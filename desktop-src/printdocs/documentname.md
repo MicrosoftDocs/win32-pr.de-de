@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über die DocumentName-Eigenschaft, die einen beschreibenden Namen für das Dokument angibt.
 ms.assetid: acb25fd6-6706-43ee-9ac0-539f20c13390
 title: Documentname
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 66809ef18edb7aa313ea5218f9122acf4ddd1ee8
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: d202ff1f5bac85fec3feac9f141834adfcd37e70
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997797"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409273"
 ---
 # <a name="documentname"></a>Documentname
 
@@ -19,7 +19,7 @@ Gibt einen beschreibenden Namen für das Dokument an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -59,7 +59,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 ``` syntax
 <psf:Property name="psk:DocumentName">

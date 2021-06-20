@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieser Artikel enthält ein Beispiel für ein PrintCapabilities-Dokument. Instanznamen im Beispiel dienen nur zur Veranschaulichung.
 ms.assetid: 86577c09-919b-4f07-9388-47879c656f32
-title: Beispiel für printfunktionalitäten-Dokument
+title: PrintCapabilities-Dokumentbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a032958221f531186c5c6ec993102e574aefc315
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: f3e2bf839e3e88e43a295912966f5b1906ef8f35
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "106355121"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407103"
 ---
-# <a name="printcapabilities-document-example"></a>Beispiel für printfunktionalitäten-Dokument
+# <a name="printcapabilities-document-example"></a>PrintCapabilities-Dokumentbeispiel
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Hinweise: der Standard Namespace gilt nicht für XML-Attribute. Sie müssen explizit mit Präfix qualifiziert werden. Die im folgenden Beispiel verwendeten Instanznamen dienen nur zur Veranschaulichung, obwohl Sie in der Regel den in den Schlüsselwörtern des Druck Schemas definierten Instanznamen entsprechen.
+Hinweise: Der Standardnamespace gilt nicht für XML-Attribute. Sie müssen explizit präfixqualifiziert sein. Instanznamen, die im folgenden Beispiel verwendet werden, dienen nur zur Veranschaulichung, obwohl sie im Allgemeinen den Instanznamen entsprechen, die in den Schlüsselwörtern für Druckschemas definiert sind.
 
 ``` syntax
 <psf:PrintCapabilities xmlns:psf="http://schemas.microsoft.com/windows/2003/08/printing/printschemaframework" 
@@ -510,7 +510,7 @@ Hinweise: der Standard Namespace gilt nicht für XML-Attribute. Sie müssen expl
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

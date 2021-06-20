@@ -1,21 +1,21 @@
 ---
 title: Zeiger (RPC)
-description: Zeiger
+description: Erfahren Sie mehr über einen allgemeinen RPC-Zeiger, der als alles andere als Schnittstellenzeiger und Byteanzahlzeiger definiert ist.
 ms.assetid: 9756E637-BCBB-48F1-B962-25AF2C917921
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cabf5109506bc1e194a39c809bfb43a8f952fbf
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 06e41a0b6208745b543a9efe2fe22ab090046778
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102651"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406593"
 ---
 # <a name="pointers-rpc"></a>Zeiger (RPC)
 
 ## <a name="common-pointers"></a>Allgemeine Zeiger
 
-Ein allgemeiner Zeiger ist als alles andere als Schnittstellen Zeiger und Byte Anzahl Zeiger definiert.
+Ein gängiger Zeiger wird als alles andere als Schnittstellenzeiger und Byteanzahlzeiger definiert.
 
 Es gibt zwei mögliche Layouts für die Beschreibung:
 
@@ -31,68 +31,68 @@ pointer_type<1> pointer_attributes<1>
 offset_to_complex_description<2>
 ```
 
-Das erste Format wird verwendet, wenn der Zeiger ein Zeiger auf einen einfachen Typ oder einen Zeichen folgen Zeiger ohne Größenanpassung ist. Das zweite Format wird für Zeiger auf alle anderen Typen verwendet. Zeiger Attribute geben an, welches Beschreibungs Layout Sie mit dem FC \_ Simple \_ Pointer-Flag hat.
+Das erste Format wird verwendet, wenn der Zeiger ein Zeiger auf einen einfachen Typ oder einen nicht großen Zeichenfolgenzeiger ist. Das zweite Format wird für Zeiger auf alle anderen Typen verwendet. Zeigerattribute geben mit dem FC SIMPLE POINTER-Flag an, welches \_ \_ Beschreibungslayout es ist.
 
-der \_ Zeigertyp<1> einer der folgenden ist.
+Zeigertyp \_<1> ist einer der folgenden.
 
 
 
-| Zeichen formatieren | BESCHREIBUNG                              |
+| Formatzeichen | BESCHREIBUNG                              |
 |------------------|------------------------------------------|
-| FC- \_ RP           | Ein Verweis Zeiger.                     |
-| FC nach \_ oben           | Ein eindeutiger Zeiger.                        |
-| FC \_ fp           | Ein vollständiger-Zeiger.                          |
-| FC- \_ op           | Ein eindeutiger Zeiger in einer Objektschnittstelle. |
+| FC \_ RP           | Ein Verweiszeiger.                     |
+| FC \_ UP           | Ein eindeutiger Zeiger.                        |
+| FC \_ FP           | Ein vollständiger Zeiger.                          |
+| FC \_ OP           | Ein eindeutiger Zeiger in einer Objektschnittstelle. |
 
 
 
  
 
-Der Grund für die Unterscheidung von FC \_ op ist Semantik: in Objekt Schnittstellen \[ sollte ein in-, out \] -Zeiger freigegeben werden, bevor ein neues-Objekt gemarshallert und ein neuer Zeiger Wert zugewiesen wird.
+Der Grund für die Unterscheidung von FC OP ist semantisch: In Objektschnittstellen sollte ein in,out-Zeiger frei werden, bevor die Zuordnung eines neuen Objekts und das Zuweisen eines neuen Zeigerwerts entschniffen \_ \[ \] wird.
 
-Zeiger \_ Attribute<1> können eines der in der folgenden Tabelle gezeigten Flags aufweisen.
+Zeigerattribute<1> können über eines der in der folgenden \_ Tabelle gezeigten Flags verfügen.
 
 
 
-| Flag | BESCHREIBUNG              |                                                                                                                                                                                                                                       |
+| Flag | Beschreibung              |                                                                                                                                                                                                                                       |
 |------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 01   | FC \_ \_ alle \_ Knoten zuordnen | Der Zeiger ist Teil eines \_ Zuordnungs Schemas (alle Knoten).                                                                                                                                                                   |
-| 02   | FC \_ nicht \_ kostenlos           | Ein Zuordnungs Zeiger (kein \_ freier Zeiger).                                                                                                                                                                                                      |
-| 04   | FC- \_ Zuweisung \_ im \_ Stapel   | Ein Zeiger, dessen Referent im Stapel des Stubs zugeordnet wird.                                                                                                                                                                            |
-| 08   | einfacher FC- \_ \_ Zeiger      | Ein Zeiger auf einen einfachen Typ oder eine konforme Zeichenfolge ohne Größenanpassung. Dieses Flag, das festgelegt wird, gibt das Layout der Zeiger Beschreibung als einfaches Zeiger Layout an, das oben beschrieben wird. andernfalls wird das deskriptorformat mit dem Offset angegeben. |
-| 10   | FC- \_ Zeiger- \_ Deref       | Ein Zeiger, der dereferenziert werden muss, bevor der Referenten des Zeigers verarbeitet wird.                                                                                                                                                           |
+| 01   | FC \_ ALLOCATE \_ ALL \_ NODES | Der Zeiger ist Teil eines Zuordnungsschemas für "allocate(alle \_ Knoten)".                                                                                                                                                                   |
+| 02   | FC \_ DONT \_ FREE           | Ein allocate(don't \_ free)-Zeiger.                                                                                                                                                                                                      |
+| 04   | FC \_ ALLOCED \_ ON \_ STACK   | Ein Zeiger, dessen Referenz auf dem Stapel des Stubs zugeordnet ist.                                                                                                                                                                            |
+| 08   | EINFACHER \_ \_ FC-ZEIGER      | Ein Zeiger auf einen einfachen Typ oder eine nicht konforme Zeichenfolge. Dieses Flag, das festgelegt wird, gibt das Layout der Zeigerbeschreibung als das oben beschriebene einfache Zeigerlayout an, andernfalls wird das Deskriptorformat mit dem Offset angegeben. |
+| 10   | \_ \_ FC-ZEIGER-DEREF       | Ein Zeiger, der dereferenziert werden muss, bevor der Zeigerreferenzierung verwendet wird.                                                                                                                                                           |
 
 
 
  
 
-Zeiger mit der Größe \_ (), Max \_ ist (), length \_ is (), Last \_ is () und/oder First \_ is (), auf die Sie angewendet werden, haben Format Zeichenfolgen-Beschreibungen, die mit einem Zeiger auf ein Array des entsprechenden Typs identisch sind (z. b. ein konformes Array, wenn Size () \_ \_ und length) \_ angewendet wird.
+Zeiger, auf die die Größe \_ is(), max \_ is(), length \_ is(), last \_ is() und/oder first \_ is() angewendet \_ \_ werden, verfügen über Formatzeichenfolgenbeschreibungen, die mit einem Zeiger auf ein Array des entsprechenden Typs \_ identisch sind (z. B. ein konformes Array, wenn size is() angewendet wird, ein konformes variierende Array, wenn size () und length angewendet werden).
 
-## <a name="interface-pointers"></a>Schnittstellen Zeiger
+## <a name="interface-pointers"></a>Schnittstellenzeker
 
-Eine Objekt Schnittstellen Zeiger-Format Zeichenfolge hat eines von zwei Formaten, abhängig davon, ob die entsprechende IID dem Compiler bekannt ist.
+Eine Objektschnittstellenzeiger-Formatzeichenfolge hat eines von zwei Formaten, je nachdem, ob die entsprechende IID dem Compiler bekannt ist.
 
-Ein Schnittstellen Zeiger mit einer Konstanten IID weist die folgende Beschreibung auf:
+Ein Schnittstellenzeiger mit einer konstanten IID hat die folgende Beschreibung:
 
 ``` syntax
 FC_IP FC_CONSTANT_IID 
 iid<16>
 ```
 
-Der IID-<16> Teil ist die tatsächliche IID für den Schnittstellen Zeiger. Die IID wird in der Format Zeichenfolge in einem Format geschrieben, das mit der GUID-Datenstruktur identisch ist: Long, Short, Short, Char \[ 8 \] .
+Der iid<16> ist die tatsächliche IID für den Schnittstellenzeiger. Die IID wird in einem Format, das mit der GUID-Datenstruktur identisch ist, in die Formatzeichenfolge geschrieben: long, short, short, char \[ \] 8.
 
-Die Beschreibung eines Schnittstellen Zeigers mit IID \_ () wird darauf angewendet:
+Die Beschreibung eines Schnittstellenzeigers, auf den iid \_ is() angewendet wird, ist:
 
 ``` syntax
 FC_IP FC_PAD 
 iid_description<> 
 ```
 
-Der IID \_ -Beschreibungs<> ist ein Korrelations Deskriptor, der abhängig davon, ob [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes hat. Der von der **ndrcomputeconformance** -Funktion berechnete Wert ist der IID-Zeiger.
+Die iid description<> ist ein Korrelationsdeskriptor und hat 4 oder 6 Bytes, je nachdem, ob \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird. Der von der **NdrComputeConformance-Funktion** berechnete Wert ist der IID-Zeiger.
 
-## <a name="byte-count-pointers"></a>Byte Anzahl Zeiger
+## <a name="byte-count-pointers"></a>Zeiger auf die Byteanzahl
 
-Byte Anzahl Zeiger beziehen sich auf ein spezielles Optimierungs Attribut mit dem Namen \[ **Byte \_ Anzahl** \] . Die folgenden Formate werden verwendet:
+Byteanzahlze zeiger beziehen sich auf ein spezielles Optimierungsattribut namens \[ **\_ Byteanzahl.** \] Die folgenden Formate werden verwendet:
 
 ``` syntax
 FC_BYTE_COUNT_POINTER 
@@ -100,7 +100,7 @@ simple_type<1>
 byte_count_description<> 
 ```
 
-immer
+– und –
 
 ``` syntax
 FC_BYTE_COUNT_POINTER 
@@ -109,9 +109,9 @@ byte_count_description<>
 pointee_description<>
 ```
 
-Die Beschreibung der Byte \_ Anzahl \_<> ist ein Korrelations Deskriptor, der abhängig davon, ob [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes hat.
+Die Beschreibung der Byteanzahl<> korrelationsdeskriptor und hat je nachdem, ob \_ \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes.
 
-Der pointee- \_ Beschreibungs<> ist eine Beschreibung des pointtyps.
+Die Zeigerbeschreibung \_<> eine Beschreibung des Zeigertyps.
 
  
 

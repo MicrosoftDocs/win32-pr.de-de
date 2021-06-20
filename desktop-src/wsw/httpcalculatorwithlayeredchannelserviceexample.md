@@ -1,33 +1,33 @@
 ---
-title: Httpcalculatorwithlayeredchannelserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts mit einer benutzerdefinierten Kanal-und Listenerimplementierung verwendet wird, die über HTTP hinausgeht.
+title: HttpCalculatorWithLayeredChannelServiceExample
+description: Sehen Sie sich ein C++-Beispiel für eine Windows-Webdienst-API (WWSAPI) eines HTTP-Rechners mit mehrschichtigem Kanaldienst an.
 ms.assetid: c5bc37bc-f242-4eda-abc4-510793d301d8
 keywords:
-- Httpcalculatorwithlayeredchannelserviceexample Native Webdienste
-- Wwsapi
+- HttpCalculatorWithLayeredChannelServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 933e39cc687ecd057f112119ff9b47be9123deff
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 277703f703051bfff77efbc01b14d25bd427a1f5
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388444"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404143"
 ---
-# <a name="httpcalculatorwithlayeredchannelserviceexample"></a>Httpcalculatorwithlayeredchannelserviceexample
+# <a name="httpcalculatorwithlayeredchannelserviceexample"></a>HttpCalculatorWithLayeredChannelServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts mit einer benutzerdefinierten Kanal-und Listenerimplementierung verwendet wird, die über HTTP hinausgeht.
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts mit einem benutzerdefinierten Kanal und einer Listenerimplementierung verwenden, die auf HTTP-Ebene sind.
 
--   [Httpcalculatorwithlayeredchannelservice. cpp](#httpcalculatorwithlayeredchannelservicecpp)
--   [Layeredchannel. h](#layeredchannelh)
--   [Layeredchannel. cpp](#layeredchannelcpp)
--   [Layeredlistener. h](#layeredlistenerh)
--   [Layeredlistener. cpp](#layeredlistenercpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [HttpCalculatorWithLayeredChannelService.cpp](#httpcalculatorwithlayeredchannelservicecpp)
+-   [LayeredChannel.h](#layeredchannelh)
+-   [LayeredChannel.cpp](#layeredchannelcpp)
+-   [LayeredListener.h](#layeredlistenerh)
+-   [LayeredListener.cpp](#layeredlistenercpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorwithlayeredchannelservicecpp"></a>Httpcalculatorwithlayeredchannelservice. cpp
+## <a name="httpcalculatorwithlayeredchannelservicecpp"></a>HttpCalculatorWithLayeredChannelService.cpp
 
 
 ```C++
@@ -389,7 +389,7 @@ Exit:
 
 
 
-## <a name="layeredchannelh"></a>Layeredchannel. h
+## <a name="layeredchannelh"></a>LayeredChannel.h
 
 
 ```C++
@@ -422,7 +422,7 @@ extern WS_CUSTOM_CHANNEL_CALLBACKS layeredChannelCallbacks;
 
 
 
-## <a name="layeredchannelcpp"></a>Layeredchannel. cpp
+## <a name="layeredchannelcpp"></a>LayeredChannel.cpp
 
 
 ```C++
@@ -678,7 +678,7 @@ WS_CUSTOM_CHANNEL_CALLBACKS layeredChannelCallbacks =
 
 
 
-## <a name="layeredlistenerh"></a>Layeredlistener. h
+## <a name="layeredlistenerh"></a>LayeredListener.h
 
 
 ```C++
@@ -710,7 +710,7 @@ extern WS_CUSTOM_LISTENER_CALLBACKS layeredListenerCallbacks;
 
 
 
-## <a name="layeredlistenercpp"></a>Layeredlistener. cpp
+## <a name="layeredlistenercpp"></a>LayeredListener.cpp
 
 
 ```C++
@@ -948,7 +948,7 @@ WS_CUSTOM_LISTENER_CALLBACKS layeredListenerCallbacks =
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -1080,9 +1080,9 @@ clean:
 
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,84 +1,84 @@
 ---
 title: Verwenden des Image-Elements
-description: In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+description: In diesem Artikel wird die Verwendung des Image-Elements in VML beschrieben, einem Feature, das seit Windows Internet Explorer 9 veraltet ist.
 ms.assetid: 444c0b21-35f0-4e2d-ab6d-87a88229d9d2
 keywords:
-- Webworkshop, Image-Element
-- Entwerfen von Webseiten, Image-Element
-- Vector Markup Language (VML), Image-Element
-- VML (Vector Markup Language), Image-Element
-- Vektorgrafiken, Bildelement
+- Web-Workshop,image-Element
+- Entwerfen von Webseiten,image-Element
+- Vector Markup Language (VML),image-Element
+- VML (Vector Markup Language),image-Element
+- Vektorgrafik,Bildelement
 - Bildelement
-- VML-Elemente, Bild
-- VML-Formen, Image-Element
-- Vector Markup Language (VML), Attribute für Zuschneiden von Eigenschaften
-- VML (Vector Markup Language), Attribute der zuschnittschaft
-- Vektorgrafiken, Attribute für Zuschneiden von Eigenschaften
-- VML-Formen, Attribute für Zuschneiden von Eigenschaften
-- Attribute der zuschnitteigenschaften
-- Vector Markup Language (VML), Eigenschafts Attribut erhalten
-- VML (Vector Markup Language), Eigenschafts Attribut erhalten
-- Vektorgrafiken, Eigenschafts Attribut gewinnen
-- VML-Formen, Eigenschafts Attribut gewinnen
-- Eigenschafts Attribut erhalten
+- VML-Elemente,Image
+- VML-Formen, Bildelement
+- Vector Markup Language (VML), Zuschneiden von Eigenschaftenattributen
+- VML (Vector Markup Language),Zuschneiden von Eigenschaftenattributen
+- Vektorgrafiken,Eigenschaftenattribute zuschneiden
+- VML-Formen,Eigenschaftenattribute zuschneiden
+- Zuschneideeigenschaftenattribute
+- Vector Markup Language (VML),gain-Eigenschaftenattribut
+- VML (Vector Markup Language),gain-Eigenschaftenattribut
+- Vektorgrafiken,Gain-Eigenschaftsattribut
+- VML-Formen,Gain-Eigenschaftsattribut
+- gain-Eigenschaftenattribut
 - Vector Markup Language (VML), Kontrast
-- VML (Vector Markup Language), Kontrast
-- Vektorgrafiken, Kontrast
-- VML-Formen, Kontrast
-- Vector Markup Language (VML), Attribut der Blacklevel-Eigenschaft
-- VML (Vector Markup Language), Attribut der Blacklevel-Eigenschaft
-- Vektorgrafiken, Attribut der Blacklevel-Eigenschaft
-- VML-Formen, Attribut der Blacklevel-Eigenschaft
-- Attribut der Blacklevel-Eigenschaft
+- VML (Vector Markup Language),Kontrast
+- Vektorgrafiken,Kontrast
+- VML-Formen,Kontrast
+- Vector Markup Language (VML), blacklevel-Eigenschaftenattribut
+- VML (Vector Markup Language),blacklevel-Eigenschaftenattribut
+- Vektorgrafiken,Blacklevel-Eigenschaftsattribut
+- VML-Formen, Blacklevel-Eigenschaftsattribut
+- blacklevel-Eigenschaftenattribut
 - Vector Markup Language (VML), Helligkeit
 - VML (Vector Markup Language), Helligkeit
 - Vektorgrafiken, Helligkeit
 - VML-Formen, Helligkeit
-- Vector Markup Language (VML), Graustufen Eigenschafts Attribut
-- VML (Vector Markup Language), Graustufen Eigenschafts Attribut
-- Vektorgrafiken, Graustufen Eigenschafts Attribut
-- VML-Formen, Graustufen Eigenschafts Attribut
-- Graustufen-Eigenschafts Attribut
-- Vector Markup Language (VML), Gamma Property-Attribut
-- VML (Vector Markup Language), Gamma Property-Attribut
-- Vektorgrafiken, Gamma Property-Attribut
-- VML-Formen, Gamma Property-Attribut
-- Gamma Property-Attribut
+- Vector Markup Language (VML), Grayscale-Eigenschaftsattribut
+- VML (Vector Markup Language),grayscale-Eigenschaftenattribut
+- Vektorgrafik,Grayscale-Eigenschaftsattribut
+- VML-Formen,Grayscale-Eigenschaftsattribut
+- grayscale-Eigenschaftenattribut
+- Vector Markup Language (VML),gamma-Eigenschaftsattribut
+- VML (Vector Markup Language),gamma-Eigenschaftenattribut
+- Vektorgrafiken, Gammaeigenschaftsattribut
+- VML-Formen, Gammaeigenschaftsattribut
+- gamma-Eigenschaftsattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 820039ff76f3685eeea7a65e2bbc01578abbe581
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 572acef76afc42e02f476ca1825ef2541f596380
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104517048"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407803"
 ---
 # <a name="using-the-image-element"></a>Verwenden des Image-Elements
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Verwenden von `<image>`
 
-In diesem Thema wird veranschaulicht, wie das-Element verwendet wird, `<image>` um Bilder mit verschiedenen speziellen Effekten anzuzeigen.
+In diesem Thema wird veranschaulicht, wie das -Element verwendet wird, um `<image>` Bilder mit verschiedenen Sondereffekten anzuzeigen.
 
-Wenn Sie ein Bild anzeigen möchten, das aus einer externen Quelle geladen wurde, verwenden Sie in der Regel das `<img>` in HTML bereitgestellte-Element, und zeigen Sie dann das **src** -Eigenschafts Attribut auf den Speicherort der Bilddatei.
+Wenn Sie ein Bild anzeigen möchten, das aus einer externen Quelle geladen wurde, verwenden Sie in der Regel das in HTML bereitgestellte Element und verweisen dann das src-Eigenschaftsattribut auf den Speicherort der `<img>` Bilddatei. 
 
-Alternativ können Sie das-Element verwenden, das `<image>` in VML bereitgestellt wird. Wenn Sie das- `<image>` Element verwenden, können Sie nur eine Bilddatei erstellen und das Bild dann unterschiedlich anzeigen, indem Sie die Eigenschafts Attribute des- `<image>` Elements ändern. Außerdem bietet das- `<image>` Element einige besondere Effekte, die Sie nicht verwenden können, indem Sie einfach das- `<img>` Element von HTML verwenden, wie z. b. das [Ausschneiden](#crop), den [Kontrast](#contrast), die [Helligkeit](#brightness), [Gamma](#gamma)und [grau](#grayscale)Stufen.
+Alternativ können Sie das in `<image>` VML bereitgestellte Element verwenden. Wenn Sie das -Element verwenden, können Sie nur eine Bilddatei erstellen und das Bild dann anders anzeigen, indem Sie die Eigenschaftenattribute `<image>` des Elements `<image>` ändern. Darüber hinaus bietet das -Element mehrere Sondereffekte, die Sie nicht einfach mithilfe des HTML-Elements verwenden können, z. B. zuschneiden, `<image>` kontrastieren, `<img>` [](#crop) [Helligkeit,](#brightness) [Gamma](#gamma)und [Graustufen.](#grayscale) [](#contrast)
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="crop"></a>an
+## <a name="crop"></a>Ernte
 
-Sie können die Eigenschaften Attribute **CropBottom**, **CropTop**, **CropLeft** und **CropRight** des-Elements verwenden `<image>` , um unterschiedliche Bilder anzuzeigen, die aus derselben Bilddatei zugeschnitten werden.
+Sie können die **Eigenschaftenattribute cropbottom**, **croptop**, **cropleft** und **cropright** des Elements verwenden, um verschiedene Bilder anzuzeigen, die aus derselben `<image>` Bilddatei zugeschnitten werden.
 
-Der Wert dieser zuschnittsattribute stellt den Prozentsatz aus dem Rand des Bilds dar. Der Wert kann eine beliebige Zahl zwischen 0 und 1 sein. Standardmäßig wird der Wert auf 0 festgelegt, was bedeutet, dass keine Zuschneiden von der Kante erfolgt. Der Wert 0,1 gibt an, dass 10 Prozent von der Kante abgeschnitten werden. der Wert 0,15 gibt an, dass der Rand 15 Prozent überspringt usw.
+Der Wert dieser Zuschneideattribute stellt den Prozentualen Schnitt vom Rand des Bilds dar. Der Wert kann eine beliebige Zahl zwischen 0 und 1 sein. Standardmäßig ist der Wert auf 0 festgelegt, was angibt, dass keine Zuschneide vom Rand entfernt wird. Der Wert 0,1 gibt einen Zuschnitt von 10 Prozent vom Rand an, der Wert 0,15 steht für einen Zuschnitt von 15 Prozent vom Rand und so weiter.
 
-Wenn Sie z. b. fünf Bilder anzeigen möchten, die alle aus derselben Bilddatei entfernt wurden, können Sie das `<image>` -Element verwenden und andere zuschnittwerte angeben, wie in der folgenden VML-Darstellung dargestellt:
+Um beispielsweise fünf Bilder anzuzeigen, die alle aus derselben Bilddatei zugeschnitten wurden, können Sie das -Element verwenden und verschiedene Zuschneidewerte angeben, wie in der folgenden `<image>` VML-Darstellung gezeigt:
 
 ![image1.jpg (5770 Bytes)](images/image1.jpg)![image1 \-2.jpg (1969 Bytes)](images/image1-2.jpg)![image1 \-3.jpg (1148 Bytes)](images/image1-3.jpg)![image1 \-4.jpg (1686 Bytes)](images/image1-4.jpg)![image1 \-5.jpg (1364 Bytes)](images/image1-5.jpg)
 
@@ -99,23 +99,23 @@ croptop="0.4" cropleft="0.3"/>
 
 
 
-Das erste Bild, `<v:image style='width:100pt;height:80pt' src="image1.jpg" />` , verfügt über keinen zuschöpfungs Wert. Aus diesem Grund wird 100 Prozent des ursprünglichen Abbilds mit einer Größe von 100 Punkten um 80 Punkte angezeigt.
+Das erste Bild , `<v:image style='width:100pt;height:80pt' src="image1.jpg" />` , hat keinen Zuschneidewert. Daher werden 100 Prozent des originalen Bilds mit einer Größe von 100 Punkten um 80 Punkten angezeigt.
 
-Das zweite Bild, `<v:image style='width:85pt;height:64pt' src="image1.jpg" cropbottom="0.2" cropright="0.15"/>` , weist einige zuschnittwerte auf. `cropbottom="0.2"` Gibt an, dass 20 Prozent des Bilds vom unteren Rand abgeschnitten werden. `cropright="0.15"` gibt an, dass 15 Prozent des Bilds vom rechten Rand abgeschnitten werden. Das verbleibende Bild wird dann mit einer Größe von 85 Punkten um 64 Punkte angezeigt.
+Das zweite Bild, `<v:image style='width:85pt;height:64pt' src="image1.jpg" cropbottom="0.2" cropright="0.15"/>` , verfügt über einige Zuschneidewerte. `cropbottom="0.2"` gibt an, dass 20 Prozent des Bilds von unten zugeschnitten werden. `cropright="0.15"` gibt an, dass 15 Prozent des Bilds vom rechten Rand aus zugeschnitten werden. Das verbleibende Bild wird dann mit einer Größe von 85 Punkten um 64 Punkten angezeigt.
 
-Ähnlich weisen die Dritten, vierten und fünften Bilder einige zuschnittwerte auf. Das ursprüngliche Bild wird entsprechend den zuschnittwerten zugeschnitten und dann entsprechend dem Wert von Width und Height angezeigt.
+Auf ähnliche Weise haben das dritte, vierte und fünfte Bild einige Zuschneidewerte. Das ursprüngliche Bild wird gemäß den Zuschneidewerten zugeschnitten und dann entsprechend dem Wert von Breite und Höhe angezeigt.
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="contrast"></a>Kontrast
 
-Sie können das Attribut "Eigenschaft **erwerben** " des- `<image>` Elements verwenden, um verschiedene Bilder mit unterschiedlichen Kontrasteinstellungen anzuzeigen.
+Sie können  das Gain-Eigenschaftsattribut des -Elements verwenden, um `<image>` verschiedene Bilder mit unterschiedlichen Kontrasteinstellungen anzuzeigen.
 
-Der Wert des Attributs für die **Attribut Eigenschaft kann** beliebig sein. Standardmäßig ist der Wert 1, was die Verwendung des gleichen Kontrast wie das ursprüngliche Bild angibt. Der Wert 0 gibt keinen Kontrast an. Je größer die Zahl, desto höher der Kontrast.
+Der Wert  des gain-Eigenschaftsattributs kann eine beliebige Zahl sein. Standardmäßig ist der Wert 1, was die Verwendung des gleichen Kontrasts wie das ursprüngliche Bild angibt. Der Wert 0 gibt keinen Kontrast an. Je größer die Zahl, desto höher der Kontrast.
 
-Wenn Sie z. b. fünf Bilder mit unterschiedlichen Kontrasteinstellungen anzeigen möchten, können Sie das `<image>` -Element verwenden und einen anderen Wert für das Attribut "Eigenschaft **erhalten** " festlegen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie beispielsweise fünf Bilder mit unterschiedlichen Kontrasteinstellungen anzeigen möchten, können Sie das -Element verwenden und einen anderen Wert für das gain-Eigenschaftsattribut festlegen, wie in der folgenden `<image>` VML-Darstellung gezeigt: 
 
-![image1.jpg (5770 Bytes)](images/image1.jpg)![Image2 \-2.jpg (270 bytes)](images/image2-2.jpg)![Image2 \-3.jpg (1919 Bytes)](images/image2-3.jpg)![Image2 \-4.jpg (3143 Bytes)](images/image2-4.jpg)![Image2 \-5.jpg (1724 Bytes)](images/image2-5.jpg)
+![image1.jpg (5770 Bytes)](images/image1.jpg)![image2 \-2.jpg (270 Bytes)](images/image2-2.jpg)![image2 \-3.jpg (1919 Bytes)](images/image2-3.jpg)![image2 \-4.jpg (3143 Bytes)](images/image2-4.jpg)![image2 \-5.jpg (1724 Bytes)](images/image2-5.jpg)
 
 
 ```HTML
@@ -130,17 +130,17 @@ Wenn Sie z. b. fünf Bilder mit unterschiedlichen Kontrasteinstellungen anzeigen
 
 
 
-Wenn das Attribut für die Eigenschaft " **Gewinn** " auf 0 festgelegt ist, wird das gesamte Bild grau, da kein Kontrast vorliegt. Der Kontrast ist deutlicher, wenn das Attribut für die Eigenschaft " **Gewinn** " auf den Wert "0,5" festgelegt ist. Der Kontrast wird umgekehrt, wenn das Attribut für die Eigenschaft " **Gewinn** " auf einen negativen Wert wie "-0,4" festgelegt ist.
+Wenn  das Gain-Eigenschaftsattribut auf 0 festgelegt ist, wird das gesamte Bild grau, da kein Kontrast besteht. Der Kontrast ist deutlicher,  wenn das Gain-Eigenschaftsattribut auf 3 festgelegt ist, als wenn es auf 0,5 festgelegt ist. Der Kontrast wird umgekehrt, wenn das Gain-Eigenschaftsattribut auf einen negativen Wert wie -0,4 festgelegt ist. 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="brightness"></a>Helligkeit
 
-Sie können das Attribut der **Blacklevel** -Eigenschaft des- `<image>` Elements verwenden, um verschiedene Bilder mit unterschiedlichen Helligkeitseinstellungen anzuzeigen.
+Sie können das **Blacklevel-Eigenschaftsattribut** des Elements verwenden, um verschiedene Bilder `<image>` mit unterschiedlichen Helligkeitseinstellungen anzuzeigen.
 
-Der Wert des Attributs der **Blacklevel** -Eigenschaft kann ein beliebiger Wert zwischen 0 und 1 sein. Standardmäßig ist der Wert 0 (null) und gibt an, dass die Ebene der Helligkeit im ursprünglichen Bild beibehalten wird. Der Wert 1 gibt den höchsten Grad an Helligkeit an.
+Der Wert des **blacklevel-Eigenschaftsattributs** kann ein beliebiger Wert zwischen 0 und 1 sein. Standardmäßig ist der Wert 0, was angibt, dass die Helligkeitsstufe im ursprünglichen Bild beibehalten wird. Der Wert 1 gibt die höchste Helligkeitsstufe an.
 
-Wenn Sie z. b. fünf Bilder mit unterschiedlichen Helligkeitseinstellungen anzeigen möchten, können Sie das `<image>` -Element verwenden und einen anderen Wert für das Attribut der **Blacklevel** -Eigenschaft festlegen, wie in der folgenden VML-Darstellung dargestellt:
+Um beispielsweise fünf Bilder mit unterschiedlichen Helligkeitseinstellungen anzuzeigen, können Sie das -Element verwenden und einen anderen Wert für das Blacklevel-Eigenschaftsattribut festlegen, wie in der folgenden `<image>` VML-Darstellung gezeigt: 
 
 ![image1.jpg (5770 Bytes)](images/image1.jpg)![image3 \-2.jpg (2579 Bytes)](images/image3-2.jpg)![image3 \-3.jpg (2330 Bytes)](images/image3-3.jpg)![image3 \-4.jpg (2727 Bytes)](images/image3-4.jpg)![image3 \-5.jpg (2435 Bytes)](images/image3-5.jpg)
 
@@ -157,19 +157,19 @@ Wenn Sie z. b. fünf Bilder mit unterschiedlichen Helligkeitseinstellungen anzei
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="grayscale"></a>Graustufe
 
-Sie können das **Graustufen** Eigenschafts Attribut des- `<image>` Elements verwenden, um Bilder mit oder ohne Graustufen anzuzeigen.
+Sie können das **Grayscale-Eigenschaftsattribut** des Elements verwenden, um Bilder mit oder `<image>` ohne Graustufen anzuzeigen.
 
-Der Wert des **Graustufen** Eigenschafts Attributs kann entweder "true" oder "false" sein. Standardmäßig ist der Wert auf false festgelegt, damit das Bild in Farbe angezeigt wird. Wenn der Wert auf true festgelegt ist, wird das Bild in Graustufen angezeigt.
+Der Wert des **Grayscale-Eigenschaftsattributs** kann entweder true oder false sein. Standardmäßig ist der Wert auf FALSE festgelegt, sodass das Bild in Farbe angezeigt wird. Wenn der Wert auf TRUE festgelegt ist, wird das Bild in Graustufen angezeigt.
 
-Beispielsweise verwendet das erste Bild, wie in der folgenden Abbildung gezeigt, die Standardeinstellung (false) des Graustufen-Attributs ( `<v:image style='width:100pt;height:80pt' src="image1.jpg" />` ). Daher wird das Bild in Farbe angezeigt.
+Wie in der folgenden Abbildung gezeigt, verwendet das erste Bild beispielsweise die Standardeinstellung (false) des Graustufenattributs ( `<v:image style='width:100pt;height:80pt' src="image1.jpg" />` ). Daher wird das Bild in Farbe angezeigt.
 
-Das zweite Bild legt das Graustufen Attribut auf "true ()" fest `<v:image style='width:100pt;height:80pt' src="image1.jpg" grayscale=true />` . Daher wird das Bild in Graustufen angezeigt, wie in der folgenden VML-Darstellung dargestellt:
+Das zweite Bild legt das Graustufenattribut auf true fest ( `<v:image style='width:100pt;height:80pt' src="image1.jpg" grayscale=true />` ). Daher wird das Bild in Graustufen angezeigt, wie in der folgenden VML-Darstellung gezeigt:
 
-![image1.jpg (5770 Bytes)](images/image1.jpg)!["image4 \-2.jpg (2138 Bytes)](images/image4-2.jpg)
+![image1.jpg (5770 Bytes)](images/image1.jpg)![image4 \-2.jpg (2138 Bytes)](images/image4-2.jpg)
 
 
 ```HTML
@@ -182,15 +182,15 @@ grayscale=true />
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="gamma"></a>Gamma
 
-Sie können das **Gamma** Property-Attribut des- `<image>` Elements verwenden, um Bilder mit unterschiedlichen Gamma Einstellungen anzuzeigen.
+Sie können das **Gammaeigenschaftsattribut** des Elements verwenden, um Bilder mit `<image>` unterschiedlichen Gammaeinstellungen anzuzeigen.
 
-Der Wert des Gamma property-Attributs kann ein beliebiger Wert zwischen 0 und 1 sein. Standardmäßig ist der Wert auf 1 festgelegt.
+Der Wert des Gammaeigenschaftsattributs kann ein beliebiger Wert zwischen 0 und 1 sein. Standardmäßig ist der Wert auf 1 festgelegt.
 
-Wenn Sie z. b. drei Bilder mit unterschiedlichen Gamma Einstellungen anzeigen möchten, können Sie das `<image>` -Element verwenden und einen anderen Wert des **Gamma** property-Attributs festlegen, wie in der folgenden VML-Darstellung gezeigt:
+Um beispielsweise drei Bilder mit unterschiedlichen Gammaeinstellungen anzuzeigen, können Sie das -Element verwenden und einen anderen Wert des Gammaeigenschaftsattributs festlegen, wie in der folgenden `<image>` VML-Darstellung gezeigt: 
 
 ![image5 \-1.jpg (2714 Bytes)](images/image5-1.jpg)![image5 \-2.jpg (2729 Bytes)](images/image5-2.jpg)![image5 \-3.jpg (2726 Bytes)](images/image5-3.jpg)
 
@@ -207,6 +207,6 @@ Wenn Sie z. b. drei Bilder mit unterschiedlichen Gamma Einstellungen anzeigen m�
 
 Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858408) .
 
- 
+ 
 
- 
+ 

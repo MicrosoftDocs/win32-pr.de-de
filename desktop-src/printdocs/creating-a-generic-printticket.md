@@ -1,50 +1,50 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Erfahren Sie, wie Sie ein generisches PrintTicket erstellen, falls das PrintCapabilities-Dokument für das Gerät nicht verfügbar ist.
 ms.assetid: 1f991b6b-8443-4234-ad46-dc4220e34c5c
-title: Erstellen eines generischen PrintTicket
+title: Erstellen eines generischen PrintTickets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c34281eda82a48ea0ac4077248547522ddc305ea
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 69e611205663138b9cc3c0d3cd315c2c19d2d7e6
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106366376"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409523"
 ---
-# <a name="creating-a-generic-printticket"></a>Erstellen eines generischen PrintTicket
+# <a name="creating-a-generic-printticket"></a>Erstellen eines generischen PrintTickets
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Wenn das Printworks-Dokument für das Gerät nicht verfügbar ist oder wenn das Zielgerät unbekannt ist, sollten Sie ein allgemeines PrintTicket erstellen. Da es kein printfunktionsdokument gibt, das einen Satz von Funktions-und Options Elementen oder Parametern bereitstellt, müssen die unterstützten Instanzen dieser Elementtypen direkt aus den Schlüsselwörtern des Print-Schemas abgerufen werden.
+Wenn das PrintCapabilities-Dokument für das Gerät nicht verfügbar ist oder das Zielgerät unbekannt ist, sollten Sie ein generisches PrintTicket erstellen. Da es kein PrintCapabilities-Dokument gibt, das einen Satz von Feature- und Optionselementen oder Parametern enthält, müssen die unterstützten Instanzen dieser Elementtypen direkt aus den Druckschemaschlüsselwörtern erhalten werden.
 
-Die in der folgenden Liste aufgeführten Schritte sollten verwendet werden, wenn Sie ein allgemeines PrintTicket erstellen.
+Die in der folgenden Liste gezeigten Schritte sollten verwendet werden, wenn Sie ein generisches PrintTicket erstellen.
 
-1.  Erstellen Sie ein leeres XML-Dokument, das den PrintTicket-Stamm enthält. Weisen Sie dem Druckschema-Namespace ein Namespace Präfix zu. Geben Sie die Schema Version an.
+1.  Erstellen Sie ein leeres XML-Dokument, das den PrintTicket-Stamm enthält. Weisen Sie dem Druckschemanamespace ein Namespacepräfix zu. Geben Sie die Schemaversion an.
 
-2.  Überprüfen Sie die Funktions Instanzen in den Print Schema-Schlüsselwörtern, und legen Sie fest, welche der in Ihrem PrintTicket definierten werden soll. Fügen Sie diese Funktions Instanzen zu PrintTicket hinzu. Wenn Sie eine untergeordnete Funktion übertragen, müssen Sie die übergeordnete Funktion übertragen und die über-/Unterordnungsbeziehung zwischen der Funktion und der Unterfunktion in PrintTicket beibehalten.
+2.  Untersuchen Sie die Featureinstanzen in den Druckschemaschlüsselwörtern, und bestimmen Sie, welche dieser Instanzen in Ihrem PrintTicket definiert werden soll. Fügen Sie diese Featureinstanzen Ihrem PrintTicket hinzu. Wenn Sie ein Unterfeature übertragen, müssen Sie das übergeordnete Feature übertragen und die Über-/Unterfunktionsbeziehung zwischen dem Feature und dem Unterfeature im PrintTicket beibehalten.
 
-    Legen Sie für jede zu übertragenden Funktions Instanz fest, welche Options Instanzen auf Ihr Print Ticket anwendbar sind. Übertragen Sie aus diesem Satz von Options Instanzen jede vollständige Options Instanz, wie Sie im Druck Schema angezeigt wird, und entfernen Sie dann alle vorhandenen Eigenschafts Instanzen, mit Ausnahme der möglichen Ausnahmen, die für Print Ticket wichtig sind. Behalten Sie alle ScoredProperty-Instanzen bei, und stellen Sie sicher, dass Sie Ihre Position beibehalten. Sie stellen einen intrinsischen Teil der Options Definition dar.
+    Bestimmen Sie für jede Featureinstanz, die Sie übertragen, welche Optionsinstanzen auf Ihr PrintTicket anwendbar sind. Übertragen Sie aus diesem Satz von Optionsinstanzen jede gesamte Option-Instanz so, wie sie im Druckschema angezeigt wird, und entfernen Sie dann alle property -Instanzen, die vorhanden sind, mit ausnahme derer, die für Ihr PrintTicket von Bedeutung sind. Behalten Sie alle ScoredProperty-Instanzen bei, und stellen Sie sicher, dass sie ihren Speicherort beibehalten. sie sind ein intrinsischer Bestandteil der Option-Definition.
 
-3.  Sie können auch Eigenschaften Instanzen zu beliebigen ScoredProperty-Objekten hinzufügen. Eigenschafts Elemente sind nur anwendbar, wenn der PrintTicket-Anbieter ihre Verwendung explizit unterstützt. Jeder Anbieter sollte den Zweck und die Verwendung aller unterstützten Eigenschaften Instanzen dokumentieren. Da Sie nicht wissen, welcher Anbieter das PrintTicket verarbeitet, möchten Sie möglicherweise nur die Eigenschaften Instanzen anfügen, die explizit vom System PrintTicket-Anbieter unterstützt werden.
+3.  Sie können jeder ScoredProperty auch Eigenschaftsinstanzen hinzufügen. Eigenschaftselemente sind nur anwendbar, wenn der PrintTicket-Anbieter deren Verwendung explizit unterstützt. Jeder Anbieter sollte den Zweck und die Verwendung aller unterstützten Eigenschafteninstanzen dokumentieren. Da Sie nicht wissen, welcher Anbieter printTicket verarbeiten wird, sollten Sie nur die Property-Instanzen anfügen, die explizit vom PrintTicket-Systemanbieter unterstützt werden.
 
-4.  Wenn die Schlüsselwörter des Druck Schemas die SelectionType-Eigenschaft für eine bestimmte Funktion auf pickmany festlegen, können Sie mehrere Optionen für dieses Feature auswählen, vorausgesetzt, dass es sich bei der als identityoption bezeichneten Option nicht um eine der ausgewählten Optionen handelt. Die identityoption im Druck Schema hat dieselbe Auswirkung wie die Option None in den Dateien der PostScript PPD und Unidrv-GPD. Er dient als No-op.
+4.  Wenn die SelectionType-Eigenschaft für ein bestimmtes Feature von den Druckschemaschlüsselwörtern auf PickMany festgelegt wird, können Sie mehrere Optionen für dieses Feature auswählen, vorausgesetzt, dass es sich bei der option, die als IdentityOption festgelegt ist, nicht um eine der ausgewählten Optionen handelt. IdentityOption im Druckschema hat die gleiche Wirkung wie die Option Keine in Postscript-PPD-Dateien und Unidrv-GPD-Dateien. sie dient als No-Op.
 
-5.  Überprüfen Sie die Druck Schema Schlüsselwörter für ParameterDef-Instanzen, die in Ihrem PrintTicket initialisiert werden sollen. Wählen Sie für jede solche ParameterDef-Instanz den Wert aus, der in der parameterinit-Instanz in PrintTicket verwendet werden soll. Dieser Wert muss den korrekten Datentyp aufweisen, muss innerhalb des Bereichs liegen, der in der ParameterDef-Instanz definiert ist, und muss alle anderen Anforderungen erfüllen, die in der ParameterDef-Instanz angegeben sind. Verwenden Sie eine parameterinit-Instanz, um den-Parameter für den von Ihnen ausgewählten Wert zu initialisieren.
+5.  Untersuchen Sie die Print Schema Keywords für ParameterDef-Instanzen, die in Ihrem PrintTicket initialisiert werden sollen. Wählen Sie für jede dieser ParameterDef-Instanzen den Wert aus, der in der ParameterInit-Instanz in PrintTicket verwendet werden soll. Dieser Wert muss vom richtigen Datentyp sein, muss innerhalb des bereichs liegen, der in der ParameterDef-Instanz definiert ist, und muss alle anderen Anforderungen erfüllen, die in der ParameterDef-Instanz angegeben sind. Verwenden Sie eine ParameterInit-Instanz, um den Parameter mit dem von Ihnen ausgewählten Wert zu initialisieren.
 
-    Wenn Sie eine Benutzeroberflächen Komponente entwickeln, entwerfen Sie Ihre PrintTicket-Generierungs Methoden, damit Benutzer den Wert für das parameterinit-Element eingeben können. Außerdem sollte die Methode für die Benutzeroberflächen Eingabe alle vom zugeordneten ParameterDef-Element angegebenen Eingabe Einschränkungen beobachten und einhalten.
+    Wenn Sie eine Benutzeroberflächenkomponente entwickeln, entwerfen Sie die PrintTicket-Generierungsmethoden, damit Benutzer den Wert für das ParameterInit-Element eingeben können. Darüber hinaus sollte die Eingabemethode der Benutzeroberfläche alle Eingabeeinschränkungen beachten und einhalten, die vom zugeordneten ParameterDef-Element angegeben werden.
 
-6.  Überprüfen Sie den Inhalt der einzelnen Options Instanzen, die im PrintTicket für Vorkommen von ParameterRef angezeigt werden. Wenn eine entsprechende parameterinit-Instanz nicht bereits in PrintTicket angezeigt wird, befolgen Sie den vorherigen Schritt, um eine parameterinit-Instanz in PrintTicket zu erstellen. Der Zweck dieser parameterinit-Instanz ist die Initialisierung des Parameters, auf den von der ParameterRef-Instanz verwiesen wird.
+6.  Überprüfen Sie den Inhalt jeder Option-Instanz, die im PrintTicket angezeigt wird, auf Vorkommen von ParameterRef. Wenn im PrintTicket noch keine entsprechende ParameterInit-Instanz angezeigt wird, führen Sie den vorherigen Schritt aus, um eine ParameterInit-Instanz im PrintTicket zu erstellen. Der Zweck dieser ParameterInit-Instanz besteht im Initialisieren des Parameters, auf den von der ParameterRef-Instanz verwiesen wird.
 
-7.  Beachten Sie, dass das Gerät, das den Auftrag verarbeitet, möglicherweise nicht alle Funktionen unterstützt, die in PrintTicket angegeben sind. Beachten Sie auch, dass eine benannte Funktion möglicherweise unterstützt wird, aber eine angegebene Option dieses Features ist möglicherweise nicht. Die gleichen Einschränkungen gelten für Parameter. Selbst wenn ein Gerät einen benannten Parameter unterstützt, liegt der in der parameterinit-Instanz angegebene Wert möglicherweise nicht innerhalb des gültigen Bereichs für das Gerät.
+7.  Beachten Sie, dass das Gerät, das den Auftrag verarbeitet, möglicherweise nicht jedes im PrintTicket angegebene Feature unterstützt. Beachten Sie auch, dass ein benanntes Feature unterstützt werden kann, aber eine angegebene Option dieses Features möglicherweise nicht ist. Die gleichen Einschränkungen gelten für Parameter. Auch wenn ein Gerät einen benannten Parameter unterstützt, liegt der in der ParameterInit-Instanz angegebene Wert möglicherweise nicht innerhalb des gültigen Bereichs für das Gerät.
 
-8.  Überprüfen Sie die Schlüsselwörter des Druck Schemas für Eigenschaften Instanzen, die in Ihrem PrintTicket vorhanden sein müssen. Fügen Sie Ihrer PrintTicket-Instanz eine Eigenschaften Instanz für diese hinzu, und geben Sie einen geeigneten Wert für diese an, indem Sie den Wert Elementtyp verwenden. Stellen Sie sicher, dass die Eigenschaften Instanzen innerhalb von PrintTicket ordnungsgemäß gefunden werden. Stellen Sie sicher, dass Sie das PrintTicket-Schema und nicht das printfunktionalitäten-Schema überprüfen.
+8.  Überprüfen Sie die Druckschemaschlüsselwörter für Eigenschafteninstanzen, die in Ihrem PrintTicket vorhanden sein müssen. Fügen Sie Ihrem PrintTicket jeweils eine Property-Instanz hinzu, und geben Sie mithilfe des Value-Elementtyps einen geeigneten Wert dafür an. Stellen Sie sicher, dass sich Eigenschafteninstanzen ordnungsgemäß innerhalb von PrintTicket befinden. Stellen Sie sicher, dass Sie das PrintTicket-Schema anstelle des PrintCapabilities-Schemas verwenden.
 
-9.  Überprüfen Sie die optionalen Eigenschaften Instanzen, die im PrintTicket-Schema definiert sind. Wenn solche Eigenschaften Instanzen in Ihrem PrintTicket vorhanden sein sollten, erstellen Sie diese in Ihrem PrintTicket.
+9.  Untersuchen Sie die optionalen Eigenschafteninstanzen, die im PrintTicket-Schema definiert sind. Wenn es solche Property-Instanzen gibt, die sich in Ihrem PrintTicket befinden sollten, erstellen Sie sie in Ihrem PrintTicket.
 
-10. Untergeordnete Elemente desselben Elementtyps dürfen nicht in einer Tiefe von mehr als 10 Elementen geschachtelt werden. Diese Regel gilt unabhängig für jeden Typ von Element, der definiert werden kann.
+10. Unterelemente desselben Elementtyps dürfen nicht bis zu einer Tiefe von mehr als 10 Elementen geschachtelt werden. Diese Regel gilt unabhängig für jeden Elementtyp, der definiert werden kann.
 
 > [!Note]  
-> Der XML-Inhalt von PrintTicket muss entweder mit UTF-8 oder UTF-16 codiert werden.
+> PrintTicket XML-Inhalt MUSS entweder mit UTF-8 oder UTF-16 codiert werden.
 
  
 
@@ -52,7 +52,7 @@ Die in der folgenden Liste aufgeführten Schritte sollten verwendet werden, wenn
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

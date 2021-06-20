@@ -1,35 +1,35 @@
 ---
-title: Direct2D Schnellstart für Windows 8
-description: Fasst die Schritte zusammen, die zum Zeichnen mit Direct2D erforderlich sind, und stellt Beispielcode bereit.
+title: Direct2D-Schnellstart für Windows 8
+description: Fasst die Schritte zusammen, die zum Zeichnen mit Direct2D für Windows 8 erforderlich sind, und stellt Beispielcode bereit. Direct2D ist eine NATIVE CODE-API zum Erstellen von 2D-Grafiken.
 ms.assetid: FF4623FA-CA60-4637-9EE6-34C4EC84E51A
 keywords:
-- Direct2D, Codebeispiel zum Zeichnen des Rechtecks
+- Beispiel für Direct2D,Zeichnen von Rechteckcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28e5cfbbf4e63e129a43bec783a64203e20e30a0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 43442e57ed0949bdf39fc05ce1a69fded42b4b3d
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341315"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406143"
 ---
-# <a name="direct2d-quickstart-for-windows-8"></a>Direct2D Schnellstart für Windows 8
+# <a name="direct2d-quickstart-for-windows-8"></a>Direct2D-Schnellstart für Windows 8
 
-Direct2D ist eine API im einheitlichen Code zum Erstellen von 2D-Grafiken. In diesem Thema wird veranschaulicht, wie Direct2D verwendet wird, um zu einem [**Windows:: UI:: Core:: corewindow**](/uwp/api/Windows.UI.Core.CoreWindow)zu zeichnen.
+Direct2D ist eine nativ codierte API im Direktmodus zum Erstellen von 2D-Grafiken. In diesem Thema wird veranschaulicht, wie Direct2D verwendet wird, um in ein [**Windows::UI::Core::CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow)zu zeichnen.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Zeichnen eines einfachen Rechtecks](#drawing-a-simple-rectangle)
--   [Schritt 1: einschließen des Direct2D-Headers](#step-1-include-direct2d-header)
--   [Schritt 2: Erstellen eines ID2D1Factory1](#step-2-create-an-id2d1factory1)
--   [Schritt 3: Erstellen eines ID2D1Device und eines ID2D1DeviceContext](#step-3-create-an-id2d1device-and-an-id2d1devicecontext)
+-   [Schritt 1: Einschließen des Direct2D-Headers](#step-1-include-direct2d-header)
+-   [Schritt 2: Erstellen einer ID2D1Factory1](#step-2-create-an-id2d1factory1)
+-   [Schritt 3: Erstellen einer ID2D1Device und eines ID2D1DeviceContext](#step-3-create-an-id2d1device-and-an-id2d1devicecontext)
 -   [Schritt 4: Erstellen eines Pinsels](#step-4-create-a-brush)
 -   [Schritt 5: Zeichnen des Rechtecks](#step-5-draw-the-rectangle)
 -   [Beispielcode](#example-code)
 
 ## <a name="drawing-a-simple-rectangle"></a>Zeichnen eines einfachen Rechtecks
 
-Wenn Sie ein Rechteck mithilfe von [GDI](/windows/desktop/gdi/windows-gdi)zeichnen möchten, können Sie die [**WM \_ Paint**](/windows/desktop/gdi/wm-paint) -Meldung wie im folgenden Code gezeigt verarbeiten.
+Um ein Rechteck mithilfe von [GDI](/windows/desktop/gdi/windows-gdi)zu zeichnen, können Sie die [**WM \_ PAINT-Meldung**](/windows/desktop/gdi/wm-paint) behandeln, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -83,15 +83,15 @@ switch(message)
 
 
 
-Der Code zum Zeichnen desselben Rechtecks mit Direct2D ist ähnlich: er erstellt Zeichnungs Ressourcen, beschreibt eine Form, die gezeichnet werden soll, zeichnet die Form und gibt dann die Zeichnungs Ressourcen frei. In den folgenden Abschnitten werden die einzelnen Schritte ausführlich beschrieben.
+Der Code zum Zeichnen desselben Rechtecks mit Direct2D ist ähnlich: Er erstellt Zeichnungsressourcen, beschreibt eine zu zeichnende Form, zeichnet die Form und gibt dann die Zeichnungsressourcen frei. In den folgenden Abschnitten werden die einzelnen Schritte ausführlich beschrieben.
 
-## <a name="step-1-include-direct2d-header"></a>Schritt 1: einschließen des Direct2D-Headers
+## <a name="step-1-include-direct2d-header"></a>Schritt 1: Einschließen des Direct2D-Headers
 
-Zusätzlich zu den Headern, die für die Anwendung erforderlich sind, schließen Sie die Header d2d1. h und d2d1 \_ 1. h ein.
+Schließen Sie zusätzlich zu den für die Anwendung erforderlichen Headern die Header d2d1.h und d2d1 \_ 1.h ein.
 
-## <a name="step-2-create-an-id2d1factory1"></a>Schritt 2: Erstellen eines ID2D1Factory1
+## <a name="step-2-create-an-id2d1factory1"></a>Schritt 2: Erstellen einer ID2D1Factory1
 
-Eines der ersten Dinge, bei denen es sich bei allen Direct2D-Beispielen um das Erstellen eines [**ID2D1Factory1**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1)handelt.
+Eines der ersten Dinge, die ein Direct2D-Beispiel macht, ist das Erstellen einer [**ID2D1Factory1.**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1)
 
 
 ```C++
@@ -107,15 +107,15 @@ DX::ThrowIfFailed(
 
 
 
-Die [**ID2D1Factory1**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1) -Schnittstelle ist der Ausgangspunkt für die Verwendung von Direct2D. Verwenden Sie ein **ID2D1Factory1** , um Direct2D-Ressourcen zu erstellen.
+Die [**ID2D1Factory1-Schnittstelle**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1factory1) ist der Ausgangspunkt für die Verwendung von Direct2D. Verwenden Sie **eine ID2D1Factory1,** um Direct2D-Ressourcen zu erstellen.
 
-Beim Erstellen einer Factory können Sie angeben, ob es sich um einen Multithread oder einen Single Thread handelt. (Weitere Informationen zu Multithread-Factorys finden Sie in den Hinweisen auf der [**ID2D1Factory-Referenzseite**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory).) In diesem Beispiel wird eine Single Thread Factory erstellt.
+Wenn Sie eine Factory erstellen, können Sie angeben, ob es sich um multi- oder singlethreaded handelt. (Weitere Informationen zu Multithreadfactorys finden Sie in den Hinweisen auf der [**ID2D1Factory-Referenzseite.)**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) In diesem Beispiel wird eine Singlethreadfactory erstellt.
 
-Im Allgemeinen sollte die Anwendung die Factory einmal erstellen und für die Lebensdauer der Anwendung beibehalten.
+Im Allgemeinen sollte Ihre Anwendung die Factory einmal erstellen und für die Lebensdauer der Anwendung beibehalten.
 
-## <a name="step-3-create-an-id2d1device-and-an-id2d1devicecontext"></a>Schritt 3: Erstellen eines ID2D1Device und eines ID2D1DeviceContext
+## <a name="step-3-create-an-id2d1device-and-an-id2d1devicecontext"></a>Schritt 3: Erstellen einer ID2D1Device und eines ID2D1DeviceContext
 
-Nachdem Sie eine Factory erstellt haben, verwenden Sie Sie, um ein Direct2D-Gerät zu erstellen, und verwenden Sie dann das Gerät zum Erstellen eines Direct2D-Geräte Kontexts. Um diese Direct2D-Objekte zu erstellen, müssen Sie über ein [**Direct3D 11-Gerät**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) , ein [**DXGI-Gerät**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)und eine [**DXGI-Swapkette**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)verfügen. Informationen zum Erstellen der erforderlichen Voraussetzungen finden Sie unter [Geräte und Geräte Kontexte](devices-and-device-contexts.md) .
+Nachdem Sie eine Factory erstellt haben, verwenden Sie sie, um ein Direct2D-Gerät zu erstellen, und verwenden Sie dann das Gerät, um einen Direct2D-Gerätekontext zu erstellen. Zum Erstellen dieser Direct2D-Objekte benötigen Sie ein [**Direct3D 11-Gerät,**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) ein [**DXGI-Gerät**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)und eine [**DXGI-Swapkette.**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) Informationen zum Erstellen der erforderlichen Voraussetzungen finden Sie unter [Geräte und Gerätekontexte.](devices-and-device-contexts.md)
 
 
 ```C++
@@ -141,11 +141,11 @@ Nachdem Sie eine Factory erstellt haben, verwenden Sie Sie, um ein Direct2D-Ger�
 
 
 
-Ein Gerätekontext ist ein Gerät, das Zeichnungsvorgänge ausführen und Geräte abhängige Zeichnungs Ressourcen erstellen kann, wie z. b. Pinsel. Sie können auch den Gerätekontext verwenden, um eine [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) mit einer DXGI-Oberfläche zu verknüpfen, die als Renderziel verwendet werden soll. Der Gerätekontext kann in verschiedene Arten von Zielen Rendering.
+Ein Gerätekontext ist ein Gerät, das Zeichnungsvorgänge ausführen und geräteabhängige Zeichnungsressourcen wie Pinsel erstellen kann. Sie verwenden auch den Gerätekontext, um eine [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) mit einer DXGI-Oberfläche zu verknüpfen, die als Renderziel verwendet werden soll. Der Gerätekontext kann auf verschiedene Arten von Zielen gerendert werden.
 
-Der Code hier deklariert die Eigenschaften für Bitmap, die mit einer DXGI-SwapChain verknüpft ist, die in ein [**corewindow**](/uwp/api/Windows.UI.Core.CoreWindow)gerendert wird. Die [**ID2D1DeviceContext:: kreatebitmapfromdxgisurface**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1_id2d1bitmap1)) -Methode ruft eine Direct2D-Oberfläche aus der DXGI-Oberfläche ab. Dadurch wird alles, was für das Ziel [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) gerendert wird, auf der Oberfläche der Swapkette gerendert.
+Der Code deklariert hier die Eigenschaften für Bitmaps, die mit einer DXGI-Swapkette verknüpft sind, die in einem [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow)gerendert wird. Die [**ID2D1DeviceContext::CreateBitmapFromDxgiSurface-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1_id2d1bitmap1)) ruft eine Direct2D-Oberfläche von der DXGI-Oberfläche ab. Dadurch wird alles, was in der [**Ziel-ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) gerendert wird, auf die Oberfläche der Swapkette gerendert.
 
-Nachdem Sie die Direct2D-Oberfläche verwendet haben, verwenden Sie die [**ID2D1DeviceContext:: SetTarget**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget) -Methode, um Sie als aktives Renderziel festzulegen.
+Sobald Sie über die Direct2D-Oberfläche verfügen, verwenden Sie die [**ID2D1DeviceContext::SetTarget-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget) um sie als aktives Renderziel festzulegen.
 
 
 ```C++
@@ -183,7 +183,7 @@ Nachdem Sie die Direct2D-Oberfläche verwendet haben, verwenden Sie die [**ID2D1
 
 ## <a name="step-4-create-a-brush"></a>Schritt 4: Erstellen eines Pinsels
 
-Wie eine Factory kann ein Gerätekontext Zeichnungs Ressourcen erstellen. In diesem Beispiel erstellt der Gerätekontext einen Pinsel.
+Wie bei einer Factory kann ein Gerätekontext Zeichnungsressourcen erstellen. In diesem Beispiel erstellt der Gerätekontext einen Pinsel.
 
 
 ```C++
@@ -198,17 +198,17 @@ DX::ThrowIfFailed(
 
 
 
-Ein Pinsel ist ein Objekt, das einen Bereich zeichnet, z. b. den Strich einer Form oder das Ausfüllen einer Geometrie. Der Pinsel in diesem Beispiel zeichnet einen Bereich mit einer vordefinierten voll Tonfarbe, schwarz.
+Ein Pinsel ist ein Objekt, das einen Bereich zeichnet, z. B. den Strich einer Form oder die Füllung einer Geometrie. Der Pinsel in diesem Beispiel zeichnet einen Bereich mit einer vordefinierten Volltonfarbe Schwarz.
 
-Direct2D bietet auch andere Pinseltypen: Farbverlaufs Pinsel zum Zeichnen von linearen und radialen Farbverläufen, ein [**Bitmap-Pinsel**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) zum Zeichnen mit Bitmaps und Mustern und ab Windows 8 ein [**Bild Pinsel**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1imagebrush) zum Zeichnen mit einem gerenderten Bild.
+Direct2D bietet auch andere Arten von Pinseln: Farbverlaufspinsel zum Zeichnen linearer und radialer Farbverläufe, ein [**Bitmappinsel**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) zum Zeichnen mit Bitmaps und Mustern und beginnend in Windows 8 ein [**Bildpinsel**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1imagebrush) zum Zeichnen mit einem gerenderten Bild.
 
-Einige Zeichnungs-APIs stellen Stifte zum Zeichnen von Gliederungen und Pinsel zum Auffüllen von Formen bereit. Direct2D unterscheidet sich von einem Stift Objekt, es wird jedoch ein Pinsel zum Zeichnen von Gliederungen und Ausfüllen von Formen verwendet. Verwenden Sie beim Zeichnen von Gliederungen die [**ID2D1StrokeStyle**](/windows/win32/api/d2d1/nn-d2d1-id2d1strokestyle) -Schnittstelle oder beginnend mit Windows 8 die [**ID2D1StrokeStyle1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1) -Schnittstelle mit einem Pinsel zum Steuern von Pfad Streifen Vorgängen.
+Einige Zeichnungs-APIs stellen Stifte zum Zeichnen von Konturen und Pinsel zum Füllen von Formen bereit. Direct2D ist anders: Es stellt kein Stiftobjekt bereit, sondern verwendet einen Pinsel zum Zeichnen von Konturen und Füllen von Formen. Verwenden Sie beim Zeichnen von Konturen die [**ID2D1StrokeStyle-Schnittstelle,**](/windows/win32/api/d2d1/nn-d2d1-id2d1strokestyle) oder beginnen Sie in Windows 8 der [**ID2D1StrokeStyle1-Schnittstelle**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1) mit einem Pinsel, um Pfad-Strichvorgänge zu steuern.
 
-Ein Pinsel kann nur mit dem Renderziel, von dem es erstellt wurde, und mit anderen renderzielen in derselben Ressourcen Domäne verwendet werden. Im Allgemeinen sollten Sie Pinsel einmal erstellen und Sie für die Lebensdauer des Renderziels aufbewahren, von dem Sie erstellt wurden. [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) ist die einzige Ausnahme. Da es relativ preiswert ist, zu erstellen, können Sie jedes Mal, wenn Sie einen Frame zeichnen, ein **ID2D1SolidColorBrush** erstellen, ohne dass eine spürbare Leistungs Beeinträchtigung erzielt wird. Sie können auch eine einzelne **ID2D1SolidColorBrush** verwenden und die Farbe oder Deckkraft jedes Mal ändern, wenn Sie Sie verwenden.
+Ein Pinsel kann nur mit dem Renderziel, das ihn erstellt hat, und mit anderen Renderzielen in derselben Ressourcendomäne verwendet werden. Im Allgemeinen sollten Sie Pinsel einmal erstellen und für die Lebensdauer des Renderziels beibehalten, das sie erstellt hat. [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) ist die einzige Ausnahme. Da die Erstellung relativ kostengünstig ist, können Sie jedes Mal, wenn Sie einen Frame zeichnen, einen **ID2D1SolidColorBrush** erstellen, ohne dass eine spürbare Leistungssteigerung auftritt. Sie können auch einen einzelnen **ID2D1SolidColorBrush** verwenden und bei jeder Verwendung einfach seine Farbe oder Deckkraft ändern.
 
 ## <a name="step-5-draw-the-rectangle"></a>Schritt 5: Zeichnen des Rechtecks
 
-Verwenden Sie als nächstes den Gerätekontext zum Zeichnen des Rechtecks.
+Verwenden Sie als Nächstes den Gerätekontext, um das Rechteck zu zeichnen.
 
 
 ```C++
@@ -234,16 +234,16 @@ DX::ThrowIfFailed(
 
 
 
-Die [**drawrechteck**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f__id2d1brush_float_id2d1strokestyle)) -Methode nimmt zwei Parameter an: das zu zeichnende Rechteck und den Pinsel, der zum Zeichnen der Kontur des Rechtecks verwendet werden soll. Optional können Sie auch die Optionen Stroke Width, Dash Pattern, Line Join und End Cap angeben.
+Die [**DrawRectangle-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f__id2d1brush_float_id2d1strokestyle)) verwendet zwei Parameter: das zu zeichnende Rechteck und den Pinsel, der zum Zeichnen der Kontur des Rechtecks verwendet werden soll. Optional können Sie auch die Optionen Strichbreite, Bindestrichmuster, Linienverknüpfung und Endendeende angeben.
 
-Sie müssen die [**beginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) -Methode aufrufen, bevor Sie Zeichenbefehle ausgeben, und Sie müssen die [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) -Methode aufrufen, nachdem Sie das Ausgeben von Zeichnungs Befehlen abgeschlossen haben. Die **EndDraw** -Methode gibt ein **HRESULT** zurück, das angibt, ob die Zeichnungs Befehle erfolgreich waren. Wenn dies nicht erfolgreich ist, löst die einschränkte Hilfsfunktion eine Ausnahme aus.
+Sie müssen die [**BeginDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) aufrufen, bevor Sie Zeichnungsbefehle ausgeben, und Sie müssen die [**EndDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufrufen, nachdem Sie mit dem Ausgeben von Zeichnungsbefehlen fertig sind. Die **EndDraw-Methode** gibt ein **HRESULT** zurück, das angibt, ob die Zeichnungsbefehle erfolgreich waren. Wenn dies nicht erfolgreich ist, löst die Hilfsfunktion ThrowIfFailed eine Ausnahme aus.
 
-Die [**idxgiswapchain::P Resent**](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present) -Methode tauscht die Puffer Oberfläche mit der auf der Bildschirmoberfläche aus, um das Ergebnis anzuzeigen.
+Die [**IDXGISwapChain::P Resent-Methode tauscht**](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present) die Pufferoberfläche mit der Bildschirmoberfläche aus, um das Ergebnis anzuzeigen.
 
 ## <a name="example-code"></a>Beispielcode
 
-Der Code in diesem Thema zeigt die grundlegenden Elemente einer Direct2D-Anwendung. Aus Gründen der Kürze lässt das Thema das Anwendungs Framework und den Fehler Behandlungs Code aus, der für eine gut geschriebene Anwendung typisch ist.
+Der Code in diesem Thema zeigt die grundlegenden Elemente einer Direct2D-Anwendung. Aus Gründen der Kürze werden im Thema das Anwendungsframework und der Fehlerbehandlungscode ausgelassen, der ein Merkmal einer gut geschriebenen Anwendung ist.
 
- 
+ 
 
- 
+ 

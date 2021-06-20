@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithsslpolicyserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standard Authentifizierung verwendet wird.
+title: HttpCalculatorWithSslPolicyServiceExample
+description: Überprüfen Sie ein C++-Beispiel für die Windows Web Services-API (WWSAPI) eines HTTP-Rechners mit SSL-Richtliniendienst.
 ms.assetid: 5b3fc119-10c2-444b-91d3-415ad36a65ab
 keywords:
-- Httpcalculatorwithsslpolicyserviceexample Native Webdienste
-- Wwsapi
+- HttpCalculatorWithSslPolicyServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45fd787d10dab20386c016848e238eb345b347f9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 05ef60e86ff6c14bb8fb91369785c197b3994c94
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388298"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409773"
 ---
-# <a name="httpcalculatorwithsslpolicyserviceexample"></a>Httpcalculatorwithsslpolicyserviceexample
+# <a name="httpcalculatorwithsslpolicyserviceexample"></a>HttpCalculatorWithSslPolicyServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standard Authentifizierung verwendet wird. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird durch ein paar aus Benutzername und Kennwort bereitgestellt, das in HTTP-Headern mit dem grundlegenden Schema
+In diesem Beispiel wird gezeigt, wie Sie einen Diensthost zum Hosten eines Rechnerdiensts über HTTP mit SSL-Transportsicherheit und Http-Header-Standardauthentifizierung verwenden. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern mithilfe des basisbasierten Schemas bereitgestellt wird.
 
--   [Httpcalculatorwithsslpolicyservice. cpp](#httpcalculatorwithsslpolicyservicecpp)
--   [Calculatorservicewithpolicy. WSDL](#calculatorservicewithpolicywsdl)
+-   [HttpCalculatorWithSslPolicyService.cpp](#httpcalculatorwithsslpolicyservicecpp)
+-   [CalculatorServiceWithPolicy.wsdl](#calculatorservicewithpolicywsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorwithsslpolicyservicecpp"></a>Httpcalculatorwithsslpolicyservice. cpp
+## <a name="httpcalculatorwithsslpolicyservicecpp"></a>HttpCalculatorWithSslPolicyService.cpp
 
 
 ```C++
@@ -271,7 +271,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewithpolicywsdl"></a>Calculatorservicewithpolicy. WSDL
+## <a name="calculatorservicewithpolicywsdl"></a>CalculatorServiceWithPolicy.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -424,9 +424,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

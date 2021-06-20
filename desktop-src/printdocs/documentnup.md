@@ -1,29 +1,29 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das DocumentNUp-Element, das die Ausgabe und das Format mehrerer logischer Seiten für ein einzelnes physisches Blatt beschreibt.
 ms.assetid: 941515a8-ba3f-47b9-9f3f-08a48122661a
 title: DocumentNUp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab531a2095e83aa35f3dff450270c2a5b4520d62
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 8b49bd4fa3eb9f2b3b0083fc8022dbd6f41d090e
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996287"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409263"
 ---
 # <a name="documentnup"></a>DocumentNUp
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Ausgabe und das Format mehrerer logischer Seiten auf einem einzelnen physischen Blatt. Jedes Dokument wird separat kompiliert. DocumentNUp und JobNUpAllDocuments Schließen sich gegenseitig aus. Der Treiber muss die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern bestimmen.
+Beschreibt die Ausgabe und das Format mehrerer logischer Seiten zu einem einzelnen physischen Blatt. Jedes Dokument wird separat kompiliert. DocumentNUp und JobNUpAllDocumentsContiguously schließen sich gegenseitig aus. Es obliegt dem Treiber, die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern zu bestimmen.
 
-Das folgende Diagramm veranschaulicht ein Beispiel mit Dokument 1 mit drei Seiten und Dokument 2 mit zwei Seiten. Jedes Dokument wird separat verduplext. Die unten gezeigte Darstellungsrichtung ist die RightBottom-Option.
+Das folgende Diagramm veranschaulicht ein Beispiel mit Dokument 1 mit 3 Seiten und Dokument 2 mit 2 Seiten. Jedes Dokument ist separat duplexed. Die unten gezeigte Präsentationsrichtung ist die RightBottom-Option.
 
-![Diagramm, das zeigt, wie Dokumentseiten basierend auf der Documentnupeinstellung auf einem einzelnen Blatt dargestellt werden](images/local-1663869164-docduplex1.gif)
+![Diagramm, das zeigt, wie Dokumentseiten basierend auf der DocumentNup-Einstellung auf einem einzelnen Blatt angeordnet werden](images/local-1663869164-docduplex1.gif)
 
 -   [Elementinformationen](#element-information)
--   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Strukturell](#structural-content)
+-   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -33,15 +33,15 @@ Das folgende Diagramm veranschaulicht ein Beispiel mit Dokument 1 mit drei Seite
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Elementtyp <br/>   | Funktion<br/>                                                                                                                              |
 | Bereichspräfix <br/> | Dokument<br/>                                                                                                                             |
-| Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize, wobei TopLeft durch den Ursprung der x-Achse und y-Achse bezeichnet wird.<br/> |
+| Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize, wobei TopLeft durch den Ursprung der x-Achse und der y-Achse gekennzeichnet ist.<br/> |
 
 
 
  
 
-## <a name="structural-content"></a>Strukturelle Inhalte
+## <a name="structural-content"></a>Strukturell
 
-Die XML-Struktur dieses Elements lautet wie folgt:
+Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ``` syntax
 <psf:Feature name="psk:DocumentNUp">
@@ -80,7 +80,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

@@ -1,19 +1,19 @@
 ---
-description: 'Schritt 2:'
+description: Implementieren Sie die ISpecifyPropertyPages-Schnittstelle im Filter als Teil der Erstellung einer Filtereigenschaftenseite für einen benutzerdefinierten DirectShow-Filter.
 ms.assetid: 8be83564-07ad-47cf-9538-73136f42ba79
 title: 'Schritt 2: Implementieren von ISpecifyPropertyPages'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3125230c8e28c6bd6b8593839d7175bb43d39674
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe37a22c6ba9c14f8656ac41294360569316be1a
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352432"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112410053"
 ---
 # <a name="step-2-implement-ispecifypropertypages"></a>Schritt 2: Implementieren von ISpecifyPropertyPages
 
-Implementieren Sie als nächstes die **ISpecifyPropertyPages** -Schnittstelle in Ihrem Filter. Diese Schnittstelle verfügt über eine einzelne Methode, **GetPages**, die ein Array von CLSIDs für die Eigenschaften Seiten zurückgibt, die der Filter unterstützt. In diesem Beispiel verfügt der Filter über eine einzelne Eigenschaften Seite. Erstellen Sie zunächst die CLSID, und deklarieren Sie Sie in der Header Datei:
+Implementieren Sie als Nächstes die **ISpecifyPropertyPages-Schnittstelle** in Ihrem Filter. Diese Schnittstelle verfügt über eine einzelne **Methode, GetPages,** die ein Array von CLSIDs für die Eigenschaftenseiten zurückgibt, die der Filter unterstützt. In diesem Beispiel verfügt der Filter über eine einzelne Eigenschaftenseite. Generieren Sie zunächst die CLSID, und deklarieren Sie sie in Ihrer Headerdatei:
 
 
 ```C++
@@ -24,7 +24,7 @@ DEFINE_GUID(CLSID_SaturationProp, 0xa9bd4eb, 0xded5,
 
 
 
-Implementieren Sie nun die **GetPages** -Methode:
+Implementieren Sie nun die **GetPages-Methode:**
 
 
 ```C++
@@ -54,15 +54,15 @@ public:
 
 
 
-Zuweisen von Arbeitsspeicher für das Array mit " **CoTaskMemAlloc**". Der Aufrufer gibt den Arbeitsspeicher frei.
+Ordnen Sie Arbeitsspeicher für das Array **mithilfe von CoTaskMemAlloc zu.** Der Aufrufer gibt den Arbeitsspeicher frei.
 
-Weiter: [Schritt 3. Unterstützung von QueryInterface](step-3--support-queryinterface.md).
+Weiter: [Schritt 3. Unterstützung von QueryInterface.](step-3--support-queryinterface.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer Filter Eigenschaften Seite](creating-a-filter-property-page.md)
+[Erstellen einer Filtereigenschaftsseite](creating-a-filter-property-page.md)
 </dt> </dl>
 
  

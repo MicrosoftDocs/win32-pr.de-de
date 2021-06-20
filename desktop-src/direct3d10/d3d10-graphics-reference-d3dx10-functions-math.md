@@ -1,24 +1,24 @@
 ---
-description: Die von der D3DX Utility Library bereitgestellte mathematische Bibliothek stellt Funktionen zum Berechnen von 3D-mathematischen Vorgängen bereit.
+description: Erfahren Sie mehr über die mathematische Bibliothek, die von der D3DX-Hilfsprogrammbibliothek in Direct3D 10 Graphics bereitgestellt wird. Die Bibliothek stellt Funktionen zum Berechnen mathematischer 3D-Operationen bereit.
 ms.assetid: 6e180c12-8cbe-4013-8bb4-3ac5bb9c65f1
 title: Mathematische Funktionen (Direct3D 10-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5401299b1aafd5663d8aaefefa4c7fa0da88a89
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 85b47aec382f8b21d8769722afab51cb69a7452e
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861547"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408043"
 ---
 # <a name="math-functions-direct3d-10-graphics"></a>Mathematische Funktionen (Direct3D 10-Grafiken)
 
 > [!Note]  
-> Die mathematischen Funktionen der D3DX Utility Library sind für Windows 8 veraltet. Es wird empfohlen, stattdessen [directxmath](../dxmath/directxmath-portal.md) zu verwenden.
+> Die mathematischen Funktionen der D3DX-Hilfsprogrammbibliothek sind für Windows 8 veraltet. Es wird empfohlen, stattdessen [DirectXMath](../dxmath/directxmath-portal.md) zu verwenden.
 
  
 
-Die von der D3DX Utility Library bereitgestellte mathematische Bibliothek stellt Funktionen zum Berechnen von 3D-mathematischen Vorgängen bereit. Jede der Funktionen kann dasselbe Objekt wie die über gebenden \[ \] und zurückgegebenen Parameter annehmen \[ \] . Außerdem werden out-Parameter normalerweise als Rückgabewerte zurückgegeben, sodass die Ausgabe einer mathematischen Funktion als Parameter für eine andere mathematische Funktion verwendet werden kann.
+Die von der D3DX-Hilfsprogrammbibliothek bereitgestellte mathematische Bibliothek stellt Funktionen zum Berechnen mathematischer 3D-Operationen bereit. Jede der Funktionen kann das gleiche Objekt wie die übergebenen \[ \] und zurückgegebenen Parameter \[ \] annehmen. Außerdem werden out-Parameter in der Regel als Rückgabewerte zurückgegeben, sodass die Ausgabe einer mathematischen Funktion als Parameter für eine andere mathematische Funktion verwendet werden kann.
 
 -   [**D3DXColorAdjustContrast**](d3d10-d3dxcoloradjustcontrast.md)
 -   [**D3DXColorAdjustSaturation**](d3d10-d3dxcoloradjustsaturation.md)
@@ -76,7 +76,7 @@ Die von der D3DX Utility Library bereitgestellte mathematische Bibliothek stellt
 -   [**D3DXSHEvalConeLight**](d3d10-d3dxshevalconelight.md)
 -   [**D3DXSHEvalDirection**](d3d10-d3dxshevaldirection.md)
 -   [**D3DXSHEvalDirectionalLight**](d3d10-d3dxshevaldirectionallight.md)
--   [**D3DXSHEvalHemisphereLight**](d3d10-d3dxshevalhemispherelight.md)
+-   [**D3DXSHEvalChemisphereLight**](d3d10-d3dxshevalhemispherelight.md)
 -   [**D3DXSHMultiply2**](d3d10-d3dxshmultiply2.md)
 -   [**D3DXSHMultiply3**](d3d10-d3dxshmultiply3.md)
 -   [**D3DXSHMultiply4**](d3d10-d3dxshmultiply4.md)
@@ -116,11 +116,11 @@ Die von der D3DX Utility Library bereitgestellte mathematische Bibliothek stellt
 -   [**D3DXVec4Transform**](d3d10-d3dxvec4transform.md)
 -   [**D3DXVec4TransformArray**](d3d10-d3dxvec4transformarray.md)
 
-## <a name="resolving-link-errors-with-d3dx-math-functions"></a>Auflösen von Link Fehlern mit D3DX Math-Funktionen
+## <a name="resolving-link-errors-with-d3dx-math-functions"></a>Beheben von Linkfehlern mit mathematischen D3DX-Funktionen
 
-Die D3DX Math-Funktionen sind in d3dx10 (D3DX10math. h) und D3DX9 (D3DX9math. h) identisch implementiert. Dies kann zu Verknüpfungs Fehlern führen, wenn ein Projekt sowohl DirectX 9-als auch DirectX 10-Code implementiert und versucht, eine Funktion aus einem Header mit der umgekehrten Bibliothek zu verknüpfen.
+Die mathematischen D3DX-Funktionen werden in D3DX10 (D3DX10math.h) und D3DX9 (D3DX9math.h) identisch implementiert. Dies kann zu Linkfehlern führen, wenn ein Projekt sowohl DirectX 9- als auch DirectX 10-Code implementiert und versucht, eine Funktion aus einem Header mit der entgegengesetzten Bibliothek zu verknüpfen.
 
-Um das Problem der Einbeziehung beider Header auszuschließen, umfasst D3DX10math. h Folgendes \# :
+D3DX10math.h enthält folgende Definitionen, um das Problem des Einschließens beider Header zu \# vermeiden:
 
 
 ```
@@ -130,7 +130,7 @@ Um das Problem der Einbeziehung beider Header auszuschließen, umfasst D3DX10mat
 
 
 
-Um mögliche Verknüpfungs Fehler auszuschließen, verknüpfen die DX SDK-Beispiele zuerst mit D3DX9 Libraries (D3DX9d. lib und D3DX9. lib) und dann mit den d3dx10-Bibliotheken (D3DX10d. lib und d3dx10. lib). Diese Einstellungen befinden sich Unterprojekt/Eigenschaften, wenn Sie Visual Studio verwenden.
+Um mögliche Linkfehler zu vermeiden, verknüpfen die DX SDK-Beispiele zuerst mit D3DX9-Bibliotheken (D3DX9d.lib und D3DX9.lib) und dann mit den D3DX10-Bibliotheken (D3DX10d.lib und D3DX10.lib). Diese Einstellungen befinden sich unter Projekt/Eigenschaften, wenn Sie Visual Studio verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,41 +1,41 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Erfahren Sie mehr über einige der Funktionen und Informationen, die das PrintCapabilities-Dokument nicht bereitstellen soll.
 ms.assetid: 87a897cd-d3aa-488a-b129-9837d3500d0d
-title: Das Dokument "printfunktionalitäten" ist nicht
+title: Was ein PrintCapabilities-Dokument nicht ist
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd6e18082a5e551f3997dad8b9688d84ff2f824a
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 8bcd5dbedf6ee3a7e2713bd3591b182c606cfb0c
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106353274"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409893"
 ---
-# <a name="what-a-printcapabilities-document-is-not"></a>Das Dokument "printfunktionalitäten" ist nicht
+# <a name="what-a-printcapabilities-document-is-not"></a>Was ein PrintCapabilities-Dokument nicht ist
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Es lohnt sich, einige der Funktionen und Informationen aufzulisten, die das Dokument printfunktionalitäten nicht bereitstellen soll.
+Es lohnt sich, einige der Funktionen und Informationen auflisten, die das PrintCapabilities-Dokument nicht bereitstellen soll.
 
-Ein printfunktionalitäten-Dokument:
+Ein PrintCapabilities-Dokument:
 
--   Stellt keine mehrwertigen (Konfigurations abhängigen) Daten dar.
+-   Stellt keine mehrwertigen (konfigurationsabhängigen) Daten dar.
 
-    Jedes Dokument "printfunktionen" wird für eine bestimmte Konfiguration erstellt. Keine Eigenschaft oder ScoredProperty im Dokument kann über einen Wert verfügen, der von der jeweiligen Konfiguration abhängt. In der anfänglichen Schema Version muss der PrintValues-Anbieter das PrintTicket-Eingabeverfahren verarbeiten und ein PrintValues-Dokument erstellen, das die für die im PrintTicket angegebenen Konfigurationen geeigneten Eigenschaftswerte enthält.
+    Jedes PrintCapabilities-Dokument wird für eine bestimmte Konfiguration erstellt. Keine Eigenschaft oder ScoredProperty im Dokument kann einen Wert haben, der von der jeweiligen Konfiguration abhängt. In der anfänglichen Schemaversion muss der PrintCapabilities-Anbieter die Eingabe PrintTicket verarbeiten und ein PrintCapabilities-Dokument erstellen, das Eigenschaftswerte enthält, die für die im PrintTicket angegebene Konfiguration geeignet sind.
 
--   Enthält keine Einschränkungs Informationen.
+-   Enthält keine Einschränkungsinformationen.
 
-    Das Dokument printfunktionalitäten gibt nicht an, welche Konfigurationen zulässig sind und welche nicht zulässig sind. In der ersten Schema Version muss der printfunktionalitäten-Anbieter alle Informationen speichern, die zum Überprüfen von Konfigurationen erforderlich sind, eine Methode bereitstellen, die das PrintTicket-Eingabe Element überprüft, und ein korrigiertes Print Ticket zurückgeben, wenn das angegebene PrintTicket gegen eine oder mehrere Einschränkungen verstößt.
+    Das PrintCapabilities-Dokument gibt nicht an, welche Konfigurationen zulässig und welche nicht zulässig sind. In der anfänglichen Schemaversion muss der PrintCapabilities-Anbieter alle Informationen speichern, die zum Überprüfen von Konfigurationen erforderlich sind, eine Methode zur Überprüfung der PrintTicket-Eingabe angeben und ein korrigiertes PrintTicket zurückgeben, wenn das angegebene PrintTicket gegen eine oder mehrere Einschränkungen verstößt.
 
 -   Enthält keine dynamischen Geräteinformationen.
 
-    Es ist zu viel mehr Aufwand bei der Erstellung des printfunktionalitäten-Dokuments, damit es für die schnelle Änderung von Statusinformationen verwendet werden kann, wie z. b. Freihand Ebenen, verbleibende Papier in jeder Info Leiste oder Papierstau Status.
+    Es ist zu viel Aufwand für die Konstruktion des PrintCapabilities-Dokuments verbunden, damit es für sich schnell ändernde Statusinformationen verwendet werden kann, z. B. Freidruckebenen, Papier, das in jeder Tablettleiste verbleibt, oder Papierstaustatus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

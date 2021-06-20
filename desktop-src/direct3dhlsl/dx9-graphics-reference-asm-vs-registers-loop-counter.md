@@ -1,6 +1,6 @@
 ---
-title: Schleifen Zählers-Register (HLSL vs-Referenz)
-description: Das einzige Register in dieser Bank ist das aktuelle Loop Counter-Register (Al).
+title: Schleifenzählerregister (HLSL VS-Referenz)
+description: Informieren Sie sich über das Schleifenzählerregister für Vertex-Shader. Das einzige Register in dieser Bank ist das aktuelle aL-Register (Loop Counter).
 ms.assetid: b32fabf8-38d3-446c-bb80-c647d5aa028d
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,27 +9,27 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b12f57ba3fcfcb41aaff3827be39dbd1b6b07df1
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
-ms.translationtype: HT
+ms.openlocfilehash: 8fb728420dc48c6cb67d5973085845b0eab742a2
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104389621"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405773"
 ---
-# <a name="loop-counter-register-hlsl-vs-reference"></a>Schleifen Zählers-Register (HLSL vs-Referenz)
+# <a name="loop-counter-register-hlsl-vs-reference"></a>Schleifenzählerregister (HLSL VS-Referenz)
 
-Das einzige Register in dieser Bank ist das aktuelle Loop Counter-Register (Al). Sie wird bei jeder Ausführung des [Schleifen-vs](loop---vs.md)... [ENDLOOP-vs-](endloop---vs.md) Block. Daher kann Sie bei Bedarf im-Block für die relative Adressierung verwendet werden und ist nicht für die Verwendung außerhalb der-Schleife ungültig.
+Das einzige Register in dieser Bank ist das aktuelle aL-Register (Loop Counter). Sie wird bei jeder Ausführung der [Schleife](loop---vs.md)automatisch erhöht – im Vergleich zu ... [endloop – vs](endloop---vs.md) block. Daher kann sie im -Block bei Bedarf für die relative Adressierung verwendet werden und ist ungültig, um sie außerhalb der Schleife zu verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Shader-Register](dx9-graphics-reference-asm-vs-registers.md)
+[Vertex-Shaderregister](dx9-graphics-reference-asm-vs-registers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

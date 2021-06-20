@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX Utility Library bereitgestellt werden. Die folgenden Schnittstellen werden mit der D3DX Utility Library verwendet.
+description: Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX-Hilfsprogrammbibliothek in Direct3D 9 Graphics bereitgestellt werden.
 ms.assetid: 4b8cdbf8-650c-4dd8-a730-b7ba7dad638b
 title: D3DX-Schnittstellen (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd5b66c013d43e1f288bea211f28954660084d50
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5705b37c1089cd965213339f50486a6f1c4f8fd7
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123871"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408173"
 ---
 # <a name="d3dx-interfaces-direct3d-9-graphics"></a>D3DX-Schnittstellen (Direct3D 9-Grafiken)
 
-Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX Utility Library bereitgestellt werden. Die folgenden Schnittstellen werden mit der D3DX Utility Library verwendet.
+Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden. Die folgenden Schnittstellen werden mit der D3DX-Hilfsprogrammbibliothek verwendet.
 
 -   [**ID3DXAllocateHierarchy**](id3dxallocatehierarchy.md)
 -   [**ID3DXAnimationCallbackHandler**](id3dxanimationcallbackhandler.md)

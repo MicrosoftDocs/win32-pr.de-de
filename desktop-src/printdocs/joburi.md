@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das JobURI-Element, das einen URI (Uniform Resource Identifier) für das Dokument angibt.
 ms.assetid: c7abb657-6c9d-435a-a700-2eb0f14707c0
 title: JobURI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3c80611a4e7dbd10f4841fae098578f0a8fdc96
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: ecc145ac9a393c09ecab762b84e9ac7d58870ddf
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107993887"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408613"
 ---
 # <a name="joburi"></a>JobURI
 
@@ -19,7 +19,7 @@ Gibt einen URI (Uniform Resource Identifier) für das Dokument an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -60,7 +60,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 ``` syntax
 <psf:Property name="psk:JobURI">

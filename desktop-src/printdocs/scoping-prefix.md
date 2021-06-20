@@ -1,57 +1,57 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Ein Bereichspräfix ist eine Textbezeichnung, die einem Schemaschlüsselwort vorangestellt ist, um einen kontextbezogenen Bereich bereitzustellen, einschließlich Auftrag, Dokument und Seite.
 ms.assetid: 4bad85d7-a933-43fe-9d79-4835d92c82d6
-title: Bereichs Präfix
+title: Bereichspräfix
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef74be192671124872e19e87973a266da4a09226
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: b2c027de94fda403eb58905e536d8c6256cb2d6c
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "103869624"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404903"
 ---
-# <a name="scoping-prefix"></a>Bereichs Präfix
+# <a name="scoping-prefix"></a>Bereichspräfix
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Ein Bereichs Präfix ist eine Text Bezeichnung, die an ein Schema Schlüsselwort angefügt wird, um einen kontextbezogenen Bereich bereitzustellen. Dies ermöglicht das Zuordnen eines bestimmten und gut verständlichen Kontexts zu Schlüsselwörtern auf vordefinierte Weise. Die Attribute "Print Schema Feature", "ParameterDef", "parameterinit" und "ParameterRef" und "Property Keywords" der Stamm Ebene müssen einen der folgenden Bereichs Präfixe aufweisen: "Job", "Document" oder "page".
+Ein Bereichspräfix ist eine Textbezeichnung, die einem Schemaschlüsselwort vorangestellt ist, um einen kontextbezogenen Bereich bereitzustellen. Dies ermöglicht das Abonnieren eines bestimmten und wohlverstandenen Kontexts für Schlüsselwörter auf vordefinierte Weise. Druckschemafunktion, ParameterDef, ParameterInit und ParameterRef und Eigenschaftsschlüsselwortelemente auf Stammebene MÜSSEN eines der folgenden Bereichspräfixe aufweisen: "Job", "Document" oder "Page".
 
-## <a name="interpretation-of-the-scoping-prefix-with-printticket-content"></a>Interpretation des Bereichs Präfixes mit PrintTicket-Inhalt
+## <a name="interpretation-of-the-scoping-prefix-with-printticket-content"></a>Interpretation des Bereichspräfixes mit PrintTicket-Inhalt
 
-Print Ticket kann in drei Inhalts Ebenen aufgeteilt werden, die den auf hoher Ebene, die Dokumente im Auftrag und die Seiten in den einzelnen Dokumenten darstellen. Diese Ebenen werden entsprechend der Spezifizität sortiert. die Auftrags Ebene ist die allgemeinste, dann die Dokument Ebene und dann die Seitenebene. Ein Auftrag besteht aus einem oder mehreren Dokumenten, und ein Dokument besteht aus einer oder mehreren Seiten.
+Das PrintTicket kann in drei Inhaltsebenen unterteilt werden, die den Auftrag auf hoher Ebene, die Dokumente im Auftrag und die Seiten in den einzelnen Dokumenten darstellen. Diese Ebenen werden nach Spezifität eingestuft. Die Auftragsebene ist am allgemeinsten, dann die Dokumentebene und dann die Seitenebene am spezifischsten. Ein Auftrag besteht aus einem oder mehreren Dokumenten und ein Dokument aus mindestens einer Seite.
 
-## <a name="job-level-prefix"></a>Präfix auf Auftrags Ebene
+## <a name="job-level-prefix"></a>Präfix auf Auftragsebene
 
-Ein Ticket auf Auftrags Ebene enthält alle Auftrags Formatierungs Einstellungen, die für den gesamten Auftrag gelten sollen. Alle Elemente mit den Bereichs Präfixen "Job", "Document" oder "page" sind in einem Ticket auf Auftrags Ebene zulässig.
+Ein Ticket auf Auftragsebene enthält alle Einstellungen für die Auftragsformatierung, die für einen gesamten Auftrag gelten sollen. Alle Elemente mit Bereichspräfixen "Job", "Document" oder "Page" sind in einem Ticket auf Auftragsebene zulässig.
 
-Die in einem Ticket auf der Auftrags Ebene angegebenen Einstellungen für "Dokument" und "Seite" werden automatisch auf die Tickets auf Dokument-und Seitenebene angewendet.
+Die in einem Auftragsebenenticket angegebenen Einstellungen mit dem Präfix "Dokument" und "Seite" werden automatisch auf die Tickets auf Dokument- und Seitenebene angewendet.
 
-## <a name="document-level-prefix"></a>Präfix auf Dokument Ebene
+## <a name="document-level-prefix"></a>Präfix auf Dokumentebene
 
-Das Ticket auf Dokument Ebene enthält alle Auftrags Formatierungs Einstellungen, die auf ein oder mehrere Dokumente in einem Auftrag angewendet werden sollen. Diese können Einstellungen enthalten, die zuvor im Ticket auf Auftrags Ebene angegeben wurden. Nur Elemente mit Bereichs Präfixen "Document" oder "page" sind in einem Ticket auf Dokument Ebene zulässig.
+Das Ticket auf Dokumentebene enthält alle Einstellungen für die Auftragsformatierung, die für ein oder mehrere Dokumente in einem Auftrag gelten sollen. Dazu können Einstellungen gehören, die zuvor im Ticket für die Auftragsebene angegeben wurden. Nur Elemente mit Bereichspräfixen "Dokument" oder "Seite" sind in einem Ticket auf Dokumentebene zulässig.
 
-Ein Ticket auf Dokument Ebene kann zuvor durch das Ticket auf Auftrags Ebene angegebene Einstellungen für ein Dokument mit Präfix enthalten.
+Ein Ticket auf Dokumentebene kann Einstellungen mit Dokumentpräfix enthalten, die zuvor vom Ticket auf Auftragsebene angegeben wurden.
 
 ## <a name="page-level-prefix"></a>Präfix auf Seitenebene
 
-Das Ticket auf Seitenebene umfasst alle Auftrags Formatierungs Einstellungen, die auf eine oder mehrere Seiten eines Auftrags angewendet werden sollen (nicht auf ein einzelnes Dokument beschränkt). Diese können Einstellungen enthalten, die zuvor im Ticket für die Auftrags-oder Dokument Ebene angegeben wurden. Nur Elemente mit Bereichs Präfixen "page" sind in einem Ticket auf Seitenebene zulässig.
+Das Ticket auf Seitenebene enthält alle Einstellungen für die Auftragsformatierung, die für eine oder mehrere Seiten eines Auftrags gelten sollen (nicht auf ein einzelnes Dokument beschränkt). Dies können Einstellungen sein, die zuvor im Auftrags- oder Dokumentebenenticket angegeben wurden. In einem Ticket auf Seitenebene sind nur Elemente mit Bereichspräfixen von "Page" zulässig.
 
-Ein Ticket auf Seitenebene kann "page"-Einstellungen enthalten, die zuvor durch das Ticket auf Auftrags Ebene und/oder das Ticket auf Dokument Ebene festgelegt wurden.
+Ein Ticket auf Seitenebene kann Einstellungen mit dem Präfix "Page" enthalten, die zuvor durch das Ticket auf Auftragsebene und/oder das Ticket auf Dokumentebene angegeben wurden.
 
-## <a name="prefix-usage-within-a-printticket-or-print-capabilities-document"></a>Präfix Verwendung innerhalb eines PrintTicket-oder Druck Funktions Dokuments
+## <a name="prefix-usage-within-a-printticket-or-print-capabilities-document"></a>Präfixverwendung in einem PrintTicket- oder Print Capabilities-Dokument
 
-Die Dokumente PrintTicket und Print-Funktionen dürfen nicht mehrere Schlüsselwörter enthalten, die sich nur im Bereichs Präfix unterscheiden. Beispielsweise darf für ein printfunktionalitäten-Dokument nicht sowohl "JobInputBin" als auch "paginput bin" angegeben werden. Für ein Dokument mit Druckfunktionen sind jedoch möglicherweise sowohl "jobduplexalldocumentscontiguron" als auch "DocumentDuplex" angegeben, da diese als verschiedene Merkmale angesehen werden, da Sie unterschiedliche Verhaltensweisen aufweisen? Dieses Beispiel gilt auch für ein einzelnes Print Ticket.
+PrintTicket- und PrintCapabilities-Dokumente DÜRFEN NICHT mehrere Schlüsselwörter enthalten, die sich nur im Bereichspräfix unterscheiden. Beispielsweise DARF für ein PrintCapabilities-Dokument NICHT sowohl JobInputBin als auch PageInputBin angegeben sein. Für ein Dokument mit Druckfunktionen können jedoch sowohl JobDuplexAllDocumentsContiguously als auch DocumentDuplex angegeben werden, da diese als unterschiedliche Features betrachtet werden, da sie ein abweichendes Verhalten aufweisen. Dieses Beispiel gilt auch für ein einzelnes PrintTicket.
 
-## <a name="prefix-conflict-management"></a>Präfix Konflikt Verwaltung
+## <a name="prefix-conflict-management"></a>Präfixkonfliktverwaltung
 
-Ein Schlüsselwort Konflikt zwischen Einstellungen wird als definiert, das gleiche Druck Schema Element auf Stamm Ebene, das durch das XML-Attribut "Name" gekennzeichnet ist, das in Tickets mit mehreren Ebenen angezeigt wird. Wenn kein Konflikt vorliegt, kann ein Element mit Präfix Bereich von einem allgemeineren Ticket zu einem spezifischeren Ticket herunter geschoben oder geerbt werden. Tritt ein Konflikt auf, hat die Einstellung des spezifischsten Tickets Vorrang. Das heißt, pro Seiteneinstellungen in einem Ticket auf Seitenebene überschreiben die identischen Einstellungen pro Seite in einem Dokument oder auf einem Ticket auf Auftrags Ebene. Ebenso haben Dokument Einstellungen im Ticket auf Dokument Ebene Vorrang vor Dokument Einstellungen im Ticket auf Auftrags Ebene.
+Ein Schlüsselwortkonflikt zwischen Einstellungen wird als dasselbe Druckschemaelement auf Stammebene definiert, das durch das XML-Attribut "Name" bezeichnet wird und in mehreren Level-Tickets angezeigt wird. Wenn kein Konflikt vorliegt, kann ein präfixbezogenes Element von einem allgemeineren Ticket auf ein spezifischeres Ticket gepusht oder geerbt werden. Wenn ein Konflikt vorliegt, hat die Einstellung des spezifischsten Tickets Vorrang. Das heißt, dass die Einstellungen pro Seite in einem Ticket auf Seitenebene die identischen Einstellungen pro Seite in einem Dokument- oder Auftragsebenenticket überschreiben. Auf ähnliche Weise haben Dokumenteinstellungen im Ticket auf Dokumentebene Vorrang vor Dokumenteinstellungen im Auftragsebenenticket.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

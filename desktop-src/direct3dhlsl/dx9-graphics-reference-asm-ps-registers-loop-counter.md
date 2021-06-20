@@ -1,6 +1,6 @@
 ---
-title: Schleifen Zählers-Register (HLSL PS-Referenz)
-description: Das einzige Register in dieser Bank ist das aktuelle Loop Counter-Register (Al).
+title: Schleifenzählerregister (HLSL-PS-Referenz)
+description: Informieren Sie sich über das Schleifenzählerregister für Pixel-Shader. Das einzige Register in dieser Bank ist das aktuelle aL-Register (Loop Counter).
 ms.assetid: 36999873-a251-4939-aac0-faa7f910bc33
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,26 +9,26 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 47582552b7e32ede7cd83637cbc3900494dfd611
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: b2a2f7f42c83308fa72ceae2875c35c600dfd7db
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "103719541"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405513"
 ---
-# <a name="loop-counter-register-hlsl-ps-reference"></a>Schleifen Zählers-Register (HLSL PS-Referenz)
+# <a name="loop-counter-register-hlsl-ps-reference"></a>Schleifenzählerregister (HLSL-PS-Referenz)
 
-Das einzige Register in dieser Bank ist das aktuelle Loop Counter-Register (Al). Sie wird bei jeder Ausführung des [Loop-PS](loop---ps.md)- / [ENDLOOP-PS-](endloop---ps.md) Blocks automatisch inkrementiert. Daher kann Sie bei Bedarf im-Block für die relative Adressierung verwendet werden und ist nicht für die Verwendung außerhalb der-Schleife ungültig.
+Das einzige Register in dieser Bank ist das aktuelle aL-Register (Loop Counter). Bei jeder Ausführung der [Schleife](loop---ps.md)– ps / [endloop](endloop---ps.md) – ps block – wird sie automatisch erhöht. Daher kann sie im -Block bei Bedarf für die relative Adressierung verwendet werden und ist ungültig, um sie außerhalb der Schleife zu verwenden.
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|-------|------|------|-------|
-| Schleifen-Counter-Register |      |      |      |      |      |       |      | x    | x     |
+| Schleifenzählerregister |      |      |      |      |      |       |      | x    | x     |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -37,9 +37,9 @@ Das einzige Register in dieser Bank ist das aktuelle Loop Counter-Register (Al).
 [Register](dx9-graphics-reference-asm-ps-registers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

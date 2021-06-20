@@ -1,49 +1,49 @@
 ---
 title: WMDM-Strukturen
-description: Strukturen
+description: Dieser Artikel enthält Referenzartikel zu Von Windows Media Geräte-Manager definierten Strukturen, z. B. _BITMAPINFOHEADER und MTP_COMMAND_DATA_IN.
 ms.assetid: 3068359f-5ac0-41e0-a09b-283b439527a0
 keywords:
-- Windows Media-Device Manager, Strukturen
-- Device Manager, Strukturen
-- Programmier Referenz, Strukturen
-- Referenz für Windows Media-Device Manager, Strukturen
+- Windows Media Geräte-Manager,Strukturen
+- Geräte-Manager,Strukturen
+- Programmierreferenz,Strukturen
+- Referenz für Windows Media Geräte-Manager,Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 903aa07bbe3d01029eb2020b521523b545843f2a
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 7cc49deb3f4dd28695f5e0e7c3a871c53fa96300
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104389624"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406503"
 ---
 # <a name="wmdm-structures"></a>WMDM-Strukturen
 
-In Windows Media Device Manager werden die folgenden Strukturen definiert.
+Windows Media Geräte-Manager definiert die folgenden Strukturen.
 
 
 
-| Struktur                                                   | BESCHREIBUNG                                                                                                                                                                                                                                              |
+| Struktur                                                   | Beschreibung                                                                                                                                                                                                                                              |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_BITMAPINFOHEADER**](-bitmapinfoheader.md)             | Definiert das Format des Video Frames.                                                                                                                                                                                                                       |
-| [**MTP- \_ Befehls \_ Daten \_ in**](/windows/desktop/api/MtpExt/ns-mtpext-mtp_command_data_in)       | Enthält benutzerdefinierte MTP (Media Transport Protocol)-Befehle, die mithilfe der [**IWMDMDevice3::D eviceiocontrol**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-deviceiocontrol) -Methode an das Gerät gesendet werden.                                                                           |
-| [**MTP- \_ Befehls \_ Datenausgabe \_**](/windows/desktop/api/MtpExt/ns-mtpext-mtp_command_data_out)     | Enthält MTP-Antworten (Media Transport Protocol), die vom Gerätetreiber ausgefüllt werden.                                                                                                                                                                  |
-| [**Opaquecommand**](opaquecommand.md)                      | Enthält Daten für Befehle, die über Windows Media Device Manager an ein Gerät übermittelt werden, jedoch nicht von Windows Media Device Manager behandelt werden sollen.                                                                                       |
-| [**\_Videoinfoheader**](-videoinfoheader.md)               | Definiert das Format eines Videodaten Stroms.                                                                                                                                                                                                                    |
+| [**\_BITMAPINFOHEADER**](-bitmapinfoheader.md)             | Definiert das Format des Videoframes.                                                                                                                                                                                                                       |
+| [**\_MTP-BEFEHLSDATEN \_ \_ IN**](/windows/desktop/api/MtpExt/ns-mtpext-mtp_command_data_in)       | Enthält benutzerdefinierte MTP-Befehle (Media Transport Protocol), die mithilfe der [**IWMDMDevice3::D eviceIoControl-Methode**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-deviceiocontrol) an das Gerät gesendet werden.                                                                           |
+| [**MTP \_ COMMAND \_ DATA \_ OUT**](/windows/desktop/api/MtpExt/ns-mtpext-mtp_command_data_out)     | Enthält MTP-Antworten (Media Transport Protocol), die vom Gerätetreiber ausgefüllt werden.                                                                                                                                                                  |
+| [**OPAQUECOMMAND**](opaquecommand.md)                      | Enthält Daten für Befehle, die über Windows Media Geräte-Manager an ein Gerät übergeben werden, aber nicht von Windows Media Geräte-Manager verarbeitet werden sollen.                                                                                       |
+| [**\_VIDEOINFOHEADER**](-videoinfoheader.md)               | Definiert das Format eines Videostreams.                                                                                                                                                                                                                    |
 | [**\_WAVEFORMATEX**](-waveformatex.md)                     | Definiert das Format von Waveform-Audiodaten.                                                                                                                                                                                                               |
-| [**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md)  | Beschreibt die Funktionen eines Geräts für ein bestimmtes Format. Diese Struktur enthält eine Reihe von Eigenschaften Konfigurationen in einem Array von [**WMDM- \_ Prop- \_ Konfigurations**](wmdm-prop-config.md) Strukturen.                                                       |
-| [**WMDM- \_ Prop- \_ Konfiguration**](wmdm-prop-config.md)              | Beschreibt einen Satz kompatibler Eigenschaftswerte für alle Eigenschaften, die vom Gerät für ein bestimmtes Format unterstützt werden. Diese Struktur enthält eine Reihe von Eigenschafts Beschreibungen in einem Array von [**WMDM-unter \_ \_**](wmdm-prop-desc.md) geordneten Strukturen. |
-| [**WMDM- \_ Prop- \_ Abteilung**](wmdm-prop-desc.md)                  | Beschreibt gültige Werte einer Eigenschaft in einer bestimmten Eigenschaften Konfiguration.                                                                                                                                                                             |
-| [**WMDM- \_ Prop \_ Values- \_ Enumeration**](wmdm-prop-values-enum.md)   | Enthält einen Aufzählungs Satz gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaften Konfiguration.                                                                                                                                             |
-| [**Bereich der WMDM- \_ Prop- \_ Werte \_**](wmdm-prop-values-range.md) | Beschreibt den Bereich gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaften Konfiguration.                                                                                                                                                        |
-| [**Wmdmdatetime**](wmdmdatetime.md)                        | Enthält ein Datum und eine Uhrzeit.                                                                                                                                                                                                                                |
-| [**Wmdmid**](wmdmid.md)                                    | Beschreibt Seriennummern und Gruppen-IDs.                                                                                                                                                                                                                  |
+| [**\_WMDM-FORMATFUNKTION \_**](wmdm-format-capability.md)  | Beschreibt die Funktionen eines Geräts für ein bestimmtes Format. Diese Struktur enthält eine Reihe von Eigenschaftenkonfigurationen in einem Array von [**WMDM \_ PROP \_ CONFIG-Strukturen.**](wmdm-prop-config.md)                                                       |
+| [**WMDM \_ PROP \_ CONFIG**](wmdm-prop-config.md)              | Beschreibt einen Satz kompatibler Eigenschaftswerte für alle Eigenschaften, die vom Gerät für ein bestimmtes Format unterstützt werden. Diese Struktur enthält eine Reihe von Eigenschaftenbeschreibungen in einem Array von [**WMDM \_ PROP \_ DESC-Strukturen.**](wmdm-prop-desc.md) |
+| [**WMDM \_ PROP \_ DESC**](wmdm-prop-desc.md)                  | Beschreibt gültige Werte einer Eigenschaft in einer bestimmten Eigenschaftenkonfiguration.                                                                                                                                                                             |
+| [**WMDM \_ PROP \_ VALUES \_ ENUM**](wmdm-prop-values-enum.md)   | Enthält einen Aufzählungssatz gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaftenkonfiguration.                                                                                                                                             |
+| [**WMDM \_ PROP \_ VALUES \_ RANGE**](wmdm-prop-values-range.md) | Beschreibt den Bereich gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaftenkonfiguration.                                                                                                                                                        |
+| [**WMDMDATETIME**](wmdmdatetime.md)                        | Enthält ein Datum und eine Uhrzeit.                                                                                                                                                                                                                                |
+| [**WMDMID**](wmdmid.md)                                    | Beschreibt Seriennummern und Gruppen-IDs.                                                                                                                                                                                                                  |
 | [**WMDMMetadataView**](wmdmmetadataview.md)                | Definiert die Metadatenansicht.                                                                                                                                                                                                                               |
-| [**Wmdmrights**](wmdmrights.md)                            | Beschreibt Inhalts Nutzungsrechte.                                                                                                                                                                                                                            |
-| [**Wmfilefunktionen**](wmfilecapabilities.md)            | Beschreibt einen MIME-Typ.                                                                                                                                                                                                                                   |
+| [**WMDMRIGHTS**](wmdmrights.md)                            | Beschreibt Rechte zur Inhaltsverwendung.                                                                                                                                                                                                                            |
+| [**WMFILECAPABILITIES**](wmfilecapabilities.md)            | Beschreibt einen MIME-Typ.                                                                                                                                                                                                                                   |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,9 +52,9 @@ In Windows Media Device Manager werden die folgenden Strukturen definiert.
 [**Programmierverzeichnis**](programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

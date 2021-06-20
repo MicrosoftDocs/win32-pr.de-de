@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das JobDuplexAllDocumentsContiguously-Element, das die Duplexmerkmale der Ausgabe beschreibt.
 ms.assetid: dd24166c-d5e2-420e-8a8c-e1a25728ab2f
 title: JobDuplexAllDocumentsContiguously
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e5ae88213af15b53f71e406b4caf791b80f286f
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 20a8911a4c62644bfc073a2a9c1dcfd67dad536a
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998217"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408953"
 ---
 # <a name="jobduplexalldocumentscontiguously"></a>JobDuplexAllDocumentsContiguously
 
@@ -19,7 +19,7 @@ Beschreibt die Duplexmerkmale der Ausgabe. Das Duplexfeature ermöglicht das Dru
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -63,17 +63,17 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                             | Zusammenfassung                                                                                                                                |
 |------------------------------------|-------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                     |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                      | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                           |
-| \_DuplexModeValue\_<br/>     | Zeichenfolge<br/> | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                | Definiert den Duplexmodus. Die automatische Duplexduplex wird von der Hardware ausgeführt. Manuelles Duplexing wird von Software und dem Benutzer ausgeführt.<br/> |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name gemäß der Definition von https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname . Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                     |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                      | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>                                                           |
+| \_DuplexModeValue\_<br/>     | Zeichenfolge<br/> | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                | Definiert den Duplexmodus. Automatischer Duplexvorgang wird von Hardware ausgeführt. Das manuelle Duplexing wird von Software und dem Benutzer durchgeführt.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
-Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:JobDuplexAllDocumentsContiguously">

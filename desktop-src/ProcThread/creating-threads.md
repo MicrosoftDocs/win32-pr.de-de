@@ -1,23 +1,23 @@
 ---
-description: Die Funktion "kreatethread" erstellt einen neuen Thread für einen Prozess.
+description: Erfahren Sie, wie Sie die CreateThread-Funktion verwenden, um einen neuen Thread für einen Prozess zu erstellen. Sehen Sie sich ein Codebeispiel an, das die Verwendung zeigt.
 ms.assetid: eb0cc3c0-14f2-4913-a592-4ba3eaf67002
 title: Erstellen von Threads
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 545088779bdaff665a8079296014535ab244e821
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: befd6c00cadb6758d076ad6c4d0fe940cf855f89
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349853"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406733"
 ---
 # <a name="creating-threads"></a>Erstellen von Threads
 
-Die Funktion " [**kreatethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " erstellt einen neuen Thread für einen Prozess. Der Erstellungs Thread muss die Startadresse des Codes angeben, den der neue Thread ausführen soll. Die Startadresse ist in der Regel der Name einer im Programmcode definierten Funktion (Weitere Informationen finden Sie unter [*ThreadProc*](/previous-versions/windows/desktop/legacy/ms686736(v=vs.85))). Diese Funktion nimmt einen einzelnen Parameter an und gibt einen **DWORD** -Wert zurück. Ein Prozess kann mehrere Threads gleichzeitig dieselbe Funktion ausführen.
+Die [**CreateThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) erstellt einen neuen Thread für einen Prozess. Der erstellende Thread muss die Startadresse des Codes angeben, der vom neuen Thread ausgeführt werden soll. In der Regel ist die Startadresse der Name einer Funktion, die im Programmcode definiert ist (weitere Informationen finden Sie unter [*ThreadProc*](/previous-versions/windows/desktop/legacy/ms686736(v=vs.85))). Diese Funktion verwendet einen einzelnen Parameter und gibt einen **DWORD-Wert** zurück. Ein Prozess kann mehrere Threads aufweisen, die gleichzeitig dieselbe Funktion ausführen.
 
-Im folgenden finden Sie ein einfaches Beispiel, das veranschaulicht, wie ein neuer Thread erstellt wird, der die lokal definierte Funktion ausführt `MyThreadFunction` .
+Im Folgenden ist ein einfaches Beispiel dargestellt, das veranschaulicht, wie ein neuer Thread erstellt wird, der die lokal definierte Funktion `MyThreadFunction` ausführt.
 
-Der aufrufende Thread verwendet die [**WaitForMultipleObjects**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjects) -Funktion, um beizubehalten, bis alle Arbeitsthreads beendet wurden. Der Aufruf Thread blockiert, während er wartet. um die Verarbeitung fortzusetzen, verwendet ein aufrufenden Thread [**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) und wartet, bis jeder Arbeits Thread sein warte Objekt signalisiert. Beachten Sie Folgendes: Wenn Sie das Handle für einen Arbeits Thread vor dem Beenden schließen, wird der Arbeits Thread dadurch nicht beendet. Allerdings steht das Handle nicht für die Verwendung in nachfolgenden Funktionsaufrufen zur Verfügung.
+Der aufrufende Thread verwendet die [**WaitForMultipleObjects-Funktion,**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjects) um so lange zu speichern, bis alle Arbeitsthreads beendet wurden. Der aufrufende Thread wird blockiert, während er wartet. Um die Verarbeitung fortzusetzen, verwendet ein aufrufender Thread [**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) und wartet, bis jeder Arbeitsthread sein Wait-Objekt signalisiert. Beachten Sie Folgendes: Wenn Sie das Handle vor dem Beenden eines Arbeitsthreads schließen würden, wird der Arbeitsthread nicht beendet. Das Handle ist jedoch nicht für die Verwendung in nachfolgenden Funktionsaufrufen verfügbar.
 
 
 ```C++
@@ -180,17 +180,17 @@ void ErrorHandler(LPTSTR lpszFunction)
 
 
 
-Die- `MyThreadFunction` Funktion vermeidet die Verwendung der C-Lauf Zeit Bibliothek (CRT), da viele ihrer Funktionen nicht Thread sicher sind, insbesondere, wenn Sie die multithreadcrt nicht verwenden. Wenn Sie die CRT in einer Funktion verwenden möchten `ThreadProc` , verwenden Sie stattdessen die **\_ beginthreadex** -Funktion.
+Die `MyThreadFunction` Funktion vermeidet die Verwendung der C-Laufzeitbibliothek (CRT), da viele ihrer Funktionen nicht threadsicher sind, insbesondere wenn Sie die Multithread-CRT nicht verwenden. Wenn Sie die CRT in einer Funktion verwenden `ThreadProc` möchten, verwenden Sie stattdessen die **\_ beginthreadex-Funktion.**
 
-Es ist riskant, die Adresse einer lokalen Variablen zu übergeben, wenn der erstellende Thread vor dem neuen Thread beendet wird, da der Zeiger ungültig wird. Übergeben Sie stattdessen einen Zeiger auf dynamisch belegten Speicher, oder lassen Sie den Erstellungs Thread warten, bis der neue Thread beendet wird. Daten können auch vom ergebenden Thread an den neuen Thread mithilfe globaler Variablen weitergegeben werden. Bei globalen Variablen ist es normalerweise erforderlich, den Zugriff durch mehrere Threads zu synchronisieren. Weitere Informationen zur Synchronisierung finden Sie unter [Synchronisieren der Ausführung mehrerer Threads](synchronizing-execution-of-multiple-threads.md).
+Es ist riskant, die Adresse einer lokalen Variablen zu übergeben, wenn der erstellende Thread vor dem neuen Thread beendet wird, da der Zeiger ungültig wird. Übergeben Sie stattdessen entweder einen Zeiger auf dynamisch zugeordneten Speicher, oder warten Sie, bis der neue Thread beendet wird. Daten können auch mithilfe globaler Variablen vom erstellenden Thread an den neuen Thread übergeben werden. Bei globalen Variablen ist es in der Regel erforderlich, den Zugriff durch mehrere Threads zu synchronisieren. Weitere Informationen zur Synchronisierung finden Sie unter [Synchronisieren der Ausführung mehrerer Threads.](synchronizing-execution-of-multiple-threads.md)
 
-Der Erstellungsthread kann die Argumente für " [**kreatethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " verwenden, um Folgendes anzugeben:
+Der erstellende Thread kann die Argumente für [**CreateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) verwenden, um Folgendes anzugeben:
 
--   Die Sicherheits Attribute für das Handle für den neuen Thread. Diese Sicherheits Attribute enthalten ein Vererbungsflag, das bestimmt, ob das Handle von untergeordneten Prozessen geerbt werden kann. Die Sicherheits Attribute enthalten außerdem eine Sicherheits Beschreibung, die das System verwendet, um Zugriffs Überprüfungen für alle nachfolgenden Verwendungen des Thread Handles durchzuführen, bevor der Zugriff gewährt wird.
--   Die anfängliche Stapelgröße des neuen Threads. Der Thread Stapel wird automatisch im Speicherbereich des Prozesses zugeordnet. Das System vergrößert den Stapel bei Bedarf und gibt ihn frei, wenn der Thread beendet wird. Weitere Informationen finden Sie unter [Thread Stapelgröße](thread-stack-size.md).
--   Ein Erstellungsflag, das es Ihnen ermöglicht, den Thread in einem angehaltenen Zustand zu erstellen. Wenn der Thread angehalten wird, wird er erst ausgeführt, wenn die [**ResumeThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread) -Funktion aufgerufen wird.
+-   Die Sicherheitsattribute für das Handle für den neuen Thread. Diese Sicherheitsattribute enthalten ein Vererbungsflag, das bestimmt, ob das Handle von untergeordneten Prozessen geerbt werden kann. Die Sicherheitsattribute enthalten auch einen Sicherheitsdeskriptor, der vom System verwendet wird, um Zugriffsüberprüfungen für alle nachfolgenden Verwendungen des Threadhandle durchzuführen, bevor der Zugriff gewährt wird.
+-   Die Anfangsstapelgröße des neuen Threads. Der Stapel des Threads wird automatisch im Arbeitsspeicherbereich des Prozesses zugeordnet. das System erhöht den Stapel nach Bedarf und gibt ihn frei, wenn der Thread beendet wird. Weitere Informationen finden Sie unter [Threadstapelgröße.](thread-stack-size.md)
+-   Ein Erstellungsflag, mit dem Sie den Thread in einem angehaltenen Zustand erstellen können. Wenn der Thread angehalten wird, wird er erst ausgeführt, nachdem die [**ResumeThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread) aufgerufen wurde.
 
-Sie können auch einen Thread erstellen, indem Sie die [**createremotethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) -Funktion aufrufen. Diese Funktion wird von debuggerprozessen verwendet, um einen Thread zu erstellen, der im Adressraum des Prozesses ausgeführt wird, der gedebuggt wird.
+Sie können auch einen Thread erstellen, indem Sie die [**CreateRemoteThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) aufrufen. Diese Funktion wird von Debuggerprozessen verwendet, um einen Thread zu erstellen, der im Adressraum des prozesses ausgeführt wird, der gedebuggt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

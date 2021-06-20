@@ -1,30 +1,30 @@
 ---
 title: Konfiguration (Windows Multimedia)
-description: Konfiguration
+description: Erfahren Sie, wie Ein Windows Multimedia-Treiber Benutzern das Auswählen von Konfigurationseinstellungen ermöglichen kann, indem ein Konfigurationsdialogfeld angezeigt wird.
 ms.assetid: d61d6c8b-8dba-45c2-ba99-0b2111a2d624
 keywords:
-- installierbare Treiber, Konfiguration
-- installierbare Treiber, DRV_CONFIGURE Meldung
+- Installierbare Treiber, Konfiguration
+- Installierbare Treiber, DRV_CONFIGURE Meldung
 - DRV_CONFIGURE Meldung
 - DRV_QUERYCONFIGURE Meldung
-- Drvconfiginfo-Meldung
-- Konfigurieren installier barer Treiber
+- DRVCONFIGINFO-Meldung
+- Konfigurieren von installierbaren Treibern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20a248f992a857b88b723bd54c771f1af5709d97
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 7804e4d92d30d666d4d28c253a1a44572a707daa
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039962"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112403923"
 ---
 # <a name="configuration-windows-multimedia"></a>Konfiguration (Windows Multimedia)
 
-Mithilfe eines installierbaren Treibers können Benutzer Konfigurationseinstellungen für den Treiber und die zugehörige Hardware auswählen, indem Sie beim verarbeiten [**der \_ drv**](drv-configure.md) -Konfigurations Nachricht ein Konfigurations Dialogfeld anzeigen. Der Treiber ist verantwortlich für das Erstellen und Verwalten des Dialog Felds, das Verarbeiten von Benutzereingaben aus dem Dialogfeld und das Ändern der Konfiguration des Treibers bzw. der Hardware, wie vom Benutzer angefordert. Der Treiber muss eine separate Dialogfeld Prozedur zum Verarbeiten von Fenster Meldungen für das Dialogfeld und eine Dialogfeld Vorlage bereitstellen, um die Darstellung und den Inhalt des Dialog Felds zu definieren.
+Mit einem installierbaren Treiber können Benutzer Konfigurationseinstellungen für den Treiber und die zugehörige Hardware auswählen, indem sie bei der Verarbeitung der [**DRV \_ CONFIGURE-Meldung**](drv-configure.md) ein Konfigurationsdialogfeld anzeigen. Der Treiber ist dafür verantwortlich, das Dialogfeld zu erstellen und zu verwalten, alle Benutzereingaben aus dem Dialogfeld zu verarbeiten und die Konfiguration des Treibers oder der Hardware wie vom Benutzer angefordert zu ändern. Der Treiber muss eine separate Dialogfeldprozedur zum Verarbeiten von Fenstermeldungen für das Dialogfeld und eine Dialogfeldvorlage bereitstellen, um die Darstellung und den Inhalt des Dialogfelds zu definieren.
 
-Vor dem Empfang der drv- \_ Konfigurations Nachricht erhält ein Treiber die [**drv-Abfrage " \_ queryconfigure**](drv-queryconfigure.md) ". Der Treiber muss einen Wert ungleich 0 (null) an die Abfrage zurückgeben, um den Empfang der nachfolgenden drv- \_ Konfigurations Meldung sicherzustellen.
+Vor dem Empfang der DRV \_ CONFIGURE-Nachricht empfängt ein Treiber die [**DRV \_ QUERYCONFIGURE-Nachricht.**](drv-queryconfigure.md) Der Treiber muss einen Wert ungleich 0 (null) an die Abfrage zurückgeben, um sicherzustellen, dass die nachfolgende DRV \_ CONFIGURE-Nachricht empfangen wird.
 
-Wenn Sie das Dialogfeld Konfiguration initialisieren, ruft der Treiber normalerweise Konfigurationsinformationen aus der Registrierung ab. Um diese Informationen zu finden, enthält die drv \_ -Konfigurations Nachricht in der Regel die Adresse einer [**drvconfiginfo**](/windows/win32/api/mmiscapi/ns-mmiscapi-drvconfiginfo) -Struktur, die die Namen des Registrierungsschlüssels und des Werts enthält, die dem Treiber zugeordnet sind. Wenn der Benutzer Änderungen an der Konfiguration anfordert, sollte der Treiber die Konfigurationsinformationen in der Registrierung aktualisieren.
+Beim Initialisieren des Konfigurationsdialogfelds ruft der Treiber in der Regel Konfigurationsinformationen aus der Registrierung ab. Um diese Informationen zu finden, enthält die DRV \_ CONFIGURE-Nachricht in der Regel die Adresse einer [**DRVCONFIGINFO-Struktur,**](/windows/win32/api/mmiscapi/ns-mmiscapi-drvconfiginfo) die die Namen des Registrierungsschlüssels und den wert enthält, der dem Treiber zugeordnet ist. Wenn der Benutzer Änderungen an der Konfiguration anfordert, sollte der Treiber die Konfigurationsinformationen in der Registrierung aktualisieren.
 
  
 

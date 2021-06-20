@@ -1,27 +1,27 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Neben PrintCapabilities ermöglicht das PrintTicket, dass clients zusätzliche Informationen in Form von Property-Elementen hinzugefügt werden.
 ms.assetid: 00f1d2c4-3c71-4b64-b689-83b4399aa61d
-title: Konfigurationsinformationen, die nicht mit Print-Funktionen verknüpft sind
+title: Konfigurationsinformationen, die nicht im Zusammenhang mit PrintCapabilities stehen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26bbc1b37d430158d6e8c020aa5994fe4e28f4af
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 40e4ac332d6e9b106ab9d68c29d03366761c01d5
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106361776"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409653"
 ---
-# <a name="configuration-information-not-related-to-printcapabilities"></a>Konfigurationsinformationen, die nicht mit Print-Funktionen verknüpft sind
+# <a name="configuration-information-not-related-to-printcapabilities"></a>Konfigurationsinformationen, die nicht im Zusammenhang mit PrintCapabilities stehen
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Zusätzlich zur Auswahl der in den printfunktionen definierten Geräte Attributen ermöglicht das PrintTicket, dass zusätzliche Informationen von Clients in Form von Eigenschafts Elementen hinzugefügt werden können. Das Druck Schema definiert eine Reihe von Standard Eigenschafts Instanzen, und der Schnittstellen Anbieter kann auch private Eigenschaften Instanzen einführen. Wenn Mitglieder einer Organisation z. b. die meisten Druckaufträge an eine zentrale Batch-Funktion senden, können Sie für jeden Auftrag eine private Eigenschaften Instanz angeben, die eine Rückgabeadresse enthält. Mit dieser Eigenschaft kann die Übermittlung des abgeschlossenen Auftrags an den Absender vereinfacht werden.
+Zusätzlich zur Auswahl der in PrintCapabilities definierten Geräteattribute ermöglicht PrintTicket, dass clients zusätzliche Informationen in Form von Property-Elementen hinzugefügt werden. Das Druckschema definiert eine Reihe von Standard-Eigenschafteninstanzen, und der Schnittstellenanbieter kann auch private Property-Instanzen einführen. Wenn Mitglieder einer Organisation beispielsweise die meisten Druckaufträge an eine zentrale Batcheinrichtung senden, können sie für jeden Auftrag eine private Property-Instanz angeben, die eine Rückgabeadresse enthält. Diese Eigenschaft kann die Bereitstellung des abgeschlossenen Auftrags vereinfachen, der an den Erursacher übermittelt werden kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

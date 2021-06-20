@@ -1,29 +1,29 @@
 ---
-title: "\"Read Write texmlexample\""
-description: In diesem Beispiel wird XML in einen XML-Puffer geschrieben und dann wieder ausgecheckt.
+title: ReadWriteXmlExample
+description: Überprüfen Sie ein XML-Beispiel für Lese-/Schreibzugriff, das die Windows-Webdienst-API (WWSAPI) verwendet. In diesem Beispiel wird XML in einen XML-Puffer schreibt und dann zurückgelesen.
 ms.assetid: e9802e3c-c8a0-4b68-bba5-cdafb7250298
 keywords:
-- "\"Read Write texmlexample\"-Webdienste für Windows"
-- Wwsapi
+- ReadWriteXmlExample-Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fbc1571716c2f01a20c18743c1f73c7306c7b53b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a3d83230f690098958ea396e830aaa54dace1f73
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947298"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404093"
 ---
-# <a name="readwritexmlexample"></a>"Read Write texmlexample"
+# <a name="readwritexmlexample"></a>ReadWriteXmlExample
 
-In diesem Beispiel wird XML in einen XML-Puffer geschrieben und dann wieder ausgecheckt.
+In diesem Beispiel wird XML in einen XML-Puffer schreibt und dann zurückgelesen.
 
--   ["Read Write texml. cpp"](#readwritexmlcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [ReadWriteXml.cpp](#readwritexmlcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="readwritexmlcpp"></a>"Read Write texml. cpp"
+## <a name="readwritexmlcpp"></a>ReadWriteXml.cpp
 
 
 ```C++
@@ -462,7 +462,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -606,9 +606,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

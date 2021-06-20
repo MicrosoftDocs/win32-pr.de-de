@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithbasicoversslserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standard Authentifizierung verwendet wird.
+title: HttpCalculatorWithBasicOverSslServiceExample
+description: Sehen Sie sich ein C++-Beispiel für eine Windows-Webdienst-API (WWSAPI) mit einem HTTP-Rechner mit grundlegendem Over-SSL-Dienst an.
 ms.assetid: ff56afec-da8c-4a2c-b26e-a065f9b73db1
 keywords:
-- Httpcalculatorwithbasicoversslserviceexample Native Webdienste
-- Wwsapi
+- HttpCalculatorWithBasicOverSslServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18517b52bf0a623877dc2d04b28daa177f1a9e81
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0490c8409ea8a08c990bad49472303dd4ae58c93
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339445"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404153"
 ---
-# <a name="httpcalculatorwithbasicoversslserviceexample"></a>Httpcalculatorwithbasicoversslserviceexample
+# <a name="httpcalculatorwithbasicoversslserviceexample"></a>HttpCalculatorWithBasicOverSslServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standard Authentifizierung verwendet wird. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird durch ein paar aus Benutzername und Kennwort bereitgestellt, das in HTTP-Headern mit dem grundlegenden Schema
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standardauthentifizierung verwenden. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern unter Verwendung des basisbasierten Schemas angegeben wird.
 
--   [Httpcalculatorwithbasicoversslservice. cpp](#httpcalculatorwithbasicoversslservicecpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [HttpCalculatorWithBasicOverSslService.cpp](#httpcalculatorwithbasicoversslservicecpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorwithbasicoversslservicecpp"></a>Httpcalculatorwithbasicoversslservice. cpp
+## <a name="httpcalculatorwithbasicoversslservicecpp"></a>HttpCalculatorWithBasicOverSslService.cpp
 
 
 ```C++
@@ -282,7 +282,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -407,9 +407,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

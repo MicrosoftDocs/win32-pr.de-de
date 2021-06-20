@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das JobID-Element, das eine eindeutige ID für den Auftrag angibt. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 138a0ae5-160d-46f2-91ae-596d8892351a
 title: JobID
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd2d77d185ab7edc611a82f94a2ce92428d9f167
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 2bfd17d068f34b56d45e4851c06b7ed1d9bd6fcc
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998137"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408883"
 ---
 # <a name="jobid"></a>JobID
 
@@ -19,7 +19,7 @@ Gibt eine eindeutige ID für den Auftrag an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -59,7 +59,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 ``` syntax
 <psf:Property name="psk:JobID">

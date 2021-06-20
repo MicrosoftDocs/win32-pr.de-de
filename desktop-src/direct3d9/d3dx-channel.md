@@ -1,15 +1,15 @@
 ---
-description: Erfahren Sie mehr über die Flags, mit denen angegeben wird, welche Kanäle in einer Textur verwendet werden sollen, z. B. D3DX \_ CHANNEL \_ RED.
+description: Erfahren Sie mehr über die D3DX_CHANNEL Flags, die verwendet werden, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen, z. B. D3DX_CHANNEL_RED.
 ms.assetid: b592b42a-0af1-49df-b159-4b84e4e12c95
 title: D3DX_CHANNEL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97f2725644295ac85d892799033cdac1d8f83416
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: d1fa9d5df75011e62034d814549202f14fe7cdba
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110342905"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408253"
 ---
 # <a name="d3dx_channel"></a>\_D3DX-KANAL
 
@@ -17,7 +17,7 @@ Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Text
 
 
 
-| \#Definieren                 | BESCHREIBUNG                                                                   |
+| \#Definieren                 | Beschreibung                                                                   |
 |--------------------------|-------------------------------------------------------------------------------|
 | D3DX \_ CHANNEL \_ RED       | Gibt an, dass der rote Kanal verwendet werden soll.                                     |
 | D3DX-KANAL \_ \_ BLAU      | Gibt an, dass der blaue Kanal verwendet werden soll.                                    |

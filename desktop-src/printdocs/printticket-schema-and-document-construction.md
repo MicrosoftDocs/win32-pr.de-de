@@ -1,41 +1,41 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Erfahren Sie mehr über das PrintTicket-Format, das Konfigurationsinformationen mithilfe des XML-basierten Druckschemaframework ausdrückt.
 ms.assetid: 573c2c82-aeb9-4ef2-8a1b-40b4db6ac6e4
-title: PrintTicket-Schema und Dokument Erstellung
+title: PrintTicket-Schema und Dokumentkonstruktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffe386638a7f119c52982f1911d602691455343f
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 5998aeb534bbbeb16681a4136cf33425a7eefad7
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104219075"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405433"
 ---
-# <a name="printticket-schema-and-document-construction"></a>PrintTicket-Schema und Dokument Erstellung
+# <a name="printticket-schema-and-document-construction"></a>PrintTicket-Schema und Dokumentkonstruktion
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Die aktuelle Methode zum Angeben von Geräte Konfigurationsinformationen mithilfe einer DEVMODE-Struktur hat mehrere Einschränkungen. Zuerst ist die DEVMODE-Struktur eine binäre Struktur, die zu Problemen unterschiedlicher Versionen führen kann. Zweitens wird Sie in einen nicht erweiterbaren öffentlichen Teil und einen privaten Teil aufgeteilt, auf den nur von Treibern zugegriffen werden kann, und nur durch den spezifischen Treiber, von dem Sie erstellt wurde. Das PrintTicket-Format drückt Konfigurationsinformationen mithilfe des XML-basierten Print Schema-Frameworks aus, wodurch diese Mängel der DEVMODE-Struktur beseitigt werden.
+Die aktuelle Methode zum Angeben von Gerätekonfigurationsinformationen mithilfe einer DEVMODE-Struktur hat mehrere Einschränkungen. Erstens ist die DEVMODE-Struktur eine binäre Struktur, die zu Problemen unterschiedlicher Versionen führen kann. Zweitens ist es in einen nicht mehr ersätzbaren öffentlichen Teil und einen privaten Teil unterteilt, auf den nur Treiber zugreifen können, und erst dann durch den spezifischen Treiber, der ihn erstellt hat. Das PrintTicket-Format drückt Konfigurationsinformationen mithilfe des XML-basierten Druckschemaframework aus, wodurch diese Mängel der DEVMODE-Struktur beseitigt werden.
 
-Das PrintTicket-Schema wird für jedes der beiden soeben erwähnten Probleme adressiert. Zuerst ist das PrintTicket-Schema eine XML-basierte Textdatei, sodass Probleme mit Erweiterbarkeit und Versionsverwaltung beseitigt werden. Zweitens sind Konfigurationsinformationen für alle Clients verfügbar. Dies bedeutet, dass jeder Client oder Anbieter alle in einem PrintTicket enthaltenen Informationen speichern und abrufen kann. Optionen werden mit dem gleichen Verfahren beschrieben, das auch vom Druck Schema Framework und dem abgeleiteten printfunktionalitäten-Dokument verwendet wird. Aus diesem Grund stellt das PrintTicket alle möglichen Portabilitäts Vorteile des Options Definitions Modells bereit, die erkannt werden können. Weitere Informationen finden Sie unter [Print Schema Framework](print-schema-framework.md) . Die Zielgruppe für diesen Abschnitt umfasst die folgenden Gruppen:
+Das PrintTicket-Schema behandelt jedes der beiden oben erwähnten Probleme. Erstens ist das PrintTicket-Schema eine XML-basierte Textdatei, sodass Probleme mit Erweiterbarkeit und Versionsänderung beseitigt werden. Zweitens sind Konfigurationsinformationen für alle Clients verfügbar. Dies bedeutet, dass jeder Client oder Anbieter alle in einem PrintTicket enthaltenen Informationen speichern und abrufen kann. Optionen werden mit demselben Verfahren beschrieben, das auch vom Print Schema Framework und dem abgeleiteten PrintCapabilities-Dokument verwendet wird. Aus diesem Grund bietet PrintTicket alle potenziellen Portabilitätsvorteile des Optionsdefinitionsmodells, das realisiert werden soll. Weitere [Informationen finden Sie unter Druckschemaframework.](print-schema-framework.md) Die zielgruppe für diesen Abschnitt umfasst die folgenden Gruppen:
 
--   Implementierer einer PrintTicket/printfunktionalitäten-Anbieter Schnittstelle
+-   Implementierer einer PrintTicket-/PrintCapabilities-Anbieterschnittstelle
 
--   Consumer von PrintTicket
+-   Consumers of the PrintTicket
 
--   Clients einer PrintTicket/printfunktionalitäten-Anbieter Schnittstelle
+-   Clients einer PrintTicket-/PrintCapabilities-Anbieterschnittstelle
 
-Die Mitglieder der ersten Kategorie in der vorangehenden Liste werden im restlichen Teil dieses Abschnitts als PrintTicket-Anbieter bezeichnet. Mitglieder der letzten beiden Kategorien werden als PrintTicket-Consumer bezeichnet.
+Mitglieder der ersten Kategorie in der vorherigen Liste werden im restlichen Teil dieses Abschnitts als PrintTicket-Anbieter bezeichnet. Mitglieder der letzten beiden Kategorien werden als PrintTicket-Kunden bezeichnet.
 
-## <a name="relationship-to-print-schema-and-printcapabilities-schema"></a>Beziehung zum Druck Schema und zum printfunktionalitäten-Schema
+## <a name="relationship-to-print-schema-and-printcapabilities-schema"></a>Beziehung zu Druckschema und PrintCapabilities-Schema
 
-Die PrintTicket-und printfunktionalitäten-Schemas sind beide spezialisierte Teile des Druck Schemas. Die wesentlichen strukturellen Unterschiede zwischen diesen Teilmengen des Druck Schemas besteht darin, dass das PrintTicket-Schema Eigenschaften-und parameterinit-Instanzen enthält, die nicht im printfunktionalitäten-Schema enthalten sind, während das printfunktionalitäten-Schema Eigenschaften-und ParameterDef-Instanzen enthält, die nicht im PrintTicket-Schema enthalten sind. Mit Ausnahme dieser Unterschiede spiegeln sich die Schemas "printfähigkeiten" und "PrintTicket" im allgemeinen gegenseitig in den Instanzen "Content", "Sharing Feature", "Option", "ScoredProperty" Alle freigegebenen Inhalte müssen auf dem neuesten Stand gehalten werden. Wenn beispielsweise eine Änderung an der mediasize-Funktion im printfunktionsschema vorgenommen wird, muss die gleiche Änderung im PrintTicket-Schema vorgenommen werden.
+Die PrintTicket- und PrintCapabilities-Schemas sind beide spezielle Teile des Druckschemas. Die wichtigsten strukturellen Unterschiede zwischen diesen Teilmengen des Druckschemas sind, dass das PrintTicket-Schema Property- und ParameterInit-Instanzen enthält, die nicht im PrintCapabilities-Schema enthalten sind, während das PrintCapabilities-Schema Property- und ParameterDef-Instanzen enthält, die nicht im PrintTicket-Schema enthalten sind. Abgesehen von diesen Unterschieden spiegeln sich die PrintCapabilities- und PrintTicket-Schemas in der Regel in Inhalts-, Freigabefeature-, Option-, ScoredProperty- und Value-Instanzen. Alle solchen freigegebenen Inhalte müssen auf dem neuesten Stand gehalten werden. Wenn beispielsweise eine Änderung am MediaSize-Feature im PrintCapabilities-Schema vorgenommen wird, muss die gleiche Änderung im PrintTicket-Schema vorgenommen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,26 +1,26 @@
 ---
-description: Die parallele Assembly-API verwendet die folgenden Enumerationen.
+description: Erfahren Sie mehr über die Strukturen, die in der API für die side-by-side-Assembly verwendet werden, z. B. ASSEMBLY_INFO und FUSION_INSTALL_REFERENCE.
 ms.assetid: e35ca5c8-74bc-4c79-9813-24ff3b4ea631
-title: Parallele assemblystrukturen
+title: Nebenseitige Assemblystrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 119327fe8870b93b864244d9eeea3fe4910cd500
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7983df818f5c4828670567d423d67d2eedefa527
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360477"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404963"
 ---
-# <a name="side-by-side-assembly-structures"></a>Parallele assemblystrukturen
+# <a name="side-by-side-assembly-structures"></a>Nebenseitige Assemblystrukturen
 
-Die parallele Assembly-API verwendet die folgenden Enumerationen.
+Die API für die seitige Assembly verwendet die folgenden Strukturen.
 
 
 
-| Enumeration                                                     | Beschreibung                                                                            |
+| Struktur                                                       | Beschreibung                                                                            |
 |-----------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [**\_Assemblyinformationen**](/windows/desktop/api/Winsxs/ns-winsxs-assembly_info)                        | Enthält Informationen zu einer Assembly im parallelen Assemblyspeicher des Systems.    |
-| [**Referenz zur Fusion- \_ Installation \_**](/windows/win32/api/winsxs/ns-winsxs-fusion_install_reference) | Enthält Informationen über die Anwendung, die auf die parallele Assembly verweist. |
+| [**\_ASSEMBLYINFORMATIONEN**](/windows/desktop/api/Winsxs/ns-winsxs-assembly_info)                        | Enthält Informationen zu einer Assembly im side-by-side-Assemblyspeicher des Systems.    |
+| [**\_ \_ FUSION-INSTALLATIONSREFERENZ**](/windows/win32/api/winsxs/ns-winsxs-fusion_install_reference) | Enthält Informationen zur Anwendung, die auf die seiteseitige Assembly verweist. |
 
 
 

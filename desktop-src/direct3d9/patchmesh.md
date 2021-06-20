@@ -1,19 +1,19 @@
 ---
-description: Definiert ein Mesh, das von Bézier-Patches definiert wird. Das erste Array ist eine Liste von Vertices, und das zweite Array definiert die Patches für das Mesh, indem es in das vertexarray indiziert wird.
+description: PatchMesh definiert ein Gitternetz, das von Bézierpatches definiert wird, einschließlich einer Liste von Scheitelpunkte und patches für das Gitternetz durch Indizierung in das Scheitelpunktarray.
 ms.assetid: vs|directx_sdk|~\patchmesh.htm
-title: Patchmesh
+title: PatchMesh
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fcdefac9799736c796aef7cbb7222ab1942540d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fabb3846246c7fb76a7146baf0b30bd9730fe24b
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520891"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404713"
 ---
-# <a name="patchmesh"></a>Patchmesh
+# <a name="patchmesh"></a>PatchMesh
 
-Definiert ein Mesh, das von Bézier-Patches definiert wird. Das erste Array ist eine Liste von Vertices, und das zweite Array definiert die Patches für das Mesh, indem es in das vertexarray indiziert wird.
+Definiert ein durch Bézierpatches definiertes Gitternetz. Das erste Array ist eine Liste von Scheitelpunkte, und das zweite Array definiert die Patches für das Gitternetz durch Indizierung in das Scheitelpunktarray.
 
 ``` syntax
 template PatchMesh
@@ -29,13 +29,13 @@ template PatchMesh
 
 Hierbei gilt:
 
--   nvertices-Anzahl der Scheitel Punkte.
--   Vertices \[ nvertices \] -Array von Vertices. Siehe [**Vektor**](vector.md).
--   npatches-Anzahl der Patches.
--   Patches \[ npatches \] -Array von Patches. Siehe [**Patch**](patch.md).
--   \[ ... \] -Eine beliebige x-Datei Vorlage kann hier verwendet werden. Dadurch wird die Architektur erweiterbar.
+-   nVertices: Anzahl der Scheitelzeichen.
+-   sctices \[ nVertices \] : Array von Scheiteltices. Siehe [**Vektor**](vector.md).
+-   nPatches: Anzahl der Patches.
+-   patches \[ nPatches: \] Array von Patches. Weitere Informationen [**finden Sie unter Patchen von**](patch.md).
+-   \[ ... \] – Hier kann eine beliebige X-Dateivorlage verwendet werden. Dadurch wird die Architektur erweiterbar.
 
-Die Patches verwenden die Scheitel Punkte im Array von Vertices als Steuerungs Punkte für die einzelnen Patches. Dies ist eine Legacy Vorlage. Die neueste patchmesh-Vorlage ist [**PatchMesh9**](patchmesh9.md).
+Die Patches verwenden die Scheitelpunkte im Array von Scheitelpunkten als Kontrollpunkte für jeden Patch. Dies ist eine Legacyvorlage. Die neueste Patch mesh-Vorlage ist [**PatchMesh9.**](patchmesh9.md)
 
 ## <a name="see-also"></a>Siehe auch
 

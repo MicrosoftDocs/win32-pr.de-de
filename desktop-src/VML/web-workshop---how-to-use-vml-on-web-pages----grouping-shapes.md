@@ -1,47 +1,47 @@
 ---
 title: Gruppieren von Formen
-description: In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+description: In diesem Artikel wird das Gruppieren von Formen in VML beschrieben, einem Feature, das seit Windows Internet Explorer 9 veraltet ist.
 ms.assetid: 469c9e4d-d1ae-4285-b2cb-ac833ebe59ff
 keywords:
-- Webworkshop, Gruppieren von Formen
+- Web-Workshop, Gruppieren von Formen
 - Entwerfen von Webseiten, Gruppieren von Formen
 - Vector Markup Language (VML), Gruppieren von Formen
-- VML (Vector Markup Language), Gruppieren von Formen
-- Vektorgrafiken, Gruppierungs Formen
-- VML-Formen, gruppieren
+- VML (Vector Markup Language),Gruppieren von Formen
+- Vektorgrafiken, Gruppieren von Formen
+- VML-Formen, Gruppierung
 - Gruppieren von Formen
-- Vector Markup Language (VML), Group-Element
-- VML (Vector Markup Language), Group-Element
-- Vektorgrafiken, Group-Element
+- Vector Markup Language (VML),group-Element
+- VML (Vector Markup Language),group-Element
+- Vektorgrafik,Group-Element
 - Gruppenelement
-- VML-Elemente,-Gruppe
-- Vector Markup Language (VML), lokaler Koordinaten Bereich
-- VML (Vector Markup Language), lokaler Koordinaten Bereich
+- VML-Elemente, Gruppe
+- Vector Markup Language (VML), lokaler Koordinatenraum
+- VML (Vector Markup Language),lokaler Koordinatenraum
 - Vektorgrafiken, lokaler Koordinatenraum
-- lokaler Koordinaten Bereich
+- Lokaler Koordinatenraum
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59eed282094e2d24d2d27e338b93731eaaa1eec0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 61e0c3073f55d23c15734b5d5ddfa886e7291530
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039508"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407703"
 ---
 # <a name="grouping-shapes"></a>Gruppieren von Formen
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Wie Sie gelernt haben, können Sie einfach einzelne Formen mithilfe von VML zeichnen. In diesem Abschnitt werden die Vorteile der Gruppierung von Formen und das Gruppieren von Formen erläutert.
+Wie Sie gelernt haben, können Sie mithilfe von VML ganz einfach einzelne Formen zeichnen. In diesem Abschnitt werden die Vorteile des Gruppierens von Formen und das Gruppieren von Formen erläutert.
 
-Wenn Sie über viele Formen verfügen, die skaliert, verschoben oder gedreht werden mussten, wäre es mühsam, die Attribute für jede Form einzeln festzulegen. Außerdem würden Sie den Rand für Fehler erhöhen. Es wäre besser, wenn Sie die Formen gruppieren und dann die Attribute für die gesamte Gruppe festlegen.
+Wenn Sie viele Formen hätten, die zusammen skaliert, verschoben oder gedreht werden mussten, wäre es mühsam, die Attribute für jede Form einzeln festlegen zu müssen. Außerdem würden Sie den Rand für Fehler erhöhen. Es wäre besser, wenn Sie die Formen gruppieren und dann die Attribute für die gesamte Gruppe festlegen könnten.
 
-In VML können Sie das- `<group>` Element verwenden, um viele Formen zu gruppieren, sodass Sie als eine Einheit transformiert werden können. Beispielsweise können Sie, wie in der folgenden VML-Darstellung gezeigt, zwei Formen problemlos gruppieren.
+In VML können Sie das -Element verwenden, um viele Formen zu gruppieren, sodass `<group>` sie als eine Einheit transformiert werden können. Beispielsweise können Sie, wie in der folgenden VML-Darstellung gezeigt, problemlos zwei Formen gruppieren.
 
 
 ```HTML
@@ -54,11 +54,11 @@ width:150pt;height:100pt; ...>
 
 
 
-Wenn Formen gruppiert sind, verwenden Sie den [lokalen Koordinaten Bereich](web-workshop---how-to-use-vml-on-web-pages----local-coordinate-space.md) der Gruppe. Daher können Formen innerhalb einer Gruppe skaliert und gruppiert werden. Weitere Beispiele finden Sie im Thema Verwenden von lokalem Koordinatenraum.
+Wenn Formen gruppiert werden, verwenden sie den [lokalen Koordinatenraum](web-workshop---how-to-use-vml-on-web-pages----local-coordinate-space.md) der Gruppe. Daher können Formen innerhalb einer Gruppe skaliert und zusammen verschoben werden. Weitere Beispiele finden Sie im Thema Verwenden des lokalen Koordinatenraums.
 
-Innerhalb einer Gruppe können Sie beliebig viele Formen oder Gruppen haben. Wenn sich eine Gruppe in einer anderen Gruppe befindet, wird Sie als "geschachtelte Gruppe" bezeichnet. Es gibt keine Einschränkung für die Schachtelungs Ebenen.
+Innerhalb einer Gruppe können Sie über so viele Formen oder Gruppen verfügen, wie Sie möchten. Wenn sich eine Gruppe in einer anderen Gruppe befindet, wird sie als "geschachtelte Gruppe" bezeichnet. Es gibt keine Einschränkung für die Schachtelungsebenen.
 
-In den folgenden Zeilen wird z. b. eine Gruppierungs Gruppe mit drei Ebenen veranschaulicht. Shape3 und Shape4 befinden sich in groupc. Shape2 und groupc sind in GroupB. Shape1 und GroupB sind in groupA.
+Die folgenden Zeilen veranschaulichen beispielsweise eine geschachtelte Gruppe mit drei Ebene. Shape3 und Shape4 befinden sich in GroupC. Shape2 und GroupC befinden sich in GroupB. Shape1 und GroupB befinden sich in GroupA.
 
 
 ```HTML
@@ -80,12 +80,12 @@ In den folgenden Zeilen wird z. b. eine Gruppierungs Gruppe mit drei Ebenen vera
 
 Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858388) .
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="summary"></a>Zusammenfassung
 
-Sie können das- `<group>` Element verwenden, um viele Formen zu gruppieren, sodass Sie als eine Einheit transformiert werden können.
+Sie können das `<group>` -Element verwenden, um viele Formen zu gruppieren, damit sie als eine Einheit transformiert werden können.
 
- 
+ 
 
- 
+ 

@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das JobBindAllDocumentsGutter-Element, das die Breite des Bindungsdarms angibt.
 ms.assetid: 97a00cd6-508c-47e9-a1c1-75646ca0c721
 title: JobBindAllDocumentsGutter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04615b85939d483f6bd2e720afa65a88d44c1caf
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: a42180ff9a00d1502d844b270fe5da7324825ca3
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998377"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409073"
 ---
 # <a name="jobbindalldocumentsgutter"></a>JobBindAllDocumentsGutter
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Breite des Bindungsstegs an.
+Gibt die Breite des Bindungsrinnenstrichs an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt die Breite des Bindungsstegs an.
 |----------------------------|-----------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                 |
 | Bereichspräfix <br/> | Auftrag <br/>                         |
-| Hinweise <br/>          | Verknüpft mit dem JobBinding-Element<br/> |
+| Hinweise <br/>          | Mit JobBinding-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Breite des Bindungsstegs an.
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobBindAllDocumentsGutter">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 
@@ -77,7 +77,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 | DefaultValue<br/> | integer<br/> | nicht definiert<br/>       |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>       |
 | Minvalue<br/>     | integer<br/> | nicht definiert<br/>       |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Obligatorisch.<br/>    | String<br/>  | psk:Conditional<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
 | Unittype<br/>     | Zeichenfolge<br/>  | Mikron<br/>         |
 
