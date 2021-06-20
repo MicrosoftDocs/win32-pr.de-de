@@ -1,29 +1,29 @@
 ---
-title: WPD-Programmier Handbuch
-description: Programmierhandbuch
+title: WPD-Programmierhandbuch
+description: Dieser Programmierleitfaden konzentriert sich darauf, wie Beispielaufgaben mithilfe der WPD-Schnittstellen und -Methoden in den Schnittstellen ausgeführt werden.
 ms.assetid: 87777b0b-a7a0-4032-99bb-92b717d3c452
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f774ffd9d7576a07b34c467a5a155d98e4f3e703
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db13d50942c28cd4937d27a745d61d7a30a01a15
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373307"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409863"
 ---
-# <a name="wpd-programming-guide"></a>WPD-Programmier Handbuch
+# <a name="wpd-programming-guide"></a>WPD-Programmierhandbuch
 
-Die primäre Quelle für dieses Programmier Handbuch ist ein Beispiel, das mit dem Software Development Kit (SDK) von Windows Portable Devices (WPD) ausgeliefert wird. Dieses Beispiel namens "WpdApiSample.exe" besteht aus sieben cpp-Modulen. Sechs dieser Module enthalten den Code, in dem 26 Aufgaben veranschaulicht werden, die eine Anwendung mithilfe der WPD-API (Application Programming Interface) erreichen kann.
+Die primäre Quelle für diesen Programmierleitfaden ist ein Beispiel, das im Paket mit dem Windows Portable Devices (WPD) Software Development Kit (SDK) enthalten ist. Dieses Beispiel namens WpdApiSample.exe besteht aus sieben CPP-Modulen. Sechs dieser Module enthalten den Code, der 26 Aufgaben veranschaulicht, die eine Anwendung mithilfe der WPD-Anwendungsprogrammierschnittstelle (APPLICATION Programming Interface, API) ausführen kann.
 
-In den folgenden Abschnitten werden die folgenden Themen beschrieben: Geräte Dienst Tasks, Kontextmenü und Eigenschaften Blatt Erweiterungen. Diese Themen wurden nicht von wpdapisample entnommen. Die Tasks für den Geräte Dienst basieren auf dem Beispiel mit dem Namen "wpdserviceapisample". Das Kontextmenü und die Eigenschaften Blatt Erweiterungen sind Ausschnitte, die von Anwendungen entnommen werden, die nicht mit dem Windows SDK ausgeliefert werden.
+Die Ausnahmen von oben sind die Themen, in denen Folgendes beschrieben wird: Gerätedienstaufgaben, das Kontextmenü und Eigenschaftenblatterweiterungen; diese Themen wurden nicht aus WpdApiSample übernommen. Die Gerätedienstaufgaben basieren auf dem Beispiel wpdServiceApiSample. Die Kontextmenü- und Eigenschaftenblatterweiterungen sind Codeausschnitte aus Anwendungen, die nicht im Windows SDK.
 
-In den folgenden Abschnitten werden die Aufgaben erläutert, die durch diese Beispiele durchgeführt werden, und es wird erläutert, wie Sie mithilfe der WPD-Schnittstellen und einer Reihe von Methoden in diesen Schnittstellen ausgeführt werden.
+Die folgenden Abschnitte konzentrieren sich auf die Aufgaben, die durch diese Beispiele ausgeführt werden, und erläutern, wie diese mithilfe der WPD-Schnittstellen und einer Reihe von Methoden in diesen Schnittstellen ausgeführt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Tragbare Windows-Geräte**](/windows/desktop/windows-portable-devices)
+[**Portable Windows-Geräte**](/windows/desktop/windows-portable-devices)
 </dt> </dl>
 
  

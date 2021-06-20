@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das JobComment-Element, das einen Kommentar angibt, der dem Auftrag zugeordnet ist, z. B. Bitte senden Sie nach Abschluss an Raum 1234.
 ms.assetid: 100fe310-8e64-453f-8eaf-10abaf8b10b7
 title: JobComment
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5210b80d4f81771dfa98d79d4ecf187b3ef145f5
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 1decf4cf3af7b3a992b07d8008579ac005d3d14e
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998347"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409043"
 ---
 # <a name="jobcomment"></a>JobComment
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Please deliver to room 1234 when completed".
 
@@ -36,7 +36,7 @@ Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Please deliv
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements sieht wie folgt aus:
+Die XML-Struktur dieses Elements lautet wie folgt:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobComment">
@@ -63,7 +63,7 @@ Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

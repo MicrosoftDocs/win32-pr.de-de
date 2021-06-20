@@ -1,7 +1,7 @@
 ---
-description: Aktualisiert den Inhalt des Start Menüs. Wird nur mit Systemen vor Windows XP verwendet.
+description: Erfahren Sie mehr über die IShellDispatch.RefreshMenu-Methode, die den Inhalt der Startmenü aktualisiert. Wird nur mit Systemen vor Windows XP verwendet.
 ms.assetid: D36FA5A0-AF03-4627-86E0-869BF1440958
-title: Ishelldispatch. erfrischend Menu-Methode (Shldisp. h)
+title: IShellDispatch.RefreshMenu-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 98728ef48ffb9ef4383cf9ba567606758b7a015c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9e1a3c326cfa79c7b754cc8a364e649cf2c9931
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978096"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404673"
 ---
-# <a name="ishelldispatchrefreshmenu-method"></a>Ishelldispatch. erfrischend Menu-Methode
+# <a name="ishelldispatchrefreshmenu-method"></a>IShellDispatch.RefreshMenu-Methode
 
-Aktualisiert den Inhalt des **Start** Menüs. Wird nur mit Systemen vor Windows XP verwendet.
+Aktualisiert den Inhalt  des Startmenüs. Wird nur mit Systemen vor Windows XP verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,15 +57,15 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ist implementiert, und der Zugriff erfolgt über die [**Shell. trayproperties**](shell-trayproperties.md) -Methode.
+Diese Methode wird implementiert und über die [**Shell.TrayProperties-Methode**](shell-trayproperties.md) aufgerufen.
 
-Die Funktionalität, die das Aktualitäts **Menü** bereitstellt, wird automatisch unter Windows XP oder höher behandelt. Diese Methode darf nicht unter Windows XP oder höher aufgerufen werden.
+Die funktionen, die **RefreshMenu** bereitstellt, werden automatisch unter Windows XP oder höher verarbeitet. Rufen Sie diese Methode nicht unter Windows XP oder höher auf.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung des **aktuerfrischenden Menüs** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **RefreshMenu** in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -81,7 +81,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -121,11 +121,11 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

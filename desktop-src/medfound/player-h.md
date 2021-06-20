@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema enthält Code für das Tutorial zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieser Artikel enthält Code für die Datei player.h für das Tutorial Wiedergeben von Mediendateien mit Media Foundation.
 ms.assetid: c3f05482-138c-4d95-9b76-a9715227961f
-title: Player. h
+title: player.h
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb04c0d99d2d83843fac8988050e17bf8ebe5efe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38c9d1c564edefb1683705d9ef8c4f009b061a7c
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527860"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404593"
 ---
-# <a name="playerh"></a>Player. h
+# <a name="playerh"></a>player.h
 
-Dieses Thema enthält Code für das Tutorial zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md).
+Dieses Thema enthält Code für das Tutorial [Wiedergeben von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md).
 
 
 ```C++
@@ -145,7 +145,7 @@ protected:
 
 <dl> <dt>
 
-[Beispiel für Medien Sitzungs Wiedergabe](media-session-playback-example.md)
+[Beispiel für die Mediensitzungswiedergabe](media-session-playback-example.md)
 </dt> <dt>
 
 [Audio-/Videowiedergabe](audio-video-playback.md)

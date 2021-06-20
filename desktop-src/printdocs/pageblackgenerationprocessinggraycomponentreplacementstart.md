@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das PageBlackGenerationProcessingGrayComponentReplacementStart-Element, das den Punkt beschreibt, an dem GCR beginnen soll.
 ms.assetid: 28ea95a2-e602-4f71-9488-48525e995814
 title: PageBlackGenerationProcessingGrayComponentReplacementStart
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2608535c65cbde04005334ed970c0d27cb1feffb
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: f2e7e5a7e22c20b15dc373a2cce2bfe19e3417d4
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996177"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408463"
 ---
 # <a name="pageblackgenerationprocessinggraycomponentreplacementstart"></a>PageBlackGenerationProcessingGrayComponentReplacementStart
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt den Punkt im Bereich "Hervorhebung bis Schatten", an dem GCR beginnen soll (100 % dunkelster Schatten).
+Beschreibt den Punkt im Bereich "Highlight to Shadow", an dem GCR beginnen soll (100 % dunkelster Schatten).
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Beschreibt den Punkt im Bereich "Hervorhebung bis Schatten", an dem GCR beginnen
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
 | Bereichspräfix <br/> | Seite<br/>                                            |
-| Hinweise <br/>          | Mit PageBlackGenerationProcessing-Element verknüpft<br/> |
+| Hinweise <br/>          | Verknüpft mit dem PageBlackGenerationProcessing-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Beschreibt den Punkt im Bereich "Hervorhebung bis Schatten", an dem GCR beginnen
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageBlackGenerationProcessingGrayComponentReplacementStart">
@@ -66,7 +66,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

@@ -1,62 +1,62 @@
 ---
-description: In diesem Thema wird erläutert, wie Sie Eigenschafts Handler erstellen und registrieren, um mit dem Windows-Eigenschaften System zu arbeiten.
+description: In diesem Artikel wird erläutert, wie Eigenschaftenhandler für die Arbeit mit dem Windows-Eigenschaftensystem initialisiert werden.
 ms.assetid: 3b54dd65-b7db-4e6a-bc3d-1008fdabcfa9
-title: Initialisieren von Eigenschaften Handlern
+title: Initialisieren von Eigenschaftenhandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f8eb11bc44217e508313bfb477c65925b44216e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b7d7626f92b3d81a6764e635c10302747f82a383
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216260"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406993"
 ---
-# <a name="initializing-property-handlers"></a>Initialisieren von Eigenschaften Handlern
+# <a name="initializing-property-handlers"></a>Initialisieren von Eigenschaftenhandlern
 
-In diesem Thema wird erläutert, wie Sie Eigenschafts Handler erstellen und registrieren, um mit dem Windows-Eigenschaften System zu arbeiten.
+In diesem Thema wird erläutert, wie Eigenschaftenhandler für die Arbeit mit dem Windows-Eigenschaftensystem erstellt und registriert werden.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Eigenschaften Handler](#property-handlers)
+-   [Eigenschaftenhandler](#property-handlers)
 -   [Vorbereitungen](#before-you-begin)
--   [Initialisieren von Eigenschaften Handlern](#initializing-property-handlers)
--   [In-Memory-Eigenschaften Speicher](#in-memory-property-store)
+-   [Initialisieren von Eigenschaftenhandlern](#initializing-property-handlers)
+-   [In-Memory-Property Store](#in-memory-property-store)
 -   [Umgang mit PROPVARIANT-Based Werten](#dealing-with-propvariant-based-values)
--   [Unterstützen offener Metadaten](#supporting-open-metadata)
--   [Voll Text Inhalte](#full-text-contents)
--   [Angeben von Werten für Eigenschaften](#providing-values-for-properties)
+-   [Unterstützen von offenen Metadaten](#supporting-open-metadata)
+-   [Volltextinhalt](#full-text-contents)
+-   [Bereitstellen von Werten für Eigenschaften](#providing-values-for-properties)
 -   [Zurückschreiben von Werten](#writing-back-values)
--   [Implementieren von ipropertystorecapabilitäten](#implementing-ipropertystorecapabilities)
--   [Registrieren und Verteilen von Eigenschaften Handlern](#registering-and-distributing-property-handlers)
--   [Zugehörige Themen](#related-topics)
+-   [Implementieren von IPropertyStoreCapabilities](#implementing-ipropertystorecapabilities)
+-   [Registrieren und Verteilen von Eigenschaftenhandlern](#registering-and-distributing-property-handlers)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="property-handlers"></a>Eigenschaften Handler
+## <a name="property-handlers"></a>Eigenschaftenhandler
 
-Eigenschaften Handler sind ein wesentlicher Bestandteil des Eigenschaften Systems. Sie werden vom Indexer Prozess Weise aufgerufen, um Eigenschaftswerte zu lesen und zu indizieren. Außerdem werden Sie von Windows-Explorer in-Process aufgerufen, um Eigenschaftswerte direkt in den Dateien zu lesen und zu schreiben. Diese Handler müssen sorgfältig geschrieben und getestet werden, um eine Beeinträchtigung der Leistung oder des Verlusts von Daten in den betroffenen Dateien zu verhindern. Weitere Informationen zu indexerspezifischen Überlegungen, die sich auf die Implementierung von Eigenschaften Handlern auswirken, finden Sie unter [entwickeln von Eigenschaften Handlern für Windows Search](../search/-search-3x-wds-extidx-propertyhandlers.md).
+Eigenschaftenhandler sind ein wichtiger Bestandteil des Eigenschaftensystems. Sie werden vom Indexer prozessin process aufgerufen, um Eigenschaftswerte zu lesen und zu indizieren, und sie werden auch von Windows-Explorer in-process aufgerufen, um Eigenschaftswerte direkt in den Dateien zu lesen und zu schreiben. Diese Handler müssen sorgfältig geschrieben und getestet werden, um eine Verschlechterung der Leistung oder den Verlust von Daten in den betroffenen Dateien zu verhindern. Weitere Informationen zu indexerspezifischen Überlegungen, die sich auf die Implementierung von Eigenschaftenhandlern auswirken, finden Sie unter [Developing Property Handlers for Windows Search](../search/-search-3x-wds-extidx-propertyhandlers.md).
 
-In diesem Thema wird ein Beispiel für ein XML-basiertes Dateiformat erläutert, das eine Anleitung mit der Dateinamenerweiterung ". Rezept" beschreibt. Die Dateinamenerweiterung ". Rezept" ist als eigenes, eindeutiges Dateiformat registriert, anstatt sich auf das allgemeinere XML-Dateiformat zu verlassen, dessen Handler einen sekundären Stream zum Speichern von Eigenschaften verwendet. Es wird empfohlen, dass Sie eindeutige Dateinamen Erweiterungen für die Dateitypen registrieren.
+In diesem Thema wird ein XML-basiertes Beispieldateiformat erläutert, das ein Rezept mit der Dateierweiterung .recipe beschreibt. Die .recipe-Dateinamenerweiterung wird als eigenes eindeutiges Dateiformat registriert, anstatt sich auf das generischere .xml-Dateiformat zu verlassen, dessen Handler einen sekundären Stream zum Speichern von Eigenschaften verwendet. Es wird empfohlen, eindeutige Dateierweiterungen für Ihre Dateitypen zu registrieren.
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-Eigenschaften Handler sind COM-Objekte, die die [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Abstraktion für ein bestimmtes Dateiformat erstellen. Sie lesen (analysieren) und Schreiben dieses Dateiformat auf eine Weise, die der Spezifikation entspricht. Einige Eigenschaften Handler arbeiten auf der Grundlage von APIs, die den Zugriff auf ein bestimmtes Dateiformat abstrahieren. Bevor Sie einen Eigenschaften Handler für das Dateiformat entwickeln, müssen Sie verstehen, wie das Dateiformat Eigenschaften speichert, und wie diese Eigenschaften (Namen und Werte) der Eigenschafts Speicher Abstraktion zugeordnet werden.
+Eigenschaftshandler sind COM-Objekte, die die [**IPropertyStore-Abstraktion**](/windows/win32/api/propsys/nn-propsys-ipropertystore) für ein bestimmtes Dateiformat erstellen. Sie lesen (analysieren) und schreiben dieses Dateiformat in einer Weise, die der Spezifikation entspricht. Einige Eigenschaftenhandler arbeiten basierend auf APIs, die den Zugriff auf ein bestimmtes Dateiformat abstrahieren. Bevor Sie einen Eigenschaftenhandler für das Dateiformat entwickeln, müssen Sie verstehen, wie das Dateiformat Eigenschaften speichert und wie diese Eigenschaften (Namen und Werte) der Eigenschaftenspeicherabstraktion zugeordnet werden.
 
-Beachten Sie beim Planen der Implementierung, dass es sich bei den Eigenschaften Handlern um Komponenten auf niedriger Ebene handelt, die im Kontext von Prozessen wie Windows-Explorer, dem Windows Search-Indexer und Anwendungen von Drittanbietern geladen werden, die das shellelement-Programmiermodell verwenden. Folglich können Eigenschafts Handler nicht in verwaltetem Code implementiert werden und sollten in C++ implementiert werden. Wenn Ihr Handler für seine Arbeit APIs oder Dienste verwendet, müssen Sie sicherstellen, dass diese Dienste ordnungsgemäß in den Umgebungen funktionieren, in denen der Eigenschafts Handler geladen wird.
+Denken Sie bei der Planung Ihrer Implementierung daran, dass Eigenschaftenhandler Komponenten auf niedriger Ebene sind, die im Kontext von Prozessen wie Windows-Explorer, dem Windows Search-Indexer und Anwendungen von Drittanbietern geladen werden, die das Shell-Elementprogrammiermodell verwenden. Daher können Eigenschaftshandler nicht in verwaltetem Code implementiert werden und sollten in C++ implementiert werden. Wenn Ihr Handler APIs oder Dienste verwendet, um seine Arbeit zu erfüllen, müssen Sie sicherstellen, dass diese Dienste in den Umgebung(en) ordnungsgemäß funktionieren, in die der Eigenschaftenhandler geladen wird.
 
 > [!Note]  
-> Eigenschaften Handler sind immer bestimmten Dateitypen zugeordnet. Wenn das Dateiformat Eigenschaften enthält, die einen benutzerdefinierten Eigenschaften Handler erfordern, sollten Sie daher immer eine eindeutige Dateinamenerweiterung für jedes Dateiformat registrieren.
+> Eigenschaftenhandler sind immer bestimmten Dateitypen zugeordnet. Wenn Ihr Dateiformat Eigenschaften enthält, die einen benutzerdefinierten Eigenschaftenhandler erfordern, sollten Sie daher immer eine eindeutige Dateierweiterung für jedes Dateiformat registrieren.
 
  
 
-## <a name="initializing-property-handlers"></a>Initialisieren von Eigenschaften Handlern
+## <a name="initializing-property-handlers"></a>Initialisieren von Eigenschaftenhandlern
 
-Bevor eine Eigenschaft vom System verwendet wird, wird Sie initialisiert, indem eine Implementierung von [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream)aufgerufen wird. Der Eigenschafts Handler sollte initialisiert werden, indem das System ihm einen Stream zuweist, anstatt diese Zuweisung der Handlerimplementierung zu überlassen. Diese Methode der Initialisierung stellt Folgendes sicher:
+Bevor eine Eigenschaft vom System verwendet wird, wird sie durch Aufrufen einer Implementierung von [**IInitializeWithStream initialisiert.**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream) Der Eigenschaftenhandler sollte initialisiert werden, indem das System ihm einen Stream zulässt, anstatt diese Zuweisung der Handlerimplementierung zu belässt. Diese Initialisierungsmethode stellt Folgendes sicher:
 
--   Der Eigenschaften Handler kann in einem eingeschränkten Prozess (einem wichtigen Sicherheits Feature) ausgeführt werden, ohne dass er über Zugriffsrechte verfügt, um Dateien direkt zu lesen oder zu schreiben, anstatt auf seinen Inhalt über den Stream zuzugreifen.
--   Das System kann als vertrauenswürdig eingestuft werden, um die Datei-oplocks ordnungsgemäß zu verarbeiten, was ein wichtiges Maß an Zuverlässigkeit ist.
--   Das-Eigenschaften System stellt einen automatisch sicheren speicheringdienst bereit, ohne dass zusätzliche Funktionen von der Implementierung des Eigenschaften Handlers benötigt werden. Weitere Informationen zu Streams finden Sie im Abschnitt [Zurückschreiben von Werten](#writing-back-values) .
--   Durch die Verwendung von [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream) wird die Implementierung aus den Dateisystem Details abstrahiert. Dies ermöglicht es dem Handler, die Initialisierung durch alternative Speicher, z. b. einen File Transfer Protocol (FTP)-Ordner oder eine komprimierte Datei mit der Dateinamenerweiterung ". zip", zu unterstützen.
+-   Der Eigenschaftenhandler kann in einem eingeschränkten Prozess (ein wichtiges Sicherheitsfeature) ausgeführt werden, ohne über Zugriffsrechte zum direkten Lesen oder Schreiben von Dateien zu verfügen, anstatt über den Stream auf ihre Inhalte zu zugreifen.
+-   Das System kann als vertrauenswürdig eingestuft werden, um die Dateioplocks ordnungsgemäß zu verarbeiten. Dies ist eine wichtige Zuverlässigkeitsmaßnahme.
+-   Das Eigenschaftensystem bietet einen automatisch sicheren Speicherungsdienst ohne zusätzliche Funktionalität, die für die Implementierung des Eigenschaftenhandlers erforderlich ist. Weitere Informationen [zu Streams finden Sie](#writing-back-values) im Abschnitt Zurückschreiben von Werten.
+-   Die Verwendung von [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream) abstrahiert Ihre Implementierung aus Dateisystemdetails. Dadurch kann der Handler die Initialisierung über alternative Speicher unterstützen, z. B. einen File Transfer Protocol-Ordner (FTP) oder eine komprimierte Datei mit .zip Dateinamenerweiterung.
 
-Es gibt Fälle, in denen die Initialisierung mit Streams nicht möglich ist. In diesen Fällen gibt es zwei weitere Schnittstellen, die von Eigenschaften Handlern implementiert werden können: [**IInitializeWithFile**](/windows/win32/api/propsys/nn-propsys-iinitializewithfile) und [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem). Wenn ein Eigenschaften Handler den [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream)nicht implementiert, muss er die Ausführung im isolierten Prozess ablehnen, in den der systemindexer ihn standardmäßig platzieren würde, wenn es eine Änderung am Stream gäbe. Wenn Sie dieses Feature ablehnen möchten, legen Sie den folgenden Registrierungs Wert fest.
+Es gibt Fälle, in denen die Initialisierung mit Streams nicht möglich ist. In diesen Situationen gibt es zwei weitere Schnittstellen, die Eigenschaftenhandler implementieren können: [**IInitializeWithFile**](/windows/win32/api/propsys/nn-propsys-iinitializewithfile) und [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem). Wenn ein Eigenschaftenhandler den [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream)nicht implementiert, muss er die Ausführung in dem isolierten Prozess deaktivieren, in den der Systemindexer ihn standardmäßig platzieren würde, wenn eine Änderung am Stream erfolgt. Legen Sie den folgenden Registrierungswert fest, um dieses Feature zu deaktivieren.
 
 ```
 HKEY_CLASSES_ROOT
@@ -65,12 +65,12 @@ HKEY_CLASSES_ROOT
          DisableProcessIsolation = 1
 ```
 
-Es ist jedoch weitaus besser, [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream) zu implementieren und eine streambasierte Initialisierung durchzuführen. Der Eigenschafts Handler ist als Ergebnis sicherer und zuverlässiger. Die Deaktivierung der Prozess Isolation ist in der Regel nur für Legacy-Eigenschaften Handler vorgesehen und sollte durch neuen Code energisch vermieden werden.
+Es ist jedoch viel besser, [**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream) zu implementieren und eine streambasierte Initialisierung zu verwenden. Ihr Eigenschaftenhandler ist dadurch sicherer und zuverlässiger. Das Deaktivieren der Prozessisolation ist in der Regel nur für Legacyeigenschaftshandler vorgesehen und sollte durch neuen Code aufs Härten vermieden werden.
 
-Wenn Sie die Implementierung eines Eigenschaften Handlers detailliert untersuchen möchten, betrachten Sie das folgende Codebeispiel, das eine Implementierung von [**IInitializeWithStream:: Initialize**](/windows/win32/api/propsys/nf-propsys-iinitializewithstream-initialize)ist. Der-Handler wird initialisiert, indem ein XML-basiertes Rezept Dokument über einen Zeiger auf die zugeordnete [**IStream**](/windows/win32/api/objidl/nn-objidl-istream) -Instanz dieses Dokuments geladen wird. Die **\_ spdocele** -Variable, die in der Nähe des Endes des Code Beispiels verwendet wird, wird weiter oben im Beispiel als msxml2:: ixmldomelementptr definiert.
+Um die Implementierung eines Eigenschaftenhandlers im Detail zu untersuchen, sehen Sie sich das folgende Codebeispiel an, bei dem es sich um eine Implementierung von [**IInitializeWithStream::Initialize handelt.**](/windows/win32/api/propsys/nf-propsys-iinitializewithstream-initialize) Der Handler wird initialisiert, indem ein XML-basiertes Rezeptdokument über einen Zeiger auf die zugeordnete [**IStream-Instanz**](/windows/win32/api/objidl/nn-objidl-istream) dieses Dokuments geladen wird. Die **\_ variable spDocEle,** die am Ende des Codebeispiels verwendet wird, wird weiter oben im Beispiel als MSXML2::IXMLDOMElementPtr definiert.
 
 > [!Note]  
-> Die folgenden und alle nachfolgenden Codebeispiele stammen aus dem Rezept Handler-Beispiel, das im Windows Software Development Kit (SDK) enthalten ist. .
+> Die folgenden und alle nachfolgenden Codebeispiele sind aus dem Beispiel für den Rezepthandler im Windows Software Development Kit (SDK) entnommen. .
 
  
 
@@ -98,7 +98,7 @@ HRESULT CRecipePropertyStore::Initialize(IStream *pStream, DWORD grfMode)
 
 Â 
 
-Nachdem das Dokument selbst geladen wurde, werden die Eigenschaften, die im Windows-Explorer angezeigt werden sollen, durch Aufrufen der geschützten **\_ LoadProperties** -Methode geladen, wie im folgenden Codebeispiel veranschaulicht. Dieser Prozess wird im nächsten Abschnitt ausführlich untersucht.
+Nachdem das Dokument selbst geladen wurde, werden die eigenschaften, die in Windows-Explorer angezeigt werden sollen, durch Aufrufen der geschützten **\_ LoadProperties-Methode** geladen, wie im folgenden Codebeispiel veranschaulicht. Dieser Prozess wird im nächsten Abschnitt ausführlich untersucht.
 
 
 ```
@@ -134,15 +134,15 @@ Nachdem das Dokument selbst geladen wurde, werden die Eigenschaften, die im Wind
 
 
 
-Wenn der Stream schreibgeschützt ist, aber der *grfMode* -Parameter das STGM-Flag zum Lesen von Lese Voreinstellungen enthält \_ , sollte die Initialisierung fehlschlagen und STG \_ E \_ AccessDenied zurückgeben. Ohne diese Überprüfung zeigt Windows Explorer die Eigenschaftswerte als beschreibbar an, auch wenn dies nicht der Fall ist, was zu einem verwirrenden Endbenutzer Prozess führt.
+Wenn der Stream schreibgeschützt ist, der *grfMode-Parameter* jedoch das STGM READWRITE-Flag enthält, sollte die Initialisierung fehlschlagen und \_ STG \_ E \_ ACCESSDENIED zurückgeben. Ohne diese Überprüfung Windows-Explorer die Eigenschaftswerte als beschreibbar, obwohl sie nicht beschreibbar sind, was zu einer verwirrenden Endbenutzererfahrung führt.
 
-Der Eigenschafts Handler wird in seiner Lebensdauer nur einmal initialisiert. Wenn eine zweite Initialisierung angefordert wird, sollte der Handler zurückgeben `HRESULT_FROM_WIN32(ERROR_ALREADY_INITIALIZED)` .
+Der Eigenschaftenhandler wird nur einmal in seiner Lebensdauer initialisiert. Wenn eine zweite Initialisierung angefordert wird, sollte der Handler `HRESULT_FROM_WIN32(ERROR_ALREADY_INITIALIZED)` zurückgeben.
 
-## <a name="in-memory-property-store"></a>Eigenschaften Speicher In-Memory
+## <a name="in-memory-property-store"></a>In-Memory Property Store
 
-Bevor Sie sich mit der Implementierung von **\_ LoadProperties** befassen, sollten Sie das **PropertyMap** -Array verstehen, das im Beispiel verwendet wird, um Eigenschaften im XML-Dokument vorhandenen Eigenschaften im Eigenschaften System über Ihre pkey-Werte zuzuordnen.
+Bevor Sie sich die Implementierung von **\_ LoadProperties** ansehen, sollten Sie das **PropertyMap-Array** kennen, das im Beispiel zum Zuordnen von Eigenschaften im XML-Dokument zu vorhandenen Eigenschaften im Eigenschaftensystem über ihre PKEY-Werte verwendet wird.
 
-Sie sollten nicht jedes Element und Attribut in der XML-Datei als Eigenschaft verfügbar machen. Wählen Sie stattdessen nur diejenigen aus, die für Endbenutzer in der Organisation Ihrer Dokumente (in diesem Fall Rezepte) nützlich sein werden. Dies ist ein wichtiges Konzept, das bei der Entwicklung von Eigenschaften Handlern beachtet werden muss: der Unterschied zwischen Informationen, die für Organisations Szenarios wirklich nützlich sind, und Informationen, die zu den Details Ihrer Datei gehören und durch das Öffnen der Datei selbst angezeigt werden können. Eigenschaften sind nicht als vollständige Duplizierung einer XML-Datei vorgesehen.
+Sie sollten nicht jedes Element und Attribut in der XML-Datei als Eigenschaft verfügbar machen. Wählen Sie stattdessen nur diejenigen aus, von denen Sie glauben, dass sie für Endbenutzer in der Organisation ihrer Dokumente nützlich sein werden (in diesem Fall Rezepte). Dies ist ein wichtiges Konzept, das Sie bei der Entwicklung Ihrer Eigenschaftenhandler beachten sollten: den Unterschied zwischen Informationen, die für Organisationsszenarien wirklich nützlich sind, und Informationen, die zu den Details Ihrer Datei gehören und durch Öffnen der Datei selbst gesehen werden können. Eigenschaften sind nicht als vollständige Duplizierung einer XML-Datei vorgesehen.
 
 
 ```
@@ -169,7 +169,7 @@ PropertyMap c_rgPropertyMap[] =
 
 
 
-Hier ist die vollständige Implementierung der **\_ LoadProperties** -Methode, die von [**IInitializeWithStream:: Initialize**](/windows/win32/api/propsys/nf-propsys-iinitializewithstream-initialize)aufgerufen wird.
+Hier ist die vollständige Implementierung der **\_ LoadProperties-Methode,** die von [**IInitializeWithStream::Initialize aufgerufen wird.**](/windows/win32/api/propsys/nf-propsys-iinitializewithstream-initialize)
 
 
 ```
@@ -204,9 +204,9 @@ HRESULT CRecipePropertyStore::_LoadProperties()
 
 
 
-Die **\_ LoadProperties** -Methode ruft die shellhilfsfunktion " [**pscreatememorypropertystore**](/windows/win32/api/propsys/nf-propsys-pscreatememorypropertystore) " auf, um einen Speicher internen Eigenschafts Speicher (Cache) für die behandelten Eigenschaften zu erstellen. Wenn Sie einen Cache verwenden, werden die Änderungen für Sie nachverfolgt. Dadurch können Sie nachverfolgen, ob ein Eigenschafts Wert im Cache geändert, aber noch nicht im persistenten Speicher gespeichert wurde. Außerdem werden Sie von unnötigerweise Beibehaltung von Eigenschafts Werten freigegeben, die sich nicht geändert haben.
+Die **\_ LoadProperties-Methode** ruft die Shell-Hilfsfunktion [**PSCreateMemoryPropertyStore**](/windows/win32/api/propsys/nf-propsys-pscreatememorypropertystore) auf, um einen In-Memory-Eigenschaftenspeicher (Cache) für die behandelten Eigenschaften zu erstellen. Mithilfe eines Caches werden Änderungen für Sie nachverfolgt. Dadurch können Sie nicht nachverfolgen, ob ein Eigenschaftswert im Cache geändert, aber noch nicht im persistenten Speicher gespeichert wurde. Außerdem können Sie keine Eigenschaftswerte unnötig beibehalten, die sich nicht geändert haben.
 
-Die **\_ LoadProperties** -Methode ruft auch **\_ LoadProperty** auf, deren Implementierung im folgenden Code dargestellt wird, und zwar einmal für jede zugeordnete Eigenschaft. **\_ LoadProperty** Ruft den Wert der Eigenschaft ab, wie im **PropertyMap** -Element im XML-Stream angegeben, und weist ihn mithilfe eines [**Ansichts namens ipropertystorecache:: setvalueandstate**](/windows/win32/api/propsys/nf-propsys-ipropertystorecache-setvalueandstate)dem in-Memory-Cache zu. Das normale PSC- \_ Flag im Aufruf von **ipropertystorecache:: setvalueandstate** gibt an, dass der Eigenschafts Wert seit dem Zeitpunkt, zu dem er in den Cache eingetreten ist, nicht geändert wurde.
+Die **\_ LoadProperties-Methode** ruft auch **\_ LoadProperty** auf, dessen Implementierung im folgenden Code veranschaulicht wird) einmal für jede zugeordnete Eigenschaft. **\_ LoadProperty** ruft den Wert der -Eigenschaft ab, wie im **PropertyMap-Element** im XML-Stream angegeben, und weist ihn dem In-Memory-Cache durch einen Aufruf von [**IPropertyStoreCache::SetValueAndState**](/windows/win32/api/propsys/nf-propsys-ipropertystorecache-setvalueandstate)zu. Das PSC NORMAL-Flag im Aufruf von \_ **IPropertyStoreCache::SetValueAndState** gibt an, dass der Eigenschaftswert seit dem Zeitpunkt, zu dem er in den Cache eingegeben wurde, nicht geändert wurde.
 
 
 ```
@@ -255,9 +255,9 @@ HRESULT CRecipePropertyStore::_LoadProperty(PropertyMap &map)
 
 ## <a name="dealing-with-propvariant-based-values"></a>Umgang mit PROPVARIANT-Based Werten
 
-In der Implementierung von **\_ LoadProperty** wird ein Eigenschafts Wert in Form einer [**PROPVARIANT**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant)bereitgestellt. Ein Satz von APIs im Software Development Kit (SDK) wird bereitgestellt, um von primitiven Typen wie **pwstr** oder **int** in oder aus **PROPVARIANT** -Typen zu konvertieren. Diese APIs finden Sie in "propvarutil. h".
+In der Implementierung von **\_ LoadProperty** wird ein Eigenschaftswert in Form einer [**PROPVARIANT bereitgestellt.**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) Ein Satz von APIs im Software Development Kit (SDK) wird bereitgestellt, um primitive Typen wie **PWSTR** oder **int** in oder aus **PROPVARIANT-Typen zu** konvertieren. Diese APIs befinden sich in Propvarutil.h.
 
-Wenn Sie z. b. eine [**PROPVARIANT**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) in eine Zeichenfolge konvertieren möchten, können Sie " [**propvariantto String**](/windows/win32/api/propvarutil/nf-propvarutil-propvarianttostring) " verwenden, wie hier dargestellt.
+Um z. B. eine [**PROPVARIANT**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) in eine Zeichenfolge zu konvertieren, können Sie [**PropVariantToString**](/windows/win32/api/propvarutil/nf-propvarutil-propvarianttostring) wie hier dargestellt verwenden.
 
 
 ```
@@ -266,7 +266,7 @@ PropVariantToString(REFPROPVARIANT propvar, PWSTR psz, UINT cch);
 
 
 
-Um eine PROPVARIANT aus einer Zeichenfolge zu initialisieren, können Sie [**initpropvariantfromstring**](/windows/win32/api/propvarutil/nf-propvarutil-initpropvariantfromstring)verwenden.
+Zum Initialisieren einer PROPVARIANT aus einer Zeichenfolge können Sie [**InitPropVariantFromString verwenden.**](/windows/win32/api/propvarutil/nf-propvarutil-initpropvariantfromstring)
 
 
 ```
@@ -275,7 +275,7 @@ InitPropVariantFromString(PCWSTR psz, PROPVARIANT *ppropvar);
 
 
 
-Wie Sie in jeder der im Beispiel enthaltenen Rezept Dateien sehen können, können in jeder Datei mehr als ein Schlüsselwort vorhanden sein. Um dies zu berücksichtigen, unterstützt das Eigenschaften System mehrwertige Zeichen folgen, die als Zeichen folgen Vektor dargestellt werden (z \_ . a. "VT Vector \| VT \_ LPWSTR"). Die **\_ loadvectorproperty** -Methode im Beispiel verwendet vektorbasierte Werte.
+Wie Sie in jeder der im Beispiel enthaltenen Rezeptdateien sehen können, kann jede Datei mehr als ein Schlüsselwort enthalten. Um dies zu berücksichtigen, unterstützt das Eigenschaftensystem mehrwertige Zeichenfolgen, die als Vektor von Zeichenfolgen dargestellt werden (z.B. "VT \_ VECTOR \| VT \_ LPWSTR"). Die **\_ LoadVectorProperty-Methode** im Beispiel verwendet vektorbasierte Werte.
 
 
 ```
@@ -330,11 +330,11 @@ HRESULT CRecipePropertyStore::_LoadVectorProperty
 
 
 
-Wenn ein Wert in der Datei nicht vorhanden ist, wird kein Fehler zurückgegeben. Legen Sie den Wert stattdessen auf VT \_ Empty fest, und geben Sie **S \_ OK** zurück. "VT Empty" gibt an \_ , dass der Eigenschafts Wert nicht vorhanden ist.
+Wenn in der Datei kein Wert vorhanden ist, geben Sie keinen Fehler zurück. Legen Sie stattdessen den Wert auf VT \_ EMPTY fest, und geben Sie **S \_ OK zurück.** VT \_ EMPTY gibt an, dass der Eigenschaftswert nicht vorhanden ist.
 
-## <a name="supporting-open-metadata"></a>Unterstützen offener Metadaten
+## <a name="supporting-open-metadata"></a>Unterstützen von offenen Metadaten
 
-In diesem Beispiel wird ein XML-basiertes Dateiformat verwendet. Das Schema kann erweitert werden, um Eigenschaften zu unterstützen, die während der Entwicklung nicht berücksichtigt wurden, z. b.. Dieses System wird als Open Metadata bezeichnet. In diesem Beispiel wird das Eigenschaften System erweitert, indem unter dem **Rezept** Element **ExtendedProperties** ein Knoten erstellt wird, wie im folgenden Codebeispiel veranschaulicht.
+In diesem Beispiel wird ein XML-basiertes Dateiformat verwendet. Das Schema kann erweitert werden, um z. B. Eigenschaften zu unterstützen, die während der Entwicklung nicht verwendet wurden. Dieses System wird als offene Metadaten bezeichnet. In diesem Beispiel wird das Eigenschaftensystem erweitert, indem unter dem **Recipe-Element** **namens ExtendedProperties** ein Knoten erstellt wird, wie im folgenden Codebeispiel veranschaulicht.
 
 
 ```
@@ -347,7 +347,7 @@ In diesem Beispiel wird ein XML-basiertes Dateiformat verwendet. Das Schema kann
 
 
 
-Wenn Sie persistente erweiterte Eigenschaften während der Initialisierung laden möchten, implementieren Sie die **\_ loadextendedproperties** -Methode, wie im folgenden Codebeispiel veranschaulicht.
+Um persistente erweiterte Eigenschaften während der Initialisierung zu laden, implementieren Sie die **\_ LoadExtendedProperties-Methode,** wie im folgenden Codebeispiel veranschaulicht.
 
 
 ```
@@ -388,7 +388,7 @@ HRESULT CRecipePropertyStore::_LoadExtendedProperties()
 
 
 
-Die in "propsys. h" deklarierten Serialisierungs-APIs werden zum Serialisieren und Deserialisieren von [**PROPVARIANT**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) -Typen in blobdaten verwendet, und anschließend wird die Base64-Codierung zum Serialisieren dieser blobzeichen in Zeichen folgen verwendet, die in der XML-Datei gespeichert werden können. Diese Zeichen folgen werden im **encodedValue** -Attribut des **ExtendedProperties** -Elements gespeichert. Die folgende Hilfsmethode, die in der Datei "util. cpp" des Beispiels implementiert ist, führt die Serialisierung aus. Er beginnt mit einem Aufrufen der [**stgserializepropvariant**](/windows/win32/api/propvarutil/nf-propvarutil-stgserializepropvariant) -Funktion, um die binäre Serialisierung auszuführen, wie im folgenden Codebeispiel veranschaulicht.
+Serialisierungs-APIs, die in Propsys.h deklariert sind, werden verwendet, um [**PROPVARIANT-Typen**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) in Datenblobs zu serialisieren und zu deserialisieren. Anschließend wird die Base64-Codierung verwendet, um diese Blobs in Zeichenfolgen zu serialisieren, die im XML-Code gespeichert werden können. Diese Zeichenfolgen werden im **EncodedValue-Attribut** des **ExtendedProperties-Elements** gespeichert. Die folgende Hilfsprogrammmethode, die in der Datei Util.cpp des Beispiels implementiert ist, führt die Serialisierung aus. Sie beginnt mit einem Aufruf der [**StgSerializePropVariant-Funktion,**](/windows/win32/api/propvarutil/nf-propvarutil-stgserializepropvariant) um die binäre Serialisierung durchzuführen, wie im folgenden Codebeispiel veranschaulicht.
 
 
 ```
@@ -401,7 +401,7 @@ HRESULT SerializePropVariantAsString(const PROPVARIANT *ppropvar, PWSTR *pszOut)
 
 
 
-Anschließend führt die Funktion " [**cryptbinarydestring**](/windows/win32/api/wincrypt/nf-wincrypt-cryptbinarytostringa)", die in Wincrypt. h deklariert ist, die Base64-Konvertierung aus.
+Als Nächstes führt die in Wincrypt.h deklarierte [**CryptBinaryToString-Funktion**](/windows/win32/api/wincrypt/nf-wincrypt-cryptbinarytostringa)die Base64-Konvertierung aus.
 
 
 ```
@@ -445,33 +445,33 @@ Anschließend führt die Funktion " [**cryptbinarydestring**](/windows/win32/api
 
 
 
-Die **deserializepropvariantfromstring** -Funktion, die auch in util. cpp enthalten ist, kehrt den Vorgang um und deserialisiert Werte aus der XML-Datei.
+Die **DeserializePropVariantFromString-Funktion,** die auch in Util.cpp enthalten ist, kehrt den Vorgang um und deserialisiert Werte aus der XML-Datei.
 
-Weitere Informationen zur Unterstützung offener Metadaten finden Sie unter "Dateitypen, die offene Metadaten unterstützen" in [Dateitypen](../shell/fa-file-types.md).
+Informationen zur Unterstützung für geöffnete Metadaten finden Sie unter "Dateitypen, die geöffnete Metadaten unterstützen" in [Dateitypen.](../shell/fa-file-types.md)
 
-## <a name="full-text-contents"></a>Inhalt Full-Text
+## <a name="full-text-contents"></a>Full-Text Inhalt
 
-Eigenschaften Handler können auch eine Volltextsuche der Dateiinhalte vereinfachen, und Sie sind eine einfache Möglichkeit, diese Funktionalität bereitzustellen, wenn das Dateiformat nicht übermäßig kompliziert ist. Es gibt eine Alternative, leistungsfähigere Möglichkeit, den vollständigen Text der Datei über die Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle bereitzustellen.
+Eigenschaftenhandler können auch eine Volltextsuche der Dateiinhalte ermöglichen. Sie sind eine einfache Möglichkeit, diese Funktionalität bereitzustellen, wenn das Dateiformat nicht übermäßig kompliziert ist. Es gibt eine alternative, leistungsfähigere Möglichkeit, den vollständigen Text der Datei über die Implementierung der [**IFilter-Schnittstelle**](/windows/win32/api/filter/nn-filter-ifilter) bereitzustellen.
 
 In der folgenden Tabelle werden die Vorteile der einzelnen Ansätze mithilfe von [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) oder [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)zusammengefasst.
 
 
 
-| Funktion                                   | IFilter                      | IPropertyStore |
+| Funktion                                   | Ifilter                      | Ipropertystore |
 |----------------------------------------------|------------------------------|----------------|
-| Ermöglicht das Zurückschreiben in Dateien?                  | Nein                           | Ja            |
+| Lässt das Zurückschreiben in Dateien zu?                  | Nein                           | Ja            |
 | Bietet eine Mischung aus Inhalt und Eigenschaften?      | Ja                          | Ja            |
 | Mehrsprachige?                                | Ja                          | Nein             |
 | MIME/Embedded?                               | Ja                          | Nein             |
-| Text Begrenzungen?                             | Satz, Absatz, Kapitel | Keine           |
-| Implementierung wird für SPS/SQL Server unterstützt? | Ja                          | Nein             |
+| Textgrenzen?                             | Satz, Absatz, Kapitel | Keine           |
+| Implementierung für SPS/SQL Server unterstützt? | Ja                          | Nein             |
 | Implementierung                               | Komplex                      | Einfach         |
 
 
 
  
 
-Im Rezept handlerbeispiel hat das Rezeptdatei Format keine komplexen Anforderungen, sodass nur [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) für die voll Textunterstützung implementiert wurde. Die Volltextsuche wird für die XML-Knoten implementiert, die im folgenden Array benannt werden.
+Im Beispiel für den Rezepthandler weist das Format der Rezeptdatei keine komplexen Anforderungen auf, sodass nur [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) für die Volltextunterstützung implementiert wurde. Die Volltextsuche wird für die XML-Knoten implementiert, die im folgenden Array benannt sind.
 
 
 ```
@@ -485,7 +485,7 @@ const PWSTR c_rgszContentXPath[] = {
 
 
 
-Das-Eigenschaften System enthält die `System.Search.Contents` Eigenschaft (pkey \_ Search \_ Content), die zum Bereitstellen von voll Text Inhalt für den Indexer erstellt wurde. Der Wert dieser Eigenschaft wird nie direkt in der Benutzeroberfläche angezeigt. der Text von allen XML-Knoten, die im obigen Array benannt werden, wird zu einer einzelnen Zeichenfolge verkettet. Diese Zeichenfolge wird dann dem Indexer als voll Text Inhalt der Rezeptdatei über einen Aufruf von [**ipropertystorecache:: setvalueandstate**](/windows/win32/api/propsys/nf-propsys-ipropertystorecache-setvalueandstate) bereitgestellt, wie im folgenden Codebeispiel veranschaulicht.
+Das Eigenschaftensystem enthält die `System.Search.Contents` Eigenschaft (PKEY \_ Search \_ Contents), die erstellt wurde, um dem Indexer Volltextinhalt bereitzustellen. Der Wert dieser Eigenschaft wird nie direkt auf der Benutzeroberfläche angezeigt. Der Text aus allen XML-Knoten, die im obigen Array benannt sind, wird zu einer einzelnen Zeichenfolge verkettet. Diese Zeichenfolge wird dann dem Indexer als Volltextinhalt der Rezeptdatei durch einen Aufruf von [**IPropertyStoreCache::SetValueAndState**](/windows/win32/api/propsys/nf-propsys-ipropertystorecache-setvalueandstate) bereitgestellt, wie im folgenden Codebeispiel veranschaulicht.
 
 
 ```
@@ -530,21 +530,21 @@ HRESULT CRecipePropertyStore::_LoadSearchContent()
 
 
 
-## <a name="providing-values-for-properties"></a>Angeben von Werten für Eigenschaften
+## <a name="providing-values-for-properties"></a>Bereitstellen von Werten für Eigenschaften
 
-Wenn Sie zum Lesen von Werten verwendet werden, werden Eigenschaften Handler in der Regel aus einem der folgenden Gründe aufgerufen:
+Beim Lesen von Werten werden Eigenschaftenhandler in der Regel aus einem der folgenden Gründe aufgerufen:
 
--   , Um alle Eigenschaftswerte aufzuzählen.
--   , Um den Wert einer bestimmten Eigenschaft zu erhalten.
+-   Zum Aufzählen aller Eigenschaftswerte.
+-   So erhalten Sie den Wert einer bestimmten Eigenschaft.
 
-Bei der Enumeration wird ein Eigenschaften Handler aufgefordert, seine Eigenschaften entweder während der Indizierung aufzulisten, oder wenn im Dialogfeld Eigenschaften nach Eigenschaften zur Anzeige in der **anderen** Gruppe gefragt werden. Die Indizierung erfolgt ständig als Hintergrund Vorgang. Wenn sich eine Datei ändert, wird der Indexer benachrichtigt, und die Datei wird neu indiziert, indem der Eigenschaften Handler aufgefordert wird, seine Eigenschaften aufzuzählen. Daher ist es wichtig, dass Eigenschaften Handler effizient implementiert werden und Eigenschaftswerte so schnell wie möglich zurückgeben. Zählen Sie alle Eigenschaften, für die Sie Werte haben, genauso wie für jede beliebige Sammlung, aber keine Eigenschaften, die speicherintensive Berechnungen oder Netzwerk Anforderungen umfassen, die Sie langsam abrufen können.
+Zur Enumeration wird ein Eigenschaftenhandler aufgefordert, seine Eigenschaften entweder während der Indizierung aufzuzählen oder wenn das Eigenschaftendialogfeld nach Eigenschaften fragt, die in der Gruppe **Andere** angezeigt werden sollen. Die Indizierung wird ständig als Hintergrundvorgang durchgeführt. Wenn sich eine Datei ändert, wird der Indexer benachrichtigt und indiziert die Datei neu, indem der Eigenschaftenhandler aufgefordert wird, seine Eigenschaften aufzuzählen. Daher ist es wichtig, dass Eigenschaftenhandler effizient implementiert werden und Eigenschaftswerte so schnell wie möglich zurückgeben. Aufzählen Sie alle Eigenschaften, für die Sie Werte haben, genau wie für jede Auflistung, aber zählen Sie keine Eigenschaften auf, die speicherintensive Berechnungen oder Netzwerkanforderungen umfassen, die deren Abruf verlangsamen könnten.
 
-Beim Schreiben eines Eigenschaften Handlers müssen Sie in der Regel die folgenden beiden Sätze von Eigenschaften in Erwägung gezogen werden.
+Beim Schreiben eines Eigenschaftenhandlers müssen Sie in der Regel die folgenden beiden Sätze von Eigenschaften berücksichtigen.
 
--   Primäre Eigenschaften: Eigenschaften, die der Dateityp nativ unterstützt. Beispielsweise unterstützt ein Foto-Eigenschaften Handler für die Metadaten für die austauschbare Bilddatei (EXIF) nativ `System.Photo.FNumber` .
--   Erweiterte Eigenschaften: Eigenschaften, die vom Dateityp als Teil der geöffneten Metadaten unterstützt werden.
+-   Primäre Eigenschaften: Eigenschaften, die ihr Dateityp nativ unterstützt. Beispielsweise unterstützt ein Fotoeigenschaftenhandler für EXIF-Metadaten (Exchangeable Image File) nativ `System.Photo.FNumber` .
+-   Erweiterte Eigenschaften: Eigenschaften, die ihr Dateityp als Teil geöffneter Metadaten unterstützt.
 
-Da im Beispiel der in-Memory-Cache verwendet wird, ist die Implementierung von [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Methoden lediglich eine Frage der Delegierung an diesen Cache, wie im folgenden Codebeispiel veranschaulicht.
+Da im Beispiel der In-Memory-Cache verwendet wird, ist die Implementierung von [**IPropertyStore-Methoden**](/windows/win32/api/propsys/nn-propsys-ipropertystore) nur eine Frage der Delegierung an diesen Cache, wie im folgenden Codebeispiel veranschaulicht.
 
 
 ```
@@ -560,16 +560,16 @@ IFACEMETHODIMP GetValue(REFPROPERTYKEY key, __out PROPVARIANT *pPropVar)
 
 
 
-Wenn Sie sich entscheiden, nicht an den in-Memory-Cache zu delegieren, müssen Sie die-Methoden implementieren, um> das folgende erwartete Verhalten bereitzustellen:
+Wenn Sie nicht an den In-Memory-Cache delegieren möchten, müssen Sie Ihre Methoden implementieren, um> das folgende erwartete Verhalten bereitzustellen:
 
--   [**IPropertyStore:: GetCount**](/previous-versions/windows/desktop/legacy/bb761472(v=vs.85)): Wenn keine Eigenschaften vorhanden sind, gibt diese Methode " **S \_ OK**" zurück.
--   [**IPropertyStore:: GetAt**](/previous-versions/windows/desktop/legacy/bb761471(v=vs.85)): Wenn *iprop* größer oder gleich *cproperist*, gibt diese Methode E \_ invalidArg zurück, und die Struktur, auf die durch den *pkey* -Parameter verwiesen wird, wird mit Nullen gefüllt.
--   [**IPropertyStore:: GetCount**](/previous-versions/windows/desktop/legacy/bb761472(v=vs.85)) und [**IPropertyStore:: GetAt**](/previous-versions/windows/desktop/legacy/bb761471(v=vs.85)) spiegeln den aktuellen Zustand des Eigenschaften Handlers wider. Wenn ein [**PropertyKey**](/windows/win32/api/wtypes/ns-wtypes-propertykey) durch [**IPropertyStore:: SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))der Datei hinzugefügt oder daraus entfernt wird, müssen diese beiden Methoden diese Änderung beim nächsten Aufrufen widerspiegeln.
--   [**IPropertyStore:: GetValue**](/previous-versions/windows/desktop/legacy/bb761473(v=vs.85)): Wenn diese Methode für einen Wert, der nicht vorhanden ist, angefordert wird, gibt Sie " **S \_ OK** " zurück, wobei der als "VT Empty" gemeldete Wert angegeben wird \_ .
+-   [**IPropertyStore::GetCount:**](/previous-versions/windows/desktop/legacy/bb761472(v=vs.85))Wenn keine Eigenschaften vorhanden sind, gibt diese Methode **S \_ OK** zurück.
+-   [**IPropertyStore::GetAt:**](/previous-versions/windows/desktop/legacy/bb761471(v=vs.85))Wenn *iProp* größer oder gleich *cProps* ist, gibt diese Methode E \_ INVALIDARG zurück, und die Struktur, auf die der *pkey-Parameter zeigt,* wird mit Nullen gefüllt.
+-   [**IPropertyStore::GetCount**](/previous-versions/windows/desktop/legacy/bb761472(v=vs.85)) und [**IPropertyStore::GetAt**](/previous-versions/windows/desktop/legacy/bb761471(v=vs.85)) spiegeln den aktuellen Zustand des Eigenschaftenhandlers wider. Wenn ein [**PROPERTYKEY**](/windows/win32/api/wtypes/ns-wtypes-propertykey) der Datei über [**IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))hinzugefügt oder daraus entfernt wird, müssen diese beiden Methoden diese Änderung beim nächsten Aufruf widerspiegeln.
+-   [**IPropertyStore::GetValue:**](/previous-versions/windows/desktop/legacy/bb761473(v=vs.85))Wenn diese Methode nach einem Wert gefragt wird, der nicht vorhanden ist, wird **S \_ OK** zurückgegeben, wobei der Wert als VT EMPTY gemeldet \_ wird.
 
 ## <a name="writing-back-values"></a>Zurückschreiben von Werten
 
-Wenn der Eigenschafts Handler den Wert einer Eigenschaft mithilfe von [**IPropertyStore:: SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))schreibt, schreibt er erst den Wert in die Datei, wenn [**IPropertyStore:: Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85)) aufgerufen wird. Der in-Memory-Cache kann bei der Implementierung dieses Schemas nützlich sein. Im Beispielcode legt die **IPropertyStore:: SetValue** -Implementierung einfach den neuen Wert im in-Memory-Cache fest und legt den Zustand dieser Eigenschaft auf PSC \_ Dirty fest.
+Wenn der Eigenschaftenhandler den Wert einer Eigenschaft mithilfe von [**IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))schreibt, wird der Wert erst in die Datei geschrieben, wenn [**IPropertyStore::Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85)) aufgerufen wird. Der In-Memory-Cache kann bei der Implementierung dieses Schemas nützlich sein. Im Beispielcode legt die **IPropertyStore::SetValue-Implementierung** einfach den neuen Wert im In-Memory-Cache und den Zustand dieser Eigenschaft auf PSC \_ DIRTY fest.
 
 
 ```
@@ -594,17 +594,17 @@ HRESULT CRecipePropertyStore::SetValue(REFPROPERTYKEY key, const PROPVARIANT *pP
 
 
 
-In jeder [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Implementierung wird das folgende Verhalten von [**IPropertyStore:: SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))erwartet:
+In jeder [**IPropertyStore-Implementierung**](/windows/win32/api/propsys/nn-propsys-ipropertystore) wird das folgende Verhalten von [**IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))erwartet:
 
 -   Wenn die Eigenschaft bereits vorhanden ist, wird der Wert der Eigenschaft festgelegt.
--   Wenn die Eigenschaft nicht vorhanden ist, wird die neue Eigenschaft hinzugefügt und der Wert festgelegt.
--   Wenn der Eigenschafts Wert nicht mit derselben Genauigkeit wie angegeben beibehalten werden kann (beispielsweise aufgrund von Größenbeschränkungen im Dateiformat), wird der Wert so weit wie möglich festgelegt, und es wird eine Unterbindung von "Inplace \_ S" \_ zurückgegeben.
--   Wenn die Eigenschaft nicht vom Eigenschaften Handler unterstützt wird, `HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)` wird zurückgegeben.
--   Wenn ein anderer Grund dafür vorliegt, dass der Eigenschafts Wert nicht festgelegt werden kann, z. b. wenn die Datei gesperrt ist oder keine Rechte zum Bearbeiten über Zugriffs Steuerungs Listen (Access Control Lists, ACLs) vorhanden sind, wird STG \_ E \_ AccessDenied zurückgegeben.
+-   Wenn die Eigenschaft nicht vorhanden ist, wird die neue Eigenschaft hinzugefügt und ihr Wert festgelegt.
+-   Wenn der Eigenschaftswert nicht mit der angegebenen Genauigkeit beibehalten werden kann (z. B. Abschneiden aufgrund von Größenbeschränkungen im Dateiformat), wird der Wert so weit wie möglich festgelegt, und INPLACE \_ S \_ TRUNCATED wird zurückgegeben.
+-   Wenn die Eigenschaft vom Eigenschaftenhandler nicht unterstützt wird, `HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)` wird zurückgegeben.
+-   Wenn es einen anderen Grund gibt, warum der Eigenschaftswert nicht festgelegt werden kann, z. B. wenn die Datei gesperrt ist oder keine Bearbeitungsrechte über Zugriffssteuerungslisten (ACLs) vorhanden sind, wird STG \_ E \_ ACCESSDENIED zurückgegeben.
 
-Ein wichtiger Vorteil der Verwendung von Streams als Beispiel ist die Zuverlässigkeit. Eigenschaften Handler müssen immer in Erwägung ziehen, dass eine Datei im Falle eines schwerwiegenden Fehlers nicht in einem inkonsistenten Zustand belassen wird. Das beschädigen der Dateien eines Benutzers sollte offensichtlich vermieden werden, und die beste Vorgehensweise hierfür ist ein "Copy-on-Write"-Mechanismus. Wenn Ihr Eigenschaften Handler einen Stream für den Zugriff auf eine Datei verwendet, erhalten Sie dieses Verhalten automatisch. Das System schreibt alle Änderungen in den Stream und ersetzt die Datei nur während des Commitvorgangs durch die neue Kopie.
+Ein wichtiger Vorteil der Verwendung von Streams als Beispiel ist die Zuverlässigkeit. Eigenschaftenhandler müssen immer berücksichtigen, dass sie eine Datei im Falle eines schwerwiegenden Fehlers nicht in einem inkonsistenten Zustand belassen können. Eine Beschädigung der Dateien eines Benutzers sollte natürlich vermieden werden, und die beste Möglichkeit hierfür ist ein Mechanismus zum Kopieren beim Schreiben. Wenn Ihr Eigenschaftenhandler einen Stream für den Zugriff auf eine Datei verwendet, erhalten Sie dieses Verhalten automatisch. Das System schreibt alle Änderungen in den Stream, wobei die Datei nur während des Commitvorgangs durch die neue Kopie ersetzt wird.
 
-Wenn Sie dieses Verhalten außer Kraft setzen und den Datei Speicherungs Prozess manuell steuern möchten, können Sie das sichere Speicherverhalten ablehnen, indem Sie den Wert von manualsafesave in den Registrierungs Eintrag Ihres Handlers festlegen, wie hier gezeigt.
+Um dieses Verhalten zu überschreiben und den Dateispeichervorgang manuell zu steuern, können Sie das sichere Speicherverhalten deaktivieren, indem Sie den Wert ManualSafeSave im Registrierungseintrag Ihres Handlers festlegen, wie hier gezeigt.
 
 ```
 HKEY_CLASSES_ROOT
@@ -613,22 +613,22 @@ HKEY_CLASSES_ROOT
          ManualSafeSave = 1
 ```
 
-Wenn ein Handler den Wert manualsafesave angibt, ist der Stream, mit dem er initialisiert wird, kein transaktiver Datenstrom (STGM \_ transaktiv). Der Handler selbst muss die Safe Save-Funktion implementieren, um sicherzustellen, dass die Datei nicht beschädigt ist, wenn der Speichervorgang unterbrochen wird. Wenn der Handler direkte Schreibvorgänge implementiert, wird er in den Stream geschrieben, den er erhält. Wenn der Handler dieses Feature nicht unterstützt, muss er einen Stream abrufen, mit dem die aktualisierte Kopie der Datei mit [**idestinationstreamfactory:: getdestinationstream**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-idestinationstreamfactory-getdestinationstream)geschrieben werden kann. Nachdem der Handler das Schreiben abgeschlossen hat, sollte er im ursprünglichen Stream [**IPropertyStore:: Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85)) aufrufen, um den Vorgang abzuschließen, und den Inhalt des ursprünglichen Streams durch die neue Kopie der Datei ersetzen.
+Wenn ein Handler den ManualSafeSave-Wert angibt, ist der Stream, mit dem er initialisiert wird, kein transaktiver Stream (STGM \_ TRANSACTED). Der Handler selbst muss die sichere Speicherfunktion implementieren, um sicherzustellen, dass die Datei nicht beschädigt ist, wenn der Speichervorgang unterbrochen wird. Wenn der Handler das schreibende Schreiben implementiert, wird er in den angegebenen Stream geschrieben. Wenn der Handler dieses Feature nicht unterstützt, muss er einen Stream abrufen, mit dem die aktualisierte Kopie der Datei mithilfe von [**IDestinationStreamFactory::GetDestinationStream**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-idestinationstreamfactory-getdestinationstream)geschrieben werden soll. Nachdem der Handler mit dem Schreiben fertig ist, sollte er [**IPropertyStore::Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85)) für den ursprünglichen Stream aufrufen, um den Vorgang abzuschließen, und den Inhalt des ursprünglichen Streams durch die neue Kopie der Datei ersetzen.
 
-Manualsafesave ist auch die Standardsituation, wenn Sie den Handler nicht mit einem Stream initialisieren. Ohne einen ursprünglichen Stream zum Empfangen der Inhalte des temporären Streams müssen Sie [**ReplaceFile**](/windows/win32/api/winbase/nf-winbase-replacefilea) verwenden, um eine atomarische Ersetzung der Quelldatei vorzunehmen.
+ManualSafeSave ist auch die Standardsituation, wenn Sie Ihren Handler nicht mit einem Stream initialisieren. Ohne einen ursprünglichen Stream, um den Inhalt des temporären Streams zu empfangen, müssen Sie [**ReplaceFile**](/windows/win32/api/winbase/nf-winbase-replacefilea) verwenden, um eine atomare Ersetzung der Quelldatei durchzuführen.
 
-Große Dateiformate, die auf eine Weise verwendet werden, um Dateien zu erstellen, die größer als 1 MB sind, sollten die Unterstützung für direktes Schreiben von Eigenschaften implementieren. Andernfalls erfüllt das Leistungsverhalten nicht die Erwartungen von Clients des Eigenschaften Systems. In diesem Szenario sollte die für das Schreiben von Eigenschaften erforderliche Zeit nicht von der Dateigröße betroffen sein.
+Große Dateiformate, die auf eine Weise verwendet werden, die Dateien größer als 1 MB erzeugt, sollten Unterstützung für das Schreiben von in-place-Eigenschaften implementieren. Andernfalls entspricht das Leistungsverhalten nicht den Erwartungen der Clients des Eigenschaftensystems. In diesem Szenario sollte die Zeit, die zum Schreiben von Eigenschaften erforderlich ist, nicht von der Dateigröße beeinflusst werden.
 
-Für sehr große Dateien, z. b. eine Videodatei mit 1 GB oder mehr, ist eine andere Lösung erforderlich. Wenn in der Datei nicht genügend Speicherplatz für das direkte Schreiben vorhanden ist, kann es sein, dass der Handler die Aktualisierung der Eigenschaft misslingt, wenn der Speicherplatz, der für das Schreiben von direkten Eigenschaften reserviert ist, erschöpft ist. Dieser Fehler tritt auf, um eine schlechte Leistung zu vermeiden, die von 2 GB e/a verursacht wird (1 zum Lesen, 1 zum Schreiben). Aufgrund dieses möglichen Fehlers sollten diese Dateiformate ausreichend Speicherplatz für das Schreiben von direkten Eigenschaften reservieren.
+Für sehr große Dateien, z. B. eine Videodatei von 1 GB oder mehr, ist eine andere Lösung erforderlich. Wenn in der Datei nicht genügend Speicherplatz vorhanden ist, um das schreiben zu können, schlägt der Handler möglicherweise bei der Eigenschaftenaktualisierung fehl, wenn der für das Schreiben von in der -Eigenschaft reservierte Speicherplatz erschöpft ist. Dieser Fehler tritt auf, um eine schlechte Leistung aufgrund von 2 GB E/A (1 zu lesen, 1 zum Schreiben) zu vermeiden. Aufgrund dieses potenziellen Fehlers sollten diese Dateiformate genügend Speicherplatz für das schreiben von Eigenschaften reservieren.
 
-Wenn die Datei über genügend Speicherplatz verfügt, um Metadaten zu schreiben, und wenn das Schreiben dieser Metadaten nicht bewirkt, dass die Datei vergrößert oder verkleinert wird, ist es möglicherweise sicher, direkt zu schreiben. Wir empfehlen 64 KB als Ausgangspunkt. Das Schreiben direkt ist äquivalent zum Handler, der manualsafesave anfordert und [**IStream:: Commit**](/windows/win32/api/objidl/nf-objidl-istream-commit) in der Implementierung von [**IPropertyStore:: Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85))anfordert und eine viel bessere Leistung als Copy-on-Write-Vorgänge aufweist. Wenn sich die Dateigröße aufgrund von Eigenschafts Wertänderungen ändert, sollte das Schreiben direkt erfolgen, weil eine beschädigte Datei im Falle einer nicht ordnungsgemäßen Beendigung nicht ordnungsgemäß geschrieben werden kann.
+Wenn die Datei über genügend Speicherplatz im Header zum Schreiben von Metadaten verfügt und das Schreiben dieser Metadaten nicht dazu führt, dass die Datei vergrößert oder verkleinert wird, ist es möglicherweise sicher, dass sie an Ort und Stelle geschrieben wird. Wir empfehlen 64 KB als Ausgangspunkt. Das Schreiben von "in-place" entspricht dem Handler, der nach ManualSafeSave fragt und [**IStream::Commit**](/windows/win32/api/objidl/nf-objidl-istream-commit) in der Implementierung von [**IPropertyStore::Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85))aufruft, und weist eine viel bessere Leistung als copy-on-write auf. Wenn sich die Dateigröße aufgrund von Änderung des Eigenschaftswerts ändert, sollte nicht versucht werden, eine dateiveränderliche Datei zu schreiben, wenn eine nicht ordnungsgemäß beendet wird.
 
 > [!Note]  
-> Aus Leistungsgründen wird empfohlen, die Option manualsafesave mit Eigenschaften Handlern zu verwenden, die mit Dateien arbeiten, die 100 KB oder größer sind.
+> Aus Leistungsgründen wird empfohlen, die Option ManualSafeSave mit Eigenschaftenhandlern zu verwenden, die mit Dateien arbeiten, die 100 KB oder größer sind.
 
  
 
-Wie in der folgenden Beispiel Implementierung von [**IPropertyStore:: Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85))veranschaulicht, wird der Handler für manualsafesave registriert, um die Option für die manuelle sichere Speicherung zu veranschaulichen. Die **\_ savecachetodom** -Methode schreibt die im Arbeitsspeicher Cache gespeicherten Eigenschaftswerte in das XmlDocument-Objekt.
+Wie in der folgenden Beispielimplementierung von [**IPropertyStore::Commit**](/previous-versions/windows/desktop/legacy/bb761470(v=vs.85))veranschaulicht, wird der Handler für ManualSafeSave registriert, um die Option zum manuellen sicheren Speichern zu veranschaulichen. Die **\_ SaveCacheToDom-Methode** schreibt die im Speichercache gespeicherten Eigenschaftswerte in das XMLdocument-Objekt.
 
 
 ```
@@ -652,7 +652,7 @@ HRESULT CRecipePropertyStore::Commit()
 
 
 
-Stellen Sie als nächstes die Frage, ob das pcified [**idestinationstreamfactory**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-idestinationstreamfactory)unterstützt.
+Fragen Sie als Nächstes, ob die angegebene [**IDestinationStreamFactory**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-idestinationstreamfactory)unterstützt.
 
 
 ```
@@ -670,7 +670,7 @@ Stellen Sie als nächstes die Frage, ob das pcified [**idestinationstreamfactory
 
 
 
-Übertragen Sie als nächstes den ursprünglichen Stream, der die Daten auf sichere Weise in die ursprüngliche Datei schreibt.
+Committen Sie als Nächstes den ursprünglichen Stream, der die Daten auf sichere Weise zurück in die ursprüngliche Datei schreibt.
 
 
 ```
@@ -694,7 +694,7 @@ Stellen Sie als nächstes die Frage, ob das pcified [**idestinationstreamfactory
 
 
 
-Untersuchen Sie dann die **\_ savecachetodom** -Implementierung.
+Untersuchen Sie dann die **\_ SaveCacheToDom-Implementierung.**
 
 
 ```
@@ -707,7 +707,7 @@ HRESULT CRecipePropertyStore::_SaveCacheToDom()
 
 
 
-Im nächsten Schritt wird die Anzahl der Eigenschaften, die im Arbeitsspeicher Cache gespeichert werden, angezeigt.
+Als Nächstes erhalten Sie die Anzahl der eigenschaften, die im In-Memory-Cache gespeichert sind.
 
 
 ```
@@ -717,7 +717,7 @@ HRESULT hr = _pCache->GetCount(&cProps);
 
 
 
-Durchlaufen Sie nun die Eigenschaften, um zu bestimmen, ob der Wert einer Eigenschaft geändert wurde, seit Sie in den Arbeitsspeicher geladen wurde.
+Durchlaufen Sie nun die Eigenschaften, um zu bestimmen, ob der Wert einer Eigenschaft seit dem Laden in den Arbeitsspeicher geändert wurde.
 
 
 ```
@@ -729,7 +729,7 @@ Durchlaufen Sie nun die Eigenschaften, um zu bestimmen, ob der Wert einer Eigens
 
 
 
-Mit der [**ipropertystorecache:: GetState**](/windows/win32/api/propsys/nf-propsys-ipropertystorecache-getstate) -Methode wird der Zustand der Eigenschaft im Cache abgerufen. Das PSC- \_ Flag "Dirty", das in der [**IPropertyStore:: SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85)) -Implementierung festgelegt wurde, markiert eine Eigenschaft als geändert.
+Die [**IPropertyStoreCache::GetState-Methode**](/windows/win32/api/propsys/nf-propsys-ipropertystorecache-getstate) ruft den Zustand der Eigenschaft im Cache ab. Das PSC \_ DIRTY-Flag, das in der [**IPropertyStore::SetValue-Implementierung**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85)) festgelegt wurde, markiert eine Eigenschaft als geändert.
 
 
 ```
@@ -747,7 +747,7 @@ Mit der [**ipropertystorecache:: GetState**](/windows/win32/api/propsys/nf-props
 
 
 
-Ordnen Sie die-Eigenschaft dem XML-Knoten zu, wie im Feld z. b. **\_ rgpropertymap** angegeben.
+Ordnen Sie die -Eigenschaft dem XML-Knoten zu, wie im **Array \_ rgPropertyMap** angegeben.
 
 
 ```
@@ -767,7 +767,7 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn eine Eigenschaft nicht in der Zuordnung angezeigt wird, handelt es sich um eine neue Eigenschaft, die von Windows Explorer festgelegt wurde. Da Open Metadata unterstützt wird, speichern Sie die neue Eigenschaft im **ExtendedProperties** -Abschnitt der XML-Datei.
+Wenn sich eine Eigenschaft nicht in der Zuordnung befindet, handelt es sich um eine neue Eigenschaft, die von Windows-Explorer festgelegt wurde. Da geöffnete Metadaten unterstützt werden, speichern Sie die neue Eigenschaft im Abschnitt **ExtendedProperties** des XML-Code.
 
 
 ```
@@ -789,9 +789,9 @@ Wenn eine Eigenschaft nicht in der Zuordnung angezeigt wird, handelt es sich um 
 
 
 
-## <a name="implementing-ipropertystorecapabilities"></a>Implementieren von ipropertystorecapabilitäten
+## <a name="implementing-ipropertystorecapabilities"></a>Implementieren von IPropertyStoreCapabilities
 
-[**Ipropertystorecapabiliinformiert**](/windows/win32/api/propsys/nn-propsys-ipropertystorecapabilities) die Shell-Benutzeroberfläche, ob eine bestimmte Eigenschaft in der Shellbenutzeroberfläche bearbeitet werden kann. Beachten Sie, dass sich dies nur auf die Möglichkeit bezieht, die Eigenschaft in der Benutzeroberfläche zu bearbeiten, nicht, ob Sie [**IPropertyStore:: SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85)) für die Eigenschaft erfolgreich aufrufen können. Eine Eigenschaft, die den Rückgabewert S \_ false aus [**ipropertystorecapabili:: ispropertywrite Table**](/windows/win32/api/propsys/nf-propsys-ipropertystorecapabilities-ispropertywritable) provoziert, kann möglicherweise trotzdem über eine Anwendung festgelegt werden.
+[**IPropertyStoreCapabilities**](/windows/win32/api/propsys/nn-propsys-ipropertystorecapabilities) informiert die Shell-Benutzeroberfläche darüber, ob eine bestimmte Eigenschaft in der Shell-Benutzeroberfläche bearbeitet werden kann. Beachten Sie, dass sich dies nur auf die Möglichkeit bezieht, die Eigenschaft in der Benutzeroberfläche zu bearbeiten, und nicht darauf, ob [**Sie IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85)) erfolgreich für die Eigenschaft aufrufen können. Eine Eigenschaft, die den Rückgabewert S FALSE von \_ [**IPropertyStoreCapabilities::IsPropertyWritable**](/windows/win32/api/propsys/nf-propsys-ipropertystorecapabilities-ispropertywritable) zurückerrechnt, kann möglicherweise weiterhin über eine Anwendung festgelegt werden.
 
 
 ```
@@ -803,39 +803,39 @@ interface IPropertyStoreCapabilities : IUnknown
 
 
 
-[**Ispropertywrite Table**](/windows/win32/api/propsys/nf-propsys-ipropertystorecapabilities-ispropertywritable) gibt **S \_ OK** zurück, um anzugeben, dass Endbenutzer die Eigenschaft direkt bearbeiten dürfen. \_False gibt an, dass dies nicht der Fall sein sollte. ' \_ False ' kann bedeuten, dass Anwendungen für das Schreiben der Eigenschaft zuständig sind, nicht für Benutzer. Die Shell deaktiviert Bearbeitungs Steuerelemente entsprechend den Ergebnissen von Aufrufen dieser Methode je nach Bedarf. Bei einem Handler, der [**ipropertystorecapabilinicht**](/windows/win32/api/propsys/nn-propsys-ipropertystorecapabilities) implementiert, wird angenommen, dass er Open Metadata durch Unterstützung für das Schreiben einer beliebigen Eigenschaft unterstützt.
+[**IsPropertyWritable gibt**](/windows/win32/api/propsys/nf-propsys-ipropertystorecapabilities-ispropertywritable) **S OK \_ zurück,** um anzugeben, dass Endbenutzer die Eigenschaft direkt bearbeiten dürfen. S \_ FALSE gibt an, dass dies nicht der Wert sein sollte. S FALSE kann bedeuten, dass Anwendungen für das Schreiben der Eigenschaft und nicht für \_ Benutzer verantwortlich sind. Die Shell deaktiviert die Bearbeitungssteuerelemente entsprechend den Ergebnissen der Aufrufe dieser Methode. Es wird davon ausgegangen, dass ein Handler, der [**IPropertyStoreCapabilities**](/windows/win32/api/propsys/nn-propsys-ipropertystorecapabilities) nicht implementiert, offene Metadaten durch Unterstützung für das Schreiben von Eigenschaften unterstützt.
 
-Wenn Sie einen Handler erstellen, der nur schreibgeschützte Eigenschaften behandelt, sollten Sie die **Initialize** -Methode ([**IInitializeWithStream**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream), [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem)oder [**IInitializeWithFile**](/windows/win32/api/propsys/nn-propsys-iinitializewithfile)) implementieren, damit Sie STG \_ E AccessDenied zurückgibt, wenn Sie \_ mit dem STGM- \_ leseschreib Flag aufgerufen wird.
+Wenn Sie einen Handler erstellen, der nur schreibgeschützte Eigenschaften behandelt, sollten Sie die **Initialize-Methode** ([**IInitializeWithStream,**](/windows/win32/api/propsys/nn-propsys-iinitializewithstream) [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem)oder [**IInitializeWithFile**](/windows/win32/api/propsys/nn-propsys-iinitializewithfile)) implementieren, sodass stg E ACCESSDENIED zurückgegeben wird, wenn sie mit dem \_ \_ STGM READWRITE-Flag aufgerufen \_ wird.
 
-Für einige Eigenschaften ist das [isinnate](./propdesc-schema-typeinfo.md) -Attribut auf " **true**" festgelegt. Angeborene Eigenschaften haben die folgenden Merkmale:
+Bei einigen Eigenschaften ist das [isInnate-Attribut](./propdesc-schema-typeinfo.md) auf **true festgelegt.** Innierte Eigenschaften haben die folgenden Merkmale:
 
--   Die-Eigenschaft wird in der Regel auf irgendeine Weise berechnet. Beispielsweise `System.Image.BitDepth` wird anhand des Bilds berechnet.
--   Das Ändern der Eigenschaft wäre nicht sinnvoll, ohne die Datei zu ändern. Wenn Sie beispielsweise `System.Image.Dimensions` die Größe des Bilds ändern, wird die Größe des Bilds nicht geändert, daher ist es nicht sinnvoll, es dem Benutzer zu gestatten.
--   In einigen Fällen werden diese Eigenschaften vom System automatisch bereitgestellt. Zu den Beispielen gehören `System.DateModified` , die vom Dateisystem bereitgestellt werden, und `System.SharedWith` , der darauf basiert, wer der Benutzer für die Datei freigegeben hat.
+-   Die -Eigenschaft wird in der Regel in irgendeiner Weise berechnet. Beispielsweise wird `System.Image.BitDepth` aus dem Bild selbst berechnet.
+-   Das Ändern der -Eigenschaft wäre nicht sinnvoll, ohne die Datei zu ändern. Wenn Sie z. B. ändern, wird die Größe des Bilds nicht geändert, daher ist es nicht sinnvoll, dem Benutzer zu erlauben, `System.Image.Dimensions` es zu ändern.
+-   In einigen Fällen werden diese Eigenschaften automatisch vom System bereitgestellt. Beispiele hierfür sind , das vom Dateisystem bereitgestellt wird, und , die darauf basieren, für wen der Benutzer `System.DateModified` `System.SharedWith` die Datei gemeinsam verwendet.
 
-Aufgrund dieser Merkmale werden Eigenschaften, die als *isinnate* gekennzeichnet sind, dem Benutzer nur als schreibgeschützte Eigenschaften in der Shell-Benutzeroberfläche bereitgestellt. Wenn eine Eigenschaft als *isinnate* gekennzeichnet ist, speichert das Eigenschaften System diese Eigenschaft nicht im Eigenschaften Handler. Daher benötigen Eigenschaften Handler keinen speziellen Code, um diese Eigenschaften in ihren Implementierungen zu berücksichtigen. Wenn der Wert des *isinnate* -Attributs nicht explizit für eine bestimmte Eigenschaft angegeben wird, ist der Standardwert **false**.
+Aufgrund dieser Merkmale werden eigenschaften, die als *IsInnate* gekennzeichnet sind, dem Benutzer auf der Shell-Benutzeroberfläche nur als schreibgeschützte Eigenschaften bereitgestellt. Wenn eine Eigenschaft als *IsInnate markiert* ist, wird diese Eigenschaft vom Eigenschaftensystem nicht im Eigenschaftenhandler gespeichert. Daher benötigen Eigenschaftenhandler keinen speziellen Code, um diese Eigenschaften in ihren Implementierungen zu berücksichtigen. Wenn der Wert des *IsInnate-Attributs* nicht explizit für eine bestimmte Eigenschaft angegeben ist, ist der Standardwert **FALSE.**
 
-## <a name="registering-and-distributing-property-handlers"></a>Registrieren und Verteilen von Eigenschaften Handlern
+## <a name="registering-and-distributing-property-handlers"></a>Registrieren und Verteilen von Eigenschaftenhandlern
 
-Nachdem der Eigenschaften Handler implementiert wurde, muss er registriert und seine Dateinamenerweiterung dem Handler zugeordnet sein. Weitere Informationen finden Sie unter [registrieren und Verteilen von Eigenschaften Handlern](./prophand-reg-dist.md).
+Wenn der Eigenschaftenhandler implementiert ist, muss er registriert werden, und seine Dateierweiterung muss dem Handler zugeordnet sein. Weitere Informationen finden Sie unter [Registrieren und Verteilen von Eigenschaftenhandlern.](./prophand-reg-dist.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Grundlegendes zu Eigenschaften Handlern](./building-property-handlers-properties.md)
+[Grundlegendes zu Eigenschaftenhandlern](./building-property-handlers-properties.md)
 </dt> <dt>
 
 [Verwenden von Kind-Namen](./building-property-handlers-user-friendly-kind-names.md)
 </dt> <dt>
 
-[Verwenden von Eigenschaften Listen](./building-property-handlers-property-lists.md)
+[Verwenden von Eigenschaftenlisten](./building-property-handlers-property-lists.md)
 </dt> <dt>
 
-[Registrieren und Verteilen von Eigenschaften Handlern](./prophand-reg-dist.md)
+[Registrieren und Verteilen von Eigenschaftenhandlern](./prophand-reg-dist.md)
 </dt> <dt>
 
-[Bewährte Methoden und häufig gestellte Fragen zu Eigenschaften Handlern](./prophand-bestprac-faq.md)
+[Bewährte Methoden und häufig gestellte Fragen zu Eigenschaftenhandlern](./prophand-bestprac-faq.md)
 </dt> </dl>
 
  

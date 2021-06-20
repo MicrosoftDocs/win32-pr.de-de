@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: ScoredProperty-Instanzen können auch in anderen ScoredProperty-Instanzen oder als untergeordnete Elemente einer Optionsinstanz geschachtelt werden.
 ms.assetid: 071dc91f-3574-4e0e-b2ba-0e4a56ce4a28
-title: Geschsted ScoredProperty-Instanzen
+title: Geschachtelte ScoredProperty-Instanzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f1bfed09c48bc0ac6e93e09f96dc8116e8b0a91
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 15a80d291fa59b2f36191f42b2f99ea9d22789a2
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106355113"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408603"
 ---
-# <a name="nested-scoredproperty-instances"></a>Geschsted ScoredProperty-Instanzen
+# <a name="nested-scoredproperty-instances"></a>Geschachtelte ScoredProperty-Instanzen
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beachten Sie, dass Sie nicht auf das Hinzufügen von ScoredProperty-Instanzen als untergeordnete Elemente einer Options Instanz beschränkt sind. ScoredProperty-Instanzen können auch in anderen ScoredProperty-Instanzen geschachtelt werden. Dies ist nützlich, wenn eine Geräte Eigenschaft Komplex ist und am besten durch mehrere unter Eigenschaften repräsentiert wird. Das Hinzufügen von untergeordneten Eigenschaften zu einer vorhandenen (oder öffentlichen) Eigenschaft oder ScoredProperty ist eine gute Möglichkeit, um eine Option zu verbessern und gleichzeitig die Portabilität mit Instanzen vorhandener Optionen beizubehalten. Beispielsweise enthalten die Standard-Options Instanzen für das MediaType-Feature eine ScoredProperty, die die Gewichtung der Medien als hell, Mittel, stark oder extra stark beschreibt. Wenn Sie genauere Beschreibungen der Gewichtung möchten, können Sie eine untergeordnete Eigenschaft (GramsPer100Sheets im folgenden Beispiel) hinzufügen, die die tatsächliche Gewichtung (in grams) von 100-Zeichen in Zeichen enthält. Die Option erweitert könnte wie im folgenden Beispiel aussehen.
+Beachten Sie, dass Sie nicht auf das Hinzufügen von ScoredProperty-Instanzen als untergeordnete Elemente einer Optionsinstanz beschränkt sind. ScoredProperty-Instanzen können auch in anderen ScoredProperty-Instanzen geschachtelt sein. Dies ist nützlich, wenn eine Geräteeigenschaft komplex ist und am besten durch mehrere Untereigenschaften dargestellt wird. Das Hinzufügen von Untereigenschaften zu einer vorhandenen (oder öffentlichen) Eigenschaft oder ScoredProperty ist eine gute Möglichkeit, eine Option zu verbessern und gleichzeitig die Portabilität mit vorhandenen Optionsinstanzen zu erhalten. Beispielsweise enthalten die Standardoption-Instanzen für das MediaType-Feature eine ScoredProperty, die die Gewichtung der Medien als Light, Medium, Heavy oder ExtraHeavy beschreibt. Wenn Sie genauere Beschreibungen der Gewichtung wünschen, können Sie eine Untereigenschaften (Im folgenden Beispiel "GramsPer100Sheets") hinzufügen, die das tatsächliche Gewicht (in Grammen) von 100 Medienblättern enthält. Die erweiterte Option könnte wie im folgenden Beispiel aussehen.
 
 ``` syntax
 <!-- Note: The following ScoredProperty is not a Public Print Schema ScoredProperty -->
@@ -30,13 +30,13 @@ Beachten Sie, dass Sie nicht auf das Hinzufügen von ScoredProperty-Instanzen al
 </psf:ScoredProperty>
 ```
 
-Ein Vergleich der ursprünglichen und erweiterten Options Instanzen erzeugt eine nahezu perfekte Entsprechung, da die erweiterte Option eine supermenge der ursprünglichen ist, und die Speicherorte und Werte der einzelnen ursprünglichen ScoredProperty-Instanzen bleiben erhalten.
+Ein Vergleich der ursprünglichen und erweiterten Option-Instanzen erzeugt eine nahezu perfekte Übereinstimmung, da die erweiterte Option eine Obermenge des Originals ist und die Speicherorte und Werte der einzelnen ursprünglichen ScoredProperty-Instanzen beibehalten werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

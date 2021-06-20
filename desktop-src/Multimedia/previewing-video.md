@@ -1,22 +1,22 @@
 ---
-title: Anzeigen einer Vorschau für Videos (Windows Multimedia)
-description: Anzeigen einer Vorschau für Videos
+title: Vorschau von Videos (Windows Multimedia)
+description: In diesem Beispiel in Windows Multimedia wird capPreviewRate verwendet, um die Bildanzeigerate für den Vorschaumodus und capPreview so zu festlegen, dass das Erfassungsfenster in den Vorschaumodus gesetzt wird.
 ms.assetid: 33ae7d07-5fea-47d7-b60d-4ee412e91dec
 keywords:
-- cappreview-Makro
-- cappreviewrate-Makro
+- capPreview-Makro
+- capPreviewRate-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79c8e24d30fd5141b5b1ac14de99d83e0b2bc620
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: bdc3aaeb9a8ff0f040218fca4822af93ab8bfe29
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341980"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405543"
 ---
-# <a name="previewing-video-windows-multimedia"></a>Anzeigen einer Vorschau für Videos (Windows Multimedia)
+# <a name="previewing-video-windows-multimedia"></a>Vorschau von Videos (Windows Multimedia)
 
-Im folgenden Beispiel wird das [**cappreviewrate**](/windows/desktop/api/Vfw/nf-vfw-cappreviewrate) -Makro verwendet, um die Frame-Anzeige Rate für den Vorschaumodus auf 66 Millisekunden pro Frame festzulegen. Anschließend wird das Aufzeichnungs Fenster mithilfe des [**cappreview**](/windows/desktop/api/Vfw/nf-vfw-cappreview) -Makros im Vorschaumodus platziert.
+Im folgenden Beispiel wird das [**Makro capPreviewRate**](/windows/desktop/api/Vfw/nf-vfw-cappreviewrate) verwendet, um die Bildanzeigerate für den Vorschaumodus auf 66 Millisekunden pro Frame zu setzen. Anschließend wird das [**CapPreview-Makro**](/windows/desktop/api/Vfw/nf-vfw-cappreview) verwendet, um das Erfassungsfenster im Vorschaumodus zu platzieren.
 
 
 ```C++
@@ -38,7 +38,7 @@ capPreview(hWndC, FALSE);        // disables preview
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video Capture](using-video-capture.md)
 </dt> </dl>
 
  

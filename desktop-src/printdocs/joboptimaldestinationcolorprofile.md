@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Hier erfahren Sie mehr über das JobOptimalDestinationColorProfile-Element, das das optimale Farbprofil bei der aktuellen Gerätekonfiguration angibt.
 ms.assetid: 70790dc2-180a-4e04-91a9-a10ee76c836b
 title: JobOptimalDestinationColorProfile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45630b2ddbe94f19905f01c508fc4d852d29566b
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 3e7ad2ea269594809b047922ea4f6c99b924e5ae
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999251"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408843"
 ---
 # <a name="joboptimaldestinationcolorprofile"></a>JobOptimalDestinationColorProfile
 
@@ -19,7 +19,7 @@ Gibt das optimale Farbprofil bei der aktuellen Gerätekonfiguration an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -61,15 +61,15 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 | Name                            | Datentyp         | Einheit           | Unterstützte Werte          | Zusammenfassung                                        |
 |---------------------------------|-------------------|----------------|---------------------------|------------------------------------------------|
-| \_ProfileValue\_<br/>     | Zeichenfolge<br/> | –<br/> | RGB, RGB, RGB, C WIE<br/> | Gibt das Farbprofil an.<br/>        |
+| \_ProfileValue\_<br/>     | Zeichenfolge<br/> | –<br/> | RGB, RGB, RGB, C RGB<br/> | Gibt das Farbprofil an.<br/>        |
 | \_PathValue\_<br/>        | Zeichenfolge<br/> | –<br/> | –<br/>            | Gibt den Dateipfad zum Profil an.<br/> |
-| \_ProfileDataValue\_<br/> | Zeichenfolge<br/> | –<br/> | –<br/>            | Enthält Profildateninhalt.<br/>      |
+| \_ProfileDataValue\_<br/> | Zeichenfolge<br/> | –<br/> | –<br/>            | Enthält Profildateninhalte.<br/>      |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
