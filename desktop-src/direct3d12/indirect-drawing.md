@@ -1,93 +1,93 @@
 ---
-title: Indirektes zeichnen
-description: Indirektes zeichnen ermöglicht das Verschieben von Szenen Durchlauf und-Daten aus der CPU auf die GPU, wodurch die Leistung verbessert werden kann. Der Befehls Puffer kann von der CPU oder GPU generiert werden.
+title: Indirektes Zeichnen
+description: Indirektes Zeichnen ermöglicht es, einige Szenendurchlauf- und Cullingvorgänge von der CPU zur GPU zu verschieben, was die Leistung verbessern kann. Der Befehlspuffer kann von der CPU oder GPU generiert werden.
 ms.assetid: F8D6C88A-101E-4F66-999F-43206F6527B6
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7731a662bc6064e635d68942e6b0b222adf1eda8
-ms.sourcegitcommit: 56f8e4d5119e5018363fa2dc3472cdff203c6913
+ms.openlocfilehash: 6fa474a469d5789d4b31830400d981ea771db2e8
+ms.sourcegitcommit: b9a7a48e52219bf8d33e6b8171fc9f8b52151e92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "104548649"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "112421878"
 ---
-# <a name="indirect-drawing"></a>Indirektes zeichnen
+# <a name="indirect-drawing"></a>Indirektes Zeichnen
 
-Indirektes zeichnen ermöglicht das Verschieben von Szenen Durchlauf und-Daten aus der CPU auf die GPU, wodurch die Leistung verbessert werden kann. Der Befehls Puffer kann von der CPU oder GPU generiert werden.
+Indirektes Zeichnen ermöglicht es, einige Szenendurchlauf- und Cullingvorgänge von der CPU zur GPU zu verschieben, was die Leistung verbessern kann. Der Befehlspuffer kann von der CPU oder GPU generiert werden.
 
--   [Befehls Signaturen](#command-signatures)
--   [Indirekte Argument Puffer Strukturen](#indirect-argument-buffer-structures)
--   [Befehls Signatur Erstellung](#command-signature-creation)
-    -   [Keine Argument Änderungen](#no-argument-changes)
-    -   [Stamm Konstanten und Vertex-Puffer](#root-constants-and-vertex-buffers)
+-   [Befehlssignaturen](#command-signatures)
+-   [Indirekte Argumentpufferstrukturen](#indirect-argument-buffer-structures)
+-   [Erstellung der Befehlssignatur](#command-signature-creation)
+    -   [Keine Argumentänderungen](#no-argument-changes)
+    -   [Stammkonstanten und Scheitelpunktpuffer](#root-constants-and-vertex-buffers)
 -   [Verwandte Themen](#related-topics)
 
-## <a name="command-signatures"></a>Befehls Signaturen
+## <a name="command-signatures"></a>Befehlssignaturen
 
-Das Befehls Signatur Objekt ([**ID3D12CommandSignature**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandsignature)) ermöglicht es apps, indirekte Zeichnungen anzugeben, insbesondere die folgenden Einstellungen:
+Mit dem Befehlssignaturobjekt ([**ID3D12CommandSignature**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandsignature)) können Apps indirekte Zeichnungen angeben, insbesondere folgende Einstellungen:
 
--   Das indirekte Argument Puffer Format.
--   Der Befehlstyp, der verwendet wird (aus den [**ID3D12GraphicsCommandList**](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist) -Methoden [**drawinstanused**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced), [**drawindexedinstanused**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced)oder [**Dispatch**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch)).
--   Der Satz von Ressourcen Bindungen, der den pro-Befehl-Rückruf und den Satz ändert, der geerbt wird.
+-   Das Pufferformat für indirekte Argumente.
+-   Der Befehlstyp, der verwendet wird (von den [**ID3D12GraphicsCommandList-Methoden**](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist) [**DrawInstanced,**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced) [**DrawIndexedInstanced**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced)oder [**Dispatch**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch)).
+-   Der Satz von Ressourcenbindungen, der sich pro Befehlsaufruf im Vergleich zu dem Satz ändert, der geerbt wird.
 
-Beim Start erstellt eine APP einen kleinen Satz von **Befehls Signaturen**. Zur Laufzeit füllt die Anwendung einen Puffer mit Befehlen (über das, was der App-Entwickler entscheidet). Die Befehle, die optional den Status für Vertex-Puffer Sichten, Index Puffer Sichten, Stamm Konstanten und Stamm Deskriptoren (RAW oder strukturierte SRV/UAV/cbvs) enthalten. Diese Argument Layouts sind nicht Hardware spezifisch, sodass Apps die Puffer direkt generieren können. Die Befehls Signatur erbt den restlichen Zustand von der Befehlsliste. Dann ruft die APP [**executeindirect**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) auf, um die GPU anzuweisen, den Inhalt des indirekten Argument Puffers entsprechend dem von einer bestimmten Befehls Signatur definierten Format zu interpretieren.
+Beim Start erstellt eine App einen kleinen Satz von **Befehlssignaturen.** Zur Laufzeit füllt die Anwendung einen Puffer mit Befehlen aus (unabhängig davon, was der App-Entwickler wählt). Die Befehle enthalten optional den Zustand, der für Scheitelpunktpuffersichten, Indexpuffersichten, Stammkonstanten und Stammdeskriptoren (unformatierte oder strukturierte SRV-/UAV-/CBVs) festgelegt werden soll. Diese Argumentlayouts sind nicht hardwarespezifisch, sodass Apps die Puffer direkt generieren können. Die Befehlssignatur erbt den verbleibenden Zustand aus der Befehlsliste. Anschließend ruft die App [**ExecuteIndirect**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) auf, um die GPU anzuweisen, den Inhalt des indirekten Argumentpuffers gemäß dem Format zu interpretieren, das von einer bestimmten Befehlssignatur definiert wird.
 
-Wenn die Befehls Signatur root-Argumente ändert, wird diese in der Befehls Signatur als Teilmenge einer Stamm Signatur gespeichert.
+Wenn die Befehlssignatur Stammargumente ändert, wird diese in der Befehlssignatur als Teilmenge einer Stammsignatur gespeichert.
 
-Beachten Sie, dass kein Befehls Signatur Zustand an die Befehlsliste zurückgibt, wenn die Ausführung vollständig ist.
+Beachten Sie, dass kein Befehlssignaturzustand in die Befehlsliste zurückfällt, wenn die Ausführung abgeschlossen ist.
 
-Angenommen, ein App-Entwickler möchte, dass eine eindeutige Stamm Konstante im indirekten Argument Puffer pro zeichnen-Befehl angegeben wird. Die APP würde eine Befehls Signatur erstellen, die es dem indirekten Argument Puffer ermöglicht, die folgenden Parameter pro zeichnen-Befehl anzugeben:
+Angenommen, ein App-Entwickler möchte eine eindeutige Stammkonstante pro Draw-Aufruf im indirekten Argumentpuffer angeben. Die App erstellt eine Befehlssignatur, die es dem indirekten Argumentpuffer ermöglicht, die folgenden Parameter pro Draw-Aufruf anzugeben:
 
--   Der Wert einer Stamm Konstante.
--   Die zeichnen-Argumente (Scheitelpunkt Anzahl, Instanzanzahl usw.).
+-   Der Wert einer Stammkonstante.
+-   Die Draw-Argumente (Scheitelpunktanzahl, Instanzanzahl usw.).
 
-Der indirekte Argument Puffer, der von der Anwendung generiert wird, enthält ein Array von Datensätzen mit fester Größe. Jede Struktur entspricht einem zeichnen-Befehl. Jede Struktur enthält die Zeichnungs Argumente und den Wert der Stamm Konstante. Die Anzahl der Draw-Aufrufe wird in einem separaten GPU-sichtbaren Puffer angegeben.
+Der von der Anwendung generierte indirekte Argumentpuffer würde ein Array von Datensätzen fester Größe enthalten. Jede Struktur entspricht einem Zeichnen-Aufruf. Jede -Struktur enthält die Zeichnungsargumente und den Wert der Stammkonstante. Die Anzahl der Zeichnen-Aufrufe wird in einem separaten GPU-sichtbaren Puffer angegeben.
 
-Ein Beispiel für einen von der APP generierten Befehls Puffer lautet folgendermaßen:
+Ein Beispielbefehlspuffer, der von der App generiert wird, lautet wie folgt:
 
-![Befehls Puffer Format](images/indirect-drawing-command-buffer.png)
+![Befehlspufferformat](images/indirect-drawing-command-buffer.png)
 
-## <a name="indirect-argument-buffer-structures"></a>Indirekte Argument Puffer Strukturen
+## <a name="indirect-argument-buffer-structures"></a>Indirekte Argumentpufferstrukturen
 
-Die folgenden Strukturen definieren, wie bestimmte Argumente in einem indirekten Argument Puffer angezeigt werden. Diese Strukturen werden in keiner D3D12-API angezeigt. Anwendungen verwenden diese Definitionen beim Schreiben in einen indirekten Argument Puffer (mit der CPU oder GPU):
+Die folgenden Strukturen definieren, wie bestimmte Argumente in einem indirekten Argumentpuffer angezeigt werden. Diese Strukturen werden in keiner D3D12-API angezeigt. Anwendungen verwenden diese Definitionen beim Schreiben in einen indirekten Argumentpuffer (mit CPU oder GPU):
 
--   [**D3D12 \_ Zeichnen von \_ Argumenten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_draw_arguments)
--   [**D3D12 \_ \_ indizierte \_ Argumente zeichnen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_draw_indexed_arguments)
--   [**D3D12 \_ \_ dispatchargumente**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_dispatch_arguments)
--   [**D3D12 \_ Vertex- \_ Puffer \_ Ansicht**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_vertex_buffer_view)
--   [**D3D12 \_ Index \_ Puffer \_ Ansicht**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_index_buffer_view)
--   D3D12 \_ GPU \_ Virtual \_ Address (ein TypeDef-Synonym von UINT64).
--   [**D3D12 \_ Konstante \_ Puffer \_ Ansicht**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_constant_buffer_view_desc)
+-   [**D3D12 \_ \_ DRAW-ARGUMENTE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_draw_arguments)
+-   [**D3D12 \_ ZEICHNEN \_ INDIZIERTE \_ ARGUMENTE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_draw_indexed_arguments)
+-   [**D3D12 \_ \_ DISPATCH-ARGUMENTE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_dispatch_arguments)
+-   [**D3D12 \_ \_ \_ VERTEXPUFFERANSICHT**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_vertex_buffer_view)
+-   [**D3D12 \_ INDEX \_ BUFFER \_ VIEW**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_index_buffer_view)
+-   D3D12 \_ GPU VIRTUAL ADDRESS \_ \_ (ein typedef'd-Synonym von UINT64).
+-   [**D3D12-KONSTANTE \_ \_ \_ PUFFERANSICHT**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_constant_buffer_view_desc)
 
-## <a name="command-signature-creation"></a>Befehls Signatur Erstellung
+## <a name="command-signature-creation"></a>Erstellung der Befehlssignatur
 
-Verwenden Sie zum Erstellen einer Befehls Signatur die folgenden API-Elemente:
+Verwenden Sie zum Erstellen einer Befehlssignatur die folgenden API-Elemente:
 
--   [**ID3D12Device:: kreatecommandsignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommandsignature) (gibt ein [**ID3D12CommandSignature**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandsignature)-Ereignis aus)
--   [**D3D12 \_ indirekter \_ \_ Argumenttyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_indirect_argument_type)
--   [**D3D12 \_ indirektes \_ Argument \_ Entsc**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_indirect_argument_desc)
--   [**D3D12 \_ Befehls \_ Signatur \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc)
+-   [**ID3D12Device::CreateCommandSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommandsignature) (gibt eine [**ID3D12CommandSignature**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandsignature)aus)
+-   [**TYP DES \_ INDIREKTEN D3D12-ARGUMENTS \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_indirect_argument_type)
+-   [**D3D12 \_ INDIRECT \_ ARGUMENT \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_indirect_argument_desc)
+-   [**\_ \_ D3D12-BEFEHLSSIGNATUR-DESC \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc)
 
-Die Reihenfolge der Argumente innerhalb eines indirekten Argument Puffers wird so definiert, dass Sie genau mit der Reihenfolge der Argumente übereinstimmt, die im *parguments* -Parameter der [**D3D12 \_ Command \_ Signature \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc)angegeben sind. Alle Argumente für einen zeichnen (graphics)/Dispatch (Compute)-Befehl innerhalb eines indirekten Argument Puffers sind eng gepackt. Allerdings dürfen Anwendungen einen beliebigen Byte Schritt zwischen den Draw-/dispatchbefehlen in einem indirekten Argument Puffer angeben.
+Die Reihenfolge der Argumente innerhalb eines indirekten Argumentpuffers wird so definiert, dass sie genau der Reihenfolge der Argumente entspricht, die im *pArguments-Parameter* von [**D3D12 \_ COMMAND SIGNATURE \_ \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc)angegeben sind. Alle Argumente für einen Zeichnen-/Verteilungsaufruf (Compute) innerhalb eines indirekten Argumentpuffers sind eng gepackt. Anwendungen dürfen jedoch einen beliebigen Byteschritt zwischen draw/dispatch-Befehlen in einem indirekten Argumentpuffer angeben.
 
-Die Stamm Signatur muss nur dann angegeben werden, wenn die Befehls Signatur eines der root-Argumente ändert.
+Die Stammsignatur muss nur angegeben werden, wenn die Befehlssignatur eines der Stammargumente ändert.
 
-Für den Stamm-SRV/UAV/CBV wird die angegebene Größe in Bytes angegeben. Die debugschicht überprüft die folgenden Einschränkungen für die Adresse:
+Für die Stamm-SRV/UAV/CBV beträgt die angegebene Größe der Anwendung in Bytes. Die Debugebene überprüft die folgenden Einschränkungen für die Adresse:
 
--   CBV – Address muss ein Vielfaches von 256 Bytes sein.
--   Die –-Rohdaten für unformatierte SRV/UAV müssen ein Vielfaches von 4 Bytes sein.
--   Die strukturierte SRV/UAV-–-Adresse muss ein Vielfaches des Struktur Byte Stride (im Shader deklariert) sein.
+-   CBV: Die Adresse muss ein Vielfaches von 256 Bytes sein.
+-   Unformatierte SRV-/UAV-Adresse: Die Adresse muss ein Vielfaches von 4 Bytes sein.
+-   Strukturierter SRV/UAV: Die Adresse muss ein Vielfaches des Struktur-Byteschritts sein (im Shader deklariert).
 
-Eine angegebene Befehls Signatur ist entweder eine zeichnen-oder eine COMPUTE-Befehls Signatur. Wenn eine Befehls Signatur einen Zeichnungs Vorgang enthält, handelt es sich um eine Grafik Befehls Signatur. Andernfalls muss die Befehls Signatur einen dispatchvorgang enthalten, und es handelt sich um eine COMPUTE-Befehls Signatur.
+Eine angegebene Befehlssignatur ist entweder eine Draw- oder eine Computebefehlssignatur. Wenn eine Befehlssignatur einen Zeichnungsvorgang enthält, handelt es sich um eine Grafikbefehlssignatur. Andernfalls muss die Befehlssignatur einen Dispatchvorgang enthalten, und es handelt sich um eine Computebefehlssignatur.
 
-In den folgenden Abschnitten werden einige Beispiel-Befehls Signaturen gezeigt.
+In den folgenden Abschnitten werden einige Beispielbefehlssignaturen gezeigt.
 
-### <a name="no-argument-changes"></a>Keine Argument Änderungen
+### <a name="no-argument-changes"></a>Keine Argumentänderungen
 
-In diesem Beispiel enthält der indirekte Argument Puffer, der von der Anwendung generiert wird, ein Array von 36-Byte-Strukturen. Jede Struktur enthält nur die fünf Parameter, die an [**drawindexedinstan}**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced) (plus Padding) übermittelt werden.
+In diesem Beispiel enthält der von der Anwendung generierte indirekte Argumentpuffer ein Array von 36-Byte-Strukturen. Jede Struktur enthält nur die fünf Parameter, die an [**DrawIndexedInstanced**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced) (plus Auffüllung) übergeben werden.
 
-Der Code zum Erstellen der Befehls Signatur Beschreibung folgt:
+Der Code zum Erstellen der Befehlssignaturbeschreibung lautet wie folgt:
 
 ``` syntax
 D3D12_INDIRECT_ARGUMENT_DESC Args[1];
@@ -99,41 +99,45 @@ ProgramDesc.NumArgumentDescs = 1;
 ProgramDesc.pArguments = Args;
 ```
 
-Das Layout einer einzelnen Struktur innerhalb eines indirekten Argument Puffers lautet:
+Das Layout einer einzelnen Struktur innerhalb eines indirekten Argumentpuffers lautet:
 
 
 
 | Byte | Beschreibung           |
 |-------|-----------------------|
-| 0:3   | Indexrattperinstance |
+| 0:3   | IndexCountPerInstance |
 | 4:7   | InstanceCount         |
-| 8:11  | Startindexlocation    |
-| 12:15 | Basevertexlocation    |
-| 16:19 | Startinstancelokation |
+| 8:11  | StartIndexLocation    |
+| 12:15 | BaseVertexLocation    |
+| 16:19 | StartInstanceLocation |
 | 20:35 | Auffüllen               |
 
 
 
  
 
-### <a name="root-constants-and-vertex-buffers"></a>Stamm Konstanten und Vertex-Puffer
+### <a name="root-constants-and-vertex-buffers"></a>Stammkonstanten und Scheitelpunktpuffer
 
-In diesem Beispiel ändert jede Struktur in einem indirekten Argument Puffer zwei Stamm Konstanten, ändert eine Vertex-Puffer Bindung und führt einen nicht indizierten Zeichnungs Vorgang aus. Es gibt keine Auffüll Zeichen zwischen Strukturen.
+In diesem Beispiel ändert jede Struktur in einem indirekten Argumentpuffer zwei Stammkonstanten, ändert eine Vertexpufferbindung und führt einen nicht indizierten Zeichnungsvorgang aus. Es gibt keine Auffüllung zwischen Strukturen.
 
-Der Code zum Erstellen der Befehls Signatur Beschreibung lautet:
+Der Code zum Erstellen der Befehlssignaturbeschreibung lautet:
 
 ``` syntax
 D3D12_INDIRECT_ARGUMENT_DESC Args[4];
 Args[0].Type = D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT;
 Args[0].Constant.RootParameterIndex = 2;
+Args[0].Constant.DestOffsetIn32BitValues = 0;
+Args[0].Constant.Num32BitValuesToSet = 1;
 
 Args[1].Type = D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT;
 Args[1].Constant.RootParameterIndex = 6;
+Args[1].Constant.DestOffsetIn32BitValues = 0;
+Args[1].Constant.Num32BitValuesToSet = 1;
 
 Args[2].Type = D3D12_INDIRECT_ARGUMENT_TYPE_VERTEX_BUFFER_VIEW;
-Args[2].VertexBuffer.VBSlot = 3;
+Args[2].VertexBuffer.Slot = 3;
 
-Args[3].Type = D3D12_INDIRECT_ARGUMENT_TYPE_DRAW_INSTANCED;
+Args[3].Type = D3D12_INDIRECT_ARGUMENT_TYPE_DRAW;
 
 D3D12_COMMAND_SIGNATURE_DESC ProgramDesc;
 ProgramDesc.ByteStride = 40;
@@ -141,34 +145,34 @@ ProgramDesc.NumArgumentDescs = 4;
 ProgramDesc.pArguments = Args;
 ```
 
-Das Layout einer einzelnen Struktur innerhalb des indirekten Argument Puffers lautet wie folgt:
+Das Layout einer einzelnen Struktur innerhalb des indirekten Argumentpuffers sieht wie folgt aus:
 
 
 
-| Byte | Beschreibung                     |
-|-------|---------------------------------|
-| 0:3   | Daten für Stamm Parameter Index 2 |
-| 4:7   | Daten für Stamm Parameter Index 6 |
-| 8:15  | Virtuelle Adresse von VB (64 Bit)  |
-| 16:19 | VB-Größe                         |
-| 20:23 | VB-Stride                       |
-| 24:27 | Vertexrattperinstance          |
-| 28:31 | InstanceCount                   |
-| 32:35 | Startvertexlocation             |
-| 36:39 | Startinstancelokation           |
+| Byte | Beschreibung                               |
+|-------|-------------------------------------------|
+| 0:3   | Daten für den Stammparameterindex 2           |
+| 4:7   | Daten für den Stammparameterindex 6           |
+| 8:15  | Virtuelle Adresse von VB im Slot 3 (64-Bit)  |
+| 16:19 | VB-Größe                                   |
+| 20:23 | VB-Stride                                 |
+| 24:27 | VertexCountPerInstance                    |
+| 28:31 | InstanceCount                             |
+| 32:35 | StartVertexLocation                       |
+| 36:39 | StartInstanceLocation                     |
 
 
 
  
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Video-Tutorials zu DirectX Advanced Learning: Ausführen indirekter und asynchroner GPU-Berechnungen](https://www.youtube.com/watch?v=fKD-VKJeeds)
+[Videotutorials für erweitertes Lernen mit DirectX: Ausführen der indirekten und asynchronen GPU-Culling](https://www.youtube.com/watch?v=fKD-VKJeeds)
 </dt> <dt>
 
-[Indirektes zeichnen und GPU-culult: Code Exemplarische Vorgehensweise](indirect-drawing-and-gpu-culling-.md)
+[Indirektes Zeichnen und GPU-Culling: exemplarische Vorgehensweise für Code](indirect-drawing-and-gpu-culling-.md)
 </dt> <dt>
 
 [Darstellung](rendering.md)
