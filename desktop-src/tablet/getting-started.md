@@ -1,29 +1,29 @@
 ---
-description: Der Tablet PC ist ein voll funktionsfähiger, von Microsoft Windows gestützter Computer, der für frei Hand fähige, für Stift aktivierte und sprach aktivierte Anwendungen konzipiert ist.
+description: Der Tablet-PC ist ein voll funktionsfähiger Pc, der von Microsoft Windows unterstützt wird und für ink-fähige, stiftfähige und sprachfähige Anwendungen konzipiert ist.
 ms.assetid: 6d1d26b7-34e9-499c-805e-6861362f4ef8
-title: Getting Started (Tablet PC)
+title: Erste Schritte (Tablet PC)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c187ee6503f68834df040442facc0b3970e6453d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67d9fc4a76696fccb60d3ca4571b51631764091a
+ms.sourcegitcommit: 4be05a12840be3d2e7c71fe57401b2edee72e354
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129528"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112449903"
 ---
-# <a name="getting-started-tablet-pc"></a>Getting Started (Tablet PC)
+# <a name="getting-started-tablet-pc"></a>Erste Schritte (Tablet PC)
 
-Der Tablet PC ist ein voll funktionsfähiger, von Microsoft Windows gestützter Computer, der für frei Hand fähige, für Stift aktivierte und sprach aktivierte Anwendungen konzipiert ist. Die Kombination von Software und Hardware auf einem Tablet PC ermöglicht diesen Methoden der Benutzerinteraktion das Erstellen einer umfassenden, interaktiven und produktiven Computer Darstellung für Benutzer.
+Der Tablet-PC ist ein voll funktionsfähiger Pc, der von Microsoft Windows unterstützt wird und für ink-fähige, stiftfähige und sprachfähige Anwendungen konzipiert ist. Die Kombination aus Software und Hardware auf einem Tablet-PC ermöglicht diese Methoden der Benutzerinteraktion, um benutzern ein umfassendes, interaktives und produktives Computingerlebnis zu bieten.
 
-Die Tablet PC-Plattform ermöglicht die Eingabe und Ausgabe von Handschrift-und sprach Daten auf einem Tablet PC sowie den Austausch dieser Daten mit anderen Computern. Die Komponenten der Tablet PC-Plattform, die vom Windows 7 SDK installiert werden, ermöglichen Ihnen das Erstellen von frei Hand fähigen und Stift fähigen Anwendungen für den Tablet PC.
+Die Tablet PC-Plattform ermöglicht die Eingabe und Ausgabe von Handschrift- und Sprachdaten auf einem Tablet-PC sowie den Austausch dieser Daten mit anderen Computern. Mit den komponenten der Tablet PC-Plattform, die vom Windows 7 SDK installiert werden, können Sie ink-fähige und stiftfähige Anwendungen für den Tablet PC erstellen.
 
-## <a name="hardware-and-software-environment"></a>Hardware-und Software Umgebung
+## <a name="hardware-and-software-environment"></a>Hardware- und Softwareumgebung
 
 -   [Verlauf der Tablet PC-Plattform](tablet-pc-platform-history.md)
--   [Neues bei der Tablet PC-Entwicklung](what-s-new-in-tablet-pc-development.md)
+-   [Neues bei der Entwicklung von Tablet-PCs](what-s-new-in-tablet-pc-development.md)
 -   [Die Entwicklungsumgebung](the-development-environment.md)
--   [Verweisen auf das SDK von Microsoft Visual Studio](referencing-the-sdk-from-microsoft-visual-studio.md)
--   [Häufig gestellte Fragen](frequently-asked-questions.md)
+-   [Verweisen auf das SDK aus Microsoft Visual Studio](referencing-the-sdk-from-microsoft-visual-studio.md)
+-   [Häufig gestellte Fragen](frequently-asked-questions.yml)
 
  
 
