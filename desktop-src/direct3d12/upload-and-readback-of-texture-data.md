@@ -1,32 +1,32 @@
 ---
-title: Hochladen von Textur Daten über Puffer
-description: Das Hochladen von 2D-oder 3D-Textur Daten ähnelt dem Hochladen von 1D-Daten, mit dem Unterschied, dass Anwendungen die Daten Ausrichtung im Zusammenhang mit der Zeilen Tonhöhe genauer berücksichtigen müssen.
+title: Hochladen von Texturdaten über Puffer
+description: Das Hochladen von 2D- oder 3D-Texturdaten ähnelt dem Hochladen von 1D-Daten, mit der Ausnahme, dass Anwendungen die Datenausrichtung im Zusammenhang mit der Zeilenhöhe genauer beachten müssen.
 ms.assetid: 22A25A94-A45C-482D-853A-FA6860EE7E4E
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aadbd1e71b3c9895b75c973397488472b57f8eb1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f72177be1fefbf102e901d28d47413c8bcff41ab
+ms.sourcegitcommit: 39754f1af7853adff2525d0936afe9aad2066a9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104548744"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112426964"
 ---
-# <a name="uploading-texture-data-through-buffers"></a>Hochladen von Textur Daten über Puffer
+# <a name="uploading-texture-data-through-buffers"></a>Hochladen von Texturdaten über Puffer
 
-Das Hochladen von 2D-oder 3D-Textur Daten ähnelt dem Hochladen von 1D-Daten, mit dem Unterschied, dass Anwendungen die Daten Ausrichtung im Zusammenhang mit der Zeilen Tonhöhe genauer berücksichtigen müssen. Puffer können von mehreren Teilen der Grafik Pipeline orthogonell und gleichzeitig verwendet werden und sind sehr flexibel.
+Das Hochladen von 2D- oder 3D-Texturdaten ähnelt dem Hochladen von 1D-Daten, mit der Ausnahme, dass Anwendungen die Datenausrichtung im Zusammenhang mit der Zeilenhöhe genauer beachten müssen. Puffer können orthogonal und gleichzeitig aus mehreren Teilen der Grafikpipeline verwendet werden und sind sehr flexibel.
 
--   [Hochladen von Textur Daten über Puffer](#upload-texture-data-via-buffers)
+-   [Hochladen von Texturdaten über Puffer](#upload-texture-data-via-buffers)
 -   [Wird kopiert](#copying)
--   [Zuordnung und Zuordnung von Zuordnung](#mapping-and-unmapping)
--   [Puffer Ausrichtung](#buffer-alignment)
+-   [Zuordnung und Entmapping](#mapping-and-unmapping)
+-   [Pufferausrichtung](#buffer-alignment)
 -   [Verwandte Themen](#related-topics)
 
-## <a name="upload-texture-data-via-buffers"></a>Hochladen von Textur Daten über Puffer
+## <a name="upload-texture-data-via-buffers"></a>Hochladen von Texturdaten über Puffer
 
-Anwendungen müssen Daten über [**ID3D12GraphicsCommandList:: copytextureregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) oder [**ID3D12GraphicsCommandList:: copybufferregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)hochladen. Textur Daten sind viel wahrscheinlicher größer, greifen auf wiederholt zu, und profitieren von der verbesserten Cache Kohärenz der nichtlinearen Speicher Layouts als bei anderen Ressourcen Daten. Wenn Puffer in D3D12 verwendet werden, haben Anwendungen vollständige Kontrolle über die Platzierung und Anordnung von Daten, die dem Kopieren von Ressourcen Daten zugeordnet sind, sofern die Anforderungen an die Arbeitsspeicher Ausrichtung erfüllt sind.
+Anwendungen müssen Daten über [**ID3D12GraphicsCommandList::CopyTextureRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) oder [**ID3D12GraphicsCommandList::CopyBufferRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)hochladen. Texturdaten sind viel wahrscheinlicher größer, greifen wiederholt darauf zu und profitieren von der verbesserten Cachekoherität von nicht linearen Speicherlayouts als andere Ressourcendaten. Wenn Puffer in D3D12 verwendet werden, haben Anwendungen vollständige Kontrolle über die Datenplatzierung und Anordnung im Zusammenhang mit dem Kopieren von Ressourcendaten, solange die Anforderungen an die Arbeitsspeicherausrichtung erfüllt sind.
 
-Im Beispiel wird hervorgehoben, wo die Anwendung 2D-Daten einfach in 1D vereinfacht, bevor Sie in den Puffer platziert wird. Für das MipMap 2D-Szenario kann die Anwendung jede unter Ressource diskret vereinfachen und schnell einen 1D-unter Zuordnungs Algorithmus verwenden, oder Sie verwenden eine kompliziertere 2D-unter Zuordnungs Technik, um die Videospeicher Auslastung zu minimieren. Das erste Verfahren wird wahrscheinlich häufiger verwendet, da es einfacher ist. Das zweite Verfahren kann nützlich sein, wenn Sie Daten auf einem Datenträger oder in einem Netzwerk verpacken. In beiden Fällen muss die Anwendung weiterhin die Kopier-APIs für jede unter Ressource abrufen.
+Im Beispiel wird hervorgehoben, wo die Anwendung 2D-Daten einfach in 1D vereinfacht, bevor sie im Puffer platziert werden. Für das Mipmap-2D-Szenario kann die Anwendung entweder jede untergeordnete Ressource diskret abschwächen und schnell einen 1D-Algorithmus für die untergeordnete Zuordnung verwenden oder eine kompliziertere 2D-Unterzuordnungsmethode verwenden, um die Videospeicherauslastung zu minimieren. Es wird erwartet, dass die erste Technik häufiger verwendet wird, da sie einfacher ist. Die zweite Technik kann beim Packen von Daten auf einem Datenträger oder über ein Netzwerk nützlich sein. In beiden Fällen muss die Anwendung weiterhin die Kopier-APIs für jede Unterressource aufrufen.
 
 ``` syntax
 // Prepare a pBitmap in memory, with bitmapWidth, bitmapHeight, and pixel format of DXGI_FORMAT_B8G8R8A8_UNORM. 
@@ -93,56 +93,56 @@ commandList->CopyTextureRegion(
         nullptr );
 ```
 
-Beachten Sie die Verwendung der Hilfsstrukturen [**CD3DX12 \_ Heap \_ Eigenschaften**](cd3dx12-heap-properties.md) und [**CD3DX12 \_ Textur \_ Kopier \_ Speicherort**](cd3dx12-texture-copy-location.md)sowie die Methoden " [**kreatecommittedresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource) " und " [**copytextureregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion)".
+Beachten Sie die Verwendung der Hilfsstrukturen [**CD3DX12 \_ HEAP \_ PROPERTIES**](cd3dx12-heap-properties.md) und [**CD3DX12 \_ TEXTURE COPY \_ \_ LOCATION**](cd3dx12-texture-copy-location.md)und die Methoden [**CreateCommittedResource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource) und [**CopyTextureRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion).
 
 ## <a name="copying"></a>Wird kopiert
 
-D3D12-Methoden ermöglichen es Anwendungen, die anfänglichen Daten D3D11 [**updatesubresource**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource), [**copysubresourceregion**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copysubresourceregion)und Resource zu ersetzen. Eine einzelne 3D-unter Quelle, die Zeilen haupttextur-Daten enthält, befindet sich möglicherweise in Puffer Ressourcen. [**Copytextureregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) kann diese Textur Daten aus dem Puffer in eine Textur Ressource mit einem unbekannten Textur Layout kopieren (und umgekehrt). Anwendungen sollten diese Art von Technik bevorzugen, um häufig verwendete GPU-Ressourcen aufzufüllen, indem große Puffer in einem uploadheap erstellt werden, während die häufig verwendeten GPU-Ressourcen in einem Standard Heap erstellt werden, der keinen CPU-Zugriff hat. Eine solche Technik unterstützt auf effiziente Weise diskrete GPUs und ihre große Menge an CPU-ungenügenden Arbeitsspeicher, ohne dass die UMA-Architekturen häufig beeinträchtigt werden.
+D3D12-Methoden ermöglichen Es Anwendungen, D3D11 [**UpdateSubresource,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-updatesubresource) [**CopySubresourceRegion**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copysubresourceregion)und Ressourcen-Anfangsdaten zu ersetzen. Eine einzelne 3D-Unterressource mit Zeilen-Haupttexturdaten kann sich in Pufferressourcen befinden. [**CopyTextureRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) kann diese Texturdaten aus dem Puffer in eine Texturressource mit unbekanntem Texturlayout kopieren und umgekehrt. Anwendungen sollten diese Art von Technik bevorzugen, um häufig genutzte GPU-Ressourcen aufzufüllen, indem große Puffer in einem UPLOAD-Heap erstellt werden, während die häufig verwendeten GPU-Ressourcen in einem DEFAULT-Heap ohne CPU-Zugriff erstellt werden. Eine solche Technik unterstützt diskrete GPUs und deren große Mengen an cpu-unzugänglichem Arbeitsspeicher effizient, ohne dass UMA-Architekturen häufig beeinträchtigt werden.
 
-Beachten Sie die folgenden zwei Konstanten:
+Beachten Sie die folgenden beiden Konstanten:
 
 ``` syntax
 const UINT D3D12_TEXTURE_DATA_PITCH_ALIGNMENT = 256;
 const UINT D3D12_TEXTURE_DATA_PLACEMENT_ALIGNMENT = 512;
 ```
 
--   [**D3D12 Ressourcen \_ \_ Bedarf**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint)
--   [**D3D12 Speicherort der untergeordneten \_ \_ Quelle \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint)
--   [**Speicherort der D3D12- \_ Textur \_ Kopie \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location)
--   [**D3D12 \_ Textur \_ \_ kopierungstyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_copy_type)
--   [**ID3D12Device:: getcopyablefootprints**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getcopyablefootprints)
--   [**ID3D12GraphicsCommandList:: copyresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource)
--   [**ID3D12GraphicsCommandList:: copytextureregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion)
--   [**ID3D12GraphicsCommandList:: copybufferregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)
--   [**ID3D12GraphicsCommandList:: copytiles**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytiles)
--   [**ID3D12CommandQueue:: updatetilemappings**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-updatetilemappings)
+-   [**D3D12 \_ SUBRESOURCE \_ FOOTPRINT**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint)
+-   [**D3D12 \_ \_ PLATZIERTER \_ SUBRESOURCE-SPEICHERBEDARF**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint)
+-   [**D3D12 \_ TEXTURE \_ COPY \_ LOCATION**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location)
+-   [**D3D12 \_ TEXTURE \_ COPY \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_copy_type)
+-   [**ID3D12Device::GetCopyableFootprints**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getcopyablefootprints)
+-   [**ID3D12GraphicsCommandList::CopyResource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource)
+-   [**ID3D12GraphicsCommandList::CopyTextureRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion)
+-   [**ID3D12GraphicsCommandList::CopyBufferRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)
+-   [**ID3D12GraphicsCommandList::CopyTiles**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytiles)
+-   [**ID3D12CommandQueue::UpdateTileMappings**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-updatetilemappings)
 
-## <a name="mapping-and-unmapping"></a>Zuordnung und Zuordnung von Zuordnung
+## <a name="mapping-and-unmapping"></a>Zuordnung und Entmapping
 
-[**Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) und [**unmap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) können von mehreren Threads sicher aufgerufen werden. Der erste Befehl von **map** ordnet einen virtuellen CPU-Adressbereich für die Ressource zu. Der letzte aufzurufende aufrufungs Befehl hebt die Zuordnung des virtuellen CPU-Adress **Bereichs auf.** Die virtuelle CPU-Adresse wird in der Regel an die Anwendung zurückgegeben.
+[**Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) und [**Unmap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) können sicher von mehreren Threads aufgerufen werden. Der erste Aufruf von **Map** ordnet einen virtuellen CPU-Adressbereich für die Ressource zu. Der letzte Aufruf von **Zuordnung** aufheben hebt die Zuordnung des virtuellen CPU-Adressbereichs auf. Die virtuelle CPU-Adresse wird häufig an die Anwendung zurückgegeben.
 
-Jedes Mal, wenn Daten zwischen CPU und GPU über Ressourcen in den rückgängig-Heaps übermittelt werden, müssen [**map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) und [**unmap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) zur Unterstützung aller Systeme verwendet werden D3D12 wird unter unterstützt. Wenn Sie die Bereiche so eng wie möglich halten, wird die Effizienz der Systeme maximiert, die Bereiche erfordern (siehe [**D3D12 \_ Range**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range)).
+Wenn Daten zwischen CPU und GPU über Ressourcen in Rückleseheaps übergeben werden, müssen [**Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) und [**Unmap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) verwendet werden, um alle Systeme zu unterstützen, auf der D3D12 unterstützt wird. Wenn Die Bereiche so eng wie möglich gehalten werden, wird die Effizienz der Systeme maximiert, die Bereiche erfordern (siehe [**D3D12 \_ RANGE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range)).
 
-Die Leistung der Debuggingtools profitiert nicht nur von der exakten Verwendung von Bereichen in allen Zuordnungs Aufrufen von [**Karten**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map)  /  [](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) , sondern auch von Anwendungen, die die Zuordnung von Ressourcen aufheben, wenn keine CPU-Änderungen mehr vorgenommen werden.
+Die Leistung von Debugtools profitiert nicht nur von [](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map)der genauen Nutzung von Bereichen bei allen  /  [**Zuordnungs-Unmap-Aufrufen,**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) sondern auch von Anwendungen, die Ressourcen aufheben, wenn CPU-Änderungen nicht mehr vorgenommen werden.
 
-Die D3D11-Methode der Verwendung von [**map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) (mit dem Parametersatz verwerfen) zum Umbenennen von Ressourcen wird in D3D12 nicht unterstützt. Anwendungen müssen das Umbenennen von Ressourcen implementieren. Alle  Zuordnungs Aufrufe sind implizit kein über \_ schreiben und Multithread. Es liegt in der Verantwortung der Anwendung, sicherzustellen, dass alle relevanten GPU-Aufgaben, die in den Befehlslisten enthalten sind, abgeschlossen sind, bevor der Datenzugriff mit der CPU D3D12 Aufrufe von **map** leeren keine impliziten Befehls Puffer, und es wird nicht blockiert, dass Sie warten, bis die GPU abgeschlossen ist. Daher können **map** und [**unmap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) in einigen Szenarios sogar optimiert werden.
+Die D3D11-Methode zur Verwendung von [**Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) (mit festgelegter DISCARD-Parameter) zum Umbenennen von Ressourcen wird in D3D12 nicht unterstützt. Anwendungen müssen das Umbenennen von Ressourcen selbst implementieren. Alle  Zuordnungsaufrufe sind implizit NO \_ OVERWRITE und Multithreading. Es liegt in der Verantwortung der Anwendung, sicherzustellen, dass alle relevanten GPU-Aufgaben in Befehlslisten abgeschlossen sind, bevor der Zugriff auf Daten mit der CPU abgeschlossen ist. D3D12-Aufrufe von **Map** leeren weder implizit Befehlspuffer, noch blockieren sie das Warten auf den Abschluss der Arbeit durch die GPU. Daher können **Map** und [**Unmap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-unmap) in einigen Szenarien sogar optimiert werden.
 
-## <a name="buffer-alignment"></a>Puffer Ausrichtung
+## <a name="buffer-alignment"></a>Pufferausrichtung
 
-Einschränkungen der Puffer Ausrichtung:
+Einschränkungen bei der Pufferausrichtung:
 
--   Das Kopieren von linearen unter Quellen muss auf 512 Byte ausgerichtet werden (wobei die Zeilengröße an D3D12- \_ Textur- \_ \_ datenpitch- \_ Ausrichtungs Bytes ausgerichtet ist).
--   Bei Konstanten Daten Lesevorgängen muss es sich um ein Vielfaches von 256 Bytes vom Anfang des Heaps handeln (d. h. nur aus Adressen, die 256 Byte ausrichten).
--   Indexdaten Lesevorgänge müssen ein Vielfaches der Größe des Index Datentyps sein (d. h. nur aus Adressen, die auf natürliche Weise für die Daten ausgerichtet sind).
--   [**ID3D12GraphicsCommandList::D rawinstanzierte**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced) und [**ID3D12GraphicsCommandList::D rawindexedinstanzierten**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced) Daten müssen aus Offsets stammen, die vielfachen von 4 sind (d. h. nur aus Adressen, die DWORD ausrichten).
+-   Das lineare Kopieren von Unterressourcen muss auf 512 Byte ausgerichtet sein (wobei die Zeilenhöhe an D3D12 TEXTURE DATA PITCH ALIGNMENT Bytes ausgerichtet \_ \_ \_ \_ ist).
+-   Konstante Datenlesedaten müssen ein Vielfaches von 256 Bytes vom Anfang des Heaps sein (d. h. nur von Adressen, die 256 Byte ausgerichtet sind).
+-   Indexdatenleseungen müssen ein Vielfaches der Größe des Indexdatentyps sein (d. h. nur von Adressen, die natürlich für die Daten ausgerichtet sind).
+-   [**ID3D12GraphicsCommandList::ExecuteIndirect-Daten**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) müssen aus Offsets stammen, die ein Vielfaches von 4 sind (d.h. nur von Adressen, die DWORD ausgerichtet sind).
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Untergeordnete Zuordnung innerhalb von Puffern](large-buffers.md)
+[Unterzuweisung innerhalb von Puffern](large-buffers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
