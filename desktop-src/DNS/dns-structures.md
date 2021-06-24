@@ -1,6 +1,6 @@
 ---
 title: DNS-Strukturen
-description: Domain Name System (DNS)-Struktur Navigationsseite.
+description: Navigationsseite für dns-Strukturen (Domain Name System).
 ms.assetid: 636399be-43a5-4ddf-b652-f8efb81fbf42
 keywords:
 - Domain Name System Strukturen
@@ -9,23 +9,25 @@ keywords:
 ms.topic: article
 ms.date: 04/19/2019
 ms.custom: 19H1
-ms.openlocfilehash: 65da2f26026ef1d9fe443fc3cfc05736459a3743
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: da0e83639eaa92e84dd076e797431d5f7138245c
+ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039387"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112588027"
 ---
 # <a name="dns-structures"></a>DNS-Strukturen
 
-Die folgenden Strukturen werden für die Verwendung mit DNS definiert:
+Die folgenden Strukturen sind für die Verwendung mit DNS definiert:
 
 - [**DNS_ADDR**](/windows/win32/api/windns/ns-windns-dns_addr)
 - [**DNS_ADDR_ARRAY**](/windows/win32/api/windns/ns-windns-dns_addr_array)
+- [**DNS_CUSTOM_SERVER**](/windows/win32/api/windns/ns-windns-dns_custom_server)
 - [**DNS_HEADER**](/windows/desktop/api/Windns/ns-windns-dns_header)
 - [**DNS_MESSAGE_BUFFER**](/windows/desktop/api/Windns/ns-windns-dns_message_buffer)
 - [**DNS_PROXY_INFORMATION**](/windows/desktop/api/Windns/ns-windns-dns_proxy_information)
 - [**DNS_QUERY_REQUEST**](/windows/desktop/api/Windns/ns-windns-dns_query_request)
+- [**DNS_QUERY_REQUEST3**](/windows/desktop/api/Windns/ns-windns-dns_query_request3)
 - [**DNS_RECORD**](/windows/win32/api/windns/ns-windns-dns_recorda)
 - [**DNS_RECORD_FLAGS**](/windows/win32/api/windns/ns-windns-dns_record_flags)
 - [**DNS_SERVICE_BROWSE_REQUEST**](/windows/desktop/api/Windns/ns-windns-dns_service_browse_request)
@@ -38,7 +40,7 @@ Die folgenden Strukturen werden für die Verwendung mit DNS definiert:
 - [**MDNS_QUERY_HANDLE**](/windows/desktop/api/Windns/ns-windns-mdns_query_handle)
 - [**MDNS_QUERY_REQUEST**](/windows/desktop/api/Windns/ns-windns-mdns_query_request)
 
-Die folgenden Ressourcen Datensatzstrukturen (RR) sind ebenfalls in der DNS-API enthalten. Diese Strukturen werden mit der **DNS_RECORD** Struktur verwendet, um DNS-Ressourcen Einträge Programm gesteuert zu verwalten.
+Die folgenden RR-Strukturen (Resource Record) sind ebenfalls in der DNS-API enthalten. Diese Strukturen werden mit der **DNS_RECORD-Struktur** verwendet, um DNS-Ressourceneinträge programmgesteuert zu verwalten.
 
 - [**DNS_A_DATA**](/windows/win32/api/windns/ns-windns-dns_a_data)
 - [**DNS_AAAA_DATA**](/windows/win32/api/windns/ns-windns-dns_aaaa_data)

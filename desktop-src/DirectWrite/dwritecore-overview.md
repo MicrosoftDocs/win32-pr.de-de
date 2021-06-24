@@ -1,21 +1,21 @@
 ---
 title: Übersicht über DWriteCore
-description: DWriteCore ist die Project Reunion-Implementierung von DirectWrite.
+description: DWriteCore ist die Windows App SDK-Implementierung von DirectWrite.
 keywords:
 - DirectWrite Core
 - DWriteCore
 ms.topic: article
 ms.date: 04/22/2021
-ms.openlocfilehash: 0f908f000d340f9cc9f374e036919422c4a940a6
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: a537d26f6aca4e2be64b61fd41da91e1f8829894
+ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262642"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112587782"
 ---
 # <a name="dwritecore-overview"></a>Übersicht über DWriteCore
 
-DWriteCore ist die [Project Reunion-Implementierung](/windows/apps/project-reunion/) von [DirectWrite (DirectWrite](./direct-write-portal.md) ist die DirectX-API für hochwertiges Textrendering, auflösungsunabhängige Gliederungsschriftarten sowie vollständige Unicode-Text- und Layoutunterstützung). DWriteCore ist eine Form von DirectWrite, die unter Windows bis zu Windows 10, Version 1809 (10.0; Build 17763) und öffnet ihnen die Tür für die plattformübergreifende Verwendung.
+DWriteCore ist die [Windows App SDK-Implementierung](/windows/apps/windows-app-sdk/) von [DirectWrite (DirectWrite](./direct-write-portal.md) ist die DirectX-API für hochwertiges Textrendering, auflösungsunabhängige Gliederungsschriftarten und vollständige Unicode-Text- und Layoutunterstützung). DWriteCore ist eine Form von DirectWrite, die unter Windows bis zu Windows 10, Version 1809 (10.0; Build 17763) und öffnet ihnen die Tür für die plattformübergreifende Verwendung.
 
 In diesem Einführungsthema wird beschrieben, was DWriteCore ist, und es wird gezeigt, wie Sie es in Ihrer Entwicklungsumgebung installieren und damit programmieren.
 
@@ -28,9 +28,9 @@ In diesem Einführungsthema wird beschrieben, was DWriteCore ist, und es wird ge
 
 Aufgrund der langen Lebensdauer von DirectWrite haben Fortschritte in der Entwicklung jedoch dazu tendiert, ältere Versionen von Windows hinter sich zu lassen. Darüber hinaus ist der Status von DirectWrite als führende Textrenderingtechnologie nur auf Windows beschränkt, sodass plattformübergreifende Anwendungen entweder ihren eigenen Textrenderingstapel schreiben oder sich auf Lösungen von Drittanbietern verlassen können.
 
-DWriteCore löst die grundlegenden Probleme der Verwaisung von Versionsfeatures und plattformübergreifender Kompatibilität, indem die Bibliothek aus dem System entfernt und alle möglichen unterstützten Endpunkte als Ziel verwendet werden. Zu diesem Zweck haben wir DWriteCore in Project Reunion integriert.
+DWriteCore löst die grundlegenden Probleme der Verwaisung von Versionsfeatures und plattformübergreifender Kompatibilität, indem die Bibliothek aus dem System entfernt und alle möglichen unterstützten Endpunkte als Ziel verwendet werden. Zu diesem Zweck haben wir DWriteCore in das Windows App SDK integriert.
 
-DWriteCore bietet Ihnen als Entwickler in Project Reunion hauptsächlich Den Zugriff auf viele (und schließlich alle) DirectWrite-Features. Alle Features von DWriteCore funktionieren auf allen Downlevelversionen gleich, ohne dass es zu Abweichungen in Bezug darauf kommt, welche Features für welche Versionen funktionieren können.
+DWriteCore bietet Ihnen als Entwickler im Windows App SDK vor allem Den Zugriff auf viele (und schließlich alle) DirectWrite-Features. Alle Features von DWriteCore funktionieren auf allen Downlevelversionen gleich, ohne dass es zu Abweichungen in Bezug darauf kommt, welche Features für welche Versionen funktionieren können.
 
 ## <a name="the-dwritecore-demo-appmdashdwritecoregallery"></a>Die DWriteCore-Demo-App &mdash; DWriteCoreGallery
 
@@ -38,19 +38,19 @@ DWriteCore wird anhand der [Beispiel-App DWriteCoreGallery](https://github.com/m
 
 ## <a name="get-started-with-dwritecore"></a>Erste Schritte mit DWriteCore
 
-DWriteCore ist Teil von [Project Reunion 0.5](https://github.com/microsoft/ProjectReunion/releases/tag/0.5.0). In diesem Abschnitt wird beschrieben, wie Sie Ihre Entwicklungsumgebung für die Programmierung mit DWriteCore einrichten.
+DWriteCore ist Teil des [Windows App SDK 0.8.](https://github.com/microsoft/ProjectReunion/releases/tag/v0.8.0) In diesem Abschnitt wird beschrieben, wie Sie Ihre Entwicklungsumgebung für die Programmierung mit DWriteCore einrichten.
 
-### <a name="install-the-project-reunion-05-vsix"></a>Installieren von Project Reunion 0.5 VSIX
+### <a name="install-the-windows-app-sdk-08-vsix"></a>Installieren des Windows App SDK 0.8 VSIX
 
-Klicken Sie in Visual Studio auf  >  **Erweiterungen Erweiterungen verwalten,** suchen Sie nach *Project Reunion*, und laden Sie die Erweiterung Project Reunion herunter. Schließen Sie Visual Studio, öffnen Sie sie erneut, und befolgen Sie die Anweisungen, um die Erweiterung zu installieren.
+Klicken Sie in Visual Studio auf  >  **Erweiterungen Erweiterungen verwalten,** suchen Sie nach *Windows App SDK,* und laden Sie die Windows App SDK-Erweiterung herunter. Schließen Sie Visual Studio, öffnen Sie sie erneut, und befolgen Sie die Anweisungen, um die Erweiterung zu installieren.
 
-Weitere Informationen finden Sie unter [Project Reunion 0.5](https://github.com/microsoft/ProjectReunion/releases/tag/0.5.0)und [Einrichten Ihrer Entwicklungsumgebung (für Project Reunion).](/windows/apps/project-reunion/get-started-with-project-reunion#set-up-your-development-environment)
+Weitere Informationen finden Sie unter [Windows App SDK 0.8](https://github.com/microsoft/ProjectReunion/releases/tag/v0.8.0) und [Einrichten Ihrer Entwicklungsumgebung.](/windows/apps/windows-app-sdk/set-up-your-development-environment#3-install-the-windows-app-sdk-extension-for-visual-studio)
 
 ### <a name="create-a-new-project"></a>Erstellen eines neuen Projekts
 
-Erstellen Sie in Visual Studio ein neues Projekt aus der Projektvorlage **Leere App, gepackt (WinUI 3 in Desktop).** Sie finden diese Projektvorlage, indem Sie sprache auswählen: *C++*; platform: *Project Reunion*; Projekttyp: *Desktop*.
+Erstellen Sie in Visual Studio ein neues Projekt aus der Projektvorlage **Leere App, gepackt (WinUI 3 in Desktop).** Sie finden diese Projektvorlage, indem Sie sprache auswählen: *C++*; Plattform: *Windows App SDK*; Projekttyp: *Desktop*.
 
-Weitere Informationen finden Sie unter [Erste Schritte mit WinUI 3 für Desktop-Apps.](/windows/apps/winui/winui3/get-started-winui3-for-desktop)
+Weitere Informationen finden Sie unter [Projektvorlagen für WinUI 3.](/windows/apps/winui/winui3/winui-project-templates-in-visual-studio#project-templates-for-winui-3)
 
 ### <a name="install-the-microsoftprojectreuniondwrite-nuget-package"></a>Installieren des NuGet-Pakets Microsoft.ProjectReunion.DWrite
 
@@ -70,7 +70,7 @@ Das Portieren von DirectWrite zu DWriteCore ist ein ausreichend großes Projekt,
 
 ### <a name="features-in-the-current-release-of-dwritecore"></a>Features in der aktuellen Version von DWriteCore
 
-Die derzeit verfügbare Version von DWriteCore ist Teil von [Project Reunion 0.5.](https://github.com/microsoft/ProjectReunion/releases/tag/0.5.0) Sie enthält die grundlegenden Tools, die Sie als Entwickler benötigen, um DWriteCore zu nutzen, einschließlich der folgenden Features.
+Die derzeit verfügbare Version von DWriteCore ist Teil des [Windows App SDK 0.8.](https://github.com/microsoft/ProjectReunion/releases/tag/v0.8.0) Sie enthält die grundlegenden Tools, die Sie als Entwickler benötigen, um DWriteCore zu nutzen, einschließlich der folgenden Features.
 
 - Schriftartenumeration.
 - Schriftart-API.
@@ -81,16 +81,20 @@ Die derzeit verfügbare Version von DWriteCore ist Teil von [Project Reunion 0.5
 - Bitmap-Renderziel.
 - Farbschriftarten.
 - Verschiedene Optimierungen (Bereinigung des Schriftartcaches, In-Memory-Schriftartladeprogramm usw.)
+- Unterstützung für Unterstreichung &mdash; finden Sie unter [**IDWriteTextLayout::GetUnderline**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-getunderline) und [**IDWriteTextLayout::SetUnderline**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-setunderline).
+- Unterstützung für durchgestrichene &mdash; Vorgehensweise finden Sie unter [**IDWriteTextLayout::GetStrikethrough**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-getstrikethrough) und [**IDWriteTextLayout::SetStrikethrough.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-setstrikethrough)
+- Unterstützung für vertikalen Text über [**IDWriteTextLayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) &mdash; finden Sie unter [Vertikaler Text.](/windows/win32/directwrite/vertical-text)
+- Alle Methoden der Schnittstellen [**IDWriteTextAnalyzer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextanalyzer) und [**IDWriteTextAnalyzer1**](/windows/win32/api/dwrite_1/nn-dwrite_1-idwritetextanalyzer1) werden implementiert.
 
 Ein Bannerfeature sind Farbschriftarten. Farbschriftarten ermöglichen es Ihnen, Ihre Schriftarten mit komplexeren Farbfunktionen zu rendern, die über einfache Einzelfarben hinausgehen. Farbschriftarten sind z. B. die Möglichkeit, Emoji- und Symbolsymbolschriftarten zu rendern (letzteres wird z. B. von Office verwendet). Farbschriftarten wurden erstmals in Windows 8.1 eingeführt, aber das Feature wurde in Windows 10 Version 1607 (Anniversary Update) stark erweitert.
 
-Die Arbeit an der Bereinigung des Schriftartcaches und des In-Memory-Schriftartlademoduls ermöglicht ein schnelleres Laden von Schriftarten und Speicherverbesserungen.
+Die Arbeit an der Bereinigung des Schriftartcaches und des In-Memory-Schriftartlademoduls ermöglicht ein schnelleres Laden von Schriftarten und Arbeitsspeicherverbesserungen.
 
 Mit diesen Features können Sie sofort damit beginnen, einige der modernen Kernfunktionen von DirectWrite &mdash; zu nutzen, z. B. variable Schriftarten. Variable Schriftarten sind eines der wichtigsten Features für DirectWrite-Kunden.
 
 ## <a name="our-invitation-to-you-as-a-directwrite-developer"></a>Unsere Einladung für Sie als DirectWrite-Entwickler
 
-DWriteCore wird zusammen mit anderen Project Reunion-Komponenten mit Entwicklerfeedback entwickelt. Wir laden Sie ein, mit dem Erkunden von DWriteCore zu beginnen und Einblicke oder Anforderungen in die Featureentwicklung in unserem [GitHub-Repository Project Reunion](https://github.com/microsoft/ProjectReunion/)bereitzustellen.
+DWriteCore wird zusammen mit anderen Komponenten des Windows App SDK mit Entwicklerfeedback entwickelt. Wir laden Sie ein, mit dem Erkunden von DWriteCore zu beginnen und Einblicke oder Anforderungen in die Featureentwicklung in unserem [GitHub-Repository für das Windows App SDK](https://github.com/microsoft/ProjectReunion/)bereitzustellen.
 
 ## <a name="programming-with-dwritecore"></a>Programmieren mit DWriteCore
 
@@ -109,17 +113,17 @@ Die `dwrite_core.h` Headerdatei definiert zuerst das Token *DWRITE_CORE* und ent
 
 ### <a name="apis-that-are-new-or-different-for-dwritecore"></a>APIs, die neu oder anders für DWriteCore sind
 
-Die DWriteCore-API-Oberfläche ist größtenteils identisch mit der Oberfläche für [DirectWrite.](/windows/win32/api/_directwrite/) Es gibt jedoch eine kleine Anzahl neuer APIs, die sich derzeit nur in DWriteCore befinden.
+Die Oberfläche der DWriteCore-API ist größtenteils identisch mit der Oberfläche für [DirectWrite.](/windows/win32/api/_directwrite/) Es gibt jedoch eine kleine Anzahl neuer APIs, die sich derzeit nur in DWriteCore befinden.
 
 #### <a name="create-a-factory-object"></a>Erstellen eines Factoryobjekts
 
-Die freie [**DWriteCoreCreateFactory-Funktion**](./dwrite_core/nf-dwrite_core-dwritecorecreatefactory.md) erstellt ein Factoryobjekt, das für die nachfolgende Erstellung einzelner DWriteCore-Objekte verwendet wird.
+Die freie [**DWriteCoreCreateFactory-Funktion**](/windows/windows-app-sdk/api/win32/dwrite_core/nf-dwrite_core-dwritecorecreatefactory) erstellt ein Factoryobjekt, das für die nachfolgende Erstellung einzelner DWriteCore-Objekte verwendet wird.
 
 **DWriteCoreCreateFactory** ist funktionell identisch mit der [DWriteCreateFactory-Funktion,](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) die von der Systemversion von DirectWrite exportiert wird. Die DWriteCore-Funktion hat einen anderen Namen, um Mehrdeutigkeiten zu vermeiden.
 
 #### <a name="create-a-restricted-factory-object"></a>Erstellen eines eingeschränkten Factoryobjekts
 
-Die [**DWRITE_FACTORY_TYPE-Enumeration**](./dwrite/ne-dwrite-dwrite_factory_type.md) verfügt über eine neue Konstante &mdash; **DWRITE_FACTORY_TYPE_ISOLATED2**, die eine eingeschränkte Factory angibt. Eine eingeschränkte Factory ist stärker gesperrt als eine isolierte Factory. Es interagiert in keiner Weise mit einem prozessübergreifenden oder persistenten Schriftartcache. Darüber hinaus enthält die von dieser Factory zurückgegebene Systemschriftartsammlung nur bekannte Schriftarten. So können Sie **DWRITE_FACTORY_TYPE_ISOLATED2** verwenden, um ein eingeschränktes Factoryobjekt zu erstellen, wenn Sie die freie [**DWriteCoreCreateFactory-Funktion**](./dwrite_core/nf-dwrite_core-dwritecorecreatefactory.md) aufrufen.
+Die [**DWRITE_FACTORY_TYPE-Enumeration**](/windows/windows-app-sdk/api/win32/dwrite/ne-dwrite-dwrite_factory_type) verfügt über eine neue Konstante &mdash; **DWRITE_FACTORY_TYPE_ISOLATED2**, die eine eingeschränkte Factory angibt. Eine eingeschränkte Factory ist stärker gesperrt als eine isolierte Factory. Es interagiert in keiner Weise mit einem prozessübergreifenden oder persistenten Schriftartcache. Darüber hinaus enthält die von dieser Factory zurückgegebene Systemschriftartsammlung nur bekannte Schriftarten. So können Sie **DWRITE_FACTORY_TYPE_ISOLATED2** verwenden, um ein eingeschränktes Factoryobjekt zu erstellen, wenn Sie die freie [**DWriteCoreCreateFactory-Funktion**](/windows/windows-app-sdk/api/win32/dwrite_core/nf-dwrite_core-dwritecorecreatefactory) aufrufen.
 
 ```cppwinrt
 // Create a factory that doesn't interact with any cross-process nor
@@ -134,13 +138,13 @@ winrt::check_hresult(
 );
 ```
 
-Wenn Sie **DWRITE_FACTORY_TYPE_ISOLATED2** an eine ältere Version von DirectWrite übergeben, die dies nicht unterstützt, gibt **DWriteCreateFactory** **E_INVALIDARG** zurück.
+Wenn Sie **DWRITE_FACTORY_TYPE_ISOLATED2** an eine ältere Version von DirectWrite übergeben, die sie nicht unterstützt, gibt **DWriteCreateFactory** **E_INVALIDARG** zurück.
 
 #### <a name="drawing-glyphs-to-a-system-memory-bitmap"></a>Zeichnen von Glyphen in einer Systemspeicherbitmap
 
 DirectWrite verfügt über eine Bitmap-Renderzielschnittstelle, die das Rendern von Glyphen in eine Bitmap im Systemspeicher unterstützt. Derzeit besteht die einzige Möglichkeit für den Zugriff auf die zugrunde liegenden Pixeldaten jedoch darin, GDI zu durchlaufen, sodass die API nicht plattformübergreifend verwendet werden kann. Dies lässt sich leicht beheben, indem eine Methode zum Abrufen der Pixeldaten hinzugefügt wird.
 
-DWriteCore führt daher die [**IDWriteBitmapRenderTarget2-Schnittstelle**](./dwrite_3/nn-dwrite_3-idwritebitmaprendertarget2.md) und ihre Methode [**IDWriteBitmapRenderTarget2::GetBitmapData**](./dwrite_3/nf-dwrite_3-idwritebitmaprendertarget2-getbitmapdata.md)ein. Diese Methode verwendet einen Parameter vom Typ (Zeiger auf) [**DWRITE_BITMAP_DATA_BGRA32**](./dwrite_3/ns-dwrite_3-dwrite_bitmap_data_bgra32.md), bei dem es sich um eine neue Struktur handelt.
+DWriteCore führt daher die [**IDWriteBitmapRenderTarget2-Schnittstelle**](/windows/windows-app-sdk/api/win32/dwrite_3/nf-dwrite_3-idwritebitmaprendertarget2-getbitmapdata) und ihre Methode [**IDWriteBitmapRenderTarget2::GetBitmapData**](/windows/windows-app-sdk/api/win32/dwrite_3/nf-dwrite_3-idwritebitmaprendertarget2-getbitmapdata)ein. Diese Methode verwendet einen Parameter vom Typ (Zeiger auf) [**DWRITE_BITMAP_DATA_BGRA32**](/windows/windows-app-sdk/api/win32/dwrite_3/ns-dwrite_3-dwrite_bitmap_data_bgra32), bei dem es sich um eine neue Struktur handelt.
 
 Ihre Anwendung erstellt ein Bitmaprenderziel durch Aufrufen von [IDWriteGdiInterop::CreateBitmapRenderTarget.](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createbitmaprendertarget) Unter Windows kapselt ein Bitmaprenderingziel einen GDI-Speicherdomänencontroller mit einer in ihm ausgewählten geräteunabhängigen GDI-Bitmap (DEVICE-Independent Bitmap, DIB). [IDWriteBitmapRenderTarget::D rawGlyphRun](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) rendert Glyphen im DIB. DirectWrite rendert die Glyphen selbst, ohne GDI zu durchlaufen. Ihre Anwendung kann dann den **HDC** aus dem Bitmaprenderingziel abrufen und [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) verwenden, um die Pixel in ein **HDC-Fenster** zu kopieren.
 
@@ -204,6 +208,6 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 #### <a name="other-api-differences-between-dwritecore-and-directwrite"></a>Andere API-Unterschiede zwischen DWriteCore und DirectWrite
 
-Es gibt einige APIs, die entweder nur Stubs sind oder sich auf Nicht-Windows-Plattformen etwas anders verhalten. [IDWriteGdiInterop::CreateFontFaceFromHdc](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createfontfacefromhdc) gibt beispielsweise  E_NOTIMPL auf Nicht-Windows-Plattformen zurück, da es keine **HDC** ohne [GDI](../gdi/windows-gdi.md)gibt.
+Es gibt einige APIs, die entweder nur Stubs sind oder sich auf Nicht-Windows-Plattformen etwas anders verhalten. Beispielsweise gibt [IDWriteGdiInterop::CreateFontFaceFromHdc](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createfontfacefromhdc) **E_NOTIMPL** auf Nicht-Windows-Plattformen zurück, da es kein **HDC** ohne [GDI](../gdi/windows-gdi.md)gibt.
 
-Und schließlich gibt es bestimmte andere Windows-APIs, die in der Regel zusammen mit DirectWrite verwendet werden (Direct2D ist ein gutes Beispiel). Derzeit können Direct2D und DWriteCore jedoch nicht zusammenarbeiten. Wenn Sie z. B. ein [**IDWriteTextLayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) mit DWriteCore erstellen und an [**D2D1RenderTarget::D rawTextLayout**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout)übergeben, erzeugt dieser Aufruf einen Fehler.
+Und schließlich gibt es bestimmte andere Windows-APIs, die in der Regel zusammen mit DirectWrite verwendet werden (Direct2D ist ein bedeutendes Beispiel). Derzeit können Direct2D und DWriteCore jedoch nicht zusammenarbeiten. Wenn Sie beispielsweise ein [**IDWriteTextLayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) mit DWriteCore erstellen und es an [**D2D1RenderTarget::D rawTextLayout**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout)übergeben, tritt bei diesem Aufruf ein Fehler auf.

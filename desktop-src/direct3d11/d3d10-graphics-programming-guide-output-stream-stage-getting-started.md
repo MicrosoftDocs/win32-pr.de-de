@@ -1,23 +1,23 @@
 ---
-title: Ersten Einstieg in die Stream-Output Phase
-description: In diesem Abschnitt wird beschrieben, wie ein Geometry-Shader mit der Stream-Ausgabestufe verwendet wird.
+title: Erste Schritte mit der Stream-Output Stage
+description: In diesem Abschnitt wird beschrieben, wie Sie einen Geometrie-Shader mit der Streamausgabephase verwenden.
 ms.assetid: 37146486-5922-4833-850c-cc4a51de0957
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 909b3ba37e8b80201a4afc3e5bf18f016fed38a0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ae2e72d25177926c948f43996b6c57d42a7c557b
+ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104976737"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112587877"
 ---
-# <a name="getting-started-with-the-stream-output-stage"></a>Ersten Einstieg in die Stream-Output Phase
+# <a name="getting-started-with-the-stream-output-stage"></a>Erste Schritte mit der Stream-Output Stage
 
-In diesem Abschnitt wird beschrieben, wie ein Geometry-Shader mit der Stream-Ausgabestufe verwendet wird.
+In diesem Abschnitt wird beschrieben, wie Sie einen Geometrie-Shader mit der Streamausgabephase verwenden.
 
-## <a name="compile-a-geometry-shader"></a>Kompilieren eines Geometry-Shaders
+## <a name="compile-a-geometry-shader"></a>Kompilieren eines Geometrie-Shaders
 
-Dieser Geometry-Shader (GS) berechnet eine Vorderseite für jedes Dreieck und gibt Positions-, normal-und Texturkoordinaten Daten aus.
+Dieser Geometrie-Shader (GS) berechnet eine Gesichtsnormal für jedes Dreieck und gibt Position, Normal- und Texturkoordinatendaten aus.
 
 
 ```
@@ -93,7 +93,7 @@ void GS( triangle GSPS_INPUT input[3], inout TriangleStream<GSPS_INPUT> TriStrea
 
 
 
-Beachten Sie dabei, dass ein Geometry-Shader ähnlich wie ein Scheitelpunkt oder Pixel-Shader aussieht, aber mit den folgenden Ausnahmen: der von der Funktion zurückgegebene Typ, die Eingabeparameter Deklarationen und die intrinsische Funktion.
+Beachten Sie unter Berücksichtigung dieses Codes, dass ein Geometrie-Shader ähnlich wie ein Vertex- oder Pixel-Shader aussieht, jedoch mit den folgenden Ausnahmen: dem von der Funktion zurückgegebenen Typ, den Eingabeparameterdeklarationen und der systeminternen Funktion.
 
 
 
@@ -105,13 +105,13 @@ Beachten Sie dabei, dass ein Geometry-Shader ähnlich wie ein Scheitelpunkt oder
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span id="Function_return_type"></span><span id="function_return_type"></span><span id="FUNCTION_RETURN_TYPE"></span>Funktions Rückgabetyp<br/></td>
-<td>Der Funktions Rückgabetyp bewirkt, dass die maximale Anzahl der Scheitel Punkte deklariert, die vom Shader ausgegeben werden können. In diesem Fall <span data-codelanguage=""></span>
+<td><span id="Function_return_type"></span><span id="function_return_type"></span><span id="FUNCTION_RETURN_TYPE"></span>Funktions-Rückgabetyp<br/></td>
+<td>Der Rückgabetyp der Funktion führt eine Aufgabe aus und deklariert die maximale Anzahl von Scheitelzeichen, die vom Shader ausgegeben werden können. In diesem Fall <span data-codelanguage=""></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -123,11 +123,11 @@ Beachten Sie dabei, dass ein Geometry-Shader ähnlich wie ein Scheitelpunkt oder
 </tbody>
 </table>
 
-definiert die Ausgabe als maximal 12 Vertices.</td>
+definiert die Ausgabe als maximal 12 Scheiteltices.</td>
 </tr>
 <tr class="even">
-<td><p><span id="Input_parameter_declarations"></span><span id="input_parameter_declarations"></span><span id="INPUT_PARAMETER_DECLARATIONS"></span>Eingabeparameter Deklarationen</p></td>
-<td><p>Diese Funktion nimmt zwei Eingabeparameter an:</p>
+<td><p><span id="Input_parameter_declarations"></span><span id="input_parameter_declarations"></span><span id="INPUT_PARAMETER_DECLARATIONS"></span>Eingabeparameterdeklarationen</p></td>
+<td><p>Diese Funktion verwendet zwei Eingabeparameter:</p>
 <div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -136,19 +136,19 @@ definiert die Ausgabe als maximal 12 Vertices.</td>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><pre><code>triangle GSPS_INPUT input[3] , inout TriangleStream<GSPS_INPUT> TriStream</code></pre></td>
+<td><pre><code>triangle GSPS_INPUT input[3] , inout TriangleStream&lt;GSPS_INPUTT&gt; TriStream</code></pre></td>
 </tr>
 </tbody>
 </table>
 
 </div>
-<p>Der erste Parameter ist ein Array von Vertices (in diesem Fall 3), das durch eine GSPS_INPUT Struktur definiert wird (die pro-Vertex-Daten als eine Position, eine normale und eine Textur Koordinate definiert). Der erste Parameter verwendet auch das Dreiecks Schlüsselwort. Dies bedeutet, dass die Eingabe Assembler-Stufe Daten an den Geometry-Shader als einen der Grundtypen des Dreiecks (Dreiecks Liste oder Dreieck) ausgeben muss.</p>
-<p>Der zweite Parameter ist ein vom Typ trianglestream definierter Dreiecks Datenstrom <GSPS_INPUT> . Dies bedeutet, dass es sich bei dem Parameter um ein Array von Dreiecken handelt, von denen jede aus drei Vertices besteht (die die Daten aus den Membern von GSPS_INPUT enthalten).</p>
-<p>Verwenden Sie die Schlüsselwörter Dreieck und trianglestream, um einzelne Dreiecke oder einen Datenstrom von Dreiecken in einer GS zu identifizieren.</p></td>
+<p>Der erste Parameter ist ein Array von Scheitelpunkt (in diesem Fall 3), das durch eine GSPS_INPUT-Struktur definiert wird (die Pro-Scheitelpunkt-Daten als Position, normal und Texturkoordinate definiert). Der erste Parameter verwendet auch das Schlüsselwort triangle. Das bedeutet, dass die Stufe des Eingabe-Assemblers Daten an den Geometrie-Shader als einen der primitiven Dreieckstypen (Dreiecksliste oder Dreiecksstreifen) ausgibt.</p>
+<p>Der zweite Parameter ist ein Dreiecksstream, der durch den Typ TriangleStream &lt; &gt; GSPS_INPUTT. Dies bedeutet, dass der -Parameter ein Array von Dreiecken ist, von denen jedes aus drei Scheitelstellen besteht (die die Daten aus den Membern der GSPS_INPUT).</p>
+<p>Verwenden Sie die Schlüsselwörter triangle und trianglestream, um einzelne Dreiecke oder einen Stream von Dreiecken in einem GS zu identifizieren.</p></td>
 </tr>
 <tr class="odd">
-<td><p><span id="Intrinsic_function"></span><span id="intrinsic_function"></span><span id="INTRINSIC_FUNCTION"></span>Intrinsische Funktion</p></td>
-<td><p>In den Codezeilen in der Shader-Funktion werden intrinsische HLSL-Funktionen von Common-Shader-Core verwendet, mit Ausnahme der letzten beiden Zeilen, die "append" und "restartstrip" aufrufen. Diese Funktionen sind nur für einen Geometry-Shader verfügbar. Anfügen informiert den Geometry-Shader darüber, dass die Ausgabe an den aktuellen Strip angefügt werden soll. Restartstrip erstellt einen neuen primitiven Strip. Ein neuer Strip wird bei jedem Aufruf der GS-Phase implizit erstellt.</p></td>
+<td><p><span id="Intrinsic_function"></span><span id="intrinsic_function"></span><span id="INTRINSIC_FUNCTION"></span>Systeminterne Funktion</p></td>
+<td><p>Die Codezeilen in der Shaderfunktion verwenden intrinsische HLSL-Funktionen mit allgemeinem Shaderkern, mit Ausnahme der letzten beiden Zeilen, die Append und RestartStrip aufrufen. Diese Funktionen sind nur für einen Geometrie-Shader verfügbar. Append informiert den Geometrie-Shader darüber, die Ausgabe an den aktuellen Strip anfügen. RestartStrip erstellt einen neuen primitiven Strip. Bei jedem Aufruf der GS-Phase wird implizit ein neuer Strip erstellt.</p></td>
 </tr>
 </tbody>
 </table>
@@ -157,9 +157,9 @@ definiert die Ausgabe als maximal 12 Vertices.</td>
 
  
 
-Der Rest des Shader ähnelt einem Scheitelpunkt oder einem Pixelshader. Der Geometry-Shader verwendet eine-Struktur, um Eingabeparameter zu deklarieren, und markiert das Positions Element mit der SV- \_ Positions Semantik, um der Hardware mitzuteilen, dass es sich um Positionsdaten handelt. Die Eingabe Struktur identifiziert die anderen beiden Eingabeparameter als Texturkoordinaten (auch wenn einer von Ihnen ein Gesicht normal enthält). Wenn Sie möchten, können Sie Ihre eigene benutzerdefinierte Semantik für die Vorderseite verwenden.
+Der Rest des Shaders sieht einem Scheitelpunkt- oder Pixel-Shader sehr ähnlich. Der Geometrie-Shader verwendet eine -Struktur, um Eingabeparameter zu deklarieren, und markiert den Position member mit der SV POSITION-Semantik, um die Hardware darüber zu informieren, dass es sich um \_ Positionsdaten handelt. Die Eingabestruktur identifiziert die anderen beiden Eingabeparameter als Texturkoordinaten (obwohl einer davon eine Gesichtsnormnorm enthält). Wenn Sie möchten, können Sie ihre eigene benutzerdefinierte Semantik für die Gesichtsnorm verwenden.
 
-Nachdem Sie den Geometry-Shader entworfen haben, müssen Sie [**D3DCompile**](/windows/desktop/direct3dhlsl/d3dcompile) zum Kompilieren aufrufen, wie im folgenden Codebeispiel gezeigt.
+Nachdem Sie den Geometrie-Shader entworfen haben, rufen [**Sie D3DCompile**](/windows/desktop/direct3dhlsl/d3dcompile) auf, um zu kompilieren, wie im folgenden Codebeispiel gezeigt.
 
 
 ```
@@ -173,13 +173,13 @@ D3DCompile( pSrcData, sizeof( pSrcData ),
 
 
 
-Genau wie Scheitelpunkt-und Pixel-Shader benötigen Sie ein Shader-Flag, um dem Compiler mitzuteilen, wie der Shader kompiliert werden soll (für das Debuggen, optimiert für Geschwindigkeit usw.), die Einstiegspunkt Funktion und das Shader-Modell, anhand dessen validiert werden soll. In diesem Beispiel wird ein Geometry-Shader erstellt, der aus der Datei Tutorial13. FX erstellt wurde, indem die GS-Funktion verwendet wird. Der Shader wird für das Shader-Modell 4,0 kompiliert.
+Genau wie Vertex- und Pixel-Shader benötigen Sie ein Shaderflag, um dem Compiler mitteilen zu können, wie der Shader kompiliert werden soll (für das Debuggen, für geschwindigkeitsoptimiert und so weiter), für die Einstiegspunktfunktion und für das Shadermodell, anhand derer überprüft werden soll. In diesem Beispiel wird mithilfe der GS-Funktion ein Geometrie-Shader erstellt, der aus der Datei Tutorial13.fx erstellt wurde. Der Shader wird für Shadermodell 4.0 kompiliert.
 
-## <a name="create-a-geometry-shader-object-with-stream-output"></a>Erstellen eines Geometry-Shader Objekts mit Datenstrom Ausgabe
+## <a name="create-a-geometry-shader-object-with-stream-output"></a>Erstellen eines Geometry-Shader Objekts mit Streamausgabe
 
-Wenn Sie wissen, dass Sie die Daten aus der Geometrie streamen, und Sie den Shader erfolgreich kompiliert haben, besteht der nächste Schritt im Aufrufen von [**ID3D11Device:: kreategeometryshaderwithstreamoutput**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput) zum Erstellen des Geometry-Shader-Objekts.
+Wenn Sie wissen, dass Sie die Daten aus der Geometrie streamen und den Shader erfolgreich kompiliert haben, besteht der nächste Schritt im Aufrufen von [**ID3D11Device::CreateGeometryShaderWithStreamOutput,**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput) um das Geometrieshaderobjekt zu erstellen.
 
-Zuerst müssen Sie jedoch die Eingabe Signatur der Ausgabe der Ausgabe (also) deklarieren. Diese Signatur gleicht die GS-Ausgaben und die so-Eingaben zum Zeitpunkt der Objekt Erstellung ab oder überprüft sie. Der folgende Code ist ein Beispiel für die so-Deklaration.
+Zunächst müssen Sie jedoch die Eingangssignatur der Phase "Output(SO)" deklarieren. Diese Signatur stimmt mit den GS-Ausgaben und den SO-Eingaben zum Zeitpunkt der Objekterstellung ab oder überprüft sie. Der folgende Code ist ein Beispiel für die SO-Deklaration.
 
 
 ```
@@ -197,22 +197,22 @@ D3D11Device->CreateGeometryShaderWithStreamOut( pShaderBytecode, ShaderBytecodes
 
 
 
-Diese Funktion erfordert mehrere Parameter, einschließlich:
+Diese Funktion verwendet mehrere Parameter, darunter:
 
--   Ein Zeiger auf den kompilierten Geometry-Shader (oder Vertex-Shader, wenn kein Geometry-Shader vorhanden ist und die Daten direkt aus dem Vertexshader gestreamt werden). Weitere Informationen zum Aufrufen dieses Zeigers finden Sie unter "aufrufen [eines Zeigers auf einen kompilierten Shader](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-using-shaders-10)".
--   Ein Zeiger auf ein Array von Deklarationen, die die Eingabedaten für die Stream-Ausgabe Phase beschreiben. (Siehe [**D3D11 \_ so- \_ Deklarations \_ Eintrag**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_so_declaration_entry).) Sie können bis zu 64 Deklarationen angeben, eine für jeden Elementtyp, der aus der so-Phase ausgegeben werden soll. Das Array der Deklarations Einträge beschreibt das Datenlayout, unabhängig davon, ob nur ein einzelner Puffer oder mehrere Puffer an die Streamausgabe gebunden werden sollen.
--   Die Anzahl der Elemente, die von der so-Phase ausgeschrieben werden.
--   Ein Zeiger auf das Geometry-Shader-Objekt, das erstellt wird (siehe [**ID3D11GeometryShader**](/windows/win32/api/d3d11/nn-d3d11-id3d11geometryshader)).
+-   Ein Zeiger auf den kompilierten Geometrie-Shader (oder vertex shader, wenn kein Geometrie-Shader vorhanden ist und Daten direkt aus dem Vertex-Shader gestreamt werden). Informationen zum Abrufen dieses Zeigers finden Sie unter [Getting a Pointer to a Compiled Shader](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-using-shaders-10).
+-   Ein Zeiger auf ein Array von Deklarationen, die die Eingabedaten für die Streamausgabephase beschreiben. (Siehe [**D3D11 \_ SO DECLARATION \_ \_ ENTRY**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_so_declaration_entry).) Sie können bis zu 64 Deklarationen, eine für jeden unterschiedlichen Elementtyp, der aus der SO-Phase ausgegeben werden soll, liefern. Das Array von Deklarationseinträgen beschreibt das Datenlayout, unabhängig davon, ob nur ein einzelner oder mehrere Puffer für die Streamausgabe gebunden werden sollen.
+-   Die Anzahl der Elemente, die von der SO-Phase geschrieben werden.
+-   Ein Zeiger auf das erstellte Geometrieshaderobjekt (siehe [**ID3D11GeometryShader**](/windows/win32/api/d3d11/nn-d3d11-id3d11geometryshader)).
 
-In dieser Situation ist der Puffer Stride NULL. der Index des Datenstroms, der an den Raster gesendet werden soll, ist 0, und die Klassen Verknüpfungs Schnittstelle ist NULL.
+In diesem Fall ist der Pufferschritt NULL, der Index des Streams, der an den Rasterizer gesendet werden soll, ist 0, und die Klassenverknüpfungsschnittstelle ist NULL.
 
-Die Datenstrom-Ausgabe Deklaration definiert, wie Daten in eine Puffer Ressource geschrieben werden. Sie können der Ausgabe Deklaration beliebig viele Komponenten hinzufügen. Verwenden Sie die so-Phase, um in eine einzelne Puffer Ressource oder viele Puffer Ressourcen zu schreiben. Bei einem einzelnen Puffer kann die so-Phase viele verschiedene Elemente pro Scheitelpunkt schreiben. Für mehrere Puffer kann die so-Phase nur ein einzelnes Element von pro-Vertex-Daten in jeden Puffer schreiben.
+Die Streamausgabedeklaration definiert, wie Daten in eine Pufferressource geschrieben werden. Sie können der Ausgabedeklaration so viele Komponenten hinzufügen, wie Sie möchten. Verwenden Sie die So-Phase, um in eine einzelne Pufferressource oder viele Pufferressourcen zu schreiben. Für einen einzelnen Puffer kann die SO-Phase viele verschiedene Elemente pro Scheitelpunkt schreiben. Bei mehreren Puffern kann die SO-Phase nur ein einzelnes Element von Pro-Scheitelpunkt-Daten in jeden Puffer schreiben.
 
-Um die so-Phase ohne Verwendung eines Geometry-Shaders zu verwenden, müssen Sie [**ID3D11Device:: deategeometryshaderwithstreamoutput**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput) aufrufen und einen Zeiger auf einen Vertex-Shader an den *pshaderbytecode* -Parameter übergeben.
+Um die SO-Phase ohne einen Geometrieshader zu verwenden, rufen Sie [**ID3D11Device::CreateGeometryShaderWithStreamOutput**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput) auf, und übergeben Sie einen Zeiger auf einen Vertexshader an den *pShaderBytecode-Parameter.*
 
-## <a name="set-the-output-targets"></a>Festlegen der Ausgabe Ziele
+## <a name="set-the-output-targets"></a>Festlegen der Ausgabeziele
 
-Der letzte Schritt besteht darin, die so-Phasen Puffer festzulegen. Daten können zur späteren Verwendung in einen oder mehrere Puffer im Arbeitsspeicher gestreamt werden. Der folgende Code zeigt, wie ein einzelner Puffer erstellt wird, der für Scheitelpunkt Daten verwendet werden kann, sowie für die so-Phase, um Daten in zu streamen.
+Der letzte Schritt besteht im Festlegen der So-Phasenpuffer. Daten können zur späteren Verwendung in einen oder mehrere Puffer im Arbeitsspeicher gestreamt werden. Der folgende Code zeigt, wie Sie einen einzelnen Puffer erstellen, der für Scheitelpunktdaten sowie für die SO-Phase zum Streamen von Daten verwendet werden kann.
 
 
 ```
@@ -233,9 +233,9 @@ D3D11Device->CreateBuffer( &bufferDesc, NULL, &m_pBuffer );
 
 
 
-Erstellen Sie einen Puffer durch Aufrufen von [**ID3D11Device:: createbuffer**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer). Dieses Beispiel veranschaulicht die Standardverwendung, die typisch für eine Puffer Ressource ist, die relativ häufig von der CPU aktualisiert werden soll. Das Bindungsflag identifiziert die Pipeline Stufe, an die die Ressource gebunden werden kann. Alle Ressourcen, die von der so-Phase verwendet werden, müssen auch mit dem Bindungsflag d3d10 \_ Bind \_ Stream Output erstellt werden \_ .
+Erstellen Sie einen Puffer, indem Sie [**ID3D11Device::CreateBuffer aufrufen.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) In diesem Beispiel wird die Standardverwendung veranschaulicht. Dies ist typisch für eine Pufferressource, die voraussichtlich relativ häufig von der CPU aktualisiert wird. Das Bindungsflag identifiziert die Pipelinephase, an die die Ressource gebunden werden kann. Jede ressource, die von der SO-Phase verwendet wird, muss auch mit dem Bindungsflag D3D10 \_ BIND STREAM OUTPUT erstellt \_ \_ werden.
 
-Nachdem der Puffer erfolgreich erstellt wurde, legen Sie ihn auf das aktuelle Gerät durch Aufrufen von [**Verknüpfung id3d11devicecontext aus:: sosettargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-sosettargets)fest:
+Nachdem der Puffer erfolgreich erstellt wurde, legen Sie ihn auf das aktuelle Gerät fest, indem Sie [**ID3D11DeviceContext::SOSetTargets aufrufen:**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-sosettargets)
 
 
 ```
@@ -245,15 +245,15 @@ D3D11Device->SOSetTargets( 1, &m_pBuffer, offset );
 
 
 
-Dieser Befehl nimmt die Anzahl von Puffern, einen Zeiger auf die Puffer und ein Array von Offsets (ein Offset in jeden Puffer, der angibt, wohin mit dem Schreiben von Daten begonnen werden soll). Daten werden in diese streamingausgabepuffer geschrieben, wenn eine Draw-Funktion aufgerufen wird. Eine interne Variable verfolgt die Position, an der mit dem Schreiben von Daten in die streamingausgabepuffer begonnen werden soll, und gibt an, dass die Variablen weiterhin erhöht werden, bis [**sosettargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-sosettargets) erneut aufgerufen wird und ein neuer Offset Wert angegeben wird.
+Dieser Aufruf nimmt die Anzahl der Puffer, einen Zeiger auf die Puffer und ein Array von Offsets an (ein Offset in jeden der Puffer, der angibt, wo mit dem Schreiben von Daten begonnen werden soll). Daten werden in diese Streamingausgabepuffer geschrieben, wenn eine draw-Funktion aufgerufen wird. Eine interne Variable verfolgt die Position, an der mit dem Schreiben von Daten in die Streamingausgabepuffer begonnen werden soll, und diese Variablen werden weiter erhöht, bis [**SOSetTargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-sosettargets) erneut aufgerufen wird und ein neuer Offsetwert angegeben wird.
 
-Alle Daten, die in die Ziel Puffer geschrieben werden, sind 32-Bit-Werte.
+Alle Daten, die in die Zielpuffer geschrieben werden, sind 32-Bit-Werte.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Stream-Ausgabe Phase](d3d10-graphics-programming-guide-output-stream-stage.md)
+[Streamausgabephase](d3d10-graphics-programming-guide-output-stream-stage.md)
 </dt> </dl>
 
  

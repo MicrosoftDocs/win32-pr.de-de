@@ -1,40 +1,40 @@
 ---
-title: Neuerungen in DirectWrite
-description: Hier sind einige der neuen Ergänzungen zu DirectWrite.
+title: Neues in DirectWrite
+description: Im Folgenden finden Sie einige der neuen Ergänzungen zu DirectWrite.
 ms.assetid: 2512D222-C6EB-4C2D-80A6-7978FED56F7A
 ms.topic: article
 ms.date: 09/23/2019
-ms.openlocfilehash: 6b54a7f671ab6472ee2e412c2797d80bf7de245e
-ms.sourcegitcommit: d5f16b9d3d5d2e2080ba7b6837eb37250fa67a30
+ms.openlocfilehash: ea9e36487477f51179a77b97726b787a0f5da844
+ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "111349959"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112587890"
 ---
-# <a name="whats-new-in-directwrite"></a>Neuerungen in DirectWrite
+# <a name="whats-new-in-directwrite"></a>Neues in DirectWrite
 
-In diesem Thema werden die Neuerungen in [DirectWrite](direct-write-portal.md) für verschiedene Releases von Windows 10 beschrieben.
+In diesem Thema werden die Neuheiten in [DirectWrite](direct-write-portal.md) für verschiedene Releases von Windows 10.
 
-## <a name="project-reunion-01-prerelease"></a>Vorabversion von Project Reunion 0.1
+## <a name="windows-app-sdk"></a>Windows-App-SDK
 
-[Project Reunion](/windows/apps/project-reunion/) führt eine neue Version von DirectWrite mit dem Namen DWriteCore ein, die unter Windows-Versionen bis zu Windows 8 ausgeführt wird und Ihnen die Plattform für die verwendung öffnet. Weitere Informationen finden Sie unter [Übersicht über DWriteCore.](dwritecore-overview.md)
+Das [Windows App SDK](/windows/apps/windows-app-sdk/) führt eine neue Version von DirectWrite namens DWriteCore ein. Weitere Informationen finden Sie unter [Übersicht über DWriteCore.](dwritecore-overview.md)
 
 ## <a name="windows-10-may-2019-update"></a>Windows 10-Update von Mai 2019
 
-Für Windows 10 Version 1903 (10.0; Build 18362) &mdash; auch als Windows 10 May 2019 Update bezeichnet.
+Für Windows 10 Version 1903 (10.0; Build 18362) &mdash; wird auch als Windows 10 May 2019 Update.
 
 ## <a name="windows-10-october-2018-update"></a>Windows 10-Update von Oktober 2018
 
-Die folgenden Features und APIs wurden für Windows 10, Version 1809 (10.0; Build 17763) &mdash; auch als Windows 10 October 2018 Update bezeichnet.
+Die folgenden Features und APIs wurden für Windows 10, Version 1809 (10.0; Build 17763) &mdash; auch als Windows 10 October 2018 Update.
 
 ### <a name="new"></a>Neu
 
-- [**DWRITE_FONT_SOURCE_TYPE-Enumeration**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_source_type)
+- [**DWRITE_FONT_SOURCE_TYPE**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_source_type) Enumeration
 - [**IDWriteFontSet3-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontset3) und ihre Methoden
 
 ## <a name="windows-10-april-2018-update"></a>Windows 10-Update vom April 2018
 
-Die folgenden Features und APIs wurden für Windows 10 Version 1803 (10.0; Build 17134) &mdash; auch als Windows 10 April 2018 Update bezeichnet.
+Die folgenden Features und APIs wurden für Windows 10 Version 1803 (10.0; Build 17134) &mdash; auch als Windows 10 April 2018 Update.
 
 ### <a name="new"></a>Neu
 
@@ -44,14 +44,14 @@ Die folgenden Features und APIs wurden für Windows 10 Version 1803 (10.0; Build
 
 ## <a name="windows-10-fall-creators-update"></a>Windows 10 Fall Creators Update
 
-Die folgenden Features und APIs wurden für Windows 10 Version 1709 (10.0; Build 16299) &mdash; auch als Windows 10 Fall Creators Update bezeichnet.
+Die folgenden Features und APIs wurden für Windows 10 Version 1709 (10.0; Build 16299) &mdash; wird auch als Windows 10 Fall Creators Update.
 
 ### <a name="new"></a>Neu
 
-- [**DWRITE_AUTOMATIC_FONT_AXES-Enumeration**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_automatic_font_axes)
-- [**DWRITE_FONT_AXIS_ATTRIBUTES-Enumeration**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_axis_attributes)
-- [**DWRITE_FONT_AXIS_TAG-Enumeration**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_axis_tag)
-- [**DWRITE_FONT_FAMILY_MODEL-Enumeration**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_family_model)
+- [**DWRITE_AUTOMATIC_FONT_AXES**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_automatic_font_axes) Enumeration
+- [**DWRITE_FONT_AXIS_ATTRIBUTES**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_axis_attributes) Enumeration
+- [**DWRITE_FONT_AXIS_TAG**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_axis_tag) Enumeration
+- [**DWRITE_FONT_FAMILY_MODEL**](/windows/win32/api/dwrite_3/ne-dwrite_3-dwrite_font_family_model) Enumeration
 - [**IDWriteFactory6-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefactory6) und ihre Methoden
 - [**IDWriteFontCollection2-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontcollection2) und ihre Methoden
 - [**IDWriteFontFace5-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontface5) und ihre Methoden
@@ -64,73 +64,73 @@ Die folgenden Features und APIs wurden für Windows 10 Version 1709 (10.0; Build
 - [**IDWriteFontSetBuilder2-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontsetbuilder2) und ihre Methoden
 - [**IDWriteTextFormat3-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritetextformat3) und ihre Methoden
 - [**IDWriteTextLayout4-Schnittstelle**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritetextlayout4) und ihre Methoden
-- [**DWRITE_MAKE_FONT_AXIS_TAG-Makro**](/windows/win32/api/dwrite_3/nf-dwrite_3-dwrite_make_font_axis_tag)
+- [**DWRITE_MAKE_FONT_AXIS_TAG**](/windows/win32/api/dwrite_3/nf-dwrite_3-dwrite_make_font_axis_tag) Makro
 - [**DWRITE_FONT_AXIS_RANGE-Struktur**](/windows/win32/api/dwrite_3/ns-dwrite_3-dwrite_font_axis_range)
 - [**DWRITE_FONT_AXIS_VALUE-Struktur**](/windows/win32/api/dwrite_3/ns-dwrite_3-dwrite_font_axis_value)
 
 ### <a name="moved"></a>Verschoben
 
-Die [**DWRITE_GLYPH_IMAGE_FORMATS**](/windows/win32/api/dcommon/ne-dcommon-dwrite_glyph_image_formats) Enumeration wurde von `dwrite_3.h` in `dcommon.h` verschoben.
+Die [**DWRITE_GLYPH_IMAGE_FORMATS-Enumeration**](/windows/win32/api/dcommon/ne-dcommon-dwrite_glyph_image_formats) wurde von in `dwrite_3.h` `dcommon.h` verschoben.
 
 ## <a name="windows-10-creators-update"></a>Windows 10 Creators Update
 
-Die folgenden Features und APIs wurden für Windows 10 Version 1703 (10.0; Build 15063) &mdash; auch als Windows 10 Creators Update bezeichnet.
+Die folgenden Features und APIs wurden für Windows 10 Version 1703 (10.0; Build 15063) &mdash; wird auch als Windows 10 Creators Update.
 
 ### <a name="expanded-api-support-for-cloud-fonts-and-custom-font-sets"></a>Erweiterte API-Unterstützung für Cloudschriftarten und benutzerdefinierte Schriftartensätze
 
-Windows 10 enthaltene APIs, die Apps den einfachen Zugriff auf Schriftarten über einen Windows-Schriftartdienst ermöglichen. Im Windows 10 Creators Update werden APIs für Remoteschriftarten erweitert, um den einfachen Zugriff auf Schriftarten aus anderen Quellen im Web zu ermöglichen, auf die über HTTP oder HTTPS zugegriffen werden kann. 
+Windows 10 enthaltene APIs, die Apps den einfachen Zugriff auf Schriftarten über einen Windows-Schriftartendienst ermöglichen. In der Windows 10 Creators Update apIs für Remoteschriftarten erweitert, um den einfachen Zugriff auf Schriftarten aus anderen Quellen im Web zu ermöglichen, auf die über HTTP oder HTTPS zugegriffen werden kann. 
 
-Die neuen Remoteschriftart-APIs können mit öffentlichen oder privaten Webdiensten verwendet werden. Darüber hinaus können sie verwendet werden, um auf unformatierte, OpenType-Schriftartdateien (TTF, OTF,, TTC, WLAN) oder Schriftarten zuzugreifen, die in [WOFF-](https://www.w3.org/TR/WOFF/) oder [WOFF2-Containerformaten](https://www.w3.org/TR/WOFF2/) gepackt sind. Die neuen APIs werden in Verbindung mit vorhandenen APIs für Warteschlangenanforderungen verwendet, um Remoteschriftdaten herunterzuladen und den eigentlichen Downloadvorgang zu verarbeiten.
+Die neuen APIs für Remoteschriftart können mit öffentlichen oder privaten Webdiensten verwendet werden. Darüber hinaus können sie für den Zugriff auf Unformatierte, OpenType-Schriftartdateien (TTF, OTF,TTC,FS) oder Schriftarten in [WOFF-](https://www.w3.org/TR/WOFF/) oder [WOFF2-Containerformaten](https://www.w3.org/TR/WOFF2/) verwendet werden. Die neuen APIs werden in Verbindung mit vorhandenen APIs für Warteschlangenanforderungen zum Herunterladen von Remoteschriftartdaten und zum Verarbeiten des eigentlichen Downloadprozesses verwendet.
 
 Andere neue APIs erleichtern Apps die Arbeit mit benutzerdefinierten Schriftarten, die im lokalen Dateisystem gespeichert oder in einen Speicherpuffer geladen werden.
 
-Weitere Informationen zu neuen APIs für die Arbeit mit Remoteschriftarten, benutzerdefinierten Schriftartsätzen oder WOFF/WOFF2-Containerformaten finden Sie im folgenden Thema:
+Weitere Informationen zu neuen APIs für die Arbeit mit Remoteschriftarten, benutzerdefinierten Schriftartensätzen oder WOFF/WOFF2-Containerformaten finden Sie im folgenden Thema:
 
 [Benutzerdefinierte Schriftartenkombinationen](custom-font-sets-win10.md)
 
-Siehe auch die Links zu API-Referenzthemen, die in diesem Thema bereitgestellt werden.  Die Verwendung neuer und vorhandener APIs für die Arbeit mit benutzerdefinierten Schriftarten wird auch im [DirectWrite Custom Font Sets-Beispiel](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/DirectWriteCustomFontSets/)veranschaulicht. Dieses Beispiel veranschaulicht die Codeimplementierung für verschiedene Szenarien, einschließlich lokaler Schriftarten auf dem Datenträger, Remoteschriftarten im Web, In-Memory-Schriftartdaten und Schriftarten in gepackten WOFF- oder WOFF2-Formaten.
+Siehe auch die Links zu API-Referenzthemen, die in diesem Thema bereitgestellt werden.  Die Verwendung neuer und vorhandener APIs für die Arbeit mit benutzerdefinierten Schriftarten wird auch im [DirectWrite Custom Font Sets-Beispiel veranschaulicht.](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/DirectWriteCustomFontSets/) Dieses Beispiel veranschaulicht die Codeimplementierung für verschiedene Szenarien, einschließlich lokaler Schriftarten auf dem Datenträger, Remoteschriftarten im Web, In-Memory-Schriftartdaten und Schriftarten in gepackten WOFF- oder WOFF2-Formaten.
 
 ### <a name="initial-support-for-opentype-font-variations"></a>Anfängliche Unterstützung für OpenType-Schriftartvariationen
 
-In Version 1.8 der Spezifikation für das OpenType-Schriftformat wurde eine interessante neue Erweiterung für das Format eingeführt, das als OpenType-Schriftartvariationen bezeichnet wird. DirectWrite wurde im Windows 10 Creators Update aktualisiert, um benannte Instanzen von Variablenschriftarten zu unterstützen. Weitere Informationen finden Sie in den folgenden Themen:
+In Version 1.8 der OpenType-Schriftartformatspezifikation wurde eine interessante neue Erweiterung für das Format eingeführt, das als OpenType-Schriftartvariationen bezeichnet wird. DirectWrite wurde in der -Windows 10 Creators Update aktualisiert, um benannte Instanzen von variablen Schriftarten zu unterstützen. Weitere Informationen finden Sie in den folgenden Themen:
 
 [OpenType-Variablenschriftarten](opentype-variable-fonts.md)
 
 ## <a name="windows-10-anniversary-update"></a>Windows 10 Anniversary Update
 
-Die folgenden Features und APIs wurden für Windows 10 Version 1607 (10.0; Build 14393) &mdash; auch als Windows 10 Anniversary Update bezeichnet.
+Die folgenden Features und APIs wurden für Windows 10 Version 1607 (10.0; Build 14393) &mdash; wird auch als Windows 10 Anniversary Update.
 
 ### <a name="improved-support-for-color-fonts"></a>Verbesserte Unterstützung für farbige Schriftarten
 
-Ab Windows 10 Anniversary Update bietet DirectWrite integrierte Unterstützung für eine größere Vielfalt von Farbschriftarten, sodass Entwickler mehr Schriftarttypen in ihren DirectWrite-basierten Apps als je zuvor verwenden können. Unter anderem werden folgende Elemente unterstützt:
+Ab Windows 10 Anniversary Update bietet DirectWrite integrierte Unterstützung für eine größere Vielfalt von Farbschriftformaten, sodass Entwickler mehr Schriftarten in ihren DirectWrite-gestützten Apps verwenden können als je zuvor. Unter anderem werden folgende Elemente unterstützt:
 
--   Die OpenType-Tabelle "COLR", die kompakte Vektorinhalte in Schriftarten ermöglicht. (Wird seit Windows 8.1 unterstützt.)
+-   Die OpenType-Tabelle "COLR", die kompakten Vektorinhalt in Schriftarten ermöglicht. (Unterstützt seit Windows 8.1.)
 -   Die OpenType-Tabelle "SVG", die SVG-Inhalt in Schriftarten ermöglicht.
--   Die OpenType-Tabelle 'ARCHET', die Farbbitmapinhalte in Schriftarten ermöglicht.
+-   Die OpenType-Tabelle 'ÖFFNT', die Farbbitmapinhalt in Schriftarten ermöglicht.
 -   Die OpenType-Tabelle "sbix", die Farbbitmapinhalte in Schriftarten ermöglicht.
 
-[Direct2D](../direct2d/direct2d-portal.md), das DirectWrite für das Textrendering verwendet, unterstützt diese Farbschriftartformate automatisch, wenn das [**Flag D2D1 \_ DRAW TEXT OPTIONS ENABLE COLOR \_ \_ \_ \_ \_ FONT**](/windows/win32/api/d2d1/ne-d2d1-d2d1_draw_text_options) aktiviert ist. Weitere Informationen finden Sie in den folgenden Themen:
+[Direct2D](../direct2d/direct2d-portal.md), das DirectWrite für das Textrendering verwendet, unterstützt diese Farbschriftformate automatisch, wenn das [**Flag D2D1 \_ DRAW TEXT OPTIONS ENABLE COLOR \_ \_ \_ \_ \_ FONT**](/windows/win32/api/d2d1/ne-d2d1-d2d1_draw_text_options) aktiviert ist. Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [Farbige Schriftarten](color-fonts.md)
--   [Beispiel für DirectWrite-Farbglyphe](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DWriteColorGlyph)
+-   [DirectWrite-Farbglyphenbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DWriteColorGlyph)
 
 ### <a name="support-for-adobe-typekit-and-other-font-service-clients"></a>Unterstützung für Adobe Typekit und andere Schriftartdienstclients
 
-Einige Schriftartdienste, z. B. Adobe Typekit, verfügen über clientseitige Hilfsprogramme, mit denen ein Benutzer Schriftarten aus dem Dienst laden und in verschiedenen Anwendungen auf dem Windows-Computer verwenden kann. Diese Hilfsprogramme funktionieren in der Regel durch Laufzeitaufrufe an GDI, um zusätzliche Schriftarten zu laden, anstatt Schriftarten dauerhaft auf dem System zu installieren. Aufgrund dieses Entwurfs können die Schriftarten in früheren Windows-Versionen in GDI-basierten Anwendungen verwendet werden, aber nicht in DirectWrite-Anwendungen. Ab dem Windows 10 Anniversary Update sind Schriftarten, die von solchen Hilfsprogrammen geladen werden, auch in DirectWrite sowie in GDI verfügbar.
+Einige Schriftartdienste wie Adobe Typekit verfügen über clientseitige Hilfsprogramme, mit denen Benutzer Schriftarten aus dem Dienst laden und in verschiedenen Anwendungen auf ihrem Windows-Computer verwenden können. Diese Hilfsprogramme funktionieren in der Regel durch Laufzeitaufrufe an GDI, um zusätzliche Schriftarten zu laden, anstatt Schriftarten dauerhaft auf dem System zu installieren. Aufgrund dieses Entwurfs können die Schriftarten in früheren Windows-Versionen in GDI-basierten Anwendungen, aber nicht in DirectWrite-Anwendungen verwendet werden. Ab dem Windows 10 Anniversary Update werden Schriftarten, die von solchen Hilfsprogrammen geladen werden, auch in DirectWrite sowie in GDI verfügbar sein.
 
-Schriftarten, die von einem hilfsprogramm font-service geladen werden, sind in der Systemschriftartauflistung sichtbar, die durch Aufrufen der [**IDWriteFactory::GetSystemFontCollection-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-getsystemfontcollection) abgerufen wurde. Da Schriftartdienste in der Regel einem Lizenzierungsmodell pro Benutzer folgen, werden von diesen Hilfsprogrammen geladene Schriftarten auf Benutzerbasis verwaltet. Daher können vorhandene DirectWrite-Anwendungen Schriftarten nutzen, die Endbenutzer mithilfe solcher Dienste erhalten haben, ohne dass Codeänderungen in der Anwendung erforderlich sind, sodass benutzerfreundlichere Funktionen zur Verfügung stehen.
+Schriftarten, die von einem Font-Service-Hilfsprogramm geladen werden, werden in der Auflistung der Systemschriftarten angezeigt, die durch Aufrufen der [**IDWriteFactory::GetSystemFontCollection-Methode erhalten**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-getsystemfontcollection) wurden. Da Schriftartdienste in der Regel einem Lizenzierungsmodell pro Benutzer folgen, werden schriftarten, die von diesen Hilfsprogrammen geladen werden, auf Benutzerbasis verwaltet. Daher können vorhandene DirectWrite-Anwendungen Schriftarten verwenden, die Endbenutzer mithilfe solcher Dienste erhalten haben, ohne dass Codeänderungen in der Anwendung erforderlich sind, was eine nahtlosere Benutzererfahrung bietet.
 
 ### <a name="support-for-opentype-collections-using-cff-outlines"></a>Unterstützung für OpenType-Sammlungen mit CFF-Konturen
 
-Die Schriftartformate OpenType und TrueType unterstützen seit langem die Möglichkeit, mehrere Schriftarten in einer einzigen Schriftartdatei zusammenzupacken, die als "Schriftartsammlung" bezeichnet wird. Die OpenType-Spezifikation hat schriftarten immer die Verwendung von TrueType- oder CFF-Formaten für Glyphengliederungsdaten ermöglicht. Bis vor Kurzem war die Spezifikation jedoch nur für Auflistungen zulässig, in denen Glyphengliederungen das TrueType-Format verwenden. OpenType Version 1.7 ermöglicht sammlungen jetzt die Verwendung von TrueType- oder CFF-Formaten für Glyphengliederungsdaten. Ab dem Windows 10 Anniversary Update unterstützt DirectWrite OpenType-Sammlungen mithilfe von CFF-Gliederungsdaten.
+Die Schriftformate OpenType und TrueType unterstützen seit langem die Möglichkeit, mehrere Schriftarten in einer einzelnen Schriftartdatei zusammen zu packen, die als "Schriftartsammlung" bezeichnet wird. Die OpenType-Spezifikation hat schriftarten immer die Verwendung von TrueType- oder CFF-Formaten für Glyphengliederungsdaten gestattet. Bis vor Kurzem war die Spezifikation jedoch nur für Sammlungen zulässig, in denen Glyphengliederungen das TrueType-Format verwenden. OpenType Version 1.7 ermöglicht sammlungen jetzt die Verwendung von TrueType- oder CFF-Formaten für Gliederungsdaten von Glyphen. Ab der Windows 10 Anniversary Update unterstützt DirectWrite OpenType-Sammlungen mithilfe von CFF-Konturdaten.
 
 ## <a name="windows-10"></a>Windows 10
 
 ### <a name="windows-font-service-integration"></a>Integration des Windows-Schriftartdiensts
 
-Ab Windows 10 sind Schriftarten, die in Windows enthalten sind, in einem Onlinedienst verfügbar und über DirectWrite auf jedem Windows 10-Gerät zugänglich. Dies gilt für alle Windows 10 Editionen, einschließlich Windows 10 Mobile, Xbox und HoloLens sowie des Desktopclients. Dadurch können Anwendungen Inhalte mit einer beliebigen Windows-Schriftart anzeigen, auch wenn die Schriftart derzeit nicht auf dem Gerät installiert ist.
+Ab Windows 10 sind Schriftarten, die in Windows enthalten sind, in einem Onlinedienst verfügbar und können über DirectWrite auf jedem gerät Windows 10 werden. Dies gilt für alle Windows 10 Editionen, einschließlich Windows 10 Mobile, Xbox und HoloLens sowie des Desktopclients. Dadurch können Anwendungen Inhalte mit einer beliebigen Windows-Schriftart anzeigen, auch wenn die Schriftart derzeit nicht auf dem Gerät installiert ist.
 
-Die Unterstützung für die Mechanismen des DirectWrite-Schriftartdiensts wurde im XAML-Framework implementiert. Dies bedeutet, dass alle Anwendungen, die XAML verwenden, keine Codeänderungen erfordern, um den Schriftartdienst nutzen zu können. Dies wird im [Xaml-Codebeispiel (Downloadable Fonts)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCloudFontIntegration) veranschaulicht. Anwendungen, die DirectWrite-APIs direkt aufrufen, müssen neue APIs verwenden, um die Schriftartdienstmechanismen zu nutzen. Weitere Informationen finden Sie in den folgenden Themen:
+Die Unterstützung für die DirectWrite-Schriftartdienstmechanismen wurde im XAML-Framework implementiert. Dies bedeutet, dass alle Anwendungen, die XAML verwenden, keine Codeänderungen erfordern, um den Schriftartdienst nutzen zu können. Dies [wird im XAML-Codebeispiel (Downloadable Fonts)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCloudFontIntegration) veranschaulicht. Anwendungen, die DirectWrite-APIs direkt aufrufen, müssen neue APIs verwenden, um die Font-Service-Mechanismen zu nutzen. Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [**IDWriteFactory3::GetSystemFontCollection-Methode**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory3-getsystemfontcollection)
 -   [**IDWriteTextLayout3-Schnittstelle**](idwritetextlayout3.md)

@@ -1,30 +1,30 @@
 ---
-description: In diesem Thema werden die von WinHTTP bereitgestellten Funktionen beschrieben.
+description: In diesem Thema werden die Funktionen identifiziert, die WinHTTP bereitstellt.
 ms.assetid: dcb56d5d-ed0d-49bb-95bf-940a49c033f1
 title: WinHTTP-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6511d2e66acc923072cc7a961aae3cb572b8e466
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf5f9db8fcde5589a86556111bec6df3b2b18c76
+ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347766"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112587752"
 ---
 # <a name="winhttp-functions"></a>WinHTTP-Funktionen
 
-WinHTTP bietet die folgenden Funktionen:
+WinHTTP stellt die folgenden Funktionen bereit:
 
 <dl> <dt>
 
-[**Winhttpadressquestheaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpaddrequestheaders)
+[**WinHttpAddRequestHeaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpaddrequestheaders)
 </dt> <dd>
 
-Fügt dem HTTP-Anforderungs handle mindestens einen HTTP-Anforderungs Header hinzu.
+Fügt dem HTTP-Anforderungshandle mindestens einen HTTP-Anforderungsheader hinzu.
 
 </dd> <dt>
 
-[**Winhttpcheckplatform**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcheckplatform)
+[**WinHttpCheckPlatform**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcheckplatform)
 </dt> <dd>
 
 Bestimmt, ob die aktuelle Plattform von WinHTTP unterstützt wird.
@@ -34,7 +34,7 @@ Bestimmt, ob die aktuelle Plattform von WinHTTP unterstützt wird.
 [**WinHttpCloseHandle**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpclosehandle)
 </dt> <dd>
 
-Schließt ein einzelnes [HINTERNET](hinternet-handles-in-winhttp.md) -handle.
+Schließt ein einzelnes [HINTERNET-Handle.](hinternet-handles-in-winhttp.md)
 
 </dd> <dt>
 
@@ -45,122 +45,136 @@ Gibt den ursprünglichen Zielserver einer HTTP-Anforderung an.
 
 </dd> <dt>
 
-[**Winhttpcrackurl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcrackurl)
+[**WinHttpCrackUrl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcrackurl)
 </dt> <dd>
 
-Trennt eine URL in Ihre Komponenten Teile, z. b. Hostname und Pfad.
+Trennt eine URL in seine Komponenten, z. B. Hostname und Pfad.
 
 </dd> <dt>
 
-[**Winhttpkreateproxyresolver**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcreateproxyresolver)
+[**WinHttpCreateProxyResolver**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcreateproxyresolver)
 </dt> <dd>
 
-Erstellt ein Handle für die Verwendung durch [**winhttpgetproxyforurlex**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurlex).
+Erstellt ein Handle für die Verwendung durch [**WinHttpGetProxyForUrlEx.**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurlex)
 
 </dd> <dt>
 
-[**Winhttpkreateurl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcreateurl)
+[**WinHttpCreateUrl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcreateurl)
 </dt> <dd>
 
-Erstellt eine URL aus Komponenten teilen, z. b. den Hostnamen und den Pfad.
+Erstellt eine URL aus Komponententeilen, z. B. dem Hostnamen und dem Pfad.
 
 </dd> <dt>
 
-[**Winhttpdetectautoproxyconfigurl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpdetectautoproxyconfigurl)
+[**WinHttpDetectAutoProxyConfigUrl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpdetectautoproxyconfigurl)
 </dt> <dd>
 
-Sucht die URL für die Datei mit der Proxy automatischen Konfiguration (PAC). Diese Funktion meldet die URL der PAC-Datei, aber Sie lädt die Datei nicht herunter.
+Sucht die URL für die PAC-Datei (Proxy Auto-Configuration). Diese Funktion meldet die URL der PAC-Datei, lädt die Datei jedoch nicht herunter.
 
 </dd> <dt>
 
-[**Winhttpfreproxyresult**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpfreeproxyresult)
+[**WinHttpFreeProxyResult**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpfreeproxyresult)
 </dt> <dd>
 
-Gibt die Daten frei, die von einem vorherigen Aufrufen von " [**winhttpgetproxyresult**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyresult)" abgerufen wurden.
+Gibt die Daten frei, die aus einem vorherigen Aufruf von [**WinHttpGetProxyResult**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyresult)abgerufen wurden.
+
+</dd> <dt>
+
+[**WinHttpFreeQueryConnectionGroupResult**](/windows/win32/api/Winhttp/nf-winhttp-winhttpfreequeryconnectiongroupresult)
+</dt> <dd>
+
+Gibt den durch einen vorherigen Aufruf von [WinHttpQueryConnectionGroup](/windows/win32/api/Winhttp/nf-winhttp-winhttpqueryconnectiongroup)belegten Arbeitsspeicher frei.
 
 </dd> <dt>
 
 [**WinHttpGetDefaultProxyConfiguration**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetdefaultproxyconfiguration)
 </dt> <dd>
 
-Ruft die standardmäßige WinHTTP-Proxykonfiguration aus der Registrierung ab.
+Ruft die WinHTTP-Standardproxykonfiguration aus der Registrierung ab.
 
 </dd> <dt>
 
-[**WinHttpGetIEProxyConfigForCurrentUser**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetieproxyconfigforcurrentuser)
+[**WinHTTPGetIEProxyConfigForCurrentUser**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetieproxyconfigforcurrentuser)
 </dt> <dd>
 
-Ruft die Internet Explorer-Proxykonfiguration für den aktuellen Benutzer ab.
+Ruft die Proxykonfiguration für Internet Explorer (IE) für den aktuellen Benutzer ab.
 
 </dd> <dt>
 
 [**WinHttpGetProxyForUrl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurl)
 </dt> <dd>
 
-Ruft die Proxy Informationen für die angegebene URL ab.
+Ruft die Proxyinformationen für die angegebene URL ab.
 
 </dd> <dt>
 
-[**Winhttpgetproxyforurlex**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurlex)
+[**WinHttpGetProxyForUrlEx**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurlex)
 </dt> <dd>
 
-Ruft die Proxy Informationen für die angegebene URL ab.
+Ruft die Proxyinformationen für die angegebene URL ab.
 
 </dd> <dt>
 
-[**Winhttpgetproxyresult**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyresult)
+[**WinHttpGetProxyResult**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyresult)
 </dt> <dd>
 
-Ruft die Ergebnisse eines Aufrufens von [**winhttpgetproxyforurlex**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurlex)ab.
+Ruft die Ergebnisse eines Aufrufs von [**WinHttpGetProxyForUrlEx**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetproxyforurlex)ab.
 
 </dd> <dt>
 
 [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen)
 </dt> <dd>
 
-Initialisiert die Verwendung der WinHTTP-Funktionen einer Anwendung.
+Initialisiert die Verwendung der WinHTTP-Funktionen durch eine Anwendung.
 
 </dd> <dt>
 
-[**Winhttpopanrequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)
+[**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)
 </dt> <dd>
 
-Erstellt ein HTTP-Anforderungs handle.
+Erstellt ein HTTP-Anforderungshandle.
 
 </dd> <dt>
 
-[**Winhttpqueryauthschemas**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryauthschemes)
+[**WinHttpQueryAuthSchemes**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryauthschemes)
 </dt> <dd>
 
-Gibt die Autorisierungs Schemas zurück, die der Server unterstützt.
+Gibt die Autorisierungsschemas zurück, die der Server unterstützt.
+
+</dd> <dt>
+
+[**WinHttpQueryConnectionGroup**](/windows/win32/api/Winhttp/nf-winhttp-winhttpqueryconnectiongroup)
+</dt> <dd>
+
+Ruft eine Beschreibung des aktuellen Status der WinHttp-Verbindungen ab.
 
 </dd> <dt>
 
 [**WinHttpQueryDataAvailable**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpquerydataavailable)
 </dt> <dd>
 
-Gibt die Anzahl der Daten Bytes zurück, die sofort verfügbar sind, um mit [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)gelesen zu werden.
+Gibt die Anzahl der Datenbytes zurück, die sofort zum Lesen mit [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)verfügbar sind.
 
 </dd> <dt>
 
 [**WinHttpQueryHeaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryheaders)
 </dt> <dd>
 
-Ruft Header Informationen ab, die einer HTTP-Anforderung zugeordnet sind.
+Ruft Headerinformationen ab, die einer HTTP-Anforderung zugeordnet sind.
 
 </dd> <dt>
 
 [**WinHttpQueryOption**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryoption)
 </dt> <dd>
 
-Fragt eine Internet Option für das angegebene Handle ab.
+Fragt eine Internetoption für das angegebene Handle ab.
 
 </dd> <dt>
 
 [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)
 </dt> <dd>
 
-Liest Daten aus einem Handle, das von der [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) -Funktion geöffnet wurde.
+Liest Daten aus einem Handle, das von der [**WinHttpOpenRequest-Funktion**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) geöffnet wird.
 
 </dd> <dt>
 
@@ -171,7 +185,7 @@ Beendet eine HTTP-Anforderung, die von [**WinHttpSendRequest**](/windows/desktop
 
 </dd> <dt>
 
-[**Winhttpre\tautoproxy**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpresetautoproxy)
+[**WinHttpResetAutoProxy**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpresetautoproxy)
 </dt> <dd>
 
 Setzt den automatischen Proxy zurück.
@@ -185,101 +199,101 @@ Sendet die angegebene Anforderung an den HTTP-Server.
 
 </dd> <dt>
 
-[**Winhttpsetanmelde Informationen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetcredentials)
+[**WinHttpSetCredentials**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetcredentials)
 </dt> <dd>
 
-Übergibt die erforderlichen Autorisierungs Anmelde Informationen an den Server.
+Übergibt die erforderlichen Autorisierungsanmeldeinformationen an den Server.
 
 </dd> <dt>
 
 [**WinHttpSetDefaultProxyConfiguration**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetdefaultproxyconfiguration)
 </dt> <dd>
 
-Legt die WinHTTP-Standard Proxykonfiguration in der Registrierung fest.
+Legt die WinHTTP-Standardproxykonfiguration in der Registrierung fest.
 
 </dd> <dt>
 
 [**WinHttpSetOption**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetoption)
 </dt> <dd>
 
-Legt eine Internet Option fest.
+Legt eine Internetoption fest.
 
 </dd> <dt>
 
-[**Winhttpsetstatus-Rückruf**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetstatuscallback)
+[**WinHttpSetStatusCallback**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetstatuscallback)
 </dt> <dd>
 
-Richtet eine Rückruffunktion ein, die von WinHTTP aufgerufen werden kann, während ein Vorgang durchgeführt wird.
+Richtet eine Rückruffunktion ein, die WinHTTP aufrufen kann, wenn der Fortschritt während eines Vorgangs erfolgt.
 
 </dd> <dt>
 
-[**Winhttpsettimeouts**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsettimeouts)
+[**WinHttpSetTimeouts**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsettimeouts)
 </dt> <dd>
 
-Legt die verschiedenen Timeouts fest, die an http-Transaktionen beteiligt sind.
+Legt die verschiedenen Time outs fest, die an HTTP-Transaktionen beteiligt sind.
 
 </dd> <dt>
 
-[**Winhttptimefromsystemtime**](/windows/desktop/api/Winhttp/nf-winhttp-winhttptimefromsystemtime)
+[**WinHttpTimeFromSystemTime**](/windows/desktop/api/Winhttp/nf-winhttp-winhttptimefromsystemtime)
 </dt> <dd>
 
-Formatiert ein Datum und eine Uhrzeit gemäß der Spezifikation der HTTP-Version 1,0.
+Formatiert ein Datum und eine Uhrzeit gemäß der HTTP-Version 1.0-Spezifikation.
 
 </dd> <dt>
 
-[**Winhttptimeumsystemtime**](/windows/desktop/api/Winhttp/nf-winhttp-winhttptimetosystemtime)
+[**WinHttpTimeToSystemTime**](/windows/desktop/api/Winhttp/nf-winhttp-winhttptimetosystemtime)
 </dt> <dd>
 
-Nimmt eine HTTP-Zeit-/Datum-Zeichenfolge und konvertiert sie in eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur.
+Verwendet eine HTTP-Zeit-/Datumszeichenfolge und konvertiert sie in eine [**SYSTEMTIME-Struktur.**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
 
 </dd> <dt>
 
-[**Winhttpschreitedata**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpwritedata)
+[**WinHttpWriteData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpwritedata)
 </dt> <dd>
 
-Schreibt Anforderungs Daten auf einen HTTP-Server.
+Schreibt Anforderungsdaten auf einen HTTP-Server.
 
 </dd> <dt>
 
-[**Winhttpwebsocketclose**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketclose)
+[**WinHttpWebSocketClose**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketclose)
 </dt> <dd>
 
 Schließt eine WebSocket-Verbindung.
 
 </dd> <dt>
 
-[**Winhttpwebsocketcompleteupgrade**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketcompleteupgrade)
+[**WinHttpWebSocketCompleteUpgrade**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketcompleteupgrade)
 </dt> <dd>
 
-Schließt einen WebSocket-Handshake ab, der von [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest)gestartet wurde.
+Schließt einen Von [**WinHttpSendRequest gestarteten**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest)WebSocket-Handshake ab.
 
 </dd> <dt>
 
-[**Winhttpwebsocketqueryclosestatus**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketqueryclosestatus)
+[**WinHttpWebSocketQueryCloseStatus**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketqueryclosestatus)
 </dt> <dd>
 
-Ruft den von einem Server gesendeten Schluss Status ab.
+Ruft den von einem Server gesendeten Schließstatus ab.
 
 </dd> <dt>
 
-[**Winhttpwebsocketreceive**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketreceive)
+[**WinHttpWebSocketReceive**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketreceive)
 </dt> <dd>
 
 Empfängt Daten von einer WebSocket-Verbindung.
 
 </dd> <dt>
 
-[**Winhttpwebsocketsend**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketsend)
+[**WinHttpWebSocketSend**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketsend)
 </dt> <dd>
 
 Sendet Daten über eine WebSocket-Verbindung.
 
 </dd> <dt>
 
-[**Winhttpwebsocketshutdown**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketshutdown)
+[**WinHttpWebSocketShutdown**](/windows/desktop/api/winhttp/nf-winhttp-winhttpwebsocketshutdown)
 </dt> <dd>
 
-Sendet einen close-Frame an eine WebSocket-Verbindung.
+Sendet einen schließenden Frame an eine WebSocket-Verbindung.
 
 </dd> </dl>
 
