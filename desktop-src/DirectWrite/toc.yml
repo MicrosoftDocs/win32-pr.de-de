@@ -1,7 +1,7 @@
 - name: DirectWrite
   href: direct-write-portal.md
   items:
-    - name: Neues in DirectWrite
+    - name: Neuerungen in DirectWrite
       href: what-s-new-in-directwrite-for-windows-8-consumer-preview.md
     - name: Programmierhandbuch
       href: programming-guide.md
@@ -40,9 +40,9 @@
               href: how-to-align-text.md
             - name: Hinzufügen von Unterstützung für mehrere Monitore
               href: how-to-add-support-for-multiple-monitors.md
-            - name: 'So stellen Sie sicher, dass Ihre Anwendung ordnungsgemäß auf Bildschirmen mit hohem DPI-Leistung angezeigt wird'
+            - name: 'Sicherstellen, dass Ihre Anwendung ordnungsgemäß auf Anzeige mit hohem DPI-Anteil angezeigt wird'
               href: how-to-ensure-that-your-application-displays-properly-on-high-dpi-displays.md
-            - name: 'Stellen Sie sicher, dass Text mit der richtigen Leserichtung angezeigt wird.'
+            - name: 'Sicherstellen, dass Text mit der richtigen Leserichtung angezeigt wird'
               href: how-to-ensure-text-is-displayed-with-the-correct-reading-direction.md
             - name: Aufzählen von Schriftarten
               href: font-enumeration.md
@@ -52,7 +52,7 @@
               href: how-to-add-inline-objects-to-a-text-layout.md
             - name: Hinzufügen von Clientzeichnungseffekten zu einem Textlayout
               href: how-to-add-custom-drawing-efffects-to-a-text-layout.md
-        - name: Glyphen- und Glyphenläufe
+        - name: Glyphen und Glyphenläufe
           href: glyphs-and-glyph-runs.md
         - name: Benutzerdefinierte Schriftartenkombinationen
           href: custom-font-sets-win10.md
@@ -75,7 +75,7 @@
             - name: DWriteCreateFactory
               href: /windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory
             - name: DWriteCoreCreateFactory (DWriteCore)
-              href: ./dwrite_core/nf-dwrite_core-dwritecorecreatefactory.md
+              href: /windows/windows-app-sdk/api/win32/dwrite_core/nf-dwrite_core-dwritecorecreatefactory
         - name: DirectWrite-Enumerationen
           href: enumerations.md
           items:
@@ -90,7 +90,7 @@
             - name: DWRITE_FACTORY_TYPE
               href: /windows/win32/api/dwrite/ne-dwrite-dwrite_factory_type
             - name: DWRITE_FACTORY_TYPE (DWriteCore)
-              href: ./dwrite/ne-dwrite-dwrite_factory_type.md
+              href: /windows/windows-app-sdk/api/win32/dwrite/ne-dwrite-dwrite_factory_type
             - name: DWRITE_FLOW_DIRECTION
               href: /windows/win32/api/dwrite/ne-dwrite-dwrite_flow_direction
             - name: DWRITE_FONT_AXIS_ATTRIBUTES
@@ -195,7 +195,7 @@
               href: /windows/win32/api/dwrite/ne-dwrite-dwrite_pixel_geometry
             - name: DWRITE_READING_DIRECTION
               href: /windows/win32/api/dwrite/ne-dwrite-dwrite_reading_direction
-            - name: DWRITE_RENDERING_MODE Enumerationen
+            - name: DWRITE_RENDERING_MODE-Enumerationen
               href: ./dwrite-rendering-mode-enumerations.md
               items:
                 - name: DWRITE_RENDERING_MODE (Windows 8 und höher)
@@ -253,10 +253,10 @@
                 - name: SetTextAntialiasMode-Methode
                   href: /windows/win32/api/dwrite_1/nf-dwrite_1-idwritebitmaprendertarget1-settextantialiasmode
             - name: IDWriteBitmapRenderTarget2 (DWriteCore)
-              href: ./dwrite_3/nn-dwrite_3-idwritebitmaprendertarget2.md
+              href: /windows/windows-app-sdk/api/win32/dwrite_3/nn-dwrite_3-idwritebitmaprendertarget2
               items:
                 - name: GetBitmapData-Methode (DWriteCore)
-                  href: ./dwrite_3/nf-dwrite_3-idwritebitmaprendertarget2-getbitmapdata.md
+                  href: /windows/windows-app-sdk/api/win32/dwrite_3/nf-dwrite_3-idwritebitmaprendertarget2-getbitmapdata
             - name: IDWriteColorGlyphRunEnumerator
               href: idwritecolorglyphrunenumerator.md
               items:
@@ -290,7 +290,7 @@
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritefactory-createglyphrunanalysis
                 - name: CreateMonitorRenderingParams
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritefactory-createmonitorrenderingparams
-                - name: CreateNumberSubstitution
+                - name: CreateNumberSubsierung
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritefactory-createnumbersubstitution
                 - name: CreateRenderingParams
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritefactory-createrenderingparams
@@ -630,7 +630,7 @@
                   items:
                     - name: GetGlyphImageFormats()-Methode
                       href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontface4-getglyphimageformats(uint16_uint32_uint32_dwrite_glyph_image_formats)
-                    - name: 'GetGlyphImageFormats(UINT16, UINT32, UINT32, DWRITE_GLYPH_IMAGE_FORMATS*)-Methode'
+                    - name: 'GetGlyphImageFormats(UINT16, UINT32, UINT32, DWRITE_GLYPH_IMAGE_FORMATS*)'
                       href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontface4-getglyphimageformats(uint16_uint32_uint32_dwrite_glyph_image_formats)
                 - name: ReleaseGlyphImageData-Methode
                   href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontface4-releaseglyphimagedata
@@ -831,7 +831,7 @@
                 - name: GetMatchingFonts-Methoden
                   href: idwritefontset-getmatchingfonts-overload.md
                   items:
-                    - name: 'GetMatchingFonts(const DWRITE_FONT_PROPERTY*, UINT32, IDWriteFontSet**)-Methode'
+                    - name: 'GetMatchingFonts(const DWRITE_FONT_PROPERTY*, UINT32, IDWriteFontSet**) -Methode'
                       href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(wcharconst_dwrite_font_weight_dwrite_font_stretch_dwrite_font_style_idwritefontset)
                     - name: 'GetMatchingFonts(const WCHAR*, DWRITE_FONT_WEIGHT, DWRITE_FONT_STRETCH, DWRITE_FONT_STYLE, IDWriteFontSet**)'
                       href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(wcharconst_dwrite_font_weight_dwrite_font_stretch_dwrite_font_style_idwritefontset)
@@ -986,7 +986,7 @@
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritelocalizedstrings-getstring
                 - name: GetStringLength
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritelocalizedstrings-getstringlength
-            - name: IDWriteNumberSubsphy
+            - name: IDWriteNumberSubsiot
               href: idwritenumbersubstitution.md
             - name: IDWritePixelSnapping
               href: /windows/win32/api/dwrite/nn-dwrite-idwritepixelsnapping
@@ -1079,7 +1079,7 @@
               items:
                 - name: GetLocaleName
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritetextanalysissource-getlocalename
-                - name: GetNumberSubsbor
+                - name: GetNumberSubstitution
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritetextanalysissource-getnumbersubstitution
                 - name: GetParagraphReadingDirection
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritetextanalysissource-getparagraphreadingdirection
@@ -1397,7 +1397,7 @@
           href: structures.md
           items:
             - name: DWRITE_BITMAP_DATA_BGRA32 (DWriteCore)
-              href: ./dwrite_3/ns-dwrite_3-dwrite_bitmap_data_bgra32.md
+              href: /windows/windows-app-sdk/api/win32/dwrite_3/ns-dwrite_3-dwrite_bitmap_data_bgra32
             - name: DWRITE_CARET_METRICS
               href: /windows/win32/api/dwrite_1/ns-dwrite_1-dwrite_caret_metrics
             - name: DWRITE_CLUSTER_METRICS
