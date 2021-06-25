@@ -1,21 +1,21 @@
 ---
 title: Dynamische Firewallschlüsselwörter
-description: Sie verwenden die APIs für dynamische Firewallschlüsselwörter, um dynamische Schlüsselwortadressen in Windows Defender Firewall zu verwalten.
+description: Sie verwenden die APIs für dynamische Schlüsselwörter der Firewall, um dynamische Schlüsselwortadressen in Microsoft Defender Firewall zu verwalten.
 keywords:
 - Dynamische Firewallschlüsselwörter
 ms.topic: article
 ms.date: 05/17/2021
 ms.localizationpriority: low
-ms.openlocfilehash: e60526d8a7889af3173913774790bdd209121040
-ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
+ms.openlocfilehash: 15e35f26b72ed8d685e8302f6222836507e5c6a3
+ms.sourcegitcommit: ae8c320a757558262167a4f4e385235b8d89035c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/24/2021
-ms.locfileid: "112681166"
+ms.locfileid: "112765534"
 ---
 # <a name="firewall-dynamic-keywords"></a>Dynamische Firewallschlüsselwörter
 
-Sie verwenden die APIs für dynamische Schlüsselwörter der Firewall, um *dynamische Schlüsselwortadressen* in [Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)zu verwalten. Eine dynamische Schlüsselwortadresse wird verwendet, um einen Satz von IP-Adressen zu erstellen, auf die eine oder mehrere Firewallregeln verweisen können. Dynamische Schlüsselwortadressen unterstützen sowohl IPv4 als auch IPv6.
+Sie verwenden die APIs für dynamische Schlüsselwörter der Firewall, um *dynamische Schlüsselwortadressen* in [Microsoft Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)zu verwalten. Eine dynamische Schlüsselwortadresse wird verwendet, um einen Satz von IP-Adressen zu erstellen, auf die eine oder mehrere Firewallregeln verweisen können. Dynamische Schlüsselwortadressen unterstützen sowohl IPv4 als auch IPv6.
 
 > [!NOTE]
 > Api-Referenzinhalte für die in diesem Thema eingeführten APIs finden Sie unter Referenz zu [dynamischen Firewallschlüsselwörtern.](firewall-dynamic-keywords-reference.md)
