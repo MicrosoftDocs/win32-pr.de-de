@@ -1,40 +1,40 @@
 ---
-description: Ein Ereignis Objekt ist ein Synchronisierungs Objekt, dessen Zustand explizit mithilfe der SetEvent-Funktion auf "signalisiert" festgelegt werden kann. Im folgenden werden die beiden Typen von Ereignis Objekten angezeigt.
+description: Ein Ereignisobjekt ist ein Synchronisierungsobjekt, dessen Zustand mithilfe der SetEvent-Funktion explizit auf signalisiert festgelegt werden kann. Es folgen die beiden Typen von Ereignisobjekten.
 ms.assetid: 63dc2991-e070-4981-9e2d-90b4fdaaee7a
-title: Ereignis Objekte (Synchronisierung)
+title: Ereignisobjekte (Synchronisierung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 365b42bb7550507fe3522f07d950dac74c88843d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03ef4f5102df91cabb76529c9d4a9958859418aa
+ms.sourcegitcommit: 967ba3a2a618e6088cb607164a2a924530278645
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363252"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113102133"
 ---
-# <a name="event-objects-synchronization"></a>Ereignis Objekte (Synchronisierung)
+# <a name="event-objects-synchronization"></a>Ereignisobjekte (Synchronisierung)
 
-Ein *Ereignis Objekt* ist ein Synchronisierungs Objekt, dessen Zustand explizit mithilfe der [**SetEvent**](/windows/win32/api/synchapi/nf-synchapi-resetevent) -Funktion auf "signalisiert" festgelegt werden kann. Im folgenden werden die beiden Typen von Ereignis Objekten angezeigt.
+Ein *Ereignisobjekt ist* ein Synchronisierungsobjekt, dessen Zustand mithilfe der SetEvent-Funktion explizit auf [**signalisiert festgelegt werden**](/windows/win32/api/synchapi/nf-synchapi-setevent) kann. Es folgen die beiden Typen von Ereignisobjekten.
 
 
 
-| Object             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Object             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ereignis für manuelles Zurücksetzen | Ein Ereignis Objekt, dessen Zustand signalisiert bleibt, bis es von der [**ResetEvent**](/windows/win32/api/synchapi/nf-synchapi-resetevent) -Funktion explizit auf "nicht signalisiert" zurückgesetzt wird. Während der Signalisierung kann eine beliebige Anzahl von wartenden Threads oder Threads, die anschließend dasselbe Ereignis Objekt in einer der [warte Funktionen](wait-functions.md)angeben, freigegeben werden.                                                                                                        |
-| Ereignis automatisch zurücksetzen   | Ein Ereignis Objekt, dessen Zustand signalisiert bleibt, bis ein einzelner wartender Thread freigegeben wird. zu diesem Zeitpunkt legt das System automatisch den Zustand auf "nicht signalisiert" fest. Wenn sich keine Threads in Warteposition befinden, verbleibt das Ereignisobjekt im signalisierten Zustand. Wenn mehr als ein Thread wartet, wird ein wartender Thread ausgewählt. Nehmen Sie keine Voraussetzung für eine FIFO-Reihenfolge (First in, First Out). Externe Ereignisse wie z. b. kernelmodusapcs können die Warte Reihenfolge ändern.<br/> |
+| Manuelles Zurücksetzen des Ereignisses | Ein Ereignisobjekt, dessen Zustand signalisiert bleibt, bis es von der ResetEvent-Funktion explizit auf nicht [**signalisiert zurückgesetzt**](/windows/win32/api/synchapi/nf-synchapi-resetevent) wird. Während dies signalisiert wird, kann eine beliebige Anzahl von wartenden Threads oder Threads, die anschließend das gleiche Ereignisobjekt in einer der Wartefunktionen [angeben,](wait-functions.md)freigegeben werden.                                                                                                        |
+| Ereignis für automatisches Zurücksetzen   | Ein Ereignisobjekt, dessen Zustand signalisiert bleibt, bis ein einzelner wartender Thread freigegeben wird. Zu diesem Zeitpunkt legt das System den Zustand automatisch auf nicht signalisiert fest. Wenn sich keine Threads in Warteposition befinden, verbleibt das Ereignisobjekt im signalisierten Zustand. Wenn mehrere Threads warten, wird ein wartender Thread ausgewählt. Gehen Sie nicht von einer FIFO-Reihenfolge (First In, First Out) aus. Externe Ereignisse wie Kernelmodus-APCs können die Wartereihen reihenfolge ändern.<br/> |
 
 
 
  
 
-Das Ereignis Objekt ist hilfreich beim Senden eines Signals an einen Thread, der angibt, dass ein bestimmtes Ereignis aufgetreten ist. Beispielsweise legt das System in überlappenden Eingaben und Ausgaben ein angegebenes Ereignis Objekt auf den signalisierten Zustand fest, wenn der überlappende Vorgang abgeschlossen wurde. Ein einzelner Thread kann verschiedene Ereignis Objekte in mehreren gleichzeitig überlappenden Vorgängen angeben und dann mithilfe einer der Wait- [Funktionen](wait-functions.md) mit mehreren Objekten darauf warten, dass der Status eines beliebigen Ereignis Objekts signalisiert wird.
+Das Ereignisobjekt ist nützlich, um ein Signal an einen Thread zu senden, das angibt, dass ein bestimmtes Ereignis aufgetreten ist. Beispielsweise legt das System bei überlappenden Eingaben und Ausgaben ein angegebenes Ereignisobjekt auf den signalisierten Zustand fest, wenn der überlappende Vorgang abgeschlossen wurde. Ein einzelner Thread kann verschiedene Ereignisobjekte in mehreren gleichzeitig überlappenden [](wait-functions.md) Vorgängen angeben und dann eine der Wartefunktionen mit mehreren Objekten verwenden, um auf den Zustand eines der Ereignisobjekte zu warten, die signalisiert werden.
 
-Ein Thread verwendet die Funktion " [**forateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa) " oder die Funktion " [**kreateeventex**](/windows/win32/api/synchapi/nf-synchapi-createeventexa) ", um ein Ereignis Objekt zu erstellen. Der Erstellungsthread gibt den ursprünglichen Zustand des-Objekts an und gibt an, ob es sich um ein manuelles Zurücksetzen oder Zurücksetzen-Ereignis Objekt handelt. Der Erstellungsthread kann auch einen Namen für das Ereignis Objekt angeben. Threads in anderen Prozessen können ein Handle für ein vorhandenes Ereignis Objekt öffnen, indem Sie den Namen in einem aufzurufenden [**OpenEvent**](/windows/win32/api/synchapi/nf-synchapi-openeventa) -Funktion angeben. Weitere Informationen zu den Namen von Mutex-, Ereignis-, Semaphore-und Timer-Objekten finden Sie unter [prozessübergreifende Synchronisierung](interprocess-synchronization.md).
+Ein Thread verwendet die [**CreateEvent- oder**](/windows/win32/api/synchapi/nf-synchapi-createeventa) [**CreateEventEx-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-createeventexa) um ein Ereignisobjekt zu erstellen. Der erstellende Thread gibt den Anfangszustand des Objekts an und gibt an, ob es sich um ein Ereignisobjekt mit manueller oder automatischer Zurücksetzung handelt. Der erstellende Thread kann auch einen Namen für das Ereignisobjekt angeben. Threads in anderen Prozessen können ein Handle für ein vorhandenes Ereignisobjekt öffnen, indem sie ihren Namen in einem Aufruf der [**OpenEvent-Funktion**](/windows/win32/api/synchapi/nf-synchapi-openeventa) angeben. Weitere Informationen zu Namen für Mutex-, Ereignis-, Semaphor- und Timerobjekte finden Sie unter [Interprocess Synchronization](interprocess-synchronization.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Ereignis Objekten](using-event-objects.md)
+[Verwenden von Ereignisobjekten](using-event-objects.md)
 </dt> </dl>
 
  

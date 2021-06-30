@@ -4,12 +4,12 @@ description: In diesem Thema wird erläutert, wie Sie Ihre Anwendung konfigurier
 ms.assetid: eb6c2469-25b9-43c4-a6ca-391a7b2859b3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39339c0535767011a59730534486604389f62468
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: a4673d0a47f42f557e09f4afe46131cd48bad1b0
+ms.sourcegitcommit: 967ba3a2a618e6088cb607164a2a924530278645
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949180"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113102169"
 ---
 # <a name="enabling-visual-styles"></a>Aktivieren von visuellen Stilen
 
@@ -18,61 +18,61 @@ In diesem Thema wird erläutert, wie Sie Ihre Anwendung konfigurieren, um sicher
 Das Thema enthält folgende Abschnitte:
 
 -   [Verwenden von Manifesten oder Direktiven, um sicherzustellen, dass visuelle Stile auf Anwendungen angewendet werden können](#using-manifests-or-directives-to-ensure-that-visual-styles-can-be-applied-to-applications)
--   [Verwenden von ComCtl32.dll Version 6 in einer Anwendung, die nur Standard Erweiterungen verwendet](#using-comctl32dll-version-6-in-an-application-that-uses-only-standard-extensions)
--   [Verwenden von ComCtl32 Version 6 in der Systemsteuerung oder einer DLL, die von RunDll32.exeausgeführt wird ](#using-comctl32-version-6-in-control-panel-or-a-dll-that-is-run-by-rundll32exe)
--   [Hinzufügen von Unterstützung für visuelle Stile zu einer Erweiterung, einem Plug-in, einem MMC-Snap-in oder einer DLL, die in einen Prozess integriert wird](#adding-visual-style-support-to-an-extension-plug-in-mmc-snap-in-or-a-dll-that-is-brought-into-a-process)
--   [Ausschalten visueller Stile](#turning-off-visual-styles)
--   [Verwenden von visuellen Stilen mit HTML-Inhalten](#using-visual-styles-with-html-content)
+-   [Verwenden ComCtl32.dll Version 6 in einer Anwendung, die nur Standarderweiterungen verwendet](#using-comctl32dll-version-6-in-an-application-that-uses-only-standard-extensions)
+-   [Verwenden von ComCtl32 Version 6 in Systemsteuerung oder einer DLL, die von RunDll32.exe](#using-comctl32-version-6-in-control-panel-or-a-dll-that-is-run-by-rundll32exe)
+-   [Hinzufügen der Unterstützung visueller Stile zu einer Erweiterung, einem Plug-In, einem MMC-Snap-In oder einer DLL, die in einen Prozess eingebunden wird](#adding-visual-style-support-to-an-extension-plug-in-mmc-snap-in-or-a-dll-that-is-brought-into-a-process)
+-   [Deaktivieren visueller Stile](#turning-off-visual-styles)
+-   [Verwenden von visuellen Stilen mit HTML-Inhalt](#using-visual-styles-with-html-content)
 -   [Wenn visuelle Stile nicht angewendet werden](#when-visual-styles-are-not-applied)
--   [Kompatibilität Ihrer Anwendung mit früheren Versionen von Windows](#making-your-application-compatible-with-earlier-versions-of-windows)
--   [Zugehörige Themen](#related-topics)
+-   [Herstellen der Kompatibilität Ihrer Anwendung mit früheren Versionen von Windows](#making-your-application-compatible-with-earlier-versions-of-windows)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="using-manifests-or-directives-to-ensure-that-visual-styles-can-be-applied-to-applications"></a>Verwenden von Manifesten oder Direktiven, um sicherzustellen, dass visuelle Stile auf Anwendungen angewendet werden können
 
-Um der Anwendung die Verwendung visueller Stile zu ermöglichen, müssen Sie ComCtl32.dll Version 6 oder höher verwenden. Da Version 6 nicht weitervertreibbar ist, ist Sie nur verfügbar, wenn Ihre Anwendung unter einer Windows-Version ausgeführt wird, in der Sie enthalten ist. Windows ist sowohl mit Version 5 als auch mit Version 6 ausgeliefert. ComCtl32.dll Version 6 enthält sowohl die Benutzer Steuerelemente als auch die allgemeinen Steuerelemente. Standardmäßig verwenden Anwendungen die in User32.dll definierten Benutzer Steuerelemente und die allgemeinen Steuerelemente, die in ComCtl32.dll Version 5 definiert sind. Eine Liste der DLL-Versionen und deren Verteilungs Plattformen finden Sie unter [allgemeine Steuerelement Versionen](common-control-versions.md).
+Damit Ihre Anwendung visuelle Stile verwenden kann, müssen Sie ComCtl32.dll Version 6 oder höher verwenden. Da Version 6 nicht weiterverteilbar ist, ist sie nur verfügbar, wenn Ihre Anwendung unter einer Windows-Version ausgeführt wird, die sie enthält. Windows wird sowohl mit Version 5 als auch mit Version 6 ausgeliefert. ComCtl32.dll Version 6 enthält sowohl die Benutzersteuerelemente als auch die allgemeinen Steuerelemente. Standardmäßig verwenden Anwendungen die in User32.dll definierten Benutzersteuerelemente und die allgemeinen Steuerelemente, die in ComCtl32.dll Version 5 definiert sind. Eine Liste der DLL-Versionen und deren Verteilungsplattformen finden Sie unter [Allgemeine Steuerungsversionen.](common-control-versions.md)
 
-Wenn Sie möchten, dass Ihre Anwendung visuelle Stile verwendet, müssen Sie ein Anwendungs Manifest oder eine Compilerdirektive hinzufügen, die angibt, dass ComCtl32.dll Version 6 verwendet werden soll, wenn Sie verfügbar ist.
+Wenn Ihre Anwendung visuelle Stile verwenden soll, müssen Sie ein Anwendungsmanifest oder eine Compilerdirektive hinzufügen, die angibt, dass ComCtl32.dll Version 6 verwendet werden soll, wenn sie verfügbar ist.
 
-Ein Anwendungs Manifest ermöglicht einer Anwendung, anzugeben, welche Versionen einer Assembly benötigt werden. In Microsoft Win32 ist eine Assembly ein Satz von DLLs und eine Liste mit Versions fähigen Objekten, die in diesen DLLs enthalten sind.
+Mit einem Anwendungsmanifest kann eine Anwendung angeben, welche Versionen einer Assembly erforderlich sind. In Microsoft Win32 besteht eine Assembly aus einem Satz von DLLs und einer Liste von versionsfähigen Objekten, die in diesen DLLs enthalten sind.
 
-Manifeste werden in XML geschrieben. Der Name der Anwendungs Manifest-Datei ist der Name der ausführbaren Datei, gefolgt von der Dateinamenerweiterung. Manifest; beispielsweise MyApp.exe. manifest. Das folgende Beispiel Manifest zeigt, dass im ersten Abschnitt das Manifest selbst beschrieben wird. In der folgenden Tabelle sind die Attribute aufgeführt, die vom Element **assemblyIdentity** im Abschnitt Beschreibung des Manifests festgelegt wurden.
+Manifeste werden in XML geschrieben. Der Name der Anwendungsmanifestdatei ist der Name Ihrer ausführbaren Datei gefolgt von der Dateinamenerweiterung .manifest. beispiel: MyApp.exe.manifest. Das folgende Beispielmanifest zeigt, dass im ersten Abschnitt das Manifest selbst beschrieben wird. Die folgende Tabelle zeigt die Attribute, die vom **assemblyIdentity-Element** im Abschnitt manifest description festgelegt wurden.
 
 
 
-| Attribut             | BESCHREIBUNG                                                                                                                 |
+| attribute             | BESCHREIBUNG                                                                                                                 |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| version               | Version des Manifests. Die Version muss im Format major. Minor. Revision. Build vorliegen (d. h. n. n, wobei n <= 65535). |
-| processorArchitecture | Der Prozessor, für den die Anwendung entwickelt wird.                                                                          |
-| name                  | Schließt den Firmennamen, den Produktnamen und den Anwendungsnamen ein.                                                                   |
-| type                  | Der Typ der Anwendung, z. b. Win32.                                                                                    |
+| version               | Version des Manifests. Die Version muss das Format major.minor.revision.build haben (d.h. n.n.n.n, wobei n <=65535). |
+| processorArchitecture | Prozessor, für den Ihre Anwendung entwickelt wird.                                                                          |
+| name                  | Enthält den Firmennamen, den Produktnamen und den Anwendungsnamen.                                                                   |
+| type                  | Typ Ihrer Anwendung, z. B. Win32.                                                                                    |
 
 
 
- 
+ 
 
-Das Beispiel Manifest enthält außerdem eine Beschreibung Ihrer Anwendung und gibt Anwendungsabhängigkeiten an. In der folgenden Tabelle sind die Attribute aufgeführt, die vom **assemblyIdentity** -Element im Abhängigkeits Abschnitt festgelegt werden.
+Das Beispielmanifest enthält auch eine Beschreibung Ihrer Anwendung und gibt Anwendungsabhängigkeiten an. Die folgende Tabelle zeigt die Attribute, die vom **assemblyIdentity-Element** im Abhängigkeitsabschnitt festgelegt wurden.
 
 
 
-| Attribut             | BESCHREIBUNG                                      |
+| attribute             | BESCHREIBUNG                                      |
 |-----------------------|--------------------------------------------------|
-| type                  | Der Typ der Abhängigkeits Komponente, z. b. Win32. |
+| type                  | Typ der Abhängigkeitskomponente, z. B. Win32. |
 | name                  | Der Name der Komponente.                           |
 | version               | Version der Komponente.                        |
 | processorArchitecture | Prozessor, für den die Komponente entworfen wurde.    |
-| PublicKeyToken        | Schlüssel Token, das mit dieser Komponente verwendet wird.              |
-| language              | Die Sprache der Komponente.                       |
+| Publickeytoken        | Schlüsseltoken, das mit dieser Komponente verwendet wird.              |
+| language              | Sprache der Komponente.                       |
 
 
 
- 
+ 
 
-Im folgenden finden Sie ein Beispiel für eine Manifest-Datei.
+Es folgt ein Beispiel für eine Manifestdatei.
 
 > [!IMPORTANT]
-> Legen Sie den Eintrag **ProcessorArchitecture** auf **"x86"** fest, wenn Ihre Anwendung auf die 32-Bit-Windows-Plattform ausgerichtet ist, oder auf **"amd64"** , wenn die Anwendung auf die Windows-Plattform mit dem 64 Bit Sie können auch **" \* "** angeben. Dadurch wird sichergestellt, dass alle Plattformen als Ziel festgelegt werden, wie in den folgenden Beispielen gezeigt.
+> Legen Sie den Eintrag **processorArchitecture** auf **"X86"** fest, wenn Ihre Anwendung auf die 32-Bit-Windows-Plattform abzielt, oder auf **"amd64",** wenn Ihre Anwendung auf die 64-Bit-Windows-Plattform abzielt. Sie können auch **" \* " "** angeben, um sicherzustellen, dass alle Plattformen als Ziel verwendet werden, wie in den folgenden Beispielen gezeigt.
 
- 
+ 
 
 
 ```C++
@@ -102,7 +102,7 @@ Im folgenden finden Sie ein Beispiel für eine Manifest-Datei.
 
 
 
-Wenn Sie Microsoft Visual C++ 2005 oder höher verwenden, können Sie die folgende Compilerdirektive in Ihren Quellcode einfügen, anstatt ein Manifest manuell zu erstellen. Zur besseren Lesbarkeit wird die-Direktive hier in mehrere Zeilen aufgeteilt.
+Wenn Sie Microsoft Visual C++ 2005 oder höher verwenden, können Sie dem Quellcode die folgende Compilerdirektive hinzufügen, anstatt manuell ein Manifest zu erstellen. Aus Gründen der Lesbarkeit ist die -Direktive hier in mehrere Zeilen unterteilt.
 
 
 ```C++
@@ -113,22 +113,22 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 
 
-In den folgenden Themen werden die Schritte zum Anwenden visueller Stile auf verschiedene Anwendungs Typen beschrieben. Beachten Sie, dass das Manifest-Format in jedem Fall identisch ist.
+In den folgenden Themen werden die Schritte zum Anwenden visueller Stile auf verschiedene Anwendungstypen beschrieben. Beachten Sie, dass das Manifestformat in jedem Fall identisch ist.
 
-## <a name="using-comctl32dll-version-6-in-an-application-that-uses-only-standard-extensions"></a>Verwenden von ComCtl32.dll Version 6 in einer Anwendung, die nur Standard Erweiterungen verwendet
+## <a name="using-comctl32dll-version-6-in-an-application-that-uses-only-standard-extensions"></a>Verwenden ComCtl32.dll Version 6 in einer Anwendung, die nur Standarderweiterungen verwendet
 
-Im folgenden finden Sie Beispiele für Anwendungen, die keine Erweiterungen von Drittanbietern verwenden.
+Im Folgenden sind Beispiele für Anwendungen aufgeführt, die keine Erweiterungen von Drittanbietern verwenden.
 
 -   Rechner
--   Freecell
--   Minesweeper
+-   FreeCell (in Windows Vista und Windows 7)
+-   Auswendungsweeper (in Windows Vista und Windows 7)
 -   Editor
--   Solitär
+-   Solitair (in Windows Vista und Windows 7)
 
-**, Um ein Manifest zu erstellen und die Anwendung für die Verwendung visueller Stile zu aktivieren.**
+**So erstellen Sie ein Manifest und ermöglichen Ihrer Anwendung die Verwendung visueller Stile.**
 
-1.  Verknüpfung mit Comctl32. lib und [**callinitcommoncontrols**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols).
-2.  Fügen Sie der Quell Struktur, die das XML-Manifest-Format aufweist, eine Datei mit dem Namen YourApp.exe. Manifest hinzu.
+1.  Stellen Sie einen Link zu ComCtl32.lib her, und rufen Sie [**InitCommonControls auf.**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols)
+2.  Fügen Sie ihrer Quellstruktur eine Datei mit dem Namen YourApp.exe.manifest hinzu, die das XML-Manifestformat auf hat.
     ```C++
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -156,7 +156,7 @@ Im folgenden finden Sie Beispiele für Anwendungen, die keine Erweiterungen von 
 
     
 
-3.  Fügen Sie das Manifest wie folgt der Ressourcen Datei Ihrer Anwendung hinzu:
+3.  Fügen Sie das Manifest wie folgt der Ressourcendatei Ihrer Anwendung hinzu:
     ```C++
     CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "YourApp.exe.manifest"
     ```
@@ -164,18 +164,18 @@ Im folgenden finden Sie Beispiele für Anwendungen, die keine Erweiterungen von 
     
 
     > [!Note]  
-    > Wenn Sie den vorherigen Eintrag der Ressource hinzufügen, müssen Sie ihn in einer Zeile formatieren. Alternativ können Sie die XML-Manifest-Datei im gleichen Verzeichnis wie die ausführbare Datei der Anwendung platzieren. Das Betriebssystem lädt das Manifest zuerst aus dem Dateisystem und überprüft dann den Ressourcenabschnitt der ausführbaren Datei. Die Dateisystem Version hat Vorrang.
+    > Wenn Sie der Ressource den vorherigen Eintrag hinzufügen, müssen Sie ihn in einer Zeile formatieren. Alternativ können Sie die XML-Manifestdatei im selben Verzeichnis wie die ausführbare Datei Ihrer Anwendung platzieren. Das Betriebssystem lädt zuerst das Manifest aus dem Dateisystem und überprüft dann den Ressourcenabschnitt der ausführbaren Datei. Die Dateisystemversion hat Vorrang.
 
-     
+     
 
-Wenn Sie die Anwendung erstellen, wird das Manifest als binäre Ressource hinzugefügt.
+Wenn Sie Ihre Anwendung erstellen, wird das Manifest als binäre Ressource hinzugefügt.
 
-## <a name="using-comctl32-version-6-in-control-panel-or-a-dll-that-is-run-by-rundll32exe"></a>Verwenden von ComCtl32 Version 6 in der Systemsteuerung oder einer DLL, die von RunDll32.exe ausgeführt wird
+## <a name="using-comctl32-version-6-in-control-panel-or-a-dll-that-is-run-by-rundll32exe"></a>Verwenden von ComCtl32 Version 6 in Systemsteuerung oder einer DLL, die von RunDll32.exe
 
-**, Um ein Manifest zu erstellen und die Anwendung für die Verwendung visueller Stile zu aktivieren.**
+**So erstellen Sie ein Manifest und ermöglichen Ihrer Anwendung die Verwendung visueller Stile.**
 
-1.  Verknüpfung mit Comctl32. lib und [**callinitcommoncontrols**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols).
-2.  Fügen Sie der Quell Struktur, die das XML-Manifest-Format aufweist, eine Datei mit dem Namen YourApp.cpl. Manifest hinzu.
+1.  Stellen Sie einen Link zu ComCtl32.lib her, und rufen Sie [**InitCommonControls auf.**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols)
+2.  Fügen Sie ihrer Quellstruktur eine Datei mit dem Namen YourApp.cpl.manifest hinzu, die das XML-Manifestformat auf hat.
     ```C++
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -203,18 +203,18 @@ Wenn Sie die Anwendung erstellen, wird das Manifest als binäre Ressource hinzug
 
     
 
-3.  Fügen Sie das Manifest der Ressourcen Datei Ihrer Anwendung als Ressourcen-ID 123 hinzu.
+3.  Fügen Sie das Manifest der Ressourcendatei Ihrer Anwendung als Ressourcen-ID 123 hinzu.
 
 > [!Note]  
-> Wenn Sie eine System Steuerungsanwendung erstellen, platzieren Sie Sie in der entsprechenden Kategorie. Die Systemsteuerung unterstützt jetzt die Kategorisierung von System Steuerungsanwendungen. Dies bedeutet, dass System Steuerungsanwendungen IDs zugewiesen und in Aufgabenbereiche wie z. b. hinzufügen oder Entfernen von Programmen, Darstellung und Designs oder Datums-, Uhrzeit-, sprach-und Regions Optionen aufgeteilt werden können.
+> Wenn Sie eine Systemsteuerung Anwendung erstellen, platzieren Sie sie in der entsprechenden Kategorie. Systemsteuerung unterstützt jetzt die Kategorisierung Systemsteuerung Anwendungen. Dies bedeutet, dass Systemsteuerung Anwendungen Bezeichner zugewiesen und in Aufgabenbereiche wie Programme hinzufügen oder entfernen, Darstellung und Designs oder Datum, Uhrzeit, Sprache und regionale Optionen unterteilt werden können.
 
- 
+ 
 
-## <a name="adding-visual-style-support-to-an-extension-plug-in-mmc-snap-in-or-a-dll-that-is-brought-into-a-process"></a>Hinzufügen von Unterstützung für visuelle Stile zu einer Erweiterung, einem Plug-in, einem MMC-Snap-in oder einer DLL, die in einen Prozess integriert wird
+## <a name="adding-visual-style-support-to-an-extension-plug-in-mmc-snap-in-or-a-dll-that-is-brought-into-a-process"></a>Hinzufügen der Unterstützung visueller Stile zu einer Erweiterung, einem Plug-In, einem MMC-Snap-In oder einer DLL, die in einen Prozess eingebunden wird
 
-Die Unterstützung für visuelle Stile kann zu einer Erweiterung, einem Plug-in, einem MMC-Snap-in oder einer DLL hinzugefügt werden, die in einen Prozess eingebunden wird. Verwenden Sie beispielsweise die folgenden Schritte, um Unterstützung für visuelle Stile für ein Microsoft Management Console (MMC)-Snap-in hinzuzufügen.
+Unterstützung für visuelle Stile kann einer Erweiterung, einem Plug-In, einem MMC-Snap-In oder einer DLL hinzugefügt werden, die in einen Prozess eingefügt wird. Verwenden Sie beispielsweise die folgenden Schritte, um visuelle Stile für ein mmc-Snap-In (Microsoft Management Console) hinzuzufügen.
 
-1.  Kompilieren Sie das Snap-in mit dem Flag "-disolations- \_ \_ fähig", oder fügen Sie die folgende Anweisung vor der \# include-Anweisung "Windows. h" ein.
+1.  Kompilieren Sie das Snap-In mit dem Flag -DISOLATION \_ AWARE \_ ENABLED, oder fügen Sie die folgende Anweisung vor der \# include -Anweisung "windows.h" ein.
 
     ```C++
     #define ISOLATION_AWARE_ENABLED 1
@@ -222,16 +222,16 @@ Die Unterstützung für visuelle Stile kann zu einer Erweiterung, einem Plug-in,
 
     
 
-    Weitere Informationen zur \_ \_ aktivierten Isolation finden Sie unter [Isolieren von Komponenten](/windows/desktop/SbsCs/isolating-components).
+    Weitere Informationen zu ISOLATION \_ AWARE ENABLED finden Sie unter Isolieren von \_ [Komponenten.](/windows/desktop/SbsCs/isolating-components)
 
-2.  Schließen Sie die allgemeine Steuerungs Header Datei in die Snap-in-Quelle ein.
+2.  Schließen Sie die allgemeine Steuerelementheaderdatei in die Snap-In-Quelle ein.
     ```C++
     #include <commctrl.h>
     ```
 
     
 
-3.  Fügen Sie der Quell Struktur, die das XML-Manifest-Format verwendet, eine Datei namens yourapp. Manifest hinzu.
+3.  Fügen Sie Ihrer Quellstruktur eine Datei namens YourApp.manifest hinzu, die das XML-Manifestformat verwendet.
     ```C++
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -259,11 +259,11 @@ Die Unterstützung für visuelle Stile kann zu einer Erweiterung, einem Plug-in,
 
     
 
-4.  Fügen Sie das Manifest der Ressourcen Datei Ihres Snap-Ins hinzu. Weitere Informationen zum Hinzufügen eines Manifests zu einer Ressourcen Datei finden [Sie unter Verwenden von ComCtl32 Version 6 in einer Anwendung, die Erweiterungen, Plug-ins oder eine DLL verwendet, die in einen Prozess eingefügt wird](/previous-versions//ms649781(v=vs.85)) .
+4.  Fügen Sie das Manifest der Ressourcendatei Ihres Snap-Ins hinzu. Ausführliche Informationen zum Hinzufügen eines Manifests zu einer Ressourcendatei finden Sie unter [Verwenden von ComCtl32 Version 6 in einer Anwendung, die Erweiterungen, Plug-Ins oder eine DLL verwendet, die in einen Prozess eingebunden wird.](/previous-versions//ms649781(v=vs.85))
 
-## <a name="turning-off-visual-styles"></a>Ausschalten visueller Stile
+## <a name="turning-off-visual-styles"></a>Deaktivieren von visuellen Stilen
 
-Sie können visuelle Stile für ein-Steuerelement oder für alle Steuerelemente in einem Fenster deaktivieren, indem Sie die [**SetWindowTheme**](/windows/desktop/api/Uxtheme/nf-uxtheme-setwindowtheme) -Funktion wie folgt aufrufen:
+Sie können visuelle Stile für ein Steuerelement oder für alle Steuerelemente in einem Fenster deaktivieren, indem Sie die [**SetWindowTheme-Funktion**](/windows/desktop/api/Uxtheme/nf-uxtheme-setwindowtheme) wie folgt aufrufen:
 
 
 ```C++
@@ -272,13 +272,13 @@ SetWindowTheme(hwnd, L" ", L" ");
 
 
 
-Im vorherigen Beispiel ist *HWND* das Handle des Fensters, in dem visuelle Stile deaktiviert werden. Nach dem-Befehl wird das-Steuerelement ohne visuelle Stile gerendert.
+Im vorherigen Beispiel ist *hwnd* das Handle des Fensters, in dem visuelle Stile deaktiviert werden. Nach dem Aufruf wird das Steuerelement ohne visuelle Stile gerendert.
 
-## <a name="using-visual-styles-with-html-content"></a>Verwenden von visuellen Stilen mit HTML-Inhalten
+## <a name="using-visual-styles-with-html-content"></a>Verwenden von visuellen Stilen mit HTML-Inhalt
 
-Auf HTML-Seiten, die die Eigenschaften des Cascading Stylesheets (CSS) ändern (z. b. Hintergrund oder Rahmen), werden keine visuellen Stile auf Sie angewendet. Sie zeigen das angegebene CSS-Attribut an. Wenn die meisten CSS-Eigenschaften als Teil des Inhalts angegeben werden, gelten die meisten CSS-Eigenschaften für Elemente, auf die visuelle Stile angewendet werden.
+Auf HTML-Seiten, die Cascading Stylesheets (CSS)-Eigenschaften wie Hintergrund oder Rahmen ändern, werden keine visuellen Stile angewendet. Sie zeigen das angegebene CSS-Attribut an. Wenn sie als Teil des Inhalts angegeben werden, gelten die meisten CSS-Eigenschaften für Elemente, auf die visuelle Stile angewendet werden.
 
-Standardmäßig werden visuelle Stile auf die systeminternen HTML-Steuerelemente auf Seiten angewendet, die in Microsoft Internet Explorer 6 und höheren Versionen angezeigt werden. Um visuelle Stile für eine HTML-Seite zu deaktivieren, fügen Sie ein Meta-Tag zum <head> -Abschnitt. Dieses Verfahren gilt auch für Inhalte, die als HTML-Anwendungen (HTAs) verpackt sind. Um visuelle Stile zu deaktivieren, muss das Meta-Tag wie folgt lauten:
+Standardmäßig werden visuelle Stile auf systeminterne HTML-Steuerelemente auf Seiten angewendet, die in Microsoft Internet Explorer 6 und höher angezeigt werden. Um visuelle Stile für eine HTML-Seite zu deaktivieren, fügen Sie dem -Element ein META-Tag hinzu. <head> -Abschnitt. Diese Technik gilt auch für Inhalte, die als HTML-Anwendungen (HTAs) verpackt sind. Um visuelle Stile zu deaktivieren, muss das META-Tag wie folgt lauten:
 
 
 ```
@@ -288,30 +288,30 @@ Standardmäßig werden visuelle Stile auf die systeminternen HTML-Steuerelemente
 
 
 > [!Note]  
-> Wenn die Browsereinstellung und die tageinstellung nicht übereinstimmen, werden auf der Seite keine visuellen Stile angewendet. Wenn das Meta-Tag beispielsweise auf "No" festgelegt ist und der Browser so festgelegt ist, dass visuelle Stile aktiviert werden, werden visuelle Stile nicht auf die Seite angewendet. Wenn jedoch entweder der Browser oder das Meta-Tag auf "yes" festgelegt ist und das andere Element nicht angegeben ist, werden visuelle Stile angewendet.
+> Wenn die Browsereinstellung und die Tageinstellung nicht stimmen, werden auf der Seite keine visuellen Stile angewendet. Wenn das META-Tag beispielsweise auf "no" festgelegt ist und der Browser so festgelegt ist, dass visuelle Stile aktiviert werden, werden visuelle Stile nicht auf die Seite angewendet. Wenn jedoch entweder der Browser oder das META-Tag auf "yes" festgelegt ist und das andere Element nicht angegeben ist, werden visuelle Stile angewendet.
 
- 
+ 
 
-Visuelle Stile können das Layout Ihrer Inhalte ändern. Wenn Sie bestimmte Attribute auf systeminternen HTML-Steuerelementen festlegen, wie z. b. die Breite einer Schaltfläche, können Sie feststellen, dass die Bezeichnung auf der Schaltfläche unter bestimmte visuelle Stile nicht lesbar ist.
+Visuelle Stile können das Layout Ihres Inhalts ändern. Wenn Sie bestimmte Attribute für systeminterne HTML-Steuerelemente festlegen, z. B. die Breite einer Schaltfläche, stellen Sie möglicherweise fest, dass die Bezeichnung auf der Schaltfläche unter bestimmten visuellen Stilen nicht lesbar ist.
 
-Sie müssen Ihre Inhalte mit visuellen Stilen gründlich testen, um zu bestimmen, ob das Anwenden visueller Stile eine negative Auswirkung auf ihren Inhalt und Ihr Layout hat.
+Sie müssen Ihre Inhalte gründlich mit visuellen Stilen testen, um festzustellen, ob die Anwendung visueller Stile negative Auswirkungen auf Ihren Inhalt und Ihr Layout hat.
 
 ## <a name="when-visual-styles-are-not-applied"></a>Wenn visuelle Stile nicht angewendet werden
 
-Um zu vermeiden, dass visuelle Stile auf ein Fenster der obersten Ebene angewendet werden, weisen Sie dem Fenster einen nicht-NULL-Bereich (**setwindowrgn**) zu. Das System geht davon aus, dass ein Fenster mit einer nicht-NULL-Region ein spezielles Fenster ist, in dem keine visuellen Stile verwendet werden. Ein untergeordnetes Fenster, das einem Fenster auf oberster Ebene der nicht visuellen Stile zugeordnet ist, kann dennoch visuelle Stile anwenden, auch wenn das übergeordnete Fenster dies nicht tut.
+Um das Anwenden visueller Stile auf ein Fenster der obersten Ebene zu vermeiden, geben Sie dem Fenster einen Nicht-NULL-Bereich (**SetWindowRgn**). Das System geht davon aus, dass ein Fenster mit einem Nicht-NULL-Bereich ein spezialisiertes Fenster ist, das keine visuellen Stile verwendet. Ein untergeordnetes Fenster, das einem Fenster der obersten Ebene nicht visueller Stile zugeordnet ist, kann auch dann visuelle Stile anwenden, wenn das übergeordnete Fenster dies nicht tut.
 
-Wenn Sie die Verwendung visueller Stile für alle Fenster in der Anwendung deaktivieren möchten, rufen Sie [**settemeappproperties**](/windows/desktop/api/Uxtheme/nf-uxtheme-setthemeappproperties) auf, und übergeben Sie das Flag "STAP \_ Allow \_ nonclient" nicht. Wenn eine Anwendung **settemeappproperties** nicht aufruft, werden die angenommenen Flagwerte STAP \_ Allow \_ nonclient STAP Allow Control STAP Allow \| \_ \_ \| \_ \_ Webcontent. Die angenommenen Werte bewirken, dass der nicht-Client Bereich, die Steuerelemente und Webinhalte auf einen visuellen Stil angewendet werden.
+Wenn Sie die Verwendung visueller Stile für alle Fenster in Ihrer Anwendung deaktivieren möchten, rufen Sie [**SetThemeAppProperties**](/windows/desktop/api/Uxtheme/nf-uxtheme-setthemeappproperties) auf, und übergeben Sie nicht das Flag STAP \_ ALLOW \_ NONCLIENT. Wenn eine Anwendung **SetThemeAppProperties** nicht aufruft, werden als Flagwerte STAP \_ ALLOW \_ NONCLIENT \| STAP \_ ALLOW CONTROLS \_ \| STAP ALLOW \_ \_ WEBCONTENT angenommen. Die angenommenen Werte bewirken, dass für den Nichtclientbereich, die Steuerelemente und den Webinhalt ein visueller Stil angewendet wird.
 
 ## <a name="making-your-application-compatible-with-earlier-versions-of-windows"></a>Kompatibilität Ihrer Anwendung mit früheren Versionen von Windows
 
-Ein Großteil der Architektur des visuellen Stils ist so konzipiert, dass es einfach ist, Ihr Produkt in früheren Versionen von Windows bereitzustellen, die das Ändern der Darstellung von Steuerelementen nicht unterstützen. Beachten Sie Folgendes, wenn Sie eine Anwendung für mehr als ein Betriebssystem versenden:
+Ein Teil der visuellen Stilarchitektur ist darauf ausgelegt, es einfach zu machen, Ihr Produkt weiterhin in früheren Versionen von Windows zu liefern, die das Ändern der Darstellung von Steuerelementen nicht unterstützen. Beachten Sie beim Versand einer Anwendung für mehrere Betriebssysteme Folgendes:
 
--   In Windows-Versionen vor Windows 8 sind visuelle Stile deaktiviert, wenn ein hoher Kontrast auf on steht. Um einen hohen Kontrast zu unterstützen, muss eine ältere Anwendung, die visuelle Stile unterstützt, einen separaten Codepfad bereitstellen, um Benutzeroberflächen Elemente im hohen Kontrast korrekt zu zeichnen. In Windows 8 ist der hohe Kontrast ein Teil von visuellen Stilen. eine Windows 8-Anwendung (eine mit der Windows 8-GUID im Kompatibilitäts Abschnitt des Anwendungs Manifests) muss jedoch immer noch einen separaten Codepfad bereitstellen, um im hohen Kontrast zu Windows 7 einem früheren Zeitpunkt ordnungsgemäß zu Rendering.
--   Wenn Sie die Funktionen in ComCtl32.dll Version 6 verwenden (z. b. die Kachel Ansicht oder das Link Steuerelement), müssen Sie den Fall behandeln, in dem diese Steuerelemente auf dem Computer des Benutzers nicht verfügbar sind. ComCtl32.dll Version 6 ist nicht Verteil Bar.
--   Testen Sie Ihre Anwendung, um sicherzustellen, dass Sie sich nicht auf Features von ComCtl32.dll Version 6 verlassen, ohne zuerst die aktuelle Version zu überprüfen.
--   Nicht mit "uxtheme. lib" verknüpfen.
--   Schreiben Sie Fehler Behandlungs Code für-Instanzen, wenn visuelle Stile nicht erwartungsgemäß funktionieren.
--   Wenn Sie das Manifest der Anwendung in früheren Versionen installieren, wirkt sich dies nicht auf das Rendering von Steuerelementen aus.
+-   In Windows-Versionen vor Windows 8 sind visuelle Stile deaktiviert, wenn hoher Kontrast eingeschaltet ist. Um hohen Kontrast zu unterstützen, muss eine Legacyanwendung, die visuelle Stile unterstützt, einen separaten Codepfad bereitstellen, um Benutzeroberflächenelemente mit hohem Kontrast ordnungsgemäß zu zeichnen. In Windows 8 ist hoher Kontrast ein Teil visueller Stile. Eine Windows 8-Anwendung (eine, die die Windows 8-GUID im Kompatibilitätsabschnitt des Anwendungsmanifests enthält) muss jedoch weiterhin einen separaten Codepfad bereitstellen, um unter Windows 7 an einem früheren Punkt ordnungsgemäß in hohem Kontrast gerendert zu werden.
+-   Wenn Sie die Features in ComCtl32.dll Version 6 verwenden, z. B. die Kachelansicht oder das Linksteuerelemente, müssen Sie den Fall behandeln, in dem diese Steuerelemente auf dem Computer Ihres Benutzers nicht verfügbar sind. ComCtl32.dll Version 6 ist nicht verteilbar.
+-   Testen Sie Ihre Anwendung, um sicherzustellen, dass Sie sich nicht auf Features ComCtl32.dll Version 6 verlassen, ohne zuerst nach der aktuellen Version zu suchen.
+-   Verknüpfen Sie nicht mit UxTheme.lib.
+-   Schreiben Sie Fehlerbehandlungscode für Instanzen, wenn visuelle Stile nicht wie erwartet funktionieren.
+-   Das Installieren des Anwendungsmanifests in früheren Versionen wirkt sich nicht auf das Rendering von Steuerelementen aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -320,6 +320,6 @@ Ein Großteil der Architektur des visuellen Stils ist so konzipiert, dass es ein
 [Visuelle Stile](themes-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,21 +1,21 @@
 ---
-description: Im folgenden finden Sie ein umfassendes Dienst Beispiel. Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen dies vorangestellt ist \_ .
+description: Im Folgenden wird ein vollständiges Dienstbeispiel veranschaulicht. Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen TO DO vorangestellt \_ ist.
 ms.assetid: dc968bd2-0397-4cec-a825-f807037b4c14
 title: Svc.cpp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 57db06947be0143712568eb8a25e8700fc075c7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6388a51335883aa48d15a52667d89d2188ac4ea3
+ms.sourcegitcommit: 967ba3a2a618e6088cb607164a2a924530278645
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349600"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113102119"
 ---
 # <a name="svccpp"></a>Svc.cpp
 
-Im folgenden finden Sie ein umfassendes Dienst Beispiel. Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen vorangestellt ist `TO_DO` .
+Im Folgenden wird ein vollständiges Dienstbeispiel veranschaulicht. Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen vorangestellt `TO_DO` wird.
 
-Wenn Sie das Beispiel entwickeln, stellen Sie sicher, dass Sie mit Kernel32. lib und advapi32. lib verknüpfen. Die Datei Sample. h wird bei der Erstellung der reinen Ressourcen-DLL-Datei (Sample.dll) generiert. Weitere Informationen finden Sie unter [Sample.MC](sample-mc.md).
+Stellen Sie beim Erstellen des Beispiels sicher, dass Sie eine Verknüpfung mit Kernel32.lib und Advapi32.lib erstellen. Die Datei Sample.h wird beim Erstellen der reinen Ressourcen-DLL generiert, Sample.dll. Weitere Informationen finden Sie unter [Sample.mc](sample-mc.md).
 
 
 ```C++
@@ -214,7 +214,7 @@ VOID SvcInit( DWORD dwArgc, LPTSTR *lpszArgv)
 
     if ( ghSvcStopEvent == NULL)
     {
-        ReportSvcStatus( SERVICE_STOPPED, NO_ERROR, 0 );
+        ReportSvcStatus( SERVICE_STOPPED, GetLastError(), 0 );
         return;
     }
 
@@ -358,7 +358,7 @@ VOID SvcReportEvent(LPTSTR szFunction)
 
 <dl> <dt>
 
-[Das Complete Service-Beispiel](the-complete-service-sample.md)
+[Beispiel für den vollständigen Dienst](the-complete-service-sample.md)
 </dt> </dl>
 
  
