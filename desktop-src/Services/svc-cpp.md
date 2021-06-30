@@ -1,21 +1,21 @@
 ---
-description: Im folgenden finden Sie ein umfassendes Dienst Beispiel. Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen dies vorangestellt ist \_ .
+description: Im Folgenden wird ein vollständiges Dienstbeispiel veranschaulicht. Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen TO DO vorangestellt \_ ist.
 ms.assetid: dc968bd2-0397-4cec-a825-f807037b4c14
 title: Svc.cpp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 57db06947be0143712568eb8a25e8700fc075c7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6388a51335883aa48d15a52667d89d2188ac4ea3
+ms.sourcegitcommit: 967ba3a2a618e6088cb607164a2a924530278645
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349600"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113102119"
 ---
-# <a name="svccpp"></a><span data-ttu-id="0e7a3-104">Svc.cpp</span><span class="sxs-lookup"><span data-stu-id="0e7a3-104">Svc.cpp</span></span>
+# <a name="svccpp"></a><span data-ttu-id="a706c-104">Svc.cpp</span><span class="sxs-lookup"><span data-stu-id="a706c-104">Svc.cpp</span></span>
 
-<span data-ttu-id="0e7a3-105">Im folgenden finden Sie ein umfassendes Dienst Beispiel.</span><span class="sxs-lookup"><span data-stu-id="0e7a3-105">The following is a complete service sample.</span></span> <span data-ttu-id="0e7a3-106">Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen vorangestellt ist `TO_DO` .</span><span class="sxs-lookup"><span data-stu-id="0e7a3-106">When using this code as a template, simply add code to the sections that are prefaced by `TO_DO`.</span></span>
+<span data-ttu-id="a706c-105">Im Folgenden wird ein vollständiges Dienstbeispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="a706c-105">The following is a complete service sample.</span></span> <span data-ttu-id="a706c-106">Wenn Sie diesen Code als Vorlage verwenden, fügen Sie einfach Code zu den Abschnitten hinzu, denen vorangestellt `TO_DO` wird.</span><span class="sxs-lookup"><span data-stu-id="a706c-106">When using this code as a template, simply add code to the sections that are prefaced by `TO_DO`.</span></span>
 
-<span data-ttu-id="0e7a3-107">Wenn Sie das Beispiel entwickeln, stellen Sie sicher, dass Sie mit Kernel32. lib und advapi32. lib verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="0e7a3-107">When building the sample, be sure to link with Kernel32.lib and Advapi32.lib.</span></span> <span data-ttu-id="0e7a3-108">Die Datei Sample. h wird bei der Erstellung der reinen Ressourcen-DLL-Datei (Sample.dll) generiert.</span><span class="sxs-lookup"><span data-stu-id="0e7a3-108">The file Sample.h is generated when building the resource-only DLL, Sample.dll.</span></span> <span data-ttu-id="0e7a3-109">Weitere Informationen finden Sie unter [Sample.MC](sample-mc.md).</span><span class="sxs-lookup"><span data-stu-id="0e7a3-109">For more information, see [Sample.mc](sample-mc.md).</span></span>
+<span data-ttu-id="a706c-107">Stellen Sie beim Erstellen des Beispiels sicher, dass Sie eine Verknüpfung mit Kernel32.lib und Advapi32.lib erstellen.</span><span class="sxs-lookup"><span data-stu-id="a706c-107">When building the sample, be sure to link with Kernel32.lib and Advapi32.lib.</span></span> <span data-ttu-id="a706c-108">Die Datei Sample.h wird beim Erstellen der reinen Ressourcen-DLL generiert, Sample.dll.</span><span class="sxs-lookup"><span data-stu-id="a706c-108">The file Sample.h is generated when building the resource-only DLL, Sample.dll.</span></span> <span data-ttu-id="a706c-109">Weitere Informationen finden Sie unter [Sample.mc](sample-mc.md).</span><span class="sxs-lookup"><span data-stu-id="a706c-109">For more information, see [Sample.mc](sample-mc.md).</span></span>
 
 
 ```C++
@@ -214,7 +214,7 @@ VOID SvcInit( DWORD dwArgc, LPTSTR *lpszArgv)
 
     if ( ghSvcStopEvent == NULL)
     {
-        ReportSvcStatus( SERVICE_STOPPED, NO_ERROR, 0 );
+        ReportSvcStatus( SERVICE_STOPPED, GetLastError(), 0 );
         return;
     }
 
@@ -354,11 +354,11 @@ VOID SvcReportEvent(LPTSTR szFunction)
 
 
 
-## <a name="related-topics"></a><span data-ttu-id="0e7a3-110">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="0e7a3-110">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="a706c-110">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="a706c-110">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="0e7a3-111">Das Complete Service-Beispiel</span><span class="sxs-lookup"><span data-stu-id="0e7a3-111">The Complete Service Sample</span></span>](the-complete-service-sample.md)
+[<span data-ttu-id="a706c-111">Beispiel für den vollständigen Dienst</span><span class="sxs-lookup"><span data-stu-id="a706c-111">The Complete Service Sample</span></span>](the-complete-service-sample.md)
 </dt> </dl>
 
  
