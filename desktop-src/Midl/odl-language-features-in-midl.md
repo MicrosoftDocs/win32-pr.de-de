@@ -1,90 +1,226 @@
 ---
-title: ODL-sprach Features in der Mitte
-description: Object Description Language (ODL)-Attribute,-Schlüsselwörter,-Anweisungen und-Direktiven, die Teil von "Mittel l" sind.
+title: ODL-Sprachfeatures in MIDL
+description: Object Description Language Attribute, Schlüsselwörter, Anweisungen und Direktiven (ODL), die Teil von MIDL sind.
 ms.assetid: beca14a6-01c4-4605-b1c5-214d48a7f46a
 keywords:
-- Mittel l-und ODL-Programmiersprache, sprach Features
-- ODL-Mittell, in Mittel l
-- ODL-Mittell, Attribute
-- ODL-Mittell, Schlüsselwörter
-- ODL-Mittell, Anweisungen
-- ODL-Mittell, Direktiven
+- MIDL und ODL MIDL , Sprachfeatures
+- ODL MIDL , in MIDL
+- ODL MIDL , Attribute
+- ODL MIDL , Schlüsselwörter
+- ODL MIDL , Anweisungen
+- ODL MIDL ,-Direktiven
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49e525322eb185e38303b387dc4aa0007322e713
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: db346a664ed7b8f7beeacfe73cc928a924befe10
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856731"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119785"
 ---
-# <a name="odl-language-features-in-midl"></a>ODL-sprach Features in der Mitte
+# <a name="odl-language-features-in-midl"></a>ODL-Sprachfeatures in MIDL
 
 > [!Note]  
-> Das Mktyplib.exe Tool ist veraltet. Verwenden Sie stattdessen den Mittel l-Compiler.
+> Das Mktyplib.exe ist veraltet. Verwenden Sie stattdessen den MIDL-Compiler.
 
- 
+ 
 
-In den folgenden Themen sind die Object Description Language (ODL)-Attribute,-Schlüsselwörter,-Anweisungen und-Direktiven aufgelistet, die nun Teil des Microsoft Interface Definition Language (mittlere) sind:
+In den folgenden Themen werden Object Description Language Attribute, Schlüsselwörter, Anweisungen und Direktiven der Object Description Language (ODL) aufgeführt, die jetzt Teil der Microsoft Interface Definition Language (MIDL) sind:
 
 -   [ODL-Attribute](#odl-attributes)
--   [ODL-Schlüsselwörter,-Anweisungen und-Direktiven](#odl-keywords-statements-and-directives)
+-   [ODL-Schlüsselwörter, -Anweisungen und -Anweisungen](#odl-keywords-statements-and-directives)
 
 ## <a name="odl-attributes"></a>ODL-Attribute
 
+:::row:::
+    :::column:::
+        \[[**appobject**](appobject.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Bindbare**](bindable.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**Steuerung**](control.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Standard**](default.md)\]
+    :::column-end:::
+:::row-end:::
 
-|                                            |                                        |
-|--------------------------------------------|----------------------------------------|
-| \[[**appobject**](appobject.md)\]         | \[[**bindbare**](bindable.md)\]       |
-| \[[**Steuerelement**](control.md)\]             | \[[**vorgegebene**](default.md)\]         |
-| \[[**DefaultValue**](defaultvalue.md)\]   | \[[**Display BIND**](displaybind.md)\] |
-| \[[**dllname**](dllname-str-.md)\]        | \[[**Ales**](dual.md)\]               |
-| \[[**ein**](entry.md)\]                 | \[[**HelpContext**](helpcontext.md)\] |
-| \[[**HelpString**](helpstring.md)\]       | \[[**HelpFile**](helpfile.md)\]       |
-| \[[**verbirgt**](hidden.md)\]               | \[[**Name**](id.md)\]                   |
-| \[[**unmittelatebind**](immediatebind.md)\] | \[[**in**](in.md)\]                   |
-| \[[**LCID**](lcid.md)\]                   | \[[**lizenziert**](licensed.md)\]       |
-| \[[**nonextensible**](nonextensible.md)\] | \[[**ODL**](odl.md)\]                 |
-| \[[**OleAutomation**](oleautomation.md)\] | \[[**optionale**](optional.md)\]       |
-| \[[**vorgenommen**](out-idl.md)\]                 | \[[**propget**](propget.md)\]         |
-| \[[**propput**](propput.md)\]             | \[[**propputref**](propputref.md)\]   |
-| \[[**Publikums**](public.md)\]               | \[schreibgeschützt [ ](readonly.md)\]      |
-| \[[**requestedit**](requestedit.md)\]     | \[[**begrenz**](restricted.md)\]   |
-| \[[**retval**](retval.md)\]               | \[[**Ausgangs**](source.md)\]           |
-| \[[**UUID**](uuid.md)\]                   | [**vararg**](vararg.md)\]             |
-| \[[**Version**](version.md)\]             | Â                                      |
+:::row:::
+    :::column:::
+        \[[**Defaultvalue**](defaultvalue.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**displaybind**](displaybind.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**Dllname**](dllname-str-.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Dual**](dual.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**Eintrag**](entry.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Helpcontext**](helpcontext.md)\]
+    :::column-end:::
+:::row-end:::
 
- 
+:::row:::
+    :::column:::
+        \[[**Helpstring**](helpstring.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Helpfile**](helpfile.md)\]
+    :::column-end:::
+:::row-end:::
 
-## <a name="odl-keywords-statements-and-directives"></a>ODL-Schlüsselwörter,-Anweisungen und-Direktiven
+:::row:::
+    :::column:::
+        \[[**Versteckte**](hidden.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Id**](id.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**immediatebind**](immediatebind.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**In**](in.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**Lcid**](lcid.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Lizenziert**](licensed.md)\]
+    :::column-end:::
+:::row-end:::
 
-|                                        |
-|----------------------------------------|
-| [**coclass**](coclass.md)             |
-| [**dispinterface**](dispinterface.md) |
-| [**Enumeration**](enum.md)                   |
-| \[[**importlib**](importlib.md)\]     |
-| [**berfläche**](interface.md)         |
-| [**Bibliothek**](library.md)             |
-| [**Mond**](module.md)               |
-| [**struct**](struct.md)               |
-| [**typedef**](typedef.md)             |
-| [**Union**](union.md)                 |
+:::row:::
+    :::column:::
+        \[[**nicht mehr zu ersätzbar**](nonextensible.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Odl**](odl.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**Oleautomation**](oleautomation.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Optional**](optional.md)\]
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+        \[[**out**](out-idl.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Propget**](propget.md)\]
+    :::column-end:::
+:::row-end:::
 
- 
+:::row:::
+    :::column:::
+        \[[**Propput**](propput.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Propputref**](propputref.md)\]
+    :::column-end:::
+:::row-end:::
 
-Informationen zum Mars Hallen von OLE-Automatisierungs Typen, z. b. **BSTR**, **Variant** und **SAFEARRAY**, finden Sie unter Mars Hallen von [OLE-Datentypen](marshaling-ole-data-types.md).
+:::row:::
+    :::column:::
+        \[[**Öffentlich**](public.md)\]
+    :::column-end:::
+    :::column:::
+        \[[ **readonly**](readonly.md)\]
+    :::column-end:::
+:::row-end:::
 
- 
+:::row:::
+    :::column:::
+        \[[**requestedit**](requestedit.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Beschränkt**](restricted.md)\]
+    :::column-end:::
+:::row-end:::
 
- 
+:::row:::
+    :::column:::
+        \[[**Retval**](retval.md)\]
+    :::column-end:::
+    :::column:::
+        \[[**Quelle**](source.md)\]
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        \[[**Uuid**](uuid.md)\]
+    :::column-end:::
+    :::column:::
+        [**Vararg**](vararg.md)\]
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        \[[**Version**](version.md)\]
+    :::column-end:::
+    :::column:::
+        Â
+    :::column-end:::
+:::row-end:::
+
+## <a name="odl-keywords-statements-and-directives"></a>ODL-Schlüsselwörter, -Anweisungen und -Anweisungen
+
+[**coclass**](coclass.md)
+
+[**Dispatchschnittstelle**](dispinterface.md)
+
+[**Enum**](enum.md)
+
+\[[**importlib**](importlib.md)\]
+
+[**Schnittstelle**](interface.md)
+
+[**Bibliothek**](library.md)
+
+[**Modul**](module.md)
+
+[**Struktur**](struct.md)
+
+[**Typedef**](typedef.md)
+
+[**Union**](union.md)
+
+Informationen zum Marshallen von OLE-Automatisierungstypen wie **BSTR,** **VARIANT** und **SAFEARRAY** finden Sie unter [Marshalling OLE Data Types](marshaling-ole-data-types.md).
+
+ 
+
+ 
 
 
 

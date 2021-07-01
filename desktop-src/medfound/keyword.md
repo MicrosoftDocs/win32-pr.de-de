@@ -1,21 +1,21 @@
 ---
-description: Gibt ein Schlüsselwort für einen MF-Ablaufverfolgungs-Anbieter an.
+description: Gibt ein Schlüsselwort für einen MFTrace-Anbieter an.
 ms.assetid: 1ce4a5ee-c053-4d31-a984-dc11acebbf2a
-title: Keywords-Element
+title: Schlüsselwortelement
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b11632a257e7d51378ddb816124e51548746a178
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7ba871fea760ed3b604048ade2722afc0323e03b
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362902"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119375"
 ---
-# <a name="keyword-element"></a>Keywords-Element
+# <a name="keyword-element"></a>Schlüsselwortelement
 
-Gibt ein Schlüsselwort für einen [MF-Ablaufverfolgungs](mftrace.md) -Anbieter an.
+Gibt ein Schlüsselwort für einen [MFTrace-Anbieter](mftrace.md) an.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <keyword
@@ -26,9 +26,9 @@ Gibt ein Schlüsselwort für einen [MF-Ablaufverfolgungs](mftrace.md) -Anbieter 
 
 
 
-| Attribut         | type             | Erforderlich       | BESCHREIBUNG                                             |
+| attribute         | Typ             | Erforderlich       | BESCHREIBUNG                                             |
 |-------------------|------------------|----------------|---------------------------------------------------------|
-| **ID**<br/> | CDATA<br/> | Ja<br/> | Der Name oder die Maske des Schlüssel Worts.<br/> <br/> |
+| **ID**<br/> | CDATA<br/> | Ja<br/> | Name oder Maske des Schlüsselworts<br/> <br/> |
 
 
 
@@ -38,39 +38,38 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-
-
 | Element                                   |
 |-------------------------------------------|
-| [**MF-Umleitungen**](mfdetours.md)<br/> |
-| [**ab**](provider.md)<br/>   |
+| [**mfdetours**](mfdetours.md)<br/> |
+| [**Anbieter**](provider.md)<br/>   |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Für das [**mfumleitungen**](mfdetours.md) -Element werden die gültigen Schlüsselwörter im Thema [mftrace-Schlüsselwörter](mftrace-keywords.md)aufgelistet.
+Für das [**mfdetours-Element**](mfdetours.md) sind die gültigen Schlüsselwörter im Thema [MFTrace Keywords](mftrace-keywords.md)aufgeführt.
 
-Für das [**Provider**](provider.md) -Element sind die Schlüsselwörter vom Ereignis Anbieter abhängig. Mit dem Wevtutil.exe-Hilfsprogramm können Sie die Schlüsselwörter für einen bestimmten Anbieter auflisten.
+Für das [**Anbieterelement**](provider.md) hängen die Schlüsselwörter vom Ereignisanbieter ab. Sie können das hilfsprogramm Wevtutil.exe verwenden, um die Schlüsselwörter für einen bestimmten Anbieter aufzulisten.
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|              |     |
-|--------------|-----|
-| Kann leer bleiben | Ja |
-
-
+:::row:::
+    :::column:::
+        Kann leer bleiben
+    :::column-end:::
+    :::column span="2":::
+        Ja
+    :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[MF-Ablauf Verfolgungs Konfigurationsdatei](mftrace-configuration-file.md)
+[MFTrace-Konfigurationsdatei](mftrace-configuration-file.md)
 </dt> <dt>
 
-[MF Trace-Schlüsselwörter](mftrace-keywords.md)
+[MFTrace-Schlüsselwörter](mftrace-keywords.md)
 </dt> </dl>
 
  

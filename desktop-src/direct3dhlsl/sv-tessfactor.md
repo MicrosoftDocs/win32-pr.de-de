@@ -1,6 +1,6 @@
 ---
 title: SV_TessFactor
-description: Definiert den Mosaikbetrag an jedem Rand eines Patches.
+description: Definiert die Mosaikmenge an jedem Rand eines Patches.
 ms.assetid: 970ff744-da5b-4933-866c-dd38b85fb48d
 keywords:
 - SV_TessFactor HLSL
@@ -13,27 +13,26 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 808365fbcba4a1180c1838b94a6c098aa4c6f9ac
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 308034fe607283ef9f1213cca1cabb4a7229765e
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999057"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118895"
 ---
 # <a name="sv_tessfactor"></a>SV \_ TessFactor
 
-Definiert den Mosaikbetrag an jedem Rand eines Patches.
+Definiert die Mosaikmenge an jedem Rand eines Patches.
 
 ## <a name="type"></a>Typ
 
 
 
-|            |                |
+|  Typ          |  Eingabetopologie              |
 |------------|----------------|
-| Typ       | Eingabetopologie |
-| float \[ 4\] | Quad-Patch     |
-| float \[ 3\] | Tri Patch      |
-| float \[ 2\] | Isoline        |
+| float \[ 4\] | Quad Patch     |
+| float \[ 3\] | tri patch      |
+| float \[ 2\] | isoline        |
 
 
 
@@ -41,17 +40,17 @@ Definiert den Mosaikbetrag an jedem Rand eines Patches.
 
 Mosaikfaktoren müssen als Array deklariert werden. sie können nicht in einen einzelnen Vektor gepackt werden.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Der Wert für den Mosaikfaktor muss während der Patchkonstantenfunktion des Hüllen-Shaders definiert werden.
+Der Wert für den Mosaikfaktor muss während der Patchkonstationsfunktion des Hüllen-Shaders definiert werden.
 
-Erforderlicher Ausgabewert für den Hüllen-Shader bei Verwendung von Quad- oder Tri-Patches. Dieser Wert ist auch ein erforderlicher Eingabewert für den Domänen-Shader, um die patchkonstanten Datensignaturen zwischen den Mosaikstufen abzugleichen.
+Erforderlicher Ausgabewert für den Hüllen-Shader, wenn Quad- oder Tri-Patches verwendet werden. Dieser Wert ist auch ein erforderlicher Eingabewert für den Domänen-Shader, der mit den Patchkonstten-Datensignaturen zwischen den Mosaikstufen übereinstimmen soll.
 
-Bei einer Isolinie ist der erste Wert in SV \_ TessFactor der Mosaikfaktor für die Liniendichte, der zweite Wert der Mosaikfaktor für Liniendetails.
+Bei einer Isoline ist der erste Wert in SV TessFactor der Mosaikfaktor der Liniendichte, der zweite Wert ist der Mosaikfaktor für \_ Zeilendetails.
 
 ### <a name="tri-patch-tessellation-factors"></a>Tri Patch Tessellation Factors
 
-Die erste Komponente stellt den Mosaikfaktor für den u==0-Rand des Patches bereit. Die zweite Komponente stellt den Mosaikfaktor für den v==0-Rand des Patches bereit. Die dritte Komponente stellt den Mosaikfaktor für den w==0-Rand des Patches dar.
+Die erste Komponente stellt den Mosaikfaktor für den u==0-Rand des Patches dar. Die zweite Komponente stellt den Mosaikfaktor für den v==0-Rand des Patches dar. Die dritte Komponente stellt den Mosaikfaktor für den w==0-Rand des Patches dar.
 
 ### <a name="quad-patch-tessellation-factors"></a>Quad Patch Tessellation Factors
 
@@ -69,7 +68,7 @@ Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,19 +1,19 @@
 ---
-title: Iagentballoon setfontcharset
-description: Iagentballoon setfontcharset
+title: IAgentBalloon SetFontCharSet
+description: IAgentBalloon SetFontCharSet
 ms.assetid: ce1b152d-c8af-47ec-9e6b-5768dbcf3566
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6202aa144d13c3c7435be03721a3f8fd4878b93
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 18cc462895ff9f19f7e722660608a268af13446f
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340652"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120205"
 ---
-# <a name="iagentballoonsetfontcharset"></a>Iagentballoon:: setfontcharset
+# <a name="iagentballoonsetfontcharset"></a>IAgentBalloon::SetFontCharSet
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetFontCharSet(
@@ -21,48 +21,48 @@ HRESULT SetFontCharSet(
 ); 
 ```
 
-Legt den Zeichensatz der Schriftart fest, die in der Word-Sprechblase angezeigt wird.
+Legt den Zeichensatz der Schriftart fest, die im Wort balloon angezeigt wird.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="sFontCharSet"></span><span id="sfontcharset"></span><span id="SFONTCHARSET"></span>*sfontcharset*
+<span id="sFontCharSet"></span><span id="sfontcharset"></span><span id="SFONTCHARSET"></span>*sFontCharSet*
 </dt> <dd>
 
-Der Zeichensatz der Schriftart. Im folgenden finden Sie einige allgemeine Einstellungen für Value:
+Der Zeichensatz der Schriftart. Im Folgenden finden Sie einige allgemeine Einstellungen für value:
 
 
 
-|     |                                                                                        |
+| Wert    | Zeichensatz                                                                                       |
 |-----|----------------------------------------------------------------------------------------|
-| 0   | Standard mäßige Windows-Zeichen (ANSI).                                                    |
+| 0   | Standard-Windows-Zeichen (ANSI).                                                    |
 | 1   | Standardzeichensatz.                                                                 |
-| 2   | Der Symbol Zeichensatz.                                                              |
-| 128 | Doppelbyte-Zeichensatz (DBCS), der für die japanische Version von Windows eindeutig ist.            |
-| 129 | Doppelbyte-Zeichensatz (DBCS), der für die koreanische Version von Windows eindeutig ist.              |
-| 134 | Doppelbyte-Zeichensatz (DBCS), der für die vereinfachte chinesische Version von Windows eindeutig ist.  |
-| 136 | Doppelbyte-Zeichensatz (DBCS), der für die traditionelle chinesische Version von Windows eindeutig ist. |
-| 255 | Erweiterte Zeichen, die normalerweise von MS-DOS-Anwendungen angezeigt werden                          |
+| 2   | Der Symbolzeichensatz.                                                              |
+| 128 | Doppel-Byte-Zeichensatz (DBCS), der für die japanische Version von Windows eindeutig ist.            |
+| 129 | Doppel-Byte-Zeichensatz (DBCS), der für die koreanische Version von Windows eindeutig ist.              |
+| 134 | Doppel-Byte-Zeichensatz (Double-Byte Character Set, DBCS), der für die vereinfachte chinesische Version von Windows eindeutig ist.  |
+| 136 | Doppel-Byte-Zeichensatz (DBCS), der für die traditionelle chinesische Version von Windows eindeutig ist. |
+| 255 | Erweiterte Zeichen werden in der Regel von MS-DOS-Anwendungen angezeigt.                          |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-Weitere Zeichensatz Werte finden Sie in der Platform SDK-Dokumentation.
+Weitere Zeichensatzwerte finden Sie in der Dokumentation zum Platform SDK.
 
-Der Standardzeichensatz, der in der Wort Sprechblase eines Zeichens verwendet wird, wird im Microsoft-Agent-Zeichen-Editor definiert. Sie können es mit [**iagentballoon:: setfontcharset**](https://www.bing.com/search?q=**IAgentBalloon::SetFontCharSet**)ändern. Der Benutzer kann jedoch die Zeichensatz Einstellung für alle Zeichen überschreiben, indem er das Eigenschaften Blatt Microsoft-Agent verwendet. Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Der Standardzeichensatz, der in der Wortsprechblase eines Zeichens verwendet wird, wird im Microsoft Agent-Zeichen-Editor definiert. Sie können es mit [**IAgentBalloon::SetFontCharSet ändern.**](https://www.bing.com/search?q=**IAgentBalloon::SetFontCharSet**) Der Benutzer kann jedoch die Zeichensatzeinstellung für alle Zeichen mithilfe des Microsoft Agent-Eigenschaftenblatts überschreiben. Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentballoon:: getfontcharset**](iagentballoon--getfontcharset.md)
+[**IAgentBalloon::GetFontCharSet**](iagentballoon--getfontcharset.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

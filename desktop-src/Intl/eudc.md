@@ -1,41 +1,41 @@
 ---
-description: Der EUDC-Registrierungsschlüssel enthält einen oder mehrere Unterschlüssel mit Werten, die die Schriftarten definieren, die Endbenutzer definierten Zeichen (eudcs) für eine bestimmte Codepage zugeordnet sind.
+description: Der EUDC-Registrierungsschlüssel enthält mindestens einen Unterschlüssel, der Werte enthält, die die Schriftarten definieren, die endbenutzerdefinierten Zeichen (EUDCs) für eine bestimmte Codepage zugeordnet sind.
 ms.assetid: d78a1d8f-a239-4388-aa21-c162953fe355
 title: EUDC
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 781f7c28460c2e56f4bcdb393277f509f88a0383
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27b583c7a0bfaa67684901e8d0a4a95ac5e45658
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350872"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120705"
 ---
 # <a name="eudc"></a>EUDC
 
-Der EUDC-Registrierungsschlüssel enthält einen oder mehrere Unterschlüssel mit Werten, die die Schriftarten definieren, die [Endbenutzer definierten Zeichen (eudcs)](end-user-defined-characters.md) für eine bestimmte Codepage zugeordnet sind. Es verfügt über den folgenden Registrierungs Speicherort:
+Der EUDC-Registrierungsschlüssel enthält mindestens einen Unterschlüssel, der Werte enthält, die die Schriftarten definieren, die endbenutzerdefinierten Zeichen [(EUDCs)](end-user-defined-characters.md) für eine bestimmte Codepage zugeordnet sind. Sie verfügt über den folgenden Registrierungsspeicherort:
 
-HKEY \_ aktueller \_ Benutzer ( \\ EUDC)
+HKEY \_ CURRENT \_ USER \\ EUDC
 
 Das Format lautet:
 
-EUDC systemdefaulteudcfont = truetyeteudcfontfilename truetyetfonttypeer = truetyeteudcfontfilename
+EUDC SystemDefaultEUDCFont=TrueTypeEUDCFontFileName TrueTypeFontTypeface=TrueTypeEUDCFontFileName
 
 Dabei gilt:
 
 
 
-|                          |                                                                                                                                          |
+| Wert                         | Beschreibung                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Systemdefaulteudcfont    | Der vordefinierte Name, der zum Festlegen der System Standard Schriftart verwendet wird. Es gibt keine System Standard-EUDC-Schriftart, es sei denn, dieser Eintrag ist explizit angegeben.     |
-| Truetyetfonttyetface     | Ein benutzerdefinierter Name, der mit einer nicht-EUDC TrueType-Schriftart verknüpft ist.                                                                              |
-| Truetyeteudcfontfilename | Eine Zeichenfolge, die aus dem Dateinamen einer separaten EUDC-Schriftart Datei besteht. Diese Datei identifiziert eine Schriftart, die truetyetfonttyetface zugeordnet werden soll. |
+| SystemDefaultEUDCFont    | Vordefinierter Name, der zum Festlegen der Standardschriftart des Systems verwendet wird. Es gibt keine EUDC-Standardschriftart des Systems, es sei denn, dieser Eintrag ist explizit angegeben.     |
+| TrueTypeFontTypeface     | Benutzerdefinierter Name, der einer Nicht-EUDC TrueType-Schriftart zugeordnet ist.                                                                              |
+| TrueTypeEUDCFontFileName | Eine Zeichenfolge, die aus dem Dateinamen einer separaten EUDC-Schriftartdatei besteht. Diese Datei identifiziert eine Schriftart, die TrueTypeFontTypeface zugeordnet werden soll. |
 
 
 
  
 
-Das folgende Beispiel zeigt den EUDC-Schlüssel für die Codepage 932.
+Das folgende Beispiel zeigt den EUDC-Schlüssel für Codepage 932.
 
 
 ```C++
@@ -47,7 +47,7 @@ MS Gothic=GTEUDC.TTF
 
 
 
-Im folgenden Beispiel wird die Standard Schriftart des EUDC-Systems auf EUDC. ttf festgelegt, und die separaten EUDC-Schriftarten mineudc. ttf und goteudc. ttf werden den Schriftart Namen MS Mincho bzw. MS Gothic zugeordnet.
+Im folgenden Beispiel wird die EUDC-Standardschriftart des Systems auf Eudc.ttf festgelegt, und die separaten EUDC-Schriftarten Mineudc.ttf und Goteudc.ttf werden den Schriftartnamen MS Mincho bzw. MS Solleezugetrennt.
 
 
 ```C++
@@ -58,9 +58,9 @@ MS Gothic=GOTEUDC.TTF
 
 
 
-Wenn die Windows-Codepage (System ACP), die der Sprache für nicht-Unicode-Programme zugeordnet ist, mit dem Unterschlüssel übereinstimmt, sucht das GDI-Subsystem nach den Unterschlüssel-Wert-Paaren, um Anzeigeinformationen zum Zeichen abzurufen. Zuerst sucht er nach einem Namen, der mit der aktuellen Schriftart übereinstimmt. Wenn keine vorhanden ist, wird der Wert systemdefaulteudcfont überprüft. Wenn kein Wert definiert ist, behandelt GDI das Zeichen als nicht definiert.
+Wenn die Windows-Codepage (System ACP), die der Sprache für Nicht-Unicode-Programme zugeordnet ist, dem Unterschlüssel entspricht, sucht das GDI-Subsystem nach den Unterschlüssel-Wertpaaren, um Anzeigeinformationen zum Zeichen zu erhalten. Zunächst wird nach einem Namen für die aktuelle Schriftart sucht. Wenn keines der Fall ist, wird der SystemDefaultEUDCFont-Wert untersucht. Wenn kein Wert definiert ist, behandelt GDI das Zeichen als nicht definiert.
 
-Beachten Sie, dass sich der Text selbst nicht auf der Windows-Codepage befinden muss. Nehmen Sie beispielsweise an, dass die Codepage den Bezeichner 1252 hat, die standardmäßige Windows-Codepage für Englisch. Eine Anwendung übergibt den einzelnen Unicode-Codepunkt U + E000 im privaten Unicode-Verwendungsbereich (Pua) an [**DrawText**](/windows/win32/api/winuser/nf-winuser-drawtext). In diesem Fall prüft GDI die Registrierungs Werte unter 1252, um die Schriftart Informationen für die Zeichen Anzeigeeigenschaften zu erhalten.
+Beachten Sie, dass der Text selbst nicht in der Windows-Codepage enthalten sein muss. Angenommen, die Codepage hat den Bezeichner 1252, die Windows-Standardcodepage für Englisch. Eine Anwendung übergibt den einzelnen Unicode-Codepunkt U+E000 im privaten Unicode-Verwendungsbereich (PUA) an [**DrawText.**](/windows/win32/api/winuser/nf-winuser-drawtext) In diesem Fall untersucht GDI die Registrierungswerte unter 1252, um die Schriftartinformationen für die Zeichenanzeigeeigenschaften zu erhalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -69,7 +69,7 @@ Beachten Sie, dass sich der Text selbst nicht auf der Windows-Codepage befinden 
 [EUDC-Registrierungseinträge](eudc-registry-entries.md)
 </dt> <dt>
 
-[Eudccoderange](eudccoderange.md)
+[EUDCCodeRange](eudccoderange.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Enthält eine Liste der Ablauf Verfolgungs Anbieter für MF Trace.
+description: Enthält eine Liste der Ablaufverfolgungsanbieter für MFTrace.
 ms.assetid: ee483f0a-5a90-4150-ada4-0b63ae312523
 title: providers-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04e5aaedcd14d840cfdc0d85559f6a7981943593
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d38a86bf3ca8ffa1ea9e3da20e0244e7abec8513
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215016"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118485"
 ---
 # <a name="providers-element"></a>providers-Element
 
-Enthält eine Liste der Ablauf Verfolgungs Anbieter für [MF Trace](mftrace.md).
+Enthält eine Liste der Ablaufverfolgungsanbieter für [MFTrace.](mftrace.md)
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <providers>
@@ -31,10 +31,10 @@ Es gibt keine Attribute.
 
 
 
-| Element                                   | BESCHREIBUNG                                                                                                      |
+| Element                                   | Beschreibung                                                                                                      |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| [**MF-Umleitungen**](mfdetours.md)<br/> | Gibt den Media Foundation umleitet-Anbieter an, der Media Foundation API-Aufrufe verfolgt.<br/> <br/> |
-| [**ab**](provider.md)<br/>   | Gibt einen Ablauf Verfolgungs Anbieter (ETW oder WPP) an.<br/> <br/>                                                  |
+| [**mfdetours**](mfdetours.md)<br/> | Gibt den Media Foundation Detours-Anbieter an, der Media Foundation API-Aufrufe verfolgt.<br/> <br/> |
+| [**Anbieter**](provider.md)<br/>   | Gibt einen Ablaufverfolgungsanbieter (ETW oder WPP) an.<br/> <br/>                                                  |
 
 
 
@@ -53,19 +53,20 @@ Es gibt keine übergeordneten Elemente.
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|              |     |
-|--------------|-----|
-| Kann leer bleiben | Ja |
-
-
+:::row:::
+    :::column:::
+        Kann leer bleiben
+    :::column-end:::
+    :::column span="2":::
+        Ja
+    :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[MF-Ablauf Verfolgungs Konfigurationsdatei](mftrace-configuration-file.md)
+[MFTrace-Konfigurationsdatei](mftrace-configuration-file.md)
 </dt> </dl>
 
  

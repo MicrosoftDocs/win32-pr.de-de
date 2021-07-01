@@ -1,26 +1,26 @@
 ---
-description: Für den Benutzer scheint das System entweder ein-oder ausgeschaltet zu sein.
+description: Für den Benutzer scheint das System entweder ein- oder ausgeschaltet zu sein.
 ms.assetid: 3d897a88-125e-457f-9ea7-ac2056b0767a
-title: System Energiestatus
+title: Systemleistungszustände
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f18cf6323ae852a871869066a2e9baa2860e6978
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efde8a130d6dbe2b44c34e8ab45b973a64f3b255
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349214"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120815"
 ---
-# <a name="system-power-states"></a>System Energiestatus
+# <a name="system-power-states"></a>Systemleistungszustände
 
-Für den Benutzer scheint das System entweder ein-oder ausgeschaltet zu sein. Es sind keine weiteren erkennbaren Zustände vorhanden. Das System unterstützt jedoch mehrere Energiezustände, die den in der Advanced Configuration and Power Interface (ACPI)-Spezifikation definierten Energiezuständen entsprechen. Es gibt auch Variationen dieser Zustände, z. b. hybride Standbymodus und schneller Start. In diesem Thema werden diese Zustände vorgestellt, und es wird beschrieben, wie Sie miteinander in Beziehung stehen.
+Für den Benutzer scheint das System entweder ein- oder ausgeschaltet zu sein. Es gibt keine anderen erkennbaren Zustände. Das System unterstützt jedoch mehrere Energiezustände, die den in der Advanced Configuration and Power Interface (ACPI)-Spezifikation definierten Energiezuständen entsprechen. Es gibt auch Variationen dieser Zustände, z. B. hybrider Standbymodus und schneller Start. In diesem Thema werden diese Zustände vorgestellt, und es wird beschrieben, wie sie miteinander in Beziehung stehen.
 
 > [!NOTE]
-> Systemintegratoren und Entwickler, die Treiber oder Anwendungen mit einem Systemdienst erstellen, sollten besonders vorsichtig auf Probleme mit der Treiber Qualität, z. b. Speicher Verluste, achten. Obwohl die Treiber Qualität immer wichtig war, kann die Betriebszeit zwischen Kernel Neustarts erheblich länger sein als in früheren Versionen des Betriebssystems, da bei vom Benutzer initiierten Ruhe-und Herunterfahr Vorgängen der Kernel, die Treiber und die Dienste beibehalten und wieder hergestellt und nicht neu gestartet werden.
+> Systemintegratoren und Entwickler, die Treiber oder Anwendungen mit einem Systemdienst erstellen, sollten bei Problemen mit der Treiberqualität, z. B. Speicherverlusten, besonders vorsichtig sein. Die Treiberqualität war zwar schon immer wichtig, aber die Betriebszeit zwischen Kernelneustarts kann erheblich länger sein als bei früheren Versionen des Betriebssystems, da beim vom Benutzer initiierten Standbymodus und Herunterfahren der Kernel, die Treiber und die Dienste beibehalten und wiederhergestellt und nicht neu gestartet werden.
 
  
 
-In der folgenden Tabelle sind die ACPI-Strom Zustände vom höchsten bis zum niedrigsten Stromverbrauch aufgelistet.
+In der folgenden Tabelle sind die ACPI-Energiezustände vom höchsten bis zum niedrigsten Energieverbrauch aufgeführt.
 
 
 
@@ -34,44 +34,44 @@ In der folgenden Tabelle sind die ACPI-Strom Zustände vom höchsten bis zum nie
 <tr class="header">
 <th>Betriebszustand</th>
 <th>ACPI-Status</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>In Bearbeitung<br/></td>
 <td>S0<br/></td>
-<td>Das System ist vollständig verwendbar. Hardware Komponenten, die nicht verwendet werden, können Energie sparen, indem Sie einen niedrigeren Energiezustand eingeben.<br/></td>
+<td>Das System kann vollständig verwendet werden. Hardwarekomponenten, die nicht verwendet werden, können energiesparend sein, indem sie in einen niedrigeren Energiezustand gelangen.<br/></td>
 </tr>
 <tr class="even">
-<td>Standby<br/> (Moderner Standby-Modus)<br/></td>
-<td>S0 im Leerlauf<br/></td>
-<td>Einige SOC-Systeme unterstützen einen Energiesparmodus, der als <a href="/windows-hardware/design/device-experiences/modern-standby">moderner Standby</a>bezeichnet wird. In diesem Zustand kann das System sehr schnell von einem Energiespar Status in den Status "Hochenergie" wechseln, um schnell auf Hardware-und Netzwerkereignisse reagieren zu können. Systeme, die modern Standby unterstützen, verwenden nicht S1-S3.<br/></td>
+<td>Standby<br/> (Moderner Standbymodus)<br/></td>
+<td>S0 mit geringer Leistung im Leerlauf<br/></td>
+<td>Einige SoC-Systeme unterstützen einen Energiesparzustand im Leerlauf, der als <a href="/windows-hardware/design/device-experiences/modern-standby">Moderner Standbymodus</a>bezeichnet wird. In diesem Zustand kann das System sehr schnell von einem Zustand mit geringer Leistung in einen Zustand mit hoher Leistung wechseln, sodass es schnell auf Hardware- und Netzwerkereignisse reagieren kann. Systeme, die modernen Standbymodus unterstützen, verwenden nicht S1-S3.<br/></td>
 </tr>
 <tr class="odd">
 <td>Standby<br/></td>
 <td>S1<br/> S2<br/> S3<br/></td>
-<td>Das System ist anscheinend deaktiviert. In diesen Zuständen verbrauchte Stromversorgung (S1-S3) ist kleiner als S0 und mehr als S4; S3 beansprucht weniger Energie als S2, und S2 beansprucht weniger Energie als S1. Systeme unterstützen in der Regel einen dieser drei Zustände, nicht alle drei.<br/> In diesen Zuständen (S1-S3) wird flüchtiger Arbeitsspeicher aktualisiert, um den Systemstatus zu erhalten. Einige Komponenten bleiben eingeschaltet, sodass der Computer aus der Eingabe von der Tastatur, dem LAN oder einem USB-Gerät aktiviert werden kann.<br/> Der <em>hybride</em>Standbymodus, der auf Desktops verwendet wird, ist der Ort, an dem ein System eine Ruhe Zustands Datei mit S1 S3 verwendet. Die Ruhe Zustands Datei speichert den Systemstatus für den Fall, dass das System im Standbymodus Energie verliert.<br/>
+<td>Das System scheint deaktiviert zu sein. Der in diesen Zuständen verbrauchte Strom (S1-S3) ist kleiner als S0 und größer als S4. S3 verbraucht weniger Strom als S2, und S2 verbraucht weniger Strom als S1. Systeme unterstützen in der Regel einen dieser drei Zustände, nicht alle drei.<br/> In diesen Zuständen (S1-S3) wird flüchtiger Speicher aktualisiert, um den Systemstatus beizubehalten. Einige Komponenten bleiben eingeschaltet, sodass der Computer von der Tastatur, dem LAN oder einem USB-Gerät aus reaktivieren kann.<br/> <em>Hybrider Standbymodus,</em>der auf Desktops verwendet wird, ist der Ort, an dem ein System eine Ruhezustandsdatei mit S1-S3 verwendet. In der Ruhezustandsdatei wird der Systemzustand gespeichert, falls das System im Energiesparmodus aus dem Energiesparmodus ausschaltet.<br/>
 <blockquote>
 [!Note]<br />
-SOC-Systeme, die den modernen Standby unterstützen (der Energiesparmodus im Leerlauf), verwenden nicht S1-S3.
+SoC-Systeme, die modernen Standbymodus unterstützen (leerer Energiesparzustand), verwenden nicht S1-S3.
 </blockquote>
 <br/> <br/></td>
 </tr>
 <tr class="even">
 <td>Ruhezustand<br/></td>
 <td>S4<br/></td>
-<td>Das System ist anscheinend deaktiviert. Der Stromverbrauch wird auf die niedrigste Ebene reduziert. Das System speichert den Inhalt des flüchtigen Speichers in einer Ruhe Zustands Datei, um den Systemstatus zu erhalten. Einige Komponenten bleiben eingeschaltet, sodass der Computer aus der Eingabe von der Tastatur, dem LAN oder einem USB-Gerät aktiviert werden kann. Der Arbeitskontext kann wieder hergestellt werden, wenn er auf nicht flüchtigen Medien gespeichert ist. <br/> Der <em>schnelle Start</em> ist der Ort, an dem der Benutzer abgemeldet wird, bevor die Ruhe Zustands Datei erstellt wird. Dies ermöglicht eine kleinere Ruhe Zustands Datei und eignet sich besser für Systeme mit weniger Speicherfunktionen.<br/></td>
+<td>Das System scheint deaktiviert zu sein. Der Stromverbrauch wird auf die niedrigste Ebene reduziert. Das System speichert den Inhalt des flüchtigen Speichers in einer Ruhezustandsdatei, um den Systemstatus beizubehalten. Einige Komponenten bleiben eingeschaltet, sodass der Computer von der Tastatur, dem LAN oder einem USB-Gerät aus reaktivieren kann. Der Arbeitskontext kann wiederhergestellt werden, wenn er auf nicht flüchtigen Medien gespeichert ist. <br/> <em>Beim schnellen Start</em> wird der Benutzer abgemeldet, bevor die Ruhezustandsdatei erstellt wird. Dies ermöglicht eine kleinere Ruhezustandsdatei, die besser für Systeme mit weniger Speicherfunktionen geeignet ist.<br/></td>
 </tr>
 <tr class="odd">
-<td>Soft ausschalten<br/></td>
+<td>Soft Off<br/></td>
 <td>S5<br/></td>
-<td>Das System ist anscheinend deaktiviert. Dieser Status besteht aus einem vollständigen Herunterfahren und einem Start Zyklus.<br/></td>
+<td>Das System scheint deaktiviert zu sein. Dieser Zustand besteht aus einem vollständigen Herunterfahren und einem Startzyklus.<br/></td>
 </tr>
 <tr class="even">
-<td>Mechanisch ausgeschaltet<br/></td>
+<td>Separator Off<br/></td>
 <td>G3<br/></td>
-<td>Das System ist vollständig ausgeschaltet und beansprucht keine Stromversorgung. Das System wird erst nach einem vollständigen Neustart wieder in den Arbeitszustand zurückversetzt.<br/></td>
+<td>Das System ist vollständig ausgeschaltet und verbraucht keinen Strom. Das System kehrt erst nach einem vollständigen Neustart in den Arbeitszustand zurück.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -80,149 +80,148 @@ SOC-Systeme, die den modernen Standby unterstützen (der Energiesparmodus im Lee
 
  
 
-Die [**System \_ Energie \_ Zustands**](/windows/desktop/api/WinNT/ne-winnt-system_power_state) -Enumeration definiert Werte, die zum Angeben von System Energiezuständen verwendet werden.
+Die [**SYSTEM \_ POWER \_ STATE-Enumeration**](/windows/desktop/api/WinNT/ne-winnt-system_power_state) definiert Werte, die zum Angeben von Systemleistungszuständen verwendet werden.
 
 ## <a name="working-state-s0"></a>Arbeitszustand (S0)
 
-Während des Arbeits Zustands ist das System aktiv und wird ausgeführt. In einfachen Worten ist das Gerät "on". Unabhängig davon, ob der Bildschirm ein-oder ausgeschaltet ist, befindet sich das Gerät in einem vollständigen Betriebsstatus. Um Energie zu sparen, insbesondere auf Geräten mit Akku Betrieb, empfehlen wir dringend, Hardwarekomponenten herunter zu schalten, wenn Sie nicht verwendet werden.
+Während des Arbeitszustands ist das System aktiv und wird ausgeführt. Einfach ausgedrückt: Das Gerät ist "ein". Unabhängig davon, ob der Bildschirm ein- oder ausgeschaltet ist, befindet sich das Gerät in einem vollständig ausgeführten Zustand. Um Energie zu sparen, insbesondere bei akkugestützten Geräten, wird dringend empfohlen, Hardwarekomponenten auszuschalten, wenn sie nicht verwendet werden.
 
 > [!IMPORTANT]
-> Schalten Sie Hardwarekomponenten immer dann ein, wenn Sie nicht verwendet werden, unabhängig vom Zustand. Der niedrige Stromverbrauch ist ein wichtiger Aspekt für Consumer mobiler Geräte.
+> Schalten Sie Hardwarekomponenten herunter, wenn sie nicht verwendet werden – unabhängig vom Zustand. Ein niedriger Energieverbrauch ist ein wichtiger Aspekt für Verbraucher mobiler Geräte.
 
  
 
-## <a name="sleep-state-modern-standby"></a>Ruhezustand (moderner Standby-Modus)
+## <a name="sleep-state-modern-standby"></a>Standbyzustand (moderner Standbymodus)
 
-Im Modus "S0 Low-Power Idle" des Arbeits Zustands, auch als [moderner Standby](/windows-hardware/design/device-experiences/modern-standby)bezeichnet, bleibt das System teilweise funktionsfähig. Während des modernen Standbymodus kann das System immer auf dem neuesten Stand bleiben, wenn ein geeignetes Netzwerk verfügbar ist, und auch aktivieren, wenn Echt Zeit Maßnahmen erforderlich sind, wie z. b. die Wartung des Betriebssystems. Moderner Standby wird deutlich schneller als S1-S3 aktiviert. Weitere Informationen finden Sie unter [modern Standby](/windows-hardware/design/device-experiences/modern-standby).
+Im Energiesparmodus S0 des Betriebszustands, der auch als [moderner Standbymodus](/windows-hardware/design/device-experiences/modern-standby)bezeichnet wird, wird das System teilweise ausgeführt. Während des modernen Standbymodus kann das System immer auf dem neuesten Stand bleiben, wenn ein geeignetes Netzwerk verfügbar ist, und auch aktiviert werden, wenn Echtzeitaktionen erforderlich sind, wie z. B. die Wartung des Betriebssystems. Moderner Standbymodus wird deutlich schneller aktiviert als S1-S3. Weitere Informationen finden Sie unter [Modern Standby](/windows-hardware/design/device-experiences/modern-standby).
 
 > [!Note]  
-> Der moderne Standby-Modus ist nur auf einigen SOC-Systemen verfügbar. Wenn es unterstützt wird, wird S1-S3 vom System nicht unterstützt.
+> Moderner Standbymodus ist nur auf einigen SoC-Systemen verfügbar. Wenn dies unterstützt wird, unterstützt das System S1-S3 nicht.
 
  
 
-## <a name="sleep-state-s1-s3"></a>Ruhezustand (S1-S3)
+## <a name="sleep-state-s1-s3"></a>Standbyzustand (S1-S3)
 
-Das System wechselt basierend auf einer Reihe von Kriterien in den Standbymodus, einschließlich Benutzer-oder Anwendungs Aktivitäten und Einstellungen, die der Benutzer auf der **Power &** -standbyseite der App " **Einstellungen** " festlegt. Standardmäßig verwendet das System den niedrigsten Energiesparmodus, der von allen aktivierten Aktivierungs Geräten unterstützt wird. Weitere Informationen darüber, wie das System festlegt, wann in den Standbymodus gewechselt wird, finden Sie unter System Standby- [Kriterien](system-sleep-criteria.md)
+Das System wechselt basierend auf einer Reihe von Kriterien in den Standbymodus, einschließlich Benutzer- oder Anwendungsaktivitäten und Einstellungen, die der Benutzer auf der Seite **Power & Standbymodus** der **App Einstellungen** festlegt. Standardmäßig verwendet das System den niedrigsten Standbyzustand, der von allen aktivierten Aktivierungsgeräten unterstützt wird. Weitere Informationen dazu, wie das System bestimmt, wann in den Standbymodus einzusteigen ist, finden Sie unter [System Standby Criteria](system-sleep-criteria.md).
 
-Bevor das System in den Standbymodus wechselt, bestimmt es den entsprechenden Ruhezustand, benachrichtigt Anwendungen und Treiber über den ausstehenden Übergang und wechselt dann in den Ruhezustand. Im Fall eines kritischen Übergangs, z. b. wenn der Schwellenwert für die kritische Akkukapazität erreicht wird, werden Anwendungen und Treiber vom System nicht benachrichtigt. Anwendungen müssen darauf vorbereitet werden, und die entsprechende Aktion wird ausgeführt, wenn das System in den Arbeitszustand zurückkehrt.
+Bevor das System in den Standbymodus wechselt, bestimmt es den geeigneten Standbyzustand, benachrichtigt Anwendungen und Treiber über den ausstehenden Übergang und übergibt dann das System in den Standbyzustand. Im Fall eines kritischen Übergangs, z. B. wenn der kritische Akkuschwellenwert erreicht wird, benachrichtigt das System Anwendungen und Treiber nicht. Anwendungen müssen darauf vorbereitet sein und die entsprechende Aktion ergreifen, wenn das System in den Arbeitszustand zurückkehrt.
 
-In diesen Zuständen (S1-S3) wird flüchtiger Arbeitsspeicher aktualisiert, um den Systemstatus zu erhalten. Einige Komponenten bleiben eingeschaltet, sodass der Computer aus der Eingabe von der Tastatur, dem LAN oder einem USB-Gerät aktiviert werden kann.
+In diesen Zuständen (S1-S3) wird flüchtiger Speicher aktualisiert, um den Systemstatus beizubehalten. Einige Komponenten bleiben eingeschaltet, sodass der Computer von der Tastatur, dem LAN oder einem USB-Gerät aus reaktivieren kann.
 
-Das System wird auch als Reaktion auf eine Benutzeraktivität oder ein Reaktivierungs Ereignis, das von einer Anwendung definiert ist, im Standbymodus aktiviert. Weitere Informationen finden Sie unter [System Aktivierungs Ereignisse](system-wake-up-events.md). Die Zeitspanne, die das System für die Aktivierung benötigt, hängt von dem Ruhezustand ab, von dem aus die Aktivierung erfolgt. Das System nimmt aufgrund der zusätzlichen Arbeit, die die Hardware möglicherweise erledigen muss, mehr Zeit in Anspruch (S3) als in einem Zustand mit niedrigerer Leistung (S1), da die Hardware möglicherweise nicht mehr benötigt wird (stabilisieren der Netzteil, Neuinitialisierung des Prozessors usw.).
+Das System wird auch als Reaktion auf Benutzeraktivitäten oder ein von einer Anwendung definiertes Aktivierungsereignis aus dem Standbymodus aktiviert. Weitere Informationen finden Sie unter [Systemreaktivierungsereignisse.](system-wake-up-events.md) Wie lange die Aktivierung des Systems dauert, hängt vom Standbyzustand ab, aus dem es weckt. Das System benötigt mehr Zeit für das Reaktivieren von einem niedrigeren Zustand (S3) als von einem höheren Zustand (S1) aufgrund der zusätzlichen Arbeit, die die Hardware möglicherweise erledigen muss (Stabilisierung der Stromversorgung, erneute Initialisierung des Prozessors usw.).
 
 > [!Caution]  
-> Beim Aufrufen von [**SetThreadExecutionState**](/windows/desktop/api/Winbase/nf-winbase-setthreadexecutionstate)sollten Sie den Wert " **es \_ awaymode \_ Required** " nur verwenden, wenn dies für Medienanwendungen absolut notwendig ist, die das System benötigen, um Hintergrundaufgaben auszuführen, z. b. das Aufzeichnen von Fernsehinhalten oder das Streaming von Medien auf anderen Geräten, während das System scheinbar im Ruhezustand ist Anwendungen, für die keine kritische Hintergrundverarbeitung erforderlich ist oder die auf tragbaren Computern ausgeführt werden, sollten den Modus "Weg" nicht aktivieren, da dadurch die Stromversorgung des Systems durch Eingabe von "true" verhindert wird.
+> Beim Aufrufen von [**SetThreadExecutionState**](/windows/desktop/api/Winbase/nf-winbase-setthreadexecutionstate)sollte der **WERT ES \_ AWAYMODE \_ REQUIRED** nur dann verwendet werden, wenn dies von Medienanwendungen unbedingt erforderlich ist, die erfordern, dass das System Hintergrundaufgaben wie das Aufzeichnen von Fernsehinhalten oder das Streaming von Medien auf anderen Geräten ausführt, während das System im Ruhezustand zu sein scheint. Anwendungen, die keine kritische Hintergrundverarbeitung erfordern oder auf portablen Computern ausgeführt werden, sollten den Auslagerungsmodus nicht aktivieren, da sie verhindern, dass das System Energie spart, indem es in den echten Standbymodus wechselt.
 
  
 
-### <a name="hybrid-sleep-s1-s3--hibernation-file"></a>Hybrider Standbymodus (S1-S3 und Ruhe Zustands Datei)
+### <a name="hybrid-sleep-s1-s3--hibernation-file"></a>Hybrider Standbymodus (S1-S3 + Ruhezustandsdatei)
 
-Der *hybride* Standbymodus ist ein spezieller Zustand, bei dem es sich um eine Kombination aus Standby-und Ruhe Zustands Zuständen handelt, wenn ein System eine Ruhe Zustands Datei mit S1-S3 verwendet. Es ist nur auf einigen Systemen verfügbar. Wenn diese Option aktiviert ist, schreibt das System eine Ruhe Zustands Datei, wechselt jedoch in einen Hochenergie Spar Modus. Wenn die Stromversorgung unterbrochen wird, während das System ausfällt, wird das System aus dem Ruhezustand aktiviert, was länger dauert, aber den Systemzustand des Benutzers wiederherstellt.
+*Hybrider Standbymodus* ist ein spezieller Zustand, der eine Kombination aus dem Ruhezustand und dem Ruhezustand ist, wenn ein System eine Ruhezustandsdatei mit S1-S3 verwendet. Sie ist nur auf einigen Systemen verfügbar. Wenn diese Option aktiviert ist, schreibt das System eine Ruhezustandsdatei, wechselt aber in einen energiesparstärkeren Zustand. Wenn die Stromversorgung verloren geht, während sich das System im Ruhezustand befindet, wird das System aus dem Ruhezustand reaktiviert, was länger dauert, aber den Systemstatus des Benutzers wiederherstellt.
 
 ## <a name="hibernate-state-s4"></a>Ruhezustand (S4)
 
-Windows verwendet den Ruhezustand, um eine schnelle Start Funktion bereitzustellen. Wenn Sie verfügbar ist, wird Sie auch auf mobilen Geräten verwendet, um die verwendbare Akku Lebensdauer eines Systems zu erweitern, indem ein Mechanismus zum Speichern des gesamten Benutzer Zustands vor dem Herunterfahren des Systems bereitgestellt wird. Bei einem Ruhezustand wird der gesamte Inhalt des Arbeitsspeichers in eine Datei auf dem primären Systemlaufwerk (der Ruhe Zustands *Datei*) geschrieben. Dadurch wird der Status des Betriebssystems, der Anwendungen und der Geräte beibehalten. Wenn der kombinierte Speicherbedarf den gesamten physischen Arbeitsspeicher beansprucht, muss die Ruhe Zustands Datei groß genug sein, um sicherzustellen, dass genügend Speicherplatz vorhanden ist, um den gesamten Inhalt des physischen Speichers zu speichern. Da Daten in einen nicht flüchtigen Speicher geschrieben werden, benötigt DRAM keine selbst Aktualisierung und kann ausgeschaltet werden. Dies bedeutet, dass der Energieverbrauch des Ruhe Zustands sehr gering ist, fast identisch mit dem Ausschalten.
+Windows verwendet den Ruhezustand, um ein schnelles Starterlebnis zu ermöglichen. Wenn verfügbar, wird es auch auf mobilen Geräten verwendet, um die nutzbare Akkulaufzeit eines Systems zu verlängern, indem ein Mechanismus zum Speichern des gesamten Benutzerzustands vor dem Herunterfahren des Systems bereitgestellt wird. Bei einem Ruhezustandsübergang wird der gesamte Inhalt des Arbeitsspeichers in eine Datei auf dem primären Systemlaufwerk, der *Ruhezustandsdatei,* geschrieben. Dadurch wird der Zustand des Betriebssystems, der Anwendungen und der Geräte beibehalten. Wenn der kombinierte Speicherbedarf den gesamten physischen Speicher belegt, muss die Ruhezustandsdatei groß genug sein, um sicherzustellen, dass Speicherplatz vorhanden ist, um den gesamten Inhalt des physischen Speichers zu speichern. Da Daten in einen nicht flüchtigen Speicher geschrieben werden, muss DRAM keine Selbstaktualisierung beibehalten und kann ausgeschaltet werden. Dies bedeutet, dass der Energieverbrauch des Ruhezustands sehr gering ist, fast identisch mit dem Ausschalten.
 
-Während eines vollständigen herunter Fahrens und Starts (S5) wird die gesamte Benutzersitzung beim nächsten Start abgebrochen und neu gestartet. Im Gegensatz dazu wird die Benutzersitzung während eines Ruhe Zustands (S4) geschlossen, und der Benutzer Zustand wird gespeichert.
+Während des vollständigen Herunterfahrens und Startens (S5) wird die gesamte Benutzersitzung beim nächsten Start heruntergefahren und neu gestartet. Im Gegensatz dazu wird während eines Ruhezustands (S4) die Benutzersitzung geschlossen und der Benutzerzustand gespeichert.
 
-### <a name="fast-startup-reduced-hibernation-file"></a>Schneller Start (reduzierte Ruhe Zustands Datei)
+### <a name="fast-startup-reduced-hibernation-file"></a>Schneller Start (reduzierte Ruhezustandsdatei)
 
-Beim *schnellen Start* handelt es sich um eine Art von Herunterfahren, bei der eine Ruhe Zustands Datei zum Beschleunigen des nachfolgenden Starts verwendet wird. Während dieser Art des herunter Fahrens wird der Benutzer vor der Erstellung der Ruhe Zustands Datei abgemeldet. Der schnelle Start ermöglicht eine kleinere Ruhe Zustands Datei und eignet sich besser für Systeme mit weniger Speicherfunktionen. Weitere Informationen finden Sie unter Ruhe Zustands [Dateitypen](#hibernation-file-types).
+*Schneller Start* ist eine Art des Herunterfahrens, die eine Ruhezustandsdatei verwendet, um den nachfolgenden Start zu beschleunigen. Während dieses Herunterfahrens wird der Benutzer abgemeldet, bevor die Ruhezustandsdatei erstellt wird. Der schnelle Start ermöglicht eine kleinere Ruhezustandsdatei, die besser für Systeme mit weniger Speicherfunktionen geeignet ist. Weitere Informationen finden Sie unter [Ruhezustandsdateitypen.](#hibernation-file-types)
 
-Wenn Sie den schnellen Start verwenden, wird dem Benutzer das System so angezeigt, als ob das vollständige Herunterfahren (S5) erfolgt ist, obwohl das System tatsächlich S4 durchlaufen hat. Dazu gehört auch die Reaktion des Systems auf Geräte Aktivierungs Alarme.
+Bei Verwendung des schnellen Starts sieht das System für den Benutzer so aus, als ob ein vollständiges Herunterfahren (S5) erfolgt wäre, obwohl das System tatsächlich S4 durchgegangen ist. Dies schließt ein, wie das System auf Geräteaktivierungsalarm reagiert.
 
-Beim schnellen Start werden Benutzersitzungen protokolliert, aber der Inhalt des Kernels (Sitzung 0) wird auf die Festplatte geschrieben. Dies ermöglicht einen schnelleren Start.
+Beim schnellen Start werden Benutzersitzungen abgemeldet, aber der Inhalt des Kernels (Sitzung 0) wird auf die Festplatte geschrieben. Dies ermöglicht einen schnelleren Start.
 
-Um Programm gesteuert ein schnelles Herunterfahren im Startmenü zu initiieren, müssen Sie die Funktion [**InitiateShutdown**](/windows/desktop/api/winreg/nf-winreg-initiateshutdowna) mit dem **\_ Hybrid** -Flag Herunterfahren oder der [**ExitWindowsEx**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) -Funktion mit dem EWX-Flag für **\_ Hybrid \_ Shutdown** Herunterfahren abrufen.
+Um programmgesteuert ein schnelles Herunterfahren im Startstil zu initiieren, rufen Sie die [**InitiateShutdown-Funktion**](/windows/desktop/api/winreg/nf-winreg-initiateshutdowna) mit dem **SHUTDOWN \_ HYBRID-Flag** oder die [**ExitWindowsEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) mit dem **EWX \_ HYBRID \_ SHUTDOWN-Flag** auf.
 
 > [!Note]  
-> Ab Windows 8 ist der schnelle Start der Standard Übergang, wenn ein System heruntergefahren wird. Ein vollständiges Herunterfahren (S5) erfolgt, wenn ein Systemneustart angefordert wird (oder eine Anwendung eine Shutdown-API aufruft).
+> Ab Windows 8 schnelles Starten der Standardübergang, wenn ein Herunterfahren des Systems angefordert wird. Ein vollständiges Herunterfahren (S5) tritt auf, wenn ein Systemneustart angefordert wird (oder eine Anwendung eine Herunterfahren-API aufruft).
 
  
 
-### <a name="entering-hibernation"></a>Wechsel in den Ruhezustand
+### <a name="entering-hibernation"></a>Eintritt in den Ruhezustand
 
-Wenn eine Ruhe Zustands Anforderung erfolgt, treten die folgenden Schritte auf, wenn das System in den Ruhezustand wechselt:
+Wenn eine Ruhezustandsanforderung erfolgt, erfolgen die folgenden Schritte, wenn das System in den Ruhezustand eintritt:
 
-1.  Apps und Dienste werden benachrichtigt
+1.  Apps und Dienste werden benachrichtigt.
 2.  Treiber werden benachrichtigt
-3.  Benutzer-und Systemstatus werden in einem komprimierten Format auf dem Datenträger gespeichert.
-4.  Die Firmware wird benachrichtigt.
+3.  Der Benutzer- und Systemstatus wird in einem komprimierten Format auf dem Datenträger gespeichert.
+4.  Firmware wird benachrichtigt
 
 > [!Note]  
 > Ab Windows 8 werden alle Kerne im System verwendet, um die Daten im Arbeitsspeicher zu komprimieren und auf den Datenträger zu schreiben.
 
  
 
-Um einen Ruhe Zustands Wechsel Programm gesteuert zu initiieren, müssen Sie die Funktion [**SetSuspendState**](/windows/desktop/api/PowrProf/nf-powrprof-setsuspendstate) aufrufen.
+Um programmgesteuert einen Ruhezustandsübergang zu initiieren, rufen Sie die [**SetSuspendState-Funktion**](/windows/desktop/api/PowrProf/nf-powrprof-setsuspendstate) auf.
 
 ### <a name="resuming-from-hibernation"></a>Fortsetzen aus dem Ruhezustand
 
-Wenn ein System aus dem Ruhezustand wieder aufgenommen wird.
+Wenn ein System aus dem Ruhezustand fortgesetzt wird.
 
-Wenn ein System eingeschaltet ist, treten die folgenden Schritte auf, wenn das System aus dem Ruhezustand wieder aufgenommen wird.
+Wenn ein System eingeschaltet wird, erfolgen die folgenden Schritte, wenn das System aus dem Ruhezustand fortgesetzt wird.
 
-1.  System Beitrag
-2.  Der System Arbeitsspeicher wird dekomprimiert und aus der Ruhe Zustands Datei wieder hergestellt.
-3.  Geräte Initialisierung
-4.  Treiber werden in dem Zustand wieder hergestellt, in dem Sie vor dem Ruhezustand waren.
-5.  Dienste werden in dem Zustand wieder hergestellt, in dem Sie vor dem Ruhezustand waren.
-6.  System wird für die Anmeldung verfügbar.
+1.  System-POST
+2.  Der Systemspeicher wird dekomprimiert und aus der Ruhezustandsdatei wiederhergestellt.
+3.  Gerätein initialisierung
+4.  Treiber werden in dem Zustand wiederhergestellt, in dem sie sich vor dem Ruhezustand befinden.
+5.  Dienste werden in dem Zustand wiederhergestellt, in dem sie sich vor dem Ruhezustand befinden.
+6.  Das System wird für die Anmeldung verfügbar.
 
-Eine Wiederaufnahme aus dem Ruhezustand beginnt mit einem System Beitrag, der mit dem Herunterfahren von S5 vergleichbar ist. Der Betriebssystem-Start-Manager bestimmt, dass eine Fortsetzung aus dem Ruhezustand erforderlich ist, indem eine gültige Ruhe Zustands Datei erkannt wird. Anschließend wird das System angewiesen, den Vorgang fortzusetzen und den Inhalt des Arbeitsspeichers und aller Architektur Register wiederherzustellen. Im Fall einer Fortsetzung aus dem Ruhezustand wird der Inhalt des System Arbeitsspeichers vom Datenträger eingelesen, entpackt und wieder hergestellt, wobei das System in den Zustand versetzt wird, in dem es sich in dem Ruhezustand befand. Nachdem der Arbeitsspeicher wieder hergestellt wurde, werden die Geräte neu gestartet, der Computer wechselt in den Zustand "wird ausgeführt", der für die Anmeldung bereit ist.
+Ein Fortsetzen aus dem Ruhezustand beginnt mit einem Post-System, das einem Herunterfahren von S5 ähnelt. Der Start-Manager des Betriebssystems stellt fest, dass eine Fortsetzung des Ruhezustands erforderlich ist, indem eine gültige Ruhezustandsdatei erkannt wird. Anschließend wird das System zum Fortsetzen des Systems und zum Wiederherstellen des Inhalts des Arbeitsspeichers und aller Architekturregister angedrungen. Bei einer Wiederaufnahme aus dem Ruhezustand wird der Inhalt des Systemspeichers vom Datenträger zurückgelesen, dekomprimiert und wiederhergestellt, und das System wird in den zustandsbewegten Zustand zurückgelesen, in dem es sich im Ruhezustand befing. Nach der Wiederherstellung des Arbeitsspeichers werden die Geräte neu gestartet, und der Computer wird wieder ausgeführt und kann sich anmelden.
 
 > [!Note]  
-> Während einer Wiederaufnahme aus dem Ruhezustand werden Treiber und Dienste benachrichtigt, aber nicht neu gestartet. Sie werden nur in dem Zustand wieder hergestellt, in dem Sie vor dem Ruhezustand waren.
+> Während einer Wiederaufnahme des Ruhezustands werden Treiber und Dienste benachrichtigt, aber nicht neu gestartet. Sie werden nur in dem Zustand wiederhergestellt, in dem sie sich vor dem Ruhezustand befinden.
 
  
 
-### <a name="hibernation-file-types"></a>Ruhe Zustands Dateitypen
+### <a name="hibernation-file-types"></a>Ruhezustandsdateitypen
 
-Ruhe Zustands Dateien werden für den hybriden Standbymodus, den schnellen Start und den Standard-Ruhezustand (weiter oben beschrieben) verwendet. Es gibt zwei Typen, die sich nach Größe unterscheiden, eine vollständige und reduzierte Größe der Ruhe Zustands Datei. Nur beim schnellen Start kann eine reduzierte Ruhe Zustands Datei verwendet werden.
+Ruhezustandsdateien werden für hybriden Ruhezustand, schnellen Start und Standard-Ruhezustand (oben beschrieben) verwendet. Es gibt zwei Typen, die sich nach Größe unterscheiden: eine vollständige und eine reduzierte Ruhezustandsdatei. Nur beim schnellen Start kann eine reduzierte Ruhezustandsdatei verwendet werden.
 
 
 
-| Ruhe Zustands Dateityp | Standardgröße           | Unterstützt...                           |
+| Ruhezustandsdateityp | Standardgröße           | Unterstützt...                           |
 |-----------------------|------------------------|---------------------------------------|
-| Vollständig                  | 40% des physischen Speichers | Ruhezustand, hybride Standbymodus, schneller Start |
-| Gerten               | 20% des physischen Arbeitsspeichers | schneller Start                          |
+| Vollständig                  | 40 % des physischen Speichers | Ruhezustand, Hybridmodus, schneller Start |
+| Reduziert               | 20 % des physischen Speichers | Schneller Start                          |
 
 
 
  
 
-Um den Typ der verwendeten Ruhe Zustands Datei zu überprüfen oder zu ändern, führen Sie das **powercfg.exe** -Hilfsprogramm aus. In den folgenden Beispielen wird veranschaulicht, wie. Wenn Sie hierzu weitere Informationen benötigen, führen Sie `powercfg /? hibernate` aus.
+Um den Typ der verwendeten Ruhezustandsdatei zu überprüfen oder zu ändern, führen Sie das **hilfsprogrammpowercfg.exe** aus. In den folgenden Beispielen wird dies veranschaulicht. Wenn Sie hierzu weitere Informationen benötigen, führen Sie `powercfg /? hibernate` aus.
 
 
 
-|                                                                         |                                                                                                                                                                                                                                                                                                                                                    |
+| Beispiel                                                                        | Beschreibung                                                                                                                                                                                                                                                                                                                                                   |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beispiel                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                        |
-| `powercfg /a`<br/>                                                | **Überprüfen Sie den Dateityp des Ruhe Zustands.** Wenn eine vollständige Ruhe Zustands Datei verwendet wird, ist der Status "Ruhezustand" eine verfügbare Option. Wenn eine reduzierte Ruhe Zustands Datei verwendet wird, werden die Ergebnisse als Ruhezustand nicht unterstützt. Wenn das System nicht über eine Ruhe Zustands Datei verfügt, werden die Ergebnisse als "Ruhezustand" nicht aktiviert.<br/> |
-| `powercfg /h /type full`<br/>                                     | **Ändern Sie den Dateityp für den Ruhezustand in vollständig.** Dies wird nicht für Systeme mit weniger als 32 GB Speicher empfohlen.<br/>                                                                                                                                                                                                                        |
-| `powercfg /h /type reduced`<br/>                                  | **Ändern Sie den Dateityp für den Ruhezustand in reduziert.** Wenn der Befehl "der Parameter ist falsch" zurückgibt, sehen Sie sich das folgende Beispiel an.<br/>                                                                                                                                                                                                        |
-| `powercfg /h /size 0`<br/> `powercfg /h /type reduced`<br/> | **Ändern Sie den Dateityp für den Ruhezustand in "reduziert"** Wenn die Ruhe Zustands Datei auf eine benutzerdefinierte Größe größer als 40% festgelegt ist, müssen Sie zuerst die Größe der Datei auf NULL festlegen. Wiederholen Sie dann die reduzierte Konfiguration.<br/>                                                                                                                       |
+| `powercfg /a`<br/>                                                | **Überprüfen Sie den Dateityp für den Ruhezustand.** Wenn eine vollständige Ruhezustandsdatei verwendet wird, ist der Ergebniszustand, dass der Ruhezustand eine verfügbare Option ist. Wenn eine reduzierte Ruhezustandsdatei verwendet wird, wird in den Ergebnissen der Ruhezustand als nicht unterstützt angezeigt. Wenn das System über keine Ruhezustandsdatei verfügt, wird in den Ergebnissen angezeigt, dass der Ruhezustand nicht aktiviert wurde.<br/> |
+| `powercfg /h /type full`<br/>                                     | **Ändern Sie den Dateityp für den Ruhezustand in Vollständig.** Dies wird auf Systemen mit weniger als 32 GB Speicher nicht empfohlen.<br/>                                                                                                                                                                                                                        |
+| `powercfg /h /type reduced`<br/>                                  | **Ändern Sie den Dateityp für den Ruhezustand in Reduziert.** Wenn der Befehl "der Parameter ist falsch" zurückgibt, sehen Sie sich das folgende Beispiel an.<br/>                                                                                                                                                                                                        |
+| `powercfg /h /size 0`<br/> `powercfg /h /type reduced`<br/> | **Versuchen Sie erneut, den Dateityp für den Ruhezustand in reduziert zu ändern.** Wenn die Ruhezustandsdatei auf eine benutzerdefinierte Größe größer als 40 % festgelegt ist, müssen Sie zuerst die Größe der Datei auf 0 (null) festlegen. Wiederholen Sie dann die reduzierte Konfiguration.<br/>                                                                                                                       |
 
 
 
  
 
-## <a name="soft-off-state-s5"></a>Soft-Off-Zustand (S5)
+## <a name="soft-off-state-s5"></a>Soft Off-Zustand (S5)
 
-Der weiche Zustand ist, wenn das System ohne eine Ruhe Zustands Datei vollständig heruntergefahren wird. Soft off wird auch als "vollständiges Herunterfahren" bezeichnet. Während eines vollständigen herunter Fahrens und Starts wird die gesamte Benutzersitzung beim nächsten Start abgebrochen und neu gestartet. Folglich dauert ein Start/Start mit diesem Zustand erheblich länger als S1-S4. Ein vollständiges Herunterfahren (S5) erfolgt, wenn ein Systemneustart angefordert wird (oder eine Anwendung eine Shutdown-API aufruft).
+Der Soft off-Zustand ist , wenn das System ohne Eine Ruhezustandsdatei vollständig heruntergefahren wird. Soft off wird auch als "vollständiges Herunterfahren" bezeichnet. Während des vollständigen Herunterfahrens und Startens wird die gesamte Benutzersitzung beim nächsten Start heruntergefahren und neu gestartet. Folglich dauert ein Start/Start aus diesem Zustand erheblich länger als S1-S4. Ein vollständiges Herunterfahren (S5) tritt auf, wenn ein Systemneustart angefordert wird (oder eine Anwendung eine Herunterfahren-API aufruft).
 
-## <a name="mechanical-off-state-g3"></a>Zustand "mechanisch ausgeschaltet" (G3)
+## <a name="mechanical-off-state-g3"></a>Ausschaltzustand (G3)
 
-In diesem Zustand ist das System vollständig ausgeschaltet und beansprucht keine Stromversorgung. Das System wird erst nach einem vollständigen Neustart wieder in den Arbeitszustand zurückversetzt.
+In diesem Zustand ist das System vollständig ausgeschaltet und verbraucht keine Stromversorgung. Das System kehrt erst nach einem vollständigen Neustart in den Betriebszustand zurück.
 
-## <a name="wake-on-lan-behavior"></a>Wake-on-LAN-Verhalten
+## <a name="wake-on-lan-behavior"></a>Wake-On-LAN-Verhalten
 
-Die Funktion Wake-on-LAN (WOL) aktiviert den Computer in einem niedrigen Energiezustand, wenn ein Netzwerkadapter ein WOL-Ereignis erkennt (in der Regel ein speziell konstruiertes Ethernet-Paket).
+Das Wake-On-LAN-Feature (WAKE) weckt den Computer aus einem niedrigen Energiezustand, wenn ein Netzwerkadapter ein WAKE-Ereignis erkennt (in der Regel ein speziell konstruiertes Ethernet-Paket).
 
-WOL wird aus dem Standbymodus (S3) oder Ruhezustand (S4) unterstützt. Dies wird nicht unterstützt, wenn der schnelle Start oder das weiche Herunterfahren (S5) beendet wird. NICs sind in diesen Zuständen nicht für die Aktivierung aktiviert, da die Benutzer nicht erwarten, dass Ihre Systeme selbst aktiviert werden.
+NAT wird vom Ruhezustand (S3) oder Ruhezustand (S4) unterstützt. Dies wird beim schnellen Start oder beim Herunterfahren (S5) nicht unterstützt. NiCs sind in diesen Zuzuständen nicht aktivierungserweckt, da Benutzer nicht erwarten, dass ihre Systeme selbst reaktivieren.
 
 > [!Note]  
-> WOL wird von Soft Off (S5) nicht offiziell unterstützt. Allerdings unterstützt das BIOS auf einigen Systemen möglicherweise die Aufrüsten von NICs für Wake-on, auch wenn Windows nicht an dem Prozess beteiligt ist.
+> OFF (Soft Off, S5) wird offiziell nicht unterstützt. Das BIOS auf einigen Systemen unterstützt jedoch möglicherweise das Arming von NICs für die Aktivierung, obwohl Windows nicht am Prozess beteiligt ist.
 
  
 
@@ -230,5 +229,5 @@ WOL wird aus dem Standbymodus (S3) oder Ruhezustand (S4) unterstützt. Dies wird
 
 <dl> <dt>
 
-[Informationen zur Energie Verwaltung](about-power-management.md)
+[Informationen zur Energieverwaltung](about-power-management.md)
 </dt> </dl>

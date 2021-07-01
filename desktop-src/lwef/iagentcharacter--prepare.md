@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter-Vorbereitung
-description: Iagentcharacter-Vorbereitung
+title: IAgentCharacter Prepare
+description: IAgentCharacter Prepare
 ms.assetid: e016039f-a0b1-4ae9-bff6-7212b02c1ad8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3eebee8d2ea99c8782e9506e0e4a812cfb277487
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b383bf10330934379990693b75fe2908a432f8d5
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038956"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119875"
 ---
-# <a name="iagentcharacterprepare"></a>Iagentcharacter::P repare
+# <a name="iagentcharacterprepare"></a>IAgentCharacter::P repare
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Prepare(
@@ -26,22 +26,22 @@ HRESULT Prepare(
 
 Ruft Animationsdaten für ein Zeichen ab.
 
--   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war. Wenn die Funktion zurückgibt, enthält *pdwreqid* die ID der Anforderung.
+-   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war. Wenn die Funktion zurückgegeben wird, enthält *pdwReqID* die ID der Anforderung.
 
 <dl> <dt>
 
 <span id="dwType"></span><span id="dwtype"></span><span id="DWTYPE"></span>*dwType*
 </dt> <dd>
 
-Ein Wert, der den zu ladenden Animations Datentyp angibt, der eines der folgenden sein muss:
+Ein -Wert, der den zu ladenden Animationsdatentyp angibt, der einer der folgenden Sein muss:
 
 
 
-| Wert                                                           | BESCHREIBUNG                                                |
+| Wert                                                           | Beschreibung                                                |
 |-----------------------------------------------------------------|------------------------------------------------------------|
-| Animation für " **Ganzzahl ohne Vorzeichen Short** **Prepare" \_ = 0;**<br/> | Die Animationsdaten eines Zeichens.                              |
-| **Ganzzahl ohne Vorzeichen Short** **Prepare \_ State = 1;**<br/>     | Die Zustandsdaten eines Zeichens.                                  |
-| Konstante " **Ganzzahl ohne Vorzeichen Short** **Prepare \_ Wave = 2** "<br/>       | Die Audiodatei eines Zeichens (. WAV oder. Lwv) für die gesprochene Ausgabe. |
+| **const unsigned short** **PREPARE ANIMATION = \_ 0;**<br/> | Animationsdaten eines Zeichens.                              |
+| **const unsigned short** **PREPARE STATE = \_ 1;**<br/>     | Zustandsdaten eines Zeichens.                                  |
+| **const unsigned short** **PREPARE WAVE = \_ 2**<br/>       | Die Sounddatei eines Zeichens (. WAV oder . LWV) für die gesprochene Ausgabe. |
 
 
 
@@ -49,66 +49,66 @@ Ein Wert, der den zu ladenden Animations Datentyp angibt, der eines der folgende
 
 </dd> <dt>
 
-<span id="bszName"></span><span id="bszname"></span><span id="BSZNAME"></span>*bszname*
+<span id="bszName"></span><span id="bszname"></span><span id="BSZNAME"></span>*bszName*
 </dt> <dd>
 
 Der Name der Animation oder des Zustands.
 
-Der Animations Name basiert auf dem, der für das Zeichen definiert wurde, als es mit dem Microsoft-Agent-Zeichen-Editor gespeichert wurde.
+Der Animationsname basiert auf dem Namen, der für das Zeichen definiert wurde, als es mit dem Microsoft-Agent-Zeichen-Editor gespeichert wurde.
 
-Für Zustände kann der Wert eines der folgenden sein:
+Für Status kann der Wert einer der folgenden Sein:
 
 
 
-|                      |                                                 |
+|                      | Beschreibung                                     |
 |----------------------|-------------------------------------------------|
-| **"Gesturung"**      | Zum Abrufen aller **gestörenden** Zustands Animationen. |
-| **"Gesturingdown"**  | Zum Abrufen von **gesturingdown** -Animationen.       |
-| **"Gesturingleft"**  | Zum Abrufen von **gesturingleft** -Animationen.       |
-| **"Gesturingright"** | Zum Abrufen von **gesturingright** -Animationen.      |
-| **"Gesturingup"**    | Zum Abrufen von **gesturingup** -Animationen.         |
-| **Zieher**         | Zum **Abrufen der Animationen zum Ausblenden** des Zustands.    |
-| **Sinn**        | Zum Abrufen der **hörzustands** Animationen.   |
-| **Leerlauf**         | , Um alle **idck** State-Animationen abzurufen.    |
-| **"IdlingLevel1"**   | Zum Abrufen aller **IdlingLevel1** -Animationen.    |
-| **"IdlingLevel2"**   | Zum Abrufen aller **IdlingLevel2** -Animationen.    |
-| **"IdlingLevel3"**   | Zum Abrufen aller **IdlingLevel3** -Animationen.    |
-| **Raum**      | **Zum Abrufen der Animation** des Empfangs Zustands. |
-| **Verschieben**         | Zum Abrufen aller **beweglicher** Zustands Animationen.    |
-| **""**     | , Um alle Verschieb **enden** Animationen abzurufen.          |
-| **"Wvingleft"**     | Zum Abrufen aller Animationen von " **wvingleft** ".      |
-| **"Wvingright"**    | , Um alle **wvingright** -Animationen abzurufen.     |
-| **"Wvingup"**       | Zum Abrufen aller " **wvingup** "-Animationen.        |
-| **Zeigten**        | Zum Abrufen der **Anzeige** Zustands Animationen.   |
-| **Isch**       | Zum Abrufen der **sprach** Zustands Animationen.  |
+| **"Gesturing"**      | So rufen Sie alle **Gesturingzustandsanimationen** ab. |
+| **"GesturingDown"**  | So rufen Sie **GesturingDown-Animationen** ab.       |
+| **"GesturingLeft"**  | So rufen Sie **GesturingLeft-Animationen** ab.       |
+| **"GesturingRight"** | So rufen Sie **GesturingRight-Animationen** ab.      |
+| **"GesturingUp"**    | So rufen Sie **GesturingUp-Animationen** ab.         |
+| **"Ausblenden"**         | So rufen Sie die Animationen des **Ausblendenszustands** ab.    |
+| **"Hörvermögen"**        | So rufen  Sie die Hörzustandsanimationen ab.   |
+| **"Idling"**         | So rufen  Sie alle Idling-Zustandsanimationen ab.    |
+| **"IdlingLevel1"**   | So rufen Sie alle **IdlingLevel1-Animationen** ab.    |
+| **"IdlingLevel2"**   | So rufen Sie alle **IdlingLevel2-Animationen** ab.    |
+| **"IdlingLevel3"**   | So rufen Sie alle **IdlingLevel3-Animationen** ab.    |
+| **"Lauschen"**      | So rufen  Sie die Überwachungzustandsanimationen ab. |
+| **"Moving" (Verschieben)**         | So rufen Sie alle **Animationen des Bewegungszustands** ab.    |
+| **"MovingDown"**     | So rufen Sie alle **Moving-Animationen** ab.          |
+| **"MovingLeft"**     | So rufen Sie alle **MovingLeft-Animationen** ab.      |
+| **"MovingRight"**    | So rufen Sie alle **MovingRight-Animationen** ab.     |
+| **"MovingUp"**       | So rufen Sie alle **MovingUp-Animationen** ab.        |
+| **"Showing" (Wird angezeigt)**        | So rufen Sie die **Zustandsanimationen anzeigen** ab.   |
+| **"Sprechen"**       | So rufen  Sie die Sprechzustandsanimationen ab.  |
 
 
 
  
 
-Damit. WAV-Dateien, legen Sie *bszname* auf die URL oder die Datei Spezifikation für fest. WAV-Datei. Wenn die Spezifikation nicht fertig ist, wird Sie als relativ zu der in der [**Load**](https://www.bing.com/search?q=**Load**) -Methode verwendeten Spezifikation interpretiert.
+Für. WAV-Dateien: Legen Sie *bszName* auf die URL oder Dateispezifikation für fest. WAV-Datei. Wenn die Spezifikation nicht vollständig ist, wird sie als relativ zur Spezifikation interpretiert, die in der [**Load-Methode**](https://www.bing.com/search?q=**Load**) verwendet wird.
 
 </dd> <dt>
 
-<span id="bQueue"></span><span id="bqueue"></span><span id="BQUEUE"></span>*bqueue*
+<span id="bQueue"></span><span id="bqueue"></span><span id="BQUEUE"></span>*bQueue*
 </dt> <dd>
 
-Ein boolescher Wert, der angibt, ob der Server die [**Vorbereitungs**](/windows/desktop/lwef/iagentcharacter--prepare) Anforderung anfügt. **True** fügt die Anforderung in die Warteschlange ein und bewirkt, dass alle darauf folgenden Animations Anforderungen warten, bis die von ihr festgelegten Animationsdaten geladen sind. **False** Ruft die Animationsdaten asynchron ab.
+Ein boolescher Wert, der angibt, ob der Server die [**Prepare-Anforderung**](/windows/desktop/lwef/iagentcharacter--prepare) in die Warteschlange stellt. **True** stellt die Anforderung in die Warteschlange und bewirkt, dass jede darauf folgende Animationsanforderung wartet, bis die von ihr angegebenen Animationsdaten geladen werden. **False** ruft die Animationsdaten asynchron ab.
 
 </dd> <dt>
 
-<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwreqid*
+<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwReqID*
 </dt> <dd>
 
-Adresse einer Variablen, die die ID der [**Vorbereitungs**](/windows/desktop/lwef/iagentcharacter--prepare) Anforderung empfängt.
+Adresse einer Variablen, die die Anforderungs-ID [**vorbereiten**](/windows/desktop/lwef/iagentcharacter--prepare) empfängt.
 
 </dd> </dl>
 
-Wenn Sie ein Zeichen mithilfe des HTTP-Protokolls (ein-Zeichen) laden. ACF-Datei). Sie müssen die [**Vorbereitungs**](/windows/desktop/lwef/iagentcharacter--prepare) Methode zum Abrufen von Animationsdaten verwenden, bevor Sie die Animation wiedergeben können. Diese Methode kann nicht verwendet werden, wenn Sie das Zeichen mithilfe des UNC-Protokolls (eines geladen haben. ACS-Datei). Sie können auch keine HTTP-Daten für ein Zeichen abrufen, indem Sie **vorbereiten** verwenden, wenn Sie dieses Zeichen mithilfe des UNC-Protokolls () geladen haben. ACS-Zeichen Datei).
+Wenn Sie ein Zeichen mithilfe des HTTP-Protokolls laden (ein . ACF-Datei), müssen Sie die [**Prepare-Methode**](/windows/desktop/lwef/iagentcharacter--prepare) verwenden, um Animationsdaten abzurufen, bevor Sie die Animation wiedergeben können. Sie können diese Methode nicht verwenden, wenn Sie das Zeichen mit dem UNC-Protokoll (einem ) geladen haben. ACS-Datei). Sie können mit **Prepare** auch keine HTTP-Daten für ein Zeichen abrufen, wenn Sie dieses Zeichen mithilfe des UNC-Protokolls geladen haben (. ACS-Zeichendatei).
 
-Die mit der [**Prepare**](/windows/desktop/lwef/iagentcharacter--prepare) -Methode abgerufenen Animations-oder Audiodaten werden im Cache des Browsers gespeichert. Bei nachfolgenden Aufrufen wird der Cache überprüft. wenn die Animationsdaten bereits vorhanden sind, lädt das-Steuerelement die Daten direkt aus dem Cache. Nach dem Laden können die Animations-oder Audiodaten mit den Methoden " [**abspielen**](/windows/desktop/lwef/iagentcharacter--play) " und " [**Sprache**](/windows/desktop/lwef/iagentcharacter--speak) " wiedergegeben werden.
+Mit der [**Prepare-Methode**](/windows/desktop/lwef/iagentcharacter--prepare) abgerufene Animations- oder Sounddaten werden im Cache des Browsers gespeichert. Nachfolgende Aufrufe überprüfen den Cache, und wenn die Animationsdaten bereits vorhanden sind, lädt das Steuerelement die Daten direkt aus dem Cache. Nach dem Laden können die Animations- oder Sounddaten mit den [**Methoden Wiedergeben**](/windows/desktop/lwef/iagentcharacter--play) oder [**Sprechen**](/windows/desktop/lwef/iagentcharacter--speak) wiedergegeben werden.
 
-Sie können mehrere Animationen und Zustände angeben, indem Sie Sie durch Kommas trennen. Es ist jedoch nicht möglich, Typen in derselben [**Prepare**](/windows/desktop/lwef/iagentcharacter--prepare) -Anweisung zu mischen.
+Sie können mehrere Animationen und Zustände angeben, indem Sie sie durch Kommas trennen. Sie können Typen jedoch nicht in derselben [**Prepare-Anweisung**](/windows/desktop/lwef/iagentcharacter--prepare) mischen.
 
  
 

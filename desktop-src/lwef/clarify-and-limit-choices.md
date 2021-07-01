@@ -1,93 +1,81 @@
 ---
-title: Optionen verdeutlichen und einschränken
-description: Optionen verdeutlichen und einschränken
+title: Verdeutlichen und Einschränken von Auswahlmöglichkeiten
+description: Verdeutlichen und Einschränken von Auswahlmöglichkeiten
 ms.assetid: 4ec3ca01-231b-4a45-aae1-fba5b2ba0033
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a43ed5f95c2e516f304ffa28bcca1d9fd67a9169
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 953001d706089244d6366c8dab0cdb580a2d72ca
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341878"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118475"
 ---
-# <a name="clarify-and-limit-choices"></a>Optionen verdeutlichen und einschränken
+# <a name="clarify-and-limit-choices"></a>Verdeutlichen und Einschränken von Auswahlmöglichkeiten
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Die Spracherkennung wird erfolgreicher, wenn der Benutzer den Bereich der passenden Grammatik lernt. Es funktioniert auch besser, wenn der Bereich der Auswahl begrenzt ist. Wenn die Eingabe weniger offen ist, desto besser kann die Sprach-Engine die Eingabe der akustischen Informationen analysieren.
+Die Spracherkennung wird erfolgreicher, wenn der Benutzer den Bereich der entsprechenden Grammatik lernt. Es funktioniert auch besser, wenn der Auswahlbereich eingeschränkt ist. Wenn die Eingabe weniger offen ist, desto besser kann die Sprach-Engine die Akustikinformationseingabe analysieren.
 
-Der Microsoft-Agent umfasst mehrere integrierte bereit Stellungen, die den Erfolg der Spracheingabe erhöhen. Das erste ist das Befehlsfenster, das angezeigt wird, wenn der Benutzer sagt: "Befehle Öffnen" oder "Was kann ich sagen?". (oder wenn der Benutzer im Popupmenü des Zeichens das Fenster Befehle Öffnen auswählt). Das Befehlsfenster dient als visuelle Anleitung für die aktive Grammatik der Sprach-Engine. Außerdem werden Erkennungs Fehler verringert, indem nur die Sprachgrammatik der Eingabe aktiven Anwendung und der globalen Befehle des Microsoft-Agents aktiviert wird. Aus diesem Grund gilt die aktive Grammatik der Sprach-Engine für den unmittelbaren Kontext. Weitere Informationen zum Fenster "Befehle" finden Sie unter [Übersicht über die Microsoft-Agent-Programmierschnittstelle](microsoft-agent-programming-interface-overview.md).
+Microsoft Agent umfasst mehrere integrierte Bestimmungen, die den Erfolg der Spracheingabe steigern. Die erste ist das Befehlsfenster, das angezeigt wird, wenn der Benutzer "Befehlsfenster öffnen" oder "Was kann ich sagen?" (oder wenn der Benutzer im Popupmenü des Zeichens Auf Befehlsfenster öffnen auswählt). Das Befehlsfenster dient als visuelle Anleitung für die aktive Grammatik der Sprach-Engine. Außerdem werden Erkennungsfehler reduziert, indem nur die Sprachgrammatik der eingabeaktiven Anwendung und die globalen Befehle von Microsoft Agent aktiviert werden. Daher gilt die aktive Grammatik der Sprach-Engine für den unmittelbaren Kontext. Weitere Informationen zum Befehlsfenster finden Sie unter [Übersicht über die Microsoft Agent-Programmierschnittstelle.](microsoft-agent-programming-interface-overview.md)
 
-Wenn Sie sprach aktivierte Befehle von Microsoft-Agent erstellen, können Sie den Beschriftungs Text, der im Fenster "Befehle" angezeigt wird, sowie den zugehörigen sprach Text (Grammatik), die Wörter, die die Engine für den Abgleich mit diesem Befehl verwenden soll, erstellen. Versuchen Sie immer, Ihre Befehle so unverwechselbar wie möglich zu gestalten. Umso größer der Unterschied zwischen dem Wortlaut der Befehle, insbesondere für den sprach Text, desto wahrscheinlicher ist es, dass die Sprach-Engine zwischen gesprochenen Befehlen unterscheiden und eine genaue Entsprechung bereitstellen kann. Vermeiden Sie auch nur-Wort-oder sehr kurze Befehle. Im Allgemeinen bieten mehr akustische Informationen in einer gesprochenen Äußerung der Engine eine bessere Möglichkeit, eine genaue Übereinstimmung zu erzielen.
+Wenn Sie sprachfähige Microsoft Agent-Befehle erstellen, können Sie den Untertiteltext, der im Befehlsfenster angezeigt wird, sowie dessen Sprachtext (Grammatik) erstellen, d. h. die Wörter, die die Engine zum Abgleichen dieses Befehls verwenden soll. Versuchen Sie immer, Ihre Befehle so unterschiedlich wie möglich zu gestalten. Je größer der Unterschied zwischen der Formulierung von Befehlen ist, insbesondere für den Sprachtext, desto wahrscheinlicher ist die Sprach-Engine in der Lage, zwischen gesprochenen Befehlen zu unterscheiden und eine genaue Übereinstimmung zu liefern. Vermeiden Sie auch Befehle mit nur einem Wort oder sehr kurz. Im Allgemeinen erhalten mehr Akustikinformationen in einer gesprochenen Äußerung der Engine eine bessere Möglichkeit, eine genaue Übereinstimmung zu finden.
 
-Wenn Sie den sprach Text für einen Befehl definieren, stellen Sie eine sinnvolle Vielfalt von Formulierungen bereit. Anforderungen, die das gleiche haben, können wie im folgenden Beispiel veranschaulicht ausgesprochen anders formuliert werden:
+Geben Sie beim Definieren des Sprachtexts für einen Befehl eine sinnvolle Vielzahl von Formulierungen an. Anforderungen, die dasselbe bedeuten, können sehr unterschiedlich formuliert werden, wie im folgenden Beispiel veranschaulicht:
 
-Fügen Sie einige pfeffoni hinzu.
+Fügen Sie einige Paprikaoni hinzu.
 
-Ich möchte einen Pfeffer.
+Ich möchte eine Paprikaoni.
 
-Könnten Sie einige pfeffoni hinzufügen?
+Könnten Sie etwas Paprikaoni hinzufügen?
 
-Pfeffoni, bitte.
+Paprika, bitte.
 
-Mit dem Microsoft-Agent können Sie problemlos Alternativen oder optionale Wörter für die Sprachgrammatik Ihrer Anwendung angeben. Sie schließen Alternative Wörter oder Ausdrücke in Klammern ein, die durch ein vertikales Balken Zeichen getrennt sind. Sie können optionale Wörter definieren, indem Sie Sie zwischen eckigen Klammer Zeichen einschließen. Außerdem können Alternativen oder optionale Wörter geschachtelt werden. Darüber hinaus können Sie eine Ellipse (...) als Platzhalter für ein beliebiges Wort verwenden. Die Verwendung von Ellipsen zu häufig erschwert jedoch möglicherweise die Unterscheidung zwischen verschiedenen Sprachbefehlen durch die Engine. Stellen Sie in jedem Fall immer sicher, dass der sprach Text mindestens ein eindeutiges Wort für jeden nicht optionalen Befehl enthält. In der Regel sollte dies einem Wort oder Wörtern im Beschriftungs Text entsprechen, den Sie definieren, der im Fenster "Befehle" angezeigt wird.
+Mit Microsoft Agent können Sie ganz einfach Alternativen oder optionale Wörter für die Sprachgrammatik für Ihre Anwendung angeben. Sie schließen alternative Wörter oder Ausdrücke zwischen Klammern ein, die durch ein vertikales Balkenzeichen getrennt sind. Sie können optionale Wörter definieren, indem Sie sie zwischen eckigen Klammern umschließen. Sie können auch Alternativen oder optionale Wörter schachteln. Darüber hinaus können Sie auch auslassungszeichen (...) im Sprachtext als Platzhalter für jedes Wort verwenden. Wenn Ellipsen jedoch zu häufig verwendet werden, kann es für die Engine schwieriger sein, zwischen verschiedenen Sprachbefehlen zu unterscheiden. Stellen Sie in jedem Fall sicher, dass Ihr Stimmtext mindestens ein charakteristisches Wort für jeden Befehl enthält, der nicht optional ist. In der Regel sollte dies mit einem Wort oder Wörtern im von Ihnen definierten Beschriftungstext übereinstimmen, der im Befehlsfenster angezeigt wird.
 
-Obwohl Sie Symbole, Interpunktions Zeichen oder Abkürzungen in den Beschriftungs Text einschließen können, sollten Sie Sie im sprach Text vermeiden. Viele Spracherkennungs-Engines können keine Symbole und Abkürzungen verarbeiten, oder Sie können Sie verwenden, um spezielle Eingabeparameter festzulegen. Benennen Sie außerdem Zahlen um. Dadurch wird auch eine zuverlässigere Erkennungs Unterstützung sichergestellt.
+Obwohl Sie Symbole, Interpunktion oder Abkürzungen in Ihren Untertiteltext einblenden können, vermeiden Sie sie in Ihrem Stimmtext. Viele Spracherkennungs-Engines können keine Symbole und Abkürzungen verarbeiten oder sie zum Festlegen spezieller Eingabeparameter verwenden. Geben Sie außerdem Zahlen ein. Dadurch wird auch eine zuverlässigere Erkennungsunterstützung sichergestellt.
 
-Sie können auch direktivenaufforderungen verwenden, um eine offen gegangene Eingabe zu vermeiden. Direktivenaufforderungen verweisen implizit auf die Auswahl oder geben Sie explizit aus, wie in den folgenden Beispielen gezeigt:
+Sie können auch Anweisungseingabeaufforderungen verwenden, um Eingaben mit offenem Ende zu vermeiden. Anweisungsaufforderungen verweisen implizit auf die Optionen oder geben sie explizit an, wie in den folgenden Beispielen gezeigt:
 
 
 
-|                                            |                                                     |
+| Prompt                                           | Auswertung                                                    |
 |--------------------------------------------|-----------------------------------------------------|
-| Was willst du?                          | Zu allgemein, eine geöffnete Anforderung                  |
-| Wählen Sie einen Pizza-Stil oder eine-Zutat aus.        | Gut, wenn Auswahlmöglichkeiten sichtbar sind, aber immer noch allgemein     |
-| Sagen Sie "Hawaiisch", "Chicago" oder "The Works". | Besser, eine explizite Direktive mit bestimmten Optionen |
+| Was willst du?                          | Zu allgemein, eine Anforderung mit offenem Ende                  |
+| Wählen Sie eine Pizzaart oder einen Pizzastil aus.        | Gut, wenn Auswahlmöglichkeiten sichtbar sind, aber trotzdem allgemein     |
+| Sagen Sie "Mayaan", "Chicago" oder "The Works". | Besser, eine explizite Direktive mit bestimmten Optionen |
 
 
 
- 
+ 
 
-Dadurch wird der Benutzer zur Ausgabe eines gültigen Befehls geleitet. Wenn Sie die Wörter oder den Ausdruck vorschlagen, ist es wahrscheinlicher, dass Sie den erwarteten Wortlaut in der Rückgabe auslösen. Um eine unnatürliche Wiederholung zu vermeiden, ändern Sie den Wortlaut, oder kürzen Sie den ursprünglichen für die nachfolgende Präsentation, da der Benutzer mit dem Eingabe Stil vertraut wird. Direktivenaufforderungen können auch in Situationen verwendet werden, in denen der Benutzer einen Befehl nicht innerhalb eines vorgeschriebenen Zeitraums ausgibt oder einen erwarteten Befehl nicht bereitstellen kann. Direktivenaufforderungen können mithilfe der Sprachausgabe, ihrer Anwendungsschnittstellen oder beides bereitgestellt werden. Der Schlüssel unterstützt den Benutzer dabei, die entsprechenden Optionen zu kennen.
+Dadurch wird der Benutzer auf die Ausgabe eines gültigen Befehls umleiten. Wenn Sie die Wörter oder Ausdrücke vorschlagen, ist es wahrscheinlicher, dass Sie im Gegenzug erwartete Formulierungen erhüren. Um unnatürliche Wiederholungen zu vermeiden, ändern Sie die Formulierung, oder kürzen Sie das Original für die nachfolgende Präsentation, wenn der Benutzer mehr Erfahrung mit dem Eingabestil hat. Anweisungsaufforderungen können auch in Situationen verwendet werden, in denen der Benutzer einen Befehl nicht innerhalb eines vorgeschriebenen Zeitpunkts ausspricht oder einen erwarteten Befehl nicht bereitstellen kann. Anweisungsaufforderungen können über die Sprachausgabe, Ihre Anwendungsschnittstellen oder beides bereitgestellt werden. Der Schlüssel hilft dem Benutzer, die entsprechenden Optionen zu kennen.
 
-Der Wortlaut wirkt sich auf den Erfolg einer Eingabeaufforderung aus. Beispielsweise die Eingabeaufforderung "möchten Sie Ihre Pizza bestellen?" kann entweder die Antwort "yes" oder "No" generieren, kann aber auch eine Bestell Anforderung generieren. Definieren Sie die Eingabe Aufforderungen, um nicht mehrdeutig zu sein oder darauf vorbereitet zu sein, eine größere Vielfalt möglicher Antworten zu akzeptieren. Beachten Sie außerdem die Tendenz, dass Personen die Wörter und Konstrukte imitieren, die Sie hören. Dies kann häufig verwendet werden, um eine entsprechende Antwort wie im folgenden Beispiel zu verwenden:
+Die Formulierung wirkt sich auf den Erfolg einer Eingabeaufforderung aus. Beispiel: "Möchten Sie Ihre Pizza bestellen?" kann entweder eine "Ja"- oder "Nein"-Antwort generieren, aber es kann auch eine Bestellanforderung generiert werden. Definieren Sie Eingabeaufforderungen, um nicht mehrdeutig zu sein oder darauf vorbereitet zu sein, eine größere Anzahl möglicher Antworten zu akzeptieren. Beachten Sie außerdem die Neigung von Menschen, Wörter und Konstrukte zu imitieren, die sie hören. Dies kann häufig verwendet werden, um eine geeignete Antwort zu geben, wie im folgenden Beispiel:
 
+**Benutzer:** Zeige mir alle Nachrichten von Paul.
 
+**Charakter:**
 
-|            |                                 |
-|------------|---------------------------------|
-| User:      | Alle Nachrichten von Paul anzeigen. |
-| Art |                                 |
+Dies ist wahrscheinlicher, um den vollständigen Namen einer der Parteien mit dem möglichen Präfix "I mean" oder "I meant" zu erhalten.
 
+Da Microsoft Agent-Zeichen innerhalb der grafischen Benutzeroberfläche von Microsoft Windows ausgeführt werden, können Sie visuelle Elemente verwenden, um Anweisungseingabeaufforderungen für die Spracheingabe zur Verfügung zu stellen. Beispielsweise können Sie die Zeichengeste in einer Liste von Auswahlmöglichkeiten verwenden und anfordern, dass der Benutzer eine Auswahl auswählt, oder Sie können Optionen in einem Dialogfeld oder Meldungsfenster anzeigen. Dies hat zwei Vorteile: Es schlägt explizit die Wörter vor, die der Benutzer sprechen soll, und bietet dem Benutzer eine alternative Möglichkeit, zu antworten.
 
+Sie können auch andere Interaktionsmodi verwenden, um Benutzern die entsprechende Sprachgrammatik zu empfehlen, wie im folgenden Beispiel gezeigt:
 
- 
+**Benutzer:** (Klickt mit der Maus auf eine Pizzaoption im Stil von ):)
 
-Es ist wahrscheinlicher, dass Sie den vollständigen Namen einer der Parteien mit dem möglichen Präfix "i mean" oder "i mean" lösen.
+**Zeichen:** Pizza im Stil von Einer-/Einer-Pizza.)
 
-Da Microsoft-agentzeichen innerhalb der visuellen Oberfläche von Microsoft Windows funktionieren, können Sie mithilfe von visuellen Elementen Anweisungs Aufforderungen für die Spracheingabe bereitstellen. Beispielsweise können Sie die Zeichen Geste in einer Liste von Optionen anzeigen und anfordern, dass der Benutzer eine Auswahl treffen kann, oder Sie können die Auswahl in einem Dialogfeld oder einem Nachrichtenfenster anzeigen. Dies hat zwei Vorteile: Es werden explizit die Wörter vorgeschlagen, die der Benutzer sprechen soll, und es gibt eine alternative Möglichkeit, um den Benutzer zu antworten.
+**Benutzer:** (Klickt mit der Maus auf die Option Extra Cheese)
 
-Sie können auch andere Interaktionsmöglichkeiten verwenden, um Benutzern eine angemessene Sprachgrammatik vorzuschlagen, wie im folgenden Beispiel gezeigt:
+**Zeichen:** Fügen Sie "Extra Cheese" hinzu.
 
+Ein weiterer wichtiger Faktor bei der erfolgreichen Spracheingabe ist das Aufbereiten des Benutzers, wenn die Engine für die Eingabe bereit ist, da viele Sprach-Engines immer nur eine einzelne Äußerung gleichzeitig zulassen. Microsoft Agent bietet dafür zwei Möglichkeiten. Erstens: Wenn die Soundkarte DIE -Audiokarte unterstützt, generiert Microsoft Agent einen kurzen Ton, um zu signalisieren, wenn der Spracheingabekanal verfügbar ist. Zweitens zeigt das Fenster Trinkgeld lauschen eine entsprechende Texteingabeaufforderung an, wenn das Zeichen (Sprach-Engine) auf Eingaben lausst. Darüber hinaus zeigt dieser Tipp an, was die Engine gehört hat.
 
+ 
 
-|            |                                                     |
-|------------|-----------------------------------------------------|
-| User:      | (Klicken Sie mit der Maus auf eine Pizza-Option im Hawai-Stil) |
-| Art | Pizza im hawaienstil.                               |
-| User:      | (Klickt mit der Maus auf eine zusätzliche Käse Option)         |
-| Art | Fügen Sie "extra Käse" hinzu.                                 |
-
-
-
- 
-
-Ein weiterer wichtiger Faktor bei der erfolgreichen Spracheingabe ist das Durchsuchen des Benutzers, wenn die Engine für die Eingabe bereit ist, da viele sprach Triebwerke jeweils nur eine einzelne Äußerung zulassen. Der Microsoft-Agent bietet zwei Möglichkeiten, dies zu unterstützen. Erstens: Wenn die Soundkarte "MIDI" unterstützt, generiert der Microsoft-Agent einen kurzen Ton, um zu signalisieren, wann der Spracheingabe Kanal verfügbar ist. Im zweiten Fall zeigt das Fenster mit der sprechenden Info eine entsprechende Texteingabe Aufforderung an, wenn das Zeichen (Sprech-Engine) auf Eingaben lauscht. Außerdem wird in diesem Tipp angezeigt, was die Engine gehört.
-
- 
-
- 
+ 
 
 
 

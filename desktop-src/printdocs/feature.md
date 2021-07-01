@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Überprüfen Sie Featureelemente, die eine Liste von Options- und Property-Elementen enthalten, die ein Geräteattribut, eine Auftragsformatierungseinstellung oder ein anderes relevantes Merkmal beschreiben.
 ms.assetid: 5a6553c2-f322-47e2-bbc8-44f6541f1288
 title: Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad89655181563e2da3a8d4841b1d90ecd4e6ac07
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: b28ab7e8cc69ecc9ba3956fbae3c5278baace8cf
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106366568"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120635"
 ---
 # <a name="feature"></a>Funktion
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Ein Feature-Element enthält eine vollständige Liste der Optionen und Eigenschaften Elemente, die ein Geräte Attribut, eine Einstellung für die Auftrags Formatierung oder ein anderes relevantes Merkmal vollständig beschreiben.
+Ein Feature-Element enthält eine vollständige Liste der Option- und Property-Elemente, die ein Geräteattribut, eine Auftragsformatierungseinstellung oder ein anderes relevantes Merkmal vollständig beschreiben.
 
 ## <a name="element-tag"></a>Elementtag
 
@@ -23,23 +23,23 @@ Ein Feature-Element enthält eine vollständige Liste der Optionen und Eigenscha
 
 ## <a name="xml-attributes"></a>XML-Attribute
 
-In der folgenden Tabelle werden die XML-Attribute aufgelistet, die sich möglicherweise auf dieses Element beziehen.
+In der folgenden Tabelle sind die XML-Attribute aufgeführt, die zu diesem Element gehören können.
 
 
 
 | XML-Attribut   | Details                                                                                              |
 |-----------------|------------------------------------------------------------------------------------------------------|
-| name<br/> | Enthält den Namen der Funktion, entweder ein Standard Feature oder eine privat definierte Funktion. <br/> |
+| name<br/> | Enthält den Namen des Features, entweder ein Standardfeature oder ein privat definiertes Feature. <br/> |
 
 
 
  
 
-Weitere Informationen finden Sie im Abschnitt [XML-Attribute](xml-attributes.md) .
+Weitere Informationen finden Sie im Abschnitt [XML-Attribute.](xml-attributes.md)
 
 ## <a name="element-information"></a>Elementinformationen
 
-In der folgenden Tabelle werden die Elemente aufgelistet, die übergeordnete Elemente dieses Elements sein können, die Elemente, die möglicherweise untergeordnete Elemente dieses Elements sind, sowie alle Einschränkungen für das Element selbst.
+In der folgenden Tabelle sind die Elemente aufgeführt, die möglicherweise die untergeordneten Elemente dieses Elements sind, sowie alle Einschränkungen für das Element selbst.
 
 
 
@@ -63,20 +63,20 @@ In der folgenden Tabelle werden die Elemente aufgelistet, die übergeordnete Ele
 <td>Untergeordnete Elemente<br/></td>
 <td>Eine der folgenden Gruppen:<br/>
 <ul>
-<li><em>Feature</em> (0 (null) oder mehr)<br/></li>
-<li><em>Option</em> (mindestens eine)<br/></li>
-<li><em>Property</em> (0 (null) oder mehr)<br/></li>
+<li><em>Feature</em> (null oder mehr)<br/></li>
+<li><em>Option</em> (mindestens eine Option)<br/></li>
+<li><em>Eigenschaft</em> (null oder mehr)<br/></li>
 </ul>
 oder <br/>
 <ul>
-<li><em>Feature</em> (mindestens ein Element)<br/></li>
-<li><em>Option</em> (0 (null) oder mehr)<br/></li>
-<li><em>Property</em> (0 (null) oder mehr)<br/></li>
+<li>Feature (mindestens ein <em>Feature)</em><br/></li>
+<li><em>Option</em> (null oder mehr)<br/></li>
+<li><em>Eigenschaft</em> (null oder mehr)<br/></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>Dieses Element<br/></td>
-<td>Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete Options Elemente, die gleich geordnete Elemente sind, sind zulässig. Doppelte namens Verknüpfungen sind zulässig. <br/></td>
+<td>Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete Optionselemente, die gleichgeordnete Elemente sind, sind zulässig. Doppelte Namensattributverknüpfungen zulässig. <br/></td>
 </tr>
 </tbody>
 </table>
@@ -85,31 +85,31 @@ oder <br/>
 
  
 
-## <a name="configuration-dependencies"></a>Konfigurations Abhängigkeiten
+## <a name="configuration-dependencies"></a>Konfigurationsabhängigkeiten
 
-Funktionselemente verfügen möglicherweise nicht über Konfigurations Abhängigkeiten.
+Featureelemente weisen möglicherweise keine Konfigurationsabhängigkeiten auf.
 
-## <a name="element-usage"></a>Element Verwendung
+## <a name="element-usage"></a>Elementverwendung
 
 ### <a name="relationship-to-xml-attributes"></a>Beziehung zu XML-Attributen
 
-In der Funktions-/Option-Darstellung wird ein Geräte Attribut durch ein Feature-Element dargestellt. Das Device-Attribut wird durch das Name-Attribut im Feature-Element des Geräte Attributs eindeutig identifiziert, wie im folgenden Beispiel gezeigt. In diesem Beispiel ist das Geräte Attribut "Resolution".
+In der Feature-/Optionsdarstellung wird ein Geräteattribut durch ein Feature-Element dargestellt. Das Geräteattribut wird durch das Name-Attribut im Feature-Element des Geräteattributs eindeutig identifiziert, wie im folgenden Beispiel. In diesem Beispiel lautet das Geräteattribut Auflösung.
 
 ``` syntax
 <Feature name="Resolution" />
 ```
 
-Das Druck Schema definiert einen Satz von namens Attributen für bestimmte Funktions Instanzen. Diese namens Attribute dienen zum Identifizieren eines Satzes von vordefinierten Funktions Instanzen, die bestimmten konfigurierbaren Geräte Attributen zugeordnet sind. Diese featureinstanznamen sollten immer dann verwendet werden, wenn Sie die Portabilität Ihres printfunktionalitäten-Dokuments und der von ihnen abgeleiteten PrintTickets erhöhen. Instanzen von Privat definierten Funktionen können eingeführt werden, wenn bestimmte Geräte Attribute keiner der Schema definierten Funktions Instanzen entsprechen. Weitere Informationen über die Syntax für namens Attribute und die Konventionen, die für Schema definierte und privat definierte Namen gelten, finden Sie unter [XML-Attribute](xml-attributes.md).
+Das Druckschema definiert einen Satz von Namensattributen für bestimmte Featureinstanzen. Diese Namensattribute dienen zum Identifizieren eines Satzes vordefinierter Featureinstanzen, die bestimmten konfigurierbaren Geräteattributen zugeordnet sind. Diese Funktionsinstanznamen sollten nach Möglichkeit verwendet werden, da sie die Portabilität Ihres PrintCapabilities-Dokuments und der von ihnen abgeleiteten PrintTickets erhöhen. Privat definierte Featureinstanzen können eingeführt werden, wenn bestimmte Geräteattribute keiner der schemadefinierte Featureinstanzen entsprechen. Informationen zur Syntax für Namensattribute und zu den Konventionen, die für schemadefinierte und private Namen gelten, finden Sie unter [XML-Attribute.](xml-attributes.md)
 
-### <a name="relationship-to-option-element"></a>Beziehung zu Option-Element
+### <a name="relationship-to-option-element"></a>Beziehung zum Option-Element
 
-Jeder der möglichen Zustände wird durch ein Option-Element dargestellt. Jede Options Definition enthält ein oder mehrere ScoredProperty-Elemente, die den dargestellten Zustand eindeutig beschreiben oder charakterisieren. Das Verfahren, das zum Erstellen von Options Definitionen verwendet wird, wird in [options Definitionen](option-definitions.md)beschrieben. Alle Options Elemente, die einem bestimmten Feature-Element zugeordnet sind, befinden sich als untergeordnete Elemente des Feature-Elements.
+Jeder der möglichen Zustände wird durch ein Option-Element dargestellt. Jede Option-Definition enthält mindestens ein ScoredProperty-Element, das den dargestellten Zustand eindeutig beschreibt oder kennzeichnet. Das Verfahren zum Erstellen von Optionsdefinitionen wird unter [Optionsdefinitionen](option-definitions.md)beschrieben. Alle Option-Elemente, die einem bestimmten Feature-Element zugeordnet sind, befinden sich als untergeordnete Elemente des Feature-Elements.
 
-### <a name="subfeatures"></a>Unter Features
+### <a name="subfeatures"></a>Unterfeatures
 
-Das Print Schema-Framework ermöglicht außerdem, dass Featureelemente hierarchisch gruppiert werden. Das heißt, ein Feature-Element kann ein oder mehrere untergeordnete Funktionselemente (unter Funktionen) enthalten. Dies kann nützlich sein, um verwandte Funktionselemente zu organisieren, oder für Featureelemente, die die Aspekte eines Geräte Features steuern. Ein Beispiel hierfür ist ein Gerät, das Heften unterstützt. Ein solches Gerät bietet dem Benutzer möglicherweise die Wahl, wo der Stapel zu suchen ist, z. b. in der oberen linken Ecke oder in der oberen rechten Ecke oder am oberen Rand oder entlang des linken Rands. Die Benutzeroberfläche (User Interface, UI) für dieses Gerät sollte dem Benutzer die höchste verfügbare Auswahl präsentieren können. in diesem Fall ist es in diesem Fall, ob Heften verwendet werden soll. Erst nachdem der Benutzer sich für die Verwendung von Heften entschieden hat, sollte er eine zweite Ebene von Auswahlmöglichkeiten haben. Eine Funktions Hierarchie fügt die zusätzliche Struktur hinzu, die eine solche Benutzeroberfläche ermöglicht. Das Print Schema-Framework ermöglicht es, dass untergeordnete Funktionen über eigene untergeordnete unter Features verfügen, wodurch eine unbegrenzte Schachtelungs Ebene ermöglicht wird.
+Das Druckschemaframework ermöglicht auch die hierarchische Gruppierung von Featureelementen. Das heißt, ein Feature-Element kann selbst ein oder mehrere untergeordnete Feature-Elemente (Unterfeatures) enthalten. Dies kann nützlich sein, um verwandte Featureelemente zu organisieren, oder für Featureelemente, die Aspekte eines Gerätefeatures steuern. Ein Beispiel ist ein Gerät, das Das Stapling unterstützt. Ein solches Gerät kann dem Benutzer die Wahl geben, wo sich die Klammer befindet, z. B. in der oberen linken Ecke, in der oberen rechten Ecke oder am oberen Rand oder am linken Rand. Die Benutzeroberfläche für dieses Gerät sollte dem Benutzer zuerst die höchsten Auswahlmöglichkeiten bieten können. In diesem Fall ist dies die Verwendung von Stapling. Erst nachdem sich der Benutzer für die Verwendung von Stapling entschieden hat, sollte ihm eine zweite Auswahlebene angezeigt werden, also einen festen Standort. Eine Featurehierarchie fügt die zusätzliche Struktur hinzu, die eine solche Benutzeroberfläche ermöglicht. Das Druckschemaframework ermöglicht untergeordneten Features ihre eigenen untergeordneten Features, wodurch eine unbegrenzte Schachtelungsebene ermöglicht wird.
 
-Das Print Schema Framework ermöglicht außerdem, dass Options Elemente auf derselben Ebene wie unter Funktionen angezeigt werden. Das heißt, als gleich geordnete Elemente innerhalb desselben übergeordneten Funktions Elements. Dadurch kann der Benutzer die allgemeine Entscheidung treffen (unabhängig davon, ob das Heften verwendet wird), bevor die Auswahl der untergeordneten Funktion aktiviert wird. In diesem Beispiel enthält das Root-Funktionselement "Staple" möglicherweise zwei Options Elemente: "on" und "Off" sowie eine Unterfunktion mit dem Namen "stapleloation".
+Mit dem Druckschemaframework können Option-Elemente auch auf der gleichen Ebene wie Unterfeatures angezeigt werden. das heißt, als gleichgeordnete Elemente innerhalb desselben übergeordneten Feature-Elements. Dadurch kann der Benutzer die übergeordnete Entscheidung treffen (ob stapling verwendet werden soll), bevor er die Teilfeatureauswahl trifft. In diesem Beispiel enthält das Feature-Stammelement "Klammer" möglicherweise zwei Optionselemente, "On" und "Off", sowie ein Unterfeature mit dem Namen "Location".
 
 ## <a name="example"></a>Beispiel
 
@@ -133,7 +133,7 @@ Das Print Schema Framework ermöglicht außerdem, dass Options Elemente auf ders
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

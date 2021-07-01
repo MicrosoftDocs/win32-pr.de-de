@@ -1,62 +1,62 @@
 ---
-description: Wird von einem inhaltsenabler-Objekt ausgelöst, wenn die Aktion zum Aktivieren von Objekten abgeschlossen ist.
+description: Wird von einem Content Enabler-Objekt ausgelöst, wenn die Objekte, die die Aktion aktivieren, abgeschlossen sind.
 ms.assetid: 5162800c-9c55-40de-be66-a98765324f76
-title: Meenablerabgeschlossene-Ereignis (mfobjects. h)
+title: MEEnablerCompleted-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a74f7379ccc2983abd2327e1250bcf1ca14e688
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f05459a648f6b357fd483baa9fc56809540e64a1
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130745"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119445"
 ---
-# <a name="meenablercompleted-event"></a>Meenablerabgeschlossene-Ereignis
+# <a name="meenablercompleted-event"></a>MEEnablerCompleted-Ereignis
 
-Wird von einem inhaltsenabler-Objekt ausgelöst, wenn die Aktivierungs Aktion des Objekts abgeschlossen ist. Objekte, die die [**imbcontentenabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) -Schnittstelle verfügbar machen, können dieses Ereignis erhöhen. Das-Ereignis wird ausgelöst, wenn eines der folgenden Ereignisse eintritt:
+Wird von einem Content Enabler-Objekt ausgelöst, wenn die Aktivierungsaktion des Objekts abgeschlossen ist. Objekte, die die [**SCHNITTSTELLE "CONTENTContentEnabler"**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) verfügbar machen, können dieses Ereignis auslösen. Das -Ereignis wird ausgelöst, wenn einer der folgenden Ereignisse auftritt:
 
--   Die [**imfcontentenabler:: automaticenable**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-automaticenable) -Methode wird asynchron abgeschlossen.
--   Die Anwendung ruft [**IMF contentenabler:: monitorenable**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-monitorenable)auf, und die Anwendung schließt dann die HTTP POST-Anforderung ab, wie in der **monitorenable** -Methode beschrieben.
+-   Die [**ASYNCHRONOUSContentEnabler::AutomaticEnable-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-automaticenable) wird asynchron abgeschlossen.
+-   Die Anwendung ruft [**DIECONTENTContentEnabler::MonitorEnable**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-monitorenable)auf, und dann schließt die Anwendung die HTTP POST-Anforderung ab, wie in der **MonitorEnable-Methode** beschrieben.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Statuscode aus dem Ereignis kann einen der folgenden Werte enthalten.
+Der Statuscode des Ereignisses kann einen der folgenden Werte enthalten.
 
 
 
-|                                      |                                                                                                                                                                                 |
+| Wert                                     | Beschreibung                                                                                                                                                                                |
 |--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **S \_ OK**                            | Der Vorgang wurde erfolgreich ausgeführt.                                                                                                                                                        |
-| **NS \_ E \_ DRM- \_ Lizenz \_ notbezogen** | Die DRM-Lizenz wurde nicht erworben. Wenn beim vorherigen Versuch [**automaticenable**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-automaticenable)verwendet wurde, sollte die Anwendung den nicht automatischen Erwerb testen. |
-| **NS \_ S- \_ DRM- \_ Monitor \_ abgebrochen**   | Der [**monitorenable**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-monitorenable) -Vorgang wurde abgebrochen.                                                                                            |
+| **NS \_ E \_ DRM \_ LICENSE \_ NOTACQUIRED** | Die DRM-Lizenz wurde nicht erworben. Wenn beim vorherigen Versuch [**AutomaticEnable**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-automaticenable)verwendet wurde, sollte die Anwendung versuchen, nicht automatisch zu erwerben. |
+| **NS \_ S \_ DRM \_ MONITOR \_ CANCELLED**   | Der [**MonitorEnable-Vorgang**](/windows/desktop/api/mfidl/nf-mfidl-imfcontentenabler-monitorenable) wurde abgebrochen.                                                                                            |
 
 
 
  
 
-Um dieses Ereignis zu erhalten, Fragen Sie die [**imfcontentenabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) -Schnittstelle für die [**imfmediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle ab. Aufrufen Sie dann [**imfmediaeventgenerator:: begingetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent), wie im Thema [Medienereignis-Generatoren](media-event-generators.md)beschrieben.
+Um dieses Ereignis zu empfangen, fragen Sie die [**SCHNITTSTELLE "CONTENTContentEnabler"**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) nach der [**SCHNITTSTELLE "ARRANGEMediaEventGenerator"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) ab. Rufen Sie dann [**DENMEDIAEventGenerator::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent)auf, wie im Thema [Medienereignisgeneratoren](media-event-generators.md)beschrieben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -64,13 +64,13 @@ Um dieses Ereignis zu erhalten, Fragen Sie die [**imfcontentenabler**](/windows/
 
 <dl> <dt>
 
-[**IMF contentenabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler)
+[**CONTENTContentEnabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler)
 </dt> <dt>
 
-[Medienereignis Generatoren](media-event-generators.md)
+[Medienereignisgeneratoren](media-event-generators.md)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

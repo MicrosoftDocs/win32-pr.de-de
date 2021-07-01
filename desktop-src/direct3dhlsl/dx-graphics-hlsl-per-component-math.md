@@ -1,5 +1,5 @@
 ---
-title: Per-Component mathematische Vorgänge
+title: Per-Component Mathematische Operationen
 description: Mit HLSL können Sie Shader auf Algorithmusebene programmieren.
 ms.assetid: a919df50-2d13-489d-9011-1137c997e121
 ms.topic: article
@@ -9,26 +9,26 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5ff30cd19b7821c9a059251e105f6acfa9cf961e
-ms.sourcegitcommit: fa5c081bf792b119a7bb92182cde1f85ca75967b
+ms.openlocfilehash: 2c8c9eeea1072c53915588ac0099998e76c0452a
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "104982820"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119595"
 ---
-# <a name="per-component-math-operations"></a>Per-Component mathematische Vorgänge
+# <a name="per-component-math-operations"></a>Per-Component Mathematische Operationen
 
-Mit HLSL können Sie Shader auf Algorithmusebene programmieren. Um die Sprache zu verstehen, müssen Sie wissen, wie Sie Variablen und Funktionen deklarieren, systeminterne Funktionen verwenden, benutzerdefinierte Datentypen definieren und die Semantik verwenden, um shaderargumente mit anderen Shader und der Pipeline zu verbinden.
+Mit HLSL können Sie Shader auf Algorithmusebene programmieren. Um die Sprache zu verstehen, müssen Sie wissen, wie Sie Variablen und Funktionen deklarieren, systeminterne Funktionen verwenden, benutzerdefinierte Datentypen definieren und Semantik verwenden, um Shaderargumente mit anderen Shadern und mit der Pipeline zu verbinden.
 
-Nachdem Sie erfahren haben, wie Shader in HLSL erstellt werden, müssen Sie sich mit API-aufrufen vertraut machen, damit Sie: einen Shader für bestimmte Hardware kompilieren, shaderkonstanten initialisieren und ggf. anderen Pipeline Status initialisieren können.
+Nachdem Sie erfahren haben, wie Sie Shader in HLSL erstellen, müssen Sie sich mit API-Aufrufen informieren, damit Sie einen Shader für bestimmte Hardware kompilieren, Shaderkonstatoren initialisieren und bei Bedarf einen anderen Pipelinezustand initialisieren können.
 
--   [Der Vektortyp.](#the-vector-type)
--   [Der Matrix-Typ](#the-matrix-type)
-    -   [Matrix Reihenfolge](#matrix-ordering)
+-   [Der Vektortyp](#the-vector-type)
+-   [Der Matrixtyp](#the-matrix-type)
+    -   [Matrix reihenfolge](#matrix-ordering)
 -   [Beispiele](#examples)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="the-vector-type"></a>Der Vektortyp.
+## <a name="the-vector-type"></a>Der Vektortyp
 
 Ein Vektor ist eine Datenstruktur, die zwischen einer und vier Komponenten enthält.
 
@@ -43,7 +43,7 @@ double4 dVector;   // vector containing 4 doubles
 
 
 
-Die ganze Zahl, die unmittelbar auf den-Datentyp folgt, ist die Anzahl der Komponenten auf dem Vektor.
+Die ganze Zahl, die unmittelbar auf den Datentyp folgt, ist die Anzahl der Komponenten im Vektor.
 
 Initialisierer können auch in die Deklarationen eingeschlossen werden.
 
@@ -57,7 +57,7 @@ double4 dVector = { 0.2, 0.3, 0.4, 0.5 };
 
 
 
-Alternativ kann der Vector Type verwendet werden, um dieselben Deklarationen zu erstellen:
+Alternativ kann der Vektortyp verwendet werden, um die gleichen Deklarationen zu machen:
 
 
 ```
@@ -69,14 +69,14 @@ vector <double, 4> dVector = { 0.2, 0.3, 0.4, 0.5 };
 
 
 
-Der Vektortyp verwendet spitzen Klammern, um den Typ und die Anzahl der Komponenten anzugeben.
+Der Vektortyp verwendet eckige Klammern, um den Typ und die Anzahl der Komponenten anzugeben.
 
-Vektoren enthalten bis zu vier Komponenten, auf die jeweils mit einem von zwei Benennungs Sätzen zugegriffen werden kann:
+Vektoren enthalten bis zu vier Komponenten, auf die jeweils mit einem von zwei Benennungssätzen zugegriffen werden kann:
 
--   Der Positions Satz: x, y, z, w
--   Der Farbsatz: r, g, b, a
+-   Der Positionssatz: x,y,z,w
+-   Der Farbsatz: r,g,b,a
 
-In diesen Anweisungen wird der Wert in der dritten Komponente zurückgegeben.
+Beide Anweisungen geben den Wert in der dritten Komponente zurück.
 
 
 ```
@@ -89,7 +89,7 @@ pos.b    // value is 2
 
 
 
-Benennungs Sätze können eine oder mehrere Komponenten verwenden, aber Sie können nicht gemischt werden.
+Benennungssätze können eine oder mehrere Komponenten verwenden, sie können jedoch nicht gemischt werden.
 
 
 ```
@@ -105,7 +105,7 @@ temp = pos.xg  // NOT VALID because the position and color sets were used.
 
 
 
-Das Angeben einer oder mehrerer Vektor Komponenten beim Lesen von Komponenten wird als "swizzling" bezeichnet. Beispiel:
+Das Angeben einer oder mehrere Vektorkomponenten beim Lesen von Komponenten wird als Swizzling bezeichnet. Beispiel:
 
 
 ```
@@ -138,7 +138,7 @@ f_4D.wzyx = pos;
 
 
 
-Zuweisungen können nicht mehrmals in dieselbe Komponente geschrieben werden. Die linke Seite dieser Anweisung ist daher ungültig:
+Zuweisungen können nicht mehr als einmal in dieselbe Komponente geschrieben werden. Daher ist die linke Seite dieser Anweisung ungültig:
 
 
 ```
@@ -147,7 +147,7 @@ f_4D.xx = pos.xy;   // cannot write to the same destination components
 
 
 
-Außerdem kann der Komponenten Namespaces nicht gemischt werden. Dies ist ein ungültiger Komponenten Schreibvorgang:
+Außerdem können die Komponentennamensräume nicht gemischt werden. Dies ist ein ungültiger Komponenten-Schreibzugriff:
 
 
 ```
@@ -156,7 +156,7 @@ f_4D.xg = pos.rgrg;    // invalid write: cannot mix component name spaces
 
 
 
-Der Zugriff auf einen Vektor als Skalar erfolgt auf die erste Komponente des Vektors. Die folgenden zwei Anweisungen sind gleichwertig.
+Der Zugriff auf einen Vektor als Skalarzugriff auf die erste Komponente des Vektors. Die folgenden beiden Anweisungen sind gleichwertig.
 
 
 ```
@@ -166,9 +166,9 @@ f_4D.a = pos.r * 5.0f;
 
 
 
-## <a name="the-matrix-type"></a>Der Matrix-Typ
+## <a name="the-matrix-type"></a>Der Matrixtyp
 
-Eine Matrix ist eine Datenstruktur, die Zeilen und Spalten mit Daten enthält. Bei den Daten kann es sich um einen beliebigen skalaren Datentypen handeln, aber jedes Element einer Matrix ist derselbe Datentyp. Die Anzahl der Zeilen und Spalten wird mit der zeilenweise Zeichenfolge angegeben, die an den Datentyp angehängt wird.
+Eine Matrix ist eine Datenstruktur, die Datenzeilen und -spalten enthält. Die Daten können alle skalaren Datentypen sein, aber jedes Element einer Matrix ist derselbe Datentyp. Die Anzahl der Zeilen und Spalten wird mit der Zeilen-für-Spalte-Zeichenfolge angegeben, die an den Datentyp angefügt wird.
 
 
 ```
@@ -188,7 +188,7 @@ double4x4 dMatrix;   // double matrix with 4 rows, 4 columns
 
 Die maximale Anzahl von Zeilen oder Spalten ist 4. die Mindestanzahl ist 1.
 
-Eine Matrix kann beim Deklarieren initialisiert werden:
+Eine Matrix kann initialisiert werden, wenn sie deklariert wird:
 
 
 ```
@@ -199,7 +199,7 @@ float2x2 fMatrix = { 0.0f, 0.1, // row 1
 
 
 
-Oder der Matrix-Typ kann verwendet werden, um dieselben Deklarationen zu erstellen:
+Oder der Matrixtyp kann verwendet werden, um die gleichen Deklarationen zu erstellen:
 
 
 ```
@@ -210,9 +210,9 @@ matrix <float, 2, 2> fMatrix = { 0.0f, 0.1, // row 1
 
 
 
-Der Matrixtyp verwendet die spitzen Klammern, um den Typ, die Anzahl der Zeilen und die Anzahl der Spalten anzugeben. In diesem Beispiel wird eine Gleit Komma Matrix mit zwei Zeilen und zwei Spalten erstellt. Alle skalaren Datentypen können verwendet werden.
+Der Matrixtyp verwendet die eckigen Klammern, um den Typ, die Anzahl der Zeilen und die Anzahl der Spalten anzugeben. In diesem Beispiel wird eine Gleitkommamatrix mit zwei Zeilen und zwei Spalten erstellt. Jeder der skalaren Datentypen kann verwendet werden.
 
-Diese Deklaration definiert eine Matrix von float-Werten (32-Bit-Gleit Komma Zahlen) mit zwei Zeilen und drei Spalten:
+Diese Deklaration definiert eine Matrix von Gleitkommawerten (32-Bit-Gleitkommazahlen) mit zwei Zeilen und drei Spalten:
 
 
 ```
@@ -221,20 +221,20 @@ matrix <float, 2, 3> fFloatMatrix;
 
 
 
-Eine Matrix enthält Werte, die in Zeilen und Spalten organisiert sind, auf die mit dem Structure-Operator "." gefolgt von einem von zwei Benennungs Sätzen zugegriffen werden kann:
+Eine Matrix enthält In Zeilen und Spalten angeordnete Werte, auf die mithilfe des Strukturoperator "." gefolgt von einem von zwei Benennungssätzen zugegriffen werden kann:
 
--   Die null basierte Zeilen Spaltenposition:
-    -   \_M00, \_ M01, \_ M02, \_ M03
-    -   \_M10, \_ M11, \_ M12, \_ M13
-    -   \_M20, \_ M21, \_ M22, \_ M23
-    -   \_M30, \_ M31, \_ M32, \_ M33
--   Die einbasierte Zeilen Spaltenposition:
+-   Die nullbasierte Zeilenspaltenposition:
+    -   \_m00, \_ m01, \_ m02, \_ m03
+    -   \_m10, \_ m11, \_ m12, \_ m13
+    -   \_m20, \_ m21, \_ m22, \_ m23
+    -   \_m30, \_ m31, \_ m32, \_ m33
+-   Die 1-basierte Zeilenspaltenposition:
     -   \_11, \_ 12, \_ 13, \_ 14
     -   \_21, \_ 22, \_ 23, \_ 24
     -   \_31, \_ 32, \_ 33, \_ 34
     -   \_41, \_ 42, \_ 43, \_ 44
 
-Jeder Benennungs Satz beginnt mit einem Unterstrich, gefolgt von der Zeilennummer und der Spaltennummer. Die null basierte Konvention enthält auch den Buchstaben "m" vor der Zeilen-und Spaltennummer. Im folgenden finden Sie ein Beispiel, das die beiden Benennungs Sätze verwendet, um auf eine Matrix zuzugreifen:
+Jeder Benennungssatz beginnt mit einem Unterstrich, gefolgt von der Zeilennummer und der Spaltennummer. Die nullbasierte Konvention enthält auch den Buchstaben "m" vor der Zeile und Spaltennummer. Hier ist ein Beispiel, in dem die beiden Benennungssätze für den Zugriff auf eine Matrix verwendet werden:
 
 
 ```
@@ -253,7 +253,7 @@ f_1D = matrix._22;  // read the value in row 2, column 2: 2.1
 
 
 
-Ebenso wie Vektoren können Benennungs Sätze eine oder mehrere Komponenten aus einer der beiden Benennungs Sätze verwenden.
+Genau wie Vektoren können Benennungssätze eine oder mehrere Komponenten aus beiden Benennungssätzen verwenden.
 
 
 ```
@@ -271,14 +271,14 @@ temp = fMatrix._22_11   // valid
 
 
 
-Auf eine Matrix kann auch mit der Array Zugriffs Notation zugegriffen werden, bei der es sich um einen NULL basierten Satz von Indizes handelt. Jeder Index befindet sich in eckigen Klammern. Der Zugriff auf eine 4X4-Matrix erfolgt mit den folgenden Indizes:
+Auf eine Matrix kann auch mithilfe der Arrayzugriffs-Notation zugegriffen werden, bei der es sich um einen nullbasierten Satz von Indizes handelt. Jeder Index befindet sich in eckigen Klammern. Auf eine 4x4-Matrix wird mit den folgenden Indizes zugegriffen:
 
 -   \[0 \] \[ 0 \] , \[ 0 \] \[ 1 \] , \[ 0 \] \[ 2 \] , \[ 0 \] \[ 3\]
--   \[1 \] \[ 0 \] , \[ 1 \] \[ 1 \] , \[ 1 \] \[ 2 \] , \[ 1 \] \[ 3\]
--   \[2 \] \[ 0,0 \] \[ \] \[ 1, 2 \] 2 \[ \] \[ \] , \[ 2 \] \[ 3\]
--   \[3 \] \[ 0,0 \] \[ \] \[ 1, 3 \] \[ \] \[ 2, 3 \] \[ \] \[ 3\]
+-   \[1 \] \[ \] 0, \[ 1 \] \[ \] 1, \[ 1 \] \[ \] 2, \[ 1 \] \[ 3\]
+-   \[2 \] \[ \] 0, \[ 2 \] \[ \] 1, \[ 2 \] \[ \] 2, \[ 2 \] \[ 3\]
+-   \[3 \] \[ \] 0, \[ 3 \] \[ \] 1, \[ 3 \] \[ \] 2, \[ 3 \] \[ 3\]
 
-Im folgenden finden Sie ein Beispiel für den Zugriff auf eine Matrix:
+Hier ist ein Beispiel für den Zugriff auf eine Matrix:
 
 
 ```
@@ -293,7 +293,7 @@ temp = fMatrix[0][1] // single component read
 
 
 
-Beachten Sie, dass der Structure-Operator "." nicht verwendet wird, um auf ein Array zuzugreifen. Die Array Zugriffs Notation kann nicht zum Lesen von mehr als einer Komponente verwendet werden.
+Beachten Sie, dass der Strukturoperator "." nicht für den Zugriff auf ein Array verwendet wird. Die Arrayzugriffs-Notation kann nicht swizzling verwenden, um mehr als eine Komponente zu lesen.
 
 
 ```
@@ -303,7 +303,7 @@ temp = fMatrix[0][0]_[0][1] // invalid, cannot read two components
 
 
 
-Allerdings kann der Array Zugriff einen Vektor mit mehreren Komponenten lesen.
+Der Arrayzugriff kann jedoch einen Vektor mit mehreren Komponenten lesen.
 
 
 ```
@@ -314,7 +314,7 @@ temp = fMatrix[0] // read the first row
 
 
 
-Wie bei Vektoren wird das Lesen von mehr als einer Matrix Komponente als "swizzling" bezeichnet. Es können mehrere Komponenten zugewiesen werden, sofern nur ein Namespace verwendet wird. Dies sind alle gültigen Zuweisungen:
+Wie bei Vektoren wird das Lesen von mehr als einer Matrixkomponente als Swizzling bezeichnet. Es können mehrere Komponenten zugewiesen werden, vorausgesetzt, es wird nur ein Namensraum verwendet. Dies sind alle gültige Zuweisungen:
 
 
 ```
@@ -345,7 +345,7 @@ tempMatrix._m23_m00 = worldMatrix._m00_m11;
 
 
 
-Zuweisungen können nicht mehrmals in dieselbe Komponente geschrieben werden. Die linke Seite dieser Anweisung ist daher ungültig:
+Zuweisungen können nicht mehr als einmal in dieselbe Komponente geschrieben werden. Daher ist die linke Seite dieser Anweisung ungültig:
 
 
 ```
@@ -355,7 +355,7 @@ tempMatrix._m00_m00 = worldMatrix._m00_m11;
 
 
 
-Außerdem kann der Komponenten Namespaces nicht gemischt werden. Dies ist ein ungültiger Komponenten Schreibvorgang:
+Außerdem können die Komponentennamensräume nicht gemischt werden. Dies ist ein ungültiger Komponenten-Schreibzugriff:
 
 
 ```
@@ -365,49 +365,88 @@ tempMatrix._11_m23 = worldMatrix._11_22;
 
 
 
-### <a name="matrix-ordering"></a>Matrix Reihenfolge
+### <a name="matrix-ordering"></a>Matrix reihenfolge
 
-Die Matrix Verpackungs Reihenfolge für einheitliche Parameter ist standardmäßig auf Column-Major festgelegt. Dies bedeutet, dass jede Spalte der Matrix in einem einzelnen Konstanten Register gespeichert wird. Auf der anderen Seite verpackt eine Zeilen hauptmatrix jede Zeile der Matrix in einem einzelnen Konstanten Register. Die Matrix Verpackung kann mit der **\# pragmapack- \_ Matrix** Direktive oder mit dem Haupt Schlüsselwort der **Zeile \_** oder der **Spalte " \_ Major** " geändert werden.
+Die Matrixpackungsauftrag für einheitliche Parameter ist standardmäßig auf Spaltenmatrizen festgelegt. Dies bedeutet, dass jede Spalte der Matrix in einem einzelnen Konstantenregister gespeichert wird. Andererseits packt eine Zeilen-Hauptmatrix jede Zeile der Matrix in einem einzelnen Konstantenregister. Die Matrixpackung kann mit der **\# pragmapack-Matrix-Direktive \_** oder mit der **\_ Zeilen-Hauptzeile** oder dem **Schlüsselwort column major \_ geändert** werden.
 
-Die Daten in einer Matrix werden vor dem Ausführen eines Shaders in Shader-Konstante Register geladen. Es gibt zwei Möglichkeiten, wie die Matrix Daten gelesen werden: in Zeilen Hauptreihen Folge oder in Spalten Hauptreihen Folge. Die Spalten-Haupt Reihenfolge bedeutet, dass jede Matrix Spalte in einem einzelnen Konstanten Register gespeichert wird, und die Reihenfolge von Zeilen ist, dass jede Zeile der Matrix in einem einzigen konstanten Register gespeichert wird. Dies ist ein wichtiger Aspekt, wie viele Konstante Register für eine Matrix verwendet werden.
+Die Daten in einer Matrix werden in Shader-Konstantenregister geladen, bevor ein Shader ausgeführt wird. Es gibt zwei Möglichkeiten, wie die Matrixdaten gelesen werden: in Zeilen-Hauptreihen- oder Spalten-Hauptreihen reihenfolge. Die Spaltenordnung bedeutet, dass jede Matrixspalte in einem einzelnen konstanten Register gespeichert wird, und zeilenbasierte Reihenfolge bedeutet, dass jede Zeile der Matrix in einem einzelnen konstanten Register gespeichert wird. Dies ist ein wichtiger Aspekt bei der Verwendung von konstanten Registern für eine Matrix.
 
-Eine Zeilen hauptmatrix wird wie folgt angeordnet:
+Eine Zeilenmatrizenmatrix ist wie folgt angelegt:
 
+:::row:::
+    :::column:::
+        11<br/>
+        21<br/>
+        31<br/>
+        41<br/>
+    :::column-end:::
+    :::column:::
+        12<br/>
+        22<br/>
+        32<br/>
+        42<br/>
+    :::column-end:::
+    :::column:::
+        13<br/>
+        23<br/>
+        33<br/>
+        43<br/>
+    :::column-end:::
+    :::column:::
+        14<br/>
+        24<br/>
+        34<br/>
+        44<br/>
+    :::column-end:::
+:::row-end:::
 
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-| 11  | 12  | 13  | 14  |
-| 21  | 22  | 23  | 24  |
-| 31  | 32  | 33  | 34  |
-| 41  | 42  | 43  | 44  |
 
 
 
  
 
-Eine Spalten hauptmatrix wird wie folgt angeordnet:
+Eine Spaltenmatrizenmatrix ist wie folgt angelegt:
 
 
+:::row:::
+    :::column:::
+        11<br/>
+        12<br/>
+        13<br/>
+        14<br/>
+    :::column-end:::
+    :::column:::
+        21<br/>
+        22<br/>
+        23<br/>
+        24<br/>
+    :::column-end:::
+    :::column:::
+        31<br/>
+        32<br/>
+        33<br/>
+        34<br/>
+    :::column-end:::
+    :::column:::
+        14<br/>
+        24<br/>
+        34<br/>
+        44<br/>
+    :::column-end:::
+:::row-end:::
 
-|     |     |     |     |
-|-----|-----|-----|-----|
-| 11  | 21  | 31  | 41  |
-| 12  | 22  | 32  | 42  |
-| 13  | 23  | 33  | 43  |
-| 14  | 24  | 34  | 44  |
 
 
 
  
 
-Zeilen-Haupt-und Spalten hauptmatrizen Reihenfolge bestimmt die Reihenfolge, in der die Matrixkomponenten aus shadereingaben gelesen werden. Nachdem die Daten in Konstante Register geschrieben wurden, wirkt sich die Reihenfolge der Matrizen nicht darauf aus, wie die Daten im Shader-Code verwendet oder aufgerufen werden. Außerdem werden in einem shadertext deklarierte Matrizen nicht in Konstante Register gepackt. Die Reihenfolge der Zeilen-Haupt-und Spalten hauptverpackung hat keinen Einfluss auf die Komprimierungs Reihenfolge von Konstruktoren (die immer auf die Reihenfolge der Zeilen Hauptreihen folgen).
+Die Reihenfolge der Zeilen- und Spaltenmatrizen bestimmt die Reihenfolge, in der die Matrixkomponenten aus Shadereingaben gelesen werden. Sobald die Daten in konstante Register geschrieben wurden, hat die Matrix reihenfolge keine Auswirkungen darauf, wie die Daten innerhalb des Shadercodes verwendet oder darauf zugegriffen wird. Außerdem werden Matrizen, die in einem Shader-Text deklariert sind, nicht in konstanten Registern gepackt. Die Zeilen- und Spalten-Hauptpackungsreihen reihenfolge hat keinen Einfluss auf die Füllreihen reihenfolge von Konstruktoren (die immer der Zeilenordnung folgt).
 
-Die Reihenfolge der Daten in einer Matrix kann zur Kompilierzeit deklariert werden, oder der Compiler sortiert die Daten zur Laufzeit, um die effizienteste Verwendung zu erreichen.
+Die Reihenfolge der Daten in einer Matrix kann zur Kompilierzeit deklariert werden, oder der Compiler ordnet die Daten zur Laufzeit für die effizienteste Verwendung an.
 
 ## <a name="examples"></a>Beispiele
 
-HLSL verwendet zwei spezielle Typen, einen Vektortyp und einen Matrixtyp, um die Programmierung von 2D-und 3D-Grafiken zu vereinfachen. Jeder dieser Typen enthält mehr als eine Komponente. ein Vektor enthält bis zu vier Komponenten, und eine Matrix enthält bis zu 16 Komponenten. Wenn Vektoren und Matrizen in standardmäßigen HLSL-Gleichungen verwendet werden, ist die durchgeführte Mathematik so konzipiert, dass Sie pro Komponente funktioniert. Beispielsweise implementiert HLSL diese Multiplikation:
+HLSL verwendet zwei spezielle Typen, einen Vektortyp und einen Matrixtyp, um die Programmierung von 2D- und 3D-Grafiken zu vereinfachen. Jeder dieser Typen enthält mehr als eine Komponente. ein Vektor enthält bis zu vier Komponenten, und eine Matrix enthält bis zu 16 Komponenten. Wenn Vektoren und Matrizen in HLSL-Standardgleichungen verwendet werden, ist die durchgeführte Mathematik so konzipiert, dass sie pro Komponente funktioniert. HLSL implementiert beispielsweise diese Multiplikation:
 
 
 ```
@@ -416,7 +455,7 @@ float4 v = a*b;
 
 
 
-als eine Multiplikation mit vier Komponenten. Das Ergebnis sind vier skalare:
+als Multiplikation mit vier Komponenten. Das Ergebnis sind vier Skalar:
 
 
 ```
@@ -430,9 +469,9 @@ v.w = a.w*b.w;
 
 
 
-Dies sind vier Multiplikationen, bei denen jedes Ergebnis in einer separaten Komponente von v gespeichert wird. Dies wird als vier-Komponenten-Multiplikation bezeichnet. HLSL verwendet die Komponente math, wodurch das Schreiben von Shader sehr effizient wird.
+Dies sind vier Multiplikationen, bei denen jedes Ergebnis in einer separaten Komponente von v gespeichert wird. Dies wird als Multiplikation mit vier Komponenten bezeichnet. HLSL verwendet Dies macht das Schreiben von Shadern sehr effizient.
 
-Dies unterscheidet sich sehr von einem multiplizieren, das in der Regel als ein Punktprodukt implementiert wird, das einen einzelnen Skalarwert generiert:
+Dies ist sehr anders als eine Multiplikation, die in der Regel als Punktprodukt implementiert wird, das einen einzelnen Skalar generiert:
 
 
 ```
@@ -441,7 +480,7 @@ v = a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w;
 
 
 
-Eine Matrix verwendet in HLSL auch Vorgänge pro Komponente:
+Eine Matrix verwendet auch Vorgänge pro Komponente in HLSL:
 
 
 ```
@@ -452,7 +491,7 @@ float3x3 mat3 = mat1*mat2;
 
 
 
-Das Ergebnis ist eine Multiplikation der beiden Matrizen pro Komponente (im Gegensatz zu einer standardmäßigen 3X3-Matrix Multiplikation). Eine Matrix Multiplikation pro Komponente ergibt diesen ersten Begriff:
+Das Ergebnis ist eine Multiplikation der beiden Matrizen pro Komponente (im Gegensatz zu einer standardmäßigen 3x3-Matrixmultiplikation). Eine Multiplikation pro Komponentenmatrix ergibt diesen ersten Begriff:
 
 
 ```
@@ -461,7 +500,7 @@ mat3.m00 = mat1.m00 * mat2._m00;
 
 
 
-Dies unterscheidet sich von einer 3X3-Matrix Multiplikation, die diesen ersten Begriff ergibt:
+Dies ist anders als bei einer 3x3-Matrixmultiplikation, die diesen ersten Begriff ergeben würde:
 
 
 ```
@@ -474,7 +513,7 @@ mat.m00 = mat1._m00 * mat2._m00 +
 
 
 
-Überladene Versionen der intrinsischen Funktion zum Multiplizieren von Funktionen, bei denen ein-Operand ein Vektor und der andere Operand eine Matrix ist. Beispielsweise: Vektor \* Vektor, Vektor \* Matrix, Matrix \* Vektor und Matrix \* Matrix. Beispiel:
+Überladene Versionen der multiplizierten systeminternen Funktion behandeln Fälle, in denen ein Operand ein Vektor und der andere Operand eine Matrix ist. Beispiel: \* Vektorvektor, \* Vektormatrix, \* Matrixvektor und \* Matrixmatrix. Beispiel:
 
 
 ```
@@ -510,9 +549,9 @@ float4 main(float4 pos : SV_POSITION) : SV_POSITION
 
 
 
-In diesem Beispiel wird der POS-Vektor mithilfe der Umwandlung (float1x4) in einen Spalten Vektor umgewandelt. Das Ändern eines Vektors durch umwandeln oder Austauschen der Reihenfolge der zu multiplizierenden Argumente entspricht der Umsetzung der Matrix.
+In diesem Beispiel wird der Pos-Vektor mithilfe der (float1x4)-Cast in einen Spaltenvektor umformatiert. Das Ändern eines Vektors durch Umwandlung oder das Austauschen der Reihenfolge der argumente, die zum Multiplizieren angegeben werden, entspricht dem Transpos der Matrix.
 
-Die automatische Umwandlung von Umwandlungen bewirkt, dass die intrinsischen Funktionen multiplizieren und Punkt dieselben Ergebnisse wie hier verwendet zurückgeben:
+Die automatische Umwandlungskonvertierung bewirkt, dass die systeminternen Funktionen multiply und dot die gleichen Ergebnisse zurückgeben wie hier verwendet:
 
 
 ```
@@ -524,7 +563,7 @@ Die automatische Umwandlung von Umwandlungen bewirkt, dass die intrinsischen Fun
 
 
 
-Das Ergebnis der Multiplikation ist ein 1 x 4 \* 4 x 1 = 1x1-Vektor. Dies entspricht einem Punktprodukt:
+Dieses Ergebnis der Multiplikation ist ein 1x4 \* 4x1 = 1x1-Vektor. Dies entspricht einem Punktprodukt:
 
 
 ```
@@ -536,7 +575,7 @@ Das Ergebnis der Multiplikation ist ein 1 x 4 \* 4 x 1 = 1x1-Vektor. Dies entspr
 
 
 
-, der einen einzelnen Skalarwert zurückgibt.
+, die einen einzelnen Skalarwert zurückgibt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

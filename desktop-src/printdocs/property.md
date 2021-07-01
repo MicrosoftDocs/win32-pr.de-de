@@ -1,23 +1,23 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Erfahren Sie mehr über das Property-Element in Dokumenten und beim Drucken. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: 14631336-adfc-4edf-81ef-63e426d41c87
 title: Eigenschaft (Dokumente und Drucken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c9fb4a057b2cf7795262b595c59f9da0343fdf12
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 4e43b52c054972ee0ee2b8a535021581c05e7d96
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104351868"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120295"
 ---
 # <a name="property-documents-and-printing"></a>Eigenschaft (Dokumente und Drucken)
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Ein Property-Element deklariert ein Gerät, eine Auftrags Formatierung oder eine andere relevante Eigenschaft, deren Name durch das Name-Attribut angegeben wird. Ein Value-Element wird verwendet, um der Eigenschaft einen Wert zuzuweisen.
+Ein Property-Element deklariert ein Gerät, eine Auftragsformatierung oder eine andere relevante Eigenschaft, deren Name durch das Name-Attribut angegeben wird. Ein Value-Element wird verwendet, um der Eigenschaft einen Wert zuzuweisen.
 
-Eine Eigenschaft kann komplex sein und möglicherweise mehrere untergeordnete Eigenschaften enthalten. Unter Eigenschaften werden auch durch Eigenschafts Elemente dargestellt.
+Eine Eigenschaft kann komplex sein und möglicherweise mehrere Untereigenschaften enthalten. Untereigenschaften werden auch durch Property-Elemente dargestellt.
 
 ## <a name="element-tag"></a>Elementtag
 
@@ -25,47 +25,47 @@ Eine Eigenschaft kann komplex sein und möglicherweise mehrere untergeordnete Ei
 
 ## <a name="xml-attributes"></a>XML-Attribute
 
-In der folgenden Tabelle werden die XML-Attribute aufgelistet, die sich möglicherweise auf dieses Element beziehen.
+In der folgenden Tabelle sind die XML-Attribute aufgeführt, die möglicherweise zu diesem Element gehören.
 
 
 
 | XML-Attribut   | Details                                                                                                                    |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------|
-| name<br/> | Enthält das Name-Attribut der Eigenschaft, bei der es sich entweder um eine Standard Eigenschaft oder eine privat definierte Eigenschaft handelt. <br/> |
+| name<br/> | Enthält das Namensattribut der Eigenschaft, bei der es sich entweder um eine Standardeigenschaft oder eine privat definierte Eigenschaft handelt. <br/> |
 
 
 
  
 
-Weitere Informationen finden Sie im Abschnitt [XML-Attribute](xml-attributes.md) .
+Weitere Informationen finden Sie im Abschnitt [XML-Attribute.](xml-attributes.md)
 
 ## <a name="element-information"></a>Elementinformationen
 
-In der folgenden Tabelle werden die Elemente aufgelistet, die übergeordnete Elemente dieses Elements sein können, die Elemente, die möglicherweise untergeordnete Elemente dieses Elements sind, sowie alle Einschränkungen für das Element selbst.
+In der folgenden Tabelle sind die Elemente aufgeführt, die möglicherweise die untergeordneten Elemente dieses Elements sind, sowie alle Einschränkungen für das Element selbst.
 
 
 
 | Category                   | Details                                                                                                                                                                                                                                                                                                                      |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Übergeordnete Elemente<br/> | PrintCapabilities <br/> Funktion<br/> PrintTicket<br/> Option<br/> ParameterDef<br/> Eigenschaft<br/> ScoredProperty<br/>                                                                                                                                                              |
-| Untergeordnete Elemente<br/>  | Das System weist der Reihenfolge der Elemente keine Bedeutung zu. Wenn Clients eine gewisse Bedeutung in der Reihenfolge der Elemente festlegen möchten, können Sie dies tun. <br/> *Eigenschaft* (mindestens ein *Wert* ) (0 (null) oder mehr)<br/> oder <br/> *Eigenschafts* Wert (null oder mehr) (mindestens ein *Wert* )<br/> |
-| Dieses Element<br/>    | Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete Element Elemente, die gleich geordnete Elemente sind, sind zulässig.<br/>                                                                                                                                                                                                        |
+| Untergeordnete Elemente<br/>  | Das System weist der Reihenfolge der Elemente keine Bedeutung zu. Wenn Clients sich dafür entscheiden, eine gewisse Bedeutung in der Reihenfolge der Elemente zuzuordnen, können sie dies auch tun. <br/> *Eigenschaftswert* (mindestens ein *Wert)* (null oder mehr)<br/> oder <br/> *Eigenschaftswert* (null oder mehr) (mindestens ein *Wert)*<br/> |
+| Dieses Element<br/>    | Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete Value-Elemente, die gleichgeordnete Elemente sind, sind zulässig.<br/>                                                                                                                                                                                                        |
 
 
 
  
 
-## <a name="configuration-dependencies"></a>Konfigurations Abhängigkeiten
+## <a name="configuration-dependencies"></a>Konfigurationsabhängigkeiten
 
-Eine Eigenschaft kann Konfigurations Abhängigkeiten aufweisen, außer wenn Sie in einem ParameterDef-Element angezeigt wird.
+Eine Eigenschaft kann Konfigurationsabhängigkeiten aufweisen, es sei denn, sie wird in einem ParameterDef-Element angezeigt.
 
-## <a name="element-usage"></a>Element Verwendung
+## <a name="element-usage"></a>Elementverwendung
 
-Eigenschaften Elemente können nicht nur innerhalb von Funktions-und Options Elementen angezeigt werden, sondern auch auf der Stamm Ebene der jeweiligen zugrunde liegenden Technologien. Das Druck Schema definiert einen Satz von Eigenschaften Elementen, die verwendet werden können, um ein Gerät portabel zu beschreiben. Wenn diese Eigenschaften jedoch nicht Ihren Anforderungen als Print-Funktions Anbieter genügt (in der Regel, weil das Gerät, das unterstützt wird, über neue Aspekte verfügt, die vom Druck Schema nicht erwartet werden), können Sie eigene private Eigenschaften Elemente einführen. Sie können die von einer öffentlichen Eigenschaft bereitgestellten Informationen verbessern oder vertiefen, indem Sie eine oder mehrere private unter Eigenschaften als Element Inhalt der Public-Eigenschaft hinzufügen.
+Zusätzlich zum Erscheinen in Feature- und Optionselementen können Eigenschaftselemente auf der Stammebene der jeweiligen zugrunde liegenden Technologien angezeigt werden. Das Druckschema definiert einen Satz von Eigenschaftselementen, die verwendet werden können, um ein Gerät auf portable Weise zu beschreiben. Wenn diese Eigenschaften jedoch nicht ihren Anforderungen als PrintCapabilities-Anbieter entsprechen (in der Regel weil das unterstützte Gerät neue Aspekte aufweist, die vom Druckschema nicht erwartet werden), können Sie Ihre eigenen privaten Property-Elemente einführen. Sie können die von einer öffentlichen Eigenschaft bereitgestellten Informationen erweitern oder erweitern, indem Sie eine oder mehrere private Untereigenschaften als Elementinhalt der öffentlichen Eigenschaft hinzufügen.
 
-Eigenschafts Elemente werden mithilfe eines XML-Element Tags definiert <Property> . Jeder Eigenschaft wird anhand des Namens Attributs ein Name zugewiesen. Der Name muss ein XML-QName sein und muss der Namespace Konvention entsprechen. Weitere Informationen finden Sie unter [XML-Attribute](xml-attributes.md). Das Eigenschaftsnamen Attribut und seine Position in der Hierarchie der übergeordneten Eigenschaften Elemente (wenn es sich um eine untergeordnete Eigenschaft handelt) identifizieren die Eigenschaft innerhalb des Printworks-Dokuments oder des PrintTicket eindeutig.
+Eigenschaftselemente werden mithilfe eines XML-Elementtags <Property> definiert. Jeder Eigenschaft wird anhand ihres Namensattributs ein Name zugewiesen. Der Name muss ein XML-QName sein und der Namespacekonvention entsprechen. Weitere Informationen finden Sie unter [XML-Attribute.](xml-attributes.md) Das Eigenschaftsnamenattribut und seine Position innerhalb der Hierarchie übergeordneter Property-Elemente (wenn es sich um eine Untereigenschaft handelt) identifizieren die Eigenschaft eindeutig im PrintCapabilities-Dokument oder printTicket.
 
-Eine Eigenschaft kann ein oder mehrere value-Elemente oder ein oder mehrere untergeordnete Eigenschaften Elemente (als untergeordnete Eigenschaften bezeichnet) oder eine Kombination aus beidem enthalten. Unter Eigenschaften sind nützlich, wenn die Eigenschaft selbst aus mehreren Komponenten besteht. Beispielsweise kann eine "consumablecolor"-Eigenschaft "C"-, "M"-und "Y"-Komponenten enthalten.
+Eine Eigenschaft kann ein oder mehrere Value-Elemente oder mindestens ein untergeordnetes Property-Element (als Untereigenschaften bezeichnet) oder eine Kombination aus beiden enthalten. Untereigenschaften sind nützlich, wenn die Eigenschaft selbst aus mehreren Komponenten besteht. Beispielsweise kann eine "ConsumableColor"-Eigenschaft über die Komponenten "C", "M" und "Y" verfügen.
 
 ## <a name="example"></a>Beispiel
 
@@ -79,7 +79,7 @@ Eine Eigenschaft kann ein oder mehrere value-Elemente oder ein oder mehrere unte
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,36 +1,36 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das PageScaling-Element. Dieses Element beschreibt die Skalierungsmerkmale der Ausgabe.
 ms.assetid: cf35bb37-bf67-4e86-bfef-9838606982a5
 title: Pagescaling
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e32beceead1c0dc867a2bb7b24d476ef05bf8820
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 795332f38da331a9f16b614154bf0a9270e613de
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997497"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119035"
 ---
 # <a name="pagescaling"></a>Pagescaling
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Skalierungsmerkmale der Ausgabe. Bestimmte Optionen dieses Features erfordern, dass der Consumer die Merkmale der "Anwendungsinhaltsdimensionen" bestimmen kann. Wenn diese Merkmale nicht bestimmt werden können, sollte der Consumer standardmäßig die Identitätsoption verwenden. Dies sind die folgenden Merkmale:
+Beschreibt die Skalierungsmerkmale der Ausgabe. Bestimmte Optionen dieses Features erfordern, dass der Consumer die Merkmale der "Anwendungsinhaltsdimensionen" bestimmen kann. Wenn diese Merkmale nicht bestimmt werden können, sollte der Consumer standardmäßig die Identitätsoption verwenden. Diese Merkmale sind:
 
 
 
-|                          |                                                                                                                                                                                                                                                       |
+| Skalierungsmerkmal                         | Beschreibung                                                                                                                                                                                                                                                      |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Größe der Anwendungsmedien   | Die Vom Anwendungslayout definierten Mediendimensionen. Die Größe der Anwendungsmedien entspricht möglicherweise einer PageMediaSize, die vom Consumer unterstützt wird.<br/>                                                                          |
-| Größe des Anwendungsinhalts | Die Vom Anwendungslayout definierten Mediendimensionen. Die Größe der Anwendungsmedien entspricht möglicherweise einer PageMediaSize, die vom Consumer unterstützt wird.<br/>                                                                          |
-| Application Bleed Size   | Der Offset und der Umfang des Überlaufbereichs der Anwendung, ein Überlauffeld, das von der Anwendung für die Registrierung und das Layout in Bezug auf die Größe der Anwendungsmedien verwendet wird. Der Überleerungsbereich ist größer oder gleich der Mediengröße der Anwendung.<br/> |
+| Größe der Anwendungsmedien   | Die Dimensionen der mediendefiniert durch das Anwendungslayout. Die Größe der Anwendungsmedien entspricht möglicherweise einer vom Consumer unterstützten PageMediaSize-Größe.<br/>                                                                          |
+| Größe des Anwendungsinhalts | Die Dimensionen der mediendefiniert durch das Anwendungslayout. Die Größe der Anwendungsmedien entspricht möglicherweise einer vom Consumer unterstützten PageMediaSize-Größe.<br/>                                                                          |
+| Bleed Size der Anwendung   | Der Offset und der Umfang des Bereichs für die Anwendungsblessure, ein Überlauffeld, das von der Anwendung für die Registrierung und das Layout in Bezug auf die Größe der Anwendungsmedien verwendet wird. Der bereichlose Bereich ist größer oder gleich der Größe des Anwendungsmediums.<br/> |
 
 
 
  
 
 -   [Elementinformationen](#element-information)
--   [Strukturelle Inhalte](#structural-content)
+-   [Strukturell](#structural-content)
 -   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
@@ -122,7 +122,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

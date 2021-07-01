@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink dragcomplete
-description: Iagentnotifysink dragcomplete
+title: IAgentNotifySink DragComplete
+description: IAgentNotifySink DragComplete
 ms.assetid: b2d9b9c2-709e-4988-aa92-f129e3836fc7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f53215591e3d2797c5b57e5586ccb13fc91f5902
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eb93fbc7bae1ac43d534962659b850561bd50a6d
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037480"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120805"
 ---
-# <a name="iagentnotifysinkdragcomplete"></a>Iagentnotifysink::D ragcomplete
+# <a name="iagentnotifysinkdragcomplete"></a>IAgentNotifySink::D ragComplete
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT DragComplete(
@@ -24,58 +24,58 @@ HRESULT DragComplete(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, wenn der Benutzer das Ziehen eines Zeichens stoppt.
+Benachrichtigt eine Clientanwendung, wenn der Benutzer das Ziehen eines Zeichens beendet.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwcharid*
+<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwCharID*
 </dt> <dd>
 
-Der Bezeichner des gezogenen Zeichens.
+Bezeichner des gezogenen Zeichens.
 
 </dd> <dt>
 
-<span id="fwKeys"></span><span id="fwkeys"></span><span id="FWKEYS"></span>*"f"-Schlüssel*
+<span id="fwKeys"></span><span id="fwkeys"></span><span id="FWKEYS"></span>*fwKeys*
 </dt> <dd>
 
-Ein-Parameter, der den Mauszeiger-und modifiziererschlüsselzustand angibt. Der-Parameter kann eine beliebige Kombination der folgenden zurückgeben:
+Ein Parameter, der den Zustand der Maustaste und des Modifizierers angibt. Der -Parameter kann eine beliebige Kombination der folgenden Punkte zurückgeben:
 
 
 
-|        |                  |
+| Wert  | Beschreibung      |
 |--------|------------------|
 | 0x0001 | Linke Schaltfläche      |
 | 0x0010 | Mittlere Schaltfläche    |
 | 0x0002 | Rechte Schaltfläche     |
-| 0x0004 | Umschalttaste nach unten   |
-| 0x0008 | Steuerelement Taste unten |
-| 0x0020 | Alt-Taste unten     |
+| 0x0004 | UMSCHALTTASTE NACH UNTEN   |
+| 0x0008 | Steuertaste nach unten |
+| 0x0020 | ALT-TASTE NACH UNTEN     |
 
 
 
- 
-
-</dd> <dt>
-
-<span id="x"></span><span id="X"></span>*Stuben*
-</dt> <dd>
-
-Die x-Koordinate des Mauszeigers in Pixel relativ zum Bildschirm Ursprung (oben links).
+ 
 
 </dd> <dt>
 
-<span id="y"></span><span id="Y"></span>*Teenie*
+<span id="x"></span><span id="X"></span>*X*
 </dt> <dd>
 
-Die y-Koordinate des Mauszeigers in Pixel relativ zum Bildschirm Ursprung (oben links).
+Die x-Koordinate des Mauszeigers in Pixel relativ zum Ursprung des Bildschirms (links oben).
+
+</dd> <dt>
+
+<span id="y"></span><span id="Y"></span>*Y*
+</dt> <dd>
+
+Die y-Koordinate des Mauszeigers in Pixel relativ zum Ursprung des Bildschirms (links oben).
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

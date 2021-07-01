@@ -1,21 +1,21 @@
 ---
-description: Gibt einen Ablauf Verfolgungs Anbieter (ETW oder WPP) für MF-Ablauf Verfolgung an.
+description: Gibt einen Ablaufverfolgungsanbieter (ETW oder WPP) für MFTrace an.
 ms.assetid: 692cce3b-ebf5-4a49-8c37-48c8ef6caee7
 title: provider-Element
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56ca319b686101766dacd79821ac6d9caf859cf5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d96b3015dddbcff74c09f77a1b6245d052fe034
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753897"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118445"
 ---
 # <a name="provider-element"></a>provider-Element
 
-Gibt einen Ablauf Verfolgungs Anbieter (ETW oder WPP) für [MF](mftrace.md)-Ablauf Verfolgung an.
+Gibt einen Ablaufverfolgungsanbieter (ETW oder WPP) für [MFTrace](mftrace.md)an.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <provider
@@ -29,7 +29,7 @@ Gibt einen Ablauf Verfolgungs Anbieter (ETW oder WPP) für [MF](mftrace.md)-Abla
 
 
 
-| Attribut            | type             | Erforderlich       | BESCHREIBUNG                                              |
+| attribute            | Typ             | Erforderlich       | BESCHREIBUNG                                              |
 |----------------------|------------------|----------------|----------------------------------------------------------|
 | **ID**<br/>    | CDATA<br/> | Ja<br/> | Der Name oder die GUID des Anbieters.<br/> <br/> |
 | **level**<br/> | CDATA<br/> | Ja<br/> | Die Ablaufverfolgungsebene.<br/> <br/>                  |
@@ -58,25 +58,26 @@ keyword+
 
 | Element                                   |
 |-------------------------------------------|
-| [**providers**](providers.md)<br/> |
+| [**Anbieter**](providers.md)<br/> |
 
 
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|              |     |
-|--------------|-----|
-| Kann leer bleiben | Nein  |
-
-
+:::row:::
+    :::column:::
+        Kann leer bleiben
+    :::column-end:::
+    :::column span="2":::
+        Nein
+    :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MF-Ablauf Verfolgungs Konfigurationsdatei](mftrace-configuration-file.md)
+[MFTrace-Konfigurationsdatei](mftrace-configuration-file.md)
 </dt> </dl>
 
  

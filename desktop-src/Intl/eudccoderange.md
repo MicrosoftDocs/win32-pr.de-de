@@ -1,40 +1,40 @@
 ---
-description: Der Registrierungsschlüssel eudccoderange definiert Endbenutzer definierte Zeichen (EUDC)-Code Bereiche für verschiedene Codepages (Zeichensätze).
+description: Der Registrierungsschlüssel EUDCCodeRange definiert EUDC-Codebereiche (End-User-Defined Character) für verschiedene Codepages (Zeichensätze).
 ms.assetid: 11a167a0-f2a3-4b8b-a38c-70cf14c895be
-title: Eudccoderange
+title: EUDCCodeRange
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e68c71751ca5d13cd04c95ff66c84067fd1d46d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8619bce02f4ca66fa9b4ce6d25aff0c5a3e66f96
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352275"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120675"
 ---
-# <a name="eudccoderange"></a>Eudccoderange
+# <a name="eudccoderange"></a>EUDCCodeRange
 
-Der Registrierungsschlüssel eudccoderange definiert [Endbenutzer definierte Zeichen (EUDC)-](end-user-defined-characters.md) Code Bereiche für verschiedene Codepages (Zeichensätze). Sie wird nur von Tools verwendet, die eudcs erstellen, und ist nicht für EUDC-Benutzer von Bedeutung. Dieser Registrierungsschlüssel weist den folgenden Registrierungs Speicherort auf:
+Der Registrierungsschlüssel EUDCCodeRange definiert [EUDC-Codebereiche (End-User-Defined Character)](end-user-defined-characters.md) für verschiedene Codepages (Zeichensätze). Sie wird nur von Tools verwendet, die EUDCs erstellen, und ist für EUDC-Benutzer nicht direkt von Bedeutung. Dieser Registrierungsschlüssel hat den folgenden Registrierungsspeicherort:
 
-HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Control \\ nls \\ Codepage \\ eudccoderange
+HKEY \_ LOCAL \_ MACHINE \\ System \\ CurrentControlSet \\ Control \\ NLS \\ CodePage \\ EUDCCodeRange
 
 Das Format lautet:
 
-Eudccoderange Codepage = FromTo \[ , FromTo\]
+EUDCCodeRange CodePage=FromTo \[ , FromTo\]
 
 Dabei gilt:
 
 
 
-|          |                                                                                                                                                                                                          |
+| Wert         | BESCHREIBUNG                                                                                                                                                                                                         |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CodePage | Eine der Zeichen folgen "932" (Japanisch), "936" (vereinfachtes Chinesisch), "949" (Koreanisch), "950" (traditionelles Chinesisch) oder "Unicode" (Unicode). Es werden keine anderen Werte unterstützt.                                     |
-| FromTo   | Ein Zeichen folgen Wert, der aus einem Paar von vierstelligen hexadezimalen Werten besteht, die durch einen Bindestrich (-) getrennt sind. Es können bis zu vier FromTo-Werte angegeben werden, aber beide müssen vom vorherigen Wert durch ein Komma (,) getrennt werden. |
+| CodePage | Eine der Zeichenfolgen "932" (Japanisch), "936" (vereinfachtes Chinesisch), "949" (Koreanisch), "950" (traditionelles Chinesisch) oder "Unicode" (Unicode). Es werden keine anderen Werte unterstützt.                                     |
+| FromTo   | Zeichenfolgenwert, der aus einem Paar aus vierstelligen Hexadezimalwerten besteht, getrennt durch einen Bindestrich (-). Bis zu vier FromTo-Werte können angegeben werden, aber jeder muss durch ein Komma (,) vom vorherigen Wert getrennt werden. |
 
 
 
  
 
-Im folgenden finden Sie die richtigen Werte für den Registrierungs Eintrag.
+Im Folgenden sind die richtigen Werte für den Registrierungseintrag angegeben.
 
 
 ```C++

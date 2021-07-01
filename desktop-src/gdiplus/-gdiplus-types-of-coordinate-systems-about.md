@@ -1,45 +1,45 @@
 ---
-description: 'In Windows GDI+ werden drei Koordinaten Bereiche verwendet: "World", "page" und "Device".'
+description: 'Windows GDI+ verwendet drei Koordinatenräume: Welt, Seite und Gerät.'
 ms.assetid: eb20f5e9-25f5-4f27-8ea5-83f6819425ed
 title: Typen von Koordinatensystemen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05908196662918eb93f4fa6e2b356a6989ed5a58
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: e259f43d4fc0d6a74021f3a6125f85652f51ac95
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104558304"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120625"
 ---
 # <a name="types-of-coordinate-systems"></a>Typen von Koordinatensystemen
 
-In Windows GDI+ werden drei Koordinaten Bereiche verwendet: "World", "page" und "Device". Wenn Sie den-Befehl ausführen `myGraphics.DrawLine(&myPen, 0, 0, 160, 80)` , befinden sich die Punkte, die Sie an die [**Grafik übergeben::D rawline**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inconstpoint__inconstpoint_)) -Methode – (0,0) und (160, 80) – im weltweiten Koordinaten Bereich. Bevor GDI+ die Linie auf dem Bildschirm zeichnen kann, durchlaufen die Koordinaten eine Sequenz von Transformationen. Eine Transformation konvertiert globale Koordinaten in Seiten Koordinaten, und eine andere Transformation wandelt Seiten Koordinaten in Geräte Koordinaten um.
+Windows GDI+ verwendet drei Koordinatenräume: Welt, Seite und Gerät. Wenn Sie den Aufruf vornehmen, befinden sich `myGraphics.DrawLine(&myPen, 0, 0, 160, 80)` die Punkte, die Sie an die [**Graphics::D rawLine-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inconstpoint__inconstpoint_)) übergeben – (0, 0) und (160, 80) – im Koordinatenraum der Welt. Bevor GDI+ die Linie auf dem Bildschirm zeichnen kann, durchlaufen die Koordinaten eine Sequenz von Transformationen. Eine Transformation konvertiert Weltkoordinaten in Seitenkoordinaten, und eine andere Transformation konvertiert Seitenkoordinaten in Gerätekoordinaten.
 
-Angenommen, Sie möchten mit einem Koordinatensystem arbeiten, dessen Ursprung im Text des Client Bereichs liegt, und nicht in der oberen linken Ecke. Angenommen, Sie möchten, dass der Ursprung 100 Pixel vom linken Rand des Client Bereichs und 50 Pixel vom oberen Rand des Client Bereichs sein soll. Die folgende Abbildung zeigt ein solches Koordinatensystem.
+Angenommen, Sie möchten mit einem Koordinatensystem arbeiten, das seinen Ursprung im Textkörper des Clientbereichs anstelle der oberen linken Ecke hat. Angenommen, Sie möchten, dass der Ursprung 100 Pixel vom linken Rand des Clientbereichs und 50 Pixel vom oberen Rand des Clientbereichs entfernt ist. Die folgende Abbildung zeigt ein solches Koordinatensystem.
 
-![Screenshot eines Fensters mit der Bezeichnung "Koordinatenachsen"](images/aboutgdip05-art01.png)
+![Screenshot eines Fensters mit bezeichneten Koordinatenachsen](images/aboutgdip05-art01.png)
 
-Wenn Sie den-Befehl ausführen `myGraphics.DrawLine(&myPen, 0, 0, 160, 80)` , erhalten Sie die in der folgenden Abbildung gezeigte Zeile.
+Wenn Sie den Aufruf `myGraphics.DrawLine(&myPen, 0, 0, 160, 80)` ausführen, erhalten Sie die in der folgenden Abbildung dargestellte Zeile.
 
-![Screenshot des vorherigen Fensters, aber mit einer blauen Linie, die diagonal vom Ursprung aus erweitert wird](images/aboutgdip05-art02.png)
+![Screenshot des vorherigen Fensters, jedoch mit einer blauen Linie, die sich diagonal vom Ursprung erstreckt](images/aboutgdip05-art02.png)
 
-Die Koordinaten der Endpunkte der Zeile in den drei Koordinaten Räumen lauten wie folgt:
+Die Koordinaten der Endpunkte Ihrer Linie in den drei Koordinatenbereichen sind wie folgt:
 
 
 
-|        |                         |
+| LeerZchn       |  Endpunktkoordinaten                       |
 |--------|-------------------------|
-| World  | (0,0) bis (160, 80)     |
+| World  | (0, 0) bis (160, 80)     |
 | Seite   | (100, 50) bis (260, 130) |
-| Sicherungsmedium | (100, 50) bis (260, 130) |
+| Gerät | (100, 50) bis (260, 130) |
 
 
 
  
 
-Beachten Sie, dass der Seiten Koordinaten Bereich seinen Ursprung in der oberen linken Ecke des Client Bereichs hat. Dies ist immer der Fall. Beachten Sie außerdem, dass die Geräte Koordinaten den Seiten Koordinaten entsprechen, da die Maßeinheit das Pixel ist. Wenn Sie die Maßeinheit auf einen anderen Wert als Pixel festlegen (z. b. Zoll), unterscheiden sich die Geräte Koordinaten von den Seiten Koordinaten.
+Beachten Sie, dass der Seitenkoordinatenraum seinen Ursprung in der oberen linken Ecke des Clientbereichs hat. Dies ist immer der Fall. Beachten Sie außerdem, dass die Gerätekoordinaten mit den Seitenkoordinaten identisch sind, da die Maßeinheit das Pixel ist. Wenn Sie die Maßeinheit auf einen anderen Als Pixel (z. B. Zoll) festlegen, unterscheiden sich die Gerätekoordinaten von den Seitenkoordinaten.
 
-Die Transformation zum Zuordnen von Weltkoordinaten zu Seiten Koordinaten wird als globale *Transformation* bezeichnet und wird von einem [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt verwaltet. Im vorherigen Beispiel handelt es sich bei der Welt Transformation um eine Translation 100-Einheiten in der x-Richtung und 50-Einheiten in der y-Richtung. Im folgenden Beispiel wird die globale Transformation eines **Grafik** Objekts festgelegt, und anschließend wird das **Grafik** Objekt verwendet, um die in der vorherigen Abbildung gezeigte Zeile zu zeichnen.
+Die Transformation, die Weltkoordinaten Seitenkoordinaten zuordnt, wird als *Welttransformation* bezeichnet und von einem [**Graphics-Objekt**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) verwaltet. Im vorherigen Beispiel ist die Welttransformation eine Übersetzung von 100 Einheiten in x-Richtung und 50 Einheiten in y-Richtung. Im folgenden Beispiel wird die Welttransformation eines **Graphics-Objekts** festgelegt und dann dieses **Graphics-Objekt** verwendet, um die in der vorherigen Abbildung gezeigte Linie zu zeichnen.
 
 
 ```
@@ -50,9 +50,9 @@ myGraphics.DrawLine(&myPen, 0, 0, 160, 80);
 
 
 
-Die Transformation, die den Geräte Koordinaten Seiten Koordinaten zuordnet, wird als *Seiten Transformation* bezeichnet. Die [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse bietet vier Methoden zum Bearbeiten und Überprüfen der Seiten Transformation: [**Graphics:: setpageunit**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setpageunit), [**Graphics:: getpageunit**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getpageunit), [**Graphics:: setpagescale**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setpagescale)und [**Graphics:: getPageScale**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getpagescale). Die **Grafik** Klasse bietet auch zwei Methoden, [**Graphics:: getdpix**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getdpix) und [**Graphics:: getdpiy**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getdpiy), um die horizontalen und vertikalen Punkte pro Zoll des Anzeige Geräts zu untersuchen.
+Die Transformation, die Seitenkoordinaten Gerätekoordinaten zuordnt, wird als *Seitentransformation* bezeichnet. Die [**Graphics-Klasse**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) stellt vier Methoden zum Bearbeiten und Untersuchen der Seitentransformation bereit: [**Graphics::SetPageUnit,**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setpageunit) [**Graphics::GetPageUnit,**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getpageunit) [**Graphics::SetPageScale**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setpagescale)und [**Graphics::GetPageScale.**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getpagescale) Die **Graphics-Klasse** stellt auch zwei Methoden bereit: [**Graphics::GetDpiX**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getdpix) und [**Graphics::GetDpiY,**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-getdpiy)um die horizontalen und vertikalen Punkte pro Zoll des Anzeigegeräts zu untersuchen.
 
-Sie können die [**Graphics:: setpageunit**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setpageunit) -Methode der [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse verwenden, um eine Maßeinheit anzugeben. Im folgenden Beispiel wird eine Zeile von (0,0) zu (2, 1) gezeichnet, wobei Punkt (2, 1) 2 Zoll nach rechts und 1 Zoll vom Punkt (0,0) ist.
+Sie können die [**Graphics::SetPageUnit-Methode**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setpageunit) der [**Graphics-Klasse**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) verwenden, um eine Maßeinheit anzugeben. Das folgende Beispiel zeichnet eine Linie von (0, 0) bis (2, 1), wobei der Punkt (2, 1) 2 Zoll nach rechts und 1 Zoll vom Punkt (0, 0) nach unten liegt.
 
 
 ```
@@ -64,27 +64,27 @@ myGraphics.DrawLine(&myPen, 0, 0, 2, 1);
 
 
 > [!Note]
-> Wenn Sie beim Erstellen des Stifts keine Stift Breite angeben, wird im vorherigen Beispiel eine Linie mit einer Breite von einem Zoll gezeichnet. Sie können die Stift Breite im zweiten Argument für den [**Stift**](/windows/desktop/api/gdipluspen/nl-gdipluspen-pen) -Konstruktor angeben:
+> Wenn Sie beim Erstellen des Stifts keine Stiftbreite angeben, wird im vorherigen Beispiel eine Linie gezeichnet, die einen Zoll breit ist. Sie können die Stiftbreite im zweiten Argument für den [**Stiftkonstruktor**](/windows/desktop/api/gdipluspen/nl-gdipluspen-pen) angeben:
 > <br/><br/>
 > `Pen myPen(Color(255, 0, 0, 0), 1/myGraphics.GetDpiX())`.
 
  
 
-Wenn wir davon ausgehen, dass das Anzeigegerät 96 Punkte pro Zoll in horizontaler Richtung und 96 Punkte pro Zoll in vertikaler Richtung aufweist, haben die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in den drei Koordinaten Räumen:
+Wenn angenommen wird, dass das Anzeigegerät 96 Punkte pro Zoll in horizontaler Richtung und 96 Punkte pro Zoll in vertikaler Richtung hat, weisen die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in den drei Koordinatenbereichen auf:
 
 
 
-|        |                     |
+| LeerZchn       | Endpunktkoordinaten                    |
 |--------|---------------------|
-| World  | (0,0) bis (2, 1)    |
-| Seite   | (0,0) bis (2, 1)    |
-| Sicherungsmedium | (0,0, bis (192, 96) |
+| World  | (0, 0) bis (2, 1)    |
+| Seite   | (0, 0) bis (2, 1)    |
+| Gerät | (0, 0, bis (192, 96) |
 
 
 
  
 
-Sie können die Transformationen für Welt und Seite kombinieren, um eine Vielzahl von Effekten zu erzielen. Angenommen, Sie möchten Zoll als Maßeinheit verwenden, und Sie möchten, dass der Ursprung ihres Koordinatensystems 2 Zoll vom linken Rand des Client Bereichs und 1/2 Zoll vom oberen Rand des Client Bereichs ist. Im folgenden Beispiel werden die Welt-und Seiten Transformationen eines [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts festgelegt, und anschließend wird eine Linie von (0,0) zu (2, 1) gezeichnet.
+Sie können die Welt- und Seitentransformationen kombinieren, um eine Vielzahl von Effekten zu erzielen. Angenommen, Sie möchten Zoll als Maßeinheit verwenden und möchten, dass der Ursprung Ihres Koordinatensystems 2 Zoll vom linken Rand des Clientbereichs und 1/2 Zoll vom oberen Rand des Clientbereichs entfernt ist. Im folgenden Beispiel werden die Welt- und Seitentransformationen eines [**Graphics-Objekts**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) festgelegt und dann eine Linie von (0, 0) bis (2, 1) zeichnet.
 
 
 ```
@@ -95,19 +95,19 @@ myGraphics.DrawLine(&myPen, 0, 0, 2, 1);
 
 
 
-In der folgenden Abbildung ist die Linie und das Koordinatensystem dargestellt.
+Die folgende Abbildung zeigt die Linie und das Koordinatensystem.
 
-![Screenshot des vorherigen Fensters, aber breiter, wobei die Achsen auf der linken Seite positioniert sind und anders gekennzeichnet sind](images/aboutgdip05-art03.png)
+![Screenshot des vorherigen Fensters, aber breiter, wobei die Achsen links positioniert und anders bezeichnet sind](images/aboutgdip05-art03.png)
 
-Wenn wir davon ausgehen, dass das Anzeigegerät 96 Punkte pro Zoll in horizontaler Richtung und 96 Punkte pro Zoll in vertikaler Richtung aufweist, haben die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in den drei Koordinaten Räumen:
+Wenn angenommen wird, dass das Anzeigegerät 96 Punkte pro Zoll in horizontaler Richtung und 96 Punkte pro Zoll in vertikaler Richtung hat, weisen die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in den drei Koordinatenbereichen auf:
 
 
 
-|        |                         |
+| LeerZchn       | Endpunktkoordinaten                        |
 |--------|-------------------------|
-| World  | (0,0) bis (2, 1)        |
+| World  | (0, 0) bis (2, 1)        |
 | Seite   | (2, 0,5) bis (4, 1,5)    |
-| Sicherungsmedium | (192, 48) bis (384, 144) |
+| Gerät | (192, 48) bis (384, 144) |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Restartstrip (DirectX HLSL Stream-Output-Objekt)
-description: Beendet den aktuellen primitiven Strip und startet einen neuen Strip. Wenn für den aktuellen Strip nicht genügend Scheitel Punkte ausgegeben werden, um die primitive Topologie auszufüllen, wird der unvollständige primitive am Ende verworfen.
+title: RestartStrip (DirectX HLSL Stream-Output Object)
+description: Beendet den aktuellen primitiven Strip und startet einen neuen Strip. Wenn für den aktuellen Strip nicht genügend Scheitelpunkte ausgegeben werden, um die primitive Topologie zu füllen, wird das unvollständige Primitive am Ende verworfen.
 ms.assetid: ca8eb7cf-1b4a-4082-b768-01390c5f8b47
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 16b31bbd1e2f72ce6b31a0c079f7ec5739aba87a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: aafd6407d556a6d0b4269c38192107edbc7cb1fa
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993423"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120195"
 ---
-# <a name="restartstrip-directx-hlsl-stream-output-object"></a>Restartstrip (DirectX HLSL Stream-Output-Objekt)
+# <a name="restartstrip-directx-hlsl-stream-output-object"></a>RestartStrip (DirectX HLSL Stream-Output Object)
 
-Beendet den aktuellen primitiven Strip und startet einen neuen Strip. Wenn für den aktuellen Strip nicht genügend Scheitel Punkte ausgegeben werden, um die primitive Topologie auszufüllen, wird der unvollständige primitive am Ende verworfen.
+Beendet den aktuellen primitiven Strip und startet einen neuen Strip. Wenn für den aktuellen Strip nicht genügend Scheitelpunkte ausgegeben werden, um die primitive Topologie zu füllen, wird das unvollständige Primitive am Ende verworfen.
 
-
-
-|                 |
-|-----------------|
-| Restartstrip (); |
+RestartStrip();
 
 
 
@@ -34,9 +30,9 @@ Beendet den aktuellen primitiven Strip und startet einen neuen Strip. Wenn für 
 
 
 
-| Element                                                                                     | BESCHREIBUNG |
+| Element                                                                                     | Beschreibung |
 |------------------------------------------------------------------------------------------|-------------|
-| <span id="None"></span><span id="none"></span><span id="NONE"></span>**Gar**<br/> |             |
+| <span id="None"></span><span id="none"></span><span id="NONE"></span>**nichts**<br/> |             |
 
 
 
@@ -48,27 +44,27 @@ Keine
 
 ## <a name="remarks"></a>Bemerkungen
 
-Ein Strip-Cut bewirkt, dass der aktuelle Bereich endet und ein neuer Bereich gestartet wird. Ein Bereichs Ausschnitt kann durch explizites Aufrufen dieser Methode oder durch Rendering bis zum maximalen Indexwert (1, 0xFFFFFFFF für 32-Bit-Indizes oder 0xFFFF für 16-Bit-Indizes) durchgeführt werden. Jede Instanz einer indizierten, instanzierten Zeichnung generiert automatisch einen Bereichs Ausschnitt. Dies gilt auch dann, wenn es sich bei der Topologie nicht um einen Dreiecks Streifen handelt.
+Ein Strip cut bewirkt, dass der aktuelle Strip endet und ein neuer Strip gestartet wird. Ein Strip cut kann durch explizites Aufrufen dieser Methode oder einfach durch Rendern bis zum maximalen Indexwert (1, der für 32-Bit-Indizes 0xffffffff ist, oder 0xffff für 16-Bit-Indizes) erfolgen. Jede Instanz eines indizierten instanziierten Zeichnens generiert automatisch einen Strip cut. Dies gilt auch, wenn die Topologie kein Dreiecksstreifen ist.
 
 > [!Note]  
-> Die Unterstützung für den Neustart und der 1 "Magic Value" for a Cut sind nur auf [Featureebene](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 10,0 oder höher verfügbar.
+> Unterstützung für Neustart und 1 "Magischer Wert" für einen Cut ist nur auf Geräten der [Featureebene](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 10.0 oder höher verfügbar.
 
  
 
-Es wird immer angenommen, dass es sich um einen Dreiecks Streifen handelt. Um die Ausgabe zu einer Dreiecks Liste zu machen, müssen Sie restartstrip zwischen jedem Dreieck aufrufen. Dreiecks Lüfter werden nicht unterstützt.
+Die Ausgabe wird immer als Dreiecksstreifen angenommen. Um die Ausgabe zu einer Dreiecksliste zu machen, müssen Sie RestartStrip zwischen den einzelnen Dreiecken aufrufen. Dreiecksfächer werden nicht unterstützt.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Anfügen (DirectX HLSL Stream-Output-Objekt)
-description: Fügen Sie Geometry-Shader-Output-Daten an einen vorhandenen Datenstrom an.
+title: Append (DirectX HLSL Stream-Output Object)
+description: Fügen Sie geometry-shader-output-Daten an einen vorhandenen Stream an.
 ms.assetid: 7df51383-7fc7-4a6f-aaa2-6c929f0443a3
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 97ab88961b22529accb4402fc2bd095ede5275c1
-ms.sourcegitcommit: 477b1efe7d9c2f91d5f2ac588a20edf348b1c734
+ms.openlocfilehash: 19d767f3c501cc42e21bbc44a196ba08cd6f1883
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "104313889"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120185"
 ---
-# <a name="append-directx-hlsl-stream-output-object"></a>Anfügen (DirectX HLSL Stream-Output-Objekt)
+# <a name="append-directx-hlsl-stream-output-object"></a>Append (DirectX HLSL Stream-Output Object)
 
-Fügen Sie Geometry-Shader-Output-Daten an einen vorhandenen Datenstrom an.
+Fügen Sie geometry-shader-output-Daten an einen vorhandenen Stream an.
 
-
-
-|                            |
-|----------------------------|
-| Append ( *streamdatatype*); |
+Append( *StreamDataType*);
 
 
 
@@ -34,9 +30,9 @@ Fügen Sie Geometry-Shader-Output-Daten an einen vorhandenen Datenstrom an.
 
 
 
-| Element                                                                                                                             | BESCHREIBUNG                                                                                                                                            |
+| Element                                                                                                                             | Beschreibung                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="StreamDataType"></span><span id="streamdatatype"></span><span id="STREAMDATATYPE"></span>**Streamdatatype**<br/> | Eine Beschreibung der Dateneingabe. Diese Beschreibung muss mit dem Stream-Object-Vorlagen Parameter namens [DataType](dx-graphics-hlsl-so-type.md)identisch sein.<br/> |
+| <span id="StreamDataType"></span><span id="streamdatatype"></span><span id="STREAMDATATYPE"></span>**StreamDataType**<br/> | Eine Dateneingabebeschreibung. Diese Beschreibung muss mit dem stream-object-Vorlagenparameter namens [DataType übereinstimmen.](dx-graphics-hlsl-so-type.md)<br/> |
 
 
 
@@ -48,7 +44,7 @@ Keine
 
 ## <a name="example"></a>Beispiel
 
-Dieser Code Ausschnitt (aus dem [cubemapgs-Beispiel](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)) zeigt ein partielles Beispiel für das Anfügen von Dreiecks leisten primitiven an ein Stream-Output-Objekt.
+Dieser Codeausschnitt (aus dem [CubeMapGS-Beispiel)](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)zeigt ein partielles Beispiel für das Anfügen von Dreiecksstreifenprimitiven an ein Streamausgabeobjekt.
 
 
 ```
@@ -75,18 +71,18 @@ void GS_CubeMap( triangle GS_CUBEMAP_IN input[3],
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

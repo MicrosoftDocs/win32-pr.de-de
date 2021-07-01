@@ -1,39 +1,39 @@
 ---
-description: WMI-C++-Klassen, die Teil des WMI-Anbieter-Frameworks sind, werden jetzt im Endzustand berücksichtigt.
+description: Erfahren Sie mehr über die WMI-C++-Klassen, die Teil des WMI-Anbieterframework sind und jetzt im enden Zustand betrachtet werden.
 ms.assetid: 062a7724-0589-4e9d-af7a-39fd9c08e40b
 ms.tgt_platform: multiple
-title: Anbieter Framework-Klassen
+title: Anbieterframeworkklassen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1562d00e6b3b1563ece933ba7dd9361dd8a5d94f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9bf4ef94b25e51b7f012987552babd30a93e7792
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349459"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120445"
 ---
-# <a name="provider-framework-classes"></a>Anbieter Framework-Klassen
+# <a name="provider-framework-classes"></a>Anbieterframeworkklassen
 
-\[WMI-C++ Klassen, die Teil des WMI-Anbieter-Frameworks sind, werden jetzt im Endzustand berücksichtigt, und für nicht sicherheitsrelevante Probleme, die diese Bibliotheken betreffen, stehen keine weiteren Entwicklungen, Verbesserungen oder Updates zur Verfügung. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[WMI-C++-Klassen, die Teil des WMI-Anbieterframework sind, werden jetzt als endgültig betrachtet, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken ausdrungen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
 
-Das Anbieter Framework implementiert die folgenden Klassen.
+Das Anbieterframework implementiert die folgenden Klassen.
 
 
 
-| Framework-Klasse                                | BESCHREIBUNG                                                                                                                                                                                                         |
+| Framework-Klasse                                | Beschreibung                                                                                                                                                                                                         |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Cframeworkquery**](/windows/desktop/api/FrQuery/nl-frquery-cframeworkquery)     | Enthält Methoden für die Verarbeitung von Abfragen.                                                                                                                                                                              |
-| [**CInstance**](/windows/desktop/api/Instance/nl-instance-cinstance)                 | Enthält Methoden zum Festlegen und Abrufen von Eigenschaften und ist eine Kapselung der [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) -Schnittstelle. Der Implementierer sollte nicht direkt auf die **IWbemClassObject** -Methoden zugreifen müssen. |
-| [**Cthreadbase**](/windows/desktop/api/ThrdBase/nl-thrdbase-cthreadbase)             | Eine Basisklasse, die die internen Thread Sicherheitsmechanismen für das WMI-Anbieter Framework bereitstellt.                                                                                                                    |
-| [**Cwbemgluefactory**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemgluefactory)   | Teil des WMI-Anbieter-Frameworks. Das Anbieter Framework implementiert intern Methoden dieser Schnittstelle, um neue Instanzen von Klassen für den Anbieter zu erstellen.                                                     |
-| [**Cwbemproviderglue**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemproviderglue) | Implementiert die [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) -Methode und die-Methode, die das Laden und Entladen des frameworkanbieters steuern.                                                                             |
-| [**Anbieter**](/windows/desktop/api/Provider/nl-provider-provider)                   | Enthält Hilfsfunktionen und stellt Standard Implementierungen der Methoden von [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices)bereit.                                                                                            |
+| [**CFrameworkQuery**](/windows/desktop/api/FrQuery/nl-frquery-cframeworkquery)     | Enthält Methoden für die Abfrageverarbeitung.                                                                                                                                                                              |
+| [**CInstance**](/windows/desktop/api/Instance/nl-instance-cinstance)                 | Enthält Methoden zum Festlegen und Abrufen von Eigenschaften und ist eine Kapselung der [**IWbemClassObject-Schnittstelle.**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) Implementer sollte nicht direkt auf **IWbemClassObject-Methoden** zugreifen müssen. |
+| [**CThreadBase**](/windows/desktop/api/ThrdBase/nl-thrdbase-cthreadbase)             | Eine Basisklasse, die die internen Threadsicherheitsmechanismen für das WMI-Anbieterframework bietet.                                                                                                                    |
+| [**CWbemGlueFactory**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemgluefactory)   | Teil des WMI-Anbieterframework. Das Anbieterframework implementiert Methoden dieser Schnittstelle intern, um neue Instanzen von Klassen für den Anbieter zu erstellen.                                                     |
+| [**CWbemProviderGlue**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemproviderglue) | Implementiert [**IWbemProviderInit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) und -Methoden, die das Laden und Entladen des Frameworkanbieters steuern.                                                                             |
+| [**Anbieter**](/windows/desktop/api/Provider/nl-provider-provider)                   | Enthält Hilfsfunktionen und stellt Standardimplementierungen der Methoden von [**IWbemServices zur Verfügung.**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices)                                                                                            |
 
 
 
  
 
-Beachten Sie, dass viele der frameworkmethoden [**chstring**](chstring.md) -Parameter verwenden. **Chstring** unterstützt viele der gleichen Methoden und Eigenschaften wie die Microsoft Foundation Classes (MFC), aber ohne den mehr Aufwand von MFC. Weitere Informationen zu " **chstring**" finden Sie unter " **chstring Class Reference**".
+Beachten Sie, dass viele framework-Methoden [**CHString-Parameter**](chstring.md) verwenden. **CHString** unterstützt viele der gleichen Methoden und Eigenschaften wie der Microsoft Foundation Classes (MFC), aber ohne den Mehraufwand von MFC. Weitere Informationen zu **CHString finden Sie unter** **CHString-Klassenreferenz.**
 
  
 

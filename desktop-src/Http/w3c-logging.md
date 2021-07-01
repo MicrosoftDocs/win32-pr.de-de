@@ -1,76 +1,76 @@
 ---
 title: W3C-Protokollierung
-description: Die erweiterte W3C-Protokollierung ist der Typ der serverseitigen Protokollierung, die für die Server Sitzung oder URL-Gruppe aktiviert werden kann.
+description: Bei der erweiterten W3C-Protokollierung handelt es sich um eine serverseitige Protokollierung, die für die Serversitzung oder URL-Gruppe aktiviert werden kann.
 ms.assetid: a08b8f9e-2247-43c6-b253-81f72001d8d2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b253daebae22a2b99e152451cff360c7b633ca64
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: eb53ccf3b6bf5383a0a4da62538b6fa516c500f8
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103724832"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119945"
 ---
 # <a name="w3c-logging"></a>W3C-Protokollierung
 
-Die erweiterte W3C-Protokollierung ist der Typ der serverseitigen Protokollierung, die für die Server Sitzung oder URL-Gruppe aktiviert werden kann. Wenn die W3C-Protokollierung für eine URL-Gruppe aktiviert ist, wird die Protokollierung nur bei Anforderungen ausgeführt, die an die URL-Gruppe weitergeleitet werden. Es wird eine separate Protokolldatei für jede URL-Gruppe erstellt, die für die W3C-Protokollierung konfiguriert ist.
+Bei der erweiterten W3C-Protokollierung handelt es sich um eine serverseitige Protokollierung, die für die Serversitzung oder URL-Gruppe aktiviert werden kann. Wenn die W3C-Protokollierung für eine URL-Gruppe aktiviert ist, wird die Protokollierung nur für Anforderungen ausgeführt, die an die URL-Gruppe weitergeleitet werden. Für jede URL-Gruppe, die für die Aktivierung der W3C-Protokollierung konfiguriert ist, wird eine separate Protokolldatei erstellt.
 
-Wenn die W3C-Protokollierung für die Server Sitzung aktiviert ist, fungiert sie als zentralisierte Form der Protokollierung für alle URL-Gruppen in der Server Sitzung. Für alle URL-Gruppen in der Server Sitzung wird eine einzelne Protokolldatei verwaltet.
+Wenn die W3C-Protokollierung in der Serversitzung aktiviert ist, fungiert sie als zentralisierte Form der Protokollierung für alle URL-Gruppen unter der Serversitzung. Eine einzelne Protokolldatei wird für alle URL-Gruppen in der Serversitzung verwaltet.
 
-In der folgenden Tabelle sind die Felder aufgeführt, die von der HTTP-Server-API protokolliert werden können. Die Tabelle enthält eine Teilmenge der [**http- \_ Protokoll \_ Feld**](http-log-field--constants.md) Konstanten. Einige der unten aufgeführten Felder werden intern automatisch von der HTTP-Server-API generiert und sind daher nicht in der Datenstruktur der [**http- \_ Protokoll \_ Felder \_**](/windows/desktop/api/Http/ns-http-http_log_fields_data) enthalten. Die Spalte "wird als" enthält den Text, der in der Protokolldatei angezeigt wird. Die Daten in der Tabelle befinden sich in der Reihenfolge der Vorkommen im Protokolldatei Daten Satz.
+In der folgenden Tabelle sind die Felder aufgeführt, die von der HTTP-Server-API protokolliert werden können. Die Tabelle enthält eine Teilmenge der [**HTTP \_ LOG FIELD-Konstanten. \_**](http-log-field--constants.md) Einige der unten aufgeführten Felder werden von der HTTP-Server-API intern automatisch generiert und sind daher nicht in der [**HTTP \_ LOG FIELDS \_ \_ DATA-Struktur**](/windows/desktop/api/Http/ns-http-http_log_fields_data) enthalten. Die Spalte "Wird angezeigt als" enthält den Text, der in der Protokolldatei angezeigt wird. Die Daten in der Tabelle werden in der Reihenfolge des Auftretens im Protokolldateidatensatz angezeigt.
 
-Felder, die nicht als "http-Server-API generiert" gekennzeichnet sind, müssen in der [**http- \_ Protokoll \_ Felder- \_ Daten**](/windows/desktop/api/Http/ns-http-http_log_fields_data) Struktur nach Anwendung übermittelt werden. Die Anwendung könnte diese Felder aus der [**http- \_ Anforderungs**](/previous-versions/windows/desktop/legacy/aa364545(v=vs.85)) Struktur generieren, die an Sie übermittelt wird.
+Felder, die nicht als "HTTP-Server-API generiert" gekennzeichnet sind, müssen innerhalb der [**HTTP \_ LOG FIELDS \_ \_ DATA-Struktur**](/windows/desktop/api/Http/ns-http-http_log_fields_data) nach Anwendung übergeben werden. Die Anwendung könnte diese Felder aus der [**http \_ REQUEST-Struktur**](/previous-versions/windows/desktop/legacy/aa364545(v=vs.85)) generieren, die an sie übergeben wird.
 
 
 
-| Feld                            | Angezeigt als      | BESCHREIBUNG                                                                                                                                | HTTP- \_ Protokoll \_ Felder- \_ Datenmember | HTTP- \_ Protokoll \_ Felder Konstanten      |
+| Feld                            | Wird als angezeigt.      | Beschreibung                                                                                                                                | HTTP \_ LOG \_ FIELDS \_ DATA Member | HTTP \_ LOG \_ FIELDS-Konstanten      |
 |----------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|----------------------------------|
-| Datum                             | Datum            | Das Datum, an dem die Aktivität aufgetreten ist.                                                                                                   | Die HTTP Server-API wurde generiert.     | \_ \_ Feld \_ Datum des HTTP-Protokolls           |
-| Time                             | time            | Die Uhrzeit in koordinierter Weltzeit (UTC), zu der die Aktivität aufgetreten ist.                                                             | Die HTTP Server-API wurde generiert.     | \_ \_ Feld \_ Zeit für HTTP-Protokoll           |
-| Dienst Name und Instanznummer | s-Sitename      | Der Internet Dienst Name und die Instanznummer, die auf dem Client ausgeführt wurden.                                                              | Dienstname                    | HTTP- \_ Protokoll \_ Feld- \_ Website \_ Name     |
-| Servername                      | s-Computername  | Der Name des Servers, auf dem der Protokolldatei Eintrag generiert wurde.                                                                          | ServerName                     | Computer Name für HTTP- \_ Protokoll \_ Feld \_ \_ |
-| Server-IP-Adresse                | s-IP            | Die IP-Adresse des Servers, auf dem der Protokolldatei Eintrag generiert wurde.                                                                    | ServerIp                       | HTTP \_ \_ -Protokollfeld \_ Server \_ -IP     |
-| Methode                           | CS-Methode       | Das angeforderte Verb, z. b. eine Get-Methode.                                                                                             | Methode                         | HTTP- \_ Protokoll \_ Feld \_ Methode         |
-| URI-Stamm                         | CS-URI-stem     | Das Ziel des Verbs, z. b. Default.htm.                                                                                          | UriStem                        | URI-Stamm des HTTP- \_ Protokoll \_ Felds \_ \_      |
-| URI-Abfrage                        | CS-URI-Query    | Die Abfrage, die der Client auszuführen versucht hat, falls vorhanden. Eine Abfrage-URI (Universal Resource Identifier) ist nur für dynamische Seiten erforderlich. | UriQuery                       | URI-Abfrage für HTTP- \_ Protokoll \_ Feld \_ \_     |
-| Serverport                      | s-Port          | Die für den Dienst konfigurierte Server Portnummer.                                                                                 | ServerPort                     | HTTP- \_ Protokoll \_ Feld- \_ \_ Serverport   |
-| Benutzername                        | cs-username     | Der Name des authentifizierten Benutzers, der auf den Server zugegriffen hat. Anonyme Benutzer werden durch einen Bindestrich gekennzeichnet.                                    | UserName                       | Benutzer Name für das HTTP- \_ Protokoll \_ Feld \_ \_     |
-| Client IP Address                | c-ip            | Die IP-Adresse des Clients, der die Anforderung gestellt hat.                                                                                        | ClientIp                       | HTTP \_ \_ -Protokollfeld \_ Client \_ -IP     |
-| Protokoll Version                 | CS-Version      | Die vom Client verwendete HTTP-Protokollversion.                                                                                            | Die HTTP Server-API wurde generiert.     | HTTP- \_ Protokoll \_ Feld \_ Version        |
-| Benutzer-Agent                       | CS (Benutzer-Agent)  | Der vom Client verwendete Browsertyp                                                                                                     | UserAgent                      | HTTP- \_ Protokoll \_ Feld Benutzer- \_ \_ Agent    |
-| Cookie                           | CS (Cookie)      | Der Inhalt des gesendeten oder empfangenen Cookies, sofern vorhanden.                                                                                        | Cookie                         | HTTP- \_ Protokoll \_ Feld \_ Cookie         |
-| Referrer                         | CS (Referrer)    | Die Website, die der Benutzer zuletzt besucht hat. Diese Website stellte eine Verknüpfung zur aktuellen Website her.                                                        | Referrer                       | Verweis auf http- \_ Protokoll \_ Feld \_       |
-| Host                             | CS-Host         | Der Host Header Name (sofern vorhanden).                                                                                                              | Host                           | HTTP- \_ Protokoll \_ Feld \_ Host           |
-| HTTP-Status                      | SC-Status       | Der HTTP-Statuscode.                                                                                                                      | ProtocolStatus                 | Status des HTTP- \_ Protokoll \_ Felds \_         |
-| Protokoll unter Status               | SC-unter Status    | Der unter Status-Fehlercode.                                                                                                                  | SubStatus                      | unter Status des HTTP- \_ Protokoll \_ Felds \_ \_    |
-| Win32-Status                     | SC-Win32-Status | Der Windows-Statuscode.                                                                                                                   | Win32Status                    | Win32-Status des HTTP- \_ Protokoll \_ Felds \_ \_  |
-| Gesendete Bytes                       | SC-bytes        | Die Anzahl der vom Server gesendeten Bytes.                                                                                                    | Die HTTP Server-API wurde generiert.     | \_gesendete HTTP-Protokoll \_ Feld \_ Bytes \_    |
-| Empfangene Bytes                   | CS-bytes        | Die Anzahl von Bytes, die vom Server empfangen und verarbeitet wurden.                                                                                  | Die HTTP Server-API wurde generiert.     | HTTP- \_ Protokoll \_ Feld ( \_ Bytes \_ )    |
-| Benötigte Zeit                       | Zeit      | Die Dauer der Aktion in Millisekunden.                                                                                  | Die HTTP Server-API wurde generiert.     | Zeit für das HTTP- \_ Protokoll \_ Feld \_ \_    |
-| Stream-ID                      | streamid          | Die Datenstrom-ID.                                                                                  | Die HTTP Server-API wurde generiert.     | HTTP- \_ Protokoll \_ Feld-Stream- \_ \_ ID       |
+| Datum                             | Datum            | Das Datum, an dem die Aktivität aufgetreten ist.                                                                                                   | HTTP-Server-API generiert.     | \_DATUM DES HTTP-PROTOKOLLFELDS \_ \_           |
+| Time                             | time            | Die Zeit in koordinierter Weltzeit (UTC), zu der die Aktivität aufgetreten ist.                                                             | HTTP-Server-API generiert.     | FELDZEIT \_ DES HTTP-PROTOKOLLS \_ \_           |
+| Dienstname und Instanznummer | s-sitename      | Der Internetdienstname und die Instanznummer, die auf dem Client ausgeführt wurden.                                                              | Dienstname                    | WEBSITENAME \_ DES HTTP-PROTOKOLLFELDS \_ \_ \_     |
+| Servername                      | s-computername  | Der Name des Servers, auf dem der Protokolldateieintrag generiert wurde.                                                                          | ServerName                     | \_ \_ COMPUTERNAME DES HTTP-PROTOKOLLFELDS \_ \_ |
+| Server-IP-Adresse                | s-ip            | Die IP-Adresse des Servers, auf dem der Protokolldateieintrag generiert wurde.                                                                    | ServerIp                       | \_IP DES HTTP-PROTOKOLLFELDSERVERS \_ \_ \_     |
+| Methode                           | cs-method       | Das angeforderte Verb, z. B. eine GET-Methode.                                                                                             | Methode                         | HTTP \_ LOG \_ \_ FIELD-METHODE         |
+| URI-Stamm                         | cs-uri-stem     | Das Ziel des Verbs, z. B. Default.htm.                                                                                          | UriStem                        | HTTP \_ LOG \_ FIELD \_ URI \_ STEM      |
+| URI-Abfrage                        | cs-uri-query    | Die Abfrage, sofern vorhanden, die der Client ausführen wollte. Eine Abfrage-URI (Universal Resource Identifier) ist nur für dynamische Seiten erforderlich. | UriQuery                       | HTTP \_ LOG \_ FIELD \_ URI \_ QUERY     |
+| Serverport                      | s-port          | Die Serverportnummer, die für den Dienst konfiguriert ist.                                                                                 | ServerPort                     | HTTP \_ LOG \_ FIELD \_ SERVER \_ PORT   |
+| Benutzername                        | cs-username     | Der Name des authentifizierten Benutzers, der auf den Server zugegriffen hat. Anonyme Benutzer werden durch einen Bindestrich gekennzeichnet.                                    | UserName (Benutzername)                       | \_BENUTZERNAME DES HTTP-PROTOKOLLFELDS \_ \_ \_     |
+| Client IP Address                | c-ip            | Die IP-Adresse des Clients, der die Anforderung gestellt hat.                                                                                        | ClientIp                       | CLIENT-IP DES \_ HTTP-PROTOKOLLFELDS \_ \_ \_     |
+| Protokollversion                 | cs-version      | Die vom Client verwendete HTTP-Protokollversion.                                                                                            | HTTP-Server-API generiert.     | VERSION \_ DES HTTP-PROTOKOLLFELDS \_ \_        |
+| Benutzer-Agent                       | cs(User-Agent)  | Der vom Client verwendete Browsertyp                                                                                                     | UserAgent                      | HTTP \_ LOG \_ FIELD \_ USER \_ AGENT    |
+| Cookie                           | cs(Cookie)      | Der Inhalt des gesendeten oder empfangenen Cookies, sofern vorhanden.                                                                                        | Cookie                         | HTTP \_ LOG \_ FIELD \_ COOKIE         |
+| Referrer                         | cs(Referrer)    | Die Website, die der Benutzer zuletzt besucht hat. Diese Website stellte eine Verknüpfung zur aktuellen Website her.                                                        | Referrer                       | HTTP \_ LOG \_ FIELD \_ REFERRER       |
+| Host                             | cs-host         | Der Hostheadername, falls dieser enthalten ist.                                                                                                              | Host                           | \_ \_ HTTP-PROTOKOLLFELDHOST \_           |
+| HTTP-Status                      | sc-status       | Der HTTP-Statuscode.                                                                                                                      | ProtocolStatus                 | \_ \_ HTTP-PROTOKOLLFELDSTATUS \_         |
+| Protokollunterstatus               | sc-substatus    | Der Unterstatusfehlercode.                                                                                                                  | SubStatus                      | UNTERSTATUS \_ DES \_ \_ HTTP-PROTOKOLLFELDS \_    |
+| Win32-Status                     | sc-win32-status | Der Windows-Statuscode.                                                                                                                   | Win32Status                    | STATUS DES \_ \_ \_ HTTP-PROTOKOLLFELDS WIN32 \_  |
+| Gesendete Bytes                       | sc-bytes        | Die Anzahl der vom Server gesendeten Bytes.                                                                                                    | HTTP-Server-API generiert.     | GESENDETE \_ \_ HTTP-PROTOKOLLFELDBYTES \_ \_    |
+| Empfangene Bytes                   | cs-bytes        | Die Anzahl der vom Server empfangenen und verarbeiteten Bytes.                                                                                  | HTTP-Server-API generiert.     | HTTP \_ LOG \_ FIELD \_ BYTES \_ RECV    |
+| Benötigte Zeit                       | Zeit in Rechnung      | Die Dauer der Aktion in Millisekunden.                                                                                  | HTTP-Server-API generiert.     | HTTP \_ LOG \_ FIELD \_ TIME \_ TAKEN    |
+| Stream-ID                      | streamid          | Die Stream-ID.                                                                                  | HTTP-Server-API generiert.     | \_ \_ \_ HTTP-PROTOKOLLFELD-STREAM-ID \_       |
 
 
 
- 
+ 
 
-Die Protokolldatei ist ein anpassbares, textbasiertes ASCII-Format. Die Feld Präfixe in der Datei werden wie folgt definiert:
+Die Protokolldatei ist ein anpassbares textbasiertes ASCII-Format. Die Feldpräfixe in der Datei sind wie folgt definiert:
 
-|     |                           |
+| Präfix    | BESCHREIBUNG                          |
 |-----|---------------------------|
-| s   | Server Aktionen.           |
-| c   | Client Aktionen.           |
-| SC  | Server-zu-Client-Aktionen. |
+| s   | Serveraktionen.           |
+| c   | Clientaktionen.           |
+| Sc  | Server-zu-Client-Aktionen. |
 | cs  | Client-zu-Server-Aktionen. |
 
 
 
- 
+ 
 
-Die Anwendung kann eine oder mehrere der erweiterten W3C-Protokolldatei Felder auswählen, aber nicht alle Felder enthalten Informationen. Für Felder, die ausgewählt wurden, für die jedoch keine Informationen vorhanden sind, wird ein Bindestrich (-) als Platzhalter angezeigt. Wenn ein Feld ein nicht druckbares Zeichen enthält, wird es von der HTTP-Server-API durch ein Pluszeichen (+) ersetzt, um das Protokolldatei Format beizubehalten. Dies tritt in der Regel bei Virenangriffen auf, wenn z. b. ein böswilliger Benutzer Wagen Rückläufe und Zeilen Feeds sendet, die, wenn Sie nicht durch das Pluszeichen (+) ersetzt werden, das Protokolldatei Format sprengen würden. Felder werden durch Leerzeichen voneinander getrennt.
+Die Anwendung kann eines oder mehrere der Felder der erweiterten W3C-Protokolldatei auswählen, aber nicht alle Felder enthalten Informationen. Bei Feldern, die ausgewählt sind, für die jedoch keine Informationen enthalten sind, wird ein Bindestrich (-) als Platzhalter angezeigt. Wenn ein Feld ein nicht druckbares Zeichen enthält, ersetzt die HTTP-Server-API es durch ein Pluszeichen (+), um das Protokolldateiformat zu erhalten. Dies tritt in der Regel bei Virenangriffen auf, wenn z. B. ein böswilliger Benutzer Wagenrücklauf- und Zeilenfeeds sendet, die das Protokolldateiformat nicht durch das Pluszeichen (+) ersetzen würden. Felder werden durch Leerzeichen getrennt.
 
-Wenn ein Feld von der URL-Gruppe oder der Server Sitzung aktiviert ist, aber nicht für die Anforderung ausgewählt ist, wird es in der Protokolldatei mit einem Bindestrich (-) als Platzhalter angezeigt.
+Wenn ein Feld von der URL-Gruppe oder Serversitzung aktiviert, aber nicht für die Anforderung ausgewählt wurde, wird es in der Protokolldatei mit einem Bindestrich (-) als Platzhalter angezeigt.
 
-Protokolldateien werden erstellt, wenn die erste Anforderung in der URL-Gruppe oder der Server Sitzung eingeht. Sie werden bei der Konfiguration der Protokollierung nicht erstellt. Im folgenden Beispiel wird der erste Eintrag der Protokolldatei für eine W3C-Protokolldatei mit den Feldern Client-IP, Benutzername, Server-IP, Serverport, Methode, URI-Stamm, URI-Abfrage, Status und Benutzer-Agent angezeigt:
+Protokolldateien werden erstellt, wenn die erste Anforderung in der URL-Gruppe oder Serversitzung eintrifft. Sie werden bei der Konfiguration der Protokollierung nicht erstellt. Das folgende Beispiel zeigt den ersten Protokolldateieintrag für eine W3C-Protokolldatei mit aktivierten Feldern "Client-IP", "Benutzername", "Server-IP", "Serverport", "Methode", "URI-Stamm", "URI-Abfrage", "Status" und "Benutzer-Agent":
 
 ``` syntax
 #Software: Microsoft HTTP Server API 2.0  
@@ -80,8 +80,8 @@ Protokolldateien werden erstellt, wenn die erste Anforderung in der URL-Gruppe o
 2002-05-02 17:42:15 172.22.255.255 - 172.30.255.255 80 GET /images/picture.jpg - 200 Mozilla/4.0+(compatible;MSIE+5.5;+Windows+2000+Server)
 ```
 
-Das Zeit Erfassungs Feld wird initialisiert, wenn die HTTP-Server-API das erste Byte empfängt, bevor die Anforderung analysiert wird. Der Zeitstempel des Zeitrahmens wird beendet, wenn der letzte Sendevorgang abgeschlossen ist. Die Zeit wird nicht über das Netzwerk hinweg berücksichtigt. Die erste Anforderung an die Site wird etwas länger als andere ähnliche Anforderungen angezeigt, da die HTTP-Server-API die Protokolldatei mit der ersten Anforderung öffnet.
+Das Zeitfeld wird initialisiert, wenn die HTTP-Server-API das erste Byte empfängt, bevor die Anforderung analysiert wird. Der zeitbasierte Zeitstempel wird beendet, wenn der letzte Sendeabschluss erfolgt. Die zeitbasierte Zeit spiegelt nicht die Zeit im gesamten Netzwerk wider. Die erste Anforderung an die Website zeigt eine etwas längere Zeit als andere ähnliche Anforderungen an, da die HTTP-Server-API die Protokolldatei mit der ersten Anforderung öffnet.
 
- 
+ 
 
- 
+ 

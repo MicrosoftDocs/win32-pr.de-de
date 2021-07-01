@@ -1,184 +1,184 @@
 ---
-description: Der audioresampler führt eine oder beide der folgenden Aktionen für einen Audiostream aus. Ändern Sie die Abtastrate. Ändern Sie die Anzahl der Kanäle.
+description: Der Audio-Resampler führt eine oder beide der folgenden Aktionen für einen Audiostream aus. Ändern Sie die Samplingrate. Ändern Sie die Anzahl der Kanäle.
 ms.assetid: bee755c4-0585-40fb-aa4d-4e964f5144a3
 title: Audio Resampler-DSP (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fb173fa4f8d964bec1102c4cfeefa4bf83f1ffe
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 8dbf5e640ffd128a5b9249514284ecef16c5f57e
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106367288"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119414"
 ---
-# <a name="audio-resampler-dsp"></a>Audioresampler-DSP
+# <a name="audio-resampler-dsp"></a>Audio-Resampler-DSP
 
-Der audioresampler führt eine oder beide der folgenden Aktionen für einen Audiostream aus.
+Der Audio-Resampler führt eine oder beide der folgenden Aktionen für einen Audiostream aus.
 
--   Ändern Sie die Abtastrate.
+-   Ändern Sie die Samplingrate.
 -   Ändern Sie die Anzahl der Kanäle.
 
 ## <a name="clsid"></a>CLSID
 
-CLSID " \_ samsamplermediaobject"
+CLSID \_ CResamplerMediaObject
 
 ## <a name="interfaces"></a>Schnittstellen
 
--   [**Imediaobject**](/previous-versions/ms785953(v=vs.85))
--   [**IMF-Transformation**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
--   [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
--   [**Iwmresamplerproperties**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-iwmresamplerprops)
+-   [**IMediaObject**](/previous-versions/ms785953(v=vs.85))
+-   [**ÜBERTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
+-   [**Ipropertystore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
+-   [**IWMResamplerProps**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-iwmresamplerprops)
 
 ## <a name="formats"></a>Formate
 
-PCM-oder IEEE-Gleit Komma
+PCM oder IEEE-Gleitkomma
 
-Der Medientyp muss ein unkomprimiertes PCM oder Gleit Komma-Audioformat angeben.
+Der Medientyp muss ein nicht komprimiertes PCM- oder Gleitkommaaudioformat angeben.
 
--   Initialisieren Sie für die [**IMF Transform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Schnittstelle den Medientyp, wie in [unkomprimierten Audiodateitypen](uncompressed-audio-media-types.md)beschrieben.
--   Bei der [**imediaobject**](/previous-versions/ms785953%28v%3dvs.85%29) -Schnittstelle muss der Medientyp ein **Format \_ WaveFormatEx** -Typ sein. Weitere Informationen finden Sie unter [**DMO \_ - \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type).
+-   Initialisieren Sie für die [**INTERFACESTransform-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) den Medientyp wie unter [Uncompressed Audio Media Types (Unkomprimierte Audiomedientypen)](uncompressed-audio-media-types.md)beschrieben.
+-   Für die [**IMediaObject-Schnittstelle**](/previous-versions/ms785953%28v%3dvs.85%29) muss der Medientyp ein **FORMAT \_ WaveFormatEx-Typ** sein. Weitere Informationen finden Sie unter [**DMO \_ MEDIA \_ TYPE**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type).
 
 ## <a name="properties"></a>Eigenschaften
 
--   [mfpkey \_ wmresamp \_ filterquality](mfpkey-wmresamp-filterquality.md)
--   [mfpkey \_ wmresamp \_ channelmtx](mfpkey-wmresamp-channelmtx.md)
--   [mfpkey \_ wmresamp \_ Lowpass- \_ Bandbreite](mfpkey-wmresamp-lowpass-bandwidth.md)
+-   [MFPKEY \_ WMRESAMP \_ FILTERQUALITY](mfpkey-wmresamp-filterquality.md)
+-   [MFPKEY \_ WMRESAMP \_ CHANNELMTX](mfpkey-wmresamp-channelmtx.md)
+-   [MFPKEY \_ WMRESAMP \_ LOWPASS \_ BANDWIDTH](mfpkey-wmresamp-lowpass-bandwidth.md)
 
 ## <a name="required-attributes"></a>Erforderliche Attribute.
 
-Der Resampler erfordert, dass die folgenden Attribute festgelegt werden:
+Für den Resampler müssen die folgenden Attribute festgelegt werden:
 
--   [MF \_ \_ -MT \_ - \_ audiokanalmaske](mf-mt-audio-channel-mask-attribute.md)
--   [MF \_ \_ -MT-audiodurchschn. \_ \_ Byte \_ pro \_ Sekunde](mf-mt-audio-avg-bytes-per-second-attribute.md)
--   [MF \_ \_ -MT- \_ Audioblock \_ Ausrichtung](mf-mt-audio-block-alignment-attribute.md)
+-   [MF \_ MT \_ AUDIO \_ CHANNEL \_ MASK](mf-mt-audio-channel-mask-attribute.md)
+-   [MF \_ MT \_ AUDIO \_ AVG \_ BYTES \_ PER \_ SECOND](mf-mt-audio-avg-bytes-per-second-attribute.md)
+-   [MF \_ MT \_ AUDIO \_ BLOCK \_ ALIGNMENT](mf-mt-audio-block-alignment-attribute.md)
 
-## <a name="custom-channel-mapping"></a>Benutzerdefinierte Kanal Zuordnung
+## <a name="custom-channel-mapping"></a>Benutzerdefinierte Kanalzuordnung
 
-Der audioresampler ordnet die eingabeaudiokanäle den audioweitergabekanälen zu, basierend auf den folgenden Informationen:
+Der Audio-Resampler ordnet die Eingabeaudiokanäle den Ausgabeaudiokanälen basierend auf den folgenden Informationen zu:
 
--   Die Anzahl der Kanäle. Dies wird im Attribut " [MF \_ MT \_ \_ audionum \_ Channels](mf-mt-audio-num-channels-attribute.md) " des Medientyps oder im **nchannels** -Member der [WaveFormatEx](mf-mt-audio-prefer-waveformatex-attribute.md) -Struktur angegeben.
--   Die Kanalmaske, die Kanäle der Redner Position zuweist. Die Kanalmaske wird im MF \_ MT \_ - \_ Audiokanal \_ Mask-Attribut des Medientyps oder im **dwchannelmask** -Member der [**WAVEFORMATEXTENSIBLE**](/windows/desktop/api/mmreg/ns-mmreg-waveformatextensible) -Struktur angegeben.
--   Eine Matrix von Mapping-Gewichtungen.
+-   Die Anzahl der Kanäle. Dies wird im [MF MT AUDIO NUM \_ \_ \_ \_ CHANNELS-Attribut](mf-mt-audio-num-channels-attribute.md) des Medientyps oder im **nChannels-Member** der [WAVEFORMATEX-Struktur](mf-mt-audio-prefer-waveformatex-attribute.md) angegeben.
+-   Die Kanalmaske, die Kanäle der Sprecherposition zuweist. Die Kanalmaske wird im MF \_ MT \_ AUDIO CHANNEL \_ \_ MASK-Attribut des Medientyps oder im **dwChannelMask-Member** der [**WAVEFORMATEXTENSIBLE-Struktur**](/windows/desktop/api/mmreg/ns-mmreg-waveformatextensible) angegeben.
+-   Eine Matrix von Zuordnungsgewichtungen.
 
-Die Matrix enthält eine Reihe von Gewichtungen, sodass jeder Ausgabekanal ein gewichteter Durchschnitt der Eingabe Kanäle ist.
+Die Matrix enthält eine Reihe von Gewichtungen, sodass jeder Ausgabekanal ein gewichteter Durchschnitt der Eingabekanäle ist.
 
-Sie können eine benutzerdefinierte Matrix für die Kanal Zuordnung angeben, indem Sie [**iwmresamplerproperties:: setuserchannelmtx**](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmresamplerprops-setuserchannelmtx) aufrufen, oder indem Sie die Eigenschaft " [**mfpkey \_ wmresamp \_ channelmtx**](mfpkey-wmresamp-channelmtx.md) " festlegen. Wenn keine benutzerdefinierte Matrix bereitgestellt wird, verwendet der audioresampler eine Reihe von Standard Matrizen.
+Sie können eine benutzerdefinierte Matrix für die Kanalzuordnung angeben, indem Sie [**IWMResamplerProps::SetUserChannelMtx**](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmresamplerprops-setuserchannelmtx) aufrufen oder die [**MFPKEY \_ WMRESAMP \_ CHANNELMTX-Eigenschaft**](mfpkey-wmresamp-channelmtx.md) festlegen. Wenn keine benutzerdefinierte Matrix bereitgestellt wird, verwendet der Audio-Resampler einen Satz von Standardmatrizen.
 
-## <a name="default-channel-mapping"></a>Standard Kanal Zuordnung
+## <a name="default-channel-mapping"></a>Standardkanalzuordnung
 
-Wenn Sie keine benutzerdefinierte Matrix angeben, verwendet der audioresampler-DSP Standardwerte für die Kanal Zuordnung.
+Wenn Sie keine benutzerdefinierte Matrix angeben, verwendet der Audio-Resampler-DSP Standardwerte für die Kanalzuordnung.
 
 In den folgenden Tabellen werden die Kanäle abgekürzt:
 
 -   L: Links
--   R: rechts
--   C: zentrieren
--   LFE: geringe frequenzeffekte
--   BL: zurück Links
--   BR: zurück rechts
--   SL: umgeben Links
--   SR: rechts umschließen
+-   R: Rechts
+-   C: Center
+-   LFE: Low Frequence Effects
+-   BL: Zurück links
+-   BR: Zurück rechts
+-   SL: Umschließen links
+-   SR: Umrandung rechts
 
-In der folgenden Tabelle sind die Standard Koeffizienten für die Zuordnung von 6 Kanälen (Maske 0x3f) und 2 Kanälen aufgeführt.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 6 Kanälen (maskieren 0x3F) zu 2 Kanälen.
 
 
 
-|     | L     | R     | C     | LFE   | BL    | BR    |
+|     | L     | R     | C     | Lfe   | BL    | BR    |
 |-----|-------|-------|-------|-------|-------|-------|
-| L   | 0.314 | 0     | 0.222 | 0,031 | 0,268 | 0,164 |
-| R   | 0     | 0.314 | 0.222 | 0,031 | 0,164 | 0,268 |
+| **L**   | 0.314 | 0     | 0.222 | 0.031 | 0,268 | 0.164 |
+| **R**   | 0     | 0.314 | 0.222 | 0.031 | 0.164 | 0,268 |
 
 
 
  
 
-In der folgenden Tabelle sind die Standard Koeffizienten für die Zuordnung von 6 Kanälen (Maske 0x60f) und 2 Kanälen aufgeführt.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 6 Kanälen (maskieren 0x60F) zu 2 Kanälen.
 
 
 
-|     | L     | R     | C     | LFE   | SL    | SR    |
+|     | L     | R     | C     | Lfe   | SL    | SR    |
 |-----|-------|-------|-------|-------|-------|-------|
-| L   | 0,320 | 0     | 0,226 | 0,032 | 0,292 | 0,130 |
-| R   | 0     | 0,320 | 0,226 | 0,032 | 0,130 | 0,292 |
+| **L**   | 0.320 | 0     | 0.226 | 0.032 | 0.292 | 0.130 |
+| **R**   | 0     | 0.320 | 0.226 | 0.032 | 0.130 | 0.292 |
 
 
 
  
 
-In der folgenden Tabelle sind die Standard Koeffizienten für die Zuordnung von 6-Kanälen (Maske 0x3f oder 0x60f) zu einem Kanal aufgeführt.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 6 Kanälen (maskieren 0x3F oder 0x60F) zu 1 Kanal.
 
 
 
-|     | L     | R     | C     | LFE   | BL (SL) | BR (SR) |
+|     | L     | R     | C     | Lfe   | BL(SL) | BR(SR) |
 |-----|-------|-------|-------|-------|--------|--------|
-| C   | 0,192 | 0,192 | 0,192 | 0,038 | 0,192  | 0,192  |
+| **C**   | 0.192 | 0.192 | 0.192 | 0.038 | 0.192  | 0.192  |
 
 
 
  
 
-In der folgenden Tabelle sind die Standard Koeffizienten für die Zuordnung von 8 Kanälen (Maske 0x63f) und 2 Kanälen aufgeführt.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 8 Kanälen (maskieren 0x63F) zu 2 Kanälen.
 
 
 
-|     | L     | R     | C     | LFE   | BL    | BR    | SL    | SR    |
+|     | L     | R     | C     | Lfe   | BL    | BR    | SL    | SR    |
 |-----|-------|-------|-------|-------|-------|-------|-------|-------|
-| L   | 0.222 | 0     | 0,157 | 0,022 | 0,189 | 0,116 | 0,203 | 0,090 |
-| R   | 0     | 0.222 | 0,157 | 0,022 | 0,116 | 0,189 | 0,090 | 0,203 |
+| **L**   | 0.222 | 0     | 0.157 | 0.022 | 0,189 | 0.116 | 0.203 | 0.090 |
+| **R**   | 0     | 0.222 | 0.157 | 0.022 | 0.116 | 0,189 | 0.090 | 0.203 |
 
 
 
  
 
-Die folgende Tabelle zeigt die Standard Koeffizienten für die Zuordnung von 8 Kanälen (Maske 0x63f) zu einem Kanal.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 8 Kanälen (maskieren 0x63F) zu 1 Kanal.
 
 
 
-|     | L     | R     | C     | LFE   | BL    | BR    | SL    | SR    |
+|     | L     | R     | C     | Lfe   | BL    | BR    | SL    | SR    |
 |-----|-------|-------|-------|-------|-------|-------|-------|-------|
-| C   | 0,139 | 0,139 | 0,139 | 0,028 | 0,139 | 0,139 | 0,139 | 0,139 |
+| **C**   | 0.139 | 0.139 | 0.139 | 0.028 | 0.139 | 0.139 | 0.139 | 0.139 |
 
 
 
  
 
-In der folgenden Tabelle sind die Standard Koeffizienten für die Zuordnung von 8 Kanälen (Maske 0x63f) und 6 Kanälen (Maske 0x3f) aufgeführt.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 8 Kanälen (maskieren 0x63F) zu 6 Kanälen (maskieren 0x3F).
 
 
 
-|     | L     | R     | C     | LFE   | BL    | BR    | SL    | SR    |
+|     | L     | R     | C     | Lfe   | BL    | BR    | SL    | SR    |
 |-----|-------|-------|-------|-------|-------|-------|-------|-------|
-| L   | 0,518 | 0     | 0     | 0     | 0     | 0     | 0,189 | 0     |
-| R   | 0     | 0,518 | 0     | 0     | 0     | 0     | 0     | 0,189 |
-| C   | 0     | 0     | 0,518 | 0     | 0     | 0     | 0     | 0     |
-| LFE | 0     | 0     | 0     | 0,518 | 0     | 0     | 0     | 0     |
-| BL  | 0     | 0     | 0     | 0     | 0,518 | 0     | 0,482 | 0     |
-| BR  | 0     | 0     | 0     | 0     | 0     | 0,518 | 0     | 0,482 |
+| **L**   | 0.518 | 0     | 0     | 0     | 0     | 0     | 0,189 | 0     |
+| **R**   | 0     | 0.518 | 0     | 0     | 0     | 0     | 0     | 0,189 |
+| **C**   | 0     | 0     | 0.518 | 0     | 0     | 0     | 0     | 0     |
+| **Lfe** | 0     | 0     | 0     | 0.518 | 0     | 0     | 0     | 0     |
+| **BL**  | 0     | 0     | 0     | 0     | 0.518 | 0     | 0.482 | 0     |
+| **BR**  | 0     | 0     | 0     | 0     | 0     | 0.518 | 0     | 0.482 |
 
 
 
  
 
-In der folgenden Tabelle sind die Standard Koeffizienten für die Zuordnung von 8 Kanälen (Maske 0x63f) und 6 Kanälen (Maske 0x60f) aufgeführt.
+Die folgende Tabelle zeigt die Standardkoeffizienten für die Zuordnung von 8 Kanälen (mask 0x63F) zu 6 Kanälen (mask 0x60F).
 
 
 
-|     | L     | R     | C     | LFE   | BL    | BR    | SL    | SR    |
+|     | L     | R     | C     | Lfe   | BL    | BR    | SL    | SR    |
 |-----|-------|-------|-------|-------|-------|-------|-------|-------|
-| L   | 0,447 | 0     | 0     | 0     | 0     | 0     | 0     | 0     |
-| R   | 0     | 0,447 | 0     | 0     | 0     | 0     | 0     | 0     |
-| C   | 0     | 0     | 0,447 | 0     | 0     | 0     | 0     | 0     |
-| LFE | 0     | 0     | 0     | 0,447 | 0     | 0     | 0     | 0     |
-| SL  | 0     | 0     | 0     | 0     | 0,429 | 0,124 | 0,447 | 0     |
-| SR  | 0     | 0     | 0     | 0     | 0,124 | 0,429 | 0     | 0,447 |
+| **L**   | 0.447 | 0     | 0     | 0     | 0     | 0     | 0     | 0     |
+| **R**   | 0     | 0.447 | 0     | 0     | 0     | 0     | 0     | 0     |
+| **C**   | 0     | 0     | 0.447 | 0     | 0     | 0     | 0     | 0     |
+| **Lfe** | 0     | 0     | 0     | 0.447 | 0     | 0     | 0     | 0     |
+| **Sl**  | 0     | 0     | 0     | 0     | 0.429 | 0.124 | 0.447 | 0     |
+| **SR**  | 0     | 0     | 0     | 0     | 0.124 | 0.429 | 0     | 0.447 |
 
 
 
  
 
-Um zu verstehen, wie die Tabellen von Koeffizienten interpretiert werden, sehen Sie sich die erste Tabelle an, die sechs Kanäle zu 2 zuordnet. Die erste Zeile der Tabelle (0,314, 0, 0,222, 0,031, 0,268, 0,164) ist ein Vektor von Gewichtungen, der angibt, wie stark jeder Eingabe Kanal zum linken Kanal der Ausgabe beiträgt. Die zweite Zeile der Tabelle (0, 0,314, 0,222, 0,031, 0,164, 0,268) ist ein Vektor von Gewichtungen, der angibt, wie stark jeder Eingabe Kanal zum rechten Kanal der Ausgabe beiträgt.
+Um zu verstehen, wie die Tabellen von Koeffizienten interpretiert werden, betrachten Sie die erste Tabelle, die 6 Kanäle 2 zu ordnet. Die erste Zeile der Tabelle (0,314, 0, 0,222, 0,031, 0,268, 0,164) ist ein Gewichtungsvektor, der angibt, wie stark jeder Eingabekanal zum linken Kanal der Ausgabe beiträgt. Die zweite Zeile der Tabelle (0, 0,314, 0,222, 0,031, 0,164, 0,268) ist ein Gewichtungsvektor, der angibt, wie stark jeder Eingabekanal zum richtigen Kanal der Ausgabe beiträgt.
 
-Die folgenden Formeln veranschaulichen, wie die Ausgabekanäle berechnet werden.
+Die folgenden Formeln zeigen, wie die Ausgabekanäle berechnet werden.
 
 ``` syntax
 L_out = L*0.314 + C*0.222 + LFE*0.031 + BL*0.268 + BR*0.164 
@@ -186,27 +186,27 @@ R_out = R*0.314 + C*0.222 + LFE*0.031 + BL*0.164 + BR*0.268
 ```
 
 > [!Note]  
-> Wenn Sie das audioresampler-DSP verwenden, um die Anzahl der Kanäle zu erhöhen, werden den hinzugefügten Kanälen Werte von 0 zugewiesen.
+> Wenn Sie den Audio Resampler-DSP verwenden, um die Anzahl von Kanälen zu erhöhen, werden den hinzugefügten Kanälen Werte von 0 zugewiesen.
 
  
 
 ## <a name="output-quality"></a>Ausgabequalität
 
-Sie können die Ausgabequalität des-audioresampler-DSP angeben, indem Sie [**iwmresamplerproperties:: setthalffilterlength**](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmresamplerprops-sethalffilterlength) aufrufen, oder indem Sie die Eigenschaft " [**\_ \_ filterquality" für mfpkey**](mfpkey-wmresamp-filterquality.md) festlegen. Wenn Sie die Ausgabequalität nicht angeben, verwendet der audioresampler-DSP einen Standardwert von 30.
+Sie können die Ausgabequalität des Audio Resampler-DSP angeben, indem Sie [**IWMResamplerProps::SetHalfFilterLength**](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmresamplerprops-sethalffilterlength) aufrufen oder die [**MFPKEY \_ WMRESAMP \_ FILTERQUALITY-Eigenschaft**](mfpkey-wmresamp-filterquality.md) festlegen. Wenn Sie die Ausgabequalität nicht angeben, verwendet der Audio Resampler-DSP einen Standardwert von 30.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl>    |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>Resampledmo.dll</dt> </dl> |
 
 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Digitale Signal Prozessoren](windowsmediadigitalsignalprocessors.md)
+[Digitale Signalprozessoren](windowsmediadigitalsignalprocessors.md)

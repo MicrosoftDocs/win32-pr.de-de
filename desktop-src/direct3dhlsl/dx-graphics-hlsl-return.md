@@ -1,9 +1,9 @@
 ---
 title: return-Anweisung
-description: Eine Return-Anweisung signalisiert das Ende einer Funktion.
+description: Eine return-Anweisung signalisiert das Ende einer Funktion.
 ms.assetid: e6c097af-ba0b-4abc-8099-69882ced1e18
 keywords:
-- Return-Anweisung HLSL
+- return Statement HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 525abf6d815d2073ee39a6bc6a5a81120cf652ee
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 876c69f3ecfcf1ee1c8391ccc503b2316056b37a
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104976193"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119585"
 ---
 # <a name="return-statement"></a>return-Anweisung
 
-Eine Return-Anweisung signalisiert das Ende einer Funktion.
+Eine return-Anweisung signalisiert das Ende einer Funktion.
+
+Rückgabewert \[ \] ;
 
 
 
-|                   |
-|-------------------|
-| Rückgabe \[ Wert \] ; |
+ 
 
-
-
- 
-
-Die einfachste Return-Anweisung gibt die Steuerung von der Funktion an das aufrufenden Programm zurück. Es wird kein Wert zurückgegeben.
+Die einfachste return-Anweisung gibt die Steuerung von der Funktion an das aufrufende Programm zurück. gibt keinen Wert zurück.
 
 
 ```
@@ -46,7 +42,7 @@ void main()
 
 
 
-Eine Return-Anweisung kann jedoch einen oder mehrere Werte zurückgeben. In diesem Beispiel wird ein Literalwert zurückgegeben:
+Eine return-Anweisung kann jedoch einen oder mehrere Werte zurückgeben. In diesem Beispiel wird ein Literalwert zurückgegeben:
 
 
 ```
@@ -67,7 +63,7 @@ return  light.enabled = true ;
 
 
 
-In diesem Beispiel wird ein Vektor mit vier Komponenten zurückgegeben, der aus einer lokalen Variablen und einem Literalelement erstellt wird.
+In diesem Beispiel wird ein Vektor mit vier Komponenten zurückgegeben, der aus einer lokalen Variablen und einem Literal erstellt wird.
 
 
 ```
@@ -76,7 +72,7 @@ return  float4(color.rgb, 1) ;
 
 
 
-In diesem Beispiel wird ein Vektor mit vier Komponenten zurückgegeben, der aus dem Ergebnis erstellt wird, das von einer intrinsischen Funktion zurückgegeben wird, sowie Literalwerte.
+In diesem Beispiel wird ein Vierkomponentenvektor zurückgegeben, der aus dem Ergebnis erstellt wird, das von einer systeminternen Funktion zusammen mit Literalwerten zurückgegeben wird.
 
 
 ```
@@ -88,7 +84,7 @@ float4 func(float2 a: POSITION): COLOR
 
 
 
-Dieses Beispiel gibt eine-Struktur zurück, die mindestens ein-Element enthält.
+In diesem Beispiel wird eine -Struktur zurückgegeben, die einen oder mehrere Member enthält.
 
 
 ```
@@ -109,16 +105,16 @@ VS_OUTPUT VertexShader_Tutorial_1(float4 inPos : POSITION )
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Funktionen (DirectX HLSL)](dx-graphics-hlsl-functions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

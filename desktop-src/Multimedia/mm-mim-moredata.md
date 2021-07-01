@@ -1,9 +1,9 @@
 ---
-title: MM_MIM_MOREDATA Meldung (MMSYSTEM. h)
-description: Die mm \_ MIM \_ MoreData-Nachricht wird an ein Rückruf Fenster gesendet, wenn eine MIDI-Nachricht von einem MIDI-Eingabegerät empfangen wird, die Anwendung jedoch MIM- \_ Daten Nachrichten nicht schnell genug verarbeitet, um mit dem Eingabe-Gerätetreiber Schritt zu halten.
+title: MM_MIM_MOREDATA Meldung (Mmsystem.h)
+description: Die MM \_ MIM \_ MOREDATA-Nachricht wird an ein Rückruffenster gesendet, wenn eine RÜCKRUFNACHRICHT von einem EINGABEGERÄT empfangen wird, die Anwendung jedoch MIM \_ DATA-Nachrichten nicht schnell genug verarbeitet, um mit dem Eingabegerätetreiber Schritt zu halten.
 ms.assetid: 25d507f9-01d4-4a9a-afdd-693d74e3bd22
 keywords:
-- MM_MIM_MOREDATA-Nachricht (Multimedia)
+- MM_MIM_MOREDATA Meldung Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b67835a67c957a250fe1ae6d391f5ebd56d5301b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3079c537ddca056ca690537c27edd95826de1189
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040581"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120025"
 ---
-# <a name="mm_mim_moredata-message"></a>MM \_ MIM \_ MoreData-Nachricht
+# <a name="mm_mim_moredata-message"></a>MM \_ MIM \_ MOREDATA-Nachricht
 
-Die **mm \_ MIM \_ MoreData** -Nachricht wird an ein Rückruf Fenster gesendet, wenn eine MIDI-Nachricht von einem MIDI-Eingabegerät empfangen wird, die Anwendung jedoch [**MIM- \_ Daten**](mim-data.md) Nachrichten nicht schnell genug verarbeitet, um mit dem Eingabe-Gerätetreiber Schritt zu halten. Das Fenster empfängt diese Meldung nur dann, wenn die Anwendung den Status der MIDI-e/a im-Befehl \_ \_ für die [**midiinopen**](/windows/win32/api/mmeapi/nf-mmeapi-midiinopen) -Funktion angibt.
+Die **MM \_ MIM \_ MOREDATA-Nachricht** wird an ein Rückruffenster gesendet, wenn eine RÜCKRUFNACHRICHT von einem INPUT-Eingabegerät empfangen wird, die Anwendung jedoch [**MIM \_ DATA-Nachrichten**](mim-data.md) nicht schnell genug verarbeitet, um mit dem Eingabegerätetreiber Schritt zu halten. Das Fenster empfängt diese Meldung nur, wenn die Anwendung IM \_ \_ Aufruf der funktion [**"arsInOpen"**](/windows/win32/api/mmeapi/nf-mmeapi-midiinopen) den STATUS DER IO-E/A-Funktion VON DER ANWENDUNG angibt.
 
 
 ```C++
@@ -38,32 +38,32 @@ lParam = (LPARAM) (DWORD) lMidiMessage
 
 <dl> <dt>
 
-<span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hinput*
+<span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hInput*
 </dt> <dd>
 
-Handle für das MIDI-Eingabegerät, das die MIDI-Nachricht empfangen hat.
+Handle für das EINGABEGERÄT, das die FEHLERMELDUNG erhalten hat.
 
 </dd> <dt>
 
-<span id="lMidiMessage"></span><span id="lmidimessage"></span><span id="LMIDIMESSAGE"></span>*lmidimessage*
+<span id="lMidiMessage"></span><span id="lmidimessage"></span><span id="LMIDIMESSAGE"></span>*lMidiMessage*
 </dt> <dd>
 
-Gibt die empfangene MIDI-Nachricht an. Die Nachricht wird wie folgt in einem Double Word-Wert verpackt:
+Gibt die empfangene FEHLERMELDUNG AN. Die Nachricht wird wie folgt in einen Doubleword-Wert gepackt:
 
 
 
-| Anforderung | Wert |
+| Anforderung | Wert | Beschreibung |
 |-----------|-----------------|-----------------------------------------------------|
-| Hohes Wort | Byte mit hoher Reihenfolge | Nicht verwendet.                                           |
-|           | Byte mit niedriger Reihenfolge  | Enthält ein zweites Byte von MIDI-Daten (bei Bedarf).  |
-| Niedriges Wort  | Byte mit hoher Reihenfolge | Enthält das erste Byte der MIDI-Daten (bei Bedarf). |
-|           | Byte mit niedriger Reihenfolge  | Enthält den Status von MIDI.                           |
+| Hohes Wort | Hohe Bytereihenfolge | Wird nicht verwendet.                                           |
+|           | Byte mit niedriger Reihenfolge  | Enthält bei Bedarf ein zweites Byte mit QUOTA-Daten.  |
+| Niedriges Wort  | Hohe Bytereihenfolge | Enthält das erste Byte derDATENÜBERTRAGUNG-Daten (falls erforderlich). |
+|           | Byte mit niedriger Reihenfolge  | Enthält den STATUS VON.                           |
 
 
 
  
 
-Die beiden Byte-Daten Bytes sind optional, abhängig vom Status Byte von MIDI.
+Die beiden BYTES für DIE DATEN SIND optional, je nach STATUS-Byte DESINEs.
 
 </dd> </dl>
 
@@ -73,17 +73,17 @@ Diese Meldung gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Ihre Anwendung die Daten von MIDI schneller empfängt, als Sie verarbeiten kann, sollten Sie keinen Fenster Rückrufmechanismus verwenden. Verwenden Sie zum Maximieren der Geschwindigkeit eine Rückruffunktion, und verwenden Sie die [**MIM \_ MoreData**](mim-moredata.md) -Nachricht anstelle von mm \_ MIM \_ MoreData.
+Wenn Ihre Anwendung SCHNELLER ALS DIE DATEN verarbeiten kann, sollten Sie keinen Fensterrückrufmechanismus verwenden. Um die Geschwindigkeit zu maximieren, verwenden Sie eine Rückruffunktion und die [**MIM \_ MOREDATA-Nachricht**](mim-moredata.md) anstelle von MM \_ MIM \_ MOREDATA.
 
-Eine Anwendung sollte nur eine minimale Menge an Verarbeitung von mm \_ MIM- \_ Daten Nachrichten verarbeiten. (Insbesondere sollten Anwendungen die [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagea) -Funktion bei der Verarbeitung von mm \_ nicht aufzurufen. MIM \_ MoreData.) Stattdessen sollte die Anwendung die Ereignisdaten in einen Puffer platzieren und dann zurückgeben.
+Eine Anwendung sollte nur eine minimale Verarbeitungsmenge von MM \_ MIM \_ MOREDATA-Nachrichten durchführen. (Insbesondere sollten Anwendungen die [PostMessage-Funktion](/windows/win32/api/winuser/nf-winuser-postmessagea) während der Verarbeitung von MM \_ nicht aufrufen. MIM \_ MOREDATA.) Stattdessen sollte die Anwendung die Ereignisdaten in einen Puffer platzieren und dann zurückgeben.
 
-Wenn eine Anwendung eine [**mm \_ MIM- \_ Daten**](mm-mim-data.md) Nachricht nach einer Reihe von mm \_ MIM- \_ Daten Nachrichten empfängt, hat Sie eingehende MIDI-Ereignisse erfasst und kann zeitintensive Funktionen sicher aufzurufen.
+Wenn eine Anwendung nach einer Reihe von MM MIM MOREDATA-Nachrichten eine [**MM \_ MIM \_ DATA-Nachricht**](mm-mim-data.md) empfängt, \_ hat sie eingehende \_ CAB-Ereignisse aufholt und kann zeitintensive Funktionen sicher aufrufen.
 
-Bei den von einem MIDI-eingabeport empfangenen MIDI-Nachrichten ist der Status " jede Nachricht wird so erweitert, dass Sie das MIDI-Status Byte enthält.
+DER STATUS von MELDUNGEN, die von einem PORTS empfangen werden, ist deaktiviert. jede Nachricht wird erweitert, um das STATUS-Byte ZU enthalten.
 
-Diese Meldung wird nicht gesendet, wenn eine vom System exklusive System exklusive Nachricht empfangen wird. Mit dieser Meldung ist kein Zeitstempel verfügbar. Für Zeitstempel-Eingabedaten müssen Sie die Nachrichten verwenden, die an Rückruf Funktionen gesendet werden.
+Diese Nachricht wird nicht gesendet, wenn eine vom SYSTEM exklusive MELDUNG empfangen wird. Für diese Nachricht ist kein Zeitstempel verfügbar. Für Eingabedaten mit Zeitstempel müssen Sie die Nachrichten verwenden, die an Rückruffunktionen gesendet werden.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -91,7 +91,7 @@ Diese Meldung wird nicht gesendet, wenn eine vom System exklusive System exklusi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (windows.h einschließen)</dt> </dl> |
 
 
 
@@ -99,10 +99,10 @@ Diese Meldung wird nicht gesendet, wenn eine vom System exklusive System exklusi
 
 <dl> <dt>
 
-[Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
+[Music Instrument Digital Interface (INSTRUMENTS)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[FEHLERMELDUNGEN](midi-messages.md)
 </dt> </dl>
 
  

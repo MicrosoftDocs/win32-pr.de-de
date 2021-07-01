@@ -1,5 +1,5 @@
 ---
-title: Getsampleposition (DirectX HLSL-Textur Objekt)
+title: GetSamplePosition (DirectX HLSL-Texturobjekt)
 description: Ruft die Position des angegebenen Beispiels ab.
 ms.assetid: 4e622b85-82d6-4339-b03a-becbe5f9aa57
 ms.topic: reference
@@ -9,22 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 062bf08064faf112fdc1efe5b371fcad72efeeea
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 9a1e5f4dc71d5af2e7973ef180c919a49e65ef81
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389496"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118585"
 ---
-# <a name="getsampleposition-directx-hlsl-texture-object"></a>Getsampleposition (DirectX HLSL-Textur Objekt)
+# <a name="getsampleposition-directx-hlsl-texture-object"></a>GetSamplePosition (DirectX HLSL-Texturobjekt)
 
 Ruft die Position des angegebenen Beispiels ab.
 
-
-
-|                                        |
-|----------------------------------------|
-| Ret Object. getsampleposition (int s); |
+ret Object.GetSamplePosition( int s );
 
 
 
@@ -34,10 +30,10 @@ Ruft die Position des angegebenen Beispiels ab.
 
 
 
-| Element                                                                                           | BESCHREIBUNG                                                                                         |
+| Element                                                                                           | Beschreibung                                                                                         |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| <span id="Object"></span><span id="object"></span><span id="OBJECT"></span>*Objekt*<br/> | Ein Texture2DMS-oder Texture2DMSArray [-Textur-Objekttyp](dx-graphics-hlsl-to-type.md) .<br/> |
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/>                                         | \[im \] NULL basierten Beispiel Index.<br/>                                                      |
+| <span id="Object"></span><span id="object"></span><span id="OBJECT"></span>*Objekt*<br/> | Ein Texture2DMS- oder ein Texture2DMSArray-Texturobjekttyp. [](dx-graphics-hlsl-to-type.md)<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/>                                         | \[in \] Der nullbasierte Beispielindex.<br/>                                                      |
 
 
 
@@ -45,15 +41,15 @@ Ruft die Position des angegebenen Beispiels ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Beispiel Position (x, y), einen Gleit Komma Vektor mit zwei Komponenten, zurück.
+Gibt die (x,y)-Beispielposition zurück, einen Gleitkommavektor mit zwei Komponenten.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
-| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | PS \_ 4 \_ 0 | PS \_ 4 \_ 1  | GS \_ 4 \_ 0 | GS \_ 4 \_ 1  |
+| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
 |----------|-----------|----------|-----------|----------|-----------|
 |          | x         |          | x         |          | x         |
 
@@ -61,23 +57,23 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
  
 
--   Das Shader-Modell 4,1 ist in Direct3D 10,1 oder höher verfügbar.
+-   ShaderModell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Ein Pixelshader kann bei der Stichproben Häufigkeit (Ausführen eines Pixelshaders einmal pro Stichprobe) oder bei Pixel Häufigkeit (Ausführen eines Pixel-Shader einmal pro Pixel) ausgewertet werden. Fügen Sie die \_ Semantik "SV sampleindex" an eine Pixel-Shadereingabe an, um einen PixelShader bei der Stichproben Häufigkeit aufzurufen. der Eingabe Wert wird dann als Beispiel Index verwendet, wenn das Rendern des Renderziels
+Ein Pixel-Shader kann mit der Abtastfrequenz (einmal pro Beispiel einen Pixels shader ausführen) oder mit Pixelfrequenz (einmal pro Pixel ausführen) ausgewertet werden. Fügen Sie die SV SampleIndex-Semantik an eine Pixel-Shadereingabe an, um einen Pixel-Shader mit Samplinghäufigkeit aufzurufen. Der Eingabewert wird dann als Beispielindex verwendet, wenn das Renderziel samplingt \_ wird.
 
-Sie können eine Pixel-Shadereingabe auf verschiedene Weise interpolieren. So interpolieren Sie an:
+Sie können eine Pixel-Shadereingabe auf verschiedene Weise interpolieren. So interpolieren Sie unter:
 
--   Ein Pixel Center verwendet keine Semantik.
--   Beispiel: Verwenden Sie die \_ Semantik "SV samplindex".
--   Einen Schwerpunkt Speicherort verwenden Sie den [ \_ Schwerpunkt](dx-graphics-hlsl-struct.md) -Modifizierer.
+-   Ein Pixelzentriert, verwenden Sie keine Semantik.
+-   Ein Beispiel: Verwenden Sie die SV \_ SampleIndex-Semantik.
+-   Verwenden Sie als Schwerpunktposition den [ \_ Modifizierer "schwerpunkt".](dx-graphics-hlsl-struct.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  
