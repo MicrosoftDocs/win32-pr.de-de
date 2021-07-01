@@ -1,6 +1,6 @@
 ---
 title: Gather (DirectX HLSL-Texturobjekt)
-description: Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Textur für die bilineare Interpolation verwendet werden.
+description: Ruft die vier Stichproben (nur rote Komponente) ab, die für die bilineare Interpolation beim Sampling einer Textur verwendet werden.
 ms.assetid: a394d8c2-99cc-4a38-9ac9-34afc666ebe0
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f333c204b77d6e0c64119e16f31e170fec1d0f6c
-ms.sourcegitcommit: 07ba02719c9779e082b108ae74f9699fb0236c34
+ms.openlocfilehash: 4659ba19e9fa950a659969f2491533858f4658fb
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108644102"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120545"
 ---
 # <a name="gather-directx-hlsl-texture-object"></a>Gather (DirectX HLSL-Texturobjekt)
 
-Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Textur für die bilineare Interpolation verwendet werden.
+Ruft die vier Stichproben (nur rote Komponente) ab, die für die bilineare Interpolation beim Sampling einer Textur verwendet werden.
 
-
-
-|                                                                                                    |
-|----------------------------------------------------------------------------------------------------|
-| &lt;Vorlagentyp &gt; 4 Object.Gather( sampler \_ state S, float2 \| 3 \| 4 Location , \[ int2 Offset \] ); |
+&lt;Vorlagentyp &gt; 4 Object.Gather( \_ Samplerzustand S, float2 \| 3 \| 4 Location , \[ int2 Offset \] );
 
 
 
@@ -42,7 +38,7 @@ Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Text
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -60,7 +56,7 @@ Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Text
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object-Typ</th>
+<th>Texture-Object Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -84,7 +80,7 @@ Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Text
 </tr>
 <tr class="even">
 <td><p><span id="Offset"></span><span id="offset"></span><span id="OFFSET"></span><em>Offset</em></p></td>
-<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Der Argumenttyp ist vom Texturobjekttyp abhängig. Bei Shadern für Shadermodell 5.0 und höher werden die 6 am wenigsten signifikanten Bits jedes Offsetwerts als Vorzeichenwert berücksichtigt, wodurch der Bereich [-32..31] ergibt. Bei vorherigen Shadermodell-Shadern müssen Offsets direkte ganze Zahlen zwischen -8 und 7 sein.</p>
+<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Der Argumenttyp ist vom Texturobjekttyp abhängig. Bei Shadern, die auf ShaderModell 5.0 und höher abzielen, werden die 6 am wenigsten signifikanten Bits jedes Offsetwerts als Wert mit Vorsignierung verwendet, was einen Bereich von [-32...31] ergibt. Bei vorherigen Shadermodell-Shadern müssen Offsets direkte ganze Zahlen zwischen -8 und 7 sein.</p>
 
 <table>
 <thead>
@@ -167,7 +163,7 @@ int4 main (float4 f : SV_Position) : SV_Target
 
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 

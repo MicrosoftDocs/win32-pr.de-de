@@ -1,50 +1,43 @@
 ---
-title: Effiziente und natürliche
-description: Effiziente und natürliche
+title: Effizient und natürlich sein
+description: Effizient und natürlich sein
 ms.assetid: 6642b41c-1833-41be-9de2-ef091cefaa45
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5de146d19f4b2bc3ce7ca1da78fb41a1e39df1dd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e1e4d7410283de231d9ee08ca586e3b8067ebffa
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709383"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118435"
 ---
-# <a name="be-efficient-and-natural"></a>Effiziente und natürliche
+# <a name="be-efficient-and-natural"></a>Effizient und natürlich sein
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Wenn Sie Aufgaben ausführen, werden in der Regel in der Regel kurze Informationen ausgetauscht. Häufig werden Elemente in der Diskussion zwischen den Parteien aufgebaut und dann indirekt mit abgekürzten Antworten bezeichnet. Diese Formen der Abkürzung sind von Vorteil, da Sie effizient sind und auch darauf hindeuten, dass der Sprecher und der Listener über einen gemeinsamen Kontext verfügen. Das heißt, dass Sie kommunizieren. Wenn Sie die entsprechenden Formen der Abkürzung verwenden, ist ein Gespräch auch natürlicher.
+Bei der Durchführung von Aufgaben sind effektive menschliche Konversationen in der Regel der Austausch kurzer Informationen. Häufig werden Elemente in der Diskussion zwischen den Parteien hergestellt und dann indirekt mit abgekürzten Antworten bezeichnet. Diese Formen der Abkürzung sind vorteilhaft, da sie effizient sind, und sie bedeuten auch, dass der Sprecher und der Listener einen gemeinsamen Kontext haben. das heißt, dass sie kommunizieren. Die Verwendung geeigneter Formen der Abkürzung macht auch einen Dialog natürlicher.
 
-Eine Form einer Konversations Abkürzung ist die Verwendung von kontra KTIONEN. Wenn Sie nicht verwendet werden, wird ein Redner eher formal und starr erscheinen und manchmal auch weniger menschlich. Die meisten menschlichen Konversationen veranschaulichen mehr Freiheit in den linguistischen Regeln als der geschriebene Text.
+Eine Form der Konversationsabkürzung ist die Verwendung von Contractions. Wenn sie nicht verwendet werden, erscheint ein Sprecher formaler und starrer und manchmal auch weniger menschenfreundlicher. Die meisten menschlichen Konversationen zeigen mehr Freiheit in den linguistischen Regeln als geschriebener Text.
 
-Eine weitere gängige Form der Abkürzung in Konversationen ist *Anaphora*, die Verwendung von Pronomen. Wenn Sie z. b. gefragt haben, "haben Sie die Rechnung heute gesehen?" Antworten, die "IT" für "Rechnung" ersetzen, sind natürlicher als die Wiederholung des Namens. Die Ersetzung ist ein Hinweis darauf, dass die Parteien im Gespräch einen gemeinsamen Kontext *haben, der "IT* " ist. Beachten Sie, dass sich das Wort "I" auf das Zeichen bezieht, wenn er es sagt.
+Eine weitere gängige Form der Abkürzung in Konversationen ist *anaphora*, die Verwendung von Pronomen. Wenn sie beispielsweise gefragt werden: "Haben Sie die Rechnung heute gesehen?" Antworten, die "him" durch "Bill" ersetzen, sind natürlicher als das wiederholen des Namens. Die Ersetzung ist ein Hinweis darauf, dass die Parteien im Dialog einen gemeinsamen Kontext davon *haben, wer* "er" ist. Beachten Sie, dass sich das Wort "I" auf das Zeichen bezieht, wenn es steht.
 
-Gemeinsam genutzter Kontext wird auch durch die Verwendung von linguistischen *Ellipsen*, das Abschneiden von vielen Wörtern in der ursprünglichen Abfrage, kommuniziert. Der Listener könnte z. b. Antworten: "Ja, ich habe ihn gesehen." demonstriert den gemeinsamen Kontext von, *Wenn* oder sogar mit einem einfachen "yes" antwortet, das den gemeinsamen Kontext von *wer* und *wann* veranschaulicht.
+Der freigegebene Kontext wird auch durch die Verwendung linguistischer *Auslassungszeichen* kommuniziert, die Kürzung vieler Wörter in der ursprünglichen Abfrage. Der Listener könnte z. B. antworten: "Ja, ich habe ihn gesehen", um den gemeinsamen Kontext von *zu demonstrieren, wenn* oder sogar mit einem einfachen "Ja" antworten, das den gemeinsamen Kontext von *wer* und *wann* veranschaulicht.
 
-Implizites Verständnis kann auch über andere Formen der abgekürzten konvertsart vermittelt werden, bei der Inhalte ohne Wiederholung abgeleitet werden, wie im folgenden Beispiel gezeigt:
+Implizites Verständnis kann auch über andere Formen abgekürzter Konversationsstile vermittelt werden, bei denen Inhalte ohne Wiederholung abgeleitet werden, wie im folgenden Beispiel gezeigt:
 
+**Benutzer:** Ich möchte eine Pizza im Stil von Chicago.
 
+**Zeichen:** Mit "Extra Cheese"?
 
-|            |                                 |
-|------------|---------------------------------|
-| User:      | Ich möchte eine Pizza im Chicago-Stil. |
-| Art | Mit "extra Käse"?            |
+Wenn jemand sagt: "Hier ist es heiß", ist der Ausdruck verständlich und erfordert keine weiteren Details, wenn Sie wissen, wo sich der Sprecher befindet. Wenn der Kontext jedoch nicht gut eingerichtet ist oder mehrdeutig ist, kann das Entfernen aller Kontextverweise den Benutzer verwirren.
 
+Wenn Sie abgekürzte Kommunikation verwenden, berücksichtigen Sie immer den Kontext des Benutzers und den Inhaltstyp. Es empfiehlt sich, längere Beschreibungen für neue und unbekannte Informationen zu verwenden. Versuchen Sie jedoch selbst bei langen beschreibenden Informationen, sie in kleinere Blöcke aufzugliedern. Dadurch können Sie die Animation ändern, während das Zeichen spricht. Außerdem bietet es dem Benutzer eine größere Möglichkeit, das Zeichen zu unterbrechen, insbesondere bei Verwendung der Spracheingabe.
 
+Konsistenz ist bei der Sprachausgabe wichtig. Ungewöhnliche Sprachmuster oder Prosodie können als Herabstufen der Intelligenz des Zeichens interpretiert werden. Ebenso kann der Wechsel zwischen TTS und aufgezeichneter Sprache dazu führen, dass Benutzer das Zeichen als ungewöhnlich interpretieren oder mehr als eine Persönlichkeit besitzen. Mit Klappen synchronisierte Mundbewegungen können die Intelligibility der Sprache verbessern. Der Microsoft-Agent unterstützt automatisch die Synchronisierung für TTS-Engines, die den erforderlichen SAPI-Schnittstellen entsprechen. Die Synchronisierung von Sprechzwecken wird jedoch auch für aufgezeichnete Sprache unterstützt. Sounddateien können auch mit dem Microsoft Linguistic Sound Editing Tool erweitert werden.
 
- 
+ 
 
-Wenn jemand sagt: "er ist hier heiß". der Ausdruck ist verständlich und erfordert keine weiteren Details, wenn Sie wissen, wo sich der Redner befindet. Wenn der Kontext jedoch nicht ordnungsgemäß eingerichtet ist oder nicht eindeutig ist, kann der Benutzer durch das Entfernen aller kontextabhängigen Verweise verwirrt bleiben.
-
-Bei der Verwendung von abgekürzten Kommunikation sollten Sie immer den Kontext des Benutzers und den Inhaltstyp in Erwägung gezogen. Es ist sinnvoll, längere Beschreibungen für neue und unbekannte Informationen zu verwenden. Versuchen Sie jedoch selbst mit langen beschreibenden Informationen, Sie in kleinere Blöcke aufzuteilen. Dadurch haben Sie die Möglichkeit, die Animation zu ändern, wenn das Zeichen spricht. Außerdem bietet der Benutzer mehr Möglichkeiten, das Zeichen zu unterbrechen, insbesondere bei der Verwendung von Spracheingaben.
-
-Konsistenz in der Sprachausgabe ist wichtig. Seltsame Sprachmuster oder prosody können als Downgrade der Intelligenz des Zeichens interpretiert werden. Ebenso kann das Wechseln zwischen TTS und der aufgezeichneten Sprache bewirken, dass Benutzer das Zeichen als seltsam interpretieren oder mehr als eine Persönlichkeit besitzen. Lip-synchronizierte Mundbewegungen können die intellidie Spracherkennung verbessern. Der Microsoft-Agent unterstützt automatisch die Lip-Synchronisierung für TTS-Engines, die den erforderlichen SAPI-Schnittstellen entsprechen. Die Lip-Synchronisierung wird jedoch auch für die aufgezeichnete Sprache unterstützt. Sound Dateien können auch mit dem Microsoft-Tool für die linguistische Sound Bearbeitung erweitert werden.
-
- 
-
- 
+ 
 
 
 

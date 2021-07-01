@@ -1,6 +1,6 @@
 ---
-title: Calculatelevelof Detail (DirectX HLSL Texture-Objekt)
-description: Berechnet den Detailgrad.
+title: CalculateLevelOfDetail (DirectX HLSL-Texturobjekt)
+description: Berechnet die Detailebene.
 ms.assetid: 7c7c3754-45a9-49c6-8420-aac22f776b15
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c59b8da97ff1cbe0bd88d6a49120a0a040cf3c30
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: 9e307527f93c153f0f78ce58b4d70ead4f7c1bc4
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104976864"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120555"
 ---
-# <a name="calculatelevelofdetail-directx-hlsl-texture-object"></a>Calculatelevelof Detail (DirectX HLSL Texture-Objekt)
+# <a name="calculatelevelofdetail-directx-hlsl-texture-object"></a>CalculateLevelOfDetail (DirectX HLSL-Texturobjekt)
 
-Berechnet den Detailgrad.
+Berechnet die Detailebene.
 
-
-
-|                                                                 |
-|-----------------------------------------------------------------|
-| Ret Object. calculatelevelof Detail (Sampler \_ State S, float x); |
+ret Object.CalculateLevelOfDetail( sampler \_ state S, float x );
 
 
 
@@ -42,25 +38,25 @@ Berechnet den Detailgrad.
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><span id="Object"></span><span id="object"></span><span id="OBJECT"></span><em>Objekt</em><br/></td>
-<td>Ein beliebiger <a href="dx-graphics-hlsl-to-type.md">Textur Objekttyp</a> (mit Ausnahme von Texture2DMS und Texture2DMSArray).<br/></td>
+<td>Beliebiger <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (außer Texture2DMS und Texture2DMSArray).<br/></td>
 </tr>
 <tr class="even">
-<td><span id="S"></span><span id="s"></span><em>Hymnen</em><br/></td>
-<td>in Ein <a href="/windows/desktop/direct3d10/d3d10-effect-sampler-syntax">samplerzustand</a>. Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.<br/></td>
+<td><span id="S"></span><span id="s"></span><em>S</em><br/></td>
+<td>[in] Ein <a href="/windows/desktop/direct3d10/d3d10-effect-sampler-syntax">Samplerzustand.</a> Dies ist ein Objekt, das in einer Effektdatei deklariert ist, die Zustandszuweisungen enthält.<br/></td>
 </tr>
 <tr class="odd">
-<td><span id="x"></span><span id="X"></span><em>Stuben</em><br/></td>
-<td>in Der lineare Interpolations Wert oder die Werte, bei dem es sich um eine Gleit Komma Zahl zwischen 0,0 und 1,0 handelt. Die Anzahl der Komponenten ist vom Textur Objekttyp abhängig. <br/> 
+<td><span id="x"></span><span id="X"></span><em>X</em><br/></td>
+<td>[in] Der oder die linearen Interpolationswerte, bei denen es sich um eine Gleitkommazahl zwischen 0,0 und einschließlich 1,0 handelt. Die Anzahl der Komponenten hängt vom Texturobjekttyp ab. <br/> 
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object-Typ</th>
+<th>Texture-Object Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -74,7 +70,7 @@ Berechnet den Detailgrad.
 <td>float2</td>
 </tr>
 <tr class="odd">
-<td>Texture3D, texturecube, texturecubearray </td>
+<td>Texture3D, TextureCube, TextureCubeArray </td>
 <td>float3</td>
 </tr>
 </tbody>
@@ -91,15 +87,15 @@ Berechnet den Detailgrad.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die berechnete Lod zurück, einen einzelnen Gleit Komma Wert.
+Gibt die berechnete LOD zurück, einen einzelnen Gleitkommawert.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
-| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | PS \_ 4 \_ 0 | PS \_ 4 \_ 1  | GS \_ 4 \_ 0 | GS \_ 4 \_ 1  |
+| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
 |----------|-----------|----------|-----------|----------|-----------|
 |          |           |          | x         |          |           |
 
@@ -107,14 +103,14 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
  
 
-1.  Texturecubearray ist im Shader-Modell 4,1 oder höher verfügbar.
-2.  Das Shader-Modell 4,1 ist in Direct3D 10,1 oder höher verfügbar.
+1.  TextureCubeArray ist in Shader Model 4.1 oder höher verfügbar.
+2.  ShaderModell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

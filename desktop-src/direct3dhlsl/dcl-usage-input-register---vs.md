@@ -1,6 +1,6 @@
 ---
-title: dcl_usage Eingabe (sm1, sm2, sm3 – vs asm)
-description: Deklarieren Sie die Zuordnung zwischen einer Vertexelementverwendung und einem Verwendungsindex für ein Vertex-Shader-Eingaberegister.
+title: dcl_usage eingabe (sm1, sm2, sm3 – vs asm)
+description: Deklarieren Sie die Zuordnung zwischen der Verwendung eines Scheitelpunktelements und einem Verwendungsindex für ein Vertex-Shader-Eingaberegister.
 ms.assetid: e0360f4d-1250-4dc5-b790-372b303a37a8
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,24 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 44bd976d05c0734ca2e498b5de405564f689e20d
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: ae4b024bbce0636127b0ed0fc5f42bc466e1b7fd
+ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998387"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113129687"
 ---
-# <a name="dcl_usage-input-sm1-sm2-sm3---vs-asm"></a>dcl \_ usage input (sm1, sm2, sm3 - vs asm) (dcl usage input (sm1, sm2, sm3 – vs asm))
+# <a name="dcl_usage-input-sm1-sm2-sm3---vs-asm"></a>dcl \_ usage input (sm1, sm2, sm3 – vs asm)
 
-Deklarieren Sie die Zuordnung zwischen einer Vertexelementverwendung und einem Verwendungsindex für ein Vertex-Shader-Eingaberegister.
+Deklarieren Sie die Zuordnung zwischen der Verwendung eines Scheitelpunktelements und einem Verwendungsindex für ein Vertex-Shader-Eingaberegister.
 
 ## <a name="syntax"></a>Syntax
 
-
-
-|                                |
-|--------------------------------|
-| dcl \_ usage usage index \[ \_ \] v\# |
+dcl \_ usage usage index \[ \_ \] v\#
 
 
 
@@ -34,11 +30,11 @@ Deklarieren Sie die Zuordnung zwischen einer Vertexelementverwendung und einem V
 
 Hierbei gilt:
 
--   dcl \_ usage gibt an, wie die Registerdaten verwendet werden. Dies ist der gleiche Wert wie die Member von [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) ohne das Präfix D3DDECLUSAGE.
--   Usage \_ Index ist ein optionaler ganzzahliger Index zwischen 0 und 15. Die Nutzungsdaten werden geändert. Der Index entspricht dem Verwendungsindex in einer Scheitelpunktdeklaration. Weitere Informationen finden Sie unter [Vertexdeklaration (Direct3D 9).](/windows/desktop/direct3d9/vertex-declaration) Der Index wird ohne Leerzeichen an den Verwendungswert (dcl \_ usage) angefügt. Wenn sie nicht angegeben wird, wird angenommen, dass sie 0 ist.
+-   dcl \_ usage gibt an, wie die Registerdaten verwendet werden. Dies ist der gleiche Wert wie die Elemente von [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) ohne das Präfix D3DDECLUSAGE.
+-   der \_ Nutzungsindex ist ein optionaler ganzzahliger Index zwischen 0 und 15. Sie ändert die Nutzungsdaten. Der Index entspricht dem Verwendungsindex in einer Scheitelpunktdeklaration. Weitere Informationen [finden Sie unter Vertexdeklaration (Direct3D 9).](/windows/desktop/direct3d9/vertex-declaration) Der Index wird ohne Speicherplatz an den Nutzungswert (dcl \_ usage) angefügt. Wenn sie nicht angegeben wird, wird davon ausgegangen, dass sie 0 ist.
 -   v \# ist ein [Eingaberegister.](dx9-graphics-reference-asm-vs-registers-input.md)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Reservierte Wörter
-description: Die folgenden Wörter sind für die Verwendung durch die HLSL-Sprache reserviert. Verwenden Sie diese nicht, um Variablen oder Funktionen im HLSL-Code zu benennen.
+description: Die folgenden Wörter sind für die Verwendung durch die HLSL-Sprache reserviert. Verwenden Sie sie nicht, um Variablen oder Funktionen in Ihrem HLSL-Code zu benennen.
 ms.assetid: acffd9e0-fa59-4690-954c-309084699425
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,45 +9,39 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dcc8afe8b62f684f0630ba3ef2b8a1375b2e84d3
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: dccc9aac1f06fff72f7dd5bd07ced73ac942ffe7
+ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038364"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113129657"
 ---
 # <a name="reserved-words"></a>Reservierte Wörter
 
-Die folgenden Wörter sind für die Verwendung durch die HLSL-Sprache reserviert. Verwenden Sie diese nicht, um Variablen oder Funktionen im HLSL-Code zu benennen.
+Die folgenden Wörter sind für die Verwendung durch die HLSL-Sprache reserviert. Verwenden Sie sie nicht, um Variablen oder Funktionen in Ihrem HLSL-Code zu benennen.
 
-
-
-|                                     |
-|-------------------------------------|
-| auto                                |
-| Case, catch                         |
-| Char, Class, Konstante Umwandlung \_            |
-| Standard, DELETE, Dynamic \_ Cast      |
-| enum                                |
-| explicit                            |
-| friend                              |
-| goto                                |
-| long                                |
-| mutable                             |
-| neu                                 |
-| Operator                            |
-| Privat, geschützt, öffentlich          |
-| Umwandlung neu \_ interpretieren                   |
-| Short, signed, sizeof, static \_ Cast |
-| Vorlage, this, Throw               |
-| try, tygtame                       |
-| Union, unsigniert                     |
-| using                               |
-| virtual                             |
-
-
-
- 
+:::column:::
+    auto
+    case, catch
+    char, class, const\_cast
+    default, delete, dynamic\_cast
+    enum
+    explicit
+    friend
+    goto
+    long
+    mutable
+    new
+    operator
+    private, protected, public
+    reinterpret\_cast
+    short, signed, sizeof, static\_cast
+    template, this, throw
+    try, typename
+    union, unsigned
+    using
+    virtual
+:::column-end:::
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -56,9 +50,9 @@ Die folgenden Wörter sind für die Verwendung durch die HLSL-Sprache reserviert
 [Anhang (DirectX HLSL)](dx-graphics-hlsl-appendix.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

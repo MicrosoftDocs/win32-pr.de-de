@@ -4,12 +4,12 @@ ms.assetid: 8c8e8af0-bf50-4a4b-945c-83bae1eff7dd
 title: Prozess- und Threadfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43841e86c151e7f617a702668f9de203ccb34654
-ms.sourcegitcommit: b01ad017c152c6756f3638623fe335877644d414
+ms.openlocfilehash: 2ebb1e281feb83b4a0da0c230792399d8e21684f
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111550012"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120997"
 ---
 # <a name="process-and-thread-functions"></a>Prozess- und Threadfunktionen
 
@@ -24,23 +24,23 @@ In diesem Thema werden die Prozess- und Threadfunktionen beschrieben.
 -   [WOW64-Funktionen](#wow64-functions)
 -   [Auftragsobjektfunktionen](#job-object-functions)
 -   [Threadpoolfunktionen](#thread-pool-functions)
--   [Funktionen des Threadreihenfolgediensts](#thread-ordering-service-functions)
--   [Funktionen des Multimedia-Klassenplanerdiensts](#multimedia-class-scheduler-service-functions)
--   [Fiberfunktionen](#fiber-functions)
+-   [Funktionen des Thread order-Diensts](#thread-ordering-service-functions)
+-   [Dienstfunktionen des Multimedia-Klassenplaners](#multimedia-class-scheduler-service-functions)
+-   [Fiber-Funktionen](#fiber-functions)
 -   [NUMA-Unterstützungsfunktionen](#numa-support-functions)
 -   [Prozessorfunktionen](#processor-functions)
--   [Zeitplanungsfunktionen im Benutzermodus](#user-mode-scheduling-functions)
+-   [Planungsfunktionen im Benutzermodus](#user-mode-scheduling-functions)
 -   [Veraltete Funktionen](#obsolete-functions)
 
 ## <a name="dispatch-queue-function"></a>Dispatch-Warteschlangenfunktion
 
-Mit der folgenden Funktion wird ein [DispatcherQueueController](/uwp/api/windows.system.dispatcherqueuecontroller)erstellt.
+Die folgende Funktion erstellt einen [DispatcherQueueController.](/uwp/api/windows.system.dispatcherqueuecontroller)
 
 
 
-| Funktion                                                                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                         |
+| Funktion                                                                   | Beschreibung                                                                                                                                                                                                                                                                                         |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CreateDispatcherQueueController**](/windows/desktop/api/DispatcherQueue/nf-dispatcherqueue-createdispatcherqueuecontroller) | Erstellt einen [DispatcherQueueController,](/uwp/api/windows.system.dispatcherqueuecontroller) der die Lebensdauer einer [DispatcherQueue](/uwp/api/windows.system.dispatcherqueue) verwaltet, die in der Warteschlange ausgeführte Aufgaben in der Prioritätsreihenfolge in einem anderen Thread ausführt. |
+| [**CreateDispatcherQueueController**](/windows/desktop/api/DispatcherQueue/nf-dispatcherqueue-createdispatcherqueuecontroller) | Erstellt einen [DispatcherQueueController,](/uwp/api/windows.system.dispatcherqueuecontroller) der die Lebensdauer einer [DispatcherQueue](/uwp/api/windows.system.dispatcherqueue) verwaltet, die aufgaben in der Warteschlange in der Reihenfolge ihrer Priorität in einem anderen Thread ausgeführt wird. |
 
 
 
@@ -48,21 +48,21 @@ Mit der folgenden Funktion wird ein [DispatcherQueueController](/uwp/api/windows
 
 ## <a name="process-functions"></a>Prozessfunktionen
 
-Die folgenden Funktionen werden mit [Prozessen](child-processes.md)verwendet.
+Die folgenden Funktionen werden mit Prozessen [verwendet.](child-processes.md)
 
 
 
-| Funktion                                                                 | BESCHREIBUNG                                                                                                                                                                                   |
+| Funktion                                                                 | Beschreibung                                                                                                                                                                                   |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**CreateProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)                                   | Erstellt einen neuen Prozess und seinen primären Thread.                                                                                                                                                 |
 | [**CreateProcessAsUser**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)                       | Erstellt einen neuen Prozess und seinen primären Thread. Der neue Prozess wird im Sicherheitskontext des Benutzers ausgeführt, der durch das angegebene Token dargestellt wird.                                                    |
 | [**CreateProcessWithLogonW**](/windows/desktop/api/WinBase/nf-winbase-createprocesswithlogonw)               | Erstellt einen neuen Prozess und seinen primären Thread. Der neue Prozess führt dann die angegebene ausführbare Datei im Sicherheitskontext der angegebenen Anmeldeinformationen (Benutzer, Domäne und Kennwort) aus.      |
 | [**CreateProcessWithTokenW**](/windows/desktop/api/WinBase/nf-winbase-createprocesswithtokenw)               | Erstellt einen neuen Prozess und seinen primären Thread. Der neue Prozess wird im Sicherheitskontext des angegebenen Tokens ausgeführt.                                                                            |
-| [**ExitProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess)                                       | Beendet den aufrufenden Prozess und alle zugehörigen Threads.                                                                                                                                                 |
-| [**FlushProcessWriteBuffers**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-flushprocesswritebuffers)             | Leert die Schreibwarteschlange jedes Prozessors, der einen Thread des aktuellen Prozesses ausführt.                                                                                                    |
+| [**ExitProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess)                                       | Beendet den aufrufenden Prozess und alle seine Threads.                                                                                                                                                 |
+| [**FlushProcessWriteBuffers**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-flushprocesswritebuffers)             | Leert die Schreibwarteschlange jedes Prozessors, auf dem ein Thread des aktuellen Prozesses ausgeführt wird.                                                                                                    |
 | [**FreeEnvironmentStrings**](/windows/win32/api/processenv/nf-processenv-freeenvironmentstringsa)                 | Gibt einen Block von Umgebungszeichenfolgen frei.                                                                                                                                                         |
 | [**GetCommandLine**](/windows/win32/api/processenv/nf-processenv-getcommandlinea)                                 | Ruft die Befehlszeilenzeichenfolge für den aktuellen Prozess ab.                                                                                                                                    |
-| [**GetCurrentProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocess)                           | Ruft ein Pseudohandle für den aktuellen Prozess ab.                                                                                                                                            |
+| [**GetCurrentProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocess)                           | Ruft ein Pseudohand handle für den aktuellen Prozess ab.                                                                                                                                            |
 | [**GetCurrentProcessId**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocessid)                       | Ruft den Prozessbezeichner des aufrufenden Prozesses ab.                                                                                                                                      |
 | [**GetCurrentProcessorNumber**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocessornumber)           | Ruft die Anzahl des Prozessors ab, auf dem der aktuelle Thread während des Aufrufs dieser Funktion ausgeführt wurde.                                                                                     |
 | [**GetEnvironmentStrings**](/windows/win32/api/processenv/nf-processenv-getenvironmentstrings)                   | Ruft den Umgebungsblock für den aktuellen Prozess ab.                                                                                                                                      |
@@ -77,16 +77,16 @@ Die folgenden Funktionen werden mit [Prozessen](child-processes.md)verwendet.
 | [**GetProcessId**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessid)                                     | Ruft den Prozessbezeichner des angegebenen Prozesses ab.                                                                                                                                    |
 | [**GetProcessIdOfThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessidofthread)                     | Ruft den Prozessbezeichner des Prozesses ab, der dem angegebenen Thread zugeordnet ist.                                                                                                         |
 | [**GetProcessIoCounters**](/windows/desktop/api/WinBase/nf-winbase-getprocessiocounters)                     | Ruft Kontoführungsinformationen für alle E/A-Vorgänge ab, die vom angegebenen Prozess ausgeführt werden.                                                                                                   |
-| [**GetProcessMitigationPolicy**](/windows/desktop/api/Processthreadsapi/nf-processthreadsapi-getprocessmitigationpolicy)         | Ruft Einstellungen der Entschärfungsrichtlinie für den aufrufenden Prozess ab.                                                                                                                                 |
-| [**GetProcessPriorityBoost**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesspriorityboost)               | Ruft den Steuerungszustand der Prioritäts boost des angegebenen Prozesses ab.                                                                                                                          |
-| [**GetProcessShutdownParameters**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessshutdownparameters)     | Ruft Parameter zum Herunterfahren für den aktuell aufrufenden Prozess ab.                                                                                                                              |
-| [**GetProcessTimes**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes)                               | Ruft Zeitsteuerungsinformationen zu für den angegebenen Prozess ab.                                                                                                                                 |
-| [**GetProcessVersion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessversion)                           | Ruft die Haupt- und Nebenversionsnummern des Systems ab, auf dem der angegebene Prozess die Ausführung erwartet.                                                                                    |
+| [**GetProcessMitigationPolicy**](/windows/desktop/api/Processthreadsapi/nf-processthreadsapi-getprocessmitigationpolicy)         | Ruft Die Einstellungen der Entschärfungsrichtlinie für den aufrufenden Prozess ab.                                                                                                                                 |
+| [**GetProcessPriorityBoost**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesspriorityboost)               | Ruft den Steuerungszustand der Prioritätssteigerung des angegebenen Prozesses ab.                                                                                                                          |
+| [**GetProcessShutdownParameters**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessshutdownparameters)     | Ruft Parameter zum Herunterfahren für den derzeit aufrufenden Prozess ab.                                                                                                                              |
+| [**GetProcessTimes**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes)                               | Ruft Zeitsteuerungsinformationen über für den angegebenen Prozess ab.                                                                                                                                 |
+| [**GetProcessVersion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessversion)                           | Ruft die Haupt- und Nebenversionsnummern des Systems ab, auf dem der angegebene Prozess ausgeführt werden soll.                                                                                    |
 | [**GetProcessWorkingSetSize**](/windows/desktop/api/memoryapi/nf-memoryapi-getprocessworkingsetsize)             | Ruft die minimalen und maximalen Arbeitssatzgrößen des angegebenen Prozesses ab.                                                                                                                 |
 | [**GetProcessWorkingSetSizeEx**](/windows/win32/api/memoryapi/nf-memoryapi-getprocessworkingsetsizeex)         | Ruft die minimalen und maximalen Arbeitssatzgrößen des angegebenen Prozesses ab.                                                                                                                 |
-| [**GetProcessorSystemCycleTime**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getprocessorsystemcycletime)       | Ruft die Zykluszeit ab, die jeder Prozessor in der angegebenen Gruppe für die Ausführung verzögerter Prozeduraufrufe (Deferred Procedure Calls, DPCs) und Interruptdienstroutinen (ISRs) aufgewendet hat.                                         |
+| [**GetProcessorSystemCycleTime**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getprocessorsystemcycletime)       | Ruft die Zykluszeit ab, die jeder Prozessor in der angegebenen Gruppe für die Ausführung von verzögerten Prozeduraufrufen (DEFERRED Procedure Calls, DPCs) und Interruptdienstroutinen (ISRs) verwendet hat.                                         |
 | [**GetStartupInfo**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getstartupinfow)                                 | Ruft den Inhalt der [**STARTUPINFO-Struktur**](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfoa) ab, die beim Erstellen des aufrufenden Prozesses angegeben wurde.                                                       |
-| [**IsImmersiveProcess**](/windows/desktop/api/Winuser/nf-winuser-isimmersiveprocess)                         | Bestimmt, ob der Prozess zu einer Windows Store-App gehört.                                                                                                                                |
+| [**IsWelsiveProcess**](/windows/desktop/api/Winuser/nf-winuser-isimmersiveprocess)                         | Bestimmt, ob der Prozess zu einer Windows Store-App gehört.                                                                                                                                |
 | [**NeedCurrentDirectoryForExePath**](/windows/win32/api/processenv/nf-processenv-needcurrentdirectoryforexepatha) | Bestimmt, ob das aktuelle Verzeichnis im Suchpfad für die angegebene ausführbare Datei enthalten sein soll.                                                                                  |
 | [**OpenProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess)                                       | Öffnet ein vorhandenes lokales Prozessobjekt.                                                                                                                                                       |
 | [**QueryFullProcessImageName**](/windows/desktop/api/WinBase/nf-winbase-queryfullprocessimagenamea)           | Ruft den vollständigen Namen des ausführbaren Images für den angegebenen Prozess ab.                                                                                                                    |
@@ -115,7 +115,7 @@ Die folgenden Funktionen werden zum Aufzählen von Prozessen verwendet.
 
 
 
-| Funktion                                                    | BESCHREIBUNG                                                                        |
+| Funktion                                                    | Beschreibung                                                                        |
 |-------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [**EnumProcesses**](/windows/win32/api/psapi/nf-psapi-enumprocesses)                     | Ruft den Prozessbezeichner für jedes Prozessobjekt im System ab.            |
 | [**Process32First**](/windows/win32/api/tlhelp32/nf-tlhelp32-process32first)                   | Ruft Informationen zum ersten Prozess ab, der in einer Systemmomentaufnahme gefunden wurde.    |
@@ -132,9 +132,8 @@ Die folgenden Funktionen werden mit prozessweiten Richtlinien verwendet.
 
 
 
-|                                                      |                                                       |
+|  Funktion                                                    |  Beschreibung                                                     |
 |------------------------------------------------------|-------------------------------------------------------|
-| Funktion                                             | BESCHREIBUNG                                           |
 | [**QueryProtectedPolicy**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-queryprotectedpolicy) | Fragt den Wert ab, der einer geschützten Richtlinie zugeordnet ist. |
 | [**SetProtectedPolicy**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setprotectedpolicy)     | Legt eine geschützte Richtlinie fest.                              |
 
@@ -148,7 +147,7 @@ Die folgenden Funktionen werden mit Threads [verwendet.](multiple-threads.md)
 
 
 
-| Funktion                                                           | BESCHREIBUNG                                                                                                                                               |
+| Funktion                                                           | Beschreibung                                                                                                                                               |
 |--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**AttachThreadInput**](/windows/desktop/api/Winuser/nf-winuser-attachthreadinput)                     | Angefügt den Eingabeverarbeitungsmechanismus eines Threads an den eines anderen Threads.                                                                          |
 | [**CreateRemoteThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread)                   | Erstellt einen Thread, der im virtuellen Adressraum eines anderen Prozesses ausgeführt wird.                                                                               |
@@ -202,7 +201,7 @@ Die folgenden Funktionen werden verwendet, um erweiterte Attribute für die Proz
 
 
 
-| Funktion                                                                       | BESCHREIBUNG                                                                                          |
+| Funktion                                                                       | Beschreibung                                                                                          |
 |--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | [**DeleteProcThreadAttributeList**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-deleteprocthreadattributelist)         | Löscht die angegebene Liste von Attributen für die Prozess- und Threaderstellung.                            |
 | [**InitializeProcThreadAttributeList**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-initializeprocthreadattributelist) | Initialisiert die angegebene Liste von Attributen für die Prozess- und Threaderstellung.                        |
@@ -218,7 +217,7 @@ Die folgenden Funktionen werden mit [WOW64](../winprog64/running-32-bit-applicat
 
 
 
-| Funktion                                         | BESCHREIBUNG                                                                                                                            |
+| Funktion                                         | Beschreibung                                                                                                                            |
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | [**IsWow64Message**](/windows/desktop/api/Winuser/nf-winuser-iswow64message)         | Bestimmt, ob die letzte aus der Warteschlange des aktuellen Threads gelesene Nachricht von einem WOW64-Prozess stammt.                              |
 | [**IsWow64Process**](/windows/win32/api/wow64apiset/nf-wow64apiset-iswow64process)         | Bestimmt, ob der angegebene Prozess unter WOW64 ausgeführt wird.                                                                       |
@@ -235,7 +234,7 @@ Die folgenden Funktionen werden mit [Auftragsobjekten](job-objects.md)verwendet.
 
 
 
-| Funktion                                                       | BESCHREIBUNG                                                                                          |
+| Funktion                                                       | Beschreibung                                                                                          |
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | [**AssignProcessToJobObject**](/windows/win32/api/jobapi2/nf-jobapi2-assignprocesstojobobject)   | Ordnet einen Prozess einem vorhandenen Auftragsobjekt zu.                                                    |
 | [**CreateJobObject**](/windows/desktop/api/WinBase/nf-winbase-createjobobjecta)                     | Erstellt oder öffnet ein Auftragsobjekt.                                                                       |
@@ -256,7 +255,7 @@ Die folgenden Funktionen werden mit [Threadpools](thread-pools.md)verwendet.
 
 
 
-| Funktion                                                                                   | BESCHREIBUNG                                                                                                                                                                                                                                         |
+| Funktion                                                                                   | Beschreibung                                                                                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**CallbackMayRunLong**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-callbackmayrunlong)                                           | Gibt an, dass der Rückruf möglicherweise nicht schnell zurückgegeben wird.                                                                                                                                                                                                 |
 | [**CancelThreadpoolIo**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-cancelthreadpoolio)                                           | Bricht die Benachrichtigung über die [**StartThreadpoolIo-Funktion**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-startthreadpoolio) ab.                                                                                                                                                          |
@@ -269,51 +268,51 @@ Die folgenden Funktionen werden mit [Threadpools](thread-pools.md)verwendet.
 | [**CloseThreadpoolWork**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-closethreadpoolwork)                                         | Gibt das angegebene Arbeitsobjekt frei.                                                                                                                                                                                                                 |
 | [**CreateThreadpool**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpool)                                               | Ordnet einen neuen Threadpool zu, um Rückrufe auszuführen.                                                                                                                                                                                               |
 | [**CreateThreadpoolCleanupGroup**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpoolcleanupgroup)                       | Erstellt eine Bereinigungsgruppe, mit der Anwendungen einen oder mehrere Threadpoolrückrufe nachverfolgen können.                                                                                                                                                       |
-| [**CreateThreadpoolIo**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpoolio)                                           | Erstellt ein neues E/A-Abschlussobjekt.                                                                                                                                                                                                                |
+| [**CreateThreadpoolIo**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpoolio)                                           | Erstellt ein neues E/A-Vervollständigungsobjekt.                                                                                                                                                                                                                |
 | [**CreateThreadpoolTimer**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpooltimer)                                     | Erstellt ein neues Timerobjekt.                                                                                                                                                                                                                         |
-| [**CreateThreadpoolWait**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpoolwait)                                       | Erstellt ein neues Warteobjekt.                                                                                                                                                                                                                          |
+| [**CreateThreadpoolWait**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpoolwait)                                       | Erstellt ein neues Wait-Objekt.                                                                                                                                                                                                                          |
 | [**CreateThreadpoolWork**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-createthreadpoolwork)                                       | Erstellt ein neues Arbeitsobjekt.                                                                                                                                                                                                                          |
 | [**DestroyThreadpoolEnvironment**](/windows/desktop/api/WinBase/nf-winbase-destroythreadpoolenvironment)                       | Löscht die angegebene Rückrufumgebung. Rufen Sie diese Funktion auf, wenn die Rückrufumgebung zum Erstellen neuer Threadpoolobjekte nicht mehr benötigt wird.                                                                                              |
-| [**DisassociateCurrentThreadFromCallback**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-disassociatecurrentthreadfromcallback)     | Entfernt die Zuordnung zwischen der derzeit ausgeführten Rückruffunktion und dem Objekt, das den Rückruf initiiert hat. Der aktuelle Thread zählt nicht mehr als Ausführen eines Rückrufs im Namen des Objekts.                                      |
-| [**FreeLibraryWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-freelibrarywhencallbackreturns)                   | Gibt die DLL an, die der Threadpool entlädt, wenn der aktuelle Rückruf abgeschlossen ist.                                                                                                                                                             |
+| [**DisassociateCurrentThreadFromCallback**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-disassociatecurrentthreadfromcallback)     | Entfernt die Zuordnung zwischen der derzeit ausgeführten Rückruffunktion und dem Objekt, das den Rückruf initiiert hat. Der aktuelle Thread zählt nicht mehr als Ausführen eines Rückrufs im Namen des -Objekts.                                      |
+| [**FreeLibraryWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-freelibrarywhencallbackreturns)                   | Gibt die DLL an, die der Threadpool entladen wird, wenn der aktuelle Rückruf abgeschlossen ist.                                                                                                                                                             |
 | [**InitializeThreadpoolEnvironment**](/windows/desktop/api/WinBase/nf-winbase-initializethreadpoolenvironment)                 | Initialisiert eine Rückrufumgebung.                                                                                                                                                                                                                 |
 | [**IsThreadpoolTimerSet**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-isthreadpooltimerset)                                       | Bestimmt, ob das angegebene Timerobjekt derzeit festgelegt ist.                                                                                                                                                                                     |
 | [**LeaveCriticalSectionWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-leavecriticalsectionwhencallbackreturns) | Gibt den kritischen Abschnitt an, den der Threadpool nach Abschluss des aktuellen Rückrufs freigibt.                                                                                                                                               |
 | [**QueryThreadpoolStackInformation**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-querythreadpoolstackinformation)                 | Ruft die Stapelreserve- und Commitgrößen für Threads im angegebenen Threadpool ab.                                                                                                                                                              |
 | [**ReleaseMutexWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-releasemutexwhencallbackreturns)                 | Gibt den Mutex an, den der Threadpool nach Abschluss des aktuellen Rückrufs freigibt.                                                                                                                                                          |
-| [**ReleaseSemaphoreWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-releasesemaphorewhencallbackreturns)         | Gibt das Semaphor an, das der Threadpool nach Abschluss des aktuellen Rückrufs freigibt.                                                                                                                                                      |
-| [**SetEventWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-seteventwhencallbackreturns)                         | Gibt das Ereignis an, das vom Threadpool festgelegt wird, wenn der aktuelle Rückruf abgeschlossen ist.                                                                                                                                                              |
+| [**ReleaseSemaphoreWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-releasesemaphorewhencallbackreturns)         | Gibt das Semaphor an, das der Threadpool freigibt, wenn der aktuelle Rückruf abgeschlossen ist.                                                                                                                                                      |
+| [**SetEventWhenCallbackReturns**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-seteventwhencallbackreturns)                         | Gibt das Ereignis an, das der Threadpool festlegt, wenn der aktuelle Rückruf abgeschlossen ist.                                                                                                                                                              |
 | [**SetThreadpoolCallbackCleanupGroup**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackcleanupgroup)             | Ordnet die angegebene Bereinigungsgruppe der angegebenen Rückrufumgebung zu.                                                                                                                                                                     |
-| [**SetThreadpoolCallbackLibrary**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbacklibrary)                       | Stellt sicher, dass die angegebene DLL geladen bleibt, solange ausstehende Rückrufe bestehen.                                                                                                                                                           |
+| [**SetThreadpoolCallbackLibrary**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbacklibrary)                       | Stellt sicher, dass die angegebene DLL geladen bleibt, solange ausstehende Rückrufe vorhanden sind.                                                                                                                                                           |
 | [**SetThreadpoolCallbackPersistent**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackpersistent)                 | Gibt an, dass der Rückruf in einem persistenten Thread ausgeführt werden soll.                                                                                                                                                                                      |
 | [**SetThreadpoolCallbackPool**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackpool)                             | Legt den Threadpool fest, der beim Generieren von Rückrufen verwendet werden soll.                                                                                                                                                                                          |
-| [**SetThreadpoolCallbackPriority**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackpriority)                     | Gibt die Priorität einer Rückruffunktion relativ zu anderen Arbeitselementen im selben Threadpool an.                                                                                                                                                 |
-| [**SetThreadpoolCallbackRunsLong**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackrunslong)                     | Gibt an, dass Rückrufe, die dieser Rückrufumgebung zugeordnet sind, möglicherweise nicht schnell zurückgeben.                                                                                                                                                          |
+| [**SetThreadpoolCallbackPriority**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackpriority)                     | Gibt die Priorität einer Rückruffunktion relativ zu anderen Arbeitselementen im gleichen Threadpool an.                                                                                                                                                 |
+| [**SetThreadpoolCallbackRunsLong**](/windows/desktop/api/WinBase/nf-winbase-setthreadpoolcallbackrunslong)                     | Gibt an, dass Rückrufe, die dieser Rückrufumgebung zugeordnet sind, möglicherweise nicht schnell zurückgegeben werden.                                                                                                                                                          |
 | [**SetThreadpoolStackInformation**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolstackinformation)                     | Legt die Stapelreserve- und Commitgrößen für neue Threads im angegebenen Threadpool fest.                                                                                                                                                               |
 | [**SetThreadpoolThreadMaximum**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolthreadmaximum)                           | Legt die maximale Anzahl von Threads fest, die der angegebene Threadpool Prozessrückrufen zuordnen kann.                                                                                                                                                |
-| [**SetThreadpoolThreadMinimum**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolthreadminimum)                           | Legt die Mindestanzahl von Threads fest, die der angegebene Threadpool für die Verarbeitung von Rückrufen zur Verfügung stellen muss.                                                                                                                                         |
+| [**SetThreadpoolThreadMinimum**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolthreadminimum)                           | Legt die Mindestanzahl von Threads fest, die der angegebene Threadpool für die Verarbeitung von Rückrufen verfügbar machen muss.                                                                                                                                         |
 | [**SetThreadpoolTimerEx**](/windows/desktop/api/threadpoolapiset/nf-threadpoolapiset-setthreadpooltimerex)                                       | Legt das Timerobjekt fest. Ein Arbeitsthread ruft den Rückruf des Timerobjekts auf, nachdem das angegebene Timeout abgelaufen ist.                                                                                                                                       |
 | [**SetThreadpoolTimer**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpooltimer)                                           | Legt das Timerobjekt fest. Ein Arbeitsthread ruft den Rückruf des Timerobjekts auf, nachdem das angegebene Timeout abgelaufen ist.                                                                                                                                       |
-| [**SetThreadpoolWait**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolwait)                                             | Legt das Wait-Objekt fest. Ein Arbeitsthread ruft die Rückruffunktion des Wait-Objekts auf, nachdem das Handle signalisiert oder das angegebene Timeout abgelaufen ist.                                                                                           |
-| [**SetThreadpoolWaitEx**](/windows/desktop/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolwaitex)                                         | Legt das Wait-Objekt fest. Ein Arbeitsthread ruft die Rückruffunktion des Wait-Objekts auf, nachdem das Handle signalisiert oder das angegebene Timeout abgelaufen ist.                                                                                           |
-| [**StartThreadpoolIo**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-startthreadpoolio)                                             | Benachrichtigt den Threadpool, dass E/A-Vorgänge möglicherweise für das angegebene E/A-Abschlussobjekt beginnen können. Ein Arbeitsthread ruft die Rückruffunktion des E/A-Abschlussobjekts auf, nachdem der Vorgang für das an dieses Objekt gebundene Dateihandler abgeschlossen wurde. |
-| [**SubmitThreadpoolWork**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-submitthreadpoolwork)                                       | Veröffentlicht ein Arbeitsobjekt an den Threadpool. Ein Arbeitsthread ruft die Rückruffunktion des Arbeitsobjekts auf.                                                                                                                                                  |
+| [**SetThreadpoolWait**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolwait)                                             | Legt das Wait-Objekt fest. Ein Arbeitsthread ruft die Rückruffunktion des Warteobjekts auf, nachdem das Handle signalisiert wurde oder das angegebene Timeout abläuft.                                                                                           |
+| [**SetThreadpoolWaitEx**](/windows/desktop/api/threadpoolapiset/nf-threadpoolapiset-setthreadpoolwaitex)                                         | Legt das Wait-Objekt fest. Ein Arbeitsthread ruft die Rückruffunktion des Warteobjekts auf, nachdem das Handle signalisiert wurde oder das angegebene Timeout abläuft.                                                                                           |
+| [**StartThreadpoolIo**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-startthreadpoolio)                                             | Benachrichtigt den Threadpool, dass E/A-Vorgänge möglicherweise für das angegebene E/A-Abschlussobjekt beginnen können. Ein Arbeitsthread ruft die Rückruffunktion des E/A-Vervollständigungsobjekts auf, nachdem der Vorgang für das an dieses Objekt gebundene Dateihandle abgeschlossen wurde. |
+| [**SubmitThreadpoolWork**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-submitthreadpoolwork)                                       | Sendet ein Arbeitsobjekt an den Threadpool. Ein Arbeitsthread ruft die Rückruffunktion des Arbeitsobjekts auf.                                                                                                                                                  |
 | [**TpInitializeCallbackEnviron**](/windows/desktop/api/winnt/nf-winnt-tpinitializecallbackenviron)                         | Initialisiert eine Rückrufumgebung für den Threadpool.                                                                                                                                                                                             |
 | [**TpDestroyCallbackEnviron**](/windows/desktop/api/winnt/nf-winnt-tpdestroycallbackenviron)                               | Löscht die angegebene Rückrufumgebung. Rufen Sie diese Funktion auf, wenn die Rückrufumgebung zum Erstellen neuer Threadpoolobjekte nicht mehr benötigt wird.                                                                                              |
 | [**TpSetCallbackActivationContext**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackactivationcontext)                   | Weist der Rückrufumgebung einen Aktivierungskontext zu.                                                                                                                                                                                          |
 | [**TpSetCallbackCleanupGroup**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackcleanupgroup)                             | Ordnet die angegebene Bereinigungsgruppe der angegebenen Rückrufumgebung zu.                                                                                                                                                                     |
-| [**TpSetCallbackFinalizationCallback**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackfinalizationcallback)             | Gibt eine Funktion an, die beim Abschluss der Rückrufumgebung aufruft werden soll.                                                                                                                                                                            |
-| [**TpSetCallbackLongFunction**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbacklongfunction)                             | Gibt an, dass Rückrufe, die dieser Rückrufumgebung zugeordnet sind, möglicherweise nicht schnell zurückgeben.                                                                                                                                                          |
+| [**TpSetCallbackFinalizationCallback**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackfinalizationcallback)             | Gibt eine Funktion an, die aufgerufen werden soll, wenn die Rückrufumgebung abgeschlossen ist.                                                                                                                                                                            |
+| [**TpSetCallbackLongFunction**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbacklongfunction)                             | Gibt an, dass Rückrufe, die dieser Rückrufumgebung zugeordnet sind, möglicherweise nicht schnell zurückgegeben werden.                                                                                                                                                          |
 | [**TpSetCallbackNoActivationContext**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbacknoactivationcontext)               | Gibt an, dass die Rückrufumgebung über keinen Aktivierungskontext verfügt.                                                                                                                                                                                  |
 | [**TpSetCallbackPersistent**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackpersistent)                                 | Gibt an, dass der Rückruf in einem persistenten Thread ausgeführt werden soll.                                                                                                                                                                                      |
-| [**TpSetCallbackPriority**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackpriority)                                     | Gibt die Priorität einer Rückruffunktion relativ zu anderen Arbeitselementen im selben Threadpool an.                                                                                                                                                 |
-| [**TpSetCallbackRaceWithDll**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackracewithdll)                               | Stellt sicher, dass die angegebene DLL geladen bleibt, solange ausstehende Rückrufe bestehen.                                                                                                                                                           |
+| [**TpSetCallbackPriority**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackpriority)                                     | Gibt die Priorität einer Rückruffunktion relativ zu anderen Arbeitselementen im gleichen Threadpool an.                                                                                                                                                 |
+| [**TpSetCallbackRaceWithDll**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackracewithdll)                               | Stellt sicher, dass die angegebene DLL geladen bleibt, solange ausstehende Rückrufe vorhanden sind.                                                                                                                                                           |
 | [**TpSetCallbackThreadpool**](/windows/desktop/api/winnt/nf-winnt-tpsetcallbackthreadpool)                                 | Weist einer Rückrufumgebung einen Threadpool zu.                                                                                                                                                                                                    |
-| [**TrySubmitThreadpoolCallback**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-trysubmitthreadpoolcallback)                         | Fordert an, dass ein Threadthread des Threadpools die angegebene Rückruffunktion aufruft.                                                                                                                                                                     |
-| [**WaitForThreadpoolIoCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpooliocallbacks)                       | Wartet auf den Abschluss ausstehender E/A-Abschlussrückrufe und bricht optional ausstehende Rückrufe ab, die noch nicht ausgeführt wurden.                                                                                                           |
-| [**WaitForThreadpoolTimerCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpooltimercallbacks)                 | Wartet auf den Abschluss ausstehender Timerrückrufe und bricht optional ausstehende Rückrufe ab, deren Ausführung noch nicht gestartet wurde.                                                                                                                    |
-| [**WaitForThreadpoolWaitCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpoolwaitcallbacks)                   | Wartet auf den Abschluss ausstehender Warterückrufe und bricht optional ausstehende Rückrufe ab, die noch nicht ausgeführt wurden.                                                                                                                     |
-| [**WaitForThreadpoolWorkCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpoolworkcallbacks)                   | Wartet auf den Abschluss ausstehender Arbeitsrückrufe und bricht optional ausstehende Rückrufe ab, die noch nicht ausgeführt wurden.                                                                                                                     |
+| [**TrySubmitThreadpoolCallback**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-trysubmitthreadpoolcallback)                         | Fordert an, dass ein Threadpoolworkerthread die angegebene Rückruffunktion aufruft.                                                                                                                                                                     |
+| [**WaitForThreadpoolIoCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpooliocallbacks)                       | Wartet, bis ausstehende E/A-Abschlussrückrufe abgeschlossen sind, und bricht optional ausstehende Rückrufe ab, deren Ausführung noch nicht gestartet wurde.                                                                                                           |
+| [**WaitForThreadpoolTimerCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpooltimercallbacks)                 | Wartet, bis ausstehende Timerrückrufe abgeschlossen sind, und bricht optional ausstehende Rückrufe ab, deren Ausführung noch nicht gestartet wurde.                                                                                                                    |
+| [**WaitForThreadpoolWaitCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpoolwaitcallbacks)                   | Wartet, bis ausstehende Warterückrufe abgeschlossen sind, und bricht optional ausstehende Rückrufe ab, deren Ausführung noch nicht gestartet wurde.                                                                                                                     |
+| [**WaitForThreadpoolWorkCallbacks**](/windows/win32/api/threadpoolapiset/nf-threadpoolapiset-waitforthreadpoolworkcallbacks)                   | Wartet, bis ausstehende Arbeitsrückrufe abgeschlossen sind, und bricht optional ausstehende Rückrufe ab, deren Ausführung noch nicht gestartet wurde.                                                                                                                     |
 
 
 
@@ -323,46 +322,46 @@ Die folgenden Funktionen sind Teil der ursprünglichen [Threadpooling-API.](thre
 
 
 
-| Funktion                                                            | BESCHREIBUNG                                                                                                                                                                                                            |
+| Funktion                                                            | Beschreibung                                                                                                                                                                                                            |
 |---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**BindIoCompletionCallback**](/windows/desktop/api/WinBase/nf-winbase-bindiocompletioncallback)        | Ordnet den E/A-Abschlussport im Besitz des Threadpools dem angegebenen Dateihandle zu. Nach Abschluss einer E/A-Anforderung mit dieser Datei führt ein Nicht-E/A-Arbeitsthread die angegebene Rückruffunktion aus. |
-| [**Queueuserworkitem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem)                      | Reiht ein Arbeitselement in die Warteschlange eines Arbeitsthreads im Threadpool ein.                                                                                                                                                              |
-| [**Registerwaitforsingleobject**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) | Weist einen Wartethread im Threadpool an, auf das Objekt zu warten.                                                                                                                                                        |
-| [**UnregisterWaitEx**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-unregisterwaitex)                       | Wartet, bis eines oder alle angegebenen Objekte im signalisierten Zustand sind oder das Time out-Intervall verstrichen ist.                                                                                                            |
+| [**BindIoCompletionCallback**](/windows/desktop/api/WinBase/nf-winbase-bindiocompletioncallback)        | Ordnet den E/A-Abschlussport, der sich im Besitz des Threadpools befindet, dem angegebenen Dateihand handle zu. Nach Abschluss einer E/A-Anforderung, die diese Datei enthält, führt ein Nicht-E/A-Arbeitsthread die angegebene Rückruffunktion aus. |
+| [**Queueuserworkitem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem)                      | Reiht ein Arbeitselement in einen Arbeitsthread im Threadpool ein.                                                                                                                                                              |
+| [**Registerwaitforsingleobject**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) | Leitet einen Wartethread im Threadpool an, auf das Objekt zu warten.                                                                                                                                                        |
+| [**UnregisterWaitEx**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-unregisterwaitex)                       | Wartet, bis sich eines oder alle der angegebenen Objekte im signalisierten Zustand befinden oder das Time out-Intervall verstreicht.                                                                                                            |
 
 
 
  
 
-## <a name="thread-ordering-service-functions"></a>Funktionen des Threadreihenfolgediensts
+## <a name="thread-ordering-service-functions"></a>Funktionen des Thread order-Diensts
 
-Die folgenden Funktionen werden mit dem [Threadreihenfolgedienst](thread-ordering-service.md)verwendet.
+Die folgenden Funktionen werden mit dem [Threadbestellungsdienst verwendet.](thread-ordering-service.md)
 
 
 
-| Funktion                                                                   | BESCHREIBUNG                                                                                 |
+| Funktion                                                                   | Beschreibung                                                                                 |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| [**AvQuerySystemResponsiveness**](/windows/desktop/api/Avrt/nf-avrt-avquerysystemresponsiveness)         | Ruft die Vom Multimediaklassenplanerdienst verwendete Einstellung für die Systemreaktionsfähigkeit ab. |
-| [**AvRtCreateThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtcreatethreadorderinggroup)     | Erstellt eine Threadreihenfolgegruppe.                                                            |
-| [**AvRtCreateThreadOrderingGroupEx**](/windows/desktop/api/Avrt/nf-avrt-avrtcreatethreadorderinggroupexa) | Erstellt eine Threadreihenfolgegruppe und ordnet den Serverthread einer Aufgabe zu.               |
-| [**AvRtDeleteThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtdeletethreadorderinggroup)     | Löscht die angegebene Threadreihenfolgegruppe, die vom Aufrufer erstellt wurde.                          |
-| [**AvRtJoinThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtjointhreadorderinggroup)         | Verbindet Clientthreads mit einer Threadreihenfolgegruppe.                                            |
-| [**AvRtLeaveThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtleavethreadorderinggroup)       | Ermöglicht Clientthreads, eine Threadreihenfolgegruppe zu verlassen.                                    |
-| [**AvRtWaitOnThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtwaitonthreadorderinggroup)     | Ermöglicht Es Clientthreads einer Threadreihenfolgegruppe, zu warten, bis sie ausgeführt werden sollen.        |
+| [**AvQuerySystemResponsiveness**](/windows/desktop/api/Avrt/nf-avrt-avquerysystemresponsiveness)         | Ruft die Vom Multimediaklassenplanerdienst verwendete Einstellung für die Systemaktivität ab. |
+| [**AvRtCreateThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtcreatethreadorderinggroup)     | Erstellt eine Thread reihenfolgengruppe.                                                            |
+| [**AvRtCreateThreadOrderingGroupEx**](/windows/desktop/api/Avrt/nf-avrt-avrtcreatethreadorderinggroupexa) | Erstellt eine Thread reihenfolgengruppe und ordnet den Serverthread einem Task zu.               |
+| [**AvRtDeleteThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtdeletethreadorderinggroup)     | Löscht die angegebene Thread reihenfolgengruppe, die vom Aufrufer erstellt wurde.                          |
+| [**AvRtJoinThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtjointhreadorderinggroup)         | Verbindet Clientthreads mit einer Thread reihenfolgengruppe.                                            |
+| [**AvRtLeaveThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtleavethreadorderinggroup)       | Ermöglicht Clientthreads, eine Thread reihenfolgengruppe zu verlassen.                                    |
+| [**AvRtWaitOnThreadOrderingGroup**](/windows/desktop/api/Avrt/nf-avrt-avrtwaitonthreadorderinggroup)     | Ermöglicht Clientthreads einer Thread reihenfolgengruppe zu warten, bis sie ausgeführt werden sollen.        |
 
 
 
  
 
-## <a name="multimedia-class-scheduler-service-functions"></a>Funktionen des Multimedia-Klassenplanerdiensts
+## <a name="multimedia-class-scheduler-service-functions"></a>Dienstfunktionen des Multimedia-Klassenplaners
 
-Die folgenden Funktionen werden mit dem [Multimediaklassenplanerdienst](multimedia-class-scheduler-service.md)verwendet.
+Die folgenden Funktionen werden mit dem [Multimediaklassenplanerdienst verwendet.](multimedia-class-scheduler-service.md)
 
 
 
-| Funktion                                                                   | BESCHREIBUNG                                                                                           |
+| Funktion                                                                   | Beschreibung                                                                                           |
 |----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| [**AvRevertMmThreadCharacteristics**](/windows/desktop/api/Avrt/nf-avrt-avrevertmmthreadcharacteristics) | Gibt an, dass ein Thread keine Der angegebenen Aufgabe zugeordneten Aufgaben mehr ausführt.              |
+| [**AvRevertMmThreadCharacteristics**](/windows/desktop/api/Avrt/nf-avrt-avrevertmmthreadcharacteristics) | Gibt an, dass ein Thread keine Arbeit mehr ausgeführt, die der angegebenen Aufgabe zugeordnet ist.              |
 | [**AvSetMmMaxThreadCharacteristics**](/windows/desktop/api/Avrt/nf-avrt-avsetmmmaxthreadcharacteristicsa) | Ordnet den aufrufenden Thread den angegebenen Aufgaben zu.                                               |
 | [**AvSetMmThreadCharacteristics**](/windows/desktop/api/Avrt/nf-avrt-avsetmmthreadcharacteristicsa)       | Ordnet den aufrufenden Thread der angegebenen Aufgabe zu.                                                |
 | [**AvSetMmThreadPriority**](/windows/desktop/api/Avrt/nf-avrt-avsetmmthreadpriority)                     | Passt die Threadpriorität des aufrufenden Threads relativ zu anderen Threads an, die dieselbe Aufgabe ausführen. |
@@ -371,27 +370,27 @@ Die folgenden Funktionen werden mit dem [Multimediaklassenplanerdienst](multimed
 
  
 
-## <a name="fiber-functions"></a>Fiberfunktionen
+## <a name="fiber-functions"></a>Fiber-Funktionen
 
-Die folgenden Funktionen werden mit [Fibers](fibers.md)verwendet.
+Die folgenden Funktionen werden mit [Fibers verwendet.](fibers.md)
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                                                  |
+| Funktion                                                 | Beschreibung                                                                                                  |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | [**ConvertFiberToThread**](/windows/desktop/api/WinBase/nf-winbase-convertfibertothread)     | Konvertiert die aktuelle Fiber in einen Thread.                                                                    |
 | [**ConvertThreadToFiber**](/windows/desktop/api/WinBase/nf-winbase-convertthreadtofiber)     | Konvertiert den aktuellen Thread in eine Fiber.                                                                    |
 | [**ConvertThreadToFiberEx**](/windows/desktop/api/WinBase/nf-winbase-convertthreadtofiberex) | Konvertiert den aktuellen Thread in eine Fiber.                                                                    |
-| [**CreateFiber**](/windows/desktop/api/WinBase/nf-winbase-createfiber)                       | Ordnet ein Fiberobjekt zu, weist ihm einen Stapel zu und richtet die Ausführung ein, um an der angegebenen Startadresse zu beginnen. |
-| [**CreateFiberEx**](/windows/desktop/api/WinBase/nf-winbase-createfiberex)                   | Ordnet ein Fiberobjekt zu, weist ihm einen Stapel zu und richtet die Ausführung ein, um an der angegebenen Startadresse zu beginnen. |
+| [**CreateFiber**](/windows/desktop/api/WinBase/nf-winbase-createfiber)                       | Ordnet ein Fiberobjekt zu, weist ihm einen Stapel zu und richtet die Ausführung so ein, dass sie an der angegebenen Startadresse beginnt. |
+| [**CreateFiberEx**](/windows/desktop/api/WinBase/nf-winbase-createfiberex)                   | Ordnet ein Fiberobjekt zu, weist ihm einen Stapel zu und richtet die Ausführung so ein, dass sie an der angegebenen Startadresse beginnt. |
 | [**DeleteFiber**](/windows/desktop/api/WinBase/nf-winbase-deletefiber)                       | Löscht eine vorhandene Fiber.                                                                                   |
-| [**FiberProc**](/windows/win32/api/winbase/nc-winbase-pfiber_start_routine)                           | Eine anwendungsdefinierte Funktion, die mit der [**CreateFiber-Funktion**](/windows/desktop/api/WinBase/nf-winbase-createfiber) verwendet wird.                   |
-| [**FlsAlloc**](/windows/win32/api/fibersapi/nf-fibersapi-flsalloc)                             | Ordnet einen Fibre Local Storage-Index (FLS) zu.                                                                 |
+| [**FiberProc**](/windows/win32/api/winbase/nc-winbase-pfiber_start_routine)                           | Eine anwendungsdefinierte Funktion, die mit der [**CreateFiber-Funktion verwendet**](/windows/desktop/api/WinBase/nf-winbase-createfiber) wird.                   |
+| [**FlsAlloc**](/windows/win32/api/fibersapi/nf-fibersapi-flsalloc)                             | Ordnet einen FIBERS-Index (Fiber Local Storage) zu.                                                                 |
 | [**FlsFree**](/windows/win32/api/fibersapi/nf-fibersapi-flsfree)                               | Gibt einen FLS-Index frei.                                                                                       |
 | [**FlsGetValue**](/windows/win32/api/fibersapi/nf-fibersapi-flsgetvalue)                       | Ruft den Wert im FLS-Slot der aufrufenden Fiber für einen angegebenen FLS-Index ab.                               |
 | [**FlsSetValue**](/windows/win32/api/fibersapi/nf-fibersapi-flssetvalue)                       | Speichert einen Wert im FLS-Slot der aufrufenden Fiber für einen angegebenen FLS-Index.                                    |
 | [**IsThreadAFiber**](/windows/win32/api/fibersapi/nf-fibersapi-isthreadafiber)                 | Bestimmt, ob der aktuelle Thread eine Fiber ist.                                                            |
-| [**SwitchToFiber**](/windows/desktop/api/WinBase/nf-winbase-switchtofiber)                   | Plant eine Fiber.                                                                                           |
+| [**SwitchToFiber**](/windows/desktop/api/WinBase/nf-winbase-switchtofiber)                   | Planen einer Fiber.                                                                                           |
 
 
 
@@ -403,21 +402,21 @@ Die folgenden Funktionen bieten [NUMA-Unterstützung.](numa-support.md)
 
 
 
-| Funktion                                                                 | BESCHREIBUNG                                                                                                                                            |
+| Funktion                                                                 | Beschreibung                                                                                                                                            |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**AllocateUserPhysicalPagesNuma**](/windows/win32/api/memoryapi/nf-memoryapi-allocateuserphysicalpagesnuma)  | Reserviert oder committet einen Speicherbereich innerhalb des virtuellen Adressraums des angegebenen Prozesses und gibt den NUMA-Knoten für den physischen Speicher an. |
+| [**AllocateUserPhysicalPagesNuma**](/windows/win32/api/memoryapi/nf-memoryapi-allocateuserphysicalpagesnuma)  | Reserviert einen Speicherbereich innerhalb des virtuellen Adressraums des angegebenen Prozesses oder führt einen Commit aus und gibt den NUMA-Knoten für den physischen Speicher an. |
 | [**GetLogicalProcessorInformation**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformation) | Ruft Informationen zu logischen Prozessoren und zugehöriger Hardware ab.                                                                                   |
-| [**GetNumaAvailableMemoryNode**](/windows/desktop/api/WinBase/nf-winbase-getnumaavailablememorynode)         | Ruft den im angegebenen Knoten verfügbaren Arbeitsspeicher ab.                                                                                        |
+| [**GetNumaAvailableMemoryNode**](/windows/desktop/api/WinBase/nf-winbase-getnumaavailablememorynode)         | Ruft die im angegebenen Knoten verfügbare Arbeitsspeichermenge ab.                                                                                        |
 | [**GetNumaAvailableMemoryNodeEx**](/windows/desktop/api/WinBase/nf-winbase-getnumaavailablememorynodeex)     | Ruft die Arbeitsspeichermenge ab, die im angegebenen Knoten als USHORT-Wert verfügbar ist.                                                              |
-| [**GetNumaHighestNodeNumber**](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumahighestnodenumber)             | Ruft den Knoten ab, der derzeit über die höchste Zahl verfügt.                                                                                              |
-| [**GetNumaNodeNumberFromHandle**](/windows/desktop/api/WinBase/nf-winbase-getnumanodenumberfromhandle)       | Ruft den NUMA-Knoten ab, der dem zugrunde liegenden Gerät für ein Dateihandle zugeordnet ist.                                                                       |
+| [**GetNumaHighestNodeNumber**](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumahighestnodenumber)             | Ruft den Knoten ab, der derzeit über die höchste Anzahl verfügt.                                                                                              |
+| [**GetNumaNodeNumberFromHandle**](/windows/desktop/api/WinBase/nf-winbase-getnumanodenumberfromhandle)       | Ruft den NUMA-Knoten ab, der dem zugrunde liegenden Gerät für ein Dateihand handle zugeordnet ist.                                                                       |
 | [**GetNumaNodeProcessorMask**](/windows/desktop/api/WinBase/nf-winbase-getnumanodeprocessormask)             | Ruft die Prozessormaske für den angegebenen Knoten ab.                                                                                                   |
 | [**GetNumaNodeProcessorMaskEx**](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumanodeprocessormaskex)         | Ruft die Prozessormaske für den angegebenen NUMA-Knoten als USHORT-Wert ab.                                                                            |
 | [**GetNumaProcessorNode**](/windows/desktop/api/WinBase/nf-winbase-getnumaprocessornode)                     | Ruft die Knotennummer für den angegebenen Prozessor ab.                                                                                                 |
 | [**GetNumaProcessorNodeEx**](/windows/desktop/api/WinBase/nf-winbase-getnumaprocessornodeex)                 | Ruft die Knotennummer des angegebenen logischen Prozessors als USHORT-Wert ab.                                                                        |
 | [**GetNumaProximityNode**](/windows/desktop/api/WinBase/nf-winbase-getnumaproximitynode)                     | Ruft die Knotennummer für den angegebenen Näherungsbezeichner ab.                                                                                      |
 | [**GetNumaProximityNodeEx**](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumaproximitynodeex)                 | Ruft die Knotennummer als USHORT-Wert für den angegebenen Näherungsbezeichner ab.                                                                    |
-| [**VirtualAllocExNuma**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocexnuma)                        | Reserviert einen Speicherbereich innerhalb des virtuellen Adressraums des angegebenen Prozesses oder führt einen Commit aus und gibt den NUMA-Knoten für den physischen Speicher an. |
+| [**VirtualAllocExNuma**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocexnuma)                        | Reserviert oder committet einen Speicherbereich innerhalb des virtuellen Adressraums des angegebenen Prozesses und gibt den NUMA-Knoten für den physischen Speicher an. |
 
 
 
@@ -425,18 +424,18 @@ Die folgenden Funktionen bieten [NUMA-Unterstützung.](numa-support.md)
 
 ## <a name="processor-functions"></a>Prozessorfunktionen
 
-Die folgenden Funktionen werden mit logischen Prozessoren und [Prozessorgruppen verwendet.](processor-groups.md)
+Die folgenden Funktionen werden mit logischen Prozessoren und [Prozessorgruppen](processor-groups.md)verwendet.
 
 
 
-| Funktion                                                                     | BESCHREIBUNG                                                                                                          |
+| Funktion                                                                     | Beschreibung                                                                                                          |
 |------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | [**GetActiveProcessorCount**](/windows/desktop/api/WinBase/nf-winbase-getactiveprocessorcount)                   | Gibt die Anzahl der aktiven Prozessoren in einer Prozessorgruppe oder im System zurück.                                       |
 | [**GetActiveProcessorGroupCount**](/windows/desktop/api/WinBase/nf-winbase-getactiveprocessorgroupcount)         | Gibt die Anzahl der aktiven Prozessorgruppen im System zurück.                                                         |
 | [**GetCurrentProcessorNumber**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocessornumber)               | Ruft die Anzahl des Prozessors ab, auf dem der aktuelle Thread während des Aufrufs dieser Funktion ausgeführt wurde.            |
 | [**GetCurrentProcessorNumberEx**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocessornumberex)           | Ruft die Prozessorgruppe und die Nummer des logischen Prozessors ab, in dem der aufrufende Thread ausgeführt wird.            |
 | [**GetLogicalProcessorInformation**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformation)     | Ruft Informationen zu logischen Prozessoren und zugehöriger Hardware ab.                                                 |
-| [**GetLogicalProcessorInformationEx**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformationex) | Ruft Informationen über die Beziehungen von logischen Prozessoren und zugehöriger Hardware ab.                            |
+| [**GetLogicalProcessorInformationEx**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformationex) | Ruft Informationen zu den Beziehungen logischer Prozessoren und zugehöriger Hardware ab.                            |
 | [**GetMaximumProcessorCount**](/windows/desktop/api/WinBase/nf-winbase-getmaximumprocessorcount)                 | Gibt die maximale Anzahl logischer Prozessoren zurück, über die eine Prozessorgruppe oder das System verfügen kann.                      |
 | [**GetMaximumProcessorGroupCount**](/windows/desktop/api/WinBase/nf-winbase-getmaximumprocessorgroupcount)       | Gibt die maximale Anzahl von Prozessorgruppen zurück, über die das System verfügen kann.                                             |
 | [**QueryIdleProcessorCycleTime**](/windows/win32/api/realtimeapiset/nf-realtimeapiset-queryidleprocessorcycletime)           | Ruft die Zykluszeit für den Leerlaufthread jedes Prozessors im System ab.                                        |
@@ -446,20 +445,20 @@ Die folgenden Funktionen werden mit logischen Prozessoren und [Prozessorgruppen 
 
  
 
-## <a name="user-mode-scheduling-functions"></a>User-Mode Planungsfunktionen
+## <a name="user-mode-scheduling-functions"></a>User-Mode Scheduling-Funktionen
 
-Die folgenden Funktionen werden bei der Benutzermodusplanung (UMS) verwendet.
+Die folgenden Funktionen werden bei der Zeitplanung im Benutzermodus (User-Mode Scheduling, UMS) verwendet.
 
 
 
-| Funktion                                                               | BESCHREIBUNG                                                                                               |
+| Funktion                                                               | Beschreibung                                                                                               |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [**CreateUmsCompletionList**](/windows/desktop/api/WinBase/nf-winbase-createumscompletionlist)             | Erstellt eine UMS-Vervollständigungsliste.                                                                            |
 | [**CreateUmsThreadContext**](/windows/desktop/api/WinBase/nf-winbase-createumsthreadcontext)               | Erstellt einen UMS-Threadkontext zur Darstellung eines UMS-Arbeitsthreads.                                            |
 | [**DeleteUmsCompletionList**](/windows/desktop/api/WinBase/nf-winbase-deleteumscompletionlist)             | Löscht die angegebene UMS-Vervollständigungsliste. Die Liste muss leer sein.                                        |
 | [**DeleteUmsThreadContext**](/windows/desktop/api/WinBase/nf-winbase-deleteumsthreadcontext)               | Löscht den angegebenen UMS-Threadkontext. Der Thread muss beendet werden.                                  |
 | [**DequeueUmsCompletionListItems**](/windows/desktop/api/WinBase/nf-winbase-dequeueumscompletionlistitems) | Ruft UMS-Arbeitsthreads aus der angegebenen UMS-Vervollständigungsliste ab.                                      |
-| [**EnterUmsSchedulingMode**](/windows/desktop/api/WinBase/nf-winbase-enterumsschedulingmode)               | Konvertiert den aufrufenden Thread in einen UMS-Planerthread.                                                  |
+| [**EnterUmsSchedulingMode**](/windows/desktop/api/WinBase/nf-winbase-enterumsschedulingmode)               | Konvertiert den aufrufenden Thread in einen UMS-Schedulerthread.                                                  |
 | [**ExecuteUmsThread**](/windows/desktop/api/WinBase/nf-winbase-executeumsthread)                           | Führt den angegebenen UMS-Arbeitsthread aus.                                                                     |
 | [**GetCurrentUmsThread**](/windows/desktop/api/WinBase/nf-winbase-getcurrentumsthread)                     | Gibt den UMS-Threadkontext des aufrufenden UMS-Threads zurück.                                                 |
 | [**GetNextUmsListItem**](/windows/desktop/api/WinBase/nf-winbase-getnextumslistitem)                       | Gibt den nächsten UMS-Threadkontext in einer Liste von UMS-Threadkontexten zurück.                                     |
@@ -467,8 +466,8 @@ Die folgenden Funktionen werden bei der Benutzermodusplanung (UMS) verwendet.
 | [**GetUmsSystemThreadInformation**](/windows/desktop/api/WinBase/nf-winbase-getumssystemthreadinformation) | Fragt ab, ob der angegebene Thread ein UMS-Planerthread, ein UMS-Arbeitsthread oder ein Nicht-UMS-Thread ist. |
 | [**QueryUmsThreadInformation**](/windows/desktop/api/WinBase/nf-winbase-queryumsthreadinformation)         | Ruft Informationen zum angegebenen UMS-Arbeitsthread ab.                                              |
 | [**SetUmsThreadInformation**](/windows/desktop/api/WinBase/nf-winbase-setumsthreadinformation)             | Legt anwendungsspezifische Kontextinformationen für den angegebenen UMS-Arbeitsthread fest.                        |
-| [*UmsSchedulerProc*](/windows/desktop/api/WinNT/nc-winnt-rtl_ums_scheduler_entry_point)                             | Die anwendungsdefinierte UMS-Planereinstiegspunktfunktion, die einer UMS-Vervollständigungsliste zugeordnet ist.         |
-| [**UmsThreadYield**](/windows/desktop/api/WinBase/nf-winbase-umsthreadyield)                               | Gibt die Steuerung an den UMS-Planerthread zurück, in dem der aufrufende UMS-Arbeitsthread ausgeführt wird.             |
+| [*UmsSchedulerProc*](/windows/desktop/api/WinNT/nc-winnt-rtl_ums_scheduler_entry_point)                             | Die anwendungsdefinierte UMS-Planer-Einstiegspunktfunktion, die einer UMS-Vervollständigungsliste zugeordnet ist.         |
+| [**UmsThreadYield**](/windows/desktop/api/WinBase/nf-winbase-umsthreadyield)                               | Gibt die Steuerung an den UMS-Planerthread zurück, auf dem der aufrufende UMS-Arbeitsthread ausgeführt wird.             |
 
 
 

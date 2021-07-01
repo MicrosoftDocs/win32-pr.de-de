@@ -1,6 +1,6 @@
 ---
 title: Geometry-Shader-Objekt
-description: Ein Geometry-Shader-Objekt verarbeitet ganze primitive. Verwenden Sie die folgende Syntax, um ein Geometry-Shader-Objekt zu deklarieren.
+description: Ein geometry-shader-Objekt verarbeitet ganze Primitive. Verwenden Sie die folgende Syntax, um ein geometry-shader-Objekt zu deklarieren.
 ms.assetid: d5c1c22b-6fa6-40a8-900f-6d74f74468c1
 keywords:
 - maxvertexcount (DirectX HLSL)
@@ -11,22 +11,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dadb0e8bb3ddda16305ac701b34523668bd9c1a5
-ms.sourcegitcommit: 477b1efe7d9c2f91d5f2ac588a20edf348b1c734
+ms.openlocfilehash: e06bbc184a4b5f82d5edaaf7fdbfbd55f1906f12
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "103719752"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120615"
 ---
 # <a name="geometry-shader-object"></a>Geometry-Shader-Objekt
 
-Ein Geometry-Shader-Objekt verarbeitet ganze primitive. Verwenden Sie die folgende Syntax, um ein Geometry-Shader-Objekt zu deklarieren.
+Ein geometry-shader-Objekt verarbeitet ganze Primitive. Verwenden Sie die folgende Syntax, um ein geometry-shader-Objekt zu deklarieren.
 
-
-
-|                                                                                                                                        |
-|----------------------------------------------------------------------------------------------------------------------------------------|
-| \[maxvertexcount (*numverts*) \] void *shadername* ( *PrimitiveType DataType Name \[ numElements \]*, INOUT *streamoutputobject* ); |
+\[maxvertexcount(*NumVerts*) \] void *ShaderName* ( *PrimitiveType DataType Name \[ NumElements \]*, inout *StreamOutputObject* );
 
 
 
@@ -36,55 +32,55 @@ Ein Geometry-Shader-Objekt verarbeitet ganze primitive. Verwenden Sie die folgen
 
 <dl> <dt>
 
-<span id="_maxvertexcount_NumVerts__"></span><span id="_maxvertexcount_numverts__"></span><span id="_MAXVERTEXCOUNT_NUMVERTS__"></span>\[maxvertexcount (*numverts*)\]
+<span id="_maxvertexcount_NumVerts__"></span><span id="_maxvertexcount_numverts__"></span><span id="_MAXVERTEXCOUNT_NUMVERTS__"></span>\[maxvertexcount(*NumVerts*)\]
 </dt> <dd>
 
-\[in \] der Deklaration für die maximale Anzahl der zu erstellenden Scheitel Punkte.
+\[in \] Deklaration für die maximale Anzahl der zu erstellenden Scheitelzeichen.
 
--   \[maxvertexcount () \] : Erforderliches Schlüsselwort; eckige Klammern und Klammer sind erforderliche Zeichen für die korrekte Syntax.
--   *Numverts* -eine ganzzahlige Zahl, die die Anzahl der Vertices darstellt.
+-   \[maxvertexcount() \] – erforderliches Schlüsselwort; Klammern und Klammern sind erforderliche Zeichen für die richtige Syntax.
+-   *NumVerts:* Eine ganzzahlige Zahl, die die Anzahl der Scheitelzeichen darstellt.
 
 </dd> <dt>
 
-<span id="ShaderName"></span><span id="shadername"></span><span id="SHADERNAME"></span>*Shadername*
+<span id="ShaderName"></span><span id="shadername"></span><span id="SHADERNAME"></span>*ShaderName*
 </dt> <dd>
 
-\[in \] einer ASCII-Zeichenfolge, die einen eindeutigen Namen für die Geometry-Shader-Funktion enthält.
+\[in \] Eine ASCII-Zeichenfolge, die einen eindeutigen Namen für die geometry-shader-Funktion enthält.
 
 </dd> <dt>
 
-<span id="PrimitiveType_DataType_Name___NumElements__"></span><span id="primitivetype_datatype_name___numelements__"></span><span id="PRIMITIVETYPE_DATATYPE_NAME___NUMELEMENTS__"></span>*PrimitiveType DataType Name \[ numElements \]*
+<span id="PrimitiveType_DataType_Name___NumElements__"></span><span id="primitivetype_datatype_name___numelements__"></span><span id="PRIMITIVETYPE_DATATYPE_NAME___NUMELEMENTS__"></span>*PrimitiveType DataType Name \[ NumElements \]*
 </dt> <dd>
 
-*PrimitiveType* : primitiver Typ, der die Reihenfolge der primitiven Daten bestimmt.
+*PrimitiveType:* Primitiver Typ, der die Reihenfolge der primitiven Daten bestimmt.
 
 
 
-| Primitiver Typ | BESCHREIBUNG                                                   |
+| Primitiver Typ | Beschreibung                                                   |
 |----------------|---------------------------------------------------------------|
-| *Punkt*        | Punkt Liste                                                    |
-| *Stimmen*         | Zeilen-oder Zeilen Streifen                                       |
-| *Triangle*     | Dreiecks Liste oder Dreiecks Leiste                               |
-| *lineadj*      | Zeilen Liste mit der Nähe oder dem Zeilen Streifen mit der Nähe         |
-| *"-adangleadj"*  | Dreiecks Liste mit der Nähe oder dem Dreiecks Streifen mit der Nähe |
+| *Punkt*        | Punktliste                                                    |
+| *Linie*         | Zeilenliste oder Linienstreifen                                       |
+| *Dreieck*     | Dreiecksliste oder Dreiecksstreifen                               |
+| *lineadj*      | Zeilenliste mit Adjacency oder Zeilenstreifen mit Adjacency         |
+| *triangleadj*  | Dreiecksliste mit Adjacency oder Dreiecksstreifen mit Adjacency |
 
 
 
  
 
-*DataType*  -  \[ in \] einem Eingabe Datentyp kann ein beliebiger [HLSL-Datentyp](dx-graphics-hlsl-data-types.md)sein.
+*DataType*  -  \[ in \] Ein Eingabedatentyp; kann ein beliebiger [HLSL-Datentyp sein.](dx-graphics-hlsl-data-types.md)
 
-*Name* : Argument Name; Dies ist eine ASCII-Zeichenfolge.
+*Name* – Argumentname; dies ist eine ASCII-Zeichenfolge.
 
-*NumElements* : Array Größe der Eingabe, die von *PrimitiveType* abhängig ist, wie in der folgenden Tabelle gezeigt.
+*NumElements:* Arraygröße der Eingabe, die vom *PrimitiveType* abhängt, wie in der folgenden Tabelle gezeigt.
 
 | Primitiver Typ | NumElements                                                                                                  |
 |----------------|--------------------------------------------------------------------------------------------------------------|
-| *Punkt*        | \[1\]<br/> Sie arbeiten jeweils nur auf einem Punkt.<br/>                                         |
-| *Stimmen*         | \[2\]<br/> Eine Zeile erfordert zwei Vertices.<br/>                                                    |
-| *Triangle*     | \[3\]<br/> Ein Dreieck erfordert drei Vertices.<br/>                                              |
-| *lineadj*      | \[4\]<br/> Ein lineadj hat zwei Ende. Daher sind vier Vertices erforderlich.<br/>                    |
-| *"-adangleadj"*  | \[6\]<br/> Ein "dreiangleadj"-Rahmen drei weitere Dreiecke Daher sind sechs Vertices erforderlich.<br/> |
+| *Punkt*        | \[1\]<br/> Sie arbeiten nur an einem Punkt nach dem anderen.<br/>                                         |
+| *Linie*         | \[2\]<br/> Eine Zeile erfordert zwei Scheitellinien.<br/>                                                    |
+| *Dreieck*     | \[3\]<br/> Ein Dreieck erfordert drei Scheitelungen.<br/>                                              |
+| *lineadj*      | \[4\]<br/> Ein lineadj hat zwei Enden; daher sind vier Scheitelungen erforderlich.<br/>                    |
+| *triangleadj*  | \[6\]<br/> Ein Dreieckadj grenzt an drei weitere Dreiecke; daher sind sechs Scheiteltices erforderlich.<br/> |
 
 
 
@@ -92,10 +88,10 @@ Ein Geometry-Shader-Objekt verarbeitet ganze primitive. Verwenden Sie die folgen
 
 </dd> <dt>
 
-<span id="StreamOutputObject"></span><span id="streamoutputobject"></span><span id="STREAMOUTPUTOBJECT"></span>*Streamoutputobject*
+<span id="StreamOutputObject"></span><span id="streamoutputobject"></span><span id="STREAMOUTPUTOBJECT"></span>*StreamOutputObject*
 </dt> <dd>
 
-Die Deklaration des [Stream-Output-Objekts](dx-graphics-hlsl-so-type.md).
+Die Deklaration des [Streamausgabeobjekts](dx-graphics-hlsl-so-type.md).
 
 </dd> </dl>
 
@@ -105,17 +101,17 @@ Keine
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das folgende Diagramm zeigt die verschiedenen primitiven Typen für ein Geometry-Shader-Objekt.
+Das folgende Diagramm zeigt die verschiedenen primitiven Typen für ein Geometrie-Shaderobjekt.
 
-![Darstellung der verschiedenen primitiven Typen für ein Geometry-Shader-Objekt](images/d3d11-gsinputs1.png)
+![Abbildung der verschiedenen primitiven Typen für ein Geometrie-Shaderobjekt](images/d3d11-gsinputs1.png)
 
-Das folgende Diagramm zeigt die Geometrie-Shader-Aufrufe.
+Das folgende Diagramm zeigt Geometry-Shaderaufrufe.
 
-![Abbildung der Geometrie-Shader-Aufrufe](images/d3d11-gsinputs2.png)
+![Abbildung von Geometry-Shaderaufrufen](images/d3d11-gsinputs2.png)
 
 ## <a name="examples"></a>Beispiele
 
-Dieses Beispiel basiert auf Übung 1 aus dem [Direct3D 10-Shader Model 4,0-Workshop](https://msdn.microsoft.com/library/Ee416554(v=VS.85).aspx).
+Dieses Beispiel ist aus Übung 1 des [Direct3D 10 Shader Model 4.0 Workshop.](https://msdn.microsoft.com/library/Ee416554(v=VS.85).aspx)
 
 
 ```
@@ -139,15 +135,15 @@ void GSScene( triangleadj GSSceneIn input[6], inout TriangleStream<PSSceneIn> Ou
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shader Model 4](dx-graphics-hlsl-sm4.md) und höhere shadermodelle | ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höher– Shadermodelle | Ja       |
 
 
 

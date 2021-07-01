@@ -4,12 +4,12 @@ description: Mixed-Mode DPI-Skalierung und DPI-orientierte APIs
 ms.assetid: 44AC0B29-3283-4801-90F5-3E78CCD87B9F
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2244ea79d489ae1e20260f72336c15bc64b97de0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d6f5b16e4c438cfe1f0d04e61524899e213b25ea
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090098"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119725"
 ---
 # <a name="mixed-mode-dpi-scaling-and-dpi-aware-apis"></a>Mixed-Mode DPI-Skalierung und DPI-orientierte APIs
 
@@ -57,34 +57,33 @@ Beachten Sie, dass Nicht-Clientbereiche eines untergeordneten Fensters, z. B. Ni
 </dt> </dl> </dd> <dd> <b> Die *ForDpi-APIs </b>
 
 -   Mehrere häufig verwendete APIs wie [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) haben keinen Kontext eines HWND und haben daher keine Möglichkeit, das richtige DPI-Bewusstsein für ihre Rückgabewerte zu deduzieren. Das Aufrufen dieser APIs aus einem Thread, der in einem anderen DPI-Bewusstseinsmodus oder Kontext ausgeführt wird, kann Werte zurückgeben, die nicht für den Kontext des aufrufenden Threads skaliert werden. ["GetSystemMetricForDpi",](/windows/desktop/api/Winuser/nf-winuser-getsystemmetricsfordpi) ["SystemParametersInfoForDpi",](/windows/desktop/api/Winuser/nf-winuser-systemparametersinfofordpi)und ["AdjustWindowRectExForDpi"](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) führen die gleiche Funktionalität wie ihre nicht DPI-nicht unterstützten Entsprechungen aus. Verwenden Sie jedoch einen DPI-Parameter als Argument, und ziehen Sie das DPI-Bewusstsein aus dem Kontext des aktuellen Threads ab.
--   **GetSystemMetricForDpi** und **SystemParametersInfoForDpi** geben DPI-skalierte Systemmetrikwerte und Systemparameterwerte gemäß dieser Gleichung zurück:
+-   **GetSystemMetricForDpi** und **SystemParametersInfoForDpi** geben gemäß dieser Gleichung DPI-skalierte Systemmetrikwerte und Systemparameterwerte zurück:
 
-    |                                                                 |
-    |-----------------------------------------------------------------|
-    | GetSystemMetrics(...) @ dpi == GetSystemMetricsForDpi(..., dpi) |
+    
+    GetSystemMetrics(...) @ dpi == GetSystemMetricsForDpi(..., dpi)
 
     
 
      
 
-    Daher gibt der Aufruf von **GetSystemMetrics** (oder **SystemParametersInfoForDpi)** während der Ausführung auf einem Gerät mit einem bestimmten System-DPI-Wert den gleichen Wert zurück, den die DPI-fähigen Varianten **(GetSystemMetricsForDpi** und **SystemParametersInfoForDpi)** erhalten, wenn derselbe DPI-Wert wie die Eingabe angegeben wird.
+    Daher gibt der Aufruf von **GetSystemMetrics** (oder **SystemParametersInfoForDpi)** während der Ausführung auf einem Gerät mit einem bestimmten DPI-Wert des Systems denselben Wert zurück, den die DPI-bewussten Varianten (**GetSystemMetricsForDpi** und **SystemParametersInfoForDpi**) bei demselben DPI-Wert wie die Eingabe erhalten.
 
--   [**AdjustWindowRectExForDpi**](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) nimmt einen HWND an und berechnet die erforderliche Größe eines Fensterrechtecks auf DPI-bezogene Weise.
+-   [**AdjustWindowRectExForDpi**](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) verwendet einen HWND und berechnet die erforderliche Größe eines Fensterrechtecks auf DPI-sensitive Weise.
 
 </dd> <dd>
 
-</dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforwindow">GetDpiForWindow</a></b><dl> <dt><b>GetDpiForWindow</b> gibt den DPI zurück, der dem bereitgestellten HWND zugeordnet ist. Die Antwort hängt vom DPI-Awareness-Modus des HWND ab:
+</dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforwindow">GetDpiForWindow</a></b><dl> <dt><b>GetDpiForWindow gibt</b> den DPI zurück, der dem bereitgestellten HWND zugeordnet ist. Die Antwort hängt vom DPI-Bewusstseinsmodus des HWND ab:
 
-| DPI-Awareness-Modus von HWND | Rückgabewert                                                                                                                                                                                                  |
+| DPI Awareness-Modus von HWND | Rückgabewert                                                                                                                                                                                                  |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nicht bekannt                    | 96                                                                                                                                                                                                            |
 | System                     | Der System-DPI                                                                                                                                                                                                |
-| Per-Monitor                | Der DPI der Anzeige, auf der sich das zugeordnete Fenster der obersten Ebene in erster Linie befindet. <br/> (Wenn ein untergeordnetes Fenster bereitgestellt wird, wird der DPI des entsprechenden übergeordneten Fensters der obersten Ebene zurückgegeben.)<br/> |
+| Per-Monitor                | Der DPI-Wert der Anzeige, auf der sich das zugeordnete Fenster der obersten Ebene hauptsächlich befindet. <br/> (Wenn ein untergeordnetes Fenster bereitgestellt wird, wird der DPI-Wert des entsprechenden übergeordneten Fensters der obersten Ebene zurückgegeben.)<br/> |
 
 </dt> </dl> </dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforsystem">GetDpiForSystem</a></b><dl> <dt>
 
-Das Aufrufen von **GetDpiForSystem** ist effizienter als das Aufrufen von [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc) und [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) zum Abrufen des System-DPI.
+Das **Aufrufen von GetDpiForSystem** ist effizienter als das Aufrufen von [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc) und [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) zum Abrufen des System-DPI.
 </dt> <dt>
 
-Jede Komponente, die in einer Anwendung ausgeführt werden könnte, die DPI-Informationen des Unterprozesses verwendet, sollte nicht davon ausgehen, dass der System-DPI während des Lebenszyklus des Prozesses statisch ist. Wenn z. B. ein Thread, der unter **dem DPI \_ AWARENESS CONTEXT \_ UNAWARE \_ Awareness-Kontext** ausgeführt wird, den System-DPI abfragt, lautet die Antwort 96. Wenn jedoch derselbe Thread zum Kontext der **DPI \_ AWARENESS \_ \_ CONTEXT-SYSTEMerkennung** gewechselt und den System-DPI erneut abgefragt hat, kann die Antwort anders lauten. Um die Verwendung eines zwischengespeicherten (und möglicherweise veralteten) System-DPI-Werts zu vermeiden, verwenden **Sie GetDpiForSystem,** um den System-DPI relativ zum DPI-Wahrnehmungsmodus des aufrufenden Threads abzurufen. 
+Jede Komponente, die in einer Anwendung ausgeführt werden kann, die DPI-Informationen zu Unterprozessen verwendet, sollte nicht davon ausgehen, dass der System-DPI während des Lebenszyklus des Prozesses statisch ist. Wenn beispielsweise ein Thread, der unter **DPI \_ AWARENESS CONTEXT \_ \_ UNAWARE** ausgeführt wird, den System-DPI abfragt, lautet die Antwort 96. Wenn derselbe Thread jedoch zum Kontext des **DPI \_ AWARENESS CONTEXT \_ \_ SYSTEM** wechselt und den System-DPI erneut abfragt, kann die Antwort anders sein. Um die Verwendung eines zwischengespeicherten (und möglicherweise veralteten) System-DPI-Werts zu vermeiden, verwenden Sie **GetDpiForSystem,** um den System-DPI relativ zum DPI-Bewusstseinsmodus des aufrufenden Threads abzurufen. 
 </dt> </dl> </dd> </dl>

@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 178b31a386a7ae4aa266ac33ddbb1ee5c842f2d1
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 2c506d2ad23003f93bbaea409cacc60b18c86534
+ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997167"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113129707"
 ---
 # <a name="dcl_semantics-sm3---ps-asm"></a>\_dcl-Semantik (sm3 – ps asm)
 
@@ -22,11 +22,7 @@ Deklarieren Sie die Zuordnung zwischen der Vertex-Shaderausgabe und der Pixel-Sh
 
 ## <a name="syntax"></a>Syntax
 
-
-
-|                                                   |
-|---------------------------------------------------|
-| dcl \_ semantics \[ \_ schwerpunktid \] dst \[ .write \_ mask\] |
+dcl \_ semantics \[ \_ schwerpunktid \] dst \[ .write \_ mask\]
 
 
 
@@ -39,7 +35,7 @@ Hierbei gilt:
 -   dst: Zielregister. Siehe [ps \_ 3 \_ 0 Registers](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).
 -   \_Schreibmaske: Das gleiche Ausgaberegister kann jedes Mal mit einer eindeutigen Schreibmaske deklariert werden (sodass verschiedene Semantik auf einzelne Komponenten angewendet werden kann). Dieselbe Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren mindestens vier Komponenten sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Ausgaberegister) hinausgehen können. Wenn die \_ Psize-Semantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar gilt. Wenn die \_ Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 
 
@@ -86,7 +82,7 @@ texld r1, v1.zw, s1
 
 <dl> <dt>
 
-[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
+[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> <dt>
 
 [Antialias-Beispiel](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)

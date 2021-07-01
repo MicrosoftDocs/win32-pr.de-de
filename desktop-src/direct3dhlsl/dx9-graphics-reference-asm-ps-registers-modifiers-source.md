@@ -1,6 +1,6 @@
 ---
-title: Pixel-Shader-quellregistrierungs Modifizierern
-description: Verwenden Sie die quellregistrierungs modifiziererer, um den Wert zu ändern, der aus einem Register gelesen wird, bevor eine Anweisung
+title: Pixelshader-Quellregistermodifizierer
+description: Verwenden Sie Quellregistermodifizierer, um den Aus einem Register gelesenen Wert zu ändern, bevor eine Anweisung ausgeführt wird.
 ms.assetid: b45d0919-7878-4184-ad4a-5623aae9d1f1
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,106 +9,105 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 12cfee533a71408a445d97a63bbd8b76b281236b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a9dd4476dd7a1a885edb2e62a29b5127f5ff0a14
+ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311490"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113129677"
 ---
-# <a name="pixel-shader-source-register-modifiers"></a>Pixel-Shader-quellregistrierungs Modifizierern
+# <a name="pixel-shader-source-register-modifiers"></a>Pixelshader-Quellregistermodifizierer
 
-Verwenden Sie die quellregistrierungs modifiziererer, um den Wert zu ändern, der aus einem Register gelesen wird, bevor eine Anweisung Der Inhalt eines Quell Registers bleibt unverändert. Modifizierer sind nützlich, um den Bereich der Register Daten zur Vorbereitung der Anweisung anzupassen. Ein Satz von Modifizierern, die als Selektoren bezeichnet werden, kopiert oder repliziert die Daten von einem einzelnen Kanal (r, g, b, a) in die anderen Kanäle.
+Verwenden Sie Quellregistermodifizierer, um den Aus einem Register gelesenen Wert zu ändern, bevor eine Anweisung ausgeführt wird. Der Inhalt eines Quellregisters bleibt unverändert. Modifizierer sind nützlich, um den Bereich der Registerdaten als Vorbereitung für die Anweisung anzupassen. Eine Reihe von Modifizierern, die als Selektoren bezeichnet werden, kopiert oder repliziert die Daten aus einem einzelnen Kanal (r,g,b,a) in die anderen Kanäle.
 
-## <a name="ps_1_1---ps_1_4"></a>PS \_ 1 \_ 1-PS \_ 1 \_ 4
+## <a name="ps_1_1---ps_1_4"></a>ps \_ 1 \_ 1 - ps \_ 1 \_ 4
 
-Diese Tabelle identifiziert die Versionen, die die einzelnen Modifizierer unterstützen:
-
-
-
-| Quellregistrierungs modifiziererer                                                                                    | Syntax         | Version |      |      |      |     |     |
-|--------------------------------------------------------------------------------------------------------------|----------------|---------|------|------|------|-----|-----|
-|                                                                                                              |                | 1\_1    | 1\_2 | 1 \_ 3 | 1\_4 |     |     |
-| [eingenommen](dx9-graphics-reference-asm-ps-registers-modifiers-bias.md)                                           | \_Befangenheit registrieren | X       | X    | X    | X    |     |     |
-| [umkehren](dx9-graphics-reference-asm-ps-registers-modifiers-invert.md)                                       | 1: registrieren   | X       | X    | X    | X    |     |     |
-| [negate](dx9-graphics-reference-asm-ps-registers-modifiers-negate.md)                                       | \- sich    | X       | X    | X    | X    |     |     |
-| [Skalieren um 2](dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md)                                 | Registrieren von \_ x2   |         |      |      | X    |     |     |
-| [signierte Skalierung](dx9-graphics-reference-asm-ps-registers-modifiers-signed-scale.md)                         | \_bx2 registrieren  | X       | X    | X    | X    |     |     |
-| [texld-und texcrd-Modifizierer](dx9-graphics-reference-asm-ps-registers-modifiers-ps-1-4.md)                   | Registrieren von \_ d\*  | X       | X    | X    | X    |     |     |
-| [Quellen Register (swizzelnder)](dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md) | Register. xyzw  | X       | X    | X    | X    |     |     |
+In dieser Tabelle sind die Versionen aufgeführt, die die einzelnen Modifizierer unterstützen:
 
 
 
- 
+| Quellregistermodifizierer                                                                                    | Syntax         | Version 1 \_ 1 | Version 1 \_ 2     | Version 1 \_ 3     | Version 1 \_ 4     |
+|--------------------------------------------------------------------------------------------------------------|----------------|---------|------|------|------|
+| [Vorurteil](dx9-graphics-reference-asm-ps-registers-modifiers-bias.md)                                           | \_Registervoreingenommenheit | X       | X    | X    | X    |
+| [Invertieren](dx9-graphics-reference-asm-ps-registers-modifiers-invert.md)                                       | 1– Registrieren   | X       | X    | X    | X    |
+| [Negieren](dx9-graphics-reference-asm-ps-registers-modifiers-negate.md)                                       | \- Registrieren    | X       | X    | X    | X    |
+| [Skalierung um 2](dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md)                                 | Registrieren \_ von x2   |         |      |      | X    |
+| [Signierte Skalierung](dx9-graphics-reference-asm-ps-registers-modifiers-signed-scale.md)                         | register \_ bx2  | X       | X    | X    | X    |
+| [Texld- und Texcrd-Modifizierer](dx9-graphics-reference-asm-ps-registers-modifiers-ps-1-4.md)                   | register \_ d\*  | X       | X    | X    | X    |
+| [Quellenregister-Swizzling](dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md) | register.xyzw  | X       | X    | X    | X    |
 
-Modifizierermodifiziererer für die Quelle können nur in arithmetischen Anweisungen verwendet werden. Sie können nicht für Textur Adress Anweisungen verwendet werden. Eine Ausnahme bildet der " [Scale by 2](dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md) "-Modifizierer. Bei Version 1 \_ 1 kann die signierte Skala für das Quell Argument einer beliebigen texm- \* Anweisung verwendet werden. Bei Version 1 \_ 2 oder 1 \_ 3 kann die signierte Skala für das Quell Argument einer beliebigen Textur Adress Anweisung verwendet werden.
 
-Bestimmte Einschränkungen für den Modifizierer:
 
--   Negate können entweder mit dem-Modifizierer "Bias", "signed Scaling" oder "scalex2" kombiniert werden. Wenn Sie kombiniert werden, wird Negation zuletzt ausgeführt.
+ 
+
+Quellregistermodifizierer können nur für arithmetische Anweisungen verwendet werden. Sie können nicht für Texturadressanweisungen verwendet werden. Eine Ausnahme bildet der Modifizierer [Scale by 2.](dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md) Für Version 1 \_ 1 kann die signierte Skalierung für das Quellargument jeder texm-Anweisung verwendet \* werden. Für Version \_ 1 2 oder 1 \_ 3 kann die signierte Skalierung für das Quellargument einer beliebigen Texturadressanweisung verwendet werden.
+
+Einige modifiziererspezifische Einschränkungen:
+
+-   Negate kann entweder mit dem Modifizierer bias, signed scaling oder scalex2 kombiniert werden. In kombination wird "negate" zuletzt ausgeführt.
 -   Invert kann nicht mit einem anderen Modifizierer kombiniert werden.
--   Invert, Negate, Bias, signierte Skalierung und scalex2 können mit jedem der Selektoren kombiniert werden.
--   Modifizierermodifiziererer für die Quelle dürfen nicht in konstanten Registern verwendet werden, da Sie zu nicht definierten Ergebnissen führen. Bei Version 1 \_ 4 sind modifiziererer für Konstanten nicht zulässig, und die Überprüfung wird fehlschlagen.
+-   Invertieren, Negieren, Voreingenommenheit, signierte Skalierung und Scalex2 können mit jedem der Selektoren kombiniert werden.
+-   Quellregistermodifizierer sollten nicht für Konstantenregister verwendet werden, da sie nicht definierte Ergebnisse verursachen. Für Version 1 \_ 4 sind Modifizierer für Konstanten nicht zulässig und schlagen bei der Überprüfung fehl.
 
-## <a name="ps_2_0-and-above"></a>PS \_ 2 \_ 0 und höher
+## <a name="ps_2_0-and-above"></a>ps \_ 2 \_ 0 und höher
 
-Bei Version PS \_ 2 \_ 0 und höher wurde die Anzahl der modifiziererer vereinfacht.
+Für Version ps \_ 2 \_ 0 und höher wurde die Anzahl der Modifizierer vereinfacht.
 
 ### <a name="negate"></a>Negate
 
-Negieren Sie den Inhalt des Quell Registers.
+Negieren Sie den Inhalt des Quellregisters.
 
 
 
-| Komponentenmodifizierer | BESCHREIBUNG     |
+| Komponentenmodifizierer | Beschreibung     |
 |--------------------|-----------------|
-| \- r               | Quell Negation |
+| \- R               | Quelln negation |
 
 
 
- 
+ 
 
-Der Negation-Modifizierer kann nicht für das zweite Quell Register dieser Anweisungen verwendet werden: [m3x2-PS](m3x2---ps.md), [M3x3-PS](m3x3---ps.md), [M3x4-PS](m3x4---ps.md), [m4x3-PS](m4x3---ps.md)und [M4x4-PS](m4x4---ps.md).
+Der Modifizierer negate kann nicht im zweiten Quellregister dieser Anweisungen verwendet werden: [m3x2 - ps](m3x2---ps.md), [m3x3 - ps](m3x3---ps.md), [m3x4 - ps](m3x4---ps.md), [m4x3 - ps](m4x3---ps.md)und [m4x4 - ps](m4x4---ps.md).
 
 
 
-| Pixel-Shader-Versionen | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|-------|------|-------|
 | \-                    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 ### <a name="absolute-value"></a>Absoluter Wert
 
-Nehmen Sie den absoluten Wert des Register.
+Nehmen Sie den absoluten Wert des Registers.
 
 
 
-| Pixel-Shader-Versionen | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|-------|------|-------|
 | abs                   |      |      |       | x    | x     |
 
 
 
- 
+ 
 
-Wenn ein Shader der Version 3 aus mindestens einem konstanten float-Register (c \# ) liest, muss einer der folgenden Werte zutreffen.
+Wenn ein Shader der Version 3 aus einem oder mehreren konstanten float-Registern (c) liest, \# muss eines der folgenden Punkte zutreffen.
 
--   Alle Konstanten Gleit Komma Register müssen den ABS-Modifizierer verwenden.
--   Keines der Konstanten Gleit Komma Register kann den ABS-Modifizierer verwenden.
+-   Alle konstanten Gleitkommaregister müssen den Abs-Modifizierer verwenden.
+-   Keiner der konstanten Gleitkommaregister kann den Abs-Modifizierer verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshadermodifizierern](dx9-graphics-reference-asm-ps-registers-modifiers.md)
+[Registermodifizierer für Pixel-Shader](dx9-graphics-reference-asm-ps-registers-modifiers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

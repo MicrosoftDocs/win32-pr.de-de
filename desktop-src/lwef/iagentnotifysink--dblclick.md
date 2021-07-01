@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink DblClick
-description: Iagentnotifysink DblClick
+title: IAgentNotifySink DblClick
+description: IAgentNotifySink DblClick
 ms.assetid: 7e86cc9b-8bc3-405e-9bbf-764cec9c3130
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9ec7372d524027588dae5a0a3aafaf07146556e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 88193f228f94d24384e6bf2b874e9208d67f3e9c
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388313"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113120923"
 ---
-# <a name="iagentnotifysinkdblclick"></a>Iagentnotifysink::D blclick
+# <a name="iagentnotifysinkdblclick"></a>IAgentNotifySink::D blClick
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT DblClick(
@@ -24,61 +24,61 @@ HRESULT DblClick(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, wenn der Benutzer auf ein Zeichen doppelklickt.
+Benachrichtigt eine Clientanwendung, wenn der Benutzer auf ein Zeichen doppelklickt.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwcharid*
+<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwCharID*
 </dt> <dd>
 
-Der Bezeichner des Zeichens, auf das Doppel geklickt wird.
+Bezeichner des doppelgeklickten Zeichens.
 
 </dd> <dt>
 
-<span id="fwKeys"></span><span id="fwkeys"></span><span id="FWKEYS"></span>*"f"-Schlüssel*
+<span id="fwKeys"></span><span id="fwkeys"></span><span id="FWKEYS"></span>*fwKeys*
 </dt> <dd>
 
-Ein-Parameter, der den Mauszeiger-und modifiziererschlüsselzustand angibt. Der-Parameter kann eine beliebige Kombination der folgenden zurückgeben:
+Ein Parameter, der den Zustand der Maustaste und des Modifiziererschlüssels angibt. Der -Parameter kann eine beliebige Kombination der folgenden Angaben zurückgeben:
 
 
 
-|        |                                                |
+| Wert  | Beschreibung                               |
 |--------|------------------------------------------------|
 | 0x0001 | Linke Schaltfläche                                    |
 | 0x0010 | Mittlere Schaltfläche                                  |
-| 0x0002 | Rechte Schaltfläche                                   |
-| 0x0004 | Umschalttaste nach unten                                 |
-| 0x0008 | Steuerelement Taste unten                               |
-| 0x0020 | Alt-Taste unten                                   |
-| 0x1000 | Das Ereignis ist auf dem Task leisten Symbol des Zeichens aufgetreten. |
+| 0x0002 | Schaltfläche "Rechts"                                   |
+| 0x0004 | UMSCHALTTASTE NACH-UNTEN                                 |
+| 0x0008 | Steuerungsschlüssel nach unten                               |
+| 0x0020 | ALT-TASTE NACH-UNTEN                                   |
+| 0x1000 | Das Ereignis ist auf dem Taskleistensymbol des Zeichens aufgetreten. |
 
 
 
- 
-
-</dd> <dt>
-
-<span id="x"></span><span id="X"></span>*Stuben*
-</dt> <dd>
-
-Die x-Koordinate des Mauszeigers in Pixel relativ zum Bildschirm Ursprung (oben links).
+ 
 
 </dd> <dt>
 
-<span id="y"></span><span id="Y"></span>*Teenie*
+<span id="x"></span><span id="X"></span>*X*
 </dt> <dd>
 
-Die y-Koordinate des Mauszeigers in Pixel relativ zum Bildschirm Ursprung (oben links).
+Die x-Koordinate des Mauszeigers in Pixel relativ zum Bildschirmursprung (oben links).
+
+</dd> <dt>
+
+<span id="y"></span><span id="Y"></span>*Y*
+</dt> <dd>
+
+Die y-Koordinate des Mauszeigers in Pixel relativ zum Bildschirmursprung (oben links).
 
 </dd> </dl>
 
-Dieses Ereignis wird an den Eingabe aktiven Client des Zeichens gesendet. Wenn keiner der Clients des Zeichens Eingabe aktiv ist, benachrichtigt der Server den aktiven Client des Zeichens. Wenn das Zeichen sichtbar ist, bewirkt der Server, dass der Client die Eingabe aktiv durchführt, und sendet [**iagentnotifysink:: activateinputstate**](iagentnotifysink--activateinputstate.md). Wenn das Zeichen ausgeblendet ist, wird das Zeichen ebenfalls automatisch angezeigt.
+Dieses Ereignis wird an den eingabeaktiven Client des Zeichens gesendet. Wenn keiner der Clients des Zeichens eingabeaktiv ist, benachrichtigt der Server den aktiven Client des Zeichens. Wenn das Zeichen sichtbar ist, aktiviert der Server auch den Client input-active und sendet [**IAgentNotifySink::ActivateInputState.**](iagentnotifysink--activateinputstate.md) Wenn das Zeichen ausgeblendet ist, wird es auch automatisch angezeigt.
 
- 
+ 
 
- 
+ 
 
 
 

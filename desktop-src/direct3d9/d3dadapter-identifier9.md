@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: db4b25cb44b3b43b3b9754f241e2c505bdfedbc7
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 85401573956d29386b5ddabbd48711a7be140463
+ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343395"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113129969"
 ---
 # <a name="d3dadapter_identifier9-structure"></a>D3DADAPTER \_ IDENTIFIER9-Struktur
 
@@ -32,9 +32,12 @@ typedef struct D3DADAPTER_IDENTIFIER9 {
   char          Driver[MAX_DEVICE_IDENTIFIER_STRING];
   char          Description[MAX_DEVICE_IDENTIFIER_STRING];
   char          DeviceName[32];
+#ifdef _WIN32
   LARGE_INTEGER DriverVersion;
+#else
   DWORD         DriverVersionLowPart;
   DWORD         DriverVersionHighPart;
+#endif
   DWORD         VendorId;
   DWORD         DeviceId;
   DWORD         SubSysId;
@@ -57,7 +60,7 @@ Typ: **char**
 
 </dd> <dd>
 
-Wird für die Darstellung für den Benutzer verwendet. Dies sollte nicht verwendet werden, um bestimmte Treiber zu identifizieren, da viele verschiedene Zeichenfolgen dem gleichen Gerät und Treiber von verschiedenen Anbietern zugeordnet sein können.
+Wird für die Darstellung für den Benutzer verwendet. Dies sollte nicht verwendet werden, um bestimmte Treiber zu identifizieren, da viele verschiedene Zeichenfolgen demselben Gerät und Treiber von verschiedenen Anbietern zugeordnet sein können.
 
 </dd> <dt>
 
@@ -90,7 +93,7 @@ Typ: **[ **LARGE \_ INTEGER**](/windows/win32/api/winnt/ns-winnt-large_integer-r
 
 </dd> <dd>
 
-Identifizieren Sie die Version des Direct3D-Treibers. Es ist zulässig, vergleicht den 64-Bit-Ganzzahlwert mit Vorzeichen kleiner als und größer als zu vergleichen. Seien Sie jedoch vorsichtig, wenn Sie dieses Element verwenden, um problematische Treiber zu identifizieren. Stattdessen sollten Sie DeviceIdentifier verwenden. Siehe Hinweise.
+Identifizieren Sie die Version des Direct3D-Treibers. Es ist gesetzlich, für den 64-Bit-Ganzzahlwert mit Vorzeichen weniger als und größer als Vergleiche zu verwenden. Seien Sie jedoch vorsichtig, wenn Sie dieses Element verwenden, um problematische Treiber zu identifizieren. Verwenden Sie stattdessen DeviceIdentifier. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -145,7 +148,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Kann verwendet werden, um einen bestimmten Chipsatz zu identifizieren. Fragen Sie dieses Element ab, um das Subsystem zu identifizieren, in der Regel das jeweilige Board. Der Wert kann 0 (null) sein, wenn er unbekannt ist.
+Kann verwendet werden, um einen bestimmten Chipsatz zu identifizieren. Fragen Sie dieses Member ab, um das Subsystem zu identifizieren, in der Regel das bestimmte Board. Der Wert kann 0 (null) sein, wenn er unbekannt ist.
 
 </dd> <dt>
 
@@ -156,7 +159,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Kann verwendet werden, um einen bestimmten Chipsatz zu identifizieren. Fragen Sie diesen Member ab, um die Revisionsebene des Chipsatzes zu identifizieren. Der Wert kann 0 (null) sein, wenn er unbekannt ist.
+Kann verwendet werden, um einen bestimmten Chipsatz zu identifizieren. Fragen Sie diesen Member ab, um die Revisionsebene des Chipsets zu identifizieren. Der Wert kann 0 (null) sein, wenn er unbekannt ist.
 
 </dd> <dt>
 
@@ -167,7 +170,7 @@ Typ: **[ **GUID**](guid.md)**
 
 </dd> <dd>
 
-Kann abgefragt werden, um Änderungen im Treiber- und Chipsatz zu überprüfen. Diese GUID ist ein eindeutiger Bezeichner für das Treiber- und Chipsatzpaar. Fragen Sie diesen Member ab, um Änderungen am Treiber- und Chipsatz nachzuverfolgen, um ein neues Profil für das Grafiksubsystem zu generieren. DeviceIdentifier kann auch verwendet werden, um bestimmte problematische Treiber zu identifizieren.
+Kann abgefragt werden, um Änderungen im Treiber- und Chipsatz zu überprüfen. Diese GUID ist ein eindeutiger Bezeichner für das Treiber- und Chipsatzpaar. Fragen Sie diesen Member ab, um Änderungen am Treiber und Chipsatz nachverfolgungen, um ein neues Profil für das Grafiksubsystem zu generieren. DeviceIdentifier kann auch verwendet werden, um bestimmte problematische Treiber zu identifizieren.
 
 </dd> <dt>
 
@@ -178,11 +181,11 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Wird verwendet, um die Windows Hardware Quality Labs -Überprüfungsebene (WHQL) für dieses Treiber- und Gerätepaar zu bestimmen. Das DWORD ist eine gepackte Datumsstruktur, die das Datum der Veröffentlichung des letzten vom Treiber bestandenen WHQL-Tests definiert. Es ist zulässig, < und > Vorgänge für diesen Wert auszuführen. Im Folgenden wird das Datumsformat veranschaulicht.
+Wird verwendet, um die Windows Hardware Quality Labs (WHQL) für dieses Treiber- und Gerätepaar zu bestimmen. Das DWORD ist eine gepackte Datumsstruktur, die das Datum der Veröffentlichung des letzten vom Treiber bestandenen WHQL-Tests definiert. Es ist gesetzlich, vorgänge < und > für diesen Wert durchzuführen. Im Folgenden wird das Datumsformat veranschaulicht.
 
 
 
-| Bits  |  BESCHREIBUNG                                             |
+| Bits  |  Beschreibung                                             |
 |-------|-----------------------------------------------|
 | 31-16 | Das Jahr, eine Dezimalzahl von 1999 nach oben. |
 | 15-8  | Der Monat, eine Dezimalzahl von 1 bis 12.     |
@@ -196,7 +199,7 @@ Die folgenden Werte werden ebenfalls verwendet.
 
 
 
-| Wert    |  BESCHREIBUNG                                                     |
+| Wert    |  Beschreibung                                                     |
 |-----|-------------------------------------------------------|
 | 0   | Nicht zertifiziert.                                        |
 | 1   | WHQL überprüft, aber es sind keine Datumsinformationen verfügbar. |
@@ -211,7 +214,7 @@ Für Direct3D9Ex unter Windows Vista, Windows Server 2008, Windows 7 und Windows
 
 </dd> </dl>
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Das folgende Pseudocodebeispiel veranschaulicht das Versionsformat, das in den Membern DriverVersion, DriverVersionLowPart und DriverVersionHighPart codiert ist.
 
@@ -225,7 +228,7 @@ Build = LOWORD(DriverVersion.LowPart)
 
 
 
-Weitere Informationen zum HIWORD-Makro, zum LOWORD-Makro und zur LARGE INTEGER-Struktur finden Sie im \_ Plattform-SDK.
+Weitere Informationen zum HIWORD-Makro, zum LOWORD-Makro und zur LARGE INTEGER-Struktur finden Sie im Platform \_ SDK.
 
 MAX \_ DEVICE IDENTIFIER STRING ist eine Konstante mit der folgenden \_ \_ Definition.
 
@@ -238,7 +241,7 @@ MAX \_ DEVICE IDENTIFIER STRING ist eine Konstante mit der folgenden \_ \_ Defin
 
 Die Member VendorId, DeviceId, SubSysId und Revision können zusammen verwendet werden, um bestimmte Chipsätze zu identifizieren. Verwenden Sie diese Member jedoch mit Vorsicht.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -248,7 +251,7 @@ Die Member VendorId, DeviceId, SubSysId und Revision können zusammen verwendet 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

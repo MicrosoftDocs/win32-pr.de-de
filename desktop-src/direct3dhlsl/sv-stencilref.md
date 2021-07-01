@@ -1,6 +1,6 @@
 ---
 title: SV_StencilRef
-description: SV \_ StencilRef stellt den aktuellen Pixelshader-Schablonenverweiswert dar.
+description: SV \_ StencilRef stellt den aktuellen Shader-Schablonenverweiswert dar.
 ms.assetid: 0E27BF04-9DA0-4D6D-BD50-07553F80590E
 keywords:
 - SV_StencilRef HLSL
@@ -12,38 +12,37 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 565a554508277ab9ce49b377b5a7e121db45b20c
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: e2900b2a821a03db4bc749a01c85b909901c39b2
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996497"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113118935"
 ---
 # <a name="sv_stencilref"></a>SV \_ StencilRef
 
-SV \_ StencilRef stellt den aktuellen Pixelshader-Schablonenverweiswert dar.
+SV \_ StencilRef stellt den aktuellen Shader-Schablonenverweiswert dar.
 
 ## <a name="type"></a>Typ
 
 
 
-|      |
+| Typ     |
 |------|
-| Typ |
 | uint |
 
 
 
  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Das Angeben des Shaderverweiswerts im Pixelshader ist sowohl in D3D11.3 als auch in D3D12 verfügbar. Weitere Informationen finden Sie unter:
+Die Angabe des Shaderverweiswerts im Pixel-Shader ist sowohl in D3D11.3 als auch in D3D12 verfügbar. Weitere Informationen finden Sie unter:
 
--   [Vom D3D11.3-Shader angegebener Schablonenverweiswert](/windows/desktop/direct3d11/shader-specified-stencil-reference-value)
--   [Vom D3D12-Shader angegebener Schablonenverweiswert](/windows/desktop/direct3d12/shader-specified-stencil-reference-value)
+-   [D3D11.3 Shader – Angegebener Schablonenverweiswert](/windows/desktop/direct3d11/shader-specified-stencil-reference-value)
+-   [D3D12 Shader – Angegebener Schablonenverweiswert](/windows/desktop/direct3d12/shader-specified-stencil-reference-value)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

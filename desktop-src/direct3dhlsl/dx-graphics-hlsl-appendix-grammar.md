@@ -1,6 +1,6 @@
 ---
 title: Grammatik
-description: HLSL-Anweisungen werden mithilfe der folgenden Regeln für die Grammatik erstellt.
+description: HLSL-Anweisungen werden mit den folgenden Grammatikregeln erstellt.
 ms.assetid: 683248e9-6fc7-451a-906b-6e0aab1b0c8c
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,69 +9,61 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d2346e1ca2302f80c796558b4aa2bbdce016d494
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: b77f1050beaee2b269d12e69704018e3c5abee6e
+ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104516520"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113129848"
 ---
 # <a name="grammar"></a>Grammatik
 
-HLSL-Anweisungen werden mithilfe der folgenden Regeln für die Grammatik erstellt.
+HLSL-Anweisungen werden mit den folgenden Grammatikregeln erstellt.
 
--   [Leerzeichen](#whitespace)
--   [Gleit Komma Zahlen](#floating-point-numbers)
+-   [Leerraum](#whitespace)
+-   [Gleitkommazahlen](#floating-point-numbers)
 -   [Ganze Zahlen](#integer-numbers)
 -   [Zeichen](#characters)
 -   [Zeichenfolgen](#strings)
 -   [Identifiers (Bezeichner)](#identifiers)
 -   [Operatoren](#operators)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="whitespace"></a>Leerraum
 
 Die folgenden Zeichen werden als Leerzeichen erkannt.
 
+- SPACE
+- TAB
+- Eol
+- C-Stilkommentare (/ \* \* /)
+- C++-Stilkommentare (/)
 
+## <a name="floating-point-numbers"></a>Gleitkommazahlen
 
-|                            |
-|----------------------------|
-| SPACE                      |
-| TAB                        |
-| EOL                        |
-| C-Stil Kommentare (/ \* \* /) |
-| C++-Stil Kommentare (//)    |
+Gleitkommazahlen werden in HLSL wie folgt dargestellt:
 
+-   fractional-constant exponent-part(opt) floating-suffix(opt)
 
+    digit-sequence exponent-part floating-suffix(opt)
 
- 
+-   fractional-constant :
 
-## <a name="floating-point-numbers"></a>Gleit Komma Zahlen
+    digit-sequence(opt) . Ziffernsequenz
 
-Gleit Komma Zahlen werden in HLSL wie folgt dargestellt:
+    digit-sequence .
 
--   Bruchteil-Konstante Exponent-Part (opt) Floating-Suffix (opt)
+-   exponent-part :
 
-    Exponent-Part-enumerationszeichen für Digit-Sequence (opt)
+    e sign(opt) digit-sequence
 
--   Bruch Komma Konstante:
-
-    Ziffern Sequenz (opt). Ziffern Sequenz
-
-    Ziffern Sequenz.
-
--   Exponent-Part:
-
-    e-Sign (opt)-Ziffern Sequenz
-
-    E-Sign (opt)-Ziffern Sequenz
+    E sign(opt) digit-sequence
 
 -   sign : eins der folgenden Zeichen
 
     \+ -
 
--   Ziffern Sequenz:
+-   digit-sequence :
 
     digit
 
@@ -79,11 +71,11 @@ Gleit Komma Zahlen werden in HLSL wie folgt dargestellt:
 
 -   floating-suffix : eins der folgenden Zeichen
 
-    h h f f l l
+    h H f F l L
 
-    Verwenden Sie das Suffix "L", um ein vollständiges Gleit Komma Trennzeichen mit 64-Bit-Genauigkeit anzugeben. Standardmäßig ist ein Gleit Komma Wert von 32 Bit.
+    Verwenden Sie das Suffix "L", um ein vollständiges Gleitkommaliteral mit 64-Bit-Genauigkeit anzugeben. Ein 32-Bit-Floatliteral ist die Standardeinstellung.
 
-    Der Compiler erkennt z. b. den folgenden Literalwert als Gleit Komma-Literale mit 32-Bit-Genauigkeit und ignoriert die unteren Bits:
+    Beispielsweise erkennt der Compiler den folgenden Literalwert als Gleitkommaliteral mit 32-Bit-Genauigkeit und ignoriert die unteren Bits:
 
     ```
     double x = -0.6473313946860445;
@@ -91,7 +83,7 @@ Gleit Komma Zahlen werden in HLSL wie folgt dargestellt:
 
     
 
-    Der Compiler erkennt den folgenden Literalwert als Gleit Komma-Literale mit 64-Bit-Genauigkeit:
+    Der Compiler erkennt den folgenden Literalwert als Gleitkommaliteral mit 64-Bit-Genauigkeit:
 
     ```
     double x = -0.6473313946860445L;
@@ -103,18 +95,18 @@ Gleit Komma Zahlen werden in HLSL wie folgt dargestellt:
 
 Ganzzahlige Zahlen werden in HLSL wie folgt dargestellt:
 
--   integer-Konstante Integer-Suffix (opt)
--   ganzzahlige Konstante: eine von
+-   integer-constant integer-suffix(opt)
+-   integer-constant: eine von
 
     \# (Dezimalzahl)
 
     0 \# (oktale Zahl)
 
-    0x (hexadezimale \# Zahl)
+    0x \# (Hexadezimalzahl)
 
--   ganzzahliges Suffix kann eines der folgenden sein:
+-   Integer-Suffix kann eines der folgenden Sein:
 
-    u u l l
+    u U l L
 
 ## <a name="characters"></a>Zeichen
 
@@ -122,23 +114,23 @@ Zeichen werden in HLSL wie folgt dargestellt:
 
 
 
-|                                           |                                                                 |
+| Zeichen                                          | Beschreibung                                                                |
 |-------------------------------------------|-----------------------------------------------------------------|
-| „c“                                       | Art                                                     |
-| ' \\ a ' ' \\ b ' ' \\ f ' ' \\ b ' ' \\ r ' ' \\ t ' ' \\ v ' | entkam                                                       |
-| '\\\#\#\#'                                | (oktale Escapezeichen, jede \# ist eine oktale Ziffer)                       |
-| " \\ x \# "                                   | (Hex-Escapezeichen, ist hexadezimal \# Zahl, beliebige Anzahl von Ziffern)            |
-| " \\ c"                                     | (c ist ein anderes Zeichen, einschließlich umgekehrter Schrägstriche und Anführungszeichen) |
+| „c“                                       | (Zeichen)                                                     |
+| \\'a' ' \\ b' ' f ' \\ \\ b' ' \\ r' ' t ' ' \\ \\ v' | (Escapes)                                                       |
+| '\\\#\#\#'                                | (oktales Escapezeichen, jedes \# ist eine oktale Ziffer)                       |
+| ' \\ x \# '                                   | (hexadezimales Escapezeichen, \# ist eine hexadezimale Zahl, eine beliebige Anzahl von Ziffern)            |
+| ' \\ c'                                     | (c ist ein anderes Zeichen, einschließlich umgekehrter Schrägstriche und Anführungszeichen) |
 
 
 
- 
+ 
 
-Escapezeichen werden in Präprozessorausdrücken nicht unterstützt.
+Escapen werden in Präprozessorausdrücken nicht unterstützt.
 
 ## <a name="strings"></a>Zeichenfolgen
 
-Zeichen folgen werden in HLSL wie folgt dargestellt:
+Zeichenfolgen werden in HLSL wie folgt dargestellt:
 
 "s" (s ist eine beliebige Zeichenfolge mit Escapezeichen).
 
@@ -163,7 +155,7 @@ Bezeichner werden in HLSL wie folgt dargestellt:
 
 
 
-Auch ein beliebiges anderes einzelnes Zeichen, das nicht mit einer anderen Regel identisch war.
+Außerdem jedes andere einzelne Zeichen, das keiner anderen Regel entspricht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -172,9 +164,9 @@ Auch ein beliebiges anderes einzelnes Zeichen, das nicht mit einer anderen Regel
 [Anhang (DirectX HLSL)](dx-graphics-hlsl-appendix.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

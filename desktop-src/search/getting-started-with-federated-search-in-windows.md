@@ -1,71 +1,71 @@
 ---
-description: Die Unterstützung von Windows 7 zum Durchsuchen von Verbund zu Remote Daten speichern mithilfe von OpenSearch-Technologien ermöglicht Benutzern den Zugriff auf und die Interaktion mit ihren Remote Daten aus Windows-Explorer.
+description: Erfahren Sie mehr über die Verbundsuche, die es Benutzern ermöglicht, auf ihre Remotedaten innerhalb von Windows-Explorer.
 ms.assetid: c25dbc33-3f9a-4e40-965e-9be639ababed
-title: Ersten Einstieg in die Verbund Suche in Windows
+title: Erste Schritte mit Der Verbundsuche in Windows
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 058c1f887ff2bdba279cdd25e4910162dd9263d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2de3fc42686e94f2edc1c5d45bbb0374afe79535
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525469"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119065"
 ---
-# <a name="getting-started-with-federated-search-in-windows"></a>Ersten Einstieg in die Verbund Suche in Windows
+# <a name="getting-started-with-federated-search-in-windows"></a>Erste Schritte mit Der Verbundsuche in Windows
 
-Die Unterstützung von Windows 7 zum Durchsuchen von Verbund zu Remote Daten speichern mithilfe von OpenSearch-Technologien ermöglicht Benutzern den Zugriff auf und die Interaktion mit ihren Remote Daten aus Windows-Explorer. Sie können einen webbasierten Datenspeicher erstellen, der mithilfe der Windows-Verbund Suche durchsucht werden kann, und eine umfassende Integration Ihrer Remote Datenquellen mit Windows-Explorer aktivieren, ohne dass Windows-Client seitiger Code geschrieben oder bereitgestellt werden muss.
+Die Windows 7-Unterstützung für den Suchverbund mit Remotedatenspeichern mithilfe von OpenSearch-Technologien ermöglicht Benutzern den Zugriff auf und die Interaktion mit ihren Remotedaten aus Windows-Explorer. Sie können einen webbasierten Datenspeicher erstellen, der mithilfe der Windows-Verbundsuche durchsucht werden kann, und eine umfassende Integration Ihrer Remotedatenquellen mit Windows-Explorer ermöglichen, ohne clientseitigen Windows-Code schreiben oder bereitstellen zu müssen.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Was ist eine Verbund Suche?](#what-is-federated-search)
--   [Schritte zum Aufbauen der Verbund Suche](#steps-for-building-federated-search)
--   [Funktionsweise der Verbund Suche](#how-federated-search-works)
+-   [Was ist die Verbundsuche?](#what-is-federated-search)
+-   [Schritte zum Erstellen der Verbundsuche](#steps-for-building-federated-search)
+-   [Funktionsweise der Verbundsuche](#how-federated-search-works)
 -   [Senden von Abfragen und Zurückgeben von Suchergebnissen in RSS oder Atom](#sending-queries-and-returning-search-results-in-rss-or-atom)
--   [Beispiele für die Verbund Suche](#federated-search-examples)
+-   [Beispiele für die Verbundsuche](#federated-search-examples)
 -   [Weitere Ressourcen](#additional-resources)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="what-is-federated-search"></a>Was ist eine Verbund Suche?
+## <a name="what-is-federated-search"></a>Was ist die Verbundsuche?
 
-Windows 7 unterstützt die Verbindung externer Quellen mit dem Windows-Client über das [OpenSearch](https://github.com/dewitt/opensearch) -Protokoll. Dies ermöglicht es Benutzern, in Windows-Explorer einen Remote Datenspeicher zu durchsuchen und Ergebnisse anzuzeigen. Der Standard [OpenSearch](https://github.com/dewitt/opensearch) v 1.1 definiert einfache Dateiformate, die verwendet werden können, um zu beschreiben, wie ein Client den Webdienst für den Datenspeicher Abfragen soll und wie der Dienst Ergebnisse zurückgeben soll, die vom Client gerendert werden sollen. Die Windows-Verbund Suche stellt eine Verbindung mit Webdiensten her, die [OpenSearch](https://github.com/dewitt/opensearch) -Abfragen empfangen, und gibt Ergebnisse entweder im RSS-oder Atom-XML-Format zurück.
+Windows 7 unterstützt die Verbindung externer Quellen mit dem Windows-Client über das [OpenSearch-Protokoll.](https://github.com/dewitt/opensearch) Auf diese Weise können Benutzer einen Remotedatenspeicher durchsuchen und Ergebnisse innerhalb Windows-Explorer. Der [OpenSearch](https://github.com/dewitt/opensearch) v1.1-Standard definiert einfache Dateiformate, die verwendet werden können, um zu beschreiben, wie ein Client den Webdienst nach dem Datenspeicher abfragen soll und wie der Dienst Ergebnisse zurückgeben soll, die vom Client gerendert werden sollen. Die Windows-Verbundsuche stellt eine Verbindung mit Webdiensten mit [OpenSearch-Abfragen](https://github.com/dewitt/opensearch) sicher und gibt Ergebnisse im RSS- oder Atom-XML-Format zurück.
 
-Der folgende Screenshot veranschaulicht die Suchergebnisse, die nach der Remote Suche einer SharePoint-Website abgerufen werden.
+Der folgende Screenshot veranschaulicht die Suchergebnisse, die nach der Remotesuche einer SharePoint-Website erzielt wurden.
 
-![Screenshot, der Suchergebnisse von einer SharePoint-Website anzeigt, wie in Windows-Explorer angezeigt](images/searchingasharepointsitefromwindowsexp.png)
+![Screenshot: Suchergebnisse von einer SharePoint-Website, wie sie im Windows-Explorer angezeigt werden](images/searchingasharepointsitefromwindowsexp.png)
 
-## <a name="steps-for-building-federated-search"></a>Schritte zum Aufbauen der Verbund Suche
+## <a name="steps-for-building-federated-search"></a>Schritte zum Erstellen der Verbundsuche
 
-Führen Sie die folgenden Schritte aus, um eine Verbund Suche zu erstellen:
+Führen Sie die folgenden Schritte aus, um eine Verbundsuche zu erstellen:
 
-1.  Aktivieren Sie den Datenspeicher in Windows-Explorer, indem Sie einen [OpenSearch](https://github.com/dewitt/opensearch)-kompatiblen Webdienst bereitstellen, der Ergebnisse im RSS-oder Atom-Format zurückgeben kann.
-2.  Erstellen Sie eine OpenSearch-Beschreibungsdatei (OSDX-Datei), in der beschrieben wird, wie eine Verbindung mit dem Webdienst hergestellt wird und wie benutzerdefinierte Elemente in der RSS-oder Atom-XML-Datei
-3.  Stellen Sie die Suchconnectors auf Windows-Client Computern mit einer OSDX-Datei bereit.
+1.  Ermöglichen Sie das Durchsuchen Ihres Datenspeichers über Windows-Explorer, indem Sie einen [OpenSearch-kompatiblen](https://github.com/dewitt/opensearch)Webdienst bereitstellen, der Ergebnisse im RSS- oder Atom-Format zurückgeben kann.
+2.  Erstellen Sie eine OpenSearch-Beschreibungsdatei (OSDX), in der beschrieben wird, wie Sie eine Verbindung mit dem Webdienst herstellen und benutzerdefinierte Elemente in RSS oder Atom XML zuordnen.
+3.  Stellen Sie die Suchconnectors mit einer OSDX-Datei auf Windows-Clientcomputern zur Verfügung.
 
-Das folgende Diagramm veranschaulicht die Schritte zum Aufbau der Verbund Suche.
+Das folgende Diagramm veranschaulicht die Schritte zum Erstellen der Verbundsuche.
 
-![Diagramm des Prozesses zum Aufbauen der Verbund Suche](images/queryinganewopensearchremotedatastore.png)
+![Diagramm des Prozesses zum Erstellen einer Verbundsuche](images/queryinganewopensearchremotedatastore.png)
 
-## <a name="how-federated-search-works"></a>Funktionsweise der Verbund Suche
+## <a name="how-federated-search-works"></a>Funktionsweise der Verbundsuche
 
-Die Kommunikation zwischen Windows-Explorer und Ihrem [OpenSearch](https://github.com/dewitt/opensearch) -Webdienst erfolgt über die Windows-Datenschicht. Die Windows-Datenschicht kann über Windows Store-Anbieter mit unterschiedlichen Datenspeicher Typen kommunizieren. Jeder Anbieter spezialisiert sich auf die Kommunikation mit Daten speichern, die ein bestimmtes Protokoll unterstützen und über bestimmte Funktionen verfügen. Die folgende Abbildung zeigt z. b., wie der [OpenSearch](https://github.com/dewitt/opensearch) -Anbieter mit Daten speichern kommuniziert, die einen Webdienst bereitstellen, der den [OpenSearch](https://github.com/dewitt/opensearch) -Standard unterstützt.
+Die Kommunikation zwischen Windows-Explorer und Ihrem [OpenSearch-Webdienst](https://github.com/dewitt/opensearch) erfolgt über die Windows-Datenebene. Die Windows-Datenschicht kann über Windows Store-Anbieter mit verschiedenen Arten von Datenspeichern kommunizieren. Jeder Anbieter ist auf die Kommunikation mit Datenspeichern spezialisiert, die ein bestimmtes Protokoll unterstützen und über bestimmte Funktionen verfügen. Die folgende Abbildung zeigt beispielsweise, wie der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) mit Datenspeichern kommuniziert, die einen Webdienst bereitstellen, der [den OpenSearch-Standard](https://github.com/dewitt/opensearch) unterstützt.
 
-![Diagramm, das die Kommunikation von Windows-Explorer auf dem Client über den OpenSearch-Datenspeicher auf dem Remote Server anzeigt](images/windowssearchfederationfunctionality.png)
+![Diagramm, das die Kommunikation vom Windows-Explorer auf dem Client über den Opensearch-Datenspeicher auf dem Remoteserver zeigt](images/windowssearchfederationfunctionality.png)
 
-Um dem Datenspeicher die Unterstützung der Verbund Suche in Windows 7 zu ermöglichen, müssen Sie eine Reihe von Tasks ausführen. In der folgenden Tabelle sind die Aufgaben zum Aktivieren des Datenspeicher, zum Ausführen der einzelnen Aufgaben und zum Speicherort der Dokumentation aufgeführt.
+Damit Ihr Datenspeicher die Verbundsuche in Windows 7 unterstützen kann, müssen Sie eine Reihe von Aufgaben ausführen. In der folgenden Tabelle sind die Aufgaben zum Aktivieren Ihres Datenspeichers, die erforderlichen Aufgaben und der Ort der Dokumentation aufgeführt.
 
 
 
 | Aufgabe                                                                                                     | Anforderung                                                                                                                                                                                            | Dokumentation                                                                                                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Aktivieren Sie den Datenspeicher, der von Windows Explorer durchsucht werden soll.<br/>                                    | Erstellen Sie einen mit OpenSearch kompatiblen Webdienst.<br/> Erstellen Sie eine OpenSearch-Beschreibungsdatei (OSDX-Datei).<br/>                                                                                       | [Verbinden des Webdiensts in der Windows-Verbund Suche](-search-federated-search-web-service.md)<br/> [Aktivieren des Datenspeicher in der Windows-Verbund Suche](-search-federated-search-data-store.md)<br/> |
-| Stellen Sie Ihren Webdienst aktiv für Benutzer in einem Unternehmen bereit.<br/>                               | Stellen Sie eine OSDX-Datei für Ihre Benutzer bereit, kopieren Sie Sie lokal, und machen Sie den Benutzer über eine Verknüpfung zugänglich.<br/>                                                                                     | [Bereitstellen von Suchconnectors in der Windows-Verbund Suche](-search-federated-search-deploying.md)<br/>                                                                                                              |
-| Listet die Suchergebnisse in Windows-Explorer als Antwort auf eine Abfrage auf.<br/>                          | Implementieren Sie einen Webdienst, der eine Abfrage Zeichenfolge akzeptiert und Ergebnisse im RSS-oder Atom-Format zurückgibt.<br/>                                                                                              | [Verbinden des Webdiensts in der Windows-Verbund Suche](-search-federated-search-web-service.md)<br/>                                                                                                            |
-| Ermöglichen Sie es Benutzern, Ihren Datenspeicher Ihrem Windows-Explorer hinzuzufügen.<br/>                                | Erstellen Sie eine OSDX-Datei, und stellen Sie Sie für Ihre Benutzer bereit.<br/>                                                                                                                                           | [Aktivieren des Datenspeicher in der Windows-Verbund Suche](-search-federated-search-data-store.md)<br/>                                                                                                                |
-| Zeigen Sie Ihre Elemente in Windows-Explorer als Datei ähnliche Elemente an.<br/>                                    | Zurückgeben einer URL zum Datei-oder Inhaltsstream mithilfe von **Gehäuse** oder **Medien: Inhalts** Elemente<br/> Geben Sie eine Dateinamenerweiterung oder einen MIME-Typ an, der vom Client Computer erkannt wird.<br/> | [Aktivieren des Datenspeicher in der Windows-Verbund Suche](-search-federated-search-data-store.md)<br/>                                                                                                                |
-| Anzeigen benutzerdefinierter Eigenschaften in Windows-Explorer, außer den in den RSS-oder Atom-Standards definierten.<br/> | Stellen Sie zusätzliche Metadaten bereit, indem Sie einen anderen XML-Namespace in der RSS/Atom-Ausgabe verwenden.<br/> Fügen Sie der OSDX-Datei eine Eigenschaften Zuordnung hinzu.<br/>                                                       | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbund Suche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
-| Passen Sie die Eigenschaften an, die für ihre Elemente in Windows-Explorer angezeigt werden.<br/>               | Fügen Sie der OSDX-Datei proplist-Zuordnungen hinzu.<br/>                                                                                                                                                   | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbund Suche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
-| Zeigen Sie eine benutzerdefinierte Webseiten Ansicht Ihrer Elemente im Vorschaubereich an.<br/>                              | Gibt eindeutige Link-und Gehäuse Werte zurück.<br/> Ordnen Sie der Windows Shell-Eigenschaft **System. webpreviewurl** einen URL-Wert zu.<br/>                                                               | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbund Suche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
-| Anzeigen einer Befehls leisten Schaltfläche in Windows-Explorer, die die Abfrage auf Ihre Website überträgt.<br/>   | Stellen Sie eine `Url format="text/html"` Vorlage in der OSDX-Datei bereit.<br/>                                                                                                                              | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbund Suche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
+| Aktivieren Sie die Suche nach Ihrem Datenspeicher durch Windows-Explorer.<br/>                                    | Erstellen Sie einen OpenSearch-kompatiblen Webdienst.<br/> Erstellen Sie eine OpenSearch-Beschreibungsdatei (.osdx).<br/>                                                                                       | [Verbinden Ihres Webdiensts in der Windows-Verbundsuche](-search-federated-search-web-service.md)<br/> [Aktivieren des Datenspeichers in der Windows-Verbundsuche](-search-federated-search-data-store.md)<br/> |
+| Stellen Sie Ihren Webdienst aktiv für Benutzer in einem Unternehmen zur Verfügung.<br/>                               | Stellen Sie Ihren Benutzern eine OSDX-Datei zur Verfügung, kopieren Sie sie lokal, und machen Sie sie über eine Verknüpfung für den Benutzer zugänglich.<br/>                                                                                     | [Bereitstellen von Suchconnectors in der Windows-Verbundsuche](-search-federated-search-deploying.md)<br/>                                                                                                              |
+| Aufzählen von Suchergebnissen in Windows-Explorer als Antwort auf eine Abfrage.<br/>                          | Implementieren Sie einen Webdienst, der eine Abfragezeichenfolge akzeptiert und Ergebnisse im RSS- oder Atom-Format zurückgibt.<br/>                                                                                              | [Verbinden Ihres Webdiensts in der Windows-Verbundsuche](-search-federated-search-web-service.md)<br/>                                                                                                            |
+| Ermöglichen Sie es Benutzern, Ihren Datenspeicher zu ihren Windows-Explorer.<br/>                                | Erstellen Sie eine OSDX-Datei, und stellen Sie sie Ihren Benutzern zur Verfügung.<br/>                                                                                                                                           | [Aktivieren des Datenspeichers in der Windows-Verbundsuche](-search-federated-search-data-store.md)<br/>                                                                                                                |
+| Zeigen Sie Ihre Elemente als dateispezifische Elemente in Windows-Explorer.<br/>                                    | Zurückgeben einer URL zur Datei oder zum Inhaltsstream mithilfe von **Gehäuse-** oder **media:content-Elementen**<br/> Geben Sie eine Dateierweiterung oder einen MIME-Typ an, den der Clientcomputer erkennt.<br/> | [Aktivieren des Datenspeichers in der Windows-Verbundsuche](-search-federated-search-data-store.md)<br/>                                                                                                                |
+| Zeigen Sie benutzerdefinierte Eigenschaften in Windows-Explorer, die über die in RSS- oder Atom-Standards definierten hinausgehen.<br/> | Geben Sie zusätzliche Metadaten an, indem Sie einen anderen XML-Namespace in Ihrer RSS/Atom-Ausgabe verwenden.<br/> Fügen Sie Ihrer OSDX-Datei eine Eigenschaftenzuordnung hinzu.<br/>                                                       | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbundsuche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
+| Passen Sie die Eigenschaften an, die für Ihre Elemente in der Windows-Explorer.<br/>               | Fügen Sie Ihrer OSDX-Datei Proplist-Zuordnungen hinzu.<br/>                                                                                                                                                   | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbundsuche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
+| Zeigen Sie eine benutzerdefinierte Webseitenansicht Ihrer Elemente im Vorschaubereich an.<br/>                              | Gibt eindeutige Link- und Gehäusewerte zurück.<br/> Ordnen Sie der Windows Shell-Eigenschaft **System.WebPreviewUrl** einen URL-Wert zu.<br/>                                                               | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbundsuche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
+| Zeigen Sie eine Befehlsleistenschaltfläche in Windows-Explorer, die die Abfrage auf Ihre Website überrollt.<br/>   | Geben Sie `Url format="text/html"` eine Vorlage in der OSDX-Datei an.<br/>                                                                                                                              | [Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbundsuche](-search-federated-search-osdx-file.md)<br/>                                                                                                  |
 
 
 
@@ -73,11 +73,11 @@ Um dem Datenspeicher die Unterstützung der Verbund Suche in Windows 7 zu ermög
 
 ## <a name="sending-queries-and-returning-search-results-in-rss-or-atom"></a>Senden von Abfragen und Zurückgeben von Suchergebnissen in RSS oder Atom
 
-Wenn der Benutzer einen Begriff in das Suchfeld in der oberen rechten Ecke von Windows-Explorer eingibt, wird die Abfrage an den [OpenSearch](https://github.com/dewitt/opensearch) -Anbieter gesendet, der die Abfrage dann an den Remote Datenspeicher sendet. Der Remoteweb Dienst antwortet auf die Abfrage, indem Ergebnisse in einem XML-Dokument (in der Regel als Feed bezeichnet) in einem von zwei unterstützten Formaten (RSS oder Atom) bereitgestellt werden. Jedes Ergebnis Element im Feed enthält untergeordnete XML-Elemente, um Element Metadaten darzustellen oder zu beschreiben, wie z. b. Titel, URL, Beschreibung, Miniaturbild und so weiter. Der [OpenSearch](https://github.com/dewitt/opensearch) -Anbieter ist für die Zuordnung der XML-Element Werte zu den Windows Shell-Systemeigenschaften zuständig, die von Windows-Anwendungen verwendet werden können.
+Wenn der Benutzer einen Begriff in das Suchfeld in der oberen rechten Ecke von Windows-Explorer ein gibt, wird die Abfrage an den [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) gesendet, der die Abfrage dann an den Remotedatenspeicher sendet. Der Remotewebdienst antwortet auf die Abfrage, indem er Ergebnisse in einem XML-Dokument, das in der Regel als Feed bezeichnet wird, in einem von zwei unterstützten Formaten (RSS oder Atom) liefert. Jedes Ergebniselement im Feed enthält untergeordnete XML-Elemente, die Elementmetadaten darstellen oder beschreiben, z. B. Titel, URL, Beschreibung, Miniaturansicht usw. Der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) ist für die Zuordnung der XML-Elementwerte zu Windows Shell-Systemeigenschaften verantwortlich, die von Windows-Anwendungen verwendet werden können.
 
-## <a name="federated-search-examples"></a>Beispiele für die Verbund Suche
+## <a name="federated-search-examples"></a>Beispiele für die Verbundsuche
 
-Die folgende OpenSearch-Beispieldatei (OSDX-Datei) besteht aus `ShortName` -und- `Url` Elementen, bei denen es sich um die mindestens erforderlichen untergeordneten Elemente handelt, um einen externen Datenspeicher mit dem Windows-Client über das OpenSearch-Protokoll zu verbinden.
+Die folgende OpenSearch Description(.osdx)-Beispieldatei besteht aus - und -Elementen, die die mindestens erforderlichen untergeordneten Elemente zum Verbinden eines externen Datenspeichers mit dem Windows-Client über das `ShortName` `Url` OpenSearch-Protokoll sind.
 
 
 ```
@@ -89,7 +89,7 @@ Die folgende OpenSearch-Beispieldatei (OSDX-Datei) besteht aus `ShortName` -und-
 
 
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie einen webfähigen Datenspeicher im RSS-Format durchsuchbar machen und angeben, dass ein Suchelement zurückgegeben werden soll:
+Im folgenden Beispiel wird veranschaulicht, wie sie einen webfähigen Datenspeicher im RSS-Format durchsuchbar machen und angeben, dass ein Suchelement zurückgegeben wird:
 
 
 ```
@@ -111,7 +111,7 @@ Im folgenden Beispiel wird veranschaulicht, wie Sie einen webfähigen Datenspeic
 
 
 
-Im folgenden Beispiel wird veranschaulicht, wie Eigenschaften zu Standardsystem Eigenschaften zugeordnet werden, damit angezeigte Elemente sortiert und gruppiert werden:
+Das folgende Beispiel veranschaulicht das Zuordnen von Eigenschaften zu Standardsystemeigenschaften, sodass angezeigte Elemente sortiert und gruppiert werden:
 
 
 ```
@@ -122,7 +122,7 @@ Im folgenden Beispiel wird veranschaulicht, wie Eigenschaften zu Standardsystem 
 
 
 
-Im folgenden Beispiel wird veranschaulicht, wie jedem Element in Windows-Explorer eine Miniaturbild Anzeige hinzugefügt wird:
+Im folgenden Beispiel wird veranschaulicht, wie jedem Element in der Datei eine Miniaturbildanzeige Windows-Explorer:
 
 
 ```
@@ -133,7 +133,7 @@ Im folgenden Beispiel wird veranschaulicht, wie jedem Element in Windows-Explore
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-Weitere Informationen zum Implementieren eines Such Verbunds in Remote Datenspeicher mithilfe von OpenSearch-Technologien in Windows 7 und höher finden Sie unter "zusätzliche Ressourcen" bei der [Verbund Suche in Windows](-search-federated-search-overview.md).
+Weitere Informationen zum Implementieren des Suchverbunds in Remotedatenspeicher mit opensearch-Technologien in Windows 7 und höher finden Sie unter "Zusätzliche Ressourcen" unter [Verbundsuche in Windows.](-search-federated-search-overview.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -142,19 +142,19 @@ Weitere Informationen zum Implementieren eines Such Verbunds in Remote Datenspei
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)
 </dt> <dt>
 
-[Verbinden des Webdiensts in der Windows-Verbund Suche](-search-federated-search-web-service.md)
+[Verbinden Ihres Webdiensts in der Windows-Verbundsuche](-search-federated-search-web-service.md)
 </dt> <dt>
 
-[Aktivieren des Datenspeicher in der Windows-Verbund Suche](-search-federated-search-data-store.md)
+[Aktivieren des Datenspeichers in der Windows-Verbundsuche](-search-federated-search-data-store.md)
 </dt> <dt>
 
-[Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbund Suche](-search-federated-search-osdx-file.md)
+[Erstellen einer OpenSearch-Beschreibungsdatei in der Windows-Verbundsuche](-search-federated-search-osdx-file.md)
 </dt> <dt>
 
-[Bewährte Methoden bei der Windows-Verbund Suche](-search-fedsearch-best.md)
+[Bewährte Methoden bei der Windows-Verbundsuche](-search-fedsearch-best.md)
 </dt> <dt>
 
-[Bereitstellen von Suchconnectors in der Windows-Verbund Suche](-search-federated-search-deploying.md)
+[Bereitstellen von Suchconnectors in der Windows-Verbundsuche](-search-federated-search-deploying.md)
 </dt> </dl>
 
  
