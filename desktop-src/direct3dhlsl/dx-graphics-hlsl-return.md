@@ -1,9 +1,9 @@
 ---
 title: return-Anweisung
-description: Eine Return-Anweisung signalisiert das Ende einer Funktion.
+description: Eine return-Anweisung signalisiert das Ende einer Funktion.
 ms.assetid: e6c097af-ba0b-4abc-8099-69882ced1e18
 keywords:
-- Return-Anweisung HLSL
+- return Statement HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 525abf6d815d2073ee39a6bc6a5a81120cf652ee
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 876c69f3ecfcf1ee1c8391ccc503b2316056b37a
+ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104976193"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113119585"
 ---
-# <a name="return-statement"></a><span data-ttu-id="f3dba-104">return-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f3dba-104">return Statement</span></span>
+# <a name="return-statement"></a><span data-ttu-id="bd19d-104">return-Anweisung</span><span class="sxs-lookup"><span data-stu-id="bd19d-104">return Statement</span></span>
 
-<span data-ttu-id="f3dba-105">Eine Return-Anweisung signalisiert das Ende einer Funktion.</span><span class="sxs-lookup"><span data-stu-id="f3dba-105">A return statement signals the end of a function.</span></span>
+<span data-ttu-id="bd19d-105">Eine return-Anweisung signalisiert das Ende einer Funktion.</span><span class="sxs-lookup"><span data-stu-id="bd19d-105">A return statement signals the end of a function.</span></span>
 
-
-
-|                   |
-|-------------------|
-| <span data-ttu-id="f3dba-106">Rückgabe \[ Wert \] ;</span><span class="sxs-lookup"><span data-stu-id="f3dba-106">return \[value\];</span></span> |
+<span data-ttu-id="bd19d-106">Rückgabewert \[ \] ;</span><span class="sxs-lookup"><span data-stu-id="bd19d-106">return \[value\];</span></span>
 
 
 
- 
+ 
 
-<span data-ttu-id="f3dba-107">Die einfachste Return-Anweisung gibt die Steuerung von der Funktion an das aufrufenden Programm zurück. Es wird kein Wert zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="f3dba-107">The simplest return statement returns control from the function to the calling program; it returns no value.</span></span>
+<span data-ttu-id="bd19d-107">Die einfachste return-Anweisung gibt die Steuerung von der Funktion an das aufrufende Programm zurück. gibt keinen Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="bd19d-107">The simplest return statement returns control from the function to the calling program; it returns no value.</span></span>
 
 
 ```
@@ -46,7 +42,7 @@ void main()
 
 
 
-<span data-ttu-id="f3dba-108">Eine Return-Anweisung kann jedoch einen oder mehrere Werte zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="f3dba-108">However, a return statement can return one or more values.</span></span> <span data-ttu-id="f3dba-109">In diesem Beispiel wird ein Literalwert zurückgegeben:</span><span class="sxs-lookup"><span data-stu-id="f3dba-109">This example returns a literal value:</span></span>
+<span data-ttu-id="bd19d-108">Eine return-Anweisung kann jedoch einen oder mehrere Werte zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="bd19d-108">However, a return statement can return one or more values.</span></span> <span data-ttu-id="bd19d-109">In diesem Beispiel wird ein Literalwert zurückgegeben:</span><span class="sxs-lookup"><span data-stu-id="bd19d-109">This example returns a literal value:</span></span>
 
 
 ```
@@ -58,7 +54,7 @@ float main( float input : COLOR0) : COLOR0
 
 
 
-<span data-ttu-id="f3dba-110">In diesem Beispiel wird das skalare Ergebnis eines Ausdrucks zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="f3dba-110">This example returns the scalar result of an expression.</span></span>
+<span data-ttu-id="bd19d-110">In diesem Beispiel wird das skalare Ergebnis eines Ausdrucks zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="bd19d-110">This example returns the scalar result of an expression.</span></span>
 
 
 ```
@@ -67,7 +63,7 @@ return  light.enabled = true ;
 
 
 
-<span data-ttu-id="f3dba-111">In diesem Beispiel wird ein Vektor mit vier Komponenten zurückgegeben, der aus einer lokalen Variablen und einem Literalelement erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="f3dba-111">This example returns a four-component vector that is constructed from a local variable and a literal.</span></span>
+<span data-ttu-id="bd19d-111">In diesem Beispiel wird ein Vektor mit vier Komponenten zurückgegeben, der aus einer lokalen Variablen und einem Literal erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="bd19d-111">This example returns a four-component vector that is constructed from a local variable and a literal.</span></span>
 
 
 ```
@@ -76,7 +72,7 @@ return  float4(color.rgb, 1) ;
 
 
 
-<span data-ttu-id="f3dba-112">In diesem Beispiel wird ein Vektor mit vier Komponenten zurückgegeben, der aus dem Ergebnis erstellt wird, das von einer intrinsischen Funktion zurückgegeben wird, sowie Literalwerte.</span><span class="sxs-lookup"><span data-stu-id="f3dba-112">This example returns a four-component vector that is constructed from the result that is returned from an intrinsic function, together with literal values.</span></span>
+<span data-ttu-id="bd19d-112">In diesem Beispiel wird ein Vierkomponentenvektor zurückgegeben, der aus dem Ergebnis erstellt wird, das von einer systeminternen Funktion zusammen mit Literalwerten zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="bd19d-112">This example returns a four-component vector that is constructed from the result that is returned from an intrinsic function, together with literal values.</span></span>
 
 
 ```
@@ -88,7 +84,7 @@ float4 func(float2 a: POSITION): COLOR
 
 
 
-<span data-ttu-id="f3dba-113">Dieses Beispiel gibt eine-Struktur zurück, die mindestens ein-Element enthält.</span><span class="sxs-lookup"><span data-stu-id="f3dba-113">This example returns a structure that contains one or more members.</span></span>
+<span data-ttu-id="bd19d-113">In diesem Beispiel wird eine -Struktur zurückgegeben, die einen oder mehrere Member enthält.</span><span class="sxs-lookup"><span data-stu-id="bd19d-113">This example returns a structure that contains one or more members.</span></span>
 
 
 ```
@@ -109,16 +105,16 @@ VS_OUTPUT VertexShader_Tutorial_1(float4 inPos : POSITION )
 
 
 
-## <a name="see-also"></a><span data-ttu-id="f3dba-114">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="f3dba-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd19d-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bd19d-114">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="f3dba-115">Funktionen (DirectX HLSL)</span><span class="sxs-lookup"><span data-stu-id="f3dba-115">Functions (DirectX HLSL)</span></span>](dx-graphics-hlsl-functions.md)
+[<span data-ttu-id="bd19d-115">Funktionen (DirectX HLSL)</span><span class="sxs-lookup"><span data-stu-id="bd19d-115">Functions (DirectX HLSL)</span></span>](dx-graphics-hlsl-functions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
