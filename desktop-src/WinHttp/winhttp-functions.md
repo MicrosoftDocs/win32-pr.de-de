@@ -4,12 +4,12 @@ ms.assetid: dcb56d5d-ed0d-49bb-95bf-940a49c033f1
 title: WinHTTP-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf5f9db8fcde5589a86556111bec6df3b2b18c76
-ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
+ms.openlocfilehash: 41e45289230c1cc22a7f8799dfbbe1dafddccf38
+ms.sourcegitcommit: 8e3d8594fa073a9c43eb5dcc7babea03ea30f10f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112587752"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113174974"
 ---
 # <a name="winhttp-functions"></a>WinHTTP-Funktionen
 
@@ -21,6 +21,13 @@ WinHTTP stellt die folgenden Funktionen bereit:
 </dt> <dd>
 
 Fügt dem HTTP-Anforderungshandle mindestens einen HTTP-Anforderungsheader hinzu.
+
+</dd> <dt>
+
+[**WinHttpAddRequestHeadersEx**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpaddrequestheadersex)
+</dt> <dd>
+
+Fügt einem HTTP-Anforderungshandle mindestens einen HTTP-Anforderungsheader hinzu, sodass Sie separate Namens-/Wertzeichenfolgen verwenden können.
 
 </dd> <dt>
 
@@ -48,7 +55,7 @@ Gibt den ursprünglichen Zielserver einer HTTP-Anforderung an.
 [**WinHttpCrackUrl**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpcrackurl)
 </dt> <dd>
 
-Trennt eine URL in seine Komponenten, z. B. Hostname und Pfad.
+Trennt eine URL in ihre Komponenten, z. B. Hostname und Pfad.
 
 </dd> <dt>
 
@@ -97,7 +104,7 @@ Ruft die WinHTTP-Standardproxykonfiguration aus der Registrierung ab.
 [**WinHTTPGetIEProxyConfigForCurrentUser**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpgetieproxyconfigforcurrentuser)
 </dt> <dd>
 
-Ruft die Proxykonfiguration für Internet Explorer (IE) für den aktuellen Benutzer ab.
+Ruft die Internet Explorer(IE)-Proxykonfiguration für den aktuellen Benutzer ab.
 
 </dd> <dt>
 
@@ -164,6 +171,13 @@ Ruft Headerinformationen ab, die einer HTTP-Anforderung zugeordnet sind.
 
 </dd> <dt>
 
+[**WinHttpQueryHeadersEx**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryheadersex)
+</dt> <dd>
+
+Ruft Headerinformationen ab, die einer HTTP-Anforderung zugeordnet sind. bietet eine Möglichkeit, analysierte Headernamen und Wertzeichenfolgen abzurufen.
+
+</dd> <dt>
+
 [**WinHttpQueryOption**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryoption)
 </dt> <dd>
 
@@ -172,6 +186,13 @@ Fragt eine Internetoption für das angegebene Handle ab.
 </dd> <dt>
 
 [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)
+</dt> <dd>
+
+Liest Daten aus einem Handle, das von der [**WinHttpOpenRequest-Funktion**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) geöffnet wird.
+
+</dd> <dt>
+
+[**WinHttpReadDataEx**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddataex)
 </dt> <dd>
 
 Liest Daten aus einem Handle, das von der [**WinHttpOpenRequest-Funktion**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) geöffnet wird.
@@ -297,6 +318,4 @@ Sendet einen schließenden Frame an eine WebSocket-Verbindung.
 
 </dd> </dl>
 
- 
 
- 
