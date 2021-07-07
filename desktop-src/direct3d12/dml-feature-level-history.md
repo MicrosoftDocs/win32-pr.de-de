@@ -4,22 +4,52 @@ description: TBD
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 11/05/2020
-ms.openlocfilehash: 1e5d9f8b0532b809bab617655694af68ba530430
-ms.sourcegitcommit: d168355cd7112871f24643b4079c2640b36f4975
+ms.openlocfilehash: 3ddb2eec80448b8119bf2d990afbb998f212db26
+ms.sourcegitcommit: 0b93de98c4afc79a6801a113bc91adbc89e835b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111521205"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113282549"
 ---
 # <a name="directml-feature-level-history"></a>DirectML-Verlauf auf Featureebene
 
-Den allgemeinen DirectML-Versionsverlauf finden Sie unter [DirectML-Versionsverlauf.](./dml-version-history.md)
+Informationen zum allgemeinen DirectML-Versionsverlauf finden Sie unter [DirectML-Versionsverlauf.](./dml-version-history.md)
+
+## <a name="dml_feature_level_4_0"></a>DML_FEATURE_LEVEL_4_0
+
+Eingeführt in DirectML Version 1.6.0.
+
+Unterstützung für die folgenden Operatortypen wurde hinzugefügt, die in [**DML_OPERATOR_TYPE**](/windows/win32/api/directml/ne-directml-dml_operator_type)dokumentiert sind. Für jede Operatortypkonstante stellt dieses Thema einen Link zur entsprechenden -Struktur bereit.
+
+* **DML_OPERATOR_ELEMENT_WISE_QUANTIZED_LINEAR_ADD**
+* **DML_OPERATOR_DYNAMIC_QUANTIZE_LINEAR**
+* **DML_OPERATOR_ROI_ALIGN1**
+
+Erweiterte Unterstützung für Datentyp und Dimensionsanzahl für die folgenden Operatoren, die in [**DML_OPERATOR_TYPE**](/windows/win32/api/directml/ne-directml-dml_operator_type)dokumentiert sind. Ausführliche Informationen zur spezifischen Unterstützung, die in [**DML_FEATURE_LEVEL_4_0**](/windows/win32/api/directml/ne-directml-dml_feature_level)hinzugefügt wurde, finden Sie im Strukturthema der einzelnen Operatoren.
+
+* **DML_OPERATOR_ACTIVATION_RELU_GRAD**
+* **DML_OPERATOR_ADAM_OPTIMIZER**
+* **DML_OPERATOR_CONVOLUTION**
+* **DML_OPERATOR_CONVOLUTION_INTEGER**
+* **DML_OPERATOR_CUMULATIVE_PRODUCT**
+* **DML_OPERATOR_CUMULATIVE_SUMMATION**
+* **DML_OPERATOR_DIAGONAL_MATRIX**
+* **DML_OPERATOR_FILL_VALUE_CONSTANT**
+* **DML_OPERATOR_FILL_VALUE_SEQUENCE**
+* **DML_OPERATOR_GEMM**
+* **DML_OPERATOR_MATRIX_MULTIPLY_INTEGER**
+* **DML_OPERATOR_MAX_POOLING_GRAD**
+* **DML_OPERATOR_NONZERO_COORDINATES**
+* **DML_OPERATOR_QUANTIZED_LINEAR_CONVOLUTION**
+* **DML_OPERATOR_QUANTIZED_LINEAR_MATRIX_MULTIPLY**
+* **DML_OPERATOR_RANDOM_GENERATOR**
+* **DML_OPERATOR_REVERSE_SUBSEQUENCES**
 
 ## <a name="dml_feature_level_3_1"></a>DML_FEATURE_LEVEL_3_1
 
 Eingeführt in DirectML Version 1.5.0.
 
-Unterstützung für die folgenden Operatoren [wurde hinzugefügt.](/windows/win32/api/directml/ne-directml-dml_operator_type)
+Unterstützung für die folgenden Operatortypen wurde hinzugefügt, die in [**DML_OPERATOR_TYPE**](/windows/win32/api/directml/ne-directml-dml_operator_type)dokumentiert sind. Für jede Operatortypkonstante stellt dieses Thema einen Link zur entsprechenden -Struktur bereit.
 
 * **DML_OPERATOR_ELEMENT_WISE_ATAN_YX**
 * **DML_OPERATOR_ELEMENT_WISE_CLIP_GRAD**
@@ -46,7 +76,7 @@ Die maximale Anzahl unterstützter Dimensionen für die folgenden Operatoren wur
 
 Eingeführt in DirectML Version 1.4.0.
 
-Unterstützung für die folgenden Operatoren [wurde hinzugefügt.](/windows/win32/api/directml/ne-directml-dml_operator_type)
+Unterstützung für die folgenden Operatortypen wurde hinzugefügt, die in [**DML_OPERATOR_TYPE**](/windows/win32/api/directml/ne-directml-dml_operator_type)dokumentiert sind. Für jede Operatortypkonstante stellt dieses Thema einen Link zur entsprechenden -Struktur bereit.
 
 * **DML_OPERATOR_ELEMENT_WISE_BIT_AND**
 * **DML_OPERATOR_ELEMENT_WISE_BIT_OR**
@@ -71,20 +101,20 @@ Unterstützung für die folgenden Operatoren [wurde hinzugefügt.](/windows/win3
 
 Die folgenden Erweiterungen wurden hinzugefügt.
 
-* Die maximale Anzahl von Tensordimensionen wurde von 5 auf 8 erhöht. Siehe [DML_TENSOR_DIMENSION_COUNT_MAX1](./direct3d-directml-constants.md).
-* Den folgenden Operatoren wurde zusätzliche Unterstützung für ganzzahlige Datentypen hinzugefügt.
+* Die maximale Anzahl von Tensordimensionen wurde von 5 auf 8 erhöht. Weitere Informationen finden Sie [unter DML_TENSOR_DIMENSION_COUNT_MAX1](./direct3d-directml-constants.md).
+* Den folgenden Operatoren wurde zusätzliche Unterstützung für integer-Datentypen hinzugefügt.
   * **DML_OPERATOR_ELEMENT_WISE_POW**
   * **DML_OPERATOR_ELEMENT_WISE_CONSTANT_POW**
   * **DML_OPERATOR_MAX_POOLING**, **DML_OPERATOR_MAX_POOLING1** und **DML_OPERATOR_MAX_POOLING2**
-  * **DML_OPERATOR_REDUCE** bei Verwendung **von** DML_REDUCE_FUNCTION_ARGMIN oder **DML_REDUCE_FUNCTION_ARGMAX**
-* Die folgenden 64-Bit-Datentypen wurden hinzugefügt und werden von select-Operatoren unterstützt.
+  * **DML_OPERATOR_REDUCE** bei Verwendung von **DML_REDUCE_FUNCTION_ARGMIN** oder **DML_REDUCE_FUNCTION_ARGMAX**
+* Die folgenden 64-Bit-Datentypen wurden hinzugefügt und werden von Select-Operatoren unterstützt.
   * **DML_TENSOR_DATA_TYPE_FLOAT64**
   * **DML_TENSOR_DATA_TYPE_UINT64**
   * **DML_TENSOR_DATA_TYPE_INT64**
 
 Veraltete Funktionalität.
 
-* **DML_REDUCE_FUNCTION_ARGMAX** und **DML_REDUCE_FUNCTION_ARGMIN** sind veraltet. Sie sollten die eigenständigen DML_OPERATOR_ARGMIN **und** **DML_OPERATOR_ARGMAX** verwenden.
+* **DML_REDUCE_FUNCTION_ARGMAX** und **DML_REDUCE_FUNCTION_ARGMIN** sind veraltet. Sie sollten die eigenständigen **operatoren DML_OPERATOR_ARGMIN** und **DML_OPERATOR_ARGMAX** an ihrer Stelle verwenden.
 
 ## <a name="dml_feature_level_2_1"></a>DML_FEATURE_LEVEL_2_1
 
@@ -95,7 +125,7 @@ Die folgenden APIs wurden hinzugefügt.
 * [IDMLDevice1-Schnittstelle](/windows/win32/api/directml/nn-directml-idmldevice1)
 * Operatordiagrammunterstützung (siehe [IDMLDevice1::CompileGraph](/windows/win32/api/directml/nf-directml-idmldevice1-compilegraph)
 
-Unterstützung für die folgenden Operatoren hinzugefügt.
+Unterstützung für die folgenden Operatortypen wurde hinzugefügt, die in [**DML_OPERATOR_TYPE**](/windows/win32/api/directml/ne-directml-dml_operator_type)dokumentiert sind. Für jede Operatortypkonstante stellt dieses Thema einen Link zur entsprechenden -Struktur bereit.
 
 * **DML_OPERATOR_ELEMENT_WISE_BIT_SHIFT_LEFT**
 * **DML_OPERATOR_ELEMENT_WISE_BIT_SHIFT_RIGHT**
@@ -124,7 +154,7 @@ Unterstützung für die folgenden Operatoren hinzugefügt.
 
 Die folgenden Erweiterungen wurden hinzugefügt.
 
-* Den folgenden Operatoren wurde zusätzliche Unterstützung für ganzzahlige Datentypen hinzugefügt.
+* Den folgenden Operatoren wurde zusätzliche Unterstützung für integer-Datentypen hinzugefügt.
   * **DML_OPERATOR_ELEMENT_WISE_IDENTITY**
   * **DML_OPERATOR_ELEMENT_WISE_ABS**
   * **DML_OPERATOR_ELEMENT_WISE_ADD**
@@ -170,7 +200,7 @@ Die folgenden APIs wurden hinzugefügt.
 * [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
 * Abfragen auf Featureebene (siehe [DML_FEATURE_QUERY_FEATURE_LEVELS](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels))
 
-Unterstützung für die folgenden Operatoren wurde hinzugefügt.
+Unterstützung für die folgenden Operatortypen wurde hinzugefügt, die in [**DML_OPERATOR_TYPE**](/windows/win32/api/directml/ne-directml-dml_operator_type)dokumentiert sind. Für jede Operatortypkonstante stellt dieses Thema einen Link zur entsprechenden -Struktur bereit.
 
 * **DML_OPERATOR_ELEMENT_WISE_SIGN**
 * **DML_OPERATOR_ELEMENT_WISE_IS_NAN**
@@ -212,6 +242,6 @@ Die Funktionsebene, in der DirectML eingeführt wurde.
 ## <a name="see-also"></a>Siehe auch
 
 * [DirectML-Versionsverlauf](./dml-version-history.md)
-* [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
+* [DML_FEATURE_LEVEL Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
 * [DMLCreateDevice1-Funktion](/windows/win32/api/directml/nf-directml-dmlcreatedevice1.md)
 * [DML_FEATURE_QUERY_FEATURE_LEVELS-Struktur](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels)

@@ -44,12 +44,12 @@ api_location:
 - DirectML.h
 api_name:
 - DML_CUMULATIVE_PRODUCT_OPERATOR_DESC
-ms.openlocfilehash: 68b001467496ab9affc559e76ecac5461902399c
-ms.sourcegitcommit: d168355cd7112871f24643b4079c2640b36f4975
+ms.openlocfilehash: cb4006a20dd25751c027ba97e63dcfc60c25faf6
+ms.sourcegitcommit: 0b93de98c4afc79a6801a113bc91adbc89e835b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111521196"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113282559"
 ---
 # <a name="dml_cumulative_product_operator_desc-directmlh"></a>DML_CUMULATIVE_PRODUCT_OPERATOR_DESC (directml.h)
 
@@ -173,20 +173,27 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
    [54, 48, 42, 60]]]] //      [2*3*9 ...]
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 Dieser Operator unterstützt die in-place-Ausführung, was bedeutet, dass der Ausgabetensor während der Bindung den *Alias InputTensor* verwenden darf.
 
 ## <a name="availability"></a>Verfügbarkeit
 Dieser Operator wurde in `DML_FEATURE_LEVEL_3_1` eingeführt.
 
 ## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*InputTensor* und *OutputTensor* müssen den gleichen *Datentyp und* die *gleichen Größen haben.*
+*InputTensor* und *OutputTensor* müssen denselben *DataType,* *DimensionCount* und *die gleichen Größen aufweisen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
+### <a name="dml_feature_level_4_0-and-above"></a>DML_FEATURE_LEVEL_4_0 und höher
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
+| ------ | ---- | -------------------------- | -------------------- |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16, UINT32, UINT16 |
+| OutputTensor | Output | 1 bis 8 | FLOAT32, FLOAT16, UINT32, UINT16 |
+
+### <a name="dml_feature_level_3_1-and-above"></a>DML_FEATURE_LEVEL_3_1 und höher
 | Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
 | InputTensor | Eingabe | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
-| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
+| OutputTensor | Output | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 | &nbsp; | &nbsp; |
