@@ -1,35 +1,35 @@
 ---
-description: In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webauthentifizierungs Broker-APIs für Ihre Webseiten beschrieben.
+description: In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webauthentifizierungsbroker-APIs für Ihre Webseiten beschrieben.
 ms.assetid: 25A024AA-9A70-40A5-BF5E-452FD148D0D2
 title: Webauthentifizierungsprobleme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cc4611461effd9cbc5546059e71fc8ca3f1f0be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f996527c58b9620b8417ac3e6cdd6e0f61bd5217
+ms.sourcegitcommit: 6377cd944d1f09f2dfe5727170ca8b330c8235bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104571199"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "113353663"
 ---
 # <a name="web-authentication-problems"></a>Webauthentifizierungsprobleme
 
-In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webauthentifizierungs Broker-APIs für Ihre Webseiten beschrieben.
+In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webauthentifizierungsbroker-APIs für Ihre Webseiten beschrieben.
 
--   [Betriebs Protokolle](#operational-logs)
--   [Verwenden von "fddler" mit dem Webauthentifizierungs Broker](#using-fiddler-with-web-authentication-broker)
--   [Zugehörige Themen](#related-topics)
+-   [Betriebsprotokolle](#operational-logs)
+-   [Verwenden von Fiddler mit dem Webauthentifizierungsbroker](#using-fiddler-with-web-authentication-broker)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="operational-logs"></a>Betriebsprotokolle
 
-Häufig können Sie anhand der Betriebsprotokolle ermitteln, was nicht funktioniert. Es gibt einen dedizierten Ereignisprotokoll Kanal Microsoft-Windows-webauth \\ Operational, mit dem Website Entwickler verstehen können, wie Ihre Webseiten vom Webauthentifizierungs Broker verarbeitet werden. Um dies zu aktivieren, starten Sie eventvwr.exe, und aktivieren Sie das Betriebsprotokoll unter den Anwendungs-und Dienstleistungen von \\ Microsoft \\ Windows \\ webauth. Außerdem fügt der Webauthentifizierungs Broker eine eindeutige Zeichenfolge an die Benutzer-Agent-Zeichenfolge an, um sich selbst auf dem Webserver zu identifizieren. Die Zeichenfolge lautet „MSAuthHost/1.0“. Beachten Sie, dass sich die Versionsnummer ändern kann. Verlassen Sie sich also in Ihrem Code nicht auf diese Versionsnummer. Ein Beispiel für die vollständige Benutzer-Agent-Zeichenfolge sieht wie folgt aus:
+Häufig können Sie anhand der Betriebsprotokolle ermitteln, was nicht funktioniert. Es gibt einen dedizierten Ereignisprotokollkanal Microsoft-Windows-WebAuth Operational, mit dem Websiteentwickler verstehen können, wie ihre Webseiten vom \\ Webauthentifizierungsbroker verarbeitet werden. Um sie zu aktivieren, starten Sie eventvwr.exe, und aktivieren Sie das Betriebsprotokoll unter Anwendung und Dienste \\ Microsoft \\ Windows \\ WebAuth. Außerdem fügt der Webauthentifizierungsbroker eine eindeutige Zeichenfolge an die Benutzer-Agent-Zeichenfolge an, um sich auf dem Webserver zu identifizieren. Die Zeichenfolge lautet „MSAuthHost/1.0“. Beachten Sie, dass sich die Versionsnummer ändern kann. Verlassen Sie sich also in Ihrem Code nicht auf diese Versionsnummer. Ein Beispiel für die vollständige Benutzer-Agent-Zeichenfolge lautet wie folgt:
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 
-Beispiel für die Verwendung von Betriebs Protokollen
+Beispiel für die Verwendung von Betriebsprotokollen
 
 1.  Aktivieren von Betriebsprotokollen
-2.  Ausführen der Anwendung "" für soziale Netzwerke![Ereignisanzeige mit webauth-Betriebsprotokollen](images/wab-figure15.png)
-3.  Die generierten Protokolleinträge können verwendet werden, um das Verhalten des Webauthentifizierungs Brokers ausführlicher nachzuvollziehen. In diesem Fall können sie Folgendes enthalten:
+2.  Ausführen einer Contoso-Anwendung für soziale Netzwerke![Ereignisanzeige mit webauth-Betriebsprotokollen](images/wab-figure15.png)
+3.  Die generierten Protokolleinträge können verwendet werden, um das Verhalten des Webauthentifizierungsbrokers ausführlicher zu verstehen. In diesem Fall können sie Folgendes enthalten:
     -   Navigation – Starten: Protokolliert, wann AuthHost gestartet wird, und enthält Informationen zu den Start- und End-URLs.
     -   ![Veranschaulicht die Details von „Navigation – Starten“"](images/wab-figure16.png)
     -   Navigation abgeschlossen: Protokolliert den Abschluss des Ladevorgangs einer Webseite.
@@ -38,13 +38,13 @@ Beispiel für die Verwendung von Betriebs Protokollen
     -   Navigationsfehler: AuthHost ermittelt einen Navigationsfehler bei einer URL, einschließlich HttpStatusCode.
     -   Navigationsende: End-URL liegt vor.
 
-## <a name="using-fiddler-with-web-authentication-broker"></a>Verwenden von "fddler" mit dem Webauthentifizierungs Broker
+## <a name="using-fiddler-with-web-authentication-broker"></a>Verwenden von Fiddler mit dem Webauthentifizierungsbroker
 
-Der webdebugger von "fddler" kann mit Windows 8-Apps verwendet werden.
+Der Fiddler-Webdebugger kann mit Windows 8 verwendet werden.
 
 1.  Da AuthHost in einem eigenen App-Container ausgeführt wird, um Funktionen für private Netzwerke zu ermöglichen, müssen Sie einen Registrierungsschlüssel festlegen: Windows Registry Editor Version 5.00
 
-    **HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **Image File Execution Options** \\ **authhost.exe** \\ **enableprivatenetwork** = 00000001<dl> <dt>
+    **HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** Image File Execution \\ **Options** \\ **authhost.exe** \\ **EnablePrivateNetwork** = 00000001<dl> <dt>
 
                      Data type
 </dt> <dd>                     DWORD</dd> </dl>
@@ -71,7 +71,7 @@ Der webdebugger von "fddler" kann mit Windows 8-Apps verwendet werden.
 
 3.  Fügen Sie Fiddler eine Firewallregel für eingehenden Datenverkehr hinzu.
 
-Weitere Informationen finden Sie unter [Verwenden des webdebuggers für Windows Store-Apps mit dem webdebugger für Windows Store](/archive/blogs/fiddler/revisiting-fiddler-and-win8-immersive-applications).
+Weitere Informationen finden Sie im [Blog zur Verwendung des Fiddler-Webdebuggers mit Windows Store Apps.](/archive/blogs/fiddler/revisiting-fiddler-and-win8-immersive-applications)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -80,13 +80,13 @@ Weitere Informationen finden Sie unter [Verwenden des webdebuggers für Windows 
 [Überlegungen für die Webseitenentwicklung](considerations-for-the-web-page-development.md)
 </dt> <dt>
 
-[Häufig gestellte Fragen zum Webauthentifizierungs Broker](faq-for-web-authentication-broker.md)
+[Häufig gestellte Fragen zum Webauthentifizierungsbroker](faq-for-web-authentication-broker.yml)
 </dt> <dt>
 
-[Beispiel-App für das Web Authentication Broker SDK](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
+[Beispiel-App für das Webauthentifizierungsbroker-SDK](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 </dt> <dt>
 
-[**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web?view=winrt-19041)
+[**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web?view=winrt-19041&preserve-view=true)
 </dt> </dl>
 
  

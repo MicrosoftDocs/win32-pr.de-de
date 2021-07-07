@@ -1,19 +1,19 @@
 ---
-description: Richtlinien für Webentwickler und Online Anbieter zum Erstellen von Webseiten, die auf die Windows 8-Webauthentifizierungs Broker-APIs für Single Sign-on (SSO)-Funktionen zugeschnitten sind.
+description: Richtlinien für Webentwickler und Onlineanbieter zum Erstellen von Webseiten, die auf die Windows 8 Web Authentication Broker-APIs für SSO-Funktionen (Single Sign-On, einmaliges Anmelden) zugeschnitten sind.
 ms.assetid: E2AECE26-9649-41CB-9808-4F8171C707C3
-title: Leitfaden zu den ersten Schritten für Online Anbieter, die in die Web Authentication Broker-APIs integrieren
+title: Leitfaden zu den ersten Schritte für Onlineanbieter, die in die Webauthentifizierungsbroker-APIs integriert sind
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 842f3c562d2ad288efaecec82f8da8ca771886a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2bf0ce59cd92e32264823861aaef44e90b4f2c0
+ms.sourcegitcommit: 6377cd944d1f09f2dfe5727170ca8b330c8235bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867264"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "113353633"
 ---
-# <a name="getting-started-guidance-for-online-providers-integrating-with-the-web-authentication-broker-apis"></a>Leitfaden zu den ersten Schritten für Online Anbieter, die in die Web Authentication Broker-APIs integrieren
+# <a name="getting-started-guidance-for-online-providers-integrating-with-the-web-authentication-broker-apis"></a>Leitfaden zu den ersten Schritte für Onlineanbieter, die in die Webauthentifizierungsbroker-APIs integriert sind
 
-In diesem Abschnitt wird erläutert, wie Webentwickler und Online Anbieter Webseiten erstellen, die auf die Windows 8-Webauthentifizierungs Broker-APIs zugeschnitten sind. Es bietet die visuellen und interaktiven Empfehlungen für eine End-to-End-Benutzer Darstellung der Webseite sowie zum Aktivieren von Single Sign-on (SSO)-Funktionen.
+In diesem Abschnitt werden Webentwickler und Onlineanbieter beim Erstellen von Webseiten geführt, die auf die Windows 8 Web Authentication Broker-APIs zugeschnitten sind. Es bietet die visuellen und interaktiven Empfehlungen für eine End-to-End-Benutzererfahrung der Webseite sowie informationen zum Aktivieren von SSO-Funktionen (Single Sign-On, einmaliges Anmelden).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,11 +21,11 @@ In diesem Abschnitt wird erläutert, wie Webentwickler und Online Anbieter Webse
 
 | Thema                                                                                                     | BESCHREIBUNG                                                                                                                                                                                                                                                                    |
 |-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Überlegungen für die Webseitenentwicklung](considerations-for-the-web-page-development.md)<br/> | Der Webauthentifizierungs Broker basiert auf den gleichen Technologien wie Internet Explorer in Windows. Aufgrund eines besonderen zwecks dieser Komponente wurden einige Features von Internet Explorer jedoch deaktiviert oder für eine bestimmte Konfiguration gesperrt. <br/> |
-| [Anpassen der Benutzeroberflächenelemente](how-to-customize-the-ui-elements.md)<br/>                       | Eine Webseite passt die Benutzeroberfläche (UI) mit dem Titel, dem Symbol und der Header Farbe an, indem Metadatentags verwendet werden, die auf der Webseite definiert sind.<br/>                                                                                                                                |
+| [Überlegungen für die Webseitenentwicklung](considerations-for-the-web-page-development.md)<br/> | Der Webauthentifizierungsbroker basiert auf denselben Technologien, die Internet Explorer in Windows unterstützen. Aufgrund eines sehr speziellen Zwecks dieser Komponente wurden einige Features der Internet Explorer jedoch deaktiviert oder für eine bestimmte Konfiguration gesperrt. <br/> |
+| [Anpassen der Benutzeroberflächenelemente](how-to-customize-the-ui-elements.md)<br/>                       | Eine Webseite passt die Benutzeroberfläche mit Titel, Symbol und Headerfarbe an, indem auf der Webseite definierte Metadatentags verwendet werden.<br/>                                                                                                                                |
 | [Tutorial zum Authentifizieren von Webseiten](tutorial-for-authenticating-web-pages.md)<br/>             |                                                                                                                                                                                                                                                                                |
-| [Webauthentifizierungsprobleme](web-authentication-problems.md)<br/>                                 | In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webauthentifizierungs Broker-APIs für Ihre Webseiten beschrieben.<br/>                                                                                                                                                          |
-| [Häufig gestellte Fragen zum Webauthentifizierungs Broker](faq-for-web-authentication-broker.md)<br/>                     | Häufig gestellte Fragen zum Webauthentifizierungs Broker.<br/>                                                                                                                                                                                                           |
+| [Webauthentifizierungsprobleme](web-authentication-problems.md)<br/>                                 | In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webauthentifizierungsbroker-APIs für Ihre Webseiten beschrieben.<br/>                                                                                                                                                          |
+| [Häufig gestellte Fragen zum Webauthentifizierungsbroker](faq-for-web-authentication-broker.yml)<br/>                     | Häufig gestellte Fragen zum Webauthentifizierungsbroker.<br/>                                                                                                                                                                                                           |
 
 
 
@@ -35,10 +35,10 @@ In diesem Abschnitt wird erläutert, wie Webentwickler und Online Anbieter Webse
 
 <dl> <dt>
 
-[Übersicht über den Webauthentifizierungs Broker](/previous-versions/windows/apps/hh750287(v=win.10))
+[Webauthentifizierungsbroker – Übersicht](/previous-versions/windows/apps/hh750287(v=win.10))
 </dt> <dt>
 
-[Beispiel-App für das Web Authentication Broker SDK](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
+[Webauthentifizierungsbroker-SDK-Beispiel-App](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 </dt> <dt>
 
 [**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web)

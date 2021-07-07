@@ -1,236 +1,236 @@
 ---
-title: Benutzeroberflächenautomatisierungs-Text Attribute
-description: In diesem Thema wird beschrieben, wie die Microsoft-Benutzeroberflächen Automatisierung die Format-und Stileigenschaften (Text Attribute) von Textinhalten verfügbar macht und eine Liste unterstützter Text Attribute bereitstellt.
+title: Benutzeroberflächenautomatisierung Textattribute
+description: In diesem Thema wird beschrieben, wie Microsoft Benutzeroberflächenautomatisierung die Format- und Stileigenschaften (Textattribute) von Textinhalten verfügbar macht und eine Liste der unterstützten Textattribute enthält.
 ms.assetid: 3a099cb6-d7ed-41bd-9091-7e39768b4581
 keywords:
-- UI-Automatisierung, Text Attribute
-- Text Attribute, Informationen zu
-- Text Attribute, Variant-Typen
-- Text Attribute, Datentypen
-- Benutzeroberflächen Automatisierung, Liste der Attribute
-- UI-Automatisierung, Liste von Textattributen
+- Benutzeroberflächenautomatisierung,Textattribute
+- Textattribute,About
+- Textattribute,Variant-Typen
+- Textattribute,Datentypen
+- Benutzeroberflächenautomatisierung,Liste der Attribute
+- Benutzeroberflächenautomatisierung,Liste der Textattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b011203111a6484156921d63cc27bb11b017e596
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7f8ae2d51a222e3833d0dd95fa6c048114a370a6
+ms.sourcegitcommit: 6377cd944d1f09f2dfe5727170ca8b330c8235bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341536"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "113353623"
 ---
-# <a name="ui-automation-text-attributes"></a>Benutzeroberflächenautomatisierungs-Text Attribute
+# <a name="ui-automation-text-attributes"></a>Benutzeroberflächenautomatisierung Textattribute
 
-In diesem Thema wird beschrieben, wie die Microsoft-Benutzeroberflächen Automatisierung die Format-und Stileigenschaften (*Text Attribute*) von Textinhalten verfügbar macht und eine Liste unterstützter Text Attribute bereitstellt.
+In diesem Thema wird beschrieben, wie Microsoft Benutzeroberflächenautomatisierung die Format- und Formateigenschaften *(* Textattribute ) von Textinhalten verfügbar macht und eine Liste der unterstützten Textattribute enthält.
 
-Benutzeroberflächenautomatisierungs-Anbieter machen Text Attribute über die [**GetAttributeValue**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itextrangeprovider-getattributevalue) -und [**FindAttribute**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itextrangeprovider-findattribute) -Methode des [TextRange](uiauto-about-text-and-textrange-patterns.md) -Steuerelement Musters verfügbar. Client Anwendungen verwenden die [**iuiautomationtextrange:: GetAttributeValue**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextrange-getattributevalue) -Methode, um den Wert eines bestimmten Text Attributs für einen Textbereich abzurufen. Clients können die [**iuiautomationtextrange:: FindAttribute**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextrange-findattribute) -Methode verwenden, um einen Textbereich nach Text zu durchsuchen, der über ein bestimmtes Attribut verfügt. Wenn ein übereinstimmender Text gefunden wird, erstellt die-Methode einen neuen Textbereich, der den übereinstimmenden Text enthält.
+Benutzeroberflächenautomatisierung anbieter machen Textattribute über die [**Methoden GetAttributeValue**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itextrangeprovider-getattributevalue) und [**FindAttribute**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itextrangeprovider-findattribute) des [TextRange-Steuerelementmusters](uiauto-about-text-and-textrange-patterns.md) verfügbar. Clientanwendungen verwenden die [**IUIAutomationTextRange::GetAttributeValue-Methode,**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextrange-getattributevalue) um den Wert eines bestimmten Textattributs für einen Textbereich abzurufen. Clients können die [**IUIAutomationTextRange::FindAttribute-Methode verwenden,**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextrange-findattribute) um einen Textbereich nach Text zu durchsuchen, der über ein bestimmtes Attribut verfügt. Wenn übereinstimmenden Text gefunden wird, erstellt die Methode einen neuen Textbereich, der den übereinstimmenden Text enthält.
 
-Die Text Attribute in der folgenden Liste werden vom **TextRange** -Steuerelement Muster unterstützt. Die Attributnamen stammen aus den Benutzeroberflächenautomatisierungs-Text Attribut bezeichnerbezeichner. Das **AnimationStyle** -Attribut wird z. b. von Clients als [**UIA \_ animationstyleattributeid**](uiauto-textattribute-ids.md) (definiert in UIAutomationClient. h) und von Anbietern als **Text \_ AnimationStyle-Attribut- \_ \_ GUID** (definiert in uiautomationcoreapi. h) identifiziert. Weitere Informationen zu den einzelnen unterstützten Textattributen finden Sie unter [**Text Attribut**](uiauto-textattribute-ids.md)Bezeichner.
+Die Textattribute in der folgenden Liste werden vom **TextRange-Steuerelementmuster** unterstützt. Die Attributnamen werden von den Benutzeroberflächenautomatisierung Textattributbezeichnern abgeleitet. Das **AnimationStyle-Attribut** wird beispielsweise von Clients als [**UIA \_ AnimationStyleAttributeId**](uiauto-textattribute-ids.md) (definiert in Uiautomationclient.h) und von Anbietern als **Text \_ AnimationStyle \_ Attribute \_ GUID** (definiert in Uiautomationcoreapi.h) identifiziert. Weitere Informationen zu jedem unterstützten Textattribut finden Sie unter [**Textattributbezeichner**](uiauto-textattribute-ids.md).
 
 > [!Note]  
-> Einige der aufgeführten Attribute werden ab Windows 8 unterstützt. Hinweise zur Versions Unterstützung finden Sie unter [**Text Attribut**](uiauto-textattribute-ids.md) Bezeichner.
+> Einige der aufgeführten Attribute werden ab Windows 8. Hinweise [**zur Versionsunterstützung finden**](uiauto-textattribute-ids.md) Sie unter Textattributbezeichner.
 
- 
+ 
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Anmerkungsattribute](#annotation-attributes)
 -   [Schriftartattribute](#font-attributes)
--   [Sprach Attribute](#language-attributes)
--   [Link-Attribut](#link-attribute)
--   [Seitenrand Attribute](#page-margin-attributes)
--   [Text Ausrichtungs Attribute](#text-alignment-attributes)
+-   [Sprachattribute](#language-attributes)
+-   [Linkattribut](#link-attribute)
+-   [Seitenrandattribute](#page-margin-attributes)
+-   [Textausrichtungsattribute](#text-alignment-attributes)
 -   [Textfarbattribute](#text-color-attributes)
--   [Attribute für die Text Dekoration](#text-decoration-attributes)
--   [Textstilattribute](#text-style-attributes)
--   [Interaktions-und Auswahl Attribute](#interaction-and-selection-attributes)
--   [Zugehörige Themen](#related-topics)
+-   [Textdekorationsattribute](#text-decoration-attributes)
+-   [Textformatattribute](#text-style-attributes)
+-   [Interaktions- und Auswahlattribute](#interaction-and-selection-attributes)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="annotation-attributes"></a>Anmerkungsattribute
 
-Anmerkung-Objekte und-Anmerkungen sind über die folgenden Attribute verfügbar.
+Anmerkungsobjekte und Anmerkungstypen sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut             | Bezeichner                                                            |
+| attribute             | Bezeichner                                                            |
 |-----------------------|-----------------------------------------------------------------------|
-| **Annotationobjects** | [**UIA \_ annotationobjecungsattributeid**](uiauto-textattribute-ids.md) |
-| **Annotationtypes**   | [**UIA \_ annotationtypesattributeid**](uiauto-textattribute-ids.md)   |
+| **AnnotationObjects** | [**UIA \_ AnnotationObjectsAttributeId**](uiauto-annotation-type-identifiers.md) |
+| **AnnotationTypes**   | [**UIA \_ AnnotationTypesAttributeId**](uiauto-annotation-type-identifiers.md)   |
 
 
 
- 
+ 
 
 ## <a name="font-attributes"></a>Schriftartattribute
 
-Name, Größe und Gewichtung einer Schriftart sind über die folgenden Attribute verfügbar.
+Der Name, die Größe und die Gewichtung einer Schriftart sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut      | Bezeichner                                                                               |
+| attribute      | Bezeichner                                                                               |
 |----------------|------------------------------------------------------------------------------------------|
-| **FontName**   | [**UIA \_ fontnameattributeid**](uiauto-textattribute-ids.md)     |
-| **FontSize**   | [**UIA \_ fontsizeattributeid**](uiauto-textattribute-ids.md)     |
-| **Schriftbreite** | [**UIA \_ fontweightattributeid**](uiauto-textattribute-ids.md) |
+| **FontName**   | [**UIA \_ FontNameAttributeId**](uiauto-textattribute-ids.md)     |
+| **FontSize**   | [**UIA \_ FontSizeAttributeId**](uiauto-textattribute-ids.md)     |
+| **Schriftbreite** | [**UIA \_ FontWeightAttributeId**](uiauto-textattribute-ids.md) |
 
 
 
- 
+ 
 
-## <a name="language-attributes"></a>Sprach Attribute
+## <a name="language-attributes"></a>Sprachattribute
 
 Informationen zur Sprache des Texts sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut              | Bezeichner                                                                                               |
+| attribute              | Bezeichner                                                                                               |
 |------------------------|----------------------------------------------------------------------------------------------------------|
-| **Kultur**            | [**UIA \_ cultureattributeid**](uiauto-textattribute-ids.md)                       |
-| **TextFlowDirections** | [**UIA- \_ textflowdirectionsattributeid**](uiauto-textattribute-ids.md) |
+| **Kultur**            | [**UIA \_ CultureAttributeId**](uiauto-textattribute-ids.md)                       |
+| **TextFlowDirections** | [**UIA \_ TextFlowDirectionsAttributeId**](uiauto-textattribute-ids.md) |
 
 
 
- 
+ 
 
-## <a name="link-attribute"></a>Link-Attribut
+## <a name="link-attribute"></a>Linkattribut
 
-Mit dem folgenden Attribut wird der Textbereich bereitstellt, der das Ziel eines Links in einem Dokument ist.
+Das folgende Attribut stellt den Textbereich zur Auswahl, der das Ziel eines Links in einem Dokument ist.
 
 
 
-| Attribut | Bezeichner                                                                   |
+| attribute | Bezeichner                                                                   |
 |-----------|------------------------------------------------------------------------------|
-| **Link**  | [**UIA \_ linkattributeid**](uiauto-textattribute-ids.md) |
+| **Link**  | [**UIA \_ LinkAttributeId**](uiauto-textattribute-ids.md) |
 
 
 
- 
+ 
 
-## <a name="page-margin-attributes"></a>Seitenrand Attribute
+## <a name="page-margin-attributes"></a>Seitenrandattribute
 
-Die Begrenzungs Rechtecke eines Text Bereichs machen die Koordinaten des Texts auf der Seite nicht verfügbar. Ein Anbieter kann jedoch die Seitenrand Informationen mithilfe der folgenden Text Attribute verfügbar machen.
+Die umgebundenen Rechtecke eines Textbereichs machen die Koordinaten des Texts auf der Seite nicht verfügbar. Ein Anbieter kann die Seitenrandinformationen jedoch mithilfe der folgenden Textattribute verfügbar machen.
 
 
 
-| Attribut          | Bezeichner                                                                                       |
+| attribute          | Bezeichner                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------|
-| **MarginBottom**   | [**UIA \_ marginbottomattributeid**](uiauto-textattribute-ids.md)     |
-| **MarginLeading**  | [**UIA \_ marginleadingattributeid**](uiauto-textattribute-ids.md)   |
-| **MarginTop**      | [**UIA \_ margintopattributeid**](uiauto-textattribute-ids.md)           |
-| **MarginTrailing** | [**UIA \_ margintrailingattributeid**](uiauto-textattribute-ids.md) |
+| **MarginBottom**   | [**UIA \_ MarginBottomAttributeId**](uiauto-textattribute-ids.md)     |
+| **MarginLeading**  | [**UIA \_ MarginLeadingAttributeId**](uiauto-textattribute-ids.md)   |
+| **MarginTop**      | [**UIA \_ MarginTopAttributeId**](uiauto-textattribute-ids.md)           |
+| **MarginTrailing** | [**UIA \_ MarginTrailingAttributeId**](uiauto-textattribute-ids.md) |
 
 
 
- 
+ 
 
-## <a name="text-alignment-attributes"></a>Text Ausrichtungs Attribute
+## <a name="text-alignment-attributes"></a>Textausrichtungsattribute
 
-Informationen zur Textausrichtung, z. b. Einzug, Tabulator Einstellungen und horizontale Ausrichtung, sind über die folgenden Attribute verfügbar.
+Informationen zur Textausrichtung wie Einzug, Registerkarteneinstellungen und horizontale Ausrichtung sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut                   | Bezeichner                                                                                                         |
+| attribute                   | Bezeichner                                                                                                         |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------|
-| **HorizontalTextAlignment** | [**UIA \_ horizontaltextalignmentattributeid**](uiauto-textattribute-ids.md) |
-| **Indentationfirstline**    | [**UIA \_ indentationfirstlineattributeid**](uiauto-textattribute-ids.md)       |
-| **Indentationleading**      | [**UIA \_ indentationleadingattributeid**](uiauto-textattribute-ids.md)           |
-| **Indentationtrailing**     | [**UIA \_ indentationtrailingattributeid**](uiauto-textattribute-ids.md)         |
-| **Registerkarten**                    | [**UIA \_ tabsattributeid**](uiauto-textattribute-ids.md)                                       |
+| **HorizontalTextAlignment** | [**UIA \_ HorizontalTextAlignmentAttributeId**](uiauto-textattribute-ids.md) |
+| **IndentationFirstLine**    | [**UIA \_ IndentationFirstLineAttributeId**](uiauto-textattribute-ids.md)       |
+| **EinzugLeading**      | [**UIA \_ IndentationLeadingAttributeId**](uiauto-textattribute-ids.md)           |
+| **EinzugTrailing**     | [**UIA \_ IndentationTrailingAttributeId**](uiauto-textattribute-ids.md)         |
+| **Registerkarten**                    | [**UIA \_ TabsAttributeId**](uiauto-textattribute-ids.md)                                       |
 
 
 
- 
+ 
 
 ## <a name="text-color-attributes"></a>Textfarbattribute
 
-Die Vordergrund-und Hintergrund Textfarben sind über die folgenden Text Attribute verfügbar. Beide Farben werden als [**COLORREF**](/windows/desktop/gdi/colorref) -Datentyp angegeben.
+Die Vordergrund- und Hintergrundtextfarben sind über die folgenden Textattribute verfügbar. Beide Farben werden als [**COLORREF-Datentyp**](/windows/desktop/gdi/colorref) angegeben.
 
 
 
-| Attribut           | Bezeichner                                                                                         |
+| attribute           | Bezeichner                                                                                         |
 |---------------------|----------------------------------------------------------------------------------------------------|
-| **BackgroundColor** | [**UIA \_ backgroundcolorattributeid**](uiauto-textattribute-ids.md) |
-| **ForegroundColor** | [**UIA \_ foregroundcolorattributeid**](uiauto-textattribute-ids.md) |
+| **BackgroundColor** | [**UIA \_ BackgroundColorAttributeId**](uiauto-textattribute-ids.md) |
+| **ForegroundColor** | [**UIA \_ ForegroundColorAttributeId**](uiauto-textattribute-ids.md) |
 
 
 
- 
+ 
 
-## <a name="text-decoration-attributes"></a>Attribute für die Text Dekoration
+## <a name="text-decoration-attributes"></a>Textdekorationsattribute
 
-Text Dekorationen enthalten Bereiche wie z. b. Aufzählungs Zeichen, Unterstreichung und Animationen. Wenn Text führende Aufzählungen oder Ziffern enthält, sollte das Symbol oder der Text, der für die Aufzählungs Zeichen oder die Zahl verwendet wird, ggf. im Textstream enthalten sein.
+Textdekorationen umfassen Bereiche wie Aufzählungszeichen, Unterstriche und Animationen. Wenn Text führende Aufzählungszeichen oder Zahlen enthält, sollte das Symbol oder der Text, der für das Aufzählungszeichen oder die Zahl verwendet wird, ggf. in den Textstream aufgenommen werden.
 
-Informationen zu Text Dekorationen sind über die folgenden Attribute verfügbar.
+Informationen zu Textdekorationen sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut              | Bezeichner                                                                                               |
+| attribute              | Bezeichner                                                                                               |
 |------------------------|----------------------------------------------------------------------------------------------------------|
-| **AnimationStyle**     | [**UIA \_ animationstyleattributeid**](uiauto-textattribute-ids.md)         |
-| **Kugel Stil**        | [**UIA \_ -"bulletstyleattributeid"**](uiauto-textattribute-ids.md)               |
-| **OutlineStyles**      | [**UIA \_ outlinestylesattributeid**](uiauto-textattribute-ids.md)           |
-| **OverlineColor**      | [**UIA \_ overlinecolorattributeid**](uiauto-textattribute-ids.md)           |
-| **OverlineStyle**      | [**UIA \_ overlinestyleattributeid**](uiauto-textattribute-ids.md)           |
-| **StrikeThrough-Farbe** | [**UIA \_ StrikeThrough colorattributeid**](uiauto-textattribute-ids.md) |
-| **StrikeThrough-Stil** | [**UIA \_ -Strip Item-Funktion**](uiauto-textattribute-ids.md) |
-| **Unterlinecolor**     | [**UIA \_ underlinecolorattributeid**](uiauto-textattribute-ids.md)         |
-| **Unterlinestyle**     | [**UIA \_ underlinestyleattributeid**](uiauto-textattribute-ids.md)         |
+| **AnimationStyle**     | [**UIA \_ AnimationStyleAttributeId**](uiauto-textattribute-ids.md)         |
+| **Bulletstyle**        | [**UIA \_ BulletStyleAttributeId**](uiauto-textattribute-ids.md)               |
+| **OutlineStyles**      | [**UIA \_ OutlineStylesAttributeId**](uiauto-textattribute-ids.md)           |
+| **OverlineColor**      | [**UIA \_ OverlineColorAttributeId**](uiauto-textattribute-ids.md)           |
+| **OverlineStyle**      | [**UIA \_ OverlineStyleAttributeId**](uiauto-textattribute-ids.md)           |
+| **StrikethroughColor** | [**UIA \_ StrikethroughColorAttributeId**](uiauto-textattribute-ids.md) |
+| **StrikethroughStyle** | [**UIA \_ StrikethroughStyleAttributeId**](uiauto-textattribute-ids.md) |
+| **UnderlineColor**     | [**UIA \_ UnderlineColorAttributeId**](uiauto-textattribute-ids.md)         |
+| **UnderlineStyle**     | [**UIA \_ UnderlineStyleAttributeId**](uiauto-textattribute-ids.md)         |
 
 
 
- 
+ 
 
-## <a name="text-style-attributes"></a>Textstilattribute
+## <a name="text-style-attributes"></a>Textformatattribute
 
-Informationen zu Textformaten sind auch über die folgenden Attribute verfügbar.
+Informationen zu Textformaten sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut         | Bezeichner                                                                                     |
+| attribute         | Bezeichner                                                                                     |
 |-------------------|------------------------------------------------------------------------------------------------|
-| **CapStyle**      | [**UIA \_ capstyleattributeid**](uiauto-textattribute-ids.md)           |
-| **IsHidden**      | [**UIA- \_ ishiddenattributeid**](uiauto-textattribute-ids.md)           |
-| **IsItalic**      | [**UIA \_ isitali| tributeid**](uiauto-textattribute-ids.md)           |
-| **IsReadOnly**    | [**UIA \_ isumlyattributeid**](uiauto-textattribute-ids.md)       |
-| **IsSuperscript** | [**UIA \_ issuperscriptattributeid**](uiauto-textattribute-ids.md) |
-| **Isabonniert**   | [**UIA \_ isabonptattributeid**](uiauto-textattribute-ids.md)     |
+| **CapStyle**      | [**UIA \_ CapStyleAttributeId**](uiauto-textattribute-ids.md)           |
+| **IsHidden**      | [**UIA \_ IsHiddenAttributeId**](uiauto-textattribute-ids.md)           |
+| **IsItalic**      | [**UIA \_ IsItalicAttributeId**](uiauto-textattribute-ids.md)           |
+| **IsReadOnly**    | [**UIA \_ IsReadOnlyAttributeId**](uiauto-textattribute-ids.md)       |
+| **IsSuperscript** | [**UIA \_ IsSuperscriptAttributeId**](uiauto-textattribute-ids.md) |
+| **IsSubscript**   | [**UIA \_ IsSubscriptAttributeId**](uiauto-textattribute-ids.md)     |
 
 
 
- 
+ 
 
-## <a name="interaction-and-selection-attributes"></a>Interaktions-und Auswahl Attribute
+## <a name="interaction-and-selection-attributes"></a>Interaktions- und Auswahlattribute
 
-Informationen zur aktuellen Textauswahl im Bereich Bereich und Fokus sind über die folgenden Attribute verfügbar.
+Informationen zur aktuellen Textauswahl im Bereich und Fokuszustand sind über die folgenden Attribute verfügbar.
 
 
 
-| Attribut              | Bezeichner                                                                                     |
+| attribute              | Bezeichner                                                                                     |
 |------------------------|------------------------------------------------------------------------------------------------|
-| **IsActive**           | [**UIA \_ isactiveattributeid**](uiauto-textattribute-ids.md)           |
-| **Selectionactiveend** | [**UIA \_ selectionactiveendattributeid**](uiauto-textattribute-ids.md) |
-| **CaretPosition**      | [**UIA \_ caretpositionattributeid**](uiauto-textattribute-ids.md)      |
-| **Caretbidimode**      | [**UIA \_ caretbidimodeattributeid**](uiauto-textattribute-ids.md) |
+| **IsActive**           | [**UIA \_ IsActiveAttributeId**](uiauto-textattribute-ids.md)           |
+| **SelectionActiveEnd** | [**UIA \_ SelectionActiveEndAttributeId**](uiauto-textattribute-ids.md) |
+| **CaretPosition**      | [**UIA \_ CaretPositionAttributeId**](uiauto-textattribute-ids.md)      |
+| **CaretBidiMode**      | [**UIA \_ CaretBidiModeAttributeId**](uiauto-textattribute-ids.md) |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Informationen zu Benutzeroberflächenautomatisierungs-Text und TextRange-Steuerelement Mustern](uiauto-about-text-and-textrange-patterns.md)
+[Informationen zu Benutzeroberflächenautomatisierung Text- und TextRange-Steuerelementmustern](uiauto-about-text-and-textrange-patterns.md)
 </dt> <dt>
 
-[Text-und TextRange-Steuerelement Muster](uiauto-implementingtextandtextrange.md)
+[Text- und TextRange-Steuerelementmuster](uiauto-implementingtextandtextrange.md)
 </dt> <dt>
 
-[Arbeiten mit Text basierten Steuerelementen](uiauto-workingwithtextbasedcontrols.md)
+[Arbeiten mit textbasierten Steuerelementen](uiauto-workingwithtextbasedcontrols.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
