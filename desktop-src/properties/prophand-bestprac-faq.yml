@@ -1,0 +1,141 @@
+### YamlMime:FAQ
+metadata:
+  description: Dieser Artikel enthält bewährte Methoden und häufig gestellte Fragen zum Erstellen und Registrieren von Eigenschaftenhandlern für die Arbeit mit dem Windows Eigenschaftensystem.
+  ms.assetid: E583A00B-F615-41c8-AECF-061F1396DB9A
+  title: Bewährte Methoden und häufig gestellte Fragen zu Eigenschaftenhandlern
+  ms.topic: article
+  ms.date: 05/31/2018
+  ms.openlocfilehash: 6e1b7d22516b1573562b25f2889b6d1ba703483c
+  ms.sourcegitcommit: ecd0ba4732f5264aab9baa2839c11f7fea36318f
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 07/07/2021
+  ms.locfileid: "113483661"
+title: Bewährte Methoden und häufig gestellte Fragen zu Eigenschaftenhandlern
+summary: >
+  In diesem Thema wird erläutert, wie Eigenschaftenhandler für die Arbeit mit dem Windows Eigenschaftensystem erstellt und registriert werden.
+
+
+  Dieses Thema ist wie folgt organisiert:
+
+
+  -   [Bewährte Methoden](#best-practices)
+      -   [Überschreiben von Dateisystemeigenschaften](#overriding-file-system-properties)
+      -   [Speichern von Eigenschaften in XML-basierten Dateiformaten](#storing-properties-in-xml-based-file-formats)
+      -   [Berechnete Eigenschaften](#computed-properties)
+  -   [Häufig gestellte Fragen](#frequently-asked-questions)
+
+  -   [Verwandte Themen](#related-topics)
+sections:
+- name: Empfehlungen
+  questions:
+  - question: >
+      Überschreiben von Dateisystemeigenschaften
+    answer: >
+      Einige Eigenschaften für Dateien werden von der Dateisystemdatenquelle bereitgestellt, z. B.:
+
+
+      -   PKEY \_ FileName
+
+      -   \_PKEY-Erweiterung
+
+      -   PKEY \_ ModifiedTime
+
+
+      Im Allgemeinen können Eigenschaftshandler keine Werte für diese Eigenschaften bereitstellen. In einigen Fällen können diese Eigenschaften jedoch auf Der Grundlage von Registrierungsinformationen überschrieben werden, die vom Eigenschaftenhandler bereitgestellt werden. Eigenschaftenhandler füllen **HKEY \_ CLASSES \_ ROOT** \\ **CLSID** \\ *{handler clsid}* \\ **OverrideFileSystemProperties** mit den Namen der Eigenschaften auf, die überschrieben werden sollen. Dies ist auf einen festen Satz von Eigenschaften beschränkt, der in der folgenden Liste angezeigt wird, über die das System über Kenntnisse verfügt.
+
+
+      Das Überschreiben wird für die folgenden Eigenschaftswerte unterstützt:
+
+
+      -   [System.Kind](./props-system-kind.md)
+
+      -   [System.FileName](./props-system-filename.md)
+
+      -   [System.IsPinnedToNameSpaceTree](./props-system-ispinnedtonamespacetree.md)
+
+      -   [System.ItemNameDisplay](./props-system-itemnamedisplay.md)
+
+      -   [System.SFGAOFlags](./props-system-sfgaoflags.md)
+
+      -   [System.ItemPathDisplay](./props-system-itempathdisplay.md)
+
+      -   [System.ItemPathDisplayNarrow](./props-system-itempathdisplaynarrow.md)
+
+      -   [System.ItemFolderNameDisplay](./props-system-itemfoldernamedisplay.md)
+
+      -   [System.ItemFolderPathDisplay](./props-system-itemfolderpathdisplay.md)
+
+      -   [System.ItemFolderPathDisplayNarrow](./props-system-itemfolderpathdisplaynarrow.md)
+
+
+      Eine vollständige Liste aller Shell-Eigenschaften finden Sie unter [Shelleigenschaften.](./props.md)
+
+
+      > [!IMPORTANT]
+
+      > Die überschriebenen Eigenschaftswerte werden nur verwendet, wenn die Dateien indiziert werden. Daher werden beim Durchsuchen von Dateien aus der Dateisystemdatenquelle die überschriebenen Werte nicht angezeigt.
+
+       
+  - question: >
+      Speichern von Eigenschaften in XML-basierten Dateiformaten
+    answer: >
+      Es gibt zwei grundlegende Optionen zum Speichern von Eigenschaften in XML-basierten Dateiformaten:
+
+
+      -   Store jede Eigenschaft mit XML-Elementen und -Attributen gemäß dem XML-Schema des Dokuments. Dieser Ansatz ist "XML-freundlicher".
+
+      -   Serialisieren Sie den gesamten Eigenschaftenspeicher in ein Binary Large Object (BLOB) im Arbeitsspeicher, konvertieren Sie das BLOB in eine Base64-codierte Zeichenfolge, und speichern Sie diese Zeichenfolge dann im XML-Code. Dies ist der einfachere der beiden Ansätze und kann verwendet werden, um einfache Unterstützung für offene Metadaten bereitzustellen.
+
+
+      Einige Handler können diese Ansätze kombinieren, indem sie einige wichtige Werte im XML-Standardformat speichern und den Rest beispielsweise in einem BLOB speichern.
+  - question: >
+      Berechnete Eigenschaften
+    answer: >
+      Einige Eigenschaften werden von bestimmten Attributen einer Datei abgeleitet. Die [System.Image.Dimensions-Eigenschaft](./props-system-image-dimensions.md) wird beispielsweise durch die tatsächlichen Abmessungen des Bilds in einer Bilddatei bestimmt. Da solche Eigenschaftswerte nicht vom Eigenschaftenhandler geändert werden können, werden sie daher `isInnate="true"` in der Eigenschaftenbeschreibung markiert. Andere Eigenschaften werden aus einem Teil einer bestimmten Eigenschaft oder durch Aggregieren der Werte mehrerer Eigenschaften berechnet. Da Aktualisierungen dieser "berechneten" Eigenschaften mehrdeutig sind, wie die Quellwerte geändert werden sollen, sollten berechnete Eigenschaften in der Eigenschaftenbeschreibung markiert `isInnate="true"` oder als schreibgeschützt gemeldet werden. Die zweite Option ist verfügbar, indem der Handler angewiesen wird, S \_ FALSE von [**IPropertyStoreCapabilities::IsPropertyWritable**](/windows/win32/api/propsys/nf-propsys-ipropertystorecapabilities-ispropertywritable)zurückzugeben.
+- name: Häufig gestellte Fragen
+  questions:
+  - question: >
+      Warum wird mein Eigenschaftenhandler nicht vom Windows Search-Indexer geladen?
+    answer: >
+      Der Windows Search-Indexer wird als Systemdienst ausgeführt und kann keine DLLs laden, die im Benutzerprofilverzeichnis gespeichert sind. Wenn Sie mit Microsoft Visual Studio erstellen und debuggen, wird die DLL in Ihrem Benutzerprofil abgelegt (daher wird sie nicht vom Indexer geladen). Um dies zu umgehen, kopieren Sie Ihre DLL außerhalb Ihres Profilordners (z. B. in **C: \\ Programme \\ YourAppName**), und registrieren Sie sie dort.
+
+
+      Eine spezifischere Anleitung zum Entwickeln von Eigenschaftenhandlern für die Arbeit mit dem indexer für die Windows Suche finden Sie unter [Developing Property Handlers for Windows Search](../search/-search-3x-wds-extidx-propertyhandlers.md).
+  - question: >
+      Welche Eigenschaften sollten über die Enumerationsmethoden "IPropertyStore::GetCount" und "IPropertyStore::GetAt" auffindbar sein?
+    answer: "Nicht alle Clients von Eigenschaftenspeicherobjekten verwenden diese Methoden. Einige Clients kennen die Eigenschaften, die sie direkt anfordern möchten (anhand des PKEY-Namens), oder empfangen Eigenschafteninformationen über eine Eigenschaftenbeschreibungsliste. Die Methoden zur Eigenschaftenermittlung unterstützen mehrere andere Szenarien. Wenn eine Eigenschaft nicht an diesen Szenarien teilnehmen muss, muss sie nicht aufzählt werden. Daher kann ein Eigenschaftenhandler einen EMPTY-Wert erzeugen, der nicht \\_ VT ist, für Eigenschaften, die nicht über die [**Methoden IPropertyStore::GetCount**](/previous-versions/windows/desktop/legacy/bb761472(v=vs.85)) und [**IPropertyStore::GetAt**](/previous-versions/windows/desktop/legacy/bb761471(v=vs.85)) ermittelt werden.\n\nEigenschaften sollten jedoch über diese Methoden sichtbar sein, wenn eine der folgenden Bedingungen erfüllt ist:\n\n- **Wenn die Eigenschaft indiziert ist, sodass sie durchsuchbar ist:** Dies bedeutet, dass sie im Windows Search-Eigenschaftenspeicher (im `isColumn = \"true\"` Eigenschaftenbeschreibungsschema angegeben) enthalten ist oder für Volltextsuchen () verfügbar `inInvertedIndex = \"true\"` ist. Wenn diese Flags nicht vorhanden sind oder keine Eigenschaftenbeschreibung vorhanden ist, werden Eigenschaften vom Typ \"string\" automatisch dem invertierten Index hinzugefügt, um die Suche zu ermöglichen. Da die Liste der bekannten Eigenschaften (mit installierten Eigenschaftenbeschreibungen) im Eigenschaftensystem sehr groß ist (mehr als 800 Eigenschaften), wäre es unpraktisch, jeden Eigenschaftenhandler nach jeder Eigenschaft zu fragen, die im Eigenschaftensystem registriert ist. Stattdessen listet der Indizierungsprozess die relevanten Eigenschaften aus dem Eigenschaftenhandler für jedes Element auf, das indiziert wird, und verwendet die Werte der aufzählten Eigenschaften, um den Volltextindex zu erstellen.\n- **Wenn die Eigenschaft kopiert werden soll, wenn der Eigenschaftensatz des Elements dupliziert wird:** Um eine Funktion zum Kopieren eines Eigenschaftensatzes zu implementieren, macht das Quellelement die Eigenschaften, die kopiert werden sollen, über die [**Methoden IPropertyStore::GetCount**](/previous-versions/windows/desktop/legacy/bb761472(v=vs.85)) und [**IPropertyStore::GetAt**](/previous-versions/windows/desktop/legacy/bb761471(v=vs.85)) sichtbar. Eigenschaften, die nicht kopiert werden müssen oder nicht sinnvoll sind, sollten nicht eingeschlossen werden.\n- **Wenn der Eigenschaftswert nicht leer ist (VT \\_ EMPTY):** Eigenschaftswerte, die leer sind, sind für Clients nicht nützlich. Wenn Clients versuchen, leere Eigenschaftswerte zurückzugeben, wird der Wert VT \\_ EMPTY zurückgegeben. Daher sollten Eigenschaften mit leeren Werten nicht aufzählt werden.\n-   **Wenn die Eigenschaft beim Aufrufen der Funktion \"remove properties\" entfernt werden soll:** Dieses Feature dient zum Schutz des Datenschutzes. er ermittelt alle Werte aus dem Eigenschaftenhandler über die -Enumeration und entfernt jeden, der vom Benutzer entfernt werden soll.\n> [!Note]  \n> Beim Aufzählen von Eigenschaften wird der Eigenschaftensatz, den ein bestimmter Eigenschaftenhandler unterstützt, nicht kommuniziert, wenn der Handler ein festes Schema (und keine geöffneten Metadaten) unterstützt. Stattdessen sollten solche Handler den Satz von Eigenschaften dokumentieren, die sie unterstützen.\n\n \n"
+  - question: >
+      Gewusst wie wissen, welche Dateiformate offene Metadaten unterstützen?
+    answer: >
+      Informationen zur Unterstützung für geöffnete Metadaten finden Sie unter "Dateitypen, die offene Metadaten unterstützen" in [Dateitypen.](../shell/fa-file-types.md)
+  - question: >
+      Können VT_NULL Werte mithilfe eines Eigenschaftenhandlers gespeichert werden?
+    answer: >
+      Nein. VT \_ NULL-Werte werden \_ bei Aufrufen von [**IPropertyStore::GetValue**](/previous-versions/windows/desktop/legacy/bb761473(v=vs.85)) und [**IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))in VT EMPTY konvertiert.
+  - question: >
+      Welche Datumszeichenfolgenformate werden von der PropVariantChangeType-Funktion unterstützt?
+    answer: >
+      Im Allgemeinen sollten Eigenschaften, die Datums-/Uhrzeitwerte darstellen, mithilfe von VT FILETIME dargestellt \_ werden. Viele Datenquellen stellen diese Informationen jedoch in Zeichenfolgenform bereit. Die [**PropVariantChangeType-Hilfs-API**](/windows/win32/api/propvarutil/nf-propvarutil-propvariantchangetype) unterstützt das Koercieren einiger Zeichenfolgendatumsformate in [**FILETIME-Werte,**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) wie in der folgenden Tabelle dargestellt.
+
+
+
+
+      | Format                  | Windows Vista, Windows XP und Microsoft Windows Desktop Search (WDS) | Windows 7 | Hinweise                                                                                                                                                                                                 |
+
+      |-------------------------|-----------------------------------------------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+      | yyyy/mm/dd:hh:mm:ss.uuu | Ja                                                                   | Ja       | UTC; y=year, m=month, d=date, h=hours (24-Stunden-Uhr), m=minutes, s=seconds, u=microseconds                                                                                                           |
+
+      | jjjj-mm-ttThh:mm:ssZ    | Nein                                                                    | Ja       | SPEZIFIKATION DES **ISO8601-Formats** UTC (angegeben durch den Zeitzonenindikator "Z"), y=year, m=month, d=date, h=hours (24-Stunden-Uhr), m=minutes, s=seconds; "T" ist ein Trennzeichen für den Zeitabschnitt.<br/> |
+  - question: >
+      Ist es möglich, einen schreibgeschützten Eigenschaftenhandler zu erstellen?
+    answer: >
+      Ja. Einige Implementierungen von Eigenschaftenhandlern unterstützen das Schreiben von Eigenschaftswerten nicht. Diese Eigenschaftenhandler sollten STGM \_ E \_ ACCESSDENIED bei Aufrufen von **IInitializeXXX::Initialize** zurückgeben, die STGM \_ READWRITE übergeben, oder bei jedem Aufruf von [**IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85)).
+
+
+      Alle im STGM-LESEmodus geöffneten Eigenschaftenhandler \_ sollten STGM \_ E \_ ACCESSDENIED bei Aufrufen von [**IPropertyStore::SetValue**](/previous-versions/windows/desktop/legacy/bb761475(v=vs.85))zurückgeben.
+  - question: >
+      Kann ein Eigenschaftenhandler eine Eigenschaft als schreibgeschützt behandeln, auch wenn das Schema angibt, dass die Eigenschaft schreibbar ist?
+    answer: "Ja. Im Schemasystem werden Eigenschaften als schreibgeschützt (einschließlich der Eigenschaften mit ) oder `isInnate = \"true\"` als Lese-/Schreibzugriff kommentiert. Eigenschaftenhandler, die das Schreiben einer bestimmten Eigenschaft nicht unterstützen, die laut Schema schreibbar sein soll, sollten [**IPropertyStoreCapabilities**](/windows/win32/api/propsys/nn-propsys-ipropertystorecapabilities) implementieren und S FALSE für Aufrufe von \\_ [**IPropertyStoreCapabilities::IsPropertyWritable**](/windows/win32/api/propsys/nf-propsys-ipropertystorecapabilities-ispropertywritable) für diese Eigenschaft zurückgeben. Dies gibt an, dass die -Eigenschaft im Kontext dieses Handlers und dieser Datei nicht schreibbar ist.\n\n> [!Note]  \n> Die umgekehrte Aktion ist nicht möglich. Sie können einen Eigenschaftenhandler nicht aktivieren, um eine Eigenschaft zu schreiben, die im Schema als schreibgeschützt markiert ist.\n"
+additionalContent: "\n## <a name=\"related-topics\"></a>Zugehörige Themen\n\n[Grundlegendes zu Eigenschaftenhandlern](./building-property-handlers-properties.md)\n\n[Verwenden von Kind-Namen](./building-property-handlers-user-friendly-kind-names.md)\n\n[Verwenden von Eigenschaftenlisten](./building-property-handlers-property-lists.md)\n\n[Initialisieren von Eigenschaftenhandlern](./building-property-handlers-property-handlers.md)\n\n[Registrieren und Verteilen von Eigenschaftenhandlern](./prophand-reg-dist.md)"

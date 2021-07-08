@@ -1,0 +1,172 @@
+### YamlMime:FAQ
+metadata:
+  title: Häufig gestellte Fragen zur Programmierung von Skripts
+  description: Häufig gestellte Fragen zur Programmierung von Skripts
+  ms.assetid: 84078c5b-7b04-48fa-9d0a-d95393c323eb
+  ms.topic: article
+  ms.date: 05/31/2018
+  ms.openlocfilehash: f3e9604bdc6bcd3871cbd931fb22b16400764dbd
+  ms.sourcegitcommit: ecd0ba4732f5264aab9baa2839c11f7fea36318f
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 07/07/2021
+  ms.locfileid: "113483653"
+title: Häufig gestellte Fragen zur Programmierung von Skripts
+summary: >
+  \[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+sections:
+- name: Wird ignoriert.
+  questions:
+  - question: >
+      Wenn ich Microsoft Visual Basic (oder andere Entwicklungstools) für die Skripterstellung für den Microsoft-Agent verwende, sehe ich nicht alle Eigenschaften und Ereignisse, die in Ihren Beispielen verwendet werden. Gewusst wie darauf zugreifen?
+    answer: >
+      Die meisten Ereignisse, Methoden und Eigenschaften, die vom Microsoft-Agent-Steuerelement unterstützt werden, werden nur zur Laufzeit verfügbar gemacht. Weitere Informationen finden Sie [unter Programmieren des Microsoft-Agent-Steuerelements.](programming-the-microsoft-agent-control.md)
+  - question: >
+      Das Map-Tag (oder ein anderes Tag) scheint nicht zu funktionieren.
+    answer: "Einige Tags enthalten Zeichenfolgen in Anführungszeichen. Für einige Programmiersprachen wie Microsoft Visual Basic und Visual Basic Scripting Edition müssen Sie möglicherweise zwei Anführungszeichen verwenden, um den Parameter des Tags festzulegen oder ein doppeltes Anführungszeichen als Teil der Zeichenfolge zu verketten. Letzteres wird in diesem Visual Basic Beispiel gezeigt:\n\nAgent1.Characters(\"Genie\"). Sprechen Sie \"This is \\\\ map=\" + ps(34) + \"Spoken text\" \\_ + ch(34) + \"=\" + ps(34) + \"Balloon text\" + ps(34) + \" \\\\ .\"\n\nFür die C-, C++- und Java-Programmierung vorangestellte umgekehrte Schrägstriche und doppelte Anführungszeichen mit einem umgekehrten Schrägstrich. Beispiel:\n\nBSTR bszSpeak = SysAllocString(L\"This is \\\\ \\\\ map= \\\\ \"Spoken text \\\\ \"= \\\\ \"Balloon text \\\\ \" \\\\ \\\\ \");\n\npCharacter->Speak(bszSpeak, ......);\n\n> [!Note]  \n> Der Microsoft-Agent unterstützt nicht alle in der Microsoft Speech-API angegebenen Tags. Darüber hinaus kann die Unterstützung für einige Parameter von der installierten Sprachtext-Engine abhängen. Weitere Informationen finden Sie unter [Sprachausgabetags des Microsoft-Agents.](microsoft-agent-speech-output-tags.md)\n\n \n"
+  - question: >
+      Ich erhalte anscheinend keine RequestStart- und RequestComplete-Ereignisse in meinem Skript (oder Programm).
+    answer: >
+      Dies kann durch eines der folgenden Probleme verursacht werden:
+
+
+      -   Ihre Programmiersprache unterstützt ActiveX Steuerelemente nicht vollständig. Überprüfen Sie Ihre Dokumentation, um sicherzustellen, dass sie die ActiveX-Schnittstelle und Ereignisse für ActiveX-Objekte unterstützt.
+
+      -   Auf einer Skriptwebseite konnte ein anderes Steuerelement nicht installiert oder geladen werden. Überprüfen Sie, ob alle anderen Steuerelemente ohne Microsoft-Agent installiert sind und ordnungsgemäß geladen werden.
+
+      -   Auf einer Skriptwebseite mit Frames verfügen Sie über das `<OBJECT>` -Tag für das Microsoft-Agent-Steuerelement auf einer Seite und die Ereignisse, für die ein Skript auf einer anderen Seite erstellt wurde. Ereignisse werden nur an die Seite gesendet, die das Steuerelement hostet.
+  - question: >
+      Ich verwende das Microsoft-Agent-Steuerelement mit anderen ActiveX Steuerelementen auf meiner Webseite, und es scheint keine Ereignisse zu erhalten.
+    answer: >
+      Überprüfen Sie, ob die anderen Steuerelemente ordnungsgemäß installiert sind. Wenn sich ein anderes ActiveX Steuerelement nicht ordnungsgemäß registrieren kann, empfängt das Microsoft-Agent-Steuerelement möglicherweise seine Ereignisse.
+  - question: >
+      Welche Programmiersprachen kann ich zum Programmieren des Microsoft-Agent-Steuerelements verwenden?
+    answer: >
+      Der Microsoft-Agent sollte in jeder Sprache unterstützt werden können, die die ActiveX-Schnittstelle unterstützt. Es enthält Codebeispiele für Visual Basic, VBScript, JScript, C/C++ und Java.
+  - question: >
+      Kann ich mithilfe von JScript auf die vom Microsoft-Agent zurückgegebenen Parameter zugreifen?
+    answer: >
+      Ja, aber derzeit ist die einzige Möglichkeit, dies zu tun, die `<SCRIPT LANGUAGE="JScript" FOR="*object*" EVENT="event()">` Syntax. Obwohl diese Syntax für Microsoft Internet Explorer unterstützt wird, wird sie von anderen Browsern nicht unterstützt. Daher empfiehlt es sich, JScript für diesen Teil des Skripts Ihrer Seite zu vermeiden.
+  - question: >
+      Kann der Microsoft-Agent mit Anderen als den von Microsoft bereitgestellten Spracherkennungs- oder Sprachsynthese-Engines (Text-to-Speech, TTS) verwendet werden?
+    answer: >
+      Ja, vorausgesetzt, die Engine unterstützt die für den Microsoft-Agent erforderlichen SapI 4.0-Schnittstellen (Microsoft Speech API). Informieren Sie sich beim Lieferanten des Triebwerks. Ausführliche Informationen zu den SAPI-Schnittstellen, die vom Microsoft-Agent benötigt werden, finden Sie unter Supportanforderungen für die [Speech-Engine.](speech-engine-support-requirements.md)
+  - question: >
+      Meine Seite enthält HTML-Objekttags für den Microsoft-Agent, die Lernout & Hauspie TruVoice TTS-Engine und die Spracherkennungs-Engine von Microsoft Command and Control, aber nicht alle Komponenten werden installiert.
+    answer: >
+      In der Regel kann das Problem durch Aktualisieren der Seite behoben werden. Im Allgemeinen empfiehlt es sich, zuerst das Microsoft-Agent-Steuerungstag, `<OBJECT>` dann lernout & Hauspie TruVoice-Engine und dann die Spracherkennungs-Engine Command and Control anzugeben.
+  - question: >
+      Nach dem Aufruf der MoveTo-Methode scheint mein Zeichen zu frieren, obwohl ich Return-Animationen den Bewegungszustandsanimationen zugewiesen habe.
+    answer: >
+      Wenn Sie eine Animation wiedergeben, zeigen die Animationsdienste weiterhin den letzten Frame an, bis eine weitere Animation aufgerufen wird. Daher sollten Sie nach dem Aufruf von [**MoveTo**](moveto-method.md)eine weitere Animation wiedergeben. Wenn Sie eine **Return-Animation** für die Animation **Zum Verschieben** des Zustands definiert haben, wird sie zuerst vom Server wiedergegeben.
+  - question: >
+      Wenn ich die Pitch-Eigenschaft des Zeichens abfrage, wird der Wert -1 zurückgegeben.
+    answer: >
+      Dies tritt auf, wenn das Zeichen mithilfe der Standardmäßige Tonhöheneigenschaft einer Sprach-Engine kompiliert wurde. Das heißt, die Tonhöhe wurde nicht geändert, als das Zeichen erstellt wurde.
+  - question: >
+      Wenn mein Code versucht, die TTS-Modus-ID für eine Sprachtext-Engine festzulegen, erhalte ich den folgenden Fehler: Ein ausgehender Aufruf kann nicht durchgeführt werden, da die Anwendung einen eingabesynchronen Aufruf verteilt.
+    answer: >
+      Zum Festlegen der TTSModeID-Eigenschaft muss Speech.dll installiert sein. Dies ist in der Regel Teil des Installationscodes der Sprach-Engine. Sie können dies auch installieren, indem Sie die Sprachobjekt-Systemsteuerung installieren, die auf der Seite Microsoft-Agent-Downloads verfügbar ist.
+  - question: >
+      Wenn ich erneut ein Zeichen lade, das nicht geladen werden konnte, schlägt der Aufruf mit dem Fehler "Character already loaded" fehl.
+    answer: >
+      Das Microsoft-Agent-Steuerelement entlädt kein Zeichenobjekt (gibt den Verweis frei), wenn die zugeordnete Zeichendatei nicht geladen werden kann. Wenn Sie versuchen möchten, das Zeichen erneut zu laden, müssen Sie [**unload**](unload-method.md) explizit aufrufen, bevor Sie [**Laden**](load-method.md) beim zweiten Mal aufrufen. Wenn Sie dies über ein Webseitenskript versuchen, müssen Sie dem **Unload-Aufruf** auch eine On Error Resume Next-Anweisung vorangehen. Andernfalls schlägt der **Unload-Aufruf** ebenfalls fehl. (Beachten Sie, dass JScript keine On Error Resume Next-Anweisung aufweist.)
+
+
+      Möglicherweise müssen Sie jedoch keinen Code einschließen, um sofort das Laden eines Zeichens zu wiederholen, wenn die Datei nicht geladen werden kann. Microsoft Internet Explorer und die Microsoft-Agent-Serverkomponente versuchen automatisch, den Vorgang mehrmals zu wiederholen, sodass die Wahrscheinlichkeit, dass ihr Wiederholungsversuch zu einem erfolgreichen Laden führt, remote ist. Eine bessere Strategie besteht darin, einige Sekunden vor dem erneuten Versuch zu warten (einen Timer festzulegen).
+  - question: >
+      Wie kann ich den Microsoft-Agent als Teil meiner Anwendung oder von meinem Webserver installieren?
+    answer: >
+      Sie können den -Agent von der Microsoft-Website installieren, indem Sie dessen *CLSID in ein HTML-Objekttag* einfügen. Wenn Sie den -Agent jedoch aus Ihrem eigenen Anwendungsprogramm oder von Ihrem eigenen Server einschließen und installieren möchten, müssen Sie die selbstinstallierende Cab-Datei des Microsoft-Agents herunterladen, indem Sie sie von der Seite Downloads herunterladen. Wählen Sie beim Herunterladen die Option Speichern statt Ausführen des Browsers aus. Wenn diese Datei ausgeführt wird, wird der Microsoft-Agent automatisch auf dem Zielcomputer installiert. Daher können Sie die Datei in Ihrem Installationsskript angeben.
+
+
+      Versuchen Sie nicht, den Microsoft-Agent zu installieren, indem Sie die verschiedenen kopieren. DLLs und der Versuch, sie selbst zu registrieren. Es wird nicht unterstützt, den -Agent auf andere Weise zu installieren und dann die selbstinstallierende Cab-Datei auszuführen.
+
+
+      Das Zielsystem muss auch aktuelle Versionen von MSVCRT.DLL (VC++ Runtime), REGSVR32.EXE (in Microsoft VC++ enthaltenes Registrierungstool) und COM enthalten. Die beste Möglichkeit, sicherzustellen, dass die richtigen Versionen installiert sind, besteht darin, dass Microsoft Internet Explorer 3.02 oder höher installiert ist. Sie können diese Laufzeitanforderungen jedoch auch lizenzieren. (Für die neueste Version von COM greifen Sie über die Microsoft-Website auf das DCOM-Update zu.)
+
+
+      Microsoft Agent 2.0 wird nicht auf Microsoft Windows 2000 installiert, da diese Version des Betriebssystems bereits den -Agent enthält.
+  - question: >
+      Kann ich die Visual Basic Setup-Assistant verwenden, um den Microsoft-Agent zu installieren?
+    answer: >
+      Sie können zwar ein eigenes Installationsprogramm mit Visual Basic Code (VB) erstellen, aber sie können dazu nicht die Visual Basic Setup-Assistant verwenden. Um den Agent über VB zu installieren, können Sie den Shell-Befehl verwenden und die selbstinstallierende Cab-Datei des Microsoft-Agents angeben.
+  - question: >
+      Gewusst wie Microsoft-Agent auf Windows 2000 installieren?
+    answer: >
+      Microsoft Agent 2.0 wird nicht auf Windows 2000 installiert, da er bereits als Teil des Betriebssystems enthalten ist.
+  - question: >
+      AgentSvr stürzt ab, wenn Speak mit einer WAV-Datei aufgerufen wird.
+    answer: >
+      Dies kann zur Folge haben, wenn das Zeichen TTS für die gesprochene Ausgabe verwendet hat, und dann geändert wird, um eine WAV-Datei zu verwenden. Text wurde im ersten Parameter der Speak-Methode nicht angegeben.
+
+
+      Um den Absturz zu vermeiden, fügen Sie ein Leerzeichen in den ersten Parameter der Speak-Methode ein, auch wenn Sie keine Textausgabe haben.
+  - question: >
+      Obwohl ich die -Agent-Sprachkomponente (DLL) bereits für eine bestimmte Sprache installiert habe, habe ich trotzdem einen Fehler erhalten, dass die Komponente fehlt, wenn ich die Sprache des Zeichens auf diese Sprache feststelle.
+    answer: >
+      Dies geschieht in der Regel, wenn Agent-Anwendungen wie Microsoft Office 2000 geöffnet sind, wenn Sie die -Agent-Sprachkomponente installieren. Schließen Sie alle Anwendungen, und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, starten Sie Ihren Computer neu, und Sie sollten die Sprach-ID jetzt festlegen können.
+  - question: >
+      Wenn ich das ampersand -Symbol "&" verwende, wird der Text um das Symbol in den Wortsprechblasen des Zeichens abgeschnitten.
+    answer: >
+      Dieses Problem ist bekannt. Sie können dies umgehen, indem Sie das Kartentag verwenden. Um beispielsweise "A & B" im Wortsprechblasen des Zeichens anzuzeigen, verwenden Sie "A \\ map="and"="&&" \\ B" in der Speak-Anweisung.
+  - question: >
+      Meine Anwendung ermöglicht Es Benutzern, das Standardzeichen zu ändern, und wenn sie dies tun, stürzt das Programm ab.
+    answer: >
+      Es gibt zwei mögliche Ursachen:
+
+
+      Wenn Sie die TTS-Modus-ID des Standardzeichens ändern und dem Benutzer dann erlauben, das Standardzeichen über ShowDefaultCharacterProperties zu ändern, stürzt AgentSvr ab.
+
+
+      Dieses Problem wurde in den Betriebssystemen Windows 2000 und Windows XP behoben. Um den Absturz auf anderen Plattformen zu vermeiden, sollten Sie dem Benutzer entweder nicht erlauben, das Standardzeichen zu ändern, nachdem Sie die TTS-Modus-ID des Standardzeichens geändert haben, oder das Standardzeichen nicht in Ihrer Anwendung oder Webseite verwenden.
+
+
+      Wenn Ihre Anwendung keine von Microsoft bereitgestellten Agent-Zeichen verwendet, stellen Sie sicher, dass ihr benutzerdefiniertes Zeichen eine Palette mit einer vollständigen Palette von 256 Farben verwendet. Weitere Informationen finden Sie im Dokument Entwerfen von Zeichen für den Microsoft-Agent.
+  - question: >
+      Meine Seite lädt das -Agent-Zeichen aus mehreren Frames. Mit IE 5 kann der Microsoft-Agent nicht geladen werden.
+    answer: >
+      Dies ist ein bekanntes Problem mit IE 5. Die Verarbeitung eines bestimmten Ereignisses durch den Browser wurde geändert, wodurch das HTML-Skript vor dem Start von AgentSvr ausgeführt wird. Damit Ihre Seite mit allen Browserversionen funktioniert, müssen Sie Ihrem Skript die folgende Zeile hinzufügen:
+
+
+      AgentControl.Connected = True
+
+
+      , der explizit eine Verbindung mit agentSvr herstellt. Beachten Sie, dass Sie dies nur tun müssen, wenn Die Seite den -Agent aus mehreren Frames lädt.
+  - question: >
+      Wenn meine Anwendung versucht, den Microsoft-Agent auf Windows 2000 (oder Windows XP) zu installieren, erhalte ich den Fehler, dass der Agent nicht mit Windows 2000 (oder Windows XP) kompatibel ist.
+    answer: >
+      Eine frühere Version der Core Component Cabinet-Datei des -Agents MSAGENT.exe blockiert bei ausführung am Windows 2000 (und Windows XP) die Installation und zeigt eine ungenaue Fehlermeldung an, dass der -Agent nicht mit der Version des betriebssystems kompatibel ist, das Sie ausführen. Tatsächlich sind Microsoft Agent 2.0-Kernkomponenten im Rahmen von Windows 2000 (und Windows XP) enthalten und bereits standardmäßig über Windows-Setup installiert.
+
+
+      In dieser Version wird die Überprüfung entfernt, und die Installationsdatei zeigt die oben genannte Fehlermeldung nicht unter Windows 2000 (oder Windows XP) an. Beachten Sie, dass dies die einzige Änderung an der Installationsdatei ist, und es gibt keine Codeänderungen an den Agent-Kernkomponenten selbst. Daher sind Sie von diesem Update nicht betroffen, wenn Agent 2.0 bereits installiert ist oder wenn Ihre Website ein Objekttag verwendet, um automatische Downloads der Agent-Kernkomponenten aus dem Microsoft Object Store auszulösen.
+
+
+      Wenn Sie die Installationsdatei der Agent-Kernkomponente in Ihre Anwendung einschließen oder die Installationsdatei auf Ihrem Server veröffentlichen, sollten Sie dieses Update herunterladen. Klicken Sie hierzu hier, und wählen Sie die Option "Dieses Programm auf Datenträger speichern" aus. Unter diesen Umständen benötigen Sie eine gültige und aktuelle Agent-Verteilungslizenz.
+
+
+      Alternativ können Sie dieses Problem auch umgehen, indem Sie bei der Installation der vorherigen Version der MSAGENT.exe Installationsdatei die Option automatisch verwenden. Der Shellbefehl lautet:
+
+
+      **MSAGENT.exe /q:a**
+
+
+      Dasselbe gilt für die -Agent-Sprachkomponenten, die ursprünglich im Oktober 1998 veröffentlicht wurden. Es gab eine Überprüfung, die verhinderte, dass die Komponenten für Arabisch, Französisch, Deutsch, Hebräisch, Italienisch, Japanisch, Koreanisch, Vereinfachtes Chinesisch, Spanisch und Chinesisch (traditionell) unter Windows 2000 (und Windows XP) installiert werden. Die neueren Versionen dieser Installationsdateien sowie die zusätzlichen 19 Sprachen, die im März 2000 hinzugefügt wurden, enthalten diese Überprüfung nicht und werden erfolgreich auf Windows 2000 (und Windows XP) installiert.
+  - question: >
+      Mein benutzerdefiniertes Zeichen weist ein unerwartetes Verhalten mit seiner Transparenzfarbe auf Windows 2000 (und Windows XP) auf.
+    answer: >
+      Dies ist ein bekanntes Problem bei Zeichen, die mit einer Palette von weniger als 256 Farben erstellt wurden. Probleme mit diesen Zeichen umfassen die Transparenzfarbe, die im Hintergrund angezeigt wird, transparenten Sprechblasentext, transparenten Sprechblasenrahmen oder transparenten Sprechblasenhintergrund. Beachten Sie, dass solche Zeichen dazu führen können, dass Ihre Anwendungen abstürzt, wenn sie im Dialogfeld "Agent-Zeichenauswahl" oder im Katalog des Microsoft Office-Assistenten geladen werden. Ihre benutzerdefinierten Zeichen müssen eine vollständige Palette mit 256 Farben verwenden. Sie können die für Office Assistant-Zeichen bereitgestellte Beispielpalette als Ausgangspunkt mit einer vollständigen Farbpalette von 256 Verwenden.
+  - question: >
+      Das Zeichen verwendet nicht die britisch-englische TTS-Engine, obwohl ich seine Sprach-ID auf Englisch (Britisch) &h0809 festgelegt habe.
+    answer: >
+      Stellen Sie zunächst sicher, dass Sie alle erforderlichen Komponenten installiert haben– Agent-Kernkomponenten, die SAPI-Laufzeitbinärdateien und eine SAPI4-konforme britisch-englische TTS-Engine wie die TTS3000 British English Engine, die auf der Seite Agent-Downloads zum Download zur Verfügung steht. Wenn Ihr Zeichen immer noch nicht die britisch-englische TTS-Engine verwendet, ist wahrscheinlich auch eine amerikanische englische TTS-Engine installiert. Da sowohl britisch als auch amerikanisches Englisch die gleiche primäre Sprache (Englisch) und amerikanisches Englisch die Standardsprache ist, wählt der -Agent die erste verfügbare amerikanische englische TTS-Engine aus, die von SAPI zurückgegeben wird. Um eine britisch-englische TTS-Engine zu verwenden, verwenden Sie stattdessen die TTSModeID-Eigenschaft des Zeichens. Die TTSModeID für die britisch-englische Stimme TTS3000 lautet beispielsweise {227A0E41-A92A-11d1-B17B-0020AFED142E}. In Microsoft Visual Basic können Sie diese Engine verwenden, indem Sie Merlins TTSModeID wie folgt festlegen:
+
+
+      AgentControl.Characters("Merlin"). TTSModeID = {227A0E41-A92A-11d1-B17B-0020AFED142E}
+  - question: >
+      Wenn das Volume des Zeichens mit dem Sprachtag \Vol=0 auf 0 festgelegt \, ist, hat es entweder keine Auswirkungen oder stürzt den AgentSvr ab.
+    answer: >
+      Dies ist ein bekanntes Problem. Bei Windows 95, Windows 98 und Windows Me-Betriebssystemen ändert sich das Volume des Zeichens nicht, sondern bleibt auf der zuvor festgelegten Ebene. Auf Windows NT 4.0-, Windows 2000- und Windows XP-Plattformen stürzt AgentSvr ab, auch wenn keine TTS-Engine installiert ist. Da der Bereich des Zeichenvolumens von 0 (Stille) bis 65535 (maximales Volumen) groß ist und der Unterschied zwischen den aufeinander folgenden Ebenen kaum erkennbar ist, besteht die einfache Problemumgehung darin, das Volume auf 1 anstelle von 0 festzulegen, wenn die Stimme des Zeichens unerhört sein soll.
+  - question: >
+      Die Return-Animation meines angepassten Zeichens wird nach den Animationen MoveDown, MoveLeft, MoveRight und/oder MoveUp nicht ordnungsgemäß wiedergegeben.
+    answer: Stellen Sie sicher, dass dem Sprechzustand eine einfache Sprechanimation zugewiesen ist. Beispielsweise können Sie einen einzelnen Frame verwenden, der aus der neutralen Position des Zeichens mit Überlagerungen besteht.
