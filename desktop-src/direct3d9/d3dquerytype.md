@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 7a9c20050e7d0dce5a19664d937c016a475a9a13
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 0778e879a6147c185964808ee4b4c302bd211ef3
+ms.sourcegitcommit: bfab92e16614d4fa54b044917358261232bda81a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343075"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "113489694"
 ---
 # <a name="d3dquerytype-enumeration"></a>D3DQUERYTYPE-Enumeration
 
@@ -30,7 +30,7 @@ Identifiziert den Abfragetyp. Informationen zu Abfragen finden Sie unter [Abfrag
 ```C++
 typedef enum D3DQUERYTYPE { 
   D3DQUERYTYPE_VCACHE             = 4,
-  D3DQUERYTYPE_ResourceManager    = 5,
+  D3DQUERYTYPE_RESOURCEMANAGER    = 5,
   D3DQUERYTYPE_VERTEXSTATS        = 6,
   D3DQUERYTYPE_EVENT              = 8,
   D3DQUERYTYPE_OCCLUSION          = 9,
@@ -105,60 +105,60 @@ Verwenden Sie diese Abfrage, um eine Anwendung zu benachrichtigen, wenn sich die
 <span id="D3DQUERYTYPE_TIMESTAMPFREQ"></span><span id="d3dquerytype_timestampfreq"></span>**D3DQUERYTYPE \_ TIMESTAMPFREQ**
 </dt> <dd>
 
-Dieses Abfrageergebnis ist **TRUE,** wenn nicht garantiert werden kann, dass die Werte aus D3DQUERYTYPE \_ TIMESTAMP-Abfragen während der gesamten Dauer der D3DQUERYTYPE \_ TIMESTAMPDISJOINT-Abfrage kontinuierlich sind. Andernfalls lautet das Abfrageergebnis **FALSE.**
+Dieses Abfrageergebnis ist **TRUE,** wenn nicht garantiert werden kann, dass die Werte aus D3DQUERYTYPE TIMESTAMP-Abfragen während der gesamten Dauer der \_ D3DQUERYTYPE \_ TIMESTAMPDISJOINT-Abfrage kontinuierlich sind. Andernfalls ist das Abfrageergebnis **FALSE.**
 
 </dd> <dt>
 
 <span id="D3DQUERYTYPE_PIPELINETIMINGS"></span><span id="d3dquerytype_pipelinetimings"></span>**D3DQUERYTYPE \_ PIPELINETIMINGS**
 </dt> <dd>
 
-Prozentsatz der Zeit, die Pipelinedaten verarbeitet.
+Prozent der Zeit für die Verarbeitung von Pipelinedaten.
 
 </dd> <dt>
 
-<span id="D3DQUERYTYPE_INTERFACETIMINGS"></span><span id="d3dquerytype_interfacetimings"></span>**D3DQUERYTYPE \_ INTERFACETIMINGS**
+<span id="D3DQUERYTYPE_INTERFACETIMINGS"></span><span id="d3dquerytype_interfacetimings"></span>**\_D3DQUERYTYPE-SCHNITTSTELLETIMINGS**
 </dt> <dd>
 
-Prozentsatz der Zeit, die Daten im Treiber verarbeitet.
+Prozent der Zeit für die Verarbeitung von Daten im Treiber.
 
 </dd> <dt>
 
 <span id="D3DQUERYTYPE_VERTEXTIMINGS"></span><span id="d3dquerytype_vertextimings"></span>**D3DQUERYTYPE \_ VERTEXTIMINGS**
 </dt> <dd>
 
-Prozentsatz der Zeit für die Verarbeitung von Vertex-Shaderdaten.
+Prozent der Zeit für die Verarbeitung von Vertex-Shaderdaten.
 
 </dd> <dt>
 
 <span id="D3DQUERYTYPE_PIXELTIMINGS"></span><span id="d3dquerytype_pixeltimings"></span>**D3DQUERYTYPE \_ PIXELTIMINGS**
 </dt> <dd>
 
-Prozentsatz der Zeit für die Verarbeitung von Pixel-Shaderdaten.
+Prozent der Zeit für die Verarbeitung von Pixel-Shaderdaten.
 
 </dd> <dt>
 
 <span id="D3DQUERYTYPE_BANDWIDTHTIMINGS"></span><span id="d3dquerytype_bandwidthtimings"></span>**D3DQUERYTYPE \_ BANDWIDTHTIMINGS**
 </dt> <dd>
 
-Vergleiche der Durchsatzmessung zum Besseren des Verständnisses der Leistung einer Anwendung.
+Vergleiche der Durchsatzmessung, um die Leistung einer Anwendung besser zu verstehen.
 
 </dd> <dt>
 
 <span id="D3DQUERYTYPE_CACHEUTILIZATION"></span><span id="d3dquerytype_cacheutilization"></span>**D3DQUERYTYPE \_ CACHEUTILIZATION**
 </dt> <dd>
 
-Messen Sie die Cachetrefferratenleistung für Texturen und indizierte Scheitelpunkte.
+Messen Sie die Leistung der Cachetrefferrate für Texturen und indizierte Scheitelungen.
 
 </dd> <dt>
 
 <span id="D3DQUERYTYPE_MEMORYPRESSURE"></span><span id="d3dquerytype_memorypressure"></span>**D3DQUERYTYPE \_ MEMORYPRESSURE**
 </dt> <dd>
 
-Effizienz der Speicherbelegung in einer [**D3DMEMORYPRESSURE-Struktur.**](d3dmemorypressure.md)
+Effizienz der Speicherzuweisung in einer [**D3DMEMORYPRESSURE-Struktur.**](d3dmemorypressure.md)
 
 Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 
-- D3DQUERYTYPE MEMORYPRESSURE ist nur in Direct3D9Ex verfügbar, das unter \_ Windows 7 (oder mehr aktuellem Betriebssystem) ausgeführt wird.
+- D3DQUERYTYPE MEMORYPRESSURE ist nur in Direct3D9Ex verfügbar, das auf \_ Windows 7 (oder mehr aktuellem Betriebssystem) ausgeführt wird.
 
 
 
@@ -166,7 +166,7 @@ Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -176,7 +176,7 @@ Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

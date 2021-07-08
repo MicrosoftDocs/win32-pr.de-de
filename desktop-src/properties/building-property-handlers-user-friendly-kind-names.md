@@ -1,38 +1,38 @@
 ---
-description: Das Eigenschaften System enthält eine Eigenschaft mit dem Namen System. Kind, die Elemente entsprechend der Dateinamenerweiterung in Typen unterteilt und die Endbenutzer leicht mit identifizieren können.
+description: Das Eigenschaftensystem enthält eine Eigenschaft namens System.Kind, die Elemente entsprechend der Dateinamenerweiterung in Typen aufteilt und mit der Endbenutzer leicht identifizieren können.
 ms.assetid: 1466b4c7-49ea-417a-ac94-7b45515ccb96
 title: Verwenden von Kind-Namen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f358306deaeb04d4ea30b10b0665cdc8323b4d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dca36d7c1de587efd8d96f0c18aaca9457721714
+ms.sourcegitcommit: ecd0ba4732f5264aab9baa2839c11f7fea36318f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344818"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "113481875"
 ---
 # <a name="using-kind-names"></a>Verwenden von Kind-Namen
 
-Das-Eigenschaften System enthält eine Eigenschaft mit dem Namen `System.Kind` , die Elemente entsprechend der Dateinamenerweiterung in Typen unterteilt und die Endbenutzer leicht mit identifizieren können.
+Das Eigenschaftensystem enthält eine Eigenschaft namens `System.Kind` , die Elemente entsprechend der Dateinamenerweiterung in Typen aufteilt und mit der sich Endbenutzer leicht identifizieren können.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Informationen zur System. Kind-Eigenschaft](#about-the-systemkind-property)
--   [Kind-Wert Hierarchie und Registrierung](#kind-value-hierarchy-and-registration)
+-   [Informationen zur System.Kind-Eigenschaft](#about-the-systemkind-property)
+-   [Hierarchie und Registrierung von Kind-Werten](#kind-value-hierarchy-and-registration)
 -   [Weitere Ressourcen](#additional-resources)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="about-the-systemkind-property"></a>Informationen zur System. Kind-Eigenschaft
+## <a name="about-the-systemkind-property"></a>Informationen zur System.Kind-Eigenschaft
 
-Art wurde in Windows Vista eingeführt, um einen benutzerfreundlicheren Begriff "Dateityp" auszudrücken. Die `System.Kind` -Eigenschaft teilt Elemente in Typen auf und gibt einen Namen an, mit dem Endbenutzer identifizieren können (z. b. Dokumente, Musik, Bilder usw.). Daher sind Kind-Namen als benutzerfreundlich bekannt. Da die `System.Kind` -Eigenschaft auf denselben Wert für Elemente desselben Dateityps festgelegt ist und Elemente, die ähnliche Merkmale aufweisen, mit einer gemeinsamen Eigenschaft verknüpft werden, können das System und der Benutzer für die Gruppe als Ganzes agieren. Beispielsweise kann die- `System.Kind` Eigenschaft verwendet werden, um eine Suche auf Elemente einer bestimmten Art zu beschränken, die relevantesten Eigenschaften für ein Element in der Inhaltsansicht anzuzeigen oder ähnliche Elemente zu gruppieren.
+Kind wurde in Windows Vista eingeführt, um ein benutzerfreundlicheres Konzept des Dateityps auszudrücken. Die `System.Kind` -Eigenschaft unterteilt Elemente in Typen und stellt einen Kind-Namen bereit, mit dem Endbenutzer identifizieren können, z. B. Dokumente, Musik, Bilder usw. Daher werden Kind-Namen als benutzerfreundliche Namen bezeichnet. Da die `System.Kind` -Eigenschaft für Elemente desselben Dateityps auf den gleichen Wert festgelegt ist und Elemente mit ähnlichen Eigenschaften einer gemeinsamen Eigenschaft zuweist, können das System und der Benutzer für die gruppe als Ganzes agieren. Beispielsweise kann die `System.Kind` -Eigenschaft verwendet werden, um eine Suche auf Elemente einer bestimmten Art zu beschränken, die relevantesten Eigenschaften für ein Element in der Inhaltsansicht anzuzeigen oder ähnliche Elemente zu gruppieren.
 
-Da Kind eine mehrwertige Zeichen folgen Eigenschaft ist, können Sie einen- `audio;video` Wert oder einen- `link;document` Wert haben. Ein- `System.Kind` Wert ist eine geordnete Liste von Zeichen folgen Werten. In einigen Fällen gibt es möglicherweise nur ein Element in der Liste. In anderen Fällen kann ein Element zu mehr als einer Art gehören. Ein Beispiel für ein Element, das zu mehr als einer Art gehört, finden Sie im Beispiel für den Registrierungsschlüssel in diesem Thema. Die Zeichen folgen Werte stammen aus einem vordefinierten Satz bekannter Werte. Die Werte werden mithilfe der Groß-/Kleinschreibung und der Gebiets Schema spezifischen Zeichen folgen Vergleichsfunktionen verglichen. Diese Zeichen folgen sind nicht lokalisiert.
+Da Kind eine Zeichenfolgeneigenschaft mit mehreren Werten ist, können Sie über einen - oder einen `audio;video` `link;document` Kind-Wert verfügen. Ein `System.Kind` Wert ist eine sortierte Liste von Zeichenfolgenwerten. In einigen Fällen gibt es möglicherweise nur ein Element in dieser Liste. In anderen Fällen kann ein Element zu mehreren Arten gehören. Ein Beispiel für ein Element, das zu mehreren Arten gehört, finden Sie im Registrierungsschlüsselbeispiel in diesem Thema. Die Zeichenfolgenwerte stammen aus einem vordefinierten Satz bekannter Werte. Die Werte werden mithilfe von Zeichenfolgenvergleichsfunktionen ohne Unterscheidung nach Groß-/Kleinschreibung und gebietsschemaunabhängig verglichen. Diese Zeichenfolgen sind nicht lokalisiert.
 
-Einige Arten von Namen sind bereits Eigenschaften und layoutmustern zugeordnet. Beispielsweise werden Elementen, `Kind.Picture` die mit-und-Elementen verknüpft sind, die mit verknüpft sind `Kind.Document` , andere Eigenschaften angezeigt, auch wenn Sie sich in derselben Ansicht befinden, aufgrund der Eigenschaften und Layoutmuster, die diesen beiden Namen bereits zugeordnet sind. Jede Elementart kann einem von vier eindeutigen layoutmustern zugeordnet werden, die die Anzahl der Eigenschaften definiert, die für jedes Element und dessen Layout angezeigt werden. Weitere Informationen finden Sie unter [Content View based on the file type or Kind Association](/previous-versions/windows/desktop/legacy/ee330739(v=vs.85)).
+Einige Kind-Namen sind bereits Eigenschaften und Layoutmustern zugeordnet. Beispielsweise zeigen Elemente, die zugeordnet `Kind.Picture` sind, und Elemente, die zugeordnet `Kind.Document` sind, unterschiedliche Eigenschaften an, auch wenn sie sich in derselben Ansicht befinden. Dies liegt an den Eigenschaften und Layoutmustern, die diesen beiden Kind-Namen bereits zugeordnet sind. Jede Elementart kann einem von vier eindeutigen Layoutmustern zugeordnet werden, die die Anzahl der Eigenschaften definieren, die für jedes Element und dessen Layout angezeigt werden. Weitere Informationen finden Sie unter [Inhaltsansicht basierend auf dem Dateityp oder der Art-Zuordnung.](/previous-versions/windows/desktop/legacy/ee330739(v=vs.85))
 
-## <a name="kind-value-hierarchy-and-registration"></a>Kind-Wert Hierarchie und Registrierung
+## <a name="kind-value-hierarchy-and-registration"></a>Hierarchie und Registrierung von Kind-Werten
 
-Ein `Kind` Wert muss einen der Werte in der folgenden Liste darstellen.
+Ein `Kind` -Wert muss einen der Werte in der folgenden Liste darstellen.
 
 ```
 Item
@@ -58,9 +58,9 @@ Item
       InstantMessage
 ```
 
-Eigenschaften Handler können Ihre `System.Kind` Eigenschaft statisch über die Registrierung deklarieren, oder Sie können den Wert dynamisch über Ihren Code bereitstellen, wie dies bei einer Standard Eigenschaft der Fall wäre.
+Eigenschaftenhandler können ihre `System.Kind` Eigenschaft statisch über die Registrierung deklarieren, oder sie können den Wert dynamisch über ihren Code bereitstellen, wie sie es mit einer Standardeigenschaft würden.
 
-Um die Eigenschaft statisch zu definieren `Kind` , wird unter dem **kindmap** -Registrierungsschlüssel ein **reg \_ SZ** -Wert Eintrag hinzugefügt, wie im folgenden Beispiel gezeigt.
+Um die Eigenschaft statisch zu `Kind` definieren, wird ein **REG \_ SZ-Werteintrag** unter dem **KindMap-Registrierungsschlüssel** hinzugefügt, wie im folgenden Beispiel gezeigt.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -74,30 +74,30 @@ HKEY_LOCAL_MACHINE
                      .ccc = Contact; Communications
 ```
 
-Beachten Sie, dass `Kind` ein einzelner Wert oder mehrere Werte in einer durch Semikolons getrennten Zeichenfolge sein kann. Wenn Sie mehrere Werte angeben, wird der spezifischere `Kind` Wert zuerst mit dem am wenigsten spezifischen Wert aufgelistet. Im Beispiel wird "Contact" zuerst benannt, da es hierarchisch spezifischer als die Kommunikation ist. Das Wert **Element** wird angenommen und sollte nicht explizit explizit angegeben werden.
+Beachten Sie, dass ein `Kind` einzelner Wert oder mehrere Werte in einer durch Semikolons getrennten Zeichenfolge sein können. Wenn Sie mehrere Werte bereitstellen, wird der spezifischste `Kind` Wert zuerst mit dem am wenigsten spezifischen Wert aufgeführt. Im Beispiel wird Contact zuerst benannt, da er hierarchisch spezifischer als Communications ist. Der Wert **Item** wird angenommen und sollte nicht explizit angegeben werden.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
--   Eine Referenz Dokumentation zu Eigenschaften finden Sie unter [System. Kind](./props-system-kind.md) und [System. kindtext](./props-system-kindtext.md).
--   Weitere Informationen zum Erstellen neuer oder vorhandener Dateitypen finden Sie unter [Dateitypen](../shell/fa-file-types.md).
+-   Eine Referenzdokumentation zu Eigenschaften finden Sie unter [System.Kind](./props-system-kind.md) und [System.KindText.](./props-system-kindtext.md)
+-   Weitere Informationen zum Erstellen neuer oder verwenden vorhandener Dateitypen finden Sie unter [Dateitypen.](../shell/fa-file-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Grundlegendes zu Eigenschaften Handlern](./building-property-handlers-properties.md)
+[Grundlegendes zu Eigenschaftenhandlern](./building-property-handlers-properties.md)
 </dt> <dt>
 
-[Verwenden von Eigenschaften Listen](./building-property-handlers-property-lists.md)
+[Verwenden von Eigenschaftenlisten](./building-property-handlers-property-lists.md)
 </dt> <dt>
 
-[Initialisieren von Eigenschaften Handlern](./building-property-handlers-property-handlers.md)
+[Initialisieren von Eigenschaftenhandlern](./building-property-handlers-property-handlers.md)
 </dt> <dt>
 
-[Registrieren und Verteilen von Eigenschaften Handlern](./prophand-reg-dist.md)
+[Registrieren und Verteilen von Eigenschaftenhandlern](./prophand-reg-dist.md)
 </dt> <dt>
 
-[Bewährte Methoden und häufig gestellte Fragen zu Eigenschaften Handlern](./prophand-bestprac-faq.md)
+[Bewährte Methoden und häufig gestellte Fragen zu Eigenschaftenhandlern](./prophand-bestprac-faq.yml)
 </dt> </dl>
 
  

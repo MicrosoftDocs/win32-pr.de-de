@@ -1,31 +1,32 @@
 ---
-title: Verwenden von Deskriptoren direkt in der Stammsignatur
-description: Anwendungen können Deskriptoren direkt in die Stamm Signatur einfügen, um zu vermeiden, dass Sie einen deskriptorheap durchlaufen müssen.
+title: Direktes Verwenden von Deskriptoren in der Stammsignatur
+description: Um zu vermeiden, dass ein Deskriptorhap durchgehen muss, können Sie einen Deskriptor direkt in die Stammsignatur einordnen.
 ms.assetid: 033E3D8F-3003-42F7-BF77-68A7D62802E5
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd97a7d68f5c9b51b6d15d3b71c6e30d04bb36e5
-ms.sourcegitcommit: 83afb2f3e9e5d37f3f5a11e975515e9ed8b044ff
+ms.openlocfilehash: ff9d459f3195a4cf722ea210edbe63e5c1bf3cc8
+ms.sourcegitcommit: 170bc12e9724d00cecbb96d57c7226c51e135dee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "104548742"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "113489169"
 ---
-# <a name="using-descriptors-directly-in-the-root-signature"></a>Verwenden von Deskriptoren direkt in der Stammsignatur
+# <a name="using-descriptors-directly-in-the-root-signature"></a>Direktes Verwenden von Deskriptoren in der Stammsignatur
 
-Anwendungen können Deskriptoren direkt in die Stamm Signatur einfügen, um zu vermeiden, dass Sie einen deskriptorheap durchlaufen müssen. Diese Deskriptoren belegen viel Platz in der Stamm Signatur (siehe den Abschnitt root Signature Limits), sodass Anwendungen Sie sparsam verwenden müssen.
+Um zu vermeiden, dass ein Deskriptorhap durchgehen muss, können Sie einen Deskriptor direkt in die Stammsignatur einordnen. Diese Deskriptoren nehmen viel Speicherplatz in der Stammsignatur ein (siehe [Grenzwerte](/windows/win32/direct3d12/root-signature-limits)für Stammsignaturen). Daher wird empfohlen, sie nur wenig zu verwenden.
 
-Ein Beispiel für die Verwendung ist das Platzieren einer Konstanten Puffer Ansicht (Constant Buffer views, CBV), die pro zeichnen im Stamm Layout geändert wird, sodass der deskriptorheap-Speicherplatz nicht von der Anwendung pro zeichnen zugeordnet werden muss (und das verweisen auf eine Deskriptortabelle an der neuen Position im deskriptorheap gespeichert werden). Wenn Sie etwas in die Stamm Signatur einfügen, übergibt die Anwendung lediglich die Versionskontrolle an den Treiber, aber dies ist die Infrastruktur, die Sie bereits haben.
+Eine Beispielverwendung wäre, im Stammlayout eine konstante Pufferansicht (CONSTANT Buffer View, CBV) zu platzieren, die sich pro Zeichnen ändert. Dies bedeutet, dass der Deskriptor-Heapspeicher nicht von der Anwendung pro Zeichnen zugeordnet werden muss (und speichert das Verweisen auf eine Deskriptortabelle an der neuen Position im Deskriptor-Heap). Indem sie etwas in die Stammsignatur setzt, überliegt die Anwendung lediglich die Verantwortung für die Versionserstellung dem Treiber. aber dies ist die Infrastruktur, über die Treiber bereits verfügen.
 
-Für das Rendering, das sehr wenige Ressourcen verwendet, ist möglicherweise keine Deskriptortabelle/Heap-Verwendung erforderlich, wenn alle benötigten Deskriptoren direkt in die Stamm Signatur eingefügt werden können.
+Für Rendering, das nur sehr wenige Ressourcen verwendet, ist die Verwendung von Deskriptortabellen/Heaps möglicherweise überhaupt nicht erforderlich, wenn alle erforderlichen Deskriptoren direkt in der Stammsignatur platziert werden können.
 
-In der Stamm Signatur werden nur die folgenden deskriptortypen unterstützt:
-- Cbvs.
-- Shader-Ressourcen Sichten (Srvs)/unordered Access views (UAVs) der Puffer Ressourcen, in denen das SRV/UAV-Format nur 32 Bit Float/uint/Sint-Komponenten enthält (es gibt keine Formatkonvertierung).
-- Srvs von Raytracing-beschleunigungsstrukturen in lokalen oder globalen Stamm Signaturen. 
+Dies sind die einzigen Typen von Deskriptoren, die in der Stammsignatur unterstützt werden.
 
-UAVs im Stamm können keine Indikatoren zugeordnet werden. Deskriptoren in der Stamm Signatur werden jeweils als einzelne separate Deskriptoren angezeigt, &mdash; die nicht dynamisch indiziert werden können.
+- Konstantenpufferansicht (CBVs).
+- Shaderressourcenansichten (SRVs) bzw. ungeordnete Zugriffsansichten (UNOrdered Access Views, UAVs) von Pufferressourcen, bei denen keine Formatkonvertierung erforderlich ist (nicht typisierte Puffer). Beispiele für nicht typisierte Puffer, die mit Stammdeskriptoren gebunden werden können, sind `StructuredBuffer<type>` `RWStructuredBuffer<type>` , und `ByteAddressBuffer` `RWByteAddressBuffer` . Typierte Puffer wie `Buffer<uint>` und `Buffer<float2>` können nicht.
+- SRVs von Raytracingbeschleunigungsstrukturen in lokalen oder globalen Stammsignaturen. 
+
+Einem UAV im Stammverzeichnis können keine Leistungsindikatoren zugeordnet sein. Deskriptoren in der Stammsignatur werden jeweils als einzelne separate Deskriptoren angezeigt, &mdash; die nicht dynamisch indiziert werden können.
 
 ``` syntax
 struct SceneData
@@ -37,20 +38,20 @@ struct SceneData
 ConstantBuffer<SceneData> mySceneData : register(b6);
 ```
 
-Im obigen Beispiel `mySceneData` kann nicht als Array deklariert werden, wie in, `cbuffer mySceneData[2]` Wenn es in einem Deskriptor in der Stamm Signatur zugeordnet werden soll, da die Indizierung über Deskriptoren in der Stamm Signatur nicht unterstützt wird. Die Anwendung kann separate einzelne Konstante Puffer definieren und Sie bei Bedarf als separaten Eintrag in der Stamm Signatur definieren. Beachten Sie, dass `mySceneData` ein Array innerhalb von oben vorhanden ist `bar[2]` . Die dynamische Indizierung innerhalb des Konstanten Puffers ist gültig. ein Deskriptor in der Stamm Signatur verhält sich so, wie sich der gleiche Deskriptor verhält, wenn er über einen deskriptorheap aufgerufen wird. Dies steht im Gegensatz zu Inlining-Konstanten direkt in der Stamm Signatur, die auch wie ein konstanter Puffer angezeigt werden, außer mit der Einschränkung, dass die dynamische Indizierung innerhalb der Inline Konstanten nicht zulässig ist `bar[2]` .
+Im obigen Beispiel kann nicht als Array deklariert werden, wie in , wenn es einem `mySceneData` Deskriptor in der Stammsignatur zugeordnet werden `cbuffer mySceneData[2]` soll. Das liegt daran, dass die Deskriptorübergreifende Indizierung in der Stammsignatur nicht unterstützt wird. Bei Wunsch können Sie separate einzelne konstante Puffer definieren und diese jeweils als separaten Eintrag in der Stammsignatur definieren. Beachten `mySceneData` Sie, dass sich in der obigen Ansicht ein Array `bar[2]` befindet. Die dynamische Indizierung innerhalb des Konstantenpuffers ist gültig. Ein Deskriptor in der Stammsignatur verhält sich genauso wie derselbe Deskriptor, wenn über einen &mdash; Deskriptor-Heap darauf zugegriffen wird. Dies steht im Gegensatz zu Inliningkonst konstanten direkt in der Stammsignatur, die auch wie ein konstanter Puffer erscheinen, mit Ausnahme der Einschränkung, dass die dynamische Indizierung innerhalb der Inlinekonst constants nicht zulässig ist und daher dort nicht zulässig `bar[2]` wäre.
 
-Die folgenden APIs (von der [**ID3D12GraphicsCommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist) -Schnittstelle) dienen zum Festlegen von Deskriptoren direkt auf der Stamm Signatur:
+Diese APIs (von der [**ID3D12GraphicsCommandList-Schnittstelle)**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist) sind zum Festlegen von Deskriptoren direkt in der Stammsignatur.
 
--   [**Setcomputerootconstantbufferview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootconstantbufferview)
--   [**Setgraphicsrootconstantbufferview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootconstantbufferview)
--   [**Setcomputerootshaderresourceview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootshaderresourceview)
--   [**Setgraphicsrootshaderresourceview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootshaderresourceview)
--   [**Setcomputerootunorderedaccessview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootunorderedaccessview)
--   [**Setgraphicsrootunorderedaccessview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootunorderedaccessview)
+-   [**SetComputeRootConstantBufferView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootconstantbufferview)
+-   [**SetGraphicsRootConstantBufferView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootconstantbufferview)
+-   [**SetComputeRootShaderResourceView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootshaderresourceview)
+-   [**SetGraphicsRootShaderResourceView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootshaderresourceview)
+-   [**SetComputeRootUnorderedAccessView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootunorderedaccessview)
+-   [**SetGraphicsRootUnorderedAccessView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootunorderedaccessview)
 
-> [!Note]  
-> Es gibt kein Konzept eines "root Deskriptor Array" in Direct3D 12. Deskriptorarrays werden nur in deskriptorheaps unterstützt.
+> [!NOTE]  
+> Es gibt kein Konzept eines *Stammdeskriptorarrays* in Direct3D 12. Deskriptorarrays werden nur in Deskriptorhaps unterstützt.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-[Stamm Signaturen](root-signatures.md)
+* [Stammsignaturen](root-signatures.md)
