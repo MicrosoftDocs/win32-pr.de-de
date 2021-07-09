@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das benutzerkonfigurierbare PageOutputBin-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: c5050804-0e77-4d26-bf00-5d9690102b18
 title: PageOutputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 557a742604f6e643e8812493049b7f2b118e262c
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 5a9963bf2ca7a2dd60be37c797a27c6ff09b1206
+ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997527"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113548998"
 ---
 # <a name="pageoutputbin"></a>PageOutputBin
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die vollständige Liste der unterstützten Container für das Gerät. Ermöglicht die Angabe des Ausgabebehälters pro Seite. Die Schlüsselwörter JobOutputBin, DocumentOutputBin und PageOutputBin schließen sich gegenseitig aus, nur eines sollte in einem PrintTicket- oder Print Capabilities-Dokument angegeben werden.
+Beschreibt die vollständige Liste der unterstützten Behälter für das Gerät. Ermöglicht die Angabe des Ausgabebehälters pro Seite. Die Schlüsselwörter JobOutputBin, DocumentOutputBin und PageOutputBin schließen sich gegenseitig aus, nur eines sollte in einem PrintTicket- oder Druckfunktionen-Dokument angegeben werden.
 
 -   [Elementinformationen](#element-information)
--   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [Strukturelle Inhalte](#structural-content)
+-   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -35,9 +35,9 @@ Beschreibt die vollständige Liste der unterstützten Container für das Gerät.
 
  
 
-## <a name="structural-content"></a>Strukturell
+## <a name="structural-content"></a>Strukturelle Inhalte
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:Feature name="psk:PageOutputBin">
@@ -61,15 +61,15 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 
 | Name                                   | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                             |
 |----------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
-| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>        |
-| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | FaceDownTray, FaceUpTray, MailBox, Sorter, Stacker, Finisher None.<br/>                                                                                                         | Gibt den allgemeinen Typ des Bin-Werts an.<br/>                                   |
+| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
+| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | n/v<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>        |
+| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | n/v<br/>        | FaceDownTray, FaceUpTray, MailBox, Sorter, Stacker, Finisher None.<br/>                                                                                                         | Gibt den allgemeinen Typ des Bin-Werts an.<br/>                                   |
 | \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Größer 0<br/>                                                                                                                                                            | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Bin-Werts an.<br/> |
 
 

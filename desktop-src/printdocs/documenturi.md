@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Abrufen von Informationen zur DocumentURI-Eigenschaft. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 7926ae9b-e195-4391-9006-1eb4cf386f88
 title: DocumentURI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0d339b1b469f276492f7989b0ed7951ca1edad8
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 2cb4d1572417ac85e14c25c238be1d49611ba858
+ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997067"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113548808"
 ---
 # <a name="documenturi"></a>DocumentURI
 
@@ -19,7 +19,7 @@ Gibt einen URI (Uniform Resource Identifier) für das Dokument an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -59,7 +59,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
 
 ``` syntax
 <psf:Property name="psk:DocumentURI">

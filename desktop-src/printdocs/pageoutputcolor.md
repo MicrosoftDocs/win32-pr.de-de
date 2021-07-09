@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das vom Benutzer konfigurierbare PageOutputColor-Element. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 1afcf2e6-5d6d-4b87-a005-15d42a610f69
 title: PageOutputColor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4791ca4a53b8bdcc43a32c5c7aa5a1e38bbe1e5
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 79fc71f58bde44224642d3a5f6979e3aef929976
+ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998047"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113548988"
 ---
 # <a name="pageoutputcolor"></a>PageOutputColor
 
@@ -19,7 +19,7 @@ Beschreibt die Merkmale der Farbeinstellungen für die Ausgabe.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -67,18 +67,18 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                                   | Datentyp          | Einheit                      | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                           |
 |----------------------------------------|--------------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/>     | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                |
-| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>            | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                      |
-| \_DeviceBitsPerPixelValue\_<br/> | integer<br/> | Bits pro Pixel<br/> | Größer als 0, kleiner als der maximale Wert für die Geräteunterstützung.<br/>                                                                                                                    | Numerischer Wert, der die Anzahl der Bits pro Pixel der vom Drucker unterstützten Farbdaten angibt.<br/>                          |
-| \_DriverBitsPerPixelValue\_<br/> | integer<br/> | Bits pro Pixel<br/> | Größer als 0, kleiner als der maximale Wert für die Geräteunterstützung.<br/>                                                                                                                    | Numerischer Wert, der die Anzahl der Bits pro Pixel angibt, die der Kerntreiber für seinen Bitmaprenderingpuffer verwenden soll.<br/> |
+| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/>     | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                |
+| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | n/v<br/>            | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                      |
+| \_DeviceBitsPerPixelValue\_<br/> | integer<br/> | Bits pro Pixel<br/> | Größer als 0, kleiner als der maximale Geräteunterstützungswert.<br/>                                                                                                                    | Numerischer Wert, der die Anzahl der vom Drucker unterstützten Farbdaten pro Pixel angibt.<br/>                          |
+| \_DriverBitsPerPixelValue\_<br/> | integer<br/> | Bits pro Pixel<br/> | Größer als 0, kleiner als der maximale Geräteunterstützungswert.<br/>                                                                                                                    | Numerischer Wert, der die Anzahl der Bits pro Pixel angibt, die der Kerntreiber für seinen Bitmaprenderingpuffer verwenden soll.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
 
-Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:PageOutputColor">

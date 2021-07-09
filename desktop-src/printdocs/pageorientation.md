@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das benutzerkonfigurierbare PageOrientation-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 52f02fc1-56fb-404d-8939-df3a4b21570d
 title: PageOrientation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01a94fb97ad1e64c7f55fd9520ed8a648a74f550
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: b6f0af08fcd29f34bb55bd16b1eac50487e96ffb
+ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997537"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549118"
 ---
 # <a name="pageorientation"></a>PageOrientation
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Beschreibt die Ausrichtung des physischen Medienblatts.
 
@@ -21,18 +21,18 @@ Beschreibt die Ausrichtung des physischen Medienblatts.
 
 | Option                       | Definition                                                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------|
-| Querformat <br/>        | Inhalt wird auf Seite 90 gedreht? Grad CCW relativ zur Standardausrichtung (Hochformat).<br/>  |
+| Querformat <br/>        | Der Inhalt wird auf der Seite 90 gedreht? Grad CCW relativ zur Standardausrichtung (Hochformat).<br/>  |
 | Hochformat <br/>         | Standardausrichtung.<br/>                                                                        |
-| ReverseLandscape <br/> | Inhalt wird auf Seite 270 gedreht? Grad CCW relativ zur Standardausrichtung (Hochformat).<br/> |
-| ReversePortrait <br/>  | Inhalt wird auf Seite 180 gedreht? Grad relativ zur Standardausrichtung (Hochformat).<br/>     |
+| ReverseLandscape <br/> | Der Inhalt wird auf der Seite 270 gedreht? Grad CCW relativ zur Standardausrichtung (Hochformat).<br/> |
+| ReversePortrait <br/>  | Der Inhalt wird auf der Seite 180 gedreht? Grad relativ zur Standardausrichtung (Hochformat).<br/>     |
 
 
 
  
 
 -   [Elementinformationen](#element-information)
--   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [Strukturelle Inhalte](#structural-content)
+-   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -42,15 +42,15 @@ Beschreibt die Ausrichtung des physischen Medienblatts.
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Elementtyp <br/>   | Funktion<br/>                                                                                                                                                                                      |
 | Bereichspräfix <br/> | Seite<br/>                                                                                                                                                                                         |
-| Hinweise <br/>          | Wenn ein Druckergerät nur eine Querformatrichtung unterstützen kann und diese Richtung als "Umgekehrte Querformat" bezeichnet wird, wird die Seitenausrichtung weiterhin als "Querformat" betrachtet.<br/> |
+| Hinweise <br/>          | Wenn ein Druckergerät nur eine Querformatrichtung unterstützen kann und diese Richtung als "umgekehrtes Querformat" bezeichnet wird, wird die Seitenausrichtung weiterhin als "Querformat" betrachtet.<br/> |
 
 
 
  
 
-## <a name="structural-content"></a>Strukturell
+## <a name="structural-content"></a>Strukturelle Inhalte
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:Feature name="psk:PageOrientation">
@@ -68,14 +68,14 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/> |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | n/v<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/> |
 
 
 

@@ -1,21 +1,21 @@
 ---
 title: PageBlackGenerationProcessingUnderColorAdditionStart
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Überprüfen Sie den Parameter PageBlackGenerationProcessingUnderColorAdditionStart. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 6c2a7bb5-436d-40ed-a855-242a6a04bc16
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 595bc3e4514b1a2e8a4d302005b97e2625a560e2
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 11bdbd970f30a7d573b7c803ea447e4ac3e94ca2
+ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999187"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549348"
 ---
 # <a name="pageblackgenerationprocessingundercoloradditionstart"></a>PageBlackGenerationProcessingUnderColorAdditionStart
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Schattenebene, unter der UCEs angewendet werden.
+Beschreibt die Schattenebene, unter der UKA angewendet wird.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Beschreibt die Schattenebene, unter der UCEs angewendet werden.
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
 | Bereichspräfix <br/> | Seite<br/>                                            |
-| Hinweise <br/>          | Verknüpft mit dem PageBlackGenerationProcessing-Element<br/> |
+| Hinweise <br/>          | Mit PageBlackGenerationProcessing-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Beschreibt die Schattenebene, unter der UCEs angewendet werden.
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageBlackGenerationProcessingUnderColorAdditionStart">
@@ -66,7 +66,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 
