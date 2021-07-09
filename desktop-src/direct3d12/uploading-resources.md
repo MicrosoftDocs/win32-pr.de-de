@@ -1,42 +1,42 @@
 ---
-title: Hochladen verschiedener Arten von Ressourcen
-description: Zeigt, wie ein Puffer verwendet wird, um sowohl Konstante Puffer Daten als auch Vertex-Puffer Daten in die GPU hochzuladen und Daten in Puffern ordnungsgemäß zuzuordnen und zu platzieren.
+title: Hochladen verschiedener Ressourcentypen
+description: Zeigt, wie Sie einen Puffer verwenden, um sowohl konstante Pufferdaten als auch Scheitelpunktpufferdaten in die GPU hochzuladen, und wie Sie Daten ordnungsgemäß unterteilen und in Puffern platzieren.
 ms.assetid: 255B0482-21D6-4276-8009-3F3891879CA1
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd2edca2cd9f4d3becf5036056a89f91c50f2c24
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b03d4755124bbadcdd255a6e99739b710845ab14
+ms.sourcegitcommit: a30d0436a84986234df673c6def6694d5a8579f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74104720"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113563780"
 ---
-# <a name="uploading-different-types-of-resources"></a>Hochladen verschiedener Arten von Ressourcen
+# <a name="uploading-different-types-of-resources"></a>Hochladen verschiedener Ressourcentypen
 
-Zeigt, wie ein Puffer verwendet wird, um sowohl Konstante Puffer Daten als auch Vertex-Puffer Daten in die GPU hochzuladen und Daten in Puffern ordnungsgemäß zuzuordnen und zu platzieren. Die Verwendung eines einzelnen Puffers steigert die Flexibilität der Speicherauslastung und bietet Anwendungen eine strengere Kontrolle der Speicherauslastung. Zeigt außerdem die Unterschiede zwischen den D3D11-und D3D12-Modellen zum Hochladen unterschiedlicher Ressourcentypen.
+Zeigt, wie Sie einen Puffer verwenden, um sowohl konstante Pufferdaten als auch Scheitelpunktpufferdaten in die GPU hochzuladen, und wie Sie Daten ordnungsgemäß unterteilen und in Puffern platzieren. Die Verwendung eines einzelnen Puffers erhöht die Flexibilität bei der Speicherauslastung und bietet Anwendungen eine strengere Kontrolle über die Speicherauslastung. Zeigt außerdem die Unterschiede zwischen den Modellen Direct3D 11 und Direct3D 12 zum Hochladen verschiedener Ressourcentypen.
 
--   [Hochladen verschiedener Arten von Ressourcen](#upload-different-types-of-resources)
-    -   [Code Beispiel: D3D11](#code-example-d3d11)
-    -   [Code Beispiel: D3D12](#code-example-d3d12)
--   [Konstanten](#constants)
--   [Ressourcen](#uploading-different-types-of-resources)
--   [Ressourcen Größen Reflektion](#resource-size-reflection)
--   [Puffer Ausrichtung](#buffer-alignment)
--   [Verwandte Themen](#related-topics)
+## <a name="upload-different-types-of-resources"></a>Hochladen ressourcentypen
 
-## <a name="upload-different-types-of-resources"></a>Hochladen verschiedener Arten von Ressourcen
+In Direct3D 12 erstellen Sie einen Puffer, der verschiedene Arten von Ressourcendaten zum Hochladen aufnehmen soll, und Sie kopieren Ressourcendaten auf ähnliche Weise für verschiedene Ressourcendaten in den gleichen Puffer. Anschließend werden einzelne Ansichten erstellt, um diese Ressourcendaten an die Grafikpipeline im Direct3D 12-Ressourcenbindungsmodell zu binden.
 
-In D3D12 erstellen Anwendungen einen Puffer, um unterschiedliche Arten von Ressourcen Daten zum Hochladen zu unterstützen und Ressourcen Daten auf ähnliche Weise für verschiedene Ressourcen Daten in denselben Puffer zu kopieren. Anschließend werden einzelne Ansichten erstellt, um diese Ressourcen Daten an die Grafik Pipeline im neuen Ressourcen Bindungs Modell zu binden.
+In Direct3D 11 erstellen Sie separate Puffer für verschiedene Arten von Ressourcendaten (beachten Sie die verschiedenen, die unten im Direct3D 11-Beispielcode verwendet werden), binden jeden Ressourcenpuffer explizit an die Grafikpipeline und aktualisieren die Ressourcendaten mit verschiedenen Methoden basierend auf verschiedenen `BindFlags` Ressourcentypen.
 
-In D3D11 erstellen Anwendungen separate Puffer für verschiedene Typen von Ressourcen Daten (Beachten Sie die anderen `BindFlags` , die im folgenden Beispielcode für D3D11 verwendet werden), binden jeden Ressourcen Puffer explizit an die Grafik Pipeline und aktualisieren die Ressourcen Daten mit unterschiedlichen Methoden auf der Grundlage unterschiedlicher Ressourcentypen.
+Sowohl in Direct3D 12 als auch in Direct3D 11 sollten Sie Ressourcen nur dann hochladen, wenn die CPU die Daten einmal schreibt, und die GPU liest sie einmal.
 
-In D3D12 und D3D11 sollten Anwendungen nur uploadressourcen verwenden, bei denen die CPU die Daten einmal schreibt und die GPU Sie einmal liest. Wenn die GPU die Daten mehrmals liest, liest die GPU die Daten nicht linear, oder das Rendering ist bereits stark GPU-begrenzt. Die bessere Option ist möglicherweise die Verwendung von [**ID3D12GraphicsCommandList:: copytextureregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) oder [**ID3D12GraphicsCommandList:: copybufferregion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion) zum Kopieren der Upload-Puffer Daten in eine Standardressource. Eine Standardressource kann sich im physischen Videospeicher auf diskreten GPUs befinden.
+In einigen Fällen
+* Die GPU liest die Daten mehrmals, oder
+* Die GPU liest die Daten nicht linear, oder
+* das Rendering ist bereits erheblich gpu-eingeschränkt.
 
-### <a name="code-example-d3d11"></a>Code Beispiel: D3D11
+In diesen Fällen ist es möglicherweise besser, [**ID3D12GraphicsCommandList::CopyTextureRegion**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) oder [**ID3D12GraphicsCommandList::CopyBufferRegion**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion) zu verwenden, um die Uploadpufferdaten in eine Standardressource zu kopieren.
 
-``` syntax
-// D3D11: Separate buffers for each resource type.
+Eine Standardressource kann sich auf diskreten GPUs im physischen Videospeicher befinden.
+
+### <a name="code-example-direct3d-11"></a>Codebeispiel: Direct3D 11
+
+```cpp
+// Direct3D 11: Separate buffers for each resource type.
 
 void main()
 {
@@ -111,10 +111,10 @@ void DrawFrame()
 }
 ```
 
-### <a name="code-example-d3d12"></a>Code Beispiel: D3D12
+### <a name="code-example-direct3d-12"></a>Codebeispiel: Direct3D 12
 
-``` syntax
-// D3D12: One buffer to accommodate different types of resources
+```cpp
+// Direct3D 12: One buffer to accommodate different types of resources
 
 ComPtr<ID3D12Resource> m_spUploadBuffer;
 UINT8* m_pDataBegin = nullptr;    // starting position of upload buffer
@@ -265,67 +265,56 @@ UINT Align(UINT uLocation, UINT uAlign)
 }
 ```
 
-Beachten Sie die Verwendung der Hilfsstrukturen [**CD3DX12 \_ Heap \_ Eigenschaften**](cd3dx12-heap-properties.md) und [**CD3DX12 \_ Resource \_ DESC**](cd3dx12-resource-desc.md).
+Beachten Sie die Verwendung der [**Hilfsstrukturen**](cd3dx12-heap-properties.md) CD3DX12_HEAP_PROPERTIES und [**CD3DX12_RESOURCE_DESC**](cd3dx12-resource-desc.md).
 
 ## <a name="constants"></a>Konstanten
 
-Verwenden Sie die folgenden APIs, um Konstanten, Vertices und Indizes in einem Upload-oder Read-Back-Heap festzulegen:
+Verwenden Sie die folgenden APIs, um Konstanten, Scheitelungen und Indizes innerhalb eines Upload- oder Readback-Heaps zu setzen.
 
--   [**ID3D12Device:: kreateconstantbufferview**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createconstantbufferview)
--   [**ID3D12GraphicsCommandList:: iasetvertexbuffers**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers)
--   [**ID3D12GraphicsCommandList:: iasetindexbuffer**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetindexbuffer)
+-   [**ID3D12Device::CreateConstantBufferView**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createconstantbufferview)
+-   [**ID3D12GraphicsCommandList::IASetVertexBuffers**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers)
+-   [**ID3D12GraphicsCommandList::IASetIndexBuffer**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetindexbuffer)
 
 ## <a name="resources"></a>Ressourcen
 
-Ressourcen sind das D3D-Konzept, das die Verwendung des physischen GPU-Speichers abstrahiert. Ressourcen erfordern einen virtuellen GPU-Adressraum für den Zugriff auf den physischen Speicher. Die Ressourcen Erstellung ist kostenlos.
+Ressourcen sind das Direct3D-Konzept, das die Nutzung des physischen GPU-Speichers abstrahiert. Ressourcen benötigen virtuellen GPU-Adressraum für den Zugriff auf physischen Speicher. Die Ressourcenerstellung wird im Freethreading ausgeführt.
 
-Es gibt drei Arten von Ressourcen in Bezug auf die Erstellung und Flexibilität von virtuellen Adressen in D3D12:
+Es gibt drei Arten von Ressourcen in Bezug auf die Erstellung virtueller Adressen und die Flexibilität in Direct3D 12.
 
--   Zugesicherte Ressourcen
+### <a name="committed-resources"></a>Ressourcen, für die ein Committed (Ressourcen
 
-    Zugesicherte Ressourcen sind die häufigste Idee der D3D-Ressourcen in den Generationen. Durch das Erstellen einer solchen Ressource wird der virtuelle Adressbereich zugeordnet, ein impliziter Heap, der groß genug für die gesamte Ressource ist, und führt einen Commit für den virtuellen Adressbereich an den vom Heap gekapselten physischen Speicher aus Die impliziten Heap Eigenschaften müssen an die funktionale Parität mit früheren D3D-Versionen angepasst werden. Weitere Informationen finden Sie unter [**ID3D12Device:: kreatecommittedresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource).
+Die gängigste Idee von Direct3D-Ressourcen über die Generationen hinweg sind ressourcenverankerte Ressourcen. Beim Erstellen einer solchen Ressource wird ein virtueller Adressbereich, ein impliziter Heap, der groß genug ist, um die gesamte Ressource zu passen, und der virtuelle Adressbereich in den physischen Speicher, der vom Heap gekapselt wird, zuteilen. Die impliziten Heapeigenschaften müssen übergeben werden, damit sie mit der funktionalen Parität mit früheren Direct3D-Versionen übereinstimmen. Weitere Informationen [**finden Sie unter ID3D12Device::CreateCommittedResource**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommittedresource).
 
--   Reservierte Ressourcen
+### <a name="reserved-resources"></a>Reservierte Ressourcen
 
-    Reservierte Ressourcen sind äquivalent zu D3D11-gekachelten Ressourcen. Bei der Erstellung wird nur ein virtueller Adressbereich zugeordnet und keinem Heap zugeordnet. Diese Ressourcen werden den Heaps später von der Anwendung zugeordnet. Die Funktionen solcher Ressourcen sind momentan gegenüber D3D11 unverändert, da Sie einem Heap mit einer Kachel Granularität von 64 KB mit [**updatetilemappings**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-updatetilemappings)zugeordnet werden können. Weitere Informationen finden Sie unter [ **ID3D12Device:: up-eservedresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createreservedresource)
+Reservierte Ressourcen entsprechen gekachelten Direct3D 11-Ressourcen. Bei der Erstellung wird nur ein virtueller Adressbereich zugeordnet und keinen Heap zugeordnet. Die Anwendung wird diese Ressourcen später Heaps zuordnen. Die Funktionen solcher Ressourcen sind derzeit unverändert gegenüber Direct3D 11, da sie einem Heap mit einer Kachelgranularität von 64 KB mit [**UpdateTileMappings zugeordnet werden können.**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-updatetilemappings) Weitere Informationen [**finden Sie unter ID3D12Device::CreateReservedResource**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createreservedresource).
 
--   Platzierte Ressourcen
+### <a name="placed-resources"></a>Platzierte Ressourcen
 
-    Neu für D3D12: Anwendungen können Heaps unabhängig von Ressourcen erstellen. Anschließend kann die Anwendung mehrere Ressourcen innerhalb eines einzelnen Heaps suchen. Dies kann ohne das Erstellen von gekachelten oder reservierten Ressourcen erfolgen, sodass die Funktionen für alle Ressourcentypen direkt von Anwendungen erstellt werden können. Mehrere Ressourcen können sich überlappen, und die Anwendung muss verwenden, `TiledResourceBarrier` um den physischen Speicher ordnungsgemäß wieder zu verwenden. Weitere Informationen finden Sie unter [ **ID3D12Device:: kreateplacedresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource)
+Neu für Direct3D 12: Sie können Heaps getrennt von Ressourcen erstellen. Anschließend können Sie mehrere Ressourcen innerhalb eines einzelnen Heaps finden. Sie können dies tun, ohne gekachelte oder reservierte Ressourcen zu erstellen, sodass die Funktionen für alle Ressourcentypen direkt von Ihrer Anwendung erstellt werden können. Mehrere Ressourcen können sich überlappen, und Sie müssen [**ID3D12GraphicsCommandList::ResourceBarrier**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier) verwenden, um physischen Speicher ordnungsgemäß wieder zu verwenden. Weitere Informationen [**finden Sie unter ID3D12Device::CreatePlacedResource**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createplacedresource).
 
-## <a name="resource-size-reflection"></a>Ressourcen Größen Reflektion
+## <a name="resource-size-reflection"></a>Reflektion der Ressourcengröße
 
-Anwendungen müssen die Reflektion der Ressourcen Größe verwenden, um zu verstehen, wie viel Raum Texturen mit unbekannten Textur Layouts in Heaps erfordern. Puffer werden auch unterstützt, aber meistens als praktische Hilfe.
+Sie müssen die Reflektion der Ressourcengröße verwenden, um zu verstehen, wie viel Raumtexturen mit unbekannten Texturlayouts in Heaps erfordern. Puffer werden ebenfalls unterstützt, aber größtenteils zur Vereinfachung.
 
-Anwendungen sollten sich von größeren Ausrichtungs Abweichungen bewusst sein, um Ressourcen stärker zu unterstützen.
+Sie sollten sich größere Abweichungen bei der Ausrichtung bewusst sein, um ressourcenverdichter zu packen.
 
-Beispielsweise gibt ein Array mit einem einzelnen Element mit einem 1-Byte-Puffer eine Größe von 64 KB und eine Ausrichtung von 64 KB zurück, da Puffer derzeit nur 64 KB ausrichten können.
+Beispielsweise gibt ein Einelementarray mit einem 1-Byte-Puffer eine Größe von 64 KB und eine *Ausrichtung* von 64 KB zurück, da Puffer nur 64 KB ausgerichtet sein können. 
 
-Außerdem wird ein Array mit drei Elementen mit zwei ausgerichteten Texturen mit einer Größe von 64 KB und eine texturale 4-MB-Struktur, die auf der Reihenfolge des Arrays basiert, unterschiedliche Größen melden. Wenn sich die 4 MB ausgerichteten Texturen in der Mitte befinden, liegt die resultierende Größe bei 12 MB. Andernfalls beträgt die resultierende Größe 8 MB. Die zurückgegebene Ausrichtung beträgt immer 4 MB, die Obermenge aller Ausrichtungen im Ressourcen Array.
+Außerdem meldet ein Array mit drei Elemente mit zwei mit einem einzelnen Texel 64 KB ausgerichteten Texturen und einer mit einem einzelnen Texel ausgerichteten Textur mit 4 MB unterschiedliche Größen basierend auf der Reihenfolge des Arrays. Wenn sich die 4 MB ausgerichteten Texturen in der Mitte befindet, beträgt die resultierende *Größe* 12 MB. Andernfalls beträgt die resultierende Größe 8 MB. Die zurückgegebene Ausrichtung wäre immer 4 MB, die Obermenge aller Ausrichtungen im Ressourcenarray.
 
-Verweisen Sie auf die folgenden APIs:
+Verweisen Sie auf die folgenden APIs.
 
--   [**D3D12 \_ Ressourcen \_ Zuordnungs \_ Informationen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)
--   [**Getresourcezucationinfo**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo)
+- [**D3D12- \_ \_ RESSOURCENZUORDNUNGSINFORMATIONEN \_**](/windows/win32/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)
+- [**GetResourceAllocationInfo**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo)
 
-## <a name="buffer-alignment"></a>Puffer Ausrichtung
+## <a name="buffer-alignment"></a>Pufferausrichtung
 
-Einschränkungen der Puffer Ausrichtung wurden von D3D11 nicht geändert, insbesondere:
+Einschränkungen der Pufferausrichtung haben sich nicht von Direct3D 11 geändert, insbesondere:
 
--   4 MB für Multisample-Texturen.
--   64 KB für Single-Sample-Texturen und-Puffer.
+- 4 MB für Texturen mit mehreren Stichproben.
+- 64 KB für Einzelbeispieltexturen und Puffer.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-<dl> <dt>
-
-[Untergeordnete Zuordnung innerhalb von Puffern](large-buffers.md)
-</dt> </dl>
-
- 
-
- 
-
-
-
-
+* [Unterzuordnung innerhalb von Puffern](large-buffers.md)
