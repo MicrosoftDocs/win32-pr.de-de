@@ -1,6 +1,6 @@
 ---
-description: Die Windows-Shell bietet einen leistungsstarken Satz von Automatisierungs Objekten, mit denen Sie die Shell mit Microsoft-Visual Basic und Skriptsprachen wie Microsoft JScript (kompatibel mit der ECMA 262-Sprachspezifikation) und Microsoft Visual Basic Scripting Edition (VBScript) programmieren können. Sie können diese Objekte verwenden, um auf viele der Funktionen und Dialogfelder der Shell zuzugreifen. Beispielsweise können Sie auf das Dateisystem zugreifen, Programme starten und Systemeinstellungen ändern.
-title: Scriptable-Shellobjekte
+description: Die Windows Shell bietet einen leistungsstarken Satz von Automatisierungsobjekten, mit denen Sie die Shell mit Microsoft Visual Basic und Skriptsprachen wie Microsoft JScript (kompatibel mit der ECMA 262-Sprachspezifikation) und Microsoft Visual Basic Scripting Edition (VBScript) programmieren können. Sie können diese Objekte verwenden, um auf viele der Funktionen und Dialogfelder der Shell zu zugreifen. Beispielsweise können Sie auf das Dateisystem zugreifen, Programme starten und Systemeinstellungen ändern.
+title: Skriptfähige Shellobjekte
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 09455fad-a769-42ef-83ba-b745ac819bf3
@@ -9,61 +9,61 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 4c39e7e58a9715598056fb74aa154ed8a850f523
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8685b44d00d3f48e8de2a567218ef08c1cb5070
+ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980465"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113581778"
 ---
-# <a name="scriptable-shell-objects"></a>Scriptable-Shellobjekte
+# <a name="scriptable-shell-objects"></a>Skriptfähige Shellobjekte
 
-Die Windows-Shell bietet einen leistungsstarken Satz von Automatisierungs Objekten, mit denen Sie die Shell mit Microsoft-Visual Basic und Skriptsprachen wie Microsoft JScript (kompatibel mit der ECMA 262-Sprachspezifikation) und Microsoft Visual Basic Scripting Edition (VBScript) programmieren können. Sie können diese Objekte verwenden, um auf viele der Funktionen und Dialogfelder der Shell zuzugreifen. Beispielsweise können Sie auf das Dateisystem zugreifen, Programme starten und Systemeinstellungen ändern.
+Die Windows Shell bietet einen leistungsstarken Satz von Automatisierungsobjekten, mit denen Sie die Shell mit Microsoft Visual Basic und Skriptsprachen wie Microsoft JScript (kompatibel mit der ECMA 262-Sprachspezifikation) und Microsoft Visual Basic Scripting Edition (VBScript) programmieren können. Sie können diese Objekte verwenden, um auf viele der Funktionen und Dialogfelder der Shell zu zugreifen. Beispielsweise können Sie auf das Dateisystem zugreifen, Programme starten und Systemeinstellungen ändern.
 
-In diesem Abschnitt werden die Skript fähigen Shellobjekte vorgestellt.
+In diesem Abschnitt werden die skriptierbaren Shellobjekte erläutert.
 
--   [Shell-Versionen](#shell-versions)
--   [Instanziieren von shellobjekten](#instantiating-shell-objects)
+-   [Shellversionen](#shell-versions)
+-   [Instanziieren von Shellobjekten](#instantiating-shell-objects)
     -   [Späte Bindung](#late-binding)
-    -   [HTML-Objekt Element](#html-object-element)
--   [Shellobjekt](#shell-object)
+    -   [HTML OBJECT-Element](#html-object-element)
+-   [Shell-Objekt](#shell-object)
     -   [Security](#security)
--   [Ordner Objekte](#folder-objects)
+-   [Ordnerobjekte](#folder-objects)
 
-## <a name="shell-versions"></a>Shell-Versionen
+## <a name="shell-versions"></a>Shellversionen
 
-Viele der Shellobjekte wurden in [Version 4,71](versions.md) der Shell verfügbar. Andere sind in Version 5,00 und höher verfügbar. Version 5,00 wurde mit Windows 2000 verfügbar. In der folgenden Tabelle werden die einzelnen Shellobjekte unter der-Version der Shell aufgelistet, in der das Objekt verfügbar wurde.
+Viele der Shell-Objekte wurden in Version [4.71 der](versions.md) Shell verfügbar. Andere sind in Version 5.00 und höher verfügbar. Version 5.00 ist ab Windows 2000 verfügbar. In der folgenden Tabelle sind alle Shell-Objekte unter der Version der Shell aufgeführt, in der das Objekt verfügbar wurde.
 
 
 
-| Version 4,71                                            | Version 5,00                                          |
+| Version 4.71                                            | Version 5.00                                          |
 |---------------------------------------------------------|-------------------------------------------------------|
-| [**Ordner**](folder.md)                                | [**Didiskquotauser**](didiskquotauser-object.md)     |
-| [**Folderitemverb**](folderitemverb.md)                | [**Diskquotacontrol**](diskquotacontrol-object.md)   |
-| [**Folderitemverbs**](folderitemverbs.md)              | [**Folder2**](folder2-object.md)                     |
-| [**Shell**](shell.md)                                  | [**Von folderItem**](folderitem.md)                      |
-| [**Shellfolderview**](shellfolderview.md)              | [**Folderitems**](folderitems.md)                    |
-| [**Shelluihelper**](shelluihelper.md)                  | [**FolderItems2**](folderitems2-object.md)           |
-| [**Shellwindows**](shellwindows.md)                    | [**IShellDispatch2**](ishelldispatch2-object.md)     |
-| [**Webviewfoldercontents**](../lwef/webviewfoldercontents.md) | [**IShellLinkDual2**](ishelllinkdual2-object.md)     |
-|                                                         | [**Shellfolderitem**](shellfolderitem-object.md)     |
-|                                                         | [**Shellfolderviewoc**](shellfolderviewoc-object.md) |
-|                                                         | [**Shelllinkobject**](shelllinkobject-object.md)     |
+| [**Ordner**](folder.md)                                | [**DIDiskQuotaUser**](didiskquotauser-object.md)     |
+| [**FolderItemVerb**](folderitemverb.md)                | [**DiskQuotaControl**](diskquotacontrol-object.md)   |
+| [**FolderItemVerbs**](folderitemverbs.md)              | [**Ordner2**](folder2-object.md)                     |
+| [**Shell**](shell.md)                                  | [**FolderItem**](folderitem.md)                      |
+| [**ShellFolderView**](shellfolderview.md)              | [**FolderItems**](folderitems.md)                    |
+| [**ShellUIHelper**](shelluihelper.md)                  | [**FolderItems2**](folderitems2-object.md)           |
+| [**ShellWindows**](shellwindows.md)                    | [**IShellDispatch2**](ishelldispatch2-object.md)     |
+| [**WebViewFolderContents**](../lwef/webviewfoldercontents.md) | [**IShellLinkDual2**](ishelllinkdual2-object.md)     |
+|                                                         | [**ShellFolderItem**](shellfolderitem-object.md)     |
+|                                                         | [**ShellFolderViewOC**](shellfolderviewoc-object.md) |
+|                                                         | [**ShellLinkObject**](shelllinkobject-object.md)     |
 
 
 
  
 
-## <a name="instantiating-shell-objects"></a>Instanziieren von shellobjekten
+## <a name="instantiating-shell-objects"></a>Instanziieren von Shellobjekten
 
-Fügen Sie Verweise auf die folgenden Bibliotheken in Ihrem Projekt hinzu, um die Shellobjekte in Visual Basic Anwendungen mit einer frühen Bindung zu instanziieren:
+Fügen Sie Verweise auf die folgenden Bibliotheken in Ihrem Projekt hinzu, um die Shellobjekte in Visual Basic Anwendungen mit früher Bindung zu instanziieren:
 
--   Microsoft Internet Controls (shdocvw)
--   Microsoft Shell-Steuerelemente und Automatisierung (shell32)
+-   Microsoft-Internetsteuerelemente (SHDocVw)
+-   Microsoft Shell-Steuerelemente und -Automatisierung (Shell32)
 
 ### <a name="late-binding"></a>Späte Bindung
 
-Sie können auch viele der Shellobjekte mit späterer Bindung instanziieren. Diese Vorgehensweise funktioniert in Visual Basic Anwendungen und in Skripts. Im folgenden Beispiel wird gezeigt, wie das [**Shellobjekt**](shell.md) in JScript instanziiert wird.
+Sie können auch viele der Shell-Objekte mit später Bindung instanziieren. Dieser Ansatz funktioniert in Visual Basic Anwendungen und Skripts. Das folgende Beispiel zeigt, wie sie das [**Shell-Objekt**](shell.md) in der JScript.
 
 
 ```
@@ -81,7 +81,7 @@ Sie können auch viele der Shellobjekte mit späterer Bindung instanziieren. Die
 
 
 
-Im folgenden Beispiel wird gezeigt, wie das [**Folder**](folder.md) -Objekt in VBScript instanziiert wird.
+Das folgende Beispiel zeigt, wie das [**Folder-Objekt**](folder.md) in VBScript instanziiert wird.
 
 
 ```
@@ -102,41 +102,41 @@ Im folgenden Beispiel wird gezeigt, wie das [**Folder**](folder.md) -Objekt in V
 
 
 
-Im vorherigen Beispiel ist *sDir* der Pfad zum [**Ordner**](folder.md) Objekt. Beachten Sie, dass die [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) -Enumerationswerte im Skript nicht verfügbar sind.
+Im vorherigen Beispiel ist *sDir* der Pfad zum [**Folder-Objekt.**](folder.md) Beachten Sie, [**dass die ShellSpecialFolderConstants-Enumerationswerte**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) im Skript nicht verfügbar sind.
 
-Die ProgID für die einzelnen Shellobjekte ist in der folgenden Tabelle dargestellt.
+Die ProgID für jedes der Shell-Objekte ist in der folgenden Tabelle dargestellt.
 
 
 
 | Object                                                  | ProgID                                                                                  |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [**Didiskquotauser**](didiskquotauser-object.md)       | Microsoft. Diskquota. 1                                                                   |
-| [**Diskquotacontrol**](diskquotacontrol-object.md)     | Die Bindung kann nicht spät                                                                        |
-| [**Ordner**](folder.md)                                | schel. Shell \_ Application. Namespace ("...")                                               |
-| [**Folder2**](folder2-object.md)                       | schel. Shell \_ Application. Namespace ("...")                                               |
-| [**Von folderItem**](folderitem.md)                        | schel. Shell \_ Application. Namespace ("..."). Self oder Folder. Items. Item oder Folder. Parser Name |
-| [**Folderitems**](folderitems.md)                      | Ordner. Items                                                                            |
-| [**FolderItems2**](folderitems2-object.md)             | Ordner. Items                                                                            |
-| [**Folderitemverb**](folderitemverb.md)                | Shell. Namespace ("..."). Self. Verbs. Item ()                                                |
-| [**Folderitemverbs**](folderitemverbs.md)              | FolderItem. Verbs oder Shell. Namespace ("..."). Selbst. Verben                                   |
-| [**IShellDispatch2**](ishelldispatch2-object.md)       | schel. \_Shellanwendung                                                                |
-| [**IShellLinkDual2**](ishelllinkdual2-object.md)       | Shell. Namespace ("..."). Self. getlink oder Shell. Namespace ("..."). Elemente (). Getlink           |
-| [**Shell**](shell.md)                                  | schel. \_Shellanwendung                                                                |
-| [**Shellfolderitem**](shellfolderitem-object.md)       | Shell. Namespace ("..."). Self oder Shell. Namespace ("..."). Elemente ()                           |
-| [**Shellfolderview**](shellfolderview.md)              | Die Bindung kann nicht spät                                                                        |
-| [**Shellfolderviewoc**](shellfolderviewoc-object.md)   | Die Bindung kann nicht spät                                                                        |
-| [**Shelllinkobject**](shelllinkobject-object.md)       | Shell. Namespace ("..."). Self. getlink oder Shell. Namespace ("..."). Elemente (). Getlink           |
-| [**Shelluihelper**](shelluihelper.md)                  | Die Bindung kann nicht spät                                                                        |
-| [**Shellwindows**](shellwindows.md)                    | schel. \_Shellfenster oder shellwindows. \_ "Netwenum"                                          |
-| [**Webviewfoldercontents**](../lwef/webviewfoldercontents.md) | Die Bindung kann nicht spät                                                                        |
+| [**DIDiskQuotaUser**](didiskquotauser-object.md)       | Microsoft.DiskQuota.1                                                                   |
+| [**DiskQuotaControl**](diskquotacontrol-object.md)     | Späte Bindung nicht möglich                                                                        |
+| [**Ordner**](folder.md)                                | Muschel. Shell \_ Application.NameSpace("...")                                               |
+| [**Ordner2**](folder2-object.md)                       | Muschel. Shell \_ Application.NameSpace("...")                                               |
+| [**FolderItem**](folderitem.md)                        | Muschel. Shell \_ Application.NameSpace("..."). Self oder Folder.Items.Item oder Folder.ParseName |
+| [**FolderItems**](folderitems.md)                      | Folder.Items                                                                            |
+| [**FolderItems2**](folderitems2-object.md)             | Folder.Items                                                                            |
+| [**FolderItemVerb**](folderitemverb.md)                | Shell.NameSpace("..."). Self.Verbs.Item()                                                |
+| [**FolderItemVerbs**](folderitemverbs.md)              | FolderItem.Verbs oder Shell.NameSpace("..."). Self.Verbs                                   |
+| [**IShellDispatch2**](ishelldispatch2-object.md)       | Muschel. \_Shellanwendung                                                                |
+| [**IShellLinkDual2**](ishelllinkdual2-object.md)       | Shell.NameSpace("..."). Self.GetLink oder Shell.NameSpace("..."). Items(). GetLink           |
+| [**Shell**](shell.md)                                  | Muschel. \_Shellanwendung                                                                |
+| [**ShellFolderItem**](shellfolderitem-object.md)       | Shell.NameSpace("..."). Self oder Shell.NameSpace("..."). Items()                           |
+| [**ShellFolderView**](shellfolderview.md)              | Späte Bindung nicht möglich                                                                        |
+| [**ShellFolderViewOC**](shellfolderviewoc-object.md)   | Späte Bindung nicht möglich                                                                        |
+| [**ShellLinkObject**](shelllinkobject-object.md)       | Shell.NameSpace("..."). Self.GetLink oder Shell.NameSpace("..."). Items(). GetLink           |
+| [**ShellUIHelper**](shelluihelper.md)                  | Späte Bindung nicht möglich                                                                        |
+| [**ShellWindows**](shellwindows.md)                    | Muschel. Shell \_ Windows oder ShellWindows. \_ NewEnum                                          |
+| [**WebViewFolderContents**](../lwef/webviewfoldercontents.md) | Späte Bindung nicht möglich                                                                        |
 
 
 
  
 
-### <a name="html-object-element"></a>HTML-Objekt Element
+### <a name="html-object-element"></a>HTML OBJECT-Element
 
-Sie können auch das [**Object**](https://msdn.microsoft.com/library/ms535859(v=VS.85).aspx) -Element verwenden, um Shellobjekte auf einer HTML-Seite zu instanziieren. Legen Sie hierzu das **ID** -Attribut des **Object** -Elements auf den Variablennamen fest, den Sie in Ihren Skripts verwenden möchten, und identifizieren Sie das Objekt mit der registrierten Nummer (ClassID). Der folgende HTML-Code erstellt mit dem **Object** -Element eine Instanz des [**shellfolderitem**](shellfolderitem-object.md) -Objekts.
+Sie können auch das [**OBJECT-Element**](https://msdn.microsoft.com/library/ms535859(v=VS.85).aspx) verwenden, um Shellobjekte auf einer HTML-Seite zu instanziieren. Legen Sie hierzu das **ID-Attribut** des **OBJECT-Elements** auf den Variablennamen fest, den Sie in Ihren Skripts verwenden, und identifizieren Sie das Objekt anhand seiner registrierten Nummer (CLASSID). Der folgende HTML-Code erstellt eine Instanz des [**ShellFolderItem-Objekts**](shellfolderitem-object.md) mithilfe des **OBJECT-Elements.**
 
 
 ```
@@ -148,46 +148,46 @@ Sie können auch das [**Object**](https://msdn.microsoft.com/library/ms535859(v=
 
 
 
-In der folgenden Tabelle werden die einzelnen Shellobjekte und die jeweilige ClassID aufgelistet.
+In der folgenden Tabelle sind jedes Shell-Objekt und die entsprechende CLASSID aufgeführt.
 
 
 
-|                                                         |                                      |
-|---------------------------------------------------------|--------------------------------------|
-| [**Didiskquotauser**](didiskquotauser-object.md)       | 7988b571-ec89-11CF-9c00-00aa00a14f56 |
-| [**Diskquotacontrol**](diskquotacontrol-object.md)     | 7988b571-ec89-11CF-9c00-00aa00a14f56 |
-| [**Ordner**](folder.md)                                | BBCBDE60-C3FF-11CE-8350-444553540000 |
+| Shellobjekt                                           | Classid                              |
+|--------------------------------------------------------|--------------------------------------|
+| [**DIDiskQuotaUser**](didiskquotauser-object.md)       | 7988B571-EC89-11cf-9C00-00AA00A14F56 |
+| [**DiskQuotaControl**](diskquotacontrol-object.md)     | 7988B571-EC89-11cf-9C00-00AA00A14F56 |
+| [**Ordner**](folder.md)                                | SOLLBDE60-C3FF-11CE-8350-444553540000 |
 | [**Folder2**](folder2-object.md)                       | f0d2d8ef-3890-11d2-bf8b-00c04fb93661 |
-| [**Von folderItem**](folderitem.md)                        | 744129e0-CBE5-11CE-8350-444553540000 |
-| [**Folderitems**](folderitems.md)                      | 744129e0-CBE5-11CE-8350-444553540000 |
+| [**FolderItem**](folderitem.md)                        | 744129E0-CBE5-11CE-8350-444553540000 |
+| [**FolderItems**](folderitems.md)                      | 744129E0-CBE5-11CE-8350-444553540000 |
 | [**FolderItems2**](folderitems2-object.md)             | C94F0AD0-F363-11d2-A327-00C04F8EEC7F |
-| [**Folderitemverb**](folderitemverb.md)                | 08ec3e00-50b0-11CF-960c-0080c7f4ee85 |
-| [**Folderitemverbs**](folderitemverbs.md)              | 1f8352c0-50b0-11CF-960c-0080c7f4ee85 |
+| [**FolderItemVerb**](folderitemverb.md)                | 08EC3E00-50B0-11CF-960C-0080C7F4EE85 |
+| [**FolderItemVerbs**](folderitemverbs.md)              | 1F8352C0-50B0-11CF-960C-0080C7F4EE85 |
 | [**IShellDispatch2**](ishelldispatch2-object.md)       | A4C6892C-3BA9-11d2-9DEA-00C04FB16162 |
-| [**IShellLinkDual2**](ishelllinkdual2-object.md)       | 317ee249-b12e-11d2-B1E4-00c04f 8eeb3e |
+| [**IShellLinkDual2**](ishelllinkdual2-object.md)       | 317EE249-F12E-11d2-B1E4-00C04F8EEB3E |
 | [**Shell**](shell.md)                                  | 13709620-C279-11CE-A49E-444553540000 |
-| [**Shellfolderitem**](shellfolderitem-object.md)       | 2fe352ea-fid1fi-11d2-B1F 4-00c04fi8eeb3e |
-| [**Shellfolderview**](shellfolderview.md)              | 62112aa1-ebe4-11CF-a5fb-0020afe7292d |
-| [**Shellfolderviewoc**](shellfolderviewoc-object.md)   | 4a3df050-23bd-11d2-939f -00a0c91eedba |
-| [**Shelllinkobject**](shelllinkobject-object.md)       | 11219420-1768-11d1-95be-00609797ea4f |
-| [**Shelluihelper**](shelluihelper.md)                  | 64ab4bb7-111E-11d1-8f79-00c04fc2fbe1 |
-| [**Shellwindows**](shellwindows.md)                    | 9ba05972-f6a8-11CF-A442-00a0c90a8f39 |
-| [**Webviewfoldercontents**](../lwef/webviewfoldercontents.md) | 1820fed0-473e-11D0-a96c-00c04f d705a2 |
+| [**ShellFolderItem**](shellfolderitem-object.md)       | 2fe352ea-fd1f-11d2-b1f4-00c04f8eeb3e |
+| [**ShellFolderView**](shellfolderview.md)              | 62112AA1-EBE4-11cf-A5FB-0020AFE7292D |
+| [**ShellFolderViewOC**](shellfolderviewoc-object.md)   | 4a3df050-23bd-11d2-939f-00a0c91eedba |
+| [**ShellLinkObject**](shelllinkobject-object.md)       | 11219420-1768-11d1-95BE-00609797EA4F |
+| [**ShellUIHelper**](shelluihelper.md)                  | 64AB4BB7-111E-11D1-8F79-00C04FC2FBE1 |
+| [**ShellWindows**](shellwindows.md)                    | 9BA05972-F6A8-11CF-A442-00A0C90A8F39 |
+| [**WebViewFolderContents**](../lwef/webviewfoldercontents.md) | 1820FED0-473E-11D0-A96C-00C04FD705A2 |
 
 
 
  
 
-## <a name="shell-object"></a>Shellobjekt
+## <a name="shell-object"></a>Shell-Objekt
 
-Das [**Shellobjekt**](shell.md) stellt die Objekte in der Shell dar. Sie können die Methoden, die vom Shell-Objekt verfügbar gemacht werden, für Folgendes verwenden:
+Das [**Shell-Objekt**](shell.md) stellt die Objekte in der Shell dar. Sie können die vom Shell-Objekt verfügbar gemachten Methoden für Folgendes verwenden:
 
--   Öffnen, untersuchen und suchen Sie nach Ordnern.
--   Minimieren, wiederherstellen, kaskadieren oder Kacheln öffnen.
--   Starten Sie System Steuerungsanwendungen.
--   Anzeigen von System Dialogfeldern.
+-   Öffnen, Durchsuchen und Suchen nach Ordnern.
+-   Fenster minimieren, wiederherstellen, kaskadieren oder Kachel öffnen.
+-   Starten Sie Systemsteuerung Anwendungen.
+-   Systemdialogfelder anzeigen.
 
-Benutzer sind vielleicht am häufigsten mit den Befehlen vertraut, auf die Sie über das **Startmenü** und das Kontextmenü der Taskleiste zugreifen. Das Kontextmenü der Taskleiste wird angezeigt, wenn Benutzer mit der rechten Maustaste auf die Taskleiste klicken. Die folgende HTML-Anwendung (HTA) erzeugt eine Startseite mit Schaltflächen, mit denen viele der Methoden des [**shellobjekts**](shell.md) implementiert werden. Einige dieser Methoden implementieren Features im **Startmenü** und im Kontextmenü der Taskleiste.
+Benutzer sind vielleicht am besten mit den Befehlen vertraut, auf die sie über das **Startmenü** und das Kontextmenü der Taskleiste zugreifen. Das Kontextmenü der Taskleiste wird angezeigt, wenn Benutzer mit der rechten Maustaste auf die Taskleiste klicken. Die folgende HTML-Anwendung (HTA) erzeugt eine Startseite mit Schaltflächen, die viele methoden des [**Shell-Objekts**](shell.md) implementieren. Einige dieser Methoden implementieren Features im **Startmenü** und im Kontextmenü der Taskleiste.
 
 
 ```
@@ -263,21 +263,21 @@ Benutzer sind vielleicht am häufigsten mit den Befehlen vertraut, auf die Sie �
 
 ### <a name="security"></a>Sicherheit
 
-Als Anwendung wird eine HTA unter einem anderen Sicherheitsmodell als eine Webseite ausgeführt. Um mit einer Webseite zu interagieren, die die Funktionalität der Shellobjekte implementiert, müssen Benutzer die **ActiveX-Steuerelemente initialisieren und Skripts, die nicht als sichere Option gekennzeichnet** sind, für die Sicherheitszone aktivieren, in der Sie die Seite anzeigen.
+Als Anwendung wird ein HTA unter einem anderen Sicherheitsmodell als eine Webseite ausgeführt. Um mit einer Webseite zu interagieren, die die Funktionalität der Shell-Objekte implementiert, müssen Benutzer die **Option Initialisieren und Skripts ActiveX Steuerelemente** aktivieren, die nicht als sichere Option für die Sicherheitszone markiert sind, in der sie die Seite anzeigen.
 
-## <a name="folder-objects"></a>Ordner Objekte
+## <a name="folder-objects"></a>Ordnerobjekte
 
-Das [**Folder**](folder.md) -Objekt stellt einen Shellordner dar. Sie können die Methoden, die vom Folder-Objekt verfügbar gemacht werden, für Folgendes verwenden:
+Das [**Folder-Objekt**](folder.md) stellt einen Shellordner dar. Sie können die vom Folder-Objekt verfügbar gemachten Methoden für Folgendes verwenden:
 
--   Hier erhalten Sie Informationen zu einem Ordner.
+-   Abrufen von Informationen zu einem Ordner.
 -   Erstellen Sie Unterordner.
--   Kopieren Sie Datei Objekte, und verschieben Sie Sie in den Ordner.
+-   Kopieren und Verschieben von Dateiobjekten in den Ordner.
 
-Das [**folderItem**](folderitem.md) -Objekt stellt ein Element in einem Shellordner dar. Mit den Eigenschaften können Sie Informationen zum Element abrufen. Sie können die Methoden, die von diesem-Objekt verfügbar gemacht werden, zum Ausführen der Verben eines Elements oder zum Abrufen von Informationen über das [**folderitemverbs**](folderitemverbs.md) -Objekt eines Elements verwenden.
+Das [**FolderItem-Objekt**](folderitem.md) stellt ein Element in einem Shellordner dar. Seine Eigenschaften ermöglichen es Ihnen, Informationen über das Element abzurufen. Sie können die von diesem -Objekt verfügbar gemachten Methoden verwenden, um die Verben eines Elements auszuführen oder Informationen zum [**FolderItemVerbs-Objekt**](folderitemverbs.md) eines Elements abzurufen.
 
-Das [**folderitems**](folderitems.md) -Objekt stellt eine Sammlung von Elementen in einem Shellordner dar. Die zugehörigen Methoden und Eigenschaften ermöglichen es Ihnen, Informationen über die Sammlung abzurufen.
+Das [**FolderItems-Objekt**](folderitems.md) stellt eine Auflistung von Elementen in einem Shellordner dar. Mithilfe der Methoden und Eigenschaften können Sie Informationen über die Auflistung abrufen.
 
-Im folgenden Visual Basic Beispiel wird die Beziehung zwischen mehreren Ordner Objekten und deren Verwendung zusammen gezeigt. Wenn der Benutzer auf die Befehls Schaltfläche **cmdgetpath** klickt, zeigt das Programm ein Dialogfeld an, in dem der Benutzer einen Ordner aus **Arbeitsplatz** auswählen kann, wobei ssfdrives der [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) -Enumerationswert für **Arbeitsplatz** ist. Wenn der Benutzer einen Ordner auswählt, wird der Pfad des Ordners im Textfeld mit dem Namen " **txtpath**" angezeigt.
+Das folgende Visual Basic Beispiel zeigt die Beziehung zwischen mehreren Ordnerobjekten und wie sie zusammen verwendet werden können. Wenn der Benutzer auf die Befehlsschaltfläche **cmdGetPath** klickt, zeigt das Programm ein Dialogfeld an, in dem der Benutzer einen Ordner aus **Arbeitsplatz** auswählen kann, wobei ssfDRIVES der [**ShellSpecialFolderConstants-Enumerationswert**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) für **Arbeitsplatz** ist. Wenn der Benutzer einen Ordner ausgibt, wird der Pfad des Ordners im Textfeld **txtPath** angezeigt.
 
 
 ```
@@ -296,7 +296,7 @@ End Sub
 
 
 
-In VBScript unterscheidet sich diese Funktion etwas, da die Enumerationswerte von [**shellspecialfolderkonstanten**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) nicht im Skript verfügbar sind. Das folgende Beispiel zeigt die VBScript-Entsprechung des vorherigen Beispiels.
+In VBScript unterscheidet sich diese Funktion geringfügig, da die [**ShellSpecialFolderConstants-Enumerationswerte**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) im Skript nicht verfügbar sind. Das folgende Beispiel zeigt die VBScript-Entsprechung des vorherigen Beispiels.
 
 
 ```
@@ -319,7 +319,7 @@ In VBScript unterscheidet sich diese Funktion etwas, da die Enumerationswerte vo
 
 
 
-Im folgenden JScript-Beispiel, bei dem es sich um eine direkte Übersetzung des vorangehenden VBScript-Beispiels handelt, beachten Sie, wie die leeren Klammern "()" verwendet werden, um die [**Elemente**](folder-items.md) und [**Element**](folderitems-item.md) Methoden aufzurufen.
+Beachten Sie im folgenden JScript Beispiel, bei dem es sich um eine direkte Übersetzung des vorherigen VBScript-Beispiels handelt, wie die leeren Klammern "()" zum Aufrufen der [**Items-**](folder-items.md) und [**Item-Methoden**](folderitems-item.md) verwendet werden.
 
 
 ```

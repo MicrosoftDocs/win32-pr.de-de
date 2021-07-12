@@ -1,56 +1,56 @@
 ---
-description: Bibliotheks Beschreibungsdateien sind XML-Dateien, die Bibliotheken definieren.
+description: Bibliotheksbeschreibungsdateien sind XML-Dateien, die Bibliotheken definieren.
 ms.assetid: 12F6E6AE-2776-408c-B9AC-E885BE93C27F
-title: Bibliotheks Beschreibungs Schema
+title: Schema der Bibliotheksbeschreibung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5bebbd7ed168cd977530ccfeb0b319c33142687
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 0a6da99820e81c55e5d705c72d4d0509ea271a4a
+ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "104981064"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113581738"
 ---
-# <a name="library-description-schema"></a>Bibliotheks Beschreibungs Schema
+# <a name="library-description-schema"></a>Schema der Bibliotheksbeschreibung
 
-Bibliotheks Beschreibungsdateien sind XML-Dateien, die Bibliotheken definieren. Bibliotheken aggregieren Elemente aus lokalen und Remote Speicherorten in einer einzelnen Ansicht in Windows-Explorer. Bibliotheks Beschreibungsdateien folgen dem Bibliotheks Beschreibungs Schema und werden als \* . Library-MS-Dateien gespeichert.
+Bibliotheksbeschreibungsdateien sind XML-Dateien, die Bibliotheken definieren. Bibliotheken aggregieren Elemente von lokalen und Remotespeicherorten in einer einzelnen Ansicht im Windows Explorer. Bibliotheksbeschreibungsdateien folgen dem Schema der Bibliotheksbeschreibung und werden als \* .library-ms-Dateien gespeichert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Übersicht über das Bibliotheks Beschreibungs Schema](#overview-of-the-library-description-schema)
--   [Namespace Versionierung](#namespace-versioning)
--   [Beispiel für eine Bibliotheks Beschreibungsdatei](#example-of-a-library-description-file)
+-   [Übersicht über das Schema der Bibliotheksbeschreibung](#overview-of-the-library-description-schema)
+-   [Namespaceversionsierung](#namespace-versioning)
+-   [Beispiel für eine Bibliotheksbeschreibungsdatei](#example-of-a-library-description-file)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="overview-of-the-library-description-schema"></a>Übersicht über das Bibliotheks Beschreibungs Schema
+## <a name="overview-of-the-library-description-schema"></a>Übersicht über das Schema der Bibliotheksbeschreibung
 
-Bibliotheken enthalten Dateien, die an einem oder mehreren Speicherorten gespeichert sind. Diese Dateien werden von Bibliotheken nicht gespeichert. Stattdessen überwachen Sie die Ordner, die die Dateien enthalten, und ermöglichen Benutzern den Zugriff auf und die Anordnung von Dateien auf verschiedene Weise. Beispielsweise kann sich ein Benutzer Musikdateien in mehreren Ordnern auf einer lokalen Festplatte und auch auf einer externen Festplatte befinden. Mithilfe der **Musikbibliothek** kann der Benutzer gleichzeitig auf alle diese Dateien zugreifen und diese nach dem Namen des Künstlers oder dem Albumtitel als einzelne Gruppe sortieren.
+Bibliotheken enthalten Dateien, die an einem oder mehreren Speicherorten gespeichert sind. Bibliotheken speichern diese Dateien nicht tatsächlich. Stattdessen überwachen sie die Ordner, die die Dateien enthalten, und ermöglichen Es Benutzern, auf die Dateien auf unterschiedliche Weise zu zugreifen und sie zu anordnen. Beispielsweise kann ein Benutzer Musikdateien in mehreren Ordnern auf einer lokalen Festplatte und auch auf einer externen Festplatte haben. Mithilfe **Musik Bibliothek** kann der Benutzer gleichzeitig auf alle diese Dateien zugreifen und sie alle nach Interpretenname oder Albumtitel als einzelne Gruppe sortieren.
 
-Das Bibliotheks Beschreibungs Schema besteht aus drei Hauptkomponenten, die in der folgenden Tabelle beschrieben werden:
+Das Schema der Bibliotheksbeschreibung besteht aus drei Hauptteilen, die in der folgenden Tabelle beschrieben sind:
 
 
 
-|                             |                                                                                                                                                            |
+| Teil                        | BESCHREIBUNG                                                                                                                                                |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Allgemeine Bibliotheksinformationen | Informationen zur Bibliothek, z. b. Name, Besitzer, Version, Symbol, die Windows Explorer verwenden kann, wenn Sie die Bibliothek für einen Benutzer anzeigt.                   |
-| Bibliotheks Eigenschaften          | Eine oder mehrere Eigenschaften, die die Bibliothek beschreiben. Diese benutzerdefinierten Eigenschaften sind spezifisch für die Bibliothek.                                                     |
-| Bibliotheks Speicherorte           | Mindestens ein suchverbinder, der die in der Bibliothek einzuschließenden Speicherorte identifiziert. Jeder dieser Standorte kann auch über einen eindeutigen Satz von Eigenschaften verfügen. |
+| Allgemeine Bibliotheksinformationen | Informationen zur Bibliothek, z. B. Name, Besitzer, Version, Symbol, die der Windows-Explorer verwenden kann, wenn die Bibliothek einem Benutzer angezeigt wird.                   |
+| Bibliothekseigenschaften          | Mindestens eine Eigenschaft, die die Bibliothek beschreibt. Diese benutzerdefinierten Eigenschaften sind bibliotheksspezifisch.                                                     |
+| Bibliotheksstandorte           | Mindestens ein Suchconnectors, der Speicherorte identifiziert, die in die Bibliothek enthalten sein sollten. Jeder dieser Speicherorte kann auch über einen eindeutigen Satz von Eigenschaften verfügen. |
 
 
 
  
 
-Bibliotheksdateien in Windows 7 werden im bekannten Ordner, folderid-Bibliotheken, gespeichert \_ . Standardmäßig befindet sich der Ordner folderid \_ Libraries unter% User Profile% \\ AppData \\ Roaming \\ Microsoft Windows \\ - \\ Bibliotheken.
+Bibliotheksdateien in Windows 7 werden im bekannten Ordner \_ FOLDERID-Bibliotheken gespeichert. Standardmäßig befindet sich der Ordner FOLDERID Libraries unter \_ %USERPROFILE% \\ AppData \\ Roaming Microsoft \\ Windows \\ \\ Libraries.
 
-## <a name="namespace-versioning"></a>Namespace Versionierung
+## <a name="namespace-versioning"></a>Namespaceversionsierung
 
-Versionen des Bibliotheks Beschreibungsdatei Formats ( \* . Library-MS) werden nachverfolgt, indem der-Namespace geändert wird. Für Windows 7 weist das Dateiformat den folgenden Standard Namespace auf: https://schemas.microsoft.com/windows/2009/library .
+Versionen des Dateiformats bibliotheksbeschreibung ( \* .library-ms) werden durch Ändern des Namespace nachverfolgt. Für Windows 7 hat das Dateiformat den folgenden Standardnamespace: https://schemas.microsoft.com/windows/2009/library .
 
-Versionen der Bibliotheksinhalte werden jedoch mithilfe des- [<version>](schema-library-version.md) Elements in einer bestimmten Bibliotheks Beschreibungsdatei nachverfolgt.
+Versionen des Bibliotheksinhalts werden jedoch mithilfe des -Elements [<version>](schema-library-version.md) in einer bestimmten Bibliotheksbeschreibungsdatei nachverfolgt.
 
-## <a name="example-of-a-library-description-file"></a>Beispiel für eine Bibliotheks Beschreibungsdatei
+## <a name="example-of-a-library-description-file"></a>Beispiel für eine Bibliotheksbeschreibungsdatei
 
-Im folgenden finden Sie ein Beispiel für eine Bibliotheks Beschreibungsdatei, die eine Bibliothek für Dokument Dateien definiert.
+Im Folgenden finden Sie ein Beispiel für eine Bibliotheksbeschreibungsdatei, die eine Bibliothek für Dokumentdateien definiert.
 
 
 ```
@@ -91,43 +91,43 @@ Im folgenden finden Sie ein Beispiel für eine Bibliotheks Beschreibungsdatei, d
 
 <dl> <dt>
 
-[foldertype-Element (Bibliotheks Schema)](schema-library-foldertype.md)
+[folderType-Element (Bibliotheksschema)](schema-library-foldertype.md)
 </dt> <dt>
 
-[iconReference-Element (Bibliotheks Schema)](schema-library-iconreference.md)
+[iconReference-Element (Bibliotheksschema)](schema-library-iconreference.md)
 </dt> <dt>
 
-[islibrarypinned-Element (Bibliotheks Schema)](schema-library-islibrarypinned.md)
+[isLibraryPinned-Element (Bibliotheksschema)](schema-library-islibrarypinned.md)
 </dt> <dt>
 
-[librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md)
+[libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md)
 </dt> <dt>
 
-[Name-Element (Bibliotheks Schema)](schema-library-name.md)
+[name-Element (Bibliotheksschema)](schema-library-name.md)
 </dt> <dt>
 
-[Besitzer-SID-Element (Bibliotheks Schema)](schema-library-ownersid.md)
+[ownerSID-Element (Bibliotheksschema)](schema-library-ownersid.md)
 </dt> <dt>
 
-[Property-Element (Bibliotheks Schema)](schema-library-property.md)
+[property-Element (Bibliotheksschema)](schema-library-property.md)
 </dt> <dt>
 
-[PropertyStore-Element (Bibliotheks Schema)](schema-library-propertystore.md)
+[propertyStore-Element (Bibliotheksschema)](schema-library-propertystore.md)
 </dt> <dt>
 
-[searchconnectordescription-Element (Bibliotheks Schema)](schema-library-searchconnectordescription.md)
+[searchConnectorDescription-Element (Bibliotheksschema)](schema-library-searchconnectordescription.md)
 </dt> <dt>
 
-[searchconnectordescriptionlist-Element (Bibliotheks Schema)](schema-library-searchconnectordescriptionlist.md)
+[searchConnectorDescriptionList-Element (Bibliotheksschema)](schema-library-searchconnectordescriptionlist.md)
 </dt> <dt>
 
-[templateingefo-Element (Bibliotheks Schema)](schema-library-templateinfo.md)
+[templateInfo-Element (Bibliotheksschema)](schema-library-templateinfo.md)
 </dt> <dt>
 
-[Version-Element (Bibliotheks Schema)](schema-library-version.md)
+[version-Element (Bibliotheksschema)](schema-library-version.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](../search/search-sconn-desc-schema-entry.md)
+[Suchconnectorbeschreibungsschema](../search/search-sconn-desc-schema-entry.md)
 </dt> </dl>
 
  

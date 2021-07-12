@@ -1,26 +1,26 @@
 ---
-description: Der Microsoft DSS-Kryptografieanbieter unterstützt das Hashing, das Signieren von Daten und die Signatur Überprüfung mithilfe der Algorithmen Secure Hash Algorithmus (SHA) und Digital Signature Standard (DSS). Sie kann außerhalb der USA und Kanada exportiert werden.
+description: Der Microsoft DSS-Kryptografieanbieter unterstützt Hashing, Datensignatur und Signaturüberprüfung mithilfe der Algorithmen Secure Hash Algorithm (SHA) und Digital Signature Standard (DSS). Sie kann außerhalb der usa und USA exportiert werden.
 ms.assetid: 9b9a288e-0167-4696-98a3-283a788f8062
 title: Microsoft DSS-Kryptografieanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e9dd9a5a5ab9e270a96e29f2013f6c482a8abf00
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 930fca73edfbb652a077c5c4b9dcd5f069b11ffb
+ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129668"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113581858"
 ---
 # <a name="microsoft-dss-cryptographic-provider"></a>Microsoft DSS-Kryptografieanbieter
 
-Der Microsoft DSS-Kryptografieanbieter unterstützt das Hashing, das Signieren von Daten und die Signatur Überprüfung mithilfe der Algorithmen [*Secure Hash Algorithmus*](../secgloss/s-gly.md) (SHA) und [*Digital Signature Standard*](../secgloss/d-gly.md) (DSS). Sie kann außerhalb der USA und Kanada exportiert werden.
+Der Microsoft DSS-Kryptografieanbieter unterstützt Hashing, Datensignatur und Signaturüberprüfung mithilfe der Algorithmen [*Secure Hash Algorithm*](../secgloss/s-gly.md) (SHA) und Digital Signature [*Standard*](../secgloss/d-gly.md) (DSS). Sie kann außerhalb der usa und USA exportiert werden.
 
 
 
-|                |                        |
-|----------------|------------------------|
-| Anbietertyp: | **Prov- \_ DSS**          |
-| Anbieter Name: | **MS \_ DEF \_ DSS \_ Prov** |
+|                   | Wert               |
+|-------------------|---------------------|
+| **Anbietertyp** | PROV \_ DSS           |
+| **Anbietername** | MS \_ DEF \_ DSS \_ PROV  |
 
 
 

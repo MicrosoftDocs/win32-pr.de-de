@@ -1,6 +1,6 @@
 ---
-description: Erfahren Sie mehr über das SUBQUERY-Argument in Der Windows Shell. Eine Unterabfrage ist eine gespeicherte Suchdatei, die Sie als Filter für eine neue Abfrage verwenden können.
-title: SUBQUERY-Argument (Die Windows-Shell)
+description: Erfahren Sie mehr über das SUBQUERY-Argument in The Windows Shell. Eine Unterabfrage ist eine gespeicherte Suchdatei, die Sie als Filter für eine neue Abfrage verwenden können.
+title: SUBQUERY-Argument (die Windows Shell)
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 2d97b891-ba62-4009-bc6a-9f42e6dbbb34
@@ -9,14 +9,14 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: ef0b37c0f473f2b86c85c18a99124be3b366f447
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: c27ce11d4d2e6ac36792f3ce47c053e9646d9903
+ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112010663"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113581598"
 ---
-# <a name="subquery-argument-the-windows-shell"></a>SUBQUERY-Argument (Die Windows-Shell)
+# <a name="subquery-argument-the-windows-shell"></a>SUBQUERY-Argument (die Windows Shell)
 
 Eine Unterabfrage ist eine gespeicherte Suchdatei \* (.search-ms), die Sie als Filter für eine neue Abfrage verwenden können. Die Ergebnisse der Unterabfrage werden als Quelle für die neue Abfrage verwendet. Angenommen, Sie verfügen über mehrere gespeicherte Suchdateien, die eine Abfrage nach E-Mail-Verteilerliste einschränken: mydepartment.search-ms, teamproject.search-ms und corporatewide.search-ms. Mithilfe des `subquery` -Arguments können Sie E-Mail-Suchvorgänge auf eine oder alle dieser gespeicherten Suchvorgänge beschränken.
 
@@ -33,9 +33,9 @@ search:query=vacation&subquery=mydepartment.search-ms
 
 
 
-|                          |                                         |
-|--------------------------|-----------------------------------------|
-| Mindestbetriebssystem | Windows Vista mit Service Pack 1 (SP1) |
+|                              | Wert                                   |
+|------------------------------|-----------------------------------------|
+| **Mindestbetriebssystem** | Windows Vista mit Service Pack 1 (SP1) |
 
 
 

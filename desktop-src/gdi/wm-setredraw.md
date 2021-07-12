@@ -1,92 +1,68 @@
 ---
-description: Eine Anwendung sendet die WM \_ setredraw-Nachricht an ein Fenster, damit Änderungen in diesem Fenster neu gezeichnet werden können, oder um zu verhindern, dass Änderungen in diesem Fenster neu gezeichnet werden.
+description: Sie senden die **WM_SETREDRAW** an ein Fenster, damit Änderungen in diesem Fenster neu gezeichnet werden können, oder um zu verhindern, dass Änderungen in diesem Fenster neu gezeichnet werden.
 ms.assetid: 0085a55e-7bf6-4eb6-a649-832b685db1cc
-title: WM_SETREDRAW Meldung (Winuser. h)
+title: WM_SETREDRAW (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 184401e70c8233b03c57db4f8a01bbd6a42e1a35
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1232833fc4465e2341541a0036af47fdd3b53393
+ms.sourcegitcommit: e5d6fb49928cc8cea4ec77dce03b740d40076348
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217039"
+ms.lasthandoff: 07/10/2021
+ms.locfileid: "113593456"
 ---
-# <a name="wm_setredraw-message"></a>WM- \_ Nachricht "abzeichnen"
+# <a name="wm_setredraw-message"></a>WM_SETREDRAW
 
-Eine Anwendung sendet die **WM \_ setredraw** -Nachricht an ein Fenster, damit Änderungen in diesem Fenster neu gezeichnet werden können, oder um zu verhindern, dass Änderungen in diesem Fenster neu gezeichnet werden.
+Sie senden die **WM \_ SETREDRAW-Nachricht** an ein Fenster, um zu ermöglichen, dass Änderungen in diesem Fenster neu gezeichnet werden, oder um zu verhindern, dass Änderungen in diesem Fenster neu gezeichnet werden.
 
-Um diese Nachricht zu senden, wenden Sie die [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage) -Funktion mit den folgenden Parametern an.
-
+Um diese Nachricht zu senden, rufen Sie die [**SendMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessage) mit den folgenden Parametern auf.
 
 ```C++
-SendMessage( 
-  (HWND) hWnd,              
-  WM_SETREDRAW,             
-  (WPARAM) wParam,          
-  (LPARAM) lParam            
+SendMessage(
+  (HWND) hWnd,
+  WM_SETREDRAW,
+  (WPARAM) wParam,
+  (LPARAM) lParam
 );
 ```
 
-
-
 ## <a name="parameters"></a>Parameter
 
-<dl> <dt>
+`wParam`
 
-*wParam* 
-</dt> <dd>
+Der neu gezeichnete Zustand. Wenn dieser Parameter **TRUE ist,** kann der Inhalt nach einer Änderung neu gezeichnet werden. Wenn dieser Parameter **FALSE ist,** kann der Inhalt nach einer Änderung nicht neu gezeichnet werden.
 
-Der neu zeichnen-Zustand. Wenn dieser Parameter **true** ist, kann der Inhalt nach einer Änderung neu gezeichnet werden. Wenn dieser Parameter **false** ist, kann der Inhalt nach einer Änderung nicht neu gezeichnet werden.
-
-</dd> <dt>
-
-*lParam* 
-</dt> <dd>
+`lParam`
 
 Dieser Parameter wird nicht verwendet.
 
-</dd> </dl>
-
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Anwendung gibt 0 (null) zurück, wenn Sie diese Nachricht verarbeitet.
+Ihre Anwendung sollte 0 zurückgeben, wenn sie diese Nachricht verarbeitet.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Meldung kann nützlich sein, wenn eine Anwendung mehrere Elemente zu einem Listenfeld hinzufügen muss. Die Anwendung kann diese Nachricht mit dem Wert " **false**" von *wParam* abrufen, die Elemente hinzufügen und die Nachricht dann erneut aufzurufen, wobei *wParam* auf " **true**" festgelegt ist. Zum Schluss kann die Anwendung [**redrawwindow**](/windows/desktop/api/Winuser/nf-winuser-redrawwindow)aufrufen (*HWND*, **null**, **null**, RDW \_ Erase \| RDW- \_ Frame \| RDW \_ Invalidate \| RDW \_ AllChildren), damit das Listenfeld neu gezeichnet wird.
+Diese Meldung kann nützlich sein, wenn Ihre Anwendung einem Listenfeld mehrere Elemente hinzufügen muss. Ihre Anwendung kann diese Nachricht aufrufen, bei der *wParam* auf **FALSE** festgelegt ist, die Elemente hinzufügen und die Nachricht dann erneut aufrufen, während *wParam* auf **TRUE festgelegt ist.** Schließlich kann Ihre Anwendung [**RedrawWindow**](/windows/win32/api/Winuser/nf-winuser-redrawwindow)(*hWnd*, **NULL**, **NULL**, RDW \_ ERASE \| RDW FRAME \_ \| RDW \_ INVALIDATE \| RDW ALLCHILDREN) \_ aufrufen, damit das Listenfeld neu gezeichnet wird.
 
-> [!Note]  
-> Das redrawwindow-Element mit den angegebenen Flags wird anstelle von [**invalidatererenverwendet**](/windows/desktop/api/Winuser/nf-winuser-redrawwindow) , da das erste-Steuerelement für einige Steuerelemente erforderlich ist, die nicht über einen Client Bereich verfügen, oder über Fenster Stile verfügen, die bewirken, dass Sie einen nicht-Client Bereich erhalten (z. b. **WS- \_ thickframe** [](/windows/desktop/api/Winuser/nf-winuser-invalidaterect) , **WS \_**-Rahmen oder **WS \_ Ex \_ clientedge** Wenn das Steuerelement nicht über einen nicht-Client Bereich verfügt, führt **redrawwindow** mit diesen Flags nur so viele ungültige Invalidierung durch wie **invalidaten.**
+> [!NOTE] 
+> Sie sollten [**RedrawWindow**](/windows/win32/api/Winuser/nf-winuser-redrawwindow) mit den angegebenen Flags anstelle von [**InvalidateRect**](/windows/win32/api/Winuser/nf-winuser-invalidaterect)verwenden, da ersteres für einige Steuerelemente erforderlich ist, die einen eigenen Nichtclientbereich haben, oder über Fensterstile verfügen, die dazu führen, dass ihnen ein Nichtclientbereich (z. B. **WS_THICKFRAME,** **WS_BORDER oder** **WS_EX_CLIENTEDGE) erteilt wird.** Wenn das Steuerelement nicht über einen Nichtclientbereich verfügt, führt **RedrawWindow** mit diesen Flags nur so viel Ungültigkeit wie **InvalidateRect** durch.
 
- 
+Durch übergeben **WM_SETREDRAW** meldung an die **DefWindowProc-Funktion** wird der WS_VISIBLE aus dem Fenster entfernt, wenn *wParam* auf **FALSE festgelegt ist.**  Obwohl der Fensterinhalt auf dem Bildschirm sichtbar bleibt, gibt die [**IsWindowVisible-Funktion**](/windows/win32/api/winuser/nf-winuser-iswindowvisible) **FALSE** zurück, wenn sie in einem Fenster in diesem Zustand aufgerufen wird. 
 
-Wenn die Anwendung die **WM \_ setredraw** -Nachricht an ein ausgeblendetes Fenster sendet, wird das Fenster sichtbar (d. h., das Betriebssystem fügt dem Fenster das **\_ sichtbare WS** -Format hinzu).
+Durch übergeben **WM_SETREDRAW** meldung an die **DefWindowProc-Funktion** wird dem Fenster der WS_VISIBLE-Stil hinzufügt, sofern nicht festgelegt, wenn *wParam* auf **TRUE festgelegt ist.**  Wenn Ihre Anwendung  die WM_SETREDRAW-Nachricht sendet, bei der *wParam* auf **TRUE** festgelegt ist, wird das Fenster sichtbar. 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+**Windows 10 und höher; Windows Server 2016 und höher.** Das System legt eine Eigenschaft namens *SysSetRedraw*  für ein Fenster fest, dessen Fensterprozedur WM_SETREDRAW an **DefWindowProc übergibt.** Sie können die [**GetProp-Funktion**](/windows/win32/api/Winuser/nf-winuser-getpropa) verwenden, um den Eigenschaftswert zu erhalten, wenn er verfügbar ist. **GetProp gibt** einen Wert zurück, der nicht 0 (null) ist, wenn das Neuzeichneten deaktiviert ist. **GetProp** gibt 0 (null) zurück, wenn das neu gezeichnete Fenster aktiviert ist oder die Fenstereigenschaft nicht vorhanden ist. 
 
-
+## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
-|-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
-
-
+|-|-|
+| Unterstützte Mindestversion (Client) | Windows 2000 Professional \[nur Desktop-Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 2000 Server \[nur Desktop-Apps\] |
+| Header | <dl><dt>Winuser.h (include Windows.h)</dt></dl> |
 
 ## <a name="see-also"></a>Weitere Informationen
 
-<dl> <dt>
-
-[Übersicht über das Zeichnen und zeichnen](painting-and-drawing.md)
-</dt> <dt>
-
-[Zeichnen und Zeichnen von Nachrichten](painting-and-drawing-messages.md)
-</dt> <dt>
-
-[**Redrawwindow**](/windows/desktop/api/Winuser/nf-winuser-redrawwindow)
-</dt> </dl>
-
- 
-
- 
+* [Übersicht über Das Zeichnen und Zeichnen](painting-and-drawing.md)
+* [Zeichnen und Zeichnen von Nachrichten](painting-and-drawing-messages.md)
+* [RedrawWindow](/windows/win32/api/Winuser/nf-winuser-redrawwindow)
