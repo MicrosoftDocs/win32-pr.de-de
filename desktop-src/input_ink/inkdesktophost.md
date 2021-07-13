@@ -1,7 +1,7 @@
 ---
-description: Implementiert die iinkdesktophost-Schnittstelle.
+description: Implementiert die IInkDesktopHost-Schnittstelle.
 ms.assetid: 7a577536-405b-400d-89bc-c3b3894b448d
-title: Inkdesktophost-Klasse
+title: InkDesktopHost-Klasse
 ms.topic: language-reference
 ms.date: 02/03/2020
 topic_type:
@@ -13,56 +13,56 @@ api_type:
 - COM
 api_location:
 - InkPresenterDesktop.idl
-ms.openlocfilehash: d5dac80a4ee09bb4b78a4d61ca0efa74e99babb9
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: 74eebdbdfdbe3a4018d63b1f2161687152ebb5cc
+ms.sourcegitcommit: 1f917afc149b5cc449a4a25a87de311e4842734b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "106365221"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113689223"
 ---
-# <a name="inkdesktophost-class"></a>Inkdesktophost-Klasse
+# <a name="inkdesktophost-class"></a>InkDesktopHost-Klasse
 
-Implementiert die [**iinkdesktophost**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost) -Schnittstelle.
+Implementiert die [**IInkDesktopHost-Schnittstelle.**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost)
 
-Ein [**iinkdesktophost**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost) -Objekt ermöglicht das Übertragen von Eingaben, die Verarbeitung und das Rendering durch die Erstellung eines App-Threads zum Hosten eines [**iinkpresenterdesktop-**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) Objekts und das Einfügen in die visuelle [directcomposition](../directcomp/directcomposition-portal.md) -Struktur der app.
+Ein [**IInkDesktopHost-Objekt**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost) ermöglicht das Eingeben, Verarbeiten und Rendern von Freihandeingaben durch die Erstellung eines App-Threads, um ein [**IInkPresenterDesktop-Objekt**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) zu hosten und in die visuelle [DirectComposition-Struktur](../directcomp/directcomposition-portal.md) der App einzufügen.
 
 ## <a name="members"></a>Member
 
-Die **inkdesktophost** -Klasse erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inkdesktophost** verfügt auch über die folgenden Typen von Membern:
+Die **InkDesktopHost-Klasse** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **InkDesktopHost** verfügt auch über diese Typen von Membern:
 
 - [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inkdesktophost** -Klasse verfügt über diese Methoden.
+Die **InkDesktopHost-Klasse** verfügt über diese Methoden.
 
-| Methode | BESCHREIBUNG |
+| Methode | Beschreibung |
 |---|---|
-| [**"Kreateandinitializabkpresenter"**](/windows/win32/api/inkpresenterdesktop/nf-inkpresenterdesktop-iinkdesktophost-createandinitializeinkpresenter) | Erstellt ein [**iinkpresenterdesktop-**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) Objekt in einem Anwendungs Thread, verbindet es mit der visuellen Struktur des [directcomposition](../directcomp/directcomposition-portal.md) -Objekts der APP und legt die Größe des-Objekts fest.<br/> |
-| [**"Kreatabkpresenter"**](/windows/win32/api/inkpresenterdesktop/nf-inkpresenterdesktop-iinkdesktophost-createinkpresenter) | Erstellt ein [**iinkpresenterdesktop-**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) Objekt in einem Anwendungs Thread.<br/> |
-| [**Queueworkitem**](/windows/win32/api/inkpresenterdesktop/nf-inkpresenterdesktop-iinkdesktophost-queueworkitem) | Fügen Sie einer Arbeits Warteschlange einen frei Hand Vorgang zur Ausführung auf dem **inkdesktophost** -Thread hinzu.<br/> |
+| [**CreateAndInitializeInkPresenter**](/windows/win32/api/inkpresenterdesktop/nf-inkpresenterdesktop-iinkdesktophost-createandinitializeinkpresenter) | Erstellt ein [**IInkPresenterDesktop-Objekt**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) in einem Anwendungsthread, verbindet es mit der visuellen [DirectComposition-Struktur](../directcomp/directcomposition-portal.md) der App und legt die Größe des Objekts fest.<br/> |
+| [**CreateInkPresenter**](/windows/win32/api/inkpresenterdesktop/nf-inkpresenterdesktop-iinkdesktophost-createinkpresenter) | Erstellt ein [**IInkPresenterDesktop-Objekt**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) in einem Anwendungsthread.<br/> |
+| [**QueueWorkItem**](/windows/win32/api/inkpresenterdesktop/nf-inkpresenterdesktop-iinkdesktophost-queueworkitem) | Fügen Sie einer Arbeitswarteschlange einen Inkk-Vorgang für die Ausführung im **InkDesktopHost-Thread** hinzu.<br/> |
 
-## <a name="creationaccess-functions"></a>Zugriffs Funktionen für die Erstellung \\
+## <a name="creationaccess-functions"></a>\\Erstellungszugriffsfunktionen
 
-Rufen Sie [<strong>cokreateinstance</strong>](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit dem Klassen Bezeichner <strong>inkdesktophost</strong> auf, um einen Verweis auf das Objekt abzurufen.
+Rufen Sie [<strong>CoCreateInstance</strong>](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit dem Klassenbezeichner <strong>InkDesktopHost</strong> auf, um einen Verweis auf das Objekt abzurufen.
 
 ``` C++
 CoCreateInstance(__uuidof(InkDesktopHost), 
   nullptr, 
   CLSCTX_INPROC_SERVER, 
-  IID_PPV_ARGS(&amp;_spInkHost));
+  IID_PPV_ARGS(&_spInkHost));
 ```
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |---|---|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/> |
-| Header<br/>                   | <dl> <dt>Inkpresenterdesktop. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Inkpresenterdesktop. idl</dt> </dl> |
-| IID<br/>                      | IID \_ iinkdesktophost ist als 4ce7d875-A981-4140-a1ff-ad93258e8d59 definiert.<br/> |
+| Header<br/>                   | <dl> <dt>InkPresenterDesktop.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>InkPresenterDesktop.idl</dt> </dl> |
+| IID<br/>                      | IID \_ IInkDesktopHost ist als 4ce7d875-a981-4140-a1ff-ad93258e8d59 definiert.<br/> |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Ink Presenter-Klassen](ink-presenter-classes.md), [Stift-und tablettstiftinteraktionen](/windows/uwp/design/input/pen-and-stylus-interactions), Handschrift Analyse- [Beispiel](/samples/microsoft/windows-universal-samples/inkanalysis/), [einfaches Beispiel zum Einfügen](/samples/microsoft/windows-universal-samples/simpleink/), Beispiel für [komplexe](/samples/microsoft/windows-universal-samples/complexink/) Erfassung
+[Klassen für die Ink-Präsentation,](ink-presenter-classes.md) [Stift- und Stiftinteraktionen,](/windows/uwp/design/input/pen-and-stylus-interactions) [Beispiel für die Ink-Analyse,](/samples/microsoft/windows-universal-samples/inkanalysis/) [Einfaches Beispiel für Denkaktionen,](/samples/microsoft/windows-universal-samples/simpleink/)Beispiel für [komplexes Inknen](/samples/microsoft/windows-universal-samples/complexink/)
