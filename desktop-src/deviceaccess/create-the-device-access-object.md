@@ -1,25 +1,25 @@
 ---
-title: Implementieren des Geräte Zugriffs Objekts
-description: In diesem Thema wird erläutert, wie das Geräte Zugriffs Objekt instanziiert und für den Zugriff auf ein Gerät verwendet wird.
+title: Implementieren des Gerätezugriffsobjekts
+description: In diesem Thema wird erläutert, wie Sie das Gerätezugriffsobjekt instanziieren und für den Zugriff auf ein Gerät verwenden.
 ms.assetid: 26619A25-67FE-44DC-82DD-36076326748D
 ms.topic: article
 ms.date: 02/11/2020
-ms.openlocfilehash: 60bd634f72b29bb6520223a7933b22a396f99723
-ms.sourcegitcommit: 3d718d8f69d3f86eaecf94c5705d761c5a9ef4a1
+ms.openlocfilehash: 9fee82f84a9325472928de69513e5f8e1c3ea1d1
+ms.sourcegitcommit: 1f917afc149b5cc449a4a25a87de311e4842734b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104474596"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113689213"
 ---
-# <a name="implement-the-device-access-object"></a><span data-ttu-id="78f8c-103">Implementieren des Geräte Zugriffs Objekts</span><span class="sxs-lookup"><span data-stu-id="78f8c-103">Implement the Device Access Object</span></span>
+# <a name="implement-the-device-access-object"></a><span data-ttu-id="71ed9-103">Implementieren des Gerätezugriffsobjekts</span><span class="sxs-lookup"><span data-stu-id="71ed9-103">Implement the Device Access Object</span></span>
 
-<span data-ttu-id="78f8c-104">In diesem Thema wird erläutert, wie das Geräte Zugriffs Objekt instanziiert und für den Zugriff auf ein Gerät verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="78f8c-104">This topic explains how to instantiate the device access object and use it to access a device.</span></span> <span data-ttu-id="78f8c-105">Die instanziierte Klasse implementiert die Schnittstellen [**ideviceiocontrol**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) und [**ikreatedeviceaccessasync**](/windows/win32/api/Deviceaccess/nn-deviceaccess-icreatedeviceaccessasync) .</span><span class="sxs-lookup"><span data-stu-id="78f8c-105">The instantiated class implements the [**IDeviceIoControl**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) and [**ICreateDeviceAccessAsync**](/windows/win32/api/Deviceaccess/nn-deviceaccess-icreatedeviceaccessasync) interfaces.</span></span>
+<span data-ttu-id="71ed9-104">In diesem Thema wird erläutert, wie Sie das Gerätezugriffsobjekt instanziieren und für den Zugriff auf ein Gerät verwenden.</span><span class="sxs-lookup"><span data-stu-id="71ed9-104">This topic explains how to instantiate the device access object and use it to access a device.</span></span> <span data-ttu-id="71ed9-105">Die instanziierte Klasse implementiert die [**Schnittstellen IDeviceIoControl**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) und [**ICreateDeviceAccessAsync.**](/windows/win32/api/Deviceaccess/nn-deviceaccess-icreatedeviceaccessasync)</span><span class="sxs-lookup"><span data-stu-id="71ed9-105">The instantiated class implements the [**IDeviceIoControl**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) and [**ICreateDeviceAccessAsync**](/windows/win32/api/Deviceaccess/nn-deviceaccess-icreatedeviceaccessasync) interfaces.</span></span>
 
-## <a name="instructions"></a><span data-ttu-id="78f8c-106">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="78f8c-106">Instructions</span></span>
+## <a name="instructions"></a><span data-ttu-id="71ed9-106">Instructions</span><span class="sxs-lookup"><span data-stu-id="71ed9-106">Instructions</span></span>
 
-### <a name="step-1"></a><span data-ttu-id="78f8c-107">Schritt 1</span><span class="sxs-lookup"><span data-stu-id="78f8c-107">Step 1</span></span>
+### <a name="step-1"></a><span data-ttu-id="71ed9-107">Schritt 1</span><span class="sxs-lookup"><span data-stu-id="71ed9-107">Step 1</span></span>
 
-<span data-ttu-id="78f8c-108">Um das Geräte Zugriffs Objekt zu instanziieren, müssen Sie zuerst die Funktion " [**devatedeviceaccessinstance**](/windows/win32/api/deviceaccess/nf-deviceaccess-createdeviceaccessinstance) " aufrufen.</span><span class="sxs-lookup"><span data-stu-id="78f8c-108">To instantiate the device access object, you must first call the [**CreateDeviceAccessInstance**](/windows/win32/api/deviceaccess/nf-deviceaccess-createdeviceaccessinstance) function.</span></span> <span data-ttu-id="78f8c-109">Wenn " **deatedeviceaccessinstance** " erfolgreich ist, können Sie die [**Wait**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-wait) -Methode aufrufen, um zu warten, bis der asynchrone Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="78f8c-109">If **CreateDeviceAccessInstance** succeeds, you can then call the [**Wait**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-wait) method to wait for the asynchronous operation to finish.</span></span> <span data-ttu-id="78f8c-110">Wenn der **warte** Vorgang erfolgreich ist, können Sie ein [**ideviceiocontrol**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) -Objekt (oder den entsprechenden Fehler) aus der [**GetResult**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-getresult) -Methode abrufen.</span><span class="sxs-lookup"><span data-stu-id="78f8c-110">If **Wait** succeeds, you can retrieve an [**IDeviceIoControl**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) object (or the appropriate error) from the [**GetResult**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-getresult) method.</span></span>
+<span data-ttu-id="71ed9-108">Um das Gerätezugriffsobjekt zu instanziieren, müssen Sie zuerst die [**CreateDeviceAccessInstance-Funktion**](/windows/win32/api/deviceaccess/nf-deviceaccess-createdeviceaccessinstance) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="71ed9-108">To instantiate the device access object, you must first call the [**CreateDeviceAccessInstance**](/windows/win32/api/deviceaccess/nf-deviceaccess-createdeviceaccessinstance) function.</span></span> <span data-ttu-id="71ed9-109">Wenn **CreateDeviceAccessInstance** erfolgreich ist, können Sie die [**Wait-Methode**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-wait) aufrufen, um auf den Abschluss des asynchronen Vorgangs zu warten.</span><span class="sxs-lookup"><span data-stu-id="71ed9-109">If **CreateDeviceAccessInstance** succeeds, you can then call the [**Wait**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-wait) method to wait for the asynchronous operation to finish.</span></span> <span data-ttu-id="71ed9-110">Wenn **Wait** erfolgreich ist, können Sie ein [**IDeviceIoControl-Objekt**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) (oder den entsprechenden Fehler) aus der [**GetResult-Methode**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-getresult) abrufen.</span><span class="sxs-lookup"><span data-stu-id="71ed9-110">If **Wait** succeeds, you can retrieve an [**IDeviceIoControl**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) object (or the appropriate error) from the [**GetResult**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-getresult) method.</span></span>
 
 ```C++
 HRESULT
@@ -57,7 +57,7 @@ Return Value:
 
    hr = CreateDeviceAccessInstance(pszDeviceInterfacePath,
                                    GENERIC_READ|GENERIC_WRITE,
-                                   &amp;pDeviceAccess);
+                                   &pDeviceAccess);
 
     if (FAILED(hr)) {
         return hr;
@@ -69,7 +69,7 @@ Return Value:
 
     if (SUCCEEDED(hr)) {
         hr = pDeviceAccess->GetResult(IID_IDeviceIoControl,
-                                            (void **)&amp;m_pDeviceIoControl);
+                                            (void **)&m_pDeviceIoControl);
     }
 
     pDeviceAccess->Release();
@@ -80,9 +80,9 @@ Return Value:
 
 
 
-### <a name="step-2"></a><span data-ttu-id="78f8c-111">Schritt 2</span><span class="sxs-lookup"><span data-stu-id="78f8c-111">Step 2</span></span>
+### <a name="step-2"></a><span data-ttu-id="71ed9-111">Schritt 2</span><span class="sxs-lookup"><span data-stu-id="71ed9-111">Step 2</span></span>
 
-<span data-ttu-id="78f8c-112">Dies ist ein Beispiel für einen Aufrufs der **deviceiocontrolsync** -Methode.</span><span class="sxs-lookup"><span data-stu-id="78f8c-112">This is an example of a call to the **DeviceIoControlSync** method.</span></span>
+<span data-ttu-id="71ed9-112">Dies ist ein Beispiel für einen Aufruf der **DeviceIoControlSync-Methode.**</span><span class="sxs-lookup"><span data-stu-id="71ed9-112">This is an example of a call to the **DeviceIoControlSync** method.</span></span>
 
 
 ```C++
@@ -116,7 +116,7 @@ Return Value:
     sevenSegment = g_NumberToMask[value];
     hr = m_pDeviceIoControl->DeviceIoControlSync(
                          IOCTL_OSRUSBFX2_SET_7_SEGMENT_DISPLAY,
-                         &amp;sevenSegment,
+                         &sevenSegment,
                          sizeof(BYTE),
                          NULL,
                          0,
@@ -129,10 +129,10 @@ Return Value:
 
 
 
-## <a name="remarks"></a><span data-ttu-id="78f8c-113">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="78f8c-113">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="71ed9-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="71ed9-113">Remarks</span></span>
 
-<span data-ttu-id="78f8c-114">Sie können ioctl auch asynchron mithilfe der [**deviceiocontrolasync**](/windows/win32/api/Deviceaccess/nf-deviceaccess-ideviceiocontrol-deviceiocontrolasync) -Methode senden.</span><span class="sxs-lookup"><span data-stu-id="78f8c-114">You can also send an IOCTL asynchronously by using the [**DeviceIoControlAsync**](/windows/win32/api/Deviceaccess/nf-deviceaccess-ideviceiocontrol-deviceiocontrolasync) method.</span></span> <span data-ttu-id="78f8c-115">In diesem Fall müssen Sie die [**idevicerequestcompletioncallback**](/windows/win32/api/Deviceaccess/nn-deviceaccess-idevicerequestcompletioncallback) -Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="78f8c-115">In that case, you must implement the [**IDeviceRequestCompletionCallback**](/windows/win32/api/Deviceaccess/nn-deviceaccess-idevicerequestcompletioncallback) interface.</span></span>
+<span data-ttu-id="71ed9-114">Sie können eine IOCTL auch asynchron senden, indem Sie die [**DeviceIoControlAsync-Methode**](/windows/win32/api/Deviceaccess/nf-deviceaccess-ideviceiocontrol-deviceiocontrolasync) verwenden.</span><span class="sxs-lookup"><span data-stu-id="71ed9-114">You can also send an IOCTL asynchronously by using the [**DeviceIoControlAsync**](/windows/win32/api/Deviceaccess/nf-deviceaccess-ideviceiocontrol-deviceiocontrolasync) method.</span></span> <span data-ttu-id="71ed9-115">In diesem Fall müssen Sie die [**IDeviceRequestCompletionCallback-Schnittstelle**](/windows/win32/api/Deviceaccess/nn-deviceaccess-idevicerequestcompletioncallback) implementieren.</span><span class="sxs-lookup"><span data-stu-id="71ed9-115">In that case, you must implement the [**IDeviceRequestCompletionCallback**](/windows/win32/api/Deviceaccess/nn-deviceaccess-idevicerequestcompletioncallback) interface.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="78f8c-116">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="78f8c-116">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="71ed9-116">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="71ed9-116">Related topics</span></span>
 
-<span data-ttu-id="78f8c-117">[Beispiel für benutzerdefinierten Treiber Zugriff](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Custom%20driver%20access%20sample), [UWP-Geräte-Apps für interne Geräte](/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices), [Hardware dev Center](/windows-hardware/drivers/)</span><span class="sxs-lookup"><span data-stu-id="78f8c-117">[Custom Driver Access Sample](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Custom%20driver%20access%20sample), [UWP device apps for internal devices](/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices), [Hardware Dev Center](/windows-hardware/drivers/)</span></span>
+<span data-ttu-id="71ed9-117">[Beispiel für benutzerdefinierten Treiberzugriff,](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Custom%20driver%20access%20sample) [UWP-Geräte-Apps für interne Geräte,](/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices) [Hardware Dev Center](/windows-hardware/drivers/)</span><span class="sxs-lookup"><span data-stu-id="71ed9-117">[Custom Driver Access Sample](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Custom%20driver%20access%20sample), [UWP device apps for internal devices](/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices), [Hardware Dev Center](/windows-hardware/drivers/)</span></span>
