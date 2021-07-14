@@ -1,39 +1,38 @@
 ---
-title: Contextpopup-Beispiel
-description: Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um eine Windows-Menü Bandanwendung mit contextpopups zu implementieren.
+title: ContextPopup-Beispiel
+description: In diesem Codebeispiel werden das Markup und der Code veranschaulicht, die zum Implementieren einer Windows Ribbon-Anwendung mit ContextPopups erforderlich sind.
 ms.assetid: f334dbfc-710a-4652-b914-a668ae36aecd
 ms.topic: article
-ms.date: 05/31/2018
-ms.openlocfilehash: 433ff2f66b27c3fb244181a779718079b3f992b4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.date: 07/13/2021
+ms.openlocfilehash: 5f469ac892f063fbd6c8beb0fe8af0c054216dbc
+ms.sourcegitcommit: 63c93e0ad0b48d60b11008767196718feb475cb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337519"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113691699"
 ---
-# <a name="contextpopup-sample"></a>Contextpopup-Beispiel
+# <a name="contextpopup-sample"></a>ContextPopup-Beispiel
 
-Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um eine Windows-Menü Bandanwendung mit contextpopups zu implementieren.
+In diesem Codebeispiel werden das Markup und der Code veranschaulicht, die zum Implementieren einer Windows Ribbon-Anwendung mit ContextPopups erforderlich sind.
 
--   [Verwendung](#usage)
-    -   [Beispiel zum Aufbau](#building-the-sample)
-    -   [Ausführen des Beispiels](#running-the-sample)
--   [Unterstützung](#support)
--   [Mindestanforderungen](#minimum-requirements)
--   [Zugehörige Themen](#related-topics)
+- [Verwendung](#usage)
+  - [Erstellen des Beispiels](#building-the-sample)
+  - [Ausführen des Beispiels](#running-the-sample)
+- [Support](#support)
+- [Mindestanforderungen](#minimum-requirements)
+- [Zugehörige Themen](#related-topics)
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Usage
 
-Das contextpopup-Beispiel kann als eigenständiges Microsoft Visual Studio Projekt aus dem [Microsoft Download Center](https://www.microsoft.com/DOWNLOADS/en/default.aspx) heruntergeladen oder als Teil des [Windows Software Development Kit (SDK)](https://msdn.microsoft.com/windows/bb980924.aspx)installiert werden.
+Die Windows Ribbon Framework-Beispiele können als eigenständige Microsoft Visual Studio-Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK) installiert werden.](https://developer.microsoft.com/windows/downloads/sdk-archive/)
 
--   Microsoft Download Center: [Beispiele für Windows-Menü Bänder](https://www.microsoft.com/downloads/details.aspx?familyid=141e13e8-b10b-4356-aaa5-609b2981574a&displaylang=en)
--   Windows Software Development Kit (SDK) (Standard Installationspfad):% Program Files% \\ Microsoft SDKs \\ Windows- \\ \[ Versionsnummer \] \\ Beispiele \\ WinUI \\ windowsribbon \\ contextpopup
+- Windows Software Development Kit (SDK) (Standardinstallationspfad): %ProgramFiles% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Beispiele \\ winui \\ WindowsRibbon \\ ContextPopup
 
 ### <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Laden Sie das Beispiel auf Ihre Festplatte herunter.
+Laden Sie das Beispiel herunter.
 
-Installieren Sie den Windows SDK für Windows 7, und öffnen Sie das Befehlsfenster Buildumgebung. Zeigen Sie im Startmenü auf Alle Programme und Microsoft Windows SDK, und klicken Sie dann auf CMD Shell.
+Installieren Sie Windows SDK für Windows 7, und öffnen Sie das Befehlsfenster der Buildumgebung. Zeigen Sie im Startmenü auf Alle Programme und Microsoft Windows SDK, und klicken Sie dann auf CMD Shell.
 
 Um das Beispiel über das Buildumgebungs-Befehlsfenster zu erstellen, wechseln Sie zum Quellverzeichnis des Beispiels. Geben Sie an der Eingabeaufforderung MSBUILD ein.
 
@@ -41,13 +40,13 @@ Um das Beispiel mit in Microsoft Visual Studio zu erstellen, laden Sie die Proje
 
 ### <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Um das Beispiel im Befehlsfenster der Buildumgebung auszuführen, führen Sie die exe-Dateien im \\ Ordner bin Debug oder bin Release aus, \\ der im Beispiel Quellordner enthalten ist.
+Um das Beispiel über das Befehlsfenster der Buildumgebung auszuführen, führen Sie die .exe-Dateien im Ordner Bin Debug oder Bin Release aus, der \\ im Beispielquellenordner \\ enthalten ist.
 
 Um das kompilierte Beispiel in Visual Studio mit Debuggen auszuführen, drücken Sie F5.
 
-## <a name="support"></a>Support
+## <a name="support"></a>Unterstützung
 
-Das [Windows-Menüband-Entwicklungs Forum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) steht zur Erörterung von Themen und zum stellen von Fragen im Zusammenhang mit der Entwicklung von Windows-
+Das [Windows Ribbon Development Forum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) steht zur Verfügung, um Themen zu besprechen und Fragen im Zusammenhang mit der Entwicklung Windows Menübandanwendungen zu stellen.
 
 ## <a name="minimum-requirements"></a>Mindestanforderungen
 
@@ -55,18 +54,18 @@ Das [Windows-Menüband-Entwicklungs Forum](https://social.msdn.microsoft.com/For
 
 | Anforderung | Wert |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 7<br/> Windows Vista mit Service Pack 2 (SP2) und [Platt Form Update für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx)<br/>         |
-| Unterstützte Mindestversion (Server) | Windows Server 2008 R2<br/> Windows Server 2008 mit SP2 und [Platt Form Update für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx)<br/> |
+| Unterstützte Mindestversion (Client) | Windows 7<br/> Windows Vista mit Service Pack 2 (SP2) und [Plattformupdate für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx)<br/>         |
+| Unterstützte Mindestversion (Server) | Windows Server 2008 R2<br/> Windows Server 2008 mit SP2 und [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx)<br/> |
 | Windows SDK              | 7.0                                                                                                                                                                      |
 | Visual Studio            | 2008                                                                                                                                                                     |
-| Header-und IDL-Dateien     | uiribbon. h, uiribbon. idl                                                                                                                                                 |
+| Header- und IDL-Dateien     | uiribbon.h, uiribbon.idl                                                                                                                                                 |
 
 
 
  
 
 > [!Note]  
-> Das [Platt Form Update für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) und das [Platt Form Update für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows-Menü Band Anwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 ausrichten können. Die Platt Form Updates werden für alle Windows Vista-und Windows Server 2008-Kunden über Windows Update verfügbar sein. Anwendungen von Drittanbietern, die ein [Platt Form Update für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder ein [Platt Form Update für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erfordern, können Windows Update erkennen, ob das erforderliche aktualisierte installiert ist. Wenn dies nicht der Fall ist, wird Windows Update im Hintergrund heruntergeladen und installiert.
+> Das [Plattformupdate](https://msdn.microsoft.com/library/dd378748.aspx) für Windows Vista und das Plattformupdate für [Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows-Menübandanwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 als Ziel verwenden können. Die Plattformupdates sind für alle Windows Vista- und Windows Server 2008-Kunden über Windows verfügbar. Bei Anwendungen von Drittanbietern, für die ein Plattformupdate für [Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder ein Plattformupdate für Windows [Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erforderlich ist, kann Windows Update erkennen, ob das erforderliche Update installiert ist. Ist dies nicht der Windows Update wird es heruntergeladen und im Hintergrund installiert.
 
  
 

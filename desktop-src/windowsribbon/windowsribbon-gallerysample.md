@@ -1,39 +1,38 @@
 ---
-title: Galerie Beispiel
-description: Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die unterschiedlichen Typen von Katalog Steuerelementen zu verwenden, die im Windows-Menü Band Framework
+title: Katalogbeispiel
+description: Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die verschiedenen Typen von Katalogsteuerelementen zu verwenden, die im Menübandframework Windows sind.
 ms.assetid: 1a462f4e-e75a-40cf-9c52-0bad0a645d57
 ms.topic: article
-ms.date: 05/31/2018
-ms.openlocfilehash: 5aacc52081fbcd2b6b58fd4c2439894705880d30
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.date: 07/13/2021
+ms.openlocfilehash: ef776a8a1a8eadf9ee41cf9964066cc612a9f9a1
+ms.sourcegitcommit: 63c93e0ad0b48d60b11008767196718feb475cb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103142"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113691749"
 ---
-# <a name="gallery-sample"></a>Galerie Beispiel
+# <a name="gallery-sample"></a>Katalogbeispiel
 
-Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die unterschiedlichen Typen von Katalog Steuerelementen zu verwenden, die im Windows-Menü Band Framework Das Beispiel enthält Code, der zum dynamischen Auffüllen von Elementen in den Galerien und zum Behandeln spezieller Katalog-Vorschau Ereignisse verwendet werden kann, die die ergebnisorientierte Benutzeroberfläche unterstützen.
+Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die verschiedenen Typen von Katalogsteuerelementen zu verwenden, die im Menübandframework Windows sind. Das Beispiel enthält Code, der verwendet werden kann, um Elemente dynamisch in die Kataloge zu füllen und spezielle Katalogvorschauereignisse zu behandeln, die eine ergebnisorientierte Benutzeroberfläche unterstützen.
 
--   [Verwendung](#usage)
-    -   [Beispiel zum Aufbau](#building-the-sample)
-    -   [Ausführen des Beispiels](#running-the-sample)
--   [Unterstützung](#support)
--   [Mindestanforderungen](#minimum-requirements)
--   [Zugehörige Themen](#related-topics)
+- [Verwendung](#usage)
+  - [Erstellen des Beispiels](#building-the-sample)
+  - [Ausführen des Beispiels](#running-the-sample)
+- [Support](#support)
+- [Mindestanforderungen](#minimum-requirements)
+- [Zugehörige Themen](#related-topics)
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Usage
 
-Das Galerie Beispiel kann als eigenständiges Microsoft Visual Studio Projekt aus dem [Microsoft Download Center](https://www.microsoft.com/DOWNLOADS/en/default.aspx) heruntergeladen oder als Teil des [Windows Software Development Kit (SDK)](https://msdn.microsoft.com/windows/bb980924.aspx)installiert werden.
+Die Windows Ribbon Framework-Beispiele können als eigenständige Microsoft Visual Studio-Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK) installiert werden.](https://developer.microsoft.com/windows/downloads/sdk-archive/)
 
--   Microsoft Download Center: [Beispiele für Windows-Menü Bänder](https://www.microsoft.com/downloads/details.aspx?familyid=141e13e8-b10b-4356-aaa5-609b2981574a&displaylang=en)
--   Windows Software Development Kit (SDK) (Standard Installationspfad):% Program Files% \\ Microsoft SDKs \\ Windows- \\ \[ Versionsnummer \] \\ Beispiele \\ WinUI \\ windowsribbon \\ Gallery
+- Windows Software Development Kit (SDK) (Standardinstallationspfad): %ProgramFiles% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Beispiele \\ winui \\ WindowsRibbon \\ Gallery
 
 ### <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Laden Sie das Beispiel auf Ihre Festplatte herunter.
+Laden Sie das Beispiel herunter.
 
-Installieren Sie den Windows SDK für Windows 7, und öffnen Sie das Befehlsfenster Buildumgebung. Zeigen Sie im Startmenü auf Alle Programme und Microsoft Windows SDK, und klicken Sie dann auf CMD Shell.
+Installieren Sie Windows SDK für Windows 7, und öffnen Sie das Befehlsfenster der Buildumgebung. Zeigen Sie im Startmenü auf Alle Programme und Microsoft Windows SDK, und klicken Sie dann auf CMD Shell.
 
 Um das Beispiel über das Buildumgebungs-Befehlsfenster zu erstellen, wechseln Sie zum Quellverzeichnis des Beispiels. Geben Sie an der Eingabeaufforderung MSBUILD ein.
 
@@ -41,13 +40,13 @@ Um das Beispiel mit in Microsoft Visual Studio zu erstellen, laden Sie die Proje
 
 ### <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Um das Beispiel im Befehlsfenster der Buildumgebung auszuführen, führen Sie die exe-Dateien im \\ Ordner bin Debug oder bin Release aus, \\ der im Beispiel Quellordner enthalten ist.
+Um das Beispiel über das Befehlsfenster der Buildumgebung auszuführen, führen Sie die .exe-Dateien im Ordner Bin Debug oder Bin Release aus, der \\ im Beispielquellenordner \\ enthalten ist.
 
 Um das kompilierte Beispiel in Visual Studio mit Debuggen auszuführen, drücken Sie F5.
 
-## <a name="support"></a>Support
+## <a name="support"></a>Unterstützung
 
-Das [Windows-Menüband-Entwicklungs Forum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) steht zur Erörterung von Themen und zum stellen von Fragen im Zusammenhang mit der Entwicklung von Windows-
+Das [Windows Ribbon Development Forum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) steht zur Verfügung, um Themen zu besprechen und Fragen im Zusammenhang mit der Entwicklung Windows Menübandanwendungen zu stellen.
 
 ## <a name="minimum-requirements"></a>Mindestanforderungen
 
@@ -55,18 +54,18 @@ Das [Windows-Menüband-Entwicklungs Forum](https://social.msdn.microsoft.com/For
 
 | Anforderung | Wert |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 7<br/> Windows Vista mit Service Pack 2 (SP2) und [Platt Form Update für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx)<br/>         |
-| Unterstützte Mindestversion (Server) | Windows Server 2008 R2<br/> Windows Server 2008 mit SP2 und [Platt Form Update für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx)<br/> |
+| Unterstützte Mindestversion (Client) | Windows 7<br/> Windows Vista mit Service Pack 2 (SP2) und [Plattformupdate für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx)<br/>         |
+| Unterstützte Mindestversion (Server) | Windows Server 2008 R2<br/> Windows Server 2008 mit SP2 und [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx)<br/> |
 | Windows SDK              | 7.0                                                                                                                                                                      |
 | Visual Studio            | 2008                                                                                                                                                                     |
-| Header-und IDL-Dateien     | uiribbon. h, uiribbon. idl                                                                                                                                                 |
+| Header- und IDL-Dateien     | uiribbon.h, uiribbon.idl                                                                                                                                                 |
 
 
 
  
 
 > [!Note]  
-> Das [Platt Form Update für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) und das [Platt Form Update für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows-Menü Band Anwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 ausrichten können. Die Platt Form Updates werden für alle Windows Vista-und Windows Server 2008-Kunden über Windows Update verfügbar sein. Anwendungen von Drittanbietern, die ein [Platt Form Update für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder ein [Platt Form Update für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erfordern, können Windows Update erkennen, ob das erforderliche aktualisierte installiert ist. Wenn dies nicht der Fall ist, wird Windows Update im Hintergrund heruntergeladen und installiert.
+> Das [Plattformupdate](https://msdn.microsoft.com/library/dd378748.aspx) für Windows Vista und das Plattformupdate für [Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows-Menübandanwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 als Ziel verwenden können. Die Plattformupdates sind für alle Windows Vista- und Windows Server 2008-Kunden über Windows verfügbar. Bei Anwendungen von Drittanbietern, für die ein Plattformupdate für [Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder ein Plattformupdate für Windows [Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erforderlich ist, kann Windows Update erkennen, ob das erforderliche Update installiert ist. Ist dies nicht der Windows Update wird es heruntergeladen und im Hintergrund installiert.
 
  
 
@@ -74,22 +73,22 @@ Das [Windows-Menüband-Entwicklungs Forum](https://social.msdn.microsoft.com/For
 
 <dl> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> <dt>
 
-[Kombinations Feld](windowsribbon-controls-combobox.md)
+[Kombinationsfeld](windowsribbon-controls-combobox.md)
 </dt> <dt>
 
-[Dropdown-Katalog](windowsribbon-controls-dropdowngallery.md)
+[Dropdownkatalog](windowsribbon-controls-dropdowngallery.md)
 </dt> <dt>
 
-[In-Ribbon-Katalog](windowsribbon-controls-inribbongallery.md)
+[Katalog im Menüband](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
-[Split Button-Katalog](windowsribbon-controls-splitbuttongallery.md)
+[Katalog mit geteilten Schaltflächen](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
-[Sammlungs Eigenschaften](windowsribbon-reference-properties-collection.md)
+[Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 </dt> </dl>
 
  
