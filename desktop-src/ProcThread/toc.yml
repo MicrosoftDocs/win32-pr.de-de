@@ -139,6 +139,8 @@
                       href: /windows/desktop/api/RTWorkQ/nf-rtworkq-rtwqunregisterplatformfrommmcss
             - name: Prozessorgruppen
               href: processor-groups.md
+            - name: 'Quality of Service (QoS, Dienstqualität)'
+              href: quality-of-service.md
         - name: Mehrere Threads
           href: multiple-threads.md
           items:
@@ -154,7 +156,7 @@
               href: multiple-threads-and-gdi-objects.md
             - name: Threadlokaler Speicher
               href: thread-local-storage.md
-            - name: Erstellen von Fenstern in Threads
+            - name: Erstellen Windows in Threads
               href: creating-windows-in-threads.md
             - name: Beenden eines Threads
               href: terminating-a-thread.md
@@ -223,7 +225,7 @@
     - name: Prozess- und Threadreferenz
       href: process-and-thread-reference.md
       items:
-        - name: Prozess- und Threadenumerationen
+        - name: Prozess- und Threadenumeration
           href: process-and-thread-enumerations.md
           items:
             - name: DISPATCHERQUEUE_THREAD_APARTMENTTYPE
@@ -517,7 +519,7 @@
               href: /windows/desktop/api/WinBase/nf-winbase-initializethreadpoolenvironment
             - name: Iocompletioncallback
               href: /previous-versions/windows/desktop/legacy/ms684124(v=vs.85)
-            - name: IsImmersiveProcess
+            - name: IsWelsiveProcess
               href: /windows/desktop/api/Winuser/nf-winuser-isimmersiveprocess
             - name: IsProcessInJob
               href: /windows/desktop/api/jobapi/nf-jobapi-isprocessinjob
