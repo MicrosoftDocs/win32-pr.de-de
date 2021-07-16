@@ -7,12 +7,12 @@ keywords:
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: ac68ba25d1e8f35c5a41daec4d7a5295235a5d98
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 027be097c5c21929f3ccdbaa169a1f3dac55b394
+ms.sourcegitcommit: 698ce2d9ba2fa650f2875225d99623995fac246a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549185"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114231607"
 ---
 # <a name="layers-overview"></a>Übersicht über Ebenen
 
@@ -31,43 +31,43 @@ In dieser Übersicht werden die Grundlagen der Verwendung von Direct2D-Ebenen be
 -   [Alternativen zu Ebenen](#alternatives-to-layers)
 -   [Beschneiden einer beliebigen Form](#clipping-an-arbitrary-shape)
     -   [An der Achse ausgerichtete Clips](#axis-aligned-clips)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="what-are-layers"></a>Was sind Ebenen?
 
-Ebenen, die durch [**ID2D1Layer-Objekte dargestellt**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) werden, ermöglichen es einer Anwendung, eine Gruppe von Zeichnungsvorgängen zu bearbeiten. Sie verwenden eine Ebene, indem Sie sie auf ein Renderziel "pushen". Nachfolgende Zeichnungsvorgänge durch das Renderziel werden an die Ebene weitergeleitet. Nachdem Sie mit der Ebene fertig sind, "popen" Sie die Ebene vom Renderziel, wodurch der Inhalt der Ebene wieder mit dem Renderziel zusammengesetzt wird.
+Ebenen, die durch [**ID2D1Layer-Objekte dargestellt**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) werden, ermöglichen es einer Anwendung, eine Gruppe von Zeichnungsvorgängen zu bearbeiten. Sie verwenden eine Ebene, indem Sie sie auf ein Renderziel "pushen". Nachfolgende Zeichnungsvorgänge durch das Renderziel werden an die Ebene geleitet. Nachdem Sie mit der Ebene fertig sind, "popen" Sie die Ebene aus dem Renderziel, wodurch der Inhalt der Ebene wieder zum Renderziel zusammengesetzt wird.
 
-Wie Pinsel sind Ebenen geräteabhängige Ressourcen, die von Renderzielen erstellt werden. Ebenen können auf jedem Renderziel in derselben Ressourcendomäne verwendet werden, die das Renderziel enthält, das es erstellt hat. Eine Ebenenressource kann jedoch jeweils nur von einem Renderziel verwendet werden. Weitere Informationen zu Ressourcen finden Sie in der [Ressourcenübersicht.](resources-and-resource-domains.md)
+Wie Pinsel sind Ebenen geräteabhängige Ressourcen, die von Renderzielen erstellt werden. Ebenen können auf jedem Renderziel in derselben Ressourcendomäne verwendet werden, die das Renderziel enthält, mit dem es erstellt wurde. Eine Ebenenressource kann jedoch nur von einem Renderziel gleichzeitig verwendet werden. Weitere Informationen zu Ressourcen finden Sie unter [Übersicht über Ressourcen.](resources-and-resource-domains.md)
 
-Obwohl Ebenen ein leistungsstarkes Renderingverfahren zum Erzeugen interessanter Effekte bieten, kann eine übermäßige Anzahl von Ebenen in einer Anwendung aufgrund der verschiedenen Kosten für die Verwaltung von Ebenen und Ebenenressourcen die Leistung beeinträchtigen. Beispielsweise entstehen die Kosten für das Auffüllen oder Löschen der Schicht und das anschließende Zusammensetzen, insbesondere bei höherer Hardware. Dann entstehen die Kosten für die Verwaltung der Ebenenressourcen. Wenn Sie diese häufig neu verteilen, sind die resultierenden Ausfälle bei der GPU das wichtigste Problem. Wenn Sie Ihre Anwendung entwerfen, versuchen Sie, die Wiederverwendung von Ebenenressourcen zu maximieren.
+Ebenen bieten zwar eine leistungsstarke Renderingtechnik zum Erzeugen interessanter Effekte, aber eine übermäßige Anzahl von Ebenen in einer Anwendung kann sich aufgrund der verschiedenen Kosten für die Verwaltung von Ebenen und Ebenenressourcen negativ auf die Leistung auswirken. Beispielsweise sind die Kosten für das Auffüllen oder Löschen der Schicht und das anschließende Wiederverblenden der Schicht erforderlich, insbesondere bei Hardware mit höherer Ebene. Anschließend sind die Kosten für die Verwaltung der Ebenenressourcen an. Wenn Sie diese häufig neu auffinden, sind die resultierenden Stags für die GPU das größte Problem. Versuchen Sie beim Entwerfen Ihrer Anwendung, die Wiederverwendung von Ebenenressourcen zu maximieren.
 
 ## <a name="layers-in-windows-8-and-later"></a>Ebenen in Windows 8 und höher
 
-Windows 8 wurden neue ebenenbezogene APIs eingeführt, die ebenenbezogene APIs vereinfachen, die Leistung von verbessern und Ebenen Features hinzufügen.
+Windows 8 neue ebenenbezogene APIs eingeführt, die die Leistung von vereinfachen, verbessern und Ebenen Features hinzufügen.
 
 ### <a name="id2d1devicecontext-and-pushlayer"></a>ID2D1DeviceContext und PushLayer
 
-Die [**ID2D1DeviceContext-Schnittstelle**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) wird von der [**ID2D1RenderTarget-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) abgeleitet und ist der Schlüssel zum Anzeigen von Direct2D-Inhalten in Windows 8. Weitere Informationen zu dieser Schnittstelle finden Sie unter [Geräte- und Gerätekontexte.](devices-and-device-contexts.md) Mit der Gerätekontextschnittstelle können Sie den Aufruf der [**CreateLayer-Methode**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) überspringen und dann NULL an die [**ID2D1DeviceContext::P ushLayer-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer)) übergeben. Direct2D verwaltet die Ebenenressource automatisch und kann Ressourcen zwischen Ebenen und Effektdiagrammen freigeben.
+Die [**ID2D1DeviceContext-Schnittstelle**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) wird von der [**ID2D1RenderTarget-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) abgeleitet und ist der Schlüssel zum Anzeigen von Direct2D-Inhalt in Windows 8. Weitere Informationen zu dieser Schnittstelle finden Sie unter Geräte und [Gerätekontexte](devices-and-device-contexts.md). Mit der Gerätekontextschnittstelle können Sie das Aufrufen der [**CreateLayer-Methode**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) überspringen und dann NULL an die [**ID2D1DeviceContext::P ushLayer-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer)) übergeben. Direct2D verwaltet die Ebenenressource automatisch und kann Ressourcen zwischen Ebenen und Effektdiagrammen freigeben.
 
 ### <a name="d2d1_layer_parameters1-and-d2d1_layer_options1"></a>D2D1 \_ LAYER \_ PARAMETERS1 und D2D1 \_ LAYER \_ OPTIONS1
 
-Die [**D2D1 \_ LAYER \_ PARAMETERS1-Struktur**](/windows/desktop/api/d2d1_1/ns-d2d1_1-d2d1_layer_parameters1) ist mit der [**D2D1 \_ LAYER \_ PARAMETERS-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters)identisch, mit der Ausnahme, dass der letzte Member der -Struktur jetzt eine [**D2D1 \_ LAYER \_ OPTIONS1-Enumeration**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1) ist.
+Die [**D2D1 \_ LAYER \_ PARAMETERS1-Struktur**](/windows/desktop/api/d2d1_1/ns-d2d1_1-d2d1_layer_parameters1) ist identisch mit [**D2D1 \_ LAYER \_ PARAMETERS,**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters)mit der Ausnahme, dass das letzte Member der Struktur jetzt eine [**D2D1 \_ LAYER \_ OPTIONS1-Enumeration**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1) ist.
 
-[**D2D1 \_ LAYER \_ OPTIONS1**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1) hat keine ClearType-Option und verfügt über zwei verschiedene Optionen, mit denen Sie die Leistung verbessern können:
+[**D2D1 \_ LAYER \_ OPTIONS1**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1) verfügt über keine ClearType-Option und verfügt über zwei verschiedene Optionen, mit denen Sie die Leistung verbessern können:
 
--   [**D2D1 \_ LAYER \_ OPTIONS1 \_ INITIALIZE \_ FROM \_ BACKGROUND**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1): Direct2D rendert Primitive auf der Ebene, ohne sie mit transparentem Schwarz zu löschen. Dies ist nicht die Standardeinstellung, führt aber in den meisten Fällen zu einer besseren Leistung.
+-   [**D2D1 \_ LAYER \_ OPTIONS1 \_ INITIALIZE FROM \_ \_ BACKGROUND:**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1)Direct2D rendert Primitive auf der Ebene, ohne sie mit transparentem Schwarz zu löschen. Dies ist nicht die Standardeinstellung, führt aber in den meisten Fällen zu einer besseren Leistung.
 
--   [**D2D1 \_ LAYER \_ OPTIONS1 \_ IGNORE \_ ALPHA**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1): Wenn die zugrunde liegende Oberfläche auf [**D2D1 \_ ALPHA MODE \_ \_ IGNORE**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)festgelegt ist, kann Direct2D mit dieser Option verhindern, dass der Alphakanal der Ebene geändert wird. Verwenden Sie dies in anderen Fällen nicht.
+-   [**D2D1 \_ LAYER \_ OPTIONS1 \_ IGNORE \_ ALPHA**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_layer_options1): Wenn die zugrunde liegende Oberfläche auf [**D2D1 \_ ALPHA MODE \_ \_ IGNORE**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)festgelegt ist, kann Direct2D mit dieser Option verhindern, dass der Alphakanal der Ebene geändert wird. Verwenden Sie dies nicht in anderen Fällen.
 
 ### <a name="blend-modes"></a>Füllmethoden
 
-Ab Windows 8 verfügt der Gerätekontext über einen [**primitiven Mischungsmodus,**](/windows/desktop/api/D2d1_1/ne-d2d1_1-d2d1_primitive_blend) der bestimmt, wie die einzelnen Primitiven mit der Zieloberfläche kombiniert werden. Dieser Modus gilt auch für Ebenen, wenn Sie die [**PushLayer-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer)) aufrufen.
+Ab Windows 8 verfügt der Gerätekontext über einen [**primitiven**](/windows/desktop/api/D2d1_1/ne-d2d1_1-d2d1_primitive_blend) Überblendmodus, der bestimmt, wie die einzelnen Primitiven mit der Zieloberfläche kombiniert werden. Dieser Modus gilt auch für Ebenen, wenn Sie die [**PushLayer-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer)) aufrufen.
 
-Wenn Sie beispielsweise eine Ebene zum Beschneiden von Primitiven mit Transparenz verwenden, legen Sie den [**D2D1 \_ PRIMITIVE \_ BLEND \_ COPY-Modus**](/windows/desktop/api/D2d1_1/ne-d2d1_1-d2d1_primitive_blend) für den Gerätekontext fest, um die richtigen Ergebnisse zu erzielen. Der Kopiermodus bewirkt, dass der Gerätekontext linear alle vier Farbkanäle, einschließlich des Alphakanals, jedes Pixels mit dem Inhalt der Zieloberfläche gemäß der geometrischen Maske der Ebene interpoliert.
+Wenn Sie beispielsweise eine Ebene zum Beschneiden von Primitiven mit Transparenz verwenden, legen Sie den [**D2D1 \_ PRIMITIVE \_ BLEND \_ COPY-Modus**](/windows/desktop/api/D2d1_1/ne-d2d1_1-d2d1_primitive_blend) für den Gerätekontext fest, um die richtigen Ergebnisse zu erzielen. Durch den Kopiermodus interpoliert der Gerätekontext alle vier Farbkanäle, einschließlich des Alphakanals, jedes Pixels mit dem Inhalt der Zieloberfläche gemäß der geometrischen Maske der Ebene.
 
 ### <a name="interoperation"></a>Interoperation
 
-Ab Windows 8 unterstützt Direct2D die Interoperation mit Direct3D und GDI, während eine Ebene oder ein Clip gepusht wird. Sie rufen [**ID2D1GdiInteropRenderTarget::GetDC**](/windows/win32/api/d2d1/nf-d2d1-id2d1gdiinteroprendertarget-getdc) auf, während eine Ebene zur Interoperabilität mit GDI gepusht wird. Sie rufen [**ID2D1DeviceContext::Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) auf und rendern dann auf der zugrunde liegenden Oberfläche, um mit Direct3D zu zusammenarbeiten. Es liegt in Ihrer Verantwortung, innerhalb der Ebene oder des Clips mit Direct3D oder GDI zu rendern. Wenn Sie versuchen, außerhalb der Ebene zu rendern oder die Ergebnisse zu beschneiden, sind die Ergebnisse nicht definiert.
+Ab Windows 8 unterstützt Direct2D die Interoperation mit Direct3D und GDI, während eine Ebene oder ein Clip mit pusht wird. Sie rufen [**ID2D1GdiInteropRenderTarget::GetDC**](/windows/win32/api/d2d1/nf-d2d1-id2d1gdiinteroprendertarget-getdc) auf, während eine Ebene zur Interoperabilität mit GDI pushed wird. Sie rufen [**ID2D1DeviceContext::Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) auf und rendern dann auf der zugrunde liegenden Oberfläche, um mit Direct3D zu zusammenarbeiten. Es liegt in Ihrer Verantwortung, innerhalb der Ebene zu rendern oder mit Direct3D oder GDI zu beschneiden. Wenn Sie versuchen, außerhalb der Ebene zu rendern oder die Ergebnisse zu beschneiden, sind die Ergebnisse nicht definiert.
 
 ## <a name="creating-layers"></a>Erstellen von Ebenen
 
@@ -81,30 +81,30 @@ Das Arbeiten mit Ebenen erfordert Vertrautheit mit den [**Methoden CreateLayer,*
 
 -   Nachdem das Zeichnen des Renderziels begonnen hat (nachdem die [**BeginDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) aufgerufen wurde), können Sie die [**PushLayer-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) verwenden. Die **PushLayer-Methode** fügt dem Renderziel die angegebene Ebene hinzu, sodass das Ziel alle nachfolgenden Zeichnungsvorgänge empfängt, bis [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird. Diese Methode verwendet ein [**ID2D1Layer-Objekt,**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) das durch Aufrufen von [**CreateLayer**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) zurückgegeben wird, und *ein layerParameters-Objekt* in der [**D2D1 \_ LAYER \_ PARAMETERS-Struktur.**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) In der folgenden Tabelle werden die Felder der -Struktur beschrieben. 
 
-    | Feld                 | Beschreibung|
+    | Feld                 | BESCHREIBUNG|
     |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | **contentBounds**     | Die Inhaltsgrenze der Ebene. Inhalte außerhalb dieser Grenzen werden garantiert nicht gerendert. Dieser Parameter ist standardmäßig auf [**InfiniteRect festgelegt.**](/windows/desktop/api/d2d1Helper/nf-d2d1helper-infiniterect) Wenn der Standardwert verwendet wird, werden die Inhaltsgrenze effektiv als Begrenzungen des Renderziels verwendet. |
+    | **contentBounds**     | Die Inhaltsgrenze der Ebene. Inhalt wird außerhalb dieser Grenzen nicht gerendert. Dieser Parameter ist standardmäßig auf [**InfiniteRect festgelegt.**](/windows/desktop/api/d2d1Helper/nf-d2d1helper-infiniterect) Wenn der Standardwert verwendet wird, werden die Inhaltsgrenze effektiv als Begrenzungen des Renderziels verwendet. |
     | **geometricMask**     | (Optional) Der bereich, der durch eine [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry)definiert wird, auf den die Ebene abgeschnitten werden soll. Wird auf **NULL** festgelegt, wenn die Ebene nicht auf eine Geometrie abgeschnitten werden soll. |
-    | **maskAntialiasMode** | Ein -Wert, der den Antialiasingmodus für die geometrische Maske angibt, die vom **geometrischen Maskenfeld** angegeben wird. |
+    | **maskAntialiasMode** | Ein -Wert, der den Antialiasingmodus für die geometrische Maske angibt, die durch das **feld geometricMask angegeben** wird. |
     | **maskTransform**     | Ein -Wert, der die Transformation angibt, die beim Erstellen der Ebene auf die geometrische Maske angewendet wird. Dies ist relativ zur Welttransformation.  |
-    | **Deckkraft**           | Der Deckkraftwert der Ebene. Die Deckkraft jeder Ressource in der Ebene wird beim Zusammenschalten zum Ziel mit diesem Wert multipliziert.  |
-    | **opacityBrush**      | (Optional) Ein Pinsel, der verwendet wird, um die Deckkraft der Ebene zu ändern. Der Pinsel wird der Ebene zugeordnet, und der Alphakanal jedes zugeordneten Pinselpixels wird mit dem entsprechenden Ebenenpixel multipliziert. Legen Sie auf **NULL** fest, wenn die Ebene keine Deckkraftmaske aufweisen soll.   |
-    | **layerOptions**      | Ein -Wert, der angibt, ob die Ebene Text mit ClearType-Antialiasing rendern soll. Dieser Parameter ist standardmäßig deaktiviert. Wenn Sie es aktivieren, funktioniert ClearType ordnungsgemäß, führt jedoch zu einer etwas langsameren Renderinggeschwindigkeit.    |
+    | **Deckkraft**           | Der Deckkraftwert der Ebene. Die Deckkraft jeder Ressource in der Ebene wird beim Zusammenordnen mit dem Ziel mit diesem Wert multipliziert.  |
+    | **opacityBrush**      | (Optional) Ein Pinsel, der verwendet wird, um die Deckkraft der Ebene zu ändern. Der Pinsel wird der Ebene zugeordnet, und der Alphakanal jedes zugeordneten Pinselpixels wird mit dem entsprechenden Ebenenpixel multipliziert. Wird auf **NULL** festgelegt, wenn die Schicht keine Deckkraftmaske haben soll.   |
+    | **layerOptions**      | Ein -Wert, der angibt, ob die Ebene text mit ClearType-Antialiasing rendern möchte. Dieser Parameter ist standardmäßig deaktiviert. Wenn Sie es aktivieren, funktioniert ClearType ordnungsgemäß, führt jedoch zu einer etwas langsameren Renderinggeschwindigkeit.    |
 
     
 
      
 
     > [!Note]  
-    > Ab Windows 8 können Sie nicht mit ClearType in einer Ebene rendern. Daher sollte der **layerOptions-Parameter** immer auf [**D2D1 LAYER OPTIONS NONE festgelegt \_ \_ \_ werden.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_layer_options)
+    > Ab Windows 8 können Sie nicht mit ClearType in einer Ebene rendern, daher sollte der **layerOptions-Parameter** immer [**auf D2D1 \_ LAYER OPTIONS NONE festgelegt \_ \_ werden.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_layer_options)
 
      
 
-    Der Einfachheit halber stellt Direct2D die [**D2D1::LayerParameters-Methode**](/windows/desktop/api/d2d1helper/nf-d2d1helper-layerparameters) bereit, um Sie beim Erstellen von [**D2D1 \_ LAYER \_ PARAMETERS-Strukturen**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) zu unterstützen.
+    Der Einfachheit halber stellt Direct2D die [**D2D1::LayerParameters-Methode**](/windows/desktop/api/d2d1helper/nf-d2d1helper-layerparameters) zum Erstellen von [**D2D1 \_ LAYER \_ PARAMETERS-Strukturen**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) zur Verfügung.
 
--   Rufen Sie die [**PopLayer-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) auf, um den Inhalt der Ebene in das Renderziel zu zusammengesetzt. Sie müssen die **PopLayer-Methode** aufrufen, bevor Sie die [**EndDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufrufen.
+-   Um den Inhalt der Ebene in das Renderziel zu zusammengesetzt, rufen Sie die [**PopLayer-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) auf. Sie müssen die **PopLayer-Methode aufrufen,** bevor Sie die [**EndDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufrufen.
 
-Das folgende Beispiel zeigt, wie [**CreateLayer,**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) [**PushLayer**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer))und PopLayer verwendet [**werden.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) Alle Felder in der [**Struktur D2D1 \_ LAYER \_ PARAMETERS**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) werden auf ihre Standardwerte festgelegt, mit Ausnahme **von opacityBrush**, das auf [**id2D1RadialGradientBrush festgelegt ist.**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush)
+Das folgende Beispiel zeigt die Verwendung von [**CreateLayer,**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer)) [**PushLayer**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer))und [**PopLayer.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) Alle Felder in der [**Struktur D2D1 \_ LAYER \_ PARAMETERS**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) werden auf ihre Standardwerte festgelegt, mit Ausnahme **von opacityBrush**, das auf [**id2D1RadialGradientBrush festgelegt ist.**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush)
 
 
 ```C++
@@ -151,7 +151,7 @@ SafeRelease(&pLayer);
 
 
 
-Code wurde in diesem Beispiel ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
 Beachten Sie, dass beim Aufrufen [**von PushLayer**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer)) und [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer)sichergestellt ist, dass **jedes PushLayer-Paar** über einen entsprechenden **PopLayer-Aufruf** verfügt. Wenn es mehr **PopLayer-Aufrufe** als **PushLayer-Aufrufe** gibt, wird das Renderziel in einen Fehlerzustand gesetzt. Wenn [**Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) aufgerufen wird, bevor alle ausstehenden Ebenen aus dem Pop aufgeblendet werden, wird das Renderziel in einen Fehlerzustand gesetzt und gibt einen Fehler zurück. Um den Fehlerzustand zu löschen, verwenden [**Sie EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw).
 
@@ -197,19 +197,19 @@ HRESULT DemoApp::RenderWithLayerWithContentBounds(ID2D1RenderTarget *pRT)
 
 
 
-Code wurde in diesem Beispiel ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
 > [!Note]
 >
-> Das resultierende abgeschnittene Bild wird weiter beeinflusst, wenn Sie eine **geometricMask angeben.** Weitere Informationen [finden Sie im](#geometric-masks) Abschnitt Geometrische Masken.
+> Das resultierende abgeschnittene Bild wird weiter beeinflusst, wenn Sie eine **geometrischeMaske angeben.** Weitere Informationen [finden Sie im](#geometric-masks) Abschnitt Geometrische Masken.
 
  
 
 ## <a name="geometric-masks"></a>Geometrische Masken
 
-Eine geometrische Maske ist ein Clip oder ein Cutout, definiert durch ein [**ID2D1Geometry-Objekt,**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) das eine Ebene maskiert, wenn sie von einem Renderziel gezeichnet wird. Sie können das **feld geometricMask** der [**D2D1 \_ LAYER \_ PARAMETERS-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) verwenden, um die Ergebnisse in einer Geometrie zu maskieren. Wenn Sie beispielsweise ein Bild anzeigen möchten, das durch einen Blockbuchstaben "A" maskiert ist, können Sie zunächst eine Geometrie erstellen, die den Blockbuchstaben "A" darstellt, und diese Geometrie als geometrische Maske für eine Ebene verwenden. Nachdem Sie die Ebene gedrückt haben, können Sie das Bild zeichnen. Wenn Die Ebene per Pop abgeschnitten wird, wird das Bild auf die Form "A" des Blockbuchstabens abgeschnitten.
+Eine geometrische Maske ist ein Clip oder ein Cutout, definiert durch ein [**ID2D1Geometry-Objekt,**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) das eine Ebene maskiert, wenn sie von einem Renderziel gezeichnet wird. Sie können das **feld geometricMask** der [**Struktur D2D1 \_ LAYER \_ PARAMETERS**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) verwenden, um die Ergebnisse in einer Geometrie zu maskieren. Wenn Sie beispielsweise ein Bild anzeigen möchten, das mit einem Blockbuchstaben "A" maskiert ist, können Sie zuerst eine Geometrie erstellen, die den Blockbuchstaben "A" darstellt, und diese Geometrie als geometrische Maske für eine Ebene verwenden. Nach dem Pushen der Ebene können Sie dann das Bild zeichnen. Wenn Sie die Ebene poppen, wird das Bild auf die Form "A" des Blockbuchstabens abgeschnitten.
 
-Das folgende Beispiel zeigt, wie Sie eine [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) erstellen, die eine Form eines Mountain enthält, und dann die Pfadgeometrie an [**pushLayer**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer))übergeben. Anschließend zeichnet er eine Bitmap und Quadrate. Wenn nur eine Bitmap in der Ebene zum Rendern vorhanden ist, verwenden Sie [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit einem klammerten Bitmappinsel zur Effizienz. Die folgende Abbildung zeigt die Ausgabe des Beispiels.
+Das folgende Beispiel zeigt, wie Sie eine [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) erstellen, die eine Form eines Mountain enthält, und dann die Pfadgeometrie an [**PushLayer übergeben.**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-pushlayer(constd2d1_layer_parameters1_id2d1layer)) Anschließend werden eine Bitmap und Quadrate ge zeichnet. Wenn nur eine Bitmap in der Ebene gerendert werden soll, verwenden Sie [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit einem geklammerten Bitmappinsel, um die Effizienz zu erhöhen. Die folgende Abbildung zeigt die Ausgabe des Beispiels.
 
 ![Abbildung eines Bilds eines Blatts und des resultierenden Bilds, nachdem eine geometrische Maske eines Mountain angewendet wurde](images/layers-bitmapmask.png)
 
@@ -298,23 +298,23 @@ HRESULT DemoApp::RenderWithLayerWithGeometricMask(ID2D1RenderTarget *pRT)
 
 
 
-In diesem Beispiel wurde Code ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
 > [!Note]
 >
-> Wenn Sie eine **geometrischeMaske** angeben, können Sie im Allgemeinen den Standardwert [**InfiniteRect**](/windows/desktop/api/d2d1Helper/nf-d2d1helper-infiniterect)für **contentBounds** verwenden.
+> Wenn Sie eine **geometricMask** angeben, können Sie im Allgemeinen den Standardwert [**InfiniteRect**](/windows/desktop/api/d2d1Helper/nf-d2d1helper-infiniterect)für **contentBounds verwenden.**
 >
-> Wenn **contentBounds** NULL und **geometricMask** ungleich NULL ist, sind die Inhaltsgrenzen effektiv die Grenzen der geometrischen Maske, nachdem die Maskentransformation angewendet wurde.
+> Wenn **contentBounds** NULL und **geometricMask** nicht NULL ist, sind die Inhaltsgrenze effektiv die Grenzen der geometrischen Maske, nachdem die Maskentransformation angewendet wurde.
 >
-> Wenn **contentBounds** ungleich NULL und **geometricMask** ungleich NULL ist, wird die transformierte geometrische Maske effektiv an Inhaltsgrenzen abgeschnitten, und es wird davon ausgegangen, dass die Inhaltsgrenzen unendlich sind.
+> Wenn **contentBounds** nicht NULL und **geometricMask** nicht NULL ist, wird die transformierte geometrische Maske effektiv an Inhaltsgrenze abgeschnitten, und es wird davon ausgegangen, dass die Inhaltsgrenze unendlich ist.
 
  
 
 ## <a name="opacity-masks"></a>Deckkraftmasken
 
-Eine Deckkraftmaske ist eine Maske, die von einem Pinsel oder einer Bitmap beschrieben wird und auf ein anderes Objekt angewendet wird, um dieses Objekt teilweise oder vollständig transparent zu machen. Sie ermöglicht die Verwendung des Alphakanals eines Pinsels als Inhaltsmaske. Beispielsweise können Sie einen radialen Farbverlaufspinsel definieren, der von deckend zu transparent variiert, um einen Effekt zu erzeugen.
+Eine Deckkraftmaske ist eine Maske, die von einem Pinsel oder einer Bitmap beschrieben wird und auf ein anderes Objekt angewendet wird, um dieses Objekt teilweise oder vollständig transparent zu machen. Sie ermöglicht die Verwendung des Alphakanals eines Pinsels als Inhaltsmaske. Sie können z. B. einen radialen Farbverlaufspinsel definieren, der von undurchsichtig bis transparent variiert, um einen Sterneffekt zu erstellen.
 
-Im folgenden Beispiel wird ein [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) (*m \_ pRadialGradientBrush*) als Deckkraftmaske verwendet. Anschließend werden eine Bitmap und Quadrate ge zeichnet. Wenn nur eine Bitmap in der Ebene gerendert werden soll, verwenden Sie [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit einem geklammerten Bitmappinsel, um die Effizienz zu erhöhen. Die folgende Abbildung zeigt die Ausgabe dieses Beispiels.
+Im folgenden Beispiel wird [**id2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) (*m \_ pRadialGradientBrush*) als Deckkraftmaske verwendet. Anschließend werden eine Bitmap und Quadrate ge zeichnet. Wenn nur eine Bitmap in der Ebene gerendert werden soll, verwenden Sie [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit einem geklammerten Bitmappinsel, um die Effizienz zu erhöhen. Die folgende Abbildung zeigt die Ausgabe dieses Beispiels.
 
 ![Abbildung eines Bilds von Strukturen und des resultierenden Bilds, nachdem eine Deckkraftmaske angewendet wurde](images/layers-opacitymask.png)
 
@@ -372,7 +372,7 @@ HRESULT DemoApp::RenderWithLayerWithOpacityMask(ID2D1RenderTarget *pRT)
 
 
 
-Code wurde in diesem Beispiel ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
 > [!Note]  
 > In diesem Beispiel wird eine Ebene verwendet, um eine Deckkraftmaske auf ein einzelnes Objekt anzuwenden, um das Beispiel so einfach wie möglich zu halten. Beim Anwenden einer Deckkraftmaske auf ein einzelnes Objekt ist es effizienter, die [**FillOpacityMask-**](id2d1rendertarget-fillopacitymask.md) oder [**FillGeometry-Methoden**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) anstelle einer Ebene zu verwenden.
@@ -459,9 +459,9 @@ Die Abbildung zeigt das Ergebnis der Anwendung eines Clips auf ein Bild.
 
 ![Ein Bild, das ein Beispiel für ein Bild vor und nach einem Clip zeigt.](images/clip.png)
 
-Sie können dieses Ergebnis erzielen, indem Sie Ebenen mit einer Geometriemaske oder die [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit einem Deckkraftpinsel verwenden.
+Sie können dieses Ergebnis erhalten, indem Sie Ebenen mit einer Geometriemaske oder die [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit einem Deckkraftpinsel verwenden.
 
-Hier sehen Sie ein Beispiel, in dem eine Ebene verwendet wird:
+Hier sehen Sie ein Beispiel, das eine Ebene verwendet:
 
 
 ```C++
@@ -474,7 +474,7 @@ m_d2dContext->PushLayer(
 
 
 
-Hier sehen Sie ein Beispiel, in dem die [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) verwendet wird:
+Hier sehen Sie ein Beispiel, in dem die [**FillGeometry-Methode verwendet**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) wird:
 
 
 ```C++
@@ -508,16 +508,16 @@ m_d2dContext->FillGeometry(
 
 
 
-Wenn Sie in diesem Codebeispiel die PushLayer-Methode aufrufen, übergeben Sie keine von der App erstellte Ebene. Direct2D erstellt eine Ebene für Sie. Direct2D kann die Zuordnung und Zerstörung dieser Ressource ohne Beteiligung der App verwalten. Dadurch kann Direct2D Ebenen intern wiederverwenden und Ressourcenverwaltungsoptimierungen anwenden.
+Wenn Sie in diesem Codebeispiel die PushLayer-Methode aufrufen, übergeben Sie keine von der App erstellte Ebene. Direct2D erstellt eine Ebene für Sie. Direct2D kann die Zuordnung und Zerstörung dieser Ressource ohne Beteiligung der App verwalten. Dadurch kann Direct2D Ebenen intern wiederverwenden und Optimierungen der Ressourcenverwaltung anwenden.
 
 > [!Note]  
-> In Windows 8 wurden viele Optimierungen an der Verwendung von Ebenen vorgenommen, und es wird empfohlen, nach Möglichkeit die Verwendung von Ebenen-APIs anstelle von [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) zu verwenden.
+> In Windows 8 viele Optimierungen an der Verwendung von Ebenen vorgenommen, und es wird empfohlen, nach Möglichkeit Ebenen-APIs anstelle von [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) zu verwenden.
 
  
 
-### <a name="axis-aligned-clips"></a>Achsenbündig ausgerichtete Clips
+### <a name="axis-aligned-clips"></a>An der Achse ausgerichtete Clips
 
-Wenn der zu beschneidende Bereich an der Achse der Zeichnungsoberfläche ausgerichtet ist, anstatt an einer beliebigen. Dieser Fall eignet sich für die Verwendung eines Cliprechtecks anstelle einer Ebene. Der Leistungsgewinn ist eher für gealiaste Geometrie als für Gealiasengeometrie. Weitere Informationen zu achsenbündig ausgerichteten Clips finden Sie im Thema [**PushAxisAlignedClip.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode))
+Wenn der bereich, der abgeschnitten werden soll, an der Achse der Zeichenoberfläche ausgerichtet ist, anstatt willkürlich. Dieser Fall eignet sich für die Verwendung eines Cliprechtecks anstelle einer Ebene. Die Leistungssteigerung ist für die Geometrie mit Aliasen höher als bei der Geometrie mit Antialiasing. Weitere Informationen zu an der Achse ausgerichteten Clips finden Sie im [**Thema PushAxisAlignedClip.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode))
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
