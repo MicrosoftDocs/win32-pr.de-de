@@ -1,31 +1,31 @@
 ---
-description: Rufen Sie Ereignisdaten mit Managed Object Format (MOF) ab, während Ereignisse verarbeitet werden. Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen.
+description: Abrufen von Ereignisdaten mit Managed Object Format (MOF) während der Verarbeitung von Ereignissen. Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen.
 ms.assetid: 13512236-c416-43ba-bf36-b05c5c08d6c9
-title: Abrufen von Ereignisdaten mit MOF
+title: Abrufen von Ereignisdaten mithilfe von MOF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8752d7a4dc71ddb7b5a5dbc39e93c5fe16bb652
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 2f6086c878a0e98c0451d1ba2f1e11e2cd0e9016
+ms.sourcegitcommit: b3839bea8d55c981d53cb8802d666bf49093b428
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112395015"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114373139"
 ---
-# <a name="retrieving-event-data-using-mof"></a>Abrufen von Ereignisdaten mit MOF
+# <a name="retrieving-event-data-using-mof"></a>Abrufen von Ereignisdaten mithilfe von MOF
 
-Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen. Wenn der Anbieter MOF zum Veröffentlichen des Formats der Ereignisdaten verwendet hat, können Sie die Ereignisdaten mithilfe der MOF-Klasse analysieren. Alle Kernelereignisse verwenden MOF, um das Format der Ereignisdaten zu veröffentlichen. Informationen zum Veröffentlichen von Ereignissen finden Sie unter [Veröffentlichen ihres Ereignisschemas.](publishing-your-event-schema.md)
+Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen. Wenn der Anbieter MOF zum Veröffentlichen des Formats der Ereignisdaten verwendet hat, können Sie die Ereignisdaten mithilfe der MOF-Klasse analysieren. Alle Kernelereignisse verwenden MOF, um das Format der Ereignisdaten zu veröffentlichen. Informationen zum Veröffentlichen von Ereignissen finden Sie unter [Veröffentlichen des Ereignisschemas.](publishing-your-event-schema.md)
 
-Zum Analysieren der Ereignisdaten muss die WMI-API (Windows Management Infrastructure) verwendet werden. Der ETW-Namespace, in dem Anbieter ihre MOF-Klasse veröffentlichen, ist \\ root wmi. Der ETW-Namespace enthält drei Typen von MOF-Klassen: die MOF-Anbieterklasse, die MOF-Ereignisklasse und die MOF-Ereignisklasse. Die MOF-Ereignisklasse gruppiert logisch eine oder mehrere MOF-Ereignistypklassen. Die MOF-Ereignisklasse definiert die tatsächlichen Ereignisdaten.
+Die Analyse der Ereignisdaten erfordert die Verwendung der Windows Management Infrastructure (WMI)-API. Der ETW-Namespace, in dem Anbieter ihre MOF-Klasse veröffentlichen, ist root \\ wmi. Der ETW-Namespace enthält drei Typen von MOF-Klassen: die MOF-Anbieterklasse, die MOF-Ereignisklasse und die MOF-Ereignisklasse. Die MOF-Ereignisklasse gruppent eine oder mehrere MOF-Ereignisklassen logisch. Die MOF-Ereignisklasse definiert die tatsächlichen Ereignisdaten.
 
-Eine MOF-Ereignisklasse  enthält einen Guid-Klassenqualifizierer, dessen Wert mit dem Wert im **Header.Guid-Member** der [**EVENT \_ TRACE-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace) übereinstimmen muss. Um sicherzustellen, dass Sie über die richtige Version der -Klasse verfügen, vergleichen Sie auch den **EventVersion-Klassenqualifizierer** mit dem **Header.Class.Version-Member** der **EVENT \_ TRACE-Struktur.**
+Eine MOF-Ereignisklasse  enthält einen Guid-Klassenqualifizierer, dessen Wert mit dem Wert im **Header.Guid-Member** der [**EVENT \_ TRACE-Struktur übereinstimmen**](/windows/win32/api/evntrace/ns-evntrace-event_trace) muss. Um sicherzustellen, dass Sie über die richtige  Version der -Klasse verfügen, vergleichen Sie auch den EventVersion-Klassenqualifizierer mit dem **Header.Class.Version-Member** der **EVENT \_ TRACE-Struktur.**
 
-Nachdem Sie die richtige Ereignisklasse gefunden haben, müssen Sie ihre untergeordneten Ereignistypklassen aufzählen, um die Klasse zu finden, die das Format der Ereignisdaten enthält. Die richtige Ereignistypklasse enthält einen **EventType-Klassenqualifizierer,** dessen Wert mit dem Wert im **Header.Class.Type-Member** der [**EVENT \_ TRACE-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace) übereinstimmt.
+Nachdem Sie die richtige Ereignisklasse finden, enumerieren Sie ihre untergeordneten Ereignistypklassen, um die Klasse zu finden, die das Format der Ereignisdaten enthält. Die richtige Ereignistypklasse  enthält einen EventType-Klassenqualifizierer, dessen Wert dem Wert im **Header.Class.Type-Member** der [**EVENT \_ TRACE-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace) entspricht.
 
-Sie können dann die WMI-API verwenden, um die Eigenschaften der MOF-Klasse aufzuzählen. Verwenden Sie die Qualifizierer und den Datentyp jeder Eigenschaft, um die Größe des Datenelements in den zu lesenden Ereignisdaten und deren Formatierung zu bestimmen. Eine Liste der MOF-Qualifizierer, die ETW unterstützt, finden Sie unter [MOF-Qualifizierer](event-tracing-mof-qualifiers.md)für die Ereignisablaufverfolgung.
+Sie können dann die WMI-API verwenden, um die Eigenschaften der MOF-Klasse zu aufzählen. Verwenden Sie die Qualifizierer und den Datentyp jeder Eigenschaft, um die Größe des zu lesenden Datenelements in den Ereignisdaten und deren Formatierung zu bestimmen. Eine Liste der MOF-Qualifizierer, die ETW unterstützt, finden Sie unter [MOF-Qualifizierer für die Ereignisablaufverfolgung.](event-tracing-mof-qualifiers.md)
 
-Da ETW keine Ausrichtung zwischen Ereignisdatenwerten erzzwingen kann, kann das Typcasten oder Zuweisen des Werts direkt aus einem Puffer zu einem Ausrichtungsfehler führen. Sie sollten keine Struktur aus der MOF-Klasse erstellen und versuchen, sie zum Nutzen von Ereignisdaten zu verwenden. Wenn Sie beispielsweise über ein Zeichen gefolgt von ULONGLONG verfügen, wird ULONGLONG nicht an einer 8-Byte-Grenze ausgerichtet, sodass eine Zuweisung eine Ausrichtungsausnahme verursachen würde. (Auf 64-Bit-Computern geschieht dies häufiger.) Aus diesem Grund sollten Sie CopyMemory verwenden, um die Daten aus dem Puffer in eine lokale Variable zu kopieren. Wenn das Ereignis später überarbeitet wird, funktioniert Ihr Consumer möglicherweise nicht, wenn Sie versuchen, eine -Struktur zu verwenden.
+Da ETW keine Ausrichtung zwischen Ereignisdatenwerten erzwingen kann, kann das Typcasting oder die direkte Zuweisung des Werts aus einem Puffer zu einem Ausrichtungsfehler führen. Sie sollten keine Struktur aus der MOF-Klasse erstellen und versuchen, sie zum Verarbeiten von Ereignisdaten zu verwenden. Wenn Sie z. B. ein Zeichen gefolgt von ULONGLONG haben, wird ULONGLONG nicht an einer 8-Byte-Grenze ausgerichtet, sodass eine Zuweisung eine Ausrichtungsausnahme verursachen würde. (Auf 64-Bit-Computern tritt dies häufiger auf.) Aus diesem Grund sollten Sie CopyMemory verwenden, um die Daten aus dem Puffer in eine lokale Variable zu kopieren. Wenn das Ereignis später überarbeitet wird, funktioniert ihr Consumer möglicherweise nicht, wenn Sie versuchen, eine -Struktur zu verwenden.
 
-Ab Windows Vista wird empfohlen, die TDH-Funktionen (Trace Data Helper) zu verwenden, um Ereignisse zu nutzen, die mit MOF-Klassen veröffentlicht wurden. Weitere Informationen finden Sie unter [Abrufen von Ereignisdaten mit TDH.](retrieving-event-data-using-tdh.md)
+Ab Windows Vista sollten Sie die TDH-Funktionen (Trace Data Helper) verwenden, um Ereignisse zu nutzen, die mithilfe von MOF-Klassen veröffentlicht wurden. Weitere Informationen finden Sie unter [Abrufen von Ereignisdaten mit TDH](retrieving-event-data-using-tdh.md).
 
 Das folgende Beispiel zeigt, wie Ereignisse verwendet werden, die von einer MOF-Klasse definiert werden.
 
@@ -600,7 +600,7 @@ BOOL GetPropertyList(IWbemClassObject* pClass, PROPERTY_LIST** ppProperties, DWO
 
     // Retrieve the property names.
 
-    hr = pClass->GetNames(NULL, WBEM_FLAG_LOCAL_ONLY, NULL, &pNames);
+    hr = pClass->GetNames(NULL, WBEM_FLAG_NONSYSTEM_ONLY, NULL, &pNames);
     if (pNames)
     {
         *pPropertyCount = pNames->rgsabound->cElements;
@@ -654,6 +654,10 @@ BOOL GetPropertyList(IWbemClassObject* pClass, PROPERTY_LIST** ppProperties, DWO
                 j = var.intVal - 1;
                 VariantClear(&var);
                 *(*ppPropertyIndex+j) = i;
+            }
+            else if (WBEM_E_NOT_FOUND == hr)
+            {
+                continue; // Ignore property without WmiDataId
             }
             else
             {

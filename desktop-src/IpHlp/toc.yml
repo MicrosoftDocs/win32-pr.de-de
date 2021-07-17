@@ -1,9 +1,9 @@
 - name: IP-Hilfsprogramm
   href: ip-helper-start-page.md
   items:
-    - name: Neues im IP-Hilfsfeld
+    - name: Neuerungen im IP-Hilf hilft
       href: what-s-new-in-ip-helper.md
-    - name: Informationen zum IP-Hilfsfeld
+    - name: Informationen zum IP-Hilf hilft
       href: about-ip-helper.md
       items:
         - name: Abrufen von Informationen zur Netzwerkkonfiguration
@@ -14,7 +14,7 @@
           href: managing-interfaces.md
         - name: Verwalten von IP-Adressen
           href: managing-ip-addresses.md
-        - name: Verwenden des Adressauflösungsprotokolls
+        - name: Verwenden des Address Resolution-Protokolls
           href: using-the-address-resolution-protocol.md
         - name: Abrufen von Informationen über das Internetprotokoll und das Internet Control Message Protocol
           href: retrieving-information-on-the-internet-protocol-and-the-internet-control-message-protocol.md
@@ -22,23 +22,23 @@
           href: managing-routing.md
         - name: Empfangen von Benachrichtigungen über Netzwerkereignisse
           href: receiving-notification-of-network-events.md
-        - name: Abrufen von Informationen über das Transmission Control Protocol und das User Datagram Protocol
+        - name: Abrufen von Informationen über das Transmission Control-Protokoll und das User Datagram-Protokoll
           href: retrieving-information-about-the-transmission-control-protocol-and-the-user-datagram-protocol.md
-    - name: Verwenden des IP-Hilfsers
+    - name: Verwenden der IP-Hilfe
       href: using-ip-helper.md
       items:
-        - name: Erste Schritte mit DEM IP-Hilfsfeld
+        - name: Erste Schritte mit ip helper
           href: getting-started-with-ip-helper.md
           items:
             - name: Erstellen einer einfachen IP-Hilfsanwendung
               href: creating-a-basic-ip-helper-application.md
-            - name: Abrufen von Informationen mit GetNetworkParams
+            - name: Abrufen von Informationen mithilfe von GetNetworkParams
               href: retrieving-information-using-getnetworkparams.md
             - name: Verwalten von Netzwerkadaptern mit GetAdaptersInfo
               href: managing-network-adapters-using-getadaptersinfo.md
             - name: Verwalten von Schnittstellen mit GetInterfaceInfo
               href: managing-interfaces-using-getinterfaceinfo.md
-            - name: Verwalten von IP-Adressen mit GetIpAddrTable
+            - name: Verwalten von IP-Adressen mit getIpAddrTable
               href: managing-ip-addresses-using-getipaddrtable.md
             - name: 'Verwalten von DHCP-Leases mit IpReleaseAddress, IpRenewAddress'
               href: managing-dhcp-leases-using-ipreleaseaddress-and-iprenewaddress.md
@@ -65,6 +65,8 @@
         - name: Enumerationen des IP-Hilfsprogramms
           href: ip-helper-enumerations.md
           items:
+            - name: DNS_SERVER_PROPERTY_TYPE
+              href: /windows/win32/api/netioapi/ne-netioapi-dns_server_property_type
             - name: IF_OPER_STATUS
               href: /windows/win32/api/ifdef/ne-ifdef-if_oper_status
             - name: IP_DAD_STATE
@@ -184,6 +186,8 @@
               href: /windows/win32/api/Netioapi/nf-netioapi-flushipnettable2
             - name: FlushIpPathTable
               href: /windows/win32/api/Netioapi/nf-netioapi-flushippathtable
+            - name: FreeInterfaceDnsSettings
+              href: /windows/win32/api/netioapi/nf-netioapi-freeinterfacednssettings
             - name: FreeMibTable
               href: /windows/win32/api/Netioapi/nf-netioapi-freemibtable
             - name: GetAdapterIndex
@@ -234,6 +238,8 @@
               href: /windows/win32/api/Netioapi/nf-netioapi-getiftable2ex
             - name: GetInterfaceActiveTimestampCapabilities
               href: /windows/win32/api/iphlpapi/nf-iphlpapi-getinterfaceactivetimestampcapabilities
+            - name: GetInterfaceDnsSettings
+              href: /windows/win32/api/netioapi/nf-netioapi-getinterfacednssettings
             - name: GetInterfaceInfo
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getinterfaceinfo
             - name: GetInterfaceSupportedTimestampCapabilities
@@ -420,6 +426,8 @@
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-sendarp
             - name: SetIfEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setifentry
+            - name: SetInterfaceDnsSettings
+              href: /windows/win32/api/netioapi/nf-netioapi-setinterfacednssettings
             - name: SetIpForwardEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setipforwardentry
             - name: SetIpForwardEntry2
@@ -453,6 +461,16 @@
           items:
             - name: ARP_SEND_REPLY
               href: /windows/win32/api/Ipexport/ns-ipexport-arp_send_reply
+            - name: DNS_DOH_SERVER_SETTINGS
+              href: /windows/win32/api/netioapi/ns-netioapi-dns_doh_server_settings
+            - name: DNS_INTERFACE_SETTINGS
+              href: /windows/win32/api/netioapi/ns-netioapi-dns_interface_settings
+            - name: DNS_INTERFACE_SETTINGS3
+              href: /windows/win32/api/netioapi/ns-netioapi-dns_interface_settings3
+            - name: DNS_SERVER_PROPERTY_TYPES
+              href: /windows/win32/api/netioapi/ns-netioapi-dns_server_property_types
+            - name: DNS_SERVER_PROPERTY
+              href: /windows/win32/api/netioapi/ns-netioapi-dns_server_property
             - name: FIXED_INFO
               href: /windows/win32/api/Iptypes/ns-iptypes-fixed_info_w2ksp1
             - name: ICMP_ECHO_REPLY
@@ -569,7 +587,7 @@
               href: /windows/win32/api/Iprtrmib/ns-iprtrmib-tcpip_owner_module_basic_info
             - name: TCP_RESERVE_PORT_RANGE
               href: /windows/desktop/api/Ipexport/ns-ipexport-tcp_reserve_port_range
-        - name: IP-Hilfsenumerationen
+        - name: IP-Hilfsenumeration
           href: ip-helper-enumerations.md
           items:
             - name: IF_OPER_STATUS

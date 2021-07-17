@@ -4,16 +4,16 @@ description: Die folgenden Funktionen rufen Konfigurationseinstellungen für den
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 5f562470-f3e8-4305-a015-3a84cd09a1eb
-ms.openlocfilehash: ae19803c25512242b613735a060c7beda8c1df70
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: ee16bb0b65545c4abbef387c5b90d42fb9d3c629
+ms.sourcegitcommit: ea0069adb72dbfa717e73f3a96c3407a49ec0dab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549505"
+ms.lasthandoff: 07/17/2021
+ms.locfileid: "114394211"
 ---
 # <a name="ip-helper-functions"></a>IP-Hilfsfunktionen
 
-Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Transport auf dem lokalen Computer ab und ändern sie. Die folgende kategorische Auflistung kann dabei helfen, zu bestimmen, welche Auflistung von Funktionen für eine bestimmte Aufgabe am besten geeignet ist.
+Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Transport auf dem lokalen Computer ab und ändern sie. Die folgende kategorische Auflistung kann dabei helfen, zu bestimmen, welche Sammlung von Funktionen für eine bestimmte Aufgabe am besten geeignet ist.
 
 -   [**GetNetworkConnectivityHint**](/windows/win32/api/netioapi/nf-netioapi-getnetworkconnectivityhint)
 -   [**GetNetworkConnectivityHintForInterface**](/windows/win32/api/netioapi/nf-netioapi-getnetworkconnectivityhintforinterface)
@@ -55,6 +55,7 @@ Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Trans
 
 ## <a name="interface-management"></a>Schnittstellenverwaltung
 
+-   [**FreeInterfaceDnsSettings**](/windows/win32/api/netioapi/nf-netioapi-freeinterfacednssettings)
 -   [**GetFriendlyIfIndex**](/windows/win32/api/Iphlpapi/nf-iphlpapi-getfriendlyifindex)
 -   [**GetIfEntry**](/windows/win32/api/Iphlpapi/nf-iphlpapi-getifentry)
 -   [**GetIfEntry2**](/windows/win32/api/Netioapi/nf-netioapi-getifentry2)
@@ -63,6 +64,7 @@ Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Trans
 -   [**GetIfTable**](/windows/win32/api/Iphlpapi/nf-iphlpapi-getiftable)
 -   [**GetIfTable2**](/windows/win32/api/Netioapi/nf-netioapi-getiftable2)
 -   [**GetIfTable2Ex**](/windows/win32/api/Netioapi/nf-netioapi-getiftable2ex)
+-   [**GetInterfaceDnsSettings**](/windows/win32/api/netioapi/nf-netioapi-getinterfacednssettings)
 -   [**GetInterfaceInfo**](/windows/win32/api/Iphlpapi/nf-iphlpapi-getinterfaceinfo)
 -   [**GetInvertedIfStackTable**](/windows/win32/api/Netioapi/nf-netioapi-getinvertedifstacktable)
 -   [**GetIpInterfaceEntry**](/windows/win32/api/Netioapi/nf-netioapi-getipinterfaceentry)
@@ -70,6 +72,7 @@ Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Trans
 -   [**GetNumberOfInterfaces**](/windows/win32/api/Iphlpapi/nf-iphlpapi-getnumberofinterfaces)
 -   [**InitializeIpInterfaceEntry**](/windows/win32/api/Netioapi/nf-netioapi-initializeipinterfaceentry)
 -   [**SetIfEntry**](/windows/win32/api/Iphlpapi/nf-iphlpapi-setifentry)
+-   [**SetInterfaceDnsSettings**](/windows/win32/api/netioapi/nf-netioapi-setinterfacednssettings)
 -   [**SetIpInterfaceEntry**](/windows/win32/api/Netioapi/nf-netioapi-setipinterfaceentry)
 
 ## <a name="internet-protocol-ip-and-internet-control-message-protocol-icmp"></a>Internetprotokoll (IP) und Internet Control Message Protocol (ICMP)
@@ -119,7 +122,7 @@ Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Trans
 -   [**RtlIpv6StringToAddress**](/windows/win32/api/ip2string/nf-ip2string-rtlipv6stringtoaddressa)
 -   [**RtlIpv6StringToAddressEx**](/windows/win32/api/ip2string/nf-ip2string-rtlipv6stringtoaddressexw)
 
-## <a name="ip-neighbor-address-management"></a>VERWALTUNG VON IP-Nachbaradressen
+## <a name="ip-neighbor-address-management"></a>IP-Nachbaradressenverwaltung
 
 -   [**CreateIpNetEntry2**](/windows/win32/api/Netioapi/nf-netioapi-createipnetentry2)
 -   [**DeleteIpNetEntry2**](/windows/win32/api/Netioapi/nf-netioapi-deleteipnetentry2)
@@ -204,10 +207,10 @@ Die folgenden Funktionen rufen Konfigurationseinstellungen für den TCP/IP-Trans
 -   [**CancelSecurityHealthChangeNotify**](/previous-versions/windows/desktop/legacy/bb442512(v=vs.85))
 -   [**NotifySecurityHealthChange**](/previous-versions/windows/desktop/legacy/bb451761(v=vs.85))
 
-Diese Funktionen werden nur unter Windows Server 2003 definiert.
+Diese Funktionen werden nur auf Windows Server 2003 definiert.
 
 > [!Note]  
-> Diese Funktionen sind weder unter Windows Vista noch unter Windows Server 2008 verfügbar.
+> Diese Funktionen sind weder auf Windows Vista noch auf Windows Server 2008 verfügbar.
 
 ## <a name="teredo-ipv6-client-management"></a>Teredo IPv6-Clientverwaltung
 
