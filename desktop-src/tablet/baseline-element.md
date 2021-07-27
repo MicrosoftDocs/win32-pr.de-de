@@ -1,19 +1,19 @@
 ---
-description: Stellt (x, y)-Informationen für die Start-und Endpunkte der Baseline eines Absatzes im Journal Dokument bereit. Der für diese Werte verwendete Koordinaten Bereich ist HIMETRIC.
+description: Stellt (x, y)-Informationen für die Start- und Endpunkte der Baseline eines Absatzes im Journaldokument zur Verfügung. Der für diese Werte verwendete Koordinatenraum ist HIMETRIC.
 ms.assetid: ff6a97ad-0e48-4128-8f94-24802b6ddc05
 title: Baseline-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b64986707eaa1b382d2f88851367b9147c59c5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4bc64f332608b4bd0281ae2a7f29db96101e9d2e
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214380"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436565"
 ---
 # <a name="baseline-element"></a>Baseline-Element
 
-Stellt (x, y)-Informationen für die Start-und Endpunkte der Baseline eines Absatzes im Journal Dokument bereit. Der für diese Werte verwendete Koordinaten Bereich ist **HIMETRIC**.
+Stellt (x, y)-Informationen für die Start- und Endpunkte der Baseline eines Absatzes im Journaldokument zur Verfügung. Der für diese Werte verwendete Koordinatenraum ist **HIMETRIC.**
 
 ## <a name="definition"></a>Definition
 
@@ -23,7 +23,7 @@ Stellt (x, y)-Informationen für die Start-und Endpunkte der Baseline eines Absa
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-[**Knotenmetriken**](paragraphlinemetrics-element.md)
+[**ParagraphLineMetrics**](paragraphlinemetrics-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -33,11 +33,11 @@ Keine
 
 
 
-| Attribut  | type                      | Erforderlich | BESCHREIBUNG                                                      | Mögliche Werte           |
+| attribute  | type                      | Erforderlich | BESCHREIBUNG                                                      | Mögliche Werte           |
 |------------|---------------------------|----------|------------------------------------------------------------------|---------------------------|
-| **Startx** | **xs:nonNegativeInteger** | Erforderlich | Der X-Wert für den Punkt, der den Anfang der Baseline markiert. | Eine beliebige nicht negative ganze Zahl. |
-| **Startty** | **xs:nonNegativeInteger** | Erforderlich | Der Y-Wert für den Punkt, der den Anfang der Baseline markiert. | Eine beliebige nicht negative ganze Zahl. |
-| **EndX**   | **xs:nonNegativeInteger** | Erforderlich | Der X-Wert für den Punkt, der das Ende der Baseline markiert.       | Eine beliebige nicht negative ganze Zahl. |
+| **Startx** | **xs:nonNegativeInteger** | Erforderlich | Der X-Wert für den Punkt, der den Anfang der Baseline markiert. | Eine nicht negative ganze Zahl. |
+| **StartY** | **xs:nonNegativeInteger** | Erforderlich | Der Y-Wert für den Punkt, der den Anfang der Baseline markiert. | Eine nicht negative ganze Zahl. |
+| **EndX**   | **xs:nonNegativeInteger** | Erforderlich | Der X-Wert für den Punkt, der das Ende der Baseline markiert.       | Eine nicht negative ganze Zahl. |
 
 
 
@@ -47,11 +47,11 @@ Keine
 
 
 
-|              |                                                               |
-|--------------|---------------------------------------------------------------|
-| Elementtyp | ComplexType für [**baselinetype**](baselinetype-complex-type.md) |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk                    |
-| Schemaname  | Journal Leser                                                |
+|                  | Wert                                                         |
+|------------------|---------------------------------------------------------------|
+| **Elementtyp** | [**complexType: BaselineType**](baselinetype-complex-type.md) |
+| **Namespace**    | urn:schemas-microsoft-com:tabletpc:richink                    |
+| **Schemaname**  | Journalreader                                                |
 
 
 

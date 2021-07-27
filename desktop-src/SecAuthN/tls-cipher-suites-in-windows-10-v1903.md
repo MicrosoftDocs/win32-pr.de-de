@@ -3,12 +3,12 @@ description: Erfahren Sie mehr über TLS-Verschlüsselungssammlungen in Windows 
 title: TLS-Verschlüsselungssammlungen in Windows 10 v1903, v1909 und v2004
 ms.topic: article
 ms.date: 10/09/2018
-ms.openlocfilehash: 8bfea2623a7935ec64c4cc1ef1e04271d4227b3c
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: 5c5cd0ff5b61d301ded666f1c236e83539698fe1
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262342"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436245"
 ---
 # <a name="tls-cipher-suites-in-windows-10-v1903-v1909-and-v2004"></a>TLS-Verschlüsselungssammlungen in Windows 10 v1903, v1909 und v2004
 
@@ -24,7 +24,7 @@ Die Verfügbarkeit von Verschlüsselungssammlungen sollte auf zwei Arten gesteue
 
  
 
-Die FIPS-Konformität wurde durch das Hinzufügen elliptischer Kurven komplexer, wodurch die Spalte fips mode enabled (FIPS-Modus aktiviert) in früheren Versionen dieser Tabelle irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-schwer, wenn elliptische NIST-Kurven verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, finden Sie in Abschnitt 3.3.1 der Richtlinien für die Auswahl, Konfiguration und Verwendung von [TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf)
+Die FIPS-Konformität wurde durch das Hinzufügen elliptischer Kurven komplexer, wodurch die Spalte fips mode enabled (FIPS-Modus aktiviert) in früheren Versionen dieser Tabelle irreführend wurde. Beispielsweise ist eine Cipher Suite wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-kompatibel, wenn NIST-elliptische Kurven verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, finden Sie in Abschnitt 3.3.1 der Richtlinien für die Auswahl, Konfiguration und Verwendung von [TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf)
 
 Für Windows 10 Version 1903, 1909 und 2004 werden die folgenden Verschlüsselungssammlungen aktiviert und standardmäßig mithilfe des Microsoft Schannel-Anbieters in dieser Prioritäts reihenfolge:
 
@@ -60,7 +60,7 @@ Für Windows 10 Version 1903, 1909 und 2004 werden die folgenden Verschlüsselun
 
  
 
-Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter unterstützt, aber standardmäßig nicht aktiviert:
+Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter unterstützt, aber nicht standardmäßig aktiviert:
 
 
 
@@ -78,7 +78,7 @@ Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter
 | TLS \_ RSA MIT DES \_ \_ \_ CBC \_ SHA<br/>                                                          | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ DHE \_ DSS \_ MIT DES \_ \_ CBC \_ SHA<br/>                                                     | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ DHE \_ DSS \_ EXPORT1024 \_ WITH DES \_ \_ CBC SHA No TLS \_ 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/>   | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
-| TLS \_ RSA MIT NULL \_ \_ \_ MD5 <br/> Wird nur verwendet, wenn die Anwendung explizit anforderungen. <br/> | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA MIT NULL \_ \_ \_ MD5 <br/> Wird nur verwendet, wenn die Anwendung explizit anfordert. <br/> | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ RSA \_ EXPORT1024 \_ MIT \_ RC4 \_ 56 \_ SHA<br/>                                               | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ RSA \_ EXPORT \_ WITH \_ RC4 \_ 40 \_ MD5<br/>                                                   | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ RSA \_ EXPORT1024 \_ MIT DES \_ \_ CBC \_ SHA<br/>                                              | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
@@ -87,7 +87,7 @@ Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter
 
  
 
-Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schannel-Anbieters standardmäßig in dieser Prioritäts reihenfolge aktiviert:
+Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schannel-Anbieters standardmäßig aktiviert und in dieser Prioritätsreihenfolge:
 
 
 
@@ -105,14 +105,14 @@ Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schann
  
 
 > [!Note]  
-> Standardmäßig sind keine PSK-Verschlüsselungssammlungen aktiviert. Anwendungen müssen PSK mit SCH \_ USE \_ PRESHAREDKEY \_ ONLY anfordern. Weitere Informationen zu Schannel-Flags finden Sie unter [**SCHANNEL \_ CRED**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred).
+> Standardmäßig sind keine PSK-Verschlüsselungssammlungen aktiviert. Anwendungen müssen PSK nur mit SCH \_ USE \_ PRESHAREDKEY \_ anfordern. Weitere Informationen zu Schannel-Flags finden Sie unter [**SCHANNEL \_ CRED**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred).
 
  
 
-Um Verschlüsselungssammlungen hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie oder die TLS-Cmdlets zur Verfügung:
+Um Verschlüsselungssammlungen hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie bereit, oder verwenden Sie die TLS-Cmdlets:
 
--   Um gruppenrichtlinien zu verwenden, konfigurieren Sie die REIHENFOLGE DER SSL-Verschlüsselungssammlung unter Computerkonfiguration > Administrative Vorlagen > Netzwerk > SSL-Konfigurationseinstellungen mit der Prioritätsliste für alle Verschlüsselungssammlungen, die Sie aktivieren möchten.
+-   Um Gruppenrichtlinien zu verwenden, konfigurieren Sie ssl cipher Suite Order unter Computerkonfiguration > Administrative Vorlagen > Netzwerk > SSL-Konfiguration Einstellungen mit der Prioritätsliste für alle Verschlüsselungssammlungen, die Sie aktivieren möchten.
 -   Informationen zur Verwendung von PowerShell finden Sie unter [TLS-Cmdlets.](/powershell/module/tls/?view=win10-ps)
 
 > [!Note]  
-> Vor der Windows 10 wurden Verschlüsselungssammlungszeichenfolgen mit der elliptischen Kurve angefügt, um die Kurvenpriorität zu bestimmen. Windows 10 unterstützt eine Einstellung für die Reihenfolge der Elliptic Curve-Priorität, sodass das Elliptic Curve-Suffix nicht erforderlich ist und durch die neue Reihenfolge der Elliptic Curve-Priorität außer Kraft gesetzt wird, sofern angegeben, damit Organisationen gruppenrichtlinien verwenden können, um verschiedene Versionen von Windows mit den gleichen Verschlüsselungssammlungen zu konfigurieren.
+> Vor Windows 10 wurden Verschlüsselungssammlungszeichenfolgen mit der elliptischen Kurve angefügt, um die Kurvenpriorität zu bestimmen. Windows 10 unterstützt eine Prioritätsreihenfolgeeinstellung für elliptische Kurven, sodass das Suffix der elliptischen Kurve nicht erforderlich ist und von der neuen Prioritätsreihenfolge der elliptischen Kurve überschrieben wird, sofern angegeben, damit Organisationen gruppenrichtlinien verwenden können, um verschiedene Versionen von Windows mit denselben Verschlüsselungssammlungen zu konfigurieren.

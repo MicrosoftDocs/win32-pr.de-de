@@ -1,19 +1,19 @@
 ---
-description: Wenn der Wert true ist, wird angegeben, dass die frei Hand Eingaben erneut analysiert werden können. Dieses Element ist false, wenn der Benutzer den Typ der frei Hand Eingabe explizit festgelegt hat, indem er die Zeichen Handschrift in Text oder die Form ändern in Journal Funktionen verwendet.
+description: Gibt bei "true" an, dass die Ink-Funktion erneut analysiert werden kann. Dieses Element ist false, wenn der Benutzer den Typ der Freihandschrift explizit mithilfe der Funktionen Handschrift in Text konvertieren oder Form ändern in von Journal festgelegt hat.
 ms.assetid: d1b9bd7f-e420-4290-a542-f1216b6ef203
-title: Canreclassify-Element
+title: CanReClassify-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c8c2898ce789e8c967c74ca26d2ab46d968c22d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f243b4237e0dd9195a2a254a06cd86dceb31b63
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749104"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436475"
 ---
-# <a name="canreclassify-element"></a>Canreclassify-Element
+# <a name="canreclassify-element"></a>CanReClassify-Element
 
-Wenn der Wert **true** ist, wird angegeben, dass die frei Hand Eingaben erneut analysiert werden können. Dieses Element ist **false** , wenn der Benutzer den Typ der frei Hand Eingabe explizit festgelegt hat, indem er die Zeichen Handschrift in Text oder die Form ändern in Journal Funktionen verwendet.
+True gibt an, dass die Ink-Datei erneut analysiert werden kann. Dieses Element ist **false,** wenn der Benutzer den Typ der Freihand mithilfe der Funktionen Handschrift in Text konvertieren oder Form ändern in von Journal explizit festgelegt hat.
 
 ## <a name="definition"></a>Definition
 
@@ -37,11 +37,11 @@ Keine
 
 
 
-|              |                                            |
-|--------------|--------------------------------------------|
-| Elementtyp | **xs:boolean**                             |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname  | Journal Leser                             |
+|                  | Wert                                      |
+|------------------|--------------------------------------------|
+| **Elementtyp** | xs:boolean                                 |
+| **Namespace**    | urn:schemas-microsoft-com:tabletpc:richink |
+| **Schemaname**  | Journalreader                             |
 
 
 

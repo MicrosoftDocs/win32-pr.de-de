@@ -1,19 +1,19 @@
 ---
-description: Enthält den Hintergrund für ein journaldocument-Element oder journalpage-Element.
+description: Enthält den Hintergrund für ein JournalDocument-Element oder ein JournalPage-Element.
 ms.assetid: 48527c4e-50fb-4800-ac87-1646234783ba
 title: Background-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e58a836c7cfd13130779c1cd6b017105bcaa6321
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46388d56c04fc24ecd578788eecf9926ef01a301
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368905"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436585"
 ---
 # <a name="background-element"></a>Background-Element
 
-Enthält den Hintergrund für ein [**journaldocument**](journaldocument-element.md) -Element oder [**journalpage**](journalpage-element.md) -Element.
+Enthält den Hintergrund für ein [**JournalDocument-Element**](journaldocument-element.md) oder [**ein JournalPage-Element.**](journalpage-element.md)
 
 ## <a name="definition"></a>Definition
 
@@ -23,7 +23,7 @@ Enthält den Hintergrund für ein [**journaldocument**](journaldocument-element.
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-[**Schreib**](stationery-element.md)
+[**Briefpapier**](stationery-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -43,7 +43,7 @@ Enthält den Hintergrund für ein [**journaldocument**](journaldocument-element.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
+<th>attribute</th>
 <th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
@@ -55,9 +55,9 @@ Enthält den Hintergrund für ein [**journaldocument**](journaldocument-element.
 <td><strong>Stil</strong></td>
 <td><strong>xs:string</strong></td>
 <td>Erforderlich</td>
-<td>Gibt die Art des Hintergrunds an.</td>
+<td>Gibt den Stil des Hintergrunds an.</td>
 <td><ul>
-<li>Keine</li>
+<li>Ohne</li>
 <li>Basis</li>
 </ul></td>
 </tr>
@@ -79,11 +79,11 @@ Enthält den Hintergrund für ein [**journaldocument**](journaldocument-element.
 
 
 
-|              |                                                                   |
-|--------------|-------------------------------------------------------------------|
-| Elementtyp | ComplexType für [**BackgroundType**](backgroundtype-complex-type.md) |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk                        |
-| Schemaname  | Journal Leser                                                    |
+|                  | Wert                                                             |
+|------------------|-------------------------------------------------------------------|
+| **Elementtyp** | [**complexType: BackgroundType**](backgroundtype-complex-type.md) |
+| **Namespace**    | urn:schemas-microsoft-com:tabletpc:richink                        |
+| **Schemaname**  | Journalreader                                                    |
 
 
 

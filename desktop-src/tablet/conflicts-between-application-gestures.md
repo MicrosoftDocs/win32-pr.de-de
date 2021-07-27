@@ -1,31 +1,31 @@
 ---
-description: Beschreibung von Konflikten zwischen Anwendungs Gesten.
+description: Beschreibung von Konflikten zwischen Anwendungsgesten.
 ms.assetid: 9d331961-5fb4-4bcb-93bc-9b53c7f83ff1
-title: Konflikte zwischen Anwendungs Gesten
+title: Konflikte zwischen Anwendungsgesten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17713f6c906fb949dddb258bb9fd1afaac031956
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad377ab618f297aac7200f51961ae73c15e877f6
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346674"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436506"
 ---
-# <a name="conflicts-between-application-gestures"></a>Konflikte zwischen Anwendungs Gesten
+# <a name="conflicts-between-application-gestures"></a>Konflikte zwischen Anwendungsgesten
 
-Einige Anwendungs Gesten sind einander ähnlich genug, um bei der Erkennung mögliche Konflikte zu verursachen. Verwenden Sie in Ihrer Anwendung möglicherweise widersprüchliche Anwendungs Gesten nicht gleichzeitig.
+Einige Anwendungsgesten ähneln einander, um mögliche Konflikte während der Erkennung zu verursachen. Verwenden Sie nicht gleichzeitig potenziell widersprüchliche Anwendungsgesten in Ihrer Anwendung.
 
-In der folgenden Tabelle wird der Satz von in Konflikt stehenden Anwendungs Gesten mit einem X angezeigt, das auf bestimmte Konflikte hinweist.
+In der folgenden Tabelle werden die In konfliktverursachenden Anwendungsgesten mit einem X angezeigt, das die spezifischen Konflikte angibt.
 
 
 
-|                          | UpLeft       | UpRight      | DownLeft     | DownRight    | ChevronDown  |
-|--------------------------|--------------|--------------|--------------|--------------|--------------|
-| Upleftlong<br/>    | X<br/> | -<br/> | -<br/> | -<br/> | -<br/> |
-| Uprightlong<br/>   | -<br/> | X<br/> | -<br/> | -<br/> | -<br/> |
-| Downleftlong<br/>  | -<br/> | -<br/> | X<br/> | -<br/> | -<br/> |
-| Downrightlong<br/> | -<br/> | -<br/> | -<br/> | X<br/> | -<br/> |
-| Azure Functions<br/>         | -<br/> | -<br/> | -<br/> | -<br/> | X<br/> |
+|                   | UpLeft       | UpRight      | DownLeft     | DownRight    | ChevronDown  |
+|-------------------|--------------|--------------|--------------|--------------|--------------|
+| **UpLeftLong**    | X<br/> | -<br/> | -<br/> | -<br/> | -<br/> |
+| **UpRightLong**   | -<br/> | X<br/> | -<br/> | -<br/> | -<br/> |
+| **DownLeftLong**  | -<br/> | -<br/> | X<br/> | -<br/> | -<br/> |
+| **DownRightLong** | -<br/> | -<br/> | -<br/> | X<br/> | -<br/> |
+| **Überprüfung**         | -<br/> | -<br/> | -<br/> | -<br/> | X<br/> |
 
 
 

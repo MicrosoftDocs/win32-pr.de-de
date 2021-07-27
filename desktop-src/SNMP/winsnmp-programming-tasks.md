@@ -1,19 +1,19 @@
 ---
 title: WinSNMP-Programmieraufgaben
-description: In der folgenden Tabelle werden die grundlegenden Programmier Prozeduren zusammengefasst, die Sie zum Codieren einer WinSNMP-Anwendung ausführen müssen, sowie die Themen mit Informationen zu diesen Aufgaben.
+description: In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengefasst, die Sie zum Codieren einer WinSNMP-Anwendung ausführen müssen, sowie die Themen, die Informationen zu diesen Aufgaben bereitstellen.
 ms.assetid: 70c24042-bf44-4484-8e5e-d117e2ba28d5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d75fa8d2ad223fbd8f71eff78c7cd232ddc492a9
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 7543a0fef8fff3f2ef1672ee29d72b0f82b75af7
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "103857980"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436619"
 ---
 # <a name="winsnmp-programming-tasks"></a>WinSNMP-Programmieraufgaben
 
-In der folgenden Tabelle werden die grundlegenden Programmier Prozeduren zusammengefasst, die Sie zum Codieren einer WinSNMP-Anwendung ausführen müssen, sowie die Themen mit Informationen zu diesen Aufgaben.
+In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengefasst, die Sie zum Codieren einer WinSNMP-Anwendung ausführen müssen, sowie die Themen, die Informationen zu diesen Aufgaben bereitstellen.
 
 
 
@@ -25,59 +25,59 @@ In der folgenden Tabelle werden die grundlegenden Programmier Prozeduren zusamme
 <thead>
 <tr class="header">
 <th>Programmieraufgabe</th>
-<th>Aufgabenbezogene Funktion und Themen</th>
+<th>Aufgabenbezogene Funktionen und Themen</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Öffnen Sie die WinSNMP-Anwendung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup</strong></a>. Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung</a>.<br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup.</strong></a> Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung.</a><br/></td>
 </tr>
 <tr class="even">
 <td>Öffnen Sie mindestens eine WinSNMP-Sitzung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>snmpkreatesession</strong></a>. Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-session.md">Öffnen und Schließen einer WinSNMP-Sitzung</a>.<br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession.</strong></a> Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-session.md">Öffnen und Schließen einer WinSNMP-Sitzung.</a><br/></td>
 </tr>
 <tr class="odd">
 <td>Registrieren Sie sich, um Traps oder Benachrichtigungen zu empfangen.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister"><strong>snmpregiester</strong></a>. Siehe <a href="managing-traps-and-notifications.md">Verwalten von Traps und Benachrichtigungen</a>.<br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister"><strong>SnmpRegister.</strong></a> Weitere Informationen finden Sie unter <a href="managing-traps-and-notifications.md">Verwalten von Traps und Benachrichtigungen.</a><br/></td>
 </tr>
 <tr class="even">
-<td>Erstellen Sie mindestens eine Variablen Bindungs Liste für die Einbindung in ein PDU.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl"><strong>snmpkreatevbl</strong></a>, <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl"><strong>snmpduplialisievbl</strong></a>, <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb"><strong>snmpsetvb</strong></a>. Weitere Informationen finden Sie <a href="working-with-variable-binding-lists.md">unter Arbeiten mit Variablen Bindungs Listen</a>.<br/>
+<td>Erstellen Sie eine oder mehrere Variablenbindungslisten für die Aufnahme in eine PDU.</td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl"><strong>SnmpCreateVbl,</strong></a> <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl"><strong>SnmpDuplicateVbl,</strong></a> <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb"><strong>SnmpSetVb</strong></a>. Weitere Informationen finden Sie unter <a href="working-with-variable-binding-lists.md">Arbeiten mit Variablenbindungslisten.</a><br/>
 <blockquote>
 [!Note]<br />
-Die Anwendung muss möglicherweise andere <a href="winsnmp-functions.md">Variablen Bindungsfunktionen</a> zum Erstellen der Variablen Bindungs Liste aufzurufen.
+Die Anwendung muss möglicherweise andere <a href="winsnmp-functions.md">Variablenbindungsfunktionen</a> aufrufen, um die Variablenbindungsliste zu erstellen.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td>Erstellen Sie einen oder mehrere PDUs für die Übertragung und Verarbeitung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu"><strong>snmpkreatepdu</strong></a>, <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata"><strong>snmpsetpdudata</strong></a>, <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu"><strong>snmpduplierepdu</strong></a>. Weitere Informationen finden Sie <a href="working-with-protocol-data-units.md">unter Arbeiten mit Protokolldaten Einheiten</a>.<br/>
+<td>Erstellen Sie eine oder mehrere PDUs für die Übertragung und Verarbeitung.</td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu"><strong>SnmpCreatePDU,</strong></a> <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata"><strong>SnmpSetPduData,</strong></a> <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu"><strong>SnmpDuplicatePDU.</strong></a> Weitere Informationen finden Sie unter <a href="working-with-protocol-data-units.md">Arbeiten mit Protokolldateneinheiten.</a><br/>
 <blockquote>
 [!Note]<br />
-Die Anwendung muss möglicherweise andere <a href="winsnmp-functions.md">PDU-Funktionen</a> und WinSNMP- <a href="winsnmp-functions.md">Hilfsprogrammfunktionen</a> zum Erstellen des PDU-Programms aufruft.
+Die Anwendung muss möglicherweise andere <a href="winsnmp-functions.md">PDU-Funktionen</a> und WinSNMP-Hilfsfunktionen aufrufen, um die PDU zu erstellen. <a href="winsnmp-functions.md"></a>
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>Senden Sie eine oder mehrere SNMP-Vorgangs Anforderungen.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg"><strong>snmpsendmsg</strong></a>. Siehe <a href="sending-snmp-messages.md">Senden von SNMP-Nachrichten</a>.<br/></td>
+<td>Übermitteln Sie eine oder mehrere SNMP-Vorgangsanforderungen.</td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg"><strong>SnmpSendMsg.</strong></a> Weitere Informationen finden Sie <a href="sending-snmp-messages.md">unter Senden von SNMP-Nachrichten.</a><br/></td>
 </tr>
 <tr class="odd">
-<td>Rufen Sie die Antwort auf die SNMP-Vorgangs Anforderung ab.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg"><strong>snmprecvmsg</strong></a>. Siehe <a href="receiving-snmp-messages.md">empfangen von SNMP-Nachrichten</a>.<br/></td>
+<td>Rufen Sie die Antwort auf die SNMP-Vorgangsanforderung ab.</td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg"><strong>SnmpRecvMsg.</strong></a> Weitere Informationen finden Sie <a href="receiving-snmp-messages.md">unter Empfangen von SNMP-Nachrichten.</a><br/></td>
 </tr>
 <tr class="even">
-<td>Verarbeiten der Anforderungs Antwort.</td>
-<td>Anwendungsspezifische Logik verwenden.</td>
+<td>Verarbeiten Sie die Anforderungsantwort.</td>
+<td>Verwenden Sie anwendungsspezifische Logik.</td>
 </tr>
 <tr class="odd">
 <td>Schließen Sie jede WinSNMP-Sitzung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose"><strong>snmpclose</strong></a>. Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-session.md">Öffnen und Schließen einer WinSNMP-Sitzung</a>.<br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose"><strong>SnmpClose</strong></a>. Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-session.md">Öffnen und Schließen einer WinSNMP-Sitzung.</a><br/></td>
 </tr>
 <tr class="even">
 <td>Schließen Sie die WinSNMP-Anwendung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup"><strong>snmpcleanup</strong></a>. Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung</a>.<br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup"><strong>SnmpCleanup.</strong></a> Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung.</a><br/></td>
 </tr>
 </tbody>
 </table>
@@ -86,19 +86,19 @@ Die Anwendung muss möglicherweise andere <a href="winsnmp-functions.md">PDU-Fun
 
  
 
-Die folgenden Themen enthalten zusätzliche Informationen zu anderen allgemeinen Programmier Konzepten, die für die WinSNMP-Umgebung spezifisch sind.
+Die folgenden Themen enthalten zusätzliche Informationen zu anderen allgemeinen Programmierkonzepten, die für die WinSNMP-Umgebung spezifisch sind.
 
 
 
-|                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Thema                                                              | Konzepte                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Allgemeine Programmieraufgaben](general-winsnmp-programming-tasks.md) | [Verwalten von Objekt](managing-object-identifiers.md)Bezeichners, die[WinSNMP-Deskriptoren freigeben](freeing-winsnmp-descriptors.md)<br/> [Festlegen des Entitäts-und Kontext Übersetzungsmodus](setting-the-entity-and-context-translation-mode.md)<br/> [Verwalten der Richtlinie für Neuübertragungen](managing-the-retransmission-policy.md)<br/> [Schreiben von WinSNMP-Anwendungen mit mehreren Threads](writing-winsnmp-applications-with-multiple-threads.md)<br/> [Registrieren einer SNMP-Agent-Anwendung](registering-an-snmp-agent-application.md)<br/> |
+| [Allgemeine Programmieraufgaben](general-winsnmp-programming-tasks.md) | [Verwalten von Objektbezeichnern,](managing-object-identifiers.md)[die WinSNMP-Deskriptoren freigeben](freeing-winsnmp-descriptors.md)<br/> [Festlegen des Entitäts- und Kontextübersetzungsmodus](setting-the-entity-and-context-translation-mode.md)<br/> [Verwalten der Neuübertragungsrichtlinie](managing-the-retransmission-policy.md)<br/> [Schreiben von WinSNMP-Anwendungen mit mehreren Threads](writing-winsnmp-applications-with-multiple-threads.md)<br/> [Registrieren einer SNMP-Agent-Anwendung](registering-an-snmp-agent-application.md)<br/> |
 
 
 
  
 
-Außerdem muss die WinSNMP-Anwendung möglicherweise Aufrufe der folgenden WinSNMP-Funktionen einbinden: [**snmpfreevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl), [**snmpfreeentity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity), [**snmpfreedescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor), [**snmpfreecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)und [**snmpfreepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu). Dadurch kann die Microsoft WinSNMP-Implementierung WinSNMP-Speicher Objekte freigeben. Als allgemeine Regel gilt: die WinSNMP-Anwendung sollte alle Ressourcen freigeben, die als Ergebnis eines Aufrufes einer WinSNMP-Funktion zugeordnet sind. Weitere Informationen zum Aufheben der Zuordnung von Ressourcen finden Sie unter [Zuordnen von WinSNMP-Speicher Objekten](allocating-winsnmp-memory-objects.md).
+Darüber hinaus muss die WinSNMP-Anwendung möglicherweise Aufrufe der folgenden WinSNMP-Funktionen integrieren: [**SnmpFreeVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl), [**SnmpFreeEntity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity), [**SnmpFreeDescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor), [**SnmpFreeContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)und [**SnmpFreePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu). Dadurch kann die Microsoft WinSNMP-Implementierung WinSNMP-Speicherobjekte freigeben. In der Regel sollte die WinSNMP-Anwendung alle Ressourcen freigeben, die als Ergebnis eines Aufrufs einer WinSNMP-Funktion zugeordnet wurden. Weitere Informationen zur Zuordnung von Ressourcen finden Sie unter [Zuordnen von WinSNMP-Speicherobjekten.](allocating-winsnmp-memory-objects.md)
 
  
 

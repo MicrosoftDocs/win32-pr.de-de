@@ -1,19 +1,19 @@
 ---
-description: Enthält einen Erkennungs Alternativen für ein InkWord. Die Alternativen werden nach dem Vertrauen der Erkennung in der alternativen geordnet, wobei die höchste erste ist.
+description: Enthält eine Erkennungs-Alternative für ein InkWord. Die Alternativen werden nach der Zuverlässigkeit der Erkennung in die Alternative geordnet, wobei der höchste Wert an erster Stelle liegt.
 ms.assetid: 6ec78ac9-c10c-4227-bead-5ddfc48ce27e
-title: Alternatives Element (WinGDI. h)
+title: Alternate-Element (Wingdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71eb1bc0bf74462cadecb480ceb87a0b610be876
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 55dfb629aadea988a6aeec1cba1020c8ab47c994
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371347"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436605"
 ---
-# <a name="alternate-element"></a>Alternatives Element
+# <a name="alternate-element"></a>Alternate-Element
 
-Enthält einen Erkennungs Alternativen für ein [**InkWord**](inkword-element.md). Die Alternativen werden nach dem Vertrauen der Erkennung in der alternativen geordnet, wobei die höchste erste ist.
+Enthält eine Erkennungs-Alternative für ein [**InkWord-.**](inkword-element.md) Die Alternativen werden nach der Zuverlässigkeit der Erkennung in die Alternative geordnet, wobei der höchste Wert an erster Stelle liegt.
 
 ## <a name="definition"></a>Definition
 
@@ -23,7 +23,7 @@ Enthält einen Erkennungs Alternativen für ein [**InkWord**](inkword-element.md
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-[**Alternative ist**](alternatelist-element.md)
+[**AlternateList**](alternatelist-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -37,23 +37,23 @@ Keine
 
 
 
-|              |                                            |
-|--------------|--------------------------------------------|
-| Elementtyp | **xs:string**                              |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname  | Journal Leser                             |
+|                  | Wert                                      |
+|------------------|--------------------------------------------|
+| **Elementtyp** | xs:string                                  |
+| **Namespace**    | urn:schemas-microsoft-com:tabletpc:richink |
+| **Schemaname**  | Journalreader                             |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WinGDI. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wingdi.h</dt> </dl> |
 
 
 

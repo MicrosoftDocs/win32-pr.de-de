@@ -1,19 +1,19 @@
 ---
-description: Definiert eine Attribut Gruppe, die von einer Vielzahl von Elementen in einer Journal-XML-Datei verwendet wird. Sie enthält Attribute, mit denen die Begrenzungen (Links, oben, Höhe und Breite) eines Elements im Dokument definiert werden.
+description: Definiert eine Attributgruppe, die von einer Vielzahl von Elementen in einer Journal-XML-Datei verwendet wird. Sie enthält Attribute, die verwendet werden, um die Begrenzungen (links, oben, Höhe und Breite) eines Elements im Dokument zu definieren.
 ms.assetid: 7841aa65-fb35-4909-a34e-3c883555f764
-title: Boundstype-Attribut Gruppe
+title: BoundsType-Attributgruppe
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 411a9d3ec30363e5c405cf27654330a0886f8946
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78c51fcb9bc0041bbc030f2c67e434a964212562
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749105"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436507"
 ---
-# <a name="boundstype-attribute-group"></a>Boundstype-Attribut Gruppe
+# <a name="boundstype-attribute-group"></a>BoundsType-Attributgruppe
 
-Definiert eine Attribut Gruppe, die von einer Vielzahl von Elementen in einer Journal-XML-Datei verwendet wird. Sie enthält Attribute, mit denen die Begrenzungen (Links, oben, Höhe und Breite) eines Elements im Dokument definiert werden.
+Definiert eine Attributgruppe, die von einer Vielzahl von Elementen in einer Journal-XML-Datei verwendet wird. Sie enthält Attribute, die verwendet werden, um die Begrenzungen (links, oben, Höhe und Breite) eines Elements im Dokument zu definieren.
 
 ## <a name="definition"></a>Definition
 
@@ -34,12 +34,12 @@ Keine
 
 
 
-| Attribut  | type                      | Erforderlich | BESCHREIBUNG                                                                                        | PossibleValues                       |
+| attribute  | type                      | Erforderlich | BESCHREIBUNG                                                                                        | PossibleValues                       |
 |------------|---------------------------|----------|----------------------------------------------------------------------------------------------------|--------------------------------------|
-| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten äußersten linken Punkt im umgebenden Feld des Elements.<br/> | Eine beliebige ganze Zahl.<br/>              |
-| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im umgebenden Feld für das Element.<br/>  | Eine beliebige ganze Zahl.<br/>              |
-| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungs Rahmens für das Element.<br/>                                          | Eine beliebige nicht negative ganze Zahl.<br/> |
-| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des umgebenden Felds für das Element.<br/>                                         | Eine beliebige nicht negative ganze Zahl.<br/> |
+| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten linken Punkt im Begrenzungsfeld für das Element.<br/> | Eine beliebige ganze Zahl.<br/>              |
+| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im Begrenzungsfeld für das Element.<br/>  | Eine beliebige ganze Zahl.<br/>              |
+| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungsfelds für das Element.<br/>                                          | Eine nicht negative ganze Zahl.<br/> |
+| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des Begrenzungsfelds für das Element.<br/>                                         | Eine nicht negative ganze Zahl.<br/> |
 
 
 
@@ -49,18 +49,18 @@ Keine
 
 
 
-|             |                                            |
-|-------------|--------------------------------------------|
-| Namespace   | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname | Journal Leser                             |
+|                 | Wert                                      |
+|-----------------|--------------------------------------------|
+| **Namespace**   | urn:schemas-microsoft-com:tabletpc:richink |
+| **Schemaname** | Journalreader                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-" **Left** " und " **Top** " können negativ sein, da der Ursprung durch die Ränder definiert wird, nicht die Seite.
+**Left** und **Top** können negativ sein, da der Ursprung durch die Ränder und nicht durch die Seite definiert wird.
 
  
 

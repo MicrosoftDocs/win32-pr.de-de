@@ -1,20 +1,20 @@
 ---
-Description: Die KNOWNFOLDERID-Konstanten stellen GUIDs dar, mit denen Standardordner identifiziert werden, die im System als bekannte Ordner registriert sind.
+Description: Die KNOWNFOLDERID-Konstanten stellen GUIDs dar, die Standardordner identifizieren, die beim System als bekannte Ordner registriert sind.
 ms.assetid: f2c08ade-3083-44e4-82b0-dde45f0e3094
-title: KNOWNFOLDERID (KnownFolders. h)
+title: KNOWNFOLDERID (Knownfolders.h)
 ms.topic: reference
 ms.custom: snippet-project
 ms.date: 07/27/2020
-ms.openlocfilehash: 97748d074d6b0982708f51ea679f0629e8abfad6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
-ms.translationtype: HT
+ms.openlocfilehash: eb4b6ef46179abbe515edfcd323a349c7d091ac9
+ms.sourcegitcommit: c8f1dc81483739b697c96ae97ca533028efc3b2c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104982860"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114656878"
 ---
 # <a name="knownfolderid"></a>KNOWNFOLDERID
 
-Die **KNOWNFOLDERID** -Konstanten stellen GUIDs dar, mit denen Standardordner identifiziert werden, die im System als [bekannte Ordner](known-folders.md)registriert sind. Diese Ordner werden mit Windows Vista und höheren Betriebssystemen installiert, und auf einem Computer sind nur geeignete Ordner installiert. Beschreibungen dieser Ordner finden Sie unter [**CSIDL**](csidl.md).
+Die **KNOWNFOLDERID-Konstanten** stellen GUIDs dar, die Standardordner identifizieren, die beim System als [Bekannte Ordner registriert sind.](known-folders.md) Diese Ordner werden mit den Betriebssystemen Windows Vista und höher installiert, und auf einem Computer sind nur die für ihn geeigneten Ordner installiert. Beschreibungen dieser Ordner finden Sie unter [**CSIDL**](csidl.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -56,7 +56,7 @@ HRESULT CExplorerBrowserHostDialog::_FillViewWithKnownFolders(IResultsFolder *pr
 
 ```
 
-Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/Win7Samples/winui/shell/appplatform/ExplorerBrowserCustomContents/ExplorerBrowserCustomContents.cpp) auf GitHub.
+Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/Win7Samples/winui/shell/appplatform/ExplorerBrowserCustomContents/ExplorerBrowserCustomContents.cpp) auf GitHub.
 
 ## <a name="constants"></a>Konstanten
 
@@ -70,7 +70,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <thead>
 <tr class="header">
 <th style="text-align: left;">Konstante</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -85,26 +85,26 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Konto Bilder</td>
+<td>Kontobilder</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\accountpictures</td>
+<td>%APPDATA%\Microsoft\Windows\AccountPictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, value introduced in Windows 8</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -127,7 +127,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -138,11 +138,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Hinzufügen neuer Programme ( <strong>in der System</strong> Steuerung unter "Software" gefunden)</td>
+<td>Legacyanzeigename</td>
+<td>Neue Programme hinzufügen (im Element <strong>"Programme</strong> hinzufügen" oder "Programme entfernen" im Systemsteuerung)</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -157,7 +157,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{724ef170-a42d-4fef -9F 26-b60e846bba4f}</td>
+<td>{724EF170-A42D-4FEF-9F26-B60E846FBA4F}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -165,23 +165,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\Microsoft\Windows\Start menu\programs\administrative Tools</td>
+<td>%APPDATA%\Microsoft\Windows\Startmenü\Programme\Verwaltung</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_ADMINTOOLS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Verwaltung</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\Startmenü \ programme\administrative Tools</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Start menu\Programs\Administrative Tools</td>
 </tr>
 </tbody>
 </table>
@@ -199,33 +199,33 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Appdatadesktop</td>
+<td>AppDataDesktop</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Desktop</td>
+<td>%LOCALAPPDATA%\Desktop</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10 eingeführte Wert, Version 1709</td>
+<td>None, value introduced in Windows 10, Version 1709</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese folderid wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung in einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="FOLDERID_AppDataDocuments"></span><span id="folderid_appdatadocuments"></span><span id="FOLDERID_APPDATADOCUMENTS"></span><dl> <dt><strong>FOLDERID_AppDataDocuments</strong></dt> </dl></td>
@@ -234,37 +234,37 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7be16610-1f7f-44ac-bff0-83e15f2ffca1}</td>
+<td>{7BE16610-1F7F-44AC-BFF0-83E15F2FFCA1}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Appdatadocals-Elemente</td>
+<td>AppDataDocuments</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Documents</td>
+<td>%LOCALAPPDATA%\Documents</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10 eingeführte Wert, Version 1709</td>
+<td>None, value introduced in Windows 10, Version 1709</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese folderid wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung in einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="FOLDERID_AppDataFavorites"></span><span id="folderid_appdatafavorites"></span><span id="FOLDERID_APPDATAFAVORITES"></span><dl> <dt><strong>FOLDERID_AppDataFavorites</strong></dt> </dl></td>
@@ -273,37 +273,37 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7cfbefbc-de1f-45AA-B843-a542ac536cc9}</td>
+<td>{7CFBEFBC-DE1F-45AA-B843-A542AC536CC9}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Appdatafavorites</td>
+<td>AppDataFavorites</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Favoriten</td>
+<td>%LOCALAPPDATA%\Favoriten</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10 eingeführte Wert, Version 1709</td>
+<td>None, in Windows 10, Version 1709 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese folderid wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung in einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu ermöglichen. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="FOLDERID_AppDataProgramData"></span><span id="folderid_appdataprogramdata"></span><span id="FOLDERID_APPDATAPROGRAMDATA"></span><dl> <dt><strong>FOLDERID_AppDataProgramData</strong></dt> </dl></td>
@@ -312,37 +312,37 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{559d40a3-a036-40fa-af61-84cb430a4d34}</td>
+<td>{559D40A3-A036-40FA-AF61-84CB430A4D34}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Appdataprogramdata</td>
+<td>AppDataProgramData</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\ProgramData</td>
+<td>%LOCALAPPDATA%\ProgramData</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10 eingeführte Wert, Version 1709</td>
+<td>None, in Windows 10, Version 1709 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese folderid wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung in einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu ermöglichen. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="FOLDERID_ApplicationShortcuts"></span><span id="folderid_applicationshortcuts"></span><span id="FOLDERID_APPLICATIONSHORTCUTS"></span><dl> <dt><strong>FOLDERID_ApplicationShortcuts</strong></dt> </dl></td>
@@ -355,26 +355,26 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Anwendungs Verknüpfungen</td>
+<td>Anwendungsverknüpfungen</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\anwendungstastenkombinationen</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\Anwendungsverknüpfungen</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -389,7 +389,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{1e87508d-89c2-42f 0-8a7e-645a0l50ca58}</td>
+<td>{1e87508d-89c2-42f0-8a7e-645a0f50ca58}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -397,7 +397,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -405,14 +405,14 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -435,7 +435,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -446,11 +446,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>None, der in Windows Vista eingeführte Wert. In früheren Versionen von Windows waren die Informationen auf dieser Seite in Software enthalten <strong>, wenn das</strong> Kontrollkästchen <strong>Updates anzeigen</strong> aktiviert wurde.</td>
+<td>Legacyanzeigename</td>
+<td>None, in Windows Vista eingeführter Wert. In früheren Versionen von Windows waren die Informationen auf dieser Seite unter <strong>Software</strong> enthalten, wenn das Kontrollkästchen <strong>Updates anzeigen</strong> aktiviert war.</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -469,26 +469,26 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Kamera-Roll</td>
+<td>Kameraroll</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\pictures\camera Roll</td>
+<td>%USERPROFILE%\Pictures\Camera Roll</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, in Windows 8.1 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -503,31 +503,31 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{9e52ab10-l80d-49df-acb8-4330b5687855}</td>
+<td>{9E52AB10-F80D-49DF-ACB8-4330F5687855}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Temporärer Brenn Ordner</td>
+<td>Temporärer Ordner "Burn"</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\burn\burn</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\Burn\Burn</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_CDBURN_AREA</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>CD-brennen</td>
+<td>Legacyanzeigename</td>
+<td>CD-Platte</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%USERPROFILE%\Local Settings\Application data\microsoft\cd Burning</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Local Einstellungen\Application Data\Microsoft\CD Überprüfen</td>
 </tr>
 </tbody>
 </table>
@@ -545,11 +545,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Programme und Funktionen</td>
+<td>Programme und Features</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -560,11 +560,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Software</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -587,23 +587,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\Microsoft\Windows\Start menu\programs\administrative Tools</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Startmenü\Programme\Verwaltung</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_ADMINTOOLS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Verwaltung</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\Startmenü \ programme\administrative Tools</td>
+<td>Legacy-Standardpfad</td>
+<td>%ALLUSERSPROFILE%\Start menu\Programs\Administrative Tools</td>
 </tr>
 </tbody>
 </table>
@@ -617,7 +617,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{C1BAE2D0-10df-4334-BEDD-7aa20b227a9d}</td>
+<td>{C1BAE2D0-10DF-4334-BEDD-7AA20B227A9D}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -625,23 +625,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\oem-Links</td>
+<td>%ALLUSERSPROFILE%\OEM-Links</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_OEM_LINKS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>OEM-Links</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\oem-Links</td>
+<td>Legacy-Standardpfad</td>
+<td>%ALLUSERSPROFILE%\OEM-Links</td>
 </tr>
 </tbody>
 </table>
@@ -655,31 +655,31 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{0139d44e-6afe-49f2-8690-3dafcae6ffb8}</td>
+<td>{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Programs</td>
+<td>Programme</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\Microsoft\Windows\Start menu\programme</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Startmenü\Programme</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_PROGRAMS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Programs</td>
+<td>Legacyanzeigename</td>
+<td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\startmenu\programme</td>
+<td>Legacy-Standardpfad</td>
+<td>%ALLUSERSPROFILE%\Start menu\Programs</td>
 </tr>
 </tbody>
 </table>
@@ -701,22 +701,22 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\microsoft\windows\startmenü</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Startmenü</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_STARTMENU</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Startmenü</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Startmenü</td>
 </tr>
 </tbody>
@@ -731,7 +731,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{82a5ea35-d9cd-47c5-9629-e15d2f 714e6e}</td>
+<td>{82A5EA35-D9CD-47C5-9629-E15D2F714E6E}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -739,23 +739,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\Microsoft\Windows\Start menu\programs\startup</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Start menu\Programs\StartUp</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>CSIDL_COMMON_STARTUP CSIDL_COMMON_ALTSTARTUP</td>
+<td>CSIDL_COMMON_STARTUP, CSIDL_COMMON_ALTSTARTUP</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Start</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\Startmenü \ programme\startup</td>
+<td>Legacy-Standardpfad</td>
+<td>%ALLUSERSPROFILE%\Start menu\Programs\StartUp</td>
 </tr>
 </tbody>
 </table>
@@ -769,7 +769,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{B94237E7-57ac-4347-9151-B08C6C32D1F7}</td>
+<td>{B94237E7-57AC-4347-9151-B08C6C32D1F7}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -777,22 +777,22 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\microsoft\windows\templates</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Templates</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_TEMPLATES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Vorlagen</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Templates</td>
 </tr>
 </tbody>
@@ -807,7 +807,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{0ac0837c-bbf8-452A-850d-79d08e667ca7}</td>
+<td>{0AC0837C-BBF8-452A-850D-79D08E667CA7}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -815,7 +815,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -826,11 +826,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td>CSIDL_DRIVES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Arbeitsplatz</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -845,7 +845,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{4bfef B45-347d-4006-a5be-ac0cb0567192}</td>
+<td>{4bfefb45-347d-4006-a5be-ac0cb0567192}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -853,7 +853,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -861,14 +861,14 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Nicht zutreffend Diese <strong>KNOWNFOLDERID</strong> bezieht sich auf den Synchronisierungs-Manager von Windows Vista. Dabei handelt es sich nicht um den Ordner, auf den der ältere <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictfolder"><strong>isyncmgrconflictfolder</strong></a>verweist.</td>
+<td>Legacyanzeigename</td>
+<td>Nicht zutreffend. Diese <strong>KNOWNFOLDERID</strong> bezieht sich auf den Windows Vista Synchronization Manager. Es handelt sich nicht um den Ordner, auf den der ältere <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictfolder"><strong>ISyncMgrConflictFolder verweist.</strong></a></td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -883,7 +883,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{6f0cd92b-2e97-45D1-88ff-b0d186b8debug}</td>
+<td>{6F0CD92B-2E97-45D1-88FF-B0D186B8DEDD}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -891,7 +891,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -902,11 +902,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td>CSIDL_CONNECTIONS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Netzwerkverbindungen</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -929,22 +929,22 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\contacts</td>
+<td>%USERPROFILE%\Contacts</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -959,7 +959,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{82a74aeb-aeb4-465c-A014-d097ee346d63}</td>
+<td>{82A74AEB-AEB4-465C-A014-D097EE346D63}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -967,7 +967,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -978,11 +978,11 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td>CSIDL_CONTROLS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Systemsteuerung</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -997,7 +997,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{2b0f765d-c0e9-4171-908e-08a611b84 FF6}</td>
+<td>{2B0F765D-C0E9-4171-908E-08A611B84FF6}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1005,23 +1005,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\cookies</td>
+<td>%APPDATA%\Microsoft\Windows\Cookies</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COOKIES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Cookies</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\Cookies</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Cookies</td>
 </tr>
 </tbody>
 </table>
@@ -1043,23 +1043,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Userprofile%\desktop</td>
+<td>%USERPROFILE%\Desktop</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>CSIDL_DESKTOP CSIDL_DESKTOPDIRECTORY</td>
+<td>CSIDL_DESKTOP, CSIDL_DESKTOPDIRECTORY</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Desktop</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%Userprofile%\desktop</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Desktop</td>
 </tr>
 </tbody>
 </table>
@@ -1073,7 +1073,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{5ce4a5e9-e4eb-479d-B89B-130c02886155}</td>
+<td>{5CE4A5E9-E4EB-479D-B89F-130C02886155}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1081,7 +1081,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1089,14 +1089,14 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1119,22 +1119,22 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\Documents</td>
+<td>%USERPROFILE%\Documents</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechungen</td>
-<td>CSIDL_MYDOCUMENTS CSIDL_PERSONAL</td>
+<td>CSIDL_MYDOCUMENTS, CSIDL_PERSONAL</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Meine Dokumente</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%USERPROFILE%\Eigene Dokumente</td>
 </tr>
 </tbody>
@@ -1149,7 +1149,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7b0db17d-9cd2-4A93-9733-46cc89022e7c}</td>
+<td>{7B0DB17D-9CD2-4A93-9733-46CC89022E7C}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1157,22 +1157,22 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\libraries\documents.Library-MS</td>
+<td>%APPDATA%\Microsoft\Windows\Libraries\Documents.library-ms</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1195,22 +1195,22 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\downloads</td>
+<td>%USERPROFILE%\Downloads</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1233,23 +1233,23 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\Favoriten</td>
+<td>%USERPROFILE%\Favoriten</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>CSIDL_FAVORITES CSIDL_COMMON_FAVORITES</td>
+<td>CSIDL_FAVORITES, CSIDL_COMMON_FAVORITES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Favoriten</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\Favoriten</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Favoriten</td>
 </tr>
 </tbody>
 </table>
@@ -1275,19 +1275,19 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%WINDIR%\fonts</td>
+<td>%windir%\Schriftarten</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_FONTS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Schriftarten</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%WINDIR%\fonts</td>
+<td>Legacystandardpfad</td>
+<td>%windir%\Fonts</td>
 </tr>
 </tbody>
 </table>
@@ -1299,7 +1299,7 @@ Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windo
 <td style="text-align: left;"><div class="alert">
 <blockquote>
 [!Note]<br />
-Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet. In diesen Versionen wird <strong>0x80070057-E_INVALIDARG</strong> zurückgegeben.
+Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Versionen wird 0x80070057 zurückgegeben– <strong>E_INVALIDARG</strong>
 </blockquote>
 </div>
 <div>
@@ -1318,7 +1318,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1329,11 +1329,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1348,7 +1348,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{054fae61-4dd8-4787-80b6-090220c4b700}</td>
+<td>{054FAE61-4DD8-4787-80B6-090220C4B700}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1356,22 +1356,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\gameexplorer</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\GameExplorer</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1394,23 +1394,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\history</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\History</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_HISTORY</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Verlauf</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%USERPROFILE%\Local Settings\History</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Local Einstellungen\History</td>
 </tr>
 </tbody>
 </table>
@@ -1424,7 +1424,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{52528a6b-b9e3-4 Add-b60d-588c2dba842d}</td>
+<td>{52528A6B-B9E3-4ADD-B60D-588C2DBA842D}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1432,7 +1432,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1440,14 +1440,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1462,15 +1462,15 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{9b74b6a3-0dfd-4f 11-9e78-5 f</td>
+<td>{9B74B6A3-0DFD-4f11-9E78-5F7800F2E772}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Der Benutzername des Benutzers (% username%)</td>
+<td>Der Benutzername des Benutzers (%USERNAME%)</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1478,14 +1478,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1504,26 +1504,26 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Implicitappverknüpfungen</td>
+<td>ImplicitAppShortcuts</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\internet Explorer\Quick launch\user pinned\implicitappverknüpfungen</td>
+<td>%APPDATA%\Microsoft\Internet Explorer\Schnellstart\User Pinned\ImplicitAppShortcuts</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1538,7 +1538,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{352481e8-33be-4251-BA85-6007caedcf9d}</td>
+<td>{352481E8-33BE-4251-BA85-6007CAEDCF9D}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1546,23 +1546,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\temporäre Internet Dateien</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\Temporäre Internetdateien</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_INTERNET_CACHE</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Temporäre Internetdateien</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%USERPROFILE%\Local settings\temporäre Internet Dateien</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Local Einstellungen\Temporary Internet Files</td>
 </tr>
 </tbody>
 </table>
@@ -1576,7 +1576,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{4d9f 7874-4e0c-4904-967b-40b0d20c3e4b}</td>
+<td>{4D9F7874-4E0C-4904-967B-40B0D20C3E4B}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1584,7 +1584,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1595,11 +1595,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_INTERNET</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Internet Explorer</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -1614,7 +1614,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{1b3ea5dc-B587-4786-b4ef-bd1dc332aeae}</td>
+<td>{1B3EA5DC-B587-4786-B4EF-BD1DC332AEAE}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1622,22 +1622,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Appdata%\microsoft\windows\libraries</td>
+<td>%APPDATA%\Microsoft\Windows\Libraries</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1660,22 +1660,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\links</td>
+<td>%USERPROFILE%\Links</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1698,23 +1698,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% LocalAppData% (%userprofile%\AppData\Local)</td>
+<td>%LOCALAPPDATA% (%USERPROFILE%\AppData\Local)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_LOCAL_APPDATA</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Anwendungsdaten</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%Userprofile%\Lokale Einstellungen\Anwendungsdaten</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Local Einstellungen\Application Data</td>
 </tr>
 </tbody>
 </table>
@@ -1736,22 +1736,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\appdata\locallow</td>
+<td>%USERPROFILE%\AppData\LocalLow</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1766,7 +1766,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{2a00375e-224c-49DE-b8d1-440df7ef3ddc}</td>
+<td>{2A00375E-224C-49DE-B8D1-440DF7EF3DDC}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1785,11 +1785,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_RESOURCES_LOCALIZED</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Keine</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%windir%\resources\0409 (Codepage)</td>
 </tr>
 </tbody>
@@ -1812,23 +1812,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\Music</td>
+<td>%USERPROFILE%\Musik</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_MYMUSIC</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Meine Musik</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%USERPROFILE%\Eigene Dateien\Eigene Musik</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Eigene Dokumente\My Musik</td>
 </tr>
 </tbody>
 </table>
@@ -1842,7 +1842,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{2112ab0a-c86a-4ffe-a368-0de96e47012e}</td>
+<td>{2112AB0A-C86A-4FFE-A368-0DE96E47012E}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1850,22 +1850,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\libraries\music.Library-MS</td>
+<td>%APPDATA%\Microsoft\Windows\Libraries\Musik.library-ms</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1884,27 +1884,27 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Netzwerk Verknüpfungen</td>
+<td>Netzwerkverknüpfungen</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\network Tastenkombinationen</td>
+<td>%APPDATA%\Microsoft\Windows\Netzwerkverknüpfungen</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_NETHOOD</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Nicht mehr</td>
+<td>Legacyanzeigename</td>
+<td>NetHood</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\netthood</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\NetHood</td>
 </tr>
 </tbody>
 </table>
@@ -1926,7 +1926,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1934,14 +1934,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>CSIDL_NETWORK CSIDL_COMPUTERSNEARME</td>
+<td>CSIDL_NETWORK, CSIDL_COMPUTERSNEARME</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Meine Netzwerk Orte</td>
+<td>Legacyanzeigename</td>
+<td>Meine Netzwerkorte</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -1956,7 +1956,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{31c0dd25-9439-4f12-bf41-7ff4eda38722}</td>
+<td>{31C0DD25-9439-4F12-BF41-7FF4EDA38722}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -1964,22 +1964,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\3d-Objekte</td>
+<td>%USERPROFILE%\3D-Objekte</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10 eingeführte Wert, Version 1703</td>
+<td>None, in Windows 10, Version 1703 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -1994,30 +1994,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{2c36c0aa-5812-4b87-b bbb0-4cd0dfb19b39}</td>
+<td>{2C36C0AA-5812-4b87-BFD0-4CD0DFB19B39}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Original Bilder</td>
+<td>Originalbilder</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Microsoft\Windows Photo gallery\original Images</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows Fotogalerie\Originalimages</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2032,30 +2032,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{69d2cf90fc33-4fb7-9a0c-ebb0f0fcb43c}</td>
+<td>{69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Folien anzeigen</td>
+<td>Bildschirmpräsentationen</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\pictures\folien anzeigen</td>
+<td>%USERPROFILE%\Pictures\Slide Shows</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2078,22 +2078,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\libraries\pictures.Library-MS</td>
+<td>%APPDATA%\Microsoft\Windows\Libraries\Pictures.library-ms</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2116,23 +2116,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\Bilder</td>
+<td>%USERPROFILE%\Pictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_MYPICTURES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Meine Bilder</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%USERPROFILE%\Eigene Dateien\Eigene Bilder</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Eigene Dokumente\Meine Bilder</td>
 </tr>
 </tbody>
 </table>
@@ -2154,22 +2154,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\music\playlists</td>
+<td>%USERPROFILE%\Musik\Playlists</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2184,7 +2184,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{76fc4e2d-D6AD-4519-A663-37bd56068185}</td>
+<td>{76FC4E2D-D6AD-4519-A663-37BD56068185}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2192,7 +2192,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2203,11 +2203,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_PRINTERS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Drucker und Faxe</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -2222,31 +2222,31 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{9274bd8d-CFD1-41c3-b35e-b13f55a758f4}</td>
+<td>{9274BD8D-CFD1-41C3-B35E-B13F55A758F4}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Drucker Verknüpfungen</td>
+<td>Druckerverknüpfungen</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\druckerkombinationen</td>
+<td>%APPDATA%\Microsoft\Windows\Druckerverknüpfungen</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PRINTHOOD</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Printhood</td>
+<td>Legacyanzeigename</td>
+<td>PrintHood</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\printhood</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\PrintHood</td>
 </tr>
 </tbody>
 </table>
@@ -2260,11 +2260,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{5e6c858l-0E22-4760-9afe-ea3317b67173}</td>
+<td>{5E6C858F-0E22-4760-9AFE-EA3317B67173}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Der Benutzername des Benutzers (% username%)</td>
+<td>Benutzername des Benutzers (%USERNAME%)</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
@@ -2272,19 +2272,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% User Profile% (%SystemDrive%\Users \% username%)</td>
+<td>%USERPROFILE% (%SystemDrive%\BenutzerBENUTZERBENUTZERNAME%) \%</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PROFILE</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Der Benutzername des Benutzers (% username%)</td>
+<td>Legacyanzeigename</td>
+<td>Benutzername des Benutzers (%USERNAME%)</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>% User Profile% (%systemdrive%\Documents and Settings \% username%)</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE% (%SystemDrive%\Documents und Einstellungen \% USERNAME%)</td>
 </tr>
 </tbody>
 </table>
@@ -2298,7 +2298,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{62ab5d82-f 1-4dc3-a9dd-070d1d495d97}</td>
+<td>{62AB5D82-FDC1-4DC3-A9DD-070D1D495D97}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2310,18 +2310,18 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% ALLUSERSPROFILE% (% Program Data%,%SystemDrive%\ProgramData)</td>
+<td>%ALLUSERSPROFILE% (%ProgramData%, %SystemDrive%\ProgramData)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_APPDATA</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Anwendungsdaten</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>%ALLUSERSPROFILE%\Anwendungsdaten</td>
 </tr>
 </tbody>
@@ -2337,7 +2337,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{905E63B6-C1BF -494E-B29C-65B732D3D21A}</td>
+<td>{905e63b6-c1bf-494e-b29c-65b732d3d21a}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2349,19 +2349,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% Program Files% (%SystemDrive%\Program Files)</td>
+<td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PROGRAM_FILES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>% Program Files% (%SystemDrive%\Program Files)</td>
+<td>Legacystandardpfad</td>
+<td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 </tbody>
 </table>
@@ -2370,13 +2370,13 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="FOLDERID_ProgramFilesX64"></span><span id="folderid_programfilesx64"></span><span id="FOLDERID_PROGRAMFILESX64"></span><dl> <dt><strong>FOLDERID_ProgramFilesX64</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Dieser Wert wird auf 32-Bit-Betriebssystemen nicht unterstützt. Es wird auch nicht für 32-Bit-Anwendungen unterstützt, die auf 64-Bit-Betriebssystemen ausgeführt werden. Der Versuch, FOLDERID_ProgramFilesX64 in beiden Situationen zu verwenden, führt zu einem Fehler. Weitere Informationen finden Sie unter Hinweise.</p>
+<td style="text-align: left;"><p>Dieser Wert wird unter 32-Bit-Betriebssystemen nicht unterstützt. Sie wird auch nicht für 32-Bit-Anwendungen unterstützt, die unter 64-Bit-Betriebssystemen ausgeführt werden. Der Versuch, FOLDERID_ProgramFilesX64 in beiden Situationen zu verwenden, führt zu einem Fehler. Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{6d809377-6af0-444b-8957-A3773F02200E}</td>
+<td>{6D809377-6AF0-444b-8957-A3773F02200E}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2388,19 +2388,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% Program Files% (%SystemDrive%\Program Files)</td>
+<td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>% Program Files% (%SystemDrive%\Program Files)</td>
+<td>Legacystandardpfad</td>
+<td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 </tbody>
 </table>
@@ -2415,7 +2415,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7c5a40ef-a0f -4bfc-874a-c0b2e0b9fa8e}</td>
+<td>{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2427,19 +2427,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% Program Files% (%SystemDrive%\Program Files)</td>
+<td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PROGRAM_FILESX86</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>% Program Files% (%SystemDrive%\Program Files)</td>
+<td>Legacystandardpfad</td>
+<td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 </tbody>
 </table>
@@ -2466,19 +2466,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ProgramFiles%\Common files</td>
+<td>%ProgramFiles%\Common Files</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PROGRAM_FILES_COMMON</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Allgemeine Dateien</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ProgramFiles%\Common files</td>
+<td>Legacystandardpfad</td>
+<td>%ProgramFiles%\Common Files</td>
 </tr>
 </tbody>
 </table>
@@ -2493,7 +2493,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{6365d5a7-0F-ID < </UI)</td>
+<td>{6365D5A7-0F0D-45E5-87F6-0DA56B6A4F7D}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2505,19 +2505,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ProgramFiles%\Common files</td>
+<td>%ProgramFiles%\Common Files</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Allgemeine Dateien</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ProgramFiles%\Common files</td>
+<td>Legacystandardpfad</td>
+<td>%ProgramFiles%\Common Files</td>
 </tr>
 </tbody>
 </table>
@@ -2544,19 +2544,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ProgramFiles%\Common files</td>
+<td>%ProgramFiles%\Common Files</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PROGRAM_FILES_COMMONX86</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Allgemeine Dateien</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ProgramFiles%\Common files</td>
+<td>Legacy-Standardpfad</td>
+<td>%ProgramFiles%\Common Files</td>
 </tr>
 </tbody>
 </table>
@@ -2574,27 +2574,27 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Programs</td>
+<td>Programme</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESENER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\Microsoft\Windows\Start menu\programme</td>
+<td>%APPDATA%\Microsoft\Windows\Startmenü\Programme</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_PROGRAMS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Programs</td>
+<td>Legacyanzeigename</td>
+<td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\startmenu\programme</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Startmenü\Programme</td>
 </tr>
 </tbody>
 </table>
@@ -2620,18 +2620,18 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% Public% (%SystemDrive%\Users\Public)</td>
+<td>%PUBLIC% (%SystemDrive%\Users\Public)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine, neu für Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2646,7 +2646,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{C4AA340D-F20F-4863-Afef-F87EF2E6BA25}</td>
+<td>{C4AA340D-F20F-4863-AFEF-F87EF2E6BA25}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2654,22 +2654,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\Desktop</td>
+<td>%PUBLIC%\Desktop</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_DESKTOPDIRECTORY</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Desktop</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Desktop</td>
 </tr>
 </tbody>
@@ -2692,7 +2692,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2703,11 +2703,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_COMMON_DOCUMENTS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Freigegebene Dokumente</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Documents</td>
 </tr>
 </tbody>
@@ -2722,7 +2722,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{3d644c9b-1B8-4f 30-9b45-b670235</td>
+<td>{3D644C9B-1FB8-4f30-9B45-F670235F79C0}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2730,22 +2730,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\downloads</td>
+<td>%PUBLIC%\Downloads</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2768,22 +2768,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\microsoft\windows\gameexplorer</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\GameExplorer</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2798,7 +2798,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{48daf80b-e6cf-4f4e-B800-0e69d84ee384}</td>
+<td>{48DAF80B-E6CF-4F4E-B800-0E69D84EE384}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2806,22 +2806,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\microsoft\windows\libraries</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Libraries</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2836,7 +2836,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{3214fab5-9757-4298-bb61-92a9de aa44ff}</td>
+<td>{3214FAB5-9757-4298-BB61-92A9DEAA44FF}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2844,23 +2844,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\Music</td>
+<td>%PUBLIC%\Musik</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_MUSIC</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Freigegebene Musik</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\documents\meine Musik</td>
+<td>Legacystandardpfad</td>
+<td>%ALLUSERSPROFILE%\Documents\My Musik</td>
 </tr>
 </tbody>
 </table>
@@ -2882,23 +2882,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\Bilder</td>
+<td>%PUBLIC%\Pictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_PICTURES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Freigegebene Bilder</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\documents\eigene Bilder</td>
+<td>Legacystandardpfad</td>
+<td>%ALLUSERSPROFILE%\Documents\My Pictures</td>
 </tr>
 </tbody>
 </table>
@@ -2920,22 +2920,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\microsoft\windows\ringtones</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Ringtones</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2950,30 +2950,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{0482af6c-08b1-4c34-8c90e17ec98b1e17}</td>
+<td>{0482af6c-08f1-4c34-8c90-e17ec98b1e17}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Öffentliche Konto Bilder</td>
+<td>Bilder für öffentliche Konten</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\accountpictures</td>
+<td>%PUBLIC%\AccountPictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -2988,7 +2988,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{2400183a-6185-49tb-a2d8-4a392a602ba3}</td>
+<td>{2400183A-6185-49FB-A2D8-4A392A602BA3}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -2996,22 +2996,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\videos</td>
+<td>%PUBLIC%\Videos</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_COMMON_VIDEO</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Gemeinsam genutztes Video</td>
+<td>Legacyanzeigename</td>
+<td>Freigegebenes Video</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>%ALLUSERSPROFILE%\Documents\My Videos</td>
 </tr>
 </tbody>
@@ -3026,7 +3026,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{52a4f 021-7b75-48a9-9B a b87b-4b87a210bc8f}</td>
+<td>{52a4f021-7b75-48a9-9f6b-4b87a210bc8f}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3034,23 +3034,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\internet explorer\schnelllaunch</td>
+<td>%APPDATA%\Microsoft\Internet Explorer\Schnellstart</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Schnellstart</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%APPDATA%\microsoft\internet explorer\schnelllaunch</td>
+<td>Legacystandardpfad</td>
+<td>%APPDATA%\Microsoft\Internet Explorer\Schnellstart</td>
 </tr>
 </tbody>
 </table>
@@ -3072,23 +3072,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\recent</td>
+<td>%APPDATA%\Microsoft\Windows\Recent</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_RECENT</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Meine letzten Dokumente</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\recent</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Recent</td>
 </tr>
 </tbody>
 </table>
@@ -3097,7 +3097,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="FOLDERID_RecordedTV"></span><span id="folderid_recordedtv"></span><span id="FOLDERID_RECORDEDTV"></span><dl> <dt><strong>FOLDERID_RecordedTV</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Nicht verwendet. Dieser Wert ist ab Windows 7 nicht definiert.</p></td>
+<td style="text-align: left;"><p>Wird nicht verwendet. Dieser Wert ist ab Windows 7 nicht definiert.</p></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="FOLDERID_RecordedTVLibrary"></span><span id="folderid_recordedtvlibrary"></span><span id="FOLDERID_RECORDEDTVLIBRARY"></span><dl> <dt><strong>FOLDERID_RecordedTVLibrary</strong></dt> </dl></td>
@@ -3106,7 +3106,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{1a6f dba2-F42D-4358-A798-B74D745926C5}</td>
+<td>{1A6FDBA2-F42D-4358-A798-B74D745926C5}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3114,22 +3114,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\recorddtv.Library-MS</td>
+<td>%PUBLIC%\RecordedTV.library-ms</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3152,7 +3152,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3163,11 +3163,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_BITBUCKET</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Papierkorb</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -3182,7 +3182,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{8ad10c31-2adb-4296-A8F7-E4701232C972}</td>
+<td>{8AD10C31-2ADB-4296-A8F7-E4701232C972}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3201,11 +3201,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_RESOURCES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Ressourcen</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>%windir%\Resources</td>
 </tr>
 </tbody>
@@ -3228,22 +3228,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\ringtones</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\Ringtones</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3266,23 +3266,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>% APPDATA% (%USERPROFILE%\appdata\roaming)</td>
+<td>%APPDATA% (%USERPROFILE%\AppData\Roaming)</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_APPDATA</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Anwendungsdaten</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>% APPDATA% (%USERPROFILE%\Anwendungsdaten)</td>
+<td>Legacystandardpfad</td>
+<td>%APPDATA% (%USERPROFILE%\Application Data)</td>
 </tr>
 </tbody>
 </table>
@@ -3300,26 +3300,26 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Roamedtileimages</td>
+<td>RoamedTileImages</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\roamedtileimages</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\RoamedTileImages</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3334,30 +3334,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{00bcfc5a-ed94-4e48-96aq1-3 f6217f21990}</td>
+<td>{00BCFC5A-ED94-4e48-96A1-3F6217F21990}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Roamingtiles</td>
+<td>RoamingTiles</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\roamingtiles</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\RoamingTiles</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3380,23 +3380,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\music\sample Music</td>
+<td>%PUBLIC%\Musik\Sample Musik</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Beispiel Musik</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%ALLUSERSPROFILE%\Documents\My music\sample Music</td>
+<td>Legacystandardpfad</td>
+<td>%ALLUSERSPROFILE%\Documents\My Musik\Sample Musik</td>
 </tr>
 </tbody>
 </table>
@@ -3414,26 +3414,26 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Beispiel Bilder</td>
+<td>Beispielbilder</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\pictures\beispielbilder</td>
+<td>%PUBLIC%\Pictures\Sample Pictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>Beispiel Bilder</td>
+<td>Legacyanzeigename</td>
+<td>Beispielbilder</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>%ALLUSERSPROFILE%\Documents\My Pictures\Sample Pictures</td>
 </tr>
 </tbody>
@@ -3448,30 +3448,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{15ca69b3-30ee-49c1-ace1-6b5ec372afb5}</td>
+<td>{15CA69B3-30EE-49C1-ACE1-6B5EC372AFB5}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Beispiel Wiedergabelisten</td>
+<td>Beispielwiedergabelisten</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\music\beispielwiedergabe Listen</td>
+<td>%PUBLIC%\Musik\Sample Playlists</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3486,30 +3486,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{859ead94-2e85-48ad-A71A-0969cb56a6cd}</td>
+<td>{859EAD94-2E85-48AD-A71A-0969CB56A6CD}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Beispiel Videos</td>
+<td>Beispielvideos</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Public%\videos\beispielvideos</td>
+<td>%PUBLIC%\Videos\Sample Videos</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3524,7 +3524,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{4c5c32ff-bb9d-43b0-b5b4-2d72e54eaaa4}</td>
+<td>{4C5C32FF-BB9D-43b0-B5B4-2D72E54EAAA4}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3532,22 +3532,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\Gespeicherte Spiele</td>
+<td>%USERPROFILE%\Saved Games</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3562,7 +3562,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{3b193882-D3AD-4eab-965A-69829d1b59f}</td>
+<td>{3B193882-D3AD-4eab-965A-69829D1FB59F}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3570,22 +3570,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\pictures\gespeicherte Bilder</td>
+<td>%USERPROFILE%\Pictures\Saved Pictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3604,26 +3604,26 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Gespeicherte Bildbibliothek</td>
+<td>Saved Pictures Library</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%Appdate%\microsoft\windows\libraries\savedpictures.Library-MS</td>
+<td>%APPDATA%\Microsoft\Windows\Libraries\SavedPictures.library-ms</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3638,7 +3638,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7d1d3a04-Debb-4115-95cf-2f29da2920da}</td>
+<td>{7d1d3a04-debb-4115-95cf-2f29da2920da}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3646,22 +3646,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\suchen</td>
+<td>%USERPROFILE%\Searches</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3684,22 +3684,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\pictures\screenshots</td>
+<td>%USERPROFILE%\Pictures\Screenshots</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführte Wert</td>
+<td>None, value introduced in Windows 8</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3722,7 +3722,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3733,11 +3733,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3752,7 +3752,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{0d4c3db6-03a3-462-a0e6-08924c41b5d4}</td>
+<td>{0D4C3DB6-03A3-462F-A0E6-08924C41B5D4}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3760,22 +3760,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\connectedsearch\history</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\ConnectedSearch\History</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3798,7 +3798,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3809,11 +3809,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3836,7 +3836,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3847,11 +3847,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3866,7 +3866,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7e636bfe-dfa9-4d5e-b456-d7b39851d8a9}</td>
+<td>{7E636BFE-DFA9-4D5E-B456-D7B39851D8A9}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -3874,22 +3874,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\microsoft\windows\connectedsearch\templates</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\ConnectedSearch\Templates</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3904,31 +3904,31 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{8983036c-27c0-404b-8f08-102d10dcfd74}</td>
+<td>{8983036C-27C0-404B-8F08-102D10DCFD74}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>SendTo</td>
+<td>Sendto</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\sendto</td>
+<td>%APPDATA%\Microsoft\Windows\SendTo</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_SENDTO</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
-<td>SendTo</td>
+<td>Legacyanzeigename</td>
+<td>Sendto</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\SendTo</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\SendTo</td>
 </tr>
 </tbody>
 </table>
@@ -3942,30 +3942,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{7b396e54-9ec5-4300-be0a-2482ebae1a26}</td>
+<td>{7B396E54-9EC5-4300-BE0A-2482EBAE1A26}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Geschenken</td>
+<td>Gadgets</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Gewöhnliche</td>
+<td>gemeinsam</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ProgramFiles%\Windows sidebar\gadgets</td>
+<td>%ProgramFiles%\Windows Sidebar\Gadgets</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine, neu für Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -3984,26 +3984,26 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Geschenken</td>
+<td>Gadgets</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Microsoft\Windows sidebar\gadgets</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows Sidebar\Gadgets</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>Keine, neu für Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4026,22 +4026,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\onedrive</td>
+<td>%USERPROFILE%\OneDrive</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4056,30 +4056,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{767e6811-49cb-4273-87c2-20s355e1085b}</td>
+<td>{767E6811-49CB-4273-87C2-20F355E1085B}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Kamera-Roll</td>
+<td>Kameraroll</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\onedrive\pictures\camera Roll</td>
+<td>%USERPROFILE%\OneDrive\Pictures\Camera Roll</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4094,7 +4094,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{24d89e24-2f19-4534-9dde -6a6671fbb8fe}</td>
+<td>{24D89E24-2F19-4534-9DDE-6A6671FBB8FE}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -4102,22 +4102,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\onedrive\documents</td>
+<td>%USERPROFILE%\OneDrive\Documents</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4132,7 +4132,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{339719b5-8c47-4894-94c2-d8b77add44a6}</td>
+<td>{339719B5-8C47-4894-94C2-D8F77ADD44A6}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -4140,22 +4140,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\onedrive\bilder</td>
+<td>%USERPROFILE%\OneDrive\Pictures</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführte Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4178,23 +4178,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\startmenü</td>
+<td>%APPDATA%\Microsoft\Windows\Startmenü</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_STARTMENU</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Startmenü</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\Startmenü</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Startmenü</td>
 </tr>
 </tbody>
 </table>
@@ -4216,23 +4216,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\Microsoft\Windows\Start menu\programs\startup</td>
+<td>%APPDATA%\Microsoft\Windows\Startmenü\Programme\StartUp</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>CSIDL_STARTUP CSIDL_ALTSTARTUP</td>
+<td>CSIDL_STARTUP, CSIDL_ALTSTARTUP</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Start</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\Startmenü \ programme\startup</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Start menu\Programs\StartUp</td>
 </tr>
 </tbody>
 </table>
@@ -4246,7 +4246,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{43668bf 8-c14e-49b2-97c9-747784d784b7}</td>
+<td>{43668BF8-C14E-49B2-97C9-747784D784B7}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -4254,7 +4254,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4262,14 +4262,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4284,15 +4284,15 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{289a9a43-be44-4057-a41b-587a76d7e7f}</td>
+<td>{289a9a43-be44-4057-a41b-587a76d7e7f9}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Ergebnisse synchronisieren</td>
+<td>Synchronisierungsergebnisse</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4300,14 +4300,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4322,15 +4322,15 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{0F 214138-b1d3-4 a90bba9-27cbc0c5389a}</td>
+<td>{0F214138-B1D3-4a90-BBA9-27CBC0C5389A}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Sync-Setup</td>
+<td>Synchronisierungssetup</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4338,14 +4338,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführte Wert</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4360,7 +4360,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{1ac14e77-02e7-4e5d-B744-2eb1ae5198b7}</td>
+<td>{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -4372,19 +4372,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%WINDIR%\System32</td>
+<td>%windir%\system32</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_SYSTEM</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>system32</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%WINDIR%\System32</td>
+<td>Legacystandardpfad</td>
+<td>%windir%\system32</td>
 </tr>
 </tbody>
 </table>
@@ -4410,19 +4410,19 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%WINDIR%\System32</td>
+<td>%windir%\system32</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_SYSTEMX86</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>system32</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%WINDIR%\System32</td>
+<td>Legacystandardpfad</td>
+<td>%windir%\system32</td>
 </tr>
 </tbody>
 </table>
@@ -4444,23 +4444,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\templates</td>
+<td>%APPDATA%\Microsoft\Windows\Templates</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
 <td>CSIDL_TEMPLATES</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Vorlagen</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%UserProfile%\Vorlagen</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Templates</td>
 </tr>
 </tbody>
 </table>
@@ -4469,7 +4469,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="FOLDERID_TreeProperties"></span><span id="folderid_treeproperties"></span><span id="FOLDERID_TREEPROPERTIES"></span><dl> <dt><strong>FOLDERID_TreeProperties</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Wird in Windows Vista nicht verwendet. Wird ab Windows 7 nicht mehr unterstützt.</p></td>
+<td style="text-align: left;"><p>Wird in Windows Vista nicht verwendet. Ab Windows 7 nicht mehr unterstützt.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="FOLDERID_UserPinned"></span><span id="folderid_userpinned"></span><span id="FOLDERID_USERPINNED"></span><dl> <dt><strong>FOLDERID_UserPinned</strong></dt> </dl></td>
@@ -4478,30 +4478,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{9e3995ab-1B-4 b827-48b24b6c7174}</td>
+<td>{9E3995AB-1F9C-4F13-B827-48B24B6C7174}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Benutzer fixiert</td>
+<td>Benutzer angeheftet</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\internet Explorer\Quick launch\benutzerpinned</td>
+<td>%APPDATA%\Microsoft\Internet Explorer\Schnellstart\Benutzer angeheftet</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4516,7 +4516,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{0762d272-c50a-4bb0-a382-697dcd729b80}</td>
+<td>{0762D272-C50A-4BB0-A382-697DCD729B80}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -4535,11 +4535,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>Keine, neu für Windows Vista</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacystandardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4554,30 +4554,30 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{5cd7aee2-2219-4a67-b85d-6c9ce15660cb}</td>
+<td>{5CD7AEE2-2219-4A67-B85D-6C9CE15660CB}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Programs</td>
+<td>Programme</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Programme</td>
+<td>%LOCALAPPDATA%\Programs</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4596,26 +4596,26 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Programs</td>
+<td>Programme</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LocalAppData%\Programme\Common</td>
+<td>%LOCALAPPDATA%\Programs\Common</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4634,11 +4634,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Der vollständige Name des Benutzers (z.b. Jean Philippe Bagel), der beim Erstellen des Benutzerkontos eingegeben wurde.</td>
+<td>Der vollständige Name des Benutzers (z.B. Beim Erstellen des Benutzerkontos wurde Der vollständige Name des Benutzers eingegeben, z.B. "Durch das Bagel-Konto" bezeichnet).</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4649,11 +4649,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>Keine</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4676,7 +4676,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtu</td>
+<td>Virtuellen</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4684,14 +4684,14 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4714,23 +4714,23 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%UserProfile%\videos</td>
+<td>%USERPROFILE%\Videos</td>
 </tr>
 <tr class="odd">
-<td>CSIDL</td>
+<td>Csidl</td>
 <td>CSIDL_MYVIDEO</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Meine Videos</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
-<td>%USERPROFILE%\Eigene Dateien\Eigene Videos</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Eigene Dokumente\Meine Videos</td>
 </tr>
 </tbody>
 </table>
@@ -4744,7 +4744,7 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <tbody>
 <tr class="odd">
 <td>GUID</td>
-<td>{491e922f -5643-4af4-A7EB-4e7a138d8174}</td>
+<td>{491E922F-5643-4AF4-A7EB-4E7A138D8174}</td>
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
@@ -4752,22 +4752,22 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Peruser</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\microsoft\windows\libraries\videos.Library-MS</td>
+<td>%APPDATA%\Microsoft\Windows\Libraries\Videos.library-ms</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführte Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>Nicht verfügbar</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht verfügbar</td>
 </tr>
 </tbody>
@@ -4801,11 +4801,11 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 <td>CSIDL_WINDOWS</td>
 </tr>
 <tr class="even">
-<td>Legacy Anzeige Name</td>
+<td>Legacyanzeigename</td>
 <td>WINDOWS</td>
 </tr>
 <tr class="odd">
-<td>Standardpfad für Legacy</td>
+<td>Legacy-Standardpfad</td>
 <td>%windir%</td>
 </tr>
 </tbody>
@@ -4818,100 +4818,100 @@ Diese folderid ist in Windows 10, Version 1803 und höheren Versionen, veraltet.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Interpretation bestimmter **KNOWNFOLDERID** -Werte hängt davon ab, ob der Ordner Teil einer 32-Bit-oder einer 64-Bit-Anwendung ist und ob diese Anwendung unter einem 32-Bit-oder 64-Bit-Betriebssystem ausgeführt wird. Wenn Ihre Anwendung zwischen z. b. **Programmdateien** und **Programmdateien (x86)** unterscheiden muss, müssen Sie die richtige **KNOWNFOLDERID** für die Situation verwenden.
+Die Interpretation bestimmter **KNOWNFOLDERID-Werte** hängt davon ab, ob der Ordner Teil einer 32-Bit- oder 64-Bit-Anwendung ist und ob diese Anwendung unter einem 32-Bit- oder 64-Bit-Betriebssystem ausgeführt wird. Wenn Ihre Anwendung z. B. zwischen **Programme** und **Programmdateien (x86)** unterscheiden muss, müssen Sie für diese Situation die richtige **KNOWNFOLDERID** verwenden.
 
-In den folgenden Tabellen wird die Verwendung von **KNOWNFOLDERID** in diesen Fällen zusammengefasst.
-
-
-**Folderid- \_ Programmdateien** 
-
-| Betriebssystem | Application | KNOWNFOLDERID | Standard Path | CSIDL-Entsprechung |
-|------------------|-------------|---------------|--------------|------------------|  
-| 32-Bit | 32-Bit | Folderid- \_ Programmdateien | % System Drive%- \\ Programmdateien | CSIDL- \_ Programm \_ Dateien |
-| 32-Bit | 32-Bit | Folderid \_ ProgramFilesX86 | % System Drive%- \\ Programmdateien | CSIDL- \_ Programm \_ FILESX86 |
-| 32-Bit | 32-Bit | Folderid \_ ProgramFilesX64 (wird unter 32-Bit-Betriebssystemen nicht unterstützt) | Nicht verfügbar | Nicht verfügbar |
-| 64-Bit | 64-Bit | Folderid- \_ Programmdateien | % System Drive%- \\ Programmdateien | CSIDL- \_ Programm \_ Dateien |
-| 64-Bit | 64-Bit | Folderid \_ ProgramFilesX86 | % System Drive% \\ Program Files (x86) | CSIDL- \_ Programm \_ FILESX86 |
-| 64-Bit | 64-Bit | Folderid \_ ProgramFilesX64 | % System Drive%- \\ Programmdateien | Keine |
-| 64-Bit | 32-Bit | Folderid- \_ Programmdateien | % System Drive% \\ Program Files (x86) | CSIDL- \_ Programm \_ Dateien |
-| 64-Bit | 32-Bit | Folderid \_ ProgramFilesX86 | % System Drive% \\ Program Files (x86) | CSIDL- \_ Programm \_ FILESX86 |
-| 64-Bit | 32-Bit | Folderid \_ ProgramFilesX64 (wird für 32-Bit-Anwendungen nicht unterstützt) | Nicht verfügbar | Nicht verfügbar |
+In den folgenden Tabellen wird die Verwendung **von KNOWNFOLDERID** in diesen Fällen zusammengefasst.
 
 
-**Folderid \_ programfilescommon**
+**FOLDERID \_ ProgramFiles** 
 
 | Betriebssystem | Application | KNOWNFOLDERID | Standard Path | CSIDL-Entsprechung |
 |------------------|-------------|---------------|--------------|------------------|  
-| 32-Bit | 32-Bit | Folderid \_ programfilescommon | % Program Files% \\ Allgemeine Dateien | Allgemeine CSIDL- \_ Programm \_ Dateien \_ |
-| 32-Bit | 32-Bit | Folderid \_ ProgramFilesCommonX86 | % Program Files% \\ Allgemeine Dateien | CSIDL- \_ Programm \_ Dateien \_ COMMONX86 |
-| 32-Bit | 32-Bit | Folderid \_ ProgramFilesCommonX64 (nicht definiert) | Nicht verfügbar | Nicht verfügbar |
-| 64-Bit | 64-Bit | Folderid \_ programfilescommon | % Program Files% \\ Allgemeine Dateien | Allgemeine CSIDL- \_ Programm \_ Dateien \_ |
-| 64-Bit | 64-Bit | Folderid \_ ProgramFilesCommonX86 | % Program Files (x86)% \\ Allgemeine Dateien | CSIDL- \_ Programm \_ Dateien \_ COMMONX86 |
-| 64-Bit | 64-Bit | Folderid \_ ProgramFilesCommonX64 | % Program Files% \\ Allgemeine Dateien | Keine |
-| 64-Bit | 32-Bit | Folderid \_ programfilescommon | % Program Files (x86)% \\ Allgemeine Dateien | Allgemeine CSIDL- \_ Programm \_ Dateien \_ |
-| 64-Bit | 32-Bit | Folderid \_ ProgramFilesCommonX86 | % Program Files (x86)% \\ Allgemeine Dateien | CSIDL- \_ Programm \_ Dateien \_ COMMONX86 |
-| 64-Bit | 32-Bit | Folderid \_ ProgramFilesCommonX64 | % Program Files% \\ Allgemeine Dateien | Keine |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFiles | %SystemDrive% \\ Programme | \_CSIDL-PROGRAMMDATEIEN \_ |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesX86 | %SystemDrive% \\ Programme | \_ \_ CSIDL-PROGRAMMDATEIENX86 |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesX64 (wird unter 32-Bit-Betriebssystemen nicht unterstützt) | Nicht verfügbar | Nicht verfügbar |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFiles | %SystemDrive% \\ Programme | \_CSIDL-PROGRAMMDATEIEN \_ |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesX86 | %SystemDrive% \\ Program Files (x86) | \_ \_ CSIDL-PROGRAMMDATEIENX86 |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesX64 | %SystemDrive% \\ Programme | Keine |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFiles | %SystemDrive% \\ Program Files (x86) | \_CSIDL-PROGRAMMDATEIEN \_ |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesX86 | %SystemDrive% \\ Program Files (x86) | \_ \_ CSIDL-PROGRAMMDATEIENX86 |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesX64 (wird für 32-Bit-Anwendungen nicht unterstützt) | Nicht verfügbar | Nicht verfügbar |
 
 
-**Folderid- \_ System**
+**FOLDERID \_ ProgramFilesCommon**
 
 | Betriebssystem | Application | KNOWNFOLDERID | Standard Path | CSIDL-Entsprechung |
 |------------------|-------------|---------------|--------------|------------------|  
-| 32-Bit | 32-Bit | Folderid- \_ System | % windir% \\ system32 | CSIDL- \_ System |
-| 32-Bit | 32-Bit | Folderid \_ SystemX86 | % windir% \\ system32 | CSIDL- \_ SYSTEMX86 |
-| 64-Bit | 64-Bit | Folderid- \_ System | % windir% \\ system32 | CSIDL- \_ System |
-| 64-Bit | 64-Bit | Folderid \_ SystemX86 | % windir% \\ syswow64 | CSIDL- \_ SYSTEMX86 |
-| 64-Bit | 32-Bit | Folderid- \_ System | % windir% \\ system32 | CSIDL- \_ System |
-| 64-Bit | 32-Bit | Folderid \_ SystemX86 | % windir% \\ syswow64 | CSIDL- \_ SYSTEMX86 |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ ( COMMON) |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX86 | %ProgramFiles% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ COMMONX86 |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX64 (nicht definiert) | Nicht verfügbar | Nicht verfügbar |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ ( COMMON) |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommonX86 | %ProgramFiles(x86)% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ COMMONX86 |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommonX64 | %ProgramFiles% \\ Common Files | Keine |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles(x86)% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ ( COMMON) |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX86 | %ProgramFiles(x86)% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ COMMONX86 |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX64 | %ProgramFiles% \\ Common Files | Keine |
 
 
-Wir haben Umgebungs Zeichenfolgen verwendet, um generische Pfade in diesem Thema bereitzustellen. Die folgenden Tabellen stellen Beispiele für die Pfade dar, die diese Umgebungs Zeichenfolgen darstellen. In einigen Fällen Stimmen diese Pfade möglicherweise nicht mit denen auf einem bestimmten Computer zu, da Sie während der Installation oder einer späteren Ordner Umleitung ausgewählt wurden. Beachten Sie, dass einige Pfade für Windows Vista geändert wurden.
+**\_FOLDERID-System**
+
+| Betriebssystem | Application | KNOWNFOLDERID | Standard Path | CSIDL-Entsprechung |
+|------------------|-------------|---------------|--------------|------------------|  
+| 32-Bit | 32-Bit | \_FOLDERID-System | %windir% \\ system32 | CSIDL \_ SYSTEM |
+| 32-Bit | 32-Bit | FOLDERID \_ SystemX86 | %windir% \\ system32 | CSIDL \_ SYSTEMX86 |
+| 64-Bit | 64-Bit | \_FOLDERID-System | %windir% \\ system32 | CSIDL \_ SYSTEM |
+| 64-Bit | 64-Bit | FOLDERID \_ SystemX86 | %windir% \\ syswow64 | CSIDL \_ SYSTEMX86 |
+| 64-Bit | 32-Bit | \_FOLDERID-System | %windir% \\ system32 | CSIDL \_ SYSTEM |
+| 64-Bit | 32-Bit | FOLDERID \_ SystemX86 | %windir% \\ syswow64 | CSIDL \_ SYSTEMX86 |
+
+
+In diesem Thema haben wir Umgebungszeichenfolgen verwendet, um generische Pfade bereitzustellen. Die folgenden Tabellen enthalten Beispiele für die Pfade, die diese Umgebungszeichenfolgen darstellen. In einigen Fällen stimmen diese Pfade möglicherweise nicht mit denen auf einem bestimmten Computer überein, weil während der Installation oder späteren Ordnerumleitung Entscheidungen getroffen wurden. Beachten Sie, dass sich einige Pfade für Windows Vista geändert haben.
 
 
 **Windows Vista und höher**
 
-| Umgebungs Zeichenfolge | Beispiel Pfad |
+| Umgebungszeichenfolge | Beispielpfad |
 |--------------------|--------------|
-| %ALLUSERSPROFILE% | C: \\ programmdata |
-| %APPDATA% | C: \\ Benutzer \\ *Benutzername* \\ AppData \\ Roaming |
-| LocalAppData | C: \\ Benutzer \\ *Benutzername* \\ AppData \\ local |
-| %ProgramData% | C: \\ programmdata |
-| %ProgramFiles% | C: \\ Programmdateien |
-| %ProgramFiles(x86)% | C: \\ Programmdateien (x86) |
-| Publikums | C: \\ \\ öffentliche Benutzer |
+| %ALLUSERSPROFILE% | C: \\ ProgramData |
+| %APPDATA% | C: \\ \\ *Benutzerbenutzername* \\ AppData \\ Roaming |
+| %LOCALAPPDATA% | C: \\ \\ *Benutzerbenutzername* \\ AppData \\ Local |
+| %ProgramData% | C: \\ ProgramData |
+| %ProgramFiles% | C: \\ Programme |
+| %ProgramFiles(x86)% | C: \\ Programme (x86) |
+| %PUBLIC% | C: \\ \\ Benutzer öffentlich |
 | %SystemDrive% | C: |
-| %USERPROFILE% | C: \\ Benutzer \\ *Benutzername* |
+| %USERPROFILE% | C: \\ \\ *Benutzername* des Benutzers |
 | %windir% | C: \\ Windows |
 
 
 **Windows XP und früher**
 
-| Umgebungs Zeichenfolge | Beispiel Pfad |
+| Umgebungszeichenfolge | Beispielpfad |
 |--------------------|--------------|
-| %ALLUSERSPROFILE% | C: \\ Dokumente und Einstellungen \\ alle Benutzer |
+| %ALLUSERSPROFILE% | C: \\ Dokumente und Einstellungen Alle \\ Benutzer |
 | %APPDATA% | C: \\ Dokumente und Einstellungen \\ *Benutzername* \\ Anwendungsdaten |
-| %ProgramFiles% | C: \\ Programmdateien |
+| %ProgramFiles% | C: \\ Programme |
 | %SystemDrive% | C: |
-| %USERPROFILE% | C: \\ \\ *Benutzername* für Dokumente und Einstellungen |
+| %USERPROFILE% | C: \\ Dokumente und Einstellungen \\ *Benutzername* |
 | %windir% | C: \\ Windows |
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>KnownFolders. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Knownfolders.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**CSIDL**](csidl.md)
+[**Csidl**](csidl.md)
 </dt> <dt>
 
 [Bekannte Ordner](known-folders.md)

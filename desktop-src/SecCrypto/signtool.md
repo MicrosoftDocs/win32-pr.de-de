@@ -1,24 +1,24 @@
 ---
 title: SignTool
-description: SignTool ist ein Befehlszeilen Tool, das Dateien digital signiert, Signaturen in Dateien und Zeitstempel-Dateien überprüft.
+description: SignTool ist ein Befehlszeilentool, das Dateien digital signiert, die Signaturen in Dateien und Zeitstempeldateien überprüft.
 ms.assetid: aa59cb35-5fba-4ce8-97ea-fc767c83f88e
 ms.topic: article
 ms.date: 10/12/2020
-ms.openlocfilehash: 884d4c132a2877a51cef7610dd32e8ef6b9c4bc3
-ms.sourcegitcommit: 25e1fa2b3641ae13b79e0afdf9cb7a168d99e009
+ms.openlocfilehash: f738eddb6e47da12297bffd13a816398ba2c46c9
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "104391178"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436445"
 ---
 # <a name="signtool"></a>SignTool
 
-SignTool ist ein Befehlszeilen Tool, das Dateien digital signiert, Signaturen in Dateien und Zeitstempel-Dateien überprüft. Informationen dazu, warum das Signieren von Dateien wichtig ist, finden [Sie unter Einführung in die Code Signatur](cryptography-tools.md). Das Tool wird im \\ Ordner bin des Installations Pfads des Microsoft Windows Software Development Kit (SDK) installiert.
+SignTool ist ein Befehlszeilentool, das Dateien digital signiert, die Signaturen in Dateien und Zeitstempeldateien überprüft. Informationen dazu, warum das Signieren von Dateien wichtig ist, finden Sie unter [Einführung in die Codesignatur.](cryptography-tools.md) Das Tool wird im Ordner Bin des Installationspfads des \\ Microsoft Windows Software Development Kit (SDK) installiert (Beispiel: C:\Programme (x86)\Windows Kits\10\bin\10.0.19041.0\x64\signtool.exe).
 
-SignTool ist als Teil des Windows SDK verfügbar, das Sie von herunterladen können <https://developer.microsoft.com/windows/downloads/windows-10-sdk/> .
+SignTool ist als Teil des Windows SDK verfügbar, das Sie unter herunterladen <https://developer.microsoft.com/windows/downloads/windows-10-sdk/> können.
 
 > [!Note]  
-> Das Windows 10 SDK, Windows 10 HLK, Windows 10 WDK und Windows 10 ADK **Build 20236 und höher** erfordern nun die Angabe des Digest-Algorithmus. Der SignTool Sign-Befehl erfordert `file digest algorithm` , dass die/FD-Option und die/TD- `timestamp digest algorithm` Option beim Signieren bzw. Zeitstempel angegeben werden. Eine Warnung (anfänglich Fehlercode 0) wird ausgelöst, wenn/FD nicht während der Signierung angegeben wird und/TD nicht während des Zeitstempels angegeben wird. In späteren Versionen von SignTool wird aus dieser Warnung ein Fehler. SHA256 wird empfohlen und gilt in der Branche als sicherer als SHA1.  
+> Das Windows 10 SDK, Windows 10 HLK, Windows 10 WDK und Windows 10 ADK-Builds **20236** und höher erfordern jetzt die Angabe des Digestalgorithmus. Für den SignTool-Befehl sign müssen die Option /fd bzw. /td während der Signierung bzw. des `file digest algorithm` `timestamp digest algorithm` Zeitstempels angegeben werden. Eine Warnung (Fehlercode 0, anfänglich) wird ausgelöst, wenn /fd während der Signierung nicht angegeben wird und /td während der Zeitstempelung nicht angegeben wird. In späteren Versionen von SignTool wird aus dieser Warnung ein Fehler. SHA256 wird empfohlen und gilt in der Branche als sicherer als SHA1.  
 
 
 ## <a name="syntax"></a>Syntax  
@@ -38,7 +38,7 @@ signtool [command] [options] [file_name | ...]
 
 Die folgenden Befehle werden von SignTool unterstützt.
 
-|Get-Help|Beschreibung|  
+|Befehl|Beschreibung|  
 |----|----|  
 |`Catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](/dotnet/framework/tools/signtool-exe#catdb-command-options).|  
 |`Sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](/dotnet/framework/tools/signtool-exe#sign-command-options).|  
@@ -53,20 +53,20 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |**/v**|Zeigt unabhängig von der erfolgreichen Ausführung des Befehls eine ausführliche Ausgabe und Warnmeldungen an.|  
 |**/debug**|Zeigt Debuginformationen an.|  
 
- 
-## <a name="catdb-command-options"></a>Optionen für den Befehl "Befehl"  
+ 
+## <a name="catdb-command-options"></a>Catdb-Befehlsoptionen  
 
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `Catdb`-Befehl verwendet werden können.
 
 | Catdb-Option | Beschreibung |
 |----|----| 
-| **/d** | Gibt an, dass die Standardkatalog Datenbank aktualisiert werden soll. Wenn weder die Option **/d** noch **/g** verwendet wird, aktualisiert SignTool die Systemkomponente und die Treiberdatenbank. |
-| **/g** - *GUID* | Gibt an, dass die durch die GUID identifizierte Katalog Datenbank aktualisiert werden soll.|
-| **/r** | Entfernt den angegebenen Katalog aus der Katalog Datenbank. Wenn diese Option nicht angegeben ist, wird der angegebene Katalog von SignTool der Katalog Datenbank hinzugefügt.|
-| **/u** | Gibt an, dass automatisch ein eindeutiger Name für die hinzugefügten Katalogdateien generiert wird. Ggf. werden die Katalogdateien umbenannt, um Namenskonflikte mit vorhandenen Katalogdateien zu verhindern. Wenn diese Option nicht angegeben wird, überschreibt SignTool alle vorhandenen Kataloge, die denselben Namen wie der hinzugefügte Katalog haben.|
+| **/d** | Gibt an, dass die Standardkatalogdatenbank aktualisiert werden soll. Wenn weder **die Option /d** noch **/g** verwendet wird, aktualisiert SignTool die Systemkomponente und die Treiberdatenbank. |
+| **/g** *GUID* | Gibt an, dass die durch die GUID identifizierte Katalogdatenbank aktualisiert werden soll.|
+| **/r** | Entfernt den angegebenen Katalog aus der Katalogdatenbank. Wenn diese Option nicht angegeben ist, fügt SignTool der Katalogdatenbank den angegebenen Katalog hinzu.|
+| **/u** | Gibt an, dass für die hinzugefügten Katalogdateien automatisch ein eindeutiger Name generiert wird. Ggf. werden die Katalogdateien umbenannt, um Namenskonflikte mit vorhandenen Katalogdateien zu verhindern. Wenn diese Option nicht angegeben ist, überschreibt SignTool alle vorhandenen Kataloge, die denselben Namen wie der hinzugefügte Katalog haben.|
 
 > [!Note]  
-> Katalog Datenbanken werden für die automatische Suche von Katalogdateien verwendet.
+> Katalogdatenbanken werden für die automatische Suche nach Katalogdateien verwendet.
 
 
 ## <a name="sign-command-options"></a>Sign-Befehlsoptionen  
@@ -81,16 +81,16 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |`/c`  *CertTemplateName*|Gibt den Zertifikatsvorlagennamen (eine Microsoft-Erweiterung) für das Signaturzertifikat an.|  
 |`/csp`  *CSPName*|Gibt den Kryptografiedienstanbieter (CSP) an, der den privaten Schlüsselcontainer enthält.|  
 |`/d`  *Desc*|Gibt eine Beschreibung des signierten Inhalts an.|  
-|`/dg`  *ADS*|Generiert den zu Signier enden Digest und die unsignierten PKCS7-Dateien. Der Ausgabe Digest und die PKCS7-Dateien lauten: *path\dateiname.Dig* und *path\dateiname.p7u*. Informationen zum Ausgeben einer zusätzlichen XML-Datei finden Sie unter <strong>/DXML</strong>.|  
-|`/di`  *ADS*|Erstellt die Signatur, indem der signierte Digest in die nicht signierte PKCS7-Datei erfasst wird. Die Eingabe signierte Digest-und Ganzzahl ohne Vorzeichen PKCS7-Dateien sollten lauten: *Path\FileName.Dig.Signed* und *path\dateiname.p7u*.|  
-|`/dlib`  *DLL*|Gibt die DLL <code>AuthenticodeDigestSign</code> an, die die Funktion zum Signieren des Digest implementiert. Diese Option entspricht der automatischen Verwendung von <strong>SignTool</strong> mit den Switches <strong>/DG</strong>, <strong>/DS</strong>und <strong>/di</strong> , mit dem Unterschied, dass diese Option Alle drei als einen atomaren Vorgang aufruft.|  
-|`/dmdf`  *Einfügen*|Wenn Sie mit der <strong>/DG</strong> -Option verwendet wird, übergibt den Inhalt der Datei <code>AuthenticodeDigestSign</code> ohne Änderung an die Funktion.|  
-|`/ds`  |Signiert nur den Digest. Die Eingabedatei sollte der Digest sein, der von der <strong>/DG</strong> -Option generiert wird. Die Ausgabedatei lautet: *file. Signed*.|  
+|`/dg`  *`Path`*|Generiert den zu signierten Digest und die nicht signierten PKCS7-Dateien. Die Ausgabeh digest- und PKCS7-Dateien sind: *Path\FileName.dig* und *Path\FileName.p7u*. Informationen zur Ausgabe einer zusätzlichen XML-Datei finden Sie unter <strong>/dxml</strong>.|  
+|`/di`  *`Path`*|Erstellt die Signatur durch Erfassung des signierten Digests in der nicht signierten PKCS7-Datei. Der eingegebene signierte Digest und die nicht signierten PKCS7-Dateien sollten: *Path\FileName.dig.signed* und *Path\FileName.p7u sein.*|  
+|`/dlib`  *Dll*|Gibt die DLL an, die die <code>AuthenticodeDigestSign</code> Funktion implementiert, mit der der Digest signiert werden soll. Diese Option entspricht der getrennten Verwendung von <strong>SignTool</strong> mit den Schaltern <strong>/dg,</strong> <strong>/ds</strong>und <strong>/di,</strong> außer dass diese Option alle drei als einen atomaren Vorgang aufruft.|  
+|`/dmdf`  *Dateiname*|Bei Verwendung mit der <strong>Option /dg</strong> übergibt den Inhalt der Datei ohne <code>AuthenticodeDigestSign</code> Änderung an die Funktion.|  
+|`/ds`  |Signiert nur den Digest. Die Eingabedatei sollte der Digest sein, der von der <strong>Option /dg generiert</strong> wird. Die Ausgabedatei ist: *File.signed*.|  
 |`/du`  *URL*|Gibt eine URL (Uniform Resource Locator) für die erweiterte Beschreibung des signierten Inhalts an.|  
-|`/dxml`  |Bei Verwendung mit der <strong>/DG</strong> -Option wird eine XML-Datei erstellt. Die Ausgabedatei lautet: *Path\FileName.dig.xml*.|  
+|`/dxml`  |Bei Verwendung mit der <strong>Option /dg</strong> erzeugt eine XML-Datei. Die Ausgabedatei ist: *Path\FileName.dig.xml*.|  
 |`/f`  *SignCertFile*|Gibt das Signaturzertifikat in einer Datei an. Wenn die Datei im PFX-Format (Personal Information Exchange) vorliegt und mit einem Kennwort gesichert ist, verwenden Sie zur Angabe des Kennworts die `/p`-Option. Wenn die Datei keine privaten Schlüssel aufweist, verwenden Sie die `/csp`-Option und `/kc`-Option, um den CSP-Namen und den Namen des privaten Schlüsselcontainers anzugeben.|  
-|`/fd`*ALG*|Gibt den Dateihashwertalgorithmus zum Erstellen von Dateisignaturen an. </br> **Hinweis:** Eine Warnung wird generiert, wenn der <strong>/FD</strong> -Schalter beim Signieren nicht angegeben wird. Der Standardwert für ALG ist SHA1, aber SHA256 wird empfohlen.|
-|`/fd` *certHash*|Durch Angabe der Zeichenfolge certHash wird standardmäßig der auf dem Signaturzertifikat verwendete Algorithmus verwendet. </br> **Hinweis:** Nur verfügbar in Windows 10 Kit-Builds 20236 und höher.|  
+|`/fd`*alg*|Gibt den Dateihashwertalgorithmus zum Erstellen von Dateisignaturen an. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/fd</strong> beim Signieren nicht bereitgestellt wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen.|
+|`/fd` *certHash*|Durch Angabe der Zeichenfolge certHash wird standardmäßig der auf dem Signaturzertifikat verwendete Algorithmus verwendet. </br> **Hinweis:** Nur in Windows 10 Kit-Builds ab 20236 verfügbar.|  
 |`/i`  *IssuerName*|Gibt den Namen des Ausstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Ausstellernamens sein.|  
 |`/kc`  *PrivKeyContainerName*|Gibt den Namen des privaten Schlüsselcontainers an.|  
 |`/n`  *SubjectName*|Gibt den Namen des Antragstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens sein.|  
@@ -105,7 +105,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |`/sha1`  *Hash*|Gibt den SHA1-Hash des Signaturzertifikats an. In der Regel wird der SHA1-Hash angegeben, wenn die von den verbleibenden Schaltern festgelegten Kriterien von mehreren Zertifikaten erfüllt werden.|  
 |`/sm`|Gibt an, dass anstatt eines Benutzerspeichers ein Computerspeicher verwendet wird.|  
 |`/t`  *URL*|Gibt die URL des Zeitstempelservers an. Wenn diese Option (oder `/tr`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/tr`-Option verwendet werden.|  
-|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Eine Warnung wird generiert, wenn der <strong>/TD</strong> -Schalter beim Timestampwert nicht angegeben wird. Der Standardwert für ALG ist SHA1, aber SHA256 wird empfohlen. <br/> Der Schalter <strong>/TD</strong> muss nach dem <strong>/TR</strong> -Switch und nicht vor vor deklariert werden. Wenn der <strong>/TD</strong> -Schalter vor dem <strong>/TR</strong> -Schalter deklariert wird, wird der Zeitstempel, der zurückgegeben wird, von einem SHA1-Algorithmus anstelle des vorgesehenen SHA256-Algorithmus. |
+|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/td</strong> beim Zeitstempel nicht angegeben wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen. <br/> Der <strong>Schalter /td</strong> muss nach dem Schalter <strong>/tr</strong> deklariert werden, nicht zuvor. Wenn der <strong>Schalter /td</strong> vor dem Schalter <strong>/tr</strong> deklariert wird, stammt der zurückgegebene Zeitstempel von einem SHA1-Algorithmus anstelle des beabsichtigten SHA256-Algorithmus. |
 |`/tr`  *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Wenn diese Option (oder `/t`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/t`-Option verwendet werden.|  
 |`/u`  *Usage*|Gibt die verbesserte Schlüsselverwendung (EKU) an, die im Signaturzertifikat vorhanden sein muss. Der Verwendungswert kann durch einen OID oder eine Zeichenfolge angegeben werden. Die Standardverwendung lautet "Codesignatur" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Gibt die Verwendung von "Verifizierung von Windows-Systemkomponenten" (1.3.6.1.4.1.311.10.3.6) an.|  
@@ -113,7 +113,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
  Verwendungsbeispiele finden Sie unter [Using SignTool to Sign a File (Signieren einer Datei mit SignTool)](using-signtool-to-sign-a-file.md).  
   
 
-## <a name="timestamp-command-options"></a>Timestamp-Befehlsoptionen  
+## <a name="timestamp-command-options"></a>TimeStamp-Befehlsoptionen  
 
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `TimeStamp`-Befehl verwendet werden können.  
   
@@ -121,7 +121,7 @@ Die folgenden Befehle werden von SignTool unterstützt.
 |----|----|  
 |`/p7`|Fügt PKCS #7-Dateien Zeitstempel hinzu.|  
 |`/t`  *URL*|Gibt die URL des Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/t`-Option oder die `/tr`-Option ist erforderlich.|  
-|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Eine Warnung wird generiert, wenn der <strong>/TD</strong> -Schalter beim Timestampwert nicht angegeben wird. Der Standardwert für ALG ist SHA1, aber SHA256 wird empfohlen. <br/> Der Schalter <strong>/TD</strong> muss nach dem <strong>/TR</strong> -Switch und nicht vor vor deklariert werden. Wenn der <strong>/TD</strong> -Schalter vor dem <strong>/TR</strong> -Schalter deklariert wird, wird der Zeitstempel, der zurückgegeben wird, von einem SHA1-Algorithmus anstelle des vorgesehenen SHA256-Algorithmus. |
+|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt. </br> **Hinweis:** Es wird eine Warnung generiert, wenn der Schalter <strong>/td</strong> beim Zeitstempel nicht angegeben wird. Die Standardeinstellung ist SHA1, sha256 wird jedoch empfohlen. <br/> Der <strong>Schalter /td</strong> muss nach dem Schalter <strong>/tr</strong> deklariert werden, nicht zuvor. Wenn der <strong>Schalter /td</strong> vor dem Schalter <strong>/tr</strong> deklariert wird, stammt der zurückgegebene Zeitstempel von einem SHA1-Algorithmus anstelle des beabsichtigten SHA256-Algorithmus. |
 |`/tp` *index*|Fügt der Signatur bei *Index* einen Zeitstempel hinzu|  
 |`/tr`  *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/tr`-Option oder die `/t`-Option ist erforderlich.|  
 
@@ -130,29 +130,29 @@ Die folgenden Befehle werden von SignTool unterstützt.
 
 |"Verify"-Option|Beschreibung|
 |----|----|
-| **/a** | Gibt an, dass alle Methoden zum Überprüfen der Datei verwendet werden können. Zuerst werden die Katalogdatenbanken durchsucht, um zu ermitteln, ob die Datei in einem Katalog signiert ist. Wenn die Datei nicht in einem Katalog signiert ist, versucht SignTool, die eingebettete Signatur der Datei zu überprüfen. Diese Option wird zum Überprüfen von Dateien empfohlen, die möglicherweise, jedoch nicht unbedingt in einem Katalog signiert sind. Beispiele für Dateien, die signiert oder nicht signiert werden können, sind Windows-Dateien oder Treiber. |
+| **/a** | Gibt an, dass alle Methoden zum Überprüfen der Datei verwendet werden können. Zuerst werden die Katalogdatenbanken durchsucht, um zu ermitteln, ob die Datei in einem Katalog signiert ist. Wenn die Datei in keinem Katalog signiert ist, versucht SignTool, die eingebettete Signatur der Datei zu überprüfen. Diese Option wird zum Überprüfen von Dateien empfohlen, die möglicherweise, jedoch nicht unbedingt in einem Katalog signiert sind. Beispiele für Dateien, die signiert werden können oder nicht, sind Windows Dateien oder Treiber. |
 | **/ad** | Sucht den Katalog in der Standardkatalogdatenbank. |
 | **/all** | Überprüft alle Signaturen in einer Datei mit mehreren Signaturen. |
 | **/as** | Sucht den Katalog in der Katalogdatenbank der Systemkomponenten (Treiber). |
-| **/AG** - *ID-GUID* | Sucht den Katalog in der Katalog Datenbank, der durch die **GUID** identifiziert wird. |
-| **/c** - *Datei* | Gibt die Katalogdatei anhand des Namens an. |
-| **/d** | Druckt die Beschreibung und Beschreibungs-URL.<br/> **Windows Vista und früher:** Dieses Flag wird nicht unterstützt.<br/> |
-| **/DS** - *Index* | Überprüft die Signatur an einer bestimmten Position. |
-| **/Hash**{**SHA1** \| **SHA256**} | Gibt einen optionalen Hashalgorithmus zum Suchen einer Datei in einem Katalog an. |
-| **/kp** | Führt die Überprüfung mithilfe der x64-Kernel Modus-Treiber Signatur Richtlinie durch. |
-| **/MS** | Verwendet mehrere Überprüfungssemantiken. Dies ist das Standardverhalten eines [**WinVerifyTrust**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) -Aufrufes. |
-| **/o** - *Version* | Überprüft die Datei anhand der Betriebssystemversion. Der Versions Parameter hat folgendes Format:<br/> *PlatformID ***:*** VerMajor ***.*** VerMinor ***.*** BuildNumber*<br/> Die Verwendung des */o* -Schalters wird empfohlen. Wenn */o* nicht angegeben ist, gibt SignTool möglicherweise unerwartete Ergebnisse zurück. Wenn Sie z. b. den */o* -Schalter nicht einschließen, werden System Kataloge, die auf einem älteren Betriebssystem ordnungsgemäß überprüft werden, unter einem neueren Betriebssystem möglicherweise nicht ordnungsgemäß überprüft. |
-| **/p7** | Überprüfen Sie die PKCS \# 7-Dateien. Für die PKCS 7-Überprüfung werden keine vorhandenen Richtlinien verwendet \# . Die Signatur wird überprüft, und für das Signaturzertifikat wird eine Kette erstellt. |
-| **/pa** | Gibt an, dass die Standard Richtlinie für die Authentifizierungs Überprüfung verwendet wird. Wenn die **/PA** -Option nicht angegeben ist, verwendet SignTool die Richtlinie für die Windows-Treiber Überprüfung. Diese Option kann nicht **mit den Optionen** von "-Optionen" verwendet werden. |
-| **/PG** *policyguid* | Gibt eine Überprüfungs Richtlinie nach **GUID** an. Die **GUID** entspricht der Aktions-ID der Überprüfungs Richtlinie. Diese Option kann nicht **mit den Optionen** von "-Optionen" verwendet werden. |
-| **/pH** | Seiten Hash Werte drucken und überprüfen.<br/> **Windows Vista und früher:** Dieses Flag wird nicht unterstützt.<br/>  |
-| **/r** *rootsubjetname* | Gibt den Antragstellernamen des Stammzertifikats an, mit dem das Signaturzertifikat verkettet werden muss. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens des Stammzertifikats sein. |
+| **/ag** *CatDBGUID* | Sucht den Katalog in der Katalogdatenbank, die durch die **GUID** identifiziert wird. |
+| **/c** *CatFile* | Gibt die Katalogdatei anhand des Namens an. |
+| **/d** | Drucken Sie die Beschreibung und die Beschreibungs-URL.<br/> **Windows Vista und früher:** Dieses Flag wird nicht unterstützt.<br/> |
+| **/ds** *Index* | Überprüft die Signatur an einer bestimmten Position. |
+| **/hash**{**SHA1** \| **SHA256**} | Gibt einen optionalen Hashalgorithmus zum Suchen einer Datei in einem Katalog an. |
+| **/kp** | Führt die Überprüfung mithilfe der x64-Kernelmodus-Treibersignaturrichtlinie aus. |
+| **/ms** | Verwendet mehrere Überprüfungssemantiken. Dies ist das Standardverhalten eines [**WinVerifyTrust-Aufrufs.**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) |
+| **/o** *Version* | Überprüft die Datei anhand der Betriebssystemversion. Der Versionsparameter hat folgendes Format:<br/> *PlatformID***:**_VerMajor_*_._ *_VerMinor_*_._ * _BuildNumber_<br/> Die Verwendung des Schalters */o* wird empfohlen. Wenn */o* nicht angegeben ist, gibt SignTool möglicherweise unerwartete Ergebnisse zurück. Wenn Sie z. B. den Schalter */o* nicht einschließen, werden Systemkataloge, die auf einem älteren Betriebssystem ordnungsgemäß überprüft werden, unter einem neueren Betriebssystem möglicherweise nicht ordnungsgemäß überprüft. |
+| **/p7** | Überprüfen Sie PKCS \# 7-Dateien. Für die PKCS 7-Überprüfung werden keine vorhandenen Richtlinien \# verwendet. Die Signatur wird überprüft, und für das Signaturzertifikat wird eine Kette erstellt. |
+| **/pa** | Gibt an, dass die Standardauthentifizierungsüberprüfungsrichtlinie verwendet wird. Wenn die Option **/pa** nicht angegeben ist, verwendet SignTool die Windows Treiberüberprüfungsrichtlinie. Diese Option kann nicht mit den **catdb-Optionen** verwendet werden. |
+| **/pg** *PolicyGUID* | Gibt eine Überprüfungsrichtlinie nach **GUID** an. Die **GUID** entspricht der ActionID der Überprüfungsrichtlinie. Diese Option kann nicht mit den **catdb-Optionen** verwendet werden. |
+| **/ph** | Seitenhashwerte drucken und überprüfen.<br/> **Windows Vista und früher:** Dieses Flag wird nicht unterstützt.<br/>  |
+| **/r** *RootSubjectName* | Gibt den Antragstellernamen des Stammzertifikats an, mit dem das Signaturzertifikat verkettet werden muss. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens des Stammzertifikats sein. |
 | **/tw** | Gibt an, dass eine Warnung generiert wird, wenn die Signatur nicht mit einem Zeitstempel versehen ist.|
 
 
-Der SignTool **Verify** -Befehl bestimmt, ob das Signaturzertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde, ob das Signaturzertifikat widerrufen wurde, und optional, ob das Signaturzertifikat für eine bestimmte Richtlinie gültig ist.  
+Der Befehl SignTool **verify** bestimmt, ob das Signaturzertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde, ob das Signaturzertifikat widerrufen wurde und optional, ob das Signaturzertifikat für eine bestimmte Richtlinie gültig ist.  
 
-Der Befehl SignTool **Verify** gibt den **eingebetteten** Signatur Status aus, es sei denn, für die Suche eines Katalogs wird eine Option angegeben (/a,/AD,/as,/AG,/c).
+Der Befehl SignTool **verify** gibt den Status der **eingebetteten** Signatur aus, es sei denn, eine Option zum Durchsuchen eines Katalogs (/a, /ad, /as, /ag, /c) ist angegeben.
 
 
 ## <a name="return-value"></a>Rückgabewert  

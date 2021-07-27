@@ -1,19 +1,19 @@
 ---
-description: Enthält den Satz alternativer Elemente, die die von der Erkennung für das übergeordnete InkWord-Element zurückgegebenen Alternativen enthalten. Die Alternativen werden nach dem Vertrauen der Erkennung in der alternativen geordnet, wobei die höchste erste ist.
+description: Enthält den Satz alternativer Elemente, die die alternativen Elemente enthalten, die von der -Erkannten für das übergeordnete InkWord-Element zurückgegeben werden. Die Alternativen werden nach der Konfidenz der Erkannten in der Alternativen geordnet, mit der höchsten zuerst.
 ms.assetid: 76c9b923-bad8-4c08-9b31-199d4f7aaeff
-title: Alternativen Element Element
+title: AlternateList-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7ea704641f06954301bdce8d7553ab74b82b88c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f04593fd93b33adde17d93033ccaffe6f97577d
+ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524416"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "114436595"
 ---
-# <a name="alternatelist-element"></a>Alternativen Element Element
+# <a name="alternatelist-element"></a>AlternateList-Element
 
-Enthält den Satz [**alternativer**](alternate-element.md) Elemente, die die von der Erkennung für das übergeordnete [**InkWord**](inkword-element.md) -Element zurückgegebenen Alternativen enthalten. Die Alternativen werden nach dem Vertrauen der Erkennung in der alternativen geordnet, wobei die höchste erste ist.
+Enthält den Satz [**alternativer Elemente,**](alternate-element.md) die die alternativen Elemente enthalten, die von der -Erkannten für das übergeordnete [**InkWord-Element zurückgegeben**](inkword-element.md) werden. Die Alternativen werden nach der Konfidenz der Erkannten in der Alternativen geordnet, mit der höchsten zuerst.
 
 ## <a name="definition"></a>Definition
 
@@ -37,11 +37,11 @@ Keine
 
 
 
-|              |                                                                           |
-|--------------|---------------------------------------------------------------------------|
-| Elementtyp | ComplexType " [**Alternative ListType**](alternateslisttype-complex-type.md) " |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk                                |
-| Schemaname  | Journal Leser                                                            |
+|                 | Wert                                                                     |
+|-----------------|---------------------------------------------------------------------------|
+| **Elementtyp**| [**complexType: AlternatesListType**](alternateslisttype-complex-type.md) |
+| **Namespace**   | urn:schemas-microsoft-com:tabletpc:richink                                |
+| **Schemaname** | Journalreader                                                            |
 
 
 
