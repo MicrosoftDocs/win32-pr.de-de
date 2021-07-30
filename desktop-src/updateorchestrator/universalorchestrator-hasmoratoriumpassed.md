@@ -1,21 +1,21 @@
 ---
 title: IUniversalOrchestrator::HasMoratoriumPassed
-description: Fragt den universellen Orchestrator ab, um zu bestimmen, ob der Post-OOBE-Zeitraum überschritten wurde.
-ms.topic: method
+description: Fragt Universal Orchestrator ab, um zu ermitteln, ob der Zeitraum nach der OOBE überschritten wurde.
+ms.topic: reference
 ms.date: 01/14/2021
-ms.openlocfilehash: 2ed354d365b795a0c959396e6b26d6bc73baad97
-ms.sourcegitcommit: 9c8ddec1e955f181beecad0478c1fb79013b5e9d
+ms.openlocfilehash: 3ccbf673b8fe22fabe7001112e04e87bd45eeaa4
+ms.sourcegitcommit: 3cea99a2ed9579a94236fa7924abd6149db51a58
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "106349744"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114991797"
 ---
-# <a name="iuniversalorchestratorhasmoratoriumpassed-method"></a>Iuniversalorchestrator:: hasmoratoriumbestandene-Methode
+# <a name="iuniversalorchestratorhasmoratoriumpassed-method"></a>IUniversalOrchestrator::HasFührungPassed-Methode
 
 > [!NOTE] 
-> Diese API gehört der universellen Orchestrator-API an.
+> Diese API gehört zur Universal Orchestrator-API.
 
-Ermöglicht Clients festzustellen, ob universelle Orchestrator unmittelbar nach der Out-of-Box-Obergrenze des neuen Geräts betrieben wird, was die Arbeit bei der Minimierung von Benutzer Unterbrechungen einschränkt. 
+Ermöglicht Clients, zu ermitteln, ob Universal Orchestrator unmittelbar nach dem neuen Out-of-Box-Gerät ausgeführt wird, wodurch Arbeitsversuche zur Minimierung von Benutzerunterbrechungen beschränkt werden. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ Eine eindeutige Zeichenfolge, die alle Aufrufe von diesem bestimmten Client iden
 Ausgabeparameter, der das Ergebnis der Abfrage speichert.
 
 ## <a name="return-value"></a>Rückgabewert
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben.  Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK.  Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

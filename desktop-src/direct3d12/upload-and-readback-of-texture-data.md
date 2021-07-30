@@ -5,30 +5,30 @@ ms.assetid: 22A25A94-A45C-482D-853A-FA6860EE7E4E
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f72177be1fefbf102e901d28d47413c8bcff41ab
-ms.sourcegitcommit: 39754f1af7853adff2525d0936afe9aad2066a9a
+ms.openlocfilehash: d8846fd5f916c440d3dbdf5d907cc7f66cc6a313
+ms.sourcegitcommit: 3cea99a2ed9579a94236fa7924abd6149db51a58
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "112426964"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114991807"
 ---
 # <a name="uploading-texture-data-through-buffers"></a>Hochladen von Texturdaten über Puffer
 
 Das Hochladen von 2D- oder 3D-Texturdaten ähnelt dem Hochladen von 1D-Daten, mit der Ausnahme, dass Anwendungen die Datenausrichtung im Zusammenhang mit der Zeilenhöhe genauer beachten müssen. Puffer können orthogonal und gleichzeitig aus mehreren Teilen der Grafikpipeline verwendet werden und sind sehr flexibel.
 
--   [Hochladen von Texturdaten über Puffer](#upload-texture-data-via-buffers)
+-   [Hochladen Texturdaten über Puffer](#upload-texture-data-via-buffers)
 -   [Wird kopiert](#copying)
 -   [Zuordnung und Entmapping](#mapping-and-unmapping)
 -   [Pufferausrichtung](#buffer-alignment)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="upload-texture-data-via-buffers"></a>Hochladen von Texturdaten über Puffer
+## <a name="upload-texture-data-via-buffers"></a>Hochladen Texturdaten über Puffer
 
 Anwendungen müssen Daten über [**ID3D12GraphicsCommandList::CopyTextureRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion) oder [**ID3D12GraphicsCommandList::CopyBufferRegion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)hochladen. Texturdaten sind viel wahrscheinlicher größer, greifen wiederholt darauf zu und profitieren von der verbesserten Cachekoherität von nicht linearen Speicherlayouts als andere Ressourcendaten. Wenn Puffer in D3D12 verwendet werden, haben Anwendungen vollständige Kontrolle über die Datenplatzierung und Anordnung im Zusammenhang mit dem Kopieren von Ressourcendaten, solange die Anforderungen an die Arbeitsspeicherausrichtung erfüllt sind.
 
 Im Beispiel wird hervorgehoben, wo die Anwendung 2D-Daten einfach in 1D vereinfacht, bevor sie im Puffer platziert werden. Für das Mipmap-2D-Szenario kann die Anwendung entweder jede untergeordnete Ressource diskret abschwächen und schnell einen 1D-Algorithmus für die untergeordnete Zuordnung verwenden oder eine kompliziertere 2D-Unterzuordnungsmethode verwenden, um die Videospeicherauslastung zu minimieren. Es wird erwartet, dass die erste Technik häufiger verwendet wird, da sie einfacher ist. Die zweite Technik kann beim Packen von Daten auf einem Datenträger oder über ein Netzwerk nützlich sein. In beiden Fällen muss die Anwendung weiterhin die Kopier-APIs für jede Unterressource aufrufen.
 
-``` syntax
+```cpp
 // Prepare a pBitmap in memory, with bitmapWidth, bitmapHeight, and pixel format of DXGI_FORMAT_B8G8R8A8_UNORM. 
 //
 // Sub-allocate from the buffer for texture data.
@@ -101,7 +101,7 @@ D3D12-Methoden ermöglichen Es Anwendungen, D3D11 [**UpdateSubresource,**](/wind
 
 Beachten Sie die folgenden beiden Konstanten:
 
-``` syntax
+```cpp
 const UINT D3D12_TEXTURE_DATA_PITCH_ALIGNMENT = 256;
 const UINT D3D12_TEXTURE_DATA_PLACEMENT_ALIGNMENT = 512;
 ```
@@ -138,11 +138,4 @@ Einschränkungen bei der Pufferausrichtung:
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-<dl> <dt>
-
-[Unterzuweisung innerhalb von Puffern](large-buffers.md)
-</dt> </dl>
-
- 
-
- 
+* [Unterzuweisung innerhalb von Puffern](large-buffers.md)

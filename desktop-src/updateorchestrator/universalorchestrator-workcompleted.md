@@ -1,21 +1,21 @@
 ---
 title: IUniversalOrchestrator::WorkCompleted
-description: Ruft Universal Orchestrator auf, um anzugeben, dass die Arbeit fertig ist
-ms.topic: method
+description: Ruft Universal Orchestrator auf, um anzugeben, dass die Arbeit abgeschlossen ist.
+ms.topic: reference
 ms.date: 01/14/2021
-ms.openlocfilehash: 8d4a08e7f021811e59a182a8b726397476b78433
-ms.sourcegitcommit: 9c8ddec1e955f181beecad0478c1fb79013b5e9d
+ms.openlocfilehash: e36a3ba744df807abbebc6332ac8433010afd667
+ms.sourcegitcommit: 3cea99a2ed9579a94236fa7924abd6149db51a58
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "106369910"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114991827"
 ---
-# <a name="iuniversalorchestratorworkcompleted-method"></a>Iuniversalorchestrator:: workabgeschlossene-Methode
+# <a name="iuniversalorchestratorworkcompleted-method"></a>IUniversalOrchestrator::WorkCompleted-Methode
 
 > [!NOTE] 
-> Diese API gehört der universellen Orchestrator-API an.
+> Diese API gehört zur Universal Orchestrator-API.
 
-Ermöglicht Clients, den universellen Orchestrator mitzuteilen, dass die zuvor geplante Arbeit abgeschlossen wurde, und beendet die Rückrufe, um die Arbeit bis zum nächsten erfolgreichen schedulework-Aufruf auszuführen.
+Ermöglicht Clients, Universal Orchestrator darüber zu informieren, dass die zuvor geplante Arbeit abgeschlossen wurde, und Rückrufe bis zum nächsten erfolgreichen ScheduleWork-Aufruf zu beenden, um Aufgaben durchzuführen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,10 +33,10 @@ Eine eindeutige Zeichenfolge, die alle Aufrufe von diesem bestimmten Client iden
 
 `workCompleted`
 
-**True** , wenn die Arbeit erfolgreich abgeschlossen wurde. Andernfalls **false** , wenn der arbeitsversuch fehlgeschlagen ist und in der Zukunft erneut versucht werden soll. 
+**TRUE,** wenn die Arbeit erfolgreich abgeschlossen wurde. **Andernfalls FALSE,** wenn der Arbeitsversuch fehlgeschlagen ist und in Zukunft wiederholt werden soll. 
 
 ## <a name="return-value"></a>Rückgabewert
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben.  Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK.  Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

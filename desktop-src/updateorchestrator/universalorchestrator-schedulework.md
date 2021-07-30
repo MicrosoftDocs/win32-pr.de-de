@@ -1,23 +1,23 @@
 ---
 title: IUniversalOrchestrator::ScheduleWork
-description: Ruft Universal Orchestrator auf, um Arbeit zu planen.
-ms.topic: method
+description: Aufrufe von Universal Orchestrator zum Planen von Arbeiten
+ms.topic: reference
 ms.date: 01/14/2021
-ms.openlocfilehash: 456df8f975114f7bdf750a0449f3bd98efcc3b2e
-ms.sourcegitcommit: 9c8ddec1e955f181beecad0478c1fb79013b5e9d
+ms.openlocfilehash: 4c49d06a28497c33e86cc1e919fdb59f2363d1f5
+ms.sourcegitcommit: 3cea99a2ed9579a94236fa7924abd6149db51a58
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "106361095"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114991817"
 ---
-# <a name="iuniversalorchestratorschedulework-method"></a>Iuniversalorchestrator:: schedulework-Methode
+# <a name="iuniversalorchestratorschedulework-method"></a>IUniversalOrchestrator::ScheduleWork-Methode
 
 > [!NOTE] 
-> Diese API gehört der universellen Orchestrator-API an.
+> Diese API gehört zur Universal Orchestrator-API.
 
-Ermöglicht Clients, den universellen Orchestrator zu informieren, dass die Arbeit aussteht, und eine Binärdatei bereitzustellen, die von Universal Orchestrator aufgerufen wird, um die Update Arbeit zu einem späteren Zeitpunkt auszuführen.
+Ermöglicht Clients, universal Orchestrator darüber zu informieren, dass die Arbeit aussteht, und stellt eine Binärdatei bereit, die von Universal Orchestrator aufgerufen wird, um die Aktualisierungsarbeiten zu einem späteren Zeitpunkt auszuführen.
 
-Die Rückruf Binärdatei muss mit einem gültigen Microsoft-Zertifikat signiert werden, und der Aufrufer muss den schedulework-Aufruf aus dem System Kontext aufrufen.
+Die Rückrufbinärdatei muss mit einem gültigen Microsoft-Zertifikat signiert werden, und der Aufrufer muss den ScheduleWork-Aufruf aus dem SYSTEM-Kontext aufrufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,18 +37,18 @@ Eine eindeutige Zeichenfolge, die alle Aufrufe von diesem bestimmten Client iden
 
 `cmdLine`
 
-Der vollständige Pfad zur Rückruf Binärdatei, die von Universal Orchestrator aufgerufen wird, um Arbeit auszuführen.
+Der vollständige Pfad zur Rückrufbinärdatei, die von Universal Orchestrator aufgerufen wird, um Aufgaben auszuführen.
 
 `startArg`
 
-Parameter, die an die Rückruf Binärdatei übergeben werden, um anzugeben, dass der Start angefordert wird
+Parameter, die an die Rückrufbinärdatei übergeben werden sollen, um anzugeben, dass Start angefordert wird.
 
 `pauseArg`
 
-*(optional)* Parameter, die an die Rückruf Binärdatei übergeben werden, um anzugeben, dass die Pause angefordert wird
+*(optional)* Parameter, die an die Rückrufbinärdatei übergeben werden sollen, um anzugeben, dass Pause angefordert wird.
 
 ## <a name="return-value"></a>Rückgabewert
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben.  Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S_OK** zurückgegeben.  Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
