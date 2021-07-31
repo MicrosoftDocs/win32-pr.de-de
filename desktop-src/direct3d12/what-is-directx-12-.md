@@ -1,68 +1,68 @@
 ---
-title: Was ist Direct3D 12
-description: DirectX 12 führt die nächste Version von Direct3D ein. die 3D-Grafik-API im Kern von DirectX.
+title: Was ist Direct3D 12?
+description: DirectX 12 führt die nächste Version von Direct3D ein. die 3D-Grafik-API, die das Herzstück von DirectX ist.
 ms.assetid: 09C586BF-11CE-4392-9BFD-A40B05DD0624
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 11/19/2018
-ms.openlocfilehash: b3ff1896372719b011b283e3ff1f5426db9e13d1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f82b01ba33cfa6660f266a481b2eaaab20ade236
+ms.sourcegitcommit: 60ff57d8cf94ae7a47c6046ad49f7c7256a7edb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74104817"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115006795"
 ---
 # <a name="what-is-direct3d-12"></a>Was ist Direct3D 12?
 
-Mit DirectX 12 wird die nächste Version von Direct3D &mdash; der 3D-Grafik-API im Kern von DirectX eingeführt. Direct3D 12 ist schneller und effizienter als jede vorherige Version. Direct3D 12 ermöglicht umfangreichere Szenen, mehr Objekte, komplexere Effekte und eine vollständige Nutzung moderner GPU-Hardware.
+DirectX 12 führt die nächste Version von Direct3D ein, die &mdash; 3D-Grafik-API im Kern von DirectX. Direct3D 12 ist schneller und effizienter als jede vorherige Version. Direct3D 12 ermöglicht vielfältigere Szenen, mehr Objekte, komplexere Effekte und die vollständige Nutzung moderner GPU-Hardware.
 
-## <a name="how-can-direct3d-12-be-so-much-faster-and-more-efficient"></a>Wie können Direct3D 12 so viel schneller und effizienter sein?
+## <a name="how-can-direct3d-12-be-so-much-faster-and-more-efficient"></a>Wie kann Direct3D 12 so viel schneller und effizienter sein?
 
-Direct3D 12 ist insofern einzigartig, als es eine niedrigere Hardware Abstraktion als in früheren Versionen bietet, sodass Sie die Multi-Core-CPU-Skalierung ihres Titels (oder einer anderen Anwendung) erheblich verbessern können. In Direct3D 12 ist Ihr Titel für die eigene [Speicherverwaltung](memory-management.md)verantwortlich. Außerdem profitieren Ihre Titel und Anwendungen mithilfe von Direct3D 12 von einem reduzierten GPU-Overhead über Features wie [Befehls Warteschlangen und Listen](command-queues-and-command-lists.md), [deskriptortabellen](descriptor-tables.md)und präzise [Pipeline Zustands Objekte](managing-graphics-pipeline-state-in-direct3d-12.md).
+Direct3D 12 ist einzigartig, da es eine niedrigere Hardwareabstraktion als frühere Versionen bietet, wodurch Sie die CPU-Skalierung mit mehreren Kernen Ihres Titels (oder einer anderen Anwendung) erheblich verbessern können. Bei Direct3D 12 ist Ihr Titel beispielsweise für die eigene [Speicherverwaltung verantwortlich.](memory-management.md) Darüber hinaus profitieren Ihre Titel und Anwendungen durch die Verwendung von Direct3D 12 durch Features wie Befehlswarteschlangen und Listen, [Deskriptortabellen](descriptor-tables.md)und präzise [Pipelinezustandsobjekte](command-queues-and-command-lists.md)vom reduzierten GPU-Mehraufwand. [](managing-graphics-pipeline-state-in-direct3d-12.md)
 
-Direct3D 12 und Direct3D 11,3 stellen eine Reihe neuer Features für die Renderingpipeline dar.
+Direct3D 12 und Direct3D 11.3 führen eine Reihe neuer Features für die Renderingpipeline ein.
 
-- [Konservative Rasterung](../direct3d11/conservative-rasterization.md) zum Aktivieren der zuverlässigen Treffer Erkennung.
-- [Menge an Kacheln](../direct3d11/volume-tiled-resources.md) , um das Streamen von dreidimensionalen Ressourcen zu ermöglichen, die so behandelt werden, als wären Sie alles im Videospeicher.
-- [Rasterizer-geordnete Sichten](../direct3d11/volume-tiled-resources.md) , um zuverlässiges Transparenz Rendering zu ermöglichen.
-- Festlegen des Schablonen Verweises innerhalb eines Shaders, um besondere shadowingund andere Effekte zu ermöglichen.
-- Verbesserte Textur Zuordnung und eingegebene UAV-Ladevorgänge (unsortierter Zugriffs Ansicht).
+- [Konservative Rasterung,](../direct3d11/conservative-rasterization.md) um eine zuverlässige Treffererkennung zu ermöglichen.
+- [Gekachelte Volumenressourcen,](../direct3d11/volume-tiled-resources.md) um zu ermöglichen, dass gestreamte dreidimensionale Ressourcen so behandelt werden, als ob sie sich alle im Videospeicher befingen.
+- [Rasterizer-geordnete Ansichten, um](../direct3d11/rasterizer-order-views.md) zuverlässiges Transparenzrendering zu ermöglichen.
+- Festlegen des Schablonenverweises in einem Shader, um spezielle Schatten und andere Effekte zu ermöglichen.
+- Verbesserte Texturzuordnung und typierte UAV-Auslastungen (Unordered Access View, ungeordnete Zugriffsansicht).
 
 ## <a name="how-deeply-should-i-invest-in-direct3d-12"></a>Wie tief sollte ich in Direct3D 12 investieren?
 
-Direct3D 12 bietet Grafik Entwicklern vier wichtige Vorteile (im Vergleich zu Direct3D 11).
+Direct3D 12 bietet Grafikentwicklern vier Hauptvorteile (im Vergleich zu Direct3D 11).
 
-- Erheblich reduzierter CPU-Aufwand.
-- Erheblich Reduzierter Stromverbrauch.
-- Bis zu (ungefähr) 20% Verbesserung der GPU-Effizienz.
-- Plattformübergreifende Entwicklung für ein Windows 10-Gerät (PC, Tablet, Console, Mobile).
+- Erheblich reduzierter CPU-Mehraufwand.
+- Deutlich reduzierter Stromverbrauch.
+- Bis zu (ca.) 20 % Verbesserung der GPU-Effizienz.
+- Plattformübergreifende Entwicklung für ein Windows 10 Gerät (PC, Tablet, Konsole, mobil).
 
-Direct3D 12 ist für die Verwendung durch erweiterte grafikprogrammierer konzipiert. Er erfordert bedeutende Grafiken und ein hohes Maß an Feinabstimmung. Direct3D 12 ist so konzipiert, dass Multithreading, sorgfältige CPU/GPU-Synchronisierung und der Übergang und die erneute Verwendung von Ressourcen von einem Zweck zu einem anderen vollständig genutzt werden. Dabei handelt es sich um Techniken, die eine beträchtliche Menge an Programmier Kenntnissen auf Speicher Ebene erfordern.
+Direct3D 12 ist für fortgeschrittene Grafikprogrammierer konzipiert. Sie erfordert umfassende Grafikkenntnisse und ein hohes Maß an Feinabstimmung. Direct3D 12 ist so konzipiert, dass Multithreading, eine sorgfältige CPU/GPU-Synchronisierung sowie der Übergang und die Erneutnutzung von Ressourcen von einem Zweck zu einem anderen vollständig genutzt werden. Dies sind Techniken, die eine beträchtliche Menge an Programmierkenntnissen auf Arbeitsspeicherebene erfordern.
 
-Ein weiterer Vorteil, den Direct3D 12 hat, ist der geringe API-Speicherbedarf. Es sind ungefähr 200 Funktionen vorhanden. und etwa ein Drittel der Arbeit ist alles ausgelastet. Dies bedeutet, dass Sie als Grafik Entwickler in der Lage sein sollten, sich über &mdash; den vollständigen API-Satz zu informieren und ihn zu beherrschen, &mdash; ohne zu viele API-Namen merken zu müssen.
+Ein weiterer Vorteil von Direct3D 12 ist der geringe API-Speicherbedarf. Es gibt etwa 200 Funktionen. und etwa ein Drittel dieser Personen sind für die arbeite Arbeit verantwortlich. Das bedeutet, dass Sie als Grafikentwickler in der Lage sein sollten, Dies zu informieren und den gesamten API-Satz zu meistern, ohne sich zu viele API-Namen merken &mdash; &mdash; zu müssen.
 
-Direct3D 11 ist neben Direct3D 12 weiterhin eine brauchbare Option. Viele der neuen Renderingfeatures von Direct3D 12 sind in [Direct3D 11,3](../direct3d11/direct3d-11-3-features.md)verfügbar. Direct3D 11,3 ist eine Grafik-Engine-API auf niedriger Ebene. und Direct3D 12 geht noch tiefer.
+Direct3D 11 ist neben Direct3D 12 weiterhin eine sinnvolle Option. Viele der neuen Renderingfunktionen von Direct3D 12 sind in [Direct3D 11.3 verfügbar.](../direct3d11/direct3d-11-3-features.md) Direct3D 11.3 ist eine Low-Level-Grafik-Engine-API. und Direct3D 12 gehen noch tiefer.
 
-Es gibt mindestens zwei Möglichkeiten, wie das Entwicklungsteam einen Direct3D 12-Titel angehen kann.
+Es gibt mindestens zwei Möglichkeiten, wie Ihr Entwicklungsteam sich einem Direct3D 12-Titel nähern kann.
 
-### <a name="use-direct3d-12-exclusively"></a>Ausschließlich Direct3D 12 verwenden
+### <a name="use-direct3d-12-exclusively"></a>Ausschließliches Verwenden von Direct3D 12
 
-Für ein Projekt, das alle Vorteile von Direct3D 12 vollständig nutzt, sollten Sie eine hochgradig angepasste Direct3D 12-Engine von Grund auf entwickeln.
+Für ein Projekt, das alle Vorteile von Direct3D 12 letztendlich nutzt, sollten Sie eine hochgradig angepasste Direct3D 12-Engine von Grund auf entwickeln.
 
-Wenn Sie als Grafik Entwickler die Verwendung und Wiederverwendung von Ressourcen in ihren Titeln verstehen, die Sie nutzen können, indem Sie das Hochladen und kopieren minimieren, können Sie eine hochgradig effiziente Engine für diese Titel entwickeln und anpassen. Die Leistungsverbesserungen können sehr beträchtlich sein, und Sie können die CPU-Zeit verbessern, um die Anzahl der Draw-Aufrufe zu erhöhen, und so weitere Lustern zu Ihren Grafiken hinzufügen.
+Wenn Sie als Grafikentwickler die Verwendung und Erneutnutzung von Ressourcen in Ihren Titeln verstehen und dies nutzen können, indem Sie das Hochladen und Kopieren minimieren, können Sie eine äußerst effiziente Engine für diese Titel entwickeln und anpassen. Die Leistungsverbesserungen können sehr erheblich sein, was die CPU-Zeit zur Erhöhung der Anzahl von Zeichnen-Aufrufen und somit das Hinzufügen von zusätzlichem Aufwand für Ihre Grafiken frei macht.
 
-Der Aufwand für die Programmierung ist beträchtlich, und Sie sollten das Debuggen und Instrumentierungs Verfahren des Projekts von Anfang an in Erwägung gezogen. Threading-, Synchronisierungs-und andere Zeit Steuerungs Fehler können eine Herausforderung darstellen.
+Die Programmierinvestitionen sind erheblich, und Sie sollten das Debuggen und instrumentieren des Projekts von Anfang an in Betracht ziehen. Threading, Synchronisierung und andere Zeitsteuerungsfehler können eine Herausforderung darstellen.
 
-### <a name="use-direct3d-12-in-concert-with-direct3d-11"></a>Verwenden Sie Direct3D 12 im Konzert mit Direct3D 11
+### <a name="use-direct3d-12-in-concert-with-direct3d-11"></a>Verwenden von Direct3D 12 in Zusammenarbeit mit Direct3D 11
 
-Ein kürzerer Begriff besteht darin, bekannte Engpässe in Ihrem Direct3D 11-Titel zu beheben. Sie können diese mithilfe von [Direct3D 12-Interop-und/oder D3D11On12-](direct3d-12-interop.md) Techniken adressieren, die es ermöglichen, dass die beiden API-Versionen zusammenarbeiten. Dieser Ansatz minimiert die Änderungen, die für ein vorhandenes Direct3D 11-Grafik Modul erforderlich sind. Die Leistungssteigerungen werden jedoch auf die Erleichterung des Engpasses beschränkt, den der Direct3D 12-Code adressiert.
+Ein kürzerer Ansatz wäre, bekannte Engpässe in Ihrem Direct3D 11-Titel zu beheben. Sie können diese Mithilfe von [Direct3D 12-Interop- und/oder D3D11On12-Techniken](direct3d-12-interop.md) adressiert werden, mit denen die beiden API-Versionen zusammenarbeiten können. Dieser Ansatz minimiert die Änderungen, die an einer vorhandenen Direct3D 11-Grafik-Engine erforderlich sind. Die Leistungssteigerungen sind jedoch auf die Beseitigung des Engpasses beschränkt, den der Direct3D 12-Code beheben kann.
 
-## <a name="microsoft-directx-12-and-graphics-education-videos"></a>Videos zu Microsoft DirectX 12 (und Grafiken Education)
+## <a name="microsoft-directx-12-and-graphics-education-videos"></a>Videos zu Microsoft DirectX 12 (und Grafik education)
 
-[Verbessertes Education für Grafik Entwickler](https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA). In diesen Videos werden Themen wie präsentationsmodi, Portieren auf DirectX 12, konservative rasterization, Grafiktools, Angle, Win2D und Ereignisse wie GDC, Build und mehr behandelt. Technical DirectX 12-Inhalt wird mit *DirectX 12* vorangestellt. Hier finden Sie Tipps und Tricks direkt aus dem Feature-Team von Direct3D 12. Wir möchten Sie dabei unterstützen, unsere neuesten Releases und Tools zu verwenden, damit Ihr Spiel das beste ist!
+[Erweiterte Bildung für Grafikentwickler](https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA). Diese Videos behandeln Themen wie Präsentationsmodi, Portierung auf DirectX 12, konservative Rasterung, Grafiktools, Winkel, Win2D und Ereignisse wie GDC, Build und mehr. Technical DirectX 12 content is prefaced *with DirectX 12*. Hier erhalten Sie Tipps und Tricks direkt vom Direct3D 12-Featureteam. Wir möchten Ihnen helfen, unsere neuesten Releases und Tools zu verwenden, um Ihr Spiel so gut wie möglich zu machen!
 
 ## <a name="conclusion"></a>Zusammenfassung
 
-Bei Direct3D 12 geht es um das dramatische Grafik-Engine-Leistung. Die einfache Entwicklung, Konstrukte auf hoher Ebene und Compilerunterstützung wurden zurück skaliert, um dies zu ermöglichen. Die Treiberunterstützung und das einfache Debuggen bleiben bei Direct3D 11 unverändert.
+Bei Direct3D 12 geht es um eine drastische Grafik-Engine-Leistung. Einfache Entwicklung, Konstrukte auf hoher Ebene und Compilerunterstützung wurden zurückskaliert, um dies zu ermöglichen. Treiberunterstützung und einfaches Debuggen bleiben gleich wie Direct3D 11.
 
-Direct3D 12 ist ein neues Gebiet. Das Gebiet, das darauf wartet, dass der begierigen Experte es untersucht.
+Direct3D 12 ist ein neues Gebiet. Gebiet, das darauf wartet, dass der inquisitive Experte kommt und es untersucht.
