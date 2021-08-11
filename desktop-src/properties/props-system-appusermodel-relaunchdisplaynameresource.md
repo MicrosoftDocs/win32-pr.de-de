@@ -1,36 +1,36 @@
 ---
-description: Gibt den anzeigen Amen an, der für die Verknüpfung verwendet wird, die auf der Taskleiste erstellt wird, wenn der Benutzer eine Anwendung an die Taskleiste anheften oder über die Sprung Liste der Schaltfläche eine neue Instanz starten soll.
+description: Gibt den Anzeigenamen an, der für die Verknüpfung verwendet wird, die auf der Taskleiste erstellt wird, wenn der Benutzer eine Anwendung an die Taskleiste anheftet oder eine neue Instanz über die Sprungliste der Schaltfläche startet.
 ms.assetid: a149838b-83b6-44ce-b705-e2804efb3d31
-title: System. appusermodel. relaunchdisplaynameresource
+title: System.AppUserModel.CsvDisplayNameResource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d79c22d0ccecb8bac86fe5ca3636ed10ed2ca50b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22b0af752fb345dd5dd5f1b091a22255e856031affaca266ff6307045f148cd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118233022"
 ---
-# <a name="systemappusermodelrelaunchdisplaynameresource"></a>System. appusermodel. relaunchdisplaynameresource
+# <a name="systemappusermodelrelaunchdisplaynameresource"></a>System.AppUserModel.CsvDisplayNameResource
 
-Gibt den anzeigen Amen an, der für die Verknüpfung verwendet wird, die auf der Taskleiste erstellt wird, wenn der Benutzer eine Anwendung an die Taskleiste anheften oder über die Sprung Liste der Schaltfläche eine neue Instanz starten soll. Der Wert dieser Eigenschaft muss einer der folgenden sein:
+Gibt den Anzeigenamen an, der für die Verknüpfung verwendet wird, die auf der Taskleiste erstellt wird, wenn der Benutzer eine Anwendung an die Taskleiste anheftet oder eine neue Instanz über die Sprungliste der Schaltfläche startet. Der Wert dieser Eigenschaft muss einer der folgenden Sein:
 
--   Eine indirekte Ressourcen Zeichenfolge, z. b. "@% systemdir% \\ system32 \\shell32.dll,-19263". Beachten Sie, dass das Zeichen "@" erforderlich ist, um eine indirekte Zeichenfolge von einer nur-Text-Zeichenfolge zu unterscheiden (im nächsten aufzurufenen Absatz beschrieben). Diese indirekte Zeichenfolge besteht aus einer Binärdatei und einer Ressourcen-ID der Zeichenfolge, die in dieser Binärdatei enthalten ist. Es wird dringend empfohlen, dieses indirekte Zeichen folgen Formular zu verwenden, das sicherstellt, dass sich der Anzeige Name entsprechend ändert, wenn die Systemsprache über die mehrsprachige Benutzeroberfläche (MUI) geändert wird. Das Zeichen "-" vor der Ressourcen-ID ist erforderlich.
--   Eine klar Text Zeichenfolge, die nicht auf eine Ressource verweist. Dies sollte nur verwendet werden, wenn der Anzeige Name dynamisch berechnet oder aus einer Datenquelle abgerufen wird, die MUI nicht unterstützt. Die Zeichenfolge könnte z. b. der Name eines Geräts sein, z. b. "Microsoft Zune", in Fällen, in denen die Anwendung angezeigt wird, wenn das Gerät mit dem Computer verbunden ist.
+-   Eine indirekte Ressourcenzeichenfolge wie "@%systemdir% \\ system32 \\shell32.dll,-19263". Beachten Sie, dass das @-Zeichen erforderlich ist, um eine indirekte Zeichenfolge von einer Nur-Text-Zeichenfolge zu unterscheiden (wie im nächsten Absatz mit Aufzählungszeichen beschrieben). Diese indirekte Zeichenfolge besteht aus einer Binärdatei und einer Ressourcen-ID der Zeichenfolge, die in dieser Binärdatei enthalten ist. Es wird dringend empfohlen, dieses indirekte Zeichenfolgenformular zu verwenden. Dadurch wird sichergestellt, dass sich der Anzeigename entsprechend ändert, wenn die Systemsprache über die mehrsprachige Benutzeroberfläche geändert wird. Das Zeichen "-", bevor die Ressourcen-ID erforderlich ist.
+-   Eine Nur-Text-Zeichenfolge, die nicht auf eine Ressource verweist. Dies sollte nur verwendet werden, wenn der Anzeigename dynamisch berechnet oder aus einer Datenquelle abgerufen wird, die NOTE nicht unterstützt. Die Zeichenfolge kann beispielsweise der Name eines Geräts sein, z. B. "Microsoft Zune", wenn die Anwendung angezeigt wird, wenn das Gerät an den Computer angeschlossen ist.
 
 > [!Note]  
-> [System. appusermodel. relaunchcommand](./props-system-appusermodel-relaunchcommand.md) und [System. appusermodel. relaunchdisplaynameresource]() müssen immer zusammengesetzt werden. Wenn eine dieser Eigenschaften nicht festgelegt ist, wird keines von beiden verwendet.
+> [System.AppUserModel.CsvCommand](./props-system-appusermodel-relaunchcommand.md) und [System.AppUserModel.NeustartDisplayNameResource]() müssen immer zusammen festgelegt werden. Wenn eine dieser Eigenschaften nicht festgelegt ist, wird keine dieser Eigenschaften verwendet.
 
  
 
-Diese Eigenschaft wird nur verwendet, wenn ein Fenster über eine explizite Anwendungs Benutzer Modell-ID (appusermodelid) verfügt ([System.AppUserModel.ID](./props-system-appusermodel-id.md), festgelegt über [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)). Wenn das Fenster nicht über eine explizite appusermodelid verfügt, wird diese Eigenschaft ignoriert, und das Fenster wird gruppiert und angeheftet, als wäre es Teil des Prozesses, in dem es enthalten ist. Weitere Informationen zur Anwendung von expliziten appusermudelids und deren Auswirkungen auf das Anheften der Taskleiste finden Sie unter [Anwendungs Benutzer Modell-IDs (appusermudelids)](../shell/appids.md). Diese Eigenschaft soll von Anwendungen oder Fenstern verwendet werden, die nicht standardmäßige Neustarts-Informationen bereitstellen möchten. Weitere Informationen finden Sie unter [System. appusermodel. relaunchcommand](./props-system-appusermodel-relaunchcommand.md).
+Diese Eigenschaft wird nur verwendet, wenn ein Fenster über eine explizite Anwendungsbenutzermodell-ID (AppUserModelID) ([System.AppUserModel.ID](./props-system-appusermodel-id.md), festgelegt über [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)) verfügt. Wenn das Fenster nicht über eine explizite AppUserModelID verfügt, wird diese Eigenschaft ignoriert, und das Fenster wird gruppiert und angeheftet, als wäre es Teil des Prozesses, der es besitzt. Weitere Informationen zur Anwendung expliziter AppUserModelIDs und deren Auswirkungen auf das Anheften auf die Taskleiste finden Sie unter [Anwendungsbenutzermodell-IDs (AppUserModelIDs).](../shell/appids.md) Diese Eigenschaft soll von Anwendungen oder Fenstern verwendet werden, die nicht standardmäßige Neustartinformationen bereitstellen möchten. Weitere Informationen finden Sie unter [System.AppUserModel.CsvCommand](./props-system-appusermodel-relaunchcommand.md).
 
 > [!Note]  
-> Diese Eigenschaft wird ignoriert, wenn [System. appusermodel. preventpinning](./props-system-appusermodel-preventpinning.md) festgelegt ist. Dies ermöglicht es einer Anwendung, die Gruppierung ihrer Fenster zu steuern, indem Ihnen explizit appusermudelids zugewiesen wird, aber verhindert wird, dass diese Fenster fixiert werden.
+> Diese Eigenschaft wird ignoriert, wenn [System.AppUserModel.PreventPinning](./props-system-appusermodel-preventpinning.md) festgelegt ist. Dadurch kann eine Anwendung die Gruppierung ihrer Fenster steuern, indem sie ihnen explizite AppUserModelIDs zuweist, aber verhindert, dass diese Fenster angeheftet werden.
 
  
 
-Wenn Sie diese Eigenschaft für ein Fenster festlegen möchten, rufen Sie mit [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow) den Eigenschaften Speicher des Fensters ab, und verwenden Sie die Methoden dieses abgerufenen [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Objekts, um die [System. appusermodel. relaunchdisplaynameresource]() -Eigenschaft dieses Fensters festzulegen.
+Um diese Eigenschaft in einem Fenster festzulegen, verwenden Sie [**SHGetPropertyStoreForWindow,**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow) um den Eigenschaftenspeicher des Fensters abzurufen, und verwenden Sie die Methoden von , die das [**IPropertyStore-Objekt**](/windows/win32/api/propsys/nn-propsys-ipropertystore) abgerufen haben, um die [System.AppUserModel.GineDisplayNameResource-Eigenschaft]() dieses Fensters festzulegen.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -48,78 +48,78 @@ propertyDescription
       IsInnate = false
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anwendungs Benutzer Modell-IDs (appusermudelids)](../shell/appids.md)
+[Anwendungsbenutzermodell-IDs (AppUserModelIDs)](../shell/appids.md)
 </dt> <dt>
 
 [System.AppUserModel.ID](./props-system-appusermodel-id.md)
 </dt> <dt>
 
-[propertydescriptionlist](./propdesc-schema-propertydescriptionlist.md)
+[propertyDescriptionList](./propdesc-schema-propertydescriptionlist.md)
 </dt> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
 [aliasInfo](./propdesc-schema-aliasinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
 [enum](./propdesc-schema-enum.md)
 </dt> <dt>
 
-[enumbereich](./propdesc-schema-enumrange.md)
+[enumRange](./propdesc-schema-enumrange.md)
 </dt> <dt>
 
 [image](./propdesc-schema-image.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> <dt>
 
-[relatedpropertyinfo](./propdesc-schema-relatedpropertyinfo.md)
+[relatedPropertyInfo](./propdesc-schema-relatedpropertyinfo.md)
 </dt> <dt>
 
 [relatedProperty](./propdesc-schema-relatedproperty.md)

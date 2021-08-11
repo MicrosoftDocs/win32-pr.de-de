@@ -1,30 +1,30 @@
 ---
-title: LibMain. CPP
-description: In der Beispiel Anbieter Komponente ist ein Codebeispiel für den Standard-DLL-Einstiegspunkt für Adssmp.dll in LibMain. cpp. In der folgenden Tabelle sind die unterstützten Routinen aufgeführt.
+title: LIBMAIN. Cpp
+description: In der Beispielanbieterkomponente befindet sich ein Codebeispiel für den STANDARDMÄßIGEN DLL-Einstiegspunkt für Adssmp.dll in Libmain.cpp. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
 ms.assetid: aa05fbd1-509d-4ed6-8a49-1ce11ce54c0e
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e309d3c6454901b26f5ab67351033b39d73dd7aa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3d2753d2067a7e33f9139836ed6e4c6806e628aa48f87d719a85c31ca6e0c8b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179268"
 ---
-# <a name="libmaincpp"></a>LibMain. CPP
+# <a name="libmaincpp"></a>LIBMAIN. Cpp
 
-In der Beispiel Anbieter Komponente ist ein Codebeispiel für den Standard-DLL-Einstiegspunkt für Adssmp.dll in LibMain. cpp. In der folgenden Tabelle sind die unterstützten Routinen aufgeführt.
+In der Beispielanbieterkomponente befindet sich ein Codebeispiel für den STANDARDMÄßIGEN DLL-Einstiegspunkt für Adssmp.dll in Libmain.cpp. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
 
 
 
 | Element                                  | BESCHREIBUNG                                                              |
 |---------------------------------------|--------------------------------------------------------------------------|
-| **DllGetClassObject**<br/>      | Der Standard-DLL-Einstiegspunkt für die Suche nach klassenfac<br/>        |
+| **Dllgetclassobject**<br/>      | Standard-DLL-Einstiegspunkt zum Suchen von Klassenfactorys.<br/>        |
 | **DllCanUnloadNow**<br/>        | Standard-DLL-Einstiegspunkt, um zu bestimmen, ob die DLL entladen werden kann.<br/> |
-| **LibMain**<br/>                | Einstiegspunkt für die Initialisierung der Standard-dll.<br/>                      |
-| **Iscompatibleoleversion**<br/> | Überprüfen Sie die Kompatibilität mit der OLE-Laufzeit.<br/>                   |
-| **DllMain**<br/>                | Einstiegspunkt für die meisten Versionen von Windows 2000 oder Windows NT.<br/>     |
+| **LibMain**<br/>                | Standard-DLL-Initialisierungspunkt.<br/>                      |
+| **IsCompatibleOleVersion**<br/> | Überprüfen Sie die Kompatibilität mit der OLE-Laufzeit.<br/>                   |
+| **DllMain**<br/>                | Einstiegspunkt für die meisten nt-Versionen Windows 2000 oder Windows.<br/>     |
 
 
 

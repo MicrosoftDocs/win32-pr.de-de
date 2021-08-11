@@ -1,24 +1,24 @@
 ---
 title: Erstellen neuer Benutzer in der Organisationseinheit
-description: Terry Adams wurde bei der Fabrikam Sales-Organisation eingestellt. Sein direkter Bericht ist Patrick Hines.
+description: Adams wurde in der Fabrikam Sales-Organisation eingestellt. Sein direkter Bericht ist Patrick Hines.
 ms.assetid: bc31ed04-e505-4d64-9fa3-d06af7351db0
 ms.tgt_platform: multiple
 keywords:
 - Erstellen neuer Benutzer in der Organisationseinheit ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c45f9dc91f1c36493a4ae8e1c9bb1a69268c9987
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b76d62c8d95e7d5e421fc562e38716477ff2dfb8f4097d4652710e2c50715487
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118180115"
 ---
 # <a name="creating-new-users-in-the-organizational-unit"></a>Erstellen neuer Benutzer in der Organisationseinheit
 
-Terry Adams wurde bei der Fabrikam Sales-Organisation eingestellt. Sein direkter Bericht ist Patrick Hines.
+Adams wurde in der Fabrikam Sales-Organisation eingestellt. Sein direkter Bericht ist Patrick Hines.
 
-Wie im folgenden Codebeispiel gezeigt, erstellt Joe andreshak, der Unternehmens Administrator, ein neues Konto für ihn.
+Wie im folgenden Codebeispiel gezeigt, erstellt Joe Andreshak, der Unternehmensadministrator, ein neues Konto für ihn.
 
 
 ```VB
@@ -37,15 +37,15 @@ usr.SetInfo
 
 
 
-Wenn Sie einen neuen Benutzer erstellen, müssen Sie einen **sAMAccountName** angeben. Dies ist ein obligatorisches Attribut für die User-Klasse. Bevor eine Instanz eines Objekts erstellt werden kann, müssen alle obligatorischen Attribute festgelegt werden. Der **sAMAccountName** wird automatisch generiert, wenn ein neuer Benutzer nicht angegeben wird.
+Beim Erstellen eines neuen Benutzers müssen Sie einen **sAMAccountName angeben.** Dies ist ein obligatorisches Attribut für die Benutzerklasse. Bevor eine Instanz eines Objekts erstellt werden kann, müssen alle obligatorischen Attribute festgelegt werden. Der sAMAccountName wird automatisch generiert, wenn kein **sAMAccountName** für einen neuen Benutzer angegeben ist.
 
-Beim Erstellen eines neuen Benutzers müssen alle erforderlichen Attribute im lokalen Cache festgelegt werden, bevor die [**IADs. SetInfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) -Methode aufgerufen wird.
+Beim Erstellen eines neuen Benutzers müssen alle erforderlichen Attribute im lokalen Cache festgelegt werden, bevor die [**IADs.SetInfo-Methode**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) aufgerufen wird.
 
-Joe kann als Administrator das Kennwort von Terry mithilfe der [**IADsUser. SetPassword**](/windows/desktop/api/Iads/nf-iads-iadsuser-setpassword) -Methode zuweisen. Die **IADsUser. SetPassword** -Methode funktioniert erst, wenn die [**IADs. SetInfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) -Methode aufgerufen wurde.
+Joe kann als Administrator mithilfe der [**IADsUser.SetPassword-Methode**](/windows/desktop/api/Iads/nf-iads-iadsuser-setpassword) das Kennwort von Administrators zuweisen. Die **IADsUser.SetPassword-Methode** funktioniert erst, wenn die [**IADs.SetInfo-Methode**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) aufgerufen wurde.
 
-Anschließend aktiviert Joe das Benutzerkonto, indem die [**IADsUser. accountdeaktiviert**](iadsuser-property-methods.md) -Eigenschaft auf **false** festgelegt wird.
+Anschließend aktiviert Joe das Benutzerkonto, indem die [**IADsUser.AccountDisabled-Eigenschaft**](iadsuser-property-methods.md) auf **FALSE festgelegt wird.**
 
-Im folgenden Codebeispiel wird gezeigt, wie Oliver als Manager für Patrick festgelegt wird.
+Im folgenden Codebeispiel wird gezeigt, wie Sie Als Patricks Vorgesetzter festlegen.
 
 
 ```VB
@@ -56,9 +56,9 @@ usr.SetInfo
 
 
 
-Sie Fragen sich vielleicht, was passiert, wenn Terry seinen Namen ändert, zu einer anderen Organisation wechselt oder das Unternehmen verlässt. Wer verwaltet diesen Manager-Direct Report Link? Weitere Informationen und die Lösung für dieses Problem finden Sie unter [Neuorganisation](reorganization.md). Da das Active Directory Schema erweiterbar ist, können Sie die Objekte modellieren, um ähnliche Manager-direkte Berichts Stil Beziehungen einzubeziehen.
+Sie fragen sich vielleicht, was passiert, wenn Chef seinen Namen ändert, in eine andere Organisation wechselt oder das Unternehmen verlässt. Wer diesen Manager-Direct-Berichtslink? Weitere Informationen und die Lösung für dieses Problem finden Sie unter [Neuorganisation von](reorganization.md). Da das Active Directory-Schema erweiterbar ist, können Sie Ihre Objekte so modellieren, dass sie ähnliche Beziehungen im Manager-Direct-Berichtsstil enthalten.
 
-Bevor Sie mit der nächsten Aufgabe fortfahren, sehen Sie sich ein Codebeispiel an, das zeigt, wie Joe die direkten Berichte von Oliver anzeigen würde.
+Bevor Sie mit der nächsten Aufgabe los gehen, sehen Sie sich ein Codebeispiel an, das zeigt, wie Joe Die direkten Berichte von Joe anzeigen würde.
 
 
 ```VB
@@ -72,11 +72,11 @@ Next
 
 
 
-In diesem Codebeispiel wird Patrick als direkter Bericht von Oliver angezeigt, auch wenn das **DirectReports** -Attribut nie geändert wurde. Active Directory führt dies automatisch aus.
+In diesem Codebeispiel wird Patrick als direkter Bericht von Patrick angezeigt, obwohl das **directReports-Attribut** nie geändert wurde. Active Directory führt dies automatisch durch.
 
-In der Verzeichnis Welt kann ein Attribut einen einzelnen oder mehrere Werte aufweisen. Da **DirectReports** über mehrere Werte verfügen, können Sie diese Informationen überprüfen, indem Sie sich das Schema ansehen. es ist einfacher, die [**IADs. Getex**](/windows/desktop/api/Iads/nf-iads-iads-getex) -Methode zu verwenden, die ein Array von Werten zurückgibt, unabhängig davon, ob ein oder mehrere Werte zurückgegeben werden.
+In der Verzeichniswelt kann ein Attribut über einzelne oder mehrere Werte verfügen. Da **directReports** über mehrere Werte verfügt, können Sie diese Informationen über das Schema erhalten. Es ist einfacher, die [**IADs.GetEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getex) zu verwenden, die unabhängig davon, ob einzelne oder mehrere Werte zurückgegeben werden, ein Array von Werten zurückgibt.
 
-Mit dem Snap-in "Active Directory-Benutzer und-Computer" können Sie direktberichte und Manager Beziehungen auf der Eigenschaften Seite des Benutzers anzeigen.
+Mit Active Directory-Benutzer und -Computer-Snap-In können Sie direkte Berichte und Managerbeziehungen auf der Eigenschaftenseite des Benutzers anzeigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -85,9 +85,9 @@ Mit dem Snap-in "Active Directory-Benutzer und-Computer" können Sie direktberic
 [Hinzufügen von Benutzern zu einer Gruppe](adding-users-to-a-group.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

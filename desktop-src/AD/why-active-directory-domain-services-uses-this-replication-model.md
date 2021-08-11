@@ -1,40 +1,40 @@
 ---
-title: Warum Active Directory Domain Services dieses Replikations Modell verwendet
-description: In diesem Thema werden die Gründe für das frei Form System erläutert, das von Active Directory Domain Services für ein Replikations Modell verwendet wird.
+title: Gründe für die Verwendung dieses Replikationsmodells durch Active Directory Domain Services
+description: In diesem Thema werden die Gründe für das Freiformsystem erläutert, das von Active Directory Domain Services für ein Replikationsmodell verwendet wird.
 ms.assetid: 202df900-6d03-4aa8-9099-016238059ef4
 ms.tgt_platform: multiple
 keywords:
-- Replikations Modell Active Directory, Vorteile
+- Replikationsmodell Active Directory , Vorteile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 538fe291a04953d373ff3cd45cbd4693d3dafab4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 79c137fadf768c97b6d8be962b22c74b45e30bc41c7dfb7e9ea67e1f145cd92d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118181991"
 ---
-# <a name="why-active-directory-domain-services-uses-this-replication-model"></a>Warum Active Directory Domain Services dieses Replikations Modell verwendet
+# <a name="why-active-directory-domain-services-uses-this-replication-model"></a>Gründe für die Verwendung dieses Replikationsmodells durch Active Directory Domain Services
 
-In diesem Thema werden die Gründe für das frei Form System erläutert, das von Active Directory Domain Services für ein Replikations Modell verwendet wird.
+In diesem Thema werden die Gründe für das Freiformsystem erläutert, das von Active Directory Domain Services für ein Replikationsmodell verwendet wird.
 
-Active Directory Domain Services sind aus folgenden Gründen ein frei Form System:
+Active Directory Domain Services sind aus folgenden Gründen ein Freiformsystem:
 
--   Kunden benötigen eine hochgradig verteilte Lösung, bei der Teile des Verzeichnisses auf Ihre Netzwerke verteilt und lokal verwaltet werden können.
--   Große Kunden wachsen häufig auf Millionen von Objekten, Hunderte oder Tausende von Replikaten oder beides.
--   Viele Kunden Netzwerke bieten nur zeitweilig eine Verbindung zu einigen Standorten. Beispielsweise werden remoteöl-drillingplattformen und-Systeme auf dem Meeres System ausgeliefert, damit das System teilweise verbundene oder getrennte Vorgänge tolerieren muss.
+-   Kunden benötigen eine hochgradig verteilte Lösung, in der Teile des Verzeichnisses auf ihre Netzwerke verteilt und lokal verwaltet werden können.
+-   Große Kunden wachsen häufig auf Millionen von Objekten, Hunderte oder Tausende von Replikaten oder beides an.
+-   Viele Kundennetzwerke bieten nur zeitweilige Verbindungen mit einigen Standorten. Beispielsweise sind Remote-Öl-Drillplattformen und -versande auf See, sodass das System gegenüber teilweise verbundenen oder getrennten Vorgängen tolerant sein muss.
 
-Es gibt keine Möglichkeit, eine umfassende Kenntnis des aktuellen oder zukünftigen Zustands eines verteilten Systems zu gewährleisten, weil Informationen zu Zustandsänderungen weitergegeben werden müssen und die Weitergabe Zeit in Anspruch nimmt.
+Es gibt keine Möglichkeit, eine vollständige Kenntnis des aktuellen oder zukünftigen Zustands eines verteilten Systems zu gewährleisten, da das Wissen über Zustandsänderungen weitergegeben werden muss und die Weitergabe eine Zeit in Anspruch nimmt, während der weitere Zustandsänderungen auftreten können.
 
-Eng gekoppelte Systeme behandeln die Unsicherheit, indem Sie versuchen, Sie auszuschließen. Dies erfolgt durch Einschränkungen bei Updates, die erfordern, dass alle Knoten oder die Mehrzahl der Knoten verfügbar sind, bevor Updates durchgeführt werden können, indem verteilte Sperr Schemas verwendet werden oder ein Single-Mastering für kritische Ressourcen verwendet wird. Dadurch werden alle Knoten auf eine gute Verbindung beschränkt oder eine Kombination dieser Techniken. Je stärker die Computer Knoten in einem verteilten System gekoppelt sind, desto niedriger ist die Skalierungs Grenze.
+Eng gekoppelte Systeme bewältigen die Unsicherheit, indem sie versuchen, sie zu beseitigen. Dies erfolgt durch Einschränkungen für Updates, die erfordern, dass alle Knoten oder ein Großteil der Knoten verfügbar sein müssen, bevor Updates ausgeführt werden können, verteilte Sperrschemas oder Singlemastering für kritische Ressourcen, das Einschränken aller Knoten für eine gute Verbindung oder eine Kombination dieser Techniken. Je enger die Computingknoten in einem verteilten System gekoppelt sind, desto niedriger ist der Skalierungsgrenzwert.
 
-Frei Formsysteme behandeln die Unsicherheit, indem Sie Sie tolerieren. Mit einem frei Form System können die Knoten unterschiedliche Ansichten des gesamten Systemstatus aufweisen und Algorithmen zum Auflösen von Konflikten bereitstellen.
+Freiformsysteme behandeln Unsicherheit, indem sie sie tolerieren. Ein Freiformsystem ermöglicht es den Knoten, unterschiedliche Ansichten des Gesamtsystemzustands zu erhalten, und stellt Algorithmen zum Lösen von Konflikten bereit.
 
-Eng gekoppelte Lösungen wurden aufgrund der Anforderungen an die lokale Verwaltung, den getrennten Betrieb und die Skalierbarkeit einer sehr großen Anzahl von Knoten als ungeeignet für Active Directory Domain Services zurückgewiesen. Das lose gekoppelte Modell, das von der multimasterlose Datenkonsistenz mit Konvergenz gewählt wurde, erfüllt alle Anforderungen.
+Eng gekoppelte Lösungen wurden aufgrund der Anforderungen an die lokale Verwaltung, den getrennten Betrieb und die Skalierbarkeit für eine sehr große Anzahl von Knoten als ungeeignet für Active Directory Domain Services abgelehnt. Das ausgewählte lose gekoppelte Modell, die lose Multimasterkonsistenz mit Konvergenz, erfüllt alle Anforderungen.
 
- 
+ 
 
- 
+ 
 
 
 

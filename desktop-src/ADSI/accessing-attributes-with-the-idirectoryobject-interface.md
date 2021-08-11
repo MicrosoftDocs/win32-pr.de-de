@@ -1,39 +1,39 @@
 ---
 title: Zugreifen auf Attribute mit der IDirectoryObject-Schnittstelle
-description: Die IDirectoryObject-Schnittstelle stellt eine Client Anwendung bereit, die in C und C++ mit direktem Zugriff auf Verzeichnisdienst Objekte geschrieben wurde.
+description: Die IDirectoryObject-Schnittstelle stellt eine in C und C++ geschriebene Clientanwendung mit direktem Zugriff auf Verzeichnisdienstobjekte bereit.
 ms.assetid: 006be48e-222f-4f77-ac91-58830f2b7363
 ms.tgt_platform: multiple
 keywords:
 - Zugreifen auf Attribute mit der IDirectoryObject-Schnittstelle ADSI
-- IDirectoryObject ADSI, zugreifen auf Attribute mit
-- ADSI ADSI, using mithilfe der IDirectoryObject-Schnittstelle für den Zugriff auf Attribute
+- IDirectoryObject ADSI , Zugreifen auf Attribute mit
+- ADSI ADSI mithilfe der IDirectoryObject-Schnittstelle für den Zugriff auf Attribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1da62b6a5cf7e1389276475c46faac6455672790
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b1fb7f2b8302c2e92a7e604bdc85389fb78acb24a59e467ca42b8bbd3c6c004e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118181539"
 ---
 # <a name="accessing-attributes-with-the-idirectoryobject-interface"></a>Zugreifen auf Attribute mit der IDirectoryObject-Schnittstelle
 
-Die [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) -Schnittstelle stellt eine Client Anwendung bereit, die in C und C++ mit direktem Zugriff auf Verzeichnisdienst Objekte geschrieben wurde. Die-Schnittstelle ermöglicht den Zugriff mithilfe eines direkten Netzwerk Protokolls anstelle des ADSI-Attribut Caches. Anstelle der Eigenschaften, die von der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle unterstützt werden, stellt **IDirectoryObject** Methoden bereit, die eine kritische Teilmenge der Wartungsmethoden eines Objekts unterstützen und Zugriff auf seine Attribute bereitstellen. Mit **IDirectoryObject** kann ein Client eine beliebige Anzahl von Objekt Attributen mit einem Methoden Befehl Abrufen oder festlegen. Im Gegensatz zu den entsprechenden Automatisierungsmethoden, die als Batch verarbeitet werden, werden die von **IDirectoryObject** beim Aufrufen von ausgeführt. Da für Methoden in dieser Schnittstelle das Erstellen einer Instanz eines Automation-Verzeichnis Objekts nicht erforderlich ist, ist der Leistungs Aufwand gering.
+Die [**IDirectoryObject-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) stellt eine in C und C++ geschriebene Clientanwendung mit direktem Zugriff auf Verzeichnisdienstobjekte bereit. Die Schnittstelle ermöglicht den Zugriff über ein direktes Netzwerkprotokoll und nicht über den ADSI-Attributcache. Statt der eigenschaften, die von der [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) unterstützt werden, stellt **IDirectoryObject** Methoden bereit, die eine kritische Teilmenge der Wartungsmethoden eines Objekts unterstützen und Zugriff auf seine Attribute bieten. Mit **IDirectoryObject kann** ein Client eine beliebige Anzahl von Objektattributen mit einem Methodenaufruf erhalten oder festlegen. Im Gegensatz zu den entsprechenden Automation-Methoden, die in Batches ausgeführt werden, werden die **von IDirectoryObject** ausgeführt, wenn sie aufgerufen werden. Da Methoden auf dieser Schnittstelle keine Instanz eines Automation-Verzeichnisobjekts erstellen müssen, ist der Leistungsaufwand gering.
 
-Clients, die in Sprachen wie C und C++ geschrieben wurden, sollten die Methoden der [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) -Schnittstelle verwenden, um die Leistung zu optimieren und die systemeigenen Verzeichnisdienst Schnittstellen zu nutzen. Automatisierungs Clients können **IDirectoryObject** nicht verwenden. Stattdessen sollten Sie die [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle verwenden.
+Clients, die in Sprachen wie C und C++ geschrieben wurden, sollten die Methoden der [**IDirectoryObject-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) verwenden, um die Leistung zu optimieren und native Verzeichnisdienstschnittstellen zu nutzen. Automation-Clients können **IDirectoryObject nicht verwenden.** Stattdessen sollten sie die [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) verwenden.
 
-Die [**IDirectoryObject:: getobjectattributes**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-getobjectattributes) -Methode ruft Attribute mit einem einzelnen und mehreren Werten ab. Diese Methode nimmt eine Liste der angeforderten Attribute an und gibt eine [**ADS \_ attr \_ Info**](/windows/desktop/api/Iads/ns-iads-ads_attr_info) -Struktur zurück. ADSI ordnet diese Struktur zu. der Aufrufer muss diesen Arbeitsspeicher freigeben, wenn er nicht mehr benötigt wird, indem die [**freeadsmem**](/windows/desktop/api/Adshlp/nf-adshlp-freeadsmem) -Funktion verwendet wird.
+Die [**IDirectoryObject::GetObjectAttributes-Methode**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-getobjectattributes) ruft Attribute mit einzelnen und mehreren Werten ab. Diese Methode verwendet eine Liste der angeforderten Attribute und gibt eine [**ADS \_ ATTR \_ INFO-Struktur**](/windows/desktop/api/Iads/ns-iads-ads_attr_info) zurück. ADSI ordnet diese Struktur zu. Der Aufrufer muss diesen Arbeitsspeicher frei geben, wenn er mit der [**FreeADsMem-Funktion nicht mehr benötigt**](/windows/desktop/api/Adshlp/nf-adshlp-freeadsmem) wird.
 
-Die Reihenfolge der zurückgegebenen Attributwerte ist nicht notwendigerweise identisch mit der Reihenfolge, in der die Attribute angefordert wurden. Daher ist es erforderlich, die von ADSI zurückgegebenen Attributnamen zu vergleichen.
+Die Reihenfolge der zurückgegebenen Attributwerte ist nicht notwendigerweise mit der Reihenfolge identisch, in der die Attribute angefordert wurden. Daher ist es erforderlich, die von ADSI zurückgegebenen Attributnamen zu vergleichen.
 
 > [!Note]  
-> Die [**ADS \_ attr \_ Info**](/windows/desktop/api/Iads/ns-iads-ads_attr_info) -Struktur gibt nicht alle angeforderten Attribute zurück. Nur die Attribute, die Werte enthalten, sind Teil der zurückgegebenen Struktur.
+> Die [**ADS \_ ATTR \_ INFO-Struktur**](/windows/desktop/api/Iads/ns-iads-ads_attr_info) gibt nicht alle angeforderten Attribute zurück. Nur die Attribute, die Werte enthalten, sind Teil der zurückgegebenen -Struktur.
 
- 
+ 
 
-Die Anzahl der zurückgegebenen Attribute wird durch den *dwnumberattributes* -Parameter bestimmt, der an die [**IDirectoryObject:: getobjectattributes**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-getobjectattributes) -Methode übergeben wird.
+Die Anzahl der zurückgegebenen Attribute wird durch den *dwNumberAttributes-Parameter* bestimmt, der an die [**IDirectoryObject::GetObjectAttributes-Methode übergeben**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-getobjectattributes) wird.
 
-Das folgende Codebeispiel bindet an ein-Objekt und verwendet die [**IDirectoryObject:: getobjectattributes**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-getobjectattributes) -Methode, um Attribute des-Objekts abzurufen.
+Im folgenden Codebeispiel wird an ein -Objekt gebunden und die [**IDirectoryObject::GetObjectAttributes-Methode**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-getobjectattributes) verwendet, um Attribute des Objekts abzurufen.
 
 
 ```C++
@@ -111,9 +111,9 @@ CoUninitialize();
 
 
 
- 
+ 
 
- 
+ 
 
 
 

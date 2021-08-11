@@ -1,10 +1,10 @@
 ---
-title: Iadscomputer-Eigenschaften Methoden (IADs. h)
-description: Die iadscomputer-Schnittstellen Methoden lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsComputer-Eigenschaftsmethoden (Iads.h)
+description: Die IADsComputer-Schnittstellenmethoden lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: c990b6bb-6256-4216-9435-c85c67db4d13
 ms.tgt_platform: multiple
 keywords:
-- Iadscomputer-Eigenschaften Methoden ADSI
+- IADsComputereigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -64,32 +64,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f2f3c455e2e43436627b62d142781bb6a605bef
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5692ffadde78c338845c497a1209cc6466923fe83e32fbf25649b4cd1d4b367d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179578"
 ---
-# <a name="iadscomputer-property-methods"></a>Iadscomputer-Eigenschaften Methoden
+# <a name="iadscomputer-property-methods"></a>IADsComputer-Eigenschaftsmethoden
 
-Die [**iadscomputer**](/windows/desktop/api/Iads/nn-iads-iadscomputer) -Schnittstellen Methoden lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die [**IADsComputer-Schnittstellenmethoden**](/windows/desktop/api/Iads/nn-iads-iadscomputer) lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Computer-ID**
+**ComputerID**
 </dt> <dd> <dl>
 
-Die den einzelnen Computern zugewiesenen Globally Unique Identifier.
+Der jedem Computer zugewiesene global eindeutige Bezeichner.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -107,14 +107,14 @@ HRESULT get_ComputerID(
 **Abteilung**
 </dt> <dd> <dl>
 
-Die Organisationseinheit (OU), z. b. die Abteilung, zu der dieser Computer gehört.
+Die Organisationseinheit ,z.B. abteilung, zu der dieser Computer gehört.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -142,7 +142,7 @@ Die Beschreibung dieses Computers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -163,14 +163,14 @@ HRESULT put_Description(
 **Division**
 </dt> <dd> <dl>
 
-Die Division innerhalb einer Organisation, der dieser Computer angehört.
+Die Abteilung innerhalb einer Organisation, zu der dieser Computer gehört.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -198,7 +198,7 @@ Der zugewiesene physische Speicherort dieses Computers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -219,14 +219,14 @@ HRESULT put_Location(
 **MemorySize**
 </dt> <dd> <dl>
 
-Die Größe des zufälligen zugriffsspeichers für diesen Computer in Megabyte.
+Die Größe des Arbeitsspeichers für den zufälligen Zugriff auf diesen Computer in Megabyte.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -254,7 +254,7 @@ Die Marke und das Modell dieses Computers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -272,17 +272,17 @@ HRESULT put_Model(
 
 </dt> </dl> </dd> <dt>
 
-**Netzwerkadressen**
+**NetAddresses**
 </dt> <dd> <dl>
 
-Ein Array von netaddress-Feldern, die die Adressen darstellen, von denen dieser Computer erreicht werden kann. Netaddress ist ein Anbieter spezifisches **BSTR** , bestehend aus zwei Teil Zeichenfolgen, die durch einen Doppelpunkt (:) getrennt sind. Die linke Teil Zeichenfolge gibt den Adresstyp an, und die Rechte Teil Zeichenfolge ist eine Zeichen folgen Darstellung einer Adresse dieses Typs. Beispielsweise weisen TCP/IP-Adressen folgendes Format auf: IP: 100.201.301.45. Die IPX-typadressen weisen folgendes Format auf: IPX: 10.123456.80.
+Ein Array von NetAddress-Feldern, die die Adressen darstellen, über die dieser Computer erreicht werden kann. NetAddress ist ein anbieterspezifischer **BSTR,** der aus zwei Teilzeichenfolgen besteht, die durch einen Doppelpunkt (:). Die linke Teilzeichenfolge gibt den Adresstyp an, und die rechte Teilzeichenfolge ist eine Zeichenfolgendarstellung einer Adresse dieses Typs. TCP/IP-Adressen haben beispielsweise folgendes Format: IP:100.201.301.45. IPX-Typadressen haben folgendes Format: IPX:10.123456.80.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -300,7 +300,7 @@ HRESULT put_NetAddresses(
 
 </dt> </dl> </dd> <dt>
 
-**OperatingSystem**
+**Operatingsystem**
 </dt> <dd> <dl>
 
 Das auf diesem Computer verwendete Betriebssystem.
@@ -310,7 +310,7 @@ Das auf diesem Computer verwendete Betriebssystem.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -338,7 +338,7 @@ Die Version des Betriebssystems, das auf diesem Computer verwendet wird.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -366,7 +366,7 @@ Die Person, der dieser Computer zugewiesen ist. Diese Person sollte auch über e
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -387,14 +387,14 @@ HRESULT put_Owner(
 **PrimaryUser**
 </dt> <dd> <dl>
 
-Der Name der Kontaktperson (z. b. ein Administrator) für diesen Computer.
+Der Name der Kontaktperson, z. B. ein Administrator, für diesen Computer.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -422,7 +422,7 @@ Der Prozessortyp.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -450,7 +450,7 @@ Die Anzahl der installierten Prozessoren.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -471,14 +471,14 @@ HRESULT put_ProcessorCount(
 **Rolle**
 </dt> <dd> <dl>
 
-Die Rolle dieses Computers, z. b. Arbeitsstation, Server oder Domänen Controller.
+Die Rolle dieses Computers, z. B. Arbeitsstation, Server oder Domänencontroller.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -499,14 +499,14 @@ HRESULT put_Role(
 **Website**
 </dt> <dd> <dl>
 
-Der Globally Unique Identifier, der den Standort identifiziert, in dem dieser Computer installiert wurde. Bei einem Standort handelt es sich um eine physische Region der guten Konnektivität in einem Netzwerk.
+Der global eindeutige Bezeichner, der den Standort identifiziert, an dem dieser Computer installiert wurde. Ein Standort ist eine physische Region mit guter Konnektivität in einem Netzwerk.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -521,7 +521,7 @@ HRESULT get_Site(
 
 </dt> </dl> </dd> <dt>
 
-**Storagecapacity**
+**StorageCapacity**
 </dt> <dd> <dl>
 
 Die Größe des Datenträgers in Megabyte.
@@ -531,7 +531,7 @@ Die Größe des Datenträgers in Megabyte.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -551,17 +551,17 @@ HRESULT put_StorageCapacity(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verschiedene Anbieter können unterschiedliche Eigenschaften eines Computer Objekts verfügbar machen. Weitere Informationen finden Sie unter [ADSI-System Anbieter](adsi-system-providers.md).
+Verschiedene Anbieter können verschiedene Eigenschaften eines Computerobjekts verfügbar machen. Weitere Informationen finden Sie unter [ADSI-Systemanbieter.](adsi-system-providers.md)
 
-Sie können ermitteln, welche Eigenschaften unterstützt werden, indem Sie die obligatorischen und optionalen Eigenschaften über die zugehörige Schema Klasse überprüfen. Weitere Informationen finden Sie unter [**iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass) -Schnittstelle.
+Sie können ermitteln, welche Eigenschaften unterstützt werden, indem Sie die obligatorischen und optionalen Eigenschaften über ihre Schemaklasse überprüfen. Weitere Informationen finden Sie in der [**IADsClass-Schnittstelle.**](/windows/desktop/api/Iads/nn-iads-iadsclass)
 
-Wenn Sie den Status eines Computers überprüfen oder den Vorgang zum Herunterfahren über das Netzwerk ausführen möchten, müssen Sie die [**iadscomputeroperations**](/windows/desktop/api/Iads/nn-iads-iadscomputeroperations) -Schnittstelle verwenden.
+Um den Status eines Computers zu überprüfen oder den Vorgang zum Herunterfahren über das Netzwerk auszuführen, müssen Sie die [**IADsComputerOperations-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadscomputeroperations) verwenden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Visual Basic Codebeispiel werden Computer Eigenschaften überprüft, die vom ADSI WinNT-Anbieter unterstützt werden.
+Im folgenden Visual Basic Codebeispiel werden computereigenschaften untersucht, die vom ADSI WinNT-Anbieter unterstützt werden.
 
 
 ```VB
@@ -581,7 +581,7 @@ End If
 
 
 
-Im folgenden C++-Codebeispiel werden Computer Eigenschaften überprüft, die vom ADSI WinNT-Anbieter unterstützt werden.
+Im folgenden C++-Codebeispiel werden die vom ADSI-WinNT-Anbieter unterstützten Computereigenschaften untersucht.
 
 
 ```C++
@@ -620,29 +620,29 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadscomputer ist als EFE3CC70-1D9F-11CF-B1F3-02608C9E7553 definiert.<br/>         |
+| IID<br/>                      | IID \_ IADsComputer ist als EFE3CC70-1D9F-11CF-B1F3-02608C9E7553 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadscomputer**](/windows/desktop/api/Iads/nn-iads-iadscomputer)
+[**IADsComputer**](/windows/desktop/api/Iads/nn-iads-iadscomputer)
 </dt> <dt>
 
-[ADSI-System Anbieter](adsi-system-providers.md)
+[ADSI-Systemanbieter](adsi-system-providers.md)
 </dt> <dt>
 
-[**Iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
+[**IADsClass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
 </dt> <dt>
 
-[**Iadscomputeroperations**](/windows/desktop/api/Iads/nn-iads-iadscomputeroperations)
+[**IADsComputerOperations**](/windows/desktop/api/Iads/nn-iads-iadscomputeroperations)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Iadsou-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadsou-Schnittstelle werden die in der folgenden Tabelle aufgeführten Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsOU-Eigenschaftenmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsOU-Schnittstelle erhalten oder legen die in der folgenden Tabelle aufgeführten Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 8cb84972-733b-47ca-8647-1b7a85c97021
 ms.tgt_platform: multiple
 keywords:
-- Iadsou-Eigenschaften Methoden ADSI
+- IADsOU-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -36,32 +36,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0ce30fad6a690a26a8e16b817b77b129dee25f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 019fb93575bc8b8b419797c7efdf41c15a6375172a834f48626befd3526b3b2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179529"
 ---
-# <a name="iadsou-property-methods"></a>Iadsou-Eigenschaften Methoden
+# <a name="iadsou-property-methods"></a>IADsOU-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**iadsou**](/windows/desktop/api/Iads/nn-iads-iadsou) -Schnittstelle werden die in der folgenden Tabelle aufgeführten Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsOU-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsou) erhalten oder legen die in der folgenden Tabelle aufgeführten Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Businesscategory**
+**BusinessCategory**
 </dt> <dd> <dl>
 
-Eine Zeichenfolge, die die allgemeine Geschäftsfunktion oder die von der Organisationseinheit ausgeführten Funktionen enthält, z. b. "Accounting".
+Eine Zeichenfolge, die die allgemeine Geschäftsfunktion oder die funktionen enthält, die von der Organisationseinheit ausgeführt werden, z. B. "Buchhaltung".
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -89,7 +89,7 @@ Eine Zeichenfolge, die eine Textbeschreibung der Organisationseinheit enthält.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -107,17 +107,17 @@ HRESULT put_Description(
 
 </dt> </dl> </dd> <dt>
 
-**Faxnummer**
+**FaxNumber**
 </dt> <dd> <dl>
 
-Eine Zeichenfolge, die die Faxnummer der Organisationseinheit enthält.
+Eine Zeichenfolge, die die Faksimilenummer der Organisationseinheit enthält.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -135,17 +135,17 @@ HRESULT put_FaxNumber(
 
 </dt> </dl> </dd> <dt>
 
-**Localityname**
+**LocalityName**
 </dt> <dd> <dl>
 
-Eine Zeichenfolge, die den Namen des geografischen Bereichs der Organisationseinheit enthält.
+Eine Zeichenfolge, die den Namen der geografischen Region der Organisationseinheit enthält.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -166,14 +166,14 @@ HRESULT put_LocalityName(
 **PostalAddress**
 </dt> <dd> <dl>
 
-Eine Zeichenfolge, die die Postanschrift der Organisationseinheit enthält.
+Eine Zeichenfolge, die die Postadresse der Organisationseinheit enthält.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -194,14 +194,14 @@ HRESULT put_PostalAddress(
 **SeeAlso**
 </dt> <dd> <dl>
 
-Ein Array von Zeichen folgen, das die Distinguished Names von anderen Verzeichnis Objekten enthält, die für dieses Objekt relevant sein können.
+Ein Array von Zeichenfolgen, das die Distinguished Names anderer Verzeichnisobjekte enthält, die für dieses Objekt relevant sein können.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -229,7 +229,7 @@ Eine Zeichenfolge, die die Telefonnummer der Organisationseinheit enthält.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -251,7 +251,7 @@ HRESULT put_TelephoneNumber(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel werden die **businesscategory** und die **Beschreibung** aller Organisationseinheiten in einem Container angezeigt. Dabei wird davon ausgegangen, dass der zugrunde liegende Verzeichnisdienst das Gruppieren von Verzeichnis Objekten nach Organisationseinheit unterstützt.
+Im folgenden Codebeispiel werden **businessCategory** und **Description aller** Organisationseinheiten in einem Container angezeigt. Es wird davon ausgegangen, dass der zugrunde liegende Verzeichnisdienst das Gruppieren von Verzeichnisobjekten nach Organisationseinheit unterstützt.
 
 
 ```VB
@@ -281,20 +281,20 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsou ist als A2F733B8-Effe-11CF-8ABC-00C04FD8D503 definiert.<br/>               |
+| IID<br/>                      | IID \_ IADsOU ist als A2F733B8-KVE-11CF-8ABC-00C04FD8D503 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadsou**](/windows/desktop/api/Iads/nn-iads-iadsou)
+[**IADsOU**](/windows/desktop/api/Iads/nn-iads-iadsou)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

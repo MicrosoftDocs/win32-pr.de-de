@@ -1,29 +1,29 @@
 ---
-title: Verwenden von IDirectoryObject, um eine Sicherheits Beschreibung zu erhalten
-description: Dieses Thema enthält ein Codebeispiel, das verwendet wird, um eine Sicherheits Beschreibung zu erhalten.
+title: Verwenden von IDirectoryObject zum Abrufen eines Sicherheitsdeskriptors
+description: Dieses Thema enthält ein Codebeispiel zum Abrufen eines Sicherheitsdeskriptors.
 ms.assetid: 989abd3f-9043-4c3f-a99a-63fa95daf203
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, verwenden von IDirectoryObject, um eine Sicherheits Beschreibung zu erhalten
+- Active Directory-Beispiele für Active Directory mithilfe von IDirectoryObject zum Abrufen eines Sicherheitsdeskriptors
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 562438d37d6bfadadfee95d13f80cb4c4728e0f2
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: bd7b2bd256fb9601cc61ff41465763ccc30c39bc68ff79760019dad1f8d510bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118182514"
 ---
-# <a name="using-idirectoryobject-to-get-a-security-descriptor"></a>Verwenden von IDirectoryObject, um eine Sicherheits Beschreibung zu erhalten
+# <a name="using-idirectoryobject-to-get-a-security-descriptor"></a>Verwenden von IDirectoryObject zum Abrufen eines Sicherheitsdeskriptors
 
-Dieses Thema enthält ein Codebeispiel, das verwendet wird, um eine Sicherheits Beschreibung zu erhalten.
+Dieses Thema enthält ein Codebeispiel zum Abrufen eines Sicherheitsdeskriptors.
 
-Im folgenden Codebeispiel für C++:
+Das folgende C++-Codebeispiel:
 
 -   Erstellt einen Puffer.
--   Verwendet die [**IDirectoryObject**](/windows/desktop/api/iads/nn-iads-idirectoryobject) -Schnittstelle, um die Sicherheits Beschreibung für das angegebene Objekt zu erhalten.
--   Kopiert die Sicherheits Beschreibung in den Puffer.
--   Gibt einen Zeiger auf eine [**Sicherheits \_ deskriptorstruktur**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) zurück, die die sicherheitsbeschreibungerdaten enthält.
+-   Verwendet die [**IDirectoryObject-Schnittstelle,**](/windows/desktop/api/iads/nn-iads-idirectoryobject) um den Sicherheitsdeskriptor des angegebenen Objekts abzurufen.
+-   Kopiert die Sicherheitsbeschreibung in den Puffer.
+-   Gibt einen Zeiger auf eine [**SECURITY \_ DESCRIPTOR-Struktur**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) zurück, die die Sicherheitsbeschreibungsdaten enthält.
 
 
 ```C++
@@ -85,6 +85,6 @@ HRESULT GetSDFromIDirectoryObject(
 
 
 
- 
+ 
 
- 
+ 

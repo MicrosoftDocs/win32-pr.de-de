@@ -1,11 +1,11 @@
 ---
-title: Das Attribut "ACS-Non-reserved-min-polierte Größe"
-description: Das Attribut ACS-Non-reserved-min-policastsize ist nur für die interne Verwendung vorgesehen.
+title: ATTRIBUT "ACS-Non-Reserved-Min-Policed-Size"
+description: Das ATTRIBUT ACS-Non-Reserved-Min-Policed-Size ist nur zur internen Verwendung.
 ms.assetid: f5ee29ec-d2a9-4026-a4d1-0484d353efdc
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ACS-Non-reserved-min-polierte Größe
-- acsnonreservedminpolicedsize-Attribut, AD-Schema
+- AD-Schema des ACS-Attributs "Non-Reserved-Min-Policed-Size"
+- AD-Schema des aCSNonReservedMinPolicedSize-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a9fa7794343929aa0f7d7d86f4fc1f1e9a8a5b2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e1f95ea52fd0b5871e28e790fdc8dcce1c247493bc0e6c9375c18a38ab0763f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118178425"
 ---
-# <a name="acs-non-reserved-min-policed-size-attribute"></a>Das Attribut "ACS-Non-reserved-min-polierte Größe"
+# <a name="acs-non-reserved-min-policed-size-attribute"></a>ATTRIBUT "ACS-Non-Reserved-Min-Policed-Size"
 
-Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verwendung vorgesehen. Basierend auf RFC2814.
+Das **ATTRIBUT ACS-Non-Reserved-Min-Policed-Size** ist nur zur internen Verwendung. Basierend auf RFC2814.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ACS-nicht reserviert-min-Richtlinien Größe    |
-| LDAP-Display-Name | acsnonreservedminpolicedsize         |
+| CN                | ACS-Non-Reserved-Min-Policed-Size    |
+| Ldap-Anzeigename | aCSNonReservedMinPolicedSize         |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1321              |
-| System-ID-GUID    | b6873917-3b90-11d2-90cc-00c04fd91ab1 |
+| System-Id-Guid    | b6873917-3b90-11d2-90cc-00c04fd91ab1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -99,11 +99,11 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -120,11 +120,11 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -141,11 +141,11 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -162,11 +162,11 @@ Das Attribut **ACS-Non-reserved-min-policastsize** ist nur für die interne Verw
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

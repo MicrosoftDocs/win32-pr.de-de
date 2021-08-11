@@ -1,39 +1,39 @@
 ---
-title: Angeben anderer Suchoptionen mit idirector ysearch
-description: Die idirector ysearch-Schnittstelle bietet zusätzliche Kontrolle über die Durchführung der Suche durch die Verwendung von Suchoptionen.
+title: Angeben anderer Suchoptionen mit IDirectorySearch
+description: Die IDirectorySearch-Schnittstelle bietet zusätzliche Kontrolle darüber, wie die Suche mithilfe von Suchoptionen durchgeführt wird.
 ms.assetid: 91b7ba90-99b3-4137-8e4e-8d0ccfb0ec13
 ms.tgt_platform: multiple
 keywords:
-- Angeben anderer Suchoptionen mit idirector ysearch ADSI
-- ADSI, Search, idirector ysearch, andere Suchoptionen
+- Angeben anderer Suchoptionen mit IDirectorySearch ADSI
+- ADSI, Search, IDirectorySearch, Andere Suchoptionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7064a291c3a299a5435ec454a17b1a666f20d0a9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 67105d9716934c8c7d1d56193ca0cdfde5f6a4bc4c32605420513dc62700d8b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118178765"
 ---
-# <a name="specifying-other-search-options-with-idirectorysearch"></a>Angeben anderer Suchoptionen mit idirector ysearch
+# <a name="specifying-other-search-options-with-idirectorysearch"></a>Angeben anderer Suchoptionen mit IDirectorySearch
 
-Die [**idirector ysearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) -Schnittstelle bietet zusätzliche Kontrolle über die Durchführung der Suche durch die Verwendung von Suchoptionen. Diese Suchoptionen werden festgelegt, indem Sie ein Array von Werbeeinblendungen von [**Werbe \_ \_**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) Einblendungen ausfüllen und die [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode aufrufen. Weitere Informationen finden Sie unter den folgenden Themen:
+Die [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) bietet zusätzliche Kontrolle darüber, wie die Suche mithilfe von Suchoptionen durchgeführt wird. Diese Suchoptionen werden festgelegt, indem sie ein Array von [**ADS \_ SEARCHPREF \_ INFO-Strukturen**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) ausfüllen und die [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) aufrufen. Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Verwenden der setsearchpreference-Methode](using-the-setsearchpreference-method.md)
--   [Synchrone und asynchrone Suchvorgänge mit idirector ysearch](synchronous-and-asynchronous-searches-with-idirectorysearch.md)
--   [Paging mit idirector ysearch](paging-with-idirectorysearch.md)
--   [Ergebnis Zwischenspeicherung mit idirector ysearch](result-caching-with-idirectorysearch.md)
--   [Ausführen einer Attribut Bereichs Abfrage](performing-an-attribute-scoped-query.md)
--   [Sortieren der Suchergebnisse mit idirector ysearch](sorting-the-search-results-with-idirectorysearch.md)
--   [Verweis Verfolgung mit idirector ysearch](referral-chasing-with-idirectorysearch.md)
--   [Größenbeschränkung mit idirector ysearch](size-limit-with-idirectorysearch.md)
--   [Server Zeit Limit bei idirector ysearch](server-time-limit-with-idirectorysearch.md)
--   [Client Zeit Limit mit idirector ysearch](client-time-limit-with-idirectorysearch.md)
--   [Zurückgeben von Attributnamen mit idirector ysearch](returning-only-attribute-names-with-idirectorysearch.md)
+-   [Verwenden der SetSearchPreference-Methode](using-the-setsearchpreference-method.md)
+-   [Synchrone und asynchrone Suchvorgänge mit IDirectorySearch](synchronous-and-asynchronous-searches-with-idirectorysearch.md)
+-   [Paging mit IDirectorySearch](paging-with-idirectorysearch.md)
+-   [Zwischenspeichern von Ergebnis mit IDirectorySearch](result-caching-with-idirectorysearch.md)
+-   [Ausführen einer Attributbereichsabfrage](performing-an-attribute-scoped-query.md)
+-   [Sortieren der Suchergebnisse mit IDirectorySearch](sorting-the-search-results-with-idirectorysearch.md)
+-   [Empfehlungssuche mit IDirectorySearch](referral-chasing-with-idirectorysearch.md)
+-   [Größenbeschränkung mit IDirectorySearch](size-limit-with-idirectorysearch.md)
+-   [Serverzeitlimit mit IDirectorySearch](server-time-limit-with-idirectorysearch.md)
+-   [Clientzeitlimit mit IDirectorySearch](client-time-limit-with-idirectorysearch.md)
+-   [Zurückgeben von nur Attributnamen mit IDirectorySearch](returning-only-attribute-names-with-idirectorysearch.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,33 +1,33 @@
 ---
-description: Apps können die Druckertreiber Isolation in Ihrem App-Manifest deklarieren, um die APP vom Druckertreiber zu isolieren und die Zuverlässigkeit der apps zu verbessern.
+description: Apps können die Druckertreiberisolation in ihrem App-Manifest deklarieren, um die App vom Druckertreiber zu isolieren und die Zuverlässigkeit der Apps zu verbessern.
 ms.assetid: 80650C46-AC96-46FD-894A-4F34B056AB79
 ms.topic: article
-title: 'Gewusst wie: Verwenden der Anwendungs Isolation'
+title: 'How To: Verwenden der Anwendungsisolation'
 ms.date: 05/31/2018
-ms.openlocfilehash: 28c2a143406e9501662e0ddf7294abfb25e362b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 818ba30e7b294c695b2f67bb9bccc485959db43818bb95aedaa67cafc26d3559
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118233830"
 ---
-# <a name="how-to-use-application-isolation"></a>Gewusst wie: Verwenden der Anwendungs Isolation
+# <a name="how-to-use-application-isolation"></a>How To: Verwenden der Anwendungsisolation
 
-Apps können die Druckertreiber Isolation in Ihrem App-Manifest deklarieren, um die APP vom Druckertreiber zu isolieren und die Zuverlässigkeit der APP zu verbessern. Der Windows-Druckdienst ermöglicht die Ausführung von Druckertreibern in Prozessen, die von dem Prozess getrennt sind, in dem der Druck Spooler ausgeführt wird. Wenn Sie diese Funktion verwenden, verhindert Ihre APP, dass Sie abstürzt, wenn der Druckertreiber einen Fehler aufweist.
+Apps können die Druckertreiberisolation in ihrem App-Manifest deklarieren, um die App vom Druckertreiber zu isolieren und die Zuverlässigkeit der App zu verbessern. Mit Windows Druckdienst können Druckertreiber in Prozessen ausgeführt werden, die von dem Prozess getrennt sind, in dem der Druckspooler ausgeführt wird. Wenn Sie dieses Feature verwenden, verhindert Ihre App, dass sie abstürzt, wenn der Druckertreiber einen Fehler hat.
 
-Die Druckertreiber Isolation ist in Windows 7 und Windows Server 2008 R2 implementiert.
+Die Druckertreiberisolation ist in Windows 7 und Windows Server 2008 R2 implementiert.
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
--   Eine verwaltete Code-oder Windows Store-App, die die Druckfunktion von Windows verwendet.
+-   Eine verwaltete Code- oder Windows Store-App, die Windows verwendet.
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="update-the-app-manifest"></a>Aktualisieren des App-Manifests
 
-Wenn Sie die Druckertreiber Isolation aktivieren, müssen Sie das **printerdriverisolation** -Element dem App-Manifest hinzufügen. Gehen Sie dazu wie folgt vor:
+Zum Aktivieren der Druckertreiberisolation müssen Sie das **PrinterDriverIsolation-Element** zum Manifest der App hinzufügen. Dazu gehen Sie wie folgt vor:
 
-1.  Bearbeiten Sie das App-Manifest, und fügen Sie das **printerdriverisolation** -Element mit dem Wert **true** zum **Windows Settings** -Element des **Application** -Elements hinzu, wie in diesem Beispiel gezeigt.
+1.  Bearbeiten Sie das App-Manifest, und fügen Sie dem **windowsSettings-Element** des  Anwendungselements das **PrinterDriverIsolation-Element** mit dem Wert **true** hinzu, wie in diesem Beispiel gezeigt.
     ```XML
     <application xmlns="urn:schemas-microsoft-com:asm.v3">
         <windowsSettings>
@@ -38,7 +38,7 @@ Wenn Sie die Druckertreiber Isolation aktivieren, müssen Sie das **printerdrive
 
     
 
-2.  Erstellen Sie die APP neu.
+2.  Erstellen Sie Ihre App neu.
 
  
 

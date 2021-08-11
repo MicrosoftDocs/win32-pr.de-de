@@ -1,11 +1,11 @@
 ---
-title: ACS-Service Type-Attribut
-description: Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
+title: ACS-Service-Type-Attribut
+description: Der ACS-Diensttyp. Kontrollierte Last oder garantierte Bandbreite.
 ms.assetid: 3de23f2b-16dc-48c0-a8c5-e3130cd84ba8
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ACS-Service Type-Attributs
-- acsservicetype-Attribut AD-Schema
+- AD-Schema des ACS-Service-Type-Attributs
+- AD-Schema des aCSServiceType-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b7dc97c17e9f7b38fa2f6f0ea863099bbef838a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bd72f8cfab55c9bd0f089aa487e0b895ca528cfdb6ceac9ae42bdae867a1050f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118178343"
 ---
-# <a name="acs-service-type-attribute"></a>ACS-Service Type-Attribut
+# <a name="acs-service-type-attribute"></a>ACS-Service-Type-Attribut
 
-Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
+Der ACS-Diensttyp. Kontrollierte Last oder garantierte Bandbreite.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ACS-Diensttyp                     |
-| LDAP-Display-Name | acsservicetype                       |
+| CN                | ACS-Service-Type                     |
+| Ldap-Anzeigename | aCSServiceType                       |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.762               |
-| System-ID-GUID    | 7F 56127b-5301-11d1-a9c5-0000 C1 |
+| System-ID-GUID    | 7f56127f-5301-11d1-a9c5-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 |------------------------|------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                         |
 | MAPI-Id                | \-                                                                                                         |
-| System-Only            | False                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                       |
-| Ist indiziert             | False                                                                                                      |
-| Im globalen Katalog      | False                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                               |
+| System-Only            | Falsch                                                                                                      |
+| Ist einwertig       | True                                                                                                       |
+| Ist indiziert             | Falsch                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                               |
 | Range-Lower            | \-                                                                                                         |
 | Range-Upper            | \-                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                 |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> [**ACS-Ressourcen Limits**](c-acsresourcelimits.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> [**ACS-Resource-Limits**](c-acsresourcelimits.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 |------------------------|------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                         |
 | MAPI-Id                | \-                                                                                                         |
-| System-Only            | False                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                       |
-| Ist indiziert             | False                                                                                                      |
-| Im globalen Katalog      | False                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                               |
+| System-Only            | Falsch                                                                                                      |
+| Ist einwertig       | True                                                                                                       |
+| Ist indiziert             | Falsch                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                               |
 | Range-Lower            | \-                                                                                                         |
 | Range-Upper            | \-                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                 |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> [**ACS-Ressourcen Limits**](c-acsresourcelimits.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> [**ACS-Resource-Limits**](c-acsresourcelimits.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 |------------------------|------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                         |
 | MAPI-Id                | \-                                                                                                         |
-| System-Only            | False                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                       |
-| Ist indiziert             | False                                                                                                      |
-| Im globalen Katalog      | False                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                               |
+| System-Only            | Falsch                                                                                                      |
+| Ist einwertig       | True                                                                                                       |
+| Ist indiziert             | Falsch                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                               |
 | Range-Lower            | \-                                                                                                         |
 | Range-Upper            | \-                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                 |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> [**ACS-Ressourcen Limits**](c-acsresourcelimits.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> [**ACS-Resource-Limits**](c-acsresourcelimits.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 |------------------------|------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                         |
 | MAPI-Id                | \-                                                                                                         |
-| System-Only            | False                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                       |
-| Ist indiziert             | False                                                                                                      |
-| Im globalen Katalog      | False                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                               |
+| System-Only            | Falsch                                                                                                      |
+| Is-Single-Valued       | True                                                                                                       |
+| Ist indiziert             | Falsch                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                               |
 | Range-Lower            | \-                                                                                                         |
 | Range-Upper            | \-                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                 |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> [**ACS-Ressourcen Limits**](c-acsresourcelimits.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> [**ACS-Resource-Limits**](c-acsresourcelimits.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 |------------------------|------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                         |
 | MAPI-Id                | \-                                                                                                         |
-| System-Only            | False                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                       |
-| Ist indiziert             | False                                                                                                      |
-| Im globalen Katalog      | False                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                               |
+| System-Only            | Falsch                                                                                                      |
+| Is-Single-Valued       | True                                                                                                       |
+| Ist indiziert             | Falsch                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                               |
 | Range-Lower            | \-                                                                                                         |
 | Range-Upper            | \-                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                 |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> [**ACS-Ressourcen Limits**](c-acsresourcelimits.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> [**ACS-Resource-Limits**](c-acsresourcelimits.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Der ACS-Diensttyp. Kontrollierte Auslastung oder garantierte Bandbreite.
 |------------------------|------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                         |
 | MAPI-Id                | \-                                                                                                         |
-| System-Only            | False                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                       |
-| Ist indiziert             | False                                                                                                      |
-| Im globalen Katalog      | False                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                               |
+| System-Only            | Falsch                                                                                                      |
+| Is-Single-Valued       | True                                                                                                       |
+| Ist indiziert             | Falsch                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                               |
 | Range-Lower            | \-                                                                                                         |
 | Range-Upper            | \-                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                 |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> [**ACS-Ressourcen Limits**](c-acsresourcelimits.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> [**ACS-Resource-Limits**](c-acsresourcelimits.md)<br/> |
 
 
 

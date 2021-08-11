@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "setPort" legt den einem Druckerport zugeordneten Status fest.
+description: Die SetPort-Funktion legt den einem Druckerport zugeordneten Status fest.
 ms.assetid: 1b80ad93-aaa1-41ed-a668-a944fa62c3eb
-title: SetPort-Funktion (winspool. h)
+title: SetPort-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: ab986128c9561b7b95de668367cafb0b3e6cd636
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3414d0566203aa51d78c6b7d4b0463cee5765bae8c35c083a959088b6559df1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118234030"
 ---
 # <a name="setport-function"></a>SetPort-Funktion
 
-Die Funktion " **setPort** " legt den einem Druckerport zugeordneten Status fest.
+Die **SetPort-Funktion** legt den einem Druckerport zugeordneten Status fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,54 +44,54 @@ BOOL SetPort(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endend beendete Zeichenfolge, die den Namen des Drucker Servers angibt, mit dem der Port verbunden ist. Legen Sie diesen Parameter auf **null** fest, wenn sich der Port auf dem lokalen Computer befindet.
+Zeiger auf eine mit 0 (null) beendete Zeichenfolge, die den Namen des Druckerservers angibt, mit dem der Anschluss verbunden ist. Legen Sie diesen Parameter auf **NULL** fest, wenn sich der Port auf dem lokalen Computer befindet.
 
 </dd> <dt>
 
-*pportname* \[ in\]
+*pPortName* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endend beendete Zeichenfolge, die den Namen des Drucker Anschlusses angibt.
+Zeiger auf eine mit 0 (null) beendete Zeichenfolge, die den Namen des Druckerports angibt.
 
 </dd> <dt>
 
-*dwlevel* \[ in\]
+*dwLevel* \[ In\]
 </dt> <dd>
 
-Gibt den Typ der Struktur an, auf die durch den *pportinfo* -Parameter verwiesen wird.
+Gibt den Typ der Struktur an, auf die der *pPortInfo-Parameter* zeigt.
 
-Dieser Wert muss 3 sein, was der Datenstruktur [**Port \_ Info \_ 3**](port-info-3.md) entspricht.
+Dieser Wert muss 3 sein, was einer [**PORT \_ INFO \_ 3-Datenstruktur**](port-info-3.md) entspricht.
 
 </dd> <dt>
 
-*pportinfo* \[ in\]
+*pPortInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Port \_ Info \_ 3**](port-info-3.md) -Struktur, die die festzulegenden Port Statusinformationen enthält.
+Zeiger auf eine [**PORT \_ INFO \_ 3-Struktur,**](port-info-3.md) die die festgelegten Portstatusinformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Der Aufrufer der Funktion " **setPort** " muss als Administrator ausgeführt werden. Wenn es sich beim Aufrufer um einen Port Monitor oder einen sprach Monitor handelt, muss er außerdem [**revertyself**](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-reverttoself) aufrufen, um den Identitätswechsel zu beenden, bevor **setPort** aufgerufen wird.
+Der Aufrufer der **SetPort-Funktion** muss als Administrator ausgeführt werden. Wenn der Aufrufer ein Portmonitor oder Sprachmonitor ist, muss er [**außerdem RevertToSelf**](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-reverttoself) aufrufen, um den Identitätswechsel zu beendet, bevor **SetPort aufruft.**
 
-Alle Programme, die **setPort** aufrufen, müssen über Server \_ Zugriffsberechtigungen \_ für den Server verfügen, mit dem der Port verbunden ist.
+Alle Programme, die **SetPort aufrufen,** müssen über SERVER ACCESS ADMINISTER-Zugriff auf den Server \_ \_ verfügen, mit dem der Port verbunden ist.
 
-Wenn Sie einen druckerportstatuswert mit dem Wert " \_ \_ Fehler beim Porttyp" festlegen \_ , beendet der Druck Spooler das Senden von Aufträgen an den Port. Der Druck Spooler setzt das Senden von Aufträgen an den Port fort, wenn der Port Status durch einen anderen Aufrufen von **setPort** gelöscht wird.
+Wenn Sie einen Druckerportstatuswert mit dem Schweregrad PORT STATUS TYPE ERROR festlegen, beendet der Druckspooler das Senden von Aufträgen \_ \_ an den \_ Port. Der Druckspooler setzt das Senden von Aufträgen an den Port wieder ein, wenn der Portstatus durch einen anderen Aufruf von **SetPort entfernt wird.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,10 +101,10 @@ Wenn Sie einen druckerportstatuswert mit dem Wert " \_ \_ Fehler beim Porttyp" f
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Setportw** (Unicode) und **setporta** (ANSI)<br/>                                                 |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **SetPortW** (Unicode) und **SetPortA** (ANSI)<br/>                                                 |
 
 
 
@@ -118,7 +118,7 @@ Wenn Sie einen druckerportstatuswert mit dem Wert " \_ \_ Fehler beim Porttyp" f
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Port \_ Info \_ 3**](port-info-3.md)
+[**PORTINFORMATIONEN \_ \_ 3**](port-info-3.md)
 </dt> </dl>
 
  

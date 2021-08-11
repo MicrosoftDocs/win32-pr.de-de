@@ -1,10 +1,10 @@
 ---
-title: WM_DSA_SHEET_CLOSE_NOTIFY Meldung
-description: Wird an das Active Directory MMC-Snap-in gesendet, wenn ein sekundäres Eigenschaften Blatt zerstört wird.
+title: WM_DSA_SHEET_CLOSE_NOTIFY-Nachricht
+description: Wird im Active Directory-MMC-Snap-In veröffentlicht, wenn ein sekundäres Eigenschaftenblatt zerstört wird.
 ms.assetid: 74271550-e1f7-4576-a04f-52d5b7c619cb
 ms.tgt_platform: multiple
 keywords:
-- WM_DSA_SHEET_CLOSE_NOTIFY Meldung Active Directory
+- WM_DSA_SHEET_CLOSE_NOTIFY Active Directory-Nachricht
 topic_type:
 - apiref
 api_name:
@@ -13,19 +13,19 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36f03cdb6224ae5f55bc995897d766ce61e67693
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f840790de51ce712b33fc9a9611934e8be9a76a35a0fc01a4ce0abe4ba040d2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118181672"
 ---
-# <a name="wm_dsa_sheet_close_notify-message"></a>WM- \_ DSA- \_ Blatt " \_ \_ Nachricht schließen"
+# <a name="wm_dsa_sheet_close_notify-message"></a>WM \_ DSA \_ SHEET CLOSE \_ NOTIFY \_ message
 
-Wenn ein sekundäres Eigenschaften Blatt zerstört wird, wird die Meldung zum Schließen der Meldung zum **\_ \_ \_ Schließen \_ des WM** -MMC an das Active Directory MMC-Snap-in gesendet.
+Die **WM \_ DSA SHEET CLOSE \_ \_ \_ NOTIFY-Meldung** wird an das Active Directory MMC-Snap-In gesendet, wenn ein sekundäres Eigenschaftenblatt zerstört wird.
 
 > [!Note]  
-> Dieser Nachrichtenwert ist nicht in einer veröffentlichten Header Datei definiert. Wenn Sie diesen Nachrichtenwert verwenden möchten, müssen Sie ihn im exakten Format definieren.
+> Dieser Nachrichtenwert ist in einer veröffentlichten Headerdatei nicht definiert. Um diesen Nachrichtenwert zu verwenden, müssen Sie ihn selbst im genauen formatierten Format definieren.
 
  
 
@@ -50,30 +50,30 @@ LRESULT SendMessage( (HWND)   hwnd,
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Das Fenster Handle des Snap-in-Fensters, das diese Nachricht verarbeitet. Dieses Handle wird vom **hwndhidden** -Member der [**propsheetcfg**](propsheetcfg.md) -Struktur abgerufen.
+Das Fensterhand handle des Snap-In-Fensters, das diese Meldung verarbeitet. Dieses Handle wird vom **hwndHidden-Member** der [**PROPSHEETCFG-Struktur**](propsheetcfg.md) erhalten.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Enthält einen von der Anwendung definierten 32-Bit-Wert. Dies wird vom **wparamsheetclose** -Member der [**propsheetcfg**](propsheetcfg.md) -Struktur abgerufen.
+Enthält einen anwendungsdefinierten 32-Bit-Wert. Dies wird aus dem **wParamSheetClose-Member** der [**PROPSHEETCFG-Struktur**](propsheetcfg.md) ermittelt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,11 +86,11 @@ Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Propsheetcfg**](propsheetcfg.md)
+[**PROPSHEETCFG**](propsheetcfg.md)
 </dt> </dl>
 
  

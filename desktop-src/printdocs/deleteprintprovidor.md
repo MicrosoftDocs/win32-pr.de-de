@@ -1,7 +1,7 @@
 ---
-description: Die deleteprintprovidor-Funktion entfernt einen von der addprintprovidor-Funktion hinzugefügten Druckanbieter.
+description: Die DeletePrintProvidor-Funktion entfernt einen Druckanbieter, der von der AddPrintProvidor-Funktion hinzugefügt wurde.
 ms.assetid: b7104f9a-111c-4904-a355-063bb4cc81f1
-title: Deleteprintprovidor-Funktion (winspool. h)
+title: DeletePrintProvidor-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: e68e56f115bac8abb1d0999990f57067f791d76d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97870208508f0a0d23b1f3ee2971a3738b8e22b8d6ef7b4252dffb2a7e77289f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118235227"
 ---
-# <a name="deleteprintprovidor-function"></a>Deleteprintprovidor-Funktion
+# <a name="deleteprintprovidor-function"></a>DeletePrintProvidor-Funktion
 
-Die **deleteprintprovidor** -Funktion entfernt einen von der [**addprintprovidor**](addprintprovidor.md) -Funktion hinzugefügten Druckanbieter.
+Die **DeletePrintProvidor-Funktion** entfernt einen Druckanbieter, der von der [**AddPrintProvidor-Funktion**](addprintprovidor.md) hinzugefügt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ BOOL DeletePrintProvidor(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Bleiben muss **null** sein.
+Reserviert; muss **NULL** sein.
 
 </dd> <dt>
 
-nach-oben  \[ in\]
+*pEnvironment* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die die Umgebung angibt, aus der der Anbieter entfernt werden soll (z. b. Windows NT x86, Windows ia64 oder Windows x64). Wenn dieser Parameter **null** ist, wird der Anbieter aus der aktuellen Umgebung der aufrufenden Anwendung und des Client Computers (nicht der Zielanwendung und des Druck Servers) entfernt. **Null** ist der empfohlene Wert, da er eine maximale Portabilität ermöglicht.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die die Umgebung angibt, aus der der Anbieter entfernt werden soll (z. B. Windows NT x86, Windows IA64 oder Windows x64). Wenn dieser Parameter **NULL** ist, wird der Anbieter aus der aktuellen Umgebung der aufrufenden Anwendung und des Clientcomputers (nicht der Zielanwendung und des Druckerservers) entfernt. **NULL** ist der empfohlene Wert, da er maximale Portabilität bietet.
 
 </dd> <dt>
 
-*pprintprovidername* \[ in\]
+*pPrintProviderName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des zu entfernenden Anbieters angibt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des anbieters angibt, der entfernt werden soll.
 
 </dd> </dl>
 
@@ -70,10 +70,10 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert u
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
@@ -85,10 +85,10 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Deleteprintprovidorw** (Unicode) und **deleteprintprovidora** (ANSI)<br/>                         |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **DeletePrintProvidorW** (Unicode) und **DeletePrintProvidorA** (ANSI)<br/>                         |
 
 
 
@@ -102,7 +102,7 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Addprintprovidor**](addprintprovidor.md)
+[**AddPrintProvidor**](addprintprovidor.md)
 </dt> </dl>
 
  

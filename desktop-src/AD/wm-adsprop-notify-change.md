@@ -1,10 +1,10 @@
 ---
-title: WM_ADSPROP_NOTIFY_CHANGE Meldung (adsprop. h)
-description: Die "WM \_ adsprop \_ Notify Change"- \_ Meldung wird intern vom Benachrichtigungs Objekt verwendet.
+title: WM_ADSPROP_NOTIFY_CHANGE (Adsprop.h)
+description: Die WM \_ ADSPROP \_ NOTIFY \_ CHANGE-Meldung wird intern vom Benachrichtigungsobjekt verwendet.
 ms.assetid: 3dc36176-eebc-4b7d-9ee9-19d2f8c543b6
 ms.tgt_platform: multiple
 keywords:
-- WM_ADSPROP_NOTIFY_CHANGE Meldung Active Directory
+- WM_ADSPROP_NOTIFY_CHANGE Active Directory-Nachricht
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e4ff416a6e0e39c3fe5e405adf90533d8e35388
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aafeec55047c63dd43b96a7ddf1a9d40dbb9e33de9fdc804aa2cc1f80b4d4d41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118182003"
 ---
-# <a name="wm_adsprop_notify_change-message"></a>WM \_ adsprop \_ - \_ Änderungs Meldung Benachrichtigen
+# <a name="wm_adsprop_notify_change-message"></a>WM \_ ADSPROP \_ NOTIFY \_ CHANGE-Meldung
 
-Die " **WM \_ adsprop \_ Notify \_ Change** "-Meldung wird intern vom Benachrichtigungs Objekt verwendet.
+Die **WM \_ ADSPROP NOTIFY \_ \_ CHANGE-Meldung** wird intern vom Benachrichtigungsobjekt verwendet.
 
 
 ```C++
@@ -41,30 +41,30 @@ WM_ADSPROP_NOTIFY_CHANGE
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,11 +74,11 @@ Diese Nachricht weist keinen Rückgabewert auf.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Adsprop. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Adsprop.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

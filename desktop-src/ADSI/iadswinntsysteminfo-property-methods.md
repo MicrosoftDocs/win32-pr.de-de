@@ -1,10 +1,10 @@
 ---
-title: Iadswinntsysteminfo-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadswinntsysteminfo-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsWinNTSystemInfo-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsWinNTSystemInfo-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 5ba36851-3d03-4179-8cee-dbebe24b7c4e
 ms.tgt_platform: multiple
 keywords:
-- Iadswinntsysteminfo-Eigenschaften Methoden ADSI
+- IADsWinNTSystemInfo-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -23,32 +23,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d647cf672032a4a06967ee034eb7b6430faf8dc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 87942adb526b88ae2b538841cd274da69aa0ea5150f6b528ea4ef299ad478f2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179469"
 ---
-# <a name="iadswinntsysteminfo-property-methods"></a>Iadswinntsysteminfo-Eigenschaften Methoden
+# <a name="iadswinntsysteminfo-property-methods"></a>IADsWinNTSystemInfo-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**iadswinntsysteminfo**](/windows/desktop/api/Iads/nn-iads-iadswinntsysteminfo) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsWinNTSystemInfo-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadswinntsysteminfo) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Computername**
+**ComputerName**
 </dt> <dd> <dl>
 
-Der Name des Host Computers, auf dem die Anwendung ausgeführt wird.
+Name des Hostcomputers, auf dem die Anwendung ausgeführt wird.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -66,14 +66,14 @@ HRESULT get_ComputerName(
 **DomainName**
 </dt> <dd> <dl>
 
-Der Name der Domäne, zu der der Benutzer gehört.
+Name der Domäne, zu der der Benutzer gehört.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -88,17 +88,17 @@ HRESULT get_DomainName(
 
 </dt> </dl> </dd> <dt>
 
-**PDC**
+**Pdc**
 </dt> <dd> <dl>
 
-Der Name des primären Domänen Controllers, zu dem der Host Computer gehört.
+Name des primären Domänencontrollers, zu dem der Hostcomputer gehört.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -116,14 +116,14 @@ HRESULT get_PDC(
 **UserName**
 </dt> <dd> <dl>
 
-Der Name des Benutzerkontos, unter dem das **winntsysteminfo** -Objekt erstellt wird.
+Name des Benutzerkontos, unter dem das **WinNTSystemInfo-Objekt** erstellt wird.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -142,7 +142,7 @@ HRESULT get_UserName(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden C/C++-Codebeispiel werden die WinNT-Systeminformationen abgerufen. Aus Gründen der Übersichtlichkeit wird die Fehlerüberprüfung ausgelassen.
+Im folgenden C/C++-Codebeispiel werden die WinNT-Systeminformationen abgerufen. Aus Kürze wird die Fehlerüberprüfung weggelassen.
 
 
 ```C++
@@ -211,7 +211,7 @@ Debug.print "PDC: " & ntsys.PDC
 
 
 
-Im folgenden Codebeispiel für Visual Basic Scripting Edition/Active Server Pages werden die WinNT-Systeminformationen abgerufen.
+Im folgenden Visual Basic Scripting Edition/Active Server Pages-Codebeispiel werden die WinNT-Systeminformationen abgerufen.
 
 
 ```VB
@@ -235,17 +235,17 @@ Response.Write "PDC: " & ntsys.PDC
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadswinntsysteminfo ist als 6c6d65dc-afd1-11d2-9cb9-0000f 87a369e definiert.<br/>  |
+| IID<br/>                      | IID \_ IADsWinNTSystemInfo ist als 6C6D65DC-AFD1-11D2-9CB9-0000F87A369E definiert.<br/>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadswinntsysteminfo**](/windows/desktop/api/Iads/nn-iads-iadswinntsysteminfo)
+[**IADsWinNTSystemInfo**](/windows/desktop/api/Iads/nn-iads-iadswinntsysteminfo)
 </dt> </dl>
 
  

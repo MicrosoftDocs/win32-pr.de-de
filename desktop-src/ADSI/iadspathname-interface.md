@@ -1,26 +1,26 @@
 ---
-title: Iadspathname-Schnittstelle
+title: IADsPathname-Schnittstelle
 description: Analysiert und ändert verschiedene Elemente eines ADsPath.
 ms.assetid: 1f820488-2e75-4257-90c7-9ec67aac4fe4
 ms.tgt_platform: multiple
 keywords:
-- Iadspathname-Schnittstelle ADSI
-- Iadspathname ADSI, using
-- ADSI ADSI, Beispielcode C/C++, using iadspathname
+- IADsPathname-Schnittstelle ADSI
+- IADsPathname ADSI mit
+- ADSI ADSI , Beispielcode C/C++ mit IADsPathname
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f5cbc5901c8f9dcebebde485decc49fc5bcf312
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a2a87e64a5afabf0e7fc1fa760ec43c8ba4113fd9f39e90e42f77c307f6e6f8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179523"
 ---
-# <a name="iadspathname-interface"></a>Iadspathname-Schnittstelle
+# <a name="iadspathname-interface"></a>IADsPathname-Schnittstelle
 
-Die [**iadspathname**](/windows/desktop/api/Iads/nn-iads-iadspathname) -Schnittstelle analysiert und ändert verschiedene Elemente eines ADsPath. Außerdem werden adspaths zwischen verschiedenen Anzeige Formaten konvertiert.
+Die [**IADsPathname-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspathname) analysiert und ändert verschiedene Elemente eines ADsPath. Außerdem werden ADsPaths zwischen verschiedenen Anzeigeformaten konvertiert.
 
-Im folgenden Codebeispiel wird der Servername aus einem gültigen ADsPath extrahiert und zurückgegeben, der dem Benutzer in einem Wartungsprogramm angezeigt wird.
+Im folgenden Codebeispiel wird der Servername aus einem gültigen ADsPath extrahiert und zurückgegeben, damit er dem Benutzer in einem Wartungshilfsprogramm angezeigt wird.
 
 
 ```C++
@@ -56,7 +56,7 @@ HRESULT GetServerName(BSTR adsPath, BSTR *adsServer)
 
 
 
-Im folgenden Codebeispiel wird das Initialisieren eines neu erstellten ADSI-Objekts unterstützt, indem die **Distinguished Name** -Eigenschaft des-Objekts aus dem eigenen ADsPath-Objekt festgelegt wird. Beachten Sie, dass die aufrufende Routine alle Änderungen am zugrunde liegenden Verzeichnis Speicher übertragen muss, indem **Sie die Methode** "*" aufrufen.
+Das folgende Codebeispiel hilft, ein neu erstelltes ADSI-Objekt zu initialisieren, indem die **Distinguished Name-Eigenschaft** des Objekts aus seinem eigenen ADsPath festgelegt wird. Beachten Sie, dass die aufrufende Routine alle Änderungen am zugrunde liegenden Verzeichnisspeicher committen muss, indem sie die **SetInfo-Methode** aufruft.
 
 
 ```C++
@@ -114,9 +114,9 @@ HRESULT SetDistinguishedName(IADs *pIADs)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

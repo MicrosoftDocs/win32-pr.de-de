@@ -9,12 +9,12 @@ keywords:
 - WinNT-Anbieter ADSI , Benutzerverwaltungsbeispiele,Benutzer kann Kennwort nicht ändern,Ändern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33510fa36285fa49a413b84d91e29f8d5a367622
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 6b510fb08172a178a454ee731110765844368ca78108047a7a5a738b78b6a196
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118178964"
 ---
 # <a name="modifying-user-cannot-change-password-winnt-provider"></a>Ändern des Benutzerkennworts kann nicht geändert werden (WinNT-Anbieter)
 

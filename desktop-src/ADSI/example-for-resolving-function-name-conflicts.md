@@ -1,27 +1,27 @@
 ---
-title: Beispiel für das Auflösen von Funktionsnamens Konflikten
-description: In diesem Thema wird beschrieben, wie Konflikte bei Funktionsnamen beim Erstellen einer Erweiterung für ADSI gelöst werden.
+title: Beispiel für das Auflösen von Funktionsnamenskonflikten
+description: In diesem Thema wird beschrieben, wie Funktionsnamenkonflikte beim Erstellen einer Erweiterung für ADSI gelöst werden.
 ms.assetid: 8121f037-3845-44ba-a2cd-8d7f15e0beb2
 ms.tgt_platform: multiple
 keywords:
-- ADSI ADSI, Beispielcode Visual Basic, Auflösen von Funktionsnamen Konflikten
-- Auflösen von Funktionsnamens Konflikten ADSI
+- ADSI ADSI, Beispielcode Visual Basic , Auflösen von Funktionsnamenskonflikten
+- Auflösen von Funktionsnamenskonflikten bei ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 049f9ce6447bf6d6ead783db3e34f74374333f10
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 2e6ce09251ba61b31768d973e258c568694067aff0420f0512a13913bb6fce90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179980"
 ---
-# <a name="example-for-resolving-function-name-conflicts"></a>Beispiel für das Auflösen von Funktionsnamens Konflikten
+# <a name="example-for-resolving-function-name-conflicts"></a>Beispiel für das Auflösen von Funktionsnamenskonflikten
 
 Beachten Sie Folgendes:
 
 -   IADs0 unterstützt Func0 nicht.
--   IADs1 unterstützt func1 und Func0.
--   IADs2 unterstützt func2 und Func0.
+-   IADs1 unterstützt Func1 und Func0.
+-   IADs2 unterstützt Func2 und Func0.
 
 Alle drei Schnittstellen sind duale Schnittstellen.
 
@@ -58,7 +58,7 @@ myInf1.Func2  ' IADs2::Func2 is invoked using GetIDsOfNames/Invoke
 
 
 
-Obwohl IADs1 func2 nicht unterstützt, erkennt ein ADSI-Client eine [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) , die alle Dual-und Dispatch-Schnittstellen im Modell unterstützt. Daher kann der ADSI-Client func2 direkt mithilfe von myInf1. func2 aufzurufen, ohne aufzulösen, welche Schnittstelle func2 unterstützt.
+Beachten Sie, dass ein ADSI-Client einen [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) erkennt, der alle Dual- und Dispatchschnittstellen im Modell unterstützt, obwohl IADs1 Func2 nicht unterstützt. Daher kann der ADSI-Client Func2 mithilfe von myInf1.Func2 direkt aufrufen, ohne aufzulösen, welche Schnittstelle Func2 unterstützt.
 
 
 ```VB
@@ -67,12 +67,12 @@ myInf1.Func2
 
 
 
-Sowohl IADs1 als auch IADs2 verfügen über eine Funktion mit dem Namen Func0, IADs1:: Func0 wird jedoch direkt mithilfe des Vtable-Zugriffs aufgerufen, da für den Client beide folgenden Bedingungen zutreffen:
+Sowohl IADs1 als auch IADs2 verfügen über eine Funktion namens Func0, aber IADs1::Func0 wird direkt mithilfe des vtable-Zugriffs aufgerufen, da beide der folgenden Funktionen für den Client gelten:
 
--   Der Client verfügt über einen Zeiger auf das Dual Interface IADs1 Object, das eine Funktion mit dem Namen "Func0" aufweist.
--   Visual Basic unterstützt den direkten Vtable-Zugriff, wobei angenommen wird, dass der Datentyp über die Typbibliothek verfügbar ist.
+-   Der Client verfügt über einen Zeiger auf das IADs1-Objekt mit dualer Schnittstelle, das über eine Funktion namens Func0 verfügt.
+-   Visual Basic unterstützt direkten vtable-Zugriff, vorausgesetzt, dass der Datentyp über die Typbibliothek verfügbar ist.
 
-Im nächsten Codebeispiel verfügt der Client über einen Dual-Interface-Zeiger auf IADs2 anstelle von IADs1. Daher wird IADs2:: Func0 mit direktem Vtable-Zugriff aufgerufen.
+Im nächsten Codebeispiel verfügt der Client über einen Dual Interface-Zeiger auf IADs2 anstelle von IADs1. Daher wird IADs2::Func0 mithilfe des direkten vtable-Zugriffs aufgerufen.
 
 
 ```VB
@@ -83,7 +83,7 @@ myInf2.Func0
 
 
 
-Im nächsten Codebeispiel verfügen sowohl IADs1 als auch IADs2 über eine Funktion mit dem Namen Func0, aber hier hat der Client einen Zeiger auf eine duale Schnittstelle, IADs0, die keine Funktion mit dem Namen Func0 hat. Daher kann kein direkter Vtable-Zugriff ausgeführt werden. Stattdessen werden [**IDispatch:: GetIDsOfNames**](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) und [**Aufruf**](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) aufgerufen, um Func0 aufzurufen.
+Auch im nächsten Codebeispiel verfügen sowohl IADs1 als auch IADs2 über eine Funktion namens Func0, aber hier hat der Client einen Zeiger auf eine duale Schnittstelle, IADs0, die keine Funktion namens Func0 hat. Daher kann kein direkter vtable-Zugriff ausgeführt werden. Stattdessen werden [**IDispatch::GetIDsOfNames**](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) und [**Invoke**](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) aufgerufen, um Func0 aufzurufen.
 
 
 ```VB
@@ -95,19 +95,19 @@ myInfNone.Func0
 
 
 
-Beachten Sie die folgenden beiden Fälle:
+Betrachten Sie diese beiden Fälle:
 
--   IADs1 und IADs2 werden von den beiden com-Komponenten EXT1 bzw. ext2 implementiert. Wenn EXT1 in der Registrierung vor EXT2 steht, wird IADs1:: Func0 aufgerufen. Wenn der Wert für "ext2" in der Registrierung jedoch an erster Stelle steht, wird IADs2:: Func0 aufgerufen.
--   Wenn IADs1 und ADs2 durch das gleiche Erweiterungs Objekt implementiert werden, wird Func0 immer von der [**iadsextension::P rivategetidsofnames**](/windows/desktop/api/Iads/nf-iads-iadsextension-privategetidsofnames) -und [**privateinvoke**](/windows/desktop/api/Iads/nf-iads-iadsextension-privateinvoke) -Methode der Erweiterung aufgerufen.
+-   IADs1 und IADs2 werden von zwei COM-Komponenten implementiert: Ext1 bzw. Ext2. Wenn Ext1 in der Registrierung vor Ext2 steht, wird IADs1::Func0 aufgerufen. Wenn Ext2 jedoch an erster Stelle in der Registrierung steht, wird IADs2::Func0 aufgerufen.
+-   Wenn IADs1 und ADs2 vom gleichen Erweiterungsobjekt implementiert werden, wird Func0 immer von den [**IADsExtension::P rivateGetIDsOfNames-**](/windows/desktop/api/Iads/nf-iads-iadsextension-privategetidsofnames) und [**PrivateInvoke-Methoden**](/windows/desktop/api/Iads/nf-iads-iadsextension-privateinvoke) der Erweiterung aufgerufen.
 
-Der Erweiterungs Entwickler muss bestimmen, wie Konflikte von Funktionen oder Eigenschaften von unterschiedlichen Dual- [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstellen, die in einer Erweiterung denselben Namen haben, gelöst werden können. Die Implementierung von [**iadsextension::P rivategetidsofnames**](/windows/desktop/api/Iads/nf-iads-iadsextension-privategetidsofnames) -und [**privateinvoke**](/windows/desktop/api/Iads/nf-iads-iadsextension-privateinvoke) -Methoden sollten diesen Konflikt lösen. Wenn Sie z. b. IMyInterface1:: func1 und IMyInterface2:: func1 verwenden, sind IMyInterface1 und IMyInterface2 duale **IDispatch** -Schnittstellen, die vom gleichen Erweiterungs Objekt unterstützt werden. Die Methoden **privategetidsofnames** und **privateinvoke** müssen bestimmen, welche func1 immer aufgerufen werden soll.
+Der Erweiterungsentwickler muss bestimmen, wie Konflikte von Funktionen oder Eigenschaften verschiedener dualer [**IDispatch-Schnittstellen**](/windows/win32/api/oaidl/nn-oaidl-idispatch) gelöst werden, die in einer Erweiterung den gleichen Namen aufweisen. Die Implementierung der [**Methoden IADsExtension::P rivateGetIDsOfNames**](/windows/desktop/api/Iads/nf-iads-iadsextension-privategetidsofnames) und [**PrivateInvoke**](/windows/desktop/api/Iads/nf-iads-iadsextension-privateinvoke) sollte diesen Konflikt lösen. Wenn Sie beispielsweise IMyInterface1::Func1 und IMyInterface2::Func1 verwenden, wobei IMyInterface1 und IMyInterface2 duale **IDispatch-Schnittstellen** sind, die vom gleichen Erweiterungsobjekt unterstützt werden. Die **Methoden PrivateGetIDsOfNames** und **PrivateInvoke** müssen bestimmen, welche Func1 immer aufgerufen werden soll.
 
-Das gleiche gilt für widersprüchliche DispIds in unterschiedlichen Dual-oder [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstellen.
+Dasselbe gilt für in Konflikt geratene DISPIDs in verschiedenen Dual- oder [**IDispatch-Schnittstellen.**](/windows/win32/api/oaidl/nn-oaidl-idispatch)
 
-Beispielsweise ist die DispID von IMyInterface1:: Y in der Datei IMyInterface1. ODL oder IMyInterface1. idl 2. Die DispID von IMyInterface2:: X ist in IMyInterface2. ODL ebenfalls 2. [**Iadsextension::P rivategetidsofnames**](/windows/desktop/api/Iads/nf-iads-iadsextension-privategetidsofnames) muss in der Erweiterung selbst eine eindeutige "DISPID" zurückgeben, anstatt die gleiche "DISPID" für beide zurückzugeben.
+Beispielsweise ist die DISPID von IMyInterface1::Y in der Datei imyinterface1.odl oder imyinterface1.idl 2. Die DISPID von IMyInterface2::X ist auch 2 in iMyInterface2.odl. [**IADsExtension::P rivateGetIDsOfNames**](/windows/desktop/api/Iads/nf-iads-iadsextension-privategetidsofnames) muss eine eindeutige DISPID innerhalb der Erweiterung selbst zurückgeben, anstatt für beide dieselbe DISPID zurückzugeben.
 
-ADSI löst das erste Problem, indem mehrere Schnittstellen mit widersprüchlichen Funktions-oder Eigenschaftsnamen nicht unterstützt werden. Das zweite Problem wird durch das Hinzufügen eines eindeutigen, das innerhalb desselben Erweiterungs Objekts liegt, zu den nicht verwendeten Bits der DISPID aufgelöst.
+ADSI löst das erste Problem, indem nicht mehrere Schnittstellen mit in Konfliktstehenden Funktions- oder Eigenschaftsnamen unterstützt werden. Das zweite Problem wird behoben, indem den nicht verwendeten Bits der DISPID eine eindeutige Schnittstellennummer hinzugefügt wird, die sich innerhalb desselben Erweiterungsobjekts befindet.
 
- 
+ 
 
- 
+ 

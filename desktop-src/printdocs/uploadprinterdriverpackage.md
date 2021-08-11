@@ -1,7 +1,7 @@
 ---
-description: Lädt einen Druckertreiber in den Drucker Server-Treiber Speicher hoch, damit er durch Aufrufen von installprinterdriverfrompackage installiert werden kann.
+description: Lädt einen Druckertreiber in den Druckerserver-Treiberspeicher hoch, damit er durch Aufrufen von InstallPrinterDriverFromPackage installiert werden kann.
 ms.assetid: dd3b3a3b-8ded-44ae-85dd-e630bc62e898
-title: Uploadprinterdriverpackage-Funktion (winspool. h)
+title: UploadPrinterDriverPackage-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: f616c4f731d3a416806f499a513f48466263f441
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15347171299e370bd5e0128976f65e4de1f7034b083b16880ac21659bfac35f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118233868"
 ---
-# <a name="uploadprinterdriverpackage-function"></a>Uploadprinterdriverpackage-Funktion
+# <a name="uploadprinterdriverpackage-function"></a>UploadPrinterDriverPackage-Funktion
 
-Lädt einen Druckertreiber in den Treiber Speicher des Druck Servers hoch, sodass er durch Aufrufen von [**installprinterdriverfrompackage**](installprinterdriverfrompackage.md)installiert werden kann.
+Lädt einen Druckertreiber in den Treiberspeicher des Druckerservers hoch, damit er durch Aufrufen von [**InstallPrinterDriverFromPackage installiert werden kann.**](installprinterdriverfrompackage.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,39 +47,39 @@ HRESULT UploadPrinterDriverPackage(
 
 <dl> <dt>
 
-*pszserver* \[ in\]
+*pszServer* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die den Namen des Drucker Servers angibt. Verwenden Sie **null** , wenn der Server der lokale Computer ist.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die den Namen des Druckerservers angibt. Verwenden **Sie NULL,** wenn der Server der lokale Computer ist.
 
 </dd> <dt>
 
-*pszinfpath* \[ in\]
+*pszInfPath* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die den Quellpfad zur INF-Datei des Treibers angibt.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die den Quellpfad zur INF-Datei des Treibers angibt.
 
 </dd> <dt>
 
-*pszenvironment* \[ in\]
+*pszEnvironment* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die die Prozessorarchitektur des Servers angibt (z. b. Windows NT x86). Dieser Wert kann **null** sein.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die die Prozessorarchitektur des Servers angibt (z. B. Windows NT x86). Dies kann **NULL sein.**
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Dabei kann es sich um einen der folgenden Werte handeln:
+Dies kann einer der folgenden Werte sein:
 
 
 
 | Wert                                                                                                                                                                                     | Bedeutung                                                                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="UPDP_SILENT_UPLOAD"></span><span id="updp_silent_upload"></span><dl> <dt>**UPDP_SILENT_UPLOAD**</dt> </dl>             | Die Benutzeroberfläche wird während des Uploads nicht angezeigt.<br/>                                                                                                             |
-| <span id="UPDP_UPLOAD_ALWAYS"></span><span id="updp_upload_always"></span><dl> <dt>**UPDP_UPLOAD_ALWAYS**</dt> </dl>             | Die Dateien werden auch dann hochgeladen, wenn das Paket bereits im Treiber Speicher des Servers vorhanden ist.<br/>                                                                 |
-| <span id="UPDP_CHECK_DRIVERSTORE"></span><span id="updp_check_driverstore"></span><dl> <dt>**UPDP_CHECK_DRIVERSTORE**</dt> </dl> | Der Treiber Speicher des Servers wird vor dem Hochladen geprüft, um festzustellen, ob das Paket bereits vorhanden ist. Diese Einstellung wird ignoriert, wenn UPDP_UPLOAD_ALWAYS festgelegt ist.<br/> |
+| <span id="UPDP_UPLOAD_ALWAYS"></span><span id="updp_upload_always"></span><dl> <dt>**UPDP_UPLOAD_ALWAYS**</dt> </dl>             | Die Dateien werden auch dann hochgeladen, wenn sich das Paket bereits im Treiberspeicher des Servers befindet.<br/>                                                                 |
+| <span id="UPDP_CHECK_DRIVERSTORE"></span><span id="updp_check_driverstore"></span><dl> <dt>**UPDP_CHECK_DRIVERSTORE**</dt> </dl> | Der Treiberspeicher des Servers wird vor dem Hochladen überprüft, um zu überprüfen, ob das Paket bereits vorhanden ist. Diese Einstellung wird ignoriert, wenn UPDP_UPLOAD_ALWAYS festgelegt ist.<br/> |
 
 
 
@@ -87,45 +87,45 @@ Dabei kann es sich um einen der folgenden Werte handeln:
 
 </dd> <dt>
 
-*HWND* \[ in\]
+*hwnd* \[ In\]
 </dt> <dd>
 
 Ein Handle für die kopierende Benutzeroberfläche.
 
 </dd> <dt>
 
-*pszdestinfpath* \[ vorgenommen\]
+*pszDestInfPath* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den Zielpfad im Treiber Speicher, in den die INF-Datei des Treibers kopiert wurde.
+Ein Zeiger auf den Zielpfad im Treiberspeicher, in den die INF-Datei des Treibers kopiert wurde.
 
 </dd> <dt>
 
-*pcchdestinfpath* \[ in, out\]
+*pcchDestInfPath* \[ in, out\]
 </dt> <dd>
 
-Gibt bei der Eingabe die Größe des *pszdestinfpath* -Puffers in Zeichen an. Bei der Ausgabe empfängt die Größe der Pfad Zeichenfolge in Zeichen, einschließlich des abschließenden NULL-Zeichens.
+Gibt bei der Eingabe die Größe des *pszDestInfPath-Puffers* in Zeichen an. Empfängt bei der Ausgabe die Größe der Pfadzeichenfolge in Zeichen, einschließlich des beendenden NULL-Zeichens.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich ist, wird der Rückgabewert S_OK, andernfalls enthält das **HRESULT** einen Fehlercode.
+Wenn der Vorgang erfolgreich ist, wird der Rückgabewert S_OK, andernfalls enthält **das HRESULT** einen Fehlercode.
 
-Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Der Treiber Speicher ist in der Regel entweder% windir% \\ INF oder% windir% \\ system32 \\ DriverStore \\ FileRepository.
+Der Treiberspeicher ist in der Regel entweder %windir% \\ inf oder %windir% \\ System32 \\ DriverStore \\ FileRepository.
 
-Es kann immer nur jeweils ein Paket hochgeladen werden. Wenn ein Paket von anderen abhängig ist, müssen diese separat hochgeladen werden.
+Es kann immer nur ein Paket gleichzeitig hochgeladen werden. Wenn ein Paket von anderen abhängig ist, müssen sie separat hochgeladen werden.
 
-Nur signierte Treiber Pakete können hochgeladen werden.
+Nur signierte Treiberpakete können hochgeladen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,10 +133,10 @@ Nur signierte Treiber Pakete können hochgeladen werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
 | Unicode- und ANSI-Name<br/>   | **UploadPrinterDriverPackageW** (Unicode) und **UploadPrinterDriverPackageA** (ANSI)<br/>           |
 

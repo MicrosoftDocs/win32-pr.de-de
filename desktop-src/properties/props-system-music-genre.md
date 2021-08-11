@@ -1,19 +1,19 @@
 ---
-description: System.Music.Genre
+description: System. Musik. Genre
 ms.assetid: c1adbc13-5069-4760-901c-d5ca47913695
-title: System.Music.Genre
+title: System. Musik. Genre
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb29e6242dcdc97fe3b814a6fa571551f77e4765
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1d056cda4cbd3a7de6d639eb96076ca90dfd8afa60ad15e0f7d1de34ee9ff6bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118230544"
 ---
-# <a name="systemmusicgenre"></a>System.Music.Genre
+# <a name="systemmusicgenre"></a>System. Musik. Genre
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -28,11 +28,11 @@ propertyDescription
       type = Multivalue String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 
-Beachten Sie, dass einige Dateiformate, z. B. eine MP3-Datei, nur ein einzelnes Genre unterstützen. Andere Dateien, z. B. WMA-Dateien, unterstützen mehrere -Dateien. Wenn Sie mehrere Genre für ein Einzelnes Genre-Dateiformat angeben, wird nur das erste Genre in der Liste erkannt.
+Beachten Sie, dass einige Dateiformate, z. B. .mp3 Datei, nur ein einzelnes Genre unterstützen. Andere, z. B. WMA-Dateien, unterstützen mehrere -Dateien. Wenn Sie mehrere Genre für ein Einzelnes Genre-Dateiformat angeben, wird nur das erste Genre in der Liste erkannt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

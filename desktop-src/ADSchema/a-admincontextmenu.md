@@ -1,11 +1,11 @@
 ---
-title: Admin-Context-Menu-Attribut
-description: Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildschirmen verwendet werden sollen.
+title: Attribut "Admin-Context-Menu"
+description: Die Bestellnummer und GUID des Kontextmenüs, das auf Verwaltungsbildschirmen verwendet werden soll.
 ms.assetid: da388bf3-1c44-4d34-b763-e45b784d3c9e
 ms.tgt_platform: multiple
 keywords:
-- Adschema des Admin-Context-Menu-Attributs
-- adminContextMenu-Attribut, AD-Schema
+- AD-Schema des Admin-Context-Menu-Attributs
+- ad-Schema des adminContextMenu-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 955267bf1e494d6bb0c98b3f5d25832896393ff2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c217d5aa5ef94f16a250bdd5c6ec8bd506a8acd668eb3094d9e9adc35d0efccb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118178279"
 ---
-# <a name="admin-context-menu-attribute"></a>Admin-Context-Menu-Attribut
+# <a name="admin-context-menu-attribute"></a>Attribut "Admin-Context-Menu"
 
-Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildschirmen verwendet werden sollen.
+Die Bestellnummer und GUID des Kontextmenüs, das auf Verwaltungsbildschirmen verwendet werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Admin-Kontextmenü                          |
-| LDAP-Display-Name | adminContextMenu                            |
+| CN                | Admin-Context-Menu                          |
+| Ldap-Anzeigename | adminContextMenu                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.614                      |
-| System-ID-GUID    | 553b0bc-00c04\d0-b0bc c04bd8dca6        |
+| System-Id-Guid    | 553fd038-f32e-11d0-b0bc-00c04fd8dca6        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Display-Specifier**](c-displayspecifier.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Display-Specifier**](c-displayspecifier.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Display-Specifier**](c-displayspecifier.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Ist einwertig       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Anzeigespezifizierer**](c-displayspecifier.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Ist einwertig       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Anzeigespezifizierer**](c-displayspecifier.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Bestellnummer und die GUID des Kontextmenüs, die auf den Verwaltungs Bildsc
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Ist einwertig       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Anzeigespezifizierer**](c-displayspecifier.md)<br/> |
 
 
 

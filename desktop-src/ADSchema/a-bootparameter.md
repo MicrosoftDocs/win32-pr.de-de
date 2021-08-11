@@ -1,10 +1,10 @@
 ---
-title: Bootparameter-Attribut
-description: Stellt Daten bereit, die zum Starten eines Daten trägerlosen Clients benötigt werden.
+title: bootParameter-Attribut
+description: Stellt Daten bereit, die zum Starten eines datenträgerlosen Clients erforderlich sind.
 ms.assetid: b6e90890-ad27-4d2a-aa71-bb433fe7eb75
 ms.tgt_platform: multiple
 keywords:
-- Bootparameter-Attribut AD-Schema
+- bootParameter-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 649507f7a59c46a4221711ba7cf5380b59d6650c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bbf763257df3eed0143210e1b5ad7d4b7f007234c7cad6ef67a038f0a97daeec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118177921"
 ---
-# <a name="bootparameter-attribute"></a>Bootparameter-Attribut
+# <a name="bootparameter-attribute"></a>bootParameter-Attribut
 
-Stellt Daten bereit, die zum Starten eines Daten trägerlosen Clients benötigt werden.
+Stellt Daten bereit, die zum Starten eines datenträgerlosen Clients erforderlich sind.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Bootparameter                        |
-| LDAP-Display-Name | Bootparameter                        |
+| CN                | bootParameter                        |
+| Ldap-Anzeigename | bootParameter                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.23                     |
-| System-ID-GUID    | d72a0750-8c7c-416E-8714-e65f11e908be |
+| System-ID-GUID    | d72a0750-8c7c-416e-8714-e65f11e908be |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -54,16 +54,16 @@ Stellt Daten bereit, die zum Starten eines Daten trägerlosen Clients benötigt 
 |------------------------|-------------------------------------------------------|
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
-| System-Only            | False                                                 |
-| Ist-einwertig       | False                                                 |
-| Ist indiziert             | False                                                 |
-| Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| System-Only            | Falsch                                                 |
+| Ist einwertig       | Falsch                                                 |
+| Ist indiziert             | Falsch                                                 |
+| Im globalen Katalog      | Falsch                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000000                                            |
-| In verwendete Klassen        | [**bootabledevice**](c-bootabledevice.md)<br/> |
+| In verwendete Klassen        | [**bootableDevice**](c-bootabledevice.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Stellt Daten bereit, die zum Starten eines Daten trägerlosen Clients benötigt 
 |------------------------|-------------------------------------------------------|
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
-| System-Only            | False                                                 |
-| Ist-einwertig       | False                                                 |
-| Ist indiziert             | False                                                 |
-| Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| System-Only            | Falsch                                                 |
+| Ist einwertig       | Falsch                                                 |
+| Ist indiziert             | Falsch                                                 |
+| Im globalen Katalog      | Falsch                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000000                                            |
-| In verwendete Klassen        | [**bootabledevice**](c-bootabledevice.md)<br/> |
+| In verwendete Klassen        | [**bootableDevice**](c-bootabledevice.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Stellt Daten bereit, die zum Starten eines Daten trägerlosen Clients benötigt 
 |------------------------|-------------------------------------------------------|
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
-| System-Only            | False                                                 |
-| Ist-einwertig       | False                                                 |
-| Ist indiziert             | False                                                 |
-| Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| System-Only            | Falsch                                                 |
+| Ist einwertig       | Falsch                                                 |
+| Ist indiziert             | Falsch                                                 |
+| Im globalen Katalog      | Falsch                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000000                                            |
-| In verwendete Klassen        | [**bootabledevice**](c-bootabledevice.md)<br/> |
+| In verwendete Klassen        | [**bootableDevice**](c-bootabledevice.md)<br/> |
 
 
 
@@ -117,20 +117,20 @@ Stellt Daten bereit, die zum Starten eines Daten trägerlosen Clients benötigt 
 |------------------------|-------------------------------------------------------|
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
-| System-Only            | False                                                 |
-| Ist-einwertig       | False                                                 |
-| Ist indiziert             | False                                                 |
-| Im globalen Katalog      | False                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                          |
+| System-Only            | Falsch                                                 |
+| Ist einwertig       | Falsch                                                 |
+| Ist indiziert             | Falsch                                                 |
+| Im globalen Katalog      | Falsch                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                          |
 | Range-Lower            | \-                                                    |
 | Range-Upper            | \-                                                    |
 | Search-Flags           | 0x00000000                                            |
 | System-Flags           | 0x00000000                                            |
-| In verwendete Klassen        | [**bootabledevice**](c-bootabledevice.md)<br/> |
+| In verwendete Klassen        | [**bootableDevice**](c-bootabledevice.md)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
