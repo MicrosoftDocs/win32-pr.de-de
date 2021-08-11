@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentupdatenotpreparedexception-Konstruktor'
-title: Esentupdatenotpreparedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentUpdateNotPreparedException-Konstruktor'
+title: EsentUpdateNotPreparedException-Konstruktor
 TOCTitle: 'EsentUpdateNotPreparedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentUpdateNotPreparedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentupdatenotpreparedexception.esentupdatenotpreparedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4dd2496eedfcd6aeaafe5838c959037ee3f486f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28c18340f21c8b5ee8ef670253076b02a6f2b01b4aa728a1e7951a6607d00805
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118256862"
 ---
-# <a name="esentupdatenotpreparedexception-constructor"></a>Esentupdatenotpreparedexception-Konstruktor
+# <a name="esentupdatenotpreparedexception-constructor"></a>EsentUpdateNotPreparedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentupdatenotpreparedexception-Klasse.
+Initialisiert eine neue Instanz der EsentUpdateNotPreparedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentUpdateNotPreparedException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentupdatenotpreparedexception-Klasse](./esentupdatenotpreparedexception-class.md)
+[EsentUpdateNotPreparedException-Klasse](./esentupdatenotpreparedexception-class.md)
 
-[Esentupdatenotpreparedexception-Elemente](./esentupdatenotpreparedexception-members.md)
+[EsentUpdateNotPreparedException-Member](./esentupdatenotpreparedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

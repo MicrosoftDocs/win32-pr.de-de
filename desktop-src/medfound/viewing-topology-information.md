@@ -4,18 +4,18 @@ ms.assetid: d687ecd3-9ad6-46d5-b927-d9b99af2002f
 title: Anzeigen von Topologieinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c4e6808fb2414de14817c63f9f4736acc9223f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78fd1d7d28de3d7fa5420241abf793295323532dca29d3d68d1271545aa460dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118237372"
 ---
 # <a name="viewing-topology-information"></a>Anzeigen von Topologieinformationen
 
-In topoedit verfügt jedes topologieelement, z. b. Knoten, Knoten Eingaben und Knoten Ausgaben, über einen zugeordneten Attribut Speicher, der das Verhalten des Knotens verwaltet. Um die Attribute anzuzeigen, wählen Sie das Element aus, und im Bereich **Attribute** werden die Informationen angezeigt. Für Topologien, die aus einer XML-Datei geladen werden, zeigen einige der Knoten möglicherweise nicht den gesamten Attribut Speicher an. Um den gesamten Attribut Speicher anzuzeigen, müssen Sie die Topologie auflösen. Weitere Informationen finden Sie unter [Auflösen einer Topologie mit topoedit](resolving-a-topology-with-topoedit.md).
+In TopoEdit verfügt jedes Topologieelement, z. B. Knoten, Knoteneingaben und Knotenausgabe, über einen zugeordneten Attributspeicher, der das Verhalten des Knotens verwaltet. Um die Attribute anzuzeigen, wählen Sie das Element aus, und **im Bereich Attribute werden** die Informationen angezeigt. Bei Topologien, die aus einer XML-Datei geladen werden, zeigen einige Knoten möglicherweise nicht den gesamten Attributspeicher an. Um den gesamten Attributspeicher zu sehen, lösen Sie die Topologie auf. Weitere Informationen finden Sie unter [Auflösen einer Topologie mit TopoEdit](resolving-a-topology-with-topoedit.md).
 
-In der folgenden Tabelle werden die Topologieelemente und die Attribute angezeigt, die im Bereich angezeigt werden.
+Die folgende Tabelle zeigt das Topologieelement und die Attribute, die im Bereich angezeigt werden.
 
 
 
@@ -34,22 +34,22 @@ In der folgenden Tabelle werden die Topologieelemente und die Attribute angezeig
 <tr class="odd">
 <td>Topologieknoten</td>
 <td><ul>
-<li><a href="topology-node-attributes.md">Topologieknotenattribute</a> für alle Knoten.<br/></li>
-<li><a href="presentation-descriptor-attributes.md">Präsentations deskriptorattribute</a> nur für Quellknoten.<br/></li>
-<li>Eingabe-und Ausgabe Vertrauensstellungs Informationen für Transformations-und Ausgabe Knoten.<br/></li>
+<li><a href="topology-node-attributes.md">Topologieknotenattribute für</a> alle Knoten.<br/></li>
+<li><a href="presentation-descriptor-attributes.md">Präsentationsdeskriptorattribute nur</a> für Quellknoten.<br/></li>
+<li>Informationen zur Eingabe- und Ausgabevertrauensstellungsstelle für Transformations- und Ausgabeknoten.<br/></li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Knoten Eingabe</td>
+<td>Knoteneingabe</td>
 <td><ul>
-<li><a href="media-type-attributes.md">Medientyp Attribute</a> für alle Knoten.</li>
+<li><a href="media-type-attributes.md">Medientypattribute für</a> alle Knoten.</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Knoten Ausgabe</td>
+<td>Knotenausgabe</td>
 <td><ul>
-<li><a href="stream-descriptor-attributes.md">Streamdeskriptorattribute</a> nur für Quellknoten.<br/></li>
-<li><a href="media-type-attributes.md">Medientyp Attribute</a> für alle Knoten.<br/></li>
+<li><a href="stream-descriptor-attributes.md">Streamdeskriptorattribute nur</a> für Quellknoten.<br/></li>
+<li><a href="media-type-attributes.md">Medientypattribute für</a> alle Knoten.<br/></li>
 </ul></td>
 </tr>
 </tbody>
@@ -59,35 +59,35 @@ In der folgenden Tabelle werden die Topologieelemente und die Attribute angezeig
 
  
 
-Die Attributwerte, außer Zeiger Verweise und Array Werte, können geändert werden. Um einen Attribut Wert zu ändern, geben Sie den neuen Wert neben dem Attribut ein, und klicken Sie im Bereich **Attribute** auf **Speichern** . Der neue Wert wird im Attribut Speicher aktualisiert und erst dann auf die Topologie angewendet, nachdem er aufgelöst wurde.
+Die Attributwerte, mit Ausnahme von Zeigerverweisen und Arraywerten, können geändert werden. Um einen Attributwert zu ändern, geben Sie den  neuen Wert neben dem Attribut ein, und klicken Sie im **Bereich Attribute auf Speichern.** Der neue Wert wird im Attributspeicher aktualisiert und erst auf die Topologie angewendet, nachdem er aufgelöst wurde.
 
 ## <a name="to-add-a-new-attribute-for-a-node"></a>So fügen Sie ein neues Attribut für einen Knoten hinzu
 
-1.  Wählen Sie den Knoten aus, indem Sie im Bereich **Topologie** darauf klicken.
+1.  Wählen Sie den Knoten aus, indem Sie im **Topologiebereich darauf klicken.**
 
-    Die Attribute, die für den Knoten festgelegt werden, werden im Bereich **Attribute** angezeigt.
+    Die Attribute, die auf dem Knoten festgelegt sind, werden im **Bereich Attribute angezeigt.**
 
-2.  Klicken Sie im Bereich **Attribute** auf **Hinzufügen**.
+2.  Klicken Sie **im Bereich Attribute** auf **Hinzufügen.**
 
-    Dadurch wird das Dialogfeld **Attribut hinzufügen** geöffnet.
+    Dadurch wird das **Dialogfeld Attribut** hinzufügen geöffnet.
 
-3.  Wählen Sie in der ersten Dropdown Liste die Attribut Kategorie aus.
+3.  Wählen Sie in der ersten Dropdownliste die Kategorie Attribut aus.
 
-    Die Kategorien sind vom topologieknoten abhängig. Beispielsweise zeigt die Dropdown Liste für den Quellknoten die **Präsentations deskriptorattribute** und **Knoten Attribute** als verfügbare Kategorien an.
+    Die Kategorien hängen vom Topologieknoten ab. Für den Quellknoten werden in der Dropdownliste beispielsweise **Presentation Descriptor Attributes (Präsentationsdeskriptorattribute)** und **Node Attributes** (Knotenattribute) als verfügbare Kategorien angezeigt.
 
-4.  Wählen Sie in der zweiten Dropdown Liste das Attribut aus, das Sie für den Knoten festlegen möchten.
+4.  Wählen Sie in der zweiten Dropdownliste das Attribut aus, das Sie auf dem Knoten festlegen möchten.
 
-5.  Fügen Sie im Bearbeitungsfeld den Wert für das-Attribut hinzu.
+5.  Fügen Sie im Bearbeitungsfeld den Wert für das Attribut hinzu.
 
-6.  Klicken Sie auf **Hinzufügen** , um das Attribut hinzuzufügen und zum Hauptfenster zurückzukehren, oder auf **Abbrechen** , um den Vorgang abzubrechen.
+6.  Klicken **Sie auf** Hinzufügen, um das Attribut hinzuzufügen und zum Hauptfenster zurückzukehren, oder klicken Sie **auf** Abbrechen, um den Vorgang abzubricht.
 
-7.  Klicken Sie im Menü **Topologie** auf **Topologie auflösen** , um das neue Attribut auf die Topologie festzulegen.
+7.  Klicken Sie **im Menü** Topologie auf **Topologie auflösen,** um das neue Attribut auf die Topologie zu setzen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Topoedit](topoedit.md)
+[TopoEdit](topoedit.md)
 </dt> </dl>
 
  

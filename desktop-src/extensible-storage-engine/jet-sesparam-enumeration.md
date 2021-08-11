@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_sesparam-Enumeration'
-title: JET_sesparam-Enumeration (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: JET_sesparam-Enumeration'
+title: JET_sesparam-Enumeration (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: JET_sesparam enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows8.JET_sesparam
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_sesparam(v=EXCHG.10)
@@ -30,19 +30,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d5ddfd613eecf5e9a6d9b6cec9eebcbab04e9b38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7866fa72df1beadf7cd06d61cfe60b2f1ca31a9feabb4412903186eeeeb80748
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118253638"
 ---
 # <a name="jet_sesparam-enumeration"></a>JET_sesparam-Enumeration
 
-ESENT-Sitzungs Parameter.
+ESENT-Sitzungsparameter.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,13 +75,13 @@ public enum JET_sesparam
 </tr>
 <tr class="even">
 <td></td>
-<td>Commitdefault</td>
-<td>Dieser Parameter legt die grbits für Commit fest. Es ist funktional identisch mit dem Systemparameter JET_param. commitdefault bei Verwendung mit einer-Instanz und einer-SID.</td>
+<td>CommitDefault</td>
+<td>Dieser Parameter legt die Grbits für commit fest. Er entspricht funktional dem Systemparameter JET_param.CommitDefault, wenn er mit einer -Instanz und einer sesid verwendet wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Commitgenericcontext</td>
-<td>Mit diesem Parameter wird ein Benutzer spezifischer commitkontext festgelegt, der im Transaktionsprotokoll bei Commit auf Ebene 0 platziert wird.</td>
+<td>CommitGenericContext</td>
+<td>Dieser Parameter legt einen benutzerspezifischen Commitkontext fest, der beim Commit im Transaktionsprotokoll auf Ebene 0 platziert wird.</td>
 </tr>
 </tbody>
 </table>
@@ -91,4 +91,4 @@ public enum JET_sesparam
 
 #### <a name="reference"></a>Referenz
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

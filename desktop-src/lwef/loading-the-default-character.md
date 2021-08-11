@@ -1,35 +1,35 @@
 ---
-title: Laden des Standard Zeichens
-description: Laden des Standard Zeichens
+title: Laden des Standardzeichens
+description: Laden des Standardzeichens
 ms.assetid: 4e91aef5-8402-401d-b09f-83be25011027
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 387715b5078c4ec875c9abce47039898e4998cf7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f99d194843c6196f69e287857ce08097e849f328738c5f5d1a6e7feba0c53d18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118247607"
 ---
-# <a name="loading-the-default-character"></a>Laden des Standard Zeichens
+# <a name="loading-the-default-character"></a>Laden des Standardzeichens
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
-Anstatt nur ein bestimmtes Zeichen direkt durch Angabe des Datei namens zu laden, können Sie das *Standard Zeichen* laden. Das Standard Zeichen ist ein Dienst, der einen freigegebenen, zentralen Windows-Assistenten bereitstellen soll, den der Benutzer auswählt. Der Microsoft-Agent enthält ein Eigenschaften Blatt als Teil des Standard-Zeichen diensdienstanders, das als Zeichen Eigenschaftenfenster bezeichnet wird, das es dem Benutzer ermöglicht, die Auswahl des Standard Zeichens zu ändern.
+Anstatt nur ein bestimmtes Zeichen direkt durch Angabe des Dateinamens zu laden, können Sie das *Standardzeichen laden.* Das Standardzeichen ist ein Dienst, der einen freigegebenen, zentralen Windows, den der Benutzer auswählt, bereitstellen soll. Microsoft Agent enthält ein Eigenschaftenblatt als Teil des Standardzeichendiensts, der als Zeichen-Eigenschaftenfenster bezeichnet wird und es dem Benutzer ermöglicht, seine Auswahl des Standardzeichens zu ändern.
 
-Die Auswahl des Standard Zeichens ist auf ein Zeichen beschränkt, das den Standard Animations Satz unterstützt. Dadurch wird ein grundlegendes Maß an Konsistenz zwischen Zeichen sichergestellt. Dadurch wird kein Zeichen von zusätzlichen Animationen ausgeschlossen.
+Die Auswahl des Standardzeichens ist auf ein Zeichen beschränkt, das den Standardanimationsatz unterstützt, um ein grundlegendes Maß an Konsistenz zwischen Zeichen sicherzustellen. Dies schließt nicht aus, dass ein Zeichen über zusätzliche Animationen verfügt.
 
-Da das Standard Zeichen jedoch für die Verwendung durch allgemeine Zwecke vorgesehen ist und von anderen Anwendungen gleichzeitig gemeinsam genutzt werden kann, sollten Sie das Standard Zeichen nicht laden, wenn Sie ein Zeichen exklusiv für Ihre Anwendung verwenden möchten.
+Da das Standardzeichen jedoch für die allgemeine Verwendung vorgesehen ist und von anderen Anwendungen gleichzeitig freigegeben werden kann, vermeiden Sie das Laden des Standardzeichens, wenn Sie ein Zeichen ausschließlich für Ihre Anwendung wünschen.
 
-Um das Standard Zeichen zu laden, müssen Sie die [**Load**](load-method.md) -Methode ohne Angabe eines Datei namens oder Pfads aufzurufen. Der Microsoft-Agent lädt den aktuellen Zeichensatz automatisch als Standard Zeichen. Wenn der Benutzer noch kein Standard Zeichen ausgewählt hat, wählt der-Agent das erste Zeichen aus, das den Standard Animations Satz unterstützt. Wenn keine verfügbar ist, schlägt die Methode fehl, und die Ursache wird gemeldet.
+Um das Standardzeichen zu laden, rufen Sie die [**Load-Methode**](load-method.md) auf, ohne einen Dateinamen oder Pfad anzugeben. Microsoft Agent lädt automatisch den aktuellen Zeichensatz als Standardzeichen. Wenn der Benutzer noch kein Standardzeichen ausgewählt hat, wählt der -Agent das erste Zeichen aus, das den Standardanimationsatz unterstützt. Wenn keine verfügbar ist, verursacht die Methode einen Fehler und gibt die Ursache zurück.
 
-Obwohl eine Client Anwendung die Identität des Zeichens untersuchen kann, kann nur ein Benutzer seine Einstellungen ändern. Mithilfe der [**showdefaultcharacters-Eigenschaften**](showdefaultcharacterproperties-method.md) können Sie das Zeichen Eigenschaftenfenster anzeigen.
+Obwohl eine Clientanwendung die Identität des Zeichens abfragen kann, kann nur ein Benutzer seine Einstellungen ändern. Sie können [**showDefaultCharacterProperties**](showdefaultcharacterproperties-method.md) verwenden, um die Zeichenzeichenfolge Eigenschaftenfenster.
 
-Der Server benachrichtigt Clients, die das Standard Zeichen geladen haben, wenn ein Benutzer eine Zeichenauswahl ändert, und übergibt die GUID des neuen Zeichens. Der Server entlädt automatisch das erste Zeichen und lädt das neue Zeichen erneut. Die Warteschlangen aller Clients, die das Standard Zeichen geladen haben, werden angehalten und geleert. Die Warteschlangen von Clients, die das Zeichen explizit mit dem Dateinamen des Zeichens geladen haben, sind jedoch nicht betroffen. Der Server übernimmt bei Bedarf auch das automatische Zurücksetzen des Text-zu-Sprache-Moduls (TTS) für das neue Zeichen.
+Der Server benachrichtigt Clients, die das Standardzeichen geladen haben, wenn ein Benutzer eine Zeichenauswahl ändert, und überträgt die GUID des neuen Zeichens. Der Server entlädt das erste Zeichen automatisch und lädt das neue Zeichen erneut. Die Warteschlangen aller Clients, die das Standardzeichen geladen haben, werden angehalten und geleert. Die Warteschlangen von Clients, die das Zeichen explizit mithilfe des Dateinamens des Zeichens geladen haben, sind jedoch nicht betroffen. Bei Bedarf übernimmt der Server auch das automatische Zurücksetzen der TTS-Engine (Text-to-Speech) für das neue Zeichen.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Activebasicdevice getcachedbitratemeasurement-Methode (playondevice. h)
+title: ActiveBasicDevice GetCachedBitrateMeasurement-Methode (PlayToDevice.h)
 description: Ruft die zwischengespeicherte Bitrate ab.
 ms.assetid: 78C3C5D7-C46B-413D-BC18-C3861E5FDAA5
 keywords:
-- Getcachedbitratemeasurement-Methode Medien Streaming-API
-- Getcachedbitratemeasurement-Methode Medien Streaming-API, activebasicdevice-Schnittstelle
-- Activebasicdevice-Schnittstelle Medien Streaming-API, getcachedbitratemeasurement-Methode
+- GetCachedBitrateMeasurement-Methode– Medienstreaming-API
+- GetCachedBitrateMeasurement-Methode Media Streaming-API, ActiveBasicDevice-Schnittstelle
+- Media Streaming-API der ActiveBasicDevice-Schnittstelle, GetCachedBitrateMeasurement-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d15b38ba2730d2023b09c2fa0352ade1f1532724
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 031d77595298651be11c793f8fd96471808ab1aef3f5a2b6398be9c1ff10de02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118236865"
 ---
-# <a name="activebasicdevicegetcachedbitratemeasurement-method"></a>Activebasicdevice:: getcachedbitratemeasurement-Methode
+# <a name="activebasicdevicegetcachedbitratemeasurement-method"></a>ActiveBasicDevice::GetCachedBitrateMeasurement-Methode
 
 Ruft die zwischengespeicherte Bitrate ab.
 
@@ -43,23 +43,23 @@ HRESULT GetCachedBitrateMeasurement(
 
 <dl> <dt>
 
-*physicalnetworkinterface* \[ in\]
+*physicalNetworkInterface* \[ In\]
 </dt> <dd>
 
 Gibt die physische Netzwerkschnittstelle an.
 
 </dd> <dt>
 
-*Bitrate* \[ Out, retval\]
+*Bitrate* \[ out, retval\]
 </dt> <dd>
 
-Empfängt den Bitrate-Wert.
+Empfängt den Bitratewert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,10 +67,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Playondevice. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Playto Device. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>PlayToDevice.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>PlayToDevice.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Playtodevice.dll</dt> </dl> |
 
 
@@ -79,7 +79,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
+[**ActiveBasicDevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
 </dt> </dl>
 
  

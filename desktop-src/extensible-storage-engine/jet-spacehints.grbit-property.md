@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_SPACEHINTS. grbit-Eigenschaft.
-title: JET_SPACEHINTS. grbit-Eigenschaft
+description: 'Weitere Informationen zu: JET_SPACEHINTS.grbit-Eigenschaft'
+title: JET_SPACEHINTS.grbit-Eigenschaft
 TOCTitle: 'grbit property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_SPACEHINTS.grbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_spacehints.grbit(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 252b1cda9de09e1739e074bddd41fc23c4043433
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4e9f52675cee097512af1e8581eec297f7a7d6e0533370f7a0d7cc503c36dfe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118252082"
 ---
-# <a name="jet_spacehintsgrbit-property"></a>JET_SPACEHINTS. grbit-Eigenschaft
+# <a name="jet_spacehintsgrbit-property"></a>JET_SPACEHINTS.grbit-Eigenschaft
 
-Ruft die Optionen für Leerzeichen ab oder legt diese fest.
+Ruft die Optionen für Leerzeichenhinweise ab oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ public SpaceHintsGrbit grbit { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft. ISAM. ESENT. Interop. spacehintsgrbit](./spacehintsgrbit-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.SpaceHintsGrbit](./spacehintsgrbit-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -70,6 +70,6 @@ Typ: [Microsoft. ISAM. ESENT. Interop. spacehintsgrbit](./spacehintsgrbit-enumer
 
 [JET_SPACEHINTS-Klasse](./jet-spacehints-class.md)
 
-[Mitglieder JET_SPACEHINTS](./jet-spacehints-members.md)
+[JET_SPACEHINTS-Member](./jet-spacehints-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,17 +1,17 @@
 ---
 description: Gibt die GUID an, die das DRM-Schutzsystem (Digital Rights Management) im Container identifiziert.
 ms.assetid: DACB355B-17B9-4968-8920-5233603FD796
-title: MFPKEY_MediaProtectionContainerGuid-Eigenschaft (mspdl. h)
+title: MFPKEY_MediaProtectionContainerGuid-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 433ef4723eb91527ad621a50bada79da76e39631
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 86dcfd4bb3a99041b15022dde4833d4a4f7fb866998283028fb82d5e650acc8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106370345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118242567"
 ---
-# <a name="mfpkey_mediaprotectioncontainerguid-property"></a>Mfpkey \_ mediaschutzcontainerguid (Eigenschaft)
+# <a name="mfpkey_mediaprotectioncontainerguid-property"></a>MFPKEY \_ MediaProtectionContainerGuid-Eigenschaft
 
 Gibt die GUID an, die das DRM-Schutzsystem (Digital Rights Management) im Container identifiziert.
 
@@ -21,7 +21,7 @@ Gibt die GUID an, die das DRM-Schutzsystem (Digital Rights Management) im Contai
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -39,9 +39,9 @@ VT \_ CLSID
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ VT \_ CLSID
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

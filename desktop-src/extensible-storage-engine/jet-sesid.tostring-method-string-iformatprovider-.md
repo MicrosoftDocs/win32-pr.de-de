@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SESID. Methode "destring" (String, IFormatProvider)'
-title: JET_SESID. Methode "destring" (String, IFormatProvider)
+description: 'Weitere Informationen finden Sie unter: JET_SESID. ToString-Methode (String, IFormatProvider)'
+title: JET_SESID. ToString-Methode (String, IFormatProvider)
 TOCTitle: ToString method (String, IFormatProvider)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_SESID.ToString(System.String,System.IFormatProvider)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_sesid.tostring(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5565e67cc0f91fd1c2edb0d9c0aa421211c57c2c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8c750d2b05ecadc3cb900838b1b20b2c8f79e74ba61d50508dd7ae62dc66705
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118253862"
 ---
-# <a name="jet_sesidtostring-method-string-iformatprovider"></a>JET_SESID. Methode "destring" (String, IFormatProvider)
+# <a name="jet_sesidtostring-method-string-iformatprovider"></a>JET_SESID. ToString-Methode (String, IFormatProvider)
 
 Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,34 +62,34 @@ public string ToString(
 #### <a name="parameters"></a>Parameter
 
   - format  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Die [Zeichenfolge](/dotnet/api/system.string) , die das zu verwendende Format angibt. oder NULL, um das für den Typ der [IFormattable](/dotnet/api/system.iformattable) -Implementierung definierte Standardformat zu verwenden.
+    Die [Zeichenfolge,](/dotnet/api/system.string) die das zu verwendende Format angibt; oder NULL, um das für den Typ der [IFormattable-Implementierung](/dotnet/api/system.iformattable) definierte Standardformat zu verwenden.
 
 <!-- end list -->
 
-  - Format Provider  
-    Typ: [System. IFormatProvider](/dotnet/api/system.iformatprovider)  
+  - Formatprovider  
+    Typ: [System.IFormatProvider](/dotnet/api/system.iformatprovider)  
     
-    Der [IFormatProvider](/dotnet/api/system.iformatprovider) , der zum Formatieren des Werts verwendet werden soll. oder NULL, um die numerischen Formatinformationen aus der aktuellen Gebiets Schema Einstellung des Betriebssystems abzurufen.
+    Der [IFormatProvider, der](/dotnet/api/system.iformatprovider) zum Formatieren des Werts verwendet werden soll. oder NULL, um die numerischen Formatinformationen aus der aktuellen Locale-Einstellung des Betriebssystems zu erhalten.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den Wert der aktuellen Instanz im angegebenen Format enthält.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die den Wert der aktuellen Instanz im angegebenen Format enthält.  
 
 #### <a name="implements"></a>Implementiert
 
-[IFormattable. to String (String, IFormatProvider)](/dotnet/api/system.iformattable.tostring#System_IFormattable_ToString_System_String_System_IFormatProvider_)  
+[IFormattable.ToString(String, IFormatProvider)](/dotnet/api/system.iformattable.tostring#System_IFormattable_ToString_System_String_System_IFormatProvider_)  
 
 ## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Referenz
 
-[JET_SESID Struktur](./jet-sesid-structure.md)
+[JET_SESID-Struktur](./jet-sesid-structure.md)
 
-[Mitglieder JET_SESID](./jet-sesid-members.md)
+[JET_SESID Member](./jet-sesid-members.md)
 
-[Überladung von ""](./jet-sesid.tostring-method2.md)
+[ToString-Überladung](./jet-sesid.tostring-method2.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

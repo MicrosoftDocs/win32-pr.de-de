@@ -1,27 +1,27 @@
 ---
-description: Enthält den decodierungszeit Stempel (DTS) für das Beispiel.
+description: Enthält den Decodierungszeitstempel (DTS) für das Beispiel.
 ms.assetid: 4E0B8266-FF48-49A1-AB7B-A47C4F96AECD
-title: MFSampleExtension_DecodeTimestamp-Attribut (mfapi. h)
+title: MFSampleExtension_DecodeTimestamp -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9676b295eb16e7cb2bb607ef4a5074d24b276d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e0d72ea69f487efe24148fa8ce60ad05eb7a124673f02a78e70c67f604a51bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118241481"
 ---
-# <a name="mfsampleextension_decodetimestamp-attribute"></a>MF Sample Extension- \_ decodetimestamp-Attribut
+# <a name="mfsampleextension_decodetimestamp-attribute"></a>MFSampleExtension \_ DecodeTimestamp-Attribut
 
-Enthält den decodierungszeit Stempel (DTS) für das Beispiel.
+Enthält den Decodierungszeitstempel (DTS) für das Beispiel.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert des-Attributs ist der DTS in 100-Nanosecond-Einheiten. DTS ist in einigen Codierungsstandards definiert, einschließlich MPEG. Der DTS gibt an, wann das codierte Bild decodiert werden soll. Wenn das codierte Video b-Frames enthält, kann sich der DTS von der Präsentationszeit unterscheiden, da B-Bilder im Bitstream außerhalb der temporalen Reihenfolge erscheinen.
+Der Wert des Attributs ist der DTS in Einheiten von 100 Nanosekunden. Der DTS ist in einigen Codierungsstandards definiert, einschließlich MPEG. Der DTS gibt an, wann das codierte Bild decodiert werden soll. Wenn das codierte Video B-Frames enthält, kann sich der DTS von der Präsentationszeit unterscheiden, da B-Bilder nicht in temporaler Reihenfolge im Bitstream angezeigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,9 +29,9 @@ Der Wert des-Attributs ist der DTS in 100-Nanosecond-Einheiten. DTS ist in einig
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -39,10 +39,10 @@ Der Wert des-Attributs ist der DTS in 100-Nanosecond-Einheiten. DTS ist in einig
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> </dl>
 
  

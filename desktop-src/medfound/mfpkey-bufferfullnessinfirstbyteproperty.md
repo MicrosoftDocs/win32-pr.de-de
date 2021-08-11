@@ -1,35 +1,35 @@
 ---
-description: Gibt an, ob der codierte videobit-Stream einen Puffer Füllwert mit jedem Keyframe enthält.
+description: Gibt an, ob der codierte Videobitstream einen Pufferfüllwert mit jedem Keyframe enthält.
 ms.assetid: 5574ee3c-ccb3-4ff6-8280-efe5626e6dd6
-title: MFPKEY_BUFFERFULLNESSINFIRSTBYTE-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_BUFFERFULLNESSINFIRSTBYTE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10fbcdb6306faeb7481f1cc7be20088ff0cedd5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 087b505680dfc3c51fe2cb50cdae76a425ca2ff5798356e9893794d47a7e22e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350922"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118242999"
 ---
-# <a name="mfpkey_bufferfullnessinfirstbyte-property"></a>Mfpkey \_ bufferfullnessinfirstbyte (Eigenschaft)
+# <a name="mfpkey_bufferfullnessinfirstbyte-property"></a>MFPKEY \_ BUFFERFULLNESSINFIRSTBYTE-Eigenschaft
 
-Gibt an, ob der codierte videobit-Stream einen Puffer Füllwert mit jedem Keyframe enthält.
+Gibt an, ob der codierte Videobitstream einen Pufferfüllwert mit jedem Keyframe enthält.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcbufferfullnessinfirstbyte
+g \_ wszWMVCBufferFullnessInFirstByte
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen einen Ausgabetyp festlegen, bevor Sie diesen Wert erhalten.
+Sie müssen einen Ausgabetyp festlegen, bevor Sie diesen Wert abrufen.
 
-Sie können den Wert dieser Eigenschaft mithilfe von [iwmcodecprop:: getcodecprop](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmcodecprops-getcodecprop)erhalten. Wenn Sie **IPropertyBag** verwenden, müssen Sie zuerst den FourCC-Wert des gewünschten komprimierten Formats mit der Eigenschaft " [mfpkey \_ FourCC](mfpkey-fourccproperty.md) " festlegen.
+Sie können den Wert dieser Eigenschaft mithilfe von [IWMCodecProps::GetCodecProp](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmcodecprops-getcodecprop)abrufen. Wenn Sie **IPropertyBag** verwenden, müssen Sie zuerst den FOURCC-Wert des gewünschten komprimierten Formats mit der [MFPKEY \_ FOURCC-Eigenschaft](mfpkey-fourccproperty.md) festlegen.
 
-Wenn Sie die Puffergröße im ersten Byte aller Keyframes haben, können Sie die erforderliche Puffergröße beim Verketten komprimierter Videostreams ermitteln.
+Wenn die Pufferfülle im ersten Byte aller Keyframes vorhanden ist, können Sie die Puffergröße bestimmen, die beim Verketten komprimierter Videostreams erforderlich ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Wenn Sie die Puffergröße im ersten Byte aller Keyframes haben, können Sie die
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Wenn Sie die Puffergröße im ersten Byte aller Keyframes haben, können Sie die
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

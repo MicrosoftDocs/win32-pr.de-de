@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SETINFO Struktur'
-title: JET_SETINFO Struktur
+description: 'Weitere Informationen zu: JET_SETINFO-Struktur'
+title: JET_SETINFO-Struktur
 TOCTitle: JET_SETINFO Structure
 ms:assetid: cbc41175-e48f-46b0-aeb1-1120fa2cd981
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294090(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 69602aad89142d9f5dc202074ca54cf278767892
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 379fd60a001312152dbe181c27a3e8158ceca79b4cfa9075a530b6c73f4337cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104531118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118253441"
 ---
-# <a name="jet_setinfo-structure"></a>JET_SETINFO Struktur
+# <a name="jet_setinfo-structure"></a>JET_SETINFO-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_setinfo-structure"></a>JET_SETINFO Struktur
+## <a name="jet_setinfo-structure"></a>JET_SETINFO-Struktur
 
-Die **JET_SETINFO** Struktur enthält optionale Eingabeparameter für [jetsetcolumn](./jetsetcolumn-function.md). Ein **null** -Zeiger kann an die Stelle geleitet werden, an der ein Zeiger auf diese-Struktur andernfalls passieren würde. Die Übergabe eines **null** -Werts ist identisch mit dem übergeben von **JET_SETINFO** , wobei **cbStruct** auf sizeof (JET_SETINFO) festgelegt ist, **iblongvalue** auf 0 (null) und **itagsequence** auf 1 festgelegt ist.
+Die **JET_SETINFO-Struktur** enthält optionale Eingabeparameter für [JetSetColumn.](./jetsetcolumn-function.md) Ein **NULL-Zeiger** kann übergeben werden, wenn andernfalls ein Zeiger auf diese Struktur übergeben würde. Die Bedeutung der Übergabe eines **NULL-Werts** entspricht der Übergabe **von JET_SETINFO,** wobei **cbStruct** auf sizeof(JET_SETINFO), **ibLongValue** auf 0 (null) und **itagSequence** auf 1 festgelegt ist.
 
 ```cpp
 typedef struct {
@@ -43,17 +43,17 @@ typedef struct {
 
 **cbStruct**
 
-Die Größe (in Bytes) der **JET_SETINFO**. Dieser Wert bestätigt, dass die folgenden Felder vorhanden sind.
+Die Größe des **JET_SETINFO** in Bytes. Dieser Wert bestätigt das Vorhandensein der folgenden Felder.
 
-**iblongvalue**
+**ibLongValue**
 
-Der Offset zum ersten Byte, der in einer Spalte vom Typ [JET_coltypLongBinary](./jet-coltyp.md) oder [JET_coltypLongText](./jet-coltyp.md)festgelegt werden soll.
+Der Offset zum ersten Byte, das in einer Spalte vom Typ [JET_coltypLongBinary](./jet-coltyp.md) oder [JET_coltypLongText](./jet-coltyp.md)festgelegt werden soll.
 
-**itagsequence**
+**itagSequence**
 
-Beschreibt die Sequenznummer des Werts in einer mehrwertigen Spalte, die festgelegt werden soll. Das Array von Werten ist 1-basiert. Der erste Wert ist Sequenz 1, nicht 0 (null). Wenn die Daten Satz Spalte nur über einen Wert verfügt, sollte 1 als **itagsequence** übergeben werden, wenn dieser Wert ersetzt wird. Der Wert 0 (null) bedeutet, dass am Ende der Sequenz der Spaltenwerte eine neue Spaltenwert Instanz hinzugefügt wird.
+Beschreibt die Sequenznummer des Werts in einer mehrwertigen Spalte, die festgelegt werden soll. Das Array von Werten ist einsbasiert. Der erste Wert ist sequenz 1, nicht 0 (null). Wenn die Datensatzspalte nur über einen Wert verfügt, sollte 1 als **itagSequence** übergeben werden, wenn dieser Wert ersetzt wird. Der Wert 0 (null) bedeutet, dass am Ende der Sequenz von Spaltenwerten eine neue Spaltenwertinstanz hinzugefügt wird.
 
-Bei einer Spalte, die mehrere Werte enthalten kann, ist es nur möglich, eine Sequenznummer größer als 1 in [jetsetcolumn](./jetsetcolumn-function.md) und [jetretrievecolumschlag](./jetretrievecolumn-function.md) oder 0 in [jetsetcolumn](./jetsetcolumn-function.md)zu verwenden. In der aktuellen Implementierung der Engine kann jede Spalte, die mit JET_bitColumnTagged erstellt wurde, mehrere Werte enthalten. Spalten, die mit JET_bitColumnMultiValued erstellt werden, unterscheiden sich nur in der Art und Weise, in der Sie indiziert werden Weitere Informationen finden Sie unter [JET_INDEXCREATE](./jet-indexcreate-structure.md) .
+Bei einer Spalte, die mehrere Werte enthalten kann, ist es nur möglich, eine Sequenznummer größer als 1 in [JetSetColumn](./jetsetcolumn-function.md) und [JetRetrieveColumn](./jetretrievecolumn-function.md) oder 0 in [JetSetColumn](./jetsetcolumn-function.md)zu verwenden. In der aktuellen Implementierung der Engine kann jede Spalte, die mit JET_bitColumnTagged erstellt wurde, mehrere Werte enthalten. Spalten, die mit JET_bitColumnMultiValued erstellt werden, unterscheiden sich von mehrwertigen markierten Spalten nur in der Weise, wie sie indiziert werden. Weitere Informationen finden [Sie unter JET_INDEXCREATE.](./jet-indexcreate-structure.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ Bei einer Spalte, die mehrere Werte enthalten kann, ist es nur möglich, eine Se
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -81,4 +81,4 @@ Bei einer Spalte, die mehrere Werte enthalten kann, ist es nur möglich, eine Se
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetsetcolumn](./jetsetcolumn-function.md)
+[JetSetColumn](./jetsetcolumn-function.md)

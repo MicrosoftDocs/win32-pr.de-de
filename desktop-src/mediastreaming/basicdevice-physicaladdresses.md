@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. physicaladressen (Eigenschaft)
+title: BasicDevice.PhysicalAddresses (Eigenschaft)
 description: Ruft einen Vektor physischer Adressen ab.
 ms.assetid: E9D86D13-8DD4-40BA-8608-54F8B3832E05
 keywords:
-- Physicaladressen-Eigenschaft Medien Streaming-API
-- Physicaladressen-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, physicaladressen (Eigenschaft)
+- PhysicalAddresses-Eigenschaft Media Streaming-API
+- PhysicalAddresses-Eigenschaft Media Streaming-API, BasicDevice-Schnittstelle
+- BasicGeräteschnittstelle Medienstreaming-API, PhysicalAddresses-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 698f8ac794a0a89bf8c31a6fd134cd4291c5fa6e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 93f5517008d4195dace53d77a8f9a4f6ca4f50aa704e52540ffbf2553aa76c84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106339483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118236603"
 ---
-# <a name="basicdevicephysicaladdresses-property"></a>Basicdevice. physicaladressen (Eigenschaft)
+# <a name="basicdevicephysicaladdresses-property"></a>BasicDevice.PhysicalAddresses (Eigenschaft)
 
 Ruft einen Vektor physischer Adressen ab.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_PhysicalAddresses(
-  [out] IVector< HSTRING > **value
+  [out] IVector< HSTRING > **value
 );
 ```
 
@@ -41,15 +41,15 @@ HRESULT get_PhysicalAddresses(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Aufzähl Bare Auflistung von Zeigern auf physische Adressen.
+Eine aufzählbare Auflistung von Zeigern auf physische Adressen.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

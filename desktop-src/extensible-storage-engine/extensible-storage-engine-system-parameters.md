@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in den System Parametern für Extensible Storage Engine.
-title: System Parameter für Extensible Storage Engine
+description: Weitere Informationen finden Sie unter Erweiterbare Storage-Engine-Systemparameter.
+title: Erweiterbare Storage-Engine-Systemparameter
 TOCTitle: Extensible Storage Engine System Parameters
 ms:assetid: f95c2e87-b25e-4be5-8c17-8486ba37dad4
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294139(v=EXCHG.10)
@@ -15,55 +15,55 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 43473f1bf5f599ba8efd06bd31345485acc07061
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 531e599c66279312f80216f1eb09fc612636821227e76f3572645ab6b4ee5137
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118256447"
 ---
-# <a name="extensible-storage-engine-system-parameters"></a>System Parameter für Extensible Storage Engine
+# <a name="extensible-storage-engine-system-parameters"></a>Erweiterbare Storage-Engine-Systemparameter
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="extensible-storage-engine-system-parameters"></a>System Parameter für Extensible Storage Engine
+## <a name="extensible-storage-engine-system-parameters"></a>Erweiterbare Storage-Engine-Systemparameter
 
-Die folgenden Konstanten werden als Werte für den *paramID* -Parameter der Funktionen [jetgetsystemparameter](./jetgetsystemparameter-function.md) und [jetsetsystemparameter](./jetsetsystemparameter-function.md) verwendet.
+Die folgenden Konstanten werden als Werte für den *par parameters* der [JetGetSystemParameter-](./jetgetsystemparameter-function.md) und [JetSetSystemParameter-Funktionen](./jetsetsystemparameter-function.md) verwendet.
 
-  - [Sicherungs-und Wiederherstellungs Parameter](./backup-and-restore-parameters.md)
+  - [Sicherungs- und Wiederherstellungsparameter](./backup-and-restore-parameters.md)
 
-  - [Rückruf Parameter](./callback-parameters.md)
+  - [Rückrufparameter](./callback-parameters.md)
 
   - [Datenbankparameter](./database-parameters.md)
 
-  - [Daten Bank Cache Parameter](./database-cache-parameters.md)
+  - [Parameter des Datenbankcaches](./database-cache-parameters.md)
 
-  - [Fehler Behandlungsparameter](./error-handling-parameters.md)
+  - [Fehlerbehandlungsparameter](./error-handling-parameters.md)
 
-  - [Ereignisprotokoll Parameter](./event-log-parameters.md)
+  - [Ereignisprotokollparameter](./event-log-parameters.md)
 
-  - [I/O-Parameter](./i-o-parameters.md)
+  - [E/A-Parameter](./i-o-parameters.md)
 
   - [Indexparameter](./index-parameters.md)
 
-  - [Informations Parameter](./informational-parameters.md)
+  - [Informationsparameter](./informational-parameters.md)
 
-  - [Meta-Parameter](./meta-parameters.md)
+  - [Metaparameter](./meta-parameters.md)
 
   - [Ressourcenparameter](./resource-parameters.md)
 
-  - [Temporäre Daten Bank Parameter](./temporary-database-parameters.md)
+  - [Temporäre Datenbankparameter](./temporary-database-parameters.md)
 
   - [Transaktionsprotokollparameters](./transaction-log-parameters.md)
 
-### <a name="system-parameter-description-format"></a>Systemparameterbeschreibungs-Format
+### <a name="system-parameter-description-format"></a>Beschreibungsformat des Systemparameters
 
 Jeder Systemparameter wird im folgenden Format beschrieben:
 
 JET_paramX
 
-Die Beschreibung des JET_paramX System Parameters.
+Beschreibung des JET_paramX Systemparameters.
 
 <table>
 <colgroup>
@@ -81,39 +81,39 @@ Die Beschreibung des JET_paramX System Parameters.
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p>Die zulässigen Werte für den Parameter.</p></td>
+<td><p>Die rechtlichen Werte für den Parameter.</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
-<td><p>Ist der Parameter Global oder pro Instanz?</p></td>
+<td><p>Ist der Parameter global oder pro Instanz?</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Kann der Parameter festgelegt werden, wenn Instanzen vorhanden sind?</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Kann der Parameter bei der Initialisierung festgelegt werden?</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Wirkt sich der Parameter auf die Dateien auf dem Datenträger aus?</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Wirkt sich der Parameter auf die Engine-Zuverlässigkeit aus?</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
+<td><p>Wirkt sich der Parameter auf die Zuverlässigkeit der Engine aus?</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Wirkt sich der Parameter auf die Engine-Leistung aus?</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Wirkt sich der Parameter auf Engine-Ressourcen aus?</p></td>
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows, die den-Parameter unterstützen.</p></td>
+<td><p>Releases von Windows, die den Parameter unterstützen.</p></td>
 </tr>
 </tbody>
 </table>

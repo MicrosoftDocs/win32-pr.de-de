@@ -1,58 +1,58 @@
 ---
-title: Allgemeine Ressourcen Attribute
-description: Die für 16-Bit-Windows unterstützten Ressourcen Definitions Anweisungen enthalten eine Load-Load-Option, die das Lade-und Arbeitsspeicher Merkmal der Ressource angibt.
+title: Allgemeine Ressourcenattribute
+description: Die ressourcendefinitionsbasierten Anweisungen, die auf 16-Bit-Windows enthalten eine load-mem-Option, die die Lade- und Arbeitsspeichermerkmale der Ressource angibt.
 ms.assetid: 53740997-854b-447c-9ab1-de8e17c0de1e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa15ae7207c80737e284151f0dfd3d7981935943
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d8b7bf01f95c700f12d130490673ef4f0df61cb84ae8077ca759655a2c4a1577
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118235577"
 ---
-# <a name="common-resource-attributes"></a>Allgemeine Ressourcen Attribute
+# <a name="common-resource-attributes"></a>Allgemeine Ressourcenattribute
 
-Die für 16-Bit-Windows unterstützten Ressourcen Definitions Anweisungen enthalten eine *Load-Load-* Option, die das Lade-und Arbeitsspeicher Merkmal der Ressource angibt. Diese Attribute sind aus Gründen der Abwärtskompatibilität in Ressourcen Skripts zulässig, werden jedoch ignoriert. Windows-Ressourcen werden geladen, wenn das entsprechende Modul geladen wird, und werden freigegeben, wenn das Modul entladen wird.
+Die ressourcendefinitionsbasierten Anweisungen, die auf 16-Bit-Windows enthalten eine *load-mem-Option,* die die Lade- und Arbeitsspeichermerkmale der Ressource angibt. Diese Attribute sind aus Gründen der Abwärtskompatibilität in Ressourcenskripts zulässig, werden jedoch ignoriert. Windows werden beim Laden des entsprechenden Moduls geladen und beim Entladen des Moduls wieder frei.
 
-## <a name="load-attributes"></a>Attribute laden
+## <a name="load-attributes"></a>Laden von Attributen
 
-Die Load-Attribute geben an, wann die Ressource geladen werden soll. Der Load-Parameter muss eines der folgenden Attribute sein.
+Die Load-Attribute geben an, wann die Ressource geladen werden soll. Der load-Parameter muss eines der folgenden Attribute sein.
 
 
 
-| Attribut      | BESCHREIBUNG                                                                  |
+| attribute      | BESCHREIBUNG                                                                  |
 |----------------|------------------------------------------------------------------------------|
-| **Vorab laden**    | Ignoriert. In 16-Bit-Fenstern wird die Ressource mit der ausführbaren Datei geladen. |
-| **LOADONCALL** | Ignoriert. In 16-Bit-Fenstern wird die Ressource geladen, wenn Sie aufgerufen wird.              |
+| **Vorspannung**    | Ignoriert. In 16-Bit-Windows wird die Ressource mit der ausführbaren Datei geladen. |
+| **Loadoncall** | Ignoriert. In 16-Bit-Windows wird die Ressource geladen, wenn sie aufgerufen wird.              |
 
 
 
- 
+ 
 
-## <a name="memory-attributes"></a>Speicher Attribute
+## <a name="memory-attributes"></a>Speicherattribute
 
-Die Speicher Attribute geben an, ob die Ressource fest oder verschiebbar ist, ob Sie verworfen werden kann und ob Sie rein ist. Der Speicher Parameter kann eines oder mehrere der folgenden Attribute sein.
+Die Speicherattribute geben an, ob die Ressource fest oder verschiebbar ist, ob sie verworfen werden kann und ob sie rein ist. Der Memory-Parameter kann eines oder mehrere der folgenden Attribute sein.
 
 
 
-| Attribut       | BESCHREIBUNG                                                                                                                               |
+| attribute       | BESCHREIBUNG                                                                                                                               |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| **FIXED**       | Ignoriert. In 16-Bit-Fenstern verbleibt die Ressource an einem Speicherort mit fester Größe.                                                              |
-| **Moveable**    | Ignoriert. In 16-Bit-Fenstern kann die Ressource ggf. verschoben werden, um Arbeitsspeicher zu komprimieren.                                                     |
-| **Entfernbare** | Ignoriert. In 16-Bit-Fenstern kann die Ressource verworfen werden, wenn Sie nicht mehr benötigt wird.                                                            |
-| **Rein**        | Ignoriert. Wird für die Kompatibilität mit vorhandenen Ressourcen Skripts akzeptiert.                                                                       |
-| **Unreinen**      | Ignoriert. Wird für die Kompatibilität mit vorhandenen Ressourcen Skripts akzeptiert.                                                                       |
-| **Genu**      | Ignoriert. In 16-Bit-Fenstern wird Shared für reguläre Module ignoriert. Für eine Ressource aus einem Windows-Rom-Modul wird der Arbeitsspeicher freigegeben.        |
-| **Nicht freigegebene**   | Ignoriert. In 16-Bit-Fenstern wird NonShared für reguläre Module ignoriert. Für eine Ressource aus einem Windows-Rom-Modul wird der Arbeitsspeicher nicht freigegeben. |
+| **FIXED**       | Ignoriert. In 16-Bit-Windows bleibt die Ressource an einem festen Speicherort.                                                              |
+| **Bewegliche**    | Ignoriert. In 16-Bit-Windows kann die Ressource bei Bedarf verschoben werden, um Arbeitsspeicher zu komprimen.                                                     |
+| **Discardable** | Ignoriert. In 16-Bit-Windows kann die Ressource verworfen werden, wenn sie nicht mehr benötigt wird.                                                            |
+| **Reine**        | Ignoriert. Wird aus Kompatibilitäts- mit vorhandenen Ressourcenskripts akzeptiert.                                                                       |
+| **Unreine**      | Ignoriert. Wird aus Kompatibilitäts- mit vorhandenen Ressourcenskripts akzeptiert.                                                                       |
+| **geteilt**      | Ignoriert. In 16-Bit-Windows wird SHARED für reguläre Module ignoriert. Für eine Ressource aus einem ROM-Windows wird der Arbeitsspeicher gemeinsam genutzt.        |
+| **NICHTFREIGABE**   | Ignoriert. In 16-Bit-Windows wird NONSHARED für reguläre Module ignoriert. Für eine Ressource aus einem ROM-Windows wird der Arbeitsspeicher nicht gemeinsam genutzt. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLECREATE-Eigenschaften'
-title: Eigenschaften von JET_TABLECREATE
+description: Weitere Informationen zu JET_TABLECREATE Eigenschaften
+title: JET_TABLECREATE-Eigenschaften
 TOCTitle: JET_TABLECREATE properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_TABLECREATE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tablecreate_properties(v=EXCHG.10)
 ms:contentKeyID: 55103995
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 2c79440fa5e04acefe54ed271460d6bd11bc57fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f5802c42bbf32548e1d42e507013fc0235eafdd1bd989b75f628b43a1b327eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118252154"
 ---
-# <a name="jet_tablecreate-properties"></a>Eigenschaften von JET_TABLECREATE
+# <a name="jet_tablecreate-properties"></a>JET_TABLECREATE-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [JET_TABLECREATE](./jet-tablecreate-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_TABLECREATE-Typ](./jet-tablecreate-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -34,83 +34,83 @@ Der [JET_TABLECREATE](./jet-tablecreate-class.md) -Typ macht die folgenden Membe
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351077(v=exchg.10).md">cbseparatelv</a></td>
-<td>Ruft die heuristische Größe ab, um ein System internes LV vom primären Datensatz zu trennen, oder legt diese fest.</td>
+<td><a href="dn351077(v=exchg.10).md">cbSeparateLV</a></td>
+<td>Ruft die heuristische Größe ab, um eine systeminterne LV vom primären Datensatz zu trennen, oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351078(v=exchg.10).md">cbyp</a></td>
+<td><a href="dn351078(v=exchg.10).md">cbtyp</a></td>
 <td>Ruft einen Typ der Rückruffunktion ab oder legt ihn fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351080(v=exchg.10).md">cColumns</a></td>
-<td>Ruft die Anzahl der zu erstellenden Spalten ab oder legt Sie fest.</td>
+<td>Ruft die Anzahl der zu erstellende Spalten ab oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351079(v=exchg.10).md">erstellt</a></td>
-<td>Ruft die Anzahl der erstellten Objekte (Spalten + Tabelle + Indizes + Rückrufe) ab oder legt Sie fest.</td>
+<td><a href="dn351079(v=exchg.10).md">cCreated</a></td>
+<td>Ruft die Anzahl der erstellten Objekte (columns+table+indexes+callbacks) ab oder legt diese fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351081(v=exchg.10).md">cindexes</a></td>
-<td>Ruft die Anzahl der zu erstellenden Indizes ab oder legt Sie fest.</td>
+<td><a href="dn351081(v=exchg.10).md">cIndexes</a></td>
+<td>Ruft die Anzahl der zu erstellende Indizes ab oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351082(v=exchg.10).md">grbit</a></td>
-<td>Ruft die Tabellen Optionen ab oder legt Sie fest.</td>
+<td>Ruft die Tabellenoptionen ab oder legt sie fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351087(v=exchg.10).md">plvspacehints</a></td>
-<td>Ruft Speicherplatz Zuordnung, Wartung und Verwendungs Hinweise für die getrennte LV-Struktur vom Typ " <a href="dn351095(v=exchg.10).md">JET_SPACEHINTS</a>" ab oder legt Sie fest.</td>
+<td><a href="dn351087(v=exchg.10).md">pLVSpacehints</a></td>
+<td>Ruft Platzzuweisungs-, Wartungs- und Nutzungshinweise für separate LV-Struktur vom Typ <a href="dn351095(v=exchg.10).md">JET_SPACEHINTS ab</a>oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351083(v=exchg.10).md">pssqspacehints</a></td>
-<td>Ruft Speicherplatz Zuordnung, Wartung und Verwendungs Hinweise für den sequenziellen Standard Index ab oder legt Sie fest.</td>
+<td><a href="dn351083(v=exchg.10).md">pSeqSpacehints</a></td>
+<td>Ruft Hinweise zur Speicherplatzbelegung, Wartung und Nutzung für den sequenziellen Standardindex ab oder legt diese fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351086(v=exchg.10).md">rgcolumncreate</a></td>
-<td>Ruft ein Array von Spalten Erstellungs Informationen vom Typ " <a href="dn335028(v=exchg.10).md">JET_COLUMNCREATE</a>" ab oder legt es fest.</td>
+<td>Ruft ein Array von Spaltenerstellungsinformationen vom Typ JET_COLUMNCREATE ab oder legt dieses <a href="dn335028(v=exchg.10).md">fest.</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351089(v=exchg.10).md">rgindexcreate</a></td>
-<td>Ruft ein Array von zu erstellenden Indizes vom Typ <a href="dn335112(v=exchg.10).md">JET_INDEXCREATE</a>ab oder legt es fest.</td>
+<td>Ruft ein Zu erstellendes Indexarray vom Typ JET_INDEXCREATE ab oder legt dieses <a href="dn335112(v=exchg.10).md">fest.</a></td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351090(v=exchg.10).md">szcallback</a></td>
-<td>Ruft eine Rückruffunktion ab, die für die Tabelle verwendet wird, oder legt Sie fest. Dies liegt im Format &quot; module! functionname vor &quot; und geht von nicht verwaltetem Code aus. Eine Alternative finden Sie <strong>unter jetregistercallback (JET_SESID, JET_TABLEID, JET_cbtyp, JET_CALLBACK, IntPtr, JET_HANDLE)</strong> .</td>
+<td><a href="dn351090(v=exchg.10).md">szCallback</a></td>
+<td>Ruft eine Rückruffunktion ab, die für die Tabelle verwendet werden soll, oder legt diese fest. Dies weist das Format &quot; module!functionName auf &quot; und geht von nicht verwaltetem Code aus. Eine Alternative finden Sie unter <strong>JetRegisterCallback(JET_SESID, JET_TABLEID, JET_cbtyp, JET_CALLBACK, IntPtr, JET_HANDLE).</strong></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351092(v=exchg.10).md">sztablename</a></td>
-<td>Ruft den Namen der zu erstellenden Tabelle ab oder legt ihn fest.</td>
+<td><a href="dn351092(v=exchg.10).md">szTableName</a></td>
+<td>Ruft den Namen der zu erstellende Tabelle ab oder legt diesen fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351093(v=exchg.10).md">sztemplatetablename</a></td>
-<td>Ruft den Namen der Tabelle ab, von der die Basis-DDL geerbt werden soll, oder legt ihn fest.</td>
+<td><a href="dn351093(v=exchg.10).md">szTemplateTableName</a></td>
+<td>Ruft den Namen der Tabelle ab, von der basis-DDL geerbt werden soll, oder legt diesen fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351099(v=exchg.10).md">TableID</a></td>
-<td>Ruft die zurückgegebene tabledid ab oder legt Sie fest.</td>
+<td><a href="dn351099(v=exchg.10).md">tableid</a></td>
+<td>Ruft die zurückgegebene "tabledid" ab oder legt sie fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351101(v=exchg.10).md">uldensity</a></td>
-<td>Ruft die Tabellen Dichte ab oder legt Sie fest.</td>
+<td><a href="dn351101(v=exchg.10).md">ulDensity</a></td>
+<td>Ruft die Tabellendichte ab oder legt sie fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351102(v=exchg.10).md">ulpages</a></td>
-<td>Ruft die für die Tabelle zuzuordnenden anfangs Seiten ab oder legt diese fest.</td>
+<td><a href="dn351102(v=exchg.10).md">ulPages</a></td>
+<td>Ruft die anfänglichen Seiten ab, die der Tabelle zugeordnet werden sollen, oder legt sie fest.</td>
 </tr>
 </tbody>
 </table>
@@ -124,4 +124,4 @@ Oben
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

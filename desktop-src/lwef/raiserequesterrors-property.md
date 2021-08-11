@@ -1,19 +1,19 @@
 ---
-title: Raiserequesterrors (Eigenschaft)
-description: Raiserequesterrors (Eigenschaft)
+title: RaiseRequestErrors-Eigenschaft
+description: RaiseRequestErrors-Eigenschaft
 ms.assetid: 60eb4478-526e-492a-8fb3-d1e54eff9868
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf9e559f999db663a8a9f5874f6d16a10e1e78ac
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 081a47eef17378c24df5bdbcb0f5141b0dece45ec9933f289d0b3da9193793d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104209188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118246613"
 ---
-# <a name="raiserequesterrors-property"></a>Raiserequesterrors (Eigenschaft)
+# <a name="raiserequesterrors-property"></a>RaiseRequestErrors-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -27,13 +27,13 @@ Gibt zurück oder legt fest, ob Fehler für Anforderungen ausgelöst werden.
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent * * *. Raiserequesterrors* *  \[  =  *boolescher* Wert\]
+*agent**. Boolescher RaiseRequestErrors-Wert* *  \[  =  \]
 
 
 
 | Teil      | BESCHREIBUNG                                                                                                                                                                                            |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *boolean* | Ein boolescher Wert, der bestimmt, ob Fehler in Anforderungen ausgelöst werden.<br/> **True**    (Standard) Anforderungs Fehler werden ausgelöst. <br/> **False**     Anforderungs Fehler werden nicht ausgelöst.<br/> |
+| *boolean* | Ein boolescher Wert, der bestimmt, ob Fehler in Anforderungen ausgelöst werden.<br/> **True**    (Standard) Anforderungsfehler werden ausgelöst. <br/> **False**     Anforderungsfehler werden nicht ausgelöst.<br/> |
 
 
 
@@ -41,11 +41,11 @@ Gibt zurück oder legt fest, ob Fehler für Anforderungen ausgelöst werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Eigenschaft können Sie feststellen, ob der Server Fehler auslöst, die mit Methoden auftreten, die [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekte unterstützen. Wenn Sie z. b. einen Animations Namen angeben, der nicht in einer [**Wiedergabe**](play-method.md)Methode vorhanden ist, löst der Server einen Fehler aus (der die Fehlermeldung anzeigt), es sei denn, Sie legen diese Eigenschaft auf **false** fest.
+Mit dieser Eigenschaft können Sie bestimmen, ob der Server Fehler bei Methoden löst, die [**Anforderungsobjekte**](/windows/desktop/lwef/the-request-object) unterstützen. Wenn Sie beispielsweise einen Animationsnamen angeben, der in einer [**Play-Methode**](play-method.md)nicht vorhanden ist, löst der Server einen Fehler aus (die Fehlermeldung wird angezeigt), es sei denn, Sie legen diese Eigenschaft auf **False fest.**
 
-Dies kann für Programmiersprachen nützlich sein, die keine Wiederherstellung bereitstellen, wenn ein Fehler ausgelöst wird. Achten Sie jedoch darauf, dass Sie diese Eigenschaft auf **false** festlegen, da es möglicherweise schwieriger ist, Fehler im Code zu finden.
+Dies kann für Programmiersprachen nützlich sein, die keine Wiederherstellung bereitstellen, wenn ein Fehler ausgelöst wird. Verwenden Sie jedoch Vorsicht, wenn Sie diese Eigenschaft auf **False festlegen,** da es schwieriger sein kann, Fehler im Code zu finden.
 
  
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentunloadableosfunctionalityexception-Klasse'
-title: Esentunloadableosfunctionalityexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentUnloadableOSFunctionalityException-Klasse'
+title: EsentUnloadableOSFunctionalityException-Klasse
 TOCTitle: EsentUnloadableOSFunctionalityException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentUnloadableOSFunctionalityException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentunloadableosfunctionalityexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 81b1151be5020a07f92582e762c6e6597138d9d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5ae24e5fd5867c847ef7f67d644e67e1be93f0d29d8bcc8a13b0fd05799f0a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118256852"
 ---
-# <a name="esentunloadableosfunctionalityexception-class"></a>Esentunloadableosfunctionalityexception-Klasse
+# <a name="esentunloadableosfunctionalityexception-class"></a>EsentUnloadableOSFunctionalityException-Klasse
 
-Basisklasse für JET_err. Unloadableosfunktionsausnahmen.
+Basisklasse für JET_err. UnloadableOSFunctionality-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentfatalexception](./esentfatalexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentunloadableosfunctionalityexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentFatalException](./esentfatalexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentUnloadableOSFunctionalityException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,6 +72,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentunloadableosfunctionalityexception-Member](./esentunloadableosfunctionalityexception-members.md)
+[EsentUnloadableOSFunctionalityException-Member](./esentunloadableosfunctionalityexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

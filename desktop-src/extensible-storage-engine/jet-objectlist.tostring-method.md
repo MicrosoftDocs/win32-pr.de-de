@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OBJECTLIST. Methode "destring"'
-title: JET_OBJECTLIST. Methode "destring"
+description: 'Weitere Informationen finden Sie unter: JET_OBJECTLIST. ToString-Methode'
+title: JET_OBJECTLIST. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_OBJECTLIST.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_objectlist.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d3a39f5be0fe93904ef95e2e54ad1d5bede63144
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e736024d8746389eef68cb1db987aa59f7de852236a8344be449452b1f4af6dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118254106"
 ---
-# <a name="jet_objectlisttostring-method"></a>JET_OBJECTLIST. Methode "destring"
+# <a name="jet_objectlisttostring-method"></a>JET_OBJECTLIST. ToString-Methode
 
-Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die den aktuellen [JET_OBJECTLIST](./jet-objectlist-class.md)darstellt.
+Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die [aktuelle](./jet-objectlist-class.md)JET_OBJECTLIST.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den aktuellen [JET_OBJECTLIST](./jet-objectlist-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die [aktuelle](./jet-objectlist-class.md)JET_OBJECTLIST.  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -65,6 +65,6 @@ Eine [Zeichenfolge](/dotnet/api/system.string) , die den aktuellen [JET_OBJECTLI
 
 [JET_OBJECTLIST-Klasse](./jet-objectlist-class.md)
 
-[Mitglieder JET_OBJECTLIST](./jet-objectlist-members.md)
+[JET_OBJECTLIST Member](./jet-objectlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

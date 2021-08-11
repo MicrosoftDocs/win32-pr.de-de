@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SNPROG Struktur'
-title: JET_SNPROG Struktur
+description: 'Weitere Informationen zu: JET_SNPROG-Struktur'
+title: JET_SNPROG-Struktur
 TOCTitle: JET_SNPROG Structure
 ms:assetid: 8b4224e4-ad4d-440f-8915-8eb43b0885f0
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269328(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 961e9cf264652924cfb1d870fa1a04aabc7fb61a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 251f7948ec4d15e455720043b847abbd855e24146dd05a432b2bf3ea6d28dfef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118252767"
 ---
-# <a name="jet_snprog-structure"></a>JET_SNPROG Struktur
+# <a name="jet_snprog-structure"></a>JET_SNPROG-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_snprog-structure"></a>JET_SNPROG Struktur
+## <a name="jet_snprog-structure"></a>JET_SNPROG-Struktur
 
-Die **JET_SNPROG** -Struktur enthält Informationen zum Fortschritt eines Vorgangs mit langer Ausführungszeit. Wenn die Rückruffunktion aufgerufen wird, um den Status des Vorgangs zu benachrichtigen, und der Vorgang noch ausgeführt wird, ist der letzte Parameter der Rückruffunktion ein Zeiger auf eine **JET_SNPROG** Struktur.
+Die **JET_SNPROG-Struktur** enthält Informationen zum Status eines Vorgangs mit langer Ausführungslaufzeit. Wenn die Rückruffunktion aufgerufen wird, um den Status des Vorgangs zu benachrichtigen, und der Vorgang noch ausgeführt wird, ist der letzte Parameter der Rückruffunktion ein Zeiger auf eine **JET_SNPROG** Struktur.
 
 ```cpp
     typedef struct {
@@ -43,15 +43,15 @@ Die **JET_SNPROG** -Struktur enthält Informationen zum Fortschritt eines Vorgan
 
 **cbStruct**
 
-Die Größe der **JET_SNPROG** Struktur in Bytes. Dieser Wert bestätigt, dass die folgenden Felder vorhanden sind.
+Die Größe der **JET_SNPROG-Struktur** in Bytes. Dieser Wert bestätigt das Vorhandensein der folgenden Felder.
 
-**cunitdone**
+**cunitDone**
 
-Die Anzahl der Arbeitseinheiten, die während der Funktion mit langer Laufzeit bereits abgeschlossen sind.
+Die Anzahl der Arbeitseinheiten, die bereits während der Funktion mit langer Ausführung abgeschlossen wurden.
 
-**cunittotal**
+**cunitTotal**
 
-Die Anzahl der Arbeitseinheiten, die abgeschlossen werden müssen. Dieser Wert sollte immer größer oder gleich **cunitdone** sein.
+Die Anzahl der Arbeitseinheiten, die abgeschlossen werden müssen. Dieser Wert sollte immer größer oder gleich **cunitDone** sein.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Die Anzahl der Arbeitseinheiten, die abgeschlossen werden müssen. Dieser Wert s
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

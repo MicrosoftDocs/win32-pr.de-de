@@ -1,43 +1,43 @@
 ---
-description: Maximale Datenmenge, die der Netzwerk Quell Puffer in Millisekunden angibt.
+description: Maximale Datenmenge in Millisekunden, die von der Netzwerkquelle gepuffert wird.
 ms.assetid: bd776dc2-341a-4d87-8a06-8063daf53ede
-title: MFNETSOURCE_MAXBUFFERTIMEMS-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_MAXBUFFERTIMEMS -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8f98cd17f33bb893dacd02b2a00669f3d2355e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99d0bf07da8b931ee5487715a4b4430e5ed4384142fc69678a075275d9c7757b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118243432"
 ---
-# <a name="mfnetsource_maxbuffertimems-property"></a>MF-Quelle \_ maxbuffertimems (Eigenschaft)
+# <a name="mfnetsource_maxbuffertimems-property"></a>MFNETSOURCE \_ MAXBUFFERTIMEMS (Eigenschaft)
 
-Maximale Datenmenge, die der Netzwerk Quell Puffer in Millisekunden angibt.
+Maximale Datenmenge in Millisekunden, die von der Netzwerkquelle gepuffert wird.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**DWORD** (als **Long** gespeichert)
+**DWORD** (als **LONG gespeichert)**
 
 VT \_ I4
 
-**LVAL**
+**lVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante " **MF NetSource \_ maxbuffertimems** " definiert die GUID für diesen Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null).
+Die Konstante **MFNETSOURCE \_ MAXBUFFERTIMEMS** definiert die GUID für diesen Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null).
 
-Anwendungen können diese Eigenschaft verwenden, um die Netzwerkquelle zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger an den quellresolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle](configuring-a-media-source.md).
+Anwendungen können diese Eigenschaft verwenden, um die Netzwerkquelle zu konfigurieren. Übergeben Sie zum Festlegen der -Eigenschaft einen **IPropertyStore-Zeiger** an den Quellre resolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle.](configuring-a-media-source.md)
 
-Der Standardwert dieser Eigenschaft ist 40.000 Millisekunden.
+Der Standardwert dieser Eigenschaft beträgt 40.000 Millisekunden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Der Standardwert dieser Eigenschaft ist 40.000 Millisekunden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -55,10 +55,10 @@ Der Standardwert dieser Eigenschaft ist 40.000 Millisekunden.
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Netzwerk Quell Features](network-source-features.md)
+[Netzwerkquellenfeatures](network-source-features.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

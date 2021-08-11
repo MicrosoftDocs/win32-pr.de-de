@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentunicodenormalizationnotsupportedexception-Konstruktor'
-title: Esentunicodenormalizationnotsupportedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentUnicodeNormalizationNotSupportedException-Konstruktor'
+title: EsentUnicodeNormalizationNotSupportedException-Konstruktor
 TOCTitle: 'EsentUnicodeNormalizationNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentUnicodeNormalizationNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentunicodenormalizationnotsupportedexception.esentunicodenormalizationnotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 13dad71f033f283acf2827cb24183b09c079274a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27ef9da11b9b0fa42448bb7bbeb94f24231ca9053330dac0f31f2bd126ae8ca3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118257248"
 ---
-# <a name="esentunicodenormalizationnotsupportedexception-constructor"></a>Esentunicodenormalizationnotsupportedexception-Konstruktor
+# <a name="esentunicodenormalizationnotsupportedexception-constructor"></a>EsentUnicodeNormalizationNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentunicodenormalizationnotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentUnicodeNormalizationNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentUnicodeNormalizationNotSupportedException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentunicodenormalizationnotsupportedexception-Klasse](./esentunicodenormalizationnotsupportedexception-class.md)
+[EsentUnicodeNormalizationNotSupportedException-Klasse](./esentunicodenormalizationnotsupportedexception-class.md)
 
-[Esentunicodenormalizationnotsupportedexception-Member](./esentunicodenormalizationnotsupportedexception-members.md)
+[EsentUnicodeNormalizationNotSupportedException-Member](./esentunicodenormalizationnotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
-- name: Eingabe Stapel für Zeiger Geräte
+- name: Zeigergeräteeingabestapel
   href: pointer-device-stack-portal.md
   items:
-    - name: Verweis auf Zeiger Geräte-Eingabe Stapel Referenz
+    - name: Zeigergeräteeingabestapelreferenz
       href: unified-input-stack-reference.md
       items:
         - name: Enumerationen
@@ -14,19 +14,19 @@
         - name: Functions
           href: functions.md
           items:
-            - name: Getpointerdevice
+            - name: GetPointerDevice
               href: /windows/win32/api/winuser/nf-winuser-getpointerdevice
-            - name: Getpointerde vicecursoren
+            - name: GetPointerDeviceCursors
               href: /windows/win32/api/winuser/nf-winuser-getpointerdevicecursors
-            - name: Getpointerdeviceproperties
+            - name: GetPointerDeviceProperties
               href: /windows/win32/api/winuser/nf-winuser-getpointerdeviceproperties
-            - name: Getpointerdevicerects
+            - name: GetPointerDeviceRects
               href: /windows/win32/api/winuser/nf-winuser-getpointerdevicerects
-            - name: Getpointerdevices
+            - name: GetPointerDevices
               href: /windows/win32/api/winuser/nf-winuser-getpointerdevices
-            - name: Getrawpointerdevicedata
+            - name: GetRawPointerDeviceData
               href: /windows/win32/api/winuser/nf-winuser-getrawpointerdevicedata
-            - name: Registerpointerdevicenotifications
+            - name: RegisterPointerDeviceNotifications
               href: /windows/win32/api/winuser/nf-winuser-registerpointerdevicenotifications
         - name: Strukturen
           href: structures.md

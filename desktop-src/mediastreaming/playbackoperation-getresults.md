@@ -1,11 +1,11 @@
 ---
-title: Playbackoperation. GetResults-Methode
-description: Gibt die Ergebnisse eines asynchronen Vorgangs zurück, der von einer der MediaRenderer-Wiedergabe Methoden gestartet wurde.
+title: PlaybackOperation.GetResults-Methode
+description: Gibt die Ergebnisse eines asynchronen Vorgangs zurück, der von einer der MediaRenderer-Wiedergabemethoden gestartet wurde.
 ms.assetid: EAA5B342-51EF-449A-A7E2-FFBDBE07757C
 keywords:
-- GetResults-Methode Medien Streaming-API
-- GetResults-Methode Medien Streaming-API, playbackoperation-Schnittstelle
-- Playbackoperation-Schnittstelle Medien Streaming-API, GetResults-Methode
+- 'GetResults-Methode: Media Streaming-API'
+- 'GetResults-Methode: Media Streaming-API, PlaybackOperation-Schnittstelle'
+- PlaybackOperation-Schnittstelle Medienstreaming-API, GetResults-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f146876966cc4e003bd88ad295c9938e5240abfe
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 9bd3c79164a78e7993eb8a58d0d89a64c7ceb31a0c33eaff2e9c1bc352144088
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104388914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118235783"
 ---
-# <a name="playbackoperationgetresults-method"></a>Playbackoperation. GetResults-Methode
+# <a name="playbackoperationgetresults-method"></a>PlaybackOperation.GetResults-Methode
 
-Gibt die Ergebnisse eines asynchronen Vorgangs zurück, der von einer der [**MediaRenderer**](mediarenderer.md) -Wiedergabe Methoden gestartet wurde.
+Gibt die Ergebnisse eines asynchronen Vorgangs zurück, der von einer der [**MediaRenderer-Wiedergabemethoden**](mediarenderer.md) gestartet wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ HRESULT GetResults(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*value* \[ out, retval\]
 </dt> <dd>
 
 Das Ergebnis des Vorgangs. Der Wert 0 gibt an, dass der Vorgang abgeschlossen wurde. Andere Werte sind reserviert.
@@ -50,7 +50,7 @@ Das Ergebnis des Vorgangs. Der Wert 0 gibt an, dass der Vorgang abgeschlossen wu
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,15 +62,15 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **GetResults** -Methode wird in der Regel vom Ereignishandler aufgerufen, der durch Festlegen der [**abgeschlossenen**](playbackoperation-completed.md) Eigenschaft registriert wurde.
+Die **GetResults-Methode** wird in der Regel vom Ereignishandler aufgerufen, der durch Festlegen der [**Completed-Eigenschaft registriert**](playbackoperation-completed.md) wurde.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Playbackoperation**](playbackoperation.md)
+[**PlaybackOperation**](playbackoperation.md)
 </dt> </dl>
 
  

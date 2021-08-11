@@ -1,23 +1,23 @@
 ---
-title: Andere mit dem Microsoft-Agent kompatible Sprach-Engines
-description: Andere mit dem Microsoft-Agent kompatible Sprach-Engines
+title: Andere Sprach-Engines, die mit Microsoft Agent kompatibel sind
+description: Andere Sprach-Engines, die mit Microsoft Agent kompatibel sind
 ms.assetid: fa87c592-c819-4dea-a1d0-6ccb25cc0bcc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9855a0f5374d35634d02f808b46449a053cada9a
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 521a236c08904c731035b709a808dc28b31bfb8e6664c07b0e6feb395dee469f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104389964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118247131"
 ---
-# <a name="other-speech-engines-compatible-with-microsoft-agent"></a>Andere mit dem Microsoft-Agent kompatible Sprach-Engines
+# <a name="other-speech-engines-compatible-with-microsoft-agent"></a>Andere Sprach-Engines, die mit Microsoft Agent kompatibel sind
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
-Zusätzlich zu den Microsoft Speech Engines, die mit und Support von Microsoft Agent bereitgestellt werden, bieten zahlreiche Unternehmen auch Sprachmodule mit Unterstützung für den Microsoft-Agent. Auf dieser Seite erhalten Sie einen kurzen Überblick über die Module, die in US-Englisch und in anderen Sprachen verfügbar sein können. Informationen zum Installieren und Zugreifen auf die Module und zum erneuten Verteilen der Module finden Sie auf ihren Websites.
+Zusätzlich zu den Microsoft-Sprach-Engines, die mit Microsoft Agent bereitgestellt werden und diese unterstützen, bieten einige Unternehmen auch Sprach-Engines mit Unterstützung für Microsoft Agent an. Auf dieser Seite erhalten Sie eine kurze Übersicht über solche Engines, die möglicherweise in Englisch (USA) und anderen Sprachen verfügbar sind. Informationen zum Installieren und Zugreifen sowie zum Lizenzieren und Verteilen der Engines finden Sie auf ihren Websites.
 
-Wenn Sie die Sprach-Engine von Drittanbietern verwenden, müssen Sie auch Microsoft SAPI 4.0 als Lauf Zeit Binärdateien installieren, damit die Engines ordnungsgemäß aufgelistet werden. Auf der Webseite können Sie das folgende Tag einschließen, um einen autodownload der Speech-API zu initiieren:
+Wenn Sie eine Sprach-Engine eines Drittanbieters verwenden, müssen Sie auch Microsoft SAPI 4.0a Runtime-Binärdateien installieren, damit die Engines ordnungsgemäß aufzählt werden. Auf Ihrer Webseite können Sie das folgende Tag verwenden, um ein automatisches Herunterladen der Speech-API auszulösen:
 
 ``` syntax
 <OBJECT WIDTH=0 HEIGHT=0
@@ -26,25 +26,25 @@ Wenn Sie die Sprach-Engine von Drittanbietern verwenden, müssen Sie auch Micros
 </OBJECT>
 ```
 
-Weitere Informationen zu den SAPI-Lauf Zeit Binärdateien finden Sie auf der [Website der Microsoft-Sprachgruppe](https://msdn.microsoft.com/library/ee705648.aspx). Der Microsoft-Agent installiert auch die SAPI-Runtime-Binärdateien mit der Microsoft-Spracherkennungs-Engine, der Sprachsystem Steuerung und dem agentzeicheneditor.
+Weitere Informationen zu den SAPI-Laufzeitbinärdateien finden Sie auf der Website der [Microsoft Speech-Gruppe.](https://msdn.microsoft.com/library/ee705648.aspx) Microsoft Agent installiert außerdem die SAPI-Laufzeitbinärdateien mit der Microsoft Speech Recognition Engine, dem Speech Systemsteuerung und dem Zeichen-Editor des Agents.
 
-Beachten Sie, dass diese Verknüpfungen auf Server verweisen, die nicht von Microsoft gesteuert werden. Lesen Sie die offizielle Microsoft- [Erklärung](https://www.microsoft.com/isapi/gomscom.asp?TARGET=/Misc/NonMS.md) zu anderen Servern. Microsoft unterstützt den Inhalt und die auf diesen Websites bereitgestellte Software nicht. Alle technischen Fragen und Supportfragen sollten auch an die Lieferanten der Engines und nicht an Microsoft oder das Microsoft-agentteam geleitet werden.
+Beachten Sie, dass diese Links auf Server verweisen, die nicht von Microsoft kontrolliert werden. Lesen Sie die offizielle [Microsoft-Anweisung](https://www.microsoft.com/isapi/gomscom.asp?TARGET=/Misc/NonMS.md) zu anderen Servern. Microsoft unterstützt weder den Inhalt noch die auf diesen Websites bereitgestellte Software. Alle technischen fragen und Supportfragen sollten auch an die Lieferanten der Engines und nicht an Microsoft oder das Microsoft Agent-Team gerichtet werden.
 
-**Digalo-Text-zu-Sprache-Engine**
+**Digge Text-to-Speech-Engine**
 
-Digalo ist eine erschwingliche TTS-Engine, die für Endbenutzer und Entwickler konzipiert ist. Die-Engine wird in einer Reihe von Sprachen angeboten: Französisch, Deutsch, Portugiesisch (Brasilien), Spanisch, Russisch und UK und US-Englisch mit Italienisch, Polnisch und anderen Sprachen, die bald verfügbar sind. Entwicklerinformationen sowie Details zur Registrierung von Endbenutzern und Partnerprogrammen sind ebenfalls verfügbar.
+Diglot ist eine kostengünstige TTS-Engine, die für Endbenutzer und Entwickler entwickelt wurde. Die Engine wird in einer Reihe von Sprachen angeboten: Französisch, Deutsch, Portugiesisch (Brasilien), Spanisch, Russisch und Englisch (VEREINIGTEs Königreich) sowie Italienisch, Polnisch und andere Sprachen, die in Kürze verfügbar sind. Entwicklerinformationen sowie Details zu Endbenutzerregistrierungs- und Partnerprogrammen sind ebenfalls verfügbar.
 
-**Elan-Sprachmodul**
+**Elan Speech Engine**
 
-Die Elan-Sprach-Engine verwendet die Text-to-Speech-Technologie von Elan und ist in sieben Sprachen verfügbar: Französisch, Deutsch, Portugiesisch (Brasilien), Spanisch, Russisch, UK und US-Englisch.
+Die Elan Speech-Engine verwendet die Text-to-Speech-Technologie von Elan und ist in sieben Sprachen verfügbar: Französisch, Deutsch, Portugiesisch (Brasilien), Spanisch, Russisch, Vereinigtes Königreich und Englisch (USA).
 
-**IBM ViaVoice Outloud**
+**IBM ViaVoice Out stubd**
 
-IBM hat mehrere Microsoft-agentzeichen für die Verwendung mit ViaVoice Outloud entwickelt. IBM ViaVoice Outloud ist eine Technologie für Text-zu-Sprache (Sprachsynthese) und ist in Französisch, Deutsch, Italienisch, Spanisch, Englisch (Großbritannien) und Englisch (USA) verfügbar. In Kombination mit dem Microsoft-Agent können Sie in vielen Sprachen lebendige Anwendungen erstellen und Ihre Verkaufschancen auf neue weltweiten Märkten ausweiten.
+IBM hat mehrere Microsoft Agent-Zeichen für die Verwendung mit ViaVoice Out stubd entwickelt. IBM ViaVoice Out stubd ist eine Sprachsynthesetechnologie (Text-to-Speech) und ist in Französisch, Deutsch, Italienisch, Spanisch, Englisch (Vereinigtes Königreich) und Englisch (USA) verfügbar. In Kombination mit Microsoft Agent können Sie dynamische Anwendungen in vielen Sprachen erstellen und Ihre Verkaufschancen auf neue weltweite Märkte ausdehnen.
 
- 
+ 
 
- 
+ 
 
 
 

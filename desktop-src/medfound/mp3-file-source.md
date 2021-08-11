@@ -1,49 +1,49 @@
 ---
-description: Die MP3-Datei Quelle analysiert MP3-Dateien.
+description: Die MP3-Dateiquelle analysiert MP3-Dateien.
 ms.assetid: 37362642-1b8a-4fb3-950d-ed1afe3696e5
-title: MP3-Datei Quelle
+title: MP3-Dateiquelle
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2241e3b99d5a1918be8ff0182a9eca8939c12ce2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89b5649f1bdbc9d9b3dfa0af2f04878dfa64852af85ff8e829d4d2d4c4d20d8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118240105"
 ---
-# <a name="mp3-file-source"></a>MP3-Datei Quelle
+# <a name="mp3-file-source"></a>MP3-Dateiquelle
 
-Die MP3-Datei Quelle analysiert MP3-Dateien.
+Die MP3-Dateiquelle analysiert MP3-Dateien.
 
-Die MP3-Datei Quelle gibt Puffer aus, die MPEG-1-Audioframes enthalten. Die Audiocodierung wird nicht decodiert.
+Die MP3-Dateiquelle gibt Puffer aus, die MPEG-1-Audioframes enthalten. Die Audiodaten werden nicht decodiert.
 
 ## <a name="file-extensions-and-mime-types"></a>Dateierweiterungen und MIME-Typen
 
-Die MP3-Datei Quelle ist die Standard Medienquelle für die folgende Dateinamenerweiterung:
+Die MP3-Dateiquelle ist die Standardmedienquelle für die folgende Dateierweiterung:
 
 -   .mp3
 
-Es ist auch die Standard Medienquelle für die folgenden MIME-Typen.
+Es ist auch die Standardmedienquelle für die folgenden MIME-Typen.
 
--   Audiodatei/MPEG
--   Audiodatei/x-MP3
--   Audiodatei/x-MPEG
+-   audio/mpeg
+-   audio/x-mp3
+-   audio/x-mpeg
 
 ## <a name="media-types"></a>Medientypen
 
-Der von der MP3-Datei Quelle angebotene Medientyp enthält die folgenden Attribute.
+Der von der MP3-Dateiquelle angebotene Medientyp enthält die folgenden Attribute.
 
 
 
-| Attribut                                                                                    | BESCHREIBUNG                                                                                                                                        |
+| attribute                                                                                    | BESCHREIBUNG                                                                                                                                        |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Haupt-Typ des MF- \_ MT \_ \_**](mf-mt-major-type-attribute.md)                                    | Gleich **mfmediatype \_ -Audiodatei**.                                                                                                                   |
-| [**MF- \_ MT- \_ Untertyp**](mf-mt-subtype-attribute.md)                                           | Entspricht **mfaudioformat \_ MP3** oder **mfaudioformat \_ MPEG**.                                                                                        |
-| [**MF \_ \_ -MT-audiodurchschn. \_ \_ Byte \_ pro \_ Sekunde**](mf-mt-audio-avg-bytes-per-second-attribute.md) | Die durchschnittliche Anzahl von Bytes pro Sekunde.                                                                                                                |
-| [**MF \_ \_ -MT- \_ Audioblock \_ Ausrichtung**](mf-mt-audio-block-alignment-attribute.md)             | Gleich 1.                                                                                                                                        |
-| [**MF \_ \_ -MT- \_ audionum- \_ Kanäle**](mf-mt-audio-num-channels-attribute.md)                   | Anzahl der Audiokanäle.                                                                                                                          |
-| [**MF \_ \_ -MT- \_ Audiobeispiele \_ pro \_ Sekunde**](mf-mt-audio-samples-per-second-attribute.md)      | Anzahl von Audiobeispielen pro Sekunde.                                                                                                                |
-| [**\_ \_ Benutzer \_ Daten für MF-MT**](mf-mt-user-data-attribute.md)                                      | Enthält den Teil einer [**MPEGLAYER3WAVEFORMAT**](/windows/win32/api/mmreg/ns-mmreg-mpeglayer3waveformat) -Struktur, der nach dem **wfx** -Member der-Struktur angezeigt wird. |
+| [**MF \_ \_ MT-HAUPTTYP \_**](mf-mt-major-type-attribute.md)                                    | Entspricht **MFMediaType \_ Audio**.                                                                                                                   |
+| [**MF \_ \_ MT-UNTERTYP**](mf-mt-subtype-attribute.md)                                           | Entspricht **MFAudioFormat \_ MP3 oder** **MFAudioFormat \_ MPEG**.                                                                                        |
+| [**MF \_ MT \_ AUDIO \_ AVG \_ BYTES \_ PER \_ SECOND**](mf-mt-audio-avg-bytes-per-second-attribute.md) | Durchschnittliche Anzahl von Bytes pro Sekunde.                                                                                                                |
+| [**MF MT AUDIO BLOCK ALIGNMENT (MF \_ \_ MT-AUDIOBLOCKAUSRICHTUNG) \_ \_**](mf-mt-audio-block-alignment-attribute.md)             | Gleich 1.                                                                                                                                        |
+| [**MF \_ MT \_ AUDIO \_ NUM \_ CHANNELS**](mf-mt-audio-num-channels-attribute.md)                   | Anzahl der Audiokanäle.                                                                                                                          |
+| [**MF \_ \_ MT-AUDIOBEISPIELE \_ \_ PRO \_ SEKUNDE**](mf-mt-audio-samples-per-second-attribute.md)      | Anzahl von Audiobeispielen pro Sekunde.                                                                                                                |
+| [**MF \_ \_ MT-BENUTZERDATEN \_**](mf-mt-user-data-attribute.md)                                      | Enthält den Teil einer [**MPEGLAYER3WAVEFORMAT-Struktur,**](/windows/win32/api/mmreg/ns-mmreg-mpeglayer3waveformat) der nach dem **wfx-Member** der -Struktur angezeigt wird. |
 
 
 
@@ -51,13 +51,13 @@ Der von der MP3-Datei Quelle angebotene Medientyp enthält die folgenden Attribu
 
 ## <a name="interfaces"></a>Schnittstellen
 
-Die MP3-Datei Quelle macht die folgenden Schnittstellen über [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))verfügbar:
+Die MP3-Dateiquelle macht die folgenden Schnittstellen über [**QueryInterface verfügbar:**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))
 
--   [**IMF-Dienst**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
--   [**IMF Media Event Generator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator)
--   [**Imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
+-   [**GEGETService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
+-   [**VERERBUNGMediaEventGenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator)
+-   [**VERERBUNGMediaSource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
 
-Außerdem werden die folgenden Schnittstellen über [**IMF-Service**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)verfügbar gemacht:
+Darüber hinaus werden die folgenden Schnittstellen über [**DENTGETService verfügbar macht:**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
 
 
 
@@ -75,24 +75,24 @@ Außerdem werden die folgenden Schnittstellen über [**IMF-Service**](/windows/d
 <tbody>
 <tr class="odd">
 <td><strong>MF_METADATA_PROVIDER_SERVICE</strong></td>
-<td><a href="/windows/desktop/api/mfidl/nn-mfidl-imfmetadataprovider"><strong>IMFMetadataProvider</strong></a></td>
+<td><a href="/windows/desktop/api/mfidl/nn-mfidl-imfmetadataprovider"><strong>INITIALMetadataProvider</strong></a></td>
 </tr>
 <tr class="even">
 <td><strong>MF_PROPERTY_HANDLER_SERVICE</strong></td>
-<td><a href="/windows/desktop/api/propsys/nn-propsys-ipropertystore"><strong>IPropertyStore</strong></a>
+<td><a href="/windows/desktop/api/propsys/nn-propsys-ipropertystore"><strong>Ipropertystore</strong></a>
 <blockquote>
 [!Note]<br />
-Siehe <a href="shell-metadata-providers.md">shellmetadatenanbieter</a>.
+Weitere Informationen finden <a href="shell-metadata-providers.md">Sie unter Shell metadata providers (Shellmetadatenanbieter).</a>
 </blockquote>
 <br/> <br/></td>
 </tr>
 <tr class="odd">
 <td><strong>MF_RATE_CONTROL_SERVICE</strong></td>
-<td><a href="/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol"><strong>Imfratecontrol</strong></a></td>
+<td><a href="/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol"><strong>ATRATEControl</strong></a></td>
 </tr>
 <tr class="even">
 <td><strong>MF_RATE_CONTROL_SERVICE</strong></td>
-<td><a href="/windows/desktop/api/mfidl/nn-mfidl-imfratesupport"><strong>Imfratesupport</strong></a></td>
+<td><a href="/windows/desktop/api/mfidl/nn-mfidl-imfratesupport"><strong>VERRATRateSupport</strong></a></td>
 </tr>
 </tbody>
 </table>
@@ -107,8 +107,8 @@ Siehe <a href="shell-metadata-providers.md">shellmetadatenanbieter</a>.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                           |
 | DLL<br/>                      | <dl> <dt>Mf.dll</dt> </dl> |
 
 
@@ -117,13 +117,13 @@ Siehe <a href="shell-metadata-providers.md">shellmetadatenanbieter</a>.
 
 <dl> <dt>
 
-[Medienquellen und senken](media-sources-and-sinks.md)
+[Medienquellen und -senken](media-sources-and-sinks.md)
 </dt> <dt>
 
 [Medienquellen](media-sources.md)
 </dt> <dt>
 
-[Quellresolver](source-resolver.md)
+[Quellre resolver](source-resolver.md)
 </dt> <dt>
 
 [Unterstützte Medienformate in Media Foundation](supported-media-formats-in-media-foundation.md)

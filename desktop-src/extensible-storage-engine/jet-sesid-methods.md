@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SESID-Methoden'
+description: Weitere Informationen zu JET_SESID Methoden
 title: JET_SESID Methoden
 TOCTitle: JET_SESID methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.JET_SESID
@@ -7,19 +7,19 @@ ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_
 ms:contentKeyID: 39514986
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: d370812dc5cec5d90f3c73b3c7b5ea16069acbd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a6e50c12fccee38f9b2b9ee87ab96c7051d25c40dd88b2a6b0c0d68c3a3f4b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118254007"
 ---
 # <a name="jet_sesid-methods"></a>JET_SESID Methoden
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [JET_SESID](./jet-sesid-structure.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_SESID-Typ](./jet-sesid-structure.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -34,42 +34,42 @@ Der [JET_SESID](./jet-sesid-structure.md) -Typ macht die folgenden Member verfü
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh579508(v=exchg.10).md">Ist gleich(Objekt)</a></td>
-<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType. gleich (Object)</a>.)</td>
+<td><a href="hh579508(v=exchg.10).md">Equals(Object)</a></td>
+<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh564851(v=exchg.10).md">Ist gleich(JET_SESID)</a></td>
+<td><a href="hh564851(v=exchg.10).md">Equals(JET_SESID)</a></td>
 <td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh564927(v=exchg.10).md">GetHashCode</a></td>
-<td>Gibt den Hashcode für diese Instanz zurück. (Überschreibt <a href="/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType. GetHashCode ()</a>.)</td>
+<td>Gibt den Hashcode für diese Instanz zurück. (Überschreibt <a href="/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">GetType</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">Gettype</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh564756(v=exchg.10).md">ToString()</a></td>
-<td>Generiert eine Zeichen folgen Darstellung der-Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.-Zeichenfolge ()</a>.)</td>
+<td>Generieren Sie eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh578692(v=exchg.10).md">"Zeichenfolge" (String, IFormatProvider)</a></td>
+<td><a href="hh578692(v=exchg.10).md">ToString(String, IFormatProvider)</a></td>
 <td>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</td>
 </tr>
 </tbody>
@@ -84,4 +84,4 @@ Oben
 
 [JET_SESID Struktur](./jet-sesid-structure.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

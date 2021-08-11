@@ -1,29 +1,29 @@
 ---
-description: Topoedit-Menüs
+description: TopoEdit-Menüs
 ms.assetid: c3d1da29-7279-4cd4-a518-56c76ececc28
-title: Topoedit-Menüs
+title: TopoEdit-Menüs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85238d9aabe859c2ca62f43b8d58f8f6bc03f7e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 90074ece838193e77d488890fc296fd82810cc3a126ffa8c4e4fe635761dbb71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118237884"
 ---
-# <a name="topoedit-menus"></a>Topoedit-Menüs
+# <a name="topoedit-menus"></a>TopoEdit-Menüs
 
-In der folgenden Tabelle werden die topoedit-Menüs beschrieben:
+In der folgenden Tabelle werden die TopoEdit-Menüs beschrieben:
 
 
 
 | Menü                               | BESCHREIBUNG                                                                    |
 |------------------------------------|--------------------------------------------------------------------------------|
-| [Menü "Datei"](file-menu.md)         | Öffnet eine neue oder vorhandene Topologie.                                              |
-| [Menü "Topologie"](topology-menu.md) | Fügt Quell-, Transformations-und Ausgabe Knoten hinzu. Löst topologieknoten auf und löscht diese. |
-| [Menü Steuerelemente](controls-menu.md) | Spielt eine aufgelöste Topologie wieder, hält Sie an und beendet diese.                                  |
-| [Menü "Extras"](tools-menu.md)       | Protokolliert Aktivitäten eines ausgewählten topologieknotens.                                   |
-| [Menü "Hilfe"](help-menu.md)         | Enthält einen Link zu den Hilfe Themen zu topoedit.                                   |
+| [Menü „Datei“](file-menu.md)         | Öffnet eine neue oder vorhandene Topologie.                                              |
+| [Topologiemenü](topology-menu.md) | Fügt Quell-, Transformations- und Ausgabeknoten hinzu. Löst Topologieknoten auf und löscht sie. |
+| [Menü "Steuerelemente"](controls-menu.md) | Gibt eine aufgelöste Topologie wieder, hält sie an und beendet sie.                                  |
+| [Menü "Extras"](tools-menu.md)       | Protokolliert Aktivitäten eines ausgewählten Topologieknotens.                                   |
+| [Menü „Hilfe“](help-menu.md)         | Stellt einen Link zu den Hilfethemen zu TopoEdit bereit.                                   |
 
 
 
@@ -33,13 +33,13 @@ In der folgenden Tabelle werden die topoedit-Menüs beschrieben:
 
 <dl> <dt>
 
-[Einführung in topoedit](introduction-to-topoedit.md)
+[Einführung in TopoEdit](introduction-to-topoedit.md)
 </dt> <dt>
 
-[Topoedit-Symbolleiste](topoedit-toolbar.md)
+[TopoEdit-Symbolleiste](topoedit-toolbar.md)
 </dt> <dt>
 
-[Topoedit](topoedit.md)
+[TopoEdit](topoedit.md)
 </dt> </dl>
 
  

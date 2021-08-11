@@ -1,9 +1,9 @@
 ---
-title: Mpfrememory-Funktion (mpclient. h)
-description: Gibt Arbeitsspeicher für den Malware Schutz-Manager frei.
+title: MpFreeMemory-Funktion (MpClient.h)
+description: Gibt Arbeitsspeicher für den Schadsoftwareschutz-Manager frei.
 ms.assetid: D0B43AE5-756F-4E86-B8A5-8268A41901BC
 keywords:
-- Mpfrememory-Funktion Legacy Funktionen der Windows-Umgebung
+- MpFreeMemory-Funktion – Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a15a2845b034a3aa739b1ba2f33a023b742b4b22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 806795cee45fcfe95473c0961106da074c1157b65ac5c19f5d4813c84865616a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118247425"
 ---
-# <a name="mpfreememory-function"></a>Mpfrememory-Funktion
+# <a name="mpfreememory-function"></a>MpFreeMemory-Funktion
 
-Gibt Arbeitsspeicher für den Malware Schutz-Manager frei. Alle Puffer, die von Malware Schutzfunktionen zugeordnet und zurückgegeben werden, müssen vom Aufrufer mithilfe dieser Funktion freigegeben werden.
+Gibt Arbeitsspeicher für den Schadsoftwareschutz-Manager frei. Alle Puffer, die von Schadsoftwareschutzfunktionen zugeordnet und zurückgegeben werden, müssen vom Aufrufer mit dieser Funktion freigegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ void WINAPI MpFreeMemory(
 
 <dl> <dt>
 
-*pmemory* \[ in\]
+*pMemory* \[ In\]
 </dt> <dd>
 
-Typ: **pVoid**
+Typ: **PVOID**
 
-Ein Zeiger auf den Arbeitsspeicher, der von einer Malware Schutzfunktion zugewiesen wird.
+Ein Zeiger auf den von einer Schadsoftwareschutzfunktion belegten Arbeitsspeicher.
 
 </dd> </dl>
 
@@ -53,17 +53,17 @@ Ein Zeiger auf den Arbeitsspeicher, der von einer Malware Schutzfunktion zugewie
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Speicherverwaltung für Clients zu vereinfachen, definiert der Malware Schutz-Manager auch Makros, um Speicher freizugeben, der mit verschiedenen von Malware Schutzfunktionen zurückgegebenen Strukturen verknüpft ist. Die folgenden Makros sind in der Header Datei mpmemfree. h definiert:
+Um die Speicherverwaltung für Clients zu vereinfachen, definiert der Malwareschutz-Manager auch Makros, um Arbeitsspeicher freizugeben, der verschiedenen Strukturen zugeordnet ist, die von Funktionen zum Schutz vor Schadsoftware zurückgegeben werden. Die folgenden Makros sind in der Headerdatei mpmemfree.h definiert:
 
 
 
 | Name                            | BESCHREIBUNG                                                                      |
 |---------------------------------|----------------------------------------------------------------------------------|
-| mpresource- \_ Informationen \_ frei          | Gibt zugeordnete [**mpresource- \_ Informationen**](mpresource-info.md)frei.                  |
-| mpthreat- \_ Informationen \_ frei            | Gibt zugeordnete [**mpthreat- \_ Informationen**](mpthreat-info.md)frei.                      |
-| lokalisierte mpthreat- \_ \_ Informationen \_ kostenlos | Gibt eine zugeordnete, [**mpthreat \_ lokalisierte \_ Information**](mpthreat-localized-info.md)frei. |
+| MPRESOURCE \_ INFO \_ FREE          | Gibt eine zugeordnete [**MPRESOURCE \_ INFO**](mpresource-info.md)frei.                  |
+| MPTHREAT \_ INFO \_ FREE            | Gibt eine zugeordnete [**MPTHREAT \_ INFO**](mpthreat-info.md)frei.                      |
+| LOKALISIERTE MPTHREAT-INFORMATIONEN \_ \_ \_ KOSTENLOS | Gibt eine zugeordnete [**LOKALISIERTE MPTHREAT-INFO \_ \_**](mpthreat-localized-info.md)frei. |
 
 
 
@@ -75,9 +75,9 @@ Um die Speicherverwaltung für Clients zu vereinfachen, definiert der Malware Sc
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
@@ -86,16 +86,16 @@ Um die Speicherverwaltung für Clients zu vereinfachen, definiert der Malware Sc
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**mpresource- \_ Informationen**](mpresource-info.md)
+[**\_MPRESOURCE-INFORMATIONEN**](mpresource-info.md)
 </dt> <dt>
 
-[**mpthreat- \_ Informationen**](mpthreat-info.md)
+[**\_MPTHREAT-INFORMATIONEN**](mpthreat-info.md)
 </dt> <dt>
 
-[**lokalisierte mpthreat- \_ \_ Informationen**](mpthreat-localized-info.md)
+[**LOKALISIERTE \_ \_ MPTHREAT-INFORMATIONEN**](mpthreat-localized-info.md)
 </dt> </dl>
 
  

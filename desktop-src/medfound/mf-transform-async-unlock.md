@@ -1,17 +1,17 @@
 ---
 description: Aktiviert die Verwendung einer asynchronen Media Foundation Transformation (MFT).
 ms.assetid: e12ab57e-ebc2-46af-afdf-d78d4db16fcf
-title: MF_TRANSFORM_ASYNC_UNLOCK-Attribut (MF Transform. h)
+title: MF_TRANSFORM_ASYNC_UNLOCK-Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e7876b3f1fca80e881414399d40e69112a64d8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82a0a8f328095c3a5c567171fa6a625a77e5623d126dfb2be9f34fef556984be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118244176"
 ---
-# <a name="mf_transform_async_unlock-attribute"></a>MF \_ Transform \_ Async \_ Unlock Attribute
+# <a name="mf_transform_async_unlock-attribute"></a>MF \_ TRANSFORM \_ ASYNC \_ UNLOCK-Attribut
 
 Aktiviert die Verwendung einer asynchronen Media Foundation Transformation (MFT).
 
@@ -21,21 +21,21 @@ Aktiviert die Verwendung einer asynchronen Media Foundation Transformation (MFT)
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Asynchrone MFTs sind nicht kompatibel mit früheren Versionen von Microsoft Media Foundation. Um zu verhindern, dass vorhandene Anwendungen versehentlich ein asynchrones MFT verwenden, muss dieses Attribut auf einen Wert ungleich 0 (null) festgelegt werden, bevor ein asynchroner MFT verwendet werden kann. Das-Attribut wird von der Media Foundation Pipeline automatisch festgelegt, sodass die meisten Anwendungen dieses Attribut nicht verwenden müssen. Wenn eine Anwendung jedoch ein asynchrones MFT außerhalb der Media Foundation Pipeline verwendet, muss die Anwendung dieses Attribut festlegen.
+Asynchrone MFTs sind nicht mit früheren Versionen von Microsoft Media Foundation kompatibel. Um zu verhindern, dass vorhandene Anwendungen versehentlich einen asynchronen MFT verwenden, muss dieses Attribut auf einen Wert ungleich 0 (null) festgelegt werden, bevor ein asynchrones MFT verwendet werden kann. Die Media Foundation Pipeline legt das Attribut automatisch fest, sodass die meisten Anwendungen dieses Attribut nicht verwenden müssen. Wenn eine Anwendung jedoch einen asynchronen MFT außerhalb der Media Foundation Pipeline verwendet, muss die Anwendung dieses Attribut festlegen.
 
-Synchrone MFTs benötigen dieses Attribut nicht.
+Synchrone MFTs erfordern dieses Attribut nicht.
 
-Um zu testen, ob eine MFT asynchron ist, erhalten Sie den Wert des " [MF \_ Transform \_ Async](mf-transform-async.md) "-Attributs für die MFT.
+Um zu testen, ob ein MFT asynchron ist, ruft den Wert des [MF \_ TRANSFORM \_ ASYNC-Attributs](mf-transform-async.md) für den MFT ab.
 
 ## <a name="examples"></a>Beispiele
 
-Mit dem folgenden Code wird ein asynchroner MFT entsperrt.
+Der folgende Code entsperrt einen asynchronen MFT.
 
 
 ```C++
@@ -63,9 +63,9 @@ HRESULT UnlockAsyncMFT(IMFTransform *pMFT)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ HRESULT UnlockAsyncMFT(IMFTransform *pMFT)
 [Asynchrone MFTs](asynchronous-mfts.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

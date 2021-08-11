@@ -1,11 +1,11 @@
 ---
-title: Devicepair-Renderer-Eigenschaft
-description: Ruft den Renderer für das aktive Basic-Geräte Paar ab.
+title: DevicePair-Renderer (Eigenschaft)
+description: Ruft den Renderer für das aktive Basisgerätepaar ab.
 ms.assetid: DB2ED5D3-CCDF-4704-A29A-F1A13F7B953A
 keywords:
-- Renderer-Eigenschaft Medien Streaming-API
-- Renderer-Eigenschaft Medien Streaming-API, devicepair-Schnittstelle
-- Devicepair Interface Media Streaming-API, Renderer-Eigenschaft
+- Renderereigenschaft Media Streaming-API
+- Renderereigenschaft Media Streaming-API, DevicePair-Schnittstelle
+- DevicePair-Schnittstelle Medienstreaming-API, Renderereigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f74b212ed4e8ec29b0234a3769c3beff91c0c777
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 05707fd65e2ac8998fa2412ec15c12d3b003b88990641aad6510d87bd7692e1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118236083"
 ---
-# <a name="devicepairrenderer-property"></a>Devicepair:: Renderer-Eigenschaft
+# <a name="devicepairrenderer-property"></a>DevicePair::Renderer-Eigenschaft
 
-Ruft den Renderer für das aktive Basic-Geräte Paar ab.
+Ruft den Renderer für das aktive Basisgerätepaar ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -34,7 +34,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_Renderer(
-  [out] ActiveBasicDevice **value
+  [out] ActiveBasicDevice **value
 );
 ```
 
@@ -42,15 +42,15 @@ HRESULT get_Renderer(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Empfängt ein [**activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85)) -Objekt, das das renderergerät darstellt.
+Empfängt ein [**ActiveBasicDevice-Objekt,**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85)) das das Renderergerät darstellt.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Devicepair**](/previous-versions/windows/desktop/legacy/dn385771(v=vs.85))
+[**DevicePair**](/previous-versions/windows/desktop/legacy/dn385771(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

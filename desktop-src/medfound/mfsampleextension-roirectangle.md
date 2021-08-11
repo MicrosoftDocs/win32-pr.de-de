@@ -1,37 +1,37 @@
 ---
-description: Gibt die Grenzen des relevanten Bereichs an, der den Bereich des Frames angibt, der unterschiedliche Qualität erfordert.
+description: Gibt die Begrenzungen des bereichs von Interesse an, der den Bereich des Frames angibt, der eine andere Qualität erfordert.
 ms.assetid: F06CACF0-AE75-4707-8CD0-7BA7D51BB80A
-title: MFSampleExtension_ROIRectangle-Attribut (mfapi. h)
+title: MFSampleExtension_ROIRectangle Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71d84d2054caa96feaf7bfb4ccc7a91ecf4ac9f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 311b17cab20de16a83d145563e8ba0b8ead6f055428ffc6a3823c99deab05fc3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118240325"
 ---
-# <a name="mfsampleextension_roirectangle-attribute"></a>MF Sample Extension- \_ Attribut (roirechteck)
+# <a name="mfsampleextension_roirectangle-attribute"></a>MFSampleExtension \_ ROIRectangle-Attribut
 
-Gibt die Grenzen des relevanten Bereichs an, der den Bereich des Frames angibt, der unterschiedliche Qualität erfordert.
+Gibt die Begrenzungen des bereichs von Interesse an, der den Bereich des Frames angibt, der eine andere Qualität erfordert.
 
 ## <a name="data-type"></a>Datentyp
 
-**[**ROI \_**](/windows/desktop/api/mfapi/ns-mfapi-roi_area)** Als **BLOB** gespeicherter Bereich
+**[**ROI \_ Als**](/windows/desktop/api/mfapi/ns-mfapi-roi_area)** **BLOB** gespeicherter BEREICH
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nach der erfolgreichen Festlegung von [codecapi \_ avencvideoroiaktiviertem](codecapi-avencvideoroienabled.md) Wert ungleich 0 (null) auf einem Encoder-MFT kann die Anwendung dieses Attribut für Eingabe Beispiele festlegen und erwarten, dass Sie berücksichtigt werden.
+Nach dem erfolgreichen Festlegen von [CODECAPI \_ AVEncVideoROIEnabled](codecapi-avencvideoroienabled.md) auf einen Wert ungleich 0 (null) in einem Encoder-MFT kann die Anwendung dieses Attribut für Eingabebeispiele festlegen und erwarten, dass es berücksichtigt wird.
 
-Wenn [codecapi \_ avencvideoroiaktivinicht](codecapi-avencvideoroienabled.md) auf einen Wert ungleich 0 (null) festgelegt ist, wird das Attribut "mfsampleextension \_ roirechteck" bei Eingabe Beispielen ignoriert.
+Wenn [CODECAPI \_ AVEncVideoROIEnabled](codecapi-avencvideoroienabled.md) nicht auf einen Wert ungleich 0 (null) festgelegt ist, wird das MFSampleExtension \_ ROIRectangle-Attribut in Eingabebeispielen ignoriert.
 
-Das mfsampleextension \_ -roirechteck ist für ein Eingabe Beispiel festgelegt und wird nur auf das aktuelle Eingabe Beispiel angewendet.
+MFSampleExtension \_ ROIRectangle wird für ein Eingabebeispiel festgelegt und nur auf das aktuelle Eingabebeispiel angewendet.
 
-Das Feld **qpdelta** in der [**ROI- \_ Bereichs**](/windows/desktop/api/mfapi/ns-mfapi-roi_area) Struktur gibt den quantisierungsparameterdelta für den angegebenen Bereich vom Rest des Frames an. Wenn **qpdelta** positiv ist, bedeutet dies, dass die Anwendung für das Rechteck eine niedrigere Qualität als für den Rest des Frames hat.
+Das **QPDelta-Feld** in der [**ROI \_ AREA-Struktur**](/windows/desktop/api/mfapi/ns-mfapi-roi_area) gibt das Delta des Quantisierungsparameters für den angegebenen Bereich aus dem restlichen Frame an. Wenn **QPDelta** positiv ist, gibt dies an, dass die Anwendung möchte, dass das Rechteck eine niedrigere Qualität als der Rest des Frames hat.
 
-**H. 264/AVC-Encoder:** **qpdelta** muss zwischen \[ -25 und + 25 liegen \] . Der Encoder muss sicherstellen, dass das endgültige QP in einem gültigen Bereich für den Videostandard liegt.
+**H.264/AVC-Encoder:** **QPDelta** muss zwischen \[ -25 und +25 \] sein. Der Encoder muss sicherstellen, dass sich der endgültige QP in einem gültigen Bereich für den Videostandard befindet.
 
-Der angegebene Bereich muss nicht auf MB ausgerichtet sein. Encoder können die tatsächliche Grenze flexibel festlegen. Es wird empfohlen, den gesamten angegebenen Bereich abzudecken.
+Der angegebene Bereich muss nicht mbbündig ausgerichtet sein. Encoder können flexibel über die tatsächliche Grenze entscheiden. Es wird empfohlen, die gesamte angegebene Region abzudecken.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Der angegebene Bereich muss nicht auf MB ausgerichtet sein. Encoder können die 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 

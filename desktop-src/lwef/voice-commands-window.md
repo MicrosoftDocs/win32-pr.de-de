@@ -1,61 +1,61 @@
 ---
-title: Sprachbefehle (Fenster)
-description: Sprachbefehle (Fenster)
+title: Fenster "Sprachbefehle"
+description: Fenster "Sprachbefehle"
 ms.assetid: vs|msagent|~\guidlin_12gn.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c4ad0a1521e8dacc941ba5b2ce5f6c264c65a31
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 06f4e5ce02ea9a964663efacbc19a3b302d6e58f0364d705491be26229b15f69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118245103"
 ---
-# <a name="voice-commands-window"></a>Sprachbefehle (Fenster)
+# <a name="voice-commands-window"></a>Fenster "Sprachbefehle"
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Das Fenster "Sprachbefehle" zeigt die aktuellen aktiven Sprachbefehle an, die für das Zeichen verfügbar sind. Das Fenster wird angezeigt, wenn der Befehl Befehle öffnen und die Eigenschaft [**sichtbar**](visible-property.md) des Objekts [**commandswindow**](/windows/desktop/lwef/the-commandswindow-object) auf **true** festgelegt ist. Wenn die Sprach-Engine noch nicht geladen wurde, versucht die Abfrage oder das Festlegen dieser Eigenschaft, den Microsoft-Agent zu initialisieren. Wenn der Benutzer die Sprache deaktiviert, kann das Fenster weiterhin angezeigt werden. Es enthält jedoch eine Text Meldung, die den Benutzer darüber informiert, dass die Sprache aktuell deaktiviert ist.
+Im Fenster Sprachbefehle werden die aktuellen aktiven Sprachbefehle angezeigt, die für das Zeichen verfügbar sind. Das Fenster wird angezeigt, wenn der Befehl "Befehlsfenster öffnen" ausgewählt oder die [**Visible-Eigenschaft**](visible-property.md) des [**CommandsWindow-Objekts**](/windows/desktop/lwef/the-commandswindow-object) auf **True** festgelegt ist. Wenn die Sprach-Engine noch nicht geladen wurde, führt das Abfragen oder Festlegen dieser Eigenschaft dazu, dass der Microsoft-Agent versucht, die Engine zu initialisieren. Wenn der Benutzer sprache deaktiviert, kann das Fenster weiterhin angezeigt werden. Sie enthält jedoch eine Textnachricht, die den Benutzer darüber informiert, dass sprache derzeit deaktiviert ist.
 
-Die Befehle der Eingabe des aktiven Clients werden auf der Grundlage der [**sprach**](voice-property.md)[**Beschriftung**](caption-property.md) und der **sprach** Eigenschafts Einstellungen, die unter der [**voicecaption**](voicecaption-property.md) der [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung aufgeführt sind, im Fenster Sprachbefehle angezeigt.
+Die Befehle des eingabeaktiven Clients werden im Fenster Sprachbefehle basierend auf den Eigenschafteneinstellungen [**Voice**](voice-property.md)[**Caption**](caption-property.md) und **Voice** angezeigt, die unter [**voiceCaption**](voicecaption-property.md) ihrer [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) aufgeführt sind.
 
-**Abbildung 1. Sprachbefehle (Fenster)**
+**Abbildung 1: Fenster "Sprachbefehle"**
 
-Das Fenster "Sprachbefehle" wird angezeigt, wenn der Befehl "Befehle Öffnen" ausgewählt wird. Die Befehle der Eingabe des aktiven Clients werden auf der Grundlage der [**sprach**](voice-property.md)[**Beschriftung**](caption-property.md) und der **sprach** Eigenschafts Einstellungen, die unter **Stimme** der [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung aufgelistet sind, im Fenster Sprachbefehle angezeigt.
+Das Fenster "Sprachbefehle" wird angezeigt, wenn der Befehl Befehl "Befehlsfenster öffnen" ausgewählt wird. Die Befehle des eingabeaktiven Clients werden im Fenster "Sprachbefehle" angezeigt, basierend auf den Eigenschafteneinstellungen [**"Voice**](voice-property.md)[**Caption"**](caption-property.md) und **"Voice",** die unter **Stimme** der [**Sammlung Befehle**](/windows/desktop/lwef/the-commands-collection-object) aufgeführt sind.
 
-Das Fenster Sprachbefehle listet außerdem die [**voicecaption**](voicecaption-property.md) der [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung für andere Clients des Zeichens auf und die folgenden vom Server generierten Sprachbefehle für allgemeine Interaktionen unter dem Eintrag globale Befehle:
+Das Fenster "Sprachbefehle" listet auch die [**VoiceCaption**](voicecaption-property.md) der [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) für andere Clients des Zeichens und die folgenden servergenerierten Sprachbefehle für die allgemeine Interaktion unter dem Eintrag Globale Befehle auf:
 
 
 
-| Sprach Beschriftung                       | Sprachgrammatik                                                                                                                                            |
+| Sprachbeschriftung                       | Sprachgrammatik                                                                                                                                            |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \|Fenster "Schließen von Sprachbefehlen öffnen" | (Öffnen Sie \| anzeigen) \[ das Fenster "Befehle", \] \[ \] \| was ich jetzt sagen kann \[ .\] <br/> schaltet mit: <br/> \[Fenster " \] Befehle" schließen \[\] <br/> |
-| Ausblenden                                | barg \*                                                                                                                                                  |
-| *Zeichenname*                     | *Zeichenname*\*\*                                                                                                                                      |
-| Globale Befehle                     | \[\] \[ \] globale Befehle anzeigen                                                                                                                          |
+| Öffnen \| des Fensters "Sprachbefehle schließen" | (show \| öffnen) \[ Das \] \[ Befehlsfenster, was kann ich \] \| jetzt sagen? \[\] <br/> umschaltet mit: <br/> Schließen \[ des \] \[ Befehlsfensters\] <br/> |
+| Ausblenden                                | Ausblenden \*                                                                                                                                                  |
+| *CharacterName*                     | *CharacterName*\*\*                                                                                                                                      |
+| Globale Befehle                     | \[\] \[ Show me global \] commands (Globale Befehle anzeigen)                                                                                                                          |
 
 
 
  
 
-\* Hier wird nur ein Zeichen aufgelistet, wenn es zurzeit sichtbar ist.
+\* Ein Zeichen wird hier nur aufgeführt, wenn es derzeit sichtbar ist.
 
 \*\* Alle geladenen Zeichen werden aufgelistet.
 
-Wenn Sie mit dem Voice-Befehl für die [**Befehle**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung eines anderen Clients zu diesem Client wechseln, werden im Fenster "Sprachbefehle" die Befehle dieses Clients angezeigt. Es werden keine weiteren Einträge erweitert. Wenn der Benutzer Zeichen wechselt, ändert sich auch das Fenster "Sprachbefehle", um die Befehle seines Eingabe aktiven Clients anzuzeigen. Wenn der Client bereits Eingabe aktiv ist, hat eine seiner Sprachbefehle keine Auswirkung. (Wenn der Benutzer jedoch die Unterstruktur des aktiven Clients mit der Maus reduziert, zeigt der Client Name die Unterstruktur des Clients erneut an.)
+Wenn Sie den Sprachbefehl für die [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) eines anderen Clients sprechen, wechselt er zu diesem Client, und im Fenster "Sprachbefehle" werden die Befehle dieses Clients angezeigt. Es werden keine anderen Einträge erweitert. Wenn der Benutzer zeichenwechselt, ändert sich auch das Fenster für Sprachbefehle, um die Befehle seines eingabeaktiven Clients anzuzeigen. Wenn der Client bereits eingabeaktiv ist, hat das Sprechen eines seiner Sprachbefehle keine Auswirkungen. (Wenn der Benutzer jedoch die Unterstruktur des aktiven Clients mit der Maus reduziert, wird die Unterstruktur des Clients beim Sprechen des Clientnamens erneut angezeigt.)
 
-Wenn ein Client Sprachbefehle, aber keine [**sprach**](voice-property.md) Einstellung für das [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Objekt (oder keine **sprach**[**Beschriftung**](caption-property.md)) hat, wird in der Struktur "(Befehl nicht definiert)" als übergeordneter Eintrag angezeigt. Dies gilt jedoch nur, wenn der Client aktiv ist und der Client Befehle in der Auflistung mit den **Beschriftungs** -und **sprach** Einstellungen aufweist.
+Wenn ein Client Sprachbefehle, aber keine [**Spracheinstellung**](voice-property.md) für sein [**Commands-Objekt**](/windows/desktop/lwef/the-commands-collection-object) (oder keine [**Sprachbeschriftung)**](caption-property.md)hat, zeigt die Struktur "(command undefined)" als übergeordneten Eintrag an – jedoch nur, wenn dieser Client eingabeaktiv ist und der Client Befehle in seiner Sammlung mit **Beschriftungs-** und **Spracheinstellungen** enthält. 
 
-Der Server zeigt automatisch die Befehle des aktuellen Eingabe aktiven Clients an und führt ggf. im Fenster einen Bildlauf durch, um so viele der Client Befehle wie möglich anzuzeigen, basierend auf der Größe des Fensters. Wenn das Zeichen keine Client Einträge enthält, wird der Eintrag für globale Befehle erweitert.
+Der Server zeigt automatisch die Befehle des aktuellen eingabeaktiven Clients an und führt bei Bedarf einen Bildlauf im Fenster durch, um so viele Befehle des Clients wie möglich basierend auf der Größe des Fensters anzuzeigen. Wenn das Zeichen keine Clienteinträge enthält, wird der Eintrag Globale Befehle erweitert.
 
-Wenn der Benutzer "globale Befehle" spricht, zeigt das Fenster "Sprachbefehle" immer die zugehörigen untergeordneten Struktur Einträge an. Wenn Sie bereits angezeigt werden, hat der Befehl keine Auswirkungen.
+Wenn der Benutzer "Globale Befehle" spricht, zeigt das Fenster "Sprachbefehle" immer die zugehörigen Unterstruktureinträge an. Wenn sie bereits angezeigt werden, hat der Befehl keine Auswirkungen.
 
-Obwohl Sie das Fenster "Sprachbefehle" mithilfe der [**Visible**](visible-property.md) -Eigenschaft im Code der Anwendung anzeigen oder ausblenden können, können Sie die Fenstergröße oder den Speicherort des sprach Befehls nicht ändern. Der Server verwaltet die Eigenschaften des sprach Befehls Fensters basierend auf der Interaktion des Benutzers mit dem Fenster. Der ursprüngliche Speicherort befindet sich unmittelbar neben dem Task leisten Symbol des Zeichens.
+Obwohl Sie das Fenster für Sprachbefehle auch mithilfe der [**Visible-Eigenschaft**](visible-property.md) im Code Ihrer Anwendung anzeigen oder ausblenden können, können Sie die Größe oder position des Fensters für Sprachbefehle nicht ändern. Der Server verwaltet die Eigenschaften des Sprachbefehlsfensters basierend auf der Interaktion des Benutzers mit dem Fenster. Die ursprüngliche Position befindet sich direkt neben dem Taskleistensymbol des Zeichens.
 
-Das Fenster "Sprachbefehle" ist in der Reihenfolge des Alt + Tab-Fensters enthalten. Dadurch kann ein Benutzer zum Fenster wechseln, um den Bildlauf durchführen, die Größe ändern oder das Fenster mit der Tastatur neu positionieren.
+Das Fenster "Sprachbefehle" ist in der Fensterreihenfolge ALT+TAB enthalten. Dadurch kann ein Benutzer zum Fenster wechseln, um das Fenster mit der Tastatur zu scrollen, seine Größe zu ändern oder die Position zu ändern.
 
--   [Der Abhör Tipp](the-listening-tip.md)
--   [Das Fenster "erweiterte Zeichen Optionen"](https://www.bing.com/search?q=The+Advanced+Character+Options+Window)
+-   [Lauschendes Trinkgeld](the-listening-tip.md)
+-   [Fenster "Erweiterte Zeichenoptionen"](https://www.bing.com/search?q=The+Advanced+Character+Options+Window)
 
  
 

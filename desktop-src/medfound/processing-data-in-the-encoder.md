@@ -4,28 +4,28 @@ ms.assetid: 7be4c5e7-db2c-4063-8e5c-af6ffb861aa5
 title: Verarbeiten von Daten im Encoder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99b7fedef50df61851408d084b511497eacd0288
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 666c2a2ff2139aadcb489022eb9b324eff1de523551244c2fd12ad0e11f68f1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118238731"
 ---
 # <a name="processing-data-in-the-encoder"></a>Verarbeiten von Daten im Encoder
 
-Nachdem Sie den Eingabetyp und den Ausgabetyp für den Encoder-MFT ausgehandelt haben, wie in [Medientyp Aushandlung für den Encoder](media-type-negotiation-on-the-encoder.md)beschrieben, können Sie mit der Verarbeitung von Mediendaten Beispielen beginnen. Die Daten werden in Form von Medien Beispielen ([**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) -Schnittstelle) und auch von der Ausgabe als Medien Beispiele empfangen.
+Nachdem Sie den Eingabe- und Ausgabetyp für den Encoder-MFT ausgehandelt haben, wie unter [Medientypaushandlung auf dem Encoder](media-type-negotiation-on-the-encoder.md)beschrieben, können Sie mit der Verarbeitung von Mediendatenbeispielen beginnen. Die Daten werden in Form von Medienbeispielen [**(SCHNITTSTELLE " NSSAMPLE")**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) übergeben und auch als Medienbeispiele aus der Ausgabe empfangen.
 
-Bevor Sie Daten zur Verarbeitung an den Encoder senden, müssen Sie ein Medien Beispiel zuordnen und einen von weiteren Medien Puffern mit Mediendaten hinzufügen, die codiert werden müssen. Aufrufen von [**imftransform::P rocessinput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) und übergeben eines Zeigers an das zugeordnete Medien Beispiel. Zusätzlich zum Medien Beispiel benötigt **ProcessInput** auch den Eingabedaten Strom Bezeichner. Um den Datenstrom Bezeichner abzurufen, nennen Sie [**imftransform:: getstreamids**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getstreamids). Da ein Encoder nur eine und eine Ausgabe haben soll, haben diese Datenstrom Bezeichner immer den Wert 0.
+Bevor Sie Daten zur Verarbeitung an den Encoder senden, müssen Sie ein Medienbeispiel zuordnen und einen von mehreren Medienpuffern hinzufügen, die Mediendaten enthalten, die codiert werden müssen. Rufen Sie [**ÜBERTRANSFORM::P rocessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) auf, und übergeben Sie einen Zeiger auf das zugeordnete Medienbeispiel. Zusätzlich zum Medienbeispiel benötigt **ProcessInput** auch den Eingabestreambezeichner. Um den Streambezeichner abzurufen, rufen [**Sie ÜBERTRANSFORM::GetStreamIDs auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getstreamids) Da ein Encoder so konzipiert ist, dass er nur eine und eine Ausgabe hat, weisen diese Streambezeichner immer den Wert 0 auf.
 
-Um Daten vom Encoder abzurufen, nennen Sie [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput). Bevor Sie [**ProcessOutput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessoutput)aufzurufen, müssen Sie herausfinden, ob der Encoder die Ausgabemedien Beispiele zuordnet, oder Sie müssen dies explizit tun. Um dies zu erreichen, nennen Sie [**imftransform:: getoutputstreaminfo**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreaminfo). Dadurch werden Beispiel Informationen zu Ausgabemedien in der [**MFT- \_ Ausgabestream \_ \_**](/windows/desktop/api/mftransform/ns-mftransform-mft_output_stream_info) -Informationsstruktur zurückgegeben. Wenn der Encoder Medien Beispiele zuordnet, gibt er den MFT \_ -Ausgabestream enthält ein \_ \_ \_ beispielflag im **dwFlags** -Member und das **CBSIZE** -Element enthält 0 (null). Wenn der Encoder erwartet, dass Sie den Ausgabepuffer zuordnen, erstellen Sie das Ausgabemedien Beispiel und den zugehörigen Medien Puffer basierend auf der Größe, die in **CBSIZE** zurückgegeben wurde. Wenn Sie [**processsample**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfmultiplexer-processsample)aufrufen, übergeben Sie einen Zeiger auf das neu erstellte Medien Beispiel. Während der Codierungs Sitzung füllt der Encoder die Medien Puffer, auf die das Ausgabemedien Beispiel verweist, mit den codierten Daten.
+Rufen Sie ZUM Abrufen von Daten aus dem Encoder [**DENTRANSFORM::P rocessOutput auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) Bevor Sie [**ProcessOutput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessoutput)aufrufen, müssen Sie herausfinden, ob der Encoder die Ausgabemedienbeispiele zuordnet, oder sie müssen dies explizit tun. Rufen Sie zu diesem Thema [**DIE FORMTRANSFORM::GetOutputStreamInfo**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreaminfo)auf. Dadurch werden Ausgabemedienbeispielinformationen in der [**MFT \_ OUTPUT STREAM \_ \_ INFO-Struktur**](/windows/desktop/api/mftransform/ns-mftransform-mft_output_stream_info) zurückgegeben. Wenn der Encoder Medienbeispiele zuordnet, gibt er das Flag MFT \_ OUTPUT STREAM PROVIDES SAMPLES im \_ \_ \_ **dwFlags-Member** zurück, und der **cbSize-Member** enthält 0 (null). Wenn der Encoder erwartet, dass Sie den Ausgabepuffer zuordnen, erstellen Sie das Ausgabemedienbeispiel und den zugeordneten Medienpuffer basierend auf der in **cbSize zurückgegebenen** Größe. Wenn Sie [**ProcessSample**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfmultiplexer-processsample)aufrufen, übergeben Sie einen Zeiger auf das neu erstellte Medienbeispiel. Während der Codierungssitzung füllt der Encoder die Medienpuffer, auf die das Ausgabemedienbeispiel zeigt, mit den codierten Daten.
 
-Zum Starten der Codierungs Sitzung übergeben Sie das Eingabemedien Beispiel durch Aufrufen von [**ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput)an den Encoder. Der Encoder startet die Verarbeitung und die Daten und erstellt ein oder mehrere Ausgabemedien Beispiele, die von [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) abgerufen werden müssen, solange die Rückgabe von MF \_ E \_ Transform \_ \_ mehr Eingaben erforderlich ist \_ . Wenn Sie **ProcessInput** aufrufen, um mehr Eingaben zu übergeben, solange Ausgabedaten abgerufen werden müssen, schlägt **ProcessInput** fehl, wenn MF \_ E \_ notakzeptiert. Der Encoder akzeptiert keine weiteren Eingaben, bis der Client **ProcessOutput** mindestens einmal aufruft.
+Um die Codierungssitzung zu starten, übergeben Sie das Eingabemedienbeispiel an den Encoder, indem [**Sie ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput)aufrufen. Der Encoder beginnt mit der Verarbeitung und den Daten und erzeugt mindestens ein Ausgabemedienbeispiel, das von [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) abgerufen werden muss, solange MF E TRANSFORM NEED MORE INPUT zurückgegeben \_ \_ \_ \_ \_ wird. Wenn Sie **ProcessInput** aufrufen, um mehr Eingaben zu übergeben, solange Ausgabedaten abgerufen werden müssen, schlägt **ProcessInput** mit MF \_ E \_ NOTACCEPTING fehl. Der Encoder akzeptiert keine weiteren Eingaben, bis der Client **ProcessOutput** mindestens einmal aufruft.
 
-Sie sollten genaue Zeitstempel und Dauer für alle bestandenen Eingabe Beispiele festlegen. Zeitstempel sind nicht unbedingt erforderlich, unterstützen jedoch die Verwaltung von Audiodaten und Videos. Wenn Sie nicht über die Zeitstempel für die Beispiele verfügen, ist es besser, Sie zu verlassen, als nicht unsichere Werte zu verwenden.
+Sie sollten genaue Zeitstempel und Daueren für alle übergebenen Eingabebeispiele festlegen. Zeitstempel sind nicht unbedingt erforderlich, unterstützen aber die Aufrechterhaltung der Audio-/Videosynchronisierung. Wenn Sie nicht über die Zeitstempel für Ihre Stichproben verfügen, sollten Sie sie besser weglassen, als unsichere Werte zu verwenden.
 
-## <a name="encoder-processing-example"></a>Beispiel für Codierungs Verarbeitung
+## <a name="encoder-processing-example"></a>Encoderverarbeitungsbeispiel
 
-Der folgende Beispielcode zeigt, wie [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) aufgerufen wird, um ein codiertes Beispiel abzurufen. Den gesamten Kontext dieses Beispiels finden Sie unter [Encoder-Beispiel Code](encoder-example-code.md).
+Der folgende Beispielcode zeigt, wie [**SIE DIE DATEI "ROCTRANSFORM::P rocessOutput"**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) aufrufen, um ein codiertes Beispiel abzurufen. Den vollständigen Kontext dieses Beispiels finden Sie unter [Encoder-Beispielcode.](encoder-example-code.md)
 
 
 ```C++
@@ -113,10 +113,10 @@ done:
 [ASF Multiplexer](asf-multiplexer.md)
 </dt> <dt>
 
-[Instanziieren eines MFT-Encoders](instantiating-the-encoder-mft.md)
+[Instanziieren eines Encoder-MFT](instantiating-the-encoder-mft.md)
 </dt> <dt>
 
-[Windows Media Encoder](windows-media-encoders.md)
+[Windows Medienencoder](windows-media-encoders.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-title: Die Seite "Ausgabe"
-description: Die Seite "Ausgabe"
+title: Seite "Ausgabe"
+description: Seite "Ausgabe"
 ms.assetid: 75a4f7c5-f8a6-4519-989b-8499a8f46b92
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bda037ac0f7d3b370cbd105cc759f0cd0a7fd23e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9b87ad8b61e61430a89295ea0b7fbdf3677b26220f90c7c89f8f186c10de85b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118245527"
 ---
-# <a name="the-output-page"></a>Die Seite "Ausgabe"
+# <a name="the-output-page"></a>Seite "Ausgabe"
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Diese Seite enthält Eigenschaften zum Steuern der Zeichenausgabe. Der Benutzer kann z. b. bestimmen, ob die Ausgabe in der Word-Sprechblase angezeigt werden soll, wie die Sprechblasen Ausgabe angezeigt werden soll, wie die Sprachausgabe abgespielt werden soll, wie die Audioeffekte wiedergegeben werden, wie die Eingabeaufforderung angezeigt wird, und die Sprach Geschwindigkeit
+Diese Seite enthält Eigenschaften, die die Zeichenausgabe steuern. Beispielsweise kann der Benutzer bestimmen, ob die Ausgabe im Wortsprechblasen angezeigt werden soll, wie die Sprechblasenausgabe aussehen soll, gesprochene Ausgabe als Audio wiedergeben, Zeichentoneffekte wiedergeben, die Neustarteingabeaufforderung anzeigen und die Sprechgeschwindigkeit anpassen.
 
-![Dialogfeld "erweiterte Zeichen Optionen"](images/f5outpp.gif)
+![Erweiterte Zeichenoptionen (Dialogfeld)](images/f5outpp.gif)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,34 +1,34 @@
 ---
-description: In diesem Tutorial wird gezeigt, wie Sie die transcode-API verwenden, um eine MP4-Datei mit H. 264 für den Videostream und AAC für den Audiostream zu codieren.
+description: In diesem Tutorial wird gezeigt, wie Sie die Transcode-API verwenden, um eine MP4-Datei mit H.264 für den Videostream und AAC für den Audiostream zu codieren.
 ms.assetid: 60873aa6-46ec-4a73-94b9-0d8ac602f850
 title: 'Tutorial: Codieren einer MP4-Datei'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae895ef321b35f080bf946384ee32d83c2c539fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 242777f04015f5444be5e0d8424ca06fc4b95cd84ca88c2b997d7b7466c734af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118237623"
 ---
 # <a name="tutorial-encoding-an-mp4-file"></a>Tutorial: Codieren einer MP4-Datei
 
-In diesem Tutorial wird gezeigt, wie Sie die [transcode-API](transcode-api.md) verwenden, um eine MP4-Datei mit H. 264 für den Videostream und AAC für den Audiostream zu codieren.
+In diesem Tutorial wird gezeigt, wie Sie die [Transcode-API](transcode-api.md) verwenden, um eine MP4-Datei mit H.264 für den Videostream und AAC für den Audiostream zu codieren.
 
 -   [Header und Bibliotheksdateien](#headers-and-library-files)
--   [Definieren der Codierungs profile](#define-the-encoding-profiles)
+-   [Definieren der Codierungsprofile](#define-the-encoding-profiles)
 -   [Schreiben der wmain-Funktion](#write-the-wmain-function)
 -   [Codieren der Datei](#encode-the-file)
     -   [Erstellen der Medienquelle](#create-the-media-source)
-    -   [Quell Dauer erhalten](#get-the-source-duration)
-    -   [Erstellen des transcode-Profils](#create-the-transcode-profile)
-    -   [Ausführen der Codierungs Sitzung](#run-the-encoding-session)
--   [Hilfsprogramm für Medien Sitzung](#media-session-helper)
+    -   [Abrufen der Quelldauer](#get-the-source-duration)
+    -   [Erstellen des Transcodierungsprofils](#create-the-transcode-profile)
+    -   [Ausführen der Codierungssitzung](#run-the-encoding-session)
+-   [Media Session Helper](#media-session-helper)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="headers-and-library-files"></a>Header und Bibliotheksdateien
 
-Fügen Sie die folgenden Header Dateien ein.
+Schließen Sie die folgenden Headerdateien ein.
 
 
 ```C++
@@ -54,11 +54,11 @@ Verknüpfen Sie die folgenden Bibliotheksdateien.
 
 
 
-## <a name="define-the-encoding-profiles"></a>Definieren der Codierungs profile
+## <a name="define-the-encoding-profiles"></a>Definieren der Codierungsprofile
 
-Ein Codierungs Ansatz besteht darin, eine Liste von Ziel Codierungs Profilen zu definieren, die im Voraus bekannt sind. Für dieses Tutorial verwenden wir einen relativ einfachen Ansatz und speichern eine Liste von Codierungs Formaten für H. 264-Video und AAC-Audiodaten.
+Ein Ansatz für die Codierung besteht darin, eine Liste von Zielcodierungsprofilen zu definieren, die im Voraus bekannt sind. In diesem Tutorial verwenden wir einen relativ einfachen Ansatz und speichern eine Liste der Codierungsformate für H.264-Video- und AAC-Audio.
 
-Bei h. 264 sind die wichtigsten Format Attribute das H. 264-Profil, die Framerate, die Frame Größe und die codierte Bitrate. Das folgende Array enthält eine Liste mit H. 264-Codierungs Formaten.
+Für H.264 sind die wichtigsten Formatattribute das H.264-Profil, die Bildfrequenz, die Framegröße und die codierte Bitrate. Das folgende Array enthält eine Liste der H.264-Codierungsformate.
 
 
 ```C++
@@ -84,9 +84,9 @@ H264ProfileInfo h264_profiles[] =
 
 
 
-H. 264-Profile werden mithilfe der [**eAVEncH264VProfile**](/windows/desktop/api/codecapi/ne-codecapi-eavench264vprofile) -Enumeration angegeben. Sie können auch die H. 264-Ebene angeben, aber der Microsoft Media Foundation [**h. 264-Video Encoder**](h-264-video-encoder.md) kann die richtige Ebene für einen bestimmten Videostream ableiten. Daher wird empfohlen, die ausgewählte Ebene des Encoders nicht zu überschreiben. Beim Zeilen Sprung Inhalt würden Sie auch den damit-Modus angeben (siehe [Video-Interlacing](video-interlacing.md)).
+H.264-Profile werden mithilfe der [**eAVEncH264VProfile-Enumeration**](/windows/desktop/api/codecapi/ne-codecapi-eavench264vprofile) angegeben. Sie können auch die H.264-Ebene angeben, aber der Microsoft Media Foundation [**H.264 Video Encoder**](h-264-video-encoder.md) kann die richtige Ebene für einen bestimmten Videostream ableiten. Daher wird empfohlen, die ausgewählte Ebene des Encoders nicht zu überschreiben. Für Interlacinginhalte würden Sie auch den Interlacemodus angeben (siehe [Video interlacing](video-interlacing.md)).
 
-Bei AAC-Audiodaten sind die wichtigsten Format Attribute die audiobeispielrate, die Anzahl der Kanäle, die Anzahl der Bits pro Sample und die codierte Bitrate. Optional können Sie die Anzeige der AAC-audioprofilebene festlegen. Weitere Informationen finden Sie unter [**AAC-Encoder**](aac-encoder.md). Das folgende Array enthält eine Liste mit AAC-Codierungs Formaten.
+Bei AAC-Audiodaten sind die wichtigsten Formatattribute die Audioabtastrate, die Anzahl der Kanäle, die Anzahl der Bits pro Stichprobe und die codierte Bitrate. Optional können Sie die AAC-Audioprofilebenenanzeige festlegen. Weitere Informationen finden Sie unter [**AAC Encoder**](aac-encoder.md). Das folgende Array enthält eine Liste der AAC-Codierungsformate.
 
 
 ```C++
@@ -111,7 +111,7 @@ AACProfileInfo aac_profiles[] =
 
 
 > [!Note]  
-> Die `H264ProfileInfo` hier definierten-und- `AACProfileInfo` Strukturen sind nicht Teil der Media Foundation-API.
+> Die `H264ProfileInfo` `AACProfileInfo` hier definierten Strukturen und sind nicht Teil der Media Foundation-API.
 
  
 
@@ -171,17 +171,17 @@ int wmain(int argc, wchar_t* argv[])
 
 
 
-Die `wmain` Funktion führt Folgendes aus:
+Die `wmain` Funktion führt folgende Schritte aus:
 
-1.  Ruft die [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) -Funktion auf, um die com-Bibliothek zu initialisieren.
-2.  Ruft die [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) -Funktion auf, um Media Foundation zu initialisieren.
-3.  Ruft die Anwendungs definierte `EncodeFile` Funktion auf. Diese Funktion versieht die Eingabedatei in die Ausgabedatei und wird im nächsten Abschnitt angezeigt.
-4.  Ruft die [**mfshutdown**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown) -Funktion auf, um Media Foundation herunterzufahren.
-5.  Um die Initialisierung der com-Bibliothek aufzurufen, können Sie die Funktion " [**count Initialize**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) "
+1.  Ruft die [**CoInitializeEx-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) auf, um die COM-Bibliothek zu initialisieren.
+2.  Ruft die [**MFStartup-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) auf, um Media Foundation zu initialisieren.
+3.  Ruft die anwendungsdefinierte `EncodeFile` Funktion auf. Diese Funktion transcodiert die Eingabedatei in die Ausgabedatei und wird im nächsten Abschnitt angezeigt.
+4.  Ruft die [**MFShutdown-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown) auf, um Media Foundation herunterzufahren.
+5.  Rufen Sie die [**CoUninitialize-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) auf, um die Initialisierung der COM-Bibliothek zu aufheben.
 
 ## <a name="encode-the-file"></a>Codieren der Datei
 
-Der folgende Code zeigt die- `EncodeFile` Funktion, die die Transcodierung ausführt. Diese Funktion besteht größtenteils aus Aufrufen von anderen Anwendungs definierten Funktionen, die weiter unten in diesem Thema angezeigt werden.
+Der folgende Code zeigt `EncodeFile` die -Funktion, die die Transcodierung ausführt. Diese Funktion besteht hauptsächlich aus Aufrufen anderer anwendungsdefinierter Funktionen, die weiter unten in diesem Thema gezeigt werden.
 
 
 ```C++
@@ -248,20 +248,20 @@ done:
 
 
 
-Die- `EncodeFile` Funktion führt die folgenden Schritte aus.
+Die `EncodeFile` Funktion führt die folgenden Schritte aus.
 
-1.  Erstellt eine Medienquelle für die Eingabedatei, wobei die URL oder der Dateipfad der Eingabedatei verwendet wird. (Informationen hierzu finden Sie [unter Erstellen der Medienquelle](#create-the-media-source).)
-2.  Ruft die Dauer der Eingabedatei ab. (Weitere Informationen finden [Sie unter Ermitteln der Quell Dauer](#get-the-source-duration).)
-3.  Erstellen Sie das transcodieren-Profil. (Weitere Informationen finden Sie [unter Erstellen des transcode-Profils](#create-the-transcode-profile).)
-4.  Rufen Sie [**mfkreatetranscodetopology**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetranscodetopology) auf, um die partielle transcodetopologie zu erstellen.
-5.  Erstellen Sie ein Hilfsobjekt, das die Medien Sitzung verwaltet. (Weitere Informationen finden Sie unter Media Session Helper).
-6.  Führen Sie die Codierungs Sitzung aus, und warten Sie, bis Sie beendet ist (Siehe [Ausführen der Codierungs Sitzung](#run-the-encoding-session).)
-7.  Wenden Sie [**imfmediasource:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) an, um die Medienquelle zu schließen.
-8.  Releaseschnittstellenzeiger. Dieser Code verwendet die [saferelease](saferelease.md) -Funktion zum Freigeben von Schnittstellen Zeigern. Eine andere Möglichkeit ist die Verwendung einer intelligenten com-Zeiger Klasse, z. b. **CComPtr**.
+1.  Erstellt eine Medienquelle für die Eingabedatei unter Verwendung der URL oder des Dateipfads der Eingabedatei. (Siehe [Erstellen der Medienquelle](#create-the-media-source).)
+2.  Ruft die Dauer der Eingabedatei ab. (Siehe [Abrufen der Quelldauer](#get-the-source-duration).)
+3.  Erstellen Sie das Transcodierungsprofil. (Weitere Informationen finden Sie unter [Erstellen des Transcodeprofils.)](#create-the-transcode-profile)
+4.  Rufen Sie [**MFCreateTranscodeTopology**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetranscodetopology) auf, um die partielle Transcodierungstopologie zu erstellen.
+5.  Erstellen Sie ein Hilfsobjekt, das die Mediensitzung verwaltet. (Weitere Informationen finden Sie unter Media Session Helper.)
+6.  Führen Sie die Codierungssitzung aus, und warten Sie, bis sie abgeschlossen ist. (Siehe [Ausführen der Codierungssitzung](#run-the-encoding-session).)
+7.  Rufen Sie [**ÜBERMEDIASOURCE::Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) auf, um die Medienquelle herunterzufahren.
+8.  Gibt Schnittstellenzeiger frei. Dieser Code verwendet die [SafeRelease-Funktion,](saferelease.md) um Schnittstellenzeiger freizugeben. Eine weitere Option ist die Verwendung einer intelligenten COM-Zeigerklasse, z. **B. CComPtr.**
 
 ### <a name="create-the-media-source"></a>Erstellen der Medienquelle
 
-Die Medienquelle ist das Objekt, das die Eingabedatei liest und analysiert. Um die Medienquelle zu erstellen, übergeben Sie die URL der Eingabedatei an den [quellresolver](source-resolver.md). Dies wird im folgenden Code veranschaulicht.
+Die Medienquelle ist das Objekt, das die Eingabedatei liest und analysiert. Um die Medienquelle zu erstellen, übergeben Sie die URL der Eingabedatei an den [Quell resolver](source-resolver.md). Dies wird im folgenden Code veranschaulicht.
 
 
 ```C++
@@ -299,11 +299,11 @@ done:
 
 
 
-Weitere Informationen finden Sie unter [using the Source Resolver](using-the-source-resolver.md).
+Weitere Informationen finden Sie unter [Verwenden des Quelllösers.](using-the-source-resolver.md)
 
-### <a name="get-the-source-duration"></a>Quell Dauer erhalten
+### <a name="get-the-source-duration"></a>Abrufen der Quelldauer
 
-Obwohl es nicht erforderlich ist, ist es hilfreich, die Medienquelle für die Dauer der Eingabedatei abzufragen. Dieser Wert kann zum Nachverfolgen des Codierungs Fortschritts verwendet werden. Die Dauer wird im [**MF \_ PD \_ Duration**](mf-pd-duration-attribute.md) -Attribut des Präsentations Deskriptors gespeichert. Rufen Sie den Präsentations Deskriptor ab, indem Sie [**imfmediasource:: createpresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor)aufrufen.
+Obwohl dies nicht erforderlich ist, ist es nützlich, die Medienquelle für die Dauer der Eingabedatei abzufragen. Dieser Wert kann verwendet werden, um den Codierungsfortschritt nachzuverfolgen. Die Dauer wird im [**MF \_ PD \_ DURATION-Attribut**](mf-pd-duration-attribute.md) des Präsentationsdeskriptors gespeichert. Rufen Sie den Präsentationsdeskriptor ab, indem Sie [**DENMEDIASource::CreatePresentationDescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor)aufrufen.
 
 
 ```C++
@@ -325,16 +325,16 @@ HRESULT GetSourceDuration(IMFMediaSource *pSource, MFTIME *pDuration)
 
 
 
-### <a name="create-the-transcode-profile"></a>Erstellen des transcode-Profils
+### <a name="create-the-transcode-profile"></a>Erstellen des Transcodierungsprofils
 
-Im transcodieren-Profil werden die Codierungs Parameter beschrieben. Weitere Informationen zum Erstellen eines transcodieren-Profils finden [Sie unter Verwenden der transcodieren-API](fast-transcode-objects.md). Führen Sie die folgenden Schritte aus, um das Profil zu erstellen.
+Das Transcodierungsprofil beschreibt die Codierungsparameter. Weitere Informationen zum Erstellen eines Transcodierungsprofils finden Sie unter [Verwenden der Transcodierungs-API.](fast-transcode-objects.md) Führen Sie die folgenden Schritte aus, um das Profil zu erstellen.
 
-1.  Rufen Sie [**mfkreatetranscodeprofile**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetranscodeprofile) auf, um das leere Profil zu erstellen.
-2.  Erstellen Sie einen Medientyp für den AAC-Audiodatenstrom. Fügen Sie Sie dem Profil hinzu, indem Sie [**imftranscodeprofile:: setaudioattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setaudioattributes)aufrufen.
-3.  Erstellen Sie einen Medientyp für den H. 264-Videostream. Fügen Sie Sie dem Profil hinzu, indem Sie [**imftranscodeprofile:: setvideoattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setvideoattributes)aufrufen.
-4.  Rufen Sie [**mfkreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen Attribut Speicher für die Attribute auf Container Ebene zu erstellen.
-5.  Legen Sie das Attribut " [MF \_ transcode \_ ContainerType](mf-transcode-containertype.md) " fest. Dies ist das einzige erforderliche Attribut auf Container Ebene. Legen Sie für die Ausgabe von MP4-Dateien dieses Attribut auf **mftranscodecontainertype \_ MPEG4** fest.
-6.  Wenn Sie [**imftranscodeprofile:: setcontainerattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes) aufrufen, legen Sie die Attribute auf Container Ebene fest.
+1.  Rufen Sie [**MFCreateTranscodeProfile**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetranscodeprofile) auf, um das leere Profil zu erstellen.
+2.  Erstellen Sie einen Medientyp für den AAC-Audiostream. Fügen Sie es dem Profil hinzu, indem Sie [**DIE DATEI ÜBERTRANSCODEProfile::SetAudioAttributes aufrufen.**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setaudioattributes)
+3.  Erstellen Sie einen Medientyp für den H.264-Videostream. Fügen Sie es dem Profil hinzu, indem Sie [**ÜBERTRANSCODEProfile::SetVideoAttributes aufrufen.**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setvideoattributes)
+4.  Rufen Sie [**MFCreateAttributes**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen Attributspeicher für die Attribute auf Containerebene zu erstellen.
+5.  Legen Sie das [MF \_ TRANSCODE \_ CONTAINERTYPE-Attribut](mf-transcode-containertype.md) fest. Dies ist das einzige erforderliche Attribut auf Containerebene. Legen Sie für die MP4-Dateiausgabe dieses Attribut auf **MFTranscodeContainerType \_ MPEG4** fest.
+6.  Rufen Sie [**ÜBERTRANSCODEProfile::SetContainerAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes) auf, um die Attribute auf Containerebene festzulegen.
 
 Der folgende Code zeigt diese Schritte.
 
@@ -412,41 +412,41 @@ done:
 
 
 
-Um die Attribute für den H. 264-Videostream anzugeben, erstellen Sie einen Attribut Speicher und legen die folgenden Attribute fest:
+Um die Attribute für den H.264-Videostream anzugeben, erstellen Sie einen Attributspeicher, und legen Sie die folgenden Attribute fest:
 
 
 
-| Attribut                                                       | Beschreibung                      |
+| attribute                                                       | Beschreibung                      |
 |-----------------------------------------------------------------|---------------------------------|
-| [**MF- \_ MT- \_ Untertyp**](mf-mt-subtype-attribute.md)              | Legen Sie auf **mfvideoformat \_ H264** fest. |
-| [**MF- \_ MT- \_ MPEG2- \_ Profil**](mf-mt-mpeg2-profile-attribute.md) | H. 264-Profil.                  |
-| [**MF- \_ MT- \_ Frame \_ Größe**](mf-mt-frame-size-attribute.md)       | Frame Größe.                     |
-| [**MF- \_ MT- \_ Frame \_ Rate**](mf-mt-frame-rate-attribute.md)       | Die Framerate.                     |
-| [**MF-mittlere mittlere \_ \_ \_ Bitrate**](mf-mt-avg-bitrate-attribute.md)     | Codierte Bitrate.               |
+| [**MF \_ \_ MT-UNTERTYP**](mf-mt-subtype-attribute.md)              | Legen Sie auf **MFVideoFormat \_ H264** fest. |
+| [**MF \_ MT \_ \_ MPEG2-PROFIL**](mf-mt-mpeg2-profile-attribute.md) | H.264-Profil.                  |
+| [**MF \_ MT \_ FRAME \_ SIZE**](mf-mt-frame-size-attribute.md)       | Framegröße.                     |
+| [**MF \_ MT \_ FRAME \_ RATE**](mf-mt-frame-rate-attribute.md)       | Bildrate.                     |
+| [**MF \_ MT \_ AVG \_ BITRATE**](mf-mt-avg-bitrate-attribute.md)     | Codierte Bitrate.               |
 
 
 
  
 
-Um die Attribute für den AAC-Audiostream anzugeben, erstellen Sie einen Attribut Speicher und legen die folgenden Attribute fest:
+Um die Attribute für den AAC-Audiostream anzugeben, erstellen Sie einen Attributspeicher, und legen Sie die folgenden Attribute fest:
 
 
 
-| Attribut                                                                                      | Beschreibung                               |
+| attribute                                                                                      | Beschreibung                               |
 |------------------------------------------------------------------------------------------------|------------------------------------------|
-| [**MF- \_ MT- \_ Untertyp**](mf-mt-subtype-attribute.md)                                             | Auf **mfaudioformat- \_ AAC** festlegen            |
-| [**MF \_ \_ -MT- \_ Audiobeispiele \_ pro \_ Sekunde**](mf-mt-audio-samples-per-second-attribute.md)        | Audiobeispielrate.                       |
-| [**MF \_ \_ -MT- \_ audiobits \_ pro \_ Beispiel**](mf-mt-audio-bits-per-sample-attribute.md)              | Bits pro Audiobeispiel.                   |
-| [**MF \_ \_ -MT- \_ audionum- \_ Kanäle**](mf-mt-audio-num-channels-attribute.md)                     | Anzahl der Audiokanäle.                |
-| [**MF \_ \_ -MT-audiodurchschn. \_ \_ Byte \_ pro \_ Sekunde**](mf-mt-audio-avg-bytes-per-second-attribute.md)   | Codierte Bitrate.                        |
-| [**MF \_ \_ -MT- \_ Audioblock \_ Ausrichtung**](mf-mt-audio-block-alignment-attribute.md)               | Auf 1 festlegen.                                |
-| [Anzeige der MF \_ \_ \_ -AAC- \_ \_ audioprofilebene \_](mf-mt-aac-audio-profile-level-indication.md) | Anzeige der AAC-Profil Ebene (optional). |
+| [**MF \_ \_ MT-UNTERTYP**](mf-mt-subtype-attribute.md)                                             | Legen Sie auf **MFAudioFormat \_ AAC fest.**            |
+| [**MF \_ \_ MT-AUDIOBEISPIELE \_ \_ PRO \_ SEKUNDE**](mf-mt-audio-samples-per-second-attribute.md)        | Rate der Audiostichproben.                       |
+| [**MF \_ \_ MT-AUDIOBITS \_ \_ PRO \_ BEISPIEL**](mf-mt-audio-bits-per-sample-attribute.md)              | Bits pro Audiobeispiel.                   |
+| [**MF \_ MT \_ AUDIO \_ NUM \_ CHANNELS**](mf-mt-audio-num-channels-attribute.md)                     | Anzahl der Audiokanäle.                |
+| [**MF \_ MT \_ AUDIO \_ AVG \_ BYTES \_ PER \_ SECOND**](mf-mt-audio-avg-bytes-per-second-attribute.md)   | Codierte Bitrate.                        |
+| [**MF MT AUDIO BLOCK ALIGNMENT (MF \_ \_ MT-AUDIOBLOCKAUSRICHTUNG) \_ \_**](mf-mt-audio-block-alignment-attribute.md)               | Auf 1 festlegen.                                |
+| [MF \_ MT \_ AAC \_ AUDIO \_ PROFILE \_ LEVEL \_ INDICATION](mf-mt-aac-audio-profile-level-indication.md) | AAC-Profilebenenanzeige (optional). |
 
 
 
  
 
-Mit dem folgenden Code werden die Videodaten Strom Attribute erstellt.
+Der folgende Code erstellt die Videostreamattribute.
 
 
 ```C++
@@ -498,7 +498,7 @@ HRESULT CreateH264Profile(DWORD index, IMFAttributes **ppAttributes)
 
 
 
-Mit dem folgenden Code werden die audiostreamattribute erstellt.
+Der folgende Code erstellt die Audiostreamattribute.
 
 
 ```C++
@@ -559,11 +559,11 @@ HRESULT CreateAACProfile(DWORD index, IMFAttributes **ppAttributes)
 
 
 
-Beachten Sie, dass die transcodieren-API keinen echten Medientyp erfordert, obwohl Sie Medientyp Attribute verwendet. Insbesondere das [**MF MT- \_ \_ \_ Haupttyp**](mf-mt-major-type-attribute.md) Attribut ist nicht erforderlich, da die [**setvideoattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setvideoattributes) -Methode und die [**setaudioattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setaudioattributes) -Methode den Haupttyp implizieren. Es ist jedoch auch gültig, einen tatsächlichen Medientyp an diese Methoden zu übergeben. (Die [**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) -Schnittstelle erbt [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes).)
+Beachten Sie, dass die Transcodierungs-API keinen echten Medientyp erfordert, obwohl sie Medientypattribute verwendet. Insbesondere das [**MF \_ MT \_ MAJOR \_ TYPE-Attribut**](mf-mt-major-type-attribute.md) ist nicht erforderlich, da die [**Methoden SetVideoAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setvideoattributes) und [**SetAudioAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setaudioattributes) den Haupttyp implizieren. Es ist jedoch auch gültig, einen tatsächlichen Medientyp an diese Methoden zu übergeben. (Die [**BESCHRIFTUNGMediaType-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) [**erbt DIE ATTRIBUTE.)**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)
 
-### <a name="run-the-encoding-session"></a>Ausführen der Codierungs Sitzung
+### <a name="run-the-encoding-session"></a>Ausführen der Codierungssitzung
 
-Der folgende Code führt die Codierungs Sitzung aus. Dabei wird die Hilfsprogrammklasse für Medien Sitzungen verwendet, die im nächsten Abschnitt angezeigt wird.
+Der folgende Code führt die Codierungssitzung aus. Es wird die Media Session-Hilfsklasse verwendet, die im nächsten Abschnitt gezeigt wird.
 
 
 ```C++
@@ -601,29 +601,29 @@ HRESULT RunEncodingSession(CSession *pSession, MFTIME duration)
 
 
 
-## <a name="media-session-helper"></a>Hilfsprogramm für Medien Sitzung
+## <a name="media-session-helper"></a>Mediensitzungs-Hilfe
 
-Die [Medien Sitzung](media-session.md) wird vollständig im Abschnitt [Media Foundation-Architektur](media-foundation-architecture.md) dieser Dokumentation beschrieben. Die Medien Sitzung verwendet ein asynchrones Ereignis Modell. In einer GUI-Anwendung sollten Sie auf Sitzungs Ereignisse reagieren, ohne den UI-Thread zu blockieren, um auf das nächste Ereignis zu warten. Im Tutorial zum Wiedergeben [ungeschützter Mediendateien](how-to-play-unprotected-media-files.md) wird gezeigt, wie dies in einer Wiedergabe Anwendung durchzuführen ist. Bei der Codierung ist das Prinzip identisch, aber es sind weniger Ereignisse relevant:
+Die [Mediensitzung](media-session.md) wird im Abschnitt Media Foundation [Architektur](media-foundation-architecture.md) dieser Dokumentation genauer beschrieben. Die Mediensitzung verwendet ein asynchrones Ereignismodell. In einer GUI-Anwendung sollten Sie auf Sitzungsereignisse reagieren, ohne zu blockieren, dass der UI-Thread auf das nächste Ereignis wartet. Das Tutorial How to Play Unprotected Media Files (Wiedergeben von [ungeschützten Mediendateien)](how-to-play-unprotected-media-files.md) zeigt, wie Sie dies in einer Wiedergabeanwendung tun. Für die Codierung ist das Prinzip identisch, aber es sind weniger Ereignisse relevant:
 
 
 
 | Ereignis                                  | Beschreibung                                                                                                                                                       |
 |----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Mesessionend](mesessionended.md)   | Wird ausgelöst, wenn die Codierung beendet ist.                                                                                                                            |
-| [Mesessionclosed](mesessionclosed.md) | Wird ausgelöst, wenn die [**imfmediasession:: Close**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-close) -Methode abgeschlossen wird. Nachdem dieses Ereignis ausgelöst wurde, kann die Medien Sitzung sicher heruntergefahren werden. |
+| [MESessionEnded](mesessionended.md)   | Wird ausgelöst, wenn die Codierung abgeschlossen ist.                                                                                                                            |
+| [MESessionClosed](mesessionclosed.md) | Wird ausgelöst, [**wenn die METHODE FÜR DIE 100:000-000000000001**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-close) abgeschlossen ist. Nachdem dieses Ereignis ausgelöst wurde, ist es sicher, die Mediensitzung herunterfahren. |
 
 
 
  
 
-Bei einer Konsolenanwendung ist es sinnvoll, Ereignisse zu blockieren und auf Ereignisse zu warten. Abhängig von der Quelldatei und den Codierungs Einstellungen kann es eine Weile dauern, bis die Codierung beendet ist. Statusaktualisierungen können wie folgt angezeigt werden:
+Für eine Konsolenanwendung ist es sinnvoll, Ereignisse zu blockieren und auf diese zu warten. Je nach Quelldatei und Codierungseinstellungen kann es einige Zeit dauern, bis die Codierung abgeschlossen ist. Sie können Statusupdates wie folgt erhalten:
 
-1.  Aufrufen von [**imfmediasession:: getclock**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-getclock) zum Abrufen der Präsentations Uhr.
-2.  Fragen Sie die Uhr nach der [**IMF presentationclock**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationclock) -Schnittstelle ab.
-3.  [**Imfpresentationclock:: getTime**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) aufrufen, um die aktuelle Position zu erhalten.
-4.  Die Position wird in Zeiteinheiten angegeben. Verwenden Sie den Wert, um den Prozentsatz der abgeschlossenen Werte zu erhalten `(100 * position) / duration` .
+1.  Rufen [**Sie DIEMEDIASession::GetClock auf,**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-getclock) um die Präsentationsuhr zu erhalten.
+2.  Fragen Sie die Uhr für die [**BENUTZEROBERFLÄCHEPresentationClock-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationclock) ab.
+3.  Rufen [**Sie VORZEIGERDarstellungClock::GetTime auf,**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) um die aktuelle Position zu erhalten.
+4.  Die Position wird in Zeiteinheiten angegeben. Verwenden Sie den Wert , um den prozentsatz abgeschlossenen Wert zu `(100 * position) / duration` erhalten.
 
-Hier ist die Deklaration der- `CSession` Klasse.
+Hier ist die Deklaration der `CSession` -Klasse.
 
 
 ```C++
@@ -679,7 +679,7 @@ private:
 
 
 
-Der folgende Code zeigt die komplette Implementierung der- `CSession` Klasse.
+Der folgende Code zeigt die vollständige Implementierung der `CSession` -Klasse.
 
 
 ```C++
@@ -871,16 +871,16 @@ HRESULT CSession::Wait(DWORD dwMsec)
 [**AAC-Encoder**](aac-encoder.md)
 </dt> <dt>
 
-[**H. 264-Video Encoder**](h-264-video-encoder.md)
+[**H.264 Video Encoder**](h-264-video-encoder.md)
 </dt> <dt>
 
-[Medien Sitzung](media-session.md)
+[Mediensitzung](media-session.md)
 </dt> <dt>
 
 [Medientypen](media-types.md)
 </dt> <dt>
 
-[Transcode-API](transcode-api.md)
+[Transcodierungs-API](transcode-api.md)
 </dt> </dl>
 
  

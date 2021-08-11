@@ -1,10 +1,10 @@
 ---
-title: Klasse "kreatemediarendereroperation"
-description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der asynchrone Vorgang, der von "initiatemediarendererasync" oder "deatemediarendererfrombasicdeviceasync" gestartet wurde, abgeschlossen ist, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+title: CreateMediaRendererOperation-Klasse
+description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der asynchrone Vorgang, der von CreateMediaRendererAsync oder CreateMediaRendererFromBasicDeviceAsync gestartet wurde, abgeschlossen wird, und stellt eine Methode zur Rückgabe der Ergebnisse des Vorgangs zur Anwendung.
 ms.assetid: 0BC87D9E-5285-4F98-96B4-C841DDECBBE0
 keywords:
-- Media Streaming-API der Klasse "kreatemediarendereroperation"
-- Datenträger-Media Streaming-API der Klasse "kreatemediarendereroperation
+- 'CreateMediaRendererOperation-Klasse : Media Streaming-API'
+- CreateMediaRendererOperation-Klasse der Media Streaming-API , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,25 +14,25 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b8be789f4343779d315808a4fc5f203f62dd58c8
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 255cbf9680e40d019a7b4fa3fda669e33e051111a975d4d63905353e81ccb53a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118236414"
 ---
-# <a name="createmediarendereroperation-class"></a>Klasse "kreatemediarendereroperation"
+# <a name="createmediarendereroperation-class"></a>CreateMediaRendererOperation-Klasse
 
-Registriert einen Ereignishandler, der aufgerufen wird, wenn der asynchrone Vorgang, der von " [**initiatemediarendererasync**](imediarendererfactory-createmediarendererasync.md) " oder " [**deatemediarendererfrombasicdeviceasync**](imediarendererfactory-createmediarendererfrombasicdeviceasync.md) " gestartet wurde, abgeschlossen ist, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+Registriert einen Ereignishandler, der aufgerufen wird, wenn der asynchrone Vorgang, der von [**CreateMediaRendererAsync**](imediarendererfactory-createmediarendererasync.md) oder [**CreateMediaRendererFromBasicDeviceAsync**](imediarendererfactory-createmediarendererfrombasicdeviceasync.md) gestartet wurde, abgeschlossen wird, und stellt eine Methode zur Rückgabe der Ergebnisse des Vorgangs zur Anwendung.
 
-" **Kreatemediarendereroperation** " verfügt über diese Typen von Membern:
+**CreateMediaRendererOperation verfügt** über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Klasse " **kreatemediarendereroperation** " verfügt über diese Methoden.
+Die **CreateMediaRendererOperation-Klasse** verfügt über diese Methoden.
 
 
 
@@ -46,13 +46,13 @@ Die Klasse " **kreatemediarendereroperation** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **kreatemediarendereroperation** " verfügt über diese Eigenschaften.
+Die **CreateMediaRendererOperation-Klasse** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                               | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                               |
 |:-----------------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Abgeschlossen**](createmediarendereroperation-completed.md)<br/> | Lesen/Schreiben<br/> | Dient zum Abrufen oder Festlegen eines Ereignis Handlers, der aufgerufen wird, wenn der asynchrone Vorgang, der von " [**deatemediarendererasync**](imediarendererfactory-createmediarendererasync.md) " oder " [**deatemediarendererfrombasicdeviceasync**](imediarendererfactory-createmediarendererfrombasicdeviceasync.md) " gestartet wurde, abgeschlossen ist <br/> |
+| [**Abgeschlossen**](createmediarendereroperation-completed.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Ereignishandler ab, der aufgerufen wird, wenn der von [**CreateMediaRendererAsync**](imediarendererfactory-createmediarendererasync.md) oder [**CreateMediaRendererFromBasicDeviceAsync gestartete asynchrone**](imediarendererfactory-createmediarendererfrombasicdeviceasync.md) Vorgang abgeschlossen wird, oder legt diesen fest. <br/> |
 
 
 

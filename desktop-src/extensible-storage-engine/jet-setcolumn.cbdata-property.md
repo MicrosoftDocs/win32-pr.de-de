@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_SETCOLUMN. cbData-Eigenschaft.
-title: JET_SETCOLUMN. cbData (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_SETCOLUMN.cbData-Eigenschaft.'
+title: JET_SETCOLUMN.cbData-Eigenschaft
 TOCTitle: 'cbData property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_SETCOLUMN.cbData
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_setcolumn.cbdata(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ebe108fb022a2c91eae8e5c632cb15b3637b47a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f263b39bc83022a67990600e3d18b3386c3da92d27e10def01fde27fdd338a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118253524"
 ---
-# <a name="jet_setcolumncbdata-property"></a>JET_SETCOLUMN. cbData (Eigenschaft)
+# <a name="jet_setcolumncbdata-property"></a>JET_SETCOLUMN.cbData-Eigenschaft
 
-Ruft die Größe der festzulegenden Daten ab oder legt diese fest.
+Ruft die Größe der festgelegten Daten ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ public int cbData { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -70,6 +70,6 @@ Typ: [System. Int32](/dotnet/api/system.int32)
 
 [JET_SETCOLUMN-Klasse](./jet-setcolumn-class.md)
 
-[Mitglieder JET_SETCOLUMN](./jet-setcolumn-members.md)
+[JET_SETCOLUMN Member](./jet-setcolumn-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

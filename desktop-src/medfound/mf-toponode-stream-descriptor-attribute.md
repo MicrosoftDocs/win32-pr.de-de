@@ -1,31 +1,31 @@
 ---
-description: Enthält einen Zeiger auf den Datenstrom Deskriptor für die Medienquelle.
+description: Enthält einen Zeiger auf den Streamdeskriptor für die Medienquelle.
 ms.assetid: 5acafbc1-823f-4b6d-8737-04b3a6a0cf87
-title: MF_TOPONODE_STREAM_DESCRIPTOR-Attribut (mspdl. h)
+title: MF_TOPONODE_STREAM_DESCRIPTOR-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f074a1c1ffde3671779362724676f884c3b6b0b8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92517560f0a1f60681afc1209d6d14d3e3c5d663958d365d18b20558c0003199
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118244324"
 ---
-# <a name="mf_toponode_stream_descriptor-attribute"></a>Das MF- \_ toponode- \_ \_ streamdeskriptorattribut
+# <a name="mf_toponode_stream_descriptor-attribute"></a>MF \_ TOPONODE \_ STREAM \_ DESCRIPTOR-Attribut
 
-Enthält einen Zeiger auf den Datenstrom Deskriptor für die Medienquelle.
+Enthält einen Zeiger auf den Streamdeskriptor für die Medienquelle.
 
 ## <a name="data-type"></a>Datentyp
 
-**IUnknown \** _
+**IUnknown\***
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Quellknoten (_ * MF- \_ Topologie \_ sourcestream- \_ Knoten * *).
+Dieses Attribut gilt für Quellknoten (**MF \_ TOPOLOGY \_ SOURCESTREAM \_ NODE**).
 
-Der Wert des-Attributs ist ein Zeiger auf die [**imfstreamdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor) -Schnittstelle des Stream-Deskriptors. Dieses Attribut ist erforderlich.
+Der Wert des Attributs ist ein Zeiger auf die [**POINTERStreamDescriptor-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor) des Streamdeskriptors. Dieses Attribut ist erforderlich.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,9 +33,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -46,13 +46,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: getunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
+[**ATTRIBUTEAttributes::GetUnknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
 </dt> <dt>
 
-[**Imfattributes:: *-Known**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
+[**ATTRIBUTEAttributes::SetUnknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
 </dt> <dt>
 
-[**Imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
+[**TOPOLOGYNode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
 </dt> <dt>
 
 [Topologieknotenattribute](topology-node-attributes.md)

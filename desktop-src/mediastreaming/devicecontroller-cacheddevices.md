@@ -1,11 +1,11 @@
 ---
-title: Devicecontroller. cacheddevices-Methode
-description: Ruft eine Auflistung von ibasicdevice-Schnittstellen Zeigern ab, die die zwischengespeicherte Ansicht aller ermittelbaren DLNA-Geräte darstellt. | Devicecontroller. cacheddevices-Methode
+title: DeviceController.CachedDevices-Methode
+description: Ruft eine Auflistung von IBasicDevice-Schnittstellenzeige ab, die die zwischengespeicherte Ansicht aller erkennbaren DLNA-Geräte darstellt. | DeviceController.CachedDevices-Methode
 ms.assetid: 89CFA4BB-EDA8-461A-A3A0-A84CBDA99EA4
 keywords:
-- Cacheddevices-Methode Medien Streaming-API
-- Cacheddevices-Methode Medien Streaming-API, devicecontroller-Schnittstelle
-- Devicecontroller-Schnittstelle Medien Streaming-API, cacheddevices-Methode
+- 'CachedDevices-Methode: Medienstreaming-API'
+- 'CachedDevices-Methode: Media Streaming-API, DeviceController-Schnittstelle'
+- DeviceController-Schnittstelle Medienstreaming-API, CachedDevices-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c0bb39e03a9788e0c444f682b61d39fc1c65781b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 86e2c4209649450fb3a8df46cde151a0b9899cd26e58bfc0b35fd7ac6e7d02b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106350627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118236360"
 ---
-# <a name="devicecontrollercacheddevices-method"></a>Devicecontroller. cacheddevices-Methode
+# <a name="devicecontrollercacheddevices-method"></a>DeviceController.CachedDevices-Methode
 
-Ruft eine Auflistung von [**ibasicdevice**](ibasicdevice.md) -Schnittstellen Zeigern ab, die die zwischengespeicherte Ansicht aller ermittelbaren DLNA-Geräte darstellt.
+Ruft eine Auflistung von [**IBasicDevice-Schnittstellenzeige**](ibasicdevice.md) ab, die die zwischengespeicherte Ansicht aller erkennbaren DLNA-Geräte darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT CachedDevices(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Empfängt eine Aufzähl Bare Auflistung von [**ibasicdevice**](ibasicdevice.md) -Schnittstellen Zeigern.
+Empfängt eine aufzählbare Auflistung von [**IBasicDevice-Schnittstellenzeigern.**](ibasicdevice.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Geräte-econtroller**](/previous-versions/windows/desktop/legacy/hh828842(v=vs.85))
+[**DeviceController**](/previous-versions/windows/desktop/legacy/hh828842(v=vs.85))
 </dt> </dl>
 
  

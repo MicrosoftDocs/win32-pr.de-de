@@ -1,59 +1,59 @@
 ---
-description: In diesem Thema wird der allgemeine Entwurf von Microsoft Media Foundation beschrieben. Weitere Informationen zum Verwenden von Media Foundation für bestimmte Programmieraufgaben finden Sie unter Media Foundation Programming Guide.
+description: In diesem Thema wird der allgemeine Entwurf von Microsoft Media Foundation. Informationen zur Verwendung von Media Foundation für bestimmte Programmieraufgaben finden Sie im Media Foundation-Programmierhandbuch.
 ms.assetid: DEA2B19A-CF15-4BF4-84C3-9A6417C942E2
-title: Übersicht über die Media Foundation-Architektur
+title: Übersicht über die Media Foundation Architektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0944eae1a74c1a5ba3dda8d94b69088128237f1
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: de953d05c55c96d1affa2213e1a7f11143a71aa319b4671c159f085e65268d05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104562529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118239631"
 ---
-# <a name="overview-of-the-media-foundation-architecture"></a>Übersicht über die Media Foundation-Architektur
+# <a name="overview-of-the-media-foundation-architecture"></a>Übersicht über die Media Foundation Architektur
 
-In diesem Thema wird der allgemeine Entwurf von Microsoft Media Foundation beschrieben. Weitere Informationen zum Verwenden von Media Foundation für bestimmte Programmieraufgaben finden Sie unter [Media Foundation Programming Guide](media-foundation-programming-guide.md).
+In diesem Thema wird der allgemeine Entwurf von Microsoft Media Foundation. Informationen zur Verwendung von Media Foundation für bestimmte Programmieraufgaben finden Sie im [Media Foundation-Programmierhandbuch.](media-foundation-programming-guide.md)
 
-Das folgende Diagramm zeigt eine allgemeine Übersicht über die Media Foundation Architektur.
+Das folgende Diagramm zeigt eine übersichtsbasierte Ansicht der Media Foundation Architektur.
 
-![das Diagramm zeigt eine allgemeine Übersicht über die Media Foundation-Architektur.](images/mfarch01.png)
+![Diagramm, das eine übersichtsbasierte Ansicht der Media Foundation-Architektur zeigt.](images/mfarch01.png)
 
-Media Foundation bietet zwei unterschiedliche Programmier Modelle. Das erste Modell, das auf der linken Seite des Diagramms angezeigt wird, verwendet eine End-to-End-Pipeline für Mediendaten. Die Anwendung initialisiert die Pipeline – beispielsweise durch Bereitstellen der URL einer wieder zugebende Datei – und ruft dann Methoden zum Steuern des Streamings auf. Im zweiten Modell, das auf der rechten Seite des Diagramms angezeigt wird, ruft die Anwendung Daten entweder aus einer Quelle ab oder schiebt sie an ein Ziel (oder beides). Dieses Modell ist besonders nützlich, wenn Sie die Daten verarbeiten müssen, da die Anwendung direkten Zugriff auf den Datenstrom hat.
+Media Foundation bietet zwei unterschiedliche Programmiermodelle. Das erste Modell, das auf der linken Seite des Diagramms angezeigt wird, verwendet eine End-to-End-Pipeline für Mediendaten. Die Anwendung initialisiert die Pipeline , z. B. durch Angabe der URL einer datei, die abspielt werden soll, und ruft dann Methoden zum Steuern des Streamings auf. Im zweiten Modell, das auf der rechten Seite des Diagramms angezeigt wird, pullt die Anwendung Daten entweder aus einer Quelle oder pusht sie an ein Ziel (oder beides). Dieses Modell ist besonders nützlich, wenn Sie die Daten verarbeiten müssen, da die Anwendung direkten Zugriff auf den Datenstrom hat.
 
 ### <a name="primitives-and-platform"></a>Primitive und Plattform
 
-Beginnend am unteren Rand des Diagramms sind die *primitiven* Hilfsobjekte, die in der Media Foundation-API verwendet werden:
+Ab dem unteren Rand des *Diagramms* sind die Primitive Hilfsobjekte, die in der gesamten Media Foundation werden:
 
--   [Attribute](attributes-and-properties.md) sind eine generische Methode zum Speichern von Informationen in einem Objekt als Liste von Schlüssel-Wert-Paaren.
--   [Medientypen](media-types.md) beschreiben das Format eines Mediendaten Stroms.
--   [Medien Puffer](media-buffers.md) enthalten Blöcke von Mediendaten, z. b. Video Frames und Audiobeispiele, und werden zum Transportieren von Daten zwischen Objekten verwendet.
--   [Medien Beispiele](media-samples.md) sind Container für Medien Puffer. Sie enthalten außerdem Metadaten zu den Puffern, z. b. Zeitstempel.
+-   [Attribute sind](attributes-and-properties.md) eine allgemeine Möglichkeit, Informationen in einem Objekt als Liste von Schlüssel-Wert-Paaren zu speichern.
+-   [Medientypen](media-types.md) beschreiben das Format eines Mediendatenstroms.
+-   [Medienpuffer enthalten](media-buffers.md) Mediendaten, z. B. Videoframes und Audiobeispiele, und werden zum Transport von Daten zwischen Objekten verwendet.
+-   [Medienbeispiele](media-samples.md) sind Container für Medienpuffer. Sie enthalten auch Metadaten zu den Puffern, z. B. Zeitstempel.
 
-Die [Media Foundation Plattform-APIs](media-foundation-platform-apis.md) stellen einige Kernfunktionen bereit, die von der Media Foundation Pipeline verwendet werden, wie z. b. asynchrone Rückrufe und Arbeits Warteschlangen. Bestimmte Anwendungen müssen diese APIs möglicherweise direkt aufzurufen. Sie benötigen Sie auch, wenn Sie eine benutzerdefinierte Quelle, eine Transformation oder eine Senke für Media Foundation implementieren.
+Die [Media Foundation-Plattform-APIs](media-foundation-platform-apis.md) bieten einige Kernfunktionen, die von der Media Foundation-Pipeline verwendet werden, z. B. asynchrone Rückrufe und Arbeitswarteschlangen. Bestimmte Anwendungen müssen diese APIs möglicherweise direkt aufrufen. Außerdem benötigen Sie sie, wenn Sie eine benutzerdefinierte Quelle, Transformation oder Senke für die Media Foundation.
 
-### <a name="media-pipeline"></a>Medien Pipeline
+### <a name="media-pipeline"></a>Medienpipeline
 
-Die Medien Pipeline enthält drei Typen von Objekten, die Mediendaten generieren oder verarbeiten:
+Die Medienpipeline enthält drei Objekttypen, die Mediendaten generieren oder verarbeiten:
 
--   [Medienquellen](media-sources.md) stellen Daten in die Pipeline ein. Eine Medienquelle erhält möglicherweise Daten aus einer lokalen Datei, z. b. einer Videodatei. aus einem Netzwerkstream oder von einem Hardware Erfassungsgerät aus.
--   [Media Foundation Transformationen](media-foundation-transforms.md) (MFTs) verarbeiten von Daten aus einem Stream. Encoder und Decoder werden als MFTs implementiert.
--   [Medien senken](media-sinks.md) nutzen die Daten. beispielsweise durch das Anzeigen von Videos in der Anzeige, das Abspielen von Audiodaten oder das Schreiben der Daten in eine Mediendatei.
+-   [Medienquellen](media-sources.md) führen Daten in die Pipeline ein. Eine Medienquelle kann Daten aus einer lokalen Datei, z. B. einer Videodatei, erhalten. aus einem Netzwerkstream; oder von einem Hardwareerfassungsgerät.
+-   [Media Foundation Transforms](media-foundation-transforms.md) (MFTs) verarbeiten Daten aus einem Stream. Encoder und Decoder werden als MFTs implementiert.
+-   [Mediensenken](media-sinks.md) nutzen die Daten. z. B. durch Anzeigen von Video auf der Anzeige, Wiederwiedergabe von Audio oder Schreiben der Daten in eine Mediendatei.
 
-Drittanbieter können Ihre eigenen benutzerdefinierten Quellen, senken und MFTs implementieren. beispielsweise, um neue Mediendatei Formate zu unterstützen.
+Drittanbieter können ihre eigenen benutzerdefinierten Quellen, Senken und MFTs implementieren. z. B. zur Unterstützung neuer Mediendateiformate.
 
-Die [Medien Sitzung](media-session.md) steuert den Datenfluss über die Pipeline und behandelt Aufgaben wie die Qualitätskontrolle, die Audio-/Videosynchronisierung und die Reaktion auf Formatänderungen.
+Die [Mediensitzung](media-session.md) steuert den Datenfluss durch die Pipeline und verarbeitet Aufgaben wie Qualitätskontrolle, Audio-/Videosynchronisierung und Reaktion auf Formatänderungen.
 
-### <a name="source-reader-and-sink-writer"></a>Quell Lese-und Senke-Writer
+### <a name="source-reader-and-sink-writer"></a>Quellleser und Senkenwriter
 
-Der [Quell Reader](source-reader.md) und der [senkenwriter](sink-writer.md) bieten eine alternative Möglichkeit, die grundlegenden Media Foundation Komponenten (Medienquellen, Transformationen und Medien senken) zu verwenden. Der Quell Leser hostet eine Medienquelle und NULL oder mehr Decoders, während der Senke Writer eine Medien Senke und NULL oder mehr Encoder hostet. Sie können den Quell Reader verwenden, um komprimierte oder unkomprimierte Daten aus einer Medienquelle zu erhalten, und den sendenden Writer verwenden, um Daten zu codieren und die Daten an eine Medien Senke zu senden.
+[Quellleser und](source-reader.md) [Senkenschreiber](sink-writer.md) bieten eine alternative Möglichkeit, die grundlegenden Media Foundation (Medienquellen, Transformationen und Mediensenken) zu verwenden. Der Quellleser hostet eine Medienquelle und null oder mehr Decoder, während der Senkenwriter eine Mediensenke und null oder mehr Encoder hostet. Sie können den Quellreader verwenden, um komprimierte oder unkomprimierte Daten aus einer Medienquelle zu erhalten, und den Senkenwriter verwenden, um Daten zu codieren und die Daten an eine Mediensenke zu senden.
 
 > [!Note]  
-> Der Quell Reader und der Senke Writer sind in Windows 7 verfügbar.
+> Der Quellleser und senkende Writer sind in Windows 7 verfügbar.
 
  
 
-Dieses Programmiermodell ermöglicht der Anwendung eine bessere Kontrolle über den Datenfluss. Außerdem erhält die Anwendung direkten Zugriff auf die Daten aus der Quelle.
+Dieses Programmiermodell bietet der Anwendung mehr Kontrolle über den Datenfluss und gewährt der Anwendung auch direkten Zugriff auf die Daten aus der Quelle.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

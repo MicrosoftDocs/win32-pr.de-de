@@ -1,23 +1,23 @@
 ---
-description: Gibt an, wie oft der sprach Erfassungs-DSP für das restliche Signal eine akustische Echo Unterdrückung (AES) ausführt.
+description: Gibt an, wie oft der Voice Capture-DSP AES (Acoustic Echo Suppression) für das Restsignal ausführt.
 ms.assetid: 409b40f8-38eb-49f7-be30-348ab5cdd33a
-title: MFPKEY_WMAAECMA_FEATR_AES-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_FEATR_AES-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5da7505a259a51ca8456f3caffa153790649320
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e842bc3064b431437d8bbdfab06c0081ecdb49a8c38288ba4adb78648363c71a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118242037"
 ---
-# <a name="mfpkey_wmaaecma_featr_aes-property"></a>Mfpkey \_ wmaaecma \_ featr \_ AES-Eigenschaft
+# <a name="mfpkey_wmaaecma_featr_aes-property"></a>MFPKEY \_ WMAAECMA \_ FEATR \_ AES-Eigenschaft
 
-Gibt an, wie oft der sprach Erfassungs-DSP für das restliche Signal eine akustische Echo Unterdrückung (AES) ausführt.
+Gibt an, wie oft der Voice Capture-DSP AES (Acoustic Echo Suppression) für das Restsignal ausführt.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mithilfe von [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -29,11 +29,11 @@ VT \_ I4
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Voice Capture-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der sprach Erfassungs-DSP kann AES für das restliche Signal nach einem Echo Abbruch ausführen. Diese Eigenschaft kann den Wert 0, 1 oder 2 aufweisen. Der Standardwert ist 0. Vor dem Festlegen dieser Eigenschaft müssen Sie die Eigenschaft [mfpkey \_ wmaaecma \_ Feature \_ Mode](mfpkey-wmaaecma-feature-modeproperty.md) auf Variant \_ true festlegen.
+Der Voice Capture-DSP kann AES für das Restsignal nach dem Echoabbruch ausführen. Diese Eigenschaft kann den Wert 0, 1 oder 2 haben. Der Standardwert ist 0. Bevor Sie diese Eigenschaft festlegen, müssen Sie die [MFPKEY \_ WMAAECMA \_ FEATURE \_ MODE-Eigenschaft](mfpkey-wmaaecma-feature-modeproperty.md) auf VARIANT \_ TRUE festlegen.
 
 Der DSP verwendet diese Eigenschaft nur, wenn die AEC-Verarbeitung aktiviert ist.
 
@@ -43,9 +43,9 @@ Der DSP verwendet diese Eigenschaft nur, wenn die AEC-Verarbeitung aktiviert ist
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -53,10 +53,10 @@ Der DSP verwendet diese Eigenschaft nur, wenn die AEC-Verarbeitung aktiviert ist
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Voice Capture-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

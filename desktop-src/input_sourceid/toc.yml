@@ -1,7 +1,7 @@
-- name: Identifizierung der Eingabe Quelle
+- name: Eingabequellenidentifikation
   href: input-source-identification-portal.md
   items:
-    - name: Identifikations Referenz für die Eingabe Quelle
+    - name: Referenz zur Eingabequellenidentifikation
       href: input-source-identification-reference.md
       items:
         - name: Enumerationen
@@ -14,9 +14,9 @@
         - name: Functions
           href: functions.md
           items:
-            - name: Getcimssm
+            - name: GetCIMSSM
               href: /windows/win32/api/winuser/nf-winuser-getcimssm
-            - name: Getcurrentinputmessagesource
+            - name: GetCurrentInputMessageSource
               href: /windows/win32/api/winuser/nf-winuser-getcurrentinputmessagesource
         - name: INPUT_MESSAGE_SOURCE
           href: /windows/win32/api/winuser/ns-winuser-input_message_source

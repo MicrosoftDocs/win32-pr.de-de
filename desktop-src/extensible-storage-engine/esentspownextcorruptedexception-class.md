@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentspownextverdertedexception-Klasse'
-title: Esentspownextverdertedexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentSPOwnExtCorruptedException-Klasse'
+title: EsentSPOwnExtCorruptedException-Klasse
 TOCTitle: EsentSPOwnExtCorruptedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSPOwnExtCorruptedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentspownextcorruptedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 15f3f37dfafcaa58d63a34c19d629f4469826cd7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab0499d607e245ca896d59579a5f280606c48768912b856d0220f35e71327a0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118258454"
 ---
-# <a name="esentspownextcorruptedexception-class"></a>Esentspownextverdertedexception-Klasse
+# <a name="esentspownextcorruptedexception-class"></a>EsentSPOwnExtCorruptedException-Klasse
 
-Basisklasse für JET_err. Spownextbeschädigte-Ausnahmen.
+Basisklasse für JET_err. SPOwnExtCorrupted-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentverdertionexception](./esentcorruptionexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentspownextverdertedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentCorruptionException](./esentcorruptionexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSPOwnExtCorruptedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,6 +72,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentspownextverdertedexception-Elemente](./esentspownextcorruptedexception-members.md)
+[EsentSPOwnExtCorruptedException-Member](./esentspownextcorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

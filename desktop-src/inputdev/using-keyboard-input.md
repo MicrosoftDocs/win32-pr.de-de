@@ -1,40 +1,40 @@
 ---
-title: Verwenden von Tastatureingaben
-description: In diesem Abschnitt werden Aufgaben behandelt, die mit Tastatureingaben verknüpft sind.
+title: Verwenden der Tastatureingabe
+description: In diesem Abschnitt werden Aufgaben behandelt, die tastatureingaben zugeordnet sind.
 ms.assetid: d08e7f12-6595-4234-bfc4-08daad93e4c4
 keywords:
 - Benutzereingabe, Tastatureingabe
 - Erfassen von Benutzereingaben, Tastatureingaben
 - Tastatureingabe
-- Tastatureingaben
-- Zeichen Nachrichten
-- Caretzeichen, Tastatureingabe
+- Tastatureingabenachrichten
+- Zeichenmeldungen
+- Carets, Tastatureingabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d76b3f90a626506430b91e7539069c6ecdf634c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cb1be8753ec6a5f920f09f6e5376b7988a88de0f9a49551492408e84908bb0c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118248272"
 ---
-# <a name="using-keyboard-input"></a>Verwenden von Tastatureingaben
+# <a name="using-keyboard-input"></a>Verwenden der Tastatureingabe
 
-Ein Fenster empfängt Tastatureingaben in Form von Tastatureingaben und Zeichen Nachrichten. Die an das Fenster angefügte Nachrichten Schleife muss Code enthalten, um Tastatureingabe-Nachrichten in die entsprechenden Zeichen Nachrichten zu übersetzen. Wenn im Fenster der Client Bereich Tastatureingaben angezeigt werden, sollte ein Caretzeichen erstellt und angezeigt werden, um die Position anzugeben, an der das nächste Zeichen eingegeben wird. In den folgenden Abschnitten wird der Code beschrieben, der beim empfangen, verarbeiten und Anzeigen von Tastatureingaben beteiligt ist:
+Ein Fenster empfängt Tastatureingaben in Form von Tastatureingabenachrichten und Zeichenmeldungen. Die an das Fenster angefügte Nachrichtenschleife muss Code enthalten, um Tastatureingabenachrichten in die entsprechenden Zeichenmeldungen zu übersetzen. Wenn im Fenster Tastatureingaben im Clientbereich angezeigt werden, sollte ein Caretzeichen erstellt und angezeigt werden, um die Position anzugeben, an der das nächste Zeichen eingegeben wird. In den folgenden Abschnitten wird der Code beschrieben, der am Empfangen, Verarbeiten und Anzeigen von Tastatureingaben beteiligt ist:
 
--   [Verarbeiten von Tastatureingaben](#processing-keystroke-messages)
--   [Übersetzen von Zeichen Meldungen](#translating-character-messages)
--   [Verarbeiten von Zeichen Meldungen](#processing-character-messages)
--   [Verwenden der Einfügemarke](#using-the-caret)
+-   [Verarbeiten von Tastatureingabenachrichten](#processing-keystroke-messages)
+-   [Übersetzen von Zeichennachrichten](#translating-character-messages)
+-   [Verarbeiten von Zeichenmeldungen](#processing-character-messages)
+-   [Verwenden von Caret](#using-the-caret)
 -   [Anzeigen von Tastatureingaben](#displaying-keyboard-input)
 
-## <a name="processing-keystroke-messages"></a>Verarbeiten von Tastatureingaben
+## <a name="processing-keystroke-messages"></a>Verarbeiten von Tastatureingabenachrichten
 
-Die Fenster Prozedur des Fensters, das über den Tastaturfokus verfügt, empfängt Tastatureingaben, wenn der Benutzer die Tastatur eingibt. Die Tastatureingabe Nachrichten sind [**WM \_ KeyDown**](wm-keydown.md), [**WM \_ KeyUp**](wm-keyup.md), [**WM \_ syskeydown**](wm-syskeydown.md)und [**WM \_ syskeyup**](wm-syskeyup.md). Eine typische Fenster Prozedur ignoriert alle Tastatureingabe-Meldungen außer **WM \_ KeyDown**. Das System sendet die **WM- \_ KeyDown** -Nachricht, wenn der Benutzer eine Taste drückt.
+Die Fensterprozedur des Fensters mit dem Tastaturfokus empfängt Tastatureingabemeldungen, wenn der Benutzer die Tastatur eingibt. Die Tastatureingabenachrichten sind [**WM \_ KEYDOWN,**](wm-keydown.md) [**WM \_ KEYUP,**](wm-keyup.md) [**WM \_ SYSKEYDOWN**](wm-syskeydown.md)und [**WM \_ SYSKEYUP.**](wm-syskeyup.md) Eine typische Fensterprozedur ignoriert alle Tastatureingabemeldungen außer **WM \_ KEYDOWN**. Das System sendet die **WM \_ KEYDOWN-Nachricht,** wenn der Benutzer eine Taste drückt.
 
-Wenn die Fenster Prozedur die [**WM- \_ KeyDown**](wm-keydown.md) -Nachricht empfängt, sollte Sie den Code der virtuellen Taste untersuchen, der die Nachricht begleitet, um zu bestimmen, wie die Tastatureingabe verarbeitet wird. Der Code des virtuellen Schlüssels befindet sich im *wParam* -Parameter der Nachricht. In der Regel verarbeitet eine Anwendung nur Tastatureingaben, die von nicht-Zeichen Schlüsseln generiert werden, z. b. die Funktionstasten, die Cursor Verschiebungs Tasten und die speziellen Schlüssel, wie z. b. ins, del, Home und End.
+Wenn die Fensterprozedur die [**WM \_ KEYDOWN-Nachricht**](wm-keydown.md) empfängt, sollte sie den Code des virtuellen Schlüssels untersuchen, der die Nachricht begleitet, um zu bestimmen, wie die Tastatureingabe verarbeitet werden soll. Der Code des virtuellen Schlüssels befindet sich im *wParam-Parameter* der Nachricht. In der Regel verarbeitet eine Anwendung nur Tastatureingaben, die von Nichtzeichenschlüsseln generiert werden, einschließlich der Funktionsschlüssel, der Cursorbewegungsschlüssel und der speziellen Schlüssel wie INS, DEL, HOME und END.
 
-Das folgende Beispiel zeigt das Fenster Prozedur Framework, das eine typische Anwendung verwendet, um Tastatureingaben zu empfangen und zu verarbeiten.
+Das folgende Beispiel zeigt das Fensterprozedurframework, das eine typische Anwendung verwendet, um Tastatureingabenachrichten zu empfangen und zu verarbeiten.
 
 
 ```
@@ -105,11 +105,11 @@ Das folgende Beispiel zeigt das Fenster Prozedur Framework, das eine typische An
 
 
 
-## <a name="translating-character-messages"></a>Übersetzen von Zeichen Meldungen
+## <a name="translating-character-messages"></a>Übersetzen von Zeichennachrichten
 
-Jeder Thread, der Zeichen Eingaben vom Benutzer empfängt, muss die [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) -Funktion in der Nachrichten Schleife enthalten. Diese Funktion untersucht den Code für den virtuellen Schlüssel einer Tastatureingabe-Nachricht und stellt eine Zeichen Nachricht in die Meldungs Warteschlange, wenn der Code einem Zeichen entspricht. Die Zeichen Nachricht wird entfernt und bei der nächsten Iterationen der Nachrichten Schleife gesendet. der *wParam* -Parameter der Nachricht enthält den Zeichencode.
+Jeder Thread, der Zeicheneingaben vom Benutzer empfängt, muss die [**TranslateMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-translatemessage) in seine Nachrichtenschleife einschließen. Diese Funktion untersucht den Virtuellen Schlüsselcode einer Tastatureingabenachricht und platziert, wenn der Code einem Zeichen entspricht, eine Zeichennachricht in die Nachrichtenwarteschlange. Die Zeichennachricht wird entfernt und bei der nächsten Iteration der Nachrichtenschleife gesendet. Der *wParam-Parameter* der Nachricht enthält den Zeichencode.
 
-Im Allgemeinen sollte die Nachrichten Schleife eines Threads die [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) -Funktion verwenden, um jede Nachricht und nicht nur die Nachrichten mit einem virtuellen Schlüssel zu übersetzen. Obwohl **translatemess** keine Auswirkung auf andere Nachrichten Typen hat, wird sichergestellt, dass Tastatureingaben ordnungsgemäß übersetzt werden. Im folgenden Beispiel wird gezeigt, wie die **translatemess** -Funktion in eine typische Thread Nachrichten Schleife eingeschlossen wird.
+Im Allgemeinen sollte die Nachrichtenschleife eines Threads die [**TranslateMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-translatemessage) verwenden, um jede Nachricht zu übersetzen, nicht nur Nachrichten mit virtuellen Schlüsseln. **TranslateMessage** hat zwar keine Auswirkungen auf andere Nachrichtentypen, garantiert jedoch, dass tastatureingaben ordnungsgemäß übersetzt werden. Das folgende Beispiel zeigt, wie die **TranslateMessage-Funktion** in eine typische Threadnachrichtenschleife eingeschlossen wird.
 
 
 ```
@@ -135,20 +135,20 @@ while (( bRet = GetMessage(&msg, (HWND) NULL, 0, 0)) != 0)
 
 
 
-## <a name="processing-character-messages"></a>Verarbeiten von Zeichen Meldungen
+## <a name="processing-character-messages"></a>Verarbeiten von Zeichenmeldungen
 
-Eine Fenster Prozedur empfängt eine Zeichen Nachricht, wenn die [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) -Funktion einen virtuellen Schlüsselcode übersetzt, der einem Zeichen Schlüssel entspricht. Die Zeichen Nachrichten lauten [**WM \_ char**](wm-char.md), [**WM \_ deadchar**](wm-deadchar.md), [**WM \_ Sychar**](/windows/desktop/menurc/wm-syschar)und [**WM \_ sysdeadchar**](wm-sysdeadchar.md). Eine typische Fenster Prozedur ignoriert alle Zeichen Meldungen außer **WM \_ char**. Die **translatemess** -Funktion generiert eine **WM- \_ char** -Nachricht, wenn der Benutzer einen der folgenden Schlüssel drückt:
+Eine Fensterprozedur empfängt eine Zeichenmeldung, wenn die [**TranslateMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-translatemessage) einen virtuellen Schlüsselcode übersetzt, der einem Zeichenschlüssel entspricht. Die Zeichenmeldungen sind [**WM \_ CHAR,**](wm-char.md) [**WM \_ DEADCHAR,**](wm-deadchar.md) [**WM \_ SYSCHAR**](/windows/desktop/menurc/wm-syschar)und [**WM \_ SYSDEADCHAR**](wm-sysdeadchar.md). Eine typische Fensterprozedur ignoriert alle Zeichenmeldungen außer **WM \_ CHAR**. Die **TranslateMessage-Funktion** generiert eine **WM \_ CHAR-Nachricht,** wenn der Benutzer einen der folgenden Tasten drückt:
 
--   Beliebige Zeichen Taste
+-   Beliebiger Zeichenschlüssel
 -   RÜCKTASTE
--   EINGABETASTE (Wagen Rücklauf)
+-   EINGABETASTE (Wagenrücklauf)
 -   ESC
--   UMSCHALT + Eingabe (Zeilenvorschub)
+-   UMSCHALT+EINGABETASTE (Zeilenumbruch)
 -   TAB
 
-Wenn eine Fenster Prozedur die Meldung " [**WM \_ char**](wm-char.md) " empfängt, sollte Sie den Zeichencode untersuchen, der die Nachricht begleitet, um zu bestimmen, wie das Zeichen verarbeitet werden soll. Der Zeichencode befindet sich im *wParam* -Parameter der Nachricht.
+Wenn eine Fensterprozedur die [**WM \_ CHAR-Nachricht**](wm-char.md) empfängt, sollte sie den Zeichencode untersuchen, der die Nachricht begleitet, um zu bestimmen, wie das Zeichen verarbeitet werden soll. Der Zeichencode befindet sich im *wParam-Parameter* der Nachricht.
 
-Das folgende Beispiel zeigt das Fenster Prozedur Framework, das eine typische Anwendung verwendet, um Zeichen Nachrichten zu empfangen und zu verarbeiten.
+Das folgende Beispiel zeigt das Fensterprozedurframework, das eine typische Anwendung verwendet, um Zeichenmeldungen zu empfangen und zu verarbeiten.
 
 
 ```
@@ -195,23 +195,23 @@ Das folgende Beispiel zeigt das Fenster Prozedur Framework, das eine typische An
 
 
 
-## <a name="using-the-caret"></a>Verwenden der Einfügemarke
+## <a name="using-the-caret"></a>Verwenden von Caret
 
-Ein Fenster, das Tastatureingaben empfängt, zeigt in der Regel die Zeichen an, die der Benutzer im Client Bereich des Fensters eingibt. Ein Fenster sollte eine Einfügemarke verwenden, um die Position im Client Bereich anzugeben, an der das nächste Zeichen angezeigt wird. Das Fenster sollte auch die Einfügemarke beim Empfang des Tastaturfokus erstellen und anzeigen und die Einfügemarke ausblenden und zerstören, wenn Sie den Fokus verliert. Diese Vorgänge können von einem Fenster bei der Verarbeitung der Nachrichten " [**WM \_ SetFocus**](wm-setfocus.md) " und " [**WM \_ killfocus**](wm-killfocus.md) " durchgeführt werden. Weitere Informationen zu Carets finden Sie unter [Caretzeichen](/windows/desktop/menurc/carets).
+Ein Fenster, das Tastatureingaben empfängt, zeigt in der Regel die Zeichen an, die der Benutzer im Clientbereich des Fensters eingibt. Ein Fenster sollte ein Caretzeichen verwenden, um die Position im Clientbereich anzugeben, an der das nächste Zeichen angezeigt wird. Das Fenster sollte auch das Caretfeld erstellen und anzeigen, wenn es den Tastaturfokus erhält, und das Caretfeld ausblenden und zerstören, wenn es den Fokus verliert. Ein Fenster kann diese Vorgänge bei der Verarbeitung der [**WM \_ SETFOCUS-**](wm-setfocus.md) und [**WM \_ KILLFOCUS-Meldungen**](wm-killfocus.md) ausführen. Weitere Informationen zu Carets finden Sie unter [Carets](/windows/desktop/menurc/carets).
 
 ## <a name="displaying-keyboard-input"></a>Anzeigen von Tastatureingaben
 
-Das Beispiel in diesem Abschnitt zeigt, wie eine Anwendung Zeichen von der Tastatur empfangen, Sie im Client Bereich eines Fensters anzeigen und die Position der Einfügemarke mit jedem typisierten Zeichen aktualisieren kann. Außerdem wird veranschaulicht, wie die Einfügemarke in Reaktion auf den nach-links-Pfeil, den Pfeil nach rechts, den Pfeil nach rechts und den Ende Tastatureingaben verschoben wird, und zeigt, wie ausgewählter Text als Reaktion auf die Tastenkombination UMSCHALT + nach-rechts hervorgehoben wird
+Das Beispiel in diesem Abschnitt zeigt, wie eine Anwendung Zeichen von der Tastatur empfangen, im Clientbereich eines Fensters anzeigen und die Position des Caretzeichens mit jedem eingegebenen Zeichen aktualisieren kann. Außerdem wird veranschaulicht, wie das Caretzeichen als Reaktion auf die TastenkombinationEN NACH-LINKS-PFEIL, NACH-RECHTS-TASTE, HOME und END verschoben wird. Außerdem wird gezeigt, wie ausgewählter Text als Reaktion auf die Tastenkombination UMSCHALT+NACH-RECHTS-TASTE hervorgehoben wird.
 
-Während der Verarbeitung der [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Meldung wird durch die im Beispiel gezeigte Fenster Prozedur ein 64K-Puffer zum Speichern von Tastatureingaben zugeordnet. Außerdem werden die Metriken der aktuell geladenen Schriftart abgerufen, und die Höhe und die durchschnittliche Breite der Zeichen in der Schriftart werden gespeichert. Die Höhe und Breite werden bei der Verarbeitung der [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Nachricht verwendet, um die Zeilenlänge und die maximale Zeilen Anzahl basierend auf der Größe des Client Bereichs zu berechnen.
+Während der Verarbeitung der [**WM \_ CREATE-Nachricht**](/windows/desktop/winmsg/wm-create) ordnet die im Beispiel gezeigte Fensterprozedur einen 64K-Puffer zum Speichern von Tastatureingaben zu. Außerdem werden die Metriken der aktuell geladenen Schriftart abgerufen, wodurch die Höhe und die durchschnittliche Breite der Zeichen in der Schriftart gespeichert werden. Die Höhe und Breite werden bei der Verarbeitung der [**WM \_ SIZE-Nachricht**](/windows/desktop/winmsg/wm-size) verwendet, um die Zeilenlänge und die maximale Anzahl von Zeilen basierend auf der Größe des Clientbereichs zu berechnen.
 
-Die Fenster Prozedur erstellt die Einfügemarke und zeigt diese an, wenn die [**WM \_ SetFocus**](wm-setfocus.md) -Nachricht verarbeitet wird. Beim Verarbeiten der [**WM- \_ killfocus**](wm-killfocus.md) -Nachricht wird die Einfügemarke ausgeblendet und gelöscht.
+Die Fensterprozedur erstellt das Caretzeichen und zeigt es an, wenn die [**WM \_ SETFOCUS-Meldung**](wm-setfocus.md) verarbeitet wird. Das Caretzeichen wird ausgeblendet und gelöscht, wenn die [**WM \_ KILLFOCUS-Nachricht**](wm-killfocus.md) verarbeitet wird.
 
-Bei der Verarbeitung der " [**WM \_ char**](wm-char.md) "-Nachricht zeigt die Fenster Prozedur Zeichen an, speichert Sie im Eingabepuffer und aktualisiert die Position der Einfügemarke. Die Fenster Prozedur konvertiert auch Tabstopp Zeichen in vier aufeinander folgende Leerzeichen. Rücktaste, linefeed und Escapezeichen generieren ein Signal, werden jedoch nicht anderweitig verarbeitet.
+Beim Verarbeiten der [**WM \_ CHAR-Nachricht**](wm-char.md) zeigt die Fensterprozedur Zeichen an, speichert sie im Eingabepuffer und aktualisiert die Position des Caretzeichens. Die Fensterprozedur konvertiert tabellarische Zeichen auch in vier aufeinanderfolgende Leerzeichen. Rücktasten-, Zeilenfeed- und Escapezeichen generieren einen Signalton, werden aber nicht anderweitig verarbeitet.
 
-Die Fenster Prozedur führt bei der Verarbeitung der [**WM- \_ keydownnachricht**](wm-keydown.md) die Bewegungen Links, rechts, Ende und Home Caretzeichen aus. Bei der Verarbeitung der Aktion der nach-rechts-Taste wird der Zustand der Umschalttaste von der Fenster Prozedur überprüft. wenn der Wert nicht ist, wird das Zeichen rechts neben der Einfügemarke ausgewählt, wenn die Einfügemarke verschoben wird.
+Die Fensterprozedur führt beim Verarbeiten der [**WM \_ KEYDOWN-Nachricht**](wm-keydown.md) die Bewegungen links, rechts, end und home caret aus. Beim Verarbeiten der Aktion der NACH-RECHTS-TASTE überprüft die Fensterprozedur den Zustand der UMSCHALTTASTE und wählt das Zeichen rechts neben dem Caretzeichen aus, wenn das Caretzeichen verschoben wird.
 
-Beachten Sie, dass der folgende Code so geschrieben ist, dass er entweder als Unicode oder als ANSI kompiliert werden kann. Wenn der Quellcode Unicode definiert, werden Zeichen folgen als Unicode-Zeichen behandelt. Andernfalls werden Sie als ANSI-Zeichen behandelt.
+Beachten Sie, dass der folgende Code so geschrieben ist, dass er entweder als Unicode oder als ANSI kompiliert werden kann. Wenn der Quellcode UNICODE definiert, werden Zeichenfolgen als Unicode-Zeichen behandelt. andernfalls werden sie als ANSI-Zeichen behandelt.
 
 
 ```
@@ -561,6 +561,6 @@ LONG APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lParam
 
 
 
- 
+ 
 
- 
+ 

@@ -1,94 +1,94 @@
 ---
-description: Präsentations Uhr
+description: Präsentationsuhr
 ms.assetid: cb8bb62a-ef80-4de0-9a44-3bb77edc9dd5
-title: Präsentations Uhr
+title: Präsentationsuhr
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f61ad02537a2591c681db78721376651f7854ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f0219b6384373fd75bc8a424935e502841071f69eaa9ae719ec6ed35c950218
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118239159"
 ---
-# <a name="presentation-clock"></a>Präsentations Uhr
+# <a name="presentation-clock"></a>Präsentationsuhr
 
-Die *Präsentations Uhr* ist ein Objekt, das die Uhrzeit für eine Präsentation generiert. Die von der Präsentations Uhr gemeldete Zeit wird als *Präsentationszeit* bezeichnet. Alle Streams in einer Präsentation werden mit der Präsentationszeit synchronisiert. Die Präsentations Uhr zeigt die folgenden Schnittstellen an.
+Die *Präsentationsuhr* ist ein Objekt, das die Uhrzeit für eine Präsentation generiert. Die von der Präsentationsuhr gemeldete Zeit wird als *Präsentationszeit bezeichnet.* Alle Streams in einer Präsentation werden mit der Präsentationszeit synchronisiert. Die Präsentationsuhr macht die folgenden Schnittstellen verfügbar.
 
 
 
 | Schnittstelle                                            | BESCHREIBUNG                                         |
 |------------------------------------------------------|-----------------------------------------------------|
-| [**IMF presentationclock**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationclock) | Primäre Schnittstelle für die Verwendung der Präsentations Uhr. |
-| [**Imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)             | Steuert die Taktrate.                            |
-| [**IMF-Timer**](/windows/desktop/api/mfidl/nn-mfidl-imftimer)                         | Stellt einen Timer-Rückruf bereit.                          |
-| [**Nicht Herunterfahren**](/windows/desktop/api/mfidl/nn-mfidl-imfshutdown)                   | Fährt die Präsentations Uhr herunter.                  |
+| [**DEADPresentationClock**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationclock) | Primäre Schnittstelle für die Verwendung der Präsentationsuhr. |
+| [**ATRATEControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)             | Steuert die Taktrate.                            |
+| [**VERERBungszeit**](/windows/desktop/api/mfidl/nn-mfidl-imftimer)                         | Stellt einen Timerrückruf zur                          |
+| [**BEShutdown**](/windows/desktop/api/mfidl/nn-mfidl-imfshutdown)                   | Fährt die Präsentationsuhr herunter.                  |
 
 
 
  
 
-Medien senken verwenden die Präsentationszeit, um den Zeitpunkt für das renderingmuster zu planen. Wenn eine Medien Senke ein neues Beispiel empfängt, ruft Sie den Zeitstempel aus dem Beispiel ab und rendert das Beispiel zum Zeitpunkt der festgelegten Zeit oder so nah wie möglich. Da alle Medien senken in einer Topologie dieselbe Präsentations Uhr verwenden, werden mehrere Streams (z. b. Audiodaten und Videos) synchronisiert. Medienquellen und-Transformationen verwenden nicht die Präsentationszeit, da Sie nicht planen, wann Stichproben geliefert werden sollen. Stattdessen werden immer dann Beispiele erzeugt, wenn die Pipeline ein neues Beispiel anfordert.
+Mediensenken verwenden die Präsentationszeit, um zu planen, wann Stichproben gerendert werden. Wenn eine Mediensenke ein neues Beispiel empfängt, ruft sie den Zeitstempel aus dem Beispiel ab und rendert das Beispiel zum angegebenen Zeitpunkt oder so nah wie möglich an diesem Zeitpunkt. Da alle Mediensenken in einer Topologie dieselbe Präsentationsuhr verwenden, werden mehrere Datenströme (z. B. Audio und Video) synchronisiert. Medienquellen und Transformationen verwenden nicht die Präsentationsuhr, da sie nicht planen, wann Stichproben zu liefern sind. Stattdessen erzeugen sie Stichproben, wenn die Pipeline ein neues Beispiel an fordert.
 
-Wenn Sie die Medien Sitzung für die Wiedergabe verwenden, verarbeitet die Medien Sitzung alle Details zum Erstellen der Präsentations Uhr, zum Auswählen einer Zeit Quelle und zum Benachrichtigen der Medien senken. Die Anwendung kann die Präsentations Uhr verwenden, um die aktuelle Präsentationszeit während der Wiedergabe abzurufen, aber andernfalls werden keine Methoden auf der Präsentations Uhr aufgerufen.
+Wenn Sie die Mediensitzung für die Wiedergabe verwenden, verarbeitet die Mediensitzung alle Details zum Erstellen der Präsentationsuhr, auswählen einer Zeitquelle und Benachrichtigen der Mediensenken. Ihre Anwendung verwendet möglicherweise die Präsentationsuhr, um die aktuelle Präsentationszeit während der Wiedergabe zu erhalten, aber andernfalls werden keine Methoden für die Präsentationsuhr aufruft.
 
-## <a name="clock-time-and-clock-states"></a>Uhrzeit-und Uhrzeitangabe
+## <a name="clock-time-and-clock-states"></a>Uhrzeit und Uhrzustände
 
-Um die aktuelle Uhrzeit von der Präsentations Uhr abzurufen, wenden Sie [**imfpresentationclock:: getTime**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime)an. Uhrzeiten sind immer in 100-Nanosecond-Einheiten, sodass eine Sekunde 10 Millionen (10 ^ 7) Ticks ist. Dies entspricht einer Häufigkeit von 10 MHz.
+Um die aktuelle Uhrzeit aus der Präsentationsuhr zu erhalten, rufen [**Sie DIEPRESENTATIONClock::GetTime auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) Die Zeiteinheiten liegen immer in Einheiten von 100 Nanosekunden, sodass eine Sekunde 10.000.000 (10^7) Ticks beträgt. Dies entspricht einer Frequenz von 10 MHz.
 
-Die Präsentations Uhr hat drei Zustände: "wird ausgeführt", "angehalten" und "beendet".
+Die Präsentationsuhr hat drei Zustände: Wird ausgeführt, angehalten und beendet.
 
--   Um die Uhr auszuführen, nennen Sie [**imfpresentationclock:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-start). Die **Start** -Methode gibt die Startzeit der Uhr an. Während der Uhr ausgeführt wird, wird die Uhrzeit von der Startzeit um die aktuelle Taktrate erhöht.
--   Um die Uhr anzuhalten, nennen Sie [**imfpresentationclock::P ause**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-pause). Während die Uhr angehalten wird, wird die Uhrzeit nicht fortgesetzt, und [**GetTime**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) gibt die Zeit zurück, zu der die Uhr angehalten wurde.
--   Um die Uhr anzuhalten, nennen Sie [**imfpresentationclock:: Beendigung**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-stop). Wenn die Uhr angehalten wird, wird die Uhrzeit nicht fortgesetzt, und [**GetTime**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) gibt 0 (null) zurück.
+-   Um die Uhr ausführen zu können, rufen [**Sie DANNPRESENTationClock::Start auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-start) Die **Startmethode** gibt die Startzeit der Uhr an. Während die Uhr ausgeführt wird, erhöht sich die Uhrzeit ab der Startzeit mit der aktuellen Taktrate.
+-   Um die Uhr anzuhalten, rufen [**Sie DANNPresentationClock::P ause auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-pause) Während die Uhr angehalten wird, wird die Uhrzeit nicht vorangehen, und [**GetTime**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) gibt die Uhrzeit zurück, zu der die Uhr angehalten wurde.
+-   Um die Uhr zu beenden, rufen [**Sie DIEPRESENTationClock::Stop auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-stop) Wenn die Uhr beendet wird, wird die Uhrzeit nicht vorangesetzt, und [**GetTime**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-gettime) gibt 0 (null) zurück.
 
-Standardmäßig wird die Uhr um 1,0 erhöht. Dies bedeutet 1 Tick pro 100 nanoseconds. Um die Rate zu ändern, mit der die Uhr fortschreitet, Fragen Sie die Präsentationszeit nach der [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) -Schnittstelle ab, und nennen Sie [**imfratecontrol:: setRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate).
+Standardmäßig wird die Uhr mit einer Rate von 1,0 vorangestellt, was 1 Tick pro 100 Nanosekunden bedeutet. Um die Geschwindigkeit zu ändern, mit der die Uhr nach vorn geht, fragen Sie die Präsentationsuhr nach der [**BERRATEControl-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) ab, und rufen [**Sie DANNRATEControl::SetRate auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate)
 
--Objekte können Benachrichtigungen über Zustandsänderungen (einschließlich Änderungs Raten Änderungen) von der Präsentations Uhr empfangen. Um Benachrichtigungen zu empfangen, implementieren Sie die [**imfclockstaatink**](/windows/desktop/api/mfidl/nn-mfidl-imfclockstatesink) -Schnittstelle, und nennen Sie [**imfpresentationclock:: addclockstaatink**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-addclockstatesink) auf der Präsentations Uhr. Vor dem Herunterfahren wird [**imfpresentationclock:: removeclockstaatink**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-removeclockstatesink) aufgerufen, um die Registrierung des Objekts aufzuheben. Medien senken verwenden diesen Mechanismus zum Empfangen von Benachrichtigungen von der Uhr.
+Objekte können Benachrichtigungen über Zustandsänderungen (einschließlich Änderungen der Geschwindigkeit) von der Präsentationsuhr empfangen. Implementieren Sie zum Empfangen von Benachrichtigungen [**die BENUTZEROBERFLÄCHEClockStateSink-Schnittstelle,**](/windows/desktop/api/mfidl/nn-mfidl-imfclockstatesink) und rufen Sie [**DANNPRESENTPresentationClock::AddClockStateSink**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-addclockstatesink) auf der Präsentationsuhr auf. Rufen Sie vor dem Herunterfahren [**DIEPRESENTationClock::RemoveClockStateSink**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-removeclockstatesink) auf, um die Registrierung des Objekts zu aufheben. Mediensenken verwenden diesen Mechanismus, um Benachrichtigungen von der Uhr zu empfangen.
 
-## <a name="presentation-times"></a>Präsentations Zeiten
+## <a name="presentation-times"></a>Präsentationszeiten
 
-Eine Medien Senke versucht, die einzelnen Stichproben so zu planen, dass das Beispiel zur richtigen Zeit oder so nah wie möglich an der richtigen Zeit gerendert wird. Die folgenden Definitionen gelten:
+Eine Mediensenke versucht, jedes Beispiel so zu planen, dass das Beispiel zum richtigen Zeitpunkt oder so nah wie möglich an der richtigen Zeit gerendert wird. Es gelten die folgenden Definitionen:
 
--   *Präsentationszeit.* Der Zeitpunkt, zu dem ein Beispiel gerendert werden soll. Die Zeit wird in Einheiten von 100 Nanosekunden angegeben.
--   *Medien Zeit.* Zeit relativ zum Anfang des Inhalts. Wenn eine Videodatei z. b. 10 Sekunden lang ist, hat der Punkt in der Hälfte der Datei eine Medien Zeit von 5 Sekunden.
--   *Zeitstempel.* Die für ein Medien Beispiel markierte Zeit. Um den Zeitstempel abzurufen, wenden Sie [**imfsample:: getsampletime**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-getsampletime)an. Wenn eine Medienquelle eine Stichprobe erstellt, legt Sie den Zeitstempel auf die Medien Zeit fest. Die Medien Sitzung übersetzt den Zeitstempel in Präsentationszeit.
+-   *Präsentationszeit.* Die Zeit, zu der ein Beispiel gerendert werden soll. Die Zeit wird in Einheiten von 100 Nanosekunden angegeben.
+-   *Medienzeit.* Zeit relativ zum Anfang des Inhalts. Wenn eine Videodatei beispielsweise 10 Sekunden lang ist, hat der Punkt in der Hälfte der Datei eine Medienzeit von 5 Sekunden.
+-   *Zeitstempel.* Die in einem Medienbeispiel markierte Zeit. Um den Zeitstempel zu erhalten, rufen [**Sie DIESAMPLE::GetSampleTime auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-getsampletime) Wenn eine Medienquelle ein Beispiel erzeugt, legt sie den Zeitstempel auf die Medienzeit fest. Die Mediensitzung übersetzt den Zeitstempel in die Präsentationszeit.
 
-Standardmäßig sind die Zeit-und Präsentationszeit des Mediums identisch, z. b. Wenn ein Videorahmen 5 Sekunden in der Quelldatei angezeigt wird, sind die Medien Zeit und die Präsentationszeit jeweils 5 Sekunden. Wenn Sie die [Sequencer-Quelle](sequencer-source.md)verwenden, ist das Zeit Steuerungsmodell etwas komplizierter, um reibungslose Übergänge zwischen Segmenten zu ermöglichen. Weitere Informationen zum Zeit Steuerungsmodell der Sequencer-Quelle finden Sie unter [Sequenz Präsentations Zeiten](sequence-presentation-times.md).
+Standardmäßig sind Medienzeit und Präsentationszeit identisch. Wenn beispielsweise ein Videoframe 5 Sekunden in der Quelldatei angezeigt wird, beträgt die Medienzeit und die Präsentationszeit beide 5 Sekunden. Wenn Sie die [Sequencerquelle](sequencer-source.md)verwenden, ist das Zeitsteuerungsmodell etwas komplizierter, um reibungslose Übergänge zwischen Segmenten zu ermöglichen. Weitere Informationen zum Zeitsteuerungsmodell der Sequencerquelle finden Sie unter [Sequence Presentation Times](sequence-presentation-times.md).
 
-Die Medienquelle legt den Zeitstempel immer auf die Medien Zeit fest. Wenn die Präsentationszeit nicht an der Medien Zeit ausgerichtet ist, werden die Zeitstempel in den Medien Beispielen von der Medien Sitzung konvertiert. Wenn die Senke ein Beispiel empfängt, wurde der Zeitstempel des Beispiels in die Präsentationszeit konvertiert. Die Senke plant die Stichprobe für die aktuelle Uhrzeit der Präsentations Uhr. (Raten lose senken stellen eine Ausnahme dar, da Sie die Präsentationszeit ignorieren.)
+Die Medienquelle legt den Zeitstempel immer auf die Medienzeit fest. Wenn die Präsentationszeit nicht an der Medienzeit ausgerichtet ist, konvertiert die Mediensitzung die Zeitstempel der Medienbeispiele. Wenn die Senke ein Beispiel empfängt, wurde der Zeitstempel des Beispiels in die Präsentationszeit konvertiert. Die Senke geplant das Beispiel mit der aktuellen Uhrzeit der Präsentationsuhr. (Rateless-Senken sind eine Ausnahme, da sie die Präsentationsuhr ignorieren.)
 
-Wenn die Anwendung an einer neuen Position sucht, startet die Medien Sitzung die Präsentations Uhr zum angegebenen suchzeitpunkt neu. Wenn die Anwendung z. b. die 5-Sekunden-Position in der Datei sucht, wird die Uhr von der Medien Sitzung um 5 Sekunden gestartet. Die Medienquelle liefert möglicherweise Beispiele mit einem etwas früheren Zeitstempel, wenn die Suchzeit nicht auf eine Keyframe-Grenze fällt. Dies ist erforderlich, damit die Decoder alle Frames decodieren können. In der Medien Sitzung werden Stichproben gelöscht oder getestet, bevor Sie die Medien senken erreichen, um die angeforderte Suchzeit abzugleichen. Wenn die Suchzeit beispielsweise 5 Sekunden beträgt, kann das erste Audiobeispiel um 4,5 Sekunden beginnen. Die Medien Sitzung schneidet die ersten 0,5 Sekunden aus dem ersten decodierten Audiobeispiel ab.
+Wenn die Anwendung eine neue Position ansuchet, startet die Mediensitzung die Präsentationsuhr zur angegebenen Suchzeit neu. Wenn die Anwendung beispielsweise die 5-Sekunden-Position in der Datei anfängt, startet die Mediensitzung die Uhr um 5 Sekunden. Die Medienquelle kann Stichproben mit einem etwas früheren Zeitstempel liefern, wenn die Suchzeit nicht auf eine Keyframegrenze fällt. Dies ist erforderlich, damit die Decoder alle Frames decodieren können. Die Mediensitzung löscht oder schneidet Stichproben ab, bevor sie die Mediensenken erreichen, um die angeforderte Suchzeit zu erreichen. Wenn die Suchzeit beispielsweise 5 Sekunden beträgt, kann das erste Audiobeispiel bei 4,5 Sekunden beginnen. Die Mediensitzung entfernt die ersten 0,5 Sekunden vom ersten decodierten Audiobeispiel.
 
-## <a name="creating-the-presentation-clock"></a>Erstellen der Präsentations Uhr
+## <a name="creating-the-presentation-clock"></a>Erstellen der Präsentationsuhr
 
-Um die Präsentations Uhr zu erstellen, rufen Sie [**mfkreatepresentationclock**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepresentationclock)auf. Um die Uhr herunterzufahren, Fragen Sie die [**imfshutdown**](/windows/desktop/api/mfidl/nn-mfidl-imfshutdown) -Schnittstelle ab, und nennen Sie [**imfshutdown:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfshutdown-shutdown). Der Aufrufer von **mfcreatepresentationclock** ist für das Aufrufen von **Shutdown** verantwortlich. in den meisten Fällen ist dies die Medien Sitzung und nicht die Anwendung.
+Rufen Sie zum Erstellen der Präsentationsuhr [**MFCreatePresentationClock auf.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepresentationclock) Fragen Sie zum Herunterfahren der Uhr nach [**der BENUTZEROBERFLÄCHE AB,**](/windows/desktop/api/mfidl/nn-mfidl-imfshutdown) und rufen [**Sie DIEZShutdown::Shutdown auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfshutdown-shutdown) Der Aufrufer von **MFCreatePresentationClock** ist für den Aufruf von **Shutdown verantwortlich.** In den meisten Fällen ist dies die Mediensitzung und nicht die Anwendung.
 
-## <a name="presentation-time-sources"></a>Präsentationszeit Quellen
+## <a name="presentation-time-sources"></a>Präsentationszeitquellen
 
-Trotz des Namens implementiert die Präsentations Uhr nicht tatsächlich eine Uhr. Stattdessen werden die Uhrzeiten von einem anderen Objekt abgerufen, das als *Präsentationszeit Quelle* bezeichnet wird. Die Zeit Quelle kann ein beliebiges Objekt sein, das exakte Takt Einheiten generiert und die [**IMF presentationtimesource**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) -Schnittstelle verfügbar macht. Die folgende Abbildung veranschaulicht diesen Prozess.
+Trotz des Namens implementiert die Präsentationsuhr keine Uhr. Stattdessen ruft sie die Uhrzeiten von einem anderen Objekt ab, das als *Präsentationszeitquelle bezeichnet wird.* Die Zeitquelle kann ein beliebiges Objekt sein, das genaue Takte generiert und die [**BENUTZEROBERFLÄCHEPresentationTimeSource-Schnittstelle verfügbar**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) macht. Die folgende Abbildung veranschaulicht diesen Prozess.
 
-![Diagramm, das die Beziehung zwischen der Präsentations Uhr und der Präsentationszeit Quelle anzeigt](images/dedc255c-eb6d-49fc-8892-7b6076ed4488.gif)
+![Diagramm, das die Beziehung zwischen der Präsentationsuhr und der Präsentationszeitquelle zeigt](images/dedc255c-eb6d-49fc-8892-7b6076ed4488.gif)
 
-Wenn die Präsentations Uhr erstmalig erstellt wird, verfügt sie nicht über eine Zeit Quelle. Um die Zeit Quelle festzulegen, müssen Sie [**imfpresentationclock:: settimesource**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-settimesource) mit einem Zeiger auf die [**imfpresentationtimesource**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) -Schnittstelle der Zeit Quelle aufrufen. Eine Zeit Quelle unterstützt die gleichen Zustände wie die Präsentations Uhr (wird ausgeführt, angehalten und beendet) und muss die [**imbodstaatink**](/windows/desktop/api/mfidl/nn-mfidl-imfclockstatesink) -Schnittstelle implementieren. Die Präsentations Uhr verwendet diese Schnittstelle, um die Zeit Quelle zu benachrichtigen, wenn der Zustand geändert werden soll. Auf diese Weise stellt die Zeit Quelle die Takt Ticks bereit, aber die Präsentations Uhr initiiert Zustandsänderungen in der Uhr.
+Wenn die Präsentationsuhr zum ersten Mal erstellt wird, verfügt sie nicht über eine Zeitquelle. Rufen Sie ZUM Festlegen der Zeitquelle [**DIE ZEITQUELLEPresentationClock::SetTimeSource**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationclock-settimesource) mit einem Zeiger auf die [**BENUTZEROBERFLÄCHE DER ZEITQUELLE AUF.**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) Eine Zeitquelle unterstützt die gleichen Zustände wie die Präsentationsuhr (wird ausgeführt, angehalten und angehalten) und muss die [**BERClockStateSink-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfclockstatesink) implementieren. Die Präsentationsuhr verwendet diese Schnittstelle, um die Zeitquelle zu benachrichtigen, wann der Zustand geändert werden soll. Auf diese Weise stellt die Zeitquelle die Takte zur Verfügung, aber die Präsentationsuhr initiiert Zustandsänderungen in der Uhr.
 
-Einige Medien senken haben Zugriff auf eine exakte Uhr und machen daher die [**imfpresentationtimesource**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) -Schnittstelle verfügbar. Insbesondere kann der audiorenderer die Frequenz der Soundkarte als Uhr verwenden. Bei der Audiowiedergabe ist es nützlich, wenn der audiorenderer als Zeit Quelle fungiert, damit das Video mit der Audiowiedergabe Rate synchronisiert wird. Dies führt im Allgemeinen zu besseren Ergebnissen als bei der Anpassung der Audiodaten an eine externe Uhr.
+Einige Mediensenken haben Zugriff auf eine genaue Uhr und machen daher die [**BENUTZEROBERFLÄCHEPRESENTationTimeSource**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) verfügbar. Insbesondere kann der Audiorenderer die Frequenz der Soundkarte als Uhr verwenden. Bei der Audiowiedergabe ist es nützlich, dass der Audiorenderer als Zeitquelle verwendet wird, damit das Video mit der Audiowiedergaberate synchronisiert wird. Dies führt im Allgemeinen zu besseren Ergebnissen als der Versuch, die Audiodaten mit einer externen Uhr zu ab passen.
 
-Media Foundation bietet auch eine Präsentationszeit Quelle basierend auf der Systemuhr. Um dieses Objekt zu erstellen, rufen Sie [**mfkreatesystemtimesource**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesystemtimesource)auf. Die Systemzeit Quelle kann verwendet werden, wenn keine Medien senken eine Zeit Quelle bereitstellen.
+Media Foundation stellt auch eine Präsentationszeitquelle basierend auf der Systemuhr zur Verfügung. Rufen Sie zum Erstellen dieses Objekts [**MFCreateSystemTimeSource auf.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesystemtimesource) Die Systemzeitquelle kann verwendet werden, wenn keine Mediensenken eine Zeitquelle bereitstellen.
 
-Im Allgemeinen muss eine Medien Senke die dargestellte Präsentations Uhr verwenden, unabhängig davon, welche Zeit Quelle von der Präsentationszeit verwendet wird. Diese Regel gilt auch, wenn eine Medien Senke [**IMF presentationtimesource**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource)implementiert. Wenn die Präsentations Uhr eine andere Zeit Quelle verwendet, muss die Medien Senke dieser Zeit Quelle und nicht der eigenen internen Uhr folgen.
+Im Allgemeinen muss eine Mediensenke die bereitgestellte Präsentationsuhr verwenden, unabhängig davon, welche Zeitquelle die Präsentationsuhr verwendet. Diese Regel gilt auch, wenn eine Mediensenke [**DIEPRESENTationTimeSource implementiert.**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationtimesource) Wenn die Präsentationsuhr eine andere Zeitquelle verwendet, muss die Mediensenke dieser Zeitquelle folgen, nicht ihrer eigenen internen Uhr.
 
-Es gibt zwei Situationen, in denen eine Medien Senke nicht der Präsentations Uhr folgt:
+Es gibt zwei Situationen, in denen eine Mediensenke nicht der Präsentationsuhr folgt:
 
--   Einige Medien senken sind Gebühren *loser*. Wenn eine Medien Senke nicht mehr benötigt wird, werden Stichproben so schnell wie möglich verarbeitet, ohne Sie entsprechend der Präsentationszeit zu planen. In der Regel schreiben ratlose senken Daten in eine Datei. Daher ist es wünschenswert, den Vorgang so schnell wie möglich abzuschließen. Eine Gebühren lose Senke gibt das mediasink- \_ Flag in der [**imfmediasink:: getcharacteristics**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics) -Methode zurück. Wenn alle senken in einer Topologie ratlos sind, überträgt die Medien Sitzung Daten so schnell wie möglich über die Pipeline.
+-   Einige Mediensenken sind *rateless*. Wenn eine Mediensenke ratelos ist, werden Stichproben so schnell wie möglich verbraucht, ohne sie gemäß der Präsentationsuhr zu planen. In der Regel schreiben rateless-Senken Daten in eine Datei, daher ist es wünschenswert, den Vorgang so schnell wie möglich abschließen. Eine rateless-Senke gibt das MEDIASINK \_ RATELESS-Flag in [**derEN METHODE ZUEink::GetCharacteristics**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics) zurück. Wenn alle Senken in einer Topologie ratelos sind, überträgt die Mediensitzung Daten so schnell wie möglich über die Pipeline.
 
--   Einige Medien senken können nicht mit den Raten einer anderen Zeit Quelle als sich selbst vergleichen. Wenn dies der Fall ist, gibt die Senke das mediasink- \_ \_ \_ Flag für die Uhr nicht mit der [**getcharacteristics**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics) -Methode identisch. Die Pipeline kann immer noch eine andere Zeit Quelle verwenden, die Ergebnisse sind jedoch kleiner als optimal. Die Senke wird wahrscheinlich zurückliegen und bewirkt, dass während der Wiedergabe Fehler auftreten.
+-   Einige Mediensenken können nicht mit einer anderen Zeitquelle als sich selbst übereinstimmen. Wenn dies der Wert ist, gibt die Senke das FLAG MEDIASINK \_ CANNOT MATCH CLOCK in der \_ \_ [**GetCharacteristics-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics) zurück. Die Pipeline kann weiterhin eine andere Zeitquelle verwenden, aber die Ergebnisse sind weniger optimal. Die Senke fällt wahrscheinlich zurück und verursacht während der Wiedergabe Störungen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Media Foundation Plattform-APIs](media-foundation-platform-apis.md)
+[Media Foundation-Plattform-APIs](media-foundation-platform-apis.md)
 </dt> </dl>
 
  

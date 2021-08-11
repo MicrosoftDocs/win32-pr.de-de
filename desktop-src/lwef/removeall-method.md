@@ -4,42 +4,42 @@ description: RemoveAll-Methode
 ms.assetid: 233f8d65-36ec-4c83-8c91-59d406edd70a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e56a22536d2d481f9da0073265e529b9a73a4088
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 6795201f9a37118e9def28c306cca8923d58443824a12a4883ccac3a9c307de7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118246478"
 ---
 # <a name="removeall-method"></a>RemoveAll-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Entfernt alle [**Befehls**](/windows/desktop/lwef/the-command-object) Objekte aus der [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung.
+Entfernt alle [**Command-Objekte**](/windows/desktop/lwef/the-command-object) aus der [**Commands-Auflistung.**](/windows/desktop/lwef/the-commands-collection-object)
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Commands. RemoveAll**
+*agent***. Zeichen ("**_CharacterID_*_"). Commands.RemoveAll_*
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt aus der Auflistung entfernt wird, wird es nicht mehr angezeigt, wenn das Popupmenü des Zeichens angezeigt wird, oder im Befehlsfenster, wenn die Client Anwendung aktiv ist.
+Wenn ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) aus der Auflistung entfernt wird, wird es nicht mehr angezeigt, wenn das Popupmenü des Zeichens oder im Befehlsfenster angezeigt wird, wenn Ihre Clientanwendung eingabeaktiv ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [**Remove-Methode**](remove-method.md)
 
 
- 
+ 
 
- 
+ 

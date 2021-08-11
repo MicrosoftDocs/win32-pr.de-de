@@ -1,11 +1,11 @@
 ---
-title: Activebasicdevice-Eigenschaft von isimagesupported (playondevice. h)
+title: ActiveBasicDevice IsImageSupported-Eigenschaft (PlayToDevice.h)
 description: Ruft einen Wert ab, der angibt, ob das Gerät Bilder unterstützt.
 ms.assetid: FC53B87C-D739-4AD4-9DD3-415AC8692224
 keywords:
-- Isimagesupported-Eigenschaft Medien Streaming-API
-- Isimagesupported-Eigenschaft Medien Streaming-API, activebasicdevice-Schnittstelle
-- Activebasicdevice-Schnittstelle Medien Streaming-API, isimagesupported-Eigenschaft
+- IsImageSupported-Eigenschaft Media Streaming-API
+- IsImageSupported-Eigenschaft Media Streaming-API, ActiveBasicDevice-Schnittstelle
+- ActiveBasicDevice-Schnittstelle Media Streaming-API, IsImageSupported-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2e90f51d2dd59ffec8221787b9ee7c247536abb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a147c5156f07c6cc6461cafcf8dc778013a7eb3048d1428f854b844d24f5642a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118236711"
 ---
-# <a name="activebasicdeviceisimagesupported-property"></a>Activebasicdevice:: isimagesupported-Eigenschaft
+# <a name="activebasicdeviceisimagesupported-property"></a>ActiveBasicDevice::IsImageSupported (Eigenschaft)
 
 Ruft einen Wert ab, der angibt, ob das Gerät Bilder unterstützt.
 
@@ -43,9 +43,9 @@ HRESULT get_IsImageSupported(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf einen **booleschen** Wert, der angibt, ob das Gerät Bilder unterstützt.
+Ein Zeiger auf einen **booleschen Wert, der angibt,** ob das Gerät Bilder unterstützt.
 
-" **true** ", wenn das Gerät Bilder unterstützt. andernfalls **false**.
+**TRUE,** wenn das Gerät Bilder unterstützt; andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,10 +53,10 @@ Ein Zeiger auf einen **booleschen** Wert, der angibt, ob das Gerät Bilder unter
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Playondevice. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Playto Device. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>PlayToDevice.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>PlayToDevice.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Playtodevice.dll</dt> </dl> |
 
 
@@ -65,7 +65,7 @@ Ein Zeiger auf einen **booleschen** Wert, der angibt, ob das Gerät Bilder unter
 
 <dl> <dt>
 
-[**Activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
+[**ActiveBasicDevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
 </dt> </dl>
 
  

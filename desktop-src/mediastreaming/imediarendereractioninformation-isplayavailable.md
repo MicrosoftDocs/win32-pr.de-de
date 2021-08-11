@@ -1,11 +1,11 @@
 ---
-title: Imediarendereraktioninformation isplayavailable-Methode
-description: Ruft einen Wert ab, der angibt, ob der DMR derzeit akzeptiert, dass die playasync-Methode und die playatspeedasync-Methode akzeptiert werden.
+title: IMediaRendererActionInformation IsPlayAvailable-Methode
+description: Ruft einen Wert ab, der angibt, ob die DMR derzeit die PlayAsync- und PlayAtSpeedAsync-Methoden akzeptiert.
 ms.assetid: 969C55FA-872D-4063-B85C-573C8DA5593C
 keywords:
-- Isplayavailable-Methode Medien Streaming-API
-- Isplayavailable-Methode Medien Streaming-API, imediarendereraktioninformation-Schnittstelle
-- Imediarendereraktioninformation-Schnittstelle Medien Streaming-API, isplayavailable-Methode
+- 'IsPlayAvailable-Methode: Medienstreaming-API'
+- 'IsPlayAvailable-Methode: Media Streaming-API, IMediaRendererActionInformation-Schnittstelle'
+- IMediaRendererActionInformation-Schnittstelle Media Streaming-API, IsPlayAvailable-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 87fa3a2005772a4d948bafe32d2a0e10cc5a6914
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 912e5478ef1d9bd7114d198a9671d38ba7b721c9dbd82d2a8080b5a7876e76cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118235845"
 ---
-# <a name="imediarendereractioninformationisplayavailable-method"></a>Imediarendereraktioninformation:: isplayavailable-Methode
+# <a name="imediarendereractioninformationisplayavailable-method"></a>IMediaRendererActionInformation::IsPlayAvailable-Methode
 
-Ruft einen Wert ab, der angibt, ob der DMR derzeit akzeptiert, dass die [**playasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playasync) -Methode und die [**playatspeedasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playatspeedasync) -Methode akzeptiert werden.
+Ruft einen Wert ab, der angibt, ob die DMR derzeit die [**PlayAsync-**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playasync) und [**PlayAtSpeedAsync-Methoden**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playatspeedasync) akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT IsPlayAvailable(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der **true** ist, wenn der DMR derzeit akzeptiert, dass die [**playasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playasync) -Methode und die [**playatspeedasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playatspeedasync) -Methode akzeptiert, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR derzeit die [**PlayAsync-**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playasync) und  [**PlayAtSpeedAsync-Methode**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-playatspeedasync) akzeptiert, ander denn, false.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Imediarendereraktioninformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
+[**IMediaRendererActionInformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
 </dt> </dl>
 
  

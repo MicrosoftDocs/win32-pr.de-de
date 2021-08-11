@@ -1,37 +1,37 @@
 ---
-description: Enthält die registrierten Eingabetypen für eine Media Foundation Transformation (MFT).
+description: Enthält die registrierten Eingabetypen für eine Media Foundation Transform (MFT).
 ms.assetid: 0fb1d9f2-2b57-41bc-8365-0b88bd5a2f3d
-title: MFT_INPUT_TYPES_Attributes-Attribut (MF Transform. h)
+title: MFT_INPUT_TYPES_Attributes -Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c42a051c124cdb96e57ea239c02ebaa47f22e0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a750094361cdaa877bff82e20a74c1beae4e1a1f76ea0a9ad5be83f308c1f2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118240235"
 ---
-# <a name="mft_input_types_attributes-attribute"></a>Attribute-Attribut für MFT- \_ Eingabe \_ Typen \_
+# <a name="mft_input_types_attributes-attribute"></a>Attribut "MFT \_ \_ INPUT TYPES \_ Attributes"
 
-Enthält die registrierten Eingabetypen für eine Media Foundation Transformation (MFT).
+Enthält die registrierten Eingabetypen für eine Media Foundation Transform (MFT).
 
 ## <a name="data-type"></a>Datentyp
 
-**MFT \_ Registrieren \_ von \_ \[ \]** **als \[ Byte \]** gespeicherten Typinformationen
+**MFT \_ REGISTER \_ TYPE \_ INFO \[ \] als** **BYTE gespeichert \[ \]**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Zum Abrufen dieses Attributs müssen Sie [**imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)aufrufen.
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)aufrufen.
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger festgelegt, die von der [**motenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) -Funktion zurückgegeben werden.
+Dieses Attribut wird für die VON der [**MFTEnumEx-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) zurückgegebenen [**ATTRIBUTEActivate-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) festgelegt.
 
-Dieses Attribut enthält ein Array von [**MFT \_ Register \_ Type \_ Info**](/windows/win32/api/mfobjects/ns-mfobjects-mft_register_type_info) -Strukturen, die ein oder mehrere Eingabeformate beschreiben, die vom MFT unterstützt werden. Diese Werte werden aus der Registrierung entnommen und dienen als Hinweis für die Anwendung. Die MFT unterstützt möglicherweise weitere Formate. Um das tatsächliche Eingabeformat festzulegen, müssen Sie die MFT erstellen und [**imftransform:: setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype)aufzurufen.
+Dieses Attribut enthält ein Array von [**MFT \_ REGISTER TYPE \_ \_ INFO-Strukturen,**](/windows/win32/api/mfobjects/ns-mfobjects-mft_register_type_info) die ein oder mehrere eingabeformate beschreiben, die von MFT unterstützt werden. Diese Werte werden aus der Registrierung übernommen und dienen als Hinweis für die Anwendung. MFT unterstützt möglicherweise zusätzliche Formate. Zum Festlegen des tatsächlichen Eingabeformats müssen Sie die MFT erstellen und [**DANNTransform::SetInputType aufrufen.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
@@ -49,10 +49,10 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

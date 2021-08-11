@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_TYPE-Enumeration (mpclient. h)
-description: Mögliche Bedrohungs Typen.
+title: MPTHREAT_TYPE -Enumeration (MpClient.h)
+description: Mögliche Bedrohungstypen.
 ms.assetid: 56061F12-AA89-4203-BED4-99613E24002A
 keywords:
-- MPTHREAT_TYPE-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_TYPE enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_TYPE enumeration Legacy Windows Environment Features
+- PMPTHREAT_TYPE enumeration pointer Legacy Windows Environment Features
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ed823b100c91f259252d7cad71e554099caf6a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b858501603b67451db9b565609d0c263040d2186cf44d91646e6df6ce3871ea1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118247141"
 ---
-# <a name="mpthreat_type-enumeration"></a>Mpthreat \_ Type-Enumeration
+# <a name="mpthreat_type-enumeration"></a>MPTHREAT \_ TYPE-Enumeration
 
-Mögliche Bedrohungs Typen.
+Mögliche Bedrohungstypen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,45 +46,45 @@ typedef enum tagMPTHREAT_TYPE {
 
 <dl> <dt>
 
-<span id="MPTHREAT_TYPE_KNOWNBAD"></span><span id="mpthreat_type_knownbad"></span>**mpthreat- \_ Typ \_ knownbad**
+<span id="MPTHREAT_TYPE_KNOWNBAD"></span><span id="mpthreat_type_knownbad"></span>**MPTHREAT-TYP \_ \_ KNOWNBAD**
 </dt> <dd>
 
-Bekannte ungültige Bedrohung durch Signatur erkannt.
+Bekannte fehlerhafte Bedrohung per Signatur erkannt.
 
 </dd> <dt>
 
-<span id="MPTHREAT_TYPE_BEHAVIOR"></span><span id="mpthreat_type_behavior"></span>**mpthreat \_ - \_ typverhalten**
+<span id="MPTHREAT_TYPE_BEHAVIOR"></span><span id="mpthreat_type_behavior"></span>**\_MPTHREAT-TYPVERHALTEN \_**
 </dt> <dd>
 
-Verdächtige Bedrohung durch Verhaltens Überwachung erkannt.
+Verdächtige Bedrohung durch Verhaltensüberwachung erkannt.
 
 </dd> <dt>
 
-<span id="MPTHREAT_TYPE_UNKNOWN"></span><span id="mpthreat_type_unknown"></span>**mpthreat- \_ Typ \_ unbekannt**
+<span id="MPTHREAT_TYPE_UNKNOWN"></span><span id="mpthreat_type_unknown"></span>**MPTHREAT-TYP \_ \_ UNBEKANNT**
 </dt> <dd>
 
 Unbekannte Bedrohungen (nicht klassifiziert).
 
 </dd> <dt>
 
-<span id="MPTHREAT_TYPE_KNOWNGOOD"></span><span id="mpthreat_type_knowngood"></span>**mpthreat- \_ Typ \_ knowngood**
+<span id="MPTHREAT_TYPE_KNOWNGOOD"></span><span id="mpthreat_type_knowngood"></span>**MPTHREAT-TYP \_ \_ KNOWNGOOD**
 </dt> <dd>
 
 Bekannte gute Bedrohung.
 
 </dd> <dt>
 
-<span id="MPTHREAT_TYPE_NIS"></span><span id="mpthreat_type_nis"></span>**mpthreat- \_ Typ \_ NIS**
+<span id="MPTHREAT_TYPE_NIS"></span><span id="mpthreat_type_nis"></span>**MPTHREAT \_ TYPE \_ NIS**
 </dt> <dd>
 
 NIS-Bedrohungserkennung.
 
 </dd> <dt>
 
-<span id="MPTHREAT_TYPE_MAXVALUE"></span><span id="mpthreat_type_maxvalue"></span>**mpthreat- \_ Typ \_ MaxValue**
+<span id="MPTHREAT_TYPE_MAXVALUE"></span><span id="mpthreat_type_maxvalue"></span>**MPTHREAT-TYP \_ \_ MAXVALUE**
 </dt> <dd>
 
-Maximal möglicher Wert.
+Maximalwert möglich.
 
 </dd> </dl>
 
@@ -94,9 +94,9 @@ Maximal möglicher Wert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OBJTYP'
+description: 'Weitere Informationen finden Sie unter: JET_OBJTYP'
 title: JET_OBJTYP
 TOCTitle: JET_OBJTYP
 ms:assetid: 7f549c84-584b-42b6-a4a5-385cf6dc25df
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b4366c8fdac3d94ef65006adb0fd3e869832cdf6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7da58236104e5fe1a9644f83592896c238e8a5387ea507c9aa68d62d220b2721
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118253936"
 ---
 # <a name="jet_objtyp"></a>JET_OBJTYP
 
@@ -46,7 +46,7 @@ Die **JET_OBJTYP** Gruppe von Konstanten stellt den Typ eines Datenbankobjekts d
 <tr class="odd">
 <td><p>JET_objtypNil<br />
 0</p></td>
-<td><p>Stellt alle Typen von-Objekten dar. Derzeit werden nur Tabellen unterstützt.</p></td>
+<td><p>Stellt alle Objekttypen dar. Derzeit werden nur Tabellen unterstützt.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_objtypTable<br />
@@ -75,7 +75,7 @@ Die **JET_OBJTYP** Gruppe von Konstanten stellt den Typ eines Datenbankobjekts d
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

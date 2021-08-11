@@ -1,17 +1,17 @@
 ---
 description: Enthält die CLSID für eine Media Foundation Transformation (MFT).
 ms.assetid: adb10fe8-760b-4aff-a582-254e11bb76af
-title: MFPKEY_CLSID-Eigenschaft (MF Transform. h)
+title: MFPKEY_CLSID (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1b1ab57ae17029b2b01823e84f607b5b21676b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7cb90d427de9c2df11e9bee538b2a7f1baf9ac1885624d6df54a41253abc27b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118242989"
 ---
-# <a name="mfpkey_clsid-property"></a>Mfpkey \_ CLSID-Eigenschaft
+# <a name="mfpkey_clsid-property"></a>\_MFPKEY-CLSID-Eigenschaft
 
 Enthält die CLSID für eine Media Foundation Transformation (MFT).
 
@@ -19,7 +19,7 @@ Enthält die CLSID für eine Media Foundation Transformation (MFT).
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -31,9 +31,9 @@ VT \_ CLSID
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist optional und dient nur zu Informationszwecken. Um diese Eigenschaft zu erhalten, Fragen Sie die MFT für die **IPropertyStore** -Schnittstelle ab.
+Diese Eigenschaft ist optional und nur informationell. Um diese Eigenschaft zu erhalten, fragen Sie den MFT für die **IPropertyStore-Schnittstelle** ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Diese Eigenschaft ist optional und dient nur zu Informationszwecken. Um diese Ei
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Diese Eigenschaft ist optional und dient nur zu Informationszwecken. Um diese Ei
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Media Foundation Transformationen](media-foundation-transforms.md)

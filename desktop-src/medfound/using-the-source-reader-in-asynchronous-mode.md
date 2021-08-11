@@ -1,31 +1,31 @@
 ---
-description: In diesem Thema wird beschrieben, wie der Quell Leser im asynchronen Modus verwendet wird.
+description: In diesem Thema wird beschrieben, wie der Quellleser im asynchronen Modus verwendet wird.
 ms.assetid: 9D3C2780-D7DB-4151-8474-9A19EC94F6BE
-title: Verwenden des Quell Readers im asynchronen Modus
+title: Verwenden des Quelllesers im asynchronen Modus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 357d0405cb3e594d059b7c93e793250e0be88562
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 514331f9d1635cbe83222ccf413b1dbb5a7d350b4656e23ed27ccede5c0be6f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118237505"
 ---
-# <a name="using-the-source-reader-in-asynchronous-mode"></a>Verwenden des Quell Readers im asynchronen Modus
+# <a name="using-the-source-reader-in-asynchronous-mode"></a>Verwenden des Quelllesers im asynchronen Modus
 
-In diesem Thema wird beschrieben, wie der [Quell Leser](source-reader.md) im asynchronen Modus verwendet wird. Im asynchronen Modus stellt die Anwendung eine Rückruf Schnittstelle bereit, die verwendet wird, um die Anwendung darüber zu benachrichtigen, dass Daten verfügbar sind.
+In diesem Thema wird beschrieben, wie der [Quellleser](source-reader.md) im asynchronen Modus verwendet wird. Im asynchronen Modus stellt die Anwendung eine Rückrufschnittstelle bereit, die verwendet wird, um die Anwendung zu benachrichtigen, dass Daten verfügbar sind.
 
-In diesem Thema wird davon ausgegangen, dass Sie das Thema [zum Verarbeiten von Mediendaten mithilfe des Quell Lesers](processing-media-data-with-the-source-reader.md)bereits gelesen haben.
+In diesem Thema wird davon ausgegangen, dass Sie das Thema Verwenden des Quelllesers zum Verarbeiten von [Mediendaten bereits gelesen haben.](processing-media-data-with-the-source-reader.md)
 
 ## <a name="using-asynchronous-mode"></a>Verwenden des asynchronen Modus
 
-Der Quell Reader funktioniert entweder im synchronen oder asynchronen Modus. Im Codebeispiel im vorherigen Abschnitt wird davon ausgegangen, dass der Quell Leser den synchronen Modus verwendet. Dies ist die Standardeinstellung. Im synchronen Modus wird die [**IMF sourcereader:: lesesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) -Methode blockiert, während die Medienquelle das nächste Beispiel erzeugt. Eine Medienquelle ruft in der Regel Daten aus einer externen Quelle (z. b. einer lokalen Datei oder einer Netzwerkverbindung) ab, sodass die Methode den aufrufenden Thread für eine merkliche Zeit blockieren kann.
+Der Quellleser arbeitet entweder im synchronen modus oder im asynchronen Modus. Im Codebeispiel im vorherigen Abschnitt wird davon ausgegangen, dass der Quellleser den synchronen Modus verwendet, der die Standardeinstellung ist. Im synchronen Modus wird die [**METHODE 10001::ReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) blockiert, während die Medienquelle das nächste Beispiel erzeugt. Eine Medienquelle ruft in der Regel Daten aus einer externen Quelle ab (z. B. aus einer lokalen Datei oder einer Netzwerkverbindung), sodass die Methode den aufrufenden Thread für einen spürbaren Zeitraum blockieren kann.
 
-Im asynchronen Modus gibt das "read [**Sample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) " sofort zurück, und die Arbeit wird in einem anderen Thread ausgeführt. Nachdem der Vorgang beendet wurde, ruft der Quell Leser die Anwendung über die [**IMF sourcereadercallback**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereadercallback) -Rückruf Schnittstelle auf. Um den asynchronen Modus zu verwenden, müssen Sie beim ersten Erstellen des Quell Readers wie folgt einen Rückruf Zeiger bereitstellen:
+Im asynchronen Modus gibt [**ReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) sofort zurück, und die Arbeit wird in einem anderen Thread ausgeführt. Nachdem der Vorgang abgeschlossen ist, ruft der Quellleser die Anwendung über die [**RÜCKRUF-Schnittstelle DESTSourceReaderCallbacks**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereadercallback) auf. Um den asynchronen Modus verwenden zu können, müssen Sie wie folgt einen Rückrufzeiger bereitstellen, wenn Sie den Quellleser zum ersten Mal erstellen:
 
-1.  Erstellen Sie einen Attribut Speicher, indem Sie die [**mfcreateattribute**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) -Funktion aufrufen.
-2.  Legen Sie [das \_ \_ \_ Async- \_ Rückruf Attribut des MF-Quell Readers](mf-source-reader-async-callback.md) für den Attribut Speicher fest. Der Attribut Wert ist ein Zeiger auf das Rückruf Objekt.
-3.  Wenn Sie den Quell Reader erstellen, übergeben Sie den Attribut Speicher an die Erstellungs Funktion im *pattributes* -Parameter. Alle Funktionen zum Erstellen des Quell Readers verfügen über diesen Parameter.
+1.  Erstellen Sie einen Attributspeicher, indem Sie die [**MFCreateAttributes-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) aufrufen.
+2.  Legen Sie das [ \_ \_ \_ ASYNC CALLBACK-Attribut des MF-QUELLLESERS \_ ](mf-source-reader-async-callback.md) für den Attributspeicher fest. Der Attributwert ist ein Zeiger auf Ihr Rückrufobjekt.
+3.  Wenn Sie den Quellleser erstellen, übergeben Sie den Attributspeicher an die *Erstellungsfunktion im pAttributes-Parameter.* Alle Funktionen zum Erstellen des Quelllesers verfügen über diesen Parameter.
 
 Das folgende Beispiel zeigt die erforderlichen Schritte:
 
@@ -61,9 +61,9 @@ done:
 
 
 
-Nachdem Sie den Quell Leser erstellt haben, können Sie nicht zwischen synchronen und asynchronen Modi wechseln.
+Nachdem Sie den Quellleser erstellt haben, können Sie nicht zwischen synchronen und asynchronen Modi wechseln.
 
-Zum Abrufen von Daten im asynchronen Modus wird die Methode "read [**Sample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) " aufgerufen, aber die letzten vier Parameter werden auf **null** festgelegt, wie im folgenden Beispiel gezeigt.
+Um Daten im asynchronen Modus zu erhalten, rufen Sie die [**ReadSample-Methode**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) auf, legen aber die letzten vier Parameter auf **NULL** fest, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -74,10 +74,10 @@ Zum Abrufen von Daten im asynchronen Modus wird die Methode "read [**Sample**](/
 
 
 
-Wenn die "read [**Sample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) "-Methode asynchron abgeschlossen wird, ruft der Quell Leser die [**IMF sourcereadercallback:: onlesesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) -Methode auf. Diese Methode hat fünf Parameter:
+Wenn die [**ReadSample-Methode**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) asynchron abgeschlossen wird, ruft der Quellleser die [**METHODE ZU ERHALTENSourceReaderCallback::OnReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) auf. Diese Methode verfügt über fünf Parameter:
 
--   *hrStatus*: enthält einen **HRESULT** -Wert. Dies ist derselbe Wert, den "read [**Sample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) " im synchronen Modus zurückgeben würde. Wenn *hrStatus* einen Fehlercode enthält, können Sie die restlichen Parameter ignorieren.
--   *dwstreamindex*, *dwstreamflags*, lltimestamp und *psample*: Diese drei Parameter entsprechen den letzten drei Parametern in "read [**Sample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample)". Sie enthalten die Datenstrom Nummer, Statusflags und den [**imfsample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) -Zeiger.
+-   *hrStatus:* Enthält einen **HRESULT-Wert.** Dies ist der gleiche Wert, den [**ReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) im synchronen Modus zurückgeben würde. Wenn *hrStatus* einen Fehlercode enthält, können Sie die verbleibenden Parameter ignorieren.
+-   *dwStreamIndex,* *dwStreamFlags,* llTimestamp und *pSample:* Diese drei Parameter entsprechen den letzten drei Parametern in [**ReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample). Sie enthalten die Streamnummer, Statusflags bzw. [**den BZW. den 100000-Zeiger .**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
 
 ```C++
@@ -87,20 +87,20 @@ Wenn die "read [**Sample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfs
 
 
 
-Außerdem werden von der Rückruf Schnittstelle zwei weitere Methoden definiert:
+Darüber hinaus definiert die Rückrufschnittstelle zwei weitere Methoden:
 
--   [**OnEvent**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onevent). Benachrichtigt die Anwendung, wenn bestimmte Ereignisse in der Medienquelle auftreten, z. b. Pufferung oder Netzwerk Verbindungs Ereignisse.
--   [**Onflush**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onflush). Wird aufgerufen, wenn die [**Flush**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-flush) -Methode abgeschlossen wird.
+-   [**OnEvent**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onevent). Benachrichtigt die Anwendung, wenn bestimmte Ereignisse in der Medienquelle auftreten, z. B. Pufferungs- oder Netzwerkverbindungsereignisse.
+-   [**OnFlush**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onflush). Wird aufgerufen, [**wenn die Flush-Methode**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-flush) abgeschlossen ist.
 
-## <a name="implementing-the-callback-interface"></a>Implementieren der Rückruf Schnittstelle
+## <a name="implementing-the-callback-interface"></a>Implementieren der Rückrufschnittstelle
 
-Die Rückruf Schnittstelle muss Thread sicher sein, da [**onlesesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) und die anderen Rückruf Methoden von Arbeitsthreads aufgerufen werden.
+Die Rückrufschnittstelle muss threadsicher sein, da [**OnReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) und die anderen Rückrufmethoden von Arbeitsthreads aufgerufen werden.
 
-Es gibt verschiedene Ansätze, die Sie bei der Implementierung des Rückrufs durchführen können. Beispielsweise können Sie die gesamte Arbeit innerhalb des Rückrufs ausführen, oder Sie können den Rückruf verwenden, um die Anwendung zu benachrichtigen (z. b. durch Signalisieren eines Ereignis Handles) und dann die Arbeit aus dem Anwendungs Thread ausführen.
+Es gibt verschiedene Ansätze, die Sie beim Implementieren des Rückrufs verfolgen können. Beispielsweise können Sie die ganze Arbeit innerhalb des Rückrufs oder den Rückruf verwenden, um die Anwendung zu benachrichtigen (z. B. durch Signalisieren eines Ereignishandpunkts) und dann im Anwendungsthread arbeiten.
 
-Die [**onlesesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) -Methode wird einmal für jeden Aufruf aufgerufen, den Sie an der [**imfsourcereader:: lesesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) -Methode vornehmen. Um das nächste Beispiel abzurufen, nennen Sie "read **Sample** " erneut. Wenn ein Fehler auftritt, wird " **onlesesample** " mit einem Fehlercode für den Parameter " *hrStatus* " aufgerufen.
+Die [**OnReadSample-Methode**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) wird einmal für jeden Aufruf aufgerufen, den Sie an die [**METHODE ZUEsourceReader::ReadSample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-readsample) stellen. Um das nächste Beispiel zu erhalten, rufen **Sie ReadSample erneut** auf. Wenn ein Fehler auftritt, **wird OnReadSample** mit einem Fehlercode für den *hrStatus-Parameter* aufgerufen.
 
-Das folgende Beispiel zeigt eine minimale Implementierung der Rückruf Schnittstelle. Hier ist die Deklaration einer Klasse, die die-Schnittstelle implementiert.
+Das folgende Beispiel zeigt eine minimale Implementierung der Rückrufschnittstelle. Zuerst ist hier die Deklaration einer Klasse, die die -Schnittstelle implementiert.
 
 
 ```C++
@@ -196,9 +196,9 @@ private:
 
 
 
-In diesem Beispiel sind die [**OnEvent**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onevent) -Methode und die [**onflush**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onflush) -Methode nicht interessiert, sodass Sie einfach **S \_ OK** zurückgeben. Die-Klasse verwendet ein Ereignis handle, um die Anwendung zu signalisieren. Dieses Handle wird durch den-Konstruktor bereitgestellt.
+In diesem Beispiel sind die Methoden [**OnEvent**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onevent) und [**OnFlush**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onflush) nicht von Interesse, daher geben sie einfach **S OK \_ zurück.** Die -Klasse verwendet ein Ereignishand handle, um die Anwendung zu signalisieren. dieses Handle wird über den Konstruktor bereitgestellt.
 
-In diesem minimalen Beispiel druckt die [**onlesesample**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) -Methode nur den Zeitstempel im Konsolenfenster. Anschließend werden der Statuscode und das Flag für das Ende des Streams gespeichert und dem Ereignis Handle signalisiert:
+In diesem minimalen Beispiel gibt die [**OnReadSample-Methode**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereadercallback-onreadsample) nur den Zeitstempel im Konsolenfenster aus. Anschließend werden der Statuscode und das Flag für das Ende des Streams gespeichert, und das Ereignishand handle wird signalisiert:
 
 
 ```C++
@@ -241,7 +241,7 @@ HRESULT SourceReaderCB::OnReadSample(
 
 
 
-Der folgende Code zeigt, wie die Anwendung diese Rückruf Klasse verwendet, um alle Video Frames aus einer Mediendatei zu lesen:
+Der folgende Code zeigt, dass die Anwendung diese Rückrufklasse verwenden würde, um alle Videoframes aus einer Mediendatei zu lesen:
 
 
 ```C++
@@ -313,7 +313,7 @@ done:
 
 <dl> <dt>
 
-[Quell Leser](source-reader.md)
+[Quellleser](source-reader.md)
 </dt> </dl>
 
  

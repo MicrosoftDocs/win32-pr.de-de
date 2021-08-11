@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBINFOMISC. genmaxrequired-Eigenschaft'
-title: JET_DBINFOMISC. genmaxrequired (Eigenschaft)
+description: 'Weitere Informationen zu: JET_DBINFOMISC.genMaxRequired-Eigenschaft'
+title: JET_DBINFOMISC.genMaxRequired-Eigenschaft
 TOCTitle: 'genMaxRequired property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.genMaxRequired
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.genmaxrequired(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e06c730318a824774365aab0f5c999e97cd22f3d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46d51809bb57f7fbdedf4c89ac1241e9f69fa1dd58236553d7c48874c349c4a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118254943"
 ---
-# <a name="jet_dbinfomiscgenmaxrequired-property"></a>JET_DBINFOMISC. genmaxrequired (Eigenschaft)
+# <a name="jet_dbinfomiscgenmaxrequired-property"></a>JET_DBINFOMISC.genMaxRequired-Eigenschaft
 
-Ruft die maximale Protokoll Generierung ab, die für die Wiedergabe der Protokolle erforderlich ist.
+Ruft die maximale Protokollgenerierung ab, die für die Wiedergabe der Protokolle erforderlich ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ public int genMaxRequired { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -68,6 +68,6 @@ Typ: [System. Int32](/dotnet/api/system.int32)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

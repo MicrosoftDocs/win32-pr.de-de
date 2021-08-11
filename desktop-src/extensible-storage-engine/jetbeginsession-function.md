@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetbeginsession-Funktion'
+description: 'Weitere Informationen zu: JetBeginSession-Funktion'
 title: JetBeginSession-Funktion
 TOCTitle: JetBeginSession Function
 ms:assetid: f1c33b78-f2d1-44ea-8ec9-94b729b94e24
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cfe0cf06e86b19d16284b704697c65b1f38a167c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0852de04f3969e3e30debc7ba7ff4f3aedf7ac4084b17f91feed8984fe4e1467
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118251614"
 ---
 # <a name="jetbeginsession-function"></a>JetBeginSession-Funktion
 
@@ -34,7 +34,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetbeginsession-function"></a>JetBeginSession-Funktion
 
-Die **jetbeginsession** -Funktion startet eine Sitzung und initialisiert und gibt ein ESE-Sitzungs handle ([JET_SESID](./jet-sesid.md)) zurück. Sitzungen steuern den gesamten Zugriff auf die Datenbank und werden verwendet, um den Umfang der Transaktionen zu steuern. Die Sitzung kann verwendet werden, um Transaktionen zu starten, zu übertragen oder abzubrechen. Die Sitzung wird auch zum Anfügen, erstellen oder Öffnen einer Datenbank verwendet. Die Sitzung wird als Kontext für alle DDL-und DML-Vorgänge verwendet. Um Parallelität und parallelen Zugriff auf die Datenbank zu erhöhen, können mehrere Sitzungen gestartet werden.
+Die **JetBeginSession-Funktion** startet eine Sitzung und initialisiert und gibt ein ESE-Sitzungshandle zurück ([JET_SESID](./jet-sesid.md)). Sitzungen steuern den gesamten Zugriff auf die Datenbank und werden zum Steuern des Transaktionsumfangs verwendet. Die Sitzung kann zum Starten, Committen oder Abbrechen von Transaktionen verwendet werden. Die Sitzung wird auch zum Anfügen, Erstellen oder Öffnen einer Datenbank verwendet. Die Sitzung wird als Kontext für alle DDL- und DML-Vorgänge verwendet. Um die Parallelität und den parallelen Zugriff auf die Datenbank zu erhöhen, können mehrere Sitzungen gestartet werden.
 
 ```cpp
     JET_ERR JET_API JetBeginSession(
@@ -47,15 +47,15 @@ Die **jetbeginsession** -Funktion startet eine Sitzung und initialisiert und gib
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Die Daten Bank Instanz, die für diesen-Befehl verwendet werden soll.
+Die Datenbankinstanz, die für diesen Aufruf verwendet werden soll.
 
-*psetup-sid*
+*psesid*
 
-Ein Zeiger auf die Variable, die vom Sitzungs Handle bei erfolgreicher Rückgabe initialisiert wird.
+Zeiger auf die Variable, die das Sitzungshandle bei erfolgreicher Rückgabe initialisiert.
 
-*szusername*
+*szUserName*
 
 Dieser Parameter ist reserviert.
 
@@ -65,7 +65,7 @@ Dieser Parameter ist reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion ermöglicht die Rückgabe von [JET_ERR](./jet-err.md)s, die in dieser API definiert sind. Weitere Informationen zu Jet-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion ermöglicht die Rückgabe aller [JET_ERR,](./jet-err.md)die in dieser API definiert sind. Weitere Informationen zu Jet-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -85,50 +85,50 @@ Diese Funktion ermöglicht die Rückgabe von [JET_ERR](./jet-err.md)s, die in di
 </tr>
 <tr class="even">
 <td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen.</p>
-<p>Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p>
+<p>Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde.</p></td>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errOutOfMemory</p></td>
-<td><p>Der Vorgang konnte nicht ausgeführt werden, da kein Arbeitsspeicher zugeordnet werden konnte.</p></td>
+<td><p>Fehler beim Vorgang, weil kein Arbeitsspeicher zugeordnet werden konnte.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errOutOfSessions</p></td>
-<td><p>Die Anzahl der Sitzungen, die die Engine für den Start des Clients zulässt, ist begrenzt. Dieser Wert kann mithilfe von <a href="gg294044(v=exchg.10).md">jetsetsystemparameter</a> mit der JET_paramMaxSessions-Konstante geändert werden. Die Standard Anzahl von Sitzungen ist 16. Weitere Informationen zu JET_paramMaxSessions finden Sie unter <a href="gg294139(v=exchg.10).md">System Parameter</a> .</p></td>
+<td><p>Die Anzahl der Sitzungen, die die Engine dem Client den Start erlaubt, ist begrenzt. Dieser Wert kann mithilfe von <a href="gg294044(v=exchg.10).md">JetSetSystemParameter</a> mit der JET_paramMaxSessions Konstante geändert werden. Die Standardanzahl von Sitzungen beträgt 16. Ausführliche Informationen zu JET_paramMaxSessions finden Sie unter <a href="gg294139(v=exchg.10).md">Systemparameter.</a></p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg wird das Sitzungs Handle initialisiert und kann für Daten Bank Vorgänge verwendet werden.
+Bei Erfolg wird das Sitzungshandle initialisiert und kann für Datenbankvorgänge verwendet werden.
 
 Bei einem Fehler sind keine Sitzungen verfügbar, oder eine neue Sitzung konnte nicht initialisiert werden.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Bei der Verwendung von Sitzungen über verschiedene Threads muss sorgfältig vorgegangen werden. In einer Sitzung wird nachverfolgt, in welchem Thread Sie während [jetbegintransaction](./jetbegintransaction-function.md), [jetcommittransaction](./jetcommittransaction-function.md)oder [jetrollback](./jetrollback-function.md)verwendet wurde, und es wird ein Fehler ausgelöst, wenn Sie für mehrere Threads mit einer geöffneten Transaktion verwendet wird. Das [jetresessioncontext](./jetresetsessioncontext-function.md)-Objekt [kann dieses](./jetsetsessioncontext-function.md) Verhalten ändern. Da es sich bei der Sitzung immer noch um einen serialisierten Kontext handelt, können mehrere Daten Bank Vorgänge nicht gleichzeitig in einer einzelnen Sitzung ausgeführt werden, sondern nur seriell. Sie können jedoch mehrere-Sitzungen verwenden, um gleichzeitigen Datenbankzugriff zu erreichen. Sitzungen können innerhalb einer Transaktion Thread übergreifend verwendet werden, indem Sie die Sitzungs Kontexte festlegen und zurücksetzen.
+Bei der Verwendung von Sitzungen über verschiedene Threads hinweg muss sorgfältig darauf geachtet werden. Eine Sitzung verfolgt, für welchen Thread sie während [JetBeginTransaction,](./jetbegintransaction-function.md) [JetCommitTransaction](./jetcommittransaction-function.md)oder [JetRollback](./jetrollback-function.md)verwendet wurde, und löst einen Fehler aus, wenn er in mehreren Threads mit einer geöffneten Transaktion verwendet wird. [JetResetSessionContext](./jetresetsessioncontext-function.md)und [JetSetSessionContext](./jetsetsessioncontext-function.md) können dieses Verhalten ändern. Da die Sitzung immer noch ein serialisierter Kontext ist und mehrere Datenbankvorgänge nicht gleichzeitig, sondern nur seriell für eine einzelne Sitzung ausgeführt werden können. Sie können jedoch mehrere Sitzungen verwenden, um gleichzeitigen Datenbankzugriff zu erhalten. Sitzungen können innerhalb einer Transaktion threadübergreifend verwendet werden, indem die Sitzungskontexte festgelegt und zurückgesetzt werden.
 
-Das Sitzungs Handle muss mit [jetendsession](./jetendsession-function.md)geschlossen werden.
+Das Sitzungshandle sollte mit [JetEndSession](./jetendsession-function.md)geschlossen werden.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -148,19 +148,19 @@ Das Sitzungs Handle muss mit [jetendsession](./jetendsession-function.md)geschlo
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetbeginsessionw</strong> (Unicode) und <strong>jetbeginsessiona</strong> (ANSI).</p></td>
+<td><p>Implementiert als <strong>JetBeginSessionW</strong> (Unicode) und <strong>JetBeginSessionA</strong> (ANSI).</p></td>
 </tr>
 </tbody>
 </table>
@@ -171,12 +171,12 @@ Das Sitzungs Handle muss mit [jetendsession](./jetendsession-function.md)geschlo
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetbegintransaction](./jetbegintransaction-function.md)  
-[Jetcommittransaction](./jetcommittransaction-function.md)  
-[Jetdupsession](./jetdupsession-function.md)  
-[Jetendsession](./jetendsession-function.md)  
-[Jetresessioncontext](./jetresetsessioncontext-function.md)  
-[Jetrollback](./jetrollback-function.md)  
-[Jetabessioncontext](./jetsetsessioncontext-function.md)  
-[Jetstopservice](./jetstopservice-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetBeginTransaction](./jetbegintransaction-function.md)  
+[JetCommitTransaction](./jetcommittransaction-function.md)  
+[JetDupSession](./jetdupsession-function.md)  
+[JetEndSession](./jetendsession-function.md)  
+[JetResetSessionContext](./jetresetsessioncontext-function.md)  
+[JetRollback](./jetrollback-function.md)  
+[JetSetSessionContext](./jetsetsessioncontext-function.md)  
+[JetStopService](./jetstopservice-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

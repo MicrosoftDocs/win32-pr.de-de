@@ -1,41 +1,41 @@
 ---
-description: Gibt an, ob ein Beispiel ein zufälliger Zugriffspunkt ist.
+description: Gibt an, ob eine Stichprobe ein zufälliger Zugriffspunkt ist.
 ms.assetid: 03d4bfd8-1148-4551-8e71-05cfba2e15fa
-title: MFSampleExtension_CleanPoint-Attribut (mfapi. h)
+title: MFSampleExtension_CleanPoint -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a54ea9bf4f1ca207a6ab12bac331c57db63136a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7181c08b19382a6b9d9da0475ec0a7a0522bd132dc10a2da1da4531d631d02d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118241497"
 ---
-# <a name="mfsampleextension_cleanpoint-attribute"></a>MF Sample Extension- \_ cleanpointattribut
+# <a name="mfsampleextension_cleanpoint-attribute"></a>CleanPoint-Attribut "MFSampleExtension" \_
 
-Gibt an, ob ein Beispiel ein zufälliger Zugriffspunkt ist.
+Gibt an, ob eine Stichprobe ein zufälliger Zugriffspunkt ist.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL als** **UINT32 gespeichert**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**VERERBUNGSample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für-Beispiele. Wenn das Attribut **true** ist, ist das Beispiel ein zufälliger Zugriffspunkt, und die Decodierung kann mit diesem Beispiel beginnen. Andernfalls ist das Beispiel kein zufälliger Zugriffspunkt.
+Dieses Attribut gilt für Beispiele. Wenn das Attribut **TRUE ist,** ist das Beispiel ein zufälliger Zugriffspunkt, und die Decodierung kann mit diesem Beispiel beginnen. Andernfalls ist das Beispiel kein zufälliger Zugriffspunkt.
 
-Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert **false**.
+Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert **FALSE.**
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,9 +56,9 @@ inline BOOL IsRandomAccessPoint(IMFSample *pSample)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -66,13 +66,13 @@ inline BOOL IsRandomAccessPoint(IMFSample *pSample)
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen zu: ideepcloneable- <T> Methoden'
-title: Ideepcloneable (T)-Methoden
+description: Weitere Informationen finden Sie unter IDeepCloneable-Methoden. <T>
+title: IDeepCloneable(T)-Methoden
 TOCTitle: IDeepCloneable(T) methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.IDeepCloneable`1
 ms:mtpsurl: https://msdn.microsoft.com/library/Hh579566(v=EXCHG.10)
 ms:contentKeyID: 39514596
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: f2d93ee68e08e2b3181aafafe270da732b12c57c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 232c38b64acbb60a7b2876f6c80b623a42083a5a666773bd37e43976d0a1c543
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104549791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118256105"
 ---
-# <a name="ideepcloneablet-methods"></a>Ideepcloneable- \<T\> Methoden
+# <a name="ideepcloneablet-methods"></a>IDeepCloneable-Methoden \<T\>
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [ideepcloneable \<T\> ](./ideepcloneable-t-interface.md) -Typ macht die folgenden Member verfügbar.
+Der [IDeepCloneable-Typ \<T\> ](./ideepcloneable-t-interface.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -34,8 +34,8 @@ Der [ideepcloneable \<T\> ](./ideepcloneable-t-interface.md) -Typ macht die folg
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh578936(v=exchg.10).md">Deepclone</a></td>
-<td>Gibt eine tiefe Kopie des-Objekts zurück.</td>
+<td><a href="hh578936(v=exchg.10).md">DeepClone</a></td>
+<td>Gibt eine tiefe Kopie des -Objekts zurück.</td>
 </tr>
 </tbody>
 </table>
@@ -47,6 +47,6 @@ Oben
 
 #### <a name="reference"></a>Referenz
 
-[Ideepcloneable- \<T\> Schnittstelle](./ideepcloneable-t-interface.md)
+[IDeepCloneable-Schnittstelle \<T\>](./ideepcloneable-t-interface.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

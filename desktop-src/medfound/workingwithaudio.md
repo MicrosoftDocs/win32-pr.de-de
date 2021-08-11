@@ -1,30 +1,30 @@
 ---
-description: Arbeiten mit Audiodaten
+description: Arbeiten mit Audio
 ms.assetid: c246efa3-25dc-4471-9b0f-619e5d125c93
-title: Arbeiten mit Audiodaten (Microsoft Media Foundation)
+title: Arbeiten mit Audio (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d465bfb538d68245e16ce4c3238271d12a9dbd07
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02cf7ecb0f6d85172dc65becb26112b9e02feaf267fdbba15ea57853982d3d27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118237252"
 ---
-# <a name="working-with-audio-microsoft-media-foundation"></a>Arbeiten mit Audiodaten (Microsoft Media Foundation)
+# <a name="working-with-audio-microsoft-media-foundation"></a>Arbeiten mit Audio (Microsoft Media Foundation)
 
-In diesem Abschnitt wird beschrieben, wie Sie Audiodaten mit den Windows Media Audio Codecs codieren und decodieren und die jeweiligen Features der einzelnen Elemente adressiert werden. In diesem Abschnitt werden die folgenden Themen behandelt:
+In diesem Abschnitt wird beschrieben, wie Audiodaten mit den Windows Media Audio-Codecs codiert und decodiert werden. Darüber hinaus werden die jeweiligen Features behandelt. In diesem Abschnitt werden die folgenden Themen behandelt:
 
 
 
 | Thema                                                                                 | BESCHREIBUNG                                                                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [Auswählen eines Audiocodecs](choosinganaudiocodec.md)                                   | Beschreibt die Inhaltstypen, die sich am besten für die Komprimierung mit den einzelnen Windows Media Audio Codecs eignen. |
-| [Konfigurieren der Audiocodierung](configuringaudioencoding.md)                            | Beschreibt, wie die Audioencoder-DMOS konfiguriert werden.                                                      |
-| [Konfigurieren der Audiodecodierung](configuringaudiodecoding.md)                            | Beschreibt, wie die Audiodecoder-DMOS konfiguriert werden.                                                      |
-| [Verwenden High-Definition Audiodaten](usinghighdefinitionaudio.md)                           | Beschreibt das Arbeiten mit Multichannel-Audiodaten und High-Definition-Audiodaten.                                |
-| [Verwenden des Windows Media Audio Voice-Codecs](usingthewindowsmediaaudio9voicecodec.md) | Beschreibt, wie der Windows Media Audio Voice-Codec verwendet wird.                                               |
-| [Decodierung in S/PDIF](decodingtospdif.md)                                             | Beschreibt, wie die Transformation für Windows Media Audio Professional zu S/PDIF verwendet wird.                          |
+| [Auswählen eines Audiocodecs](choosinganaudiocodec.md)                                   | Beschreibt die Inhaltstypen, die für die Komprimierung mit jedem der Windows Medienaudiocodecs am besten geeignet sind. |
+| [Konfigurieren der Audiocodierung](configuringaudioencoding.md)                            | Beschreibt, wie die Audioencoder-DMOs konfiguriert werden.                                                      |
+| [Konfigurieren der Audiodecodierung](configuringaudiodecoding.md)                            | Beschreibt, wie die Audiodecoder-DMOs konfiguriert werden.                                                      |
+| [Verwenden High-Definition Audio](usinghighdefinitionaudio.md)                           | Beschreibt die Verwendung von Multichannel-Audio und High-Definition-Audio.                                |
+| [Verwenden des Windows Media Audio Voice Codec](usingthewindowsmediaaudio9voicecodec.md) | Beschreibt die Verwendung des Windows Media Audio Voice-Codecs.                                               |
+| [Decodieren in S/PDIF](decodingtospdif.md)                                             | Beschreibt die Verwendung der Windows Media Audio Professional in die S/PDIF-Transformation.                          |
 
 
 

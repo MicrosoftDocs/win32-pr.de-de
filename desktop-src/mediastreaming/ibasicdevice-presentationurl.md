@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice presentationurl-Methode
+title: IBasicDevice PresentationUrl-Methode
 description: Ruft die Präsentations-URL des Geräts ab.
 ms.assetid: F1EF1BBE-F35D-4828-B4F6-D6DEFF5A6391
 keywords:
-- Presentationurl-Methode Media Streaming-API
-- Presentationurl-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, presentationurl-Methode
+- 'PresentationUrl-Methode: Media Streaming-API'
+- 'PresentationUrl-Methode: Media Streaming-API, IBasicDevice-Schnittstelle'
+- IBasicDevice-Schnittstelle Medienstreaming-API, PresentationUrl-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 89d10187329692c4f279a94cde004455a182733e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 60d5908b80e7b413ca646279a751e12ec7d9c7e6e98ae7ecff3ad1f1d9e60bd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118235937"
 ---
-# <a name="ibasicdevicepresentationurl-method"></a>Ibasicdevice::P-Methode "Ressentiments ationurl"
+# <a name="ibasicdevicepresentationurl-method"></a>IBasicDevice::P resentationUrl-Methode
 
 Ruft die Präsentations-URL des Geräts ab.
 
@@ -41,7 +41,7 @@ HRESULT PresentationUrl(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf die Präsentations-URL des Geräts.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf die Präsentations-URL des Geräts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

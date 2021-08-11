@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SPACEHINTS. Contentequals-Methode'
-title: JET_SPACEHINTS. Contentequals-Methode
+description: 'Weitere Informationen finden Sie unter: JET_SPACEHINTS. ContentEquals-Methode'
+title: JET_SPACEHINTS. ContentEquals-Methode
 TOCTitle: 'ContentEquals method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_SPACEHINTS.ContentEquals(Microsoft.Isam.Esent.Interop.JET_SPACEHINTS)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_spacehints.contentequals(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f32ca814f8a72e22d485b57528b96843067d97f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d24676244a49fd884238072bb139b1d01b7cfd8cfbbd2a464dc470de949a434f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118252227"
 ---
-# <a name="jet_spacehintscontentequals-method"></a>JET_SPACEHINTS. Contentequals-Methode
+# <a name="jet_spacehintscontentequals-method"></a>JET_SPACEHINTS. ContentEquals-Methode
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,19 +61,19 @@ public bool ContentEquals(
 
 #### <a name="parameters"></a>Parameter
 
-  - andere  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SPACEHINTS](./jet-spacehints-class.md)  
+  - Sonstige  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SPACEHINTS](./jet-spacehints-class.md)  
     
-    Eine-Instanz, die mit dieser Instanz verglichen werden soll.
+    Eine -Instanz, die mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 #### <a name="implements"></a>Implementiert
 
-[Icontentequatable \<T\> . Contentequals (T)](./icontentequatable-t-.contentequals-method.md)  
+[IContentEquatable \<T\> . ContentEquals(T)](./icontentequatable-t-.contentequals-method.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -81,6 +81,6 @@ True, wenn die beiden Instanzen gleich sind.
 
 [JET_SPACEHINTS-Klasse](./jet-spacehints-class.md)
 
-[Mitglieder JET_SPACEHINTS](./jet-spacehints-members.md)
+[JET_SPACEHINTS Mitglieder](./jet-spacehints-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

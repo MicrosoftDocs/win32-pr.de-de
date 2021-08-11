@@ -1,33 +1,33 @@
 ---
-description: 'Die Image:: Save Methods-Methode und die Image:: SaveAdd Methods-Methode der Image-Klasse erhalten ein EncoderParameters-Objekt, das ein Array von EncoderParameter-Objekten enthält.'
+description: Die Methoden Image::Save Methods und Image::SaveAdd Methods der Image-Klasse empfangen ein EncoderParameters-Objekt, das ein Array von EncoderParameter-Objekten enthält.
 ms.assetid: babc89f0-aea5-4341-8cf9-40d11e73fb10
-title: Bild Encoder Konstanten
+title: Image Encoder-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8130b90ad7f1d559ca480a581a0b157ff152fc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 37a47f533a490fe3428964c9e469df6fbe89800f95bfe89daf7bf05d6c49a75c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118248884"
 ---
-# <a name="image-encoder-constants"></a>Bild Encoder Konstanten
+# <a name="image-encoder-constants"></a>Image Encoder-Konstanten
 
-Die [Image:: Save Methods](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-image-save(inistream_inconstclsid_inconstencoderparameters)) -Methode und die [Image:: SaveAdd Methods](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-image-saveadd(inimage_inconstencoderparameters)) -Methode der [**Image**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) -Klasse erhalten ein [**EncoderParameters**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-encoderparameters) -Objekt, das ein Array von [**EncoderParameter**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-encoderparameter) -Objekten enthält. Jedes **EncoderParameter** -Objekt verfügt über einen GUID-Datenmember, der die Parameter Kategorie angibt. Die folgenden Konstanten, die in "gdiplusimaging. h" definiert sind, stellen GUIDs dar, die die verschiedenen Parameter Kategorien angeben.
+Die [Methoden Image::Save Methods](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-image-save(inistream_inconstclsid_inconstencoderparameters)) und [Image::SaveAdd Methods](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-image-saveadd(inimage_inconstencoderparameters)) der [**Image-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) empfangen ein [**EncoderParameters-Objekt,**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-encoderparameters) das ein Array von [**EncoderParameter-Objekten**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-encoderparameter) enthält. Jedes **EncoderParameter-Objekt** verfügt über einen GUID-Daten member, der die Parameterkategorie angibt. Die folgenden Konstanten, die in Gdiplusimaging.h definiert sind, stellen GUIDs dar, die die verschiedenen Parameterkategorien angeben.
 
--   Encoderchrominancetable
--   Encodercolortiefe
--   Encodercolorspace
--   Encodercompression
--   Encoderluminancetable
--   Encoderquality
--   Encoderrendermethod
--   Encodersaveflag
--   Encoderscanmethod
--   Encodertransformation
+-   Encoder Encoder EncoderInanceTable
+-   EncoderColorDepth
+-   EncoderColorSpace
+-   EncoderCompression
+-   EncoderLuminanceTable
+-   EncoderQuality
+-   EncoderRenderMethod
+-   EncoderSaveFlag
+-   EncoderScanMethod
+-   EncoderTransformation
 -   EncoderVersion
--   Encoderimageitems
--   Encodersaveascmyk
+-   EncoderImageItems
+-   EncoderSaveAsC KODI
 
  
 

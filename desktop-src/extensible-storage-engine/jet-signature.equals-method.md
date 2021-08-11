@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SIGNATURE. Gleichheits Methode'
-title: JET_SIGNATURE. Gleichheits Methode
+description: 'Erfahren Sie mehr über: JET_SIGNATURE. Equals-Methode'
+title: JET_SIGNATURE. Equals-Methode
 TOCTitle: 'Equals method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.JET_SIGNATURE.Equals
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_signature.equals(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 0389ddf4ff5e7efd86fef09d428e1756eb72f161
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80203a222c2cdf1c36df47f8d95a4792a6723e9478d52c634b1a13d01d5dd436
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118253226"
 ---
-# <a name="jet_signatureequals-method"></a>JET_SIGNATURE. Gleichheits Methode
+# <a name="jet_signatureequals-method"></a>JET_SIGNATURE. Equals-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,12 +39,12 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh557517(v=exchg.10).md">Ist gleich(Objekt)</a></td>
-<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType. gleich (Object)</a>.)</td>
+<td><a href="hh557517(v=exchg.10).md">Equals(Object)</a></td>
+<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh564920(v=exchg.10).md">Ist gleich(JET_SIGNATURE)</a></td>
+<td><a href="hh564920(v=exchg.10).md">Equals(JET_SIGNATURE)</a></td>
 <td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.</td>
 </tr>
 </tbody>
@@ -57,8 +57,8 @@ Oben
 
 #### <a name="reference"></a>Referenz
 
-[JET_SIGNATURE Struktur](./jet-signature-structure2.md)
+[JET_SIGNATURE-Struktur](./jet-signature-structure2.md)
 
-[Mitglieder JET_SIGNATURE](./jet-signature-members.md)
+[JET_SIGNATURE-Member](./jet-signature-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

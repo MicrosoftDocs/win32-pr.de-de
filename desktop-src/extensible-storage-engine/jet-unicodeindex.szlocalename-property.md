@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_UNICODEINDEX. szlocalename-Eigenschaft'
-title: JET_UNICODEINDEX. szlocalename-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_UNICODEINDEX.szLocaleName-Eigenschaft'
+title: JET_UNICODEINDEX.szLocaleName-Eigenschaft
 TOCTitle: 'szLocaleName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_UNICODEINDEX.szLocaleName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_unicodeindex.szlocalename(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bd986b9df7956709d5a756dd066d612ddb4624c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f324e3ac54ed7faa3b69b23248b9fa0e1959ed4b83d60adff20a3061bad6cbda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118251624"
 ---
-# <a name="jet_unicodeindexszlocalename-property"></a>JET_UNICODEINDEX. szlocalename-Eigenschaft
+# <a name="jet_unicodeindexszlocalename-property"></a>JET_UNICODEINDEX.szLocaleName-Eigenschaft
 
-Ruft den localename ab, der beim Normalisieren von Unicode-Daten verwendet werden soll, oder legt diesen fest.
+Ruft den LocaleName ab, der beim Normalisieren von Unicode-Daten verwendet werden soll, oder legt dieses fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ public string szLocaleName { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -70,6 +70,6 @@ Typ: [System. String](/dotnet/api/system.string)
 
 [JET_UNICODEINDEX-Klasse](./jet-unicodeindex-class.md)
 
-[Mitglieder JET_UNICODEINDEX](./jet-unicodeindex-members.md)
+[JET_UNICODEINDEX Member](./jet-unicodeindex-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

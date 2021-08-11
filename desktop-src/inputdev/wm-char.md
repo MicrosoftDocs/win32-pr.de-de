@@ -1,9 +1,9 @@
 ---
-title: WM_CHAR Meldung (Winuser. h)
-description: Wird an das Fenster mit dem Tastaturfokus gesendet, wenn eine WM- \_ KeyDown-Meldung von der translatemess-Funktion übersetzt wird. Die Meldung "WM \_ char" enthält den Zeichencode der Taste, die gedrückt wurde.
+title: WM_CHAR (Winuser.h)
+description: Wird im Fenster mit dem Tastaturfokus veröffentlicht, wenn eine WM \_ KEYDOWN-Nachricht von der TranslateMessage-Funktion übersetzt wird. Die WM \_ CHAR-Meldung enthält den Zeichencode der gedrückten Taste.
 ms.assetid: 7e45dc6f-ff68-4534-9e52-46e5f4110532
 keywords:
-- Tastatur-und Maus Eingaben für WM_CHAR Nachricht
+- WM_CHAR der Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.custom: snippet-project
 ms.date: 07/28/2020
-ms.openlocfilehash: 8d174f64fa776b506814540d4f2c97635fba38a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 16f9f1160f9766bd6284f62f2203b940ab6336f326aa31a0d9fa2894d243cf59
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118247949"
 ---
-# <a name="wm_char-message"></a>WM- \_ char-Nachricht
+# <a name="wm_char-message"></a>WM \_ CHAR-Meldung
 
-Wird an das Fenster mit dem Tastaturfokus gesendet, wenn eine [**WM- \_ KeyDown**](wm-keydown.md) -Meldung von der [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) -Funktion übersetzt wird. Die Meldung " **WM \_ char** " enthält den Zeichencode der Taste, die gedrückt wurde.
+Wird im Fenster mit dem Tastaturfokus veröffentlicht, wenn eine [**WM \_ KEYDOWN-Nachricht**](wm-keydown.md) von der [**TranslateMessage-Funktion übersetzt**](/windows/desktop/api/winuser/nf-winuser-translatemessage) wird. Die **WM \_ CHAR-Meldung** enthält den Zeichencode der gedrückten Taste.
 
 
 ```C++
@@ -47,28 +47,28 @@ Der Zeichencode des Schlüssels.
 *lParam* 
 </dt> <dd>
 
-Die Wiederholungs Anzahl, der Überprüfungs Code, das erweiterte schlüsselflag, der Kontext Code, das vorherige schlüsselstatusflag und das Flag für den Übergangszustand, wie in der folgenden Tabelle gezeigt.
+Anzahl der Wiederholungen, Überprüfungscode, Flag für erweiterte Schlüssel, Kontextcode, vorheriges Schlüsselzustandsflag und Übergangszustandsflag, wie in der folgenden Tabelle dargestellt.
 
 
 
 | Bits  | Bedeutung                                                                                                                                                                                                                                                               |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0-15  | Die Wiederholungs Anzahl für die aktuelle Nachricht. Der Wert gibt an, wie oft der Tastatur Schlag automatisch durchgeführt wird, wenn der Benutzer die Taste gedrückt hält. Wenn die Tastatureingabe lang genug gehalten wird, werden mehrere Nachrichten gesendet. Die Wiederholungs Anzahl ist jedoch nicht kumulativ. |
-| 16-23 | Der Überprüfungs Code. Der Wert hängt vom OEM ab.                                                                                                                                                                                                                          |
-| 24    | Gibt an, ob der Schlüssel ein erweiterter Schlüssel ist, z. b. die Rechte ALT-Taste und die STRG-Taste, die auf einer erweiterten 101-oder 102-Tastatur-Tastatur angezeigt werden. Der Wert ist 1, wenn es sich um einen erweiterten Schlüssel handelt. Andernfalls ist der Wert 0.                                                              |
-| 25-28 | Bleiben Verwenden Sie nicht.                                                                                                                                                                                                                                                 |
-| 29    | Der Kontext Code. Der Wert ist 1, wenn die Alt-Taste gedrückt gehalten wird, während die Taste gedrückt wird. Andernfalls ist der Wert 0.                                                                                                                                                     |
-| 30    | Der vorherige Schlüssel Zustand. Der Wert ist 1, wenn der Schlüssel vor dem Senden der Nachricht nicht angezeigt wird, oder wenn der Schlüssel auf "0" festgelegt ist.                                                                                                                                                    |
-| 31    | Der Übergangszustand. Der Wert ist 1, wenn der Schlüssel freigegeben wird, oder der Wert ist 0, wenn die Taste gedrückt wird.                                                                                                                                                            |
+| 0-15  | Die Wiederholungsanzahl für die aktuelle Nachricht. Der Wert gibt an, wie oft die Tastatureingabe automatisch angezeigt wird, wenn der Benutzer den Schlüssel hält. Wenn die Tastatureingabe lange genug gehalten wird, werden mehrere Nachrichten gesendet. Die Wiederholungsanzahl ist jedoch nicht kumulativ. |
+| 16-23 | Der Scancode. Der Wert hängt vom OEM ab.                                                                                                                                                                                                                          |
+| 24    | Gibt an, ob es sich bei der Taste um eine erweiterte Taste handelt, z. B. die rechte ALT- und STRG-Taste, die auf einer erweiterten Tastatur mit 101 oder 102 Tasten angezeigt werden. Der Wert ist 1, wenn es sich um einen erweiterten Schlüssel handelt. andernfalls ist es 0.                                                              |
+| 25-28 | Reserviert; nicht verwenden.                                                                                                                                                                                                                                                 |
+| 29    | Der Kontextcode. Der Wert ist 1, wenn die ALT-TASTE gedrückt gehalten wird, während die Taste gedrückt wird. andernfalls ist der Wert 0.                                                                                                                                                     |
+| 30    | Der vorherige Schlüsselzustand. Der Wert ist 1, wenn der Schlüssel vor dem Senden der Nachricht heruntergefahren ist, oder 0, wenn der Schlüssel hoch ist.                                                                                                                                                    |
+| 31    | Der Übergangszustand. Der Wert ist 1, wenn die Taste freigegeben wird, oder 0, wenn die Taste gedrückt wird.                                                                                                                                                            |
 
-Weitere Details finden Sie unter [KeyStroke-Nachrichtenflags](about-keyboard-input.md#keystroke-message-flags).
+Weitere Informationen finden Sie unter [Keystroke Message Flags](about-keyboard-input.md#keystroke-message-flags).
  
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Anwendung sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung sollte 0 (null) zurückgeben, wenn sie diese Nachricht verarbeitet.
 
 ## <a name="example"></a>Beispiel
 
@@ -90,17 +90,17 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
     return 0;
 }
 ```
-Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/Win7Samples/multimedia/mediafoundation/protectedplayback/winmain.cpp) auf GitHub.
+Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/Win7Samples/multimedia/mediafoundation/protectedplayback/winmain.cpp) auf GitHub.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Meldung " **WM \_ char** " verwendet UTF (Unicode Transformation Format)-16.
+Die **WM \_ CHAR-Nachricht** verwendet das Unicode Transformation Format (UTF)-16.
 
-Es gibt nicht notwendigerweise eine eins-zu-eins-Entsprechung zwischen den gedrückten Schlüsseln und den generierten Zeichen Meldungen. Daher sind die Informationen im höherwertigen Wort des *LPARAM* -Parameters für Anwendungen in der Regel nicht nützlich. Die Informationen im höherwertigen Wort gelten nur für die letzte [**WM- \_ KeyDown**](wm-keydown.md) -Nachricht, die vor der Bereitstellung der **WM- \_ char** -Nachricht steht.
+Es gibt nicht notwendigerweise eine 1:1-Entsprechung zwischen gedrückten Tasten und generierten Zeichenmeldungen, sodass die Informationen im hohen Wort des *lParam-Parameters* in der Regel für Anwendungen nicht nützlich sind. Die Informationen im hoch geordneten Wort gelten nur für die letzte [**WM \_ KEYDOWN-Nachricht,**](wm-keydown.md) die der Veröffentlichung der **WM \_ CHAR-Nachricht vorausgegangen** ist.
 
-Erweiterte Schlüssel für erweiterte 101-und 102-keytastaturen sind die Rechte ALT-Taste und die Rechte STRG-Taste im Hauptabschnitt der Tastatur. die Eingaben "ins", "Entf", "Start", "Ende", "Bild-ab" und "Pfeil" in den Clustern auf der linken Seite der numerischen Tastatur und die Unterteilung (/) und EINGABETASTE in der numerischen Tastatur. Einige andere Tastaturen unterstützen möglicherweise das Extended-Key-Bit im *LPARAM* -Parameter.
+Für erweiterte Tastaturen mit 101 und 102 Tasten sind erweiterte Tasten die rechte ALT-Taste und die rechte STRG-Taste im Hauptteil der Tastatur. DIE TASTEN INS, DEL, HOME, END, PAGE UP, PAGE DOWN und die Pfeiltasten in den Clustern links neben der numerischen Tastatur; und die Division (/) und die EINGABETASTEn in der numerischen Tastatur. Einige andere Tastaturen unterstützen möglicherweise das Bit mit erweiterter Taste im *lParam-Parameter.*
 
-Die [**WM \_ UNICHAR**](wm-unichar.md) -Nachricht ist mit **WM \_ char** identisch, mit der Ausnahme, dass Sie UTF-32 verwendet. Er ist darauf ausgelegt, Unicode-Zeichen an ANSI-Fenster zu senden oder bereitzustellen, und er kann Unicode-Zeichen der ergänzenden Ebene verarbeiten.
+Die [**WM \_ UNICHAR-Nachricht**](wm-unichar.md) ist identisch mit **WM \_ CHAR,** mit der Ausnahme, dass UTF-32 verwendet wird. Sie ist für das Senden oder Posten von Unicode-Zeichen an ANSI-Fenster konzipiert und kann Zeichen der ergänzenden Unicode-Ebene verarbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Die [**WM \_ UNICHAR**](wm-unichar.md) -Nachricht ist mit **WM \_ char** identis
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -118,22 +118,22 @@ Die [**WM \_ UNICHAR**](wm-unichar.md) -Nachricht ist mit **WM \_ char** identis
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**TranslateMessage**](/windows/desktop/api/winuser/nf-winuser-translatemessage)
 </dt> <dt>
 
-[**WM- \_ KeyDown**](wm-keydown.md)
+[**WM \_ KEYDOWN**](wm-keydown.md)
 </dt> <dt>
 
 [**WM \_ UNICHAR**](wm-unichar.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Tastatureingabe](keyboard-input.md)
+[Tastatureingaben](keyboard-input.md)
 </dt> </dl>
 
  

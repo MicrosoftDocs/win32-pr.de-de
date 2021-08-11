@@ -4,60 +4,60 @@ ms.assetid: cd94280d-7267-4d35-8333-aa4a5bd81b73
 title: Schreiben einer asynchronen Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e3d8360d0c15fe25661b8cd0f0f5adc9768db8ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2efc9b38212f729dc840dde1ad1976a1b523103312710a0f316369637f3b66d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118237013"
 ---
 # <a name="writing-an-asynchronous-method"></a>Schreiben einer asynchronen Methode
 
 In diesem Thema wird beschrieben, wie eine asynchrone Methode in Microsoft Media Foundation implementiert wird.
 
-Asynchrone Methoden sind in der Media Foundation Pipeline allgegenwärtig. Asynchrone Methoden vereinfachen die Verteilung von Arbeit auf mehrere Threads. Es ist besonders wichtig, e/a-Vorgänge asynchron auszuführen, damit das Lesen aus einer Datei oder einem Netzwerk den Rest der Pipeline nicht blockiert.
+Asynchrone Methoden sind in der Media Foundation Pipeline ubiquitlich. Asynchrone Methoden erleichtern die Verteilung der Arbeit auf mehrere Threads. Es ist besonders wichtig, E/A asynchron auszuführen, damit das Lesen aus einer Datei oder einem Netzwerk den Rest der Pipeline nicht blockiert.
 
-Wenn Sie eine Medienquelle oder eine Medien Senke schreiben, ist es von entscheidender Bedeutung, asynchrone Vorgänge ordnungsgemäß zu verarbeiten, da sich die Leistung der Komponente auf die gesamte Pipeline auswirkt.
+Wenn Sie eine Medienquelle oder Mediensenke schreiben, ist es wichtig, asynchrone Vorgänge ordnungsgemäß zu verarbeiten, da sich die Leistung Ihrer Komponente auf die gesamte Pipeline auswirkt.
 
 > [!Note]  
-> Media Foundation Transformationen (MFTs) verwenden synchrone Methoden standardmäßig.
+> Media Foundation Transformationen (MFTs) verwenden standardmäßig synchrone Methoden.
 
  
 
-### <a name="work-queues-for-asynchronous-operations"></a>Arbeits Warteschlangen für asynchrone Vorgänge
+### <a name="work-queues-for-asynchronous-operations"></a>Arbeitswarteschlangen für asynchrone Vorgänge
 
-In Media Foundation gibt es eine enge Beziehung zwischen [asynchronen Rückruf Methoden](asynchronous-callback-methods.md) und [Arbeits Warteschlangen](work-queues.md). Eine Arbeits Warteschlange ist eine Abstraktion zum Verschieben von Arbeit aus dem Thread des Aufrufers in einen Arbeits Thread. Gehen Sie folgendermaßen vor, um Arbeit an einer Arbeits Warteschlange auszuführen:
+In Media Foundation besteht eine enge Beziehung zwischen [asynchronen Rückrufmethoden](asynchronous-callback-methods.md) und [Arbeitswarteschlangen.](work-queues.md) Eine Arbeitswarteschlange ist eine Abstraktion zum Verschieben von Arbeit aus dem Thread des Aufrufers in einen Arbeitsthread. Führen Sie die folgenden Schritte aus, um Aufgaben an einer Arbeitswarteschlange auszuführen:
 
-1.  Implementieren Sie die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle.
-2.  Rufen Sie [**mfkreateasynkresult**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) auf, um ein *Ergebnis* Objekt zu erstellen. Das Ergebnis Objekt macht [**imfasynkresult**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult)verfügbar. Das Ergebnis Objekt enthält drei Zeiger:
+1.  Implementieren Sie die [**INTERFACESAsyncCallback-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback)
+2.  Rufen Sie [**MFCreateAsyncResult**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) auf, um ein *Ergebnisobjekt* zu erstellen. Das Ergebnisobjekt macht DAS [**ASYNCRESULT verfügbar.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) Das Ergebnisobjekt enthält drei Zeiger:
 
-    -   Ein Zeiger auf die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle des Aufrufers.
-    -   Ein optionaler Zeiger auf ein Zustands Objekt. Wenn angegeben, muss das Zustands Objekt **IUnknown** implementieren.
+    -   Ein Zeiger auf die [**POINTERAsyncCallback-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) des Aufrufers.
+    -   Ein optionaler Zeiger auf ein Zustandsobjekt. Wenn angegeben, muss das Zustandsobjekt **IUnknown** implementieren.
     -   Ein optionaler Zeiger auf ein privates Objekt. Wenn angegeben, muss dieses Objekt auch **IUnknown** implementieren.
 
-    Die letzten beiden Zeiger können **null** sein. Verwenden Sie diese andernfalls zum Speichern von Informationen über den asynchronen Vorgang.
+    Die letzten beiden Zeiger können **NULL** sein. Andernfalls verwenden Sie sie, um Informationen zum asynchronen Vorgang zu speichern.
 
-3.  [**Mfputworkitemex**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitemex) wird aufgerufen, um das Arbeits Element in die Warteschlange zu stellen.
-4.  Der Arbeits Warteschlangen Thread ruft die [**imfasynccallback:: Aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) -Methode auf.
-5.  Führen Sie die Arbeit innerhalb der [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Methode aus. Der *pasynkresult* -Parameter dieser Methode ist der [**imfasynkresult**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) -Zeiger aus Schritt 2. Verwenden Sie diesen Zeiger, um das State-Objekt und das private-Objekt zu erhalten:
-    -   Um das State-Objekt abzurufen, nennen Sie [**imfasynkresult:: GetState**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasyncresult-getstate).
-    -   Um das private Objekt abzurufen, nennen Sie [**imfasynkresult:: GetObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasyncresult-getobject).
+3.  Rufen Sie [**MFPutWorkItemEx**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitemex) auf, um das Arbeitselement in die Warteschlange zu stellen.
+4.  Der Arbeitswarteschlangenthread ruft Ihre [**METHODE VOMASYNCCallback::Invoke**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) auf.
+5.  Führen Sie die Arbeit in Ihrer [**Invoke-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) aus. Der *pAsyncResult-Parameter* dieser Methode ist der [**POINTERAsyncResult-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) aus Schritt 2. Verwenden Sie diesen Zeiger, um das Zustandsobjekt und das private Objekt abzurufen:
+    -   Rufen Sie ZUM Abrufen des Zustandsobjekts [**DEN AUFRUF VONASYNCResult::GetState auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasyncresult-getstate)
+    -   Rufen Sie ZUM Abrufen des privaten Objekts [**DEN AUFRUF VONASYNCResult::GetObject auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasyncresult-getobject)
 
-Als Alternative können Sie die Schritte 2 und 3 durch Aufrufen der Funktion " [**mfputworkitem**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) " kombinieren. Intern ruft diese Funktion [**mfkreateasynkresult**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) auf, um das Ergebnis Objekt zu erstellen.
+Alternativ können Sie die Schritte 2 und 3 kombinieren, indem Sie die [**MFPutWorkItem-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) aufrufen. Intern ruft diese Funktion [**MFCreateAsyncResult**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) auf, um das Ergebnisobjekt zu erstellen.
 
-Das folgende Diagramm zeigt die Beziehungen zwischen dem Aufrufer, dem Ergebnis Objekt, dem Zustands Objekt und dem privaten Objekt.
+Das folgende Diagramm zeigt die Beziehungen zwischen dem Aufrufer, dem Ergebnisobjekt, dem Zustandsobjekt und dem privaten Objekt.
 
-![Diagramm, das ein asynchrones Ergebnis Objekt anzeigt](images/workqueues01.png)
+![Diagramm eines asynchronen Ergebnisobjekts](images/workqueues01.png)
 
-Das folgende Sequenzdiagramm zeigt, wie ein-Objekt eine Arbeitsaufgabe in die Warteschlange stellt. Wenn der Arbeits Warteschlangen Thread [**aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke)aufruft, führt das-Objekt den asynchronen Vorgang in diesem Thread aus.
+Das folgende Sequenzdiagramm zeigt, wie ein Objekt ein Arbeitselement in die Warteschlange einreiht. Wenn der Arbeitswarteschlangenthread [**Invoke**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke)aufruft, führt das -Objekt den asynchronen Vorgang für diesen Thread aus.
 
-![Diagramm, das zeigt, wie ein Objekt in die Warteschlange eines Arbeits](images/workqueues02.png)
+![Diagramm, das zeigt, wie ein Objekt ein Arbeitselement in die Warteschlange einreiht](images/workqueues02.png)
 
-Beachten Sie, dass [**aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) von einem Thread aufgerufen wird, der sich im Besitz der Arbeits Warteschlange befindet. Die **Implementierung des** Aufrufs muss Thread sicher sein. Wenn Sie die Platform Work Queue (**mfasync \_ Callback \_ Queue \_ Standard**) verwenden, ist es außerdem wichtig, dass Sie den Thread nie blockieren, da dadurch die gesamte Media Foundation Pipeline die Verarbeitung von Daten blockieren kann. Wenn Sie einen Vorgang ausführen müssen, der blockiert wird oder lange dauert, verwenden Sie eine private Arbeits Warteschlange. Um eine private Arbeits Warteschlange zu erstellen, rufen Sie [**mfbelegcateworkqueue**](/windows/desktop/api/mfapi/nf-mfapi-mfallocateworkqueue)auf. Jede Pipeline Komponente, die e/a-Vorgänge ausführt, sollte aus demselben Grund verhindern, dass e/a-Aufrufe blockiert werden. Die [**IMF Bytestream**](/windows/desktop/api/mfobjects/nn-mfobjects-imfbytestream) -Schnittstelle stellt eine nützliche Abstraktion für asynchrone Datei-e/a dar.
+Denken Sie daran, dass [**Invoke**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) von einem Thread aufgerufen wird, der sich im Besitz der Arbeitswarteschlange befindet. Die Implementierung von **Invoke** muss threadsicher sein. Wenn Sie außerdem die Plattformarbeitswarteschlange **(MFASYNC \_ CALLBACK \_ QUEUE \_ STANDARD)** verwenden, ist es wichtig, dass Sie den Thread nie blockieren, da dadurch die Verarbeitung von Daten für die gesamte Media Foundation Pipeline blockiert werden kann. Wenn Sie einen Vorgang ausführen müssen, der blockiert wird oder lange dauert, verwenden Sie eine private Arbeitswarteschlange. Um eine private Arbeitswarteschlange zu erstellen, rufen Sie [**MFAllocateWorkQueue**](/windows/desktop/api/mfapi/nf-mfapi-mfallocateworkqueue)auf. Jede Pipelinekomponente, die E/A-Vorgänge ausführt, sollte aus dem gleichen Grund verhindern, dass E/A-Aufrufe blockiert werden. Die [**INTERFACESByteStream-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfbytestream) stellt eine nützliche Abstraktion für asynchrone Datei-E/A bereit.
 
-### <a name="implementing-the-beginend-pattern"></a>Implementieren von BEGIN. ../End... Bau
+### <a name="implementing-the-beginend-pattern"></a>Implementieren von Begin.../End... Muster
 
-Wie unter [Aufrufen von asynchronen Methoden](calling-asynchronous-methods.md)beschrieben, verwenden asynchrone Methoden in Media Foundation häufig den **Anfang...** / **Ende...** Bau. In diesem Muster verwendet ein asynchroner Vorgang zwei Methoden mit Signaturen, die den folgenden ähneln:
+Wie unter [Aufrufen asynchroner Methoden](calling-asynchronous-methods.md)beschrieben, verwenden asynchrone Methoden in Media Foundation häufig **begin...** / **Ende...** Muster. In diesem Muster verwendet ein asynchroner Vorgang zwei Methoden mit Signaturen ähnlich der folgenden:
 
 ``` syntax
 // Starts the asynchronous operation.
@@ -68,21 +68,21 @@ HRESULT BeginX(IMFAsyncCallback *pCallback, IUnknown *punkState);
 HRESULT EndX(IMFAsyncResult *pResult);
 ```
 
-Damit die Methode wirklich asynchron ist, muss die Implementierung von **BeginX** die tatsächliche Arbeit in einem anderen Thread durchführen. An dieser Stelle kommen Arbeits Warteschlangen ins Spiel. In den folgenden *Schritten ist der* Aufrufer der Code, der **BeginX** und **EndX** aufruft. Dabei kann es sich um eine Anwendung oder die Media Foundation Pipeline handeln. Bei der *Komponente* handelt es sich um den Code, der **BeginX** und **EndX** implementiert.
+Damit die Methode wirklich asynchron wird, muss die Implementierung von **BeginX** die eigentliche Arbeit an einem anderen Thread ausführen. Hier kommen Arbeitswarteschlangen ins Spiel. In den folgenden Schritten ist der *Aufrufer* der Code, der **BeginX** und **EndX** aufruft. Dies kann eine Anwendung oder die Media Foundation Pipeline sein. Die *-Komponente* ist der Code, der **BeginX** und **EndX** implementiert.
 
-1.  Der Aufrufer ruft **BEGIN...** auf und übergibt einen Zeiger auf die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle des Aufrufers.
-2.  Die Komponente erstellt ein neues asynchrones Ergebnis Objekt. Dieses Objekt speichert die Rückruf Schnittstelle und das Zustands Objekt des Aufrufers. In der Regel speichert Sie auch alle privaten Zustandsinformationen, die die Komponente benötigt, um den Vorgang abzuschließen. Das Ergebnis Objekt aus diesem Schritt wird im nächsten Diagramm als "Ergebnis 1" bezeichnet.
-3.  Die Komponente erstellt ein zweites Ergebnis Objekt. Dieses Ergebnis Objekt speichert zwei Zeiger: das erste Ergebnis Objekt und die Rückruf Schnittstelle des aufgerufenen. Dieses Ergebnis Objekt wird im nächsten Diagramm als "Ergebnis 2" bezeichnet.
-4.  Die Komponente ruft [**mfputworkitemex**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitemex) auf, um eine neue Arbeitsaufgabe in die Warteschlange zu stellen.
-5.  In der [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Methode führt die Komponente die asynchrone Arbeit aus.
-6.  Die Komponente ruft [**mfinvokecallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback) auf, um die Rückruf Methode des Aufrufers aufzurufen.
-7.  Der Aufrufer ruft die **EndX** -Methode auf.
+1.  Der Aufrufer ruft **Begin...** auf und übergibt einen Zeiger auf die [**POINTERAsyncCallback-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) des Aufrufers.
+2.  Die Komponente erstellt ein neues asynchrones Ergebnisobjekt. Dieses Objekt speichert die Rückrufschnittstelle und das Zustandsobjekt des Aufrufers. In der Regel werden auch alle Informationen zum privaten Zustand gespeichert, die die Komponente zum Abschließen des Vorgangs benötigt. Das Ergebnisobjekt aus diesem Schritt wird im nächsten Diagramm als "Ergebnis 1" bezeichnet.
+3.  Die Komponente erstellt ein zweites Ergebnisobjekt. Dieses Ergebnisobjekt speichert zwei Zeiger: das erste Ergebnisobjekt und die Rückrufschnittstelle des Aufgerufenen. Dieses Ergebnisobjekt wird im nächsten Diagramm als "Ergebnis 2" bezeichnet.
+4.  Die Komponente ruft [**MFPutWorkItemEx**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitemex) auf, um ein neues Arbeitselement in die Warteschlange zu setzen.
+5.  In der [**Invoke-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) führt die Komponente die asynchrone Arbeit aus.
+6.  Die Komponente ruft [**MFInvokeCallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback) auf, um die Rückrufmethode des Aufrufers aufzurufen.
+7.  Der Aufrufer ruft die **EndX-Methode** auf.
 
 ![Diagramm, das zeigt, wie ein Objekt das Begin/End-Muster implementiert](images/workqueues03.png)
 
 ## <a name="asynchronous-method-example"></a>Beispiel für eine asynchrone Methode
 
-Um diese Erörterung zu veranschaulichen, verwenden wir ein Beispiel mit einem Beispiel. Stellen Sie sich eine asynchrone Methode zum Berechnen einer Quadratwurzel vor:
+Zur Veranschaulichung dieser Diskussion verwenden wir ein konstruiertes Beispiel. Betrachten Sie eine asynchrone Methode zum Berechnen einer Quadratwurzel:
 
 
 ```C++
@@ -92,7 +92,7 @@ Um diese Erörterung zu veranschaulichen, verwenden wir ein Beispiel mit einem B
 
 
 
-Der *x* -Parameter von `BeginSquareRoot` ist der Wert, dessen Quadratwurzel berechnet wird. Die Quadratwurzel wird im *PVal* -Parameter von zurückgegeben `EndSquareRoot` .
+Der *x-Parameter* von `BeginSquareRoot` ist der Wert, dessen Quadratwurzel berechnet wird. Die Quadratwurzel wird im *pVal-Parameter* von `EndSquareRoot` zurückgegeben.
 
 Hier ist die Deklaration einer Klasse, die diese beiden Methoden implementiert:
 
@@ -155,9 +155,9 @@ public:
 
 
 
-Die `SqrRoot` Klasse implementiert [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) , sodass Sie die Quadratwurzel Operation in einer Arbeits Warteschlange platzieren kann. Die- `DoCalculateSquareRoot` Methode ist die private-Klassenmethode, die die Quadratwurzel berechnet. Diese Methode wird vom Arbeitswarteschlangen-Thread aufgerufen.
+Die `SqrRoot` -Klasse implementiert [**DEN AsyncCallback-Vorgang SO,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) dass der Quadratstammvorgang in eine Arbeitswarteschlange gestellt werden kann. Die `DoCalculateSquareRoot` -Methode ist die private Klassenmethode, die die Quadratwurzel berechnet. Diese Methode wird aus dem Arbeitswarteschlangenthread aufgerufen.
 
-Zunächst benötigen wir eine Möglichkeit, den Wert von *x* zu speichern, damit Sie abgerufen werden kann, wenn der Arbeits Warteschlangen Thread aufruft `SqrRoot::Invoke` . Im folgenden finden Sie eine einfache Klasse, in der die Informationen gespeichert werden:
+Zunächst benötigen wir eine Möglichkeit, den Wert von *x* zu speichern, damit er abgerufen werden kann, wenn der Arbeitswarteschlangenthread `SqrRoot::Invoke` aufruft. Hier ist eine einfache Klasse, die die Informationen speichert:
 
 
 ```C++
@@ -200,9 +200,9 @@ public:
 
 
 
-Diese Klasse implementiert **IUnknown** , damit Sie in einem Ergebnis Objekt gespeichert werden kann.
+Diese Klasse implementiert **IUnknown,** damit sie in einem Ergebnisobjekt gespeichert werden kann.
 
-Der folgende Code implementiert die- `BeginSquareRoot` Methode:
+Der folgende Code implementiert die `BeginSquareRoot` -Methode:
 
 
 ```C++
@@ -244,16 +244,16 @@ HRESULT SqrRoot::BeginSquareRoot(double x, IMFAsyncCallback *pCB, IUnknown *pSta
 
 Im Code werden folgende Schritte ausgeführt:
 
-1.  Erstellt eine neue Instanz der- `AsyncOp` Klasse, die den Wert von *x* enthalten soll.
-2.  Ruft [**mfkreateasynkresult**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) auf, um ein Ergebnis Objekt zu erstellen. Dieses Objekt enthält mehrere Zeiger:
-    -   Ein Zeiger auf die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle des Aufrufers.
-    -   Ein Zeiger auf das Zustands Objekt des Aufrufers (*pState*).
+1.  Erstellt eine neue Instanz der `AsyncOp` -Klasse, die den Wert von *x* enthalten soll.
+2.  Ruft [**MFCreateAsyncResult**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) auf, um ein Ergebnisobjekt zu erstellen. Dieses Objekt enthält mehrere Zeiger:
+    -   Ein Zeiger auf die [**POINTERAsyncCallback-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) des Aufrufers.
+    -   Ein Zeiger auf das Zustandsobjekt des Aufrufers (*pState*).
     -   Ein Zeiger auf das `AsyncOp`-Objekt.
-3.  Ruft [**mfputworkitem**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) auf, um ein neues Arbeits Element in die Warteschlange zu stellen Dieser Befehl erstellt implizit ein äußeres Ergebnis Objekt, das die folgenden Zeiger enthält:
-    -   Ein Zeiger auf die `SqrRoot` [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle des Objekts.
-    -   Ein Zeiger auf das innere Ergebnis Objekt aus Schritt 2.
+3.  Ruft [**MFPutWorkItem**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) auf, um ein neues Arbeitselement in die Warteschlange zu setzen. Dieser Aufruf erstellt implizit ein äußeres Ergebnisobjekt, das die folgenden Zeiger enthält:
+    -   Ein Zeiger auf die `SqrRoot` [**POINTERAsyncCallback-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) des Objekts.
+    -   Ein Zeiger auf das innere Ergebnisobjekt aus Schritt 2.
 
-Der folgende Code implementiert die- `SqrRoot::Invoke` Methode:
+Der folgende Code implementiert die `SqrRoot::Invoke` -Methode:
 
 
 ```C++
@@ -314,9 +314,9 @@ done:
 
 
 
-Diese Methode ruft das innere Ergebnis Objekt und das- `AsyncOp` Objekt ab. Anschließend wird das- `AsyncOp` Objekt an das-Objekt weitergeleitet `DoCalculateSquareRoot` . Schließlich ruft Sie [**imfasynkresult:: SetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasyncresult-setstatus) auf, um den Statuscode festzulegen, und [**mfinvokecallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback) , um die Rückruf Methode des Aufrufers aufzurufen.
+Diese Methode ruft das innere Ergebnisobjekt und das `AsyncOp` -Objekt ab. Anschließend wird das `AsyncOp` -Objekt an `DoCalculateSquareRoot` übergeben. Schließlich ruft sie [**DEN STATUSCODE AUFASYNCResult::SetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasyncresult-setstatus) und [**MFInvokeCallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback) auf, um die Rückrufmethode des Aufrufers aufzurufen.
 
-Die- `DoCalculateSquareRoot` Methode erfüllt genau das, was Sie erwarten würden:
+Die `DoCalculateSquareRoot` -Methode führt genau das aus, was Sie erwarten würden:
 
 
 ```C++
@@ -330,7 +330,7 @@ HRESULT SqrRoot::DoCalculateSquareRoot(AsyncOp *pOp)
 
 
 
-Wenn die Rückruf Methode des Aufrufers aufgerufen wird, liegt es in der Verantwortung des Aufrufers, die **End...** -Methode aufzurufen – in diesem Fall `EndSquareRoot` . Der `EndSquareRoot` gibt an, wie der Aufrufer das Ergebnis des asynchronen Vorgangs abruft, der in diesem Beispiel die berechnete Quadratwurzel ist. Diese Informationen werden im Ergebnis Objekt gespeichert:
+Wenn die Rückrufmethode des Aufrufers aufgerufen wird, liegt es in der Verantwortung des Aufrufers, die **End...-Methode** aufzurufen, in diesem Fall `EndSquareRoot` . `EndSquareRoot`Der ruft das Ergebnis des asynchronen Vorgangs ab, bei dem es sich in diesem Beispiel um die berechnete Quadratwurzel handelt. Diese Informationen werden im Ergebnisobjekt gespeichert:
 
 
 ```C++
@@ -366,28 +366,28 @@ done:
 
 
 
-## <a name="operation-queues"></a>Vorgangs Warteschlangen
+## <a name="operation-queues"></a>Vorgangswarteschlangen
 
-Bisher wurde angenommen, dass ein asynchroner Vorgang jederzeit ausgeführt werden kann, unabhängig vom aktuellen Zustand des Objekts. Nehmen Sie beispielsweise an, was geschieht, wenn eine Anwendung aufruft, `BeginSquareRoot` während ein früherer Aufruf derselben Methode noch aussteht. Die- `SqrRoot` Klasse kann die neue Arbeitsaufgabe in die Warteschlange stellen, bevor die vorherige Arbeitsaufgabe abgeschlossen ist. Arbeits Warteschlangen werden jedoch nicht garantiert, dass Arbeitselemente serialisiert werden. Beachten Sie, dass eine Arbeits Warteschlange mehr als einen Thread zum Verteilen von Arbeits Elementen verwenden kann. In einer Multithread-Umgebung kann ein Arbeits Element aufgerufen werden, bevor das vorherige abgeschlossen ist. Arbeitselemente können sogar außerhalb der Reihenfolge aufgerufen werden, wenn ein Kontextwechsel unmittelbar vor dem Aufrufen des Rückrufs stattfindet.
+Bisher wurde implizit davon ausgegangen, dass ein asynchroner Vorgang jederzeit ausgeführt werden kann, unabhängig vom aktuellen Zustand des Objekts. Stellen Sie sich beispielsweise vor, was geschieht, wenn eine Anwendung `BeginSquareRoot` aufruft, während ein früherer Aufruf derselben Methode noch aussteht. Die `SqrRoot` -Klasse kann das neue Arbeitselement in die Warteschlange einreihen, bevor das vorherige Arbeitselement abgeschlossen ist. Es ist jedoch nicht garantiert, dass Arbeitselemente von Arbeitswarteschlangen serialisiert werden. Denken Sie daran, dass eine Arbeitswarteschlange mehrere Threads zum Senden von Arbeitselementen verwenden kann. In einer Multithreadumgebung kann ein Arbeitselement aufgerufen werden, bevor das vorherige abgeschlossen ist. Arbeitselemente können sogar außerhalb der Reihenfolge aufgerufen werden, wenn ein Kontextwechsel erfolgt, kurz bevor der Rückruf aufgerufen wird.
 
-Aus diesem Grund ist es für das Objekt zuständig, Vorgänge für sich selbst zu serialisieren, wenn dies erforderlich ist. Anders ausgedrückt: Wenn das-Objekt erfordert *, dass der* Vorgang *a* abgeschlossen ist, bevor der Vorgang *b* gestartet werden kann, darf das Objekt eine Arbeitsaufgabe nicht in die Warteschlange stellen, bis der Vorgang *a* abgeschlossen ist. Ein Objekt kann diese Anforderung erfüllen, indem es eine eigene Warteschlange für ausstehende Vorgänge hat. Wenn eine asynchrone Methode für das-Objekt aufgerufen wird, stellt das-Objekt die Anforderung in eine eigene Warteschlange. Wenn jeder asynchrone Vorgang abgeschlossen ist, ruft das-Objekt die nächste Anforderung aus der Warteschlange ab. Das [MPEG1Source](mpeg1source-sample.md) -Beispiel zeigt, wie eine solche Warteschlange implementiert wird.
+Aus diesem Grund ist das Objekt für die Serialisierung von Vorgängen für sich selbst verantwortlich, falls dies erforderlich ist. Anders ausgedrückt: Wenn das Objekt erfordert, dass Vorgang *A* abgeschlossen ist, bevor Vorgang *B* gestartet werden kann, darf das Objekt ein Arbeitselement für *B* erst in die Warteschlange stellen, nachdem Vorgang *A* abgeschlossen wurde. Ein Objekt kann diese Anforderung erfüllen, indem es über eine eigene Warteschlange mit ausstehenden Vorgängen verfügt. Wenn eine asynchrone Methode für das Objekt aufgerufen wird, fügt das Objekt die Anforderung in eine eigene Warteschlange ein. Wenn jeder asynchrone Vorgang abgeschlossen ist, ruft das -Objekt die nächste Anforderung aus der Warteschlange ab. Das [MPEG1Source-Beispiel](mpeg1source-sample.md) zeigt ein Beispiel für die Implementierung einer solchen Warteschlange.
 
-Eine einzelne Methode kann mehrere asynchrone Vorgänge umfassen, insbesondere dann, wenn e/a-Aufrufe verwendet werden. Wenn Sie asynchrone Methoden implementieren, sollten Sie sich sorgfältig mit den Serialisierungsanforderungen beschäftigen. Ist es z. b. für das-Objekt zulässig, einen neuen Vorgang zu starten, während eine vorherige e/a-Anforderung noch aussteht? Wenn der neue Vorgang den internen Zustand des Objekts ändert, was geschieht, wenn eine vorherige e/a-Anforderung abgeschlossen ist und Daten zurückgibt, die möglicherweise veraltet sind? Ein gutes Zustandsdiagramm kann bei der Identifizierung der gültigen Zustandsübergänge helfen.
+Eine einzelne Methode kann mehrere asynchrone Vorgänge umfassen, insbesondere wenn E/A-Aufrufe verwendet werden. Wenn Sie asynchrone Methoden implementieren, sollten Sie sorgfältig über serialisierungsanforderungen nachdenken. Ist es beispielsweise gültig, dass das -Objekt einen neuen Vorgang startet, während eine vorherige E/A-Anforderung noch aussteht? Wenn der neue Vorgang den internen Zustand des Objekts ändert, was geschieht, wenn eine vorherige E/A-Anforderung abgeschlossen wird und Daten zurückgibt, die möglicherweise veraltet sind? Ein gutes Zustandsdiagramm kann dabei helfen, die gültigen Zustandsübergänge zu identifizieren.
 
-## <a name="cross-thread-and-cross-process-considerations"></a>Thread übergreifende und prozessübergreifende Überlegungen
+## <a name="cross-thread-and-cross-process-considerations"></a>Thread- und prozessübergreifende Überlegungen
 
-Arbeits Warteschlangen verwenden kein COM-Marshalling zum Mars Hallen von Schnittstellen Zeigern über Thread Grenzen hinweg. Daher wird auch dann, wenn ein Objekt als Apartment Thread registriert ist oder der Anwendungs Thread ein Single Thread-Apartment (STA) eingegeben hat, [**imfasynccallback-Rückrufe**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) von einem anderen Thread aufgerufen. In jedem Fall sollten alle Media Foundation Pipeline Komponenten das "beide" Threading Modell verwenden.
+Arbeitswarteschlangen verwenden kein COM-Marshalling, um Schnittstellenzeiger über Threadgrenzen hinweg zu marshallen. Selbst wenn ein Objekt als apartment-threaded registriert ist oder der Anwendungsthread in ein Singlethread-Apartment (STA) eingetreten ist, werden [**DAHER DIE RÜCKRUFE VONASYNCCallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) von einem anderen Thread aufgerufen. In jedem Fall sollten alle Media Foundation Pipelinekomponenten das Threadingmodell "Beide" verwenden.
 
-Einige Schnittstellen in Media Foundation definieren Remote Versionen einiger asynchroner Methoden. Wenn eine dieser Methoden über Prozess Grenzen hinweg aufgerufen wird, ruft die Media Foundation Proxy-/Stub-DLL die Remote Version der-Methode auf, die das benutzerdefinierte Marshalling der Methoden Parameter ausführt. Im Remote Prozess übersetzt der Stub den Rückruf wieder in die lokale Methode des Objekts. Dieser Prozess ist sowohl für die Anwendung als auch für das Remote Objekt transparent. Diese benutzerdefinierten marshallingmethoden werden primär für Objekte bereitgestellt, die in den geschützten Medien Pfad (PMP) geladen werden. Weitere Informationen zum PMP finden Sie unter [geschützter Medien Pfad](protected-media-path.md).
+Einige Schnittstellen in Media Foundation definieren Remoteversionen einiger asynchroner Methoden. Wenn eine dieser Methoden über Prozessgrenzen hinweg aufgerufen wird, ruft die Media Foundation Proxy-/Stub-DLL die Remoteversion der Methode auf, die ein benutzerdefiniertes Marshalling der Methodenparameter ausführt. Im Remoteprozess übersetzt der Stub den Rückruf in die lokale Methode für das Objekt. Dieser Prozess ist sowohl für die Anwendung als auch für das Remoteobjekt transparent. Diese benutzerdefinierten Marshallingmethoden werden hauptsächlich für Objekte bereitgestellt, die im Geschützten Medienpfad (Protected Media Path, PMP) geladen werden. Weitere Informationen zum PMP finden Sie unter [Geschützter Medienpfad.](protected-media-path.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Asynchrone Rückruf Methoden](asynchronous-callback-methods.md)
+[Asynchrone Rückrufmethoden](asynchronous-callback-methods.md)
 </dt> <dt>
 
-[Arbeits Warteschlangen](work-queues.md)
+[Arbeitswarteschlangen](work-queues.md)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
-description: Der Klassen Bezeichner (CLSID) der dem topologieknoten zugeordneten Media Foundation Transformation (MFT).
+description: Der Klassenbezeichner (CLSID) der Media Foundation Transformation (MFT), die diesem Topologieknoten zugeordnet ist.
 ms.assetid: 6aa6e649-d23d-4d8d-be80-2b8814b07a57
-title: MF_TOPONODE_TRANSFORM_OBJECTID-Attribut (mspdl. h)
+title: MF_TOPONODE_TRANSFORM_OBJECTID -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ea96e09a75374bfe048b531492fc913f764d364
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9b5013bc43f07e08e1a2c26530e9325595e62666986516029ef9d76e2c72ffe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118244314"
 ---
-# <a name="mf_toponode_transform_objectid-attribute"></a>MF \_ toponode \_ Transform \_ objectID-Attribut
+# <a name="mf_toponode_transform_objectid-attribute"></a>MF \_ TOPONODE \_ TRANSFORM \_ OBJECTID-Attribut
 
-Der Klassen Bezeichner (CLSID) der dem topologieknoten zugeordneten Media Foundation Transformation (MFT).
+Der Klassenbezeichner (CLSID) der Media Foundation Transformation (MFT), die diesem Topologieknoten zugeordnet ist.
 
 ## <a name="data-type"></a>Datentyp
 
 **GUID**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Transformations Knoten (**MF- \_ topologietransformations- \_ \_ Knoten**).
+Dieses Attribut gilt für Transformationsknoten (**MF \_ TOPOLOGY \_ TRANSFORM \_ NODE**).
 
-Anwendungen können dieses Attribut verwenden, um einen transfrom-Knoten zu initialisieren. Wenn Sie dieses Attribut festlegen, müssen Sie [**imftopologynode:: SetObject**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-setobject) nicht mit einem Zeiger auf ein MFT-oder Aktivierungs Objekt aufrufen. Wenn Sie hingegen **SetObject** aufrufen, muss dieses Attribut nicht festgelegt werden. Weitere Informationen finden Sie unter [Erstellen von Topologien](creating-topologies.md).
+Anwendungen können dieses Attribut verwenden, um einen Transfrom-Knoten zu initialisieren. Wenn Sie dieses Attribut festlegen, müssen Sie NICHT MIT einem Zeiger auf ein MFT- oder Aktivierungsobjekt [**DIE TOPOLOGIENode::SetObject**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-setobject) aufrufen. Wenn Sie dagegen **SetObject** aufrufen, müssen Sie dieses Attribut nicht festlegen. Weitere Informationen finden Sie unter [Erstellen von Topologien.](creating-topologies.md)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,9 +33,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -43,16 +43,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
+[**ATTRIBUTEs::GetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
 </dt> <dt>
 
-[**Imfattributes:: SetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
+[**ATTRIBUTEs::SetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
 </dt> <dt>
 
-[**Imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
+[**TOPOLOGIENode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

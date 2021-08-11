@@ -4,61 +4,61 @@ description: Status-Eigenschaft
 ms.assetid: vs|msagent|~\pacontrol_8xd6.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 402e88185e1024aa5958d06936a6529ae4012622
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6edb1196e5ec41571c9c760b91a72b350b94f6b85f1f85af018691d3f25ecec5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118245824"
 ---
 # <a name="status-property"></a>Status-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den Status des audioausgabekanals zurück.
+Gibt den Status des Audioausgabekanals zurück.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent * * *. Audiooutput. Status**
+*agent**. AudioOutput.Status**
 
 
 
 | Wert | BESCHREIBUNG                                                                                                       |
 |-------|-------------------------------------------------------------------------------------------------------------------|
-| 0     | Der audioausgabechannel ist verfügbar (nicht ausgelastet).                                                                 |
-| 1     | Die Audioausgabe wird nicht unterstützt. Dies ist beispielsweise der Fall, weil keine Soundkarte vorhanden ist.                                |
-| 2     | Der audioausgabechannel kann nicht geöffnet werden (ist ausgelastet); beispielsweise, weil eine andere Anwendung Audiofunktionen wieder gibt. |
-| 3     | Der audioausgabechannel ist ausgelastet, weil der Server die Benutzer Spracheingabe verarbeitet.                              |
-| 4     | Der audioausgabechannel ist ausgelastet, weil zurzeit ein Zeichen spricht.                                       |
-| 5     | Der audioausgabechannel ist nicht ausgelastet, aber er wartet auf die Benutzer Spracheingabe.                                    |
-| 6     | Beim Versuch, auf den audioausgabechannel zuzugreifen, ist ein anderes (Unbekanntes) Problem aufgetreten.                          |
+| 0     | Der Audioausgabekanal ist verfügbar (nicht ausgelastet).                                                                 |
+| 1     | Die Audioausgabe wird nicht unterstützt. z. B. weil keine Soundkarte besteht.                                |
+| 2     | Der Audioausgabekanal kann nicht geöffnet werden (ist ausgelastet). Zum Beispiel, weil eine andere Anwendung Audio abspielt. |
+| 3     | Der Audioausgabekanal ist ausgelastet, da der Server Spracheingaben des Benutzers verarbeitet.                              |
+| 4     | Der Audioausgabekanal ist ausgelastet, da derzeit ein Zeichen spricht.                                       |
+| 5     | Der Audioausgabekanal ist nicht ausgelastet, wartet aber auf die Spracheingabe des Benutzers.                                    |
+| 6     | Es gab ein anderes (unbekanntes) Problem beim Zugreifen auf den Audioausgabekanal.                          |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Einstellung kann Ihre Client Anwendung den audioausgabechannel Abfragen und einen ganzzahligen Wert zurückgeben, der den Status des audioausgabekanals angibt. Sie können dies verwenden, um zu bestimmen, ob es angemessen ist, das Zeichen zu verwenden, oder ob es sinnvoll ist, den Empfangsmodus zu aktivieren ( [**mithilfe der Abhör**](listen-method.md) Methode).
+Mit dieser Einstellung kann Ihre Clientanwendung den Audioausgabekanal abfragen und einen Ganzzahlwert zurückgeben, der den Status des Audioausgabekanals angibt. Sie können damit bestimmen, ob es sinnvoll ist, das Zeichen sprechen zu lassen, oder ob es sinnvoll ist, den Lauschenmodus zu aktivieren (mithilfe der [**Listen-Methode).**](listen-method.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Listencomplete-Ereignis**](listencomplete-event.md)
+[**ListenComplete-Ereignis**](listencomplete-event.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKINFO. lgposmark-Eigenschaft'
-title: JET_BKINFO. lgposmark (Eigenschaft)
+description: 'Weitere Informationen zu: JET_BKINFO.lgposMark-Eigenschaft'
+title: JET_BKINFO.lgposMark-Eigenschaft
 TOCTitle: 'lgposMark property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_BKINFO.lgposMark
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_bkinfo.lgposmark(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a6d51fc144e649d442e9b6ce0ab80b7dd5cc3153
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 759307cb9ef54fce8c63a53af59e03da8085ea8ca315c6e50080f3501ef6c8cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118255411"
 ---
-# <a name="jet_bkinfolgposmark-property"></a>JET_BKINFO. lgposmark (Eigenschaft)
+# <a name="jet_bkinfolgposmark-property"></a>JET_BKINFO.lgposMark-Eigenschaft
 
-Ruft die Protokoll Position der Sicherung ab.
+Ruft die Protokollposition der Sicherung ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ public JET_LGPOS lgposMark { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_LGPOS](./jet-lgpos-structure2.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_LGPOS](./jet-lgpos-structure2.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -68,6 +68,6 @@ Typ: [Microsoft.ISAM.ESENT.Interop.JET_LGPOS](./jet-lgpos-structure2.md)
 
 [JET_BKINFO Struktur](./jet-bkinfo-structure2.md)
 
-[Mitglieder JET_BKINFO](./jet-bkinfo-members.md)
+[JET_BKINFO-Member](./jet-bkinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

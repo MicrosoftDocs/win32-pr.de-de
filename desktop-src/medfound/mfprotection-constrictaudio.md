@@ -1,19 +1,19 @@
 ---
-description: Gibt an.
+description: Gibt an, dass Audio eingeschränkt wird.
 ms.assetid: 455F12C9-FBD0-483F-AAC1-63FAC2A5F1F3
-title: MFPROTECTION_CONSTRICTAUDIO-Attribut (mspdl. h)
+title: MFPROTECTION_CONSTRICTAUDIO-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bee7862b2ac1a95906fe73015617dc94a8906098
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed2b20bb1d3bf579e7d1c6f3248bf6d79e9c59da6fd582ed681ea69c041550bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118241648"
 ---
-# <a name="mfprotection_constrictaudio-attribute"></a>MF Protection \_ -Attribut "-Attribut"
+# <a name="mfprotection_constrictaudio-attribute"></a>MFPROTECTION \_ CONSTRICTAUDIO-Attribut
 
-Gibt an.
+Gibt an, dass Audio eingeschränkt wird.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,9 +25,9 @@ Gibt an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

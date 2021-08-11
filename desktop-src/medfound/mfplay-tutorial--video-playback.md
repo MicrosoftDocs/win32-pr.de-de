@@ -1,44 +1,44 @@
 ---
-description: Dieses Tutorial zeigt eine komplette Anwendung, die Videos mit MF Play wieder gibt.
+description: In diesem Tutorial wird eine vollständige Anwendung gezeigt, die Videos mithilfe von MFPlay abspielt.
 ms.assetid: f72a7c1f-b059-474c-96f2-8fad3b1f7035
-title: 'MF Play-Tutorial: Video Wiedergabe'
+title: 'MFPlay-Tutorial: Videowiedergabe'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30bbadae22e72799c64a42d09b6eed904b56a60d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb5b98de6cc845d121928fb18a33db055154f717e8fe583bcd1ad6ef8da32deb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118242007"
 ---
-# <a name="mfplay-tutorial-video-playback"></a>MF Play-Tutorial: Video Wiedergabe
+# <a name="mfplay-tutorial-video-playback"></a>MFPlay-Tutorial: Videowiedergabe
 
-\[MF Play ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
+\[MFPlay steht für die Verwendung in den betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
 
-Dieses Tutorial zeigt eine komplette Anwendung, die Videos mit MF Play wieder gibt. Es basiert auf dem [simpleplay](simpleplay-sample.md) SDK-Beispiel.
+In diesem Tutorial wird eine vollständige Anwendung gezeigt, die Videos mithilfe von MFPlay abspielt. Sie basiert auf dem [SimplePlay SDK-Beispiel.](simpleplay-sample.md)
 
 Dieses Tutorial enthält die folgenden Abschnitte:
 
 -   [Anforderungen](#requirements)
--   [Header-und Bibliotheksdateien](#header-and-library-files)
+-   [Header- und Bibliotheksdateien](#header-and-library-files)
 -   [Globale Variablen](#global-variables)
--   [Deklaration der Rückruf Klasse](#declare-the-callback-class)
--   [Deklarieren der saferelease-Funktion](#declare-the-saferelease-function)
+-   [Deklarieren der Rückrufklasse](#declare-the-callback-class)
+-   [Deklarieren der SafeRelease-Funktion](#declare-the-saferelease-function)
 -   [Öffnen einer Mediendatei](#open-a-media-file)
--   [Fenster Meldungs Handler](#window-message-handlers)
--   [Implementieren der Rückruf Methode](#implement-the-callback-method)
+-   [Fenstermeldungshandler](#window-message-handlers)
+-   [Implementieren der Rückrufmethode](#implement-the-callback-method)
 -   [Implementieren von WinMain](#implement-winmain)
 -   [Zugehörige Themen](#related-topics)
 
-Eine ausführlichere Erläuterung der MF Play-API finden Sie unter [Getting Started with MF](getting-started-with-mfplay.md).
+Eine ausführlichere Erläuterung der MFPlay-API finden Sie unter Erste Schritte [mit MFPlay.](getting-started-with-mfplay.md)
 
 ## <a name="requirements"></a>Anforderungen
 
-MF Play erfordert Windows 7.
+MFPlay erfordert Windows 7.
 
-## <a name="header-and-library-files"></a>Header-und Bibliotheksdateien
+## <a name="header-and-library-files"></a>Header- und Bibliotheksdateien
 
-Fügen Sie die folgenden Header Dateien in das Projekt ein:
+Schließen Sie die folgenden Headerdateien in Ihr Projekt ein:
 
 
 ```C++
@@ -56,10 +56,10 @@ Fügen Sie die folgenden Header Dateien in das Projekt ein:
 
 
 
-Verknüpfung mit den folgenden Codebibliotheken:
+Link zu den folgenden Codebibliotheken:
 
--   MF Play. lib
--   shlwapi. lib
+-   mfplay.lib
+-   shlwapi.lib
 
 ## <a name="global-variables"></a>Globale Variablen
 
@@ -79,39 +79,39 @@ Diese Variablen werden wie folgt verwendet:
 
 <dl> <dt>
 
-<span id="g_hwnd"></span><span id="G_HWND"></span>*g \_ HWND*
+<span id="g_hwnd"></span><span id="G_HWND"></span>*g \_ hwnd*
 </dt> <dd>
 
 Ein Handle für das Anwendungsfenster.
 
 </dd> <dt>
 
-<span id="g_bVideo"></span><span id="g_bvideo"></span><span id="G_BVIDEO"></span>*g \_ bvideo*
+<span id="g_bVideo"></span><span id="g_bvideo"></span><span id="G_BVIDEO"></span>*g \_ bVideo*
 </dt> <dd>
 
-Ein boolescher Wert, der nachverfolgt, ob Videos abgespielt werden.
+Ein boolescher Wert, der verfolgt, ob das Video abspielt.
 
 </dd> <dt>
 
-<span id="g_pPlayer"></span><span id="g_pplayer"></span><span id="G_PPLAYER"></span>*g \_ PPlayer*
+<span id="g_pPlayer"></span><span id="g_pplayer"></span><span id="G_PPLAYER"></span>*g \_ pPlayer*
 </dt> <dd>
 
-Ein Zeiger auf die [**imfpmediaplayer**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) -Schnittstelle. Diese Schnittstelle wird zum Steuern der Wiedergabe verwendet.
+Ein Zeiger auf die [**IMFPMediaPlayer-Schnittstelle.**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) Diese Schnittstelle wird verwendet, um die Wiedergabe zu steuern.
 
 </dd> <dt>
 
 <span id="g_pCallback"></span><span id="g_pcallback"></span><span id="G_PCALLBACK"></span>*g \_ pCallback*
 </dt> <dd>
 
-Ein Zeiger auf die [**imfpmediaplayercallback**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) -Schnittstelle. Die Anwendung implementiert diese Rückruf Schnittstelle, um Benachrichtigungen vom Player-Objekt zu erhalten.
+Ein Zeiger auf die [**IMFPMediaPlayerCallback-Schnittstelle.**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) Die Anwendung implementiert diese Rückrufschnittstelle, um Benachrichtigungen vom Playerobjekt zu erhalten.
 
 </dd> </dl>
 
-## <a name="declare-the-callback-class"></a>Deklaration der Rückruf Klasse
+## <a name="declare-the-callback-class"></a>Deklarieren der Rückrufklasse
 
-Um Ereignis Benachrichtigungen aus dem Player-Objekt zu erhalten, muss die Anwendung die [**imfpmediaplayercallback**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) -Schnittstelle implementieren. Im folgenden Code wird eine Klasse deklariert, die die-Schnittstelle implementiert. Die einzige Member-Variable ist *m- \_ kref*, die den Verweis Zähler speichert.
+Um Ereignisbenachrichtigungen vom Playerobjekt zu erhalten, muss die Anwendung die [**IMFPMediaPlayerCallback-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) implementieren. Der folgende Code deklariert eine Klasse, die die -Schnittstelle implementiert. Die einzige Membervariable ist *m \_ cRef,* in der die Verweisanzahl gespeichert wird.
 
-Die **IUnknown** -Methoden werden Inline implementiert. Die Implementierung der [**imfpmediaplayercallback:: onmediaplayerevent**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) -Methode wird später angezeigt. Weitere Informationen finden Sie [unter Implementieren der Rückruf Methode](#implement-the-callback-method).
+Die **IUnknown-Methoden** werden inline implementiert. Die Implementierung der [**IMFPMediaPlayerCallback::OnMediaPlayerEvent-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) wird später gezeigt. Siehe [Implementieren der Rückrufmethode](#implement-the-callback-method).
 
 
 ```C++
@@ -160,9 +160,9 @@ public:
 
 
 
-## <a name="declare-the-saferelease-function"></a>Deklarieren der saferelease-Funktion
+## <a name="declare-the-saferelease-function"></a>Deklarieren der SafeRelease-Funktion
 
-In diesem Tutorial wird die [saferelease](saferelease.md) -Funktion verwendet, um Schnittstellen Zeiger freizugeben:
+In diesem Tutorial wird die [SafeRelease-Funktion](saferelease.md) verwendet, um Schnittstellenzeigen zu veröffentlichen:
 
 
 ```C++
@@ -182,8 +182,8 @@ template <class T> void SafeRelease(T **ppT)
 
 Die `PlayMediaFile` Funktion öffnet wie folgt eine Mediendatei:
 
-1.  Wenn *g \_ PPlayer* **null** ist, ruft die Funktion [**mfpkreatemediaplayer**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) auf, um eine neue Instanz des Media Player-Objekts zu erstellen. Die Eingabeparameter für **mfpkreatemediaplayer** enthalten einen Zeiger auf die Rückruf Schnittstelle und ein Handle für das Videofenster.
-2.  Um die Mediendatei zu öffnen, ruft die Funktion [**imfpmediaplayer:: foratemediaitemfromurl**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl)auf und übergibt dabei die URL der Datei. Diese Methode wird asynchron abgeschlossen. Wenn der Vorgang abgeschlossen ist, wird die [**imfpmediaplayercallback:: onmediaplayerevent**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) -Methode der Anwendung aufgerufen.
+1.  Wenn *g \_ pPlayer* NULL **ist,** ruft die Funktion [**MFPCreateMediaPlayer**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) auf, um eine neue Instanz des Media Player-Objekts zu erstellen. Die Eingabeparameter für **MFPCreateMediaPlayer** enthalten einen Zeiger auf die Rückrufschnittstelle und ein Handle für das Videofenster.
+2.  Um die Mediendatei zu öffnen, ruft die Funktion [**IMFPMediaPlayer::CreateMediaItemFromURL**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl)auf und über gibt die URL der Datei an. Diese Methode wird asynchron abgeschlossen. Nach Abschluss wird die [**IMFPMediaPlayerCallback::OnMediaPlayerEvent-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) der Anwendung aufgerufen.
 
 
 ```C++
@@ -228,7 +228,7 @@ HRESULT PlayMediaFile(HWND hwnd, PCWSTR pszURL)
 
 
 
-Die- `OnFileOpen` Funktion zeigt das allgemeine Datei Dialogfeld an, das es dem Benutzer ermöglicht, eine Datei für die Wiedergabe auszuwählen. Die **IFileOpenDialog** -Schnittstelle wird verwendet, um das allgemeine Datei Dialogfeld anzuzeigen. Diese Schnittstelle ist Teil der Windows Shell-APIs. Es wurde in Windows Vista als Ersatz für die ältere **GetOpenFileName** -Funktion eingeführt. Nachdem der Benutzer eine Datei ausgewählt hat, `OnFileOpen` ruft `PlayMediaFile` auf, um die Wiedergabe zu starten.
+Die `OnFileOpen` Funktion zeigt das Allgemeine Dateidialogfeld an, mit dem der Benutzer eine Datei für die Wiedergabe auswählen kann. Die **IFileOpenDialog-Schnittstelle** wird verwendet, um das Allgemeine Dateidialogfeld anzuzeigen. Diese Schnittstelle ist Teil der Windows Shell-APIs. es wurde in Windows Vista als Ersatz für die ältere **GetOpenFileName-Funktion** eingeführt. Nachdem der Benutzer eine Datei ausgewählt hat, ruft `OnFileOpen` auf, `PlayMediaFile` um die Wiedergabe zu starten.
 
 
 ```C++
@@ -290,17 +290,17 @@ void OnFileOpen(HWND hwnd)
 
 
 
-## <a name="window-message-handlers"></a>Fenster Meldungs Handler
+## <a name="window-message-handlers"></a>Fenstermeldungshandler
 
-Deklarieren Sie als nächstes Nachrichten Handler für die folgenden Fenster Meldungen:
+Deklarieren Sie als Nächstes Meldungshandler für die folgenden Fenstermeldungen:
 
--   **WM- \_ Paint**
--   **WM- \_ Größe**
--   **WM \_ Schließen**
+-   **WM \_ PAINT**
+-   **WM \_ SIZE**
+-   **WM \_ CLOSE**
 
-Für die **WM \_** -Zeichnungs Nachricht müssen Sie nachverfolgen, ob das Video derzeit wiedergegeben wird. Wenn dies der Fall ist, müssen Sie die [**imfpmediaplayer:: Updatevideo**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-updatevideo) -Methode aufrufen. Diese Methode bewirkt, dass das Player-Objekt den neuesten Videorahmen neu zeichnet.
+Für die **WM \_ PAINT-Nachricht** müssen Sie nachverfolgen, ob das Video gerade abspielt. Wenn ja, rufen Sie die [**IMFPMediaPlayer::UpdateVideo-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-updatevideo) auf. Diese Methode bewirkt, dass das Player-Objekt den letzten Videoframe neu gezeichnet hat.
 
-Wenn kein Video vorhanden ist, ist die Anwendung dafür verantwortlich, das Fenster zu zeichnen. In diesem Tutorial Ruft die Anwendung einfach die GDI **fillRect** -Funktion auf, um den gesamten Client Bereich auszufüllen.
+Wenn kein Video angezeigt wird, ist die Anwendung für das Malen des Fensters verantwortlich. In diesem Tutorial ruft die Anwendung einfach die GDI **FillRect-Funktion** auf, um den gesamten Clientbereich zu füllen.
 
 
 ```C++
@@ -332,7 +332,7 @@ void OnPaint(HWND hwnd)
 
 
 
-Geben Sie für die Meldung **WM \_ size** den Wert [**imfpmediaplayer:: Updatevideo**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-updatevideo)ein. Diese Methode bewirkt, dass das Player-Objekt das Video mit der aktuellen Fenstergröße umpasst. Beachten Sie, dass **Updatevideo** sowohl für **WM \_ Paint** als auch für **WM \_ size** verwendet wird.
+Rufen Sie **für die \_ WM SIZE-Meldung** [**IMFPMediaPlayer::UpdateVideo auf.**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-updatevideo) Diese Methode bewirkt, dass das Player-Objekt das Video an die aktuelle Größe des Fensters anpasst. Beachten **Sie, dass UpdateVideo** sowohl für **WM \_ PAINT** als auch **für WM SIZE verwendet \_ wird.**
 
 
 ```C++
@@ -351,7 +351,7 @@ void OnSize(HWND /*hwnd*/, UINT state, int /*cx*/, int /*cy*/)
 
 
 
-Geben Sie für die Meldung zum **\_ Schließen der WM** den [**imfpmediaplayer**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) -und den [**imfpmediaplayercallback**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) -Zeiger frei.
+Geben Sie **für die \_ WM CLOSE-Nachricht** die [**Zeiger IMFPMediaPlayer**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) und [**IMFPMediaPlayerCallback**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) frei.
 
 
 ```C++
@@ -365,26 +365,26 @@ void OnClose(HWND /*hwnd*/)
 
 
 
-## <a name="implement-the-callback-method"></a>Implementieren der Rückruf Methode
+## <a name="implement-the-callback-method"></a>Implementieren der Rückrufmethode
 
-Die [**imfpmediaplayercallback**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) -Schnittstelle definiert eine einzige Methode, [**onmediaplayerevent**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent). Diese Methode benachrichtigt die Anwendung immer dann, wenn während der Wiedergabe ein Ereignis auftritt. Die-Methode nimmt einen Parameter an, einen Zeiger auf eine [**MFP- \_ Ereignis \_ Header**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) Struktur. Der **eeventtype** -Member der-Struktur gibt das Ereignis an, das aufgetreten ist.
+Die [**IMFPMediaPlayerCallback-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) definiert eine einzelne Methode, [**OnMediaPlayerEvent.**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) Diese Methode benachrichtigt die Anwendung, wenn während der Wiedergabe ein Ereignis auftritt. Die -Methode akzeptiert einen Parameter, einen Zeiger auf eine [**MFP \_ EVENT \_ HEADER-Struktur.**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) Der **eEventType-Member** der -Struktur gibt das aufgetretene Ereignis an.
 
-Auf die [**MFP- \_ Ereignis \_ Header**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) Struktur folgen möglicherweise weitere Daten. Für jeden Ereignistyp wird ein Makro definiert, das den **MFP- \_ Ereignis \_ Header** Zeiger in eine ereignisspezifische Struktur umwandelt. (Siehe [**MFP \_ - \_ Ereignistyp**](/windows/desktop/api/mfplay/ne-mfplay-mfp_event_type).)
+Auf [**die MFP \_ EVENT \_ HEADER-Struktur**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) können zusätzliche Daten folgen. Für jeden Ereignistyp wird ein Makro definiert, das den **MFP \_ EVENT \_ HEADER-Zeiger** in eine ereignisspezifische Struktur umformt. (Siehe [**\_ MFP-EREIGNISTYP \_**](/windows/desktop/api/mfplay/ne-mfplay-mfp_event_type).)
 
-Für dieses Tutorial sind zwei Ereignisse maßgeblich:
+Für dieses Tutorial sind zwei Ereignisse von Bedeutung:
 
 
 
 | Ereignis                                    | BESCHREIBUNG                                                                                       |
 |------------------------------------------|---------------------------------------------------------------------------------------------------|
-| **MFP \_ - \_ Ereignistyp \_ mediaitem \_ erstellt** | Wird gesendet, wenn die " [**kreatemediaitemfromurl**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) " abgeschlossen ist. |
-| **MFP \_ - \_ Ereignistyp \_ mediaitem \_ festgelegt**     | Wird gesendet, wenn [**setmediaitem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) abgeschlossen ist.                         |
+| **\_ \_ MFP-EREIGNISTYP \_ MEDIAITEM \_ ERSTELLT** | Wird gesendet, [**wenn CreateMediaItemFromURL**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) abgeschlossen ist. |
+| **\_ \_ MFP-EREIGNISTYP \_ MEDIAITEM \_ SET**     | Wird [**gesendet, wenn SetMediaItem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) abgeschlossen ist.                         |
 
 
 
  
 
-Der folgende Code zeigt, wie Sie den [**MFP- \_ Ereignis \_ Header**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) Zeiger in die ereignisspezifische Struktur umwandeln.
+Der folgende Code zeigt, wie der [**MFP \_ EVENT \_ HEADER-Zeiger**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) in die ereignisspezifische Struktur umgeformt wird.
 
 
 ```C++
@@ -411,7 +411,7 @@ void MediaPlayerCallback::OnMediaPlayerEvent(MFP_EVENT_HEADER * pEventHeader)
 
 
 
-Mit dem Ereignis **MFP- \_ \_ Ereignistyp \_ mediaitem \_ wurde** die Anwendung benachrichtigt, dass die [**imfpmediaplayer:: foratemediaitemfromurl**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) -Methode abgeschlossen wurde. Die Ereignis Struktur enthält einen Zeiger auf die [**imfpmediaitem**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaitem) -Schnittstelle, die das aus der URL erstellte Medien Element darstellt. Um das Element für die Wiedergabe in die Warteschlange zu stellen, übergeben Sie diesen Zeiger an die [**imfpmediaplayer:: setmediaitem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) -Methode:
+Das **MFP \_ EVENT TYPE \_ \_ MEDIAITEM \_ CREATED-Ereignis** benachrichtigt die Anwendung, dass die [**IMFPMediaPlayer::CreateMediaItemFromURL-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) abgeschlossen wurde. Die Ereignisstruktur enthält einen Zeiger auf die [**IMFPMediaItem-Schnittstelle,**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaitem) die das aus der URL erstellte Medienelement darstellt. Um das Element für die Wiedergabe in die Warteschlange zu stellen, übergeben Sie diesen Zeiger an die [**IMFPMediaPlayer::SetMediaItem-Methode:**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem)
 
 
 ```C++
@@ -445,7 +445,7 @@ void OnMediaItemCreated(MFP_MEDIAITEM_CREATED_EVENT *pEvent)
 
 
 
-Der Ereignis Ereignis **\_ \_ \_ \_ Satz "mediaitem" vom MFP-Ereignistyp** benachrichtigt die Anwendung, dass [**setmediaitem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) abgeschlossen wurde. [**Imfpmediaplayer wird aufgerufen::P Lay**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-play) , um die Wiedergabe zu starten:
+Das **MFP \_ EVENT TYPE \_ \_ MEDIAITEM \_ SET-Ereignis** benachrichtigt die Anwendung, dass [**SetMediaItem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) abgeschlossen wurde. Rufen [**Sie IMFPMediaPlayer::P lay auf,**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-play) um die Wiedergabe zu starten:
 
 
 ```C++
@@ -463,7 +463,7 @@ void OnMediaItemSet(MFP_MEDIAITEM_SET_EVENT * /*pEvent*/)
 
 ## <a name="implement-winmain"></a>Implementieren von WinMain
 
-Im restlichen Teil dieses Tutorials gibt es keine Aufrufe von Media Foundation-APIs. Der folgende Code zeigt die Fenster Prozedur:
+Im weiteren Verlauf dieses Tutorials werden keine Aufrufe Media Foundation APIs. Der folgende Code zeigt die Fensterprozedur:
 
 
 ```C++
@@ -487,7 +487,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 
-Die `InitializeWindow` -Funktion registriert die Fenster Klasse der Anwendung und erstellt das Fenster.
+Die `InitializeWindow` -Funktion registriert die Fensterklasse der Anwendung und erstellt das Fenster.
 
 
 ```C++
@@ -527,7 +527,7 @@ BOOL InitializeWindow(HWND *pHwnd)
 
 
 
-Implementieren Sie schließlich den Anwendungs Einstiegspunkt:
+Implementieren Sie abschließend den Anwendungseinstiegspunkt:
 
 
 ```C++
@@ -568,7 +568,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 <dl> <dt>
 
-[Verwenden von MF Play für die Audiowiedergabe und Video Wiedergabe](using-mfplay-for-audio-video-playback.md)
+[Verwenden von MFPlay für die Audio-/Videowiedergabe](using-mfplay-for-audio-video-playback.md)
 </dt> </dl>
 
  

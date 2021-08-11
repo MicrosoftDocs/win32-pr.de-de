@@ -1,19 +1,19 @@
 ---
-description: Gibt den Schutz der Bildschirm Abfälle deaktivieren an.
+description: Gibt an, dass der Schutz vor Bildschirmabwrackung deaktiviert wird.
 ms.assetid: 2CA548FC-0923-4E02-BFEE-A5179C0C5110
-title: MFPROTECTION_DISABLE_SCREEN_SCRAPE-Attribut (mspdl. h)
+title: MFPROTECTION_DISABLE_SCREEN_SCRAPE -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7577e3efc9e52419ed965a4599841543d565d722
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c97de33bd4ebbf7b66693881a9eedddcae7c14d9ac0d773d82ce3a23e952b832
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118241621"
 ---
-# <a name="mfprotection_disable_screen_scrape-attribute"></a>MF Protection \_ - \_ Bildschirm Abbild \_ Attribut deaktivieren
+# <a name="mfprotection_disable_screen_scrape-attribute"></a>MFPROTECTION \_ DISABLE \_ SCREEN \_ SCRAPE-Attribut
 
-Gibt den Schutz der Bildschirm Abfälle deaktivieren an.
+Gibt an, dass der Schutz vor Bildschirmabwrackung deaktiviert wird.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,9 +25,9 @@ Gibt den Schutz der Bildschirm Abfälle deaktivieren an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -35,7 +35,7 @@ Gibt den Schutz der Bildschirm Abfälle deaktivieren an.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

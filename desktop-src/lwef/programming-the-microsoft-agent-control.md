@@ -1,32 +1,32 @@
 ---
-title: Programmieren des Microsoft-agentsteuerelements
-description: Programmieren des Microsoft-agentsteuerelements
+title: Programmieren des Microsoft Agent-Steuerelements
+description: Programmieren des Microsoft Agent-Steuerelements
 ms.assetid: 06a145fe-bac9-493a-bac5-e80cb2ef3159
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c61a147aa6da14371bd425923781612b4050d687
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 81a299c7be5b9e826a152d6de49586694ca4bf1d7d7e480dcd49e02595e70fc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118246966"
 ---
-# <a name="programming-the-microsoft-agent-control"></a>Programmieren des Microsoft-agentsteuerelements
+# <a name="programming-the-microsoft-agent-control"></a>Programmieren des Microsoft Agent-Steuerelements
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
-Obwohl Anwendungen mithilfe der Automatisierungsserver Schnittstellen direkt in die Microsoft-Agent-Dienste schreiben können, enthält der Microsoft-Agent auch ein ActiveX-Steuerelement (OLE). Das-Steuerelement unterstützt die einfache Programmierung mithilfe einer Skriptsprache wie Microsoft Visual Basic Scripting Edition (VBScript) oder anderen Sprachen, die die ActiveX-Steuerelement Schnittstelle unterstützen.
+Obwohl Anwendungen über die Automatisierungsserverschnittstellen direkt in die Microsoft Agent-Dienste schreiben können, enthält Microsoft Agent auch ein ActiveX-Steuerelement (OLE). Das Steuerelement unterstützt die einfache Programmierung mit einer Skriptsprache wie Microsoft Visual Basic Scripting Edition (VBScript) oder anderen Sprachen, die die ActiveX unterstützen.
 
--   [Dokument Konventionen](document-conventions.md)
+-   [Dokumentkonventionen](document-conventions.md)
 -   [Zugreifen auf das Steuerelement in Webseiten](accessing-the-control-in-web-pages.md)
--   [Zugreifen auf Sprachdienste](accessing-speech-services-.md)
+-   [Zugreifen auf Speech-Dienste](accessing-speech-services-.md)
 -   [Zugreifen auf das Steuerelement über Visual Basic und andere Programmiersprachen](accessing-the-control-from-visual-basic-and-other-programming-languages.md)
--   [Direktes Zugreifen auf Microsoft-Agent-Dienste](accessing-microsoft-agent-services-directly.md)
--   [Verweis](reference-.md)
+-   [Direkter Zugriff auf Microsoft Agent-Dienste](accessing-microsoft-agent-services-directly.md)
+-   [Referenz](reference-.md)
 
- 
+ 
 
- 
+ 
 
 
 

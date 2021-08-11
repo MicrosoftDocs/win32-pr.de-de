@@ -1,31 +1,31 @@
 ---
-description: Legt die unter Stichproben Zuordnung für das Beispiel fest, das die unverschlüsselten und verschlüsselten Bytes in den Beispiel Daten angibt.
+description: Legt die Unterbeispielzuordnung für das Beispiel fest, die die eindeutigen und verschlüsselten Bytes in den Beispieldaten angibt.
 ms.assetid: E672F53D-2083-430B-90D2-A1DA482EF9E1
-title: MFSampleExtension_Encryption_SubSampleMappingSplit-Attribut (mfapi. h)
+title: MFSampleExtension_Encryption_SubSampleMappingSplit Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c90fb6ae22417f059bfa3268382877363178940
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19f10f845b337ab92774f36b46940fe9d5203ca3a672f573e33fbcea26e96e16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118240793"
 ---
-# <a name="mfsampleextension_encryption_subsamplemappingsplit-attribute"></a>MF SampleExtension \_ Encryption \_ subsamplemappingsplit-Attribut
+# <a name="mfsampleextension_encryption_subsamplemappingsplit-attribute"></a>MFSampleExtension \_ Encryption \_ SubSampleMappingSplit-Attribut
 
-Legt die unter Stichproben Zuordnung für das Beispiel fest, das die unverschlüsselten und verschlüsselten Bytes in den Beispiel Daten angibt.
+Legt die Unterbeispielzuordnung für das Beispiel fest, die die eindeutigen und verschlüsselten Bytes in den Beispieldaten angibt.
 
 ## <a name="data-type"></a>Datentyp
 
-**BLOB**
+**Blob**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **BLOB** muss ein Array von Byte Bereichen als DWords enthalten, wobei jede zweier DWords eine Menge macht. Das erste DWORD in jeder Gruppe ist die Anzahl der eindeutigen bytes, und das zweite DWORD des Satzes ist die Anzahl verschlüsselter Bytes. Beachten Sie, dass es sich bei einem Paar von 0s nicht um einen gültigen Satz handelt (jeder Wert kann 0 sein, aber nicht beides). Das Array von Byte Bereichen gibt an, welche Bereiche entschlüsselt werden sollen, einschließlich der Möglichkeit, dass die gesamte Stichprobe nicht entschlüsselt werden soll. Es wird empfohlen, dass dies nicht für klare Beispiele festgelegt wird, obwohl es möglich ist, dasselbe Ergebnis zu erzielen, indem es die entsprechenden Werte festlegt.
+Das **BLOB** sollte ein Array von Bytebereichen als DWORDs enthalten, wobei alle zwei DWORDs einen Satz machen. Das erste DWORD in jeder Menge ist die Anzahl der eindeutigen Bytes, und das zweite DWORD der Menge ist die Anzahl der verschlüsselten Bytes. Beachten Sie, dass ein 0s-Paar kein gültiger Satz ist (beide Werte können 0 sein, aber nicht beide). Das Array von Bytebereichen gibt an, welche Bereiche entschlüsselt werden sollen, einschließlich der Möglichkeit, dass das gesamte Beispiel nicht entschlüsselt werden soll. Es wird empfohlen, dies nicht für eindeutige Stichproben festzulegen, obwohl es möglich ist, das gleiche Ergebnis zu erzielen, indem Sie es mit den entsprechenden Werten festlegen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie mfsampleextension \_ Encryption \_ subsamplemappingsplit festgelegt wird.
+Das folgende Beispiel zeigt, wie MFSampleExtension \_ Encryption \_ SubSampleMappingSplit festgelegt wird.
 
 
 ```C++
@@ -46,9 +46,9 @@ m_spSample->SetBlob( MFSampleExtension_Encryption_SubSampleMappingSplit,
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -59,10 +59,10 @@ m_spSample->SetBlob( MFSampleExtension_Encryption_SubSampleMappingSplit,
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DIESSAMPLE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 </dt> <dt>
 
-[MF SampleExtension- \_ Inhalts \_ Schlüssel-ID](mfsampleextension-content-keyid.md)
+[MFSampleExtension \_ Content \_ KeyID](mfsampleextension-content-keyid.md)
 </dt> </dl>
 
  

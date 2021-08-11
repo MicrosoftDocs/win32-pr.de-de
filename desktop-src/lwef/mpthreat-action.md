@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_ACTION-Enumeration (mpclient. h)
-description: Mögliche Bedrohungs Aktionen.
+title: MPTHREAT_ACTION-Enumeration (MpClient.h)
+description: Mögliche Bedrohungsaktionen.
 ms.assetid: 142249A5-4C9D-4E3A-A06E-70C040F9C14F
 keywords:
-- MPTHREAT_ACTION-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_ACTION enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_ACTION enumeration Legacy Windows Environment Features
+- PMPTHREAT_ACTION-Enumerationszeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ae0377517af590072b797a57c051ad062842ea9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8a3cd46583b9736ad8304c16e3b12d4f0157edcdb319fd0923a0fe737d504415
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118247264"
 ---
-# <a name="mpthreat_action-enumeration"></a>Mpthreat \_ Action-Enumeration
+# <a name="mpthreat_action-enumeration"></a>MPTHREAT \_ ACTION-Enumeration
 
-Mögliche Bedrohungs Aktionen.
+Mögliche Bedrohungsaktionen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ typedef enum tagMPTHREAT_ACTION {
 
 <dl> <dt>
 
-<span id="MP_THREAT_ACTION_UNKNOWN"></span><span id="mp_threat_action_unknown"></span>**MP- \_ Bedrohungs \_ Aktion \_ unbekannt**
+<span id="MP_THREAT_ACTION_UNKNOWN"></span><span id="mp_threat_action_unknown"></span>**MP \_ THREAT \_ ACTION \_ UNKNOWN**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_CLEAN"></span><span id="mp_threat_action_clean"></span>**Management Pack- \_ Bedrohungs \_ Aktion \_ bereinigt**
+<span id="MP_THREAT_ACTION_CLEAN"></span><span id="mp_threat_action_clean"></span>**MP \_ THREAT \_ ACTION \_ CLEAN**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_QUARANTINE"></span><span id="mp_threat_action_quarantine"></span>**\_Quarantäne mit Bedrohungs \_ Aktion \_**
+<span id="MP_THREAT_ACTION_QUARANTINE"></span><span id="mp_threat_action_quarantine"></span>**MP \_ THREAT \_ ACTION \_ QUARANTINE**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_REMOVE"></span><span id="mp_threat_action_remove"></span>**MP- \_ Bedrohungs \_ Aktion \_ Entfernen**
+<span id="MP_THREAT_ACTION_REMOVE"></span><span id="mp_threat_action_remove"></span>**MP \_ THREAT \_ ACTION \_ REMOVE**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_ALLOW"></span><span id="mp_threat_action_allow"></span>**MP- \_ Bedrohungs \_ Aktion \_ zulassen**
+<span id="MP_THREAT_ACTION_ALLOW"></span><span id="mp_threat_action_allow"></span>**MP \_ THREAT \_ ACTION \_ ALLOW**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_USERDEFINED"></span><span id="mp_threat_action_userdefined"></span>**MP- \_ Bedrohungs \_ Aktion \_ UserDefined**
+<span id="MP_THREAT_ACTION_USERDEFINED"></span><span id="mp_threat_action_userdefined"></span>**MP \_ THREAT \_ ACTION \_ USERDEFINED**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_NOACTION"></span><span id="mp_threat_action_noaction"></span>**MP- \_ Bedrohungs \_ Aktion \_ NoAction**
+<span id="MP_THREAT_ACTION_NOACTION"></span><span id="mp_threat_action_noaction"></span>**MP \_ THREAT \_ ACTION \_ NOACTION**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_BLOCK"></span><span id="mp_threat_action_block"></span>**MP- \_ Bedrohungs \_ Aktions \_ Block**
+<span id="MP_THREAT_ACTION_BLOCK"></span><span id="mp_threat_action_block"></span>**MP \_ THREAT \_ ACTION \_ BLOCK**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_ACTION_MAX_VALUE"></span><span id="mp_threat_action_max_value"></span>**Maximalwert für MP- \_ Bedrohungs \_ Aktion \_ \_**
+<span id="MP_THREAT_ACTION_MAX_VALUE"></span><span id="mp_threat_action_max_value"></span>**\_MAX. WERT DER \_ MP-BEDROHUNGSAKTION \_ \_**
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -82,9 +82,9 @@ typedef enum tagMPTHREAT_ACTION {
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
