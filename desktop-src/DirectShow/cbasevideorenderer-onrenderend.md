@@ -1,7 +1,7 @@
 ---
-description: Die onrenderend-Methode führt Glättung für Fälle aus, bei denen die Renderingzeit aufgrund von Unterbrechungen variiert.
+description: Die OnRenderEnd-Methode führt die Glättung für Fälle aus, in denen die Renderingzeit aufgrund von Unterbrechungen variiert.
 ms.assetid: 561b3306-0c41-4f04-b73a-78e7b4038e86
-title: Cbasevideorenderer. onrenderend-Methode (renbase. h)
+title: CBaseVideoRenderer.OnRenderEnd-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8f37b4d03f77090f4cac40a218fd3ac27c0c349d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 24d622ec62b27ae2e85eb9bef37516c82acbb17e03bef9a51b161edacd0b95c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658687"
 ---
-# <a name="cbasevideorendereronrenderend-method"></a>Cbasevideorenderer. onrenderend-Methode
+# <a name="cbasevideorendereronrenderend-method"></a>CBaseVideoRenderer.OnRenderEnd-Methode
 
-Die- `OnRenderEnd` Methode führt Glättung in Fällen aus, in denen die Renderingzeit aufgrund von Unterbrechungen variiert
+Die `OnRenderEnd` -Methode führt die Glättung für Fälle aus, in denen die Renderingzeit aufgrund von Unterbrechungen variiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void OnRenderEnd(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf das Medien Beispiel.
+Zeiger auf das Medienbeispiel.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Zeiger auf das Medien Beispiel.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion sollte direkt nach dem Zeichnen eines Bilds aufgerufen werden.
+Diese Memberfunktion sollte direkt nach dem Zeichnen eines Bilds aufgerufen werden.
 
-Diese Member-Funktion überschreibt [**cbaserenderer:: onrenderend**](cbaserenderer-onrenderend.md).
+Diese Memberfunktion überschreibt [**CBaseRenderer::OnRenderEnd**](cbaserenderer-onrenderend.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Diese Member-Funktion überschreibt [**cbaserenderer:: onrenderend**](cbaserende
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

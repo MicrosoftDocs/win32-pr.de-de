@@ -1,11 +1,11 @@
 ---
-title: Player. MediaError-Ereignis
-description: Das MediaError-Ereignis tritt auf, wenn das Medienobjekt einen Fehlerzustand aufweist.
+title: Player.MediaError-Ereignis
+description: Das MediaError-Ereignis tritt auf, wenn das Medienobjekt eine Fehlerbedingung aufweist.
 ms.assetid: b2e0176a-cc52-4f59-8894-440f426a1b6e
 keywords:
-- Media Player "MediaError-Ereignisfenster"
-- MediaError-Ereignis, Windows Media Player, Player-Klasse
-- Player-Klasse Windows Media Player, MediaError-Ereignis
+- MediaError-Ereignis Windows Media Player
+- MediaError-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , MediaError-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec8c22825f4aa720efa85275ce520eb81f082fd9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cb1eb94d245f0b0a91786b2b1a7b677429cc9040d8cbb1372164bf6e7ed209d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572840"
 ---
-# <a name="playermediaerror-event"></a>Player. MediaError-Ereignis
+# <a name="playermediaerror-event"></a>Player.MediaError-Ereignis
 
-Das **MediaError** -Ereignis tritt auf, wenn das **Medien** Objekt einen Fehlerzustand aufweist.
+Das **MediaError-Ereignis** tritt auf, wenn das **Medienobjekt** eine Fehlerbedingung aufweist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.MediaError(
 
 <dl> <dt>
 
-*pmediaobject* 
+*pMediaObject* 
 </dt> <dd>
 
-Ein **Medien** Objekt, das über eine Fehlerbedingung verfügt.
+**Medienobjekt,** das eine Fehlerbedingung aufweist.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Ein **Medien** Objekt, das über eine Fehlerbedingung verfügt.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,7 +1,7 @@
 ---
-description: Die dosetwindowfore-Methode führt das Fenster in den Vordergrund.
+description: Die DoSetWindowForeground-Methode bringt das Fenster in den Vordergrund.
 ms.assetid: 5aace88b-14c0-41ce-95a3-0e255ca56ae6
-title: Cbasewindow. dosetwindowvorder Grund-Methode (winutil. h)
+title: CBaseWindow.DoSetWindowForeground-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 16a4c8bf41c042c99624289fa26fe252dee62747
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f0d0dd99f5e2c5e5afffb78066a9380c56f744a4ba54b64bf987df15ea58862
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658019"
 ---
-# <a name="cbasewindowdosetwindowforeground-method"></a>Cbasewindow. dosetwindowvorder Grund-Methode
+# <a name="cbasewindowdosetwindowforeground-method"></a>CBaseWindow.DoSetWindowForeground-Methode
 
-Die- `DoSetWindowForeground` Methode stellt das Fenster in den Vordergrund.
+Die `DoSetWindowForeground` -Methode bringt das Fenster in den Vordergrund.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void DoSetWindowForeground(
 
 <dl> <dt>
 
-*bfocus* 
+*bFocus* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob dem Fenster Fokus zugewiesen werden soll. Wenn der Wert **true** ist, erhält das Fenster den Fokus.
+Boolescher Wert, der angibt, ob das Fenster den Fokus erhalten soll. Wenn der Wert **TRUE ist,** erhält das Fenster den Fokus.
 
 </dd> </dl>
 
@@ -59,16 +59,16 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

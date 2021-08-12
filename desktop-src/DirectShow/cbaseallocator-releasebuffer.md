@@ -1,7 +1,7 @@
 ---
-description: 'Die ReleaseBuffer-Methode gibt ein Medien Beispiel an die Liste der Beispiele für freie Medien zurück. Diese Methode implementiert die imemzuzucator:: ReleaseBuffer-Methode.'
+description: Die ReleaseBuffer-Methode gibt ein Medienbeispiel an die Liste kostenloser Medienbeispiele zurück. Diese Methode implementiert die IMemAllocator::ReleaseBuffer-Methode.
 ms.assetid: 35e4e426-044c-4e57-af13-2fddf8501db7
-title: Cbasezucator. ReleaseBuffer-Methode (amfilter. h)
+title: CBaseAllocator.ReleaseBuffer-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8e339f3a8186e845e28261633806a61b1b15c281
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5d1096cc7cd4ed31346b38719a3f622edf780408fd50262d93515f68d92b421d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118661506"
 ---
-# <a name="cbaseallocatorreleasebuffer-method"></a>Cbasezucator. ReleaseBuffer-Methode
+# <a name="cbaseallocatorreleasebuffer-method"></a>CBaseAllocator.ReleaseBuffer-Methode
 
-Die- `ReleaseBuffer` Methode gibt ein Medien Beispiel zur Liste der Beispiele für freie Medien zurück. Diese Methode implementiert die [**imemzuzucator:: ReleaseBuffer**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-releasebuffer) -Methode.
+Die `ReleaseBuffer` -Methode gibt ein Medienbeispiel an die Liste der Beispiele für kostenlose Medien zurück. Diese Methode implementiert die [**IMemAllocator::ReleaseBuffer-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-releasebuffer)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT ReleaseBuffer(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Medien Beispiel Objekts.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Medienbeispielobjekts.
 
 </dd> </dl>
 
@@ -53,14 +53,14 @@ Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasa
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Verweis Zähler eines Medien Beispiels Null erreicht, ruft das Beispiel **ReleaseBuffer** mit sich selbst als Parameter auf. Diese Methode führt die folgenden Aktionen aus.
+Wenn der Verweiszähler eines Medienbeispiels 0 (null) erreicht, ruft das Beispiel **ReleaseBuffer** mit sich selbst als Parameter auf. Diese Methode führt die folgenden Aktionen aus.
 
--   Gibt das Medien Beispiel in der kostenlosen Liste ([**cbasezucator:: m \_ lfree**](cbaseallocator-m-lfree.md)) zurück.
--   Ruft die [**cbasezucator:: notifysample**](cbaseallocator-notifysample.md) -Methode auf, die alle Threads freigibt, die bei Aufrufen der [**cbasezucator:: GetBuffer**](cbaseallocator-getbuffer.md) -Methode blockiert werden.
--   Wenn die [**cbasedepcator:: setnotify**](cbaseallocator-setnotify.md) -Methode zuvor aufgerufen wurde, ruft die **imemzuzucatornotifycallbacktemp:: notifyrelease** -Methode auf.
--   Wenn das letzte Beispiel freigegeben ist, wenn ein [**ausstehender cbasebelegcator::D ecommit**](cbaseallocator-decommit.md) -Aufruf vorhanden ist, ruft die [**cbasezucator:: Free**](cbaseallocator-free.md) -Methode auf, um den Pufferspeicher freizugeben. (In der Basisklasse ist **Free** eine rein virtuelle Methode.)
+-   Gibt das Medienbeispiel an die Freie Liste zurück ([**CBaseAllocator::m \_ lFree**](cbaseallocator-m-lfree.md)).
+-   Ruft die [**CBaseAllocator::NotifySample-Methode**](cbaseallocator-notifysample.md) auf, die alle Threads freigibt, die bei Aufrufen der [**CBaseAllocator::GetBuffer-Methode**](cbaseallocator-getbuffer.md) blockiert werden.
+-   Wenn die [**CBaseAllocator::SetNotify-Methode**](cbaseallocator-setnotify.md) zuvor aufgerufen wurde, ruft die **IMemAllocatorNotifyCallbackTemp::NotifyRelease-Methode** auf.
+-   Wenn das letzte Beispiel freigegeben wird und ein ausstehender [**CBaseAllocator::D ecommit-Aufruf**](cbaseallocator-decommit.md) vorhanden ist, ruft die [**CBaseAllocator::Free-Methode**](cbaseallocator-free.md) auf, um den Pufferspeicher freizugeben. (In der Basisklasse ist **Free** eine reine virtuelle Methode.)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,16 +68,16 @@ Wenn der Verweis Zähler eines Medien Beispiels Null erreicht, ruft das Beispiel
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

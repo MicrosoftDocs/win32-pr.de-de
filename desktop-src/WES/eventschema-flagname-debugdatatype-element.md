@@ -1,6 +1,6 @@
 ---
-title: FlagName (Debug DataType)-Element
-description: Der Flagwert, der beim Aktivieren an den Anbieter übermittelt wurde.
+title: FlagName(DebugDataType)-Element
+description: Der Flagwert, der beim Aktivieren an den Anbieter übergeben wurde.
 ms.assetid: c47962e4-3aa4-42e6-ad62-47f94a89cf26
 keywords:
 - FlagName-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3bb2e62e1e1447116a6abb2b22ee4c6a944898da
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c3bda2ee7629b4bdc1adf1d7040a9cd5c2c6685db46b14afc7b35c2a823f4df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118588780"
 ---
-# <a name="flagname-debugdatatype-element"></a>FlagName (Debug DataType)-Element
+# <a name="flagname-debugdatatype-element"></a>FlagName(DebugDataType)-Element
 
-Der Flagwert, der beim Aktivieren an den Anbieter übermittelt wurde.
+Der Flagwert, der beim Aktivieren an den Anbieter übergeben wurde.
 
 ``` syntax
 <xs:element name="FlagName"
@@ -30,7 +30,7 @@ Der Flagwert, der beim Aktivieren an den Anbieter übermittelt wurde.
  />
 ```
 
-Das **FlagName** -Element wird durch den komplexen Typ [**debugdatatype**](eventschema-debugdatatype-complextype.md) definiert.
+Das **FlagName-Element** wird durch den komplexen [**DebugDataType-Typ**](eventschema-debugdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **FlagName** -Element wird durch den komplexen Typ [**debugdatatype**](event
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

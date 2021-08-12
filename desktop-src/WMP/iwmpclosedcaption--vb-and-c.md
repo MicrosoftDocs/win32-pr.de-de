@@ -1,10 +1,10 @@
 ---
-title: Iwmpclosedcaption (VB und C)-Schnittstelle (WMP. h)
-description: Bietet eine Möglichkeit zum Einschließen von Untertiteln in eine digitale Mediendatei. Der Beschriftungs Text befindet sich in einer synchronisierten, zugänglichen Medienaustausch Datei (Sami).
+title: IWMPClosedCaption -Schnittstelle (VB und C ) (Wmp.h)
+description: Bietet eine Möglichkeit zum Hinzufügen von Untertiteln zu einer digitalen Mediendatei. Der Beschriftungstext befindet sich in einer SAMI-Datei (Synchronized Accessible Media Interchange).
 ms.assetid: 927f6fe4-5847-439e-9df0-19cc910d887d
 keywords:
-- Iwmpclosedcaption (VB und C) Interface Windows Media Player
-- Iwmpclosedcaption (VB und C) Interface Windows Media Player, beschrieben
+- IWMPClosedCaption -Schnittstelle (VB und C ) Windows Media Player
+- IWMPClosedCaption -Schnittstelle (VB und C ) Windows Media Player , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,43 +15,43 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ce3f697fc5c651a47f257a61bd9841987f54478
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a398d211613238e9ee9d06f1d9a1d6a6cf0bd4bea3a32a818a7fe6a45d8df5cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575948"
 ---
-# <a name="iwmpclosedcaption-vb-and-c-interface"></a>Iwmpclosedcaption-Schnittstelle (VB und c#)
+# <a name="iwmpclosedcaption-vb-and-c-interface"></a>IWMPClosedCaption-Schnittstelle (VB und C#)
 
-Bietet eine Möglichkeit zum Einschließen von Untertiteln in eine digitale Mediendatei. Der Beschriftungs Text befindet sich in einer synchronisierten, zugänglichen Medienaustausch Datei (Sami).
+Bietet eine Möglichkeit zum Hinzufügen von Untertiteln zu einer digitalen Mediendatei. Der Beschriftungstext befindet sich in einer SAMI-Datei (Synchronized Accessible Media Interchange).
 
 ## <a name="members"></a>Member
 
-Die **iwmpclosedcaption (VB und c#)** -Schnittstelle definiert keine Member.
+Die **IWMPClosedCaption-Schnittstelle (VB und C#)** definiert keine Member.
 
-Die **iwmpclosedcaption** -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die **IWMPClosedCaption-Schnittstelle** macht die folgenden Eigenschaften verfügbar.
 
 
 
-| Eigenschaft                                                                             | BESCHREIBUNG                                                                                |
+| Eigenschaft                                                                             | Beschreibung                                                                                |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [captioningid](wmplibiwmpclosedcaption-iwmpclosedcaption-captioningid--vb-and-c.md) | Ruft den Namen des HTML-Elements ab, das die Beschriftung anzeigt, oder legt diesen fest.                       |
-| [Samifilename](wmplibiwmpclosedcaption-iwmpclosedcaption-samifilename--vb-and-c.md) | Ruft den Namen der Datei ab, die die für den Untertitel erforderlichen Informationen enthält, oder legt diesen fest. |
-| [Samilang](wmplibiwmpclosedcaption-iwmpclosedcaption-samilang--vb-and-c.md)         | Ruft die für Untertitel angezeigte Sprache ab oder legt diese fest.                                 |
-| [Samistyle](wmplibiwmpclosedcaption-iwmpclosedcaption-samistyle--vb-and-c.md)       | Ruft den Untertitel Stil ab oder legt diesen fest.                                                  |
+| [captioningId](wmplibiwmpclosedcaption-iwmpclosedcaption-captioningid--vb-and-c.md) | Ruft den Namen des HTML-Elements ab, das die Beschriftung zeigt, oder legt den Namen fest.                       |
+| [SAMIFileName](wmplibiwmpclosedcaption-iwmpclosedcaption-samifilename--vb-and-c.md) | Ruft den Namen der Datei ab, die die für die Untertitelung erforderlichen Informationen enthält, oder legt diesen fest. |
+| [SAMILang](wmplibiwmpclosedcaption-iwmpclosedcaption-samilang--vb-and-c.md)         | Ruft die Sprache ab, die für Untertitel angezeigt wird, oder legt diese fest.                                 |
+| [SAMIStyle](wmplibiwmpclosedcaption-iwmpclosedcaption-samistyle--vb-and-c.md)       | Ruft den Untertitelstil ab oder legt diese fest.                                                  |
 
 
 
  
 
-Verwenden Sie die folgende Eigenschaft, um eine **iwmpclosedcaption** -Schnittstelle zu erhalten.
+Verwenden Sie die folgende Eigenschaft, um eine **IWMPClosedCaption-Schnittstelle** zu erhalten.
 
 
 
 | Object                                                            | Eigenschaft                                                                   |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [AxWindowsMediaPlayer](axwindowsmediaplayer-object--vb-and-c.md) | [closedcaption](axwmplib-axwindowsmediaplayer-closedcaption--vb-and-c.md) |
+| [AxWindowsMediaPlayer](axwindowsmediaplayer-object--vb-and-c.md) | [closedCaption](axwmplib-axwindowsmediaplayer-closedcaption--vb-and-c.md) |
 
 
 
@@ -63,7 +63,7 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpclosedcaption** -Schnittst
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -74,10 +74,10 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpclosedcaption** -Schnittst
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**IWMPClosedCaption2-Schnittstelle (VB und c#)**](iwmpclosedcaption2--vb-and-c.md)
+[**IWMPClosedCaption2-Schnittstelle (VB und C#)**](iwmpclosedcaption2--vb-and-c.md)
 </dt> </dl>
 
  

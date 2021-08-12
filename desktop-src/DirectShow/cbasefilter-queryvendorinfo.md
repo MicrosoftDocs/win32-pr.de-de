@@ -1,7 +1,7 @@
 ---
-description: 'Die queryvendorinfo-Methode ruft eine Zeichenfolge ab, die Hersteller Informationen enthält. Diese Methode implementiert die ibasefilter:: queryvendorinfo-Methode.'
+description: Die QueryVendorInfo-Methode ruft eine Zeichenfolge mit Herstellerinformationen ab. Diese Methode implementiert die IBaseFilter::QueryVendorInfo-Methode.
 ms.assetid: 083c0556-d516-4daf-8621-e158ea78b5a3
-title: Cbasefilter. queryvendorinfo-Methode (amfilter. h)
+title: CBaseFilter.QueryVendorInfo-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1786477c042bb1d9ecc6340056a771141d0a3c74
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff1cd8b966456df631a573ab2e8691b3be5d8bda47b21b042986204144e639b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118659803"
 ---
-# <a name="cbasefilterqueryvendorinfo-method"></a>Cbasefilter. queryvendorinfo-Methode
+# <a name="cbasefilterqueryvendorinfo-method"></a>CBaseFilter.QueryVendorInfo-Methode
 
-Die- `QueryVendorInfo` Methode ruft eine Zeichenfolge ab, die Hersteller Informationen enthält. Diese Methode implementiert die [**ibasefilter:: queryvendorinfo**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-queryvendorinfo) -Methode.
+Die `QueryVendorInfo` -Methode ruft eine Zeichenfolge mit Herstellerinformationen ab. Diese Methode implementiert die [**IBaseFilter::QueryVendorInfo-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-queryvendorinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT QueryVendorInfo(
 
 <dl> <dt>
 
-*pvendorinfo* 
+*pVendorInfo* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf eine breit Zeichen-Zeichenfolge mit den Hersteller Informationen empfängt.
+Adresse einer Variablen, die einen Zeiger auf eine Zeichenfolge mit Breitzeichen empfängt, die die Herstellerinformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E \_ notimpl" zurück.
+Gibt E \_ NOTIMPL zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode, um Hersteller Informationen für einen Filter bereitzustellen. Wenn Sie diese Methode implementieren, verwenden Sie die **CoTaskMemAlloc** -Funktion, um Arbeitsspeicher für die Zeichenfolge zuzuweisen. Der Aufrufer ist für das Aufrufen der **CoTaskMemFree** -Funktion verantwortlich.
+Um Anbieterinformationen für einen Filter bereitzustellen, überschreiben Sie diese Methode. Wenn Sie diese Methode implementieren, verwenden Sie die **CoTaskMemAlloc-Funktion,** um Speicher für die Zeichenfolge zuzuordnen. Der Aufrufer ist für den Aufruf der **CoTaskMemFree-Funktion** verantwortlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Gibt "E \_ notimpl" zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
-description: Aktiviert oder deaktiviert die Hardwarebeschleunigung für das Decodieren von VC-1-Videos.
+description: Aktiviert oder deaktiviert die Hardwarebeschleunigung für die VC-1-Videodecodierung.
 ms.assetid: eee85330-098e-4f21-81b7-a493abbd599b
-title: AVDecVideoAcceleration_VC1-Eigenschaft (codecapi. h)
+title: AVDecVideoAcceleration_VC1 -Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fcdbe265f5a65212a2846b724f570b024ea0ab8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1767206fab479dbcae1dec5e768b21d768440a66776b1f41610b75be4190d6c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663839"
 ---
-# <a name="avdecvideoacceleration_vc1-property"></a>Avdecvideoacceleration \_ VC1 (Eigenschaft)
+# <a name="avdecvideoacceleration_vc1-property"></a>AVDecVideoAcceleration \_ VC1-Eigenschaft
 
-Aktiviert oder deaktiviert die Hardwarebeschleunigung für das Decodieren von VC-1-Videos.
+Aktiviert oder deaktiviert die Hardwarebeschleunigung für die VC-1-Videodecodierung.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdecvideoacceleration \_ VC1**
+**CODECAPI \_ AVDecVideoAcceleration \_ VC1**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert 0 (null) ist, verwendet der Decoder keine DirectX-Videobeschleunigung (DXVA) für die Video Decodierung von VC-1. Legen Sie diese Eigenschaft für DirectShow-Filter fest, bevor die Ausgabe-PIN des Decoders verbunden ist.
+Wenn der Wert 0 (null) ist, verwendet der Decoder directX Video Acceleration (DXVA) nicht für die VC-1-Videodecodierung. Legen Sie für DirectShow-Filter diese Eigenschaft fest, bevor der Ausgabepin des Decoders verbunden wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Wenn der Wert 0 (null) ist, verwendet der Decoder keine DirectX-Videobeschleunig
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die nächste Methode ruft die nächste Position in der Liste ab.
+description: Die Next-Methode ruft die nächste Position in der Liste ab.
 ms.assetid: ba9753b0-c82e-4772-84a7-e9982de3b8ad
-title: Cbaselist. Next-Methode (wxlist. h)
+title: CBaseList.Next-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f8a09ec91191437fbfb851ce92824b118a5440ca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d07030c046f3fe55178707af297542f383bfd5cf75f40169b5c93cfafa1c698b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658956"
 ---
-# <a name="cbaselistnext-method"></a>Cbaselist. Next-Methode
+# <a name="cbaselistnext-method"></a>CBaseList.Next-Methode
 
-Die- `Next` Methode ruft die nächste Position in der Liste ab.
+Die `Next` -Methode ruft die nächste Position in der Liste ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ POSITION Next(
 *pos* 
 </dt> <dd>
 
-Positionswert.
+POSITION-Wert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Positionsindikator zurück, der der von *POS* angegebenen Position folgt.
+Gibt den Positionsindikator zurück, der der durch pos angegebenen Position *folgt.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *POS* die letzte Position in der Liste ist, gibt die Methode **null** zurück. Wenn *POS* **null** ist, gibt die Methode die erste Position in der Liste zurück.
+Wenn *pos* die letzte Position in der Liste ist, gibt die Methode **NULL zurück.** Wenn *pos* **NULL ist,** gibt die Methode die erste Position in der Liste zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Wenn *POS* die letzte Position in der Liste ist, gibt die Methode **null** zurü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

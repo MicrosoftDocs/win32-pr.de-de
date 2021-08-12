@@ -1,7 +1,7 @@
 ---
-description: Ändern der zu ändernden Scheitel Punkte
+description: Ändern Sie, welche Scheitelpunkte von welchen Ecken beeinflusst werden.
 ms.assetid: b0d71f3e-9a2d-469d-808b-2fa768cf14b0
-title: 'ID3DX10SkinInfo:: remapvertices-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::RemapVertices-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cc51c912794135b456542bb9a8a779601681f393
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d73b9878a43ef876174561f16678f78787b15b88f423ecfb3f1765bd82c84630
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118302476"
 ---
-# <a name="id3dx10skininforemapvertices-method"></a>ID3DX10SkinInfo:: remapvertices-Methode
+# <a name="id3dx10skininforemapvertices-method"></a>ID3DX10SkinInfo::RemapVertices-Methode
 
-Ändern der zu ändernden Scheitel Punkte
+Ändern Sie, welche Scheitelpunkte von welchen Ecken beeinflusst werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT RemapVertices(
 
 <dl> <dt>
 
-*Newvertexcount* \[ in\]
+*NewVertexCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die neue Anzahl von Vertices.
+Die neue Anzahl von Scheitelpunkten.
 
 </dd> <dt>
 
-*pvertexremap* \[ in\]
+*pVertexRemap* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf ein Array von Scheitelpunkt Indizes, die die Neuzuordnung beschreiben. Beispiel: "skininfo" enthält einige Scheitel Punkte, z. b. "bone0", "v0", "bone1 to v1" und "bone2" zu "V2" und "Array mit 2, 1, 0" für "pboneremap". Dies bewirkt, dass bone0 v2, bone1 zu v1 und bone2 zu v0 zugeordnet wird.
+Ein Zeiger auf ein Array von Scheitelpunktindizes, die die Neuzuordnung beschreiben. Angenommen, SkinInfo enthält einige Scheitelpunkte, sodass "skin0" v0, "1" zu "v1" und "2" zu "v2" zugeordnet ist und "array" mit "2,1,0" für pBoneRemap angegeben ist. Dies führt dazu, dass "0" v2, "1" zu "v1" und "2" zu "v0" zugeordnet wird.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Ein Zeiger auf ein Array von Scheitelpunkt Indizes, die die Neuzuordnung beschre
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert lauten: e \_ outo-Memory oder e \_ invalidArg.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert E \_ OUTOFMEMORY oder E \_ INVALIDARG sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

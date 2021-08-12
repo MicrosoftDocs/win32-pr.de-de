@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: a0f6c976f64fe64d3ca583351ae5c7c32aa958fd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ea9b91fe926ecbab34fa65fd6c21f852501b6d515acaf8b9aaa5b8971a27c37b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118304504"
 ---
 # <a name="d3dxmatrixperspectivelh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveLH-Funktion (D3DX10Math.h)
 
@@ -93,11 +93,11 @@ Z-Wert der fernen Ansichtsebene.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine linkshändige Projektionsmatrix handelt.
+Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine linkshändige Perspektivprojektionsmatrix handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter der D3DXMatrixPerspectiveLH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
+Alle Parameter der D3DXMatrixPerspectiveLH-Funktion sind Abstände im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumens.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -117,14 +117,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

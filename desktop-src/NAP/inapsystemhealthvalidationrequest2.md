@@ -1,10 +1,10 @@
 ---
-title: INapSystemHealthValidationRequest2-Schnittstelle (napsystemhealthvalidator. h)
-description: Stellt Methoden bereit, die zur Unterstützung von Systemintegritäts-Validierungs Steuerelementen verwendet werden, die vom Anwendungsentwickler definiert werden.
+title: INapSystemHealthValidationRequest2-Schnittstelle (NapSystemHealthValidator.h)
+description: Stellt Methoden bereit, die zur Unterstützung von Systemzustands-Validierungsprüfern verwendet werden, die vom Anwendungsentwickler definiert werden.
 ms.assetid: 12094203-bb6c-4028-9baf-a2a9b124ce6d
 keywords:
 - INapSystemHealthValidationRequest2-Schnittstelle NAP
-- INapSystemHealthValidationRequest2 Interface NAP, beschrieben
+- INapSystemHealthValidationRequest2-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,50 +15,50 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12fdbfc46578a4e64a92accc46f6b910a44dd946
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2b6438394120ecd901c6de6d7a8ccac40f742d9f73d27a36682de894d9c5a7ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118620849"
 ---
 # <a name="inapsystemhealthvalidationrequest2-interface"></a>INapSystemHealthValidationRequest2-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **INapSystemHealthValidationRequest2** -Schnittstelle stellt Methoden bereit, die zur Unterstützung von Systemintegritäts-Validierungs Steuerelementen verwendet werden, die vom Anwendungsentwickler definiert werden.
+Die **INapSystemHealthValidationRequest2-Schnittstelle** stellt Methoden bereit, die zur Unterstützung von Systemzustandsvalidierungsvalidatoren verwendet werden, die vom Anwendungsentwickler definiert werden.
 
 > [!Note]  
-> Diese Schnittstelle erbt alle Methoden von [**inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md) und sollte stattdessen verwendet werden.
+> Diese Schnittstelle erbt alle Methoden von [**INapSystemHealthValidationRequest**](inapsystemhealthvalidationrequest.md) und sollte stattdessen verwendet werden.
 
  
 
 ## <a name="members"></a>Member
 
-Die **INapSystemHealthValidationRequest2** -Schnittstelle erbt von [**inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md). **INapSystemHealthValidationRequest2** verfügt auch über die folgenden Typen von Membern:
+Die **INapSystemHealthValidationRequest2-Schnittstelle** erbt von [**INapSystemHealthValidationRequest.**](inapsystemhealthvalidationrequest.md) **INapSystemHealthValidationRequest2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **INapSystemHealthValidationRequest2** -Schnittstelle verfügt über diese Methoden.
+Die **INapSystemHealthValidationRequest2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                    | BESCHREIBUNG                                                        |
+| Methode                                                                                                    | Beschreibung                                                        |
 |:----------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
-| [**INapSystemHealthValidationRequest2:: getconfigid**](inapsystemhealthvalidationrequest2-getconfigid.md) | Ruft die Konfigurations-ID in einer Validierungs Anforderung ab.<br/> |
+| [**INapSystemHealthValidationRequest2::GetConfigId**](inapsystemhealthvalidationrequest2-getconfigid.md) | Ruft die Konfigurations-ID in einer Validierungsanforderung ab.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein SHV [**INapComponentConfig3**](inapcomponentconfig3.md)nicht unterstützt, wird diese Schnittstelle nicht angewendet.
+Wenn eine SHV [**INapComponentConfig3**](inapcomponentconfig3.md)nicht unterstützt, gilt diese Schnittstelle nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,18 +67,18 @@ Wenn ein SHV [**INapComponentConfig3**](inapcomponentconfig3.md)nicht unterstüt
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Napsystemhealthvalidator. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthvalidator. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>NapSystemHealthValidator.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthValidator.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qshvhost.dll</dt> </dl>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md)
+[**INapSystemHealthValidationRequest**](inapsystemhealthvalidationrequest.md)
 </dt> <dt>
 
 [NAP-Schnittstellen](nap-interfaces.md)

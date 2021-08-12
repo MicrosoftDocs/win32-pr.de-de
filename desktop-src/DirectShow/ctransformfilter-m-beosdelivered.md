@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob der Filter eine Benachrichtigung über das Ende des Datenstroms gesendet hat.
+description: Flag, das angibt, ob der Filter eine End-of-Stream-Benachrichtigung gesendet hat.
 ms.assetid: 93f897de-04bb-4de4-a612-39b27c7d6f6c
-title: 'Ctransformfilter:: m_bEOSDelivered Member (Transfrm. h)'
+title: CTransformFilter::m_bEOSDelivered-Member (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f24b87f9808c53b5f64f66031a8ee2a4e9449089
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 38d27fabb9dd3ed2a37ed5d836bfdfb1036f4255e6af48580ab6e0678abad74b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655104"
 ---
-# <a name="ctransformfilterm_beosdelivered-member"></a>Ctransformfilter:: m-über \_ mittelte Member
+# <a name="ctransformfilterm_beosdelivered-member"></a>CTransformFilter::m \_ bEOSDelivered-Member
 
-Flag, das angibt, ob der Filter eine Benachrichtigung über das Ende des Datenstroms gesendet hat.
+Flag, das angibt, ob der Filter eine End-of-Stream-Benachrichtigung gesendet hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ BOOL m_bEOSDelivered;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Filter angehalten wird, wenn keine Eingabe Verbindung vorhanden ist, sendet er eine downstreambenachrichtigung und legt dieses Flag auf **true** fest. Die Benachrichtigung über das Ende des Datenstroms stellt sicher, dass der Downstream-Filter nicht auf Stichproben wartet. Beachten Sie, dass die [**EndOf Stream**](ctransformfilter-endofstream.md) -Methode des Filters dieses Flag nicht festgelegt hat.
+Wenn der Filter angehalten wird, wenn er über keine Eingabeverbindung verfügt, sendet er eine End-of-Stream-Benachrichtigung downstream und legt dieses Flag auf **TRUE** fest. Die Benachrichtigung zum Ende des Streams stellt sicher, dass der Downstreamfilter nicht auf Stichproben wartet. Beachten Sie, dass die [**EndOfStream-Methode**](ctransformfilter-endofstream.md) des Filters dieses Flag nicht festgelegt hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Wenn der Filter angehalten wird, wenn keine Eingabe Verbindung vorhanden ist, se
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

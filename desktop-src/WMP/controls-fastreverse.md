@@ -1,11 +1,11 @@
 ---
-title: Controls. fastreverse-Methode
-description: Die fastreverse-Methode startet die schnelle Überprüfung des Medien Elements in umgekehrter Richtung.
+title: Controls.fastReverse-Methode
+description: Die fastReverse-Methode beginnt mit dem schnellen Scannen des Medienelements in umgekehrter Richtung.
 ms.assetid: 4fc61739-9006-4d62-b2c1-2b8e8830f2d9
 keywords:
-- fastreverse-Methode, Windows-Media Player
-- fastreverse-Methode, Windows Media Player, Controls-Klasse
-- Steuerelemente-Klasse, Windows Media Player, fastreverse-Methode
+- fastReverse-Methode Windows Media Player
+- fastReverse-Methode Windows Media Player , Controls-Klasse
+- Steuert die Klasse Windows Media Player , fastReverse-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 73e5a63c4299bf08c25e36e2d61924f3fb171792
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d4643525f66102cbd7b017a4a48f1068489062ec0849f197f1f55df45fc6f1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118580276"
 ---
-# <a name="controlsfastreverse-method"></a>Controls. fastreverse-Methode
+# <a name="controlsfastreverse-method"></a>Controls.fastReverse-Methode
 
-Die **fastreverse** -Methode startet die schnelle Überprüfung des Medien Elements in umgekehrter Richtung.
+Die **fastReverse-Methode** beginnt mit dem schnellen Scannen des Medienelements in umgekehrter Richtung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,19 +44,19 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **fastreverse** -Methode scannt den Clip in umgekehrter Reihenfolge mit dem fünfmal normalen Tempo und zeigt nur die Keyframes an, wenn es sich um eine Videodatei handelt. Durch Aufrufen von **fastreverse** werden die *Einstellungen* geändert. **bewerten** Sie die-Eigenschaft auf 5,0. Wenn die **Rate** anschließend geändert wird **oder wenn "** wiedergeben" oder " **Beenden** " aufgerufen wird, wird Windows Media Player schnell umkehren.
+Die **fastReverse-Methode** scannt den Clip um das Fünffache der Normalgeschwindigkeit in umgekehrter Richtung und zeigt nur die Keyframes an, wenn es sich um eine Videodatei handelt. Durch den Aufruf von **fastReverse** wird die *Einstellungen* geändert. **rate-Eigenschaft** auf 5,0. Wenn **die Rate** anschließend geändert wird oder **Wiedergabe** oder **Beendigung** aufgerufen wird, wird Windows Media Player schnell in umgekehrter Richtung beendet.
 
-Wenn das Element Teil einer Wiedergabeliste ist, wird **fastreverse** am Anfang der aktuellen Spur angehalten. Wenn sich beispielsweise Track 3 in **fastreverse** befindet und der Anfang von Track 3 erreicht wird, wechselt Windows Media Player nicht mehr zu Track 2. Die Wiedergabe Anzahl wird beim Aufrufen von **fastreverse** nicht inkrementiert.
+Wenn das Element Teil einer Wiedergabeliste ist, wird **fastReverse** am Anfang der aktuellen Spur angehalten. Wenn z. B. Track 3 sich in **fastReverse** befindet, wenn der Anfang von Track 3 erreicht ist, wird Windows Media Player nicht zu Track 2 wechseln. Die Wiedergabeanzahl wird beim Aufrufen von **fastReverse** nicht erhöht.
 
-Wenn Sie **FastForward** aufzurufen, während **fastreverse** wirksam ist, wird **fastreverse** angehalten, und **FastForward** wird begonnen.
+Wenn Sie **fastForward** aufrufen, während **fastReverse** wirksam ist, wird **fastReverse** beendet, und **fastForward** beginnt.
 
-Diese Methode funktioniert nicht für Live-Übertragungen und bestimmte Medientypen. Um zu ermitteln, ob Sie fast Reverse in einem Clip verwenden können, nennen Sie **IsAvailable**("fastreverse").
+Diese Methode funktioniert nicht für Liveübertragungen und bestimmte Medientypen. Rufen Sie **isAvailable**("FastReverse") auf, um zu bestimmen, ob Sie schnelles Reverse in einem Clip verwenden können.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **fastreverse** verwendet, um den schnellen umgekehrten Wiedergabe des Medien Elements zu starten. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **fastReverse** verwendet, um die schnelle umgekehrte Wiedergabe des Medienelements zu starten. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -78,7 +78,7 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **fastr
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -90,19 +90,19 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **fastr
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Controls. FastForward**](controls-fastforward.md)
+[**Controls.fastForward**](controls-fastforward.md)
 </dt> <dt>
 
-[**Controls. IsAvailable**](controls-isavailable.md)
+[**Controls.isAvailable**](controls-isavailable.md)
 </dt> <dt>
 
-[**Controls. Play**](controls-play.md)
+[**Controls.play**](controls-play.md)
 </dt> <dt>
 
-[**Controls. Pause**](controls-stop.md)
+[**Controls.stop**](controls-stop.md)
 </dt> <dt>
 
-[**"Settings. Rate"**](settings-rate.md)
+[**Einstellungen.rate**](settings-rate.md)
 </dt> </dl>
 
  

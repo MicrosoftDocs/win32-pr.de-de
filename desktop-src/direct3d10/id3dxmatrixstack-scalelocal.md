@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXMATRIXStack::ScaleLocal-Methode (D3DX10.h): Skaliert die aktuelle Matrix über den Objekt ursprung.'
+description: 'ID3DXMATRIXStack::ScaleLocal-Methode (D3DX10.h): Skaliert die aktuelle Matrix über den Ursprung des Objekts.'
 ms.assetid: 748fce3a-a33c-4975-bbf0-dd3167a036f1
 title: ID3DXMATRIXStack::ScaleLocal-Methode (D3DX10.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 3961db0794703e3974dbd92d8eae8293173c2354
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1e48346f50310bee25c96275dda6b003bf73933ae98c7a49ac6d1dd867dd8ec3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118301578"
 ---
 # <a name="id3dxmatrixstackscalelocal-method-d3dx10h"></a>ID3DXMATRIXStack::ScaleLocal-Methode (D3DX10.h)
 
@@ -75,7 +75,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode multipliziert die aktuelle Matrix mit der berechneten Skalierungsmatrix. Bei der Transformation geht es um den lokalen Ursprung des Objekts.
 
@@ -92,14 +92,14 @@ m_stack[m_currentPos] = tmp * m_stack[m_currentPos];
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

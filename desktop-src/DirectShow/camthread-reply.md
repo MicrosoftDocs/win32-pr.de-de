@@ -1,7 +1,7 @@
 ---
-description: Die Antwortmethode antwortet auf eine Anforderung.
+description: Die Reply-Methode antwortet auf eine Anforderung.
 ms.assetid: 90e91b99-6a1c-46a2-b83d-eba483f1832a
-title: Camthread. Reply-Methode (wxutil. h)
+title: WEBCAMThread.Reply-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5e86e0bc0155e527aa11c26531ae5608e6828362
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9783703d711800b8002aa0372292349d83620eafb097be2256ffde6ab2c91c09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118662366"
 ---
-# <a name="camthreadreply-method"></a>Camthread. Reply-Methode
+# <a name="camthreadreply-method"></a>CAMThread.Reply-Methode
 
-Die- `Reply` Methode antwortet auf eine-Anforderung.
+Die `Reply` -Methode antwortet auf eine Anforderung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void Reply(
 *dw* 
 </dt> <dd>
 
-Wert, der in der Methode " [**camthread:: callworker**](camthread-callworker.md) " zurückgegeben werden soll.
+Wert, der in [**derCAMThread::CallWorker-Methode zurückgeben werden**](camthread-callworker.md) soll.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Wert, der in der Methode " [**camthread:: callworker**](camthread-callworker.md)
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die callworker-Methode blockiert, bis diese Methode aufgerufen wird. Der *DW* -Parameter liefert den Rückgabewert für callworker. Rufen Sie diese Methode in ihrer Thread Prozedur auf, nachdem Sie eine Anforderung abgerufen haben, um den angeforderten Thread freizugeben.
+Die CallWorker-Methode wird blockiert, bis diese Methode aufgerufen wird. Der *dw-Parameter* gibt den Rückgabewert für CallWorker an. Rufen Sie diese Methode in Ihrer Threadprozedur auf, nachdem Sie eine Anforderung abgerufen haben, um den anfordernden Thread frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Die callworker-Methode blockiert, bis diese Methode aufgerufen wird. Der *DW* -P
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**CAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'CBaseMediaFilter::m_tStart-Member: Die Referenzzeit, die der Streamzeit 0 entspricht.'
+description: 'CBaseMediaFilter::m_tStart Member: Verweiszeit, die der Streamzeit 0 entspricht.'
 ms.assetid: e80d2fe0-48fb-494e-9450-b5cae2ec9c9f
 title: CBaseMediaFilter::m_tStart-Member (Amfilter.h)
 ms.topic: reference
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: bdea1f0cdf804c870a712991a09b2a8325d3c34e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a30467af33f2e77fdb51d9feaabadb3b4669cd5e93e7570e75f4fbcf4c3e72fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658893"
 ---
-# <a name="cbasemediafilterm_tstart-member"></a>CBaseMediaFilter::m \_ tStart-Member
+# <a name="cbasemediafilterm_tstart-member"></a>CBaseMediaFilter::m \_ tStart-Mitglied
 
-Die Referenzzeit, die der Streamzeit 0 entspricht.
+Verweiszeit, die der Streamzeit 0 entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ CRefTime m_tStart;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

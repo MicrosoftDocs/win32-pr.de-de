@@ -1,9 +1,9 @@
 ---
-title: Ereignis. offität
-description: Das OffsetY-Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf das Element ab, das das Ereignis auslöst.
+title: event.offsetY
+description: Das offsetY-Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf das Element ab, das das Ereignis ausgelöst hat.
 ms.assetid: c8970d22-3498-4bb3-9212-fe2e0cc4c8b5
 keywords:
-- Ereignis. offsty Windows Media Player
+- event.offsetY Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d4765eb1948386f335ba5c4827ccedb947fa7c4a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 61ee08d610fbc4ab6ccd32157850cbbf0a87d54d8d6334a114e48b82adcec464
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577041"
 ---
-# <a name="eventoffsety"></a>Ereignis. offität
+# <a name="eventoffsety"></a>event.offsetY
 
-Das **OffsetY** -Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf das Element ab, das das Ereignis auslöst.
+Das **offsetY-Attribut** ruft die y-Koordinate des Mauszeigers in Bezug auf das Element ab, das das Ereignis ausgelöst hat.
 
 ``` syntax
 event.offsetY
@@ -29,7 +29,7 @@ event.offsetY
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> <dt>
 
-[**Event. OffsetX**](event-offsetx.md)
+[**event.offsetX**](event-offsetx.md)
 </dt> </dl>
 
  

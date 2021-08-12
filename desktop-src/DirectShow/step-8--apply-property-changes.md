@@ -1,19 +1,19 @@
 ---
 description: 'Schritt 8:'
 ms.assetid: c54745ef-beeb-40b6-9db6-6e3b5da860f8
-title: 'Schritt 8: Anwenden von Eigenschafts Änderungen'
+title: 'Schritt 8: Anwenden von Eigenschaftsänderungen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46425613b8f23981a7b288121dc1a4ab0945452e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2292d9f294711129b2edba50ef6fb623d767dfba4122295222d08eb1ad21dfb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118652056"
 ---
-# <a name="step-8-apply-property-changes"></a>Schritt 8: Anwenden von Eigenschafts Änderungen
+# <a name="step-8-apply-property-changes"></a>Schritt 8: Anwenden von Eigenschaftsänderungen
 
-Überschreiben Sie die [**cbasepropertypage:: onapplychanges**](cbasepropertypage-onapplychanges.md) -Methode, um einen Commit für alle Eigenschafts Änderungen vorzunehmen. In diesem Beispiel wird die m \_ lnewval-Variable immer dann aktualisiert, wenn der Benutzer den Schieberegler durchläuft. Die **onapplychanges** -Methode kopiert diesen Wert in die m \_ LVAL-Variable, wobei der ursprüngliche Wert überschrieben wird:
+Überschreiben Sie [**die CBasePropertyPage::OnApplyChanges-Methode,**](cbasepropertypage-onapplychanges.md) um alle Eigenschaftsänderungen zu commiten. In diesem Beispiel wird die Variable m lNewVal immer dann aktualisiert, wenn der Benutzer auf der \_ Schiebereglerleiste scrollt. Die **OnApplyChanges-Methode** kopiert diesen Wert in die m \_ lVal-Variable und überschreiben den ursprünglichen Wert:
 
 
 ```C++
@@ -26,13 +26,13 @@ HRESULT CGrayProp::OnApplyChanges(void)
 
 
 
-Weiter: [Schritt 9. Trennen Sie die Eigenschaften Seite](step-9--disconnect-the-property-page.md).
+Weiter: [Schritt 9. Trennen Sie die Eigenschaftenseite](step-9--disconnect-the-property-page.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer Filter Eigenschaften Seite](creating-a-filter-property-page.md)
+[Erstellen einer Filtereigenschaftsseite](creating-a-filter-property-page.md)
 </dt> </dl>
 
  

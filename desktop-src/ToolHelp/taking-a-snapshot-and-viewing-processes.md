@@ -1,21 +1,21 @@
 ---
-title: Erstellen von Momentaufnahmen und Anzeigen von Prozessen
-description: Die folgende einfache Konsolenanwendung erhält eine Liste der laufenden Prozesse.
+title: Erstellen einer Momentaufnahme und Anzeigen von Prozessen
+description: Die folgende einfache Konsolenanwendung ruft eine Liste der ausgeführten Prozesse ab.
 ms.assetid: 318d166f-858f-4f33-9422-977e0c4beb3f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b90a90ea3456d2783c6015ae230d0f0b9e84806e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9cdf74ec3d0d0d47e91b385598b06a672ee17e63681f2c82305474db06993ca2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118603793"
 ---
-# <a name="taking-a-snapshot-and-viewing-processes"></a>Erstellen von Momentaufnahmen und Anzeigen von Prozessen
+# <a name="taking-a-snapshot-and-viewing-processes"></a>Erstellen einer Momentaufnahme und Anzeigen von Prozessen
 
-Die folgende einfache Konsolenanwendung erhält eine Liste der laufenden Prozesse. Zuerst nimmt die `GetProcessList` Funktion mithilfe von [**CreateToolhelp32Snapshot**](/windows/desktop/api/TlHelp32/nf-tlhelp32-createtoolhelp32snapshot)eine Momentaufnahme der derzeit ausgeführten Prozesse im System an und durchläuft die in der Momentaufnahme aufgezeichnete Liste mithilfe von [**Process32First**](/windows/desktop/api/TlHelp32/nf-tlhelp32-process32first) und [**Process32Next**](/windows/desktop/api/TlHelp32/nf-tlhelp32-process32next). Für jeden Prozess `GetProcessList` ruft wiederum die Funktion auf, die unter durchlaufen `ListProcessModules` [der Modulliste](traversing-the-module-list.md)beschrieben ist, und die Funktion, die unter durchlaufen `ListProcessThreads` [der Thread Liste](traversing-the-thread-list.md)beschrieben wird.
+Die folgende einfache Konsolenanwendung ruft eine Liste der ausgeführten Prozesse ab. Zuerst erstellt die `GetProcessList` Funktion mit [**createToolhelp32Snapshot**](/windows/desktop/api/TlHelp32/nf-tlhelp32-createtoolhelp32snapshot)eine Momentaufnahme der derzeit ausgeführten Prozesse im System und führt dann mitHilfe von [**Process32First**](/windows/desktop/api/TlHelp32/nf-tlhelp32-process32first) und [**Process32Next**](/windows/desktop/api/TlHelp32/nf-tlhelp32-process32next)durch die in der Momentaufnahme aufgezeichnete Liste. Ruft für jeden Prozess wiederum die -Funktion auf, `GetProcessList` die unter Durchlaufen der `ListProcessModules` [Modulliste](traversing-the-module-list.md)beschrieben wird, und die `ListProcessThreads` -Funktion, die unter [Durchlaufen der Threadliste](traversing-the-thread-list.md)beschrieben wird.
 
-Eine einfache Fehler Berichterstattungs Funktion, `printError` , zeigt den Grund für alle Fehler an, die in der Regel aus Sicherheitseinschränkungen resultieren. Beispielsweise schlägt [**OpenProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocess) für die Prozesse im Leerlauf und für CSRSS fehl, da ihre Zugriffsbeschränkungen verhindern, dass Code auf Benutzerebene geöffnet wird.
+Eine einfache Fehlerberichterstattungsfunktion ( `printError` ) zeigt die Ursache für alle Fehler an, die in der Regel auf Sicherheitseinschränkungen zurückzuführen sind. Beispielsweise schlägt [**OpenProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocess) für die Prozesse Idle und CSRSS fehl, da deren Zugriffseinschränkungen verhindern, dass sie von Code auf Benutzerebene geöffnet werden.
 
 
 ```C++
@@ -217,6 +217,6 @@ void printError( TCHAR* msg )
 [Momentaufnahmen des Systems](snapshots-of-the-system.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

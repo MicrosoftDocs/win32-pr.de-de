@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. addselectedtoplaylist
-description: Die addselectedtoplaylist-Methode fügt das ausgewählte Element einer Wiedergabeliste hinzu.
+title: PLAYLIST.addSelectedToPlaylist
+description: Die addSelectedToPlaylist-Methode fügt das ausgewählte Element einer Wiedergabeliste hinzu.
 ms.assetid: 02ce8553-4ffc-44c1-b260-f41d0877137f
 keywords:
-- Wiedergabeliste. addselectedtoplaylist Windows Media Player
+- PLAYLIST.addSelectedToPlaylist-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5cda55f82d13db6061cb713388a618dfa8f2b5e2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b67fd824bb5055156a6ae1846ab4017b662dbeea9434ff1657d7fe76ebda640b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118571480"
 ---
-# <a name="playlistaddselectedtoplaylist"></a>Wiedergabeliste. addselectedtoplaylist
+# <a name="playlistaddselectedtoplaylist"></a>PLAYLIST.addSelectedToPlaylist
 
-Die **addselectedtoplaylist** -Methode fügt das ausgewählte Element einer Wiedergabeliste hinzu.
+Die **addSelectedToPlaylist-Methode** fügt das ausgewählte Element einer Wiedergabeliste hinzu.
 
 ``` syntax
         elementID.addSelectedToPlaylist(playlist)
@@ -32,10 +32,10 @@ Die **addselectedtoplaylist** -Methode fügt das ausgewählte Element einer Wied
 
 <dl> <dt>
 
-<span id="playlist"></span><span id="PLAYLIST"></span>*Abspielen*
+<span id="playlist"></span><span id="PLAYLIST"></span>*Playlist*
 </dt> <dd>
 
-**Wiedergabe** Listen Objekt, das das ausgewählte Element empfängt.
+**Wiedergabelistenobjekt,** das das ausgewählte Element empfangen wird.
 
 </dd> </dl>
 
@@ -49,7 +49,7 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -57,7 +57,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

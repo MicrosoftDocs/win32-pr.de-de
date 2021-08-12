@@ -1,7 +1,7 @@
 ---
-description: Die Methode "kreaterecord" des Installer-Objekts gibt ein neues Datensatz-Objekt mit der angeforderten Anzahl von Feldern zurück.
+description: Die CreateRecord-Methode des Installer-Objekts gibt ein neues Record-Objekt mit der angeforderten Anzahl von Feldern zurück.
 ms.assetid: 7f9adb28-87da-48dd-ab5c-e138b356b133
-title: Installer. kreaterecord-Methode
+title: Installer.CreateRecord-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 8095e35a7e424a50448f1f0d948b9224bcdaa423
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da9c6132b79706cca2135ffcea1bff09040e15a90af5b8b3b1b7175a41229dc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118631911"
 ---
-# <a name="installercreaterecord-method"></a>Installer. kreaterecord-Methode
+# <a name="installercreaterecord-method"></a>Installer.CreateRecord-Methode
 
-Die Methode " **kreaterecord** " des [**Installer**](installer-object.md) -Objekts gibt ein neues [**Datensatz**](record-object.md) -Objekt mit der angeforderten Anzahl von Feldern zurück.
+Die **CreateRecord-Methode** des [**Installer-Objekts**](installer-object.md) gibt ein neues [**Record-Objekt**](record-object.md) mit der angeforderten Anzahl von Feldern zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Installer.CreateRecord(
 *count* 
 </dt> <dd>
 
-Erforderliche Anzahl von Feldern, die möglicherweise 0 (null) ist. Die maximale Anzahl von Feldern in einem Datensatz ist auf 65535 beschränkt.
+Erforderliche Anzahl von Feldern, die 0 sein können. Die maximale Anzahl von Feldern in einem Datensatz ist auf 65535 beschränkt.
 
 </dd> </dl>
 
@@ -50,9 +50,9 @@ Erforderliche Anzahl von Feldern, die möglicherweise 0 (null) ist. Die maximale
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Feld 0, nicht eines der Felder in *count*, wird normalerweise für Daten Satz orientierte Elemente verwendet, z. b. Format Zeichenfolgen oder Ausführungs-op-Codes.
+Feld 0, keins der Felder in *count,* wird normalerweise für datensatzorientierte Elemente wie Formatzeichenfolgen oder Ausführungs-Op-Codes verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Feld 0, nicht eines der Felder in *count*, wird normalerweise für Daten Satz or
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 

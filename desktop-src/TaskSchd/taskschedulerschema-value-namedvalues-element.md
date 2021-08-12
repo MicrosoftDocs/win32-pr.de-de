@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8afa12156a15ff399f3cbc967a5fd9c612df582b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2583d7fcaa9a9832e54c405200397e40948204546cb81e89a90ceb6949e218e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118610415"
 ---
 # <a name="value-namedvalues-element"></a>Value (namedValues)-Element
 
@@ -32,23 +32,23 @@ Enthält den Wert, der einem Namen in einem Name-Wert-Paar zugeordnet ist.
  />
 ```
 
-Das **value** -Element wird durch den komplexen [**namedValues**](taskschedulerschema-namedvalues-complextype.md) -Typ definiert.
+Das **Value-Element** wird durch den komplexen [**NamedValues-Typ**](taskschedulerschema-namedvalues-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                              | Abgeleitet von                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                       |
+| Element                                                                                              | Abgeleitet von                                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                       |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Valuequeries (eventtriggertype)**](taskschedulerschema-valuequeries-eventtriggertype-element.md) | [**namedValues**](taskschedulerschema-namedvalues-complextype.md) | Gibt eine Auflistung von benannten XPath-Abfragen an. Jede Abfrage in der Auflistung wird auf das letzte übereinstimmende Ereignis-XML angewendet, das von der Abonnement Abfrage zurückgegeben wird, die im [**Abonnement**](taskschedulerschema-subscription-eventtriggertype-element.md) -Element angegeben ist. Der Name der Abfrage kann als Variable in der Nachricht einer ShowMessage-Aktion verwendet werden.<br/> |
+| [**ValueQueries (eventTriggerType)**](taskschedulerschema-valuequeries-eventtriggertype-element.md) | [**namedValues**](taskschedulerschema-namedvalues-complextype.md) | Gibt eine Auflistung benannter XPath-Abfragen an. Jede Abfrage in der Auflistung wird auf die letzte übereinstimmende Ereignis-XML angewendet, die von der Abonnementabfrage zurückgegeben wird, die im [**Subscription-Element**](taskschedulerschema-subscription-eventtriggertype-element.md) angegeben ist. Der Name der Abfrage kann als Variable in der Nachricht einer ShowMessage-Aktion verwendet werden.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Value-Eigenschaft von itasknamedvaluepair**](/windows/desktop/api/taskschd/nf-taskschd-itasknamedvaluepair-get_value).
+Informationen zur C++-Entwicklung finden Sie unter [**Value Property of ITaskNamedValuePair (Werteigenschaft von ITaskNamedValuePair).**](/windows/desktop/api/taskschd/nf-taskschd-itasknamedvaluepair-get_value)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasknamedvaluepair. Value**](tasknamedvaluepair-value.md).
+Informationen zur Skriptentwicklung finden Sie unter [**TaskNamedValuePair.Value.**](tasknamedvaluepair-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**tasknamedvaluepair. Val
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Legt einen Vektor fest.
 ms.assetid: 7dae88fc-d5d3-4751-859a-fa1bde4d0ce8
-title: 'ID3DXBaseEffect:: setvector-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::SetVector-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 5d6fccc24410e06dd9bb4e6b0b1f1c36b03dd355
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 34c61a4b6b3dc1882a1d5d0598b249b51618574993e3439d791482051cc39301
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118296263"
 ---
-# <a name="id3dxbaseeffectsetvector-method"></a>ID3DXBaseEffect:: setvector-Methode
+# <a name="id3dxbaseeffectsetvector-method"></a>ID3DXBaseEffect::SetVector-Methode
 
 Legt einen Vektor fest.
 
@@ -41,19 +41,19 @@ HRESULT SetVector(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*pvector* \[ in\]
+*pVector* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
 Zeiger auf einen 4D-Vektor.
 
@@ -63,11 +63,11 @@ Zeiger auf einen 4D-Vektor.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Ziel Vektor kleiner als der Quell Vektor ist, werden die zusätzlichen Komponenten des Quell Vektors ignoriert.
+Wenn der Zielvektor kleiner als der Quellvektor ist, werden die zusätzlichen Komponenten des Quellvektors ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Wenn der Ziel Vektor kleiner als der Quell Vektor ist, werden die zusätzlichen 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -87,7 +87,7 @@ Wenn der Ziel Vektor kleiner als der Quell Vektor ist, werden die zusätzlichen 
 [ID3DXBaseEffect](id3dxbaseeffect.md)
 </dt> <dt>
 
-[**Getvector**](id3dxbaseeffect--getvector.md)
+[**GetVector**](id3dxbaseeffect--getvector.md)
 </dt> </dl>
 
  

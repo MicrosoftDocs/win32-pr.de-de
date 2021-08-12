@@ -1,9 +1,9 @@
 ---
-title: glpolygonmode-Funktion (GL. h)
-description: Die glpolygonmode-Funktion wählt einen Polygon-rasterisierungsmodus aus.
+title: glPolygonMode-Funktion (Gl.h)
+description: Die glPolygonMode-Funktion wählt einen Polygonrastermodus aus.
 ms.assetid: d8781bae-e78c-40fb-9f33-c742c70ebda1
 keywords:
-- glpolygonmode-Funktion OpenGL
+- glPolygonMode-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23d133243c1655432842a939b8da0f3a981fdffd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f040b3e44ee34d819752bae5deffbf1a02f0d38ab1249f2e32de67c262bd5f2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118615206"
 ---
-# <a name="glpolygonmode-function"></a>glpolygonmode-Funktion
+# <a name="glpolygonmode-function"></a>glPolygonMode-Funktion
 
-Die **glpolygonmode** -Funktion wählt einen Polygon-rasterisierungsmodus aus.
+Die **glPolygonMode-Funktion** wählt einen Polygonrastermodus aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,25 +41,25 @@ void WINAPI glPolygonMode(
 
 <dl> <dt>
 
-*mit* 
+*Gesicht* 
 </dt> <dd>
 
-Die Polygone, auf die der *Modus* angewendet wird. Muss "GL \_ Front" für Front-on-Polygone, "GL \_ Back" für rückwärts gerichtete Polygone oder "GL \_ Front \_ und \_ Back" für Front-und Back-on-Polygone sein.
+Die Polygone, für die *der Modus* gilt. Muss GL \_ FRONT für vordere Polygone, GL \_ BACK für rückwärts gerichtete Polygone oder GL \_ FRONT AND BACK für \_ \_ vordere und hintere Polygone sein.
 
 </dd> <dt>
 
 *mode* 
 </dt> <dd>
 
-Die Art und Weise, wie Polygone rasteriert werden. Die folgenden Modi sind definiert und können im- *Modus* angegeben werden. Der Standardwert ist GL \_ Fill sowohl für Front-als auch für rückwärts gerichtete Polygone.
+Die Art und Weise, wie Polygone gerastert werden. Die folgenden Modi sind definiert und können im *Modus* angegeben werden. Der Standardwert ist GL \_ FILL für vordere und hintere Polygone.
 
 
 
 | Wert                                                                                                                                          | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_POINT"></span><span id="gl_point"></span><dl> <dt>**GL- \_ Punkt**</dt> </dl> | Polygon Scheitel Punkte, die als Ausgangspunkt eines Begrenzungs Kanten gekennzeichnet sind, werden als Punkte gezeichnet. Die rasterisierung der Punkte wird von Punkt Attributen wie der GL \_ \_ -Punktgröße und dem GL- \_ Punkt \_ glatt gesteuert. Polygon-rasterisierungsattribute außer dem GL- \_ Polygon- \_ Modus haben keine Auswirkung.<br/>                                                                                                                                                    |
-| <span id="GL_LINE"></span><span id="gl_line"></span><dl> <dt>**GL- \_ Zeile**</dt> </dl>    | Begrenzungs Kanten des Polygons werden als Liniensegmente gezeichnet. Sie werden als verbundene Liniensegmente für den Zeilen stippling behandelt. der Zeilen stippingcounter und das Muster werden nicht zwischen Segmenten zurückgesetzt (siehe [**glLineStipple**](gllinestipple.md)). Linien Attribute wie GL \_ -Linienstärke \_ und GL- \_ Linien \_ Glättung steuern die rasterisierung der Zeilen. Polygon-rasterisierungsattribute außer dem GL- \_ Polygon- \_ Modus haben keine Auswirkung.<br/> |
-| <span id="GL_FILL"></span><span id="gl_fill"></span><dl> <dt>**Ausfüllen von GL \_**</dt> </dl>    | Das Innere des Polygons wird ausgefüllt. Polygon-Attribute, wie z. b. gl \_ \_ -Polygon-Stippel und GL- \_ Polygon, \_ steuern die rasterisierung des Polygons.<br/>                                                                                                                                                                                                                                                                       |
+| <span id="GL_POINT"></span><span id="gl_point"></span><dl> <dt>**GL \_ POINT**</dt> </dl> | Polygonvertices, die als Anfang eines Begrenzungsrands markiert sind, werden als Punkte gezeichnet. Punktattribute wie GL \_ POINT SIZE und GL POINT SMOOTH steuern die \_ \_ \_ Rasterung der Punkte. Andere Polygonrasterisierungsattribute als GL \_ POLYGON MODE haben keine \_ Auswirkungen.<br/>                                                                                                                                                    |
+| <span id="GL_LINE"></span><span id="gl_line"></span><dl> <dt>**GL \_ LINE**</dt> </dl>    | Begrenzungsränder des Polygons werden als Liniensegmente gezeichnet. Sie werden als verbundene Liniensegmente für Zeilenstippling behandelt. der Linienstipplezähler und das Muster werden nicht zwischen Segmenten zurückgesetzt (siehe [**glLineStipple**](gllinestipple.md)). Linienattribute wie GL \_ LINE WIDTH und GL LINE SMOOTH steuern die \_ \_ \_ Rasterung der Linien. Andere Polygonrasterisierungsattribute als GL \_ POLYGON MODE haben keine \_ Auswirkungen.<br/> |
+| <span id="GL_FILL"></span><span id="gl_fill"></span><dl> <dt>**GL \_ FILL**</dt> </dl>    | Das Innere des Polygons wird gefüllt. Polygonattribute wie GL \_ POLYGON \_ STIPPLE und GL \_ POLYGON SMOOTH steuern die \_ Rasterung des Polygons.<br/>                                                                                                                                                                                                                                                                       |
 
 
 
@@ -73,30 +73,30 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Entweder das *Gesicht* oder der *Modus* war kein akzeptierter Wert.<br/>                                                                         |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | Das *Gesicht* oder *der Modus* war kein akzeptierter Wert.<br/>                                                                         |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glpolygonmode** " steuert die Interpretation von Polygonen für die rasterisierung. Der *Face* -Parameter beschreibt, für welchen polygonalmodus gilt: Front-on-Polygone (GL  \_ Front), Back-over-Polygone (GL \_ Back) oder beides (GL \_ Front \_ und \_ Back). Der Polygon Modus wirkt sich nur auf die endgültige rasterisierung von Polygonen aus. Vor allem werden die Scheitel Punkte eines Polygons beleuchtet, und das Polygon wird abgeschnitten, und möglicherweise ist es möglich, bevor diese Modi angewendet werden.
+Die **glPolygonMode-Funktion** steuert die Interpretation von Polygonen für die Rasterung. Der *Gesichtsparameter* beschreibt, für welche *Polygone der Modus* gilt: vordere Polygone (GL \_ FRONT), rückwärts gerichtete Polygone (GL \_ BACK) oder beides (GL \_ FRONT UND \_ \_ BACK). Der Polygonmodus wirkt sich nur auf die endgültige Rasterung von Polygonen aus. Insbesondere werden die Scheitelpunkte eines Polygons angelichtet, und das Polygon wird abgeschnitten und möglicherweise gekäutert, bevor diese Modi angewendet werden.
 
-Um eine Oberfläche mit gefüllten, rückwärts gerichteten Polygonen zu zeichnen und Front-End-Polygone zu sehen,
+Rufen Sie auf, um eine Oberfläche mit gefüllten rückwärts gerichteten Polygonen und umrandete Polygone nach oben zu zeichnen.
 
-**glpolygonmode**(GL \_ Front, GL \_ Line);
+**glPolygonMode**(GL \_ FRONT, GL \_ LINE);
 
-Scheitel Punkte werden mit einem edgeflag als Begrenzung oder nonborder gekennzeichnet. Edge-Flags werden intern von OpenGL generiert, wenn Polygone entfernt werden, und Sie können mithilfe von [**gledgeflag**](gledgeflag-functions.md)explizit festgelegt werden.
+Scheitelpunkte werden als Begrenzung oder nicht gebunden mit einem Edgeflag markiert. Edgeflags werden intern von OpenGL generiert, wenn Polygone zerlegt werden, und sie können explizit mit [**glEdgeFlag**](gledgeflag-functions.md)festgelegt werden.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **glpolygonmode** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glPolygonMode** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Polygon- \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ POLYGON \_ MODE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,26 +106,26 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glpolygonmode** a
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gledgeflag**](gledgeflag-functions.md)
+[**glEdgeFlag**](gledgeflag-functions.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**gllinestippel**](gllinestipple.md)
+[**glLineStipple**](gllinestipple.md)
 </dt> <dt>
 
 [**glLineWidth**](gllinewidth.md)
@@ -134,7 +134,7 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glpolygonmode** a
 [**glPointSize**](glpointsize.md)
 </dt> <dt>
 
-[**glpolygonstippel**](glpolygonstipple.md)
+[**glPolygonStipple**](glpolygonstipple.md)
 </dt> </dl>
 
  

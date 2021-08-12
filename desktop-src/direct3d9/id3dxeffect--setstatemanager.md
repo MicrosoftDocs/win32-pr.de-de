@@ -1,7 +1,7 @@
 ---
-description: Legen Sie den Effekt Zustands-Manager fest.
+description: Legen Sie den Effektzustands-Manager fest.
 ms.assetid: 87409687-03f1-4593-ae58-3a8ba08e592b
-title: 'ID3DXEffect:: setstatuemanager-Methode (D3DX9Effect. h)'
+title: ID3DXEffect::SetStateManager-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: bb32e3f668884a6f51bd5c5058a4f27e141f0aa3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 06b6a7404f664e8ec18247b2eda57c5097cd575a3556853bfe8a9eb67705d071
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118295903"
 ---
-# <a name="id3dxeffectsetstatemanager-method"></a>ID3DXEffect:: setstatuemanager-Methode
+# <a name="id3dxeffectsetstatemanager-method"></a>ID3DXEffect::SetStateManager-Methode
 
-Legen Sie den Effekt Zustands-Manager fest.
+Legen Sie den Effektzustands-Manager fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT SetStateManager(
 
 <dl> <dt>
 
-*pManager* \[ in\]
+*pManager* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXEFFECTSTATEMANAGER**](id3dxeffectstatemanager.md)**
@@ -53,11 +53,11 @@ Ein Zeiger auf den Zustands-Manager. Siehe [**ID3DXEffectStateManager**](id3dxef
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**ID3DXEffectStateManager**](id3dxeffectstatemanager.md) ist eine vom Benutzer implementierte Schnittstelle, die Rückrufe in eine Anwendung eingibt, um den Gerätezustand von einem Effekt festzulegen.
+Der [**ID3DXEffectStateManager**](id3dxeffectstatemanager.md) ist eine vom Benutzer implementierte Schnittstelle, die Rückrufe in eine Anwendung überfingt, um den Gerätezustand von einem Effekt aus zu setzen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -77,7 +77,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 [ID3DXEffect](id3dxeffect.md)
 </dt> <dt>
 
-[**ID3DXEffect:: GetStatus Manager**](id3dxeffect--getstatemanager.md)
+[**ID3DXEffect::GetStateManager**](id3dxeffect--getstatemanager.md)
 </dt> </dl>
 
  

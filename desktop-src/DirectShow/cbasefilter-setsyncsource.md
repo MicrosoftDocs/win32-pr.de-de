@@ -1,7 +1,7 @@
 ---
-description: 'Die setsyncsource-Methode legt eine Referenzuhr für den Filter fest. Diese Methode implementiert die imediafilter:: setsyncsource-Methode.'
+description: Die SetSyncSource-Methode legt eine Referenzuhr für den Filter fest. Diese Methode implementiert die IMediaFilter::SetSyncSource-Methode.
 ms.assetid: 298039fc-dd38-4063-8752-2669b134b8ef
-title: Cbasefilter. setsyncsource-Methode (amfilter. h)
+title: CBaseFilter.SetSyncSource-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8eaab23f1afd7e7b502d6828bc3f10cbfec49410
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 95e1f1b3578fa88d4616fc9e0b7d0af9fe89ab80c2e93ee32eef305b93d45478
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118659586"
 ---
-# <a name="cbasefiltersetsyncsource-method"></a>Cbasefilter. setsyncsource-Methode
+# <a name="cbasefiltersetsyncsource-method"></a>CBaseFilter.SetSyncSource-Methode
 
-Die **setsyncsource** -Methode legt eine Referenzuhr für den Filter fest. Diese Methode implementiert die [**imediafilter:: setsyncsource**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) -Methode.
+Die **SetSyncSource-Methode** legt eine Referenzuhr für den Filter fest. Diese Methode implementiert die [**IMediaFilter::SetSyncSource-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT SetSyncSource(
 
 <dl> <dt>
 
-*pclock* 
+*Pclock* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IReferenceClock**](/windows/desktop/api/Strmif/nn-strmif-ireferenceclock) -Schnittstelle der Uhr oder **null**.
+Zeiger auf die [**IReferenceClock-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ireferenceclock) der Uhr oder **NULL.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,16 +59,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die ThreadProc-Methode ist die Thread Prozedur.
+description: Die ThreadProc-Methode ist die Threadprozedur.
 ms.assetid: 2d991f15-afea-4843-bc68-aeb5ca69d28b
-title: Camthread. ThreadProc-Methode (wxutil. h)
+title: WEBCAMThread.ThreadProc-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7081a7f7e1cd84a6bf8d482aa7dddf7a48b39f0a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6419d315e162f859f49ee2448758999ca194adf8c16c6210f77d919fa2a18f47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118662110"
 ---
-# <a name="camthreadthreadproc-method"></a>Camthread. ThreadProc-Methode
+# <a name="camthreadthreadproc-method"></a>CAMThread.ThreadProc-Methode
 
-Die- `ThreadProc` Methode ist die Thread Prozedur.
+Die `ThreadProc` -Methode ist die Threadprozedur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **DWORD** -Wert zurück, dessen Bedeutung durch die abgeleitete Klasse definiert wird.
+Gibt einen **DWORD-Wert** zurück, dessen Bedeutung von der abgeleiteten Klasse definiert wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine reine virtuelle Methode. Implementieren Sie diese Methode in der abgeleiteten Klasse, um eine Thread Prozedur bereitzustellen. Wenn die Methode " [**camthread:: Create**](camthread-create.md) " einen Thread erstellt, erhält Sie die Adresse der " [**camthread:: initialthleproc**](camthread-initialthreadproc.md) "-Methode, die wiederum ihre ThreadProc-Methode aufruft.
+Dies ist eine rein virtuelle Methode. Implementieren Sie diese Methode in der abgeleiteten Klasse, um eine Threadprozedur zu erstellen. Wenn die [**METHODECAMThread::Create**](camthread-create.md) einen Thread erstellt, gibt sie die Adresse [**derCAMThread::InitialThreadProc-Methode**](camthread-initialthreadproc.md) an, die wiederum Ihre ThreadProc-Methode aufruft.
 
-In der Regel wird von der ThreadProc-Methode eine Schleife eingegeben, die Anforderungen abruft (durch Aufrufen der Methoden [**camthread:: GetRequest**](camthread-getrequest.md) oder [**camthread:: CheckRequest**](camthread-checkrequest.md) ) und die Daten verarbeitet.
+In der Regel gibt Ihre ThreadProc-Methode eine Schleife ein, die Anforderungen abruft (durch Aufrufen der [**METHODENCAMThread::GetRequest**](camthread-getrequest.md) [**oderCAMThread::CheckRequest)**](camthread-checkrequest.md) und Daten verarbeitet.
 
 Wenn diese Methode zurückgegeben wird, wird der Thread beendet.
 
@@ -58,16 +58,16 @@ Wenn diese Methode zurückgegeben wird, wird der Thread beendet.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**CAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

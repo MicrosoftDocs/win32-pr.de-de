@@ -1,37 +1,37 @@
 ---
-description: Aktiviert oder deaktiviert die Lautsprecher Füllung in einem Audiodecoder oder Digital Signal Processor (DSP).
+description: Aktiviert oder deaktiviert die Sprecherfüllung in einem Audiodecoder oder digital signal processor (DSP).
 ms.assetid: 5a42d4c9-d593-4d7f-bfee-37271c48e5cf
-title: Avdspspeakerfill-Eigenschaft (codecapi. h)
+title: AVDSPSpeakerFill-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16bcdda053439b76c9445f2f9c866ee26afb4858
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9ff4886f1b6f1e6ae19f9f1b5bf78e20159df390f2d642ac2b9cb3c4c834d1bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663431"
 ---
-# <a name="avdspspeakerfill-property"></a>Avdspspeakerfill (Eigenschaft)
+# <a name="avdspspeakerfill-property"></a>AVDSPSpeakerFill-Eigenschaft
 
-Aktiviert oder deaktiviert die Lautsprecher Füllung in einem Audiodecoder oder Digital Signal Processor (DSP).
+Aktiviert oder deaktiviert die Sprecherfüllung in einem Audiodecoder oder digital signal processor (DSP).
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdspspeakerfill**
+**CODECAPI \_ AVDSPSpeakerFill**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavdspspeakerfill**](/windows/desktop/api/codecapi/ne-codecapi-eavdspspeakerfill) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVDSPSpeakerFill-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavdspspeakerfill)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Lautsprecher Füllung ist ein DSP-Prozess, der Mono-oder Stereo-Audiodaten in Multichannel-Audiodaten konvertiert
+Die Sprecherfüllung ist ein DSP-Prozess, bei dem Mono- oder Stereoaudiodaten in Multichannel-Audio konvertiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,20 +39,20 @@ Lautsprecher Füllung ist ein DSP-Prozess, der Mono-oder Stereo-Audiodaten in Mu
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

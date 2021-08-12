@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob der Zugriff auf alle Infrastruktur Netzwerke blockiert ist.
+description: Gibt an, ob der Zugriff auf alle Infrastrukturnetzwerke blockiert wird.
 ms.assetid: d57ae27c-3cd3-4e53-b5c9-cd3cbb91289b
-title: denyalless (NetworkFilter)-Element
+title: denyAllESS (networkFilter)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: c3e83aeb14e0572f8e2ccc49bf2d04718afa7f30
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5057f94dd91e2d7090c4f147ba987324e369dda706031ecebb8a79b165214414
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118619865"
 ---
-# <a name="denyalless-networkfilter-element"></a>denyalless (NetworkFilter)-Element
+# <a name="denyalless-networkfilter-element"></a>denyAllESS (networkFilter)-Element
 
-Das denyalless (NetworkFilter)-Element gibt an, ob der Zugriff auf alle Infrastruktur Netzwerke blockiert ist. Wenn **denyalless** den Wert true aufweist, können Computer keine Verbindung mit einem Infrastrukturnetzwerk herstellen. Andernfalls können Computer Verbindungen mit Infrastruktur Netzwerken herstellen.
+Das element denyAllESS (networkFilter) gibt an, ob der Zugriff auf alle Infrastrukturnetzwerke blockiert wird. Wenn **denyAllESS über** den Wert TRUE verfügt, können Computer keine Verbindung mit einem Infrastrukturnetzwerk herstellen. Andernfalls können Computer eine Verbindung mit Infrastrukturnetzwerken herstellen.
 
-Der Standardwert für dieses Element ist false. Wenn **denyalless** nicht in einem Profil angegeben ist, können Computer standardmäßig eine Verbindung mit Infrastruktur Netzwerken herstellen.
+Der Standardwert für dieses Element ist FALSE. Wenn **denyAllESS** nicht in einem Profil angegeben ist, können Computer standardmäßig eine Verbindung mit Infrastrukturnetzwerken herstellen.
 
 ``` syntax
 <xs:element name="denyAllESS"
@@ -31,7 +31,7 @@ Der Standardwert für dieses Element ist false. Wenn **denyalless** nicht in ein
  />
 ```
 
-Das **denyalless** -Element wird durch das [**NetworkFilter**](wlan-policyschema-networkfilter-wlanpolicy-element.md) -Element definiert.
+Das **denyAllESS-Element** wird durch das [**networkFilter-Element**](wlan-policyschema-networkfilter-wlanpolicy-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,25 +39,25 @@ Das **denyalless** -Element wird durch das [**NetworkFilter**](wlan-policyschema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Network Filter**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
+[**networkFilter**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Network Filter (wlanpolicy)**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
+[**networkFilter (WLANPolicy)**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
 </dt> </dl>
 
  

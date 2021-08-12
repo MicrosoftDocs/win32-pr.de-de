@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Windows Style-Methode ruft die Standardfenster Stile ab.
+description: Die \_ Methode "WindowStyle abrufen" ruft die Standardfensterstile ab.
 ms.assetid: 5c204814-5c7c-47e2-95dd-86455ed77cc7
-title: CBaseControlWindow.get_WindowStyle-Methode (ctlutil. h)
+title: CBaseControlWindow.get_WindowStyle-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 91e04efac3a67c262b4eeb85948f846dbb06086a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e9356b449adbb4ee760ec70990c4db0b6703c16e9d0970f2756bac23907b1bfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118660259"
 ---
-# <a name="cbasecontrolwindowget_windowstyle-method"></a>Cbasecontrolwindow. get \_ WindowStyle-Methode
+# <a name="cbasecontrolwindowget_windowstyle-method"></a>CBaseControlWindow.get \_ WindowStyle-Methode
 
-Die- `get_WindowStyle` Methode ruft die Standardfenster Stile ab.
+Die `get_WindowStyle` -Methode ruft die Standardfensterstile ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT get_WindowStyle(
 
 <dl> <dt>
 
-*pwindowstyle* 
+*pWindowStyle* 
 </dt> <dd>
 
-Zeiger auf Fenster Stile.
+Zeiger auf Fensterstile.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion gibt die Standardfenster Stile zurück, wie z \_ . b. WS Child und WS \_ Visible. Die [**cbasecontrolwindow::D ogetwindowstyle**](cbasecontrolwindow-dogetwindowstyle.md) -Member-Funktion wird aufgerufen.
+Diese Memberfunktion gibt die Standardfensterstile zurück, z. B. WS \_ CHILD und WS \_ VISIBLE. Sie ruft die [**Memberfunktion CBaseControlWindow::D oGetWindowStyle**](cbasecontrolwindow-dogetwindowstyle.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Member-Funktion gibt die Standardfenster Stile zurück, wie z \_ . b. WS C
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

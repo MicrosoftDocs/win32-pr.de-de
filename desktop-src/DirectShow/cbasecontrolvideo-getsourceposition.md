@@ -1,7 +1,7 @@
 ---
-description: Die getsourceposition-Methode ruft die Position und die Dimensionen des Quell Rechtecks in einem atomaren Vorgang ab.
+description: Die GetSourcePosition-Methode ruft die Position und dimensionen des Quellrechtecks in einem atomaren Vorgang ab.
 ms.assetid: 44356f62-8b14-4b0e-a587-f832adff3bba
-title: Cbasecontrolvideo. getsourceposition-Methode (ctlutil. h)
+title: CBaseControlVideo.GetSourcePosition-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2422845a7b5c64bc07b8e8942b2f19cd10a54d26
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9ed52109284d9c9f8aa7884f4a0e361ec1a8f5564d0a22ae7fbf528d35a5e6ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118661074"
 ---
-# <a name="cbasecontrolvideogetsourceposition-method"></a>Cbasecontrolvideo. getsourceposition-Methode
+# <a name="cbasecontrolvideogetsourceposition-method"></a>CBaseControlVideo.GetSourcePosition-Methode
 
-Die `GetSourcePosition` -Methode ruft die Position und die Dimensionen des Quell Rechtecks in einem atomaren Vorgang ab.
+Die `GetSourcePosition` -Methode ruft die Position und die Abmessungen des Quellrechtecks in einem atomaren Vorgang ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,54 +45,54 @@ HRESULT GetSourcePosition(
 
 <dl> <dt>
 
-*pleft* 
+*pLeft* 
 </dt> <dd>
 
-Ein Zeiger auf die linke Koordinate des Quell Rechtecks.
+Zeiger auf die linke Koordinate des Quellrechtecks.
 
 </dd> <dt>
 
-*ptop* 
+*pTop* 
 </dt> <dd>
 
-Ein Zeiger auf die obere Koordinate des Quell Rechtecks.
+Zeiger auf die obere Koordinate des Quellrechtecks.
 
 </dd> <dt>
 
 *pWidth* 
 </dt> <dd>
 
-Ein Zeiger auf die Breite des Quell Rechtecks.
+Zeiger auf die Breite des Quellrechtecks.
 
 </dd> <dt>
 
 *pHeight* 
 </dt> <dd>
 
-Ein Zeiger auf die Höhe des Quell Rechtecks.
+Zeiger auf die Höhe des Quellrechtecks.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte sein, oder andere Werte, die nicht aufgeführt sind.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                                                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                | Fehler.<br/>                                                              |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/>                                            |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                | Fehler.<br/>                                                              |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>             | **NULL-Zeigerargument.**<br/>                                            |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
 | <dl> <dt>**NOERROR**</dt> </dl>                | Erfolg.<br/>                                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle ändern. Das Quell Rechteck wirkt sich darauf aus, welcher Abschnitt der systemeigenen Videoquelle auf der Anzeige angezeigt wird. Das Ziel Rechteck wirkt sich darauf aus, wo das Video bei der Wiedergabe angezeigt wird. Das Ziel Rechteck ist relativ zum Client Bereich des Fensters, in dem es abgespielt wird. Die linke obere Ecke des Fensters ist Koordinaten (0,0).
+Eine Anwendung kann die Quell- und Zielrechtecke für das Video über die [**IBasicVideo-Schnittstelle**](/windows/desktop/api/Control/nn-control-ibasicvideo) ändern. Das Quellrechteck wirkt sich darauf aus, welcher Abschnitt der nativen Videoquelle auf der Anzeige angezeigt wird. das Zielrechteck wirkt sich darauf aus, wo das Video angezeigt wird, wenn es wiedergegeben wird. Das Zielrechteck ist relativ zum Clientbereich des Fensters, in dem es wiedergegeben wird. Die obere linke Ecke des Fensters ist die Koordinate (0,0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,16 +100,16 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

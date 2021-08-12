@@ -1,136 +1,136 @@
 ---
-description: Windows 8 bietet Unterstützung für das Flip Presentation Model und die zugehörigen aktuellen Statistiken in DXGI 1,2.
+description: Windows 8 fügt Unterstützung für das Flip-Präsentationsmodell und die zugehörigen aktuellen Statistiken in DXGI 1.2 hinzu.
 ms.assetid: E132DAF5-80B7-4C52-A760-3779CC140CE7
-title: DXGI-Flip-Modell
+title: DXGI Flip-Modell
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49ee82febd13a3b57a06d93fd01eb8d230d6b78a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 04b4b4cf8f792a23d4d32e5cb4b4273594745283cb803a638ea3d0cf4c45977f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118289442"
 ---
-# <a name="dxgi-flip-model"></a>DXGI-Flip-Modell
+# <a name="dxgi-flip-model"></a>DXGI Flip-Modell
 
-Windows 8 bietet Unterstützung für das Flip Presentation Model und die zugehörigen aktuellen Statistiken in DXGI 1,2. Das DXGI Flip Presentation-Modell von Windows 8 ähnelt der Darstellung des [Direct3D 9Ex-Flip-Modus](../direct3darticles/direct3d-9ex-improvements.md)von Windows 7. Auf Video-oder Frameraten basierende Präsentations-apps wie Spiele können am meisten von der Verwendung eines Flip Presentation-Modells profitieren. Apps, die das DXGI Flip Presentation-Modell verwenden, verringern die Auslastung der Systemressourcen und erhöhen die Leistung. Apps können auch die aktuellen Statistik Erweiterungen mit dem Flip Presentation Model verwenden, um die Präsentations Rate besser zu steuern, indem Sie Echtzeitfeedback und Korrekturmechanismen bereitstellen.
+Windows 8 fügt Unterstützung für das Flip-Präsentationsmodell und die zugehörigen aktuellen Statistiken in DXGI 1.2 hinzu. das DXGI-Flip-Präsentationsmodell von Windows 8 ähnelt Windows 7 [direct3D 9EX Flip Mode Presentation](../direct3darticles/direct3d-9ex-improvements.md). Video- oder Bildfrequenzbasierte Präsentations-Apps wie Spiele können am meisten von der Verwendung des Flip-Präsentationsmodells profitieren. Apps, die das DXGI-Flip-Präsentationsmodell verwenden, reduzieren die Auslastung der Systemressourcen und steigern die Leistung. Apps können auch aktuelle Statistikverbesserungen mit dem Flip-Präsentationsmodell verwenden, um die Präsentationsrate durch Bereitstellen von Echtzeitfeedback und Korrekturmechanismen besser zu steuern.
 
--   [Vergleich zwischen dem DXGI-Flip-Modell und dem BitBLT-Modell](#comparing-the-dxgi-flip-model-and-the-bitblt-model)
+-   [Vergleichen des DXGI-Flip-Modells mit dem BitBlt-Modell](#comparing-the-dxgi-flip-model-and-the-bitblt-model)
 -   [Verwenden des DXGI-Flip-Modells](#how-to-use-dxgi-flip-model)
--   [Frame Synchronisierung von DXGI-Flip Model-apps](#frame-synchronization-of-dxgi-flip-model-apps)
--   [Vermeiden, erkennen und Wiederherstellen von Störungen](#avoiding-detecting-and-recovering-from-glitches)
+-   [Framesynchronisierung von DXGI-Flip-Modell-Apps](#frame-synchronization-of-dxgi-flip-model-apps)
+-   [Vermeiden, Erkennen und Wiederherstellen von Störungen](#avoiding-detecting-and-recovering-from-glitches)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="comparing-the-dxgi-flip-model-and-the-bitblt-model"></a>Vergleich zwischen dem DXGI-Flip-Modell und dem BitBLT-Modell
+## <a name="comparing-the-dxgi-flip-model-and-the-bitblt-model"></a>Vergleichen des DXGI-Flip-Modells mit dem BitBlt-Modell
 
-Die Laufzeit verwendet die Bitblock Übertragung (BitBLT) und die Flip Presentation-Modelle, um Grafik Inhalte auf Anzeige Monitoren darzustellen. Der größte Unterschied zwischen den BitBlt-und der Flip Presentation-Modellen besteht darin, wie Hintergrund Puffer Inhalte für die Komposition in Windows 8 DWM gelangen. Im BitBLT-Modell werden die Inhalte des backpuffers bei jedem [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)auf die Umleitungs Oberfläche kopiert. Im Flip-Modell werden alle Back Puffer für den Desktopfenster-Manager (DWM) freigegeben. Aus diesem Grund kann der DWM-Vorgang direkt von diesen Back Puffern ohne zusätzliche Kopiervorgänge verfasst werden. Im Allgemeinen ist das Flip-Modell effizienter. Das Flip-Modell bietet auch weitere Funktionen, z. b. Erweiterte aktuelle Statistiken.
+Die Runtime verwendet die Bitblockübertragungs- (bitblt) und Flip-Präsentationsmodelle, um Grafikinhalte auf Anzeigemonitoren darzustellen. Der größte Unterschied zwischen bitblt- und flip-Präsentationsmodellen besteht darin, wie Backpufferinhalte zur Komposition zum Windows 8 DWM gelangen. Im bitblt-Modell wird der Inhalt des Hintergrundpuffers bei jedem Aufruf von [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)in die Umleitungsoberfläche kopiert. Im Flip-Modell werden alle Hintergrundpuffer für die Desktopfenster-Manager (DWM) freigegeben. Daher kann der DWM ohne zusätzliche Kopiervorgänge direkt aus diesen Rückpuffern zusammensetzen. Im Allgemeinen ist das Flip-Modell effizienter. Das Flip-Modell bietet auch weitere Features, z. B. erweiterte aktuelle Statistiken.
 
-Wenn Sie über ältere Komponenten verfügen, die Windows Graphics Device Interface (GDI) verwenden, um direkt in ein [**HWND**](../winprog/windows-data-types.md) zu schreiben, verwenden Sie das BitBLT-Modell.
+Wenn Sie über Legacykomponenten verfügen, die Windows Graphics Device Interface (GDI) verwenden, um direkt in ein [**HWND**](../winprog/windows-data-types.md) zu schreiben, verwenden Sie das bitblt-Modell.
 
-Leistungsverbesserungen des DXGI-Flip-Modells sind wichtig, wenn sich die APP im Fenstermodus befindet. In der Sequenz in dieser Tabelle und der Abbildung werden Speicher Bandbreiten-Verwendungen und System Lese-und Schreibvorgänge von Fenster Anwendungen verglichen, bei denen das Modell kippen im Vergleich zum BitBLT-Modell ausgewählt wird.
+Leistungsverbesserungen des DXGI-Flip-Modells sind wichtig, wenn sich die App im Fenstermodus befindet. Die Sequenz in dieser Tabelle und die Abbildung vergleichen die Speicherbandbreitennutzung und die Systemlese- und -schreibvorgänge von Fenster-Apps, die das Flip-Modell auswählen, mit dem Bitblt-Modell.
 
 
 
-| Schritt | Für DWM vorhandenes BitBLT-Modell                                                                               | DXGI-Flip-Modell für DWM vorhanden                                   |
+| Schritt | BitBlt-Modell für DWM vorhanden                                                                               | DXGI flip model present to DWM                                   |
 |------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| 1.   | Die APP aktualisiert Ihren Frame (schreiben).<br/>                                                              | Die APP aktualisiert Ihren Frame (schreiben).<br/>                     |
-| 2.   | Direct3D-Laufzeit kopiert Oberflächen Inhalte in eine DWM-Umleitungs Oberfläche (lesen, schreiben)<br/>            | Direct3D Runtime übergibt die APP-Oberfläche an DWM<br/>        |
-| 3.   | Nachdem die freigegebene Oberflächen Kopie abgeschlossen ist, rendert DWM die APP-Oberfläche auf dem Bildschirm (lesen, schreiben)<br/> | DWM rendert die APP-Oberfläche auf dem Bildschirm (lesen, schreiben)<br/> |
+| 1.   | Die App aktualisiert ihren Frame (Schreiben).<br/>                                                              | Die App aktualisiert ihren Frame (Schreiben).<br/>                     |
+| 2.   | Direct3D-Runtime kopiert Oberflächeninhalte auf eine DWM-Umleitungsoberfläche (Lesen, Schreiben).<br/>            | Direct3D-Runtime übergibt die App-Oberfläche an DWM<br/>        |
+| 3.   | Nach Abschluss der Kopie der freigegebenen Oberfläche rendert DWM die App-Oberfläche auf dem Bildschirm (Lesen, Schreiben).<br/> | DWM rendert die App-Oberfläche auf dem Bildschirm (Lesen, Schreiben)<br/> |
 
 
 
  
 
-![Abbildung eines Vergleichs zwischen dem BLT-Modell und dem Flip-Modell](images/blt-flip-mode-present.png)
+![Abbildung eines Vergleichs des Blt-Modells und des Flip-Modells](images/blt-flip-mode-present.png)
 
-Das Kippen-Modell reduziert die Systemspeicher Auslastung durch Verringern der Anzahl von Lese-und Schreibvorgängen durch die Direct3D-Laufzeit für die Zusammenstellung des Fensterrahmens durch DWM.
+Das Flip-Modell reduziert die Systemspeicherauslastung, indem die Anzahl der Lese- und Schreibvorgänge durch die Direct3D-Runtime für die Framekomposition im Fenster durch DWM reduziert wird.
 
 ## <a name="how-to-use-dxgi-flip-model"></a>Verwenden des DXGI-Flip-Modells
 
-Direct3D 11,1-apps, die auf Windows 8 abzielen, verwenden ein Flip-Modell, indem Sie die **SwapChain** mit dem [**DXGI- \_ \_ swapffekt-Wert \_ Flip \_ sequenzieller**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect) Enumerationswert erstellen, der im SwapEffect-Member der [**\_ \_ \_ DESC1**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) -Struktur Wenn Sie **SwapEffect** auf den **DXGI- \_ swapffekt als \_ \_ \_ sequenziell** festlegen, legen Sie auch diese Member der **DXGI- \_ \_ SwapChain \_ DESC1** auf die folgenden Werte fest:
+Direct3D 11.1-Apps, die Windows 8 flip model verwenden, indem sie die Swapkette mit dem [**DXGI \_ SWAP EFFECT FLIP \_ \_ \_ SEQUENTIAL-Enumerationswert**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect) erstellen, der im **SwapEffect-Member** der [**DXGI SWAP CHAIN \_ \_ \_ DESC1-Struktur**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) festgelegt ist. Wenn Sie **SwapEffect** auf **DXGI \_ SWAP EFFECT FLIP \_ \_ \_ SEQUENTIAL** festlegen, legen Sie auch diese Member von **DXGI SWAP CHAIN \_ \_ \_ DESC1** auf die angegebenen Werte fest:
 
--   **BUFFERCOUNT** auf einen Wert zwischen 2 und 16, um eine Leistungs Einbuße zu verhindern, weil darauf gewartet wird, dass DWM den vorherigen Präsentations Puffer freigibt.
--   **Format** im DXGI- \_ Format \_ R16G16B16A16 \_ float, DXGI- \_ Format \_ B8G8R8A8 \_ unorm oder DXGI- \_ Format \_ R8G8B8A8 \_ unorm
--   **Count** -Member der [**DXGI- \_ Beispiel \_**](/windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc) -Debug-Struktur, die vom **sampledebug** -Member an einen und der **Quality** -Member des DXGI-Samplingrate auf NULL festgelegt wird, da mehrere Sample Antialiasing (MSAA) nicht unterstützt werden. **\_ \_**
+-   **BufferCount** auf einen Wert zwischen 2 und 16, um leistungseinbußen zu vermeiden, da dwm darauf wartet, den vorherigen Präsentationspuffer freizugeben.
+-   **Formatieren** in DXGI \_ FORMAT \_ R16G16B16A16 \_ FLOAT, DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM oder DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM
+-   **Count** member of the [**DXGI \_ SAMPLE \_ DESC**](/windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc) structure that the **SampleDesc** member specifies to one and the **Quality** member of **DXGI \_ SAMPLE \_ DESC** to zero because multiple sample antialiasing (MSAA) is not supported
 
-Wenn Sie [**DXGI- \_ \_ swapffekt \_ \_**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect) bei Windows 7 oder einem älteren Betriebssystem als sequenziell verwenden, schlägt die Geräte Erstellung fehl. Wenn Sie das Modell "Kippen" verwenden, können Sie die voll Bild Anzeige im Fenstermodus verwenden. Das voll Bild Verhalten ist nicht betroffen. Wenn Sie **null** an den *pfullscreendebug* -Parameter von [**IDXGIFactory2:: anateswapchainforhwnd**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd) für eine Fensteraustausch Kette übergeben und **SwapEffect** auf den **DXGI- \_ Swap-Effekt in \_ \_ \_ sequenzieller Richtung** festlegen, erstellt die Laufzeit einen zusätzlichen Hintergrund Puffer und rotiert, welches Handle zu dem Puffer gehört, der zur Präsentationszeit zum vorderen Puffer wird.
+Wenn Sie [**DXGI \_ SWAP EFFECT FLIP \_ \_ \_ SEQUENTIAL**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect) auf Windows 7 oder früheren Betriebssystemen verwenden, tritt bei der Geräteerstellung ein Fehler auf. Wenn Sie das Flip-Modell verwenden, können Sie die im Fenstermodus vorhandenen Statistiken im Vollbildmodus verwenden. Das Vollbildverhalten ist nicht betroffen. Wenn Sie **NULL** an den *pFullscreenDesc-Parameter* von [**IDXGIFactory2::CreateSwapChainForHwnd**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd) für eine Swapkette mit Fenstern übergeben und **SwapEffect** auf **DXGI SWAP EFFECT FLIP \_ \_ \_ \_ SEQUENTIAL** festlegen, erstellt die Laufzeit einen zusätzlichen Hintergrundpuffer und rotiert das handle, das zum Puffer gehört, der zur Präsentationszeit zum Frontpuffer wird.
 
-Beachten Sie bei der Verwendung von Flip Model die folgenden Tipps:
+Wenn Sie das Flip-Modell verwenden, beachten Sie die folgenden Tipps:
 
--   Verwenden Sie eine kippen-Modell Austausch Kette pro [**HWND**](../winprog/windows-data-types.md). Verwenden Sie nicht mehrere Flip-Modell Austausch Ketten an dasselbe **HWND**.
--   Verwenden Sie keine Flip Model Swap-Kette mit der [**scrollwindow**](/windows/win32/api/winuser/nf-winuser-scrollwindow) -Funktion oder der [**scrollwindowex**](/windows/win32/api/winuser/nf-winuser-scrollwindowex) -Funktion von GDI. Einige Direct3D-Apps verwenden die Funktionen **scrollwindow** und **scrollwindowex** von GDI zum Aktualisieren von Fenster Inhalten, nachdem ein Benutzer scrollereignis auftritt. **Scrollwindow** und **scrollwindowex** führen bitblts von Fenster Inhalten auf dem Bildschirm aus, während der Benutzer einen Bildlauf durchführt. Diese Funktionen erfordern auch BitBLT-Modell Updates für GDI-und Direct3D-Inhalte. Apps, die eine dieser Funktionen verwenden, zeigen nicht notwendigerweise sichtbare Fenster Inhalte an, die auf dem Bildschirm angezeigt werden, wenn sich die APP im Fenstermodus befindet. Es wird empfohlen, die Funktionen " **scrollwindow** " und " **scrollwindowex** " von GDI nicht zu verwenden, sondern stattdessen GDI-und Direct3D-Inhalte auf dem Bildschirm neu zu zeichnen
--   Verwenden Sie das Flip-Modell in einem [**HWND**](../winprog/windows-data-types.md) , das nicht auch von anderen APIs als Ziel verwendet wird, einschließlich DXGI BitBLT Presentation Model, Other Version of Direct3D oder GDI. Da das BitBLT-Modell eine zusätzliche Kopie der Oberfläche beibehält, können Sie GDI und andere Direct3D-Inhalte dem gleichen **HWND** hinzufügen, indem Sie schrittweise Updates von Direct3D und GDI ausführen. Wenn Sie das Flip-Modell verwenden, werden nur Direct3D-Inhalte in kippen Model-Austausch Ketten angezeigt, die die Laufzeit an DWM übergibt. Die Laufzeit ignoriert alle anderen BitBLT-Modell-Direct3D-oder GDI-Inhalts Updates.
+-   Verwenden Sie eine Flip-Modell-Swapkette pro [**HWND.**](../winprog/windows-data-types.md) Richten Sie sich nicht an mehrere Flip-Modell-Swapketten für den gleichen **HWND.**
+-   Verwenden Sie keine Swapkette für Flip-Modelle mit der [**ScrollWindow-**](/windows/win32/api/winuser/nf-winuser-scrollwindow) oder [**ScrollWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-scrollwindowex) von GDI. Einige Direct3D-Apps verwenden die GDI-Funktionen **ScrollWindow** und **ScrollWindowEx,** um den Inhalt des Fensters zu aktualisieren, nachdem ein Benutzerbildlaufereignis aufgetreten ist. **ScrollWindow** und **ScrollWindowEx** führen Bitblts von Fensterinhalten auf dem Bildschirm aus, während der Benutzer in einem Fenster scrollt. Diese Funktionen erfordern auch Bitblt-Modellupdates für GDI- und Direct3D-Inhalte. Apps, die eine der beiden Funktionen verwenden, zeigen nicht unbedingt sichtbare Fensterinhalte an, die auf dem Bildschirm scrollen, wenn sich die App im Fenstermodus befindet. Es wird empfohlen, die Funktionen **ScrollWindow** und **ScrollWindowEx** von GDI nicht zu verwenden und stattdessen GDI- und Direct3D-Inhalte auf dem Bildschirm neu zu zeichnen, um scrollen zu können.
+-   Verwenden Sie das Flip-Modell in einem [**HWND,**](../winprog/windows-data-types.md) das nicht auch für andere APIs vorgesehen ist, z. B. DXGI-Bitblt-Präsentationsmodell, andere Versionen von Direct3D oder GDI. Da das Bitblt-Modell eine zusätzliche Kopie der Oberfläche beibehält, können Sie GDI- und andere Direct3D-Inhalte dem gleichen **HWND** durch teilliche Updates von Direct3D und GDI hinzufügen. Wenn Sie das Flip-Modell verwenden, sind nur Direct3D-Inhalte in Swapketten des Flipmodells sichtbar, die die Laufzeit an DWM übergibt. Die Runtime ignoriert alle anderen Bitblt-Modellupdates für Direct3D- oder GDI-Inhalte.
 
-## <a name="frame-synchronization-of-dxgi-flip-model-apps"></a>Frame Synchronisierung von DXGI-Flip Model-apps
+## <a name="frame-synchronization-of-dxgi-flip-model-apps"></a>Framesynchronisierung von DXGI-Flip-Modell-Apps
 
-Aktuelle Statistiken sind Informationen zur Rahmen Zeit, die von Medien-Apps zum Synchronisieren von Video-und Audiodatenströmen und zum Wiederherstellen von Videowiedergabe-Störungen verwendet werden. Apps können die Informationen zur Rahmen Zeitangabe in der aktuellen Statistik verwenden, um die Präsentations Rate ihrer Video Frames für eine reibungslosere Darstellung anzupassen. Zum Abrufen der aktuellen Statistik Informationen rufen Sie die [**idxgiswapchain:: getframestatistics**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics) -Methode auf, um die Struktur der [**DXGI- \_ Frame \_ Statistik**](/windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics) abzurufen. **DXGI \_ Die Frame- \_ Statistik** enthält Statistiken zu [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) -aufrufen. Eine kippen-Modell Austausch Kette stellt die aktuellen Statistik Informationen sowohl im Fenstermodus als auch im Vollbildmodus bereit. Bei BitBLT-Modell Austausch Ketten im Fenstermodus sind alle **DXGI- \_ Frame \_ Statistik** Werte Nullen.
+Aktuelle Statistiken sind Frame-Timing-Informationen, die Medien-Apps verwenden, um Video- und Audiostreams zu synchronisieren und nach Störungen bei der Videowiedergabe wiederherzustellen. Apps können die Frame-Timing-Informationen in aktuellen Statistiken verwenden, um die Präsentationsrate ihrer Videoframes für eine reibungslose darstellung anzupassen. Um aktuelle Statistikinformationen abzurufen, rufen Sie die [**IDXGISwapChain::GetFrameStatistics-Methode**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics) auf, um die [**DXGI \_ FRAME \_ STATISTICS-Struktur**](/windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics) abzurufen. **DXGI \_ FRAME \_ STATISTICS** enthält Statistiken zu [**IDXGISwapChain1::P resent1-Aufrufen.**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) Eine Swapkette für Flip-Modelle stellt sowohl im Fenstermodus als auch im Vollbildmodus aktuelle Statistikinformationen bereit. Bei Bitblt-Modellaustauschketten im Fenstermodus sind alle **DXGI \_ FRAME \_ STATISTICS-Werte** Nullen.
 
-Für das Flip Model Present Statistics gibt [**idxgiswapchain:: getframestatistics**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics) in folgenden Situationen eine **Disjunktion der DXGI- \_ Fehler \_ Rahmen \_ Statistiken \_** zurück:
+Für aktuelle Statistiken des Flip-Modells gibt [**IDXGISwapChain::GetFrameStatistics**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics) **DXGI \_ ERROR FRAME \_ STATISTICS \_ \_ DISJOINT** in folgenden Situationen zurück:
 
--   Erster [**getframestatistics**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics)-Befehl, der den Anfang einer Sequenz angibt
--   Modusänderung: entweder der Fenstermodus zum oder vom Vollbildmodus oder vom Vollbildmodus bis zum voll Bild Übergang
+-   Erster Aufruf von [**GetFrameStatistics,**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics)der den Anfang einer Sequenz angibt
+-   Modusänderung: Entweder im Fenstermodus oder von Vollbild- oder Vollbild- zu Vollbildübergängen
 
-Die Werte in den Elementen **presentfreshcount**, **synkrefreshcount** und **syncqpctime** der [**DXGI- \_ Frame \_ Statistiken**](/windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics) weisen die folgenden Eigenschaften auf:
+Die Werte in **den Membern PresentRefreshCount,** **SyncRefreshCount** und **SyncQPCTime** von [**DXGI \_ FRAME \_ STATISTICS**](/windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics) weisen die folgenden Merkmale auf:
 
--   **Presentfreshcount** ist gleich **synkrefreshcount** , wenn die APP bei jeder VSYNC angezeigt wird.
--   **Synkrefreshcount** wird im VSYNC-Intervall abgerufen, wenn der vorhandene gesendet wurde. **syncqpctime** ist ungefähr die Zeit, die dem VSYNC-Intervall zugeordnet ist.
+-   **PresentRefreshCount** ist gleich **SyncRefreshCount,** wenn die App auf jeder vsync dargestellt wird.
+-   **SyncRefreshCount** wird im vsync-Intervall abgerufen, als das aktuelle übermittelt wurde. **SyncQPCTime** entspricht ungefähr der Zeit, die dem vsync-Intervall zugeordnet ist.
 
-Die [**idxgiswapchain:: getlastpresentcount**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getlastpresentcount) -Methode gibt die letzte vorhandene Anzahl zurück, d. h. die aktuelle ID des letzten erfolgreichen [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) -Aufrufens von einem Anzeigegerät, das der Swapkette zugeordnet ist. Diese vorhandene ID ist der Wert des **presentcount** -Members der Struktur der [**DXGI- \_ Frame \_ Statistik**](/windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics) . Bei BitBLT-Modell Austausch Ketten werden im Fenstermodus alle **DXGI- \_ Frame \_ Statistik** Werte als Nullen angezeigt.
+Die [**IDXGISwapChain::GetLastPresentCount-Methode**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getlastpresentcount) gibt die letzte aktuelle Anzahl zurück, d.h. die aktuelle ID des letzten [**erfolgreichen IDXGISwapChain1::P resent1-Aufrufs,**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) der von einem Anzeigegerät erfolgt ist, das der Swapkette zugeordnet ist. Diese aktuelle ID ist der Wert des **PresentCount-Elements** der [**DXGI \_ FRAME \_ STATISTICS-Struktur.**](/windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics) Bei Bitblt-Modellaustauschketten sind im Fenstermodus alle **DXGI \_ FRAME \_ STATISTICS-Werte** Nullen.
 
-## <a name="avoiding-detecting-and-recovering-from-glitches"></a>Vermeiden, erkennen und Wiederherstellen von Störungen
+## <a name="avoiding-detecting-and-recovering-from-glitches"></a>Vermeiden, Erkennen und Wiederherstellen von Störungen
 
-Führen Sie diese Schritte aus, um das Durchsuchen in der Frame Präsentation zu vermeiden, zu erkennen und wiederherzustellen:
+Führen Sie diese Schritte aus, um Störungen in der Framepräsentation zu vermeiden, zu erkennen und nach diesen wiederherzustellen:
 
-1.  Queue [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) -Aufrufe (d. h. Aufrufen von **IDXGISwapChain1::P resent1** mehrmals, was dazu veranlasst, dass Sie in einer Warteschlange gesammelt werden).
-2.  Erstellen Sie eine vorhandene Warteschlangen Struktur zum Speichern aller erfolgreich gesendeten [**IDXGISwapChain1::P**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)der vorhandenen ID (zurückgegeben von [**idxgiswapchain:: getlastpresentcount**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getlastpresentcount)) und zugeordneten, berechneten/erwarteten **presenterfrischendes count** -Werten.
-3.  So erkennen Sie einen Fehler:
+1.  [**Warteschlangen-IDXGISwapChain1::P resent1-Aufrufe**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) (d.b. **mehrmals IDXGISwapChain1::P resent1** aufrufen, wodurch sie in einer Warteschlange erfasst werden).
+2.  Erstellen Sie eine present-queue-Struktur, um alle erfolgreich [**übermittelten IDXGISwapChain1::P resent1-Id**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)(zurückgegeben von [**IDXGISwapChain::GetLastPresentCount)**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getlastpresentcount)und die zugehörigen, berechneten/erwarteten **PresentRefreshCount-Werte** zu speichern.
+3.  So erkennen Sie eine Störung:
 
-    -   Aufrufen von [**idxgiswapchain:: getframestatistics**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics).
-    -   Für diesen Frame können Sie die aktuelle ID (**presentcount**) und die VSYNC-Anzahl anzeigen, bei der das Betriebssystem dem Monitor das letzte Bild angezeigt hat (**presenterfrischendes count**).
-    -   Rufen Sie den erwarteten **presenterfrischend-Zähler** ab, der der aktuellen ID zugeordnet ist und die Sie zuvor in der Struktur der aktuellen Warteschlange gespeichert haben.
-    -   Wenn die tatsächliche **presentaktuellem Anzahl** später als die erwartete **presenterfrischen-Anzahl** liegt, ist ein Fehler aufgetreten.
+    -   Rufen Sie [**IDXGISwapChain::GetFrameStatistics auf.**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics)
+    -   Für diesen Frame erhalten Sie die aktuelle ID (**PresentCount**) und die vsync-Anzahl, bei der das Betriebssystem dem Monitor das letzte Image angezeigt hat (**PresentRefreshCount**).
+    -   Rufen Sie das erwartete **PresentRefreshCount** ab, das der aktuellen ID zugeordnet ist und die Sie zuvor in der Present-Queue-Struktur gespeichert haben.
+    -   Wenn das tatsächliche **PresentRefreshCount-Element** höher als das erwartete **PresentRefreshCount-Element** ist, ist eine Störung aufgetreten.
 
-4.  So stellen Sie eine Wiederherstellung nach dem glitch durch:
+4.  So stellen Sie die Wiederherstellung nach der Störung her:
 
-    -   Berechnen Sie die Anzahl der Frames, die bei der Wiederherstellung nach dem glitch übersprungen werden. Wenn in Schritt 3 beispielsweise angezeigt wird, dass die erwartete VSYNC-Anzahl (**presenterfrischendes count**) für eine vorhandene ID (**presentcount**) 5 beträgt und die tatsächliche VSYNC-Anzahl für die vorhandene ID 8 ist, ist die Anzahl der zu über springenden Rahmen bei der Wiederherstellung aus dem Störung 3 Frames.
-    -   Übergeben Sie 0 an den *syncinterval* -Parameter in dieser Anzahl von Aufrufen an [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) , um diese Anzahl von Frames zu verwerfen und zu überspringen.
+    -   Berechnen Sie die Anzahl der Frames, die bei der Wiederherstellung nach der Störung übersprungen werden sollen. Wenn beispielsweise Schritt 3 ergibt, dass die erwartete vsync-Anzahl (**PresentRefreshCount**) für eine aktuelle ID (**PresentCount**) 5 und die tatsächliche vsync-Anzahl für die aktuelle ID 8 ist, beträgt die Anzahl der Frames, die zur Wiederherstellung nach der Störung übersprungen werden sollen, 3 Frames.
+    -   Übergeben Sie 0 an den *SyncInterval-Parameter* in dieser Anzahl von Aufrufen von [**IDXGISwapChain1::P resent1,**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) um diese Anzahl von Frames zu verwerfen und zu überspringen.
 
         > [!Note]  
-        > Wenn das Störung aus einer großen Anzahl von Frames besteht, nennen Sie [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) , wobei der *Flags* -Parameter auf [**DXGI \_ Present \_ Restart**](dxgi-present.md) festgelegt ist, um alle ausstehenden in der Warteschlange befindlichen Darstellung zu verwerfen und zu überspringen.
+        > Wenn die Störung aus einer großen Anzahl von Frames besteht, rufen [**Sie IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) auf, wobei der *Flags-Parameter* auf [**DXGI \_ PRESENT \_ RESTART**](dxgi-present.md) festgelegt ist, um alle ausstehenden Präsentierten in der Warteschlange zu verwerfen und zu überspringen.
 
          
 
-Im folgenden finden Sie ein Beispielszenario für die Wiederherstellung nach einem Fehler in der Frame Präsentation:
+Hier sehen Sie ein Beispielszenario für die Wiederherstellung nach Störungen in der Framepräsentation:
 
-![Abbildung eines Beispiel Szenarios für die Wiederherstellung nach einem Fehler in der Frame Präsentation](images/frame-sync-glitch-recover.png)
+![Abbildung eines Beispielszenarios für die Wiederherstellung nach Störungen in der Framepräsentation](images/frame-sync-glitch-recover.png)
 
-Im Beispielszenario erwarten Sie, dass Frame a auf dem Bildschirm für die VSYNC-Anzahl 1 angezeigt wird. Sie erkennen aber tatsächlich den VSYNC-Zähler, dass Frame A auf dem Bildschirm 4 angezeigt wird. Daher können Sie feststellen, dass ein Fehler aufgetreten ist. Sie können dann drei Frames verwerfen, d. h., Sie können 0 an den *syncinterval* -Parameter in drei Aufrufen von [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)übergeben. Im vorangehenden Beispielszenario benötigen Sie zum Wiederherstellen nach dem glitch eine Summe von 8 **IDXGISwapChain1::P resent1** -aufrufen. Der 9. Frame wird dann gemäß der erwarteten VSYNC-Anzahl angezeigt.
+Im Beispielszenario erwarten Sie, dass Frame A auf dem Bildschirm mit einer vsync-Anzahl von 1 angezeigt wird. Tatsächlich erkennen Sie jedoch die vsync-Anzahl, dass Frame A auf dem Bildschirm als 4 angezeigt wird. Daher stellen Sie fest, dass eine Störung aufgetreten ist. Sie können dann drei Frames verwerfen, d.h. Sie können 0 in drei Aufrufen von [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)an den *SyncInterval-Parameter* übergeben. Im vorherigen Beispielszenario benötigen Sie insgesamt 8 **IDXGISwapChain1::P resent1-Aufrufe,** um nach der Störung wiederherzustellen. Der 9. Frame wird dann gemäß der erwarteten vsync-Anzahl angezeigt.
 
-Im folgenden finden Sie eine zeitanfolge von Präsentations Ereignissen. Jede vertikale Linie stellt eine VSYNC dar. Die horizontale Richtung ist die Zeit, die auf der rechten Seite zunimmt. Anhand der Abbildung können Sie sich vorstellen, wie Fehler auftreten können.
+Hier ist eine Zeitzeile mit Präsentationsereignissen. Jede vertikale Linie stellt eine vsync dar. Die horizontale Richtung ist die Zeit, die nach rechts zunimmt. Anhand der Abbildung können Sie sich vorstellen, wie Störungen auftreten können.
 
-![Abbildung einer zeitanfolge der Präsentation eventsl](images/present-timeline.png)
+![Abbildung einer Zeitlinie von Präsentationsereignissenl](images/present-timeline.png)
 
-Diese Sequenz wird in der Abbildung veranschaulicht:
+Die Abbildung veranschaulicht diese Sequenz:
 
-1.  Die APP wird bei VSYNC reaktiviert, blau gerendert, [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)und dann wieder in den Standbymodus wechselt.
-2.  Die Grafikverarbeitungseinheit (Graphics Processing Unit, GPU) wird aus dem Leerlauf aktiviert, führt das Rendering in blau aus und wechselt dann wieder in den Standbymodus.
-3.  Die DWM wird bei der nächsten VSYNC reaktiviert, eine blaue in ihren Hintergrund Puffer setzt, [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)aufruft und dann wieder in den Standbymodus wechselt.
-4.  Die APP wird reaktiviert, rendert grün, ruft [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)auf und wechselt dann wieder in den Standbymodus.
+1.  Die App aktiviert vsync, rendert blau, ruft [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)auf und wechselt dann wieder in den Ruhezustand.
+2.  Die Grafikverarbeitungseinheit (GPU) wird aus dem Leerlauf aktiviert, führt das Rendern in Blau aus und wechselt dann wieder in den Standbymodus.
+3.  Der DWM wird bei der nächsten vsync aktiviert, erstellt blau in seinem Hintergrundpuffer, ruft [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)auf und wechselt dann wieder in den Standbymodus.
+4.  Die App wird aktiviert, wird grün gerendert, ruft [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)auf und wechselt dann wieder in den Ruhezustand.
     > [!Note]  
-    > Die APP wird gleichzeitig ausgeführt, während die GPU die Komposition von blau ausführt.
+    > Die App wird gleichzeitig ausgeführt, während die GPU die Blau-Erstellung ausführt.
 
      
 
-5.  Als nächstes rendert die GPU grün für die app.
-6.  Zum Schluss zeigt der Digital to Analog Converter (DAC) die Ergebnisse der DWM-Komposition für den Monitor bei der nächsten VSYNC.
+5.  Als Nächstes wird die GPU für die App grün gerendert.
+6.  Schließlich zeigt der digitale zu analoge Konverter (Digital to Analog Converter, DAC) ergebnisse der DWM-Komposition auf dem Monitor bei der nächsten vsync an.
 
-In der zeitanschlange können Sie sich die Latenz der aktuellen Statistiken und die Art der fehlerhafte Verwendung vorstellen. Wenn Sie z. b. einen DWM-Glitzer für die grüne Farbe anzeigen möchten, die auf dem Bildschirm angezeigt wird, stellen Sie sich vor, das grüne/rote Feld zu vergrößern, sodass die Rechte Seite des grünen/roten Felds mit der rechten Seite des lila/roten Felds übereinstimmt. In diesem Szenario zeigt die DAC zwei Rahmen blau und dann den grünen Rahmen an. Sie sehen, dass dieser Fehler beim Lesen der aktuellen Statistiken aufgetreten ist.
+In der Zeitlinie können Sie sich die Latenz der aktuellen Statistiken und die Art und Weise vorstellen, wie Störungen auftreten können. Um beispielsweise eine DWM-Störung für die grüne Farbe anzuzeigen, die auf dem Bildschirm angezeigt wird, stellen Sie sich vor, das grüne/rote Feld zu erweitern, sodass die rechte Seite des grün/rot-Felds rechts vom violetten/roten Feld übereinstimmt. In diesem Szenario zeigt die DAC zwei blaue Und dann den grünen Rahmen an. Sie können sehen, dass diese Störung beim Lesen vorhandener Statistiken aufgetreten ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verbessern der Präsentation mit dem Flip-Modell, den geänderten Rechtecke und den Bereichen](dxgi-1-2-presentation-improvements.md)
+[Verbessern der Darstellung mit dem Flip-Modell, den geänderten Rechtecke und scrollbaren Bereichen](dxgi-1-2-presentation-improvements.md)
 </dt> </dl>
 
  

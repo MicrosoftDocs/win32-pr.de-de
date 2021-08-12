@@ -1,34 +1,34 @@
 ---
-description: 'Es gibt zwei Möglichkeiten zum Hinzufügen von Nebel zu einer Szene: mit Pixel Nebel und/oder Scheitelpunkt Nebel.'
+description: 'Es gibt zwei Möglichkeiten, einer Szene Heiterheit hinzuzufügen: mit Pixelpixel und/oder Scheitelpunkt.'
 ms.assetid: 96531830-2df1-40d4-af46-09b1ca153834
-title: Nebel Typen (Direct3D 9)
+title: Typen von Typen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b5dd845373ac4a42a32ab7a9965501df4894568
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cdde2f4dd10ea468b72c1ac91e6a43326ccac81a459a893b5235a43d4428ff38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118297540"
 ---
-# <a name="fog-types-direct3d-9"></a>Nebel Typen (Direct3D 9)
+# <a name="fog-types-direct3d-9"></a>Typen von Typen (Direct3D 9)
 
-Es gibt zwei Möglichkeiten zum Hinzufügen von Nebel zu einer Szene: mit Pixel Nebel und/oder Scheitelpunkt Nebel. In den folgenden Themen werden die in den Nebel Gleichungen verwendeten Formeln und die Implementierung von Scheitelpunkt und Pixel Nebel veranschaulicht. Eine Anwendung kann Nebel mit einem Vertexshader implementieren und ggf. Pixel Nebel gleichzeitig.
+Es gibt zwei Möglichkeiten, einer Szene Heiterheit hinzuzufügen: mit Pixelpixel und/oder Scheitelpunkt. Die folgenden Themen veranschaulichen die Formeln, die in Gleichungsgleichungen verwendet werden, sowie die Implementierung von Scheitelpunkt und Pixelpixel. Eine Anwendung kann mit einem Scheitelpunkt-Shader und bei Wunsch Pixelpixel gleichzeitig implementieren.
 
--   [Nebel Formeln](fog-formulas.md)
--   [Nebel Parameter](fog-parameters.md)
--   [Nebel Mischung](fog-blending.md)
--   [Nebelfarbe](fog-color.md)
--   [Scheitelpunkt Nebel](vertex-fog.md)
--   [Pixel Nebel](pixel-fog.md)
+-   [Formeln für Formeln](fog-formulas.md)
+-   [Parameter von "Parameters"](fog-parameters.md)
+-   [Blending von Blending für Blending](fog-blending.md)
+-   [Farbton](fog-color.md)
+-   [Scheitelpunkt](vertex-fog.md)
+-   [Pixelpixel](pixel-fog.md)
 
-Nebel Mischung wird durch Rendering-Zustände gesteuert. Sie ist nicht Teil der programmierbaren Pixel Pipeline.
+Das Blending von Blending wird durch Renderzustände gesteuert. sie ist nicht Teil der programmierbaren Pixelpipeline.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Frame Puffer](frame-buffer.md)
+[Framepuffer](frame-buffer.md)
 </dt> </dl>
 
  

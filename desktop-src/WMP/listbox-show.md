@@ -1,9 +1,9 @@
 ---
-title: ListBox. Show
-description: Die Show-Methode zeigt das-Steuerelement an.
+title: LISTBOX.show
+description: Die show-Methode zeigt das Steuerelement an.
 ms.assetid: ae07ce83-c592-42a1-8cd3-7e62e846ac5c
 keywords:
-- ListBox. Show Windows Media Player
+- LISTBOX.show Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4c01c1ca46a1a9d8ef32ca4f520b146825f21f44
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c2845c880dd16b488eec3354c14c5398cab1455368a52946d95ec81944acd8ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118574812"
 ---
-# <a name="listboxshow"></a>ListBox. Show
+# <a name="listboxshow"></a>LISTBOX.show
 
-Die **Show** -Methode zeigt das-Steuerelement an.
+Die **show-Methode** zeigt das Steuerelement an.
 
 ``` syntax
         elementID.show()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird hauptsächlich mit dem **Popup** -Element verwendet, das ein Listenfeld-Steuerelement darstellt, das nur bei Bedarf angezeigt wird.
+Diese Methode wird in erster Linie mit dem **POPUP-Element** verwendet, das ein Listenfeld-Steuerelement darstellt, das nur bei Bedarf angezeigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,13 +54,13 @@ Diese Methode wird hauptsächlich mit dem **Popup** -Element verwendet, das ein 
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**ListBox. verwerfen**](listbox-dismiss.md)
+[**LISTBOX.dismiss**](listbox-dismiss.md)
 </dt> <dt>
 
-[**Popup-Element**](popup-element.md)
+[**POPUP-Element**](popup-element.md)
 </dt> </dl>
 
  

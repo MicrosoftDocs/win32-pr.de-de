@@ -1,11 +1,11 @@
 ---
-title: Player. playlistchange-Ereignis
-description: Das playlistchange-Ereignis tritt auf, wenn eine Wiedergabeliste geändert wird. | Player. playlistchange-Ereignis
+title: Player.PlaylistChange-Ereignis
+description: Das PlaylistChange-Ereignis tritt auf, wenn sich eine Wiedergabeliste ändert. | Player.PlaylistChange-Ereignis
 ms.assetid: 09ab0560-e18d-4ee8-a649-2b2468b40c31
 keywords:
-- Media Player "playlistchange-Ereignisfenster"
-- Playlistchange-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, playlistchange-Ereignis
+- PlaylistChange-Windows Media Player
+- PlaylistChange-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , PlaylistChange-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 83d371818e8166b536543246eeecf0090509e62b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ff4c45449c8de2062aa53ce9bda89c8d634dd30bc1ac8c03f091e8b97e9ce60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572803"
 ---
-# <a name="playerplaylistchange-event"></a>Player. playlistchange-Ereignis
+# <a name="playerplaylistchange-event"></a>Player.PlaylistChange-Ereignis
 
-Das **playlistchange** -Ereignis tritt auf, wenn eine Wiedergabeliste geändert wird.
+Das **PlaylistChange-Ereignis** tritt auf, wenn sich eine Wiedergabeliste ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ Player.PlaylistChange(
 
 <dl> <dt>
 
-*Abspielen* 
+*Wiedergabeliste* 
 </dt> <dd>
 
-**Wiedergabe** Listen Objekt, das geändert wurde.
+**Wiedergabelistenobjekt,** das geändert wurde.
 
 </dd> <dt>
 
 *change* 
 </dt> <dd>
 
-**Zahl** (**Long**), die den Typ der Änderung angibt, die in der Wiedergabeliste aufgetreten ist. Enthält einen der folgenden Werte.
+**Number** (**long**) gibt den Typ der Änderung an, die an der Wiedergabeliste aufgetreten ist. Enthält einen der folgenden Werte.
 
 
 
 | number | name          |
 |--------|---------------|
 | 0      | Unbekannt       |
-| 1      | Clear         |
-| 2      | Infochange    |
+| 1      | Löschen         |
+| 2      | InfoChange    |
 | 3      | Move          |
 | 4      | Löschen        |
 | 5      | Einfügen        |
 | 6      | Anfügen        |
 | 7      | Nicht unterstützt |
-| 8      | Name Change    |
+| 8      | NameChange    |
 | 9      | Nicht unterstützt |
 | 10     | Sortieren          |
 
@@ -75,7 +75,7 @@ Player.PlaylistChange(
 
  
 
-Die Enumerationskonstante im C-Stil kann durch Voranstellen des Namens Werts mit "wmsps" abgeleitet werden. Beispielsweise ist die Konstante für den Verschiebungs Zustand **wmplcmove**.
+Die Enumerationskonst constant im C-Stil kann abgeleitet werden, indem dem Namenswert "wmplc" vorangestellt wird. Die Konstante für den Move-Status ist z. B. **wmplcMove.**
 
 </dd> </dl>
 
@@ -83,9 +83,9 @@ Die Enumerationskonstante im C-Stil kann durch Voranstellen des Namens Werts mit
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens auf eine Methode in einer importierten JScript-Datei zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt typisieren, einschließlich Groß- und Groß-/Schreibanforderungen.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -95,7 +95,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

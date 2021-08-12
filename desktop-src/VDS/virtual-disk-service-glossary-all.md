@@ -1,386 +1,386 @@
 ---
-description: Dieser Abschnitt enthält ein Glossar der technischen Begriffe, die in der Dokumentation zu Virtual Disk Service (VDS) verwendet werden.
+description: Dieser Abschnitt enthält ein Glossar mit technischen Begriffen, die in der Dokumentation zu Virtual Disk Service (VDS) verwendet werden.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 1cf28cfb-ce96-4659-955d-0088bddcb9ce
 title: Glossar zum Dienst für virtuelle Datenträger
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cc8804f1aea832f59fcbcab65423e92e134939f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af7e73e9de8f6c30b69f2e39e78fae36e5c3ea547cccfed2f25f9a15327e3f8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118602993"
 ---
 # <a name="virtual-disk-service-glossary"></a>Glossar zum Dienst für virtuelle Datenträger
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-Dieser Abschnitt enthält ein Glossar der technischen Begriffe, die in der Dokumentation zu Virtual Disk Service (VDS) verwendet werden.
+Dieser Abschnitt enthält ein Glossar mit technischen Begriffen, die in der Dokumentation zu Virtual Disk Service (VDS) verwendet werden.
 
 <dl> <dt>
 
-<span id="base.automagic_configuration"></span><span id="BASE.AUTOMAGIC_CONFIGURATION"></span>**automagationskonfiguration**
+<span id="base.automagic_configuration"></span><span id="BASE.AUTOMAGIC_CONFIGURATION"></span>**Automagic-Konfiguration**
 </dt> <dd>
 
-Der Hardware-RAID-Anbieter, der eine Reihe von Regeln zur Auswahl eines logischen LUN-Blocks basierend auf einfachen Attributen bereitstellt. Automaginganbieter können die Zuordnung für die Leistung oder Fehler Verwaltung auch dynamisch ändern.
+Hardware-RAID-Anbieter, der eine Reihe von Regeln für die Auswahl der Neuzuordnung logischer LUN-Blöcke basierend auf einfachen Attributen bietet. Automagic-Anbieter können auch die Zuordnung für die Leistung oder Fehlerverwaltung dynamisch ändern.
 
 </dd> <dt>
 
-<span id="base.binding_hints"></span><span id="BASE.BINDING_HINTS"></span>**automagandeutungen**
+<span id="base.binding_hints"></span><span id="BASE.BINDING_HINTS"></span>**Automagic-Hinweise**
 </dt> <dd>
 
-Informationen, die für einen automischen Anbieter bereitgestellt werden, um die Konfiguration der logischen LUN-Blöcke zu steuern Hinweise enthalten Informationen zu der gewünschten Fehlertoleranz, der physischen Atomizität und dem beabsichtigten e/a-Zugriffsmuster.
+Informationen, die an einen automagic-Anbieter bereitgestellt werden, um die Konfiguration des logischen LUN-Blocks zu steuern. Hinweise enthalten Informationen zur gewünschten Fehlertoleranz, zur physischen Atomarität und zum beabsichtigten E/A-Zugriffsmuster.
 
 </dd> <dt>
 
-<span id="base.basic_disk"></span><span id="BASE.BASIC_DISK"></span>**Basis Festplatte**
+<span id="base.basic_disk"></span><span id="BASE.BASIC_DISK"></span>**Basisdatenträger**
 </dt> <dd>
 
-Ein Datenträger, der vom einfachsten möglichen Softwareanbieter verwaltet wird. Der Basic-Datenträger Anbieter unterstützt nur Volumes, die den Partitions Konfigurationsdaten Strukturen direkt zugeordnet werden.
+Ein Datenträger, der vom einfachsten softwareanbieter verwaltet wird. Der Basisdatenträgeranbieter unterstützt nur Volumes, die Partitionskonfigurationsdatenstrukturen direkt zugeordnet werden.
 
 </dd> <dt>
 
-<span id="base.binding"></span><span id="BASE.BINDING"></span>**lichere**
+<span id="base.binding"></span><span id="BASE.BINDING"></span>**Bindung**
 </dt> <dd>
 
 Auswählen eines Satzes von Zuordnungen zu physischen Ressourcen.
 
 </dd> <dt>
 
-<span id="base.convert"></span><span id="BASE.CONVERT"></span>**umgebaut**
+<span id="base.convert"></span><span id="BASE.CONVERT"></span>**Konvertieren**
 </dt> <dd>
 
-Der Prozess, bei dem ein Basis Datenträger in einen dynamischen Datenträger umwandelt.
+Der Prozess der Konvertierung eines Basisdatenträgers in einen dynamischen Datenträger.
 
 </dd> <dt>
 
-<span id="base.configuration"></span><span id="BASE.CONFIGURATION"></span>**konfiguri**
+<span id="base.configuration"></span><span id="BASE.CONFIGURATION"></span>**Konfiguration**
 </dt> <dd>
 
 Eine Auflistung der Betriebsparameter, die die Zuordnung von einem Volume oder einer LUN zu physischen Ressourcen bereitstellen.
 
 </dd> <dt>
 
-<span id="base.controller"></span><span id="BASE.CONTROLLER"></span>**ern**
+<span id="base.controller"></span><span id="BASE.CONTROLLER"></span>**Controller**
 </dt> <dd>
 
-Ein Softwareprogramm, das die Lauf Zeit Intelligenz für einen Hardware Anbieter enthält.
+Ein Softwareprogramm, das die Laufzeitintelligenz für einen Hardwareanbieter enthält.
 
 </dd> <dt>
 
-<span id="base.disk"></span><span id="BASE.DISK"></span>**Diskette**
+<span id="base.disk"></span><span id="BASE.DISK"></span>**Datenträger**
 </dt> <dd>
 
-Ein physischer Datenträger oder eine Hardware-RAID-LUN. Datenträger sind Ziele für die Laufzeitspeicher-e/a-Last. Plug & Play (PNP) unterscheidet nicht zwischen JBOD und LUNs.
+Ein physischer Datenträger oder eine HARDWARE-RAID-LUN. Datenträger sind Ziele für die E/A-Last des Laufzeitspeichers. Plug & Play (PNP) unterscheidet nicht zwischen JBOD und LUNs.
 
 </dd> <dt>
 
-<span id="base.disk_platter"></span><span id="BASE.DISK_PLATTER"></span>**Datenträger Platte**
+<span id="base.disk_platter"></span><span id="BASE.DISK_PLATTER"></span>**Disk-8000-Datenträger**
 </dt> <dd>
 
 Eine Teilmenge eines Pakets, das zum Exportieren oder Importieren von Volumes aus einem Paket verwendet wird.
 
 </dd> <dt>
 
-<span id="base.disk_pack"></span><span id="BASE.DISK_PACK"></span>**Disk Pack**
+<span id="base.disk_pack"></span><span id="BASE.DISK_PACK"></span>**Datenträgerpaket**
 </dt> <dd>
 
-Siehe *Paket*.
+Weitere Informationen finden Sie *unter pack*.
 
 </dd> <dt>
 
-<span id="base.drive"></span><span id="BASE.DRIVE"></span>**Antrie**
+<span id="base.drive"></span><span id="BASE.DRIVE"></span>**Laufwerk**
 </dt> <dd>
 
-Eine physische Datenträger Spindel innerhalb eines Hardware-RAID-Subsystems. Laufwerke werden vom-Subsystem an LUNs gebunden.
+Eine physische Datenträgerspindel innerhalb eines Hardware-RAID-Subsystems. Laufwerke werden durch das Subsystem an LUNs gebunden.
 
 </dd> <dt>
 
-<span id="base.dynamic_disk"></span><span id="BASE.DYNAMIC_DISK"></span>**dynamischer Datenträger**
+<span id="base.dynamic_disk"></span><span id="BASE.DYNAMIC_DISK"></span>**Dynamischer Datenträger**
 </dt> <dd>
 
-Ein von einem Software-RAID-Anbieter verwalteter Datenträger mit Unterstützung für eine flexible Neukonfiguration von Volumes. Ein dynamischer Datenträger verwendet eine Partition als Container für Volumes. Es ist keine garantierte Zuordnung vorhanden.
+Ein Datenträger, der von einem Software-RAID-Anbieter mit Unterstützung für die flexible Volume-Neukonfiguration verwaltet wird. Ein dynamischer Datenträger verwendet eine Partition als Container für Volumes. es gibt keine garantierte Zuordnung.
 
 </dd> <dt>
 
-<span id="base.explicit_configuration"></span><span id="BASE.EXPLICIT_CONFIGURATION"></span>**explizite Konfiguration**
+<span id="base.explicit_configuration"></span><span id="BASE.EXPLICIT_CONFIGURATION"></span>**Explizite Konfiguration**
 </dt> <dd>
 
-Eine Konfiguration mit den Parametern, einschließlich des Volumetyps und dem exakten Layout, für eine Auflistung von Zielvolumes.
+Eine Konfiguration mit den Parametern, einschließlich des Volumetyps und des genauen Layouts, für eine Sammlung von Zielvolumes.
 
 </dd> <dt>
 
-<span id="base.export"></span><span id="BASE.EXPORT"></span>**Exports**
+<span id="base.export"></span><span id="BASE.EXPORT"></span>**Exportieren**
 </dt> <dd>
 
-Das Verschieben einer Datenträger Platte und aller Volumes, die auf dieser Platte enthalten sind, aus einem Paket.
+Das Verschieben eines Datenträgers und aller darin enthaltenen Volumes aus einem Paket.
 
 </dd> <dt>
 
-<span id="base.extent"></span><span id="BASE.EXTENT"></span>**Ausdehnung**
+<span id="base.extent"></span><span id="BASE.EXTENT"></span>**Umfang**
 </dt> <dd>
 
-Ein zusammenhängender Bereich logischer Sektoren, die zu einem einzelnen Volume oder Datenträger beitragen. Ein Block kann auch der Bereich nicht zugeordneter Sektoren sein. Häufig werden einem Endbenutzer in einem Dateisystem Details zu den Details angezeigt.
+Ein zusammenhängender Bereich logischer Sektoren, die zu einem einzelnen Volume oder Datenträger beitragen. Ein Bereich kann auch ein Bereich von nicht zugeordneten Sektoren sein. In der Regel zeigt ein Dateisystem die Erweiterungsdetails für einen Endbenutzer an.
 
 </dd> <dt>
 
 <span id="base.guid_partition_table_gpt"></span><span id="BASE.GUID_PARTITION_TABLE_GPT"></span>**GUID-Partitionstabelle (GPT)**
 </dt> <dd>
 
-Von EFI-Firmware verwendete Strukturen. GPT ist eines von zwei Datenformaten für die Softwarekonfiguration auf niedrigster Ebene, die von der Platt Form Firmware verwendet werden, um ein Start fähiges Betriebssystem oder ein anderes ausführbares Image
+Von der EFI-Firmware verwendete Strukturen. GPT ist eines von zwei Softwarekonfigurationsdatenformaten der untersten Ebene, die von der Plattformfirmware verwendet werden, um ein startbares Betriebssystem oder ein anderes ausführbares Image zu finden.
 
 </dd> <dt>
 
-<span id="base.hardware_provider"></span><span id="BASE.HARDWARE_PROVIDER"></span>**Hardware Anbieter**
+<span id="base.hardware_provider"></span><span id="BASE.HARDWARE_PROVIDER"></span>**Hardwareanbieter**
 </dt> <dd>
 
-Eine Sammlung von Software, die auf dem Host ausgeführt wird, ein Busadapter und möglicherweise ein externes Speichersubsystem, das zusammenarbeitet, um RAID-LUNs zu verwalten und zu verwalten. Hardware Anbieter für die meisten externen Speicher Subsysteme enthalten nur Host basierte Software im Benutzermodus.
+Eine Sammlung von Software, die auf dem Host, einem Busadapter und möglicherweise einem externen Speichersubsystem ausgeführt wird, das zusammen raid-LUNs aufweist und verwaltet. Hardwareanbieter für die meisten externen Speichersubsysteme enthalten nur hostbasierte Software im Benutzermodus.
 
 </dd> <dt>
 
-<span id="base.health"></span><span id="BASE.HEALTH"></span>**gesundheitliche**
+<span id="base.health"></span><span id="BASE.HEALTH"></span>**Gesundheit**
 </dt> <dd>
 
-Der aktuelle Fehler Verwaltungsstatus eines Volumes oder einer LUN.
+Der aktuelle Fehlerverwaltungsstatus eines Volumes oder einer LUN.
 
 </dd> <dt>
 
-<span id="base.hot_spotting"></span><span id="BASE.HOT_SPOTTING"></span>**heiß sparsam**
+<span id="base.hot_spotting"></span><span id="BASE.HOT_SPOTTING"></span>**Hot Sparing**
 </dt> <dd>
 
-Temporäres Hinzufügen eines volumeplex zu einem Volume.
+Vorübergehendes Hinzufügen eines Volumeplexs zu einem Volume.
 
 </dd> <dt>
 
 <span id="base.import"></span><span id="BASE.IMPORT"></span>**Importieren**
 </dt> <dd>
 
-Das Verschieben einer Datenträger Platte und sämtlicher Volumes in ein vorhandenes Paket.
+Das Verschieben eines Datenträgers und aller zugehörigen Volumes in ein vorhandenes Paket.
 
 </dd> <dt>
 
 <span id="base.JBOD"></span><span id="base.jbod"></span><span id="BASE.JBOD"></span>**nur eine Reihe von Datenträgern (JBOD)**
 </dt> <dd>
 
-Eine Auflistung physischer Spindeln ohne das koordinierte Steuerelement, das von einem Hardware-RAID-Gerät bereitgestellt wird.
+Eine Sammlung physischer Spindeln ohne die koordinierte Steuerung, die von einem Hardware-RAID-Gerät bereitgestellt wird.
 
 </dd> <dt>
 
-<span id="base.logical_block_number_LBN"></span><span id="base.logical_block_number_lbn"></span><span id="BASE.LOGICAL_BLOCK_NUMBER_LBN"></span>**logische Block Nummer (LBN)**
+<span id="base.logical_block_number_LBN"></span><span id="base.logical_block_number_lbn"></span><span id="BASE.LOGICAL_BLOCK_NUMBER_LBN"></span>**Logische Blocknummer (Logical Block Number, LBN)**
 </dt> <dd>
 
-Die kleinste adressierbare Einheit von Speicherdaten. LBN wird mit e/a-Befehls Protokollen verwendet.
+Die kleinste adressierbare Einheit von Speicherdaten. LBN wird mit E/A-Befehlsprotokollen verwendet.
 
 </dd> <dt>
 
-<span id="base.logical_block_mapping"></span><span id="BASE.LOGICAL_BLOCK_MAPPING"></span>**logische Block Zuordnung**
+<span id="base.logical_block_mapping"></span><span id="BASE.LOGICAL_BLOCK_MAPPING"></span>**Logische Blockzuordnung**
 </dt> <dd>
 
-Die Transformation der logischen Blöcke, die einem Anbieter für die vom Anbieter bereitgestellten logischen Blöcke angezeigt werden.
+Die Transformation der logischen Blöcke, die einem Anbieter für diejenigen angezeigt werden, die vom Anbieter verfügbar gemacht werden.
 
 </dd> <dt>
 
-<span id="base.logical_Unit_Number_LUN"></span><span id="base.logical_unit_number_lun"></span><span id="BASE.LOGICAL_UNIT_NUMBER_LUN"></span>**logische Gerätenummer (LUN)**
+<span id="base.logical_Unit_Number_LUN"></span><span id="base.logical_unit_number_lun"></span><span id="BASE.LOGICAL_UNIT_NUMBER_LUN"></span>**Logische Einheitennummer (LUN)**
 </dt> <dd>
 
-Eine physisch adressierbare Speichereinheit, die von einem Hardware-RAID-Subsystem bereitgestellt wird. Dieser Begriff kann sich auch auf den SCSI-Bezeichner für die Speichereinheit beziehen.
+Eine physisch adressierbare Speichereinheit, die von einem Hardware-RAID-Subsystem verfügbar ist. Dieser Begriff kann auch auf den SCSI-Bezeichner für die Speichereinheit verweisen.
 
 </dd> <dt>
 
 <span id="base.LUN_number"></span><span id="base.lun_number"></span><span id="BASE.LUN_NUMBER"></span>**LUN-Nummer**
 </dt> <dd>
 
-Eine Zahl, die ein VDS-Hardware Anbieter einer LUN in einem Array zuweist. Dies entspricht nicht der "logischen Gerätenummer" in der SCSI-Adresse des Datenträgers.
+Eine Zahl, die ein VDS-Hardwareanbieter einer LUN in einem Array zuweist. Dies entspricht nicht der "logischen Einheitennummer" in der SCSI-Adresse des Datenträgers.
 
 </dd> <dt>
 
 <span id="base.management_service"></span><span id="BASE.MANAGEMENT_SERVICE"></span>**Verwaltungsdienst**
 </dt> <dd>
 
-Ein Softwareprogramm, das nach Bedarf ausgeführt wird, um die Volumekonfiguration, Überwachung oder Fehlerbehandlung auszuführen.
+Ein Softwareprogramm, das nach Bedarf ausgeführt wird, um Volumekonfiguration, Überwachung oder Fehlerbehandlung durchzuführen.
 
 </dd> <dt>
 
-<span id="base.mapping"></span><span id="BASE.MAPPING"></span>**Mapping**
+<span id="base.mapping"></span><span id="BASE.MAPPING"></span>**Zuordnung**
 </dt> <dd>
 
-Ein Volume, das für das Betriebssystem verfügbar gemacht wird und über einen zugeordneten Volumenamen (Laufwerk Buchstabe) verfügt. Ein Dateisystem kann auf ein Volume zugreifen.
+Ein Volume, das für das Betriebssystem verfügbar gemacht wird und über einen zugeordneten Volumenamen (laufwerkbuchstabe) verfügt. Auf ein Volume kann von einem Dateisystem zugegriffen werden.
 
 </dd> <dt>
 
-<span id="base.masking"></span><span id="BASE.MASKING"></span>**maskiert**
+<span id="base.masking"></span><span id="BASE.MASKING"></span>**Maskierung**
 </dt> <dd>
 
-Ein Datenträger, der vom Betriebssystem nicht erkannt wird. Ein Datenträger kann mit dem Hardware-RAID-Subsystem, dem Switch, der SCSI-Reserve eines anderen Computer Hosts oder der Software im Datenträger Stapel maskiert werden.
+Ein Datenträger, der vom Betriebssystem nicht erkannt wird. Ein Datenträger kann durch das Hardware-RAID-Subsystem, den Switch, die SCSI-RESERVE durch einen anderen Computerhost oder software im Datenträgerstapel maskiert werden.
 
 </dd> <dt>
 
-<span id="base.master_Boot_Record_partitioning_MBR"></span><span id="base.master_boot_record_partitioning_mbr"></span><span id="BASE.MASTER_BOOT_RECORD_PARTITIONING_MBR"></span>**Master Boot Record Partitionierung (MBR)**
+<span id="base.master_Boot_Record_partitioning_MBR"></span><span id="base.master_boot_record_partitioning_mbr"></span><span id="BASE.MASTER_BOOT_RECORD_PARTITIONING_MBR"></span>**Partitionierung von Masterstartdatensätzen (MBR)**
 </dt> <dd>
 
-MBR ist eines von zwei Datenformaten für die Softwarekonfiguration auf niedrigster Ebene und wird von der BIOS-Firmware verwendet, um ein Start fähiges Betriebssystem Abbild zu suchen.
+MBR ist eines von zwei Softwarekonfigurationsdatenformaten der untersten Ebene und wird von der BIOS-Firmware verwendet, um ein startbares Betriebssystemabbild zu finden.
 
 </dd> <dt>
 
-<span id="base.member"></span><span id="BASE.MEMBER"></span>**Kollege**
+<span id="base.member"></span><span id="BASE.MEMBER"></span>**Mitglied**
 </dt> <dd>
 
-Eine Auflistung verketter Datenträger Blöcke, die auf einem oder mehreren Datenträgern enthalten sind. Ein Datenträger kann nur zu einem Mitglied eines Volumes beitragen.
+Eine Auflistung verketteter Datenträger-Erweiterungen, die auf einem weiteren Datenträger enthalten sind. Ein Datenträger kann nur zu einem Mitglied eines Volumes beitragen.
 
 </dd> <dt>
 
-<span id="base.mirror"></span><span id="BASE.MIRROR"></span>**OL**
+<span id="base.mirror"></span><span id="BASE.MIRROR"></span>**Spiegel**
 </dt> <dd>
 
-Ein Volume oder eine Datenträger Zuordnung, das mindestens zwei identische Datenkopien verwaltet. Der Typ der Zuordnung wird auch als RAID-Stufe 1 bezeichnet.
+Eine Volume- oder Datenträgerzuordnung, die zwei oder mehr identische Datenkopien beibehält. Der Typ der Zuordnung wird auch als RAID-Ebene 1 bezeichnet.
 
 </dd> <dt>
 
-<span id="base.pack"></span><span id="BASE.PACK"></span>**ru**
+<span id="base.pack"></span><span id="BASE.PACK"></span>**Pack**
 </dt> <dd>
 
-Eine Auflistung logischer Volumes und zugrunde liegender Datenträger. Ein Paket ist die Einheit des transitiven Abschlusses für ein Volume. Dynamische Festplatten Pakete und Datenträger Gruppen sind Begriffe für dasselbe Element.
+Eine Sammlung logischer Volumes und zugrunde liegender Datenträger. Ein Paket ist die Einheit des transitiven Abschlusses für ein Volume. Dynamische Datenträgerpakete und Datenträgergruppen sind Begriffe für dasselbe Element.
 
 </dd> <dt>
 
-<span id="base.parity_stripe"></span><span id="BASE.PARITY_STRIPE"></span>**Paritäts Streifen**
+<span id="base.parity_stripe"></span><span id="BASE.PARITY_STRIPE"></span>**Paritätsstreifen**
 </dt> <dd>
 
-Ein Volume oder eine Datenträger Zuordnung, das Informationen zur Paritäts Überprüfung sowie Daten verwaltet. Jeder Lieferant liefert das genaue Mapping-und Schutzschema. Umfasst RAID 3, 4, 5 und 6.
+Eine Volume- oder Datenträgerzuordnung, die Informationen zur Paritätsprüfung sowie Daten verwaltet. Jeder Anbieter stellt das genaue Zuordnungs- und Schutzschema zur Verfügung. Umfasst RAID 3, 4, 5 und 6.
 
 </dd> <dt>
 
-<span id="base.partially_directed_configuration"></span><span id="BASE.PARTIALLY_DIRECTED_CONFIGURATION"></span>**teilweise gesteuerte Konfiguration**
+<span id="base.partially_directed_configuration"></span><span id="BASE.PARTIALLY_DIRECTED_CONFIGURATION"></span>**Teilweise gerichtete Konfiguration**
 </dt> <dd>
 
-Ein Volume oder eine Datenträger Konfiguration, das nicht vollständig explizit ist. Der Bindungstyp und eine Auflistung von Ziel Ressourcen werden angegeben. das tatsächliche Layout ist nicht. Die teilweise gesteuerte Konfiguration ist die gängigste Volumekonfiguration.
+Ein Volume oder eine Datenträgerkonfiguration, die nicht vollständig explizit ist. Der Bindungstyp und eine Auflistung von Zielressourcen werden angegeben. das tatsächliche Layout ist dies nicht. Die teilweise gerichtete Konfiguration ist die gängigste Volumekonfiguration.
 
 </dd> <dt>
 
-<span id="base.partition"></span><span id="BASE.PARTITION"></span>**spaltet**
+<span id="base.partition"></span><span id="BASE.PARTITION"></span>**Partition**
 </dt> <dd>
 
-Ein zusammenhängender Bereich logischer Sektoren, der durch einen einzelnen Eintrag in der MBR-oder GPT-Struktur beschrieben wird. Auf Basis Datenträgern entsprechen Partitionen direkt einfachen Volumes. Partitions Strukturen werden von der BIOS-oder EFI-Platt Form Firmware und einem Betriebssystem oder einem anderen Start baren Image gemeinsam genutzt.
+Ein zusammenhängender Bereich logischer Sektoren, der durch einen einzelnen Eintrag in der MBR- oder GPT-Struktur beschrieben wird. Auf Basisdatenträgern entsprechen Partitionen direkt einfachen Volumes. Partitionsstrukturen werden von der BIOS- oder EFI-Plattformfirmware und einem Betriebssystem oder einem anderen startbaren Image gemeinsam genutzt.
 
 </dd> <dt>
 
-<span id="base.path"></span><span id="BASE.PATH"></span>**ADS**
+<span id="base.path"></span><span id="BASE.PATH"></span>**Pfad**
 </dt> <dd>
 
-Der Zugriffs Pfad von einem Computer auf einen Datenträger oder eine externe Hardware-LUN.
+Der Zugriffspfad von einem Computer zu einem Datenträger oder einer externen Hardware-LUN.
 
 </dd> <dt>
 
 <span id="base.plex"></span><span id="BASE.PLEX"></span>**Plex**
 </dt> <dd>
 
-Ein Member eines gespiegelten Volumes oder einer gespiegelten LUN.
+Ein Member eines gespiegelten Volumes oder einer LUN.
 
 </dd> <dt>
 
-<span id="base.port"></span><span id="BASE.PORT"></span>**Port**
+<span id="base.port"></span><span id="BASE.PORT"></span>**Hafen**
 </dt> <dd>
 
 Der Endpunkt eines Pfads auf einem Datenträger.
 
 </dd> <dt>
 
-<span id="base.redundant_array_of_independent_disks_RAID"></span><span id="base.redundant_array_of_independent_disks_raid"></span><span id="BASE.REDUNDANT_ARRAY_OF_INDEPENDENT_DISKS_RAID"></span>**redundantes Array von unabhängigen Datenträgern (RAID)**
+<span id="base.redundant_array_of_independent_disks_RAID"></span><span id="base.redundant_array_of_independent_disks_raid"></span><span id="BASE.REDUNDANT_ARRAY_OF_INDEPENDENT_DISKS_RAID"></span>**Redundantes Array unabhängiger Datenträger (RAID)**
 </dt> <dd>
 
 Eine Sammlung von Techniken zum Verwalten mehrerer Datenträger.
 
 </dd> <dt>
 
-<span id="base.runtime_service"></span><span id="BASE.RUNTIME_SERVICE"></span>**Lauf Zeit Dienst**
+<span id="base.runtime_service"></span><span id="BASE.RUNTIME_SERVICE"></span>**Laufzeitdienst**
 </dt> <dd>
 
-Ein Softwareprogramm, das auf einer e/a-Anforderung ausgeführt wird.
+Ein Softwareprogramm, das auf E/A-Anforderungsbasis ausgeführt wird.
 
 </dd> <dt>
 
-<span id="base.simple_disk"></span><span id="BASE.SIMPLE_DISK"></span>**einfache Festplatte**
+<span id="base.simple_disk"></span><span id="BASE.SIMPLE_DISK"></span>**einfacher Datenträger**
 </dt> <dd>
 
-Eine Spindel, die nicht mit einem Hardware-RAID-Controller verbunden ist. Siehe auch nur eine Reihe von Datenträgern (JBOD).
+Eine Spindel, die nicht mit einem Hardware-RAID-Controller verbunden ist. Siehe auch Just a Bunch Of Disks (JBOD).
 
 </dd> <dt>
 
 <span id="base.software_provider"></span><span id="BASE.SOFTWARE_PROVIDER"></span>**Softwareanbieter**
 </dt> <dd>
 
-Host basierte Software, die logische Volumes verfügbar macht und auf Datenträgern arbeitet. Ein Softwareanbieter umfasst Lauf Zeit Dienste im Kernel Modus, Konfigurationsdaten und benutzermodusverwaltungsdienste.
+Hostbasierte Software, die logische Volumes verfügbar macht und auf Datenträgern betrieben wird. Ein Softwareanbieter umfasst Laufzeitdienste im Kernelmodus, Konfigurationsdaten und Verwaltungsdienste im Benutzermodus.
 
 </dd> <dt>
 
-<span id="base.span"></span><span id="BASE.SPAN"></span>**Spanne**
+<span id="base.span"></span><span id="BASE.SPAN"></span>**Span**
 </dt> <dd>
 
-Eine lineare Zuordnung von Volumes oder Datenträgern mehrerer diskontinuierlichen Datenträger-oder Laufwerks Blöcke. Die Blöcke können sich auf einem oder mehreren Spindeln oder LUNs befinden.
+Eine lineare Zuordnung mehrerer diskontinuerlicher Datenträger- oder Laufwerksdehnungen auf einem Volume oder Datenträger. Die Erweiterungen können sich auf einer oder mehreren Spindeln oder LUNs benn.
 
 </dd> <dt>
 
-<span id="base.spindle"></span><span id="BASE.SPINDLE"></span>**Maschinen**
+<span id="base.spindle"></span><span id="BASE.SPINDLE"></span>**Spindel**
 </dt> <dd>
 
-Eine physische Einheit von Datenträger Speicher.
+Eine physische Einheit des Datenträgerspeichers.
 
 </dd> <dt>
 
-<span id="base.stacking"></span><span id="BASE.STACKING"></span>**Staffeln**
+<span id="base.stacking"></span><span id="BASE.STACKING"></span>**Stapeln**
 </dt> <dd>
 
-Der Vorgang des Erstellens eines Volumes oder einer LUN durch Ausführen mehrerer logischer Block Mapping-Vorgänge. Ein Beispiel hierfür ist ein gespiegeltes Stripeset. Das häufigste Stapeln tritt auf, wenn Software-RAID für LUNs verwendet wird, die von Hardware-RAID erstellt wurden.
+Das Erstellen eines Volumes oder einer LUN durch Ausführen von mehr als einem logischen Blockzuordnungsvorgang. Ein Beispiel ist ein gespiegeltes Stripesetvolume. Die gängigste Stapelung tritt auf, wenn Software-RAID über LUNs hinweg verwendet wird, die von Hardware-RAID erstellt werden.
 
 </dd> <dt>
 
-<span id="base.stripe"></span><span id="BASE.STRIPE"></span>**Reifen**
+<span id="base.stripe"></span><span id="BASE.STRIPE"></span>**Streifen**
 </dt> <dd>
 
-Ein Volume oder eine Datenträger Zuordnung, das zusammenhängende Blöcke über mehrere Volumes, Datenträger oder Laufwerke hinweg überlappt. Diese Zuordnung wird auch als RAID 0 bezeichnet.
+Eine Volume- oder Datenträgerzuordnung, die zusammenhängende Erweiterungen über mehrere Volumes, Datenträger oder Laufwerke verteilt. Diese Zuordnung wird auch als RAID 0 bezeichnet.
 
 </dd> <dt>
 
-<span id="base.status"></span><span id="BASE.STATUS"></span>**Stands**
+<span id="base.status"></span><span id="BASE.STATUS"></span>**Status**
 </dt> <dd>
 
-Die aktuelle Verfügbarkeit eines Volumes, einer Festplatte oder eines Laufwerks.
+Die aktuelle Verfügbarkeit eines Volumes, Datenträgers oder Laufwerks.
 
 </dd> <dt>
 
-<span id="base.subsystem"></span><span id="BASE.SUBSYSTEM"></span>**System**
+<span id="base.subsystem"></span><span id="BASE.SUBSYSTEM"></span>**Subsystem**
 </dt> <dd>
 
-Die Instanziierung von Hardware Anbieter Software. Ein Subsystem enthält mindestens einen Controller und ein Laufwerk. Wenn das Subsystem für den Computer extern ist, wird von einem oder mehreren Netzwerkpfaden das Subsystem mit dem Computer verbunden.
+Die Instanziierung von Hardwareanbietersoftware. Ein Subsystem enthält mindestens einen Controller und ein Laufwerk. Wenn sich das Subsystem außerhalb des Computers befindet, verbinden mindestens ein Netzwerkpfad das Subsystem mit dem Computer.
 
 </dd> <dt>
 
-<span id="base.jello"></span><span id="BASE.JELLO"></span>**Übergangsstatus**
+<span id="base.jello"></span><span id="BASE.JELLO"></span>**Übergangszustand**
 </dt> <dd>
 
-Der Status der logischen und physischen Zuordnung, die geändert wird.
+Status der logischen zu physischen Zuordnung, die geändert wird.
 
 </dd> <dt>
 
-<span id="base.uninitialized_disk"></span><span id="BASE.UNINITIALIZED_DISK"></span>**nicht initialisierter Datenträger**
+<span id="base.uninitialized_disk"></span><span id="BASE.UNINITIALIZED_DISK"></span>**Nicht initialisierter Datenträger**
 </dt> <dd>
 
 Ein Datenträger, der kein Mitglied eines Pakets ist.
 
 </dd> <dt>
 
-<span id="base.unmasked_disk"></span><span id="BASE.UNMASKED_DISK"></span>**unmaskierte Festplatte**
+<span id="base.unmasked_disk"></span><span id="BASE.UNMASKED_DISK"></span>**Datenträger ohne Maskierung**
 </dt> <dd>
 
-Ein Datenträger, der für das Betriebssystem sichtbar ist. Der Inhalt eines nicht maskierten Datenträgers ist für Softwareverteilungs-Manager, Dateisysteme usw. sichtbar.
+Ein Datenträger, der für das Betriebssystem sichtbar ist. Der Inhalt eines datenträgers ohne Maskierung ist für Softwarevolume-Manager, Dateisysteme usw. sichtbar.
 
 </dd> <dt>
 
-<span id="base.volume"></span><span id="BASE.VOLUME"></span>**Handels**
+<span id="base.volume"></span><span id="BASE.VOLUME"></span>**Volumen**
 </dt> <dd>
 
-Eine Reihe von Datenträger Blöcke, die an einen praktisch zusammenhängenden Bereich logischer Blöcke gebunden sind. Auf ein Volume kann über einen Laufwerk Buchstaben, einen bereitgestellten Ordner oder einen VolumeGuid-Pfad zugegriffen werden.
+Eine Reihe von Datenträgerblöcken, die an einen praktisch zusammenhängenden Bereich logischer Blöcke gebunden sind. Auf ein Volume kann über einen Laufwerkbuchstaben, einen bereitgestellten Ordner oder einen Volume-GUID-Pfad zugegriffen werden.
 
 </dd> </dl>
 

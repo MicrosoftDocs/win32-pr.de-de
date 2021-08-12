@@ -1,9 +1,9 @@
 ---
-title: Komplexer Typ "kredentialssourceparameters"
-description: Definiert das Element, das zum Angeben der Quelle des Zertifikats erforderlich ist, das mit einer EAP-TLS-Authentifizierung verwendet werden soll.
+title: Komplexer CredentialsSourceParameters-Typ
+description: Definiert das Element, das erforderlich ist, um die Quelle des Zertifikats anzugeben, das mit einer EAP-TLS-Authentifizierung verwendet werden soll.
 ms.assetid: 1482694e-3025-4231-8154-4be0301fe5ce
 keywords:
-- Der komplexe Typ "fidentialssourceparameters" EAPHost
+- 'CredentialsSourceParameters: komplexer Typ EAPHost'
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 912faa4a388d9a57225991959625a978ca0921f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 881cd4225c0e7e2f557ad7206176224a0b3929cdac7398b29f30382506f816ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274007"
 ---
-# <a name="credentialssourceparameters-complex-type"></a>Komplexer Typ "kredentialssourceparameters"
+# <a name="credentialssourceparameters-complex-type"></a>Komplexer CredentialsSourceParameters-Typ
 
-Der komplexe Typ " **fordentialssourceparameters** " definiert das Element, das zum Angeben der Quelle des Zertifikats erforderlich ist, das mit einer EAP-TLS-Authentifizierung verwendet werden soll.
+Der komplexe **CredentialsSourceParameters-Typ** definiert das Element, das erforderlich ist, um die Quelle des Zertifikats anzugeben, das mit einer EAP-TLS-Authentifizierung verwendet werden soll.
 
-Zwischen dem [**Smartcard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md) -Element oder dem [**certifikatestore**](eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md) -Element kann eine Auswahl getroffen werden.
+Es gibt eine Auswahl zwischen dem [**SmartCard-Element**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md) oder [**dem CertificateStore-Element.**](eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md)
 
 ``` syntax
 <xs:complexType name="CredentialsSourceParameters">
@@ -44,16 +44,16 @@ Zwischen dem [**Smartcard**](eaptlsconnectionpropertiesv1schema-smartcard-creden
 
 
 
-| Element                                                                                                             | type                                                                                  | BESCHREIBUNG                                                                                                                  |
+| Element                                                                                                             | type                                                                                  | Beschreibung                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| [**CertificateStore**](eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md) | [**Certselection**](eaptlsconnectionpropertiesv1schema-certselection-complextype.md) | Gibt an, dass EAP-TLS das Zertifikat aus dem eigenen Speicher des Benutzers oder dem Computer lesen soll, der authentifiziert wird. <br/> |
-| [**Smartcard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md)               | [**emptyString**](eaptlsconnectionpropertiesv1schema-emptystring-simpletype.md)      | Gibt an, dass EAP-TLS das Zertifikat von der Smartcard lesen soll. <br/>                                          |
+| [**CertificateStore**](eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md) | [**CertSelection**](eaptlsconnectionpropertiesv1schema-certselection-complextype.md) | Gibt an, dass EAP-TLS das Zertifikat aus dem My Store des Benutzers oder dem authentifizierten Computer lesen soll. <br/> |
+| [**SmartCard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md)               | [**emptyString**](eaptlsconnectionpropertiesv1schema-emptystring-simpletype.md)      | Gibt an, dass EAP-TLS das Zertifikat von der Smartcard lesen soll. <br/>                                          |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**certifikatestore**](eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md) -und [**Smartcard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md) -Elemente können nicht gleichzeitig verwendet werden.
+Die [**Elemente CertificateStore**](eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md) und [**SmartCard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md) können nicht gleichzeitig verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Die [**certifikatestore**](eaptlsconnectionpropertiesv1schema-certificatestore-c
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -70,13 +70,13 @@ Die [**certifikatestore**](eaptlsconnectionpropertiesv1schema-certificatestore-c
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[komplexe eaptlsconnectionpropertiesv1-Schema Typen](eaptlsconnectionpropertiesv1schema-complex-types.md)
+[eaptlsconnectionpropertiesv1 : Komplexe Schematypen](eaptlsconnectionpropertiesv1schema-complex-types.md)
 </dt> </dl>
 
  

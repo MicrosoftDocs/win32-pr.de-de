@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentkeyboundaryexception-Konstruktor'
-title: Esentkeyboundaryexception-Konstruktor
+description: 'Weitere Informationen zu: EsentKeyBoundaryException-Konstruktor'
+title: EsentKeyBoundaryException-Konstruktor
 TOCTitle: 'EsentKeyBoundaryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentKeyBoundaryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentkeyboundaryexception.esentkeyboundaryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b024cf6baca367e1ca1c1e5c17593314c09e8d72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e4ae00e2fe760f9b86c558d3bd7cbe74dab1aa4fb6793dd8957767de1aed18b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118264861"
 ---
-# <a name="esentkeyboundaryexception-constructor"></a>Esentkeyboundaryexception-Konstruktor
+# <a name="esentkeyboundaryexception-constructor"></a>EsentKeyBoundaryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentkeyboundaryexception-Klasse.
+Initialisiert eine neue Instanz der EsentKeyBoundaryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentKeyBoundaryException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentkeyboundaryexception-Klasse](./esentkeyboundaryexception-class.md)
+[EsentKeyBoundaryException-Klasse](./esentkeyboundaryexception-class.md)
 
-[Esentkeyboundaryexception-Member](./esentkeyboundaryexception-members.md)
+[EsentKeyBoundaryException-Member](./esentkeyboundaryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

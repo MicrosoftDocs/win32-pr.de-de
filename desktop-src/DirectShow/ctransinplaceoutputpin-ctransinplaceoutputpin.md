@@ -1,5 +1,5 @@
 ---
-description: CTransInPlaceOutputPin.CTransInPlaceOutputPin-Konstruktor – Konstruktormethode.
+description: 'CTransInPlaceOutputPin.CTransInPlaceOutputPin-Konstruktor : Konstruktormethode.'
 ms.assetid: fe7b2d62-0e6a-4253-b469-6cede5dc9bb1
 title: CTransInPlaceOutputPin.CTransInPlaceOutputPin-Konstruktor (Transip.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d6b63ee3aa52bc0363bcab90275be4148659b3bb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: faf8b2cf0a4f1def8ea89ad04bd013d3867ff5a456e6c8922f72a078d860df92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654778"
 ---
 # <a name="ctransinplaceoutputpinctransinplaceoutputpin-constructor"></a>CTransInPlaceOutputPin.CTransInPlaceOutputPin-Konstruktor
 
@@ -48,21 +48,21 @@ CTransInPlaceOutputPin(
 *pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
+Eine Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, der diesen Pin erstellt hat, der ein [**CTransInPlaceFilter-Objekt**](ctransinplacefilter.md) sein muss.
+Zeiger auf den Filter, der diesen Pin erstellt hat, der ein [**CTransInPlaceFilter-Objekt sein**](ctransinplacefilter.md) muss.
 
 </dd> <dt>
 
 *Phr* 
 </dt> <dd>
 
-Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt. Initialisieren Sie den Wert vor dem Erstellen des -Objekts mit S \_ OK. Der Wert wird nur geändert, wenn ein Fehler auftritt.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt. Initialisieren Sie den Wert auf S \_ OK, bevor Sie das -Objekt erstellen. Der Wert wird nur geändert, wenn ein Fehler auftritt.
 
 </dd> <dt>
 
@@ -73,15 +73,15 @@ Breitzeichenzeichenfolge, die den Pinnamen enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *pName-Parameter* gibt den Pinnamen an, der von der [**IPin::QueryPinInfo-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) zurückgegeben wird. Die Zeichenfolge wird jedoch nicht für den Stecknadelbezeichner verwendet. Der Stecknadelbezeichner für diese Klasse ist immer "Out". Weitere Informationen finden Sie unter [**QueryId**](ctransforminputpin-queryid.md).
+Der *pName-Parameter* gibt den Pinnamen an, der von der [**IPin::QueryPinInfo-Methode zurückgegeben**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) wird. Die Zeichenfolge wird jedoch nicht für den Pinbezeichner verwendet. Der Pinbezeichner für diese Klasse ist immer "Out". Weitere Informationen finden Sie unter [**QueryId**](ctransforminputpin-queryid.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

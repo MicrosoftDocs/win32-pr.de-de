@@ -1,9 +1,9 @@
 ---
-title: Ereignis für die Ereignis Ereignis Änderung des AxWindowsMediaPlayer-Objekts
-description: Das Ereignis "Ereignis Ereignisse" tritt auf, wenn sich der Wert von "iwmpcontrols. accesstitem" ändert.
+title: CurrentItemChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das CurrentItemChange-Ereignis tritt auf, wenn sich der Wert von IWMPControls.currentItem ändert.
 ms.assetid: c5eeafd2-405b-4808-97d1-399a2344ca42
 keywords:
-- Ereignis für die Ereignis Ereignis Änderung der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CurrentItemChange-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c33bb3e9c4c1e512e742c0e679f3c5b53a29735
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d1786fab3e312f95550103cdc6cf4f2558e25e883df9c7be2d6f850a7f8a5ce4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582556"
 ---
-# <a name="currentitemchange-event-of-the-axwindowsmediaplayer-object"></a>Ereignis für die Ereignis Ereignis Änderung des AxWindowsMediaPlayer-Objekts
+# <a name="currentitemchange-event-of-the-axwindowsmediaplayer-object"></a>CurrentItemChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das Ereignis "Ereignis Ereignisse" tritt auf, wenn der Wert von "iwmpcontrols" lautet. das Ereignis **wird geändert.**
+Das CurrentItemChange-Ereignis tritt auf, wenn der Wert von IWMPControls. **currentItem-Änderungen.**
 
 ``` syntax
 [C#]
@@ -41,13 +41,13 @@ Private Sub player_CurrentItemChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ anwendungtemchangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents- \_ Ereignis Ereignis**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CurrentItemChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CurrentItemChangeEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft   | BESCHREIBUNG                                                                                                   |
 |------------|---------------------------------------------------------------------------------------------------------------|
-| pdispmedia | System. objectdas neue aktuelle Medien Element. Sie können dies in eine iwmpmedia-Schnittstelle umwandeln, um darauf zuzugreifen.<br/> |
+| pdispMedia | System.ObjectDas neue aktuelle Medienelement. Sie können dies in eine IWMPMedia-Schnittstelle um casten, um darauf zu zugreifen.<br/> |
 
 
 
@@ -55,7 +55,7 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Ereignishandler für das Ereignis "Ereignis Ereignisse" veranschaulicht. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird ein Ereignishandler für das CurrentItemChange-Ereignis veranschaulicht. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -90,7 +90,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -100,13 +100,13 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Currency Item (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)
+[**IWMPControls.currentItem (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

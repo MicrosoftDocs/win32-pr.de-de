@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2472630d69119f33653d831386af615718274d99
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c3c90587cbd0a9cc9b0abed834db68de3edac6f73d98dac3c8bb283e77f978fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654851"
 ---
 # <a name="ctransinplaceinputpingetallocator-method"></a>CTransInPlaceInputPin.GetAllocator-Methode
 
@@ -64,7 +64,7 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden T
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der Ausgabepin des Filters verbunden ist, fordert diese Methode eine Zuweisung vom Eingabepin des Downstreamfilters an.
 
@@ -74,7 +74,7 @@ Wenn der Ausgabepin des Filters nicht verbunden ist, erstellt diese Methode eine
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

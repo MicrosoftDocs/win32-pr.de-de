@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cea1bec170664993332b1cde1de375c416209209
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 32c3745a16061805ae165c3542e8bb7f8aba6c7e8d932cfcc169186c6d4a14e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118304474"
 ---
 # <a name="d3dxmatrixperspectivefovlh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveFovLH-Funktion (D3DX10Math.h)
 
@@ -76,11 +76,11 @@ Seitenverhältnis, definiert als Ansichtsraumbreite dividiert durch Höhe.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der ansichtsnahen Ebene.
+Z-Wert der Near View-Plane.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -93,13 +93,13 @@ Z-Wert der fernen Ansichtsebene.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine linkshändige Projektionsmatrix handelt.
+Zeiger auf eine D3DXMATRIX-Struktur, die eine linkshändige perspektivische Projektionsmatrix ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveFovLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Diese Funktion berechnet die zurückgegebene Matrix wie gezeigt:
+Diese Funktion berechnet die zurückgegebene Matrix wie folgt:
 
 
 ```
@@ -119,14 +119,14 @@ xScale = yScale / aspect ratio
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

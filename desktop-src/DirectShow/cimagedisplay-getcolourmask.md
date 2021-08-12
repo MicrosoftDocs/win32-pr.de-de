@@ -1,7 +1,7 @@
 ---
-description: Die getColorMask-Methode ruft die Farb Masken für das aktuelle Anzeige Format ab.
+description: Die GetColourMask-Methode ruft die Farbmasken für das aktuelle Anzeigeformat ab.
 ms.assetid: 386d0439-8502-411d-935c-3c2153a8b5b4
-title: Cimagedisplay. getColorMask-Methode (winutil. h)
+title: CImageDisplay.GetColourMask-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 499b3677cd68444b58514d692d87cd4f631350b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 018bdaf96e5b6508e13893290449d77041c453b3b28bb4c4d794cc5cc85fb945
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655941"
 ---
-# <a name="cimagedisplaygetcolourmask-method"></a>Cimagedisplay. getColorMask-Methode
+# <a name="cimagedisplaygetcolourmask-method"></a>CImageDisplay.GetColourMask-Methode
 
-Die- `GetColourMask` Methode ruft die Farb Masken für das aktuelle Anzeige Format ab.
+Die `GetColourMask` -Methode ruft die Farbmasken für das aktuelle Anzeigeformat ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ BOOL GetColourMask(
 
 <dl> <dt>
 
-*pmaskred* 
+*pMaskRed* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die rote Komponenten Maske empfängt.
+Zeiger auf eine Variable, die die rote Komponentenmaske empfängt.
 
 </dd> <dt>
 
-*pmaskgreen* 
+*pMaskGreen* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die grüne Komponenten Maske empfängt.
+Zeiger auf eine Variable, die die grüne Komponentenmaske empfängt.
 
 </dd> <dt>
 
-*pmaskblue* 
+*pMaskBlue* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die blaue Komponenten Maske empfängt.
+Zeiger auf eine Variable, die die blaue Komponentenmaske empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,16 +75,16 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

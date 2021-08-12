@@ -1,26 +1,26 @@
 ---
-title: VML-INSET-Attribut
-description: VML-INSET-Attribut
+title: VML-Inset-Attribut
+description: VML-Inset-Attribut
 ms.assetid: b50f900a-b0dc-4042-af9e-050011307765
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d83f2ea38ef4ca90f6687196335d2edd2d39c09c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6e1d4b44756034a3ebc7e46e1cdda43042f347e58cb87c02b00c90a14320a40f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118600236"
 ---
-# <a name="vml-inset-attribute"></a>VML-INSET-Attribut
+# <a name="vml-inset-attribute"></a>VML-Inset-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt die inneren Rand Werte für Text Feld Text an. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt innere Randwerte für Textfeldtext an. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,25 +28,25 @@ Gibt die inneren Rand Werte für Text Feld Text an. Lese-/Schreibzugriff. **Zeic
 
 **Tagsyntax**
 
-<v: *Element* INSET = " *Expression* " >
+<v: *element* inset=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Inset = "*Ausdruck*"
+*element* .inset="*expression*"
 
-*Ausdruck* = *Element*. Inset
+*expression* = .inset-Element
 
 **Anmerkungen**
 
-Der Wert für den internen Textrand wird als Zeichenfolge angegeben, die vier Werte enthält, die jeweils durch Kommas oder Leerzeichen voneinander getrennt sind. Die Werte werden vom linken, oberen, rechten und unteren Rand des Felds festgelegt, das durch das [textboxrect](msdn-online-vml-textboxrect-attribute.md) -Attribut von **path** angegeben wird. Fehlende Werte werden auf den Standardwert festgelegt, der "0,1 in, 0,05 in, 0,1 in, 0,05 in" ist.
+Der interne Textrandwert wird als Zeichenfolge mit vier Werten angegeben, die jeweils durch Kommas oder Leerzeichen getrennt sind. Die Werte messen Denkmenge von links, oben, rechts und unteren Rändern des Felds, das durch das [TextBoxRect-Attribut](msdn-online-vml-textboxrect-attribute.md) von **Path** angegeben wird. Fehlende Werte werden auf den Standardwert "0.1in, 0.05in, 0.1in, 0.05in" festgelegt.
 
-Für gedrehte Formen in Browsern, die keine Rotation unterstützen, wird das umgebende Feld am nächstgelegenen Vielfachen von 90 Grad ausgerichtet.
+Bei gedrehten Formen in Browsern, die keine Drehung unterstützen, wird der Begrenzungsfeld am nächsten Vielfachen von 90 Grad ausgerichtet.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Das Textfeld enthält einen einsetenrand von 10 Pixeln.
+Das Textfeld hat einen Eingangsrand von 10 Pixeln.
 
 
 ```HTML
@@ -63,6 +63,6 @@ Das Textfeld enthält einen einsetenrand von 10 Pixeln.
 
 
 
- 
+ 
 
- 
+ 

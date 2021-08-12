@@ -1,9 +1,9 @@
 ---
-title: komplexer eventtriggertype-Typ
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das EventTrigger-Element.
+title: EventTriggerType Complex Type
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das EventTrigger-Element.
 ms.assetid: c678af6f-bdfb-4c4d-85d7-2d93abfc2a7d
 keywords:
-- komplexer ereignistriggertyp Taskplaner
+- Komplexe EventTriggerType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 16c3d4257d89ebb8d0efb6dadcd3ac466b929c9a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0acd4bafa6033e461b69180862a8302e76f363b581d7f06b0812824f2031780b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118612053"
 ---
-# <a name="eventtriggertype-complex-type"></a>komplexer eventtriggertype-Typ
+# <a name="eventtriggertype-complex-type"></a>EventTriggerType Complex Type
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) -Element.
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das [**EventTrigger-Element.**](taskschedulerschema-eventtrigger-triggergroup-element.md)
 
 ``` syntax
 <xs:complexType name="eventTriggerType">
@@ -53,17 +53,17 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 
 
-| Element                                                                           | type                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Element                                                                           | type                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Verzögern**](taskschedulerschema-delay-eventtriggertype-element.md)               | duration                                                                | Gibt die Zeitspanne zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [**Abonnement**](taskschedulerschema-subscription-eventtriggertype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den-Triggern auslöst.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| [**Valuequeries**](taskschedulerschema-valuequeries-eventtriggertype-element.md) | [**namedValues**](taskschedulerschema-namedvalues-complextype.md)      | Gibt eine Sequenz von Elementen an, die jeweils einen Namen und einen XPath-Abfrage Wert enthalten. Die Abfragen werden auf ein Ereignis angewendet, das von dem im [**Abonnement**](taskschedulerschema-subscription-eventtriggertype-element.md) Element angegebenen Ereignis Abonnement zurückgegeben wurde. Der Name des XPath-Abfrage Werts kann als Variable im [**Body**](taskschedulerschema-body-showmessagetype-element.md) -Element im [**ShowMessage**](taskschedulerschema-showmessage-actiongroup-element.md) -Aktions Abschnitt einer Aufgabe verwendet werden. <br/> |
+| [**Verzögern**](taskschedulerschema-delay-eventtriggertype-element.md)               | duration                                                                | Gibt die Zeit zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [**Subscription**](taskschedulerschema-subscription-eventtriggertype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den Trigger auslöst.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| [**ValueQueries**](taskschedulerschema-valuequeries-eventtriggertype-element.md) | [**namedValues**](taskschedulerschema-namedvalues-complextype.md)      | Gibt eine Sequenz von Elementen an, die jeweils einen Namen und einen XPath-Abfragewert enthalten. Die Abfragen werden auf ein Ereignis angewendet, das von dem ereignisabonnement zurückgegeben wird, das im [**Subscription-Element angegeben**](taskschedulerschema-subscription-eventtriggertype-element.md) ist. Der Name für den XPath-Abfragewert kann als Variable im [**Body-Element**](taskschedulerschema-body-showmessagetype-element.md) im [**Aktionsabschnitt ShowMessage**](taskschedulerschema-showmessage-actiongroup-element.md) einer Aufgabe verwendet werden. <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zum untergeordneten-Element, das hier definiert ist, verwendet das [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) -Element auch untergeordnete Elemente, die durch den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Typ definiert werden.
+Zusätzlich zum hier definierten untergeordneten Element verwendet [**das EventTrigger-Element**](taskschedulerschema-eventtrigger-triggergroup-element.md) auch untergeordnete Elemente, die durch den [**komplexen TriggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Zusätzlich zum untergeordneten-Element, das hier definiert ist, verwendet das [
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

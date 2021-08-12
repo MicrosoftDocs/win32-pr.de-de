@@ -1,5 +1,5 @@
 ---
-description: CABThread.~CABThread-Destruktor – Destruktormethode.
+description: 'CABThread.~CABThread-Destruktor : Destruktormethode.'
 ms.assetid: eed6c566-8a03-4a97-9d99-8e500ce2954c
 title: CABThread.~HIDThread-Destruktor (Wxutil.h)
 ms.topic: reference
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 84a40205fc93677f20256676ad09a18357d46acb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 884460b0c1af3b96a610a18b7475d2a144dc32bf308ea0e0191f0f526565726a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118662376"
 ---
-# <a name="camthreadcamthread-destructor"></a>CABThread.~CABThread-Destruktor
+# <a name="camthreadcamthread-destructor"></a>CABThread.~MSIThread-Destruktor
 
 Destruktormethode.
 
@@ -36,7 +36,7 @@ virtual ~CAMThread();
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Destruktor ruft die [**METHODE CABThread::Close**](camthread-close.md) auf, die darauf wartet, dass der Thread beendet wird.
 
@@ -44,7 +44,7 @@ Der Destruktor ruft die [**METHODE CABThread::Close**](camthread-close.md) auf, 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

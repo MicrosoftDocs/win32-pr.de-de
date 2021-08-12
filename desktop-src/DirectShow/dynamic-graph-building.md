@@ -1,29 +1,29 @@
 ---
-description: Dynamische Diagramm Bildung
+description: Erstellen dynamischer Graph
 ms.assetid: 13fed430-979b-40f7-91ba-aff2d811bd92
-title: Dynamische Diagramm Bildung
+title: Erstellen dynamischer Graph
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 710bf5f648fc91e8db6bf62d81b41327f874ddf7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f8c7296b95bc97461eb5a16ee577acb4bd267ee1a25f9be357a00fef7d4bdba5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118652790"
 ---
-# <a name="dynamic-graph-building"></a>Dynamische Diagramm Bildung
+# <a name="dynamic-graph-building"></a>Erstellen dynamischer Graph
 
-Wenn Sie ein vorhandenes Filter Diagramm ändern müssen, können Sie das Diagramm beenden, die Änderungen vornehmen und das Diagramm neu starten. Dies ist normalerweise der beste Ansatz. Unter bestimmten Umständen möchten Sie jedoch möglicherweise einen Graphen ändern, während er noch ausgeführt wird. Beispiel:
+Wenn Sie ein vorhandenes Filterdiagramm ändern müssen, können Sie das Diagramm beenden, die Änderungen vornehmen und das Diagramm neu starten. Dies ist in der Regel der beste Ansatz. Unter bestimmten Umständen können Sie jedoch ein Diagramm ändern, während es noch ausgeführt wird. Beispiel:
 
--   Die Anwendung fügt während der Wiedergabe einen Videoeffekt Filter ein.
--   Ein Quell Filter schaltet die Medientypen "Mittel Strom" ein und erfordert ggf. einen neuen Dekomprimierungs Filter.
+-   Die Anwendung fügt während der Wiedergabe einen Filter für Videoeffekte ein.
+-   Ein Quellfilter schaltet medientyps midstream um, sodass möglicherweise ein neuer Dekomprimierungsfilter erforderlich ist.
 -   Die Anwendung fügt dem Diagramm einen neuen Videostream hinzu.
 
-Dabei handelt es sich um Beispiele für das *dynamische Graph-Gebäude*, einen Begriff, der alle Arten von Änderungen an einem Filter Diagramm abdeckt, während der Graph weiterhin ausgeführt wird. Die dynamische Diagramm Bildung kann von einer Anwendung oder einem Filter im Diagramm initiiert werden. Drei verschiedene Szenarien sind möglich:
+Dies sind alle Beispiele für die *dynamische Grapherstellung,* ein Begriff, der jede Art von Änderung an einem Filterdiagramm abdeckt, während der Graph weiterhin ausgeführt wird. Die dynamische Grapherstellung kann von einer Anwendung oder einem Filter im Diagramm initiiert werden. Es sind drei verschiedene Szenarien möglich:
 
--   [Dynamische Format Änderungen](dynamic-format-changes.md): ein Filter kann die Formatierungen von mittlerer Stream ändern, ohne dass Filter entfernt oder ersetzt werden müssen.
--   [Dynamische erneute Verbindung](dynamic-reconnection.md): das Diagramm wird durch Hinzufügen oder Entfernen von Filtern geändert.
--   [Filter Ketten](filter-chains.md): Hinzufügen, entfernen und Steuern von Filtern von Filtern.
+-   [Dynamische Formatänderungen:](dynamic-format-changes.md)Ein Filter kann formate midstream ändern, ohne Filter entfernen oder ersetzen zu müssen.
+-   [Dynamische Wiederherstellung der Verbindung:](dynamic-reconnection.md)Ändern des Diagramms durch Hinzufügen oder Entfernen von Filtern.
+-   [Filterketten:](filter-chains.md)Hinzufügen, Entfernen und Steuern von Filterketten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

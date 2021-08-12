@@ -1,7 +1,7 @@
 ---
-description: Die onreceivemess Age-Methode verarbeitet Fenster Meldungen.
+description: Die OnReceiveMessage-Methode verarbeitet Fenstermeldungen.
 ms.assetid: 0f074f9b-00e5-42ff-a491-020d441acad1
-title: Cbasewindow. onreceivemess Age-Methode (winutil. h)
+title: CBaseWindow.OnReceiveMessage-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: defef9a7ca24d6875eda508989615f308a2385b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a5dbfb84edef1f5257cfda8cae08d27b219909f47a7d88fd29580ae12e48b3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118657963"
 ---
-# <a name="cbasewindowonreceivemessage-method"></a>Cbasewindow. onreceivemess Age-Methode
+# <a name="cbasewindowonreceivemessage-method"></a>CBaseWindow.OnReceiveMessage-Methode
 
-Die- `OnReceiveMessage` Methode verarbeitet Fenster Meldungen.
+Die `OnReceiveMessage` -Methode verarbeitet Fenstermeldungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,50 +45,50 @@ virtual LRESULT OnReceiveMessage(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Handle für das Fenster.
+Handle zum Fenster.
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Nachrichten-ID.
+Nachrichtenbezeichner.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Der erste Message-Parameter.
+Erster Nachrichtenparameter.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der zweite Meldungs Parameter.
+Zweiter Nachrichtenparameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn die Meldung verarbeitet wurde, oder 1, wenn die Meldung nicht verarbeitet wurde.
+Gibt 0 zurück, wenn die Nachricht verarbeitet wurde, oder 1, wenn die Nachricht nicht verarbeitet wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Basisklasse verarbeitet die folgenden Meldungen:
+Die Basisklasse verarbeitet die folgenden Nachrichten:
 
--   WM \_ Schließen
--   WM \_ verschieben
--   WM \_ palettechanged
--   WM \_ querynewpalette
--   WM- \_ Größe
--   WM- \_ syscolorchange
+-   WM \_ CLOSE
+-   WM \_ MOVE
+-   WM \_ PALETTECHANGED
+-   WM \_ QUERYNEWPALETTE
+-   \_WM-GRÖßE
+-   WM \_ SYSCOLORCHANGE
 
-Eine abgeleitete Klasse kann diese Methode überschreiben, um andere Nachrichten zu verarbeiten. Die abgeleitete Klasse sollte die Basisklassen Methode zum Verarbeiten von Nachrichten, die von der abgeleiteten Klasse ignoriert werden, aufruft.
+Eine abgeleitete Klasse kann diese Methode überschreiben, um andere Nachrichten zu verarbeiten. Die abgeleitete Klasse sollte die Basisklassenmethode aufrufen, um alle Nachrichten zu behandeln, die von der abgeleiteten Klasse ignoriert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,16 +96,16 @@ Eine abgeleitete Klasse kann diese Methode überschreiben, um andere Nachrichten
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

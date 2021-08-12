@@ -1,12 +1,12 @@
 ---
 title: SetName-Methode der Win32_SessionDirectoryVMMPlugin-Klasse
-description: Legt den Namen des Plug-ins fest.
+description: Legt den Namen des Plug-Ins fest.
 ms.assetid: 8af4abca-f147-4027-91fb-4d669b58caa4
 ms.tgt_platform: multiple
 keywords:
 - SetName-Methode Remotedesktopdienste
-- SetName-Methode Remotedesktopdienste, Win32_SessionDirectoryVMMPlugin-Klasse
-- Win32_SessionDirectoryVMMPlugin-Klasse Remotedesktopdienste, SetName-Methode
+- SetName-Methode Remotedesktopdienste , Win32_SessionDirectoryVMMPlugin-Klasse
+- Win32_SessionDirectoryVMMPlugin Klasse Remotedesktopdienste , SetName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2dc9902e8d5931f0800dc6c62d36815f4f78db73
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6960d08f39e7ce026a36d1644bebf49aec292a44d900974ebd8481379b00dcf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118604639"
 ---
-# <a name="setname-method-of-the-win32_sessiondirectoryvmmplugin-class"></a>SetName-Methode der Win32- \_ Klasse "sessiondirectoryvmmplugin"
+# <a name="setname-method-of-the-win32_sessiondirectoryvmmplugin-class"></a>SetName-Methode der Win32 \_ SessionDirectoryVMMPlugin-Klasse
 
-Legt den Namen des Plug-ins fest.
+Legt den Namen des Plug-Ins fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 SetName(
 
 <dl> <dt>
 
-*sname* \[ in\]
+*sName* \[ In\]
 </dt> <dd>
 
-Der Name des Plug-ins.
+Der Name des Plug-Ins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ sessiondirector yvmmplugin**](win32-sessiondirectoryvmmplugin.md)
+[**Win32 \_ SessionDirectoryVMMPlugin**](win32-sessiondirectoryvmmplugin.md)
 </dt> </dl>
 
  

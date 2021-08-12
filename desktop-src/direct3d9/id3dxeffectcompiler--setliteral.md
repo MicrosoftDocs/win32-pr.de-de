@@ -1,7 +1,7 @@
 ---
-description: Schaltet den literalstatus eines Parameters um. Ein literalparameter weist einen Wert auf, der sich während der Lebensdauer eines Effekts nicht ändert.
+description: Schaltet den Literalstatus eines Parameters um. Ein Literalparameter hat einen Wert, der sich während der Lebensdauer eines Effekts nicht ändert.
 ms.assetid: 09ebf666-8a50-4604-abef-aed0d92a6d49
-title: 'ID3DXEffectCompiler:: setliteralmethode (D3DX9Shader. h)'
+title: ID3DXEffectCompiler::SetLiteral-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 5a64426381876458b601b741050a01e5f35d084c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5d28ee64c1d1e52b4005c1a81ef4690c539a09e06eb7a8378a246184cf4d2fd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118295831"
 ---
-# <a name="id3dxeffectcompilersetliteral-method"></a>ID3DXEffectCompiler:: setliterale-Methode
+# <a name="id3dxeffectcompilersetliteral-method"></a>ID3DXEffectCompiler::SetLiteral-Methode
 
-Schaltet den literalstatus eines Parameters um. Ein literalparameter weist einen Wert auf, der sich während der Lebensdauer eines Effekts nicht ändert.
+Schaltet den Literalstatus eines Parameters um. Ein Literalparameter hat einen Wert, der sich während der Lebensdauer eines Effekts nicht ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetLiteral(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für einen Parameter. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner für einen Parameter. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*Literale* \[ in\]
+*Literal* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Legen Sie diese Einstellung auf " **true** " fest, um **den-Parameter als** Literalwert festzulegen.
+Legen Sie diese Einstellung auf **TRUE** fest, um den Parameter als Literal festzulegen, und **FALSE,** wenn der Parameter den Wert während der Shaderlebensdauer ändern kann.
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ Legen Sie diese Einstellung auf " **true** " fest, um **den-Parameter als** Lite
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methoden ändern nur, ob der Parameter ein Literalwert ist oder nicht. Um den Wert eines Parameters zu ändern, verwenden Sie eine Methode wie [**ID3DXBaseEffect:: SetBool**](id3dxbaseeffect--setbool.md) oder [**ID3DXBaseEffect:: SetValue**](id3dxbaseeffect--setvalue.md).
+Diese Methode ändert nur, ob der Parameter ein Literal ist oder nicht. Um den Wert eines Parameters zu ändern, verwenden Sie eine Methode wie [**ID3DXBaseEffect::SetBool**](id3dxbaseeffect--setbool.md) oder [**ID3DXBaseEffect::SetValue.**](id3dxbaseeffect--setvalue.md)
 
-Diese Funktion muss vor der Kompilierung des Effekts aufgerufen werden. Im folgenden finden Sie ein Beispiel dafür, wie Sie diese Funktion verwenden können:
+Diese Funktion muss aufgerufen werden, bevor der Effekt kompiliert wird. Hier sehen Sie ein Beispiel für die Verwendung dieser Funktion:
 
 
 ```
@@ -106,8 +106,8 @@ Diese Funktion muss vor der Kompilierung des Effekts aufgerufen werden. Im folge
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -121,7 +121,7 @@ Diese Funktion muss vor der Kompilierung des Effekts aufgerufen werden. Im folge
 [Verwendungen und Literale (Direct3D 9)](usages-and-literals.md)
 </dt> <dt>
 
-[**ID3DXEffectCompiler:: getliteral**](id3dxeffectcompiler--getliteral.md)
+[**ID3DXEffectCompiler::GetLiteral**](id3dxeffectcompiler--getliteral.md)
 </dt> </dl>
 
  

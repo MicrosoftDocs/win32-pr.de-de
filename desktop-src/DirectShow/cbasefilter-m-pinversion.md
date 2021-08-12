@@ -1,7 +1,7 @@
 ---
-description: Aktuelle Version des Satzes von Pins für diesen Filter.
+description: Aktuelle Version des Stecknadelsatzes für diesen Filter.
 ms.assetid: c748d62a-a725-43a0-b5f4-b14ae9e6ef2c
-title: 'Cbasefilter:: m_PinVersion Member (amfilter. h)'
+title: CBaseFilter::m_PinVersion-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 15936bc37ff4c1c02077ad65d6700cdbdf1dbe8d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aef93f49119573d7c6fdacba3ba3796bea6fe3fafdf8b631bcf694e7b68fc433
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118659954"
 ---
-# <a name="cbasefilterm_pinversion-member"></a>Cbasefilter:: m \_ pinversion-Member
+# <a name="cbasefilterm_pinversion-member"></a>CBaseFilter::m \_ PinVersion-Member
 
-Aktuelle Version des Satzes von Pins für diesen Filter.
+Aktuelle Version des Stecknadelsatzes für diesen Filter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,19 +42,19 @@ long m_PinVersion;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> <dt>
 
-[**Cbasefilter:: getpinversion**](cbasefilter-getpinversion.md)
+[**CBaseFilter::GetPinVersion**](cbasefilter-getpinversion.md)
 </dt> </dl>
 
  

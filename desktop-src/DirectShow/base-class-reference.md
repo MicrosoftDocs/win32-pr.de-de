@@ -4,97 +4,97 @@ ms.assetid: 56f3685f-3df8-4358-b04e-3efc04b58008
 title: Referenz zur DirectShow-Basisklasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8816656f0ae87224cc95886ad32aaa1a098f177
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 950a4eff89e235194be974256492bd23701f69e5f64181a2e805cf67c1fd62f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663047"
 ---
 # <a name="directshow-base-class-reference"></a>Referenz zur DirectShow-Basisklasse
 
-Dieser Abschnitt enthält Referenz Einträge für alle Microsoft [DirectShow-Basisklassen](directshow-base-classes.md), ihre Datenmember und ihre Funktionen.
+Dieser Abschnitt enthält Verweiseinträge für alle Microsoft [DirectShow-Basisklassen,](directshow-base-classes.md)ihre Datenmember und ihre Funktionen.
 
 
 
 | Klasse                                                                  | BESCHREIBUNG                                                                                                                       |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [**Caggdirectdraw**](caggdirectdraw.md)                               | Veraltet.                                                                                                                       |
-| [**Caggdrawsurface**](caggdrawsurface.md)                             | Veraltet.                                                                                                                       |
-| [**Camevent**](camevent.md)                                           | Wrapper Klasse für manuelles und automatisches Zurücksetzen von Ereignissen.                                                                                  |
-| [**Cammsgevent**](cammsgevent.md)                                     | Wrapper Klasse für Ereignis Objekte, die die Nachrichtenverarbeitung durchführen.                                                                  |
-| [**"Camschedule"**](camschedule.md)                                     | Scheduler für Referenzuhren.                                                                                                   |
-| [**Camthread**](camthread.md)                                         | Die Bass-Klasse zum Verwalten von Arbeitsthreads.                                                                                           |
-| [**Cautolock**](cautolock.md)                                         | Enthält einen kritischen Abschnitt für den Bereich eines-Blocks.                                                                                |
-| [**Cautousingoutputpin**](cautousingoutputpin-cautousingoutputpin.md) | Ruft den Zugriff auf ein [**cdynamicoutputpin**](cdynamicoutputpin.md) -Objekt ab und gibt diesen frei.                                           |
-| [**Cbasezucator**](cbaseallocator.md)                               | Die Bass-Klasse für Zuweisungen.                                                                                                        |
-| [**Cbasebasicvideo**](cbasebasicvideo.md)                             | Behandelt die IDispatch-Komponente der [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle.                                              |
-| [**Cbasecontrolvideo**](cbasecontrolvideo.md)                         | Implementiert die ibasicvideo-Schnittstelle für ein generisches Videofenster.                                                                  |
-| [**Cbasecontrolwindow**](cbasecontrolwindow.md)                       | Implementiert die [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Schnittstelle.                                                                    |
-| [**Cbasedispatch**](cbasedispatch.md)                                 | Basisklasse für die Implementierung der IDispatch-Schnittstelle.                                                                              |
-| [**Cbasefilter**](cbasefilter.md)                                     | Basisklasse für Filter.                                                                                                           |
-| [**Cbaseingeputpin**](cbaseinputpin.md)                                 | Basisklasse für Eingabe Pins.                                                                                                        |
-| [**Cbaselist**](cbaselist.md)                                         | Basisklasse für generische Listen.                                                                                                     |
-| [**Cbasemediafilter**](cbasemediafilter.md)                           | Implementiert die [**imediafilter**](/windows/desktop/api/Strmif/nn-strmif-imediafilter) -Schnittstelle.                                                                    |
-| [**Cbaseobject**](cbaseobject.md)                                     | Basisklasse für die Implementierung von DirectShow-Objekten.                                                                                   |
-| [**Cbaseoutputpin**](cbaseoutputpin.md)                               | Basisklasse für Ausgabe Pins.                                                                                                       |
-| [**Cbasepin**](cbasepin.md)                                           | Basisklasse für Pins.                                                                                                              |
-| [**Cbasepropertypage**](cbasepropertypage.md)                         | Basisklasse zum Implementieren von Eigenschaften Seiten.                                                                                       |
-| [**Cbasereferenceclock**](cbasereferenceclock.md)                     | Implementiert eine verweisuhr.                                                                                                     |
-| [**Cbaserererderer**](cbaserenderer.md)                                 | Basisklasse zum Implementieren von rendererfiltern.                                                                                     |
-| [**Cbasestreamcontrol**](cbasestreamcontrol.md)                       | Implementiert die [**iamstreamcontrol**](/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol) -Schnittstelle.                                                            |
-| [**Cbasevideorenderer**](cbasevideorenderer.md)                       | Basisklasse für Videorenderer.                                                                                                   |
-| [**Cbasevideowindow**](cbasevideowindow.md)                           | Behandelt die IDispatch-Komponente der [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Schnittstelle.                                            |
-| [**Cbasewindow**](cbasewindow.md)                                     | Basisklasse für die Verwaltung von Fenstern.                                                                                                  |
-| [**Cbasicaudiodatei**](cbasicaudio.md)                                     | Behandelt die IDispatch-Schnittstellen Komponente der [**ibasicaudioschnittstelle**](/windows/desktop/api/Control/nn-control-ibasicaudio) .                                    |
-| [**Ccmdqueue**](ccmdqueue.md)                                         | Hilfsklasse für die Implementierung der [**iqueuecommand**](/windows/desktop/api/Control/nn-control-iqueuecommand) -Schnittstelle.                                               |
-| [**Ccritsec**](ccritsec.md)                                           | Stellt eine Thread Sperre bereit.                                                                                                           |
-| [**Cdeferredcommand**](cdeferredcommand.md)                           | Implementiert die [**ideferredcommand**](/windows/desktop/api/Control/nn-control-ideferredcommand) -Schnittstelle.                                                            |
-| [**Cdispparameams**](cdispparams.md)                                     | Wrapper Klasse für die dispparameams-Struktur.                                                                                       |
-| [**Cdrawimage**](cdrawimage.md)                                       | Hilfsklasse zum Zeichnen in ein Fenster.                                                                                             |
-| [**Cdynamicoutputpin**](cdynamicoutputpin.md)                         | Ausgabepin, die Dyanamic-erneute Verbindungen unterstützt und Änderungen formatiert.                                                               |
-| [**Cenum mediatypes**](cenummediatypes.md)                             | Enumerator für bevorzugte Medientypen.                                                                                             |
-| [**Cenumpins**](cenumpins.md)                                         | Enumerator für Pins.                                                                                                              |
-| [**Cfacrenytemplate**](cfactorytemplate.md)                           | Klasse, die Informationen für eine Klassenfactory bereitstellt.                                                                              |
-| [**Cgenericlist**](cgenericlist.md)                                   | Eine Klassen Vorlage, die eine typspezifische Liste implementiert.                                                                              |
-| [**Cimagezuordcator**](cimageallocator.md)                             | Zuordnung für DIB-Abschnitte.                                                                                                       |
-| [**Cimagedisplay**](cimagedisplay.md)                                 | Hilfsklasse zum Verwalten von Bild Anzeige Formaten.                                                                                  |
-| [**Cimagepalette**](cimagepalette.md)                                 | Hilfsklasse für die Verwaltung von Paletten.                                                                                               |
-| [**Cimagesample**](cimagesample.md)                                   | Ein Medien Beispiel, das DIB-Abschnitte verwendet.                                                                                              |
-| [**Cloaddirectdraw**](cloaddirectdraw.md)                             | Veraltet.                                                                                                                       |
-| [**Cmediacontrol**](cmediacontrol.md)                                 | Behandelt die IDispatch-Methoden der [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) -Schnittstelle.                                            |
-| [**Cmediaevent**](cmediaevent.md)                                     | Behandelt die IDispatch-Methoden der [**imediaevent**](/windows/desktop/api/Control/nn-control-imediaevent) -Schnittstelle.                                                |
-| [**Cmediaposition**](cmediaposition.md)                               | Behandelt die IDispatch-Methoden der [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition) -Schnittstelle.                                          |
-| [**Cmediasample**](cmediasample.md)                                   | Medien Beispiel.                                                                                                                     |
-| [**Cmediatype**](cmediatype.md)                                       | Klasse zum Verwalten von Medientypen.                                                                                                   |
-| [**Cmemzuordcator**](cmemallocator.md)                                 | Speicherzuweisung.                                                                                                                 |
-| [**CMSG**](cmsg.md)                                                   | Hilfsklasse für die Verwaltung von Anforderungen, die an ein [**cmsgthread**](cmsgthread.md) -Objekt gerichtet sind.                                             |
-| [**Cmsgthread**](cmsgthread.md)                                       | Arbeits Thread, der Anforderungen an den Warteschlangen Thread für den asynchronen Abschluss anfügt.                                             |
-| [**Coaref-Zeit**](coareftime.md)                                       | Konvertiert Verweis Zeiten zwischen Sekunden und 100-Nanosekunden-Einheiten.                                                                |
-| [**Coutputqueue**](coutputqueue.md)                                   | Objekt, das Medien Beispiele für die Übermittlung in die Warteschlange                                                                                    |
-| [**Cpersiststream**](cpersiststream.md)                               | Basisklasse zum Implementieren der IPersistStream-Schnittstelle.                                                                         |
-| [**Cpospassthru**](cpospassthru.md)                                   | Behandelt Such Befehle für Filter mit einer Eingabe-PIN.                                                                             |
-| [**Cpullpin**](cpullpin.md)                                           | Hilfsklasse, die Daten aus einer Ausgabe-PIN abruft, die die [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Schnittstelle unterstützt.                 |
-| [**Cqueue**](cqueue.md)                                               | Eine Klassen Vorlage, die eine einfache, statisch formatierte Warteschlange implementiert.                                                                  |
-| [**Zeitpunkt der Aktualisierung**](creftime.md)                                           | Hilfsklasse zum Verwalten von Verweis Zeiten.                                                                                           |
-| [**Crenderedinputpin**](crenderedinputpin.md)                         | Eingabe-PIN für rendererfilter, die mehrere Eingaben unterstützen.                                                                      |
-| [**Crendererinputpin**](crendererinputpin.md)                         | Eingabe-PIN für die [**cbasererererklasse**](cbaserenderer.md) .                                                                   |
-| [**Crendererpospassthru**](crendererpospassthru.md)                   | Behandelt Such Befehle für rendererfilter.                                                                                       |
-| [**Cseekingpassthru**](cseekingpassthru.md)                           | Hilfsobjekt, das [**cpospassthru**](cpospassthru.md) -und [**crendererpospassthru**](crendererpospassthru.md) -Objekte erstellt. |
-| [**CSource**](csource.md)                                             | Basisklasse zum Implementieren von Quell filtern.                                                                                       |
-| [**Csourceposition**](csourceposition.md)                             | Abstrakte Klasse für die Implementierung der [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition) -Schnittstelle. Veraltet.                                 |
-| [**Csourceseeking**](csourceseeking.md)                               | Abstrakte Klasse für die Implementierung von suchen in Quell Filtern mit einem Ausgabepin.                                                    |
-| [**Csourcestream**](csourcestream.md)                                 | Ausgabe-PIN für die [**CSource**](csource.md) -Klasse.                                                                              |
-| [**Csystemclock**](csystemclock.md)                                   | Systemuhr.                                                                                                                     |
-| [**Ctransformfilter**](ctransformfilter.md)                           | Basisklasse für die Implementierung von Transformations filtern.                                                                                    |
-| [**Ctransforminputpin**](ctransforminputpin.md)                       | Eingabe-PIN, die von der ctransformfilter-Klasse verwendet wird.                                                                                     |
-| [**Ctransformoutputpin**](ctransformoutputpin.md)                     | Ausgabe-PIN, die von der ctransformfilter-Klasse verwendet wird.                                                                                    |
-| [**Ctransinplacefilter**](ctransinplacefilter.md)                     | Klasse zum Implementieren von Transformations filtern, die keine Daten kopieren.                                                                   |
-| [**Ctransinplaceinputpin**](ctransinplaceinputpin.md)                 | Eingabe-PIN für die ctransinplacefilter-Klasse.                                                                                      |
-| [**Ctransinplaceoutputpin**](ctransinplaceoutputpin.md)               | Ausgabepin für die ctransinplacefilter-Klasse.                                                                                     |
-| [**Cunknown**](cunknown.md)                                           | Implementiert die IUnknown-Schnittstelle.                                                                                                |
-| [**Cvideotransformfilter**](cvideotransformfilter.md)                 | Basisklasse für Video Transformations Filter.                                                                                           |
-| [**Fourccmap**](fourccmap.md)                                         | Hilfsklasse für die Typumwandlung zwischen GUIDs und fourccs.                                                                            |
+| [**CAggDirectDraw**](caggdirectdraw.md)                               | Veraltet.                                                                                                                       |
+| [**CAggDrawSurface**](caggdrawsurface.md)                             | Veraltet.                                                                                                                       |
+| [**WEBCAMEvent**](camevent.md)                                           | Wrapperklasse für Ereignisse mit manueller und automatischer Zurücksetzung.                                                                                  |
+| [**WEBCAMMsgEvent**](cammsgevent.md)                                     | Wrapperklasse für Ereignisobjekte, die die Nachrichtenverarbeitung durchführen.                                                                  |
+| [**CAMSchedule**](camschedule.md)                                     | Scheduler für Verweisuhren.                                                                                                   |
+| [**WEBCAMThread**](camthread.md)                                         | Klasse für die Verwaltung von Arbeitsthreads.                                                                                           |
+| [**CAutoLock**](cautolock.md)                                         | Enthält einen kritischen Abschnitt für den Bereich eines Blocks.                                                                                |
+| [**CAutoUsingOutputPin**](cautousingoutputpin-cautousingoutputpin.md) | Ruft den Zugriff auf ein [**CDynamicOutputPin-Objekt**](cdynamicoutputpin.md) ab und gibt diesen frei.                                           |
+| [**CBaseAllocator**](cbaseallocator.md)                               | Klasse für Zuweisungen.                                                                                                        |
+| [**CBaseBasicVideo**](cbasebasicvideo.md)                             | Verarbeitet die IDispatch-Komponente der [**IBasicVideo-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ibasicvideo)                                              |
+| [**CBaseControlVideo**](cbasecontrolvideo.md)                         | Implementiert die IBasicVideo-Schnittstelle für ein generisches Videofenster.                                                                  |
+| [**CBaseControlWindow**](cbasecontrolwindow.md)                       | Implementiert die [**IVideoWindow-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ivideowindow)                                                                    |
+| [**CBaseDispatch**](cbasedispatch.md)                                 | Basisklasse zum Implementieren der IDispatch-Schnittstelle.                                                                              |
+| [**CBaseFilter**](cbasefilter.md)                                     | Basisklasse für Filter.                                                                                                           |
+| [**CBaseInputPin**](cbaseinputpin.md)                                 | Basisklasse für Eingabepins.                                                                                                        |
+| [**CBaseList**](cbaselist.md)                                         | Basisklasse für generische Listen.                                                                                                     |
+| [**CBaseMediaFilter**](cbasemediafilter.md)                           | Implementiert die [**IMediaFilter-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imediafilter)                                                                    |
+| [**CBaseObject**](cbaseobject.md)                                     | Basisklasse zum Implementieren von DirectShow-Objekten.                                                                                   |
+| [**CBaseOutputPin**](cbaseoutputpin.md)                               | Basisklasse für Ausgabepins.                                                                                                       |
+| [**CBasePin**](cbasepin.md)                                           | Basisklasse für Pins.                                                                                                              |
+| [**CBasePropertyPage**](cbasepropertypage.md)                         | Basisklasse zum Implementieren von Eigenschaftenseiten.                                                                                       |
+| [**CBaseReferenceClock**](cbasereferenceclock.md)                     | Implementiert eine Verweisuhr.                                                                                                     |
+| [**CBaseRenderer**](cbaserenderer.md)                                 | Basisklasse zum Implementieren von Rendererfiltern.                                                                                     |
+| [**CBaseStreamControl**](cbasestreamcontrol.md)                       | Implementiert die [**IAMStreamControl-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol)                                                            |
+| [**CBaseVideoRenderer**](cbasevideorenderer.md)                       | Basisklasse für Videorenderer.                                                                                                   |
+| [**CBaseVideoWindow**](cbasevideowindow.md)                           | Verarbeitet die IDispatch-Komponente der [**IVideoWindow-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ivideowindow)                                            |
+| [**CBaseWindow**](cbasewindow.md)                                     | Basisklasse für die Verwaltung von Fenstern.                                                                                                  |
+| [**CBasicAudio**](cbasicaudio.md)                                     | Verarbeitet die IDispatch-Schnittstellenkomponente der [**IBasicAudio-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ibasicaudio)                                    |
+| [**CCmdQueue**](ccmdqueue.md)                                         | Hilfsklasse zum Implementieren der [**IQueueCommand-Schnittstelle.**](/windows/desktop/api/Control/nn-control-iqueuecommand)                                               |
+| [**CCritSec**](ccritsec.md)                                           | Stellt eine Threadsperre bereit.                                                                                                           |
+| [**CDeferredCommand**](cdeferredcommand.md)                           | Implementiert die [**IDeferredCommand-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ideferredcommand)                                                            |
+| [**CDispParams**](cdispparams.md)                                     | Wrapperklasse für die DISPPARAMS-Struktur.                                                                                       |
+| [**CDrawImage**](cdrawimage.md)                                       | Hilfsklasse zum Zeichnen in ein Fenster.                                                                                             |
+| [**CDynamicOutputPin**](cdynamicoutputpin.md)                         | Ausgabepin, der dämmische Verbindungswiederherstellungen und Formatänderungen unterstützt.                                                               |
+| [**CEnumMediaTypes**](cenummediatypes.md)                             | Enumerator für bevorzugte Medientypen.                                                                                             |
+| [**CEnumPins**](cenumpins.md)                                         | Enumerator für Pins.                                                                                                              |
+| [**CFactoryTemplate**](cfactorytemplate.md)                           | Klasse, die Informationen für eine Klassenfactory bereitstellt.                                                                              |
+| [**CGenericList**](cgenericlist.md)                                   | Klassenvorlage, die eine typspezifische Liste implementiert.                                                                              |
+| [**CImageAllocator**](cimageallocator.md)                             | Zuweisung für DIB-Abschnitte.                                                                                                       |
+| [**CImageDisplay**](cimagedisplay.md)                                 | Hilfsklasse zum Verwalten von Bildanzeigeformaten.                                                                                  |
+| [**CImagePalette**](cimagepalette.md)                                 | Hilfsklasse zum Verwalten von Paletten.                                                                                               |
+| [**CImageSample**](cimagesample.md)                                   | Medienbeispiel, das DIB-Abschnitte verwendet.                                                                                              |
+| [**CLoadDirectDraw**](cloaddirectdraw.md)                             | Veraltet.                                                                                                                       |
+| [**CMediaControl**](cmediacontrol.md)                                 | Behandelt die IDispatch-Methoden der [**IMediaControl-Schnittstelle.**](/windows/desktop/api/Control/nn-control-imediacontrol)                                            |
+| [**CMediaEvent**](cmediaevent.md)                                     | Behandelt die IDispatch-Methoden der [**IMediaEvent-Schnittstelle.**](/windows/desktop/api/Control/nn-control-imediaevent)                                                |
+| [**CMediaPosition**](cmediaposition.md)                               | Behandelt die IDispatch-Methoden der [**IMediaPosition-Schnittstelle.**](/windows/desktop/api/Control/nn-control-imediaposition)                                          |
+| [**CMediaSample**](cmediasample.md)                                   | Medienbeispiel.                                                                                                                     |
+| [**CMediaType**](cmediatype.md)                                       | Klasse zum Verwalten von Medientypen.                                                                                                   |
+| [**CMemAllocator**](cmemallocator.md)                                 | Speicherzuweisung.                                                                                                                 |
+| [**CMsg**](cmsg.md)                                                   | Hilfsklasse zum Verwalten von Anforderungen an ein [**CMsgThread-Objekt.**](cmsgthread.md)                                             |
+| [**CMsgThread**](cmsgthread.md)                                       | Arbeitsthread, der Anforderungen an den Warteschlangenthread zur asynchronen Vervollständigung in die Warteschlange einreiht.                                             |
+| [**COARefTime**](coareftime.md)                                       | Konvertiert Verweiszeiten zwischen Sekunden und Einheiten von 100 Nanosekunden.                                                                |
+| [**COutputQueue**](coutputqueue.md)                                   | Objekt, das Medienbeispiele für die Übermittlung in die Warteschlange einreiht.                                                                                    |
+| [**CPersistStream**](cpersiststream.md)                               | Basisklasse für die Implementierung der IPersistStream-Schnittstelle.                                                                         |
+| [**CPosPassThru**](cpospassthru.md)                                   | Verarbeitet Suchbefehle für Filter mit einem Eingabepin.                                                                             |
+| [**CPullPin**](cpullpin.md)                                           | Hilfsklasse, die Daten von einem Ausgabepin pullt, der die [**IAsyncReader-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) unterstützt.                 |
+| [**CQueue**](cqueue.md)                                               | Klassenvorlage, die eine einfache Warteschlange mit statischer Größe implementiert.                                                                  |
+| [**CRefTime**](creftime.md)                                           | Hilfsklasse zum Verwalten von Verweiszeiten.                                                                                           |
+| [**CRenderedInputPin**](crenderedinputpin.md)                         | Eingabepin für Rendererfilter, die mehrere Eingaben unterstützen.                                                                      |
+| [**CRendererInputPin**](crendererinputpin.md)                         | Eingabepin für die [**CBaseRenderer-Klasse.**](cbaserenderer.md)                                                                   |
+| [**CRendererPosPassThru**](crendererpospassthru.md)                   | Verarbeitet Suchbefehle für Rendererfilter.                                                                                       |
+| [**CSeekingPassThru**](cseekingpassthru.md)                           | Hilfsobjekt, das [**CPosPassThru-**](cpospassthru.md) und [**CRendererPosPassThru-Objekte**](crendererpospassthru.md) erstellt. |
+| [**CSource**](csource.md)                                             | Basisklasse zum Implementieren von Quellfiltern.                                                                                       |
+| [**CSourcePosition**](csourceposition.md)                             | Abstrakte Klasse zum Implementieren der [**IMediaPosition-Schnittstelle.**](/windows/desktop/api/Control/nn-control-imediaposition) Veraltet.                                 |
+| [**CSourceSeeking**](csourceseeking.md)                               | Abstrakte Klasse für die Implementierung von Such- in Quellfiltern mit einem Ausgabepin.                                                    |
+| [**CSourceStream**](csourcestream.md)                                 | Ausgabepin für die [**CSource-Klasse.**](csource.md)                                                                              |
+| [**CSystemClock**](csystemclock.md)                                   | Systemuhr.                                                                                                                     |
+| [**CTransformFilter**](ctransformfilter.md)                           | Basisklasse zum Implementieren von Transformationsfiltern.                                                                                    |
+| [**CTransformInputPin**](ctransforminputpin.md)                       | Eingabepin, der von der CTransformFilter-Klasse verwendet wird.                                                                                     |
+| [**CTransformOutputPin**](ctransformoutputpin.md)                     | Ausgabepin, der von der CTransformFilter-Klasse verwendet wird.                                                                                    |
+| [**CTransInPlaceFilter**](ctransinplacefilter.md)                     | Klasse zum Implementieren von Transformationsfiltern, die keine Daten kopieren.                                                                   |
+| [**CTransInPlaceInputPin**](ctransinplaceinputpin.md)                 | Eingabepin für die CTransInPlaceFilter-Klasse.                                                                                      |
+| [**CTransInPlaceOutputPin**](ctransinplaceoutputpin.md)               | Ausgabepin für die CTransInPlaceFilter-Klasse.                                                                                     |
+| [**CUnknown**](cunknown.md)                                           | Implementiert die IUnknown-Schnittstelle.                                                                                                |
+| [**CVideoTransformFilter**](cvideotransformfilter.md)                 | Basisklasse für Videotransformationsfilter.                                                                                           |
+| [**FOURCCMap**](fourccmap.md)                                         | Hilfsklasse für die Konvertierung zwischen GUIDs und FOURCCs.                                                                            |
 
 
 

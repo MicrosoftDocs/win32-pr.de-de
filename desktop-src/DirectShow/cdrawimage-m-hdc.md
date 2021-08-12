@@ -1,7 +1,7 @@
 ---
-description: Die m- \_ hdc-Mitglieds Variable ist ein Handle für den Gerätekontext des besitzenden Fensters.
+description: Die \_ m hdc-Membervariable ist ein Handle für den Gerätekontext des besitzenden Fensters.
 ms.assetid: ffe11577-d811-494e-ad7b-094c4aa970f5
-title: 'Cdrawimage:: m_hdc Member (winutil. h)'
+title: CDrawImage::m_hdc-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: df54ade2872eacc25e972d9b510cfcaf3e1e0d3d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2139c6509aacd76bc0d41f618abe481fdd959eb77fcfcbe6daff1acedb5df2c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656993"
 ---
-# <a name="cdrawimagem_hdc-member"></a>Cdrawimage:: m- \_ hdc-Mitglied
+# <a name="cdrawimagem_hdc-member"></a>CDrawImage::m \_ hdc-Member
 
-Die Element `m_hdc` Variable ist ein Handle für den Gerätekontext des besitzenden Fensters.
+Die `m_hdc` Membervariable ist ein Handle für den Gerätekontext des besitzenden Fensters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,19 +42,19 @@ HDC m_hdc;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: setdrawcontext**](cdrawimage-setdrawcontext.md)
+[**CDrawImage::SetDrawContext**](cdrawimage-setdrawcontext.md)
 </dt> </dl>
 
  

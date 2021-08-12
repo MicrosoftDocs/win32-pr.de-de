@@ -1,7 +1,7 @@
 ---
-description: Die removetail-Methode entfernt das letzte Element in der Liste.
+description: Die RemoveTail-Methode entfernt das letzte Element in der Liste.
 ms.assetid: 377af676-8042-430e-87a6-b41c00482a90
-title: Cgenericlist. removetail-Methode (wxlist. h)
+title: CGenericList.RemoveTail-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a7b98187c663f643acdce28b4f12ebc37b1d4c25
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ed0b39d72eac68310dacdf2bfdc1d3c28bb35695b3d77230ba37f6fe81c417ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656155"
 ---
-# <a name="cgenericlistremovetail-method"></a>Cgenericlist. removetail-Methode
+# <a name="cgenericlistremovetail-method"></a>CGenericList.RemoveTail-Methode
 
-Die- `RemoveTail` Methode entfernt das letzte Element in der Liste.
+Die `RemoveTail` -Methode entfernt das letzte Element in der Liste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf ein Objekt vom Typ " **Object** " (der Vorlagentyp) oder **null** zurück, wenn die Liste leer ist.
+Gibt einen Zeiger auf ein Objekt vom Typ **OBJECT** (vorlagentyp) oder **NULL** zurück, wenn die Liste leer ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode löscht den Listen Knoten, jedoch nicht das Element, das im Knoten enthalten ist.
+Diese Methode löscht den Listenknoten, aber nicht das Element, das im Knoten enthalten ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Diese Methode löscht den Listen Knoten, jedoch nicht das Element, das im Knoten
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cgenericlist-Klasse**](cgenericlist.md)
+[**CGenericList-Klasse**](cgenericlist.md)
 </dt> </dl>
 
  

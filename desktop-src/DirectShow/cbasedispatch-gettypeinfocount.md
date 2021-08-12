@@ -1,5 +1,5 @@
 ---
-description: 'CBaseDispatch.GetTypeInfoCount-Methode: Die GetTypeInfoCount-Methode ruft die Anzahl der Typinformationsschnittstellen ab, die das Objekt bereitstellt.'
+description: 'CBaseDispatch.GetTypeInfoCount-Methode: Die GetTypeInfoCount-Methode ruft die Anzahl der Schnittstellen für Typinformationen ab, die das Objekt zur Verfügung stellt.'
 ms.assetid: e09e6f6c-6ac8-4ce1-8ce1-ee5374d54183
 title: CBaseDispatch.GetTypeInfoCount-Methode (Ctlutil.h)
 ms.topic: reference
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 81e68c94420b3d7715845f8d6bd14e26b770b44f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: da80cdb4810ea3e598ad9483ccf52e8033ccb1a5b7ee65351e2cfcc273a3415f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118660017"
 ---
 # <a name="cbasedispatchgettypeinfocount-method"></a>CBaseDispatch.GetTypeInfoCount-Methode
 
-Die `GetTypeInfoCount` -Methode ruft die Anzahl der Typinformationsschnittstellen ab, die das -Objekt bereitstellt.
+Die `GetTypeInfoCount` -Methode ruft die Anzahl der Schnittstellen mit Typinformationen ab, die das -Objekt bietet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Gibt einen der folgenden Werte zurück.
 | Rückgabecode                                                                               | Beschreibung                           |
 |-------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                   |
-| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerargument.**<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> |  NULL-Zeigerargument.<br/> |
 
 
 
@@ -68,10 +68,10 @@ Gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

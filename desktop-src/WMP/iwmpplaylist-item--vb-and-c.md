@@ -1,9 +1,9 @@
 ---
-title: Iwmpwiedergabe. Item (VB und C)
-description: Die Item-Eigenschaft (die get \_ Item-Methode in C \) Ruft eine Schnittstelle zum Medien Element am angegebenen Index ab.
+title: IWMPPlaylist.Item (VB und C )
+description: Die Item-Eigenschaft (die \_ Get Item-Methode in C\) ruft eine Schnittstelle zum Medienelement am angegebenen Index ab.
 ms.assetid: 874663e2-0b89-4ef7-9d4a-3a334482b352
 keywords:
-- Iwmpwiedergabe. Item (VB und C) Windows Media Player
+- IWMPPlaylist.Item (VB und C) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1318f37c3f590eec2c97252e2f484b0d1bc6d83
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 06b4c29b5f3821ad2ec3434fcad2defc2e4128e7f6e69c70940294ef0ff7f963
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575417"
 ---
-# <a name="iwmpplaylistitem-vb-and-c"></a>Iwmpwiedergabe. Item (VB und c#)
+# <a name="iwmpplaylistitem-vb-and-c"></a>IWMPPlaylist.Item (VB und C#)
 
-Die **Item** -Eigenschaft (die **get \_ Item** -Methode in c#) Ruft eine Schnittstelle zum Medien Element am angegebenen Index ab.
+Die **Item-Eigenschaft** (die **Get \_ Item-Methode** in C#) ruft eine Schnittstelle zum Medienelement am angegebenen Index ab.
 
 
 ```
@@ -49,19 +49,19 @@ IWMPMedia get_Item (
 
 *Lindex*
 
-Ein **System. Int32** -Wert, der den Index des Medien Elements in der Wiedergabeliste ist.
+Ein **System.Int32,** das der Index des Medienelements in der Wiedergabeliste ist.
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle, die Zugriff auf das Medien Element am angegebenen Index bereitstellt.
+Eine **WMPLib.IWMPMedia-Schnittstelle,** die Zugriff auf das Medienelement am angegebenen Index bereitstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwmpwiedergabe. Item** ist eine schreibgeschützte Eigenschaft in Visual Basic, die einen-Parameter annimmt, während in c# als **iwmpwiedergabe. get- \_ Element** Methode bezeichnet wird.
+**IWMPPlaylist.Item** ist eine schreibgeschützte Eigenschaft in Visual Basic, die einen Parameter annimmt, während sie in C# als **IWMPPlaylist.get \_ Item-Methode** bezeichnet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die **Item** -Eigenschaft (die **get \_ Item** -Methode in c#) zum Abrufen eines Medien Elements aus einer Wiedergabeliste basierend auf einer Benutzer Auswahl verwendet. Ein Listenfeld mit dem Namen weblist wurde erstellt und mit den Titeln der Wiedergabeliste mit dem Namen audioplaylist gefüllt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird die **Item-Eigenschaft** (die **\_ Get Item-Methode** in C#) verwendet, um ein Medienelement basierend auf einer Benutzerauswahl aus einer Wiedergabeliste abzurufen. Ein Listenfeld wurde mit dem Namen weblist erstellt und mit den Titeln aus der Wiedergabeliste namens audioPlaylist gefüllt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -106,7 +106,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -116,22 +116,22 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. InsertItem (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-insertitem--vb-and-c.md)
+[**IWMPPlaylist.insertItem (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-insertitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. RemoveItem (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-removeitem--vb-and-c.md)
+[**IWMPPlaylist.removeItem (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-removeitem--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

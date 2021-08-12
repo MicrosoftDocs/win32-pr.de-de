@@ -1,7 +1,7 @@
 ---
-description: Die \_ Member-Variable m busingimagezuweisung gibt an, ob die Zuweisung für die PIN-Verbindung ein cimagezuordcator-Objekt ist. Wenn der Wert true ist, ist die Zuweisung ein cimagezuordcator-Objekt (oder wird von dieser Klasse abgeleitet).
+description: Die m bUsingImageAllocator-Membervariable gibt an, ob die Zuweisung für die Pinverbindung \_ ein CImageAllocator-Objekt ist. Wenn der Wert TRUE ist, ist die Zuweisung ein CImageAllocator-Objekt (oder wird von dieser Klasse abgeleitet).
 ms.assetid: 8eddcab6-77b9-4c8f-be74-33e91661430d
-title: 'Cdrawimage:: m_bUsingImageAllocator Member (winutil. h)'
+title: CDrawImage::m_bUsingImageAllocator-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e08d1e8217f42c6855759cefeef40e56949156fb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf60184758598872577e0c6b293f8eb0b72c5bf7305f1516a4dd6b5a4a639b94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118657110"
 ---
-# <a name="cdrawimagem_busingimageallocator-member"></a>Cdrawimage:: m \_ busingimagezuordcator-Member
+# <a name="cdrawimagem_busingimageallocator-member"></a>CDrawImage::m \_ bUsingImageAllocator-Member
 
-Die `m_bUsingImageAllocator` Member-Variable gibt an, ob die Zuweisung der Pin-Verbindung ein **cimagezuordcator** -Objekt ist. Wenn der Wert **true** ist, ist die Zuweisung ein **cimagezuordcator** -Objekt (oder wird von dieser Klasse abgeleitet).
+Die `m_bUsingImageAllocator` Membervariable gibt an, ob die Zuweisung für die Pinverbindung ein **CImageAllocator-Objekt** ist. Wenn der Wert **TRUE ist,** ist die Zuweisung ein **CImageAllocator-Objekt** (oder wird von dieser Klasse abgeleitet).
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ BOOL m_bUsingImageAllocator;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **true** ist, kann das **cdrawimage** -Objekt die GDI **-BitBLT** -Funktion und die **StretchBlt** -Funktion verwenden, um das Bild zu Rendering, anstatt die langsamsten Funktionen **SetDIBitsToDevice** und **StretchDIBits** zu verwenden.
+Wenn der Wert **TRUE ist,** kann das **CDrawImage-Objekt** die GDI-Funktionen **BitBlt** und **StretchBlt** anstelle der langsameren **Funktionen SetDIBitsToDevice** und **StretchDIBits** verwenden, um das Bild zu rendern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,22 +46,22 @@ Wenn der Wert **true** ist, kann das **cdrawimage** -Objekt die GDI **-BitBLT** 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: notifyzucator**](cdrawimage-notifyallocator.md)
+[**CDrawImage::NotifyAllocator**](cdrawimage-notifyallocator.md)
 </dt> <dt>
 
-[**Cdrawimage:: usingimagezuordcator**](cdrawimage-usingimageallocator.md)
+[**CDrawImage::UsingImageAllocator**](cdrawimage-usingimageallocator.md)
 </dt> </dl>
 
  

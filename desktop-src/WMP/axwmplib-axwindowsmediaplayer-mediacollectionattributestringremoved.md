@@ -1,9 +1,9 @@
 ---
-title: Mediacollectionattributestraningrebewegereignis des AxWindowsMediaPlayer-Objekts
-description: Das Ereignis mediacollectionattributestraningrebewegt tritt auf, wenn ein Attribut Wert aus der Bibliothek entfernt wird. | Mediacollectionattributestraningrebewegereignis des AxWindowsMediaPlayer-Objekts
+title: MediaCollectionAttributeStringRemoved-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das MediaCollectionAttributeStringRemoved-Ereignis tritt auf, wenn ein Attributwert aus der Bibliothek entfernt wird. | MediaCollectionAttributeStringRemoved-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 2f264416-0bc5-41d0-8863-32c284393082
 keywords:
-- Mediacollectionattributestraningreverschogereignis der "AxWindowsMediaPlayer"-Objekt Fenster Media Player
+- MediaCollectionAttributeStringRemoved-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a11b6b028a2a47585b06159ed46b986124583950
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f56a6e997ada3296a0ec1df841797c1495ccde0864495dcf77a0a0634ccde5fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582076"
 ---
-# <a name="mediacollectionattributestringremoved-event-of-the-axwindowsmediaplayer-object"></a>Mediacollectionattributestraningrebewegereignis des AxWindowsMediaPlayer-Objekts
+# <a name="mediacollectionattributestringremoved-event-of-the-axwindowsmediaplayer-object"></a>MediaCollectionAttributeStringRemoved-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das Ereignis mediacollectionattributestraningrebewegt tritt auf, wenn ein Attribut Wert aus der Bibliothek entfernt wird.
+Das MediaCollectionAttributeStringRemoved-Ereignis tritt auf, wenn ein Attributwert aus der Bibliothek entfernt wird.
 
 ``` syntax
 [C#]
@@ -41,22 +41,22 @@ Private Sub player_MediaCollectionAttributeStringRemoved(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionattributestrauingrefivedeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionattributestrauingremuvedevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionAttributeStringRemovedEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionAttributeStringRemovedEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft           | BESCHREIBUNG                                                                                                                                                                                  |
+| Eigenschaft           | Beschreibung                                                                                                                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **bstrattribname** | System. StringGibt den Namen des Attributs an. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).<br/> |
-| bstrattribval      | System. StringGibt den Wert des Attributs an.<br/>                                                                                                                                |
+| **bstrAttribName** | System.String Gibt den Namen des Attributs an. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attributreferenz.](attribute-reference.md)<br/> |
+| bstrAttribVal      | System.String Gibt den Wert des Attributs an.<br/>                                                                                                                                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Medien Element aus der Bibliothek entfernt wird, werden die zugehörigen Metadaten aus der **mediacollection** entfernt, und dieses Ereignis wird für jedes entfernte Attribut ausgelöst.
+Wenn ein Medienelement aus der Bibliothek entfernt wird, werden seine Metadaten aus **der MediaCollection** entfernt, und dieses Ereignis wird für jedes entfernte Attribut ausgelöst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Wenn ein Medien Element aus der Bibliothek entfernt wird, werden die zugehörige
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -74,13 +74,13 @@ Wenn ein Medien Element aus der Bibliothek entfernt wird, werden die zugehörige
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. mediacollection (VB und c#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
+[**AxWindowsMediaPlayer.mediaCollection (VB und C#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

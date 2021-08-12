@@ -1,5 +1,5 @@
 ---
-description: Rückruf zum Zurückgeben von Pixel Verlaufs interabschnitten (Draw-Anruf Ebene) und primitiven (Dreiecks Ebene) in zwei unterschiedlichen Ergebnissen.
+description: Rückruf zum Zurückgeben von Pixelverlaufs-Schnittmengen (Zeichnen-Aufrufebene) und Primitiven (Dreiecksebene) in zwei unterschiedlichen Ergebnissen.
 MS-HAID: vspixengine.IPixelHistoryCallback2
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,34 +17,34 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 473f3540ad9c6a16659a6e43c3aa31eef706ec59
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7ccb3ea0f3e3cdffbe0b3469b1897d4081eaff89a9ffa4e7eaf43217664f57d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283225"
 ---
 # <a name="span-idvspixengineipixelhistorycallback2spanipixelhistorycallback2-interface"></a><span id="vspixengine.ipixelhistorycallback2"></span>IPixelHistoryCallback2-Schnittstelle
 
-Rückruf zum Zurückgeben von Pixel Verlaufs interabschnitten (Draw-Anruf Ebene) und primitiven (Dreiecks Ebene) in zwei unterschiedlichen Ergebnissen.
+Rückruf zum Zurückgeben von Pixelverlaufs-Schnittmengen (Zeichnen-Aufrufebene) und Primitiven (Dreiecksebene) in zwei unterschiedlichen Ergebnissen.
 
 ## <a name="members"></a>Member
 
-Die **IPixelHistoryCallback2** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **IPixelHistoryCallback2** verfügt auch über die folgenden Typen von Membern:
+Die **IPixelHistoryCallback2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixelHistoryCallback2** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="span-idmethodsspanmethods"></a><span id="methods"></span>Methoden
 
-Die **IPixelHistoryCallback2** -Schnittstelle verfügt über diese Methoden.
+Die **IPixelHistoryCallback2-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistorycallback2-intersectionscallback-dword-pixelhistoryintersection-arr"><strong>Intersectionscallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host über Schnittstellen Informationen des Pixel Verlaufs benachrichtigt, die von der assocaas-Anforderung zurückgegeben werden.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistorycallback2-primitivescallback-dword-pixelhistoryoperation-arr"><strong>Primitivescallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host über die primitiven Vorgangs Informationen des Pixel Verlaufs benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistorycallback2-intersectionscallback-dword-pixelhistoryintersection-arr"><strong>IntersectionsCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host von Pixelverlaufs-Schnittpunktinformationen benachrichtigt, die von der assocaited-Anforderung zurückgegeben werden.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistorycallback2-primitivescallback-dword-pixelhistoryoperation-arr"><strong>PrimitivesCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host über primitive Vorgangsinformationen des Pixelverlaufs benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr></tbody></table>
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

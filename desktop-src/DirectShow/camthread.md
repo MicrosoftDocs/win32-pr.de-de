@@ -1,7 +1,7 @@
 ---
-description: Die Klasse "camthread" ist eine abstrakte Klasse zum Verwalten von Arbeitsthreads.
+description: Die KLASSE CABThread ist eine abstrakte Klasse zum Verwalten von Arbeitsthreads.
 ms.assetid: c217d879-0203-4566-96ad-7463b05bc990
-title: Camthread-Klasse (wxutil. h)
+title: CABThread-Klasse (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,59 +16,59 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e5c2bde058267ae4c530f33a96778792d5fe247b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ca7182ecc16cd873732b2d39d2659f42017f9e01c1308642af4b8cac7ff2a682
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118662113"
 ---
-# <a name="camthread-class"></a>Camthread-Klasse
+# <a name="camthread-class"></a>WEBCAMThread-Klasse
 
-Die- `CAMThread` Klasse ist eine abstrakte Klasse zum Verwalten von Arbeitsthreads.
+Die `CAMThread` -Klasse ist eine abstrakte Klasse zum Verwalten von Arbeitsthreads.
 
 
 
-| Geschützte Member-Variablen                                 | BESCHREIBUNG                                                                  |
+| Geschützte Membervariablen                                 | BESCHREIBUNG                                                                  |
 |------------------------------------------------------------|------------------------------------------------------------------------------|
 | [**m \_ hThread**](camthread-m-hthread.md)                  | Handle für den Thread.                                                        |
-| Öffentliche Element Variablen                                    | BESCHREIBUNG                                                                  |
-| [**m \_ accesslock**](camthread-m-accesslock.md)            | Kritischer Abschnitt, der den Zugriff auf den Thread durch andere Threads sperrt. |
-| [**m \_ workerlock**](camthread-m-workerlock.md)            | Kritischer Abschnitt, der die von Threads gemeinsam genutzten Daten sperrt.                       |
+| Öffentliche Membervariablen                                    | BESCHREIBUNG                                                                  |
+| [**m \_ AccessLock**](camthread-m-accesslock.md)            | Kritischer Abschnitt, der verhindert, dass andere Threads auf den Thread zugreifen. |
+| [**m \_ WorkerLock**](camthread-m-workerlock.md)            | Kritischer Abschnitt zum Sperren von Daten, die von Threads gemeinsam genutzt werden.                       |
 | Öffentliche Methoden                                             | BESCHREIBUNG                                                                  |
-| [**Camthread**](camthread-camthread.md)                   | Konstruktormethode.                                                          |
-| [**~ Camthread**](camthread--camthread.md)                | Dekonstruktormethode. Virtu.                                                  |
-| [**Initialthumproc**](camthread-initialthreadproc.md)   | Ruft die ThreadProc-Methode auf, wenn der Thread erstellt wird.                      |
-| [**Stelle**](camthread-create.md)                         | Erstellt den Thread.                                                          |
-| [**Callworker**](camthread-callworker.md)                 | Signalisiert dem Thread eine Anforderung.                                           |
+| [**WEBCAMThread**](camthread-camthread.md)                   | Konstruktormethode.                                                          |
+| [**~ WEBCAMThread**](camthread--camthread.md)                | Destruktormethode. Virtuellen.                                                  |
+| [**InitialThreadProc**](camthread-initialthreadproc.md)   | Ruft die ThreadProc-Methode auf, wenn der Thread erstellt wird.                      |
+| [**Erstellen**](camthread-create.md)                         | Erstellt den Thread.                                                          |
+| [**CallWorker**](camthread-callworker.md)                 | Signalisiert dem Thread eine Anforderung.                                           |
 | [**Schließen**](camthread-close.md)                           | Wartet, bis der Thread beendet wird, und gibt dann seine Ressourcen frei.                   |
-| [**Threadexists**](camthread-threadexists.md)             | Fragt ab, ob der Thread vorhanden ist.                                           |
+| [**ThreadExists**](camthread-threadexists.md)             | Fragt ab, ob der Thread vorhanden ist.                                           |
 | [**GetRequest**](camthread-getrequest.md)                 | Wartet auf die nächste Anforderung.                                                  |
-| [**Check Request**](camthread-checkrequest.md)             | Überprüft, ob eine Anforderung vorhanden ist, ohne zu blockieren.                              |
+| [**CheckRequest**](camthread-checkrequest.md)             | Überprüft, ob eine Anforderung vorhanden ist, ohne dass eine Blockierung erfolgt.                              |
 | [**Antwort**](camthread-reply.md)                           | Antwortet auf eine Anforderung.                                                        |
-| [**Getrequesthandle**](camthread-getrequesthandle.md)     | Ruft ein Handle für das Ereignis ab, das von der callworker-Methode signalisiert wird.           |
-| [**Getrequestparam**](camthread-getrequestparam.md)       | Ruft die aktuelle Anforderung ab.                                                |
-| [**Coinitializehelper**](camthread-coinitializehelper.md) | Ruft CoInitializeEx am Anfang des Threads auf.                             |
+| [**GetRequestHandle**](camthread-getrequesthandle.md)     | Ruft ein Handle für das Ereignis ab, das von der CallWorker-Methode signalisiert wird.           |
+| [**GetRequestParam**](camthread-getrequestparam.md)       | Ruft die neueste Anforderung ab.                                                |
+| [**CoInitializeHelper**](camthread-coinitializehelper.md) | Ruft CoInitializeEx am Anfang des Threads auf.                             |
 | Reine virtuelle Methoden                                       | BESCHREIBUNG                                                                  |
-| [**ThreadProc**](camthread-threadproc.md)                 | Thread Prozedur.                                                            |
+| [**ThreadProc**](camthread-threadproc.md)                 | Threadprozedur.                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse stellt Methoden zum Erstellen eines Arbeits Thread, zum Übergeben von Anforderungen an den Thread und zum warten auf das Beenden des Threads bereit. Gehen Sie folgendermaßen vor, um diese Klasse zu verwenden:
+Diese Klasse stellt Methoden zum Erstellen eines Arbeitsthreads, zum Übergeben von Anforderungen an den Thread und zum Warten auf das Beenden des Threads bereit. Gehen Sie wie folgt vor, um diese Klasse zu verwenden:
 
--   Leiten Sie eine Klasse von ab, `CAMThread` und überschreiben Sie die reine virtuelle Methode " [**camthread:: ThreadProc**](camthread-threadproc.md)". Bei dieser Methode handelt es sich um die Thread Prozedur, die am Anfang des Threads aufgerufen wird.
--   Erstellen Sie in Ihrer Anwendung eine Instanz der abgeleiteten Klasse. Beim Erstellen des Objekts wird der Thread nicht erstellt. Um den Thread zu erstellen, rufen Sie die Methode " [**camthread:: Create**](camthread-create.md) " auf.
--   Rufen Sie die Methode " [**camthread:: callworker**](camthread-callworker.md) " auf, um Anforderungen an den Thread zu senden. Diese Methode nimmt einen DWORD-Parameter an, dessen Bedeutung von ihrer Klasse definiert wird. Die-Methode wird blockiert, bis der Thread antwortet (siehe unten).
--   Antworten Sie in ihrer Thread Prozedur auf Anforderungen, indem Sie entweder " [**camthread:: GetRequest**](camthread-getrequest.md) " oder " [**camthread:: CheckRequest**](camthread-checkrequest.md)" aufrufen. Die GetRequest-Methode blockiert, bis ein anderer Thread callworker aufruft. Die CheckRequest-Methode ist nicht blockierend, sodass der Thread bei asynchroner Arbeit auf neue Anforderungen prüfen kann.
--   Wenn der Thread eine Anforderung empfängt, rufen Sie " [**camthread:: Reply**](camthread-reply.md) " auf, um die Blockierung des aufrufenden Threads aufzulösen. Die Reply-Methode nimmt einen DWORD-Parameter an, der als Rückgabewert für callworker an den aufrufenden Thread übergeben wird.
+-   Leiten Sie eine Klasse von `CAMThread` ab, und überschreiben Sie die reine virtuelle Methode [**MSIThread::ThreadProc**](camthread-threadproc.md). Diese Methode ist die Threadprozedur, die am Anfang des Threads aufgerufen wird.
+-   Erstellen Sie in Ihrer Anwendung eine Instanz der abgeleiteten Klasse. Beim Erstellen des -Objekts wird der Thread nicht erstellt. Um den Thread zu erstellen, rufen Sie die [**METHODE TARThread::Create**](camthread-create.md) auf.
+-   Um Anforderungen an den Thread zu senden, rufen Sie die [**METHODE TARThread::CallWorker**](camthread-callworker.md) auf. Diese Methode verwendet einen DWORD-Parameter, dessen Bedeutung von Ihrer -Klasse definiert wird. Die -Methode wird blockiert, bis der Thread antwortet (siehe unten).
+-   Reagieren Sie in Ihrer Threadprozedur auf Anforderungen, indem Sie entweder [**"TARThread::GetRequest"**](camthread-getrequest.md) oder [**"WEBCAMThread::CheckRequest"**](camthread-checkrequest.md)aufrufen. Die GetRequest-Methode wird blockiert, bis ein anderer Thread CallWorker aufruft. Die CheckRequest-Methode ist nicht blockierend, wodurch der Thread bei asynchroner Arbeit auf neue Anforderungen überprüfen kann.
+-   Wenn der Thread eine Anforderung empfängt, rufen Sie [**MITTHREAD::Reply**](camthread-reply.md) auf, um die Blockierung des aufrufenden Threads aufzuheben. Die Reply-Methode verwendet einen DWORD-Parameter, der als Rückgabewert für CallWorker an den aufrufenden Thread übergeben wird.
 
-Wenn Sie mit dem Thread abgeschlossen sind, können Sie die Methode " [**camthread:: Close**](camthread-close.md) " aufzurufen. Diese Methode wartet darauf, dass der Thread beendet wird, und schließt dann das Thread handle. Es ist sichergestellt, dass Ihre ThreadProc-Nachricht entweder eigenständig oder als Reaktion auf eine callworker-Anforderung beendet wird. Die dekonstruktormethode ruft auch Close auf.
+Wenn Sie mit dem Thread fertig sind, rufen Sie die [**METHODE TARThread::Close**](camthread-close.md) auf. Diese Methode wartet, bis der Thread beendet wird, und schließt dann das Threadhandle. Ihre ThreadProc-Nachricht muss garantiert beendet werden, entweder eigenständig oder als Antwort auf eine CallWorker-Anforderung. Die Destruktormethode ruft auch Close auf.
 
-Diese Schritte werden im folgenden Beispiel veranschaulicht:
+Im folgenden Beispiel werden diese Schritte veranschaulicht:
 
 
 ```C++
@@ -105,7 +105,7 @@ void main()
 
 
 
-In ihrer abgeleiteten Klasse können Sie auch Element Funktionen definieren, die die Parameter an callworker überprüfen. Das folgende Beispiel zeigt eine typische Vorgehensweise:
+In ihrer abgeleiteten Klasse können Sie auch Memberfunktionen definieren, die die Parameter auf CallWorker überprüfen. Das folgende Beispiel zeigt eine typische Vorgehensweise:
 
 
 ```C++
@@ -119,7 +119,7 @@ HRESULT Exit(void)  { return CallWorker(CMD_EXIT); }
 
 
 
-Die- `CAMThread` Klasse stellt zwei kritische Abschnitte als öffentliche Element Variablen bereit. Verwenden `CAMThread::m_AccessLock` Sie, um den Zugriff auf den Thread durch andere Threads zu sperren. (Beispielsweise enthalten die Methoden Create und callworker diese Sperre, um Vorgänge für den Thread zu serialisieren.) Verwenden Sie " [**camthread:: m \_ workerlock**](camthread-m-workerlock.md) ", um Daten zu sperren, die von Threads gemeinsam genutzt werden.
+Die `CAMThread` -Klasse stellt zwei kritische Abschnitte als öffentliche Membervariablen bereit. Verwenden Sie `CAMThread::m_AccessLock` , um den Thread daran zu hindern, von anderen Threads darauf zuzugreifen. (Beispielsweise halten die Create- und CallWorker-Methoden diese Sperre bei, um Vorgänge für den Thread zu serialisieren.) Verwenden Sie [**DEN \_ WORKERLOCK-Code VON THREADSThread::m,**](camthread-m-workerlock.md) um Daten zu sperren, die von Threads gemeinsam genutzt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,8 +127,8 @@ Die- `CAMThread` Klasse stellt zwei kritische Abschnitte als öffentliche Elemen
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

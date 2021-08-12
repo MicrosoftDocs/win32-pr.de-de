@@ -1,7 +1,7 @@
 ---
-description: Die Wait-Methode blockiert, bis das-Ereignis signalisiert wird, oder bis ein Timeout auftritt.
+description: Die Wait-Methode wird blockiert, bis das Ereignis signalisiert wird oder bis ein Time out auftritt.
 ms.assetid: bcc13723-a59b-4e8a-bfc8-eadb6facf116
-title: Camevent. Wait-Methode (wxutil. h)
+title: WEBCAMEvent.Wait-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0ab5bc2aabf77fb73739528e99cda7961ae87e9d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3875647cb93619e8326066bc9af7a6f99f79a0b0a2df58f668b1e365fd39102b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118662511"
 ---
-# <a name="cameventwait-method"></a>Camevent. Wait-Methode
+# <a name="cameventwait-method"></a>CAMEvent.Wait-Methode
 
-Die- `Wait` Methode wird blockiert, bis das-Ereignis signalisiert wird, oder bis ein Timeout auftritt.
+Die `Wait` -Methode wird blockiert, bis das Ereignis signalisiert wird oder bis ein Time out auftritt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL Wait(
 
 <dl> <dt>
 
-*dwtimeout* 
+*dwTimeout* 
 </dt> <dd>
 
-Optionaler Timeout Wert, dargestellt in Millisekunden.
+Optionaler Time out-Wert, dargestellt in Millisekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn das Ereignis signalisiert wird. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn das Ereignis signalisiert wird. Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei automatischen Zurücksetzungs Ereignissen wird das Ereignis auf einen nicht signalisierten Zustand zurückgesetzt, wenn diese Methode zurückgegeben wird.
+Bei Automatisch zurücksetzungsereignissen wird das Ereignis in einen nicht signalisierte Zustand zurückgesetzt, wenn diese Methode zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Bei automatischen Zurücksetzungs Ereignissen wird das Ereignis auf einen nicht 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camevent-Klasse**](camevent.md)
+[**CAMEvent-Klasse**](camevent.md)
 </dt> </dl>
 
  
