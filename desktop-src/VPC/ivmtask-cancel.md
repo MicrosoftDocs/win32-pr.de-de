@@ -1,11 +1,11 @@
 ---
-title: Ivmtask Cancel-Methode (vpccominterfaces. h)
+title: IVMTask Cancel-Methode (VPCCOMInterfaces.h)
 description: Bricht die Aufgabe ab.
 ms.assetid: 29107942-334c-452a-b787-6e0cb7380f90
 keywords:
-- Methode "Virtual PC Abbrechen"
-- Cancel-Methode Virtual PC, ivmtask-Schnittstelle
-- Ivmtask Interface Virtual PC, Cancel-Methode
+- 'Cancel-Methode : Virtueller PC'
+- Abbrechen der Methode Virtual PC, IVMTask-Schnittstelle
+- IVMTask-Schnittstelle Virtueller PC, Cancel-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 931b7229f3c81166f4610e873c23eca979c8897b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0580adb49306397460bd99b0135a13956d01b0a839b72e0ae8ae19f00f7c929e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118593143"
 ---
-# <a name="ivmtaskcancel-method"></a>Ivmtask:: Cancel-Methode
+# <a name="ivmtaskcancel-method"></a>IVMTask::Cancel-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Bricht die Aufgabe ab.
 
@@ -51,8 +51,8 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                 | BESCHREIBUNG                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>**E \_**</dt> <dt>0x80004005</dt> fehlschlagen </dl>            | Die Aufgabe kann nicht abgebrochen werden.<br/>      |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>**E \_ FEHLER**</dt> <dt>0x80004005</dt> </dl>            | Die Aufgabe kann nicht abgebrochen werden.<br/>      |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -64,12 +64,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmtask ist als ab72b222-6e9c-48ae-AA54-85e3e635767c definiert.<br/>                    |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMTask ist als ab72b222-6e9c-48ae-aa54-85e3e635767c definiert.<br/>                    |
 
 
 
@@ -77,7 +77,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Ivmtask**](ivmtask.md)
+[**IVMTask**](ivmtask.md)
 </dt> </dl>
 
  

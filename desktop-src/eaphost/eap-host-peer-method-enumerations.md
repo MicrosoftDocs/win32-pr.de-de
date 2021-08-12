@@ -1,35 +1,35 @@
 ---
-title: EAPHost-Peer Methoden Enumerationen
-description: Informieren Sie sich über die Enumerationen der Peer Methode von EAPHost. Die Enumerationen lauten eapkredentialtype, eappeermethodresponse Action und eappeermethodresulverrat.
+title: Enumerationen der EAPHost-Peermethode
+description: Erfahren Sie mehr über EAPHost-Peermethode-Enumerationen. Die Enumerationen sind EapCredentialType, EapPeerMethodResponseAction und EapPeerMethodResultReason.
 ms.assetid: e57e8c74-b224-4c01-913b-e41af651acc3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b6b868839acea9fd6efab0b4ad63f9b7ba645b4
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 7f9946666c8f9c7f212c0bb99d99901a23e6ce3762a44435d620b6e34b0257bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106339911"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118275215"
 ---
-# <a name="eaphost-peer-method-enumerations"></a>EAPHost-Peer Methoden Enumerationen
+# <a name="eaphost-peer-method-enumerations"></a>Enumerationen der EAPHost-Peermethode
 
-Die API-Enumerationen der EAPHost-Peer Methode lauten wie folgt.
+Die EAPHost-Peermethode-API-Enumerationen lauten wie folgt.
 
 
 
 | Enumeration                                                        | Beschreibung                                                                                                                |
 |--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**Eapkredentialtype**](/windows/desktop/api/eaptypes/ns-eaptypes-eapcredential)                         | Definiert die EAP-Anmelde Informationstypen und die entsprechenden Anmelde Informationen.                                                          |
-| [**Eappeermethodresponse Action**](/windows/win32/api/eapauthenticatoractiondefine/ne-eapauthenticatoractiondefine-eappeermethodresponseaction) | Definiert den Satz von Aktionen, die ein EAP-Authentifikator bei der Authentifizierung einer Supplicant-oder EAP-Peer Methode anzeigen kann.     |
-| [**Eappeermethodresulverrat**](/windows/win32/api/eapauthenticatoractiondefine/ne-eapauthenticatoractiondefine-eappeermethodresultreason)     | Definiert den Satz von Ergebnissen einer EAP-Authentifizierungs Sitzung, die von einer EAP-Authenticator-Methode an eine EAP-Peer Methode zurückgegeben wird. |
+| [**EapCredentialType**](/windows/desktop/api/eaptypes/ns-eaptypes-eapcredential)                         | Definiert die EAP-Anmeldeinformationstypen und die entsprechenden Anmeldeinformationen.                                                          |
+| [**EapPeerMethodResponseAction**](/windows/win32/api/eapauthenticatoractiondefine/ne-eapauthenticatoractiondefine-eappeermethodresponseaction) | Definiert den Satz von Aktionen, die ein EAP-Authentator einer supplicant- oder EAP-Peermethode während der Authentifizierung angeben kann.     |
+| [**EapPeerMethodResultReason**](/windows/win32/api/eapauthenticatoractiondefine/ne-eapauthenticatoractiondefine-eappeermethodresultreason)     | Definiert die Ergebnisse einer EAP-Authentifizierungssitzung, die von einer EAP-Authentisierungsmethode an eine EAP-Peermethode zurückgegeben wird. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

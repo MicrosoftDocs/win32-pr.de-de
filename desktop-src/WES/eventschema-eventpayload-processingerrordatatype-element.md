@@ -1,9 +1,9 @@
 ---
-title: EventPayload-Element (processingerrordatatype)
-description: Enthält binäre Ereignisdaten für das Ereignis, das einen Fehler verursacht hat, als die Ereignisdaten verarbeitet wurden.
+title: EventPayload (ProcessingErrorDataType)-Element
+description: Enthält binäre Ereignisdaten für das Ereignis, das beim Verarbeiten der Ereignisdaten einen Fehler verursacht hat.
 ms.assetid: 0ba72d72-8f43-40ca-b3ee-89fe27a4dd07
 keywords:
-- EventPayload-Element (Ereignisprotokoll)
+- EventPayload-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4dd20f95924282ae8cb0f1b0604c0e77d07766ed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 131869f9c54143f32780ff2ad1133b2c9ddf113c990b13be497a554caec30ba0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589013"
 ---
-# <a name="eventpayload-processingerrordatatype-element"></a>EventPayload-Element (processingerrordatatype)
+# <a name="eventpayload-processingerrordatatype-element"></a>EventPayload (ProcessingErrorDataType)-Element
 
-Enthält binäre Ereignisdaten für das Ereignis, das einen Fehler verursacht hat, als die Ereignisdaten verarbeitet wurden.
+Enthält binäre Ereignisdaten für das Ereignis, das beim Verarbeiten der Ereignisdaten einen Fehler verursacht hat.
 
 ``` syntax
 <xs:element name="EventPayload"
@@ -30,7 +30,7 @@ Enthält binäre Ereignisdaten für das Ereignis, das einen Fehler verursacht ha
  />
 ```
 
-Das **eventPayload** -Element wird durch den komplexen Typ [**processingerrordatatype**](eventschema-processingerrordatatype-complextype.md) definiert.
+Das **EventPayload-Element** wird vom komplexen [**ProcessingErrorDataType-Typ**](eventschema-processingerrordatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **eventPayload** -Element wird durch den komplexen Typ [**processingerrordat
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **eventPayload** -Element wird durch den komplexen Typ [**processingerrordat
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Processingerrordata (EventType)**](eventschema-processingerrordata-eventtype-element.md)
+[**ProcessingErrorData (EventType)**](eventschema-processingerrordata-eventtype-element.md)
 </dt> </dl>
 
  

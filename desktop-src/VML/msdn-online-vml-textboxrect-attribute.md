@@ -1,50 +1,50 @@
 ---
-title: VML-textboxrect-Attribut
-description: VML-textboxrect-Attribut
+title: VML-TextBoxRect-Attribut
+description: VML-TextBoxRect-Attribut
 ms.assetid: 22c3510a-be5f-4357-b288-02d96eae99ed
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c23e955c8dc929a442fe147d5401fd597534242e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 644d4a89effa54a991d04de4c97c4f9d86876a78d86149d9b99c3a8161585b44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118597482"
 ---
-# <a name="vml-textboxrect-attribute"></a>VML-textboxrect-Attribut
+# <a name="vml-textboxrect-attribute"></a>VML-TextBoxRect-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert ein oder mehrere Textfelder innerhalb einer Form. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Pfad](msdn-online-vml-path-element.md)
+[Path](msdn-online-vml-path-element.md)
 
 **Tagsyntax**
 
-<v: *Element* textboxrect = " *Expression* " >
+<v: *element* textboxrect=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . textboxrect = "*Ausdruck*"
+*element* .textboxrect="*expression*"
 
-*Ausdruck* = *Element*. textboxrect
+*expression* = *.textboxrect-Element*
 
 **Anmerkungen**
 
-Ein Textfeld wird durch mindestens einen Satz von Zahlen definiert, der (in der Reihenfolge) die linken, oberen, rechten und unteren Punkte des Rechtecks angibt. Mehrere Sätze werden durch ein Semikolon getrennt. Der Standardwert ist derselbe Dimensions Wert wie das enthaltende Rechteck. Wenn mehr als ein Textfeld definiert ist, werden die durch Trennzeichen getrennten viertsets, die jedes Textfeld definieren, durch Semikolons getrennt. Normalerweise treten Textfelder in Sätzen von 1, 2, 3 oder 6 Rechtecke in einer Form auf.
+Ein Textfeld wird durch eine oder mehrere Zahlensätze definiert, die (in der Reihenfolge) die linken, oberen, rechten und unteren Punkte des Rechtecks angeben. Mehrere Sätze werden durch ein Semikolon getrennt. Der Standardwert ist derselbe Dimensionswert wie das enthaltende Rechteck. Wenn mehr als ein Textfeld definiert ist, werden die durch Kommas getrennten Quadruplesätze, die jedes Textfeld definieren, durch Semikolons getrennt. Normalerweise befinden sich Textfelder in Sätzen von 1, 2, 3 oder 6 Rechtecke auf einer Form.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-In der linken oberen Ecke der Form wird ein text95 Feld mit einer Einheit von 95 Einheiten definiert und 5 Einheiten platziert.
+Ein Textfeld mit 95 einheiten x 95 Einheiten wird definiert und 5 Einheiten in der oberen linken Ecke der Form platziert.
 
 
 ```HTML
@@ -59,6 +59,6 @@ In der linken oberen Ecke der Form wird ein text95 Feld mit einer Einheit von 95
 
 
 
- 
+ 
 
- 
+ 

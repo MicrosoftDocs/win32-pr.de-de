@@ -1,9 +1,9 @@
 ---
-title: Data (templateitemtype)-Element
-description: Definiert ein Datenelement, das Sie mit dem-Ereignis einschließen möchten. | Data (templateitemtype)-Element
+title: data (TemplateItemType)-Element
+description: Definiert ein Datenelement, das Sie in das Ereignis einschließen möchten. | data (TemplateItemType)-Element
 ms.assetid: 7e4a4f5d-d61a-4a42-ba7d-4549a294229a
 keywords:
-- Datenelement-Ereignisprotokoll
+- Data-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 632d2ef1d9ba31d923a16eacf82bee480433c14b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 60b5ca3675a735ba742f953e3e880fd9db4def579962e83581b415ecb0b99f15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106367323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589662"
 ---
-# <a name="data-templateitemtype-element"></a>Data (templateitemtype)-Element
+# <a name="data-templateitemtype-element"></a>data (TemplateItemType)-Element
 
-Definiert ein Datenelement, das Sie mit dem-Ereignis einschließen möchten.
+Definiert ein Datenelement, das Sie in das Ereignis einschließen möchten.
 
 ``` syntax
 <xs:element name="data"
@@ -30,7 +30,7 @@ Definiert ein Datenelement, das Sie mit dem-Ereignis einschließen möchten.
  />
 ```
 
-Das **Data** -Element wird durch den komplexen Typ [**templateitemtype**](eventmanifestschema-templateitemtype-complextype.md) definiert.
+Das **Datenelement** wird vom komplexen [**TemplateItemType-Typ**](eventmanifestschema-templateitemtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Data** -Element wird durch den komplexen Typ [**templateitemtype**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Data** -Element wird durch den komplexen Typ [**templateitemtype**](eventm
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Vorlage (templatelisttype)**](eventmanifestschema-template-templatelisttype-element.md)
+[**template (TemplateListType)**](eventmanifestschema-template-templatelisttype-element.md)
 </dt> </dl>
 
  

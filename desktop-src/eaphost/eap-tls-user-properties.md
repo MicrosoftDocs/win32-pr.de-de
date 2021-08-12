@@ -1,19 +1,19 @@
 ---
 title: EAP-TLS-Benutzereigenschaften
-description: Erfahren Sie mehr über EAP-TLS-Benutzereigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des eaptlsuserpropertiesv1-Legacy Schemas ist.
+description: Erfahren Sie mehr über EAP-TLS-Benutzereigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des Legacyschemas eaptlsuserpropertiesv1 ist.
 ms.assetid: d5a265a9-4c09-4a60-a188-dff471ee72c9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d104d8eb5eaca67985be5574504dfbe57b5a6f9
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 9eb62acc8cbe5a56eb56152f8625bf3c9cfeb79fdf31558aa5de4bf131e82f61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "106340291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118275182"
 ---
 # <a name="eap-tls-user-properties"></a>EAP-TLS-Benutzereigenschaften
 
-Bei diesem Beispiel handelt es sich um eine Instanz des [eaptlsuserpropertiesv1](eaptlsuserpropertiesv1schema-schema.md) -Legacy Schemas.
+Dieses Beispiel ist eine Instanz des [Legacyschemas eaptlsuserpropertiesv1.](eaptlsuserpropertiesv1schema-schema.md)
 
 ``` syntax
  <?xml version="1.0" ?> 
@@ -46,12 +46,12 @@ Bei diesem Beispiel handelt es sich um eine Instanz des [eaptlsuserpropertiesv1]
 [Benutzereigenschaften](user-profiles.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

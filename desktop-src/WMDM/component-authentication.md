@@ -1,28 +1,28 @@
 ---
-title: Komponenten Authentifizierung
-description: Komponenten Authentifizierung
+title: Komponentenauthentifizierung
+description: Komponentenauthentifizierung
 ms.assetid: f1d9d41a-409d-43b5-9506-af130047349b
 keywords:
-- Windows Media-Device Manager, Authentifizierung
-- Device Manager, Authentifizierung
-- Desktop Anwendungen, Authentifizierung
-- Dienstanbieter, Authentifizierung
-- Programmier Handbuch, Authentifizierung
+- Windows Medien Geräte-Manager,Authentifizierung
+- Geräte-Manager,Authentifizierung
+- Desktopanwendungen,Authentifizierung
+- Dienstanbieter,Authentifizierung
+- Programmierhandbuch,Authentifizierung
 - authentication
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 89bc75eff3a1a90948de90b52f890c4097993035
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bc0bf340d6864acfdf5cc35c4c8aaf522c7e87ce95adf43cfa8d9c8c8e929aed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118585963"
 ---
-# <a name="component-authentication"></a>Komponenten Authentifizierung
+# <a name="component-authentication"></a>Komponentenauthentifizierung
 
-Alle Anwendungen und Dienstanbieter müssen authentifiziert werden, bevor Sie beginnen können, Windows Media Device Manager-Methoden aufzurufen oder zu implementieren.
+Jede Anwendung und jeder Dienstanbieter muss authentifiziert werden, bevor sie mit dem Aufrufen oder Implementieren Windows Media Geräte-Manager-Methoden beginnen kann.
 
-Die Authentifizierung wird für Dienstanbieter und Anwendungen anders gehandhabt. Weitere Informationen finden Sie unter dem Thema, das für Ihr Projekt gilt:
+Die Authentifizierung wird für Dienstanbieter und Anwendungen unterschiedlich behandelt. Weitere Informationen finden Sie in dem Thema, das für Ihr Projekt gilt:
 
 -   [Authentifizieren der Anwendung](authenticating-the-application.md)
 -   [Authentifizieren des Dienstanbieters](authenticating-the-service-provider.md)
@@ -31,12 +31,12 @@ Die Authentifizierung wird für Dienstanbieter und Anwendungen anders gehandhabt
 
 <dl> <dt>
 
-[**Verwenden sicherer authentifizierter Kanäle**](using-secure-authenticated-channels.md)
+[**Verwenden von sicheren authentifizierten Kanälen**](using-secure-authenticated-channels.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

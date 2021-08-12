@@ -1,7 +1,7 @@
 ---
 description: Erstellt eine leere Textur und passt die aufrufenden Parameter nach Bedarf an.
 ms.assetid: ea028aa9-4f37-4625-9e07-9072ec1a61d0
-title: D3DXCreateTexture-Funktion (D3dx9tex. h)
+title: D3DXCreateTexture-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ecbd5cbb94355af9c1e51e6c7e8fc31a862b03be
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6264be0712f5ac7f30a9882efde5c66e1e75404634e77d6b72d2313ba016fd6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118299255"
 ---
 # <a name="d3dxcreatetexture-function"></a>D3DXCreateTexture-Funktion
 
@@ -47,75 +47,75 @@ HRESULT D3DXCreateTexture(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Textur zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Textur zugeordnet werden soll.
 
 </dd> <dt>
 
-*Breite* \[ in\]
+*Breite* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Breite in Pixel. Wenn dieser Wert 0 ist, wird der Wert 1 verwendet. Siehe Hinweise.
 
 </dd> <dt>
 
-*Höhe* \[ in\]
+*Höhe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Höhe in Pixel. Wenn dieser Wert 0 ist, wird der Wert 1 verwendet. Siehe Hinweise.
 
 </dd> <dt>
 
-*Miplevels* \[ in\]
+*MipLevels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der angeforderten Mip-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ Default ist, wird eine komplette MipMap-Kette erstellt.
+Anzahl der angeforderten MIP-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, wird eine vollständige Mipmapkette erstellt.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Nutzung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-0, [**D3DUSAGE \_ renderTarget**](d3dusage.md)oder **D3DUSAGE \_ Dynamic**. Wenn dieses Flag auf **D3DUSAGE \_ renderTarget** festgelegt wird, wird angegeben, dass die Oberfläche als Renderziel verwendet werden soll, indem die [**SetRenderTarget**](/windows/desktop/api) -Methode aufgerufen wird. Wenn entweder **D3DUSAGE \_ renderTarget** oder **D3DUSAGE \_ Dynamic** angegeben ist, muss die Anwendung überprüfen, ob das Gerät diesen Vorgang durch Aufrufen von [**CheckDeviceFormat**](/windows/desktop/api)unterstützt. Weitere Informationen zur Verwendung dynamischer Texturen finden Sie unter [Verwenden dynamischer Texturen](performance-optimizations.md).
+0, [**D3DUSAGE \_ RENDERTARGET**](d3dusage.md)oder **D3DUSAGE \_ DYNAMIC**. Das Festlegen dieses Flags auf **D3DUSAGE \_ RENDERTARGET** gibt an, dass die Oberfläche durch Aufrufen der [**SetRenderTarget-Methode**](/windows/desktop/api) als Renderziel verwendet werden soll. Wenn **D3DUSAGE \_ RENDERTARGET** oder **D3DUSAGE \_ DYNAMIC** angegeben ist, sollte die Anwendung überprüfen, ob das Gerät diesen Vorgang unterstützt, indem [**CheckDeviceFormat aufruft.**](/windows/desktop/api) Weitere Informationen zur Verwendung dynamischer Texturen finden Sie unter [Verwenden von dynamischen Texturen.](performance-optimizations.md)
 
 </dd> <dt>
 
-*Format* \[ in\]
+*Formatieren* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das angeforderte Pixel Format für die Textur beschreibt. Die zurückgegebene Textur kann ein anderes Format aufweisen als das angegebene Format, wenn das Gerät das angeforderte Format nicht unterstützt. Anwendungen sollten das Format der zurückgegebenen Textur überprüfen, um festzustellen, ob es mit dem angeforderten Format übereinstimmt.
+Member des [aufzählten D3DFORMAT-Typs,](d3dformat.md) der das angeforderte Pixelformat für die Textur beschreibt. Die zurückgegebene Textur kann ein anderes Format als die angegebene aufweisen, wenn das Gerät das angeforderte Format nicht unterstützt. Anwendungen sollten das Format der zurückgegebenen Textur überprüfen, um zu überprüfen, ob sie dem angeforderten Format entspricht.
 
 </dd> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klasse beschreibt, in der die Textur platziert werden soll.
+Member des [**aufzählten D3DPOOL-Typs,**](./d3dpool.md) der die Speicherklasse beschreibt, in der die Textur platziert werden soll.
 
 </dd> <dt>
 
-*pptexture* \[ vorgenommen\]
+*ppTexture* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)\***
 
-Adresse eines Zeigers auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle, die das erstellte Textur Objekt darstellt.
+Adresse eines Zeigers auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die das erstellte Texturobjekt darstellt.
 
 </dd> </dl>
 
@@ -123,13 +123,13 @@ Adresse eines Zeigers auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9he
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcallable, D3DERR \_ NotAvailable, D3DERR \_ oudefvideomemory, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Intern verwendet D3DXCreateTexture [**D3DXCheckTextureRequirements**](d3dxchecktexturerequirements.md) , um die aufrufenden Parameter anzupassen. Daher sind Aufrufe von D3DXCreateTexture oft erfolgreich, wenn Aufrufe von " [**kreatetexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createtexture) " fehlschlagen.
+Intern verwendet D3DXCreateTexture [**D3DXCheckTextureRequirements,**](d3dxchecktexturerequirements.md) um die aufrufenden Parameter anzupassen. Daher sind Aufrufe von D3DXCreateTexture häufig erfolgreich, wenn Aufrufe von [**CreateTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createtexture) fehlschlagen würden.
 
-Wenn sowohl Height als auch Width auf [D3DX \_ default](other-d3dx-constants.md)festgelegt ist, wird für beide Parameter der Wert 256 verwendet. Wenn entweder Height oder Width auf D3DX Default festgelegt ist \_ und der andere Parameter auf einen numerischen Wert festgelegt ist, ist die Textur quadratisch, wobei die Höhe und die Breite dem numerischen Wert entspricht.
+Wenn sowohl Height als auch Width auf [D3DX \_ DEFAULT](other-d3dx-constants.md)festgelegt sind, wird für beide Parameter der Wert 256 verwendet. Wenn Height oder Width auf D3DX DEFAULT festgelegt ist und der andere Parameter auf einen numerischen Wert festgelegt ist, ist die Textur quadratisch, und die Höhe und Breite sind gleich dem numerischen \_ Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,8 +137,8 @@ Wenn sowohl Height als auch Width auf [D3DX \_ default](other-d3dx-constants.md)
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -146,7 +146,7 @@ Wenn sowohl Height als auch Width auf [D3DX \_ default](other-d3dx-constants.md)
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

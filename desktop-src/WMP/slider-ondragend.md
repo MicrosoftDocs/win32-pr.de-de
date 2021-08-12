@@ -1,9 +1,9 @@
 ---
-title: Slider. ondragend
-description: Der ondragend-Ereignishandler behandelt ein Ereignis, das auftritt, wenn die linke Maustaste nach einem Zieh Vorgang losgelassen wird. | Slider. ondragend
+title: SLIDER.onDragEnd
+description: Der onDragEnd-Ereignishandler behandelt ein Ereignis, das auftritt, wenn die linke Maustaste nach einem Ziehvorgang losgelassen wird. | SLIDER.onDragEnd
 ms.assetid: e34a9491-efad-4704-99b2-e1cbe0557b7f
 keywords:
-- Schieberegler. ondragend-Fenster Media Player
+- SLIDER.onDragEnd Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07bd0f377499276aeed02260988c668f236594b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2254b2e37c892d35cfbc6e3afa649679e55ae05a8f103a7afacaa1acd8647506
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118569063"
 ---
-# <a name="sliderondragend"></a>Slider. ondragend
+# <a name="sliderondragend"></a>SLIDER.onDragEnd
 
-Der **ondragend** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn die linke Maustaste nach einem Zieh Vorgang losgelassen wird.
+Der **onDragEnd-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn die linke Maustaste nach einem Ziehvorgang losgelassen wird.
 
 ``` syntax
 onDragEnd
@@ -33,7 +33,7 @@ onDragEnd
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -41,7 +41,7 @@ onDragEnd
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
  

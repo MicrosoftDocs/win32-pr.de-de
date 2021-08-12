@@ -1,7 +1,7 @@
 ---
-description: Berechnet eine Projektion der direkten Beleuchtung aus dem vorherigen Licht Sprung in eine kugelförmige (SH) Basis Vektoren, die den Vorfall Glanz an angegebenen Orten darstellen.
+description: Berechnet eine Projektion der direkten Beleuchtung aus dem vorherigen Lichtprall in SH-Basisvektoren (Spherical Vector), die die Strahlkraft von Vorfällen an angegebenen Stellen darstellen.
 ms.assetid: ccde7c59-cb82-4d61-822a-e1e9ecea0a28
-title: 'ID3DXPRTEngine:: computevolumesamples-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeVolumeSamples-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bd77fff723f0cf7e3dc2a52be6a40ff6f0d71fe1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: edc13e8b6f0e5c725e957be22f1b297f825a4f3b622ced68adf19b34a0b64b5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118293501"
 ---
-# <a name="id3dxprtenginecomputevolumesamples-method"></a>ID3DXPRTEngine:: computevolumesamples-Methode
+# <a name="id3dxprtenginecomputevolumesamples-method"></a>ID3DXPRTEngine::ComputeVolumeSamples-Methode
 
-Berechnet eine Projektion der direkten Beleuchtung aus dem vorherigen Licht Sprung in eine kugelförmige (SH) Basis Vektoren, die den Vorfall Glanz an angegebenen Orten darstellen.
+Berechnet eine Projektion der direkten Beleuchtung aus dem vorherigen Lichtprall in SH-Basisvektoren (Spherical Vector), die die Strahlkraft von Vorfällen an angegebenen Stellen darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT ComputeVolumeSamples(
 
 <dl> <dt>
 
-*psurfdatain* \[ in\]
+*pDataIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Eingabe Objekt, das das 3D-Objekt aus dem vorherigen Licht Sprung darstellt.
+Zeiger auf ein [**EINGABE-ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das das 3D-Objekt aus dem vorherigen lichten Hüpfen darstellt.
 
 </dd> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Evaluierung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
-*NumVolSamples.xml* \[ in\]
+*NumVolSamples.xml* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Beispiel Speicherorte.
+Anzahl von Beispielspeicherorten.
 
 </dd> <dt>
 
-*psamplelocs* \[ in\]
+*pSampleLocs* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Die Position für jede Stichprobe. Wenn psamplelocs den Wert **null** hat, berechnet computevolumesamples Übertragungs Matrizen an jedem Mesh-Scheitelpunkt. Wenn psamplelocs jedoch nicht **null** ist, müssen Sie eine Stichprobe über eine Kugel ausführen (Set usesphere = **true** und usecosinus = **false** in [**ID3DXPRTEngine:: setsamplinginfo**](id3dxprtengine--setsamplinginfo.md)); Andernfalls gibt computevolumesamples D3DERR \_ invalidcallzurück.
+Position für jedes Beispiel. Wenn pSampleLocs **NULL** ist, berechnet ComputeVolumeSamples Übertragungsmatrizen an jedem Gittervertex. Wenn pSampleLocs jedoch nicht **NULL** ist, müssen Sie eine Stichprobe für eine Kugel erstellen (legen Sie UseSphere = **TRUE** und UseCosine = **FALSE** in [**ID3DXPRTEngine::SetSamplingInfo fest).**](id3dxprtengine--setsamplinginfo.md) Andernfalls gibt ComputeVolumeSamples D3DERR \_ INVALIDCALL zurück.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das die direkte Beleuchtung aus dem vorherigen Licht Sprung in SH-Basis Vektoren projiziert. Dieser Puffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**ID3DXPRTBuffer-Ausgabeobjekt,**](id3dxprtbuffer.md) das die direkte Beleuchtung des vorherigen Lichts projiziert, springt in SH-Basisvektoren. Diesem Puffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das die d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode berechnet, wie das Licht aus der Quell Funktions Funktion von der Oberfläche reflektiert wird, die die Szene darstellt (psurfdatain) und an jedem von psamplelocs angegebenen Punkt des Raums ankommt. Die SH-Koeffizienten stellen die Zuordnung der Quell Strahlung an jedem psamplelocs-Punkt zur Übertragung von Ereignis Strahlen dar.
+Diese Methode berechnet, wie das Licht aus der Quellstrahlfunktion von der Oberfläche reflektiert wird, die die Szene darstellt (pDataIn) und an jedem Punkt im durch pSampleLocs angegebenen Raum eingeht. Die SH-Koeffizienten stellen an jedem pSampleLocs-Punkt die Zuordnung des Quellstrahls zum übertragenen Vorfallsmaß dar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Methode berechnet, wie das Licht aus der Quell Funktions Funktion von der 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -117,7 +117,7 @@ Diese Methode berechnet, wie das Licht aus der Quell Funktions Funktion von der 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computevolumesamplesdirectsh**](id3dxprtengine--computevolumesamplesdirectsh.md)
+[**ID3DXPRTEngine::ComputeVolumeSamplesDirectSH**](id3dxprtengine--computevolumesamplesdirectsh.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Event. ctrlKey
-description: Mit dem ctrlKey-Attribut wird ein Wert abgerufen, der angibt, ob die STRG-Taste gedrückt wurde, als das Ereignis aufgetreten ist.
+title: event.strrlKey
+description: Das CTRLKEY-Attribut ruft einen Wert ab, der angibt, ob die STRG-TASTE beim Ereignis heruntergefahren war.
 ms.assetid: a96e1575-1610-4e4b-9292-d853c1a1d5bd
 keywords:
-- Event. ctrlKey-Windows-Media Player
+- event.ctrlKey Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f2365337bb1d046f72bd965f3812dd126c041db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d55221a1448b23e2ea308e0e16cd174fe4cd0d404164a01a7ff59011010075a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577244"
 ---
-# <a name="eventctrlkey"></a>Event. ctrlKey
+# <a name="eventctrlkey"></a>event.strrlKey
 
-Mit dem **ctrlKey** -Attribut wird ein Wert abgerufen, der angibt, ob die STRG-Taste gedrückt wurde, als das Ereignis aufgetreten ist.
+Das **CTRLKEY-Attribut** ruft einen Wert ab, der angibt, ob die STRG-TASTE beim Ereignis heruntergefahren war.
 
 ``` syntax
 event.ctrlKey
@@ -29,14 +29,14 @@ event.ctrlKey
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
+Dieses Attribut ist ein schreibgeschützter **boolescher Wert.**
 
 
 
 | Wert | BESCHREIBUNG                                      |
 |-------|--------------------------------------------------|
-| true  | Gibt an, dass die STRG-Taste gedrückt wurde. |
-| false | Gibt an, dass die STRG-Taste gedrückt wurde.   |
+| true  | Gibt an, dass sich die STRG-Taste in der nach unten angegebenen Position befing. |
+| false | Gibt an, dass sich die STRG-Taste an der Position oben positioniert hat.   |
 
 
 
@@ -48,7 +48,7 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -56,7 +56,7 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> </dl>
 
  

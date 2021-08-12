@@ -1,9 +1,9 @@
 ---
-title: Schieberegler. QuickInfo
-description: Das ToolTip-Attribut gibt den QuickInfo-Text für das Slider-Steuerelement an oder ruft ihn ab.
+title: SLIDER.toolTip
+description: Das ToolTip-Attribut gibt den QuickInfo-Text für das Schieberegler-Steuerelement an oder ruft den Text ab.
 ms.assetid: 797a88bf-06a4-44f0-b671-478149009db1
 keywords:
-- Schieberegler. QuickInfo-Fenster Media Player
+- SLIDER.toolTip-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fed6fc096461107884b665124a9aaaab017eb7f2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ecb4e836599f0d1c11ea77c1dcbef4cb1b5333286466b46021a028a828e33cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568802"
 ---
-# <a name="slidertooltip"></a>Schieberegler. QuickInfo
+# <a name="slidertooltip"></a>SLIDER.toolTip
 
-Das **ToolTip** -Attribut gibt den QuickInfo-Text für das Slider-Steuerelement an oder ruft ihn ab.
+Das **ToolTip-Attribut** gibt den QuickInfo-Text für das Schieberegler-Steuerelement an oder ruft den Text ab.
 
 ``` syntax
         elementID.toolTip
@@ -29,9 +29,9 @@ Das **ToolTip** -Attribut gibt den QuickInfo-Text für das Slider-Steuerelement 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einer maximalen Länge von 1024 Zeichen. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge mit einer maximalen Länge von 1024 Zeichen. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine QuickInfo angezeigt.
 
@@ -41,7 +41,7 @@ Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine Quic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,7 +49,7 @@ Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine Quic
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
  

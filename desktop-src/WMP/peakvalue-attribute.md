@@ -1,9 +1,9 @@
 ---
-title: Attribut "Peer Wert"
-description: Das peakvalue-Attribut ist ein 16-Bit-Amplitude-Wert, der die maximale Volumeebene angibt.
+title: PeakValue-Attribut
+description: Das PeakValue-Attribut ist ein 16-Bit-Amplitudenwert, der die Spitzenvolumenebene angibt.
 ms.assetid: 5d80a1f3-015c-4740-bd1c-f3bbf88a9df2
 keywords:
-- Media Player "Peer Value"-Attribut
+- PeakValue-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,34 +12,34 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74fde522e043adb8b11c25bede763bed6b252f2f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5aa2a661342b305155717f4f11336f540e1ae53524ff2d303a2ab790e2c73af7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118573584"
 ---
-# <a name="peakvalue-attribute"></a>Attribut "Peer Wert"
+# <a name="peakvalue-attribute"></a>PeakValue-Attribut
 
-Das **peakvalue** -Attribut ist ein 16-Bit-Amplitude-Wert, der die maximale Volumeebene angibt.
+Das **PeakValue-Attribut** ist ein 16-Bit-Amplitudenwert, der die Spitzenvolumenebene angibt.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Häufig verwendete Windows Media-Dateien](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateien](commonly-used-windows-media-file-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
 
-Dieser Wert wird von Windows Media Player in einer der folgenden Instanzen festgelegt:
+Windows Media Player legt diesen Wert in einer der folgenden Instanzen fest:
 
--   Nachdem eine Datei durch eine Datei gerissen wurde.
--   Nachdem eine Datei wiedergegeben wurde (bei aktivierter Erweiterung für das automatische Volume).
+-   Nachdem eine Datei gezippt wurde.
+-   Nachdem eine Datei abgespielt wurde (wenn die Erweiterung für automatisches Volumeleveling aktiviert ist).
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszpeer Value.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszPeakValue.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -55,7 +55,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

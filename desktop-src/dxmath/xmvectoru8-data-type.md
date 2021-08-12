@@ -1,19 +1,19 @@
 ---
-description: Ein undurchsichtiger, portabler Typ, der die Verwendung der C/C++-initialisierersyntax zum Laden von Uint8 \_ t-Werten in eine Instanz des xmvector-Typs unterstützt.
+description: Ein nicht transparenter, portabler Typ zur Unterstützung der Verwendung der C/C++-Initialisierersyntax zum Laden von uint8 \_ t-Werten in eine Instanz des XMVECTOR-Typs.
 ms.assetid: ab73ac2c-f178-1bb9-910d-9eef5fc6f5df
-title: XMVECTORU8-Datentyp (directxmath. h)
+title: XMVECTORU8-Datentyp (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4428cdd78206bfa17c295a9578653bb0a66f0c6b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff3c335df3e74bc58776883b15d724c65d558bad30fc37e0e28547102260301a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118276196"
 ---
 # <a name="xmvectoru8-data-type"></a>XMVECTORU8-Datentyp
 
-Ein undurchsichtiger, portabler Typ, der die Verwendung der C/C++-initialisierersyntax zum Laden von Uint8 \_ t-Werten in eine Instanz des [**xmvector**](xmvector-data-type.md) -Typs unterstützt.
+Ein nicht transparenter, portabler Typ zur Unterstützung der Verwendung der C/C++-Initialisierersyntax zum Laden von uint8 \_ t-Werten in eine Instanz des [**XMVECTOR-Typs.**](xmvector-data-type.md)
 
 
 ```C++
@@ -22,13 +22,13 @@ typedef XMVECTORU8 vectoru8;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste der zusätzlichen Funktionen, wie z. b. Konstruktoren und Operatoren, die mit XMVECTORU8 bei der Programmierung in C++ verfügbar sind, finden Sie unter [XMVECTORU8 Extensions](ovw-xmvectoru8-extensions.md).
+Eine Liste zusätzlicher Funktionen wie Konstruktoren und Operatoren, die bei der Programmierung in C++ mit XMVECTORU8 verfügbar sind, finden Sie unter [XMVECTORU8-Erweiterungen.](ovw-xmvectoru8-extensions.md)
 
-Die [**XMVECTORF32**](xmvectorf32-data-type.md)-, [**XMVECTORU32**](xmvectoru32-data-type.md)-, [**XMVECTORI32**](xmvectori32-data-type.md)-und **XMVECTORU8** -Strukturen werden als Mechanismus zur Erstellung von [**xmvector**](xmvector-data-type.md) aus unterschiedlichen Konstanten Datentypen (Gleit Komma Zahl, Ganzzahl ohne Vorzeichen, Ganzzahl und Byte) mithilfe von Initialisierern bereitgestellt.
+Die [**XMVECTORF32-,**](xmvectorf32-data-type.md) [**XMVECTORU32-,**](xmvectoru32-data-type.md) [**XMVECTORI32-**](xmvectori32-data-type.md)und **XMVECTORU8-Strukturen** werden als Mechanismus zum Erstellen von [**XMVECTOR**](xmvector-data-type.md) aus verschiedenen konstanten Datentypen (Gleitkomma, ganze Zahl ohne Vorzeichen, Integer und Byte) mit initialisierern bereitgestellt.
 
-Dies ist für die Unterstützung von [**xmvector**](xmvector-data-type.md)erforderlich, da Initialisierer aus Gründen der Portabilität und Optimierung nicht selbst unterstützt werden.
+Dies ist aus Gründen der Portabilität und Optimierung erforderlich, um [**XMVECTOR**](xmvector-data-type.md)zu unterstützen, da es selbst keine Initialisierer unterstützt.
 
 Beispiel:
 
@@ -42,7 +42,7 @@ XMVECTORU8  byteVector = { (uint8_t)  1,(uint8_t) 16,(uint8_t)101,(uint8_t) 62,
 data = floatingVector;
 ```
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** Verwenden von DirectX
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -54,7 +54,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
@@ -62,10 +62,10 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 <dl> <dt>
 
-[Directxmath-Bibliothekstypen](ovw-xnamath-reference-types.md)
+[DirectXMath-Bibliothekstypen](ovw-xnamath-reference-types.md)
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> <dt>
 
 [**XMVECTORF32-Datentyp**](xmvectorf32-data-type.md)

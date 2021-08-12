@@ -1,10 +1,10 @@
 ---
-description: Stellt Informationen zu einem einzelnen Eintrag im Puffer Layout eines Netzes dar.
+description: Stellt Informationen zu einem einzelnen Eintrag im Pufferlayout eines Gitternetzes dar.
 MS-HAID: vspixengine.MeshDataBufferLayoutEntry
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Meshdatabufferlayoutentry-Struktur
+title: MeshDataBufferLayoutEntry-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: FE1D796C-DFD8-4C6E-9914-3063408FE565
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: bce67b8316e9eb9b96e641e2a90260fab6bfdaad
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 44cc67402c69b690ba9070fa51bf8d26f316faa7d10ac991226db2c05b6d6a6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118282272"
 ---
-# <a name="span-idvspixenginemeshdatabufferlayoutentryspanmeshdatabufferlayoutentry-structure"></a><span id="vspixengine.meshdatabufferlayoutentry"></span>Meshdatabufferlayoutentry-Struktur
+# <a name="span-idvspixenginemeshdatabufferlayoutentryspanmeshdatabufferlayoutentry-structure"></a><span id="vspixengine.meshdatabufferlayoutentry"></span>MeshDataBufferLayoutEntry-Struktur
 
-Stellt Informationen zu einem einzelnen Eintrag im Puffer Layout eines Netzes dar.
+Stellt Informationen zu einem einzelnen Eintrag im Pufferlayout eines Gitternetzes dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,20 +38,20 @@ Stellt Informationen zu einem einzelnen Eintrag im Puffer Layout eines Netzes da
 ## <a name="members"></a>Member
 
 **pName**  
-Eine com-Zeichenfolge, die den Namen des Eintrags enthält.
+Eine COM-Zeichenfolge, die den Namen des Eintrags enthält.
 
-**numcomponents**  
-Die Anzahl der homogenen Komponenten (Werte), aus denen dieser Eintrag besteht.
+**numComponents**  
+Die Anzahl homogener Komponenten (Werte), aus denen dieser Eintrag besteht.
 
-**isposition**  
-true, wenn der Eintrag eine Position ist. andernfalls false.
+**isPosition**  
+TRUE, wenn der Eintrag eine Position ist; andernfalls FALSE.
 
 **format**  
-Das Datenformat des Eintrags (Register). Weitere Informationen finden Sie unter Register \_ Format-Enumeration.
+Das Datenformat des Eintrags (Register). Weitere Informationen finden Sie unter REGISTER \_ FORMAT-Enumeration.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

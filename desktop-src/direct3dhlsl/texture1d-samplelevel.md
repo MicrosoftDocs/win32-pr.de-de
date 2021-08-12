@@ -1,9 +1,9 @@
 ---
-title: 'Texture1D:: Texture1D samplelevel-Methoden'
-description: Prüft eine Texture1D auf der angegebenen MipMap-Ebene.
+title: Texture1D::Texture1D SampleLevel-Methoden
+description: Samples a Texture1D on the specified mipmap level(Stichproben einer Texture1D auf der angegebenen Mipmap-Ebene).
 ms.assetid: 1334CEDE-5885-4DC6-8438-3ADFC3B58AD8
 keywords:
-- Samplelevel-Methoden HLSL
+- SampleLevel-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,33 +12,33 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: a8a2bd8674e8d373082b5f9bf30ea1618b7776a8
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 0303ecf3ed9647172b2306563936f58968297018cd7553e36c71cda572dc4252
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "103948273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283937"
 ---
-# <a name="texture1dsamplelevel-methods"></a>Texture1D:: samplelevel-Methoden
+# <a name="texture1dsamplelevel-methods"></a>Texture1D::SampleLevel-Methoden
 
-Prüft eine [**Texture1D**](sm5-object-texture1d.md) auf der angegebenen MipMap-Ebene.
+Samples a Texture1D on the specified mipmap level(Stichproben einer [**Texture1D**](sm5-object-texture1d.md) auf der angegebenen Mipmap-Ebene).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                 | BESCHREIBUNG                                                                                        |
+| Methode                                                                                 | Beschreibung                                                                                        |
 |:---------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| [**Samplelevel (S, float, float, int)**](dx-graphics-hlsl-to-samplelevel.md)              | Prüft eine Textur auf der angegebenen MipMap-Ebene.<br/>                                        |
-| [**Samplelevel (S, float, float, int, uint)**](t1d-samplelevel-s-float-float-int-uint-.md) | Führt eine Stichprobe für eine Textur auf der angegebenen MipMap-Ebene aus und gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleLevel(S,float,float,int)**](dx-graphics-hlsl-to-samplelevel.md)              | Stichproben einer Textur auf der angegebenen Mipmapebene.<br/>                                        |
+| [**SampleLevel(S,float,float,int,uint)**](t1d-samplelevel-s-float-float-int-uint-.md) | Samples a texture on the specified mipmap level and returns status about the operation. (Stichprobenentnahme einer Textur auf der angegebenen Mipmapebene und Rückgabe des Status des Vorgangs.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Texture-Object](dx-graphics-hlsl-to-type.md).
+Weitere Informationen finden [Sie unter Texture-Object](dx-graphics-hlsl-to-type.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,29 +1,29 @@
 ---
-title: Zurück Lesen von Daten über einen Puffer
-description: Wenn Sie Daten aus der GPU zurück lesen möchten (z. b. um einen Screenshot aufzuzeichnen), verwenden Sie einen lesebackheap.
+title: Zurücklesen von Daten über einen Puffer
+description: Zum Zurücklesen von Daten aus der GPU (z. B. zum Erfassen eines Screenshots) verwenden Sie einen Rückleseheap.
 ms.assetid: 2F515B2C-3317-4AA8-81E1-7762ED895F77
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 12/17/2018
-ms.openlocfilehash: 752d97d517a48a38adabc7c8fe51d11d47c1d8d3
-ms.sourcegitcommit: 4c00910ed754d7d0a68c9a833751d714c06e3b39
+ms.openlocfilehash: 56babd93ddd0f06ee331b19db4a4d8ba2dc5ecb314ec3d828e3e3f7c4f4f9a7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "104548717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118300873"
 ---
-# <a name="read-back-data-via-a-buffer"></a>Zurück Lesen von Daten über einen Puffer
+# <a name="read-back-data-via-a-buffer"></a>Zurücklesen von Daten über einen Puffer
 
-Wenn Sie Daten aus der GPU zurück lesen möchten (z. b. um einen Screenshot aufzuzeichnen), verwenden Sie einen lesebackheap. Diese Technik bezieht sich auf das [Hochladen von Textur Daten über einen Puffer](upload-and-readback-of-texture-data.md)mit wenigen unterschieden.
+Zum Zurücklesen von Daten aus der GPU (z. B. zum Erfassen eines Screenshots) verwenden Sie einen Rückleseheap. Diese Technik bezieht sich auf das [Hochladen von Texturdaten über einen Puffer](upload-and-readback-of-texture-data.md)mit einigen Unterschieden.
 
-- Zum Lesen von Daten erstellen Sie einen Heap, bei dem die **D3D12_HEAP_TYPE** auf [D3D12_HEAP_TYPE_READBACK](/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type)festgelegt ist, anstatt auf **D3D12_HEAP_TYPE_UPLOAD**.
-- Die Ressource auf dem Read-Back-Heap muss immer ein **D3D12_RESOURCE_DIMENSION_BUFFER** sein.
-- Sie verwenden einen Fence, um zu erkennen, wann die GPU die Verarbeitung eines Frames abgeschlossen hat (wenn das Schreiben von Daten in den Ausgabepuffer abgeschlossen ist). Dies ist wichtig, da die [**ID3D12Resource:: Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) -Methode nicht mit der GPU synchronisiert wird ( *umgekehrt wird die Entsprechung* von Direct3D 11 synchronisiert). Direct3D 12  Zuordnungs Aufrufe Verhalten sich so, als hätten Sie die Direct3D 11-Entsprechung mit dem NO_OVERWRITE-Flag aufgerufen.
-- Nachdem die Daten bereit sind (einschließlich der erforderlichen Ressourcen Barriere), müssen Sie [**ID3D12Resource:: Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) anrufen, um die Daten für die Daten der CPU sichtbar zu machen.
+- Um Daten zurückzulesen, erstellen Sie einen Heap, wobei der **D3D12_HEAP_TYPE** auf [D3D12_HEAP_TYPE_READBACK](/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type)und nicht auf D3D12_HEAP_TYPE_UPLOAD festgelegt **ist.**
+- Die Ressource auf dem zurückgelesenen Heap muss immer ein **D3D12_RESOURCE_DIMENSION_BUFFER** sein.
+- Sie verwenden einen Fence, um zu erkennen, wann die GPU die Verarbeitung eines Frames abgeschlossen hat (wenn das Schreiben von Daten in Ihren Ausgabepuffer abgeschlossen ist). Dies ist wichtig, da die [**ID3D12Resource::Map-Methode**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) nicht mit der GPU synchronisiert wird (umgekehrt *wird* die Direct3D 11-Entsprechung synchronisiert). Direct3D **12-Zuordnungsaufrufe** verhalten sich so, als würden Sie die Direct3D 11-Entsprechung mit dem flag NO_OVERWRITE aufrufen.
+- Nachdem die Daten bereit sind (einschließlich aller erforderlichen Ressourcenbarrieren), rufen Sie [**ID3D12Resource::Map**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map) auf, um die Rücklesedaten für die CPU sichtbar zu machen.
 
 ## <a name="code-example"></a>Codebeispiel
 
-Das folgende Codebeispiel zeigt den allgemeinen Überblick über das Lesen von Daten aus der GPU zur CPU über einen Puffer.
+Das folgende Codebeispiel zeigt die allgemeine Übersicht über den Prozess des Zurücklesens von Daten von der GPU auf die CPU über einen Puffer.
 
 ```cppwinrt
 
@@ -94,8 +94,8 @@ readbackBuffer->Unmap
 );
 ```
 
-Eine vollständige Implementierung einer Screenshot-Routine, die die renderzieltextur liest und als Datei auf den Datenträger schreibt, finden Sie unter *DirectX-Toolkit für* den [screengriff](https://github.com/microsoft/DirectXTK12/blob/master/Src/ScreenGrab.cpp)von DX12.
+Eine vollständige Implementierung einer Screenshotroutine, die die Renderzieltextur liest und als Datei auf den Datenträger schreibt, finden Sie unter *DirectX Tool Kit for DX12* es [ScreenGrab](https://github.com/microsoft/DirectXTK12/blob/master/Src/ScreenGrab.cpp).
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-* [Untergeordnete Zuordnung innerhalb eines Puffers](large-buffers.md)
+* [Unterzuordnung innerhalb eines Puffers](large-buffers.md)

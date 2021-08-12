@@ -1,23 +1,23 @@
 ---
 title: Abfragen von Ereignissen
-description: Sie können Ereignisse von einem Kanal oder einer Protokolldatei Abfragen.
+description: Sie können Ereignisse aus einem Kanal oder einer Protokolldatei abfragen.
 ms.assetid: 929bedbf-6dce-428e-b2c0-de9dcfe4531b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6fa69f9b1308cd7ebbc4e4510692bb25ab031ec
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 981e4a8c39daebbce641c79e7d26331b9b36845d3c71fd1902ea667ca85c5dbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118587801"
 ---
 # <a name="querying-for-events"></a>Abfragen von Ereignissen
 
-Sie können Ereignisse von einem Kanal oder einer Protokolldatei Abfragen. Der Kanal oder die Protokolldatei kann auf dem lokalen Computer oder einem Remote Computer vorhanden sein. Um die Ereignisse anzugeben, die Sie aus der Kanal-oder Protokolldatei erhalten möchten, verwenden Sie eine XPath-Abfrage oder eine XML-Struktur Abfrage. Ausführliche Informationen zum Schreiben der Abfrage finden Sie unter Verwenden von [Ereignissen](consuming-events.md).
+Sie können Ereignisse aus einem Kanal oder einer Protokolldatei abfragen. Der Kanal oder die Protokolldatei kann auf dem lokalen Computer oder einem Remotecomputer vorhanden sein. Um die Ereignisse anzugeben, die Sie aus dem Kanal oder der Protokolldatei erhalten möchten, verwenden Sie eine XPath-Abfrage oder eine Struktur-XML-Abfrage. Weitere Informationen zum Schreiben der Abfrage finden Sie unter [Verwenden von Ereignissen.](consuming-events.md)
 
-Um Ereignisse abzufragen, müssen Sie die [**evtquery**](/windows/desktop/api/WinEvt/nf-winevt-evtquery) -Funktion aufzurufen. Sie können die Reihenfolge angeben, in der die Ereignisse zurückgegeben werden (die älteste zu den neuesten (Standard) oder die neueste zum ältesten) und ob falsch formatierte XPath-Ausdrücke in der Abfrage toleriert werden sollen (Ausführliche Informationen dazu, wie die Funktion die falsch formatierten Ausdrücke ignoriert, finden Sie im [**evtquerytoleratequeryerrors**](/windows/desktop/api/WinEvt/ne-winevt-evt_query_flags) -Flag).
+Rufen Sie zum Abfragen von Ereignissen die [**EvtQuery-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtquery) auf. Sie können die Reihenfolge angeben, in der die Ereignisse zurückgegeben werden (älteste bis neueste (Standard) oder neueste bis älteste), und angeben, ob falsch formatierte XPath-Ausdrücke in der Abfrage toleriert werden sollen (Details dazu, wie die Funktion die falsch formatierten Ausdrücke ignoriert, finden Sie unter [**EvtQueryTolerateQueryErrors-Flag).**](/windows/desktop/api/WinEvt/ne-winevt-evt_query_flags)
 
-Im folgenden Beispiel wird gezeigt, wie Sie mithilfe eines XPath-Ausdrucks Ereignisse aus einem Kanal Abfragen.
+Das folgende Beispiel zeigt, wie Ereignisse aus einem Kanal mithilfe eines XPath-Ausdrucks abfragen.
 
 
 ```C++
@@ -70,7 +70,7 @@ cleanup:
 
 
 
-Im folgenden Beispiel wird gezeigt, wie Sie mithilfe einer strukturierten XML-Abfrage Ereignisse aus einem Kanal Abfragen. Die Ereignisse werden in der Reihenfolge von der aktuellen zum ältesten zurückgegeben.
+Das folgende Beispiel zeigt, wie Ereignisse aus einem Kanal mithilfe einer strukturierten XML-Abfrage abfragen. Die Ereignisse werden in der Reihenfolge von der neuesten zur ältesten zurückgegeben.
 
 
 ```C++
@@ -125,9 +125,9 @@ cleanup:
 
 
 
-Wenn Sie eine strukturierte XML-Abfrage verwenden und das evtquerytoleratequeryerrors-Flag an [**evtquery**](/windows/desktop/api/WinEvt/nf-winevt-evtquery)übergeben, ist die Funktion erfolgreich, auch wenn mindestens eine der Abfragen in der strukturierten Abfrage tatsächlich fehlgeschlagen ist. Um zu ermitteln, welche Abfragen in der strukturierten Abfrage erfolgreich waren oder fehlgeschlagen sind, müssen Sie die [**evtgetqueryinfo**](/windows/desktop/api/WinEvt/nf-winevt-evtgetqueryinfo) -Funktion aufrufen. Wenn Sie das evtquerytoleratequeryerrors-Flag nicht übergeben, schlägt die **evtquery** -Funktion mit dem ersten Fehler fehl, der in der Abfrage gefunden wird. Wenn die Abfrage mit \_ \_ einer ungültigen fehlerhaften Abfrage fehlschlägt \_ , können Sie die [**evtgetextendedstatus**](/windows/desktop/api/WinEvt/nf-winevt-evtgetextendedstatus) -Funktion aufrufen, um eine Nachrichten Zeichenfolge abzurufen, die den XPath-Fehler beschreibt.
+Wenn Sie eine strukturierte XML-Abfrage verwenden und das EvtQueryTolerateQueryErrors-Flag an [**EvtQuery**](/windows/desktop/api/WinEvt/nf-winevt-evtquery)übergeben, ist die Funktion erfolgreich, obwohl eine oder mehrere Abfragen in der strukturierten Abfrage tatsächlich fehlgeschlagen sind. Um zu bestimmen, welche Abfragen in der strukturierten Abfrage erfolgreich waren oder fehlgeschlagen sind, rufen Sie die [**EvtGetQueryInfo-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgetqueryinfo) auf. Wenn Sie das EvtQueryTolerateQueryErrors-Flag nicht übergeben, tritt bei der **EvtQuery-Funktion** der erste Fehler auf, den sie in der Abfrage findet. Wenn die Abfrage mit ERROR EVT INVALID QUERY fehlschlägt, rufen Sie die \_ \_ \_ [**EvtGetExtendedStatus-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgetextendedstatus) auf, um eine Meldungszeichenfolge zu erhalten, die den XPath-Fehler beschreibt.
 
-Das folgende Beispiel zeigt, wie Sie den Erfolg oder Misserfolg der einzelnen Abfragen in einer strukturierten Abfrage ermitteln können, wenn Sie das evtquerytoleratequeryerrors-Flag an [**evtquery**](/windows/desktop/api/WinEvt/nf-winevt-evtquery)übergeben.
+Das folgende Beispiel zeigt, wie Sie den Erfolg oder Fehler jeder Abfrage in einer strukturierten Abfrage ermitteln, wenn Sie das EvtQueryTolerateQueryErrors-Flag an [**EvtQuery übergeben.**](/windows/desktop/api/WinEvt/nf-winevt-evtquery)
 
 
 ```C++
@@ -210,9 +210,9 @@ cleanup:
 
 ## <a name="reading-events-from-the-result-set"></a>Lesen von Ereignissen aus dem Resultset
 
-Um die Ereignisse im Resultset aufzulisten, müssen Sie die [**EvtNext**](/windows/desktop/api/WinEvt/nf-winevt-evtnext) -Funktion in einer Schleife aufrufen, bis die Funktion " **false** " zurückgibt und die Funktion " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) " einen Fehler \_ ohne \_ Weitere Elemente zurückgibt \_ . Die Ereignisse im Resultset sind nicht statisch. neue Ereignisse, die in den Kanal geschrieben werden, werden in das Resultset eingeschlossen, bis der Fehler \_ keine \_ weiteren \_ Elemente festgelegt ist. Um die Leistung zu verbessern, rufen Sie Ereignisse aus dem Resultset in Batches ab (berücksichtigen Sie dabei die Größe jedes Ereignisses, wenn Sie die Anzahl der abzurufenden Ereignisse bestimmen).
+Um die Ereignisse im ResultSet aufzählen zu können, rufen Sie die [**EvtNext-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtnext) in einer Schleife auf, bis die Funktion **FALSE** zurückgibt und die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) ERROR \_ NO MORE ITEMS \_ \_ zurückgibt. Die Ereignisse im ResultSet sind nicht statisch. Neue Ereignisse, die in den Kanal geschrieben werden, werden in das Ergebnisset aufgenommen, bis ERROR \_ NO MORE ITEMS festgelegt \_ \_ ist. Um die Leistung zu verbessern, rufen Sie Ereignisse aus dem Ergebnisset in Batches ab (unter Berücksichtigung der Größe jedes Ereignisses bei der Bestimmung der Anzahl der zu abrufenden Ereignisse).
 
-Im folgenden Beispiel wird gezeigt, wie die-Ereignisse in einem Resultset aufgelistet werden.
+Das folgende Beispiel zeigt, wie die Ereignisse in einem Resultset aufzählt werden.
 
 
 ```C++
@@ -266,10 +266,10 @@ cleanup:
 
 
 
-Ausführliche Informationen zum Rendern der Ereignisse, die Sie aus dem Resultset erhalten, finden Sie unter [Rendern von Ereignissen](rendering-events.md).
+Weitere Informationen zum Rendern der Ereignisse, die Sie aus dem Resultset erhalten, finden Sie unter [Renderingereignisse](rendering-events.md).
 
-Wenn Sie Ereignisse abfragen möchten, von denen Sie aufgehört haben, erstellen Sie ein Lesezeichen für das letzte gelesene Ereignis, und verwenden Sie es, wenn Sie die Abfrage das nächste Mal ausführen. Weitere Informationen finden Sie unter [Lesezeichen Ereignisse](bookmarking-events.md).
+Wenn Sie Ereignisse abfragen möchten, von denen aus Sie aufgelassen haben, erstellen Sie ein Lesezeichen des letzten Ereignisses, das Sie gelesen haben, und verwenden Sie es beim nächsten Ausführen der Abfrage. Weitere Informationen finden Sie unter [Bookmarking Events](bookmarking-events.md).
 
- 
+ 
 
- 
+ 

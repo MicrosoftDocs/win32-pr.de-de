@@ -1,71 +1,71 @@
 ---
-description: Sie können das Logman-Tool verwenden, um Ablauf Verfolgungs Informationen für VSS-Anwendungen zu sammeln, die automatisierte System Wiederherstellung (ASR) verwenden.
+description: Sie können das Logman-Tool verwenden, um Ablaufverfolgungsinformationen für VSS-Anwendungen zu sammeln, die die automatisierte Systemwiederherstellung (Automated System Recovery, ASR) verwenden.
 ms.assetid: 872609c8-a123-40a8-96ca-58f34d37f3d8
-title: Verwenden von Ablauf Verfolgungs Tools mit ASR-Anwendungen
+title: Verwenden von Ablaufverfolgungstools mit ASR-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c13eee1c62cd6636eebe5bcfd35bd5abb119645
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e2d22dbb1488b5fd60836926d3c5ef2de5913ff1cc1529fdb278773b2ccd8b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118590869"
 ---
-# <a name="using-tracing-tools-with-asr-applications"></a>Verwenden von Ablauf Verfolgungs Tools mit ASR-Anwendungen
+# <a name="using-tracing-tools-with-asr-applications"></a>Verwenden von Ablaufverfolgungstools mit ASR-Anwendungen
 
-Sie können das Logman-Tool verwenden, um Ablauf Verfolgungs Informationen für VSS-Anwendungen zu sammeln, die [automatisierte System Wiederherstellung (ASR)](using-vss-automated-system-recovery-for-disaster-recovery.md)verwenden. Logman (logman.exe) ist ein Ablauf Verfolgungs Controller für Ablauf Verfolgungs Ereignisse und Leistungsindikatoren. Es ist in Windows XP und höheren Versionen von Windows enthalten. Oder Sie können, wenn Sie möchten, das tracelog-Tool verwenden, um die gleichen ASR-Ablauf Verfolgungs Informationen zu sammeln. TraceLog ist im Windows-Treiberkit (WDK) enthalten.
+Sie können das Logman-Tool verwenden, um Ablaufverfolgungsinformationen für VSS-Anwendungen zu sammeln, die die automatisierte [Systemwiederherstellung (Automated System Recovery, ASR) verwenden.](using-vss-automated-system-recovery-for-disaster-recovery.md) Logman (logman.exe) ist ein Ablaufverfolgungscontroller für Ablaufverfolgungsereignisse und Leistungsindikatoren. Sie ist in Windows XP und neueren Versionen von Windows. Wenn Sie möchten, können Sie auch das Tracelog-Tool verwenden, um dieselben ASR-Ablaufverfolgungsinformationen zu erfassen. Tracelog ist im Windows Driver Kit (WDK) enthalten.
 
-Informationen zur Verwendung von Ablauf Verfolgungs Tools mit VSS finden Sie unter [Verwenden von Ablauf Verfolgungs Tools mit VSS](using-tracing-tools-with-vss.md).
+Informationen zur Verwendung von Ablaufverfolgungstools mit VSS finden Sie unter [Verwenden von Ablaufverfolgungstools mit VSS.](using-tracing-tools-with-vss.md)
 
-## <a name="using-logman"></a>Verwenden von logman
+## <a name="using-logman"></a>Verwenden von Logman
 
-Im folgenden Verfahren wird beschrieben, wie Sie Logman mit der ASR-Anwendung verwenden.
+Im folgenden Verfahren wird beschrieben, wie Sie Logman mit Ihrer ASR-Anwendung verwenden.
 
-**So verwenden Sie Logman mit der ASR-Anwendung**
+**So verwenden Sie Logman mit Ihrer ASR-Anwendung**
 
-1.  Verwenden Sie den folgenden Befehl zum Starten der Ablauf Verfolgung:
+1.  Verwenden Sie den folgenden Befehl, um die Ablaufverfolgung zu starten:
 
-    **logman Start ASR-o** *x: \\ * * * ASR. ETL-ETS-p {6407345b-94f 2-44c8-b3db-4e076be46816} 0xFF 0xFF**
+    **logman start asr -o** *\\ x:r.etl -ets -p {6407345b-94f2-44c8-b3db-4e076be46816} 0xff 0xff**
 
     > [!Note]  
-    > Ersetzen Sie "x: \\ " durch den Pfad zu dem Verzeichnis, in dem die Ablauf Verfolgungs Protokolldatei gespeichert werden soll. Für eine optimale Leistung sollte sich die Ablauf Verfolgungs Protokolldatei auf einem Volume befinden, das nicht Teil der Schatten Kopie ist.
+    > Ersetzen Sie "x: " durch den Pfad zu dem Verzeichnis, \\ in dem die Ablaufverfolgungsprotokolldatei gespeichert werden soll. Um eine optimale Leistung zu erzielen, sollte sich die Ablaufverfolgungsprotokolldatei auf einem Volume befinden, das nicht Teil der Schattenkopie ist.
 
      
 
-2.  Verwenden Sie den folgenden Befehl, um die Ablauf Verfolgung anzuhalten:
+2.  Verwenden Sie den folgenden Befehl, um die Ablaufverfolgung zu beenden:
 
-    **logman beendet ASR-ETS**
+    **logman stop asr -ets**
 
-Die Ablauf Verfolgungs Protokolldatei ist *x \\ :* ASR. ETL.
+Die Ablaufverfolgungsprotokolldatei ist *x: \\* asr.etl.
 
-Weitere Informationen zum Logman-Tool finden Sie unter [logman](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753820(v=ws.11)).
+Weitere Informationen zum Logman-Tool finden Sie unter [Logman](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753820(v=ws.11)).
 
-## <a name="using-tracelog"></a>Verwenden von tracelog
+## <a name="using-tracelog"></a>Verwenden von Tracelog
 
-Im folgenden Verfahren wird die Verwendung von tracelog beschrieben.
+Im folgenden Verfahren wird die Verwendung von Tracelog beschrieben.
 
-**So verwenden Sie tracelog**
+**So verwenden Sie Tracelog**
 
-1.  Erstellen Sie eine Textdatei mit dem Namen ASR. CTL, die nur den folgenden Text enthält:
+1.  Erstellen Sie eine Textdatei namens asr.ctl, die nur den folgenden Text enthält:
 
-    **6407345b-94f 2-44c8-b3db-4e076be46816 ASR**
+    **6407345b-94f2-44c8-b3db-4e076be46816 asr**
 
-2.  Verwenden Sie den folgenden Befehl zum Starten der Ablauf Verfolgung:
+2.  Verwenden Sie den folgenden Befehl, um die Ablaufverfolgung zu starten:
 
-    **tracelog-Start ASR-f** *x: \\ * * * ASR. ETL-GUID ASR. CTL-Flag 0xFF-Level 0xFF**
+    **tracelog -start asr -f** *x: \\ ".asr.etl -guid asr.ctl -flag 0xff -level 0xff**
 
     > [!Note]  
-    > Ersetzen Sie "x: \\ " durch den Pfad zu dem Verzeichnis, in dem die Ablauf Verfolgungs Protokolldatei gespeichert werden soll. Für eine optimale Leistung sollte sich die Ablauf Verfolgungs Protokolldatei auf einem Volume befinden, das nicht Teil der Schatten Kopie ist.
+    > Ersetzen Sie "x: " durch den Pfad zu dem Verzeichnis, \\ in dem die Ablaufverfolgungsprotokolldatei gespeichert werden soll. Um eine optimale Leistung zu erzielen, sollte sich die Ablaufverfolgungsprotokolldatei auf einem Volume befinden, das nicht Teil der Schattenkopie ist.
 
      
 
-3.  Verwenden Sie den folgenden Befehl, um die Ablauf Verfolgung anzuhalten:
+3.  Verwenden Sie den folgenden Befehl, um die Ablaufverfolgung zu beenden:
 
-    **tracelog-ASR Abbrechen**
+    **tracelog -stop asr**
 
-Die Ablauf Verfolgungs Protokolldatei ist *x \\ :* ASR. ETL.
+Die Ablaufverfolgungsprotokolldatei ist *x: \\* asr.etl.
 
-Weitere Informationen zum tracelog-Tool finden Sie unter [tracelog](https://msdn.microsoft.com/library/ms797927.aspx).
+Weitere Informationen zum Tracelog-Tool finden Sie unter [Tracelog](https://msdn.microsoft.com/library/ms797927.aspx).
 
  
 

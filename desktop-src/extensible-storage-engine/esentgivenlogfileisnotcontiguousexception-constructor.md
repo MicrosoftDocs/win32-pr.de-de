@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentgivenlogfileisnotcontiguousexception-Konstruktor'
-title: Esentgivenlogfileisnotcontiguousexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentGivenLogFileIsNotContiguousException-Konstruktor'
+title: EsentGivenLogFileIsNotContiguousException-Konstruktor
 TOCTitle: 'EsentGivenLogFileIsNotContiguousException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentGivenLogFileIsNotContiguousException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentgivenlogfileisnotcontiguousexception.esentgivenlogfileisnotcontiguousexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d21ea222fa5454b5888e9280a62d3f3bef255263
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16cba3930186616fa5ccd0c99a87f6032a0dccec247cd576951f13dd969217ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118268268"
 ---
-# <a name="esentgivenlogfileisnotcontiguousexception-constructor"></a>Esentgivenlogfileisnotcontiguousexception-Konstruktor
+# <a name="esentgivenlogfileisnotcontiguousexception-constructor"></a>EsentGivenLogFileIsNotContiguousException-Konstruktor
 
-Initialisiert eine neue Instanz der esentgivenlogfileisnotcontiguousexception-Klasse.
+Initialisiert eine neue Instanz der EsentGivenLogFileIsNotContiguousException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentGivenLogFileIsNotContiguousException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentgivenlogfileisnotcontiguousexception-Klasse](./esentgivenlogfileisnotcontiguousexception-class.md)
+[EsentGivenLogFileIsNotContiguousException-Klasse](./esentgivenlogfileisnotcontiguousexception-class.md)
 
-[Esentgivenlogfileisnotcontiguousexception-Elemente](./esentgivenlogfileisnotcontiguousexception-members.md)
+[EsentGivenLogFileIsNotContiguousException-Member](./esentgivenlogfileisnotcontiguousexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

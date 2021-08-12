@@ -1,7 +1,7 @@
 ---
 description: Beschreibt eine Oberfläche.
 ms.assetid: fad8ffdb-36e5-4695-b343-e1315357c31a
-title: D3DSURFACE_DESC-Struktur (D3D9Types. h)
+title: D3DSURFACE_DESC-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 6424bbe9b78532657670bc5cd9ad0705de89a3b0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b18c9cd3428463f82a6e243a57ade3fffd650bb35f2c73234b725fa5bf0607eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118300232"
 ---
-# <a name="d3dsurface_desc-structure"></a>D3DSURFACE- \_ Struktur
+# <a name="d3dsurface_desc-structure"></a>D3DSURFACE \_ DESC-Struktur
 
 Beschreibt eine Oberfläche.
 
@@ -53,18 +53,18 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das Oberflächen Format beschreibt.
+Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Oberflächenformat beschreibt.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
 Typ: **[ **D3DRESOURCETYPE**](./d3dresourcetype.md)**
 
 </dd> <dd>
 
-Member des [**D3DRESOURCETYPE**](./d3dresourcetype.md) -Enumerationstyps, der diese Ressource als Oberfläche identifiziert.
+Member des [**D3DRESOURCETYPE-Enumerationstyps,**](./d3dresourcetype.md) der diese Ressource als Oberfläche identifiziert.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Entweder die D3DUSAGE \_ depthstencil-oder D3DUSAGE \_ renderTarget-Werte. Weitere Informationen finden Sie unter [**D3DUSAGE**](d3dusage.md).
+Entweder die D3DUSAGE \_ DEPTHSTENCIL- oder D3DUSAGE \_ RENDERTARGET-Werte. Weitere Informationen finden Sie unter [**D3DUSAGE**](d3dusage.md).
 
 </dd> <dt>
 
@@ -86,36 +86,36 @@ Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
 </dd> <dd>
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die für diese Oberfläche zugeordnete Arbeitsspeicher Klasse angibt.
+Member des [**D3DPOOL-Enumerationstyps,**](./d3dpool.md) der die Für diese Oberfläche zugeordnete Speicherklasse angibt.
 
 </dd> <dt>
 
 **MultiSampleType**
 </dt> <dd>
 
-Type: **[ **D3DMULTISAMPLE- \_ Typ**](./d3dmultisample-type.md)**
+Typ: **[ **D3DMULTISAMPLE \_ TYPE**](./d3dmultisample-type.md)**
 
 </dd> <dd>
 
-Member des Typs " [**D3DMULTISAMPLE \_ Type**](./d3dmultisample-type.md) enumerieriert", der die Ebenen der von der-Oberfläche unterstützten vollständigen multisamplinggrad-Auflistung angibt.
+Member des [**D3DMULTISAMPLE TYPE-Enumerationstyps, \_**](./d3dmultisample-type.md) der die Ebenen der von der Oberfläche unterstützten Vollszenen-Multisampling angibt.
 
 </dd> <dt>
 
-**Multisamplequality**
+**MultiSampleQuality**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Qualitätsstufe. Der gültige Bereich liegt zwischen 0 (null) und einem niedrigeren Wert als der von " [**checkdevicemultisampletype**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdevicemultisampletype)" verwendeten pqualitylevels. Wenn Sie einen größeren Wert übergeben, wird der Fehler "D3DERR \_ invalidcall" zurückgegeben. Die multisamplequality-Werte von gekoppelten renderzielen, tiefen Schablone-Oberflächen und der Multisample-Typ müssen alle entsprechen.
+Qualitätsstufe. Der gültige Bereich liegt zwischen 0 (null) und 1 kleiner als die von "pQualityLevels" zurückgegebene Ebene, die von [**CheckDeviceMultiSampleType**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdevicemultisampletype)verwendet wird. Wenn Sie einen größeren Wert übergeben, wird der Fehler D3DERR \_ INVALIDCALL zurückgegeben. Die MultisampleQuality-Werte von gekoppelten Renderzielen, Tiefenschablonenoberflächen und dem MultiSample-Typ müssen übereinstimmen.
 
 </dd> <dt>
 
 **Width**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -126,7 +126,7 @@ Breite der Oberfläche in Pixel.
 **Height**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -140,7 +140,7 @@ Höhe der Oberfläche in Pixel.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
@@ -151,13 +151,13 @@ Höhe der Oberfläche in Pixel.
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**Getleveldebug**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getleveldesc)
+[**GetLevelDesc**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getleveldesc)
 </dt> <dt>
 
 [**GetDesc**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dsurface9-getdesc)
 </dt> <dt>
 
-[**Getleveldebug**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getleveldesc)
+[**GetLevelDesc**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getleveldesc)
 </dt> </dl>
 
  

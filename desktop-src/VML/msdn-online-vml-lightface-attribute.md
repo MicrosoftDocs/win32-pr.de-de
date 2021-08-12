@@ -1,47 +1,47 @@
 ---
-title: VML-Lightface-Attribut
-description: VML-Lightface-Attribut
+title: VML-LightFace-Attribut
+description: VML-LightFace-Attribut
 ms.assetid: 552a4145-fb34-4a85-a32a-c9ef74f11f13
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ef71e5ea998233b16785e39dbe179490bc6cc32
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bcc1196e9c46cc915c74ea06a43c5bbfe3134e50408716e14b1cdc9753bcda86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118598968"
 ---
-# <a name="vml-lightface-attribute"></a>VML-Lightface-Attribut
+# <a name="vml-lightface-attribute"></a>VML-LightFace-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die Vorderseite der-Extrusion auf Änderungen in der Beleuchtung antwortet. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob die Vorderseite derExtrusion auf Änderungen in der Beleuchtung reagiert. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Schläuche](msdn-online-vml-extrusion-element.md)
+[Extrusion](msdn-online-vml-extrusion-element.md)
 
 **Tagsyntax**
 
-<o: *Element* Lightface = " *Expression* " >
+<o: *element* lightface=" *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Lightface = "*Ausdruck*"
+*element* .lightface="*expression*"
 
-*Ausdruck* = *Element*. Lightface
+*expression* = *Element*.lightface
 
 **Anmerkungen**
 
-Wenn der Wert **false** ist, antwortet die Vorderseite nicht, wenn sich ein Beleuchtungs Wert ändert. Der Standardwert ist **True**.
+False **gibt an,** dass das Vordergesicht nicht reagiert, wenn sich ein Beleuchtungswert ändert. Der Standardwert ist **True**.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

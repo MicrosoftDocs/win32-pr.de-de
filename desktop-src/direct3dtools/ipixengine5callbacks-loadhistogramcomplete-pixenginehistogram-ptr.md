@@ -1,10 +1,10 @@
 ---
-description: Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn eine histogrammauslastung abgeschlossen wurde.
+description: Eine Rückruffunktion, mit der der Host benachrichtigt wird, wenn ein Histogramm geladen wurde.
 MS-HAID: vspixengine.IPixEngine5Callbacks\_LoadHistogramComplete\_PixEngineHistogram\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'IPixEngine5Callbacks:: loadhistogrammcomplete-Methode'
+title: IPixEngine5Callbacks::LoadHistogramComplete-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: A72DB49E-06C8-4061-9872-C4380D90EEB2
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d0e468422f722a8bd549d63f34225833462856b8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 329def1499fba39ff59842bd22d3beaf6fd3c4211050b785d5c774aaae6870fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118282336"
 ---
-# <a name="span-idvspixengineipixengine5callbacks_loadhistogramcomplete_pixenginehistogram_ptrspanipixengine5callbacksloadhistogramcomplete-method"></a><span id="vspixengine.ipixengine5callbacks_loadhistogramcomplete_pixenginehistogram_ptr"></span>IPixEngine5Callbacks:: loadhistogrammcomplete-Methode
+# <a name="span-idvspixengineipixengine5callbacks_loadhistogramcomplete_pixenginehistogram_ptrspanipixengine5callbacksloadhistogramcomplete-method"></a><span id="vspixengine.ipixengine5callbacks_loadhistogramcomplete_pixenginehistogram_ptr"></span>IPixEngine5Callbacks::LoadHistogramComplete-Methode
 
-Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn eine histogrammauslastung abgeschlossen wurde.
+Eine Rückruffunktion, mit der der Host benachrichtigt wird, wenn ein Histogramm geladen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,11 +50,11 @@ Die Adresse der Histogrammdaten für das geladene Histogramm.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

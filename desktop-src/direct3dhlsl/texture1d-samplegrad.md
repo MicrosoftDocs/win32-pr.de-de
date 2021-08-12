@@ -1,9 +1,9 @@
 ---
-title: 'Texture1D:: Texture1D samplegrad-Methoden'
-description: Abtast eine Texture1D mit einem Farbverlauf, um die Berechnung der Stichproben Position zu beeinflussen.
+title: Texture1D::Texture1D SampleGrad-Methoden
+description: Probieren Sie eine Textur1D mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.
 ms.assetid: 20DE104D-79FD-410D-A8FC-7E810A0654A0
 keywords:
-- Samplegrad-Methoden HLSL
+- SampleGrad-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,34 +12,34 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: d5cbc05afd1003081d8b96086e24084b7dc17882
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 6c8a4cc1266d13e75708cd8dd2c0bb7f18401e8ff5a90a067936748dff50620e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104038215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283974"
 ---
-# <a name="texture1dsamplegrad-methods"></a>Texture1D:: samplegrad-Methoden
+# <a name="texture1dsamplegrad-methods"></a>Texture1D::SampleGrad-Methoden
 
-Abtast eine [**Texture1D**](sm5-object-texture1d.md) mit einem Farbverlauf, um die Berechnung der Stichproben Position zu beeinflussen.
+Probieren Sie eine [**Textur1D**](sm5-object-texture1d.md) mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                       | BESCHREIBUNG                                                                                                                                                                                                        |
+| Methode                                                                                                       | Beschreibung                                                                                                                                                                                                        |
 |:-------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Samplegrad (S, float, float, float, int)**](dx-graphics-hlsl-to-samplegrad.md)                                | Abtast eine Textur und verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der die Stichproben<br/>                                                                                                             |
-| [**Samplegrad (S, float, float, float, int, float)**](t1d-samplegrad-s-float-float-float-int-float-.md)           | Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden.<br/>                                     |
-| [**Samplegrad (S, float, float, float, int, float, uint)**](t1d-samplegrad-s-float-float-float-int-float-uint-.md) | Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden. Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleGrad(S,float,float,float,int)**](dx-graphics-hlsl-to-samplegrad.md)                                | Stichproben einer Textur mithilfe eines Farbverlaufs, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.<br/>                                                                                                             |
+| [**SampleGrad(S,float,float,float,int,float)**](t1d-samplegrad-s-float-float-float-int-float-.md)           | Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail).<br/>                                     |
+| [**SampleGrad(S,float,float,float,int,float,uint)**](t1d-samplegrad-s-float-float-float-int-float-uint-.md) | Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Texture-Object](dx-graphics-hlsl-to-type.md).
+Weitere Informationen finden Sie unter [Texture-Object](dx-graphics-hlsl-to-type.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

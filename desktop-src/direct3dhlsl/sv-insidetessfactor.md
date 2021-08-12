@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 90d31aa6a11ce8e2bdd75ff1171705cc9b3de437
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 043d1a43186623e81cb529d2906d4475291547d326bf2d75758c8ee696a812b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111826614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285506"
 ---
 # <a name="sv_insidetessfactor"></a>SV \_ InsideTessFactor
 
@@ -44,7 +44,7 @@ Mosaikfaktoren müssen als Array deklariert werden. sie können nicht in einen e
 
 Dieser Wert muss während der Patchkonst constant-Funktion des Hüllen-Shaders definiert werden.
 
-Erforderlicher Ausgabewert für den Hüllen-Shader, wenn Quad- oder Tri-Patches verwendet werden. Dieser Wert ist eine erforderliche Eingabe für den Domänen-Shader, damit Die Hardware mit den Signaturen über den Mosaik-Shader übereinstimmen kann.
+Erforderlicher Ausgabewert für den Hüllen-Shader bei Verwendung von Quad- oder Tri-Patches. Dieser Wert ist eine erforderliche Eingabe für den Domänen-Shader, damit Die Hardware mit den Signaturen über den Mosaik-Shader übereinstimmen kann.
 
 Diese Funktion wird in den folgenden Shadertypen unterstützt:
 

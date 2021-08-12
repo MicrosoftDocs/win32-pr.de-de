@@ -1,6 +1,6 @@
 ---
-title: Sub-PS
-description: Subtrahiert Quellen. | Sub-PS
+title: sub – ps
+description: Subtrahiert Quellen. | sub – ps
 ms.assetid: e130724f-63bf-4d7f-bc9f-6a4441a788b8
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4998892aa06eff55632600a9c2f7fe359c11f830
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5fc4faa24f95824a77e9a1e92b9a15479d2e509212c52c9309c38fcc42cf6b3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285718"
 ---
-# <a name="sub---ps"></a>Sub-PS
+# <a name="sub---ps"></a>sub – ps
 
 Subtrahiert Quellen.
 
@@ -24,7 +24,7 @@ Subtrahiert Quellen.
 
 
 
-| Sub DST, src0, Quelle1 |
+| sub dst, src0, src1 |
 |---------------------|
 
 
@@ -33,15 +33,15 @@ Subtrahiert Quellen.
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | sub                   | x    | x    | x    | x    | x    | x    | x     | x    | x     |
 
@@ -49,7 +49,7 @@ where
 
  
 
-Diese Anweisung führt die Subtraktion aus, die in dieser Formel angezeigt wird.
+Diese Anweisung führt die in dieser Formel gezeigte Subtraktion aus.
 
 
 ```

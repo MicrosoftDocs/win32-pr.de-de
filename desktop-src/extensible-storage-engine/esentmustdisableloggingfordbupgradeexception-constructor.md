@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentmustdisableloggingfordbupgradeexception-Konstruktor'
-title: Esentmustdisableloggingfordbupgradeexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentMustDisableLoggingForDbUpgradeException-Konstruktor'
+title: EsentMustDisableLoggingForDbUpgradeException-Konstruktor
 TOCTitle: 'EsentMustDisableLoggingForDbUpgradeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMustDisableLoggingForDbUpgradeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmustdisableloggingfordbupgradeexception.esentmustdisableloggingfordbupgradeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d14f2ab29e61b510feebbf4c320ef8a6424ca08c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: edbd3772b7bda87bcb81a9470d6e6a97f91f271917af5900a921386c1ed68256
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118263756"
 ---
-# <a name="esentmustdisableloggingfordbupgradeexception-constructor"></a>Esentmustdisableloggingfordbupgradeexception-Konstruktor
+# <a name="esentmustdisableloggingfordbupgradeexception-constructor"></a>EsentMustDisableLoggingForDbUpgradeException-Konstruktor
 
-Initialisiert eine neue Instanz der esentmustdisableloggingfordbupgradeexception-Klasse.
+Initialisiert eine neue Instanz der EsentMustDisableLoggingForDbUpgradeException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentMustDisableLoggingForDbUpgradeException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentmustdisableloggingfordbupgradeexception-Klasse](./esentmustdisableloggingfordbupgradeexception-class.md)
+[EsentMustDisableLoggingForDbUpgradeException-Klasse](./esentmustdisableloggingfordbupgradeexception-class.md)
 
-[Esentmustdisableloggingfordbupgradeexception-Member](./esentmustdisableloggingfordbupgradeexception-members.md)
+[EsentMustDisableLoggingForDbUpgradeException-Member](./esentmustdisableloggingfordbupgradeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

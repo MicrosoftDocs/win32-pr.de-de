@@ -1,7 +1,7 @@
 ---
-description: Legt einen normalen Vektor für jeden Texttyp in einem Textur Objekt fest. Diese Methode wird verwendet, um Scheitelpunkt normale Vektoren aus einem Mesh (oder interpoliert Vertex-Normale) zu speichern, wenn die pixelbasierte Voraus berechnete Strahlungs Übertragung (PRT) berechnet wird).
+description: Legt einen normalen Vektor für jedes Texel in einem Texturobjekt fest. Diese Methode wird verwendet, um vertexnormelle Vektoren aus einem Gitternetz zu speichern (oder interpolierte Scheitelpunktnormationen, wenn die pixelbasierte vorausberechnte Radianceübertragung (PRT) berechnet wird).
 ms.assetid: 165a3ef6-c142-4988-b4fb-5aafd8ff11fe
-title: 'ID3DXPRTEngine:: setpertexelnormal-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::SetPerTexelNormal-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5220ad500312792cd158967e9502381f49b0e3e7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 75877e8af86a22f80703742f148d5171e3a99e5c0c580bff588c27deba269b98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118293374"
 ---
-# <a name="id3dxprtenginesetpertexelnormal-method"></a>ID3DXPRTEngine:: setpertexelnormal-Methode
+# <a name="id3dxprtenginesetpertexelnormal-method"></a>ID3DXPRTEngine::SetPerTexelNormal-Methode
 
-Legt einen normalen Vektor für jeden Texttyp in einem Textur Objekt fest. Diese Methode wird verwendet, um Scheitelpunkt normale Vektoren aus einem Mesh (oder interpoliert Vertex-Normale) zu speichern, wenn die pixelbasierte Voraus berechnete Strahlungs Übertragung (PRT) berechnet wird).
+Legt einen normalen Vektor für jedes Texel in einem Texturobjekt fest. Diese Methode wird verwendet, um vertexnormelle Vektoren aus einem Gitternetz zu speichern (oder interpolierte Scheitelpunktnormationen, wenn die pixelbasierte vorausberechnte Radianceübertragung (PRT) berechnet wird).
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetPerTexelNormal(
 
 <dl> <dt>
 
-*pnormaltexture* \[ in\]
+*pNormalTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Ein Zeiger auf ein [**IDirect3DTexture9**](/windows/desktop/api) -Textur Objekt, das als eine Objekt Raum normale Zuordnung fungiert, in der normale Vektoren gespeichert werden. Die Textur muss die gleichen Dimensionen wie [**ID3DXPRTBuffer**](id3dxprtbuffer.md) aufweisen und muss signierte Textur Formate speichern können.
+Zeiger auf ein [**IDirect3DTexture9-Texturobjekt,**](/windows/desktop/api) das als Normalkarte des Objektraums dient, in der normale Vektoren gespeichert werden. Die Textur muss die gleichen Abmessungen wie [**ID3DXPRTBuffer**](id3dxprtbuffer.md) aufweisen und in der Lage sein, signierte Texturformate zu speichern.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Ein Zeiger auf ein [**IDirect3DTexture9**](/windows/desktop/api) -Textur Objekt,
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

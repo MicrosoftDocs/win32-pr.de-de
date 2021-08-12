@@ -1,9 +1,9 @@
 ---
-title: Slider. ForegroundColor
-description: Das ForegroundColor-Attribut gibt die Vordergrundfarbe des Schieberegler-Steuer Elements an oder ruft diese ab.
+title: SLIDER.foregroundColor
+description: Das foregroundColor-Attribut gibt die Vordergrundfarbe des Schieberegler-Steuerelements an oder ruft sie ab.
 ms.assetid: 8c8de4a9-0021-41ed-aeb8-75653855b6f1
 keywords:
-- Schieberegler. ForegroundColor-Media Player
+- SLIDER.foregroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d334dff4d9b7d90582e44018bf8f56c04fa784a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a111dca131351dedaf2080d16bffa4db1344e9993cabcfe8ca44f149fd97eb3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118569088"
 ---
-# <a name="sliderforegroundcolor"></a>Slider. ForegroundColor
+# <a name="sliderforegroundcolor"></a>SLIDER.foregroundColor
 
-Das **ForegroundColor** -Attribut gibt die Vordergrundfarbe des Schieberegler-Steuer Elements an oder ruft diese ab.
+Das **foregroundColor-Attribut** gibt die Vordergrundfarbe des Schieberegler-Steuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundColor
@@ -29,17 +29,17 @@ Das **ForegroundColor** -Attribut gibt die Vordergrundfarbe des Schieberegler-St
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist "White".
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer-Farbwert enthält. Der Standardwert ist "white".
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein grundlegendes Schieberegler-Steuerelement kann erstellt werden, indem eines von zwei Attributen von Attributen angegeben wird: **Background Color** und **ForegroundColor** oder **BackgroundImage** und **foregroundimage**.
+Ein einfaches Schieberegler-Steuerelement kann erstellt werden, indem eines von zwei Attributpaaren angegeben wird: **backgroundColor** und **foregroundColor** oder **backgroundImage** **und foregroundImage**.
 
-Wenn Sie mithilfe der Color-Attribute ein Schieberegler-Steuerelement erstellen, definieren die Abmessungen des Schieberegler-Steuer Elements den Bereich, der von der Hintergrundfarbe ausgefüllt wird. Die Vordergrundfarbe deckt die Hintergrundfarbe ab, wenn die Schiebereglerposition zunimmt.
+Wenn Sie ein Schieberegler-Steuerelement mithilfe der Farbattribute erstellen, definieren die Abmessungen des Schieberegler-Steuerelements den Bereich, der von der Hintergrundfarbe ausgefüllt wird. Die Vordergrundfarbe deckt die Hintergrundfarbe ab, wenn die Position des Schiebereglers zunimmt.
 
-Geben Sie die Attribute **backgroundendcolor** oder **foregroundendcolor** an, um eine Verlaufs Füllung in dem Bereich zu erstellen, der durch die Hintergrund-oder Vordergrundfarbe belegt ist.
+Geben Sie die Attribute **backgroundEndColor** oder **foregroundEndColor** an, um eine Farbverlaufsfüllung in dem Bereich zu erstellen, der von der Hintergrund- oder Vordergrundfarbe belegt wird.
 
-Weitere Informationen finden Sie unter *customslider*. [positionImage](customslider-positionimage.md) -Attribut für ein Beispiel, das veranschaulicht, wie die Attribute des **Slider** -Elements verwendet werden.
+Weitere Informationen *finden Sie unter DER -1000-000-0* [positionImage-Attribut](customslider-positionimage.md) für ein Beispiel, das veranschaulicht, wie die Attribute des **SLIDER-Elements** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Weitere Informationen finden Sie unter *customslider*. [positionImage](customsli
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -55,22 +55,22 @@ Weitere Informationen finden Sie unter *customslider*. [positionImage](customsli
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Slider. BackgroundColor**](slider-backgroundcolor.md)
+[**SLIDER.backgroundColor**](slider-backgroundcolor.md)
 </dt> <dt>
 
-[**Slider. backgroundendcolor**](slider-backgroundendcolor.md)
+[**SLIDER.backgroundEndColor**](slider-backgroundendcolor.md)
 </dt> <dt>
 
-[**Slider. foregroundendcolor**](slider-foregroundendcolor.md)
+[**SLIDER.foregroundEndColor**](slider-foregroundendcolor.md)
 </dt> <dt>
 
-[**Slider. foregroundimage**](slider-foregroundimage.md)
+[**SLIDER.foregroundImage**](slider-foregroundimage.md)
 </dt> </dl>
 
  

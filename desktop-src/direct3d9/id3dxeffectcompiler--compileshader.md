@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 3e8d1d72fccd5c4ad47d21d05ee46013860a7743
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 1e42eec5cc9c5c90d1fa4e26c4ad38d611dce3ce0df933d76b1eb81d2534b8dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118295876"
 ---
 # <a name="id3dxeffectcompilercompileshader-method"></a>ID3DXEffectCompiler::CompileShader-Methode
 
@@ -63,7 +63,7 @@ Zeiger auf ein Shaderprofil, das den Shader-Anweisungssatz bestimmt. Eine Liste 
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -77,7 +77,7 @@ Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Di
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Puffer, der den kompilierten Shader enthält. Der Compiler-Shader ist ein Array von DWORDs. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Puffer, der den kompilierten Shader enthält. Der Compiler-Shader ist ein Array von DWORDs. Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
 
 </dd> <dt>
 
@@ -86,7 +86,7 @@ Puffer, der den kompilierten Shader enthält. Der Compiler-Shader ist ein Array 
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Puffer, der mindestens die erste aufgetretene Kompilierfehlermeldung enthält. Dies schließt Auswirkungencompilerfehler und Fehler bei der Sprachcompilierung auf hoher Ebene ein. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Puffer, der mindestens die erste kompilierungsfehlermeldung enthält, die aufgetreten ist. Dies schließt Compilerfehler und Kompilierungsfehler auf hoher Ebene ein. Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
 
 </dd> <dt>
 
@@ -95,7 +95,7 @@ Puffer, der mindestens die erste aufgetretene Kompilierfehlermeldung enthält. D
 
 Typ: **[ **LPD3DXCONSTANTTABLE**](id3dxconstanttable.md)\***
 
-Gibt eine [**ID3DXConstantTable-Schnittstelle**](id3dxconstanttable.md) zurück, die für den Zugriff auf Shaderkonstanten verwendet werden kann. Dieser Wert kann NULL **sein.** Wenn Sie Ihre Anwendung als große Adressierung kompilieren (d. h., Sie verwenden die Linkeroption /LARGEADDRESSAWARE, um Adressen zu verarbeiten, die größer als 2 GB sind), können Sie diesen Parameter nicht verwenden und müssen ihn auf **NULL festlegen.** Stattdessen müssen Sie die [**D3DXGetShaderConstantTableEx-Funktion**](d3dxgetshaderconstanttableex.md) verwenden, um die shaderkonstante Tabelle abzurufen, die in den Shader eingebettet ist. In diesem **D3DXGetShaderConstantTableEx-Aufruf** müssen Sie das **D3DXCONSTTABLE \_ LARGEADDRESSAWARE-Flag** an den *Flags-Parameter* übergeben, um den Zugriff auf bis zu 4 GB virtuellen Adressraum anzugeben.
+Gibt eine [**ID3DXConstantTable-Schnittstelle**](id3dxconstanttable.md) zurück, die für den Zugriff auf Shaderkonstanten verwendet werden kann. Dieser Wert kann **NULL** sein. Wenn Sie Ihre Anwendung als große Adressverwaltung kompilieren (d. h., Sie verwenden die Linkeroption /LARGEADDRESSAWARE, um Adressen zu verarbeiten, die größer als 2 GB sind), können Sie diesen Parameter nicht verwenden und müssen ihn auf **NULL** festlegen. Stattdessen müssen Sie die [**D3DXGetShaderConstantTableEx-Funktion**](d3dxgetshaderconstanttableex.md) verwenden, um die shaderkonstante Tabelle abzurufen, die in den Shader eingebettet ist. In diesem **D3DXGetShaderConstantTableEx-Aufruf** müssen Sie das **Flag D3DXCONSTTABLE \_ LARGEADDRESSAWARE** an den *Flags-Parameter* übergeben, um anzugeben, dass auf bis zu 4 GB des virtuellen Adressraums zugegriffen werden soll.
 
 </dd> </dl>
 
@@ -103,11 +103,11 @@ Gibt eine [**ID3DXConstantTable-Schnittstelle**](id3dxconstanttable.md) zurück,
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK.
 
 Wenn die Argumente ungültig sind, gibt die Methode D3DERR \_ INVALIDCALL zurück.
 
-Wenn bei der Methode ein Fehler auftritt, ist der Rückgabewert E \_ FAIL.
+Wenn die Methode fehlschlägt, ist der Rückgabewert E \_ FAIL.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -138,7 +138,7 @@ Diese Methode kompiliert einen Shader aus einer Funktion, die in einer C-ähnlic
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

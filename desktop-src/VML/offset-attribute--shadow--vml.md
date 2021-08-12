@@ -1,26 +1,26 @@
 ---
-title: Offset-Attribut (Schatten) (VML)
-description: Offset-Attribut (Schatten) (VML)
+title: Offset-Attribut (Schatten)(VML)
+description: Offset-Attribut (Schatten)(VML)
 ms.assetid: bb5810cd-bd9a-4888-a0ce-8de732215c80
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a61daaf3b311a87a3e3bcf064ceffc491e1134fe
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a0683e9536e10bed141ecca56b4335d6221c5ced7e3d26220908aa388b453843
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118596905"
 ---
-# <a name="offset-attribute-shadowvml"></a>Offset-Attribut (Schatten) (VML)
+# <a name="offset-attribute-shadowvml"></a>Offset-Attribut (Schatten)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert, wie weit der Schatten sich hinter der Form erstreckt. Lese-/Schreibzugriff. **VgVector2D**.
+Definiert, wie weit sich der Schatten über die Form erstreckt. Lese-/Schreibzugriff. **VgVector2D**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert, wie weit der Schatten sich hinter der Form erstreckt. Lese-/Schreibzu
 
 **Tagsyntax**
 
-<v: *Element* Offset = " *Ausdruck* " >
+<v: *element* offset=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Offset = "*Ausdruck*"
+*element* .offset="*expression*"
 
-*Ausdruck* = *Element*. Offset
+*expression* = *Element*.offset
 
 **Anmerkungen**
 
-Der Standard Offset für den x-Wert ist 2pt, und der Standardwert für den y-Wert ist 2pt. Werte sind entweder eine absolute Messung oder ein Bruchteil der Form. Bei einem Bruchteil liegen Sie zwischen 50% und-50%.
+Der Standardoffset für den x-Wert ist 2pt, und der Standardwert für den y-Wert ist 2pt. Werte sind entweder eine absolute Messung oder ein Bruchteil der Form. Bei Bruch liegen sie zwischen 50 % und -50 %.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Form weist einen Schatten mit einem Offset von 5 Punkten nach unten und 10 nach rechts auf.
+Die Form hat einen Schatten mit einem Offset von 5 Punkten nach unten und 10 Punkten rechts.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Die Form weist einen Schatten mit einem Offset von 5 Punkten nach unten und 10 n
 
 
 
- 
+ 
 
- 
+ 

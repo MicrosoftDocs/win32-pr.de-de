@@ -1,11 +1,11 @@
 ---
-title: Ivmfloppydrive-drivenenumber-Eigenschaft (vpccominterfaces. h)
-description: Ruft den NULL basierten Index des Controllers ab, an den das Diskettenlaufwerk angefügt ist.
+title: IVMFloppyDrive DriveNumber-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft den nullbasierten Index des Controllers ab, an den das Diskettenlaufwerk angefügt ist.
 ms.assetid: 79a40cad-d280-4c67-9214-0532569e47e4
 keywords:
-- Drivenumschlag-Eigenschaft virtueller PC
-- Drivenumschlag-Eigenschaft Virtual PC, ivmfloppydrive-Schnittstelle
-- Ivmfloppydrive Interface Virtual PC, drivenumschlag-Eigenschaft
+- DriveNumber-Eigenschaft Virtueller PC
+- DriveNumber-Eigenschaft Virtual PC, IVMFloppyDrive-Schnittstelle
+- IVMFloppyDrive-Schnittstelle Virtueller PC, DriveNumber-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eb2f2aeacaf3067515e9e44c58422cd4c9f31fe1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e5a72b9546949a4cd8b2450a3ed41e90d598dc306974a13c7b0dfcf2fe5c232
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118595359"
 ---
-# <a name="ivmfloppydrivedrivenumber-property"></a>Ivmfloppydrive::D rivenumber-Eigenschaft
+# <a name="ivmfloppydrivedrivenumber-property"></a>IVMFloppyDrive::D riveNumber-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft den NULL basierten Index des Controllers ab, an den das Diskettenlaufwerk angefügt ist.
+Ruft den nullbasierten Index des Controllers ab, an den das Diskettenlaufwerk angefügt ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_DriveNumber(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der null basierte Index des Controllers.
+Der nullbasierte Index des Controllers.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ Der null basierte Index des Controllers.
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,20 +65,20 @@ Der null basierte Index des Controllers.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmfloppydrive ist als 661abee6-112a-4ed9-BABF -3c874969s10e definiert.<br/>             |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMFloppyDrive ist als 661abee6-112a-4ed9-fsf-3c874969f10e definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmfloppydrive**](ivmfloppydrive.md)
+[**IVMFloppyDrive**](ivmfloppydrive.md)
 </dt> </dl>
 
  

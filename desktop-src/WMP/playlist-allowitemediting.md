@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. Zuweisung
-description: Mit dem Attribut "attribuwitemediting" wird ein Wert angegeben oder abgerufen, der angibt, ob die direkte Bearbeitung von Elementen in einer Wiedergabeliste unterstützt wird.
+title: PLAYLIST.allowItemEditing
+description: Das allowItemEditing-Attribut gibt einen Wert an, der angibt, ob Elemente in einer Wiedergabeliste die bearbeitungsbasierte Bearbeitung unterstützen, oder ruft diesen ab.
 ms.assetid: fc6120d9-0424-4c42-8aa9-ba4bbbd580fe
 keywords:
-- Wiedergabeliste. Zuweisung von Windows-Media Player
+- PLAYLIST.allowItemEditing Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8949b02a9a0be61ea3dbf2e54fa01b2bb9521e19
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 53a3f07c3212cddeb45ff4ba4c5c6c268483025e782b41d79c8cc51765aa6d00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118571490"
 ---
-# <a name="playlistallowitemediting"></a>Wiedergabeliste. Zuweisung
+# <a name="playlistallowitemediting"></a>PLAYLIST.allowItemEditing
 
-Mit dem Attribut " **attribuwitemediting** " wird ein Wert angegeben oder abgerufen, der angibt, ob die direkte Bearbeitung von Elementen in einer Wiedergabeliste unterstützt wird.
+Das **allowItemEditing-Attribut** gibt einen Wert an, der angibt, ob Elemente in einer Wiedergabeliste die bearbeitungsbasierte Bearbeitung unterstützen, oder ruft diesen ab.
 
 ``` syntax
         elementID.allowItemEditing
@@ -29,14 +29,14 @@ Mit dem Attribut " **attribuwitemediting** " wird ein Wert angegeben oder abgeru
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                           |
 |-------|---------------------------------------|
-| true  | Standard. Direkte Bearbeitung ist zulässig. |
-| false | Direkte Bearbeitung ist nicht zulässig.      |
+| true  | Standard. Die bearbeitung vor Ort ist zulässig. |
+| false | Die bearbeitung vor Ort ist nicht zulässig.      |
 
 
 
@@ -48,7 +48,7 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -56,7 +56,7 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

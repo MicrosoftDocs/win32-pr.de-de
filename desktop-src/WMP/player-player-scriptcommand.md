@@ -1,11 +1,11 @@
 ---
-title: Player. ScriptCommand-Ereignis
-description: Das ScriptCommand-Ereignis tritt auf, wenn ein synchronisierter Befehl oder eine synchronisierte URL empfangen wird. | Player. ScriptCommand-Ereignis
+title: Player.ScriptCommand-Ereignis
+description: Das ScriptCommand-Ereignis tritt auf, wenn ein synchronisierter Befehl oder eine synchronisierte URL empfangen wird. | Player.ScriptCommand-Ereignis
 ms.assetid: d3aec4e2-1b0e-414e-8113-0af4fcd37e3b
 keywords:
-- ScriptCommand-Ereignisfenster Media Player
-- ScriptCommand-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, ScriptCommand-Ereignis
+- ScriptCommand-Ereignis Windows Media Player
+- ScriptCommand-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , ScriptCommand-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f9ca7ec22694956e1d91d055e8db057a91ecca4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 27f54aac54cf56e65b71dbd604d57d5ae9404a0148db139779ced3aa9e0da0f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572428"
 ---
-# <a name="playerscriptcommand-event"></a>Player. ScriptCommand-Ereignis
+# <a name="playerscriptcommand-event"></a>Player.ScriptCommand-Ereignis
 
-Das **ScriptCommand** -Ereignis tritt auf, wenn ein synchronisierter Befehl oder eine synchronisierte URL empfangen wird.
+Das **ScriptCommand-Ereignis** tritt auf, wenn ein synchronisierter Befehl oder eine synchronisierte URL empfangen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Player.ScriptCommand(
 
 <dl> <dt>
 
-*sctype* 
+*scType* 
 </dt> <dd>
 
-Zeichenfolge, die den Typ des Skript Befehls angibt.
+Zeichenfolge, die den Typ des Skriptbefehls angibt.
 
 </dd> <dt>
 
-*Parameter* 
+*Param* 
 </dt> <dd>
 
-**Zeichenfolge** , die den Skript Befehl angibt.
+**Zeichenfolge,** die den Skriptbefehl angibt.
 
 </dd> </dl>
 
@@ -61,43 +61,43 @@ Zeichenfolge, die den Typ des Skript Befehls angibt.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Befehle können zwischen den Sounds und Bildern einer Windows Media-Datei oder eines Windows-Streams eingebettet werden. Die Befehle sind ein paar von Unicode-Zeichen folgen, die mit einer bestimmten Zeit im Stream verknüpft sind. Wenn der Stream den dem Befehl zugeordneten Zeitpunkt erreicht, sendet das Windows Media Player-Steuerelement ein **ScriptCommand** -Ereignis mit zwei Parametern. Ein Parameter gibt den Typ des gesendeten Befehls an, und der andere Parameter gibt den Befehl an. Der Parametertyp wird verwendet, um zu bestimmen, wie der Befehlsparameter verarbeitet wird. Alle Befehls Typen können in eine Datei oder einen Stream eingebettet werden, damit Sie vom **ScriptCommand** -Ereignis verarbeitet wird.
+Befehle können zwischen den Sounds und Bildern einer Windows Mediendatei oder eines Medienstreams eingebettet werden. Die Befehle sind ein Paar von Unicode-Zeichenfolgen, die einer bestimmten Zeit im Stream zugeordnet sind. Wenn der Stream die dem Befehl zugeordnete Zeit erreicht, sendet das Windows Media Player-Steuerelement ein **ScriptCommand-Ereignis** mit zwei Parametern. Ein Parameter gibt den Typ des zu sendenden Befehls an, und der andere Parameter gibt den Befehl an. Der Typ des Parameters wird verwendet, um zu bestimmen, wie der Befehlsparameter verarbeitet wird. Jeder Befehlstyp kann in eine Datei oder einen Stream eingebettet werden, die vom **ScriptCommand-Ereignis** verarbeitet werden soll.
 
-In der folgenden Tabelle sind Skript Befehls Typen aufgeführt, die automatisch von Windows Media Player verarbeitet werden.
+In der folgenden Tabelle sind Skriptbefehlstypen aufgeführt, die automatisch von Windows Media Player verarbeitet werden.
 
 
 
-| type                   | BESCHREIBUNG                                                                                                                                                         |
+| type                   | Beschreibung                                                                                                                                                         |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CAPTION                | Das-Steuerelement zeigt den zugeordneten Text in dem durch *closedcaption* angegebenen div-Element an. **captioningid**.                                                                  |
-| EREIGNIS                  | Weist das Steuerelement an, Anweisungen auszuführen, die für das angegebene Ereignis definiert sind.                                                                                          |
-| Einfügen               | Das-Steuerelement setzt seine **URL** -Eigenschaft zurück, versucht, die angegebene Datei zu öffnen, und beginnt sofort mit der Wiedergabe des neuen Streams.                                        |
-| OpenEvent              | Puffert den zugeordneten Ereignistyp Befehl für die rechtzeitige Ausführung des Ereignis Skripts.                                                                                 |
-| SYNCHRONIZEDLYRICLYRIC | Der Parameter *param* enthält den synchronisierten Text. In Windows Media Player wird der Text im Bereich geschlossene Überschrift der Funktion **jetzt abgespielt** angezeigt. |
-| TEXT                   | Das-Steuerelement zeigt den zugeordneten Text in dem durch *closedcaption* angegebenen div-Element an. **captioningid**.                                                                  |
-| URL                    | Das-Steuerelement öffnet automatisch die URL, die mit dem Standard Internet Browser angegeben wird, wenn die *Einstellungen*. die **invokeurls** -Eigenschaft ist auf true festgelegt.                      |
+| CAPTION                | Das -Steuerelement zeigt den zugeordneten Text im DIV an, der von *ClosedCaption* angegeben wird. **captioningID**.                                                                  |
+| EREIGNIS                  | Weist das Steuerelement an, anweisungen auszuführen, die für das angegebene Ereignis definiert sind.                                                                                          |
+| Dateiname               | Das Steuerelement setzt seine **URL-Eigenschaft** zurück, versucht, die angegebene Datei zu öffnen, und beginnt sofort mit der Wiedergabe des neuen Streams.                                        |
+| OPENEVENT              | Puffert den zugeordneten EVENT-Typbefehl für die rechtzeitige Ausführung des EVENT-Skripts.                                                                                 |
+| SYNCHRONIZEDLYRICRIC | Der *Parameter Param* enthält den synchronisierten Text . Windows Media Player zeigt den Text im Untertitelbereich des Features **Jetzt wiedergeben an.** |
+| TEXT                   | Das -Steuerelement zeigt den zugeordneten Text im DIV an, der von *ClosedCaption* angegeben wird. **captioningID**.                                                                  |
+| URL                    | Das -Steuerelement öffnet automatisch die url, die im Standardinternetbrowser angegeben wird, wenn die *Einstellungen.* **die invokeURLs-Eigenschaft** ist auf TRUE festgelegt.                      |
 
 
 
  
 
-Sie können beliebige andere Befehls Typen einbetten, solange Sie gegenseitigen Code zur Behandlung des Befehls bereitstellen. Obwohl unbekannte Befehle vom Windows Media Player-Steuerelement ignoriert werden, werden Sie weiterhin an das **ScriptCommand** -Ereignis übergeben.
+Sie können einen beliebigen anderen Befehlstyp einbetten, solange Sie reziproken Code für die Verarbeitung des Befehls bereitstellen. Obwohl unbekannte Befehle vom Windows Media Player-Steuerelement ignoriert werden, werden sie weiterhin an das **ScriptCommand-Ereignis** übergeben.
 
-URL-Befehle, die vom Windows Media Player-Steuerelement empfangen werden, werden automatisch in Ihrem Standard Webbrowser aufgerufen, wenn die *Einstellungen*. die **invokeurls** -Eigenschaft ist auf true festgelegt. Sie können die *Einstellungen* verwenden. **defaultframe** -Eigenschaft, um den Zielframe anzugeben, in dem die Webseite angezeigt wird.
+URL-Befehle, die vom Windows Media Player-Steuerelement empfangen werden, werden automatisch in Ihrem Standardwebbrowser aufgerufen, wenn die *Einstellungen.* **die invokeURLs-Eigenschaft** ist auf TRUE festgelegt. Sie können die *Einstellungen* verwenden. **defaultFrame-Eigenschaft,** um den Zielframe anzugeben, in dem die Webseite angezeigt wird.
 
-Die an Windows Media Player gesendete URL wird relativ zur Basis-URL verarbeitet, die in den *Einstellungen* angegeben ist. **baseurl** -Eigenschaft. Die Basis-URL wird mit der relativ angegebenen URL verkettet, was zu einer vollständig angegebenen URL führt, die vom **ScriptCommand** -Ereignis als Befehlsparameter übergeben wird.
+Die an Windows Media Player gesendete URL wird relativ zur Basis-URL verarbeitet, die vom *Einstellungen* angegeben wird. **baseURL-Eigenschaft.** Die Basis-URL wird mit der relativ angegebenen URL verkettet, was zu einer vollständig angegebenen URL führt, die vom **ScriptCommand-Ereignis** als Befehlsparameter übergeben wird.
 
-Das Windows Media Player-Steuerelement verarbeitet eingehende URL-Typbefehle immer wie folgt:
+Das Windows Media Player-Steuerelement verarbeitet eingehende BEFEHLE vom Typ "URL" immer wie folgt:
 
-1.  Ein URL-Type-Befehl wird empfangen.
-2.  *Einstellungen*. **baseurl** wird verwendet, um eine vollständige URL aus der relative URL zu erstellen, die im Skript Befehl angegeben ist.
+1.  Ein URL-Typbefehl wird empfangen.
+2.  *Einstellungen*. **baseURL** wird verwendet, um eine vollständige URL aus der im Skriptbefehl angegebenen relative URL zu erstellen.
 3.  *ScriptCommand* wird aufgerufen.
-4.  Nachdem *ScriptCommand* zurückgegeben wurde, werden die *Einstellungen*. **invokeurls** wird geprüft.
-5.  Wenn *Einstellungen*. **invokeurls** ist true, und der Befehl ist ein URL-Typ, die angegebene URL wird aufgerufen. Wenn *Einstellungen*. **invokeurls** ist false, oder wenn der Befehl kein URL-Typ ist, wird der Befehl ignoriert.
+4.  Nachdem *ScriptCommand* zurückgegeben wurde, *Einstellungen*. **invokeURLs** ist aktiviert.
+5.  Wenn *Einstellungen*. **invokeURLs** ist true, und der Befehl ist ein URL-Typ. Die angegebene URL wird aufgerufen. Wenn *Einstellungen*. **invokeURLs** ist false, oder wenn der Befehl kein URL-Typ ist, wird der Befehl ignoriert.
 
-Wenn Sie eine Windows Media-Datei erstellen, können Sie angeben, in welchem Frame die neue URL angezeigt werden soll, indem Sie zwei kaufmännische und den Namen des Frames im Parameterfeld verketten. Im folgenden Beispiel werden typische *ScriptCommand* -Parameter veranschaulicht. Er gibt an, dass die URL *MyPage* im Frame " *MyFrame* " gestartet werden muss.
+Beim Erstellen einer Windows Media-Datei können Sie angeben, in welchem Frame die neue URL angezeigt wird, indem Sie zwei Amperands und den Namen des Frames im Parameterfeld verketten. Das folgende Beispiel veranschaulicht typische *ScriptCommand-Parameter.* Sie gibt an, dass die URL *mypage* im *Rahmen des Myframes* gestartet werden muss.
 
 
 ```JScript
@@ -108,9 +108,9 @@ Param = https://myweb/mypage.html&&myframe
 
 
 
-Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei gescannt wird (schnell weitergeleitet oder schnell-umgekehrt).
+Das ScriptCommand-Ereignis wird nicht aufgerufen, wenn die Datei gescannt wird (schnell weitergeleitet oder schnell umgekehrt).
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,7 +118,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -130,16 +130,16 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. URL**](player-url.md)
+[**Player.URL**](player-url.md)
 </dt> <dt>
 
-[**Settings. baseurl**](settings-baseurl.md)
+[**Einstellungen.baseURL**](settings-baseurl.md)
 </dt> <dt>
 
-[**Settings. defaultframe**](settings-defaultframe.md)
+[**Einstellungen.defaultFrame**](settings-defaultframe.md)
 </dt> <dt>
 
-[**Settings. invokeurls**](settings-invokeurls.md)
+[**Einstellungen.invokeURLs**](settings-invokeurls.md)
 </dt> </dl>
 
  

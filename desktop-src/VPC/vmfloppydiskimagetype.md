@@ -1,9 +1,9 @@
 ---
-title: Vmfloppydiskimagetype-Enumeration (vpccominterfaces. h)
-description: Gibt die Disketten Formate an.
+title: VMFloppyDiskImageType-Enumeration (VPCCOMInterfaces.h)
+description: Gibt die Diskettenformate an.
 ms.assetid: 7eb504c0-dfb7-45eb-a943-b453b5f8ca63
 keywords:
-- Vmfloppydiskimagetype-Enumeration virtueller PC
+- VMFloppyDiskImageType-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f20732e46617288602e841a1047db5db30eba5ae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2b00daad9cf9abc0f713e5f3b5f530d2facd696b6f48bb17167b0d4ddecb76d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118591435"
 ---
-# <a name="vmfloppydiskimagetype-enumeration"></a>Vmfloppydiskimagetype-Enumeration
+# <a name="vmfloppydiskimagetype-enumeration"></a>VMFloppyDiskImageType-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt die Disketten Formate an.
+Gibt die Diskettenformate an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,52 +48,52 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmFloppyDiskImage_Unknown"></span><span id="vmfloppydiskimage_unknown"></span><span id="VMFLOPPYDISKIMAGE_UNKNOWN"></span>**vmfloppydiskimage \_ unbekannt**
+<span id="vmFloppyDiskImage_Unknown"></span><span id="vmfloppydiskimage_unknown"></span><span id="VMFLOPPYDISKIMAGE_UNKNOWN"></span>**vmFloppyDiskImage \_ Unknown**
 </dt> <dd>
 
 Unbekanntes Format.
 
 </dd> <dt>
 
-<span id="vmFloppyDiskImage_LowDensity"></span><span id="vmfloppydiskimage_lowdensity"></span><span id="VMFLOPPYDISKIMAGE_LOWDENSITY"></span>**vmfloppydiskimage- \_ lowdensity**
+<span id="vmFloppyDiskImage_LowDensity"></span><span id="vmfloppydiskimage_lowdensity"></span><span id="VMFLOPPYDISKIMAGE_LOWDENSITY"></span>**vmFloppyDiskImage \_ LowDensity**
 </dt> <dd>
 
-Ein Format mit niedriger Dichte (720K).
+Ein Format mit niedriger Dichte (720.000).
 
 </dd> <dt>
 
-<span id="vmFloppyDiskImage_HighDensity"></span><span id="vmfloppydiskimage_highdensity"></span><span id="VMFLOPPYDISKIMAGE_HIGHDENSITY"></span>**vmfloppydiskimage- \_ highdensity**
+<span id="vmFloppyDiskImage_HighDensity"></span><span id="vmfloppydiskimage_highdensity"></span><span id="VMFLOPPYDISKIMAGE_HIGHDENSITY"></span>**vmFloppyDiskImage \_ HighDensity**
 </dt> <dd>
 
 Ein Format mit hoher Dichte (1,44 MB).
 
 </dd> <dt>
 
-<span id="vmFloppyDiskImage_DMF"></span><span id="vmfloppydiskimage_dmf"></span><span id="VMFLOPPYDISKIMAGE_DMF"></span>**vmfloppydiskimage- \_ DMF**
+<span id="vmFloppyDiskImage_DMF"></span><span id="vmfloppydiskimage_dmf"></span><span id="VMFLOPPYDISKIMAGE_DMF"></span>**vmFloppyDiskImage \_ DMF**
 </dt> <dd>
 
-Ein Verteilungs Medienformat (1,68 MB).
+Ein Verteilungsmedienformat (1,68 MB).
 
 </dd> <dt>
 
-<span id="vmFloppyDiskImage_LowDensitySingleSided"></span><span id="vmfloppydiskimage_lowdensitysinglesided"></span><span id="VMFLOPPYDISKIMAGE_LOWDENSITYSINGLESIDED"></span>**vmfloppydiskimage \_ lowdensitysingleseitiges**
+<span id="vmFloppyDiskImage_LowDensitySingleSided"></span><span id="vmfloppydiskimage_lowdensitysinglesided"></span><span id="VMFLOPPYDISKIMAGE_LOWDENSITYSINGLESIDED"></span>**vmFloppyDiskImage \_ LowDensitySingleSided**
 </dt> <dd>
 
 Ein einseitiges Format mit niedriger Dichte.
 
 </dd> <dt>
 
-<span id="vmFloppyDiskImage_MediumDensity"></span><span id="vmfloppydiskimage_mediumdensity"></span><span id="VMFLOPPYDISKIMAGE_MEDIUMDENSITY"></span>**"vmfloppydiskimage" \_ mediumschlag Density**
+<span id="vmFloppyDiskImage_MediumDensity"></span><span id="vmfloppydiskimage_mediumdensity"></span><span id="VMFLOPPYDISKIMAGE_MEDIUMDENSITY"></span>**vmFloppyDiskImage \_ MediumDensity**
 </dt> <dd>
 
-Ein mittelgroßes Dichte Format (1,2 MB).
+Ein Format mittlerer Dichte (1,2 MB).
 
 </dd> <dt>
 
-<span id="vmFloppyDiskImage_HighDensityMSS"></span><span id="vmfloppydiskimage_highdensitymss"></span><span id="VMFLOPPYDISKIMAGE_HIGHDENSITYMSS"></span>**vmfloppydiskimage \_ highdensitymss**
+<span id="vmFloppyDiskImage_HighDensityMSS"></span><span id="vmfloppydiskimage_highdensitymss"></span><span id="VMFLOPPYDISKIMAGE_HIGHDENSITYMSS"></span>**vmFloppyDiskImage \_ HighDensityMSS**
 </dt> <dd>
 
-Eine MSS (Multiple sektorsize) mit hoher Dichte, die vom erweiterten Verteilungs Format (Xdf) verwendet wird.
+Eine MSS (Multiple Sector Size) mit hoher Dichte, die vom eXtended Distribution Format (XDF) verwendet wird.
 
 </dd> </dl>
 
@@ -103,11 +103,11 @@ Eine MSS (Multiple sektorsize) mit hoher Dichte, die vom erweiterten Verteilungs
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
@@ -115,10 +115,10 @@ Eine MSS (Multiple sektorsize) mit hoher Dichte, die vom erweiterten Verteilungs
 
 <dl> <dt>
 
-[**Ivmvirtualpc:: kreatefloppydiskimage**](ivmvirtualpc-createfloppydiskimage.md)
+[**IVMVirtualPC::CreateFloppyDiskImage**](ivmvirtualpc-createfloppydiskimage.md)
 </dt> <dt>
 
-[**Ivmvirtualpc:: getfloppydiskimagetype**](ivmvirtualpc-getfloppydiskimagetype.md)
+[**IVMVirtualPC::GetFloppyDiskImageType**](ivmvirtualpc-getfloppydiskimagetype.md)
 </dt> </dl>
 
  

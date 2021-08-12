@@ -1,32 +1,32 @@
 ---
-title: Aktivieren von PNP für Geräte
-description: Aktivieren von PNP für Geräte
+title: Aktivieren von PnP für Geräte
+description: Aktivieren von PnP für Geräte
 ms.assetid: 510237a9-2b74-4c2e-ad45-3f45117289a6
 keywords:
-- Windows Media Device Manager, PNP-Geräte
-- Device Manager, PNP-Geräte
-- Programmier Handbuch, PNP-Geräte
-- Dienstanbieter, PNP-Geräte
+- Windows Medien Geräte-Manager,PnP-Geräte
+- Geräte-Manager,PnP-Geräte
+- Programmierhandbuch,PnP-Geräte
+- Dienstanbieter,PnP-Geräte
 - Erstellen von Dienstanbietern, PnP-Geräten
-- PNP-Geräte
+- PnP-Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d44c7ccdfd29453c1ab28e970c1b054d1278e620
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e574aa0d5462c2fcbb0592e9d3faaf927cd7e5213e6eec3d8e7f016eabfb7abc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584998"
 ---
-# <a name="enabling-pnp-for-devices"></a>Aktivieren von PNP für Geräte
+# <a name="enabling-pnp-for-devices"></a>Aktivieren von PnP für Geräte
 
-Windows Media Device Manager überwacht die Eingangs-und Entfernungs Benachrichtigungen von Geräten, die eine Portable Audioplayer-Geräteschnittstelle ankündigen. Beim Eintreffen eines solchen Geräts fragt Windows Media Device Manager einen Geräteparameter mit dem Namen " *wmdmspclsid* " für die Klassen-ID des Dienstanbieters ab, der für dieses Gerät zuständig ist. Windows Media Device Manager ruft [**IMDServiceProvider2:: anatedevice**](/windows/desktop/api/mswmdm/nf-mswmdm-imdserviceprovider2-createdevice) für diesen Dienstanbieter auf, um ein Geräte Objekt zu erstellen, das für die Anwendung als [**iwmdmdevice**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice) -Objekt verfügbar gemacht wird.
+Windows Medien Geräte-Manager überwacht Benachrichtigungen zum Ein- und Entfernen von Geräten, die eine Portable Audio Player-Geräteschnittstelle anknten. Bei der Ankunft eines solchen Geräts fragt Windows Media Geräte-Manager einen Geräteparameter namens *WMDMSPCLSID* nach der Klassen-ID des für dieses Gerät verantwortlichen Dienstanbieters ab. Windows Media Geräte-Manager ruft [**IMDServiceProvider2::CreateDevice**](/windows/desktop/api/mswmdm/nf-mswmdm-imdserviceprovider2-createdevice) für diesen Dienstanbieter auf, um ein Geräteobjekt zu erstellen, das für die Anwendung als [**IWMDMDevice-Objekt verfügbar**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice) gemacht wird.
 
-Ein Dienstanbieter kann entweder PNP-Geräte oder nicht-PNP-Geräte verarbeiten. Beide Typen können nicht verarbeitet werden.
+Ein Dienstanbieter kann entweder PnP-Geräte oder Nicht-PnP-Geräte verarbeiten. Er kann nicht beide Typen verarbeiten.
 
-Damit ein Gerät mit dem vorangehenden Mechanismus funktioniert (und somit die Eingangs-und Entfernungs Benachrichtigungen für das Gerät unter Windows Media Device Manager-Anwendungen) aktivieren kann, müssen die folgenden Anforderungen erfüllt sein:
+Damit ein Gerät mit dem oben genannten Mechanismus funktioniert (und somit Benachrichtigungen zum Ein- und Entfernen des Geräts unter Windows Media Geräte-Manager-Anwendungen) aktiviert, müssen die folgenden Anforderungen erfüllt sein:
 
--   Der Gerätetreiber dieses Geräts muss die Windows Media Device Manager portablen Audioplayer-Geräteschnittstelle ankündigen. Die GUID für diese Geräteschnittstelle wird wie folgt definiert:
+-   Der Gerätetreiber dieses Geräts muss die Geräteschnittstelle Windows Media Geräte-Manager Portable Audio Player ankn.) Die GUID für diese Geräteschnittstelle ist wie die folgenden definiert:
 
     ```
     {0xf33fdc04, 0xd1ac, 0x4e8e, {0x9a, 0x30, 0x19, 0xbb, 0xd4, 0xb1, 0x8, 0xae} }
@@ -35,13 +35,13 @@ Damit ein Gerät mit dem vorangehenden Mechanismus funktioniert (und somit die E
     
 
     > [!Note]  
-    > Ein Gerät sollte diese Schnittstelle nicht ankündigen, wenn das Gerät die Volume-Schnittstelle (als volumeclassguid oder GUID \_ devinterface- \_ Volume in winioctl. h definiert) ankündigt. Wenn das Gerät die volumeschnittstelle ankündigt, ist es unter Windows Media Device Manager bereits PNP-fähig.
+    > Ein Gerät sollte diese Schnittstelle nicht anbenennen, wenn das Gerät die Volume-Schnittstelle anklasst (definiert als VolumeClassGuid oder GUID \_ DEVINTERFACE \_ VOLUME in winioctl.h). Wenn das Gerät die Volumeschnittstelle ank angekündigt, ist sie bereits PnP-fähig unter Windows Medienschnittstelle Geräte-Manager.
 
-     
+     
 
-    -und/oder-
+    -AND/OR-
 
-    Ein neuer Registrierungs Unterschlüssel für den Dienstanbieter muss innerhalb des unter Schlüssels HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows Media Device Manager \\ knowndevices erstellt werden. Dieser Schlüssel sollte den Namen Ihres Dienstanbieters aufweisen und über die folgenden beiden REG SZ- \_ Wert Einträge verfügen:
+    Ein neuer Registrierungsunterschlüssel für den Dienstanbieter muss im Unterschlüssel HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Windows Media Geräte-Manager \_ \\ \\ \\ \\ KnownDevices erstellt werden. Dieser Schlüssel muss den Namen Ihres Dienstanbieters und die folgenden beiden Reg \_ SZ-Werteinträge enthalten:
 
     ```
     DeviceInterface         {25DBCE51-6C8F-4A72-8A6D-B54C2B4FC835}
@@ -50,15 +50,15 @@ Damit ein Gerät mit dem vorangehenden Mechanismus funktioniert (und somit die E
 
     
 
--   Das Gerät muss über einen Geräteparameter mit dem Namen "wmdmspclsid" verfügen. Der Wert dieses Parameters sollte als CLSID des Dienstanbieters in Form einer Zeichenfolge festgelegt werden. Weitere Informationen zu Geräteparametern finden Sie unter [Geräteparameter](device-parameters.md).
+-   Das Gerät muss über einen Geräteparameter mit dem Namen WMDMSPCLSID verfügen. Der Wert dieses Parameters sollte als CLSID des Dienstanbieters in einer Zeichenfolgenform festgelegt werden. Weitere Informationen zu Geräteparametern finden Sie unter [Geräteparameter.](device-parameters.md)
 
     > [!Note]  
     > Der Parameterwert muss die CLSID und nicht die ProgID des Dienstanbieters sein.
 
-     
+     
 
 -   Der Dienstanbieter für dieses Gerät muss die IMDServiceProvider2-Schnittstelle implementieren.
--   Der Dienstanbieter Schlüssel unter HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows Media Device Manager \\ Plugins \\ SP \\ spname muss den folgenden DWORD-Wert enthalten.
+-   Der Dienstanbieterschlüssel unter HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Windows Media Geräte-Manager Plugins SP SPName muss den folgenden \_ \\ \\ \\ \\ \\ \\ DWORD-Wert enthalten.
     ```
     PnPAware    1
     ```
@@ -72,9 +72,9 @@ Damit ein Gerät mit dem vorangehenden Mechanismus funktioniert (und somit die E
 [**Erstellen eines Dienstanbieters**](creating-a-service-provider.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

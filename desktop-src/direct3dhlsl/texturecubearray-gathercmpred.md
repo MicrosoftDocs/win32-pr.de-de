@@ -1,9 +1,9 @@
 ---
-title: 'Texturecubearray:: texturecubearray gathercmpred-Methoden'
-description: 'Vergleicht und vergleicht eine Textur und gibt die rote Komponente zurück. | Texturecubearray:: texturecubearray gathercmpred-Methoden'
+title: TextureCubeArray::TextureCubeArray GatherCmpRed-Methoden
+description: Lädt eine Textur und vergleicht sie und gibt die rote Komponente zurück. | TextureCubeArray::TextureCubeArray GatherCmpRed-Methoden
 ms.assetid: FD87AA60-C99D-404E-AA28-096240A2E757
 keywords:
-- Gathercmpred-Methoden HLSL
+- GatherCmpRed-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,32 +12,32 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: b1e6e05d7ca6a49d3386eae40092083b2a8e76f9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 16733f393be44842777b8e11efa7f122fa6f8b324ba1abe9e4383910a018a777
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283094"
 ---
-# <a name="texturecubearraygathercmpred-methods"></a>Texturecubearray:: gathercmpred-Methoden
+# <a name="texturecubearraygathercmpred-methods"></a>TextureCubeArray::GatherCmpRed-Methoden
 
-Vergleicht und vergleicht eine Textur und gibt die rote Komponente zurück.
+Lädt eine Textur und vergleicht sie und gibt die rote Komponente zurück.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                  | BESCHREIBUNG                                                                                                    |
+| Methode                                                                                  | Beschreibung                                                                                                    |
 |:----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
-| [**Gathercmpred (S, float, float, uint)**](tcubearray-gathercmpred-s-float-float-uint-.md) | Vergleicht und vergleicht eine Textur und gibt die rote Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
+| [**GatherCmpRed(S,float,float,uint)**](tcubearray-gathercmpred-s-float-float-uint-.md) | Lädt eine Textur und vergleicht sie und gibt die rote Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> </dl>
 
  

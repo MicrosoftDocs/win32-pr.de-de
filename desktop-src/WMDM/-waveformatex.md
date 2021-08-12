@@ -1,9 +1,9 @@
 ---
-title: _WAVEFORMATEX Struktur
+title: _WAVEFORMATEX-Struktur
 description: Die \_WAVEFORMATEX-Struktur definiert das Format von Waveform-Audiodaten.
 ms.assetid: 2128f07a-4858-49b7-b031-16d4a84c9d32
 keywords:
-- _WAVEFORMATEX Struktur von Windows-Medien Device Manager
+- _WAVEFORMATEX Struktur von Windows Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d1d0ede83e22033aee8f18d11b6230e471e0dfe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e149608d740df6df40b39b64b09ac11837a721b5b4844f1a73eb52e1b5cea479
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118586745"
 ---
-# <a name="_waveformatex-structure"></a>\_WaveFormatEx-Struktur
+# <a name="_waveformatex-structure"></a>\_WAVEFORMATEX-Struktur
 
-Die **\_ WaveFormatEx** -Struktur definiert das Format von Waveform-Audiodaten.
+Die **\_ WAVEFORMATEX-Struktur** definiert das Format von Waveform-Audiodaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,49 +46,49 @@ typedef struct _tWAVEFORMATEX {
 
 <dl> <dt>
 
-**wformattag**
+**wFormatTag**
 </dt> <dd>
 
-Muss auf ein Format oder auf Formate festgelegt werden, die vom Gerät unterstützt werden. Beachten Sie, dass in früheren Versionen des Windows Media-Device Manager die Verwendung von WMDM \_ Wave \_ Format all empfohlen wird \_ , um die Unterstützung für alle Formate anzugeben. Dies wird jedoch nicht mehr empfohlen, da verschiedene Medienspieler dies auf unterschiedliche Weise interpretieren und nur wenige Geräte das Dateiformat wirklich wiedergeben können. Es wird nun empfohlen, die WMDM- \_ \_ Enumerationswerte \_ gültige \_ Werte \_ für einen beliebigen Wert der Enumeration für [**\_ \_ \_ gültige \_ Werte \_ des WMDM**](wmdm-enum-prop-valid-values-form.md) -Enumerationswerts zu verwenden, oder Sie sollten einen Bereich von Formaten mit der [**WMDM- \_ \_ Werte \_ Bereichs**](wmdm-prop-values-range.md) Struktur angeben.
+Muss auf ein Format oder Formate festgelegt werden, die vom Gerät unterstützt werden. Beachten Sie, dass frühere Versionen des Windows Media Geräte-Manager WMDM WAVE FORMAT ALL empfohlen werden, um unterstützung für \_ \_ alle Formate \_ anzugeben. Dies wird jedoch nicht mehr empfohlen, da verschiedene Media Player dies auf unterschiedliche Weise interpretieren, und nur wenige Geräte können wirklich jedes Dateiformat wiedererspielen. Es wird jetzt empfohlen, den WMDM \_ ENUM PROP VALID VALUES ANY-Wert der \_ \_ \_ \_ [**WMDM \_ ENUM \_ PROP VALID VALUES \_ \_ \_ FORM-Enumeration**](wmdm-enum-prop-valid-values-form.md) [**\_ \_ \_**](wmdm-prop-values-range.md) zu verwenden oder besser noch einen Bereich von Formaten mit der WMDM PROP VALUES RANGE-Struktur anzugeben.
 
 </dd> <dt>
 
-**nchannels**
+**nChannels**
 </dt> <dd>
 
-Anzahl von Kanälen in den Waveform-Audiodaten. Die Monale Daten verwenden einen Kanal, und Stereodaten verwenden zwei Kanäle.
+Anzahl der Kanäle in den Waveform-Audiodaten. Atururale Daten verwenden einen Kanal, und Stereodaten verwenden zwei Kanäle.
 
 </dd> <dt>
 
-**nsamplespersec**
+**nSamplesPerSec**
 </dt> <dd>
 
-Die Stichprobenrate in Samplings pro Sekunde (Hertz), bei der jeder Kanal wiedergegeben oder aufgezeichnet werden muss. Allgemeine Werte für **nsamplespersec** sind 8,0 Kilohertz (kHz), 11,025 kHz, 22,05 kHz und 44,1 kHz.
+Stichprobenrate in Stichproben pro Sekunde (Hertz), mit der jeder Kanal abgespielt oder aufgezeichnet werden muss. Allgemeine Werte für **nSamplesPerSec** sind 8,0 Kilohertz (kHz), 11,025 kHz, 22,05 kHz und 44,1 kHz.
 
 </dd> <dt>
 
-**navgbytespersec**
+**nAvgBytesPerSec**
 </dt> <dd>
 
-Erforderliche durchschnittliche Datenübertragungsrate für das Formattag (in Bytes pro Sekunde). Wiedergabe-und Aufzeichnungssoftware kann die Puffergrößen mit dem **navgbytespersec** -Member schätzen.
+Erforderliche durchschnittliche Datenübertragungsrate für das Formattag in Bytes pro Sekunde. Wiedergabe- und Aufzeichnungssoftware kann Puffergrößen mithilfe des **nAvgBytesPerSec-Mitglieds** schätzen.
 
 </dd> <dt>
 
 **nBlockAlign**
 </dt> <dd>
 
-Block Ausrichtung (in Bytes). Die Block Ausrichtung ist die minimale unteilbare Einheit von Daten für den Formattyp " **wformattag** ". Wiedergabe-und Aufzeichnungssoftware muss ein Vielfaches von **nBlockAlign** -Bytes an Daten gleichzeitig verarbeiten. Von einem Gerät geschriebene und gelesene Daten müssen immer am Anfang eines-Blocks gestartet werden. Beispielsweise ist es nicht möglich, in der Mitte eines Beispiels (d. h. an einer Grenze, die nicht Block bündig ist) die Wiedergabe von PCM-Daten zu starten.
+Blockausrichtung in Bytes. Die Blockausrichtung ist die minimale atomische Dateneinheit für den **wFormatTag-Formattyp.** Wiedergabe- und Aufzeichnungssoftware muss ein Vielfaches von **nBlockAlign-Datenbytes** gleichzeitig verarbeiten. Von einem Gerät geschriebene und gelesene Daten müssen immer am Anfang eines Blocks beginnen. Beispielsweise ist es nicht möglich, die Wiedergabe von PCM-Daten in der Mitte eines Beispiels richtig zu starten (d. h. an einer Grenze, die nicht blockbündig ist).
 
 </dd> <dt>
 
-**wbitspersample**
+**wBitsPerSample**
 </dt> <dd>
 
-Bits pro Sample für den Formattyp " **wformattag** ".
+Bits pro Beispiel für den **Formattyp wFormatTag.**
 
 </dd> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
 Dieser Member wird ignoriert.
@@ -101,7 +101,7 @@ Dieser Member wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 
@@ -109,25 +109,25 @@ Dieser Member wird ignoriert.
 
 <dl> <dt>
 
-[**Imdspdevice:: getformatsupport**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspdevice-getformatsupport)
+[**IMDSPDevice::GetFormatSupport**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspdevice-getformatsupport)
 </dt> <dt>
 
-[**Imdspstorage:: anatestorage**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-createstorage)
+[**IMDSPStorage::CreateStorage**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-createstorage)
 </dt> <dt>
 
-[**Imdspstorage:: GetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-getattributes)
+[**IMDSPStorage::GetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-getattributes)
 </dt> <dt>
 
-[**Iwmdmdevice:: getformatsupport**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice-getformatsupport)
+[**IWMDMDevice::GetFormatSupport**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice-getformatsupport)
 </dt> <dt>
 
-[**Iwmdmoperation:: getobjectattributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation-getobjectattributes)
+[**IWMDMOperation::GetObjectAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation-getobjectattributes)
 </dt> <dt>
 
-[**Iwmdmoperation:: "abtobjectattributes"**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation-setobjectattributes)
+[**IWMDMOperation::SetObjectAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation-setobjectattributes)
 </dt> <dt>
 
-[**Iwmdmstorage:: GetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-getattributes)
+[**IWMDMStorage::GetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-getattributes)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

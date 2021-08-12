@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. gainLevel4
-description: Das gainLevel4-Attribut gibt die Gewinn Ebene von Band 4 an oder ruft Sie ab.
+title: EQUALIZERSETTINGS.gainLevel4
+description: Das gainLevel4-Attribut gibt die Verstärkungsstufe von Band 4 an oder ruft sie ab.
 ms.assetid: 01383171-f991-4d09-858a-ce21ce93e14e
 keywords:
-- Equalizersettings. gainLevel4 Windows Media Player
+- EQUALIZERSETTINGS.gainLevel4 Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bea5359a9dae8bac12f89effa8afbeceaef9f9cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7b1479d1be95895f124c5150d17a281fec5fc95fcbbedd65ca2ce9887678fae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118578167"
 ---
-# <a name="equalizersettingsgainlevel4"></a>Equalizersettings. gainLevel4
+# <a name="equalizersettingsgainlevel4"></a>EQUALIZERSETTINGS.gainLevel4
 
-Das **gainLevel4** -Attribut gibt die Gewinn Ebene von Band 4 an oder ruft Sie ab.
+Das **gainLevel4-Attribut** gibt die Verstärkungsstufe von Band 4 an oder ruft sie ab.
 
 ``` syntax
         elementID.gainLevel4
@@ -29,11 +29,11 @@ Das **gainLevel4** -Attribut gibt die Gewinn Ebene von Band 4 an oder ruft Sie a
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Wert, der normalerweise zwischen 20 und + 20 liegt.  Der Standardwert ist 0 (null).
+Dieses Attribut ist eine Lese-/Schreibnummer (**float**), deren Wert normalerweise zwischen 20 und +20 liegt.  Sie hat den Standardwert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit diesem Attribut wird der Teil des Frequenzbereichs für die Audiofrequenz angepasst, der sich auf 250 Hz konzentriert.
+Dieses Attribut passt den Teil des Audiofrequenzspektrums an, der auf 250Hz zentriert ist.
 
 Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
@@ -43,7 +43,7 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -51,10 +51,10 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. Erwerbs Stufen**](equalizersettings-gainlevels.md)
+[**EQUALIZERSETTINGS. gainLevels**](equalizersettings-gainlevels.md)
 </dt> </dl>
 
  

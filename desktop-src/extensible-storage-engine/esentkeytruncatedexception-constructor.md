@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentkeytruneredexception-Konstruktor'
-title: Esentkeytruneredexception-Konstruktor
+description: 'Weitere Informationen zu: EsentKeyTruncatedException-Konstruktor'
+title: EsentKeyTruncatedException-Konstruktor
 TOCTitle: 'EsentKeyTruncatedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentKeyTruncatedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentkeytruncatedexception.esentkeytruncatedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 26571c95c810b9b89005a212f35d265c5968ce7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aae4fd709cbb956e8e59776bcf242f87c9deb1ee4fd53b653a4d9a71f5019d90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118264753"
 ---
-# <a name="esentkeytruncatedexception-constructor"></a>Esentkeytruneredexception-Konstruktor
+# <a name="esentkeytruncatedexception-constructor"></a>EsentKeyTruncatedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentkeytruneredexception-Klasse.
+Initialisiert eine neue Instanz der EsentKeyTruncatedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentKeyTruncatedException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentkeytruneredexception-Klasse](./esentkeytruncatedexception-class.md)
+[EsentKeyTruncatedException-Klasse](./esentkeytruncatedexception-class.md)
 
-[Esentkeytruneredexception-Elemente](./esentkeytruncatedexception-members.md)
+[EsentKeyTruncatedException-Member](./esentkeytruncatedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,11 +1,11 @@
 ---
 title: Win32_TerminalServiceToSetting-Klasse
-description: Stellt die Zuordnung zwischen einer Instanz der Win32 \_ Terminalservice-Klasse und der Einstellung einer bestimmten Win32 \_ terminalservicesetts-Eigenschaft dar.
+description: Stellt die Zuordnung zwischen einer Instanz der Win32 \_ TerminalService-Klasse und der Einstellung einer bestimmten Win32 \_ TerminalServiceSetting-Eigenschaft dar.
 ms.assetid: 4c206812-7549-4410-b6ba-1163f20d2bee
 ms.tgt_platform: multiple
 keywords:
-- Win32_TerminalServiceToSetting-Klasse Remotedesktopdienste
-- Win32_TerminalServiceToSetting Klasse Remotedesktopdienste, beschrieben
+- Win32_TerminalServiceToSetting-Klassen-Remotedesktopdienste
+- Win32_TerminalServiceToSetting-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d37a255b0a894ab257166f17c765f009d33b075
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 658f6a91d256806af7740e5e389523e2257e9b02b96e6cfff4b26b109a487cf9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118603901"
 ---
-# <a name="win32_terminalservicetosetting-class"></a>Win32 \_ terminalservicedesetting-Klasse
+# <a name="win32_terminalservicetosetting-class"></a>Win32 \_ TerminalServiceToSetting-Klasse
 
-Die **Win32 \_ terminalservicedesetting** -WMI-Klasse stellt die Zuordnung zwischen einer Instanz der [**Win32 \_ Terminalservice**](win32-terminalservice.md) -Klasse und der Einstellung einer bestimmten [**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md) -Eigenschaft dar. Zu den Konfigurationseinstellungen gehören Remotedesktop-Sitzungshost (RD-Sitzungshost) Server Modus, Lizenzierung, aktiver Desktop, Berechtigungs Funktion, Löschen von temporären Ordnern und temporären Ordnern pro Sitzung.
+Die WMI-Klasse **Win32 \_ TerminalServiceToSetting** stellt die Zuordnung zwischen einer Instanz der [**Win32 \_ TerminalService-Klasse**](win32-terminalservice.md) und der Einstellung einer bestimmten [**Win32 \_ TerminalServiceSetting-Eigenschaft**](win32-terminalservicesetting.md) dar. Zu den Konfigurationseinstellungen gehören Remotedesktop-Sitzungshost Servermodus (RD-Sitzungshost), Lizenzierung, Active Desktop, Berechtigungsfunktion, Löschen temporärer Ordner und temporäre Ordner pro Sitzung.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht und umfasst alle definierten Eigenschaften.
+Die folgende Syntax wird aus MOF-Code vereinfacht und enthält alle definierten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,29 +54,29 @@ class Win32_TerminalServiceToSetting : CIM_ElementSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ terminalservicetosetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ TerminalServiceToSetting-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ terminalservicedesetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ TerminalServiceToSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilige Zeichenfolge) des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -85,7 +85,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -100,7 +100,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ Terminalservice**
+Datentyp: **Win32 \_ TerminalService**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -109,23 +109,23 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Stellt die Instanz von [**Win32 \_ Terminalservice**](win32-terminalservice.md) dar, die mit der **Setting** -Eigenschaft konfiguriert werden kann.
+Stellt die Instanz von [**Win32 \_ TerminalService**](win32-terminalservice.md) dar, die mit der **Setting-Eigenschaft** konfiguriert werden kann.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -134,7 +134,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -149,7 +149,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ terminalservicesetts**
+Datentyp: **Win32 \_ TerminalServiceSetting**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -165,16 +165,16 @@ Stellt die Remotedesktopdienste Konfigurationseinstellungen dar, die auf den zug
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -238,9 +238,9 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -251,25 +251,25 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Element Setting**](cim-elementsetting.md)
+[**CIM \_ ElementSetting**](cim-elementsetting.md)
 </dt> <dt>
 
-[**Win32 \_ Terminalservice**](win32-terminalservice.md)
+[**Win32 \_ TerminalService**](win32-terminalservice.md)
 </dt> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> <dt>
 
-[**CIM- \_ Element Setting**](/windows/desktop/CIMWin32Prov/cim-elementsetting)
+[**CIM \_ ElementSetting**](/windows/desktop/CIMWin32Prov/cim-elementsetting)
 </dt> </dl>
 
  

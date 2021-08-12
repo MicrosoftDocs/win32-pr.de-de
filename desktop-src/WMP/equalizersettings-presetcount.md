@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. presetcount
-description: Mit dem presetcount-Attribut wird die Anzahl der verfügbaren Voreinstellungen abgerufen.
+title: EQUALIZERSETTINGS.presetCount
+description: Das attribut presetCount ruft die Anzahl der verfügbaren Voreinstellungen ab.
 ms.assetid: 6186746c-294f-486e-b054-969d235b7e6c
 keywords:
-- Ausgleichs Einstellungen. presetcount Windows Media Player
+- EQUALIZERSETTINGS.presetCount Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0db226e324fb41bfded4e4c7cba0384ef2601456
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2f369bfaa4d8c5480c34a69bf5ad3de2054a2edb8051863ac1223c8b67d0c26a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577975"
 ---
-# <a name="equalizersettingspresetcount"></a>Equalizersettings. presetcount
+# <a name="equalizersettingspresetcount"></a>EQUALIZERSETTINGS.presetCount
 
-Mit dem **presetcount** -Attribut wird die Anzahl der verfügbaren Voreinstellungen abgerufen.
+Das **attribut presetCount** ruft die Anzahl der verfügbaren Voreinstellungen ab.
 
 ``` syntax
         elementID.presetCount
@@ -29,7 +29,7 @@ Mit dem **presetcount** -Attribut wird die Anzahl der verfügbaren Voreinstellun
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. Sättigung
-description: Das Sättigungs Attribut gibt den Sättigungswert der ButtonGroup-Bilder an oder ruft ihn ab.
+title: BUTTONGROUP.saturation
+description: Das Sättigungsattribut gibt den Sättigungswert der BUTTONGROUP-Bilder an oder ruft den Sättigungswert ab.
 ms.assetid: bfd957f0-8201-4a4f-9162-a397ed97c747
 keywords:
-- ButtonGroup. Sättigung Windows Media Player
+- BUTTONGROUP.saturation Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8de7dd39eb0b1a9e3f24031e24851eba22c6c6a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90d3579ac8109cb56e56c78a07a8f53e4cd7c017a695b6018f6a2ad41f703035
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581302"
 ---
-# <a name="buttongroupsaturation"></a>ButtonGroup. Sättigung
+# <a name="buttongroupsaturation"></a>BUTTONGROUP.saturation
 
-Das **Sättigungs** Attribut gibt den Sättigungswert der **ButtonGroup** -Bilder an oder ruft ihn ab.
+Das **Sättigungsattribut** gibt den Sättigungswert der **BUTTONGROUP-Bilder** an oder ruft den Sättigungswert ab.
 
 ``` syntax
         elementID.saturation
@@ -29,11 +29,11 @@ Das **Sättigungs** Attribut gibt den Sättigungswert der **ButtonGroup** -Bilde
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Wert zwischen 0,0 und 2,0 mit dem Standardwert 1,0. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit einem Wert von 0,0 bis 2,0 mit einem Standardwert von 1,0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ändert den Sättigungswert der Bilder, die durch die Attribute **disabledImage**, **downImage**, **hoverdownimage**, **hoverimage** und **Image** angegeben werden, wenn Sie angegeben wurden und Sie auf 8-Bit-BMP-Bilder verweisen.
+Dieses Attribut ändert den Sättigungswert der Bilder, die von den Attributen **disabledImage,** **downImage,** **hoverDownImage,** **hoverImage** und **image** angegeben werden, wenn sie angegeben wurden und auf 8-Bit-BMP-Bilder verweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dieses Attribut ändert den Sättigungswert der Bilder, die durch die Attribute 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
 
 
 
@@ -49,25 +49,25 @@ Dieses Attribut ändert den Sättigungswert der Bilder, die durch die Attribute 
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonGroup. disabledImage**](buttongroup-disabledimage.md)
+[**BUTTONGROUP.disabledImage**](buttongroup-disabledimage.md)
 </dt> <dt>
 
-[**ButtonGroup. downImage**](buttongroup-downimage.md)
+[**BUTTONGROUP.downImage**](buttongroup-downimage.md)
 </dt> <dt>
 
-[**ButtonGroup. hoverdownimage**](buttongroup-hoverdownimage.md)
+[**BUTTONGROUP.hoverDownImage**](buttongroup-hoverdownimage.md)
 </dt> <dt>
 
-[**ButtonGroup. hoverimage**](buttongroup-hoverimage.md)
+[**BUTTONGROUP.hoverImage**](buttongroup-hoverimage.md)
 </dt> <dt>
 
-[**ButtonGroup. hueshift**](buttongroup-hueshift.md)
+[**BUTTONGROUP.hueShift**](buttongroup-hueshift.md)
 </dt> <dt>
 
-[**ButtonGroup. Image**](buttongroup-image.md)
+[**BUTTONGROUP.image**](buttongroup-image.md)
 </dt> </dl>
 
  

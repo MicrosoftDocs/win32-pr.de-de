@@ -1,9 +1,9 @@
 ---
-title: Querylist-Element
-description: Der Stamm Knoten der Abfrage.
+title: QueryList-Element
+description: Der Stammknoten der Abfrage.
 ms.assetid: 944170c6-2b97-4a80-81b9-631484f973f1
 keywords:
-- Querylist-Element EventLog
+- QueryList-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 02aa303d0d3eb016a73a4df338cabe2143b018e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e340ece78b0631b09ba8ff2588a272bb3955e6d49a3906f5f41a5626dd51f34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118587717"
 ---
-# <a name="querylist-element"></a>Querylist-Element
+# <a name="querylist-element"></a>QueryList-Element
 
-Der Stamm Knoten der Abfrage.
+Der Stammknoten der Abfrage.
 
 ``` syntax
 <xs:element name="QueryList"
@@ -36,8 +36,8 @@ Der Stamm Knoten der Abfrage.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

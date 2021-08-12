@@ -1,7 +1,7 @@
 ---
-description: Legt die linke Seite "World-View Transform" für ein Sprite fest. Ein Aufrufe dieser Methode ist vor dem abgleichen oder Sortieren von Sprites erforderlich.
+description: Legt die linkshändige Weltansichtstransformation für ein Sprite fest. Ein Aufruf dieser Methode ist erforderlich, bevor Sprites umgezweigt oder sortiert werden.
 ms.assetid: 70f1181d-41f9-4663-91e0-8df94bce4eed
-title: 'ID3DXSprite:: SetWorldViewLH-Methode (D3dx9core. h)'
+title: ID3DXSprite::SetWorldViewLH-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 397c3803f6d4e445f74a8b24a61e86e72e471648
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 67ee276b90629a18f93bd9a26879e8a7ad62d71ae46baf2d2c0a6bfba82a53a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118292572"
 ---
-# <a name="id3dxspritesetworldviewlh-method"></a>ID3DXSprite:: SetWorldViewLH-Methode
+# <a name="id3dxspritesetworldviewlh-method"></a>ID3DXSprite::SetWorldViewLH-Methode
 
-Legt die linke Seite "World-View Transform" für ein Sprite fest. Ein Aufrufe dieser Methode ist vor dem abgleichen oder Sortieren von Sprites erforderlich.
+Legt die linkshändige Weltansichtstransformation für ein Sprite fest. Ein Aufruf dieser Methode ist erforderlich, bevor Sprites umgezweigt oder sortiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetWorldViewLH(
 
 <dl> <dt>
 
-*pworld* \[ in\]
+*pWorld* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Zeiger auf ein [**D3DXMATRIX**](d3dxmatrix.md) -Wert, der eine Welt Transformation enthält. Wenn der Wert **null** ist, wird die Identitätsmatrix für die weltweite Transformation verwendet.
+Zeiger auf eine [**D3DXMATRIX,**](d3dxmatrix.md) die eine Welttransformation enthält. Bei **NULL** wird die Identitätsmatrix für die Welttransformation verwendet.
 
 </dd> <dt>
 
-*PView* \[ in\]
+*pView* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Zeiger auf ein [**D3DXMATRIX**](d3dxmatrix.md) -Wert, der eine Ansichts Transformation enthält. Wenn der Wert **null** ist, wird die Identitätsmatrix für die Ansichts Transformation verwendet.
+Zeiger auf eine [**D3DXMATRIX, die**](d3dxmatrix.md) eine Ansichtstransformation enthält. Bei **NULL** wird die Identitätsmatrix für die Ansichtstransformation verwendet.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Zeiger auf ein [**D3DXMATRIX**](d3dxmatrix.md) -Wert, der eine Ansichts Transfor
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Aufrufen dieser Methode (oder an [**ID3DXSprite:: SetWorldViewRH**](id3dxsprite--setworldviewrh.md)) ist erforderlich, wenn das Sprite mit dem [D3DXSprite \_ \_ Billboard](d3dxsprite.md), D3DXSprite \_ \_ Sort \_ Tiefe \_ frontbackback oder D3DXSprite \_ \_ Sort \_ Tiefe \_ backbackfront-Flagwert in [**ID3DXSprite:: begin**](id3dxsprite--begin.md)gerendert wird.
+Ein Aufruf dieser Methode (oder von [**ID3DXSprite::SetWorldViewRH)**](id3dxsprite--setworldviewrh.md)ist erforderlich, wenn das Sprite mit dem [Flagwert D3DXSprite \_ \_ ALPHABET,](d3dxsprite.md)D3DXSprite \_ \_ SORT DEPTH \_ FRONTTOBACK oder \_ D3DXSprite \_ \_ SORT DEPTH \_ \_ BACKTOFRONT in [**ID3DXSprite::Begin**](id3dxsprite--begin.md)gerendert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Ein Aufrufen dieser Methode (oder an [**ID3DXSprite:: SetWorldViewRH**](id3dxspr
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

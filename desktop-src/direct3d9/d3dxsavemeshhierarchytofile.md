@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine x-Datei und speichert die Gitter Hierarchie und die dazugehörigen Animationen darin.
+description: Erstellt eine X-Datei und speichert die Gitternetzhierarchie und die entsprechenden Animationen darin.
 ms.assetid: 803926fe-8cb7-422a-9920-56f7d0b0d0ea
-title: D3DXSaveMeshHierarchyToFile-Funktion (D3dx9anim. h)
+title: D3DXSaveMeshHierarchyToFile-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f2de65f9bc2f9e40a5bc07c6f0b4d00112f0df21
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 892d27e305badc2cf1b21de41a1f9d37da13f36c1521135a79a65619e31903f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118298528"
 ---
 # <a name="d3dxsavemeshhierarchytofile-function"></a>D3DXSaveMeshHierarchyToFile-Funktion
 
-Erstellt eine x-Datei und speichert die Gitter Hierarchie und die dazugehörigen Animationen darin.
+Erstellt eine X-Datei und speichert die Gitternetzhierarchie und die entsprechenden Animationen darin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,43 +44,43 @@ HRESULT D3DXSaveMeshHierarchyToFile(
 
 <dl> <dt>
 
-*pfilename* \[ in\]
+*pFilename* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen der x-Datei angibt, die das gespeicherte Mesh identifiziert. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der String-Datentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Namen der X-Datei angibt, die das gespeicherte Gitternetz identifiziert. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR aufgelöst. Siehe Hinweise.
 
 </dd> <dt>
 
-*Xformat* \[ in\]
+*XFormat* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Format der x-Datei (Text oder Binär, komprimiert oder nicht). Siehe D3DXF \_ FileFormat. Das \_ komprimierte D3DXF File Format \_ kann mithilfe eines logischen OR-Werts kombiniert werden, entweder mit dem D3DXF \_ File Format \_ binary-oder D3DXF \_ FileFormat- \_ textflags, um die Größe der Ausgabedatei zu verringern.
+Format der X-Datei (Text oder Binärdatei, komprimiert oder nicht) Siehe D3DXF \_ FILEFORMAT. D3DXF \_ FILEFORMAT \_ COMPRESSED kann (mithilfe eines logischen OR) entweder mit den D3DXF \_ FILEFORMAT \_ BINARY- oder D3DXF \_ FILEFORMAT \_ TEXT-Flags kombiniert werden, um die Größe der Ausgabedatei zu reduzieren.
 
 </dd> <dt>
 
-*pframeroot* \[ in\]
+*pFrameRoot* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXFRAME**](d3dxframe.md) \***
+Typ: **const [**D3DXFRAME**](d3dxframe.md) \***
 
-Der Stamm Knoten der zu speichernden Hierarchie. Siehe [**D3DXFRAME**](d3dxframe.md).
+Stammknoten der zu speichernden Hierarchie. Siehe [**D3DXFRAME**](d3dxframe.md).
 
 </dd> <dt>
 
-*panimcontroller* \[ in\]
+*pAnimController* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONCONTROLLER**](id3dxanimationcontroller.md)**
 
-Animations Controller, der Animations Sätze enthält, die gespeichert werden sollen. Siehe [**ID3DXAnimationController**](id3dxanimationcontroller.md).
+Animationscontroller, der über zu speichernde Animationssätze verfügt. Siehe [**ID3DXAnimationController.**](id3dxanimationcontroller.md)
 
 </dd> <dt>
 
-*puserdatasaver* \[ in\]
+*pUserDataSaver* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXSAVEUSERDATA**](id3dxsaveuserdata.md)**
@@ -93,13 +93,13 @@ Von der Anwendung bereitgestellte Schnittstelle, die das Speichern von Benutzerd
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert lauten: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXSaveMeshHierarchyToFileW aufgelöst. Andernfalls wird der Funktions aufrufin D3DXSaveMeshHierarchyToFileA aufgelöst.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXSaveMeshHierarchyToFileW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXSaveMeshHierarchyToFileA aufgelöst.
 
-Diese Funktion speichert keine komprimierten Animations Sätze.
+Diese Funktion speichert keine komprimierten Animationssätze.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,8 +107,8 @@ Diese Funktion speichert keine komprimierten Animations Sätze.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -116,10 +116,10 @@ Diese Funktion speichert keine komprimierten Animations Sätze.
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> <dt>
 
-[Verweis auf X-Datei](dx9-graphics-reference-d3dx-x-file.md)
+[X-Dateiverweis](dx9-graphics-reference-d3dx-x-file.md)
 </dt> </dl>
 
  

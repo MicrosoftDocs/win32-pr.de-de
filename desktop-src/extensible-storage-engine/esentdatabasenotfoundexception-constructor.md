@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasenotfoundexception-Konstruktor'
-title: Esentdatabasenotfoundexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseNotFoundException-Konstruktor'
+title: EsentDatabaseNotFoundException-Konstruktor
 TOCTitle: 'EsentDatabaseNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasenotfoundexception.esentdatabasenotfoundexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 64a7c032b0384be84194ad3b0549c05eb81d53f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 69dc3209e4e3f11d48e12de52ea35a267b1963b333e0dcd0ab5caa43429e4844
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118271114"
 ---
-# <a name="esentdatabasenotfoundexception-constructor"></a>Esentdatabasenotfoundexception-Konstruktor
+# <a name="esentdatabasenotfoundexception-constructor"></a>EsentDatabaseNotFoundException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasenotfoundexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseNotFoundException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentDatabaseNotFoundException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentdatabasenotfoundexception-Klasse](./esentdatabasenotfoundexception-class.md)
+[EsentDatabaseNotFoundException-Klasse](./esentdatabasenotfoundexception-class.md)
 
-[Esentdatabasenotfoundexception-Elemente](./esentdatabasenotfoundexception-members.md)
+[EsentDatabaseNotFoundException-Member](./esentdatabasenotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,42 +1,42 @@
 ---
 title: Ändern von Attributen mit der IDirectoryObject-Schnittstelle
-description: Zusätzlich zu IADs Put und IADs PutEx können Sie die IDirectoryObject setobjectattributes-Methode verwenden, um Attributwerte zu ändern. Um diese Methode verwenden zu können, müssen Sie \_ \_ für jedes zu ändernde Attribut eine ADS attr Info-Struktur ausfüllen.
+description: Zusätzlich zu IADs Put und IADs PutEx können Sie die IDirectoryObject SetObjectAttributes-Methode verwenden, um Attributwerte zu ändern. Um diese Methode zu verwenden, müssen Sie eine ADS \_ ATTR \_ INFO-Struktur für jedes zu ändernde Attribut ausfüllen.
 ms.assetid: 1d3fe8f6-34be-4bcb-8ba5-2d92ddc0852a
 ms.tgt_platform: multiple
 keywords:
 - Ändern von Attributen mit der IDirectoryObject-Schnittstelle ADSI
-- IDirectoryObject ADSI, verwenden zum Ändern von Attributen
-- ADSI ADSI, Beispiel Code C/C++, verwenden von IDirectoryObject zum Ändern von Attributen
+- IDirectoryObject ADSI , verwenden zum Ändern von Attributen
+- ADSI ADSI , Beispielcode C/C++, Verwenden von IDirectoryObject zum Ändern von Attributen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8715826d0fc835f3d9ecae914fcc51603883af5d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 30fa7d75d3e0dce489f676dafb36992c95a1cba2e9856bbbaf49f14806a6c1ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118179028"
 ---
 # <a name="modifying-attributes-with-the-idirectoryobject-interface"></a>Ändern von Attributen mit der IDirectoryObject-Schnittstelle
 
-Zusätzlich zu [**IADs::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) und [**IADs::P utex**](/windows/desktop/api/Iads/nf-iads-iads-putex)können Sie die [**IDirectoryObject:: setobjectattributes**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-setobjectattributes) -Methode verwenden, um Attributwerte zu ändern. Um diese Methode verwenden zu können, müssen Sie für jedes zu ändernde Attribut eine [**ADS \_ attr \_ Info**](/windows/desktop/api/Iads/ns-iads-ads_attr_info) -Struktur ausfüllen.
+Zusätzlich zu [**IADs::P ut**](/windows/desktop/api/Iads/nf-iads-iads-put) und [**IADs::P utEx**](/windows/desktop/api/Iads/nf-iads-iads-putex)können Sie die [**IDirectoryObject::SetObjectAttributes-Methode**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-setobjectattributes) verwenden, um Attributwerte zu ändern. Um diese Methode zu verwenden, müssen Sie eine [**ADS \_ ATTR \_ INFO-Struktur**](/windows/desktop/api/Iads/ns-iads-ads_attr_info) für jedes zu ändernde Attribut ausfüllen.
 
-Mit der [**IDirectoryObject:: setobjectattributes**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-setobjectattributes) -Methode können Sie sowohl einwertige als auch mehrwertige Attribute ändern. Diese Funktion bietet ähnliche operative Steuerelemente, wie z. b. Clear, Append, DELETE und Update, die in der [**IADs::P utex**](/windows/desktop/api/Iads/nf-iads-iads-putex) -Methode gefunden werden. Die Steuerelement Konstanten umfassen Folgendes:
+Mit [**der IDirectoryObject::SetObjectAttributes-Methode**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-setobjectattributes) können Sie sowohl einwertige als auch mehrwertige Attribute ändern. Diese Funktion stellt ähnliche betriebsbereite Steuerelemente wie Clear, Append, Delete und Update für diejenigen bereit, die in der [**IADs::P utEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-putex) gefunden werden. Zu den Steuerelementkonstanten gehören:
 
--   [**ADS ist \_ \_ klar**](adsi-attribute-modification-types.md)
--   [**ADS- \_ \_ Update**](adsi-attribute-modification-types.md)
--   [**Werbung \_ \_ Anfügen**](adsi-attribute-modification-types.md)
--   [**ADS- \_ \_ Löschung**](adsi-attribute-modification-types.md)
+-   [**ADS \_ ATTR \_ CLEAR**](adsi-attribute-modification-types.md)
+-   [**ADS \_ ATTR \_ UPDATE**](adsi-attribute-modification-types.md)
+-   [**ADS \_ ATTR \_ APPEND**](adsi-attribute-modification-types.md)
+-   [**ADS \_ ATTR \_ DELETE**](adsi-attribute-modification-types.md)
 
-Wenn Sie [**ADS \_ attr \_ Update**](adsi-attribute-modification-types.md) angeben, wird ein serverseitiger Vorgang, der ressourcenintensiv sein kann, auslöst. Ein Beispiel wäre, den Vorgang zum Aktualisieren einer langen Liste von Gruppenmitgliedschaften zu initiieren. Im Allgemeinen sollten Sie diesen Vorgang nicht verwenden, es sei denn, die Änderung umfasst eine kleine Anzahl von Attributen im Verzeichnis. Um eine lange Liste der Gruppenmitgliedschaften zu ändern, ist es effizienter, die Liste aus dem zugrunde liegenden Verzeichnis zu lesen, Änderungen vorzunehmen und die aktualisierte Liste wieder in das Verzeichnis zu speichern.
+Die Angabe von [**ADS \_ ATTR \_ UPDATE**](adsi-attribute-modification-types.md) löst einen serverseitigen Vorgang aus, der ressourcenintensiv sein kann. Ein Beispiel wäre das Initiieren des Vorgangs zum Aktualisieren einer langen Liste von Gruppenmitgliedschaften. Im Allgemeinen sollten Sie diesen Vorgang nicht verwenden, es sei denn, die Änderung umfasst eine kleine Anzahl von Attributen im Verzeichnis. Um eine lange Liste von Gruppenmitgliedschaften zu ändern, besteht der effizientere Ansatz darin, die Liste aus dem zugrunde liegenden Verzeichnis zu lesen, Änderungen vorzunehmen und die aktualisierte Liste wieder im Verzeichnis zu speichern.
 
 > [!Note]  
-> Wie [**IADs::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) und [**IADs::P utex**](/windows/desktop/api/Iads/nf-iads-iads-putex) mit [**IADs:: abtinfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo)werden die Attribut Änderungen entweder vollständig committet oder in Active Directory verworfen. Wenn eine oder mehrere der Änderungen nicht zulässig sind und daher nicht ausgeführt werden können, wird für keine der an den Attributen vorgenommenen Änderungen ein Commit an das Verzeichnis übertragen.
+> Wie [**IADs::P ut**](/windows/desktop/api/Iads/nf-iads-iads-put) und [**IADs::P utEx**](/windows/desktop/api/Iads/nf-iads-iads-putex) mit [**IADs::SetInfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo)werden die Attributänderungen in Active Directory entweder vollständig ausgeführt oder verworfen. Wenn eine oder mehrere der Änderungen nicht zulässig sind und daher nicht ausgeführt werden können, wird für keine der an den Attributen vorgenommenen gemeinsamen Änderungen ein Commit für das Verzeichnis ausgeführt.
 
- 
+ 
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird gezeigt, wie ein-Attribut und ein mehr wertiges Attribut mit der [**IDirectoryObject:: setobjectattributes**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-setobjectattributes) -Methode geändert werden.
+Das folgende Codebeispiel zeigt, wie Sie sowohl einzelne als auch mehrwertige Attribute mit der [**IDirectoryObject::SetObjectAttributes-Methode**](/windows/desktop/api/Iads/nf-iads-idirectoryobject-setobjectattributes) ändern.
 
 
 ```C++
@@ -92,9 +92,9 @@ if(SUCCEEDED(hr))
 
 
 
- 
+ 
 
- 
+ 
 
 
 

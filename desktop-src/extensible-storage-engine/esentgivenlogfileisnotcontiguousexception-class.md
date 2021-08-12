@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentgivenlogfileisnotcontiguousexception-Klasse'
-title: Esentgivenlogfileisnotcontiguousexception-Klasse
+description: 'Weitere Informationen zu: EsentGivenLogFileIsNotContiguousException-Klasse'
+title: EsentGivenLogFileIsNotContiguousException-Klasse
 TOCTitle: EsentGivenLogFileIsNotContiguousException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentGivenLogFileIsNotContiguousException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentgivenlogfileisnotcontiguousexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d6cbba7d6bf7f5fb30ac77cc92232507cc2a15d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e1ed504581d47c4c20072aed320080351ca2f42cc15296d42aac1386a1a86f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118268307"
 ---
-# <a name="esentgivenlogfileisnotcontiguousexception-class"></a>Esentgivenlogfileisnotcontiguousexception-Klasse
+# <a name="esentgivenlogfileisnotcontiguousexception-class"></a>EsentGivenLogFileIsNotContiguousException-Klasse
 
-Basisklasse für JET_err. Givenlogfileisnotcontiguous-Ausnahmen.
+Basisklasse für JET_err. GivenLogFileIsNotContiguous-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. EsentInconsistentException](./esentinconsistentexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentgivenlogfileisnotcontiguousexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentInconsistentException](./esentinconsistentexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentGivenLogFileIsNotContiguousException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,6 +72,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentgivenlogfileisnotcontiguousexception-Elemente](./esentgivenlogfileisnotcontiguousexception-members.md)
+[EsentGivenLogFileIsNotContiguousException-Member](./esentgivenlogfileisnotcontiguousexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

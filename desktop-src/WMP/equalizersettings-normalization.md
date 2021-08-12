@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. Normalisierung
-description: Das normalisierungs Attribut gibt einen Wert an, der angibt, ob Normalisierung aktiviert ist, oder ruft diesen ab.
+title: EQUALIZERSETTINGS.normalization
+description: Das Normalisierungsattribut gibt einen Wert an, der angibt, ob die Normalisierung aktiviert ist, oder ruft einen Wert ab.
 ms.assetid: d0819624-7bc5-447a-b890-c8af94faa7b0
 keywords:
-- Equalizersettings. Normalisierung Windows Media Player
+- EQUALIZERSETTINGS.normalization Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9714359e5d5e2af0c82a0d687555f7cfcbf1cf70
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b6f2befdd62f0508822d5547cb3b894b93ea095f52db4cf9bbdb4a444d99251c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118578166"
 ---
-# <a name="equalizersettingsnormalization"></a>Equalizersettings. Normalisierung
+# <a name="equalizersettingsnormalization"></a>EQUALIZERSETTINGS.normalization
 
-Das **normalisierungs** Attribut gibt einen Wert an, der angibt, ob Normalisierung aktiviert ist, oder ruft diesen ab.
+Das  Normalisierungsattribut gibt einen Wert an, der angibt, ob die Normalisierung aktiviert ist, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.normalization
@@ -29,22 +29,22 @@ Das **normalisierungs** Attribut gibt einen Wert an, der angibt, ob Normalisieru
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                         |
 |-------|-------------------------------------|
-| true  | Normalisierung ist aktiviert.           |
+| true  | Die Normalisierung ist aktiviert.           |
 | false | Standard. Die Normalisierung ist deaktiviert. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Normalisierung aktiviert ist, wird das Audiosignal für eine gesamte digitale Mediendatei auf den maximalen Wert hochskaliert. Auf diese Weise können mehrere Dateien auf ungefähr demselben Volume abgespielt werden, ohne dass die volumeanpassungen erforderlich sind.
+Wenn die Normalisierung aktiviert ist, wird das Audiosignal für eine gesamte digitale Mediendatei auf den maximal zulässigen Wert hochskaliert. Dadurch können mehrere Dateien auf ungefähr demselben Volume wiedergegeben werden, ohne dass Volumeanpassungen erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Wenn die Normalisierung aktiviert ist, wird das Audiosignal für eine gesamte di
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -60,13 +60,13 @@ Wenn die Normalisierung aktiviert ist, wird das Audiosignal für eine gesamte di
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. normalizationaverage**](equalizersettings-normalizationaverage.md)
+[**EQUALIZERSETTINGS.normalizationAverage**](equalizersettings-normalizationaverage.md)
 </dt> <dt>
 
-[**Equalizersettings. normalizationpeak**](equalizersettings-normalizationpeak.md)
+[**EQUALIZERSETTINGS.normalizationPeak**](equalizersettings-normalizationpeak.md)
 </dt> </dl>
 
  

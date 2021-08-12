@@ -1,19 +1,19 @@
 ---
-description: Die Anzahl der Ecken, die boundingfrustum definieren.
+description: Die Anzahl der Ecken, die das BoundingFrustum definieren.
 ms.assetid: 0344b0ca-de22-454a-b140-33f5790fb1b9
-title: BoundingFrustum.CORNER_COUNT (directxcollision. h)
+title: BoundingFrustum.CORNER_COUNT (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 497fc560a96bb06df6ca8288c8c581c587190675
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f5611fc8c6ad820d759fa7ab7895b0b8d571b40bf9d813fb791c7403170ffbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118278624"
 ---
-# <a name="boundingfrustumcorner_count"></a>Boundingfrustum. Corner- \_ Anzahl
+# <a name="boundingfrustumcorner_count"></a>BoundingFrustum.CORNER \_ COUNT
 
-Die Anzahl der Ecken, die [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)definieren.
+Die Anzahl der Ecken, die den [**BoundingFrustum definieren.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -35,7 +35,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
@@ -46,10 +46,10 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 [Fields](boundingfrustum-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
+[**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 </dt> </dl>
 
  

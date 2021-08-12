@@ -1,11 +1,11 @@
 ---
-title: Ivmparallelport-_ID Methode (vpccominterfaces. h)
+title: IVMParallelPort_ID Methode (VPCCOMInterfaces.h)
 description: Ruft den internen Bezeichner des parallelen Ports ab.
 ms.assetid: a0de74da-0e23-489e-8a89-8deba974e548
 keywords:
-- _ID-Methode Virtual PC
-- _ID-Methode Virtual PC, ivmparallelport-Schnittstelle
-- Ivmparallelport Interface Virtual PC, _ID-Methode
+- _ID-Methode Virtueller PC
+- _ID Virtual PC, IVMParallelPort-Schnittstelle
+- IVMParallelPort-Schnittstelle Virtueller PC , _ID-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 267061204ea92dd8f5cae37fc5cb279e7dc2b010
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df0c7b3eab7de47d182c94aa9b5fb35aef04e98495ef3e7b39d4547967f3438b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118593218"
 ---
-# <a name="ivmparallelport_id-method"></a>Ivmparallelport:: \_ ID-Methode
+# <a name="ivmparallelport_id-method"></a>IVMParallelPort:: \_ ID-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den internen Bezeichner des parallelen Ports ab.
 
@@ -44,10 +44,10 @@ HRESULT _ID(
 
 <dl> <dt>
 
-*portid* \[ vorgenommen\]
+*portID* \[ out\]
 </dt> <dd>
 
-Der parallele Port Bezeichner.
+Der Bezeichner des parallelen Ports.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                 | BESCHREIBUNG                                                         |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>                            |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>                               |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                        |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/> |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>                               |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                        |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/> |
 
 
 
@@ -70,7 +70,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Eigenschaft kann nicht von Skriptsprachen verwendet werden.
+Diese Eigenschaft kann von Skriptsprachen nicht verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,20 +78,20 @@ Diese Eigenschaft kann nicht von Skriptsprachen verwendet werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmparallelport ist als 097beecb-0a02-474b-abd6-298b22293fc6 definiert.<br/>            |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMParallelPort ist als 097beecb-0a02-474f-abd6-298b22293fc6 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmparallelport**](ivmparallelport.md)
+[**IVMParallelPort**](ivmparallelport.md)
 </dt> </dl>
 
  

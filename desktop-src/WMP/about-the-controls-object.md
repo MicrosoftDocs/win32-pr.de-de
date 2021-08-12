@@ -1,28 +1,28 @@
 ---
-title: Informationen zum Steuerelement Objekt
-description: Informationen zum Steuerelement Objekt
+title: Informationen zum Controls-Objekt
+description: Informationen zum Controls-Objekt
 ms.assetid: 1678c931-af47-42c9-a8a5-b6b775aebda8
 keywords:
-- Windows Media Player, Steuerelemente-Objekt
-- Objektmodell für Windows Media Player, Steuerelemente (Objekt)
-- Objektmodell, Steuerelement Objekt
-- Windows Media Player ActiveX-Steuerelement, Steuerelemente-Objekt
-- ActiveX-Steuerelement, Steuerelement Objekt
-- Windows Media Player Mobile ActiveX-Steuerelement, Steuerelemente Objekt
-- Windows Media Player Mobile, Steuerelemente (Objekt)
+- Windows Media Player,Controls-Objekt
+- Windows Media Player-Objektmodell, Controls-Objekt
+- Objektmodell,Controls-Objekt
+- Windows Media Player ActiveX-Steuerelement, Controls-Objekt
+- ActiveX Steuerelement, Controls-Objekt
+- Windows Media Player Mobiles ActiveX-Steuerelement, Controls-Objekt
+- Windows Media Player Mobiles,Controls-Objekt
 - Controls-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f064ef65401876dedb4181ba788788f5e5d9676c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6ea914234ce4458d296a27efe7cf3a392b45b09f05e81f35bef5a355a4e12eab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104387989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583897"
 ---
-# <a name="about-the-controls-object"></a>Informationen zum Steuerelement Objekt
+# <a name="about-the-controls-object"></a>Informationen zum Controls-Objekt
 
-Das Steuer **Element Objekt steuert den Transport** von Inhalten digitaler Medien über das-Steuerelement mithilfe von Methoden wie wieder **Gabe** und **Beendigung**. Der Zugriff erfolgt nur über die **Controls** -Eigenschaft des **Player** -Objekts. Die **Controls** -Eigenschaft gibt das Steuer **Element Objekt zurück** . Sie können nur auf die Eigenschaften des Steuer Elements "Steuer **Elemente** " zugreifen, nachdem Sie es erstellt haben. Wenn Sie z. b. die **Play** -Methode verwenden möchten, müssen Sie den folgenden Code verwenden:
+Das **Controls-Objekt** steuert den Transport von digitalen Medieninhalten über das -Steuerelement mithilfe von Methoden wie **Play** und **Stop.** Der Zugriff erfolgt nur über die **Controls-Eigenschaft** des **Player-Objekts.** Die **Controls-Eigenschaft** gibt das **Controls-Objekt** zurück. Sie können erst auf die Eigenschaften des **Controls-Objekts** zugreifen, nachdem Sie es erstellt haben. Um beispielsweise die **Play-Methode** zu verwenden, müssen Sie den folgenden Code verwenden:
 
 
 ```C++
@@ -42,9 +42,9 @@ player.controls.play();
 [**Player-Objektmodell für Skriptsprachen**](player-object-model-for-scripting-languages.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

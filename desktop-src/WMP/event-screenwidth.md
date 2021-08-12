@@ -1,9 +1,9 @@
 ---
-title: Event. ScreenWidth
-description: Das ScreenWidth-Attribut ruft die Breite der verfügbaren Bildschirmgröße in Pixel ab.
+title: event.screenWidth
+description: Das screenWidth-Attribut ruft die Breite der verfügbaren Bildschirmgröße in Pixel ab.
 ms.assetid: 613defdd-3644-4bf1-a0aa-93431d3bb35a
 keywords:
-- Event. ScreenWidth-Fenster Media Player
+- event.screenWidth Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f7d50c6c9d99b04b2562d27b7de1e82c507f2a2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 885909243c35a26f05368245240b18a2a091100715a57081386414a427d51544
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577024"
 ---
-# <a name="eventscreenwidth"></a>Event. ScreenWidth
+# <a name="eventscreenwidth"></a>event.screenWidth
 
-Das **ScreenWidth** -Attribut ruft die Breite der verfügbaren Bildschirmgröße in Pixel ab.
+Das **screenWidth-Attribut** ruft die Breite der verfügbaren Bildschirmgröße in Pixel ab.
 
 ``` syntax
 event.screenWidth
@@ -29,11 +29,11 @@ event.screenWidth
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist hilfreich, um den Umfang des Speicherplatzes zu ermitteln, der im Monitor vorhanden ist. Wenn zwei Monitore vorhanden sind, wird der Speicherplatz für beide Monitore berechnet.
+Dies ist nützlich, um die Menge an Speicherplatz im Monitor zu bestimmen. Wenn zwei Monitore zur Verfügung stehen, wird der Speicherplatz für beide Monitore berechnet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dies ist hilfreich, um den Umfang des Speicherplatzes zu ermitteln, der im Monit
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -49,10 +49,10 @@ Dies ist hilfreich, um den Umfang des Speicherplatzes zu ermitteln, der im Monit
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> <dt>
 
-[**Event. ScreenHeight**](event-screenheight.md)
+[**event.screenHeight**](event-screenheight.md)
 </dt> </dl>
 
  

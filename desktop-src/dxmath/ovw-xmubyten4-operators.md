@@ -4,16 +4,16 @@ ms.assetid: eb6d6d20-febf-4035-a79d-3239d828ce0d
 title: XMUBYTEN4-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79a1774a3f325accfa01f27ad738008b7954d4ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be833ffdf7ef9a37c6723a7f2c94bc0e50981c6fd19a0a9c7b7d7c6b7a3558e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118277464"
 ---
 # <a name="xmubyten4-operators"></a>XMUBYTEN4-Operatoren
 
-Die [**XMUBYTEN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmubyten4) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMUBYTEN4-Struktur**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmubyten4) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,7 +26,7 @@ Die [**XMUBYTEN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvecto
 
 | Methoden                                                | BESCHREIBUNG                                                                                                            |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [**Operator =**](/previous-versions/windows/desktop/legacy/ee420506(v=vs.85))<br/> | Weist die Vektor Komponenten Daten einer Instanz von `XMUBYTEN4` der aktuellen Instanz von zu `XMUBYTEN4` . <br/> |
+| [**operator =**](/previous-versions/windows/desktop/legacy/ee420506(v=vs.85))<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMUBYTEN4` der aktuellen Instanz von `XMUBYTEN4` zu. <br/> |
 
 
 
@@ -39,7 +39,7 @@ Die [**XMUBYTEN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvecto
 [XMUBYTEN4-Erweiterungen](ovw-xmubyten4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUBYTEN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmubyten4)

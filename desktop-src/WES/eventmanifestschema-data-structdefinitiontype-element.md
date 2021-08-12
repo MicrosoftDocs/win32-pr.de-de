@@ -1,9 +1,9 @@
 ---
-title: Data (StructDefinitionType)-Element
+title: data (StructDefinitionType)-Element
 description: Definiert ein Datenelement, das Sie in die Struktur einschließen möchten.
 ms.assetid: 3b71afb2-412b-4992-ac30-974393aa9194
 keywords:
-- Datenelement-Ereignisprotokoll
+- Data-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fd2fbffb39fe795e15a8cb06641132ee880b6867
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a9b0e0206d0b8f2e5eeec65dc8a7f7bb71a7e757d101d0941dd2500ca64a4750
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589867"
 ---
-# <a name="data-structdefinitiontype-element"></a>Data (StructDefinitionType)-Element
+# <a name="data-structdefinitiontype-element"></a>data (StructDefinitionType)-Element
 
 Definiert ein Datenelement, das Sie in die Struktur einschließen möchten.
 
@@ -30,7 +30,7 @@ Definiert ein Datenelement, das Sie in die Struktur einschließen möchten.
  />
 ```
 
-Das **Data** -Element wird durch den komplexen [**StructDefinitionType**](eventmanifestschema-structdefinitiontype-complextype.md) -Typ definiert.
+Das **Datenelement** wird vom komplexen [**StructDefinitionType-Typ**](eventmanifestschema-structdefinitiontype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Data** -Element wird durch den komplexen [**StructDefinitionType**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Data** -Element wird durch den komplexen [**StructDefinitionType**](eventm
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**struct (templateitemtype)**](eventmanifestschema-struct-templateitemtype-element.md)
+[**struct (TemplateItemType)**](eventmanifestschema-struct-templateitemtype-element.md)
 </dt> </dl>
 
  

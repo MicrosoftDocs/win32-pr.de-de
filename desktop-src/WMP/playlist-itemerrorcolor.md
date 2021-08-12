@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. itemerrorcolor
-description: Das itemerrorcolor-Attribut gibt die Hervorhebungs Farbe an oder ruft diese ab, die ein Wiedergabelisten Element mit einer Fehlerbedingung angibt.
+title: PLAYLIST.itemErrorColor
+description: Das itemErrorColor-Attribut gibt die Hervorhebungsfarbe an, die ein Wiedergabelistenelement mit einer Fehlerbedingung angibt, oder ruft sie ab.
 ms.assetid: 6f2d4267-07e7-4630-b567-043c0baff1c7
 keywords:
-- Wiedergabeliste. itemerrorcolor (Fenster) Media Player
+- PLAYLIST.itemErrorColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 184819f02ef666240768eee0a890ed1e0b62b873
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f3396392f8010e58d81cb7d8970a4fc5fd022c87bbcb152fa6911154039c564
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118571295"
 ---
-# <a name="playlistitemerrorcolor"></a>Wiedergabeliste. itemerrorcolor
+# <a name="playlistitemerrorcolor"></a>PLAYLIST.itemErrorColor
 
-Das **itemerrorcolor** -Attribut gibt die Hervorhebungs Farbe an oder ruft diese ab, die ein Wiedergabelisten Element mit einer Fehlerbedingung angibt.
+Das **itemErrorColor-Attribut** gibt die Hervorhebungsfarbe an, die ein Wiedergabelistenelement mit einer Fehlerbedingung angibt, oder ruft sie ab.
 
 ``` syntax
         elementID.itemErrorColor
@@ -29,7 +29,7 @@ Das **itemerrorcolor** -Attribut gibt die Hervorhebungs Farbe an oder ruft diese
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist "Red".
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er hat den Standardwert "red".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

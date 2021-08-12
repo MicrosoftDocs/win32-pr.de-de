@@ -1,41 +1,41 @@
 ---
 title: Anwenden von 2D-Transformationen
-description: In diesem Thema wird veranschaulicht, wie 2D-Transformationen mithilfe von Microsoft directcomposition auf ein visuelles Element angewendet werden.
+description: In diesem Thema wird veranschaulicht, wie Sie 2D-Transformationen mithilfe von Microsoft DirectComposition auf ein Visual anwenden.
 ms.assetid: DED74416-C85A-4220-89BD-3F9BEF786B7D
 keywords:
-- Anwenden von 2D-Transformationen für directcomposition
-- Directcomposition 2D-Transformationen
+- Anwenden von DirectComposition 2D-Transformationen
+- DirectComposition 2D-Transformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b52d2e0ce9fbb56547c42ea4ea18d57d173a7e40
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6ef965ce98bb064eb63b34de569160c9b68932c96ce757e3e5d13450f73098b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118281955"
 ---
 # <a name="how-to-apply-2d-transforms"></a>Anwenden von 2D-Transformationen
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
-In diesem Thema wird veranschaulicht, wie 2D-Transformationen mithilfe von Microsoft directcomposition auf ein visuelles Element angewendet werden. Im Beispiel in diesem Thema wird eine Gruppe von Transformationen angewendet, die Folgendes ausführen:
+In diesem Thema wird veranschaulicht, wie Sie 2D-Transformationen mithilfe von Microsoft DirectComposition auf ein Visual anwenden. Im Beispiel in diesem Thema wird eine Gruppe von Transformationen angewendet, die:
 
-1.  Drehen Sie die Visualisierung um 180 Grad.
-2.  Skalieren Sie die Visualisierung um das Dreifache der ursprünglichen Größe.
-3.  Übersetzen (verschieben) Sie die Visual 150 Pixel nach rechts von der ursprünglichen Position.
+1.  Drehen Sie das Visual um 180 Grad.
+2.  Skalieren Sie das Visual auf das Dreifache seiner ursprünglichen Größe hoch.
+3.  Übersetzen (Verschieben) des Visuals um 150 Pixel nach rechts von seiner ursprünglichen Position.
 
-Die folgenden Screenshots zeigen das visuelle Element vor und nach dem Anwenden der 2D-Transformationen.
+Die folgenden Screenshots zeigen das Visual vor und nach dem Anwenden der 2D-Transformationen.
 
-![Ergebnis der Anwendung einer Gruppe von 2D-Transformationen auf ein visuelles Element](images/apply2dtransform.png)
+![Ergebnis der Anwendung einer Gruppe von 2d-Transformationen auf ein Visual](images/apply2dtransform.png)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -45,14 +45,14 @@ Die folgenden Screenshots zeigen das visuelle Element vor und nach dem Anwenden 
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von directcomposition-Objekten
+### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von DirectComposition-Objekten
 
-1.  Erstellen Sie das Geräte Objekt und das Kompositions Zielobjekt.
-2.  Erstellen Sie ein visuelles Element, legen Sie seinen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
+1.  Erstellen Sie das Geräteobjekt und das Kompositionszielobjekt.
+2.  Erstellen Sie ein Visual, legen Sie dessen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
 
-Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
-### <a name="step-2-create-the-transform-group-array"></a>Schritt 2: Erstellen des Transformationsgruppen Arrays
+### <a name="step-2-create-the-transform-group-array"></a>Schritt 2: Erstellen des Transformationsgruppenarrays
 
 
 ```C++
@@ -61,11 +61,11 @@ IDCompositionTransform *pTransforms[3];
 
 
 
-### <a name="step-3-create-the-transform-objects-set-their-properties-and-add-them-to-the-transform-group-array"></a>Schritt 3: Erstellen der Transformations Objekte, Festlegen ihrer Eigenschaften und Hinzufügen der Objekte zum Transformationsgruppen Array
+### <a name="step-3-create-the-transform-objects-set-their-properties-and-add-them-to-the-transform-group-array"></a>Schritt 3: Erstellen der Transformationsobjekte, Festlegen ihrer Eigenschaften und Hinzufügen zum Transformationsgruppenarray
 
-1.  Verwenden Sie die Methoden [**idcompositiondevice:: kreaterotatetransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createrotatetransform), [**:: kreatescaletransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createscaletransform)und [**:: kreatetranslatetransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtranslatetransform) , um die Transformations Objekte zu erstellen.
-2.  Verwenden Sie die Member-Funktionen der Schnittstellen [**idcompositionrotatetransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrotatetransform), [**idcompositionscaletransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionscaletransform)und [**idcompositiontranslatetransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontranslatetransform) , um die Eigenschaften der Transformationen festzulegen.
-3.  Kopieren Sie die Transformations Schnittstellen Zeiger in das Transformationsgruppen Array.
+1.  Verwenden Sie die Methoden [**IDCompositionDevice::CreateRotateTransform,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createrotatetransform) [**::CreateScaleTransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createscaletransform)und [**::CreateTranslateTransform,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtranslatetransform) um die Transformationsobjekte zu erstellen.
+2.  Verwenden Sie die Memberfunktionen der Schnittstellen [**IDCompositionRotateTransform,**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrotatetransform) [**IDCompositionScaleTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionscaletransform)und [**IDCompositionTranslateTransform,**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontranslatetransform) um die Eigenschaften der Transformationen festzulegen.
+3.  Kopieren Sie die Transformationsschnittstellenzeiger auf das Transformationsgruppenarray.
 
 
 ```C++
@@ -140,9 +140,9 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-4-create-the-transform-group-object"></a>Schritt 4: Erstellen des Transformationsgruppen Objekts
+### <a name="step-4-create-the-transform-group-object"></a>Schritt 4: Erstellen des Transformationsgruppenobjekts
 
-Rufen Sie die [**idcompositiondevice:: kreatetransformgroup**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtransformgroup) -Methode auf, um das Transformationsgruppen Objekt zu erstellen.
+Rufen Sie die [**IDCompositionDevice::CreateTransformGroup-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtransformgroup) auf, um das Transformationsgruppenobjekt zu erstellen.
 
 
 ```C++
@@ -155,9 +155,9 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-5-apply-the-transform-group-object-to-the-visual"></a>Schritt 5: Anwenden des Transformationsgruppen Objekts auf das visuelle Element
+### <a name="step-5-apply-the-transform-group-object-to-the-visual"></a>Schritt 5: Anwenden des Transformationsgruppenobjekts auf das Visual
 
-Verwenden Sie die [**idcompositionvisual:: setTransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(constd2d_matrix_3x2_f_)) -Methode, um die Transform-Eigenschaft der Visualisierung dem Transformationsgruppen Objekt zuzuordnen.
+Verwenden Sie die [**IDCompositionVisual::SetTransform-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(constd2d_matrix_3x2_f_)) um die Transform-Eigenschaft des Visuals dem Transformationsgruppenobjekt zuzuordnen.
 
 
 ```C++
@@ -170,9 +170,9 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-6-commit-the-composition"></a>Schritt 6: Commit der Komposition ausführen
+### <a name="step-6-commit-the-composition"></a>Schritt 6: Committen der Komposition
 
-Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) -Methode auf, um die Aktualisierungen für die Visualisierung für die Verarbeitung in directcomposition zu committen. Das Ergebnis der Anwendung der Gruppe von 2D-Transformationen wird im Zielfenster angezeigt.
+Rufen Sie die [**IDCompositionDevice::Commit-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) auf, um die Aktualisierungen des Visuals zur Verarbeitung an DirectComposition zu committen. Das Ergebnis der Anwendung der Gruppe von 2D-Transformationen wird im Zielfenster angezeigt.
 
 
 ```C++
@@ -185,9 +185,9 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-7-free-the-directcomposition-objects"></a>Schritt 7: Freigeben der directcomposition-Objekte
+### <a name="step-7-free-the-directcomposition-objects"></a>Schritt 7: Freigeben der DirectComposition-Objekte
 
-Stellen Sie sicher, dass Sie die Gruppe von 2D-Transformations Objekten freigeben, wenn Sie Sie nicht mehr benötigen. Im folgenden Beispiel wird das Anwendungs definierte [**saferelease**](/windows/desktop/medfound/saferelease) -Makro aufgerufen, um die Transformations Objekte freizugeben.
+Stellen Sie sicher, dass Sie die Gruppe von 2D-Transformationsobjekten freigeben, wenn Sie sie nicht mehr benötigen. Im folgenden Beispiel wird das anwendungsdefinierte [**SafeRelease-Makro**](/windows/desktop/medfound/saferelease) zum Freigeben der Transformationsobjekte aufrufen.
 
 
 ```C++
@@ -200,7 +200,7 @@ for (int i = 0; i < 3; i++)
 
 
 
-Denken Sie auch daran, das Geräte Objekt, das Kompositions Zielobjekt und die visuellen Elemente freizugeben, bevor die Anwendung beendet wird.
+Denken Sie auch daran, das Geräteobjekt, das Kompositionszielobjekt und die Visuals frei zu lassen, bevor Ihre Anwendung beendet wird.
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
@@ -327,6 +327,6 @@ HRESULT DemoApp::ApplyTransformGroup(IDCompositionDevice *pDevice,
 [Transformationen](transforms.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

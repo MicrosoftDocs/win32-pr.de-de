@@ -1,7 +1,7 @@
 ---
-description: Entfernt alle Ereignisse für die geplante Prioritäts Mischung aus dem Animations Controller.
+description: Entfernt alle geplanten Prioritätsmischungsereignisse aus dem Animationscontroller.
 ms.assetid: 4dea1998-4081-4c2c-929e-6fb440806c2a
-title: 'ID3DXAnimationController:: unkeyallprioritymischungsmethode (D3dx9anim. h)'
+title: ID3DXAnimationController::UnkeyAllPriorityBlends-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c39ddd36843b52ca3bb7bf504d3de766f3e1be21
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 765321a2e657dcc6b3fc1e6949509cab70c968d61c22638c8e5ebb505494feff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118296786"
 ---
-# <a name="id3dxanimationcontrollerunkeyallpriorityblends-method"></a>ID3DXAnimationController:: unkeyallprioritymischungsmethode
+# <a name="id3dxanimationcontrollerunkeyallpriorityblends-method"></a>ID3DXAnimationController::UnkeyAllPriorityBlends-Methode
 
-Entfernt alle Ereignisse für die geplante Prioritäts Mischung aus dem Animations Controller.
+Entfernt alle geplanten Prioritätsmischungsereignisse aus dem Animationscontroller.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

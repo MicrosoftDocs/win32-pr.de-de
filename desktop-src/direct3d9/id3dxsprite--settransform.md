@@ -1,7 +1,7 @@
 ---
-description: Legt die Sprite-Transformation fest.
+description: Legt die Spritetransformation fest.
 ms.assetid: 87dfc169-b647-4a96-897d-abbe765ea9e2
-title: 'ID3DXSprite:: setTransform-Methode (D3dx9core. h)'
+title: ID3DXSprite::SetTransform-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 316e7e2c68dfa8f25a712c2077ece03d09455050
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: fba7c21d0ba0e99aefc5c4d5dfd69301bb706f804e736badcbe0227d58aca81a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118292617"
 ---
-# <a name="id3dxspritesettransform-method"></a>ID3DXSprite:: setTransform-Methode
+# <a name="id3dxspritesettransform-method"></a>ID3DXSprite::SetTransform-Methode
 
-Legt die Sprite-Transformation fest.
+Legt die Spritetransformation fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetTransform(
 
 <dl> <dt>
 
-*ptransform* \[ in\]
+*pTransform* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) , die eine Transformation des Sprite aus dem ursprünglichen Raum enthält. Verwenden Sie diese Transformation, um Sprite zu skalieren, zu drehen oder zu transformieren.
+Zeiger auf ein [**D3DXMATRIX,das**](d3dxmatrix.md) eine Transformation des Sprite aus dem ursprünglichen Weltraum enthält. Verwenden Sie diese Transformation, um den Sprite zu skalieren, zu drehen oder zu transformieren.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) , die eine Transformation des Sp
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
