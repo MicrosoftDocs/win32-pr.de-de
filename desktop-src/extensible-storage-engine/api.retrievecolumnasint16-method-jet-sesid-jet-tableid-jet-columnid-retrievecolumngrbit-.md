@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. RetrieveColumnAsInt16-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, retrievecolenngrbit)'
-title: API. RetrieveColumnAsInt16-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, retrievecolenngrbit)
+description: Weitere Informationen finden Sie unter Api.RetrieveColumnAsInt16-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, RetrieveColumnGrbit).
+title: Api.RetrieveColumnAsInt16-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, RetrieveColumnGrbit)
 TOCTitle: RetrieveColumnAsInt16 method (JET_SESID, JET_TABLEID, JET_COLUMNID, RetrieveColumnGrbit)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.RetrieveColumnAsInt16(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID,Microsoft.Isam.Esent.Interop.RetrieveColumnGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.retrievecolumnasint16(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1972d3cc8ac75d25b140f00e6ff215c7d1a47106
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd8591f2b01011335180e20703e5cedc3fa0efb1eb7e4f897dc65a63f7fc2d26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118271520"
 ---
-# <a name="apiretrievecolumnasint16-method-jet_sesid-jet_tableid-jet_columnid-retrievecolumngrbit"></a>API. RetrieveColumnAsInt16-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, retrievecolenngrbit)
+# <a name="apiretrievecolumnasint16-method-jet_sesid-jet_tableid-jet_columnid-retrievecolumngrbit"></a>Api.RetrieveColumnAsInt16-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, RetrieveColumnGrbit)
 
-Ruft einen Int16-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der mit dem Index Eintrag an der aktuellen Position des Cursors verknüpft ist.
+Ruft einen int16-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,36 +66,36 @@ public static Nullable<short> RetrieveColumnAsInt16(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem die Spalte abgerufen werden soll.
+    Der Cursor, aus dem die Spalte abgerufen werden soll.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das abzurufende ColumnID.
+    Die abzurufende columnid.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. retrievecolenngrbit](./retrievecolumngrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.RetrieveColumnGrbit](./retrievecolumngrbit-enumeration.md)  
     
-    Abruf Optionen.
+    Abrufoptionen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Nullable](/dotnet/api/system.nullable-1)\<[Int16](/dotnet/api/system.int16)\>  
-Die Daten, die aus der Spalte als kurz abgerufen werden. NULL, wenn die Spalte NULL ist.  
+Typ: [System.Nullable](/dotnet/api/system.nullable-1)\<[Int16](/dotnet/api/system.int16)\>  
+Die aus der Spalte als Short abgerufenen Daten. NULL, wenn die Spalte NULL ist.  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -103,8 +103,8 @@ Die Daten, die aus der Spalte als kurz abgerufen werden. NULL, wenn die Spalte N
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
 [RetrieveColumnAsInt16-Überladung](./api.retrievecolumnasint16-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

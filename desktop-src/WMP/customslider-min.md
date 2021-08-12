@@ -1,9 +1,9 @@
 ---
-title: Customslider. min
-description: Das min-Attribut gibt den minimalen Wert des vom benutzerdefinierten Schieberegler definierten Bereichs an oder ruft ihn ab.
+title: MENULIDER.min
+description: Das Min-Attribut gibt den minimalen Wert des bereichs an, der durch den benutzerdefinierten Schieberegler definiert wird, oder ruft den Minimalwert ab.
 ms.assetid: a152cf9f-7383-47da-a9b2-dedd13749964
 keywords:
-- Customslider. min. Windows-Media Player
+- MENULIDER.min Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 95fa28e010dc969a041fbe8e2e16a58f4729df4a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f324fd70aa996c593ce9a89365341919e10e9407c20326f8f9a8f9300c0dd7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118579728"
 ---
-# <a name="customslidermin"></a>Customslider. min
+# <a name="customslidermin"></a>MENULIDER.min
 
-Das **Min** -Attribut gibt den minimalen Wert des vom benutzerdefinierten Schieberegler definierten Bereichs an oder ruft ihn ab.
+Das **Min-Attribut** gibt den minimalen Wert des bereichs an, der durch den benutzerdefinierten Schieberegler definiert wird, oder ruft den Minimalwert ab.
 
 ``` syntax
         elementID.min
@@ -29,15 +29,15 @@ Das **Min** -Attribut gibt den minimalen Wert des vom benutzerdefinierten Schieb
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Standardwert von 0 (null). 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit dem Standardwert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert von " **Min** " muss kleiner als der **maximal** Wert sein.
+Der Wert von **min** muss kleiner als **max** sein.
 
 ## <a name="examples"></a>Beispiele
 
-Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **customslider** -Elements verwendet werden.
+Ein Beispiel zur Veranschaulichung der Verwendung der Attribute des **ELEMENTS AUSLLIDER** finden Sie unter dem [attribut positionImage.](customslider-positionimage.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ei
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -53,10 +53,10 @@ Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ei
 
 <dl> <dt>
 
-[**Customslider-Element**](customslider-element.md)
+[**ELEMENTSLIDER-Element**](customslider-element.md)
 </dt> <dt>
 
-[**Customslider. Max**](customslider-max.md)
+[**VERALTUNGLIDER.max**](customslider-max.md)
 </dt> </dl>
 
  

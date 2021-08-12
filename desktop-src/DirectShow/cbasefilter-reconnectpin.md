@@ -1,7 +1,7 @@
 ---
-description: Die reconnectpin-Methode unterbricht eine vorhandene Pin-Verbindung und verbindet Sie mit dem gleichen PIN, wobei ein angegebener Medientyp verwendet wird.
+description: Die ReconnectPin-Methode unterbricht eine vorhandene Stecknadelverbindung und verbindet sie unter Verwendung eines angegebenen Medientyps erneut mit demselben Pin.
 ms.assetid: 9e2dea49-a2bd-4abd-b896-54b13b2271bb
-title: Cbasefilter. reconnectpin-Methode (amfilter. h)
+title: CBaseFilter.ReconnectPin-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 22507995621d708e40437175d7004d10f68fedb5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a39cef0ac5a0a7c4f186b8eae90a96a8e26fbf886f819dc7562cb7d8df4e087e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118659720"
 ---
-# <a name="cbasefilterreconnectpin-method"></a>Cbasefilter. reconnectpin-Methode
+# <a name="cbasefilterreconnectpin-method"></a>CBaseFilter.ReconnectPin-Methode
 
-Die `ReconnectPin` -Methode unterbricht eine vorhandene Pin-Verbindung und verbindet Sie mit dem gleichen PIN, wobei ein angegebener Medientyp verwendet wird.
+Die `ReconnectPin` -Methode unterbricht eine vorhandene Pinverbindung und verbindet sie unter Verwendung eines angegebenen Medientyps erneut mit demselben Pin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ HRESULT ReconnectPin(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Pins.
 
 </dd> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**am- \_ Medientyp \_**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, die den Medientyp angibt, oder **null**.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die den Medientyp angibt, oder **NULL**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                       |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                                               |
-| <dl> <dt>**E \_ nointerface**</dt> </dl> | die [**m- \_ PGraph**](cbasefilter-m-pgraph.md) -Element Variable ist **null**.<br/> |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl> | [**Die \_ m pGraph-Membervariable**](cbasefilter-m-pgraph.md) ist **NULL.**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**IFilterGraph2:: reconnectex**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-reconnectex) -Methode für den Filter Graph-Manager auf. Wenn die [**IFilterGraph2**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph2) -Schnittstelle nicht verfügbar ist, ruft die-Methode [**ifiltergraph:: Reconnect**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-reconnect)auf.
+Diese Methode ruft die [**IFilterGraph2::ReconnectEx-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-reconnectex) für den Filtergraph-Manager auf. Wenn die [**IFilterGraph2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph2) nicht verfügbar ist, ruft die Methode [**IFilterGraph::Reconnect**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-reconnect)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,16 +82,16 @@ Diese Methode ruft die [**IFilterGraph2:: reconnectex**](/windows/desktop/api/St
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

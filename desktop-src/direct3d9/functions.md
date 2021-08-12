@@ -1,19 +1,19 @@
 ---
-description: Eine Funktion ist der Baustein für einen Shader, der in der Sprache auf hoher Ebene erstellt wird. Wenn Sie Shader lieber in einer Sprache im C-Stil schreiben möchten, anstatt Sie in der Assemblysprache zu verwenden, sollten Sie Funktionen schreiben.
+description: Eine Funktion ist der Baustein für einen Shader, der in der übergeordneten Sprache erstellt wurde. Wenn Sie Shader lieber in einer Sprache im C-Stil statt in der Assemblysprache schreiben möchten, sollten Sie Funktionen schreiben.
 ms.assetid: vs|directx_sdk|~\functions.htm
-title: Effekt Funktions Syntax (Direct3D 9)
+title: Effect-Funktionssyntax (Direct3D 9)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21e239359877813e64acea8b5f404a6ade59c992
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7b9de680f2f892e59f49e1dfd0850a128ca9ba34e2588e416059251d5058c44c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118297108"
 ---
-# <a name="effect-function-syntax-direct3d-9"></a>Effekt Funktions Syntax (Direct3D 9)
+# <a name="effect-function-syntax-direct3d-9"></a>Effect-Funktionssyntax (Direct3D 9)
 
-Eine Funktion ist der Baustein für einen Shader, der in der Sprache auf hoher Ebene erstellt wird. Wenn Sie Shader lieber in einer Sprache im C-Stil schreiben möchten, anstatt Sie in der Assemblysprache zu verwenden, sollten Sie Funktionen schreiben.
+Eine Funktion ist der Baustein für einen Shader, der in der übergeordneten Sprache erstellt wurde. Wenn Sie Shader lieber in einer Sprache im C-Stil statt in der Assemblysprache schreiben möchten, sollten Sie Funktionen schreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,20 +25,20 @@ type id ( [ parameters ] )
 
 
 
-Funktionen ändern die Parameterwerte nicht in einem Effekt.
+Funktionen ändern keine Parameterwerte in einem Effekt.
 
--   Type: ein beliebiger gültiger [Verweis für den HLSL](../direct3dhlsl/dx-graphics-hlsl-reference.md) -Typ.
--   ID: ein eindeutiger Name.
--   Parameter-Funktionsparameter.
--   Body: der Hauptteil der Funktion.
+-   type: Ein beliebiger gültiger [Verweis für den HLSL-Typ.](../direct3dhlsl/dx-graphics-hlsl-reference.md)
+-   id: Ein eindeutiger Name.
+-   parameters: Funktionsparameter.
+-   body: Der Text der Funktion.
 
-Funktionen werden aus der Sprache auf hoher Ebene erstellt. Weitere Informationen finden Sie unter [Referenz für HLSL](../direct3dhlsl/dx-graphics-hlsl-reference.md).
+Funktionen werden aus der übergeordneten Sprache erstellt. Weitere Informationen finden Sie [unter Referenz für HLSL.](../direct3dhlsl/dx-graphics-hlsl-reference.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Effekt Format](dx9-graphics-reference-effects-file-format.md)
+[Effektformat](dx9-graphics-reference-effects-file-format.md)
 </dt> </dl>
 
  

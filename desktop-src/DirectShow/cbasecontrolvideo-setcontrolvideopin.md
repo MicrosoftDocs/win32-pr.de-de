@@ -1,7 +1,7 @@
 ---
-description: Die setcontrolvideopin-Methode legt die vom Filter verwendete PIN fest.
+description: Die SetControlVideoPin-Methode legt den vom Filter verwendeten Pin fest.
 ms.assetid: 4346f828-4380-4150-9ecb-74eb690bdcdf
-title: Cbasecontrolvideo. setcontrolvideopin-Methode (ctlutil. h)
+title: CBaseControlVideo.SetControlVideoPin-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a4cf47469800a4d1ecd8abe373d6f3c1fd53ece5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6169b5d2ec71148cd868e340c5a2f4e206355044ce55e0905c20787ddb3a263e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118660785"
 ---
-# <a name="cbasecontrolvideosetcontrolvideopin-method"></a>Cbasecontrolvideo. setcontrolvideopin-Methode
+# <a name="cbasecontrolvideosetcontrolvideopin-method"></a>CBaseControlVideo.SetControlVideoPin-Methode
 
-Die- `SetControlVideoPin` Methode legt die vom Filter verwendete PIN fest.
+Die `SetControlVideoPin` -Methode legt den vom Filter verwendeten Pin fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetControlVideoPin(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Zeiger auf die PIN, mit der die Schnittstelle synchronisiert wird.
+Zeiger auf den Stecknadel, mit dem die Schnittstelle synchronisiert wird.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Zeiger auf die PIN, mit der die Schnittstelle synchronisiert wird.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Schnittstelle kann nur aufgerufen werden, wenn der Filter erfolgreich verbunden wurde. Das-Objekt wird durch diese Methode an die PIN übergeben, mit der es synchronisiert wird. in den meisten Fällen wird festgestellt, ob die PIN verbunden ist, wenn Sie über eine Schnittstellen Methode mit dem Namen verfügt, und \_ \_ \_ Wenn Sie fehlschlägt, wird VFW E nicht verbunden zurückgegeben.
+Die Schnittstelle kann nur aufgerufen werden, wenn der Filter erfolgreich verbunden wurde. Das -Objekt wird durch diese Methode an den Pin übergeben, mit dem es synchronisiert wird. in den meisten Fällen wird ermittelt, ob der Pin verbunden ist, wenn er über eine Schnittstellenmethode namens verfügt, und gibt VFW \_ E \_ NOT CONNECTED \_ zurück, wenn er ausfällt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Die-Schnittstelle kann nur aufgerufen werden, wenn der Filter erfolgreich verbun
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

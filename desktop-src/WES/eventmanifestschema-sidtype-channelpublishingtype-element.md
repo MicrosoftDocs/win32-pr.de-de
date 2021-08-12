@@ -1,9 +1,9 @@
 ---
-title: SIDType (channelpublishingtype)-Element
-description: Bestimmt, ob eine Sicherheits-ID (SID) des Prinzipals mit jedem Ereignis eingeschlossen werden soll, das in den Kanal geschrieben wird.
+title: sidType(ChannelPublishingType)-Element
+description: Bestimmt, ob eine Sicherheits-ID (SID) des Prinzipals mit jedem ereignis in den Kanal geschrieben werden soll.
 ms.assetid: 3ce176a3-9e21-4646-8c99-7beb687e6847
 keywords:
-- SIDType-Element EventLog
+- sidType-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5d65e1ade4ded95b070b45de9462f6aee2c60ac0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41653a1fbda3400b74ca5302deb8075ae891e69f22ca0f0e88b6ec4dbb58dfc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589151"
 ---
-# <a name="sidtype-channelpublishingtype-element"></a>SIDType (channelpublishingtype)-Element
+# <a name="sidtype-channelpublishingtype-element"></a>sidType(ChannelPublishingType)-Element
 
-Bestimmt, ob eine Sicherheits-ID (SID) des Prinzipals mit jedem Ereignis eingeschlossen werden soll, das in den Kanal geschrieben wird.
+Bestimmt, ob eine Sicherheits-ID (SID) des Prinzipals mit jedem ereignis in den Kanal geschrieben werden soll.
 
 ``` syntax
 <xs:element name="sidType">
@@ -41,7 +41,7 @@ Bestimmt, ob eine Sicherheits-ID (SID) des Prinzipals mit jedem Ereignis eingesc
 </xs:element>
 ```
 
-Das Element " **SIDType** " wird vom komplexen Typ " [**channelpublishingtype**](eventmanifestschema-channelpublishingtype-complextype.md) " definiert.
+Das **sidType-Element** wird vom komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,8 +49,8 @@ Das Element " **SIDType** " wird vom komplexen Typ " [**channelpublishingtype**]
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -61,7 +61,7 @@ Das Element " **SIDType** " wird vom komplexen Typ " [**channelpublishingtype**]
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Veröffentlichung (channelType)**](eventmanifestschema-publishing-channeltype-element.md)
+[**publishing (ChannelType)**](eventmanifestschema-publishing-channeltype-element.md)
 </dt> </dl>
 
  

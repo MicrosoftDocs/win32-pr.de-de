@@ -1,9 +1,9 @@
 ---
 title: Komplexer DefinitionType-Typ
-description: Definiert eine Liste von Ereignissen, die von Ihrem Anbieter protokolliert werden können.
+description: Definiert eine Liste von Ereignissen, die Ihr Anbieter protokollieren kann.
 ms.assetid: 6d401ced-be1a-409a-8f4d-2d977a33ff8d
 keywords:
-- DefinitionType komplexer Typ (Ereignisprotokoll)
+- Komplexer DefinitionType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 82fbf7ec7db6f64f1bac9776376fa8fe89659d9c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f62ab040f57fdeb4e4208554c642e9b0bc2fb1135512d1c512f0b0ef90b69e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341002"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589635"
 ---
 # <a name="definitiontype-complex-type"></a>Komplexer DefinitionType-Typ
 
-Definiert eine Liste von Ereignissen, die von Ihrem Anbieter protokolliert werden können.
+Definiert eine Liste von Ereignissen, die Ihr Anbieter protokollieren kann.
 
 ``` syntax
 <xs:complexType name="DefinitionType">
@@ -44,10 +44,10 @@ Definiert eine Liste von Ereignissen, die von Ihrem Anbieter protokolliert werde
 
 
 
-| Element                                                           | type                                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                             |
+| Element                                                           | Typ                                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                             |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Veranstalter**](eventmanifestschema-event-definitiontype-element.md) | [**EventDefinitionType**](eventmanifestschema-eventdefinitiontype-complextype.md)         | Definiert ein Ereignis, das von Ihrem Anbieter protokolliert werden kann.<br/>                                                                                                                                                                                                                                 |
-| [**Task**](eventmanifestschema-task-definitiontype-element.md)   | [**TaskEventDefinitionType**](eventmanifestschema-taskeventdefinitiontype-complextype.md) | Wird nicht unterstützt.<br/> **Windows Server 2008 und Windows Vista:** Definiert ein Aufgaben spezifisches Ereignis, das von Ihrem Anbieter protokolliert werden kann. (Beginnend mit dem Nachrichten Compiler, der mit der Windows 7-Version der Windows SDK ausgeliefert wird, werden aufgabenspezifische Ereignisse nicht mehr unterstützt.)<br/> |
+| [**Ereignis**](eventmanifestschema-event-definitiontype-element.md) | [**EventDefinitionType**](eventmanifestschema-eventdefinitiontype-complextype.md)         | Definiert ein Ereignis, das ihr Anbieter protokollieren kann.<br/>                                                                                                                                                                                                                                 |
+| [**Aufgabe**](eventmanifestschema-task-definitiontype-element.md)   | [**TaskEventDefinitionType**](eventmanifestschema-taskeventdefinitiontype-complextype.md) | Wird nicht unterstützt.<br/> **Windows Server 2008 und Windows Vista:** Definiert ein aufgabenspezifisches Ereignis, das ihr Anbieter protokollieren kann. (Ab dem Nachrichtencompiler, der mit der Windows 7-Version des Windows SDK ausgeliefert wird, werden taskspezifische Ereignisse nicht mehr unterstützt.)<br/> |
 
 
 
@@ -57,8 +57,8 @@ Definiert eine Liste von Ereignissen, die von Ihrem Anbieter protokolliert werde
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

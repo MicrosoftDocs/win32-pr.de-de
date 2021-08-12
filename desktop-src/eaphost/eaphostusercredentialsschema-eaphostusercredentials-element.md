@@ -1,9 +1,9 @@
 ---
-title: Eaphustuser-Anmelde Informationen-Element
-description: Enthält das EapMethod-Element und die-Anmelde Informationen oder das-Element für das-Element.
+title: EapHostUserCredentials-Element
+description: Enthält das EapMethod-Element und das Credentials- oder CredentialsBlob-Element.
 ms.assetid: 6d0d41c8-560c-4d42-83c9-865053aef47a
 keywords:
-- Eaphostuser-Anmelde Informationen-Element EAPHost
+- EapHostUserCredentials-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 690770091219e51b3ebb550a1a72e50f76b20542
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a18922ef19bd828067ddb0153aa7c6369ecfeebd0446f5a6481f91fa64ca21b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274420"
 ---
-# <a name="eaphostusercredentials-element"></a>Eaphustuser-Anmelde Informationen-Element
+# <a name="eaphostusercredentials-element"></a>EapHostUserCredentials-Element
 
-Das **eapanstuseranmelde** -Element enthält das [**EapMethod**](eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md) -Element und die [**Anmelde**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md) [**Informationen oder das**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md) Element "-Element".
+Das **EapHostUserCredentials-Element** enthält das [**EapMethod-Element**](eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md) und [**das Credentials-**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md) oder [**CredentialsBlob-Element.**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md)
 
 ``` syntax
 <xs:element name="EapHostUserCredentials">
@@ -55,21 +55,21 @@ Das **eapanstuseranmelde** -Element enthält das [**EapMethod**](eaphostusercred
 
 
 
-| Element                                                                                                | type                                                                                                                | BESCHREIBUNG                                                                                      |
+| Element                                                                                                | type                                                                                                                | Beschreibung                                                                                      |
 |--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [**Daten**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md)         | [**Baseeapmethoduseranmeldeinformationen**](baseeapmethodusercredentialsschema-baseeapmethodusercredentials-complextype.md) | Wird verwendet, wenn die Methoden Konfiguration im XML-Textformular statt in einem binären BLOB erfolgt.<br/>   |
-| [**"Kredentialsblob"**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md) | hexBinary                                                                                                           | Wird verwendet, wenn die Methoden Konfiguration ein binäres Blob anstelle von im XML-Textformat ist.<br/> |
-| [**EapMethod**](eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md)             | [**Eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md)                                                  | Identifiziert die Methode, auf die verwiesen wird. <br/>                                             |
+| [**Anmeldeinformationen**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md)         | [**BaseEapMethodUserCredentials**](baseeapmethodusercredentialsschema-baseeapmethodusercredentials-complextype.md) | Wird verwendet, wenn die Methodenkonfiguration in XML-Textform und nicht in einem binären BLOB vorliegt.<br/>   |
+| [**CredentialsBlob**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md) | hexBinary                                                                                                           | Wird verwendet, wenn die Methodenkonfiguration ein binäres BLOB anstelle des XML-Textformats ist.<br/> |
+| [**EapMethod**](eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md)             | [**EapMethodType**](eapcommonschema-eapmethodtype-complextype.md)                                                  | Identifiziert die Methode, auf die verwiesen wird. <br/>                                             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente " [**Anmelde**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md) Informationen" und " [**kredentialsblob**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md) " können nicht gleichzeitig verwendet werden.
+Die [**Elemente Credentials**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md) und [**CredentialsBlob**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md) können nicht gleichzeitig verwendet werden.
 
-Es gibt einen Erweiterungs Punkt für andere Namespaces.
+Es gibt einen Erweiterungspunkt für andere Namespaces.
 
-Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schemas. Das **processContents** -Element ist optional.
+Das **processContents-Element** ermöglicht zukünftige Erweiterungen des Schemas. Das **processContents-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -86,10 +86,10 @@ Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schema
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
-[eaphustuseranmelde-Schema](eaphostusercredentialsschema-schema.md)
+[eaphostusercredentials-Schema](eaphostusercredentialsschema-schema.md)
 </dt> </dl>
 
  

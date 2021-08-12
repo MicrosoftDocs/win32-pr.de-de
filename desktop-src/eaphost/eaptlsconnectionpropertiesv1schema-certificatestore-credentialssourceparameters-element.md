@@ -1,9 +1,9 @@
 ---
-title: Certifikatestore ("kredentialssourceparameters")-Element
-description: Gibt an, dass EAP-TLS das Zertifikat aus dem eigenen Speicher des Benutzers oder dem Computer lesen soll, der authentifiziert wird.
+title: CertificateStore-Element (CredentialsSourceParameters)
+description: Gibt an, dass EAP-TLS das Zertifikat aus dem My Store des Benutzers lesen soll, oder dass der computer authentifiziert wird.
 ms.assetid: 6b15c7cc-b686-4419-a962-e3dd6b4b84a6
 keywords:
-- Certifikatestore-Element EAPHost
+- CertificateStore-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc7c8841fe275d19752f8b774de5766b95824339
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8fb3d2b5c9d50ea8b63c513e4fd9e7297afe236c5ccd16711d9bf4371e76a8d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274292"
 ---
-# <a name="certificatestore-credentialssourceparameters-element"></a>Certifikatestore ("kredentialssourceparameters")-Element
+# <a name="certificatestore-credentialssourceparameters-element"></a>CertificateStore-Element (CredentialsSourceParameters)
 
-Das **CertificateStore ("kredentialssourceparameters")** -Element gibt an, dass EAP-TLS das Zertifikat aus dem eigenen Speicher des Benutzers oder dem Computer lesen soll, der authentifiziert wird.
+Das **CertificateStore-Element (CredentialsSourceParameters)** gibt an, dass EAP-TLS das Zertifikat aus my Store des Benutzers oder dem authentifizierten Computer lesen soll.
 
 ``` syntax
 <xs:element name="CertificateStore"
@@ -31,11 +31,11 @@ Das **CertificateStore ("kredentialssourceparameters")** -Element gibt an, dass 
  />
 ```
 
-Das **certifikatestore** -Element wird durch den komplexen Typ " [**fordentialssourceparameters**](eaptlsconnectionpropertiesv1schema-credentialssourceparameters-complextype.md) " definiert.
+Das **CertificateStore-Element** wird durch den komplexen [**CredentialsSourceParameters-Typ**](eaptlsconnectionpropertiesv1schema-credentialssourceparameters-complextype.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **certifikatestore** -und [**Smartcard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md) -Elemente können nicht gleichzeitig verwendet werden.
+Die **Elemente CertificateStore** [**und SmartCard**](eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md) können nicht gleichzeitig verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,8 +43,8 @@ Die **certifikatestore** -und [**Smartcard**](eaptlsconnectionpropertiesv1schema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,28 +52,28 @@ Die **certifikatestore** -und [**Smartcard**](eaptlsconnectionpropertiesv1schema
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**"Kredentialssourceparameters"**](eaptlsconnectionpropertiesv1schema-credentialssourceparameters-complextype.md)
+[**CredentialsSourceParameters**](eaptlsconnectionpropertiesv1schema-credentialssourceparameters-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**"Kredentialssource" (eaptype)**](eaptlsconnectionpropertiesv1schema-credentialssource-eaptype-element.md)
+[**CredentialsSource (EapType)**](eaptlsconnectionpropertiesv1schema-credentialssource-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv1-Schema Elemente](eaptlsconnectionpropertiesv1schema-elements.md)
+[eaptlsconnectionpropertiesv1-Schemaelemente](eaptlsconnectionpropertiesv1schema-elements.md)
 </dt> </dl>
 
  

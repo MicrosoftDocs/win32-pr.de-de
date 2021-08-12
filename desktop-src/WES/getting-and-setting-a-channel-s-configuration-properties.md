@@ -1,31 +1,31 @@
 ---
-title: Einrichten und Festlegen der Konfigurations Eigenschaften eines Kanals
-description: Ein Kanal ist anfänglich im Manifest konfiguriert (siehe definieren von Kanälen). Zum Abrufen der konfigurierbaren Eigenschaften eines Kanals können Sie die evtopenchannelconfig-Funktion zum Abrufen eines Handles für den Kanal abrufen.
+title: Abrufen und Festlegen der Konfigurationseigenschaften eines Kanals
+description: Ein Kanal wird anfänglich im Manifest konfiguriert (siehe Definieren von Kanälen). Um die konfigurierbaren Eigenschaften eines Kanals zu erhalten, rufen Sie die EvtOpenChannelConfig-Funktion auf, um ein Handle für den Kanal zu erhalten.
 ms.assetid: 4ee44dae-b390-4d98-bcef-836b53b04860
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52b28e96e45a8b061fac2914b2ef79847cf25a6b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 82f77271e811a2f16599ac9fe94ce4c984564b2b8af559dba46a391d7759060d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118588130"
 ---
-# <a name="getting-and-setting-a-channels-configuration-properties"></a>Einrichten und Festlegen der Konfigurations Eigenschaften eines Kanals
+# <a name="getting-and-setting-a-channels-configuration-properties"></a>Abrufen und Festlegen der Konfigurationseigenschaften eines Kanals
 
-Ein Kanal ist anfänglich im Manifest konfiguriert (siehe [Definieren von Kanälen](defining-channels.md)). Zum Abrufen der konfigurierbaren Eigenschaften eines Kanals können Sie die [**evtopenchannelconfig**](/windows/desktop/api/WinEvt/nf-winevt-evtopenchannelconfig) -Funktion zum Abrufen eines Handles für den Kanal abrufen. Anschließend können Sie die [**evtgetchannelconfigproperty**](/windows/desktop/api/WinEvt/nf-winevt-evtgetchannelconfigproperty) -Funktion aufrufen, um den Wert einer konfigurierbaren Eigenschaft des Kanals abzurufen. Eine Liste der konfigurierbaren Eigenschaften finden Sie in der [**EVT- \_ \_ channelkonfigurations \_ Eigenschaft \_ ID**](/windows/desktop/api/WinEvt/ne-winevt-evt_channel_config_property_id) -Enumeration. Die Eigenschaften Name, Wert und Nachrichten Zeichenfolge des Kanals werden als Metadaten betrachtet und können nicht mithilfe der **evtgetchannelconfigproperty** -Funktion abgerufen werden. Ausführliche Informationen zum erhalten dieser Eigenschaften finden Sie unter "Informationen zu [den Metadaten eines Anbieters](getting-a-provider-s-metadata-.md)".
+Ein Kanal wird anfänglich im Manifest konfiguriert (siehe [Definieren von Kanälen](defining-channels.md)). Um die konfigurierbaren Eigenschaften eines Kanals zu erhalten, rufen Sie die [**EvtOpenChannelConfig-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtopenchannelconfig) auf, um ein Handle für den Kanal zu erhalten. Rufen Sie dann die [**EvtGetChannelConfigProperty-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgetchannelconfigproperty) auf, um den Wert einer konfigurierbaren Eigenschaft des Kanals zu erhalten. Eine Liste der konfigurierbaren Eigenschaften finden Sie in der [**EVT \_ CHANNEL \_ CONFIG \_ PROPERTY \_ ID-Enumeration.**](/windows/desktop/api/WinEvt/ne-winevt-evt_channel_config_property_id) Die Eigenschaften name, value und message string des Kanals gelten als Metadaten und können nicht mithilfe der **EvtGetChannelConfigProperty-Funktion abgerufen** werden. Weitere Informationen zum Abrufen dieser Eigenschaften finden Sie unter [Abrufen der Metadaten eines Anbieters.](getting-a-provider-s-metadata-.md)
 
-Sie können viele der Eigenschaften des Kanals zur Laufzeit konfigurieren. Die Eigenschaften-ID-Enumeration der [**EVT- \_ Kanal \_ Konfiguration \_ \_**](/windows/desktop/api/WinEvt/ne-winevt-evt_channel_config_property_id) identifiziert die Eigenschaften, die Sie nicht festlegen können. Zum Konfigurieren von Kanaleigenschaften muss der Benutzer in der Gruppe "Administratoren" sein und mit erweiterten Berechtigungen ausführen. Um die konfigurierbaren Eigenschaften eines Kanals festzulegen, müssen Sie die [**evtopenchannelconfig**](/windows/desktop/api/WinEvt/nf-winevt-evtopenchannelconfig) -Funktion zum Abrufen eines Handles für den Kanal abrufen. Anschließend können Sie die [**evtsetchannelconfigproperty**](/windows/desktop/api/WinEvt/nf-winevt-evtsetchannelconfigproperty) -Funktion aufrufen, um den Wert einer konfigurierbaren Eigenschaft festzulegen. Nachdem Sie die konfigurierbaren Eigenschaften festgelegt haben, können Sie die [**evtsavechannelconfig**](/windows/desktop/api/WinEvt/nf-winevt-evtsavechannelconfig) -Funktion zum Speichern und Anwenden der Änderungen verwenden.
+Sie können viele der Eigenschaften des Kanals zur Laufzeit konfigurieren. Die [**EVT \_ CHANNEL \_ CONFIG PROPERTY \_ \_ ID-Enumeration**](/windows/desktop/api/WinEvt/ne-winevt-evt_channel_config_property_id) identifiziert die Eigenschaften, die Sie nicht festlegen können. Zum Konfigurieren von Kanaleigenschaften muss sich der Benutzer in der Administratorgruppe und mit erhöhten Rechten ausführen. Rufen Sie zum Festlegen der konfigurierbaren Eigenschaften eines Kanals die [**EvtOpenChannelConfig-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtopenchannelconfig) auf, um ein Handle für den Kanal zu erhalten. Rufen Sie dann die [**EvtSetChannelConfigProperty-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtsetchannelconfigproperty) auf, um den Wert einer konfigurierbaren Eigenschaft zu festlegen. Rufen Sie nach dem Festlegen der konfigurierbaren Eigenschaften die [**EvtSaveChannelConfig-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtsavechannelconfig) auf, um die Änderungen zu speichern und anzuwenden.
 
-In den folgenden Abschnitten finden Sie Beispiele, die zeigen, wie Sie Kanaleigenschaften erhalten und festlegen:
+Beispiele zum Erhalten und Festlegen von Kanaleigenschaften finden Sie in den folgenden Abschnitten:
 
--   [Auflisten von Kanälen](#enumerating-channels)
--   [Kanaleigenschaften werden erhalten.](#getting-and-setting-a-channels-configuration-properties)
+-   [Aufzählen von Kanälen](#enumerating-channels)
+-   [Abrufen von Kanaleigenschaften](#getting-and-setting-a-channels-configuration-properties)
 -   [Festlegen von Kanaleigenschaften](#getting-and-setting-a-channels-configuration-properties)
 
-## <a name="enumerating-channels"></a>Auflisten von Kanälen
+## <a name="enumerating-channels"></a>Aufzählen von Kanälen
 
-Im folgenden Beispiel wird gezeigt, wie die auf dem Computer registrierten Kanäle aufgelistet werden.
+Im folgenden Beispiel wird gezeigt, wie die auf dem Computer registrierten Kanäle aufzählt werden.
 
 
 ```C++
@@ -108,9 +108,9 @@ cleanup:
 
 
 
-## <a name="getting-channel-properties"></a>Kanaleigenschaften werden erhalten.
+## <a name="getting-channel-properties"></a>Abrufen von Kanaleigenschaften
 
-Im folgenden Beispiel wird veranschaulicht, wie die konfigurierbaren Eigenschaften eines Kanals angezeigt werden.
+Das folgende Beispiel zeigt, wie sie die konfigurierbaren Eigenschaften eines Kanals erhalten.
 
 
 ```C++
@@ -332,7 +332,7 @@ DWORD PrintChannelProperty(int Id, PEVT_VARIANT pProperty)
 
 ## <a name="setting-channel-properties"></a>Festlegen von Kanaleigenschaften
 
-Im folgenden Beispiel wird gezeigt, wie die konfigurierbaren Eigenschaften eines Kanals festgelegt werden.
+Das folgende Beispiel zeigt, wie die konfigurierbaren Eigenschaften eines Kanals festgelegt werden.
 
 
 ```C++
@@ -422,9 +422,9 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

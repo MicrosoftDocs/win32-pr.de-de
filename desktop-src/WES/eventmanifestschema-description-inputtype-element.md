@@ -1,9 +1,9 @@
 ---
-title: Description-Element (InputType)
+title: description (InputType)-Element
 description: Eine Beschreibung des Eingabetyps.
 ms.assetid: f7d534d6-3477-4868-ab94-d4713222acf2
 keywords:
-- Description-Element EventLog
+- description-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 11ea044efc9e9a0ed54d31ad98614c1c4ba8fa06
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4b501de2b1232da479006f31974ed44b8c8ba5e595c14840a25d28e265f2ce6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589615"
 ---
-# <a name="description-inputtype-element"></a>Description-Element (InputType)
+# <a name="description-inputtype-element"></a>description (InputType)-Element
 
 Eine Beschreibung des Eingabetyps.
 
@@ -30,7 +30,7 @@ Eine Beschreibung des Eingabetyps.
  />
 ```
 
-Das **Description** -Element wird durch den komplexen [**InputType**](eventmanifestschema-inputtype-complextype.md) -Typ definiert.
+Das **description-Element** wird durch den komplexen [**InputType-Typ**](eventmanifestschema-inputtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Description** -Element wird durch den komplexen [**InputType**](eventmanif
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Description** -Element wird durch den komplexen [**InputType**](eventmanif
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**intype (inputtypelisttype)**](eventmanifestschema-intype-inputtypelisttype-element.md)
+[**inType (InputTypeListType)**](eventmanifestschema-intype-inputtypelisttype-element.md)
 </dt> </dl>
 
  

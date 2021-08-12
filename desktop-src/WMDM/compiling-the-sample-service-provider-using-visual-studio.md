@@ -1,29 +1,29 @@
 ---
-title: Kompilieren des Beispiel Dienstanbieters mithilfe von Visual Studio
-description: Kompilieren des Beispiel Dienstanbieters mithilfe von Visual Studio
+title: Kompilieren des Beispieldienstanbieters mit Visual Studio
+description: Kompilieren des Beispieldienstanbieters mit Visual Studio
 ms.assetid: db0ecc18-d5b0-47d8-9b3f-3a9644343de8
 keywords:
-- Windows Media Device Manager, Beispiele
-- Device Manager, Beispiele
-- Windows Media Device Manager, Dienstanbieter Beispiel
-- Beispiel für Device Manager, Dienstanbieter
+- Windows Media Geräte-Manager, Beispiele
+- Geräte-Manager, Beispiele
+- Windows Beispiel für Medien Geräte-Manager, Dienstanbieter
+- beispiel für Geräte-Manager,Dienstanbieter
 - Dienstanbieter, Beispiele
 - Beispiele, Dienstanbieter
-- Beispiele, Kompilieren mithilfe von Visual Studio
+- Beispiele,Kompilieren mit Visual Studio
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2abded2aa1272f2e5e14b711c0d8b0a8ec79f280
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cd220e314a6de0a9c5e4cf50ccd710a0236c3b3ec469247ef99f319b553b15c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118586018"
 ---
-# <a name="compiling-the-sample-service-provider-using-visual-studio"></a>Kompilieren des Beispiel Dienstanbieters mithilfe von Visual Studio
+# <a name="compiling-the-sample-service-provider-using-visual-studio"></a>Kompilieren des Beispieldienstanbieters mit Visual Studio
 
-Das Windows Media-Format-SDK enthält keine Visual Studio-Projektmappendatei. Dieses Dokument enthält jedoch zwei Dateien, die es Ihnen ermöglichen, den Beispiel Dienstanbieter mithilfe von Visual Studio zu erstellen und zu debuggen. Beide bereitgestellten Dateien sind für Visual Studio .NET 2003.
+Das Windows Media Format SDK enthält keine Visual Studio Projektmappendatei. Dieses Dokument enthält jedoch zwei Dateien, mit denen Sie Visual Studio zum Erstellen und Debuggen des Beispieldienstanbieters verwenden können. Beide bereitgestellten Dateien gelten für Visual Studio .NET 2003.
 
--   Speichern Sie den folgenden Code als Textdatei mit dem Namen "mshdsp. vcproj" im Ordner <*SDK-Installationspfad* > \\ wmfsdk \\ WMFSDK95 \\ WMDM \\ mdsp \\ mshdsp.
+-   Speichern Sie den folgenden Code als Textdatei mit dem Namen mshdsp.vcproj im Ordner <*SDK-Installationspfad* > \\ WMFSDK \\ WMFSDK95 \\ WMDM \\ mdsp \\ mshdsp.
 
 
 ```C++
@@ -300,7 +300,7 @@ Das Windows Media-Format-SDK enthält keine Visual Studio-Projektmappendatei. Di
 
 
 
--   Speichern Sie den folgenden Code als Textdatei mit dem Namen "mshdsp. sln" im selben Ordner, in dem Sie "mshdsp. vcproj" gespeichert haben.
+-   Speichern Sie den folgenden Code als Textdatei mit dem Namen mshdsp.sln in demSelben Ordner, in dem Sie mshdsp.vcproj gespeichert haben.
 
 
 ```C++
@@ -335,12 +335,12 @@ EndGlobal
 
 <dl> <dt>
 
-[**Beispiel Dienstanbieter**](sample-service-provider.md)
+[**Beispieldienstanbieter**](sample-service-provider.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

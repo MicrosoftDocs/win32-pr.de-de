@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc setconfigurationvalue-Methode (vpccominterfaces. h)
+title: IVMVirtualPC SetConfigurationValue-Methode (VPCCOMInterfaces.h)
 description: Legt den Wert der angegebenen Konfigurationseinstellung fest.
 ms.assetid: 7760b81e-734d-4970-8875-f2d310ff6c5c
 keywords:
-- Setconfigurationvalue-Methode Virtual PC
-- Setconfigurationvalue-Methode Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, setconfigurationvalue-Methode
+- SetConfigurationValue-Methode Virtueller PC
+- SetConfigurationValue-Methode Virtueller PC, IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC , SetConfigurationValue-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ecb8ff3bb68829e944461cedb1c86904c7150593
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 50d3ea585182794c1e96195fdbef842bc35c86342d390dd59e7077b31d4ef9a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118591703"
 ---
-# <a name="ivmvirtualpcsetconfigurationvalue-method"></a>Ivmvirtualpc:: setconfigurationvalue-Methode
+# <a name="ivmvirtualpcsetconfigurationvalue-method"></a>IVMVirtualPC::SetConfigurationValue-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Legt den Wert der angegebenen Konfigurationseinstellung fest.
 
@@ -45,22 +45,22 @@ HRESULT SetConfigurationValue(
 
 <dl> <dt>
 
-*preferecekey* \[ in\]
+*preferenceKey* \[ In\]
 </dt> <dd>
 
-Der Schlüssel, der verwendet wird, um die Einstellung zu identifizieren, wie Sie in der Konfigurationsdatei pro Benutzer (Options.xml in "% LocalAppData% \\ Microsoft \\ Windows Virtual PC") gespeichert ist.
+Der Schlüssel, der zum Identifizieren der Einstellung verwendet wird, wie in der Konfigurationsdatei pro Benutzer gespeichert (Options.xml in "%LocalAppData% \\ Microsoft \\ Windows Virtual PC").
 
 > [!IMPORTANT]
-> Es sollten Änderungen vorgenommen werden, die nur mit der **setconfigurationvalue** -Methode Options.xml werden. Das Ändern von Options.xml mit einer anderen Methode wird nicht unterstützt.
+> Änderungen an Options.xml sollten nur mithilfe der **SetConfigurationValue-Methode** vorgenommen werden. Das Ändern Options.xml mit einer anderen Methode wird nicht unterstützt.
 
  
 
 </dd> <dt>
 
-*preferumcevalue* \[ in\]
+*preferenceValue* \[ In\]
 </dt> <dd>
 
-Der bevorzugte Wert. Dieser Wert kann einer der folgenden **Variant** -Typen sein: **VT \_ Array** \| **VT \_ UI1** (RAW Bytes), **VT \_ BSTR** (String), **VT \_ UI4** (Integer) oder **VT \_ bool** (Boolean).
+Der Einstellungswert. Dieser Wert kann einer der folgenden **VARIANT-Typen** sein: **VT \_ ARRAY** \| **VT \_ UI1** (unformatierte Bytes), **VT \_ BSTR** (Zeichenfolge), **VT \_ UI4** (integer) oder **VT \_ BOOL** (Boolean).
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                        | BESCHREIBUNG                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                | Der *preferecekey* -Parameter oder der *preferendcevalue* -Parameter ist **null**.<br/>                      |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                             | Der *preferencekey* -Parameter ist ungültig oder eine leere Zeichenfolge.<br/>                    |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>**E \_ AccessDenied**</dt> <dt>0x80070005</dt> </dl>                           | Der aktuelle Benutzer verfügt nicht über ausreichenden Zugriff auf die Konfigurationsdatei.<br/>                  |
-| <dl> <dt>**VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert**</dt> <dt>0xa0040951</dt> </dl> | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                | Der *preferenceKey-* oder *preferenceValue-Parameter* ist **NULL.**<br/>                      |
+| <dl> <dt>**E \_ INVALIDARG**</dt> <dt>0x80000003</dt> </dl>                             | Der *preferenceKey-Parameter* ist ungültig oder eine leere Zeichenfolge.<br/>                    |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> <dt>0x80070005</dt> </dl>                           | Der aktuelle Benutzer hat nicht genügend Zugriff auf die Konfigurationsdatei.<br/>                  |
+| <dl> <dt>**VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT**</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -85,38 +85,38 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die folgenden Werte werden für den *preferecekey* -Parameter unterstützt.
+Die folgenden Werte werden für den *preferenceKey-Parameter* unterstützt.
 
 
 
-| *preferecekey* -Wert      | BESCHREIBUNG                                                                                                                                                                           | Datentyp            | Standardwert   |
+| *preferenceKey-Wert*      | BESCHREIBUNG                                                                                                                                                                           | Datentyp            | Standardwert   |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|-----------------|
-| "Leerlauf \_ Timeout"<br/> | Anzahl der Sekunden, die vpc.exe warten soll, bis der Vorgang beendet ist, wenn die [Windows Virtual PC-Schnittstellen](virtual-pc-interfaces.md)keine aktiven VMS oder Anwendungen verwenden.<br/> | Zah<br/> | „30“<br/> |
+| \_"Leerlauftimeout"<br/> | Anzahl von Sekunden, die vpc.exe warten sollten, bevor sie beendet werden, wenn keine aktiven VMs oder Anwendungen vorhanden sind, die die [Windows Virtual PC Interfaces](virtual-pc-interfaces.md)verwenden.<br/> | "integer"<br/> | „30“<br/> |
 
 
 
  
 
-Diese Methode bietet Zugriff auf niedriger Ebene auf einen beliebigen Konfigurations Wert. Sie kann verwendet werden, um Konfigurationswerte für Kunden definierte Schlüssel festzulegen. Gehen Sie vorsichtig vor, wenn Sie diese Methode verwenden, um Systemkonfigurations Werte festzulegen, da für den Konfigurations Wert keine Fehlerüberprüfung durchgeführt wird. Außerdem können einige Konfigurationswerte nicht geändert werden, während ein virtueller Computer ausgeführt wird.
+Diese Methode bietet Zugriff auf einen beliebigen Konfigurationswert auf niedriger Ebene. Sie kann verwendet werden, um Konfigurationswerte für kundendefinierte Schlüssel festzulegen. Seien Sie vorsichtig, wenn Sie diese Methode verwenden, um Systemkonfigurationswerte festzulegen, da keine Fehlerüberprüfung für den Konfigurationswert ausgeführt wird. Außerdem können einige Konfigurationswerte nicht geändert werden, während ein virtueller Computer ausgeführt wird.
 
-Konfigurationsschlüssel befinden sich im XML-Format in der Datei "Options.xml" der virtuellen Maschine. Die Schlüssel werden auf hierarchische Weise gespeichert, ähnlich wie die Registrierungsschlüssel in Windows. Um einen bestimmten Unterschlüssel anzugeben, wird ein "Schlüssel Pfad" erstellt, der die verschiedenen Schlüssel in einem durch Trennzeichen getrennten Format angibt.
+Konfigurationsschlüssel befinden sich in der Datei "Options.xml" des virtuellen Computers im XML-Format. Die Schlüssel werden auf hierarchische Weise gespeichert, ähnlich wie die Registrierungsschlüssel in Windows. Um einen bestimmten Unterschlüssel anzugeben, wird ein "Schlüsselpfad" erstellt, der die verschiedenen Schlüssel in einem durch Schrägstriche getrennten Format angibt.
 
-So legen Sie beispielsweise den Wert für den Schlüssel "Leerlauf Timeout" fest, der \_ sich in der folgenden Schlüsselstruktur befindet:
+So legen Sie beispielsweise den Wert des \_ Schlüssels "Leerlauftimeout" fest, der sich in der folgenden Schlüsselstruktur befindet:
 
 ``` syntax
 <preferences>
   <idle_timeout type="integer">60</idle_timeout>
 ```
 
-Die Pfad *Zeichenfolge für den preferencekey* wird wie folgt angegeben:
+Die *Pfadzeichenfolge preferenceKey* wird wie folgt angegeben:
 
 ``` syntax
 "idle_timeout"
 ```
 
-Wenn einer der Schlüssel in der gewünschten Struktur über einen "ID"-Attribut Wert verfügt, werden das Attribut und sein Wert in der Pfad *Zeichenfolge "preferencekey* " direkt nach dem zugehörigen Konfigurationsschlüssel in folgendem Format in Klammern eingebettet: " \[ @id ="*ID- \_ Wert*" \] ".
+Wenn einer der Schlüssel in der gewünschten Struktur über einen ID-Attributwert  verfügt, werden das Attribut und sein Wert unmittelbar nach dem zugeordneten Konfigurationsschlüssel in die preferenceKey-Pfadzeichenfolge eingebettet, wobei das folgende formatierte Format in Klammern verwendet wird: " \[ @id ="*id \_ value*" \] ".
 
-So legen Sie beispielsweise den Wert des "Golf"-Schlüssels fest, der sich in der folgenden Schlüsselstruktur befindet:
+So legen Sie z. B. den Wert des Schlüssels "soll" in der folgenden Schlüsselstruktur fest:
 
 ``` syntax
 <preferences>
@@ -129,7 +129,7 @@ So legen Sie beispielsweise den Wert des "Golf"-Schlüssels fest, der sich in de
               <golf type="string">D</golf>
 ```
 
-Die Pfad *Zeichenfolge für den preferencekey* wird wie folgt angegeben:
+Die *Pfadzeichenfolge preferenceKey* wird wie folgt angegeben:
 
 ``` syntax
 "alpha/bravo/charlie/delta[@id=1]/echo[@id=0]/foxtrot/golf"
@@ -141,12 +141,12 @@ Die Pfad *Zeichenfolge für den preferencekey* wird wie folgt angegeben:
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
@@ -154,10 +154,10 @@ Die Pfad *Zeichenfolge für den preferencekey* wird wie folgt angegeben:
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> <dt>
 
-[**Ivmvirtualmachine:: setconfigurationvalue**](ivmvirtualmachine-setconfigurationvalue.md)
+[**IVMVirtualMachine::SetConfigurationValue**](ivmvirtualmachine-setconfigurationvalue.md)
 </dt> </dl>
 
  
