@@ -1,30 +1,30 @@
 ---
-description: Zusätzlich zum Erkennen von Text können Erkennungs Tools eine Klasse verwandter Objekte erkennen.
+description: Neben der Texterkennung können Erkennungen auch eine Klasse verwandter Objekte erkennen.
 ms.assetid: 53b6137d-2998-4a3b-b469-3d1204ea194b
-title: Objekterkenzer
+title: Objekt-Recognizers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83a258c8486bcf773f5f94c4de51c501e107fac4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aabfd44a5eb126d48df70efd1c391584d12afc94e5e21c714aa0c740a7d486f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449661"
 ---
-# <a name="object-recognizers"></a>Objekterkenzer
+# <a name="object-recognizers"></a>Objekt-Recognizers
 
-Zusätzlich zum Erkennen von Text können Erkennungs Tools eine Klasse verwandter Objekte erkennen. Objekt erkenmentatoren erkennen allgemeine Formen entsprechend ihrem Zweck. Objekterkenatoren werden verwendet, um Folgendes zu erkennen:
+Neben der Texterkennung können Erkennungen auch eine Klasse verwandter Objekte erkennen. Objekt-Recognizer erkennen allgemeine Formen entsprechend ihrem Zweck. Objekt-Recognizer werden verwendet, um:
 
--   Musik Notizen
+-   Anmerkungen zu Notes
 -   Geometrische Formen
 -   Mathematische Gleichungen
--   Flussdiagramm Elemente
+-   Flow Diagrammelemente
 
-In der Regel befinden sich die Objekte, die von einer solchen Erkennung erkannt werden, in einer zweidimensionalen räumlichen oder funktionalen Beziehung zueinander. Innerhalb der komplexen Beziehungen in einer mathematischen Gleichung kann eine Erkennung z. b. unterschiedliche Ergebnisse für eine Obergrenze für eine definitive Ganzzahl zurückgeben, im Gegensatz zu einem Zähler in einem Bruchteil.
+In der Regel befinden sich die Objekte, die von einer solchen Erkennen erkannt werden, in einer zweidimensionalen räumlichen oder funktionalen Beziehung miteinander. Innerhalb der komplexen Beziehungen in einer mathematischen Gleichung kann eine Recognizer beispielsweise unterschiedliche Ergebnisse für eine Obergrenze für ein bestimmtes Integral zurückgeben, im Gegensatz zu einem Zähler in einem Bruch.
 
-Aufgrund der allgemeinen Natur dieser Beziehungen ist es äußerst schwierig, den Satz von Schnittstellen zu definieren, der für jede Objekterkennung funktioniert.
+Aufgrund der sehr allgemeinen Natur dieser Beziehungen ist es äußerst schwierig, die Gruppe von Schnittstellen zu definieren, die für jede Objekt erkannt werden können.
 
-Die Tablet PC-Technologie stellt ein grundlegendes Framework für Objekt erkenzer in der verwalteten Bibliothek und in den Automatisierungs Schnittstellen bereit. Sie müssen jedoch benutzerdefinierte Schnittstellen entwickeln, die komplexe räumliche Beziehungen zwischen erkannten Objekten für jede Objekterkennung beschreiben. Speziell für Objekt erkennenungen stellt die Plattform das grundlegende [**Erkennungs**](inkrecognizercontext-class.md) Element-Objekt bereit, [**um das frei Hand Objekt dem**](inkdisp-class.md) Erkennungs Kontext zuzuordnen und den Erkennungs Modul zum Durchführen der Erkennung aufzurufenden.
+Die Tablet PC-Technologie stellt ein grundlegendes Framework für Objekt erkennende Objekte in den Schnittstellen verwaltete Bibliothek und Automatisierung bereit. Sie müssen jedoch benutzerdefinierte Schnittstellen entwickeln, die komplexe räumliche Beziehungen zwischen erkannten Objekten für jede Objekt erkannt werden. Insbesondere für Objekterkennungen stellt die Plattform das grundlegende [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) zum Zuordnen des [**Ink-Objekts**](inkdisp-class.md) zum Erkennungskontext und zum Aufrufen der Erkennung zum Durchführen der Erkennung zur Verfügung.
 
  
 

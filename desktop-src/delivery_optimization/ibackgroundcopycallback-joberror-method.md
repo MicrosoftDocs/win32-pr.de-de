@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopycallback-joberror-Methode (deliveryoptimization. h)
-description: Die Übermittlungs Optimierung (Do) ruft Ihre Implementierung der joberror-Methode auf, wenn sich der Status des Auftrags in "BG_JOB_STATE_ERROR" ändert.
+title: IBackgroundCopyCallback JobError-Methode (Deliveryoptimization.h)
+description: Übermittlungsoptimierung (DO) ruft Ihre Implementierung der JobError-Methode auf, wenn sich der Status des Auftrags in BG_JOB_STATE_ERROR.
 ms.assetid: 121712A5-98EB-4B2F-A004-A3BDF9C1332B
 keywords:
-- Joberror-Methode
-- Joberror-Methode, ibackgroundcopycallback-Schnittstelle
-- Ibackgroundcopycallback-Schnittstelle, joberror-Methode
+- JobError-Methode
+- JobError-Methode, IBackgroundCopyCallback-Schnittstelle
+- IBackgroundCopyCallback-Schnittstelle, JobError-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0122f5777303506be5fd81d0966b00f828bf2073
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 307ab18a0f956e5a2f4f14e9782f90b8ec6bff723da04aa9866566d95c53dca7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118543132"
 ---
-# <a name="ibackgroundcopycallbackjoberror-method"></a>Ibackgroundcopycallback:: joberror-Methode
+# <a name="ibackgroundcopycallbackjoberror-method"></a>IBackgroundCopyCallback::JobError-Methode
 
-Die Übermittlungs Optimierung (Do) ruft Ihre Implementierung der [**joberror**](https://www.bing.com/search?q=**JobError**) -Methode auf, wenn sich der Status des Auftrags in "BG_JOB_STATE_ERROR" ändert.
+Übermittlungsoptimierung (DO) ruft Ihre Implementierung der [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) auf, wenn sich der Status des Auftrags in BG_JOB_STATE_ERROR.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,35 +44,35 @@ HRESULT JobError(
 
 <dl> <dt>
 
-*pjob* \[ in\]
+*pJob* \[ In\]
 </dt> <dd>
 
-Enthält auftragsbezogene Informationen, wie z. b. die Anzahl von Bytes und Dateien, die vor dem Auftreten des Fehlers übertragen wurden. Außerdem enthält es die Methoden zum fortsetzen und Abbrechen des Auftrags. *Pjob* nicht freigeben; Gibt die-Schnittstelle frei, wenn die [**joberror**](https://www.bing.com/search?q=**JobError**) -Methode zurückgibt.
+Enthält auftragsbezogene Informationen, z. B. die Anzahl der Bytes und Dateien, die vor dem Fehler übertragen wurden. Sie enthält auch die Methoden zum Fortsetzen und Abbrechen des Auftrags. Geben Sie *pJob nicht frei.* DO gibt die Schnittstelle frei, wenn die [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) zurückgegeben wird.
 
 </dd> <dt>
 
-*perror* \[ in\]
+*pError* \[ In\]
 </dt> <dd>
 
-Enthält Fehlerinformationen, wie z. b. die Datei, die zu dem Zeitpunkt, zu dem ein schwerwiegender Fehler aufgetreten ist, und eine Beschreibung des Fehlers. Kein Release von *perror*; Gibt die-Schnittstelle frei, wenn die [**joberror**](https://www.bing.com/search?q=**JobError**) -Methode zurückgibt.
+Enthält Fehlerinformationen, z. B. die Datei, die zum Zeitpunkt des schwerwiegenden Fehlers verarbeitet wird, und eine Beschreibung des Fehlers. Geben Sie *pError nicht frei.* DO gibt die Schnittstelle frei, wenn die [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) zurückgegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode sollte **S_OK** zurückgeben. Andernfalls wird diese Methode weiterhin aufgerufen, bis **S_OK** zurückgegeben wird. Aus Leistungsgründen sollten Sie begrenzen, wie oft ein anderer Wert als **S_OK** zurückgegeben werden soll. Als Alternative zum Zurückgeben eines Fehlercodes sollten Sie die Rückgabe von **S_OK** und die interne Behandlung des Fehlers in Erwägung gezogen. Das Intervall, in dem diese Methode aufgerufen wird, ist willkürlich.
+Diese Methode sollte **S_OK.** Andernfalls wird diese Methode von DO weiterhin verwendet, **bis S_OK** zurückgegeben wird. Aus Leistungsgründen sollten Sie die Anzahl der Rückgaben eines anderen Werts als S_OK auf **einige** Male beschränken. Als Alternative zur Rückgabe eines Fehlercodes  sollten Sie in Betracht ziehen, immer S_OK und den Fehler intern zu behandeln. Das Intervall, in dem diese Methode aufgerufen wird, ist beliebig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie die Ursache des Fehlers bestimmt haben, führen Sie eine der folgenden Optionen aus:
+Nachdem Sie die Ursache des Fehlers ermittelt haben, führen Sie eine der folgenden Optionen aus:
 
--   Um den Auftrag abzubrechen, rufen Sie die [**ibackgroundcopyjob:: Cancel**](ibackgroundcopyjob-cancel.md) -Methode auf.
--   Um den Teil des Auftrags zu akzeptieren, der vor dem Auftreten des Fehlers erfolgreich übertragen wurde, können Sie die [**ibackgroundcopyjob:: Complete**](ibackgroundcopyjob-complete.md) -Methode abrufen. Diese Option gilt nicht für Aufträge zum hochladen. ein Teil eines uploadauftrags kann nicht ausgeführt werden.
--   Beheben Sie das Problem, und führen Sie dann die [**ibackgroundcopyjob:: Resume**](ibackgroundcopyjob-resume.md) -Methode aus, um die Verarbeitung des Auftrags abzuschließen.
+-   Rufen Sie zum Abbrechen des Auftrags die [**IBackgroundCopyJob::Cancel-Methode**](ibackgroundcopyjob-cancel.md) auf.
+-   Um den Teil des Auftrags zu akzeptieren, der vor dem Fehler erfolgreich übertragen wurde, rufen Sie die [**IBackgroundCopyJob::Complete-Methode**](ibackgroundcopyjob-complete.md) auf. Diese Option gilt nicht für Uploadaufträge. Sie können einen Teil eines Uploadauftrags nicht abschließen.
+-   Beheben Sie das Problem, und rufen Sie dann die [**IBackgroundCopyJob::Resume-Methode**](ibackgroundcopyjob-resume.md) auf, um die Verarbeitung des Auftrags fertig zu stellen.
 
-Vorübergehende Fehler generieren keine Aufrufe der [**joberror**](https://www.bing.com/search?q=**JobError**) -Methode.
+Vorübergehende Fehler generieren keine Aufrufe der [**JobError-Methode.**](https://www.bing.com/search?q=**JobError**)
 
-Gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn der Auftrag einen HTTP 403-Fehler ausgelöst hat, andernfalls BG_ERROR_CONTEXT_NONE.
+DO gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn für den Auftrag ein HTTP 403-Fehler aufgetreten ist, BG_ERROR_CONTEXT_NONE andernfalls .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,33 +80,33 @@ Gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn der Auftrag einen HTTP 403-Fehle
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyCallback ist als 97ea99c7-0186-4ad4-8df9-c5b4e0ed6b22 definiert.<br/>          |
+| IID<br/>                      | IID_IBackgroundCopyCallback ist als 97EA99C7-0186-4AD4-8DF9-C5B4E0ED6B22 definiert.<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Ibackgroundcopycallback**](ibackgroundcopycallback.md)
+[**IBackgroundCopyCallback**](ibackgroundcopycallback.md)
 </dt> <dt>
 
-[**Ibackgroundcopyerror**](ibackgroundcopyerror.md)
+[**IBackgroundCopyError**](ibackgroundcopyerror.md)
 </dt> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: Cancel**](ibackgroundcopyjob-cancel.md)
+[**IBackgroundCopyJob::Cancel**](ibackgroundcopyjob-cancel.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: Resume**](ibackgroundcopyjob-resume.md)
+[**IBackgroundCopyJob::Resume**](ibackgroundcopyjob-resume.md)
 </dt> </dl>
 
  

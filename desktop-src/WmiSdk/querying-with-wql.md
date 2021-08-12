@@ -1,5 +1,5 @@
 ---
-description: Der WMI Query Language (WQL) ist eine Teilmenge der Standard American National Standards Institute Structured Query Language (ANSI SQL) mit geringfügigen Semantik Änderungen, um WMI zu unterstützen.
+description: Die WMI Query Language (WQL) ist eine Teilmenge der Standard-American National Standards Institute strukturierte Abfragesprache (ANSI SQL) mit geringfügigen semantischen Änderungen zur Unterstützung von WMI.
 ms.assetid: 7e04ba37-c0e0-4304-b162-8b911f233f38
 ms.tgt_platform: multiple
 title: Abfragen mit WQL
@@ -10,45 +10,45 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8e2d3f68f4d7384781110958070b33b67a78405f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 737ae9505a0f775c26c5049eeb2f8500c9e3222d78181e18326ff53d39dfde01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118554831"
 ---
 # <a name="querying-with-wql"></a>Abfragen mit WQL
 
-Der WMI Query Language (WQL) ist eine Teilmenge der Standard American National Standards Institute Structured Query Language (ANSI SQL) mit geringfügigen Semantik Änderungen, um WMI zu unterstützen.
+Die WMI Query Language (WQL) ist eine Teilmenge der Standard-American National Standards Institute strukturierte Abfragesprache (ANSI SQL) mit geringfügigen semantischen Änderungen zur Unterstützung von WMI.
 
-Eine umfassende Liste der unterstützten WQL-Schlüsselwörter finden Sie unter [WQL (SQL für WMI)](wql-sql-for-wmi.md). Durch die Verwendung von SQL-Schlüsselwörtern für Objekt-oder Eigenschaftsnamen kann eine Abfrage möglicherweise nicht analysiert werden. Die folgenden SQL-Schlüsselwörter sind eingeschränkt: **null**, **true** und **false**.
+Eine vollständige Liste der unterstützten WQL-Schlüsselwörter finden Sie unter [WQL (SQL für WMI).](wql-sql-for-wmi.md) Die Verwendung von SQL Schlüsselwörtern für Objekt- oder Eigenschaftsnamen kann die Analyse einer Abfrage einschränken. Die folgenden SQL Schlüsselwörter sind eingeschränkt: **NULL,** **TRUE** und **FALSE.**
 
 > [!Note]  
-> Es gibt Einschränkungen für die Anzahl von-und-oder-Schlüsselwörtern, die in WQL-Abfragen verwendet werden können. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann bewirken, dass WMI den Fehlercode der **WBEM \_ E- \_ Kontingent \_ Verletzung** als **HRESULT** -Wert zurückgibt Das Limit von WQL-Schlüsselwörtern hängt von der Komplexität der Abfrage ab.
+> Die Anzahl von AND- und OR-Schlüsselwörtern, die in WQL-Abfragen verwendet werden können, ist begrenzt. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den **WBEM \_ E \_ QUOTA \_ VIOLATION-Fehlercode** als **HRESULT-Wert** zurückgibt. Die Beschränkung der WQL-Schlüsselwörter hängt davon ab, wie komplex die Abfrage ist.
 
  
 
-Abfragen können die **Where** -Klausel für Erweiterung und Anpassung verwenden, obwohl Sie nicht erforderlich ist. Die **Where** -Klausel besteht aus einer Eigenschaft oder einem Schlüsselwort, einem Operator und einer Konstante. Alle **Where** -Klauseln müssen einen der vordefinierten Operatoren angeben, die in WQL enthalten sind. Weitere Informationen zur Syntax finden Sie unter [WHERE-Klausel](where-clause.md). Weitere Informationen zu gültigen WQL-Operatoren finden Sie unter [WQL-Operatoren](wql-operators.md).
+Abfragen können die **WHERE-Klausel** für Erweiterungen und Anpassungen verwenden, obwohl dies nicht erforderlich ist. Die **WHERE-Klausel** besteht aus einer Eigenschaft oder einem Schlüsselwort, einem Operator und einer Konstante. Alle **WHERE-Klauseln** müssen einen der vordefinierten Operatoren angeben, die in WQL enthalten sind. Weitere Informationen zur Syntax finden Sie unter [WHERE-Klausel.](where-clause.md) Weitere Informationen zu gültigen WQL-Operatoren finden Sie unter [WQL-Operatoren.](wql-operators.md)
 
-Wie bei anderen SQL-Abfrage Zeichenfolgen können Sie Ihre Abfragen mit Escapezeichen versehen.
+Wie bei anderen SQL Abfragezeichenfolgen können Sie Ihre Abfragen mit Escapezeichen umgehen.
 
 > [!Note]  
-> WQL unterstützt keine Namespace übergreifende Abfragen oder Zuordnungen. Es ist nicht möglich, alle Instanzen einer bestimmten Klasse abzufragen, die sich in allen Namespaces auf dem Bereitstellungs Zielcomputer befinden.
+> WQL unterstützt keine namespaceübergreifenden Abfragen oder Zuordnungen. Sie können nicht alle Instanzen einer angegebenen Klasse abfragen, die sich in allen Namespaces auf dem Zielcomputer befinden.
 
  
 
-WQL unterstützt die folgenden Typen von Abfragen:
+WQL unterstützt die folgenden Abfragetypen:
 
--   Daten Abfragen
+-   Datenabfragen
 
-    Daten Abfragen werden verwendet, um Klassen Instanzen und Daten Zuordnungen abzurufen. Dabei handelt es sich um den am häufigsten verwendeten Abfragetyp in WMI-Skripts und-Anwendungen. Weitere Informationen zur Syntax von Daten Abfragen finden Sie unter [anfordern von klasseninstanzdaten](requesting-class-instance-data.md). Weitere Informationen zu Zuordnungen finden Sie unter [Deklarieren einer Association-Klasse](declaring-an-association-class.md).
+    Datenabfragen werden verwendet, um Klasseninstanzen und Datenzuordnungen abzurufen. Sie sind der am häufigsten verwendete Abfragetyp in WMI-Skripts und -Anwendungen. Weitere Informationen zur Syntax von Datenabfragen finden Sie unter [Anfordern von Klasseninstanzdaten.](requesting-class-instance-data.md) Weitere Informationen zu Zuordnungen finden Sie unter [Deklarieren einer Zuordnungsklasse.](declaring-an-association-class.md)
 
     > [!Note]  
-    > WQL unterstützt keine Abfragen von Array Datatypes.
+    > WQL unterstützt keine Abfragen von Arraydatentypen.
 
      
 
-    Im folgenden Beispiel für eine Datenabfrage wird die Ereignisprotokoll Datei "Application" aus allen Instanzen von [**Win32 \_ ntlogevent**](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent)angefordert.
+    Im folgenden Beispiel für eine Datenabfrage wird die Ereignisprotokolldatei mit dem Namen "Application" von allen Instanzen von [**Win32 \_ NTLogEvent**](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent)angefordert.
 
     ```VB
     strComputer = "." 
@@ -61,11 +61,11 @@ WQL unterstützt die folgenden Typen von Abfragen:
 
     
 
--   Ereignis Abfragen
+-   Ereignisabfragen
 
-    Consumer verwenden Ereignis Abfragen, um sich für den Empfang von Benachrichtigungen über Ereignisse zu registrieren. Ereignis Anbieter verwenden Ereignis Abfragen zur Registrierung, um ein oder mehrere Ereignisse zu unterstützen. Weitere Informationen zu Ereignis Abfragen finden Sie unter [empfangen von Ereignis Benachrichtigungen](receiving-event-notifications.md).
+    Consumer verwenden Ereignisabfragen, um sich zu registrieren, um Benachrichtigungen über Ereignisse zu erhalten. Ereignisanbieter verwenden Ereignisabfragen zur Registrierung, um ein oder mehrere Ereignisse zu unterstützen. Weitere Informationen zu Ereignisabfragen finden Sie unter [Empfangen von Ereignisbenachrichtigungen.](receiving-event-notifications.md)
 
-    Die folgende Beispiel Ereignis Abfrage durch einen temporären Ereignisconsumer fordert eine Benachrichtigung an, wenn eine neue Instanz einer Klasse erstellt wird, die von [**Win32 \_ ntlogevent**](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent) abgeleitet wurde.
+    Die folgende Beispielereignisabfrage durch einen temporären Ereignisverbraucher fordert eine Benachrichtigung an, wenn eine neue Instanz einer von [**Win32 \_ NTLogEvent**](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent) abgeleiteten Klasse erstellt wird.
 
     ```VB
     strComputer = "." 
@@ -87,11 +87,11 @@ WQL unterstützt die folgenden Typen von Abfragen:
 
     
 
--   Schema Abfragen
+-   Schemaabfragen
 
-    Schema Abfragen werden verwendet, um Klassendefinitionen (anstelle von Klassen Instanzen) und Schema Zuordnungen abzurufen. Klassen Anbieter verwenden Schema Abfragen, um die Klassen anzugeben, die Sie bei der Registrierung unterstützen. Weitere Informationen zu Schema Abfragen finden Sie unter [Abrufen von Klassendefinitionen](retrieving-class-definitions.md).
+    Schemaabfragen werden verwendet, um Klassendefinitionen (anstatt Klasseninstanzen) und Schemazuordnungen abzurufen. Klassenanbieter verwenden Schemaabfragen, um die Klassen anzugeben, die sie bei der Registrierung unterstützen. Weitere Informationen zu Schemaabfragen finden Sie unter [Abrufen von Klassendefinitionen.](retrieving-class-definitions.md)
 
-    Die folgende Beispiel Schema Abfrage zeigt die spezielle Syntax.
+    Die folgende Beispielschemaabfrage zeigt die spezielle Syntax.
 
     ```sql
     SELECT * FROM meta_class WHERE __this ISA "Win32_BaseService"

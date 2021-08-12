@@ -1,29 +1,29 @@
 ---
-description: Die CIM \_ physicalframe-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ PhysicalFrame-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 6E332F8D-1ED8-4C23-9A59-092A16E3A238
 ms.tgt_platform: multiple
-title: CIM_PhysicalFrame Methoden
+title: CIM_PhysicalFrame-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c7c24f8a44686a7f57e1ad8c5d25c711171dc82
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1eda80994215f569258923f0138ce9509f8680872bb6ad51e9cb14727d477e7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118678138"
 ---
-# <a name="cim_physicalframe-methods"></a>CIM \_ physicalframe-Methoden
+# <a name="cim_physicalframe-methods"></a>CIM \_ PhysicalFrame-Methoden
 
-Die [**CIM \_ physicalframe**](cim-physicalframe.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ PhysicalFrame-Klasse**](cim-physicalframe.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Iscompatible-Methode**](iscompatible-method-in-class-cim-physicalframe.md)
+-   [**IsCompatible-Methode**](iscompatible-method-in-class-cim-physicalframe.md)
 
  
 

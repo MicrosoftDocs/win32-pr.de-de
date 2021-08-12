@@ -1,28 +1,28 @@
 ---
-description: Com+-Ressourcen Verteiler Dienst
+description: COM+-Ressourcensenderdienst
 ms.assetid: 34825538-85dd-4e86-a306-79cd60b3bc0b
-title: Com+-Ressourcen Verteiler Dienst
+title: COM+-Ressourcensenderdienst
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f78bf9d9338473572ef5d1f38c05b3e49e2772a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4dfb83d6f88eff89ccccad313f8c5251df1924b299d4b082d850cbde562ce4c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118548776"
 ---
-# <a name="com-resource-dispenser-service"></a>Com+-Ressourcen Verteiler Dienst
+# <a name="com-resource-dispenser-service"></a>COM+-Ressourcensenderdienst
 
-Die Anwendungskomponenten können den com+- *Ressourcen* Verteiler verwenden, um auf freigegebene Informationen zuzugreifen.
+Ihre Anwendungskomponenten können den *COM+-Ressourcensender für* den Zugriff auf freigegebene Informationen verwenden.
 
-Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrundinformationen und Aufgabeninformationen zur Verwendung des com+-Ressourcen Verteiler dienstanders.
+Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrund- und Aufgabeninformationen zur Verwendung des COM+-Ressourcensenderdiensts.
 
 
 
-| Thema                                                                               | BESCHREIBUNG                                                                  |
+| Thema                                                                               | Beschreibung                                                                  |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| [Konzepte des com+-Ressourcen Verteilers](com--resource-dispenser-concepts.md)<br/> | Bietet einen Überblick über die Verwendung eines com+-ressourcenverteilungsdienstanders.<br/>  |
-| [Aufgaben des com+-Ressourcen Verteilers](com--resource-dispenser-tasks.md)<br/>       | Enthält Anweisungen zum Implementieren eines com+-Ressourcen Verteilers.<br/> |
+| [KONZEPTE DES COM+-Ressourcensenders](com--resource-dispenser-concepts.md)<br/> | Bietet eine Übersicht über die Verwendung eines COM+-Ressourcensenderdiensts.<br/>  |
+| [Aufgaben der COM+-Ressourcenausgabe](com--resource-dispenser-tasks.md)<br/>       | Enthält Anweisungen zum Implementieren eines COM+-Ressourcenspenders.<br/> |
 
 
 

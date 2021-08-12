@@ -1,23 +1,23 @@
 ---
-title: Syntax Syntax (Direct3D 11)
-description: Eine Anmerkung ist ein benutzerdefiniertes Informationselement, das mit der in diesem Abschnitt beschriebenen Syntax deklariert wird.
+title: Anmerkungssyntax (Direct3D 11)
+description: Eine Anmerkung ist eine benutzerdefinierte Information, die mit der in diesem Abschnitt beschriebenen Syntax deklariert wird.
 ms.assetid: a81198d2-c4d7-47b5-b3b8-2de11a9ee9a3
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9583dafd3e1fb314ae6ac9e53d609bebc74a030
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1109695f6239708e8f241b796b888b8d494acd7ab806b98c08352dbe3aeaee3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118538564"
 ---
-# <a name="annotation-syntax-direct3d-11"></a>Syntax Syntax (Direct3D 11)
+# <a name="annotation-syntax-direct3d-11"></a>Anmerkungssyntax (Direct3D 11)
 
-Eine Anmerkung ist ein benutzerdefiniertes Informationselement, das mit der in diesem Abschnitt beschriebenen Syntax deklariert wird.
+Eine Anmerkung ist eine benutzerdefinierte Information, die mit der in diesem Abschnitt beschriebenen Syntax deklariert wird.
 
 
 
-| <*DataType* - *namens*  =  *Wert*; *...* ; > |
+| <*DataType* *Name*  =  *Value*; *...* ;> |
 |----------------------------------------------|
 
 
@@ -28,24 +28,24 @@ Eine Anmerkung ist ein benutzerdefiniertes Informationselement, das mit der in d
 
 
 
-| Element                                                                                                   | BESCHREIBUNG                                                                                                                                                                      |
+| Element                                                                                                   | Beschreibung                                                                                                                                                                      |
 |--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DataType"></span><span id="datatype"></span><span id="DATATYPE"></span>*Datentyp*<br/> | \[im- \] Datentyp, der einen beliebigen [skalaren HLSL](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar) -Typ und den [Zeichen Folgentyp](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar)enthält.<br/> |
-| <span id="Name"></span><span id="name"></span><span id="NAME"></span>*Benennen*<br/>                 | \[in \] einer ASCII-Zeichenfolge, die den Namen der Anmerkung darstellt.<br/>                                                                                                          |
-| <span id="Value"></span><span id="value"></span><span id="VALUE"></span>*Wert*<br/>             | \[im \] Anfangswert der Anmerkung.<br/>                                                                                                                           |
-| <span id="..."></span>*...*<br/>                                                                 | \[in \] zusätzlichen Anmerkungen (Name-Wert-Paare).<br/>                                                                                                                     |
+| <span id="DataType"></span><span id="datatype"></span><span id="DATATYPE"></span>*Datatype*<br/> | \[in \] Der -Datentyp, der jeden [skalaren HLSL-Typ](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar) sowie den Zeichenfolgentyp [enthält.](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar)<br/> |
+| <span id="Name"></span><span id="name"></span><span id="NAME"></span>*Namen*<br/>                 | \[in \] Eine ASCII-Zeichenfolge, die den Anmerkungsnamen darstellt.<br/>                                                                                                          |
+| <span id="Value"></span><span id="value"></span><span id="VALUE"></span>*Wert*<br/>             | \[in \] Der Anfangswert der Anmerkung.<br/>                                                                                                                           |
+| <span id="..."></span>*...*<br/>                                                                 | \[in \] Zusätzliche Anmerkungen (Name-Wert-Paare).<br/>                                                                                                                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können mehr als eine Anmerkung in den spitzen Klammern hinzufügen, die jeweils durch ein Semikolon voneinander getrennt sind. Die Effekt-Framework-APIs erkennen Anmerkungen für globale Variablen. alle anderen Anmerkungen werden ignoriert.
+Sie können innerhalb der eckigen Klammern mehrere Anmerkungen hinzufügen, die jeweils durch ein Semikolon getrennt sind. Die Effektframework-APIs erkennen Anmerkungen für globale Variablen. alle anderen Anmerkungen werden ignoriert.
 
 ## <a name="example"></a>Beispiel
 
-Hier einige Beispiele.
+Beispiele:
 
 
 ```
@@ -76,10 +76,10 @@ return pos;
 
 <dl> <dt>
 
-[Effekt Format](d3d11-effect-format.md)
+[Effect-Format](d3d11-effect-format.md)
 </dt> <dt>
 
-[Syntax der Effekt Variablen](d3d11-effect-variable-syntax.md)
+[Syntax der Effect-Variablen](d3d11-effect-variable-syntax.md)
 </dt> </dl>
 
  

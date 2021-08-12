@@ -1,34 +1,34 @@
 ---
-description: Nicht-Berechnungs-Counter-Typen verfügen nicht über eine zugeordnete Formel. Der Rohwert ist von Bedeutung.
+description: Nicht berechnete Indikatortypen verfügen nicht über eine zugeordnete Formel. Der Rohwert ist direkt aussagekräftig.
 ms.assetid: 2a6bb3a3-0aec-437a-881a-c4e14fcff6da
 ms.tgt_platform: multiple
-title: Nicht-Berechnungs-Counter-Typen
+title: Nicht berechnete Indikatortypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87ba2757f08dcb2256236117daf2ef3343004425
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a05da34058ceeb99ab60d8cc3d4f72cb3eec85194e48bb707a929eb2f68aa7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118555160"
 ---
-# <a name="noncomputational-counter-types"></a>Nicht-Berechnungs-Counter-Typen
+# <a name="noncomputational-counter-types"></a>Nicht berechnete Indikatortypen
 
-Nicht-Berechnungs-Counter-Typen verfügen nicht über eine zugeordnete Formel. Der Rohwert ist von Bedeutung.
+Nicht berechnete Indikatortypen verfügen nicht über eine zugeordnete Formel. Der Rohwert ist direkt aussagekräftig.
 
-Die **filestobeindexed** -Eigenschaft in der [**Win32 \_ perfrawdata \_ ContentIndex \_ indexingservice**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) -Klasse ist ein Beispiel für den Leistungsindikator " **\_ \_ rawcount** Counter Type". Sie enthält eine Anzahl von Dateien, die nicht indiziert wurden.
+Die **FilesToBeIndexed-Eigenschaft** in der [**Win32 \_ PerfRawData \_ ContentIndex \_ IndexingService-Klasse**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) ist ein Beispiel für den **PERF \_ COUNTER \_ RAWCOUNT-Indikatortyp.** Sie enthält die Anzahl der Dateien, die nicht indiziert wurden.
 
-Leistungsdaten Typen werden durch die in Winperf. h definierte Konstante festgelegt, die sich im Microsoft Windows Software Development Kit (SDK) befindet. In der folgenden Tabelle sind die bereitgestellten nicht Berechnungs Typen aufgeführt.
+Indikatortypen werden durch die in Winperf.h definierte Konstante festgelegt, die sich im Microsoft Windows Software Development Kit (SDK) befindet. In der folgenden Tabelle sind die nicht berechneten Indikatortypen aufgeführt, die bereitgestellt werden.
 
 
 
-| Counter Type                                                                                                 | BESCHREIBUNG                                                                                                            |
+| Countertype                                                                                                 | Beschreibung                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| Leistung [ \_ Counter- \_ Text](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 2816<br/>                | Dieser zähtertyp zeigt eine Text Zeichenfolge variabler Länge in Unicode an. Berechnete Werte werden nicht angezeigt.               |
-| Leistung [ \_ Zähler \_ rawcount](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 65536<br/>           | Der Rohdaten Wert, der keine Berechnungen erfordert, und stellt ein Beispiel dar, bei dem es sich nur um den zuletzt beobachteten Wert handelt. |
-| Leistung [ \_ Zähler \_ Large \_ rawcount](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 65792<br/>    | Identisch mit dem Leistungs **\_ Zähler \_ rawcount**, aber eine 64-Bit-Darstellung für größere Werte.                                    |
-| Leistung [ \_ Zähler \_ rawcount \_ Hex](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))0<br/>                  | Zuletzt beobachteter Wert im Hexadezimal Format. Er zeigt keinen Durchschnittswert an.                                    |
-| Leistung [ \_ Zähler \_ Large \_ rawcount \_ Hex](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 256<br/> | Identisch mit dem Leistungs **\_ Zähler \_ rawcount \_ Hex**, aber eine 64-Bit-Darstellung im Hexadezimal Format für die Verwendung mit großen Werten.        |
+| [PERF \_ \_INDIKATORTEXT](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Dezimalzahl 2816<br/>                | Dieser Indikatortyp zeigt eine Textzeichenfolge variabler Länge in Unicode an. Berechnete Werte werden nicht angezeigt.               |
+| [PERF \_ COUNTER \_ RAWCOUNT](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Dezimalzahl 65536<br/>           | Unformatierte Indikatorwerte, die keine Berechnungen erfordern, und stellt eine Stichprobe dar, die nur der letzte beobachtete Wert ist. |
+| [PERF \_ COUNTER \_ LARGE \_ RAWCOUNT](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 65792<br/>    | Identisch mit **PERF \_ COUNTER \_ RAWCOUNT,** aber eine 64-Bit-Darstellung für größere Werte.                                    |
+| [PERF \_ INDIKATOR \_ RAWCOUNT \_ HEX](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))0<br/>                  | Zuletzt beobachteter Wert im Hexadezimalformat. Er zeigt keinen Durchschnittswert an.                                    |
+| [PERF \_ COUNTER \_ LARGE \_ RAWCOUNT \_ HEX](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 256<br/> | Identisch mit **PERF \_ COUNTER \_ RAWCOUNT \_ HEX**, aber eine 64-Bit-Darstellung in Hexadezimal für die Verwendung mit großen Werten.        |
 
 
 
@@ -38,7 +38,7 @@ Leistungsdaten Typen werden durch die in Winperf. h definierte Konstante festgel
 
 <dl> <dt>
 
-[WMI-Leistungsdaten Typen](wmi-performance-counter-types.md)
+[WMI-Leistungsindikatortypen](wmi-performance-counter-types.md)
 </dt> </dl>
 
  

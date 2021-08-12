@@ -1,8 +1,8 @@
 ---
-description: In der folgenden Liste sind die möglichen Werte des Felds Flags in einem WMI-Access Control Entry (ACE) aufgelistet.
+description: Die folgende Liste listet die möglichen Werte des Flags-Felds in einem WMI-Access Control Entry (ACE) auf.
 ms.assetid: bd09691d-e285-40e0-8686-edd5a132a06e
 ms.tgt_platform: multiple
-title: Namespace-ACE-Flag-Konstanten (WinNT. h)
+title: Namespace-ACE-Flagkonstanten (Winnt.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -18,20 +18,20 @@ api_type:
 - HeaderDef
 api_location:
 - Winnt.h
-ms.openlocfilehash: 053d4166882b6254dec313cb10fbf10588ba0071
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b4051a6c17e9861d656207335b2543cf7d886e74569c269df2a4f680f47fbe3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118555180"
 ---
-# <a name="namespace-ace-flag-constants"></a>Namespace-ACE-Flag-Konstanten
+# <a name="namespace-ace-flag-constants"></a>Ace-Flagkonstanten für Namespaces
 
-In der folgenden Liste sind die möglichen Werte des Felds **Flags** in einem WMI-Access Control Entry (ACE) aufgelistet.
+In der folgenden Liste sind die möglichen Werte des **Felds Flags** in einem WMI-Access Control Entry (ACE) aufgeführt.
 
 <dl> <dt>
 
-<span id="OBJECT_INHERIT_ACE"></span><span id="object_inherit_ace"></span>**Objekt \_ erben ( \_ ACE)**
+<span id="OBJECT_INHERIT_ACE"></span><span id="object_inherit_ace"></span>**\_OBJEKTVERERBUNGS-ACE \_**
 </dt> <dd> <dl> <dt>
 
 1 (0x1)
@@ -39,12 +39,12 @@ In der folgenden Liste sind die möglichen Werte des Felds **Flags** in einem WM
 
 
 
-Untergeordnete Objekte, die nicht Container sind, erben den ACE als effektiven ACE.
+Untergeordnete Objekte, die keine Container sind, erben den ACE als effektiven ACE.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="CONTAINER_INHERIT_ACE"></span><span id="container_inherit_ace"></span>**Container \_ erben ( \_ ACE)**
+<span id="CONTAINER_INHERIT_ACE"></span><span id="container_inherit_ace"></span>**CONTAINER \_ INHERIT \_ ACE**
 </dt> <dd> <dl> <dt>
 
 2 (0x2)
@@ -52,12 +52,12 @@ Untergeordnete Objekte, die nicht Container sind, erben den ACE als effektiven A
 
 
 
-Der ACE wirkt sich auf untergeordnete Namespaces und den aktuellen Namespace aus.
+Der ACE wirkt sich sowohl auf untergeordnete Namespaces als auch auf den aktuellen Namespace aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="NO_PROPAGATE_INHERIT_ACE"></span><span id="no_propagate_inherit_ace"></span>**kein \_ propagieren- \_ \_ ACE erben**
+<span id="NO_PROPAGATE_INHERIT_ACE"></span><span id="no_propagate_inherit_ace"></span>**NO \_ PROPAGATE \_ INHERIT \_ ACE**
 </dt> <dd> <dl> <dt>
 
 4 (0x4)
@@ -65,12 +65,12 @@ Der ACE wirkt sich auf untergeordnete Namespaces und den aktuellen Namespace aus
 
 
 
-Der ACE gilt nur für den aktuellen Namespace und die unmittelbar untergeordneten Elemente.
+Der ACE gilt nur für den aktuellen Namespace und die unmittelbar untergeordneten Elemente .
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INHERIT_ONLY_ACE"></span><span id="inherit_only_ace"></span>**\_nur \_ ACE erben**
+<span id="INHERIT_ONLY_ACE"></span><span id="inherit_only_ace"></span>**\_NUR ACE ERBEN \_**
 </dt> <dd> <dl> <dt>
 
 8 (0x8)
@@ -83,7 +83,7 @@ Der ACE gilt nur für untergeordnete Namespaces.
 
 </dt> </dl> </dd> <dt>
 
-<span id="INHERITED_ACE"></span><span id="inherited_ace"></span>**geerbte \_ ACE**
+<span id="INHERITED_ACE"></span><span id="inherited_ace"></span>**GEERBTER \_ ACE**
 </dt> <dd> <dl> <dt>
 
 16 (0x10)
@@ -102,21 +102,21 @@ Dies wird nicht von Clients festgelegt, sondern an Clients gemeldet, wenn die Qu
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WinNT. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Winnt.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[WMI-Sicherheits Konstanten](wmi-security-constants.md)
+[WMI-Sicherheitskonstanten](wmi-security-constants.md)
 </dt> <dt>
 
-[Festlegen von namepace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md)
+[Festlegen von Namepace-Sicherheitsbeschreibungen](setting-namespace-security-descriptors.md)
 </dt> <dt>
 
-[Einrichten der Vererbung der Namespace Sicherheit](establishing-inheritance-of-namespace-security.md)
+[Festlegen der Vererbung von Namespacesicherheit](establishing-inheritance-of-namespace-security.md)
 </dt> <dt>
 
 [**\_\_SystemSecurity**](--systemsecurity.md)

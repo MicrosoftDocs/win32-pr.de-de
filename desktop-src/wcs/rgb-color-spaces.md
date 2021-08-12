@@ -1,40 +1,40 @@
 ---
 title: RGB-Farbräume
-description: Ein RGB-Farbraum wird durch Zuordnung der Farben rot, grün und blau zu einem kartesischen 3D-Koordinatensystem erstellt.
+description: Ein RGB-Farbraum wird erstellt, indem die Farben Rot, Grün und Blau einem kartesischen 3D-Koordinatensystem zuordnen.
 ms.assetid: fbe00c2a-700f-4905-a67a-47e3fd2bfa5c
 keywords:
-- Windows Color System (WCS), RGB-Farbbereiche
-- WCS (Windows Color System), RGB-Farbbereiche
-- Bild Farbverwaltung, RGB-Farbbereiche
-- Farbverwaltung, RGB-Farbbereiche
-- Farben, RGB-Farbbereiche
-- Farbbereiche, RGB
-- RGB-Farbbereiche
-- rotes grünes blau (RGB)
-- RGB (rotes grünes blau)
+- Windows Farbsystem (WCS), RGB-Farbräume
+- WCS (Windows Color System), RGB-Farbräume
+- Bildfarbverwaltung, RGB-Farbräume
+- Farbverwaltung, RGB-Farbräume
+- Farben,RGB-Farbräume
+- Farbräume,RGB
+- RGB-Farbräume
+- Rot-Grün-Blau (RGB)
+- RGB (rotgrünblau)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58a73ac8b87847dda92332a3dd1041043e093590
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 1d6fabb2bc9cee5abf79b3c875814fccbdd649e0b8400b91ee0e8c0e07d86877
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106355085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118444790"
 ---
 # <a name="rgb-color-spaces"></a>RGB-Farbräume
 
-Ein RGB- [Farbraum](c.md) wird durch Zuordnung der Farben rot, grün und blau zu einem kartesischen 3D-Koordinatensystem erstellt. Das Ergebnis ist ein 3D-Cube, wie in der folgenden Abbildung dargestellt. In dieser Abbildung wird derselbe RGB-Cube aus zwei unterschiedlichen Winkeln angezeigt. Beachten Sie, dass der Ursprung des Koordinatensystems schwarz ist. Dabei handelt es sich bei den Farbkomponenten Rot, grün und blau (RGB) um 0,0. Die diagonal umgekehrte Ecke des Cubes ist weiß, wobei die RGB-Farbkomponenten ihren maximalen Wert haben.
+Ein [RGB-Farbraum](c.md) wird erstellt, indem die Farben Rot, Grün und Blau einem kartesischen 3D-Koordinatensystem zuordnen. Dies ist ein 3D-Cube wie in der folgenden Abbildung dargestellt. In dieser Abbildung wird derselbe RGB-Cube aus zwei verschiedenen Winkeln angezeigt. Beachten Sie, dass der Ursprung des Koordinatensystems schwarz ist. Hier sind die Farbkomponenten "Rot", "Grün" und "Blau" (RGB) alle 0,0. Die diagonal gegenüberliegende Ecke des Würfels ist weiß, wobei die RGB-Farbkomponenten ihren Höchstwert haben.
 
-![RGB-Farb Raum Cube bei maximalen Werten](images/rgbclrs1.png)
+![rgb color space cube at maximum values (Rgb-Farbraumcube bei maximal zulässigen Werten)](images/rgbclrs1.png)
 
-![RGB-Farb Raum Cube mit minimalen Werten](images/rgbclrs2.png)
+![rgb color space cube at minimum values (Rgb-Farbraumcube mit Minimalwerten)](images/rgbclrs2.png)
 
-Wie die meisten [Farbbereiche](c.md)wird der RGB-Farbraum normalisiert. Das heißt, alle Farbwerte sind auf den Bereich von 0 bis 1 einschließlich beschränkt. Schwarz ist (0,0, 0,0, 0,0), und weiß ist (1,0, 1,0, 1,0).
+Wie die [meisten Farbräume](c.md)wird der RGB-Farbraum normalisiert. Das heißt, alle Farbwerte sind auf den Bereich von 0 (null) bis 1 (einschließlich) beschränkt. Schwarz ist also (0,0, 0,0, 0,0) und Weiß (1,0, 1,0, 1,0).
 
-Im RGB-Farbraum sind die [Primärfarben](p.md) rot, grün und blau. Die sekundären Farben sind Cyan, gelbe und Magenta.
+Im RGB-Farbraum sind [die Primärfarben](p.md) Rot, Grün und Blau. Die sekundären Farben sind Zyan, Gelb und Magenta.
 
-RGB-Farbbereiche können Geräte abhängig oder Geräte unabhängig sein.
+RGB-Farbräume können geräteabhängig oder geräteunabhängig sein.
 
  
 

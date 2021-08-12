@@ -1,19 +1,19 @@
 ---
-title: Access Control Listen für com
-description: Access Control Listen für com
+title: Access Control Listen für COM
+description: Access Control Listen für COM
 ms.assetid: ceb37563-7e7f-4704-b671-72ed65e3e102
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 811b6cdbca36ef75bb5ee3f185b0261967d736d0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e50e1641691b1a2812e861a95c5bc0f7eac8f0f8af67d41b18287c07253b8d51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118551354"
 ---
-# <a name="access-control-lists-for-com"></a>Access Control Listen für com
+# <a name="access-control-lists-for-com"></a>Access Control Listen für COM
 
-Windows Server XP Service Pack 2 (SP 2) und Windows Server 2003 Service Pack 1 (SP 1) führen zu Sicherheitsverbesserungen für den verteilten Component Object Model (DCOM). Eine dieser Verbesserungen sind spezifischere Zugriffsrechte für die Verwendung in Zugriffs Steuerungs Listen (Access Control Lists, ACLs). Die Zugriffsrechte lauten:
+Windows Server XP Service Pack 2 (SP 2) und Windows Server 2003 Service Pack 1 (SP 1) führen Sicherheitsverbesserungen für distributed Component Object Model (DCOM) ein. Eine dieser Verbesserungen sind spezifischere Zugriffsrechte für die Verwendung in Zugriffssteuerungslisten (ACCESS Control Lists, ACLs). Die Zugriffsrechte sind:
 
 ``` syntax
 COM_RIGHTS_EXECUTE 1
@@ -23,16 +23,16 @@ COM_RIGHTS_ACTIVATE_LOCAL 8
 COM_RIGHTS_ACTIVATE_REMOTE 16
 ```
 
-Um Abwärtskompatibilität zu gewährleisten, ist möglicherweise eine ACL in dem vor Windows XP SP 2 und Windows Server 2003 SP 1 verwendeten Format vorhanden. in der nur die Zugriffsrechte für com \_ \_ -Rechte ausführen verwendet werden, oder Sie können im neuen Format vorliegen, das in Windows XP SP 2 und Windows Server 2003 SP 1 verwendet wird. die com- \_ Rechte werden \_ zusammen mit einer Kombination aus com- \_ Rechten ausführen \_ \_ lokal, com- \_ Rechte \_ Execute \_ Remote, com- \_ Rechte \_ Aktivierung \_ lokal und com- \_ Rechte \_ Remote Aktivierung verwendet \_ .
+Um Abwärtskompatibilität zu gewährleisten, Eine ACL kann im Format vor Windows XP SP 2 und Windows Server 2003 SP 1 vorhanden sein, das nur das Zugriffsrecht COM RIGHTS EXECUTE verwendet, oder sie kann im neuen Format vorhanden sein, das in Windows XP SP 2 und \_ Windows Server 2003 SP 1 verwendet wird, das COM RIGHTS EXECUTE zusammen mit einer Kombination aus \_ COM RIGHTS EXECUTE \_ \_ \_ \_ \_ LOCAL, COM RIGHTS EXECUTE REMOTE, COM RIGHTS ACTIVATE LOCAL und \_ COM RIGHTS ACTIVATE REMOTE \_ \_ \_ \_ \_ \_ \_ \_ verwendet.
 
 > [!Note]  
-> COM- \_ Rechte \_ ausführen müssen immer vorhanden sein. das Fehlen dieses Rechts generiert eine ungültige Sicherheits Beschreibung.
+> COM RIGHTS EXECUTE muss immer vorhanden sein. Wenn dieses Recht nicht vorhanden ist, wird \_ \_ ein ungültiger Sicherheitsdeskriptor generiert.
 
- 
+ 
 
-Das alte Format und das neue Format dürfen nicht in einer einzelnen Zugriffs Steuerungs Liste (ACL) gemischt werden. entweder müssen alle Zugriffs Steuerungs Einträge (ACEs) nur die com- \_ Rechte \_ Execute Access Right gewähren, oder Sie müssen alle com- \_ Rechte \_ mit einer Kombination aus com- \_ rechten Execute \_ \_ local, com- \_ Rechte \_ Execute \_ Remote, com \_ \_ -Rechte lokal aktivieren \_ und com- \_ Rechte für \_ Remote Aktivierung gewähren \_ .
+Sie dürfen das alte und das neue Format nicht in einer einzelnen ACL mischen. Entweder müssen alle Zugriffssteuerungseinträge (ACCESS Control Entries, ACEs) nur das COM RIGHTS EXECUTE-Zugriffsrecht gewähren, oder alle müssen COM RIGHTS EXECUTE zusammen mit einer Kombination aus \_ \_ COM RIGHTS EXECUTE \_ \_ \_ \_ \_ LOCAL, COM RIGHTS EXECUTE REMOTE, COM RIGHTS ACTIVATE LOCAL und \_ COM RIGHTS ACTIVATE \_ REMOTE \_ \_ \_ \_ \_ \_ \_ gewähren.
 
-Im folgenden finden Sie ein Beispiel für eine falsch formatierte ACL:
+Im Folgenden finden Sie ein Beispiel für eine falsch formatierte ACL:
 
 ``` syntax
 Revision 1
@@ -70,9 +70,9 @@ SACL:
     (null)
 ```
 
-Beachten Sie, dass der erste Zugriffs Steuerungs Eintrag (ACE) \_ nur com-Rechte \_ Execute (0x1) gewährt, während der zweite ACE com- \_ Rechte \_ ausführen, com- \_ Rechte \_ Execute \_ local und com- \_ Rechte \_ lokal aktivieren ( \_ 0xB), und der dritte die com-Rechte Execute \_ \_ und com \_ Rights \_ Aktivierung \_ local (0x9) gewährt.
+Beachten Sie, dass der erste Zugriffssteuerungseintrag (ACE) nur COM RIGHTS EXECUTE (0x1) gewährt, während der zweite ACE COM RIGHTS EXECUTE, COM RIGHTS EXECUTE LOCAL und COM RIGHTS ACTIVATE LOCAL (0xb) gewährt und der dritte COM RIGHTS EXECUTE und \_ \_ COM RIGHTS ACTIVATE \_ \_ \_ \_ LOCAL \_ \_ \_ \_ \_ \_ \_ \_ \_ (0x9).
 
-Um dies zu korrigieren, sollte der erste ACE geändert werden, um com- \_ Rechte \_ in Kombination mit einer der anderen vier Zugriffsrechte zu erteilen. andernfalls sollten der zweite und der dritte ACEs so geändert werden, dass nur die com- \_ Rechte Execute erteilt werden \_ .
+Um dies zu korrigieren, sollte der erste ACE so geändert werden, dass COM RIGHTS EXECUTE in Kombination mit einem der anderen vier Zugriffsrechte gewährt wird. Ander denn, die zweite und dritte ACEs sollten so geändert werden, dass nur COM RIGHTS EXECUTE gewährt \_ \_ \_ \_ wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -81,12 +81,12 @@ Um dies zu korrigieren, sollte der erste ACE geändert werden, um com- \_ Rechte
 [DCOM-Sicherheitsverbesserungen in Windows XP Service Pack 2 und Windows Server 2003 Service Pack 1](dcom-security-enhancements-in-windows-xp-service-pack-2-and-windows-server-2003-service-pack-1.md)
 </dt> <dt>
 
-[Sicherheit in com](security-in-com.md)
+[Sicherheit in COM](security-in-com.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

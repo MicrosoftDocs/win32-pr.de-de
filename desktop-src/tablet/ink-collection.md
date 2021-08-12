@@ -1,100 +1,100 @@
 ---
-description: Die frei Hand Auflistung beginnt mit dem Digitalisierer.
+description: Die Auflistung von Ink beginnt mit dem Digitizer.
 ms.assetid: 95e49f5b-d6f0-4a5a-868b-aa0caf87c39c
-title: Ink-Auflistung
+title: Ink-Sammlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fcd5bf0d73f48e63366843c85c9d6dd7cd388f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e45988ea93aac5016391e22c352b9d0123a5e122f4a79c55e41e06834ed040e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452066"
 ---
-# <a name="ink-collection"></a>Ink-Auflistung
+# <a name="ink-collection"></a>Ink-Sammlung
 
-Die frei Hand Auflistung beginnt mit dem Digitalisierer. Ein Benutzer platziert einen Stift für den Digitalisierer und beginnt mit dem Schreiben. Mithilfe der frei Hand Sammlungs Funktionen der API können Sie die Sammlung von frei Hand Daten verwalten, die vom Stift "Flows" werden. Sie haben Zugriff auf Informationen zur verfügbaren Hardware auf Tablet PC über die [**Tablets**](/windows/desktop/api/msinkaut/nf-msinkaut-iinktablets-item) -Sammlung und das [**Tablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) -Objekt. Anschließend verwenden Sie das [**InkCollector**](inkcollector-class.md) -Objekt, um die Daten aus dem Digitalisierer zu erhalten.
+Die Auflistung von Ink beginnt mit dem Digitizer. Ein Benutzer platziert einen Stift auf dem Digitizer und beginnt mit dem Schreiben. Sie können die Ink-Sammlungsfeatures der API verwenden, um die Sammlung von Ink-Daten zu verwalten, die aus dem Stift "fließen". Sie haben Über die [**Tablets-Sammlung**](/windows/desktop/api/msinkaut/nf-msinkaut-iinktablets-item) und das [**Tablet-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) Zugriff auf Informationen zur verfügbaren Hardware auf dem Tablet-PC. Anschließend verwenden Sie das [**InkCollector-Objekt,**](inkcollector-class.md) um die Daten abzurufen, die vom Digitizer stammen.
 
 ## <a name="tablets-and-the-tablet-object"></a>Tablets und das Tablet-Objekt
 
-Ein [**Tablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) stellt ein Digitalisierungsprogramm des Tablet PCs dar. Ein Tablet PC verfügt möglicherweise über mehr als einen Digitalisierer. Mithilfe des **Tablet** -Objekts können Sie die verfügbaren digitalisierergeräte Abfragen, die an Tablet PC angeschlossen sind, sowie die jeweiligen Hardwarefunktionen. Beispielsweise können Sie feststellen, ob das **Tablet** , mit dem Sie arbeiten, in die Anzeige integriert ist oder ob es sich um ein separates externes Gerät handelt.
+Ein [**Tablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) stellt ein Digitizergerät von Tablet PC dar. Ein Tablet-PC kann über mehrere Digitizer verfügen. Mithilfe des **Tablet-Objekts** können Sie die verfügbaren Digitizergeräte abfragen, die an den Tablet PC und die jeweiligen Hardwarefunktionen angefügt sind. Beispielsweise können Sie ermitteln, ob das **Tablet,** mit dem Sie arbeiten, in die Anzeige integriert ist oder ein separates externes Gerät ist.
 
 ## <a name="inkcollector-object"></a>InkCollector-Objekt
 
-Das [**InkCollector**](inkcollector-class.md) -Objekt erfasst Freihand Eingaben von verfügbaren [**Tablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) -Geräten. Das **InkCollector** -Objekt sammelt nur frei Hand Eingaben und Gesten, die in ein bestimmtes Fenster eingegeben werden. Eine sehr effiziente Ereignis Senke rendert diese Eingabe in Echtzeit. Das **InkCollector** -Objekt erfasst die Eingabe und leitet Sie an ein [**Ink**](inkdisp-class.md) -Objekt weiter.
+Das [**InkCollector-Objekt**](inkcollector-class.md) erfasst Freihandeingaben von verfügbaren [**Tablet-Geräten.**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) Das **InkCollector-Objekt** erfasst nur Ink- und Gesten, die in ein bestimmtes Fenster eingegeben werden. Eine sehr effiziente Ereignissenke rendert diese Eingabe in Echtzeit. Das **InkCollector-Objekt** erfasst die Eingabe und leitet sie an ein [**Ink-Objekt**](inkdisp-class.md) weiter.
 
 > [!Note]  
-> Die gleichzeitige Einrichtung von frei Hand Eingaben mit mehreren stiften hängt von den Hardwarefunktionen des Digitalisierungsprogramms ab.
+> Die gleichzeitige Verlegung von Ink mit mehreren Stiften funktioniert abhängig von den Hardwarefunktionen des Digitizergeräts möglicherweise oder nicht.
 
  
 
-### <a name="how-the-ink-collector-works"></a>Funktionsweise des Ink Collector
+### <a name="how-the-ink-collector-works"></a>Funktionsweise des Ink-Collectors
 
-Das [**InkCollector**](inkcollector-class.md) -Objekt wird an ein bekanntes Anwendungsfenster angefügt. Anschließend können Benutzer beliebige verfügbare Tablet PC-Geräte (einschließlich der Maus) verwenden, um frei Hand Eingaben in Echtzeit in diesem Fenster zu verwenden. Die gesammelten Hand Striche werden in einem zugeordneten [**Ink**](inkdisp-class.md) -Objekt gespeichert. Diese Striche können dann bearbeitet oder zur Erkennung an eine Erkennungsfunktion gesendet werden. Das **InkCollector** -Objekt benachrichtigt die Anwendung auch, wenn ein Cursor in den Bereich eines der verwendeten Tablet PC-Geräte fällt.
+Das [**InkCollector-Objekt**](inkcollector-class.md) fügt sich an ein bekanntes Anwendungsfenster an. Anschließend können Benutzer jedes verfügbare Tablet PC-Gerät (einschließlich der Maus) verwenden, um Freihand in Echtzeit in diesem Fenster zu legen. Die erfassten Ink-Striche werden in einem zugeordneten [**Ink-Objekt**](inkdisp-class.md) gespeichert. Diese Striche können dann bearbeitet oder zur Erkennung an eine Erkennung gesendet werden. Das **InkCollector-Objekt** benachrichtigt die Anwendung auch, wenn ein Cursor in den Bereich eines der verwendeten Tablet PC-Geräte gelangt.
 
-Damit das [**InkCollector**](inkcollector-class.md) -Objekt den Mauszeiger in einem frei Hand Eingabe fähigen Fenster exakt festlegen kann, muss das Fenster die WM- **\_ SetCursor** -Nachricht empfangen können. Dies ist für alle regulären Fenster erfolgreich, aber bei einem Steuerelement in einem Dialogfeld wird diese Meldung durch das übergeordnete Dialogfeld des Steuer Elements gefiltert. Damit das Steuerelement die Meldung empfängt, legen Sie den **SS- \_ Benachrichtigungs** Stil fest.
+Damit das [**InkCollector-Objekt**](inkcollector-class.md) den Mauszeiger innerhalb eines ink-fähigen Fensters genau festlegen kann, muss dieses Fenster in der Lage sein, die **WM \_ SETCURSOR-Meldung** zu empfangen. Dies ist für alle regulären Fenster erfolgreich, aber für ein Steuerelement innerhalb eines Dialogfelds filtert das übergeordnete Dialogfeld des Steuerelements diese Meldung. Damit das Steuerelement die Nachricht empfangen kann, legen Sie den **SS \_ NOTIFY-Stil** fest.
 
 ## <a name="inkoverlay-object"></a>InkOverlay-Objekt
 
-Das zuvor beschriebene [**InkCollector**](inkcollector-class.md) -Objekt eignet sich für Anwendungen zum Bereitstellen eines eigenen Modells für das auswählen, löschen und andere Benutzerinteraktionen. Das [**InkOverlay**](inkoverlay-class.md) -Objekt ist eine supermenge des **InkCollector** -Objekts, das Bearbeitungs Unterstützung bereitstellt. Dies ist hilfreich, wenn Anwendungen das Zeichnen und Bearbeiten von Hand Eingaben in Ihre eigene Dokument Canvas integrieren möchten, indem Sie eine Reihe von standardmäßigen frei Handauswahl Modellen verwenden, die das Objekt bereitstellt.
+Das zuvor [**erläuterte InkCollector-Objekt**](inkcollector-class.md) ist für Anwendungen nützlich, um ein eigenes Modell für die Auswahl, Löschung und andere Benutzerinteraktion bereitzustellen. Das [**InkOverlay-Objekt**](inkoverlay-class.md) ist eine Obermenge des **InkCollector-Objekts,** das Bearbeitungsunterstützung bereitstellt. Dies ist nützlich für Anwendungen, um Das Zeichnen und Bearbeiten von Ink in ihren eigenen Dokumentzeichenbereich zu integrieren, indem ein Satz von Standard-Ink-Auswahlmodellen verwendet wird, die das -Objekt bereitstellt.
 
-Sowohl das [**InkCollector**](inkcollector-class.md) -Objekt als auch das [**InkOverlay**](inkoverlay-class.md) -Objekt (sowie das [InkPicture](inkpicture-control.md) -Steuerelement) verwenden allgemeine Konstrukte, wie z. b. das [**Ink**](inkdisp-class.md) -Objekt und die [**DrawingAttributes**](inkdrawingattributes-class.md) -Auflistung, sodass die grundlegende Methode zum Ändern der farbliche Ink-Methode überall gleich ist. Dies ermöglicht es Ihnen, Code wiederzuverwenden und allgemeinen programmgesteuerten Zugriff zu erhalten. Dies kann besonders wichtig sein, wenn Sie in Ihrer Anwendung Skriptunterstützung anbieten.
+Sowohl das [**InkCollector-Objekt**](inkcollector-class.md) als auch das [**InkOverlay-Objekt**](inkoverlay-class.md) (sowie das [InkPicture-Steuerelement)](inkpicture-control.md) verwenden allgemeine Konstrukte wie das [**Freihandobjekt**](inkdisp-class.md) und die [**DrawingAttributes-Auflistung, sodass**](inkdrawingattributes-class.md) die grundlegende Methode zum Ändern der Farbe von Freihand überall gleich ist. Dadurch können Sie Code wiederverwenden und über gemeinsamen programmgesteuerten Zugriff verfügen. Dies kann besonders wichtig sein, wenn Sie Skriptunterstützung in Ihrer Anwendung anbieten.
 
-[**InkOverlay**](inkoverlay-class.md) ist ein COM-Objekt, das für Anmerkung-Szenarios nützlich ist, in denen Benutzer sich nicht mit der Erkennung von frei Hand Eingaben befassen, sondern vielmehr an der Größe, der Form, der Farbe und der Position der Handschrift interessiert sind. Sie eignet sich gut für Notizen und grundlegende scriberend. Die Standardbenutzer Oberfläche ist ein transparentes Rechteck mit undurchsichtigem frei Hand Eingaben.
+[**InkOverlay**](inkoverlay-class.md) ist ein COM-Objekt, das für Anmerkungsszenarien nützlich ist, in denen Es benutzern nicht darum geht, Freihanderkennung durchzuführen, sondern stattdessen die Größe, Form, Farbe und Position der Freihand. Es eignet sich gut für Notizen und einfaches Scribbling. Die Standardbenutzerschnittstelle ist ein transparentes Rechteck mit nicht transparentem Ink.
 
-[**InkOverlay**](inkoverlay-class.md) erweitert die [**InkCollector**](inkcollector-class.md) -Klasse auf drei Arten:
+[**InkOverlay**](inkoverlay-class.md) erweitert die [**InkCollector-Klasse**](inkcollector-class.md) auf drei Arten:
 
--   Es werden Ereignisse für die Änderungen am Anfang, am Ende des Strichs und an Ink-Attributen ausgelöst.
--   Er ermöglicht Benutzern das auswählen, löschen und Ändern der Größe von frei Hand Eingaben.
--   Sie unterstützt Befehle zum Ausschneiden, kopieren und einfügen.
+-   Es löst Ereignisse für Änderungen des Begin-Stroke-, End-Stroke- und Ink-Attributs aus.
+-   Sie ermöglicht Benutzern das Auswählen, Löschen und Ändern der Größe von Ink.
+-   Die Befehle Ausschneiden, Kopieren und Einfügen werden unterstützt.
 
-Ein typisches Szenario, in dem [**InkOverlay**](inkoverlay-class.md) nützlich ist, ist das Markieren einer Präsentations Folie oder eines Bilds. Das **InkOverlay** -Objekt ermöglicht eine einfache Implementierung der frei Hand-und Layoutfunktionen, die für dieses Szenario erforderlich sind.
+Ein typisches Szenario, in dem [**InkOverlay**](inkoverlay-class.md) nützlich ist, ist das Markieren einer Präsentationsfolie oder eines Bilds. Das **InkOverlay-Objekt** ermöglicht eine einfache Implementierung der Ink- und Layoutfunktionen, die für dieses Szenario erforderlich sind.
 
-Wenn Sie mit [**InkOverlay**](inkoverlay-class.md)arbeiten möchten, können Sie Folgendes tun:
+Um mit [**InkOverlay**](inkoverlay-class.md)zu arbeiten, müssen Sie:
 
-1.  Instanziieren Sie ein [**InkOverlay**](inkoverlay-class.md) -Objekt.
-2.  Fügen Sie das HWND (handle, in verwaltetem Code) eines Fensters an die [**HWND**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_hwnd) -Eigenschaft des [**InkOverlay**](inkoverlay-class.md) -Objekts an ([handle](/previous-versions/ms582171(v=vs.100)) -Eigenschaft in verwaltetem Code).
-3.  Legen Sie die [**aktivierte**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_enabled) Eigenschaft des [**InkOverlay**](inkoverlay-class.md) -Objekts auf " **true**" fest.
+1.  Instanziieren Sie ein [**InkOverlay-Objekt.**](inkoverlay-class.md)
+2.  Fügen Sie den hWnd (Handle in verwaltetem Code) eines Fensters an die [**hWnd-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_hwnd) des [**InkOverlay-Objekts**](inkoverlay-class.md) an ([Handle-Eigenschaft,](/previous-versions/ms582171(v=vs.100)) in verwaltetem Code).
+3.  Legen Sie die [**Enabled-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_enabled) des [**InkOverlay-Objekts**](inkoverlay-class.md) auf **TRUE** fest.
 
-Das [**InkOverlay**](inkoverlay-class.md) -Objekt enthält grundlegende Druckunterstützung, aber Sie müssen die Druckvorschau oder andere erweiterte Druckfunktionen implementieren.
+Das [**InkOverlay-Objekt**](inkoverlay-class.md) enthält grundlegende Druckunterstützung, sie müssen jedoch die Druckvorschau oder andere erweiterte Druckfunktionen implementieren.
 
-[**InkOverlay**](inkoverlay-class.md) speichert Frei Hand Eingaben im frei Hand Format (Ink serialisiert Format, ISF).
+[**InkOverlay**](inkoverlay-class.md) bleibt ink im ink serialisierten Format (ISF) erhalten.
 
 > [!Note]  
-> Wenn die [**EditingMode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_editingmode) -Eigenschaft des [**InkOverlay**](inkoverlay-class.md) -Objekts auf **Delete** oder **Select** festgelegt ist, werden andere Ereignisse (z. b. [**InkAdded**](inkdisp-inkadded.md), [**InkDeleted**](inkdisp-inkdeleted.md)und [**Stroke**](inkoverlay-stroke.md)) ausgelöst. Diese Ereignisse sind nützlich, wenn Sie Ihre eigenen Lösch-oder SELECT-Modi implementieren möchten.
+> Wenn [**editingMode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_editingmode) des [**InkOverlay-Objekts**](inkoverlay-class.md) auf **Löschen** oder **Auswählen** festgelegt ist, werden andere Ereignisse (z. B. [**InkAdded,**](inkdisp-inkadded.md) [**InkDeleted**](inkdisp-inkdeleted.md)und [**Stroke)**](inkoverlay-stroke.md)ausgelöst. Diese Ereignisse sind nützlich, wenn Sie Ihren eigenen Lösch- oder Auswahlmodus implementieren möchten.
 
  
 
-### <a name="selecting-ink"></a>Freihand auswählen
+### <a name="selecting-ink"></a>Auswählen von "Ink"
 
-Das [**InkOverlay**](inkoverlay-class.md) -Objekt ermöglicht Benutzern die Verwendung eines Lassopfad-Tools, um frei Hand Objekte auszuwählen, die in einem nach verfolgten Bereich enthalten sind. Benutzer können auch Ink auswählen, indem Sie [**auf ein frei**](inkdisp-class.md) Hand Objekt tippen.
+Das [**InkOverlay-Objekt**](inkoverlay-class.md) ermöglicht Benutzern die Verwendung eines Lassotools, um Ink-Objekte auszuwählen, die in einem nachverfolgten Bereich enthalten sind. Benutzer können auch Ink auswählen, indem sie auf ein beliebiges [**Ink-Objekt**](inkdisp-class.md) tippen.
 
-Verwenden Sie die [**Auswahl**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) Eigenschaft, um eine [**Striche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung zurückzugeben, die Sie zum Bearbeiten der Auswahl eines Benutzers verwenden können.
+Verwenden Sie die [**Selection-Eigenschaft,**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) um eine [**Strokes-Sammlung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) zurückzugeben, mit der Sie die Auswahl eines Benutzers bearbeiten können.
 
-Wenn ein [**Ink**](inkdisp-class.md) -Objekt oder ein Satz **von frei** Hand Objekten ausgewählt wird, werden die Größen Zieh Punkte in den vier Ecken des umgebenden Felds der frei Hand Eingabe und in allen Mittelpunkten zwischen angrenzenden Ecken angezeigt. Wenn der Benutzer eine beliebige Stelle innerhalb des ausgewählten Bereichs zieht, wird die frei Hand Eingabe im Steuerelement verschoben.
+Wenn ein [**Ink-Objekt**](inkdisp-class.md) oder eine Gruppe von **Ink-Objekten** ausgewählt ist, werden Größenziehpunkte an den vier Ecken des umgebenden Felds der Ink und an allen Mittelpunkten zwischen benachbarten Ecken angezeigt. Wenn der Benutzer eine beliebige Stelle innerhalb des ausgewählten Bereichs zieht, wird die Ink innerhalb des Steuerelements verschiebbar.
 
 ### <a name="default-behavior"></a>Standardverhalten
 
-Das [**InkOverlay**](inkoverlay-class.md) -Objekt ist so festgelegt, dass frei Hand Eingaben standardmäßig gesammelt werden "Ink" ist 53 frei Hand Einheiten breit (wobei 1 frei Hand Raumeinheit = 1 HIMETRIC). Ink ist schwarz, wenn der Benutzer nicht im Modus mit hohem Kontrast ausgeführt wird. Andernfalls wird Ink auf den Color- **\_ WindowText** -Wert (**WindowText** in verwaltetem Code) festgelegt. [**Fitum Curve**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_fittocurve) ist **false**.
+Das [**InkOverlay-Objekt**](inkoverlay-class.md) ist standardmäßig auf die Erfassung von Ink festgelegt. Freihand ist 53 Freihandraumeinheiten breit (wobei 1 Freihandraumeinheit = 1 HIMETRIC ist). Ink ist schwarz, wenn der Benutzer nicht im Modus mit hohem Kontrast ausgeführt wird. Andernfalls wird ink auf den **COLOR \_ WINDOWTEXT-Wert** **(WindowText** in verwaltetem Code) festgelegt. [**FitToCurve**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_fittocurve) ist **FALSE.**
 
-### <a name="cursor-and-button-objects"></a>Cursor-und Schaltflächen Objekte
+### <a name="cursor-and-button-objects"></a>Cursor- und Schaltflächenobjekte
 
-Ein Cursor entspricht der Spitze des Stifts, der auf Tablet PC verwendet wird. Beispielsweise weist ein Stift zwei Enden auf. Normalerweise wird ein Ende zum Schreiben verwendet, und das andere wird zum Löschen verwendet. Diese beiden Enden entsprechen zwei Cursorn. Die [**Cursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) Klasse wird nicht mit [**System. Windows. Forms. Cursor**](/dotnet/api/system.windows.forms.cursor?view=netcore-3.1)verwechselt.
+Ein Cursor entspricht der Spitze des Stifts, der auf tablet PC verwendet wird. Beispielsweise hat ein Stift zwei Enden. In der Regel wird ein Ende zum Schreiben und das andere zum Löschen verwendet. Diese beiden Enden entsprechen zwei Cursorn. Die [**Cursor-Klasse**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) wird nicht mit [**System.Windows verwechselt. Forms.Cursor**](/dotnet/api/system.windows.forms.cursor?view=netcore-3.1).
 
-Auf Tablet PC wird normalerweise ein Cursor definiert, der zum Schreiben oder Löschen verwendet werden kann. Ein Cursor kann möglicherweise Rollen ändern, wenn die Anwendung diese Funktion aktiviert. Für einige Tablet PC-Geräte sind mehrere Stifte zulässig. Jeder Cursor verfügt über eine zugeordnete Cursor-ID, die im System eindeutig ist. Einem Cursor können NULL oder mehr zugeordnete Schaltflächen zugeordnet werden. Diese Schaltflächen werden der Anwendung als Cursor Button-Objekte bereitgestellt. Die Anwendung kann für jeden beliebigen Cursor ein bestimmtes [**DrawingAttributes**](inkdrawingattributes-class.md) -Objekt bereitstellen.
+Auf Tablet PC ist ein Cursor normalerweise so definiert, dass er zum Schreiben oder Löschen verwendet wird. Ein Cursor kann rollenverändern, wenn die Anwendung diese Funktionalität aktiviert. Einige Tablet PC-Geräte lassen mehrere Stifte zu. Jeder Cursor verfügt über eine zugeordnete Cursor-ID, die im System eindeutig ist. Einem Cursor können 0 (null) oder mehr Schaltflächen zugeordnet sein. Diese Schaltflächen werden der Anwendung als CursorButton-Objekte bereitgestellt. Die Anwendung kann ein [**bestimmtes DrawingAttributes-Objekt**](inkdrawingattributes-class.md) für jeden angegebenen Cursor bereitstellen.
 
-### <a name="drawing-attributes-object"></a>Zeichnungs Attribute-Objekt
+### <a name="drawing-attributes-object"></a>Zeichnungsattribute-Objekt
 
-Ein [**DrawingAttributes**](inkdrawingattributes-class.md) -Objekt beschreibt, wie ein bekannter Satz von frei Hand Eingaben gezeichnet werden muss. Ein **DrawingAttributes** -Objekt enthält grundlegende Eigenschaften wie [**Color**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_color), [**Width**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_width)und [**ptip**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_pentip). Sie kann auch erweiterte Parameter umfassen, z. b. Variable Transparenz und Bezier-Glättung, die interessante Effekte bereitstellen oder die Lesbarkeit der Lesbarkeit verbessern können.
+Ein [**DrawingAttributes-Objekt**](inkdrawingattributes-class.md) beschreibt, wie jeder bekannte Satz von Ink gezeichnet werden soll. Ein **DrawingAttributes-Objekt** enthält grundlegende Eigenschaften wie [**Color**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_color), [**Width**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_width)und [**PenTip**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_pentip). Sie kann auch erweiterte Parameter wie variable Transparenz und Bézierglättung umfassen, die interessante Effekte bieten oder die Lesbarkeit von Ink verbessern können.
 
-### <a name="peninputpanel-object"></a>"Pinputpanel"-Objekt
+### <a name="peninputpanel-object"></a>PenInputPanel-Objekt
 
 > [!Note]  
-> Die Klasse " [**pinputpanel**](peninputpanel-class.md) " ist veraltet. Die Klasse " **pinputpanel** " wurde durch die [**TextInputPanel**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel) -Klasse ersetzt.
+> Die [**PenInputPanel-Klasse**](peninputpanel-class.md) ist veraltet. Die **PenInputPanel-Klasse** wurde durch die [**TextInputPanel-Klasse**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel) ersetzt.
 
  
 
-Mit dem [**PenInputPanel**](peninputpanel-class.md) -Objekt können Sie Ihren Anwendungen problemlos direkte Stift Eingaben hinzufügen. Der " **pinputpanel** " steht als anfügbares Objekt zur Verfügung, mit dem Sie vorhandenen Steuerelementen Tablet PC-Eingabe Bereichs Funktionen hinzufügen können. Die Benutzeroberfläche wird größtenteils von der aktuellen Eingabe Sprache vorgeschrieben. Sie haben die Möglichkeit, die Standardeingabe Methode für das " **Pendel Panel**"-Steuerelement ("Handschrift" oder "Tastatur") auszuwählen. Der Endbenutzer kann mithilfe von Schaltflächen auf der Benutzeroberfläche zwischen Eingabemethoden wechseln.
+Mit dem [**PenInputPanel-Objekt**](peninputpanel-class.md) können Sie Ihren Anwendungen ganz einfach Stifteingaben hinzufügen. Das **PenInputPanel** ist als anfügebares Objekt verfügbar, mit dem Sie vorhandenen Steuerelementen Tablet PC Input Panel-Funktionen hinzufügen können. Die Benutzeroberfläche wird größtenteils von der aktuellen Eingabesprache gefordert. Sie haben die Möglichkeit, die Standardeingabemethode für das **PenInputPanel** auszuwählen , entweder Handschrift oder Tastatur. Der Endbenutzer kann mithilfe von Schaltflächen auf der Benutzeroberfläche zwischen Eingabemethoden wechseln.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -106,7 +106,7 @@ Mit dem [**PenInputPanel**](peninputpanel-class.md) -Objekt können Sie Ihren An
 [**InkOverlay-Klasse (C++)**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Microsoft. Ink-Namespace**](/previous-versions/dotnet/netframework-3.5/ms581553(v=vs.90))
+[**Microsoft.Ink-Namespace**](/previous-versions/dotnet/netframework-3.5/ms581553(v=vs.90))
 </dt> </dl>
 
  

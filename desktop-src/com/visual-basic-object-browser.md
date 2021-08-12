@@ -1,31 +1,31 @@
 ---
-title: Visual Basic Objektkatalog
-description: Nachdem ein COM-Objekt als Verweis oder Komponente zum Projekt hinzugefügt wurde, können Sie die Visual Basic Objektkatalog verwenden, um Typbibliotheks Informationen für dieses Objekt in Visual Basic anzuzeigen.
+title: Visual Basic Objektbrowser
+description: Nachdem dem Projekt ein COM-Objekt als Verweis oder Komponente hinzugefügt wurde, können Sie den Visual Basic-Objektbrowser verwenden, um Typbibliotheksinformationen für dieses Objekt in der Visual Basic.
 ms.assetid: 8147a90f-e08d-4717-946b-0e451d95d2d3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bcce20e6b9511b4372d92cbb3072ea9a3d462ab9
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: f045eb4fb7195e877d49aab49c8f046621f479d6d0fd8fd75113acf012b550c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118549585"
 ---
-# <a name="visual-basic-object-browser"></a>Visual Basic Objektkatalog
+# <a name="visual-basic-object-browser"></a>Visual Basic Objektbrowser
 
-Nachdem ein COM-Objekt als Verweis oder Komponente zum Projekt hinzugefügt wurde, können Sie die Visual Basic Objektkatalog verwenden, um Typbibliotheks Informationen für dieses Objekt in Visual Basic anzuzeigen.
+Nachdem dem Projekt ein COM-Objekt als Verweis oder Komponente hinzugefügt wurde, können Sie den Visual Basic-Objektbrowser verwenden, um Typbibliotheksinformationen für dieses Objekt in der Visual Basic.
 
-So zeigen Sie ein COM-Objekt im Objektkatalog an:
+So zeigen Sie ein COM-Objekt im Objektbrowser an:
 
--   Klicken Sie im Menü **Ansicht** auf **Objektkatalog**.
+-   Klicken Sie **im Menü** Ansicht auf **Objektbrowser**.
 
-Auf der linken Seite des Fensters Objektkatalog werden alle Klassen von verweisen und Komponenten angezeigt, die dem aktuellen Projekt hinzugefügt wurden. Auf der rechten Seite sind die Methoden, Eigenschaften und Ereignisse dieser Klassen enthalten.
+Auf der linken Seite des Fensters Objektbrowser werden alle Klassen von Verweisen und Komponenten angezeigt, die dem aktuellen Projekt hinzugefügt wurden. Die rechte Seite enthält die Methoden, Eigenschaften und Ereignisse dieser Klassen.
 
-Sie können filtern, welche com-Objektklassen angezeigt werden, indem Sie in der Dropdown Liste Bibliotheks Auswahl eine Objektbibliothek auswählen.
+Sie können filtern, welche COM-Objektklassen angezeigt werden, indem Sie eine Objektbibliothek aus der Dropdownliste für die Bibliotheksauswahl auswählen.
 
-Weitere Informationen finden Sie unter durch [Suchen von ActiveX-komponententypbibliotheken](/previous-versions/visualstudio/visual-basic-6/aa240782(v=vs.60)) in der Visual Basic-Dokumentation.
+Weitere Informationen finden Sie unter [Durchsuchen ActiveX Komponententypbibliotheken](/previous-versions/visualstudio/visual-basic-6/aa240782(v=vs.60)) in der Visual Basic Dokumentation.
 
-In einigen Fällen wird der Visual Basic Objektkatalog anscheinend keinen Rückgabetyp für eine Funktion oder Eigenschaft anzeigen. Es wird kein Rückgabetyp **angezeigt, wenn** der Rückgabetyp der Standardtyp ist. Wenn der Beschreibungs Bereich der Objektkatalog das Element als Funktion oder Eigenschaft beschreibt und ein Rückgabetyp nicht angezeigt wird, ist die Rückgabetyp Anweisung "As Variant".
+In einigen Fällen zeigt Visual Basic Objektbrowser keinen Rückgabetyp für eine Funktion oder Eigenschaft an. Es wird kein Rückgabetyp angezeigt, wenn der Rückgabetyp der Standardtyp Variant **ist.** Wenn der Beschreibungsbereich des Objektbrowsers das Element als Funktion oder Eigenschaft beschreibt und kein Rückgabetyp angezeigt wird, ist die Rückgabetyp-Anweisung "As Variant".
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -34,6 +34,6 @@ In einigen Fällen wird der Visual Basic Objektkatalog anscheinend keinen Rückg
 [Übersetzen in Visual Basic](translating-to-visual-basic.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

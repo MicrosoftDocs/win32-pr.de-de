@@ -1,33 +1,33 @@
 ---
-description: Persistenz und Interoperabilität sind zwei äußerst wichtige Features, insbesondere für Anwendungen, die frei Hand Eingaben verwenden.
+description: Persistenz und Interoperabilität sind zwei wichtige Features, insbesondere für Anwendungen, die Ink verwenden.
 ms.assetid: 71e963d8-2917-40e1-8214-27521cffe340
-title: Frei Hand Interoperabilität
+title: Interoperabilität mit Ink
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c40fda8e9ab98e32b42b87a0b108651b553653ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9f107e1cf39858434e6d2ca93147be12c6a43c9f28973e7d9b14c441a3ec138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452037"
 ---
-# <a name="ink-interoperability"></a>Frei Hand Interoperabilität
+# <a name="ink-interoperability"></a>Interoperabilität mit Ink
 
-Persistenz und Interoperabilität sind zwei äußerst wichtige Features, insbesondere für Anwendungen, die frei Hand Eingaben verwenden. Um die Persistenz und Interoperabilität von frei Hand Eingaben zu ermöglichen, muss eine Anwendung Benutzern folgende Aktionen gestatten:
+Persistenz und Interoperabilität sind zwei wichtige Features, insbesondere für Anwendungen, die Ink verwenden. Um Persistenz und Interoperabilität von Ink zu ermöglichen, muss eine Anwendung Benutzern Dies ermöglichen:
 
--   Speichern und öffnen Sie Ihre Dokumente mit vollständiger Daten Treue.
--   Verschieben von Daten in und aus anderen Microsoft Windows – basierten Anwendungen mithilfe der Zwischenablage.
+-   Speichern und öffnen Sie ihre Dokumente mit vollständiger Genauigkeit der Freik-Daten.
+-   Verschieben von Daten in und aus anderen Microsoft Windows-basierten Anwendungen mithilfe der Zwischenablage.
 
-In den folgenden Abschnitten wird die frei Hand Interoperabilität ausführlich erläutert.
+In den folgenden Abschnitten wird die Interoperabilität von Ink erläutert.
 
--   [Frei Hand Datenformate](ink-data-formats.md)
--   [Wichtige Interoperabilitäts Szenarien](important-interoperability-scenarios.md)
+-   [Ink-Datenformate](ink-data-formats.md)
+-   [Wichtige Interoperabilitätsszenarien](important-interoperability-scenarios.md)
 -   [Persistenzformate](persistence-formats.md)
--   [Auswählen der zu unterstützten Formate](choosing-which-formats-to-support.md)
+-   [Auswählen der zu unterstützenden Formate](choosing-which-formats-to-support.md)
 -   [Bausteine](building-blocks.md)
--   [Speichern von frei Hand Eingaben in HTML](storing-ink-in-html.md)
+-   [Speichern von Ink in HTML](storing-ink-in-html.md)
 
-In diesem Dokument wird davon ausgegangen, dass die Zwischenablage ausführlich erläutert wird. Weitere Informationen zur Zwischenablage finden Sie in der [Dokumentation der Zwischenablage](/windows/desktop/dataxchg/clipboard).
+Dieses Dokument setzt ein detailliertes Verständnis der Zwischenablage voraus. Weitere Informationen zur Zwischenablage finden Sie in der [Dokumentation zur Zwischenablage.](/windows/desktop/dataxchg/clipboard)
 
  
 

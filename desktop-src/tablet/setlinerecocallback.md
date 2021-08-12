@@ -1,7 +1,7 @@
 ---
-description: Legt eine Rückruffunktion fest, die während der Zeilen Erkennung verwendet werden soll.
+description: Legt eine Rückruffunktion fest, die während der Zeilenerkennung verwendet werden soll.
 ms.assetid: 0b07ec80-328a-471b-b554-fa66f56a2871
-title: Setlinerecocallback-Funktion
+title: SetLineRecoCallback-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkDiv.dll
 - InkDiv.dll.dll
-ms.openlocfilehash: b256a38d6d6ee6ecf43994c6619c369ea6ca2212
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b0e146152f88a8847b76ac9d00cf7b10c0d5ebfdafa1dc483eca4d946517fd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449300"
 ---
-# <a name="setlinerecocallback-function"></a>Setlinerecocallback-Funktion
+# <a name="setlinerecocallback-function"></a>SetLineRecoCallback-Funktion
 
-Legt eine Rückruffunktion fest, die während der Zeilen Erkennung verwendet werden soll.
+Legt eine Rückruffunktion fest, die während der Zeilenerkennung verwendet werden soll.
 
-Diese Hilfsfunktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Hilfsfunktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT WINAPI SetLineRecoCallback(
 
 <dl> <dt>
 
-*hdivider* \[ in\]
+*hDivider* \[ In\]
 </dt> <dd>
 
-Ein Handle für das [**InkDivider**](inkdivider-class.md) -Objekt.
+Ein Handle für das [**InkDivider-Objekt.**](inkdivider-class.md)
 
 </dd> <dt>
 
-*PFN* 
+*pfn* 
 </dt> <dd>
 
-Ein Zeiger auf eine Funktion, die aufgerufen wird, wenn die Erkennung für den weiter gegebenen [**InkDivider**](inkdivider-class.md) erfolgt.
+Ein Zeiger auf eine Funktion, die aufgerufen wird, wenn die Erkennung auf dem übergebenen [**InkDivider**](inkdivider-class.md) auftritt.
 
 </dd> </dl>
 
@@ -66,15 +66,15 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                  | Beschreibung                                     |
 |----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Funktion wurde erfolgreich ausgeführt.<br/>              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *pdivider* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *pDivider-Parameter* ist ungültig.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie die Syntax für die Rückruffunktion.
+Im Folgenden ist die Syntax für die Rückruffunktion angegeben.
 
 ``` syntax
 public delegate void GetLineRecoDef(
@@ -96,7 +96,7 @@ public delegate void GetLineRecoDef(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkDiv.dll</dt> </dl> |
 

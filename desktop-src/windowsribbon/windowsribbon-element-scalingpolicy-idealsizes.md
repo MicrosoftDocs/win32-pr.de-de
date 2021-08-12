@@ -1,9 +1,9 @@
 ---
-title: Scalingpolicy. idealsizes (Eigenschaft)
-description: Stellt einen Container mit Skalierungs Spezifikationen für die bevorzugte sizedefinition-Vorlage basierend auf der Menü Band Größe dar.
+title: ScalingPolicy.IdealSizes-Eigenschaft
+description: Stellt einen Container mit Skalierungsspezifikationen für die bevorzugte SizeDefinition-Vorlage basierend auf der Größe des Menübands dar.
 ms.assetid: a4aa2642-160d-4d81-9df9-29277911aa5a
 keywords:
-- Skingpolicy. idealsizes-Eigenschaften Fenster (Menüband)
+- ScalingPolicy.IdealSizes-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7bf62cd0388b523f444c4a9cca226b58187212b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 500f6193411ed72b8858506816d9af4f82b1219680fa0537bf54b3daa7735211
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439525"
 ---
-# <a name="scalingpolicyidealsizes-property"></a>Scalingpolicy. idealsizes (Eigenschaft)
+# <a name="scalingpolicyidealsizes-property"></a>ScalingPolicy.IdealSizes-Eigenschaft
 
-Stellt einen Container mit Skalierungs Spezifikationen für die bevorzugte [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlage basierend auf der Menü Band Größe dar.
+Stellt einen Container mit Skalierungsspezifikationen für die bevorzugte [**SizeDefinition-Vorlage**](windowsribbon-element-sizedefinition.md) basierend auf der Größe des Menübands dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                 | BESCHREIBUNG                                        |
 |---------------------------------------------------------|----------------------------------------------------|
-| [**Migen**](windowsribbon-element-scale.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Skalieren**](windowsribbon-element-scale.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -55,21 +55,21 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jede [**scalingpolicy**](windowsribbon-element-scalingpolicy.md)auftreten.
+Kann höchstens einmal für jede [**ScalingPolicy**](windowsribbon-element-scalingpolicy.md)auftreten.
 
-Wenn **scalingpolicy. ideal sizes** definiert ist, muss für jedes [**Group**](windowsribbon-element-group.md) -Element in einem [**Tab**](windowsribbon-element-tab.md) -Element ein [**Skalierungs**](windowsribbon-element-scale.md) Eintrag vorhanden sein.
+Wenn **ScalingPolicy.IdealSizes** definiert ist, muss ein [**Scale-Eintrag**](windowsribbon-element-scale.md) für jedes [**Group-Element**](windowsribbon-element-group.md) in einem [**Tab-Element**](windowsribbon-element-tab.md) vorhanden sein.
 
-**Scalingpolicy. ideal sizes** sind die bevorzugten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layouts für eine [**Gruppe**](windowsribbon-element-group.md) von Steuerelementen.
+**ScalingPolicy.IdealSizes** sind die bevorzugten [**SizeDefinition-Layouts**](windowsribbon-element-sizedefinition.md) für eine [**Gruppe**](windowsribbon-element-group.md) von Steuerelementen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie die Darstellung von Steuerelementen in einer [**Gruppe**](windowsribbon-element-group.md) durch die Adaptive Layoutfunktionalität von Menüband- [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen angepasst werden kann.
+Im folgenden Beispiel wird veranschaulicht, wie die Darstellung von Steuerelementen in einer [**Gruppe**](windowsribbon-element-group.md) mithilfe der adaptiven Layoutfunktionalität von [**Menübandgrößendefinitionsvorlagen**](windowsribbon-element-sizedefinition.md) angepasst werden kann.
 
-Das [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest in diesem Beispiel gibt für jede der vier Gruppen von Steuerelementen auf einer Registerkarte **Home** die Einstellung **scalingpolicy. ideal sizes** [**sizedefinition**](windowsribbon-element-sizedefinition.md) an. Außerdem werden [**Skalierungs**](windowsribbon-element-scale.md) Elemente angegeben, um das reduzierende Verhalten der einzelnen Gruppen in absteigender Reihenfolge zu beeinflussen.
+Das [**ScalingPolicy-Manifest**](windowsribbon-element-scalingpolicy.md) in diesem Beispiel gibt eine **ScalingPolicy.IdealSizes** [**SizeDefinition-Einstellung**](windowsribbon-element-sizedefinition.md) für jede von vier Gruppen von Steuerelementen auf einer Registerkarte **Home** an. Darüber hinaus werden [**Skalierungselemente**](windowsribbon-element-scale.md) angegeben, um das Reduzierungsverhalten jeder Gruppe in absteigender Größenreihenfolge zu beeinflussen.
 
 
 ```C++
@@ -141,16 +141,16 @@ Das [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest in die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

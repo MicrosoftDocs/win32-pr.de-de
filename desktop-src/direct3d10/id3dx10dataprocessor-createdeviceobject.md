@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie ein Geräte Objekt.
+description: Erstellen Sie ein Geräteobjekt.
 ms.assetid: 5b9b00de-c744-43c7-b383-1d3358c80741
-title: 'ID3DX10DataProcessor:: kreatedeviceobject-Methode (d3dx10. h)'
+title: ID3DX10DataProcessor::CreateDeviceObject-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1ed362f992ca2b9d3ce6e561e08e5fe7fd0bdbe3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ca20de85e867cc8c444f05ea187fb314a6b983ad8c72a5f8ae921c0747bd9ce8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540418"
 ---
-# <a name="id3dx10dataprocessorcreatedeviceobject-method"></a>ID3DX10DataProcessor:: kreatedeviceobject-Methode
+# <a name="id3dx10dataprocessorcreatedeviceobject-method"></a>ID3DX10DataProcessor::CreateDeviceObject-Methode
 
-Erstellen Sie ein Geräte Objekt.
+Erstellen Sie ein Geräteobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT CreateDeviceObject(
 
 <dl> <dt>
 
-*ppdataobject* \[ vorgenommen\]
+*ppDataObject* \[ out\]
 </dt> <dd>
 
-Typ: **void \* \***
+Typ: **\* \* void**
 
-Adresse eines Zeigers auf das erstellte Geräte Objekt.
+Adresse eines Zeigers auf das erstellte Geräteobjekt.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Adresse eines Zeigers auf das erstellte Geräte Objekt.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

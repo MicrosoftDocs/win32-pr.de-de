@@ -1,5 +1,5 @@
 ---
-description: Gibt Ereignisse an, die den Analyse Schritten eines iinkanalyzer-Objekts zugeordnet sind.
+description: Gibt Ereignisse an, die den Analyseschritten eines IInkAnalyzer-Objekts zugeordnet sind.
 ms.assetid: 8cb75f99-aa39-44d1-a055-dc1fb3f6b292
 title: _IAnalysisEvents-Schnittstelle
 ms.topic: reference
@@ -12,32 +12,32 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 90e32669d8b542202f6166052c072f224bb2954a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f49455e3e6fb68b2884cda380c304d7655b70d49ff338bcfb7c36904b449019
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452165"
 ---
-# <a name="_ianalysisevents-interface"></a>\_Ianalysil Vents-Schnittstelle
+# <a name="_ianalysisevents-interface"></a>\_IAnalysisEvents-Schnittstelle
 
-Gibt Ereignisse an, die den Analyse Schritten eines [**iinkanalyzer**](iinkanalyzer.md) -Objekts zugeordnet sind.
+Gibt Ereignisse an, die den Analyseschritten eines [**IInkAnalyzer-Objekts zugeordnet**](iinkanalyzer.md) sind.
 
 -   [Ereignisse](/windows)
 
 ### <a name="events"></a>Ereignisse
 
-Die **\_ ianalysil Vents** -Schnittstelle enthält diese Ereignisse.
+Die **\_ IAnalysisEvents-Schnittstelle** verfügt über diese Ereignisse.
 
 
 
-| Ereignis                                                               | BESCHREIBUNG                                                                                                                                                                                    |
+| Ereignis                                                               | Beschreibung                                                                                                                                                                                    |
 |:--------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aktivität**](-ianalysisevents-activity.md)                       | Tritt bei Aufrufen der [**iinkanalyzer:: Analysis-Methode**](iinkanalyzer-analyze.md) oder der [**iinkanalyzer:: BackgroundAnalyze-Methoden**](iinkanalyzer-backgroundanalyze.md) Methode auf.<br/> |
-| [**IntermediateResults**](-ianalysisevents-intermediateresults.md) | Tritt auf, wenn die aktuelle zwischen Analysephase abgeschlossen ist.<br/>                                                                                                                    |
-| [**"Read ytor econcile"**](-ianalysisevents-readytoreconcile.md)       | Tritt auf, wenn [**iinkanalyzer**](iinkanalyzer.md) bereit ist, die Ergebnisse der Hintergrundanalyse mit dem aktuellen Zustand abzustimmen.<br/>                                                  |
-| [**Ergebnisse**](-ianalysisevents-results.md)                         | Tritt auf, wenn die abschließende Analysephase abgeschlossen ist.<br/>                                                                                                                                   |
-| [**Updatestrokescache**](-ianalysisevents-updatestrokescache.md)   | Tritt auf, bevor der [**iinkanalyzer**](iinkanalyzer.md) auf Stroke-Daten zugreift.<br/>                                                                                                        |
+| [**Aktivität**](-ianalysisevents-activity.md)                       | Tritt bei Aufrufen der [**IInkAnalyzer::Analyze-Methode oder**](iinkanalyzer-analyze.md) [**der IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md) auf.<br/> |
+| [**IntermediateResults**](-ianalysisevents-intermediateresults.md) | Tritt ein, wenn die aktuelle Zwischenanalysephase abgeschlossen ist.<br/>                                                                                                                    |
+| [**Readytoreconcile**](-ianalysisevents-readytoreconcile.md)       | Tritt ein, wenn [**der IInkAnalyzer bereit**](iinkanalyzer.md) ist, die Ergebnisse der Hintergrundanalyse mit dem aktuellen Zustand in Einklang zu bringen.<br/>                                                  |
+| [**Ergebnisse**](-ianalysisevents-results.md)                         | Tritt ein, wenn die abschließende Analysephase abgeschlossen ist.<br/>                                                                                                                                   |
+| [**UpdateStrokesCache**](-ianalysisevents-updatestrokescache.md)   | Tritt ein, bevor [**IInkAnalyzer**](iinkanalyzer.md) auf Strichdaten zuspricht.<br/>                                                                                                        |
 
 
 
@@ -49,28 +49,28 @@ Die **\_ ianalysil Vents** -Schnittstelle enthält diese Ereignisse.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

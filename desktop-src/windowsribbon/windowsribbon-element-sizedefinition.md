@@ -1,9 +1,9 @@
 ---
 title: SizeDefinition-Element
-description: Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
+description: Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
 ms.assetid: f90bb469-aee2-4bba-9efe-142a39a8c1ae
 keywords:
-- SizeDefinition-Element Windows-Menüband
+- SizeDefinition-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cc68ac032459bed77d402ebd860886398748c874
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 982825649afb7640f87cb7032b000d837915c4bc9d970444da3c5cd3a5a98375
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439535"
 ---
 # <a name="sizedefinition-element"></a>SizeDefinition-Element
 
-Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
+Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <SizeDefinition
@@ -47,7 +47,7 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -58,7 +58,7 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
 <td>xs:positiveInteger oder xs:string oder xs:token<br/></td>
 <td>Ja<br/></td>
 <td>Wenn <a href="windowsribbon-element-ribbon-sizedefinitions.md"><strong>Ribbon.SizeDefinitions</strong></a> das übergeordnete Element ist, andernfalls optional.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string oder xs:token)<br/> </dt> <dd> Eine Zeichenfolge oder ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f hexadezimal, einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string oder xs:token)<br/> </dt> <dd> Eine Zeichenfolge oder ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f in Hexadezimal, einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -72,7 +72,7 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
 | Element                                                                             | BESCHREIBUNG                                     |
 |-------------------------------------------------------------------------------------|-------------------------------------------------|
 | [**ControlNameMap**](windowsribbon-element-controlnamemap.md)<br/>           | Kann höchstens einmal auftreten.<br/> <br/>   |
-| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
+| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
 
 
@@ -89,7 +89,7 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann höchstens einmal für jedes [**Group-Element**](windowsribbon-element-group.md) auftreten.
 
@@ -199,7 +199,7 @@ Das folgende Codebeispiel veranschaulicht eine einfache benutzerdefinierte Vorla
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

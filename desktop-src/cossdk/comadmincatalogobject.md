@@ -1,7 +1,7 @@
 ---
-description: Stellt Elemente in Auflistungen im com+-Katalog dar. Verwenden Sie es zum Abrufen und Ändern von Eigenschaften, die von einem Element in einer Sammlung verfügbar gemacht werden.
+description: Stellt Elemente in Auflistungen im COM+-Katalog dar. Verwenden Sie sie, um Eigenschaften abzurufen und zu ändern, die von einem Element in einer Auflistung verfügbar gemacht werden.
 ms.assetid: 1d7f248b-20ec-4b34-88ab-3c68bef72b5a
-title: COMAdminCatalogObject-Klasse (COMAdmin. h)
+title: COMAdminCatalogObject-Klasse (ComAdmin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,26 +13,26 @@ api_type:
 - COM
 api_location:
 - ComAdmin.Idl
-ms.openlocfilehash: 19fb873e29ad235b11dfe6e7a95b2ad47a8405b2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bce57021774b3abc2f69a1120862912452629c3e70d9c8fd0ebcc5d39ce5203d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118548587"
 ---
 # <a name="comadmincatalogobject-class"></a>COMAdminCatalogObject-Klasse
 
-Stellt Elemente in Auflistungen im com+-Katalog dar. Verwenden Sie es zum Abrufen und Ändern von Eigenschaften, die von einem Element in einer Sammlung verfügbar gemacht werden.
+Stellt Elemente in Auflistungen im COM+-Katalog dar. Verwenden Sie sie, um Eigenschaften abzurufen und zu ändern, die von einem Element in einer Auflistung verfügbar gemacht werden.
 
 ## <a name="when-to-implement"></a>Gründe für die Implementierung
 
-Diese Klasse wird von com+ implementiert.
+Diese Klasse wird von COM+ implementiert.
 
 
 
 | Anforderung | Wert |
 |------------|------------------------------------------|
-| Schnittstellen | [**Icatalogobject**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogobject) |
+| Schnittstellen | [**ICatalogObject**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogobject) |
 
 
 
@@ -40,21 +40,21 @@ Diese Klasse wird von com+ implementiert.
 
 ## <a name="when-to-use"></a>Verwendung
 
-Verwenden Sie Objekte, die aus der **COMAdminCatalogObject** -Klasse erstellt wurden, um die Eigenschaften von Elementen in Auflistungen im com+-Katalog zu ändern. Diese Elemente entsprechen den Elementen, die in den Ordnern in der Konsolen Struktur des Verwaltungs Tools für Komponenten Dienste angezeigt werden. Ordner im Verwaltungs Tool Komponenten Dienste entsprechen Sammlungen im-Katalog, die Sie mithilfe von Objekten darstellen können, die aus der [**comadmincatalogcollection**](comadmincatalogcollection.md) -Klasse erstellt wurden.
+Verwenden Sie Objekte, die mit der **COMAdminCatalogObject-Klasse erstellt** wurden, um die Eigenschaften von Elementen zu ändern, die in Auflistungen im COM+-Katalog enthalten sind. Diese Elemente entsprechen Elementen, die in Ordnern in der Konsolenstruktur des Verwaltungtools für Komponentendienste angezeigt werden. Ordner im Verwaltungstool für Komponentendienste entsprechen Sammlungen im Katalog, die Sie mithilfe von Objekten darstellen können, die aus der [**COMAdminCatalogCollection-Klasse erstellt**](comadmincatalogcollection.md) wurden.
 
-Nicht alle Auflistungen und Elemente, die über " [**comadmincatalogcollection**](comadmincatalogcollection.md) " und " **COMAdminCatalogObject** " verfügbar gemacht werden, sind im Verwaltungs Tool für Komponenten Dienste verfügbar.
+Nicht alle Sammlungen und Elemente, die über [**COMAdminCatalogCollection**](comadmincatalogcollection.md) und **COMAdminCatalogObject** verfügbar gemacht werden, sind im Verwaltungstool für Komponentendienste verfügbar.
 
-Informationen zu bestimmten Sammlungen und deren Eigenschaften finden Sie unter [com+-Verwaltungs Sammlungen](com--administration-collections.md).
+Informationen zu bestimmten Sammlungen und deren Eigenschaften finden Sie unter [COM+-Verwaltungssammlungen.](com--administration-collections.md)
 
-Eine Einführung in die programmgesteuerte Verwaltung von com+ finden Sie unter [Automatisieren der com+-Verwaltung](automating-com--administration.md).
+Eine Einführung in die programmgesteuerte Verwaltung von COM+ finden Sie unter [Automatisieren der COM+-Verwaltung.](automating-com--administration.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein **COMAdminCatalogObject** -Objekt kann nicht direkt erstellt werden. Um die Methoden dieses Objekts verwenden zu können, müssen Sie ein [**comadmincatalog**](comadmincatalog.md) -Objekt erstellen, einen Verweis auf [**icomadmincatalog**](/windows/desktop/api/ComAdmin/nn-comadmin-icomadmincatalog)abrufen und dann [**icomadmincatalog:: GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-getcollection) verwenden, um einen Verweis auf eine [**icatalogcollection**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogcollection) -Schnittstelle zu erhalten, die eine Auflistung der obersten Ebene darstellt, oder [**icatalogcollection:**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection)
+Sie können kein **COMAdminCatalogObject-Objekt direkt** erstellen. Um die Methoden dieses Objekts zu verwenden, müssen Sie ein [**COMAdminCatalog-Objekt**](comadmincatalog.md) erstellen, einen Verweis auf [**ICOMAdminCatalog**](/windows/desktop/api/ComAdmin/nn-comadmin-icomadmincatalog)abrufen und dann [**ICOMAdminCatalog::GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-getcollection) verwenden, um einen Verweis auf eine [**ICatalogCollection-Schnittstelle**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogcollection) zu erhalten, die eine Sammlung der obersten Ebene darstellt, oder [**ICatalogCollection::GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) für den Zugriff auf Sammlungen verwenden, die nicht auf oberster Ebene sind.
 
-Nachdem Sie einen Verweis auf die [**icatalogcollection**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogcollection) -Schnittstelle der Sammlung haben, für die Sie sich interessieren, nennen Sie [**icatalogcollection::P opate**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-populate) , um die Auflistung mit allen Elementen aufzufüllen. Durchlaufen Sie alle Elemente in der Auflistung, indem Sie [**icatalogcollection:: get \_ Item**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-get_item) aufrufen, um einen Verweis auf jede [**icatalogobject**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogobject) -Schnittstelle zu erhalten. Wenn Sie das gewünschte Element finden, können Sie die Eigenschaften des Elements ändern und die Iterationen beenden. Wenn Sie Änderungen an Elementen in einer Auflistung vornehmen, müssen Sie [**icatalogcollection:: SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) zum Speichern der Änderungen im com+-Katalog abrufen.
+Nachdem Sie über einen Verweis auf die [**ICatalogCollection-Schnittstelle**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogcollection) der Sammlung verfügen, an der Sie interessiert sind, rufen Sie [**ICatalogCollection::P opulate**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-populate) auf, um die Sammlung mit allen elementen zu füllen. Iterieren Sie die einzelnen Elemente in der Auflistung, indem Sie [**ICatalogCollection::get \_ Item**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-get_item) aufrufen, um einen Verweis auf jede [**ICatalogObject-Schnittstelle**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogobject) zu erhalten. Wenn Sie das element von Interesse finden, können Sie die Eigenschaften des Elements ändern und die Iteration beenden. Wenn Sie Änderungen an Elementen in einer Sammlung vornehmen, müssen Sie [**ICatalogCollection::SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) aufrufen, um die Änderungen am COM+-Katalog zu speichern.
 
-Dies wird im folgenden Beispiel gezeigt, in dem "topcollection" durch den Namen einer der com+-Verwaltungs Sammlungen der obersten Ebene ersetzt werden muss. "ItemName" muss durch den Namen des Elements ersetzt werden, an dem Sie interessiert sind. "PropertyName" muss durch den Namen der Eigenschaft ersetzt werden, die Sie im Element ändern. und varnewprop müssen durch eine Variante ersetzt werden, die den neuen Wert für die Eigenschaft enthält.
+Dies wird im folgenden Beispiel gezeigt, wobei "TopCollection" durch den Namen einer der COM+-Verwaltungssammlungen der obersten Ebene ersetzt werden muss. "ItemName" muss durch den Namen des Elements ersetzt werden, an dem Sie interessiert sind. "PropertyName" muss durch den Namen der Eigenschaft ersetzt werden, die Sie im Element ändern. und varNewProp müssen durch eine VARIANT-Eigenschaft ersetzt werden, die den neuen Wert für die Eigenschaft enthält.
 
 
 ```C++
@@ -102,11 +102,11 @@ SysFreeString(bstrItemName);
 
 
 
-Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verweis auf die com+-admin-Typbibliothek hinzu. Ein comadmincatalogcollection-Objekt kann erstellt werden, indem [**GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-getcollection) für ein [**comadmincatalog**](comadmincatalog.md) -oder [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekt aufgerufen wird.
+Um diese Klasse von Microsoft Visual Basic verwenden zu können, fügen Sie einen Verweis auf die COM+-Administratortypbibliothek hinzu. Ein COMAdminCatalogCollection-Objekt kann durch Aufrufen von [**GetCollection für**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-getcollection) ein [**COMAdminCatalog-**](comadmincatalog.md) oder [**COMAdminCatalogCollection-Objekt erstellt**](comadmincatalogcollection.md) werden.
 
-Rufen Sie die [**Auffüllen**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-populate) -Methode des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts auf, um die Auflistung mit allen Elementen aufzufüllen. Iterieren Sie alle Elemente in der Auflistung. Wenn Sie das gewünschte Element finden, können Sie die Eigenschaften des Elements ändern und die Iterationen beenden. Wenn Sie Änderungen an Elementen in einer Auflistung vornehmen, müssen Sie die [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) -Methode des **comadmincatalogcollection** -Objekts anrufen, um die Änderungen im com+-Katalog zu speichern.
+Rufen Sie [**die Populate-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-populate) des [**COMAdminCatalogCollection-Objekts**](comadmincatalogcollection.md) auf, um die Auflistung mit allen elementen zu füllen. Iterieren Sie jedes der Elemente in der Auflistung. Wenn Sie das element von Interesse finden, können Sie die Eigenschaften des Elements ändern und die Iteration beenden. Wenn Sie Änderungen an Elementen in einer Sammlung vornehmen, müssen Sie die [**SaveChanges-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) des **COMAdminCatalogCollection-Objekts** aufrufen, um die Änderungen im COM+-Katalog zu speichern.
 
-Dies wird im folgenden Beispiel gezeigt, in dem "topcollection" durch den Namen einer der com+-Verwaltungs Sammlungen der obersten Ebene ersetzt werden muss. "ItemName" muss durch den Namen des Elements ersetzt werden, an dem Sie interessiert sind. "PropertyName" muss durch den Namen der Eigenschaft ersetzt werden, die Sie im Element ändern. und newpropvalue müssen durch den neuen Wert für die-Eigenschaft ersetzt werden.
+Dies wird im folgenden Beispiel gezeigt, wobei "TopCollection" durch den Namen einer der COM+-Verwaltungssammlungen der obersten Ebene ersetzt werden muss. "ItemName" muss durch den Namen des Elements ersetzt werden, an dem Sie interessiert sind. "PropertyName" muss durch den Namen der Eigenschaft ersetzt werden, die Sie im Element ändern. und NewPropValue müssen durch den neuen Wert für die -Eigenschaft ersetzt werden.
 
 
 ```VB
@@ -136,22 +136,22 @@ objAppCollection.SaveChanges
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>"COMAdmin. h"</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>COMAdmin. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>ComAdmin.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>ComAdmin.Idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Comadmincatalog**](comadmincatalog.md)
+[**COMAdminCatalog**](comadmincatalog.md)
 </dt> <dt>
 
-[**Comadmincatalogcollection**](comadmincatalogcollection.md)
+[**COMAdminCatalogCollection**](comadmincatalogcollection.md)
 </dt> <dt>
 
-[**Icatalogobject**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogobject)
+[**ICatalogObject**](/windows/desktop/api/ComAdmin/nn-comadmin-icatalogobject)
 </dt> </dl>
 
  

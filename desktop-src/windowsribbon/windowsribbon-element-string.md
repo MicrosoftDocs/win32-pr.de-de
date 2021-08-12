@@ -3,7 +3,7 @@ title: String-Element
 description: Stellt eine Zeichenfolgenressource dar.
 ms.assetid: 83e5bdbb-ef86-4942-af40-2e327360ee67
 keywords:
-- Windows-Menüband für Zeichenfolgenelement
+- Zeichenfolgenelement Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0b0dab5d7ce1485aad5fe1e15442069c488933aa
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 80558bed1e2152454df46d8a8dc6ab4fc40056f0257a08c91026504ec64f1722
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439408"
 ---
 # <a name="string-element"></a>String-Element
 
 Stellt eine Zeichenfolgenressource dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <String
@@ -49,7 +49,7 @@ Stellt eine Zeichenfolgenressource dar.
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -73,7 +73,7 @@ Stellt eine Zeichenfolgenressource dar.
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Das Ressourcensymbol für die Zeichenfolge.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Ein Buchstabe oder Unterstrich, gefolgt von einer beliebigen Sequenz von Buchstaben, Ziffern oder Unterstrichen.<br/> Die maximale Länge beträgt 100 Zeichen.<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Ein Buchstabe oder Unterstrich gefolgt von einer beliebigen Sequenz von Buchstaben, Ziffern oder Unterstrichen.<br/> Die maximale Länge beträgt 100 Zeichen.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ Stellt eine Zeichenfolgenressource dar.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann höchstens einmal für jedes [**Command.LabelTitle-,**](windowsribbon-element-command-labeltitle.md) [**Command.LabelDescription-,**](windowsribbon-element-command-labeldescription.md) [**Command.Keytip-,**](windowsribbon-element-command-keytip.md) [**Command.TooltipTitle-**](windowsribbon-element-command-tooltiptitle.md)oder [**Command.TooltipDescription-Element**](windowsribbon-element-command-tooltipdescription.md) auftreten.
 

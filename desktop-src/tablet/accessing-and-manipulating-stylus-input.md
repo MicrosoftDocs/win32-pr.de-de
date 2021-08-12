@@ -1,61 +1,61 @@
 ---
-description: Der Tablet PC umfasst Technologien für die Interaktion mit Tablet Pen-Daten, während diese gesammelt werden.
+description: Der Tablet-PC enthält Technologie für die Interaktion mit Tablettstiftdaten während der Datenerfassung.
 ms.assetid: e026f860-be4d-40a5-b951-15b8be3cd626
-title: Zugreifen auf und Bearbeiten von Tablettstifteingaben
+title: Zugreifen auf und Bearbeiten von Stifteingaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 333126f195154241333127ec585864bd9d592a08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7df56b690a8b7459f42e7d692e47dff4e9f1c00330e02cc0c912d7a3ca3dda02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452057"
 ---
-# <a name="accessing-and-manipulating-stylus-input"></a>Zugreifen auf und Bearbeiten von Tablettstifteingaben
+# <a name="accessing-and-manipulating-stylus-input"></a>Zugreifen auf und Bearbeiten von Stifteingaben
 
-Der Tablet PC umfasst Technologien für die Interaktion mit Tablet Pen-Daten, während diese gesammelt werden. Die [**RealTimeStylus**](realtimestylus-class.md) -Klasse ist Teil der StylusInput-API (Application Programming Interfaces), die Zugriff auf den Tablet Pen-Datenstream bereitstellen. Mit diesen APIs können Sie den Stream unabhängig vom Rendern und Sammeln von frei Hand Eingaben erfassen, unterbrechen und ändern.
+Der Tablet-PC enthält Technologie für die Interaktion mit Tablettstiftdaten während der Datenerfassung. Die [**RealTimeStylus-Klasse**](realtimestylus-class.md) ist Teil der Anwendungsprogrammierschnittstellen (API) StylusInput, die Zugriff auf den Tablettstiftdatenstrom bieten. Mit diesen APIs können Sie den Stream unabhängig vom Rendern und Sammeln von Ink-Daten erfassen, unterbrechen und ändern.
 
-Die StylusInput-APIs sind für Folgendes konzipiert:
+Die StylusInput-APIs sind für:
 
--   Stellen Sie Echtzeitzugriff auf den Tablet Pen-Datenstrom bereit.
--   Sorgen Sie dafür, dass der Benutzeroberflächen Thread das dynamische frei Hand Rendering blockiert, indem die Paketdaten im UI-Thread in die Warteschlange eingereiht werden und die frei Hand Auflistung Single Thread ist.
--   Erhöhen Sie die Leistung, und senken Sie die gesamt Thread Verwendung über das [**InkCollector**](inkcollector-class.md) -Objekt, das [**InkOverlay**](inkoverlay-class.md) -Objekt, das [InkPicture](inkpicture-control-reference.md) -Steuerelement oder das [InkEdit](inkedit-control-reference.md) -Steuerelement, um frei Hand Eingaben
+-   Bieten Sie Echtzeitzugriff auf den Tablettstift-Datenstrom.
+-   Halten Sie den Ui-Thread (Benutzeroberflächenthread) davon ab, das dynamische Ink-Rendering zu blockieren, indem Sie die Paketdaten im UI-Thread in die Warteschlange einordnen und die Ink-Sammlung als Singlethread erstellen.
+-   Erhöhen Sie die Leistung, und senken Sie die allgemeine Threadauslastung gegenüber dem Verwenden des [**InkCollector-Objekts,**](inkcollector-class.md) [**des InkOverlay-Objekts,**](inkoverlay-class.md) des [InkPicture-Steuerelements](inkpicture-control-reference.md) oder des [InkEdit-Steuerelements](inkedit-control-reference.md) zum Erfassen von Ink.
 
-Die StylusInput-APIs sind nicht für die Arbeit mit dem [**InkCollector**](inkcollector-class.md) -Objekt, dem [**InkOverlay**](inkoverlay-class.md) -Objekt, dem [InkPicture](inkpicture-control-reference.md) -Steuerelement oder dem [InkEdit](inkedit-control-reference.md) -Steuerelement konzipiert.
+Die StylusInput-APIs sind nicht für die Arbeit mit dem [**InkCollector-Objekt,**](inkcollector-class.md) [**dem InkOverlay-Objekt,**](inkoverlay-class.md) dem [InkPicture-Steuerelement](inkpicture-control-reference.md) oder dem [InkEdit-Steuerelement](inkedit-control-reference.md) konzipiert.
 
-Wenn Sie direkt mit dem Tablettstiftdaten-Datenstrom interagieren müssen oder wenn Ihre Anwendung das Echt Zeit Inking blockieren kann, verwenden Sie das [**RealTimeStylus**](realtimestylus-class.md) -Objekt. Verwenden Sie das [**InkCollector**](inkcollector-class.md) -Objekt, das [**InkOverlay**](inkoverlay-class.md) -Objekt, das [InkPicture](inkpicture-control-reference.md) -Steuerelement oder das [InkEdit](inkedit-control-reference.md) -Steuerelement, wenn das Standardverhalten dieser Objekte das benötigte Verhalten bereitstellt.
+Verwenden Sie das [**RealTimeStylus-Objekt,**](realtimestylus-class.md) wenn Sie direkt mit dem Tablettstift-Datenstrom interagieren müssen oder Ihre Anwendung die Echtzeit-Inknung blockieren kann. Verwenden Sie [**das InkCollector-Objekt,**](inkcollector-class.md) [**das InkOverlay-Objekt,**](inkoverlay-class.md) das [InkPicture-Steuerelement](inkpicture-control-reference.md) oder das [InkEdit-Steuerelement,](inkedit-control-reference.md) wenn das Standardverhalten dieser Objekte das von Ihnen benötigte Verhalten bietet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-In den folgenden Abschnitten werden die Elemente der StylusInput-APIs beschrieben:
+In den folgenden Abschnitten werden Elemente der StylusInput-APIs beschrieben:
 
 -   [Architektur der StylusInput-APIs](architecture-of-the-stylusinput-apis.md)
 -   [Arbeiten mit den StylusInput-APIs](working-with-the-stylusinput-apis.md)
     -   [Arbeiten mit der RealTimeStylus-Klasse](working-with-the-realtimestylus-class.md)
-    -   [Plug-ins und die RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md)
+    -   [Plug-Ins und die RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md)
     -   [Plug-In-Daten und die RealTimeStylus-Klasse](plug-in-data-and-the-realtimestylus-class.md)
-    -   [Implementierungs Hinweise für die StylusInput-APIs](implementation-notes-for-the-stylusinput-apis.md)
-    -   [Plug-Ins für die frei Hand Erfassung](ink-collection-plug-ins.md)
-    -   [Plug-Ins für dynamisches Renderer](dynamic-renderer-plug-ins.md)
-    -   [Erkennungs-Plug-ins](recognizer-plug-ins.md)
+    -   [Implementierungshinweise für die StylusInput-APIs](implementation-notes-for-the-stylusinput-apis.md)
+    -   [Ink-Collection-Plug-Ins](ink-collection-plug-ins.md)
+    -   [Dynamic-Renderer-Plug-Ins](dynamic-renderer-plug-ins.md)
+    -   [Erkennen von Plug-Ins](recognizer-plug-ins.md)
 -   [Überlegungen bei der Verwendung der StylusInput-APIs](considerations-when-using-the-stylusinput-apis.md)
-    -   [Entwurfs Überlegungen für die StylusInput-APIs](design-considerations-for-the-stylusinput-apis.md)
-    -   [Threading Überlegungen für die StylusInput-APIs](threading-considerations-for-the-stylusinput-apis.md)
+    -   [Entwurfsüberlegungen für die StylusInput-APIs](design-considerations-for-the-stylusinput-apis.md)
+    -   [Überlegungen zum Threading für die StylusInput-APIs](threading-considerations-for-the-stylusinput-apis.md)
 
-[Das Cascaded RealTimeStylus-Modell](the-cascaded-realtimestylus-model.md)
+[Das kaskadierte RealTimeStylus-Modell](the-cascaded-realtimestylus-model.md)
 
 -   [Überlegungen zur Fehlerbehandlung für die StylusInput-APIs](error-handling-considerations-for-the-stylusinput-apis.md)
 -   [Überlegungen zur Leistung der StylusInput-APIs](performance-considerations-for-the-stylusinput-apis.md)
--   [Überlegungen zur teilweisen Vertrauenswürdigkeit für die StylusInput-APIs](partial-trust-considerations-for-the-stylusinput-apis.md)
+-   [Überlegungen zur teilweisen Vertrauenswürdigkeit der StylusInput-APIs](partial-trust-considerations-for-the-stylusinput-apis.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Plug-in-Beispiel für RealTimeStylus](realtimestylus-plug-in-sample.md)
+[RealTimeStylus-Plug-In-Beispiel](realtimestylus-plug-in-sample.md)
 </dt> <dt>
 
-[RealTimeStylus Ink Collection-Beispiel](realtimestylus-ink-collection-sample.md)
+[RealTimeStylus Ink Collection Sample](realtimestylus-ink-collection-sample.md)
 </dt> </dl>
 
  

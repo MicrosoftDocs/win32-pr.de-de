@@ -1,22 +1,22 @@
 ---
-description: Ein Qualifizierer ist eine Daten Zeichenfolge, die weitere Informationen über eine Klasse, eine Instanz, eine Eigenschaft, eine Methode oder einen Parameter bereitstellt.
+description: Ein Qualifizierer ist eine Datenzeichenfolge, die weitere Informationen zu einer Klasse, Instanz, Eigenschaft, Methode oder einem Parameter bereitstellt.
 ms.assetid: 6984b575-b365-49dd-aeab-a763430f434c
 ms.tgt_platform: multiple
-title: Fügen eines Qualifizierers
+title: Hinzufügen eines Qualifizierers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5a6f18f2b79bcd25b2b4ca75811157c9091e6eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 333c24e89d711a8998c58c6201776d5d4c50cc1107f4c9ca4308d9cc992b44dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118557823"
 ---
-# <a name="adding-a-qualifier"></a>Fügen eines Qualifizierers
+# <a name="adding-a-qualifier"></a>Hinzufügen eines Qualifizierers
 
-Ein Qualifizierer ist eine Daten Zeichenfolge, die weitere Informationen über eine Klasse, eine Instanz, eine Eigenschaft, eine Methode oder einen Parameter bereitstellt.
+Ein Qualifizierer ist eine Datenzeichenfolge, die weitere Informationen zu einer Klasse, Instanz, Eigenschaft, Methode oder einem Parameter bereitstellt.
 
-Die folgende Klassendefinition ist ein Beispiel für eine abgeleitete Klasse mit Klassen Qualifizierern.
+Die folgende Klassendefinition ist ein Beispiel für eine abgeleitete Klasse mit Klassenqualifizierern.
 
 ``` syntax
 [Dynamic, Provider ("ProviderX")] 
@@ -28,27 +28,27 @@ class MyDerivedClass : MyClass
 };
 ```
 
-Qualifizierer können in Standard Qualifizierer, CIM-Qualifizierer und eindeutige Qualifizierer unterteilt werden:
+Qualifizierer können in Standardqualifizierer, CIM-Qualifizierer und eindeutige Qualifizierer unterteilt werden:
 
--   Standard Qualifizierer
+-   Standardqualifizierer
 
-    Ein Standard Qualifizierer ist ein von WMI definierter Qualifizierer, der häufig in MOF-Code verwendet wird. Beispielsweise sind die Qualifizierer " [**Dynamic**](dynamic-qualifier.md) " und " [**Read**](standard-qualifiers.md) " Standard Qualifizierer. Weitere Informationen finden Sie unter [WMI-Qualifizierer](wmi-qualifiers.md).
+    Ein Standardqualifizierer ist ein von WMI definierter Qualifizierer, der häufig in MOF-Code verwendet wird. Beispielsweise sind die [**Qualifizierer "Dynamisch"**](dynamic-qualifier.md) und [**"Lesen"**](standard-qualifiers.md) standardqualifizierer. Weitere Informationen finden Sie unter [WMI-Qualifizierer.](wmi-qualifiers.md)
 
--   CIM Qualifizierer
+-   CIM-Qualifizierer
 
-    Ein CIM-Qualifizierer ist ein Qualifizierer in der CIM-Spezifikation. Während Sie CIM-Qualifizierer in MOF-Code verwenden, sind die Standard Qualifizierer speziell auf WMI zugeschnitten. Weitere Informationen finden Sie in der DMTF [CIM-Spezifikation](https://www.dmtf.org/spec/cims.html/).
+    Ein CIM-Qualifizierer ist ein in der CIM-Spezifikation enthaltener Qualifizierer. Während CIM-Qualifizierer in MOF-Code verwendet werden, sind die Standardqualifizierer speziell unter Berücksichtigung von WMI konzipiert. Weitere Informationen finden Sie in der DMTF [CIM-Spezifikation.](https://www.dmtf.org/spec/cims.html/)
 
--   Eindeutige Qualifizierer
+-   Eindeutiger Qualifizierer
 
-    Ein eindeutiger Qualifizierer ist ein Qualifizierer, der speziell für eine neue Klasse durch einen Klassen Anbieter definiert ist Der [**Einheiten**](standard-qualifiers.md) Qualifizierer ist beispielsweise ein nicht standardmäßiger Anbieter spezifischer Qualifizierer. Sie können Ihre eigenen Qualifizierer für die Verwendung mit Ihrem Anbieter erstellen. Weitere Informationen zum Erstellen eines Anbieters finden Sie unter [Entwickeln eines WMI-Anbieters](developing-a-wmi-provider.md).
+    Ein eindeutiger Qualifizierer ist ein Qualifizierer, der von einem Klassenanbieter speziell für eine neue Klasse definiert wird. Der Units-Qualifizierer ist beispielsweise ein anbieterspezifischer Qualifizierer, der nicht dem Standard entspricht. [](standard-qualifiers.md) Sie können eigene Qualifizierer für die Verwendung mit Ihrem Anbieter erstellen. Weitere Informationen zum Erstellen eines Anbieters finden Sie unter [Entwickeln eines WMI-Anbieters.](developing-a-wmi-provider.md)
 
-Was Ihr Qualifizierer tut, der Hauptprozess, den Sie ausführen, ist die Verwendung des Qualifizierers in Ihrem MOF-Code. Weitere Informationen finden Sie unter [Anwenden eines Qualifizierers](applying-a-qualifier.md). Sie können einen Qualifizierer mit einer qualifiziererkonfiguration weiter beschreiben. Eine qualifiziererkonfiguration enthält weitere Informationen zur Verwendung eines Qualifizierers durch einen Anbieter. Weitere Informationen finden Sie unter [beschreiben eines Qualifizierers mit einer qualifiziererkonfiguration](describing-a-qualifier-with-a-qualifier-flavor.md).
+Unabhängig von Ihrem Qualifizierer besteht der Hauptprozess darin, den Qualifizierer in Ihrem MOF-Code zu verwenden. Weitere Informationen finden Sie unter [Anwenden eines Qualifizierers.](applying-a-qualifier.md) Sie können einen Qualifizierer mit einer Qualifizierer-Variante weiter beschreiben. Eine Qualifizierer-Variante enthält weitere Informationen dazu, wie ein Anbieter einen Qualifizierer verwenden soll. Weitere Informationen finden Sie unter [Beschreiben eines Qualifizierers mit einer Qualifizierer-Variante.](describing-a-qualifier-with-a-qualifier-flavor.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Entwerfen von Managed Object Format-Klassen (MOF)](designing-managed-object-format--mof--classes.md)
+[Entwerfen von MOF-Klassen (Managed Object Format)](designing-managed-object-format--mof--classes.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt werden die Werte aufgeführt, die für die Funktion Breitband Träger verwendet werden.
+description: In diesem Abschnitt werden die Werte aufgeführt, die für die Breitband-Bearerfunktion verwendet werden.
 ms.assetid: 9e45ca17-2aec-42e5-88a5-5ef1dc4238d9
-title: Breitband Träger Funktion
+title: Breitband-Bearerfunktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 11e94e926b8013a252ee842e6ffeec3d5c9eb35f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f1294724726d766c209c9f83adc5dd2bfc0db2680cf144759b95654748b0d81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118560328"
 ---
-# <a name="broadband-bearer-capability"></a>Breitband Träger Funktion
+# <a name="broadband-bearer-capability"></a>Breitband-Bearerfunktion
 
-In diesem Abschnitt werden die Werte aufgeführt, die für die Funktion Breitband Träger verwendet werden.
+In diesem Abschnitt werden die Werte aufgeführt, die für die Breitband-Bearerfunktion verwendet werden.
 
 ``` syntax
 #include <windows.h>

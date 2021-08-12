@@ -1,7 +1,7 @@
 ---
-description: Enthält modusdeskriptorelemente für das monitorsourcemodes-Array in der wmimonitorlistedsupportedsourcemodes-Klasse.
+description: Enthält Modedeskriptorelemente für das MonitorSourceModes-Array in der WmiMonitorListedSupportedSourceModes-Klasse.
 ms.assetid: 6d6c846d-caec-41a8-8a88-1c1e14bc0473
-title: Videomodedescriptor-Klasse
+title: VideoModeDescriptor-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -39,16 +39,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 06094b24b6b8197eab89b65cd5a9a83f46b39f95
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8f103bf5a23f6e157fc9ecca697c0d1ce7c47bd71be20458d816ca74819dc10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118558405"
 ---
-# <a name="videomodedescriptor-class"></a>Videomodedescriptor-Klasse
+# <a name="videomodedescriptor-class"></a>VideoModeDescriptor-Klasse
 
-Die **videomodedescriptorvideo** -WMI-Klasse enthält modusdeskriptorelemente für das **monitorsourcemodes** -Array in der [**wmimonitorlistedsupportedsourcemodes**](wmimonitorlistedsupportedsourcemodes.md) -Klasse. Zu diesen Elementen gehören Monitor Features wie Aktualisierungsrate, Pixel Merkmale oder die Bildgröße. Die **videomodedescriptorvideo** -Klasse enthält Informationen, die eine übergeordnete Menge der Daten sind, die aus eingerichteten, standardmäßigen und detaillierten Zeit Steuerungs Blöcken verfügbar sind.
+Die WMI-Klasse **VideoModeDescriptorVideo** enthält Modedeskriptorelemente für das **MonitorSourceModes-Array** in der [**WmiMonitorListedSupportedSourceModes-Klasse.**](wmimonitorlistedsupportedsourcemodes.md) Zu diesen Elementen gehören Überwachungsfunktionen wie Aktualisierungsrate, Pixelmerkmale oder Bildgröße. Die **VideoModeDescriptorVideo-Klasse** enthält Informationen, die eine Obermenge der Daten sind, die von festgelegten, Standard- und detaillierten Zeitsteuerungsblöcken verfügbar sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -86,34 +86,34 @@ class VideoModeDescriptor : WmiMonitorSupportedVideoModes
 
 ## <a name="members"></a>Member
 
-Die **videomodedescriptor** -Klasse verfügt über diese Typen von Membern:
+Die **VideoModeDescriptor-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **videomodedescriptor** -Klasse verfügt über diese Eigenschaften.
+Die **VideoModeDescriptor-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Compositepolaritytype**
+**CompositePolarityType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusammengesetzter poltyp. Dies ist eine Polarität von horizontalen Synchronisierungs Impulsen außerhalb der vertikalen Synchronisierung.
+Zusammengesetzter Polaritätstyp. Dies ist die Polarität horizontaler Synchronisierungsim pulses außerhalb der vertikalen Synchronisierung.
 
 
 
 | Wert                                                                              | Bedeutung                                                                    |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Die zusammengesetzte Polarität ist positiv.<br/>                                 |
-| <dl> <dt>1 (0x1)</dt> </dl> | Die zusammengesetzte Polarität ist negativ.<br/>                                 |
-| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signal Synchronisierungstyp muss Digital Composite sein.<br/> |
+| <dl> <dt>0 (0x0)</dt> </dl> | Zusammengesetzte Polarität ist positiv.<br/>                                 |
+| <dl> <dt>1 (0x1)</dt> </dl> | Zusammengesetzte Polarität ist negativ.<br/>                                 |
+| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss digital zusammengesetzt sein.<br/> |
 
 
 
@@ -121,36 +121,36 @@ Zusammengesetzter poltyp. Dies ist eine Polarität von horizontalen Synchronisie
 
 </dd> <dt>
 
-**Horizontalactivepixels**
+**HorizontalActivePixels**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl von horizontal aktiven Pixeln.
+Anzahl der horizontal aktiven Pixel.
 
 </dd> <dt>
 
-**Horizontalblankingpixels**
+**HorizontalBlankingPixels**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der horizontal leere Pixel
+Anzahl horizontal leerender Pixel
 
 </dd> <dt>
 
-**Horizontalborder**
+**HorizontalBorder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -160,10 +160,10 @@ Horizontaler Rahmen.
 
 </dd> <dt>
 
-**Horizontalimagesize**
+**HorizontalImageSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -173,16 +173,16 @@ Horizontale Bildgröße in Millimeter (mm).
 
 </dd> <dt>
 
-**Horizontalpolaritytype**
+**HorizontalPolarityType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Horizontaler poltyp.
+Horizontaler Polaritätstyp.
 
 
 
@@ -190,7 +190,7 @@ Horizontaler poltyp.
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <dl> <dt>0 (0x0)</dt> </dl> | Die horizontale Polarität ist positiv.<br/>                               |
 | <dl> <dt>1 (0x1)</dt> </dl> | Die horizontale Polarität ist negativ.<br/>                               |
-| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signal Synchronisierungstyp muss Digital getrennt sein.<br/> |
+| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss digital getrennt sein.<br/> |
 
 
 
@@ -198,89 +198,89 @@ Horizontaler poltyp.
 
 </dd> <dt>
 
-**Horizontalfreshshratenenner**
+**HorizontalRefreshRateDenominator**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Nenner der horizontalen Aktualisierungsrate.
+Nenner der horizontalen Aktualisierungsrate.
 
 </dd> <dt>
 
-**Horizontalfreshshratenumschlag**
+**HorizontalRefreshRateNumerator**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Horizontaler Aktualisierungs Raten Zähler in Hertz (Hz).
+Zähler für horizontale Aktualisierungsrate in Hertz (Hz).
 
 </dd> <dt>
 
-**Horizontalsyncoffset**
+**HorizontalSyncOffset**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Horizontaler Synchronisierungs Offset.
+Horizontaler Synchronisierungsoffset.
 
 </dd> <dt>
 
-**Horizontalsyncpull Width**
+**HorizontalSyncSynchronisierungWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Breite der horizontalen Synchronisierungs Pulse.
+Breite des horizontalen Synchronisierungsimimens.
 
 </dd> <dt>
 
-**Isinterschnür**
+**IsInterlaced**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Anzeigemodus mit Zeilen Sprung verbunden ist.
+Gibt an, ob der Anzeigemodus übersprungen wird.
 
 </dd> <dt>
 
-**Isserrationrequired**
+**IsSerrationRequired**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt ggf. an, welche Art von Server erforderlich ist.
+Gibt ggf. an, welcher Typ von Serration erforderlich ist.
 
 
 
 | Wert                                                                              | Bedeutung                                                                                                  |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Der Controller muss während der vertikalen Synchronisierung eine horizontale Synchronisierung angeben.<br/>                                 |
+| <dl> <dt>0 (0x0)</dt> </dl> | Der Controller muss während der vertikalen Synchronisierung eine horizontale Synchronisierung bereitstellen.<br/>                                 |
 | <dl> <dt>1 (0x1)</dt> </dl> | Der Controller darf während der vertikalen Synchronisierung keine horizontale Synchronisierung bereitstellen.<br/>                             |
-| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signal Synchronisierungstyp muss ein Bipolar, ein Analog zusammengesetzter oder ein digitaler Verbund sein.<br/> |
+| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss "1", "Analog Composite" oder "Digital Composite" sein.<br/> |
 
 
 
@@ -288,24 +288,24 @@ Gibt ggf. an, welche Art von Server erforderlich ist.
 
 </dd> <dt>
 
-**Issynconfiguration**
+**IsSyncOnRGB**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt ggf. an, welche Videosignal Linien synchronisiert werden sollen.
+Gibt ggf. an, welche Videosignallinien synchronisiert werden sollen.
 
 
 
 | Wert                                                                              | Bedeutung                                                                           |
 |------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Der Synchronisierungs Impuls sollte in allen drei Videosignal Zeilen angezeigt werden.<br/>                  |
-| <dl> <dt>1 (0x1)</dt> </dl> | Der Synchronisierungs Impuls sollte nur in der grünen Videosignal Linie angezeigt werden.<br/>          |
-| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signal Synchronisierungstyp muss eine bipolare, zusammengesetzte Zeichen<br/> |
+| <dl> <dt>0 (0x0)</dt> </dl> | Der Synchronisierungsim pulse sollte auf allen drei Videosignallinien angezeigt werden.<br/>                  |
+| <dl> <dt>1 (0x1)</dt> </dl> | Der Synchronisierungsim pulse sollte nur auf der grünen Videosignallinie angezeigt werden.<br/>          |
+| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss analog zusammengesetzt sein.<br/> |
 
 
 
@@ -313,41 +313,41 @@ Gibt ggf. an, welche Videosignal Linien synchronisiert werden sollen.
 
 </dd> <dt>
 
-**Pixelclockrate**
+**PixelClockRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Pixel Taktfrequenz in Hertz (Hz).
+Pixeltaktfrequenz in Hertz (Hz).
 
 </dd> <dt>
 
-**Stereomodetype**
+**StereoModeType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Typ des Stereo-Modus. In der folgenden Tabelle sind die möglichen Werte aufgeführt.
+Stereomodustyp. In der folgenden Tabelle sind die möglichen Werte aufgeführt.
 
 
 
 | Wert                                                                              | Bedeutung                                                             |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Keine Stereo-.<br/>                                               |
-| <dl> <dt>1 (0x1)</dt> </dl> | Feld sequenzielles Stereo mit dem richtigen Bild bei der Stereo Synchronisierung.<br/> |
-| <dl> <dt>2 (0x2)</dt> </dl> | Feld sequenzielles Stereo mit Links Bild bei der Stereo-Synchronisierung.<br/>  |
-| <dl> <dt>3 (0x3)</dt> </dl> | bidirektionale verschachtelte Stereo-Stereo-Datei mit dem rechten Bild in geraden Linien.<br/> |
-| <dl> <dt>4 (0x4)</dt> </dl> | bidirektionale verschachtelte Stereo-Stereo-Datei mit dem linken Bild in geraden Linien.<br/>  |
-| <dl> <dt>5 (0x5)</dt> </dl> | vier Wege verschachtelte Stereo<br/>                                |
-| <dl> <dt>6 (0x6)</dt> </dl> | Paralleles Interleaved Stereo.<br/>                         |
+| <dl> <dt>0 (0x0)</dt> </dl> | Keine Stereo-<br/>                                               |
+| <dl> <dt>1 (0x1)</dt> </dl> | Sequenzielles Stereofeld mit rechtem Bild bei Stereosynchronisierung.<br/> |
+| <dl> <dt>2 (0x2)</dt> </dl> | Sequenzielles Stereofeld mit linker Abbildung bei Stereosynchronisierung.<br/>  |
+| <dl> <dt>3 (0x3)</dt> </dl> | 2-Wege-Überlappung von Stereo mit rechtem Bild auf geraden Linien.<br/> |
+| <dl> <dt>4 (0x4)</dt> </dl> | 2-Wege-Überlappung von Stereo mit linker Abbildung bei gleichmäßigen Linien.<br/>  |
+| <dl> <dt>5 (0x5)</dt> </dl> | 4-Wege-Interleaved Stereo.<br/>                                |
+| <dl> <dt>6 (0x6)</dt> </dl> | Side-by-Side Interleaved Stereo.)<br/>                         |
 
 
 
@@ -355,25 +355,25 @@ Typ des Stereo-Modus. In der folgenden Tabelle sind die möglichen Werte aufgef�
 
 </dd> <dt>
 
-**Syncsignaltype**
+**SyncSignalType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Signal Synchronisierungstyp. In der folgenden Tabelle sind die möglichen Werte aufgeführt.
+Signalsynchronisierungstyp. In der folgenden Tabelle sind die möglichen Werte aufgeführt.
 
 
 
 | Wert                                                                              | Bedeutung                             |
 |------------------------------------------------------------------------------------|-------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Analog zusammengesetzter<br/>         |
+| <dl> <dt>0 (0x0)</dt> </dl> | Analog Composite<br/>         |
 | <dl> <dt>1 (0x1)</dt> </dl> | Bipolar Analog Composite<br/> |
-| <dl> <dt>2 (0x2)</dt> </dl> | Digitaler Verbund<br/>        |
-| <dl> <dt>3 (0x3)</dt> </dl> | Digitaler separater<br/>         |
+| <dl> <dt>2 (0x2)</dt> </dl> | Digital Composite<br/>        |
+| <dl> <dt>3 (0x3)</dt> </dl> | Digital Separate<br/>         |
 
 
 
@@ -381,36 +381,36 @@ Signal Synchronisierungstyp. In der folgenden Tabelle sind die möglichen Werte 
 
 </dd> <dt>
 
-**Verticalactivepixels**
+**VerticalActivePixels**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl von vertikal aktiven Pixeln.
+Anzahl vertikal aktiver Pixel.
 
 </dd> <dt>
 
-**Verticalblankingpixels**
+**VerticalBlankingPixels**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl von vertikal Leerlauf enden Pixeln.
+Anzahl vertikal leerer Pixel.
 
 </dd> <dt>
 
-**Verticalborder**
+**VerticalBorder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -420,10 +420,10 @@ Vertikaler Rahmen.
 
 </dd> <dt>
 
-**Vertikalimagesize**
+**VerticalImageSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -433,24 +433,24 @@ Vertikale Bildgröße in Millimeter (mm).
 
 </dd> <dt>
 
-**Verticalpolaritytype**
+**VerticalPolarityType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vertikaler poltyp.
+Vertikaler Polaritätstyp.
 
 
 
 | Wert                                                                              | Bedeutung                                                                   |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <dl> <dt>0 (0x0)</dt> </dl> | Die vertikale Polarität ist positiv.<br/>                                 |
-| <dl> <dt>1 (0x1)</dt> </dl> | Vertikale Polarität ist negativ.<br/>                                  |
-| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signal Synchronisierungstyp muss Digital getrennt sein.<br/> |
+| <dl> <dt>1 (0x1)</dt> </dl> | Vertikale Polarität ist negativ<br/>                                  |
+| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss digital getrennt sein.<br/> |
 
 
 
@@ -458,95 +458,95 @@ Vertikaler poltyp.
 
 </dd> <dt>
 
-**Verticalfreshshratenenner**
+**VerticalRefreshRateDenominator**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vertikaler Aktualisierungs Raten Nenner.
+Nenner der vertikalen Aktualisierungsrate.
 
 </dd> <dt>
 
-**Verticalcalfreshatenumschlag**
+**VerticalRefreshRateNumerator**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vertikaler Aktualisierungs Raten Zähler in Hertz (Hz).
+Zähler für vertikale Aktualisierungsrate in Hertz (Hz).
 
 </dd> <dt>
 
-**Verticalsyncoffset**
+**VerticalSyncOffset**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vertikaler Synchronisierungs Offset.
+Vertikaler Synchronisierungsoffset.
 
 </dd> <dt>
 
-**Verticalsyncpulcalwidth**
+**VerticalSyncSyncSynceWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Breite der vertikalen Synchronisierungs Pulse.
+Vertikale Synchronisierungs-Pulsbreite.
 
 </dd> <dt>
 
-Videostandardtype
+VideoStandardType
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Video-Standardtyp.
+Videostandardtyp.
 
 
 
 | Wert                                                                                | Bedeutung                                                                                                        |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl>   | Sonstiges<br/>                                                                                               |
-| <dl> <dt>1 (0x1)</dt> </dl>   | VESA-DMT. Von der Grafik zur Anzeige des Monitor Zeit Monitors für die Video-Electronics Standard Association (VESA).<br/> |
-| <dl> <dt>2 (0x2)</dt> </dl>   | VESA-GTF. Von VESA verallgemeinerter Zeit Formel Standard.<br/>                                            |
-| <dl> <dt>3 (0x3)</dt> </dl>   | VESA CVT/von VESA koordinierte Video Zeitstandard.<br/>                                             |
+| <dl> <dt>0 (0x0)</dt> </dl>   | Andere<br/>                                                                                               |
+| <dl> <dt>1 (0x1)</dt> </dl>   | VESA DMT. Aus der Spezifikation der Video Electronics Standard Association (VESA) Display Monitor Timings.<br/> |
+| <dl> <dt>2 (0x2)</dt> </dl>   | VESA GTF. Aus VESA Generalized Timing Formula Standard.<br/>                                            |
+| <dl> <dt>3 (0x3)</dt> </dl>   | VESA CVT/Von VESA Coordinated Video Timings Standard.<br/>                                             |
 | <dl> <dt>4 (0x4)</dt> </dl>   | IBM<br/>                                                                                                 |
-| <dl> <dt>5 (0x5)</dt> </dl>   | Apples<br/>                                                                                               |
+| <dl> <dt>5 (0x5)</dt> </dl>   | Apple<br/>                                                                                               |
 | <dl> <dt>6 (0x6)</dt> </dl>   | NTSC M<br/>                                                                                              |
 | <dl> <dt>7 (0x7)</dt> </dl>   | NTSC J<br/>                                                                                              |
 | <dl> <dt>8 (0x8)</dt> </dl>   | NTSC 433<br/>                                                                                            |
 | <dl> <dt>9 (0x9)</dt> </dl>   | PAL B<br/>                                                                                               |
-| <dl> <dt>10 (0xa)</dt> </dl>  | PAL B1<br/>                                                                                              |
+| <dl> <dt>10 (0xA)</dt> </dl>  | PAL B1<br/>                                                                                              |
 | <dl> <dt>11 (0xB)</dt> </dl>  | PAL G<br/>                                                                                               |
-| <dl> <dt>12 (0xc)</dt> </dl>  | PAL H<br/>                                                                                               |
+| <dl> <dt>12 (0xC)</dt> </dl>  | PAL H<br/>                                                                                               |
 | <dl> <dt>13 (0xD)</dt> </dl>  | PAL I<br/>                                                                                               |
-| <dl> <dt>14 (0xe)</dt> </dl>  | PAL-ID<br/>                                                                                               |
+| <dl> <dt>14 (0xE)</dt> </dl>  | PAL D<br/>                                                                                               |
 | <dl> <dt>15 (0xF)</dt> </dl>  | PAL N<br/>                                                                                               |
-| <dl> <dt>16 (0x10)</dt> </dl> | PAL-NC<br/>                                                                                              |
+| <dl> <dt>16 (0x10)</dt> </dl> | PAL NC<br/>                                                                                              |
 | <dl> <dt>17 (0x11)</dt> </dl> | SECAM B<br/>                                                                                             |
 | <dl> <dt>18 (0x12)</dt> </dl> | SECAM D<br/>                                                                                             |
 | <dl> <dt>19 (0x13)</dt> </dl> | SECAM G<br/>                                                                                             |
 | <dl> <dt>20 (0x14)</dt> </dl> | SECAM H<br/>                                                                                             |
-| <dl> <dt>21 (0x15)</dt> </dl> | SECAM-K<br/>                                                                                             |
+| <dl> <dt>21 (0x15)</dt> </dl> | SECAM K<br/>                                                                                             |
 | <dl> <dt>22 (0x16)</dt> </dl> | SECAM K1<br/>                                                                                            |
 | <dl> <dt>23 (0x17)</dt> </dl> | SECAM L<br/>                                                                                             |
 | <dl> <dt>24 (0x18)</dt> </dl> | SECAM L1<br/>                                                                                            |
@@ -568,13 +568,13 @@ Video-Standardtyp.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

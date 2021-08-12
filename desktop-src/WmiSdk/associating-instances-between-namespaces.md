@@ -1,40 +1,40 @@
 ---
-description: Eine Zuordnungs Ansichts Klasse ermöglicht es Ihnen, assoziatoren von Abfragen für Klassen zu verwenden, die sich in verschiedenen Namespaces befinden.
+description: Mit einer Zuordnungsansichtsklasse können Sie ASSOCIATORS OF-Abfragen für Klassen verwenden, die sich in verschiedenen Namespaces befinden.
 ms.assetid: 4af4fe1b-2b19-472e-8261-798b374ae57e
 ms.tgt_platform: multiple
 title: Zuordnen von Instanzen zwischen Namespaces
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8347d3a35f06f72d3344f5c12606d82709a1370
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d743b835d28af4fe0a8dd5d09858b2ba6ff0abacd0f35219c3dd90d39d0810d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118557018"
 ---
 # <a name="associating-instances-between-namespaces"></a>Zuordnen von Instanzen zwischen Namespaces
 
-Eine Zuordnungs Ansichts Klasse ermöglicht es Ihnen, [assoziatoren von](associators-of-statement.md) Abfragen für Klassen zu verwenden, die sich in verschiedenen Namespaces befinden.
+Mit einer Zuordnungsansichtsklasse können Sie [ASSOCIATORS OF-Abfragen](associators-of-statement.md) für Klassen verwenden, die sich in verschiedenen Namespaces befinden.
 
 Im folgenden Verfahren wird beschrieben, wie Instanzen zwischen Namespaces zugeordnet werden.
 
 **So ordnen Sie Instanzen zwischen Namespaces zu**
 
-1.  Beginnen Sie die Klassendefinition mit dem Qualifizierer der [**Assoziations**](meta-qualifiers.md) Zeichenfolge
+1.  Beginnen Sie ihre [](meta-qualifiers.md) Klassendefinition mit dem Zuordnungszeichenfolgen-Qualifizierer.
 
-    Die Qualifizierer **joinon**, [**Association**](meta-qualifiers.md)und **Union** schließen sich gegenseitig aus.
+    Die **JoinOn-,** [**Association-**](meta-qualifiers.md)und Union-Qualifizierer schließen sich gegenseitig aus. 
 
-2.  Erstellen Sie die Abfragen, die die in der Ansichts Klasse verwendeten Quell Instanzen mit dem [**viewsources**](viewsources-qualifier.md) -Qualifizierer definieren.
-3.  Definieren Sie die Namen und den Speicherort der Namespaces, in denen sich die Quell Instanzen mit dem [**viewspaces**](viewspaces-qualifier.md) -Qualifizierer befinden.
-4.  Definieren Sie die gewünschten Eigenschaften in der Zuordnungs Ansichts Klasse mit dem [**propertysources**](propertysources-qualifier.md) -Qualifizierer.
+2.  Erstellen Sie mit dem ViewSources-Qualifizierer die Abfragen, die Quellinstanzen definieren, die in der [**Ansichtsklasse**](viewsources-qualifier.md) verwendet werden.
+3.  Definieren Sie die Namen und den Speicherort der Namespaces, in denen sich die Quellinstanzen befinden, mit dem [**ViewSpaces-Qualifizierer.**](viewspaces-qualifier.md)
+4.  Definieren Sie die gewünschten Eigenschaften in der [**Zuordnungsansichtsklasse**](propertysources-qualifier.md) mit dem PropertySources-Qualifizierer.
 
-    Bei Bedarf können Sie jede der Eigenschaften mit dem [**hiddendefault-Qualifizierer**](qualifiers-specific-to-the-view-provider.md) als zu einer Quell Klasse gehörend markieren.
+    Bei Bedarf können Sie jede der Eigenschaften mithilfe des [**HiddenDefault-Qualifizierers**](qualifiers-specific-to-the-view-provider.md) als zu einer Quellklasse gehörend markieren.
 
-5.  Markieren Sie alle relevanten Eigenschaften mit dem **direkten** Qualifizierer.
+5.  Markieren Sie alle  relevanten Eigenschaften mit dem Direct-Qualifizierer.
 
-    Der **direkte** Qualifizierer verhindert, dass der Ansichts Anbieter den markierten Zuordnungs Verweis einem Sicht Verweis zuordnet.
+    Der **Direktqualifizierer** verhindert, dass der Ansichtsanbieter den markierten Zuordnungsverweis einem Ansichtsverweis zuzuordnen kann.
 
-In den folgenden Codebeispielen wird gezeigt, wie Zuordnungs Ansichts Klassen erstellt werden.
+Die folgenden Codebeispiele zeigen, wie Zuordnungsansichtsklassen erstellt werden.
 
 ``` syntax
 [union,

@@ -1,7 +1,7 @@
 ---
-description: Gibt den Punkt Rep-Puffer des Netzes an.
+description: Abrufen des Punkt-Rep-Puffers des Gitternetzes.
 ms.assetid: 4be7bee5-15ea-496f-83c2-a3a9bafd97c6
-title: 'ID3DX10Mesh:: getpointrepbuffer-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetPointRepBuffer-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 131094792f35b21fd230b66bda6a43fb104b65ee
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4e3c23f4ac4e77d97d290075ba6970062af9ea3a44c608d02e98c05e8f248b07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540236"
 ---
-# <a name="id3dx10meshgetpointrepbuffer-method"></a>ID3DX10Mesh:: getpointrepbuffer-Methode
+# <a name="id3dx10meshgetpointrepbuffer-method"></a>ID3DX10Mesh::GetPointRepBuffer-Methode
 
-Gibt den Punkt Rep-Puffer des Netzes an.
+Abrufen des Punkt-Rep-Puffers des Gitternetzes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetPointRepBuffer(
 
 <dl> <dt>
 
-*pppointreps* \[ vorgenommen\]
+*ppPointReps* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10MeshBuffer**](id3dx10meshbuffer.md)\*\***
 
-Ein Zeiger auf einen Gitter Puffer, der die Punkt-Rep-Daten des Netzes enthält. Siehe [**ID3DX10MeshBuffer**](id3dx10meshbuffer.md).
+Zeiger auf einen Gitternetzpuffer, der die Punktdaten des Gitters enthält. Siehe [**ID3DX10MeshBuffer**](id3dx10meshbuffer.md).
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Ein Zeiger auf einen Gitter Puffer, der die Punkt-Rep-Daten des Netzes enthält.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

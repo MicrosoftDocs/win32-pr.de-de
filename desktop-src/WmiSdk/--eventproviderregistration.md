@@ -1,5 +1,5 @@
 ---
-description: Wird zum Registrieren von Ereignis Anbietern bei Windows-Verwaltungsinstrumentation (WMI) verwendet.
+description: Wird verwendet, um Ereignisanbieter bei der Windows Management Instrumentation (WMI) zu registrieren.
 ms.assetid: d87f61a8-5549-4f33-ba67-31b5d72b5282
 ms.tgt_platform: multiple
 title: __EventProviderRegistration-Klasse
@@ -16,18 +16,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: caaad1b4ab03cfc1b43e4239b9144d3ceeade82f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce973f05aec0a1c859598c558ef8c2cc637a8faec22fd1d7f2ad2aaf383bd201
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118557944"
 ---
-# <a name="__eventproviderregistration-class"></a>\_\_Eventproviderregistration-Klasse
+# <a name="__eventproviderregistration-class"></a>\_\_EventProviderRegistration-Klasse
 
-Die **\_ \_ eventproviderregistration** -System Klasse wird zum Registrieren von Ereignis Anbietern bei Windows-Verwaltungsinstrumentation (WMI) verwendet.
+Die **\_ \_ EventProviderRegistration-Systemklasse** wird verwendet, um Ereignisanbieter bei der Windows Management Instrumentation (WMI) zu registrieren.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ class __EventProviderRegistration : __ProviderRegistration
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ eventproviderregistration** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ EventProviderRegistration-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ eventproviderregistration** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ EventProviderRegistration-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **EventQueryList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Eine oder mehrere WQL-Abfragen (Windows-Verwaltungsinstrumentation Query Language), die die Ereignisse beschreiben, die vom Ereignis Anbieter unterstützt werden.
+Mindestens eine Windows WQL-Abfragen (Management Instrumentation Query Language), die die vom Ereignisanbieter unterstützten Ereignisse beschreiben.
 
 </dd> <dt>
 
-**ab**
+**Anbieter**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **\_ \_ Anbieter**
@@ -73,13 +73,13 @@ Datentyp: **\_ \_ Anbieter**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Objekt Pfad zum Ereignis Anbieter. Diese Eigenschaft wird von [**\_ \_ providerregistration**](--providerregistration.md)geerbt.
+Objektpfad zum Ereignisanbieter. Diese Eigenschaft wird von [**\_ \_ ProviderRegistration geerbt.**](--providerregistration.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur Administratoren können einen Ereignis Anbieter registrieren oder löschen, indem Sie eine Instanz von [**\_ \_ Win32Provider**](--win32provider.md) und [**\_ \_ eventproviderregistration**](--eventconsumerproviderregistration.md)erstellen. Die **\_ \_ eventproviderregistration** -Klasse wird von [**\_ \_ providerregistration**](--providerregistration.md)abgeleitet.
+Nur Administratoren können einen Ereignisanbieter registrieren oder löschen, indem sie eine Instanz von [**\_ \_ Win32Provider**](--win32provider.md) und [**\_ \_ EventProviderRegistration erstellen.**](--eventconsumerproviderregistration.md) Die **\_ \_ EventProviderRegistration-Klasse** wird von [**\_ \_ ProviderRegistration abgeleitet.**](--providerregistration.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,20 +93,20 @@ Nur Administratoren können einen Ereignis Anbieter registrieren oder löschen, 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**\_\_Providerregistration**](/windows/desktop/WmiSdk/--providerregistration)
+[**\_\_ProviderRegistration**](/windows/desktop/WmiSdk/--providerregistration)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[Registrieren eines Ereignis Anbieters](registering-an-event-provider.md)
+[Registrieren eines Ereignisanbieters](registering-an-event-provider.md)
 </dt> <dt>
 
-[Schreiben eines Ereignis Anbieters](writing-an-event-provider.md)
+[Schreiben eines Ereignisanbieters](writing-an-event-provider.md)
 </dt> </dl>
 
  

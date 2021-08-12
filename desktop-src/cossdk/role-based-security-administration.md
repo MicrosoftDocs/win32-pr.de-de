@@ -1,42 +1,42 @@
 ---
-description: Role-Based Sicherheitsverwaltung
+description: Role-Based-Sicherheitsverwaltung
 ms.assetid: 7247758e-f486-4ce2-afca-f0d10fffe626
-title: Role-Based Sicherheitsverwaltung
+title: Role-Based-Sicherheitsverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 714cede74e105a68b0a5fed2371858054add954e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c72ed2f1fdd5eb0b650b991b776364bf982c774b3ffcaff1358ea2c3ed1ee4d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118547072"
 ---
-# <a name="role-based-security-administration"></a>Role-Based Sicherheitsverwaltung
+# <a name="role-based-security-administration"></a>Role-Based-Sicherheitsverwaltung
 
-Die rollenbasierte Sicherheit ist ein von com+ bereitgestellter automatischer Dienst, mit dem Sie eine Zugriffs Steuerungs Richtlinie für Ihre COM+-Anwendung administrativ erstellen und erzwingen können. Mit einem flexiblen und erweiterbaren Sicherheits Konfigurations Modell bietet die rollenbasierte Sicherheit einen erheblichen Vorteil gegenüber der Durchsetzung der gesamten Sicherheit in ihren Komponenten und bietet die folgenden Vorteile:
+Rollenbasierte Sicherheit ist ein von COM+ bereitgestellter automatischer Dienst, mit dem Sie eine Zugriffssteuerungsrichtlinie für Ihre COM+-Anwendung administrativ erstellen und erzwingen können. Mit einem flexiblen und erweiterbaren Sicherheitskonfigurationsmodell bietet die rollenbasierte Sicherheit einen erheblichen Vorteil gegenüber der Erzwingung der gesamten Sicherheit innerhalb Ihrer Komponenten und bietet die folgenden Vorteile:
 
--   Sie können die Sicherheit administrativ konfigurieren, indem Sie entweder das Verwaltungs Programmkomponenten Dienste oder die Verwaltungsfunktionen verwenden.
--   Sie müssen keine sicherheitsbezogene Logik in Ihre Komponenten schreiben, wenn der Rollen Schutz auf Methoden Ebene Ihnen ausreichend Zugriffs Steuerung bereitstellt.
--   Sie müssen die Sicherheit nicht in eine Schnittstelle oder einen Komponenten Entwurf einbeziehen. Stattdessen können Sie die Sicherheit auf Methoden Basis festlegen.
--   Sie können sich auf die Struktur der Sicherheitsrichtlinie konzentrieren, die Sie erzwingen möchten, und überrollen kann diese Richtlinie den Administratoren, die Ihre Anwendung bereitstellen, eindeutig ausgedrückt werden.
--   Sie können eine Sicherheitsrichtlinie auf einfache Weise ändern, um sich an sich entwickelnde Sicherheitsanforderungen für eine Anwendung anzupassen.
--   Sie können bei Bedarf differenziertere Sicherheitsrichtlinien erstellen, wenn Sie die rollenbasierte Sicherheit als unterstützende Plattform verwenden möchten.
--   Sie können die rollenbasierte Sicherheit für eine ausführliche Überwachung nutzen, da Sie Aufrufer-Sicherheitsinformationen für eine ganze Kette von upstreamaufrufen abrufen können.
+-   Sie können die Sicherheit mithilfe des Verwaltungstools Komponentendienste oder mithilfe der Verwaltungsfunktionen administrativer Art konfigurieren.
+-   Sie müssen keine sicherheitsbezogene Logik in Ihre Komponenten schreiben, wenn der Rollenschutz auf Methodenebene ausreichend Zugriffssteuerung bietet.
+-   Sie müssen die Sicherheit nicht in den Schnittstellen- oder Komponentenentwurf integrieren. Stattdessen können Sie die Sicherheit methodenweise festlegen.
+-   Sie können sich auf die Struktur der Zu erzwingenden Sicherheitsrichtlinie konzentrieren, und über Rollen kann diese Richtlinie den Administratoren klar ausgedrückt werden, die Ihre Anwendung bereitstellen.
+-   Sie können eine Sicherheitsrichtlinie problemlos ändern, um sie an sich ändernde Sicherheitsanforderungen für eine Anwendung anzupassen.
+-   Sie können bei Bedarf präzisere Sicherheitsrichtlinien programmgesteuert erstellen, indem Sie die rollenbasierte Sicherheit als unterstützende Plattform verwenden.
+-   Sie können die rollenbasierte Sicherheit nutzen, um eine detaillierte Überwachung zu durchführen, da Sie Sicherheitsinformationen des Aufrufers für eine gesamte Kette von Upstreamaufrufen abrufen können.
 
 > [!Note]  
-> Benutzer in der Administrator Rolle für die System Anwendung müssen Mitglieder der lokalen Administratoren Gruppe sein. Ab Windows Server 2003 enthält die Authentifizierungsfunktion für die com+-System Anwendung auch den Wert eoac- \_ deaktivierte \_ AAA. Dieser Wert, der Aktivierungen von Aktivierungen durch aktivierte Aktivierungen deaktiviert, wird beim Starten der System Anwendung im [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) -Befehl verwendet. Wenn Sie die Authentifizierungsfunktion auf eoac \_ deaktivieren, \_ kann eine Anwendung, die unter einem privilegierten Konto (z. b. LocalSystem) ausgeführt wird, verhindern, dass Ihre Identität verwendet wird, um nicht vertrauenswürdige Komponenten zu starten.
+> Benutzer mit der Administratorrolle für die Systemanwendung müssen Mitglieder der lokalen Administratorgruppe sein. Ab Windows Server 2003 enthält die Authentifizierungsfunktion für die COM+-Systemanwendung außerdem den Wert EOAC \_ DISABLE \_ AAA. Dieser Wert, der AKTIVIERUNGSAKTIVATOR-Aktivierungen (AAA) deaktiviert, wird beim Starten der Systemanwendung im [**CoInitializeSecurity-Aufruf**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) verwendet. Wenn Sie die Authentifizierungsfunktion auf EOAC \_ DISABLE \_ AAA festlegen, kann eine Anwendung, die unter einem privilegierten Konto (z. B. LocalSystem) ausgeführt wird, verhindern, dass ihre Identität zum Starten nicht vertrauenswürdiger Komponenten verwendet wird.
 
  
 
-In den folgenden Themen dieses Abschnitts finden Sie Informationen zur Funktionsweise der rollenbasierten Sicherheit und zu berücksichtigende Aspekte bei der Verwendung, um eine Sicherheitsrichtlinie für eine Anwendung zu erstellen:
+In den folgenden Themen dieses Abschnitts finden Sie Informationen zur Funktionsweise der rollenbasierten Sicherheit und zu berücksichtigende Probleme beim Erstellen einer Sicherheitsrichtlinie für eine Anwendung:
 
--   [Verwenden von Rollen für die Client Autorisierung](using-roles-for-client-authorization.md)
+-   [Verwenden von Rollen für die Clientautorisierung](using-roles-for-client-authorization.md)
 -   [Effektives Entwerfen von Rollen](designing-roles-effectively.md)
 -   [Sicherheitsgrenzen](security-boundaries.md)
--   [Informationen zum Sicherheits Aufrufkontext](security-call-context-information.md)
--   [Sicherheitskontext Eigenschaft](security-context-property.md)
+-   [Kontextinformationen für Sicherheitsaufrufe](security-call-context-information.md)
+-   [Sicherheitskontexteigenschaft](security-context-property.md)
 
-Ausführliche Beschreibungen der Schritte, die zum Konfigurieren der rollenbasierten Sicherheit für eine Anwendung erforderlich sind, finden Sie unter [Konfigurieren von Role-Based Sicherheit](configuring-role-based-security.md).
+Ausführliche Anleitungen zu den Schritten zum Konfigurieren der rollenbasierten Sicherheit für eine Anwendung finden Sie unter [Konfigurieren von Role-Based Security](configuring-role-based-security.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -45,19 +45,19 @@ Ausführliche Beschreibungen der Schritte, die zum Konfigurieren der rollenbasie
 [Clientauthentifizierung](client-authentication.md)
 </dt> <dt>
 
-[Client Identitätswechsel und Delegierung](client-impersonation-and-delegation.md)
+[Clientidentitätswechsel und -delegierung](client-impersonation-and-delegation.md)
 </dt> <dt>
 
-[Sicherheit der Bibliothek Anwendungen](library-application-security.md)
+[Bibliotheksanwendungssicherheit](library-application-security.md)
 </dt> <dt>
 
-[Multi-Tier-Anwendungssicherheit](multi-tier-application-security.md)
+[Anwendungssicherheit mit mehreren Ebenen](multi-tier-application-security.md)
 </dt> <dt>
 
-[Sicherheit für programmgesteuerte Komponenten](programmatic-component-security.md)
+[Programmgesteuerte Komponentensicherheit](programmatic-component-security.md)
 </dt> <dt>
 
-[Verwenden der Richtlinie für Software Einschränkung in com+](using-the-software-restriction-policy-in-com-.md)
+[Verwenden der Softwareeinschränkungsrichtlinie in COM+](using-the-software-restriction-policy-in-com-.md)
 </dt> </dl>
 
  

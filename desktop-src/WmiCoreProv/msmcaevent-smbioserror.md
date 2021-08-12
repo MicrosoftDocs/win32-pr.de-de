@@ -1,5 +1,5 @@
 ---
-description: Gibt einen MCA-System-BIOS-Fehler (Machine Check Architecture) an. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+description: Gibt einen SYSTEM-BIOS-Fehler (Machine Check Architecture, MCA) an. Diese Klasse ist nur in 64-Bit-Systemen Windows verfügbar.
 ms.assetid: b451ca45-6208-4445-b9f1-b4e3174837a4
 title: MSMCAEvent_SMBIOSError-Klasse
 ms.topic: reference
@@ -25,18 +25,18 @@ api_type:
 - DllExport
 api_location:
 - Wmiprov.dll
-ms.openlocfilehash: 709d480e8865c5d5bde2a9f5e8de45f138e66548
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fccb38a73585db71c6418929a35458f26b9749159e537de47a298d920b318e08
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118558395"
 ---
-# <a name="msmcaevent_smbioserror-class"></a>Msmcaevent \_ smbioserror-Klasse
+# <a name="msmcaevent_smbioserror-class"></a>MSMCAEvent \_ SMBIOSError-Klasse
 
-Die **msmcaevent \_ smbioserror** -Klasse gibt einen MCA-System-BIOS-Fehler (Machine Check Architecture) an. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+Die **MSMCAEvent \_ SMBIOSError-Klasse** weist auf einen BIOS-Systemfehler der Computerprüfungsarchitektur (Machine Check Architecture, MCA) hin. Diese Klasse ist nur in 64-Bit-Systemen Windows verfügbar.
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,33 +60,33 @@ class MSMCAEvent_SMBIOSError : WMIEvent
 
 ## <a name="members"></a>Member
 
-Die **msmcaevent \_ smbioserror** -Klasse verfügt über diese Typen von Membern:
+Die **MSMCAEvent \_ SMBIOSError-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **msmcaevent \_ smbioserror** -Klasse verfügt über diese Eigenschaften.
+Die **MSMCAEvent \_ SMBIOSError-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True**, wenn diese Instanz der-Klasse aktiv ist. andernfalls **false**.
+**TRUE**, wenn diese Instanz der -Klasse aktiv ist; andernfalls **FALSE**.
 
 </dd> <dt>
 
-**Additionalerrors**
+**AdditionalErrors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -96,37 +96,37 @@ Anzahl zusätzlicher Fehler im Datensatz.
 
 </dd> <dt>
 
-**CPU**
+**Cpu**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, dem dem ersten Prozessor die Zahl 0 zugewiesen ist, dem zweiten Prozessor die Zahl 1 zugewiesen wird usw.
+CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, in dem dem ersten Prozessor die Zahl 0, dem zweiten Prozessor die Zahl 1 zugewiesen wird, und so weiter.
 
 </dd> <dt>
 
-**Errorschwere Grad**
+**ErrorSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Schweregrad des gemeldeten Fehlers.
+Schweregrad des gemeldeten Fehlers.
 
 
 
 | Wert                                                                                                | Bedeutung                |
 |------------------------------------------------------------------------------------------------------|------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Wiederherstellbar<br/> |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | FAT<br/>       |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | KORRIGIER barer<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Schwerwiegend<br/>       |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Korrigierbar<br/> |
 
 
 
@@ -137,7 +137,7 @@ Der Schweregrad des gemeldeten Fehlers.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -146,68 +146,68 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Eindeutiger Bezeichner dieser Instanz der Klasse.
+Eindeutiger Bezeichner dieser Instanz der -Klasse.
 
 </dd> <dt>
 
-**Logtoeventlog**
+**LogToEventlog**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn 0 (null) ist, wird dieses Ereignis nicht im System Ereignisprotokoll protokolliert.
+Bei 0 (null) wird dieses Ereignis nicht im Systemereignisprotokoll protokolliert.
 
 </dd> <dt>
 
-**Rawrecord**
+**RawRecord**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Bytearray, das den unformatierten Fehler Daten Satz enthält. Die Anzahl von Elementen im Array, die von der **size** -Eigenschaft angegeben wird.
+Ein Bytearray, das den unformatten Fehlerdatensatz enthält. Die Anzahl der Elemente im Array, die von der **Size-Eigenschaft** angegeben werden.
 
 </dd> <dt>
 
-**Datensatz**
+**Recordid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datensatz-ID des Fehler Datensatzes für diesen Fehler.
+Datensatzbezeichner des Fehlerdatensatz für diesen Fehler.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Größe des unformatierten Fehler Datensatzes.
+Größe des unformatten Fehlerdatensatz.
 
 </dd> <dt>
 
-**SMBIOS \_ - \_ Ereignistyp**
+**\_SMBIOS-EREIGNISTYP \_**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -220,29 +220,29 @@ Der Ereignistyp.
 | Wert                                                                                                  | Bedeutung                                                                                                                     |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl>   | Reserviert.<br/>                                                                                                        |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl>   | Single-Bit-ECC-Speicherfehler.<br/>                                                                                     |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl>   | Multibit-ECC-Speicherfehler.<br/>                                                                                   |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl>   | Fehler bei Paritäts Arbeitsspeicher.<br/>                                                                                             |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl>   | Bustimeout.<br/>                                                                                                    |
-| <span id="5"></span><dl> <dt>**5**</dt> </dl>   | Überprüfung des e/a-Kanals.<br/>                                                                                               |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl>   | ECC-Arbeitsspeicherfehler mit einzelnem Bit.<br/>                                                                                     |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl>   | ECC-Arbeitsspeicherfehler mit mehreren Bit.<br/>                                                                                   |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl>   | Paritätsspeicherfehler.<br/>                                                                                             |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl>   | Bus-Time out.<br/>                                                                                                    |
+| <span id="5"></span><dl> <dt>**5**</dt> </dl>   | E/A-Kanalüberprüfung.<br/>                                                                                               |
 | <span id="6"></span><dl> <dt>**6**</dt> </dl>   | Software-NMI.<br/>                                                                                                    |
-| <span id="7"></span><dl> <dt>**7**</dt> </dl>   | Größe des Arbeitsspeichers nach dem Arbeitsspeicher<br/>                                                                                              |
-| <span id="8"></span><dl> <dt>**8**</dt> </dl>   | Fehler nach dem Fehler.<br/>                                                                                                      |
+| <span id="7"></span><dl> <dt>**7**</dt> </dl>   | Größe des Arbeitsspeichers nach der Größenvergrößerung.<br/>                                                                                              |
+| <span id="8"></span><dl> <dt>**8**</dt> </dl>   | POST-Fehler.<br/>                                                                                                      |
 | <span id="9"></span><dl> <dt>**9**</dt> </dl>   | PCI-Paritätsfehler.<br/>                                                                                                |
-| <span id="10"></span><dl> <dt>**10**</dt> </dl> | PCI-System Fehler.<br/>                                                                                                |
-| <span id="11"></span><dl> <dt>**11:**</dt> </dl> | CPU-Fehler.<br/>                                                                                                     |
-| <span id="12"></span><dl> <dt>**12.12.2016**</dt> </dl> | Timeout des EISA-Failsafe-Timers.<br/>                                                                                    |
-| <span id="13"></span><dl> <dt>**13**</dt> </dl> | Das korrigierbare Speicher Protokoll ist deaktiviert.<br/>                                                                                 |
-| <span id="14"></span><dl> <dt>**14**</dt> </dl> | Die Protokollierung für einen bestimmten Ereignistyp ist deaktiviert. In kurzer Zeit wurden zu viele Fehler desselben Typs empfangen.<br/> |
-| <span id="15"></span><dl> <dt>**17.15**</dt> </dl> | Reserviert.<br/>                                                                                                        |
-| <span id="16"></span><dl> <dt>**Uhr**</dt> </dl> | Das System Limit wurde überschritten (z. b. Spannung oder Temperaturschwellen Wert überschritten).<br/>                                  |
-| <span id="17"></span><dl> <dt>**Uhr**</dt> </dl> | Der asynchrone Hardware-Timer ist abgelaufen und hat eine System Zurücksetzung ausgegeben.<br/>                                                   |
-| <span id="18"></span><dl> <dt>**Jahren**</dt> </dl> | System Konfigurationsinformationen.<br/>                                                                                |
-| <span id="19"></span><dl> <dt>**19.07.2016**</dt> </dl> | Festplatten Informationen.<br/>                                                                                           |
-| <span id="20"></span><dl> <dt>**20**</dt> </dl> | Das System wurde neu konfiguriert.<br/>                                                                                             |
-| <span id="21"></span><dl> <dt>**21**</dt> </dl> | Nicht korrigierbare CPU-komplexer Fehler.<br/>                                                                                 |
-| <span id="22"></span><dl> <dt>**22**</dt> </dl> | Der Protokollbereich wurde zurückgesetzt oder gelöscht.<br/>                                                                                       |
-| <span id="23"></span><dl> <dt>**23**</dt> </dl> | System Start. Bei Implementierung ist dieser Protokolleintrag garantiert der erste, der bei jedem Systemstart geschrieben wird.<br/>        |
+| <span id="10"></span><dl> <dt>**10**</dt> </dl> | PCI-Systemfehler.<br/>                                                                                                |
+| <span id="11"></span><dl> <dt>**11**</dt> </dl> | CPU-Fehler.<br/>                                                                                                     |
+| <span id="12"></span><dl> <dt>**12**</dt> </dl> | TIMER-Time out für EISA Failsafe.<br/>                                                                                    |
+| <span id="13"></span><dl> <dt>**13**</dt> </dl> | Korrigierende Speicherprotokoll deaktiviert.<br/>                                                                                 |
+| <span id="14"></span><dl> <dt>**14**</dt> </dl> | Protokollierung für einen bestimmten Ereignistyp deaktiviert. Zu viele Fehler desselben Typs wurden in kurzer Zeit empfangen.<br/> |
+| <span id="15"></span><dl> <dt>**15**</dt> </dl> | Reserviert.<br/>                                                                                                        |
+| <span id="16"></span><dl> <dt>**16**</dt> </dl> | Das Systemlimit wurde überschritten (z. B. die Belastung oder der Temperaturschwellenwert überschritten).<br/>                                  |
+| <span id="17"></span><dl> <dt>**17**</dt> </dl> | Der asynchrone Hardwaretimer ist abgelaufen und hat eine Systemrücksetzung ausgegeben.<br/>                                                   |
+| <span id="18"></span><dl> <dt>**18**</dt> </dl> | Systemkonfigurationsinformationen.<br/>                                                                                |
+| <span id="19"></span><dl> <dt>**19**</dt> </dl> | Informationen zur Festplatte.<br/>                                                                                           |
+| <span id="20"></span><dl> <dt>**20**</dt> </dl> | System neu konfiguriert.<br/>                                                                                             |
+| <span id="21"></span><dl> <dt>**21**</dt> </dl> | Unbesenkbarer CPU-komplexer Fehler.<br/>                                                                                 |
+| <span id="22"></span><dl> <dt>**22**</dt> </dl> | Zurücksetzen des Protokollbereichs oder Löschen.<br/>                                                                                       |
+| <span id="23"></span><dl> <dt>**23**</dt> </dl> | Systemstart. Bei Implementierung ist dieser Protokolleintrag garantiert der erste, der beim Systemstart geschrieben wurde.<br/>        |
 
 
 
@@ -250,37 +250,37 @@ Der Ereignistyp.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ereignisprotokoll Meldung. Diese Meldungen entsprechen den Ereignisprotokoll-Nachrichten Codes, die zum Einfügen von Ereignisprotokoll Meldungen vom Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn ein Ereignis empfangen wird.
+Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokollmeldungscodes, die verwendet werden, um Ereignisprotokollmeldungen vom Windows Ereignisprotokoll-Consumeranbieter einzufügen, wenn er eines der Ereignisse empfängt.
 
 </dd> <dt>
 
-**Validierungs \_ Bits**
+**\_VALIDIERUNGSBITS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Validierungs Bits zum Angeben der Gültigkeit der nachfolgenden Felder. Der Wert 1 (0x1) bedeutet, dass das **SMBIOS- \_ Ereignis** gültig ist.
+Validierungsbits, die verwendet werden, um die Gültigkeit der nachfolgenden Felder anzugeben. Der Wert 1 (0x1) bedeutet, dass das **\_ SMBIOS-EREIGNIS** gültig ist.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **msmcaevent \_ smbioserror** -Klasse wird von [**wmievent**](wmievent.md)abgeleitet.
+Die **MSMCAEvent \_ SMBIOSError-Klasse** wird von [**WMIEvent**](wmievent.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -289,14 +289,14 @@ Die **msmcaevent \_ smbioserror** -Klasse wird von [**wmievent**](wmievent.md)ab
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>Wmicore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wmiprov.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

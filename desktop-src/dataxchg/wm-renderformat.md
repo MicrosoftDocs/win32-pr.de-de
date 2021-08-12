@@ -1,9 +1,9 @@
 ---
-title: WM_RENDERFORMAT Meldung (Winuser. h)
-description: Wird an den Besitzer der Zwischenablage gesendet, wenn er das Rendern eines bestimmten Zwischenablage Formats verzögert hat und eine Anwendung Daten in diesem Format angefordert hat.
+title: WM_RENDERFORMAT (Winuser.h)
+description: Wird an den Besitzer der Zwischenablage gesendet, wenn das Rendering eines bestimmten Zwischenablageformats verzögert wurde und eine Anwendung Daten in diesem Format angefordert hat.
 ms.assetid: 81638109-4c5e-4b4c-b2db-4208b6ee83cc
 keywords:
-- WM_RENDERFORMAT Nachrichten Datenaustausch
+- WM_RENDERFORMAT der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab9d0e8539dc666c7a791a24c9ba7ac772c3c2c0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2885e056577656d6cabb8ea78f48a02a19f3c3c40bb3c30b1e5ca25c72cdf39b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118545309"
 ---
-# <a name="wm_renderformat-message"></a>WM- \_ Renderformat-Meldung
+# <a name="wm_renderformat-message"></a>WM \_ RENDERFORMAT-Meldung
 
-Wird an den Besitzer der Zwischenablage gesendet, wenn er das Rendern eines bestimmten Zwischenablage Formats verzögert hat und eine Anwendung Daten in diesem Format angefordert hat. Der Besitzer der Zwischenablage muss die Daten im angegebenen Format Renderingdaten in der Zwischenablage platzieren, indem er die [**SetClipboardData**](/windows/win32/api/winuser/nf-winuser-setclipboarddata) -Funktion aufruft.
+Wird an den Besitzer der Zwischenablage gesendet, wenn das Rendering eines bestimmten Zwischenablageformats verzögert wurde und eine Anwendung Daten in diesem Format angefordert hat. Der Besitzer der Zwischenablage muss Daten im angegebenen Format rendern und durch Aufrufen der [**Funktion SetClipboardData**](/windows/win32/api/winuser/nf-winuser-setclipboarddata) in der Zwischenablage platzieren.
 
 
 ```C++
@@ -39,7 +39,7 @@ Wird an den Besitzer der Zwischenablage gesendet, wenn er das Rendern eines best
 *wParam* 
 </dt> <dd>
 
-Das zu rendernde [Zwischenablage Format](standard-clipboard-formats.md) .
+Das [zwischenablageformat,](standard-clipboard-formats.md) das gerendert werden soll.
 
 </dd> <dt>
 
@@ -52,11 +52,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Reaktion auf eine **WM- \_ Renderformat** -Nachricht darf der Besitzer der Zwischenablage die Zwischenablage vor dem Aufrufen von [**SetClipboardData**](/windows/win32/api/winuser/nf-winuser-setclipboarddata)nicht öffnen. Das Öffnen der Zwischenablage ist nicht erforderlich, bevor Daten als Antwort auf **WM \_ Renderformat** platziert werden, und jeder Versuch, die Zwischenablage zu öffnen, schlägt fehl, da die Zwischenablage derzeit von der Anwendung geöffnet wird, die das zu rendernde Format angefordert hat.
+Wenn der Besitzer der Zwischenablage auf eine **WM \_ RENDERFORMAT-Meldung** reagiert, darf er die Zwischenablage nicht öffnen, bevor [**er SetClipboardData aufruft.**](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Das Öffnen der Zwischenablage ist vor dem Platzieren von Daten als Reaktion auf **WM \_ RENDERFORMAT** nicht erforderlich, und bei jedem Versuch, die Zwischenablage zu öffnen, wird ein Fehler angezeigt, da die Zwischenablage derzeit von der Anwendung geöffnet gehalten wird, die das zu rendernde Format angefordert hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,24 +66,24 @@ Bei der Reaktion auf eine **WM- \_ Renderformat** -Nachricht darf der Besitzer d
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**SetClipboardData**](/windows/win32/api/winuser/nf-winuser-setclipboarddata)
 </dt> <dt>
 
-[**WM- \_ renderallformats**](wm-renderallformats.md)
+[**WM \_ RENDERALLFORMATS**](wm-renderallformats.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Zwischenablage](clipboard.md)

@@ -1,5 +1,5 @@
 ---
-description: Meldet ein Namespace-Änderungs Ereignis, bei dem es sich um einen Typ eines systeminternen Ereignisses handelt, das generiert wird, wenn ein Namespace geändert wird.
+description: Meldet ein Namespaceänderungsereignis, bei dem es sich um einen Typ von systeminternem Ereignis handelt, das generiert wird, wenn ein Namespace geändert wird.
 ms.assetid: 168505d7-4677-4f41-935e-149f22de2cb5
 ms.tgt_platform: multiple
 title: __NamespaceModificationEvent-Klasse
@@ -19,18 +19,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 5af5783d3ebfbfb4b7842cb86b1919f8dbed1365
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3243afe0a8cae34e83ad85e2d89a3becab8d07775ba3ec0c3283fd4ea8ed8bbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118557813"
 ---
-# <a name="__namespacemodificationevent-class"></a>\_\_Namespacemodificationevent-Klasse
+# <a name="__namespacemodificationevent-class"></a>\_\_NamespaceModificationEvent-Klasse
 
-Die **\_ \_ namespacemodificationevent** -System Klasse meldet ein Namespace-Änderungs Ereignis, bei dem es sich um einen Typ eines systeminternen [Ereignisses](determining-the-type-of-event-to-receive.md) handelt, das generiert wird, wenn ein Namespace geändert wird.
+Die **\_ \_ NamespaceModificationEvent-Systemklasse** meldet ein Namespaceänderungsereignis, bei dem es sich um einen [Systemereignistyp](determining-the-type-of-event-to-receive.md) handelt, der generiert wird, wenn ein Namespace geändert wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,17 +47,17 @@ class __NamespaceModificationEvent : __NamespaceOperationEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ namespacemodificationevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ NamespaceModificationEvent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ namespacemodificationevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ NamespaceModificationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Previousnamespace**
+**PreviousNamespace**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **\_ \_ Namespace**
@@ -66,42 +66,42 @@ Datentyp: **\_ \_ Namespace**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kopie der ursprünglichen Version einer [**\_ \_ Namespace**](--namespace.md) Instanz. Die **Name** -Eigenschaft dieser Instanz identifiziert den Namespace, der geändert wird.
+Kopie der ursprünglichen Version einer [**\_ \_ Namespace-Instanz.**](--namespace.md) Die **Name-Eigenschaft** dieser Instanz identifiziert den Namespace, der geändert wird.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung** 
+**\_SICHERHEITSBESCHREIBUNG** 
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, den der Ereignis Anbieter verwendet, um die Benutzer zu ermitteln, die ein Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, den der Ereignisanbieter verwendet, um die Benutzer zu bestimmen, die ein Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 > [!Note]  
-> Eine Zugriffs Steuerungs Liste (Access Control List, ACL) für **null** in der [**Sicherheits \_ Beschreibung**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) gewährt allen Benutzern uneingeschränkten Zugriff. Weitere Informationen finden Sie unter [Erstellen einer Sicherheits Beschreibung für ein neues Objekt](/windows/desktop/SecAuthZ/creating-a-security-descriptor-for-a-new-object-in-c--).
+> Eine  NULL-Zugriffssteuerungsliste (Access Control List, ACL) in SECURITY [**\_ DESCRIPTOR**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) gewährt jedem jederzeit unbegrenzten Zugriff. Weitere Informationen finden Sie unter [Erstellen eines Sicherheitsdeskriptors für ein neues Objekt.](/windows/desktop/SecAuthZ/creating-a-security-descriptor-for-a-new-object-in-c--)
 
  
 
 </dd> <dt>
 
-**TargetNamespace**
+**Targetnamespace**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **\_ \_ Namespace**
@@ -110,32 +110,32 @@ Datentyp: **\_ \_ Namespace**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kopie der geänderten [**\_ \_ Namespace**](--namespace.md) Instanz. Die **Name** -Eigenschaft der **\_ \_ Namespace** Instanz gibt den Namespace an, der geändert wird. Diese Eigenschaft wird von der Klasse [**\_ \_ namespaceoperationevent**](--namespaceoperationevent.md)geerbt.
+Kopie der [**\_ \_ namespace-Instanz,**](--namespace.md) die geändert wird. Die **Name-Eigenschaft** der **\_ \_ Namespace-Instanz** gibt den Namespace an, der geändert wird. Diese Eigenschaft wird von der [**\_ \_ Klasse NamespaceOperationEvent**](--namespaceoperationevent.md)geerbt.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der ein Ereignis generiert wird. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordinierte Weltzeit) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der die Zeit angibt, zu der ein Ereignis generiert wird. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen haben das format koordinierte Weltzeit (UTC). Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ namespacemodificationevent** -Klasse wird von [**\_ \_ namespaceoperationevent**](--namespaceoperationevent.md)abgeleitet.
+Die **\_ \_ NamespaceModificationEvent-Klasse** wird von [**\_ \_ NamespaceOperationEvent**](--namespaceoperationevent.md)abgeleitet.
 
-Die einzigen Unterschiede zwischen dem Ziel Namespace und dem vorherigen Namespace sind die Qualifizierer und Eigenschaften mit Ausnahme von [**Name**](--namespace.md).
+Die einzigen Unterschiede zwischen dem Zielnamespace und dem vorherigen Namespace sind die Qualifizierer und Eigenschaften mit Ausnahme [**von Name**](--namespace.md).
 
-Beachten Sie, dass die [**Name**](--namespace.md) -Eigenschaft einer **\_ \_ Namespace** Instanz nicht geändert werden kann, da Namespaces nicht umbenannt werden können. Um den Namen eines Namespace zu ändern, muss die **\_ \_ Namespace** Instanz gelöscht und mit einem neuen Namen neu erstellt werden. Daher werden Namespace Änderungs Ereignisse generiert, wenn eine Änderung an Qualifizierern und anderen Eigenschaften als **Name** auftritt. Ein Namespace-Änderungs Ereignis wird nicht generiert, wenn eine Art von Änderung im Namespace auftritt. Ein Namespace-Änderungs Ereignis wird nur generiert, wenn eine Namespace Instanz geändert wird.
+Beachten Sie, dass die [**Name-Eigenschaft**](--namespace.md) einer **\_ \_ Namespace-Instanz** nicht geändert werden kann, da Namespaces nicht umbenannt werden können. Um den Namen eines Namespaces zu ändern, muss die **\_ \_ Namespace-Instanz** gelöscht und mit einem neuen Namen neu erstellt werden. Daher werden Namespaceänderungsereignisse generiert, wenn eine Änderung an anderen Qualifizierern und Eigenschaften als **Name** vorgenommen wird. Ein Namespaceänderungsereignis wird nicht generiert, wenn innerhalb des Namespace eine Änderung erfolgt. Ein Namespaceänderungsereignis wird nur generiert, wenn eine Namespaceinstanz geändert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -149,14 +149,14 @@ Beachten Sie, dass die [**Name**](--namespace.md) -Eigenschaft einer **\_ \_ Nam
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**\_\_Namespaceoperationevent**](/windows/desktop/WmiSdk/--namespaceoperationevent)
+[**\_\_NamespaceOperationEvent**](/windows/desktop/WmiSdk/--namespaceoperationevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

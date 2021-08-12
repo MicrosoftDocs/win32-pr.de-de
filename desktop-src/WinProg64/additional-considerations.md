@@ -3,15 +3,15 @@ title: Weitere Überlegungen
 description: Beachten Sie beim Portieren Ihres Codes die folgenden Punkte.
 ms.assetid: 2d649a09-b593-477a-9b4f-d2404784f4b0
 keywords:
-- Portieren von Tipps 64-Bit-Windows-Programmierung
+- Tipps zum Portieren von 64-Bit-Windows-Programmierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7607685f4b4ba04b86da276c38090a48ce0fead
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 199f522bebf0d6d5552aa81d99aab12f77685dea35eb329b9e7d11d46b4f1500
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106350740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118561535"
 ---
 # <a name="additional-considerations"></a>Weitere Überlegungen
 
@@ -27,7 +27,7 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
    #endif
    ```
 
-   Der 64-Bit-Compiler definiert \_ Win32 jedoch aus Gründen der Abwärtskompatibilität.
+   Der 64-Bit-Compiler definiert jedoch \_ WIN32 aus Gründen der Abwärtskompatibilität.
 
 - Die folgende Annahme ist nicht mehr gültig:
 
@@ -39,11 +39,11 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
    #endif
    ```
 
-   In diesem Fall kann die Else-Klausel \_ Win32 oder \_ Win64 darstellen.
+   In diesem Fall kann die else-Klausel \_ WIN32 oder \_ WIN64 darstellen.
 
-- Achten Sie auf die Ausrichtung des Datentyps. Das **\_ typausrichtungs** Makro gibt die Ausrichtungs Anforderungen eines Datentyps zurück. Beispiel: `TYPE_ALIGNMENT( KFLOATING_SAVE )` = = 4 auf x86, 8 auf dem Intel Itanium-Prozessor `TYPE_ALIGNMENT( UCHAR )` = = 1 Everywhere
+- Seien Sie vorsichtig bei der Ausrichtung des Datentyps. Das **TYPE \_ ALIGNMENT-Makro** gibt die Ausrichtungsanforderungen eines Datentyps zurück. Beispiel: `TYPE_ALIGNMENT( KFLOATING_SAVE )` == 4 auf x86, 8 auf Intel Itanium-Prozessor `TYPE_ALIGNMENT( UCHAR )` == 1 überall
 
-    Beispiel: Kernel Code, der derzeit wie folgt aussieht:
+    Ein Beispiel hierfür ist Kernelcode, der derzeit wie folgt aussieht:
 
     ```syntax
     ProbeForRead( UserBuffer, UserBufferLength, sizeof(ULONG) );
@@ -55,9 +55,9 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
     ProbeForRead( UserBuffer, UserBufferLength, TYPE_ALIGNMENT(IOCTL_STRUC) );
     ```
 
-    Automatische Korrekturen der kernelmodusausrichtungs-Ausnahmen sind für Intel Itanium-Systeme deaktiviert.
+    Automatische Korrekturen von Kernelmodusausnahmen werden für Intel Itanium-Systeme deaktiviert.
 
-- Seien Sie vorsichtig mit nicht Vorgängen. Beachten Sie Folgendes:
+- Seien Sie bei NOT-Vorgängen vorsichtig. Beachten Sie Folgendes:
 
     ```syntax
     UINT_PTR a; 
@@ -65,13 +65,13 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
     a = a & ~(b - 1);
     ```
 
-    Das Problem besteht darin, dass ~ (b – 1) "0x0000 0000 xxxx xxxx" und nicht "0xFFFF FFFF xxxx xxxx" erzeugt. Der Compiler erkennt dies nicht. Um dieses Problem zu beheben, ändern Sie den Code wie folgt:
+    Das Problem besteht darin, dass ~(b–1) "0x0000 0000 xxxx xxxx" und nicht "0xFFFF FFFF xxxx xxxx" erzeugt. Der Compiler erkennt dies nicht. Ändern Sie den Code wie folgt, um dies zu beheben:
 
     ```syntax
     a = a & ~((UINT_PTR)b - 1);
     ```
 
-- Achten Sie darauf, nicht signierte und signierte Vorgänge auszuführen. Beachten Sie Folgendes:
+- Seien Sie vorsichtig, wenn Sie Vorgänge ohne Vorzeichen und mit Vorzeichen ausführen. Beachten Sie Folgendes:
 
     ```syntax
     LONG a;
@@ -83,9 +83,9 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
     c = a / b;
     ```
 
-    Das Ergebnis ist unerwartet groß. Die Regel ist, dass das Ergebnis ohne Vorzeichen ist, wenn einer der beiden Operanden nicht signiert ist. Im vorherigen Beispiel wird eine in einen nicht signierten Wert, dividiert durch b, und das in c gespeicherte Ergebnis konvertiert. Die Konvertierung umfasst keine numerische Bearbeitung.
+    Das Ergebnis ist unerwartet groß. Die Regel ist, dass das Ergebnis unsigned ist, wenn einer der Operanden nicht signiert ist. Im vorherigen Beispiel wird ein in einen Wert ohne Vorzeichen konvertiert, dividiert durch b, und das In c gespeicherte Ergebnis. Die Konvertierung umfasst keine numerische Bearbeitung.
 
-    Beachten Sie als weiteres Beispiel Folgendes:
+    Betrachten Sie als weiteres Beispiel Folgendes:
 
     ```syntax
     ULONG x;
@@ -96,9 +96,9 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
     pVar2 = pVar1 + y * (x - 1);
     ```
 
-    Das Problem tritt auf, weil x nicht signiert ist, wodurch der gesamte Ausdruck nicht signiert wird. Dies funktioniert problemlos, es sei denn, y ist negativ. In diesem Fall wird y in einen Wert ohne Vorzeichen konvertiert, der Ausdruck wird mit einer Genauigkeit von 32 Bit ausgewertet, skaliert und zu pVar1 hinzugefügt. Eine negative 32-Bit-Zahl ohne Vorzeichen wird zu einer großen 64-Bit-positiven Zahl, die das falsche Ergebnis liefert. Um dieses Problem zu beheben, deklarieren Sie x als einen signierten Wert, oder legen Sie ihn explizit in **Long** im Ausdruck ab.
+    Das Problem tritt auf, weil x nicht signiert ist, wodurch der gesamte Ausdruck nicht signiert ist. Dies funktioniert einwandfrei, es sei denn, y ist negativ. In diesem Fall wird y in einen Wert ohne Vorzeichen konvertiert. Der Ausdruck wird mit 32-Bit-Genauigkeit ausgewertet, skaliert und pVar1 hinzugefügt. Eine negative 32-Bit-Zahl ohne Vorzeichen wird zu einer großen positiven 64-Bit-Zahl, die das falsche Ergebnis liefert. Um dieses Problem zu beheben, deklarieren Sie x als signierten Wert, oder geben Sie ihn im Ausdruck explizit in **LONG** ein.
 
-- Gehen Sie beim Erstellen von Zuordnungen mit schrittweisen Größen vorsichtig vor. Beispiel:
+- Seien Sie vorsichtig, wenn Sie stückweise Größenzuordnungen vornehmen. Beispiel:
 
     ```syntax
     struct xx {
@@ -107,20 +107,20 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
     };
     ```
 
-    Der folgende Code ist falsch, da der Compiler die Struktur mit zusätzlichen 4 Bytes auffüllt, um die 8-Byte-Ausrichtung zu treffen:
+    Der folgende Code ist falsch, da der Compiler die -Struktur mit weiteren 4 Bytes aufgefüllt, um die 8-Byte-Ausrichtung zu erzielen:
 
     ```syntax
     malloc(sizeof(DWORD) + 100*sizeof(PVOID));
     ```
 
-    Der folgende Code ist korrekt:
+    Der folgende Code ist richtig:
 
     ```syntax
     malloc(offsetof(struct xx, Pointers) + 100*sizeof(PVOID));
     ```
 
-- Übergeben Sie nicht `(HANDLE)0xFFFFFFFF` an Funktionen wie z. b. " [**kreatefilemapping**](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)". Verwenden Sie stattdessen **einen ungültigen \_ handle- \_ Wert**.
-- Verwenden Sie die richtigen Format Bearbeiter, wenn Sie eine Zeichenfolge drucken. Verwenden Sie% p, um Zeiger in Hexadezimal zu drucken. Dies ist die beste Wahl für das Drucken von Zeigern. Der Microsoft Visual C++ unterstützt% I. zum Drucken von polymorphen Daten. Visual C++ unterstützt auch% I64, um Werte, die 64 Bits sind, zu drucken.
+- Übergeben Sie nicht `(HANDLE)0xFFFFFFFF` an Funktionen wie [**CreateFileMapping.**](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Verwenden Sie stattdessen **INVALID \_ HANDLE \_ VALUE**.
+- Verwenden Sie beim Drucken einer Zeichenfolge die richtigen Formatbezeichner. Verwenden Sie %p, um Zeiger in Hexadezimal zu drucken. Dies ist die beste Wahl für das Drucken von Zeigern. Microsoft Visual C++ unterstützt %I zum Drucken polymorpher Daten. Visual C++ unterstützt auch %I64 zum Drucken von Werten mit 64 Bits.
 
  
 

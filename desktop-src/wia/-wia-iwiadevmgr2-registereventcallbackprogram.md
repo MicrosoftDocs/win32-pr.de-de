@@ -1,7 +1,7 @@
 ---
-description: 'Die IWiaDevMgr2:: registereventcallbackprogram-Methode registriert eine Anwendung, um Geräte Ereignisse zu empfangen. Es wird hauptsächlich aus Gründen der Abwärtskompatibilität mit Anwendungen bereitgestellt, die nicht für die Windows-Abbild Beschaffung (WIA) 2,0 geschrieben wurden.'
+description: Die IWiaDevMgr2::RegisterEventCallbackProgram-Methode registriert eine Anwendung zum Empfangen von Geräteereignissen. Es wird in erster Linie aus Gründen der Abwärtskompatibilität mit Anwendungen bereitgestellt, die nicht für Windows Image Acquisition (WIA) 2.0 geschrieben wurden.
 ms.assetid: 6b427f19-719b-44ce-8e2c-3c44672345c8
-title: 'IWiaDevMgr2:: registereventcallbackprogram-Methode (WIA. h)'
+title: IWiaDevMgr2::RegisterEventCallbackProgram-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 9b18b5833b7616493c24f0128caa7c910b685e37
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ebc99e61bf038c8db2ea537a1f8a5933ad512d21ec05cf51f6f8b7af5ede2b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441298"
 ---
-# <a name="iwiadevmgr2registereventcallbackprogram-method"></a>IWiaDevMgr2:: registereventcallbackprogram-Methode
+# <a name="iwiadevmgr2registereventcallbackprogram-method"></a>IWiaDevMgr2::RegisterEventCallbackProgram-Methode
 
-Die **IWiaDevMgr2:: registereventcallbackprogram** -Methode registriert eine Anwendung, um Geräte Ereignisse zu empfangen. Es wird hauptsächlich aus Gründen der Abwärtskompatibilität mit Anwendungen bereitgestellt, die nicht für die Windows-Abbild Beschaffung (WIA) 2,0 geschrieben wurden.
+Die **IWiaDevMgr2::RegisterEventCallbackProgram-Methode** registriert eine Anwendung zum Empfangen von Geräteereignissen. Es wird in erster Linie aus Gründen der Abwärtskompatibilität mit Anwendungen bereitgestellt, die nicht für Windows Image Acquisition (WIA) 2.0 geschrieben wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,10 +46,10 @@ HRESULT RegisterEventCallbackProgram(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Die Registrierungsflags. Kann auf die folgenden Werte festgelegt werden.
 
@@ -57,9 +57,9 @@ Die Registrierungsflags. Kann auf die folgenden Werte festgelegt werden.
 
 | Wert                                                                                                                                                                                                           | Bedeutung                                                      |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| <span id="WIA_REGISTER_EVENT_CALLBACK"></span><span id="wia_register_event_callback"></span><dl> <dt>**WIA- \_ Register \_ Ereignis \_ Rückruf**</dt> </dl>       | Registrieren Sie sich für das-Ereignis.<br/>                           |
-| <span id="WIA_UNREGISTER_EVENT_CALLBACK"></span><span id="wia_unregister_event_callback"></span><dl> <dt>**\_ \_ Ereignis Rückruf für die Aufhebung der Registrierung \_**</dt> </dl> | Löschen Sie die Registrierung für das Ereignis.<br/>            |
-| <span id="WIA_SET_DEFAULT_HANDLER"></span><span id="wia_set_default_handler"></span><dl> <dt>**WIA \_ - \_ Standard \_ Handler festlegen**</dt> </dl>                   | Legen Sie die Anwendung als Standard Ereignishandler fest.<br/> |
+| <span id="WIA_REGISTER_EVENT_CALLBACK"></span><span id="wia_register_event_callback"></span><dl> <dt>**WIA \_ \_ REGISTER-EREIGNISRÜCKRUF \_**</dt> </dl>       | Registrieren Sie sich für das Ereignis.<br/>                           |
+| <span id="WIA_UNREGISTER_EVENT_CALLBACK"></span><span id="wia_unregister_event_callback"></span><dl> <dt>**WIA \_ UNREGISTER \_ EVENT \_ CALLBACK**</dt> </dl> | Löschen Sie die Registrierung für das Ereignis.<br/>            |
+| <span id="WIA_SET_DEFAULT_HANDLER"></span><span id="wia_set_default_handler"></span><dl> <dt>**WIA \_ \_ SET-STANDARDHANDLER \_**</dt> </dl>                   | Legen Sie die Anwendung als Standardereignishandler fest.<br/> |
 
 
 
@@ -67,25 +67,25 @@ Die Registrierungsflags. Kann auf die folgenden Werte festgelegt werden.
 
 </dd> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Ein Geräte Bezeichner. Übergeben Sie **null** , um für das Ereignis auf allen WIA 2,0-Geräten zu registrieren.
+Ein Gerätebezeichner. Übergeben Sie **NULL,** um sich für das Ereignis auf allen WIA 2.0-Geräten zu registrieren.
 
 </dd> <dt>
 
-" *Peer-GUID* \[ " in\]
+*pEventGUID* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Das Ereignis, für das die Anwendung registriert wird. Eine Liste gültiger Ereignis-GUIDs finden Sie unter [WIA-Ereignis](-wia-wia-event-identifiers.md)Bezeichner.
+Das Ereignis, für das die Anwendung registriert wird. Eine Liste gültiger Ereignis-GUIDs finden Sie unter [WIA-Ereignisbezeichner.](-wia-wia-event-identifiers.md)
 
 </dd> <dt>
 
-_bstrFullAppName * \[ in\]
+*bstrFullAppName* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -94,7 +94,7 @@ Der vollständige Pfadname der Anwendung.
 
 </dd> <dt>
 
-*bstraucommandlinearg* \[ in\]
+*bstrCommandlineArg* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -103,7 +103,7 @@ Die entsprechenden Befehlszeilenargumente für die Anwendung.
 
 </dd> <dt>
 
-*bstrinname* \[ in\]
+*bstrName* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -112,7 +112,7 @@ Der Namen der Anwendung. Der Name wird dem Benutzer angezeigt, wenn sich mehrere
 
 </dd> <dt>
 
-*bstraudescription* \[ in\]
+*bstrDescription* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -121,12 +121,12 @@ Die Beschreibung der Anwendung. Die Beschreibung wird dem Benutzer angezeigt, we
 
 </dd> <dt>
 
-*bstricon* \[ in\]
+*bstrIcon* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Das Symbol, das die Anwendung darstellt. Das Symbol wird dem Benutzer angezeigt, wenn sich mehrere Anwendungen für dasselbe Ereignis registrieren. Die Zeichenfolge enthält den Namen der Anwendung und den NULL basierten Index des Symbols, getrennt durch ein Komma, z. b. "MyApp, 0". Möglicherweise gibt es mehrere Symbole, die eine Anwendung darstellen.
+Das Symbol, das die Anwendung darstellt. Das Symbol wird dem Benutzer angezeigt, wenn sich mehrere Anwendungen für dasselbe Ereignis registrieren. Die Zeichenfolge enthält den Namen der Anwendung und den nullbasierten Index des Symbols, getrennt durch ein Komma, z.B. "MyApp, 0". Möglicherweise gibt es mehrere Symbole, die eine Anwendung darstellen.
 
 </dd> </dl>
 
@@ -134,17 +134,17 @@ Das Symbol, das die Anwendung darstellt. Das Symbol wird dem Benutzer angezeigt,
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **IWiaDevMgr2:: registereventcallbackprogram** , um sich für Hardware Geräte Ereignisse zu registrieren. Wenn ein Ereignis auftritt, bei dem eine Anwendung für registriert ist, wird die Anwendung gestartet, und die Ereignis Informationen werden an die Anwendung übertragen.
+Verwenden Sie **IWiaDevMgr2::RegisterEventCallbackProgram,** um sich für Hardwaregeräteereignisse zu registrieren. Wenn ein Ereignis auftritt, für das eine Anwendung registriert ist, wird die Anwendung gestartet, und die Ereignisinformationen werden an die Anwendung übertragen.
 
-Verwenden Sie die [**enumregistereventinfo**](-wia-iwiaitem2-enumregistereventinfo.md) -Methode, um einen Zeiger auf ein Enumeratorobjekt für Ereignis Registrierungs Eigenschaften abzurufen.
+Verwenden Sie die [**EnumRegisterEventInfo-Methode,**](-wia-iwiaitem2-enumregistereventinfo.md) um einen Zeiger auf ein Enumeratorobjekt für Ereignisregistrierungseigenschaften abzurufen.
 
-Verwenden Sie die **IWiaDevMgr2:: registereventcallbackprogram** -Methode nur für die Abwärtskompatibilität mit Anwendungen, die nicht für die WIA 2,0-Architektur geschrieben wurden. Verwenden Sie die von der WIA 2,0-Architektur bereitgestellten Component Object Model (com)-Schnittstellen für neue Anwendungen. Rufen Sie insbesondere [**IWiaDevMgr2:: registereventcallbackinterface**](-wia-iwiadevmgr2-registereventcallbackinterface.md) oder [**IWiaDevMgr2:: registereventcallbackclsid**](-wia-iwiadevmgr2-registereventcallbackclsid.md) auf, um eine neue Anwendung für Geräte Ereignisse zu registrieren.
+Verwenden Sie nur die **IWiaDevMgr2::RegisterEventCallbackProgram-Methode** für Abwärtskompatibilität mit Anwendungen, die nicht für die WIA 2.0-Architektur geschrieben wurden. Verwenden Sie die com-Schnittstellen (Component Object Model), die von der WIA 2.0-Architektur bereitgestellt werden, für neue Anwendungen. Rufen Sie insbesondere [**IWiaDevMgr2::RegisterEventCallbackInterface**](-wia-iwiadevmgr2-registereventcallbackinterface.md) oder [**IWiaDevMgr2::RegisterEventCallbackCLSID**](-wia-iwiadevmgr2-registereventcallbackclsid.md) auf, um eine neue Anwendung für Geräteereignisse zu registrieren.
 
-In der Regel wird diese Methode von einem Installationsprogramm oder einem Skript aufgerufen. Das Installationsprogramm oder Skript registriert die Anwendung, um WIA 2,0-Geräte Ereignisse zu empfangen. Wenn das Ereignis auftritt, wird die Anwendung vom WIA 2,0-Laufzeitsystem gestartet.
+In der Regel wird diese Methode von einem Installationsprogramm oder Skript aufgerufen. Das Installationsprogramm oder Skript registriert die Anwendung zum Empfangen von WIA 2.0-Geräteereignissen. Wenn das Ereignis auftritt, wird die Anwendung vom WIA 2.0-Laufzeitsystem gestartet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -152,9 +152,9 @@ In der Regel wird diese Methode von einem Installationsprogramm oder einem Skrip
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Mithilfe der iwiaapperrorhandler-Schnittstelle können Anwendungen Fehler Fenster (während der Datenübertragungen) anzeigen, von denen der Benutzer auswählen kann, ob die Übertragung fortgesetzt, abgebrochen oder abgebrochen werden soll.
+description: Mit der IWiaAppErrorHandler-Schnittstelle können Anwendungen Fehlerfenster (während Datenübertragungen) anzeigen, in denen der Benutzer auswählen kann, ob die Übertragung fortgesetzt, abgebrochen oder abgebrochen werden soll.
 ms.assetid: ac2597e6-2857-4694-bea7-1ea65d63b365
-title: Iwiaapperrorhandler-Schnittstelle (WIA. h)
+title: IWiaAppErrorHandler-Schnittstelle (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,49 +13,49 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 6ccac7b689055bfaab926a8db46b4632606811d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 385a97a71d7017cba5bbfffd0833068a74acbe9d7281f8308b003a525b3f60f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106373056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441346"
 ---
-# <a name="iwiaapperrorhandler-interface"></a>Iwiaapperrorhandler-Schnittstelle
+# <a name="iwiaapperrorhandler-interface"></a>IWiaAppErrorHandler-Schnittstelle
 
-Mithilfe der **iwiaapperrorhandler** -Schnittstelle können Anwendungen Fehler Fenster (während der Datenübertragungen) anzeigen, von denen der Benutzer auswählen kann, ob die Übertragung fortgesetzt, abgebrochen oder abgebrochen werden soll.
+Mit der **IWiaAppErrorHandler-Schnittstelle** können Anwendungen Fehlerfenster (während Datenübertragungen) anzeigen, in denen der Benutzer auswählen kann, ob die Übertragung fortgesetzt, abgebrochen oder abgebrochen werden soll.
 
 ## <a name="members"></a>Member
 
-Die **iwiaapperrorhandler** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwiaapperrorhandler** verfügt auch über die folgenden Typen von Membern:
+Die **IWiaAppErrorHandler-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaAppErrorHandler** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwiaapperrorhandler** -Schnittstelle verfügt über diese Methoden.
+Die **IWiaAppErrorHandler-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                        | BESCHREIBUNG                                                                                                                                             |
 |:--------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetWindow**](-wia-iwiaapperrorhandler-getwindow.md)       | Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und eine oder mehrere Schaltflächen zum Fortfahren, Abbrechen oder Abbrechen der Anwendung bereitstellt.<br/> |
-| [**Report Status**](-wia-iwiaapperrorhandler-reportstatus.md) | Verarbeitet den Gerätestatus und Fehlermeldungen während der Bild Datenübertragungen und zeigt dem Benutzer die Nachrichten an.<br/>                                  |
+| [**GetWindow**](-wia-iwiaapperrorhandler-getwindow.md)       | Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und mindestens eine Schaltfläche zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung bereitstellt.<br/> |
+| [**ReportStatus**](-wia-iwiaapperrorhandler-reportstatus.md) | Behandelt Gerätestatus- und Fehlermeldungen während Bilddatenübertragungen und zeigt die Meldungen dem Benutzer an.<br/>                                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Fehlerbehandlung oder das Rückruf Objekt, das diese Schnittstelle implementiert, wird an [**iwiatransfer::D ownload**](-wia-iwiatransfer-download.md) und [**iwiatransfer:: Upload**](-wia-iwiatransfer-upload.md)übergeben.
+Das Fehlerbehandlungs- oder Rückrufobjekt, das diese Schnittstelle implementiert, wird an [**IWiaTransfer::D ownload**](-wia-iwiatransfer-download.md) und [**IWiaTransfer::Hochladen**](-wia-iwiatransfer-upload.md)übergeben.
 
-Diese Schnittstelle ist nicht für die Behandlung von Fehlern konzipiert, die außerhalb der Bild Datenübertragungen aufgetreten sind, z. b. Fehler beim Aufrufen oder Festlegen von Geräteeigenschaften oder nicht zurückgegebene Rückrufe an einen Treiber.
+Diese Schnittstelle ist nicht für die Behandlung von Fehlern konzipiert, die außerhalb von Bilddatenübertragungen auftreten, z. B. Fehler beim Abrufen oder Festlegen von Geräteeigenschaften oder nicht ausgeführte Rückrufe in einem Treiber.
 
-Ein Treiber Fehlerhandler sollte [**iwiaerrorhandler**](-wia-iwiaerrorhandler.md)anstelle von **iwiaapperrorhandler** implementieren.
+Ein Treiberfehlerhandler sollte [**IWiaErrorHandler**](-wia-iwiaerrorhandler.md)anstelle von **IWiaAppErrorHandler** implementieren.
 
-Das Objekt, das diese Schnittstelle implementiert, sollte auch [**iwiatransfercallback**](-wia-iwiatransfercallback.md)implementieren.
+Das Objekt, das diese Schnittstelle implementiert, sollte auch [**IWiaTransferCallback**](-wia-iwiatransfercallback.md)implementieren.
 
-Wenn Sie möchten, dass ein Treiber Fehlerhandler und der Standardfehler Handler Fehler Meldungs Fenster anzeigen, aber keinen kompletten Fehlerhandler für die Anwendung erstellen möchten, implementieren Sie diese Schnittstelle, und implementieren Sie außerdem die [**iwiaapperrorhandler:: Report Status**](-wia-iwiaapperrorhandler-reportstatus.md) -Methode, um einen \_ \_ nicht behandelten WIA-Status zurückzugeben \_ .
+Wenn Sie möchten, dass ein Treiberfehlerhandler und ein Standardfehlerhandler Fehlermeldungsfenster anzeigen, aber keinen vollständigen Fehlerhandler für die Anwendung erstellen möchten, implementieren Sie diese Schnittstelle und implementieren auch die [**IWiaAppErrorHandler::ReportStatus-Methode,**](-wia-iwiaapperrorhandler-reportstatus.md) um WIA \_ STATUS NOT HANDLED \_ \_ zurückzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,10 +63,10 @@ Wenn Sie möchten, dass ein Treiber Fehlerhandler und der Standardfehler Handler
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

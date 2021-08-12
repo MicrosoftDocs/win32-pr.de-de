@@ -1,19 +1,19 @@
 ---
-description: 'InkPicture.CursorButtonUp-Ereignis: Tritt auf, wenn der InkCollector eine Cursorschaltfläche erkennt, die aktiv ist.'
+description: 'InkPicture.CursorButtonUp-Ereignis: Tritt auf, wenn der InkCollector eine geöffnete Cursorschaltfläche erkennt.'
 ms.assetid: bb10b032-a88d-4b52-9062-c0b63dfe98e9
 title: InkPicture.CursorButtonUp-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 639d0cbd89e2ca44d8855b6508c5284f59a7c654
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 56a84a5d8529ecf6387d3832608ae3821be9d317fef46211a6824bddc2ee9574
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118451079"
 ---
 # <a name="inkpicturecursorbuttonup-event"></a>InkPicture.CursorButtonUp-Ereignis
 
-Tritt ein, wenn [**der InkCollector**](inkcollector-class.md) eine cursor-Schaltfläche erkennt, die aktiv ist.
+Tritt ein, wenn [**der InkCollector**](inkcollector-class.md) eine Cursorschaltfläche erkennt, die geöffnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ void CursorButtonUp(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor-Schnittstellenobjekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorButtonUp-Ereignis** generiert hat.
+Das [**IInkCursor Interface-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorButtonUp-Ereignis generiert** hat.
 
 </dd> <dt>
 
@@ -49,28 +49,28 @@ Die Schaltfläche, die freigegeben wurde.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Schaltfläche auf einer Stiftspitze wird angezeigt, wenn der Benutzer einen Strich abschließt und den Stift aus dem Digitizer hebt. Eine Schaltfläche an einem Fass ist hoch, wenn die Schaltfläche nicht gedrückt wird.
+Eine Schaltfläche an einer Stiftspitze ist nach oben, wenn der Benutzer einen Strich schließt und den Stift aus dem Digitizer hebt. Wenn die Schaltfläche nicht gedrückt wird, ist eine Schaltfläche auf einem Knopf oben.
 
-Wenn Sie die rechte Maustaste loslassen, erhalten Sie tatsächlich zwei **CursorButtonUp-Ereignisse:** eines für die rechte Schaltfläche nach oben und eines für die linke Schaltfläche nach oben.
+Wenn Sie die rechte Maustaste loslegen, erhalten Sie tatsächlich zwei **CursorButtonUp-Ereignisse** : eines für die rechte Schaltfläche nach oben und eines für die linke Schaltfläche nach oben.
 
-Diese Ereignismethode wird in den **\_ Dispinterfaces IInkCollectorEvents**, **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ ICECursorButtonUp definiert.
+Diese Ereignismethode wird in den **\_ IInkCollectorEvents-,** **\_ IInkOverlayEvents-** und **\_ IInkPictureEvents-Disp-Interfaces** mit der ID DISPID \_ ICECursorButtonUp definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

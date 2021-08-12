@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie ein Thread-Pump.
+description: Erstellen Sie eine Threadpumpe.
 ms.assetid: a7a016e2-784d-4d7a-8058-88895bf3c4e2
-title: D3DX10CreateThreadPump-Funktion (d3dx10. h)
+title: D3DX10CreateThreadPump-Funktion (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8a27f8df1f4eaa8e7f41e863d703063308f9c595
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 99b5766625f2a269d1fb36e9e808c206d0e3040419f505622ccfe1e27ca4bcdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118541058"
 ---
 # <a name="d3dx10createthreadpump-function"></a>D3DX10CreateThreadPump-Funktion
 
-Erstellen Sie ein Thread-Pump.
+Erstellen Sie eine Threadpumpe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT D3DX10CreateThreadPump(
 
 <dl> <dt>
 
-*ciothreads* \[ in\]
+*cIoThreads* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der zu erstellenden e/a-Threads. Wenn 0 angegeben wird, versucht Direct3D, die optimale Anzahl von Threads basierend auf der Hardwarekonfiguration zu berechnen.
+Die Anzahl der zu erstellenden E/A-Threads. Wenn 0 angegeben ist, versucht Direct3D, die optimale Anzahl von Threads basierend auf der Hardwarekonfiguration zu berechnen.
 
 </dd> <dt>
 
-*cprocthreads* \[ in\]
+*cProcThreads* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der zu erstellenden Prozessthreads. Wenn 0 angegeben wird, versucht Direct3D, die optimale Anzahl von Threads basierend auf der Hardwarekonfiguration zu berechnen.
+Die Anzahl der zu erstellenden Prozessthreads. Wenn 0 angegeben ist, versucht Direct3D, die optimale Anzahl von Threads basierend auf der Hardwarekonfiguration zu berechnen.
 
 </dd> <dt>
 
-*ppthreadpump* \[ vorgenommen\]
+*ppThreadPump* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10ThreadPump**](id3dx10threadpump.md)\*\***
 
-Die erstellte Thread-Pump. Siehe [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md).
+Die erstellte Threadpumpe. Siehe [**ID3DX10ThreadPump-Schnittstelle.**](id3dx10threadpump.md)
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Die erstellte Thread-Pump. Siehe [**ID3DX10ThreadPump-Schnittstelle**](id3dx10th
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Thread Pump ist ein sehr Ressourcen intensives Objekt. Pro Anwendung sollte nur ein Thread Pump erstellt werden.
+Eine Threadpumpe ist ein sehr ressourcenintensives Objekt. Pro Anwendung sollte nur eine Threadpumpe erstellt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,16 +85,16 @@ Ein Thread Pump ist ein sehr Ressourcen intensives Objekt. Pro Anwendung sollte 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: CD3DX12_PIPELINE_STATE_STREAM_FLAGS-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die zum Beschreiben von Pipeline-Statusflags als einzelnes Objekt verwendet wird, das für eine streambeschreibung geeignet ist.
+title: CD3DX12_PIPELINE_STATE_STREAM_FLAGS-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, die verwendet wird, um Pipelinezustandsflags als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 ms.assetid: EF67936B-315A-4B3F-9E07-7CF4C5EE47CF
 keywords:
 - CD3DX12_PIPELINE_STATE_STREAM_FLAGS Struktur
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 034f4a63c774ca41f28fbe9e6c2945fddee47c4f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2d8789fb8c393ecaf83e0295654092b22aba7f497abf909c46bac422d442c6fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118530709"
 ---
-# <a name="cd3dx12_pipeline_state_stream_flags-structure"></a>CD3DX12 \_ Pipeline \_ - \_ Stream- \_ Flags-Struktur
+# <a name="cd3dx12_pipeline_state_stream_flags-structure"></a>CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ FLAGS-Struktur
 
-Eine hilfsstruktur, die zum Beschreiben von Pipeline-Statusflags als einzelnes Objekt verwendet wird, das für eine streambeschreibung geeignet ist.
+Eine Hilfsstruktur, die verwendet wird, um Pipelinezustandsflags als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ struct CD3DX12_PIPELINE_STATE_STREAM_FLAGS {
 
 <dl> <dt>
 
-**CD3DX12 \_ - \_ Flags für Pipeline Zustandsdaten \_ Strom \_**
+**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ FLAGS**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 Pipeline- \_ \_ \_ StatusStream- \_ Flags.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ PIPELINE \_ STATE STREAM \_ \_ FLAGS.
 
 </dd> <dt>
 
-**CD3DX12 \_ - \_ Flags für Pipeline Zustandsdaten \_ Strom \_ (D3D12 \_ Pipeline- \_ \_ Statusflags Konstanten &i)**
+**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ FLAGS (D3D12 \_ PIPELINE STATE \_ \_ FLAGS const &i)**
 </dt> <dd>
 
-Erstellt eine neue Instanz der CD3DX12 \_ Pipeline- \_ \_ \_ Statusflags, die mit einem untergeordneten Typ von **D3D12 Pipeline State-untergeordneten \_ \_ \_ \_ typfjektflags \_** und aus *i* kopierten untergeordneten Daten, einer [**D3D12 \_ Pipeline \_ State \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_flags) -Struktur, initialisiert werden.
+Erstellt eine neue Instanz eines CD3DX12 \_ PIPELINE \_ STATE STREAM \_ \_ FLAGS, initialisiert mit einem Unterobjekttyp von **D3D12 \_ PIPELINE STATE \_ \_ SUBOBJECT TYPE \_ \_ FLAGS** und unterobjektdaten, die aus *i*, einer [**D3D12 \_ PIPELINE STATE \_ \_ FLAGS-Struktur,**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_flags) kopiert wurden.
 
 </dd> <dt>
 
-**Operator = (D3D12 \_ Pipeline \_ State \_ Flags Konstanten& i)**
+**operator=(D3D12 \_ PIPELINE \_ STATE \_ FLAGS const& i)**
 </dt> <dd>
 
-Kopier Zuweisungs Operator.
+Kopierzuweisungsoperator.
 
 </dd> <dt>
 
-**Operator D3D12 \_ Pipeline \_ - \_ Statusflags ()**
+**Operator D3D12 \_ PIPELINE \_ STATE \_ FLAGS() const**
 </dt> <dd>
 
-Implizite Konvertierung in eine [**D3D12 \_ Pipeline \_ State \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_flags) -Struktur.
+Implizite Konvertierung in eine [**D3D12 \_ PIPELINE \_ STATE \_ FLAGS-Struktur.**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_flags)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-CD3DX12 \_ Pipeline \_ State \_ Stream \_ Flags ist eine typedef-Spezialisierung der untergeordneten Pipeline für den [**CD3DX12 \_ Pipeline \_ State \_ Stream \_**](cd3dx12-pipeline-state-stream-subobject.md) und ist wie folgt definiert:
+CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ FLAGS ist eine Typedef-Spezialisierung der [**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ SUBOBJECT-Vorlage**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
 
 
 ```C++
@@ -91,21 +91,21 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<D3D12_PIPELINE_STATE_FLAGS, D3D1
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)
 </dt> <dt>
 
-[**CD3DX12 \_ Pipeline State-Datenstrom-unter \_ \_ \_ Objekt**](cd3dx12-pipeline-state-stream-subobject.md)
+[**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ SUBOBJECT**](cd3dx12-pipeline-state-stream-subobject.md)
 </dt> <dt>
 
-[**D3D12 \_ Pipeline \_ Status-unter Objekt- \_ \_ Typ**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
+[**D3D12 \_ PIPELINE \_ STATE \_ SUBOBJECT \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
 </dt> </dl>
 
  

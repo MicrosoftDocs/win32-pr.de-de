@@ -1,30 +1,30 @@
 ---
-title: Kern Referenz (Direct3D 12)
-description: In diesem Abschnitt werden die in d3d12. h deklarierten Direct3D 12-APIs behandelt, einschließlich APIs für Puffer, Texturen und Sichten.
+title: Core-Referenz (Direct3D 12)
+description: In diesem Abschnitt werden direct3D 12-APIs behandelt, die in d3d12.h deklariert wurden, einschließlich APIs für Puffer, Texturen und Ansichten.
 ms.assetid: 588202FB-A187-4727-BF53-31BEA6CFB9E9
 ms.localizationpriority: low
 ms.topic: article
 ms.date: 11/27/2018
-ms.openlocfilehash: 841ec37a5b3c7f125f169c340a942f99b3bfee73
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 27acf8afa68c292fd3cc4bedfbf3a606c2a61b11e089d99303b2021ad2fad040
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "106341904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118529914"
 ---
-# <a name="core-reference-direct3d-12"></a>Kern Referenz (Direct3D 12)
+# <a name="core-reference-direct3d-12"></a>Core-Referenz (Direct3D 12)
 
-In diesem Abschnitt werden die in d3d12. h deklarierten Direct3D 12-APIs behandelt, einschließlich APIs für Puffer, Texturen und Sichten.
+In diesem Abschnitt werden direct3D 12-APIs behandelt, die in d3d12.h deklariert wurden, einschließlich APIs für Puffer, Texturen und Ansichten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [Core-Schnittstellen](direct3d-12-interfaces.md) | Die folgenden Schnittstellen werden in d3d12. h deklariert. |
-| [Core-Funktionen](direct3d-12-functions.md) | Die folgenden Funktionen werden in d3d12. h deklariert. |
-| [Core-Strukturen](direct3d-12-structures.md) | Die folgenden Strukturen werden in d3d12. h deklariert. |
-| [Core-Enumerationen](direct3d-12-enumerations.md) | Die folgenden Enumerationen werden in d3d12. h deklariert. |
-| [Core-Konstanten](constants.md) | Die folgenden Konstanten werden in d3d12. h für die Verwendung durch einen d3d12-Titel deklariert. |
+| [Core-Schnittstellen](direct3d-12-interfaces.md) | Die folgenden Schnittstellen werden in d3d12.h deklariert. |
+| [Core-Funktionen](direct3d-12-functions.md) | Die folgenden Funktionen werden in d3d12.h deklariert. |
+| [Core-Strukturen](direct3d-12-structures.md) | Die folgenden Strukturen werden in d3d12.h deklariert. |
+| [Core-Enumerationen](direct3d-12-enumerations.md) | Die folgenden Enumerationen werden in d3d12.h deklariert. |
+| [Core-Konstanten](constants.md) | Die folgenden Konstanten werden in d3d12.h zur Verwendung durch einen D3D12-Titel deklariert. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

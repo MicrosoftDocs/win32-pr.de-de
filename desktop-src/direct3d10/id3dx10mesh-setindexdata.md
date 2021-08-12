@@ -1,7 +1,7 @@
 ---
-description: Legen Sie die Indexdaten des Netzes fest.
+description: Legen Sie die Indexdaten des Gitternetzes fest.
 ms.assetid: f3e7e166-94b5-45f6-9d43-8d7e32b7b523
-title: 'ID3DX10Mesh:: setindexdata-Methode (d3dx10. h)'
+title: ID3DX10Mesh::SetIndexData-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: f561a4109fbab2163b2ec51e95b45a618da5b6d5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 030e4a796be5c35b5f57e1e17832b7da7c3514edd494d5421e3c13d7b2dc3e12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540181"
 ---
-# <a name="id3dx10meshsetindexdata-method"></a>ID3DX10Mesh:: setindexdata-Methode
+# <a name="id3dx10meshsetindexdata-method"></a>ID3DX10Mesh::SetIndexData-Methode
 
-Legen Sie die Indexdaten des Netzes fest.
+Legen Sie die Indexdaten des Gitternetzes fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT SetIndexData(
 
 <dl> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \***
+Typ: **const \* void**
 
 Die Indexdaten.
 
 </dd> <dt>
 
-*cindizes* \[ in\]
+*cIndices* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Die Anzahl der Indizes in pData.
 
@@ -63,7 +63,7 @@ Die Anzahl der Indizes in pData.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

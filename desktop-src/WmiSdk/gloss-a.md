@@ -6,44 +6,44 @@ ms.tgt_platform: multiple
 title: A (WMI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b22a868d41e7aa65e97b5ef1eecca07b2028bc11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 615a73afb1287e8dff900e50625198bf7f7c3adc365bd026cf2dd7b345365412
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118556107"
 ---
 # <a name="a-wmi"></a>A (WMI)
 
-a B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F](gloss-f.md) G [H](gloss-h.md) [I](gloss-i.md) J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) [O](gloss-o.md) [P](gloss-p.md) [Q](gloss-q.md) [R](gloss-r.md) [S](gloss-s.md) [T](gloss-t.md) U V [W](gloss-w.md) X Y Z
+A B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F](gloss-f.md) G [H](gloss-h.md) [I](gloss-i.md) J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) [O](gloss-o.md) [P](gloss-p.md) [Q](gloss-q.md) [R](gloss-r.md) [S](gloss-s.md) [T](gloss-t.md) U V [W](gloss-w.md) X Y Z
 
 <dl> <dt>
 
 <span id="wmi.gloss_adap"></span><span id="WMI.GLOSS_ADAP"></span>**ADAP**
 </dt> <dd>
 
-Weitere Informationen finden Sie unter *Auto-Discovery/automatische Löschung (ADAP)*.
+Weitere Informationen *finden Sie unter Automatische Ermittlung/automatische Bereinigung (ADAP).*
 
 </dd> <dt>
 
 <span id="wmi.gloss_alias"></span><span id="WMI.GLOSS_ALIAS"></span>**Alias**
 </dt> <dd>
 
-Ein symbolischer Verweis in einer Klassen-oder Instanzdeklaration für ein Objekt, das an anderer Stelle in einer [*MOF*](gloss-m.md) -Datei gespeichert ist.
+Ein symbolischer Verweis in einer Klassen- oder Instanzdeklaration auf ein Objekt, das sich an anderer Stelle in einer [*MOF-Datei*](gloss-m.md) befindet.
 
 </dd> <dt>
 
-<span id="wmi.gloss_association_class"></span><span id="WMI.GLOSS_ASSOCIATION_CLASS"></span>**Association-Klasse**
+<span id="wmi.gloss_association_class"></span><span id="WMI.GLOSS_ASSOCIATION_CLASS"></span>**Zuordnungsklasse**
 </dt> <dd>
 
 Eine Klasse, die die Beziehung zwischen zwei Klassen oder zwischen Instanzen von zwei Klassen beschreibt.
 
 </dd> <dt>
 
-<span id="wmi.gloss_auto_discovery_auto_purge"></span><span id="WMI.GLOSS_AUTO_DISCOVERY_AUTO_PURGE"></span>**Automatische Ermittlung/automatische Löschung (ADAP)**
+<span id="wmi.gloss_auto_discovery_auto_purge"></span><span id="WMI.GLOSS_AUTO_DISCOVERY_AUTO_PURGE"></span>**Automatische Ermittlung/automatische Bereinigung (ADAP)**
 </dt> <dd>
 
-Ein Prozess, der eine Leistungs Bibliothek in eine WMI-Klasse überträgt.
+Ein Prozess, der eine Leistungsbibliothek in eine WMI-Klasse überträgt.
 
 </dd> </dl>
 

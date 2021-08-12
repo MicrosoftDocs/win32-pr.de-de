@@ -1,9 +1,9 @@
 ---
-title: XTYP_ADVSTART Transaktion (Ddeml. h)
-description: Ein Client verwendet die xtipp- \_ advstart-Transaktion, um eine Empfehlung-Schleife mit einem Server einzurichten.
+title: XTYP_ADVSTART Transaktion (Ddeml.h)
+description: Ein Client verwendet die XTYP \_ ADVSTART-Transaktion, um eine Advise-Schleife mit einem Server herzustellen.
 ms.assetid: 8911e722-5656-4ca6-8b0a-6bdf8281611a
 keywords:
-- XTYP_ADVSTART Transaktionsdaten Austausch
+- XTYP_ADVSTART Transaktion Data Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 852351ad902a0552ee012d6c1e5c4d61501e6e58
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fb18bda3dce4db465045991e26cdc2d97ddd87ddc69c494ffaf103c566955da1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118544759"
 ---
-# <a name="xtyp_advstart-transaction"></a>Xttyp- \_ advstart-Transaktion
+# <a name="xtyp_advstart-transaction"></a>XTYP \_ ADVSTART-Transaktion
 
-Ein Client verwendet die **xtipp- \_ advstart** -Transaktion, um eine Empfehlung-Schleife mit einem Server einzurichten. Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion ( [*ddecallback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt diese Transaktion, wenn ein Client **xType \_ advstart** als *wType* -Parameter der [**ddeclienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) -Funktion angibt.
+Ein Client verwendet die **XTYP \_ ADVSTART-Transaktion,** um eine Advise-Schleife mit einem Server herzustellen. Eine dynamische Daten Exchange-Serverrückruffunktion [*(DdeCallback)*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt diese Transaktion, wenn ein Client **XTYP \_ ADVSTART** als *wType-Parameter* der [**DdeClientTransaction-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) angibt.
 
 
 ```C++
@@ -44,14 +44,14 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
 Das vom Client angeforderte Datenformat.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
 Ein Handle für die Konversation.
@@ -61,7 +61,7 @@ Ein Handle für die Konversation.
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen.
+Ein Handle für den Themennamen.
 
 </dd> <dt>
 
@@ -75,33 +75,33 @@ Ein Handle für den Elementnamen.
 *hdata* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Server Rückruffunktion sollte **true** zurückgeben, um eine Empfehlung-Schleife für den angegebenen Themen Namen und das Element namens paar zuzulassen, oder **false** , um die Empfehlung-Schleife abzulehnen. Wenn die Rückruffunktion **true** zurückgibt, bewirkt jeder nachfolgende Aufruf der [**ddepostadvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) -Funktion durch den Server für denselben Themen Namen und dasselbe Elementnamen Paar, dass das System [**xD \_ advreq**](xtyp-advreq.md) -Transaktionen an den Server sendet.
+Eine Serverrückruffunktion sollte **TRUE** zurückgeben, um eine Advise-Schleife für das angegebene Themennamens- und Elementnamenpaar zu ermöglichen, oder **FALSE,** um die Advise-Schleife zu verweigern. Wenn die Rückruffunktion **TRUE** zurückgibt, bewirkt jeder nachfolgende Aufruf der [**DdePostAdvise-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) durch den Server im selben Themennamen- und Elementnamenpaar, dass das System [**XTYP \_ ADBENACHRICHTIGUNGQ-Transaktionen**](xtyp-advreq.md) an den Server sendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Client eine Empfehlung-Schleife für einen Themen Namen, Elementnamen und ein Datenformat für eine bereits erstellte Empfehlung-Schleife anfordert, wird von der dynamischer Datenaustausch Management Library (Ddeml) keine doppelte Empfehlung-Schleife erstellt, sondern die Empfehlung-Schleifen-Flags (**xtypf \_ ackreq** und **xtypf \_ NODATA**) so geändert, dass Sie mit der aktuellen Anforderung übereinstimmen.
+Wenn ein Client eine Advise-Schleife für einen Themennamen, Einen Elementnamen und ein Datenformat für eine bereits eingerichtete Advise-Schleife an fordert, erstellt die dynamische Daten Exchange Management Library (DDEML) keine doppelte Advise-Schleife, sondern ändert stattdessen die Advise-Schleifenflags (**XTYPF \_ ACKREQ** und **XTYPF \_ NODATA**) so, dass sie mit der neuesten Anforderung übereinstimmen.
 
-Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF \_ Fail \_** " in der Funktion " [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) " angegeben wurde.
+Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ ADVISES-Flag** in der [**DdeInitialize-Funktion angegeben**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,30 +111,30 @@ Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF 
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
+[**DdeClientTransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
 </dt> <dt>
 
-[**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
+[**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
 </dt> <dt>
 
-[**DDE postadvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise)
+[**DdePostAdvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange Management Library](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

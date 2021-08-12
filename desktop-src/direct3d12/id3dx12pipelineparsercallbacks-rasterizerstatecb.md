@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks rasterizerstatuecb-Methode (D3DX12. h)
-description: Ruft den Zustands Beschreibungs Rückruf für den Raster eines Objekts auf, das diese Schnittstelle implementiert.
+title: ID3DX12PipelineParserCallbacks RasterizerStateCb-Methode (D3DX12.h)
+description: Ruft den Rückruf des Unterobjekts der Rasterizerzustandsbeschreibung eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: 125FC6EC-B749-4EE2-9D34-14BD12993BDC
 keywords:
-- Rasterizerstatuecb-Methode
-- Rasterizerstatuecb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks-Schnittstelle, rasterizerstatuecb-Methode
+- RasterizerStateCb-Methode
+- RasterizerStateCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, RasterizerStateCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a970e8061ed9199ba5a6a334c7b670218e93936
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c39a179f26d88f25027eb9ffc2b4b3712ac963b65179334fff1bfa4d6103ef76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118528620"
 ---
-# <a name="id3dx12pipelineparsercallbacksrasterizerstatecb-method"></a>ID3DX12PipelineParserCallbacks:: rasterizerstatuecb-Methode
+# <a name="id3dx12pipelineparsercallbacksrasterizerstatecb-method"></a>ID3DX12PipelineParserCallbacks::RasterizerStateCb-Methode
 
-Ruft den Zustands Beschreibungs Rückruf für den Raster eines Objekts auf, das diese Schnittstelle implementiert.
+Ruft den Rückruf des Unterobjekts der Rasterizerzustandsbeschreibung eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ void RasterizerStateCb(
 
 <dl> <dt>
 
-*Rasterizerstate* \[ atur\]
+*RasterizerState* \[ Ref\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3D12 \_ Rasterizer \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)**
+Typ: **const [**D3D12 \_ RASTERIZER \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)**
 
-Details zur Zustands Beschreibungs Beschreibung des Rasterizers, die aus einem Pipeline Status-Stream analysiert wurde.
+Details des Rasterizer-Zustandsbeschreibungs-Unterobjekts, das aus einem Pipelinezustandsstream analysiert wird.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
@@ -78,7 +78,7 @@ Gibt nichts zurück.
 [**ID3DX12PipelineParserCallbacks**](id3dx12pipelineparsercallbacks.md)
 </dt> <dt>
 
-[**D3D12 \_ Rasterizer- \_ Abteilung**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)
+[**D3D12 \_ RASTERIZER \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rasterizer_desc)
 </dt> </dl>
 
  

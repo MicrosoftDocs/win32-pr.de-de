@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob setnoprogresstimeout-Methode (deliveryoptimization. h)
-description: Legt die Zeitspanne fest, die die Übermittlungs Optimierung (Do) versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler aufgetreten ist. Bei einem Fortschritt wird der Timer zurückgesetzt.
+title: IBackgroundCopyJob SetNoProgressTimeout-Methode (Deliveryoptimization.h)
+description: Legt die Zeitspanne fest, die Übermittlungsoptimierung (DO) versucht, die Datei nach auftreten einer vorübergehenden Fehlerbedingung zu übertragen. Wenn ein Fortschritt vorliegt, wird der Timer zurückgesetzt.
 ms.assetid: DC86F74F-8429-4D78-B425-CAF19867B05E
 keywords:
-- Setnoprogresstimeout-Methode
-- Setnoprogresstimeout-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, setnoprogresstimeout-Methode
+- SetNoProgressTimeout-Methode
+- SetNoProgressTimeout-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, SetNoProgressTimeout-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 276c8c44d2b2b034543aae25361c5f5c94046f5d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dcf6905388d54103aaac34ae934c89e2fd8ccc16ce32a384eb730376606351b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118542927"
 ---
-# <a name="ibackgroundcopyjobsetnoprogresstimeout-method"></a>Ibackgroundcopyjob:: setnoprogresstimeout-Methode
+# <a name="ibackgroundcopyjobsetnoprogresstimeout-method"></a>IBackgroundCopyJob::SetNoProgressTimeout-Methode
 
-Legt die Zeitspanne fest, die die Übermittlungs Optimierung (Do) versucht, die Datei zu übertragen, nachdem ein vorübergehender Fehler aufgetreten ist. Bei einem Fortschritt wird der Timer zurückgesetzt.
+Legt die Zeitspanne fest, die Übermittlungsoptimierung (DO) versucht, die Datei nach auftreten einer vorübergehenden Fehlerbedingung zu übertragen. Wenn ein Fortschritt vorliegt, wird der Timer zurückgesetzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ HRESULT SetNoProgressTimeout(
 
 <dl> <dt>
 
-*RetryPeriod* \[ in\]
+*RetryPeriod* \[ In\]
 </dt> <dd>
 
-Die Zeitspanne in Sekunden, die versucht, die Datei zu übertragen, nachdem kein Fortschritt unternommen wurde. Der standardmäßige Wiederholungs Zeitraum für einen Auftrag mit hoher Priorität beträgt 3600 Sekunden (1 Stunde), und für einen Auftrag mit niedriger Priorität beträgt der Wert 86400 Sekunden (24 Stunden).
+Die Zeitspanne in Sekunden, in der do versucht, die Datei zu übertragen, nachdem kein Fortschritt erzielt wurde. Der Standardwiederholungszeitraum für einen Auftrag mit hoher Priorität beträgt 3600 Sekunden (1 Stunde) und für einen Auftrag mit niedriger Priorität 86.400 Sekunden (24 Stunden).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                          |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl>             | Der Wiederholungs Zeitraum wurde erfolgreich festgelegt.<br/>                                                            |
-| <dl> <dt>**DO_E_INVALID_STATE**</dt> </dl> | Der Status des Auftrags kann nicht BG_JOB_STATE_CANCELLED oder BG_JOB_STATE_ACKNOWLEDGED sein.<br/> |
+| <dl> <dt>S_OK</dt> </dl>             | Der Wiederholungszeitraum wurde erfolgreich festgelegt.<br/>                                                            |
+| <dl> <dt>**DO_E_INVALID_STATE**</dt> </dl> | Der Status des Auftrags kann nicht BG_JOB_STATE_CANCELLED oder BG_JOB_STATE_ACKNOWLEDGED werden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Vorgang während des Wiederholungs Zeitraums nicht fortgesetzt wird, wird der Status des Auftrags von BG_JOB_STATE_TRANSIENT_ERROR in BG_JOB_STATE_ERROR verschoben. Wenn Sie eine Fehler Benachrichtigung anfordern, wird Ihr [**joberror**](https://www.bing.com/search?q=**JobError**) -Rückruf aufgerufen.
+Wenn do während des Wiederholungszeitraums keinen Fortschritt macht, wird der Status des Auftrags von BG_JOB_STATE_TRANSIENT_ERROR in BG_JOB_STATE_ERROR verschoben. Wenn Sie eine Fehlerbenachrichtigung anfordern, rufen Sie den [**JobError-Rückruf**](https://www.bing.com/search?q=**JobError**) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,24 +75,24 @@ Wenn der Vorgang während des Wiederholungs Zeitraums nicht fortgesetzt wird, wi
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: getnoprogresstimeout**](ibackgroundcopyjob-getnoprogresstimeout.md)
+[**IBackgroundCopyJob::GetNoProgressTimeout**](ibackgroundcopyjob-getnoprogresstimeout.md)
 </dt> </dl>
 
  

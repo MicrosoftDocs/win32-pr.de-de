@@ -4,12 +4,12 @@ ms.assetid: 60be4680-c434-4fdb-8449-c040969d2f59
 title: eventArg-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 820c4223e8e4a880343faf2e9df686d9746b1b29
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 5a25909010f812779a5e6d91530a56faff067e1abcd8c041680f2918ba6ad4a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118552421"
 ---
 # <a name="eventarg-element"></a>eventArg-Element
 
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                               | BESCHREIBUNG                                                                                     |
+| Element                                                               | Beschreibung                                                                                     |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/> | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/> |
 | [**stubDefinitions**](stubdefinitions.md)<br/>                 | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/>   |
@@ -42,7 +42,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Mögliche Werte sind 1 (Ereignisargumente eingeschlossen) und 0 (Standard, ausgeschlossene Ereignisargumente).
+Mögliche Werte sind 1 (eingeschlossene Ereignisargumente) und 0 (Standard, ausgeschlossene Ereignisargumente).
 
 ## <a name="element-information"></a>Elementinformationen
 

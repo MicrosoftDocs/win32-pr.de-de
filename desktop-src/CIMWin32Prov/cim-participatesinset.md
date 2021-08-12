@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ participatesinset-Klasse identifiziert physische Elemente, die zusammen ersetzt werden sollen.
+description: Die CIM \_ ParticipatesInSet-Klasse identifiziert physische Elemente, die zusammen ersetzt werden sollen.
 ms.assetid: 417607a3-6682-4745-a5ca-0538a0d4853d
 ms.tgt_platform: multiple
 title: CIM_ParticipatesInSet-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e1a581452ad6ce032dcb8d3ec5c6c0caa505f7bf
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bc09c4c8ff717e2c6c9c90dcd3f583f18dab1d0a74a623d3f4de67695f5f5b02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118678970"
 ---
-# <a name="cim_participatesinset-class"></a>CIM \_ participatesinset-Klasse
+# <a name="cim_participatesinset-class"></a>CIM \_ ParticipatesInSet-Klasse
 
-Die **CIM \_ participatesinset** -Klasse identifiziert physische Elemente, die zusammen ersetzt werden sollen.
+Die **CIM \_ ParticipatesInSet-Klasse** identifiziert physische Elemente, die zusammen ersetzt werden sollen.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,13 +47,13 @@ class CIM_ParticipatesInSet
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ partiatesinset** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ParticipatesInSet-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ partiatesinset** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ParticipatesInSet-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -66,31 +66,31 @@ Datentyp: **CIM \_ PhysicalElement**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf das physische Element, das als Satz durch andere Elemente ersetzt werden soll.
+Verweis auf das physische Element, das durch andere Elemente ersetzt werden soll, als Satz.
 
 </dd> <dt>
 
 **Set**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ replacementset**
+Datentyp: **CIM \_ ReplacementSet**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Aggregieren**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Verweis auf den Ersetzungs Satz von Elementen.
+Verweis auf den Ersetzungssatz von Elementen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,8 +100,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

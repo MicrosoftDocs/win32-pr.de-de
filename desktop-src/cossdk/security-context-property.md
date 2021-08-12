@@ -1,27 +1,27 @@
 ---
-description: Sicherheitskontext Eigenschaft
+description: Sicherheitskontexteigenschaft
 ms.assetid: 7ffae145-be13-4a2c-beb1-eaa1d11ad9a7
-title: Sicherheitskontext Eigenschaft
+title: Sicherheitskontexteigenschaft
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54b061ef7c0d0d0c146b626c11fd550c48ab488a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 31c537dc8c9b925fff5f7fc4f3da99fd361bfb02f61008b7d7af8a421b9f1d11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118546821"
 ---
-# <a name="security-context-property"></a>Sicherheitskontext Eigenschaft
+# <a name="security-context-property"></a>Sicherheitskontexteigenschaft
 
-Wie bei jedem von com+ bereitgestellten automatischen Dienst basiert die automatische Rollen Überprüfung auf den Eigenschaften, die im Objekt Kontext enthalten sind. Die Bestimmung, ob eine Sicherheitsüberprüfung für einen-Rückruf in einer-Komponente durchgeführt werden muss, basiert auf der Security-Eigenschaft des Objekt Kontexts, der erstellt wird, wenn die konfigurierte Komponente instanziiert wird.
+Wie bei jedem automatischen Dienst, der von COM+ bereitgestellt wird, basiert die automatische Rollenüberprüfung auf Eigenschaften, die im Objektkontext enthalten sind. Die Ermittlung, ob bei einem Aufruf einer Komponente eine Sicherheitsüberprüfung durchgeführt werden muss, basiert auf der Sicherheitseigenschaft des Objektkontexts, der beim Instanziieren der konfigurierten Komponente erstellt wird.
 
-Im Allgemeinen müssen Sie sich nicht mit dieser Eigenschaft befassen. Sie wird direkt von com+ verwendet, nicht von Ihnen. In einigen Fällen möchten Sie jedoch möglicherweise eine strikte Kontrolle über die Aktivierung eines Objekts haben. In diesem Fall kann die Security-Eigenschaft den Kontext beeinflussen, in dem Ihr Objekt aktiviert ist. Das heißt, wenn für ein Objekt eine Konfiguration mit dem Kontext des Erstellers nicht kompatibel ist, wird es in einem eigenen Kontext aktiviert. Die Security-Eigenschaft kann dies beeinflussen, ebenso wie jede Eigenschaft im Objekt Kontext.
+In der Regel müssen Sie sich nicht um diese Eigenschaft sorgen. sie wird direkt von COM+ verwendet, nicht von Ihnen. Unter bestimmten Umständen möchten Sie jedoch möglicherweise eine strenge Kontrolle über die Aktivierung eines Objekts. In diesem Fall kann sich die Sicherheitseigenschaft darauf auswirken, in welchem Kontext Ihr Objekt aktiviert wird. Das heißt, wenn ein Objekt über eine Konfiguration verfügt, die mit dem Kontext seines Erstellers nicht kompatibel ist, wird es in seinem eigenen Kontext aktiviert. Die Sicherheitseigenschaft kann dies beeinflussen, ebenso wie jede Eigenschaft im Objektkontext.
 
-Wenn Sie nicht möchten, dass die Sicherheitseinstellungen die Aktivierung beeinflussen, können Sie nur die Zugriffs Überprüfung auf Prozessebene auswählen. Dadurch wird die Security-Eigenschaft des Objekt Kontexts unterdrückt, obwohl die rollenbasierte Überprüfung deaktiviert wird und die [Kontextinformationen für den Sicherheits Rückruf](security-call-context-information.md) nicht verfügbar sind.
+Wenn Sie nicht möchten, dass Sicherheitseinstellungen die Aktivierung beeinflussen, können Sie nur zugriffsüberprüfung auf Prozessebene auswählen. Dadurch wird die Sicherheitseigenschaft für den Objektkontext unterdrückt, obwohl die rollenbasierte Überprüfung effektiv deaktiviert wird und Kontextinformationen für [Sicherheitsaufrufe nicht](security-call-context-information.md) verfügbar sind.
 
-Weitere Informationen zu Zugriffs Überprüfungen auf Prozessebene finden Sie unter [Sicherheitsgrenzen](security-boundaries.md). Informationen zum Festlegen der Sicherheit auf Prozessebene finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffs Überprüfungen](setting-a-security-level-for-access-checks.md).
+Weitere Informationen zu Zugriffsüberprüfungen auf Prozessebene finden Sie unter [Sicherheitsgrenzen.](security-boundaries.md) Informationen zum Festlegen der Sicherheit auf Prozessebene finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffsüberprüfungen.](setting-a-security-level-for-access-checks.md)
 
-Weitere Informationen zum Objekt Kontext finden Sie unter [Kontexte](com--contexts.md).
+Weitere Informationen zum Objektkontext finden Sie unter [Kontexte.](com--contexts.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -33,10 +33,10 @@ Weitere Informationen zum Objekt Kontext finden Sie unter [Kontexte](com--contex
 [Sicherheitsgrenzen](security-boundaries.md)
 </dt> <dt>
 
-[Informationen zum Sicherheits Aufrufkontext](security-call-context-information.md)
+[Kontextinformationen zu Sicherheitsaufrufen](security-call-context-information.md)
 </dt> <dt>
 
-[Verwenden von Rollen für die Client Autorisierung](using-roles-for-client-authorization.md)
+[Verwenden von Rollen für die Clientautorisierung](using-roles-for-client-authorization.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Greifen Sie auf den Vertex-Puffer des Mesh zu, nachdem er mit ID3DX10Mesh:: committedevice an das Gerät übertragen wurde. Dies unterscheidet sich von ID3DX10Mesh:: getvertexbuffer, das den Vertex-Puffer zurückgibt, bevor er an das Gerät übertragen wurde.'
+description: Greifen Sie mit ID3DX10Mesh::CommitToDevice auf den Scheitelpunktpuffer des Gitters zu, nachdem ein Commit auf das Gerät ausgeführt wurde. Dies unterscheidet sich von ID3DX10Mesh::GetVertexBuffer, das den Scheitelpunktpuffer zurückgibt, bevor ein Commit auf das Gerät ausgeführt wurde.
 ms.assetid: 621d9105-e55d-47b8-8557-8adb7db19d66
-title: 'ID3DX10Mesh:: getdevicevertexbuffer-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetDeviceVertexBuffer-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 9943050d174acb4e8f8e676f56a95cfdcde88f5a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 11493392f710fe3fd3bebab5187b61522434b268bf099489d84ea1cc3ec99309
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540263"
 ---
-# <a name="id3dx10meshgetdevicevertexbuffer-method"></a>ID3DX10Mesh:: getdevicevertexbuffer-Methode
+# <a name="id3dx10meshgetdevicevertexbuffer-method"></a>ID3DX10Mesh::GetDeviceVertexBuffer-Methode
 
-Greifen Sie auf den Vertex-Puffer des Mesh zu, nachdem er mit [**ID3DX10Mesh:: committedevice**](id3dx10mesh-committodevice.md)an das Gerät übertragen wurde. Dies unterscheidet sich von [**ID3DX10Mesh:: getvertexbuffer**](id3dx10mesh-getvertexbuffer.md), das den Vertex-Puffer zurückgibt, bevor er an das Gerät übertragen wurde.
+Greifen Sie mit [**ID3DX10Mesh::CommitToDevice**](id3dx10mesh-committodevice.md)auf den Scheitelpunktpuffer des Gitters zu, nachdem ein Commit auf das Gerät ausgeführt wurde. Dies unterscheidet sich von [**ID3DX10Mesh::GetVertexBuffer,**](id3dx10mesh-getvertexbuffer.md)das den Scheitelpunktpuffer zurückgibt, bevor ein Commit auf das Gerät ausgeführt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetDeviceVertexBuffer(
 
 <dl> <dt>
 
-*ibuffer* \[ in\]
+*iBuffer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der den Zugriff auf den Vertex-Puffer identifiziert.
+Ein Index, der angibt, auf welchen Scheitelpunktpuffer zugegriffen werden soll.
 
 </dd> <dt>
 
-*ppvertexbuffer* \[ vorgenommen\]
+*ppVertexBuffer* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Buffer**](/windows/desktop/api/D3D10/nn-d3d10-id3d10buffer)\*\***
 
-Der Vertex-Puffer, nachdem ein Commit für das Gerät ausgeführt wurde.
+Der Scheitelpunktpuffer, nachdem ein Commit auf das Gerät ausgeführt wurde.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Der Vertex-Puffer, nachdem ein Commit für das Gerät ausgeführt wurde.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

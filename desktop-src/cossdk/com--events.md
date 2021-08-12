@@ -1,26 +1,26 @@
 ---
-description: Com+-Ereignisse
+description: COM+-Ereignisse
 ms.assetid: 1e0570ae-9099-465a-9133-72aa7d574932
-title: Com+-Ereignisse
+title: COM+-Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec70befd5a430eb04e549a84f93841f21993dc56
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bfbc33091d5c241d1995d085cf7167b6e8a8119840d6498a9fc125f9b48f8c73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118549497"
 ---
-# <a name="com-events"></a>Com+-Ereignisse
+# <a name="com-events"></a>COM+-Ereignisse
 
-Der com+-Ereignis Dienst ist ein automatisiertes, locker gekoppeltes Ereignis System, das Ereignis Informationen von verschiedenen Verlegern im com+-Katalog speichert. Abonnenten können diesen Speicher Abfragen und die Ereignisse auswählen, über die Sie informiert werden möchten.
+Der COM+-Ereignisdienst ist ein automatisiertes, lose gekoppeltes Ereignissystem, das Ereignisinformationen von verschiedenen Herausgebern im COM+-Katalog speichert. Abonnenten können diesen Speicher abfragen und die Ereignisse auswählen, die sie hören möchten.
 
 
 
-| Thema                                            | BESCHREIBUNG                                                                   |
+| Thema                                            | Beschreibung                                                                   |
 |--------------------------------------------------|-------------------------------------------------------------------------------|
-| [Konzepte der com+-Ereignisse](com--events-concepts.md) | Bietet eine Übersicht über den com+-Ereignis Dienst.                              |
-| [Aufgaben für COM+-Ereignisse](com--events-tasks.md)       | Enthält Anweisungen zum Verwenden des com+-Ereignis Dienstanbieter in Ihren Anwendungen. |
+| [COM+-Ereigniskonzepte](com--events-concepts.md) | Bietet eine Übersicht über den COM+-Ereignisdienst.                              |
+| [COM+-Ereignisaufgaben](com--events-tasks.md)       | Enthält Anweisungen zur Verwendung des COM+-Ereignisdiensts in Ihren Anwendungen. |
 
 
 
@@ -30,7 +30,7 @@ Der com+-Ereignis Dienst ist ein automatisiertes, locker gekoppeltes Ereignis Sy
 
 <dl> <dt>
 
-[Com+-Instrumentations Konzepte](com--instrumentation-concepts.md)
+[COM+-Instrumentierungskonzepte](com--instrumentation-concepts.md)
 </dt> </dl>
 
  

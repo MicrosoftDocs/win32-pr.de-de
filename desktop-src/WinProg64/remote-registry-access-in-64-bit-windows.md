@@ -1,36 +1,36 @@
 ---
-title: Remote Registrierungs Zugriff in 64-Bit-Windows
-description: Der registrierungsredirector bietet über die regconnectregistry-Funktion Remote Zugriff auf die Registrierung auf 64-Bit-Fenstern.
+title: Remoteregistrierungszugriff in 64-Bit-Windows
+description: Der Registrierungsumleitung bietet Remotezugriff auf die Registrierung auf 64-Bit-Windows regConnectRegistry-Funktion.
 ms.assetid: 7873c1e2-53fb-4c93-bf4c-251a13cd8db7
 keywords:
-- Remote Registrierungs Zugriff 64-Bit-Windows-Programmierung
+- Remoteregistrierungszugriff auf 64-Bit-Windows Programmierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a139198ca08e0fdb9d7bcb070dcabf89dfa5403
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2f066641b080ace60a62c882a4abd0190e20537259517a2e789b4d450e352349
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118561451"
 ---
-# <a name="remote-registry-access-in-64-bit-windows"></a>Remote Registrierungs Zugriff in 64-Bit-Windows
+# <a name="remote-registry-access-in-64-bit-windows"></a>Remoteregistrierungszugriff in 64-Bit-Windows
 
-Der registrierungsredirector bietet über die [**regconnectregistry**](/windows/desktop/api/winreg/nf-winreg-regconnectregistrya) -Funktion Remote Zugriff auf die Registrierung auf 64-Bit-Fenstern.
+Der Registrierungsumleitung bietet Remotezugriff auf die Registrierung auf 64-Bit-Windows [**regConnectRegistry-Funktion.**](/windows/desktop/api/winreg/nf-winreg-regconnectregistrya)
 
-Handelt es sich bei dem Client um eine 32-Bit-Anwendung, greift er auf die standardmäßige 32-Bit-Registrierungs Ansicht des Servers zu. Wenn es sich bei dem Client um eine 64-Bit-Anwendung handelt, greift er auf die 64-Bit-Registrierungs Ansicht zu.
+Wenn es sich bei dem Client um eine 32-Bit-Anwendung handelt, wird auf die standardmäßige 32-Bit-Registrierungsansicht des Servers zugreifen. Wenn der Client eine 64-Bit-Anwendung ist, greifen sie auf die 64-Bit-Registrierungsansicht zu.
 
-**Windows Server 2003:** Alle Clients greifen auf die 64-Bit-Registrierungs Ansicht zu, es sei denn, die Anwendung verwendet das Key \_ WOW64 \_ 32key-Flag. Dieses Verhalten hat sich in Windows Server 2003 mit Service Pack 1 (SP1) und Windows XP Professional x64 Edition geändert, vorausgesetzt, dass sowohl der Client als auch der Server diese Versionen von Windows ausführen.
+**Windows Server 2003:** Alle Clients greifen auf die 64-Bit-Registrierungsansicht zu, es sei denn, die Anwendung verwendet das KEY \_ WOW64 \_ 32KEY-Flag. Dieses Verhalten hat sich mit Windows Server 2003 mit Service Pack 1 (SP1) und Windows XP Professional x64 Edition geändert, vorausgesetzt, dass sowohl der Client als auch der Server diese Versionen von Windows.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Registrierungs Redirector](registry-redirector.md)
+[Registrierungsumleitung](registry-redirector.md)
 </dt> <dt>
 
-[Registrierungs Reflektion](registry-reflection.md)
+[Registrierungslektion](registry-reflection.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,34 +1,34 @@
 ---
-description: Wenn Sie eine Authentifizierungs Ebene für eine Anwendung festlegen, legen Sie fest, welcher Grad an Authentifizierung durchgeführt wird, wenn Clients die Anwendung anrufen.
+description: Wenn Sie eine Authentifizierungsebene für eine Anwendung festlegen, bestimmen Sie, welcher Authentifizierungsgrad ausgeführt wird, wenn Clients die Anwendung aufrufen.
 ms.assetid: a59935de-6b8f-4c0a-8479-e30bc0509698
-title: Festlegen einer Authentifizierungs Ebene für eine Server Anwendung
+title: Festlegen einer Authentifizierungsebene für eine Serveranwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83450b3f8d1939d08cc3d16a21f438c8da6f8fc1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6248574117a55420940fbaf24f88c5d3b2c8721e6fa022bad5923ba658bf5da7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118546254"
 ---
-# <a name="setting-an-authentication-level-for-a-server-application"></a>Festlegen einer Authentifizierungs Ebene für eine Server Anwendung
+# <a name="setting-an-authentication-level-for-a-server-application"></a>Festlegen einer Authentifizierungsebene für eine Serveranwendung
 
-Wenn Sie eine Authentifizierungs Ebene für eine Anwendung festlegen, legen Sie fest, welcher Grad an Authentifizierung durchgeführt wird, wenn Clients die Anwendung anrufen. Höhere Authentifizierungs Ebenen sorgen für eine höhere Sicherheit und Datenintegrität, auch wenn dies in der Regel zu Leistungseinbußen führen kann. Weitere Informationen finden Sie unter [Client Authentifizierung](client-authentication.md).
+Wenn Sie eine Authentifizierungsebene für eine Anwendung festlegen, bestimmen Sie, welcher Authentifizierungsgrad ausgeführt wird, wenn Clients die Anwendung aufrufen. Höhere Authentifizierungsebenen sorgen für mehr Sicherheit und Datenintegrität, allerdings in der Regel mit leistungsschädigungen. Weitere Informationen finden Sie unter [Clientauthentifizierung](client-authentication.md).
 
-**So wählen Sie eine Authentifizierungs Ebene für eine Serveranwendung aus**
+**So wählen Sie eine Authentifizierungsebene für eine Serveranwendung aus**
 
-1.  Klicken Sie mit der rechten Maustaste auf die COM+-Anwendung, für die Sie die Authentifizierung festlegen, und klicken Sie dann auf **Eigenschaften**.
+1.  Klicken Sie mit der rechten Maustaste auf die COM+-Anwendung, für die Sie die Authentifizierung festlegen, und klicken Sie dann auf **Eigenschaften.**
 
-2.  Klicken Sie im Dialogfeld Anwendungseigenschaften auf die Registerkarte **Sicherheit** .
+2.  Klicken Sie im Dialogfeld Anwendungseigenschaften auf die **Registerkarte** Sicherheit.
 
-3.  Wählen Sie im Feld **Authentifizierungs Ebene für Anrufe** die entsprechende Ebene aus. Die folgenden Ebenen sind von der niedrigsten zur höchsten Sicherheit geordnet:
+3.  Wählen Sie **im Feld Authentifizierungsebene für** Aufrufe die entsprechende Ebene aus. Die Ebenen sind wie folgt und von der niedrigsten zur höchsten Sicherheit geordnet:
 
     -   **Keine**. Es erfolgt keine Authentifizierung.
-    -   **Verbinden** Sie sich. Authentifiziert Anmeldeinformationen nur dann, wenn die Verbindung hergestellt wurde.
-    -   **Aufgerufen** wird. Authentifiziert am Anfang jedes Aufrufs die Anmeldeinformationen.
-    -   **Paket**. Authentifiziert Anmeldeinformationen und überprüft, ob alle Aufrufdaten empfangen wurden. Dies ist die Standardeinstellung für com+-Server Anwendungen.
-    -   **Paketintegrität**. Authentifiziert Anmeldeinformationen und stellt sicher, dass während der Übertragung keine Aufrufdaten geändert wurden.
-    -   **Paket Datenschutz**. Authentifiziert Anmeldeinformationen und verschlüsselt das Paket, einschließlich der Daten sowie der Identität und Signatur des Absenders.
+    -   **Verbinden**. Authentifiziert Anmeldeinformationen nur dann, wenn die Verbindung hergestellt wurde.
+    -   **Rufen Sie auf.** Authentifiziert am Anfang jedes Aufrufs die Anmeldeinformationen.
+    -   **Paket**. Authentifiziert Anmeldeinformationen und überprüft, ob alle Aufrufdaten empfangen wurden. Dies ist die Standardeinstellung für COM+-Serveranwendungen.
+    -   **Paketintegrität.** Authentifiziert Anmeldeinformationen und stellt sicher, dass während der Übertragung keine Aufrufdaten geändert wurden.
+    -   **Paketschutz**. Authentifiziert Anmeldeinformationen und verschlüsselt das Paket, einschließlich der Daten sowie der Identität und Signatur des Absenders.
 
 4.  Klicken Sie auf **OK**.
 
@@ -36,7 +36,7 @@ Wenn Sie eine Authentifizierungs Ebene für eine Anwendung festlegen, legen Sie 
 
 <dl> <dt>
 
-[Aktivieren der Authentifizierung für eine Bibliotheks Anwendung](enabling-authentication-for-a-library-application.md)
+[Aktivieren der Authentifizierung für eine Bibliotheksanwendung](enabling-authentication-for-a-library-application.md)
 </dt> </dl>
 
  

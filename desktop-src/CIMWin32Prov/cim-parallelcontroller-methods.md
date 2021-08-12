@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ parallelcontroller-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ ParallelController-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 5AF9DB0B-614A-4595-99E8-BA54960B0310
 ms.tgt_platform: multiple
-title: CIM_ParallelController Methoden
+title: CIM_ParallelController-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e8b6a3779ff7c419e866bce62fa292f2f625297
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6d31db14df95f9e228f9dbaa2170986c9629d077afacbbfc1ce4d4befe8d9402
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118679076"
 ---
-# <a name="cim_parallelcontroller-methods"></a>CIM \_ parallelcontroller-Methoden
+# <a name="cim_parallelcontroller-methods"></a>CIM \_ ParallelController-Methoden
 
-Die [**CIM \_ parallelcontroller**](cim-parallelcontroller.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ ParallelController-Klasse**](cim-parallelcontroller.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

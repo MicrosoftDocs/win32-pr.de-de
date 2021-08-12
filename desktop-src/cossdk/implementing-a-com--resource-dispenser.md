@@ -1,42 +1,42 @@
 ---
-description: Implementieren eines com+-Ressourcen Verteilers
+description: Implementieren eines COM+-Ressourcensenders
 ms.assetid: 083c5962-f55a-435a-964e-fdc868f9bd3d
-title: Implementieren eines com+-Ressourcen Verteilers
+title: Implementieren eines COM+-Ressourcensenders
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a81e189f3bfc5025bc949ef6e5bc82bf9408c339
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7b9c37de2a4910af908bdc3f2e38f1c1b55699b133a59a818b8a09236f8c0a38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118547892"
 ---
-# <a name="implementing-a-com-resource-dispenser"></a>Implementieren eines com+-Ressourcen Verteilers
+# <a name="implementing-a-com-resource-dispenser"></a>Implementieren eines COM+-Ressourcensenders
 
-Die folgenden Schritte beschreiben ein allgemeines Verfahren zum Implementieren eines com+-Ressourcen Verteilers:
+In den folgenden Schritten wird ein allgemeines Verfahren für die Implementierung eines COM+-Ressourcensenders beschrieben:
 
-1.  Entscheiden Sie sich für das **restypid** -Format, in dem die Unterschiede zwischen den Ressourcen voneinander kategorisiert werden.
+1.  Entscheiden Sie sich **für das RESTYPID-Format,** das kategorisiert, wie sich Ihre Ressourcen voneinander unterscheiden.
 
-2.  Verwenden Sie die Header Datei bzw. die Bibliothek "mtxdm. h" und "mtxdm. lib".
+2.  Verwenden Sie die Headerdatei mtxdm.h bzw. die Mtxdm.lib-Bibliothek.
 
-3.  Erstellen Sie eine DLL, die die [**idispenser Server Driver**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispenserdriver) -Schnittstelle und die API implementiert, die Sie für Anwendungen verfügbar machen möchten.
+3.  Erstellen Sie eine DLL, die die [**IDispenserDriver-Schnittstelle**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispenserdriver) und die API implementiert, die Sie für Anwendungen verfügbar machen möchten.
 
-4.  Aufrufen der [**getdispenser-Manager**](/windows/desktop/api/MtxDM/nf-mtxdm-getdispensermanager) -Funktion beim Start ([*DllMain*](/windows/desktop/Dlls/dllmain) oder ersten Aufrufen der Dispenser-API). Dies gibt einen Zeiger auf die [**idispenser Manager Manager**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispensermanager) -Schnittstelle des Dispenser-Managers zurück.
+4.  Rufen Sie beim Start ([*DllMain*](/windows/desktop/Dlls/dllmain) oder erster Aufruf der Bibliotheks-API) die [**GetDispenserManager-Funktion**](/windows/desktop/api/MtxDM/nf-mtxdm-getdispensermanager) auf. Dadurch wird ein Zeiger auf die [**IDispenserManager-Schnittstelle des Versender-Managers**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispensermanager) zurückgegeben.
 
-5.  Wenden Sie [**idispenser Server Manager:: registerdispenser**](/windows/desktop/api/ComSvcs/nf-comsvcs-idispensermanager-registerdispenser)an, und übergeben Sie einen Zeiger auf Ihre Implementierung von [**idispenser Server Driver**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispenserdriver). Dies bewirkt, dass der Dispenser-Manager einen Halter (Pooling-Manager) für den Ressourcen Verteiler erstellt und dann den Zeiger auf Ihre [**ihälter**](/windows/desktop/api/ComSvcs/nn-comsvcs-iholder) -Schnittstelle zurückgibt.
+5.  Rufen [**Sie IDispenserManager::RegisterDispenser**](/windows/desktop/api/ComSvcs/nf-comsvcs-idispensermanager-registerdispenser)auf, und übergeben Sie einen Zeiger auf Ihre Implementierung von [**IDispenserDriver**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispenserdriver). Dies bewirkt, dass der Versender-Manager einen Halter (Pooling-Manager) für Ihren Ressourcensender erstellt und dann den Zeiger auf Ihre [**IHolder-Schnittstelle zurücksendet.**](/windows/desktop/api/ComSvcs/nn-comsvcs-iholder)
 
-6.  Speichern Sie diesen Zeiger, damit Sie [**ihälter:: Zuweisung**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-allocresource) und [**ihälter:: freeresource**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-freeresource)aufrufen können.
+6.  Store sie diesen Zeiger, damit Sie [**IHolder::AllocResource**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-allocresource) und [**IHolder::FreeResource aufrufen können.**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-freeresource)
 
-7.  Sie können jetzt (als Reaktion auf Aufrufe ihrer API) Aufrufe an " [**zugriffsource**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-allocresource) " und " [**freeresource**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-freeresource)" tätigen. " **Zuweisung** " ist zunächst eine Antwort auf die [**CreateResource**](/windows/desktop/api/ComSvcs/nf-comsvcs-idispenserdriver-createresource) -Methode, **die später jedoch** aus dem wachsenden Ressourcenpool bedient wird.
+7.  Sie können jetzt (als Reaktion auf Aufrufe Ihrer API) Aufrufe an [**AllocResource**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-allocresource) und [**FreeResource ausführen.**](/windows/desktop/api/ComSvcs/nf-comsvcs-iholder-freeresource) **AllocResource antwortet** zunächst, indem es zurück zu Ihrer [**CreateResource-Methode**](/windows/desktop/api/ComSvcs/nf-comsvcs-idispenserdriver-createresource) aufruft, aber spätere **AllocResource-Aufrufe** werden aus dem wachsenden Ressourcenpool aus beantwortet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konzepte des com+-Ressourcen Verteilers](com--resource-dispenser-concepts.md)
+[KONZEPTE DES COM+-Ressourcensenders](com--resource-dispenser-concepts.md)
 </dt> <dt>
 
-[Com+-Ressourcen Verteiler Schnittstellen](com--resource-dispenser-interfaces.md)
+[COM+-Ressourcenspenderschnittstellen](com--resource-dispenser-interfaces.md)
 </dt> </dl>
 
  

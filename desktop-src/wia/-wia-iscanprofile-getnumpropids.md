@@ -1,7 +1,7 @@
 ---
 description: Ruft die Anzahl der Eigenschaften-IDs in einem Profil ab.
 ms.assetid: fa587c8a-8d09-4dfc-938a-5ec8cc9265f5
-title: 'Iscanprofile:: getnumpropids-Methode (Scanprofile. h)'
+title: IScanProfile::GetNumPropIDS-Methode (Scanprofile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Scanprofile.h
-ms.openlocfilehash: 13d8d276ca4b849fc1a2ae108369f84354d44361
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b8193259844732b708e56ba5fb191bd9ed7f9bf8fac27609c256b4df9cc7ccb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441475"
 ---
-# <a name="iscanprofilegetnumpropids-method"></a>Iscanprofile:: getnumpropids-Methode
+# <a name="iscanprofilegetnumpropids-method"></a>IScanProfile::GetNumPropIDS-Methode
 
 Ruft die Anzahl der Eigenschaften-IDs in einem Profil ab.
 
@@ -39,10 +39,10 @@ HRESULT GetNumPropIDS(
 
 <dl> <dt>
 
-*NUM* \[ vorgenommen\]
+*num* \[ out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
 Die Anzahl der Eigenschaften-IDs im Profil.
 
@@ -50,9 +50,9 @@ Die Anzahl der Eigenschaften-IDs im Profil.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,21 +60,21 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofile. h</dt> </dl>    |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofile.h</dt> </dl>    |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iscanprofile**](-wia-iscanprofile.md)
+[**IScanProfile**](-wia-iscanprofile.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

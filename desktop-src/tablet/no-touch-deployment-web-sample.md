@@ -1,28 +1,28 @@
 ---
-description: In diesem Beispiel wird gezeigt, wie Sie eine verwaltete Tablet PC-Anwendung über das Internet mithilfe der No-Touchscreen-Bereitstellung bereitstellen.
+description: In diesem Beispiel wird gezeigt, wie Sie eine verwaltete Tablet PC-Anwendung über das Web bereitstellen, indem Sie die No-Touch-Bereitstellung verwenden.
 ms.assetid: d226bd67-e20d-431b-b0c3-9361b00a9340
-title: No-Touch Bereitstellungs-webbeispiel
+title: No-Touch Deployment Web Sample
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a0742deef8ea9b418fba6de4724975ee27693f8
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 7d8fb9989785dc081022c2e76d8fade6d48bf521b3f27449ff5aac963706f356
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104530443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449651"
 ---
-# <a name="no-touch-deployment-web-sample"></a>No-Touch Bereitstellungs-webbeispiel
+# <a name="no-touch-deployment-web-sample"></a>No-Touch Deployment Web Sample
 
-In diesem Beispiel wird gezeigt, wie Sie eine verwaltete Tablet PC-Anwendung über das Internet mithilfe der No-Touchscreen-Bereitstellung bereitstellen. Sie sollten sich mit den Konzepten vertraut machen, die in [der .NET Framework bereit](/documentation/?url=%2flibrary%2fdv_vstechart%2fhtml%2fvbtchno-touchdeploymentinnetframework.asp)gestellt werden. Auf dem Computer muss Microsoft Internetinformationsdienste (IIS) installiert sein, um dieses Beispiel ausführen zu können.
+In diesem Beispiel wird gezeigt, wie Sie eine verwaltete Tablet PC-Anwendung über das Web bereitstellen, indem Sie die No-Touch-Bereitstellung verwenden. Sie sollten mit den Konzepten vertraut sein, die unter [No-Touch Deployment (No-Touch-Bereitstellung) in der .NET Framework.](/documentation/?url=%2flibrary%2fdv_vstechart%2fhtml%2fvbtchno-touchdeploymentinnetframework.asp) Auf Ihrem Computer muss Microsoft-Internetinformationsdienste (IIS) installiert sein, um dieses Beispiel ausführen zu können.
 
 ## <a name="overview"></a>Übersicht
 
-Bei der Bereitstellung ohne Fingereingabe können Tablet PCWindows Forms-Anwendungen-Desktop Anwendungen, die mithilfe der Klassen im System. Windows. Forms-Namespace von Microsoft .NET Framework und Microsoft Windows XP Tablet PC Edition Development Kit 1,7 erstellt wurden, heruntergeladen, installiert und direkt auf den Computern der Benutzer ausgeführt werden, ohne dass die Registrierung oder die freigegebenen System Komponenten geändert werden müssen.
+Bei der No-Touch-Bereitstellung verwenden Tablet PCWindows Forms-Anwendungen Desktopanwendungen, die mithilfe der Klassen im System erstellt wurden. Windows. Der Formularnamespace von Microsoft .NET Framework und microsoft Windows XP Tablet PC Edition Development Kit 1.7 kann heruntergeladen, installiert und direkt auf den Computern der Benutzer ausgeführt werden, ohne dass die Registrierung oder freigegebenen Systemkomponenten geändert werden.
 
-In diesem Beispiel wird das ursprüngliche Projekt für das [Formular Beispiel "Automatische Ansprüche](auto-claims-form-sample.md)", "autoclaims" und ein Installer-Projekt, "autoclaims \_ notouchweb", bereitstellt. Nachdem Sie kompiliert und ausgeführt wurden, erstellt das Installer-Projekt ein neues virtuelles Stammverzeichnis, das auch autoclaims \_ notouchweb genannt wird. Das Installationsprogramm kopiert eine Datei default.htm, die einen Link zur AutoClaims.exe Assembly enthält. Navigieren Sie zum Starten der Rich Client-Anwendung mit Microsoft Internet Explorer zum virtuellen Stammverzeichnis, und klicken Sie dann auf der Seite default.htm auf den Link.
+In diesem Beispiel wird das ursprüngliche Projekt für [Auto Claims Form Sample](auto-claims-form-sample.md), AutoClaims und das Installationsprojekt AutoClaims \_ NoTouchWeb verwendet. Nach der Kompilierung und Ausführung erstellt das Installationsprogrammprojekt einen neuen virtuellen Stamm, auch als AutoClaims \_ NoTouchWeb bezeichnet. Das Installationsprogramm kopiert eine Datei default.htm, die einen Link zur AutoClaims.exe enthält. Um die Rich Client-Anwendung zu starten, navigieren Sie zum virtuellen Stamm mit Microsoft Internet Explorer, und klicken Sie dann auf den Link auf der default.htm Seite.
 
 > [!Note]  
-> Zum virtuellen Stammverzeichnis müssen Sie IIS (z. b. https://localhost/AutoClaims\_NoTouchWeb/default.htm) und nicht direkt über das Dateisystem) navigieren, damit die Anwendung in der Internet Explorer-Anwendungsdomäne funktioniert.
+> Sie müssen über IIS zum virtuellen Stamm navigieren (z. B. und nicht direkt über das Dateisystem), damit die Anwendung in der Internet Explorer https://localhost/AutoClaims\_NoTouchWeb/default.htm) funktioniert.
 
  
 
@@ -40,16 +40,16 @@ In diesem Beispiel wird das ursprüngliche Projekt für das [Formular Beispiel "
 
 
 
-## <a name="no-touch-deployment-requirements"></a>No-Touch Bereitstellungs Anforderungen
+## <a name="no-touch-deployment-requirements"></a>No-Touch Bereitstellungsanforderungen
 
-Alle abhängigen Assemblys müssen sich entweder im Assemblysuchpfad oder im Stammverzeichnis des virtuellen Verzeichnisses der Website befinden. Das \_ Bereitstellungs Projekt "autoclaims notouchweb" installiert die Assembly und die verweisende Seite (default.htm) im selben virtuellen Stammverzeichnis (autoclaims \_ notouchweb).
+Alle abhängigen Assemblys müssen sich entweder im Assemblysuchpfad oder im Stammverzeichnis des virtuellen Verzeichnisses der Website befinden. Das Bereitstellungsprojekt AutoClaims NoTouchWeb installiert die Assembly und die verweisende Seite default.htm im gleichen virtuellen Stamm \_ (AutoClaims \_ NoTouchWeb).
 
 > [!Note]  
-> Die kompilierten webbeispiele werden von der Standard Installationsoption für das SDK nicht installiert. Sie müssen eine benutzerdefinierte Installation durchführen und die unter Option "vorkompilierte webbeispiele" auswählen, um Sie zu installieren.
+> Die kompilierten Webbeispiele werden nicht von der Standardinstallationsoption für das SDK installiert. Sie müssen eine benutzerdefinierte Installation abschließen und die Unteroption "Vor kompilierte Webbeispiele" auswählen, um sie zu installieren.
 
  
 
-Weitere Informationen zur Verwendung von frei Hand Eingaben im Web finden Sie unter frei Hand Eingaben [im Web](ink-on-the-web.md).
+Weitere Informationen zur Verwendung von Ink im Web finden Sie unter [Ink on the Web (Ink im Web).](ink-on-the-web.md)
 
  
 

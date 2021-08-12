@@ -1,7 +1,7 @@
 ---
-description: Wird von Anwendungen verwendet, um dem Benutzer ein Dialogfeld für das Gerät anzuzeigen.
+description: Wird von Anwendungen verwendet, um dem Benutzer ein Gerätedialogfeld anzuzeigen.
 ms.assetid: 3b486220-32ab-4d6c-872c-684f9d1ee660
-title: Devicedialog-Funktion (wiadevd. h)
+title: DeviceDialog-Funktion (Wiadevd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 7389b0466dadf530da6fb7cd386d8a57d92cf1c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de8a3d36472d51c24a2c007ad7be0be371a0b5d8bb39e75f457e204250e8f53b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441678"
 ---
-# <a name="devicedialog-function"></a>Devicedialog-Funktion
+# <a name="devicedialog-function"></a>DeviceDialog-Funktion
 
-Wird von Anwendungen verwendet, um dem Benutzer ein Dialogfeld für das Gerät anzuzeigen.
+Wird von Anwendungen verwendet, um dem Benutzer ein Gerätedialogfeld anzuzeigen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT WINAPI DeviceDialog(
 
 <dl> <dt>
 
-*pdevicedialogdata* \[ in\]
+*pDeviceDialogData* \[ In\]
 </dt> <dd>
 
-Typ: **pdevicedialogdata**
+Typ: **PDEVICEDIALOGDATA**
 
-Die [**devicedialogdata**](-wia-devicedialogdata.md) , die zum Erstellen des Dialog Felds für das Gerät verwendet werden soll.
+Der [**DEVICEDIALOGDATA-Wert,**](-wia-devicedialogdata.md) der zum Erstellen des Gerätedialogfelds verwendet werden soll.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Die [**devicedialogdata**](-wia-devicedialogdata.md) , die zum Erstellen des Dia
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,18 +61,18 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Wiadevd. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Devicedialogdata**](-wia-devicedialogdata.md)
+[**DEVICEDIALOGDATA**](-wia-devicedialogdata.md)
 </dt> </dl>
 
  

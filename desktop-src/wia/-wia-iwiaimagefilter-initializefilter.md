@@ -1,7 +1,7 @@
 ---
-description: Initialisiert den Filter. Wird von der Windows-Abbild Beschaffung (WIA) 2,0 vor jedem Herunterladen des Images aufgerufen.
+description: Initialisiert den Filter. Wird von Windows Image Acquisition (WIA) 2.0 vor jedem Imagedownload aufgerufen.
 ms.assetid: 0487900d-2103-4314-b18d-58ff97d6f524
-title: 'Iwiaimagefilter:: initializefilter-Methode (WIA. h)'
+title: IWiaImageFilter::InitializeFilter-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: a113c9493128a634ce61ccf7c0362bf7a9767f72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43b818c3adc9926c4ba27f11f5d489ffc0b97e4443d0427e7a12067e9062072a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118440445"
 ---
-# <a name="iwiaimagefilterinitializefilter-method"></a>Iwiaimagefilter:: initializefilter-Methode
+# <a name="iwiaimagefilterinitializefilter-method"></a>IWiaImageFilter::InitializeFilter-Methode
 
-Initialisiert den Filter. Wird von der Windows-Abbild Beschaffung (WIA) 2,0 vor jedem Herunterladen des Images aufgerufen.
+Initialisiert den Filter. Wird von Windows Image Acquisition (WIA) 2.0 vor jedem Imagedownload aufgerufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT InitializeFilter(
 
 <dl> <dt>
 
-*pWiaItem2* \[ in\]
+*pWiaItem2* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWiaItem2**](-wia-iwiaitem2.md) \** _
+Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\***
 
-Gibt einen Zeiger auf das [_ *IWiaItem2* *](-wia-iwiaitem2.md) -Element an, das das Vorschaubild darstellt.
+Gibt einen Zeiger auf das [**IWiaItem2-Element**](-wia-iwiaitem2.md) an, das das Vorschaubild darstellt.
 
 </dd> <dt>
 
-*pwiatransfercallback* \[ in\]
+*pWiaTransferCallback* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwiatransfercallback**](-wia-iwiatransfercallback.md) \** _
+Typ: **[ **IWiaTransferCallback**](-wia-iwiatransfercallback.md)\***
 
-Gibt einen Zeiger auf die [_ *iwiatransfercallback* *](-wia-iwiatransfercallback.md) -Schnittstelle der Anwendung an.
+Gibt einen Zeiger auf die [**IWiaTransferCallback-Schnittstelle**](-wia-iwiatransfercallback.md) der Anwendung an.
 
 </dd> </dl>
 
@@ -62,11 +62,11 @@ Gibt einen Zeiger auf die [_ *iwiatransfercallback* *](-wia-iwiatransfercallback
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn eine Anwendung den [**Download**](-wia-iwiatransfer-download.md) aufruft und eine Anwendung die Funktion der WIA 2,0-Vorschau Komponente aufruft `GetNewPreview` . **Iwiaimagefilter:: initializefilter** speichert die Verweise auf *pWiaItem2* und *pwiatransfercallback* , um diese Funktionen zu übergeben. Diese beiden Schnittstellen Zeiger sollten als Element Variablen gespeichert werden, und [IUnknown:: adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) sollte für jede aufgerufen werden. Die Schnittstellen Zeiger werden auch in der Implementierung von " [**transfercallback**](-wia-iwiatransfercallback-transfercallback.md) " und " [**getnextstream**](-wia-iwiatransfercallback-getnextstream.md) " des Filters während der Abbild Erfassung benötigt.
+Diese Methode wird aufgerufen, wenn eine Anwendung [**Download**](-wia-iwiatransfer-download.md) aufruft und wenn eine Anwendung die Funktion der WIA 2.0 Preview-Komponente `GetNewPreview` aufruft. **IWiaImageFilter::InitializeFilter** speichert die Verweise auf *pWiaItem2* und *pWiaTransferCallback,* um sie an diese Funktionen zu übergeben. Diese beiden Schnittstellenzeiger sollten als Membervariablen gespeichert werden, und [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) sollte jeweils aufgerufen werden. Die Schnittstellenzeiger werden auch in der Implementierung des Filters von [**TransferCallback**](-wia-iwiatransfercallback-transfercallback.md) und [**GetNextStream**](-wia-iwiatransfercallback-getnextstream.md) während der Imageerfassung benötigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,10 +74,10 @@ Diese Methode wird aufgerufen, wenn eine Anwendung den [**Download**](-wia-iwiat
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

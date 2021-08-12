@@ -4,12 +4,12 @@ ms.assetid: d29d70d7-8a0b-4fa5-afb7-ba115028e115
 title: System.Security.EncryptionOwners
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d381b009943159cfc12e13750b2aeb6181401df0
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 3ef7374fd27a8219d4bf009e9aa1f0b2bd17398ee0f4bbe93b751f7b8c0678d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118464780"
 ---
 # <a name="systemsecurityencryptionowners"></a>System.Security.EncryptionOwners
 
@@ -62,7 +62,7 @@ propertyDescription
       type = Multivalue String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

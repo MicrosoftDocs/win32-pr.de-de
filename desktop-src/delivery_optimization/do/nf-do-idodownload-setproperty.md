@@ -1,8 +1,8 @@
 ---
-title: 'Idodownload:: SetProperty-Methode'
-description: Legt eine Download Eigenschaft fest.
+title: IDODownload::SetProperty-Methode
+description: Legt eine Downloadeigenschaft fest.
 keywords:
-- 'Idodownload:: SetProperty-Methode'
+- IDODownload::SetProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/03/2019
-ms.openlocfilehash: 0d496f49851aab665e49f3aaeb51e4b941d6c183
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: a7d966edb083107b80f0723bce195bfc588797efb8ad1931e0e75a468bec5a3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103719565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118543899"
 ---
-# <a name="idodownloadsetproperty-method"></a>Idodownload:: SetProperty-Methode
+# <a name="idodownloadsetproperty-method"></a>IDODownload::SetProperty-Methode
 
-Legt eine Download Eigenschaft fest. Die-Methode akzeptiert einen Zeiger auf eine **Variante** , die eine bestimmte Eigenschaft enthält, die auf den Download angewendet werden soll.
+Legt eine Downloadeigenschaft fest. Die -Methode akzeptiert  einen Zeiger auf eine VARIANT-Eigenschaft, die eine bestimmte Eigenschaft enthält, die auf den Download angewendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,25 +38,25 @@ HRESULT SetProperty(
 
 `propId`
 
-Die erforderliche eigen schafts-ID, die festgelegt werden soll (vom Typ **dodownloadproperty**).
+Die erforderliche Festzulegende Eigenschaften-ID (vom Typ **DODownloadProperty**).
 
 `propVal`
 
-Der festzulegende Eigenschafts Wert, der in einem **Variant** gespeichert wird.
+Der festzulegende Eigenschaftswert, der in einer **VARIANT** gespeichert wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](/windows/desktop/com/structure-of-com-error-codes) - [Fehlercode](/windows/desktop/com/com-error-codes-10)zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT-Fehlercode**](/windows/desktop/com/structure-of-com-error-codes) [](/windows/desktop/com/com-error-codes-10)zurückgegeben.
 
-|Rückgabewert|BESCHREIBUNG|
+|Rückgabewert|Beschreibung|
 |-|-|
-|DO_E_UNKNOWN_PROPERTY_ID|*PROPID* ist unbekannt.|
+|DO_E_UNKNOWN_PROPERTY_ID|*propId* ist unbekannt.|
 |DO_E_INVALID_STATE|Der Download befindet sich derzeit nicht in einem Zustand, der das Festlegen von Eigenschaften zulässt.|
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Do. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Header** | Do.h |

@@ -4,12 +4,12 @@ ms.assetid: FDCF2D92-5D37-43E4-B94A-66CA7E75AA88
 title: Zusätzliche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f09ce4783579bbae1e5a6f56964cb89ce1e04933
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28269966588b4a16ed819b6bd0d790e02354128bb8bf7d88c9846cd3b54cdeba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118463915"
 ---
 # <a name="supplemental"></a>Zusätzliche
 
@@ -19,10 +19,10 @@ ms.locfileid: "106346704"
 
 
 
-| Thema                                                                                  | BESCHREIBUNG                                                                                                                                                                                                                                                |
+| Thema                                                                                  | Beschreibung                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [System. Supplemental. albumId](https://www.bing.com/search?q=System.Supplemental.AlbumID)<br/>       | Enthält die Bezeichner der Alben, in denen das Element Mitglied ist. Kann in Verbindung mit dem Album-Element in den Content Indexer-APIs verwendet werden, um andere apps über bildalben zu benachrichtigen, die vom Benutzer erstellt oder bereits erstellt wurden.<br/> |
-| [System. Supplemental. ResourceId](https://www.bing.com/search?q=System.Supplemental.ResourceId)<br/> | Enthält den Bezeichner für das Element im Remote Synchronisierungs Dienst. Wird verwendet, um eine Datei auf dem System mit denen zu vergleichen, die in der Cloud verfügbar sind.<br/>                                                                                               |
+| [System.Supplemental.AlbumID](https://www.bing.com/search?q=System.Supplemental.AlbumID)<br/>       | Enthält die Bezeichner der Alben, deren Member das Element ist. Kann in Verbindung mit dem Element Album in den Content Indexer-APIs verwendet werden, um andere Apps über Bildalben zu benachrichtigen, die der Benutzer erstellt hat oder die Apps bereits erstellt haben.<br/> |
+| [System.Supplemental.ResourceId](https://www.bing.com/search?q=System.Supplemental.ResourceId)<br/> | Enthält den Bezeichner für das Element im Remotesynchronisierungsdienst. Wird verwendet, um eine Datei im System mit denen zu vergleichen, die in der Cloud verfügbar sind.<br/>                                                                                               |
 
 
 

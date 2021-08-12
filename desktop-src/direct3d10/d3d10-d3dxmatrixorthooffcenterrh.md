@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixOrthoOffCenterRH-Funktion (D3DX10Math.h): Erstellt eine benutzerdefinierte, rechtshändige orthografische Projektionsmatrix.'
+description: 'D3DXMatrixOrthoOffCenterRH-Funktion (D3DX10Math.h): Erstellt eine angepasste, rechtshändige orthografische Projektionsmatrix.'
 ms.assetid: 01d4d61e-de7b-4431-a168-68a50b1d6021
 title: D3DXMatrixOrthoOffCenterRH-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0b41038021cc34cb02961cb9894415995955404c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 79594b606124f6b3634e7b379bda0cb664cbec31b417112641d06f335a16ce04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118541241"
 ---
 # <a name="d3dxmatrixorthooffcenterrh-function-d3dx10mathh"></a>D3DXMatrixOrthoOffCenterRH-Funktion (D3DX10Math.h)
 
@@ -96,16 +96,16 @@ Maximaler y-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler Z-Wert des Ansichtsvolumes.
+Minimaler Z-Wert des Ansichtsvolumens.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*( )* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler Z-Wert des Ansichtsvolumes.
+Maximaler Z-Wert des Ansichtsvolumens.
 
 </dd> </dl>
 
@@ -115,9 +115,9 @@ Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
 Zeiger auf die resultierende [**D3DXMATRIX.**](d3d10-d3dxmatrix.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**D3DXMatrixOrthoRH-Funktion**](d3d10-d3dxmatrixorthorh.md) ist ein Sonderfall der D3DXMatrixOrthoOffCenterRH-Funktion. Verwenden Sie die folgenden Werte, um dieselbe Projektion mit D3DXMatrixOrthoOffCenterRH zu erstellen:
+Die [**D3DXMatrixOrthoRH-Funktion**](d3d10-d3dxmatrixorthorh.md) ist ein Sonderfall der D3DXMatrixOrthoOffCenterRH-Funktion. Um dieselbe Projektion mit D3DXMatrixOrthoOffCenterRH zu erstellen, verwenden Sie die folgenden Werte:
 
 l = -w/2,
 
@@ -127,7 +127,7 @@ b = -h/2 und
 
 t = h/2.
 
-Alle Parameter der D3DXMatrixOrthoOffCenterRH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
+Alle Parameter der D3DXMatrixOrthoOffCenterRH-Funktion sind Abstände im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumens.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixOrthoOffCenterRH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -147,14 +147,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
