@@ -1,7 +1,7 @@
 ---
-description: Öffnet die Shimdatenbank.
+description: Öffnet die Shim-Datenbank.
 ms.assetid: ece1bd39-20a1-42e6-8e2b-1d38f7223d42
-title: Sdbinitdatabase-Funktion
+title: SdbInitDatabase-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 7a3c63fa712aec988dbf13c4fb7f9fddbf159fdd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0504b12254658250820cb3ecac3e9e47ee2a6ca242b15600fa69241b597bb0dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104482894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118666381"
 ---
-# <a name="sdbinitdatabase-function"></a>Sdbinitdatabase-Funktion
+# <a name="sdbinitdatabase-function"></a>SdbInitDatabase-Funktion
 
-Öffnet die Shimdatenbank.
+Öffnet die Shim-Datenbank.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,33 +40,33 @@ HSDB WINAPI SdbInitDatabase(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Dieser Parameter gibt das Format des Pfads im *pszdatabasepath* -Parameter an. Dieses Argument einen der folgenden Werte annehmen.
+Dieser Parameter gibt das Format des Pfads im *pszDatabasePath-Parameter* an. Dieses Argument einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                                                                                                      | Bedeutung                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| <span id="HID_DOS_PATHS"></span><span id="hid_dos_paths"></span><dl> <dt>**Versteckt \_ DOS- \_ Pfade**</dt> <dt>0x00000001</dt> </dl>                             | Ein MS-DOS-stilpfad.<br/>                                                                       |
-| <span id="HID_DATABASE_FULLPATH"></span><span id="hid_database_fullpath"></span><dl> <dt>**Versteckt \_ Daten Bank \_ Vollständiger Pfad**</dt> <dt>0x00000002</dt> </dl>     | Ein vollständiger Pfad.<br/>                                                                                |
-| <span id="HID_NO_DATABASE"></span><span id="hid_no_database"></span><dl> <dt>**Versteckt \_ Keine \_ Datenbank**</dt> <dt>0x00000004</dt> </dl>                       | Der *pszdatabasepath* -Parameter wird ignoriert, und es wird keine Datenbank geöffnet.<br/>                       |
-| <span id="HID_DATABASE_TYPE_MASK"></span><span id="hid_database_type_mask"></span><dl> <dt>**Versteckt \_ Datenbank \_ - \_ typmaske**</dt> <dt>0xF 00F 0000</dt> </dl> | Dieser Parameter gibt eine vordefinierte Datenbank an. Der *pszdatabasepath* -Parameter wird ignoriert.<br/> |
+| <span id="HID_DOS_PATHS"></span><span id="hid_dos_paths"></span><dl> <dt>**HID \_ \_DOS-PFADE**</dt> <dt>0x00000001</dt> </dl>                             | Ein MS-DOS-Stilpfad.<br/>                                                                       |
+| <span id="HID_DATABASE_FULLPATH"></span><span id="hid_database_fullpath"></span><dl> <dt>**HID \_ DATABASE \_ FULLPATH-0x00000002**</dt> <dt></dt> </dl>     | Ein vollständiger Pfad.<br/>                                                                                |
+| <span id="HID_NO_DATABASE"></span><span id="hid_no_database"></span><dl> <dt>**HID \_ NO \_ DATABASE**</dt> <dt>0x00000004</dt> </dl>                       | Der *pszDatabasePath-Parameter* wird ignoriert, und es wird keine Datenbank geöffnet.<br/>                       |
+| <span id="HID_DATABASE_TYPE_MASK"></span><span id="hid_database_type_mask"></span><dl> <dt>**HID \_ DATABASE \_ TYPE \_ MASK**</dt> <dt>0xF00F0000</dt> </dl> | Dieser Parameter gibt eine vordefinierte Datenbank an. Der *pszDatabasePath-Parameter* wird ignoriert.<br/> |
 
 
 
  
 
-Wenn *dwFlags* eine **versteckte \_ \_ Datentyp \_ Maske** enthält, kann dieser Parameter auch einen der folgenden Werte enthalten.
+Wenn *dwFlags* **HID DATA TYPE MASK \_ \_ \_ enthält,** kann dieser Parameter auch einen der folgenden Werte enthalten.
 
 
 
 | Wert                                                                                                                                                                                                                                                               | Bedeutung                                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| <span id="SDB_DATABASE_MAIN_SHIM"></span><span id="sdb_database_main_shim"></span><dl> <dt>**SDB \_ Datenbank- \_ Haupt- \_ Shim**</dt> <dt>0x80030000</dt> </dl>          | Anwendungsshimdatenbank.<br/>         |
-| <span id="SDB_DATABASE_MAIN_MSI"></span><span id="sdb_database_main_msi"></span><dl> <dt>**SDB \_ Datenbank- \_ Haupt- \_ MSI**</dt> <dt>0x80020000</dt> </dl>             | MSI-Datenbank.<br/>                      |
-| <span id="SDB_DATABASE_MAIN_DRIVERS"></span><span id="sdb_database_main_drivers"></span><dl> <dt>**SDB \_ \_Haupt \_ Treiber der Datenbank**</dt> <dt>0x80040000</dt> </dl> | Die Datenbank der zu blockierenden Treiber.<br/> |
+| <span id="SDB_DATABASE_MAIN_SHIM"></span><span id="sdb_database_main_shim"></span><dl> <dt>**SDB \_ DATABASE \_ MAIN \_ SHIM**</dt> <dt>0x80030000</dt> </dl>          | Anwendungss shim-Datenbank.<br/>         |
+| <span id="SDB_DATABASE_MAIN_MSI"></span><span id="sdb_database_main_msi"></span><dl> <dt>**SDB \_ \_ \_ DATENBANK-MSI-0X80020000**</dt> <dt></dt> </dl>             | MSI-Datenbank.<br/>                      |
+| <span id="SDB_DATABASE_MAIN_DRIVERS"></span><span id="sdb_database_main_drivers"></span><dl> <dt>**SDB \_ \_ \_ DATENBANK-HAUPTTREIBER**</dt> <dt>0X80040000</dt> </dl> | Datenbank mit zu blockierenden Treibern.<br/> |
 
 
 
@@ -74,16 +74,16 @@ Wenn *dwFlags* eine **versteckte \_ \_ Datentyp \_ Maske** enthält, kann dieser
 
 </dd> <dt>
 
-*pszdatabasepath* \[ in\]
+*pszDatabasePath* \[ In\]
 </dt> <dd>
 
-Der Pfad zur Datenbank. Dieser Parameter kann **null** sein, wenn der *dwFlags* -Parameter eine vordefinierte Datenbank angibt.
+Der Pfad zur Datenbank. Dieser Parameter kann NULL **sein,** wenn *der dwFlags-Parameter* eine vordefinierte Datenbank angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt ein Handle für die geöffnete Datenbank zurück.
+Die Funktion gibt ein Handle an die geöffnete Datenbank zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,26 +91,26 @@ Die-Funktion gibt ein Handle für die geöffnete Datenbank zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sdbgetapppatchdir**](sdbgetapppatchdir.md)
+[**SdbGetAppPatchDir**](sdbgetapppatchdir.md)
 </dt> <dt>
 
-[**Sdbgetmatchingexe**](sdbgetmatchingexe.md)
+[**SdbGetMatchingExe**](sdbgetmatchingexe.md)
 </dt> <dt>
 
-[**Sdbreleasematchingexe**](sdbreleasematchingexe.md)
+[**SdbReleaseMatchingExe**](sdbreleasematchingexe.md)
 </dt> <dt>
 
-[**Sdbtagrebtotagid**](sdbtagreftotagid.md)
+[**SdbTagRefToTagID**](sdbtagreftotagid.md)
 </dt> </dl>
 
  

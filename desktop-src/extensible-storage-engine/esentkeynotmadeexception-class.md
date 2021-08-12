@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentkeynotmadeexception-Klasse'
-title: Esentkeynotmadeexception-Klasse
+description: 'Weitere Informationen zu: EsentKeyNotAlignException-Klasse'
+title: EsentKeyNotAlignException-Klasse
 TOCTitle: EsentKeyNotMadeException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentKeyNotMadeException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentkeynotmadeexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9e77be995e6f06aaa7058455f9e0f64bd9721f6b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 90527fd1b5b0f696ed0f19408342d09a6e3f6595b6bcce5a23bbaf92fbd07469
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118264743"
 ---
-# <a name="esentkeynotmadeexception-class"></a>Esentkeynotmadeexception-Klasse
+# <a name="esentkeynotmadeexception-class"></a>EsentKeyNotAlignException-Klasse
 
-Basisklasse für JET_err. Keynotmade-Ausnahmen.
+Basisklasse für JET_err. KeyNot Ready-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentkeynotmadebug Exception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentKeyNotAlignException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,6 +72,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentkeynotmade Exception-Member](./esentkeynotmadeexception-members.md)
+[EsentKeyNotAlignException-Member](./esentkeynotmadeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

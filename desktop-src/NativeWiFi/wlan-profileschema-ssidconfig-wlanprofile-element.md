@@ -1,7 +1,7 @@
 ---
-description: Enthält mindestens eine SSIDs für drahtlose LANs.
+description: Enthält mindestens ein SSIDs für LANs für Funkverbindungen.
 ms.assetid: f9c46db8-2933-48e1-8cb3-effeb13c43ed
-title: Ssidconfig (wlanprofile)-Element
+title: SSIDConfig(WLANProfile)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 5665b385c3264ff9d36e79ad671c8f9e8377d4bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6df6edc3affa551d62473b616562257cd422fcc4a4021ea7e4ef05ba3c8af9dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118619041"
 ---
-# <a name="ssidconfig-wlanprofile-element"></a>Ssidconfig (wlanprofile)-Element
+# <a name="ssidconfig-wlanprofile-element"></a>SSIDConfig(WLANProfile)-Element
 
-Das ssidconfig (wlanprofile)-Element enthält mindestens eine SSIDs für drahtlose LANs.
+Das SSIDConfig-Element (WLANProfile) enthält mindestens ein SSIDs-Element für LANs für Funkverbindungen.
 
 ``` syntax
 <xs:element name="SSIDConfig"
@@ -90,24 +90,24 @@ Das ssidconfig (wlanprofile)-Element enthält mindestens eine SSIDs für drahtlo
 </xs:element>
 ```
 
-Das **ssidconfig** -Element wird vom [**wlanprofile**](wlan-profileschema-wlanprofile-element.md) -Element definiert.
+Das **SSIDConfig-Element** wird durch das [**WLANProfile-Element**](wlan-profileschema-wlanprofile-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                                    | type                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Element                                                                    | type                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |----------------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**hex**](wlan-profileschema-hex-ssid-element.md)                         |                                                                   | Enthält die SSID eines Drahtlos-LANs im Hexadezimal Format.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [**Benennen**](wlan-profileschema-name-ssid-element.md)                       |                                                                   | Enthält den Namen (Groß-/Kleinschreibung) der SSID eines drahtlosen LANs.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| [**nicht Broadcast**](wlan-profileschema-nonbroadcast-ssidconfig-element.md) | [boolean](/dotnet/api/system.boolean) | Gibt an, ob das Netzwerk seine SSID überträgt.<br/> Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf ESS festgelegt ist, kann dieser Wert entweder **true** oder **false** sein. Der Standardwert ist **true** , wenn dieses Element nicht vorhanden ist.<br/> Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf IBSS festgelegt ist, muss dieser Wert **false** lauten.<br/> **Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.<br/> |
-| [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md)                 |                                                                   | Enthält eine SSID für ein drahtloses LAN.<br/> **Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Höchstens ein [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md) -Element kann in einem Profil angezeigt werden.<br/>                                                                                                                                                                                                                                                                                                        |
+| [**Hex**](wlan-profileschema-hex-ssid-element.md)                         |                                                                   | Enthält die SSID eines WLAN im Hexadezimalformat.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [**Namen**](wlan-profileschema-name-ssid-element.md)                       |                                                                   | Enthält den Namen der SSID eines Wlan-Lans (unter Schreibung der Schreibung).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| [**nonBroadcast**](wlan-profileschema-nonbroadcast-ssidconfig-element.md) | [boolean](/dotnet/api/system.boolean) | Gibt an, ob das Netzwerk seine SSID überträgt.<br/> Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf ESS festgelegt ist, kann dieser Wert entweder **TRUE** oder **FALSE sein.** Der Standardwert ist **TRUE, wenn** dieses Element nicht vorhanden ist.<br/> Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf IBSS festgelegt ist, muss dieser Wert **FALSE sein.**<br/> **Windows XP mit SP3 und der Wlan-LAN-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.<br/> |
+| [**Ssid**](wlan-profileschema-ssid-ssidconfig-element.md)                 |                                                                   | Enthält eine SSID für ein WLAN.<br/> **Windows XP mit SP3 und der Wlan-LAN-API für Windows XP mit SP2:** In einem Profil kann nur ein [**SSID-Element**](wlan-profileschema-ssid-ssidconfig-element.md) angezeigt werden.<br/>                                                                                                                                                                                                                                                                                                        |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Beispiel Profile, die das **ssidconfig** -Element verwenden, finden Sie unter [Beispiele für Funk profile](wireless-profile-samples.md).
+Beispielprofile, die das **SSIDConfig-Element** verwenden, finden Sie unter [Beispiele für Funkprofile.](wireless-profile-samples.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,23 +115,23 @@ Beispiel Profile, die das **ssidconfig** -Element verwenden, finden Sie unter [B
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP3 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                |
-| Verteilbare Komponente<br/>          | Drahtlose LAN-API für Windows XP mit SP2<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP3-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                |
+| Verteilbare Komponente<br/>          | WLAN-API für Windows XP mit SP2<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**WLANProfile**](wlan-profileschema-wlanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**WLANProfile**](wlan-profileschema-wlanprofile-element.md)

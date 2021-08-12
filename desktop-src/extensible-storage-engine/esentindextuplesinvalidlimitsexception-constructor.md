@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentindextuplesinvalidlimitsexception-Konstruktor'
-title: Esentindextuplesinvalidlimitsexception-Konstruktor
+description: 'Weitere Informationen zu: EsentIndexTuplesInvalidLimitsException-Konstruktor'
+title: EsentIndexTuplesInvalidLimitsException-Konstruktor
 TOCTitle: 'EsentIndexTuplesInvalidLimitsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentIndexTuplesInvalidLimitsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentindextuplesinvalidlimitsexception.esentindextuplesinvalidlimitsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8b42d35b851154197a92df0c0c65e2f14575a68d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15c84a2198919c138b9c342ac6971472c35f1f9120307a6285fef7633259a109
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118267406"
 ---
-# <a name="esentindextuplesinvalidlimitsexception-constructor"></a>Esentindextuplesinvalidlimitsexception-Konstruktor
+# <a name="esentindextuplesinvalidlimitsexception-constructor"></a>EsentIndexTuplesInvalidLimitsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentindextuplesinvalidlimitsexception-Klasse.
+Initialisiert eine neue Instanz der EsentIndexTuplesInvalidLimitsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentIndexTuplesInvalidLimitsException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentindextuplesinvalidlimitsexception-Klasse](./esentindextuplesinvalidlimitsexception-class.md)
+[EsentIndexTuplesInvalidLimitsException-Klasse](./esentindextuplesinvalidlimitsexception-class.md)
 
-[Esentindextuplesinvalidlimitsexception-Elemente](./esentindextuplesinvalidlimitsexception-members.md)
+[EsentIndexTuplesInvalidLimitsException-Member](./esentindextuplesinvalidlimitsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

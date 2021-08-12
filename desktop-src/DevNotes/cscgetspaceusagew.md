@@ -1,7 +1,7 @@
 ---
-description: Ruft Informationen über den vom Offlinedateien Cache verwendeten Speicherplatz ab.
+description: Ruft Informationen über den vom Cache verwendeten Speicherplatz Offlinedateien ab.
 ms.assetid: 3a6fa548-0e9a-4138-a5ec-cde0aeb2b811
-title: Cscgetspaceusagew-Funktion
+title: CSCGetSpaceUsageW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Cscmig.dll
-ms.openlocfilehash: 608fd7736093ae1f8d131ede777a691e467de9de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8dd6d12c4e0267c97b93a812a4b66d3bd14a408dff0191686d4949ccbc958723
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667953"
 ---
-# <a name="cscgetspaceusagew-function"></a>Cscgetspaceusagew-Funktion
+# <a name="cscgetspaceusagew-function"></a>CSCGetSpaceUsageW-Funktion
 
 \[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden.\]
 
-Ruft Informationen über den vom Offlinedateien Cache verwendeten Speicherplatz ab.
+Ruft Informationen über den vom Cache verwendeten Speicherplatz Offlinedateien ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,56 +48,56 @@ BOOL WINAPI CSCGetSpaceUsageW(
 
 <dl> <dt>
 
-*lptzlocation* \[ in, out\]
+*lptzLocation* \[ in, out\]
 </dt> <dd>
 
-Der Verzeichnis Speicherort des Caches.
+Der Verzeichnisspeicherort des Caches.
 
 </dd> <dt>
 
-*dwSize* \[ in\]
+*dwSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *lptzlocation* -Puffers in Zeichen.
+Die Größe des *lptzLocation-Puffers* in Zeichen.
 
 </dd> <dt>
 
-*lpdwmaxspacehigh* \[ in, out\]
+*lpdwMaxSpaceHigh* \[ in, out\]
 </dt> <dd>
 
-Das höchst wertige **DWORD** -Wert der maximalen Anzahl von Bytes, die im Cache verfügbar sind.
+Das obere **DWORD der** maximalen Anzahl von Bytes, die im Cache verfügbar sind.
 
 </dd> <dt>
 
-*lpdwmaxspacelow* \[ in, out\]
+*lpdwMaxSpaceLow* \[ in, out\]
 </dt> <dd>
 
-Das **DWORD** in niedriger Reihenfolge mit der maximalen Anzahl von Bytes, die im Cache verfügbar sind.
+Das niedrige **DWORD der** maximalen Anzahl von Bytes, die im Cache verfügbar sind.
 
 </dd> <dt>
 
-*lpdwcurrentspacehigh* \[ in, out\]
+*lpdwCurrentSpaceHigh* \[ in, out\]
 </dt> <dd>
 
-Das höchst wertige **DWORD** der aktuellen Anzahl von Bytes, die im Cache verfügbar sind.
+Das obere **DWORD der** aktuellen Anzahl von Bytes, die im Cache verfügbar sind.
 
 </dd> <dt>
 
-*lpdwcurrentspacelow* \[ in, out\]
+*lpdwCurrentSpaceLow* \[ in, out\]
 </dt> <dd>
 
-Das **DWORD** mit niedriger Ordnung der aktuellen Anzahl von Bytes, die im Cache verfügbar sind.
+Das niedrige **DWORD der** aktuellen Anzahl von Bytes, die im Cache verfügbar sind.
 
 </dd> <dt>
 
-*lpcnttotalfiles* \[ in, out\]
+*lpcntTotalFiles* \[ in, out\]
 </dt> <dd>
 
 Die Gesamtanzahl der Dateien im Cache.
 
 </dd> <dt>
 
-*lpcnttotaldirs* \[ in, out\]
+*lpcntTotalDirs* \[ in, out\]
 </dt> <dd>
 
 Die Gesamtanzahl der Verzeichnisse im Cache.
@@ -106,11 +106,11 @@ Die Gesamtanzahl der Verzeichnisse im Cache.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich ist. Andernfalls wird **false** zurückgegeben.
+Diese Funktion gibt **TRUE zurück,** wenn sie erfolgreich ist. Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
-title: BM_SETSTYLE Meldung (Winuser. h)
-description: Legt den Stil einer Schaltfläche fest. Sie können diese Nachricht explizit senden oder das SetStyle-Makro der Schaltfläche verwenden \_ .
+title: BM_SETSTYLE Meldung (Winuser.h)
+description: Legt den Stil einer Schaltfläche fest. Sie können diese Nachricht explizit senden oder das Button \_ SetStyle-Makro verwenden.
 ms.assetid: 6439e68f-87fc-4a4a-8025-facc3c0e03e2
 keywords:
-- Windows-Steuerelemente für BM_SETSTYLE Meldung
+- BM_SETSTYLE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c080e1098d70b17e1e68bbbcd2d5598db79ef8f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 17f635a70bf806c6c26f5b236ea939bc453d27bf0fe135f8e2586aeb59021b9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118674418"
 ---
-# <a name="bm_setstyle-message"></a>BM- \_ SetStyle-Nachricht
+# <a name="bm_setstyle-message"></a>BM \_ SETSTYLE-Nachricht
 
-Legt den Stil einer Schaltfläche fest. Sie können diese Nachricht explizit senden oder das [**\_ SetStyle**](/windows/desktop/api/Windowsx/nf-windowsx-button_setstyle) -Makro der Schaltfläche verwenden.
+Legt den Stil einer Schaltfläche fest. Sie können diese Nachricht explizit senden oder das [**Button \_ SetStyle-Makro**](/windows/desktop/api/Windowsx/nf-windowsx-button_setstyle) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt den Stil einer Schaltfläche fest. Sie können diese Nachricht explizit sen
 *wParam* 
 </dt> <dd>
 
-Der Stil der Schaltfläche. Dieser Parameter kann eine Kombination von Schaltflächen Stilen sein. Eine Tabelle mit Schaltflächen Formaten finden Sie unter [Button Styles](button-styles.md).
+Das Schaltflächenformat. Dieser Parameter kann eine Kombination aus Schaltflächenstilen sein. Eine Tabelle mit Schaltflächenstilen finden Sie unter [Schaltflächenstile.](button-styles.md)
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) von *LPARAM* ist ein **boolescher** Wert, der angibt, ob die Schaltfläche neu gezeichnet werden soll. Mit dem Wert **true** wird die Schaltfläche neu gezeichnet. bei einem Wert von **false** wird die Schaltfläche nicht neu gezeichnet.
+[**LowORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) von *lParam* ist eine **BOOL,** die angibt, ob die Schaltfläche neu gezeichnet werden soll. Mit dem Wert **TRUE** wird die Schaltfläche neu gezeichnet. Der Wert **FALSE** hat die Schaltfläche nicht neu gezeichnet.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Diese Meldung gibt immer 0 (null) zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

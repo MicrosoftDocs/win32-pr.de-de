@@ -1,29 +1,29 @@
 ---
-title: Unvorhersehunmultiplizieren
-description: Verwenden Sie diesen Effekt zum Konvertieren eines Bilds von einem prämultiplizierten Alpha in ein unvorhersehvielfaches alpha.
+title: Unprämultiply-Effekt
+description: Verwenden Sie diesen Effekt, um ein Bild von einem prämultipliierten Alpha in ein nicht multipliediertes Alpha zu konvertieren.
 ms.assetid: A4FAF899-81DA-4BDA-98B4-DE63EC1664F5
 keywords:
-- unvorhersehunmultiplizieren
+- Unpremultiply-Effekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5628ea646443a08abffa4549ad25147deb609acf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a152803956b9839b881404be013c521dc0f5bfc764b2f07a8462275b523ba762
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118664878"
 ---
-# <a name="unpremultiply-effect"></a>Unvorhersehunmultiplizieren
+# <a name="unpremultiply-effect"></a>Unprämultiply-Effekt
 
-Verwenden Sie diesen Effekt zum Konvertieren eines Bilds von einem prämultiplizierten Alpha in ein unvorhersehvielfaches alpha. Der Effekt ersetzt jedes Eingabe Pixel `P = {R, G, B, A}` durch `P' = {R/A, G/A, B/A, A}` in der Ausgabe.
+Verwenden Sie diesen Effekt, um ein Bild von einem prämultipliierten Alpha in ein nicht multipliediertes Alpha zu konvertieren. Der Effekt ersetzt jedes Eingabepixel `P = {R, G, B, A}` `P' = {R/A, G/A, B/A, A}` durch in der Ausgabe.
 
 Dieser Effekt hat keine Eigenschaften.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Unpremultiply.
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Größe der Ausgabe Bitmap entspricht der Größe der Eingabe Bitmap.
+Die Größe der Ausgabebitmap ist mit der Größe der Eingabebitmap identisch.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,10 +31,10 @@ Die Größe der Ausgabe Bitmap entspricht der Größe der Eingabe Bitmap.
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TVM_SETBORDER Meldung (kommstrg. h)
-description: Legt die Größe des Rahmens für die Elemente in einem Strukturansicht-Steuerelement fest. Sie können die Nachricht explizit oder mithilfe des TreeView \_ setborder-Makros senden.
+title: TVM_SETBORDER Nachricht (Commctrl.h)
+description: Legt die Größe des Rahmens für die Elemente in einem Strukturansichtssteuerelement fest. Sie können die Nachricht explizit oder mithilfe des TreeView \_ SetBorder-Makros senden.
 ms.assetid: 468b46ae-2ab2-4753-a0af-7c644f75ce62
 keywords:
-- Windows-Steuerelemente für TVM_SETBORDER Meldung
+- TVM_SETBORDER Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b4401959e2579caab7f2cb4b6eed1ea34481ffa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d1c8cab133fb654e431638be96301325d68d9743109f84ed8def1ee9cc67c01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118669655"
 ---
-# <a name="tvm_setborder-message"></a>TVM- \_ setborder-Meldung
+# <a name="tvm_setborder-message"></a>TVM \_ SETBORDER-Nachricht
 
-**Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen.**
+**Für die interne Verwendung vorgesehen; nicht für die Verwendung in Anwendungen empfohlen.**
 
-Legt die Größe des Rahmens für die Elemente in einem Strukturansicht-Steuerelement fest. Sie können die Nachricht explizit oder mithilfe des [**TreeView \_ setborder**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setborder) -Makros senden.
+Legt die Größe des Rahmens für die Elemente in einem Strukturansichtssteuerelement fest. Sie können die Nachricht explizit oder mithilfe des [**TreeView \_ SetBorder-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setborder) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Legt die Größe des Rahmens für die Elemente in einem Strukturansicht-Steuerel
 *wParam* 
 </dt> <dd>
 
-Aktionsflags. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen:
+Aktionsflags. Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt:
 
 
 
 | Wert                                                                                                                                                         | Bedeutung                                                                                               |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| <span id="TVSBF_XBORDER"></span><span id="tvsbf_xborder"></span><dl> <dt>**tvsbf- \_ xborder**</dt> </dl> | Wendet die angegebene Rahmengröße auf die linke Seite der Elemente im Strukturansicht-Steuerelement an. <br/> |
-| <span id="TVSBF_YBORDER"></span><span id="tvsbf_yborder"></span><dl> <dt>**tvsbf \_ yborder**</dt> </dl> | Wendet die angegebene Rahmengröße auf den oberen Rand der Elemente im Strukturansicht-Steuerelement an.<br/>        |
+| <span id="TVSBF_XBORDER"></span><span id="tvsbf_xborder"></span><dl> <dt>**TVSBF \_ XBORDER**</dt> </dl> | Wendet die angegebene Rahmengröße auf die linke Seite der Elemente im Strukturansicht-Steuerelement an. <br/> |
+| <span id="TVSBF_YBORDER"></span><span id="tvsbf_yborder"></span><dl> <dt>**TVSBF \_ YBORDER**</dt> </dl> | Wendet die angegebene Rahmengröße auf den Anfang der Elemente im Strukturansichtssteuerelement an.<br/>        |
 
 
 
@@ -52,21 +52,21 @@ Aktionsflags. Dieser Parameter kann einen oder mehrere der folgenden Werte aufwe
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **kurzes** , das die Größe des linken Rahmens in Pixel angibt. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **kurzes** , das die Größe des oberen Rahmens in Pixel angibt.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **SHORT-Wert,** der die Größe des linken Rahmens in Pixel angibt. [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **SHORT-Wert,** der die Größe des oberen Rahmens in Pixel angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **Long** -Wert zurück, der die vorherige Rahmengröße in Pixel enthält. Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält die vorherige Größe des horizontalen Rahmens, und das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) enthält die vorherige Größe des vertikalen Rahmens.
+Gibt einen **LONG-Wert** zurück, der die vorherige Rahmengröße in Pixel enthält. [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält die vorherige Größe des horizontalen Rahmens, und [**hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) enthält die vorherige Größe des vertikalen Rahmens.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Sicherheitswarnung:** Die Verwendung dieser Nachricht kann die Sicherheit des Programms beeinträchtigen.
+**Sicherheitswarnung:** Die Verwendung dieser Meldung kann die Sicherheit Ihres Programms gefährden.
 
-Der Element Rahmen wird nur für Abstands Zwecke festgelegt. Eine erfolgreiche Einstellung löst eine Neuberechnung der Schiebe leisten aus.
+Der Elementrahmen wird nur zu Abstandszwecken festgelegt. Eine erfolgreiche Einstellung löst eine Neuberechnung der Bildlaufleisten aus.
 
-Diese Meldung wird in zukünftigen Versionen von Comctl32.dll möglicherweise nicht mehr unterstützt. Außerdem ist diese Meldung nicht in "kommctrl. h" definiert. Fügen Sie den Quelldateien Ihrer Anwendung die folgenden Definitionen hinzu, um die Meldung zu verwenden:
+Diese Meldung wird in zukünftigen Versionen von Comctl32.dll möglicherweise nicht mehr unterstützt. Außerdem ist diese Meldung in commctrl.h nicht definiert. Fügen Sie den Quelldateien Ihrer Anwendung die folgenden Definitionen hinzu, um die Nachricht zu verwenden:
 
 ``` syntax
 #define TVM_SETBORDER (TV_FIRST + 35)
@@ -80,17 +80,17 @@ Diese Meldung wird in zukünftigen Versionen von Comctl32.dll möglicherweise ni
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TreeView \_ setborder**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setborder)
+[**TreeView \_ SetBorder**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setborder)
 </dt> </dl>
 
  

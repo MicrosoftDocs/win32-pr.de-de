@@ -1,9 +1,9 @@
 ---
-title: Copyrepairren Info-Funktion (ndattributils. h)
-description: Erstellt eine Kopie einer repairiinfo-Struktur.
+title: CopyRepairInfo-Funktion (Ndattributils.h)
+description: Erstellt eine Kopie einer RepairInfo-Struktur.
 ms.assetid: a1147ce6-9a90-4a46-8fe4-da3353391a13
 keywords:
-- Copyrepairren Info-Funktion NDF
+- CopyRepairInfo-Funktion NDF
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a24d15ec5a8a69b3c8c40700273ebcb6f32bcfd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e40a054df2b16684840f22295f0c26de6029ef150a97ca8839c98d94713ab030
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118620435"
 ---
-# <a name="copyrepairinfo-function"></a>Copyrepairren Info-Funktion
+# <a name="copyrepairinfo-function"></a>CopyRepairInfo-Funktion
 
-Die **copyrepairren Info** -Funktion erstellt eine Kopie einer [**repairiinfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) -Struktur.
+Die **CopyRepairInfo-Funktion** erstellt eine Kopie einer [**RepairInfo-Struktur.**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,37 +41,37 @@ HRESULT CopyRepairInfo(
 
 <dl> <dt>
 
-*Dest* \[ vorgenommen\]
+*Dest* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**repairren Info**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) \** _
+Typ: **[ **RepairInfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)\***
 
-Die zu Aktualisier Ende-Struktur.
+Die zu aktualisierende -Struktur.
 
 </dd> <dt>
 
-_Source * \[ in\]
+*Quelle* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *[**repairren Info**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) \** _
+Typ: **const [**RepairInfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) \***
 
-Die vorhandene zu kopierende-Struktur.
+Die vorhandene zu kopierende -Struktur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Mögliche Rückgabewerte sind u. a. die folgenden.
+Mögliche Rückgabewerte sind u. a. folgende:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                 |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Der Vorgang wurde erfolgreich ausgeführt.<br/>                                         |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Mindestens ein Parameter wurde nicht ordnungsgemäß bereitgestellt.<br/>          |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um diesen Vorgang abzuschließen.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Mindestens ein Parameter wurde nicht ordnungsgemäß bereitgestellt.<br/>          |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um diesen Vorgang abschließen zu können.<br/> |
 
 
 
@@ -83,17 +83,17 @@ Mögliche Rückgabewerte sind u. a. die folgenden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ndattributils. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ndattributils.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Repairren Info**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)
+[**RepairInfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)
 </dt> </dl>
 
  

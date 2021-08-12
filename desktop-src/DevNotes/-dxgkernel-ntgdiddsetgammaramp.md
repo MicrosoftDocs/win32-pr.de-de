@@ -1,7 +1,7 @@
 ---
 description: Legt die Gamma-Rampe für das Gerät fest.
 ms.assetid: 92ea0247-6eec-4c5f-9ea7-65f6b97dde1e
-title: Ntgdiddsetgammaramp-Funktion (ntgdi. h)
+title: NtGdiDdSetGammaRamp-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: 0c5efba67eedbd6e70f1e0682f42c1855948cecd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 78e68a76fed6db78a2f3d247c5bec1b73f3df3b6fe204e0d09b1bc5f14a014b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118668809"
 ---
-# <a name="ntgdiddsetgammaramp-function"></a>Ntgdiddsetgammaramp-Funktion
+# <a name="ntgdiddsetgammaramp-function"></a>NtGdiDdSetGammaRamp-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
 Legt die Gamma-Rampe für das Gerät fest.
 
@@ -46,34 +46,34 @@ BOOL APIENTRY NtGdiDdSetGammaRamp(
 
 <dl> <dt>
 
-*hdirectdraw* \[ in\]
+*hDirectDraw* \[ In\]
 </dt> <dd>
 
-Handle für das Kernel Modus-Treiber Objekt, für das die Rampe festgelegt werden soll.
+Handle für das Kernelmodustreiberobjekt, für das die Rampe festgelegt werden soll.
 
 </dd> <dt>
 
-*hdc* \[ in\]
+*hdc* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*lpgammaramp* \[ in\]
+*lpGammaRamp* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein Array von **ddgammaramp** -Strukturen.
+Zeiger auf ein Array von **DDGAMMARAMP-Strukturen.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist " **true** ", wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls ist der Wert **null**.
+Der Rückgabewert ist **TRUE,** wenn die Funktion erfolgreich ist. Andernfalls ist es **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es wird empfohlen, dass Anwendungen stattdessen die **idirectdrawgammacontrol:: setgammaramp** -oder [**IDirect3DDevice9:: setgammaramp**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setgammaramp) -Methoden verwenden, da diese Methoden unabhängig vom Betriebssystem die gleiche Funktionalität bieten.
+Es wird empfohlen, dass Anwendungen stattdessen die Methoden **IDirectDrawGammaControl::SetGammaRamp** oder [**IDirect3DDevice9::SetGammaRamp**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setgammaramp) verwenden, da diese Methoden unabhängig vom Betriebssystem die gleiche Funktionalität bieten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,15 +83,15 @@ Es wird empfohlen, dass Anwendungen stattdessen die **idirectdrawgammacontrol:: 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

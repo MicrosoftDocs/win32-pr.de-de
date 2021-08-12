@@ -1,9 +1,9 @@
 ---
-title: Averagelevel-Attribut
-description: Das averagelevel-Attribut ist ein 16-Bit-Amplitude-Wert, der die durchschnittliche Volumeebene angibt.
+title: AverageLevel-Attribut
+description: Das AverageLevel-Attribut ist ein 16-Bit-Amplitudenwert, der die durchschnittliche Volumeebene angibt.
 ms.assetid: 04ff19f1-a9a5-4e47-86a6-50c6f08b0d7d
 keywords:
-- Averagelevel-Attribut, Windows Media Player
+- AverageLevel-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,34 +12,34 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 594612f3675d818f94270b1952d2a9ca7bed15d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e169b1e2d63e6f8215515acc852d431ff13ccd513924e4c2a237b16c17dacfc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582745"
 ---
-# <a name="averagelevel-attribute"></a>Averagelevel-Attribut
+# <a name="averagelevel-attribute"></a>AverageLevel-Attribut
 
-Das **averagelevel** -Attribut ist ein 16-Bit-Amplitude-Wert, der die durchschnittliche Volumeebene angibt.
+Das **AverageLevel-Attribut** ist ein 16-Bit-Amplitudenwert, der die durchschnittliche Volumeebene angibt.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Häufig verwendete Windows Media-Dateien](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateien](commonly-used-windows-media-file-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
 
-Dieser Wert wird von Windows Media Player in einer der folgenden Instanzen festgelegt:
+Windows Media Player legt diesen Wert in einer der folgenden Instanzen fest:
 
--   Nachdem eine Datei durch eine Datei gerissen wurde.
--   Nachdem eine Datei wiedergegeben wurde (bei aktivierter Erweiterung für das automatische Volume).
+-   Nach dem Löschen einer Datei.
+-   Nachdem eine Datei wiedergegeben wurde (wenn die Automatische Volume leveling-Erweiterung aktiviert ist).
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszaveragelevel.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszAverageLevel.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -55,7 +55,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

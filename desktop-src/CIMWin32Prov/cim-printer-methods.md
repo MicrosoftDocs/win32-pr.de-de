@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Drucker Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die \_ CIM-Druckerklasse macht die folgenden Methoden verfügbar.
 ms.assetid: F8DB0681-9A3D-4007-8FFF-4B77FEC6AEFF
 ms.tgt_platform: multiple
-title: CIM_Printer Methoden
+title: CIM_Printer-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9717fe3ad65f0be75476d962b5ce940872996a7b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5d5df53e2698ea97c0971a7a0de17f1c1c23f0502b12467e43d8501aa92cdde1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118677681"
 ---
-# <a name="cim_printer-methods"></a>CIM- \_ Drucker Methoden
+# <a name="cim_printer-methods"></a>\_CIM-Druckermethoden
 
-Die [**CIM- \_ Drucker**](cim-printer.md) Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**\_ CIM-Druckerklasse**](cim-printer.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

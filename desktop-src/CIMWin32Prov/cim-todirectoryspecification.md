@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ Verzeichnisdienst Spezifikation identifiziert das Zielverzeichnis für die Datei Aktion.
+description: Die ZUORDNUNG \_ CIM ToDirectorySpecification identifiziert das Zielverzeichnis für die Dateiaktion.
 ms.assetid: ab31101f-1948-4b3d-baef-0d61d5898b21
 ms.tgt_platform: multiple
 title: CIM_ToDirectorySpecification-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e0728f605e02195a6bf2bd4beb0ca67fe8744e12
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e079a5012760507adfd9bff6b9716a6828e1f3e9b516ec252895ab8e93e801d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118677386"
 ---
-# <a name="cim_todirectoryspecification-class"></a>CIM- \_ Klasse für directoryspecification
+# <a name="cim_todirectoryspecification-class"></a>CIM \_ ToDirectorySpecification-Klasse
 
-Die **CIM \_** -Verzeichnisdienst Spezifikation identifiziert das Zielverzeichnis für die Datei Aktion. Wenn diese Zuordnung verwendet wird, wird davon ausgegangen, dass das Zielverzeichnis bereits vorhanden ist. Diese Zuordnung darf nicht mit einer [**CIM-" \_ dedirector yaction**](cim-todirectoryaction.md) "-Zuordnung vorhanden sein, da eine Datei Aktion nur ein einzelnes Zielverzeichnis umfassen kann.
+Die **ZUORDNUNG CIM \_ ToDirectorySpecification** identifiziert das Zielverzeichnis für die Dateiaktion. Wenn diese Zuordnung verwendet wird, wird davon ausgegangen, dass das Zielverzeichnis bereits vorhanden ist. Diese Zuordnung kann nicht mit einer [**CIM \_ ToDirectoryAction-Zuordnung**](cim-todirectoryaction.md) vorhanden sein, da eine Dateiaktion nur ein einzelnes Zielverzeichnis umfassen kann.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,20 +47,20 @@ class CIM_ToDirectorySpecification
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ todirectoryspecification** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ToDirectorySpecification-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ dedirectoryspecification** " verfügt über diese Eigenschaften.
+Die **CIM \_ ToDirectorySpecification-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **DestinationDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ directoriyspecification**
+Datentyp: **CIM \_ DirectorySpecification**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -76,7 +76,7 @@ Verweis auf das Zielverzeichnis.
 **FileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ copyfileaction**
+Datentyp: **CIM \_ CopyFileAction**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -89,11 +89,11 @@ Verweis auf den Dateinamen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,8 +103,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Klasse "Wormdrive" stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ WORMDrive-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 877CC484-EBBE-4719-85B9-50C04A8A61FE
 ms.tgt_platform: multiple
-title: CIM_WORMDrive Methoden
+title: CIM_WORMDrive-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6ecd49da5cc4cb24423525ae90fd329254facb5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 428c81cf99196a35a35bb12127dde31d21422f2f4ecd98380d88c4f2b3f0329a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103747920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118676891"
 ---
-# <a name="cim_wormdrive-methods"></a>CIM- \_ Wormdrive-Methoden
+# <a name="cim_wormdrive-methods"></a>CIM \_ WORMDrive-Methoden
 
-Die CIM-Klasse " [**\_ Wormdrive**](cim-wormdrive.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ WORMDrive-Klasse**](cim-wormdrive.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

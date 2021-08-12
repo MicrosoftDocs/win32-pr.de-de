@@ -1,9 +1,9 @@
 ---
-title: ButtonElement. Index
-description: Das Index Attribut ruft den Index des ButtonElement innerhalb der ButtonGroup ab.
+title: BUTTONELEMENT.index
+description: Das Indexattribut ruft den Index des BUTTONELEMENT innerhalb der BUTTONGROUP ab.
 ms.assetid: b4fd7cd9-7788-4234-8f2f-fb85ea9e6b0e
 keywords:
-- ButtonElement. Index-Windows-Media Player
+- BUTTONELEMENT.index-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfb89056d6e18429ad787c0325689918e7b959ba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 031bce6f0f4eda1281e8ec09185177d81d4b445ea798556d41aa0af32cc40787
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581384"
 ---
-# <a name="buttonelementindex"></a>ButtonElement. Index
+# <a name="buttonelementindex"></a>BUTTONELEMENT.index
 
-Das **Index** Attribut ruft den Index des **ButtonElement** innerhalb der **ButtonGroup** ab.
+Das  Indexattribut ruft den Index des **BUTTONELEMENT** innerhalb der **BUTTONGROUP ab.**
 
 ``` syntax
         elementID.index
@@ -29,7 +29,7 @@ Das **Index** Attribut ruft den Index des **ButtonElement** innerhalb der **Butt
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**ButtonElement-Element**](buttonelement-element.md)
+[**BUTTONELEMENT-Element**](buttonelement-element.md)
 </dt> </dl>
 
  

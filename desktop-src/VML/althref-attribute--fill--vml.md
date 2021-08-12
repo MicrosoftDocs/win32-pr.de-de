@@ -1,24 +1,24 @@
 ---
-title: Althref-Attribut (Fill) (VML)
-description: Althref-Attribut (Fill) (VML)
+title: AltHRef-Attribut (Fill)(VML)
+description: AltHRef-Attribut (Fill)(VML)
 ms.assetid: 3f6376e3-24db-412c-b265-5916950c3824
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0679e5aa01b934092c21bfa5d0504b056f620f2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 181f98ace80403668f8f67c6f8412091271fdfcf2abcb5a1320d0685853d92bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118603003"
 ---
-# <a name="althref-attribute-fillvml"></a>Althref-Attribut (Fill) (VML)
+# <a name="althref-attribute-fillvml"></a>AltHRef-Attribut (Fill)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert einen alternativen Verweis für ein Bild. Lese-/Schreibzugriff. **Zeichenfolge**.
 
@@ -28,23 +28,23 @@ Definiert einen alternativen Verweis für ein Bild. Lese-/Schreibzugriff. **Zeic
 
 **Tagsyntax**
 
-<v: *Element* o:althref = " *Ausdruck* " >
+<v: *element* o:althref=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . althref = "*Ausdruck*"
+*element* .althref="*expression*"
 
-*Ausdruck* = *Element*. althref
+*expression* = *.althref-Element*
 
 **Anmerkungen**
 
-Unterstützt die Beibehaltung von Daten mithilfe von HTML-Roundtripping. Beim HTML-Schreibvorgang wird die alternative Darstellung (die ursprünglichen Daten, wenn die Datei aus dem Apple Macintosh stammt) gespeichert. Beim Lesen von HTML wird **althref** gegenüber **src** bevorzugt.
+Unterstützt die Beibehaltung von PICT-Daten durch HTML-Roundtripping. Beim HTML-Schreibvorgang wird die alternative Darstellung (die ursprünglichen PICT-Daten, wenn die Datei vom Apple Macintosh stammt) gespeichert. Bei HTML-Lese- wird **AltHRef** gegenüber **Src** bevorzugt.
 
 *Microsoft Office Extensions-Attribut*
 
 **Beispiel**
 
-Die Füllung der Form hat eine **althref** , die auf eine Datei mit dem Namen "myimage.gif" zeigt.
+Die Füllung der Form weist ein **AltHRef** auf, das auf eine Datei mit dem Namen myimage.gif zeigt.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Die Füllung der Form hat eine **althref** , die auf eine Datei mit dem Namen "m
 
 
 
- 
+ 
 
- 
+ 

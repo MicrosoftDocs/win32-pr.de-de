@@ -1,9 +1,9 @@
 ---
-title: Komplexer eventdatatype-Typ
-description: Definiert die Ereignisdaten Elemente und-Strukturen, die die Ereignisdaten enthalten.
+title: Komplexer EventDataType-Typ
+description: Definiert die Ereignisdatenelemente und -strukturen, die die Ereignisdaten enthalten.
 ms.assetid: 9531163f-34ce-4673-b2d8-636042915c73
 keywords:
-- Ereignisprotokoll des komplexen eventdatatype-Typs
+- 'EventDataType: komplexer EventLog-Typ'
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6a93695db477ebb0c7b5652419198f8f5c6370dc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 424f7f5f6472859a06605467c427fc7b9f210a960f0920fb8593778bd757fc06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589023"
 ---
-# <a name="eventdatatype-complex-type"></a>Komplexer eventdatatype-Typ
+# <a name="eventdatatype-complex-type"></a>Komplexer EventDataType-Typ
 
-Definiert die Ereignisdaten Elemente und-Strukturen, die die Ereignisdaten enthalten.
+Definiert die Ereignisdatenelemente und -strukturen, die die Ereignisdaten enthalten.
 
 ``` syntax
 <xs:complexType name="EventDataType">
@@ -54,11 +54,11 @@ Definiert die Ereignisdaten Elemente und-Strukturen, die die Ereignisdaten entha
 
 
 
-| Element                                                              | type                                                               | BESCHREIBUNG                                                                                          |
+| Element                                                              | Typ                                                               | BESCHREIBUNG                                                                                          |
 |----------------------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**Binary**](eventschema-binary-eventdatatype-element.md)           | hexBinary                                                          | Ein binäres Daten-BLOB für Ereignisse, die mithilfe der [Ereignisprotokollierung](/windows/desktop/EventLog/event-logging)geschrieben werden.<br/> |
-| [**Complexdata**](eventschema-complexdata-eventdatatype-element.md) | [**Complexdatatype**](eventschema-complexdatatype-complextype.md) | Eine-Struktur, die in der Vorlage für das-Ereignis definiert ist.<br/>                                |
-| [**Daten**](eventschema-data-eventdatatype-element.md)               | [**DataType**](eventschema-datafieldtype-complextype.md)          | Ein Datenelement der obersten Ebene, das in der Vorlage für das-Ereignis definiert ist.<br/>                      |
+| [**Binäre**](eventschema-binary-eventdatatype-element.md)           | hexBinary                                                          | Ein binäres Datenblob für Ereignisse, die mithilfe der [Ereignisprotokollierung geschrieben werden.](/windows/desktop/EventLog/event-logging)<br/> |
+| [**ComplexData**](eventschema-complexdata-eventdatatype-element.md) | [**ComplexDataType**](eventschema-complexdatatype-complextype.md) | Eine -Struktur, die in der Vorlage für das Ereignis definiert ist.<br/>                                |
+| [**Daten**](eventschema-data-eventdatatype-element.md)               | [**Datatype**](eventschema-datafieldtype-complextype.md)          | Ein Datenelement der obersten Ebene, das in der Vorlage für das Ereignis definiert ist.<br/>                      |
 
 
 
@@ -66,7 +66,7 @@ Definiert die Ereignisdaten Elemente und-Strukturen, die die Ereignisdaten entha
 
 
 
-| Name | type   | BESCHREIBUNG                                                       |
+| Name | Typ   | BESCHREIBUNG                                                       |
 |------|--------|-------------------------------------------------------------------|
 | Name | Zeichenfolge | Der Name der Vorlage, die die Datenelemente enthält.<br/> |
 
@@ -74,7 +74,7 @@ Definiert die Ereignisdaten Elemente und-Strukturen, die die Ereignisdaten entha
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion rendert Arrays und Strukturen als binäre Blob.
+Die [**EvtRender-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) rendert Arrays und Strukturen als binäre Blobs.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion r
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

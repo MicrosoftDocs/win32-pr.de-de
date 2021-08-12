@@ -1,19 +1,19 @@
 ---
-description: Sehen Sie sich ein Codebeispiel an, das veranschaulicht, wie sie mithilfe der Cabinet-API ein Gehäuse erstellen. Zum Kompilieren müssen die Rückruffunktionen definiert werden.
+description: Sehen Sie sich ein Codebeispiel an, das veranschaulicht, wie sie mithilfe der Cabinet-API ein Schränk erstellen. Zum Kompilieren müssen die Rückruffunktionen definiert werden.
 ms.assetid: a16c332d-5afc-46ad-992b-324ed5e70683
-title: Erstellen eines Gehäuses
+title: Erstellen eines Schränkens
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d1d746a61f09237d08ade349ea33b4ec8146913
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: a65a75e817bd061af1fc7cc9f482c1df34bcd98d2e24bc2ce1cca5d379810f02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667973"
 ---
-# <a name="creating-a-cabinet"></a>Erstellen eines Gehäuses
+# <a name="creating-a-cabinet"></a>Erstellen eines Schränkens
 
-Die folgende Syntax veranschaulicht die Erstellung eines Schränks.
+Die folgende Syntax veranschaulicht die Erstellung eines Schränken.
 
 > [!Note]  
 > Dieser Code dient nur zur Veranschaulichung. Zum Kompilieren müssen die Rückruffunktionen definiert werden.
@@ -249,7 +249,7 @@ LPCSTR FCIErrorToString(FCIERROR err)
 
 <dl> <dt>
 
-[**FCIErzählen**](/windows/desktop/api/Fci/nf-fci-fcicreate)
+[**FCIErzeugen**](/windows/desktop/api/Fci/nf-fci-fcicreate)
 </dt> <dt>
 
 [**FCIAddFile**](/windows/desktop/api/Fci/nf-fci-fciaddfile)
@@ -264,7 +264,7 @@ LPCSTR FCIErrorToString(FCIERROR err)
 [**FCIDestroy**](/windows/desktop/api/Fci/nf-fci-fcidestroy)
 </dt> <dt>
 
-[Cab-API-Makros](cabinet-api-macros.md)
+[Makros der Cabinet-API](cabinet-api-macros.md)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob die ursprüngliche Quelle des Eingabe Videos "Film" oder "Video" war.
+description: Gibt an, ob die ursprüngliche Quelle des Eingabevideos Ein Film oder Video war.
 ms.assetid: 21b0449b-eed0-4879-a938-a7b01b349f22
-title: Avencvideosourcefilmcontent-Eigenschaft (codecapi. h)
+title: AVEncVideoSourceContent-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 859a547ca67b5ffbf476ae0eff04562c75dd7bfe
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cfe76c04da1c6d2e1f0bb9dd4782eec1fe9a85f31011709300fb3ef3aac612c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213823"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663154"
 ---
-# <a name="avencvideosourcefilmcontent-property"></a>Avencvideosourcefilmcontent (Eigenschaft)
+# <a name="avencvideosourcefilmcontent-property"></a>AVEncVideoSourceContent (Eigenschaft)
 
-Gibt an, ob die ursprüngliche Quelle des Eingabe Videos "Film" oder "Video" war.
+Gibt an, ob die ursprüngliche Quelle des Eingabevideos Ein Film oder Video war.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideosourcefilmcontent**
+**CODECAPI \_ AVEncVideoSourceContent**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencvideofilmcontent**](/windows/win32/api/codecapi/ne-codecapi-eavencvideofilmcontent) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncVideoContent-Enumeration.**](/windows/win32/api/codecapi/ne-codecapi-eavencvideofilmcontent)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencvideofilmcontent**](/win
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

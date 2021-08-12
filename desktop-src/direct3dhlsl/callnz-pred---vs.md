@@ -1,6 +1,6 @@
 ---
-title: callnz pred-vs
-description: Mit einem Prädikat wird aufgerufen, wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist. Das-Prädikat verwendet einen booleschen Wert, um zu bestimmen, ob die Anweisung nicht durchgeführt werden soll.
+title: callnz pred – vs
+description: Rufen Sie auf, wenn nicht 0 (null) mit einem Prädikat. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus. Prädication verwendet einen booleschen Wert, um zu bestimmen, ob von die Anweisung nicht ausführen soll.
 ms.assetid: 3417f3e3-7e73-4131-8069-09c0de1469a7
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,46 +9,46 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e3c3de590dfee56013c76402c840a959e8f9306c
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 1449ed9fb061ea2d5a83d37cb7c0d744a4c7e8b6517d49c0d2e32a10f7f5ed9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118287024"
 ---
-# <a name="callnz-pred---vs"></a>callnz pred-vs
+# <a name="callnz-pred---vs"></a>callnz pred – vs
 
-Mit einem Prädikat wird aufgerufen, wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist. Das-Prädikat verwendet einen booleschen Wert, um zu bestimmen, ob die Anweisung nicht durchgeführt werden soll.
+Rufen Sie auf, wenn nicht 0 (null) mit einem Prädikat. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus. Prädication verwendet einen booleschen Wert, um zu bestimmen, ob von die Anweisung nicht ausführen soll.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| callnz l \# , \[ ! \] P0. Stuben|Teenie|z|Löw |
+| callnz l \# , \[ ! \] p0. {x\|y\|z\|w} |
 |----------------------------------|
 
 
 
- 
+ 
 
 Dabei gilt:
 
--   l \# ist eine [Bezeichnung-vs](label---vs.md) , die den Anfang der aufzurufenden Unterroutine markiert.
--   \[!\] ist ein optionaler Negation-Modifizierer.
--   P0 ist das [Prädikat Register](dx9-graphics-reference-asm-vs-registers-predicate.md).
--   {x \| y \| z \| w} ist das erforderliche Replizieren von Replizieren auf p0.
+-   l \# ist eine Bezeichnung , im Gegensatz [zum](label---vs.md) Markieren des Anfangs der aufgerufenen Unterroutine.
+-   \[!\] ist ein optionaler Negatmodifizierer.
+-   p0 ist das [Prädikatregister.](dx9-graphics-reference-asm-vs-registers-predicate.md)
+-   {x \| y \| z \| w} ist die erforderliche Replikation von Swizzle auf p0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| callnz-präd            |      |      | x    | x     | x    | x     |
+| callnz pred            |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 Diese Anweisung führt Folgendes aus:
 
@@ -63,18 +63,18 @@ if (specified register component is not zero)
 
 
 
-Diese Anweisung verwendet einen Vertex-Shader-Anweisungs Slot.
+Diese Anweisung verwendet einen Vertex-Shaderanweisungsslot.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

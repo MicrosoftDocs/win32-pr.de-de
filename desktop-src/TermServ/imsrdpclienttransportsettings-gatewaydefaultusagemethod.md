@@ -1,12 +1,12 @@
 ---
-title: Imsrdpclienttransportsettings (gatewaydefaultusagemethod-Eigenschaft)
-description: Die Standard Verwendungs Methode für Remotedesktop Gateway (RD-Gateway).
+title: IMsRdpClientTransportSettings GatewayDefaultUsageMethod (Eigenschaft)
+description: Die Standardverwendungsmethode für Remotedesktop Gateway (RD-Gateway).
 ms.assetid: 7014538d-550a-4246-ad32-406ef67fb112
 ms.tgt_platform: multiple
 keywords:
-- Gatewaydefaultusagemethod-Eigenschaft Remotedesktopdienste
-- Gatewaydefaultusagemethod-Eigenschaft Remotedesktopdienste, imsrdpclienttransportsettings-Schnittstelle
-- Imsrdpclienttransportsettings-Schnittstelle Remotedesktopdienste, gatewaydefaultusagemethod-Eigenschaft
+- GatewayDefaultUsageMethod-Remotedesktopdienste
+- GatewayDefaultUsageMethod-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings-Schnittstelle
+- IMsRdpClientTransportSettings-Schnittstelle Remotedesktopdienste , GatewayDefaultUsageMethod (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b8417da30f9a692e6e233174a33f4b03682a5bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6403f319eaa79b9d140a3d75f9dd4f7625eced916ee907755c017d3e58a1767f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607421"
 ---
-# <a name="imsrdpclienttransportsettingsgatewaydefaultusagemethod-property"></a>Imsrdpclienttransportsettings:: gatewaydefaultusagemethod (Eigenschaft)
+# <a name="imsrdpclienttransportsettingsgatewaydefaultusagemethod-property"></a>IMsRdpClientTransportSettings::GatewayDefaultUsageMethod (Eigenschaft)
 
-Die Standard Verwendungs Methode für Remotedesktop Gateway (RD-Gateway).
+Die Standardverwendungsmethode für Remotedesktop Gateway (RD-Gateway).
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,11 +44,11 @@ HRESULT get_GatewayDefaultUsageMethod(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf die Standard Verwendungs Methode für RD-Gateway. Gibt eine Union der Benutzereinstellungen zurück, die durch [**Put \_ gatewayusagemethod ()**](imsrdpclienttransportsettings-gatewayusagemethod.md)und Gruppenrichtlinien Einstellungen festgelegt werden. Wenn keine Benutzereinstellungen durch **Put \_ gatewayusagemethod ()** festgelegt wurden, gibt **get \_ gatewaydefaultusagemethod ()** den Standardwert für die **Erkennung des TSC- \_ Proxy \_ Modus \_** zurück.
+Ein Zeiger auf die Standardverwendungsmethode für rd-Gateway. Gibt eine Vereinigung der Benutzereinstellungen zurück, die durch [**put \_ GatewayUsageMethod() und**](imsrdpclienttransportsettings-gatewayusagemethod.md)Gruppenrichtlinieneinstellungen festgelegt werden. Wenn von **put \_ GatewayUsageMethod()** keine Benutzereinstellungen festgelegt wurden, gibt **get \_ GatewayDefaultUsageMethod()** den Standardwert **TSC PROXY MODE DETECT \_ \_ \_ zurück.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,15 +60,15 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                   |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ imsrdpclienttransportsettings ist definiert als 720298c0-A099-46f 5-9F 82-96921bae4701<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientTransportSettings ist als 720298C0-A099-46f5-9F82-96921BAE4701 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> </dl>
 
  

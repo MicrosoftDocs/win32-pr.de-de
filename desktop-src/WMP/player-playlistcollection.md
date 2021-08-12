@@ -1,9 +1,9 @@
 ---
-title: Player. playlistcollection
-description: Die playlistcollection-Eigenschaft ruft das playlistcollection-Objekt ab.
+title: Player.playlistCollection
+description: Die playlistCollection-Eigenschaft ruft das PlaylistCollection-Objekt ab.
 ms.assetid: c5500edd-6658-48cd-9486-70f7b9ae78e4
 keywords:
-- Player. playlistcollection-Fenster Media Player
+- Player.playlistCollection-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7548a57a45ba30f185c9c1a205ce87069da7434a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a1576e915b2a037b4bd90a5a1d337bf3e3b854f41e8e924c933751a4b6eaa30e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572029"
 ---
-# <a name="playerplaylistcollection"></a>Player. playlistcollection
+# <a name="playerplaylistcollection"></a>Player.playlistCollection
 
-Die **playlistcollection** -Eigenschaft ruft das **playlistcollection** -Objekt ab.
+Die **playlistCollection-Eigenschaft** ruft das **PlaylistCollection-Objekt** ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **playlistcollection**
+*Player* . **playlistCollection**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschütztes **playlistcollection** -Objekt.
+Diese Eigenschaft ist ein schreibgeschütztes **PlaylistCollection-Objekt.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -55,13 +55,13 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

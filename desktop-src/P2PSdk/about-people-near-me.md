@@ -1,26 +1,26 @@
 ---
-description: Informationen zu Personen in meiner Umgebung
+description: Informationen Personen in meiner Umgebung
 ms.assetid: 814d6d3a-39b3-493c-b0fe-65e9bc38ee05
-title: Informationen zu Personen in meiner Umgebung
+title: Informationen Personen in meiner Umgebung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1eb384091d80a1b70cb023348190cd83d00e3b3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 145c02cf94e45af52a43259b01dfa8681a6bd2f3ecfc172634024a14e442fb5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118612883"
 ---
-# <a name="about-people-near-me"></a>Informationen zu Personen in meiner Umgebung
+# <a name="about-people-near-me"></a>Informationen Personen in meiner Umgebung
 
-"Personen in meiner Umgebung" (PNM) ist eine Möglichkeit für Personen und Anwendungen, sich selbst und ihre Interessen für eine einfache Verbindung und Zusammenarbeit zu ankündigen. "Near" in "Personen in meiner Umgebung" ist die Gruppe von Benutzern, die sich im selben Subnetz befinden. PNM ist eine neue Funktion von [Windows-Peer Netzwerken](what-is-peer-networking-.md) , die in Windows Vista enthalten ist.
+Personen in meiner Umgebung (PNM) ist eine Möglichkeit für Personen und Anwendungen, sich und ihre Interessen für eine einfache Verbindung und Zusammenarbeit zu bewerben. Bei "Near" in Personen in meiner Umgebung handelt es sich um die Gruppe von Benutzern, die sich im selben Subnetz befinden. PNM ist eine neue Funktion Windows [Peernetzwerks,](what-is-peer-networking-.md) die in Windows Vista enthalten ist.
 
-Dieser Abschnitt der Dokumentation enthält Informationen zu PNM und umfasst die folgenden Themen:
+Dieser Abschnitt der Dokumentation enthält Informationen zu PNM sowie die folgenden Themen:
 
--   [Gründe für die Verwendung von Personen in meiner Umgebung](why-use-people-near-me-.md)
--   [Anforderungen an Personen in meiner Nähe](people-near-me-requirements.md)
+-   [Gründe für Personen in meiner Umgebung?](why-use-people-near-me-.md)
+-   [Personen in meiner Umgebung Anforderungen](people-near-me-requirements.md)
 
-Weitere Informationen zur grundlegenden Architektur sowie zu den von PNM verwendeten spezifischen APIs, speichern und Komponenten finden Sie [in der Dokumentation zu Personen in meiner](people-near-me-architecture.md)Umgebung.
+Informationen zur grundlegenden Architektur sowie zu den spezifischen APIs, Speichern und Komponenten, die von PNM verwendet werden, finden Sie in der Dokumentation zur [Personen in meiner Umgebung Architektur.](people-near-me-architecture.md)
 
  
 

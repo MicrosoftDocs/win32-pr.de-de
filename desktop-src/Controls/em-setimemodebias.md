@@ -1,9 +1,9 @@
 ---
-title: EM_SETIMEMODEBIAS Meldung (RichEdit. h)
-description: Legen Sie den Modus für den Eingabemethoden-Editor (IME) für ein Rich-Edit-Steuerelement fest.
+title: EM_SETIMEMODEBIAS Nachricht (Richedit.h)
+description: Legen Sie den IME-Modus (Input Method Editor) für ein Rich-Edit-Steuerelement fest.
 ms.assetid: 4a3f97eb-fe80-4e84-a73e-3ed6d73644de
 keywords:
-- Windows-Steuerelemente für EM_SETIMEMODEBIAS Meldung
+- EM_SETIMEMODEBIAS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48fbd93971a57cffa3441c2a3db0816572f761d7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b4812c21558fba07be2709c0fd1a011f31d79fad17e0b4146fa0c7d65843a087
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118672670"
 ---
-# <a name="em_setimemodebias-message"></a>EM- \_ /timemodebias-Nachricht
+# <a name="em_setimemodebias-message"></a>EM \_ SETIMEMODEBIAS-Nachricht
 
-Legen Sie den Modus für den Eingabemethoden-Editor (IME) für ein Rich-Edit-Steuerelement fest.
+Legen Sie den IME-Modus (Input Method Editor) für ein Rich-Edit-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legen Sie den Modus für den Eingabemethoden-Editor (IME) für ein Rich-Edit-Ste
 *wParam* 
 </dt> <dd>
 
-Wert des IME-Modus-Bias. Dies kann einer der folgenden sein:
+IME-Modus-Biaswert. Dies kann einer der folgenden Sein:
 
 
 
 | Wert                                                                                                                                                                                        | Bedeutung                                    |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| <span id="IMF_SMODE_PLAURALCLAUSE"></span><span id="imf_smode_plauralclause"></span><dl> <dt>**IMF- \_ smode- \_ plauralklausel**</dt> </dl> | Legt die Verschiebung des IME-Modus auf Name fest.<br/> |
-| <span id="IMF_SMODE_NONE"></span><span id="imf_smode_none"></span><dl> <dt>**IMF- \_ smode- \_ keine**</dt> </dl>                            | Keine Neigung.<br/>                        |
+| <span id="IMF_SMODE_PLAURALCLAUSE"></span><span id="imf_smode_plauralclause"></span><dl> <dt>**\_ÜBERFALL-SMODE \_ PLAURALCLAUSE**</dt> </dl> | Legt den IME-Modus-Bias auf Name fest.<br/> |
+| <span id="IMF_SMODE_NONE"></span><span id="imf_smode_none"></span><dl> <dt>**IMF \_ SMODE \_ NONE**</dt> </dl>                            | Keine Voreingenommenheit.<br/>                        |
 
 
 
@@ -50,7 +50,7 @@ Wert des IME-Modus-Bias. Dies kann einer der folgenden sein:
 *lParam* 
 </dt> <dd>
 
-Dieser Wert muss mit dem Wert von *wParam* identisch sein.
+Dies muss derselbe Wert wie *wParam* sein.
 
 </dd> </dl>
 
@@ -58,13 +58,13 @@ Dieser Wert muss mit dem Wert von *wParam* identisch sein.
 
 Diese Meldung gibt die neue Einstellung für den IME-Modus zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der IME eine Liste alternativer Optionen für einen Satz von Zeichen generiert, legt diese Meldung die Kriterien fest, mit denen einige der Optionen oben in der Liste angezeigt werden.
+Wenn die IME eine Liste alternativer Optionen für einen Satz von Zeichen generiert, legt diese Meldung die Kriterien fest, nach denen einige der Optionen am Anfang der Liste angezeigt werden.
 
-Um den TSF-Modus (Text Services Framework) festzulegen, verwenden Sie [**EM \_ setctfmodebias**](em-setctfmodebias.md).
+Verwenden Sie [**EM \_ SETCTFMODEBIAS,**](em-setctfmodebias.md)um die Voreingenommenheit des Textdienstframework -Modus (TSF) festzulegen.
 
-Die Anwendung sollte [**EM- \_ isime**](em-isime.md) aufrufen, bevor diese Funktion aufgerufen wird.
+Die Anwendung sollte [**EM \_ ISIME**](em-isime.md) aufrufen, bevor diese Funktion aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,23 +72,23 @@ Die Anwendung sollte [**EM- \_ isime**](em-isime.md) aufrufen, bevor diese Funkt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP1 \[ Desktop-Apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP1-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM- \_ isime**](em-isime.md)
+[**EM \_ ISIME**](em-isime.md)
 </dt> <dt>
 
-[**EM \_ setctf modebias**](em-setctfmodebias.md)
+[**EM \_ SETCTFMODEBIAS**](em-setctfmodebias.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Initiieren Sie das Rendering einer kubischen Umgebungs Zuordnung.
+description: Initiieren Sie das Rendering einer kubischen Umgebungskarte.
 ms.assetid: 0f02b2e2-8132-4994-ab07-c79a1b7821dd
-title: 'ID3DXRenderToEnvMap:: begincube-Methode (D3dx9core. h)'
+title: ID3DXRenderToEnvMap::BeginCube-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bff6c8f3bdc49dfe0c1b677c6805cb332c05007d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 081e96425a7928cb1cd4a5a3ee48479d562c5c30a2f9017665acd32ffb539244
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118293274"
 ---
-# <a name="id3dxrendertoenvmapbegincube-method"></a>ID3DXRenderToEnvMap:: begincube-Methode
+# <a name="id3dxrendertoenvmapbegincube-method"></a>ID3DXRenderToEnvMap::BeginCube-Methode
 
-Initiieren Sie das Rendering einer kubischen Umgebungs Zuordnung.
+Initiieren Sie das Rendering einer kubischen Umgebungskarte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT BeginCube(
 
 <dl> <dt>
 
-*pcubetex* \[ in\]
+*pCubeTex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DCUBETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9)**
 
-Ein Zeiger auf eine [**IDirect3DCubeTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9) -Schnittstelle, die die zu Rendering Ende Cubestruktur darstellt.
+Zeiger auf eine [**IDirect3DCubeTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9) die die Cubetextur darstellt, in der gerendert werden soll.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf eine [**IDirect3DCubeTexture9**](/windows/win32/api/d3d9helper/nn
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [**ID3DXRenderToEnvMap:: Face**](id3dxrendertoenvmap--face.md) .
+Informationen zum Zeichnen der sechs Gesichter finden Sie unter [**ID3DXRenderToEnvMap::Face.**](id3dxrendertoenvmap--face.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Weitere Informationen finden Sie unter [**ID3DXRenderToEnvMap:: Face**](id3dxren
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -77,7 +77,7 @@ Weitere Informationen finden Sie unter [**ID3DXRenderToEnvMap:: Face**](id3dxren
 [ID3DXRenderToEnvMap](id3dxrendertoenvmap.md)
 </dt> <dt>
 
-[**ID3DXRenderToEnvMap:: End**](id3dxrendertoenvmap--end.md)
+[**ID3DXRenderToEnvMap::End**](id3dxrendertoenvmap--end.md)
 </dt> </dl>
 
  

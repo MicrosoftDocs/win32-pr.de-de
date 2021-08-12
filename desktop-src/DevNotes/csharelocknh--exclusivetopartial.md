@@ -1,7 +1,7 @@
 ---
 description: Ändert eine exklusive Sperre in eine partielle Sperre.
 ms.assetid: 46f0c354-6cb6-4d23-888a-88a2629a46b8
-title: 'Csharelocknh:: exclusivetopartial-Methode'
+title: CShareLockNH::ExclusiveToPartial-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Rwnh.dll
-ms.openlocfilehash: ae337917ee443544ebbd031dd0d95f4e20918570
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4584b9ede8d5512e75346882bfbf21ef68fe017a6950443a28fbf3dc85454c8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667846"
 ---
-# <a name="csharelocknhexclusivetopartial-method"></a>Csharelocknh:: exclusivetopartial-Methode
+# <a name="csharelocknhexclusivetopartial-method"></a>CShareLockNH::ExclusiveToPartial-Methode
 
 Ändert eine exklusive Sperre in eine partielle Sperre.
 
@@ -41,9 +41,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

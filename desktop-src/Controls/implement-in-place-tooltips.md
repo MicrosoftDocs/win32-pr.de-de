@@ -1,61 +1,61 @@
 ---
-title: Implementieren von In-Place Quick Infos
-description: Direkte Quick Infos werden zum Anzeigen von Text Zeichenfolgen für Objekte verwendet, die abgeschnitten wurden. Eine Abbildung finden Sie unter Informationen zu QuickInfo-Steuerelementen.
+title: Implementieren von In-Place QuickInfos
+description: QuickInfos werden verwendet, um Textzeichenfolgen für Objekte anzuzeigen, die abgeschnitten wurden. Eine Abbildung finden Sie unter Informationen zu QuickInfo-Steuerelementen.
 ms.assetid: 2FE39B99-75F3-4978-B0B3-B769E2961F23
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc321ecdd6df151a151e6d21c8419326edb63d38
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 9dd3b01d30a20b52cbb80121cc8c1d793965acf0ea3cf4f2be1ce4553f4ccb98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118671728"
 ---
-# <a name="how-to-implement-in-place-tooltips"></a>Implementieren von In-Place Quick Infos
+# <a name="how-to-implement-in-place-tooltips"></a>Implementieren von In-Place QuickInfos
 
-Direkte Quick Infos werden zum Anzeigen von Text Zeichenfolgen für Objekte verwendet, die abgeschnitten wurden. Eine Abbildung finden Sie unter [Informationen zu](tooltip-controls.md)QuickInfo-Steuerelementen.
+QuickInfos werden verwendet, um Textzeichenfolgen für Objekte anzuzeigen, die abgeschnitten wurden. Eine Abbildung finden Sie unter [Informationen zu QuickInfo-Steuerelementen.](tooltip-controls.md)
 
-Der Unterschied zwischen normalen und direkten Quick Infos ist die Positionierung. Wenn der Mauszeiger auf einen Bereich zeigt, dem eine QuickInfo zugeordnet ist, wird die QuickInfo standardmäßig neben dem Bereich angezeigt. Quick Infos sind jedoch Windows, und Sie können an einer beliebigen Stelle positioniert werden, indem Sie [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos)aufrufen. Das Erstellen einer direkten QuickInfo besteht darin, das QuickInfo-Fenster so zu positionieren, dass es die Text Zeichenfolge überlagert.
+Der Unterschied zwischen normalen und tatsächlichen QuickInfos ist die Positionierung. Wenn der Mauszeiger mit dem Mauszeiger auf einen Bereich zeigt, dem eine QuickInfo zugeordnet ist, wird die QuickInfo standardmäßig neben dem Bereich angezeigt. QuickInfos sind jedoch Fenster, und sie können an einer beliebigen Stelle positioniert werden, indem [**Sie SetWindowPos aufrufen.**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Das Erstellen einer quickinfo ist eine Frage der Positionierung des QuickInfo-Fensters, sodass es die Textzeichenfolge überlagert.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche Programmierung
 
-## <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a>Instructions
 
-### <a name="positioning-an-in-place-tooltip"></a>Positionieren einer In-Place-QuickInfo
+### <a name="positioning-an-in-place-tooltip"></a>Positionieren einer In-Place QuickInfo
 
-Sie müssen drei Rechtecke nachverfolgen, wenn Sie eine direkte QuickInfo positionieren:
+Sie müssen drei Rechtecke nachverfolgen, wenn Sie eine quickinfo positionieren:
 
-1.  Das Rechteck, das den vollständigen Bezeichnungs Text umgibt.
-2.  Das Rechteck, das den QuickInfo-Text umgibt. Der QuickInfo-Text ist mit dem vollständigen Bezeichnungs Text identisch und weist normalerweise dieselbe Größe und Schriftart auf. Die zwei Text Rechtecke haben daher normalerweise dieselbe Größe.
-3.  Das QuickInfo-Fenster Rechteck. Dieses Rechteck ist etwas größer als das QuickInfo-Text Rechteck, das es einschließt.
-
-
-Die drei Rechtecke werden schematisch in der folgenden Abbildung dargestellt. Der verborgene Teil des Beschriftungs Texts wird durch einen grauen Hintergrund angegeben.
-
-![das Diagramm zeigt eine lange Zeichenfolge, die Hälfte davon einen grauen Hintergrund hat, dann die gleiche Zeichenfolge innerhalb eines größeren QuickInfo-Fenster Rechtecks.](images/inplace.png)
-
-Um eine direkte QuickInfo zu erstellen, müssen Sie das QuickInfo-Text Rechteck so positionieren, dass es das Bezeichnungs Text Rechteck überlagert. Die Vorgehensweise zum Ausrichten der beiden Rechtecke ist relativ unkompliziert:
-
-1.  Definieren des Bezeichnungs Text Rechtecks.
-2.  Positionieren Sie das QuickInfo-Fenster, sodass das Text Rechteck der QuickInfo das Bezeichnungs Text Rechteck überlagert.
+1.  Das Rechteck, das den vollständigen Bezeichnungstext umgibt.
+2.  Das Rechteck, das den QuickInfo-Text umgibt. Der QuickInfo-Text ist mit dem vollständigen Bezeichnungstext identisch und hat normalerweise die gleiche Größe und Schriftart. Die beiden Textrechtecke haben daher in der Regel die gleiche Größe.
+3.  Das QuickInfo-Fensterrechteck. Dieses Rechteck ist etwas größer als das QuickInfo-Textrechteck, das es umschließt.
 
 
-In der Praxis ist es in der Regel ausreichend, die obere linke Ecke der beiden Text Rechtecke auszurichten. Wenn Sie versuchen, die Größe des QuickInfo-Text Rechtecks exakt mit dem Bezeichnungs Text Rechteck übereinzustimmen, können Probleme mit der QuickInfo angezeigt werden
+Die drei Rechtecke werden in der folgenden Abbildung schematisch dargestellt. Der ausgeblendete Teil des Bezeichnungstexts wird durch einen grauen Hintergrund angezeigt.
 
-Das Problem mit diesem einfachen Schema besteht darin, dass Sie das QuickInfo-Text Rechteck nicht direkt positionieren können. Stattdessen müssen Sie das QuickInfo-Fenster Rechteck direkt oberhalb und Links vom Bezeichnungs Text Rechteck positionieren, damit die Ecken der zwei Text Rechtecke übereinstimmen. Anders ausgedrückt: Sie müssen den Offset zwischen dem QuickInfo-Fenster Rechteck und dem eingeschlossenen Text Rechteck kennen. Im Allgemeinen gibt es keine einfache Methode zum Ermitteln dieses Offsets.
+![Diagramm, das eine lange Zeichenfolge zeigt, von der die Hälfte einen grauen Hintergrund hat, und dann dieselbe Zeichenfolge innerhalb eines größeren Rechtecks im QuickInfo-Fenster](images/inplace.png)
 
-### <a name="implement-in-place-tooltips"></a>Implementieren von In-Place Quick Infos
+Um eine quickinfo zu erstellen, müssen Sie das QuickInfo-Textrechteck so positionieren, dass es das Bezeichnungstextrechteck überlagert. Das Verfahren zum Ausrichten der beiden Rechtecke ist relativ einfach:
 
-Im folgenden Code Fragment wird veranschaulicht, wie eine [**TTM \_**](ttm-adjustrect.md) -Nachricht in einem [TTN- \_ Show](ttn-show.md) Handler verwendet wird, um eine direkte QuickInfo anzuzeigen. Die Anwendung gibt an, dass der Bezeichnungs Text abgeschnitten wird, indem die private *fmystringistruncated* -Variable auf **true** festgelegt wird. Der Handler Ruft die Anwendungs definierte Funktion **getmyitemrect** auf, um das Bezeichnungs Text Rechteck abzurufen. Dieses Rechteck wird an das QuickInfo-Steuerelement mit TTM-"-", "-", das das entsprechende Fenster Rechteck zurückgibt. **\_** [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) wird dann aufgerufen, um die QuickInfo über der Bezeichnung zu positionieren.
+1.  Definieren Sie das Bezeichnungstextrechteck.
+2.  Positionieren Sie das QuickInfo-Fenster so, dass das QuickInfo-Textrechteck das Bezeichnungstextrechteck überlagert.
+
+
+In der Praxis ist es in der Regel ausreichend, die linke obere Ecke der beiden Textrechtecke auszurichten. Der Versuch, die Größe des QuickInfo-Textrechtecks so zu ändern, dass es genau mit dem Bezeichnungstextrechteck übereinstimmen kann, kann probleme mit der QuickInfo-Anzeige verursachen.
+
+Das Problem bei diesem einfachen Schema ist, dass Sie das QuickInfo-Textrechteck nicht direkt positionieren können. Stattdessen müssen Sie das Rechteck des QuickInfo-Fensters genau so weit über und links vom Bezeichnungstextrechteck positionieren, dass die Ecken der beiden Textrechtecke übereinstimmen. Anders ausgedrückt: Sie müssen den Offset zwischen dem Rechteck des QuickInfo-Fensters und dem umschlossenen Textrechteck kennen. Im Allgemeinen gibt es keine einfache Möglichkeit, diesen Offset zu bestimmen.
+
+### <a name="implement-in-place-tooltips"></a>Implementieren In-Place QuickInfos
+
+Das folgende Codefragment veranschaulicht, wie eine [**TTM \_ ADJUSTRECT-Nachricht**](ttm-adjustrect.md) in einem [TTN \_ SHOW-Handler](ttn-show.md) verwendet wird, um eine quickinfo anzuzeigen. Ihre Anwendung gibt an, dass der Bezeichnungstext abgeschnitten wird, indem die private *fMyStringIsTruncated-Variable* auf **TRUE festlegen.** Der Handler ruft die anwendungsdefinierte Funktion **GetMyItemRect** auf, um das Bezeichnungstextrechteck abzurufen. Dieses Rechteck wird mit **TTM \_ ADJUSTRECT** an das QuickInfo-Steuerelement übergeben, das das entsprechende Fensterrechteck zurückgibt. [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) wird dann aufgerufen, um die QuickInfo über der Bezeichnung zu positionieren.
 
 
 ```C++
@@ -76,17 +76,17 @@ case TTN_SHOW:
 
 
 
-In diesem Beispiel wird die Größe der QuickInfo nicht geändert, sondern nur die Position. Die zwei Text Rechtecke werden an Ihren oberen linken Ecken ausgerichtet, aber nicht unbedingt mit denselben Dimensionen. In der Praxis ist der Unterschied in der Regel gering, und diese Vorgehensweise wird für die meisten Zwecke empfohlen. Obwohl Sie [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) zum Ändern der Größe und zum Neupositionieren der QuickInfo verwenden können, kann dies zu unvorhersehbaren Folgen führen.
+Dieses Beispiel ändert nicht die Größe der QuickInfo, sondern nur deren Position. Die beiden Textrechtecke werden an ihren oberen linken Ecken ausgerichtet, aber nicht notwendigerweise mit den gleichen Dimensionen. In der Praxis ist der Unterschied in der Regel klein, und dieser Ansatz wird für die meisten Zwecke empfohlen. Sie können zwar im Prinzip [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) verwenden, um die Größe zu ändern und die QuickInfo neu zu positionieren. Dies kann jedoch unvorhersehbare Folgen haben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Allgemeine Steuerelemente [Version 5,80](common-control-versions.md) vereinfachen die Verwendung von direkten Quick Infos durch das Hinzufügen einer neuen Nachricht, [**TTM- \_**](ttm-adjustrect.md)Version. Senden Sie diese Nachricht mit den Koordinaten des Beschriftungs Text Rechtecks, das von der QuickInfo überlagern werden soll, und gibt die Koordinaten eines ordnungsgemäß positionierten QuickInfo-Fenster Rechtecks zurück.
+Allgemeine [Steuerelemente, Version 5.80,](common-control-versions.md) vereinfachen die Verwendung von quickinfos, indem eine neue Nachricht, [**TTM \_ ADJUSTRECT, eingeführt wird.**](ttm-adjustrect.md) Senden Sie diese Nachricht mit den Koordinaten des Bezeichnungstextrechtecks, das die QuickInfo überlagern soll, und gibt die Koordinaten eines entsprechend positionierten QuickInfo-Fensterrechtecks zurück.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Quick Infos](using-tooltip-contro.md)
+[Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)
 </dt> </dl>
 
  

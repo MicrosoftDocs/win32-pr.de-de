@@ -1,9 +1,9 @@
 ---
-title: LVM_GETSELECTIONMARK Meldung (kommstrg. h)
-description: Ruft die Auswahl Markierung von einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ getselectionmark-Makro verwenden.
+title: LVM_GETSELECTIONMARK-Nachricht (Commctrl.h)
+description: Ruft das Auswahlzeichen aus einem Listenansichtssteuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ GetSelectionMark-Makro verwenden.
 ms.assetid: 21daf7d7-1217-4608-93f9-c390546f1591
 keywords:
-- Windows-Steuerelemente für LVM_GETSELECTIONMARK Meldung
+- LVM_GETSELECTIONMARK Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 076aff15ff69c4b442c74022ed5a7c02b92a8c52
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ed2675550ebc4cf456b439a2e5869068e983f46c82bf6fdde99d8b92806e6cac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118670978"
 ---
-# <a name="lvm_getselectionmark-message"></a>LVM \_ getselectionmark-Nachricht
+# <a name="lvm_getselectionmark-message"></a>LVM \_ GETSELECTIONMARK-Nachricht
 
-Ruft die Auswahl Markierung von einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ getselectionmark**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getselectionmark) -Makro verwenden.
+Ruft das Auswahlzeichen aus einem Listenansichtssteuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ GetSelectionMark-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getselectionmark) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die Auswahl Markierung von einem Listenansicht-Steuerelement ab. Sie könne
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das null basierte Auswahl Zeichen oder-1 zurück, wenn kein Auswahl Zeichen vorhanden ist.
+Gibt das nullbasierte Auswahlzeichen oder -1 zurück, wenn kein Auswahlzeichen vorhanden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das *Auswahl Zeichen* ist der Element Index, von dem eine Mehrfachauswahl gestartet wird.
+Das *Auswahlzeichen* ist der Elementindex, ab dem eine Mehrfachauswahl beginnt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Das *Auswahl Zeichen* ist der Element Index, von dem eine Mehrfachauswahl gestar
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**LVM \_ setselectionmark**](lvm-setselectionmark.md)
+[**LVM \_ SETSELECTIONMARK**](lvm-setselectionmark.md)
 </dt> </dl>
 
  

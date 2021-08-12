@@ -1,9 +1,9 @@
 ---
-title: TVM_SORTCHILDRENCB Meldung (kommstrg. h)
-description: Sortiert Struktur Ansichts Elemente mithilfe einer Anwendungs definierten Rückruffunktion, die die Elemente vergleicht. Sie können diese Nachricht explizit oder mit dem TreeView- \_ Makro "SortChildren-CB" senden.
+title: TVM_SORTCHILDRENCB-Nachricht (Commctrl.h)
+description: Sortiert Strukturansichtselemente mithilfe einer anwendungsdefiniert Rückruffunktion, die die Elemente vergleicht. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ SortChildrenCB-Makros senden.
 ms.assetid: 1669e576-5e57-49f6-8097-7d6547306014
 keywords:
-- Windows-Steuerelemente für TVM_SORTCHILDRENCB Meldung
+- TVM_SORTCHILDRENCB Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b1dab4abbbc019a81d7a066c81dbb3537a0d80d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 45f0ec311cc5ce0f972f3363ea97cd42874ca85807bf852296de0283fccc95c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118669476"
 ---
-# <a name="tvm_sortchildrencb-message"></a>TVM \_ SortChildren-Nachricht
+# <a name="tvm_sortchildrencb-message"></a>TVM \_ SORTCHILDRENCB-Nachricht
 
-Sortiert Struktur Ansichts Elemente mithilfe einer Anwendungs definierten Rückruffunktion, die die Elemente vergleicht. Sie können diese Nachricht explizit oder mit dem [**TreeView-Makro " \_ SortChildren-CB**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sortchildrencb) " senden.
+Sortiert Strukturansichtselemente mithilfe einer anwendungsdefiniert Rückruffunktion, die die Elemente vergleicht. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SortChildrenCB-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sortchildrencb) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,13 +39,13 @@ Reserviert. Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**tvsortcb**](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) -Struktur. Der **lpfncompare** -Member ist die Adresse der Anwendungs definierten Rückruffunktion, die während des Sortier Vorgangs aufgerufen wird, wenn die relative Reihenfolge zweier Listenelemente verglichen werden muss. Weitere Informationen zur Rückruffunktion finden Sie in der Beschreibung von **tvsortcb**.
+Zeiger auf eine [**TVSORTCB-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) Der **lpfnCompare-Member** ist die Adresse der anwendungsdefinierte Rückruffunktion, die während des Sortiervorgangs jedes Mal aufgerufen wird, wenn die relative Reihenfolge von zwei Listenelementen verglichen werden muss. Weitere Informationen zur Rückruffunktion finden Sie in der Beschreibung von **TVSORTCB**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

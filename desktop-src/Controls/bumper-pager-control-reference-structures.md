@@ -1,23 +1,23 @@
 ---
-title: Pager-Steuerungsstrukturen
-description: Pager-Steuerungsstrukturen
+title: Pager-Steuerelementstrukturen
+description: Pager-Steuerelementstrukturen
 ms.assetid: 1dea25e9-2ec7-4e2a-a64f-029888898448
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1122ff42a1ece716197b2cf014463bfc737812ca
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f930b3ae1e9dda0dc8d87fc646ddae0d478c85e4c9f255454018392116d0ca19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118673214"
 ---
-# <a name="pager-control-structures"></a>Pager-Steuerungsstrukturen
+# <a name="pager-control-structures"></a>Pager-Steuerelementstrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Nmpgcalcsize**](/windows/desktop/api/Commctrl/ns-commctrl-nmpgcalcsize)
--   [**Nmpghotitem**](/windows/win32/api/commctrl/ns-commctrl-nmpghotitem)
--   [**Nmpgscroll**](/windows/desktop/api/Commctrl/ns-commctrl-nmpgscroll)
+-   [**NMPGCALCSIZE**](/windows/desktop/api/Commctrl/ns-commctrl-nmpgcalcsize)
+-   [**NMPGHOTITEM**](/windows/win32/api/commctrl/ns-commctrl-nmpghotitem)
+-   [**NMPGSCROLL**](/windows/desktop/api/Commctrl/ns-commctrl-nmpgscroll)
 
  
 

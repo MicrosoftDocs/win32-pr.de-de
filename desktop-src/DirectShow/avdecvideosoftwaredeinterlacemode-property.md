@@ -1,33 +1,33 @@
 ---
-description: Gibt den Software Deinterlacing-Modus des Decoders an.
+description: Gibt den Softwaredeinterlacemodus des Decoders an.
 ms.assetid: 254f003f-b3fd-40ab-a472-6bae93f11326
-title: Avdecvideosoftwaredeingeterlacemode-Eigenschaft (codecapi. h)
+title: AVDecVideoSoftwareDeinterlaceMode-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e728b12d11def7f35c207bb8f76a5c763675397b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 67c48f60b0d54487ab2ee227c72e2a4f068b520542a6bcfe424fb384984a33db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663451"
 ---
-# <a name="avdecvideosoftwaredeinterlacemode-property"></a>Avdecvideosoftwaredeingeterlacemode (Eigenschaft)
+# <a name="avdecvideosoftwaredeinterlacemode-property"></a>AVDecVideoSoftwareDeinterlaceMode (Eigenschaft)
 
-Gibt den Software Deinterlacing-Modus des Decoders an.
+Gibt den Softwaredeinterlacemodus des Decoders an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdecvideosoftwaredeingeterlacemode**
+**CODECAPI \_ AVDecVideoSoftwareDeinterlaceMode**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavdecvideosoftwaredeingeterlacemode**](/windows/desktop/api/codecapi/ne-codecapi-eavdecvideosoftwaredeinterlacemode) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVDecVideoSoftwareDeinterlaceMode-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavdecvideosoftwaredeinterlacemode)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavdecvideosoftwaredeingeterla
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

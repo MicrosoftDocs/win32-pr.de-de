@@ -1,6 +1,6 @@
 ---
 title: D3DX_FLOAT4_to_B8G8R8A8_UNORM_SRGB-Funktion
-description: Packt das angegebene XMFLOAT4 in ein DXGI- \_ Format \_ B8G8R8A8 \_ unorm \_ sRGB uint.
+description: Packt den angegebenen XMFLOAT4 in ein \_ DXGI-FORMAT \_ B8G8R8A8 \_ UNORM \_ SRGB UINT.
 ms.assetid: 2fc36f19-44ce-43ba-9d9f-e8061f94a207
 keywords:
 - D3DX_FLOAT4_to_B8G8R8A8_UNORM_SRGB-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c20292e1038d31c6d853eb8ae62f7e764e722a6c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6661ea7bce5f5a10fec8c3d96bf178fc4e169ba53d013143b89c8114de71cc60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118286836"
 ---
-# <a name="d3dx_float4_to_b8g8r8a8_unorm_srgb-function"></a>D3DX \_ float4 \_ to \_ B8G8R8A8 \_ unorm \_ sRGB-Funktion
+# <a name="d3dx_float4_to_b8g8r8a8_unorm_srgb-function"></a>D3DX \_ FLOAT4 \_ bis \_ B8G8R8A8 \_ UNORM \_ SRGB-Funktion
 
-Packt das angegebene XMFLOAT4 in ein DXGI- \_ Format \_ B8G8R8A8 \_ unorm \_ sRGB uint.
+Packt den angegebenen XMFLOAT4 in ein \_ DXGI-FORMAT \_ B8G8R8A8 \_ UNORM \_ SRGB UINT.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,24 +37,24 @@ UINT D3DX_FLOAT4_to_B8G8R8A8_UNORM_SRGB(
 
 <dl> <dt>
 
-*unpackedinput* 
+*unpackedInput* 
 </dt> <dd>
 
-Die entpackten Shader-Daten.
+Die entpackten Shaderdaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die gepackten Shader-Daten.
+Die gepackten Shaderdaten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die gepackten Shader-Daten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

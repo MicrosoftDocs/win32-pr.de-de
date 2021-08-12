@@ -1,66 +1,66 @@
 ---
-title: Unterstützen von hoher Kontrast Designs
-description: In diesem Thema wird die Unterstützung für Designs mit hohem Kontrast in Windows 8 mit denen früherer Windows-Versionen verglichen, und es wird erläutert, wie Designs mit hohem Kontrast in einer Windows 8-Anwendung unterstützt werden.
+title: Unterstützen hoher Kontrast Designs
+description: In diesem Thema wird die Unterstützung für Designs mit hohem Kontrast in Windows 8 mit denen früherer Versionen von Windows verglichen, und es wird erläutert, wie Designs mit hohem Kontrast in einer Windows 8 unterstützt werden.
 ms.assetid: 6E4F1198-E69C-4C60-B3B0-2702AECAA203
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2068d64b585f302f578296c9e156895c23b9bce9
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 7f32c89302daeb7190174a0d6b9e822e1c55d3e530ad29baedd00c5ffdefc97b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118670626"
 ---
-# <a name="supporting-high-contrast-themes"></a>Unterstützen von hoher Kontrast Designs
+# <a name="supporting-high-contrast-themes"></a>Unterstützen hoher Kontrast Designs
 
-In diesem Thema wird die Unterstützung für Designs mit hohem Kontrast in Windows 8 mit denen früherer Windows-Versionen verglichen, und es wird erläutert, wie Designs mit hohem Kontrast in einer Windows 8-Anwendung unterstützt werden.
+In diesem Thema wird die Unterstützung für Designs mit hohem Kontrast in Windows 8 mit denen früherer Versionen von Windows verglichen, und es wird erläutert, wie Designs mit hohem Kontrast in einer Windows 8 unterstützt werden.
 
-Dies umfasst die folgenden Abschnitte.
+Sie enthält die folgenden Abschnitte.
 
--   [Übersicht über die Unterstützung von hoher Kontrast Designs](#overview-of-support-for-high-contrast-themes)
--   [Unterstützen von hoher Kontrast Designs in Windows 8 und höher](#supporting-high-contrast-themes-in-windows-8-and-later)
--   [Hinzufügen eines Kompatibilitäts Abschnitts zum Anwendungs Manifest](#adding-a-compatibility-section-to-your-application-manifest)
--   [Erkennen von hoher Kontrast in früheren Versionen von Windows](#detecting-high-contrast-in-previous-versions-of-windows)
+-   [Übersicht über die Unterstützung für hoher Kontrast Designs](#overview-of-support-for-high-contrast-themes)
+-   [Unterstützen hoher Kontrast Designs in Windows 8 und höher](#supporting-high-contrast-themes-in-windows-8-and-later)
+-   [Hinzufügen eines Kompatibilitätsabschnitts zum Anwendungsmanifest](#adding-a-compatibility-section-to-your-application-manifest)
+-   [Erkennen hoher Kontrast in früheren Versionen von Windows](#detecting-high-contrast-in-previous-versions-of-windows)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="overview-of-support-for-high-contrast-themes"></a>Übersicht über die Unterstützung von hoher Kontrast Designs
+## <a name="overview-of-support-for-high-contrast-themes"></a>Übersicht über die Unterstützung für hoher Kontrast Designs
 
-Windows 7 und frühere Versionen unterstützen zwei Designmodelle, einschließlich des klassischen Windows Classic-Modells und der aktuellen visuellen Stile. Das klassische Windows-Modell wurde über Windows 7 vor allem zur Unterstützung der verschiedenen Designs mit hohem Kontrast beibehalten. Das klassische Windows-Modell weist jedoch eine Reihe von Nachteilen auf:
+Windows 7 und früher unterstützen zwei Designmodelle, einschließlich des legacy Windows klassischen Modells und der aktuellen visuellen Stile. Das Windows klassische Modell wurde bis Windows 7 beibehalten, um hauptsächlich die verschiedenen Designs mit hohem Kontrast zu unterstützen. Das klassische Windows hat jedoch eine Reihe von Nachteilen:
 
--   Keine Unterstützung für Designs, die visuelle Stile verwenden, wie z. b. Windows Aero. Benutzer mit Designs mit hohem Kontrast müssen die klassische Windows-Benutzeroberfläche verwenden.
--   Keine Unterstützung für Benutzeroberflächen Features, die zum Ausführen von Desktopfenster-Manager (DWM) benötigt werden, wie z. b. Miniaturansichten und die voll Bild Bildschirmlupe, die in Windows 7 eingeführt wurde.
--   Entwickler müssen zwei separate Codepfade verwalten, um die beiden unterschiedlichen Designmodelle zu unterstützen.
+-   Keine Unterstützung für Designs, die visuelle Stile verwenden, z. B. Windows Denen. Benutzer von Designs mit hohem Kontrast müssen die Windows benutzeroberfläche verwenden.
+-   Keine Unterstützung für Benutzeroberflächenfeatures, die für die Ausführung von Desktopfenster-Manager (DWM) verwendet werden, z. B. Miniaturansichten und die in Windows 7 eingeführte Vollbildlupe.
+-   Entwickler müssen zwei separate Codepfade verwalten, um die beiden verschiedenen Themingmodelle zu unterstützen.
 
-In Windows 8 und höher werden die vorherigen Nachteile durch die folgenden Änderungen am Designmodell behandelt:
+In Windows 8 und höher werden die vorherigen Nachteile durch die folgenden Änderungen am Themingmodell adressiert:
 
--   Das klassische Windows-Designmodell wird nicht mehr unterstützt, sodass Entwickler nur einen Codepfad für Anwendungen verwalten können, die nur auf Windows 8 abzielen.
--   Da visuelle Stile und DWM in Windows 8 vorhanden sind, haben Benutzer mit hohem Kontrast Zugriff auf Features wie Miniaturansichten und die Bildschirmlupe.
--   Visuelle Stile unterstützen das Festlegen der Farben verschiedener Benutzeroberflächen Elemente, sodass Benutzer mit hohem Kontrast die Benutzeroberfläche anpassen können, um die individuellen Anforderungen und Vorlieben zu erfüllen.
--   Windows 8 umfasst Kompatibilitäts Unterstützung für vorhandene Anwendungen, die für die Verwendung von Designs mit hohem Kontrast basierend auf dem klassischen Windows-Designmodell entwickelt wurden.
+-   Das Windows klassische Designmodell wird nicht mehr unterstützt, sodass Entwickler nur einen Codepfad für Anwendungen verwalten können, die nur auf Windows 8.
+-   Da visuelle Stile und DWM in Windows 8 sind, haben Benutzer mit hohem Kontrast Zugriff auf Features wie Miniaturansichten und die Vollbildlupe.
+-   Visuelle Stile unterstützen das Festlegen der Farben verschiedener Benutzeroberflächenelemente, sodass Benutzer mit hohem Kontrast die Benutzeroberfläche an die individuellen Anforderungen und Einstellungen anpassen können.
+-   Windows 8 enthält Kompatibilitätsunterstützung für vorhandene Anwendungen, die für die Verwendung von Designs mit hohem Kontrast entwickelt wurden, die auf dem Windows-Designmodell basieren.
 
-## <a name="supporting-high-contrast-themes-in-windows-8-and-later"></a>Unterstützen von hoher Kontrast Designs in Windows 8 und höher
+## <a name="supporting-high-contrast-themes-in-windows-8-and-later"></a>Unterstützen hoher Kontrast Designs in Windows 8 und höher
 
-Da visuelle Stile in Windows 8 im Modus mit hohem Kontrast angezeigt werden, ist die Unterstützung von Designs mit hohem Kontrast unkompliziert, solange Sie die folgenden Richtlinien beachten.
+Da Windows 8 visuelle Stile im Modus mit hohem Kontrast aktiviert sind, ist die Unterstützung von Designs mit hohem Kontrast einfach, solange Sie die folgenden Richtlinien befolgen.
 
--   Schrift-und Steuerelement Größen. Um sicherzustellen, dass die Benutzeroberfläche für Benutzer mit Behinderungen zugänglich ist, legen Sie Schriftart Größen entsprechend den aktuellen Design Einstellungen fest. Legen Sie die Größe der Steuerelemente auf mindestens die Standardgröße fest.
--   Ellen. Vermeiden Sie es, hart codierte Farben zu verwenden. Verwenden Sie stattdessen die Systemfarben, da Sie auf dem aktuellen Design basieren. Durch die Verwendung benutzerdefinierter Farben können die Farben in den Designs mit hohem Kontrast beeinträchtigt und überschrieben werden.
--   Anwendungs Manifest. Für Anwendungen, die für die Arbeit mit den neuen Designs mit hohem Kontrast entwickelt wurden, sollte ein Anwendungs Kompatibilitäts Abschnitt definiert sein, der die Windows 8-Kompatibilitäts-GUIDs enthält. Andernfalls geht Windows davon aus, dass die Anwendung auf eine ältere Version von Windows ausgelegt ist, und rendert die Benutzeroberfläche der Anwendung, indem das klassische Windows-Designmodell simuliert wird.
+-   Schrift- und Steuerelementgrößen. Um sicherzustellen, dass Ihre Benutzeroberfläche für Benutzer mit Behinderungen zugänglich ist, legen Sie die Schriftgrößen gemäß den aktuellen Designeinstellungen fest. Legen Sie die Größe von Steuerelementen auf mindestens die Standardgröße fest.
+-   Farben. Vermeiden Sie die Verwendung hart codierten Farben. Verwenden Sie stattdessen die Systemfarben, da sie auf dem aktuellen Design basieren. Die Verwendung benutzerdefinierter Farben kann die Farben in designs mit hohem Kontrast beeinträchtigen und überschreiben.
+-   Anwendungsmanifest. Anwendungen, die für die Arbeit mit den neuen Designs mit hohem Kontrast entwickelt wurden, sollten über einen anwendungskompatibilitätsabschnitt verfügen, der in ihrem Manifest definiert ist und Windows 8 Kompatibilitäts-GUIDs enthält. Andernfalls Windows davon ausgegangen, dass die Anwendung für eine ältere Version von Windows entwickelt wurde, und rendert die Benutzeroberfläche der Anwendung, indem das Windows klassisches Designmodell simuliert wird.
 
-## <a name="adding-a-compatibility-section-to-your-application-manifest"></a>Hinzufügen eines Kompatibilitäts Abschnitts zum Anwendungs Manifest
+## <a name="adding-a-compatibility-section-to-your-application-manifest"></a>Hinzufügen eines Kompatibilitätsabschnitts zum Anwendungsmanifest
 
-Ein Anwendungs Manifest ist eine XML-Datei, in der die Anforderungen für eine Anwendung beschrieben werden. Der Kompatibilitäts Abschnitt des Manifests identifiziert die Versionen von Windows, die von der Anwendung unterstützt werden. Die folgenden GUIDs werden im Kompatibilitäts Abschnitt verwendet, um die verschiedenen Versionen von Windows zu identifizieren.
+Ein Anwendungsmanifest ist eine XML-Datei, die die Anforderungen für eine Anwendung beschreibt. Der Kompatibilitätsabschnitt des Manifests identifiziert die Versionen der Windows von der Anwendung unterstützt werden. Die folgenden GUIDs werden im Kompatibilitätsabschnitt verwendet, um die verschiedenen Versionen von Windows.
 
 | Version       | GUID                                   |
 |---------------|----------------------------------------|
-| Windows Vista | {e2011457-1546-43c5-a5fe-008deee3d3f0} |
-| Windows 7     | {35138b9a-5d96-4f BD-8e2d-a2440225b93a} |
-| Windows 8     | {4a2b28e3-53b9-4441-ba9c-d69d4a4a6e38} |
+| Windows Vista | {e2011457-1546-43c5-a5fe-008deee3d3f0} |
+| Windows 7     | {35138b9a-5d96-4fbd-8e2d-a2440225f93a} |
+| Windows 8     | {4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38} |
 
 
 
- 
+ 
 
-Im Kompatibilitäts Abschnitt können mehrere Versionen von Windows angegeben werden, die jeweils in einem eigenen Tag enthalten sein müssen `<supportedOS/>` . Das folgende Beispiel zeigt ein Anwendungs Manifest, das Windows 7 und Windows 8 im Kompatibilitäts Abschnitt angibt:
+Der Kompatibilitätsabschnitt kann mehrere Versionen von Windows, muss jedoch jeweils in einem eigenen Tag enthalten `<supportedOS/>` sein. Das folgende Beispiel zeigt ein Anwendungsmanifest, das Windows 7 und Windows 8 kompatibilitätsabschnitt angibt:
 
 
 ```C++
@@ -80,25 +80,25 @@ Im Kompatibilitäts Abschnitt können mehrere Versionen von Windows angegeben we
 
 
 
-Wenn für eine Anwendung kein Kompatibilitäts Manifest vorhanden ist, wird davon ausgegangen, dass es sich um eine Windows Vista-Anwendung handelt, und es werden keine Design Steuerelemente im Client Bereich verwendet, wenn ein Design mit hohem Kontrast aktiv ist. Außerdem ist das Verhalten einiger visueller Stile-Funktionen betroffen. Beispielsweise wird von [**isthmeactive**](/windows/desktop/api/Uxtheme/nf-uxtheme-isthemeactive), [**iscompositionactive**](/windows/desktop/api/Uxtheme/nf-uxtheme-iscompositionactive)und [**isapptheme**](/windows/desktop/api/Uxtheme/nf-uxtheme-isappthemed) false zurückgegeben, während [**openthmedata**](/windows/desktop/api/Uxtheme/nf-uxtheme-openthemedata) und [**openrowmedataex**](/windows/desktop/api/Uxtheme/nf-uxtheme-openthemedataex) ein NULL-Handle zurückgeben. Dies dient der Kompatibilitäts Unterstützung, sodass Anwendungen, die vor Windows 8 erstellt wurden, Ihre Benutzeroberfläche immer noch in demselben aussehen wie der Modus für hohe Kontraste in früheren Versionen von Windows renderingelemente darstellen können, in dem visuelle Stile nicht verfügbar sind.
+Wenn eine Anwendung über kein Kompatibilitätsmanifest verfügt, wird davon ausgegangen, dass es sich um eine Windows Vista-Anwendung handelt, und es werden keine Designsteuerelemente im Clientbereich verwendet, wenn ein Design mit hohem Kontrast aktiv ist. Außerdem ist das Verhalten einiger visueller Stilfunktionen betroffen. Beispielsweise geben [**IsThemeActive**](/windows/desktop/api/Uxtheme/nf-uxtheme-isthemeactive), [**IsCompositionActive**](/windows/desktop/api/Uxtheme/nf-uxtheme-iscompositionactive)und [**IsAppThemed**](/windows/desktop/api/Uxtheme/nf-uxtheme-isappthemed) FALSE zurück, während [**OpenThemeData**](/windows/desktop/api/Uxtheme/nf-uxtheme-openthemedata) und [**OpenThemeDataEx**](/windows/desktop/api/Uxtheme/nf-uxtheme-openthemedataex) ein NULL-Handle zurückgeben. Dies ist für die Kompatibilitätsunterstützung geeignet, sodass Anwendungen, die vor Windows 8 erstellt wurden, ihre Benutzeroberfläche weiterhin im gleichen Aussehen rendern können wie der Modus mit hohem Kontrast früherer Versionen von Windows wenn visuelle Stile nicht verfügbar sind.
 
-Unter Windows 8 erhält die Anwendung weiterhin die Vorteile der Desktop Komposition. Dies bedeutet beispielsweise, dass die Verwendbarkeit von Anwendungen wie z. b. der Vollbild-Bildschirmlupe nicht vom Status des Manifests einer einzelnen Anwendung abhängt. Die Verwendbarkeits Anwendung funktioniert im Modus mit hohem Kontrast weiterhin mit einer Anwendung, die sich nicht im Manifest als Windows 8-kompatibel identifiziert.
+Auf Windows 8 erhält die Anwendung weiterhin die Vorteile der Desktopkomposition. Dies bedeutet beispielsweise, dass Benutzerfreundlichkeitsanwendungen wie die Vollbildlupe nicht vom Status des Manifests einer einzelnen Anwendung abhängen. Die Benutzerfreundlichkeitsanwendung funktioniert weiterhin im Modus mit hohem Kontrast mit einer Anwendung, die sich nicht als Windows 8 im Manifest identifiziert.
 
-In den folgenden Abbildungen wird ein einfaches Dialogfeld in hohem Kontrast zu Windows 7 angezeigt.
+Die folgenden Abbildungen zeigen ein einfaches Dialogfeld mit hohem Kontrast Windows 7.
 
-![Dialogfeld "Benutzer-Kontrast"](images/win7-high-contrast.png)
+![Dialogfeld "hig-Kontrast"](images/win7-high-contrast.png)
 
-Dieses Bild zeigt das gleiche Dialogfeld in hohem Kontrast zu Windows 8, aber mit der Windows 7-Kompatibilität, die im Anwendungs Manifest angegeben ist:
+Diese Abbildung zeigt dasselbe Dialogfeld mit hohem Kontrast auf Windows 8, jedoch mit Windows 7-Kompatibilität, die im Anwendungsmanifest angegeben ist:
 
-![Dialogfeld für den hohen Kontrast von W8](images/win7-compat.png)
+![Dialogfeld "w8– hoher Kontrast"](images/win7-compat.png)
 
-Dieses Bild zeigt das gleiche Dialogfeld in hohem Kontrast zu Windows 8, wobei Windows 8 im Anwendungs Manifest angegeben ist:
+Diese Abbildung zeigt dasselbe Dialogfeld mit hohem Kontrast auf Windows 8, Windows 8 im Anwendungsmanifest angegeben ist:
 
-![W8-Dialogfeld mit hohem Kontrast und Manifest](images/win8-manifest.png)
+![w8-Dialogfeld mit hohem Kontrast mit Manifest](images/win8-manifest.png)
 
-## <a name="detecting-high-contrast-in-previous-versions-of-windows"></a>Erkennen von hoher Kontrast in früheren Versionen von Windows
+## <a name="detecting-high-contrast-in-previous-versions-of-windows"></a>Erkennen hoher Kontrast in früheren Versionen von Windows
 
-Anwendungen, die in früheren Versionen von Windows ausgeführt werden, haben keinen Zugriff auf die neuen Designs mit hohem Kontrast. Wenn Ihre Anwendung auf früheren Versionen von ausgeführt werden muss, sollten Sie die Unterstützung für das Rendern Ihrer Benutzeroberfläche im klassischen Windows-Designmodell in High kontra windowsst einschließen. Die Anwendung kann ermitteln, ob ein Design mit hohem Kontrast aktiv ist, indem die [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion mit dem **SPI \_ gethighcontrast** -Flag aufgerufen wird.
+Anwendungen, die unter früheren Versionen von Windows haben keinen Zugriff auf die neuen Designs mit hohem Kontrast. Wenn Ihre Anwendung unter früheren Versionen von ausgeführt werden muss, sollten Sie Unterstützung für das Rendern Ihrer Benutzeroberfläche in hohem KontraWindowsst im Windows klassischen Designmodells enthalten. Ihre Anwendung kann bestimmen, ob ein Design mit hohem Kontrast aktiv ist, indem sie die [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) mit dem **SPI \_ GETHIGHCONTRAST-Flag** aufruft.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -110,6 +110,6 @@ Anwendungen, die in früheren Versionen von Windows ausgeführt werden, haben ke
 [Visuelle Stile](themes-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

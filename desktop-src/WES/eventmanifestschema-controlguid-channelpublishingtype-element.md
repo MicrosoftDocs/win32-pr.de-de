@@ -1,9 +1,9 @@
 ---
-title: controlguid (channelpublishingtype)-Element
-description: Gibt die Sitzungs-GUID für eine ETW-Sitzung an, die WPP-Ereignisse enthält.
+title: controlGuid (ChannelPublishingType)-Element
+description: Identifiziert die Sitzungs-GUID für eine ETW-Sitzung, die WPP-Ereignisse enthält.
 ms.assetid: a9e86468-8a97-4689-a258-85d253debf55
 keywords:
-- controlguid-Element EventLog
+- controlGuid-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 92d4f6e1d2985bc983c34552b2e7a973075c9989
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bd831592d7b01f8ffca102c2cab6626d74d6b666bf6f0d6cfc6e6311c4aa7eab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118589951"
 ---
-# <a name="controlguid-channelpublishingtype-element"></a>controlguid (channelpublishingtype)-Element
+# <a name="controlguid-channelpublishingtype-element"></a>controlGuid (ChannelPublishingType)-Element
 
-Gibt die Sitzungs-GUID für eine ETW-Sitzung an, die WPP-Ereignisse enthält.
+Identifiziert die Sitzungs-GUID für eine ETW-Sitzung, die WPP-Ereignisse enthält.
 
 ``` syntax
 <xs:element name="controlGuid"
@@ -30,7 +30,7 @@ Gibt die Sitzungs-GUID für eine ETW-Sitzung an, die WPP-Ereignisse enthält.
  />
 ```
 
-Das **controlguid** -Element wird durch den komplexen [**channelpublishingtype**](eventmanifestschema-channelpublishingtype-complextype.md) -Typ definiert.
+Das **controlGuid-Element** wird durch den komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **controlguid** -Element wird durch den komplexen [**channelpublishingtype**
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **controlguid** -Element wird durch den komplexen [**channelpublishingtype**
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Veröffentlichung (channelType)**](eventmanifestschema-publishing-channeltype-element.md)
+[**publishing (ChannelType)**](eventmanifestschema-publishing-channeltype-element.md)
 </dt> </dl>
 
  

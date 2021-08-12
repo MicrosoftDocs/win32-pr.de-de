@@ -1,19 +1,19 @@
 ---
-description: Die dvdadm. bookmarkonstoppt-Eigenschaft legt einen Wert fest oder Ruft einen Wert ab, der dem mswebdvd-Objekt mitteilt, ob ein Lesezeichen des aktuellen Speicher Orts und der Einstellungen automatisch gespeichert werden soll, wenn der Benutzer auf die Schaltfläche Beenden klickt.
+description: Die DVDAdm.BookmarkOnStop-Eigenschaft legt einen Wert fest oder ruft einen Wert ab, der dem MSWebDVD-Objekt mitgibt, ob automatisch ein Lesezeichen des aktuellen Speicherorts und der Einstellungen gespeichert werden soll, wenn der Benutzer auf die Schaltfläche Beenden klickt.
 ms.assetid: bcadaa3c-23b7-4408-8199-058103a92a34
-title: Bookmarkonstoppt (Eigenschaft)
+title: BookmarkOnStop-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 355ae01c43ef28a086c76f4716fe3d46d250fbe4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5c73d8b9829075125437e05da96c78d101f5a7f5df4dc2decc25f044cc3f5f27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118662672"
 ---
-# <a name="bookmarkonstop-property"></a>Bookmarkonstoppt (Eigenschaft)
+# <a name="bookmarkonstop-property"></a>BookmarkOnStop-Eigenschaft
 
-Die- `DVDAdm.BookmarkOnStop` Eigenschaft legt einen Wert fest oder Ruft einen Wert ab, der das mswebdvd-Objekt anweist, ob ein Lesezeichen des aktuellen Speicher Orts und **der** Einstellungen automatisch gespeichert werden soll, wenn der Benutzer auf die Schaltfläche
+Die `DVDAdm.BookmarkOnStop` -Eigenschaft legt einen Wert fest oder ruft einen Wert ab, der dem MSWebDVD-Objekt mitgibt, ob automatisch ein Lesezeichen des aktuellen Speicherorts und der Einstellungen gespeichert werden soll, wenn der Benutzer auf die Schaltfläche **Beenden** klickt.
 
 ``` syntax
 [ bBookmarkOnStop = ] DVD.DVDAdm.BookmarkOnStop
@@ -21,22 +21,22 @@ Die- `DVDAdm.BookmarkOnStop` Eigenschaft legt einen Wert fest oder Ruft einen We
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen booleschen Wert zurück, der angibt, ob das msdvdadm-Objekt ein Lesezeichen aller DVD-Einstellungen speichert, einschließlich der Position auf der Festplatte, der Jugendebene und dem Eltern Land/der Region
+Gibt einen booleschen Wert zurück, der angibt, ob das MSDVDAdm-Objekt ein Lesezeichen aller DVD-Einstellungen speichert, einschließlich der Position auf dem Datenträger, der Elternebene und des Lands/der Region der Eltern.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist Lese-/Schreibzugriff und hat den Standardwert false.
+Diese Eigenschaft ist lese-/schreibgeschützt und hat den Standardwert false.
 
-Lesezeichen sind nur für einen bestimmten Computer gültig. Ein Benutzer kann ein Lesezeichen nicht speichern und dann an eine andere Person senden, um Sie auf einem anderen Computer zu lesen.
+Lesezeichen sind nur für einen bestimmten Computer gültig. Ein Benutzer kann ein Lesezeichen nicht speichern und dann an eine andere Person senden, um es auf einem anderen Computer zu lesen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Bookmarkonclose**](bookmarkonclose-property.md)
+[**BookmarkOnClose**](bookmarkonclose-property.md)
 </dt> <dt>
 
-[Msdvdadm-Objekt](msdvdadm-object.md)
+[MSDVDAdm-Objekt](msdvdadm-object.md)
 </dt> </dl>
 
  

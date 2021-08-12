@@ -1,11 +1,11 @@
 ---
-title: Iwmpplaylistcollection GetAll-Methode
-description: Die GetAll-Methode gibt eine iwmpplaylistarray-Schnittstelle zurück, die Zugriff auf alle Wiedergabelisten in der Bibliothek bietet.
+title: IWMPPlaylistCollection getAll-Methode
+description: Die getAll-Methode gibt eine IWMPPlaylistArray-Schnittstelle zurück, die Zugriff auf alle Wiedergabelisten in der Bibliothek bietet.
 ms.assetid: d36dbc5c-ccb0-400a-ab5b-918598c218f1
 keywords:
-- GetAll-Methoden Fenster Media Player
-- GetAll-Methode, Windows Media Player, iwmpplaylistcollection-Schnittstelle
-- Iwmpplaylistcollection-Schnittstelle, Windows Media Player, GetAll-Methode
+- getAll-Methode Windows Media Player
+- getAll-Methode Windows Media Player , IWMPPlaylistCollection-Schnittstelle
+- IWMPPlaylistCollection-Schnittstelle Windows Media Player , getAll-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a4260f5c960650cf6c04a1dd8b39d887f711fb8a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c9ff50c2983d911e7aa3951e34f908d9982b623912539aa4e162c9cccb2f5256
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568449"
 ---
-# <a name="iwmpplaylistcollectiongetall-method"></a>Iwmpplaylistcollection:: GetAll-Methode
+# <a name="iwmpplaylistcollectiongetall-method"></a>IWMPPlaylistCollection::getAll-Methode
 
-Die **GetAll** -Methode gibt eine **iwmpplaylistarray** -Schnittstelle zurück, die Zugriff auf alle Wiedergabelisten in der Bibliothek bietet.
+Die **getAll-Methode** gibt eine **IWMPPlaylistArray-Schnittstelle** zurück, die Zugriff auf alle Wiedergabelisten in der Bibliothek bietet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,11 +51,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpplaylistarray** -Schnittstelle für das abgerufene Array von Wiedergabelisten.
+Eine **WMPLib.IWMPPlaylistArray-Schnittstelle** für das abgerufene Array von Wiedergabelisten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9 oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player serie 9 oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,10 +73,10 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 <dl> <dt>
 
-[**Iwmpplaylistarray-Schnittstelle (VB und c#)**](iwmpplaylistarray--vb-and-c.md)
+[**IWMPPlaylistArray-Schnittstelle (VB und C#)**](iwmpplaylistarray--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,36 +1,36 @@
 ---
-title: Informationen zu mediacollection und Media Objects
-description: Informationen zu mediacollection und Media Objects
+title: Informationen zu MediaCollection und Medienobjekten
+description: Informationen zu MediaCollection und Medienobjekten
 ms.assetid: e3260efd-44cc-4b4e-9f48-3441631bfa4f
 keywords:
-- Windows Media Player, mediacollection-Objekt
-- Windows Media Player-Objektmodell, mediacollection-Objekt
-- Objektmodell, mediacollection-Objekt
-- Windows Media Player ActiveX-Steuerelement, mediacollection-Objekt
-- ActiveX-Steuerelement, mediacollection-Objekt
-- Windows Media Player Mobile ActiveX-Steuerelement, mediacollection-Objekt
-- Windows Media Player Mobile, mediacollection-Objekt
-- Mediacollection-Objekt
-- Windows Media Player, Medienobjekt
-- Windows Media Player-Objektmodell, Medienobjekt
+- Windows Media Player,MediaCollection-Objekt
+- Windows Media Player-Objektmodell, MediaCollection-Objekt
+- Objektmodell,MediaCollection-Objekt
+- Windows Media Player ActiveX,MediaCollection-Objekt
+- ActiveX,MediaCollection-Objekt
+- Windows Media Player Mobile ActiveX-Steuerelement, MediaCollection-Objekt
+- Windows Media Player Mobile,MediaCollection-Objekt
+- MediaCollection-Objekt
+- Windows Media Player,Media-Objekt
+- Windows Media Player Objektmodell, Medienobjekt
 - Objektmodell, Medienobjekt
-- Windows Media Player ActiveX-Steuerelement, Medienobjekt
-- ActiveX-Steuerelement, Medienobjekt
-- Windows Media Player Mobile ActiveX-Steuerelement, Medienobjekt
-- Windows Media Player Mobile, Medienobjekt
+- Windows Media Player ActiveX,Medienobjekt
+- ActiveX,Medienobjekt
+- Windows Media Player Mobiles ActiveX-Steuerelement, Medienobjekt
+- Windows Media Player Mobil,Medienobjekt
 - Medienobjekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe902fd9ed046e0197fb5c8c2d995d26befafe29
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 082bea6eb3707915422a0bfa5cba63a2a999ac8df27ffa13876e74ffcfc6a882
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583682"
 ---
-# <a name="about-the-mediacollection-and-media-objects"></a>Informationen zu mediacollection und Media Objects
+# <a name="about-the-mediacollection-and-media-objects"></a>Informationen zu MediaCollection und Medienobjekten
 
-**Mediacollection** und **Media** Objects steuern die Mediensammlung, in der die Speicherorte digitaler Mediendateien definiert sind, auf die Windows Media Player zugreifen kann. Sie erhalten das **mediacollection** -Objekt aus der **mediacollection** -Eigenschaft des **Player** -Objekts. Die **mediacollection** -Eigenschaft gibt das **mediacollection** -Objekt zurück. Sie können nur auf die Eigenschaften des **mediacollection** -Objekts zugreifen, nachdem Sie es erstellt haben. Wenn Sie z. b. ein **Medien** Objekt (einen Song) hinzufügen möchten, verwenden Sie den folgenden Code:
+Die **MediaCollection-** und **Media-Objekte** steuern die Mediensammlung, die die Speicherorte von digitalen Mediendateien definiert, auf die Windows Media Player können. Sie erhalten das **MediaCollection-Objekt** aus der **mediaCollection-Eigenschaft** des **Player-Objekts.** Die **mediaCollection-Eigenschaft** gibt das **MediaCollection-Objekt** zurück. Sie können erst auf die Eigenschaften des **MediaCollection-Objekts zugreifen,** nachdem Sie es erstellt haben. Verwenden Sie beispielsweise den folgenden Code, um ein **Media-Objekt** (einen Titel) hinzuzufügen:
 
 
 ```C++
@@ -40,9 +40,9 @@ player.mediacollection.add('laure.wma');
 
 
 
-Sie haben der Mediensammlung die Datei "Laure. wma" hinzugefügt.
+Sie haben der Mediensammlung die Datei laure.wma hinzugefügt.
 
-Sie können das aktuelle **Medien** Objekt mit der **currentMedia** -Eigenschaft des **Players** erhalten. Mit diesem Code wird beispielsweise die **Duration** -Eigenschaft des aktuellen **Medien** Objekts abgerufen:
+Sie können das aktuelle **Media-Objekt** mithilfe der **currentMedia-Eigenschaft** des **Players erhalten.** Dieser Code ruft beispielsweise die **duration-Eigenschaft** des aktuellen **Media-Objekts** ab:
 
 
 ```C++
@@ -52,9 +52,9 @@ myduration = player.currentmedia.duration;
 
 
 
-Es gibt viele Möglichkeiten, ein **Medien** Objekt zu erhalten, sodass Sie auf seine Eigenschaften zugreifen können. Wenn Sie z. b. auf die **Duration** -Eigenschaft des aktuellen Mediums zugreifen möchten, können Sie jede der folgenden Codezeilen verwenden.
+Es gibt viele Möglichkeiten, ein **Medienobjekt zu** erhalten, damit Sie auf seine Eigenschaften zugreifen können. Wenn Sie beispielsweise auf die **duration-Eigenschaft** des aktuellen Mediums zugreifen möchten, kann jede der folgenden Codezeilen verwendet werden.
 
-So erhalten Sie die Dauer der derzeit Wiedergabe Medien:
+So erhalten Sie die Dauer der aktuell abspielten Medien:
 
 
 ```C++
@@ -64,7 +64,7 @@ player.currentMedia.duration;
 
 
 
-So erhalten Sie die Dauer des aktuellen Mediums in einer Wiedergabeliste:
+So erhalten Sie die Dauer der aktuellen Medien in einer Wiedergabeliste:
 
 
 ```C++
@@ -74,7 +74,7 @@ player.controls.currentItem.duration;
 
 
 
-So erhalten Sie die Dauer des dritten Medien Elements in einer Wiedergabeliste:
+So erhalten Sie die Dauer des dritten Medienelements in einer Wiedergabeliste:
 
 
 ```C++
@@ -84,7 +84,7 @@ player.currentPlaylist.item(2).duration;
 
 
 
-So erhalten Sie die Dauer des dritten Medien Elements in einem "Jazz"-Genre:
+So erhalten Sie die Dauer des dritten Medienelements in einem "Jazz"-Genre:
 
 
 ```C++
@@ -94,7 +94,7 @@ player.mediaCollection.getByGenre("jazz").item(2).duration;
 
 
 
-So erhalten Sie die Dauer des dritten Medien Elements in der zweiten Wiedergabeliste:
+So erhalten Sie die Dauer des dritten Medienelements in der zweiten Wiedergabeliste:
 
 
 ```C++
@@ -110,15 +110,15 @@ player.playlistCollection.getAll.item(1).item(2).duration;
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
 [**Player-Objektmodell für Skriptsprachen**](player-object-model-for-scripting-languages.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,41 +1,41 @@
 ---
-title: VML hrwidth-Attribut
-description: VML hrwidth-Attribut
+title: VML HRWidth-Attribut
+description: VML HRWidth-Attribut
 ms.assetid: aca2fccc-f898-4c6f-9785-1b14b309b055
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b00fac84061909e76f743d563d21544f0554a879
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ee2ede4e2c3ca4a5c7c643882ea731c37166116ec4fd6a8f87ded473ea49af55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118600677"
 ---
-# <a name="vml-hrwidth-attribute"></a>VML hrwidth-Attribut
+# <a name="vml-hrwidth-attribute"></a>VML HRWidth-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Länge einer horizontalen Regel. Lese-/Schreibzugriff. **Vglength**.
+Definiert die Länge einer horizontalen Regel. Lese-/Schreibzugriff. **VgLength**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* o:hrwidth = " *Ausdruck* " >
+<v: *element* o:hrwidth=" *ausdruck* ">
 
 **Anmerkungen**
 
-Der Standardwert ist 0. Die Standardeinheiten sind Pixel. Das Attribut " **hrwidth** " ähnelt dem standardmäßigen HTML-Attribut " **hrwidth** ". Wenn Sie die Breite einer Regel als Prozentsatz der Seitenbreite ausdrücken möchten, verwenden Sie das [hrpct](msdn-online-vml-hrpct-attribute.md) -Attribut.
+Der Standardwert ist 0. Die Standardeinheiten sind Pixel. Das **HRWidth-Attribut** ähnelt dem HRWidth-Standardattribut.  Wenn Sie die Breite einer Regel als Prozentsatz der Seitenbreite ausdrücken möchten, verwenden Sie das [HRPct-Attribut.](msdn-online-vml-hrpct-attribute.md)
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

@@ -1,6 +1,6 @@
 ---
-title: eaphustuseranmelde-Schema
-description: Erfahren Sie mehr über das eaphustuseranmelde-Schema. Dieses Schema definiert die EAPHost-Schema Elemente für Anmelde Informationen.
+title: eaphostusercredentials-Schema
+description: Erfahren Sie mehr über das eaphostusercredentials-Schema. Dieses Schema definiert die Schemaelemente der EAPHost-Anmeldeinformationen.
 ms.assetid: a2aff175-06c8-4352-9f37-edcd44229ea8
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2688824d9fc3c7c5c84bc2432cc81d26b3de8a22
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: c2d8f19c1d06ba726809d658860850dfd4fdf0360695e01aea91df6cfa14b152
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274282"
 ---
-# <a name="eaphostusercredentials-schema"></a>eaphustuseranmelde-Schema
+# <a name="eaphostusercredentials-schema"></a>eaphostusercredentials-Schema
 
-Das eaphostusercredeneschema definiert das EAPHost-Anmelde Informations Schema.
+Das eaphostusercredentials-Schema definiert das EAPHost-Anmeldeinformationsschema.
 
--   [eaphustuser-Anmelde Informationen Schema Elemente](eaphostusercredentialsschema-elements.md)
+-   [eaphostusercredentials-Schemaelemente](eaphostusercredentialsschema-elements.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

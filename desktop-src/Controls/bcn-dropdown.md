@@ -1,9 +1,9 @@
 ---
-title: BCN_DROPDOWN Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer auf einen Dropdown Pfeil auf einer Schaltfläche klickt. Das übergeordnete Fenster des Steuer Elements empfängt diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: BCN_DROPDOWN Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer auf einen Dropdownpfeil auf einer Schaltfläche klickt. Das übergeordnete Fenster des Steuerelements empfängt diesen Benachrichtigungscode in Form einer WM \_ NOTIFY-Nachricht.
 ms.assetid: 61503b8d-193e-4855-b9eb-35c0dc636c02
 keywords:
-- Windows-Steuerelemente für BCN_DROPDOWN Benachrichtigungs
+- BCN_DROPDOWN Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e78512419f62beaa82aff42ccaf951d34130fe3a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1fbacf22cdabbac7c5d2932c604fab634dbc185207acda8cee311d434478e5ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118674972"
 ---
-# <a name="bcn_dropdown-notification-code"></a>BCN- \_ Dropdown-Benachrichtigungs Code
+# <a name="bcn_dropdown-notification-code"></a>\_BCN-DROPDOWN-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer auf einen Dropdown Pfeil auf einer Schaltfläche klickt. Das übergeordnete Fenster des Steuer Elements empfängt diesen Benachrichtigungs Code in Form einer [**WM \_**](wm-notify.md) -Benachrichtigungs Meldung.
+Wird gesendet, wenn der Benutzer auf einen Dropdownpfeil auf einer Schaltfläche klickt. Das übergeordnete Fenster des Steuerelements empfängt diesen Benachrichtigungscode in Form einer [**WM \_ NOTIFY-Nachricht.**](wm-notify.md)
 
 
 ```C++
@@ -41,7 +41,7 @@ BCN_DROPDOWN
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmbcdropdown**](/windows/win32/api/commctrl/ns-commctrl-nmbcdropdown) -Struktur. Der **rcbutton** -Member wird so festgelegt, dass der Dropdown Bereich beschrieben wird.
+Ein Zeiger auf eine [**NMBCDROPDOWN-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmbcdropdown) Der **rcButton-Member** ist so festgelegt, dass er den Dropdownbereich beschreibt.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Ein Zeiger auf eine [**nmbcdropdown**](/windows/win32/api/commctrl/ns-commctrl-n
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Benachrichtigungs Empfänger wandelt **LPARAM** ein, um die [**nmbcdropdown**](/windows/win32/api/commctrl/ns-commctrl-nmbcdropdown) -Struktur abzurufen. **WParam** enthält die ID des Steuer Elements, das diese Nachricht sendet. Das Schaltflächen-Steuerelement muss einen Dropdown-Schaltflächen Stil aufweisen.
+Der Benachrichtigungsempfänger castiert **LPARAM,** um die [**NMBCDROPDOWN-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmbcdropdown) abzurufen. **WPARAM** enthält die ID des Steuerelements, das diese Nachricht sendet. Das Schaltflächen-Steuerelement muss ein Dropdown-Schaltflächenformat haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Der Benachrichtigungs Empfänger wandelt **LPARAM** ein, um die [**nmbcdropdown*
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

@@ -1,31 +1,31 @@
 ---
-description: In diesem Thema wird erläutert, wie Sie einen Peer zum beitreten zu einer Peer Gruppe mithilfe der Peer Gruppierungs-APIs einladen.
+description: In diesem Thema wird der Prozess zum Einladen eines Peers zum Beitreten zu einer Peergruppe mithilfe der Peer grouping-APIs erläutert.
 ms.assetid: 6afcbfec-b1df-45cd-8a43-221dfe5d8c33
-title: Einladen eines Peers zu einer Gruppe
+title: Einladen eines Peers in eine Gruppe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 68b1e8852f58387d424944d4a8821f56b5e11e8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8760c2fb6023d5332da74402726669367fee4f5102c99269fa8e603653a1e2eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118612650"
 ---
-# <a name="inviting-a-peer-to-a-group"></a>Einladen eines Peers zu einer Gruppe
+# <a name="inviting-a-peer-to-a-group"></a>Einladen eines Peers in eine Gruppe
 
-In diesem Thema wird erläutert, wie Sie einen Peer zum beitreten zu einer Peer Gruppe mithilfe der Peer Gruppierungs-APIs einladen.
+In diesem Thema wird der Prozess zum Einladen eines Peers zum Beitreten zu einer Peergruppe mithilfe der Peer grouping-APIs erläutert.
 
-Eine Peer Gruppe benötigt gültige Anmelde Informationen, um teilnehmen zu können. Anmelde Informationen werden von außerhalb einer Gruppe in Form von Einladungen oder direkt an Mitglieder innerhalb einer Gruppe ausgegeben, wenn Aktualisierungen von Anmelde Informationen benötigt werden.
+Eine Peergruppe benötigt gültige Anmeldeinformationen, um teilnehmen zu können. Anmeldeinformationen werden von außerhalb einer Gruppe in Form von Einladungen oder direkt an Mitglieder innerhalb einer Gruppe ausgegeben, wenn Aktualisierungen der Anmeldeinformationen erforderlich sind.
 
-## <a name="group-member-certificates"></a>Gruppenmitglieder Zertifikate
+## <a name="group-member-certificates"></a>Gruppenmitgliedszertifikate
 
-Eine Peer Gruppe wird erstellt, wenn eine Anwendung [**peergroupcreate**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate)aufruft.
+Eine Peergruppe wird erstellt, wenn eine Anwendung [**PeerGroupCreate aufruft.**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate)
 
-Um an einer Peer Gruppe teilnehmen zu können, muss jeder Peer über eine Peer Identität verfügen. Nennen Sie [**peertenumidentities**](/windows/desktop/api/P2P/nf-p2p-peerenumidentities) , bis alle für den Peer definierten Peer Identitäten zurückgegeben wurden, und wählen Sie die zu verwendende. Wenn keine Peer Identität vorhanden ist, erstellen Sie eine, indem Sie [**peeridentitycreate**](/windows/desktop/api/P2P/nf-p2p-peeridentitycreate)aufrufen.
+Um an einer Peergruppe teilnehmen zu können, muss jeder Peer über eine Peeridentität verfügen. Rufen [**Sie PeerEnumIdentities auf,**](/windows/desktop/api/P2P/nf-p2p-peerenumidentities) bis alle für den Peer definierten Peeridentitäten zurückgegeben wurden, und wählen Sie die identität aus, die verwendet werden soll. Wenn keine Peeridentität vorhanden ist, erstellen Sie eine, indem Sie [**PeerIdentityCreate aufrufen.**](/windows/desktop/api/P2P/nf-p2p-peeridentitycreate)
 
-Jede Peer Identität ist einem bestimmten Satz von Anmelde Informationen zugeordnet, die verwendet werden können, um die Peer Gruppenmitgliedschaft beim Herstellen einer Verbindung zu beweisen, sowie zum Veröffentlichen von Datensätzen oder zum einladen zusätzlicher Mitglieder. Diese Anmelde Informationen werden als Ketten von [X. 509-Zertifikaten](https://www.ietf.org/rfc/rfc2511.txt) dargestellt, die Gruppen Mitgliedschafts Zertifikate (GMC) genannt werden.
+Jede Peeridentität ist einem bestimmten Satz von Anmeldeinformationen zugeordnet, die zum Nachweisen der Peergruppenmitgliedschaft beim Herstellen einer Verbindung sowie beim Veröffentlichen von Datensätzen oder Einladen zusätzlicher Mitglieder verwendet werden können. Diese Anmeldeinformationen werden als Ketten von [X.509-Zertifikaten dargestellt, die](https://www.ietf.org/rfc/rfc2511.txt) als Gruppenmitgliedschaftszertifikate (Group Membership Certificates, GMC) bezeichnet werden.
 
-Um die GMC für eine Peer Identität zu erstellen, müssen Sie zuerst Ihren öffentlichen Schlüssel abrufen. Dieser Schlüssel wird abgerufen, indem [**peeridentitygetxml**](/windows/desktop/api/P2P/nf-p2p-peeridentitygetxml) für den potenziellen einladenden Empfänger aufgerufen und seine Peer Identität übergeben wird. Diese Funktion gibt ein Base-64-codiertes Zertifikat (IDC) zurück, das den öffentlichen RSA-Schlüssel enthält, der zum Erstellen der GMC für die Peer Identität (unter anderem) in einem XML-BLOB in folgendem Format verwendet wird:
+Um die GMC für eine Peeridentität zu erstellen, müssen Sie zuerst ihren öffentlichen Schlüssel abrufen. Dieser Schlüssel wird durch Aufrufen von [**PeerIdentityGetXML**](/windows/desktop/api/P2P/nf-p2p-peeridentitygetxml) für den potenziellen Eingeladenen und Übergeben seiner Peeridentität ermittelt. Diese Funktion gibt ein Base64-codiertes Zertifikat (Base64-codiertes Zertifikat, IDC) zurück, das den öffentlichen RSA-Schlüssel enthält, der zum Erstellen des GMC für die Peeridentität (unter anderem) verwendet wird, gekapselt in einem XML-Blob im folgenden Format:
 
 ``` syntax
 <PEERIDENTITYINFO VERSION="1.0">
@@ -35,28 +35,28 @@ Um die GMC für eine Peer Identität zu erstellen, müssen Sie zuerst Ihren öff
 </PEERIDENTITYINFO>
 ```
 
-Diese Zeichenfolge kann an [**peergroupkreateinvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation)übergeben werden, die eine Einladung zurückgibt, die die GMC für diese Peer Identität enthält. Die Einladung muss an den einladenden Empfänger mit einem anderen Prozess, z. b. e-Mail, FTP oder einer sicheren Dateifreigabe, weitergeleitet werden.
+Diese Zeichenfolge kann an [**PeerGroupCreateInvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation)übergeben werden, die eine Einladung zurückgibt, die die GMC für diese Peeridentität enthält. Die Einladung muss mit einem anderen Prozess wie E-Mail, FTP oder einer sicheren Dateifreigabe an den Eingeladenen übergeben werden.
 
-Alternativ kann das IDC selbst in einer neuen [**Peer \_ Credential \_ Info**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) -Struktur abgelegt und an [**peergroupissuecredential**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)weitergeleitet werden, wodurch entsprechend eine Einladung generiert wird.
+Alternativ kann das IDC selbst in einer neuen [**PEER \_ CREDENTIAL \_ INFO-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) platziert und an [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)übergeben werden, die ebenfalls eine Einladung generiert.
 
-Beachten Sie, dass Anwendungen keine Tags innerhalb des " **Peer Identity tyinfo** "-Tags hinzufügen oder dieses XML-Fragment in irgendeiner Weise ändern dürfen. Anwendungen dürfen dieses XML-Fragment in andere XML-Dokumente einbinden, müssen jedoch alle anwendungsspezifischen XML-Daten entfernen, bevor Sie dieses Fragment an die Funktionen " [**Peer groupkreateinvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation) " oder " [**Peer groupissuecredential**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) " übergeben.
+Beachten Sie, dass Anwendungen keine Tags innerhalb des **PEERIDENTITYINFO-Tags** hinzufügen oder dieses XML-Fragment in irgendeiner Weise ändern dürfen. Anwendungen dürfen dieses XML-Fragment in andere XML-Dokumente integrieren, müssen jedoch alle anwendungsspezifischen XML-Daten ausziehen, bevor sie dieses Fragment an die [**Funktionen PeerGroupCreateInvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation) oder [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) übergeben.
 
-Mitglied-gmcs werden von Administratoren und dem Ersteller der Peer Gruppe ausgegeben. Mitglieder müssen neue gmcs mit den erweiterten Lebens dauern ihrer gmcs abrufen, bevor die Ablaufzeit abgelaufen ist. Der Peer Gruppenadministrator gibt aktualisierte Anmelde Informationen durch Aufrufen von [**peergroupissuecredenseins**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) mit den vorhandenen Anmelde Informationen für diesen Peer aus.
+Mitglieds-GMCs werden von Administratoren und dem Ersteller der Peergruppe ausgestellt. Mitglieder müssen neue GMCs mit erweiterter Lebensdauer ihrer GMCs abrufen, bevor die Ablaufzeit verstrichen ist. Der Peergruppenadministrator gibt aktualisierte Anmeldeinformationen aus, indem er [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) mit den vorhandenen Anmeldeinformationen für diesen Peer aufruft.
 
-Die [**Peer \_ Credential \_ Info**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) -Struktur enthält die grundlegenden Daten zum Mitgliedschaftsstatus eines Peers, einschließlich des öffentlichen Schlüssels für die zugehörige GMC. Neu ausgestellte Anmelde Informationen können in der Peer Gruppe veröffentlicht werden, indem das Flag für die Peer \_ Gruppen- \_ Anmelde Informationen \_ im [**peergroupissuecreden-**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)Befehl festgelegt wird. Wenn der Empfänger der neuen Anmelde Informationen der Peer Gruppe Beitritt, werden vorhandene Anmelde Informationen von der Peer Gruppierungs Infrastruktur aktualisiert.
+Die [**PEER \_ CREDENTIAL \_ INFO-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) enthält die grundlegenden Daten zum Mitgliedschaftsstatus eines Peers, einschließlich des öffentlichen Schlüssels für seine GMC. Neu ausgestellte Anmeldeinformationen können in der Peergruppe veröffentlicht werden, indem im Aufruf von \_ \_ \_ [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)das Flag PEER GROUP STORE CREDENTIALS (PEER GROUP STORE CREDENTIALS) angegeben wird. Wenn der Empfänger der neuen Anmeldeinformationen der Peergruppe beitritt, werden die vorhandenen Anmeldeinformationen von der Peer grouping Infrastructure aktualisiert.
 
 ## <a name="issuing-an-invitation"></a>Ausstellen einer Einladung
 
-Ein Mitglied wird mit einer der beiden folgenden Methoden eingeladen, der Peer Gruppe beizutreten:
+Ein Mitglied wird auf eine der beiden folgenden Arten eingeladen, der Peergruppe bei beitritten:
 
--   Ein Peer Gruppenadministrator ruft [**peergroupkreateinvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation)auf und übergibt dabei die XML-Zeichenfolge mit den Identitätsinformationen, die der potenzielle einladende Empfänger über einen gemeinsamen out-of-Band-Mechanismus erhält, z. b. e-Mail oder eine im-Sitzung. Die Einladung wird auch über einen externen Prozess oder Mechanismus an den Peer übermittelt, der Sie schließlich als XML-Zeichenfolge oder Textdatei empfängt.
--   Ein Peer Gruppenadministrator ruft [**peergroupissuecredensts**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)auf. Um diese Funktion verwenden zu können, muss der Peer bereits Mitgliedschafts Informationen für die Peer Gruppe [**( \_ peermember**](/windows/desktop/api/P2P/ns-p2p-peer_member)) veröffentlicht haben oder über einen verfügbaren öffentlichen Schlüssel verfügen (dem RSA-Schlüsselpaar, das zum Erstellen der betreffidentität verwendet wurde). Im ersten Fall kann die für **peergroupissuecredential** erforderliche [**Peer \_ Credential \_ Info**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) -Struktur aus der peermember **- \_** Struktur abgerufen werden. in letzterem Fall kann eine neue **Peer \_ Credential \_ Info** -Struktur mit dem öffentlichen Schlüssel aufgefüllt werden.
+-   Ein Peergruppenadministrator ruft [**PeerGroupCreateInvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation)auf und übergibt die XML-Zeichenfolge für Identitätsinformationen, die vom potenziellen Eingeladenen über einen allgemeinen Out-of-Band-Mechanismus wie E-Mail oder EINE IM-Sitzung erhalten wurde. Die Einladung wird auch über einen externen Prozess oder Mechanismus an den Peer übergeben, der sie letztendlich als XML-Zeichenfolge oder Textdatei erhält.
+-   Ein Peergruppenadministrator ruft [**PeerGroupIssueCredentials auf.**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) Um diese Funktion verwenden zu können, muss der Peer bereits Mitgliedschaftsinformationen für die Peergruppe [**\_ (PEERMITGLIED)**](/windows/desktop/api/P2P/ns-p2p-peer_member)veröffentlicht haben oder über einen verfügbaren öffentlichen Schlüssel (des RSA-Schlüsselpaars, das zum Erstellen der Subjektidentität verwendet wird) verfügen. Im ersten Fall kann die für **PeerGroupIssueCredentials** erforderliche [**PEER \_ CREDENTIAL \_ INFO-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) aus der **PEER \_ MEMBER-Struktur** ermittelt werden. Im letzteren Fall kann eine neue **PEER \_ CREDENTIAL \_ INFO-Struktur** mit dem öffentlichen Schlüssel aufgefüllt werden.
 
-Nach dem Empfang der Einladungs Zeichenfolge übergibt der Peer ihn an [**peergroupjoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin) , um der Peer Gruppe beizutreten. Wenn der Aufruf von **peergroupjoin** erfolgreich ist, kann der Peer die Peer Gruppe später durch Aufrufen von [**peergroupopen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen)öffnen.
+Nachdem die Einladungszeichenfolge empfangen wurde, übergibt der Peer sie an [**PeerGroupJoin,**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin) um der Peergruppe bei beitreten zu können. Wenn der Aufruf von **PeerGroupJoin** erfolgreich ist, kann der Peer die Peergruppe später öffnen, indem er [**PeerGroupOpen aufruft.**](/windows/desktop/api/P2P/nf-p2p-peergroupopen)
 
-## <a name="parsing-an-invitation"></a>Eine Einladung wird verarbeitet.
+## <a name="parsing-an-invitation"></a>Analyse einer Einladung
 
-Optional kann eine Einladung analysiert werden, indem [**peergroupparamevitation**](/windows/desktop/api/P2P/nf-p2p-peergroupparseinvitation)aufgerufen wird, die eine [**Peer \_ Einladungs \_ Informations**](/windows/desktop/api/P2P/ns-p2p-peer_invitation_info) Struktur zurückgibt. Die Felder in der Struktur können problemlos zu Anzeige Zwecken abgerufen werden.
+Optional kann eine Einladung durch Aufrufen von [**PeerGroupParseInvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupparseinvitation)analysiert werden, das eine [**PEER INVITATION \_ \_ INFO-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_invitation_info) zurückgibt. Die Felder in der -Struktur können zu Anzeigezwecken leicht ermittelt werden.
 
  
 

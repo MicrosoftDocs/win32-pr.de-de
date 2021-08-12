@@ -1,7 +1,7 @@
 ---
-description: Fügt für den Computer, von dem Sie aufgerufen wird, einen alternativen lokalen Netzwerknamen hinzu.
+description: Fügt einen alternativen lokalen Netzwerknamen für den Computer hinzu, von dem aus er aufgerufen wird.
 ms.assetid: e4d8355b-0492-4b6f-988f-3887e63a2bba
-title: Addlocalalternativen Computername-Funktion
+title: AddLocalAlternateComputerName-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,16 +23,16 @@ api_location:
 - API-Ms-Win-Core-Kernel32-Legacy-Ansi-L1-1-0.dll
 - API-MS-Win-Core-Kernel32-Legacy-L1-1-4.dll
 - API-MS-Win-Core-Kernel32-Legacy-L1-1-5.dll
-ms.openlocfilehash: 6027752a0e60f135f0cc8a1c0cdd536c59c09621
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90945188209abdcaf16a7250e43db2af9a99ab4a3fbb55b8baabf0ea610c99e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118668682"
 ---
-# <a name="addlocalalternatecomputername-function"></a>Addlocalalternativen Computername-Funktion
+# <a name="addlocalalternatecomputername-function"></a>AddLocalAlternateComputerName-Funktion
 
-Fügt für den Computer, von dem Sie aufgerufen wird, einen alternativen lokalen Netzwerknamen hinzu.
+Fügt einen alternativen lokalen Netzwerknamen für den Computer hinzu, von dem aus er aufgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,14 +50,14 @@ DWORD AddLocalAlternateComputerName(
 
 <dl> <dt>
 
-*lpdnsfqhostname* \[ in\]
+*lpDnsFQHostname* \[ In\]
 </dt> <dd>
 
-Der Alternative Name, der hinzugefügt werden soll. Der Name muss das Format " **computernamednsfullyqualified** " aufweisen, wie in der-Enumeration des [**Computer \_ Namen \_ Formats**](/windows/win32/api/sysinfoapi/ne-sysinfoapi-computer_name_format) definiert, und die [**DnsValidateName \_ W**](/windows/win32/api/windns/nf-windns-dnsvalidatename) -Funktion muss Sie in der Lage sein, Sie zu validieren, wenn ihr Format auf **dnsnamehostnamefull** festgelegt ist.
+Der alternative Name, der hinzugefügt werden soll. Der Name muss im **ComputerNameDnsFullyQualified-Format** vorliegen, wie in der [**COMPUTER NAME \_ \_ FORMAT-Enumeration**](/windows/win32/api/sysinfoapi/ne-sysinfoapi-computer_name_format) definiert, und die [**W-Funktion DnsValidateName \_**](/windows/win32/api/windns/nf-windns-dnsvalidatename) muss in der Lage sein, ihn mit dem Format **dnsNameHostnameFull** zu überprüfen.
 
 </dd> <dt>
 
-*ulflags* \[ in\]
+*ulFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
@@ -66,14 +66,14 @@ Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion den **Fehler \_ Erfolg** zurück. Wenn die Funktion fehlschlägt, wird ein Fehlercode ungleich 0 (null) zurückgegeben. Zu den zurückgegebenen Fehlercodes zählen die folgenden:
+Wenn die Funktion erfolgreich ist, gibt die Funktion **ERROR \_ SUCCESS zurück.** Wenn die Funktion fehlschlägt, wird ein Fehlercode ungleich 0 (null) zurückgegeben. Zu den zurückgegebenen Fehlercodes gehören die folgenden:
 
 
 
 | Rückgabecode                                                                                               | Beschreibung                                                                                                                                         |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl>  | Gibt an, dass der *lpdnsfqhostname* -Parameter nicht auf einen gültigen DNS-Namen verweist oder dass der *ulflags* -Parameter ungleich 0 (null) ist.<br/> |
-| <dl> <dt>**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**</dt> </dl> | Es steht nicht genügend Arbeitsspeicher zur Verfügung, um den Vorgang durchzuführen.<br/>                                                                                    |
+| <dl> <dt>**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl>  | Gibt an, dass der *lpDnsFQHostname-Parameter* nicht auf einen gültigen DNS-Namen verweist oder dass der *ulFlags-Parameter* ungleich 0 (null) ist.<br/> |
+| <dl> <dt>**FEHLER \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl> | Es steht nicht genügend Arbeitsspeicher zur Verfügung, um den Vorgang durchzuführen.<br/>                                                                                    |
 
 
 
@@ -87,15 +87,15 @@ Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion den **Fehler \
 |-----------------------------------|-------------------------------------------------------------------------------------------------------|
 | Bibliothek<br/>                | <dl> <dt>Kernel32.lib</dt> </dl>               |
 | DLL<br/>                    | <dl> <dt>Kernel32.dll</dt> </dl>               |
-| Unicode- und ANSI-Name<br/> | **Addlocalalternativen computernamew** (Unicode) und **addlocalalternativen computernamea** (ANSI)<br/> |
+| Unicode- und ANSI-Name<br/> | **AddLocalAlternateComputerNameW** (Unicode) und **AddLocalAlternateComputerNameA** (ANSI)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Format des Computer \_ namens \_**](/windows/win32/api/sysinfoapi/ne-sysinfoapi-computer_name_format)
+[**\_FORMAT DES \_ COMPUTERNAMENS**](/windows/win32/api/sysinfoapi/ne-sysinfoapi-computer_name_format)
 </dt> <dt>
 
 [**DnsValidateName \_ W**](/windows/win32/api/windns/nf-windns-dnsvalidatename)

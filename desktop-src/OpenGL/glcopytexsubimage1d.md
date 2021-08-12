@@ -1,6 +1,6 @@
 ---
-title: glCopyTexSubImage1D-Funktion (GL. h)
-description: Die glCopyTexSubImage1D-Funktion kopiert ein unter Bild eines eindimensionalen Textur Bilds aus dem Framebuffer.
+title: glCopyTexSubImage1D-Funktion (Gl.h)
+description: Die glCopyTexSubImage1D-Funktion kopiert ein Unterbild eines eindimensionalen Texturbilds aus dem Framepuffer.
 ms.assetid: 718aee8a-6dce-49e1-a441-19beccd89f8d
 keywords:
 - glCopyTexSubImage1D-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 64006f9cec7e5fd2f3ca6f860249e579b16dbf10
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 38c35e28a37608ebbbdbaf331e2837f83022768cf4eb4033cad2a482d477b37f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118617135"
 ---
 # <a name="glcopytexsubimage1d-function"></a>glCopyTexSubImage1D-Funktion
 
-Die **glCopyTexSubImage1D** -Funktion kopiert ein unter Bild eines eindimensionalen Textur Bilds aus dem Framebuffer.
+Die **glCopyTexSubImage1D-Funktion** kopiert ein Unterbild eines eindimensionalen Texturbilds aus dem Framepuffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,42 +48,42 @@ void WINAPI glCopyTexSubImage1D(
 *Ziel* 
 </dt> <dd>
 
-Das Ziel, in das die Bilddaten geändert werden. Muss den Wert "GL \_ Texture \_ 1D" aufweisen.
+Das Ziel, in das die Bilddaten geändert werden. Muss den Wert GL \_ TEXTURE \_ 1D aufweisen.
 
 </dd> <dt>
 
 *level* 
 </dt> <dd>
 
-Die Detailebene. Ebene 0 ist das Basis Image. Ebene *n* ist das *n*-te MipMap-Reduzierungs Bild.
+Die Detailebenennummer. Ebene 0 ist das Basisimage. Ebene *n* ist das Bild der *n-ten* Mipmapverringerung.
 
 </dd> <dt>
 
 *xoffset* 
 </dt> <dd>
 
-Der texveroffset innerhalb des Textur Arrays.
+Der Texeloffset innerhalb des Texturarrays.
 
 </dd> <dt>
 
 *x* 
 </dt> <dd>
 
-Die x-Ebenen-Koordinate der unteren linken Ecke der Zeile der zu kopierenden Pixel.
+Die X-Ebenenkoordinate des Fensters der unteren linken Ecke der Zu kopierenden Pixelzeile.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die y-ebenenkoordinate des Fensters der unteren linken Ecke der Zeile der zu kopierenden Pixel.
+Die y-Ebenenkoordinate des Fensters der unteren linken Ecke der Zu kopierenden Pixelzeile.
 
 </dd> <dt>
 
 *width* 
 </dt> <dd>
 
-Die Breite des unter Bilds des Textur Bilds. Das Angeben eines Textur unter Bilds mit einer Breite von NULL hat keine Auswirkungen.
+Die Breite des Unterbilds des Texturbilds. Das Angeben eines Texturunterbilds mit einer Breite von null hat keine Auswirkungen.
 
 </dd> </dl>
 
@@ -93,45 +93,45 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Ziel* war kein akzeptierter Wert.<br/>                                                                                                                                                                               |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Ebene* war kleiner als 0 (null), oder die *Ebene* ist größer als *Log* 2 (*Max*), wobei *Max* der zurückgegebene Wert von GL \_ Max \_ Texture \_ size ist.<br/>                                                                                 |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *xoffset* war kleiner als der *Rahmen oder (* *xoffset*  +  *Width*) war größer als (*w*-Rahmen  +  ), wobei *w* die Breite von GL und der Rahmen der \_ \_ GL-Textur Rahmen ist  \_ \_ . Beachten Sie, dass *w* die doppelte *Rahmenbreite umfasst* .<br/> |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | " *Width* " war kleiner als " *Border* " oder " *y* " ist kleiner als " *Border*", wobei " *Border* " die Rahmenbreite des Textur Arrays ist.<br/>                                                                                            |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Das Textur Array wurde nicht durch einen vorherigen [**glTexImage1D**](glteximage1d.md) -Vorgang definiert.<br/>                                                                                                                   |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                                                                                        |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* war kein akzeptierter Wert.<br/>                                                                                                                                                                               |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *level* war kleiner als 0 (null) oder *ebene* ist größer als *log* 2(*max*), wobei *max* der zurückgegebene Wert von GL MAX TEXTURE \_ SIZE \_ \_ ist.<br/>                                                                                 |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *xoffset* war kleiner als *border* oder (*xoffset*  +  *width*) was greater than (*w*  +  *border*), wobei *w* gleich GL TEXTURE WIDTH \_ und \_ *border* gl TEXTURE \_ BORDER \_ ist. Beachten Sie, dass *w* die doppelte *Rahmenbreite* enthält.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *width* war kleiner als *border* oder *y* war kleiner als *border*, wobei *border* die Rahmenbreite des Texturarrays ist.<br/>                                                                                            |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Das Texturarray wurde nicht durch einen vorherigen [**glTexImage1D-Vorgang**](glteximage1d.md) definiert.<br/>                                                                                                                   |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                                                                                        |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glCopyTexSubImage1D** -Funktion ersetzt einen Teil eines eindimensionalen Textur Bilds mithilfe von Pixeln aus dem aktuellen Framebuffer, nicht aus dem Hauptspeicher, wie es bei [**glTexSubImage1D**](gltexsubimage1d.md)der Fall ist.
+Die **glCopyTexSubImage1D-Funktion** ersetzt einen Teil eines eindimensionalen Texturbilds mitHilfe von Pixeln aus dem aktuellen Framepuffer anstelle des Hauptspeichers, wie dies bei [**glTexSubImage1D**](gltexsubimage1d.md)der Fall ist.
 
-Eine Zeile mit Pixeln, beginnend mit den durch *x* und *y* angegebenen Fenster Koordinaten und mit der Längen *Breite* , ersetzt den Teil des Textur *Arrays durch xoffset +* (  *Width* -1). Das Ziel im Textur Array darf keine texeln außerhalb des ursprünglich angegebenen Textur Arrays enthalten.
+Eine Zeile mit Pixeln, die mit den durch *x* und *y* angegebenen Fensterkoordinaten beginnt, und mit der Längenbreite ersetzt den Teil des Texturarrays durch die Indizes *xoffset* bis *xoffset* + (*breite* – 1).  Das Ziel im Texturarray darf keine Texel außerhalb des ursprünglich angegebenen Texturarrays enthalten.
 
-Die **glCopyTexSubImage1D** -Funktion verarbeitet die Pixel in einer Zeile auf die gleiche Weise wie [**glcopypixels**](glcopypixels.md) , mit dem Unterschied, dass vor der abschließenden Konvertierung der Pixel alle Pixel Komponenten Werte an den Bereich \[ 0, 1 gebunden \] und in das interne Format der Textur für die Speicherung im Textur Array konvertiert werden. Die Pixel Reihenfolge wird mit niedrigeren *x* -Koordinaten bestimmt, die den unteren Texturkoordinaten entsprechen. Wenn eine der Pixel innerhalb einer angegebenen Zeile des aktuellen Frame Puffer außerhalb des Fensters liegt, das dem aktuellen renderingkontext zugeordnet ist, sind ihre Werte nicht definiert.
+Die **glCopyTexSubImage1D-Funktion** verarbeitet die Pixel in einer Zeile auf die gleiche Weise wie [**glCopyPixels,**](glcopypixels.md) mit der Ausnahme, dass vor der endgültigen Konvertierung der Pixel alle Pixelkomponentenwerte an den Bereich 0,1 klammern und in \[ das interne Format der Textur für die Speicherung im \] Texturarray konvertiert werden. Die Pixelreihenfolge wird mit niedrigeren *x* Koordinaten bestimmt, die niedrigeren Texturkoordinaten entsprechen. Wenn sich eines der Pixel innerhalb einer angegebenen Zeile des aktuellen Framepuffers außerhalb des Fensters befindet, das dem aktuellen Renderingkontext zugeordnet ist, sind deren Werte nicht definiert.
 
-Der *internalformat*-, *Width*-oder Border-Parameter des angegebenen Textur Arrays oder der *Border* -Wert außerhalb des angegebenen Textur unter Bilds wird nicht geändert.
+Es wird keine Änderung am *internalFormat-,* *Width-* oder *Border-Parameter* des angegebenen Texturarrays oder an Texelwerten außerhalb des angegebenen Texturunterbilds vorgenommen.
 
-Sie können **glCopyTexSubImage1D** -Aufrufe nicht in Anzeigelisten einschließen.
+Aufrufe von **glCopyTexSubImage1D** können nicht in Anzeigelisten eingeschlossen werden.
 
 > [!Note]  
-> Die **glCopyTexSubImage1D** -Funktion ist nur in OpenGL-Version 1,1 oder höher verfügbar.
+> Die **glCopyTexSubImage1D-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
-Die Texturierung hat keine Auswirkung auf den Farb Index Modus. Die Funktionen " [**glpixelstore**](glpixelstore-functions.md) " und " [**glpixeltransfer**](glpixeltransfer.md) " beeinflussen die Textur Bilder genau so, wie Sie sich auf die Art und Weise auswirken, wie Pixel mithilfe von " [**gldrawpixels**](gldrawpixels.md)
+Texturierung hat keine Auswirkungen im Farbindexmodus. Die Funktionen [**glPixelStore**](glpixelstore-functions.md) und [**glPixelTransfer**](glpixeltransfer.md) wirken sich auf Texturbilder genau so aus, wie sie sich darauf auswirken, wie Pixel mithilfe von [**glDrawPixels**](gldrawpixels.md)gezeichnet werden.
 
 Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glCopyTexSubImage1D** ab:
 
-[**glgetteximage**](glgetteximage.md)
+[**glGetTexImage**](glgetteximage.md)
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Texture \_ 1D
+[**glIsEnabled**](glisenabled.md) mit argument GL \_ TEXTURE \_ 1D
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -141,13 +141,13 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glCopyTexSubI
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -157,25 +157,25 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glCopyTexSubI
 [**glCopyTexSubImage2D**](glcopytexsubimage2d.md)
 </dt> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glnebel**](glfog.md)
+[**glFog**](glfog.md)
 </dt> <dt>
 
-[**glpixelstore**](glpixelstore-functions.md)
+[**glPixelStore**](glpixelstore-functions.md)
 </dt> <dt>
 
-[**glpixeltransfer**](glpixeltransfer.md)
+[**glPixelTransfer**](glpixeltransfer.md)
 </dt> <dt>
 
-[**gltexd**](gltexenv-functions.md)
+[**glTexEnv**](gltexenv-functions.md)
 </dt> <dt>
 
-[**gltexgen**](gltexgen-functions.md)
+[**glTexGen**](gltexgen-functions.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
@@ -190,7 +190,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glCopyTexSubI
 [**glTexSubImage2D**](gltexsubimage2d.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

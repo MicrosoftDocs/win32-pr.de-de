@@ -6,20 +6,20 @@ keywords:
 - OpenGL, Anhang
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 740660f2b324b69b362d0b80f657fc48c68265ee
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 3abd318166daf42dac6b212b26fae7a04d5b91c530aae8a825c1f2fc1ba55cba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618473"
 ---
 # <a name="appendix-opengl"></a>Anhang (OpenGL)
 
-Bei OpenGL, ursprünglich von Silicon Graphics Incorporated (SGI) für Ihre Grafik Arbeitsstationen entwickelt, können Anwendungen qualitativ hochwertige Farbbilder erstellen, die von windowingsystemen, Betriebssystemen und Hardware unabhängig sind.
+OpenGL wurde ursprünglich von Silicon Graphics Incorporated (SGI) für seine Grafikarbeitsstationen entwickelt und ermöglicht Anwendungen, hochwertige Farbbilder unabhängig von Fenstersystemen, Betriebssystemen und Hardware zu erstellen.
 
-Das OpenGL Architecture Review Board (ARB), ein Branchen Konsortium, ist zurzeit für die Definition von OpenGL verantwortlich. Zu den Membern des ARB gehören die Silicon Graphics Incorporated, Microsoft Corporation, Intel, IBM und Digital Equipment Corporation.
+Das OpenGL Architecture Review Board (ARB), ein Branchenkonsortium, ist derzeit für die Definition von OpenGL verantwortlich. Zu den Mitgliedern des ARB gehören Silicon Graphics Incorporated, Microsoft Corporation, Intel, IBM und Digital Equipment Corporation.
 
-Das offizielle Referenzdokument für OpenGL Version 1 ist das *OpenGL-Referenzhandbuch* vom OpenGL Architecture Review Board (ISBN 0-201-63276-4). Die offizielle Anleitung zum Erlernen von OpenGL Version 1 ist das *OpenGL-Programmier Handbuch* von Jackie Neider, Tom Davis und Mason woo (ISBN 0-201-63274-8). Beide Bücher werden von Addison-Wesley veröffentlicht.
+Das offizielle Referenzdokument für OpenGL Version 1 ist das *OpenGL-Referenzhandbuch* vom OpenGL Architecture Review Board (ISBN 0-201-63276-4). Der offizielle Leitfaden zum Erlernen von OpenGL Version 1 ist das *OpenGL-Programmierhandbuch* von Jackie Neider, Tom Guides und Woo (ISBN 0-201-63274-8). Beide Bücher werden von Addison-Wesley veröffentlicht.
 
  
 

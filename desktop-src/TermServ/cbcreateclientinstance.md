@@ -1,10 +1,10 @@
 ---
-title: Cbkreateclientinstance-Funktion (cbclient. h)
+title: CBCreateClientInstance-Funktion (Cbclient.h)
 description: Erstellt eine Instanz des Remotedesktopverbindung Broker-RPC-Clients.
 ms.assetid: 700E47BC-C547-44AB-8607-B9797D542AA7
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der cbkreateclientinstance-Funktion
+- CBCreateClientInstance-Funktion Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2b30f2d236bcc90dfa4977f54d56a5d1717d18a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 59b0873fac5b33370333ec8f5774e5b8dbbcd896f6afb9777a6dd74dd6913dcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118610147"
 ---
-# <a name="cbcreateclientinstance-function"></a>Cbkreateclientinstance-Funktion
+# <a name="cbcreateclientinstance-function"></a>CBCreateClientInstance-Funktion
 
 Erstellt eine Instanz des Remotedesktopverbindung Broker-RPC-Clients.
 
@@ -42,10 +42,10 @@ HRESULT CBCreateClientInstance(
 
 <dl> <dt>
 
-*Version* \[ in\]
+*Version* \[ In\]
 </dt> <dd>
 
-Gibt die Version der angeforderten Remotedesktopverbindung Broker-Client Schnittstelle an. Dabei muss es sich um den folgenden Wert handeln.
+Gibt die Version der Remotedesktopverbindung Broker-Clientschnittstelle an, die angefordert wird. Dies muss der folgende Wert sein.
 
 <dt>
 
@@ -56,16 +56,16 @@ Version 1 des Remotedesktopverbindung Broker-Clients.
 
 </dd> </dl> </dd> <dt>
 
-*ppcbclient* \[ vorgenommen\]
+*ppCbClient* \[ out\]
 </dt> <dd>
 
-Die Adresse eines [**iconnectionbrokerclient**](iconnectionbrokerclient.md) -Schnittstellen Zeigers, der das Remotedesktopverbindung Broker-Client Objekt empfängt.
+Die Adresse eines [**IConnectionBrokerClient-Schnittstellenzeigers,**](iconnectionbrokerclient.md) der das Remotedesktopverbindung Broker-Clientobjekt empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,8 +73,8 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cbclient. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Cbclient. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cbclient.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Cbclient.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Cbclient.dll</dt> </dl> |
 
 

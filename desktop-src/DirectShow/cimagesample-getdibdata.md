@@ -1,7 +1,7 @@
 ---
-description: Die getdibdata-Methode ruft Informationen über das von diesem Objekt verwaltete GDI-geräteunabhängige Bitmap (DIB) ab.
+description: Die GetDIBData-Methode ruft Informationen über die geräteunabhängige GDI-Bitmap (DEVICE-Independent Bitmap, DIB) ab, die von diesem Objekt verwaltet wird.
 ms.assetid: ec337336-69ec-47ff-a522-42c0388f9bc0
-title: Cimagesample. getdibdata-Methode (winutil. h)
+title: CImageSample.GetDIBData-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0fd198152e7c0042a6d48cf942a48745540960d3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 894d75512c6c7909f617e13999e7290efea663fa843bf64424aad8371965de75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655599"
 ---
-# <a name="cimagesamplegetdibdata-method"></a>Cimagesample. getdibdata-Methode
+# <a name="cimagesamplegetdibdata-method"></a>CImageSample.GetDIBData-Methode
 
-Die- `GetDIBData` Methode ruft Informationen über die von diesem-Objekt verwaltete GDI-geräteunabhängige Bitmap (DIB) ab.
+Die `GetDIBData` -Methode ruft Informationen über die geräteunabhängige GDI-Bitmap (DEVICE-Independent Bitmap, DIB) ab, die von diesem Objekt verwaltet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf eine [**dibdata**](dibdata.md) -Struktur zurück.
+Gibt einen Zeiger auf eine [**DIBDATA-Struktur**](dibdata.md) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Aufrufer muss die **dibdata** -Struktur initialisieren, bevor diese Methode aufgerufen wird. Überprüfen Sie den Wert von **cimagesample:: m \_ binit**. Um die Struktur zu initialisieren, müssen Sie die [**cimagesample:: setdibdata**](cimagesample-setdibdata.md) -Methode aufrufen.
+Der Aufrufer muss die **DIBDATA-Struktur** initialisieren, bevor er diese Methode aufruft. überprüfen Sie den Wert von **CImageSample::m \_ bInit**. Um die -Struktur zu initialisieren, rufen Sie die [**CImageSample::SetDIBData-Methode**](cimagesample-setdibdata.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Der Aufrufer muss die **dibdata** -Struktur initialisieren, bevor diese Methode 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagesample-Klasse**](cimagesample.md)
+[**CImageSample-Klasse**](cimagesample.md)
 </dt> </dl>
 
  

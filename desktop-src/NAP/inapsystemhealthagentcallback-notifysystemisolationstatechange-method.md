@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentcallback notifysystemisolationstatechange-Methode (napsystemhealthagent. h)
-description: Wird von NAPAgent aufgerufen, um anzugeben, dass sich der System Isolations Status oder die Endzeit der Bewährungszeit geändert hat.
+title: INapSystemHealthAgentCallback NotifySystemIsolationStateChange-Methode (NapSystemHealthAgent.h)
+description: Wird vom NapAgent aufgerufen, um anzugeben, dass sich der Isolationsstatus des Systems oder die Endzeit der Probe geändert hat.
 ms.assetid: 0837eea4-6d92-44dc-b8b8-eca6be5f63e6
 keywords:
-- Notifysystemisolationstatechange-Methode NAP
-- Notifysystemisolationstatechange-Methode NAP, inapsystemhealthagentcallback-Schnittstelle
-- Inapsystemhealthagentcallback-Schnittstelle NAP, notifysystemsolationstatechange-Methode
+- NotifySystemIsolationStateChange-Methode NAP
+- NotifySystemIsolationStateChange-Methode NAP, INapSystemHealthAgentCallback-Schnittstelle
+- INapSystemHealthAgentCallback-Schnittstelle NAP, NotifySystemIsolationStateChange-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c519d1569fe2e43cc6012ffa30c5bfb4402cc56
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5fc75686801148e0866f8996dabdb31af66eac9b55c60473782a794ea59f7463
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621151"
 ---
-# <a name="inapsystemhealthagentcallbacknotifysystemisolationstatechange-method"></a>Inapsystemhealthagentcallback:: notifysystemsolationstatechange-Methode
+# <a name="inapsystemhealthagentcallbacknotifysystemisolationstatechange-method"></a>INapSystemHealthAgentCallback::NotifySystemIsolationStateChange-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsystemhealthagentcallback:: notifysystemsolationstatechange** -Methode wird von NAPAgent aufgerufen, um anzugeben, dass sich der System Isolations Status oder die Endzeit der Bewährungszeit geändert hat.
+Die **INapSystemHealthAgentCallback::NotifySystemIsolationStateChange-Methode** wird vom NapAgent aufgerufen, um anzugeben, dass sich der Isolationsstatus des Systems oder die Endzeit der Probe geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,11 +59,11 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Rückruf Methode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
+Diese Rückrufmethode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
 
-Der Integritäts-Agent kann den NAP-Systemstatus mithilfe von [**inapsystemhealthagentbinding:: getsystemsolationinfo**](inapsystemhealthagentbinding-getsystemisolationinfo-method.md)Abfragen.
+Der Integritäts-Agent kann den NAP-Systemstatus mithilfe von [**INapSystemHealthAgentBinding::GetSystemIsolationInfo abfragen.**](inapsystemhealthagentbinding-getsystemisolationinfo-method.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,18 +71,18 @@ Der Integritäts-Agent kann den NAP-Systemstatus mithilfe von [**inapsystemhealt
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsystemhealthagentcallback**](inapsystemhealthagentcallback.md)
+[**INapSystemHealthAgentCallback**](inapsystemhealthagentcallback.md)
 </dt> </dl>
 
  

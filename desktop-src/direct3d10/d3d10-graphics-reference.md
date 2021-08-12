@@ -4,12 +4,12 @@ ms.assetid: ff729810-bd9d-4396-a6aa-bbeb558bd3fa
 title: Referenz für Direct3D 10
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b47d0c109b6c5f3afa34ea6e0f92b7358c7e004
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c449e46bb070d4b984ca7a3237377dbcffda8f4e0df40b75eada8c215b6aae78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483150"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118303700"
 ---
 # <a name="reference-for-direct3d-10"></a>Referenz für Direct3D 10
 

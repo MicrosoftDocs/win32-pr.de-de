@@ -1,7 +1,7 @@
 ---
-description: Erh채lt eine Lese-/Schreibsperre.
+description: Er erh채lt eine Reader-/Writersperre.
 ms.assetid: fd212dd9-034b-4e0c-9111-e3460ea6f133
-title: 'Csharelocknh:: exclusivelock-Methode'
+title: CShareLockNH::ExclusiveLock-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Rwnh.dll
-ms.openlocfilehash: 8b35b544c10e6dde2887e75971d747feade5517e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 16a5d2ba49d5ff1c25079a99a979d7a0fb4a51ee64d54fa4042152d7b010dc1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667963"
 ---
-# <a name="csharelocknhexclusivelock-method"></a>Csharelocknh:: exclusivelock-Methode
+# <a name="csharelocknhexclusivelock-method"></a>CShareLockNH::ExclusiveLock-Methode
 
-Erh채lt eine Lese-/Schreibsperre.
+Er erh채lt eine Reader-/Writersperre.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zur체ck.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder R체ckruf von **exclusivelock** muss mit genau einem R체ckruf von [**exclusiveunlock**](csharelocknh--exclusiveunlock.md) gekoppelt werden, um das Risiko eines Deadlocks zu vermeiden.
+Jeder Aufruf von **ExclusiveLock** muss mit genau einem Aufruf von [**ExclusiveUnlock**](csharelocknh--exclusiveunlock.md) gekoppelt werden, um das Risiko eines Deadlocks zu vermeiden.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,11 +57,11 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Exclusiveunlock**](csharelocknh--exclusiveunlock.md)
+[**ExclusiveUnlock**](csharelocknh--exclusiveunlock.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientTransportSettings3 gatewayverschlüsseltedauthcookiesize (Eigenschaft)
-description: Die Größe der gatewayverschlüsseltedauthcookie-Eigenschaft in Zeichen.
+title: IMsRdpClientTransportSettings3 GatewayEncryptedAuthCookieSize (Eigenschaft)
+description: Die Größe der GatewayEncryptedAuthCookie-Eigenschaft in Zeichen.
 ms.assetid: 52e24bef-5afa-4954-b639-08ea8701404a
 ms.tgt_platform: multiple
 keywords:
-- Gatewayverschlüsseltedauthcookiesize-Eigenschaft Remotedesktopdienste
-- Gatewayverschlüsseltedauthcookiesize-Eigenschaft Remotedesktopdienste, IMsRdpClientTransportSettings3-Schnittstelle
-- IMsRdpClientTransportSettings3 Interface Remotedesktopdienste, gatewayverschlüsseltedauthcookiesize (Eigenschaft)
+- GatewayEncryptedAuthCookieSize-Remotedesktopdienste
+- GatewayEncryptedAuthCookieSize-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings3-Schnittstelle
+- IMsRdpClientTransportSettings3-Schnittstelle Remotedesktopdienste , GatewayEncryptedAuthCookieSize (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 238245cdb9c0164b69434cf61f790b8f81fa3da2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41e26e4d15c134bcd8a2dd5bbf74b574f38ce56627d0f7e7840547ed1d56a67a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118606935"
 ---
-# <a name="imsrdpclienttransportsettings3gatewayencryptedauthcookiesize-property"></a>IMsRdpClientTransportSettings3:: gatewayverschlüsseltedauthcookiesize (Eigenschaft)
+# <a name="imsrdpclienttransportsettings3gatewayencryptedauthcookiesize-property"></a>IMsRdpClientTransportSettings3::GatewayEncryptedAuthCookieSize (Eigenschaft)
 
-Die Größe der [**gatewayverschlüsseltedauthcookie**](imsrdpclienttransportsettings3-gatewayencryptedauthcookie.md) -Eigenschaft in Zeichen.
+Die Größe der [**GatewayEncryptedAuthCookie-Eigenschaft in**](imsrdpclienttransportsettings3-gatewayencryptedauthcookie.md) Zeichen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_GatewayEncryptedAuthCookieSize(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **ulong** -Wert, der den neuen Größen Wert enthält.
+Ein **ULONG-Wert,** der den neuen Größenwert enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,14 +57,14 @@ Ein **ulong** -Wert, der den neuen Größen Wert enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

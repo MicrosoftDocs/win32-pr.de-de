@@ -1,9 +1,9 @@
 ---
-title: TVN_BEGINRDRAG Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Baumansicht-Steuer Elements über die Initiierung eines Drag & Drop-Vorgangs mit der rechten Maustaste. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TVN_BEGINRDRAG Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements über die Initiierung eines Drag & Drop-Vorgangs mit der rechten Maustaste. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 4a61d8b5-ceb9-46a3-95ef-27e843e8c986
 keywords:
-- Windows-Steuerelemente für TVN_BEGINRDRAG Benachrichtigungs
+- TVN_BEGINRDRAG Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bec15b5f48d4ed5612778622bb3655ae153c1b9f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f7ce3fb92f39097c51cf54d707fac4341bc2a4c098b5abb0b36abcbd47f5744
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118669174"
 ---
-# <a name="tvn_beginrdrag-notification-code"></a>TVN \_ beginrdrag-Benachrichtigungs Code
+# <a name="tvn_beginrdrag-notification-code"></a>TVN \_ BEGINRDRAG-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Baumansicht-Steuer Elements über die Initiierung eines Drag & Drop-Vorgangs mit der rechten Maustaste. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements über die Initiierung eines Drag & Drop-Vorgangs mit der rechten Maustaste. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ TVN_BEGINRDRAG
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtreeview**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) -Struktur. Der **itemnew** -Member ist eine [**tvitem**](/windows/win32/api/commctrl/ns-commctrl-tvitema) -Struktur, die gültige Informationen in den **Hitem**-, **State**-und **LPARAM** -Membern zu dem Element enthält, das gezogen werden soll. Der **ptdrag** -Member gibt die aktuellen Bildschirm Koordinaten der Maus an.
+Zeiger auf eine [**NMTREEVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) Der **itemNew-Member** ist eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die gültige Informationen in den **Membern hItem,** **state** und **lParam** über das zu ziehende Element enthält. Das **ptDrag-Element** gibt die aktuellen Bildschirmkoordinaten der Maus an.
 
 </dd> </dl>
 
@@ -57,10 +57,10 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TVN \_ Beginrdragw** (Unicode) und **TVN \_ beginrdraga** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TVN \_ BEGINRDRAGW** (Unicode) und **TVN \_ BEGINRDRAGA** (ANSI)<br/>             |
 
 
 
