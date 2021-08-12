@@ -1,61 +1,61 @@
 ---
-description: Schattenvolumes werden zum Zeichnen von Schatten mit dem Schablonen Puffer verwendet.
+description: Schattenvolumes werden zum Zeichnen von Schatten mit dem Schablonenpuffer verwendet.
 ms.assetid: 8b71d871-ee66-47c4-8190-5c75419b28b2
 title: Two-Sided Schablone (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b238c4b778b9894029764032e76b60c476a891a9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 95bca0b960f96d1747b2b7ad51771276df2cfe1da1fa8ac9aa4d7c1ce8ea7c03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118290510"
 ---
 # <a name="two-sided-stencil-direct3d-9"></a>Two-Sided Schablone (Direct3D 9)
 
-Schattenvolumes werden zum Zeichnen von Schatten mit dem Schablonen Puffer verwendet. Die Anwendung berechnet die schattenvolumes, die durch die Schattierung von Geometrie umgewandelt werden, indem die Silhouette-Kanten berechnet und vom Licht in eine Gruppe von 3D-Volumes aufgeteilt werden. Diese Volumes werden dann zweimal im Schablonen Puffer gerendert.
+Schattenvolumes werden zum Zeichnen von Schatten mit dem Schablonenpuffer verwendet. Die Anwendung berechnet die Schattenvolumen, die durch verdeckende Geometrie umgewandelt werden, indem die Kanten der Kanten berechnet und vom Licht weg in eine Reihe von 3D-Volumes zusammengestellt werden. Diese Volumes werden dann zweimal in den Schablonenpuffer gerendert.
 
-Das erste Rendering zeichnet nach vorne gerichtete Polygone und erhöht die Schablonen Puffer Werte. Das zweite Rendering zeichnet die rückwärts gerichteten Polygone des Schatten Volumens und Dekremente die Schablonen Puffer Werte. Normalerweise brechen alle inkrementierten und dekrementierten Werte einander ab. Die Szene wurde jedoch bereits mit normaler Geometrie gerendert, sodass einige Pixel den z-Puffer-Test nicht bestanden haben, während das Schatten Volume gerendert wird. Werte, die im Schablonen Puffer verbleiben, entsprechen den im Schatten entsprechenden Pixeln. Diese verbleibenden Schablone-Puffer Inhalte werden als Maske verwendet, um einen großen, umfassenden, vier Vierfache in die Szene zu mischen. Wenn der Schablone-Puffer als Maske fungiert, besteht das Ergebnis darin, die Pixel in den Schatten zu verbergen.
+Das erste Rendern zeichnet vorwärts gerichtete Polygone und erhöht die Schablonenpufferwerte. Das zweite Rendern zeichnet die rückwärts gerichteten Polygone des Schattenvolumens und dekrementiert die Schablonenpufferwerte. Normalerweise brechen sich alle inkrementierten und dekrementierten Werte gegenseitig ab. Die Szene wurde jedoch bereits mit normaler Geometrie gerendert, sodass einige Pixel beim Z-Puffertest fehlschlagen, wenn das Schattenvolumen gerendert wird. Die werte, die im Schablonenpuffer übrig bleiben, entsprechen den Pixeln im Schatten. Diese verbleibenden Schablonenpufferinhalte werden als Maske verwendet, um ein großes, allumfassendes schwarzes Quader alphanumerierend in die Szene einzublenden. Wenn der Schablonenpuffer als Maske fungiert, besteht das Ergebnis darin, Pixel in den Schatten zu dunkler zu machen.
 
-Dies bedeutet, dass die Schatten Geometrie zweimal pro Lichtquelle gezeichnet wird und somit den Scheitelpunkt Durchsatz der GPU erhöht. Das zweiseitige Schablonen Feature wurde entwickelt, um diese Situation zu mindern. Bei dieser Vorgehensweise gibt es zwei Sätze von Schablone State (unten genannt), jeweils eine Menge für die Vorder-und die andere für die mit der Rückseite gerichteten Dreiecke. Auf diese Weise wird nur ein einzelner Durchlauf pro Schatten Volume pro Licht gezeichnet.
+Dies bedeutet, dass die Schattengeometrie zweimal pro Lichtquelle gezeichnet wird, was den Scheitelpunktdurchsatz der GPU unter Druck setzt. Die zweiseitige Schablonenfunktion wurde entwickelt, um diese Situation zu entschärfen. Bei diesem Ansatz gibt es zwei Sätze des Schablonenzustands (unten benannt), eine für die vorderen Dreiecke und die andere für die hinteren Dreiecke. Auf diese Weise wird nur ein einzelner Durchlauf pro Schattenvolumen pro Licht gezeichnet.
 
-Die API-Änderungen sind auf einen neuen Satz von Rendering-Zuständen beschränkt. Der neue renderzustand D3DRS der \_ zwei \_ seitige \_ Schablonen Modus kann auf " **true** " oder " **false**" festgelegt werden. Der Standardwert ist **false** . Dies bedeutet das aktuelle Verhalten (DirectX 8). Wenn diese auf **true** festgelegt ist (dies funktioniert nur, wenn D3DSTENCILCAPS \_ twoseitigem festgelegt ist), gelten die folgenden Rendering-Zustände nur für die Front-on-Dreiecke (im Uhrzeigersinn).
+Die API-Änderungen sind auf einen neuen Satz von Renderzuständen beschränkt. Der neue Renderzustand D3DRS \_ Two \_ Sided \_ StencilMODE kann auf **TRUE** oder **FALSE** festgelegt werden. Standardmäßig ist **es FALSE,** d.h. das aktuelle Verhalten (DirectX 8). Wenn diese Einstellung auf **TRUE** festgelegt ist (dies funktioniert nur, wenn D3DSTENCILCAPS \_ TWOSIDED festgelegt ist), gelten die folgenden Renderzustände nur für die vorderen Dreiecke (im Uhrzeigersinn).
 
 
 
-| Rendering-Zustand        | BESCHREIBUNG                                                                              |
+| Renderzustand        | Beschreibung                                                                              |
 |---------------------|------------------------------------------------------------------------------------------|
-| D3DRS \_ stencilfail  | D3DSTENCILOP, wenn der Schablone-Test fehlschlägt.                                                |
-| D3DRS \_ stencilzfail | D3DSTENCILOP, wenn der Schablone-Test erfolgreich verläuft und z-Test fehlschlägt.                              |
-| D3DRS \_ stencilpass  | D3DSTENCILOP, wenn sowohl Schablone als auch z-Tests bestanden werden.                                     |
-| D3DRS \_ stencilfunc  | D3DCMPFUNC Fn. Der Schablone-Test wird durchlaufen, wenn ((Ref & Mask) stencilfn (Schablone & Mask)) "true" ist. |
+| D3DRS \_ STENCILFAIL  | D3DSTENCILOP, wenn der Schablonentest fehlschlägt.                                                |
+| D3DRS \_ STENCILZFAIL | D3DSTENCILOP, wenn der Schablonentest erfolgreich war und z-test fehlschlägt.                              |
+| D3DRS \_ STENCILPASS  | D3DSTENCILOP, wenn Schablonen- und Z-Tests erfolgreich sind.                                     |
+| D3DRS \_ STENCILFUNC  | D3DCMPFUNC fn. Der Schablonentest ist erfolgreich, wenn ((ref & mask) stencilfn (stencil & mask)) true ist. |
 
 
 
  
 
-Ein neuer Satz von Rendering-Zuständen gilt für die nach hinten gerichteten Dreiecke (gegen den Uhrzeigersinn).
+Ein neuer Satz von Renderzuständen gilt für die rückwärts gerichteten Dreiecke (gegen den Uhrzeigersinn).
 
 
 
-| Rendering-Zustand             | BESCHREIBUNG                                                                                    |
+| Renderzustand             | Beschreibung                                                                                    |
 |--------------------------|------------------------------------------------------------------------------------------------|
-| D3DRS \_ CCW \_ stencilfail  | D3DSTENCILOP, wenn der Schablone-Test fehlschlägt.                                                      |
-| D3DRS \_ CCW \_ stencilzfail | D3DSTENCILOP, wenn der Schablone-Test erfolgreich verläuft und z-Test fehlschlägt.                                    |
-| D3DRS \_ CCW \_ stencilpass  | D3DSTENCILOP, wenn sowohl Schablone als auch z-Tests bestanden werden.                                           |
-| D3DRS \_ CCW \_ stencilfunc  | D3DCMPFUNC-Funktion. Der Schablone-Test wird durchlaufen, wenn ((Ref & Mask) stencilfn (Schablone & Mask)) "true" ist. |
+| D3DRS \_ CCW \_ STENCILFAIL  | D3DSTENCILOP, wenn der Schablonentest fehlschlägt.                                                      |
+| D3DRS \_ CCW \_ STENCILZFAIL | D3DSTENCILOP, wenn der Schablonentest erfolgreich war und z-test fehlschlägt.                                    |
+| D3DRS \_ CCW \_ STENCILPASS  | D3DSTENCILOP, wenn Schablonen- und Z-Tests erfolgreich sind.                                           |
+| D3DRS \_ CCW \_ STENCILFUNC  | D3DCMPFUNC-Funktion. Der Schablonentest ist erfolgreich, wenn ((ref & Mask) stencilfn (stencil & mask)) true ist. |
 
 
 
  
 
-Die verbleibenden Schablone-Rendering-Zustände gelten immer für den Uhrzeigersinn und gegen den Uhrzeigersinn.
+Die verbleibenden Schablonenrenderzustände gelten immer für Dreiecke im Uhrzeigersinn und gegen den Uhrzeigersinn.
 
-D3DRS \_ \_ der zweiseitige \_ Schablonen Modus wird für Linien und Punkt Sprites ignoriert, was bedeutet, dass das Verhalten von DirectX 8 unverändert bleibt. Die D3DRS \_ CCW- \_ Schablonen- \* Rendering-Zustände werden ignoriert.
+D3DRS \_ Two \_ Sided \_ StencilMODE wird für Linien und Punkt-Sprites ignoriert, was bedeutet, dass das Verhalten von DirectX 8 nicht geändert wird. Die D3DRS \_ CCW \_ STENCIL-Renderzustände \* werden ignoriert.
 
-Ein neues Cap-Bit gibt an, ob das Gerät dieses Feature unterstützt. Treiber, die dieses Feature nicht unterstützen, werden davon ausgehen, dass diese neuen Rendering-Zustände ignoriert werden. Alle anderen Schablone-deckbits gelten für beide Modi der Schablonen Pufferung. Da zwei \_ seitige \_ Schablonen die Fähigkeit zum Zeichnen mit D3DCULLMODE None impliziert \_ , muss die entsprechende Obergrenze vom Treiber festgelegt werden, wenn Sie diesen neuen Schablone-Modus unterstützt. Microsoft Windows Hardware Quality Labs (WHQL) sollte dies erzwingen.
+Ein neues Cap-Bit gibt an, ob das Gerät dieses Feature unterstützt. Es wird erwartet, dass Treiber, die dieses Feature nicht unterstützen, diese neuen Renderzustände ignorieren. Alle anderen Schablonen-Cap-Bits gelten für beide Modi der Schablonenpufferung. Da Two \_ Sided \_ Stencil die Fähigkeit impliziert, mit D3DCULLMODE \_ NONE zu zeichnen, muss die entsprechende Obergrenze vom Treiber festgelegt werden, wenn dieser neue Schablonenmodus unterstützt wird. Microsoft Windows Hardware Quality Labs (WHQL) sollte dies erzwingen.
 
-Neue Rendering-Zustände:
+Neue Renderzustände:
 
 
 ```
@@ -81,7 +81,7 @@ D3DSTENCILCAPS_TWOSIDED // a flag on D3DCAPS9.StencilCaps
 
 <dl> <dt>
 
-[Techniken für Schablonen Puffer](stencil-buffer-techniques.md)
+[Schablonenpuffertechniken](stencil-buffer-techniques.md)
 </dt> <dt>
 
 [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md)

@@ -1,9 +1,9 @@
 ---
-title: StartTime-Element
-description: Das StartTime-Element definiert einen Zeit Index, von dem aus Windows Media Player das Rendern des Streams startet.
+title: STARTTIME-Element
+description: Das STARTTIME-Element definiert einen Zeitindex, ab dem Windows Media Player mit dem Rendern des Streams beginnt.
 ms.assetid: 9b0199c8-5c95-4b4e-a943-e3bd037bf0bc
 keywords:
-- StartTime-Element Fenster Media Player
+- STARTTIME-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8a882da6c07ec76a94c8e214fe1da11c71680b0c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9138b05b949098c59996c69143059de5cb5b25cafcd8da7d922de120d586b356
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568792"
 ---
-# <a name="starttime-element"></a>StartTime-Element
+# <a name="starttime-element"></a>STARTTIME-Element
 
-Das **StartTime** -Element definiert einen Zeit Index, von dem aus Windows Media Player das Rendern des Streams startet.
+Das **STARTTIME-Element** definiert einen Zeitindex, ab dem Windows Media Player mit dem Rendern des Streams beginnt.
 
 ``` syntax
 <STARTTIME
@@ -32,17 +32,17 @@ Das **StartTime** -Element definiert einen Zeit Index, von dem aus Windows Media
 
 ## <a name="attributes"></a>Attribute
 
-**Wert** (erforderlich)
+**VALUE** (erforderlich)
 
-Der Zeit Index (in Stunden, Minuten, Sekunden und Hundertstel Sekunden), aus dem Windows Media Player mit der Wiedergabe eines Datenstroms beginnt, der im zugeordneten Element definiert ist.
+Der Zeitindex (in Stunden, Minuten, Sekunden und Hundertstelsekunden), ab dem Windows Media Player mit der Wiedergabe eines im zugeordneten Element definierten Streams beginnt.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente           |
 |-----------------|--------------------|
-| Übergeordnete Elemente | **Eintrag**, **ref** |
+| Übergeordnete Elemente | **ENTRY**, **REF** |
 | Untergeordnete Elemente  | Keine               |
 
 
@@ -51,7 +51,7 @@ Der Zeit Index (in Stunden, Minuten, Sekunden und Hundertstel Sekunden), aus dem
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element definiert einen Zeit Index in den Inhalt, in dem Windows Media Player das Rendern des Streams starten soll. Dieses Element kann nur mit gespeicherten on-Demand-Inhalten verwendet werden, die indiziert wurden.
+Dieses Element definiert einen Zeitindex für den Inhalt, in dem Windows Media Player mit dem Rendern des Streams beginnen soll. Dieses Element kann nur mit gespeicherten on-demand-Inhalten verwendet werden, die indiziert wurden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -68,7 +68,7 @@ Dieses Element definiert einen Zeit Index in den Inhalt, in dem Windows Media Pl
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
@@ -76,10 +76,10 @@ Dieses Element definiert einen Zeit Index in den Inhalt, in dem Windows Media Pl
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

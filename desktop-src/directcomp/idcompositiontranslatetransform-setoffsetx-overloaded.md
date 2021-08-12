@@ -1,9 +1,9 @@
 ---
-title: Idcompositiontranslatetransform sethffsetx-Methode (Dcomp. h)
-description: Ändert oder animiert den Wert der OffsetX-Eigenschaft einer 2D-Übersetzungs Transformation.
+title: IDCompositionTranslateTransform SetOffsetX-Methoden (Dcomp.h)
+description: Ändert oder animiert den Wert der OffsetX-Eigenschaft einer 2D-Übersetzungstransformation.
 ms.assetid: E77645DB-6C6F-4A6C-9BD1-F2CF5915A85E
 keywords:
-- Sedeffsetx-Methoden directcomposition
+- SetOffsetX-Methoden – DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: d6e163fe83af68319f20f6f531366e04a7bc6422
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0abd8a3126c2846820d8aae4836016766f065c5fdc12837116b5b4792e772879
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118281274"
 ---
-# <a name="idcompositiontranslatetransformsetoffsetx-methods"></a>Idcompositiontranslatetransform:: Seto ffsetx-Methoden
+# <a name="idcompositiontranslatetransformsetoffsetx-methods"></a>IDCompositionTranslateTransform::SetOffsetX-Methoden
 
-Ändert oder animiert den Wert der OffsetX-Eigenschaft einer 2D-Übersetzungs Transformation. Die OffsetX-Eigenschaft gibt die Übersetzung entlang der x-Achse an.
+Ändert oder animiert den Wert der OffsetX-Eigenschaft einer 2D-Übersetzungstransformation. Die OffsetX-Eigenschaft gibt die Übersetzung entlang der X-Achse an.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                            | BESCHREIBUNG                                            |
+| Methode                                                                                                            | Beschreibung                                            |
 |:------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [**Seto ffsetx (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform-setoffsetx(float))                                     | Ändert den Wert der OffsetX-Eigenschaft.<br/>  |
-| [**Seto ffsetx (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform-setoffsetx(idcompositionanimation)) | Animiert den Wert der OffsetX-Eigenschaft.<br/> |
+| [**SetOffsetX(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform-setoffsetx(float))                                     | Ändert den Wert der OffsetX-Eigenschaft.<br/>  |
+| [**SetOffsetX(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform-setoffsetx(idcompositionanimation)) | Animiert den Wert der OffsetX-Eigenschaft.<br/> |
 
 
 
@@ -40,10 +40,10 @@ ms.locfileid: "104391908"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 
@@ -52,7 +52,7 @@ ms.locfileid: "104391908"
 
 <dl> <dt>
 
-[**Idcompositiontranslatetransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontranslatetransform)
+[**IDCompositionTranslateTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontranslatetransform)
 </dt> </dl>
 
 �

@@ -1,11 +1,11 @@
 ---
-title: Player. playlistcollectionchange-Ereignis
-description: Das playlistcollectionchange-Ereignis tritt auf, wenn sich etwas in der Wiedergabelisten Auflistung ändert. | Player. playlistcollectionchange-Ereignis
+title: Player.PlaylistCollectionChange-Ereignis
+description: Das PlaylistCollectionChange-Ereignis tritt auf, wenn sich etwas in der Wiedergabelistensammlung ändert. | Player.PlaylistCollectionChange-Ereignis
 ms.assetid: b03fd52f-9b22-4535-9d6f-f7abc04b328e
 keywords:
-- Playlistcollectionchange-Ereignisfenster Media Player
-- Playlistcollectionchange-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, playlistcollectionchange-Ereignis
+- PlaylistCollectionChange-Ereignis Windows Media Player
+- PlaylistCollectionChange-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , PlaylistCollectionChange-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e24b99dd8cb88a1213812875f029c08ba80a8e2c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 351b07b2d8432dd05a5a28f6a4ae0dd11aa47a8652c504bd5bbda615e11b088a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572616"
 ---
-# <a name="playerplaylistcollectionchange-event"></a>Player. playlistcollectionchange-Ereignis
+# <a name="playerplaylistcollectionchange-event"></a>Player.PlaylistCollectionChange-Ereignis
 
-Das **playlistcollectionchange** -Ereignis tritt auf, wenn sich etwas in der Wiedergabelisten Auflistung ändert.
+Das **PlaylistCollectionChange-Ereignis** tritt auf, wenn sich etwas in der Wiedergabelistensammlung ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,13 +38,13 @@ Player.PlaylistCollectionChange()
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -54,7 +54,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

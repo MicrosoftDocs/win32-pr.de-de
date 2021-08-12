@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Beschreibung des Parameters oder einer Anmerkung ab.
+description: Ruft einen Parameter oder eine Anmerkungsbeschreibung ab.
 ms.assetid: fd54eb08-a7e4-4106-b0ed-49a4da7fcadc
-title: 'ID3DXBaseEffect:: getparameterdesc-Methode (D3DX9Effect. h)'
+title: ID3DXBaseEffect::GetParameterDesc-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 8c3a52c06ebed764b3ab1718488c2dbc55ceda41
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8c60332909ef601d58cb624201bae6e1934a84699ead1227a5d8a83c2db64dc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118296703"
 ---
-# <a name="id3dxbaseeffectgetparameterdesc-method"></a>ID3DXBaseEffect:: getparameterdesc-Methode
+# <a name="id3dxbaseeffectgetparameterdesc-method"></a>ID3DXBaseEffect::GetParameterDesc-Methode
 
-Ruft eine Beschreibung des Parameters oder einer Anmerkung ab.
+Ruft einen Parameter oder eine Anmerkungsbeschreibung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetParameterDesc(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Parameter-oder Anmerkung-handle. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Parameter- oder Anmerkungshand handle. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*PDE SC* \[ vorgenommen\]
+*pDesc* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXPARAMETER \_ DESC**](d3dxparameter-desc.md)\***
 
-Gibt eine Beschreibung des angegebenen Parameters oder der angegebenen Anmerkung zurück. Weitere Informationen finden Sie unter [**D3DXPARAMETER \_**](d3dxparameter-desc.md).
+Gibt eine Beschreibung des angegebenen Parameters oder der Anmerkung zurück. Siehe [**D3DXPARAMETER \_ DESC**](d3dxparameter-desc.md).
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Gibt eine Beschreibung des angegebenen Parameters oder der angegebenen Anmerkung
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

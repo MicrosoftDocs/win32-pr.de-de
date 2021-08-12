@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Überladungs Liste der esentresource. verwerfen-Methode.
-title: Überladungs Liste der esentresource. verwerfen-Methode
+description: 'Weitere Informationen finden Sie unter: Überladungsliste der EsentResource.Dispose-Methode'
+title: Überladungsliste der EsentResource.Dispose-Methode
 TOCTitle: 'Dispose method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.EsentResource.Dispose
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentresource.dispose(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: a90411b937dbd4b7844837529fc19f27927bd035
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 5cb52d703caf03645a8be6f35196f12c858cdcb342f9e693cdea54b9e2b81b7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118260903"
 ---
-# <a name="esentresourcedispose-method-overload-list"></a>Überladungs Liste der esentresource. verwerfen-Methode
+# <a name="esentresourcedispose-method-overload-list"></a>Überladungsliste der EsentResource.Dispose-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,19 +33,19 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn350553(v=exchg.10).md">Verwerfen ()</a></td>
-<td>Löschen Sie dieses Objekt, und veröffentlichen Sie die zugrunde liegende ESENT-Ressource.</td>
+<td><a href="dn350553(v=exchg.10).md">Dispose()</a></td>
+<td>Veräußern Sie dieses Objekt, und geben Sie die zugrunde liegende Esent-Ressource frei.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn350543(v=exchg.10).md">Verwerfen (Boolean)</a></td>
-<td>Wird von verwerfen und dem Finalizer aufgerufen.</td>
+<td><a href="dn350543(v=exchg.10).md">Dispose(Boolean)</a></td>
+<td>Wird von Dispose und dem Finalizer aufgerufen.</td>
 </tr>
 </tbody>
 </table>
@@ -57,8 +57,8 @@ Oben
 
 #### <a name="reference"></a>Referenz
 
-[Esentresource-Klasse](./esentresource-class.md)
+[EsentResource-Klasse](./esentresource-class.md)
 
-[Esentresource-Member](./esentresource-members.md)
+[EsentResource-Member](./esentresource-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

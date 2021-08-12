@@ -1,7 +1,7 @@
 ---
 description: Speichert Vorlagen in einer DirectX-Datei. Veraltet.
 ms.assetid: 7a45565a-8c04-4fa1-a424-294b847d3a2f
-title: 'Idirectxfilesaveobject:: savetemplates-Methode (dxfile. h)'
+title: IDirectXFileSaveObject::SaveTemplates-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 3c63ae2e0f211aa8e7064161d03a66cafe1e8289
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 87ec95932b26877354c22089a97b249bd542aa841552c3e3f9e4827a20f6d608
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118292221"
 ---
-# <a name="idirectxfilesaveobjectsavetemplates-method"></a>Idirectxfilesaveobject:: savetemplates-Methode
+# <a name="idirectxfilesaveobjectsavetemplates-method"></a>IDirectXFileSaveObject::SaveTemplates-Methode
 
 Speichert Vorlagen in einer DirectX-Datei. Veraltet.
 
@@ -41,21 +41,21 @@ HRESULT SaveTemplates(
 
 <dl> <dt>
 
-*ctemplates* \[ in\]
+*cTemplates* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Die Gesamtanzahl der zu speichernden Vorlagen.
+Gesamtanzahl der zu speichernden Vorlagen.
 
 </dd> <dt>
 
-*ppguidtemplates* \[ in\]
+*ppguidTemplates* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**GUID**](guid.md) \* \***
+Typ: **const [**GUID**](guid.md) \* \***
 
-Adresse eines Zeigers auf ein Array von GUIDs für alle zu speichernden Vorlagen.
+Adresse eines Zeigers auf ein Array der GUIDs für alle zu speichernden Vorlagen.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Adresse eines Zeigers auf ein Array von GUIDs für alle zu speichernden Vorlagen
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert dxfileerr \_ badvalue lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert DXFILEERR \_ BADVALUE sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende Code Fragment stellt einen Beispiel Aufrufe von **idirectxfilesaveobject:: savetemplates** und Beispiel Inhalt für das Array bereit, auf das ppguidtemplates zeigt.
+Das folgende Codefragment enthält einen Beispielaufruf von **IDirectXFileSaveObject::SaveTemplates** und Beispielinhalte für das Array, auf das ppguidTemplates verweist.
 
 
 ```
@@ -83,7 +83,7 @@ hr = pDXFileSaveObject->SaveTemplates(3, aIds);
 
 
 
-Nachdem Sie diese Methode zum Speichern der Vorlagen verwendet haben, verwenden Sie die [**idirectxfilesaveobject:: kreatedataobject**](idirectxfilesaveobject--createdataobject.md) -Methode zum Erstellen eines Datenobjekts.
+Nachdem Sie diese Methode zum Speichern der Vorlagen verwendet haben, verwenden Sie die [**IDirectXFileSaveObject::CreateDataObject-Methode,**](idirectxfilesaveobject--createdataobject.md) um ein Datenobjekt zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Nachdem Sie diese Methode zum Speichern der Vorlagen verwendet haben, verwenden 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -100,10 +100,10 @@ Nachdem Sie diese Methode zum Speichern der Vorlagen verwendet haben, verwenden 
 
 <dl> <dt>
 
-[Idirectxfilesaveobject](idirectxfilesaveobject.md)
+[IDirectXFileSaveObject](idirectxfilesaveobject.md)
 </dt> <dt>
 
-[**Idirectxfilesaveobject:: kreatedataobject**](idirectxfilesaveobject--createdataobject.md)
+[**IDirectXFileSaveObject::CreateDataObject**](idirectxfilesaveobject--createdataobject.md)
 </dt> </dl>
 
  

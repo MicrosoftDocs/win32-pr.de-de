@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. windowlessvideo (Eigenschaft)
-description: Mit der windowlessvideo-Eigenschaft wird ein Wert abgerufen oder festgelegt, der angibt, ob das Windows Media Player-Steuerelement Videos im fensterlosen Modus rendert.
+title: AxWindowsMediaPlayer.windowlessVideo (Eigenschaft)
+description: Die windowlessVideo-Eigenschaft ruft einen Wert ab, der angibt, ob das Windows Media Player Video im fensterlosen Modus rendert, oder legt einen Wert fest.
 ms.assetid: 70386aae-cd30-405d-90dd-9b3fa63dad17
 keywords:
-- windowlessvideo-Eigenschaften Fenster Media Player
-- windowlessvideo-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, windowlessvideo (Eigenschaft)
+- windowlessVideo-Windows Media Player
+- windowlessVideo-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , windowlessVideo-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d22ecc0f39b03201809877fe8ebc667d62e16d0b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a63a7246e730f73bd6d6f27111112a3db2029e3b53c80569e2e013771da6708
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581520"
 ---
-# <a name="axwindowsmediaplayerwindowlessvideo-property"></a>AxWindowsMediaPlayer. windowlessvideo (Eigenschaft)
+# <a name="axwindowsmediaplayerwindowlessvideo-property"></a>AxWindowsMediaPlayer.windowlessVideo (Eigenschaft)
 
-Mit der windowlessvideo-Eigenschaft wird ein Wert abgerufen oder festgelegt, der angibt, ob das Windows Media Player-Steuerelement Videos im fensterlosen Modus rendert.
+Die windowlessVideo-Eigenschaft ruft einen Wert ab, der angibt, ob das Windows Media Player Video im fensterlosen Modus rendert, oder legt einen Wert fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,15 +46,15 @@ Public Property windowlessVideo As System.Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein System. Boolean-Wert, der angibt, ob das Windows Media Player-Steuerelement Videos im fensterlosen Modus rendert. Der Standardwert ist „FALSE“.
+Ein boolescher System.Boolean-Wert, der angibt, ob das Windows Media Player-Steuerelement Video im fensterlosen Modus rendert. Der Standardwert ist „FALSE“.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig rendert ein eingebettetes Windows-Media Player-Steuerelement Videos in einem eigenen Fenster innerhalb des Client Bereichs. Wenn **windowlessvideo** auf "true" festgelegt ist, rendert das Windows-Media Player-Objekt Video direkt im Client Bereich, sodass Sie besondere Effekte anwenden oder das Video mit Text auf eine Ebene anwenden können.
+Standardmäßig rendert ein eingebettetes Windows Media Player Video in einem eigenen Fenster innerhalb des Clientbereichs. Wenn **windowlessVideo** auf TRUE festgelegt ist, rendert das Windows Media Player-Objekt Video direkt im Clientbereich, sodass Sie Sondereffekte anwenden oder das Video mit Text über ebenen können.
 
 In Windows Vista kann das Rendern von Videos im fensterlosen Modus die Leistung beeinträchtigen.
 
-Das erhalten eines Werts für diese Eigenschaft wird für den Netscape-Navigator nicht unterstützt. Wenn Sie einen Wert für diese Eigenschaft in Netscape Navigator festlegen, kann dies zu unerwarteten Ergebnissen führen.
+Das Abrufen eines Werts für diese Eigenschaft wird für Netscape Navigator. Das Festlegen eines Werts für diese Eigenschaft in Netscape Navigator zu unerwarteten Ergebnissen führen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Das erhalten eines Werts für diese Eigenschaft wird für den Netscape-Navigator
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -72,7 +72,7 @@ Das erhalten eines Werts für diese Eigenschaft wird für den Netscape-Navigator
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

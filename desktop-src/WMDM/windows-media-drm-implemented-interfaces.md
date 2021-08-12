@@ -1,32 +1,32 @@
 ---
-title: Windows Media DRM-Implemented-Schnittstellen
-description: Windows Media DRM-Implemented-Schnittstellen
+title: Windows Medienschnittstellen DRM-Implemented Medien
+description: Windows Medienschnittstellen DRM-Implemented Medien
 ms.assetid: 4da673be-52b2-4532-8580-5d1946169099
 keywords:
-- Windows Media Device Manager, DRM-geschützter Inhalt
-- Device Manager, DRM-geschützter Inhalt
-- Programmier Referenz, DRM-geschützter Inhalt
-- Referenz für Windows Media Device Manager, DRM-geschützten Inhalt
+- Windows Medien Geräte-Manager, DRM-geschützter Inhalt
+- Geräte-Manager, DRM-geschützter Inhalt
+- Programmierreferenz,DRM-geschützter Inhalt
+- Referenz zu Windows Media Geräte-Manager,DRM-geschützten Inhalten
 - DRM-geschützter Inhalt
-- Windows Media Device Manager, DRM-Schnittstellen
-- Device Manager, DRM-Schnittstellen
-- Programmier Referenz, DRM-Schnittstellen
-- Referenz für Windows Media Device Manager, DRM-Schnittstellen
+- Windows Medien Geräte-Manager,DRM-Schnittstellen
+- Geräte-Manager,DRM-Schnittstellen
+- Programmierreferenz,DRM-Schnittstellen
+- Referenz für Windows Media Geräte-Manager,DRM-Schnittstellen
 - DRM-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 600680857a4e03b4bdfa473b3f1b0246fc8b6a94
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 92f0719438fe8b09b9e02a00d89e23823fc6ca33cbbc6fd9fa5eda2fd8e88a38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584140"
 ---
-# <a name="windows-media-drm-implemented-interfaces"></a>Windows Media DRM-Implemented-Schnittstellen
+# <a name="windows-media-drm-implemented-interfaces"></a>Windows Medienschnittstellen DRM-Implemented Medien
 
-Die folgenden Schnittstellen sind nicht für die Implementierung durch Dienstanbieter von Drittanbietern vorgesehen, sondern werden von Windows Media DRM und Windows Media Device Manager intern implementiert und aufgerufen. Durch Implementieren dieser Schnittstellen wird verhindert, dass von DRM geschützte Inhalte verarbeitet werden. Sie werden lediglich aus Gründen der Vollständigkeit dokumentiert.
+Die folgenden Schnittstellen sollen nicht von Drittanbietern implementiert werden, sondern werden intern vom Windows Media DRM und dem Windows Media Geräte-Manager. Durch die Implementierung dieser Schnittstellen wird verhindert, dass DRM-geschützte Inhalte verarbeitet werden. Sie werden lediglich der Vollständigkeit halber dokumentiert.
 
--   [**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+-   [**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 -   [**IWMDRMDevice2-Schnittstelle**](iwmdrmdevice2.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
@@ -36,9 +36,9 @@ Die folgenden Schnittstellen sind nicht für die Implementierung durch Dienstanb
 [**Programmierverzeichnis**](programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

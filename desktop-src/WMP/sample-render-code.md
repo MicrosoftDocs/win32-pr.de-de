@@ -1,26 +1,26 @@
 ---
-title: Beispiel-Rendering-Code
-description: Beispiel-Rendering-Code
+title: Beispiel für Rendercode
+description: Beispiel für Rendercode
 ms.assetid: 14978cf4-47fa-4b2e-ba51-799be873dc8a
 keywords:
-- Visualisierungen, Beispielcode
-- benutzerdefinierte Visualisierungen, Beispielcode
-- Visualisierungen, Rendering-Funktion
-- benutzerdefinierte Visualisierungen, Rendering-Funktion
-- Funktion "Rendering", Beispielcode
-- Beispiele, Rendering-Funktion für Visualisierungen
+- Visualisierungen,Beispielcode
+- Benutzerdefinierte Visualisierungen, Beispielcode
+- Visualisierungen,Render-Funktion
+- Benutzerdefinierte Visualisierungen, Renderfunktion
+- Renderfunktion, Beispielcode
+- Beispiele,Renderfunktion für Visualisierungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a1ee5d00bc1aed5bd8bd91880e43e2ac2d1f6bc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 51265191ba7fd8b5eb9e4b1140990a7713eba08356d01c58097c727ec2fe533e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118569786"
 ---
-# <a name="sample-render-code"></a>Beispiel-Rendering-Code
+# <a name="sample-render-code"></a>Beispiel für Rendercode
 
-Hier sehen Sie einen Beispielcode, der die Funktion " **Rendering** " verwendet, um eine Linie auf dem Bildschirm zu zeichnen. Die Höhe der Zeile wird durch den Wellenform-Wert definiert.
+Im Folgenden finden Sie Beispielcode, der die **Render-Funktion** verwendet, um eine Linie über den Bildschirm zu zeichnen. Die Höhe der Linie wird durch den Wellenformwert definiert.
 
 
 ```C++
@@ -65,64 +65,64 @@ STDMETHODIMP CStock::Render(TimedLevel *pLevels, HDC hdc, RECT *prc)
 
 
 
-Die Funktion " **Rendering** " ist der Ort, an dem die Hauptarbeit Ihres Codes erfolgt. Jedes Mal, wenn Windows Media Player eine Momentaufnahme der Audiodatei aufnimmt, wird diese Funktion aufgerufen, und der Code wird ausgeführt.
+Die **Render-Funktion** ist der Ort, an dem die Hauptarbeit ihres Codes stattfindet. Jedes Mal, Windows Media Player eine Momentaufnahme der Audiodatei erstellt, wird diese Funktion aufrufen, und Ihr Code wird ausgeführt.
 
-Dieser Code führt die folgenden Aufgaben aus: Weitere Informationen zu bestimmten Funktionen finden Sie im Microsoft Windows-Plattform-SDK für 32-Bit-Windows.
+Dieser Code führt die folgenden Aufgaben aus. Weitere Informationen zu bestimmten Windows finden Sie im Microsoft Windows Platform SDK für 32-Bit-Anwendungen.
 
 ## <a name="creating-objects"></a>Erstellen von Objekten
 
-Normalerweise verwenden Sie die Zeichnungsfunktionen von Microsoft Windows Graphical Display Interface (GDI). Sie müssen Stifte erstellen, um Linien und Pinsel zum Auffüllen von Bereichen zu zeichnen.
+In der Regel verwenden Sie die Zeichnungsfunktionen, die im Microsoft Windows Graphical Display Interface (GDI) stehen. Sie müssen Stifte erstellen, um Linien und Pinsel zum Füllen von Bereichen zu zeichnen.
 
-Ein solider schwarzer Pinsel wird erstellt, um den Hintergrund zu füllen.
+Es wird ein solider schwarzer Pinsel erstellt, um den Hintergrund zu füllen.
 
-Ein Vollstift wird erstellt, um eine Linie zu zeichnen. Die Farbe entspricht der Vordergrundfarbe, die von der Skin definiert wird, in der die Visualisierung angezeigt werden soll.
+Ein solider Stift wird erstellt, um eine Linie zu zeichnen. Die Farbe ist die Vordergrundfarbe, wie von der Skin definiert, die die Visualisierung anzeigen soll.
 
 ## <a name="adding-the-object-to-the-dc"></a>Hinzufügen des Objekts zum DC
 
-Sie müssen den Stift dem Gerätekontext (DC) hinzufügen. Der Domänen Controller ist der Teil des Arbeitsspeichers, in dem alle Zeichnungsdaten und Objekte gespeichert werden. Im Wesentlichen ist der Domänen Controller der Fenster Traffic Manager, mit dem alles grafisch nachverfolgt wird.
+Sie müssen den Stift dem Gerätekontext (DC) hinzufügen. Der DC ist der Teil des Arbeitsspeichers, in dem alle Zeichnungsdaten und -objekte gespeichert werden. Im Wesentlichen ist der DC der Fensterdatenverkehr-Manager, der alles grafisch nachverfolgt.
 
-Sie *müssen das von* Ihnen erstellte Pen-Objekt umwandeln und als alten Stift speichern. Verwenden Sie diese Codierungstechnik für alle neuen Stifte. Diese Technik ist für die 32-Bit-Programmierung erforderlich.
+Sie müssen das *von Ihnen* erstellte Stiftobjekt um casten und als alten Stift speichern. Verwenden Sie diese Codierungstechnik für alle neuen Stifte. Diese Technik ist für die 32-Bit-Programmierung erforderlich.
 
 ## <a name="filling-in-the-background"></a>Ausfüllen des Hintergrunds
 
-Sie können jetzt zeichnen. Die **fillRect** -Funktion wird das Rechteck des Fensters auffüllen, wie durch die Parameter der Funktion " **Rendering** " definiert. Das Rechteck ist mit einem schwarzen Pinsel gefüllt.
+Sie können jetzt zeichnen. Die **FillRect-Funktion** füllt das Rechteck des Fensters aus, wie durch die Parameter der **Render-Funktion definiert.** Das Rechteck wird mit einem schwarzen Pinsel gefüllt.
 
-## <a name="getting-audio-data"></a>Audiodaten werden erhalten.
+## <a name="getting-audio-data"></a>Abrufen von Audiodaten
 
-Als Nächstes ruft der Code einige Audiodaten aus Windows Media Player ab. Mithilfe des Wellenform-Arrays können Sie den aktuellen Wert der audiopotenz zu dem Zeitpunkt, zu dem die Momentaufnahme erstellt wurde, erhalten. In diesem Fall nehmen Sie die Audiodaten des linken Kanals an. Der erste Wert im Array ist der erste 1024. der audiostrommomentaufnahme.
+Als Nächstes ruft der Code einige Audiodaten aus Windows Media Player. Mithilfe des Waveform-Arrays können Sie den aktuellen Wert der Audioleistung zum Zeitpunkt der Momentaufnahme erhalten. In diesem Fall verwenden Sie die Audiodaten des linken Kanals. Der erste Wert im Array ist der erste 1024. der Audiostrommomentaufnahme.
 
-Diese Informationen werden verwendet, um eine Zeile anzuzeigen, deren Höhe mit der audiostrommomentaufnahme übereinstimmt.
+Diese Informationen werden verwendet, um eine Linie anzuzeigen, deren Höhe mit der Audiostrommomentaufnahme übereinstimmen wird.
 
-## <a name="draw-the-line"></a>Linie zeichnen
+## <a name="draw-the-line"></a>Einen Punkt machen
 
-Die Linie wird von links nach rechts mithilfe der Funktionen " **muveumex** " und " **LineTo** GDI" gezeichnet.
+Die Linie wird mithilfe der GDI-Funktionen **MoveToEx** und **LineTo** von links nach rechts gezeichnet.
 
-Zuerst verschieben Sie den Stift an den Ausgangspunkt. In diesem Fall werden x und y verwendet, um die Werte von links nach rechts und von oben nach unten zu definieren, die dem Benutzer auf dem Bildschirm angezeigt werden. X wird durch die Rechteck-PRC und insbesondere durch den Wert von PRC->left definiert. Y ist zu diesem Zeitpunkt als Wert der Wellenform-Daten definiert.
+Zuerst verschieben Sie den Stift an den Anfangspunkt. In diesem Fall werden x und y verwendet, um die Werte von links nach rechts und von oben nach unten zu definieren, die dem Benutzer auf dem Bildschirm angezeigt werden. X wird durch das Rechteck PRC und insbesondere durch den Wert von prc->definiert. Y ist in diesem Moment als Wert der Wellenformdaten definiert.
 
-Anschließend zeichnen Sie eine Linie auf die andere Seite des Fensters. Der Punkt, zu dem Sie die Linie zeichnen, ist wieder ein x-, y-Wert. X wird durch die Rechteck-PRC definiert, aber diesmal von PRC->Recht. Y wird weiterhin durch die Wellenform Daten definiert und entspricht dem Punkt, von dem Sie gestartet haben, da Sie eine gerade Linie von links nach rechts zeichnen.
+Anschließend zeichnen Sie eine Linie zur anderen Seite des Fensters. Der Punkt, auf den Sie die Linie zeichnen, ist wieder ein x,y-Wert. X wird durch das Rechteck PRC definiert, dieses Mal jedoch durch prc->rechts. Y wird weiterhin durch die Wellenformdaten definiert und ist identisch mit dem Punkt, von dem aus Sie begonnen haben, da Sie eine gerade Linie von links nach rechts zeichnen.
 
-## <a name="clean-up-everything"></a>Alles bereinigen
+## <a name="clean-up-everything"></a>Bereinigt alles
 
-Sie müssen die von Ihnen erstellten Objekte löschen. Insbesondere müssen Sie alle Pinsel und Stifte löschen, die Sie erstellen. Es empfiehlt sich, Stifte und Pinsel zu löschen, wenn Sie Sie nicht mehr verwenden.
+Sie müssen die objekte löschen, die Sie erstellen. Insbesondere müssen Sie alle Pinsel und Stifte löschen, die Sie erstellen. Es ist eine bewährte Methode, Stifte und Pinsel zu löschen, wenn Sie sie nicht mehr verwenden.
 
-Wenn Sie Sie nicht löschen, bevor Sie die Implementierung der **Rendering** -Funktion abschließen, stürzt die Visualisierung innerhalb weniger Minuten ab. Sie müssen die Anzahl der Stifte und Pinsel beibehalten und alle einzelnen Stifte zerstören. Achten Sie besonders darauf, keine Stifte innerhalb einer Code Schleife zu erstellen.
+Wenn Sie sie nicht löschen, bevor Sie die Implementierung der **Render-Funktion** beenden, stürzt Ihre Visualisierung in einer Minute oder weniger ab. Sie müssen die Anzahl Ihrer Stifte und Pinsel behalten und jeden einzelnen zerstören. Achten Sie besonders darauf, in einer Codeschleife keine Stifte zu erstellen.
 
-Verwenden Sie die im Beispiel angegebene Codierungsmethode, um ihre Stifte und Pinsel zu zerstören.
+Verwenden Sie die im Beispiel gegebene Codierungstechnik, um Ihre Stifte und Pinsel zu zerstören.
 
 -   **Wichtig** Zerstören Sie Ihre Stifte und Pinsel!
 
-Wenn Sie die Bereinigung abgeschlossen haben, stellen Sie sicher, dass Sie den Wert OK zurückgibt, \_ damit Windows Media Player weiß, dass Sie das Zeichnen abgeschlossen haben. Sobald Sie fertig sind, wird das Zeichnen in das Fenster übertragen, eine weitere Momentaufnahme wird erstellt, das **Rendering** fordert den Code auf, Sie erneut zu zeichnen, usw.
+Wenn Sie die Bereinigung abgeschlossen haben, stellen Sie sicher, dass SIE S OK zurückgeben, damit Windows Media Player wissen, dass Sie mit dem \_ Zeichnen fertig sind. Sobald Sie fertig sind, wird ihre Zeichnung in das Fenster übertragen, eine weitere Momentaufnahme wird erstellt, **Render** fragt Ihren Code erneut, um zu zeichnen, und so weiter.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Implementieren von Rendering**](implementing-render.md)
+[**Implementieren von Rendern**](implementing-render.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

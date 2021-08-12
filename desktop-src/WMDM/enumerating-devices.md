@@ -1,38 +1,38 @@
 ---
-title: Aufzählen von Windows Media Geräte-Manager-Geräten
-description: Erfahren Sie mehr über das Aufzählen der von Windows Media Geräte-Manager erkannten Geräte mithilfe einer Enumerationsschnittstelle.
+title: Aufzählen Windows Medien Geräte-Manager Mediengeräten
+description: Erfahren Sie mehr über das Auflisten der geräte, die von Windows Media Geräte-Manager mithilfe einer Enumerationsschnittstelle erkannt wurden.
 ms.assetid: c5935681-b530-4446-a026-7ddc74084d23
 keywords:
-- Windows Media Geräte-Manager,Aufzählen von Geräten
+- Windows Medien Geräte-Manager,Aufzählen von Geräten
 - Geräte-Manager,Aufzählen von Geräten
 - Programmierhandbuch,Aufzählen von Geräten
-- Desktopanwendungen, Aufzählen von Geräten
-- Erstellen von Windows Media Geräte-Manager-Anwendungen, Aufzählen von Geräten
+- Desktopanwendungen,Aufzählen von Geräten
+- Erstellen Windows Media Geräte-Manager-Anwendungen,Aufzählen von Geräten
 - Aufzählen von Geräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94653d59b0880e9d52f43b34e21522a220d39beb
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 0009e2206bf7c97839d890d00c08a8e1806196efee9af95db72336b95d8b2cdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584658"
 ---
-# <a name="enumerating-windows-media-device-manager-devices"></a>Aufzählen von Windows Media Geräte-Manager-Geräten
+# <a name="enumerating-windows-media-device-manager-devices"></a>Aufzählen Windows Medien Geräte-Manager Mediengeräten
 
-Nach der Authentifizierung einer Anwendung können Sie damit beginnen, die von Windows Media Geräte-Manager erkannten Geräte aufzuzählen. Die Enumeration erfolgt über die Enumerationsschnittstelle [**IWMDMEnumDevice,**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmenumdevice)die entweder mithilfe von [**IWMDeviceManager2::EnumDevices2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager2-enumdevices2) oder [**IWMDeviceManager::EnumDevices**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager-enumdevices)abgerufen wird. Falls unterstützt, verwenden Sie die **EnumDevices2-Methode,** da die frühere Version nur Legacyschnittstellen auf Geräten zurückgegeben hat, während die neue Version sowohl die Legacyschnittstelle als auch die neuen Schnittstellen zurückgibt.
+Nach der Authentifizierung einer Anwendung können Sie mit dem Aufzählen der Geräte beginnen, die von Windows Media Geräte-Manager. Die Enumeration erfolgt mithilfe der Enumerationsschnittstelle [**IWMDMEnumDevice,**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmenumdevice)die entweder mithilfe von [**IWMDeviceManager2::EnumDevices2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager2-enumdevices2) oder [**IWMDeviceManager::EnumDevices**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager-enumdevices)abgerufen wird. Wenn dies unterstützt wird, verwenden Sie die **EnumDevices2-Methode,** da die frühere Version nur Legacyschnittstellen auf Geräten zurückgegeben hat, während die neue Version sowohl die Legacy- als auch die neuen Schnittstellen zurückgibt.
 
-Bevor Sie einen Enumerator abrufen, sollten Sie entscheiden, welche Enumerationsansicht verwendet werden soll. Einige Geräte machen jeden Speicher als ein anderes Gerät verfügbar. Beispielsweise werden zwei Flashspeicherkarten auf einem Gerät so aufzählen, als wären es separate Geräte. Sie können angeben, dass alle Speicher auf einem Gerät als einzelnes Gerät aufzählt werden. Sie können diese Einstellung nur einmal in Ihrer Anwendung festlegen. Wenn Sie sie ändern möchten, müssen Sie die Anwendung herunterfahren und neu starten. Beachten Sie jedoch, dass ältere Geräte manchmal eine Anforderung ignorieren, separate Gerätespeicher als einzelnes Gerät aufzuzählen und sie weiterhin separat aufzuzählen.
+Vor dem Abrufen eines Enumerators müssen Sie entscheiden, welche Enumerationsansicht verwendet werden soll. Einige Geräte machen jeden Speicher als anderes Gerät verfügbar. Beispielsweise werden zwei Flash-Speicherkarten auf einem Gerät so aufzählt, als ob es sich um separate Geräte wäre. Sie können angeben, dass alle Speicher auf einem Gerät zusammen als einzelnes Gerät aufzählt werden. Sie können diese Einstellung nur einmal in Ihrer Anwendung festlegen. Wenn Sie sie ändern möchten, müssen Sie die Anwendung herunterfahren und neu starten. Beachten Sie jedoch, dass ältere Geräte manchmal eine Anforderung ignorieren, separate Gerätespeicher als einzelnes Gerät aufzählen und diese weiterhin separat aufzählen.
 
 Die folgenden Schritte zeigen, wie verbundene Geräte aufzählt werden:
 
-1.  Legen Sie die Einstellung für die Geräteenumeration mithilfe von [**IWMDeviceManager3::SetDeviceEnumPreference**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager3-setdeviceenumpreference)fest. Wenn diese Methode nicht aufgerufen wird, besteht die Standardmethode darin, Speicher als separate Geräte anzuzeigen. Um zu bestimmen, ob einzelne "Geräte" tatsächlich Speicher auf demselben Gerät sind, rufen [**Sie IWMDMDevice2::GetCanonicalName auf.**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice2-getcanonicalname) Speicher vom gleichen Gerät geben identische Werte zurück, mit Ausnahme der letzten Ziffer nach dem letzten "$"-Zeichen.
-2.  Fragen [**Sie IWMDeviceManager**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdevicemanager) oder [**IWMDeviceManager2**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdevicemanager2)ab, und rufen Sie dann [**IWMDeviceManager2::EnumDevices2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager2-enumdevices2) auf, um die Geräteenumeratorschnittstelle [**IWMDMEnumDevice**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmenumdevice)abzurufen. (Wenn dies unterstützt wird, verwenden Sie **EnumDevices2,** was effizienter ist, da die frühere Version möglicherweise keine MTP-Geräte zurückgibt.)
-3.  Rufen Sie die [**IWMDMEnumDevices::Next-Methode**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmenumdevice-next) auf, um mindestens ein Gerät gleichzeitig abzurufen. Fahren Sie mit dem Aufrufen dieser Methode fort, bis die Methode S \_ FALSE oder eine Fehlermeldung zurückgibt. Wenn Sie jeweils nur ein Gerät abrufen, müssen Sie kein Array für die Geräte zuordnen.
+1.  Legen Sie die Einstellung für die [**Geräteenumeration mithilfe von IWMDeviceManager3::SetDeviceEnumPreference fest.**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager3-setdeviceenumpreference) Wenn diese Methode nicht aufgerufen wird, werden Speicher standardmäßig als separate Geräte angezeigt. Um festzustellen, ob einzelne "Geräte" tatsächlich Speicher auf demselben Gerät sind, rufen [**Sie IWMDMDevice2::GetCanonicalName auf.**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice2-getcanonicalname) Speicher vom selben Gerät geben identische Werte zurück, mit Ausnahme der letzten Ziffer nach dem letzten "$"-Zeichen.
+2.  Fragen Sie [**IWMDeviceManager**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdevicemanager) oder [**IWMDeviceManager2**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdevicemanager2)ab, und rufen Sie [**dann IWMDeviceManager2::EnumDevices2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdevicemanager2-enumdevices2) auf, um die Geräteenumeratorschnittstelle [**IWMDMEnumDevice abzurufen.**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmenumdevice) (Wenn dies unterstützt wird, verwenden Sie **EnumDevices2**. Dies ist effizienter, da die frühere Version möglicherweise keine MTP-Geräte zurück gibt).
+3.  Rufen Sie [**die IWMDMEnumDevices::Next-Methode**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmenumdevice-next) auf, um ein oder mehrere Geräte gleichzeitig abzurufen. Fahren Sie mit dem Aufrufen dieser Methode fort, bis die Methode S \_ FALSE oder eine Fehlermeldung zurückgibt. Wenn Sie immer nur ein Gerät gleichzeitig abrufen, müssen Sie kein Array zuordnen, um die Geräte zu speichern.
 
-Da Benutzer Geräte an den Computer anfügen oder entfernen können, während Ihre Anwendung ausgeführt wird, ist es eine gute Idee, eine Benachrichtigung über die Geräteverbindung oder das Entfernen zu implementieren. Hierzu wird die [**IWMDMNotification-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmnotification) implementiert und registriert. Weitere Informationen hierzu finden Sie unter [Aktivieren von Benachrichtigungen.](enabling-notifications.md)
+Da Benutzer Geräte an den Computer anfügen oder vom Computer entfernen können, während Ihre Anwendung ausgeführt wird, ist es eine gute Idee, eine Benachrichtigung über die Geräteverbindung oder das Entfernen zu implementieren. Dies erfolgt, indem die [**IWMDMNotification-Schnittstelle implementiert**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmnotification) und registriert wird. Weitere Informationen hierzu finden Sie unter Aktivieren [von Benachrichtigungen.](enabling-notifications.md)
 
-Der folgende C++-Code listet Geräte auf und fordert Informationen zu jedem Gerät an.
+Der folgende C++-Code aufzählt Geräte und fordert Informationen zu jedem Gerät an.
 
 
 ```C++
@@ -184,7 +184,7 @@ HRESULT CWMDMController::EnumDevices()
 
 <dl> <dt>
 
-[**Erstellen einer Windows Media Geräte-Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
+[**Erstellen einer Windows Media Geräte-Manager Anwendung**](creating-a-windows-media-device-manager-application.md)
 </dt> </dl>
 
  

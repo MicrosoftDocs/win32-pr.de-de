@@ -4,16 +4,16 @@ ms.assetid: 8f67be03-9b2e-4ffd-99ca-deb2c2cd1adf
 title: XMDEC4-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d497fcdb13b7b4c17a7a24d116ab8a5659569b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dcbcfb33bc851ad48cb67a165de1b6ab2bb599948da739aff1da935a2df4cba7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118278194"
 ---
 # <a name="xmdec4-operators"></a>XMDEC4-Operatoren
 
-Die [**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMDEC4-Struktur**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,8 +26,8 @@ Die [**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-x
 
 | Methoden                                                           | BESCHREIBUNG                                                                                                          |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**Operator UInt32 \_ t**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmdec4-operatoruint32_t)<br/> | Gibt eine Instanz von zurück, `uint32_t` die die Komponenten der- `XMDEC4` Instanz in einem gepackten Format enthält. <br/> |
-| [**Operator =**](xmdec4-operator-eq.md)<br/>               | Weist der aktuellen Instanz von Vektor Komponenten Daten zu `XMDEC4` . <br/>                                       |
+| [**operator uint32 \_ t**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmdec4-operatoruint32_t)<br/> | Gibt eine Instanz von `uint32_t` zurück, die die Komponenten der `XMDEC4` Instanz in einem gepackten Format enthält. <br/> |
+| [**operator =**](xmdec4-operator-eq.md)<br/>               | Weist der aktuellen Instanz von Vektorkomponentendaten `XMDEC4` zu. <br/>                                       |
 
 
 
@@ -40,7 +40,7 @@ Die [**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-x
 [XMDEC4-Erweiterungen](ovw-xmdec4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4)

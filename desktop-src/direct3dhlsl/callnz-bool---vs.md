@@ -1,6 +1,6 @@
 ---
-title: callnz bool-vs
-description: Wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist. | callnz bool-vs
+title: callnz bool – vs
+description: Rufen Sie auf, wenn nicht 0 (null) ist. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus. | callnz bool – vs
 ms.assetid: 9be030b9-fa21-459f-bd6c-f34ad6f177fc
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f3932f4c5d50445b3220a0460a5c434a1ff8aae4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8a6d5a7646670d182b0b685ab742fb5b2094a89a717a31019165054bcbc4816b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118287258"
 ---
-# <a name="callnz-bool---vs"></a>callnz bool-vs
+# <a name="callnz-bool---vs"></a>callnz bool – vs
 
-Wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist.
+Rufen Sie auf, wenn nicht 0 (null) ist. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| callnz l \# , \[ ! \] b\# |
+| callnz l \# , \[ ! \] B\# |
 |----------------------|
 
 
@@ -33,15 +33,15 @@ Wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die 
 
 Dabei gilt:
 
--   Where l \# ist eine [Bezeichnung-vs](label---vs.md) , die den Anfang der aufzurufenden Unterroutine kennzeichnet.
--   \[!\] der optionale boolesche not-Modifizierer.
--   b \# identifiziert ein [konstantes boolesches Register](dx9-graphics-reference-asm-vs-registers-constant-boolean.md).
+-   wobei l \# eine Bezeichnung [ist, im Gegensatz zum](label---vs.md) Markieren des Anfangs der auf zu aufgerufenen Unterroutine.
+-   \[!\] ist der optionale boolesche NOT-Modifizierer.
+-   b \# identifiziert einen [konstanten booleschen Register.](dx9-graphics-reference-asm-vs-registers-constant-boolean.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | callnz bool            |      | x    | x    | x     | x    | x     |
 
@@ -62,13 +62,13 @@ if (specified boolean register is not zero)
 
 
 
-Diese Anweisung verwendet einen Vertex-Shader-Anweisungs Slot.
+Diese Anweisung verwendet einen Vertex-Shaderanweisungsslot.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

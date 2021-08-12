@@ -1,9 +1,9 @@
 ---
-title: Player. mediacollection
-description: Die mediacollection-Eigenschaft ruft das mediacollection-Objekt ab.
+title: Player.mediaCollection
+description: Die mediaCollection-Eigenschaft ruft das MediaCollection-Objekt ab.
 ms.assetid: fbcf23db-2a36-4c3f-9d5d-628b604d1803
 keywords:
-- Player. mediacollection-Fenster Media Player
+- Player.mediaCollection-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa79b455abec6fbdd5c7b4eda0eca327bd57f81f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ea536f8938e5ab438312980f03536d7930ddcea45f01c7250c08a5c9665b1f45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118573167"
 ---
-# <a name="playermediacollection"></a>Player. mediacollection
+# <a name="playermediacollection"></a>Player.mediaCollection
 
-Die **mediacollection** -Eigenschaft ruft das **mediacollection** -Objekt ab.
+Die **mediaCollection-Eigenschaft** ruft das **MediaCollection-Objekt** ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **mediacollection**
+*Player* . **mediaCollection**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschütztes **mediacollection** -Objekt.
+Diese Eigenschaft ist ein schreibgeschütztes **MediaCollection-Objekt.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -52,16 +52,16 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

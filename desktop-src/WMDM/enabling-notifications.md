@@ -3,47 +3,47 @@ title: Aktivieren von Benachrichtigungen
 description: Aktivieren von Benachrichtigungen
 ms.assetid: b4fc7714-a7d0-409f-a47c-4903bab883cc
 keywords:
-- Windows Media-Device Manager, Benachrichtigungen
-- Device Manager, Benachrichtigungen
-- Programmier Handbuch, Benachrichtigungen
-- Desktop Anwendungen, Benachrichtigungen
-- Erstellen von Windows Media Device Manager-Anwendungen, Benachrichtigungen
+- Windows Medien Geräte-Manager, Benachrichtigungen
+- Geräte-Manager, Benachrichtigungen
+- Programmierhandbuch,Benachrichtigungen
+- Desktopanwendungen, Benachrichtigungen
+- Erstellen von Windows Media Geräte-Manager-Anwendungen, Benachrichtigungen
 - Benachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 618356c9d63d20a8b6b14e6c99072074cfc75073
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 33ab1b71482db78571f141b7042d8abc926b0d79ca2f487ee7dc961396993b9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118585063"
 ---
 # <a name="enabling-notifications"></a>Aktivieren von Benachrichtigungen
 
-Windows Media Device Manager deklariert vier Schnittstellen, die von einer Anwendung in einer com-Klasse implementiert werden können, um Ereignis Benachrichtigungen zu empfangen. Diese Schnittstellen sind in zwei Gruppen unterteilt, wie in der folgenden Tabelle dargestellt.
+Windows Media Geräte-Manager deklariert vier Schnittstellen, die eine Anwendung in einer COM-Klasse implementieren kann, um Ereignisbenachrichtigungen zu empfangen. Diese Schnittstellen lassen sich in zwei Gruppen unterteilen, wie in der folgenden Tabelle dargestellt.
 
 
 
 | Schnittstellen                                                                                                                                                | BESCHREIBUNG                                                                                                                                                                   |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iwmdmnotification**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmnotification)                                                                                                            | Benachrichtigt die Anwendung, wenn Geräte oder Speichermedien verbunden oder getrennt sind.                                                                                         |
-| [**Iwmdmprogress**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress)<br/> [**IWMDMProgress2**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress2)<br/> [**IWMDMProgress3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3)<br/> | Ein sehr einfaches Benachrichtigungssystem, um eine Anwendung über den Fortschritt eines beliebigen Ereignisses zu informieren. Die Anwendung muss keine Aktionen als Reaktion auf diese Nachrichten durchführen. |
+| [**IWMDMNotification**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmnotification)                                                                                                            | Benachrichtigt die Anwendung, wenn Geräte oder Speichermedien verbunden oder getrennt sind.                                                                                         |
+| [**IWMDMProgress**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress)<br/> [**IWMDMProgress2**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress2)<br/> [**IWMDMProgress3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3)<br/> | Ein sehr einfaches Benachrichtigungssystem, um eine Anwendung über den Fortschritt eines Ereignisses zu informieren. Die Anwendung muss keine Aktionen als Reaktion auf diese Nachrichten ausführen. |
 
 
 
  
 
-**Iwmdmnotification**
+**IWMDMNotification**
 
-**Iwmdmnotification** benachrichtigt die Anwendung, wenn Plug & Play Geräte mit dem Computer verbunden oder getrennt werden, und wenn Plug & Play Speichermedien (z. b. Flash Karten) vom Gerät eingefügt oder entfernt werden. Diese Benachrichtigungen können dazu beitragen, dass die Anwendung die Benutzeroberfläche aktualisiert, um Änderungen widerzuspiegeln.
+**IWMDMNotification** alerts the application when Plug and Play devices are connected or disconnected from the computer, as well as when Plug and Play storage media (such as flash cards) are inserted or removed from the device. Diese Benachrichtigungen können der Anwendung helfen, ihre Benutzeroberfläche zu aktualisieren, um Änderungen widerzuspiegeln.
 
-Um diese Benachrichtigungen zu erhalten, muss Ihre Anwendung sich registrieren, um Sie über das Platform SDK **IConnectionPointContainer** -und **IConnectionPoint** -Schnittstellen zu empfangen. Die Anwendung sollte sich registrieren, um beim Starten Ereignisse zu empfangen und die Registrierung beim Schließen aufzuheben. Führen Sie diese Schritte aus, um sich für den Empfang dieser Benachrichtigungen zu registrieren
+Um diese Benachrichtigungen zu erhalten, muss sich Ihre Anwendung registrieren, um sie mithilfe der Schnittstellen **IConnectionPointContainer** und **IConnectionPoint** des Plattform-SDK zu empfangen. Ihre Anwendung sollte sich registrieren, um Ereignisse zu empfangen, wenn sie gestartet wird, und die Registrierung beim Schließen aufheben. Führen Sie die folgenden Schritte aus, um sich zu registrieren, um diese Benachrichtigungen zu erhalten.
 
-1.  Fragen Sie die Hauptschnittstelle von **iwmtovicemanager** ab, die Sie beim Authentifizieren Ihrer Anwendung für **IConnectionPointContainer** erhalten haben.
-2.  Rufen Sie **IConnectionPointContainer:: FindConnectionPoint** auf, um einen Container Verbindungspunkt für die **iwmdmnotification** -Schnittstellen abzurufen.
-3.  Registrieren Sie sich, um Ereignisse durch Aufrufen von **IConnectionPoint:: Rat** zu empfangen. Übergeben Sie die Klasse, die **iwmdmnotification** implementiert, und rufen Sie ein Cookie ab, eine eindeutige ID, die den Verbindungspunkt identifiziert. Diese muss gespeichert und später verwendet werden, um die Registrierung für Ereignis Benachrichtigungen aufzuheben.
+1.  Fragen Sie die **IWMDeviceManager-Hauptschnittstelle** ab, die Sie beim Authentifizieren Ihrer Anwendung für **IConnectionPointContainer** erhalten haben.
+2.  Rufen Sie **IConnectionPointContainer::FindConnectionPoint** auf, um einen Containerverbindungspunkt für **IWMDMNotification-Schnittstellen** abzurufen.
+3.  Registrieren Sie sich, um Ereignisse zu empfangen, indem **Sie IConnectionPoint::Advise** aufrufen. Übergeben Sie die Klasse, die **IWMDMNotification** implementiert, und rufen Sie ein Cookie ab, eine eindeutige ID, die Ihren Verbindungspunkt identifiziert. Dieser muss gespeichert und später zum Aufheben der Registrierung für Ereignisbenachrichtigungen verwendet werden.
 
-Der folgende C++-Code veranschaulicht, wie Sie sich für den Empfang von Benachrichtigungen von **iwmdmnotification** registrieren können.
+Der folgende C++-Code veranschaulicht, wie Sie sich registrieren können, um Benachrichtigungen von **IWMDMNotification** zu empfangen.
 
 
 ```C++
@@ -75,13 +75,13 @@ HRESULT CWMDMController::RegisterForNotifications()
 
 
 
-Wenn die Anwendung geschlossen wird, müssen Sie die Registrierung bei **IConnectionPoint** aufheben, um anzugeben, dass Benachrichtigungen nicht mehr gesendet werden sollen. Führen Sie die folgenden Schritte aus, um die Registrierung für Benachrichtigungen aufzuheben:
+Wenn Die Anwendung geschlossen wird, müssen Sie die Registrierung bei **IConnectionPoint** aufheben, um anzugeben, dass keine Benachrichtigungen mehr gesendet werden sollen. Führen Sie die folgenden Schritte aus, um die Registrierung für Benachrichtigungen zu aufheben:
 
-1.  Fragen Sie die Hauptschnittstelle der **iwmdebug** Manager-Schnittstelle für **IConnectionPointContainer** ab.
-2.  Sie erhalten einen Verbindungspunkt für die **iwmdmnotification** -Schnittstellen.
-3.  Heben Sie die Registrierung Ihrer Anwendung für Ereignis Benachrichtigungen auf, indem Sie **IConnectionPoint:: Unrat** aufrufen und dabei die eindeutige ID übergeben, die bei der Registrierung für den Empfang von Ereignissen empfangen wurde.
+1.  Fragen Sie die **IWMDeviceManager-Hauptschnittstelle** nach **IConnectionPointContainer** ab.
+2.  Abrufen eines Verbindungspunkts für **IWMDMNotification-Schnittstellen.**
+3.  Aufheben der Registrierung Ihrer Anwendung für Ereignisbenachrichtigungen durch Aufrufen von **IConnectionPoint::Unadvise.** Dabei wird die eindeutige ID übergeben, die beim Registrieren für den Empfang von Ereignissen empfangen wurde.
 
-Der folgende C++-Code zeigt, wie die Registrierung für **iwmdmnotification** -Ereignisse aufgehoben wird, wenn die Anwendung geschlossen wird.
+Der folgende C++-Code zeigt, wie die Registrierung für **IWMDMNotification-Ereignisse** aufgehoben wird, wenn Ihre Anwendung geschlossen wird.
 
 
 ```C++
@@ -123,35 +123,35 @@ HRESULT CWMDMController::UnregisterForNotifications()
 
 
 
-**Verwenden von iwmdmprogress**
+**Verwenden von IWMDMProgress**
 
-Windows Media Device Manager kann Ihre Anwendungs Statusmeldungen senden, wenn bestimmte Aktionen (z. b. Inhalts Übertragung, sichere Uhr-Erfassung und Informationen zu DRM-Dateien) auftreten. Die Anwendung kann diese Nachrichten verwenden, um den Status des Ereignisses zu überwachen oder ein Ereignis abzubrechen. Um diese Schnittstelle zu verwenden, implementieren Sie [**iwmdmprogress**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress), [**IWMDMProgress2**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress2)oder [**IWMDMProgress3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3), und übergeben Sie Sie als Parameter an eine Methode, die eine Fortschrittsmeldung akzeptiert. Beachten Sie, dass **IWMDMProgress3** die überlegene Schnittstelle ist, da Sie eine Identifikations-GUID bereitstellt, die angibt, welche Aktion nachverfolgt wird. Die folgenden Anwendungsmethoden akzeptieren eine Fortschritts Schnittstelle (die entsprechenden Dienstanbieter Methoden sollten Benachrichtigungen an eine übermittelte Schnittstelle senden können):
+Windows Medien-Geräte-Manager können Ihre Anwendungsstatusmeldungen senden, wenn bestimmte Aktionen wie Inhaltsübertragung, sichere Uhrerfassung und das Auftreten von DRM-Dateiinformationen auftreten. Ihre Anwendung kann diese Meldungen verwenden, um den Status des Ereignisses zu überwachen oder ein Ereignis abzubrechen. Um diese Schnittstelle zu verwenden, implementieren [**Sie IWMDMProgress,**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress) [**IWMDMProgress2**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress2)oder [**IWMDMProgress3,**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3)und übergeben Sie sie als Parameter an eine Methode, die eine Statusmeldung akzeptiert. Beachten Sie, dass **IWMDMProgress3** die übergeordnete Schnittstelle ist, da sie eine ID-GUID bereitstellt, die angibt, welche Aktion nachverfolgt wird. Die folgenden Anwendungsmethoden akzeptieren eine Statusschnittstelle (die entsprechenden Dienstanbietermethoden sollten in der Lage sein, Benachrichtigungen an eine übermittelte Schnittstelle zu senden):
 
-[**Iwmdmstoragecontrol::D Elete**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-delete)
+[**IWMDMStorageControl::D elete**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-delete)
 
-[**Iwmdmstoragecontrol:: INSERT**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-insert)
+[**IWMDMStorageControl::Insert**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-insert)
 
-[**Iwmdmstoragecontrol:: Move**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-move)
+[**IWMDMStorageControl::Move**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-move)
 
-[**Iwmdmstoragecontrol:: Read**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-read)
+[**IWMDMStorageControl::Read**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-read)
 
-[**Iwmdmstoragecontrol:: Rename**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-rename)
+[**IWMDMStorageControl::Rename**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-rename)
 
 [**IWMDMStorageControl2::Insert2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol2-insert2)
 
 [**IWMDMStorageControl3::Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)
 
-[**Iwmdmstorageglobals:: Initialize**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorageglobals-initialize)
+[**IWMDMStorageGlobals::Initialize**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorageglobals-initialize)
 
-[**Iwmdrmdeviceapp:: acquiredevicedata**](iwmdrmdeviceapp-acquiredevicedata.md)
+[**IWMDRMDeviceApp::AcquireDeviceData**](iwmdrmdeviceapp-acquiredevicedata.md)
 
-Beispiele für die Übergabe einer Schnittstelle an eine Methode finden Sie in der Dokumentation für diese Methoden. Beispiele für die Implementierung der Rückruf Schnittstellen finden Sie in der Dokumentation zu den Methoden von **iwmdmprogress**, **IWMDMProgress2** oder **IWMDMProgress3**.
+Beispiele für die Übergabe einer Schnittstelle an eine Methode finden Sie in der Dokumentation für diese Methoden. Beispiele für die Implementierung der Rückrufschnittstellen finden Sie in der Dokumentation zu den Methoden von **IWMDMProgress,** **IWMDMProgress2** oder **IWMDMProgress3.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen einer Windows Media Device Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
+[**Erstellen einer Windows Media Geräte-Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
 </dt> </dl>
 
  

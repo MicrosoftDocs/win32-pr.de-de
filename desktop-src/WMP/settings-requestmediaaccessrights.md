@@ -1,11 +1,11 @@
 ---
-title: Settings. requestmediaaccessrights-Methode
-description: Die requestmediaaccessrights-Methode fordert eine angegebene Zugriffsebene auf die Bibliothek an. | Settings. requestmediaaccessrights-Methode
+title: Einstellungen.requestMediaAccessRights-Methode
+description: Die requestMediaAccessRights-Methode fordert eine angegebene Zugriffsebene auf die Bibliothek an. | Einstellungen.requestMediaAccessRights-Methode
 ms.assetid: 076b749b-9b25-483c-aa1f-60fc4367e4e0
 keywords:
-- requestmediaaccessrights-Methode, Windows Media Player
-- requestmediaaccessrights-Methode, Windows Media Player, Settings-Klasse
-- Einstellungs Klasse Windows Media Player, requestmediaaccessrights-Methode
+- requestMediaAccessRights-Methode Windows Media Player
+- requestMediaAccessRights-Methode Windows Media Player , Einstellungen-Klasse
+- Einstellungen-Klasse Windows Media Player , requestMediaAccessRights-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abfeed45666ee1f63bf995b211030b0b840c4279
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1e157e7b4495c8d90964d62a9045eebb202126906f0022e97c4983220e47ac03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118569311"
 ---
-# <a name="settingsrequestmediaaccessrights-method"></a>Settings. requestmediaaccessrights-Methode
+# <a name="settingsrequestmediaaccessrights-method"></a>Einstellungen.requestMediaAccessRights-Methode
 
-Die **requestmediaaccessrights** -Methode fordert eine angegebene Zugriffsebene auf die Bibliothek an.
+Die **requestMediaAccessRights-Methode** fordert eine angegebene Zugriffsebene auf die Bibliothek an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ bRetVal = Settings.requestMediaAccessRights(
 
 <dl> <dt>
 
-*Zugriff* \[ in\]
+*Zugriff* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die gewünschte Zugriffsrechte Ebene angibt. Enthält einen der folgenden Werte.
+**Zeichenfolge,** die die gewünschte Zugriffsrechteebene angibt. Enthält einen der folgenden Werte.
 
 
 
 | Zeichenfolge | Beschreibung                      |
 |--------|----------------------------------|
-| none   | Nur die aktuellen Element Zugriffsrechte. |
-| Lesen   | Nur Lese Zugriffsrechte.         |
+| Keine   | Nur aktuelle Elementzugriffsrechte. |
+| Lesen   | Nur Lesezugriffsrechte.         |
 | Voll   | Lese-/Schreibzugriffsrechte.        |
 
 
@@ -63,13 +63,13 @@ bRetVal = Settings.requestMediaAccessRights(
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt einen **booleschen** Wert zurück, der angibt, ob die angeforderten Zugriffsrechte erteilt wurden.
+Diese Methode gibt einen **booleschen** Wert zurück, der angibt, ob die angeforderten Zugriffsrechte gewährt wurden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Webseite muss zuerst die Berechtigung des Benutzers anfordern, Informationen aus der Bibliothek zu lesen oder Daten in die Bibliothek zu schreiben. Beim Aufrufen dieser Methode wird der Benutzer zu einem Dialogfeld aufgefordert, das die angegebene Berechtigungsebene anfordert. Dies bedeutet, dass auf bestimmte Methoden, Eigenschaften und Ereignisse von Code aus nicht zugegriffen werden kann, wenn die entsprechenden Zugriffsrechte nicht erteilt wurden. Die aktuelle Zugriffsrechte Ebene kann mithilfe von *Einstellungen* abgerufen werden. **mediaaccessrights**.
+Eine Webseite muss zunächst die Berechtigung des Benutzers anfordern, Informationen aus der Bibliothek zu lesen oder Daten in die Bibliothek zu schreiben. Beim Aufrufen dieser Methode wird der Benutzer mit einem Dialogfeld aufgefordert, in dem die angegebene Berechtigungsebene angefordert wird. Dies bedeutet, dass der Code auf bestimmte Methoden, Eigenschaften und Ereignisse nicht zugreifen kann, wenn die entsprechenden Zugriffsrechte nicht erteilt wurden. Die aktuelle Zugriffsrechteebene kann mit *Einstellungen* abgerufen werden. **mediaAccessRights**.
 
-**Windows Media Player 10 Mobile**: Diese Methode gibt immer " **true**" zurück.
+**Windows Media Player 10 Mobile:** Diese Methode gibt immer **true** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Eine Webseite muss zuerst die Berechtigung des Benutzers anfordern, Informatione
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -86,10 +86,10 @@ Eine Webseite muss zuerst die Berechtigung des Benutzers anfordern, Informatione
 
 <dl> <dt>
 
-[**Einstellungs Objekt**](settings-object.md)
+[**Einstellungen Objekt**](settings-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> </dl>
 
  

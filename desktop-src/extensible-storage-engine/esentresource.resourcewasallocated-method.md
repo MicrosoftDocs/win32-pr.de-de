@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der esentresource. resourcewaszugewiesenmethode.
-title: Esentresource. resourcewaszugewiesenmethode
+description: 'Weitere Informationen finden Sie unter: EsentResource.ResourceWasAllocated-Methode'
+title: EsentResource.ResourceWasAllocated-Methode
 TOCTitle: 'ResourceWasAllocated method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentResource.ResourceWasAllocated
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentresource.resourcewasallocated(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 19556ea7153f1a8a4580e2365b772efe6c02d89b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 369cac35cec9b218eb1de668f44098394a4df0670660c5d30d01fdd8e2ab802e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118260715"
 ---
-# <a name="esentresourceresourcewasallocated-method"></a>Esentresource. resourcewaszugewiesenmethode
+# <a name="esentresourceresourcewasallocated-method"></a>EsentResource.ResourceWasAllocated-Methode
 
 Wird von einer Unterklasse aufgerufen, wenn eine Ressource zugeordnet wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ protected void ResourceWasAllocated()
 
 #### <a name="reference"></a>Referenz
 
-[Esentresource-Klasse](./esentresource-class.md)
+[EsentResource-Klasse](./esentresource-class.md)
 
-[Esentresource-Member](./esentresource-members.md)
+[EsentResource-Member](./esentresource-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

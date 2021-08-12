@@ -3,18 +3,18 @@ title: Kompatibilitätsprobleme
 description: Kompatibilitätsprobleme
 ms.assetid: 2a912f95-4edd-48b8-80c9-c226b06077f8
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Kompatibilitätsprobleme
-- Wiedergabelisten, Kompatibilitätsprobleme
-- Metadatei-Wiedergabelisten, Kompatibilitätsprobleme
-- Windows Media Metadatei-Wiedergabelisten, Netscape
-- Wiedergabelisten, Netscape
-- Metadatei-Wiedergabelisten, Netscape
-- Kompatibilität, HtmlView
-- Kompatibilität, Netscape
-- Windows Media Player, Netscape
-- Windows Media Player, Kompatibilitätsprobleme
-- HtmlView, Netscape
-- HtmlView, Kompatibilitätsprobleme
+- Windows Wiedergabelisten von Medienmetadateien, Kompatibilitätsprobleme
+- Wiedergabelisten,Kompatibilitätsprobleme
+- Metafile-Wiedergabelisten,Kompatibilitätsprobleme
+- Windows Wiedergabelisten von Medienmetadateien, Netscape
+- Playlists,Netscape
+- Metafile-Wiedergabelisten,Netscape
+- Kompatibilität,HTMLView
+- Kompatibilität,Netscape
+- Windows Media Player,Netscape
+- Windows Media Player,Kompatibilitätsprobleme
+- HTMLView,Netscape
+- HTMLView,Kompatibilitätsprobleme
 - Netscape-Kompatibilitätsprobleme
 ms.topic: article
 ms.date: 05/31/2018
@@ -23,33 +23,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: be155f0fce4155514e9459e3cd49a89e24e2be04
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7e8234960c28e09408a152fbf185acabca825ad83ab489867c48439491e2b320
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118580572"
 ---
 # <a name="compatibility-issues"></a>Kompatibilitätsprobleme
 
 ## <a name="netscape-support"></a>Netscape-Unterstützung
 
-Von der HtmlView-Funktion geöffnete Webseiten werden mithilfe einer eingebetteten Instanz von Microsoft Internet Explorer angezeigt. Für den HtmlView-Inhalt ist keine Netscape-Kompatibilität erforderlich.
+Webseiten, die von der HTMLView-Funktion geöffnet werden, werden mithilfe einer eingebetteten Instanz von Microsoft Internet Explorer. Für HTMLView-Inhalte ist keine Netscape-Kompatibilität erforderlich.
 
-## <a name="no-htmlview-support-in-earlier-versions-of-windows-media-player"></a>In früheren Versionen von Windows Media Player keine HtmlView-Unterstützung
+## <a name="no-htmlview-support-in-earlier-versions-of-windows-media-player"></a>Keine HTMLView-Unterstützung in früheren Versionen von Windows Media Player
 
-Derzeit unterstützt nur Windows Media Player 9 oder höher die HtmlView-Funktion. Frühere Versionen des Players und der Versionen, die für andere Plattformen erstellt wurden, ignorieren den HtmlView-Parameter beim Durchsuchen einer. ASX-Datei. In diesem Fall wird der Inhalt der digitalen Medien erwartungsgemäß wiedergegeben, aber der webbasierte Inhalt wird nicht in der Funktion " **jetzt** wiedergeben" angezeigt.
+Derzeit unterstützt nur Windows Media Player 9-Serie oder höher das HTMLView-Feature. Frühere Versionen des Players und Versionen, die für andere Plattformen erstellt wurden, ignorieren den HTMLView-Parameter beim Analyse einer ASX-Datei. In diesem Fall wird der Inhalt der digitalen Medien wie erwartet abgerechnet, aber der webbasierte Inhalt wird nicht im Feature **Jetzt wieder verwendet** angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Entwickeln des Plug-Ins für einen Typ 2-Online Store**](building-the-plug-in-for-a-type-2-online-store.md)
+[**Erstellen des Plug-Ins für eine Online-Store**](building-the-plug-in-for-a-type-2-online-store.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

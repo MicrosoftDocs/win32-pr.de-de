@@ -1,9 +1,9 @@
 ---
-title: Mediachange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das mediachange-Ereignis tritt auf, wenn ein Medien Element geändert wird. | Mediachange-Ereignis des AxWindowsMediaPlayer-Objekts
+title: MediaChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das MediaChange-Ereignis tritt auf, wenn sich ein Medienelement ändert. | MediaChange-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 0a2380ff-df50-4092-a952-812184822719
 keywords:
-- Mediachange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- MediaChange-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 175a7ed6ca57e3083d307cfe218d09233410053c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a0cf0d5cef7141cfa466bd6a4311d122e1cad34c05b5ce9b78ead15f4f43f75c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582138"
 ---
-# <a name="mediachange-event-of-the-axwindowsmediaplayer-object"></a>Mediachange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="mediachange-event-of-the-axwindowsmediaplayer-object"></a>MediaChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das mediachange-Ereignis tritt auf, wenn ein Medien Element geändert wird.
+Das MediaChange-Ereignis tritt auf, wenn sich ein Medienelement ändert.
 
 ``` syntax
 [C#]
@@ -41,13 +41,13 @@ Private Sub player_MediaChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediachangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediachangeevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaChangeEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft | BESCHREIBUNG                                                                                                    |
 |----------|----------------------------------------------------------------------------------------------------------------|
-| Element     | System. objectdas Medien Element, das geändert wurde. Sie können dies in eine iwmpmedia-Schnittstelle umwandeln, um darauf zuzugreifen.<br/> |
+| Element     | System.ObjectDas geänderte Medienelement. Sie können diese in eine IWMPMedia-Schnittstelle umleiten, um darauf zuzugreifen.<br/> |
 
 
 
@@ -55,7 +55,7 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine Bezeichnung verwendet, um den Namen des aktuellen Medien Elements anzuzeigen. Der Code aktualisiert den Text in der Bezeichnung mit jedem Vorkommen des mediachange-Ereignisses. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird eine Bezeichnung verwendet, um den Namen des aktuellen Medienelements anzuzeigen. Der Code aktualisiert den Text in der Bezeichnung mit jedem Vorkommen des MediaChange-Ereignisses. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -96,7 +96,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -106,10 +106,10 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

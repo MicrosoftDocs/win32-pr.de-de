@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentpagenotinitializedexception-Konstruktor'
-title: Esentpagenotinitializedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentPageNotInitializedException-Konstruktor'
+title: EsentPageNotInitializedException-Konstruktor
 TOCTitle: 'EsentPageNotInitializedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentPageNotInitializedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentpagenotinitializedexception.esentpagenotinitializedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0e71eb0b92c47e34ca26ec7f7438e4bdc7a7eaf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 233aff9487e7b6e69ed2eb507cada944870843e3483429f876dba5585ecc2812
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118261217"
 ---
-# <a name="esentpagenotinitializedexception-constructor"></a>Esentpagenotinitializedexception-Konstruktor
+# <a name="esentpagenotinitializedexception-constructor"></a>EsentPageNotInitializedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentpagenotinitializedexception-Klasse.
+Initialisiert eine neue Instanz der EsentPageNotInitializedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentPageNotInitializedException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentpagenotinitializedexception-Klasse](./esentpagenotinitializedexception-class.md)
+[EsentPageNotInitializedException-Klasse](./esentpagenotinitializedexception-class.md)
 
-[Esentpagenotinitializedexception-Elemente](./esentpagenotinitializedexception-members.md)
+[EsentPageNotInitializedException-Member](./esentpagenotinitializedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

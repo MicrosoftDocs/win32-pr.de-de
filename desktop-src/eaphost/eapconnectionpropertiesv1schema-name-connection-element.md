@@ -1,6 +1,6 @@
 ---
 title: Name (Connection)-Element
-description: Hiermit wird der Name der zu definierenden Verbindung erfasst und die Identifizierung mehrerer Verbindungen unterstützt.
+description: Erfasst den Namen der verbindung, die definiert wird, und unterstützt sie bei der Identifizierung mehrerer Verbindungen.
 ms.assetid: 649c238d-0940-4fbe-93e5-2612d95fffa7
 keywords:
 - Name-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6e69c35ebfb2bf263882c6fb0337fc44c609bab3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5346aff83f9a7f56907d67025ee92ec1148cff6af3f4b3a3ee917589be721ea8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118275188"
 ---
 # <a name="name-connection-element"></a>Name (Connection)-Element
 
-Das Element **Name (Connection)** erfasst den Namen der zu definierenden Verbindung und unterstützt die Identifizierung mehrerer Verbindungen.
+Das **Name (Connection)-Element** erfasst den Namen der verbindung, die definiert wird, und unterstützt sie bei der Identifizierung mehrerer Verbindungen.
 
 ``` syntax
 <xs:element name="Name"
@@ -31,7 +31,7 @@ Das Element **Name (Connection)** erfasst den Namen der zu definierenden Verbind
  />
 ```
 
-Das **Name** -Element wird vom [**Connection**](eapconnectionpropertiesv1schema-connection-connections-element.md) -Element definiert.
+Das **Name-Element** wird durch das [**Connection-Element**](eapconnectionpropertiesv1schema-connection-connections-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Das **Name** -Element wird vom [**Connection**](eapconnectionpropertiesv1schema-
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -48,19 +48,19 @@ Das **Name** -Element wird vom [**Connection**](eapconnectionpropertiesv1schema-
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**Verbindung**](eapconnectionpropertiesv1schema-connection-connections-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Verbindung (Verbindungen)**](eapconnectionpropertiesv1schema-connection-connections-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapconnectionpropertiesv1-Schema](eapconnectionpropertiesv1schema-schema.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentnobackupexception-Konstruktor'
-title: Esentnobackupexception-Konstruktor
+description: 'Weitere Informationen zu: EsentNoBackupException-Konstruktor'
+title: EsentNoBackupException-Konstruktor
 TOCTitle: 'EsentNoBackupException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentNoBackupException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentnobackupexception.esentnobackupexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f6563e2ac2e952bf2484849b93c93498239d31a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c59a2166107b9a237f2f91148da3397e4cccd71b8dfb294c77a1454cd9e10fcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118263693"
 ---
-# <a name="esentnobackupexception-constructor"></a>Esentnobackupexception-Konstruktor
+# <a name="esentnobackupexception-constructor"></a>EsentNoBackupException-Konstruktor
 
-Initialisiert eine neue Instanz der esentnobackupexception-Klasse.
+Initialisiert eine neue Instanz der EsentNoBackupException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentNoBackupException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentnobackupexception-Klasse](./esentnobackupexception-class.md)
+[EsentNoBackupException-Klasse](./esentnobackupexception-class.md)
 
-[Esentnobackupexception-Member](./esentnobackupexception-members.md)
+[EsentNoBackupException-Member](./esentnobackupexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

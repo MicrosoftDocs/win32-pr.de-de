@@ -1,7 +1,7 @@
 ---
-description: Bereiten Sie ein Gerät zum Zeichnen von Sprites vor.
+description: Bereiten Sie ein Gerät für das Zeichnen von Sprites vor.
 ms.assetid: cffe5ac3-eeee-4ece-afcc-04a476b75863
-title: 'ID3DX10Sprite:: Begin-Methode (d3dx10. h)'
+title: ID3DX10Sprite::Begin-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: ede2995f72eb1200e68f035119643a362e15701e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e23ff3e4b8be62ac97f2874aa398770936bd84ab1c330c94efb87146046db847
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118302405"
 ---
-# <a name="id3dx10spritebegin-method"></a>ID3DX10Sprite:: Begin-Methode
+# <a name="id3dx10spritebegin-method"></a>ID3DX10Sprite::Begin-Methode
 
-Bereiten Sie ein Gerät zum Zeichnen von Sprites vor.
+Bereiten Sie ein Gerät für das Zeichnen von Sprites vor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT Begin(
 
 <dl> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Flags, die Steuern, wie die Sprites gezeichnet werden. Siehe [**d3dx10 \_ Sprite- \_ Flag**](d3dx10-sprite-flag.md).
+Flags, die steuern, wie die Sprites gezeichnet werden. Siehe [**D3DX10 \_ \_ SPRITE-FLAG**](d3dx10-sprite-flag.md).
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Flags, die Steuern, wie die Sprites gezeichnet werden. Siehe [**d3dx10 \_ Sprite
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DERR \_ ouesfvideomemory, D3DXERR \_ InvalidData, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DERR \_ OUTOFVIDEOMEMORY, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Aufrufe von Begin müssen mit einem [**ID3DX10Sprite:: End**](id3dx10sprite-end.md)-Befehl abgeglichen werden.
+Jeder Aufruf von Begin muss mit einem Aufruf von [**ID3DX10Sprite::End übereinstimmen.**](id3dx10sprite-end.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Alle Aufrufe von Begin müssen mit einem [**ID3DX10Sprite:: End**](id3dx10sprite
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

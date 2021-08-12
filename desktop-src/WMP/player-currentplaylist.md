@@ -1,9 +1,9 @@
 ---
-title: Player. currentwiedergabe
-description: Die currentwiedergabe-Eigenschaft gibt das aktuelle Wiedergabelisten Objekt an oder ruft es ab.
+title: Player.currentPlaylist
+description: Die currentPlaylist-Eigenschaft gibt das aktuelle Playlist-Objekt an oder ruft es ab.
 ms.assetid: fabfb927-5f64-4fc4-8ee5-e2449082dfbc
 keywords:
-- Player. currentwiedergabe-Fenster Media Player
+- Player.currentPlaylist-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,34 +14,34 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ceae33a201086d268942e47496874678ec13f459
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7139c567eab5fbb3c324916dec260d34f57429cb50bb99d199f35be8aee7a1c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118573215"
 ---
-# <a name="playercurrentplaylist"></a>Player. currentwiedergabe
+# <a name="playercurrentplaylist"></a>Player.currentPlaylist
 
-Die currentwiedergabe-Eigenschaft gibt das aktuelle **Wiedergabe** Listen Objekt an oder ruft es ab.
+Die currentPlaylist-Eigenschaft gibt das aktuelle Playlist-Objekt an oder **ruft es** ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **currentwiedergabe**
+*Player* . **currentPlaylist**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Lese-/Schreib-Wiedergabe Listen Objekt. 
+Diese Eigenschaft ist ein  Wiedergabelistenobjekt mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die *Einstellungen*. die **Autostart** -Eigenschaft ist "true". die Wiedergabe beginnt automatisch, wenn Sie **currentwiedergabe** festlegen.
+Wenn der *Einstellungen.* **Die autoStart-Eigenschaft** ist true. Die Wiedergabe beginnt automatisch, wenn Sie **currentPlaylist festlegen.**
 
-Diese Eigenschaft nimmt ein Wiedergabelisten Objekt an, das auf verschiedene Weise abgerufen werden kann, z. b. durch Aufrufen von *playlistarray*. **Item** oder *playlistcollection*. **newwiedergabe**. Wenn Sie ein **Wiedergabe** Listenelement mithilfe eines Datei namens laden möchten, legen Sie die URL-Eigenschaft fest oder verwenden *Player*. **newwiedergabe**.
+Diese Eigenschaft verwendet ein Playlist-Objekt, das auf verschiedene Weise erworben werden kann, z. B. durch Aufrufen von *PlaylistArray*. **item** oder *PlaylistCollection*. **newPlaylist**. Um ein **Wiedergabelistenelement** mithilfe eines Dateinamens zu laden, legen Sie die URL-Eigenschaft fest, oder verwenden Sie *Player*. **newPlaylist**.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird die erste Wiedergabeliste in der-Bibliothek abgerufen. Anschließend wird **currentwiedergabe** verwendet, um die abgerufene Wiedergabeliste zur aktuellen Wiedergabeliste zu machen, und dann, um den Namen der aktuellen Wiedergabeliste anzuzeigen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird die erste Wiedergabeliste in der Bibliothek abgerufen. Anschließend wird **currentPlaylist verwendet,** um die abgerufene Wiedergabeliste zur aktuellen Wiedergabeliste zu machen und dann den Namen der aktuellen Wiedergabeliste anzuzeigen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -63,7 +63,7 @@ document.write("Found first playlist. Name: " + Player.currentPlaylist.name);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -75,19 +75,19 @@ document.write("Found first playlist. Name: " + Player.currentPlaylist.name);
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. newwiedergabe**](player-newplaylist.md)
+[**Player.newPlaylist**](player-newplaylist.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Playlistarray. Item**](playlistarray-item.md)
+[**PlaylistArray.item**](playlistarray-item.md)
 </dt> <dt>
 
-[**Playlistcollection. newwiedergabe**](playlistcollection-newplaylist.md)
+[**PlaylistCollection.newPlaylist**](playlistcollection-newplaylist.md)
 </dt> <dt>
 
-[**Einstellungen. Autostart**](settings-autostart.md)
+[**Einstellungen.autoStart**](settings-autostart.md)
 </dt> </dl>
 
  

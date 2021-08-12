@@ -1,7 +1,7 @@
 ---
-description: Legt gittermaterial Eigenschaften in der 3D-Szene fest. Verwenden Sie diese Methode, um Parameter für die unter Surface-Verteilung anzugeben.
+description: Legt Gittermaterialeigenschaften in der 3D-Szene fest. Verwenden Sie diese Methode, um Unterflächens scattering-Parameter anzugeben.
 ms.assetid: 830d73be-bba6-454d-8476-341d291a5b2e
-title: 'ID3DXPRTEngine:: stmeschmaterials-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::SetMeshMaterials-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0c90ae72cab5d7a20c2c65b940d28a9b57902d2d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7c24ff96b4582e86580774a1f7ac7cd889547018a5b0f138d5e43685c50e1701
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118293384"
 ---
-# <a name="id3dxprtenginesetmeshmaterials-method"></a>ID3DXPRTEngine:: stmeschmaterials-Methode
+# <a name="id3dxprtenginesetmeshmaterials-method"></a>ID3DXPRTEngine::SetMeshMaterials-Methode
 
-Legt gittermaterial Eigenschaften in der 3D-Szene fest. Verwenden Sie diese Methode, um Parameter für die unter Surface-Verteilung anzugeben.
+Legt Gittermaterialeigenschaften in der 3D-Szene fest. Verwenden Sie diese Methode, um Unterflächens scattering-Parameter anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT SetMeshMaterials(
 
 <dl> <dt>
 
-*ppmaterials* \[ in\]
+*ppMaterials* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXSHMATERIAL**](d3dxshmaterial.md) \* \***
+Typ: **const [**D3DXSHMATERIAL**](d3dxshmaterial.md) \* \***
 
-Adresse eines Zeigers auf gewünschte gittermaterial Eigenschaften. Siehe [**D3DXSHMATERIAL**](d3dxshmaterial.md).
+Adresse eines Zeigers auf gewünschte Gittermaterialeigenschaften. Siehe [**D3DXSHMATERIAL**](d3dxshmaterial.md).
 
 </dd> <dt>
 
-*Nummeshes* \[ in\]
+*NumMeshes* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Index des Netzes, in dem Materialeigenschaften festgelegt werden sollen.
+Index des Gitternetzes, für das Materialeigenschaften festgelegt werden sollen.
 
 </dd> <dt>
 
-*Numchannels* \[ in\]
+*NumChannels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Farbkanälen, die im Mesh festgelegt werden sollen. Legen Sie auf 1 fest, um graue Materialien (R = G = B) oder 3 anzugeben, um Farb Blutungen zu aktivieren. Wenn Sie diesen Parameter ändern möchten, legen Sie zuerst "Albedo" mit einer anderen Methode fest, wie z. [**b. ID3DXPRTEngine:: setpertexelalbedo**](id3dxprtengine--setpertexelalbedo.md) oder [**ID3DXPRTEngine:: setpervertexalbedo**](id3dxprtengine--setpervertexalbedo.md).
+Anzahl der Farbkanäle, die im Gitternetz festgelegt werden sollen. Legen Sie auf 1 fest, um graue Materialien anzugeben (R = G = B) oder 3, um Farbunterdärkungseffekte zu ermöglichen. Wenn Sie diesen Parameter ändern möchten, legen Sie zuerst den Albedo mithilfe einer anderen Methode fest, z.B. [**ID3DXPRTEngine::SetPerTexelAlbedo**](id3dxprtengine--setpertexelalbedo.md) oder [**ID3DXPRTEngine::SetPerVertexAlbedo.**](id3dxprtengine--setpervertexalbedo.md)
 
 </dd> <dt>
 
-*babtalbedo* \[ in\]
+*bSetAlbedo* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Wenn **true**, wird die Albedo-Option des Netzes auf ppmaterials festgelegt, wobei alle vorhandenen texelwerte und Vertex-Albedo-Werte überschrieben werden. Wenn **false**, werden alle vorhandenen texkingwerte und Vertex Albedo-Werte beibehalten, die von anderen Methoden festgelegt werden. Numchannels muss mit dem Parameter numchannels identisch sein, der zum Erstellen des Puffers in [**D3DXCreatePRTBuffer**](d3dxcreateprtbuffer.md) oder [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md)verwendet wird.
+True gibt an, dass der Albedo des Gitternetzes auf ppMaterials festgelegt wird, wobei alle vorhandenen Texel- und Scheitelpunkt-Albedowerte überschrieben werden. False gibt an, dass alle vorhandenen Texel- und Scheitelpunkt-Albedo-Werte beibehalten werden, die von anderen Methoden festgelegt wurden. NumChannels muss mit dem NumChannels-Parameter übereinstimmen, der zum Erstellen des Puffers in [**D3DXCreatePRTBuffer**](d3dxcreateprtbuffer.md) oder [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md)verwendet wird.
 
 </dd> <dt>
 
-*flengthscale* \[ in\]
+*fLengthScale* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierung der 3D-Szene in Relation zu einem 1-mm-Cube. Wird für die Berechnung von subsurface-Strukturen verwendet.
+Skalierung der 3D-Szene relativ zu einem 1-mm-Würfel. Wird für Berechnungen von Punktdiagrammen unter der Oberfläche verwendet.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Skalierung der 3D-Szene in Relation zu einem 1-mm-Cube. Wird für die Berechnung
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

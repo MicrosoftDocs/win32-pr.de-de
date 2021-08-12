@@ -1,18 +1,18 @@
 ---
-title: Vorteile der Verwendung von HtmlView
-description: Vorteile der Verwendung von HtmlView
+title: Vorteile der Verwendung von HTMLView
+description: Vorteile der Verwendung von HTMLView
 ms.assetid: bbec9471-87f1-4c41-a322-f11e9e1dec37
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, HtmlView-Vorteile
-- Wiedergabelisten, HtmlView-Vorteile
-- Metadatei-Wiedergabelisten, HtmlView-Vorteile
-- Windows Media Metadatei-Wiedergabelisten, Vorteile von HtmlView
-- Wiedergabelisten, Vorteile von HtmlView
-- Metadatei-Wiedergabelisten, Vorteile von HtmlView
-- Vorteile von HtmlView
-- Windows Media Player, Vorteile von HtmlView
-- Windows Media Player, HtmlView-Vorteile
-- HtmlView, Vorteile
+- Windows Wiedergabelisten von Medienmetadateien, HTMLView-Vorteile
+- Playlists,HTMLView-Vorteile
+- Metafile-Wiedergabelisten, HTMLView-Vorteile
+- Windows Wiedergabelisten von Medienmetadateien,Vorteile von HTMLView
+- Wiedergabelisten,Vorteile von HTMLView
+- Metafile-Wiedergabelisten,Vorteile von HTMLView
+- Vorteile von HTMLView
+- Windows Media Player,Vorteile von HTMLView
+- Windows Media Player,HTMLView-Vorteile
+- HTMLView,Vorteile
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -20,30 +20,30 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f5e5409db969f5e9a8e0df18738f4995490b1d83
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a6019ec83466be9f4eca649d870422dce640fddc3ff011c46c6f918a1a09faa2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583267"
 ---
-# <a name="advantages-of-using-htmlview"></a>Vorteile der Verwendung von HtmlView
+# <a name="advantages-of-using-htmlview"></a>Vorteile der Verwendung von HTMLView
 
-Mit der HtmlView-Funktion können Sie auf einfache Weise eine integrierte webbasierte Benutzer Funktionalität erstellen, mit der digitale Medieninhalte wiedergegeben werden, indem das vertraute Erscheinungsbild des Internets verwendet wird. Wenn Sie webbasierten Inhalt mit digitalen Medieninhalten in der Windows Media Player-Benutzeroberfläche (UI) kombinieren, kann das Ergebnis eine größere Auswirkung auf den Benutzer haben, als wenn die Elemente separat angezeigt werden. Der Inhalt digitaler Medien wird durch interessante Verwandte Informationen erweitert, während die Webseite Links zu ähnlichen Inhalten bereitstellen kann, sodass neue Geschäftschancen geschaffen werden.
+Das HTMLView-Feature erleichtert das Erstellen einer integrierten webbasierten Benutzeroberfläche, die digitale Medieninhalte mithilfe des vertrauten Aussehens des Webs wiederspiegelt. Wenn Sie webbasierte Inhalte mit digitalen Medieninhalten auf der Windows Media Player-Benutzeroberfläche kombinieren, kann das Ergebnis einen größeren Einfluss auf den Benutzer haben, als wenn die Elemente separat angezeigt werden. Die digitalen Medieninhalte werden durch interessante verwandte Informationen erweitert, während die Webseite Links zu ähnlichen Inhalten bereitstellen kann, wodurch neue Geschäftsmöglichkeiten eröffnet werden.
 
-## <a name="htmlview-provides-a-better-user-experience"></a>HtmlView bietet eine bessere Benutzer Leistung.
+## <a name="htmlview-provides-a-better-user-experience"></a>HTMLView bietet eine bessere Benutzererfahrung
 
-Benutzer haben Zugriff auf die Informationen, die mit digitalen Medieninhalten angeboten werden können, aber Sie möchten nicht mit einer scheinbar unendlichen Reihe von Popup Ankündigungen umgehen. Die Verwendung von Popup Browserfenstern zum Anzeigen von Werbung im Web ist so üblich, dass jetzt Software vorhanden ist, die das Öffnen dieser Fenster verhindert. Diese Software kann den unerwünschten Nebeneffekt haben, dass legitime Webseiten nicht angezeigt werden. manchmal wird eine gesamte digitale Medienpräsentation unterdrückt.
+Benutzer möchten auf die Informationen zugreifen, die mit digitalen Medieninhalten angeboten werden können, aber sie möchten nicht mit einer scheinbar endlosen Reihe von Popup-Ankündigungen umgehen. Die Verwendung von Popupbrowserfenstern zum Anzeigen von Werbung im Web ist so üblich geworden, dass es jetzt Software gibt, die verhindert, dass diese Fenster geöffnet werden. Diese Software kann den unerwünschten Nebeneffekt haben, dass legitime Webseiten nicht angezeigt werden, und manchmal wird eine gesamte digitale Medienpräsentation unterdrückt.
 
-Wenn Sie die HtmlView-Funktion verwenden, müssen Benutzer sich nicht mehr mit Popup Fenstern beschäftigen. Anstatt ein separates Browserfenster zum Bereitstellen zusätzlicher Informationen für den Benutzer zu öffnen, können Sie benutzerdefinierten webbasierten Inhalt in der Windows Media Player-Benutzeroberfläche anzeigen, **während der Player** die Audioinhalte oder Videoinhalte des Benutzers wieder gibt. Benutzer können die Wiedergabe mithilfe der Windows Media Player-Steuerelemente steuern. Da Ihre Inhalte im vollmodusplayer abgespielt werden, hindert die Software, die zum Verhindern von Popup-Werbeeinblendungen konzipiert ist, den Inhalt nicht mehr.
+Wenn Sie das HTMLView-Feature verwenden, müssen Benutzer sich nicht mehr mit Popupfenstern befassen. Anstatt ein separates Browserfenster öffnen zu müssen, um dem Benutzer zusätzliche Informationen zur  Verfügung zu stellen, können Sie benutzerdefinierte, webbasierte Inhalte in der Funktion Jetzt wiedererlangen der Windows Media Player-Benutzeroberfläche anzeigen, während der Player die audio- oder videoinhalte wieder gibt, die der Benutzer möchte. Benutzer können die Wiedergabe mithilfe der Windows Media Player steuern. Da Ihre Inhalte im Vollmodus-Player abspielt, verhindert Software, die Popupanzeigen verhindern soll, dass Benutzer die Inhalte nicht verwenden.
 
-## <a name="htmlview-content-is-easy-to-create"></a>HtmlView-Inhalte können einfach erstellt werden.
+## <a name="htmlview-content-is-easy-to-create"></a>HTMLView-Inhalt ist einfach zu erstellen
 
-Wie der Funktionsname schon sagt, erstellen Sie mithilfe der HtmlView-Funktion mithilfe von Hypertext Markup Language (HTML) webbasierten Inhalt. Wenn Sie bereits Inhalte für das Web erstellen, bedeutet dies, dass Sie keine neue Programmiersprache erlernen müssen, um mit der HtmlView-Funktion problemlos umfangreiche Inhalte zu erstellen. Wenn Sie bereits Webseiten mit einem eingebetteten Windows Media Player ActiveX-Steuerelement haben, können Sie diese Seiten in der Benutzeroberfläche des Players anzeigen lassen, indem Sie einfach auf diese Webseiten aus einer Windows Media-Metadatendatei (. ASX) mithilfe eines speziellen Parameters zeigen.
+Wie der Featurename schon sagt, erstellen Sie webbasierte Inhalte, die mithilfe des HTMLView-Features angezeigt werden, Hypertext Markup Language (HTML). Wenn Sie bereits Inhalte für das Web erstellen, bedeutet dies, dass Sie keine neue Programmiersprache erlernen müssen, um mit dem HTMLView-Feature problemlos umfangreiche Inhalte zu erstellen. Wenn Sie bereits über Webseiten mit einem eingebetteten Windows Media Player ActiveX-Steuerelement verfügen, können Sie diese Seiten auf der Player-Benutzeroberfläche anzeigen lassen, indem Sie einfach über eine Windows Media-Metadatei (ASX-Datei) mithilfe eines speziellen Parameters auf diese Webseiten verweisen.
 
-In Windows Media Player wird eine eingebettete Instanz von Microsoft Internet Explorer verwendet, um HtmlView-Inhalte anzuzeigen. Dies bedeutet, dass Sie beim Erstellen Ihrer Webseiten nicht verschiedene Internet Browser, mehrere Skript Modelle oder andere Skriptsprachen in Erwägung gezogen müssen. Selbst wenn der Benutzer Internet Explorer nicht als seinen Standardbrowser verwendet, wird die Webseite weiterhin ordnungsgemäß im Player angezeigt.
+Windows Media Player verwendet eine eingebettete Instanz von Microsoft Internet Explorer, um HTMLView-Inhalte anzuzeigen. Dies bedeutet, dass Sie beim Erstellen Ihrer Webseiten keine verschiedenen Internetbrowser, mehrere Skriptmodelle oder verschiedene Skriptsprachen berücksichtigen müssen. Auch wenn der Benutzer nicht Internet Explorer als Standardbrowser verwendet, wird Ihre Webseite weiterhin ordnungsgemäß im Player angezeigt.
 
-Es ist möglich, dass sich ein anderes Programm als Windows Media Player sich selbst als Standardprogramm zum Öffnen von. ASX-Dateien registrieren kann. Das Objektmodell Windows Media Player 9 oder höher enthält eine neue Methode, **openplayer**, die es Ihnen ermöglicht, eine Uniform Resource Locator (URL) für den Inhalt anzugeben, den Sie wiedergeben möchten. Wenn Sie die **openplayer** -Methode verwenden, wird Windows Media Player immer im vollständigen Modus geöffnet, um den angegebenen Inhalt wiederzugeben. Mit dieser Methode können Sie sicherstellen, dass der HtmlView-Inhalt in Windows Media Player und nicht in einer anderen Anwendung angezeigt wird, die die. ASX-Dateityp Zuordnung übernommen hat.
+Es ist möglich, dass ein anderes Programm als Windows Media Player sich selbst als Standardprogramm zum Öffnen von ASX-Dateien registriert. Das Windows Media Player-Objektmodell der 9er-Serie oder höher enthält die neue Methode **openPlayer,** mit der Sie eine Uniform Resource Locator (URL) für den Inhalt angeben können, den Sie wieder geben möchten. Wenn Sie die **openPlayer-Methode** verwenden, Windows Media Player immer im vollständigen Modus geöffnet, um den angegebenen Inhalt wieder anzugeben. Mit dieser Methode können Sie sicherstellen, dass Ihr HTMLView-Inhalt in Windows Media Player angezeigt wird, anstatt in einer anderen Anwendung, die die ASX-Dateityp-Zuordnung übernommen hat.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,12 +52,12 @@ Es ist möglich, dass sich ein anderes Programm als Windows Media Player sich se
 [**Anzeigen von Webseiten in Windows Media Player**](displaying-web-pages-in-windows-media-player.md)
 </dt> <dt>
 
-[**Player. openplayer**](player-openplayer.md)
+[**Player.openPlayer**](player-openplayer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

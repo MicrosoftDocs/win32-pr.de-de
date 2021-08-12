@@ -1,30 +1,30 @@
 ---
-title: Ebenenverweis
-description: Die Direct3D-API definiert mehrere ebenenapi-Elemente.
+title: Ebenenreferenz
+description: Die Direct3D-API definiert mehrere Ebenen-API-Elemente.
 ms.assetid: 6acca19e-92b1-46d3-b5cc-58d35686381c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e00e792f82b189a5a15b512257ae8c25a39fb63e
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
-ms.translationtype: HT
+ms.openlocfilehash: d6d2cacf81caf5f701808a4ab6df0d6c6e41150b327e18c8e35ed0b2c1b277d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104316833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118300749"
 ---
-# <a name="layer-reference"></a>Ebenenverweis
+# <a name="layer-reference"></a>Ebenenreferenz
 
-Die Direct3D-API definiert mehrere ebenenapi-Elemente.
+Die Direct3D-API definiert mehrere Ebenen-API-Elemente.
 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                              | BESCHREIBUNG                                                                |
+| Thema                                                                              | Beschreibung                                                                |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [Ebenenschnittstellen](d3d11-graphics-reference-d3d11-layer-interfaces.md)<br/> | Dieser Abschnitt enthält Informationen zu den ebenenschnittstellen. <br/>  |
-| [Ebenenstrukturen](d3d11-graphics-reference-d3d11-layer-structures.md)<br/> | Dieser Abschnitt enthält Informationen zu den ebenenstrukturen.<br/>   |
-| [Ebenenenumerationen](d3d11-graphics-reference-d3d11-layer-enums.md)<br/>    | Dieser Abschnitt enthält Informationen zu ebenenenumerationen.<br/> |
+| [Ebenenschnittstellen](d3d11-graphics-reference-d3d11-layer-interfaces.md)<br/> | Dieser Abschnitt enthält Informationen zu den Ebenenschnittstellen. <br/>  |
+| [Ebenenstrukturen](d3d11-graphics-reference-d3d11-layer-structures.md)<br/> | Dieser Abschnitt enthält Informationen zu den Ebenenstrukturen.<br/>   |
+| [Ebenenenumeration](d3d11-graphics-reference-d3d11-layer-enums.md)<br/>    | Dieser Abschnitt enthält Informationen zu den Ebenenenumeration.<br/> |
 
 
 

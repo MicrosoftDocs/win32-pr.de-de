@@ -1,9 +1,9 @@
 ---
-title: Ratingorg-Attribut
-description: Das ratingorg-Attribut ist der Name des Anbieters des Bewertungs Werts.
+title: RatingOrg-Attribut
+description: Das RatingOrg-Attribut ist der Name des Anbieters des Bewertungswerts.
 ms.assetid: 166ffd00-e814-49fd-83d9-b6e931259b41
 keywords:
-- Ratingorg-Attribut, Windows Media Player
+- RatingOrg-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 28f51c06fec5e360793d5314f5fa9904c8d03850
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cbeb5e83b0c572fe09cad987e63712a57fd9bde1e059e5d3aeacf1e41f4316a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118570493"
 ---
-# <a name="ratingorg-attribute"></a>Ratingorg-Attribut
+# <a name="ratingorg-attribute"></a>RatingOrg-Attribut
 
-Das **ratingorg** -Attribut ist der Name des Anbieters des Bewertungs Werts.
+Das **RatingOrg-Attribut** ist der Name des Anbieters des Bewertungswerts.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [DVDs](dvd-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur im Bibliotheks Cache gespeichert.
+Dieses Attribut wird nur im Bibliothekscache gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
 
 
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-description: Comrepl ist ein Hilfsprogramm, mit dem der com+-Katalog von einem bestimmten Quellcomputer auf einem oder mehreren Ziel Computern repliziert wird.
+description: COMREPL ist ein Hilfsprogramm, das den COM+-Katalog von einem bestimmten Quellcomputer auf einen oder mehrere Zielcomputer repliziert.
 ms.assetid: 11aa7603-61f1-4af0-b6f9-81f484788052
-title: Das Hilfsprogramm zur Comrepl-Replikation
+title: Das COMREPL-Replikationshilfsprogramm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a08ecd77a679b6fc150e7a91fc0214eb829792dd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 446cfc0e627463e8c142ccab624c3773123034c2becebc402a6069f74d30ccd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118305295"
 ---
-# <a name="the-comrepl-replication-utility"></a>Das Hilfsprogramm zur Comrepl-Replikation
+# <a name="the-comrepl-replication-utility"></a>Das COMREPL-Replikationshilfsprogramm
 
-Comrepl ist ein Hilfsprogramm, mit dem der com+-Katalog von einem bestimmten Quellcomputer auf einem oder mehreren Ziel Computern repliziert wird. Stellen Sie sich den Quellcomputer vor, der eine "Master Konfiguration" darstellt. Mit Comrepl wird diese Master Konfiguration repliziert, um einen Satz identisch konfigurierter Computer beizubehalten.
+COMREPL ist ein Hilfsprogramm, das den COM+-Katalog von einem bestimmten Quellcomputer auf einen oder mehrere Zielcomputer repliziert. Stellen Sie sich den Quellcomputer vor, der eine "Masterkonfiguration" darstellt. COMREPL wird verwendet, um diese Masterkonfiguration zu replizieren, um eine Gruppe identisch konfigurierter Computer zu verwalten.
 
-Die Replikations Einheit ist die gesamte com+-Konfiguration auf dem Master Computer. Alle com+-Anwendungen auf dem Master werden auf den Ziel Computern repliziert. Alles oder nichts. Außerdem werden alle com+-Anwendungen, die zuvor auf den Ziel Computern installiert wurden, mit Ausnahme der vorinstallierten com+-Anwendungen, im Rahmen des Replikations Prozesses gelöscht.
+Die Replikationseinheit ist die gesamte COM+-Konfiguration auf dem Mastercomputer. Alle COM+-Anwendungen auf dem Master werden auf die Zielcomputer repliziert. es ist alles oder nichts. Darüber hinaus werden alle COM+-Anwendungen, die zuvor auf den Zielcomputern installiert wurden, mit Ausnahme der vorinstallierten COM+-Anwendungen im Rahmen des Replikationsprozesses gelöscht.
 
-Comrepl repliziert nur com+-Konfigurationsdaten. Dies schließt com+-Anwendungen und com+-spezifische Computereinstellungen ein. Microsoft Internetinformationsdienste (IIS) verfügt über ein ähnliches Dienstprogramm (Iissync), das Comrepl zum Replizieren von IIS-und com+-Konfigurationen verwendet.
+COMREPL repliziert nur COM+-Konfigurationsdaten. Dies schließt COM+-Anwendungen und COM+-spezifische Computereinstellungen ein. Microsoft-Internetinformationsdienste (IIS) verfügt über ein ähnliches Hilfsprogramm (IISSync), das COMREPL zum Replizieren von IIS- und COM+-Konfigurationen verwendet.
 
-Ausführliche Informationen zum Starten und Verwenden von Comrepl finden Sie in den folgenden Themen in diesem Abschnitt:
+Ausführliche Informationen zum Starten und Verwenden von COMREPL finden Sie in den folgenden Themen in diesem Abschnitt:
 
--   [Verwenden von Comrepl](using-comrepl.md)
+-   [Verwenden von COMREPL](using-comrepl.md)
 -   [Was wird repliziert?](what-gets-replicated.md)
--   [Replikations Phasen](replication-phases.md)
+-   [Replikationsphasen](replication-phases.md)
 -   [Dateiverwaltung](file-management.md)
 -   [Protokollierung und Fehlerberichterstattung](logging-and-error-reporting.md)
 
@@ -31,13 +31,13 @@ Ausführliche Informationen zum Starten und Verwenden von Comrepl finden Sie in 
 
 <dl> <dt>
 
-[Installationspakete für COM+-Anwendungen werden erstellt.](creating-installation-packages-for-com--applications.md)
+[Erstellen von Installationspaketen für COM+-Anwendungen](creating-installation-packages-for-com--applications.md)
 </dt> <dt>
 
-[Anwendungs Proxys](deploying-application-proxies.md)
+[Bereitstellen von Anwendungsproxys](deploying-application-proxies.md)
 </dt> <dt>
 
-[Der com+-Katalog](the-com--catalog.md)
+[Der COM+-Katalog](the-com--catalog.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine ID3DXCompressedAnimationSet Key-Animation-Schnittstelle, die Keyframe-Daten in einem komprimierten Format speichert.
+description: Erstellt eine ID3DXCompressedAnimationSet-Schnittstelle für keyframed-Animationssets, die Keyframedaten in einem komprimierten Format speichert.
 ms.assetid: c3f97d35-5654-4d85-a337-d77819ce3874
-title: D3DXCreateCompressedAnimationSet-Funktion (D3dx9anim. h)
+title: D3DXCreateCompressedAnimationSet-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8aab23466cecf43a50a4136eb0b3d93a271dcb0e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2acca9d1b697bb9b06b47aa75948ca74ec00cc7ecb919334c01cf874293cb495
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118299285"
 ---
 # <a name="d3dxcreatecompressedanimationset-function"></a>D3DXCreateCompressedAnimationSet-Funktion
 
-Erstellt eine [**ID3DXCompressedAnimationSet**](id3dxcompressedanimationset.md) Key-Animation-Schnittstelle, die Keyframe-Daten in einem komprimierten Format speichert.
+Erstellt eine [**ID3DXCompressedAnimationSet-Keyframed-Animationssatzschnittstelle,**](id3dxcompressedanimationset.md) die Keyframedaten in einem komprimierten Format speichert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXCreateCompressedAnimationSet(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Namen des Animations Satzes.
+Zeiger auf den Namen des Animationssets.
 
 </dd> <dt>
 
-*TicksPerSecond* \[ in\]
+*TicksPerSecond* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Anzahl der Keyframe-Ticks, die pro Sekunde verstrichen sind.
+Anzahl der Keyframe-Ticks, die pro Sekunde verstreichen.
 
 </dd> <dt>
 
-*Wiedergabe* \[ in\]
+*Wiedergabe* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXPLAYBACK- \_ Typ**](./d3dxplayback-type.md)**
+Typ: **[ **D3DXPLAYBACK-TYP \_**](./d3dxplayback-type.md)**
 
-Der Typ der Wiedergabe Schleife für Animations Sätze. Siehe [**D3DXPLAYBACK \_ Type**](./d3dxplayback-type.md).
+Typ der Wiedergabeschleife des Animationssets. Siehe [**D3DXPLAYBACK \_ TYPE**](./d3dxplayback-type.md).
 
 </dd> <dt>
 
-*pcompresseddata* \[ in\]
+*pCompressedData* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)**
 
-Zeiger auf den [**ID3DXBuffer**](id3dxbuffer.md) -Puffer, in dem der Animations Satz als komprimierte Daten gespeichert wird.
+Zeiger auf den [**ID3DXBuffer-Puffer,**](id3dxbuffer.md) der den Animationssatz als komprimierte Daten speichert.
 
 </dd> <dt>
 
-*Numcallbackkeys* \[ in\]
+*NumCallbackKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Rückruf Schlüsseln.
+Anzahl von Rückrufschlüsseln.
 
 </dd> <dt>
 
-*pcallkeys* \[ in\]
+*pCallKeys* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**LPD3DXKEY \_ Rückruf**](d3dxkey-callback.md) \***
+Typ: **const [**LPD3DXKEY \_ CALLBACK**](d3dxkey-callback.md) \***
 
-Zeiger auf eine [**D3DXKEY- \_ Rückruf**](d3dxkey-callback.md) Struktur, die Benutzer Rückruf Daten speichert.
+Zeiger auf eine [**D3DXKEY \_ CALLBACK-Struktur,**](d3dxkey-callback.md) in der Benutzerrückrufdaten gespeichert werden.
 
 </dd> <dt>
 
-*ppanimationset* \[ vorgenommen\]
+*ppAnimationSet* \[ out\]
 </dt> <dd>
 
-Typ: **[ **LPD3DXCOMPRESSEDANIMATIONSET**](id3dxcompressedanimationset.md)\***
+Typ: **[ **LPD3DXCOMJSDANIMATIONSET**](id3dxcompressedanimationset.md)\***
 
-Adresse eines Zeigers auf die [**ID3DXCompressedAnimationSet**](id3dxcompressedanimationset.md) -Schnittstelle, in der die Daten der keysetanimation in einem komprimierten Format gespeichert werden.
+Adresse eines Zeigers auf die [**ID3DXCompressedAnimationSet-Schnittstelle,**](id3dxcompressedanimationset.md) die Schlüsselframed-Animationssatzdaten in einem komprimierten Format speichert.
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Adresse eines Zeigers auf die [**ID3DXCompressedAnimationSet**](id3dxcompresseda
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,8 +121,8 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. W
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -130,7 +130,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. W
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Currentbitrate-Attribut
-description: Das currentbitrate-Attribut ist die aktuelle Bitrate des Elements (in Bits pro Sekunde).
+title: CurrentBitrate-Attribut
+description: Das CurrentBitrate-Attribut ist die aktuelle Bitrate des Elements in Bits pro Sekunde.
 ms.assetid: 785b362e-ef3b-4a09-adb0-3ab6cdadb4da
 keywords:
-- Currentbitrate-Attribut, Windows Media Player
+- CurrentBitrate-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,27 +12,27 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 567c2e6b43679204f0e2d0f249c1b16dff4071a9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c3e614e241093a5b81a8b636410f0581aac277fc45925b55d741e4d3c9277d29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118579899"
 ---
-# <a name="currentbitrate-attribute"></a>Currentbitrate-Attribut
+# <a name="currentbitrate-attribute"></a>CurrentBitrate-Attribut
 
-Das **currentbitrate** -Attribut ist die aktuelle Bitrate des Elements (in Bits pro Sekunde).
+Das **CurrentBitrate-Attribut** ist die aktuelle Bitrate des Elements in Bits pro Sekunde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmcurrentbitrate.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMCurrentBitrate.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,7 +40,7 @@ Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ ws
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------|
-| Version<br/> | Nur Windows Media Player 9-Serie<br/> |
+| Version<br/> | Windows Media Player 9er Serie<br/> |
 
 
 
@@ -48,7 +48,7 @@ Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ ws
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

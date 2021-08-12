@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Animations Satz mit dem angegebenen Namen ab.
+description: Ruft einen Animationssatz mit seinem Namen ab.
 ms.assetid: 4c3f3002-45f6-49b2-8a42-18d5824fb36f
-title: 'ID3DXAnimationController:: getanimationsetbyname-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetAnimationSetByName-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d520625e457a50fe962ae74d6e25fc17e2beb729
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8b417bf9434b712903e61839807f71765b2e3c69916430f162a67febe65fc6cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118297043"
 ---
-# <a name="id3dxanimationcontrollergetanimationsetbyname-method"></a>ID3DXAnimationController:: getanimationsetbyname-Methode
+# <a name="id3dxanimationcontrollergetanimationsetbyname-method"></a>ID3DXAnimationController::GetAnimationSetByName-Methode
 
-Ruft einen Animations Satz mit dem angegebenen Namen ab.
+Ruft einen Animationssatz mit seinem Namen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetAnimationSetByName(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeichenfolge, die den Namen des Animations Satzes enthält.
+Zeichenfolge, die den Namen des Animationssatzes enthält.
 
 </dd> <dt>
 
-*ppanimset* \[ vorgenommen\]
+*ppAnimSet* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONSET**](id3dxanimationset.md)\***
 
-Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz.
+Zeiger auf den [**ID3DXAnimationSet-Animationssatz.**](id3dxanimationset.md)
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Animations Controller enthält ein Array von Animations Sätzen. Diese Methode gibt einen Animations Satz mit dem angegebenen Namen zurück.
+Der Animationscontroller enthält ein Array von Animationssätzen. Diese Methode gibt einen Animationssatz mit dem angegebenen Namen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Der Animations Controller enthält ein Array von Animations Sätzen. Diese Metho
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

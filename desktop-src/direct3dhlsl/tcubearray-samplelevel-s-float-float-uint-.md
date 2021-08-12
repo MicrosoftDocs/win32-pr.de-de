@@ -1,9 +1,9 @@
 ---
-title: 'Samplelevel:: samplelevel (S, float, float, uint)-Funktion'
-description: 'Führt eine Stichprobe für eine Textur auf der angegebenen MipMap-Ebene aus und gibt den Status des Vorgangs zurück. | Samplelevel:: samplelevel (S, float, float, uint)-Funktion'
+title: SampleLevel::SampleLevel(S,float,float,uint)-Funktion
+description: Probieren Sie eine Textur auf der angegebenen Mipmapebene aus und gibt den Status des Vorgangs zurück. | SampleLevel::SampleLevel(S,float,float,uint)-Funktion
 ms.assetid: 3794D17F-BC70-4D3A-9F2C-ADF900983D2C
 keywords:
-- Samplelevel-Funktion HLSL
+- SampleLevel-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 356e2779d82e886946e93d2071ae693279c07eb8
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6eb4e4f6d3320bcac06c973ef28e8af0934f3a55da9045f01141157240434fbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118284298"
 ---
-# <a name="samplelevelsamplelevelsfloatfloatuint-function"></a>Samplelevel:: samplelevel (S, float, float, uint)-Funktion
+# <a name="samplelevelsamplelevelsfloatfloatuint-function"></a>SampleLevel::SampleLevel(S,float,float,uint)-Funktion
 
-Führt eine Stichprobe für eine Textur auf der angegebenen MipMap-Ebene aus und gibt den Status des Vorgangs zurück.
+Probieren Sie eine Textur auf der angegebenen Mipmapebene aus und gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,18 +45,18 @@ DXGI_FORMAT SampleLevel(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Ein [samplerzustand](dx-graphics-hlsl-sampler.md). Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.
+Ein [Samplerzustand.](dx-graphics-hlsl-sampler.md) Dies ist ein Objekt, das in einer Effektdatei deklariert ist, die Zustandszuweisungen enthält.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -64,8 +64,8 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
-| Texture2DArray, Texture3D, texturecube | float3         |
-| Texturecubearray                       | float4         |
+| Texture2DArray, Texture3D, TextureCube | float3         |
+| TextureCubeArray                       | float4         |
 
 
 
@@ -73,38 +73,38 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 
 </dd> <dt>
 
-*Lod* \[ in\]
+*LOD* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-\[in \] einer Zahl, die die MipMap-Ebene angibt. Wenn der Wert 0 (null) ist, wird MipMap Level 0 (größte Zuordnung) verwendet. Der Bruch Wert (falls angegeben) wird verwendet, um zwischen zwei MipMap-Ebenen zu interpolieren.
+\[in \] Eine Zahl, die die Mipmapebene angibt. Wenn der Wert ≤ 0 ist, wird mipmap level 0 (größte Karte) verwendet. Der Bruchwert (sofern angegeben) wird verwendet, um zwischen zwei Mipmapebenen zu interpolieren.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
+Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Samplelevel-Methoden](texturecubearray-samplelevel.md)
+[SampleLevel-Methoden](texturecubearray-samplelevel.md)
 </dt> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> </dl>
 
  

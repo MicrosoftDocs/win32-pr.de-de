@@ -1,7 +1,7 @@
 ---
-description: Berechnen von pro-Dreieck-Daten aus pro-Texttypen. Diese Funktion ähnelt D3DXComputeIMTFromTexture, aber Sie verwendet ein Float-Array, um die Daten zu übergeben, und Sie kann höhere Dimensions Werte berechnen als 4.
+description: Berechnen Sie imT-Werte pro Dreieck aus Daten pro Texel. Diese Funktion ähnelt D3DXComputeIMTFromTexture, verwendet jedoch ein float-Array, um die Daten zu übergeben, und sie kann höhere dimensionale Werte als 4 berechnen.
 ms.assetid: 4a151184-e67e-41e9-83c6-63da72f262fa
-title: D3DXComputeIMTFromPerTexelSignal-Funktion (D3DX9Mesh. h)
+title: D3DXComputeIMTFromPerTexelSignal-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a3db71fbc931f7bdb3e73c8d949a163607e66c31
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 48053a238806c223067742b62675f1c0b8bc5a53e8bdf05f78f3fc56520b8388
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118299889"
 ---
 # <a name="d3dxcomputeimtfrompertexelsignal-function"></a>D3DXComputeIMTFromPerTexelSignal-Funktion
 
-Berechnen von pro-Dreieck-Daten aus pro-Texttypen. Diese Funktion ähnelt [**D3DXComputeIMTFromTexture**](d3dxcomputeimtfromtexture.md), aber Sie verwendet ein Float-Array, um die Daten zu übergeben, und Sie kann höhere Dimensions Werte berechnen als 4.
+Berechnen Sie imT-Werte pro Dreieck aus Daten pro Texel. Diese Funktion ähnelt [**D3DXComputeIMTFromTexture,**](d3dxcomputeimtfromtexture.md)verwendet jedoch ein float-Array, um die Daten zu übergeben, und sie kann höhere dimensionale Werte als 4 berechnen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,102 +50,102 @@ HRESULT D3DXComputeIMTFromPerTexelSignal(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Ein Zeiger auf ein Eingabe Gitter (siehe [**ID3DXMesh**](id3dxmesh.md)), das die Objekt Geometrie zum Berechnen des IMTS enthält.
+Ein Zeiger auf ein Eingabegittermodell (siehe [**ID3DXMesh),**](id3dxmesh.md)das die Objektgeometrie zum Berechnen des IMT enthält.
 
 </dd> <dt>
 
-*dwtextureindex* \[ in\]
+*dwTextureIndex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-NULL basierter Texturkoordinaten Index, der angibt, welcher Satz von Texturkoordinaten verwendet werden soll.
+Nullbasierter Texturkoordinatenindex, der an identifiziert, welche Texturkoordinaten verwendet werden.
 
 </dd> <dt>
 
-*pftexelsignal* \[ in\]
+*pfTexelSignal* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf ein Array von Eingabe texeln, von dem IMT berechnet wird. Die Array Größe ist \* uheight uheight \* ucomponents.
+Ein Zeiger auf ein Array von Eingabe-Texeln, aus denen IMT berechnet wird. Die Arraygröße ist uWidth \* uHeight \* uComponents.
 
 </dd> <dt>
 
-*uwidth* \[ in\]
+*uWidth* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Textur Breite in Pixel.
+Texturbreite in Pixel.
 
 </dd> <dt>
 
-*uheight* \[ in\]
+*uHeight* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Textur Höhe in Pixel.
+Texturhöhe in Pixel.
 
 </dd> <dt>
 
-*usignaldimension* \[ in\]
+*uSignalDimension* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl von Gleit Komma Zahlen pro Komponente in jedem Element des Signal Arrays.
+Die Anzahl der Gleitkommazahlen pro Komponente in jedem Element des Signalarrays.
 
 </dd> <dt>
 
-*ucomponents* \[ in\]
+*uComponents* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Komponenten in jeder tex.
+Die Anzahl der Komponenten in jedem Texel.
 
 </dd> <dt>
 
-*dwOptions* \[ in\]
+*dwOptions* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Textur Umbruch Optionen. Dies ist eine Kombination aus einem oder mehreren [**D3DXIMT-Flags**](./d3dximt-flags.md).
+Texturumbruchoptionen. Dies ist eine Kombination aus mindestens einem [**D3DXIMT-FLAGS.**](./d3dximt-flags.md)
 
 </dd> <dt>
 
-*pstatus Callback* 
+*pStatusCallback* 
 </dt> <dd>
 
 Typ: **[LPD3DXUVATLASCB](lpd3dxuvatlascb.md)**
 
-Ein Zeiger auf eine Rückruffunktion zum Überwachen des Fortschritts der IMT-Berechnung.
+Ein Zeiger auf eine Rückruffunktion zum Überwachen des IMT-Berechnungsfortschritts.
 
 </dd> <dt>
 
-*pusercontext* 
+*pUserContext* 
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf eine benutzerdefinierte Variable, die an die Status Rückruffunktion übermittelt wird. Wird normalerweise von einer Anwendung verwendet, um einen Zeiger auf eine Datenstruktur zu übergeben, die Kontextinformationen für die Rückruffunktion bereitstellt.
+Ein Zeiger auf eine benutzerdefinierte Variable, die an die Statusrückruffunktion übergeben wird. Wird in der Regel von einer Anwendung verwendet, um einen Zeiger auf eine Datenstruktur zu übergeben, die Kontextinformationen für die Rückruffunktion enthält.
 
 </dd> <dt>
 
-*ppimtdata* \[ vorgenommen\]
+*ppIMTData* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Ein Zeiger auf den Puffer (siehe [**ID3DXBuffer**](id3dxbuffer.md)), der das zurückgegebene IMT-Array enthält. Dieses Array kann als Eingabe für die D3DX [uvatlas-Funktionen](dx9-graphics-reference-d3dx-functions-uvatlas.md) bereitgestellt werden, um die Zuordnung des Textur Raums in der Textur Parametrisierung zu priorisieren.
+Ein Zeiger auf den Puffer (siehe [**ID3DXBuffer),**](id3dxbuffer.md)der das zurückgegebene IMT-Array enthält. Dieses Array kann als Eingabe für die D3DX [UVAtlas-Funktionen](dx9-graphics-reference-d3dx-functions-uvatlas.md) bereitgestellt werden, um die Texturraumzuordnung in der Texturparameterisierung zu priorisieren.
 
 </dd> </dl>
 
@@ -153,7 +153,7 @@ Ein Zeiger auf den Puffer (siehe [**ID3DXBuffer**](id3dxbuffer.md)), der das zur
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK; andernfalls ist der Wert D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D OK, andernfalls ist der Wert \_ D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -161,8 +161,8 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK;
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -170,10 +170,10 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK;
 
 <dl> <dt>
 
-[Uvatlas-Funktionen](dx9-graphics-reference-d3dx-functions-uvatlas.md)
+[UVAtlas-Funktionen](dx9-graphics-reference-d3dx-functions-uvatlas.md)
 </dt> <dt>
 
-[Verwenden von uvatlas (Direct3D 9)](using-uvatlas.md)
+[Verwenden von UVAtlas (Direct3D 9)](using-uvatlas.md)
 </dt> </dl>
 
  

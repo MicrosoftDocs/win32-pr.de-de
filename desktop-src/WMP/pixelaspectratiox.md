@@ -1,9 +1,9 @@
 ---
-title: Pixelaspectratiox
-description: Das pixelaspectratiox-Attribut ist der horizontale Teil des Seitenverhältnisses eines Videos.
+title: PixelAspectRatioX
+description: Das PixelAspectRatioX-Attribut ist der horizontale Teil des Seitenverhältnisses eines Videos.
 ms.assetid: 614b9c34-1b8f-47c9-bc75-f6d827341d38
 keywords:
-- Pixelaspectratiox-Fenster Media Player
+- PixelAspectRatioX Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d7e9438299386d754be3c0fa87876fc2aff0b1e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 50f2aecef8fecc2eae495990480ee14d3c841dcca0cd95f29f5444967ed14214
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118573506"
 ---
-# <a name="pixelaspectratiox"></a>Pixelaspectratiox
+# <a name="pixelaspectratiox"></a>PixelAspectRatioX
 
-Das **pixelaspectratiox** -Attribut ist der horizontale Teil des Seitenverhältnisses eines Videos.
+Das **PixelAspectRatioX-Attribut** ist der horizontale Teil des Seitenverhältnisses eines Videos.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für ein Video mit einem Seitenverhältnis von 16:9 wäre **pixelaspectratiox** gleich "16".
+Für ein Video mit einem Seitenverhältnis von 16:9 würde **PixelAspectRatioX** gleich "16" sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Für ein Video mit einem Seitenverhältnis von 16:9 wäre **pixelaspectratiox** 
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
 title: IDXCoreAdapterList::Sort
-description: Sortiert ein DXCore-Adapter Listen Objekt auf Grundlage eines angegebenen Eingabe Arrays von Sortierkriterien.
+description: Sortiert ein DXCore-Adapterlistenobjekt basierend auf einem bereitgestellten Eingabearray von Sortierkriterien.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 09/03/2019
-ms.openlocfilehash: 6260e700053a99b531a66a5c19e15d4a32f07e46
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 59580fb8b76c80a264796f829d2b0a1d2e8eabb4375896fbd27fb34a7697cf90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118278871"
 ---
-# <a name="idxcoreadapterlistsort-method"></a>Idxcoreadapterlist:: Sort-Methode
+# <a name="idxcoreadapterlistsort-method"></a>IDXCoreAdapterList::Sort-Methode
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Sortiert ein DXCore-Adapter Listen Objekt auf Grundlage eines angegebenen Eingabe Arrays von Sortierkriterien, wobei Array Elemente an früherer Stelle im Array von Kriterien eine höhere Gewichtung erhalten. Mit **Sort** können Sie den idealen Adapter leichter in einer Adapter Liste finden.
+Sortiert ein DXCore-Adapterlistenobjekt basierend auf einem bereitgestellten Eingabearray von Sortierkriterien, wobei Arrayelementen weiter oben im Kriterienarray eine höhere Gewichtung erteilt wird. **Sortieren** hilft Ihnen, Ihren idealen Adapter einfacher in einer Adapterliste zu finden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,38 +28,38 @@ HRESULT Sort(
 
 ## <a name="parameters"></a>Parameter
 
-### <a name="numpreferences"></a>numpreferences
+### <a name="numpreferences"></a>numPreferences
 
 Typ: **uint32_t**
 
-Die Anzahl der Elemente im Array, auf die durch den *Preferences* -Parameter verwiesen wird.
+Die Anzahl der Elemente im Array, auf die der *Preferences-Parameter* zeigt.
 
-### <a name="preferences-in"></a>Einstellungen [in]
+### <a name="preferences-in"></a>Preferences [in]
 
-Typ: Konstante **[dxcoreadapterpreference](./ne-dxcore_interface-dxcoreadapterpreference.md) \***
+Typ: **const [DXCoreAdapterPreference](./ne-dxcore_interface-dxcoreadapterpreference.md) \***
 
-Ein Zeiger auf ein konstantes Array von [dxcoreadapterpreference](./ne-dxcore_interface-dxcoreadapterpreference.md) -Werten, das Sortierkriterien darstellt.
+Ein Zeiger auf ein konstantes Array [von DXCoreAdapterPreference-Werten,](./ne-dxcore_interface-dxcoreadapterpreference.md) die Sortierkriterien darstellen.
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **[HRESULT](../../com/structure-of-com-error-codes.md)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](../../com/structure-of-com-error-codes.md) - [Fehlercode](../../com/com-error-codes-10.md)zurückgegeben.
+Wenn die Funktion erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein [**HRESULT-Fehlercode**](../../com/structure-of-com-error-codes.md) [zurückgegeben.](../../com/com-error-codes-10.md)
 
-|Rückgabewert|BESCHREIBUNG|
+|Rückgabewert|Beschreibung|
 |-|-|
-|E_INVALIDARG|Das *numpreferences* -Argument ist 0 (null), oder das *Preferences* -Argument ist `nullptr` .|
+|E_INVALIDARG|Das *argument numPreferences* ist 0 (null), oder *das Preferences-Argument* ist `nullptr` .|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Fällen, in denen ein bereitgestellter [dxcoreadapterpreference](./ne-dxcore_interface-dxcoreadapterpreference.md) -Wert vom Betriebssystem (OS) nicht erkannt wird, wird er ignoriert und führt nicht zu einem Fehler bei der API. Bekannte **dxcoreadapterpreference** -Werte werden in diesem Fall weiterhin berücksichtigt. Um zu ermitteln, ob ein Sortierungstyp von der API verstanden wird, nennen Sie [idxcoreadapterlist:: isadapterpreferencesupportiert](./nf-dxcore_interface-idxcoreadapterlist-isadapterpreferencesupported.md).
+In Fällen, in denen ein bereitgestellter [DXCoreAdapterPreference-Wert](./ne-dxcore_interface-dxcoreadapterpreference.md) vom Betriebssystem nicht erkannt wird, wird er ignoriert und führt nicht dazu, dass die API fehlschlägt. Bekannte **DXCoreAdapterPreference-Werte** werden in diesem Fall weiterhin berücksichtigt. Um zu bestimmen, ob ein Sortiertyp von der API verstanden wird, rufen Sie [IDXCoreAdapterList::IsAdapterPreferenceSupported auf.](./nf-dxcore_interface-idxcoreadapterlist-isadapterpreferencesupported.md)
 
-**Dxcoreadapterpreference** -Werte, die zuvor im angegebenen *Einstellungs* Array auftreten, werden mit höherer Priorität behandelt. 
+**DXCoreAdapterPreference-Werte,** die zuvor im angegebenen *Preferences-Array* auftreten, werden mit höherer Priorität behandelt. 
 
-Ausführliche Informationen dazu, welche Logik für die einzelnen Typen angewendet wird, finden Sie in der Dokumentation zur **dxcoreadapterpreference** -Enumeration. Die interne Logik für einen Typ kann sich entwickeln, wenn das Betriebssystem entwickelt wird.
+Weitere Informationen dazu, welche Logik für die einzelnen Typen angewendet wird, finden Sie in der **DXCoreAdapterPreference-Enumerationsdokumentation.** Die interne Logik für einen Typ kann sich während der Entwicklung des Betriebssystems entwickeln.
 
-Wenn " **Sort** " zurückgegeben wird, wurden Elemente in der DXCore-Adapter Liste nach den am wenigsten bevorzugten Elementen sortiert. Wenn Sie daher [idxcoreadapterlist:: GetAdapter](./nf-dxcore_interface-idxcoreadapterlist-getadapter.md) mit dem Index 0 aufrufen, wird der Adapter abgerufen, der den angeforderten Sortier Einstellungs Typen am besten entspricht. Index 1 ist die nächste am besten geeignete Entsprechung usw.
+Nach der Rückgabe von **Sort** wurden elemente in der DXCore-Adapterliste von den am wenigsten bevorzugten elementen sortiert. Daher ruft der [Aufruf von IDXCoreAdapterList::GetAdapter](./nf-dxcore_interface-idxcoreadapterlist-getadapter.md) mit Index 0 den Adapter ab, der den angeforderten Sortierpräferenztypen am besten entspricht. Index 1 ist die nächste beste Übereinstimmung, und so weiter.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Idxcoreadapterlist](./nn-dxcore_interface-idxcoreadapterlist.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapterList](./nn-dxcore_interface-idxcoreadapterlist.md), [DXCore-Referenz](../dxcore-reference.md), Verwenden von DXCore zum [Auflisten von Adaptern](../dxcore-enum-adapters.md)

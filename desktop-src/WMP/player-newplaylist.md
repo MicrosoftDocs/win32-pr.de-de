@@ -1,11 +1,11 @@
 ---
-title: Player. newwiedergabe-Methode
-description: Die newwiedergabe-Methode erstellt ein neues Wiedergabelisten Objekt.
+title: Player.newPlaylist-Methode
+description: Die newPlaylist-Methode erstellt ein neues Wiedergabelistenobjekt.
 ms.assetid: a566006e-8647-4c51-ab77-762728f25a30
 keywords:
-- newwiedergabe-Methode, Windows-Media Player
-- newwiedergabe-Methode, Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, newwiedergabe-Methode
+- newPlaylist-Methode Windows Media Player
+- newPlaylist-Methode Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , newPlaylist-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa65ae4b453fe919116a33c5ee86b14ba353f681
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 380d1f2751487f5c648b154852be625a5c93103851541dea7e2488ba75080ca0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572830"
 ---
-# <a name="playernewplaylist-method"></a>Player. newwiedergabe-Methode
+# <a name="playernewplaylist-method"></a>Player.newPlaylist-Methode
 
-Die **newwiedergabe** -Methode erstellt ein neues **Wiedergabe** Listen Objekt.
+Die **newPlaylist-Methode** erstellt ein neues **Wiedergabelistenobjekt.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ retVal = Player.newPlaylist(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*name* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen der neuen Wiedergabeliste enthält.
+**Zeichenfolge,** die den Namen der neuen Wiedergabeliste enthält.
 
 </dd> <dt>
 
-*URL* \[ in\]
+*URL* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die URL der Windows Media-Metadatei-Wiedergabeliste enthält, mit der das **Wiedergabe** Listen Objekt erstellt
+**Zeichenfolge,** die die URL der Windows Media-Metadateiwiedergabeliste enthält, mit der das **Wiedergabelistenobjekt** erstellt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der *URL* -Parameter auf NULL oder "" (leere Zeichenfolge) festgelegt ist, wird ein leeres **Wiedergabe** Listen Objekt erstellt. Wenn der *Name* -Parameter auf "" festgelegt ist, wird der Name in der Metadatei verwendet.
+Wenn der *URL-Parameter* auf NULL oder "" (leere Zeichenfolge) festgelegt ist, wird ein leeres **Wiedergabelistenobjekt** erstellt. Wenn der *name-Parameter* auf "" festgelegt ist, wird der Name in der Metadatei verwendet.
 
-Die neue Wiedergabeliste, die mit dieser Methode erstellt wurde, wird nicht der Bibliothek hinzugefügt. Verwenden Sie *playlistcollection*, um der Bibliothek eine neue Wiedergabeliste hinzuzufügen. **importwiedergabe Liste** oder *playlistcollection*. **newwiedergabe**. Alle führenden oder nachfolgenden Leerzeichen im Wiedergabelisten Namen werden automatisch entfernt, wenn Sie der Bibliothek hinzugefügt werden.
+Die mit dieser Methode erstellte neue Wiedergabeliste wird der Bibliothek nicht hinzugefügt. Um der Bibliothek eine neue Wiedergabeliste hinzuzufügen, verwenden Sie *PlaylistCollection*. **importPlaylist** oder *PlaylistCollection*. **newPlaylist**. Führende oder nachfolgende Leerzeichen im Wiedergabelistennamen werden automatisch entfernt, wenn sie der Bibliothek hinzugefügt werden.
 
-Da die Bibliothek mehrere Wiedergabelisten mit dem gleichen Namen zulässt, sollten Sie überprüfen, ob eine Wiedergabeliste mit einem bestimmten Namen vorhanden ist, bevor Sie einen neuen hinzufügen.
+Da die Bibliothek mehrere Wiedergabelisten mit dem gleichen Namen zulässt, sollten Sie vor dem Hinzufügen einer neuen Wiedergabeliste überprüfen, ob eine Wiedergabeliste mit einem bestimmten Namen vorhanden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Da die Bibliothek mehrere Wiedergabelisten mit dem gleichen Namen zulässt, soll
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -87,13 +87,13 @@ Da die Bibliothek mehrere Wiedergabelisten mit dem gleichen Namen zulässt, soll
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Playlistcollection. importwiedergabe**](playlistcollection-importplaylist.md)
+[**PlaylistCollection.importPlaylist**](playlistcollection-importplaylist.md)
 </dt> <dt>
 
-[**Playlistcollection. newwiedergabe**](playlistcollection-newplaylist.md)
+[**PlaylistCollection.newPlaylist**](playlistcollection-newplaylist.md)
 </dt> <dt>
 
-[**Windows Media-Metadateien**](windows-media-metafiles.md)
+[**Windows Medienmetadateien**](windows-media-metafiles.md)
 </dt> </dl>
 
  

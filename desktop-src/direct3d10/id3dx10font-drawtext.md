@@ -1,7 +1,7 @@
 ---
-description: Formatierten Text zeichnen. Diese Methode unterstützt ANSI-und Unicode-Zeichen folgen.
+description: Zeichnen von formatiertem Text. Diese Methode unterstützt ANSI- und Unicode-Zeichenfolgen.
 ms.assetid: 205e9e23-4293-4195-9e41-d8c06dabd285
-title: ID3DX10Font::D rawtext-Methode (d3dx10. h)
+title: ID3DX10Font::D rawText-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 5fa23684be1b63cfbd8e3d07d3578d87fdfbf46a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1eabe3a88fb3d38021eee8f186baed1d8403d18026d4d1704d520ad3c8b8f72c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118303170"
 ---
-# <a name="id3dx10fontdrawtext-method"></a>ID3DX10Font::D rawtext-Methode
+# <a name="id3dx10fontdrawtext-method"></a>ID3DX10Font::D rawText-Methode
 
-Formatierten Text zeichnen. Diese Methode unterstützt ANSI-und Unicode-Zeichen folgen.
+Zeichnen von formatiertem Text. Diese Methode unterstützt ANSI- und Unicode-Zeichenfolgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,65 +45,65 @@ INT DrawText(
 
 <dl> <dt>
 
-*psprite* \[ in\]
+*pSprite* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DX10SPRITE**](id3dx10sprite.md)**
 
-Zeiger auf ein ID3DX10Sprite-Objekt, das die Zeichenfolge enthält, die Sie zeichnen möchten. Kann **null** sein. in diesem Fall wird die Zeichenfolge von Direct3D mit einem eigenen Sprite-Objekt dargestellt. Um die Effizienz zu verbessern, sollte ein Sprite-Objekt angegeben werden, wenn ID3DX10Font::D rawtext mehrmals in einer Zeile aufgerufen werden soll.
+Zeiger auf ein ID3DX10Sprite-Objekt, das die zu zeichnende Zeichenfolge enthält. Kann **NULL sein.** In diesem Fall rendert Direct3D die Zeichenfolge mit einem eigenen Sprite-Objekt. Zur Verbesserung der Effizienz sollte ein Sprite-Objekt angegeben werden, wenn ID3DX10Font::D rawText mehr als einmal in einer Zeile aufgerufen werden soll.
 
 </dd> <dt>
 
-*pstring* \[ in\]
+*pString* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die gezeichnet werden soll. Wenn Unicode definiert ist, wird dieser Parametertyp in LPCWSTR aufgelöst. andernfalls wird der Typ zu LPCSTR aufgelöst. Wenn der count-Parameter-1 ist, muss die Zeichenfolge **null** sein.
+Zeiger auf eine zu zeichnende Zeichenfolge. Wenn UNICODE definiert ist, wird dieser Parametertyp in eine LPCWSTR-Datei auflösen, andernfalls wird der Typ in eine LPCSTR-Datei auflösen. Wenn der Count-Parameter -1 ist, muss die Zeichenfolge **NULL-terminiert** sein.
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Zeichen in der Zeichenfolge. Wenn count-1 ist, wird angenommen, dass es sich bei dem pstring-Parameter um einen Zeiger auf ein Sprite handelt, das eine mit NULL endende Zeichenfolge und ID3DX10Font::D rawtext die Zeichen Anzahl automatisch berechnet.
+Die Anzahl der Zeichen in der Zeichenfolge. Wenn Count -1 ist, wird angenommen, dass der pString-Parameter ein Zeiger auf ein Sprite ist, das eine NULL-terminierte Zeichenfolge enthält, und ID3DX10Font::D rawText berechnet die Zeichenanzahl automatisch.
 
 </dd> <dt>
 
-*vorab ausführen* \[ in\]
+*pRect* \[ In\]
 </dt> <dd>
 
-Typ: **lprect**
+Typ: **LPRECT**
 
-Ein Zeiger auf eine [Rect](/previous-versions//ms536136(v=vs.85)) -Struktur, die das Rechteck in logischen Koordinaten enthält, in dem der Text formatiert werden soll. Wie bei jedem Rect-Objekt muss der Koordinaten Wert der rechten Seite des Rechtecks größer sein als der der linken Seite. Ebenso muss der Koordinaten Wert des unteren Werts größer als der obere Wert sein.
+Zeiger auf eine [RECT-Struktur,](/previous-versions//ms536136(v=vs.85)) die das Rechteck in logischen Koordinaten enthält, in dem der Text formatiert werden soll. Wie bei jedem RECT-Objekt muss der Koordinatenwert der rechten Seite des Rechtecks größer als der wert der linken Seite sein. Ebenso muss der Koordinatenwert des unteren -Werts größer als der des oberen Werts sein.
 
 </dd> <dt>
 
-*Format* \[ in\]
+*Formatieren* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt die Methode zum Formatieren des Texts an. Dabei kann es sich um eine beliebige Kombination der folgenden Werte handeln:
+Geben Sie die Methode zum Formatieren des Texts an. Dies kann eine beliebige Kombination der folgenden Werte sein:
 
 
 
-| Element                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Element                                                                                      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DT_BOTTOM"></span><span id="dt_bottom"></span>DT \_ unten<br/>             | Rechtfertigen Sie den Text am unteren Rand des Rechtecks. Dieser Wert muss mit dt \_ SingleLine kombiniert werden.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| <span id="DT_CALCRECT"></span><span id="dt_calcrect"></span>DT \_ calcrect<br/>       | Weisen Sie DrawText an, die Breite und Höhe des Rechtecks basierend auf der Länge der Zeichenfolge, die gezeichnet werden soll, automatisch zu berechnen. Wenn mehrere Textzeilen vorhanden sind, verwendet ID3DX10Font::D rawtext die Breite des Rechtecks, auf das der prect-Parameter zeigt, und erweitert die Basis des Rechtecks, um die letzte Textzeile zu binden. Wenn nur eine Textzeile vorhanden ist, ändert ID3DX10Font::D rawtext die Rechte Seite des Rechtecks so, dass es das letzte Zeichen in der Zeile umschließt. In beiden Fällen gibt ID3DX10Font::D rawtext die Höhe des formatierten Texts zurück, aber den Text nicht.<br/> |
-| <span id="DT_CENTER"></span><span id="dt_center"></span>DT \_ Center<br/>             | Zentrieren Sie Text horizontal im Rechteck.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| <span id="DT_EXPANDTABS"></span><span id="dt_expandtabs"></span>DT- \_ ExpandTabs<br/> | Erweitern Sie Tabulator Zeichen. Die Standardanzahl von Zeichen pro Tabstopp beträgt acht.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| <span id="DT_LEFT"></span><span id="dt_left"></span>DT \_ Links<br/>                   | Text Links ausrichten.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| <span id="DT_NOCLIP"></span><span id="dt_noclip"></span>DT \_ NoClip<br/>             | Zeichnen Sie ohne Clipping. ID3DX10Font::D rawtext ist etwas schneller, wenn dt \_ NoClip verwendet wird.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| <span id="DT_RIGHT"></span><span id="dt_right"></span>\_rechter dt<br/>                | Text rechts ausrichten.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| <span id="DT_RTLREADING"></span><span id="dt_rtlreading"></span>DT \_ RtlReading<br/> | Zeigt Text in der Lesefolge von rechts nach Links für bidirektionalen Text an, wenn eine hebräische oder arabische Schriftart ausgewählt wird. Die Standard Lesereihenfolge für den gesamten Text ist von links nach rechts.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| <span id="DT_SINGLELINE"></span><span id="dt_singleline"></span>DT \_ SingleLine<br/> | Anzeige von Text nur in einer einzelnen Zeile. Wagen Rückläufe und Zeilen Vorschübe unterbrechen die Linie nicht.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| <span id="DT_TOP"></span><span id="dt_top"></span>DT \_ Top<br/>                      | Text der obersten rechtfertigen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| <span id="DT_VCENTER"></span><span id="dt_vcenter"></span>DT \_ vCenter<br/>          | Text vertikal zentrieren (nur einzeilige Zeile).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| <span id="DT_WORDBREAK"></span><span id="dt_wordbreak"></span>DT- \_ WordBreak<br/>    | Wörter brechen. Zeilen werden zwischen Wörtern automatisch getrennt, wenn sich ein Wort hinter dem Rand des Rechtecks ausdehnen würde, das durch den prect-Parameter angegeben wird. Eine Wagen Rücklauf-/Zeilenvorschub Sequenz unterbricht ebenfalls die Zeile.<br/>                                                                                                                                                                                                                                                                                                                                                                                            |
+| <span id="DT_BOTTOM"></span><span id="dt_bottom"></span>DT \_ BOTTOM<br/>             | Rechtfertigen Sie den Text am unteren Rand des Rechtecks. Dieser Wert muss mit DT \_ SINGLELINE kombiniert werden.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| <span id="DT_CALCRECT"></span><span id="dt_calcrect"></span>DT \_ CALCRECT<br/>       | Weisen Sie DrawText an, die Breite und Höhe des Rechtecks basierend auf der Länge der zu zeichnenden Zeichenfolge automatisch zu berechnen. Wenn mehrere Textzeilen enthalten sind, verwendet ID3DX10Font::D rawText die Breite des Rechtecks, auf das der pRect-Parameter zeigt, und erweitert die Basis des Rechtecks, um die letzte Textzeile zu gebundene. Wenn nur eine Textzeile enthalten ist, ändert ID3DX10Font::D rawText die rechte Seite des Rechtecks, sodass es das letzte Zeichen in der Zeile umgibt. In beiden Fällen gibt ID3DX10Font::D rawText die Höhe des formatierten Texts zurück, aber nicht den Text.<br/> |
+| <span id="DT_CENTER"></span><span id="dt_center"></span>DT \_ CENTER<br/>             | Zentriert Text horizontal im Rechteck.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| <span id="DT_EXPANDTABS"></span><span id="dt_expandtabs"></span>DT \_ EXPANDTABS<br/> | Erweitern Sie Tabstoppzeichen. Die Standardanzahl von Zeichen pro Tabstopp beträgt acht.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| <span id="DT_LEFT"></span><span id="dt_left"></span>DT \_ LEFT<br/>                   | Richten Sie Text links aus.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="DT_NOCLIP"></span><span id="dt_noclip"></span>DT \_ NOCLIP<br/>             | Zeichnen ohne Clipping. ID3DX10Font::D rawText ist etwas schneller, wenn DT \_ NOCLIP verwendet wird.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <span id="DT_RIGHT"></span><span id="dt_right"></span>DT \_ RIGHT<br/>                | Richten Sie Text rechts aus.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <span id="DT_RTLREADING"></span><span id="dt_rtlreading"></span>DT \_ RTLREADING<br/> | Anzeigen von Text in Leserichtung von rechts nach links für bidirektionalen Text, wenn eine hebräische oder arabische Schriftart ausgewählt ist. Die Standardlese reihenfolge für den text-Text ist von links nach rechts.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| <span id="DT_SINGLELINE"></span><span id="dt_singleline"></span>DT \_ SINGLELINE<br/> | Anzeigen von Text nur in einer einzelnen Zeile. Wagenrücklauf und Zeilenfeeds unterbricht die Zeile nicht.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| <span id="DT_TOP"></span><span id="dt_top"></span>DT \_ TOP<br/>                      | Text mit oberster Begründung.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| <span id="DT_VCENTER"></span><span id="dt_vcenter"></span>DT \_ VCENTER<br/>          | Text vertikal zentriert (nur eine Zeile).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| <span id="DT_WORDBREAK"></span><span id="dt_wordbreak"></span>DT \_ WORDBREAK<br/>    | Wörter unterbricht. Zeilen werden automatisch zwischen Wörtern unterbrochen, wenn sich ein Wort über den Rand des Rechtecks erstreckt, das durch den pRect-Parameter angegeben wird. Eine Wagenrücklauf-/Zeilenfeedsequenz unterbricht auch die Zeile.<br/>                                                                                                                                                                                                                                                                                                                                                                                            |
 
 
 
@@ -111,32 +111,32 @@ Gibt die Methode zum Formatieren des Texts an. Dabei kann es sich um eine belieb
 
 </dd> <dt>
 
-*Farbe* \[ in\]
+*Farbe* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXCOLOR**](../direct3d9/d3dxcolor.md)**
 
-Textfarbe. Siehe [**D3DXCOLOR**](d3d10-d3dxcolor.md).
+Farbe des Texts. Siehe [**D3DXCOLOR**](d3d10-d3dxcolor.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert die Höhe des Texts in logischen Einheiten. Wenn dt \_ vCenter oder dt \_ Bottom angegeben ist, ist der Rückgabewert der Offset von vorab (oben nach unten) des gezeichneten Texts. Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert die Höhe des Texts in logischen Einheiten. Wenn DT VCENTER oder DT BOTTOM angegeben ist, ist der Rückgabewert der Offset von pRect (von oben nach \_ \_ unten) des gezeichneten Texts. Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parameter dieser Methode ähneln denen der [GDI-DrawText](/previous-versions//ms533909(v=vs.85)) -Funktion.
+Die Parameter dieser Methode sind denen der [GDI DrawText-Funktion sehr](/previous-versions//ms533909(v=vs.85)) ähnlich.
 
-Diese Methode unterstützt sowohl ANSI-als auch Unicode-Zeichen folgen.
+Diese Methode unterstützt sowohl ANSI- als auch Unicode-Zeichenfolgen.
 
-Wenn das DT \_ NoClip-Format nicht verwendet wird, wird der Text von dieser Methode so geklammert, dass er nicht außerhalb des angegebenen Rechtecks angezeigt wird. Es wird davon ausgegangen, dass die gesamte Formatierung mehrere Zeilen umfasst, es sei denn, das DT- \_ SingleLine-Format
+Sofern nicht das DT NOCLIP-Format verwendet wird, schneide diese Methode den Text so ab, dass er nicht außerhalb des \_ angegebenen Rechtecks angezeigt wird. Es wird davon ausgegangen, dass alle Formatierungen mehrere Zeilen haben, es sei denn, das DT \_ SINGLELINE-Format ist angegeben.
 
-Wenn die ausgewählte Schriftart für das Rechteck zu groß ist, versucht diese Methode nicht, eine kleinere Schriftart zu ersetzen.
+Wenn die ausgewählte Schriftart zu groß für das Rechteck ist, versucht diese Methode nicht, eine kleinere Schriftart zu ersetzen.
 
-Diese Methode unterstützt nur Schriftarten, deren escapesin und Ausrichtung gleich NULL sind.
+Diese Methode unterstützt nur Schriftarten, deren Escape- und Ausrichtungsformat 0 (null) ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -144,8 +144,8 @@ Diese Methode unterstützt nur Schriftarten, deren escapesin und Ausrichtung gle
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

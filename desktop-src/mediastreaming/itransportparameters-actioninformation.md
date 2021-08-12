@@ -1,11 +1,11 @@
 ---
-title: Itransportparameters-Methode "aktioninformation"
-description: Ruft eine imediarendereraktioninformation-Schnittstelle ab, die Informationen darüber bereitstellt, welche Methoden aktuell für die DMR aufgerufen werden können.
+title: ITransportParameters ActionInformation-Methode
+description: Ruft eine IMediaRendererActionInformation-Schnittstelle ab, die Informationen darüber bereitstellt, welche Methoden derzeit für die DMR aufgerufen werden können.
 ms.assetid: 3EEB94E1-B6BC-4111-AEF1-D5724BD0A2E7
 keywords:
-- Aktioninformation-Methode Medien Streaming-API
-- Aktions Information-Methode Medien Streaming-API, itransportparameters-Schnittstelle
-- Itransportparameters-Schnittstelle Medien Streaming-API, aktioninformation-Methode
+- 'ActionInformation-Methode : Medienstreaming-API'
+- ActionInformation-Methode Medienstreaming-API , ITransportParameters-Schnittstelle
+- ITransportParameters-Schnittstelle Medienstreaming-API , ActionInformation-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b194da50e71402b6af69eb4cc9d67902e8ae89a0
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 551612fcaffb9379823efea15f29ed9feba1ff3d0c5af6e7271b61ad9d6036f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118235855"
 ---
-# <a name="itransportparametersactioninformation-method"></a>Itransportparameters:: aktioninformation-Methode
+# <a name="itransportparametersactioninformation-method"></a>ITransportParameters::ActionInformation-Methode
 
-Ruft eine [**imediarendereraktioninformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation) -Schnittstelle ab, die Informationen darüber bereitstellt, welche Methoden aktuell für die DMR aufgerufen werden können.
+Ruft eine [**IMediaRendererActionInformation-Schnittstelle**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation) ab, die Informationen darüber bereitstellt, welche Methoden derzeit für die DMR aufgerufen werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT ActionInformation(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*wert* \[ out, retval\]
 </dt> <dd>
 
-Empfängt einen Verweis auf eine [**imediarendereraktioninformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation) -Schnittstelle.
+Empfängt einen Verweis auf eine [**IMediaRendererActionInformation-Schnittstelle.**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Itransportparameters**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-itransportparameters)
+[**ITransportParameters**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-itransportparameters)
 </dt> </dl>
 
  

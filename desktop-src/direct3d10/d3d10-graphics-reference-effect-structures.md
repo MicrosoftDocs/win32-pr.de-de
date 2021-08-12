@@ -1,31 +1,31 @@
 ---
-description: 'Dieser Abschnitt enthält Informationen zu den folgenden Effekt Strukturen:'
+description: 'Dieser Abschnitt enthält Informationen zu den folgenden Effektstrukturen:'
 ms.assetid: bbd69b4b-d2f4-471f-a607-328f5fc603b5
-title: Effekt Strukturen (Direct3D 10)
+title: Effektstrukturen (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 991061fa75ff04222d842b3bb31bf7638e511f54
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 914f6b2adab91dc73755abf3925717caf4c53e7a481800b193f2db3406cac619
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118303802"
 ---
-# <a name="effect-structures-direct3d-10"></a>Effekt Strukturen (Direct3D 10)
+# <a name="effect-structures-direct3d-10"></a>Effektstrukturen (Direct3D 10)
 
-Dieser Abschnitt enthält Informationen zu den folgenden Effekt Strukturen:
+Dieser Abschnitt enthält Informationen zu den folgenden Effektstrukturen:
 
 
 
-| Strukturen                                                          | BESCHREIBUNG                        |
+| Strukturen                                                          | Beschreibung                        |
 |---------------------------------------------------------------------|------------------------------------|
-| [**D3d10 \_ Auswirkung \_**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_desc)                    | Beschreibt einen Effekt.               |
-| [**D3d10 \_ Effekt- \_ Shader- \_ Debugger**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_shader_desc)     | Beschreibt einen Effekt-Shader.        |
-| [**D3d10 \_ Effect \_ Type \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_type_desc)         | Beschreibt einen Effekt Variablen-Typ. |
-| [**D3d10 \_ Effect- \_ Variable ( \_ Decoder)**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_variable_desc) | Beschreibt eine Effekt Variable.      |
-| [**D3d10 \_ bestanden \_**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_pass_desc)                        | Beschreibt einen Durchlauf.                  |
-| [**D3d10 \_ Pass- \_ Shader- \_ Debugger**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_pass_shader_desc)         | Beschreibt eine shadervariable.       |
-| [**D3d10- \_ Technik \_**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_technique_desc)              | Beschreibt eine Technik.             |
+| [**D3D10 \_ EFFECT \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_desc)                    | Beschreibt einen Effekt.               |
+| [**D3D10 \_ EFFECT \_ SHADER \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_shader_desc)     | Beschreibt einen Effekt-Shader.        |
+| [**D3D10 \_ EFFECT \_ TYPE \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_type_desc)         | Beschreibt einen Effektvariablentyp. |
+| [**D3D10 \_ EFFECT \_ VARIABLE \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_effect_variable_desc) | Beschreibt eine Effektvariable.      |
+| [**D3D10 \_ PASS \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_pass_desc)                        | Beschreibt einen Durchlauf.                  |
+| [**D3D10 \_ PASS \_ SHADER \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_pass_shader_desc)         | Beschreibt eine Shadervariable.       |
+| [**D3D10 \_ TECHNIQUE \_ DESC**](/windows/desktop/api/d3d10effect/ns-d3d10effect-d3d10_technique_desc)              | Beschreibt eine Technik.             |
 
 
 
@@ -35,7 +35,7 @@ Dieser Abschnitt enthält Informationen zu den folgenden Effekt Strukturen:
 
 <dl> <dt>
 
-[Effekt Referenz](d3d10-graphics-reference-effect.md)
+[Auswirkungsverweis](d3d10-graphics-reference-effect.md)
 </dt> </dl>
 
  

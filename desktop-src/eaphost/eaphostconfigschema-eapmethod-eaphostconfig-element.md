@@ -1,6 +1,6 @@
 ---
-title: EapMethod (eaphostconfig)-Element
-description: Erfahren Sie mehr über das EapMethod (eaphostconfig)-Element. Dieses Element identifiziert die Methode, auf die verwiesen wird.
+title: EapMethod-Element (EapHostConfig)
+description: Erfahren Sie mehr über das EapMethod-Element (EapHostConfig). Dieses Element identifiziert die Methode, auf die verwiesen wird.
 ms.assetid: 00d6fd29-da8f-4142-ac1e-686ab8dd2eab
 keywords:
 - EapMethod-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 85c7df5649ea430518ee7e848645680336a37b86
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 9691ff65709c451efc5de92099a6ec37d333a476d2997b365ba6b1df73546fbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274774"
 ---
-# <a name="eapmethod-eaphostconfig-element"></a>EapMethod (eaphostconfig)-Element
+# <a name="eapmethod-eaphostconfig-element"></a>EapMethod-Element (EapHostConfig)
 
-Das **EapMethod (eaphostconfig)** -Element identifiziert die Methode, auf die verwiesen wird.
+Das **EapMethod-Element (EapHostConfig)** identifiziert die Methode, auf die verwiesen wird.
 
 ``` syntax
 <xs:element name="EapMethod"
@@ -31,7 +31,7 @@ Das **EapMethod (eaphostconfig)** -Element identifiziert die Methode, auf die ve
  />
 ```
 
-Das **EapMethod** -Element wird durch das [**eaphostconfig**](eaphostconfigschema-eaphostconfig-element.md) -Element definiert.
+Das **EapMethod-Element** wird durch das [**EapHostConfig-Element**](eaphostconfigschema-eaphostconfig-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Das **EapMethod** -Element wird durch das [**eaphostconfig**](eaphostconfigschem
 
 | Role | Minimale Version des Betriebssystems |
 |------|--------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>              |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>              |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -48,19 +48,19 @@ Das **EapMethod** -Element wird durch das [**eaphostconfig**](eaphostconfigschem
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaphostconfig**](eaphostconfigschema-eaphostconfig-element.md)
+[**EapHostConfig**](eaphostconfigschema-eaphostconfig-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaphostconfig**](eaphostconfigschema-eaphostconfig-element.md)
+[**EapHostConfig**](eaphostconfigschema-eaphostconfig-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaphostconfig-Schema](eaphostconfigschema-schema.md)

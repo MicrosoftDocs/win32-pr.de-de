@@ -1,18 +1,18 @@
 ---
-description: Gibt einen Dateipfad an, der einen Speicherort darstellt, den das Content entschlüsseln Module (CDM) für inhaltsspezifische Daten verwenden kann.
+description: Gibt einen Dateipfad an, der einen Speicherort darstellt, den das Content Decryption Module (CDM) für inhaltsspezifische Daten verwenden kann.
 title: MF_CONTENTDECRYPTIONMODULE_INPRIVATESTOREPATH (mfcontentdecryptionmodule.h)
 ms.topic: reference
 ms.date: 01/31/2020
-ms.openlocfilehash: 0d8ce394f4b7a4e952fc9d5928a80cc5500dcdd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf03d4411ac2959a336b931bc5e45ec969772ab35c194de03cbd9c74aaca0c0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118244773"
 ---
-# <a name="mf_contentdecryptionmodule_inprivatestorepath-property"></a>"MF \_ contentdecryptionmodule" \_ inprivatestorepath (Eigenschaft)
+# <a name="mf_contentdecryptionmodule_inprivatestorepath-property"></a>MF \_ CONTENTDECRYPTIONMODULE \_ INPRIVATESTOREPATH-Eigenschaft
 
-Gibt einen Dateipfad an, der einen Speicherort darstellt, den das Content entschlüsseln Module (CDM) für inhaltsspezifische Daten verwenden kann.
+Gibt einen Dateipfad an, der einen Speicherort darstellt, den das Content Decryption Module (CDM) für inhaltsspezifische Daten verwenden kann.
 
 
 ## <a name="data-type"></a>Datentyp
@@ -21,19 +21,19 @@ Gibt einen Dateipfad an, der einen Speicherort darstellt, den das Content entsch
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**MF \_ contentdecryptionmodule \_ inprivatestorepath**
+**MF \_ CONTENTDECRYPTIONMODULE \_ INPRIVATESTOREPATH**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Dateipfad, der einen Speicherort darstellt, den das Content entschlüsseln Module (CDM) für inhaltsspezifische Daten verwenden kann.
+Ein Dateipfad, der einen Speicherort darstellt, den das Content Decryption Module (CDM) für inhaltsspezifische Daten verwenden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die APP sollte den Speicherort löschen, nachdem das CDM-Objekt freigegeben wurde.
+Die App sollte den Speicherort löschen, nachdem das CDM-Objekt freigegeben wurde.
 
-Wenn diese Eigenschaft nicht festgelegt ist, verwendet das System den Pfad, der mit der [MF_CONTENTDECRYPTIONMODULE_STOREPATH](mf-contentdecryptionmodule-storepath.md) -Eigenschaft für inhaltsspezifische Daten angegeben wird.
+Wenn diese Eigenschaft nicht festgelegt ist, verwendet das System den mit der [MF_CONTENTDECRYPTIONMODULE_STOREPATH](mf-contentdecryptionmodule-storepath.md) -Eigenschaft angegebenen Pfad für inhaltsspezifische Daten.
 
-Legen Sie diese Eigenschaft fest, wenn Sie einen CDM durch Aufrufen von [imfcontentdecryptionmoduleaccess:: createcontentdecryptionmodule](/windows/win32/api/mfcontentdecryptionmodule/nf-mfcontentdecryptionmodule-imfcontentdecryptionmoduleaccess-createcontentdecryptionmodule)erstellen.
+Legen Sie diese Eigenschaft fest, wenn Sie ein CDM erstellen, indem Sie ["CONTENTDecryptionModuleAccess::CreateContentDecryptionModule"](/windows/win32/api/mfcontentdecryptionmodule/nf-mfcontentdecryptionmodule-imfcontentdecryptionmoduleaccess-createcontentdecryptionmodule)aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,15 +41,15 @@ Legen Sie diese Eigenschaft fest, wenn Sie einen CDM durch Aufrufen von [imfcont
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 April 2020-Update<br/>                                     |
-| Header<br/>                   | <dl> <dt>MF contentdecryptionmodule. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 April 2020 Update<br/>                                     |
+| Header<br/>                   | <dl> <dt>mfcontentdecryptionmodule.h</dt> </dl> |
 
 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Eigenschaften von Media Foundation](media-foundation-properties.md)
-- [Imbcontentdecryptionmoduleaccess:: kreatecontentdecryptionmodule](/windows/win32/api/mfcontentdecryptionmodule/nf-mfcontentdecryptionmodule-imfcontentdecryptionmoduleaccess-createcontentdecryptionmodule)
+- [Media Foundation-Eigenschaften](media-foundation-properties.md)
+- [CONTENTDecryptionModuleAccess::CreateContentDecryptionModule](/windows/win32/api/mfcontentdecryptionmodule/nf-mfcontentdecryptionmodule-imfcontentdecryptionmoduleaccess-createcontentdecryptionmodule)
 
 
  

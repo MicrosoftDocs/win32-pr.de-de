@@ -1,7 +1,7 @@
 ---
-description: Legen Sie die Punkt-Rep-Daten für das Mesh fest.
+description: Legen Sie die Point Rep-Daten für das Gitternetz fest.
 ms.assetid: 451a1ff0-68fa-48c4-b3f1-d41d7583cb3f
-title: 'ID3DX10Mesh:: setpointrepdata-Methode (d3dx10. h)'
+title: ID3DX10Mesh::SetPointRepData-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 65114c5411de7932e9cb71166fcf8554fa0bf7b6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: af7db99222e124e7a137a308863daa6db0413660b06bdc529e12da53b2b90fab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118302585"
 ---
-# <a name="id3dx10meshsetpointrepdata-method"></a>ID3DX10Mesh:: setpointrepdata-Methode
+# <a name="id3dx10meshsetpointrepdata-method"></a>ID3DX10Mesh::SetPointRepData-Methode
 
-Legen Sie die Punkt-Rep-Daten für das Mesh fest.
+Legen Sie die Point Rep-Daten für das Gitternetz fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetPointRepData(
 
 <dl> <dt>
 
-*ppointreps* \[ in\]
+*pPointReps* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**uint**](../winprog/windows-data-types.md) \***
+Typ: **const [**UINT**](../winprog/windows-data-types.md) \***
 
-Die festzulegenden Punkt-Rep-Daten.
+Die zu setzenden Punkt-Rep-Daten.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Die festzulegenden Punkt-Rep-Daten.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

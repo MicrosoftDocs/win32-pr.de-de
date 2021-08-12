@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_SNPROG. cunitdone-Eigenschaft.'
-title: JET_SNPROG. cunitdone (Eigenschaft)
+description: 'Weitere Informationen zu: JET_SNPROG.cunitDone-Eigenschaft'
+title: JET_SNPROG.cunitDone-Eigenschaft
 TOCTitle: 'cunitDone property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_SNPROG.cunitDone
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_snprog.cunitdone(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 63c4b10ba9a16b7e63e9eaa0f866b21492fe11d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79b099b9a6211f73255abe8a758f29a9810b9ee7014641f8a8a3cff8383dafdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118252652"
 ---
-# <a name="jet_snprogcunitdone-property"></a>JET_SNPROG. cunitdone (Eigenschaft)
+# <a name="jet_snprogcunitdone-property"></a>JET_SNPROG.cunitDone-Eigenschaft
 
-Ruft die Anzahl der Arbeitseinheiten ab, die während des Vorgangs mit langer Laufzeit bereits abgeschlossen sind.
+Ruft die Anzahl der Arbeitseinheiten ab, die bereits während des Vorgangs mit langer Ausführung abgeschlossen wurden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ public int cunitDone { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -68,6 +68,6 @@ Typ: [System. Int32](/dotnet/api/system.int32)
 
 [JET_SNPROG-Klasse](./jet-snprog-class.md)
 
-[Mitglieder JET_SNPROG](./jet-snprog-members.md)
+[JET_SNPROG-Member](./jet-snprog-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

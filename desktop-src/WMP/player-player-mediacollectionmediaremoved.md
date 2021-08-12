@@ -1,11 +1,11 @@
 ---
-title: Player. mediacollectionmediarebewegereignis
-description: Das Ereignis mediacollectionmediareverschohe tritt auf, wenn ein Medien Element aus der lokalen Bibliothek entfernt wird. | Player. mediacollectionmediarebewegereignis
+title: Player.MediaCollectionMediaRemoved-Ereignis
+description: Das MediaCollectionMediaRemoved-Ereignis tritt auf, wenn ein Medienelement aus der lokalen Bibliothek entfernt wird. | Player.MediaCollectionMediaRemoved-Ereignis
 ms.assetid: a1df6faf-38dc-4f5f-8f8a-953c91ea026c
 keywords:
-- Mediacollectionmediareverschoderte Ereignisfenster Media Player
-- Mediacollectionmediareverschodem Ereignis Windows Media Player, Player-Klasse
-- Windows Media Player der Player-Klasse, mediacollectionmediarebewegereignis
+- MediaCollectionMediaRemoved-Ereignis Windows Media Player
+- MediaCollectionMediaRemoved-Ereignis Windows Media Player , Player-Klasse
+- Player-Windows Media Player , MediaCollectionMediaRemoved-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72af5fe4c5e90effeb34745ea71e3edb457da357
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 009432040deace140dd3cf4d7d7da1246c0a38dbd9fc0da028832af137cefa83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572850"
 ---
-# <a name="playermediacollectionmediaremoved-event"></a>Player. mediacollectionmediarebewegereignis
+# <a name="playermediacollectionmediaremoved-event"></a>Player.MediaCollectionMediaRemoved-Ereignis
 
-Das Ereignis mediacollectionmediareverschohe tritt auf, wenn ein Medien Element aus der lokalen Bibliothek entfernt wird.
+Das MediaCollectionMediaRemoved-Ereignis tritt auf, wenn ein Medienelement aus der lokalen Bibliothek entfernt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.MediaCollectionMediaRemoved(
 
 <dl> <dt>
 
-*pdispmedia* 
+*pdispMedia* 
 </dt> <dd>
 
-Das **Medien** Objekt, das entfernt wurde.
+**Medienobjekt,** das entfernt wurde.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Das **Medien** Objekt, das entfernt wurde.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis tritt nur für die lokale Bibliothek auf.
 
@@ -74,13 +74,13 @@ Dieses Ereignis tritt nur für die lokale Bibliothek auf.
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. mediacollection**](player-mediacollection.md)
+[**Player.mediaCollection**](player-mediacollection.md)
 </dt> </dl>
 
  

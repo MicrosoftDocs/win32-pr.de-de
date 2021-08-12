@@ -1,9 +1,9 @@
 ---
-title: Queryset-Element
-description: Das Queryset-Element enthält Elemente, die definieren, welche Medienelemente aus der Bibliothek ausgewählt werden.
+title: querySet-Element
+description: Das querySet-Element enthält Elemente, die definieren, welche Medienelemente aus der Bibliothek ausgewählt werden.
 ms.assetid: 18b5a509-a56b-4fd1-812f-60b8efd5136b
 keywords:
-- Queryset-Element, Windows-Media Player
+- querySet-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4971c2a7f601132640d7654a95dd288f1740a467
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cb157bb30c2e728b7840fe7021a2a4fcacc317b10eb6778b5702d7d2277c4a92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118570613"
 ---
-# <a name="queryset-element"></a>Queryset-Element
+# <a name="queryset-element"></a>querySet-Element
 
-Das **Queryset** -Element enthält Elemente, die definieren, welche Medienelemente aus der Bibliothek ausgewählt werden.
+Das **querySet-Element** enthält Elemente, die definieren, welche Medienelemente aus der Bibliothek ausgewählt werden.
 
 ``` syntax
 <querySet>
@@ -33,22 +33,22 @@ Das **Queryset** -Element enthält Elemente, die definieren, welche Medienelemen
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy | Elemente                                   |
 |-----------|--------------------------------------------|
-| Parent    | [smartwiedergabe](smartplaylist-element.md) |
-| Untergeordnet     | [sourceFilter](sourcefilter-element.md)   |
+| Parent    | [smartPlaylist](smartplaylist-element.md) |
+| Untergeordnet     | [Sourcefilter](sourcefilter-element.md)   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Queryset** -Element gibt an, welche Medienelemente aus der Bibliothek ausgewählt werden sollen, ohne Berücksichtigung der Größe des Resultsets. Das **Filter** -Element hingegen schränkt die Größe des Resultsets ein.
+Das **querySet-Element** gibt an, welche Medienelemente aus der Bibliothek ausgewählt werden sollen, ohne die Größe des Ergebnisses zu betrachten. Das **Filterelement** schränkt hingegen die Größe des Resultsets ein.
 
 ## <a name="examples"></a>Beispiele
 
@@ -79,7 +79,7 @@ Das **Queryset** -Element gibt an, welche Medienelemente aus der Bibliothek ausg
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/> |
 
 
 
@@ -87,22 +87,22 @@ Das **Queryset** -Element gibt an, welche Medienelemente aus der Bibliothek ausg
 
 <dl> <dt>
 
-[**Argument-Element**](argument-element.md)
+[**argument-Element**](argument-element.md)
 </dt> <dt>
 
-[**Filter-Element**](filter-element.md)
+[**filter-Element**](filter-element.md)
 </dt> <dt>
 
-[**Fragment-Element**](fragment-element.md)
+[**fragment-Element**](fragment-element.md)
 </dt> <dt>
 
-[**smartwiedergabe-Element**](smartplaylist-element.md)
+[**smartPlaylist-Element**](smartplaylist-element.md)
 </dt> <dt>
 
-[**SourceFilter-Element**](sourcefilter-element.md)
+[**sourceFilter-Element**](sourcefilter-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Medienwiedergabelisten-Elementreferenz**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

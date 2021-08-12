@@ -1,19 +1,19 @@
 ---
-description: Ermöglicht es Ihnen, den Dateinamen einer Textur anzugeben, die auf ein Mesh oder eine Fläche angewendet werden soll. Diese Vorlage sollte innerhalb eines Material Objekts angezeigt werden.
+description: Ermöglicht es Ihnen, den Dateinamen einer Textur anzugeben, die auf ein Gitternetz oder ein Gesicht angewendet werden soll. Diese Vorlage sollte in einem Materialobjekt angezeigt werden.
 ms.assetid: 3b27d58d-9c85-4c68-81a9-1ba9c3c0743e
-title: Texturefilename
+title: TextureFilename
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 122eefb1f23083e7d2ebe4005985134840ab8777
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2ce19a2ca528a5223b0b1d9845b277e9a4682a6493070321cb745ad8f47baee3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118290568"
 ---
-# <a name="texturefilename"></a>Texturefilename
+# <a name="texturefilename"></a>TextureFilename
 
-Ermöglicht es Ihnen, den Dateinamen einer Textur anzugeben, die auf ein Mesh oder eine Fläche angewendet werden soll. Diese Vorlage sollte innerhalb eines Material Objekts angezeigt werden.
+Ermöglicht es Ihnen, den Dateinamen einer Textur anzugeben, die auf ein Gitternetz oder ein Gesicht angewendet werden soll. Diese Vorlage sollte in einem Materialobjekt angezeigt werden.
 
 ``` syntax
 template TextureFilename 

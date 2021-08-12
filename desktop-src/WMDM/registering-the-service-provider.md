@@ -3,30 +3,30 @@ title: Registrieren des Dienstanbieters
 description: Registrieren des Dienstanbieters
 ms.assetid: 556d6519-bc24-446b-a360-e3d83b40d541
 keywords:
-- Windows Media Device Manager, Registrieren von Dienstanbietern
-- Device Manager, Registrieren von Dienstanbietern
-- Programmier Handbuch, Registrieren von Dienstanbietern
-- Dienstanbieter, Registrieren von Dienstanbietern
-- Erstellen von Dienstanbietern, Registrieren von Dienstanbietern
+- Windows Medien Geräte-Manager,Registrieren von Dienstanbietern
+- Geräte-Manager,Registrieren von Dienstanbietern
+- Programmierhandbuch,Registrieren von Dienstanbietern
+- Dienstanbieter,Registrieren von Dienstanbietern
+- Erstellen von Dienstanbietern,Registrieren von Dienstanbietern
 - Registrieren von Dienstanbietern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d1226b724b06990fc1e000a522e3a61672789cf3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f480fff04d34cf671bdc37e3bcded92c73f20d31d2fb67e4d6e41593a724d392
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584285"
 ---
 # <a name="registering-the-service-provider"></a>Registrieren des Dienstanbieters
 
-Ein Dienstanbieter muss nicht nur als COM-Objekt registriert werden, sondern muss als Plug-in für Windows Media Device Manager registriert werden. Ein Dienstanbieter muss den folgenden Registrierungsschlüssel erstellen, um sich zu registrieren:
+Ein Dienstanbieter muss nicht nur als COM-Objekt registriert werden, sondern auch als Plug-In für Windows Media Geräte-Manager. Für die Registrierung muss ein Dienstanbieter den folgenden Registrierungsschlüssel erstellen:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Media Device Manager\Plugins\SP\<             `
 
-In diesem Schlüssel < der *Name Ihres Dienstanbieters* > der Name der dll ist. beispielsweise verwendet der Beispiel Dienstanbieter mshdsp. Der ProgID-Schlüssel sollte über einen Zeichen folgen Wert verfügen, der der CLSID Ihres Dienstanbieters entspricht. Der Beispiel Dienstanbieter hat beispielsweise den Wert "mdserviceproviderhd. mdserviceproviderhd".
+Geben Sie in < *Dienstanbieternamen* an, > der Name Ihrer DLL ist. Beispielsweise verwendet der Beispieldienstanbieter MsHDSP. Der ProgID-Schlüssel sollte über einen Zeichenfolgenwert verfügen, der der CLSID Ihres Dienstanbieters entspricht. Der Beispieldienstanbieter hat beispielsweise den Wert "MDServiceProviderHD.MDServiceProviderHD".
 
-Die Implementierung von DllRegisterServer durch den Beispiel Dienstanbieter in mdsp. cpp fügt diesen Registrierungsschlüssel hinzu, wenn Sie die Beispiel-Dienstanbieter-dll registrieren.
+Die Implementierung von DLLRegisterServer durch den Beispieldienstanbieter in Mdsp.cpp fügt diesen Registrierungsschlüssel hinzu, wenn Sie die Beispiel-Dienstanbieter-DLL registrieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -35,9 +35,9 @@ Die Implementierung von DllRegisterServer durch den Beispiel Dienstanbieter in m
 [**Erstellen eines Dienstanbieters**](creating-a-service-provider.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

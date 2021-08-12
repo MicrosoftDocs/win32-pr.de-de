@@ -1,57 +1,57 @@
 ---
-title: Einführung in die Veröffentlichungsassistenten
-description: Mit Windows XP werden der Webpublishing-Assistent und der Assistent für die Online druckbestellung eingeführt.
+title: Einführung in Veröffentlichungs-Assistenten
+description: Windows XP führt den Webpublishing-Assistenten und den Onlinedruckbestellungs-Assistenten ein.
 ms.assetid: da3adc24-5b37-48b5-b055-d5bfa572defd
 keywords:
-- Veröffentlichungs-Assistenten, Informationen zu
-- Webpublishing-Assistent, Informationen zu
-- Online-druckbestell-Assistent, Info
-- Veröffentlichungs-Assistenten, Webpublishing-Assistent
-- Veröffentlichungs-Assistenten, Assistent für Online-Druck Bestellungen
+- Veröffentlichungs-Assistenten,Informationen
+- Webpublishing-Assistent,Informationen
+- Onlinedruckbestellungs-Assistent,Informationen
+- Veröffentlichungs-Assistenten,Webpublishing-Assistent
+- Veröffentlichungs-Assistenten,Onlinedruckbestellungs-Assistent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b4e6d3c515edae23d0e74f550e000bdfdfacf03
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 70d576d04579847d2e65bbc59399d11689259f8e64823a3c3068cafad912ff8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118246673"
 ---
-# <a name="publishing-wizards-introduction"></a>Einführung in die Veröffentlichungsassistenten
+# <a name="publishing-wizards-introduction"></a>Einführung in Veröffentlichungs-Assistenten
 
-Mit Windows XP werden der Webpublishing-Assistent und der Assistent für die Online druckbestellung eingeführt. Basierend auf demselben Framework bieten diese Assistenten dem Benutzer einen einfachen Mechanismus zum Veröffentlichen von Inhalten auf einer Website oder zum Bestellen von Druck Vorzügen aus digitalen Bilddateien. Der Vorteil dieser Assistenten besteht darin, HTML-Inhalte von unterschiedlichen Anbietern auf den Seiten des Assistenten zu hosten, sodass die Optionen für das Aussehen, die Prozedur und die verfügbaren Benutzer vollständig vom Anbieter gesteuert werden und von Ihnen jederzeit geändert werden können, ohne dass sich dies auf den Client-Assistenten auswirkt, der Sie hostet. Obwohl diese vorhandenen Assistenten bereits mit digitaler Abbild Erstellung erstellt wurden, können das Framework und die Konzepte für viele andere Zwecke verwendet werden, wie z. b. einen Dokument Druckdienst oder als Methode zum Freigeben von Bildern für Freunde und Familien.
+Windows XP führt den Webpublishing-Assistenten und den Onlinedruckbestellungs-Assistenten ein. Basierend auf demselben Framework bieten diese Assistenten dem Benutzer einen einfachen Mechanismus zum Veröffentlichen von Inhalten auf einer Website oder zum Bestellen von Drucken aus digitalen Bilddateien. Der Vorteil dieser Assistenten besteht darin, dass sie HTML-Inhalte von verschiedenen Anbietern auf ihren Assistentenseiten hosten können, sodass das Aussehen, die Prozedur und die verfügbaren Benutzeroptionen vollständig vom Anbieter gesteuert werden und jederzeit ohne Auswirkungen auf den Client-Assistenten geändert werden können, der sie hostet. Diese vorhandenen Assistenten wurden zwar mithilfe der digitalen Bildverarbeitung erstellt, aber das Framework und die Konzepte können für viele andere Zwecke verwendet werden, z. B. für einen Dokumentdruckdienst oder als Methode zum Freigeben von Bildern für Freunde und Familienmitglieder.
 
 -   [Wie funktioniert es?](#how-does-it-work)
--   [Dokumentation des Veröffentlichungs-Assistenten](#publishing-wizard-documentation)
+-   [Dokumentation zum Veröffentlichungs-Assistenten](#publishing-wizard-documentation)
 
 ## <a name="how-does-it-work"></a>Wie funktioniert es?
 
-Die Benutzeroberfläche für den Webpublishing-Assistenten und den Assistenten für die Online druckbestellung ist ähnlich, aber der Einstiegspunkt für die einzelnen Assistenten ist unterschiedlich. Für den Webpublishing-Assistenten ist eine Aufgabe mit dem Titel **diesen Ordner im Web veröffentlichen** in der Liste **Datei-und Ordner Aufgaben** links neben den meisten Ordneransichten verfügbar. Der Text für die Aufgabe variiert je nach ausgewähltem Inhalt. Wenn z. b. eine Datei ausgewählt ist, liest der Task **Diese Datei im Web veröffentlichen** , wie im folgenden Beispiel gezeigt.
+Die Benutzeroberfläche für den Webveröffentlichungs-Assistenten und den Onlinedruckbestellungs-Assistenten ist ähnlich, aber der Einstiegspunkt für jeden Assistenten unterscheidet sich. Für den Webveröffentlichungs-Assistenten ist eine Aufgabe mit dem  Titel Diesen Ordner im **Web veröffentlichen** in der Liste Datei- und Ordneraufgaben links von den meisten Ordneransichten verfügbar. Der Text für die Aufgabe variiert je nach ausgewähltem Inhalt. Wenn beispielsweise eine Datei ausgewählt ist, liest die Aufgabe Diese Datei im **Web** veröffentlichen, wie im folgenden Beispiel gezeigt.
 
-![Datei-und Ordner Aufgaben](images/shell-pubwiz-tasks.png)
+![Datei- und Ordneraufgaben](images/shell-pubwiz-tasks.png)
 
-Der Benutzer klickt auf die Aufgabe, um den Assistenten zu starten. Wenn Sie mit dem Assistenten fortfahren, wird dem Benutzer eine Liste mit Anbietern angezeigt, wie im folgenden Beispiel gezeigt. Internet Dienstanbieter (ISPs) können Ihre eigenen Anbieter Seiten entwickeln und registrieren, die in dieser Liste angezeigt werden.
+Der Benutzer klickt auf die Aufgabe, um den Assistenten zu starten. Wenn Sie mit dem Assistenten fortfahren, wird dem Benutzer eine Liste von Anbietern angezeigt, wie im folgenden Beispiel gezeigt. Internetdienstanbieter (ISPs) können eigene Anbieterseiten entwickeln und registrieren, die in dieser Liste angezeigt werden sollen.
 
-![Liste der Veröffentlichungs-Assistenten Anbieter](images/shell-pubwiz-provs.png)
+![Anbieterliste des Veröffentlichungs-Assistenten](images/shell-pubwiz-provs.png)
 
-Sobald ein Anbieter ausgewählt ist, stellt der Assistent eine Verbindung mit dieser Site her und die ersten HTML-Seiten Downloads für die Anzeige im Assistenten. Wenn Benutzer über kein Konto mit dem ausgewählten Anbieter verfügen, können Sie eine einrichten.
+Nachdem ein Anbieter ausgewählt wurde, stellt der Assistent eine Verbindung mit dieser Website und die erste HTML-Seite wird zur Anzeige im Assistenten heruntergeladen. Wenn Benutzer kein Konto beim ausgewählten Anbieter haben, können sie eines einrichten.
 
-Mehrere HTML-Seiten sind auf einer einzelnen Seite des Assistenten enthalten. Das heißt, das Handle der Assistenten Seite, die diese Prozession von HTML-Seiten gehostet, bleibt konstant. Die HTML-Seiten werden im mittleren Bereich wie bei jeder Standard Assistenten Seite verfügbar gemacht. Die Anbieter Site stellt Methoden bereit, mit denen gesteuert werden kann, wo die Schaltflächen **zurück**, **weiter** und **Abbrechen** des Assistenten angezeigt werden, während die HTML-Seiten angezeigt werden. Innerhalb dieser HTML-Seiten werden Benutzer möglicherweise aufgefordert, einen Ordner anzugeben, in dem Sie Dateien kopieren oder den Namen einer Website speichern können, die Sie erstellen möchten. Nachdem ein Benutzer alle erforderlichen Schritte ausgeführt hat, ruft die Website eine Methode auf, um mit dem Hochladen zu beginnen, und gibt die Steuerung an den Assistenten zurück. Der Assistent selbst verarbeitet den Upload und alle zugehörigen Grafiken, wie z. b. eine Statusanzeige. Nachdem der Upload abgeschlossen ist, kann die Anbieter Website eine URL angeben, mit der der Benutzer nach dem Schließen des Assistenten fortfahren kann.
+Mehrere HTML-Seiten sind auf einer einzelnen Seite im Assistenten enthalten. Anders ausgedrückt: Das Handle der Assistentenseite, die diese Verarbeitung von HTML-Seiten hosten soll, bleibt konstant. Die HTML-Seiten werden wie bei jeder Standardseite des Assistenten im mittelpunkten Bereich verfügbar gemacht. Die Anbieterwebsite stellt Methoden zur Verfügung, um zu  steuern, wohin die Schaltflächen **Zurück,** **Weiter** und Abbrechen des Assistenten führen, während die HTML-Seiten angezeigt werden. Innerhalb dieser HTML-Seiten werden Benutzer möglicherweise aufgefordert, einen Ordner anzugeben, in den sie Dateien kopieren oder den Namen einer Website speichern können, die sie erstellen möchten. Nachdem ein Benutzer alle erforderlichen Schritte ausgeführt hat, ruft die Website eine -Methode auf, um den Upload zu starten, und gibt die Steuerung an den Assistenten zurück. Der Assistent selbst verarbeitet den Upload und alle damit wickeln Grafiken, z. B. eine Statusanzeige. Nach Abschluss des Uploads kann die Anbieterwebsite eine URL angeben, zu der der Benutzer wechseln kann, sobald der Assistent geschlossen wurde.
 
-Im Assistenten für die Online Druck Sortierung wird online ausgegeben, dass die Task **Reihenfolge** nur in Bild Ordnern wie z. b. "meine Bilder" angezeigt wird, wie im folgenden Beispiel gezeigt. Der Prozess ist jedoch dem Webpublishing-Assistenten sehr ähnlich. Der Anbieter Standort fordert Benutzer zur Eingabe von Optionen wie Bildauswahl, Druckgröße, Anzahl der Kopien und Zahlungsinformationen auf.
+Im Assistenten zum Bestellen von Onlinedrucken wird die Aufgabe Reihenfolge wird **online** gedruckt nur in Bildordnern wie Meine Bilder angezeigt, wie im folgenden Beispiel gezeigt. Der Prozess ähnelt jedoch dem Webveröffentlichungs-Assistenten. Die Anbieterwebsite fordert Benutzer zur Eingabe von Optionen auf, z. B. Bildauswahl, Druckgrößen, Anzahl von Kopien und Zahlungsinformationen.
 
-![Bild Aufgaben](images/shell-pubwiz-pix.png)
+![Bildaufgaben](images/shell-pubwiz-pix.png)
 
-## <a name="publishing-wizard-documentation"></a>Dokumentation des Veröffentlichungs-Assistenten
+## <a name="publishing-wizard-documentation"></a>Dokumentation zum Veröffentlichungs-Assistenten
 
-Der Webpublishing-Assistent und der Assistent für die Online druckbestellung werden in den folgenden Dokumenten ausführlich erläutert. Außerdem finden Sie Anweisungen zum Entwickeln von Anwendungen, die von Ihnen gehostet werden.
+Der Webveröffentlichungs-Assistent und der Onlinedruck-Bestell-Assistent werden in den folgenden Dokumenten ausführlich erläutert. Außerdem werden Anweisungen zum Entwickeln von Anwendungen erläutert, die von ihnen gehostet werden sollen.
 
--   [Client seitiges Design](pubwiz-client.md)
--   [Server seitiges Design](pubwiz-server.md)
--   [Registrieren eines Dienstanbieter](pubwiz-reg.md)
--   [Verwenden des Übertragungs Manifests](pubwiz-manifest.md)
--   [Schema des Übertragungs Manifests](/windows/desktop/shell/interfaces)
+-   [Clientseitiger Entwurf](pubwiz-client.md)
+-   [Serverseitiger Entwurf](pubwiz-server.md)
+-   [Registrieren eines Diensts](pubwiz-reg.md)
+-   [Verwenden des Übertragungsmanifests](pubwiz-manifest.md)
+-   [Manifestschema übertragen](/windows/desktop/shell/interfaces)
 
- 
+ 
 
- 
+ 

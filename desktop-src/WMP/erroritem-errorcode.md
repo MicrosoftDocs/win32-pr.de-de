@@ -1,9 +1,9 @@
 ---
-title: ErrorItem. ErrorCode
-description: Die ErrorCode-Eigenschaft ruft den aktuellen Fehlercode ab.
+title: ErrorItem.errorCode
+description: Die errorCode-Eigenschaft ruft den aktuellen Fehlercode ab.
 ms.assetid: 1495ec34-0995-40c6-bfd0-f3695784e057
 keywords:
-- ErrorItem. ErrorCode-Media Player
+- ErrorItem.errorCode Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c934b83b28e510f29b84a45b48bde700968c97b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f426bbaf1092b64cdb3578cb681282c9b27d9d2e2e23a69d50f9c065353ad104
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577704"
 ---
-# <a name="erroritemerrorcode"></a>ErrorItem. ErrorCode
+# <a name="erroritemerrorcode"></a>ErrorItem.errorCode
 
-Die **errorCode** -Eigenschaft ruft den aktuellen Fehlercode ab.
+Die **errorCode-Eigenschaft** ruft den aktuellen Fehlercode ab.
 
 ``` syntax
 player.error.item(
@@ -33,15 +33,15 @@ player.error.item(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie sollten *Einstellungen* festlegen. **enableerrordialogs** auf false, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Legen Sie *Einstellungen* fest. **enableErrorDialogs** wird auf FALSE festgelegt, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *ErrorItem* verwendet. **errorCode** in einem Ereignishandler, um dem Benutzer den Fehlercode anzuzeigen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *ErrorItem* verwendet. **errorCode** in einem Ereignishandler, um den Fehlercode für den Benutzer anzuzeigen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -69,7 +69,7 @@ document.write(message);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -81,7 +81,7 @@ document.write(message);
 [**ErrorItem-Objekt**](erroritem-object.md)
 </dt> <dt>
 
-[**ErrorItem. ErrorDescription**](erroritem-errordescription.md)
+[**ErrorItem.errorDescription**](erroritem-errordescription.md)
 </dt> </dl>
 
  

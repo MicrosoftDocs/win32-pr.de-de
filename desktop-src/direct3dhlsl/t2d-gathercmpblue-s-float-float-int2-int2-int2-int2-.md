@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gathercmpblue (S, float, float, int2, int2, int2, int2)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der blauen Komponente mit einem Vergleichswert zurückgegeben. | Texture2D:: gathercmpblue (S, float, float, int2, int2, int2, int2)-Funktion'
+title: Texture2D::GatherCmpBlue(S,float,float,int2,int2,int2,int2)-Funktion
+description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zurück. | Texture2D::GatherCmpBlue(S,float,float,int2,int2,int2,int2)-Funktion
 ms.assetid: DAA41BF3-6037-404F-9B35-C5F1302367B9
 keywords:
-- Gathercmpblue-Funktion HLSL
+- GatherCmpBlue-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9d66364dd1c07d692c87a9e3a05501a56a587cb3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 26638d790223f362dc2ba5d23f5f70500fe967fd6e026aef8321875b02872dbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285020"
 ---
-# <a name="texture2dgathercmpbluesfloatfloatint2int2int2int2-function"></a>Texture2D:: gathercmpblue (S, float, float, int2, int2, int2, int2)-Funktion
+# <a name="texture2dgathercmpbluesfloatfloatint2int2int2int2-function"></a>Texture2D::GatherCmpBlue(S,float,float,int2,int2,int2,int2)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der blauen Komponente mit einem Vergleichswert zurückgegeben.
+Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,81 +48,81 @@ TemplateType GatherCmpBlue(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*CompareValue* \[ in\]
+*CompareValue* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset1* \[ in\]
+*Offset1* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die erste Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die erste Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset2* \[ in\]
+*Offset2* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die zweite Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die zweite Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset3* \[ in\]
+*Offset3* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die dritte Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die dritte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset4* \[ in\]
+*Offset4* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die vierte Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -130,11 +130,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Gathercmpblue-Methoden](texture2d-gathercmpblue.md)
+[GatherCmpBlue-Methoden](texture2d-gathercmpblue.md)
 </dt> </dl>
 
  

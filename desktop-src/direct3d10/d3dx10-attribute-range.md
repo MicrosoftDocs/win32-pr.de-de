@@ -1,7 +1,7 @@
 ---
-description: 'D3DX10_ATTRIBUTE_RANGE Struktur: Speichert einen Attributtabelleneintrag.'
+description: 'D3DX10_ATTRIBUTE_RANGE struktur: Speichert einen Attributtabelleneintrag.'
 ms.assetid: 81c77dc9-e078-46a1-a435-4b241e36ec13
-title: D3DX10_ATTRIBUTE_RANGE-Struktur (D3DX10.h)
+title: D3DX10_ATTRIBUTE_RANGE -Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 3e2954483da53c77ebef57f9cf2de104734caba2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9dafba8928d0c488c0ab4a5c50bbe632012c70d1cebcced3e1c970e029f1181a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118303485"
 ---
 # <a name="d3dx10_attribute_range-structure"></a>D3DX10 \_ ATTRIBUTE \_ RANGE-Struktur
 
@@ -61,7 +61,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Beginnendes Gesicht.
+Startgesicht.
 
 </dd> <dt>
 
@@ -72,7 +72,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Gesichtsanzahl.
+Anzahl der Gesichtserkennungen.
 
 </dd> <dt>
 
@@ -83,7 +83,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Starten des Scheitelpunkts.
+Scheitelpunkt wird gestartet.
 
 </dd> <dt>
 
@@ -98,9 +98,9 @@ Scheitelpunktanzahl.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Attributtabelle wird verwendet, um Bereiche des Gitternetzes zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien usw. gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitters auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner (AttribId) gezeichnunget wird.
+Eine Attributtabelle wird verwendet, um Bereiche des Gitters zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien und so weiter gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitters auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner (AttribId) gezeichnunget wird.
 
 Der TYP LPD3DX ATTRIBUTE RANGE wird als Zeiger auf die \_ \_ D3DX \_ ATTRIBUTE \_ RANGE-Struktur definiert.
 
@@ -115,13 +115,13 @@ typedef D3DX_ATTRIBUTE_RANGE* LPD3DX_ATTRIBUTE_RANGE;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

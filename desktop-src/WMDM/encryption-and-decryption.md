@@ -3,60 +3,60 @@ title: Verschlüsselung und Entschlüsselung
 description: Verschlüsselung und Entschlüsselung
 ms.assetid: 6aef4138-0391-4edd-b4fc-d6d0ec3c735b
 keywords:
-- Windows Media Device Manager, Verschlüsselung
-- Device Manager, Verschlüsselung
-- Desktop Anwendungen, Verschlüsselung
-- Dienstanbieter, Verschlüsselung
-- Programmier Handbuch, Verschlüsselung
+- Windows Medien Geräte-Manager,Verschlüsselung
+- Geräte-Manager,Verschlüsselung
+- Desktopanwendungen, Verschlüsselung
+- Dienstanbieter,Verschlüsselung
+- Programmierhandbuch,Verschlüsselung
 - Verschlüsselung
-- Windows Media-Device Manager, Entschlüsselung
-- Device Manager, Entschlüsselung
-- Desktop Anwendungen, entschlüsseln
-- Dienstanbieter, Entschlüsselung
-- Programmier Handbuch, Entschlüsselung
+- Windows Medien Geräte-Manager,Entschlüsselung
+- Geräte-Manager,Entschlüsselung
+- Desktopanwendungen,Entschlüsselung
+- Dienstanbieter,Entschlüsselung
+- Programmierhandbuch,Entschlüsselung
 - Entschlüsselung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78688c1b4ca9991d8b322c6991de96a51e7e8d22
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a1c154910709007e502c1505fc6fc3274665942c9eabe8e24de5b30fe932d813
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584668"
 ---
 # <a name="encryption-and-decryption"></a>Verschlüsselung und Entschlüsselung
 
-Windows Media Device Manager erfordert die Verschlüsselung von Dateien, die zwischen dem Dienstanbieter und der Anwendung gesendet werden. Dafür können Sie zwei Methoden verwenden:
+Windows Medien Geräte-Manager erfordert die Verschlüsselung von Dateien, die zwischen dem Dienstanbieter und der Anwendung gesendet werden. Dafür können Sie zwei Methoden verwenden:
 
--   Wenn der Dienstanbieter nur [**imdspobject:: Read**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-read) und [**imdspobject:: Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-write)unterstützt, müssen die Daten von der Anwendung und dem Dienstanbieter mithilfe der Methoden [csecurechannelclient](csecurechannelclient-class.md) bzw. [csecurechannelserver](csecurechannelserver-class.md) verschlüsselt und entschlüsselt werden.
--   Wenn der Dienstanbieter [**IMDSPObject2:: Read onclearchannel**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject2-readonclearchannel) und [**IMDSPObject2:: Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject2-writeonclearchannel)Service Provider unterstützt, kann die Anwendung eine teure sichere Kanalnachrichten Authentifizierung vermeiden. (Der sichere Kanal wird beibehalten, sodass Legacy-Dienstanbieter, die [**IMDSPObject2**](/windows/desktop/api/mswmdm/nn-mswmdm-imdspobject2) nicht implementieren, weiterhin funktionieren können.)
+-   Wenn der Dienstanbieter nur [**IMDSPObject::Read**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-read) und [**IMDSPObject::Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-write)unterstützt, müssen die Daten von der Anwendung und dem Dienstanbieter mithilfe der [Methoden CSecureChannelClient](csecurechannelclient-class.md) bzw. [CSecureChannelServer](csecurechannelserver-class.md) verschlüsselt und entschlüsselt werden.
+-   Wenn der Dienstanbieter [**IMDSPObject2::ReadOnClearChannel**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject2-readonclearchannel) und [**IMDSPObject2::WriteOnClearChannel**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject2-writeonclearchannel)unterstützt, kann Ihre Anwendung kostspielige sichere Kanalnachrichtenauthentifizierung vermeiden. (Der sichere Kanal wird beibehalten, sodass Legacydienstanbieter, die [**IMDSPObject2**](/windows/desktop/api/mswmdm/nn-mswmdm-imdspobject2) nicht implementieren, weiterhin funktionieren können.)
 
-Die Verschlüsselungs Anforderung verhindert, dass böswillige Anwendungen Daten abrufen, die zwischen Softwarekomponenten übermittelt werden, und schützt außerdem die Integrität der Daten, die an das Gerät gesendet werden.
+Die Verschlüsselungsanforderung verhindert, dass schädliche Anwendungen Daten abrufen, die zwischen Softwarekomponenten übergeben werden, und schützt auch die Integrität der Daten, die an das Gerät oder vom Gerät gesendet werden.
 
-Die folgenden drei Methoden müssen verschlüsselt oder entschlüsselt werden.
+Die folgenden drei Methoden erfordern eine Verschlüsselung oder Entschlüsselung.
 
 
 
 | Methode                                                                          | BESCHREIBUNG                                                                                                |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**Iwmdmoperation:: transferobjectdata**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation-transferobjectdata) | Asyl Verschlüsselung oder Entschlüsselung, abhängig davon, ob die Anwendung Daten sendet oder empfängt. |
-| [**Imdspobject:: Read**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-read)                                   | (Dienstanbieter) Verschlüsselungs.                                                                             |
-| [**Imdspobject:: Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-write)                                 | (Dienstanbieter) Entschlüsselung.                                                                             |
+| [**IWMDMOperation::TransferObjectData**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation-transferobjectdata) | (Anwendung) Verschlüsselung oder Entschlüsselung, je nachdem, ob die Anwendung Daten sendet oder empfängt. |
+| [**IMDSPObject::Read**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-read)                                   | (Dienstanbieter) Verschlüsselung.                                                                             |
+| [**IMDSPObject::Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-write)                                 | (Dienstanbieter) Entschlüsselung.                                                                             |
 
 
 
- 
+ 
 
-Verschlüsselung und Entschlüsselung werden von einzelnen Methoden aufrufen durchgeführt. Die Verschlüsselung erfolgt durch [**csecurechannelclient:: verschlüsseltparam**](/previous-versions/bb231587(v=vs.85)) für Anwendungen oder durch [**csecurechannelserver:: verschlüsseltparam**](/previous-versions/ms868509(v=msdn.10)) für Dienstanbieter. Die Entschlüsselung erfolgt durch [**csecurechannelclient::D ecryptparam**](/previous-versions/bb231586(v=vs.85)) für Anwendungen oder [**csecurechannelserver::D ecryptparam**](/previous-versions/bb231598(v=vs.85)) für Dienstanbieter. Die Parameter sind zwischen den Client-und Server Methoden identisch.
+Die Verschlüsselung und Entschlüsselung erfolgt jeweils durch einzelne Methodenaufrufe. Die Verschlüsselung erfolgt durch [**CSecureChannelClient::EncryptParam**](/previous-versions/bb231587(v=vs.85)) für Anwendungen oder durch [**CSecureChannelServer::EncryptParam**](/previous-versions/ms868509(v=msdn.10)) für Dienstanbieter. Die Entschlüsselung erfolgt durch [**CSecureChannelClient::D ecryptParam**](/previous-versions/bb231586(v=vs.85)) für Anwendungen oder [**CSecureChannelServer::D ecryptParam**](/previous-versions/bb231598(v=vs.85)) für Dienstanbieter. Die Parameter sind zwischen der Client- und der Servermethode identisch.
 
-In den folgenden Schritten wird gezeigt, wie Daten verschlüsselt und entschlüsselt werden. (Diese Schritte sind nur dann wichtig, wenn Ihre Anwendung mit einem Legacy Dienstanbieter kommuniziert, der [IWMDMOperation3:: transferobjectdataonclearchannel](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation3-transferobjectdataonclearchannel)nicht implementiert.)
+Die folgenden Schritte zeigen, wie Daten verschlüsselt und entschlüsselt werden. (Diese Schritte sind nur wichtig, wenn Ihre Anwendung mit einem Legacy-Dienstanbieter kommuniziert, der [IWMDMOperation3::TransferObjectDataOnClearChannel](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmoperation3-transferobjectdataonclearchannel)nicht implementiert.)
 
 **Verschlüsselung**
 
-1.  Erstellen Sie den Mac-Schlüssel für die verschlüsselten Daten, wie in [Nachrichten Authentifizierung](message-authentication.md)beschrieben.
-2.  Nennen Sie **verschlüsseltparam** mit den zu verschlüsselnden Daten, um eine direkte Verschlüsselung auszuführen.
+1.  Erstellen Sie den MAC-Schlüssel für die verschlüsselten Daten, wie unter [Nachrichtenauthentifizierung](message-authentication.md)beschrieben.
+2.  Rufen Sie **EncryptParam** mit den zu verschlüsselnden Daten auf, um eine verschlüsselungsbasierte Verschlüsselung durchzuführen.
 
-Im folgenden Codebeispiel wird die Implementierung von [**imdspobject:: Read**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-read)eines Dienstanbieters veranschaulicht. Diese Methode erstellt den Mac-Schlüssel mithilfe der zu verschlüsselnden Daten und der Größe der Daten und sendet beide an die Anwendung.
+Im folgenden Codebeispiel wird die Implementierung von [**IMDSPObject::Read**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-read)eines Dienstanbieters veranschaulicht. Diese Methode erstellt den MAC-Schlüssel mithilfe der Daten zum Verschlüsseln und der Größe der Daten und sendet beide an die Anwendung.
 
 
 ```C++
@@ -139,10 +139,10 @@ Error:
 
 **Entschlüsselung**
 
-1.  Wenden Sie **decryptparam** mit den zu verschlüsselnden Daten an, um eine direkte Entschlüsselung auszuführen.
-2.  Überprüfen Sie den Mac-Schlüssel für die entschlüsselten Daten, wie in [Nachrichten Authentifizierung](message-authentication.md)beschrieben.
+1.  Rufen Sie **DecryptParam** mit den zu verschlüsselnden Daten auf, um eine direkte Entschlüsselung durchzuführen.
+2.  Überprüfen Sie den MAC-Schlüssel für die entschlüsselten Daten, wie unter [Nachrichtenauthentifizierung](message-authentication.md)beschrieben.
 
-Im folgenden Codebeispiel wird die Implementierung von [**imdspobject:: Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-write)eines Dienstanbieters veranschaulicht. Diese Methode erstellt den Mac-Schlüssel mithilfe der zu verschlüsselnden Daten und der Größe der Daten und sendet beide an die Anwendung.
+Im folgenden Codebeispiel wird die Implementierung von [**IMDSPObject::Write**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspobject-write)durch einen Dienstanbieter veranschaulicht. Diese Methode erstellt den MAC-Schlüssel mithilfe der Daten zum Verschlüsseln und der Größe der Daten und sendet beide an die Anwendung.
 
 
 ```C++
@@ -216,9 +216,9 @@ Error:
 
 <dl> <dt>
 
-[**Verwenden sicherer authentifizierter Kanäle**](using-secure-authenticated-channels.md)
+[**Verwenden von sicheren authentifizierten Kanälen**](using-secure-authenticated-channels.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

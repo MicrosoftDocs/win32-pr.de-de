@@ -1,23 +1,23 @@
 ---
-title: store_structured (SM5-ASM)
-description: Zufälliger Zugriff auf Schreibvorgänge von 1-4 32-Bit-Komponenten in eine strukturierte Puffer-UAV (unsortierter Zugriffs Ansicht).
+title: store_structured (sm5 – asm)
+description: Schreiben von 1-4 32-Bit-Komponenten mit wahlfreiem Zugriff in eine strukturierte, ungeordnete Pufferzugriffsansicht (UAV).
 ms.assetid: 8080B2CA-5BDA-4F01-8B2B-B85BDD58C5AF
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5890d30fac57923365f0bdea89fcce55f7922c7
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 6a220fca330ba4198669245f0336b363c448067613e3f21fce44c9af9325bd9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285755"
 ---
-# <a name="store_structured-sm5---asm"></a>\_strukturierte Geschäfte (SM5-ASM)
+# <a name="store_structured-sm5---asm"></a>store \_ structured (sm5 – asm)
 
-Zufälliger Zugriff auf Schreibvorgänge von 1-4 32-Bit-Komponenten in eine strukturierte Puffer-UAV (unsortierter Zugriffs Ansicht).
+Schreiben von 1-4 32-Bit-Komponenten mit wahlfreiem Zugriff in eine strukturierte, ungeordnete Pufferzugriffsansicht (UAV).
 
 
 
-| Store \_ strukturiert dst0 \[ . Write \_ mask \] , dstaddress \[ . Select \_ Component \] , dstbyteoffset \[ . Select \_ Component \] , src0 \[ . Swizzle\] |
+| store \_ structured dst0 \[ .write mask , \_ \] dstAddress \[ .select component , \_ \] dstByteOffset \[ .select component , \_ \] src0 \[ .swizzle\] |
 |---------------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -26,26 +26,26 @@ Zufälliger Zugriff auf Schreibvorgänge von 1-4 32-Bit-Komponenten in eine stru
 
 
 
-| Element                                                                                                                       | BESCHREIBUNG                                                    |
+| Element                                                                                                                       | Beschreibung                                                    |
 |----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                            | \[in \] der Adresse der Ergebnisse des Vorgangs.<br/> |
-| <span id="dstAddress"></span><span id="dstaddress"></span><span id="DSTADDRESS"></span>*dstaddress*<br/>             | \[in \] der Adresse, an der geschrieben werden soll.<br/>               |
-| <span id="dstByteOffset"></span><span id="dstbyteoffset"></span><span id="DSTBYTEOFFSET"></span>*dstbyteoffset*<br/> | \[im \] Index der zu schreibenden-Struktur.<br/>         |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                            | \[in \] den zu schreibende Komponenten.<br/>                     |
+| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                            | \[in \] Die Adresse der Ergebnisse des Vorgangs.<br/> |
+| <span id="dstAddress"></span><span id="dstaddress"></span><span id="DSTADDRESS"></span>*dstAddress*<br/>             | \[in \] Die Adresse, an der geschrieben werden soll.<br/>               |
+| <span id="dstByteOffset"></span><span id="dstbyteoffset"></span><span id="DSTBYTEOFFSET"></span>*dstByteOffset*<br/> | \[in \] Der Index der zu schreibende Struktur.<br/>         |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                            | \[in \] Die zu schreibende Komponenten.<br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt 1-4 \* -Komponente-32-Bit-Komponenten aus, die von *src0* auf *dst0* an der Adresse in *dstaddress* und *dstbyteoffset* geschrieben wurden. Keine Formatkonvertierung.
+Diese Anweisung führt \* 32-Bit-Komponenten mit 1 bis 4 Komponenten aus, die von *src0* in *dst0* an der Adresse in *dstAddress* und *dstByteOffset* geschrieben wurden. Keine Formatkonvertierung.
 
-*dst0* muss eine UAV (u \# ) sein. Im COMPUTE-Shader kann es sich auch um einen Thread Gruppen-Shared Memory (g \# ) handeln.
+*dst0* muss ein UAV (u \# ) sein. Im Compute-Shader kann es sich auch um freigegebenen Speicher der Threadgruppe \# (g) befinden.
 
-*dstaddress* gibt den Index der zu schreibenden Struktur an.
+*dstAddress* gibt den Index der zu schreibenden Struktur an.
 
-Der Speicherort der geschriebenen Daten entspricht dem folgenden Pseudo Code, der den Offset, die Adresse, den Zeiger auf den Pufferinhalt, den Schritt der Quelle und die Daten, die linear gespeichert werden, anzeigt.
+Die Position der geschriebenen Daten entspricht dem folgenden Pseudocode, der den Offset, die Adresse, den Zeiger auf den Pufferinhalt, den Schritt der Quelle und die linear gespeicherten Daten anzeigt.
 
 ``` syntax
                     BYTE *BufferContents;             // from dst0
@@ -74,25 +74,25 @@ Der Speicherort der geschriebenen Daten entspricht dem folgenden Pseudo Code, de
                              WriteComponents * sizeof(INT32));
 ```
 
-Dieser Pseudo Code zeigt, wie der Vorgang funktioniert, aber die tatsächlichen Daten müssen nicht linear gespeichert werden. Wenn die Daten nicht linear gespeichert werden, muss die tatsächliche Operation der Anweisung mit dem Verhalten des obigen Vorgangs identisch sein.
+Dieser Pseudocode zeigt, wie der Vorgang funktioniert, aber die tatsächlichen Daten müssen nicht linear gespeichert werden. Wenn die Daten nicht linear gespeichert werden, muss der tatsächliche Vorgang der Anweisung mit dem Verhalten des obigen Vorgangs übereinstimmen.
 
-*dst0* kann nur eine Schreib Maske aufweisen, die eine der folgenden ist:. x,. XY,. XYZ,. xyzw. Die Schreib Maske bestimmt die Anzahl der 32-Bit-Komponenten, die ohne Lücken geschrieben werden sollen.
+*dst0* kann nur über eine Schreibmaske verfügen, die eine der folgenden Ist: .x, .xy, .xyz, .xyzw. Die Schreibmaske bestimmt die Anzahl der 32-Bit-Komponenten, die ohne Lücken geschrieben werden sollen.
 
-Wenn die Adressierung von " \# *dstaddress* " nicht mehr begrenzt ist, bedeutet dies, dass nichts in den Speicher außerhalb des gültigen Bereichs geschrieben wird.
+Die Adressierung außerhalb der Grenzen für u \# casued by *dstAddress* bedeutet, dass nichts in den Arbeitsspeicher außerhalb der Grenzen geschrieben wird.
 
-Wenn *dstbyteoffset*, einschließlich *dstschreitemask*, den Zugriff für den Zugriff auf Sie verursacht, wird \# der gesamte Inhalt der UAV nicht definiert.
+Wenn *dstByteOffset*, einschließlich *dstWriteMask,* den Zugriff außerhalb der Grenzen auf Sie \# verursacht, wird der gesamte Inhalt des UAV nicht definiert.
 
-Die Adressierung auf g \# (die Begrenzungen dieses bestimmten g \# , im Gegensatz zum gesamten freigegebenen Speicher) für eine bestimmte 32-Bit-Komponente bewirkt, dass der gesamte Inhalt des gesamten freigegebenen Speichers undefiniert wird.
+Die Adressierung außerhalb der Grenzen von g \# (die Begrenzungen dieses bestimmten g \# im Gegensatz zum gesamten freigegebenen Arbeitsspeicher) für eine bestimmte 32-Bit-Komponente bewirkt, dass der gesamte Inhalt des gesamten freigegebenen Speichers nicht definiert wird.
 
-*dstbyteoffset* ist ein separates Argument von *dstaddress* , da es sich in der Regel um ein Literalelement handelt. Diese Parameter Trennung wurde nicht für Atomics in strukturiertem Arbeitsspeicher durchgeführt.
+*dstByteOffset* ist ein separates Argument von *dstAddress,* da es sich häufig um ein Literal handelt. Diese Parametertrennung wurde für Atomaren im strukturierten Speicher nicht durchgeführt.
 
-CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen diese Anweisung für UAV und TGSM.
+cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützen diese Anweisung für UAV und TGSM.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | X     | X       |
 
@@ -100,11 +100,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8 verfügbar ist.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -112,20 +112,20 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
@@ -135,7 +135,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

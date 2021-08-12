@@ -1,7 +1,7 @@
 ---
-description: Wendet den Animations Satz auf den angegebenen Titel an.
+description: Wendet den Animationssatz auf die angegebene Spur an.
 ms.assetid: f48bb0f1-3ccd-4db9-8a30-58c79ae0939e
-title: 'ID3DXAnimationController:: settrackanimationset-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::SetTrackAnimationSet-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9dce979e48ed118dc257c147b27615f7bbc89231
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a94fee2a0bd80f391b514895aa5b5348cbef6d8a53e31200b49a403a6712e2d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118296883"
 ---
-# <a name="id3dxanimationcontrollersettrackanimationset-method"></a>ID3DXAnimationController:: settrackanimationset-Methode
+# <a name="id3dxanimationcontrollersettrackanimationset-method"></a>ID3DXAnimationController::SetTrackAnimationSet-Methode
 
-Wendet den Animations Satz auf den angegebenen Titel an.
+Wendet den Animationssatz auf die angegebene Spur an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetTrackAnimationSet(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner des Titels, auf den der Animations Satz angewendet wird.
+Bezeichner der Spur, auf die der Animationssatz angewendet wird.
 
 </dd> <dt>
 
-*panimset* \[ in\]
+*pAnimSet* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONSET**](id3dxanimationset.md)**
 
-Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz, der der Spur hinzugefügt werden soll.
+Zeiger auf die [**ID3DXAnimationSet-Animation,**](id3dxanimationset.md) die der Spur hinzugefügt werden soll.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz, d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt den Animations Satz auf den angegebenen Titel für die Mischung fest. Der Animations Satz für jede Spur wird entsprechend der Last und Geschwindigkeit des Titels gemischt, wenn [**AdvanceTime**](id3dxanimationcontroller--advancetime.md) aufgerufen wird.
+Diese Methode legt den Animationssatz auf die angegebene Spur zum Mischen fest. Die Für jede Spur festgelegte Animation wird entsprechend der Gewichtung und Geschwindigkeit der Spur kombiniert, wenn [**AdvanceTime**](id3dxanimationcontroller--advancetime.md) aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Diese Methode legt den Animations Satz auf den angegebenen Titel für die Mischu
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

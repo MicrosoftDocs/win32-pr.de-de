@@ -1,9 +1,9 @@
 ---
-title: Player. Network
-description: Die Netzwerk Eigenschaft ruft das Netzwerk Objekt ab.
+title: Player.network
+description: Die Netzwerkeigenschaft ruft das Network-Objekt ab.
 ms.assetid: 83de787c-5071-40fa-bed4-df8aa6f78380
 keywords:
-- Player. Network-Windows-Media Player
+- Player.network-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,24 +14,24 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69db4438545bb23cdc99f2fdfe26132bb5b892cf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b998444447a0fa5c16b3db9767371ffa3d52cd62ca5eb3a4c89e2b0a4a1a453
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572942"
 ---
-# <a name="playernetwork"></a>Player. Network
+# <a name="playernetwork"></a>Player.network
 
-Die **Netzwerk** Eigenschaft ruft das Netzwerk Objekt ab.
+Die **Netzwerkeigenschaft** ruft das Network-Objekt ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **Netzwerk**
+*Player* . **network**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschütztes Netzwerk Objekt.
+Diese Eigenschaft ist ein schreibgeschütztes Network-Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Diese Eigenschaft ist ein Schreib geschütztes Netzwerk Objekt.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -48,7 +48,7 @@ Diese Eigenschaft ist ein Schreib geschütztes Netzwerk Objekt.
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)

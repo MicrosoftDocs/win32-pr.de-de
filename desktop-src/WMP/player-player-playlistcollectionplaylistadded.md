@@ -1,11 +1,11 @@
 ---
-title: Player. playlistcollectionplaylistadded-Ereignis
-description: Das playlistcollectionplaylistadded-Ereignis tritt auf, wenn der Wiedergabelisten Auflistung eine Wiedergabeliste hinzugefügt wird. | Player. playlistcollectionplaylistadded-Ereignis
+title: Player.PlaylistCollectionPlaylistAdded-Ereignis
+description: Das PlaylistCollectionPlaylistAdded-Ereignis tritt auf, wenn der Wiedergabelistensammlung eine Wiedergabeliste hinzugefügt wird. | Player.PlaylistCollectionPlaylistAdded-Ereignis
 ms.assetid: 07acb5e6-d832-4f0b-a6bb-2b7ba27c368d
 keywords:
-- Playlistcollectionplaylistadded-Ereignisfenster Media Player
-- Playlistcollectionplaylistadded-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, playlistcollectionplaylistadded-Ereignis
+- PlaylistCollectionPlaylistAdded-Ereignis Windows Media Player
+- PlaylistCollectionPlaylistAdded-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , PlaylistCollectionPlaylistAdded-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e6a229aff95d29ae93433dab538521d88c50c1a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1e72dcacbb60c141348a295fe086957b1404475e9e3be90433f8bdbe816fc834
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118572589"
 ---
-# <a name="playerplaylistcollectionplaylistadded-event"></a>Player. playlistcollectionplaylistadded-Ereignis
+# <a name="playerplaylistcollectionplaylistadded-event"></a>Player.PlaylistCollectionPlaylistAdded-Ereignis
 
-Das **playlistcollectionplaylistadded** -Ereignis tritt auf, wenn der Wiedergabelisten Auflistung eine Wiedergabeliste hinzugefügt wird.
+Das **PlaylistCollectionPlaylistAdded-Ereignis** tritt auf, wenn der Wiedergabelistensammlung eine Wiedergabeliste hinzugefügt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.PlaylistCollectionPlaylistAdded(
 
 <dl> <dt>
 
-*bstrauplaylistname* 
+*bstrPlaylistName* 
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Namen der hinzugefügten Wiedergabeliste angibt.
+**Zeichenfolge,** die den Namen der hinzugefügten Wiedergabeliste angibt.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Eine **Zeichenfolge** , die den Namen der hinzugefügten Wiedergabeliste angibt.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Name der hinzugefügten Wiedergabeliste kann verwendet werden, um das entsprechende **Wiedergabe** Listen Objekt mithilfe von *playlistcollection* abzurufen. **getByName** -Methode.
+Der Name der hinzugefügten Wiedergabeliste kann verwendet werden, um das entsprechende **Wiedergabelistenobjekt** mithilfe der *PlaylistCollection* abzurufen. **getByName-Methode.**
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -67,7 +67,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -79,7 +79,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Playlistcollection. getByName**](playlistcollection-getbyname.md)
+[**PlaylistCollection.getByName**](playlistcollection-getbyname.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Ereignis. Schaltfläche
-description: Mit dem Button-Attribut wird ein Wert abgerufen, der angibt, welche Maustasten beim Eintreten des Ereignisses nicht angezeigt wurden.
+title: event.button
+description: Das Schaltflächenattribut ruft einen Wert ab, der angibt, welche Maustasten beim Ereignis heruntergefahren waren.
 ms.assetid: 58fb1522-9946-4942-b4bf-4cff37f7dbaf
 keywords:
-- Ereignis. Button-Fenster Media Player
+- event.button-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f218c0703bd2847cc0f3b7fb2091bbb02e7863e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dbf9b98412630c91f0b0ffea03acf5c8f9a53043b280efdabbfffb8b972a17d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577667"
 ---
-# <a name="eventbutton"></a>Ereignis. Schaltfläche
+# <a name="eventbutton"></a>event.button
 
-Mit dem **Button** -Attribut wird ein Wert abgerufen, der angibt, welche Maustasten beim Eintreten des Ereignisses nicht angezeigt wurden.
+Das **Schaltflächenattribut** ruft einen Wert ab, der angibt, welche Maustasten beim Ereignis heruntergefahren waren.
 
 ``` syntax
 event.button
@@ -29,16 +29,16 @@ event.button
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 
 
-| Wert | BESCHREIBUNG                      |
+| Wert | Beschreibung                      |
 |-------|----------------------------------|
-| 0     | Keine Maustasten.      |
-| 1     | Die linke Maustaste ist nicht mehr vorhanden.  |
-| 2     | Die Rechte Maustaste wurde gedrückt. |
-| 3     | Beide Maustasten waren nicht angezeigt.    |
+| 0     | Es waren keine Maustasten heruntergefahren.      |
+| 1     | Die linke Maustaste war nach unten.  |
+| 2     | Die rechte Maustaste war gedrückt. |
+| 3     | Beide Maustasten waren gedrückt.    |
 
 
 
@@ -50,7 +50,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -58,7 +58,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> </dl>
 
  

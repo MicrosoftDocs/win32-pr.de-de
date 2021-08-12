@@ -1,36 +1,36 @@
 ---
-description: Die Aktualisierung der Variablen Aktualisierungsrate erfordert, dass das Zerreißen aktiviert ist. Dies wird auch als &\# 0034; VSYNC-off&\# 0034;-Unterstützung bezeichnet.
+description: Variable Aktualisierungsrate zeigt an, dass die Löschung aktiviert werden muss. Dies wird auch als unterstützung für &\# 0034;vsync-off&\# 0034; bezeichnet.
 ms.assetid: C5F140DD-5BAF-404A-9253-611831C4D424
-title: Variable Aktualisierungsrate anzeigen
+title: Variable Aktualisierungsrate wird angezeigt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: da6e658d84c51a6b51bc32855226194b9c22507e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 349592ce49d1008f6337b53c7f524ac7303907f75cd99205fe79bf55988b934b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118288923"
 ---
-# <a name="variable-refresh-rate-displays"></a>Variable Aktualisierungsrate anzeigen
+# <a name="variable-refresh-rate-displays"></a>Variable Aktualisierungsrate wird angezeigt
 
-Die Anzeige der Variablen Aktualisierungsrate erfordert, dass das *zerreißen* aktiviert wird. Dies wird auch als "VSYNC-Off"-Unterstützung bezeichnet.
+Variable Aktualisierungsrate zeigt an, dass *das Löschen* aktiviert werden muss. Dies wird auch als "vsync-off"-Unterstützung bezeichnet.
 
--   [Variable Aktualisierungsrate wird angezeigt/VSYNC deaktiviert](#variable-refresh-rate-displaysvsync-off)
+-   [Variable Aktualisierungsrate wird angezeigt/Vsync deaktiviert](#variable-refresh-rate-displaysvsync-off)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="variable-refresh-rate-displaysvsync-off"></a>Variable Aktualisierungsrate wird angezeigt/VSYNC deaktiviert
+## <a name="variable-refresh-rate-displaysvsync-off"></a>Variable Aktualisierungsrate wird angezeigt/Vsync deaktiviert
 
-Unterstützung für die Anzeige von Variablen Aktualisierungs Raten wird erreicht, indem beim Erstellen und darstellen der Swapkette bestimmte Flags festgelegt werden.
+Die Unterstützung für die Anzeige variabler Aktualisierungsrate wird erreicht, indem bestimmte Flags beim Erstellen und Darstellen der Swapkette festgelegt werden.
 
-Um dieses Feature verwenden zu können, müssen sich App-Benutzer auf Windows 10-Systemen befinden, auf denen entweder [KB3156421](https://support.microsoft.com/kb/3156421) oder das Anniversary Update installiert ist. Die Funktion funktioniert in allen Versionen von Direct3D 11 und 12 mithilfe von **DXGI \_ Swap \_ Effect \_ Flip \_ \** _ Swap-Effekten.
+Um dieses Feature verwenden zu können, müssen sich App-Benutzer auf Windows 10 Systemen mit [installierten KB3156421-](https://support.microsoft.com/kb/3156421) oder Anniversary Update-Systemen befingen. Das Feature funktioniert für alle Versionen von Direct3D 11 und 12 mit **DXGI \_ SWAP EFFECT \_ \_ \_ \* FLIP-Swapeffekten.**
 
-Weitere Informationen zum Hinzufügen von VSYNC-off für Ihre apps finden Sie in einem Beispiel für eine komplette Ausführung für Direct3D 12, _ *D3D12Fullscreen** (siehe [funktionierende Beispiele](../direct3d12/working-samples.md)). Es gibt auch einige Punkte, die nicht explizit im Beispielcode genannt werden, aber Sie müssen darauf achten.
+Informationen zum Hinzufügen von vsync-off-Unterstützung zu Ihren Apps finden Sie in einem vollständig ausgeführten Beispiel für Direct3D 12, **D3D12Fullscreen** (siehe [Working Samples](../direct3d12/working-samples.md)). Es gibt auch einige Punkte, die im Beispielcode nicht explizit erwähnt werden, aber Sie müssen darauf achten.
 
--   [**Resizebuffers**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizebuffers) (oder [**ResizeBuffers1**](/windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgiswapchain3-resizebuffers1)) muss das gleiche Flag für die Auslagerungs Ketten Erstellung (DXGI- \_ SwapChain- \_ \_ Flag \_ zulassen \_ ) als [**vorhanden**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-present) (oder [**Present1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)) erhalten.
--   DXGI \_ Present das Beenden \_ \_ kann nur mit dem Synchronisierungs Intervall 0 verwendet werden. Es wird empfohlen, dieses Tränen Kennzeichen immer zu übergeben, wenn Sie das Synchronisierungs Intervall 0 verwenden, wenn [**checkfeaturesupport**](/windows/desktop/api/DXGI1_5/nf-dxgi1_5-idxgifactory5-checkfeaturesupport) meldet, dass das Zerreißen unterstützt wird *und* sich die APP im Fenstermodus befindet, einschließlich des Modus ohne Rand. Weitere Informationen finden Sie in den [**DXGI \_ Present**](dxgi-present.md) -Konstanten.
--   Durch das Deaktivieren von VSYNC wird Ihre Framerate nicht zwangsläufig aufgehoben: Entwickler müssen auch sicherstellen, dass [**vorhandene**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-present) Aufrufe nicht durch andere Zeit Steuerungs Ereignisse (z. b. das `CompositionTarget::Rendering` Ereignis in einer XAML-basierten APP) gedrosselt werden.
+-   [**Für ResizeBuffers**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizebuffers) (oder [**ResizeBuffers1**](/windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgiswapchain3-resizebuffers1)) muss dasselbe Flag für die Erstellung der Swapkette (DXGI \_ SWAP CHAIN FLAG ALLOW \_ \_ \_ \_ TEARING) als [**Present**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-present) (oder [**Present1)**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)übergeben werden.
+-   DXGI \_ PRESENT \_ ALLOW \_ TEARING kann nur mit dem Synchronisierungsintervall 0 verwendet werden. Es wird empfohlen, dieses Löschflag bei Verwendung des Synchronisierungsintervalls 0 immer zu übergeben, wenn [**CheckFeatureSupport**](/windows/desktop/api/DXGI1_5/nf-dxgi1_5-idxgifactory5-checkfeaturesupport) meldet, dass das Löschen unterstützt wird *und* sich die App in einem Fenstermodus befindet – einschließlich des rahmenfreien Vollbildmodus. Weitere Informationen finden Sie in den [**DXGI \_ PRESENT-Konstanten.**](dxgi-present.md)
+-   Durch das Deaktivieren von vsync wird die Framerate nicht [](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-present) unbedingt aufgehoben: Entwickler müssen auch sicherstellen, dass Present-Aufrufe nicht durch andere Zeitsteuerungsereignisse gedrosselt werden (z. B. das `CompositionTarget::Rendering` Ereignis in einer XAML-basierten App).
 
-Mit dem folgenden Code werden einige wichtige Elemente, die Sie Ihren apps hinzufügen müssen, zusammengefasst.
+Der folgende Code fasst einige wichtige Teile zusammen, die Sie Ihren Apps hinzufügen müssen.
 
 ``` syntax
 //--------------------------------------------------------------------------------------------------------
@@ -81,10 +81,10 @@ ThrowIfFailed(m_swapChain->Present(0, presentFlags));
 
 <dl> <dt>
 
-[DXGI 1,5-Verbesserungen](dxgi-1-5-improvements.md)
+[DXGI 1.5-Verbesserungen](dxgi-1-5-improvements.md)
 </dt> <dt>
 
-[Programmier Handbuch für DXGI](dx-graphics-dxgi-overviews.md)
+[Programmierhandbuch für DXGI](dx-graphics-dxgi-overviews.md)
 </dt> </dl>
 
  

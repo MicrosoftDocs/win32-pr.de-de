@@ -1,9 +1,9 @@
 ---
-title: Query-Objekt
-description: Das Query-Objekt stellt eine Verbund Abfrage dar.
+title: Abfrageobjekt
+description: Das Query-Objekt stellt eine zusammengesetzte Abfrage dar.
 ms.assetid: a0094897-a7f5-40ba-af49-e5a5a8fcb762
 keywords:
-- Objekt Fenster Media Player Abfragen
+- Abfrageobjekt-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b9ab64f76243065e28ebf83eedb0845f30642751
-ms.sourcegitcommit: 4f5016b1fbfd703dbf769c508db464c2518c0fa5
+ms.openlocfilehash: 4c0b6684722478ef913a5d03d5e50c2f7d76fc692696661357b970388397b494
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104389362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118570641"
 ---
-# <a name="query-object"></a>Query-Objekt
+# <a name="query-object"></a>Abfrageobjekt
 
-Das **Query** -Objekt stellt eine Verbund Abfrage dar.
+Das **Query-Objekt** stellt eine zusammengesetzte Abfrage dar.
 
-Das **Query** -Objekt unterstützt die folgenden Methoden.
+Das **Query-Objekt** unterstützt die folgenden Methoden.
 
 
 
-| Methode                                     | BESCHREIBUNG                                               |
+| Methode                                     | Beschreibung                                               |
 |--------------------------------------------|-----------------------------------------------------------|
-| [addcondition](query-addcondition.md)     | Fügt dem **Abfrage** Objekt mithilfe der-und der-Logik eine Bedingung hinzu. |
-| [beginnextgroup](query-beginnextgroup.md) | Startet eine neue Bedingungs Gruppe.                             |
+| [addCondition](query-addcondition.md)     | Fügt dem Query-Objekt **mithilfe der AND-Logik** eine Bedingung hinzu. |
+| [beginNextGroup](query-beginnextgroup.md) | Startet eine neue Bedingungsgruppe.                             |
 
 
 
- 
+ 
 
-Zum Zweck der Veranschaulichung wird "Player. mediacollection. kreatequery ()" verwendet, um das **Abfrage** Objekt in den Abschnitten der Verweis Syntax darzustellen.
+Zur Veranschaulichung wird player.mediaCollection.createQuery() verwendet, um das **Query-Objekt** in den Referenzsyntaxabschnitten dargestellt.
 
--   [Informationen zum Query-Objekt](about-the-query-object.md)
--   [Mediacollection. kreatequery](mediacollection-createquery.md)
--   [Mediacollection. getplaylistbyquery](mediacollection-getplaylistbyquery.md)
--   [Mediacollection. getstringcollectionbyquery](mediacollection-getstringcollectionbyquery.md)
--   [Objektmodell Referenz für die Skripterstellung](object-model-reference-for-scripting.md)
+-   [Informationen zum Abfrageobjekt](about-the-query-object.md)
+-   [MediaCollection.createQuery](mediacollection-createquery.md)
+-   [MediaCollection.getPlaylistByQuery](mediacollection-getplaylistbyquery.md)
+-   [MediaCollection.getStringCollectionByQuery](mediacollection-getstringcollectionbyquery.md)
+-   [Objektmodellreferenz für die Skripterstellung](object-model-reference-for-scripting.md)
 
- 
+ 
 
- 
+ 
 
 
 

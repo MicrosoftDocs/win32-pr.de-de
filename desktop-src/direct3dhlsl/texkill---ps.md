@@ -1,5 +1,5 @@
 ---
-title: texkill-PS
+title: texkill - ps
 description: Bricht das Rendering des aktuellen Pixels ab, wenn eine der ersten drei Komponenten (UVW) der Texturkoordinaten kleiner als 0 (null) ist.
 ms.assetid: 7641aef8-8931-4a19-827a-75ab17e901ac
 ms.topic: reference
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4da9c6b59a3c16eeecb8755f2f19542df6ee8a7b
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 462549a9caba9b4b49ca5b5ac088e41320b3d6f731a78a0251d5191cc601a2e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118284028"
 ---
-# <a name="texkill---ps"></a>texkill-PS
+# <a name="texkill---ps"></a>texkill - ps
 
 Bricht das Rendering des aktuellen Pixels ab, wenn eine der ersten drei Komponenten (UVW) der Texturkoordinaten kleiner als 0 (null) ist.
 
@@ -24,52 +24,52 @@ Bricht das Rendering des aktuellen Pixels ab, wenn eine der ersten drei Komponen
 
 
 
-| texkill DST |
+| texkill dst |
 |-------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist ein Ziel Register
+-   dst ist ein Zielregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texkill               | x    | x    | x    | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Diese Anweisung entspricht der " [**Clip**](dx-graphics-hlsl-clip.md) "-Funktion von HLSL.
+Diese Anweisung entspricht der [**Clipfunktion**](dx-graphics-hlsl-clip.md) von HLSL.
 
-texkill führt keine Stichprobe für eine Textur aus. Er arbeitet auf den ersten drei Komponenten der Texturkoordinaten, die von der Ziel Registernummer angegeben werden. Für PS \_ 1 \_ 4 arbeitet texkill mit den Daten in den ersten drei Komponenten des Ziel Registers.
+texkill führt keine Stichprobenentnahme für eine Textur durch. Er arbeitet mit den ersten drei Komponenten der Texturkoordinaten, die von der Zielregisternummer angegeben werden. Für ps \_ 1 \_ 4 verarbeitet texkill die Daten in den ersten drei Komponenten des Zielregisters.
 
-Sie können diese Anweisung verwenden, um beliebige Clip-Ebenen im Rasterizer zu implementieren.
+Sie können diese Anweisung verwenden, um beliebige Clipebenen im Rasterizer zu implementieren.
 
-Bei der Verwendung von Vertex-Shadern ist die Anwendung für das Anwenden der Perspektiven Transformation verantwortlich. Dies kann Probleme für die willkürlichen clippingflächen verursachen, denn wenn Sie anfügende Skalierungsfaktoren enthält, müssen auch die Clip-Ebenen transformiert werden. Daher ist es am besten, eine nicht projizierte Scheitelpunkt Position für die Verwendung im beliebigen clipperdienst bereitzustellen. dabei handelt es sich um den durch den texkill-Operator identifizierten Texturkoordinaten Satz.
+Bei Verwendung von Vertex-Shadern ist die Anwendung für die Anwendung der Perspektiventransformation verantwortlich. Dies kann Probleme für die beliebigen Clippingebenen verursachen, da die Clipebenen ebenfalls transformiert werden müssen, wenn sie anisomorphe Skalierungsfaktoren enthalten. Daher ist es am besten, eine nicht projizierte Scheitelpunktposition bereitzustellen, die im beliebigen Clipper verwendet werden kann. Dabei handelt es sich um den Texturkoordinatensatz, der vom Texkill-Operator identifiziert wird.
 
 Diese Anweisung wird wie folgt verwendet:
 
-<dl> texkill TN  
-Die Pixel Maskierung wird wie folgt durchgeführt:  
-if (x, y, z Komponenten von TextureCoordinates (Stufe n)<sub>uvwq</sub>< 0)  
-Pixel Rendering Abbrechen
+<dl> texkill tn  
+Die Pixelmaskierung wird wie folgt durchgeführt:  
+if ( die x,y,z-Komponenten von TextureCoordinates(stage n)<sub>UVWQ</sub>< 0 )  
+Abbrechen des Pixelrenderings
 </dl>
 
-Für den Pixelshader 1 \_ 1, 1 \_ 2 und 1 \_ 3 arbeitet texkill mit dem Texturkoordinaten Satz, der von der Ziel Registernummer angegeben wird. In Version 1 \_ 4 arbeitet texkill jedoch mit den Daten, die im [Texturkoordinaten Register](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) (TN) oder in dem temporären Register (RN) enthalten sind, das als Ziel angegeben wurde.
+Für den Pixelshader 1 \_ 1, 1 \_ 2 und 1 \_ 3 arbeitet texkill mit der Texturkoordinatenmenge, die von der Zielregisternummer angegeben wird. In Version 1 \_ 4 arbeitet texkill jedoch mit den Daten, die im [Texturkoordinatenregister (tn)](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) oder im temporären Register (rn) enthalten sind, das als Ziel angegeben wurde.
 
-Wenn die multisamplinggrad-Funktion aktiviert ist, werden alle Antialiasing-Effekte, die aufgrund von multisamplinggrad auf Polygon Kanten erzielt wurden, nicht an einem von texkill generierten Edge erreicht. Der Pixelshader wird einmal pro Pixel ausgeführt.
+Wenn Multisampling aktiviert ist, werden alle Antialiasingeffekte, die aufgrund von Multisampling an Polygonrändern erzielt werden, nicht entlang eines Edges erreicht, der von texkill generiert wurde. Der Pixelshader wird einmal pro Pixel ausgeführt.
 
 Dieses Beispiel dient nur zur Veranschaulichung.
 
-In diesem Beispiel werden Pixel mit negativen Texturkoordinaten maskiert. Die Pixel Farben werden aus Scheitelpunkt Farben interpoliert, die in den Scheitelpunkt Daten bereitgestellt werden.
+In diesem Beispiel werden Pixel mit negativen Texturkoordinaten maskiert. Die Pixelfarben werden aus scheitelpunktfarben interpoliert, die in den Scheitelpunktdaten bereitgestellt werden.
 
 
 ```
@@ -82,11 +82,11 @@ mov r0, v0   // Move the diffuse color in v0 to r0
 
 
 
-Die Texturkoordinaten reichen von-0,5 bis 0,5 in u und 0,0 bis 1,0 in v. Diese Anweisung bewirkt, dass die negativen u-Werte maskiert werden. Die erste Abbildung unten zeigt die Vertexfarbe, die auf das Vierfache angewendet wird, ohne dass die texkill-Anweisung angewendet wurde. Die zweite Abbildung unten zeigt das Ergebnis der texkill-Anweisung. Die Pixel Farben aus den Texturkoordinaten unterhalb von 0 (wobei x von-0,5 bis 0,0 reicht) werden maskiert. Die Hintergrundfarbe (weiß) wird verwendet, wenn die Pixelfarbe maskiert ist.
+Die Texturkoordinaten reichen von -0,5 bis 0,5 in u und 0,0 bis 1,0 in v. Diese Anweisung bewirkt, dass die negativen u-Werte maskiert werden. Die erste Abbildung unten zeigt die Scheitelpunktfarbe, die auf das Quad angewendet wird, ohne dass die Texkill-Anweisung angewendet wurde. Die zweite Abbildung unten zeigt das Ergebnis der Texkill-Anweisung. Die Pixelfarben der Texturkoordinaten unter 0 (wobei x von -0,5 bis 0,0 verläuft) werden maskiert. Die Hintergrundfarbe (weiß) wird verwendet, wenn die Pixelfarbe maskiert ist.
 
-![Abbildung der Ausgabe mit der auf das Vierfache angewendeten Vertexfarbe ohne die texkill-Anweisung](images/pstexkill-in.jpg)![Darstellung der Ausgabe mit angewendeter texkill-Anweisung](images/pstexkill-out.jpg)
+![Abbildung der Ausgabe mit der Vertexfarbe, die ohne die Texkill-Anweisung auf das Quad angewendet wird](images/pstexkill-in.jpg)![Abbildung der Ausgabe mit angewendeter Texkill-Anweisung](images/pstexkill-out.jpg)
 
-Die Texturkoordinaten Daten werden in diesem Beispiel in der Vertex-Daten Deklaration deklariert.
+Die Texturkoordinatendaten werden in diesem Beispiel in der Vertexdatendeklaration deklariert.
 
 
 ```
@@ -120,9 +120,9 @@ static CUSTOMVERTEX g_Vertices[]=
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

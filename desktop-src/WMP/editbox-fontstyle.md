@@ -1,9 +1,9 @@
 ---
-title: EditBox. FontStyle
-description: Das FontStyle-Attribut gibt den Schrift Schnitt für das Bearbeitungsfeld-Steuerelement an oder ruft ihn ab.
+title: EDITBOX.fontStyle
+description: Das attribut fontStyle gibt den Schriftschnitt für das Bearbeitungsfeld-Steuerelement an oder ruft den Schriftschnitt ab.
 ms.assetid: bc71359d-2b75-4134-99e8-52b2ca48dcde
 keywords:
-- EditBox. FontStyle-Fenster Media Player
+- EDITBOX.fontStyle-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d4249f6224099c3d2a36a3b26244c9b804be519c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 65d9dc5ac5fe3750fb3a6af8658a5ddb30274764cc891438162434a44651322a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118578846"
 ---
-# <a name="editboxfontstyle"></a>EditBox. FontStyle
+# <a name="editboxfontstyle"></a>EDITBOX.fontStyle
 
-Das **FontStyle** -Attribut gibt den Schrift Schnitt für das Bearbeitungsfeld-Steuerelement an oder ruft ihn ab.
+Das **attribut fontStyle** gibt den Schriftschnitt für das Bearbeitungsfeld-Steuerelement an oder ruft den Schriftschnitt ab.
 
 ``` syntax
         elementID.fontStyle
@@ -29,27 +29,27 @@ Das **FontStyle** -Attribut gibt den Schrift Schnitt für das Bearbeitungsfeld-S
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen oder mehrere der folgenden Werte enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die mindestens einen der folgenden Werte enthält.
 
 
 
-| Wert     | BESCHREIBUNG           |
+| Wert     | Beschreibung           |
 |-----------|-----------------------|
-| Fett      | Fett Schriftstil.      |
-| Kursiv    | Kursiv Schriftstil.    |
-| Underline | Unterstreichung der Schriftart. |
-| Durchgestrichen | Stil der Strikeout-Schriftart. |
-| Normal    | Normaler Schriftart Stil.    |
+| Fett      | Fetter Schriftschnitt.      |
+| Kursiv    | Italischer Schriftschnitt.    |
+| Underline | Unterstrichen Sie den Schriftschnitt. |
+| Durchgestrichen | Schriftschnitt mit durchsaarten Zeichen. |
+| Normal    | Normaler Schriftschnitt.    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine beliebige Kombination der Werte kann mit Leerzeichen getrennt verwendet werden. Der normale Stil hat Vorrang vor allen anderen Werten, und alle anderen Werte, die zusammen mit normal angegeben werden, werden ignoriert.
+Jede Kombination der Werte kann verwendet werden, getrennt durch Leerzeichen. Der Normal-Stil hat Vorrang vor allen anderen Werten, und alle anderen werte, die zusammen mit Normal angegeben werden, werden ignoriert.
 
-Zu Renderingzwecken ist normal der Standard Schriftart Stil. Der Standardwert, der von diesem Attribut abgerufen wird, ist "" (leere Zeichenfolge).
+Zu Renderingzwecken ist Normal der Standardschriftstil. Der Standardwert, der von diesem Attribut abgerufen wird, ist "" (leere Zeichenfolge).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,13 +65,13 @@ Zu Renderingzwecken ist normal der Standard Schriftart Stil. Der Standardwert, d
 
 <dl> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> <dt>
 
-[**EditBox. fontface**](editbox-fontface.md)
+[**EDITBOX.fontFace**](editbox-fontface.md)
 </dt> <dt>
 
-[**EditBox. FontSize**](editbox-fontsize.md)
+[**EDITBOX.fontSize**](editbox-fontsize.md)
 </dt> </dl>
 
  

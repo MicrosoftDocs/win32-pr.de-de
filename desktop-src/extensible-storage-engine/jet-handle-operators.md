@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_HANDLE-Operatoren'
-title: JET_HANDLE-Operatoren
+description: 'Erfahren Sie mehr über: JET_HANDLE Operatoren'
+title: JET_HANDLE Operatoren
 TOCTitle: JET_HANDLE operators
 ms:assetid: 5d3fcd9b-50a0-dfff-a38e-a6bfe82cf496
 ms:mtpsurl: https://msdn.microsoft.com/library/Hh557794(v=EXCHG.10)
 ms:contentKeyID: 39512315
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 4d7abae5aca585debf7f17595bbba294340fe6ce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 62a1bfce3f2c2f0606d34c9f3d4263967ecc3738134bc08c02e73efa25657b8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104560407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118254277"
 ---
-# <a name="jet_handle-operators"></a>JET_HANDLE-Operatoren
+# <a name="jet_handle-operators"></a>JET_HANDLE Operatoren
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [JET_HANDLE](./jet-handle-structure.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_HANDLE](./jet-handle-structure.md) macht die folgenden Member verfügbar.
 
 ## <a name="operators"></a>Operatoren
 
@@ -35,12 +35,12 @@ Der [JET_HANDLE](./jet-handle-structure.md) -Typ macht die folgenden Member verf
 <tr class="odd">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh557740(v=exchg.10).md">Gleichheit</a></td>
-<td>Bestimmt, ob zwei angegebene Instanzen von JET_HANDLE gleich sind.</td>
+<td>Bestimmt, ob zwei angegebene Instanzen JET_HANDLE gleich sind.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh578013(v=exchg.10).md">Ungleichheit</a></td>
-<td>Bestimmt, ob zwei angegebene Instanzen von JET_HANDLE nicht gleich sind.</td>
+<td>Bestimmt, ob zwei angegebene Instanzen JET_HANDLE gleich sind.</td>
 </tr>
 </tbody>
 </table>
@@ -52,6 +52,6 @@ Oben
 
 #### <a name="reference"></a>Referenz
 
-[JET_HANDLE Struktur](./jet-handle-structure.md)
+[JET_HANDLE-Struktur](./jet-handle-structure.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

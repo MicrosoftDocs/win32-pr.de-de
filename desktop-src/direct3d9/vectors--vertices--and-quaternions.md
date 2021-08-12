@@ -1,33 +1,33 @@
 ---
-description: In Direct3D beschreiben Vertices Position und Ausrichtung. Jeder Scheitelpunkt in einem primitiven wird durch einen Vektor beschrieben, der seine Position, Farbe, Texturkoordinaten und einen normalen Vektor übergibt, der seine Ausrichtung ermöglicht.
+description: In Direct3D beschreiben Scheitelungen die Position und Ausrichtung. Jeder Scheitelpunkt in einem Primitiven wird durch einen Vektor beschrieben, der seine Position, Farbe, Texturkoordinaten und einen normalen Vektor angibt, der seine Ausrichtung angibt.
 ms.assetid: f18b235c-97ff-4779-8584-8e96b62c7ca3
-title: Vektoren, Vertices und Quaternionen (Direct3D 9)
+title: Vektoren, Scheitelungen und Quaternionen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c2e6e6e316b633359205ffd24a64aa349eeec74
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 601b6a71dcb00356d4de4637a6aabb1eba5c02e49c62380b32732351d15bfcb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118290441"
 ---
-# <a name="vectors-vertices-and-quaternions-direct3d-9"></a>Vektoren, Vertices und Quaternionen (Direct3D 9)
+# <a name="vectors-vertices-and-quaternions-direct3d-9"></a>Vektoren, Scheitelungen und Quaternionen (Direct3D 9)
 
-In Direct3D beschreiben Vertices Position und Ausrichtung. Jeder Scheitelpunkt in einem primitiven wird durch einen Vektor beschrieben, der seine Position, Farbe, Texturkoordinaten und einen normalen Vektor übergibt, der seine Ausrichtung ermöglicht.
+In Direct3D beschreiben Scheitelungen die Position und Ausrichtung. Jeder Scheitelpunkt in einem Primitiven wird durch einen Vektor beschrieben, der seine Position, Farbe, Texturkoordinaten und einen normalen Vektor angibt, der seine Ausrichtung angibt.
 
-Quaternionen fügen ein viertes Element zu den \[ x-, y-, z- \] Werten hinzu, die einen drei komponentenvektor definieren. Quaternionen stellen eine Alternative zu den Matrix Methoden dar, die in der Regel für 3D-Drehungen verwendet werden. Eine Quaternion stellt eine Achse im 3D-Raum und eine Drehung um diese Achse dar. Beispielsweise kann eine Quaternion eine (1, 1, 2) Achse und eine Drehung von einem Radian darstellen. Quaternions enthalten wertvolle Informationen, aber ihre wahre Leistung ergibt sich aus den beiden Vorgängen, die Sie ausführen können: Komposition und interpolung.
+Quaternionen fügen den \[ x-, y-, z-Werten, die einen \] Drei-Komponenten-Vektor definieren, ein viertes Element hinzu. Quaternionen sind eine Alternative zu den Matrixmethoden, die in der Regel für 3D-Drehungen verwendet werden. Eine Quaternion stellt eine Achse im 3D-Raum und eine Drehung um diese Achse dar. Beispielsweise kann eine Quaternion eine (1,1,2) Achse und eine Drehung von 1 Bogenmaß darstellen. Quaternionen enthalten wertvolle Informationen, aber ihre wahre Leistung geht auf die beiden Vorgänge zurück, die Sie für sie ausführen können: Komposition und Interpolation.
 
-Das Durchführen der Komposition in Quaternionen ähnelt dem kombinieren. Die Komposition von zwei Quaternionen ist wie in der folgenden Abbildung dargestellt.
+Das Durchführen der Komposition für Quaternionen ähnelt der Kombination dieser Quaternionen. Die Zusammensetzung von zwei Quaternionen wird wie in der folgenden Abbildung dargestellt notiert.
 
-![Abbildung der Quaternion-Notation](images/quateq.png)
+![Abbildung der Quaternions-Notation](images/quateq.png)
 
-Die Komposition von zwei Quaternionen, die auf eine Geometrie angewendet werden, bedeutet "Drehen der Geometrie um die Achse" durch Drehung, und drehen Sie Sie um die Achse ₁ durch Drehung ₁. " In diesem Fall stellt q eine Drehung um eine einzelne Achse dar, die das Ergebnis der Anwendung von q-Wert ist, und dann q ₁ auf die Geometrie.
+Die Zusammensetzung von zwei Quaternionen, die auf eine Geometrie angewendet werden₂ bedeutet "die Geometrie um die Achse drehen₂ durch Drehung₂ und dann um die Achse drehen₁ durch Drehung₁." In diesem Fall stellt Q eine Drehung um eine einzelne Achse dar, die das Ergebnis der Anwendung von q₂ und dann q₁ auf die Geometrie ist.
 
-Mithilfe der Quaternion-interpolung kann eine Anwendung einen Smooth-und einen angemessenen Pfad von einer Achse und eine Ausrichtung auf eine andere berechnen. Aus diesem Grund bietet die Interpolationsmethode zwischen q ₁ und q-CO2 eine einfache Möglichkeit, um von einer Ausrichtung zu einer anderen zu animieren.
+Mithilfe der Quaternioninterpolation kann eine Anwendung einen reibungslosen und angemessenen Pfad von einer Achse und Ausrichtung zur anderen berechnen. Daher bietet die Interpolation zwischen q₁ und q₂ eine einfache Möglichkeit, von einer Ausrichtung zur anderen zu animieren.
 
-Wenn Sie Komposition und Interpolationen zusammen verwenden, bieten Sie eine einfache Möglichkeit, um eine Geometrie auf eine komplexe Weise zu manipulieren. Stellen Sie sich beispielsweise vor, dass Sie über eine Geometrie verfügen, die Sie zu einer bestimmten Ausrichtung drehen möchten. Sie wissen, dass Sie die r-Grad-um-Achse um die Achse umdrehen und dann den Wert r ₁ Grad um Achse ₁ drehen möchten, aber die endgültige Quaternion ist nicht bekannt. Mithilfe der Komposition können Sie die beiden Rotationen der Geometrie kombinieren, um eine einzelne Quaternion zu erhalten, die das Ergebnis ist. Anschließend könnten Sie von der ursprünglichen zur zusammengesetzten Quaternion interpolieren, um einen reibungslosen Übergang von einem zum anderen zu erzielen.
+Wenn Sie Komposition und Interpolation zusammen verwenden, bieten sie Ihnen eine einfache Möglichkeit, eine Geometrie auf eine komplexe Weise zu bearbeiten. Angenommen, Sie verfügen über eine Geometrie, die Sie zu einer bestimmten Ausrichtung drehen möchten. Sie wissen, dass Sie es r₂ Grad um die Achse drehen möchten₂ und dann um die Achse drehen möchten₁ Grad um die Achse₁ aber Sie kennen die endgültige Quaternion nicht. Mithilfe der Komposition können Sie die beiden Drehungen der Geometrie kombinieren, um eine einzelne Quaternion zu erhalten, die das Ergebnis ist. Anschließend können Sie von der ursprünglichen zur zusammengesetzten Quaternion interpolieren, um einen reibungslosen Übergang von der einen zur anderen zu erreichen.
 
-Die D3DX Utility Library enthält Funktionen, die Ihnen bei der Arbeit mit Quaternionen helfen. Die [**D3DXQuaternionRotationAxis**](d3dxquaternionrotationaxis.md) -Funktion fügt z. b. einen Rotations Wert zu einem Vektor hinzu, der eine Achse der Drehung definiert, und gibt das Ergebnis in einer Quaternion zurück, die durch eine [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur definiert ist. Außerdem führt die [**D3DXQuaternionMultiply**](d3dxquaternionmultiply.md) -Funktion Quaternionen aus, und [**D3DXQuaternionSlerp**](d3dxquaternionslerp.md) führt eine sphärische lineare interpolung zwischen zwei Quaternionen aus.
+Die D3DX-Hilfsprogrammbibliothek enthält Funktionen, die Ihnen bei der Arbeit mit Quaternionen helfen. Beispielsweise fügt die [**D3DXQuaternionRotationAxis-Funktion**](d3dxquaternionrotationaxis.md) einem Vektor, der eine Drehachse definiert, einen Drehungswert hinzu und gibt das Ergebnis in einer Quaternion zurück, die durch eine [**D3DXQUATERNION-Struktur**](d3dxquaternion.md) definiert ist. Darüber hinaus erstellt die [**D3DXQuaternionMultiply-Funktion**](d3dxquaternionmultiply.md) Quaternionen, und [**D3DXQuaternionSlerp**](d3dxquaternionslerp.md) führt eine pherische lineare Interpolation zwischen zwei Quaternionen durch.
 
 Direct3D-Anwendungen können die folgenden Funktionen verwenden, um die Arbeit mit Quaternionen zu vereinfachen.
 
@@ -50,7 +50,7 @@ Direct3D-Anwendungen können die folgenden Funktionen verwenden, um die Arbeit m
 -   [**D3DXQuaternionSquad**](d3dxquaternionsquad.md)
 -   [**D3DXQuaternionToAxisAngle**](d3dxquaterniontoaxisangle.md)
 
-Direct3D-Anwendungen können die folgenden Funktionen verwenden, um die Aufgabe der Arbeit mit drei-Komponenten-Vektoren zu vereinfachen.
+Direct3D-Anwendungen können die folgenden Funktionen verwenden, um die Arbeit mit drei Komponentenvektoren zu vereinfachen.
 
 -   [**D3DXVec3Add**](d3dxvec3add.md)
 -   [**D3DXVec3BaryCentric**](d3dxvec3barycentric.md)
@@ -72,7 +72,7 @@ Direct3D-Anwendungen können die folgenden Funktionen verwenden, um die Aufgabe 
 -   [**D3DXVec3TransformNormal**](d3dxvec3transformnormal.md)
 -   [**D3DXVec3Unproject**](d3dxvec3unproject.md)
 
-Viele zusätzliche Funktionen, die Aufgaben mit zwei-und vier-Komponenten-Vektoren vereinfachen, sind in den [mathematischen Funktionen](dx9-graphics-reference-d3dx-functions-math.md) enthalten, die von der D3DX Utility Library bereitgestellt werden.
+Viele zusätzliche Funktionen, die Aufgaben mit zwei- und vier [](dx9-graphics-reference-d3dx-functions-math.md) Komponentenvektoren vereinfachen, sind in den mathematischen Funktionen enthalten, die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

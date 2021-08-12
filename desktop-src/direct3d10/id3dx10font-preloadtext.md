@@ -1,7 +1,7 @@
 ---
-description: Laden Sie formatierten Text in den Videospeicher, um die Effizienz beim Rendern auf das Gerät zu verbessern. Diese Methode unterstützt ANSI-und Unicode-Zeichen folgen.
+description: Laden Sie formatierten Text in den Videospeicher, um die Effizienz des Renderns auf dem Gerät zu verbessern. Diese Methode unterstützt ANSI- und Unicode-Zeichenfolgen.
 ms.assetid: 0e5380fc-7a01-4e09-9c18-22087be56780
-title: ID3DX10Font::P reloadtext-Methode (d3dx10. h)
+title: ID3DX10Font::P reloadText-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c7294fb7e86b3532960a34a15e1118dc33f748f2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 23c7a3a8ce8ed3534a7369f167ce1045d200cbaeea1aa80653e05412ffa978e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118302845"
 ---
-# <a name="id3dx10fontpreloadtext-method"></a>ID3DX10Font::P reloadtext-Methode
+# <a name="id3dx10fontpreloadtext-method"></a>ID3DX10Font::P reloadText-Methode
 
-Laden Sie formatierten Text in den Videospeicher, um die Effizienz beim Rendern auf das Gerät zu verbessern. Diese Methode unterstützt ANSI-und Unicode-Zeichen folgen.
+Laden Sie formatierten Text in den Videospeicher, um die Effizienz des Renderns auf dem Gerät zu verbessern. Diese Methode unterstützt ANSI- und Unicode-Zeichenfolgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ HRESULT PreloadText(
 
 <dl> <dt>
 
-*pstring* \[ in\]
+*pString* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
@@ -50,12 +50,12 @@ Zeiger auf eine Zeichenfolge, die in den Videospeicher geladen werden soll. Wenn
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
-Anzahl der Zeichen in der Text Zeichenfolge.
+Anzahl der Zeichen in der Textzeichenfolge.
 
 </dd> </dl>
 
@@ -63,17 +63,17 @@ Anzahl der Zeichen in der Text Zeichenfolge.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufzurufen in preloadtextw aufgelöst. Andernfalls wird der Funktions Aufrufwert in preloadtexta aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in PreloadTextW aufgelöst. Andernfalls wird der Funktionsaufruf in PreloadTextA aufgelöst, da ANSI-Zeichenfolgen verwendet werden.
 
-Diese Methode generiert Texturen, die Symbole enthalten, die den Eingabetext darstellen. Die Symbole werden als eine Reihe von Dreiecken gezeichnet.
+Diese Methode generiert Texturen, die Glyphen enthalten, die den Eingabetext darstellen. Die Glyphen werden als eine Reihe von Dreiecken gezeichnet.
 
-Der Text wird nicht auf dem Gerät gerendert. ID3DX10Font::D rawtext muss nach wie vor aufgerufen werden, um den Text zu erzeugen. Durch das vorab Laden von Text in den Videospeicher verwendet ID3DX10Font::D rawtext erheblich weniger CPU-Ressourcen.
+Text wird nicht auf dem Gerät gerendert. ID3DX10Font::D rawText muss weiterhin aufgerufen werden, um den Text zu rendern. Durch das Vorabladen von Text in den Videospeicher beansprucht ID3DX10Font::D rawText jedoch deutlich weniger CPU-Ressourcen.
 
-Diese Methode konvertiert Zeichen intern mithilfe der GDI-Funktion [getcharakteriplacement](/previous-versions//ms534004(v=vs.85))in Glyphen.
+Diese Methode konvertiert Zeichen intern mithilfe der GDI-Funktion [GetCharacterPlacement](/previous-versions//ms534004(v=vs.85))in Glyphen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Diese Methode konvertiert Zeichen intern mithilfe der GDI-Funktion [getcharakter
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

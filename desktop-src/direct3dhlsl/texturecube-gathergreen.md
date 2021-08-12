@@ -1,9 +1,9 @@
 ---
-title: 'Texturecube:: texturecube gathergreen-Methoden'
-description: 'Gibt die grünen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Texturecube:: texturecube gathergreen-Methoden'
+title: TextureCube::TextureCube GatherGreen-Methoden
+description: Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden. | TextureCube::TextureCube GatherGreen-Methoden
 ms.assetid: F70AA57B-D54C-4F78-ABD1-7F8D3AD44997
 keywords:
-- Gathergreen-Methoden HLSL
+- GatherGreen-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,28 +12,28 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: b0eaac705ce15b0174903cc87e630b14df28becb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: acc46aec3c248fc89c69eba9f4a820e1b3c3c513a7ac36afa36b3f48aac521d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283699"
 ---
-# <a name="texturecubegathergreen-methods"></a>Texturecube:: gathergreen-Methoden
+# <a name="texturecubegathergreen-methods"></a>TextureCube::GatherGreen-Methoden
 
-Gibt die grünen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                               | BESCHREIBUNG                                                                                                                                       |
+| Methode                                                               | Beschreibung                                                                                                                                       |
 |:---------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Gathergrün (S, float, uint)**](tcube-gathergreen-s-float-uint-.md)  | Gibt die grünen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang zusammen mit dem Status der Kachel Zuordnung verwendet werden.<br/> |
+| [**GatherGreen(S,float,uint)**](tcube-gathergreen-s-float-uint-.md)  | Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

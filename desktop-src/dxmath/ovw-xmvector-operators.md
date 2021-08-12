@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Operatoren werden von der xmvector-Struktur verfügbar gemacht.
+description: Die folgenden Operatoren werden von der XMVECTOR-Struktur verfügbar gemacht.
 ms.assetid: 16fc1276-7bed-4e6f-8af5-d871afa73b68
-title: Xmvector-Operatoren
+title: XMVECTOR-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0611be5e9737e2829bc06f9a3fade10db233cbcc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d7c0430b8b3457f90ab42909c619a4fbdac918ed12f6ded7484dc3b4f2ef250
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118277032"
 ---
-# <a name="xmvector-operators"></a>Xmvector-Operatoren
+# <a name="xmvector-operators"></a>XMVECTOR-Operatoren
 
-Die folgenden Operatoren werden von der [**xmvector**](xmvector-data-type.md) -Struktur verfügbar gemacht.
+Die folgenden Operatoren werden von der [**XMVECTOR-Struktur**](xmvector-data-type.md) verfügbar gemacht.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,14 +26,14 @@ Die folgenden Operatoren werden von der [**xmvector**](xmvector-data-type.md) -S
 
 | Methoden                                                    | BESCHREIBUNG                                                                                                                                 |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Operator + =**](/previous-versions/windows/desktop/legacy/ee421394(v=vs.85))<br/>  | Fügt einer Instanz einen Gleit Komma Wert hinzu `XMVECTOR` und gibt einen Verweis auf die aktualisierte-Instanz zurück. <br/>                         |
-| [**Operator-=**](/previous-versions/windows/desktop/legacy/ee421383(v=vs.85))<br/>    | Subtrahiert einen Gleit Komma Wert von der aktuellen Instanz von `XMVECTOR` und gibt das Ergebnis in der aktualisierten aktuellen Instanz zurück. <br/> |
-| [**Operator \** _](xmvector-operator-mul.md)<br/>    | Multiplikations Operator<br/>                                                                                                         |
-| [*Operator \* =* _*](xmvector-operator-muleq.md)<br/> | Multiplikations Zuweisung<br/>                                                                                              |
-| [**KOM**](xmvector-operator-div.md)<br/>     | Divisionsoperator<br/>                                                                                                               |
-| [**Operator/=**](xmvector-operator-diveq.md)<br/>  | Divisions Zuweisungs Operator.<br/>                                                                                                    |
-| [**KOM**](xmvector-operator--.md)<br/>       | Subtraktions-und Negations Operatoren<br/>                                                                                               |
-| [**Operator +**](xmvector-operator-pls.md)<br/>     | Addition-Operatoren.<br/>                                                                                                              |
+| [**operator +=**](/previous-versions/windows/desktop/legacy/ee421394(v=vs.85))<br/>  | Fügt einer -Instanz einen Gleitkommawert `XMVECTOR` hinzu und gibt einen Verweis auf die aktualisierte Instanz zurück. <br/>                         |
+| [**operator -=**](/previous-versions/windows/desktop/legacy/ee421383(v=vs.85))<br/>    | Subtrahiert einen Gleitkommawert von der aktuellen Instanz von `XMVECTOR` und gibt das Ergebnis in der aktualisierten aktuellen Instanz zurück. <br/> |
+| [**Operator \***](xmvector-operator-mul.md)<br/>    | Multiplikationsoperatoren<br/>                                                                                                         |
+| [**Operator \*=**](xmvector-operator-muleq.md)<br/> | Multiplikationszuweisungsoperatoren<br/>                                                                                              |
+| [**operator /**](xmvector-operator-div.md)<br/>     | Divisionsoperator<br/>                                                                                                               |
+| [**operator /=**](xmvector-operator-diveq.md)<br/>  | Divisionszuweisungsoperator.<br/>                                                                                                    |
+| [**Operator :**](xmvector-operator--.md)<br/>       | Subtraktion und Negationsoperatoren<br/>                                                                                               |
+| [**Operator +**](xmvector-operator-pls.md)<br/>     | Additionsoperatoren.<br/>                                                                                                              |
 
 
 
@@ -43,13 +43,13 @@ Die folgenden Operatoren werden von der [**xmvector**](xmvector-data-type.md) -S
 
 <dl> <dt>
 
-[Xmvector-Erweiterungen](ovw-xmvector-extensions.md)
+[XMVECTOR-Erweiterungen](ovw-xmvector-extensions.md)
 </dt> <dt>
 
 **Typen**
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> </dl>
 
  

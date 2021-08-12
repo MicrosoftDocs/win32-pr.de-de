@@ -1,10 +1,10 @@
 ---
-title: Iwmpplaylistcollection-Schnittstelle (VB und C) (WMP. h)
-description: Stellt Methoden zum Bearbeiten von iwmpwiedergabe-und iwmpplaylistarray-Schnittstellen in einer-Auflistung bereit.
+title: IWMPPlaylistCollection-Schnittstelle (VB und C) (Wmp.h)
+description: Stellt Methoden zum Bearbeiten von IWMPPlaylist- und IWMPPlaylistArray-Schnittstellen in einer Auflistung bereit.
 ms.assetid: 19a4e0d7-cb3f-42ec-9acb-7ac0c5837662
 keywords:
-- Iwmpplaylistcollection (VB und C) Interface Windows Media Player
-- Iwmpplaylistcollection (VB und C) Interface Windows Media Player, beschrieben
+- IWMPPlaylistCollection-Schnittstelle (VB und C) Windows Media Player
+- IWMPPlaylistCollection-Schnittstelle (VB und C) Windows Media Player beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,50 +16,50 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ccc97f9e98838fedc3bd5441d6bfda2da5319dd6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ae130b9134d9ad6e19fa062946a591cdf7749b428201750fda8ff55252c3212
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575216"
 ---
-# <a name="iwmpplaylistcollection-vb-and-c-interface"></a>Iwmpplaylistcollection-Schnittstelle (VB und c#)
+# <a name="iwmpplaylistcollection-vb-and-c-interface"></a>IWMPPlaylistCollection-Schnittstelle (VB und C#)
 
-Stellt Methoden zum Bearbeiten von **iwmpwiedergabe** -und **iwmpplaylistarray** -Schnittstellen in einer-Auflistung bereit.
+Stellt Methoden zum Bearbeiten von **IWMPPlaylist-** und **IWMPPlaylistArray-Schnittstellen** in einer Auflistung bereit.
 
 ## <a name="members"></a>Member
 
-Die **iwmpplaylistcollection-Schnittstelle (VB und c#)** verfügt über diese Typen von Membern:
+Die **IWMPPlaylistCollection-Schnittstelle (VB und C#)** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmpplaylistcollection-Schnittstelle (VB und c#)** verfügt über diese Methoden.
+Die **IWMPPlaylistCollection-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                 | BESCHREIBUNG                                                                                                                    |
+| Methode                                                                                                 | Beschreibung                                                                                                                    |
 |:-------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [**"GetAll"**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getall--vb-and-c.md)                 | Gibt eine **iwmpplaylistarray** -Schnittstelle zurück, die Zugriff auf alle Wiedergabelisten in der Bibliothek bietet.<br/>             |
-| [**getByName**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getbyname--vb-and-c.md)           | Gibt eine **iwmpplaylistarray** -Schnittstelle zurück, die Zugriff auf Wiedergabelisten mit dem angegebenen Namen bietet, sofern vorhanden.<br/> |
-| [**importwiedergabe Liste**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-importplaylist--vb-and-c.md) | Fügt der Bibliothek eine statische Wiedergabeliste hinzu.<br/>                                                                              |
-| [**isDeleted**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-isdeleted--vb-and-c.md)           | Gibt einen Wert zurück, der angibt, ob sich die angegebene Wiedergabeliste im Ordner Gelöschte Elemente befindet.<br/>                           |
-| [**neue**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-newplaylist--vb-and-c.md)       | Gibt eine **iwmpwiedergabe** -Schnittstelle für eine neue, leere Wiedergabeliste in der Bibliothek zurück.<br/>                                     |
-| [**aufgeh**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-remove--vb-and-c.md)                 | Entfernt eine Wiedergabeliste aus der Bibliothek.<br/>                                                                                |
-| **SetDeleted**                                                                                         | Wird nicht mehr unterstützt.<br/>                                                                                                |
+| [**getAll**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getall--vb-and-c.md)                 | Gibt eine **IWMPPlaylistArray-Schnittstelle** zurück, die Zugriff auf alle Wiedergabelisten in der Bibliothek bietet.<br/>             |
+| [**getByName**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getbyname--vb-and-c.md)           | Gibt eine **IWMPPlaylistArray-Schnittstelle** zurück, die den Zugriff auf Wiedergabelisten mit dem angegebenen Namen ermöglicht, sofern vorhanden.<br/> |
+| [**importPlaylist**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-importplaylist--vb-and-c.md) | Fügt der Bibliothek eine statische Wiedergabeliste hinzu.<br/>                                                                              |
+| [**isDeleted**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-isdeleted--vb-and-c.md)           | Gibt einen Wert zurück, der angibt, ob sich die angegebene Wiedergabeliste im Ordner für gelöschte Elemente befindet.<br/>                           |
+| [**newPlaylist**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-newplaylist--vb-and-c.md)       | Gibt eine **IWMPPlaylist-Schnittstelle** für eine neue, leere Wiedergabeliste in der Bibliothek zurück.<br/>                                     |
+| [**Entfernen**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-remove--vb-and-c.md)                 | Entfernt eine Wiedergabeliste aus der Bibliothek.<br/>                                                                                |
+| **setDeleted**                                                                                         | Wird nicht mehr unterstützt.<br/>                                                                                                |
 
 
 
  
 
-Verwenden Sie die folgende Eigenschaft, um eine **iwmpplaylistcollection** -Schnittstelle zu erhalten.
+Abrufen einer **IWMPPlaylistCollection-Schnittstelle** mithilfe der folgenden Eigenschaft.
 
 
 
 | Object                                                                   | Eigenschaft                                                                                 |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| [AxWindowsMediaPlayer-Objekt](axwindowsmediaplayer-object--vb-and-c.md) | [**playlistcollection**](axwmplib-axwindowsmediaplayer-playlistcollection--vb-and-c.md) |
+| [AxWindowsMediaPlayer-Objekt](axwindowsmediaplayer-object--vb-and-c.md) | [**playlistCollection**](axwmplib-axwindowsmediaplayer-playlistcollection--vb-and-c.md) |
 
 
 
@@ -71,7 +71,7 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpplaylistcollection** -Schn
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -79,13 +79,13 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpplaylistcollection** -Schn
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistarray-Schnittstelle (VB und c#)**](iwmpplaylistarray--vb-and-c.md)
+[**IWMPPlaylistArray-Schnittstelle (VB und C#)**](iwmpplaylistarray--vb-and-c.md)
 </dt> </dl>
 
  
