@@ -1,54 +1,54 @@
 ---
-title: VML JOINSTYLE-Attribut
-description: VML JOINSTYLE-Attribut
+title: VML JoinStyle-Attribut
+description: VML JoinStyle-Attribut
 ms.assetid: d947d115-2064-446a-8c12-e8063fe10953
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 657d3c815d6165cecd853f394780237ad0b89f0d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1cbad649d2a8889846d1d0c1e1df3d62e94cb8e8ff03f0dfa5c47f7bd414dcdc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118599364"
 ---
-# <a name="vml-joinstyle-attribute"></a>VML JOINSTYLE-Attribut
+# <a name="vml-joinstyle-attribute"></a>VML JoinStyle-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die joinart einer Polylinie. Lese-/Schreibzugriff. Eine Zeichenfolge.
+Definiert den Joinstil einer Polylinie. Lese-/Schreibzugriff. Eine Zeichenfolge.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* JOINSTYLE = " *Expression* " >
+<v: *element* joinstyle=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . JOINSTYLE = "*Ausdruck*"
+*element* .joinstyle="*expression*"
 
-*Ausdruck* = *Element*. JOINSTYLE
+*expression* = *.joinstyle-Element*
 
 **Anmerkungen**
 
 Mögliche Werte:
 
--   Round (Standard)
+-   round (Standard)
 -   Abschrägung
--   Gehrungs
+-   Miter
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Gelenke auf der Polylinie werden gevelht.
+Die Fugen auf der Polylinie werden abgedreht.
 
 
 ```HTML
@@ -61,6 +61,6 @@ Die Gelenke auf der Polylinie werden gevelht.
 
 
 
- 
+ 
 
- 
+ 

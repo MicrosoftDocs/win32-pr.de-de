@@ -1,28 +1,28 @@
 ---
-title: Informationen zum closedcaption-Objekt
-description: Informationen zum closedcaption-Objekt
+title: Informationen zum ClosedCaption-Objekt
+description: Informationen zum ClosedCaption-Objekt
 ms.assetid: f536c062-fcf6-4ada-b485-6deeb4dd4d9d
 keywords:
-- Windows Media Player, closedcaption-Objekt
-- Windows Media Player-Objektmodell, closedcaption-Objekt
-- Objektmodell, closedcaption-Objekt
-- Windows Media Player ActiveX-Steuerelement, closedcaption-Objekt
-- ActiveX-Steuerelement, closedcaption-Objekt
-- Windows Media Player Mobile ActiveX-Steuerelement, closedcaption-Objekt
-- Windows Media Player Mobile, closedcaption-Objekt
-- Closedcaption-Objekt
+- Windows Media Player,ClosedCaption-Objekt
+- Windows Media Player Objektmodell, ClosedCaption-Objekt
+- Objektmodell, ClosedCaption-Objekt
+- Windows Media Player ActiveX,ClosedCaption-Objekt
+- ActiveX,ClosedCaption-Objekt
+- Windows Media Player Mobile ActiveX-Steuerelement, ClosedCaption-Objekt
+- Windows Media Player Mobile,ClosedCaption-Objekt
+- ClosedCaption-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 575eddb906e7bcbdc7d307ddb52b4394fbb960a8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a9cd538f06550524b16ba1cb16fb202cfd64010208ff4360ff096641d68eef3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515836"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583927"
 ---
-# <a name="about-the-closedcaption-object"></a>Informationen zum closedcaption-Objekt
+# <a name="about-the-closedcaption-object"></a>Informationen zum ClosedCaption-Objekt
 
-Das **closedcaption** -Objekt steuert die Beschriftungs Schnittstelle für Windows-Media Player. Das **closedcaption** -Objekt wird über die **closedcaption** -Eigenschaft des **Player** -Objekts abgerufen. Geben Sie z. b. Folgendes ein, um den **samifilename** -Eigenschafts Wert zu erhalten:
+Das **ClosedCaption-Objekt** steuert die Beschriftungsschnittstelle für Windows Media Player. Das **ClosedCaption-Objekt** wird über die **closedCaption-Eigenschaft** des **Player-Objekts** erhalten. Geben Sie beispielsweise Folgendes ein, um **den SAMIFileName-Eigenschaftswert** zu erhalten:
 
 
 ```C++
@@ -36,15 +36,15 @@ myfile = player.closedcaption.SAMIFileName;
 
 <dl> <dt>
 
-[**Closedcaption-Objekt**](closedcaption-object.md)
+[**ClosedCaption-Objekt**](closedcaption-object.md)
 </dt> <dt>
 
 [**Player-Objektmodell für Skriptsprachen**](player-object-model-for-scripting-languages.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

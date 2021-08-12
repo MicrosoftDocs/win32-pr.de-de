@@ -1,29 +1,29 @@
 ---
-description: Windows 8, Windows Server 2012 und höher enthalten eine neue Verbindungs-Manager-Funktion, mit der Benutzer problemlos eine Verbindung mit dem Internet und anderen Netzwerken (z. b. Arbeits-und Heim Netzwerken) herstellen können.
+description: Windows 8, Windows Server 2012 und höher enthalten ein neues Verbindungs-Manager-Feature, mit dem Benutzer problemlos eine Verbindung mit dem Internet und anderen Netzwerken (z. B. Arbeits- und Heimnetzwerken) herstellen können.
 ms.assetid: 6b2f5a50-fabd-4c80-acc8-a0883c939632
-title: APIs für drahtlose Benutzeroberflächen
+title: APIs Benutzeroberfläche drahtlosen Verbindungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c5814ea8daa55ab3ec1bf431543174cf57fdfa7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e2b2af7faccc5452163ad89ed28d12e7de917f4b872011165e0cfb1760657dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118619927"
 ---
-# <a name="wireless-user-interface-apis"></a>APIs für drahtlose Benutzeroberflächen
+# <a name="wireless-user-interface-apis"></a>APIs Benutzeroberfläche drahtlosen Verbindungen
 
-Windows 8, Windows Server 2012 und höher enthalten eine neue Verbindungs-Manager-Funktion, mit der Benutzer problemlos eine Verbindung mit dem Internet und anderen Netzwerken (z. b. Arbeits-und Heim Netzwerken) herstellen können. Diese neue Verbindungs-Manager-Funktion ersetzt die ältere Verbindung mit **einem Netzwerk** und die Benutzeroberflächen von **Drahtlos Netzwerken** , die in älteren Versionen von Windows zum Verwalten nativer WLAN-Verbindungen enthalten sind.
+Windows 8, Windows Server 2012 und höher enthalten ein neues Verbindungs-Manager-Feature, mit dem Benutzer problemlos eine Verbindung mit dem Internet und anderen Netzwerken (z. B. Arbeits- und Heimnetzwerken) herstellen können. Dieses neue Verbindungs-Manager ersetzt die älteren **Verbinden** in ein  Netzwerk und die Benutzeroberflächen von Drahtlosen Netzwerken verwalten, die in älteren Versionen von Windows für die Verwaltung von Native Wifi-Verbindungen enthalten sind.
 
-Unter Windows 7, Windows Server 2008 und Windows Vista gibt es eine Reihe von Benutzeroberflächen (User Interfaces, UIs), die zum Herstellen einer Verbindung mit oder zum Konfigurieren eines drahtlos Netzwerks verwendet werden. Diese Benutzerkonten können in einer Anwendung mit nativen WiFi-und Windows-Shellfunktionen gestartet werden. Diese UIS sind unter Windows 8, Windows Server 2012 und höher nicht verfügbar.
+In Windows 7, Windows Server 2008 und Windows Vista gibt es eine Reihe von Benutzeroberflächen (UIs), die zum Herstellen einer Verbindung mit einem Drahtlosnetzwerk oder zum Konfigurieren eines Drahtlosnetzwerks verwendet werden. Diese Beis können in einer Anwendung mit nativem WLAN und Windows Shell-Funktionen gestartet werden. Diese Beis sind nicht für Windows 8, Windows Server 2012 und höher verfügbar.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Sie können keine Benutzeroberfläche starten, um eine Verbindung mit einem Drahtlos Netzwerk in einer Anwendung Programm gesteuert herzustellen oder ein Drahtlos Netzwerk zu konfigurieren.
+**Windows XP mit SP3 und der Wlan-LAN-API für Windows XP mit SP2:** Sie können keine Benutzeroberfläche starten, die zum herstellen oder programmgesteuerten Konfigurieren eines Drahtlosnetzwerks in einer Anwendung verwendet wird.
 
 ## <a name="connect-to-a-network"></a>Herstellen einer Verbindung mit einem Netzwerk
 
-Unter Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 und Windows Vista kann der Assistent **zum Herstellen** einer Verbindung mit einem Netzwerk verwendet werden, um eine Verbindung mit einem Drahtlos Netzwerk herzustellen. Sie können die [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) -Funktion verwenden, um den Assistenten zum **Herstellen einer Verbindung mit einem Netzwerk** zu starten.
+In Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 und Windows Vista kann der **Assistent Verbinden** zu einem Netzwerk verwendet werden, um eine Verbindung mit einem Drahtlosnetzwerk herzustellen. Sie können die [**ShellExecute-Funktion**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) verwenden, um die Verbinden **Netzwerk-Assistenten zu** starten.
 
-Der folgende Code zeigt einen [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) -Befehl, der den Assistenten zum **Herstellen einer Verbindung mit einem Netzwerk** startet.
+Der folgende Code zeigt einen [**ShellExecute-Aufruf,**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) der die Verbinden **netzwerk-Assistenten** startet.
 
 
 ```C++
@@ -51,13 +51,13 @@ void wmain()
 
 
 
-## <a name="manage-wireless-networks"></a>**Verwalten von Drahtlos Netzwerken**
+## <a name="manage-wireless-networks"></a>**Verwalten von Drahtlosnetzwerken**
 
-Unter Windows 7, Windows Server 2008 und Windows Vista wird das System Steuerungselement **drahtlose Netzwerke verwalten** zum Verwalten von Drahtlos Netzwerk Profilen verwendet. Die [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) -Funktion kann auch verwendet werden, um das Element " **Drahtlos Netzwerke verwalten** " zu starten. Der Pfad für den Aufruf von **ShellExecute** unter Windows 7 und Windows Vista lautet wie folgt:
+Unter Windows 7, Windows Server 2008 und Windows Vista wird  das Systemsteuerung-Element Drahtlosnetzwerke verwalten zum Verwalten von Drahtlosnetzwerkprofilen verwendet. Die [**ShellExecute-Funktion**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) kann auch verwendet werden, um das Element Drahtlose Netzwerke **verwalten zu** starten. Der Pfad, der beim Aufrufen von **ShellExecute** auf Windows 7 und Windows Vista verwendet werden soll, ist der folgende:
 
 `shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}\3\::{1fa9085f-25a2-489b-85d4-86326eedcd87}  `.
 
-Der folgende Beispielcode zeigt, wie Sie mit [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) den Assistenten für **verwaltete drahtlose Netzwerke** in einer Anwendung starten.
+Der folgende Beispielcode zeigt, wie [**ShellExecute verwendet**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) wird, um den Assistenten für verwaltete **Drahtlosnetzwerke** aus einer Anwendung zu starten.
 
 
 ```C++
@@ -119,24 +119,24 @@ int wmain()
 
 
 
-## <a name="advanced-settings-for-wireless-network-profiles"></a>Erweiterte Einstellungen für Drahtlos Netzwerk Profile
+## <a name="advanced-settings-for-wireless-network-profiles"></a>Erweiterte Einstellungen für Drahtlosnetzwerkprofile
 
-Windows Vista und höher enthalten eine erweiterte Benutzeroberfläche, die verwendet wird, um erweiterte Einstellungen eines Drahtlos Netzwerk Profils anzuzeigen und zu bearbeiten. Sie können diese erweiterte Benutzeroberfläche starten, indem Sie die [**wlanuieditprofile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanuieditprofile) -Funktion aufrufen.
+Windows Vista und höher enthalten eine erweiterte Benutzeroberfläche, die zum Anzeigen und Bearbeiten erweiterter Einstellungen eines Drahtlosnetzwerkprofils verwendet wird. Sie können diese erweiterte Benutzeroberfläche starten, indem Sie die [**WlanUIEditProfile-Funktion**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanuieditprofile) aufrufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von nativem WiFi](using-native-wifi.md)
+[Verwenden von nativem WLAN](using-native-wifi.md)
 </dt> <dt>
 
-[Beispiele für Funk profile](wireless-profile-samples.md)
+[Beispiele für Drahtlosprofile](wireless-profile-samples.md)
 </dt> <dt>
 
 [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea)
 </dt> <dt>
 
-[**Wlanuieditprofile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanuieditprofile)
+[**WLANUIEditProfile**](/windows/desktop/api/wlanapi/nf-wlanapi-wlanuieditprofile)
 </dt> </dl>
 
  

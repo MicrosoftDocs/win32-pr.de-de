@@ -1,7 +1,7 @@
 ---
-description: Legt den Timeout Wert für das Debuggen fest. Wird in Einzelhandels Builds ignoriert.
+description: Legt den Debugtime out-Wert fest. Wird in Einzelhandelsbuilds ignoriert.
 ms.assetid: d0f60d8b-34f2-44b2-bdd6-5e8e6f7806d8
-title: Dbgsetwaittimeout-Funktion (wxdebug. h)
+title: DbgSetWaitTimeout-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5805112b19132045e0245ef7baf29cb5c844e290
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 67a5522184b9e88cd4b8ac9f23246f96c13ffad2175d625334de32d34c750e12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654022"
 ---
-# <a name="dbgsetwaittimeout-function"></a>Dbgsetwaittimeout-Funktion
+# <a name="dbgsetwaittimeout-function"></a>DbgSetWaitTimeout-Funktion
 
-Legt den Timeout Wert für das Debuggen fest. Wird in Einzelhandels Builds ignoriert.
+Legt den Debugtime out-Wert fest. Wird in Einzelhandelsbuilds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void DbgSetWaitTimeout(
 
 <dl> <dt>
 
-*dwtimeout* 
+*dwTimeout* 
 </dt> <dd>
 
-Timeout Wert in Millisekunden oder unendlich, wenn unbegrenzt gewartet werden soll.
+Time out-Wert in Millisekunden oder INFINITE, um unbegrenzt zu warten.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Timeout Wert in Millisekunden oder unendlich, wenn unbegrenzt gewartet werden so
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Debugbuilds verwenden die Funktionen [**dbgwaitformultipleobjects**](dbgwaitformultipleobjects.md) und [**dbgwaitforsingleobject**](dbgwaitforsingleobject.md) diesen Wert als Timeout Intervall.
+In Debugbuilds verwenden die Funktionen [**DbgWaitForMultipleObjects**](dbgwaitformultipleobjects.md) und [**DbgWaitForSingleObject**](dbgwaitforsingleobject.md) diesen Wert als Time out-Intervall.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ In Debugbuilds verwenden die Funktionen [**dbgwaitformultipleobjects**](dbgwaitf
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Wait-Debugging-Funktionen](wait-debugging-functions.md)
+[Wartedebuggen von Funktionen](wait-debugging-functions.md)
 </dt> </dl>
 
  

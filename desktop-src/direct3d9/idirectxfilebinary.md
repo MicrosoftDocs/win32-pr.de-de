@@ -1,7 +1,7 @@
 ---
-description: Anwendungen verwenden die Methoden der idirectxfilebinary-Schnittstelle zum Lesen und Abrufen von Informationen zu Binärdaten. Veraltet.
+description: Anwendungen verwenden die Methoden der IDirectXFileBinary-Schnittstelle, um Informationen zu Binärdaten zu lesen und abzurufen. Veraltet.
 ms.assetid: 43b20ab3-67b2-4717-ad90-0bf4ddb3207e
-title: Idirectxfilebinary-Schnittstelle (dxfile. h)
+title: IDirectXFileBinary-Schnittstelle (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,32 +14,32 @@ api_type:
 api_location:
 - d3dxof.lib
 - d3dxof.dll
-ms.openlocfilehash: b6707e4e685289f16b85ab85c2cce13dcd1da962
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 46e0da3a0cb03d3769e7888706a48fbf00786471afed285ce54c629285ac158c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118292409"
 ---
-# <a name="idirectxfilebinary-interface"></a>Idirectxfilebinary-Schnittstelle
+# <a name="idirectxfilebinary-interface"></a>IDirectXFileBinary-Schnittstelle
 
-Anwendungen verwenden die Methoden der idirectxfilebinary-Schnittstelle zum Lesen und Abrufen von Informationen zu Binärdaten. Veraltet.
+Anwendungen verwenden die Methoden der IDirectXFileBinary-Schnittstelle, um Informationen zu Binärdaten zu lesen und abzurufen. Veraltet.
 
 ## <a name="members"></a>Member
 
-Die **idirectxfilebinary** -Schnittstelle erbt von [**idirectxfileobject**](idirectxfileobject.md). **Idirectxfilebinary** verfügt auch über diese Typen von Membern:
+Die **IDirectXFileBinary-Schnittstelle** erbt von [**IDirectXFileObject**](idirectxfileobject.md). **IDirectXFileBinary** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idirectxfilebinary** -Schnittstelle verfügt über diese Methoden.
+Die **IDirectXFileBinary-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                 | BESCHREIBUNG                                                                                                 |
+| Methode                                                 | Beschreibung                                                                                                 |
 |:-------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| [**Getmimetype**](idirectxfilebinary--getmimetype.md) | Ruft den Multipurpose Internet Mail Extensions (MIME)-Typ für die Binärdaten ab. Veraltet.<br/> |
+| [**GetMimeType**](idirectxfilebinary--getmimetype.md) | Ruft den mime Multipurpose Internet Mail Extensions typ (MIME) für die Binärdaten ab. Veraltet.<br/> |
 | [**GetSize**](idirectxfilebinary--getsize.md)         | Ruft die Größe der Binärdaten ab. Veraltet.<br/>                                               |
 | [**Lesen**](idirectxfilebinary--read.md)               | Liest die Binärdaten. Veraltet.<br/>                                                               |
 
@@ -47,11 +47,11 @@ Die **idirectxfilebinary** -Schnittstelle verfügt über diese Methoden.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die GUID für die idirectxfilebinary-Schnittstelle ist IID \_ idirectxfilebinary.
+Die GUID für die IDirectXFileBinary-Schnittstelle ist IID \_ IDirectXFileBinary.
 
-Der lpdirectxfilebinary-Typ wird als Zeiger auf diese Schnittstelle definiert.
+Der LPDIRECTXFileBinary-Typ wird als Zeiger auf diese Schnittstelle definiert.
 
 
 ```
@@ -66,8 +66,8 @@ typedef interface IDirectXFileBinary *LPDIRECTXFILEBINARY;
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -75,10 +75,10 @@ typedef interface IDirectXFileBinary *LPDIRECTXFILEBINARY;
 
 <dl> <dt>
 
-[**Idirectxfileobject**](idirectxfileobject.md)
+[**IDirectXFileObject**](idirectxfileobject.md)
 </dt> <dt>
 
-[X-Datei Schnittstellen](dx9-graphics-reference-x-file-interfaces.md)
+[X-Dateischnittstellen](dx9-graphics-reference-x-file-interfaces.md)
 </dt> </dl>
 
  

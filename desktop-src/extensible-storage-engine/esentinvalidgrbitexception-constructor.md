@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidgrbitexception-Konstruktor'
-title: Esentinvalidgrbitexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidGrbitException-Konstruktor'
+title: EsentInvalidGrbitException-Konstruktor
 TOCTitle: 'EsentInvalidGrbitException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidGrbitException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidgrbitexception.esentinvalidgrbitexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c4470b848688450aab029f48026719c579d034fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a969a1238f1134242dc9675fffbe75b32263a9b5ff69ed694fbcdeb98bc9ee8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118266180"
 ---
-# <a name="esentinvalidgrbitexception-constructor"></a>Esentinvalidgrbitexception-Konstruktor
+# <a name="esentinvalidgrbitexception-constructor"></a>EsentInvalidGrbitException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidgrbitexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidGrbitException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentInvalidGrbitException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentinvalidgrbitexception-Klasse](./esentinvalidgrbitexception-class.md)
+[EsentInvalidGrbitException-Klasse](./esentinvalidgrbitexception-class.md)
 
-[Esentinvalidgrbitexception-Member](./esentinvalidgrbitexception-members.md)
+[EsentInvalidGrbitException-Member](./esentinvalidgrbitexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

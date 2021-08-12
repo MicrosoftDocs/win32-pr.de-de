@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ea812d0c7629b98d90f3f7e535d229c707452b23
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 37fadefe3163ed4211b8112ec17cc1cfb3fb3625b4aba207db06a25de3e27b17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655224"
 ---
 # <a name="cmediaeventinvoke-method"></a>CMediaEvent.Invoke-Methode
 
@@ -52,28 +52,28 @@ HRESULT Invoke(
 *dispidMember* 
 </dt> <dd>
 
-Bezeichner des Mitglieds. Verwenden [**Sie CMediaEvent::GetIDsOfNames**](cmediaevent-getidsofnames.md) oder die Dokumentation des Objekts, um den Dispatchbezeichner zu erhalten.
+Bezeichner des Members. Verwenden Sie [**CMediaEvent::GetIDsOfNames**](cmediaevent-getidsofnames.md) oder die Dokumentation des Objekts, um den Dispatchbezeichner abzurufen.
 
 </dd> <dt>
 
 *riid* 
 </dt> <dd>
 
-Für die zukünftige Verwendung reserviert. Muss IID NULL \_ sein.
+Für die zukünftige Verwendung reserviert. Muss IID \_ NULL sein.
 
 </dd> <dt>
 
 *lcid* 
 </dt> <dd>
 
-Der Locale-Kontext, in dem Argumente interpretiert werden.
+Gebietsschemakontext, in dem Argumente interpretiert werden sollen.
 
 </dd> <dt>
 
 *wFlags* 
 </dt> <dd>
 
-Flags, die den Kontext des Aufrufs `CMediaEvent::Invoke` beschreiben.
+Flags, die den Kontext des `CMediaEvent::Invoke` Aufrufs beschreiben.
 
 </dd> <dt>
 
@@ -101,19 +101,19 @@ Zeiger auf eine -Struktur, die Ausnahmeinformationen enthält.
 *puArgErr* 
 </dt> <dd>
 
-Zeiger auf den Index des ersten Arguments innerhalb des **rgvarg-Arrays** der **DISPPARAMS-Struktur** mit einem Fehler. Weitere Informationen zu **DISPPARAMS finden** Sie im Platform SDK.
+Zeiger auf den Index des ersten Arguments innerhalb des **rgvarg-Arrays** der **DISPPARAMS-Struktur,** das einen Fehler aufweist. Weitere Informationen zu **DISPPARAMS** finden Sie im Plattform-SDK.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt DISP \_ E \_ UNKNOWNINTERFACE zurück, *wenn riid* nicht IID \_ NULL ist. Gibt einen der Fehlercodes von [**CMediaEvent::GetTypeInfo**](cmediaevent-gettypeinfo.md) zurück, wenn der Aufruf fehlschlägt. Andernfalls gibt das **HRESULT** aus dem Aufruf von **IDispatch::Invoke** zurück.
+Gibt DISP \_ E \_ UNKNOWNINTERFACE zurück, wenn *riid* nicht IID \_ NULL ist. Gibt einen der Fehlercodes von [**CMediaEvent::GetTypeInfo**](cmediaevent-gettypeinfo.md) zurück, wenn der Aufruf fehlschlägt. Andernfalls gibt das **HRESULT** aus dem Aufruf von **IDispatch::Invoke** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

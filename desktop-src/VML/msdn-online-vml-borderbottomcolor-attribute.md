@@ -1,38 +1,38 @@
 ---
-title: VML borderBottomColor-Attribut
-description: VML borderBottomColor-Attribut
+title: VML-BorderBottomColor-Attribut
+description: VML-BorderBottomColor-Attribut
 ms.assetid: cfafb92c-24d9-402f-860a-23cf3c98201a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b66e0789003b0ec59e70d07bc523bcdab73309f1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 82ef58c8c51d071edbff3fafe9e6327b0b858fde1b5d8f27fc3cf9b97d8bd669
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118602332"
 ---
-# <a name="vml-borderbottomcolor-attribute"></a>VML borderBottomColor-Attribut
+# <a name="vml-borderbottomcolor-attribute"></a>VML-BorderBottomColor-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Farbe des unteren Rahmens einer Inline Form. Lese-/Schreibzugriff. **Vgcolor**.
+Untere Rahmenfarbe einer Inlineform. Lese-/Schreibzugriff. **VgColor**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* o:borderBottomColor = " *Expression* " >
+<v: *Element* o:borderbottomcolor=" *Ausdruck* ">
 
 **Anmerkungen**
 
-Wird von Microsoft Word verwendet.
+Wird von Microsoft Word.
 
 Mögliche Werte:
 
@@ -41,15 +41,15 @@ Mögliche Werte:
 | Wert | BESCHREIBUNG                                                                         |
 |-------|-------------------------------------------------------------------------------------|
 | Null  | Keine Rahmenfarbe. Standard.                                                           |
-| color | Die für den Rahmen verwendete Farbe.                                                              |
-| Diese  | Gibt an, dass in der Benutzeroberfläche der Anwendung **automatisch** ausgewählt wurde. |
+| color | Für rahmen verwendete Farbe.                                                              |
+| Diese  | Gibt **an, dass** automatisch in der Benutzeroberfläche der Anwendung ausgewählt wurde. |
 
 
 
- 
+ 
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

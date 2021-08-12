@@ -1,9 +1,9 @@
 ---
-title: Customslider. Value
-description: Das value-Attribut gibt die aktuelle Position des Schiebereglers an oder ruft diese ab. | Customslider. Value
+title: LIDER.value
+description: Das Value-Attribut gibt die aktuelle Position des Schiebereglers an oder ruft sie ab. | LIDER.value
 ms.assetid: 29e17f48-1848-458d-9da4-316013b21980
 keywords:
-- Customslider. Value-Fenster Media Player
+- LIDER.value-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89be4edd43fc79c8a8938a3861c982068760bcf3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3a256274fe2170ad50c164f7bf6768f82e3266db7a4ea5e2c6c8e28edd083c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118579708"
 ---
-# <a name="customslidervalue"></a>Customslider. Value
+# <a name="customslidervalue"></a>LIDER.value
 
-Das **value** -Attribut gibt die aktuelle Position des Schiebereglers an oder ruft diese ab.
+Das **Value-Attribut** gibt die aktuelle Position des Schiebereglers an oder ruft sie ab.
 
 ``` syntax
         elementID.value
@@ -29,15 +29,15 @@ Das **value** -Attribut gibt die aktuelle Position des Schiebereglers an oder ru
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Standardwert, **der dem** Minimum-Attribut entspricht. 
+Dieses Attribut ist eine Lese-/Schreibnummer (**float**) mit einem Standardwert, der dem **min-Attribut** entspricht. 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **Wert** muss größer als oder gleich **Min** und kleiner als oder gleich dem **maximalen** Wert sein. Wenn der Wert außerhalb des Bereichs liegt, wird eine Warnung ausgegeben, und der Wert ändert sich nicht.
+Der **Wert** muss größer oder gleich **min** und kleiner oder gleich **max sein.** Wenn der Wert außerhalb des Bereichs liegt, wird eine Warnung ausgegeben, und der Wert ändert sich nicht.
 
 ## <a name="examples"></a>Beispiele
 
-Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **customslider** -Elements verwendet werden.
+Im Attribut [positionImage finden](customslider-positionimage.md) Sie ein Beispiel, das veranschaulicht, wie die Attribute des **ELEMENTS VERDRLIDER** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ei
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -53,7 +53,7 @@ Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ei
 
 <dl> <dt>
 
-[**Customslider-Element**](customslider-element.md)
+[**LIDER-Element**](customslider-element.md)
 </dt> </dl>
 
  

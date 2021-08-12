@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. playlistcollection (Eigenschaft)
-description: Die playlistcollection-Eigenschaft ruft eine iwmpplaylistcollection-Schnittstelle ab.
+title: AxWindowsMediaPlayer.playlistCollection (Eigenschaft)
+description: Die playlistCollection-Eigenschaft ruft eine IWMPPlaylistCollection-Schnittstelle ab.
 ms.assetid: f3c65f70-b58f-41c1-afe0-3a9d9c95561c
 keywords:
-- playlistcollection-Eigenschaft, Windows-Media Player
-- playlistcollection-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, playlistcollection (Eigenschaft)
+- playlistCollection-Windows Media Player
+- playlistCollection-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , playlistCollection-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94a01ca41d194a6321e02d34280241cd5701597e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6d646bec99c61032c0347d9d21df443c890837424255ebd687c15cc9f780a1d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581900"
 ---
-# <a name="axwindowsmediaplayerplaylistcollection-property"></a>AxWindowsMediaPlayer. playlistcollection (Eigenschaft)
+# <a name="axwindowsmediaplayerplaylistcollection-property"></a>AxWindowsMediaPlayer.playlistCollection (Eigenschaft)
 
-Die playlistcollection-Eigenschaft ruft eine **iwmpplaylistcollection** -Schnittstelle ab.
+Die playlistCollection-Eigenschaft ruft eine **IWMPPlaylistCollection-Schnittstelle** ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -48,11 +48,11 @@ Public ReadOnly Property playlistCollection As IWMPPlaylistCollection
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-WMPLib. **Iwmpplaylistcollection** -Schnittstelle.
+Die WMPLib. **IWMPPlaylistCollection-Schnittstelle.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -70,16 +70,16 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

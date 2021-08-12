@@ -1,39 +1,39 @@
 ---
-description: Datensätze können anwendungsspezifische Attribute aufweisen, bei denen es sich um eine Sequenz von Name-Wert-Paaren handelt, die im pszattribute-Member der Peer Daten Satzstruktur als XML-Zeichenfolge dargestellt werden \_ .
+description: Datensätze können anwendungsspezifische Attribute aufweisen, bei denen es sich um eine Sequenz von Name- oder Wertpaaren handelt, die als XML-Zeichenfolge im pszAttributes-Element der PEER \_ RECORD-Struktur dargestellt werden.
 ms.assetid: 2991af9b-da32-4915-b4d6-575e3faac04e
-title: Attribut Schema aufzeichnen
+title: Datensatzattributschema
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eefa8c4c8b00b09e9c8cb988088af645e9f9c967
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3597369d7214b51b94a74b777315bb2ce2beb280232be5fb29571376ad3fc93e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118612311"
 ---
-# <a name="record-attribute-schema"></a>Attribut Schema aufzeichnen
+# <a name="record-attribute-schema"></a>Datensatzattributschema
 
-Datensätze können anwendungsspezifische Attribute aufweisen, bei denen es sich um eine Sequenz von Name-Wert-Paaren handelt, die im **pszattribute** -Member der [**Peer \_ Daten Satz**](/windows/desktop/api/P2P/ns-p2p-peer_record) Struktur als XML-Zeichenfolge dargestellt werden. Die Attribute werden verwendet, um eine Daten Satz Suche zu filtern, die durch Aufrufe von " [**Peer-groupsearchrecords**](/windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords)" initiiert wurde, die einen XML-Suchfilter verwendet, der im [Suchabfrage Format des Datensatzes](record-search-query-format.md) als Parameter angegeben
+Datensätze können anwendungsspezifische Attribute aufweisen, bei denen es sich um eine Sequenz von Name- oder Wertpaaren handelt, die als XML-Zeichenfolge im **pszAttributes-Element** der [**PEER \_ RECORD-Struktur dargestellt**](/windows/desktop/api/P2P/ns-p2p-peer_record) werden. Die Attribute werden verwendet, um eine Datensatzsuche zu filtern, die durch Aufrufe von [**PeerGroupSearchRecords**](/windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords)initiiert wird. Dabei wird ein XML-Suchfilter verwendet, der [im](record-search-query-format.md) Abfrageformat für die Datensatzsuche als Parameter angegeben ist.
 
-Ein Daten Satz Attribut kann einen der folgenden drei Typen aufweisen:
+Ein Datensatzattribut kann einer der folgenden drei Typen sein:
 
 -   **int** ist ein ganzzahliger Wert.
--   **Date** ist ein DateTime-Wert, der als eines der Standardformate dargestellt wird, die unter beschrieben werden [https://www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime) .
--   die **Zeichen** Folge ist ein Unicode-Zeichen folgen Wert.
+-   **date** ist ein datetime-Wert, der als eines der unter beschriebenen Standardformate dargestellt [https://www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime) wird.
+-   **string** ist ein Unicode-Zeichenfolgenwert.
 
-In der folgenden Liste sind die spezifischen Attributnamen aufgeführt, die von der Peer Infrastruktur reserviert werden:
+In der folgenden Liste sind die spezifischen Attributnamen aufgeführt, die von der Peerinfrastruktur reserviert werden:
 
--   **"Peer Last ModifiedBy"**
--   **"Peer-kreatorid"**
--   **"Peer Last ModificationTime"**
--   **Peer RecordID**
--   **"Peer RecordType"**
--   **"Peer-erkreationtime"**
--   **"Peer Last ModificationTime"**
+-   **peerlastmodifiedby**
+-   **peercrekollegd**
+-   **peerlastmodificationtime**
+-   **peerrecordid**
+-   **peerrecordtype**
+-   **peercreationtime**
+-   **peerlastmodificationtime**
 
-## <a name="example-of-defining-record-attributes"></a>Beispiel für das Definieren von Daten Satz Attributen
+## <a name="example-of-defining-record-attributes"></a>Beispiel für das Definieren von Datensatzattributen
 
-Im folgenden Schema Beispiel wird gezeigt, wie Sie Daten Satz Attribute definieren:
+Im folgenden Schemabeispiel wird veranschaulicht, wie Datensatzattribute definiert werden:
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -70,11 +70,11 @@ Im folgenden Schema Beispiel wird gezeigt, wie Sie Daten Satz Attribute definier
 ```
 
 > [!Note]  
-> Attributnamen müssen Sequenzen von alphanumerischen Zeichen sein. Sonderzeichen wie Bindestriche ("-") und Unterstriche (" \_ ") sind in einem Attributnamen nicht zulässig.
+> Attributnamen müssen Sequenzen alphanumerischer Zeichen sein. Sonderzeichen wie Bindestriche ("-") und Unterstriche (" \_ ") sind in einem Attributnamen nicht zulässig.
 
  
 
-Das folgende Beispiel für eine XML-Attribut Sequenz enthält die benutzerdefinierten **AuthenticationType** -und **authexpire** -Attribute, die im **pszattribute** -Member des [**Peer \_ Datensatzes**](/windows/desktop/api/P2P/ns-p2p-peer_record)angezeigt werden.
+Das folgende Beispiel für eine XML-Attributsequenz enthält die benutzerdefinierten **Attribute AuthenticationType** und **AuthExpires,** die im **pszAttributes-Element** von [**PEER RECORD angezeigt \_ werden.**](/windows/desktop/api/P2P/ns-p2p-peer_record)
 
 ``` syntax
 <attributes>

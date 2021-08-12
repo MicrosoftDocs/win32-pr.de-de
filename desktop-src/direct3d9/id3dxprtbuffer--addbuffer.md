@@ -1,7 +1,7 @@
 ---
-description: Fügt der ID3DXPRTBuffer einen weiteren Puffer hinzu und speichert die Ergebnisse in ID3DXPRTBuffer.
+description: Fügt dem ID3DXPRTBuffer einen weiteren Puffer hinzu und speichert die Ergebnisse in ID3DXPRTBuffer.
 ms.assetid: 345412f4-30c5-4c1d-b0ef-6e3e18c4e5ab
-title: 'ID3DXPRTBuffer:: addbuffer-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTBuffer::AddBuffer-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 90b86ad3d5d9fe5aa65db722757bdb34574a1006
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ffbaffbb47d91b18a6fad9bdee98012fa11fb923a7c7586acf7d7b0cd181bcc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106360244"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118294113"
 ---
-# <a name="id3dxprtbufferaddbuffer-method"></a>ID3DXPRTBuffer:: addbuffer-Methode
+# <a name="id3dxprtbufferaddbuffer-method"></a>ID3DXPRTBuffer::AddBuffer-Methode
 
-Fügt der [**ID3DXPRTBuffer**](id3dxprtbuffer.md) einen weiteren Puffer hinzu und speichert die Ergebnisse in **ID3DXPRTBuffer**.
+Fügt dem [**ID3DXPRTBuffer**](id3dxprtbuffer.md) einen weiteren Puffer hinzu und speichert die Ergebnisse in **ID3DXPRTBuffer.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT AddBuffer(
 
 <dl> <dt>
 
-*pbuffer* \[ in\]
+*pBuffer* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Ein Zeiger auf einen Puffer, der Elemente enthält, die den entsprechenden Membern des [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Puffers hinzugefügt werden sollen.
+Zeiger auf einen Puffer, der Member enthält, die den entsprechenden Membern des [**ID3DXPRTBuffer-Puffers**](id3dxprtbuffer.md) hinzugefügt werden sollen.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf einen Puffer, der Elemente enthält, die den entsprechenden Membe
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-pbuffer und [**ID3DXPRTBuffer**](id3dxprtbuffer.md) müssen über die gleiche Anzahl von Beispielen, Koeffizienten und Farbkanälen verfügen. Andernfalls führt die-Methode zu einem Fehler.
+pBuffer und [**ID3DXPRTBuffer**](id3dxprtbuffer.md) müssen die gleiche Anzahl von Stichproben, Koeffizienten und Farbkanälen aufweisen. andernfalls schlägt die -Methode fehl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ pbuffer und [**ID3DXPRTBuffer**](id3dxprtbuffer.md) müssen über die gleiche An
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

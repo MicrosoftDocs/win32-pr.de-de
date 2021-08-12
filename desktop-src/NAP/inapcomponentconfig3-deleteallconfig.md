@@ -1,11 +1,11 @@
 ---
-title: INapComponentConfig3 deleteallconfig-Methode (napcommon. h)
-description: Wird von System Integritätsprüfungen (SHVs) implementiert, um den SHV-Speicher nach dem Setup in seinen ursprünglichen Zustand zurückzusetzen.
+title: INapComponentConfig3 DeleteAllConfig-Methode (NapCommon.h)
+description: Wird von System health validators (SHVs) implementiert, um eine Möglichkeit zu bieten, den SHV-Speicher nach dem Setup auf seinen ursprünglichen Zustand zurückzusetzen.
 ms.assetid: 7f079743-1c32-430d-a250-b49a96b99f14
 keywords:
-- Deleteallconfig-Methode NAP
-- Deleteallconfig-Methode, NAP, INapComponentConfig3-Schnittstelle
-- INapComponentConfig3 Interface NAP, deleteallconfig-Methode
+- DeleteAllConfig-Methode NAP
+- DeleteAllConfig-Methode NAP, INapComponentConfig3-Schnittstelle
+- INapComponentConfig3-Schnittstelle NAP, DeleteAllConfig-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12a766690114db20fb9be5cccbd4508f4565f2cf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 05b2a81a33dfb659c3398c8c853132244d088b7fa65bd4bb0317869e13b85abf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621739"
 ---
-# <a name="inapcomponentconfig3deleteallconfig-method"></a>INapComponentConfig3::D eleteallconfig-Methode
+# <a name="inapcomponentconfig3deleteallconfig-method"></a>INapComponentConfig3::D eleteAllConfig-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **deleteallconfig** -Methode wird von System Integritätsprüfungen (SHVs) implementiert, um eine Möglichkeit zu bieten, den SHV-Speicher nach dem Setup in seinen ursprünglichen Zustand zurückzusetzen. Alle Konfigurationsdaten außer der Standardkonfiguration müssen gelöscht werden.
+Die **DeleteAllConfig-Methode** wird von System health validators (SHVs) implementiert, um eine Möglichkeit zu bieten, den SHV-Speicher nach dem Setup auf seinen ursprünglichen Zustand zurückzusetzen. Alle Konfigurationsdaten mit Ausnahme der Standardkonfiguration müssen gelöscht werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,13 +66,13 @@ Gibt basierend auf dem Ergebnis dieses Vorgangs einen der folgenden Fehlercodes 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

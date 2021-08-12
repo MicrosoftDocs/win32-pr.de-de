@@ -4,23 +4,23 @@ ms.assetid: 40323e64-ad5f-4646-bad7-2a4e7d0ddcf6
 title: clip-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d937f942ba7b564e65b0e37d9c11929805287da
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 1b94ffdbd3d9b49d961cdefdd64de9a212858c5da4859c3beddb77db0ab732d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655514"
 ---
 # <a name="clip-element"></a>clip-Element
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
 Gibt `clip` eine Medienquelle an.
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 [**clsid**](clsid-attribute.md), [**framerate**](framerate-attribute.md), [**lock**](lock-attribute.md), [**mlength**](mlength-attribute.md), [**mstart**](mstart-attribute.md), [**mstop**](mstop-attribute.md), [**mute**](mute-attribute.md), [**src**](src-attribute.md), [**start**](start-attribute.md), [**stop**](stop-attribute.md), [**stream**](stream-attribute.md), [**stretchmode**](stretchmode-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md)
 
@@ -37,13 +37,13 @@ Gibt `clip` eine Medienquelle an.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **clsid-Attribut** gibt die CLSID eines Quellfilters an, der als Quelle verwendet werden soll. Geben Sie die **Attribute src** und **clsid nicht** innerhalb desselben Elements `clip` an.
+Das **clsid-Attribut** gibt die CLSID eines Quellfilters an, der als Quelle verwendet werden soll. Geben Sie nicht die **Attribute src** und **clsid** innerhalb desselben `clip` Elements an.
 
-Geben Sie mindestens ein Startzeitattribut (**start** oder **mstart**) und ein Stoppzeitattribut (**stop** oder mstop ) **an.** Wenn eines der Startzeitattribute nicht angegeben ist, wird standardmäßig 0 (der Anfang der Zeitachse für **start** oder der Anfang des Clips für **mstart ) verwendet.** Wenn eines der Stoppzeitattribute nicht angegeben ist, geht DES von einer normalen Wiedergaberate aus und berechnet die nicht angegebene Stoppzeit entsprechend. Wenn beide Stoppzeiten angegeben sind, ist die Wiedergabe bei Bedarf schneller oder langsamer als normal.
+Geben Sie mindestens ein Startzeitattribut (**start** oder **mstart**) und ein Stoppzeitattribut (**stop** oder **mstop**) an. Wenn eines der Startzeitattribute nicht angegeben ist, wird standardmäßig 0 (der Anfang der Zeitachse für **start** oder der Anfang des Clips für mstart ) **verwendet.** Wenn eines der Stoppzeitattribute nicht angegeben ist, geht DES von einer normalen Wiedergaberate aus und berechnet die nicht angegebene Beendigungszeit entsprechend. Wenn beide Beendigungszeiten angegeben werden, ist die Wiedergabe bei Bedarf schneller oder langsamer als normal.
 
-Im folgenden Beispiel beträgt die Zeitachse sieben Sekunden (**Stop** minus **Start**). Es wird eine normale Wiedergaberate angenommen, sodass die Medienstoppzeit standardmäßig 10 Sekunden beträgt (Dauer plus **mstart).**
+Im folgenden Beispiel beträgt die Zeitachsendauer sieben Sekunden (**stop** minus **start**). Es wird eine normale Wiedergaberate angenommen, sodass die Medienstoppzeit standardmäßig 10 Sekunden beträgt (Dauer plus **mstart**).
 
 
 ```
@@ -52,7 +52,7 @@ Im folgenden Beispiel beträgt die Zeitachse sieben Sekunden (**Stop** minus **S
 
 
 
-Im nächsten Beispiel wird die Medienstartzeit standardmäßig auf 0 festgelegt, sodass die Mediendauer 10 Sekunden beträgt. Die Dauer der Zeitachse beträgt fünf Sekunden, sodass der Clip doppelt so schnell wie gewohnt abspielt.
+Im nächsten Beispiel wird die Medienstartzeit standardmäßig auf 0 (0) eingestellt, sodass die Mediendauer 10 Sekunden beträgt. Die Zeitachsendauer beträgt fünf Sekunden, sodass der Clip doppelt so lange wie die normale Rate wiedergegeben wird.
 
 
 ```
@@ -61,7 +61,7 @@ Im nächsten Beispiel wird die Medienstartzeit standardmäßig auf 0 festgelegt,
 
 
 
-Wenn das **src-Attribut** ein Stillbild angibt, versucht DES, eine Reihe von Still-Bildern zu laden, um eine Animation zu erstellen. Wenn das **src-Attribut** beispielsweise IMAGE001.BMP ist, sucht DES nach IMAGE002.BMP, IMAGE003.BMP, IMAGE004.BMP usw. Wenn sie vorhanden sind, werden sie in sequenzieller numerischer Reihenfolge mit der vom **Framerate-Attribut** angegebenen Rate angezeigt.
+Wenn das **src-Attribut** ein Stillbild angibt, versucht DES, eine Reihe von Standbildern zu laden, um eine Animation zu erstellen. Wenn das **src-Attribut** beispielsweise IMAGE001.BMP ist, sucht DES nach IMAGE002.BMP, IMAGE003.BMP, IMAGE004.BMP usw. Wenn sie vorhanden sind, werden sie in sequenzieller numerischer Reihenfolge mit der vom **Framerate-Attribut** angegebenen Rate angezeigt.
 
 ## <a name="examples"></a>Beispiele
 

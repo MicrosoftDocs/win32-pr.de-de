@@ -1,9 +1,9 @@
 ---
-title: Performservervalidation (eaptype)
-description: Erfahren Sie mehr über das performservervalidation-Element. Dieses Element gibt an, ob die Server Validierung ausgeführt wird. | Performservervalidation (eaptype)
+title: PerformServerValidation (EapType)
+description: Erfahren Sie mehr über das PerformServerValidation-Element. Dieses Element gibt an, ob die Servervalidierung ausgeführt wird. | PerformServerValidation (EapType)
 ms.assetid: f6233bff-18e4-45b4-b598-839fa198f676
 keywords:
-- EAPHost-Element
+- Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 655379676bd117b89a6fe41a8d6895260e71a2bf
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5d4915b2342e6c453134cabd431db59c62c037d6c5ec8cde139f402933bd4f53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118273704"
 ---
-# <a name="performservervalidation-eaptype"></a>Performservervalidation (eaptype)
+# <a name="performservervalidation-eaptype"></a>PerformServerValidation (EapType)
 
-Das **performservervalidation (eaptype)** -Element gibt an, ob die Server Validierung ausgeführt wird.
+Das **Element PerformServerValidation (EapType)** gibt an, ob die Serverüberprüfung ausgeführt wird.
 
 ``` syntax
 <xs:element
@@ -31,20 +31,20 @@ Das **performservervalidation (eaptype)** -Element gibt an, ob die Server Validi
  />
 ```
 
-Das-Element wird durch das [**eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das -Element wird durch das [**EapType-Element**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **performservervalidation** -Element ist optional.
+Das **PerformServerValidation-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Server<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Server<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -52,31 +52,31 @@ Das **performservervalidation** -Element ist optional.
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv1-Schema Elemente](eaptlsconnectionpropertiesv1schema-elements.md)
+[eaptlsconnectionpropertiesv1-Schemaelemente](eaptlsconnectionpropertiesv1schema-elements.md)
 </dt> <dt>
 
-[**Performservervalidation (eaptype)**](eaptlsconnectionpropertiesv2shema-tlsextensions-tlsextensionstype-element.md)
+[**PerformServerValidation (EapType)**](eaptlsconnectionpropertiesv2shema-tlsextensions-tlsextensionstype-element.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die m \_ bmodifiesdata-Member-Variable gibt an, ob der Filter die Beispiel Daten ändert, die empfangen werden. Der Wert wird im ctransinplacefilter-Konstruktor festgelegt, jedoch ist der Standardwert true.
+description: Die \_ m bModifiesData-Membervariable gibt an, ob der Filter die empfangenen Beispieldaten ändert. Der Wert wird im CTransInPlaceFilter-Konstruktor festgelegt, ist jedoch standardmäßig auf TRUE festgelegt.
 ms.assetid: 8ccdba46-315f-4519-b363-6870d1217f98
-title: 'Ctransinplacefilter:: m_bModifiesData Member (transip. h)'
+title: CTransInPlaceFilter::m_bModifiesData-Member (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5bc0d630fd0eda6e9915f8c11f5b15d21b725ce8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7461f7f62a6cbd1fea2ff18f6e8f2e4b73825ea04cb9e3b0a679ee7cf15fef90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654879"
 ---
-# <a name="ctransinplacefilterm_bmodifiesdata-member"></a>Ctransinplacefilter:: m \_ bmodifiesdata-Member
+# <a name="ctransinplacefilterm_bmodifiesdata-member"></a>CTransInPlaceFilter::m \_ bModifiesData-Member
 
-Die `m_bModifiesData` Member-Variable gibt an, ob der Filter die Beispiel Daten ändert, die empfangen werden. Der Wert wird im **ctransinplacefilter** -Konstruktor festgelegt, jedoch ist der Standardwert **true**.
+Die `m_bModifiesData` Membervariable gibt an, ob der Filter die empfangenen Beispieldaten ändert. Der Wert wird im **CTransInPlaceFilter-Konstruktor** festgelegt, ist jedoch standardmäßig auf **TRUE** festgelegt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ bool m_bModifiesData;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Variable wirkt sich darauf aus, wie der Filter die Zuweisung aushandtert. Wenn der Wert **true** ist, kann der Filter keine schreibgeschützte Zuweisung für beide Pin-Verbindungen verwenden.
+Diese Variable wirkt sich darauf aus, wie der Filter die Zuweisung aushandelt. Wenn der Wert **TRUE** ist, kann der Filter keine schreibgeschützte Zuweisung für beide Pinverbindungen verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Diese Variable wirkt sich darauf aus, wie der Filter die Zuweisung aushandtert. 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplacefilter-Klasse**](ctransinplacefilter.md)
+[**CTransInPlaceFilter-Klasse**](ctransinplacefilter.md)
 </dt> </dl>
 
  

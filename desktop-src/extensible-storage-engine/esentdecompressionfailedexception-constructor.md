@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: EsentDecompressionFailedException-Konstruktor'
+description: 'Weitere Informationen zu: EsentDecompressionFailedException-Konstruktor'
 title: EsentDecompressionFailedException-Konstruktor
 TOCTitle: 'EsentDecompressionFailedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDecompressionFailedException.#ctor
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d92f0364fd9da033f32d418bf28466d1e4d67b56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 920a06b713a4a30dd9036a1792f1d6286f9d6528d21da46d3b35aeca7c3aca93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118270737"
 ---
 # <a name="esentdecompressionfailedexception-constructor"></a>EsentDecompressionFailedException-Konstruktor
 
 Initialisiert eine neue Instanz der EsentDecompressionFailedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,4 +60,4 @@ public EsentDecompressionFailedException()
 
 [EsentDecompressionFailedException-Member](./esentdecompressionfailedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

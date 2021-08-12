@@ -1,9 +1,9 @@
 ---
-title: 'Texture1DArray:: Texture1DArray Load-Methoden'
-description: 'Liest Textur Daten. | Texture1DArray:: Texture1DArray Load-Methoden'
+title: Texture1DArray::Texture1DArray Load-Methoden
+description: Liest Texturdaten. | Texture1DArray::Texture1DArray Load-Methoden
 ms.assetid: 0cf877fd-7e55-44f3-8965-8cff46f9f595
 keywords:
-- Lade Methoden HLSL
+- HlSL-Lademethoden
 topic_type:
 - apiref
 api_type:
@@ -12,29 +12,29 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: d73360f6c9bc10478bd8d0b0ade9ea984d0b998b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 330672a54f1d66b0c8674828d3e1f2c8538ba9cda9f1621d42e7c517813d7d6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283927"
 ---
-# <a name="texture1darrayload-methods"></a>Texture1DArray:: Load-Methoden
+# <a name="texture1darrayload-methods"></a>Texture1DArray::Load-Methoden
 
-Liest Textur Daten.
+Liest Texturdaten.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                            | BESCHREIBUNG                                                        |
+| Methode                                                            | Beschreibung                                                        |
 |:------------------------------------------------------------------|:-------------------------------------------------------------------|
-| [**Load (int, int)**](dx-graphics-hlsl-to-load.md)                 | Liest Textur Daten.<br/>                                     |
-| [**Load (int, int, uint)**](texture1darray-load-float-int-uint-.md) | Liest Textur Daten und gibt den Status des Vorgangs zurück.<br/> |
+| [**Load(int, int)**](dx-graphics-hlsl-to-load.md)                 | Liest Texturdaten.<br/>                                     |
+| [**Load(int, int, uint)**](texture1darray-load-float-int-uint-.md) | Liest Texturdaten und gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

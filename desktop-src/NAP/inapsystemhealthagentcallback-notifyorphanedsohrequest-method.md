@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentcallback notifis-Benachrichtigungsmethode (napsystemhealthagent. h)
-description: Wird aufgerufen, wenn ein sohrequest vom SHA abgefragt wurde, die Antwort jedoch nie zurückgegeben wurde.
+title: INapSystemHealthAgentCallback NotifyOrphanedSoHRequest-Methode (NapSystemHealthAgent.h)
+description: Wird aufgerufen, wenn eine SoHRequest vom SHA abgefragt wurde, aber die Antwort nie zurückgerufen wurde.
 ms.assetid: 9e6fac6c-fb23-4725-ae0f-28ef8a6c4ea6
 keywords:
-- Notisyorphanedsohrequest-Methode NAP
-- Notisyorphanedsohrequest-Methode NAP, inapsystemhealthagentcallback-Schnittstelle
-- Inapsystemhealthagentcallback-Schnittstelle NAP, notitelyorphanedsohrequest-Methode
+- NotifyOrphanedSoHRequest-Methode NAP
+- NotifyOrphanedSoHRequest-Methode NAP, INapSystemHealthAgentCallback-Schnittstelle
+- INapSystemHealthAgentCallback-Schnittstelle NAP , NotifyOrphanedSoHRequest-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 676b67b61a9375f4fd44ecc41f9e56e92a97b693
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 171191c266ae3fd59ab1ba8f55acd73eb143e9aa220fb3d2989a7ced9f716513
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621181"
 ---
-# <a name="inapsystemhealthagentcallbacknotifyorphanedsohrequest-method"></a>Inapsystemhealthagentcallback:: notieyorphanedsohrequest-Methode
+# <a name="inapsystemhealthagentcallbacknotifyorphanedsohrequest-method"></a>INapSystemHealthAgentCallback::NotifyOrphanedSoHRequest-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthagentcallback:: notifyorphanedsohrequest** -Methode wird aufgerufen, wenn ein [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) vom SHA abgefragt wurde, die Antwort jedoch nie zurückgegeben wurde.
+Die **INapSystemHealthAgentCallback::NotifyOrphanedSoHRequest-Methode** wird aufgerufen, wenn eine [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) vom SHA abgefragt wurde, aber die Antwort nie zurückgerufen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ HRESULT NotifyOrphanedSoHRequest(
 
 <dl> <dt>
 
-*correlationId* \[ in\]
+*correlationId* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die eindeutige [**correlationId**](/windows/win32/api/naptypes/ns-naptypes-correlationid) -Struktur, die den verwaisten [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh)identifiziert.
+Ein Zeiger auf die eindeutige [**CorrelationId-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-correlationid) die die verwaiste [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh)identifiziert.
 
 </dd> </dl>
 
@@ -68,23 +68,23 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Rückruf Methode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
+Diese Rückrufmethode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
 
 Diese Methode kann vom System in den folgenden Fällen aufgerufen werden:
 
--   Ein [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) konnte nicht gesendet werden.
--   Ein [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) wurde über das Netzwerk gesendet, aber es wurde kein **sohresponse** zurückgegeben, d. h., es ist ein Timeout für den enforcern aufgetreten, oder auf der Serverseite ist kein entsprechender SHV vorhanden.
--   Die Verbindung wurde heruntergefahren, oder ein Enforcer wurde offline geschaltet.
+-   Eine [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) konnte nicht über das Kabel gesendet werden.
+-   Eine [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) wurde über die Leitung gesendet, aber es wurde keine **SoHResponse** zurückgesendet, d. h., für den Erzwinger ist ein Time out aufgetreten, oder es gab keine entsprechende SHV auf serverseitiger Seite.
+-   Die Verbindung wurde getrennt, oder ein Erzwinger wurde offline geschaltet.
 
-Dies ist nur eine bestmögliche Benachrichtigung, daher dürfen sich SHAs nicht auf diese Informationen verlassen, um den Status zu bereinigen. Es gibt mehrere Situationen, in denen ein SHA nicht benachrichtigt wird:
+Dies ist nur eine Best-Effort-Benachrichtigung, sodass SHAs sich nicht auf diese Informationen verlassen dürfen, um den Zustand zu bereinigen. Es gibt mehrere Situationen, in denen ein SHA nicht benachrichtigt wird:
 
--   Wenn ein Enforcer falsch verhält, bedeutet dies, dass das SHA nicht benachrichtigt wird, wenn der Verbindungsstatus nicht erfüllt ist.
--   , Wenn ein-Enforcer abstürzt.
--   In Fehlerzuständen, d. h., der NAPAgent verfügt nicht über genügend Arbeitsspeicher.
+-   Wenn sich ein Erzwinger nicht verhält, d. h. er benachrichtigt den SHA nicht, wenn der Verbindungsstatus nicht mehr besteht.
+-   Wenn ein Erzwingungserzwinger abstürzt.
+-   Bei Fehlerbedingungen, d. h., der NapAgent ist nicht genügend Arbeitsspeicher.
 
-SHAs erhalten möglicherweise falsche Benachrichtigungen, wenn Sie zum ersten Mal eine Bindung an den NAPAgent herstellen, z. b. Wenn ein SoH-Austausch ausgeführt wird, wenn der SHA-gebunden ist, und dann ein Timeout auftritt.
+SHAs erhalten möglicherweise einige falsche Benachrichtigungen, wenn sie zum ersten Mal an napAgent gebunden werden, z. B. wenn ein SoH-Austausch ausgeführt wird, wenn die SHA-Bindung erfolgt, und dann tritt ein Times out auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,18 +92,18 @@ SHAs erhalten möglicherweise falsche Benachrichtigungen, wenn Sie zum ersten Ma
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsystemhealthagentcallback**](inapsystemhealthagentcallback.md)
+[**INapSystemHealthAgentCallback**](inapsystemhealthagentcallback.md)
 </dt> </dl>
 
  

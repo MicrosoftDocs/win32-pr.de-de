@@ -1,7 +1,7 @@
 ---
-description: Die m \_ binit-Member-Variable gibt an, ob das cimagesample-Objekt initialisiert wurde. Wenn dies der Fall ist, ist der Wert true. Andernfalls ist Sie false.
+description: Die m \_ bInit-Membervariable gibt an, ob das CImageSample-Objekt initialisiert wurde. Wenn dies der Fall ist, der Wert, wenn TRUE. Andernfalls ist dies FALSE.
 ms.assetid: bd508622-356e-46fe-98aa-c001c7742383
-title: 'Cimagesample:: m_bInit Member (winutil. h)'
+title: CImageSample::m_bInit Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8a2f2b91d81dfbdd4f385d8f38104c365c44b318
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 24f5ff7e56422afb40e85040de3d496a45143b5683af0c3882f5fc0a04688666
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655583"
 ---
-# <a name="cimagesamplem_binit-member"></a>Cimagesample:: m- \_ binit-Member
+# <a name="cimagesamplem_binit-member"></a>CImageSample::m \_ bInit-Member
 
-Die `m_bInit` Member-Variable gibt an, ob das **cimagesample** -Objekt initialisiert wurde. Wenn dies der Fall ist, ist der Wert **true**. Andernfalls ist Sie **false**.
+Die `m_bInit` Membervariable gibt an, ob **das CImageSample-Objekt** initialisiert wurde. Wenn dies der Fall ist, der Wert, wenn **TRUE**. Andernfalls ist es **FALSE.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ BOOL m_bInit;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagesample-Klasse**](cimagesample.md)
+[**CImageSample-Klasse**](cimagesample.md)
 </dt> <dt>
 
-[**Cimagesample:: getdibdata**](cimagesample-getdibdata.md)
+[**CImageSample::GetDIBData**](cimagesample-getdibdata.md)
 </dt> <dt>
 
-[**Cimagesample:: setdibdata**](cimagesample-setdibdata.md)
+[**CImageSample::SetDIBData**](cimagesample-setdibdata.md)
 </dt> </dl>
 
  

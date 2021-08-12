@@ -1,19 +1,19 @@
 ---
-description: XMHALF4 beschreibt einen 4D-Vektor, der aus vier Gleit Komma Werten mit halber Genauigkeit (16 Bit) besteht.
+description: XMHALF4 beschreibt einen 4D-Vektor, der aus vier Gleitkommawerten mit halber Genauigkeit (16 Bit) besteht.
 ms.assetid: 2bd8d651-e60e-409c-9257-5b30e212372e
 title: XMHALF4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afded103fc14c94396b476ae0448fd697c445955
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c0feeeb54c2f9139f251965295fff15af25f56e7deb987f744d0a3edf20bb31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118277862"
 ---
 # <a name="xmhalf4-extensions"></a>XMHALF4-Erweiterungen
 
-[**XMHALF4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmhalf4) beschreibt einen 4D-Vektor, der aus vier Gleit Komma Werten mit halber Genauigkeit (16 Bit) besteht.
+[**XMHALF4 beschreibt**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmhalf4) einen 4D-Vektor, der aus vier Gleitkommawerten mit halber Genauigkeit (16 Bit) besteht.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ ms.locfileid: "106350539"
 
 
 
-| Thema                                                     | BESCHREIBUNG                                   |
+| Thema                                                     | Beschreibung                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
-| [**XMHALF4-Konstruktoren**](xmhalf4-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMHALF4` .<br/> |
-| [XMHALF4-Operatoren](ovw-xmhalf4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMHALF4` .<br/>    |
+| [**XMHALF4-Konstruktoren**](xmhalf4-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMHALF4` werden.<br/> |
+| [XMHALF4-Operatoren](ovw-xmhalf4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMHALF4` werden.<br/>    |
 
 
 

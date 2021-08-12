@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_GET_VIDEOFORMAT Meldung (VFW. h)
-description: Die "WM \_ Cap \_ Get Videoformat"- \_ Meldung Ruft eine Kopie des verwendeten Video Formats oder die erforderliche Größe für das Videoformat ab. Sie können diese Nachricht explizit oder mithilfe der Makros capgetvideoformat und capgetvideoformatsize senden.
+title: WM_CAP_GET_VIDEOFORMAT Meldung (Vfw.h)
+description: Die \_ WM CAP \_ GET \_ VIDEOFORMAT-Nachricht ruft eine Kopie des verwendeten Videoformats oder die für das Videoformat erforderliche Größe ab. Sie können diese Nachricht explizit oder mithilfe der Makros capGetVideoFormat und capGetVideoFormatSize senden.
 ms.assetid: ac72dfdb-fe1a-4007-bdce-41e5e67d076a
 keywords:
-- WM_CAP_GET_VIDEOFORMAT-Nachricht (Multimedia)
+- WM_CAP_GET_VIDEOFORMAT Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 072d71366efee550b037d4a20388817954937854
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: afae3ea79b29cad6a758272f8f3952fdfb830a2b3d6d60f9fc5b4ca5042179fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118622619"
 ---
-# <a name="wm_cap_get_videoformat-message"></a>WM-Abdeckung \_ \_ get \_ Videoformat Message
+# <a name="wm_cap_get_videoformat-message"></a>WM \_ CAP \_ GET \_ VIDEOFORMAT-Meldung
 
-Die " **WM \_ Cap \_ get \_ Videoformat** "-Meldung Ruft eine Kopie des verwendeten Video Formats oder die erforderliche Größe für das Videoformat ab. Sie können diese Nachricht explizit oder mithilfe der Makros [**capgetvideoformat**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformat) und [**capgetvideoformatsize**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformatsize) senden.
+Die **WM CAP GET \_ \_ \_ VIDEOFORMAT-Nachricht** ruft eine Kopie des verwendeten Videoformats oder die für das Videoformat erforderliche Größe ab. Sie können diese Nachricht explizit oder mithilfe der Makros [**capGetVideoFormat**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformat) und [**capGetVideoFormatSize**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformatsize) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) (psVideoFormat);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Größe (in Bytes) der Struktur, auf die von **s** verwiesen wird.
+Größe der Struktur in Bytes, auf die von **s** verwiesen wird.
 
 </dd> <dt>
 
-<span id="psVideoFormat"></span><span id="psvideoformat"></span><span id="PSVIDEOFORMAT"></span>*psvideoformat*
+<span id="psVideoFormat"></span><span id="psvideoformat"></span><span id="PSVIDEOFORMAT"></span>*psVideoFormat*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur. Sie können auch **null** angeben, um die erforderliche Anzahl von Bytes abzurufen.
+Zeiger auf eine [**BITMAPINFO-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) Sie können auch **NULL** angeben, um die Anzahl der erforderlichen Bytes abzurufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Größe (in Bytes) des Video Formats oder 0 (null) zurück, wenn das Erfassungsfenster nicht mit einem Aufzeichnungs Treiber verbunden ist. Für Videoformate, für die eine Palette erforderlich ist, wird die aktuelle Palette ebenfalls zurückgegeben.
+Gibt die Größe des Videoformats in Bytes oder 0 (null) zurück, wenn das Aufzeichnungsfenster nicht mit einem Erfassungstreiber verbunden ist. Für Videoformate, die eine Palette erfordern, wird auch die aktuelle Palette zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da komprimierte Videoformate die Größenanforderungen variieren, müssen Anwendungen zuerst die Größe abrufen, dann Arbeitsspeicher zuweisen und schließlich die Videoformat Daten anfordern.
+Da komprimierte Videoformate in den Größenanforderungen variieren, müssen Anwendungen zuerst die Größe abrufen, dann Arbeitsspeicher zuordnen und schließlich die Videoformatdaten anfordern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Da komprimierte Videoformate die Größenanforderungen variieren, müssen Anwend
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

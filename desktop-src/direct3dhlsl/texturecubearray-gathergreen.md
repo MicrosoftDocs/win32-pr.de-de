@@ -1,9 +1,9 @@
 ---
-title: 'Texturecubearray:: texturecubearray gathergreen-Methoden'
-description: 'Führt eine Stichprobe einer Textur aus und gibt die grüne Komponente zurück. | Texturecubearray:: texturecubearray gathergreen-Methoden'
+title: TextureCubeArray::TextureCubeArray GatherGreen-Methoden
+description: Samples a texture and returns the green component. (Stichprobenentnahme für eine Textur und Rückgabe der grünen Komponente. | TextureCubeArray::TextureCubeArray GatherGreen-Methoden
 ms.assetid: EB180EA9-D1AE-4ACA-A518-92F7E46571E8
 keywords:
-- Gathergreen-Methoden HLSL
+- GatherGreen-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,32 +12,32 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: d6241b68445333e136db7cdf84a58858fe932491
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5d804b51d703342e96a27da6399a6267e4c2a5b7f2cbb377800a5f3826793fd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283084"
 ---
-# <a name="texturecubearraygathergreen-methods"></a>Texturecubearray:: gathergreen-Methoden
+# <a name="texturecubearraygathergreen-methods"></a>TextureCubeArray::GatherGreen-Methoden
 
-Führt eine Stichprobe einer Textur aus und gibt die grüne Komponente zurück.
+Samples a texture and returns the green component. (Stichprobenentnahme für eine Textur und Rückgabe der grünen Komponente.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                    | BESCHREIBUNG                                                                                                                                       |
+| Methode                                                                    | Beschreibung                                                                                                                                       |
 |:--------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Gathergrün (S, float, uint)**](tcubearray-gathergreen-s-float-uint-.md)  | Gibt die grünen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang zusammen mit dem Status der Kachel Zuordnung verwendet werden.<br/> |
+| [**GatherGreen(S,float,uint)**](tcubearray-gathergreen-s-float-uint-.md)  | Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidlcmapstringflagsexception-Konstruktor'
-title: Esentinvalidlcmapstringflagsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidLCMapStringFlagsException-Konstruktor'
+title: EsentInvalidLCMapStringFlagsException-Konstruktor
 TOCTitle: 'EsentInvalidLCMapStringFlagsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidLCMapStringFlagsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidlcmapstringflagsexception.esentinvalidlcmapstringflagsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4963f1f0bfc4dc81752b8f997fc893e91bd89d9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8373e1a9ec8a151b4472a5af34bbad4612e872136232188e5e6bfb0bc76dddc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118265747"
 ---
-# <a name="esentinvalidlcmapstringflagsexception-constructor"></a>Esentinvalidlcmapstringflagsexception-Konstruktor
+# <a name="esentinvalidlcmapstringflagsexception-constructor"></a>EsentInvalidLCMapStringFlagsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidlcmapstringflagsexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidLCMapStringFlagsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentInvalidLCMapStringFlagsException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentinvalidlcmapstringflagsexception-Klasse](./esentinvalidlcmapstringflagsexception-class.md)
+[EsentInvalidLCMapStringFlagsException-Klasse](./esentinvalidlcmapstringflagsexception-class.md)
 
-[Esentinvalidlcmapstringflagsexception-Elemente](./esentinvalidlcmapstringflagsexception-members.md)
+[EsentInvalidLCMapStringFlagsException-Member](./esentinvalidlcmapstringflagsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

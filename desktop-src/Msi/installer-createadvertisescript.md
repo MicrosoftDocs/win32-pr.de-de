@@ -1,7 +1,7 @@
 ---
-description: Mit der Methode "-Methode" der Methode "-Installer" wird ein Ankündigungs Skript generiert.
+description: Die CreateAdvertiseScript-Methode des Installer-Objekts generiert ein Anklangskript.
 ms.assetid: 32a331e5-d291-49cd-ab0e-7d0e4d72a95b
-title: 'Installer:: kreatewerbung-Methode'
+title: Installer::CreateAdvertiseScript-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 9ec4b18eee376e7bde4824a497ea14b503045f43
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9416b3b503db11411db93c66242ea55587e6175344313f785c08392c72ad0991
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118631956"
 ---
-# <a name="installercreateadvertisescript-method"></a>Installer:: kreatewerbung-Methode
+# <a name="installercreateadvertisescript-method"></a>Installer::CreateAdvertiseScript-Methode
 
-Mit **der Methode "** -Methode" der Methode "- [**Installer**](installer-object.md) " wird ein Ankündigungs Skript generiert.
+Die **CreateAdvertiseScript-Methode** des [**Installer-Objekts**](installer-object.md) generiert ein Anklangskript.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,21 +47,21 @@ Mit **der Methode "** -Methode" der Methode "- [**Installer**](installer-object.
 *packagePath* 
 </dt> <dd>
 
-Der vollständige Pfad zum Windows Installer Paket (. msi), das angekündigt werden soll.
+Der vollständige Pfad zum Windows Installer-Paket (.msi), das angekündigt werden soll.
 
 </dd> <dt>
 
-*ScriptFilePath* 
+*scriptFilePath* 
 </dt> <dd>
 
-Der vollständige Pfad zu der Skriptdatei, die mit den angekündigten Informationen erstellt werden soll.
+Der vollständige Pfad zur Skriptdatei, die mit den angekündigten Informationen erstellt werden soll.
 
 </dd> <dt>
 
-*Kranz* 
+*Verwandelt* 
 </dt> <dd>
 
-Die Liste der Transformationen, die auf das Produkt angewendet werden sollen. Transformationen in der Liste werden durch Semikolons getrennt. Dieser Parameter ist optional.
+Die Liste der Transformationen, die auf das Produkt angewendet werden. Transformationen in der Liste werden durch Semikolons getrennt. Dieser Parameter ist optional.
 
 </dd> <dt>
 
@@ -75,13 +75,13 @@ Die Sprache des zu verwendenden Installationspakets. Dieser Parameter ist option
 *platform* 
 </dt> <dd>
 
-Dieser Parameter gibt an, für welche Plattform das Installationsprogramm vom Installationsprogramm erstellt werden soll. Dieser Parameter kann einen der folgenden Werte annehmen.
+Dieser Parameter gibt an, für welche Plattform das Installationsprogramm das Skript erstellen soll. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                                       | Bedeutung                                                |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <span id="msiAdvertiseCurrentPlatform"></span><span id="msiadvertisecurrentplatform"></span><span id="MSIADVERTISECURRENTPLATFORM"></span><dl> <dt>**msiankündigen-currentplatform**</dt> <dt>0</dt> </dl> | Erstellt ein Skript für die aktuelle Plattform.<br/>  |
+| <span id="msiAdvertiseCurrentPlatform"></span><span id="msiadvertisecurrentplatform"></span><span id="MSIADVERTISECURRENTPLATFORM"></span><dl> <dt>**msiAdvertiseCurrentPlatform**</dt> <dt>0</dt> </dl> | Erstellt ein Skript für die aktuelle Plattform.<br/>  |
 | <span id="msiAdvertiseX86Platform"></span><span id="msiadvertisex86platform"></span><span id="MSIADVERTISEX86PLATFORM"></span><dl> <dt>**msiAdvertiseX86Platform**</dt> <dt>1</dt> </dl>                 | Erstellt ein Skript für die x86-Plattform.<br/>      |
 | <span id="msiAdvertiseIA64Platform"></span><span id="msiadvertiseia64platform"></span><span id="MSIADVERTISEIA64PLATFORM"></span><dl> <dt>**msiAdvertiseIA64Platform**</dt> <dt>2</dt> </dl>             | Erstellt ein Skript für Itanium-basierte Systeme.<br/> |
 | <span id="msiAdvertiseX64Platform"></span><span id="msiadvertisex64platform"></span><span id="MSIADVERTISEX64PLATFORM"></span><dl> <dt>**msiAdvertiseX64Platform**</dt> <dt>4</dt> </dl>                 | Erstellt ein Skript für die x64-Plattform.<br/>      |
@@ -95,14 +95,14 @@ Dieser Parameter gibt an, für welche Plattform das Installationsprogramm vom In
 *options* 
 </dt> <dd>
 
-Ankündigungs Optionen. Dieser Parameter ist optional. Dieser Parameter kann einen der folgenden Werte annehmen. Dieser Parameter ist optional.
+Ankündigungsoptionen. Dieser Parameter ist optional. Dieser Parameter kann einen der folgenden Werte annehmen. Dieser Parameter ist optional.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                                   | Bedeutung                                                                                                                                                                                                                                                                                                                                           |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="msiAdvertiseDefault"></span><span id="msiadvertisedefault"></span><span id="MSIADVERTISEDEFAULT"></span><dl> <dt>**msiankündigen-Standard**</dt> Wert <dt>0</dt> </dl>                             | Standard Ankündigung<br/>                                                                                                                                                                                                                                                                                                                 |
-| <span id="msiAdvertiseSingleInstance"></span><span id="msiadvertisesingleinstance"></span><span id="MSIADVERTISESINGLEINSTANCE"></span><dl> <dt>**msiwerbesesinglabstance**</dt> <dt>1</dt> </dl> | Gibt eine neue Instanz des Produkts an. Erfordert, dass die erste Transformation in der Transformations Liste des *Transformationen* -Parameters die instanztransformation ist, mit der der Produktcode geändert wird. Weitere Informationen finden Sie unter [Installieren mehrerer Instanzen von Produkten und Patches](installing-multiple-instances-of-products-and-patches.md).<br/> |
+| <span id="msiAdvertiseDefault"></span><span id="msiadvertisedefault"></span><span id="MSIADVERTISEDEFAULT"></span><dl> <dt>**msiAdvertiseDefault**</dt> <dt>0</dt> </dl>                             | Standard-Ankündigung<br/>                                                                                                                                                                                                                                                                                                                 |
+| <span id="msiAdvertiseSingleInstance"></span><span id="msiadvertisesingleinstance"></span><span id="MSIADVERTISESINGLEINSTANCE"></span><dl> <dt>**msiAdvertiseSingleInstance**</dt> <dt>1</dt> </dl> | Gibt eine neue Instanz des Produkts an. Erfordert, dass die erste Transformation in der *Transformationsliste des Transformationsparameters* die Instanztransformation ist, die den Produktcode ändert. Weitere Informationen finden Sie unter [Installieren mehrerer Instanzen von Produkten und Patches.](installing-multiple-instances-of-products-and-patches.md)<br/> |
 
 
 
@@ -114,13 +114,13 @@ Ankündigungs Optionen. Dieser Parameter ist optional. Dieser Parameter kann ein
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**Methode "**](installer-advertiseproduct.md) ankündigen" verwendet die [**msiankündigen-productex**](/windows/desktop/api/Msi/nf-msi-msiadvertiseproductexa) -Funktion.
+Die [**AdvertiseProduct-Methode**](installer-advertiseproduct.md) verwendet die [**MsiAdvertiseProductEx-Funktion.**](/windows/desktop/api/Msi/nf-msi-msiadvertiseproductexa)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Verwendung der Methode " **kreatewerbung** " veranschaulicht.
+Im folgenden Beispiel wird die Verwendung der **CreateAdvertiseScript-Methode** veranschaulicht.
 
 
 ```VB
@@ -142,20 +142,20 @@ Installer.CreateAdvertiseScript "\\products\public\orca\orca.msi", "c:\scripts\o
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 4,5 unter Windows Server 2003 und Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 4.5 auf Windows Server 2003 und Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                           |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                                |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Installationsprogramm**](installer-object.md)
+[**Installer**](installer-object.md)
 </dt> <dt>
 
-[Wird in Windows Installer 3,1 und früheren Versionen nicht unterstützt.](not-supported-in-windows-installer-version-3-1.md)
+[Nicht unterstützt in Windows Installer 3.1 und früheren Versionen](not-supported-in-windows-installer-version-3-1.md)
 </dt> </dl>
 
  

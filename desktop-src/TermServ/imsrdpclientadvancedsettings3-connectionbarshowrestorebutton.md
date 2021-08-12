@@ -1,22 +1,22 @@
 ---
-title: IMsRdpClientAdvancedSettings3 connectionbarshowrestorebutton (Eigenschaft)
-description: Gibt an, ob die Schaltfläche Wiederherstellen auf der Verbindungs Leiste angezeigt werden soll.
+title: IMsRdpClientAdvancedSettings3 ConnectionBarShowRestoreButton (Eigenschaft)
+description: Gibt an, ob die Schaltfläche Wiederherstellen auf der Verbindungsleiste angezeigt werden soll.
 ms.assetid: a56c3c05-d253-404a-bf49-9c1d804802e0
 ms.tgt_platform: multiple
 keywords:
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, connectionbarshowrestorebutton-Eigenschaft
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, connectionbarshowrestorebutton-Eigenschaft
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, connectionbarshowrestorebutton-Eigenschaft
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, connectionbarshowrestorebutton-Eigenschaft
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, connectionbarshowrestorebutton-Eigenschaft
-- Connectionbarshowrestorebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, connectionbarshowrestorebutton-Eigenschaft
+- ConnectionBarShowRestoreButton-Remotedesktopdienste
+- ConnectionBarShowRestoreButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , ConnectionBarShowRestoreButton-Eigenschaft
+- ConnectionBarShowRestoreButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , ConnectionBarShowRestoreButton-Eigenschaft
+- ConnectionBarShowRestoreButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, ConnectionBarShowRestoreButton(Eigenschaft)
+- ConnectionBarShowRestoreButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , ConnectionBarShowRestoreButton-Eigenschaft
+- ConnectionBarShowRestoreButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, ConnectionBarShowRestoreButton(Eigenschaft)
+- ConnectionBarShowRestoreButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, ConnectionBarShowRestoreButton(Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ae83ecde31461eff9c553782b8bfa3ae760fb54
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 81bcdefbd7cc41a0a1771705482cc67da028bf6dd349e473c02249284dcfcfe3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118608419"
 ---
-# <a name="imsrdpclientadvancedsettings3connectionbarshowrestorebutton-property"></a>IMsRdpClientAdvancedSettings3:: connectionbarshowrestorebutton-Eigenschaft
+# <a name="imsrdpclientadvancedsettings3connectionbarshowrestorebutton-property"></a>IMsRdpClientAdvancedSettings3::ConnectionBarShowRestoreButton (Eigenschaft)
 
-Gibt an, ob die Schaltfläche **Wiederherstellen** auf der Verbindungs Leiste angezeigt werden soll.
+Gibt an, ob die Schaltfläche **Wiederherstellen** auf der Verbindungsleiste angezeigt werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,17 +74,17 @@ HRESULT get_ConnectionBarShowRestoreButton(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie **auf Variant \_ true** fest, um die Schaltfläche **Wiederherstellen** anzuzeigen, und auf **Variant \_ false** , um die Anzeige der Schaltfläche **Wiederherstellen** zu deaktivieren.
+Legen Sie **auf VARIANT TRUE \_ fest,** um die **Schaltfläche** Wiederherstellen anzuzeigen, und auf **VARIANT \_ FALSE,** um die Anzeige der Schaltfläche **Wiederherstellen zu** deaktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nicht festgelegt werden, wenn das Steuerelement verbunden ist.
+Diese Eigenschaft kann nicht festgelegt werden, während das Steuerelement verbunden ist.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,11 +96,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                   |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings3 ist als 19cd856b-c542-4c53-ACee-B127 e3be1a59 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings3 ist als 19cd856b-c542-4c53-acee-f127e3be1a59 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

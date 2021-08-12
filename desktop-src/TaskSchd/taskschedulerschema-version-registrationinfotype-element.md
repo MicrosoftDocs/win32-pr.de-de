@@ -1,9 +1,9 @@
 ---
-title: Version (registrationinfotype)-Element
-description: Gibt die Versionsnummer der Aufgabe an.
+title: Version (registrationInfoType)-Element
+description: Gibt die Versionsnummer des Tasks an.
 ms.assetid: 0a7223ae-dfc7-4356-aea4-88ff3b3b9148
 keywords:
-- Versions Element Taskplaner
+- Version-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: eb1ae5094ad6f69a61e86da1716169a1b7929e3b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63d69b501b12890939f3bd0b146c959278eeaa0d5eb596851a488cef87f0770a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118610425"
 ---
-# <a name="version-registrationinfotype-element"></a>Version (registrationinfotype)-Element
+# <a name="version-registrationinfotype-element"></a>Version (registrationInfoType)-Element
 
-Gibt die Versionsnummer der Aufgabe an.
+Gibt die Versionsnummer des Tasks an.
 
 ``` syntax
 <xs:element name="Version"
@@ -31,27 +31,27 @@ Gibt die Versionsnummer der Aufgabe an.
  />
 ```
 
-Das **Versions** Element wird durch den komplexen Typ [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
+Das **Version-Element** wird durch den komplexen [**registrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                           | Abgeleitet von                                                                         | BESCHREIBUNG                                                                                                                         |
+| Element                                                                           | Abgeleitet von                                                                         | Beschreibung                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen zum Task an, z. b. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert ist.<br/> |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen über den Task an, z. B. den Ersteller der Aufgabe und das Datum, an dem der Task registriert ist.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird die Version einer Aufgabe mithilfe der [**RegistrationInfo. Version**](registrationinfo-version.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird die Version eines Tasks mithilfe der [**RegistrationInfo.Version-Eigenschaft**](registrationinfo-version.md) angegeben.
 
-Bei der C++-Entwicklung wird die Version einer Aufgabe mithilfe der [**iregistrationinfo:: Version**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_version) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird die Version eines Tasks mithilfe der [**IRegistrationInfo::Version-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_version) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert die Version einer Aufgabe.
+Der folgende XML-Code definiert die Version eines Tasks.
 
 
 ```XML
@@ -68,16 +68,16 @@ Der folgende XML-Code definiert die Version einer Aufgabe.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

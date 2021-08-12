@@ -1,41 +1,41 @@
 ---
-description: Das cutpoint-Attribut gibt an, wann ein Übergang von einer Quelle zum nächsten erfolgt, wenn der Übergang als Ausschneiden gerendert wird. Der Wert ist relativ zum Anfang des Übergangs.
+description: Das Cutpointattribut gibt an, wann ein Übergang von einer Quelle zur nächsten schneidet, wenn der Übergang als Schnitt gerendert wird. Der Wert ist relativ zum Beginn des Übergangs.
 ms.assetid: bdb0b8cd-025f-4b56-9cd4-f71c58ee809a
 title: cutpoint-Attribut
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd516bd67577906a0a06d8da692ffbd7563ce32f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7332d3ef1b608b192b18e0d32bc99bce547058754950847e0a9767eb500a1553
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654591"
 ---
 # <a name="cutpoint-attribute"></a>cutpoint-Attribut
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Das- `cutpoint` Attribut gibt an, wann ein Übergang von einer Quelle zum nächsten erfolgt, wenn der Übergang als Ausschneiden gerendert wird. Der Wert ist relativ zum Anfang des Übergangs.
+Das -Attribut gibt an, wann ein Übergang von einer Quelle zur nächsten schneidet, wenn der Übergang `cutpoint` als Schnitt gerendert wird. Der Wert ist relativ zum Beginn des Übergangs.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Muss eine Zeichenfolge im Format " *hh: mm: SS. FF* " sein, wobei " *HH* = Hours, *mm* = Minutes, *SS* = seconds" und " *FF* = Sekundenbruchteile" sein muss. Beispiel: 1:04:30.512. Führende Einheiten können ausgelassen werden. Beispielsweise sind 3:00 (drei Minuten) und 45 (45 Sekunden) beide gültig.
+Muss eine Zeichenfolge im Format *hh:mm:ss.ff* sein, wobei *hh* = hours, *mm* = minutes, *ss* = seconds und *ff* = fractions of seconds ist. Beispiel: 1:04:30.512. Führende Einheiten können weggelassen werden. Beispielsweise sind 3:00 (drei Minuten) und 45 (45 Sekunden) beide gültig.
 
 ## <a name="applies-to"></a>Gilt für
 
 [**Übergang**](transition-element.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XTL-Attribute](xtl-attributes.md)
 </dt> <dt>
 
-[**Iamtimelinetrans:: setcutpoint**](iamtimelinetrans-setcutpoint.md)
+[**IAMTimelineTrans::SetCutPoint**](iamtimelinetrans-setcutpoint.md)
 </dt> </dl>
 
  

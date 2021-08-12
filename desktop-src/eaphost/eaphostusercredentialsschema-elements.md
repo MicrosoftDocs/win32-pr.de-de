@@ -1,6 +1,6 @@
 ---
-title: eaphustuser-Anmelde Informationen Schema Elemente
-description: Erfahren Sie mehr über die eaphustuseranmelde-Schema Elemente. Hier finden Sie eine Liste der Schema Elemente und weitere verfügbare Ressourcen.
+title: eaphostusercredentials-Schemaelemente
+description: Erfahren Sie mehr über die eaphostusercredentials-Schemaelemente. Sehen Sie sich eine Liste der Schemaelemente an, und zeigen Sie zusätzliche verfügbare Ressourcen an.
 ms.assetid: befc5a27-03ff-4e42-a99e-047a4237d8a7
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,35 +9,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 762200967b5d1127dc1904d1a3348d50950c04a7
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: b6012733a16f7eab84b4242828ce94113e52fc5df7fc62240f9dfce7193d868a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274302"
 ---
-# <a name="eaphostusercredentials-schema-elements"></a>eaphustuser-Anmelde Informationen Schema Elemente
+# <a name="eaphostusercredentials-schema-elements"></a>eaphostusercredentials-Schemaelemente
 
-Das [eaphustuseranmelde](eaphostusercredentialsschema-schema.md) -Schema besteht aus den folgenden Schema Elementen.
+Das [eaphostusercredentials-Schema](eaphostusercredentialsschema-schema.md) besteht aus den folgenden Schemaelementen.
 
--   [**"Kredentialsblob" (eaphustuseranmeldeinformationen)**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md)
--   [**Anmelde Informationen (eaphustuseranmeldeinformationen)**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md)
--   [**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
--   [**EapMethod (eaphustuseranmeldeinformationen)**](eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md)
+-   [**CredentialsBlob (EapHostUserCredentials)**](eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md)
+-   [**Anmeldeinformationen (EapHostUserCredentials)**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md)
+-   [**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+-   [**EapMethod (EapHostUserCredentials)**](eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
-[eaphustuseranmelde-Schema](eaphostusercredentialsschema-schema.md)
+[eaphostusercredentials-Schema](eaphostusercredentialsschema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

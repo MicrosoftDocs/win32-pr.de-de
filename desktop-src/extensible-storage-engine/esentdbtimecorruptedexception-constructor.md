@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdbtimeverdertedexception-Konstruktor'
-title: Esentdbtimeverdertedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDbTimeCorruptedException-Konstruktor'
+title: EsentDbTimeCorruptedException-Konstruktor
 TOCTitle: 'EsentDbTimeCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDbTimeCorruptedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdbtimecorruptedexception.esentdbtimecorruptedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2904beca8bf9eddb4a9ee4fa170d786a03e51afb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4d63b3ea38410b2d57341e27bacd0a10352c1d1c7e0a17b9240d94976da779c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118271124"
 ---
-# <a name="esentdbtimecorruptedexception-constructor"></a>Esentdbtimeverdertedexception-Konstruktor
+# <a name="esentdbtimecorruptedexception-constructor"></a>EsentDbTimeCorruptedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdbtimeverdertedexception-Klasse.
+Initialisiert eine neue Instanz der EsentDbTimeCorruptedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentDbTimeCorruptedException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentdbtimeverdertedexception-Klasse](./esentdbtimecorruptedexception-class.md)
+[EsentDbTimeCorruptedException-Klasse](./esentdbtimecorruptedexception-class.md)
 
-[Esentdbtimeverdertedexception-Elemente](./esentdbtimecorruptedexception-members.md)
+[EsentDbTimeCorruptedException-Member](./esentdbtimecorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

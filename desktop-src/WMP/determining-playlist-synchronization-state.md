@@ -1,41 +1,41 @@
 ---
-title: Status der Wiedergabelisten Synchronisierung
-description: Status der Wiedergabelisten Synchronisierung
+title: Bestimmen des Wiedergabelistensynchronisierungsstatus
+description: Bestimmen des Wiedergabelistensynchronisierungsstatus
 ms.assetid: 634b659b-c3ae-4957-b17e-18fd92e915be
 keywords:
-- Windows Media Player, Synchronisierungs Wiedergabelisten
-- Windows Media Player-Objektmodell, Synchronisierungs Wiedergabelisten
-- Objektmodell, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile, Synchronisierungs Wiedergabelisten
-- Windows Media Player ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- ActiveX-Steuerung, Synchronisierungs Wiedergabelisten
+- Windows Media Player, Synchronisierungswiedergabelisten
+- Windows Media Player Objektmodell, Synchronisierungswiedergabelisten
+- Objektmodell, Synchronisierungswiedergabelisten
+- Windows Media Player Mobile Wiedergabelisten, Synchronisierungswiedergabelisten
+- Windows Media Player ActiveX-Steuerelement, Synchronisierungswiedergabelisten
+- Windows Media Player Mobile ActiveX-Steuerelement, Wiedergabelisten für die Synchronisierung
+- ActiveX-Steuerelement, Synchronisierungswiedergabelisten
 - Wiedergabelisten, Synchronisierung
-- Metadatei-Wiedergabelisten, Synchronisierung
-- Windows Media Metadatei-Wiedergabelisten, Synchronisierung
-- Portable Geräte, bestimmen des Status der Synchronisierungs Wiedergabe
-- Synchronisierungs Wiedergabelisten, Synchronisierungs Status
+- Metafile-Wiedergabelisten, Synchronisierung
+- Windows Medienmetadatei-Wiedergabelisten, Synchronisierung
+- Portable Geräte, Bestimmen des Wiedergabelistenzustands der Synchronisierung
+- Synchronisierungswiedergabelisten, Synchronisierungsstatus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9758cfbb73c698a40d6d4f48e645e57750d8a332
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: a14af59f66d1b21eac00208ecc805f756761256e47a35042694bcd65e6f96558
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106337207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118579459"
 ---
-# <a name="determining-playlist-synchronization-state"></a>Status der Wiedergabelisten Synchronisierung
+# <a name="determining-playlist-synchronization-state"></a>Bestimmen des Wiedergabelistensynchronisierungsstatus
 
-Windows Media Player 10 oder höher verwendet das **SyncState** -Attribut, um Informationen darüber zu erhalten, ob eine bestimmte digitale Mediendatei auf ein tragbares Gerät kopiert wurde, und im Falle eines Fehlers, ob das Kopieren fehlgeschlagen ist, da das Gerät nicht über genügend Arbeitsspeicher verfügt.
+Windows Media Player 10 oder höher verwendet das **SyncState-Attribut,** um Informationen darüber zu enthalten, ob eine bestimmte digitale Mediendatei auf ein portables Gerät kopiert wurde, und im Fall eines Fehlers, ob beim Kopieren ein Fehler aufgetreten ist, weil das Gerät nicht über genügend Arbeitsspeicher verfügte.
 
-Im folgenden Beispielcode wird eine Funktion erstellt, die diese Informationen aus einer digitalen Mediendatei abruft. Die Funktion übernimmt die folgenden Parameter:
+Der folgende Beispielcode erstellt eine Funktion, die diese Informationen aus einer digitalen Mediendatei abruft. Die Funktion verwendet die folgenden Parameter:
 
--   *pmedia*. Zeiger auf eine **iwmpmedia** -Schnittstelle, die die zu überprüfende digitale Mediendatei darstellt.
--   *lpsindex*: Der Partnerschafts Index des aktuellen Geräts.
--   *pulondevice*. Zeiger auf eine **Long** -Variable, die den Wert empfängt, der angibt, ob die digitale Mediendatei auf das Gerät kopiert wurde.
--   *puldidnotfit*. Zeiger auf eine **Long** -Variable, die den Wert empfängt, der angibt, ob der Kopiervorgang fehlgeschlagen ist, da das Gerät nicht über genügend Arbeitsspeicher verfügt.
+-   *pMedia*. Zeiger auf eine **IWMPMedia-Schnittstelle,** die die zu überprüfende digitale Mediendatei darstellt.
+-   *lPsIndex*. Partnerschaftsindex des aktuellen Geräts.
+-   *pulOnDevice*. Zeiger auf  eine long-Variable, die den Wert empfängt, der angibt, ob die digitale Mediendatei auf das Gerät kopiert wurde.
+-   *pulDidNotFit*. Zeiger auf  eine long-Variable, die den Wert empfängt, der angibt, ob beim Kopiervorgang ein Fehler aufgetreten ist, weil das Gerät nicht über genügend Arbeitsspeicher verfügte.
 
-Die im **SyncState** -Attribut enthaltenen Informationen werden bitweise codiert. Sie können sehen, wie diese Funktion im Beispielcode zum Auflisten [der Medienelemente](enumerating-the-media-items.md)verwendet wird.
+Die im **SyncState-Attribut** enthaltenen Informationen werden bitweise codiert. Wie diese Funktion verwendet wird, erfahren Sie im Beispielcode unter [Aufzählen der Medienelemente.](enumerating-the-media-items.md)
 
 
 ```C++
@@ -97,21 +97,21 @@ STDMETHODIMP CSyncSettings::GetPartnershipSyncState(IWMPMedia* pMedia, long lPsI
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia)
+[**IWMPMedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia)
 </dt> <dt>
 
-[**IWMPMedia3:: getItemInfoByType**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia3-getiteminfobytype)
+[**IWMPMedia3::getItemInfoByType**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia3-getiteminfobytype)
 </dt> <dt>
 
-[**Synchronisierungs Wiedergabelisten**](managing-synchronization-playlists.md)
+[**Verwalten von Synchronisierungswiedergabelisten**](managing-synchronization-playlists.md)
 </dt> <dt>
 
 [**SyncState-Attribut**](syncstate-attribute.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

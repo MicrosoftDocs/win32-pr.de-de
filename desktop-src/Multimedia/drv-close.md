@@ -1,9 +1,9 @@
 ---
-title: DRV_CLOSE Meldung (MMSYSTEM. h)
-description: Weist den Treiber an, die angegebene-Instanz zu schließen. Wenn keine anderen Instanzen geöffnet sind, sollte der Treiber für die nachfolgende Freigabe aus dem Arbeitsspeicher vorbereitet werden.
+title: DRV_CLOSE Nachricht (Mmsystem.h)
+description: Weist den Treiber an, die angegebene Instanz zu schließen. Wenn keine anderen Instanzen geöffnet sind, sollte sich der Treiber auf die nachfolgende Freigabe aus dem Arbeitsspeicher vorbereiten.
 ms.assetid: 98d7fe47-5194-4912-a9d6-3af3d1fa4e60
 keywords:
-- DRV_CLOSE-Nachricht (Multimedia)
+- DRV_CLOSE Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,52 +14,52 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a205b7e6edb4a427b0e80d32cc711d9bf2b052c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5d89be1821b03e43fbe05b5ed2efc90e40db03e36538cf0412201baa7273e596
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118622667"
 ---
-# <a name="drv_close-message"></a>DRV- \_ Schließen-Meldung
+# <a name="drv_close-message"></a>DRV \_ CLOSE-Meldung
 
-Weist den Treiber an, die angegebene-Instanz zu schließen. Wenn keine anderen Instanzen geöffnet sind, sollte der Treiber für die nachfolgende Freigabe aus dem Arbeitsspeicher vorbereitet werden.
+Weist den Treiber an, die angegebene Instanz zu schließen. Wenn keine anderen Instanzen geöffnet sind, sollte sich der Treiber auf die nachfolgende Freigabe aus dem Arbeitsspeicher vorbereiten.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="dwDriverId"></span><span id="dwdriverid"></span><span id="DWDRIVERID"></span>*dwdriverid*
+<span id="dwDriverId"></span><span id="dwdriverid"></span><span id="DWDRIVERID"></span>*dwDriverId*
 </dt> <dd>
 
-Der Bezeichner des installierbaren Treibers. Dabei handelt es sich um den gleichen Wert, der zuvor vom Treiber aus der von [**drv \_ geöffneten**](drv-open.md) Nachricht zurückgegeben wurde.
+Bezeichner des installierbaren Treibers. Dies ist derselbe Wert, der zuvor vom Treiber aus der [**DRV \_ OPEN-Nachricht**](drv-open.md) zurückgegeben wurde.
 
 </dd> <dt>
 
 <span id="hdrvr"></span><span id="HDRVR"></span>*hdrvr*
 </dt> <dd>
 
-Handle der installierbaren Treiber Instanz.
+Handle der installierbaren Treiberinstanz.
 
 </dd> <dt>
 
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-32-Bit-Wert, der in einem Aufrufen der **driverclose** -Funktion als *lParam1* -Parameter angegeben wird.
+32-Bit-Wert, der als *lParam1-Parameter* in einem Aufruf der **DriverClose-Funktion** angegeben wird.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-32-Bit-Wert, der in einem Aufrufen der **driverclose** -Funktion als *lParam2* -Parameter angegeben wird.
+32-Bit-Wert, der als *lParam2-Parameter* in einem Aufruf der **DriverClose-Funktion** angegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn erfolgreich, andernfalls
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,18 +69,18 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn erfolgreich, andernfalls
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

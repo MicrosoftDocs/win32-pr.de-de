@@ -1,11 +1,11 @@
 ---
-title: Inapsohprocessor getnumofattributes-Methode (napprotocol. h)
-description: Ruft die Gesamtanzahl der Attribute im SoH ab.
+title: INapSoHProcessor GetNumberOfAttributes-Methode (NapProtocol.h)
+description: Ruft die Gesamtzahl der Attribute im SoH ab.
 ms.assetid: ee0b1857-65a7-47bb-ae91-c939344a24d0
 keywords:
-- Getnumofattributes-Methode NAP
-- Getnumofattributes-Methode NAP, inapsohprocessor-Schnittstelle
-- Inapsohprocessor-Schnittstelle NAP, getnumofattributes-Methode
+- GetNumberOfAttributes-Methode NAP
+- GetNumberOfAttributes-Methode NAP, INapSoHProcessor-Schnittstelle
+- INapSoHProcessor-Schnittstelle NAP, GetNumberOfAttributes-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f1336362b44d49c71ce81b197f9f95b1a1b8fc9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a55805d85cc6a809a915f3998ab1b3dd218bd35a10b3b0044ff7c78130a72d97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621171"
 ---
-# <a name="inapsohprocessorgetnumberofattributes-method"></a>Inapsohprocessor:: getzahlofattributes-Methode
+# <a name="inapsohprocessorgetnumberofattributes-method"></a>INapSoHProcessor::GetNumberOfAttributes-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsohprocessor:: getzahlofattributes** -Methode ruft die Gesamtanzahl der Attribute im SoH ab.
+Die **INapSoHProcessor::GetNumberOfAttributes-Methode** ruft die Gesamtzahl der Attribute im SoH ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT GetNumberOfAttributes(
 
 <dl> <dt>
 
-*AttributeCount* \[ vorgenommen\]
+*attributeCount* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die zurückgegebene Attribut Anzahl.
+Ein Zeiger auf die zurückgegebene Attributanzahl.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -76,19 +76,19 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsohprocessor**](inapsohprocessor.md)
+[**INapSoHProcessor**](inapsohprocessor.md)
 </dt> </dl>
 
  

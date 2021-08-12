@@ -1,10 +1,10 @@
 ---
-title: Wmdmrights-Struktur
-description: Die wmdmrights-Struktur beschreibt Inhalts Nutzungsrechte.
+title: WMDMRIGHTS-Struktur
+description: Die WMDMRIGHTS-Struktur beschreibt Inhaltsnutzungsrechte.
 ms.assetid: 1be9167b-0d20-4a17-a42b-9696ada2b539
 keywords:
-- Wmdmrights-Struktur Windows Media Device Manager
-- Pwmdmrights-Struktur Zeiger Windows Media-Device Manager
+- WMDMRIGHTS-Strukturfenster Media Geräte-Manager
+- PWMDMRIGHTS-Strukturzeigerfenster Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff8bc3bcd61efc64d32daa3179b77a9aaa518d4f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6b54713add3bef1c51d18fea3f66ac4b3e2e8ff1a066bcd83781f0f522d5a4be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583983"
 ---
-# <a name="wmdmrights-structure"></a>Wmdmrights-Struktur
+# <a name="wmdmrights-structure"></a>WMDMRIGHTS-Struktur
 
-Die **wmdmrights** -Struktur beschreibt Inhalts Nutzungsrechte.
+Die **WMDMRIGHTS-Struktur** beschreibt Inhaltsnutzungsrechte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,34 +47,34 @@ typedef struct __WMDMRIGHTS {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
-Größe der Struktur in Bytes.
+Größe der -Struktur in Bytes.
 
 </dd> <dt>
 
-**dwcontenttype**
+**dwContentType**
 </dt> <dd>
 
-**DWORD** , das den Inhaltstyp enthält.
+**DWORD,** das den Inhaltstyp enthält.
 
 </dd> <dt>
 
-**fuflags**
+**fuFlags**
 </dt> <dd>
 
-Bitfeld, das die Rechte Optionen angibt, die für den Inhalt verwendet werden.
+Bitfeld, das die für den Inhalt zu verwendenden Rechteoptionen an gibt.
 
 
 
 | Wert                        | BESCHREIBUNG                                  |
 |------------------------------|----------------------------------------------|
-| playbackcount für WMDM- \_ Rechte \_  | Gibt an, wie oft die Datei wiedergegeben werden kann. |
-| WMDM- \_ Rechte \_ ExpirationDate | Ablaufdatum der Datei.                 |
-| WMDM- \_ Rechte \_ freeserialids  | Der freie serielle Bezeichner der Datei.          |
-| Gruppen für WMDM- \_ Rechte \_ Gruppen  | Der Bezeichner der Datei.                      |
-| WMDM- \_ Rechte \_ namedserialids | Der benannte serielle Bezeichner der Datei.         |
+| WMDM \_ RIGHTS \_ PLAYBACKCOUNT  | Gibt an, wie oft die Datei abgespielt werden kann. |
+| WMDM \_ RIGHTS \_ EXPIRATIONDATE | Ablaufdatum der Datei.                 |
+| WMDM \_ RIGHTS \_ FREESERIALIDS  | Freier serieller Bezeichner der Datei.          |
+| WMDM \_ RIGHTS \_ GROUPID Group  | Bezeichner der Datei.                      |
+| WMDM \_ RIGHTS \_ NAMEDSERIALIDS | Benannter serieller Bezeichner der Datei.         |
 
 
 
@@ -82,19 +82,19 @@ Bitfeld, das die Rechte Optionen angibt, die für den Inhalt verwendet werden.
 
 </dd> <dt>
 
-**furights**
+**fuRights**
 </dt> <dd>
 
-Bitfeld, das die Rechte Bits für den Inhalt enthält.
+Bitfeld, das die Rechtebits für den Inhalt enthält.
 
 
 
 | Wert                                     | BESCHREIBUNG                                   |
 |-------------------------------------------|-----------------------------------------------|
-| WMDM- \_ Rechte \_ spielen auf dem \_ \_ PC                | Inhalt kann auf einem PC wiedergegeben werden. |
-| WMDM- \_ Rechte \_ Kopie \_ auf nicht- \_ \_ SDMI- \_ Gerät kopieren | Der Inhalt kann auf ein nicht-SDMI-Gerät kopiert werden.   |
-| WMDM \_ - \_ Rechte \_ in \_ CD kopieren                | Der Inhalt kann auf eine CD kopiert werden.                |
-| WMDM- \_ Rechte \_ Kopie \_ auf \_ SDMI- \_ Gerät kopieren      | Der Inhalt kann auf ein SDMI-Gerät kopiert werden.      |
+| WMDM \_ RIGHTS PLAY AUF DEM \_ \_ \_ PC                | Inhalte können auf einem PC abgespielt werden. |
+| WMDM \_ RIGHTS COPY TO NON \_ SDMI DEVICE (WMDM-RECHTEKOPIE AUF EIN \_ \_ \_ NICHT-SDMI-GERÄT) \_ | Inhalte können auf ein Nicht-SDMI-Gerät kopiert werden.   |
+| WMDM \_ RIGHTS \_ COPY \_ TO \_ CD                | Inhalte können auf eine CD kopiert werden.                |
+| WMDM \_ RIGHTS COPY TO \_ SDMI DEVICE (WMDM-RECHTEKOPIE AUF \_ \_ SDMI-GERÄT) \_      | Inhalte können auf ein SDMI-Gerät kopiert werden.      |
 
 
 
@@ -102,24 +102,24 @@ Bitfeld, das die Rechte Bits für den Inhalt enthält.
 
 </dd> <dt>
 
-**dwappsec**
+**dwAppSec**
 </dt> <dd>
 
-Bytearray, das die minimale Ebene der Anwendungssicherheit angibt.
+Bytearray, das die Mindestsicherheitsstufe der Anwendung angibt.
 
 </dd> <dt>
 
-**dwplaybackcount**
+**dwPlaybackCount**
 </dt> <dd>
 
-**DWORD** , das die Anzahl der verbleibenden Zeiten enthält, zu denen der Inhalt gerendert werden kann.
+**DWORD** mit der Anzahl der verbleibenden Male, die der Inhalt gerendert werden kann.
 
 </dd> <dt>
 
 **ExpirationDate**
 </dt> <dd>
 
-Die [**wmdmdatetime**](wmdmdatetime.md) -Struktur, die das Ablaufdatum und die Ablaufzeit für den Inhalt enthält. Wenn die Lizenz kein Ablaufdatum hat, wird das **wYear** -Element auf 0xFFFF festgelegt, und alle anderen Member von **wmdmdatetime** werden ignoriert.
+[**WMDMDATETIME-Struktur,**](wmdmdatetime.md) die das Ablaufdatum und die Uhrzeit für den Inhalt enthält. Wenn die Lizenz kein Ablaufdatum hat, wird **das wYear-Mitglied** auf 0xFFFF festgelegt, und alle anderen Mitglieder von **WMDMDATETIME** werden ignoriert.
 
 </dd> </dl>
 
@@ -129,7 +129,7 @@ Die [**wmdmdatetime**](wmdmdatetime.md) -Struktur, die das Ablaufdatum und die A
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 
@@ -137,13 +137,13 @@ Die [**wmdmdatetime**](wmdmdatetime.md) -Struktur, die das Ablaufdatum und die A
 
 <dl> <dt>
 
-[**Imdspstorage:: GetRights**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-getrights)
+[**IMDSPStorage::GetRights**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-getrights)
 </dt> <dt>
 
-[**Iwmdmstorage:: GetRights**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-getrights)
+[**IWMDMStorage::GetRights**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-getrights)
 </dt> <dt>
 
-[**Wmdmdatetime**](wmdmdatetime.md)
+[**WMDMDATETIME**](wmdmdatetime.md)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

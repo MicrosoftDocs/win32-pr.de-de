@@ -1,7 +1,7 @@
 ---
-description: 'Die getTime-Methode ruft die streamzeiten ab, zu denen das Beispiel beginnen und fertigstellen soll. Diese Methode implementiert die imediasample:: getTime-Methode.'
+description: Die GetTime-Methode ruft die Streamzeiten ab, zu denen dieses Beispiel beginnen und abgeschlossen werden soll. Diese Methode implementiert die IMediaSample::GetTime-Methode.
 ms.assetid: ddb0df1c-707d-405d-9e73-0d5a59f487b6
-title: Cmediasample. getTime-Methode (amfilter. h)
+title: CMediaSample.GetTime-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8ff2035ede3e49feb2bc14a7aa31cfc18f2e7d23
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 755965864692cf2b34ebaadc6e064a47a7514c69fe891a6a15f1bb364e5345e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655251"
 ---
-# <a name="cmediasamplegettime-method"></a>Cmediasample. getTime-Methode
+# <a name="cmediasamplegettime-method"></a>CMediaSample.GetTime-Methode
 
-Die- `GetTime` Methode ruft die streamzeiten ab, zu denen das Beispiel beginnen und fertigstellen soll. Diese Methode implementiert die [**imediasample:: getTime**](/windows/desktop/api/Strmif/nf-strmif-imediasample-gettime) -Methode.
+Die `GetTime` -Methode ruft die Streamzeiten ab, zu denen dieses Beispiel beginnen und abgeschlossen werden soll. Diese Methode implementiert die [**IMediaSample::GetTime-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-gettime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,41 +43,41 @@ HRESULT GetTime(
 
 <dl> <dt>
 
-*ptimestart* 
+*pTimeStart* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die beginnende streamzeit in 100-Nanosecond-Einheiten empfängt.
+Zeiger auf eine Variable, die die Anfangszeit des Streams in Einheiten von 100 Nanosekunden empfängt.
 
 </dd> <dt>
 
-*ptimeend* 
+*pTimeEnd* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die endstreamzeit in 100-Nanosecond-Einheiten empfängt. Wenn das Beispiel keine Endzeit hat, wird der Wert auf die Startzeit plus 1 festgelegt.
+Zeiger auf eine Variable, die die Endstreamzeit in Einheiten von 100 Nanosekunden empfängt. Wenn das Beispiel keine Stoppzeit auf hat, wird der Wert auf die Startzeit plus 1 festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                   | Beschreibung                                                 |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                          | Erfolg.<br/>                                         |
-| <dl> <dt>**VFW \_ S \_ keine \_ \_ Endzeit**</dt> </dl>         | Sample hat eine gültige Startzeit, aber keine Endzeit.<br/> |
-| <dl> <dt>**VFW \_ E- \_ Beispiel \_ Zeit \_ nicht \_ festgelegt**</dt> </dl> | Das Beispiel enthält keine gültigen Zeitstempel.<br/>          |
+| <dl> <dt>**VFW \_ S \_ NO \_ STOP \_ TIME**</dt> </dl>         | Das Beispiel hat eine gültige Startzeit, aber keine Stoppzeit.<br/> |
+| <dl> <dt>**VFW \_ E \_ SAMPLE \_ TIME \_ NOT \_ SET**</dt> </dl> | Das Beispiel enthält keine gültigen Zeitstempel.<br/>          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die endmember-Variablen " [**cmediasample:: m \_ Start**](cmediasample-m-start.md) " und " [**cmediasample:: m \_**](cmediasample-m-end.md) " geben die Zeitstempel an. Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) gibt an, ob die Zeitstempel gültig sind.
+Die [**Membervariablen CMediaSample::m \_ Start**](cmediasample-m-start.md) und [**CMediaSample::m \_ End**](cmediasample-m-end.md) geben die Zeitstempel an. Die [**CMediaSample::m \_ dwFlags-Membervariable**](cmediasample-m-dwflags.md) gibt an, ob die Zeitstempel gültig sind.
 
-Weitere Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
+Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in DirectShow.](time-and-clocks-in-directshow.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,16 +85,16 @@ Weitere Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in Direct
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

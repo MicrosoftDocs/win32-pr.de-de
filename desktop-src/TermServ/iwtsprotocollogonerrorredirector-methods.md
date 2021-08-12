@@ -1,33 +1,33 @@
 ---
-title: Iwtsprodecollogonerrorredirector-Methoden
-description: Die iwtsprodecollogonerrorredirector-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IWTSProtocolLogonErrorRedirector-Methoden
+description: Die IWTSProtocolLogonErrorRedirector-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: C0C2E4F8-C0DD-4F4A-9DF2-210A0BF65F45
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 043a01136df0a2883bdf3330e701ee8ead572e96
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e208e4c5de912d553eaf75e448c2ef4c0144ab7043150595d046488c8ea8981a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118605926"
 ---
-# <a name="iwtsprotocollogonerrorredirector-methods"></a>Iwtsprodecollogonerrorredirector-Methoden
+# <a name="iwtsprotocollogonerrorredirector-methods"></a>IWTSProtocolLogonErrorRedirector-Methoden
 
-\[Iwtsprodecollogonerrorredirector ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar.\]
+\[IWTSProtocolLogonErrorRedirector ist ab diesem Windows Server 2012.\]
 
-Die [**iwtsprodecollogonerrorredirector**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocollogonerrorredirector) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWTSProtocolLogonErrorRedirector-Schnittstelle**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocollogonerrorredirector) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Onbeginpaint-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-onbeginpainting)
--   [**Redirectlogonerror-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-redirectlogonerror)
+-   [**OnBeginPainting-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-onbeginpainting)
+-   [**RedirectLogonError-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-redirectlogonerror)
 -   [**RedirectMessage-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-redirectmessage)
--   [**Redirectstatus-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-redirectstatus)
+-   [**RedirectStatus-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollogonerrorredirector-redirectstatus)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,22 +1,22 @@
 ---
-title: IMsRdpClientNonScriptable4 allowkredentialsave (Eigenschaft)
-description: Gibt an, ob im Dialogfeld Anmelde Informationen ein Kontrollkästchen angezeigt wird, das das Speichern von Anmelde Informationen ermöglicht.
+title: IMsRdpClientNonScriptable4 AllowCredentialSaving (Eigenschaft)
+description: Gibt an, ob im Dialogfeld Anmeldeinformationen ein Kontrollkästchen angezeigt wird, das das Speichern von Anmeldeinformationen ermöglicht.
 ms.assetid: c5148ff0-0d7f-413d-b2a8-ff942668bee6
 ms.tgt_platform: multiple
 keywords:
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, allowkredentialsave (Eigenschaft)
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, allowkredentialsave (Eigenschaft)
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, allowkredentialsave (Eigenschaft)
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, allowkredentialsave (Eigenschaft)
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, allowkredentialsave (Eigenschaft)
-- Allowkredentialsave-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, allowkredentialsave (Eigenschaft)
+- AllowCredentialSaving-Remotedesktopdienste
+- AllowCredentialSaving-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , AllowCredentialSaving -Eigenschaft
+- AllowCredentialSaving-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , AllowCredentialSaving -Eigenschaft
+- AllowCredentialSaving-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , AllowCredentialSaving-Eigenschaft
+- AllowCredentialSaving-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , AllowCredentialSaving-Eigenschaft
+- AllowCredentialSaving-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , AllowCredentialSaving -Eigenschaft
+- AllowCredentialSaving-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , AllowCredentialSaving-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -36,16 +36,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 240e2eb8e80209ee5c90d63f2996231cf84bb2dc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1cca6f61b8cbcc315eb93e6e9c3ab0f89684e4d29c3fcb8313af0198ee594cc9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607732"
 ---
-# <a name="imsrdpclientnonscriptable4allowcredentialsaving-property"></a>IMsRdpClientNonScriptable4:: allowkredentialsave (Eigenschaft)
+# <a name="imsrdpclientnonscriptable4allowcredentialsaving-property"></a>IMsRdpClientNonScriptable4::AllowCredentialSaving (Eigenschaft)
 
-Gibt an, ob im Dialogfeld Anmelde Informationen ein Kontrollkästchen angezeigt wird, das das Speichern von Anmelde Informationen ermöglicht.
+Gibt an, ob im Dialogfeld Anmeldeinformationen ein Kontrollkästchen angezeigt wird, das das Speichern von Anmeldeinformationen ermöglicht.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -66,11 +66,11 @@ HRESULT get_AllowCredentialSaving(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt fest, ob im Dialogfeld Anmelde Informationen ein Kontrollkästchen angezeigt wird, das das Speichern von Anmelde Informationen ermöglicht.
+Legt fest, ob im Dialogfeld Anmeldeinformationen ein Kontrollkästchen angezeigt wird, das das Speichern von Anmeldeinformationen ermöglicht.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,7 +86,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

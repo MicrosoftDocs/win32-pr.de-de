@@ -1,7 +1,7 @@
 ---
-description: Der m- \_ Anzeige Member ist eine videoinfo-Struktur, die das aktuelle Anzeige Format beschreibt.
+description: Der m \_ Display-Member ist eine VIDEOINFO-Struktur, die das aktuelle Anzeigeformat beschreibt.
 ms.assetid: 774264a1-86a8-449f-a83a-a56c04b8a6ac
-title: 'Cimagedisplay:: m_Display Member (winutil. h)'
+title: CImageDisplay::m_Display-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f83960751138ef477bf90269f345fd63f913ade6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6948de26a8850e5f8083bc8302ee0f778edd7490f488fb6435938ab032f50b2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118655846"
 ---
-# <a name="cimagedisplaym_display-member"></a>Cimagedisplay:: m- \_ Anzeigeelement
+# <a name="cimagedisplaym_display-member"></a>CImageDisplay::m-Anzeigemember \_
 
-Der `m_Display` Member ist eine [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur, die das aktuelle Anzeige Format beschreibt.
+Der `m_Display` Member ist eine [**VIDEOINFO-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) die das aktuelle Anzeigeformat beschreibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ VIDEOINFO  m_Display;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

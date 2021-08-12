@@ -1,28 +1,28 @@
 ---
-title: Imstscadvancedsettings-plugindlls (Eigenschaft)
-description: Gibt die Namen der zu ladenden Virtual Channel-Client-DLLs an.
+title: IMsTscAdvancedSettings-Plug-InDlls (Eigenschaft)
+description: Gibt die Namen der zu ladenden Client-DLLs des virtuellen Kanals an.
 ms.assetid: 4b248fb8-200a-4ce0-8c8e-ce1692a80d88
 ms.tgt_platform: multiple
 keywords:
-- Plugindlls-Eigenschaft Remotedesktopdienste
-- Plugindlls-Eigenschaft Remotedesktopdienste, imstscadvancedsettings-Schnittstelle
-- Imstscadvancedsettings-Schnittstelle Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
-- Plugindlls-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, plugindlls (Eigenschaft)
+- PluginDlls-Remotedesktopdienste
+- PluginDlls-Remotedesktopdienste , IMsTscAdvancedSettings-Schnittstelle
+- IMsTscAdvancedSettings-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
+- PluginDlls-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , PluginDlls-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -50,16 +50,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3ef2e518145ae34533477bcbefb92e15d9c8d94
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e896a8ce82a6e1dee7896a242bb2dace442dba595a66a7c45a7c3baf3060dff3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118606131"
 ---
-# <a name="imstscadvancedsettingsplugindlls-property"></a>Imstscadvancedsettings::P lugindlls (Eigenschaft)
+# <a name="imstscadvancedsettingsplugindlls-property"></a>IMsTscAdvancedSettings::P luginDlls-Eigenschaft
 
-Gibt die Namen der zu ladenden Virtual Channel-Client-DLLs an. Client-DLLs für virtuelle Kanäle werden auch als Plug-in-DLLs bezeichnet.
+Gibt die Namen der zu ladenden Client-DLLs des virtuellen Kanals an. Client-DLLs für virtuelle Kanäle werden auch als Plug-In-DLLs bezeichnet.
 
 Diese Eigenschaft ist lesegeschützt.
 
@@ -76,19 +76,19 @@ HRESULT put_PluginDlls(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Durch Trennzeichen getrennte Liste mit den Namen der zu ladenden DLLs des virtuellen Channel-Clients. Die DLL-Namen dürfen nur alphanumerische Zeichen enthalten. Weitere Informationen zum Format dieser Namen finden Sie unter [DVC-Plug-in-Registrierung](dvc-plug-in-registration.md).
+Durch Komma getrennte Liste der Namen der zu ladenden Client-DLLs des virtuellen Kanals. Die DLL-Namen dürfen nur alphanumerische Zeichen enthalten. Weitere Informationen zum Format dieser Namen finden Sie unter [DVC-Plug-In-Registrierung.](dvc-plug-in-registration.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** falls erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Steuerelement auf einer Webseite gehostet wird, akzeptiert die **plugindlls** -Eigenschaft aus Sicherheitsgründen nur eine benannte Liste von Client-DLLs für virtuelle Kanäle. Das-Steuerelement gibt einen Fehler zurück, wenn ein Dateisystem oder ein UNC-Pfad angegeben wird.
+Aus Sicherheitsgründen akzeptiert die **PluginDlls-Eigenschaft** nur eine benannte Liste von Client-DLLs für virtuelle Kanäle, wenn das Steuerelement auf einer Webseite gehostet wird. Das Steuerelement gibt einen Fehler zurück, wenn ein Dateisystem oder ein UNC-Pfad angegeben ist.
 
-Virtuelle channelclientdlls, auf die von einer Webseite zugegriffen wird, müssen im Verzeichnis "% windir% \\ system32" installiert sein, da das Remotedesktop ActiveX-Steuerelement nur auf DLL-Dateien an diesem Speicherort zugreift. Wenn das Steuerelement nicht auf einer Webseite gehostet wird, ist diese Sicherheits Einschränkung nicht vorhanden, und vollständige Pfade können verwendet werden, um auf virtuelle channelclientdlls zuzugreifen und Sie zu laden, die sich an beliebiger Stelle im Dateisystem befinden.
+Client-DLLs für virtuelle Kanäle, auf die von einer Webseite aus zugegriffen wird, müssen im Verzeichnis "%WinDir% system32" installiert werden, da das Remotedesktop ActiveX-Steuerelement nur auf DLL-Dateien an diesem Speicherort \\ zusteuert. Wenn das Steuerelement nicht auf einer Webseite gehostet wird, ist diese Sicherheitseinschränkung nicht vorhanden, und vollständige Pfade können verwendet werden, um auf Client-DLLs für virtuelle Kanäle zu zugreifen und diese zu laden, die sich an einer beliebigen Stelle im Dateisystem befinden.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,15 +100,15 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>    |
-| IID<br/>                      | IID \_ imstscadvancedsettings ist als 809945cc-4b3b-4a92-a6b0-DBF 9b5s2ef2d definiert.<br/> |
+| IID<br/>                      | IID \_ IMsTscAdvancedSettings ist als 809945cc-4b3b-4a92-a6b0-dbf9b5f2ef2d definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
@@ -132,7 +132,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> </dl>
 
  

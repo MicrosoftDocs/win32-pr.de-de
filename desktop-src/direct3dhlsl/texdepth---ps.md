@@ -1,6 +1,6 @@
 ---
-title: textiefe-PS
-description: Berechnen von tiefen Werten, die im tiefen Puffer Vergleichstest für dieses Pixel verwendet werden sollen.
+title: texdepth - ps
+description: Berechnen Sie die Tiefenwerte, die im Tiefenpuffervergleichstest für dieses Pixel verwendet werden sollen.
 ms.assetid: f7128dbb-a5f3-4e95-b53b-7432439ae0c4
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,55 +9,55 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3eb5cd337108d08efee465c136adf1afb4921123
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: f39135c34c07a9a20f03c9ebc979647733884b37680ef07b9bc666b882052690
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103857755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118284174"
 ---
-# <a name="texdepth---ps"></a>textiefe-PS
+# <a name="texdepth---ps"></a>texdepth - ps
 
-Berechnen von tiefen Werten, die im tiefen Puffer Vergleichstest für dieses Pixel verwendet werden sollen.
+Berechnen Sie die Tiefenwerte, die im Tiefenpuffervergleichstest für dieses Pixel verwendet werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| textiefe DST |
+| texdepth dst |
 |--------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
+-   dst ist das Zielregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| textiefe              |      |      |      | x    |      |      |       |      |       |
+| texdepth              |      |      |      | w    |      |      |       |      |       |
 
 
 
- 
+ 
 
-Diese Anweisung verwendet "R5. r/R5. g" im tiefen Puffer Vergleichstest für dieses Pixel. Die Daten in den blauen und Alpha Kanälen werden ignoriert. Wenn R5. g = 0, das Ergebnis von R5. r/R5. g = 1,0.
+Diese Anweisung verwendet r5.r/r5.g im Tiefenpuffervergleichstest für dieses Pixel. Die Daten im blauen und Alphakanal werden ignoriert. Wenn r5.g = 0 ist, ist das Ergebnis von r5.r / r5.g = 1,0.
 
-Temporäres Register R5 ist das einzige Register, das von dieser Anweisung verwendet werden kann.
+Das temporäre Register r5 ist das einzige Register, das von dieser Anweisung verwendet werden kann.
 
-Nach dem Ausführen dieser Anweisung ist das temporäre Register "R5" für zusätzliche Verwendung im Shader nicht verfügbar.
+Nach dem Ausführen dieser Anweisung ist das temporäre Register r5 für die zusätzliche Verwendung im Shader nicht verfügbar.
 
-Wenn Sie mit dieser Anweisung eine Multisampling-Anweisung verwenden, entfällt der größte Vorteil des tiefen Puffers höherer Auflösung. Da der Pixelshader einmal pro Pixel ausgeführt wird, wird der einzelne tiefen Wert, der von [texm3x2depth-PS](texm3x2depth---ps.md) oder textiefe ausgegeben wird, für jeden Vergleichstest des Subpixels-tiefen Werts verwendet.
+Beim Multisampling entfällt durch die Verwendung dieser Anweisung der größte Teil des Vorteils des Tiefenpuffers mit höherer Auflösung. Da der Pixelshader einmal pro Pixel ausgeführt wird, wird der einzelne Tiefenwert, der von [texm3x2depth - ps](texm3x2depth---ps.md) oder texdepth ausgegeben wird, für jeden der Subpixel-Tiefenvergleichstests verwendet.
 
 ## <a name="examples"></a>Beispiele
 
-Hier finden Sie ein Beispiel für die Verwendung von textiefe.
+Hier ist ein Beispiel für die Verwendung von texdepth.
 
 
 ```
@@ -81,9 +81,9 @@ texdepth  r5         // Calculate pixel depth as r5.r / r5.g
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: 'Die Reset-Methode setzt die Enumerationsfolge auf den Anfang zurück. Diese Methode implementiert die ienummediatypes:: Reset-Methode.'
+description: Die Reset-Methode setzt die Enumerationssequenz auf den Anfang zurück. Diese Methode implementiert die IEnumMediaTypes::Reset-Methode.
 ms.assetid: 3a5388d5-eaab-47af-b45e-c75199a22f02
-title: Cenumschlag mediatypes. Reset-Methode (amfilter. h)
+title: CEnumMediaTypes.Reset-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 81451b1a01e873d380da6c341977af0028d5160b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 82dd6ff798136f6e97ddfcbcb181ea9fa1cc91d593b762a2b555e958b9073294
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656415"
 ---
-# <a name="cenummediatypesreset-method"></a>Cenumschlag mediatypes. Reset-Methode
+# <a name="cenummediatypesreset-method"></a>CEnumMediaTypes.Reset-Methode
 
-Die- `Reset` Methode setzt die Enumerationsfolge auf den Anfang zurück. Diese Methode implementiert die [**ienummediatypes:: Reset**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-reset) -Methode.
+Die `Reset` -Methode setzt die Enumerationssequenz auf den Anfang zurück. Diese Methode implementiert die [**IEnumMediaTypes::Reset-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-reset)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,16 +50,16 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cenum mediatypes-Klasse**](cenummediatypes.md)
+[**CEnumMediaTypes-Klasse**](cenummediatypes.md)
 </dt> </dl>
 
  

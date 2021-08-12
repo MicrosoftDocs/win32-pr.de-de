@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 warnaboutclipboardredirection (Eigenschaft)
-description: Gibt an oder Ruft ab, ob das Dialogfeld Sicherheitswarnung angezeigt werden soll, um Benutzer vor der Zwischenablage Umleitung zu warnen.
+title: IMsRdpClientNonScriptable3 WarnAboutClipboardRedirection-Eigenschaft
+description: Gibt an oder ruft ab, ob das Sicherheitswarnungsdialogfeld angezeigt werden soll, um Benutzer vor der Umleitung der Zwischenablage zu warnen.
 ms.assetid: 2f3ca58b-3c89-4251-ae15-2c0aaf308893
 ms.tgt_platform: multiple
 keywords:
-- Die warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
-- Warnaboutclipboardredirection-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, warnaboutclipboardredirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
+- WarnAboutClipboardRedirection-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , WarnAboutClipboardRedirection-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8da6fa2f7fb36a110666c8b14a818264813d816
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d3f9b0865b8d7e1b374cd0f8f7ebc47a817f8ca79e0156a57f24971456733532
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607669"
 ---
-# <a name="imsrdpclientnonscriptable3warnaboutclipboardredirection-property"></a>IMsRdpClientNonScriptable3:: warnaboutclipboardredirection-Eigenschaft
+# <a name="imsrdpclientnonscriptable3warnaboutclipboardredirection-property"></a>IMsRdpClientNonScriptable3::WarnAboutClipboardRedirection-Eigenschaft
 
-Gibt an oder Ruft ab, ob das Dialogfeld Sicherheitswarnung angezeigt werden soll, um Benutzer vor der Zwischenablage Umleitung zu warnen.
+Gibt an oder ruft ab, ob das Sicherheitswarnungsdialogfeld angezeigt werden soll, um Benutzer vor der Umleitung der Zwischenablage zu warnen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,7 +74,7 @@ HRESULT get_WarnAboutClipboardRedirection(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob das Dialogfeld Sicherheitswarnung angezeigt werden soll, um Benutzer vor der Zwischenablage Umleitung zu warnen.
+Gibt an, ob das Dialogfeld "Sicherheitswarnung" angezeigt werden soll, um Benutzer vor der Umleitung der Zwischenablage zu warnen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,7 +90,7 @@ Gibt an, ob das Dialogfeld Sicherheitswarnung angezeigt werden soll, um Benutzer
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientbinding processsohresponse-Methode (napforcementclient. h)
-description: Wird von Erzwingungs Clients verwendet, um eine sohresponse zu verarbeiten, wenn Sie ein sohresponse-datenblob von dem Erzwingungs Server erhalten.
+title: INapEnforcementClientBinding ProcessSoHResponse-Methode (NapEnforcementClient.h)
+description: Wird von Erzwingungsclients verwendet, um eine SoHResponse zu verarbeiten, wenn sie ein SoHResponse-Datenblob vom Erzwingungsserver empfangen.
 ms.assetid: 6ff6d2c5-9ebe-4d8c-aa27-03147e2e1122
 keywords:
-- Processsohresponse-Methode NAP
-- Processsohresponse-Methode NAP, inapenforcementclientbinding-Schnittstelle
-- Inapenforcementclientbinding-Schnittstelle NAP, processsohresponse-Methode
+- ProcessSoHResponse-Methode NAP
+- ProcessSoHResponse-Methode NAP, INapEnforcementClientBinding-Schnittstelle
+- INapEnforcementClientBinding-Schnittstelle NAP , ProcessSoHResponse-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2ac8c87314ca1e28163428bf53e4a1fc6e31106
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4cffd2caeaf3a39bd5c28b4850fc560dc9567a3552aad88929581efd2729acce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621709"
 ---
-# <a name="inapenforcementclientbindingprocesssohresponse-method"></a>Inapenforcementclientbinding::P rocesssohresponse-Methode
+# <a name="inapenforcementclientbindingprocesssohresponse-method"></a>INapEnforcementClientBinding::P rocessSoHResponse-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientbinding::P rocesssohresponse** -Methode wird von Erzwingungs Clients verwendet, um eine sohresponse zu verarbeiten, wenn Sie ein sohresponse-datenblob von dem Erzwingungs Server erhalten.
+Die **INapEnforcementClientBinding::P rocessSoHResponse-Methode** wird von Erzwingungsclients verwendet, um eine SoHResponse zu verarbeiten, wenn sie ein SoHResponse-Datenblob vom Erzwingungsserver empfangen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,40 +47,40 @@ HRESULT ProcessSoHResponse(
 
 <dl> <dt>
 
-*Verbindung* \[ in\]
+*Verbindung* \[ In\]
 </dt> <dd>
 
-Ein com-Zeiger auf die [**inapenforcementclientconnection**](inapenforcementclientconnection.md) -Schnittstelle der Client Verbindung. Der NAPAgent enthält keine Verweise auf das Objekt, das dieser Schnittstelle zugeordnet ist, nachdem dieser Methoden Aufrufvorgang abgeschlossen wurde.
+Ein COM-Zeiger auf die [**INapEnforcementClientConnection-Schnittstelle**](inapenforcementclientconnection.md) der Clientverbindung. NapAgent enthält keine Verweise auf das Objekt, das dieser Schnittstelle zugeordnet ist, nachdem dieser Methodenaufruf abgeschlossen wurde.
 
-Sie müssen eine zuvor festgelegte Verbindung für die Verarbeitung von sohresponse-datenblobvorgängen verwenden.
+Sie müssen eine zuvor hergestellte Verbindung für die Verarbeitung von SOHResponse-Datenblobs verwenden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                        |
 |---------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Der Vorgang ist erfolgreich.<br/>                                                                                                                                                                                                                                                                                            |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>            | Auf dem Erzwingungs Client wurden zuvor keine Verbindungen erstellt. <br/>                                                                                                                                                                                                                                                 |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl>         | Berechtigungs Fehler, Zugriff verweigert.<br/>                                                                                                                                                                                                                                                                                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>          | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/>                                                                                                                                                                                                                                                                 |
-| <dl> <dt>**\_ \_ Ungültiges NAP- \_ Paket**</dt> </dl>  | Wenn dieser Wert zurückgegeben wird, muss der Erzwingungs Client das Paket löschen, wenn der NAPAgent ein ungültiges NAP-Paket zurückgibt \_ \_ \_ . In diesem Fall muss der Enforcer davon ausgehen, dass der Server, mit dem er kommuniziert, nicht NAP-fähig ist, und die Verbindung aus der aktiven Liste entfernen (d. h., der NAPAgent wird über einen Verbindungsstatus benachrichtigt).<br/> |
-| <dl> <dt>**nicht \_ \_ übereinstimmende NAP- \_ ID**</dt> </dl>   | Wenn dieser Wert zurückgegeben wird, weist dies darauf hin, dass die Korrelations-ID im SoH-Response Paket nicht mit der ausstehenden SoH-Antwort identisch war. In diesem Fall sollte der Enforcer das Paket löschen und auf ein anderes neueres SoH-Response Paket warten.<br/> Dies kann durch eine Antwort auf eine ältere Anforderungs Nachricht verursacht werden.<br/>        |
-| <dl> <dt>**NAP \_ E \_ nicht \_ Initialisiert**</dt> </dl> | Der Enforcer wurde nicht bereits initialisiert.<br/>                                                                                                                                                                                                                                                                       |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>            | Zuvor wurden keine Verbindungen auf dem Erzwingungsclient erstellt. <br/>                                                                                                                                                                                                                                                 |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>         | Berechtigungsfehler, Zugriff verweigert.<br/>                                                                                                                                                                                                                                                                                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>          | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/>                                                                                                                                                                                                                                                                 |
+| <dl> <dt>**NAP \_ E \_ INVALID \_ PACKET**</dt> </dl>  | Wenn dieser Wert zurückgegeben wird, muss der Erzwingungsclient das Paket löschen, wenn NapAgent NAP \_ E INVALID PACKET zurückgibt. \_ \_ In diesem Fall muss der Erzwingende davon ausgehen, dass der Server, mit dem er spricht, nicht NAP-fähig ist, und die Verbindung aus der aktiven Liste entfernen (d. h. napAgent über einen Verbindungsstatus benachrichtigen).<br/> |
+| <dl> <dt>**NICHT \_ \_ ÜBEREINSTIMMENDE \_ NAP E-ID**</dt> </dl>   | Wenn dieser Wert zurückgegeben wird, gibt er an, dass die Korrelations-ID im SoH-Response Paket nicht mit der ausstehenden SoH-Response übereinstimmt. In diesem Fall sollte der Erzwingende das Paket löschen und auf ein anderes neueres SoH-Response Paket warten.<br/> Dies kann durch eine Antwort auf eine ältere Anforderungsnachricht verursacht werden.<br/>        |
+| <dl> <dt>**NAP \_ E \_ NICHT \_ INITIALISIERT**</dt> </dl> | Der Enforcer wurde zuvor nicht initialisiert.<br/>                                                                                                                                                                                                                                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der NAPAgent fragt den SoH-Response Data BLOB aus dem Verbindungs Objekt ab, verarbeitet ihn und legt die resultierende Entscheidung fest (z. b. vollständiger/eingeschränkter Zugriff/usw.) für das Verbindungs Objekt.
+NapAgent fragt das SoH-Response Datenblob aus dem Verbindungsobjekt ab, verarbeitet es und legt die resultierende Entscheidung fest (z. B. vollständiger/eingeschränkter Zugriff/usw.) für das Verbindungsobjekt.
 
-Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](inapenforcementclientbinding-initialize-method.md) -Methode aufrufen, bevor diese oder eine andere Methode der [**inapenforcementclientbinding**](inapenforcementclientbinding.md) -Schnittstelle aufgerufen wird.
+Der Erzwingungsclient muss die [**INapEnforcementClientBinding::Initialize-Methode**](inapenforcementclientbinding-initialize-method.md) aufrufen, bevor er diese oder eine andere Methode der [**INapEnforcementClientBinding-Schnittstelle aufruft.**](inapenforcementclientbinding.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,25 +88,25 @@ Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 
 </dt> <dt>
 
-[**Inapenforcementclientbinding**](inapenforcementclientbinding.md)
+[**INapEnforcementClientBinding**](inapenforcementclientbinding.md)
 </dt> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

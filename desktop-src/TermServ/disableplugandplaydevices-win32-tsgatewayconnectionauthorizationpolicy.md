@@ -1,12 +1,12 @@
 ---
-title: Disableplugandplaydevices-Methode der Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-description: Legt die plugandplaydevicesdeaktiviert-Eigenschaft fest.
+title: DisablePlugAndPlayDevices-Methode der Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
+description: Legt die PlugAndPlayDevicesDisabled-Eigenschaft fest.
 ms.assetid: 0cfe9fea-da93-47fa-a9ea-868c78890a53
 ms.tgt_platform: multiple
 keywords:
-- Disableplugandplaydevices-Methode Remotedesktopdienste
-- Disableplugandplaydevices-Methode Remotedesktopdienste, Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-- Win32_TSGatewayConnectionAuthorizationPolicy-Klasse Remotedesktopdienste, disableplugandplaydevices-Methode
+- DisablePlugAndPlayDevices-Methode Remotedesktopdienste
+- DisablePlugAndPlayDevices-Methode Remotedesktopdienste , Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
+- Win32_TSGatewayConnectionAuthorizationPolicy-Klasse Remotedesktopdienste , DisablePlugAndPlayDevices-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc7432d69fc8cd088af5d5a44a07b90f9d697348
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 84bbd9c6f44c120d5a47e74219ed071a6e405e70ab0a46b54f707671ff5b2e6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118609436"
 ---
-# <a name="disableplugandplaydevices-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>Disableplugandplaydevices-Methode der Win32-Klasse "t- \_ gatewayconnectionauthorizationpolicy"
+# <a name="disableplugandplaydevices-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>DisablePlugAndPlayDevices-Methode der Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse
 
-Legt die **plugandplaydevicesdeaktiviert** -Eigenschaft fest. Wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" hat, steuert die **plugandplaydevicesdeaktiviert** -Eigenschaft die Umleitung von Plug & Play Geräten für Sitzungen, die über den Remotedesktop Gateway (RD-Gateway)-Server eingerichtet werden.
+Legt die **PlugAndPlayDevicesDisabled-Eigenschaft fest.** If the **DeviceRedirectionType** property has a value of "2", the **PlugAndPlayDevicesDisabled** property controls redirection of Plug and Play devices for sessions that are established through the Remote Desktop Gateway (RD Gateway) server.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ uint32 DisablePlugAndPlayDevices(
 
 <dl> <dt>
 
-*Deaktiviert* \[ in\]
+*Deaktiviert* \[ In\]
 </dt> <dd>
 
-Neuer Wert für die **plugandplaydevicesdeaktiviert** -Eigenschaft.
+Neuer Wert für die **PlugAndPlayDevicesDisabled-Eigenschaft.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,16 +69,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> </dl>
 
  

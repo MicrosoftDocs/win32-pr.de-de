@@ -1,7 +1,7 @@
 ---
-description: 'Die Skip-Methode überspringt eine angegebene Anzahl von Medientypen. Diese Methode implementiert die ienummediatypes:: Skip-Methode.'
+description: Die Skip-Methode überspringt eine angegebene Anzahl von Medientypen. Diese Methode implementiert die IEnumMediaTypes::Skip-Methode.
 ms.assetid: a01fb084-b227-4ca6-b5ca-c57d56e8b1aa
-title: Cenumschlag mediatypes. Skip-Methode (amfilter. h)
+title: CEnumMediaTypes.Skip-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6e09217bc45b866cfb08aa2ab0cae5a7a28815fb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a9930472b5c8a2873ca0a7f3280565bd41ac6b0aac7e1e33303464d3a2c1ca3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656445"
 ---
-# <a name="cenummediatypesskip-method"></a>Cenumschlag mediatypes. Skip-Methode
+# <a name="cenummediatypesskip-method"></a>CEnumMediaTypes.Skip-Methode
 
-Die- `Skip` Methode überspringt eine angegebene Anzahl von Medientypen. Diese Methode implementiert die [**ienummediatypes:: Skip**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-skip) -Methode.
+Die `Skip` -Methode überspringt eine angegebene Anzahl von Medientypen. Diese Methode implementiert die [**IEnumMediaTypes::Skip-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-skip)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*cmediatypes* 
+*cMediaTypes* 
 </dt> <dd>
 
-Anzahl der zu über springenden Medientypen.
+Anzahl der zu überspringenden Medientypen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                         |
 |------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>                    | Wird über das Ende der Sequenz übersprungen.<br/>                                    |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                    | Übersprungen am Ende der Sequenz.<br/>                                    |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                                                                 |
-| <dl> <dt>**VFW \_ E \_ Enum \_ nicht \_ \_ synchron**</dt> </dl> | Der Zustand der PIN wurde geändert und ist nun inkonsistent mit dem Enumerator.<br/> |
+| <dl> <dt>**VFW \_ \_ E-ENUM \_ NICHT \_ \_ SYNCHRON**</dt> </dl> | Der Zustand des Pins hat sich geändert und ist jetzt inkonsistent mit dem Enumerator.<br/> |
 
 
 
@@ -71,16 +71,16 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cenum mediatypes-Klasse**](cenummediatypes.md)
+[**CEnumMediaTypes-Klasse**](cenummediatypes.md)
 </dt> </dl>
 
  

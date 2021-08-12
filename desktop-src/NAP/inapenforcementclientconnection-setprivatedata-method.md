@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientconnection setprivatedata-Methode (napforcementclient. h)
-description: Wird von NAPAgent verwendet, um private Daten festzulegen.
+title: INapEnforcementClientConnection SetPrivateData-Methode (NapEnforcementClient.h)
+description: Wird vom NapAgent verwendet, um private Daten festzulegen.
 ms.assetid: 2559a612-8857-4e60-b5bc-dd8235ff69f9
 keywords:
-- Setprivatedata-Methode NAP
-- Setprivatedata-Methode NAP, inapenforcementclientconnection-Schnittstelle
-- Inapenforcementclientconnection-Schnittstelle NAP, setprivatedata-Methode
+- Nap-Methode "SetPrivateData"
+- SetPrivateData-Methode NAP, INapEnforcementClientConnection-Schnittstelle
+- INapEnforcementClientConnection-Schnittstelle NAP, SetPrivateData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3e73248e546b1f0e48438553877f0523bd30b56
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 62bcfcefdebbdea7a8b76279416a2067b069891d0b41b14ebafb10b0fdcec797
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621699"
 ---
-# <a name="inapenforcementclientconnectionsetprivatedata-method"></a>Inapenforcementclientconnection:: setprivatedata-Methode
+# <a name="inapenforcementclientconnectionsetprivatedata-method"></a>INapEnforcementClientConnection::SetPrivateData-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientconnection:: setprivatedata** -Methode wird vom NAPAgent verwendet, um private Daten festzulegen.
+Die **INapEnforcementClientConnection::SetPrivateData-Methode** wird vom NapAgent verwendet, um private Daten festzulegen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT SetPrivateData(
 
 <dl> <dt>
 
-*PRIVATEDATA* \[ in\]
+*privateData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein [**PRIVATEDATA**](/windows/win32/api/naptypes/ns-naptypes-privatedata) -datenblob, das nur von NAPAgent interpretiert werden kann.
+Ein Zeiger [](/windows/win32/api/naptypes/ns-naptypes-privatedata) auf ein PrivateData-Datenblob, das nur vom NapAgent interpretiert werden kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -76,19 +76,19 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

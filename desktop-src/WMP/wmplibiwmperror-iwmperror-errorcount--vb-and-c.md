@@ -1,11 +1,11 @@
 ---
-title: Iwmperror errorCount (Eigenschaft)
-description: Die errorCount-Eigenschaft ruft die Anzahl der Fehler in der Fehler Warteschlange ab.
+title: IWMPError errorCount (Eigenschaft)
+description: Die errorCount-Eigenschaft ruft die Anzahl der Fehler in der Fehlerwarteschlange ab.
 ms.assetid: a30750c8-2025-4087-bd2b-f313ccbde38c
 keywords:
-- errorCount-Eigenschaft, Windows Media Player
-- errorCount-Eigenschaft, Windows Media Player, iwmperror-Schnittstelle
-- Iwmperror-Schnittstelle, Windows Media Player, errorCount (Eigenschaft)
+- errorCount-Windows Media Player
+- errorCount-Eigenschaft Windows Media Player , IWMPError-Schnittstelle
+- IWMPError-Schnittstelle Windows Media Player , errorCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b62c16f07260847c91f1c9f18885587444a4ceb8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 42d288d1476318b1cace98d4b7549b7f5755b383da19d88ce04cbcf271326ac8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568772"
 ---
-# <a name="iwmperrorerrorcount-property"></a>Iwmperror:: errorCount (Eigenschaft)
+# <a name="iwmperrorerrorcount-property"></a>IWMPError::errorCount (Eigenschaft)
 
-Die **errorCount** -Eigenschaft ruft die Anzahl der Fehler in der Fehler Warteschlange ab.
+Die **errorCount-Eigenschaft** ruft die Anzahl der Fehler in der Fehlerwarteschlange ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,15 +46,15 @@ Public ReadOnly Property errorCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl der Fehler ist.
+Ein **System.Int32,** das die Anzahl der Fehler ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie sollten **iwmpsettings. enableerrordialogs** auf **false** festlegen, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Sie sollten **IWMPSettings.enableErrorDialogs** auf **FALSE** festlegen, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **errorCount** in einem Fehler Ereignishandler verwendet, um den Benutzer über den letzten Fehler in der Fehler Warteschlange zu benachrichtigen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **errorCount** in einem Error-Ereignishandler verwendet, um den Benutzer über den letzten Fehler in der Fehlerwarteschlange zu warnen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -100,7 +100,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -110,10 +110,10 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmperror-Schnittstelle (VB und c#)**](iwmperror--vb-and-c.md)
+[**IWMPError-Schnittstelle (VB und C#)**](iwmperror--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. enableerrordialogs (VB und c#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
+[**IWMPSettings.enableErrorDialogs (VB und C#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
 </dt> </dl>
 
  

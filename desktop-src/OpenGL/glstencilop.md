@@ -1,9 +1,9 @@
 ---
-title: glstencilop-Funktion (GL. h)
-description: Die Funktion "glstencilop" legt die Test Aktionen der Schablone fest.
+title: glStencilOp-Funktion (Gl.h)
+description: Die glStencilOp-Funktion legt die Schablonentestaktionen fest.
 ms.assetid: 16809735-5624-49cf-bfa5-9908d008b234
 keywords:
-- glstencilop-Funktion OpenGL
+- glStencilOp-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b23162f8606ed68dc90a0cb6debdcc903e0ccd0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: da899207456cece58216874c7540a032326e4180e9484590e2effd619eea72f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118614334"
 ---
-# <a name="glstencilop-function"></a>glstencilop-Funktion
+# <a name="glstencilop-function"></a>glStencilOp-Funktion
 
-Die Funktion " **glstencilop** " legt die Test Aktionen der Schablone fest.
+Die **glStencilOp-Funktion** legt die Schablonentestaktionen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ void WINAPI glStencilOp(
 
 <dl> <dt>
 
-*UN* 
+*Fehler* 
 </dt> <dd>
 
-Die Aktion, die ausgeführt werden soll, wenn der Schablonen Test fehlschlägt. Die folgenden sechs symbolischen Konstanten werden akzeptiert.
+Die Aktion, die durchgeführt werden soll, wenn der Schablonentest fehlschlägt. Die folgenden sechs symbolischen Konstanten werden akzeptiert.
 
 
 
 | Wert                                                                                                                                                | Bedeutung                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| <span id="GL_KEEP"></span><span id="gl_keep"></span><dl> <dt>**GL \_ beibehalten**</dt> </dl>          | Behält den aktuellen Wert bei.<br/>                                                                         |
-| <span id="GL_ZERO"></span><span id="gl_zero"></span><dl> <dt>**GL \_ null**</dt> </dl>          | Legt den Schablonen Puffer Wert auf 0 (null) fest.<br/>                                                           |
-| <span id="GL_REPLACE"></span><span id="gl_replace"></span><dl> <dt>**GL \_ ersetzen**</dt> </dl> | Legt den Schablonen Puffer Wert entsprechend der Angabe durch **glstencilfunc** auf *ref* fest.<br/>                       |
-| <span id="GL_INCR"></span><span id="gl_incr"></span><dl> <dt>**GL- \_ INCR**</dt> </dl>          | Inkremente den aktuellen Schablonen Puffer Wert. Bindet an den maximalen darstellbaren Wert ohne Vorzeichen.<br/> |
-| <span id="GL_DECR"></span><span id="gl_decr"></span><dl> <dt>**GL- \_ decr**</dt> </dl>          | Dekremente den aktuellen Schablonen Puffer Wert. Bindet auf NULL.<br/>                                     |
-| <span id="GL_INVERT"></span><span id="gl_invert"></span><dl> <dt>**GL \_ Invert**</dt> </dl>    | Bitweise kehrt den aktuellen Schablonen Puffer Wert um.<br/>                                                |
+| <span id="GL_KEEP"></span><span id="gl_keep"></span><dl> <dt>**GL \_ KEEP**</dt> </dl>          | Behält den aktuellen Wert bei.<br/>                                                                         |
+| <span id="GL_ZERO"></span><span id="gl_zero"></span><dl> <dt>**GL \_ ZERO**</dt> </dl>          | Legt den Schablonenpufferwert auf 0 (null) fest.<br/>                                                           |
+| <span id="GL_REPLACE"></span><span id="gl_replace"></span><dl> <dt>**GL \_ REPLACE**</dt> </dl> | Legt den Schablonenpufferwert auf *ref* fest, wie von **glStencilFunc angegeben.**<br/>                       |
+| <span id="GL_INCR"></span><span id="gl_incr"></span><dl> <dt>**GL \_ INCR**</dt> </dl>          | Erhöht den aktuellen Schablonenpufferwert. Klammern an den maximal darstellbaren Wert ohne Vorzeichen.<br/> |
+| <span id="GL_DECR"></span><span id="gl_decr"></span><dl> <dt>**GL \_ DECR**</dt> </dl>          | Dekrementiert den aktuellen Schablonenpufferwert. Klammern auf 0 (null).<br/>                                     |
+| <span id="GL_INVERT"></span><span id="gl_invert"></span><dl> <dt>**GL \_ INVERT**</dt> </dl>    | Bitweises Invertiert den aktuellen Schablonenpufferwert.<br/>                                                |
 
 
 
@@ -64,17 +64,17 @@ Die Aktion, die ausgeführt werden soll, wenn der Schablonen Test fehlschlägt. 
 
 </dd> <dt>
 
-*zfail* 
+*-Nistail* 
 </dt> <dd>
 
-Schablone-Aktion, wenn der Schablone-Test erfolgreich verläuft, aber der tiefen Test fehlschlägt. Akzeptiert dieselben symbolischen Konstanten als *fehlgeschlagen.*
+Schablonenaktion, wenn der Schablonentest bestanden wird, der Tiefentest jedoch fehlschlägt. Akzeptiert die gleichen symbolischen Konstanten wie *fail.*
 
 </dd> <dt>
 
-*ZPass* 
+*zpass* 
 </dt> <dd>
 
-Schablone-Aktion, wenn der Schablonen Test und der tiefen Test bestanden werden, oder wenn der Schablonen Test erfolgreich verläuft und entweder kein tiefen Puffer vorhanden ist oder keine tiefen Tests aktiviert sind. Akzeptiert dieselben symbolischen Konstanten als *fehl* geschlagen.
+Schablonenaktion, wenn sowohl der Schablonentest als auch der Tiefentest bestanden werden oder wenn der Schablonentest bestanden wird und entweder kein Tiefenpuffer oder keine Tiefentests aktiviert sind. Akzeptiert die gleichen symbolischen Konstanten wie *fail.*
 
 </dd> </dl>
 
@@ -84,42 +84,42 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | " *Fail*", " *zfail*" oder " *ZPass* " war ein anderer Wert als die sechs definierten Konstanten Werte.<br/>                                      |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      |  *fail,ggail* oder *zpass* war ein beliebiger Wert, der nicht die sechs definierten konstanten Werte war.<br/>                                      |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch die Schablone, z. b. *z*-Pufferung, wird das Zeichnen pro Pixel aktiviert und deaktiviert. Sie zeichnen mithilfe von OpenGL-Zeichen primitiven in die Schablone-Ebenen und erzeugen dann Geometrie und Bilder mithilfe der Schablonen Flächen, um Teile des Bildschirms zu maskieren. Die Schablone wird in der Regel in Multipass-renderingalgorithmen verwendet, um besondere Effekte zu erzielen, wie z. b. Decals, Gliederung und konstruktives solides Geometrie Rendering.
+Schablonen, wie *z*-buffering, ermöglichen und deaktivieren das Zeichnen pro Pixel. Sie zeichnen mit OpenGL-Zeichnungsprimitiven in die Schablonenebenen und rendern dann Geometrie und Bilder, indem Sie die Schablonenebenen verwenden, um Teile des Bildschirms zu maskieren. Schablonen werden in der Regel in Multipass-Renderingalgorithmen verwendet, um Sondereffekte zu erzielen, wie z. B. Abschärfungen, Lining und das rendern von solider Geometrie.
 
-Der Schablone-Test entfernt bedingt ein Pixel basierend auf dem Ergebnis eines Vergleichs zwischen dem Wert im Schablonen Puffer und einem Verweis Wert. Der Test ist mit " [**glEnable**](glenable.md) "-und " [**gldeaktiviert**](gldisable.md) "-aufrufen mit dem Argument "GL \_ Stencil Test" aktiviert \_ und mit " [**glstencilfunc**](glstencilfunc.md)" gesteuert
+Der Schablonentest entfernt bedingt ein Pixel basierend auf dem Ergebnis eines Vergleichs zwischen dem Wert im Schablonenpuffer und einem Verweiswert. Der Test wird mit [**glEnable-**](glenable.md) und [**glDisable-Aufrufen**](gldisable.md) mit dem Argument GL STENCIL TEST aktiviert und mit \_ \_ [**glStencilFunc gesteuert.**](glstencilfunc.md)
 
-Die **glstencilop** -Funktion nimmt drei Argumente an, die angeben, was mit dem gespeicherten Schablonen Wert geschieht, während die Schablone aktiviert ist. Wenn der Schablone-Test fehlschlägt, wird keine Änderung an den Farb-oder tiefen Puffern des Pixels vorgenommen, und der Fehler gibt an, was mit dem Inhalt der *Schablone-Puffer* passiert.
+Die **glStencilOp-Funktion** verwendet drei Argumente, die angeben, was mit dem gespeicherten Schablonenwert geschieht, während die Schablone aktiviert ist. Wenn der Schablonentest fehlschlägt, wird keine Änderung an der Farbe oder den Tiefenpuffern des Pixels vorgenommen, und *fail* gibt an, was mit dem Inhalt des Schablonenpuffers geschieht.
 
-Schablonen Puffer Werte werden als ganze Zahlen ohne Vorzeichen behandelt. Wenn inkrementiert und dekrementiert, werden die Werte an 0 und 2 *n* 1 gebunden, wobei *n* der Wert ist, der durch Abfragen von GL-Schablonen Bits zurückgegeben wird \_ \_ .
+Schablonenpufferwerte werden als ganze Zahlen ohne Vorzeichen behandelt. Wenn sie inkrementiert und dekrementiert werden, werden werte an 0 und 2 *n* 1 geklammert, wobei *n* der Wert ist, der durch Abfragen von GL \_ STENCIL BITS zurückgegeben \_ wird.
 
-Die anderen beiden Argumente für **glstencilop** geben Schablonen Puffer Aktionen an, wenn nachfolgende tiefen Puffer Tests erfolgreich verlaufen (*ZPass*) oder Fail (*zfail*). (Siehe [**gldepthfunc**](gldepthfunc.md).) Sie werden mit denselben sechs symbolischen Konstanten wie " *Fail*" angegeben. Beachten Sie, dass *zfail* ignoriert wird, wenn kein tiefen Puffer vorhanden ist oder wenn der tiefen Puffer nicht aktiviert ist. In diesen Fällen geben *Fail* und *ZPass* eine Schablone-Aktion an, wenn der Schablonen Test fehlschlägt bzw. übergibt.
+Die anderen beiden Argumente für **glStencilOp** geben Schablonenpufferaktionen an, wenn nachfolgende Tiefenpuffertests erfolgreich sind (*zpass*) oder fehlschlagen (*): ).* (Siehe [**glDepthFunc**](gldepthfunc.md).) Sie werden mit den gleichen sechs symbolischen Konstanten wie fail *angegeben.* Beachten *Sie, dass eine* Dämpfung ignoriert wird, wenn kein Tiefenpuffer vorüber ist oder wenn der Tiefenpuffer nicht aktiviert ist. In diesen Fällen geben *fail* und *zpass* die Schablonenaktion an, wenn der Schablonentest fehlschlägt bzw. bestanden wird.
 
-Anfänglich ist der Schablonen Test deaktiviert. Wenn kein Schablonen Puffer vorhanden ist, kann keine Schablone geändert werden, und es ist so, als ob die Schablonen Tests immer bestanden werden, unabhängig von jedem beliebigen Aufrufe von **glstencilop**.
+Der Schablonentest ist anfänglich deaktiviert. Wenn es keinen Schablonenpuffer gibt, kann keine Schablonenänderung erfolgen, und es ist so, als ob die Schablonentests immer bestanden würden, unabhängig von jedem Aufruf von **glStencilOp**.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glstencilop** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glStencilOp ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Stencil \_ Fail
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ STENCIL \_ FAIL
 
-**glget** mit dem Argument GL \_ Stencil \_ Pass \_ Tiefe \_ Pass
+**glGet** mit Argument GL \_ STENCIL \_ PASS DEPTH \_ \_ PASS
 
-**glget** mit dem Argument GL \_ Stencil \_ Pass \_ Tiefe \_ Fail
+**glGet** mit Argument GL \_ STENCIL \_ PASS DEPTH \_ \_ FAIL
 
-**glget** mit Argument GL- \_ Schablonen \_ Bits
+**glGet** mit Argument GL \_ STENCIL \_ BITS
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Stencil \_ Test
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ STENCIL \_ TEST
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,26 +129,26 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glstenci
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glalphafunc**](glalphafunc.md)
+[**glAlphaFunc**](glalphafunc.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glblendfunc**](glblendfunc.md)
+[**glBlendFunc**](glblendfunc.md)
 </dt> <dt>
 
-[**gldepthfunc**](gldepthfunc.md)
+[**glDepthFunc**](gldepthfunc.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -157,13 +157,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glstenci
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**gllogicop**](gllogicop.md)
+[**glLogicOp**](gllogicop.md)
 </dt> <dt>
 
-[**glstencilfunc**](glstencilfunc.md)
+[**glStencilFunc**](glstencilfunc.md)
 </dt> </dl>
 
  

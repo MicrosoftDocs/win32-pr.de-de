@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdeletebackupfilefailexception-Klasse'
-title: Esentdeletebackupfilefailexception-Klasse
+description: 'Weitere Informationen zu: EsentDeleteBackupFileFailException-Klasse'
+title: EsentDeleteBackupFileFailException-Klasse
 TOCTitle: EsentDeleteBackupFileFailException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDeleteBackupFileFailException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdeletebackupfilefailexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 193acd73388640123ef0471d8391cb05e44cd4aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30aa7c12c9877414733666fdb9771eed43b9ae7b935f1a4951eb6e39f48be7a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118270623"
 ---
-# <a name="esentdeletebackupfilefailexception-class"></a>Esentdeletebackupfilefailexception-Klasse
+# <a name="esentdeletebackupfilefailexception-class"></a>EsentDeleteBackupFileFailException-Klasse
 
-Basisklasse für JET_err. Deletebackupfilefail-Ausnahmen.
+Basisklasse für JET_err. DeleteBackupFileFail-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentioexception](./esentioexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentdeletebackupfilefailexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentIOException](./esentioexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentDeleteBackupFileFailException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,6 +72,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentdeletebackupfilefailexception-Elemente](./esentdeletebackupfilefailexception-members.md)
+[EsentDeleteBackupFileFailException-Member](./esentdeletebackupfilefailexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

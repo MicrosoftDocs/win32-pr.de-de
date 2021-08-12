@@ -4,23 +4,23 @@ ms.assetid: e3e1c795-5cfa-4e4b-86aa-948dd2bf91a4
 title: Testen, ob ein Grafiktreiber COPP unterstützt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f98a5bfc3f577d1acb45969ec5d10503ae87b27a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22280f880ba01a8e51acda74a2a46dff595d5569f885ce1da3a3631bacd8db06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118651830"
 ---
 # <a name="testing-whether-a-graphics-driver-supports-copp"></a>Testen, ob ein Grafiktreiber COPP unterstützt
 
-Mit dem Certified Output Protection Protocol (COPP) kann eine Anwendung Videoinhalte während der Übertragung von der Grafikkarte zum Anzeigegerät schützen. Wenn ein Grafiktreiber COPP unterstützt, enthält der Treiber eine von Microsoft signierte Zertifikatskette, die den Treiber authentifiziert. Wiedergabe Anwendungen, die COPP zum Erzwingen von Inhalts Schutz verwenden, müssen die Zertifikat Kette validieren, um sicherzustellen, dass der Treiber nicht manipuliert wurde.
+Certified Output Protection Protocol (COPP) ermöglicht es einer Anwendung, Videoinhalte zu schützen, während sie von der Grafikkarte zum Anzeigegerät übertragen werden. Wenn ein Grafiktreiber COPP unterstützt, enthält der Treiber eine Von Microsoft signierte Zertifikatkette, die den Treiber authentifiziert. Wiedergabeanwendungen, die COPP zum Erzwingen des Inhaltsschutzes verwenden, müssen die Zertifikatkette überprüfen, um sicherzustellen, dass der Treiber nicht manipuliert wurde.
 
-Möglicherweise möchten Sie jedoch überprüfen, ob ein Grafiktreiber COPP unterstützt, ohne das Zertifikat zu validieren. Wenn ein digitaler Medienanbieter z. b. eine Digital Rights Management-Lizenz (DRM) ausgibt, möchte er möglicherweise überprüfen, ob der Benutzer über einen COPP-fähigen Grafiktreiber verfügt. Der Anbieter muss COPP nicht durchsetzen, wenn er die Lizenz ausgibt. Es muss nur getestet werden, ob der Treiber COPP unterstützt.
+Möglicherweise möchten Sie jedoch überprüfen, ob ein Grafiktreiber COPP unterstützt, ohne das Zertifikat zu überprüfen. Wenn beispielsweise ein Anbieter digitaler Medien eine DRM-Lizenz (Digital Rights Management) aushing, kann er überprüfen, ob der Benutzer über einen COPP-fähigen Grafiktreiber verfügt. Der Anbieter muss COPP zum Zeitpunkt der Lizenzerzwingung nicht erzwingen. Er muss nur testen, ob der Treiber COPP unterstützt.
 
-Der folgende Code zeigt, wie Sie testen können, ob ein Treiber COPP unterstützt. Die Anwendung muss den Namen einer Videodatei übergeben, die verwendet wird, um den Treiber zu testen. Dies ist erforderlich, da der Filter für den Video Mischungs Renderer in Microsoft® DirectShow® eine COPP-Sitzung erst initialisiert, wenn der Filter verbunden ist. Diese Funktion kann in einer Client Anwendung enthalten sein, um zu überprüfen, ob der Treiber COPP ausführen kann.
+Der folgende Code zeigt, wie Sie testen, ob ein Treiber COPP unterstützt. Die Anwendung muss den Namen einer Videodatei übergeben, die zum Testen des Treibers verwendet wird. Dies ist erforderlich, da der Filter Video Mixing Renderer in Microsoft® DirectShow® eine COPP-Sitzung erst initialisiert, wenn der Filter verbunden ist. Diese Funktion kann in einer Clientanwendung enthalten sein, um zu überprüfen, ob der Treiber COPP ausführen kann.
 
 > [!Note]  
-> Wenn der Computer des Benutzers über zwei Grafikkarten verfügt, testet diese Funktion den Treiber auf die primäre Grafikkarte, jedoch nicht auf die sekundäre Grafikkarte.
+> Wenn der Computer des Benutzers über zwei Grafikkarten verfügt, testet diese Funktion den Treiber auf die primäre Grafikkarte, aber nicht auf die sekundäre Grafikkarte.
 
  
 
@@ -130,7 +130,7 @@ done:
 
 <dl> <dt>
 
-[Verwenden des zertifizierten Ausgabe Schutz Protokolls](using-certified-output-protection-protocol--copp.md)
+[Verwenden des Certified Output Protection-Protokolls](using-certified-output-protection-protocol--copp.md)
 </dt> </dl>
 
  

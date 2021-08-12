@@ -1,7 +1,7 @@
 ---
-Description: Flag, das angibt, ob der Eingabestream schreibgeschützt ist. Der Upstream-Filter gibt diese Informationen an, wenn die notifyzucator-Methode aufgerufen wird. Standardmäßig ist der Wert false.
+Description: Flag, das angibt, ob der Eingabestream schreibgeschützt ist. Der Upstreamfilter gibt diese Informationen an, wenn er die NotifyAllocator-Methode aufruft. Standardmäßig ist der Wert FALSE.
 ms.assetid: d5a71c00-326c-45b4-b9c5-b67a0fe71bf5
-title: 'Ctransinplaceinputpin:: m_bReadOnly Member (transip. h)'
+title: CTransInPlaceInputPin::m_bReadOnly-Member (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ac2f66296c08b2461440e0615b225c62405fd99a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 526955ba60d9b54d80035f3feebebbc3a32efbdd00721a171c71f187ce9584de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654832"
 ---
-# <a name="ctransinplaceinputpinm_breadonly-member"></a>Ctransinplaceinputpin:: m \_ bReadOnly-Member
+# <a name="ctransinplaceinputpinm_breadonly-member"></a>CTransInPlaceInputPin::m \_ bReadOnly-Member
 
-Flag, das angibt, ob der Eingabestream schreibgeschützt ist. Der Upstream-Filter gibt diese Informationen an, wenn die [**notifyzucator**](ctransinplaceinputpin-notifyallocator.md) -Methode aufgerufen wird. Standardmäßig ist der Wert **false**.
+Flag, das angibt, ob der Eingabestream schreibgeschützt ist. Der Upstreamfilter gibt diese Informationen an, wenn er die [**NotifyAllocator-Methode**](ctransinplaceinputpin-notifyallocator.md) aufruft. Standardmäßig ist der Wert **FALSE.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL m_bReadOnly;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  

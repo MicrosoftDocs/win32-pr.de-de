@@ -1,71 +1,71 @@
 ---
-description: Anbieter verwalten laufende Volumes und erstellen die Schatten Kopien von Ihnen bei Bedarf.
+description: Anbieter verwalten ausgeführte Volumes und erstellen die Schattenkopien von ihnen bei Bedarf.
 ms.assetid: 4e6b46b0-df9e-4458-b0ac-e237d7656337
 title: Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bb336dbb51fcbd715ea236ecdc0c62d81daf29d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58c9e098981c6246392fef75f717b1d7676df1aa134e4faef3e436ee8b3eb537
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118591327"
 ---
 # <a name="providers"></a>Anbieter
 
-[*Anbieter*](vssgloss-p.md) verwalten laufende Volumes und erstellen die Schatten Kopien von Ihnen bei Bedarf.
+[*Anbieter*](vssgloss-p.md) verwalten ausgeführte Volumes und erstellen die Schattenkopien von ihnen bei Bedarf.
 
-Als Antwort auf eine Anforderung eines Anforderers generiert ein Anbieter COM-Ereignisse, um Anwendungen über eine kommende Schatten Kopie zu signalisieren, und erstellt und verwaltet diese Kopie, bis Sie nicht mehr benötigt wird.
+Als Reaktion auf eine Anforderung von einem Anfordernden generiert ein Anbieter COM-Ereignisse, um Anwendungen einer kommenden Schattenkopie zu signalisieren. Anschließend erstellt und verwaltet er diese Kopie, bis sie nicht mehr benötigt wird.
 
-Während eine Schatten Kopie vorhanden ist, erstellt der Anbieter eine Umgebung, in der effektiv zwei unabhängige Kopien eines Volumes vorhanden sind, auf die Schatten kopiert wurde: ein Datenträger, der als normal verwendet und aktualisiert wird, der andere eine Kopie, die Festplatte ist und für die Sicherung stabil ist.
+Während eine Schattenkopie vorhanden ist, erstellt der Anbieter eine Umgebung, in der es effektiv zwei unabhängige Kopien eines Volumes gibt, die schattenkopiert wurden: eine der ausgeführten Datenträger, die wie gewohnt verwendet und aktualisiert wird, die andere eine Kopie, die für die Sicherung fest und stabil ist.
 
-Während ein Standardanbieter als Teil von Windows bereitgestellt wird, können andere Anbieter eigene Implementierungen bereitstellen, die für Ihre eigene Speicherhardware und Ihre Software Angebote optimiert sind.
+Während ein Standardanbieter als Teil von Windows bereitgestellt wird, können andere Anbieter ihre eigenen Implementierungen zur Verfügung stellen, die für ihre eigenen Speicherhardware- und Softwareangebote optimiert sind.
 
-Aus Sicht eines Endbenutzers oder eines Sicherungs-/wiederherstellungsentwicklers haben alle Anbieter die gleiche Schnittstelle (siehe Auswählen von [Anbietern](selecting-providers.md)).
+Aus Sicht eines Endbenutzers oder Entwicklers einer Sicherungs-/Wiederherstellungsanwendung verfügen alle Anbieter über die gleiche Schnittstelle (siehe [Auswählen von Anbietern](selecting-providers.md)).
 
-Alle Anbieter müssen in der Lage sein, folgende Aktionen durchzuführen:
+Alle Anbieter müssen in der Lage sein, Folgendes zu tun:
 
--   Fangen Sie e/a-Anforderungen zwischen dem Dateisystem und dem zugrunde liegenden Massen Speichersystem ab.
--   Erfassen und Abrufen des Status eines Volumes zum Zeitpunkt der Schatten Kopie, wobei eine "Zeitpunkt"-Ansicht der Dateien auf dem Datenträger beibehalten wird und keine partiellen e/a-Vorgänge in seinem Zustand reflektiert werden.
--   Verwenden Sie diese "Point-in-Time"-Ansicht, um (minimal für VSS-fähige Anwendungen) ein virtuelles Volume verfügbar zu machen, das die Schatten kopierten Daten enthält.
+-   Abfangen von E/A-Anforderungen zwischen dem Dateisystem und dem zugrunde liegenden Massenspeichersystem.
+-   Erfassen und abrufen Sie den Status eines Volumes zum Zeitpunkt der Schattenkopie, und verwalten Sie dabei eine "Zeitpunkt"-Ansicht der Dateien auf dem Datenträger, ohne dass partielle E/A-Vorgänge im Zustand widergespiegelt werden.
+-   Verwenden Sie diese "Zeitpunktansicht", um (minimal für VSS-fähige Anwendungen) ein virtuelles Volume verfügbar zu machen, das die kopierten Schattendaten enthält.
 
-Abhängig davon, wie dies geschieht, kann ein Anbieter einen von drei Typen aufweisen:
+Je nachdem, wie dies erfolgt, kann ein Anbieter einen von drei Typen haben:
 
--   [System Anbieter](#system-provider)
--   [Software Anbieter](#software-providers)
--   [Hardware Anbieter](#hardware-providers)
+-   [Systemanbieter](#system-provider)
+-   [Softwareanbieter](#software-providers)
+-   [Hardwareanbieter](#hardware-providers)
 
-## <a name="system-provider"></a>System Anbieter
+## <a name="system-provider"></a>Systemanbieter
 
-Ein Schattenkopieanbieter, der [*Systemanbieter*](vssgloss-s.md), wird als Standard Teil einer Windows-Betriebssystem Installation bereitgestellt. Derzeit ist der Systemanbieter eine bestimmte Instanz eines Softwareanbieters. Dies kann sich jedoch in Zukunft ändern.
+Ein Schattenkopieanbieter, der [*Systemanbieter,*](vssgloss-s.md)wird als Standardteil einer Betriebssysteminstallation Windows bereitgestellt. Derzeit ist der Systemanbieter eine bestimmte Instanz eines Softwareanbieters. Dies kann sich jedoch in Zukunft ändern.
 
-Um einen "Zeitpunkt"-Ansicht eines in der Schatten Kopie enthaltenen Volumes beizubehalten, verwendet der Systemanbieter eine Kopiermethode. Kopien der Sektoren auf dem Datenträger, die seit dem Beginn der Erstellung der Schatten Kopie geändert wurden, werden in einem Speicherbereich für Schatten Kopien gespeichert.
+Um eine "Zeitpunkt"-Ansicht eines Volumes zu verwalten, das in der Schattenkopie enthalten ist, verwendet der Systemanbieter eine Kopier-bei-Schreib-Technik. Kopien der Sektoren auf dem Datenträger, die seit dem Beginn der Erstellung der Schattenkopie geändert wurden (als "Diffs" bezeichnet), werden in einem Schattenkopiespeicherbereich gespeichert.
 
-Daher kann der Systemanbieter das Live Volume verfügbar machen, das in den Normalfall geschrieben und daraus gelesen werden kann, und die "diffs" auf die Daten des Livevolumes anwenden, um die fixierten Daten der Schatten Kopie effektiv verfügbar zu machen.
+Daher kann der Systemanbieter das Live-Volume verfügbar machen, auf das normalerweise geschrieben und gelesen werden kann, und die "Unterschiede" auf die Daten des Live-Volumes anwenden, um die fixierten Daten der Schattenkopie effektiv verfügbar zu machen.
 
 Für den Systemanbieter muss sich der Schattenkopie-Speicherbereich auf einem NTFS-Volume befinden. Das Volume, das als Schatten gesichert werden soll, muss kein NTFS-Volume sein, aber mindestens ein auf dem System eingebundenes Volume muss ein NTFS-Volume sein.
 
-## <a name="software-providers"></a>Software Anbieter
+## <a name="software-providers"></a>Softwareanbieter
 
-Software Schatten Kopie-Anbieter fangen e/a-Anforderungen in einer Software Schicht zwischen dem Dateisystem und der Volume Manager-Software auf und verarbeiten Sie. Diese Anbieter werden als benutzermodusdll-Komponente und mindestens ein Gerätetreiber im Kernelmodus implementiert, in der Regel (aber nicht unbedingt) ein Speicher Filtertreiber. Die Erstellung dieser Schatten Kopien erfolgt in der Software.
+Softwareschattenkopieanbieter fangen E/A-Anforderungen in einer Softwareschicht zwischen dem Dateisystem und der Volume-Manager-Software ab und verarbeiten sie. Diese Anbieter werden als DLL-Komponente im Benutzermodus und mindestens ein Gerätetreiber im Kernelmodus implementiert, in der Regel (aber nicht notwendigerweise) als Speicherfiltertreiber. Die Erstellung dieser Schattenkopien erfolgt in Software.
 
-Ein Software Schatten Kopie-Anbieter muss eine "Point-in-Time"-Ansicht eines Volumes verwalten, indem er auf einen Satz von Dateien zugreifen kann, mit dem der Volumestatus vor der Schatten Kopie korrekt neu erstellt werden kann. Ein Beispiel hierfür ist die Copy-on-write-Technik des Systemanbieters.
+Ein Softwareschattenkopieanbieter muss eine Point-in-Time-Ansicht eines Volumes verwalten, indem er Zugriff auf eine Gruppe von Dateien hat, mit denen der Volumestatus vor der Schattenkopie genau neu erstellt werden kann. Ein Beispiel hierfür ist die Kopier-bei-Schreib-Technik des Systemanbieters.
 
-Allerdings gelten für VSS keine Einschränkungen hinsichtlich der Technik, die Softwareanbieter zum Erstellen und Verwalten von Schatten Kopien verwenden. Drittanbieter können Ihre Softwareanbieter so implementieren, dass Sie Ihren Anforderungen entsprechen.
+VsS legt jedoch keine Einschränkungen hinsichtlich der Technik fest, die Softwareanbieter zum Erstellen und Verwalten von Schattenkopien verwenden, und Drittanbieter können ihre Softwareanbieter nach Ihren Anforderungen implementieren.
 
-Außerdem bietet VSS Unterstützung für einen Großteil der Funktionen von Software Schatten Kopien, wie z. b. das Definieren des Zeitpunkts, das Synchronisieren und leeren von Daten, das Bereitstellen einer gemeinsamen Schnittstelle für Sicherungs Anwendungen und die Verwaltung der Schatten Kopie.
+Darüber hinaus bietet VSS Unterstützung für einen großen Teil der Funktionalität von Softwareschattenkopieanbietern, z. B. das Definieren des Zeitpunkts, die Datensynchronisierung und -leerung, die Bereitstellung einer gemeinsamen Schnittstelle für Sicherungsanwendungen und die Verwaltung der Schattenkopie.
 
-Ein Softwareanbieter ist definitionsgemäß auf eine größere Anzahl von Speicher Plattformen als ein Hardware Anbieter anwendbar und sollte in der Lage sein, mit Basis Datenträgern oder logischen Volumes gleich gut zu arbeiten. Diese Generalität stellt die Leistung dar, die möglicherweise durch Implementieren von Schatten Kopien in der Hardware verfügbar ist, und nutzt keine herstellerspezifischen Volumen Erfassungs-oder Datei Spiegelungs Features.
+Ein Softwareanbieter ist definitionsgemäß auf eine größere Bandbreite von Speicherplattformen anwendbar als ein Hardwareanbieter und sollte in der Lage sein, mit Basisdatenträgern oder logischen Volumes gleichermaßen gut zu arbeiten. Diese Allgemeinheit wirkt sich auf die Leistung aus, die durch die Implementierung von Schattenkopien in der Hardware verfügbar sein kann, und nutzt keine anbieterspezifischen Volumeerfassungs- oder Dateispiegelungsfeatures.
 
-## <a name="hardware-providers"></a>Hardware Anbieter
+## <a name="hardware-providers"></a>Hardwareanbieter
 
-Hardware Schattenkopieanbieter fangen e/a-Anforderungen aus dem Dateisystem auf Hardwareebene aus, indem Sie in Verbindung mit einem Hardware Speicher Adapter oder-Controller arbeiten. Das Erstellen der Schatten Kopie wird von einem Host Adapter, einem Speichergerät oder einem RAID-Controller außerhalb des Betriebssystems ausgeführt.
+Hardwareschattenkopieanbieter fangen E/A-Anforderungen vom Dateisystem auf Hardwareebene ab, indem sie in Verbindung mit einem Hardwarespeicheradapter oder Controller arbeiten. Die Erstellung der Schattenkopie wird von einem Hostadapter, einem Speichergerät oder einem RAID-Controller außerhalb des Betriebssystems ausgeführt.
 
-Diese Anbieter werden als benutzermodusdll-Komponente implementiert, die mit der Hardware kommuniziert, von der die Schattenkopiedaten verfügbar gemacht werden. Daher müssen Hardware Schattenkopieanbieter möglicherweise andere Kernelmoduskomponenten anrufen oder erstellen.
+Diese Anbieter werden als DLL-Komponente im Benutzermodus implementiert, die mit der Hardware kommuniziert, die die Schattenkopiedaten verfügbar macht. Daher müssen Hardwareschattenkopieanbieter möglicherweise andere Kernelmoduskomponenten aufrufen oder erstellen.
 
-Hardware Anbieter machen VSS-Schatten Kopien ganzer Datenträger oder logischer Einheiten (Logical Units, LUNs) verfügbar. Der Anforderer behandelt weiterhin Schatten Kopien von Volumes. die gesamte Zuordnung von Volumes zu Datenträgern wird intern von VSS verarbeitet. Von Hardwareanbietern von Volumes, die sich auf dynamischen Datenträgern befinden, erstellte Schatten Kopien haben eine bestimmte Anforderung: Sie können nicht auf das gleiche System importiert werden. Sie müssen austauschen erstellt und auf einem zweiten System importiert werden.
+Hardwareanbieter machen VSS-Schattenkopien von gesamten Datenträgern oder logischen Einheiten (LUNs) verfügbar. Anfordernde behandeln weiterhin Schattenkopien von Volumes. die Zuordnung von Volume zu Datenträger wird intern von VSS verarbeitet. Schattenkopien, die von Hardwareanbietern von Volumes erstellt werden, die sich auf dynamischen Datenträgern befinden, haben eine bestimmte Anforderung: Sie können nicht in dasselbe System importiert werden. Sie müssen transportierbar erstellt und in ein zweites System importiert werden.
 
-Während ein Hardware Schatten Kopie-Anbieter VSS-Funktionen verwendet, die den Zeitpunkt definieren, die Datensynchronisierung ermöglicht, die Schatten Kopie verwaltet und eine gemeinsame Schnittstelle mit Sicherungs Anwendungen bereitstellt, gibt VSS nicht den zugrunde liegenden Mechanismus an, mit dem der Hardware Anbieter Schatten Kopien erstellt und verwaltet.
+Während ein Hardwareschattenkopieanbieter VSS-Funktionen nutzt, die den Zeitpunkt definieren, die Datensynchronisierung ermöglichen, die Schattenkopie verwalten und eine gemeinsame Schnittstelle mit Sicherungsanwendungen bieten, gibt VSS nicht den zugrunde liegenden Mechanismus an, mit dem der Hardwareanbieter Schattenkopien erstellt und verwaltet.
 
  
 

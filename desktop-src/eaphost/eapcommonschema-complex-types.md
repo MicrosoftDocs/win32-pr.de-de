@@ -1,6 +1,6 @@
 ---
-title: komplexe Typen von eapcommon-Schemas
-description: Erfahren Sie mehr über die komplexen eapcommon-Schema Typen. Das Schema definiert die komplexen Typen eapblob und eapmethodtype.
+title: Komplexe eapcommon-Schematypen
+description: Erfahren Sie mehr über die komplexen Typen des eapcommon-Schemas. Das Schema definiert die komplexen Typen EapBlob und EapMethodType.
 ms.assetid: f6001c76-3716-4e90-8737-b815f4af21ae
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,33 +9,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7f1f6a82519447529e88c9c47dfa80091b100dc8
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 4b855a5148183ffac7a26ae614aa468463827e44ccb4ca6aea9453fef2fb8549
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118275164"
 ---
-# <a name="eapcommon-schema-complex-types"></a>komplexe Typen von eapcommon-Schemas
+# <a name="eapcommon-schema-complex-types"></a>Komplexe eapcommon-Schematypen
 
-Das [eapcommon](eapcommonschema-schema.md) -Schema definiert die folgenden komplexen Typen.
+Das [eapcommon-Schema](eapcommonschema-schema.md) definiert die folgenden komplexen Typen.
 
--   [**Eapblob**](eapcommonschema-eapblob-complextype.md)
--   [**Eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md)
+-   [**EapBlob**](eapcommonschema-eapblob-complextype.md)
+-   [**EapMethodType**](eapcommonschema-eapmethodtype-complextype.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapcommon-Schema](eapcommonschema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

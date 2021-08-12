@@ -4,29 +4,29 @@ ms.assetid: 2925c315-4488-4961-a8f7-77a9ac571b70
 title: Übergänge und Effekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43f30d3a404993e58b859a2cacdf0bcd4718e45b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f9142baf35b85a3887600abb2730b9ddbc3a16af625420ac3ef1378e8cd86df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118651232"
 ---
 # <a name="transitions-and-effects"></a>Übergänge und Effekte
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-In diesem Abschnitt werden die Auswirkungen und Übergänge beschrieben, die mit DirectShow-Bearbeitungs Diensten bereitgestellt werden.
+In diesem Abschnitt werden die Effekte und Übergänge beschrieben, die mit DirectShow Editing Services bereitgestellt werden.
 
 
 
-| Übergang                              | BESCHREIBUNG                                                                            |
+| Übergang                              | Beschreibung                                                                            |
 |-----------------------------------------|----------------------------------------------------------------------------------------|
 | [Compositor](compositor-transition.md) | Streckt den Vordergrund in ein bestimmtes Rechteck, ohne den Hintergrund zu ändern. |
-| [Schlüssel](key-transition.md)               | Führt die Schlüssel Erstellung basierend auf Chroma, Alpha, Hue oder Leuchtkraft durch.                             |
-| [SMPTE-Löschung](smpte-wipe-transition.md) | Führt die standardmäßigen SMPTE-Wipes aus.                                                     |
+| [Schlüssel](key-transition.md)               | Führt schlüsselbasierte Schlüssel auf Basis von Alpha, Farbton oder Leuchtdichte aus.                             |
+| [SMPTE-Löschung](smpte-wipe-transition.md) | Führt die standardmäßigen SMPTE-Zurücksetzungen aus.                                                     |
 
 
 
@@ -36,8 +36,8 @@ In diesem Abschnitt werden die Auswirkungen und Übergänge beschrieben, die mit
 
 | Auswirkung                                        | Beschreibung                           |
 |-----------------------------------------------|---------------------------------------|
-| [Alpha Setter](alpha-setter-effect.md)       | Legt die Alpha Bits eines Video Bilds fest. |
-| [Volumeumschlag](volume-envelope-effect.md) | Legt das Volume für einen Audiodatenstrom fest.   |
+| [Alpha-Setter](alpha-setter-effect.md)       | Legt die Alphabits auf einem Videobild fest. |
+| [Volume Envelope](volume-envelope-effect.md) | Legt das Volume für einen Audiostream fest.   |
 
 
 
@@ -45,9 +45,9 @@ In diesem Abschnitt werden die Auswirkungen und Übergänge beschrieben, die mit
 
 
 
-| Quell Objekt                                | BESCHREIBUNG                                        |
+| Quellobjekt                                | Beschreibung                                        |
 |----------------------------------------------|----------------------------------------------------|
-| [Video Farbquelle](video-color-source.md) | Erstellt ein kontinuierliches Video Bild einer voll Tonfarbe. |
+| [Videofarbquelle](video-color-source.md) | Erstellt ein fortlaufendes Videobild einer Volltonfarbe. |
 
 
 
@@ -57,7 +57,7 @@ In diesem Abschnitt werden die Auswirkungen und Übergänge beschrieben, die mit
 
 <dl> <dt>
 
-[DirectShow-Bearbeitungs Dienste C++ Referenz](directshow-editing-services-c---reference.md)
+[C++-Referenz für DirectShow Editing Services](directshow-editing-services-c---reference.md)
 </dt> </dl>
 
  

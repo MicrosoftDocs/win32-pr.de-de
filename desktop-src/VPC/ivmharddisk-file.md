@@ -1,11 +1,11 @@
 ---
-title: Ivmharddisk-Datei Eigenschaft (vpccominterfaces. h)
-description: Ruft den vollständigen Pfadnamen der virtuellen Festplatten Datei ab.
+title: IVMHardDisk-Dateieigenschaft (VPCCOMInterfaces.h)
+description: Ruft den vollständigen Pfadnamen der virtuellen Festplattendatei ab.
 ms.assetid: 8c1f028a-32e6-4b70-b19c-bed7c2d53de1
 keywords:
-- Datei Eigenschaft virtueller PC
-- Datei Eigenschaft Virtual PC, ivmharddisk-Schnittstelle
-- Ivmharddisk Interface Virtual PC, File-Eigenschaft
+- Dateieigenschaft Virtueller PC
+- Dateieigenschaft Virtual PC , IVMHardDisk-Schnittstelle
+- IVMHardDisk-Schnittstelle Virtueller PC, File-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43b2a83b92bb5d02049066f9be90543a34a2fe7d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e207b14bd974d42ee694b6897ae42106ba5c3f87adb9b4ed880f288f0d28fd9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118593675"
 ---
-# <a name="ivmharddiskfile-property"></a>Ivmharddisk:: File (Eigenschaft)
+# <a name="ivmharddiskfile-property"></a>IVMHardDisk::File-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft den vollständigen Pfadnamen der virtuellen Festplatten Datei ab.
+Ruft den vollständigen Pfadnamen der virtuellen Festplattendatei ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_File(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der vollständige Pfadname der aktuellen Festplatten Abbild Datei.
+Der vollständige Pfadname der aktuellen Festplattenimagedatei.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ Der vollständige Pfadname der aktuellen Festplatten Abbild Datei.
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,20 +65,20 @@ Der vollständige Pfadname der aktuellen Festplatten Abbild Datei.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmharddisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHardDisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmharddisk**](ivmharddisk.md)
+[**IVMHardDisk**](ivmharddisk.md)
 </dt> </dl>
 
  

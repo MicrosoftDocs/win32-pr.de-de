@@ -1,7 +1,7 @@
 ---
-description: Ruft die GUID der Objekt Vorlage ab. Veraltet.
+description: Ruft die GUID der Vorlage des Objekts ab. Veraltet.
 ms.assetid: bb4a4a32-a9e7-4caa-869d-24cfb310d8d1
-title: 'Idirectxfiledata:: GetType-Methode (dxfile. h)'
+title: IDirectXFileData::GetType-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 463391c661b2d166a6fba773e3b01590daf0ebd7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 564d682c606d8b6bc0001f5d430d2d93f36c25210746169af4802512c330da08
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118292276"
 ---
-# <a name="idirectxfiledatagettype-method"></a>Idirectxfiledata:: GetType-Methode
+# <a name="idirectxfiledatagettype-method"></a>IDirectXFileData::GetType-Methode
 
-Ruft die GUID der Objekt Vorlage ab. Veraltet.
+Ruft die GUID der Vorlage des Objekts ab. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetType(
 
 <dl> <dt>
 
-*ppGUID* \[ Out, retval\]
+*ppguid* \[ out, retval\]
 </dt> <dd>
 
-Typ: Konstante **[**GUID**](guid.md) \* \***
+Typ: **const [**GUID**](guid.md) \* \***
 
-Adresse eines Zeigers, der die GUID der Objekt Vorlage empfängt.
+Adresse eines Zeigers, der die GUID der Vorlage des Objekts empfangen soll.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Adresse eines Zeigers, der die GUID der Objekt Vorlage empfängt.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert dxfileerr \_ badvalue lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert DXFILEERR \_ BADVALUE sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 <dl> <dt>
 
-[Idirectxfiledata](idirectxfiledata.md)
+[IDirectXFileData](idirectxfiledata.md)
 </dt> </dl>
 
  

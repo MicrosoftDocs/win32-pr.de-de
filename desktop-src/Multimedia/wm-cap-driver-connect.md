@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_DRIVER_CONNECT Meldung (VFW. h)
-description: Mit der CONNECT-Nachricht des WM- \_ Cap- \_ Treibers wird \_ ein Aufzeichnungs Fenster mit einem Aufzeichnungs Treiber verbunden. Sie können diese Nachricht explizit oder mithilfe des capdriverconnect-Makros senden.
+title: WM_CAP_DRIVER_CONNECT (Vfw.h)
+description: Die WM \_ CAP \_ DRIVER \_ CONNECT-Meldung verbindet ein Erfassungsfenster mit einem Erfassungstreiber. Sie können diese Nachricht explizit oder mithilfe des Makros capDriverConnect senden.
 ms.assetid: 8804bb3c-d06c-4ddc-b116-3d292205a52d
 keywords:
-- WM_CAP_DRIVER_CONNECT-Nachricht (Multimedia)
+- WM_CAP_DRIVER_CONNECT von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d73fdeb89968926429f7225912e3d1b3b348e287
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c8b0e54d496302488db653505321778bcd22546bd2ed9b2180aa0e15cb6969f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118622629"
 ---
-# <a name="wm_cap_driver_connect-message"></a>\_ \_ \_ Verbindungs Meldung zum WM-Cap-Treiber
+# <a name="wm_cap_driver_connect-message"></a>WM \_ CAP \_ DRIVER \_ CONNECT-Meldung
 
-Mit der CONNECT-Nachricht des **WM- \_ Cap- \_ Treibers \_** wird ein Aufzeichnungs Fenster mit einem Aufzeichnungs Treiber verbunden. Sie können diese Nachricht explizit oder mithilfe des [**capdriverconnect**](/windows/desktop/api/Vfw/nf-vfw-capdriverconnect) -Makros senden.
+Die **WM CAP DRIVER \_ \_ \_ CONNECT-Meldung** verbindet ein Erfassungsfenster mit einem Erfassungstreiber. Sie können diese Nachricht explizit oder mithilfe des [**Makros capDriverConnect**](/windows/desktop/api/Vfw/nf-vfw-capdriverconnect) senden.
 
 
 ```C++
@@ -41,17 +41,17 @@ lParam = 0L;
 <span id="iIndex"></span><span id="iindex"></span><span id="IINDEX"></span>*iIndex*
 </dt> <dd>
 
-Der Index des Erfassungs Treibers. Der Index kann zwischen 0 und 9 liegen.
+Index des Erfassungstreibers. Der Index kann zwischen 0 und 9 liegen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, oder **false** , wenn der angegebene Erfassungs Treiber nicht mit dem Erfassungsfenster verbunden werden kann.
+Gibt **TRUE zurück,** wenn erfolgreich, oder **FALSE,** wenn der angegebene Erfassungstreiber nicht mit dem Erfassungsfenster verbunden werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch das Verbinden eines Erfassungs Treibers mit einem Aufzeichnungs Fenster wird automatisch eine Verbindung mit allen zuvor verbundenen Aufzeichnungs Treibern getrennt.
+Beim Verbinden eines Erfassungstreibers mit einem Erfassungsfenster werden alle zuvor verbundenen Erfassungstreiber automatisch getrennt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,18 +61,18 @@ Durch das Verbinden eines Erfassungs Treibers mit einem Aufzeichnungs Fenster wi
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

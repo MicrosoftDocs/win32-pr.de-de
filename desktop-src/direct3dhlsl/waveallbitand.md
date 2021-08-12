@@ -1,9 +1,9 @@
 ---
-title: Waveactivebitand-Funktion
-description: Gibt das bitweise and aller Werte des Ausdrucks für alle aktiven Bereiche in der aktuellen Wave zurück und repliziert Sie zurück in alle aktiven Bereiche.
+title: WaveActiveBitAnd-Funktion
+description: Gibt das bitweise AND aller Werte des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert es zurück an alle aktiven Lanes.
 ms.assetid: 602884CD-E656-4DEB-A30A-8A7D127A2217
 keywords:
-- Waveactivebitand-Funktion HLSL
+- WaveActiveBitAnd-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2b6a3b0b097ea8737e07a91fcfc6553f22b828f1
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
+ms.openlocfilehash: 96d09d91df4ff9226a8fb86203be0bd79bc3c11d1882553607358c3c84d3814c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118282998"
 ---
-# <a name="waveactivebitand-function"></a>Waveactivebitand-Funktion
+# <a name="waveactivebitand-function"></a>WaveActiveBitAnd-Funktion
 
-Gibt das bitweise and aller Werte des Ausdrucks für alle aktiven Bereiche in der aktuellen Wave zurück und repliziert Sie zurück in alle aktiven Bereiche.
+Gibt das bitweise AND aller Werte des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert es zurück an alle aktiven Lanes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,24 +48,24 @@ Der auszuwertende Ausdruck.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der bitweise and-Wert.
+Der bitweise AND-Wert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

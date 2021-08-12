@@ -1,7 +1,7 @@
 ---
-description: Testet, ob boundingsphere ein angegebenes Objekt enthält.
+description: Testet, ob BoundingSphere ein angegebenes -Objekt enthält.
 ms.assetid: e5e42d29-f39f-44cd-8be1-06afd5eec7d9
-title: Boundingsphere. enthält-Methoden
+title: BoundingSphere.Contains-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,29 +11,29 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 10277f897b3b5888a5bb44be88b9df7eb0c3316b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cba59831335523f4b80074c3c25118a4545b317607834191d070f310ae5eee21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118278214"
 ---
-# <a name="boundingspherecontains-methods"></a>Boundingsphere. enthält-Methoden
+# <a name="boundingspherecontains-methods"></a>BoundingSphere.Contains-Methoden
 
-Testet, ob boundingsphere ein angegebenes Objekt enthält.
+Testet, ob BoundingSphere ein angegebenes -Objekt enthält.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                     | BESCHREIBUNG                                                                                                                                      |
+| Methode                                                                                     | Beschreibung                                                                                                                                      |
 |:-------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Boundingsphere:: enthält (xmvector)**](/previous-versions/windows/desktop/legacy/hh449621(v=vs.85))                   | Testet, ob boundingsphere einen angegebenen Punkt enthält.<br/>                                                                          |
-| [**Boundingsphere:: enthält (const BoundingBox-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingbox_))         | Testet, ob boundingsphere eine angegebene BoundingBox enthält.<br/>                                                                    |
-| [**Boundingsphere:: enthält (const boundingsphere&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingsphere_))      | Testet, ob boundingsphere eine angegebene boundingsphere enthält.<br/>                                                                 |
-| [**Boundingsphere:: enthält (const boundingfrustum-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingfrustum_))     | Testet, ob [**boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere) die angegebene [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)-Klasse enthält.<br/>         |
-| [**Boundingsphere:: enthält (xmvector, xmvector, xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(fxmvector_fxmvector_fxmvector)) | Testet, ob boundingsphere ein angegebenes Dreieck enthält.<br/>                                                                       |
-| [**Boundingsphere:: enthält (const boundingorientedbox-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingorientedbox_)) | Testet, ob [**boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere) das angegebene [**boundingorientedbox-Feld**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)enthält.<br/> |
+| [**BoundingSphere::Contains (XMVECTOR)**](/previous-versions/windows/desktop/legacy/hh449621(v=vs.85))                   | Testet, ob BoundingSphere einen angegebenen Punkt enthält.<br/>                                                                          |
+| [**BoundingSphere::Contains (const BoundingBox&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingbox_))         | Testet, ob BoundingSphere eine angegebene BoundingBox enthält.<br/>                                                                    |
+| [**BoundingSphere::Contains (const BoundingSphere&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingsphere_))      | Testet, ob BoundingSphere eine angegebene BoundingSphere enthält.<br/>                                                                 |
+| [**BoundingSphere::Contains (const BoundingFrustum&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingfrustum_))     | Testet, ob [**BoundingSphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere) den angegebenen [**BoundingFrustum enthält.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)<br/>         |
+| [**BoundingSphere::Contains (XMVECTOR,XMVECTOR,XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(fxmvector_fxmvector_fxmvector)) | Testet, ob BoundingSphere ein angegebenes Dreieck enthält.<br/>                                                                       |
+| [**BoundingSphere::Contains (const BoundingOrientedBox&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-contains(constboundingorientedbox_)) | Testet, ob [**BoundingSphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere) die angegebene [**BoundingOrientedBox enthält.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)<br/> |
 
 
 
@@ -44,7 +44,7 @@ Testet, ob boundingsphere ein angegebenes Objekt enthält.
 [Methoden](boundingsphere-methods.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**Boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)

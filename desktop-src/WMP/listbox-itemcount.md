@@ -1,9 +1,9 @@
 ---
-title: ListBox. ItemCount
-description: Das ItemCount-Attribut ruft die Anzahl der Elemente im Listenfeld-Steuerelement ab.
+title: LISTBOX.itemCount
+description: Das itemCount-Attribut ruft die Anzahl der Elemente im Listenfeld-Steuerelement ab.
 ms.assetid: 8d92e4ed-ce75-4291-8ece-8067f88f8f35
 keywords:
-- ListBox. ItemCount-Windows-Media Player
+- LISTBOX.itemCount Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc6499515876631a5fcd7f96f5821b5a04c44aa8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7032943c10f27ccb9d12476cce00e4e5ea6499ce5b66a3f961f1abca715d02ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118574947"
 ---
-# <a name="listboxitemcount"></a>ListBox. ItemCount
+# <a name="listboxitemcount"></a>LISTBOX.itemCount
 
-Das **ItemCount** -Attribut ruft die Anzahl der Elemente im Listenfeld-Steuerelement ab.
+Das **itemCount-Attribut** ruft die Anzahl der Elemente im Listenfeld-Steuerelement ab.
 
 ``` syntax
         elementID.itemCount
@@ -29,7 +29,7 @@ Das **ItemCount** -Attribut ruft die Anzahl der Elemente im Listenfeld-Steuerele
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

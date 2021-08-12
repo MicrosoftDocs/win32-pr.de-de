@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia Name (Eigenschaft)
-description: Die Name-Eigenschaft ruft den Namen des Medien Elements ab oder legt ihn fest.
+title: IWMPMedia-Name-Eigenschaft
+description: Die name-Eigenschaft ruft den Namen des Medienelements ab oder legt diesen fest.
 ms.assetid: d1057871-bccf-4f84-9b1d-74c41a8f7f7c
 keywords:
-- Name der Eigenschaften Fenster Media Player
-- Name-Eigenschaft, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, Name-Eigenschaft
+- name-Eigenschaft Windows Media Player
+- name-Eigenschaft Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , Name-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c526fc9847b06d0f7b6f4ebadf71761fd29a9d9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 46f4e99aaa7a05530a555cb51a6b1b10d511a342143f2be2bc7e029cc813cfba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568735"
 ---
-# <a name="iwmpmedianame-property"></a>Iwmpmedia:: Name (Eigenschaft)
+# <a name="iwmpmedianame-property"></a>IWMPMedia::name-Eigenschaft
 
-Die **Name** -Eigenschaft ruft den Namen des Medien Elements ab oder legt ihn fest.
+Die **name-Eigenschaft** ruft den Namen des Medienelements ab oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -50,15 +50,15 @@ Public Property name As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. String** -Wert, der der Name des Medien Elements ist.
+Eine **System.String,** die der Name des Medienelements ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Name** verwendet, um den Namen des aktuellen Medien Elements zu ändern. Ein Textfeld ermöglicht dem Benutzer, einen neuen Namen einzugeben, und der Name wird als Reaktion auf das Click-Ereignis einer Schaltfläche geändert. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **name** verwendet, um den Namen des aktuellen Medienelements zu ändern. In einem Textfeld kann der Benutzer einen neuen Namen eingeben, und der Name wird als Reaktion auf das Click-Ereignis einer Schaltfläche geändert. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -100,7 +100,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -110,7 +110,7 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

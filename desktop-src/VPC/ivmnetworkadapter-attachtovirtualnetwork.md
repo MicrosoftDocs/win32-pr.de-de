@@ -1,11 +1,11 @@
 ---
-title: Ivmnetworkadapter attachdevirtualnetwork-Methode (vpccominterfaces. h)
-description: Fügt die Netzwerkschnittstelle an das angegebene virtuelle Netzwerk an.
+title: IVMNetworkAdapter AttachToVirtualNetwork-Methode (VPCCOMInterfaces.h)
+description: Angefügt die Netzwerkschnittstelle an das angegebene virtuelle Netzwerk.
 ms.assetid: c743e930-c22e-4f32-b691-f7adc2485fed
 keywords:
-- Attachdevirtualnetwork-Methode Virtual PC
-- Attachdevirtualnetwork-Methode Virtual PC, ivmnetworkadapter-Schnittstelle
-- Ivmnetworkadapter Interface Virtual PC, attachdevirtualnetwork-Methode
+- AttachToVirtualNetwork-Methode Virtueller PC
+- AttachToVirtualNetwork-Methode Virtual PC, IVMNetworkAdapter-Schnittstelle
+- IVMNetworkAdapter-Schnittstelle Virtueller PC, AttachToVirtualNetwork-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01e7d0d9822e73ef6081a35f19ef628fd10051b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b03bf8bd0bcde6ba0353ce62e227c100a17ed1df0b2267ad54cd127c95c5836b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118593228"
 ---
-# <a name="ivmnetworkadapterattachtovirtualnetwork-method"></a>Ivmnetworkadapter:: attachdevirtualnetwork-Methode
+# <a name="ivmnetworkadapterattachtovirtualnetwork-method"></a>IVMNetworkAdapter::AttachToVirtualNetwork-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Fügt die Netzwerkschnittstelle an das angegebene virtuelle Netzwerk an.
+Angefügt die Netzwerkschnittstelle an das angegebene virtuelle Netzwerk.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT AttachToVirtualNetwork(
 
 <dl> <dt>
 
-*VirtualNetwork* \[ in\]
+*virtualNetwork* \[ In\]
 </dt> <dd>
 
-Das virtuelle Netzwerk, mit dem diese virtuelle NIC verbunden wird. Siehe [**ivmvirtualnetwork**](ivmvirtualnetwork.md).
+Das virtuelle Netzwerk, mit dem diese virtuelle NIC verbunden wird. Siehe [**IVMVirtualNetwork**](ivmvirtualnetwork.md).
 
 </dd> </dl>
 
@@ -60,12 +60,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                          | BESCHREIBUNG                                                        |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                                                                                       | Der Vorgang wurde durchgeführt.<br/>                           |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                  | Der-Parameter ist **null**.<br/>                              |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                               | Der-Parameter enthält kein gültiges virtuelles Netzwerk.<br/> |
-| <dl> <dt>**HRESULT \_ Von \_ Win32 (Fehler \_ Zugriff \_ verweigert)**</dt> <dt>0x80070005</dt> </dl> | Der Zugriff auf das angeforderte virtuelle Netzwerk wurde verweigert.<br/>     |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>                          | Der virtuelle Computer ist ungültig oder nicht mehr vorhanden.<br/>     |
-| <dl> <dt>**VM \_ E \_ ungültige \_ virtuelle \_ Netzwerk- \_ ID**</dt> </dl>                                                                        | Der-Parameter ist kein vorhandenes virtuelles Netzwerk.<br/>       |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> </dl>                                                                                          | Ein unerwarteter Fehler ist aufgetreten.<br/>                       |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>                                  | Der Parameter ist **NULL.**<br/>                              |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                               | Der -Parameter enthält kein gültiges virtuelles Netzwerk.<br/> |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ ACCESS \_ DENIED)**</dt> <dt>0X80070005</dt> </dl> | Der Zugriff auf das angeforderte virtuelle Netzwerk wurde verweigert.<br/>     |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>                          | Der virtuelle Computer ist ungültig oder nicht mehr vorhanden.<br/>     |
+| <dl> <dt>**VM \_ E \_ UNGÜLTIGE ID DES \_ \_ VIRTUELLEN \_ NETZWERKS**</dt> </dl>                                                                        | Der -Parameter ist kein vorhandenes virtuelles Netzwerk.<br/>       |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> </dl>                                                                                          | Ein unerwarteter Fehler ist aufgetreten.<br/>                       |
 
 
 
@@ -77,20 +77,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmnetworkadapter ist als e32e4165-22b8-4DC0-8d57-850171ae207a definiert.<br/>          |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMNetworkAdapter ist als e32e4165-22b8-4dc0-8d57-850171ae207a definiert.<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmnetworkadapter**](ivmnetworkadapter.md)
+[**IVMNetworkAdapter**](ivmnetworkadapter.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Wartet darauf, dass alle (oder alle) der angegebenen Objekte signalisiert werden.
+description: Wartet, bis ein (oder alle) der angegebenen Objekte signalisiert wird.
 ms.assetid: e60c98b6-a4d2-40de-8297-727404e3c387
-title: Dbgwaitformultipleobjects-Funktion (wxdebug. h)
+title: DbgWaitForMultipleObjects-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,20 +16,20 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0e555afb4e6a82500876f11e6d1275e7de027f7e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: acab4a7f59fe0775e8e474f8a8a2342a5f29ae6266ee36432b0fc1b0e597141a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654060"
 ---
-# <a name="dbgwaitformultipleobjects-function"></a>Dbgwaitformultipleobjects-Funktion
+# <a name="dbgwaitformultipleobjects-function"></a>DbgWaitForMultipleObjects-Funktion
 
-Wartet darauf, dass alle (oder alle) der angegebenen Objekte signalisiert werden.
+Wartet, bis ein (oder alle) der angegebenen Objekte signalisiert wird.
 
-In einem Debugbuild löst diese Funktion eine Assert-Funktion aus, wenn das Timeout Intervall abläuft, bevor die Objekte signalisiert werden. Um das Timeout Intervall festzulegen, müssen Sie die [**dbgsetwaittimeout**](dbgsetwaittimeout.md) -Funktion aufrufen.
+In einem Debugbuild löst diese Funktion eine Assert-Funktion aus, wenn das Time out-Intervall abläuft, bevor die Objekte signalisiert werden. Rufen Sie zum Festlegen des Timeoutintervalls die [**DbgSetWaitTimeout-Funktion**](dbgsetwaittimeout.md) auf.
 
-In einem Einzelhandels Build entspricht diese Funktion der **WaitForMultipleObjects** -Funktion mit einem Timeout Intervall von unendlich.
+In einem Einzelhandels-Build entspricht diese Funktion der **WaitForMultipleObjects-Funktion** mit einem Time out-Intervall von INFINITE.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,21 +51,21 @@ DWORD DbgWaitForMultipleObjects(
 *nCount* 
 </dt> <dd>
 
-Anzahl von Objekten.
+Anzahl der Objekte.
 
 </dd> <dt>
 
-*lphandles* 
+*lpHandles* 
 </dt> <dd>
 
-Array von Handles zu Objekten, Größe *nCount*.
+Array von Handles für Objekte der Größe *nCount*.
 
 </dd> <dt>
 
-*bwaitall* 
+*bWaitAll* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob auf alle-Objekte gewartet werden soll. **True** gibt an, dass die Funktion darauf wartet, dass alle Objekte signalisiert werden. Andernfalls wartet es darauf, dass mindestens ein Objekt signalisiert wird.
+Boolescher Wert, der angibt, ob auf alle -Objekte gewartet werden soll. True **gibt** an, dass die Funktion darauf wartet, dass alle Objekte signalisiert werden. Andernfalls wird darauf gewartet, dass mindestens ein Objekt signalisiert wird.
 
 </dd> </dl>
 
@@ -75,16 +75,16 @@ Boolescher Wert, der angibt, ob auf alle-Objekte gewartet werden soll. **True** 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Wait-Debugging-Funktionen](wait-debugging-functions.md)
+[Wartedebuggingfunktionen](wait-debugging-functions.md)
 </dt> </dl>
 
  
