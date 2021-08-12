@@ -1,6 +1,6 @@
 ---
-title: EapMethod (eaphustuseranmeldeinformationen)-Element
-description: Erfahren Sie mehr über das EapMethod-Element (eaphustuseranmelde Informationen). Dieses Element identifiziert die Methode, auf die verwiesen wird.
+title: EapMethod -Element (EapHostUserCredentials)
+description: Erfahren Sie mehr über das EapMethod-Element (EapHostUserCredentials). Dieses Element identifiziert die Methode, auf die verwiesen wird.
 ms.assetid: 0a510f44-09ac-466e-a806-4e89909fe850
 keywords:
 - EapMethod-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8d2f1bf5aa2901316db380e2cfd011b11c420035
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 00269c22497d04763c349ad5d5c0106c45d8dc47a369481c48b8ab440c70f3f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104102346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274430"
 ---
-# <a name="eapmethod-eaphostusercredentials-element"></a>EapMethod (eaphustuseranmeldeinformationen)-Element
+# <a name="eapmethod-eaphostusercredentials-element"></a>EapMethod -Element (EapHostUserCredentials)
 
-Das **EapMethod (eaptustuseranmelde-)** -Element identifiziert die Methode, auf die verwiesen wird.
+Das **EapMethod-Element (EapHostUserCredentials)** identifiziert die Methode, auf die verwiesen wird.
 
 ``` syntax
 <xs:element name="EapMethod"
@@ -31,16 +31,16 @@ Das **EapMethod (eaptustuseranmelde-)** -Element identifiziert die Methode, auf 
  />
 ```
 
-Das **EapMethod** -Element wird durch das [**eaphustuseranmelde**](eaphostusercredentialsschema-eaphostusercredentials-element.md) -Element definiert.
+Das **EapMethod-Element** wird durch das [**EapHostUserCredentials-Element**](eaphostusercredentialsschema-eaphostusercredentials-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -48,22 +48,22 @@ Das **EapMethod** -Element wird durch das [**eaphustuseranmelde**](eaphostusercr
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+[**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+[**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
-[eaphustuseranmelde-Schema](eaphostusercredentialsschema-schema.md)
+[eaphostusercredentials-Schema](eaphostusercredentialsschema-schema.md)
 </dt> </dl>
 
  

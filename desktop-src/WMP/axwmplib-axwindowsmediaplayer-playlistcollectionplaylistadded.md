@@ -1,9 +1,9 @@
 ---
-title: Playlistcollectionplaylistadded-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das playlistcollectionplaylistadded-Ereignis tritt auf, wenn der Wiedergabelisten Auflistung eine Wiedergabeliste hinzugefügt wird. | Playlistcollectionplaylistadded-Ereignis des AxWindowsMediaPlayer-Objekts
+title: PlaylistCollectionPlaylistAdded-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das PlaylistCollectionPlaylistAdded-Ereignis tritt auf, wenn der Wiedergabelistensammlung eine Wiedergabeliste hinzugefügt wird. | PlaylistCollectionPlaylistAdded-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 13d3bc86-6655-4536-a58f-327eabb2b8f9
 keywords:
-- Playlistcollectionplaylistadded-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- PlaylistCollectionPlaylistAdded-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b019e58ae8955f6df894101956e4776c2cd71626
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4d5223d5864aa8be9019b2219ef09917a1c63cf16d87a48aef9543246d5197a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581825"
 ---
-# <a name="playlistcollectionplaylistadded-event-of-the-axwindowsmediaplayer-object"></a>Playlistcollectionplaylistadded-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="playlistcollectionplaylistadded-event-of-the-axwindowsmediaplayer-object"></a>PlaylistCollectionPlaylistAdded-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das playlistcollectionplaylistadded-Ereignis tritt auf, wenn der Wiedergabelisten Auflistung eine Wiedergabeliste hinzugefügt wird.
+Das PlaylistCollectionPlaylistAdded-Ereignis tritt auf, wenn der Wiedergabelistensammlung eine Wiedergabeliste hinzugefügt wird.
 
 ``` syntax
 [C#]
@@ -41,21 +41,21 @@ Private Sub player_PlaylistCollectionPlaylistAdded(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ playlistcollectionplaylistaddedeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ playlistcollectionplaylistaddedevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PlaylistCollectionPlaylistAddedEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PlaylistCollectionPlaylistAddedEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft             | BESCHREIBUNG                                                                |
+| Eigenschaft             | Beschreibung                                                                |
 |----------------------|----------------------------------------------------------------------------|
-| **bstrauplaylistname** | System. StringGibt den Namen der hinzugefügten Wiedergabeliste an.<br/> |
+| **bstrPlaylistName** | System.String Gibt den Namen der hinzugefügten Wiedergabeliste an.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Name der hinzugefügten Wiedergabeliste kann verwendet werden, um die entsprechende Wiedergabeliste mithilfe von iwmpplaylistcollection abzurufen. **getByName** -Methode.
+Der Name der hinzugefügten Wiedergabeliste kann verwendet werden, um die entsprechende Wiedergabeliste mithilfe der IWMPPlaylistCollection abzurufen. **getByName-Methode.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Der Name der hinzugefügten Wiedergabeliste kann verwendet werden, um die entspr
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,10 +73,10 @@ Der Name der hinzugefügten Wiedergabeliste kann verwendet werden, um die entspr
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection. getByName (VB und c#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getbyname--vb-and-c.md)
+[**IWMPPlaylistCollection.getByName (VB und C#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getbyname--vb-and-c.md)
 </dt> </dl>
 
  

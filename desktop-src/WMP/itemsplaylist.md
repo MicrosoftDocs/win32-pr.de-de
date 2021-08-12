@@ -1,9 +1,9 @@
 ---
-title: Itemsplaylist
-description: Dies ist ein vordefiniertes Wiedergabelisten Element mit den folgenden Standardwerten. | Itemsplaylist
+title: ITEMSPLAYLIST
+description: Dies ist ein vordefiniertes PLAYLIST-Element mit den folgenden Standardwerten. | ITEMSPLAYLIST
 ms.assetid: 0621885c-04e3-4de7-a4cc-2eb4e94de53c
 keywords:
-- Itemsplaylist-Windows-Media Player
+- ITEMSPLAYLIST-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 76ac19cc914fa154c2800fab9f9b784cc3f0d809
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6b12899c8ec44034a8cca827400d814dd69925c0b4deb1b4725d10cd00d0fa57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118576098"
 ---
-# <a name="itemsplaylist"></a>Itemsplaylist
+# <a name="itemsplaylist"></a>ITEMSPLAYLIST
 
-Dies ist ein vordefiniertes **Wiedergabe** Listenelement mit den folgenden Standardwerten.
+Dies ist ein vordefiniertes **PLAYLIST-Element** mit den folgenden Standardwerten.
 
 ``` syntax
 backgroundColor="black"
@@ -32,9 +32,9 @@ dropDownVisible="false"
 foregroundColor="white"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird eine einfache **Wiedergabeliste** erstellt, in der die Elemente in einer Wiedergabeliste ohne Dropdown-oder Spaltenüberschriften angezeigt werden. Alle Eigenschaften dieser **Wiedergabeliste** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird eine einfache **PLAYLIST erstellt,** die die Elemente in einer Wiedergabeliste anzeigt, ohne dass Dropdown- oder Spaltenüberschriften sichtbar sind. Alle Eigenschaften dieser **PLAYLIST können** überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,7 +42,7 @@ Dadurch wird eine einfache **Wiedergabeliste** erstellt, in der die Elemente in 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
@@ -50,7 +50,7 @@ Dadurch wird eine einfache **Wiedergabeliste** erstellt, in der die Elemente in 
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

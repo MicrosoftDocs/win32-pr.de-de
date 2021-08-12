@@ -1,68 +1,68 @@
 ---
-title: Bereiche Verarbeitung und Attribut Bearbeitung
-description: Die Verarbeitung von Bereichen, die auch als Attribut Manipulation bezeichnet wird, bezieht sich auf das Transformieren des Namens des Benutzers, der Zugriff anfordert.
+title: Bereichsverarbeitung und Attributbearbeitung
+description: Bereichsverarbeitung, die auch als Attributbearbeitung bezeichnet wird, bezieht sich auf das Transformieren des Namens des Benutzers, der Zugriff an fordert.
 ms.assetid: 52963eda-ea95-4307-8924-d4143bc1f53d
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd630fd683342c45ab35161bf2c740ac7e8a6fa2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8054ad8234ca4772a52619d83bc85a9d357f2cf8da2f1c969eed918c75a8305a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618946"
 ---
-# <a name="realms-processing-and-attribute-manipulation"></a>Bereiche Verarbeitung und Attribut Bearbeitung
+# <a name="realms-processing-and-attribute-manipulation"></a>Bereichsverarbeitung und Attributbearbeitung
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Internet Authentication Service (IAS) wurde ab Windows Server 2008 in Network Policy Server (NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
-Die Verarbeitung von Bereichen, die auch als Attribut Manipulation bezeichnet wird, bezieht sich auf das Transformieren des Namens des Benutzers, der Zugriff anfordert. Die aufrufende-ID und die ID der aufgerufenen Station können ebenfalls manipuliert werden. Die Bereichs Verarbeitungs Regeln sind Teil der Auflistung der Proxy Profil Attribute.
+Bereichsverarbeitung, die auch als Attributbearbeitung bezeichnet wird, bezieht sich auf das Transformieren des Namens des Benutzers, der Zugriff an fordert. Die ID der aufrufenden Station und die ID der aufgerufenen Station können ebenfalls bearbeitet werden. Die Bereichsverarbeitungsregeln sind Teil der Auflistung der Proxyprofilattribute.
 
-Für jede Bearbeitung müssen Sie zwei [Manipulations Regel](/windows/desktop/Nps/sdo-manipulation-rule) Attribute erstellen. Jedes dieser Attribute ist ein Zeichen folgen Wert. Die erste Regel enthält einen regulären Ausdruck, der das Muster darstellt, das abgeglichen werden soll. Die zweite Regel enthält einen regulären Ausdruck, der den Ersetzungstext darstellt. Außerdem müssen Sie ein [Manipulations Ziel](/windows/desktop/Nps/sdo-manipulation-target) Attribut erstellen. Dieses Attribut ist eine Enumeration, die angibt, welcher Teil der Benutzerinformationen bearbeitet werden soll.
+Für jede Bearbeitung müssen Sie zwei [Manipulationsregelattribute](/windows/desktop/Nps/sdo-manipulation-rule) erstellen. Jedes dieser Attribute ist ein Zeichenfolgenwert. Die erste Regel enthält einen regulären Ausdruck, der das übereinstimmende Muster darstellt. Die zweite Regel enthält einen regulären Ausdruck, der den Ersetzungstext darstellt. Sie müssen auch ein [Manipulation-Target-Attribut](/windows/desktop/Nps/sdo-manipulation-target) erstellen. Dieses Attribut ist eine Enumeration, die angibt, welcher Teil der Benutzerinformationen bearbeitet werden soll.
 
-Die Reihenfolge, in der die Attribute erstellt werden, ist wichtig. NPS verarbeitet die Attribute in der Reihenfolge, in der Sie erstellt wurden.
+Die Reihenfolge, in der die Attribute erstellt werden, ist wichtig. NPS verarbeitet die Attribute in der Reihenfolge, in der sie erstellt wurden.
 
-Die folgende Tabelle zeigt ein Beispiel für eine Reihe von Manipulations Attributen.
+Die folgende Tabelle zeigt ein Beispiel für einen Satz von Manipulationsattributen.
 
 
 
 | Name                 | type         | Zeichenfolgenwert     |
 |----------------------|--------------|------------------|
-| msmanipulationrule   | **VT \_ BSTR** | "@company.com"   |
-| msmanipulationrule   | **VT \_ BSTR** | "@microsoft.com" |
-| msmanipulationrule   | **VT \_ BSTR** | "^.+@"           |
-| msmanipulationrule   | **VT \_ BSTR** | "Guest@"         |
-| msmanipulationtarget | **VT \_ I4**   | "1"              |
+| msManipulationRule   | **VT \_ BSTR** | "@company.com"   |
+| msManipulationRule   | **VT \_ BSTR** | "@microsoft.com" |
+| msManipulationRule   | **VT \_ BSTR** | "^.+@"           |
+| msManipulationRule   | **VT \_ BSTR** | "guest@"         |
+| msManipulationTarget | **VT \_ I4**   | "1"              |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Objektmodell Hierarchie](/windows/desktop/Nps/sdo-object-model-hierarchy)
+[Objektmodellhierarchie](/windows/desktop/Nps/sdo-object-model-hierarchy)
 </dt> <dt>
 
-[Unterstützte SDO-Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes)
+[Von SDO unterstützte Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes)
 </dt> <dt>
 
-[Erstellen einer Verbindungs Anforderungs Richtlinie](/windows/desktop/Nps/sdo-creating-a-connection-request-policy)
+[Erstellen einer Verbindungsanforderungsrichtlinie](/windows/desktop/Nps/sdo-creating-a-connection-request-policy)
 </dt> <dt>
 
-[**Isdocollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection)
+[**ISdoCollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection)
 </dt> <dt>
 
-[**Isdodiktattionaryold**](/windows/desktop/api/sdoias/nn-sdoias-isdodictionaryold)
+[**ISdoDictionaryOld**](/windows/desktop/api/sdoias/nn-sdoias-isdodictionaryold)
 </dt> <dt>
 
-[**Iasproperties**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
+[**IASPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Enthält den Namen einer kabelgebundenen LAN-Richtlinie.
+description: Enthält den Namen einer Kabel-LAN-Richtlinie.
 ms.assetid: 042be748-3337-4eb2-a75f-c85f7042bf13
-title: Name (lanpolicy)-Element
+title: name(LANPolicy)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 195eadfb4700a5ac9d28bb7ea1152228fae9480a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f3faf980b6e03eb75f8c64d7aaab0facf58047f188f764428d7903f75118a79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118620228"
 ---
-# <a name="name-lanpolicy-element"></a>Name (lanpolicy)-Element
+# <a name="name-lanpolicy-element"></a>name(LANPolicy)-Element
 
-Das Name-Element (lanpolicy) enthält den Namen einer Richtlinie für ein kabelgebundenes LAN.
+Das Name-Element (LANPolicy) enthält den Namen einer Lan-Richtlinie für kabelgebundene Verbindungen.
 
 ``` syntax
 <xs:element name="name"
@@ -29,11 +29,11 @@ Das Name-Element (lanpolicy) enthält den Namen einer Richtlinie für ein kabelg
  />
 ```
 
-Das **Name** -Element wird durch das [**lanpolicy**](lan-policyschema-lanpolicy-element.md) -Element definiert.
+Das **Name-Element** wird durch das [**LANPolicy-Element**](lan-policyschema-lanpolicy-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Namen wird die Groß-/Kleinschreibung nicht beachtet.
+Bei Namen wird die Schreibung nicht beachtet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,25 +41,25 @@ Bei Namen wird die Groß-/Kleinschreibung nicht beachtet.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Lanpolicy**](lan-policyschema-lanpolicy-element.md)
+[**LANPolicy**](lan-policyschema-lanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Lanpolicy**](lan-policyschema-lanpolicy-element.md)
+[**LANPolicy**](lan-policyschema-lanpolicy-element.md)
 </dt> </dl>
 
  

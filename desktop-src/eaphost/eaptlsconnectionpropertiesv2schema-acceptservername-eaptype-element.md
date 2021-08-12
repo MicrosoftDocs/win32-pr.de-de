@@ -1,9 +1,9 @@
 ---
-title: Accepted Servername-Element
-description: Gibt an, ob der Servername anhand der im Server Ames (servervalidationparameters)-Element angegebenen Namens Zeichenfolge validiert wird. | Accepted Servername-Element
+title: AcceptServerName-Element
+description: Gibt an, ob der Servername anhand der im ServerNames (ServerValidationParameters)-Element angegebenen Namenszeichenfolge überprüft wird. | AcceptServerName-Element
 ms.assetid: 307b2d2a-1678-4aa9-82ed-46d401cf0e0f
 keywords:
-- Accept-Servername-Element EAPHost
+- AcceptServerName-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b48c43bce2bd71f4d761ea58fcdf5e0632107f87
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 69cb60d89824c4b6bf83f4903e96b1856433e367e647d19657b70888839595f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106351876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118273701"
 ---
-# <a name="acceptservername-element"></a>Accepted Servername-Element
+# <a name="acceptservername-element"></a>AcceptServerName-Element
 
-Das Element "Accept Servername **(eaptype)** " gibt an, ob der Servername anhand der namens Zeichenfolge überprüft wird, die im Servername [**(servervalidationparameters)**](eaptlsconnectionpropertiesv1schema-servernames-servervalidationparameters-element.md) -Element angegeben ist.
+Das **AcceptServerName -Element (EapType)** gibt an, ob der Servername anhand der Im [**ServerNames-Element (ServerValidationParameters)**](eaptlsconnectionpropertiesv1schema-servernames-servervalidationparameters-element.md) angegebenen Namenszeichenfolge überprüft wird.
 
 ``` syntax
 <xs:element name="AcceptServerName"
@@ -31,11 +31,11 @@ Das Element "Accept Servername **(eaptype)** " gibt an, ob der Servername anhand
  />
 ```
 
-Das Element " **Accept Servername** " wird durch das [**eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das **AcceptServerName-Element** wird durch das [**EapType-Element**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Element " **Accept Servername** " ist optional.
+Das **AcceptServerName-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,8 +43,8 @@ Das Element " **Accept Servername** " ist optional.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -52,31 +52,31 @@ Das Element " **Accept Servername** " ist optional.
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv2](eaptlsconnectionpropertiesv2schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv2-Schema Elemente](eaptlsconnectionpropertiesv2schema-elements.md)
+[eaptlsconnectionpropertiesv2-Schemaelemente](eaptlsconnectionpropertiesv2schema-elements.md)
 </dt> <dt>
 
-[**"Accept Servername" (eaptype)**](eaptlsconnectionpropertiesv1schema-tlsextensionstype-peapextensionstype-element.md)
+[**AcceptServerName (EapType)**](eaptlsconnectionpropertiesv1schema-tlsextensionstype-peapextensionstype-element.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: Priority (settingstype)-Element
-description: Gibt die Prioritätsstufe für den Task an.
+title: Priority (settingsType)-Element
+description: Gibt die Prioritätsebene für den Task an.
 ms.assetid: 4885fffa-b7d9-4f5e-b6e8-6f18b01c2427
 keywords:
 - Priority-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ecda59ecbbe23550363fb30706d73bca54fcd925
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 11b71c88f63e7a3beb3c1c9ec8e1f3253bcd05a567ec5cd077f62175561ce2c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118611892"
 ---
-# <a name="priority-settingstype-element"></a>Priority (settingstype)-Element
+# <a name="priority-settingstype-element"></a>Priority (settingsType)-Element
 
-Gibt die Prioritätsstufe für den Task an.
+Gibt die Prioritätsebene für den Task an.
 
 ``` syntax
 <xs:element name="Priority"
@@ -32,47 +32,47 @@ Gibt die Prioritätsstufe für den Task an.
  />
 ```
 
-Das **Priority** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **Priority-Element** wird durch den komplexen [**SettingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Prioritätsstufe 0 ist die höchste Priorität, und Prioritätsstufe 10 ist die niedrigste Priorität. Der Standardwert ist 7. Der minimale und der maximale Wert werden vom einfachen [**prioritytype**](taskschedulerschema-prioritytype-simpletype.md) -Typ festgelegt. Die Prioritätsstufen 7 und 8 werden für Hintergrundaufgaben verwendet, und die Prioritätsstufen 4, 5 und 6 werden für interaktive Aufgaben verwendet.
+Prioritätsstufe 0 ist die höchste Priorität, und Prioritätsstufe 10 ist die niedrigste Priorität. Der Standardwert ist 7. Die Mindest- und Höchstwerte werden durch den einfachen [**PriorityType-Typ**](taskschedulerschema-prioritytype-simpletype.md) festgelegt. Die Prioritätsstufen 7 und 8 werden für Hintergrundaufgaben und die Prioritätsstufen 4, 5 und 6 für interaktive Aufgaben verwendet.
 
-Die Aktion der Aufgabe wird in einem Prozess mit einer Priorität gestartet, die auf einem Prioritäts Klassen Wert basiert. Ein Wert für die Prioritätsstufe (Thread Priorität) wird für com-Handler-, Meldungs-und e-Mail-Aufgaben Aktionen verwendet. Weitere Informationen zu den Werten für die Prioritäts Klasse und Prioritätsstufen finden Sie unter [Planungs Prioritäten](/windows/desktop/ProcThread/scheduling-priorities). In der folgenden Tabelle sind die möglichen Werte für das **Prioritäts** Element sowie die entsprechenden Werte für die Prioritäts Klasse und die Prioritäts Ebene aufgeführt.
+Die Aktion der Aufgabe wird in einem Prozess mit einer Priorität gestartet, die auf einem Priority Class-Wert basiert. Ein Wert auf Prioritätsebene (Threadpriorität) wird für COM-Handler, Meldungsfeld und E-Mail-Aufgabenaktionen verwendet. Weitere Informationen zu den Prioritätsklassen- und Prioritätsebenenwerten finden Sie unter [Zeitplanungsprioritäten.](/windows/desktop/ProcThread/scheduling-priorities) In der folgenden Tabelle sind die möglichen Werte für das **Priority-Element** und die entsprechenden Priority Class- und Priority Level-Werte aufgeführt.
 
 
 
-| Aufgaben Priorität | Prioritäts Klasse                 | Prioritätsstufe                   |
+| Aufgabenpriorität | Priority-Klasse                 | Prioritätsstufe                   |
 |---------------|--------------------------------|----------------------------------|
-| 0             | Realtime \_ priority- \_ Klasse      | Thread \_ Prioritäts \_ Zeit \_ kritisch |
-| 1             | Klasse mit hoher \_ Priorität \_          | Thread \_ Priorität \_ höchste        |
-| 2             | oberhalb der \_ normalen \_ Prioritäts \_ Klasse | Thread \_ Priorität \_ oberhalb des \_ normalen  |
-| 3             | oberhalb der \_ normalen \_ Prioritäts \_ Klasse | Thread \_ Priorität \_ oberhalb des \_ normalen  |
-| 4             | Klasse der normalen \_ Priorität \_        | Thread \_ Priorität \_ Normal         |
-| 5             | Klasse der normalen \_ Priorität \_        | Thread \_ Priorität \_ Normal         |
-| 6             | Klasse der normalen \_ Priorität \_        | Thread \_ Priorität \_ Normal         |
-| 7             | unterhalb der \_ normalen \_ Prioritäts \_ Klasse | Thread \_ Priorität \_ unterhalb von \_ Normal  |
-| 8             | unterhalb der \_ normalen \_ Prioritäts \_ Klasse | Thread \_ Priorität \_ unterhalb von \_ Normal  |
-| 9             | inaktive \_ Prioritäts \_ Klasse          | Thread \_ Priorität \_ niedrigste         |
-| 10            | inaktive \_ Prioritäts \_ Klasse          | Thread \_ Priorität im \_ Leerlauf           |
+| 0             | REALTIME \_ PRIORITY \_ CLASS      | \_ZEITKRITISCH FÜR THREADPRIORITÄT \_ \_ |
+| 1             | KLASSE MIT HOHER \_ PRIORITÄT \_          | \_HÖCHSTE \_ THREADPRIORITÄT        |
+| 2             | OBERHALB \_ DER NORMALEN \_ \_ PRIORITÄTSKLASSE | \_ \_ THREADPRIORITÄT ÜBER \_ NORMAL  |
+| 3             | OBERHALB \_ DER NORMALEN \_ \_ PRIORITÄTSKLASSE | \_ \_ THREADPRIORITÄT ÜBER \_ NORMAL  |
+| 4             | NORMAL \_ \_ PRIORITY-KLASSE        | \_THREADPRIORITÄT \_ NORMAL         |
+| 5             | NORMAL \_ \_ PRIORITY-KLASSE        | \_THREADPRIORITÄT \_ NORMAL         |
+| 6             | NORMAL \_ \_ PRIORITY-KLASSE        | \_THREADPRIORITÄT \_ NORMAL         |
+| 7             | BELOW \_ NORMAL \_ PRIORITY \_ CLASS | \_THREADPRIORITÄT \_ UNTER \_ NORMAL  |
+| 8             | BELOW \_ NORMAL \_ PRIORITY \_ CLASS | \_THREADPRIORITÄT \_ UNTER \_ NORMAL  |
+| 9             | IDLE \_ \_ PRIORITY-KLASSE          | \_ \_ THREADPRIORITÄT NIEDRIGSTE         |
+| 10            | IDLE \_ \_ PRIORITY-KLASSE          | \_ \_ THREADPRIORITÄT IM LEERLAUF           |
 
 
 
  
 
-Informationen zur C++-Entwicklung finden Sie unter [**Priority-Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_priority).
+Informationen zur C++-Entwicklung finden Sie unter [**Priority Property of ITaskSettings (Prioritätseigenschaft von ITaskSettings).**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_priority)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. Priority**](tasksettings-priority.md).
+Informationen zur Skriptentwicklung finden Sie unter [**TaskSettings.Priority**](tasksettings-priority.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,16 +80,16 @@ Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. Priority*
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Benachrichtigt den DWM-Code über ein eingehender Update für eine freigegebene Fenster Oberfläche.
+description: Benachrichtigt den DWM über ein eingehendes Update an einer freigegebenen Fensteroberfläche.
 ms.assetid: 8357D977-E501-47D7-85BC-7C8954C6D166
-title: Dwmdxupdatewindowsharedsurface-Funktion
+title: DwmDxUpdateWindowSharedSurface-Funktion
 ms.topic: reference
 ms.date: 11/27/2018
 topic_type:
@@ -13,16 +13,16 @@ api_location:
 - Dwmapi.dll
 api_name:
 - DwmDxUpdateWindowSharedSurface
-ms.openlocfilehash: 7649e96fb3a16458b518d0fc2c6dd09725a4b0ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9eac390cd6ccf79ed3f916f4c9605b938ab9fd338df3643301d7f5e5c900c0d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118280120"
 ---
-# <a name="dwmdxupdatewindowsharedsurface-function"></a>Dwmdxupdatewindowsharedsurface-Funktion
+# <a name="dwmdxupdatewindowsharedsurface-function"></a>DwmDxUpdateWindowSharedSurface-Funktion
 
-Benachrichtigt den DWM-Code über ein eingehender Update für eine freigegebene Fenster Oberfläche.
+Benachrichtigt den DWM über ein eingehendes Update an einer freigegebenen Fensteroberfläche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,11 +40,11 @@ HRESULT WINAPI DwmDxUpdateWindowSharedSurface(
 
 `hwnd`
 
-Ein [**HWND**](/windows/desktop/winprog/windows-data-types) , das das zu Aktualisier Ende Fenster angibt.
+Ein [**HWND,**](/windows/desktop/winprog/windows-data-types) der das zu aktualisierende Fenster angibt.
 
 `uiUpdateId`
 
-Die Update-ID, die von [**dwmdxgetwindowsharedsurface**](dwmdxgetwindowsharedsurface.md)abgerufen wird.
+Die Update-ID, die von [**DwmDxGetWindowSharedSurface**](dwmdxgetwindowsharedsurface.md)abgerufen wurde.
 
 `dwFlags`
 
@@ -56,24 +56,24 @@ Reserviert.
 
 `prc`
 
-Der Rect des zu aktualisierenden Fensters im Fenster Koordinaten Bereich. Ein NULL-Rechteck gibt an, dass keine Region aktualisiert wurde.
+Der Rect des zu aktualisierenden Fensters im Fensterkoordinatenraum. Ein NULL-Rechteck gibt an, dass kein Bereich aktualisiert wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**S \_ OK** , wenn erfolgreich, andernfalls ein **HRESULT** mit Fehlern.
+**S \_ OK,** wenn erfolgreich, andernfalls ein FAILED **HRESULT.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese API ist für die Implementierung eines Grafik Treibers oder einer Laufzeit vorgesehen. Eine Anwendung ruft diese Methode möglicherweise nicht auf. Diese Dokumentation ist nur für Windows 7 gültig, und diese API ist nicht garantiert vorhanden und verhält sich in anderen Versionen von Windows nicht auf ähnliche Weise. Diese Funktion ist in keiner Header-oder statischen Link Bibliothek vorhanden und befindet sich in dwmapi.dll in der Ordnungszahl 101.
+Diese API ist für die Implementierung eines Grafiktreibers oder einer Runtime vorgesehen. Eine Anwendung ruft diese Methode möglicherweise nicht auf. Diese Dokumentation gilt nur für Windows 7, und es ist nicht garantiert, dass diese API in anderen Versionen von Windows vorhanden ist oder sich auf ähnliche Weise verhält. Diese Funktion ist in keinem Header oder in einer statischen Linkbibliothek vorhanden und befindet sich unter der Ordnungszahl 101 in dwmapi.dll.
 
-Diese Methode sollte nur aufgerufen werden, nachdem " [**dwmdxgetwindowsharedsurface**](dwmdxgetwindowsharedsurface.md) " den Wert " **\_ OK**" zurückgegeben hat und in diesem Szenario aufgerufen werden muss, unabhängig davon, ob die Oberfläche aktualisiert wurde oder nicht.
+Diese Methode sollte immer nur aufgerufen werden, nachdem [**DwmDxGetWindowSharedSurface**](dwmdxgetwindowsharedsurface.md) **S \_ OK** zurückgibt, und muss in diesem Szenario aufgerufen werden, unabhängig davon, ob die Oberfläche aktualisiert wird oder nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
-| Unterstützte Mindestversion (Client) | Nur Windows 7 \[ -Desktop-Apps\] |
+| Unterstützte Mindestversion (Client) | nur Windows 7 \[ Desktop-Apps\] |
 | Unterstützte Mindestversion (Server) | Nicht unterstützt |
-| Ende des Supports (Client) | Windows 7 |
+| Ende des Supports (Client) | Windows 7 |
 | Header | N/V |
 | DLL | Dwmapi.dll |

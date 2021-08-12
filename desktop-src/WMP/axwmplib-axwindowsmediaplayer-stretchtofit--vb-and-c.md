@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. stretchdefit (Eigenschaft)
-description: Mit der Eigenschaft stretchdefit wird ein Wert abgerufen oder festgelegt, der angibt, ob die Größe des Videos, das vom Windows Media Player-Steuerelement angezeigt wird, automatisch an das Videofenster angepasst wird, wenn das Videofenster größer als die Abmessungen des Video Bilds
+title: AxWindowsMediaPlayer.stretchToFit-Eigenschaft
+description: Die stretchToFit-Eigenschaft ruft einen Wert ab, der angibt, ob das vom Windows Media Player-Steuerelement angezeigte Video automatisch an das Videofenster angepasst wird, wenn das Videofenster größer als die Abmessungen des Videobilds ist, oder legt diesen fest.
 ms.assetid: 02e2bcba-4975-4ddd-996b-9bd40774ebc1
 keywords:
-- Eigenschaften Fenster für stretchdefit-Eigenschaft Media Player
-- stretchdefit-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, stretchdefit (Eigenschaft)
+- stretchToFit-Eigenschaft Windows Media Player
+- stretchToFit-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , stretchToFit-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2dd6937ffa556817a80f0b21dfaed6d270c2e351
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3090889207e0631fbc2f35613398b4c979f4c907cfe240e9f0a7374c74b00b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581510"
 ---
-# <a name="axwindowsmediaplayerstretchtofit-property"></a>AxWindowsMediaPlayer. stretchdefit (Eigenschaft)
+# <a name="axwindowsmediaplayerstretchtofit-property"></a>AxWindowsMediaPlayer.stretchToFit-Eigenschaft
 
-Mit der Eigenschaft stretchdefit wird ein Wert abgerufen oder festgelegt, der angibt, ob die Größe des Videos, das vom Windows Media Player-Steuerelement angezeigt wird, automatisch an das Videofenster angepasst wird, wenn das Videofenster größer als die Abmessungen des Video Bilds
+Die stretchToFit-Eigenschaft ruft einen Wert ab, der angibt, ob das vom Windows Media Player-Steuerelement angezeigte Video automatisch an das Videofenster angepasst wird, wenn das Videofenster größer als die Abmessungen des Videobilds ist, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,13 +46,13 @@ Public Property stretchToFit As System.Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der System. Boolean-Wert, der angibt, ob das Video so gestreckt wird, dass es an das Fenster angepasst wird. Der Standardwert ist „FALSE“.
+Der System.Boolean-Wert, der angibt, ob das Video gestreckt wird, um an das Fenster anzupassen. Der Standardwert ist „FALSE“.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **stretchdefit** auf true festgelegt ist, wird das ursprüngliche Seitenverhältnis des Videos vom Windows Media Player-Steuerelement beibehalten. Wenn das Seitenverhältnis des Videos nicht mit dem Seitenverhältnis des Videofensters identisch ist, können schwarze Masken Bereiche entweder am oberen und unteren Rand des Video Bilds angezeigt werden.
+Wenn **stretchToFit** auf TRUE festgelegt ist, behält das Windows Media Player-Steuerelement das ursprüngliche Seitenverhältnis des Videos bei. Wenn das Seitenverhältnis des Videos nicht mit dem Seitenverhältnis des Videofensters übereinstimmt, können schwarze Maskierungsbereiche entweder oben und unten oder links und rechts des Videobilds angezeigt werden.
 
-Diese Eigenschaft gilt nur für das Windows Media Player-Steuerelement, wenn es in eine Webseite eingebettet ist.
+Diese Eigenschaft gilt nur für das Windows Media Player Steuerelement, wenn es in eine Webseite eingebettet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Diese Eigenschaft gilt nur für das Windows Media Player-Steuerelement, wenn es 
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -70,7 +70,7 @@ Diese Eigenschaft gilt nur für das Windows Media Player-Steuerelement, wenn es 
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

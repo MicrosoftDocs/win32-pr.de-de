@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentmultivaluedduplicateaftertruncationexception-Klasse'
-title: Esentmultivaluedduplicateaftertruncationexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentMultiValuedDuplicateAfterTruncationException-Klasse'
+title: EsentMultiValuedDuplicateAfterTruncationException-Klasse
 TOCTitle: EsentMultiValuedDuplicateAfterTruncationException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentMultiValuedDuplicateAfterTruncationException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmultivaluedduplicateaftertruncationexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4354bc53349d7c9ee4625c085b983e90b06a747f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 05d00de435a7f8be2c860b73b4d58445bb7a22288fd4d27cc071c3f1ddb5c618
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118264628"
 ---
-# <a name="esentmultivaluedduplicateaftertruncationexception-class"></a>Esentmultivaluedduplicateaftertruncationexception-Klasse
+# <a name="esentmultivaluedduplicateaftertruncationexception-class"></a>EsentMultiValuedDuplicateAfterTruncationException-Klasse
 
-Basisklasse für JET_err. Multivaluedduplicateaftertrunationausnahmen.
+Basisklasse für JET_err. MultiValuedDuplicateAfterTruncation-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentmultivaluedduplicateaftertruncationexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentMultiValuedDuplicateAfterTruncationException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,6 +72,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentmultivaluedduplicateaftertruncationexception-Member](./esentmultivaluedduplicateaftertruncationexception-members.md)
+[EsentMultiValuedDuplicateAfterTruncationException-Member](./esentmultivaluedduplicateaftertruncationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

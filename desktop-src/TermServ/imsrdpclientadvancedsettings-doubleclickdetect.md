@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings doubleclickdetect (Eigenschaft)
-description: Gibt an, ob der Client für den Server Doppelklicks identifiziert.
+title: IMsRdpClientAdvancedSettings DoubleClickDetect-Eigenschaft
+description: Gibt an, ob der Client Doppelklicks für den Server identifiziert.
 ms.assetid: 39e76bef-3d12-406d-a074-8c084fbe9ccc
 ms.tgt_platform: multiple
 keywords:
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, doubleclickdetect-Eigenschaft
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
-- Doubleclickdetect-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, doubleclickdetect (Eigenschaft)
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
+- DoubleClickDetect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , DoubleClickDetect-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd771614a80d909e0e7a748ab7256a5310084deb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc2d7a292bf307ffeac538cafd31dc7fb3ceeb1a54b1e768239ee169b04e0fd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118608735"
 ---
-# <a name="imsrdpclientadvancedsettingsdoubleclickdetect-property"></a>Imsrdpclientadvancedsettings::D oubleclickdetect-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsdoubleclickdetect-property"></a>IMsRdpClientAdvancedSettings::D oubleClickDetect-Eigenschaft
 
-Gibt an, ob der Client für den Server Doppelklicks identifiziert.
+Gibt an, ob der Client Doppelklicks für den Server identifiziert.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,13 +84,13 @@ HRESULT get_DoubleClickDetect(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Funktion zu deaktivieren, oder einen Wert ungleich NULL, um das Feature zu aktivieren.
+Legen Sie diesen Parameter auf 0 fest, um das Feature zu deaktivieren, oder einen Wert ungleich 0 (null), um das Feature zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -104,11 +104,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

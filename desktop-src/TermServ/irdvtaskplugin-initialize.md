@@ -1,12 +1,12 @@
 ---
-title: Methode "undvtaskplugin Initialize"
+title: IRDVTaskPlugin Initialize-Methode
 description: Wird aufgerufen, um den Task-Agent zu initialisieren.
 ms.assetid: eef813e6-ecca-400a-a9f3-efca6bd81161
 ms.tgt_platform: multiple
 keywords:
-- Initialize-Methode Remotedesktopdienste
-- Initialize-Methode Remotedesktopdienste, undvtaskplugin-Schnittstelle
-- Undvtaskplugin-Schnittstelle Remotedesktopdienste, Initialize-Methode
+- Initialize method Remotedesktopdienste
+- Initialisieren der Methode Remotedesktopdienste , IRDVTaskPlugin-Schnittstelle
+- IRDVTaskPlugin-Schnittstelle Remotedesktopdienste , Initialize-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9530be7334e1f3fefa7f73007334e448362a95ed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c14f4a002a0b33e403c02dba74385edd21e211fb27bcfb144c7a9ddc080a40fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118606103"
 ---
-# <a name="irdvtaskplugininitialize-method"></a>Undvtaskplugin:: Initialize-Methode
+# <a name="irdvtaskplugininitialize-method"></a>IRDVTaskPlugin::Initialize-Methode
 
 Wird aufgerufen, um den Task-Agent zu initialisieren.
 
@@ -42,12 +42,12 @@ HRESULT Initialize(
 
 <dl> <dt>
 
-*pnotifysink* \[ in\]
+*pNotifySink* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**undvtaskpluginnotifysink**](irdvtaskpluginnotifysink.md) \** _
+Typ: **[ **IRDVTaskPluginNotifySink**](irdvtaskpluginnotifysink.md)\***
 
-Ein Zeiger auf eine [_ *undvtaskpluginnotifysink* *](irdvtaskpluginnotifysink.md) -Schnittstelle, die der Task-Agent für die Kommunikation mit dem Auslöse-Agent verwendet. Sie müssen diese Schnittstelle freigeben, wenn Sie nicht mehr benötigt wird.
+Ein Zeiger auf eine [**IRDVTaskPluginNotifySink-Schnittstelle,**](irdvtaskpluginnotifysink.md) die der Task-Agent für die Kommunikation mit dem Trigger-Agent verwendet. Sie müssen diese Schnittstelle freigeben, wenn sie nicht mehr benötigt wird.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Ein Zeiger auf eine [_ *undvtaskpluginnotifysink* *](irdvtaskpluginnotifysink.md
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,11 +68,11 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**"Undvtaskplugin"**](irdvtaskplugin.md)
+[**IRDVTaskPlugin**](irdvtaskplugin.md)
 </dt> </dl>
 
  

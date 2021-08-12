@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentouesfobjectidsexception-Konstruktor'
-title: Esentouesfobjectidsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentOutOfObjectIDsException-Konstruktor'
+title: EsentOutOfObjectIDsException-Konstruktor
 TOCTitle: 'EsentOutOfObjectIDsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfObjectIDsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofobjectidsexception.esentoutofobjectidsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e78b9c4baf854e7d7734c9d3180affc3609f7192
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d96e45624ee632c1bed59b37c4d308876943c5ceae0addd1182b533ad421f3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118261926"
 ---
-# <a name="esentoutofobjectidsexception-constructor"></a>Esentouesfobjectidsexception-Konstruktor
+# <a name="esentoutofobjectidsexception-constructor"></a>EsentOutOfObjectIDsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesfobjectidsexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfObjectIDsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentOutOfObjectIDsException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentouesfobjectidsexception-Klasse](./esentoutofobjectidsexception-class.md)
+[EsentOutOfObjectIDsException-Klasse](./esentoutofobjectidsexception-class.md)
 
-[Esentouesfobjectidsexception-Member](./esentoutofobjectidsexception-members.md)
+[EsentOutOfObjectIDsException-Member](./esentoutofobjectidsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

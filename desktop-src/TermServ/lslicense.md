@@ -1,11 +1,11 @@
 ---
-title: Lslicense-Struktur
+title: LSLicense-Struktur
 description: Enthält Informationen zu einer bestimmten Remotedesktopdienste Lizenz.
 ms.assetid: 2c7f7b7a-e3b5-4f84-b49f-5f1d6960652d
 ms.tgt_platform: multiple
 keywords:
-- Lslicense-Struktur Remotedesktopdienste
-- Lplslicense-Struktur Zeiger Remotedesktopdienste
+- LSLicense-Struktur Remotedesktopdienste
+- LPLSLicense-Strukturzeiger Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dcb8551c1d1edfd9486d42df63de9a76fab38433
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3ea276b1b1217505a7bb44e1d70dd58d53eb57933d755ed9f79100abc177c3a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118605413"
 ---
-# <a name="lslicense-structure"></a>Lslicense-Struktur
+# <a name="lslicense-structure"></a>LSLicense-Struktur
 
 Enthält Informationen zu einer bestimmten Remotedesktopdienste Lizenz.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer Header Datei definiert. Um diese Struktur verwenden zu können, müssen Sie Sie selbst definieren, wie in diesem Thema gezeigt.
+> Diese Struktur ist in keiner Headerdatei definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
 
  
 
@@ -63,49 +63,49 @@ Version der Lizenz.
 
 </dd> <dt>
 
-**dwlicenseid**
+**dwLicenseId**
 </dt> <dd>
 
-Die ID der Lizenz.
+ID der Lizenz.
 
 </dd> <dt>
 
-**dwkeypackid**
+**dwKeyPackId**
 </dt> <dd>
 
-ID des [**lschräypack-Pakets**](lskeypack.md) , das die Lizenz enthält.
+ID des [**LSKeyPack,**](lskeypack.md) das die Lizenz enthält.
 
 </dd> <dt>
 
-**szhwid**
+**szHWID**
 </dt> <dd>
 
-Die Hardware-ID des Remotedesktopverbindung (RDC)-Clients, für den die Lizenz ausgestellt wurde.
+Hardware-ID des RDC-Clients (Remotedesktopverbindung), für den die Lizenz ausgestellt wurde.
 
 </dd> <dt>
 
-**szmachinename**
+**szMachineName**
 </dt> <dd>
 
-Der Name des Remotedesktopverbindung (RDC)-Clients, für den die Lizenz ausgestellt wurde.
+Name des RDC-Clients (Remotedesktopverbindung), für den die Lizenz ausgestellt wurde.
 
 </dd> <dt>
 
-**szusername**
+**szUserName**
 </dt> <dd>
 
-Der Name des Benutzers, der die Lizenz ausgestellt hat.
+Name des Benutzers, der die Lizenz ausgestellt hat.
 
 </dd> <dt>
 
-**dwcertseriallicense**
+**dwCertSerialLicense**
 </dt> <dd>
 
 Für die zukünftige Verwendung reserviert.
 
 </dd> <dt>
 
-**dwlicenseserialnumber**
+**dwLicenseSerialNumber**
 </dt> <dd>
 
 Seriennummer der Lizenz.
@@ -119,14 +119,14 @@ Datum, an dem die Lizenz ausgestellt wurde.
 
 </dd> <dt>
 
-**ftexpiredate**
+**ftExpireDate**
 </dt> <dd>
 
 Datum, an dem die Lizenz abläuft.
 
 </dd> <dt>
 
-**uclicenstatusstatus**
+**ucLicenseStatus**
 </dt> <dd>
 
 Aktueller Status der Lizenz.
@@ -144,20 +144,20 @@ Aktueller Status der Lizenz.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Lschräypack**](lskeypack.md)
+[**LSKeyPack**](lskeypack.md)
 </dt> <dt>
 
-[**Tlslicenseenumbegin**](tlslicenseenumbegin.md)
+[**TLSLicenseEnumBegin**](tlslicenseenumbegin.md)
 </dt> <dt>
 
-[**Tlslicensitztenenumnext**](tlslicenseenumnext.md)
+[**TLSLicenseEnumNext**](tlslicenseenumnext.md)
 </dt> <dt>
 
-[**Tlslicenabenumend**](tlslicenseenumend.md)
+[**TLSLicenseEnumEnd**](tlslicenseenumend.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Definiert ein Kabelnetzwerk Profil (LAN).
+description: Definiert ein LAN-Netzwerkprofil (Kabelnetzwerk).
 ms.assetid: b9b415c9-b2c6-4888-bad0-b2daeffc4387
-title: LAN_profile-Schema
+title: LAN_profile Schema
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e888b49ad3036efb7578682d6ef8cc69a33599a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d5cc1cf3a47ebd4bd8faf1b0b02805cbe28def7eac4a4bbe3534094e3757e5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106363449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118620092"
 ---
-# <a name="lan_profile-schema"></a>LAN- \_ Profil Schema
+# <a name="lan_profile-schema"></a>\_LAN-Profilschema
 
-Das LAN- \_ Profil Schema definiert ein Kabelnetzwerk Profil (LAN). Ein LAN-Profil enthält Netzwerkeinstellungen für eine Ethernet-Schnittstelle.
+Das \_ LAN-Profilschema definiert ein LAN-Netzwerkprofil (Kabelnetzwerk). Ein LAN-Profil enthält Netzwerkeinstellungen für eine Ethernet-Schnittstelle.
 
-Das Stamm Element eines LAN-Profils ist das [**lanprofile**](lan-profileschema-lanprofile-element.md) -Element. Jedes Profil weist genau ein Stamm Element auf. Alle LAN- \_ Profil Elemente befinden sich im-Namespace `https://www.microsoft.com/networking/LAN/profile/v1` .
+Das Stammelement eines LAN-Profils ist das [**LANProfile-Element.**](lan-profileschema-lanprofile-element.md) Jedes Profil hat genau ein Stammelement. Alle \_ LAN-Profilelemente befinden sich im Namespace `https://www.microsoft.com/networking/LAN/profile/v1` .
 
-Beispiele für LAN-Profile finden Sie unter [Beispiele für kabelgebundene profile](wired-profile-samples.md).
+Beispiel-LAN-Profile finden Sie unter [Beispiele für kabelgebundene Profile.](wired-profile-samples.md)
 
--   [LAN- \_ Profil Schema Elemente](lan-profileschema-elements.md)
+-   [\_LAN-Profilschemaelemente](lan-profileschema-elements.md)
 
  
 

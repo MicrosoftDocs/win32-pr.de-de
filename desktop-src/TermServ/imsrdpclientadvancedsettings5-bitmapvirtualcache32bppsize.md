@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 BitmapVirtualCache32BppSize-Eigenschaft
-description: Legt die Größe der virtuellen Cachedatei für 32 Bits pro Pixel (BPP)-Bitmaps fest oder ruft Sie ab.
+title: IMsRdpClientAdvancedSettings5 BitmapVirtualCache32BppSize (Eigenschaft)
+description: Legt die Dateigröße des virtuellen Caches für BPP-Bitmaps (32 Bits pro Pixel) fest oder ruft sie ab.
 ms.assetid: 7084293a-ae75-4711-a8d8-f813117333e7
 ms.tgt_platform: multiple
 keywords:
-- BitmapVirtualCache32BppSize-Eigenschaft Remotedesktopdienste
-- BitmapVirtualCache32BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, BitmapVirtualCache32BppSize-Eigenschaft
-- BitmapVirtualCache32BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, BitmapVirtualCache32BppSize-Eigenschaft
-- BitmapVirtualCache32BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, BitmapVirtualCache32BppSize-Eigenschaft
-- BitmapVirtualCache32BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, BitmapVirtualCache32BppSize-Eigenschaft
+- BitmapVirtualCache32BppSize-Remotedesktopdienste
+- BitmapVirtualCache32BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , BitmapVirtualCache32BppSize (Eigenschaft)
+- BitmapVirtualCache32BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , BitmapVirtualCache32BppSize (Eigenschaft)
+- BitmapVirtualCache32BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , BitmapVirtualCache32BppSize (Eigenschaft)
+- BitmapVirtualCache32BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BitmapVirtualCache32BppSize (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d43de82b97e16fa36f83a5edde43712b2a9cbbb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cb33ee817a9410beb95e91be674de1a96cdbf78f92f5aaa7e3298447804cc1d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118608409"
 ---
-# <a name="imsrdpclientadvancedsettings5bitmapvirtualcache32bppsize-property"></a>IMsRdpClientAdvancedSettings5:: BitmapVirtualCache32BppSize-Eigenschaft
+# <a name="imsrdpclientadvancedsettings5bitmapvirtualcache32bppsize-property"></a>IMsRdpClientAdvancedSettings5::BitmapVirtualCache32BppSize (Eigenschaft)
 
-Legt die Größe der virtuellen Cachedatei für 32 Bits pro Pixel (BPP)-Bitmaps fest oder ruft Sie ab.
+Legt die Dateigröße des virtuellen Caches für BPP-Bitmaps (32 Bits pro Pixel) fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_BitmapVirtualCache32BppSize(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die Größe der virtuellen Cachedatei für 32 bpp-Bitmaps in Megabyte (MB) fest. Der Maximalwert ist 48 MB.
+Legt die Größe der virtuellen Cachedatei für 32 BPP-Bitmaps in Megabyte (MB) fest. Der Höchstwert beträgt 48 MB.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Legt die Größe der virtuellen Cachedatei für 32 bpp-Bitmaps in Megabyte (MB) 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

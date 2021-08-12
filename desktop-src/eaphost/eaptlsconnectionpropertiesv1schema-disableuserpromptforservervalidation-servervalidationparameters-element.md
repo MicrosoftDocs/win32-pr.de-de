@@ -1,9 +1,9 @@
 ---
-title: Disableuserpromptforservervalidation (servervalidationparameters)
-description: Erfahren Sie mehr über das disableuserpromptforservervalidation (servervalidationparameters)-Element. Gibt an, ob der Benutzer zur Server Validierung aufgefordert werden soll. | Disableuserpromptforservervalidation (servervalidationparameters)
+title: DisableUserPromptForServerValidation (ServerValidationParameters)
+description: Erfahren Sie mehr über das DisableUserPromptForServerValidation (ServerValidationParameters)-Element. Gibt an, ob der Benutzer zur Servervalidierung aufgefordert werden soll. | DisableUserPromptForServerValidation (ServerValidationParameters)
 ms.assetid: d1c2f334-286b-4aac-b723-806b90fc7b1f
 keywords:
-- Disableuserpromptforservervalidation-Element EAPHost
+- DisableUserPromptForServerValidation-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 368b2593b3c55ef571e3f1892634318e54447643
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 37f412f9c6200e7d2a54d624d0a77b4df5316ea7edd0ab75b69f92c753abbcff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118273718"
 ---
-# <a name="disableuserpromptforservervalidation-servervalidationparameters-element-tls"></a>Disableuserpromptforservervalidation (servervalidationparameters)-Element (TLS)
+# <a name="disableuserpromptforservervalidation-servervalidationparameters-element-tls"></a>DisableUserPromptForServerValidation (ServerValidationParameters)-Element (TLS)
 
-Das **disableuserpromptforservervalidation (servervalidationparameters)** -Element gibt an, ob der Benutzer zur Server Validierung aufgefordert werden soll.
+Das **DisableUserPromptForServerValidation-Element (ServerValidationParameters)** gibt an, ob der Benutzer zur Serverüberprüfung aufgefordert werden soll.
 
-Wenn " **disableuserpromptforservervalidation** " den Wert "true" hat, führt EAP-TLS die Server Validierung ohne Benutzereingaben aus. Wenn die Überprüfung fehlschlägt, schlägt EAP-TLS die Authentifizierung fehl. Wenn **disableuserpromptforservervalidation** den Wert false hat, wird der Benutzer zur Eingabe eines validierten Serverzertifikats oder-Namens bzw. einer Stamm Zertifizierungsstelle (Root Certificate Authority, ca) aufgefordert.
+Wenn **DisableUserPromptForServerValidation** true ist, führt EAP-TLS die Serverüberprüfung ohne Benutzereingabe aus. Wenn die Überprüfung fehlschlägt, schlägt EAP-TLS die Authentifizierung fehl. Wenn **DisableUserPromptForServerValidation** auf FALSE festgelegt ist, wird der Benutzer zur Eingabe eines überprüften Serverzertifikats oder -namens oder einer Stammzertifizierungsstelle aufgefordert.
 
-Das **disableuserpromptforservervalidation** -Element ist optional.
+Das **DisableUserPromptForServerValidation-Element** ist optional.
 
 ``` syntax
 <xs:element name="DisableUserPromptForServerValidation"
@@ -35,16 +35,16 @@ Das **disableuserpromptforservervalidation** -Element ist optional.
  />
 ```
 
-Das **disableuserpromptforservervalidation** -Element wird durch den komplexen [**servervalidationparameters**](eaptlsconnectionpropertiesv1schema-servervalidationparameters-complextype.md) -Typ definiert.
+Das **DisableUserPromptForServerValidation-Element** wird durch den komplexen [**ServerValidationParameters-Typ**](eaptlsconnectionpropertiesv1schema-servervalidationparameters-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,28 +52,28 @@ Das **disableuserpromptforservervalidation** -Element wird durch den komplexen [
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Servervalidationparameters**](eaptlsconnectionpropertiesv1schema-servervalidationparameters-complextype.md)
+[**ServerValidationParameters**](eaptlsconnectionpropertiesv1schema-servervalidationparameters-complextype.md)
 </dt> <dt>
 
-**Mögliche direkt übergeordnete Elemente in der Schema Instanz**
+**Mögliche unmittelbar übergeordnete Elemente in der Schemainstanz**
 </dt> <dt>
 
-[**ServerValidation (eaptype)**](eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element.md)
+[**ServerValidation (EapType)**](eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv1-Schema Elemente](eaptlsconnectionpropertiesv1schema-elements.md)
+[eaptlsconnectionpropertiesv1-Schemaelemente](eaptlsconnectionpropertiesv1schema-elements.md)
 </dt> </dl>
 
  

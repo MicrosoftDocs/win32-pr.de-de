@@ -1,20 +1,20 @@
 ---
-title: Beispiel für das DVC-Server Modul
-description: C++-Codebeispiel, das zeigt, wie das serverseitige Dynamic Virtual Channel (DVC)-Modul erstellt wird.
+title: Beispiel für ein DVC-Servermodul
+description: C++-Codebeispiel, das zeigt, wie das serverseitige DVC-Modul (Dynamic Virtual Channel) erstellt wird.
 ms.assetid: 497d4ed3-8160-43d2-8f03-b2f2b7988dc3
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2d474dc228b58f09859c59f5e8d47dcfd0b3047
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a25853f369edc82228ba31bb1f371972ca4c3e542e2ab1449d231bcb9ae33081
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118609409"
 ---
-# <a name="dvc-server-module-example"></a>Beispiel für das DVC-Server Modul
+# <a name="dvc-server-module-example"></a>Beispiel für ein DVC-Servermodul
 
-Im folgenden Codebeispiel für C++ finden Sie ein Beispiel für die Erstellung des serverseitigen dynamischen virtuellen Kanal Moduls (DVC).
+Das folgende C++-Codebeispiel enthält ein Beispiel für das Erstellen des serverseitigen DVC-Moduls (Dynamic Virtual Channel).
 
 
 ```C++
@@ -280,9 +280,9 @@ DWORD WINAPI ReadThread(PVOID param)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

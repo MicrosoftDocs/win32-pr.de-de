@@ -1,26 +1,26 @@
 ---
-title: VML-Attribut "CropBottom"
-description: VML-Attribut "CropBottom"
+title: VML CropBottom-Attribut
+description: VML CropBottom-Attribut
 ms.assetid: 9548d0fa-1708-4206-90d8-1d90cb42de87
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b847fcd061e13418efe04b6ea27795a19002abf0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 667e5501f43d55dcc6a489406e4b10397c1a39773fad2fce7dc6f8601bf45024
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118601953"
 ---
-# <a name="vml-cropbottom-attribute"></a>VML-Attribut "CropBottom"
+# <a name="vml-cropbottom-attribute"></a>VML CropBottom-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Prozentsatz der Bild Entfernung von der unteren Seite. Lese-/Schreibzugriff. **Vgnumber**.
+Definiert den Prozentsatz der Entfernung des Bilds von der unteren Seite. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert den Prozentsatz der Bild Entfernung von der unteren Seite. Lese-/Schre
 
 **Tagsyntax**
 
-<v: *Element* CropBottom = " *Expression* " >
+<v: *element* cropbottom=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . CropBottom = "*Ausdruck*"
+*element* .cropbottom="*expression*"
 
-*Ausdruck* = *Element*. CropBottom
+*expression* = *.cropbottom-Element*
 
 **Anmerkungen**
 
-Der Wert für das Zuschneiden kann zwischen-1,0 und 1,0 liegen. Der Standardwert ist 0. Beachten Sie, dass bei einem Wert von 1 überhaupt kein Bild angezeigt wird. Negative Werte führen dazu, dass das Bild von der Kante, die zugeschnitten wird, nach innen gedrückt wird (der leere Bereich zwischen dem Bild und dem Rand der Kante wird durch die Füllfarbe der Form aufgefüllt). Positive Werte kleiner als 1 führen dazu, dass das verbleibende Bild so gestreckt wird, dass es der Form entspricht.
+Die Zuschneidemenge kann zwischen -1,0 und 1,0 liegen. Der Standardwert ist 0. Beachten Sie, dass der Wert 1 überhaupt kein Bild anzeigt. Negative Werte führen dazu, dass das Bild von der zugeschnittenen Kante nach innen gezogen wird (der leere Bereich zwischen dem Bild und dem zugeschnittenen Rand wird durch die Füllfarbe der Form gefüllt). Positive Werte kleiner als 1 führen dazu, dass das verbleibende Bild gestreckt wird, um die Form anzupassen.
 
-VML-Standard Attribut
+VML-Standardattribut
 
 **Beispiel**
 
-Es wird kein Bild angezeigt, da das Bild von unten nach 100% zugeschnitten ist.
+Es wird kein Bild angezeigt, da das Bild zu 100 % vom unteren Rand zugeschnitten ist.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Es wird kein Bild angezeigt, da das Bild von unten nach 100% zugeschnitten ist.
 
 
 
- 
+ 
 
- 
+ 

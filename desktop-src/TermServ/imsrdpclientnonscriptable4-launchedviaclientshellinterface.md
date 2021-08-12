@@ -1,24 +1,24 @@
 ---
-title: IMsRdpClientNonScriptable4 launchedviaclientshellinterface (Eigenschaft)
-description: Gibt an, ob der Benutzer das Client Steuerelement über die Schnittstelle Remotedesktop Webzugriff (RD Webzugriff) gestartet hat.
+title: IMsRdpClientNonScriptable4 LaunchViaClientShellInterface-Eigenschaft
+description: Gibt an, ob der Benutzer das Clientsteuerelement mithilfe der Remotedesktop Webzugriff -Schnittstelle (RD-Webzugriff) gestartet hat.
 ms.assetid: bf72c375-0eec-49c7-9f9a-c7545a95bdce
 ms.tgt_platform: multiple
 keywords:
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
-- Launchedviaclientshellinterface-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, launchedviaclientshellinterface (Eigenschaft)
+- Eigenschaft "LaunchedViaClientShellInterface" Remotedesktopdienste
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
+- LaunchViaClientShellInterface-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , LaunchViaClientShellInterface-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -39,16 +39,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d5854a4e75be455035fd9a123418bd486932379
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0bf4b3af34d274ae2ebfc34aed2a4256272daca2365966795de14d6b156562d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607588"
 ---
-# <a name="imsrdpclientnonscriptable4launchedviaclientshellinterface-property"></a>IMsRdpClientNonScriptable4:: launchedviaclientshellinterface (Eigenschaft)
+# <a name="imsrdpclientnonscriptable4launchedviaclientshellinterface-property"></a>IMsRdpClientNonScriptable4::LaunchedViaClientShellInterface-Eigenschaft
 
-Gibt an, ob der Benutzer das Client Steuerelement über die Schnittstelle Remotedesktop Webzugriff (RD Webzugriff) gestartet hat.
+Gibt an, ob der Benutzer das Clientsteuerelement mithilfe der Remotedesktop Webzugriff -Schnittstelle (RD-Webzugriff) gestartet hat.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -69,7 +69,7 @@ HRESULT get_LaunchedViaClientShellInterface(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die **launchedviaclientshellinterface** -Eigenschaft fest.
+Legt die **LaunchViaClientShellInterface-Eigenschaft** fest.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -89,7 +89,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

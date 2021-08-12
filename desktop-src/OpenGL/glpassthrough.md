@@ -1,9 +1,9 @@
 ---
-title: glpassthrough-Funktion (GL. h)
-description: Die Funktion "glpassthrough" platziert einen Marker im Feedback Puffer.
+title: glPassThrough-Funktion (Gl.h)
+description: Die glPassThrough-Funktion platziert einen Marker im Feedbackpuffer.
 ms.assetid: 14664ac6-eb25-46ae-86d8-7ece31df103f
 keywords:
-- glpassthrough-Funktion OpenGL
+- glPassThrough-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd1174dd933d46813a89c35b781d0408c3ac5476
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c5edf1b0fb2dbda1ef1e0a2c4b9ab67b8e7e6305998a8f5a6de9c461e4e148bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118615417"
 ---
-# <a name="glpassthrough-function"></a>glpassthrough-Funktion
+# <a name="glpassthrough-function"></a>glPassThrough-Funktion
 
-Die Funktion " **glpassthrough** " platziert einen Marker im Feedback Puffer.
+Die **glPassThrough-Funktion** platziert einen Marker im Feedbackpuffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ void WINAPI glPassThrough(
 *token* 
 </dt> <dd>
 
-Ein Markerwert, der in den Feedback Puffer eingefügt werden soll. Dies wird durch den folgenden eindeutigen identifizierenden Wert angegeben.
+Ein Markerwert, der im Feedbackpuffer platziert werden soll. Sie wird mit dem folgenden eindeutigen Identifizierenswert angegeben.
 
 
 
 | Wert                                                                                                                                                                                   | Bedeutung                                                                                                                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_PASS_THROUGH_TOKEN"></span><span id="gl_pass_through_token"></span><dl> <dt>**GL- \_ Pass- \_ through- \_ Token**</dt> </dl> | Die Reihenfolge der **glpassthrough** -Befehle in Bezug auf die Spezifikation von Grafik primitiven wird beibehalten.<br/> |
+| <span id="GL_PASS_THROUGH_TOKEN"></span><span id="gl_pass_through_token"></span><dl> <dt>**\_ \_ GL-PASS-THROUGH-TOKEN \_**</dt> </dl> | Die Reihenfolge der **glPassThrough-Befehle** in Bezug auf die Spezifikation von Grafikprimitiven wird beibehalten.<br/> |
 
 
 
@@ -63,27 +63,27 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Feedback ist ein OpenGL-Rendermodus, der durch Aufrufen von [**glrendermode**](glrendermode.md) mit GL-Feedback ausgewählt wird \_ . Wenn OpenGL im Feedback Modus ist, werden von der rasterisierung keine Pixel erzeugt. Stattdessen werden Informationen über primitive, die gerengt worden wären, von OpenGL an die Anwendung zurückgegeben. Eine Beschreibung des Feedback Puffers und der darin verwendeten Werte finden Sie unter [**glfeedbackbuffer**](glfeedbackbuffer.md) .
+Feedback ist ein OpenGL-Rendermodus, der durch Aufrufen von [**glRenderMode**](glrendermode.md) mit GL FEEDBACK ausgewählt \_ wird. Wenn sich OpenGL im Feedbackmodus befindet, werden keine Pixel durch Rasterung erzeugt. Stattdessen werden Informationen zu Primitiven, die gerastert worden wären, von OpenGL an die Anwendung zurückgespeist. Eine Beschreibung des Feedbackpuffers und der darin enthaltenen Werte finden Sie unter [**glFeedbackBuffer.**](glfeedbackbuffer.md)
 
-Die **glpassthrough** -Funktion fügt einen benutzerdefinierten Marker in den Feedback Puffer ein, wenn er im Feedback Modus ausgeführt wird. Der *tokenparameter* wird zurückgegeben, als ob es sich um einen primitiven handelt.
+Die **glPassThrough-Funktion** fügt einen benutzerdefinierten Marker in den Feedbackpuffer ein, wenn er im Feedbackmodus ausgeführt wird. Der *Tokenparameter* wird zurückgegeben, als wäre er ein Primitiver.
 
-Die **glpassthrough** -Funktion wird ignoriert, wenn OpenGL nicht im Feedback Modus ist.
+Die **glPassThrough-Funktion** wird ignoriert, wenn sich OpenGL nicht im Feedbackmodus befindet.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **glpassthrough** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glPassThrough ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ \_ Rendermodus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ RENDER \_ MODE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,13 +93,13 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glpassthrough** a
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -109,10 +109,10 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glpassthrough** a
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glfeedbackbuffer**](glfeedbackbuffer.md)
+[**glFeedbackBuffer**](glfeedbackbuffer.md)
 </dt> <dt>
 
-[**glrendermode**](glrendermode.md)
+[**glRenderMode**](glrendermode.md)
 </dt> </dl>
 
  

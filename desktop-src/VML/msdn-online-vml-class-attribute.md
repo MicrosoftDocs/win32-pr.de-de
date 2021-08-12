@@ -1,56 +1,56 @@
 ---
-title: VML-Klassen Attribut
-description: VML-Klassen Attribut
+title: VML-Klassenattribut
+description: VML-Klassenattribut
 ms.assetid: 4030b8b7-fcc9-4153-8004-81935a347a09
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94bdc723ba9be335afc43023ab89b88834c55474
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 87ada95b56430dacd09801a9aaa200c92abab064bbbb5732b369372de63c34de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118602182"
 ---
-# <a name="vml-class-attribute"></a>VML-Klassen Attribut
+# <a name="vml-class-attribute"></a>VML-Klassenattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Verweist auf eine Definition eines CSS-Stils. Lese-/Schreibzugriff. **Zeichenfolge**.
+Bezieht sich auf eine Definition eines CSS-Stils. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* Class = " *Expression* " >
+<v: *element* class="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . ClassName = "*Ausdruck*"
+*element* .classname="*expression*"
 
-*Ausdruck* = *Element*. ClassName
+*expression* = *Element*.classname
 
 **Anmerkungen**
 
-Das **Class** -Attribut ähnelt dem Standard-HTML- **Klassen** Attribut, das mit CSS-Stylesheets verwendet wird.
+Das **Klassenattribut** ähnelt dem HTML-Standardklassenattribut, das mit CSS-Stylesheets verwendet wird. 
 
-Beachten Sie, dass **className** anstelle der- **Klasse** für die Skripterstellung verwendet wird. Beachten Sie außerdem, dass für die Skripterstellung nur der **Klassenname** gelesen werden kann. Wenn Sie den Wert von **className** ändern, wird das Rendering der Form nicht geändert.
+Beachten **Sie, dass classname** anstelle der -Klasse **für Skripts** verwendet wird. Beachten Sie auch, dass der Klassenname für die **Skripterstellung** nur gelesen werden kann. Das Ändern des Werts **von Classname** ändert nicht das Rendering der Form.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Beispiel**
 
-Eine Klasse für die **Breite** wird mit dem Stil erstellt.
+Eine Klasse für **breite wird** mit dem Stil erstellt.
 
 
 ```HTML
@@ -59,7 +59,7 @@ Eine Klasse für die **Breite** wird mit dem Stil erstellt.
 
 
 
-Dann wird auf die Breite durch Einschließen des Stils verwiesen. Beachten Sie, dass die Width-und Height-Eigenschaft nicht im **Style** -Attribut definiert ist, sondern durch den-Stil definiert wird.
+Anschließend wird auf die Breite verwiesen, indem der Stil ein- und aus dem Format besteht. Beachten Sie, dass width undheight  nicht im Formatattribut definiert sind, sondern durch den Stil definiert werden.
 
 
 ```HTML
@@ -73,8 +73,8 @@ Dann wird auf die Breite durch Einschließen des Stils verwiesen. Beachten Sie, 
 
 
 
-Beachten Sie, dass die **Klasse** nur auf CSS-Type-Attribute angewendet wird.
+Beachten Sie, **dass Class** nur für CSS-Typattribute gilt.
 
- 
+ 
 
- 
+ 

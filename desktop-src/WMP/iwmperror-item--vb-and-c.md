@@ -1,9 +1,9 @@
 ---
-title: Iwmperror. Item (VB und C)
-description: Die Item-Eigenschaft (die get \_ Item-Methode in C \) Ruft eine iwmperroritem-Schnittstelle am angegebenen Index in der Fehler Warteschlange ab.
+title: IWMPError.Item (VB und C )
+description: Die Item-Eigenschaft (die get Item-Methode in C\ ) ruft eine IWMPErrorItem-Schnittstelle am angegebenen Index \_ in der Fehlerwarteschlange ab.
 ms.assetid: acfaaaa5-eb13-4ba0-8417-4229adc62c5d
 keywords:
-- Iwmperror. Item (VB und C) Windows Media Player
+- IWMPError.Item (VB und C ) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9217ec772512171c828dd0dad06ec8fe3704dba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: be8d212eca9e9e54770e7e2751df345d80bbfb6bfc1b12714e811c7795990725
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575632"
 ---
-# <a name="iwmperroritem-vb-and-c"></a>Iwmperror. Item (VB und c#)
+# <a name="iwmperroritem-vb-and-c"></a>IWMPError.Item (VB und C#)
 
-Die **Item** -Eigenschaft (die **get \_ Item** -Methode in c#) Ruft eine **iwmperroritem** -Schnittstelle am angegebenen Index in der Fehler Warteschlange ab.
+Die **Item-Eigenschaft** (die **get \_ Item-Methode** in C#) ruft eine **IWMPErrorItem-Schnittstelle** am angegebenen Index in der Fehlerwarteschlange ab.
 
 
 ```
@@ -49,21 +49,21 @@ IWMPErrorItem get_Item (
 
 *dwIndex*
 
-Ein **System. Int32** -Wert, der der null basierte Index einer **iwmperroritem** -Schnittstelle in der Fehler Warteschlange ist.
+Ein **System.Int32,** das der nullbasierte Index einer **IWMPErrorItem-Schnittstelle** in der Fehlerwarteschlange ist.
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **WMPLib. iwmperroritem** -Schnittstelle.
+Eine **WMPLib.IWMPErrorItem-Schnittstelle.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Media Player kann als Reaktion auf eine Fehlerbedingung eine Reihe von Fehlern generieren. Diese Eigenschaft ruft einen bestimmten Fehler in der Warteschlange mit einer Indexnummer ab. Die Indexnummern für die Fehler Warteschlange beginnen mit 0 (null).
+Windows Media Player kann eine Reihe von Fehlern als Reaktion auf eine Fehlerbedingung generieren. Diese Eigenschaft ruft mithilfe einer Indexnummer einen bestimmten Fehler in der Warteschlange ab. Die Indexnummern für die Fehlerwarteschlange beginnen mit 0 (null).
 
-Sie sollten **iwmpsettings. enableerrordialogs** auf **false** festlegen, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Sie sollten **IWMPSettings.enableErrorDialogs** auf **FALSE** festlegen, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die **Item** -Eigenschaft (die **get \_ Item** -Methode in c#) in einem Fehler Ereignishandler verwendet, um Informationen zum letzten Fehler in der Fehler Warteschlange abzurufen und anzuzeigen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird die **Item-Eigenschaft** (die **get \_ Item-Methode** in C#) in einem Error-Ereignishandler verwendet, um Informationen zum letzten Fehler in der Fehlerwarteschlange abzurufen und anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -116,7 +116,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -126,13 +126,13 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmperror-Schnittstelle (VB und c#)**](iwmperror--vb-and-c.md)
+[**IWMPError-Schnittstelle (VB und C#)**](iwmperror--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmperroritem-Schnittstelle (VB und c#)**](iwmperroritem--vb-and-c.md)
+[**IWMPErrorItem-Schnittstelle (VB und C#)**](iwmperroritem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. enableerrordialogs (VB und c#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
+[**IWMPSettings.enableErrorDialogs (VB und C#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
 </dt> </dl>
 
  

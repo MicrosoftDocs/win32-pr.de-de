@@ -1,12 +1,12 @@
 ---
-title: Joinmethode der Win32_RDMSJoinedNode-Klasse
-description: Fügt Remotedesktop Verwaltungsdienste (RDMs) einen Knoten hinzu.
+title: Join-Methode der Win32_RDMSJoinedNode-Klasse
+description: Fügt Remotedesktop Management Services (RDMS) einen Knoten hinzu.
 ms.assetid: 7451d12a-ace2-4564-bf6d-fb0169be967f
 ms.tgt_platform: multiple
 keywords:
-- Joinmethode Remotedesktopdienste
-- Joinmethode Remotedesktopdienste, Win32_RDMSJoinedNode-Klasse
-- Win32_RDMSJoinedNode-Klasse Remotedesktopdienste, Join-Methode
+- Join-Methode Remotedesktopdienste
+- Join-Methode Remotedesktopdienste , Win32_RDMSJoinedNode-Klasse
+- Win32_RDMSJoinedNode Klasse Remotedesktopdienste , Join-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 587e68758971453e8c4e307ccb37ce6cede262f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 204d83988f9a57d9fe0edf8daa6dc580676fc7395f98edcbece49674c0041aef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118605423"
 ---
-# <a name="join-method-of-the-win32_rdmsjoinednode-class"></a>Joinmethode der Win32 \_ rdmsjoinednode-Klasse
+# <a name="join-method-of-the-win32_rdmsjoinednode-class"></a>Join-Methode der Win32 \_ RDMSJoinedNode-Klasse
 
-Fügt Remotedesktop Verwaltungsdienste (RDMs) einen Knoten hinzu.
+Fügt Remotedesktop Management Services (RDMS) einen Knoten hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 Join(
 
 <dl> <dt>
 
-*Nodefqdn* \[ in\]
+*NodeFQDN* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Domänen Name des Knotens.
+Der vollqualifizierte Domänenname des Knotens.
 
 </dd> <dt>
 
-*Nodesid* \[ in\]
+*NodeSID* \[ In\]
 </dt> <dd>
 
 Die Sicherheits-ID (SID) des Knotens.
@@ -60,7 +60,7 @@ Die Sicherheits-ID (SID) des Knotens.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,17 +70,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ rdmsjoinednode**](win32-rdmsjoinednode.md)
+[**Win32 \_ RDMSJoinedNode**](win32-rdmsjoinednode.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie ein asynchrones Ressourcen Lade Modul.
+description: Erstellen Sie ein asynchrones Ressourcenlader.
 ms.assetid: 1b3eb21c-4ba6-4910-b2f0-2ffa4ae50e47
-title: D3DX10CreateAsyncResourceLoader-Funktion (D3DX10Async. h)
+title: D3DX10CreateAsyncResourceLoader-Funktion (D3DX10Async.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Async.h
-ms.openlocfilehash: 0539817ffff75c28af41289fc5197f6440a915bd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bedb3559ead576c074dafed526fc0ebfefebaf5c3e53a6559223af346e7f9c98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118303455"
 ---
 # <a name="d3dx10createasyncresourceloader-function"></a>D3DX10CreateAsyncResourceLoader-Funktion
 
-Erstellen Sie ein asynchrones Ressourcen Lade Modul.
+Erstellen Sie ein asynchrones Ressourcenlader.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,25 +41,25 @@ HRESULT D3DX10CreateAsyncResourceLoader(
 
 <dl> <dt>
 
-*hsrcmodule* \[ in\]
+*hSrcModule* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HMODULE**](../winprog/windows-data-types.md)**
 
-Handle für das Ressourcen Modul. Verwenden Sie die [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) , um das Handle zu erhalten.
+Handle für das Ressourcenmodul. Verwenden [Sie die GetModuleHandle-Funktion,](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) um das Handle zu erhalten.
 
 </dd> <dt>
 
-*psrkresource* \[ in\]
+*pSrcResource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Der Name der Ressource in hsrcmodule. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
+Name der Ressource in hSrcModule. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Datentyp in LPCSTR auflösen.
 
 </dd> <dt>
 
-*ppdataloader* \[ vorgenommen\]
+*ppDataLoader* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10DataLoader**](id3dx10dataloader.md)\*\***
@@ -72,7 +72,7 @@ Die Adresse eines Zeigers auf den asynchronen Datenprozessor (siehe [**ID3DX10Da
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Async. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Async.h</dt> </dl> |
 
 
 
@@ -88,7 +88,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

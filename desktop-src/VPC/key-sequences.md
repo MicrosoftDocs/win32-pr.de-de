@@ -1,163 +1,163 @@
 ---
 title: Schlüsselsequenzen
-description: Eine Schlüssel Sequenz Zeichenfolge ist ein durch Trennzeichen getrennter Satz von Schlüssel Bezeichnerzeichen, die verwendet werden, um die Tastenkombination und die releasesequenz einer Standardtastatur des US-amerikanischen 101-Schlüssels zu simulieren.
+description: Eine Tastensequenzzeichenfolge ist ein durch Trennzeichen getrennter Satz von Schlüsselbezeichnern, die verwendet werden, um die Tastenkombination und die Freigabesequenz einer STANDARDTASTATUR (U.S. 101) zu simulieren.
 ms.assetid: 6f5301d1-af6e-4b43-8884-c76b2300ba92
 keywords:
-- Virtueller Computer für Windows Virtual PC, schlüsselsequenzen
+- Windows Virtueller PC , Tastensequenzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b0c973b5aafd3bf02746ac1550ffedf3d4a4c1f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3b300c1d417bad30f7a0e06fd8cfb411184eb8f6b800549536c9b6452dcdfefa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118591445"
 ---
 # <a name="key-sequences"></a>Schlüsselsequenzen
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Eine Schlüssel Sequenz Zeichenfolge ist ein durch Trennzeichen getrennter Satz von Schlüssel Bezeichnerzeichen, die verwendet werden, um die Tastenkombination und die releasesequenz einer Standardtastatur des US-amerikanischen 101-Schlüssels zu simulieren.
+Eine Tastensequenzzeichenfolge ist ein durch Trennzeichen getrennter Satz von Schlüsselbezeichnern, die verwendet werden, um die Tastenkombination und die Freigabesequenz einer STANDARDTASTATUR (U.S. 101) zu simulieren.
 
-Wenn ein Schlüssel Bezeichner in der Zeichenfolge ohne einen vorangehenden Modifizierer angezeigt wird, wird ein Schlüssel gesteuertes Code simuliert, gefolgt vom zugehörigen Code, der durch den Schlüssel freigegeben wurde. Schlüsselmodifizierer können verwendet werden, um dieses Verhalten zu ändern.
+Wenn ein Schlüsselbezeichner in der Zeichenfolge ohne vorangehenden Modifizierer angezeigt wird, wird ein per Taste gedrückter Code simuliert, unmittelbar gefolgt von dem entsprechenden, von der Taste freigegebenen Code. Schlüsselmodifizierer können verwendet werden, um dieses Verhalten zu ändern.
 
-Der **down** -Modifizierer sendet z. b. den Schlüssel gesteuerten Code für den folgenden Schlüssel Bezeichner, ohne den Schlüssel freigegebenen Code zu senden. Dies ist nützlich zum Simulieren von STRG-, alt-und Umschalttaste, wenn Sie gedrückt werden, während andere Schlüssel gesendet werden. Um den Schlüssel freizugeben, muss er erneut in die Schlüssel Zeichenfolge eingefügt werden, zusammen mit **einem vorangehenden** Modifizierer.
+Der DOWN-Modifizierer sendet z. B. den gedrückten Code für den folgenden Schlüsselbezeichner, ohne den code freigelassenen Schlüssel zu senden.  Dies ist nützlich, um STRG-, ALT- und UMSCHALTTASTEn zu simulieren, wenn sie gedrückt gehalten werden, während andere Tasten gesendet werden. Um den Schlüssel frei zu geben, muss er zusammen mit einem vorangehenden UP-Modifizierer erneut in die **Schlüsselzeichenfolge eingeschlossen** werden.
 
-## <a name="key-identifiers"></a>Schlüssel Bezeichner
+## <a name="key-identifiers"></a>Schlüsselbezeichner
 
-Die folgende Liste enthält die gültigen schlüsselbezeichnerzeichenfolgen. 
+In der folgenden Liste sind die gültigen Schlüsselbezeichnerzeichenfolgen aufgeführt. 
 
-| Key Identifier-Zeichenfolge | Bedeutung                         |
+| Schlüsselbezeichnerzeichenfolge | Bedeutung                         |
 |-----------------------|---------------------------------|
-| Key- \_ Escape           | **ESC** -Taste                 |
-| Schlüssel \_ F1               | **F1** -Taste                  |
-| Schlüssel \_ F2               | **F2** -Taste                  |
-| Taste \_ F3               | **F3** -Taste                  |
-| Schlüssel \_ F4               | **F4** -Taste                  |
-| Taste \_ F5               | **F5** -Taste                  |
-| Schlüssel \_ F6               | **F6** -Taste                  |
-| Schlüssel \_ F7               | **F7** -Taste                  |
-| Schlüssel \_ F8               | **F8** -Taste                  |
-| Schlüssel \_ F9               | **F9** -Taste                  |
-| Taste \_ F10              | **F10** -Taste                 |
-| Taste \_ F11              | **F11** -Taste                 |
-| Taste \_ F12              | **F12** -Taste                 |
-| Schlüssel- \_ sysreq           | der **sysreq** -Schlüssel              |
-| Key \_ ScrollLock       | **ScrollLock** -Taste          |
-| Schlüssel \_ Umbruch            | **Pause** -Taste               |
-| Schlüssel \_ leftapostroph   | der **\`** Schlüssel                  |
-| Schlüssel \_ 1                | **1** -Taste                   |
-| Schlüssel \_ 2                | **2** -Taste                   |
-| Schlüssel \_ 3                | **3** -Taste                   |
-| Schlüssel \_ 4                | **4** -Taste                   |
-| Schlüssel \_ 5                | **5** -Taste                   |
-| Schlüssel \_ 6                | **6** -Taste                   |
-| Schlüssel \_ 7                | **7** -Taste                   |
-| Schlüssel \_ 8                | **8** -Taste                   |
-| Schlüssel \_ 9                | **9** -Taste                   |
-| Schlüssel \_ 0                | **0** -Taste                   |
-| Key- \_ Bindestrich           | der **-** Schlüssel                   |
-| Schlüssel ist \_ Gleichheits           | der **=** Schlüssel                   |
-| Schlüssel \_ RÜCKTASTE        | **RÜCKTASTE**           |
-| Key \_ Insert           | die **ins** -Taste                 |
-| Key \_ Home             | der **Home** -Schlüssel                |
-| \_Schlüsselpageup           | die **PageUp** -Taste              |
-| Schlüssel- \_ Numlock          | **Numlock** -Schlüssel             |
-| Unterteilung von Keypad \_        | der **/** Schlüssel auf der Tastatur     |
-| Tastenkombination \_      | der **\*** Schlüssel auf der Tastatur    |
-| Keypad \_ minus         | der **-** Schlüssel auf der Tastatur     |
-| Schlüssel \_ Registerkarte              | **Tab** -Taste                 |
-| Key \_ Q                | **Q** -Taste                   |
-| Schlüssel \_ W                | **W** -Taste                   |
-| Schlüssel \_ E                | **E** -Taste                   |
-| Schlüssel \_ R                | **R** -Taste                   |
-| Schlüssel \_ T                | **T** -Taste                   |
-| Schlüssel \_ Y                | **Y** -Taste                   |
-| Schlüssel \_ U                | **U** -Taste                   |
-| Schlüssel \_ I                | die **I** -Taste                   |
-| Key \_ O                | **O** -Taste                   |
-| Key \_ P                | **P** -Taste                   |
-| Schlüssel \_ leftklammer      | der **\[** Schlüssel                  |
-| Key \_ rightklammer     | der **\]** Schlüssel                  |
+| Key \_ Escape           | **ESC-TASTE**                 |
+| Taste \_ F1               | **F1-TASTE**                  |
+| Taste \_ F2               | **F2-TASTE**                  |
+| Taste \_ F3               | **F3-TASTE**                  |
+| Taste \_ F4               | **F4-TASTE**                  |
+| Taste \_ F5               | **F5-TASTE**                  |
+| Taste \_ F6               | **F6-TASTE**                  |
+| Taste \_ F7               | **F7-TASTE**                  |
+| Taste \_ F8               | **F8-TASTE**                  |
+| Taste \_ F9               | **F9-TASTE**                  |
+| Taste \_ F10              | **F10-TASTE**                 |
+| Taste \_ F11              | **F11-TASTE**                 |
+| Taste \_ F12              | **F12-TASTE**                 |
+| \_SysReq-Schlüssel           | **SysReq-Schlüssel**              |
+| Key \_ ScrollLock       | **ScrollLock-Taste**          |
+| Key \_ Break            | Die **Break-TASTE**               |
+| Schlüssel \_ linksApostrophe   | den **\`** Schlüssel                  |
+| Schlüssel \_ 1                | **1-Taste**                   |
+| Schlüssel \_ 2                | die **2-Taste**                   |
+| Schlüssel \_ 3                | die **3-Taste**                   |
+| Schlüssel \_ 4                | die **4-Taste**                   |
+| Schlüssel \_ 5                | die **5-Taste**                   |
+| Schlüssel \_ 6                | die **6-Taste**                   |
+| Schlüssel \_ 7                | die **7-Taste**                   |
+| Schlüssel \_ 8                | 8 **Schlüssel**                   |
+| Schlüssel \_ 9                | die **9-Taste**                   |
+| Schlüssel \_ 0                | **0-Taste**                   |
+| Schlüssel \_ bindestrich           | den **-** Schlüssel                   |
+| \_Schlüsselgleichheit           | den **=** Schlüssel                   |
+| Key \_ Backspace        | Die **Rücktaste**           |
+| \_Schlüsseleinfügung           | **Ins-Taste**                 |
+| Key \_ Home             | Den **Schlüssel "Home"**                |
+| Key \_ PageUp           | **PageUp-Schlüssel**              |
+| Key \_ NumLock          | **NumLock-Taste**             |
+| KeyPad \_ Divide        | Die **/** Taste auf der Tastatur     |
+| Multiplizieren des \_ KeyPads      | Die **\*** Taste auf der Tastatur    |
+| KeyPad \_ Minus         | Die **-** Taste auf der Tastatur     |
+| Registerkarte \_ "Schlüssel"              | **TAB-TASTE**                 |
+| Schlüssel \_ Q                | **Q-Taste**                   |
+| Schlüssel \_ W                | **W-Taste**                   |
+| Schlüssel \_ E                | **E-Taste**                   |
+| Schlüssel \_ R                | **R-Taste**                   |
+| Schlüssel \_ T                | **T-Taste**                   |
+| Schlüssel \_ Y                | **Y-Taste**                   |
+| Schlüssel \_ U                | **U-Taste**                   |
+| Schlüssel \_ I                | **I-Taste**                   |
+| Schlüssel \_ O                | **O-Schlüssel**                   |
+| Schlüssel \_ P                | **P-Taste**                   |
+| Key \_ LeftBracket      | der **\[** Schlüssel                  |
+| Key \_ RightBracket     | der **\]** Schlüssel                  |
 | Umgekehrter \_ Schrägstrich        | der **\\** Schlüssel                  |
-| Schlüssel \_ Löschen           | die  ENTF-Taste              |
-| Schlüssel \_ Ende              | die **endtaste**                 |
-| Schlüssel \_ PageDown         | die **PageDown** -Taste            |
-| Keypad \_ 7             | **7** -Taste auf der Tastatur     |
-| Tastatur \_ 8             | **8** -Taste auf der Tastatur     |
-| Keypad \_ 9             | **9** -Taste auf der Tastatur     |
-| Keypad \_ Plus          | der **+** Schlüssel auf der Tastatur     |
-| Schlüssel \_ A                | die **A** -Taste                   |
-| Schlüssel \_ S                | die **S** -Taste                   |
-| Schlüssel \_ D                | **D-** Taste                   |
-| Key \_ F                | **F** -Taste                   |
-| Key \_ G                | **G** -Taste                   |
-| Schlüssel \_ H                | **H** -Taste                   |
-| Schlüssel \_ J                | **J** -Taste                   |
-| Schlüssel \_ K                | **K** -Taste                   |
-| Schlüssel \_ L                | **L** -Taste                   |
-| Schlüssel \_ Semikolon        | die **Schlüssel**                   |
-| Schlüssel- \_ singleanführungs Zeichen      | der **Schlüssel**                   |
-| Schlüssel \_ Eingabe            | **Eingabe** Taste               |
-| Keypad \_ 4             | **4** -Taste auf der Tastatur     |
-| Keypad \_ 5             | **5** -Taste auf der Tastatur     |
-| Keypad \_ 6             | **6** -Taste auf der Tastatur     |
-| Schlüssel \_ LeftShift        | **linke UMSCHALT** Taste          |
-| Schlüssel \_ Z                | **Z** -Taste                   |
-| Schlüssel \_ X                | **X** -Taste                   |
-| Schlüssel \_ C                | **C** -Taste                   |
-| Schlüssel \_ V                | **V** -Taste                   |
-| Schlüssel \_ B                | **B** -Taste                   |
-| Schlüssel \_ N                | **N** -Taste                   |
-| Schlüssel \_ M                | **M** -Taste                   |
-| Schlüssel \_ Komma            | **,** Schlüssel                   |
-| Schlüssel \_ Zeitraum           | die **.** Schlüssel                   |
-| Schlüssel \_ Schrägstrich            | der **/** Schlüssel                   |
-| Key- \_ RightShift       | **Rechte UMSCHALT** Taste         |
-| Schlüssel \_ aufwärts               | nach- **oben** -Taste                  |
-| Keypad \_ 1             | **1** -Taste auf der Tastatur     |
-| Tastatur \_ 2             | **2** -Taste auf der Tastatur     |
-| Keypad \_ 3             | **3** -Taste auf der Tastatur     |
-| Tastatur \_ EINGABETASTE         | **Eingabe** Taste auf der Tastatur |
-| Schlüssel \_ leftctrl         | **linke STRG** -Taste           |
-| Key \_ leftwindows      | **linke Windows** -Taste        |
-| Key \_ LeftAlt          | **linke alt** -Taste            |
-| Schlüssel \_ Bereich            | die **LEERTASTE**               |
-| Key \_ rightalt         | die **Rechte alt** -Taste           |
-| Key \_ rightwindows     | die **Rechte Windows** -Taste       |
-| Schlüssel \_ Rechts STRG        | die **Rechte STRG** -Taste          |
-| Schlüssel \_ Anwendung      | **Anwendungs** Schlüssel         |
-| Schlüssel \_ Links             | die **linke** Taste                |
-| Taste \_ unten             | **nach-unten** -Taste                |
-| Schlüssel \_ Rechts            | **rechter** Schlüssel               |
-| Keypad \_ 0             | **0** -Taste auf der Tastatur     |
-| Keypad- \_ decimalpoint  | die **.** Schlüssel auf der Tastatur     |
+| \_Schlüssellöschung           | Der **Löschschlüssel**              |
+| \_Schlüsselende              | **Der Endschlüssel**                 |
+| Key \_ PageDown         | **PageDown-Taste**            |
+| KeyPad \_ 7             | die **7-Taste** auf der Tastatur     |
+| KeyPad \_ 8             | die **8-Taste** auf der Tastatur     |
+| KeyPad \_ 9             | Die **9-Taste** auf der Tastatur     |
+| KeyPad \_ Plus          | **+** die Taste auf der Tastatur     |
+| Schlüssel \_ A                | **A-Schlüssel**                   |
+| Schlüssel \_ S                | **S-Taste**                   |
+| Schlüssel \_ D                | **D-Taste**                   |
+| Taste \_ F                | **F-TASTE**                   |
+| Schlüssel \_ G                | **G-Taste**                   |
+| Schlüssel \_ H                | **H-Taste**                   |
+| Schlüssel \_ J                | **J-Schlüssel**                   |
+| Schlüssel \_ K                | **K-Taste**                   |
+| Schlüssel \_ L                | **L-Taste**                   |
+| \_Schlüssel-Semikolon        | der **Schlüssel ;**                   |
+| Key \_ SingleQuote      | Schlüssel **""**                   |
+| \_EINGABETASTE            | **Die EINGABETASTE**               |
+| KeyPad \_ 4             | die **4-Taste** auf der Tastatur     |
+| KeyPad \_ 5             | **die 5-Taste** auf der Tastatur     |
+| KeyPad \_ 6             | **6-Taste** auf der Tastatur     |
+| Key \_ LeftShift        | **Umschalttaste nach links**          |
+| Schlüssel \_ Z                | **Z-Taste**                   |
+| Schlüssel \_ X                | **X-Taste**                   |
+| Schlüssel \_ C                | **C-Taste**                   |
+| Schlüssel \_ V                | der **V-Schlüssel**                   |
+| Schlüssel \_ B                | **B-Taste**                   |
+| Schlüssel \_ N                | **N-Taste**                   |
+| Schlüssel \_ M                | **M-Taste**                   |
+| \_Schlüssel-Komma            | der **Schlüssel ,**                   |
+| \_Schlüsselzeitraum           | die **.** key                   |
+| Schrägstrich \_ (Key Slash)            | der **/** Schlüssel                   |
+| Key \_ RightShift       | **DIE UMSCHALTTASTE NACH RECHTS**         |
+| Key \_ Up               | **Up-Taste**                  |
+| KeyPad \_ 1             | **1** Taste auf der Tastatur     |
+| KeyPad \_ 2             | die **2-Taste** auf der Tastatur     |
+| KeyPad \_ 3             | die **3-Taste** auf der Tastatur     |
+| \_KeyPad-EINGABETASTE         | **Die EINGABETASTE** auf der Tastatur |
+| Key \_ LeftCtrl         | **DIE LINKE STRG-TASTE**           |
+| Key \_ LeftWindows      | Die **linke Windows**        |
+| Key \_ LeftAlt          | DIE **LINKE ALT-TASTE**            |
+| \_Schlüsselbereich            | Der **Schlüssel "Space"**               |
+| Key \_ RightAlt         | DIE **RECHTE ALT-TASTE**           |
+| Key \_ RightWindows     | Rechter **Windows**       |
+| Key \_ RightCtrl        | DIE **RECHTE STRG-TASTE**          |
+| \_Schlüsselanwendung      | **Anwendungsschlüssel**         |
+| Schlüssel \_ links             | Die **linke** Taste                |
+| Key \_ Down             | DIE **TASTE "NACH UNTEN"**                |
+| \_Schlüsselrecht            | Der **richtige** Schlüssel               |
+| KeyPad \_ 0             | Die **0-Taste** auf der Tastatur     |
+| KeyPad \_ DecimalPoint  | die **.** Taste auf der Tastatur     |
 
 
 
- 
+ 
 
 ## <a name="key-modifiers"></a>Schlüsselmodifizierer
 
-Die folgende Liste enthält die gültigen schlüsselmodifiziererzeichenfolgen. 
+In der folgenden Liste sind die gültigen Schlüsselmodifiziererzeichenfolgen aufgeführt. 
 
-| Schlüsselmodifizierer Zeichenfolge | Bedeutung                                                                                       |
+| Schlüsselmodifiziererzeichenfolge | Bedeutung                                                                                       |
 |---------------------|-----------------------------------------------------------------------------------------------|
-| DOWN                | Senden Sie einen Schlüssel gesteuerten Code für den folgenden Schlüssel Bezeichner, ohne einen Schlüssel freigegebenen Code zu senden. |
-| UP                  | Senden Sie einen Schlüssel freigegebenen Code für den folgenden Schlüssel Bezeichner.                                    |
-| HOLD                | Halten Sie 200 Millisekunden an, bevor Sie die Verarbeitung der restlichen Schlüssel Sequenz Zeichenfolge fortsetzen. |
+| DOWN                | Senden Sie einen durch die Taste gedrückten Code für den folgenden Schlüsselbezeichner, ohne einen von der Taste freigegebenen Code zu senden. |
+| UP                  | Senden Sie einen schlüsselverknickten Code für den folgenden Schlüsselbezeichner.                                    |
+| HOLD                | Halten Sie 200 Millisekunden an, bevor Sie den Rest der Schlüsselsequenzzeichenfolge verarbeiten. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Ivmkeyboard**](ivmkeyboard.md)
+[**IVMKeyboard**](ivmkeyboard.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: komplexer TaskType-Typ (Taskplaner)
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das Task-Element.
+title: taskType Complex Type (Taskplaner)
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das Task-Element.
 ms.assetid: 622b2bf4-c7e0-403c-bd6c-99b687c1d439
 keywords:
-- komplexer TaskType-Typ Taskplaner
+- komplexer taskType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0e86174920c28614f6c871e3f0bb0bc322243009
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9e2465773fb784c87fe560bdc8f6306771578cb22cf9aa26bf79b84867deb61b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118611057"
 ---
-# <a name="tasktype-complex-type"></a>komplexer TaskType-Typ
+# <a name="tasktype-complex-type"></a>komplexer taskType-Typ
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das [**Task**](taskschedulerschema-task-element.md) -Element.
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das [**Task-Element.**](taskschedulerschema-task-element.md)
 
 ``` syntax
 <xs:complexType name="taskType">
@@ -63,14 +63,14 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 
 
-| Element                                                                           | type                                                                                 | BESCHREIBUNG                                                                                                                         |
+| Element                                                                           | type                                                                                 | Beschreibung                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aktionen**](taskschedulerschema-actions-tasktype-element.md)                   | [**Aktions sType**](taskschedulerschema-actionstype-complextype.md)                   | Gibt die Aktionen an, die vom Task ausgeführt werden.<br/>                                                                             |
-| [**Daten**](taskschedulerschema-data-tasktype-element.md)                         | [**Datentyp**](taskschedulerschema-datatype-complextype.md)                         | Gibt zusätzliche Daten an, die dem Task zugeordnet sind, wird aber vom Taskplaner-Dienst anderweitig nicht verwendet.<br/>         |
-| [**Principals**](taskschedulerschema-principals-tasktype-element.md)             | [**principalstype**](taskschedulerschema-principalstype-complextype.md)             | Gibt die Sicherheits Kontexte an, die verwendet werden können, um den Task auszuführen.<br/>                                                        |
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen zum Task an, z. b. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert ist.<br/> |
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md)                 | [**settingstype**](taskschedulerschema-settingstype-complextype.md)                 | Gibt die Einstellungen an, die vom Taskplaner zum Ausführen der Aufgabe verwendet werden.<br/>                                                 |
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md)                 | [**triggerstype**](taskschedulerschema-triggerstype-complextype.md)                 | Gibt die Trigger an, die den Task starten.<br/>                                                                              |
+| [**Aktionen**](taskschedulerschema-actions-tasktype-element.md)                   | [**actionsType**](taskschedulerschema-actionstype-complextype.md)                   | Gibt die aktionen an, die von der Aufgabe ausgeführt werden.<br/>                                                                             |
+| [**Daten**](taskschedulerschema-data-tasktype-element.md)                         | [**Datatype**](taskschedulerschema-datatype-complextype.md)                         | Gibt Additionsdaten an, die der Aufgabe zugeordnet sind, aber andernfalls vom Taskplaner werden.<br/>         |
+| [**Principals**](taskschedulerschema-principals-tasktype-element.md)             | [**principalsType**](taskschedulerschema-principalstype-complextype.md)             | Gibt die Sicherheitskontexte an, die zum Ausführen der Aufgabe verwendet werden können.<br/>                                                        |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt Administratorinformationen zum Task an, z. B. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert wird.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md)                 | [**settingsType**](taskschedulerschema-settingstype-complextype.md)                 | Gibt die Einstellungen an, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/>                                                 |
+| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md)                 | [**triggersType**](taskschedulerschema-triggerstype-complextype.md)                 | Gibt die Trigger an, die die Aufgabe starten.<br/>                                                                              |
 
 
 
@@ -80,7 +80,7 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 | Name    | type                                                              | BESCHREIBUNG                                   |
 |---------|-------------------------------------------------------------------|-----------------------------------------------|
-| version | [**versiontype**](taskschedulerschema-versiontype-simpletype.md) | Gibt die Version der Aufgabe an.<br/> |
+| version | [**versionType**](taskschedulerschema-versiontype-simpletype.md) | Gibt die Version der Aufgabe an.<br/> |
 
 
 
@@ -90,16 +90,16 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

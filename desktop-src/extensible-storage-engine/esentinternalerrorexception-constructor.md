@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentinternalerrorexception-Konstruktor'
-title: Esentinternalerrorexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInternalErrorException-Konstruktor'
+title: EsentInternalErrorException-Konstruktor
 TOCTitle: 'EsentInternalErrorException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInternalErrorException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinternalerrorexception.esentinternalerrorexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 32b55686e510735dc456e6116e55d01897712ee7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2140c6357b92816977ad8a562e76c3a3f7f53abd578a88ad07eb1b2eed5f5be2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118267155"
 ---
-# <a name="esentinternalerrorexception-constructor"></a>Esentinternalerrorexception-Konstruktor
+# <a name="esentinternalerrorexception-constructor"></a>EsentInternalErrorException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinternalerrorexception-Klasse.
+Initialisiert eine neue Instanz der EsentInternalErrorException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentInternalErrorException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentinternalerrorexception-Klasse](./esentinternalerrorexception-class.md)
+[EsentInternalErrorException-Klasse](./esentinternalerrorexception-class.md)
 
-[Esentinternalerrorexception-Member](./esentinternalerrorexception-members.md)
+[EsentInternalErrorException-Member](./esentinternalerrorexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

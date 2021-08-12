@@ -4,52 +4,52 @@ ms.assetid: vs|directx_sdk|~\d3d10_shader.htm
 title: D3D10_SHADER Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f16480e2aceada7f5ed05912eca59cc88886ac9b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2e965c050d3643e80b493875b27ba5a9b774b351487e191584f40297819758f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118303523"
 ---
-# <a name="d3d10_shader-constants"></a>D3d10- \_ Shader-Konstanten
+# <a name="d3d10_shader-constants"></a>\_D3D10-SHADER-Konstanten
 
 HLSL-Kompilierungsoptionen.
 
 
 
-| \#definieren                                        | BESCHREIBUNG                                                                                                                                                                                                                                    |
+| \#Definieren                                        | Beschreibung                                                                                                                                                                                                                                    |
 |-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3d10- \_ Shader \_ Vermeidung der \_ Fluss \_ Steuerung             | Weisen Sie den Compiler an, die Fluss Steuerung nicht zuzulassen (sofern möglich).                                                                                                                                                                                       |
-| D3d10- \_ Shader \_ Debuggen                            | Fügt Debugdatei/Zeilen-/Typ-/Symbolinformationen ein.                                                                                                                                                                                                |
-| D3d10- \_ Shader " \_ \_ strictness" aktivieren               | Standardmäßig deaktiviert der HLSL-Compiler die strenge in der veralteten Syntax. Wenn Sie dieses Flag angeben, wird eine strenge ermöglicht, die möglicherweise keine Legacy Syntax zulässt.                                                                                         |
-| D3d10- \_ Shader-abwärts \_ \_ \_ Kompatibilität aktivieren | Dadurch können ältere Shader in 4- \_ 0-Ziele kompilieren.                                                                                                                                                                                         |
-| D3d10 \_ Shader \_ Force \_ vs \_ Software \_ No \_ Opt     | Kompilieren Sie einen Vertex-Shader für das nächsthöhere Shader-Profil. Mit dieser Option wird das Debugging aktiviert (und Optimierungen deaktiviert).                                                                                                                           |
-| D3d10 \_ Shader \_ Force \_ PS \_ Software \_ No \_ Opt     | Kompilieren Sie einen PixelShader für das nächste höchste Shader-Profil. Mit dieser Option wird das Debugging aktiviert (und Optimierungen deaktiviert).                                                                                                                            |
-| D3d10 \_ Shader \_ IEEE \_ strictness                 | Aktiviert IEEE-strenge.                                                                                                                                                                                                                       |
-| D3d10- \_ Shader \_ kein \_ preshader                    | Deaktiviert preshaders. Die Verwendung dieses Flags bewirkt, dass der Compiler keinen statischen Ausdruck für die Auswertung abruft.                                                                                                                                 |
-| D3d10- \_ \_ shaderoptimierung \_ LEVEL0             | Niedrigste Optimierungs Ebene. Erzeugt möglicherweise langsameren Code, führt dies jedoch schneller aus. Dies kann bei einem hochgradig iterativen shaderentwicklungsprozess nützlich sein.                                                                                             |
-| D3d10- \_ \_ shaderoptimierung \_ Level1             | Die zweite niedrigste Optimierungs Ebene.                                                                                                                                                                                                              |
-| D3d10- \_ \_ shaderoptimierung \_ Level2             | Die zweithöchste Optimierungs Ebene.                                                                                                                                                                                                             |
-| D3d10- \_ \_ shaderoptimierung \_ LEVEL3             | Höchste Optimierungs Ebene. Erzeugt einen bestmöglichen Code, kann aber erheblich länger dauern. Dies ist nützlich für endgültige Builds einer Anwendung, bei der die Leistung der wichtigste Faktor ist.                                 |
-| D3d10 \_ Shader \_ Pack \_ Matrix \_ Zeile \_ Haupt         | Sofern nicht explizit angegeben, werden Matrizen in der Reihenfolge der Zeilen in der Reihenfolge der Eingaben und Ausgaben des Shaders verpackt.                                                                                                                                   |
-| D3d10 \_ Shader \_ Pack \_ Matrix \_ Spalte \_ Major      | Wenn die Matrizen nicht explizit angegeben werden, werden Sie in der Spalte in der Reihenfolge der Eingabe und Ausgabe des Shaders verpackt. Dies ist in der Regel effizienter, da Sie die Multiplikation von Vektor Matrizen mithilfe einer Reihe von Punkt Produkten ermöglicht. |
-| Teil Genauigkeit der d3d10- \_ Shader \_ \_               | Erzwingen, dass alle Berechnungen mit teilweiser Genauigkeit durchgeführt werden. Dies kann auf Hardware möglicherweise schneller ausgeführt werden.                                                                                                                                                |
-| D3d10- \_ Shader \_ bevorzugt \_ Fluss \_ Steuerung            | Weisen Sie den Compiler an, die Fluss Steuerung (sofern möglich) zu verwenden.                                                                                                                                                                                             |
-| D3d10 \_ Shader \_ Skip- \_ Optimierung               | Optimierung während der Codegenerierung überspringen; wird im Allgemeinen nur für Debuggen empfohlen.                                                                                                                                                                |
-| D3d10 \_ Shader-über \_ Prüfung überspringen \_                 | Validieren Sie den generierten Code nicht mit bekannten Funktionen und Einschränkungen. Verwenden Sie dies nur für Shader, die in der Vergangenheit erfolgreich kompiliert wurden. Shader werden immer von DirectX überprüft, bevor Sie auf das Gerät festgelegt werden.         |
-| D3d10- \_ Shader- \_ Warnungen \_ sind \_ Fehler            | Informieren Sie den HLSL-Compiler, dass beim Kompilieren des Shader-Codes alle Warnungen als Fehler behandelt werden. Für neuen Shader-Code sollten Sie diese Option verwenden, um alle Warnungen zu beheben und möglichst wenige schwer zu suchende Code Fehler zu ermitteln.             |
+| D3D10-SHADER \_ VERMEIDEN \_ DER \_ \_ FLUSSSTEUERUNG             | Teilen Sie dem Compiler mit, dass die Flusssteuerung (wenn möglich) nicht zulässig ist.                                                                                                                                                                                       |
+| D3D10 \_ SHADER \_ DEBUG                            | Fügen Sie Debugdatei-/Zeilen-/Typ-/Symbolinformationen ein.                                                                                                                                                                                                |
+| D3D10 \_ SHADER ENABLE STRICTNESS (D3D10-SHADER \_ AKTIVIEREN DER \_ STRENGE)               | Standardmäßig deaktiviert der HLSL-Compiler die Strenge der veralteten Syntax. Die Angabe dieses Flags ermöglicht Strenge, die möglicherweise keine Legacysyntax zu lässt.                                                                                         |
+| D3D10-SHADER \_ \_ AKTIVIEREN DER \_ \_ ABWÄRTSKOMPATIBILITÄT | Dadurch können ältere Shader auf 4 \_ 0 Ziele kompiliert werden.                                                                                                                                                                                         |
+| D3D10 \_ SHADER \_ FORCE \_ VS \_ SOFTWARE \_ NO \_ OPT     | Kompilieren Sie einen Vertex-Shader für das höchste Shaderprofil. Mit dieser Option wird das Debuggen aktiviert (und Optimierungen deaktiviert).                                                                                                                           |
+| D3D10 \_ SHADER \_ FORCE \_ PS \_ SOFTWARE \_ NO \_ OPT     | Kompilieren Sie einen Pixel-Shader für das höchste Shaderprofil. Mit dieser Option wird das Debuggen aktiviert (und Optimierungen deaktiviert).                                                                                                                            |
+| IEEE STRICTNESS DES \_ D3D10-SHADERS \_ \_                 | Aktiviert IEEE-Strenge.                                                                                                                                                                                                                       |
+| D3D10-SHADER \_ \_ KEIN \_ PRESHADER                    | Deaktiviert Preshaders. Wenn Sie dieses Flag verwenden, wird der Compiler keinen statischen Ausdruck zur Auswertung herausziehen.                                                                                                                                 |
+| D3D10 \_ SHADER \_ OPTIMIZATION \_ LEVEL0             | Niedrigste Optimierungsstufe. Kann langsameren Code erzeugen, wird dies aber schneller tun. Dies kann in einem hochgradig iterativen Shader-Entwicklungszyklus nützlich sein.                                                                                             |
+| D3D10 \_ SHADER \_ OPTIMIZATION \_ LEVEL1             | Die zweit niedrigste Optimierungsstufe.                                                                                                                                                                                                              |
+| D3D10 \_ SHADER \_ OPTIMIZATION \_ LEVEL2             | Die zweit höchste Optimierungsstufe.                                                                                                                                                                                                             |
+| D3D10 \_ SHADER \_ OPTIMIZATION \_ LEVEL3             | Höchste Optimierungsstufe. Erzeugt den bestmöglichen Code, kann aber deutlich länger dauern. Dies ist nützlich für endgültige Builds einer Anwendung, bei denen die Leistung der wichtigste Faktor ist.                                 |
+| D3D10 \_ SHADER \_ PACK \_ MATRIX \_ ROW \_ MAJOR         | Sofern nicht explizit angegeben, werden Matrizen in Zeilen-Hauptreihen-Reihenfolge für die Eingabe und Ausgabe des Shaders gepackt.                                                                                                                                   |
+| D3D10 \_ SHADER \_ PACK \_ MATRIX \_ COLUMN \_ MAJOR      | Sofern nicht explizit angegeben, werden Matrizen in Spaltenmatrizen nach Eingabe und Ausgabe des Shaders gepackt. Dies ist im Allgemeinen effizienter, da sie die Vektormatrixmultiplikation mit einer Reihe von Punktprodukten ermöglicht. |
+| TEILGENAUIGKEIT DES \_ D3D10-SHADERS \_ \_               | Erzwingen, dass alle Berechnungen mit teilweiser Genauigkeit durchgeführt werden; dies kann auf einigen Hardwarekomponenten schneller ausgeführt werden.                                                                                                                                                |
+| D3D10-SHADER \_ \_ BEVORZUGEN \_ \_ FLUSSSTEUERUNG            | Informieren Sie den Compiler, die Flusssteuerung zu verwenden (wenn möglich).                                                                                                                                                                                             |
+| D3D10 \_ SHADER \_ SKIP \_ OPTIMIZATION               | Überspringen der Optimierung während der Codegenerierung; wird im Allgemeinen nur für das Debuggen empfohlen.                                                                                                                                                                |
+| D3D10-SHADER \_ – \_ ÜBERPRÜFUNG \_ ÜBERSPRINGEN                 | Überprüfen Sie den generierten Code nicht anhand bekannter Funktionen und Einschränkungen. Verwenden Sie dies nur mit Shadern, die in der Vergangenheit erfolgreich kompiliert wurden. Shader werden immer von DirectX überprüft, bevor sie auf das Gerät festgelegt werden.         |
+| \_D3D10-SHADERWARNUNGEN \_ \_ SIND \_ FEHLER            | Informieren Sie den HLSL-Compiler, alle Warnungen beim Kompilieren des Shadercodes als Fehler zu behandeln. Für neuen Shadercode sollten Sie diese Option verwenden, um alle Warnungen aufzulösen und so sicherzustellen, dass möglichst wenig schwer zu findende Codefehler angezeigt werden.             |
 
 
 
  
 
-Diese Konstanten werden in d3d10shader. h als Makros definiert.
+Diese Konstanten werden in d3d10shader.h als Makros definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shaderkonstanten](d3d10-graphics-reference-d3d10-shader-constants.md)
+[Shaderkonst constants (Shaderkonst constants)](d3d10-graphics-reference-d3d10-shader-constants.md)
 </dt> </dl>
 
  

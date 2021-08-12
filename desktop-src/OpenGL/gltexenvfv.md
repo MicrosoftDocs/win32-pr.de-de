@@ -1,9 +1,9 @@
 ---
-title: gltexenvfv-Funktion (GL. h)
-description: Die gltexenvfv-Funktion legt einen Texture-Umgebungsparameter fest.
+title: glTexEnvfv-Funktion (Gl.h)
+description: Die glTexEnvfv-Funktion legt einen Texturumgebungsparameter fest.
 ms.assetid: 7b8e65aa-1b5c-47ab-8d6c-df14c90075a8
 keywords:
-- gltexenvfv-Funktion OpenGL
+- glTexEnvfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 52a2b74025deee08d2d895af0012e85e19ac269b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ae06746d00584cb6df6aa06c434115d1b53daab680e7f6cad8b4f12c78dba91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118613536"
 ---
-# <a name="gltexenvfv-function"></a>gltexenvfv-Funktion
+# <a name="gltexenvfv-function"></a>glTexEnvfv-Funktion
 
-Die **gltexenvfv** -Funktion legt einen Texture-Umgebungsparameter fest.
+Die **glTexEnvfv-Funktion** legt einen Texturumgebungsparameter fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ void WINAPI glTexEnvfv(
 *Ziel* 
 </dt> <dd>
 
-Eine Textur Umgebung. Muss "GL \_ Texture" sein \_ .
+Eine Texturumgebung. Muss GL \_ TEXTURE \_ ENV sein.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der symbolische Name eines einwertigen Textur Umgebungs Parameters. Akzeptierte Werte sind der \_ GL \_ -Textur env \_ -Modus und die GL- \_ Textur \_ env- \_ Farbe.
+Der symbolische Name eines Umgebungsparameters für eine einwertige Textur. Akzeptierte Werte sind GL \_ TEXTURE \_ ENV \_ MODE und GL TEXTURE \_ \_ ENV \_ COLOR.
 
 </dd> <dt>
 
@@ -69,33 +69,33 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *target* oder *PName* war keiner der akzeptierten definierten Werte, oder wenn Parameter einen definierten Konstanten Wert *aufweisen sollten (* basierend auf dem Wert von *PName*), und nicht.<br/> |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                                             |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* oder *pname* war keiner der akzeptierten definierten Werte, oder wenn *params* einen definierten konstanten Wert aufweisen sollten (basierend auf dem Wert von *pname*) und nicht.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                                             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Textur Umgebung gibt an, wie Textur Werte interpretiert werden, wenn ein Fragment strukturiert ist. Der *Ziel* Parameter muss "GL \_ Texture" sein \_ . Der *PName* -Parameter kann entweder der GL- \_ Textur \_ env- \_ Modus oder die GL- \_ Textur \_ env- \_ Farbe sein.
+Eine Texturumgebung gibt an, wie Texturwerte interpretiert werden, wenn ein Fragment texturiert wird. Der *Zielparameter* muss GL \_ TEXTURE \_ ENV sein. Der *Parameter pname* kann entweder GL \_ TEXTURE \_ ENV \_ MODE oder GL TEXTURE \_ \_ ENV \_ COLOR sein.
 
-Wenn *PName* den GL- \_ Textur \_ env- \_ Modus  hat, ist der symbolische Name einer Textur Funktion (oder verweist auf diesen). Drei Textur Funktionen sind definiert: GL \_ Modulate, GL \_ Decal und GL \_ Blend.
+Wenn *pname* gl \_ TEXTURE \_ ENV MODE ist, ist \_ *params* (oder zeigt auf) den symbolischen Namen einer Texturfunktion. Es werden drei Texturfunktionen definiert: GL \_ MODULATE, GL \_ DECAL und GL \_ BLEND.
 
-Eine Textur Funktion wird für das Fragment verwendet, das mit dem Textur bildrwert, der für das Fragment gilt (siehe [**gltexparameter**](gltexparameter-functions.md)), strukturiert werden soll, und erzeugt eine RGBA-Farbe für dieses Fragment. In der folgenden Tabelle wird gezeigt, wie die RGBA-Farbe für jede der drei Textur Funktionen erstellt wird, die ausgewählt werden können. *C* ist ein dreifaches von Farbwerten (RGB), und *ein* ist der zugeordnete Alphawert. Aus einem Textur Bild extrahierte RGBA-Werte liegen im Bereich von \[ 0, 1 \] . Der Index " *f* " bezieht sich auf das eingehende Fragment, *das für das* Textur Bild, den Index " *c* " für die Textur Umgebungs Farbe und "Index *v* " einen Wert, der von der Textur Funktion erzeugt wird.
+Eine Texturfunktion wirkt auf das Fragment, das mithilfe des Texturbildwerts texturiert werden soll, der für das Fragment gilt (siehe [**glTexParameter)**](gltexparameter-functions.md)und erzeugt eine RGBA-Farbe für dieses Fragment. Die folgende Tabelle zeigt, wie die RGBA-Farbe für jede der drei Texturfunktionen erzeugt wird, die ausgewählt werden können. *C* ist ein Dreifaches von Farbwerten (RGB), und *A* ist der zugeordnete Alphawert. RGBA-Werte, die aus einem Texturbild extrahiert werden, liegen im Bereich \[ von 0, \] 1. Der *Tiefgestellte f* bezieht sich auf das eingehende Fragment, den Index *t* für das Texturbild, das Tiefskript *c* auf die Texturumgebungsfarbe und subscript *v* gibt einen von der Texturfunktion erzeugten Wert an.
 
-Ein Textur Bild kann bis zu vier Komponenten pro Textur Element aufweisen (siehe [**glTexImage1D**](glteximage1d.md) und [**glTexImage2D**](glteximage2d.md)). In einem einkomponentenbild gibt lt diese einzelne Komponente an. Ein Image mit zwei Komponenten verwendet *L?*  und *A?* . Ein Image mit drei Komponenten hat nur einen Farbwert, *C?* . Ein Image mit vier Komponenten hat beide den Farbwert *C?*  und ein Alpha Wert *A?* .
+Ein Texturbild kann bis zu vier Komponenten pro Texturelement enthalten (siehe [**glTexImage1D**](glteximage1d.md) und [**glTexImage2D**](glteximage2d.md)). In einem Einkomponentenimage gibt Lt diese einzelne Komponente an. Ein Bild mit zwei Komponenten verwendet *L?*  und *A?* . Ein Bild mit drei Komponenten hat nur einen Farbwert, *C?* . Ein Bild mit vier Komponenten verfügt über einen Farbwert *C?*  und einen Alphawert *A?* .
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Anzahl von Komponenten</th>
+<th>Anzahl der Komponenten</th>
 <th>GL_MODULATE</th>
 <th>GL_DECAL</th>
 <th>GL_BLEND</th>
@@ -103,12 +103,12 @@ Ein Textur Bild kann bis zu vier Komponenten pro Textur Element aufweisen (siehe
 </thead>
 <tbody>
 <tr class="odd">
-<td rowspan="2">1 $ {Remove} $<br />
+<td rowspan="2">1${REMOVE}$<br />
 </td>
 <td><em>C<sub>v</sub> </em>  =  <em>L?</em> <em>C<sub>f</sub></em></td>
-<td rowspan="2">nicht definiertes $ {Remove} $<br />
+<td rowspan="2">undefined${REMOVE}$<br />
 </td>
-<td><em>C<sub>v</sub> </em>  =  <em>(1</em> - <em>L?</em> <em>) C<sub>f</sub> </em> + <em>L?</em> <em>C<sub>c</sub></em></td>
+<td><em>C<sub>v</sub> </em>  =  <em>(1</em> - <em>L?</em> <em>)C<sub>f</sub> </em> + <em>L?</em> <em>C<sub>c</sub></em></td>
 </tr>
 <tr class="even">
 <td><em>A<sub>v</sub> </em>  =  <em>A<sub>f</sub> </em></td>
@@ -117,25 +117,25 @@ Ein Textur Bild kann bis zu vier Komponenten pro Textur Element aufweisen (siehe
 
 </tr>
 <tr class="odd">
-<td rowspan="2">2 $ {Remove} $<br />
+<td rowspan="2">2${REMOVE}$<br />
 </td>
 <td><em>C<sub>v</sub> </em>  =  <em>L?</em> <em>C<sub>f</sub></em></td>
-<td rowspan="2">nicht definiertes $ {Remove} $<br />
+<td rowspan="2">undefined${REMOVE}$<br />
 </td>
-<td><em>C<sub>v</sub> </em>  =  <em>(1</em> - <em>L?</em> <em>) C<sub>f</sub> </em> + <em>L?</em> <em>C<sub>c</sub></em></td>
+<td><em>C<sub>v</sub> </em>  =  <em>(1</em> - <em>L?</em> <em>)C<sub>f</sub> </em> + <em>L?</em> <em>C<sub>c</sub></em></td>
 </tr>
 <tr class="even">
-<td><em>A</em> <em><sub>v</sub></em>   =  <em>a<sub>f</sub> </em></td>
+<td><em>A</em> <em><sub>v</sub></em>   =  <em>A<sub>f</sub> </em></td>
 <td><em>A<sub>v</sub> </em>  =  <em>A<sub>f</sub> </em></td>
 
 
 </tr>
 <tr class="odd">
-<td rowspan="2">3 $ {Remove} $<br />
+<td rowspan="2">3${REMOVE}$<br />
 </td>
 <td><em>C<sub>v</sub> </em>  =  <em>C?</em> <em>C<sub>f</sub></em></td>
 <td><em>C<sub>v</sub> </em>  =  <em>C?</em></td>
-<td rowspan="2">nicht definiertes $ {Remove} $<br />
+<td rowspan="2">undefined${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -145,11 +145,11 @@ Ein Textur Bild kann bis zu vier Komponenten pro Textur Element aufweisen (siehe
 
 </tr>
 <tr class="odd">
-<td rowspan="2">4 $ {Remove} $<br />
+<td rowspan="2">4${REMOVE}$<br />
 </td>
 <td><em>C<sub>v</sub> </em>  =  <em>C?</em> <em>C<sub>f</sub></em></td>
-<td><em>C<sub>v</sub> </em> = (1- <em>A?</em> <em>) C<sub>f</sub> </em> + <em>A?</em> <em>Scher?</em></td>
-<td rowspan="2">nicht definiertes $ {Remove} $<br />
+<td><em>C<sub>v</sub> </em> = (1 - <em>A?</em> <em>)C<sub>f</sub> </em> + <em>A?</em> <em>C?</em></td>
+<td rowspan="2">undefined${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -165,13 +165,13 @@ Ein Textur Bild kann bis zu vier Komponenten pro Textur Element aufweisen (siehe
 
  
 
-Wenn pName eine GL- \_ Textur \_ env-Farbe ist \_ , ist *params* ein Zeiger auf ein Array, das eine aus vier Werten bestehenden RGBA-Farbe enthält. Ganzzahlige Farbkomponenten werden linear interpretiert, sodass die positive ganze Zahl 1,0 und die negativste Ganzzahl "-1,0" zugeordnet wird. Die Werte werden an den Bereich \[ 0, 1 gebunden, \] Wenn Sie angegeben werden. *C <sub>c</sub>* übernimmt diese vier Werte.
+Wenn pname GL \_ TEXTURE \_ ENV \_ COLOR ist, ist *params* ein Zeiger auf ein Array, das eine RGBA-Farbe enthält, die aus vier Werten besteht. Ganzzahlige Farbkomponenten werden linear interpretiert, sodass die positivste ganze Zahl 1,0 und die negativste ganze Zahl -1,0 zugeordnet wird. Die Werte werden an den Bereich \[ 0 und 1 klammern, \] wenn sie angegeben werden. *C <sub>c</sub>* nimmt diese vier Werte an.
 
-Der \_ GL \_ -Textur env \_ -Modus wird standardmäßig auf GL \_ modulate und \_ die Standardfarbe der GL-Textur \_ env \_ auf (0, 0, 0, 0) eingestellt.
+\_Der \_ GL TEXTURE-ENV-MODUS \_ ist standardmäßig auf GL \_ MODULATE und GL TEXTURE \_ \_ ENV \_ COLOR standardmäßig auf (0, 0, 0, 0) eingestellt.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **gltexenvfv** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glTexEnvfv ab:**
 
-[**gltexgetenvfv**](glgettexenvfv.md)
+[**glTexGetEnvfv**](glgettexenvfv.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -181,13 +181,13 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gltexenvfv** ab:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -203,7 +203,7 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gltexenvfv** ab:
 [**glTexImage2D**](glteximage2d.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

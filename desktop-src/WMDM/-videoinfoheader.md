@@ -1,9 +1,9 @@
 ---
-title: _VIDEOINFOHEADER Struktur
-description: Die \_ videoinfoheader-Struktur enthält Informationen zu einem Videostream und enthält eine \_ BITMAPINFOHEADER-Struktur, die das Format eines einzelnen Frames definiert.
+title: _VIDEOINFOHEADER-Struktur
+description: Die VIDEOINFOHEADER-Struktur enthält Informationen zu einem Videostream und eine \_ BITMAPINFOHEADER-Struktur, die das \_ Format eines einzelnen Frames definiert.
 ms.assetid: 5a39d66e-8dbc-4572-8370-14f722b6c906
 keywords:
-- _VIDEOINFOHEADER Struktur von Windows-Medien Device Manager
+- _VIDEOINFOHEADER Struktur von Windows Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5b389c5c82296e95ecfb3900518af4a2c7ddd7c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5b00c641f0fb9a9f68217de8a21a732b4b45a8e4417104be981ffd90161f7340
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118586800"
 ---
-# <a name="_videoinfoheader-structure"></a>\_Videoinfoheader-Struktur
+# <a name="_videoinfoheader-structure"></a>\_VIDEOINFOHEADER-Struktur
 
-Die **\_ videoinfoheader** -Struktur enthält Informationen zu einem Videostream und enthält eine **\_ BITMAPINFOHEADER** -Struktur, die das Format eines einzelnen Frames definiert.
+Die **\_ VIDEOINFOHEADER-Struktur** enthält Informationen zu einem Videostream und eine **\_ BITMAPINFOHEADER-Struktur,** die das Format eines einzelnen Frames definiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,42 +48,42 @@ typedef struct _tagVIDEOINFOHEADER {
 **rcSource**
 </dt> <dd>
 
-**Rect** -Struktur, die das Quellvideo Fenster angibt.
+**RECT-Struktur,** die das Quellvideofenster angibt.
 
 </dd> <dt>
 
-**rctarget**
+**rcTarget**
 </dt> <dd>
 
-**Rect** -Struktur, die das Ziel Videofenster angibt.
+**RECT-Struktur,** die das Zielvideofenster angibt.
 
 </dd> <dt>
 
-**dwbitrate**
+**dwBitRate**
 </dt> <dd>
 
-**DWORD** -Wert, der die ungefähre Datenrate des Videostreams in Bits pro Sekunde angibt.
+**DWORD-Wert,** der die ungefähre Datenrate des Videostreams in Bits pro Sekunde angibt.
 
 </dd> <dt>
 
-**dwbiterrorrate**
+**dwBitErrorRate**
 </dt> <dd>
 
-**DWORD** -Wert, der die Datenfehler Rate des Videostreams in Bitfehlern pro Sekunde angibt.
+**DWORD-Wert,** der die Datenfehlerrate des Videostreams in Bitfehlern pro Sekunde angibt.
 
 </dd> <dt>
 
-**Avgtimeperframe**
+**AvgTimePerFrame**
 </dt> <dd>
 
-**Verweis \_ Der Zeitwert** , der die durchschnittliche Anzeigezeit des Video Frames in 100-Nanosecond-Einheiten angibt.
+**REFERENZ \_ TIME-Wert,** der die durchschnittliche Anzeigezeit des Videoframes in Einheiten von 100 Nanosekunden angibt.
 
 </dd> <dt>
 
-**bmiheader**
+**bmiHeader**
 </dt> <dd>
 
-Win32- **\_ BITMAPINFOHEADER** -Struktur, die Farb-und Dimensions Informationen für die Video Bild-Bitmap enthält.
+Win32 **\_ BITMAPINFOHEADER-Struktur,** die Farb- und Dimensionsinformationen für die Videobildbitmap enthält.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Win32- **\_ BITMAPINFOHEADER** -Struktur, die Farb-und Dimensions Informationen 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 

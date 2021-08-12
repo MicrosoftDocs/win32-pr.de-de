@@ -1,35 +1,35 @@
 ---
-description: Die renderingschnittstellen für Direct3D bestehen aus Methoden zum Rendern von primitiven aus Scheitelpunkt Daten, die in einem oder mehreren Daten Puffern gespeichert sind.
+description: Die Renderingschnittstellen für Direct3D bestehen aus Methoden, die Primitive aus Scheitelpunktdaten rendern, die in einem oder mehreren Datenpuffern gespeichert sind.
 ms.assetid: e89eae14-f480-470c-b301-f7ff316ad339
-title: Vertex-Datenströme (Direct3D 9)
+title: Vertex Data Streams (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efd45fc3f645de49060cd201a6a6e9e238712338
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4f154621da4ba03f78beee87767130e37da9e9ab9ba899af737b968fb20f0609
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118290384"
 ---
-# <a name="vertex-data-streams-direct3d-9"></a>Vertex-Datenströme (Direct3D 9)
+# <a name="vertex-data-streams-direct3d-9"></a>Vertex Data Streams (Direct3D 9)
 
-Die renderingschnittstellen für Direct3D bestehen aus Methoden zum Rendern von primitiven aus Scheitelpunkt Daten, die in einem oder mehreren Daten Puffern gespeichert sind. Vertex-Daten bestehen aus Vertex-Elementen, die zum bilden von Scheitelpunkt Komponenten kombiniert werden. Vertex-Elemente, die kleinste Einheit eines Scheitel Punkts, stellen Entitäten dar, z. b. Position, normal oder Farbe.
+Die Renderingschnittstellen für Direct3D bestehen aus Methoden, die Primitive aus Scheitelpunktdaten rendern, die in einem oder mehreren Datenpuffern gespeichert sind. Scheitelpunktdaten bestehen aus Scheitelpunktelementen, die zu Scheitelpunktkomponenten kombiniert werden. Scheitelpunktelemente, die kleinste Einheit eines Scheitelpunkts, stellen Entitäten wie Position, Normal oder Farbe dar.
 
-Bei Scheitelpunkt Komponenten handelt es sich um ein oder mehrere Vertex-Elemente, die in einem einzelnen Speicherpuffer zusammenhängend (verschachtelt pro Scheitelpunkt) gespeichert sind. Ein kompletter Scheitelpunkt besteht aus einer oder mehreren Komponenten, wobei sich jede Komponente in einem separaten Speicherpuffer befindet. Zum Rendering eines primitiven werden mehrere Scheitelpunkt Komponenten gelesen und zusammengestellt, sodass für die Vertexverarbeitung umfassende Scheitel Punkte verfügbar sind. Das folgende Diagramm zeigt den Prozess des Renderings primitiver mithilfe von Scheitelpunkt Komponenten.
+Scheitelpunktkomponenten sind ein oder mehrere Vertexelemente, die zusammenhängend (verleaved pro Scheitelpunkt) in einem einzelnen Speicherpuffer gespeichert sind. Ein vollständiger Scheitelpunkt besteht aus mindestens einer Komponente, wobei sich jede Komponente in einem separaten Speicherpuffer befindet. Zum Rendern eines Primitiven werden mehrere Scheitelpunktkomponenten gelesen und zusammengestellt, sodass vollständige Scheitelpunkte für die Scheitelpunktverarbeitung verfügbar sind. Das folgende Diagramm zeigt den Prozess des Renderns von Primitiven mithilfe von Scheitelpunktkomponenten.
 
-![Diagramm des Prozesses zum Rendering von primitiven mithilfe von Scheitelpunkt Komponenten](images/vertexdata.png)
+![Diagramm des Prozesses zum Rendern von Primitiven mithilfe von Scheitelpunktkomponenten](images/vertexdata.png)
 
-Das Rendern von primitiven besteht aus zwei Schritten. Richten Sie zuerst einen oder mehrere Scheitelpunkt-komponentenstreams ein. Rufen Sie zweitens eine [**IDirect3DDevice9::D rawprimitiv**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) -Methode auf, um diese Datenströme zu Rendering. Die Identifizierung der Scheitelpunkt Elemente innerhalb dieser komponentenstreams wird vom Vertexshader angegeben.
+Renderingprimitive bestehen aus zwei Schritten. Richten Sie zunächst einen oder mehrere Scheitelpunktkomponentenstreams ein. Rufen Sie zweitens eine [**IDirect3DDevice9::D rawPrimitive-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) auf, um aus diesen Streams zu rendern. Die Identifizierung von Scheitelpunktelementen in diesen Komponentenstreams wird vom Vertex-Shader angegeben.
 
-Die [**IDirect3DDevice9::D rawprimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) -Methoden geben einen Offset in den Vertex-Datenströmen an, sodass eine beliebige zusammenhängende Teilmenge der primitiven innerhalb eines Satzes von Scheitelpunkt Daten mit jedem Zeichnen-Aufruf gerendert werden kann. Dies ermöglicht es Ihnen, den Renderingzustand des Geräts zwischen Gruppen primitiver Elemente zu ändern, die aus denselben Scheitelpunkt Puffern gerendert werden.
+Die [**IDirect3DDevice9::D rawPrimitive-Methoden**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) geben einen Offset in den Scheitelpunktdatenströmen an, sodass bei jedem Zeichnen-Aufruf eine beliebige zusammenhängende Teilmenge der Primitive in einem Satz von Scheitelpunktdaten gerendert werden kann. Dadurch können Sie den Renderingzustand des Geräts zwischen Gruppen von Primitiven ändern, die aus denselben Scheitelpunktpuffern gerendert werden.
 
-Indizierte und nicht indizierte Zeichnungs Methoden werden unterstützt. Weitere Informationen finden Sie unter [Rendering from Scheitelpunkt and Index Buffers (Direct3D 9)](rendering-from-vertex-and-index-buffers.md).
+Sowohl indizierte als auch nicht indizierte Zeichnungsmethoden werden unterstützt. Weitere Informationen finden Sie unter [Rendern von Scheitelpunkt- und Indexpuffern (Direct3D 9).](rendering-from-vertex-and-index-buffers.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Rendern von primitiven](rendering-primitives.md)
+[Rendern von Primitiven](rendering-primitives.md)
 </dt> </dl>
 
  

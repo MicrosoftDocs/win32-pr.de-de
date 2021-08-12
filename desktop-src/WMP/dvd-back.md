@@ -1,11 +1,11 @@
 ---
-title: DVD. Back-Methode
-description: Die Methode "Back" gibt die Anzeige von einem Untermenü an das übergeordnete Menü zurück.
+title: DVD.back-Methode
+description: Die back-Methode gibt die Anzeige aus einem Untermenü an das übergeordnete Menü zurück.
 ms.assetid: 4b6c3562-6484-4ef0-8c5c-c24d88e02096
 keywords:
-- Windows-Media Player der Back-Methode
-- Back-Methode, Windows Media Player, DVD-Klasse
-- DVD-Klasse, Windows Media Player, Back-Methode
+- Back-Windows Media Player
+- back-Methode Windows Media Player , DVD-Klasse
+- DVD-Klasse Windows Media Player , back-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e656051d02ec5efc74aa7595d2ca6cb20e648f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 916c16af578e2ccb6b0e4a6717431f7c30f3084bcd12fbedb1dff9f6c0627493
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118579089"
 ---
-# <a name="dvdback-method"></a>DVD. Back-Methode
+# <a name="dvdback-method"></a>DVD.back-Methode
 
-Die Methode " **Back** " gibt die Anzeige von einem Untermenü an das übergeordnete Menü zurück.
+Die **back-Methode** gibt die Anzeige aus einem Untermenü an das übergeordnete Menü zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede DVD wird unterschiedlich verfasst. Einige DVDs werden so erstellt, dass die **Back** -Methode über das Root-Menü verfügbar ist, aber wenn Sie aufgerufen wird, wird keine Aktion durchführen.
+Jede DVD wird anders verfasst. Einige DVDs werden so verfasst, dass die **Back-Methode** über das Stammmenü verfügbar ist, aber wenn sie aufgerufen wird, wird sie nichts tun.
 
-**Windows Media Player 10 Mobile:** Diese Methode ist immer erfolgreich, führt jedoch nicht den beabsichtigten Vorgang aus.
+**Windows Media Player 10 Mobile:** Diese Methode ist immer erfolgreich, führt aber nicht den beabsichtigten Vorgang aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Jede DVD wird unterschiedlich verfasst. Einige DVDs werden so erstellt, dass die
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
 | Version<br/>                  | Windows Media Player für Windows XP oder höher.<br/>                           |
 | DLL<br/>                      | <dl> <dt>Wmp.dll</dt> </dl> |
 

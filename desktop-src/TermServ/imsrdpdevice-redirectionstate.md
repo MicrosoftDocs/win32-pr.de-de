@@ -1,12 +1,12 @@
 ---
-title: Imsrdpdevice redirectionstate (Eigenschaft)
-description: Gibt den Umleitungs Status des Geräts an.
+title: IMsRdpDevice RedirectionState-Eigenschaft
+description: Gibt den Umleitungsstatus des Geräts an.
 ms.assetid: 967734c9-64d8-4604-a133-4649279f4475
 ms.tgt_platform: multiple
 keywords:
-- Redirectionstate-Eigenschaft Remotedesktopdienste
-- Redirectionstate-Eigenschaft Remotedesktopdienste, imsrdpdevice-Schnittstelle
-- Imsrdpdevice-Schnittstelle Remotedesktopdienste, redirectionstate-Eigenschaft
+- RedirectionState-Eigenschaft Remotedesktopdienste
+- RedirectionState-Eigenschaft Remotedesktopdienste , IMsRdpDevice-Schnittstelle
+- IMsRdpDevice-Schnittstelle Remotedesktopdienste , RedirectionState-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be0f6fb5781700daa8a65443d2713253e97f73bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8609c682a7a31d293e6e8a9606c8ae445b0487da0d95399fb4e00d779914bfd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118606682"
 ---
-# <a name="imsrdpdeviceredirectionstate-property"></a>Imsrdpdevice:: redirectionstate-Eigenschaft
+# <a name="imsrdpdeviceredirectionstate-property"></a>IMsRdpDevice::RedirectionState-Eigenschaft
 
-Gibt den Umleitungs Status des Geräts an.
+Gibt den Umleitungsstatus des Geräts an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,11 +49,11 @@ HRESULT get_RedirectionState(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf **Variant \_ false** fest, um die Umleitung zu deaktivieren oder **Variant \_ true** zu aktivieren
+Legen Sie diesen Parameter auf **VARIANT \_ FALSE** fest, um die Umleitung zu deaktivieren, oder **VARIANT \_ TRUE,** um die Umleitung zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,15 +65,15 @@ Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere 
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpdevice ist als 60c3b9c8-9E92-4fi5e-a3e7-604a912093ea definiert.<br/>        |
+| IID<br/>                      | IID \_ IMsRdpDevice ist als 60c3b9c8-9e92-4f5e-a3e7-604a912093ea definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpdevice**](imsrdpdevice.md)
+[**IMsRdpDevice**](imsrdpdevice.md)
 </dt> </dl>
 
  

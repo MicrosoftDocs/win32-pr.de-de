@@ -4,12 +4,12 @@ description: Der Registrierungsschlüssel AssumePhase2Fragmentation bestimmt, ob
 ms.assetid: 3d6ececf-8871-4038-9706-4da57857d25a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b0fa35692ec3ac741e2bd2fdb43607dfe1cb948
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: caee785b0c89b92aaf4b01c590425c451b9a977664e915874e7eb5ad1edf46aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104389636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118275837"
 ---
 # <a name="assumephase2fragmentation"></a>AssumePhase2Fragmentation
 
@@ -19,36 +19,36 @@ Der Registrierungsschlüssel AssumePhase2Fragmentation bestimmt, ob der Server u
 
 ```
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Rasman\PPP\EAP\25
-   AssumePhase2Fragmentation = value
+   AssumePhase2Fragmentation = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ DWORD** -Wert.
+Dies ist ein **\_ REG-DWORD-Wert.**
 
 
 
-| Wert   | BESCHREIBUNG                                                                                                  |
+| Wert   | Beschreibung                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------|
-| 0       | Server und Client gehen davon aus, dass die andere Partei während der Peer-Authentifizierung keine Fragmentierung in Phase 2 durchsetzen kann. |
-| ungleich NULL | Server und Client gehen davon aus, dass die andere Partei während der Peer-Authentifizierung die Fragmentierung der Phase 2 unterstützt.     |
+| 0       | Server und Client gehen davon aus, dass die andere Partei während der PEAP-Authentifizierung nicht in der Lage ist, die Phase 2 zu fragmentieren. |
+| Nonzero | Server und Client gehen davon aus, dass die andere Partei in der Lage ist, die Phase 2-Fragmentierung während der PEAP-Authentifizierung zu erstellen.     |
 
 
 
- 
+ 
 
-Wenn dieser Registrierungs Wert nicht vorhanden ist, gehen Server und Client davon aus, dass die andere Partei während der Peer-Authentifizierung die Fragmentierung der Phase 2 unterstützt.
+Wenn dieser Registrierungswert nicht vorhanden ist, gehen server und client davon aus, dass die andere Partei während der PEAP-Authentifizierung in der Lage ist, die Phase 2 zu fragmentieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost-Registrierungs Einstellungen](eaphost-registry-settings.md)
+[EAPHost-Einstellungen](eaphost-registry-settings.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

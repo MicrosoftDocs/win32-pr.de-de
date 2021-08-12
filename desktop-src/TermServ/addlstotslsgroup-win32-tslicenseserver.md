@@ -1,12 +1,12 @@
 ---
-title: Addlstozlsgroup-Methode der Win32_TSLicenseServer-Klasse
-description: Fügt den Remotedesktop-Lizenzserver der Gruppe Remotedesktopverbindung Broker (RD-Verbindungsbroker)-Lizenzserver auf einem Domänen Controller in derselben Domäne wie der Remotedesktop Lizenzserver hinzu.
+title: AddLStoTSLSGroup-Methode der Win32_TSLicenseServer-Klasse
+description: Fügt den Remotedesktop Lizenzserver der Lizenzservergruppe Remotedesktopverbindung Broker (RD-Verbindungsbroker) auf einem Domänencontroller in derselben Domäne wie der Remotedesktop Lizenzserver hinzu.
 ms.assetid: 65c6b7cf-324a-44f1-8dfc-40e35ed45d4f
 ms.tgt_platform: multiple
 keywords:
-- Addlstozlsgroup-Methode Remotedesktopdienste
-- Addlstozlsgroup-Methode Remotedesktopdienste, Win32_TSLicenseServer-Klasse
-- Win32_TSLicenseServer-Klasse Remotedesktopdienste, addlstozlsgroup-Methode
+- AddLStoTSLSGroup-Methode Remotedesktopdienste
+- AddLStoTSLSGroup-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer-Klasse Remotedesktopdienste , AddLStoTSLSGroup-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53934f6682d1a23f99916588aa4eac3b18526c06
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cf3d0464b42159ca1827caf579e21982c08d066495cd664ec1adfcaa883a4b16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118610405"
 ---
-# <a name="addlstotslsgroup-method-of-the-win32_tslicenseserver-class"></a>Addlstozlsgroup-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="addlstotslsgroup-method-of-the-win32_tslicenseserver-class"></a>AddLStoTSLSGroup-Methode der Win32 \_ TSLicenseServer-Klasse
 
-Fügt den Remotedesktop-Lizenzserver der Gruppe Remotedesktopverbindung Broker (RD-Verbindungsbroker)-Lizenzserver auf einem Domänen Controller in derselben Domäne wie der Remotedesktop Lizenzserver hinzu.
+Fügt den Remotedesktop Lizenzserver der Lizenzservergruppe Remotedesktopverbindung Broker (RD-Verbindungsbroker) auf einem Domänencontroller in derselben Domäne wie der Remotedesktop Lizenzserver hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,15 +43,15 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Domänen-Admins" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Domänenadministratoren sein, um diese Methode aufzurufen.
 
-Der Lizenzserver sollte Mitglied der Gruppe Remotedesktop-Lizenzserver sein, wenn der Server für die Verwendung des Domänen-oder Gesamtstruktur-Ermittlungs Bereichs konfiguriert ist.
+Der Lizenzserver sollte Mitglied der Gruppe Remotedesktop Lizenzserver sein, wenn der Server für die Verwendung des Domänen- oder Gesamtstrukturermittlungsbereichs konfiguriert ist.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,19 +62,19 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> <dt>
 
-[**Islsinzlsgroup**](islsintslsgroup-win32-tslicenseserver.md)
+[**IsLSinTSLSGroup**](islsintslsgroup-win32-tslicenseserver.md)
 </dt> </dl>
 
  

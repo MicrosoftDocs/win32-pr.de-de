@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 hotkeyfocenreleaseleft (Eigenschaft)
-description: Gibt den Code des virtuellen Schlüssels an, der STRG + ALT hinzugefügt werden soll, um die Hotkey-Ersetzung für STRG + ALT + nach-Links zu bestimmen.
+title: IMsRdpClientAdvancedSettings6 HotKeyFocusReleaseLeft (Eigenschaft)
+description: Gibt den virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-LINKS-TASTE zu bestimmen.
 ms.assetid: 9F2942BD-9F5C-4E02-A330-42C30C6C8F87
 ms.tgt_platform: multiple
 keywords:
-- Hotkeyfocupreleaseleft-Eigenschaft Remotedesktopdienste
-- Hotkeyfocus releaseleft-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, hotkeyfocwereleaseleft-Eigenschaft
-- Hotkeyfocus releaseleft-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, hotkeyfocwereleaseleft-Eigenschaft
-- Hotkeyfocus releaseleft-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, hotkeyfocwereleaseleft-Eigenschaft
+- HotKeyFocusReleaseLeft-Remotedesktopdienste
+- HotKeyFocusReleaseLeft-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseLeft-Eigenschaft
+- HotKeyFocusReleaseLeft-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseLeft-Eigenschaft
+- HotKeyFocusReleaseLeft-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseLeft-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27e0e6d4e334edeffbf0ef025e59454e0f26c34c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c2a5df8cd9c85ecccaf2de32a0e82ac604429f7b9f1e4801e3bfb025de8116d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607905"
 ---
-# <a name="imsrdpclientadvancedsettings6hotkeyfocusreleaseleft-property"></a>IMsRdpClientAdvancedSettings6:: hotkeyfocaufreleaseleft-Eigenschaft
+# <a name="imsrdpclientadvancedsettings6hotkeyfocusreleaseleft-property"></a>IMsRdpClientAdvancedSettings6::HotKeyFocusReleaseLeft (Eigenschaft)
 
-Gibt den Code des virtuellen Schlüssels an, der STRG + ALT hinzugefügt werden soll, um die Hotkey-Ersetzung für STRG + ALT + nach-Links zu bestimmen.
+Gibt den virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-LINKS-TASTE zu bestimmen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,11 +59,11 @@ HRESULT get_HotKeyFocusReleaseLeft(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Code des virtuellen Schlüssels.
+Der neue Virtuelle Schlüsselcode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird nur von Remotedesktopverbindung 6,1-und 7,0-Clients unterstützt.
+Diese Eigenschaft wird nur von Remotedesktopverbindung 6.1- und 7.0-Clients unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,7 +79,7 @@ Diese Eigenschaft wird nur von Remotedesktopverbindung 6,1-und 7,0-Clients unter
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

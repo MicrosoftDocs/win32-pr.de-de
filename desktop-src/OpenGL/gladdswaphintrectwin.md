@@ -1,9 +1,9 @@
 ---
-title: gladdtauaphintrectwin-Funktion (GL. h)
-description: Die Funktion "gladdswap aphintrectwin" gibt einen Satz von Rechtecke an, die von "Swap" kopiert werden sollen.
+title: glAddSwapHintRectWIN-Funktion (Gl.h)
+description: Die Rückruffunktion glAddSwapHintRectWIN gibt einen Satz von Rechtecke an, die von SwapBuffers kopiert werden sollen.
 ms.assetid: f242e755-8e8a-471a-9884-47efa22a3de6
 keywords:
-- gladdtauaphintrectwin-Funktion OpenGL
+- glAddSwapHintRectWIN-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ae3e10c2f51ff8d7c9763ff1dad7d09d800cd60
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 75077ac2a93e3e952ae3c3daca3ea847f7b4b0efc340da0e980b1a4bec6efa64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618050"
 ---
-# <a name="gladdswaphintrectwin-function"></a>gladdtauaphintrectwin-Funktion
+# <a name="gladdswaphintrectwin-function"></a>glAddSwapHintRectWIN-Funktion
 
-Die Funktion " **gladdswap aphintrectwin** " gibt einen Satz von Rechtecke an, die von " [**Swap**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)" kopiert werden sollen.
+Die **Rückruffunktion glAddSwapHintRectWIN** gibt einen Satz von Rechtecke an, die von [**SwapBuffers**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)kopiert werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ void WINAPI glAddSwapHintRectWIN(
 *x* 
 </dt> <dd>
 
-Die *x*-Koordinate (in Fenster Koordinaten) der unteren linken Ecke des Hint-Bereichs Rechtecks.
+Die x-Koordinate (in Fensterkoordinaten) der unteren linken Ecke des Rechtecks für den Hinweisbereich.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die *y*-Koordinate (in Fenster Koordinaten) der unteren linken Ecke des Hint-Bereichs Rechtecks.
+Die y-Koordinate (in Fensterkoordinaten) der unteren linken Ecke des Rechtecks für den Hinweisbereich.
 
 </dd> <dt>
 
 *width* 
 </dt> <dd>
 
-Die Breite des Hint-Bereichs Rechtecks.
+Die Breite des Rechtecks für den Hinweisbereich.
 
 </dd> <dt>
 
 *height* 
 </dt> <dd>
 
-Die Höhe des Hint-Bereichs Rechtecks.
+Die Höhe des Rechtecks für den Hinweisbereich.
 
 </dd> </dl>
 
@@ -75,18 +75,18 @@ Die Höhe des Hint-Bereichs Rechtecks.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gladdtauaphintrectwin** " beschleunigt die Animation, indem die Menge an Umzeichnung zwischen Frames reduziert wird. Mit " **gladdtauaphintrectwin**" geben Sie einen Satz von rechteckigen Bereichen an, die beim Abrufen von " [**Austausch Puffern**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)" kopiert werden sollen. Wenn Sie vor dem Aufrufen von " **Austausch Puffer**" keine Rechtecke mit " **gladdtauaphintrectwin** " angeben, wird der gesamte Frame Puffer ausgetauscht. Die Verwendung von " **gladdtauaphintrectwin** ", um nur geänderte Teile des Puffers zu kopieren, kann die Leistung von "Swap"- **Puffer** erheblich erhöhen, insbesondere dann, wenn " **Swap Buffers** " in Software implementiert ist.
+Die **glAddSwapHintRectWIN-Funktion** beschleunigt die Animation, indem sie die Menge der Neumalungen zwischen Frames reduziert. Mit **glAddSwapHintRectWIN** geben Sie einen Satz rechteckiger Bereiche an, die kopiert werden sollen, wenn Sie [**SwapBuffers**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)aufrufen. Wenn Sie vor dem Aufrufen von **SwapBuffers** keine Rechtecke mit **glAddSwapHintRectWIN** angeben, wird der gesamte Framepuffer ausgetauscht. Die Verwendung von **glAddSwapHintRectWIN** zum Kopieren nur geänderter Teile des Puffers kann die Leistung von **SwapBuffers** erheblich steigern, insbesondere wenn **SwapBuffers** in Software implementiert ist.
 
-Die Funktion " **gladdtauaphintrectwin** " fügt dem Hinweis Bereich ein Rechteck hinzu. Wenn das PFD \_ - \_ auslagerungskopierflag der [**pixelformatdescriptor**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) -Pixel Format Struktur festgelegt ist, verwendet **swapbuffers** diesen Bereich, um das Kopieren des Hintergrund Puffers auf den Frontpuffer abzuschneiden. Sie geben die PFD \_ - \_ swapkopie nicht an. Sie wird durch die leistungsfähige Hardware festgelegt. Der Hinweis Bereich wird nach jedem Rückruf von " **Austausch Puffer**" gelöscht. Bei manchen Hardware Konfigurationen können **Austausch Puffer** den Hinweis Bereich ignorieren und den gesamten Puffer austauschen. **Swap-Puffer** werden vom System implementiert, nicht von der Anwendung.
+Die **glAddSwapHintRectWIN-Funktion** fügt dem Hinweisbereich ein Rechteck hinzu. Wenn das PFD \_ SWAP \_ COPY-Flag der [**Pixelformatstruktur PIXELFORMATDESCRIPTOR**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) festgelegt ist, verwendet **SwapBuffers** diesen Bereich, um das Kopieren des Hintergrundpuffers in den Frontpuffer abzuschneiden. Sie geben PFD SWAP COPY nicht an. Sie \_ \_ wird von der fähigen Hardware festgelegt. Der Hinweisbereich wird nach jedem Aufruf von **SwapBuffers** gelöscht. Bei einigen Hardwarekonfigurationen kann **SwapBuffers** den Hinweisbereich ignorieren und den gesamten Puffer austauschen. **SwapBuffers** wird vom System und nicht von der Anwendung implementiert.
 
-OpenGL verwaltet für jedes Fenster einen separaten Hinweis Bereich. Wenn Sie " **gladdtauaphintrectwin** " für alle einem Fenster zugeordneten renderingkontexte aufzurufen, werden die Hinweis Rechtecke in einer einzelnen Region kombiniert.
+OpenGL verwaltet für jedes Fenster einen separaten Hinweisbereich. Wenn Sie **glAddSwapHintRectWIN** für alle Einem Fenster zugeordneten Renderingkontexte aufrufen, werden die Hinweisrechtecke in einem einzelnen Bereich kombiniert.
 
-Wenden Sie " **gladdtauaphintrectwin** " mit einem umschließenden Rechteck für jedes für einen Frame gezeichnete Objekt an, und für jedes Rechteck, das zum Löschen Vorheriger Frame Objekte gelöscht wurde.
+Rufen **Sie glAddSwapHintRectWIN** mit einem umschließenden Rechteck für jedes für einen Frame gezeichnete Objekt und für jedes Rechteck auf, das gelöscht wird, um vorherige Frameobjekte zu löschen.
 
 > [!Note]  
-> Die Funktion " **gladdswaphintrectwin** " ist eine Erweiterungs Funktion, die nicht Teil der OpenGL-Standardbibliothek ist, aber Teil der GL- \_ Win-Swap- \_ \_ Hinweis Erweiterung ist. Um zu überprüfen, ob die Implementierung von OpenGL " **gladdtauaphintrectwin**" unterstützt, nennen Sie " **glgetstring**(GL \_ Extensions)". Wenn der GL. Win-Swap-Hinweis zurückgegeben wird \_ \_ \_ , wird " **gladdswaphintrectwin** " unterstützt. Rufen Sie zum Abrufen der Adresse einer Erweiterungs Funktion **wglgetprocaddress** auf.
+> Die **glAddSwapHintRectWIN-Funktion** ist eine Erweiterungsfunktion, die nicht Teil der OpenGL-Standardbibliothek ist, sondern Teil der GL \_ \_ WIN-Austauschhinweiserweiterung \_ ist. Um zu überprüfen, ob Ihre Implementierung von OpenGL **glAddSwapHintRectWIN** unterstützt, rufen Sie **glGetString**(GL \_ EXTENSIONS) auf. Wenn der GL \_ \_ WIN-Swaphinweis zurückgegeben \_ wird, wird **glAddSwapHintRectWIN** unterstützt. Rufen Sie **wglGetProcAddress** auf, um die Adresse einer Erweiterungsfunktion abzurufen.
 
  
 
@@ -98,24 +98,24 @@ Wenden Sie " **gladdtauaphintrectwin** " mit einem umschließenden Rechteck für
 |-------------------------------------|---------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**Pixelformatdescriptor**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor)
+[**PIXELFORMATDESCRIPTOR**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor)
 </dt> <dt>
 
-[**Austausch Puffer**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)
+[**SwapBuffers**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)
 </dt> <dt>
 
-[**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
+[**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
 </dt> </dl>
 
  

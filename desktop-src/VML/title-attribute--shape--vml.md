@@ -1,50 +1,50 @@
 ---
-title: Title-Attribut (Form) (VML)
-description: Title-Attribut (Form) (VML)
+title: Title-Attribut (Form)(VML)
+description: Title-Attribut (Form)(VML)
 ms.assetid: 08680706-5274-46d4-9199-4fdbf32f884b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 075b1cf078617abd3486ba55008794e1342efa63
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 55ec2a16df6740bca64357dae039f4222de956300604198b2d199977970c526d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104474156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118596508"
 ---
-# <a name="title-attribute-shapevml"></a>Title-Attribut (Form) (VML)
+# <a name="title-attribute-shapevml"></a>Title-Attribut (Form)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Text, der angezeigt wird, wenn der Mauszeiger über der Form bewegt wird. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Text, der angezeigt wird, wenn der Mauszeiger über die Form bewegt wird. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* Title = " *Ausdruck* " >
+<v: *element* title=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Title = "*Ausdruck*"
+*element* .title="*expression*"
 
-*Ausdruck* = *Element*. Title
+*expression* = *Element*.title
 
 **Anmerkungen**
 
-Das **Title** -Attribut ähnelt dem Standard-HTML- **Titel** Attribut. Das Verhalten eines Titels ähnelt einer Microsoft Windows-QuickInfo.
+Das **Title-Attribut** ähnelt dem **HTML-Standardtitelattribut.** Das Verhalten eines Titels ähnelt einer Microsoft Windows QuickInfo.
 
-**VML-Standard Attribut**
+**VML-Standardattribut**
 
 **Beispiel**
 
-Der Titel der Form ist "QuickInfo Display" und wird angezeigt, wenn der Mauszeiger über der Form bewegt wird.
+Der Titel der Form ist "QuickInfo-Anzeige" und wird angezeigt, wenn der Mauszeiger über die Form bewegt wird.
 
 
 ```HTML
@@ -55,8 +55,8 @@ Der Titel der Form ist "QuickInfo Display" und wird angezeigt, wenn der Mauszeig
 
 
 
-[Beispiel für das Titel Attribut](/previous-versions/bb264097(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Title-Attribut – Beispiel.](/previous-versions/bb264097(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

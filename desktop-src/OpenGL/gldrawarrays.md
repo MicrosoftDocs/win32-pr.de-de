@@ -1,9 +1,9 @@
 ---
-title: gldrawarrays-Funktion (GL. h)
-description: Die Funktion "gldrawarrays" gibt mehrere primitive zum Rendering an.
+title: glDrawArrays-Funktion (Gl.h)
+description: Die glDrawArrays-Funktion gibt mehrere primitive Typen an, die gerendert werden sollen.
 ms.assetid: 6ebd467b-5a63-43e4-b3fd-242c704d7d13
 keywords:
-- gldrawarrays-Funktion OpenGL
+- glDrawArrays-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88b20cf3a3e3b2c96a8172f53f8126815efe16d6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 349ba3407d84d66afd431d14c3fc97b151661f4f783a05734a55d9ba1dc313ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118616992"
 ---
-# <a name="gldrawarrays-function"></a>gldrawarrays-Funktion
+# <a name="gldrawarrays-function"></a>glDrawArrays-Funktion
 
-Die Funktion " **gldrawarrays** " gibt mehrere primitive zum Rendering an.
+Die **glDrawArrays-Funktion** gibt mehrere primitive Typen an, die gerendert werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI glDrawArrays(
 *mode* 
 </dt> <dd>
 
-Die Art der zu Rendering enden primitiver. Die folgenden Konstanten geben akzeptable Typen von primitiven an: GL- \_ Punkte, GL-Zeilen \_ \_ Streifen, GL- \_ Zeilen \_ Schleife, GL \_ -Linien, GL \_ \_ -Dreiecks Streifen, GL \_ \_ -Dreiecks Lüfter, GL \_ -Dreiecke, GL \_ Quad \_ Strip, GL \_ QUADS und GL- \_ Polygon.
+Die Art von primitiven Typen, die gerendert werden sollen. Die folgenden Konstanten geben zulässige Typen von Primitiven an: GL \_ POINTS, GL \_ LINE \_ STRIP, GL \_ LINE \_ LOOP, GL \_ LINES, GL TRIANGLE \_ \_ STRIP, GL TRIANGLE \_ \_ FAN, GL \_ TRIANGLES, GL \_ QUAD \_ STRIP, GL \_ QUADS und GL \_ POLYGON.
 
 </dd> <dt>
 
 *first* 
 </dt> <dd>
 
-Der Start Index in den aktivierten Arrays.
+Der Startindex in den aktivierten Arrays.
 
 </dd> <dt>
 
 *count* 
 </dt> <dd>
 
-Die Anzahl der zu Rendering enden Indizes.
+Die Anzahl der zu rendernden Indizes.
 
 </dd> </dl>
 
@@ -69,31 +69,31 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Anzahl* war negativ.<br/>                                                                                                      |
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Modus* war kein akzeptierter Wert.<br/>                                                                                          |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *count* war negativ.<br/>                                                                                                      |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *mode* war kein akzeptierter Wert.<br/>                                                                                          |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit **gldrawarrays** können Sie mehrere geometrische Primitive zum Rendering angeben. Anstatt separate OpenGL-Funktionen zum übergeben einzelner Scheitel Punkte, normaler Werte oder Farben aufzurufen, können Sie separate Arrays von Scheitel Punkten, normalen und Farben angeben, um eine Sequenz von primitiven (alle Arten) mit einem einzigen Aufruf von **gldrawarrays** zu definieren.
+Mit **glDrawArrays** können Sie mehrere geometrische Primitive angeben, die gerendert werden sollen. Anstatt separate OpenGL-Funktionen aufzurufen, um jeden einzelnen Scheitelpunkt, jede Normale oder Farbe zu übergeben, können Sie separate Arrays von Scheitelpunkten, Normalitäten und Farben angeben, um eine Sequenz von Primitiven (alle gleich) mit einem einzigen Aufruf von **glDrawArrays** zu definieren.
 
-Wenn Sie **gldrawarrays** aufzurufen, werden sequenzielle Elemente aus den einzelnen aktivierten Arrays *verwendet, um* eine Sequenz geometrischer primitiver Elemente zu erstellen, beginnend mit dem *ersten* Element. Der *Mode* -Parameter gibt an, welche Art von primitiver konstruiert werden soll und wie die Array Elemente zum Erstellen der primitiven verwendet werden.
+Wenn Sie **glDrawArrays** aufrufen, werden sequenzielle Elemente aus jedem aktivierten Array *gezählt,* um eine Sequenz geometrischer Primitive zu erstellen, beginnend mit dem *ersten* Element. Der *mode-Parameter* gibt an, welche Art von Primitivem erstellt werden soll und wie die Arrayelemente verwendet werden, um die Primitiven zu erstellen.
 
-Nachdem **gldrawarrays** zurückgegeben wurde, sind die Werte von Vertex-Attributen, die von **gldrawarrays** geändert werden, nicht definiert. Wenn z. b. \_ das GL- \_ Farbarray aktiviert ist, ist der Wert der aktuellen Farbe nach dem Zurückgeben von **gldrawarrays** nicht definiert. Von **gldrawarrays** nicht geänderte Attribute bleiben definiert. Wenn das GL- \_ Scheitelpunkt \_ Array nicht aktiviert ist, werden keine geometrischen primitiven generiert, aber die Attribute, die aktivierten Arrays entsprechen, werden geändert.
+Nachdem **glDrawArrays** zurückgegeben wurde, sind die Werte von Vertexattributen, die von **glDrawArrays** geändert werden, nicht definiert. Wenn z. B. GL \_ COLOR \_ ARRAY aktiviert ist, ist der Wert der aktuellen Farbe nicht definiert, nachdem **glDrawArrays** zurückgegeben wurde. Attribute, die nicht durch **glDrawArrays** geändert werden, bleiben definiert. Wenn GL \_ VERTEX \_ ARRAY nicht aktiviert ist, werden keine geometrischen Primitive generiert, aber die Attribute, die aktivierten Arrays entsprechen, werden geändert.
 
-Sie können **gldrawarrays** in Anzeigelisten einschließen. Wenn Sie **gldrawarrays** in eine Anzeigeliste einschließen, werden die erforderlichen Array Daten, die durch die Array Zeiger und die aktiviert werden, in der Anzeigeliste generiert und eingegeben. Die Werte der Array Zeiger und-Aktivierung werden während der Erstellung von Anzeigelisten bestimmt.
+Sie können **glDrawArrays** in Anzeigelisten einschließen. Wenn Sie **glDrawArrays** in eine Anzeigeliste einschließen, werden die erforderlichen Arraydaten, die durch die Arrayzeiger und die Aktivierten bestimmt werden, generiert und in die Anzeigeliste eingegeben. Die Werte von Arrayzeigern und -aktivierten werden während der Erstellung von Anzeigelisten bestimmt.
 
-Sie können statische Array Daten jederzeit lesen. Wenn statische Array Elemente geändert und das Array nicht erneut angegeben wird, sind die Ergebnisse aller nachfolgenden Aufrufe von **gldrawarrays** nicht definiert.
+Sie können statische Arraydaten jederzeit lesen. Wenn statische Arrayelemente geändert werden und das Array nicht erneut angegeben wird, sind die Ergebnisse aller nachfolgenden Aufrufe von **glDrawArrays** nicht definiert.
 
-Obwohl kein Fehler generiert wird, wenn Sie ein Array mehr als einmal innerhalb der [**glBegin**](glbegin.md) -und [**glEnd**](glend.md) -Paare angeben, sind die Ergebnisse nicht definiert.
+Obwohl kein Fehler generiert wird, wenn Sie ein Array mehr als einmal in [**glBegin-**](glbegin.md) und [**-paaren**](glend.md) angeben, sind die Ergebnisse nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,47 +103,47 @@ Obwohl kein Fehler generiert wird, wenn Sie ein Array mehr als einmal innerhalb 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

@@ -3,34 +3,34 @@ title: Authentifizieren des Dienstanbieters
 description: Authentifizieren des Dienstanbieters
 ms.assetid: e48a8a7c-0277-4f0c-bad2-5bc9d0286da8
 keywords:
-- Windows Media-Device Manager, Authentifizierung
-- Device Manager, Authentifizierung
-- Programmier Handbuch, Authentifizierung
-- Dienstanbieter, Authentifizierung
-- Erstellen von Dienstanbietern, Authentifizierung
+- Windows Medien Geräte-Manager,Authentifizierung
+- Geräte-Manager,Authentifizierung
+- Programmierhandbuch,Authentifizierung
+- Dienstanbieter,Authentifizierung
+- Erstellen von Dienstanbietern,Authentifizierung
 - authentication
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 271bf5594e4adaede01bb8e3795780f8f5c5177a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 52d6931acb4644d4222659d428be10877deb164a184c95609663a915c12b95d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118586486"
 ---
 # <a name="authenticating-the-service-provider"></a>Authentifizieren des Dienstanbieters
 
-Um von Windows Media Device Manager zugänglich zu sein, muss ein Dienstanbieter die [**icomponentauthenticate**](/windows/desktop/api/mswmdm/nn-mswmdm-icomponentauthenticate) -Schnittstelle erben und implementieren.
+Um über Windows Media Geräte-Manager zugänglich zu sein, muss ein Dienstanbieter die [**IComponentAuthenticate-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-icomponentauthenticate) erben und implementieren.
 
-Ein Dienstanbieter führt die folgenden Schritte aus, um sich selbst zu authentifizieren:
+Um sich selbst zu authentifizieren, führt ein Dienstanbieter die folgenden Schritte aus:
 
-1.  Bei der Instanziierung wird ein neues globales [csecurechannelserver](csecurechannelserver-class.md) -Objekt erstellt und das Zertifikat und die Schlüsselwerte aus seiner Schlüsseldatei festgelegt.
-2.  Es implementiert die [**icomponentauthenticate:: sacauth**](/windows/desktop/api/mswmdm/nf-mswmdm-icomponentauthenticate-sacauth) -und die [**icomponentauthenticate:: sacgetprotokolls**](/windows/desktop/api/mswmdm/nf-mswmdm-icomponentauthenticate-sacgetprotocols) -Methode, indem die Parameter einfach an das globale csecurechannelserver-Element übergeben werden.
-3.  Vor der Behandlung implementierter Windows Media Device Manager-Methoden muss der Dienstanbieter die Authentifizierung des Aufrufers durch Aufrufen von csecurechannelserver:: fisauthenticated überprüfen und einen Fehler auftreten, wenn der Aufrufer nicht authentifiziert ist.
+1.  Bei der Instanziierung wird ein neues globales [CSecureChannelServer-Objekt](csecurechannelserver-class.md) erstellt und die Zertifikat- und Schlüsselwerte aus der Schlüsseldatei definiert.
+2.  Sie implementiert die [**Methoden IComponentAuthenticate::SACAuth**](/windows/desktop/api/mswmdm/nf-mswmdm-icomponentauthenticate-sacauth) und [**IComponentAuthenticate::SACGetProtocols,**](/windows/desktop/api/mswmdm/nf-mswmdm-icomponentauthenticate-sacgetprotocols) indem die Parameter einfach an das globale CSecureChannelServer-Member übergeben werden.
+3.  Vor der Verarbeitung implementierter Windows Media Geräte-Manager-Methoden muss der Dienstanbieter die Authentifizierung des Aufrufers überprüfen, indem er CSecureChannelServer::fIsAuthenticated aufruft und einen Fehler auft, wenn der Aufrufer nicht authentifiziert ist.
 
-Diese Schritte sind in den folgenden C++ Beispielen aufgeführt.
+Diese Schritte werden in den folgenden C++-Beispielen gezeigt.
 
-**Erstellen des csecurechannelserver-Objekts**
+**Erstellen des CSecureChannelServer-Objekts**
 
 
 ```C++
@@ -60,7 +60,7 @@ CMyServiceProvider::CMyServiceProvider()
 
 
 
-**Implementieren der icomponentauthenticate-Methoden**
+**Implementieren der IComponentAuthenticate-Methoden**
 
 
 ```C++
@@ -109,7 +109,7 @@ STDMETHODIMP CMDServiceProvider::SACGetProtocols(
 
 **Überprüfen der Authentifizierung des Aufrufers**
 
-Das folgende Codebeispiel zeigt, wie ein Dienstanbieter die Authentifizierung des Aufrufers im Rahmen der Implementierung der **imdserviceprovider** -Schnittstelle prüft.
+Das folgende Codebeispiel zeigt einen Dienstanbieter, der die Authentifizierung des Aufrufers als Teil seiner Implementierung der **IMDServiceProvider-Schnittstelle** überprüft.
 
 
 ```C++
@@ -137,9 +137,9 @@ STDMETHODIMP CMyServiceProvider::GetDeviceCount(DWORD * pdwCount)
 [**Erstellen eines Dienstanbieters**](creating-a-service-provider.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

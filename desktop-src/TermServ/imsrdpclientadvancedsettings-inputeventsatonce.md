@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-Eigenschaft inputeventsatonce
-description: Diese Eigenschaft wird nicht unterstützt. | Imsrdpclientadvancedsettings-Eigenschaft inputeventsatonce
+title: IMsRdpClientAdvancedSettings InputEventsAtOnce (Eigenschaft)
+description: Diese Eigenschaft wird nicht unterstützt. | IMsRdpClientAdvancedSettings InputEventsAtOnce (Eigenschaft)
 ms.assetid: 2f24b2cd-136d-4bde-9808-e5cb02bd7ce8
 ms.tgt_platform: multiple
 keywords:
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
-- Inputeventsatonce-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste-Eigenschaft, inputeventsatonce-Eigenschaft
+- InputEventsAtOnce-Remotedesktopdienste
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
+- InputEventsAtOnce-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , InputEventsAtOnce-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,14 +54,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 999d00cb706e4fdd4cf0c9ed606c33de4a81e8d6
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 820b054a97246e81af1b21e46a0e5b272a95749c1aaabc77561e091d00677aaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118608528"
 ---
-# <a name="imsrdpclientadvancedsettingsinputeventsatonce-property"></a>Imsrdpclientadvancedsettings:: inputeventsatonce-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsinputeventsatonce-property"></a>IMsRdpClientAdvancedSettings::InputEventsAtOnce -Eigenschaft
 
 Diese Eigenschaft wird nicht unterstützt.
 
@@ -84,11 +84,11 @@ HRESULT get_InputEventsAtOnce(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neue Anzahl von Eingabe Ereignissen. Der Standardwert ist 10.
+Die neue Anzahl von Eingabeereignissen. Der Standardwert ist 10.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **" \_ false**" zurück.
+Gibt **S \_ FALSE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,11 +102,11 @@ Gibt **" \_ false**" zurück.
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -131,7 +131,7 @@ Gibt **" \_ false**" zurück.
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

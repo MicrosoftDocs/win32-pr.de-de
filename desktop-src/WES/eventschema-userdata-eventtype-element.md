@@ -1,6 +1,6 @@
 ---
-title: UserData (EventType)-Element
-description: Enthält die Ereignisdaten. | UserData (EventType)-Element
+title: UserData -Element (EventType)
+description: Enthält die Ereignisdaten. | UserData -Element (EventType)
 ms.assetid: b267187b-cfce-4e33-aba2-cf46efdd174d
 keywords:
 - UserData-Element EventLog
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c9f7e5a2babe42073d4f27cfaae1d2e28dedfe35
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 1042e5665bbedc4670d3615846c991bb9d6c944fca3fe90e223e4c7b6fb19420
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106354951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118588158"
 ---
-# <a name="userdata-eventtype-element"></a>UserData (EventType)-Element
+# <a name="userdata-eventtype-element"></a>UserData -Element (EventType)
 
 Enthält die Ereignisdaten.
 
@@ -30,7 +30,7 @@ Enthält die Ereignisdaten.
  />
 ```
 
-Das **UserData** -Element wird durch den komplexen [**eventType**](eventschema-eventtype-complextype.md) -Typ definiert.
+Das **UserData-Element** wird durch den komplexen [**EventType-Typ**](eventschema-eventtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **UserData** -Element wird durch den komplexen [**eventType**](eventschema-e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

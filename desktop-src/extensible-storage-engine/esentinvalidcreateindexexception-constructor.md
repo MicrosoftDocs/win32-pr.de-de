@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentinvalidkreateindexexception-Konstruktor'
-title: Esentinvalidkreateindexexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidCreateIndexException-Konstruktor'
+title: EsentInvalidCreateIndexException-Konstruktor
 TOCTitle: 'EsentInvalidCreateIndexException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidCreateIndexException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcreateindexexception.esentinvalidcreateindexexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8a0f8038fb43999121dd8463e52aaeb106d8365a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb013903baf43674211f3c5e92b68cad4ce909460c99869c243d36e47ecb9a7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118266534"
 ---
-# <a name="esentinvalidcreateindexexception-constructor"></a>Esentinvalidkreateindexexception-Konstruktor
+# <a name="esentinvalidcreateindexexception-constructor"></a>EsentInvalidCreateIndexException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidkreateindexexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidCreateIndexException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentInvalidCreateIndexException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentinvalidkreateindexexception-Klasse](./esentinvalidcreateindexexception-class.md)
+[EsentInvalidCreateIndexException-Klasse](./esentinvalidcreateindexexception-class.md)
 
-[Esentinvalidkreateindexexception-Member](./esentinvalidcreateindexexception-members.md)
+[EsentInvalidCreateIndexException-Member](./esentinvalidcreateindexexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

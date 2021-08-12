@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-bitmapcachesize (Eigenschaft)
-description: Die Größe (in Kilobyte) der Bitmap-Cachedatei, die für 8-Bit-pro-Pixel-Bitmaps verwendet wird.
+title: IMsRdpClientAdvancedSettings BitmapCacheSize-Eigenschaft
+description: Die Größe der Bitmapcachedatei in Kilobyte, die für Bitmaps mit 8 Bits pro Pixel verwendet wird.
 ms.assetid: a2a4b739-0fa3-4a76-87ae-3cba913b7703
 ms.tgt_platform: multiple
 keywords:
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, bitmapcachesize-Eigenschaft
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
-- Bitmapcachesize-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, bitmapcachesize (Eigenschaft)
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
+- BitmapCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BitmapCacheSize-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a38376bb0b06bd4efea36d3c4cad4e4aec0f35b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: af56056cbdd62bb041ba9ab08e83a4f09e69037a3f9bd6799fa0c0facc9da75e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118609051"
 ---
-# <a name="imsrdpclientadvancedsettingsbitmapcachesize-property"></a>Imsrdpclientadvancedsettings:: bitmapcachesize-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsbitmapcachesize-property"></a>IMsRdpClientAdvancedSettings::BitmapCacheSize-Eigenschaft
 
-Die Größe (in Kilobyte) der Bitmap-Cachedatei, die für 8-Bit-pro-Pixel-Bitmaps verwendet wird.
+Die Größe der Bitmapcachedatei in Kilobyte, die für Bitmaps mit 8 Bits pro Pixel verwendet wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,13 +84,13 @@ HRESULT get_BitmapCacheSize(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neue Cache Größe in Kilobyte. Die gültigen numerischen Werte lauten zwischen 1 und 32.
+Die neue Cachegröße in Kilobyte. Die gültigen numerischen Werte sind 1 bis einschließlich 32.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -104,11 +104,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

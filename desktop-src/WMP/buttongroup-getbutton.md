@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. getbutton
-description: Die getbutton-Methode ruft das ButtonElement mit dem angegebenen Index ab.
+title: BUTTONGROUP.getButton
+description: Die getButton-Methode ruft buttonelement mit dem angegebenen Index ab.
 ms.assetid: 49e1cf61-f5de-430d-8492-bd49b186f5ea
 keywords:
-- ButtonGroup. getbutton-Fenster Media Player
+- BUTTONGROUP.getButton-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d4f302480730ffba472366ac851412483040b7c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c29e1516fcbfc3a777553c412b34608ae46a74bdc75b96c265969e066c533be0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118581364"
 ---
-# <a name="buttongroupgetbutton"></a>ButtonGroup. getbutton
+# <a name="buttongroupgetbutton"></a>BUTTONGROUP.getButton
 
-Die **getbutton** -Methode ruft das **ButtonElement** mit dem angegebenen Index ab.
+Die **getButton-Methode** ruft **buttonelement** mit dem angegebenen Index ab.
 
 ``` syntax
         elementID.getButton(button)
@@ -31,16 +31,16 @@ Die **getbutton** -Methode ruft das **ButtonElement** mit dem angegebenen Index 
 
 <dl> <dt>
 
-<span id="button"></span><span id="BUTTON"></span>*gedrückt*
+<span id="button"></span><span id="BUTTON"></span>*Schaltfläche*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index des abzurufenden **buttonelements** enthält.
+**Number** (**long**), die den Index des abzurufenden **BUTTONELEMENT** enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein-Objekt zurück, das einem **ButtonElement** -Element entspricht.
+Diese Methode gibt ein Objekt zurück, das einem **BUTTONELEMENT-Element** entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ Diese Methode gibt ein-Objekt zurück, das einem **ButtonElement** -Element ents
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
 
 
 
@@ -56,10 +56,10 @@ Diese Methode gibt ein-Objekt zurück, das einem **ButtonElement** -Element ents
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonElement. Index**](buttonelement-index.md)
+[**BUTTONELEMENT.index**](buttonelement-index.md)
 </dt> </dl>
 
  

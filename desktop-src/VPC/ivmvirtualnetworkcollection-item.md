@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualnetworkcollection-Element Eigenschaft (vpccominterfaces. h)
-description: Ivmvirtualnetwork-Objekt, das dem angegebenen Index entspricht.
+title: IVMVirtualNetworkCollection-Elementeigenschaft (VPCCOMInterfaces.h)
+description: IVMVirtualNetwork-Objekt, das dem angegebenen Index entspricht.
 ms.assetid: 1c6a3449-f76a-4216-8840-0fb9fb133e67
 keywords:
-- Element Eigenschaft virtueller PC
-- Item-Eigenschaft Virtual PC, ivmvirtualnetworkcollection-Schnittstelle
-- Ivmvirtualnetworkcollection-Schnittstelle Virtual PC, Item-Eigenschaft
+- Elementeigenschaft Virtueller PC
+- Item-Eigenschaft Virtueller PC, IVMVirtualNetworkCollection-Schnittstelle
+- IVMVirtualNetworkCollection-Schnittstelle Virtueller PC , Item-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac5a7648db4708fbc1b445029419ee794809abcb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9133efe93ef5feeb9d8e15862a9d25ea6b14c0de08dd35faa46abc4589fcb21b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118592318"
 ---
-# <a name="ivmvirtualnetworkcollectionitem-property"></a>Ivmvirtualnetworkcollection:: Item (Eigenschaft)
+# <a name="ivmvirtualnetworkcollectionitem-property"></a>IVMVirtualNetworkCollection::Item-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft das [**ivmvirtualnetwork**](ivmvirtualnetwork.md) -Objekt ab, das dem angegebenen Index entspricht.
+Ruft das [**IVMVirtualNetwork-Objekt**](ivmvirtualnetwork.md) ab, das dem angegebenen Index entspricht.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -46,7 +46,7 @@ HRESULT get_Item(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [**ivmvirtualnetwork**](ivmvirtualnetwork.md) -Objekt.
+Das [**IVMVirtualNetwork-Objekt.**](ivmvirtualnetwork.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -55,9 +55,9 @@ Das [**ivmvirtualnetwork**](ivmvirtualnetwork.md) -Objekt.
 | Name/Wert                                                                                                                                                    | Bedeutung                                                                                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>                                                      |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der *VirtualNetwork* -Parameter ist **null**.<br/>                                        |
-| <dl> <dt>DISP \_ E \_ badindex</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                  |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der *parameter virtualNetwork* ist **NULL.**<br/>                                        |
+| <dl> <dt>DISP \_ E \_ BADINDEX</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                  |
 
 
 
@@ -67,12 +67,12 @@ Das [**ivmvirtualnetwork**](ivmvirtualnetwork.md) -Objekt.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                           |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                           |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl>  |
-| IID<br/>                      | IID \_ ivmvirtualnetworkcollection ist als 8ed680be-4242-4b2a-A21C-1982d8b0f. definiert.<br/> |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl>  |
+| IID<br/>                      | IID \_ IVMVirtualNetworkCollection ist als 8ed680be-4242-4b2a-a21c-1982d8b0f675 definiert.<br/> |
 
 
 
@@ -80,10 +80,10 @@ Das [**ivmvirtualnetwork**](ivmvirtualnetwork.md) -Objekt.
 
 <dl> <dt>
 
-[**Ivmvirtualnetwork**](ivmvirtualnetwork.md)
+[**IVMVirtualNetwork**](ivmvirtualnetwork.md)
 </dt> <dt>
 
-[**Ivmvirtualnetworkcollection**](ivmvirtualnetworkcollection.md)
+[**IVMVirtualNetworkCollection**](ivmvirtualnetworkcollection.md)
 </dt> </dl>
 
  

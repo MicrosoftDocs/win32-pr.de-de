@@ -1,9 +1,9 @@
 ---
-title: Message (renderinginfotype)-Element
-description: Enthält die Ereignismeldung, die für das-Ereignis gerendert wird.
+title: Message(RenderingInfoType)-Element
+description: Enthält die Ereignismeldung, die für das Ereignis gerendert wird.
 ms.assetid: 2a29f09f-cd1a-415a-aa52-1c8643a95c25
 keywords:
-- Message-Element-Ereignisprotokoll
+- Message-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bcd00b14e9a6182b881933952569f40cc8bc4ffe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6b33776a0f1b10c811d84210f66d1f0b30b4c273c0160cbc365440351160f42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118588600"
 ---
-# <a name="message-renderinginfotype-element"></a>Message (renderinginfotype)-Element
+# <a name="message-renderinginfotype-element"></a>Message(RenderingInfoType)-Element
 
-Enthält die Ereignismeldung, die für das-Ereignis gerendert wird.
+Enthält die Ereignismeldung, die für das Ereignis gerendert wird.
 
 ``` syntax
 <xs:element name="Message"
@@ -30,7 +30,7 @@ Enthält die Ereignismeldung, die für das-Ereignis gerendert wird.
  />
 ```
 
-Das **Message** -Element wird durch den komplexen [**renderinginfotype**](eventschema-renderingtype-complextype.md) -Typ definiert.
+Das **Message-Element** wird durch den komplexen [**RenderingInfoType-Typ**](eventschema-renderingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Message** -Element wird durch den komplexen [**renderinginfotype**](events
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Message** -Element wird durch den komplexen [**renderinginfotype**](events
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Renderinginfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
+[**RenderingInfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
 </dt> </dl>
 
  

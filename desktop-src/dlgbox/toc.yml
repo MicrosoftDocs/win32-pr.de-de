@@ -130,7 +130,7 @@
                   href: page-setup-dialog-box.md
                 - name: Drucken (Dialogfeld)
                   href: print-dialog-box.md
-                - name: Eigenschaftenblatt drucken
+                - name: Drucken des Eigenschaftenblatts
                   href: print-property-sheet.md
             - name: Allgemeine Dialogfeld-Initialisierungsflags
               href: common-dialog-box-initialization-flags.md
@@ -150,7 +150,7 @@
                   href: /windows/win32/api/commdlg/nc-commdlg-lpcfhookproc
                 - name: ChooseColor
                   href: /previous-versions/windows/win32/legacy/ms646912(v=vs.85)
-                - name: ChooseFont
+                - name: Wählen SieFont aus.
                   href: /windows/win32/api/Commdlg/ns-commdlg-choosefonta
                 - name: CommDlgExtendedError
                   href: /windows/win32/api/Commdlg/nf-commdlg-commdlgextendederror

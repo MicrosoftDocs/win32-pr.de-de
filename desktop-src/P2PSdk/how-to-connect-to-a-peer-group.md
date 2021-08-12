@@ -1,61 +1,61 @@
 ---
-description: In diesem Thema wird erläutert, wie eine Anwendung mithilfe der Peer Gruppierungs-APIs eine Verbindung mit einer Peer Gruppe herstellt.
+description: In diesem Thema wird erläutert, wie eine Anwendung mithilfe der Peer grouping-APIs eine Verbindung mit einer Peergruppe herstellt.
 ms.assetid: 56fa28d8-3b3a-4cd5-8448-c8c4ce8d0b2c
-title: Vorgehensweise beim Herstellen einer Verbindung mit einer Peer Gruppe
+title: How to Verbinden to a Peer Group
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5bb3f41342573742e634a6e7ebce283188f3ffd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0bb1cfd08fde0fc733873648dfae1ffb4f86b713b3ed790430686b641a893d23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118612766"
 ---
-# <a name="how-to-connect-to-a-peer-group"></a>Vorgehensweise beim Herstellen einer Verbindung mit einer Peer Gruppe
+# <a name="how-to-connect-to-a-peer-group"></a>How to Verbinden to a Peer Group
 
-In diesem Thema wird erläutert, wie eine Anwendung mithilfe der Peer Gruppierungs-APIs eine Verbindung mit einer Peer Gruppe herstellt.
+In diesem Thema wird erläutert, wie eine Anwendung mithilfe der Peer grouping-APIs eine Verbindung mit einer Peergruppe herstellt.
 
-## <a name="joining-a-peer-group"></a>Beitreten zu einer Peer Gruppe
+## <a name="joining-a-peer-group"></a>Beitreten zu einer Peergruppe
 
-Wenn Sie einer Peer Gruppe beitreten möchten, nennen Sie [**peergroupjoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin), und übergeben Sie dabei den Identitäts Namen des Peers und die Einladung (und einen optionalen PNRP-cloudnamen, wenn der cloudName in der Einladung mehrdeutig ist).
+Rufen Sie zum Beitreten zu einer Peergruppe [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)auf, und übergeben Sie dabei den Identitätsnamen des Peers und die Einladung (und einen optionalen PNRP-Cloudnamen, wenn der Cloudname in der Einladung mehrdeutig ist).
 
-Wenn der Vorgang erfolgreich ist, gibt [**peergroupjoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin) ein Handle für die Peer Gruppe zurück.
+Bei Erfolg gibt [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin) ein Handle an die Peergruppe zurück.
 
-Wenn der Peer zuvor der Peer Gruppe beigetreten ist und dann das Handle geschlossen hat, sollte die Peer Gruppe durch Aufrufen von [**peergroupopen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen) und übergeben des Namens der Peer Gruppe erneut geöffnet werden. Dieser Rückruf gibt ein neues Peer Gruppen Handle zurück.
+Wenn der Peer zuvor der Peergruppe beigetreten ist und dann das Handle geschlossen hat, sollte die Peergruppe erneut geöffnet werden, indem [**PeerGroupOpen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen) aufruft und der Name der Peergruppe übergeben wird. Dieser Aufruf gibt ein neues Peergruppenhand handle zurück.
 
-Nachdem die Peer Gruppe erfolgreich verknüpft wurde, kann der Peer eine direkte Verbindung mit der Peer Gruppe herstellen und mit der Interaktion beginnen, indem [**peergroupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)aufgerufen wird. Nachdem die Verbindung hergestellt wurde, wird der Peer als "Online" betrachtet.
+Nachdem die Peergruppe erfolgreich beigetreten ist, kann der Peer eine direkte Verbindung mit der Peergruppe herstellen und mit der Interaktion beginnen, indem [**PeerGroupConnect aufruft.**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) Nach dem Herstellen der Verbindung gilt der Peer als "online".
 
-Wenn eine Anwendung zu diesem Zeitpunkt nicht mit der Gruppe interagiert, kann Sie "Offline" bleiben. Wenn die Teilnahme an einer späteren Instanz direkt an der Peer Gruppe teilnimmt, wird Sie durch einen nachfolgenden [**peergroupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) -Befehl online geschaltet. Nachdem ein Peer der Peer Gruppe beigetreten ist, muss er mindestens einmal eine Verbindung herstellen, bevor er Datensätze in der Peer Gruppe veröffentlichen kann.
+Wenn eine Anwendung zu diesem Zeitpunkt nicht mit der Gruppe interagiert, kann sie "offline" bleiben. Wenn sie sich für eine direkte Teilnahme an der Peergruppe in einer späteren Instanz entscheidet, wird sie durch einen nachfolgenden Aufruf von [**PeerGroupConnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) online wiederherstellen. Nachdem ein Peer der Peergruppe beigetreten ist, muss er mindestens einmal eine Verbindung herstellen, bevor er Datensätze in der Peergruppe veröffentlichen kann.
 
-## <a name="opening-a-peer-group-without-connecting-offline"></a>Öffnen einer Peer Gruppe ohne Verbindung (offline)
+## <a name="opening-a-peer-group-without-connecting-offline"></a>Öffnen einer Peergruppe ohne Verbindung (offline)
 
-Häufig möchten Sie, dass eine Anwendung eine Verbindung mit einer Peer Gruppe herstellt, Sie jedoch nicht direkt daran beteiligt, Daten Satz Aktualisierungen empfängt und veröffentlicht, aber keine Daten Nachrichten sendet oder empfängt. Eine Anwendung befindet sich unmittelbar nach dem Aufrufen von " [**Peer groupcreate**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate)", " [**Peer GroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)" oder " [**Peer groupopen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen) " in diesem Status "Offline".
+Häufig möchten Sie eine Anwendung eine Verbindung mit einer Peergruppe herstellen, aber nicht direkt daran teilnehmen, d. b. Aktualisierungen von Datensatzdaten empfangen und veröffentlichen, aber keine Datennachrichten senden oder empfangen. Eine Anwendung befindet sich unmittelbar nach dem Aufgerufenen [**von PeerGroupCreate,**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate) [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)oder [**PeerGroupOpen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen) in diesem Offlinezustand.
 
-Eine Offline Anwendung kann jederzeit online geschaltet werden, indem " [**Peer groupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)" aufgerufen wird. Nachdem die Verbindung hergestellt wurde, kann eine Peer Gruppe erst offline geschaltet werden, wenn alle anderen Anwendungen, die dieser Identität zugeordnet sind und die diese Gruppe freigeben, ebenfalls über geschlossene Verbindungen verfügen.
+Eine Offlineanwendung kann jederzeit durch Aufrufen von [**PeerGroupConnect online geschaltet werden.**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) Sobald die Verbindung besteht, kann eine Peergruppe erst offline geschaltet werden, wenn alle anderen Anwendungen, die dieser Identität zugeordnet sind und diese Gruppe freigeben, auch über geschlossene Verbindungen verfügen.
 
-Eine Peer Gruppe ist eine freigegebene Ressource mit der gleichen Peer Gruppe, die für mehrere Anwendungen verfügbar ist. Wenn mehr als eine Anwendung für die gleiche Identität und den Windows-Benutzer dieselbe Peer Gruppe verwendet, nutzen Sie auch die gleiche zugrunde liegende Datenbank und die gleichen Verbindungen (Nachbar und direkt). Wenn eine dieser Anwendungen [**peergroupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)aufruft, stellen alle anderen Anwendungen für diese Identität bzw. diesen Benutzer, die an der Gruppe teilnehmen, auch eine Verbindung mit der Gruppe her. Wenn ein Datensatz von einer Anwendung hinzugefügt wird, während die Gruppe offline ist, können andere Anwendungen Sie sehen. Daher muss eine Anwendung jederzeit online geschaltet werden können.
+Eine Peergruppe ist eine freigegebene Ressource, bei der dieselbe Peergruppe für mehrere Anwendungen verfügbar ist. Wenn mehr als eine Anwendung für dieselbe Identität und Windows benutzer dieselbe Peergruppe verwendet, verwenden sie auch die gleiche zugrunde liegende Datenbank und die gleichen Verbindungen (Nachbar und direkt). Wenn eine dieser Anwendungen [**PeerGroupConnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)aufruft, stellen alle anderen Anwendungen für diese Identität/diesen Benutzer, die an der Gruppe teilnehmen, ebenfalls eine Verbindung mit der Gruppe her. Wenn ein Datensatz von einer Anwendung hinzugefügt wird, während die Gruppe offline ist, können andere Anwendungen ihn auch sehen. Daher muss eine Anwendung jederzeit online gehen können.
 
-## <a name="connecting-to-a-peer-group-online"></a>Herstellen einer Verbindung mit einer Peer Gruppe (Online)
+## <a name="connecting-to-a-peer-group-online"></a>Herstellen einer Verbindung mit einer Peergruppe (Online)
 
-Um mit der Teilnahme an einer Gruppe zu beginnen, können Sie [**peergroupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) aufrufen, nachdem Sie die Gruppe erstellt, beitreten oder geöffnet haben. In diesem Zustand können direkte Verbindungen mit anderen Peers geöffnet werden, die an derselben Gruppe teilnehmen, indem [**peergroupopendirectconnection**](/windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection)aufgerufen wird.
+Um mit der Teilnahme an einer Gruppe zu beginnen, rufen Sie [**PeerGroupConnect auf,**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) nachdem Sie die Gruppe erstellt, beitreten oder geöffnet haben. In diesem Zustand können direkte Verbindungen mit anderen Peers geöffnet werden, die an derselben Gruppe teilnehmen, indem [**PeerGroupOpenDirectConnection aufruft.**](/windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection)
 
-Um zu ermitteln, ob bei einem Verbindungsversuch ein Fehler aufgetreten ist, registrieren Sie sich für das Ereignis Verbindungsfehler bei der Peer \_ Gruppe \_ \_ \_ . Dieses Ereignis wird ausgelöst, wenn die Gruppierungs Infrastruktur keinen anderen Member finden kann, mit dem eine Verbindung hergestellt werden kann, oder wenn die Verbindung fehlschlägt, bevor die Gruppen Datenbank synchronisiert wird und keine andere Verbindung hergestellt werden kann.
+Um zu ermitteln, ob ein Verbindungsversuch fehlgeschlagen ist, registrieren Sie sich für das PEER \_ GROUP \_ EVENT CONNECTION \_ \_ FAILED-Ereignis. Dieses Ereignis wird ausgelöst, wenn die Gruppierungsinfrastruktur kein anderes Mitglied finden kann, mit dem eine Verbindung hergestellt werden kann, oder wenn die Verbindung fehlschlägt, bevor die Gruppendatenbank synchronisiert wird und keine weitere Verbindung hergestellt werden kann.
 
-Obwohl mehrere Anwendungen, die auf dem Peer ausgeführt werden und an derselben Gruppe mit der gleichen Peer Identität beteiligt sind, möglicherweise offline sind, führt ein Aufrufen von [**peergroupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) durch eine der Anwendungen dazu, dass alle Anwendungen online werden.
+Obwohl mehrere Anwendungen, die auf dem Peer ausgeführt werden und an derselben Gruppe mit derselben Peeridentität teilnehmen, offline sein können, führt ein Aufruf von [**PeerGroupConnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) durch eine der Anwendungen dazu, dass alle Anwendungen online geschaltet werden.
 
-Wenn eine Anwendung auf dem Peer eine Verbindung mit der Gruppe hergestellt hat, sind auch alle anderen Anwendungen, die [**peergroupjoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin) oder [**peergroupopen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen) aufrufen, sofort verbunden. Wenn eine Anwendung " [**Peer groupclose**](/windows/desktop/api/P2P/nf-p2p-peergroupclose)" aufruft, wird das Handle nur für diese Anwendung geschlossen. Folglich gibt ein nachfolgende Aufrufen von **peergroupopen** durch die Anwendung ein neues Gruppen Handle zurück, und die Anwendung wird sofort online geschaltet, wenn andere Anwendungen, die an derselben Gruppe teilnehmen, weiterhin verbunden sind.
+Wenn eine Anwendung auf dem Peer mit der Gruppe verbunden ist, werden auch alle anderen Anwendungen, die [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin) oder [**PeerGroupOpen**](/windows/desktop/api/P2P/nf-p2p-peergroupopen) aufrufen, sofort verbunden. Wenn eine Anwendung [**PeerGroupClose aufruft,**](/windows/desktop/api/P2P/nf-p2p-peergroupclose)wird das Handle nur für diese Anwendung geschlossen. Daher gibt ein nachfolgender Aufruf von **PeerGroupOpen** durch die Anwendung ein neues Gruppenhand handle zurück, und die Anwendung wird sofort online gestellt, wenn andere Anwendungen, die zur gleichen Gruppe gehören, weiterhin verbunden sind.
 
-## <a name="sending-and-receiving-data"></a>Senden und empfangen von Daten
+## <a name="sending-and-receiving-data"></a>Senden und Empfangen von Daten
 
-Zum Senden und empfangen von Daten zwischen bestimmten Mitglieds Knoten in der Gruppe müssen Direktverbindungen mit den Mitgliedern hergestellt werden, mit denen Sie interagieren möchten. Das Einrichten einer direkten Verbindung ist ein asynchroner [**peergroupopendirectconnection-Peering**](/windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection)und übergibt das Handle für eine verbundene Gruppe sowie die Identität des Peers innerhalb der Gruppe, mit der Sie eine Verbindung herstellen möchten. Diese Methode gibt eine Verbindungs-ID zurück. Wenn der-Vorgang erfolgreich ist, \_ \_ wird auf dem Peer ein Ereignis für eine Peer Gruppen Ereignis- \_ direkte \_ Verbindung ausgelöst, wobei die Verbindungs-ID überprüft wird.
+Um Daten zwischen bestimmten Mitgliedsknoten in der Gruppe zu senden und zu empfangen, müssen direkte Verbindungen mit den Mitgliedern hergestellt werden, mit denen Sie interagieren möchten. Das Herstellen einer direkten Verbindung ist ein asynchroner Aufruf von [**PeerGroupOpenDirectConnection,**](/windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection)bei dem das Handle für eine verbundene Gruppe sowie die Identität des Peers innerhalb der Gruppe übergeben wird, mit der Sie eine Verbindung herstellen möchten. Diese Methode gibt eine Verbindungs-ID zurück. Wenn der Aufruf erfolgreich ist, wird ein PEER GROUP EVENT DIRECT CONNECTION-Ereignis auf dem Peer ausgelöst, um \_ \_ die \_ \_ Verbindungs-ID zu überprüfen.
 
-Um direkte Verbindungen von anderen Online Peers zu empfangen, registrieren Sie sich \_ \_ \_ \_ mit einem [**peergroupregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent)-Ereignis für das Peer Group Event Direct Connection-Ereignis.
+Um direkte Verbindungen von anderen Online-Peers zu empfangen, registrieren Sie sich für das PEER GROUP EVENT DIRECT CONNECTION-Ereignis mit einem Aufruf \_ \_ von \_ \_ [**PeerGroupRegisterEvent.**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent)
 
-Sobald eine direkte Verbindung hergestellt wurde, kann die Anwendung mit dem Senden von Daten mit Aufrufen von " [**Peer Group Data**](/windows/desktop/api/P2P/nf-p2p-peergroupsenddata)" beginnen und dabei die gültige Verbindungs-ID übergeben. Die Reihenfolge von mehrteiligen Datenübertragungen wird von " **Peer Group**" verarbeitet. Anwendungen sollten jedoch einen ordnungsgemäßen Protokollstapel implementieren, um die nicht transparenten Daten zu verarbeiten, die von diesem API-Befehl zurückgegeben werden.
+Nachdem eine direkte Verbindung erfolgreich hergestellt wurde, kann die Anwendung mit dem Senden von Daten mit Aufrufen von [**PeerGroupSendData**](/windows/desktop/api/P2P/nf-p2p-peergroupsenddata)beginnen und die gültige Verbindungs-ID übergeben. Die Reihenfolge der mehrteiligen Datenübertragungen wird von **PeerGroupSendData verarbeitet.** Anwendungen sollten jedoch einen geeigneten Protokollstapel für die Verarbeitung der nicht transparenten Daten implementieren, die von diesem API-Aufruf zurückgegeben werden.
 
-Um Daten über eine direkte Verbindung zu empfangen, muss sich die Anwendung \_ \_ \_ \_ mit [**peergroupregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent)für das Ereignis eingehende Daten der Peer Gruppe registrieren. Der Ereignishandler ist für das Abrufen und Anordnen der nicht transparenten Daten und die Übergabe an die Anwendung zuständig. Diese Daten werden innerhalb des Ereignis Handlers abgerufen, indem " [**Peer groupgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) " mit dem Handle für die registrierten Ereignisse aufgerufen wird.
+Um Daten über eine direkte Verbindung zu empfangen, muss sich die Anwendung bei PeerGroupRegisterEvent für das PEER \_ GROUP \_ EVENT INCOMING \_ \_ [**DATA-Ereignis registrieren.**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent) Der Ereignishandler ist dafür verantwortlich, die nicht transparenten Daten zu erhalten und zu ordnen und an die Anwendung zu übergeben. Diese Daten werden innerhalb des Ereignishandlers durch Aufrufen von [**PeerGroupGetEventData mit**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) dem Handle für die registrierten Ereignisse erhalten.
 
-Eine direkte Verbindung wird geschlossen, indem [**peergroupclosedirectconnection**](/windows/desktop/api/P2P/nf-p2p-peergroupclosedirectconnection) aufgerufen und die Verbindungs-ID übergeben wird, die durch einen vorherigen Aufruf von [**peergroupopendirectconnection**](/windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection) abgerufen oder in den Ereignisdaten für die \_ \_ \_ direkte Verbindung mit der Peer-Ereignis Gruppe empfangen wurde \_ .
+Eine direkte Verbindung wird durch Aufrufen von [**PeerGroupCloseDirectConnection**](/windows/desktop/api/P2P/nf-p2p-peergroupclosedirectconnection) und Übergeben der Verbindungs-ID geschlossen, die durch einen vorherigen Aufruf von [**PeerGroupOpenDirectConnection**](/windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection) ermittelt oder in den Ereignisdaten für PEER EVENT GROUP DIRECT CONNECTION empfangen \_ \_ \_ \_ wurde.
 
  
 

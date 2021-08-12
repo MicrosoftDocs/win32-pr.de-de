@@ -1,6 +1,6 @@
 ---
-title: WaitTimeout (idlesettingstype)-Element
-description: Gibt die Zeitspanne an, die der Taskplaner auf das Eintreten einer Leerlauf Bedingung wartet.
+title: WaitTimeout-Element (idleSettingsType)
+description: Gibt die Zeitspanne an, die der Taskplaner auf das Auftreten einer Leerlaufbedingung wartet.
 ms.assetid: 6a4cc80d-adc2-47a7-946f-a9f12eeb35a4
 keywords:
 - WaitTimeout-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 16f71a014358a8e0520274d1ff853cf6146aa05d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4d078acecf39f9bd4848cabaa8b203787049ca8a66e565e6183b8b1998389ad8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118610395"
 ---
-# <a name="waittimeout-idlesettingstype-element"></a>WaitTimeout (idlesettingstype)-Element
+# <a name="waittimeout-idlesettingstype-element"></a>WaitTimeout-Element (idleSettingsType)
 
-Gibt die Zeitspanne an, die der Taskplaner auf das Eintreten einer Leerlauf Bedingung wartet. Wenn für dieses Element kein Wert angegeben wird, wartet der Taskplaner-Dienst unbegrenzt, bis eine Leerlauf Bedingung auftritt. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Weitere Informationen zum Duration-Typ finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> . Die zulässige minimal Zeit beträgt 1 Minute.
+Gibt die Zeitspanne an, die der Taskplaner auf das Auftreten einer Leerlaufbedingung wartet. Wenn für dieses Element kein Wert angegeben wird, wartet der Taskplaner-Dienst unbegrenzt, bis eine Leerlaufbedingung auftritt. Das Format für diese Zeichenfolge lautet PnYnMnDTnHnMnS, wobei nY die Anzahl der Jahre, nM die Anzahl der Monate, nD die Anzahl der Tage, "T" das Datums-/Uhrzeittrennzeichen, nH die Anzahl der Stunden, nM die Anzahl der Minuten und nS die Anzahl von Sekunden ist (z. B. PT5M gibt 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> . Die zulässige Mindestzeit beträgt 1 Minute.
 
 ``` syntax
 <xs:element name="WaitTimeout"
@@ -41,27 +41,27 @@ Gibt die Zeitspanne an, die der Taskplaner auf das Eintreten einer Leerlauf Bedi
 </xs:element>
 ```
 
-Das-Element wird durch den komplexen Typ [**idlesettingstype**](taskschedulerschema-idlesettingstype-complextype.md) definiert.
+Das Element wird durch den komplexen [**idleSettingsType-Typ**](taskschedulerschema-idlesettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                       | Abgeleitet von                                                                 | BESCHREIBUNG                                                                                       |
+| Element                                                                       | Abgeleitet von                                                                 | Beschreibung                                                                                       |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [**Idlesettings**](taskschedulerschema-idlesettings-settingstype-element.md) | [**idlesettingstype**](taskschedulerschema-idlesettingstype-complextype.md) | Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.<br/> |
+| [**IdleSettings**](taskschedulerschema-idlesettings-settingstype-element.md) | [**idleSettingsType**](taskschedulerschema-idlesettingstype-complextype.md) | Gibt an, wie der Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird diese Einstellung für den Leerlauf mithilfe der [**idlesettings. WaitTimeout**](idlesettings-waittimeout.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird diese Leerlaufeinstellung mithilfe der [**IdleSettings.WaitTimeout-Eigenschaft**](idlesettings-waittimeout.md) angegeben.
 
-Bei der C++-Entwicklung wird diese Einstellung für den Leerlauf mithilfe der [**iidlesettings:: WaitTimeout**](/windows/desktop/api/taskschd/nf-taskschd-iidlesettings-get_waittimeout) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird diese Leerlaufeinstellung mithilfe der [**IIdleSettings::WaitTimeout-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iidlesettings-get_waittimeout) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert eine Leerlauf Einstellung, die 24 Stunden wartet, bis eine Leerlauf Bedingung auftritt.
+Der folgende XML-Code definiert eine Leerlaufeinstellung, die 24 Stunden wartet, bis eine Leerlaufbedingung auftritt.
 
 
 ```XML
@@ -78,16 +78,16 @@ Der folgende XML-Code definiert eine Leerlauf Einstellung, die 24 Stunden wartet
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

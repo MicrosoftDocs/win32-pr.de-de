@@ -1,9 +1,9 @@
 ---
-title: ListBox. FontStyle
-description: Das FontStyle-Attribut gibt den Schrift Schnitt für das Listenfeld-Steuerelement an oder ruft ihn ab.
+title: LISTBOX.fontStyle
+description: Das attribut fontStyle gibt den Schriftschnitt für das Listenfeld-Steuerelement an oder ruft den Schriftschnitt ab.
 ms.assetid: c42b80b6-0dea-4080-a06e-931fdc02fa55
 keywords:
-- ListBox. FontStyle-Fenster Media Player
+- LISTBOX.fontStyle-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0903ac77f1fa4307dfcabad6311eb556617d8153
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 258064ca4ee97fc33bb98bf64d8e3dcf305c5d7e045282a5218a060e904aff50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575037"
 ---
-# <a name="listboxfontstyle"></a>ListBox. FontStyle
+# <a name="listboxfontstyle"></a>LISTBOX.fontStyle
 
-Das **FontStyle** -Attribut gibt den Schrift Schnitt für das Listenfeld-Steuerelement an oder ruft ihn ab.
+Das **attribut fontStyle** gibt den Schriftschnitt für das Listenfeld-Steuerelement an oder ruft den Schriftschnitt ab.
 
 ``` syntax
         elementID.fontStyle
@@ -29,27 +29,27 @@ Das **FontStyle** -Attribut gibt den Schrift Schnitt für das Listenfeld-Steuere
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen oder mehrere der folgenden Werte enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die mindestens einen der folgenden Werte enthält.
 
 
 
-| Wert     | BESCHREIBUNG           |
+| Wert     | Beschreibung           |
 |-----------|-----------------------|
-| Fett      | Fett Schriftstil.      |
-| Kursiv    | Kursiv Schriftstil.    |
-| Underline | Unterstreichung der Schriftart. |
-| Durchgestrichen | Stil der Strikeout-Schriftart. |
-| Normal    | Normaler Schriftart Stil.    |
+| Fett      | Fetter Schriftschnitt.      |
+| Kursiv    | Italischer Schriftschnitt.    |
+| Underline | Unterstrichen Sie den Schriftschnitt. |
+| Durchgestrichen | Schriftschnitt mit durchsaarten Zeichen. |
+| Normal    | Normaler Schriftschnitt.    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine beliebige Kombination der Werte kann mit Leerzeichen getrennt verwendet werden. Der normale Stil hat Vorrang vor allen anderen Werten, und alle anderen Werte, die zusammen mit normal angegeben werden, werden ignoriert.
+Jede Kombination der Werte kann verwendet werden, getrennt durch Leerzeichen. Der Normal-Stil hat Vorrang vor allen anderen Werten, und alle anderen werte, die zusammen mit Normal angegeben werden, werden ignoriert.
 
-Zu Renderingzwecken ist normal der Standard Schriftart Stil. Der Standardwert, der von diesem Attribut abgerufen wird, ist "" (leere Zeichenfolge).
+Zu Renderingzwecken ist Normal der Standardschriftstil. Der Standardwert, der von diesem Attribut abgerufen wird, ist "" (leere Zeichenfolge).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,10 +65,10 @@ Zu Renderingzwecken ist normal der Standard Schriftart Stil. Der Standardwert, d
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**ListBox. FontSize**](listbox-fontsize.md)
+[**LISTBOX.fontSize**](listbox-fontsize.md)
 </dt> </dl>
 
  

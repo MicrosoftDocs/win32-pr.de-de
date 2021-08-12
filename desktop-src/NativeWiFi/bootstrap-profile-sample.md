@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um sich zum ersten Mal bei einem Drahtlos Netzwerk zu authentifizieren, bevor der Computer einer Domäne hinzugefügt wurde.
+description: Wird verwendet, um sich zum ersten Mal bei einem Drahtlosnetzwerk zu authentifizieren, bevor der Computer einer Domäne beigetreten ist.
 ms.assetid: e1a5ce76-9761-4c65-8b26-a44bf2eb1835
-title: Bootstrap-Profil Beispiel
+title: Bootstrap-Profilbeispiel
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,24 +9,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 96c7daa6bdc72146400973d08c9e5780092b214a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4aa83aa04ce4a442351485c25fbc7f4c6d252f923f6777cfe807abf9ba527a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118620217"
 ---
-# <a name="bootstrap-profile-sample"></a>Bootstrap-Profil Beispiel
+# <a name="bootstrap-profile-sample"></a>Bootstrap-Profilbeispiel
 
-Das Bootstrap-Profil Beispiel kann verwendet werden, um sich zum ersten Mal bei einem Drahtlos Netzwerk zu authentifizieren, bevor der Computer einer Domäne hinzugefügt wurde.
+Das Bootstrap-Profilbeispiel kann verwendet werden, um sich zum ersten Mal bei einem Drahtlosnetzwerk zu authentifizieren, bevor der Computer einer Domäne beigetreten ist.
 
-Dieses Profil überprüft nicht die vom RADIUS-Server (Remote Authentication Dial-in User Service) dargestellten Zertifikate und sollte nicht verwendet werden, nachdem der Computer einer Domäne hinzugefügt wurde.
+Dieses Profil überprüft nicht die vom RADIUS-Server (Remote Authentication Dial-In User Service) angezeigten Zertifikate und sollte nicht verwendet werden, nachdem der Computer in eine Domäne eingebunden wurde.
 
-Dieses Beispiel ist für die Verwendung Wi-Fi geschützten Zugriffs 2-Sicherheit konfiguriert, die im Unternehmens Modus (WPA2-Enterprise) ausgeführt wird. Andere Sicherheits Typen können verwendet werden, solange die Authentifizierungsmethode "Peer-MSCHAPv2" ist.
+Dieses Beispiel ist so konfiguriert, dass Wi-Fi Protected Access 2-Sicherheit verwendet wird, die im Enterprise Modus (WPA2-Enterprise) ausgeführt wird. Andere Sicherheitstypen können verwendet werden, solange die Authentifizierungsmethode PEAP-MSCHAPv2 ist.
 
-**Windows 7 und Windows Server 2008 R2 mit installiertem drahtlosen LAN-Dienst:** Änderungen werden unter Windows 7 und Windows Server 2008 R2 implementiert, und der drahtlose LAN-Dienst wird installiert, um die Leistung des drahtlos Netzwerks zu optimieren. Die Standardeinstellung für [**autoswitch**](wlan-profileschema-autoswitch-wlanprofile-element.md) , wenn dieses Element nicht in einem Drahtlos LAN-Profil festgelegt ist, hat sich geändert. Die Standardeinstellung wird unter Windows 7 und Windows Server 2008 R2 in "false" geändert, wobei der drahtlose LAN-Dienst installiert ist. Die Standardeinstellung ist auf Windows Server 2008 und Windows Vista auf "true" festgelegt. Weitere Informationen finden Sie in der Beschreibung des Schema Elements " [**autoswitch**](wlan-profileschema-autoswitch-wlanprofile-element.md) ".
+**Windows 7 und Windows Server 2008 R2 mit installiertem WLAN-Dienst:** Änderungen werden auf Windows 7 und Windows Server 2008 R2 mit installiertem Wlan-Dienst implementiert, um die Leistung von Drahtlosnetzwerken zu optimieren. Die Standardeinstellung für [**autoSwitch,**](wlan-profileschema-autoswitch-wlanprofile-element.md) wenn dieses Element nicht in einem WLAN-Profil festgelegt ist, wurde geändert. Die Standardeinstellung wird auf Windows 7 und Windows Server 2008 R2 mit installiertem WLAN-Dienst in "false" geändert. Die Standardeinstellung war "true" auf Windows Server 2008 und Windows Vista. Weitere Informationen finden Sie in der [**AutoSwitch-Schemaelementbeschreibung.**](wlan-profileschema-autoswitch-wlanprofile-element.md)
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Der untergeordnete [**Name**](wlan-profileschema-name-wlanprofile-element.md) des [**wlanprofile**](wlan-profileschema-wlanprofile-element.md) -Elements wird ignoriert. Der Name des Profils, wie er im Profil Speicher gespeichert ist, wird vom untergeordneten [**Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md) -Elements abgeleitet. Die untergeordneten Elemente [**cacheuserdata**](onexschema-cacheuserdata-onex-element.md), [**authmode**](onexschema-authmode-onex-element.md)und [**SingleSignOn**](onexschema-singlesignon-onex-element.md) des [**Onex**](onexschema-onex-element.md) -Elements werden nicht unterstützt und sollten vor der Verwendung aus dem Profil entfernt werden.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Der [**untergeordnete Name**](wlan-profileschema-name-wlanprofile-element.md) des [**WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Name des Profils, wie er im Profilspeicher gespeichert ist, wird vom [**untergeordneten Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet. Die untergeordneten [**Elemente cacheUserData,**](onexschema-cacheuserdata-onex-element.md) [**authMode**](onexschema-authmode-onex-element.md)und [**singleSignOn**](onexschema-singlesignon-onex-element.md) des [**OneX-Elements**](onexschema-onex-element.md) werden nicht unterstützt und sollten vor der Verwendung aus dem Profil entfernt werden.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>
@@ -99,10 +99,10 @@ Dieses Beispiel ist für die Verwendung Wi-Fi geschützten Zugriffs 2-Sicherheit
 
 <dl> <dt>
 
-[Beispiele für Funk profile](wireless-profile-samples.md)
+[Beispiele für Funkprofile](wireless-profile-samples.md)
 </dt> <dt>
 
-[Verbinden eines Windows Vista-drahtlos Clients mit einer Domäne](https://www.microsoft.com/technet/network/wifi/vista_bootstrap_wireless.mspx)
+[Verknüpfen eines Windows Vista Wireless Client mit einer Domäne](https://www.microsoft.com/technet/network/wifi/vista_bootstrap_wireless.mspx)
 </dt> </dl>
 
  

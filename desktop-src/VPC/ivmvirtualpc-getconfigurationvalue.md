@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc getconfigurationvalue-Methode (vpccominterfaces. h)
+title: IVMVirtualPC GetConfigurationValue-Methode (VPCCOMInterfaces.h)
 description: Ruft den Wert der angegebenen Konfigurationseinstellung ab
 ms.assetid: 4598b57c-9942-4b40-97b5-41ad9ec74bfa
 keywords:
-- Getconfigurationvalue-Methode Virtual PC
-- Getconfigurationvalue-Methode Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, getconfigurationvalue-Methode
+- GetConfigurationValue-Methode Virtueller PC
+- GetConfigurationValue-Methode Virtual PC , IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC , GetConfigurationValue-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 11851e2dc2e51c0dc5eed876fc755655ed488554
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a483211353474f3328fc4e5da3b80ecf3fbbece53bc306e546f85543ac9027e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105200"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118591861"
 ---
-# <a name="ivmvirtualpcgetconfigurationvalue-method"></a>Ivmvirtualpc:: getconfigurationvalue-Methode
+# <a name="ivmvirtualpcgetconfigurationvalue-method"></a>IVMVirtualPC::GetConfigurationValue-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den Wert der angegebenen Konfigurationseinstellung ab
 
@@ -45,17 +45,17 @@ HRESULT GetConfigurationValue(
 
 <dl> <dt>
 
-*preferecekey* \[ in\]
+*preferenceKey* \[ In\]
 </dt> <dd>
 
-Der Schlüssel, der verwendet wird, um die Einstellung zu identifizieren, wie Sie in der Konfigurationsdatei gespeichert ist.
+Der Schlüssel, der zum Identifizieren der Einstellung verwendet wird, wie in der Konfigurationsdatei gespeichert.
 
 </dd> <dt>
 
-*preferumcevalue* \[ Out, retval\]
+*preferenceValue* \[ out, retval\]
 </dt> <dd>
 
-Der bevorzugte Wert. Dieser Parameter kann einer der folgenden **Variant** -Typen sein: **VT \_ Array** \| **VT \_ UI1** (RAW Bytes), **VT \_ BSTR** (String), **VT \_ I4** (Integer) oder **VT \_ bool** (Boolean).
+Der Einstellungswert. Dieser Parameter kann einer der folgenden **VARIANT-Typen** sein: **VT \_ ARRAY** \| **VT \_ UI1** (unformatierte Bytes), **VT \_ BSTR** (Zeichenfolge), **VT \_ I4** (integer) oder **VT \_ BOOL** (Boolean).
 
 </dd> </dl>
 
@@ -68,10 +68,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                        | BESCHREIBUNG                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                | Der *preferecekey* -Parameter oder der *preferendcevalue* -Parameter ist **null**.<br/>                      |
-| <dl> <dt>**VM \_ E \_ Pref \_ nicht \_ gefunden**</dt> <dt>0xa0040300</dt> </dl>                   | Die Einstellung wurde nicht gefunden.<br/>                                                        |
-| <dl> <dt>**VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert**</dt> <dt>0xa0040951</dt> </dl> | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/> |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
+| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                | Der *preferenceKey-* oder *preferenceValue-Parameter* ist **NULL.**<br/>                      |
+| <dl> <dt>**VM \_ \_E PREF \_ NOT \_ FOUND**</dt> <dt>0xa0040300</dt> </dl>                   | Die Einstellung wurde nicht gefunden.<br/>                                                        |
+| <dl> <dt>**VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT**</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
 
 
 
@@ -79,7 +79,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ermöglicht den Zugriff auf niedriger Ebene auf einen beliebigen bevorzugten Wert für den aktuellen Benutzer. Sie kann verwendet werden, um bevorzugte Werte für Kunden definierte Schlüssel abzurufen.
+Diese Methode bietet Zugriff auf einen beliebigen Einstellungswert für den aktuellen Benutzer auf niedriger Ebene. Sie kann verwendet werden, um Einstellungswerte für kundendefinierte Schlüssel abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,12 +87,12 @@ Diese Methode ermöglicht den Zugriff auf niedriger Ebene auf einen beliebigen b
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
@@ -100,7 +100,7 @@ Diese Methode ermöglicht den Zugriff auf niedriger Ebene auf einen beliebigen b
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> </dl>
 
  

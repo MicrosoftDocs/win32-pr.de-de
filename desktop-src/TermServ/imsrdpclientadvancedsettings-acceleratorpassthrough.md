@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings acceleratorpassthrough (Eigenschaft)
-description: Gibt an, ob Tastaturbeschleuniger an den Server übermittelt werden sollen.
+title: IMsRdpClientAdvancedSettings AcceleratorPassthrough (Eigenschaft)
+description: Gibt an, ob Tastenkombinationen an den Server übergeben werden sollen.
 ms.assetid: ad0053bc-e3a9-4cd5-a409-fab3e24ffffa
 ms.tgt_platform: multiple
 keywords:
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough
-- Beschleunigungs atorpassthrough-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
-- Eigenschaften Remotedesktopdienste von acceleratorpassthrough, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, acceleratorpassthrough-Eigenschaft
+- AcceleratorPassthrough-Remotedesktopdienste
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
+- AcceleratorPassthrough-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AcceleratorPassthrough-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c252c5c0477f331b66cf65b93ed2cab844fb88e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c422147848c2b2625acc518074468febb7593d4a97bb8080c1db7d4b1ba7c081
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118609254"
 ---
-# <a name="imsrdpclientadvancedsettingsacceleratorpassthrough-property"></a>Imsrdpclientadvancedsettings:: acceleratorpassthrough (Eigenschaft)
+# <a name="imsrdpclientadvancedsettingsacceleratorpassthrough-property"></a>IMsRdpClientAdvancedSettings::AcceleratorPassthrough (Eigenschaft)
 
-Gibt an, ob Tastaturbeschleuniger an den Server übermittelt werden sollen.
+Gibt an, ob Tastenkombinationen an den Server übergeben werden sollen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,15 +84,15 @@ HRESULT get_AcceleratorPassthrough(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Funktion zu deaktivieren, oder einen Wert ungleich NULL, um das Feature zu aktivieren. Der Standardwert ist ein Wert ungleich 0 (null).
+Legen Sie diesen Parameter auf 0 fest, um das Feature zu deaktivieren, oder einen Wert ungleich 0 (null), um das Feature zu aktivieren. Der Standardwert ist ein Wert ungleich 0 (null).
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,11 +104,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

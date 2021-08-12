@@ -1,9 +1,9 @@
 ---
-title: glclearstencil-Funktion (GL. h)
-description: Die glclearstencil-Funktion gibt den eindeutigen Wert für den Schablonen Puffer an.
+title: glClearStencil-Funktion (Gl.h)
+description: Die glClearStencil-Funktion gibt den eindeutigen Wert für den Schablonenpuffer an.
 ms.assetid: bbde8fa8-78f3-45bd-bac3-5d03839acc52
 keywords:
-- glclearstencil-Funktion OpenGL
+- glClearStencil-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78d831540b4c7833368bbac075835faaec359695
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4749a8d9c4844bd95181a7353bb0ce4559001fa47164fec3dbab5c188de8d994
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618030"
 ---
-# <a name="glclearstencil-function"></a>glclearstencil-Funktion
+# <a name="glclearstencil-function"></a>glClearStencil-Funktion
 
-Die **glclearstencil** -Funktion gibt den eindeutigen Wert für den Schablonen Puffer an.
+Die **glClearStencil-Funktion** gibt den eindeutigen Wert für den Schablonenpuffer an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glClearStencil(
 *s* 
 </dt> <dd>
 
-Der Index, der verwendet wird, wenn der Schablonen Puffer gelöscht wird. Der Standardwert ist 0 (null).
+Der Index, der beim Löschen des Schablonenpuffers verwendet wird. Der Standardwert ist 0 (null).
 
 </dd> </dl>
 
@@ -53,25 +53,25 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glclearstencil** -Funktion gibt den von [**glClear**](glclear.md) verwendeten Index zum Löschen des Schablonen Puffers an. Der *s* -Parameter wird mit 2 <sup>m</sup>  -1 maskiert, wobei *m* die Anzahl der Bits im Schablonen Puffer ist.
+Die **glClearStencil-Funktion** gibt den Index an, der von [**glClear**](glclear.md) zum Löschen des Schablonenpuffers verwendet wird. Der *s-Parameter* wird mit 2 <sup>m</sup>  bis 1 maskiert, wobei *m* die Anzahl der Bits im Schablonenpuffer ist.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " **glclearstencil** " ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glClearStencil-Funktion** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Stencil \_ Clear \_ value
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ STENCIL \_ CLEAR \_ VALUE
 
-**glget** mit Argument GL- \_ Schablonen \_ Bits
+**glGet** mit Argument GL \_ STENCIL \_ BITS
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,13 +81,13 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -100,7 +100,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> </dl>
 
  

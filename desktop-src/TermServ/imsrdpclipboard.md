@@ -1,10 +1,10 @@
 ---
 title: IMsRdpClipboard-Schnittstelle
-description: Stellt den Zwischenablage Controller dar, mit dem die lokalen und Remote-zwischen Ablagen synchronisiert werden, wenn die manuelle Synchronisierung der Zwischenablage aktiviert
+description: Stellt den Zwischenablagecontroller dar, der zum Synchronisieren der lokalen und Remote-Zwischenablage verwendet wird, wenn die manuelle Zwischenablagesynchronisierung aktiviert ist.
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpclipboard-Schnittstelle Remotedesktopdienste
-- Imsrdpclipboard-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpClipboard-Remotedesktopdienste
+- IMsRdpClipboard-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,34 +15,34 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: 1baa65264226d5c4bd1e32acbe0666545e79b7a0
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: a1ffc9a503365337676a11ccbdb872c1c7c7bed24eeb108fe1d565ced4de41d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "104123301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118606877"
 ---
 # <a name="imsrdpclipboard-interface"></a>IMsRdpClipboard-Schnittstelle
 
-Stellt den Zwischenablage Controller dar, der zum Synchronisieren der lokalen und Remote-zwischen Ablagen verwendet wird, wenn die manuelle Synchronisierung der Zwischenablage aktiviert ist (d. h., der [manualclipboardsyncenabled](imsrdpextendedsettings-property.md) -Eigenschafts Wert ist auf **true**
+Stellt den Zwischenablagecontroller dar, der zum Synchronisieren der lokalen und Remote-Zwischenablage verwendet wird, wenn die manuelle Zwischenablagesynchronisierung aktiviert ist (d. h., der [ManualClipboardSyncEnabled-Eigenschaftswert](imsrdpextendedsettings-property.md) ist auf **True festgelegt).**
 
 ## <a name="members"></a>Member
 
-Die **imsrdpclipboard** -Schnittstelle erbt von **IUnknown**. **Imsrdpclipboard** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpClipboard-Schnittstelle** erbt von **IUnknown**. **IMsRdpClipboard** verfügt auch über diese Membertypen:
 
 - [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **imsrdpclipboard** -Schnittstelle verfügt über diese Methoden.
+Die **IMsRdpClipboard-Schnittstelle** verfügt über diese Methoden.
 
 
 | Methode        | BESCHREIBUNG      |
 |:---------------|:----------------|
-| [**Cansynclocalclipboardtor emotesession**](imsrdpclipboard-cansynclocalclipboardtoremotesession.md)       |  Gibt an, ob die lokale Zwischenablage mit der Remote Sitzung synchronisiert werden kann.                   |
-| [**Cansynkremoteclipboardtolocalsession**](imsrdpclipboard-cansyncremoteclipboardtolocalsession.md)       |  Gibt an, ob die Remote Zwischenablage mit der lokalen Sitzung synchronisiert werden kann.                   |
-| [**Synclocalclipboardtor emotesession**](imsrdpclipboard-synclocalclipboardtoremotesession.md)       |  Synchronisiert die lokale Zwischenablage mit der Remote Sitzung.                   |
-| [**Synkremoteclipboardtolocalsession**](imsrdpclipboard-syncremoteclipboardtolocalsession.md)       |   Synchronisiert die Remote Zwischenablage mit der lokalen Sitzung.                      |
+| [**CanSyncLocalClipboardToRemoteSession**](imsrdpclipboard-cansynclocalclipboardtoremotesession.md)       |  Gibt an, ob die lokale Zwischenablage mit der Remotesitzung synchronisiert werden kann.                   |
+| [**CanSyncRemoteClipboardToLocalSession**](imsrdpclipboard-cansyncremoteclipboardtolocalsession.md)       |  Gibt an, ob die Remoteablage mit der lokalen Sitzung synchronisiert werden kann.                   |
+| [**SyncLocalClipboardToRemoteSession**](imsrdpclipboard-synclocalclipboardtoremotesession.md)       |  Synchronisiert die lokale Zwischenablage mit der Remotesitzung.                   |
+| [**SyncRemoteClipboardToLocalSession**](imsrdpclipboard-syncremoteclipboardtolocalsession.md)       |   Synchronisiert die Remote-Zwischenablage mit der lokalen Sitzung.                      |
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,11 +51,11 @@ Die **imsrdpclipboard** -Schnittstelle verfügt über diese Methoden.
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpclipboard ist als 2e769ee8-00c7-43dc-afd9-235d75b72a40 definiert.            |
+| IID                      | IID \_ IMsRdpClipboard ist als 2E769EE8-00C7-43DC-AFD9-235D75B72A40 definiert.            |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMsRdpClientNonScriptable7:: Zwischenablage**](imsrdpclientnonscriptable7-clipboard.md)
+[**IMsRdpClientNonScriptable7::Zwischenablage**](imsrdpclientnonscriptable7-clipboard.md)
 </dt> </dl>

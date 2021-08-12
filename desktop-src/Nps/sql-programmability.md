@@ -1,38 +1,38 @@
 ---
-title: SQL-Programmierbarkeit
+title: SQL Programmierbarkeit
 description: NPS unterstützt SQL Server Protokollierung.
 ms.assetid: 55152f56-9ca4-4d0b-a0e9-223168dba83f
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7dcc3d68519e6e260613d2729cabdb1e9991540a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 33aab125b8e4d00e0be06206dbdd855b7768638a8dd2545e71448a0e1a0f4f8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618535"
 ---
-# <a name="sql-programmability"></a>SQL-Programmierbarkeit
+# <a name="sql-programmability"></a>SQL Programmierbarkeit
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Der Internetauthentifizierungsdienst (INTERNET Authentication Service, IAS) wurde ab Windows Server 2008 in Netzwerkrichtlinienserver (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
 NPS unterstützt SQL Server Protokollierung.
 
-Standardmäßig ist die Protokollierung für NPS deaktiviert. Um dies zu aktivieren, führen Sie das Snap-in "Netzwerk Richtlinien Server" (NPS. msc) oder das Snap-in "Internet Authentifizierungsdienst" (IAS. msc) aus, und befolgen Sie die Anweisungen auf der Seite "Buchhaltung".
+Standardmäßig ist die Protokollierung für NPS deaktiviert. Führen Sie zum Aktivieren das Netzwerkrichtlinienserver-Snap-In (nps.msc) oder das Snap-In Internetauthentifizierungsdienst (ias.msc) aus, und befolgen Sie die Anweisungen auf der Seite Buchhaltung.
 
-## <a name="sample-stored-procedure"></a>Beispiel für eine gespeicherte Prozedur
+## <a name="sample-stored-procedure"></a>Gespeicherte Beispielprozedur
 
 > [!Note]  
-> Eine gespeicherte Prozedur in der SQL Server Datenbank, die von NPS aufgerufen wird, muss als **Berichts \_ Ereignis** bezeichnet werden, oder die NPS-SQL Server Protokollierung schlägt fehl.
+> Eine gespeicherte Prozedur in der SQL Server Datenbank, die von NPS aufgerufen wird, muss als **\_ Berichtsereignis** bezeichnet werden. Andernfalls schlägt die NPS-SQL Server Protokollierung fehl.
 
- 
+ 
 
-Im folgenden Beispiel wird eine NPS-Datenbank in der SQL Server 2000-Datenbankumgebung erstellt und XML-Dokumente verarbeitet, die von den NPS-Servern gesendet werden, die für die Protokollierung an SQL Server dieser
+Im folgenden Beispiel wird eine NPS-Datenbank in der SQL Server 2000-Datenbankumgebung erstellt und XML-Dokumente verarbeitet, die von den NPS-Servern gesendet werden, die für die Protokollierung bei diesem SQL Server konfiguriert sind.
 
-In diesem Beispiel werden die NAP-spezifischen Informationen, die nur von NPS-Servern unter Windows Server 2008 oder höher verfügbar sind, in der \_ Spalte MS Quarantäne \_ State gespeichert. Das Report-Ereignis für gespeicherte Prozeduren \_ Ruft die Werte für diese Spalte aus dem XML-Element **"./MS-Quarantine-State"** ab. Zulässige Werte für die MS- \_ Quarantäne \_ Zustands Spalte sind 0 (Vollzugriff), 1 (unter Quarantäne) und 2 (Bewährung).
+In diesem Beispiel werden die NAP-spezifischen Informationen, die nur von NPS-Servern verfügbar sind, die auf Windows Server 2008 oder höher ausgeführt werden, in der Spalte MS \_ Quarantine \_ State gespeichert. Das \_ Berichtereignis der gespeicherten Prozedur ruft die Werte für diese Spalte aus dem XML-Element **"./MS-Quarantine-State"** ab. Die zulässigen Werte für die Spalte MS \_ Quarantine \_ State sind 0 (Vollzugriff), 1 (Quarantäne) und 2 (Test).
 
 ``` syntax
 IF EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'NPSODBC')
@@ -400,9 +400,9 @@ GO
 
 <dl> <dt>
 
-[TechNet: wichtige Konzepte für die IAS-SQL Server Protokollierung](/previous-versions/windows/it-pro/windows-server-2003/cc778830(v=ws.10))
+[TechNet: Wichtige Konzepte für DIE SQL SERVER protokollierung](/previous-versions/windows/it-pro/windows-server-2003/cc778830(v=ws.10))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

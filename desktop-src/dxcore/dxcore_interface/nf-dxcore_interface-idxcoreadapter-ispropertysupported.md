@@ -1,19 +1,19 @@
 ---
 title: IDXCoreAdapter::IsPropertySupported
-description: Bestimmt, ob dieses DXCore-Adapter Objekt und das aktuelle Betriebssystem (OS) die angegebene Adapter Eigenschaft unterstützen.
+description: Bestimmt, ob dieses DXCore-Adapterobjekt und das aktuelle Betriebssystem die angegebene Adaptereigenschaft unterstützen.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: b960d96515d4aee85520a6def70a8f0e9349e131
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ddee6bea5af8fb64dfa2bfc15392e92239e7326b34cbd93cbd112559a6027912
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118279231"
 ---
-# <a name="idxcoreadapterispropertysupported-method"></a>Idxcoreadapter:: ispropertysupported-Methode
+# <a name="idxcoreadapterispropertysupported-method"></a>IDXCoreAdapter::IsPropertySupported-Methode
 
-Bestimmt, ob dieses DXCore-Adapter Objekt und das aktuelle Betriebssystem (OS) die angegebene Adapter Eigenschaft unterstützen.
+Bestimmt, ob dieses DXCore-Adapterobjekt und das aktuelle Betriebssystem die angegebene Adaptereigenschaft unterstützen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,16 +26,16 @@ virtual bool STDMETHODCALLTYPE IsPropertySupported(
 
 ### <a name="property"></a>property
 
-Type: **[dxcoreadapterproperty](./ne-dxcore_interface-dxcoreadapterproperty.md)**
+Typ: **[DXCoreAdapterProperty](./ne-dxcore_interface-dxcoreadapterproperty.md)**
 
-Der Typ der Eigenschaft, die Sie für die Unterstützung von Abfragen. Weitere Informationen zu den einzelnen Adapter Eigenschaften finden Sie in der Tabelle unter [dxcoreadapterproperty](./ne-dxcore_interface-dxcoreadapterproperty.md) .
+Der Typ der Eigenschaft, für die Sie die Unterstützung abfragen. Weitere Informationen zu den einzelnen Adaptereigenschaften finden Sie in der Tabelle in [DXCoreAdapterProperty.](./ne-dxcore_interface-dxcoreadapterproperty.md)
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **bool**
 
-Gibt zurück,  `true`   Wenn dieses DXCore-Adapter Objekt und das aktuelle Betriebssystem (OS) die angegebene Adapter Eigenschaft unterstützen. Andernfalls wird zurückgegeben  `false` .
+Gibt `true` zurück, wenn dieses DXCore-Adapterobjekt und das aktuelle Betriebssystem die angegebene Adaptereigenschaft unterstützen. Andernfalls wird `false`zurückgegeben.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [DXCore-Adapter Attribut-GUIDs](../dxcore-adapter-attribute-guids.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [DXCore-Adapterattribut-GUIDs](../dxcore-adapter-attribute-guids.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

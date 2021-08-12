@@ -1,26 +1,26 @@
 ---
-title: VML-aspektattribut
-description: VML-aspektattribut
+title: VML-Aspektattribut
+description: VML-Aspektattribut
 ms.assetid: 5486ed48-d28f-4bbb-b8ed-fc5a5aa12f25
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45f7cf666e9bb8d4bf3cfe0e47190a8127415ac1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 669b0f93e740e6bc4d4fb94155f6ca0ab60d5e00cebfb1604d5272d45d4dd8ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118602897"
 ---
-# <a name="vml-aspect-attribute"></a>VML-aspektattribut
+# <a name="vml-aspect-attribute"></a>VML-Aspektattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt an, wie das Seitenverhältnis des Füll Bilds beibehalten wird. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt an, wie das Seitenverhältnis des Füllbilds beibehalten wird. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,13 +28,13 @@ Gibt an, wie das Seitenverhältnis des Füll Bilds beibehalten wird. Lese-/Schre
 
 **Tagsyntax**
 
-<v: *Element* Aspekt = " *Ausdruck* " >
+<v: *element* aspect=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Aspect = "*Ausdruck*"
+*element* .aspect="*expression*"
 
-*Ausdruck* = *Element*. Aspekt
+*expression* = *Element*.aspect
 
 **Anmerkungen**
 
@@ -42,21 +42,21 @@ Mögliche Werte:
 
 
 
-| Wert   | BESCHREIBUNG                           |
+| Wert   | Beschreibung                           |
 |---------|---------------------------------------|
-| ignore  | Ignoriert Aspekte von Aspekten. Standard.        |
-| mindestens | Image ist mindestens so groß wie die **Größe**. |
-| höchstens  | Das Bild ist nicht größer als die **Größe**.     |
+| ignore  | Ignorieren sie Aspektprobleme. Standard.        |
+| Atleast | Image ist mindestens so groß wie **Größe.** |
+| atmost  | Image ist nicht größer als **Größe**.     |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Das Bild, das die Füllung bildet, ist größer als oder gleich einer Größe von 10 Punkten um 10 Punkte.
+Das Bild, aus dem die Füllung besteht, ist größer oder gleich einer Größe von 10 Punkten um 10 Punkte.
 
 
 ```HTML
@@ -71,6 +71,6 @@ Das Bild, das die Füllung bildet, ist größer als oder gleich einer Größe vo
 
 
 
- 
+ 
 
- 
+ 

@@ -1,28 +1,28 @@
 ---
-title: Lokalisieren von Meldungs Zeichenfolgen
-description: Jede Nachrichten Zeichenfolge, die Sie im Manifest angeben, muss im Lokalisierungs Abschnitt des Manifests auf eine Zeichenfolge verweisen.
+title: Lokalisieren von Meldungszeichenfolgen
+description: Jede Meldungszeichenfolge, die Sie im Manifest angeben, muss auf eine Zeichenfolge im Lokalisierungsabschnitt des Manifests verweisen.
 ms.assetid: aeae9ef6-6ef7-46f5-a9ab-fabe418549b2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7812aed8bf376994a2cbecfa5997737d9740ec1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b55b94ea8e8a40de1401cf3aba97488d5531a77b441361e38f1ff98219940afc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118587898"
 ---
-# <a name="localizing-message-strings"></a>Lokalisieren von Meldungs Zeichenfolgen
+# <a name="localizing-message-strings"></a>Lokalisieren von Meldungszeichenfolgen
 
-Jede Nachrichten Zeichenfolge, die Sie im Manifest angeben, muss im **Lokalisierungs** Abschnitt des Manifests auf eine Zeichenfolge verweisen. Der Abschnitt Lokalisierung enthält einen Zeichen folgen Tabellen Abschnitt für jedes Gebiets Schema, das Sie unterstützen.
+Jede Meldungszeichenfolge, die Sie im Manifest  angeben, muss auf eine Zeichenfolge im Lokalisierungsabschnitt des Manifests verweisen. Der Lokalisierungsabschnitt enthält einen Zeichenfolgentabellenabschnitt für jedes von Ihnen unterstützte Locale.
 
-Im folgenden Beispiel wird gezeigt, wie eine Zeichen folgen Tabelle definiert wird. Sie müssen die Attribute **ID** und **value** der Zeichenfolge angeben. Sie verwenden den Wert des **ID** -Attributs, um auf die Zeichenfolge im Manifest zu verweisen. Das **value** -Attribut enthält die lokalisierte Zeichenfolge.
+Das folgende Beispiel zeigt, wie eine Zeichenfolgentabelle definiert wird. Sie müssen die Id- und **Wertattribute** **der** Zeichenfolge angeben. Sie verwenden den Wert des **ID-Attributs,** um auf die Zeichenfolge in Ihrem Manifest zu verweisen. Das **Value-Attribut** enthält die lokalisierte Zeichenfolge.
 
 
 ```XML
 <instrumentationManifest
     xmlns="http://schemas.microsoft.com/win/2004/08/events" 
-    xmlns:win="https://manifests.microsoft.com/win/2004/08/windows/events"
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"    
+    xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     >
 
     <instrumentation>
@@ -53,13 +53,13 @@ Im folgenden Beispiel wird gezeigt, wie eine Zeichen folgen Tabelle definiert wi
 ```
 
 
-Anstatt dem Manifest lokalisierte Zeichen folgen hinzuzufügen, sollten Sie eine MUI-Datei (mehrsprachige Benutzeroberfläche) für jede Sprache erstellen, die Sie unterstützen. Verwenden Sie eine Meldungs Textdatei, um die lokalisierten Zeichen folgen anzugeben.
+Anstatt lokalisierte Zeichenfolgen zum Manifest hinzufügen zu müssen, sollten Sie eine mehrsprachige Benutzeroberflächendatei (MULTILINGUAL) für jede Sprache erstellen, die Sie unterstützen. Verwenden Sie eine Meldungstextdatei, um ihre lokalisierten Zeichenfolgen anzugeben.
 
-Im folgenden Verfahren wird beschrieben, wie eine MUI-Datei für Englisch und Französisch erstellt wird.
+Im folgenden Verfahren wird beschrieben, wie Eine -DATEI für Englisch und Französisch erstellt wird.
 
-**So erstellen Sie eine MUI-Datei für Englisch und Französisch**
+**So erstellen Sie eine ANWEISUNG-Datei für Englisch und Französisch**
 
-1.  Erstellen Sie eine Meldungs Textdatei, die die französischen Nachrichten Zeichenfolgen erstellt. Ausführliche Informationen zum Erstellen einer Meldungs Textdatei finden Sie unter [Message Text Files](/windows/desktop/EventLog/message-text-files). Die Nachrichten-IDs, die Sie in der Meldungs Textdatei angeben, müssen mit den Ressourcen Bezeichner übereinstimmen, die der Nachrichten Compiler für dieselben Zeichen folgen im Manifest generiert hat. Um die Ressourcen Bezeichner zu ermitteln, die für die Zeichen folgen im Manifest verwendet werden, sehen Sie sich die h-Datei an, die der Nachrichten Compiler beim Kompilieren des Manifests generiert hat.
+1.  Erstellen Sie eine Meldungstextdatei, die die französischen Nachrichtenzeichenfolgen erstellt. Weitere Informationen zum Erstellen einer Nachrichtentextdatei finden Sie unter [Nachrichtentextdateien](/windows/desktop/EventLog/message-text-files). Die Nachrichtenbezeichner, die Sie in der Meldungstextdatei angeben, müssen mit den Ressourcenbezeichnern übereinstimmen, die der Nachrichtencompiler für die gleichen Zeichenfolgen im Manifest generiert hat. Informationen zum Bestimmen der Ressourcenbezeichner, die für die Zeichenfolgen im Manifest verwendet werden, finden Sie in der H-Datei, die der Nachrichtencompiler beim Kompilieren des Manifests generiert hat.
     ```Text
     LanguageNames=(French=0x40C:MSG0040C)
 
@@ -81,7 +81,7 @@ Im folgenden Verfahren wird beschrieben, wie eine MUI-Datei für Englisch und Fr
     ```
 
 
-2.  Führen Sie die folgenden Befehle aus, um die Ressourcen-DLL zu erstellen, die ihre lokalisierten Zeichen folgen enthält Die Datei Messages.MC ist die Nachrichten Textdatei, die Sie in Schritt 1 erstellt haben.
+2.  Führen Sie die folgenden Befehle aus, um die Ressourcen-DLL zu erstellen, die ihre lokalisierten Zeichenfolgen enthält. Die messages.mc ist die Meldungstextdatei, die Sie in Schritt 1 erstellt haben.
     ```cmd
     mc -u -U messages.mc
 
@@ -92,8 +92,8 @@ Im folgenden Verfahren wird beschrieben, wie eine MUI-Datei für Englisch und Fr
 
     
 
-3.  Erstellen Sie in dem Ordner, der Ihren Anbieter enthält, einen Unterordner für jedes Gebiets Schema, das Sie unterstützen. Der Name des unter Ordners muss der Sprachen Name für dieses Gebiets Schema sein. Verwenden Sie z. b. für 0x0409 en-US als Ordnernamen.
-4.  Erstellen Sie eine rcconfig-Datei, die dem Muirct.exe Tool mitteilt, dass Sie die Nachrichten Zeichen folgen Ressourcen aus der ausführbaren Datei und den Ressourcen-DLLs aufteilen möchten. Im folgenden finden Sie ein Beispiel für eine rcconfig-Beispieldatei.
+3.  Erstellen Sie in dem Ordner, der Ihren Anbieter enthält, einen Unterordner für jedes von Ihnen unterstützte Locale. Der Name des Unterordners muss der Sprachname für dieses Locale sein. Verwenden Sie für 0x0409 z. B. en-US als Ordnernamen.
+4.  Erstellen Sie eine RCCONFIG-Datei, die dem Muirct.exe angibt, dass Sie die Nachrichtenzeichenfolgenressourcen von der ausführbaren Datei und den Ressourcen-DLLs aufteilen möchten. Im Folgenden finden Sie eine RCCONFIG-Beispieldatei.
     ```XML
     <localization>
           <resources>
@@ -109,7 +109,7 @@ Im folgenden Verfahren wird beschrieben, wie eine MUI-Datei für Englisch und Fr
     ```
   
 
-5.  Führen Sie die folgenden Muirct.exe Befehle aus, um die englischen Zeichen folgen aus der ausführbaren Datei des Anbieters aufzuteilen.
+5.  Führen Sie die folgenden Muirct.exe aus, um die englischen Zeichenfolgen aus der ausführbaren Datei des Anbieters zu teilen.
     ```cmd
     muirct -q split.rcconfig -v 2 -x 0x0409 -g 0x0409 provider.exe provider.exe.ln en-US\provider.exe.mui
 
@@ -117,7 +117,7 @@ Im folgenden Verfahren wird beschrieben, wie eine MUI-Datei für Englisch und Fr
     ```
  
 
-6.  Führen Sie die folgenden Muirct.exe Befehle aus, um die französischen Zeichen folgen aus der Ressourcen-DLL aufzuteilen. Entfernen Sie die sprachneutrale Datei (fr-FR \\messages.dll), nachdem die MUI-Datei erstellt wurde.
+6.  Führen Sie die folgenden Muirct.exe aus, um die französischen Zeichenfolgen von der Ressourcen-DLL zu trennen. Entfernen Sie die sprachneutrale Datei (fr-FR \\messages.dll), nachdem die DATEI MIT-Anweisung erstellt wurde.
     ```cmd
     muirct -q split.rcconfig -v 2 -x 0x040C -g 0x0409 messages.dll fr-FR\messages.dll fr-FR\provider.exe.mui
 
@@ -125,4 +125,4 @@ Im folgenden Verfahren wird beschrieben, wie eine MUI-Datei für Englisch und Fr
     ```
   
 
-7.  Benennen Sie provider.exe. ln in provider.exe um.
+7.  Benennen provider.exe.ln in provider.exe.

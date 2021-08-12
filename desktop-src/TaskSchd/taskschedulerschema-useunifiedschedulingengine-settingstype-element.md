@@ -1,9 +1,9 @@
 ---
-title: Useunimeschedulingengine (settingstype)-Element
-description: Gibt an, dass die vereinheitlichte Planungs-Engine verwendet wird, um diese Aufgabe auszuführen.
+title: UseUnifiedSchedulingEngine (settingsType)-Element
+description: Gibt an, dass die einheitliche Zeitplanungs-Engine zum Ausführen dieser Aufgabe verwendet wird.
 ms.assetid: 93436f14-1caf-4ec8-bf74-a198b7dcb27c
 keywords:
-- Useunifedschedulingengine-Element Taskplaner
+- UseUnifiedSchedulingEngine-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a00798a46df3dfbb351dd8705b264192c38daff6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: faf27ea132fb47e35cd248e183fbec0584cb5d44414d6cacda6baac0d595c32d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118610453"
 ---
-# <a name="useunifiedschedulingengine-settingstype-element"></a>Useunimeschedulingengine (settingstype)-Element
+# <a name="useunifiedschedulingengine-settingstype-element"></a>UseUnifiedSchedulingEngine (settingsType)-Element
 
-Gibt an, dass die vereinheitlichte Planungs-Engine verwendet wird, um diese Aufgabe auszuführen.
+Gibt an, dass die einheitliche Zeitplanungs-Engine zum Ausführen dieser Aufgabe verwendet wird.
 
 ``` syntax
 <xs:element name="UseUnifiedSchedulingEngine"
@@ -32,27 +32,27 @@ Gibt an, dass die vereinheitlichte Planungs-Engine verwendet wird, um diese Aufg
  />
 ```
 
-Das **useunifedschedulingengine** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **UseUnifiedSchedulingEngine-Element** wird durch den komplexen [**settingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standardeinstellung für dieses Element ist false.
+Die Standardeinstellung für dieses Element ist False.
 
-Bei der C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**ITaskSettings2:: useunifedschedulingengine**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings2-get_useunifiedschedulingengine) -Eigenschaft.
+Bei der C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**ITaskSettings2::UseUnifiedSchedulingEngine-Eigenschaft.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings2-get_useunifiedschedulingengine)
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein settings-Element, das angibt, dass das vereinheitlichte Planungs Modul zum Ausführen dieser Aufgabe verwendet wird.
+Der folgende XML-Code definiert ein Einstellungselement, das angibt, dass die einheitliche Zeitplanungs-Engine zum Ausführen dieser Aufgabe verwendet wird.
 
 
 ```XML
@@ -70,16 +70,16 @@ Der folgende XML-Code definiert ein settings-Element, das angibt, dass das verei
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

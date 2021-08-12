@@ -1,93 +1,93 @@
 ---
-title: Informationen über imediaobject
-description: Informationen über imediaobject
+title: Informationen zu IMediaObject
+description: Informationen zu IMediaObject
 ms.assetid: c483f74a-efd8-4a9f-a719-686099755e63
 keywords:
-- Windows Media Player-Plug-ins, Schnittstellen
-- Plug-ins, Schnittstellen
+- Windows Media Player-Plug-Ins,Schnittstellen
+- Plug-Ins, Schnittstellen
 - Plug-Ins für die digitale Signalverarbeitung, Schnittstellen
-- DSP-Plug-ins, Schnittstellen
-- Schnittstellen, DSP-Plug-ins
-- Windows Media Player-Plug-ins, imediaobject-Schnittstelle
-- Plug-ins, imediaobject-Schnittstelle
-- Plug-Ins für die digitale Signalverarbeitung, imediaobject-Schnittstelle
-- DSP-Plug-ins, imediaobject-Schnittstelle
-- Imediaobject-Schnittstelle
+- DSP-Plug-Ins, Schnittstellen
+- Schnittstellen,DSP-Plug-Ins
+- Windows Media Player-Plug-Ins, IMediaObject-Schnittstelle
+- Plug-Ins, IMediaObject-Schnittstelle
+- Plug-Ins für die digitale Signalverarbeitung, IMediaObject-Schnittstelle
+- DSP-Plug-Ins, IMediaObject-Schnittstelle
+- IMediaObject-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cfbbecd749242b67bc5c8f36b3c7a2c0a5fbe461
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2dbf44a527d61d924045a4bcceded5d90bb174fef608e3b7667338e99aa1efe9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583907"
 ---
-# <a name="about-imediaobject"></a>Informationen über imediaobject
+# <a name="about-imediaobject"></a>Informationen zu IMediaObject
 
-Die **imediaobject** -Schnittstelle ist die erforderliche Schnittstelle für DMOS. **Imediaobject** enthält die Methoden, die ein Windows Media Player DSP-Plug-in verwendet, um Daten aus Windows Media Player zu erhalten, die Daten zu verarbeiten und die verarbeiteten Daten an Windows Media Player zurückzugeben. Eine umfassende Dokumentation der **imediaobject** -Schnittstelle finden Sie im Abschnitt DirectShow des Windows SDK.
+Die **IMediaObject-Schnittstelle** ist die erforderliche Schnittstelle für DMOs. **IMediaObject** enthält die Methoden, die ein Windows Media Player DSP-Plug-In verwendet, um Daten aus Windows Media Player zu erhalten, die Daten zu verarbeiten und die verarbeiteten Daten an Windows Media Player. Die vollständige Dokumentation der **IMediaObject-Schnittstelle** finden Sie im Abschnitt DirectShow des Windows SDK.
 
-Die Methoden von **imediaobject** können wie folgt kategorisiert werden:
+Die Methoden von **IMediaObject** können wie folgt kategorisiert werden:
 
-## <a name="methods-that-handle-format-negotiation"></a>Methoden, die die Format Aushandlung behandeln
+## <a name="methods-that-handle-format-negotiation"></a>Methoden zur Behandlung der Formataushandlung
 
-Dies sind die Methoden, die von Windows Media Player aufgerufen werden, um Informationen zu den vom Plug-in unterstützten Datenformaten zu erhalten. Diese Methoden umfassen:
+Dies sind die Methoden, Windows Media Player aufrufen, um Informationen über die vom Plug-In unterstützten Datenformate zu erhalten. Diese Methoden umfassen:
 
--   **Getinputmaxlatency**
--   **Getinputsizone FO**
--   **Getinputstreaminfo**
--   **Getinputtype**
--   **Getoutputsizone FO**
--   **Getoutputstreaminfo**
--   **Getoutputtype**
--   **Getstreamcount**
--   **"* Tinputmaxlatency"**
--   **"Ttinputtype"**
--   **Setoutputtype**
+-   **GetInputMaxLatency**
+-   **GetInputSizeInfo**
+-   **GetInputStreamInfo**
+-   **GetInputType**
+-   **GetOutputSizeInfo**
+-   **GetOutputStreamInfo**
+-   **GetOutputType**
+-   **GetStreamCount**
+-   **SetInputMaxLatency**
+-   **SetInputType**
+-   **SetOutputType**
 
-Einige dieser Methoden, wie z. b. **getinputtype** und " **abtinputtype**", verwenden die **DMO- \_ \_ Medientyp** Struktur, um das Format der Daten zu beschreiben, die von einem Stream verwendet werden. Wenn diese Methoden von Windows Media Player aufgerufen werden, wird ein Zeiger auf eine **DMO- \_ \_ Medientyp** Struktur bereitstellt. Wenn eine Methode wie z. b. " **stinputtype** " die Medientyp Informationen angibt, muss das Plug-in die **DMO- \_ \_ Medientyp** Struktur in eine Member-Variable kopieren und deren Datenmember überprüfen, um den Datentyp zu bestimmen, den Windows Media Player im Eingabepuffer bereitstellt. Wenn eine Methode, wie z. b. **getinputtype** , die Medientyp Informationen abruft, muss das Plug-in die Adresse der Element Variablen mit der Struktur des **DMO- \_ Medien \_ Typs** in den von Windows Media Player in der Parameterliste bereitgestellten Zeiger kopieren.
+Einige dieser Methoden, z. B. **GetInputType** und **SetInputType,** verwenden die **DMO MEDIA \_ \_ TYPE-Struktur,** um das Format der von einem Stream verwendeten Daten zu beschreiben. Wenn Windows Media Player diese Methoden aufruft, stellt sie einen Zeiger auf eine DMO **\_ MEDIA \_ TYPE-Struktur.** Wenn eine Methode wie **SetInputType** die Medientypinformationen angibt, sollte das Plug-In die **DMO MEDIA \_ \_ TYPE-Struktur in** eine Membervariable kopieren und deren Datenmitglieder überprüfen, um den Datentyp zu bestimmen, den Windows Media Player im Eingabepuffer bereitstellen wird. Wenn eine Methode wie **GetInputType** die Medientypinformationen abruft, sollte das Plug-In die Adresse der Membervariablen, die die **DMO MEDIA \_ \_ TYPE-Struktur enthält, in** den Zeiger kopieren, der von Windows Media Player in der Parameterliste bereitgestellt wird.
 
-Windows Media Player verwendet hauptsächlich zwei Member der **DMO \_ - \_ Medientyp** Struktur:
+Windows Media Player werden hauptsächlich zwei Member der MEDIA **\_ \_ TYPE DMO struktur** verwendet:
 
--   **majortype**: eine Globally Unique Identifier (GUID), die die Gesamtkategorie der Medien angibt, z. b. Audiodaten oder Videos.
--   **Untertyp**: eine GUID, die eine ausführlichere Beschreibung der Medien angibt, z. b. PCM-Audiodaten.
+-   **majortype:** Ein GUID (Globally Unique Identifier), der die Gesamtkategorie der Medien angibt, z. B. Audio oder Video.
+-   **Untertyp:** Eine GUID, die eine ausführlichere Beschreibung der Medien angibt, z. B. PCM-Audio.
 
-Diese GUIDs befinden sich im Header "UUIDs. h", der in der Windows SDK enthalten ist.
+Diese GUIDs finden Sie im Header mit dem Namen uuids.h, der im Windows SDK enthalten ist.
 
-Methoden wie z. b. **getinputsizeinfo** stellen Informationen für Windows Media Player bereit, wie viel Arbeitsspeicher zum Zuordnen der Verarbeitungs Puffer erforderlich ist. Methoden wie **getstreamcount** und **getoutputstreaminfo** stellen Windows-Media Player Informationen über die Anzahl und das Zeichen der Streams bereit, die vom DSP-Plug-in unterstützt werden.
+Methoden wie **GetInputSizeInfo** stellen Informationen Windows Media Player, wie viel Arbeitsspeicher zum Zuordnen der Verarbeitungspuffer erforderlich ist. Methoden wie **GetStreamCount und** **GetOutputStreamInfo** stellen Informationen Windows Media Player die Anzahl und das Zeichen der vom DSP-Plug-In unterstützten Streams zur Verfügung.
 
-" **Getinputmaxlatency** " und "* **tinputmaxlatency** " werden in besonderen Fällen von dmos implementiert. Windows Media Player DSP-Plug-Ins müssen E \_ notimpl zurückgeben.
+**GetInputMaxLatency und** **SetInputMaxLatency** werden von DMOs in Sonderfällen implementiert. Windows Media Player DSP-Plug-Ins sollten E \_ NOTIMPL zurückgeben.
 
-## <a name="methods-that-specify-or-retrieve-state-information"></a>Methoden zum angeben oder Abrufen von Zustandsinformationen
+## <a name="methods-that-specify-or-retrieve-state-information"></a>Methoden zum Angeben oder Abrufen von Zustandsinformationen
 
-Dies sind die Methoden, die von Windows Media Player aufgerufen werden, um Werte im Zusammenhang mit dem aktuellen Status des Plug-ins zu erhalten oder festzulegen. Diese Methoden umfassen:
+Dies sind die Methoden, Windows Media Player aufrufen, um Werte im Zusammenhang mit dem aktuellen Zustand des Plug-Ins zu erhalten oder zu festlegen. Diese Methoden umfassen:
 
--   **Getinputcurrenttype**
--   **Getinputstatus**
--   **Getoutputcurrenttype**
+-   **GetInputCurrentType**
+-   **GetInputStatus**
+-   **GetOutputCurrentType**
 
-**Getinputcurrenttype** und **getoutputcurrenttype** verwenden die **DMO \_ - \_ Medientyp** Struktur zum Zurückgeben von Informationen an Windows Media Player zu den zuvor festgelegten Medientypen für die Eingabe-und Ausgabestreams. **Getinputstatus** gibt ein Flag zurück, das Windows Media Player angibt, ob das DSP-Plug-in Eingabedaten akzeptieren kann.
+**GetInputCurrentType** und **GetOutputCurrentType** verwenden die **DMO MEDIA \_ \_ TYPE-Struktur,** um Informationen zu den zuvor für die Eingabe- und Ausgabestreams festgelegten Medientypen Windows Media Player an Windows Media Player zurück zu geben. **GetInputStatus gibt** ein Flag zurück, das Windows Media Player ob das DSP-Plug-In Eingabedaten akzeptieren kann.
 
-## <a name="methods-that-handle-buffering-and-processing-data"></a>Methoden, die die Pufferung und Verarbeitung von Daten verarbeiten
+## <a name="methods-that-handle-buffering-and-processing-data"></a>Methoden zum Verarbeiten von Pufferungs- und Verarbeitungsdaten
 
-Dies sind die Methoden, die von Windows Media Player aufgerufen werden, um die verschiedenen Prozesse zu initiieren, die das Plug-in für die digitale Signalverarbeitung durchführt. Diese Methoden umfassen:
+Dies sind die Methoden, Windows Media Player aufrufen, um die verschiedenen Prozesse zu initiieren, die das Plug-In für die Verarbeitung digitaler Signale ausführt. Diese Methoden umfassen:
 
--   **"" Zugeordnet**
+-   **AllocateStreamingResources**
 -   **Diskontinuität**
 -   **Leerung**
--   **Freestreamingresources**
+-   **FreeStreamingResources**
 -   **Sperre**
 -   **ProcessInput**
 -   **ProcessOutput**
 
-In Windows Media Player werden **zuordungsoramingresources** und **freestreamingresources** aufgerufen, um dem DSP-Plug-in die Möglichkeit zu geben, zusätzliche Puffer einzurichten oder freizugeben, die das Plug-in möglicherweise für die interne Verarbeitung benötigt.
+Windows Media Player aufruft **AllocateStreamingResources** und **FreeStreamingResources,** um dem DSP-Plug-In die Möglichkeit zu geben, zusätzliche Puffer, die das Plug-In möglicherweise für die interne Verarbeitung benötigt, ein- oder frei zu geben.
 
-Windows Media Player DSP-Plug-Ins müssen die DMO- **Diskontinuitäts** Methode nicht verwenden.
+Windows Media Player DSP-Plug-Ins müssen nicht die DMO **Discontinuity-Methode** verwenden.
 
-Windows Media Player ruft **Flush** auf, um das DSP-Plug-in anzuweisen, alle intern gepufferten Daten zu leeren. Das Plug-in sollte alle Verweise auf **imediabuffer** -Schnittstellen freigeben, alle Werte, die den Zeitstempel oder die Stichproben Länge für den Medien Puffer angeben, löschen und alle internen Zustände erneut initialisieren, die vom Inhalt des Mediums "Sample" abhängen.
+Windows Media Player **Wird geleert,** um das DSP-Plug-In an das Leeren aller intern gepufferten Daten zu richten. Das Plug-In sollte alle Verweise auf **IMediaBuffer-Schnittstellen** veröffentlichen, alle Werte löschen, die den Zeitstempel oder die Stichprobenlänge für den Medienpuffer angeben, und alle internen Zustände erneut initialisieren, die vom Inhalt des Medienbeispiels abhängen.
 
-Windows Media Player ruft ProcessInput auf, um einen Zeiger auf eine **imediabuffer** -Schnittstelle an das DSP-Plug-in zu übergeben. Diese Schnittstelle ermöglicht den Zugriff auf den von Windows Media Player zugeordneten Eingabepuffer zum Bereitstellen von Daten für das Plug-in. Windows Media Player anschließend **ProcessOutput** aufrufen, um einen Zeiger auf eine **imediabuffer** -Schnittstelle zu übergeben, die Zugriff auf den von Windows Media Player zugeordneten Ausgabepuffer ermöglicht, um die verarbeiteten Daten aus dem DSP-Plug-in zu empfangen.
+Windows Media Player ProcessInput auf, um einen Zeiger auf eine **IMediaBuffer-Schnittstelle** an das DSP-Plug-In zu übergeben. Diese Schnittstelle bietet Zugriff auf den Eingabepuffer, der von Windows Media Player, um Daten an das Plug-In zu übergeben. Windows Media Player anschließend **ProcessOutput** auf, um einen Zeiger auf eine **IMediaBuffer-Schnittstelle** zu übergeben, die Zugriff auf den von Windows Media Player zugeordneten Ausgabepuffer ermöglicht, um die verarbeiteten Daten vom DSP-Plug-In zu empfangen.
 
-Die **imediaobject** -Schnittstelle enthält eine Methode mit dem Namen **Lock**. Diese Methode ist dafür konzipiert, eine Sperre für den DMO abzurufen oder freizugeben, damit DMO beim Ausführen mehrerer Vorgänge serialisiert wird. Die Version von **imediaobject:: Lock** im Assistenten Code überschreibt die ATL-Implementierung von **Lock**. Da Windows Media Player Aufrufe an die DMO-Schnittstelle eines DSP-Plug-ins serialisiert, gibt die Implementierung von **Lock** einfach S \_ OK zurück. Ausführliche Informationen zum Erstellen eines Multithread-DMO finden Sie im Abschnitt DirectShow des Windows SDK.
+Die **IMediaObject-Schnittstelle** enthält eine Methode namens **Lock**. Diese Methode ist so konzipiert, dass sie eine Sperre für die DMO, um die DMO serialisiert zu lassen, wenn mehrere Vorgänge ausführen. Die Version von **IMediaObject::Lock** im Assistentencode überschreibt die ATL-Implementierung von **Lock.** Da Windows Media Player Aufrufe an die DMO-Schnittstelle eines DSP-Plug-Ins serialisiert, gibt die Implementierung von **Lock** einfach S \_ OK zurück. Weitere Informationen zum Erstellen eines Multithread-DMO finden Sie im Abschnitt DirectShow des Windows SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -96,9 +96,9 @@ Die **imediaobject** -Schnittstelle enthält eine Methode mit dem Namen **Lock**
 [**Erforderliche Schnittstellen**](required-interfaces.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

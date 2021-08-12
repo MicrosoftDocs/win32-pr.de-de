@@ -1,7 +1,7 @@
 ---
-description: Enthält eine SSID für ein drahtloses LAN.
+description: Enthält eine SSID für ein Drahtlos-LAN.
 ms.assetid: fb3466c4-a586-424b-96e2-ba287c99a1d9
-title: SSID-Element (ssidconfig)
+title: SSID-Element (SSIDConfig)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 644a4afbd10fbfff870007befda964fc9babd593
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d58ed866e79269e604fe49ad8afe65d557f27a90d0be03904b8d27da5ac5c2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118619057"
 ---
-# <a name="ssid-ssidconfig-element"></a>SSID-Element (ssidconfig)
+# <a name="ssid-ssidconfig-element"></a>SSID-Element (SSIDConfig)
 
-Das SSID-Element (ssidconfig) enthält eine SSID für ein drahtloses LAN.
+Das SSID-Element (SSIDConfig) enthält eine SSID für ein Wlan.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Höchstens ein **SSID** -Element kann in einem Profil angezeigt werden.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Höchstens ein **SSID-Element** kann in einem Profil angezeigt werden.
 
 ``` syntax
 <xs:element name="SSID"
@@ -74,30 +74,30 @@ Das SSID-Element (ssidconfig) enthält eine SSID für ein drahtloses LAN.
 </xs:element>
 ```
 
-Das **SSID** -Element wird vom [**ssidconfig**](wlan-profileschema-ssidconfig-wlanprofile-element.md) -Element definiert.
+Das **SSID-Element** wird durch das [**SSIDConfig-Element**](wlan-profileschema-ssidconfig-wlanprofile-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                              | type | BESCHREIBUNG                                                           |
+| Element                                              | type | Beschreibung                                                           |
 |------------------------------------------------------|------|-----------------------------------------------------------------------|
-| [**hex**](wlan-profileschema-hex-ssid-element.md)   |      | Enthält die SSID eines Drahtlos-LANs im Hexadezimal Format.<br/> |
-| [**Benennen**](wlan-profileschema-name-ssid-element.md) |      | Enthält die SSID für ein drahtloses LAN.<br/>                      |
+| [**Hex**](wlan-profileschema-hex-ssid-element.md)   |      | Enthält die SSID eines Drahtlos-LAN im Hexadezimalformat.<br/> |
+| [**Namen**](wlan-profileschema-name-ssid-element.md) |      | Enthält die SSID für ein Drahtlos-LAN.<br/>                      |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl das [**Hex**](wlan-profileschema-hex-ssid-element.md) -Element und das [**Name**](wlan-profileschema-name-ssid-element.md) -Element optional sind, muss mindestens ein **Hex** -oder [**Name**](wlan-profileschema-name-ssid-element.md) -Element als untergeordnetes Element des **SSID** -Elements angezeigt werden.
+Obwohl die [**Hexadezimal-**](wlan-profileschema-hex-ssid-element.md) und [**Namenselemente**](wlan-profileschema-name-ssid-element.md) optional sind, muss mindestens ein **Hexadezimal-** oder [**Namenselement**](wlan-profileschema-name-ssid-element.md) als untergeordnetes Element des **SSID-Elements** angezeigt werden.
 
-Wenn Profilinformationen in eine SSID konvertiert werden, wird das [**Hex**](wlan-profileschema-hex-ssid-element.md) -Element in die SSID (sofern vorhanden) konvertiert, und das [**Name**](wlan-profileschema-name-ssid-element.md) -Element wird ignoriert. Wenn das **Hex** -Element nicht vorhanden ist, wird das [**Name**](wlan-profileschema-name-ssid-element.md) -Element mithilfe der Unicode-in-ASCII-Konvertierung in eine SSID konvertiert.
+Wenn Profilinformationen in eine SSID konvertiert werden, wird das [**Hexadezimalelement**](wlan-profileschema-hex-ssid-element.md) in die SSID konvertiert (sofern vorhanden), und das [**Name-Element**](wlan-profileschema-name-ssid-element.md) wird ignoriert. Wenn das **Hexadezimalelement** nicht vorhanden ist, wird das [**Name-Element**](wlan-profileschema-name-ssid-element.md) mithilfe der Unicode- in ASCII-Konvertierung in eine SSID konvertiert.
 
-Wenn eine SSID in einem Profil gespeichert wird, wird das [**Hex**](wlan-profileschema-hex-ssid-element.md) -Element immer generiert. Das [**Name**](wlan-profileschema-name-ssid-element.md) -Element wird nur generiert, wenn sowohl die ASCII-als auch die Unicode-Konvertierung der SSID und die Generierung des XML-Profils erfolgreich sind. Einige Informationen aus der ursprünglichen SSID können verloren gehen, wenn Sie in einen [**Namen**](wlan-profileschema-name-ssid-element.md)konvertiert werden.
+Wenn eine SSID in einem Profil gespeichert wird, wird das [**Hexadezimalelement**](wlan-profileschema-hex-ssid-element.md) immer generiert. Das [**Name-Element**](wlan-profileschema-name-ssid-element.md) wird nur generiert, wenn sowohl die ASCII- in Unicode-Konvertierung der SSID als auch die XML-Profilgenerierung erfolgreich sind. Einige Informationen aus der ursprünglichen SSID verloren, wenn sie in einen [**Namen**](wlan-profileschema-name-ssid-element.md)konvertiert werden.
 
 ## <a name="examples"></a>Beispiele
 
-Beispiel Profile, die das **SSID** -Element verwenden, finden Sie unter [Beispiele für drahtlos profile](wireless-profile-samples.md).
+Beispielprofile, die das **SSID-Element** verwenden, finden Sie unter [Beispiele für Funkprofile.](wireless-profile-samples.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,26 +105,26 @@ Beispiel Profile, die das **SSID** -Element verwenden, finden Sie unter [Beispie
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP3 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                |
-| Verteilbare Komponente<br/>          | Drahtlose LAN-API für Windows XP mit SP2<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP3-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                |
+| Verteilbare Komponente<br/>          | WLAN-API für Windows XP mit SP2<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**SSIDConfig**](wlan-profileschema-ssidconfig-wlanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Ssidconfig (wlanprofile)**](wlan-profileschema-ssidconfig-wlanprofile-element.md)
+[**SSIDConfig (WLANProfile)**](wlan-profileschema-ssidconfig-wlanprofile-element.md)
 </dt> </dl>
 
  

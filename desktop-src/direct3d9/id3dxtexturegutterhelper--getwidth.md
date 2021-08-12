@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d113107867cb418b17761c5bc5c72a600df73140
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0bea1aaaf8dc79fef7b95a8dc76320ee7911d7c68ac227703acbb95b66ff5a5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118292474"
 ---
 # <a name="id3dxtexturegutterhelpergetwidth-method"></a>ID3DXTextureGutterHelper::GetWidth-Methode
 
@@ -48,14 +48,14 @@ Gibt die Breite der Textur in Pixel zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

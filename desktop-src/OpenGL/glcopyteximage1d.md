@@ -1,6 +1,6 @@
 ---
-title: glCopyTexImage1D-Funktion (GL. h)
-description: Die glCopyTexImage1D-Funktion kopiert Pixel aus dem Frame Puffer in ein eindimensionales Textur Bild.
+title: glCopyTexImage1D-Funktion (Gl.h)
+description: Die glCopyTexImage1D-Funktion kopiert Pixel aus dem Framepuffer in ein eindimensionales Texturbild.
 ms.assetid: 3b4d12d5-5efe-40d2-ac5f-95ea5ef243dd
 keywords:
 - glCopyTexImage1D-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e63180386c094f0c4e4de0f1a361bc3bcb1c6e5e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e3dd966aa08eb5c74fa15235ed51f07a671c4e6f1378a990c6686fdc801e1d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118617348"
 ---
 # <a name="glcopyteximage1d-function"></a>glCopyTexImage1D-Funktion
 
-Die **glCopyTexImage1D** -Funktion kopiert Pixel aus dem Frame Puffer in ein eindimensionales Textur Bild.
+Die **glCopyTexImage1D-Funktion** kopiert Pixel aus dem Framepuffer in ein eindimensionales Texturbild.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,49 +49,49 @@ void WINAPI glCopyTexImage1D(
 *Ziel* 
 </dt> <dd>
 
-Das Ziel, für das die Bilddaten geändert werden. Muss den Wert "GL \_ Texture \_ 1D" aufweisen.
+Das Ziel, für das die Bilddaten geändert werden. Muss den Wert GL \_ TEXTURE \_ 1D aufweisen.
 
 </dd> <dt>
 
 *level* 
 </dt> <dd>
 
-Die Detailebene. Ebene 0 ist das Basis Image. Ebene *n* ist das *n*-te MipMap-Reduzierungs Bild.
+Die Detailebenennummer. Ebene 0 ist das Basisimage. Ebene *n* ist das Bild der *n-ten* Mipmapverringerung.
 
 </dd> <dt>
 
-*internalformat* 
+*internalFormat* 
 </dt> <dd>
 
-Das interne Format und die Auflösung der Textur Daten. Dieser Parameter muss einen der folgenden symbolischen Werte aufweisen.
+Das interne Format und die Auflösung der Texturdaten. Dieser Parameter muss einer der folgenden symbolischen Werte sein.
 
 
 
-| Konstante                 | R-Bits | G Bits | B Bits | Eine Bits | L Bits | I Bits |
+| Konstante                 | R-Bits | G Bits | B-Bits | A Bits | L-Bits | I Bits |
 |--------------------------|--------|--------|--------|--------|--------|--------|
-| GL- \_ Alpha                |        |        |        |        |        |        |
+| GL \_ ALPHA                |        |        |        |        |        |        |
 | GL \_ ALPHA4               |        |        |        | 4      |        |        |
 | GL \_ ALPHA8               |        |        |        | 8      |        |        |
 | GL \_ ALPHA12              |        |        |        | 12     |        |        |
 | GL \_ ALPHA16              |        |        |        | 16     |        |        |
-| GL- \_ Beleuchtung            |        |        |        |        |        |        |
+| GL \_ LUMINANCE            |        |        |        |        |        |        |
 | GL \_ LUMINANCE4           |        |        |        |        | 4      |        |
 | GL \_ LUMINANCE8           |        |        |        |        | 8      |        |
 | GL \_ LUMINANCE12          |        |        |        |        | 12     |        |
 | GL \_ LUMINANCE16          |        |        |        |        | 16     |        |
-| GL- \_ Leuchtkraft \_ Alpha     |        |        |        |        |        |        |
+| GL \_ LUMINANCE \_ ALPHA     |        |        |        |        |        |        |
 | GL \_ LUMINANCE4 \_ ALPHA4   |        |        |        | 4      | 4      |        |
 | GL \_ LUMINANCE6 \_ ALPHA2   |        |        |        | 2      | 6      |        |
 | GL \_ LUMINANCE8 \_ ALPHA8   |        |        |        | 8      | 8      |        |
 | GL \_ LUMINANCE12 \_ ALPHA4  |        |        |        | 4      | 12     |        |
 | GL \_ LUMINANCE12 \_ ALPHA12 |        |        |        | 12     | 12     |        |
 | GL \_ LUMINANCE16 \_ ALPHA16 |        |        |        | 16     | 16     |        |
-| GL- \_ Intensität            |        |        |        |        |        |        |
+| \_GL-INTENSITÄT            |        |        |        |        |        |        |
 | GL \_ INTENSITY4           |        |        |        |        |        | 4      |
 | GL \_ INTENSITY8           |        |        |        |        |        | 8      |
 | GL \_ INTENSITY12          |        |        |        |        |        | 12     |
 | GL \_ INTENSITY16          |        |        |        |        |        | 16     |
-| GL. \_ RGB                  |        |        |        |        |        |        |
+| GL \_ RGB                  |        |        |        |        |        |        |
 | GL \_ R3 \_ G3 \_ B2           | 3      | 3      | 2      |        |        |        |
 | GL \_ RGB4                 | 4      | 4      | 4      |        |        |        |
 | GL \_ RGB5                 | 5      | 5      | 5      |        |        |        |
@@ -102,9 +102,9 @@ Das interne Format und die Auflösung der Textur Daten. Dieser Parameter muss ei
 | GL \_ RGBA                 |        |        |        |        |        |        |
 | GL \_ RGBA2                | 2      | 2      | 2      | 2      |        |        |
 | GL \_ RGBA4                | 4      | 4      | 4      | 4      |        |        |
-| GL \_ RGB5 \_ a1             | 5      | 5      | 5      | 1      |        |        |
+| GL \_ RGB5 \_ A1             | 5      | 5      | 5      | 1      |        |        |
 | GL \_ RGBA8                | 8      | 8      | 8      | 8      |        |        |
-| GL \_ RGB10 \_ a2            | 10     | 10     | 10     | 2      |        |        |
+| GL \_ RGB10 \_ A2            | 10     | 10     | 10     | 2      |        |        |
 | GL \_ RGBA12               | 12     | 12     | 12     | 12     |        |        |
 | GL \_ RGBA16               | 16     | 16     | 16     | 16     |        |        |
 
@@ -117,28 +117,28 @@ Das interne Format und die Auflösung der Textur Daten. Dieser Parameter muss ei
 *x* 
 </dt> <dd>
 
-Die x-Ebenen-Koordinate der unteren linken Ecke der Zeile der zu kopierenden Pixel.
+Die X-Ebenenkoordinate des Fensters in der unteren linken Ecke der zu kopierenden Pixelzeile.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die y-ebenenkoordinate des Fensters der unteren linken Ecke der Zeile der zu kopierenden Pixel.
+Die y-Ebenenkoordinate des Fensters in der unteren linken Ecke der zu kopierenden Pixelzeile.
 
 </dd> <dt>
 
 *width* 
 </dt> <dd>
 
-Die Breite des Textur Bilds. Muss NULL oder 2N + 2 (*Border*) für eine ganze Zahl *n* sein. Die Höhe des Textur Bilds ist 1.
+Die Breite des Texturbilds. Muss 0 oder 2n + 2(*Rahmen*) für eine ganze Zahl *n sein.* Die Höhe des Texturbilds ist 1.
 
 </dd> <dt>
 
-*Aun* 
+*Grenze* 
 </dt> <dd>
 
-Die Breite des Rahmens. Muss entweder NULL oder 1 sein.
+Die Breite des Rahmens. Muss entweder 0 (null) oder 1 sein.
 
 </dd> </dl>
 
@@ -148,40 +148,40 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                                  |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Ziel* war kein akzeptierter Wert.<br/>                                                                                                           |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Ebene* war kleiner als 0 (null) oder größer als log2 *Max*, wobei *Max* der zurückgegebene Wert von GL \_ Max \_ Texture \_ size ist.<br/>                           |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | der *Rahmen war nicht* 0 (null) oder 1.<br/>                                                                                                                   |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *Breite* war kleiner als 0 (null), größer als 2 + gl \_ Maximale \_ Textur \_ Größe, oder *Breite* kann nicht als 2n + (*Border*) für eine Ganzzahl *n* dargestellt werden.<br/> |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                    |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* war kein akzeptierter Wert.<br/>                                                                                                           |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *level* war kleiner als 0 (null) oder größer als log2 *max,* wobei *max* der zurückgegebene Wert von GL \_ MAX TEXTURE SIZE \_ \_ ist.<br/>                           |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *border* war nicht 0 (null) oder 1.<br/>                                                                                                                   |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *width* war kleiner als 0 (null), größer als 2 + GL MAX TEXTURE SIZE, oder die Breite kann nicht als \_ \_ \_ 2n +(*Rahmen*) für  eine ganze Zahl *n dargestellt werden.*<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/>                    |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glCopyTexImage1D** -Funktion definiert ein eindimensionales Textur Bild mithilfe von Pixel aus dem aktuellen Framebuffer, nicht aus dem Hauptspeicher, wie es bei [**glTexImage1D**](glteximage1d.md)der Fall ist.
+Die **glCopyTexImage1D-Funktion** definiert ein eindimensionales Texturbild mit Pixeln aus dem aktuellen Framepuffer und nicht aus dem Hauptspeicher, wie es bei [**glTexImage1D**](glteximage1d.md)der Fall ist.
 
-Mithilfe der mit *Level* angegebenen MipMap-Ebene werden Textur Arrays als Pixel Zeile definiert, die an der unteren linken Ecke des Fensters an den durch *x* und *y* angegebenen Koordinaten ausgerichtet ist, wobei die Länge gleich dem Rahmen der *Breite* + 2 ist \* . Das interne Format des Textur Arrays wird mit dem *internalformat* -Parameter angegeben.
+Mithilfe der Mipmapebene, die mit level angegeben *wird,* werden Texturarrays als Pixelzeile definiert, die an der unteren linken Ecke des Fensters an den von *x* und *y* angegebenen Koordinaten ausgerichtet ist, mit einer Länge, die der Breite *+* 2 Rahmen \* entspricht. Das interne Format des Texturarrays wird mit dem *internalFormat-Parameter* angegeben.
 
-Die **glCopyTexImage1D** -Funktion verarbeitet die Pixel in einer Zeile auf die gleiche Weise wie [**glcopypixels**](glcopypixels.md), mit dem Unterschied, dass vor der abschließenden Konvertierung der Pixel alle Pixel Komponenten Werte an den Bereich \[ 0, 1 gebunden und in das \] interne Format der Textur für die Speicherung im Textur Array konvertiert werden. Die Pixel Reihenfolge wird mit niedrigeren *x* -Koordinaten bestimmt, die den unteren Texturkoordinaten entsprechen. Wenn eine der Pixel innerhalb einer angegebenen Zeile des aktuellen Frame Puffer außerhalb des Fensters liegt, das dem aktuellen renderingkontext zugeordnet ist, sind ihre Werte nicht definiert.
+Die **glCopyTexImage1D-Funktion** verarbeitet die Pixel in einer Zeile auf die gleiche Weise wie [**glCopyPixels,**](glcopypixels.md)mit der Ausnahme, dass vor der endgültigen Konvertierung der Pixel alle Pixelkomponentenwerte an den Bereich 0,1 geklammert und in das interne Format der Textur für die Speicherung im Texturarray konvertiert \[ \] werden. Die Pixel reihenfolge wird mit niedrigeren *x Koordinaten* bestimmt, die niedrigeren Texturkoordinaten entspricht. Wenn einer der Pixel innerhalb einer angegebenen Zeile des aktuellen Framepuffers außerhalb des Fensters liegt, das dem aktuellen Renderingkontext zugeordnet ist, sind ihre Werte nicht definiert.
 
-Sie können **glCopyTexImage1D** -Aufrufe nicht in Anzeigelisten einschließen.
+Aufrufe von **glCopyTexImage1D können nicht** in Anzeigelisten enthalten sein.
 
 > [!Note]  
-> Die **glCopyTexImage1D** -Funktion ist nur in OpenGL-Version 1,1 oder höher verfügbar.
+> Die **glCopyTexImage1D-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
-Die Texturierung hat keine Auswirkung auf den Farb Index Modus. Die Funktionen " [**glpixelstore**](glpixelstore-functions.md) " und " [**glpixeltransfer**](glpixeltransfer.md) " wirken sich auf Textur Bilder genau so aus, wie Sie sich auf [**gldrawpixels**](gldrawpixels.md)auswirken
+Die Texturierung hat keine Auswirkungen im Farbindexmodus. Die [**Funktionen glPixelStore**](glpixelstore-functions.md) und [**glPixelTransfer**](glpixeltransfer.md) wirken sich genau so auf Texturbilder aus, wie sie [**glDrawPixels beeinflussen.**](gldrawpixels.md)
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **glCopyTexImage1D** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glCopyTexImage1D ab:**
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Texture \_ 1D
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ TEXTURE \_ 1D
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -191,38 +191,38 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glCopyTexImage1D*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glcopypixels**](glcopypixels.md)
+[**glCopyPixels**](glcopypixels.md)
 </dt> <dt>
 
 [**glCopyTexImage2D**](glcopyteximage2d.md)
 </dt> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
-[**glnebel**](glfog.md)
+[**glFog**](glfog.md)
 </dt> <dt>
 
-[**glpixelstore**](glpixelstore-functions.md)
+[**glPixelStore**](glpixelstore-functions.md)
 </dt> <dt>
 
-[**glpixeltransfer**](glpixeltransfer.md)
+[**glPixelTransfer**](glpixeltransfer.md)
 </dt> <dt>
 
-[**gltexd**](gltexenv-functions.md)
+[**glTexEnv**](gltexenv-functions.md)
 </dt> <dt>
 
-[**gltexgen**](gltexgen-functions.md)
+[**glTexGen**](gltexgen-functions.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
@@ -231,7 +231,7 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glCopyTexImage1D*
 [**glTexImage2D**](glteximage2d.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

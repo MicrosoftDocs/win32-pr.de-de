@@ -1,14 +1,14 @@
 ---
-title: IMsRdpClientAdvancedSettings7 videoplaybackmode (Eigenschaft)
-description: Gibt einen Wert an, der den Videowiedergabe Modus angibt, oder ruft ihn ab.
+title: IMsRdpClientAdvancedSettings7 VideoPlaybackMode-Eigenschaft
+description: Gibt einen Wert an, der den Videowiedergabemodus angibt, oder ruft diesen ab.
 ms.assetid: 83f0baa3-3ac2-47ee-b106-5beaf60d73d2
 ms.tgt_platform: multiple
 keywords:
-- Videoplaybackmode-Eigenschaft Remotedesktopdienste
-- Videoplaybackmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, videoplaybackmode (Eigenschaft)
-- Videoplaybackmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, videoplaybackmode (Eigenschaft)
+- VideoPlaybackMode-Eigenschaft Remotedesktopdienste
+- VideoPlaybackMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , VideoPlaybackMode-Eigenschaft
+- VideoPlaybackMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , VideoPlaybackMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f864224f402814ada268b9b7cbc85ec115a1fa2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 353cf72822ac91686cb5a08edf5ca6a5e25b24ff8e544ff79bdd8a2085f761fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607817"
 ---
-# <a name="imsrdpclientadvancedsettings7videoplaybackmode-property"></a>IMsRdpClientAdvancedSettings7:: videoplaybackmode (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings7videoplaybackmode-property"></a>IMsRdpClientAdvancedSettings7::VideoPlaybackMode-Eigenschaft
 
-Gibt einen Wert an, der den Videowiedergabe Modus angibt, oder ruft ihn ab.
+Gibt einen Wert an, der den Videowiedergabemodus angibt, oder ruft diesen ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -54,7 +54,7 @@ HRESULT get_VideoPlaybackMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein-Wert, der den Videowiedergabe Modus angibt.
+Ein -Wert, der den Videowiedergabemodus angibt.
 
 Mögliche Werte sind:
 
@@ -63,14 +63,14 @@ Mögliche Werte sind:
 1
 </dt> <dd>
 
-Der Standardmodus für die Videowiedergabe. Wenn der Videowiedergabe Modus auf diesen Wert festgelegt ist, wird die Video Umleitung von der [**audioredirectionmode**](imsrdpclientsecuredsettings-autoredirectionmode.md) -Eigenschaft gesteuert. Wenn die **audioredirectionmode** -Eigenschaft auf **audiomodusumleitung \_ \_** festgelegt ist, wird das Video decodiert und auf dem Client gerendert.
+Der Standardwiedergabemodus für Videos. Wenn der Videowiedergabemodus auf diesen Wert festgelegt ist, wird die Videoumleitung durch die [**AudioRedirectionMode-Eigenschaft**](imsrdpclientsecuredsettings-autoredirectionmode.md) gesteuert. Wenn die **AudioRedirectionMode-Eigenschaft** auf **AUDIO MODE \_ \_ REDIRECT** festgelegt ist, wird das Video decodiert und auf dem Client gerendert.
 
 </dd> <dt>
 
 0
 </dt> <dd>
 
-Die Umleitung der Video Wiedergabe ist deaktiviert, auch wenn [**audioredirectionmode**](imsrdpclientsecuredsettings-autoredirectionmode.md) auf **audiomodusumleitung \_ \_** festgelegt ist. In diesem Modus wird das Video auf dem RD-Sitzungshost Server decodiert und gerendert.
+Die Videowiedergabeumleitung ist deaktiviert, auch wenn [**AudioRedirectionMode**](imsrdpclientsecuredsettings-autoredirectionmode.md) auf **AUDIO MODE \_ \_ REDIRECT** festgelegt ist. In diesem Modus wird das Video decodiert und auf dem RD-Sitzungshost-Server gerendert.
 
 </dd> </dl>
 
@@ -80,15 +80,15 @@ Die Umleitung der Video Wiedergabe ist deaktiviert, auch wenn [**audioredirectio
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7<br/>                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7<br/>                                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                                |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings7 wird als 26036036-4010-4578-8091-0db9a1edf-C3 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings7 ist als 26036036-4010-4578-8091-0db9a1edf9c3 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

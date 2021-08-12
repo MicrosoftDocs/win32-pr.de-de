@@ -1,50 +1,50 @@
 ---
-title: Nachrichten Authentifizierung
-description: Nachrichten Authentifizierung
+title: Nachrichtenauthentifizierung
+description: Nachrichtenauthentifizierung
 ms.assetid: 6cb49f6b-e303-4840-9343-9891e75e07a4
 keywords:
-- Windows Media Device Manager, Nachrichten Authentifizierung
-- Device Manager, Nachrichten Authentifizierung
-- Desktop Anwendungen, Nachrichten Authentifizierung
-- Dienstanbieter, Nachrichten Authentifizierung
-- Programmier Handbuch, Nachrichten Authentifizierung
-- Nachrichten Authentifizierung
-- Message Authentication Code (Mac)
-- Mac (Message Authentication Code)
+- Windows Medien Geräte-Manager,Nachrichtenauthentifizierung
+- Geräte-Manager,Nachrichtenauthentifizierung
+- Desktopanwendungen,Nachrichtenauthentifizierung
+- Dienstanbieter,Nachrichtenauthentifizierung
+- Programmierhandbuch, Nachrichtenauthentifizierung
+- Nachrichtenauthentifizierung
+- Nachrichtenauthentifizierungscode (MAC)
+- MAC (Nachrichtenauthentifizierungscode)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14805e2074509e918902aae9eb9e9680ca52a6d6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2921b80d42207bab608c6a8260e6756d3e9f323eab70742acc787ff731ad4b80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584484"
 ---
-# <a name="message-authentication"></a>Nachrichten Authentifizierung
+# <a name="message-authentication"></a>Nachrichtenauthentifizierung
 
-Die Nachrichten Authentifizierung ist ein Prozess, mit dem Anwendungen und Dienstanbieter überprüfen können, ob die zwischen Ihnen übergebenen Daten nicht manipuliert wurden. Mithilfe von Windows Media Device Manager können Anwendungen und Dienstanbieter die Nachrichten Authentifizierung mithilfe von Nachrichten Authentifizierungscodes (Macs) durchführen. Die Mac-Authentifizierung funktioniert wie folgt:
+Nachrichtenauthentifizierung ist ein Prozess, mit dem Anwendungen und Dienstanbieter überprüfen können, ob zwischen ihnen übergebene Daten nicht manipuliert wurden. Windows Media Geräte-Manager ermöglicht Es Anwendungen und Dienstanbietern, die Nachrichtenauthentifizierung mithilfe von Nachrichtenauthentifizierungscodes (Message Authentication Codes, MACs) durchzuführen. So funktioniert die MAC-Authentifizierung:
 
-Der Daten Absender, normalerweise der Dienstanbieter, übergibt ein oder mehrere Datenelemente über eine unidirektionale Kryptografiefunktion, die für alle Daten eine einzige Signatur, den Mac, erzeugt. Anschließend sendet der Absender alle signierten Daten zusammen mit dem Mac an den Empfänger (in der Regel die Anwendung). Der Empfänger übergibt die Daten über dieselbe Kryptografiefunktion, um einen Mac zu generieren, und vergleicht ihn mit dem gesendeten Mac. Wenn der Mac übereinstimmt, wurden die Daten nicht geändert.
+Der Datensender, in der Regel der Dienstanbieter, übergibt ein oder mehrere Datenteile über eine einfache kryptografische Funktion, die eine einzelne Signatur, den MAC, für alle Daten erzeugt. Der Absender sendet dann alle signierten Daten zusammen mit dem MAC an den Empfänger (in der Regel die Anwendung). Der Empfänger übergibt die Daten über dieselbe kryptografische Funktion, um einen MAC zu generieren, und vergleicht sie mit dem gesendeten MAC. Wenn der MAC entspricht, wurden die Daten nicht geändert.
 
-Um die Mac-Authentifizierung auszuführen, erfordert die Anwendung oder der Dienstanbieter einen Verschlüsselungsschlüssel und ein entsprechendes Zertifikat. Informationen dazu, wo Sie diese erhalten, finden Sie unter [Tools für die Entwicklung](tools-for-development.md).
+Für die MAC-Authentifizierung benötigt die Anwendung oder der Dienstanbieter einen Verschlüsselungsschlüssel und ein entsprechendes Zertifikat. Informationen dazu, wo sie zu erhalten sind, finden Sie unter [Tools für die Entwicklung](tools-for-development.md).
 
-In den folgenden Schritten wird beschrieben, wie Daten vom Absender signiert und später vom Empfänger geprüft werden. In Windows Media Device Manager verwendet der Dienstanbieter die [csecurechannelserver](csecurechannelserver-class.md) -Klasse, um Macs zu generieren, und die Anwendung verwendet die [csecurechannelclient](csecurechannelclient-class.md) -Klasse. Beide Klassen stellen identische Funktionen mit identischen Parametern bereit, sodass die folgenden Schritte für beide Klassen gelten.
+In den folgenden Schritten wird beschrieben, wie Daten vom Absender signiert und später vom Empfänger überprüft werden. In Windows Media Geräte-Manager verwendet der Dienstanbieter die [CSecureChannelServer-Klasse,](csecurechannelserver-class.md) um MACs zu generieren, und die Anwendung verwendet die [CSecureChannelClient-Klasse.](csecurechannelclient-class.md) Beide Klassen stellen identische Funktionen mit identischen Parametern zur Verfügung, sodass die folgenden Schritte für beide Klassen gelten.
 
 Der Absender (in der Regel der Dienstanbieter):
 
-1.  Die zu Signier enden Daten.
-2.  Erstellen Sie ein neues Mac-Handle durch Aufrufen von **Macinit**.
-3.  Fügen Sie ein Datenelement hinzu, das im handle signiert werden soll, indem Sie **macupdate** aufrufen. Diese Funktion akzeptiert das zuvor erstellte Handle sowie ein Datenelement, das signiert werden muss.
-4.  Wiederholen Sie Schritt 3 mit jedem weiteren Datenelement, das signiert werden muss. Es spielt keine Rolle, in welcher Reihenfolge Daten dem Mac hinzugefügt werden.
-5.  Kopieren Sie den Mac aus dem Handle in einen neuen Byte Puffer, indem Sie **macfinal** aufrufen. Diese Funktion akzeptiert das Mac-Handle und einen Puffer, den Sie zuordnen, und kopiert den Mac aus dem Handle in den bereitgestellten Puffer.
+1.  Hier erhalten Sie die zu signierten Daten.
+2.  Erstellen Sie ein neues MAC-Handle, indem Sie **MACInit aufrufen.**
+3.  Fügen Sie ein Datenstück hinzu, das durch Aufrufen von MACUpdate am Handle **signiert werden soll.** Diese Funktion akzeptiert das zuvor erstellte Handle sowie ein Datenstück, das signiert werden muss.
+4.  Wiederholen Sie Schritt 3 mit jedem zusätzlichen Datenteil, der signiert werden muss. Es spielt keine Rolle, in welcher Reihenfolge dem MAC Daten hinzugefügt werden.
+5.  Kopieren Sie den MAC aus dem Handle in einen neuen Bytepuffer, indem Sie **MACFinal aufrufen.** Diese Funktion akzeptiert das MAC-Handle und einen Puffer, den Sie zuordnen, und kopiert den MAC aus dem Handle in den bereitgestellten Puffer.
 
-Beim Durchführen der Mac-Authentifizierung ist es wichtig, dass sowohl der Absender als auch der Empfänger die gleichen Daten auf dem Mac ablegen. Für die Anwendungsmethoden, die einen Mac bereitstellen, sind normalerweise alle Parameter im Mac-Wert enthalten (mit Ausnahme des Mac selbst). Stellen Sie sich beispielsweise die **iwmdmoperation:: transferobjectdata** -Methode vor:
+Beim Ausführen der MAC-Authentifizierung ist es wichtig, dass sowohl der Absender als auch der Empfänger dieselben Daten auf dem MAC abhören. Für die Anwendungsmethoden, die einen MAC bereitstellen, sind in der Regel alle Parameter im MAC-Wert enthalten (mit Ausnahme des MAC selbst, natürlich). Betrachten Sie beispielsweise die **IWMDMOperation::TransferObjectData-Methode:**
 
 `HRESULT TransferObjectData(BYTE* pData, DWORD* pdwSize, BYTE[WMDM_MAC_LENGTH] abMac);`
 
-Bei dieser Methode würde der Mac *pData* und *pdwSize* enthalten. Wenn Sie nicht beide Parameter einschließen, entspricht der von Ihnen erstellte Mac nicht dem Mac, der an *abmac* übermittelt wurde. Ein Dienstanbieter muss sicherstellen, dass alle erforderlichen Parameter in der Anwendungsmethode in den Mac-Wert eingefügt werden.
+In dieser Methode würde der MAC *pData und* *pdwSize enthalten.* Wenn Sie nicht beide Parameter angeben, stimmen die von Ihnen erstellten MAC-Computer nicht mit dem MAC überein, der an *abMac übergeben wurde.* Ein Dienstanbieter muss sicherstellen, dass alle erforderlichen Parameter in der Anwendungsmethode im MAC-Wert gespeichert werden.
 
-Der folgende C++-Code veranschaulicht das Erstellen eines Macs in der Implementierung eines Dienstanbieters von [**imdspstorageglobals:: GetSerialNumber**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorageglobals-getserialnumber).
+Der folgende C++-Code veranschaulicht das Erstellen eines MAC in der Implementierung [**von IMDSPStorageGlobals::GetSerialNumber**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorageglobals-getserialnumber)durch einen Dienstanbieter.
 
 
 ```C++
@@ -97,7 +97,7 @@ HRESULT CMyDevice::GetSerialNumber(
 
 Der Empfänger (in der Regel die Anwendung):
 
-Wenn der Empfänger die [**IWMDMOperation3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation3) -Schnittstelle nicht implementiert hat, sollte er die gleichen Schritte wie der Absender ausführen und dann die beiden Mac-Werte vergleichen. Im folgenden C++-Codebeispiel wird gezeigt, wie eine Anwendung den in einem [**callmdmstorageglobals:: GetSerialNumber**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorageglobals-getserialnumber) empfangenen Mac überprüft, um sicherzustellen, dass die Seriennummer bei der Übertragung nicht manipuliert wurde.
+Wenn der Empfänger die [**IWMDMOperation3-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation3) nicht implementiert hat, sollte er die gleichen Schritte wie der Absender ausführen und dann die beiden MAC-Werte vergleichen. Das folgende C++-Codebeispiel zeigt, wie eine Anwendung den mac überprüft, der in einem Aufruf von [**IWMDMStorageGlobals::GetSerialNumber**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorageglobals-getserialnumber) empfangen wurde, um sicherzustellen, dass die Seriennummer während der Übertragung nicht manipuliert wurde.
 
 
 ```C++
@@ -156,12 +156,12 @@ if (hr == S_OK)
 
 <dl> <dt>
 
-[**Verwenden sicherer authentifizierter Kanäle**](using-secure-authenticated-channels.md)
+[**Verwenden von sicheren authentifizierten Kanälen**](using-secure-authenticated-channels.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

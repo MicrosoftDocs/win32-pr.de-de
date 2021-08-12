@@ -1,7 +1,7 @@
 ---
-description: 'Nennen Sie dies nach ID3DX10Sprite:: Flush. Wenn \_ beim Aufruf von \_ \_ ID3DX10Sprite:: Begin der d3dx10 Sprite-Speicher Zustand angegeben wurde, stellt diese API den Gerätezustand vor dem Aufruf von ID3DX10Sprite:: begin wieder her.'
+description: Rufen Sie dies nach ID3DX10Sprite::Flush auf. Wenn D3DX10 SPRITE SAVE STATE angegeben wurde, als ID3DX10Sprite::Begin aufgerufen wurde, stellt diese API den Gerätestatus wie vor dem Aufruf von \_ \_ \_ ID3DX10Sprite::Begin wieder bereit.
 ms.assetid: 71645edb-be4a-4d87-9fb0-557cf5cf10e5
-title: 'ID3DX10Sprite:: End-Methode (d3dx10. h)'
+title: ID3DX10Sprite::End-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 02d25e41916bd5d7605f3c0e1bc6e7998ea06e86
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 02cfa1e92275230bd3a853aa9079187181089c46b4e4f193404b9dc0c709c9e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118302289"
 ---
-# <a name="id3dx10spriteend-method"></a>ID3DX10Sprite:: End-Methode
+# <a name="id3dx10spriteend-method"></a>ID3DX10Sprite::End-Methode
 
-Nennen Sie dies nach ID3DX10Sprite:: Flush. Wenn \_ beim Aufruf von \_ \_ ID3DX10Sprite:: Begin der d3dx10 Sprite-Speicher Zustand angegeben wurde, stellt diese API den Gerätezustand vor dem Aufruf von ID3DX10Sprite:: begin wieder her.
+Rufen Sie dies nach ID3DX10Sprite::Flush auf. Wenn D3DX10 SPRITE SAVE STATE angegeben wurde, als ID3DX10Sprite::Begin aufgerufen wurde, stellt diese API den Gerätestatus wie vor dem Aufruf von \_ \_ \_ ID3DX10Sprite::Begin wieder bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

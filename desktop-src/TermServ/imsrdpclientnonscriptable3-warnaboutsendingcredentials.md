@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 warnaboutsending-Anmelde Informationen (Eigenschaft)
-description: Gibt an oder Ruft ab, ob das Dialogfeld Sicherheitswarnung eine Warnung zum Senden von Anmelde Informationen an den Remote Server enthalten soll, bevor eine Sitzung gestartet wird.
+title: IMsRdpClientNonScriptable3 WarnAboutSendingCredentials (Eigenschaft)
+description: Gibt an oder ruft ab, ob das Dialogfeld "Sicherheitswarnung" eine Warnung zum Senden von Anmeldeinformationen an den Remoteserver enthalten soll, bevor eine Sitzung gestartet wird.
 ms.assetid: b97baef5-4a51-4e5c-bd53-10cff175533c
 ms.tgt_platform: multiple
 keywords:
-- Eigenschaften Remotedesktopdienste warnaboutsending-Anmelde Informationen
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
-- Warnaboutsendinganmelde-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, warnaboutsending-Anmelde Informationen (Eigenschaft)
+- WarnAboutSendingCredentials-Remotedesktopdienste
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
+- WarnAboutSendingCredentials-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , WarnAboutSendingCredentials -Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29d9d2fcfe158f5a0bb6812002bfcc160f1c9009
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 48924b435e09b002992e6380ef130a1e11ca4961dbb0d3514b8c551f21f1b648
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118607679"
 ---
-# <a name="imsrdpclientnonscriptable3warnaboutsendingcredentials-property"></a>IMsRdpClientNonScriptable3:: warnaboutsendinganmeldeinformationen (Eigenschaft)
+# <a name="imsrdpclientnonscriptable3warnaboutsendingcredentials-property"></a>IMsRdpClientNonScriptable3::WarnAboutSendingCredentials (Eigenschaft)
 
-Gibt an oder Ruft ab, ob das Dialogfeld Sicherheitswarnung eine Warnung zum Senden von Anmelde Informationen an den Remote Server enthalten soll, bevor eine Sitzung gestartet wird.
+Gibt an oder ruft ab, ob das Dialogfeld "Sicherheitswarnung" eine Warnung zum Senden von Anmeldeinformationen an den Remoteserver enthalten soll, bevor eine Sitzung gestartet wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,7 +74,7 @@ HRESULT get_WarnAboutSendingCredentials(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob das Dialogfeld Sicherheitswarnung eine Warnung zum Senden von Anmelde Informationen an den Remote Server enthalten soll, bevor eine Sitzung gestartet wird.
+Gibt an, ob das Dialogfeld "Sicherheitswarnung" eine Warnung zum Senden von Anmeldeinformationen an den Remoteserver enthalten soll, bevor eine Sitzung gestartet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,7 +90,7 @@ Gibt an, ob das Dialogfeld Sicherheitswarnung eine Warnung zum Senden von Anmeld
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

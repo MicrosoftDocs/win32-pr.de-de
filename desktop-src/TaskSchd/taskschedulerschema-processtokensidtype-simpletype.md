@@ -1,9 +1,9 @@
 ---
-title: einfacher processtokensidtype-Typ
-description: Definiert die möglichen Werte für das processtokensidtype (principaltype)-Element.
+title: processTokenSidType – einfacher Typ
+description: Definiert die möglichen Werte für das ProcessTokenSidType -Element (principalType).
 ms.assetid: 9db3e113-c525-4cbf-88c2-be256d641e92
 keywords:
-- Dateityp "processtokensidtype" Taskplaner
+- einfacher processTokenSidType-Typ Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 13cf70534510e1aed8def9005d0c2d1eafab2a5a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 505f8abe340af36c25792ec97a5a465a166eedb74921c800d2a568d10a5cce0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118611902"
 ---
-# <a name="processtokensidtype-simple-type"></a>einfacher processtokensidtype-Typ
+# <a name="processtokensidtype-simple-type"></a>processTokenSidType – einfacher Typ
 
-Definiert die möglichen Werte für das [**processtokensidtype (principaltype)**](taskschedulerschema-processtokensidtype-principaltype-element.md) -Element.
+Definiert die möglichen Werte für das [**ProcessTokenSidType -Element (principalType).**](taskschedulerschema-processtokensidtype-principaltype-element.md)
 
 ``` syntax
 <xs:simpleType name="processTokenSidType">
@@ -41,14 +41,14 @@ Definiert die möglichen Werte für das [**processtokensidtype (principaltype)**
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache Typ **processtokensidtype** definiert die folgenden Werte.
+Der einfache **processTokenSidType-Typ** definiert die folgenden Werte.
 
 
 
-| Wert        | BESCHREIBUNG                                                                                                                                 |
+| Wert        | Beschreibung                                                                                                                                 |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| Keine         | Tasks werden in einem Prozess ausgeführt, der keine Prozess Token-sid enthält (es werden keine Änderungen an der Liste der prozesstokengruppen vorgenommen).<br/> |
-| Nicht eingeschränkt | Eine Task-sid wird vom vollständigen Aufgaben Pfad abgeleitet und der Liste der prozesstokengruppen hinzugefügt.<br/>                           |
+| Keine         | Aufgaben werden in einem Prozess ausgeführt, der keine Prozesstoken-SID enthält (an der Liste der Prozesstokengruppen werden keine Änderungen vorgenommen).<br/> |
+| Nicht eingeschränkt | Eine Task-SID wird vom vollständigen Aufgabenpfad abgeleitet und der Liste der Prozesstokengruppen hinzugefügt.<br/>                           |
 
 
 
@@ -58,8 +58,8 @@ Der einfache Typ **processtokensidtype** definiert die folgenden Werte.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

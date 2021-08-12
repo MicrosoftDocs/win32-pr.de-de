@@ -1,23 +1,23 @@
 ---
-title: IAdd (SM4-ASM)
+title: iadd (sm4 - asm)
 description: Ganzzahlige Addition.
 ms.assetid: EF78EA65-DC16-469A-9E45-52844FF4BD93
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b593484aa7c1ef376bb5febf141b144ddef338e0
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 9226223b5a065714ca17bd63775b8d4e8a3bc9b96de111cec87b879114728bf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285789"
 ---
-# <a name="iadd-sm4---asm"></a>IAdd (SM4-ASM)
+# <a name="iadd-sm4---asm"></a>iadd (sm4 - asm)
 
 Ganzzahlige Addition.
 
 
 
-| IAdd dest \[ . mask \] , \[ - \] src0 \[ . Swizzle \] , \[ - \] Quelle1 \[ . Swizzle\] |
+| iadd dest \[ .mask \] , \[ - \] src0 \[ .swizzle \] , \[ - \] src1 \[ .swizzle\] |
 |------------------------------------------------------------------|
 
 
@@ -26,23 +26,23 @@ Ganzzahlige Addition.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                   |
+| Element                                                            | Beschreibung                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse des Vorgangs Ergebnisses.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] der Zahl, die zu *Quelle1* hinzugefügt werden soll.<br/>           |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] der Zahl, die zu *src0* hinzugefügt werden soll.<br/>           |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Zahl, die *src1 hinzugefügt werden soll.*<br/>           |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Die Zahl, die *src0* hinzugefügt werden soll.<br/>           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Komponenten weises Hinzufügen von 32-Bit-Operanden *src0* und *Quelle1*, wobei das korrekte 32-Bit-Ergebnis in *dest* platziert wird. Über die 32-Bit-Werte der einzelnen Komponenten hinaus werden keine übertragen oder Ausleihe durchgeführt, sodass diese Anweisung nicht für die Signierung ihrer Operanden sensibel ist.
+Komponentenweises Hinzufügen der 32-Bit-Operanden *src0* und *src1,* das richtige 32-Bit-Ergebnis wird in *dest platziert.* Über die 32-Bit-Werte der einzelnen Komponenten hinaus wird kein Carry oder Borrow ausgeführt, sodass diese Anweisung nicht für die Signiertheit ihrer Operanden sensibel ist.
 
-Der optionale Negation-Modifizierer für Quell Operanden nimmt die Ergänzung von 2 vor dem Ausführen des Vorgangs an.
+Der optionale Negatmodifizierer für Quellopernden nimmt vor dem Ausführen des Vorgangs ein Komplement von 2 an.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -54,20 +54,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
