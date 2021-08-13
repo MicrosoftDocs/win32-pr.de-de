@@ -1,6 +1,6 @@
 ---
 title: Erstellen von BITS-Übertragungsaufträgen mithilfe von Windows PowerShell
-description: Sie können PowerShell-Cmdlets verwenden, um synchrone und asynchrone Background Intelligent Transfer Service (Bits)-Übertragungs Aufträge zu erstellen.
+description: Sie können PowerShell-Cmdlets verwenden, um synchrone und asynchrone BITS-Übertragungsaufträge (Background Intelligent Transfer Service) zu erstellen.
 ms.assetid: 22bcf0d5-36f0-4677-84a7-502b98cfaac2
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,34 +9,34 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: af4879d1fc8f1b25fa0b1b51816432aad3bed8bd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e939342414d62e4e1af0551318dfec0fb9a5ca59a7e310f13de7b6b67b0440cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118679892"
 ---
 # <a name="using-windows-powershell-to-create-bits-transfer-jobs"></a>Erstellen von BITS-Übertragungsaufträgen mithilfe von Windows PowerShell
 
-Sie können PowerShell-Cmdlets verwenden, um synchrone und asynchrone Background Intelligent Transfer Service (Bits)-Übertragungs Aufträge zu erstellen.
+Sie können PowerShell-Cmdlets verwenden, um synchrone und asynchrone BITS-Übertragungsaufträge (Background Intelligent Transfer Service) zu erstellen.
 
-In allen Beispielen in diesem Thema wird das Cmdlet [Start-bitstransfer](/previous-versions//dd347701(v=technet.10)) verwendet. Um das Cmdlet zu verwenden, müssen Sie zuerst das Modul importieren. Führen Sie den folgenden Befehl aus, um das Modul zu installieren: Import-Module bitstransfer. Wenn Sie weitere Informationen benötigen, geben **Sie "Get-Help Start-bitstransfer** " an der PowerShell-Eingabeaufforderung ein.
+In allen Beispielen in diesem Thema wird das Cmdlet [Start-BitsTransfer](/previous-versions//dd347701(v=technet.10)) verwendet. Um das Cmdlet zu verwenden, müssen Sie zuerst das Modul importieren. Führen Sie zum Installieren des Moduls den folgenden Befehl aus: Import-Module BitsTransfer. Geben **Sie get-Help Start-BitsTransfer** an der PowerShell-Eingabeaufforderung ein, um weitere Informationen zu erhalten.
 
 > [!IMPORTANT]
 >
-> Wenn Sie [ \* -bitstransfer-](/previous-versions//dd819413(v=technet.10)) Cmdlets von einem Prozess aus verwenden, der in einem nicht interaktiven Kontext (z. b. einem Windows-Dienst) ausgeführt wird, sind Sie möglicherweise nicht in der Lage, Bits-Aufträgen Dateien hinzuzufügen, was zu einem angehaltenen Status führen kann. Damit der Auftrag fortgesetzt werden kann, muss die Identität, die zum Erstellen eines Übertragungs Auftrags verwendet wurde, angemeldet sein. Wenn Sie z. b. einen BITS-Auftrag in einem PowerShell-Skript erstellen, das als Taskplaner Auftrag ausgeführt wurde, wird die Bits-Übertragung nie abgeschlossen, es sei denn, Taskplaner die Task Einstellung "nur ausführen, wenn ein Benutzer angemeldet ist" wird aktiviert.
+> Wenn Sie [ \* -BitsTransfer-Cmdlets](/previous-versions//dd819413(v=technet.10)) in einem Prozess verwenden, der in einem nicht interaktiven Kontext ausgeführt wird, z. B. einem Windows Diensts, können Sie bits-Aufträgen möglicherweise keine Dateien hinzufügen, was zu einem angehaltenen Zustand führen kann. Damit der Auftrag fortgesetzt werden kann, muss die Identität angemeldet werden, die zum Erstellen eines Übertragungsauftrags verwendet wurde. Wenn Sie beispielsweise einen BITS-Auftrag in einem PowerShell-Skript erstellen, das als Taskplaner Auftrag ausgeführt wurde, wird die BITS-Übertragung nur abgeschlossen, wenn die Taskeinstellung "Nur ausführen, wenn der Benutzer angemeldet ist" des Taskplaner aktiviert ist.
 
  
 
--   [So erstellen Sie einen synchronen Bits-Übertragungs Auftrag](#to-create-a-synchronous-bits-transfer-job)
--   [So erstellen Sie einen synchronen Bits-Übertragungs Auftrag mit mehreren Dateien](#to-create-a-synchronous-bits-transfer-job-with-multiple-files)
--   [So erstellen Sie einen synchronen Bits-Übertragungs Auftrag und geben Anmelde Informationen für einen Remote Server an](#to-create-a-synchronous-bits-transfer-job-and-specify-credentials-for-a-remote-server)
--   [So erstellen Sie einen synchronen Bits-Übertragungs Auftrag aus einer CSV-Datei](#to-create-a-synchronous-bits-transfer-job-from-a-csv-file)
--   [So erstellen Sie einen asynchronen Bits-Übertragungs Auftrag](#to-create-an-asynchronous-bits-transfer-job)
--   [So verwalten Sie PowerShell-Remote Sitzungen](#to-manage-powershell-remote-sessions)
+-   [So erstellen Sie einen synchronen BITS-Übertragungsauftrag](#to-create-a-synchronous-bits-transfer-job)
+-   [So erstellen Sie einen synchronen BITS-Übertragungsauftrag mit mehreren Dateien](#to-create-a-synchronous-bits-transfer-job-with-multiple-files)
+-   [So erstellen Sie einen synchronen BITS-Übertragungsauftrag und geben Anmeldeinformationen für einen Remoteserver an](#to-create-a-synchronous-bits-transfer-job-and-specify-credentials-for-a-remote-server)
+-   [So erstellen Sie einen synchronen BITS-Übertragungsauftrag aus einer CSV-Datei](#to-create-a-synchronous-bits-transfer-job-from-a-csv-file)
+-   [So erstellen Sie einen asynchronen BITS-Übertragungsauftrag](#to-create-an-asynchronous-bits-transfer-job)
+-   [So verwalten Sie PowerShell-Remotesitzungen](#to-manage-powershell-remote-sessions)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="to-create-a-synchronous-bits-transfer-job"></a>So erstellen Sie einen synchronen Bits-Übertragungs Auftrag
+## <a name="to-create-a-synchronous-bits-transfer-job"></a>So erstellen Sie einen synchronen BITS-Übertragungsauftrag
 
 
 ```PowerShell
@@ -47,15 +47,15 @@ Start-BitsTransfer -Source https://Server01/serverdir/testfile1.txt `
 
 
 > [!Note]  
-> Das Zeichen mit einem Doppel Akzent ( \` ) wird verwendet, um einen Zeilenumbruch anzugeben.
+> Das Akzentzeichen \` () wird verwendet, um einen Zeilenbruch anzugeben.
 
  
 
-Im vorherigen Beispiel werden der lokale und der Remote Name der Datei jeweils in den *Quell* -und *Ziel* Parametern angegeben. Die Eingabeaufforderung kehrt zurück, nachdem die Dateiübertragung abgeschlossen wurde oder wenn ein Fehler aufgetreten ist.
+Im vorherigen Beispiel werden die lokalen und Remotenamen der Datei in den Parametern *Quelle* bzw. *Ziel* angegeben. Die Eingabeaufforderung kehrt zurück, nachdem die Dateiübertragung abgeschlossen wurde oder wenn ein Fehler aufgetreten ist.
 
-Der Standard Übertragungstyp ist herunterladen. Wenn Sie Dateien in einen HTTP-Speicherort hochladen, muss der *TransferType* -Parameter auf Upload festgelegt werden.
+Der Standardübertragungstyp ist Download. Wenn Sie Dateien an einen HTTP-Speicherort hochladen, muss der *Parameter TransferType* auf Hochladen festgelegt werden.
 
-Da die Parameter Position für das Cmdlet [Start-bitstransfer](/previous-versions//dd347701(v=technet.10)) erzwungen wird, müssen die Parameternamen für die Quell-und Zielparameter nicht angegeben werden. Daher kann dieser Befehl wie folgt vereinfacht werden.
+Da die Parameterposition für das [Cmdlet Start-BitsTransfer](/previous-versions//dd347701(v=technet.10)) erzwungen wird, müssen die Parameternamen nicht für die Parameter Source und Destination angegeben werden. Daher kann dieser Befehl wie folgt vereinfacht werden.
 
 
 ```PowerShell
@@ -64,7 +64,7 @@ Start-BitsTransfer https://Server01/serverdir/testfile1.txt C:\clientdir\testfil
 
 
 
-## <a name="to-create-a-synchronous-bits-transfer-job-with-multiple-files"></a>So erstellen Sie einen synchronen Bits-Übertragungs Auftrag mit mehreren Dateien
+## <a name="to-create-a-synchronous-bits-transfer-job-with-multiple-files"></a>So erstellen Sie einen synchronen BITS-Übertragungsauftrag mit mehreren Dateien
 
 
 ```PowerShell
@@ -74,14 +74,14 @@ Start-BitsTransfer -Source C:\clientsourcedir\*.txt `
 
 
 
-Im vorherigen Beispiel wird mit dem Befehl [Start-bitstransfer](/previous-versions//dd347701(v=technet.10)) ein neuer Bits-Übertragungs Auftrag erstellt. Alle Dateien werden diesem Auftrag hinzugefügt und sequenziell auf den Client übertragen.
+Im vorherigen Beispiel erstellt der [Befehl Start-BitsTransfer](/previous-versions//dd347701(v=technet.10)) einen neuen BITS-Übertragungsauftrag. Alle Dateien werden diesem Auftrag hinzugefügt und sequenziell an den Client übertragen.
 
 > [!Note]  
-> Im Zielpfad dürfen keine Platzhalterzeichen verwendet werden. Der Zielpfad unterstützt relative Verzeichnisse, Stamm Pfade oder implizite Verzeichnisse (d. h. das aktuelle Verzeichnis). Zieldateien können nicht mit einem Platzhalter Zeichen umbenannt werden. Außerdem können http-und HTTPS-URLs nicht mit Platzhaltern verwendet werden. Platzhalter sind nur für UNC-Pfade und lokale Verzeichnisse gültig.
+> Im Zielpfad dürfen keine Platzhalterzeichen verwendet werden. Der Zielpfad unterstützt relative Verzeichnisse, Stammpfade oder implizite Verzeichnisse (das aktuelle Verzeichnis). Zieldateien können nicht mithilfe eines Platzhalterzeichens umbenannt werden. Darüber hinaus funktionieren HTTP- und HTTPS-URLs nicht mit Platzhaltern. Platzhalter sind nur für UNC-Pfade und lokale Verzeichnisse gültig.
 
  
 
-## <a name="to-create-a-synchronous-bits-transfer-job-and-specify-credentials-for-a-remote-server"></a>So erstellen Sie einen synchronen Bits-Übertragungs Auftrag und geben Anmelde Informationen für einen Remote Server an
+## <a name="to-create-a-synchronous-bits-transfer-job-and-specify-credentials-for-a-remote-server"></a>So erstellen Sie einen synchronen BITS-Übertragungsauftrag und geben Anmeldeinformationen für einen Remoteserver an
 
 
 ```PowerShell
@@ -92,9 +92,9 @@ Start-BitsTransfer -DisplayName MyJob -Credential Username\Domain `
 
 
 
-Im vorherigen Beispiel erstellt ein Benutzer einen Bits-Übertragungs Auftrag zum Herunterladen einer Datei von einem Server, für den eine Authentifizierung erforderlich ist. Der Benutzer wird zur Eingabe von Anmelde Informationen aufgefordert, und der *Anmelde Informationen* -Parameter übergibt ein Anmelde Informationen-Objekt an das Cmdlet [Start-bitstransfer](/previous-versions//dd347701(v=technet.10)) . Der Benutzer legt einen expliziten Proxy fest, und der Bits-Übertragungs Auftrag verwendet nur die Proxys, die durch den *proxylist* -Parameter definiert werden. Der *DisplayName* -Parameter gibt dem Bits-Übertragungs Auftrag einen eindeutigen anzeigen Amen.
+Im vorherigen Beispiel erstellt ein Benutzer einen BITS-Übertragungsauftrag, um eine Datei von einem Server herunterzuladen, der eine Authentifizierung erfordert. Der Benutzer wird zur Eingabe von Anmeldeinformationen aufgefordert, und der *Credential-Parameter* übergibt ein Anmeldeinformationsobjekt an das [Cmdlet Start-BitsTransfer.](/previous-versions//dd347701(v=technet.10)) Der Benutzer legt einen expliziten Proxy fest, und der BITS-Übertragungsauftrag verwendet nur die Proxys, die durch den *ProxyList-Parameter* definiert werden. Der *DisplayName-Parameter* gibt dem BITS-Übertragungsauftrag einen eindeutigen Anzeigenamen.
 
-## <a name="to-create-a-synchronous-bits-transfer-job-from-a-csv-file"></a>So erstellen Sie einen synchronen Bits-Übertragungs Auftrag aus einer CSV-Datei
+## <a name="to-create-a-synchronous-bits-transfer-job-from-a-csv-file"></a>So erstellen Sie einen synchronen BITS-Übertragungsauftrag aus einer CSV-Datei
 
 
 ```PowerShell
@@ -104,13 +104,13 @@ Import-CSV filelist.txt | Start-BitsTransfer -TransferType Upload
 
 
 > [!Note]  
-> Das Zeichen "" ist ein senkrechter Strich \| .
+> "" \| ist das Pipezeichen.
 
  
 
-Im vorherigen Beispiel erstellt ein Benutzer einen Bits-Übertragungs Auftrag, mit dem mehrere Dateien von einem Client hochgeladen werden. Das [Import-CSV-](/previous-versions//dd347665(v=technet.10)) Cmdlet importiert die Quell-und Ziel Dateispeicher Orte und leitet Sie an den Befehl [Start-bitstransfer](/previous-versions//dd347701(v=technet.10)) weiter. Mit dem Befehl [Start-bitstransfer](/previous-versions//dd347701(v=technet.10)) wird ein neuer Bits-Übertragungs Auftrag für jede Datei erstellt, die Dateien werden dem Auftrag hinzugefügt und dann sequenziell auf den Server übertragen.
+Im vorherigen Beispiel erstellt ein Benutzer einen BITS-Übertragungsauftrag, der mehrere Dateien von einem Client hochlädt. Das Cmdlet [Import-CSV](/previous-versions//dd347665(v=technet.10)) importiert die Quell- und Zieldateispeicherorte und überleitet sie an den Befehl [Start-BitsTransfer.](/previous-versions//dd347701(v=technet.10)) Der Befehl [Start-BitsTransfer](/previous-versions//dd347701(v=technet.10)) erstellt einen neuen BITS-Übertragungsauftrag für jede Datei, fügt die Dateien dem Auftrag hinzu und überträgt sie dann sequenziell auf den Server.
 
-Der Inhalt der Filelist.txt Datei sollte das folgende Format aufweisen:
+Der Inhalt der Filelist.txt-Datei sollte das folgende Format aufweisen:
 
 ``` syntax
 Source, Destination
@@ -120,7 +120,7 @@ c:\clienttestdir\testfile3.txt, https://server01/servertestdir/testfile3.txt
 c:\clienttestdir\testfile4.txt, https://server01/servertestdir/testfile4.txt
 ```
 
-## <a name="to-create-an-asynchronous-bits-transfer-job"></a>So erstellen Sie einen asynchronen Bits-Übertragungs Auftrag
+## <a name="to-create-an-asynchronous-bits-transfer-job"></a>So erstellen Sie einen asynchronen BITS-Übertragungsauftrag
 
 
 ```PowerShell
@@ -141,22 +141,22 @@ Switch($Job.JobState)
 
 
 
-Im vorherigen Beispiel wurde der Bits-Übertragungs Auftrag der $Job Variablen zugewiesen. Die Dateien werden sequenziell heruntergeladen. Nach Abschluss des Übertragungs Auftrags sind die Dateien sofort verfügbar. Wenn $Job. jobstate "übertragen" zurückgibt, wird das $Job-Objekt an das [Complete-bitstransfer-]( /previous-versions//dd347701(v=technet.10)) Cmdlet gesendet.
+Im vorherigen Beispiel wurde der BITS-Übertragungsauftrag der $Job Variablen zugewiesen. Die Dateien werden sequenziell heruntergeladen. Nach Abschluss des Übertragungsauftrags sind die Dateien sofort verfügbar. Wenn $Job.JobState "Transferd" zurückgibt, wird das $Job -Objekt an das [Complete-BitsTransfer-Cmdlet]( /previous-versions//dd347701(v=technet.10)) gesendet.
 
-Wenn $Job. jobstate "Error" zurückgibt, wird das $Job Objekt an das Cmdlet " [Format-List]( /previous-versions//dd347700(v=technet.10)) " gesendet, um die Fehler aufzulisten.
+Wenn $Job.JobState "Error" zurückgibt, wird das $Job-Objekt an das [Format-List-Cmdlet]( /previous-versions//dd347700(v=technet.10)) gesendet, um die Fehler aufzulisten.
 
-## <a name="to-manage-powershell-remote-sessions"></a>So verwalten Sie PowerShell-Remote Sitzungen
+## <a name="to-manage-powershell-remote-sessions"></a>So verwalten Sie PowerShell-Remotesitzungen
 
-Ab Windows 10, Version 1607, können Sie PowerShell-Cmdlets, BITSAdmin oder andere Anwendungen ausführen, die die Bits- [Schnittstellen](bits-interfaces.md) über eine PowerShell-Remote Befehlszeile verwenden, die mit einem anderen Computer (physisch oder virtuell) verbunden ist. Diese Funktion ist nicht verfügbar, wenn Sie eine [PowerShell Direct](/virtualization/hyper-v-on-windows/user_guide/vmsession) -Befehlszeile für eine virtuelle Maschine auf demselben physischen Computer verwenden, und Sie ist nicht verfügbar, wenn Sie WinRM-Cmdlets verwenden.
+Ab Windows 10 Version 1607 können Sie PowerShell-Cmdlets, BITSAdmin oder andere Anwendungen ausführen, die die [BITS-Schnittstellen](bits-interfaces.md) über eine PowerShell Remote-Befehlszeile verwenden, die mit einem anderen Computer verbunden ist (physisch oder virtuell). Diese Funktion ist nicht verfügbar, wenn Sie eine [PowerShell Direct-Befehlszeile](/virtualization/hyper-v-on-windows/user_guide/vmsession) für einen virtuellen Computer auf demselben physischen Computer verwenden, und sie ist nicht verfügbar, wenn Sie WinRM-Cmdlets verwenden.
 
-Ein aus einer PowerShell-Remote Sitzung erstellter BITS-Auftrag wird unter dem Benutzerkonto Kontext der Sitzung ausgeführt und wird nur fortgesetzt, wenn mindestens eine aktive lokale Anmelde Sitzung oder eine PowerShell-Remote Sitzung mit diesem Benutzerkonto verknüpft ist. Sie können die persistenten pssessions von PowerShell verwenden, um Remote Befehle auszuführen, ohne dass ein PowerShell-Fenster für jeden Auftrag geöffnet bleiben muss, damit der Fortschritt fortgesetzt wird, wie in [PowerShell-Grundlagen: Remote Verwaltung](https://techgenix.com/remote-management-powershell-part1/)beschrieben.
+Ein BITS-Auftrag, der aus einer Remote-PowerShell-Sitzung erstellt wurde, wird im Benutzerkontokontext dieser Sitzung ausgeführt und wird nur dann ausgeführt, wenn diesem Benutzerkonto mindestens eine aktive lokale Anmeldesitzung oder Remote-PowerShell-Sitzung zugeordnet ist. Sie können die persistenten PSSessions von PowerShell verwenden, um Remotebefehle auszuführen, ohne ein PowerShell-Fenster für jeden Auftrag geöffnet zu lassen, um den Fortschritt fortzusetzen, wie unter [PowerShell-Grundlagen: Remoteverwaltung](https://techgenix.com/remote-management-powershell-part1/)beschrieben.
 
--   [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-7&preserve-view=true) erstellt eine permanente PowerShell-Remote Sitzung. Nach der Erstellung bleiben die PSSession-Objekte auf dem Remote Computer erhalten, bis Sie explizit gelöscht werden. Alle Bits-Aufträge, die in einer aktiven Sitzung initiiert werden, übertragen Daten, auch nachdem die Verbindung des Clients mit der Sitzung getrennt wurde.
--   [Disconnect-PSSession](/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7&preserve-view=true) trennt den Client Computer von einer PowerShell-Remote Sitzung, und der Status der Sitzung wird weiterhin vom Remote Computer verwaltet. Am wichtigsten ist, dass die Prozesse der Remote Sitzung weiterhin ausgeführt werden, und BITS-Aufträge werden fortlaufend ausgeführt. Der Client Computer kann auch nach dem Aufruf von Disconnect-PSSession neu gestartet und/oder ausgeschaltet werden.
--   [Connect-PSSession](/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-7&preserve-view=true) verbindet den Client Computer erneut mit einer aktiven PowerShell-Remote Sitzung.
--   [Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession?view=powershell-7&preserve-view=true) gibt eine PowerShell-Remote Sitzung aus.
+-   [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-7&preserve-view=true) erstellt eine persistente Remote-PowerShell-Sitzung. Nach der Erstellung werden die PSSession-Objekte auf dem Remotecomputer beibehalten, bis sie explizit gelöscht werden. Alle BITS-Aufträge, die in einer aktiven Sitzung initiiert werden, machen den Fortschritt bei der Übertragung von Daten, auch wenn der Client die Verbindung mit der Sitzung getrennt hat.
+-   [Disconnect-PSSession](/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7&preserve-view=true) trennt den Clientcomputer von einer Remote-PowerShell-Sitzung, und der Sitzungszustand wird weiterhin vom Remotecomputer beibehalten. Am wichtigsten ist, dass die Prozesse der Remotesitzung weiterhin ausgeführt werden und BITS-Aufträge weiterhin Fortschritte machen. Der Clientcomputer kann nach dem Aufruf von Disconnect-PSSession sogar neu gestartet und/oder deaktiviert werden.
+-   [Verbinden-PSSession](/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-7&preserve-view=true) verbindet den Clientcomputer erneut mit einer aktiven Remote-PowerShell-Sitzung.
+-   [Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession?view=powershell-7&preserve-view=true) löscht eine Remote-PowerShell-Sitzung.
 
-Im folgenden Beispiel wird gezeigt, wie PowerShell Remote verwendet wird, um mit asynchronen Bits-Übertragungs Aufträgen zu arbeiten, sodass der Auftrag fortgesetzt werden kann, auch wenn Sie nicht aktiv mit der Remote Sitzung verbunden sind.
+Das folgende Beispiel zeigt, wie PowerShell Remote verwendet wird, um mit asynchronen BITS-Übertragungsaufträgen auf eine Weise zu arbeiten, die es dem Auftrag ermöglicht, den Fortschritt auch dann fortzusetzen, wenn Sie nicht aktiv mit der Remotesitzung verbunden sind.
 
 
 ```PowerShell
@@ -205,10 +205,10 @@ Remove-PSSession -Name MyRemoteSession
 
 <dl> <dt>
 
-[Start-bitstransfer](/previous-versions//dd347701(v=technet.10))
+[Start-BitsTransfer](/previous-versions//dd347701(v=technet.10))
 </dt> <dt>
 
-[Complete-bitstransfer]( /previous-versions//dd347701(v=technet.10))
+[Complete-BitsTransfer]( /previous-versions//dd347701(v=technet.10))
 </dt> </dl>
 
  

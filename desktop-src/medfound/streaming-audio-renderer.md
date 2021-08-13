@@ -1,58 +1,58 @@
 ---
-description: Der streamingaudiorenderer (SAR) ist eine Medien Senke, die Audiodaten rendert.
+description: Der Streamingaudiorenderer (SAR) ist eine Mediensenke, die Audio rendert.
 ms.assetid: 5884a128-597d-432b-a706-e10c894d7965
-title: Streamingaudiorenderer
+title: StreamingAudiorenderer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f59c5b55f197d5e9770c6f1be55f680c7f9136f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01752cbec7d801177b39d939baeca93f720e12aafeaf9845c1aa0ded033c3fe2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118238265"
 ---
-# <a name="streaming-audio-renderer"></a>Streamingaudiorenderer
+# <a name="streaming-audio-renderer"></a>StreamingAudiorenderer
 
-Der streamingaudiorenderer (SAR) ist eine Medien Senke, die Audiodaten rendert. Jede Instanz der SAR rendert einen einzelnen Audiodatenstrom. Zum Rendering mehrerer Streams verwenden Sie mehrere Instanzen von SAR.
+Der Streamingaudiorenderer (SAR) ist eine Mediensenke, die Audio rendert. Jede Instanz des SAR rendert einen einzelnen Audiostream. Um mehrere Datenströme zu rendern, verwenden Sie mehrere Instanzen der SAR.
 
-Um den SAR zu erstellen, rufen Sie eine der folgenden Funktionen auf:
+Rufen Sie zum Erstellen der SAR eine der folgenden Funktionen auf:
 
--   [**Mskreateaudiorenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer). Gibt einen Zeiger auf den SAR zurück.
--   [**MF | ateaudiorendereraktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate). Gibt einen Zeiger auf ein Aktivierungs Objekt zurück, das zum Erstellen der SAR verwendet werden kann.
+-   [**MFCreateAudioRenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer). Gibt einen Zeiger auf die SAR zurück.
+-   [**MFCreateAudioRendererActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate). Gibt einen Zeiger auf ein Aktivierungsobjekt zurück, das zum Erstellen der SAR verwendet werden kann.
 
-Die zweite Funktion, die ein Aktivierungs Objekt zurückgibt, ist erforderlich, wenn geschützter Inhalt wiedergegeben wird, da das Aktivierungs Objekt in den geschützten Prozess serialisiert werden muss. Wenn Sie den Inhalt löschen möchten, können Sie beide Funktionen verwenden.
+Die zweite Funktion, die ein Aktivierungsobjekt zurückgibt, ist erforderlich, wenn Sie geschützte Inhalte wiedergeben, da das Aktivierungsobjekt in den geschützten Prozess serialisiert werden muss. Für klare Inhalte können Sie eine der beiden Funktionen verwenden.
 
-Der SAR kann unkomprimierte Audiodaten im PCM-oder IEEE-Gleit Komma Format empfangen. Wenn die Wiedergabe Rate schneller oder langsamer als 1 × ist, passt der SAR automatisch die Tonhöhe an.
+Die SAR kann unkomprimierte Audiodaten im PCM- oder IEEE-Gleitkommaformat empfangen. Wenn die Wiedergaberate schneller oder langsamer als 1× ist, passt die SAR die Tonhöhe automatisch an.
 
-## <a name="configuring-the-audio-renderer"></a>Konfigurieren des audiorenderers
+## <a name="configuring-the-audio-renderer"></a>Konfigurieren des Audiorenderers
 
-Der SAR unterstützt mehrere Konfigurations Attribute. Der Mechanismus zum Festlegen dieser Attribute hängt von der Funktion ab, die Sie zum Erstellen der SAR-Methode aufruft. Gehen Sie wie folgt vor, wenn Sie die [**msup**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer) -Funktion verwenden:
+Die SAR unterstützt mehrere Konfigurationsattribute. Der Mechanismus zum Festlegen dieser Attribute hängt davon ab, welche Funktion Sie aufrufen, um die SAR zu erstellen. Wenn Sie die [**MFCreateAudioRenderer-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer) verwenden, gehen Sie folgendermaßen vor:
 
-1.  Erstellen Sie einen neuen Attribut Speicher, indem Sie [**mfcreateattribute**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes)aufrufen.
-2.  Fügen Sie dem Attribut Speicher die Attribute hinzu.
-3.  Übergeben Sie den Attribut Speicher an die [**mfkreateaudiorenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer) -Funktion im *paudioattributparameter* .
+1.  Erstellen Sie einen neuen Attributspeicher, indem Sie [**MFCreateAttributes**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes)aufrufen.
+2.  Fügen Sie die Attribute dem Attributspeicher hinzu.
+3.  Übergeben Sie den Attributspeicher an die [**MFCreateAudioRenderer-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer) im *pAudioAttributes-Parameter.*
 
-Wenn Sie die [**mfkreateaudiorendereraktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate) -Funktion verwenden, gibt die Funktion einen Zeiger auf die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle im *ppaktivierungs* -Parameter zurück. Verwenden Sie diesen Zeiger, um die Attribute hinzuzufügen.
+Wenn Sie die [**MFCreateAudioRendererActivate-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate) verwenden, gibt die Funktion einen Zeiger auf die [**INTERFACESAttributes-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) im *ppActivate-Parameter* zurück. Verwenden Sie diesen Zeiger, um die Attribute hinzuzufügen.
 
-Eine Liste der Konfigurations Attribute finden Sie unter [Attribute für audiorenderer](audio-renderer-attributes.md).
+Eine Liste der Konfigurationsattribute finden Sie unter [Audiorendererattribute.](audio-renderer-attributes.md)
 
-## <a name="selecting-the-audio-endpoint-device"></a>Auswählen des audioendpunktgeräts
+## <a name="selecting-the-audio-endpoint-device"></a>Auswählen des Audioendpunktgeräts
 
-Ein *audioendpunktgerät* ist ein Hardware Gerät, das Audiodaten rendert oder aufzeichnet. Beispiele hierfür sind Sprecher, Kopfhörer, Mikrofon und CD-Player. Der SAR verwendet immer ein audiorenderinggerät. Es gibt zwei Möglichkeiten, das Gerät auszuwählen.
+Ein *Audioendpunktgerät* ist ein Hardwaregerät, das Audio entweder rendert oder erfasst. Beispiele hierfür sind Lautsprecher, Lautsprecher, Mikrofone und CD-Player. Die SAR verwendet immer ein Audiorenderinggerät. Es gibt zwei Möglichkeiten, das Gerät auszuwählen.
 
-Der erste Ansatz besteht darin, die audiorenderinggeräte im System mithilfe der [**immdeviceenumerator**](/windows/win32/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) -Schnittstelle aufzuzählen. Diese Schnittstelle ist in der Dokumentation zur kernton-API dokumentiert.
+Der erste Ansatz besteht darin, die Audiorenderinggeräte im System mithilfe der [**IMMDeviceEnumerator-Schnittstelle aufzulisten.**](/windows/win32/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) Diese Schnittstelle ist in der Kerndokumentation der Audio-API dokumentiert.
 
-1.  Erstellen Sie das Geräte Enumeratorobjekt.
-2.  Verwenden Sie den Geräte Enumerator, um audiorenderinggeräte aufzuzählen. Jedes Gerät wird durch einen Zeiger auf die [**immdevice**](/windows/win32/api/mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstelle dargestellt.
+1.  Erstellen Sie das Geräteenumeratorobjekt.
+2.  Verwenden Sie den Geräteenumerator, um Audiorenderinggeräte aufzuzählen. Jedes Gerät wird durch einen Zeiger auf die [**IMMDevice-Schnittstelle**](/windows/win32/api/mmdeviceapi/nn-mmdeviceapi-immdevice) dargestellt.
 3.  Wählen Sie ein Gerät basierend auf den Geräteeigenschaften oder der Auswahl des Benutzers aus.
-4.  Bitten Sie [**immdevice:: GetId**](/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-getid) , um den Geräte Bezeichner abzurufen.
-5.  Legen Sie den Geräte Bezeichner als Wert für das Attribut [**\_ Endpunkt-ID für das MF- \_ audiorenderer \_ \_ \_**](mf-audio-renderer-attribute-endpoint-id-attribute.md) fest.
+4.  Rufen Sie [**IMMDevice::GetId**](/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-getid) auf, um den Gerätebezeichner abzurufen.
+5.  Legen Sie den Gerätebezeichner als Wert des [**Attributs MF \_ AUDIO \_ RENDERER \_ ATTRIBUTE ENDPOINT \_ \_ ID**](mf-audio-renderer-attribute-endpoint-id-attribute.md) fest.
 
-Anstatt Geräte aufzuzählen, können Sie das Audiogerät anhand seiner *Rolle* angeben. Eine audiorolle identifiziert eine allgemeine Kategorie der Verwendung. Beispielsweise ist die *Konsolen* Rolle für Spiele und System Benachrichtigungen definiert, während die *Multimedia* -Rolle für Musik und Filme definiert ist. Jeder Rolle ist ein audiorenderinggerät zugewiesen, und der Benutzer kann diese Zuweisungen ändern. Wenn Sie eine Geräte Rolle angeben, verwendet SAR das beliebige Audiogerät, das für diese Rolle zugewiesen wurde. Um die Geräte Rolle anzugeben, legen Sie das Attribut für das [**MF \_ - \_ audiorendererattribut \_ \_ EndPoint \_ Role**](mf-audio-renderer-attribute-endpoint-role-attribute.md) fest.
+Anstatt Geräte aufzählen zu müssen, können Sie das Audiogerät anhand seiner *Rolle* angeben. Eine Audiorolle identifiziert eine allgemeine Kategorie der Verwendung. Beispielsweise ist die *Konsolenrolle* für Spiele und Systembenachrichtigungen definiert, während die *Multimediarolle* für Musik und Filme definiert ist. Jeder Rolle ist ein Audiorenderinggerät zugewiesen, und der Benutzer kann diese Zuweisungen ändern. Wenn Sie eine Geräterolle angeben, verwendet die SAR das Audiogerät, das für diese Rolle zugewiesen wurde. Um die Geräterolle anzugeben, legen Sie das [**ATTRIBUT MF \_ AUDIO \_ RENDERER ATTRIBUTE ENDPOINT \_ \_ \_ ROLE**](mf-audio-renderer-attribute-endpoint-role-attribute.md) fest.
 
-Die beiden in diesem Abschnitt aufgeführten Attribute schließen sich gegenseitig aus. Wenn Sie keinen der beiden Optionen festlegen, verwendet der SAR das Audiogerät, das der Rolle " **econsole** " zugewiesen ist.
+Die beiden in diesem Abschnitt aufgeführten Attribute schließen sich gegenseitig aus. Wenn Sie keines von ihnen festlegen, verwendet die SAR das Audiogerät, das der **eConsole-Rolle** zugewiesen ist.
 
-Der folgende Code listet die audiorenderinggeräte auf und weist dem SAR das erste Gerät in der Liste zu. In diesem Beispiel wird die [**mfkreateaudiorenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer) -Funktion verwendet, um den SAR zu erstellen.
+Der folgende Code listet die Audiorenderinggeräte auf und weist das erste Gerät in der Liste dem SAR zu. In diesem Beispiel wird die [**MFCreateAudioRenderer-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer) verwendet, um die SAR zu erstellen.
 
 
 ```C++
@@ -123,7 +123,7 @@ CoTaskMemFree(wstrID);
 
 
 
-Um das Aktivierungs Objekt für den SAR zu erstellen, ändern Sie den Code, der nach dem Aufrufen von " [**immdevice:: GetId**](/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-getid) " angezeigt wird, in Folgendes:
+Um das Aktivierungsobjekt für die SAR zu erstellen, ändern Sie den Code, der nach dem Aufruf von [**IMMDevice::GetId**](/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-getid) angezeigt wird, wie folgt:
 
 
 ```C++
@@ -149,15 +149,15 @@ SAFE_RELEASE(pActivate);
 
 ## <a name="selecting-the-audio-session"></a>Auswählen der Audiositzung
 
-Eine Audiositzung ist eine Gruppe verwandter Audiodatenströme, die von einer Anwendung gemeinsam verwaltet werden können. Die Anwendung kann die Volumeebene und den stumm Zustand jeder Sitzung steuern. Sitzungen werden durch die GUID identifiziert. Um die Audiositzung für den SAR anzugeben, verwenden Sie das-Attribut für das [MF \_ - \_ audiorendererattribut \_ \_ Session \_ ID](mf-audio-renderer-attribute-session-id-attribute.md) . Wenn Sie dieses Attribut nicht festlegen, fügt der SAR die Standard Sitzung für diesen Prozess an, der durch **GUID \_ null** identifiziert wird.
+Eine Audiositzung ist eine Gruppe verwandter Audiostreams, die eine Anwendung zusammen verwalten kann. Die Anwendung kann die Volumeebene steuern und den Zustand der einzelnen Sitzungen stummschalten. Sitzungen werden anhand der GUID identifiziert. Um die Audiositzung für die SAR anzugeben, verwenden Sie das [MF \_ AUDIO \_ RENDERER ATTRIBUTE SESSION \_ \_ \_ ID-Attribut.](mf-audio-renderer-attribute-session-id-attribute.md) Wenn Sie dieses Attribut nicht festlegen, verbindet die SAR die Standardsitzung für diesen Prozess, die durch **GUID \_ NULL** identifiziert wird.
 
-Standardmäßig ist eine Audiositzung Prozess spezifisch, d. h., Sie enthält nur Datenströme aus dem aufrufenden Prozess. Um einer prozessübergreifenden Sitzung beizutreten, legen Sie das Attribut Flags für das [MF \_ - \_ audiorenderer \_ Attribut \_](mf-audio-renderer-attribute-flags-attribute.md) mit dem Wert **MF \_ - \_ audiorendererattributflags \_ \_ \_ CrossProcess** fest.
+Standardmäßig ist eine Audiositzung prozessspezifisch, d. h., sie enthält nur Streams aus dem aufrufenden Prozess. Um einer prozessübergreifenden Sitzung beizutreten, legen Sie das [ATTRIBUT \_ MF AUDIO \_ RENDERER ATTRIBUTE \_ \_ FLAGS](mf-audio-renderer-attribute-flags-attribute.md) mit dem Wert **MF AUDIO \_ \_ RENDERER ATTRIBUTE \_ \_ FLAGS \_ CROSSPROCESS fest.**
 
-Nachdem Sie den SAR erstellt haben, verwenden Sie die [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Schnittstelle, um die Sitzung mit einer Gruppe von Sitzungen zu verknüpfen, die in der Systemsteuerung von der gleichen volumesteuerung gesteuert werden. Sie können diese Schnittstelle auch verwenden, um den anzeigen Amen und das Symbol festzulegen, die im volumesteuerelement angezeigt werden.
+Nachdem Sie die SAR erstellt haben, verwenden Sie die [**SCHNITTSTELLE ZUSCHALTAUDIOPOLICY,**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) um die Sitzung mit einer Gruppe von Sitzungen zu verbinden, die alle von demselben Volumesteuerelement in der Systemsteuerung gesteuert werden. Sie können diese Schnittstelle auch verwenden, um den Anzeigenamen und das Symbol festzulegen, die im Volumesteuerelement angezeigt werden.
 
-## <a name="controlling-volume-levels"></a>Steuern der volumeebenen
+## <a name="controlling-volume-levels"></a>Steuern von Volumeebenen
 
-Verwenden Sie die [**imfsimpleaudiovolume**](/windows/desktop/api/mfidl/nn-mfidl-imfsimpleaudiovolume) -Schnittstelle, um die Master Volume-Ebene aller Streams in der-Audiositzung von SAR zu steuern. Um das Volume eines einzelnen Streams zu steuern oder die Menge einzelner Kanäle innerhalb eines Streams zu steuern, verwenden Sie die [**imfaudiostreamvolume**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiostreamvolume) -Schnittstelle. Beide Schnittstellen werden abgerufen, indem [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice)aufgerufen wird. Sie können **GetService** direkt auf dem SAR aufrufen oder es für die Medien Sitzung aufrufen. Volumeebenen werden als Dämpfungswerte ausgedrückt. Für jeden Kanal ist die Ebene der Dämpfung das Produkt des Master Volumes und des channelvolumes.
+Um die Mastervolumeebene aller Streams in der Audiositzung der SAR zu steuern, verwenden Sie die [**INTERFACESSimpleAudioVolume-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfsimpleaudiovolume) Verwenden Sie zum Steuern des Volumens eines einzelnen Streams oder zum Steuern des Volumens einzelner Kanäle innerhalb eines Streams die [**INTERFACESAudioStreamVolume-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiostreamvolume) Beide Schnittstellen werden abgerufen, indem [**SIE DENGETService::GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice)aufrufen. Sie können **GetService** direkt in der SAR oder in der Mediensitzung aufrufen. Volumeebenen werden als Dämpfungswerte ausgedrückt. Für jeden Kanal ist die Dämpfungsebene das Produkt des Mastervolumes und des Kanalvolumes.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

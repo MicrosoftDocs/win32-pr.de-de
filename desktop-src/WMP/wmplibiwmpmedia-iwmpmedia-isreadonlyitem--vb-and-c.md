@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia isread onlyitem-Methode
-description: Die isread onlyitem-Methode gibt einen Wert zurück, der angibt, ob die Attribute des angegebenen Medien Elements bearbeitet werden können.
+title: IWMPMedia isReadOnlyItem-Methode
+description: Die isReadOnlyItem-Methode gibt einen Wert zurück, der angibt, ob die Attribute des angegebenen Medienelements bearbeitet werden können.
 ms.assetid: c810c5c1-8cb9-4ac7-ac49-1ebdc86f5d7f
 keywords:
-- isread onlyitem-Methode, Windows Media Player
-- isleseronlyitem-Methode, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, isread onlyitem-Methode
+- isReadOnlyItem-Methode Windows Media Player
+- isReadOnlyItem-Methode Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , isReadOnlyItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f21d3dfefc1222832783e62962298da8bcb02b25
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dcfd6ef631ed1a3e8159c91bd26e637fc9f22c9b3aa61594555ce1e5ede9c81f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361470"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464990"
 ---
-# <a name="iwmpmediaisreadonlyitem-method"></a>Iwmpmedia:: isread onlyitem-Methode
+# <a name="iwmpmediaisreadonlyitem-method"></a>IWMPMedia::isReadOnlyItem-Methode
 
-Die **isread onlyitem** -Methode gibt einen Wert zurück, der angibt, ob die Attribute des angegebenen Medien Elements bearbeitet werden können.
+Die **isReadOnlyItem-Methode** gibt einen Wert zurück, der angibt, ob die Attribute des angegebenen Medienelements bearbeitet werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,26 +53,26 @@ Implements IWMPMedia.isReadOnlyItem
 
 <dl> <dt>
 
-*bstritemname* \[ in\]
+*bstrItemName* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Name des Medien Elements ist.
+Eine **System.String,** die der Name des Medienelements ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Boolean** -Wert, der angibt, ob die Attribute schreibgeschützt sind.
+Ein **System.Boolean-Wert,** der angibt, ob die Attribute schreibgeschützt sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Attribut schreibgeschützt ist, kann es nicht mit der **setiteminfo** -Methode festgelegt werden. Beachten Sie, dass diese Methode möglicherweise unterschiedliche Werte für ein bestimmtes Attribut zurückgibt, wenn Sie mit verschiedenen Versionen von Windows Media Player verwendet wird.
+Wenn ein Attribut schreibgeschützt ist, kann es nicht mit der **setItemInfo-Methode** festgelegt werden. Beachten Sie, dass diese Methode möglicherweise unterschiedliche Werte für ein bestimmtes Attribut zurückgibt, wenn sie mit verschiedenen Versionen von Windows Media Player verwendet wird.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **isinfoonlyitem** verwendet, um ein mehr zeitiges Textfeld mit Informationen zum aktuellen Medien Element auszufüllen. Im Code werden die einzelnen Attribute des aktuellen Medien Elements sowie Text angezeigt, der angibt, ob das Attribut schreibgeschützt ist oder Lese-/Schreibzugriff aufweist. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel **wird isReadOnlyItem** verwendet, um ein mehrzeiliges Textfeld mit Informationen zum aktuellen Medienelement auszufüllen. Der Code zeigt jedes Attribut des aktuellen Medienelements zusammen mit Text an, der angibt, ob das Attribut schreibgeschützt oder lese-/schreibgeschützt ist. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -153,20 +153,20 @@ rwText.Lines = atInfo
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. Einstellungs Verzeichnis (VB und c#)**](wmplibiwmpmedia-iwmpmedia-setiteminfo--vb-and-c.md)
+[**IWMPMedia.setItemInfo (VB und C#)**](wmplibiwmpmedia-iwmpmedia-setiteminfo--vb-and-c.md)
 </dt> </dl>
 
  

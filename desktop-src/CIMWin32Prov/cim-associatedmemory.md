@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ associatememory-Klasse ordnet installierten oder zugeordneten Arbeitsspeicher zu, z. b. Cache Speicher mit einem logischen Gerät.
+description: Die CIM \_ AssociateMemory-Klasse ordnet installierten oder zugeordneten Arbeitsspeicher, z. B. Cachespeicher, einem logischen Gerät zu.
 ms.assetid: b108d0cc-9353-4940-a5f6-34bb93330a62
 ms.tgt_platform: multiple
 title: CIM_AssociatedMemory-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3cb1443f54ab273ef6c114b8645e5322c24785f8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8fd56da36546365fecc053d679e31982c44efdfb85289c7fb64ce16651241f9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439290"
 ---
-# <a name="cim_associatedmemory-class"></a>CIM \_ associatedmemory-Klasse
+# <a name="cim_associatedmemory-class"></a>CIM \_ AssociatedMemory-Klasse
 
-Die **CIM \_ associatememory** -Klasse ordnet installierten oder zugeordneten Arbeitsspeicher zu, z. b. Cache Speicher mit einem logischen Gerät.
+Die **CIM \_ AssociateMemory-Klasse** ordnet installierten oder zugeordneten Arbeitsspeicher, z. B. Cachespeicher, einem logischen Gerät zu.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,33 +47,33 @@ class CIM_AssociatedMemory : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ associatedmemory** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM AssociatedMemory-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ associatedmemory** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ AssociatedMemory-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Speicher**
+Datentyp: **\_ CIM-Arbeitsspeicher**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ Speicher**](cim-memory.md) , der den Arbeitsspeicher beschreibt, der auf einem Gerät installiert oder diesem zugeordnet ist.
+Ein [**\_ CIM-Arbeitsspeicher,**](cim-memory.md) der den auf einem Gerät installierten oder zugeordneten Arbeitsspeicher beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -82,20 +82,20 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das das logische Gerät beschreibt.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) der das logische Gerät beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ associatedmemory** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **\_ CIM AssociatedMemory-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,17 +105,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: EM_INSERTIMAGE Meldung (RichEdit. h)
-description: Ersetzt die Auswahl durch ein BLOB, das ein Bild anzeigt.
+title: EM_INSERTIMAGE Nachricht (Richedit.h)
+description: Ersetzt die Auswahl durch ein Blob, das ein Bild anzeigt.
 ms.assetid: 147B298B-C4A9-455B-9736-A0B09D72902B
 keywords:
-- Windows-Steuerelemente für EM_INSERTIMAGE Meldung
+- EM_INSERTIMAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc9ff1e0fd355cf5dd8d43d211c44fda6417c638
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7418a8fe4b7c627d211bce7bf2591ed684d82e42089fbe9bedeb2f76a6b9d3e0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119437890"
 ---
-# <a name="em_insertimage-message"></a>EM \_ InsertImage-Nachricht
+# <a name="em_insertimage-message"></a>EM \_ INSERTIMAGE-Nachricht
 
-Ersetzt die Auswahl durch ein BLOB, das ein Bild anzeigt.
+Ersetzt die Auswahl durch ein Blob, das ein Bild anzeigt.
 
 
 ```C++
@@ -46,29 +46,29 @@ Nicht verwendet; muss 0 (null) sein.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**RichEdit- \_ Bild \_ Parameter**](/windows/win32/api/richedit/ns-richedit-richedit_image_parameters) Struktur, die das bildblob enthält.
+Ein Zeiger auf eine [**RICHEDIT \_ IMAGE \_ PARAMETERS-Struktur,**](/windows/win32/api/richedit/ns-richedit-richedit_image_parameters) die das Imageblob enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen der folgenden Fehlercodes zurück.
+Gibt bei Erfolg S \_ OK oder einen der folgenden Fehlercodes zurück.
 
 
 
 | Rückgabecode                                                                                    | Beschreibung                                                   |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <dl> <dt>**E \_** Fehler</dt> </dl>        | Das Bild kann nicht eingefügt werden. <br/>                          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>   | Der *LPARAM* -Parameter ist NULL oder zeigt auf ein ungültiges Bild. |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar.<br/>                  |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Das Bild kann nicht eingefügt werden. <br/>                          |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>   | Der *lParam-Parameter* ist NULL oder verweist auf ein ungültiges Bild. |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher verfügbar.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn es sich bei der Auswahl um eine Einfügemarke handelt, wird das imageblob an der Einfügemarke eingefügt.
+Wenn die Auswahl eine Einfügemarke ist, wird das Bildblob an der Einfügemarke eingefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,17 +76,17 @@ Wenn es sich bei der Auswahl um eine Einfügemarke handelt, wird das imageblob a
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**EM \_ inserables**](em-inserttable.md)
+[**EM \_ INSERTTABLE**](em-inserttable.md)
 </dt> </dl>
 
  

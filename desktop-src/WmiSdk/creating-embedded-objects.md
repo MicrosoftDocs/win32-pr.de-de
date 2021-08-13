@@ -1,8 +1,8 @@
 ---
-description: 'Wenn Sie eine Instanz mit eingebetteten Objekten erstellen, führen Sie die folgenden Aufgaben aus:'
+description: 'Führen Sie beim Erstellen einer Instanz mit eingebetteten Objekten die folgenden Aufgaben aus:'
 ms.assetid: 2abf6197-8b95-4c04-b154-508aa85fe12f
 ms.tgt_platform: multiple
-title: Erstellen von eingebetteten Objekten
+title: Erstellen eingebetteter Objekte
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,25 +10,25 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a76a70fa0e01068622a4f4cdbbbfb6c992b67f56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e54e16005669ebd77b0bc08e5d3174f7aa5fadee2a47477920e91aaa2ae155b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464170"
 ---
-# <a name="creating-embedded-objects"></a>Erstellen von eingebetteten Objekten
+# <a name="creating-embedded-objects"></a>Erstellen eingebetteter Objekte
 
-Wenn Sie eine Instanz mit eingebetteten Objekten erstellen, führen Sie die folgenden Aufgaben aus:
+Führen Sie beim Erstellen einer Instanz mit eingebetteten Objekten die folgenden Aufgaben aus:
 
--   Sie müssen ein eingebettetes Objekt als stark typisiert oder schwach typisiert deklarieren.
+-   Sie müssen ein eingebettetes Objekt als stark typisch oder schwach typisch deklarieren.
 
-    Ein stark typisiertes Objekt verweist auf ein Objekt einer bestimmten Klasse und verwendet den Klassennamen. Ein schwach typisiertes Objekt verweist auf ein Objekt einer nicht angegebenen Klasse und verwendet das **Object** -Schlüsselwort. Beide Objekte werden dem **\_ unbekannten VT** -Typ zugeordnet.
+    Ein stark typiertes Objekt verweist auf ein Objekt einer bestimmten Klasse und verwendet den Klassennamen. Ein schwach typisiertes Objekt verweist auf ein Objekt einer nicht angegebenen Klasse und verwendet das **Object-Schlüsselwort.** Beide Objekte sind dem **VT \_ UNKNOWN-Typ** zuordnen.
 
--   Sie können **null** als Standardwert für eingebettete Objekte und Pfade in Initialisierungen und Deklarationen verwenden.
--   Wenn Sie einen Objekt Pfad einbetten, dürfen Sie keinen Leerraum zwischen den Elementen des eingebetteten Pfades platzieren. Der Objekt Pfad "Class1Index = 3;" enthält z. b. kein Leerzeichen zwischen dem Eigenschaftsnamen "Class1Index" und dem zugewiesenen Wert ("3").
+-   Sie können **NULL für** den Standardwert eingebetteter Objekte und Pfade in Initialisierungen und Deklarationen verwenden.
+-   Platzieren Sie beim Einbetten eines Objektpfads keinen Leerraum zwischen den Elementen des eingebetteten Pfads. Beispielsweise enthält der Objektpfad "Class1Index=3;" kein Leerzeichen zwischen dem Eigenschaftennamen "Class1index" und dem zugewiesenen Wert, der "3" ist.
 
-Die folgende Klassen Deklaration zeigt, wie stark typisierte und schwach typisierte eingebettete Objekte deklariert werden.
+Die folgende Klassendeklaration zeigt, wie Sie stark typierte und schwach typierte eingebettete Objekte deklarieren.
 
 ``` syntax
 Class MyClass
@@ -38,7 +38,7 @@ Class MyClass
 };
 ```
 
-In den folgenden Beispielen wird beschrieben, wie eingebettete Objekte innerhalb einer Klassen Deklaration deklariert werden.
+In den folgenden Beispielen wird beschrieben, wie eingebettete Objekte in einer Klassendeklaration deklariert werden.
 
 ``` syntax
 Class Class1 
@@ -59,7 +59,7 @@ Class Class3
 };
 ```
 
-Im folgenden Beispiel wird die Initialisierung einer Eigenschaft beschrieben, bei der es sich um ein stark typisiertes Objekt handelt, und eine andere Eigenschaft, die ein Array von schwach typisierten Objekten ist.
+Im folgenden Beispiel wird die Initialisierung einer Eigenschaft beschrieben, bei der es sich um ein stark typiertes Objekt handelt, und einer anderen Eigenschaft, bei der es sich um ein Array von schwach typierten Objekten handelt.
 
 ``` syntax
 Class EmbedClass1

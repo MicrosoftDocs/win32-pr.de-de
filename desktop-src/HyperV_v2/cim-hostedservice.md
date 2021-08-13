@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, jedoch stellt diese Klasse keine Dienste dar, die auf mehreren Systemen gehostet werden.
+description: Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, diese Klasse stellt jedoch keine Dienste dar, die über mehrere Systeme gehostet werden.
 ms.assetid: ede67a81-cf1b-41aa-b907-5b635cf80423
-title: CIM_HostedService-Klasse (Hyper-V-Verwaltung)
+title: CIM_HostedService -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 841c0e26898ed3baa4b4947779a395ee9ce870d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 65667d46ea3af91f33a118d49902c77e411fc56959eb1f1345d4b42fab372270
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118648555"
 ---
-# <a name="cim_hostedservice-class-hyper-v-management"></a>CIM_HostedService-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_hostedservice-class-hyper-v-management"></a>CIM_HostedService -Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, jedoch stellt diese Klasse keine Dienste dar, die auf mehreren Systemen gehostet werden.
+Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, diese Klasse stellt jedoch keine Dienste dar, die über mehrere Systeme gehostet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,42 +39,42 @@ class CIM_HostedService : CIM_HostedDependency
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ hustedservice** " verfügt über diese Typen von Membern:
+Die **CIM \_ HostedService-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ hustedservice** " verfügt über diese Eigenschaften.
+Die **CIM \_ HostedService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ System**
+Datentyp: **\_ CIM-System**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Das Host System.
+Das Hostsystem.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Dienst**
+Datentyp: **\_ CIM-Dienst**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig"), [**schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Der auf dem System gehostete Dienst.
@@ -90,16 +90,16 @@ Der auf dem System gehostete Dienst.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ hubabhängigkeit**](cim-hosteddependency.md)
+[**CIM \_ HostedDependency**](cim-hosteddependency.md)
 </dt> </dl>
 
  

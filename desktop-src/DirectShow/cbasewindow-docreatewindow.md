@@ -1,7 +1,7 @@
 ---
-description: Das Fenster wird von der dokreatewindow-Methode erstellt.
+description: Die DoCreateWindow-Methode erstellt das Fenster.
 ms.assetid: bbe38a71-bbf7-4380-96a3-074b992a1d1e
-title: CBaseWindow.DoCreatewindow-Methode (winutil. h)
+title: CBaseWindow.DoCreateWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 76bea1523f48a6e22a3c2d9370fa32bcea022621
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f2502d1c07efbb5fa15c8113d11504b9a61a64321686e2b0e7e4939fabad7395
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658224"
 ---
-# <a name="cbasewindowdocreatewindow-method"></a>CBaseWindow.DoCreatewindow-Methode
+# <a name="cbasewindowdocreatewindow-method"></a>CBaseWindow.DoCreateWindow-Methode
 
-Mit der- `DoCreateWindow` Methode wird das-Fenster erstellt.
+Die `DoCreateWindow` -Methode erstellt das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbasewindow::P Analyse Window**](cbasewindow-preparewindow.md) -Methode ruft diese Methode auf.
+Die [**CBaseWindow::P repareWindow-Methode**](cbasewindow-preparewindow.md) ruft diese Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Die [**cbasewindow::P Analyse Window**](cbasewindow-preparewindow.md) -Methode r
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

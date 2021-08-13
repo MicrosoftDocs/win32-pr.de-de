@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistacold. Longlong Field'
-title: Vistacold. Longlong-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: VistaColtyp.LongLong-Feld'
+title: VistaColtyp.LongLong-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: LongLong field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaColtyp.LongLong
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistacoltyp.longlong(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: df5e4a7e31dd40b786fdc69bbedc047879c225ed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75b0575a1416b02df279c17b1a2ad1800b912524f6dbebd60cf607ad3ef6d3aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119471170"
 ---
-# <a name="vistacoltyplonglong-field"></a>Vistacold. Longlong-Feld
+# <a name="vistacoltyplonglong-field"></a>VistaColtyp.LongLong-Feld
 
-Signierte 64-Bit-Nummer.
+64-Bit-Zahl mit Vorzeichen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = VistaColtyp.LongLong
 public const JET_coltyp LongLong
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistacoltyp-Klasse](./vistacoltyp-class.md)
+[VistaColtyp-Klasse](./vistacoltyp-class.md)
 
-[Vistacolyp-Member](./vistacoltyp-members.md)
+[VistaColtyp-Member](./vistacoltyp-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

@@ -1,35 +1,35 @@
 ---
-description: Gibt die Anzahl der Video Frames zurück, die der Encoder empfangen hat.
+description: Gibt die Anzahl der Videoframes zurück, die der Encoder empfangen hat.
 ms.assetid: 3de49105-3c74-4a52-9cac-465b4abfcbf5
-title: Avencstatus videototalframes-Eigenschaft (codecapi. h)
+title: AVEncStatVideoTotalFrames-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d76adda51e6d16676a2a957fd16a5aac2a15691e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 461708e9006db183992cf550bf7f98eeaeacbfe16c100675ab4992b54f0768d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118663441"
 ---
-# <a name="avencstatvideototalframes-property"></a>Avencstatus videototalframes (Eigenschaft)
+# <a name="avencstatvideototalframes-property"></a>AVEncStatVideoTotalFrames (Eigenschaft)
 
-Gibt die Anzahl der Video Frames zurück, die der Encoder empfangen hat.
+Gibt die Anzahl der Videoframes zurück, die der Encoder empfangen hat.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencstatus Video Total Frames**
+**CODECAPI \_ AVEncStatVideoTotalFrames**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft ist nach Abschluss der Codierung verfügbar.
 
-Der Wert dieser Eigenschaft ist die Gesamtzahl der an den Encoder gesendeten Frames, einschließlich abgelöschter Frames. Um die Anzahl der codierten Frames zu erhalten, lesen Sie die Eigenschaft " [**avencstatus videocodedframes**](avencstatvideocodedframes-property.md) ".
+Der Wert dieser Eigenschaft ist die Gesamtzahl der an den Encoder gesendeten Frames, einschließlich der gelöschten Frames. Um die Anzahl der codierten Frames zu erhalten, lesen Sie die [**AVEncStatVideoCodedFrames-Eigenschaft.**](avencstatvideocodedframes-property.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,20 +37,20 @@ Der Wert dieser Eigenschaft ist die Gesamtzahl der an den Encoder gesendeten Fra
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

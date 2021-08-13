@@ -1,7 +1,7 @@
 ---
-description: Löscht alle Überprüfungs Profile, die dem angegebenen Gerät zugeordnet sind.
+description: Löscht alle Scanprofile, die dem angegebenen Gerät zugeordnet sind.
 ms.assetid: 5abf101b-0442-47fc-8159-95db63f0af78
-title: Iscanprofilemgr::D eleteallprofiles-Methode (scanprofilemgr. h)
+title: IScanProfileMgr::D eleteAllProfiles-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: f21e9f562d008846b4ecf6ad46e86c2c371eb9f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7476f014b0dbcdb16af2a0db46c92a8c2db112528ec4bb8f2903e0c7f9c7a72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119450820"
 ---
-# <a name="iscanprofilemgrdeleteallprofiles-method"></a>Iscanprofilemgr::D eleteallprofiles-Methode
+# <a name="iscanprofilemgrdeleteallprofiles-method"></a>IScanProfileMgr::D eleteAllProfiles-Methode
 
-Löscht alle Überprüfungs Profile, die dem angegebenen Gerät zugeordnet sind.
+Löscht alle Scanprofile, die dem angegebenen Gerät zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ HRESULT DeleteAllProfiles(
 
 <dl> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -52,7 +52,7 @@ Die ID des Geräts.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,21 +60,21 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

@@ -1,8 +1,8 @@
 ---
-description: Berechnete Liefer (&\# 0034; gekocht&\# 0034;) Leistungsdaten des Leistungs Zählers. Stellt dynamische Daten für die WMI-Klassen bereit, die von Win32 \_ perfformatteddata abgeleitet werden. Wird auch als gekochte gegen Anbieter bezeichnet.
+description: Berechnete Dienstleistungen (&\# 0034;&\# 0034;) Leistungsindikatordaten. Stellt dynamische Daten für die WMI-Klassen zur Anwendung, die von Win32 \_ PerfFormattedData abgeleitet wurden. Wird auch als Anbieter des Kontrahentenzählers bezeichnet.
 ms.assetid: 59823f7c-3046-4608-99df-1f43e2934e7e
 ms.tgt_platform: multiple
-title: Formatierte Leistungs Datenanbieter
+title: Formatierte Leistungsindikatoren Datenanbieter
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,33 +10,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0db075ebdafcd31c7aa0980d191ed565873f686f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab8e931c3d03c619af5b1e37cadd8dacdccd21534513ed3a1aa1d7b9076acfb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118556613"
 ---
-# <a name="formatted-performance-data-provider"></a>Formatierte Leistungs Datenanbieter
+# <a name="formatted-performance-data-provider"></a>Formatierte Leistungsindikatoren Datenanbieter
 
-\[Die formatierte Leistungs Datenanbieter, auch bekannt als "gekochte Leistungs Anbieter", ist nicht mehr zur Verwendung verfügbar. Verwenden Sie stattdessen den [wmiperfinst](wmiperfinst-provider.md) -Anbieter.\]
+\[Die formatierte Datenanbieter, auch bekannt als "Anbieter von Kontrahentenzählern", steht nicht mehr zur Verwendung zur Verfügung. Verwenden Sie stattdessen den [WMIPerfInst-Anbieter.](wmiperfinst-provider.md)\]
 
-Der leistungsfähige Hochleistungs Datenanbieter liefert berechnete ("gekochte") Leistungsdaten, z. b. den Prozentsatz der Zeit, die ein Datenträger für das Schreiben von Daten benötigt. Dieser Anbieter stellt dynamische Daten für die WMI-Klassen bereit, die von [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)abgeleitet werden. Der Unterschied zwischen diesem Anbieter und dem [Leistungsindikatorenanbieter](performance-counter-provider.md) besteht darin, dass der Leistungsindikatorenanbieter Rohdaten bereitstellt und [](gloss-s.md)der gekochte Leistungsindikatoren Leistungsdaten liefert Der [**\_ \_ Win32Provider**](--win32provider.md) -Instanzname ist "hiperfkocher \_ v1".
+Der Hochleistungsanbieter für formatierte Leistungsdaten stellt berechnete Leistungsindikatordaten ("1000") zur Verfügung, z. B. den Prozentsatz der Zeit, die ein Datenträger zum Schreiben von Daten verbringt. Dieser Anbieter stellt dynamische Daten für die WMI-Klassen zur Anwendung, die von [**Win32 \_ PerfFormattedData abgeleitet wurden.**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) Der Unterschied zwischen diesem [](performance-counter-provider.md) Anbieter und dem Leistungsindikatoranbieter besteht in dem, dass der Leistungsindikatoranbieter Rohdaten und der Anbieter des Zählerzählers Leistungsdaten liefert, die genau wie im [*Systemmonitor angezeigt werden.*](gloss-s.md) Der [**\_ \_ Win32Provider-Instanzname**](--win32provider.md) ist "HiPerfCooker \_ v1".
 
-Der WMI-formatierte Klassenname für ein Counter-Objekt hat die Form "Win32 \_ perfformatteddata \_ *Service \_ Name* \_ *Object \_ Name*". Der WMI-Klassenname, der die Leistungsindikatoren für logische Datenträger enthält, lautet beispielsweise **Win32 \_ perfformatteddata \_ perfdisk \_ LogicalDisk**. Diese Klassen befinden sich im \\ Namespace "root CIMv2".
+Der WMI-formatierte Klassenname für ein Indikatorobjekt hat das Format "Win32 \_ PerfFormattedData \_ *\_ Dienstname* \_ *\_ Objektname*". Der WMI-Klassenname, der die logischen Datenträgerindikatoren enthält, ist beispielsweise **Win32 \_ PerfFormattedData \_ PerfDisk \_ LogicalDisk.** Diese Klassen befinden sich im Namespace "Root \\ CIMv2".
 
-Da Leistungsdaten Klassen auf einem bestimmten System dynamisch hinzugefügt und geändert werden, ist es nicht möglich, die Eigenschaften aller bekannten Leistungs Objekte formal zu dokumentieren. Informationen dazu, welche Klassen für Sie verfügbar sind, und um zu ermitteln, welche Member diese Klassen haben, finden Sie unter [Abrufen der Dokumentation für Rohdaten und formatierte Leistungsdaten Objekte](retrieving-raw-and-formatted-performance-data.md).
+Da Leistungsdatenklassen auf einem bestimmten System dynamisch hinzugefügt und geändert werden, ist es nicht möglich, die Eigenschaften aller bekannten Leistungsobjekte formal zu dokumentieren. Informationen dazu, welche Klassen für Sie verfügbar sind und welche Member diese Klassen haben, finden Sie unter Abrufen der Dokumentation für Unformatierte und [formatierte Leistungsdatenobjekte.](retrieving-raw-and-formatted-performance-data.md)
 
-Die [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) -Klassen verwenden den **cookingtype** -Qualifizierer in [WMI-Leistungsdaten Typen](wmi-performance-counter-types.md) , um die Formel für die Berechnung der Leistungsdaten anzugeben. Dieser Qualifizierer ist mit dem **CounterType** -Qualifizierer in den [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) -Klassen identisch.
+Die [**Win32 \_ PerfFormattedData-Klassen**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) verwenden den Qualifizierer **"Ungstyp"** in WMI-Leistungsindikatortypen, um die Formel zum Berechnen von Leistungsdaten anzugeben. [](wmi-performance-counter-types.md) Dieser Qualifizierer ist  mit dem CounterType-Qualifizierer in den [**Win32 \_ PerfRawData-Klassen**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) identisch.
 
-Als Hochleistungs Anbieter implementiert der gekochte Leistungs Anbieter die standardmäßige [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) -Schnittstelle sowie die [**iwbemrefresh Sher:: Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) -Methode und die folgenden [**IWbemHiPerfProvider**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemhiperfprovider) -Methoden:
+Als Leistungsstarker Anbieter implementiert der Anbieter des Zählers Für Kontrahenten die [**IWbemProviderInit-Standardschnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) sowie die [**IWbemRefresher::Refresh-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) und die folgenden [**IWbemHiPerfProvider-Methoden:**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemhiperfprovider)
 
--   [**"Kreaterefreshableaufzählung"**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-createrefreshableenum)
--   [**"Kreaterefreshableobject"**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-createrefreshableobject)
--   [**Anmelde Fresher**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-createrefresher)
--   [**GetObjects**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-getobjects)
--   [**Queryinstance**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-queryinstances)
--   [**Stopp Aktualisierung**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-stoprefreshing)
+-   [**CreateRefreshableEnum**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-createrefreshableenum)
+-   [**CreateRefreshableObject**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-createrefreshableobject)
+-   [**CreateRefresher**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-createrefresher)
+-   [**Getobjects**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-getobjects)
+-   [**QueryInstances**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-queryinstances)
+-   [**StopRefreshing**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemhiperfprovider-stoprefreshing)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,11 +1,11 @@
 ---
 title: Win32_TSGatewayServer-Klasse
-description: Wird für Server spezifische Vorgänge Remotedesktop Gateway (RD-Gateway) verwendet.
+description: Wird für serverspezifische vorgänge Remotedesktop Gateway (RD Gateway) verwendet.
 ms.assetid: ae24b7ff-2c26-43a5-ac11-52f83225f4ee
 ms.tgt_platform: multiple
 keywords:
 - Win32_TSGatewayServer-Klasse Remotedesktopdienste
-- Win32_TSGatewayServer Klasse Remotedesktopdienste, beschrieben
+- Win32_TSGatewayServer-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7dee009521c59b606010be085fcb0447558898d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 43cd6c24447e7ba3bc22788484b2ac9e437ee947243c17a676728d2a336bd326
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118603887"
 ---
-# <a name="win32_tsgatewayserver-class"></a>Win32-Klasse "- \_ Gatewayserver"
+# <a name="win32_tsgatewayserver-class"></a>Win32 \_ TSGatewayServer-Klasse
 
-Wird für Server spezifische Vorgänge Remotedesktop Gateway (RD-Gateway) verwendet.
+Wird für serverspezifische vorgänge Remotedesktop Gateway (RD Gateway) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,21 +38,21 @@ class Win32_TSGatewayServer
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zgatewayserver** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSGatewayServer-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zgatewayserver** " verfügt über diese Methoden.
+Die **Win32 \_ TSGatewayServer-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                   | BESCHREIBUNG                                                                                                                    |
 |:-----------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [**"Kreateselfsignedcertificate"**](createselfsignedcertificate-win32-tsgatewayserver.md) | Erstellt ein selbst signiertes Zertifikat mit einem angegebenen Antragsteller Namen und gibt den Zertifikat Hash als einen out-Parameter zurück.<br/> |
-| [**Exportieren**](export-win32-tsgatewayserver.md)                                           | Gibt die RD-Gateway Server-Konfiguration als XML-Zeichenfolge zurück.<br/>                                                       |
-| [**Importieren**](import-win32-tsgatewayserver.md)                                           | Importiert eine angegebene Konfiguration auf den RD-Gateway Server.<br/>                                                             |
+| [**CreateSelfSignedCertificate**](createselfsignedcertificate-win32-tsgatewayserver.md) | Erstellt ein selbstsigniertes Zertifikat mit einem angegebenen Antragstellernamen und gibt den Zertifikathash als "out"-Parameter zurück.<br/> |
+| [**Exportieren**](export-win32-tsgatewayserver.md)                                           | Gibt die RD-Gatewayserverkonfiguration als XML-Zeichenfolge zurück.<br/>                                                       |
+| [**Importieren**](import-win32-tsgatewayserver.md)                                           | Importiert eine bestimmte Konfiguration auf den RD-Gatewayserver.<br/>                                                             |
 
 
 
@@ -60,7 +60,7 @@ Die Win32-Klasse " **\_ zgatewayserver** " verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 

@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Temperatursensor Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ TemperatureSensor-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: FBEBF43D-444C-45E0-B04A-D3A086AFBDC0
 ms.tgt_platform: multiple
-title: CIM_TemperatureSensor Methoden
+title: CIM_TemperatureSensor-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 517b6a7c8b1c370ca8044e010e21d4ba128cb91c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 19efde5f9171c5d3d97f95252b8f3d0ec88792d7389112c0e5263681c9ccfa51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118677414"
 ---
-# <a name="cim_temperaturesensor-methods"></a>CIM- \_ Temperatursensor-Methoden
+# <a name="cim_temperaturesensor-methods"></a>CIM \_ TemperatureSensor-Methoden
 
-Die [**CIM- \_ Temperatursensor**](cim-temperaturesensor.md) Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ TemperatureSensor-Klasse**](cim-temperaturesensor.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

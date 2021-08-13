@@ -1,7 +1,7 @@
 ---
-description: Bestimmt die Unterbereiche eines Bilds, das auf dem flachen Platen angeordnet ist, sodass jede Unterregion in einem separaten Bildelement abgerufen werden kann.
+description: Bestimmt die Unterregionen eines Bilds, das auf dem Flachbildschirm ausgelegt ist, sodass jeder untere Bereich in ein separates Bildelement übernommen werden kann.
 ms.assetid: 899d61f0-2dd8-4a68-827e-89e85ebb5143
-title: Iwiasegmentationfilter::D etectregions-Methode (WIA. h)
+title: IWiaSegmentationFilter::D etectRegions-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 94fe2f5076e9ff7cc0de0f7c916f6edacf2d03fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46496360d7b54bed837ba287d604233a9fac98ee13807744b4adbfb52e9934d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119450260"
 ---
-# <a name="iwiasegmentationfilterdetectregions-method"></a>Iwiasegmentationfilter::D etectregions-Methode
+# <a name="iwiasegmentationfilterdetectregions-method"></a>IWiaSegmentationFilter::D etectRegions-Methode
 
-Bestimmt die Unterbereiche eines Bilds, das auf dem flachen Platen angeordnet ist, sodass jede Unterregion in einem separaten Bildelement abgerufen werden kann.
+Bestimmt die Unterregionen eines Bilds, das auf dem Flachbildschirm ausgelegt ist, sodass jeder untere Bereich in ein separates Bildelement übernommen werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT DetectRegions(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 </dd> <dt>
 
-*pinputstream* \[ in\]
+*pInputStream* \[ In\]
 </dt> <dd>
 
-Typ: **[IStream](/windows/win32/api/objidl/nn-objidl-istream) \** _
+Typ: **[IStream](/windows/win32/api/objidl/nn-objidl-istream)\***
 
-Gibt einen Zeiger auf das [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Vorschaubild an.
+Gibt einen Zeiger auf das [IStream-Vorschaubild](/windows/win32/api/objidl/nn-objidl-istream) an.
 
 </dd> <dt>
 
-_pWiaItem2 * \[ in\]
+*pWiaItem2* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWiaItem2**](-wia-iwiaitem2.md) \** _
+Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\***
 
-Gibt einen Zeiger auf das [_ *IWiaItem2* *](-wia-iwiaitem2.md) -Element an, für das *pinputstream abgerufen* wurde. Der Segmentierungs Filter erstellt untergeordnete Elemente für dieses Element.
+Gibt einen Zeiger auf das [**IWiaItem2-Element**](-wia-iwiaitem2.md) an, für das *pInputStream* erworben wurde. Der Segmentierungsfilter erstellt untergeordnete Elemente für dieses Element.
 
 </dd> </dl>
 
@@ -72,28 +72,28 @@ Gibt einen Zeiger auf das [_ *IWiaItem2* *](-wia-iwiaitem2.md) -Element an, für
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bestimmt die Unterbereiche des durch pinputstream dargestellten Bilds. Für jede unterregion, die Sie erkennt, wird ein untergeordnetes Element für das [**IWiaItem2**](-wia-iwiaitem2.md) -Element erstellt, das im *pWiaItem2* -Parameter angegeben ist. Für jedes untergeordnete Element muss der Segmentierungs Filter Werte für das umgebende Rechteck des zu überprüfenden Bereichs festlegen, wobei die folgenden [**Eigenschaften Konstanten für die WIA-Eigenschaft des Scanners**](-wia-wiaitempropscanneritem.md)verwendet werden.
+Diese Methode bestimmt die Unterregionen des durch pInputStream dargestellten Bilds. Für jeden erkannten Unterbereich wird ein untergeordnetes Element für das [**im pWiaItem2-Parameter angegebene IWiaItem2-Element**](-wia-iwiaitem2.md) erstellt.  Für jedes untergeordnete Element muss der Segmentierungsfilter Werte für das umgebundene Rechteck des zu überprüfenden Bereichs festlegen, indem die folgenden [**WIA-Elementeigenschaftskonstationen für**](-wia-wiaitempropscanneritem.md)Scanner verwendet werden.
 
--   [**WIA- \_ IPS- \_ xPos**](-wia-wiaitempropscanneritem.md)
--   [**WIA- \_ IPS ( \_ yPos)**](-wia-wiaitempropscanneritem.md)
--   [**WIA- \_ IPS- \_ XBlock**](-wia-wiaitempropscanneritem.md)
--   [**WIA- \_ IPS \_ yblock**](-wia-wiaitempropscanneritem.md)
+-   [**WIA \_ IPS \_ XPOS**](-wia-wiaitempropscanneritem.md)
+-   [**WIA \_ IPS \_ YPOS**](-wia-wiaitempropscanneritem.md)
+-   [**WIA \_ IPS \_ XEXTENT**](-wia-wiaitempropscanneritem.md)
+-   [**WIA \_ IPS \_ YEXTENT**](-wia-wiaitempropscanneritem.md)
 
-Ein erweiterter Filter erfordert möglicherweise auch andere [**Scanner-WIA-Element Eigenschafts Konstanten**](-wia-wiaitempropscanneritem.md) , wie z. b. **WIA- \_ IPS \_ deschiefe \_ X** und **WIA- \_ IPS \_ deschiefe \_ Y**, wenn der Treiber de-Schiefe unterstützt.
+Für einen erweiterten Filter sind möglicherweise auch andere [**WIA-Elementeigenschaftskonstten**](-wia-wiaitempropscanneritem.md) für Scanner erforderlich, z. B. **WIA \_ IPS \_ DESKEW \_ X** und **WIA \_ IPS \_ DESKEW \_ Y,** wenn der Treiber die Deskewing unterstützt.
 
-Wenn die Anwendung **iwiasegmentationfilter::D etectregions** mehrmals aufruft, muss die Anwendung zunächst die untergeordneten Elemente löschen, die beim letzten Aufruf von **iwiasegmentationfilter::D etectregions** erstellt wurden.
+Wenn die Anwendung **IWiaSegmentationFilter::D etectRegions** mehr als einmal aufruft, muss die Anwendung zuerst die untergeordneten Elemente löschen, die durch den letzten Aufruf von **IWiaSegmentationFilter::D etectRegions** erstellt wurden.
 
-Wenn eine Anwendung Eigenschaften in *pWiaItem2* ändert, muss zwischen dem Abrufen des Bilds in *pinputstream* und dem Aufruf von **iwiasegmentationfilter::D etectregions** die ursprünglichen Eigenschaften (d. h. die Eigenschaften, die das Element beim Abrufen des Streams enthielt) wieder hergestellt werden. Dies kann durch [**getpropertystream**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-getpropertystream) und [**setpropertystream**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-setpropertystream)erreicht werden.
+Wenn eine Anwendung Eigenschaften in *pWiaItem2* ändert, müssen die ursprünglichen Eigenschaften (d. h. die Eigenschaften, die das Element beim Abrufen des Streams hatte) wiederhergestellt werden, zwischen dem Abrufen des Images in *pInputStream* und dem Aufruf **von IWiaSegmentationFilter::D etectRegions).** Dies kann mit [**GetPropertyStream und**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-getpropertystream) [**SetPropertyStream erfolgen.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-setpropertystream)
 
-Die Anwendung muss den [IStream](/windows/win32/api/objidl/nn-objidl-istream) zurücksetzen, wenn der zugehörige-Befehl denselben Stream mehrmals an den Segmentierungs Filter übergibt. Die Anwendung muss den Stream auch nach dem anfänglichen Download und vor dem Aufrufen von **iwiasegmentationfilter::D etectregions** zurücksetzen.
+Die Anwendung muss den [IStream zurücksetzen,](/windows/win32/api/objidl/nn-objidl-istream) wenn sein Aufruf denselben Stream mehr als einmal an den Segmentierungsfilter übergibt. Die Anwendung muss den Stream auch nach dem ersten Download und vor dem Aufruf von **IWiaSegmentationFilter::D etectRegions zurücksetzen.**
 
 ## <a name="examples"></a>Beispiele
 
-Die Segmentierung führt die Regions Erkennung im Stream () aus, die an `pImageStream` detectsubregions weitergeleitet wird. Weitere Informationen finden Sie in diesem Beispiel in der [**GetExtension**](-wia-iwiaitem2-getextension.md) für die in diesem Beispiel verwendete Methode "".
+Die Segmentierung führt die Erkennung von Regionen für den Stream ( ) aus, `pImageStream` der an DetectSubregions übergeben wird. Siehe die [**in diesem Beispiel verwendete GetExtension**](-wia-iwiaitem2-getextension.md) for CreateSegmentationFilter-Methode.
 
 
 ```C++
@@ -132,9 +132,9 @@ DetectSubregions(
 
 
 
-Downloadpreviewimage lädt Bilddaten aus dem Scanner herunter, indem die [**getnewpreview**](-wia-iwiapreview-getnewpreview.md) -Methode der Vorschau Komponente aufgerufen wird. Anschließend wird detectsubregions aufgerufen, wenn der Anwendungs Benutzer den Segmentierungs Filter aufrufen möchte, der für jeden erkannten Bereich ein untergeordnetes Element unter pWiaItem2 erstellt. Weitere Informationen finden Sie unter **iwiasegmentationfilter::D etectregions** für die detectsubregions-Methode, die in diesem Beispiel verwendet wird.
+DownloadPreviewImage lädt Bilddaten vom Scanner herunter, indem die [**GetNewPreview-Methode**](-wia-iwiapreview-getnewpreview.md) der Vorschaukomponente aufruft. Anschließend wird DetectSubregions aufgerufen, wenn der Anwendungsbenutzer den Segmentierungsfilter aufrufen möchte. Dadurch wird unter pWiaItem2 für jede erkannte Region ein untergeordnetes Element erstellt. Die in diesem Beispiel verwendete DetectSubregions-Methode finden Sie unter **IWiaSegmentationFilter::D etectRegions.**
 
-In diesem Beispiel legt der Anwendungs Benutzer fest, `m_bUseSegmentationFilter` indem Sie auf ein Kontrollkästchen klicken. Wenn die Anwendung dies unterstützt, sollte zuerst überprüft werden, ob der Treiber über einen Segmentierungs Filter verfügt, indem [**checkextension**](-wia-iwiaitem2-checkextension.md)aufgerufen wird. Unter [**getnewpreview**](-wia-iwiapreview-getnewpreview.md) finden Sie ein Beispiel für die checkimgfilter-Methode, das zeigt, wie dies erreicht werden kann.
+In diesem Beispiel legt der Anwendungsbenutzer `m_bUseSegmentationFilter` fest, indem er auf ein Kontrollkästchen klickt. Wenn die Anwendung dies unterstützt, sollte sie zunächst überprüfen, ob der Treiber über einen Segmentierungsfilter verfügt, indem [**CheckExtension aufruft.**](-wia-iwiaitem2-checkextension.md) Unter [**GetNewPreview finden**](-wia-iwiapreview-getnewpreview.md) Sie ein Beispiel für die CheckImgFilter-Methode, das zeigt, wie dies möglich ist.
 
 
 ```C++
@@ -219,10 +219,10 @@ DownloadPreviewImage(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

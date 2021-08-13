@@ -1,25 +1,25 @@
 ---
-title: Registrieren von DSP-Plug-ins
-description: Registrieren von DSP-Plug-ins
+title: Registrieren von DSP-Plug-Ins
+description: Registrieren von DSP-Plug-Ins
 ms.assetid: af264ff7-702b-4a49-a14d-ab8563a40c4e
 keywords:
-- Windows Media Player-Plug-ins, Registrierungseinträge
-- Plug-ins, Registrierungseinträge
+- Windows Media Player-Plug-Ins, Registrierungseinträge
+- Plug-Ins, Registrierungseinträge
 - Plug-Ins für die digitale Signalverarbeitung, Registrierungseinträge
-- DSP-Plug-ins, Registrierungseinträge
-- Registrierung, DSP-Plug-ins
+- DSP-Plug-Ins, Registrierungseinträge
+- Registrierung, DSP-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a64e7afd43cf242d57c0a9375c4cbda56e457ef1
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 7671c59dfe64094afbc5f0537bcae237b3812699f4db1a06519054b14ef295f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103948439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118570380"
 ---
-# <a name="registering-dsp-plug-ins"></a>Registrieren von DSP-Plug-ins
+# <a name="registering-dsp-plug-ins"></a>Registrieren von DSP-Plug-Ins
 
-Um Ihr DSP-Plug-in in Media Player Windows verfügbar zu machen, müssen Sie auf dem Computer des Benutzers die folgenden Registrierungs Unterschlüssel und Einträge erstellen.
+Um Ihr DSP-Plug-In in Windows Media Player verfügbar zu machen, müssen Sie die folgenden Registrierungsunterschlüssel und -einträge auf dem Computer des Benutzers erstellen.
 
 
 ```C++
@@ -33,22 +33,22 @@ Um Ihr DSP-Plug-in in Media Player Windows verfügbar zu machen, müssen Sie auf
 
 
 
-In der vorangehenden Registrierungs Syntax sind die Symbole in kursiv Platzhalter für Namen und Global Unique Identifier (GUIDs), die für das DSP-Plug-in spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
+In der obigen Registrierungssyntax sind die italischen Symbole Platzhalter für Namen und GUIDs (Globally Unique Identifiers), die für das DSP-Plug-In spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
 
 
 
 | Platzhalter               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Pluginclsid*             | Eine GUID, die der Klassen Bezeichner für die primäre Klasse des DSP-Plug-ins ist. Dies ist die Klasse, die **imediaobject**, **ipluginenable** und möglicherweise **ISpecifyPropertyPages** implementiert. In einem Dual-Mode-Plug-in implementiert diese Klasse auch **IMF Transform** und **IMF GetService**. Diese GUID muss das Registrierungs Format aufweisen und mit den geschweiften Klammern vervollständigt werden.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<br/> |
-| *Pluginclassfriendlyname* | Ein Anzeige Name für die primäre Klasse des DSP-Plug-ins. Beispiel: "prosewaredsp Class"<br/>                                                                                                                                                                                                                                                                                                                                 |
-| *Pluginmodulename*        | Der voll qualifizierte Pfad zu der dll, die das DSP-Plug-in implementiert. Beispiel: "C: \\ Program Files \\ proseware \\ProsewareDsp.dll"<br/>                                                                                                                                                                                                                                                                                     |
-| *Threading*               | Eine Zeichenfolge, die das Threading Modell für das Plug-in angibt. Wenn das Plug-in mit Windows Media Player 11 unter Windows Vista ausgeführt wird, muss dieser Registrierungs Eintrag gleich "beide" sein. Wenn das Plug-in unter Windows XP oder älteren Betriebssystemen ausgeführt werden soll, kann dieser Registrierungs Eintrag entweder "Apartment" oder "both" lauten.                                                                                           |
+| *Plug-InClsid*             | Eine GUID, die der Klassenbezeichner für die primäre Klasse des DSP-Plug-Ins ist. Dies ist die Klasse, die **IMediaObject,** **IPluginEnable** und möglicherweise **ISpecifyPropertyPages** implementiert. In einem Dual-Mode-Plug-In implementiert diese Klasse auch **DIE** NSDTRANSTRANSFORM und **DIE NSGET-Funktion**. Diese GUID muss das Registrierungsformat aufweisen und die geschweiften Klammern aufweisen.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}<br/> |
+| *PluginClassFriendlyName* | Ein Anzeigename für die primäre Klasse des DSP-Plug-Ins. Beispiel: "ProsewareDSP-Klasse"<br/>                                                                                                                                                                                                                                                                                                                                 |
+| *PluginModuleName*        | Der vollqualifizierte Pfad zur DLL, die das DSP-Plug-In implementiert. Beispiel: "C: \\ Programme \\ Proseware \\ProsewareDsp.dll"<br/>                                                                                                                                                                                                                                                                                     |
+| *Threading*               | Eine Zeichenfolge, die das Threadingmodell für das Plug-In angibt. Wenn das Plug-In mit Windows Media Player 11 auf Windows Vista ausgeführt wird, muss dieser Registrierungseintrag gleich "Both" sein. Wenn das Plug-In auf Windows XP oder älteren Betriebssystemen ausgeführt wird, kann dieser Registrierungseintrag entweder gleich "Apartment" oder "Both" sein.                                                                                           |
 
 
 
  
 
-Wenn Ihr DSP-Plug-in eine benutzerdefinierte Schnittstelle implementiert und das Plug-in unter Windows Media Player 11 unter Windows Vista ausgeführt wird, müssen Sie auf dem Computer des Benutzers die folgenden Registrierungs Unterschlüssel und-Einträge erstellen.
+Wenn Ihr DSP-Plug-In eine benutzerdefinierte Schnittstelle implementiert und ihr Plug-In in Windows Media Player 11 auf Windows Vista ausgeführt wird, müssen Sie die folgenden Registrierungsunterschlüssel und -einträge auf dem Computer des Benutzers erstellen.
 
 
 ```C++
@@ -71,23 +71,23 @@ Wenn Ihr DSP-Plug-in eine benutzerdefinierte Schnittstelle implementiert und das
 
 
 
-In der vorangehenden Registrierungs Syntax sind die Symbole in kursiv Platzhalter für Namen, numerische Werte und global eindeutige Bezeichner (GUIDs), die für das DSP-Plug-in spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
+In der obigen Registrierungssyntax sind die italischen Symbole Platzhalter für Namen, numerische Werte und GUIDs (Globally Unique Identifiers), die spezifisch für das DSP-Plug-In sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
 
 
 
 | Platzhalter           | BESCHREIBUNG                                                                                                                                                                                                                                                                |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Proxystubclsid*      | Eine GUID, die der Klassen Bezeichner für die Klasse ist, die die Proxys und stubwerte für die benutzerdefinierten Schnittstellen des DSP-Plug-Ins implementiert. Diese GUID muss das Registrierungs Format aufweisen und mit den geschweiften Klammern vervollständigt werden.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<br/> |
-| *Proxystubmodulename* | Der voll qualifizierte Pfad zu der dll, die die Proxy-und Stub-Schnittstellen für das DSP-Plug-in implementiert. Beispiel: "C: \\ Program Files \\ proseware \\ProsewareDspPS.dll"<br/>                                                                                               |
-| *Custominterfakeid*   | Eine GUID, die der Schnittstellen Bezeichner für eine benutzerdefinierte Schnittstelle ist, die durch das DSP-Plug-in implementiert wird. Diese GUID muss das Registrierungs Format aufweisen und mit den geschweiften Klammern vervollständigt werden.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<br/>                           |
-| *Custominterfakename* | Der Name einer benutzerdefinierten Schnittstelle, die vom DSP-Plug-in implementiert wird. Beispiel: "iprosewaredsp"<br/>                                                                                                                                                                  |
-| *Anzahlungsmethoden*     | Die Anzahl der Methoden, einschließlich der geerbten Methoden, die durch eine benutzerdefinierte Schnittstelle definiert werden. Beispiel: "5"<br/>                                                                                                                                                                  |
+| *ProxyStubClsid*      | Eine GUID, die der Klassenbezeichner für die Klasse ist, die die Proxys und Stubs für die benutzerdefinierten Schnittstellen des DSP-Plug-Ins implementiert. Diese GUID muss das Registrierungsformat aufweisen und die geschweiften Klammern aufweisen.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}<br/> |
+| *ProxyStubModuleName* | Der vollqualifizierte Pfad zur DLL, die die Proxy- und Stubschnittstellen für das DSP-Plug-In implementiert. Beispiel: "C: \\ Programme \\ Proseware \\ProsewareDspPS.dll"<br/>                                                                                               |
+| *CustomInterfaceId*   | Eine GUID, die der Schnittstellenbezeichner für eine benutzerdefinierte Schnittstelle ist, die vom DSP-Plug-In implementiert wird. Diese GUID muss das Registrierungsformat aufweisen und die geschweiften Klammern aufweisen.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}<br/>                           |
+| *CustomInterfaceName* | Der Name einer benutzerdefinierten Schnittstelle, die vom DSP-Plug-In implementiert wird. Beispiel: "IProsewareDsp"<br/>                                                                                                                                                                  |
+| *NumberOfMethods*     | Die Anzahl von Methoden, einschließlich geerbter Methoden, die von einer benutzerdefinierten Schnittstelle definiert werden. Beispiel: "5"<br/>                                                                                                                                                                  |
 
 
 
  
 
-Wenn Ihr DSP-Plug-in eine Eigenschaften Seite bereitstellt, müssen Sie auf dem Computer des Benutzers die folgenden Registrierungs Unterschlüssel und Einträge erstellen.
+Wenn ihr DSP-Plug-In eine Eigenschaftenseite bereitstellt, müssen Sie die folgenden Registrierungsunterschlüssel und -einträge auf dem Computer des Benutzers erstellen.
 
 
 ```C++
@@ -101,40 +101,40 @@ Wenn Ihr DSP-Plug-in eine Eigenschaften Seite bereitstellt, müssen Sie auf dem 
 
 
 
-In der vorangehenden Registrierungs Syntax sind die Symbole in kursiv Platzhalter für Namen und Global Unique Identifier (GUIDs), die für das DSP-Plug-in spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
+In der obigen Registrierungssyntax sind die italischen Symbole Platzhalter für Namen und GUIDs (Globally Unique Identifiers), die für das DSP-Plug-In spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
 
 
 
 | Platzhalter                 | BESCHREIBUNG                                                                                                                                                                                                                            |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Proppageclsid*             | Eine GUID, die der Klassen Bezeichner für die Eigenschaften Seiten Klasse ist, die vom DSP-Plug-in bereitgestellt wird. Diese GUID muss das Registrierungs Format aufweisen und mit den geschweiften Klammern vervollständigt werden.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<br/> |
-| *Proppageclassfriendlyname* | Ein Anzeige Name für die Eigenschaften Seiten Klasse. Beispiel: "prosewaredsp Property Page Class"<br/>                                                                                                                                     |
-| *Pluginmodulename*          | Der voll qualifizierte Pfad zu der dll, die das DSP-Plug-in implementiert. Beispiel: "C: \\ Program Files \\ proseware \\ProsewareDsp.dll"<br/>                                                                                               |
+| *PropPageClsid*             | Eine GUID, die der Klassenbezeichner für die Eigenschaftenseitenklasse ist, die vom DSP-Plug-In bereitgestellt wird. Diese GUID muss das Registrierungsformat aufweisen und die geschweiften Klammern aufweisen.<br/> Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}<br/> |
+| *PropPageClassFriendlyName* | Ein Anzeigename für die Eigenschaftenseitenklasse. Beispiel: "ProsewareDSP-Eigenschaftenseitenklasse"<br/>                                                                                                                                     |
+| *PluginModuleName*          | Der vollqualifizierte Pfad zur DLL, die das DSP-Plug-In implementiert. Beispiel: "C: \\ Programme \\ Proseware \\ProsewareDsp.dll"<br/>                                                                                               |
 
 
 
  
 
-**Iwmppluginregistrar wird aufgerufen**
+**Aufrufen von IWMPPluginRegistrar**
 
-Zusätzlich zu den in den vorangehenden Listen und Tabellen beschriebenen Registrierungs unter Schlüsseln und Einträgen müssen Sie einige Registrierungsschlüssel und-Einträge erstellen, indem Sie [iwmpmediapluginregistrar:: wmpregisterplayerplugin](/previous-versions/windows/desktop/api/wmpservices/nf-wmpservices-iwmpmediapluginregistrar-wmpregisterplayerplugin)aufrufen. Diese Methode führt die erforderliche Registrierung aus, damit Windows Media Player Ihr Plug-in erkennen und als Option für den Benutzer präsentieren kann.
+Zusätzlich zu den Registrierungsunterschlüsseln und -einträgen, die in den vorherigen Listen und Tabellen beschrieben sind, müssen Sie einige Registrierungsschlüssel und -einträge erstellen, indem Sie [IWMPMediaPluginRegistrar::WMPRegisterPlayerPlugin](/previous-versions/windows/desktop/api/wmpservices/nf-wmpservices-iwmpmediapluginregistrar-wmpregisterplayerplugin)aufrufen. Diese Methode führt die erforderliche Registrierung aus, damit Windows Media Player Ihr Plug-In erkennen und dem Benutzer als Option zur Verfügung stellen kann.
 
-Rufen Sie in der **DllRegisterServer** -Funktion des Plug-ins den Befehl **iwmpmediapluginregistrar:: wmpregisterplayerplugin** auf, und rufen Sie in der **DllUnregisterServer** -Funktion des Plug-ins den Befehl [iwmpmediapluginregistername](/previous-versions/windows/desktop/api/wmpservices/nf-wmpservices-iwmpmediapluginregistrar-wmpunregisterplayerplugin) auf. Um einen Zeiger auf eine **iwmpmediapluginregistrar** -Schnittstelle zu erhalten, müssen Sie **cokreateinstance** aufrufen und CLSID \_ wmpmediapluginregistrar als Klassen-ID übergeben. Die Konstante CLSID \_ wmpmediapluginregistrar ist in wmpservices. h definiert.
+Rufen Sie **IWMPMediaPluginRegistrar::WMPRegisterPlayerPlugin** in der **DllRegisterServer-Funktion** Ihres Plug-Ins auf, und rufen Sie [IWMPMediaPluginRegistrar::WMPUnRegisterPlayerPlugin](/previous-versions/windows/desktop/api/wmpservices/nf-wmpservices-iwmpmediapluginregistrar-wmpunregisterplayerplugin) in der **DllUnregisterServer-Funktion** Ihres Plug-Ins auf. Um einen Zeiger auf eine **IWMPMediaPluginRegistrar-Schnittstelle** abzurufen, rufen Sie **CoCreateInstance** auf, und übergeben Sie CLSID \_ WMPMediaPluginRegistrar als Klassen-ID. Die konstante CLSID \_ WMPMediaPluginRegistrar wird in wmpservices.h definiert.
 
-**Registrierung im DSP-Plug-in-Assistenten**
+**Registrierung im DSP-Plug-In-Assistenten**
 
-Der DSP-Plug-in-Assistent, der in der Windows SDK enthalten ist, generiert Beispielcode, der auf Active Template Library (ATL) basiert. Die **DllRegisterServer** -Funktion des Plug-Ins für das Beispiel ruft die **RegisterServer** -Funktion von ATL auf, mit der Registrierungs Unterschlüssel und Einträge gemäß zwei Registrierungs Skriptdateien im Visual Studio-Projekt erstellt werden. Die Datei " *ProjectName*. RGS" enthält das Skript zum Registrieren der Hauptklasse des Plug-ins, und die Datei " *ProjectName* PropPage. RGS" enthält das Skript zum Registrieren der Eigenschaften Seiten Klasse des Plug-ins. Die **DllRegisterServer** -Funktion des Plug-Ins für das Beispiel ruft auch **iwmppluginregistrar:: wmpregisterplayerplugin** auf.
+Der DSP-Plug-In-Assistent, der im Windows SDK enthalten ist, generiert Beispielcode, der auf Active Template Library (ATL) basiert. Die **DllRegisterServer-Funktion** des Beispiel-Plug-Ins ruft die **RegisterServer-Funktion** von ATL auf, die Registrierungsunterschlüssel und -einträge gemäß zwei Registrierungsskriptdateien im projekt Visual Studio erstellt. Die Datei *ProjectName*.rgs enthält das Skript zum Registrieren der Hauptklasse des Plug-Ins, und die Datei *ProjectName* PropPage.rgs enthält das Skript zum Registrieren der Eigenschaftenseitenklasse des Plug-Ins. Die **DllRegisterServer-Funktion** des Beispiel-Plug-Ins ruft auch **IWMPPluginRegistrar::WMPRegisterPlayerPlugin** auf.
 
-Der DSP-Plug-in-Assistent generiert auch Code für eine ProxyStub-Komponente, bei der es sich um eine selbst registrierte DLL-Datei handelt. Der Registrierungscode für diese Datei befindet sich in "dlldata. cpp". Die Makro- **dlldata- \_ Routinen** werden so erweitert, dass Sie eine Implementierung von **DllRegisterServer** enthalten.
+Der DSP-Plug-In-Assistent generiert auch Code für eine Proxystubkomponente, bei der es sich um eine selbst registrierende .dll-Datei handelt. Der Registrierungscode für diese Datei befindet sich in dlldata.cpp. Das Makro **DLLDATA \_ ROUTINES** wird erweitert, um eine Implementierung von **DllRegisterServer** einzuschließt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über den DSP-Plug-in-Entwickler**](dsp-plug-in-developer-overview.md)
+[**Übersicht über DSP-Plug-In-Entwickler**](dsp-plug-in-developer-overview.md)
 </dt> <dt>
 
-[**Iwmpmediapluginregistrar**](/previous-versions/windows/desktop/api/wmpservices/nn-wmpservices-iwmpmediapluginregistrar)
+[**IWMPMediaPluginRegistrar**](/previous-versions/windows/desktop/api/wmpservices/nn-wmpservices-iwmpmediapluginregistrar)
 </dt> </dl>
 
  

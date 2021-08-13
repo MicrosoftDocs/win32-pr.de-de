@@ -1,11 +1,11 @@
 ---
 title: ACS-Server-List-Attribut
-description: Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
+description: Enthält die DNS-Namen Windows NT-Servern, die ACS ausführen dürfen.
 ms.assetid: 1a26ba49-e9c9-4881-a7ce-7c91bf32875e
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des ACS-Server-List-Attributs
-- acsserverlist-Attribut, AD-Schema
+- AD-Schema des aCSServerList-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74968d0c5b11502e2ba867bccfff246fb50cae80
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fff4e294a51a92e48682e1b81ed4153939ab770d118257e2aa304ec4f63e1e7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118689349"
 ---
 # <a name="acs-server-list-attribute"></a>ACS-Server-List-Attribut
 
-Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
+Enthält die DNS-Namen Windows NT-Servern, die ACS ausführen dürfen.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | ACS-Server-List                             |
-| LDAP-Display-Name | acsserverlist                               |
+| Ldap-Anzeigename | aCSServerList                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1312                     |
-| System-ID-GUID    | 7cbd59a5-3b90-11d2-90cc-00c04f d91ab1        |
+| System-Id-Guid    | 7cbd59a5-3b90-11d2-90cc-00c04fd91ab1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Falsch                                        |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Falsch                                        |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -99,11 +99,11 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Falsch                                        |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -120,11 +120,11 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Falsch                                        |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -141,11 +141,11 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Falsch                                        |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -162,11 +162,11 @@ Enthält die DNS-Namen von Windows NT-Servern, die ACS ausführen dürfen.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Falsch                                        |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

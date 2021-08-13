@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopymanager GetJob-Methode (deliveryoptimization. h)
-description: Ruft einen angegebenen Auftrag aus der Übertragungs Warteschlange ab. In der Regel speichert Ihre Anwendung die Auftrags Kennung, sodass Sie den Auftrag später aus der Warteschlange abrufen können.
+title: IBackgroundCopyManager GetJob-Methode (Deliveryoptimization.h)
+description: Ruft einen angegebenen Auftrag aus der Übertragungswarteschlange ab. In der Regel wird die Auftrags-ID von Ihrer Anwendung beibehalten, sodass Sie den Auftrag später aus der Warteschlange abrufen können.
 ms.assetid: ED551A6B-66C7-47E9-93DA-E231BD637522
 keywords:
 - GetJob-Methode
-- GetJob-Methode, ibackgroundcopymanager-Schnittstelle
-- Ibackgroundcopymanager-Schnittstelle, GetJob-Methode
+- GetJob-Methode, IBackgroundCopyManager-Schnittstelle
+- IBackgroundCopyManager-Schnittstelle, GetJob-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a59956e68b5b656e7182e62969b3212c2ef6732c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d8d05b496eaa0d6f1520f22efeed8a39af5eb8e4c338457e18c65a7913489472
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118542288"
 ---
-# <a name="ibackgroundcopymanagergetjob-method"></a>Ibackgroundcopymanager:: GetJob-Methode
+# <a name="ibackgroundcopymanagergetjob-method"></a>IBackgroundCopyManager::GetJob-Methode
 
-Ruft einen angegebenen Auftrag aus der Übertragungs Warteschlange ab. In der Regel speichert Ihre Anwendung die Auftrags Kennung, sodass Sie den Auftrag später aus der Warteschlange abrufen können.
+Ruft einen angegebenen Auftrag aus der Übertragungswarteschlange ab. In der Regel wird die Auftrags-ID von Ihrer Anwendung beibehalten, sodass Sie den Auftrag später aus der Warteschlange abrufen können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,29 +44,29 @@ HRESULT GetJob(
 
 <dl> <dt>
 
-*JobID* \[ in\]
+*JobID* \[ In\]
 </dt> <dd>
 
-Identifiziert den Auftrag, der aus der Übertragungs Warteschlange abgerufen wird. Die Methode " [**kreatejob**](ibackgroundcopymanager-createjob.md) " gibt den Auftrags Bezeichner zurück.
+Identifiziert den Auftrag, der aus der Übertragungswarteschlange abgerufen werden soll. Die [**CreateJob-Methode**](ibackgroundcopymanager-createjob.md) gibt den Auftragsbezeichner zurück.
 
 </dd> <dt>
 
-*ppjob* \[ vorgenommen\]
+*ppJob* \[ out\]
 </dt> <dd>
 
-Ein [**ibackgroundcopyjob**](ibackgroundcopyjob-.md) -Schnittstellen Zeiger auf den von *JobID* angegebenen Auftrag. Wenn Sie den Vorgang abgeschlossen haben, geben Sie *ppjob* frei
+Ein [**IBackgroundCopyJob-Schnittstellenzeiger**](ibackgroundcopyjob-.md) auf den durch *JobID* angegebenen Auftrag. Wenn Sie fertig sind, geben Sie *ppJob frei.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                                      | Beschreibung                                                        |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl>         | Der Auftrag wurde erfolgreich aus der Übertragungs Warteschlange abgerufen.<br/> |
+| <dl> <dt>S_OK</dt> </dl>         | Der Auftrag wurde erfolgreich aus der Übertragungswarteschlange abgerufen.<br/> |
 | <dl> <dt>**DO_E_NOT_FOUND**</dt> </dl> | Der Auftrag wurde nicht in der Warteschlange gefunden.<br/>                     |
 | <dl> <dt>**E_ACCESSDENIED**</dt> </dl>   | Der Benutzer verfügt nicht über die Berechtigung zum Abrufen des Auftrags.<br/>      |
 
@@ -80,30 +80,30 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyManager ist als 5ce34c0d-0dc9-4c1f -897c-daa1b78cee7c definiert.<br/>           |
+| IID<br/>                      | IID_IBackgroundCopyManager ist als 5CE34C0D-0DC9-4C1F-897C-DAA1B78CEE7C definiert.<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Ibackgroundcopymanager**](ibackgroundcopymanager.md)
+[**IBackgroundCopyManager**](ibackgroundcopymanager.md)
 </dt> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: GetId**](ibackgroundcopyjob-getid.md)
+[**IBackgroundCopyJob::GetId**](ibackgroundcopyjob-getid.md)
 </dt> <dt>
 
-[**Ibackgroundcopymanager:: kreatejob**](ibackgroundcopymanager-createjob.md)
+[**IBackgroundCopyManager::CreateJob**](ibackgroundcopymanager-createjob.md)
 </dt> </dl>
 
  

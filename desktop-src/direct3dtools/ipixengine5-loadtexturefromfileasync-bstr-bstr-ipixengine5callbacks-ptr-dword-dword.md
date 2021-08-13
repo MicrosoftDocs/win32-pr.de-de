@@ -1,10 +1,10 @@
 ---
-description: Lädt eine Textur aus einer Datei und benachrichtigt den Host beim Abschluss asynchron.
+description: Lädt eine Textur aus einer Datei und benachrichtigt den Host asynchron, wenn er abgeschlossen ist.
 MS-HAID: vspixengine.IPixEngine5\_LoadTextureFromFileAsync\_BSTR\_BSTR\_IPixEngine5Callbacks\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'IPixEngine5:: loadtexturefromfileasync-Methode'
+title: IPixEngine5::LoadTextureFromFileAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: DF10C209-B6B5-4692-81D7-7FD59CE49F56
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: bef4e4e5117680f7c18f13cc99f801c8e8b8bdfd
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3f48771603aa5704433bf5d6999bf2c5502e344baf952b78d7e20d9471fecf9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118282748"
 ---
-# <a name="span-idvspixengineipixengine5_loadtexturefromfileasync_bstr_bstr_ipixengine5callbacks_ptr_dword_dwordspanipixengine5loadtexturefromfileasync-method"></a><span id="vspixengine.ipixengine5_loadtexturefromfileasync_bstr_bstr_ipixengine5callbacks_ptr_dword_dword"></span>IPixEngine5:: loadtexturefromfileasync-Methode
+# <a name="span-idvspixengineipixengine5_loadtexturefromfileasync_bstr_bstr_ipixengine5callbacks_ptr_dword_dwordspanipixengine5loadtexturefromfileasync-method"></a><span id="vspixengine.ipixengine5_loadtexturefromfileasync_bstr_bstr_ipixengine5callbacks_ptr_dword_dword"></span>IPixEngine5::LoadTextureFromFileAsync-Methode
 
-Lädt eine Textur aus einer Datei und benachrichtigt den Host beim Abschluss asynchron.
+Lädt eine Textur aus einer Datei und benachrichtigt den Host asynchron, wenn er abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ HRESULT LoadTextureFromFileAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*Einfügen*   
-Eine com-Zeichenfolge, die den Namen der Textur Datei enthält.
+*Dateiname*   
+Eine COM-Zeichenfolge, die den Namen der Texturdatei enthält.
 
-*histogrammdatafilename*   
-Eine com-Zeichenfolge mit dem Namen der histogrammdatendatei, die der Textur zugeordnet ist.
+*histogramDataFileName*   
+Eine COM-Zeichenfolge, die den Namen der Histogrammdatendatei enthält, die der Textur zugeordnet ist.
 
 *Rückrufe*   
-Die Adresse eines Objekts, das die IPixEngine5 Rückrufe-Schnittstelle bereitstellt.
+Die Adresse eines Objekts, das die IPixEngine5-Rückrufschnittstelle bereitstellt.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig idenfigt und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

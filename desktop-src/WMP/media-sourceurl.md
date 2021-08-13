@@ -1,9 +1,9 @@
 ---
-title: Media. SourceUrl
-description: Die SourceUrl-Eigenschaft ruft die URL des Medien Elements ab.
+title: Media.sourceURL
+description: Die sourceURL-Eigenschaft ruft die URL des Medienelements ab.
 ms.assetid: 98ff6ed4-ad3d-44f8-893d-f016e5217ce5
 keywords:
-- Media. SourceUrl-Windows-Media Player
+- Media.sourceURL-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c32d594cd1c3b590001eedfd09e9a8c8eb21240
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1e2f99aeb64a73bcf36e2cbd472aedfa8f509a5073e70792e7b47343a1b37d60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119415950"
 ---
-# <a name="mediasourceurl"></a>Media. SourceUrl
+# <a name="mediasourceurl"></a>Media.sourceURL
 
-Die **SourceUrl** -Eigenschaft ruft die URL des Medien Elements ab.
+Die **sourceURL-Eigenschaft** ruft die URL des Medienelements ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *currentMedia*. SourceUrl
+*Player*. *currentMedia*.sourceURL
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel werden *Medien* verwendet. **SourceUrl** zum Abrufen der URL des ersten Medien Elements in der Beispiel Wiedergabeliste die URL des Medien Elements wird dann der Eigenschaft "Player Object **URL** " zugewiesen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Media *verwendet.* **sourceURL** zum Abrufen der URL des ersten Medienelements in der Beispielwiedergabeliste; Die URL des Medienelements wird dann der Url-Eigenschaft des **Playerobjekts** zugewiesen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -61,12 +61,12 @@ Player.controls.play();
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

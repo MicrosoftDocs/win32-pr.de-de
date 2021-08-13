@@ -1,21 +1,21 @@
 ---
 title: Durchlaufen der Modulliste
-description: Im folgenden Beispiel wird eine Liste von Modulen für den angegebenen Prozess abgerufen.
+description: Im folgenden Beispiel wird eine Liste von Modulen für den angegebenen Prozess erhalten.
 ms.assetid: 8efe1e13-6222-496a-bff3-90f53b03c750
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9be7df4d992b8958a09ec92f722cd7bb9c151f7b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a3f84907cfeba5a9106616d68a3039dd1555e0f4c238ae111df4c886f7664f27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119419190"
 ---
 # <a name="traversing-the-module-list"></a>Durchlaufen der Modulliste
 
-Im folgenden Beispiel wird eine Liste von Modulen für den angegebenen Prozess abgerufen. Die `ListProcessModules` Funktion nimmt mithilfe der [**CreateToolhelp32Snapshot**](/windows/desktop/api/TlHelp32/nf-tlhelp32-createtoolhelp32snapshot) -Funktion eine Momentaufnahme der Module an, die einem bestimmten Prozess zugeordnet sind, und durchläuft dann die Liste mithilfe der [**Module32First**](/windows/desktop/api/TlHelp32/nf-tlhelp32-module32first) -und [**Module32Next**](/windows/desktop/api/TlHelp32/nf-tlhelp32-module32next) -Funktionen. Der `dwPID` -Parameter von `ListProcessModules` identifiziert den Prozess, für den Module aufgelistet werden sollen, und wird in der Regel durch Aufrufen von **CreateToolhelp32Snapshot** abgerufen, um die Prozesse aufzulisten, die auf dem System ausgeführt werden. Weitere Informationen finden [Sie unter Erstellen einer Momentaufnahme und Anzeigen von Prozessen](taking-a-snapshot-and-viewing-processes.md) für eine einfache Konsolenanwendung, die diese Funktion verwendet.
+Im folgenden Beispiel wird eine Liste von Modulen für den angegebenen Prozess erhalten. Die `ListProcessModules` Funktion erstellt mithilfe der [**CreateToolhelp32Snapshot-Funktion**](/windows/desktop/api/TlHelp32/nf-tlhelp32-createtoolhelp32snapshot) eine Momentaufnahme der Module, die einem bestimmten Prozess zugeordnet sind, und führt dann mithilfe der Funktionen [**Module32First**](/windows/desktop/api/TlHelp32/nf-tlhelp32-module32first) und [**Module32Next**](/windows/desktop/api/TlHelp32/nf-tlhelp32-module32next) durch die Liste. Der `dwPID` -Parameter von `ListProcessModules` identifiziert den Prozess, für den Module aufzählt werden sollen, und wird in der Regel durch Aufrufen von **CreateToolhelp32Snapshot** abgerufen, um die auf dem System ausgeführten Prozesse aufzuzählen. Eine einfache Konsolenanwendung, die diese Funktion verwendet, finden Sie unter [Erstellen einer Momentaufnahme und Anzeigen](taking-a-snapshot-and-viewing-processes.md) von Prozessen.
 
-Eine einfache Fehler Berichterstattungs Funktion, `printError` , zeigt den Grund für alle Fehler an, die in der Regel aus Sicherheitseinschränkungen resultieren.
+Eine einfache Fehlerberichterstattungsfunktion ( `printError` ) zeigt die Ursache für alle Fehler an, die in der Regel auf Sicherheitseinschränkungen zurückzuführen sind.
 
 
 ```C++
@@ -110,12 +110,12 @@ void printError( TCHAR* msg )
 
 <dl> <dt>
 
-[Modul läuft](module-walking.md)
+[Modullauf](module-walking.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

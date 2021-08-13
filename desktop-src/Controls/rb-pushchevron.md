@@ -1,9 +1,9 @@
 ---
-title: RB_PUSHCHEVRON Meldung (kommstrg. h)
-description: Wird an ein Grund leisten-Steuerelement gesendet, um ein Chevron Programm gesteuert zu pushen.
+title: RB_PUSHCHEVRON (Commctrl.h)
+description: Wird an ein Rebar-Steuerelement gesendet, um ein Chevron programmgesteuert zu pushen.
 ms.assetid: 00a8ce10-1fb2-488a-a6f9-1814f73f82bd
 keywords:
-- Windows-Steuerelemente für RB_PUSHCHEVRON Meldung
+- RB_PUSHCHEVRON meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e09e558d5574d4fd28cf01e9794657556dda4ae8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d2d095cd824970b7ea90541420274b204a1e2f63ce6e1218e62221741f572feb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434970"
 ---
-# <a name="rb_pushchevron-message"></a>RB \_ pushchevron-Nachricht
+# <a name="rb_pushchevron-message"></a>RB \_ PUSHCHEVRON-Nachricht
 
-Wird an ein Grund leisten-Steuerelement gesendet, um ein Chevron Programm gesteuert zu pushen.
+Wird an ein Rebar-Steuerelement gesendet, um ein Chevron programmgesteuert zu pushen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Wird an ein Grund leisten-Steuerelement gesendet, um ein Chevron Programm gesteu
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index des Bands, dessen Chevron per pushübertragung durchgesetzt werden soll.
+Nullbasierter Index des Bands, dessen Chevron pusht werden soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein von der Anwendung definierter 32-Bit-Wert. Sie wird an die Anwendung als **lparamnm** -Member der [**nmrebarchevron**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchevron) -Struktur zurückgegeben, die mit der [RBN- \_ chevronpushbenachrichtigung](rbn-chevronpushed.md) übergeben wird.
+Ein von der Anwendung definierter 32-Bit-Wert. Sie wird als **lParamNM-Mitglied** der [**NMREBARCHEVRON-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchevron) die mit der [RBN-CHEVRONPUSHED-Benachrichtigung \_](rbn-chevronpushed.md) übergeben wird, an die Anwendung übergeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Nachricht gesendet wird, sendet das Grund leisten-Steuerelement der Anwendung einen [RBN- \_ chevronpushbenachrichtigungscode](rbn-chevronpushed.md) , der Sie auffordert, das Chevron-Menü anzuzeigen.
+Wenn diese Meldung gesendet wird, sendet das Leistensteuerelement der Anwendung einen [ \_ RBN-CHEVRONPUSHED-Benachrichtigungscode](rbn-chevronpushed.md) und fordert sie auf, das Chevronmenü anzuzeigen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Wenn diese Nachricht gesendet wird, sendet das Grund leisten-Steuerelement der A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,128 +1,128 @@
 ---
-title: Neues für Windows Media Player Skins
-description: Neues für Windows Media Player Skins
+title: Neu für Windows Media Player Skins
+description: Neu für Windows Media Player Skins
 ms.assetid: 72ca819a-267d-4c7a-9b1e-b28c1a7a85cc
 keywords:
-- Windows Media Player, Neuerungen
-- Windows Media Player, neue Features
-- Windows Media Player Skins, Neuerungen
-- Windows Media Player Skins, neue Features
-- Skins, Neuerungen
+- Windows Media Player,What es new
+- Windows Media Player,neue Features
+- Windows Media Player skins,what es new
+- Windows Media Player Skins,neue Features
+- skins,what es new
 - Skins, neue Features
-- Neuerungen, Skins
-- neue Features, Skins
-- Versionen von Windows Media Player, neue Features in Skins
-- Kompatibilität, Skins
+- What es new,skins
+- neue Features,Skins
+- Versionen von Windows Media Player,neue Features in Skins
+- Kompatibilität,Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 512f23c3cd4dca45ae84a2ae96a3c78c98a73268
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 17a7290c42728a8e847279fc467b6f8a619ef2ff5235eb6eee2f1fa2554a9133
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118573786"
 ---
-# <a name="new-for-windows-media-player-skins"></a>Neues für Windows Media Player Skins
+# <a name="new-for-windows-media-player-skins"></a>Neu für Windows Media Player Skins
 
-In Windows Media Player 7,0 wurde eine Skin-Technologie eingeführt. Die verfügbaren Elemente und Attribute blieben für Windows Media Player 7,1 und Windows Media Player für Windows XP unverändert. In der Windows Media Player 9-Reihe wurden neue Elemente und Attribute eingeführt, die Sie verwenden können. Windows Media Player 10 führt ein neues Attribut ein.
+Windows Media Player 7.0 wurde die Skintechnologie eingeführt. Die verfügbaren Elemente und Attribute bleiben für Windows Media Player 7.1 unverändert und Windows Media Player für Windows XP. Windows Media Player 9-Serie wurden neue Elemente und Attribute eingeführt, die Sie verwenden können. Windows Media Player 10 führt ein neues Attribut ein.
 
-Jedes Thema im Abschnitt "Skin Programming Reference" enthält einen Anforderungs Abschnitt, der die Mindestanforderungen für das einzelne Element, die Methode, den Ereignishandler oder das Attribut auflistet. In der folgenden Liste werden auch die neuen Elemente für bestimmte Versionen von Windows Media Player erläutert.
+Jedes Thema im Abschnitt Skin Programming Reference (Referenz zur Skinprogrammierung) enthält einen Abschnitt Requirements (Anforderungen), in dem die Mindestanforderungen für das einzelne Element, die Methode, den Ereignishandler oder das Attribut aufgeführt sind. In der folgenden Liste werden auch die neuen Elemente für bestimmte Versionen von Windows Media Player.
 
-## <a name="added-for-windows-media-player-for-windows-xp"></a>Für Windows-Media Player für Windows XP hinzugefügt
+## <a name="added-for-windows-media-player-for-windows-xp"></a>Hinzugefügt für Windows Media Player für Windows XP
 
--   [Effekte. effectcangofullscreen](effects-effectcangofullscreen.md)
--   [Effects. effectcount](effects-effectcount.md)
+-   [EFFECTS.effectCanGoFullScreen](effects-effectcangofullscreen.md)
+-   [EFFECTS.effectCount](effects-effectcount.md)
 
-## <a name="added-for-windows-media-player-9-series"></a>Für Windows Media Player 9-Reihe hinzugefügt
+## <a name="added-for-windows-media-player-9-series"></a>Hinzugefügt für Windows Media Player 9-Serie
 
--   [Ambientattribute. accdescription](ambientattributes-accdescription.md) -Attribut
--   [Ambientattribute. accKeyboardShortcut](ambientattributes-acckeyboardshortcut.md) -Attribut
--   [Ambientattribute. accName](ambientattributes-accname.md) -Attribut
--   [Ambientattribute. AlphaBlend](ambientattributes-alphablend.md) -Attribut
--   [Ambientattribute. alphablendto](ambientattributes-alphablendto.md) -Methode
--   [Automenu-Element](automenu-element.md)
--   [Balanceslider](balanceslider.md) Vordefiniertes Element
--   [ButtonElement. Click](buttonelement-click.md) -Methode
--   [ButtonElement. Index](buttonelement-index.md) -Attribut
--   [ButtonGroup. ButtonCount](buttongroup-buttoncount.md) -Attribut
--   [ButtonGroup. Click](buttongroup-click.md) -Methode
--   [ButtonGroup. getbutton](buttongroup-getbutton.md) -Methode
--   [ButtonGroup. hueshift](buttongroup-hueshift.md) -Attribut
--   [ButtonGroup. Sättigung](buttongroup-saturation.md) -Attribut
--   [CloseButton](closebutton.md) Vordefiniertes Element
--   [Column-Element](column-element.md)
--   [Currentpositiontext](currentpositiontext.md) Vordefiniertes Element
--   [Dropdownwiedergabe](dropdownplaylist.md) Vordefiniertes Element
--   [Durationtext](durationtext.md) Vordefiniertes Element
--   [EditBox](editbox-element.md) Gewisses
--   [Effects. EffectTitle](effects-effecttitle.md) -Methode
--   [Effects. EffectType](effects-effecttype.md) -Methode
--   [Equalizersettings. Crossfade](equalizersettings-crossfade.md) -Attribut
--   [Equalizersettings. crossfadewindow](equalizersettings-crossfadewindow.md) -Attribut
--   [Equalizersettings. currentspeakername](equalizersettings-currentspeakername.md) -Attribut
--   [Equalizersettings. enablesplinetension](equalizersettings-enablesplinetension.md) -Attribut
--   [Equalizersettings. enhancedaudioattribut](equalizersettings-enhancedaudio.md)
--   [Equalizersettings. Normalisierung](equalizersettings-normalization.md) -Attribut
--   [Equalizersettings. normalizationaverage](equalizersettings-normalizationaverage.md) -Attribut
--   [Equalizersettings. normalizationpeak](equalizersettings-normalizationpeak.md) -Attribut
--   [Equalizersettings. presettitle](equalizersettings-presettitle.md) -Methode
--   [Equalizersettings. speakersize](equalizersettings-speakersize.md) -Attribut
--   [Equalizersettings. splinetension](equalizersettings-splinetension.md) -Attribut
--   [Equalizersettings. trubasslevel](equalizersettings-trubasslevel.md) -Attribut
--   [Equalizersettings. wowlevel](equalizersettings-wowlevel.md) -Attribut
--   [Item-Element](item-element.md)
--   [Itemsplaylist](itemsplaylist.md) Vordefiniertes Element
--   [ListBox-Element](listbox-element.md)
--   [Minimizebutton](minimizebutton.md) Vordefiniertes Element
--   [MuteButton](mutebutton.md) Vordefiniertes Element
--   [onendalphablend](onendalphablend.md) Ereignis Handler
--   [Playerapplication-Element](playerapplication-element.md)
--   [Wiedergabelisten. dropdownbackgroundimage](playlist-dropdownbackgroundimage.md) -Attribut
--   [Wiedergabelisten. dropdownimage](playlist-dropdownimage.md) -Attribut
--   [Wiedergabeliste. editbuttonvisible](playlist-editbuttonvisible.md) -Attribut
--   [Wiedergabe. getNextCheckedItem2](playlist-getnextcheckeditem2.md) -Methode
--   [Wiedergabe. getNextSelectedItem2](playlist-getnextselecteditem2.md) -Methode
--   [Wiedergabelisten. hueshift](playlist-hueshift.md) -Attribut
--   [Wiedergabelisten. ItemCount](playlist-itemcount.md) -Attribut
--   [Wiedergabelisten. itemerrorcolor](playlist-itemerrorcolor.md) -Attribut
--   [Wiedergabelisten. itemmedia](playlist-itemmedia.md) -Attribut
--   [Wiedergabelisten. itemwiedergabe](playlist-itemplaylist.md) -Attribut
--   [Wiedergabelisten. leftstatus](playlist-leftstatus.md) -Attribut
--   [Wiedergabelisten. rightstatus](playlist-rightstatus.md) -Attribut
--   [Wiedergabe Attribut. Sättigung](playlist-saturation.md)
--   [Wiedergabe. setCheckedState2](playlist-setcheckedstate2.md) -Methode
--   [Wiedergabe. setSelectedState2](playlist-setselectedstate2.md) -Methode
--   [Wiedergabelisten. Status Color](playlist-statuscolor.md) -Attribut
--   [RepeatButton](repeatbutton.md) Vordefiniertes Element
--   [Returnbutton](returnbutton.md) Vordefiniertes Element
--   [SeekSlider](seekslider.md) Vordefiniertes Element
--   [Shufflebutton](shufflebutton.md) Vordefiniertes Element
--   [Statustext](statustext.md) Vordefiniertes Element
--   [Theme. PlaySound](theme-playsound.md) -Methode
--   [Tracknametext](tracknametext.md) Vordefiniertes Element
--   [View. backgroundimagehueshift](view-backgroundimagehueshift.md) -Attribut
--   [View. backgroundimagesaturations](view-backgroundimagesaturation.md) -Attribut
--   [View. resizebackgroundimage](view-resizebackgroundimage.md) -Attribut
--   [VolumeSlider](volumeslider.md) Vordefiniertes Element
--   [Wmpeffects](wmpeffects.md) Vordefiniertes Element
--   [Wmpvideo](wmpvideo.md) Vordefiniertes Element
+-   [AmbientAttributes.accDescription-Attribut](ambientattributes-accdescription.md)
+-   [AmbientAttributes.accKeyboardShortcut-Attribut](ambientattributes-acckeyboardshortcut.md)
+-   [AmbientAttributes.accName-Attribut](ambientattributes-accname.md)
+-   [AmbientAttributes.alphaBlend-Attribut](ambientattributes-alphablend.md)
+-   [AmbientAttributes.alphaBlendTo-Methode](ambientattributes-alphablendto.md)
+-   [AUTOMENU-Element](automenu-element.md)
+-   [BALANCESLIDER](balanceslider.md) Vordefiniertes Element
+-   [BUTTONELEMENT.click-Methode](buttonelement-click.md)
+-   [BUTTONELEMENT.index-Attribut](buttonelement-index.md)
+-   [BUTTONGROUP.buttonCount-Attribut](buttongroup-buttoncount.md)
+-   [BUTTONGROUP.click-Methode](buttongroup-click.md)
+-   [BUTTONGROUP.getButton-Methode](buttongroup-getbutton.md)
+-   [BUTTONGROUP.hueShift-Attribut](buttongroup-hueshift.md)
+-   [BUTTONGROUP.saturation-Attribut](buttongroup-saturation.md)
+-   [CLOSEBUTTON](closebutton.md) Vordefiniertes Element
+-   [COLUMN-Element](column-element.md)
+-   [CURRENTPOSITIONTEXT](currentpositiontext.md) Vordefiniertes Element
+-   [DROPDOWNPLAYLIST](dropdownplaylist.md) Vordefiniertes Element
+-   [DURATIONTEXT](durationtext.md) Vordefiniertes Element
+-   [EDITBOX](editbox-element.md) Element
+-   [EFFECTS.effectTitle-Methode](effects-effecttitle.md)
+-   [EFFECTS.effectType-Methode](effects-effecttype.md)
+-   [EQUALIZERSETTINGS.crossFade-Attribut](equalizersettings-crossfade.md)
+-   [EQUALIZERSETTINGS.crossFadeWindow-Attribut](equalizersettings-crossfadewindow.md)
+-   [EQUALIZERSETTINGS.currentSpeakerName-Attribut](equalizersettings-currentspeakername.md)
+-   [EQUALIZERSETTINGS.enableSplineTension-Attribut](equalizersettings-enablesplinetension.md)
+-   [EQUALIZERSETTINGS.enhancedAudio-Attribut](equalizersettings-enhancedaudio.md)
+-   [EQUALIZERSETTINGS.normalization-Attribut](equalizersettings-normalization.md)
+-   [EQUALIZERSETTINGS.normalizationAverage-Attribut](equalizersettings-normalizationaverage.md)
+-   [EQUALIZERSETTINGS.normalizationPeak-Attribut](equalizersettings-normalizationpeak.md)
+-   [EQUALIZERSETTINGS.presetTitle-Methode](equalizersettings-presettitle.md)
+-   [EQUALIZERSETTINGS.speakerSize-Attribut](equalizersettings-speakersize.md)
+-   [EQUALIZERSETTINGS.splineTension-Attribut](equalizersettings-splinetension.md)
+-   [EQUALIZERSETTINGS.truBassLevel-Attribut](equalizersettings-trubasslevel.md)
+-   [EQUALIZERSETTINGS.wowLevel-Attribut](equalizersettings-wowlevel.md)
+-   [ITEM-Element](item-element.md)
+-   [ITEMSPLAYLIST](itemsplaylist.md) Vordefiniertes Element
+-   [LISTBOX-Element](listbox-element.md)
+-   [MINIMIZEBUTTON](minimizebutton.md) Vordefiniertes Element
+-   [MUTEBUTTON](mutebutton.md) Vordefiniertes Element
+-   [onendalphablend](onendalphablend.md) Ereignishandler
+-   [PLAYERAPPLICATION-Element](playerapplication-element.md)
+-   [PLAYLIST.dropDownBackgroundImage-Attribut](playlist-dropdownbackgroundimage.md)
+-   [PLAYLIST.dropDownImage-Attribut](playlist-dropdownimage.md)
+-   [PLAYLIST.editButtonVisible-Attribut](playlist-editbuttonvisible.md)
+-   [PLAYLIST.getNextCheckedItem2-Methode](playlist-getnextcheckeditem2.md)
+-   [PLAYLIST.getNextSelectedItem2-Methode](playlist-getnextselecteditem2.md)
+-   [PLAYLIST.hueShift-Attribut](playlist-hueshift.md)
+-   [PLAYLIST.itemCount-Attribut](playlist-itemcount.md)
+-   [PLAYLIST.itemErrorColor-Attribut](playlist-itemerrorcolor.md)
+-   [PLAYLIST.itemMedia-Attribut](playlist-itemmedia.md)
+-   [PLAYLIST.itemPlaylist-Attribut](playlist-itemplaylist.md)
+-   [PLAYLIST.leftStatus-Attribut](playlist-leftstatus.md)
+-   [PLAYLIST.rightStatus-Attribut](playlist-rightstatus.md)
+-   [PLAYLIST.saturation-Attribut](playlist-saturation.md)
+-   [PLAYLIST.setCheckedState2-Methode](playlist-setcheckedstate2.md)
+-   [PLAYLIST.setSelectedState2-Methode](playlist-setselectedstate2.md)
+-   [PLAYLIST.statusColor-Attribut](playlist-statuscolor.md)
+-   [REPEATBUTTON](repeatbutton.md) Vordefiniertes Element
+-   [RETURNBUTTON](returnbutton.md) Vordefiniertes Element
+-   [SEEKSLIDER](seekslider.md) Vordefiniertes Element
+-   [SHUFFLEBUTTON](shufflebutton.md) Vordefiniertes Element
+-   [STATUSTEXT](statustext.md) Vordefiniertes Element
+-   [THEME.playSound-Methode](theme-playsound.md)
+-   [TRACKNAMETEXT](tracknametext.md) Vordefiniertes Element
+-   [VIEW.backgroundImageHueShift-Attribut](view-backgroundimagehueshift.md)
+-   [VIEW.backgroundImageSaturation-Attribut](view-backgroundimagesaturation.md)
+-   [VIEW.resizeBackgroundImage-Attribut](view-resizebackgroundimage.md)
+-   [VOLUMESLIDER](volumeslider.md) Vordefiniertes Element
+-   [WMPEFFECTS](wmpeffects.md) Vordefiniertes Element
+-   [WMPVIDEO](wmpvideo.md) Vordefiniertes Element
 
-## <a name="added-for-windows-media-player-10"></a>Für Windows Media Player 10 hinzugefügt
+## <a name="added-for-windows-media-player-10"></a>Hinzugefügt für Windows Media Player 10
 
--   [Wiedergabeliste. ToolbarVisible](playlist-toolbarvisible.md)
--   [Wiedergabeliste. itemselectedbackgroundcolor](playlist-itemselectedbackgroundcolor.md)
--   [Wiedergabeliste. itemselectedbackgroundfocrlostcolor](playlist-itemselectedbackgroundfocuslostcolor.md) r
--   [Wiedergabeliste. itemselectedcolor](playlist-itemselectedcolor.md)
--   [Wiedergabeliste. itemselectedfoclelostcolor](playlist-itemselectedfocuslostcolor.md)
+-   [PLAYLIST.toolbarVisible](playlist-toolbarvisible.md)
+-   [PLAYLIST.itemSelectedBackgroundColor](playlist-itemselectedbackgroundcolor.md)
+-   [PLAYLIST.itemSelectedBackgroundFocusLostColor](playlist-itemselectedbackgroundfocuslostcolor.md) r
+-   [PLAYLIST.itemSelectedColor](playlist-itemselectedcolor.md)
+-   [PLAYLIST.itemSelectedFocusLostColor](playlist-itemselectedfocuslostcolor.md)
 
-## <a name="added-for-windows-media-player-11"></a>Für Windows Media Player 11 hinzugefügt
+## <a name="added-for-windows-media-player-11"></a>Hinzugefügt für Windows Media Player 11
 
--   [Ambientattribute. Bottom](ambientattributes-bottom.md)
--   [Ambientattribute. muvesizeto](ambientattributes-movesizeto.md)
--   [Ambientattribute. ninegridmargin](ambientattributes-ninegridmargins.md)
--   [Ambientattribute. resizeimages](ambientattributes-resizeimages.md)
--   [Ambientattribute. Right](ambientattributes-right.md)
--   [Ambientattribute. slideto](ambientattributes-slideto.md)
+-   [AmbientAttributes.bottom](ambientattributes-bottom.md)
+-   [AmbientAttributes.moveSizeTo](ambientattributes-movesizeto.md)
+-   [AmbientAttributes.nineGridMargins](ambientattributes-ninegridmargins.md)
+-   [AmbientAttributes.resizeImages](ambientattributes-resizeimages.md)
+-   [AmbientAttributes.right](ambientattributes-right.md)
+-   [AmbientAttributes.slideTo](ambientattributes-slideto.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -131,15 +131,15 @@ Jedes Thema im Abschnitt "Skin Programming Reference" enthält einen Anforderung
 [Informationen zu Skins](about-skins.md)
 </dt> <dt>
 
-[Referenz zur Skin-Programmierung](skin-programming-reference.md)
+[Referenz zur Skinprogrammierung](skin-programming-reference.md)
 </dt> <dt>
 
 [Neuerungen in Windows Media Player 11](what-was-new-in-windows-media-player-11.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

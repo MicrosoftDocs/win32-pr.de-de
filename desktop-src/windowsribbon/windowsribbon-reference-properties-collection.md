@@ -1,31 +1,31 @@
 ---
 title: Sammlungseigenschaften
-description: Referenz Dokumentation zu Eigenschafts Schlüsseln für Auflistungs basierte Steuerelemente auf Menüband-Framework.
+description: Referenzdokumentation zu Eigenschaftsschlüsseln für auflistungsbasierte Steuerelemente im Menübandframework.
 ms.assetid: fa317765-25e2-42ef-8558-fb5ef951fc17
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d9aa78db8acdf7b0a1a4f994f65c08e774129f8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eef0698f41e870f834ea55e97d34957edbffdf28675caac9ac0191b6299bca68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118438795"
 ---
 # <a name="collection-properties"></a>Sammlungseigenschaften
 
-Referenz Dokumentation zu Eigenschafts Schlüsseln für Auflistungs basierte Steuerelemente auf Menüband-Framework.
+Referenzdokumentation zu Eigenschaftsschlüsseln für auflistungsbasierte Steuerelemente im Menübandframework.
 
 
 
 | Thema                                                                                | Inhalte                                                   |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------|
-| [UI- \_ pkey- \_ Kategorien](windowsribbon-reference-properties-uipkey-categories.md)     | Bezeichnet die Eigenschaft der UI- \_ pkey- \_ Kategorien.<br/>   |
-| [Benutzeroberflächen- \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)     | Gibt die Benutzeroberflächen- \_ pkey \_ CategoryID-Eigenschaft an.<br/>   |
-| [UI- \_ pkey- \_ CommandID](windowsribbon-reference-properties-uipkey-commandid.md)       | Gibt die Benutzeroberflächen- \_ pkey- \_ CommandID-Eigenschaft an.<br/>    |
-| [UI \_ pkey \_ CommandType](windowsribbon-reference-properties-uipkey-commandtype.md)   | Bezeichnet die \_ Eigenschaft "pkey CommandType" der UI \_ .<br/>  |
-| [UI \_ pkey \_ itemImage](windowsribbon-reference-properties-uipkey-itemimage.md)       | Identifiziert die Benutzeroberflächen- \_ pkey \_ itemImage-Eigenschaft.<br/>    |
-| [UI- \_ pkey \_ ItemsSource](windowsribbon-reference-properties-uipkey-itemssource.md)   | Identifiziert die \_ \_ ItemsSource-Eigenschaft der UI pkey.<br/>  |
-| [UI \_ pkey \_ SelectedItem](windowsribbon-reference-properties-uipkey-selecteditem.md) | Bezeichnet die Benutzeroberflächen- \_ pkey- \_ SelectedItem-Eigenschaft.<br/> |
+| [\_PKEY-Kategorien für die \_ Benutzeroberfläche](windowsribbon-reference-properties-uipkey-categories.md)     | Identifiziert die \_ PKEY \_ Categories-Eigenschaft der Benutzeroberfläche.<br/>   |
+| [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md)     | Identifiziert die \_ PKEY \_ CategoryId-Eigenschaft der Benutzeroberfläche.<br/>   |
+| [\_ \_ PKEY-Befehls-ID der Benutzeroberfläche](windowsribbon-reference-properties-uipkey-commandid.md)       | Identifiziert die \_ PKEY \_ CommandId-Eigenschaft der Benutzeroberfläche.<br/>    |
+| [\_PKEY-Befehlstyp der \_ Benutzeroberfläche](windowsribbon-reference-properties-uipkey-commandtype.md)   | Identifiziert die \_ PKEY \_ CommandType-Eigenschaft der Benutzeroberfläche.<br/>  |
+| [\_PKEY-Element der \_ BenutzeroberflächeImage](windowsribbon-reference-properties-uipkey-itemimage.md)       | Identifiziert die \_ PKEY \_ ItemImage-Eigenschaft der Benutzeroberfläche.<br/>    |
+| [\_PKEY-Elemente der \_ BenutzeroberflächeQuelle](windowsribbon-reference-properties-uipkey-itemssource.md)   | Identifiziert die \_ PKEY \_ ItemsSource-Eigenschaft der Benutzeroberfläche.<br/>  |
+| [UI \_ PKEY \_ SelectedItem](windowsribbon-reference-properties-uipkey-selecteditem.md) | Identifiziert die \_ PKEY \_ SelectedItem-Eigenschaft der Benutzeroberfläche.<br/> |
 
 
 
@@ -35,25 +35,25 @@ Referenz Dokumentation zu Eigenschafts Schlüsseln für Auflistungs basierte Ste
 
 <dl> <dt>
 
-[Eigenschafts Schlüssel](windowsribbon-reference-properties.md)
+[Eigenschaftsschlüssel](windowsribbon-reference-properties.md)
 </dt> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> <dt>
 
-[Kombinations Feld](windowsribbon-controls-combobox.md)
+[Kombinationsfeld](windowsribbon-controls-combobox.md)
 </dt> <dt>
 
-[Dropdown-Katalog](windowsribbon-controls-dropdowngallery.md)
+[Dropdownkatalog](windowsribbon-controls-dropdowngallery.md)
 </dt> <dt>
 
-[In-Ribbon-Katalog](windowsribbon-controls-inribbongallery.md)
+[Katalog im Menüband](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
-[Split Button-Katalog](windowsribbon-controls-splitbuttongallery.md)
+[Split Button Gallery](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
-[Galerie Beispiel](windowsribbon-gallerysample.md)
+[Katalogbeispiel](windowsribbon-gallerysample.md)
 </dt> </dl>
 
  

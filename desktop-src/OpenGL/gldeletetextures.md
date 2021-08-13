@@ -1,9 +1,9 @@
 ---
-title: gldeletetexturen-Funktion (GL. h)
-description: Die Funktion "gldeletetexturen" löscht benannte Texturen.
+title: glDeleteTextures-Funktion (Gl.h)
+description: Die glDeleteTextures-Funktion löscht benannte Texturen.
 ms.assetid: 300eb99a-9ee5-4495-9489-7e084db9c6c1
 keywords:
-- gldeletetexturen-Funktion OpenGL
+- glDeleteTextures-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e37893874f143a210bde0099caa7b5ec266f8948
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 408019d3bfe226c9e7ecdc2ea00182a0b11c78fa64a0210be658ded4556850cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118617045"
 ---
-# <a name="gldeletetextures-function"></a>gldeletetexturen-Funktion
+# <a name="gldeletetextures-function"></a>glDeleteTextures-Funktion
 
-Die Funktion " **gldeletetexturen** " löscht benannte Texturen.
+Die **glDeleteTextures-Funktion** löscht benannte Texturen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ Die Anzahl der zu löschenden Texturen.
 
 </dd> <dt>
 
-*Textur* 
+*Texturen* 
 </dt> <dd>
 
 Ein Array von Texturen, die gelöscht werden sollen.
@@ -61,33 +61,33 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *n* war ein negativer Wert.<br/>                                                                                                  |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *n* war ein negativer Wert.<br/>                                                                                                  |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gldeletetexturen** -Funktion löscht *n* Texturen, die von den Elementen der Array *Texturen* benannt werden. Nachdem eine Textur gelöscht wurde, weist Sie keinen Inhalt oder keine Dimensionalität auf, und der Name ist für die Wiederverwendung frei (z. b. von **glgentexturen**). Die Funktion " **gldeletetexturen** " ignoriert Nullen und Namen, die nicht vorhandenen Texturen entsprechen.
+Die **glDeleteTextures-Funktion** löscht *n Texturen,* die von den Elementen der Arraytexturen *benannt werden.* Nachdem eine Textur gelöscht wurde, hat sie keinen Inhalt oder keine Dimensionalität, und ihr Name kann wiederverwendet werden (z.B. **durch glGenTextures**). Die **glDeleteTextures-Funktion** ignoriert Nullen und Namen, die nicht vorhandenen Texturen entsprechen.
 
-Wenn eine Textur, die gerade gebunden ist, gelöscht wird, wird die Bindung auf NULL (die Standard Textur) zurückgesetzt.
+Wenn eine textur, die derzeit gebunden ist, gelöscht wird, wird die Bindung auf null (die Standardtextur) zurückgesetzt.
 
-Sie können keine Aufrufe von **gldeletetexturen** in Anzeigelisten einschließen.
+Aufrufe von **glDeleteTextures** können nicht in Anzeigelisten enthalten sein.
 
 > [!Note]  
-> Die **gldeletetexturen** -Funktion ist nur in OpenGL-Version 1,1 oder höher verfügbar.
+> Die **glDeleteTextures-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **gldeletetexturen** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glDeleteTextures ab:**
 
--   [**glistexture**](glistexture.md)
+-   [**glIsTexture**](glistexture.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,17 +97,17 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gldeletetexturen*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glaretexturesresidente**](glaretexturesresident.md)
+[**glAreTexturesResident**](glaretexturesresident.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
@@ -119,22 +119,22 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gldeletetexturen*
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgentexturen**](glgentextures.md)
+[**glGenTextures**](glgentextures.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glgettexparameter**](glgettexparameter.md)
+[**glGetTexParameter**](glgettexparameter.md)
 </dt> <dt>
 
-[**glistexture**](glistexture.md)
+[**glIsTexture**](glistexture.md)
 </dt> <dt>
 
-[**glpriorizetexturen**](glprioritizetextures.md)
+[**glPrioritizeTextures**](glprioritizetextures.md)
 </dt> <dt>
 
-[**gltexgen**](gltexgen-functions.md)
+[**glTexGen**](gltexgen-functions.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
@@ -143,7 +143,7 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **gldeletetexturen*
 [**glTexImage2D**](glteximage2d.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

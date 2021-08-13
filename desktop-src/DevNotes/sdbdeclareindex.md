@@ -1,7 +1,7 @@
 ---
 description: Deklariert einen neuen Index in der angegebenen Datenbank.
 ms.assetid: 21a09201-8f84-4263-b258-77716826a3cd
-title: Sdbdeclareingedex-Funktion
+title: SdbDeclareIndex-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 68004a29d01288a2e1d177b8a33df32b919e73ce
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b428699641d5a18bad8a1869f59ab1bb5402e7b667526070c3dc0575e435fc38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118666589"
 ---
-# <a name="sdbdeclareindex-function"></a>Sdbdeclareingedex-Funktion
+# <a name="sdbdeclareindex-function"></a>SdbDeclareIndex-Funktion
 
 Deklariert einen neuen Index in der angegebenen Datenbank.
 
@@ -44,55 +44,55 @@ BOOL WINAPI SdbDeclareIndex(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
 Ein Handle für die Shimdatenbank.
 
 </dd> <dt>
 
-*TDas* \[ in\]
+*tWhich* \[ In\]
 </dt> <dd>
 
-Dieser Parameter muss eine **\_ Tagtyp \_ Liste** sein.
+Dieser Parameter muss **TAG \_ TYPE LIST \_ sein.**
 
 </dd> <dt>
 
-*TKey* \[ in\]
+*tKey* \[ In\]
 </dt> <dd>
 
-Das-Tag, das den Typ angibt, der als Schlüssel verwendet werden soll. Dieser Parameter kann keine **\_ Tagtyp \_ Liste** sein.
+Das TAG, das den Typ angibt, der als Schlüssel verwendet werden soll. Dieser Parameter darf nicht **TAG \_ TYPE LIST \_ sein.**
 
 </dd> <dt>
 
-*dwentries* \[ in\]
+*dwEntries* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Einträge, die im Index zuzuordnen sind.
+Die Anzahl der Einträge, die im Index zuteilen sind.
 
 </dd> <dt>
 
-*buniquekey* \[ in\]
+*bUniqueKey* \[ In\]
 </dt> <dd>
 
-Wenn dieser Parameter **true** ist, ist der Index ein Index mit einem eindeutigen Schlüssel.
+Wenn dieser Parameter **TRUE ist,** ist der Index ein eindeutiger Schlüsselindex.
 
 </dd> <dt>
 
-*piiindex* \[ vorgenommen\]
+*piiIndex* \[ out\]
 </dt> <dd>
 
-Die resultierende **IndexID** des neu deklarierten Indexes.
+Die resultierende **INDEXID** des neu deklarierten Indexes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE bei** Erfolg oder **FALSE bei** Einem Fehler zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird aufgerufen, bevor Tags in den neuen Index geschrieben werden.
+Rufen Sie diese Funktion auf, bevor Sie Tags in den neuen Index schreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,26 +100,26 @@ Diese Funktion wird aufgerufen, bevor Tags in den neuen Index geschrieben werden
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**INDEXID**](indexid.md)
 </dt> <dt>
 
-[**Sdbcommitindexes**](sdbcommitindexes.md)
+[**SdbCommitIndexes**](sdbcommitindexes.md)
 </dt> <dt>
 
-[**Sdbstartindizierung**](sdbstartindexing.md)
+[**SdbStartIndexing**](sdbstartindexing.md)
 </dt> <dt>
 
-[**Sdbstopindizierung**](sdbstopindexing.md)
+[**SdbStopIndexing**](sdbstopindexing.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die dbginitialise-Funktion initialisiert die Debug-Bibliothek. Wird in Einzelhandels Builds ignoriert.
+description: Die DbgInitialise-Funktion initialisiert die Debugbibliothek. Wird in Einzelhandels-Builds ignoriert.
 ms.assetid: d4ca739e-cd39-4692-81da-c5a88a09d546
-title: Dbginitialise-Funktion (wxdebug. h)
+title: DbgInitialise-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 33a62c8dad7ef6e15b9b11461303b1bced977a96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 13aad8d0214c65c01237c8e74548c3915af9287c935b53e33c6d229b2da5b12e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654215"
 ---
-# <a name="dbginitialise-function"></a>Dbginitialise-Funktion
+# <a name="dbginitialise-function"></a>DbgInitialise-Funktion
 
-Die **dbginitialise** -Funktion initialisiert die Debug-Bibliothek. Wird in Einzelhandels Builds ignoriert.
+Die **DbgInitialise-Funktion** initialisiert die Debugbibliothek. Wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void DbgInitialise(
 
 <dl> <dt>
 
-*hinst* 
+*hInst* 
 </dt> <dd>
 
-Handle für die Modul Instanz.
+Handle für die Modulinstanz.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Handle für die Modul Instanz.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einer ausführbaren Datei wird diese Methode aufgerufen, bevor die DirectShow-Debugfunktionen verwendet werden. Bevor die ausführbare Datei beendet wird, müssen Sie die [**dbgend**](dbgterminate.md) -Funktion zum Bereinigen der Debugbibliothek aufzurufen.
+Rufen Sie diese Methode in einer ausführbaren Datei auf, bevor Sie die DirectShow-Debugmöglichkeiten verwenden. Rufen Sie vor dem Beenden der ausführbaren Datei die [**DbgTerminate-Funktion**](dbgterminate.md) auf, um die Debugbibliothek zu bereinigt.
 
-In einer DLL, die mit der Basisklassen Bibliothek verknüpft ist ("straumbase. lib"), ist es nicht erforderlich, diese Funktion aufzurufen. Die-Funktion wird automatisch aufgerufen, wenn die dll geladen wird.
+In einer DLL, die mit der Basisklassenbibliothek (Strmbase.lib) verknüpft ist, muss diese Funktion nicht aufrufen werden. Die Funktion wird automatisch aufgerufen, wenn die DLL geladen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ In einer DLL, die mit der Basisklassen Bibliothek verknüpft ist ("straumbase. l
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

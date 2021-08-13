@@ -1,5 +1,5 @@
 ---
-description: 'CBaseOutputPin.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Stecknadelverbindung geeignet ist.'
+description: 'CBaseOutputPin.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Pinverbindung geeignet ist.'
 ms.assetid: 50ab59ad-8ff7-4d7b-add3-b59203d93307
 title: CBaseOutputPin.CheckConnect-Methode (Amfilter.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7ea5ad32de18046f3d23145d82e971391c3e304c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ca35cb98f279674285610fbd06b0399e93a68d59749fe4129475ab8bd970824a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658863"
 ---
 # <a name="cbaseoutputpincheckconnect-method"></a>CBaseOutputPin.CheckConnect-Methode
 
@@ -58,25 +58,25 @@ Gibt einen der folgenden **HRESULT-Werte** zurück.
 | Rückgabecode                                                                                               | Beschreibung                                                                 |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                      | Erfolg.<br/>                                                         |
-| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl>             | Der Eingabepin unterstützt [**IMemInputPin nicht.**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)<br/> |
-| <dl> <dt>**VFW \_ E \_ UNGÜLTIGE \_ RICHTUNG**</dt> </dl> | Pin-Anweisungen sind nicht kompatibel.<br/>                               |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl>             | Der Eingabepin unterstützt [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)nicht.<br/> |
+| <dl> <dt>**VFW \_ E \_ INVALID \_ DIRECTION**</dt> </dl> | Stecknadelrichtungen sind nicht kompatibel.<br/>                               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**CBasePin::CheckConnect-Methode**](cbasepin-checkconnect.md) der Basisklasse auf und fragt dann den Eingabepin für seine [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) ab.
+Diese Methode ruft die [**CBasePin::CheckConnect-Methode**](cbasepin-checkconnect.md) der Basisklasse auf und fragt dann den Eingabepin nach der [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) ab.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

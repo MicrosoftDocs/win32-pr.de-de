@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_THREADSTATS. Create-Methode'
-title: JET_THREADSTATS. Create-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: JET_THREADSTATS. Create-Methode'
+title: JET_THREADSTATS. Create-Methode (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'Create method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS.Create(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_threadstats.create(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: beaaee85fc0f6c331db1d813280d4b900e39fb54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a3450835a90c3e21902a6097d9cfb672c51769cc00810d86e338bef40ce2565
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118251902"
 ---
 # <a name="jet_threadstatscreate-method"></a>JET_THREADSTATS. Create-Methode
 
-Erstellen Sie eine neue [JET_THREADSTATS](./jet-threadstats-structure2.md) Struktur mit dem angegebenen Wert.
+Erstellen Sie eine [JET_THREADSTATS](./jet-threadstats-structure2.md) Struktur mit dem angegebenen Wert.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,64 +80,64 @@ public static JET_THREADSTATS Create(
 
 #### <a name="parameters"></a>Parameter
 
-  - cpagereferenziert  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - cPageReferenced  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Anzahl der besuchten Seiten.
 
 <!-- end list -->
 
-  - cpageread  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - cPageRead  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Anzahl der gelesenen Seiten.
 
 <!-- end list -->
 
-  - cpagepreread  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - cPagePreread  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Anzahl der Seiten, die Voraussetzungen sind.
+    Anzahl der vorab gelesenen Seiten.
 
 <!-- end list -->
 
-  - cpagedirtied  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - cPageDirtied  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Tnumber der Seiten, für die ein Pfad verwendet wurde.
+    TNumber of pages dirtied.
 
 <!-- end list -->
 
   - cPageRedirtied  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Anzahl der Seiten, für die ein erneuter Versuch besteht.
+    Anzahl der neu ierten Seiten.
 
 <!-- end list -->
 
-  - clogrecord  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - cLogRecord  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Anzahl der generierten Protokolldaten Sätze.
+    Anzahl der generierten Protokolldatensätze.
 
 <!-- end list -->
 
-  - cblogdatensatz  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - cbLogRecord  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Bytes der geschriebenen Protokolldaten Sätze.
+    Geschriebene Bytes von Protokolldatensätzen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
-Eine neue [JET_THREADSTATS](./jet-threadstats-structure2.md) Struktur mit den angegebenen Werten.  
+Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS](./jet-threadstats-structure2.md)  
+Eine neue [JET_THREADSTATS](./jet-threadstats-structure2.md) struktur mit den angegebenen Werten.  
 
 ## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Referenz
 
-[JET_THREADSTATS Struktur](./jet-threadstats-structure2.md)
+[JET_THREADSTATS-Struktur](./jet-threadstats-structure2.md)
 
-[Mitglieder JET_THREADSTATS](./jet-threadstats-members.md)
+[JET_THREADSTATS Member](./jet-threadstats-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

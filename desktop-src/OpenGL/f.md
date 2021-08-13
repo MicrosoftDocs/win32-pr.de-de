@@ -5,71 +5,71 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: ba960409-84e0-4ece-967b-97f0e1183956
 keywords:
 - faces
-- flatschattierung
+- Flache Schattierung
 - Nebel
 - Schriftarten
 - fragments
 - framebuffers
-- Vorderseite
+- Front face (Front-Face)
 - Frustum
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7085765a5585268acb2f20a77c72bdd7cf1b4b81
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 748eb0fade84ef76c133453165db53d8540326dae3111ac04f3b7a6819ae825a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106337278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618185"
 ---
 # <a name="f-opengl"></a>F (OpenGL)
 
-[a](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) F [G](g.md) [H](h.md) [I](i.md) [J K](jk.md) [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) [U V](u-v.md) [W](w.md) [X Y Z](x-y-z.md)
+[A](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) F [G](g.md) [H](h.md) [I](i.md) J [K](jk.md) [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) U [V](u-v.md) [W](w.md) X [Y Z](x-y-z.md)
 
 <dl> <dt>
 
-<span id="opengl_face"></span><span id="OPENGL_FACE"></span>**mit**
+<span id="opengl_face"></span><span id="OPENGL_FACE"></span>**Gesicht**
 </dt> <dd>
 
-Eine Seite eines Polygons. Jedes Polygon hat zwei Gesichter: eine Vorderseite und eine Rückseite. Im Fenster ist immer nur ein Gesicht sichtbar. Ob das hintere oder das vordere Gesicht sichtbar ist, wird effektiv festgelegt, nachdem das Polygon auf das Fenster projiziert wurde. Wenn die Ränder des Polygons nach dieser Projektion im Uhrzeigersinn weitergeleitet werden, ist eine der Gesichter sichtbar. Wenn das andere Gesicht gegen den Uhrzeigersinn gerichtet ist, ist es sichtbar. Ob der Uhrzeigersinn dem Vordergrund oder dem Hintergrund entspricht (und gegen den Uhrzeigersinn entsprechen), wird vom OpenGL-Programmierer bestimmt.
+Eine Seite eines Polygons. Jedes Polygon verfügt über zwei Gesichter: ein Vorder- und ein Hintergrundgesicht. Im Fenster ist immer nur ein Gesicht sichtbar. Ob das Hinter- oder Vordergesicht sichtbar ist, wird effektiv bestimmt, nachdem das Polygon auf das Fenster projiziert wurde. Wenn nach dieser Projektion die Ränder des Polygons im Uhrzeigersinn gerichtet sind, ist eines der Gesichter sichtbar. Wenn gegen den Uhrzeigersinn gerichtet, ist das andere Gesicht sichtbar. Ob der Uhrzeigersinn front oder back entspricht (und counterclockwise entspricht back oder front), wird vom OpenGL-Programmierer bestimmt.
 
 </dd> <dt>
 
-<span id="opengl_flat_shading"></span><span id="OPENGL_FLAT_SHADING"></span>**flatschattierung**
+<span id="opengl_flat_shading"></span><span id="OPENGL_FLAT_SHADING"></span>**Flache Schattierung**
 </dt> <dd>
 
-Bezieht sich auf die Farbgebung eines Primitivs mit einer einzelnen, Konstanten Farbe in seinem Block, anstatt Farben über das primitive hinweg zu interpolieren. Siehe [Gouraud-Schattierung](g.md).
+Bezieht sich auf die Färbung eines Primitivs mit einer einzelnen, konstanten Farbe über seinen Umfang, anstatt farben reibungslos über den Primitiven hinweg zu interpolieren. Weitere Informationen [finden Sie unter Gouraud shading](g.md).
 
 </dd> <dt>
 
-<span id="opengl_fog"></span><span id="OPENGL_FOG"></span>**Neben**
+<span id="opengl_fog"></span><span id="OPENGL_FOG"></span>**Nebel**
 </dt> <dd>
 
-Eine renderingtechnik, die verwendet werden kann, um atmosphärische Effekte wie z. b. Dunst, Nebel und Smog zu simulieren, indem Objekt Farben auf Grundlage der Entfernung vom Viewer auf eine Hintergrundfarbe ausgeblendet werden. Der Nebel unterstützt auch die Wahrnehmung der Entfernung vom Viewer und bietet einen tiefen Hinweis. Siehe auch [ausführlichere](d.md)Informationen.
+Eine Renderingtechnik, die verwendet werden kann, um Effekten wie Haze, Brand und Smog zu simulieren, indem Objektfarben basierend auf der Entfernung vom Betrachter in eine Hintergrundfarbe überfingt werden. Außerdem hilft Einschlag bei der Wahrnehmung der Entfernung vom Betrachter und gibt einen tiefen Hinweis. Siehe auch [tiefenorientierte .](d.md)
 
 </dd> <dt>
 
-<span id="opengl_font"></span><span id="OPENGL_FONT"></span>**Raster**
+<span id="opengl_font"></span><span id="OPENGL_FONT"></span>**Schriftart**
 </dt> <dd>
 
-Eine Gruppe grafischer Zeichen Darstellungen, die normalerweise zum Anzeigen von Text Zeichenfolgen verwendet wird. Bei den Zeichen kann es sich um römische Buchstaben, mathematische Symbole, asiatische Ideogramme, ägyptische Hieroglyphen usw. handeln.
+Eine Gruppe von grafischen Zeichendarstellungen, die normalerweise zum Anzeigen von Textzeichenfolgen verwendet werden. Bei den Zeichen kann es sich um romanische Buchstaben, mathematische Symbole, asiatische Ideogramme, Hieroglyphen für Diebungen und so weiter werden.
 
 </dd> <dt>
 
-<span id="opengl_fragment"></span><span id="OPENGL_FRAGMENT"></span>**Bruch**
+<span id="opengl_fragment"></span><span id="OPENGL_FRAGMENT"></span>**Fragment**
 </dt> <dd>
 
-Grafikdaten, die von der Rasterung von primitiven generiert werden. Jedes Fragment entspricht einem einzelnen Pixel und umfasst Farben, Tiefe und manchmal Texturkoordinaten Werte.
+Grafikdaten, die durch die Rasterung von Primitiven generiert werden. Jedes Fragment entspricht einem einzelnen Pixel und enthält Farb-, Tiefen- und manchmal Texturkoordinatenwerte.
 
 </dd> <dt>
 
-<span id="opengl_framebuffer"></span><span id="OPENGL_FRAMEBUFFER"></span>**Frame Puffer**
+<span id="opengl_framebuffer"></span><span id="OPENGL_FRAMEBUFFER"></span>**Framebuffer**
 </dt> <dd>
 
-Ein Stapel von bitflächen. Alle Puffer eines bestimmten Fensters oder Kontexts. Umfasst manchmal den gesamten Pixel Speicher des Grafikhardware-Accelerators. Siehe auch [bitplane](b.md).
+Ein Stapel von Bitebenen. Alle Puffer eines bestimmten Fensters oder Kontexts. Manchmal enthält den pixel-Arbeitsspeicher des Grafikhardwarebeschleunigers. Siehe auch [bitplane](b.md).
 
 </dd> <dt>
 
-<span id="opengl_front_face"></span><span id="OPENGL_FRONT_FACE"></span>**Vorderseite**
+<span id="opengl_front_face"></span><span id="OPENGL_FRONT_FACE"></span>**Front face (Front-Face)**
 </dt> <dd>
 
 Siehe Gesicht.
@@ -79,7 +79,7 @@ Siehe Gesicht.
 <span id="opengl_frustum"></span><span id="OPENGL_FRUSTUM"></span>**Frustum**
 </dt> <dd>
 
-Das Ansichts Volume, das von der Perspektiven Division zurückgeleitet wurde.
+Das Ansichtsvolumen, das durch die perspektivische Division getauscht wird.
 
 </dd> </dl>
 

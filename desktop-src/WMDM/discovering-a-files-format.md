@@ -1,47 +1,47 @@
 ---
-title: Das Format der Datei wird ermittelt.
-description: Das Format der Datei wird ermittelt.
+title: Ermitteln des Formats einer Datei
+description: Ermitteln des Formats einer Datei
 ms.assetid: f1b3f811-8161-41ca-a92c-2735c0bec2e8
 keywords:
-- Windows Media Device Manager, Dateiformate
-- Device Manager, Dateiformate
-- Programmier Handbuch, Dateiformate
-- Desktop Anwendungen, Dateiformate
-- Erstellen von Windows Media Device Manager-Anwendungen, Dateiformaten
+- Windows Medien Geräte-Manager, Dateiformate
+- Geräte-Manager, Dateiformate
+- Programmierhandbuch, Dateiformate
+- Desktopanwendungen, Dateiformate
+- Erstellen von Windows Media Geräte-Manager-Anwendungen, Dateiformaten
 - Schreiben von Dateien auf Geräte, Dateiformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b06c963b01e3b681fd078d8685e1c788c73352e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 83706a3026968a694d3629551d310db9021b7f8c8118f3d98621751a95af26b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118585329"
 ---
-# <a name="discovering-a-files-format"></a>Das Format der Datei wird ermittelt.
+# <a name="discovering-a-files-format"></a>Ermitteln des Formats einer Datei
 
-Vor dem Senden einer Datei an das Gerät muss eine Anwendung bestimmen, ob das Gerät dieses Dateiformat unterstützt.
+Vor dem Senden einer Datei an das Gerät sollte eine Anwendung bestimmen, ob das Gerät dieses Dateiformat unterstützt.
 
-Es kann komplex sein, das Format einer Datei zu ermitteln. Die einfachste Möglichkeit besteht darin, eine Liste von Dateierweiterungen zu erstellen, die bestimmten WMDM \_ Formatcode-Enumerationswerten zugeordnet sind. Bei diesem System gibt es jedoch einige Probleme: ein einzelnes Format kann mehrere Erweiterungen aufweisen (z. b. jpg, jpe und JPEG für JPEG-Bilder). Außerdem kann die gleiche Dateierweiterung von verschiedenen Programmen für unterschiedliche Formate verwendet werden.
+Das Ermitteln des Formats einer Datei kann komplex sein. Die einfachste Möglichkeit besteht darin, eine Liste von Dateierweiterungen zu erstellen, die bestimmten WMDM \_ FORMATCODE-Enumerationswerten zugeordnet sind. Es gibt jedoch einige Probleme mit diesem System: Ein einzelnes Format kann mehrere Erweiterungen aufweisen (z. B. .jpg, JPE und JPEG für JPEG-Bilder). Außerdem kann dieselbe Dateierweiterung von verschiedenen Programmen für verschiedene Formate verwendet werden.
 
-Um die Einschränkungen einer strikten Zuordnung zu überwinden, empfiehlt es sich, eine Anwendung zu überprüfen, ob das Format mit der Erweiterung übereinstimmt. Das DirectShow SDK stellt Tools bereit, die es einer Anwendung ermöglichen, eine begrenzte Anzahl von Details zu den meisten Medien Dateitypen zu ermitteln. Das SDK für den Windows Media-Format macht eine große Anzahl von Details verfügbar, aber nur Informationen zu den ASF-Dateien. Da für alle Dateitypen der Format Code nach Möglichkeit überprüft werden sollte, ist es daher am besten, DirectShow zu verwenden, um den grundlegenden Formatierungs Code zu ermitteln oder zu überprüfen. Außerdem können Sie mit dem Windows Media-Format SDK alle zusätzlichen Metadaten ermitteln, die für ASF-Dateien erforderlich sind DirectShow kann auch verwendet werden, um grundlegende Metadaten für nicht--ASF-Dateien zu ermitteln.
+Um die Einschränkungen einer strengen Zuordnung zu umgehen, empfiehlt es sich, dass eine Anwendung überprüft, ob das Format der Erweiterung entspricht. Das DirectShow SDK bietet Tools, mit denen eine Anwendung einen begrenzten Satz von Details zu den meisten Mediendateitypen ermitteln kann. Das Windows Media Format SDK macht eine große Anzahl von Details verfügbar, jedoch nur zu ASF-Dateien. Da bei allen Dateitypen nach Möglichkeit ihr Formatcode überprüft werden sollte, sollten Sie directShow verwenden, um den grundlegenden Formatcode zu ermitteln oder zu überprüfen, und das Windows Media Format SDK verwenden, um alle zusätzlichen Metadaten zu ermitteln, die für ASF-Dateien gewünscht sind. DirectShow kann auch verwendet werden, um grundlegende Metadaten für Nicht-ASF-Dateien zu ermitteln.
 
-Im folgenden finden Sie eine Möglichkeit, ein Dateiformat mithilfe der Erweiterungs Zuordnung und DirectShow zu ermitteln.
+Im Folgenden finden Sie eine Möglichkeit, ein Dateiformat mithilfe von Erweiterungszuordnung und DirectShow zu ermitteln.
 
-Vergleichen Sie zunächst die Dateinamenerweiterung mit einer Liste bekannter Erweiterungen. Achten Sie darauf, dass die Groß-/Kleinschreibung nicht beachtet wird. Wenn die Erweiterung nicht zugeordnet ist, legen Sie das Format auf WMDM- \_ Formatcode nicht \_ definiert fest.
+Vergleichen Sie zunächst die Dateinamenerweiterung mit einer Liste bekannter Erweiterungen. Achten Sie darauf, dass die Groß-/Kleinschreibung des Vergleichs nicht beachtet wird. Wenn die Erweiterung nicht zugeordnet ist, legen Sie das Format auf WMDM \_ FORMATCODE \_ UNDEFINED fest.
 
--   Wenn der Format Code nicht gefunden wurde (oder Sie überprüfen möchten, ob es sich bei einer Datei um eine Mediendatei handelt), können Sie die folgenden Schritte ausführen:
-    1.  Erstellen Sie mithilfe von **cokreateinstance**(CLSID mediadet) ein DirectShow-Medien Erkennungs Objekt \_ , und rufen Sie die **imediadet** -Schnittstelle ab.
-    2.  Öffnen Sie die Datei durch Aufrufen von **imediadet::p UT \_ filename**. Bei diesem Befehl tritt ein Fehler auf, wenn die Datei geschützt ist.
-    3.  Rufen Sie den Medientyp des Standardstreams ab, indem Sie **imediadet:: get \_ streammediatype** aufrufen, der einen **am- \_ \_ Medientyp** zurückgibt.
-    4.  Rufen Sie die Anzahl der Streams durch Aufrufen von **imediadet:: get \_ outputstreams** ab.
-        -   Wenn nur ein Stream und Audiodaten vorhanden sind, lautet der Dateityp WMDM \_ Formatcode \_ undefinedaudio.
-        -   Wenn nur ein Stream und ein Video vorhanden sind, lautet der Dateityp WMDM \_ Formatcode \_ undefinedvideo.
-        -   Wenn nur ein Stream vorhanden ist und ein Video und die Bitrate NULL ist, lautet der Dateityp WMDM \_ Formatcode \_ windowsimageformat.
+-   Wenn der Formatcode nicht gefunden wurde (oder Sie überprüfen möchten, ob es sich bei einer Datei um eine Mediendatei handelt), können Sie die folgenden Schritte ausführen:
+    1.  Erstellen Sie ein DirectShow-Medienerkennungsobjekt mithilfe von **CoCreateInstance**(CLSID \_ MediaDet), und ruft Sie die **IMediaDet-Schnittstelle** ab.
+    2.  Öffnen Sie die Datei, indem Sie **IMediaDet::p ut \_ Filename** aufrufen. Dieser Aufruf schlägt fehl, wenn die Datei geschützt ist.
+    3.  Rufen Sie den Medientyp des Standardstreams ab, indem **Sie IMediaDet::get \_ StreamMediaType** aufrufen, der einen **AM MEDIA \_ \_ TYPE** zurückgibt.
+    4.  Rufen Sie **IMediaDet::get \_ OutputStreams** auf, um die Anzahl der Streams abzurufen.
+        -   Wenn es nur einen Stream gibt und es sich um Audiodaten handelt, lautet der Dateityp WMDM \_ FORMATCODE \_ UNDEFINEDAUDIO.
+        -   Wenn nur ein Stream vorhanden ist und es sich um ein Video handelt, lautet der Dateityp WMDM \_ FORMATCODE \_ UNDEFINEDVIDEO.
+        -   Wenn es nur einen Stream gibt und es sich um video handelt und die Bitrate 0 (null) ist, lautet der Dateityp WMDM \_ FORMATCODE \_ WINDOWSIMAGEFORMAT.
 
-Außerdem können Sie versuchen, Audiodateien oder Video Codecs aus den aus **get \_ streammediatype** abgerufenen **videoinfoheader** -oder **WaveFormatEx** -Membern zu vergleichen.
+Sie können auch versuchen, Audio- oder Videocodecs von den **VIDEOINFOHEADER-** oder **WAVEFORMATEX-Membern** abzugleichen, die von **get \_ StreamMediaType** abgerufen wurden.
 
-Die folgende C++-Funktion veranschaulicht den Datei Erweiterungs Abgleich und die Verwendung von DirectShow, um unbekannte Dateien zu analysieren.
+Die folgende C++-Funktion veranschaulicht den Abgleich von Dateierweiterungen und die Verwendung von DirectShow, um zu versuchen, unbekannte Dateien zu analysieren.
 
 
 ```C++
@@ -184,9 +184,9 @@ WMDM_FORMATCODE CWMDMController::myGetWMDM_FORMATCODE(LPCWSTR pFileName)
 [**Schreiben von Dateien auf das Gerät**](writing-files-to-the-device.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

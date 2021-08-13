@@ -1,9 +1,9 @@
 ---
-title: HDM_SETFILTERCHANGETIMEOUT Meldung (kommstrg. h)
-description: Legt das Timeout Intervall zwischen dem Zeitpunkt fest, an dem eine Änderung in den Filter Attributen stattfindet, und dem Veröffentlichen einer Hdn \_ FilterChange-Benachrichtigung. Sie können diese Nachricht explizit senden oder das-Header \_ setfilterchangetimeout-Makro verwenden.
+title: HDM_SETFILTERCHANGETIMEOUT (Commctrl.h)
+description: Legt das Timeoutintervall zwischen dem Zeitpunkt, zu dem eine Änderung in den Filterattributen stattfindet, und der Veröffentlichung einer HDN \_ FILTERCHANGE-Benachrichtigung fest. Sie können diese Nachricht explizit senden oder das \_ Header-SetFilterChangeTimeout-Makro verwenden.
 ms.assetid: 9bc8e0e7-d7c1-4dd6-9d39-6ae937f19d60
 keywords:
-- Windows-Steuerelemente für HDM_SETFILTERCHANGETIMEOUT Meldung
+- HDM_SETFILTERCHANGETIMEOUT von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9876634d12cd15001c296151694cb755ed1b34e9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 23b5f8df12a7f30baa5f8b7d4bf15698b30cfbb6619fb71a81d4977b259c318b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435860"
 ---
-# <a name="hdm_setfilterchangetimeout-message"></a>HDM- \_ setfilterchangetimeout-Meldung
+# <a name="hdm_setfilterchangetimeout-message"></a>\_HDM-Nachricht "SETFILTERCHANGETIMEOUT"
 
-Legt das Timeout Intervall zwischen dem Zeitpunkt fest, an dem eine Änderung in den Filter Attributen stattfindet, und dem Veröffentlichen einer [Hdn \_ FilterChange](hdn-filterchange.md) -Benachrichtigung. Sie können diese Nachricht explizit senden oder das- [**Header \_ setfilterchangetimeout**](/windows/desktop/api/Commctrl/nf-commctrl-header_setfilterchangetimeout) -Makro verwenden.
+Legt das Timeoutintervall zwischen dem Zeitpunkt, zu dem eine Änderung in den Filterattributen stattfindet, und dem Posten einer [HDN \_ FILTERCHANGE-Benachrichtigung](hdn-filterchange.md) fest. Sie können diese Nachricht explizit senden oder das [**\_ Header-Makro SetFilterChangeTimeout**](/windows/desktop/api/Commctrl/nf-commctrl-header_setfilterchangetimeout) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,7 +41,7 @@ Der Timeoutwert in Millisekunden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des geänderten Filter Steuer Elements zurück.
+Gibt den Index des filter-Steuerelements zurück, das geändert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Gibt den Index des geänderten Filter Steuer Elements zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Hdn- \_ Filter Änderung](hdn-filterchange.md)
+[HDN \_ FILTERCHANGE](hdn-filterchange.md)
 </dt> </dl>
 
  

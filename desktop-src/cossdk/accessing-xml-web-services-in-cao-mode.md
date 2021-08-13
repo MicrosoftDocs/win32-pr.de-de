@@ -1,19 +1,19 @@
 ---
-description: Wenn der XML-Webdienst, auf den Sie zugreifen möchten, durch Bereitstellen einer COM+-Anwendung erstellt wurde, können Sie im Client aktivierten Objekt Modus (Cao) darauf zugreifen, wodurch die Lauf Zeit Generierung eines Proxys vermieden und die Leistung mithilfe dauerhafter Verbindungen gesteigert wird.
+description: Wenn der XML-Webdienst, auf den Sie zugreifen möchten, durch Verfügbar machen einer COM+-Anwendung erstellt wurde, sollten Sie den Zugriff im CAO-Modus (Client-Activated Object) in Betracht ziehen. Dies vermeidet die Generierung eines Proxys zur Laufzeit und erhöht die Leistung durch die Verwendung persistenter Verbindungen.
 ms.assetid: 471de0fa-3429-45f8-abe2-aff0cf6fb350
-title: Zugreifen auf XML-Webdienste im Modus "Cao"
+title: Zugreifen auf XML-Webdienste im CAO-Modus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50f1e15c18a925ba88f1b9c7c8267bfb2ef12292
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1e3f8dc1fa3c037d03d8b69cf45737c7211d92f7d38e733a97b9be109a2243a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118549458"
 ---
-# <a name="accessing-xml-web-services-in-cao-mode"></a>Zugreifen auf XML-Webdienste im Modus "Cao"
+# <a name="accessing-xml-web-services-in-cao-mode"></a>Zugreifen auf XML-Webdienste im CAO-Modus
 
-Wenn der XML-Webdienst, auf den Sie zugreifen möchten, durch Bereitstellen einer COM+-Anwendung erstellt wurde, können Sie im Client aktivierten Objekt Modus (Cao) darauf zugreifen, wodurch die Lauf Zeit Generierung eines Proxys vermieden und die Leistung mithilfe dauerhafter Verbindungen gesteigert wird. Um auf einen XML-Webdienst im Modus "Cao" zuzugreifen, [exportieren](exporting-a-soap-enabled-application.md) Sie zuerst die entsprechende SOAP-aktivierte Anwendung vom Server im Proxy Modus, und [importieren](importing-a-soap-enabled-application.md) Sie die Anwendung dann in den Client, von dem aus Sie als XML-Webdienst auf die Anwendung zugreifen möchten. Die Komponenten der Anwendung können dann auf dem Client genauso wie die Komponenten lokaler Anwendungen instanziiert werden – z. b. **GetObject** und [**cokreatinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Wenn der XML-Webdienst, auf den Sie zugreifen möchten, durch Verfügbar machen einer COM+-Anwendung erstellt wurde, sollten Sie den Zugriff im CAO-Modus (Client-Activated Object) in Betracht ziehen. Dies vermeidet die Generierung eines Proxys zur Laufzeit und erhöht die Leistung durch die Verwendung persistenter Verbindungen. Um auf einen XML-Webdienst im [](exporting-a-soap-enabled-application.md) CAO-Modus zu zugreifen, exportieren Sie zunächst [](importing-a-soap-enabled-application.md) die entsprechende SOAP-fähige Anwendung von Ihrem Server im Proxymodus, und importieren Sie dann die Anwendung in den Client, von dem aus Sie als XML-Webdienst auf die Anwendung zugreifen möchten. Die Komponenten der Anwendung können dann auf dem Client genau wie die Komponenten lokaler Anwendungen instanziiert werden, z. B. mit **GetObject** und [**CoCreateInstance.**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)
 
 ## <a name="user-interface"></a>Benutzeroberfläche
 
@@ -21,7 +21,7 @@ Nicht anwendbar.
 
 ## <a name="visual-basic"></a>Visual Basic
 
-Das folgende Visual Basic Code Fragment veranschaulicht die Verwendung einer Komponente einer COM+-Anwendung, die als XML-Webdienst im Modus "Cao" verfügbar gemacht wurde.
+Das folgende Visual Basic veranschaulicht die Verwendung einer Komponente einer COM+-Anwendung, die als XML-Webdienst im CAO-Modus verfügbar gemacht wurde.
 
 
 ```VB
@@ -33,7 +33,7 @@ output = Obj.Method(input)
 
 ## <a name="cc"></a>C/C++
 
-Das folgende Code Fragment veranschaulicht die Verwendung einer Komponente einer COM+-Anwendung, die als XML-Webdienst im Modus "Cao" verfügbar gemacht wurde.
+Das folgende Codefragment veranschaulicht die Verwendung einer Komponente einer COM+-Anwendung, die als XML-Webdienst im CAO-Modus verfügbar gemacht wurde.
 
 
 ```C++
@@ -55,7 +55,7 @@ if (FAILED(hr)) throw(hr);
 [Zugreifen auf XML-Webdienste im WKO-Modus](accessing-xml-web-services-in-wko-mode.md)
 </dt> <dt>
 
-[Übersicht über den COM+ SOAP-Dienst](com--soap-service-overview.md)
+[ÜBERSICHT ÜBER DEN COM+-SOAP-Dienst](com--soap-service-overview.md)
 </dt> <dt>
 
 [Erstellen von XML-Webdiensten](creating-xml-web-services.md)

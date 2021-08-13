@@ -1,27 +1,27 @@
 ---
-description: Wenn diese pro-Computer-System Richtlinie auf &\# 0034; 1&0034; festgelegt ist \# , verhindert das Installationsprogramm, dass nicht Administratoren die Benutzerkontensteuerung (User Account Control, UAC) für alle auf dem Computer installierten Anwendungen verwenden.
+description: Wenn diese Systemrichtlinie pro Computer auf &\# 0034;1&\# 0034; festgelegt ist, verhindert das Installationsprogramm, dass Nichtadministratoren das Patchen von Benutzerkontensteuerung (User Account Control, UAC) für alle auf dem Computer installierten Anwendungen verwenden.
 ms.assetid: b122d6f4-2be6-4b9b-b8e0-ca08fe9c4f94
-title: Disableluapatching
+title: DisableLUAPatching
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b76357211523d0a69a56ab2a047623a63f211df9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5821eb480ac09a2fc0416d7b3a54c0df5699a7096b45e56a843afe691886296f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118637777"
 ---
-# <a name="disableluapatching"></a>Disableluapatching
+# <a name="disableluapatching"></a>DisableLUAPatching
 
-Wenn diese pro-Computer-System Richtlinie auf "1" festgelegt ist, verhindert das Installationsprogramm, dass nicht Administratoren die [Benutzerkontensteuerung (User Account Control, UAC)](user-account-control--uac--patching.md) für alle auf dem Computer installierten Anwendungen verwenden. Wenn die System Richtlinie pro Computer nicht festgelegt oder auf 0 festgelegt ist, können nicht Administratoren benutzerpatches mit geringsten Rechten auf Anwendungen anwenden, die für das Patchen von Benutzerkonten mit geringsten Rechten aktiviert sind.
+Wenn diese Systemrichtlinie pro Computer auf "1" festgelegt ist, verhindert das Installationsprogramm, dass Nichtadministratoren das Patchen der [Benutzerkontensteuerung (User Account Control, UAC)](user-account-control--uac--patching.md) für alle auf dem Computer installierten Anwendungen verwenden. Wenn die Systemrichtlinie pro Computer nicht auf 0 festgelegt oder auf 0 festgelegt ist, können Nichtadministratoren Benutzerpatches mit den geringsten Rechten auf Anwendungen anwenden, die für das Patchen von Benutzerkonten mit den geringsten Rechten aktiviert sind.
 
-Verwenden Sie die [**msidisableluapatching**](msidisableluapatching.md) -Eigenschaft, um das Patchen einer Anwendung mit den geringsten Berechtigungen zu verhindern.
+Verwenden Sie die [**MSIDISABLELUAPATCHING-Eigenschaft,**](msidisableluapatching.md) um das Patchen einer Anwendung mit den geringsten Rechten zu verhindern.
 
-Die Richtlinie "disableluapatching" ist ab Windows Installer Version 3,0 verfügbar.
+Die Richtlinie DisableLUAPatching ist ab Windows Installer Version 3.0 verfügbar.
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-**HKEY \_ Software Richtlinien für lokale \_ Computer** \\  \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ Local \_ MACHINE** \\ **Software** \\ **Policies** \\ **Microsoft** \\ **Windows** \\ **Installer**
 
 ## <a name="data-type"></a>Datentyp
 
@@ -31,7 +31,7 @@ Die Richtlinie "disableluapatching" ist ab Windows Installer Version 3,0 verfüg
 
 <dl> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

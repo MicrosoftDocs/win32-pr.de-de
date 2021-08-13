@@ -1,23 +1,23 @@
 ---
 title: Asynchroner Vorgang
-description: Im asynchronen Modus kann eine Anwendung jede Funktion ausführen, die einen Kontextwert als einen ihrer Parameter enthält, und andere Befehle oder Funktionen weiterhin ausführen, während die Anwendung auf den Abschluss der Aufgabe wartet.
+description: Im asynchronen Modus kann eine Anwendung jede Funktion ausführen, die einen Kontextwert als einen ihrer Parameter enthält, und kann weitere Befehle oder Funktionen ausführen, während die Anwendung wartet, bis die Funktion ihre Aufgabe abgeschlossen hat.
 ms.assetid: 4b8ade00-deb3-4d9f-9ceb-5ba3296c8c68
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a7e1d0cf84aa92691e1d926d771ea809d31a171
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2e494b79b28b9aaf005fc6b1790d0cf84b07ceade6606f03ce03198426ac33d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118562092"
 ---
 # <a name="asynchronous-operation"></a>Asynchroner Vorgang
 
-Die Zeit, die eine Anwendung benötigt, um auf eine Internet Ressource zuzugreifen, hängt von einer Reihe von Faktoren ab, z. b. der verwendeten Verbindung, dem Server, auf dem sich die Ressource befindet, und der Anzahl der Benutzer, die versuchen, auf die Ressource zuzugreifen. Bei Anwendungen, die mehrere Ressourcen herunterladen oder mehrere Tasks verarbeiten (einschließlich eines oder mehrerer Downloads), kann das warten auf den Abschluss der einzelnen Downloads, bevor Sie mit der nächsten Aufgabe fortfahren, äußerst ineffizient sein. Um die Zeitspanne zu verkürzen, die eine Anwendung warten muss, können viele der WinInet-Funktionen asynchron ausgeführt werden.
+Die Zeit, die eine Anwendung für den Zugriff auf eine Internetressource benötigt, hängt von einer Reihe von Faktoren ab, z. B. der verwendeten Verbindung, dem Server, auf dem sich die Ressource befindet, und der Anzahl der Benutzer, die versuchen, auf die Ressource zu zugreifen. Für Anwendungen, die mehrere Ressourcen herunterladen oder mehrere Aufgaben (einschließlich eines oder mehrerer Downloads) verarbeiten, kann das Warten auf den Abschluss jedes Downloads vor dem Wechsel zur nächsten Aufgabe äußerst ineffizient sein. Um die Wartezeit einer Anwendung zu verringern, können viele WinINet-Funktionen asynchron ausgeführt werden.
 
-Im asynchronen Modus kann eine Anwendung jede Funktion ausführen, die einen Kontextwert als einen ihrer Parameter enthält, und andere Befehle oder Funktionen weiterhin ausführen, während die Anwendung auf den Abschluss der Aufgabe wartet. Während der Aufgabe abgeschlossen wird, wird eine von der Anwendung bereitgestellte Status Rückruffunktion über den Fortschritt der Aufgabe benachrichtigt und nachdem Sie abgeschlossen wurde. Zu diesem Zeitpunkt kann die Status Rückruffunktion andere Funktionen anrufen oder alle anderen erforderlichen Aufgaben ausführen, die von der Beendigung der Aufgabe abhängen.
+Im asynchronen Modus kann eine Anwendung jede Funktion ausführen, die einen Kontextwert als einen ihrer Parameter enthält, und kann weitere Befehle oder Funktionen ausführen, während die Anwendung wartet, bis die Funktion ihre Aufgabe abgeschlossen hat. Während die Aufgabe abgeschlossen ist, wird eine von der Anwendung bereitgestellte Statusrückruffunktion über den Status der Aufgabe und deren Abschluss benachrichtigt. Zu diesem Zeitpunkt kann die Statusrückruffunktion andere Funktionen aufrufen oder andere erforderliche Aufgaben ausführen, die vom Abschluss der Aufgabe abhängig waren.
 
-Es gibt keinen Rückruf Thread, wenn Sie WinInet asynchron aufzurufen: ein-Befehl kann von einem Thread gestartet werden, aber jeder andere Thread kann den Rückruf empfangen.
+Wenn Sie WinINet asynchron aufrufen, ist kein Rückrufthread definiert: Ein Aufruf kann von einem Thread aus beginnen, aber jeder andere Thread kann den Rückruf empfangen.
 
 -   [Vorteile](#benefits)
 -   [Szenarios](#scenarios)
@@ -25,91 +25,91 @@ Es gibt keinen Rückruf Thread, wenn Sie WinInet asynchron aufzurufen: ein-Befeh
 
 ## <a name="benefits"></a>Vorteile
 
-Es gibt mehrere Vorteile, die asynchron funktionieren. Beispiel:
+Der asynchrone Betrieb hat mehrere Vorteile. Beispiel:
 
--   Mehrere Internet Ressourcen werden gleichzeitig heruntergeladen.
+-   Gleichzeitiges Herunterladen mehrerer Internetressourcen.
 
-    Sie können gleichzeitig eine Verbindung mit mehreren Internet Ressourcen herstellen und Sie herunterladen, sobald Sie verfügbar werden.
+    Sie können gleichzeitig eine Verbindung mit mehreren Internetressourcen herstellen und diese herunterladen, sobald sie verfügbar sind.
 
--   Erhöhen der Leistung Ihrer Anwendung.
+-   Steigern der Leistung Ihrer Anwendung.
 
-    Eine Anwendung, die die WinInet-Funktionen asynchron verwendet, muss nicht warten, bis die Anforderung abgeschlossen ist, sodass die Anwendung andere Tasks ausführen kann, die nicht von der Anforderung abhängen, wodurch die Gesamtleistung der Anwendung verbessert wird.
+    Eine Anwendung, die die WinINet-Funktionen asynchron verwendet, muss nicht warten, bis die Anforderung abgeschlossen ist, sodass die Anwendung andere Aufgaben ausführen kann, die nicht von der Anforderung abhängig sind, wodurch die Gesamtleistung der Anwendung verbessert wird.
 
 -   Überwachen Sie den Fortschritt des Downloads.
 
-    Die Status Rückruffunktion empfängt bei der Verarbeitung einer Anforderung Benachrichtigungen. Bei Bedarf kann die Anwendung die von dieser Status Rückruffunktion bereitgestellten Informationen verwenden, um den Benutzer über den Fortschritt des Vorgangs zu informieren oder Anforderungen zu unterbrechen, die zu lange dauern.
+    Die Statusrückruffunktion empfängt Benachrichtigungen, während sie eine Anforderung verarbeitet. Bei Bedarf kann Ihre Anwendung die von dieser Statusrückruffunktion bereitgestellten Informationen verwenden, um den Benutzer über den Fortschritt des Vorgangs auf dem Laufenden zu halten oder Anforderungen zu unterbrechen, deren Abschluss zu lange dauern soll.
 
 ## <a name="scenarios"></a>Szenarien
 
-Nehmen wir an, Ihre Anwendung muss Kaffeepreise von der & für das Herunterladen von Kaffee und die vierten Kaffee-Websites herunterladen und die Preise vergleichen. Die vierte Coffee-Website hat normalerweise eine langsamere Reaktionszeit, sodass Ihre Anwendung die Informationen von "bei Kaffee & Tee" zuerst herunterladen sollte.
+Angenommen, Ihre Anwendung muss die Kaffeepreise von downfall Coffee & Tee und der Vierten Kaffee-Website herunterladen und die Preise vergleichen. Die Fourth Coffee-Website hat in der Regel eine langsamere Antwortzeit, sodass Ihre Anwendung die Informationen zuerst von Downfall Coffee & Tee herunterladen sollte.
 
-Zwei Versionen der Anwendung werden entwickelt. Ein solcher arbeitet synchron und lädt zuerst die Preise von der Seite Coffee & Tea herunter, und dann die Preise von der vierten Kaffee Website. Die zweite Funktion arbeitet asynchron, sendet Anforderungen an beide Standorte und lädt die Preise herunter, wenn Sie verfügbar werden.
+Es werden zwei Versionen der Anwendung entwickelt. Eins funktioniert synchron, und zuerst werden die Preise von der Website Downfall Coffee & Tee und dann die Preise von der Fourth Coffee-Website heruntergeladen. Das zweite funktioniert asynchron und sendet Anforderungen an beide Websites und downloadt die Preise, sobald sie verfügbar sind.
 
-In der folgenden Tabelle wird veranschaulicht, was passiert, wenn die vierte Kaffee Website an einem bestimmten Tag schneller war.
+Die folgende Tabelle veranschaulicht, was passieren würde, wenn die Website "Fourth Coffee" an einem bestimmten Tag schneller wäre.
 
 
 
 | Ereignis                                                            | Synchrone Version                        | Asynchrone Version                                     |
 |------------------------------------------------------------------|--------------------------------------------|----------------------------------------------------------|
-| Start                                                            | Anforderung zum Absenden von Kaffee & Tee senden      | Senden von Anforderungen an den Absturz von Kaffee & Tee und Fourth Coffee |
-| Anforderung von der asynchronen Version an den vierten Kaffee abgeschlossen | Warten                                    | Preise von Fourth Coffee herunterladen                       |
-| Anforderung zum Durchlaufen von Kaffee & Tee abgeschlossen                       | Preise von "bei Kaffee & Tee herunterladen" herunterladen | Preise von "bei Kaffee & Tee herunterladen" herunterladen               |
-| Nach dem Herunterladen von Kaffee & die Preise von Tea heruntergeladen.              | Anforderung an vierten Kaffee senden              | Preise vergleichen                                           |
-| Vergleich der asynchronen Version abgeschlossen                      | Warten                                    | Vorgang beendet                                       |
-| Anforderung von synchroner Version zum vierten Kaffee abgeschlossen  | Preise von Fourth Coffee herunterladen         | –                                                      |
-| Nachdem die Preise für den vierten Kaffee heruntergeladen wurden                      | Preise vergleichen                             | –                                                      |
-| Vergleich der synchronen Version abgeschlossen                       | Vorgang beendet                         | –                                                      |
+| Starten                                                            | Senden einer Anforderung an Downfall Coffee & Tee      | Senden von Anforderungen an Downfall Coffee & Coffee und Fourth Coffee |
+| Anforderung von der asynchronen Version an Fourth Coffee abgeschlossen | Wartend                                    | Herunterladen von Preisen von Fourth Coffee                       |
+| Anforderung zum Ausfall von Coffee & Tee abgeschlossen                       | Laden Sie die Preise von Downfall Coffee & Tee herunter. | Laden Sie die Preise von Downfall Coffee & Tee herunter.               |
+| Nach dem Ausfall von Coffee & tee es prices are downloaded              | Senden einer Anforderung an Fourth Coffee              | Vergleich der Preise                                           |
+| Vergleich der asynchronen Version abgeschlossen                      | Wartend                                    | Vorgang abgeschlossen                                       |
+| Anforderung von der synchronen Version an Fourth Coffee abgeschlossen  | Herunterladen von Preisen von Fourth Coffee         | –                                                      |
+| Nach dem Herunterladen der Preise für Fourth Coffee                      | Vergleich der Preise                             | –                                                      |
+| Vergleich der synchronen Version abgeschlossen                       | Vorgang abgeschlossen                         | –                                                      |
 
 
 
- 
+ 
 
-Ein weiteres Beispiel wäre ein Webbrowser wie z. b. Microsoft Internet Explorer. Wenn der Browser eine Seite herunterlädt, müssen häufig andere Ressourcen wie Bilder und Audiodateien heruntergeladen werden. Im asynchronen Modus können die Seite und die zugehörigen Ressourcen gleichzeitig angefordert und heruntergeladen werden, wenn Sie verfügbar werden, anstatt die Seite und die einzelnen Ressourcen einzeln anzufordern und herunterzuladen.
+Ein weiteres Beispiel wäre ein Webbrowser wie Microsoft Internet Explorer. Wenn der Browser eine Seite herunterlädt, müssen häufig andere Ressourcen wie Bilder und Sounddateien heruntergeladen werden. Im asynchronen Modus können die Seite und die zugehörigen Ressourcen gleichzeitig angefordert und heruntergeladen werden, sobald sie verfügbar sind, anstatt die Seite und jede Ressource nacheinander an- und herunterzuladen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-Im folgenden finden Sie verknüpfte Links.
+Im Folgenden finden Sie verwandte Links.
 
 Tutorials
 
--   [Erstellen von Status Rückruf Funktionen](creating-status-callback-functions.md)
+-   [Erstellen von Statusrückruffunktionen](creating-status-callback-functions.md)
 
-Zum Einrichten des asynchronen Vorgangs erforderliche Funktionen
+Funktionen, die zum Einrichten eines asynchronen Vorgangs erforderlich sind
 
 -   [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena)
--   [**Internetsetstatus Callback**](/windows/desktop/api/Wininet/nf-wininet-internetsetstatuscallback)
+-   [**InternetSetStatusCallback**](/windows/desktop/api/Wininet/nf-wininet-internetsetstatuscallback)
 
 Funktionen, die asynchron verwendet werden können
 
--   [**Ftpkreatedirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya)
--   [**Ftpdeletefile**](/windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea)
--   [**Ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea)
--   [**Ftpgetcurrentdirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpgetcurrentdirectorya)
--   [**Ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)
--   [**Ftpopumfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea)
--   [**Ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)
--   [**Ftpremuvedirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya)
--   [**Ftprenamefile**](/windows/desktop/api/Wininet/nf-wininet-ftprenamefilea)
--   [**Ftpsetcurrentdirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpsetcurrentdirectorya)
--   [**Gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea)
--   [**Gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)
--   [**Httpdrequest**](/windows/desktop/api/Wininet/nf-wininet-httpendrequesta)
--   [**Httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)
+-   [**FtpCreateDirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya)
+-   [**FtpDeleteFile**](/windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea)
+-   [**FtpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea)
+-   [**FtpGetCurrentDirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpgetcurrentdirectorya)
+-   [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)
+-   [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea)
+-   [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)
+-   [**FtpRemoveDirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya)
+-   [**FtpRenameFile**](/windows/desktop/api/Wininet/nf-wininet-ftprenamefilea)
+-   [**FtpSetCurrentDirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpsetcurrentdirectorya)
+-   [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea)
+-   [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)
+-   [**HttpEndRequest**](/windows/desktop/api/Wininet/nf-wininet-httpendrequesta)
+-   [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)
 -   [**HttpSendRequestEx**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequestexa)
 -   [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)
--   [**InternetOpenURL**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)
--   [**Internetreadfileex**](/windows/desktop/api/Wininet/nf-wininet-internetreadfileexa)
+-   [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)
+-   [**InternetReadFileEx**](/windows/desktop/api/Wininet/nf-wininet-internetreadfileexa)
 
 > [!Note]  
-> Die Funktionen [**ftpkreatedirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya), [**ftpremumuvedirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya), [**ftpsetcurrentdirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpsetcurrentdirectorya), [**ftpgetcurrentdirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpgetcurrentdirectorya), [**ftpdeletefile**](/windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea)und [**ftprenamefile**](/windows/desktop/api/Wininet/nf-wininet-ftprenamefilea) verwenden den Kontextwert, der im Aufrufen der [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) -Funktion bereitgestellt wird.
+> Die [**Funktionen FtpCreateDirectory,**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya) [**FtpRemoveDirectory,**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya) [**FtpSetCurrentDirectory,**](/windows/desktop/api/Wininet/nf-wininet-ftpsetcurrentdirectorya) [**FtpGetCurrentDirectory,**](/windows/desktop/api/Wininet/nf-wininet-ftpgetcurrentdirectorya) [**FtpDeleteFile**](/windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea)und [**FtpRenameFile**](/windows/desktop/api/Wininet/nf-wininet-ftprenamefilea) verwenden den Kontextwert, der im Aufruf der [**InternetConnect-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) angegeben wird.
 
- 
+ 
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierung. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP Services (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
- 
+ 
 
- 
+ 
 
- 
+ 

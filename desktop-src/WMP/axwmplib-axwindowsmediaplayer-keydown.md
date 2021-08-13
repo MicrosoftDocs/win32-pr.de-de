@@ -3,7 +3,7 @@ title: KeyDown-Ereignis des AxWindowsMediaPlayer-Objekts
 description: Das KeyDown-Ereignis tritt auf, wenn eine Taste gedrückt wird. | KeyDown-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: e67b9628-6c53-4893-921a-9487ebfc1cd5
 keywords:
-- Das KeyDown-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- KeyDown-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc89814063e1a43badd22e658b5f19ece7abb074
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 054736007219021dbc0a4c1c968f61e1bbdb285fa416aae5f3c92c3880fb55de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119469720"
 ---
 # <a name="keydown-event-of-the-axwindowsmediaplayer-object"></a>KeyDown-Ereignis des AxWindowsMediaPlayer-Objekts
 
@@ -41,73 +41,73 @@ Private Sub player_KeyDownEvent(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ keydownetventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ keydownvent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ KeyDownEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ KeyDownEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| nKeyCode    | System. Int16Specifies der physische Schlüssel, auf den geklickt wird. Mögliche Werte finden Sie unter "Hinweise".<br/>                                                                                                                                                                                                                                                                                    |
-| nshiftstate | System. Int16A Bitfeld mit den geringsten signifikanten Bits, die der Umschalttaste (Bit 0), der STRG-Taste (Bit 1) und der Alt-Taste (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 und 4. Das Shift-Argument gibt den Zustand dieser Schlüssel an. Einige, alle oder keine der Bits können festgelegt werden. Dies deutet darauf hin, dass einige, alle oder keine der Schlüssel gedrückt werden.<br/> |
+| nKeyCode    | System.Int16 Gibt an, welche physische Taste gedrückt wird. Mögliche Werte finden Sie unter Hinweise.<br/>                                                                                                                                                                                                                                                                                    |
+| nShiftState | System.Int16A-Bitfeld mit den am wenigsten signifikanten Bits, die der UMSCHALTTASTE (Bit 0), der STRG-Taste (Bit 1) und der ALT-Taste (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 bzw. 4. Das Shift-Argument gibt den Zustand dieser Schlüssel an. Einige, alle oder keine der Bits können festgelegt werden, was darauf hinweist, dass einige, alle oder keine der Tasten gedrückt werden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **nKeyCode** -Eigenschaft gibt einen physischen Schlüssel an. In den folgenden Tabellen sind die möglichen Werte für die Hauptschlüssel auf einer Standardtastatur aufgeführt.
+Die **nKeyCode-Eigenschaft** gibt einen physischen Schlüssel an. Die folgenden Tabellen zeigen die möglichen Werte für die Haupttasten auf einer Standardtastatur.
 
 Werte für die Hauptschlüssel.
 
 
 
-| Schlüssel                     | Wert   |
+| Key                     | Wert   |
 |-------------------------|---------|
 | A-Z                     | 65-90   |
 | 0-9                     | 48-56   |
-| F1-F12                  | 112-123 |
+| F1–F12                  | 112-123 |
 | ESC                     | 27      |
 | TAB                     | 9       |
 | Feststelltaste               | 20      |
-| Shift (links oder rechts)   | 16      |
+| UMSCHALT (links oder rechts)   | 16      |
 | STRG (links oder rechts)    | 17      |
 | ALT (links oder rechts)     | 18      |
 | SPACE                   | 32      |
 | RÜCKTASTE               | 8       |
 | EINGABETASTE                   | 13      |
-| Windows-Taste, Links  | 91      |
-| Windows-Taste, rechts | 92      |
+| Windows Logo-TASTE, links  | 91      |
+| Windows Logo-Taste rechts | 92      |
 | Anwendungsschlüssel         | 93      |
 
 
 
  
 
-Werte für die Zahlen Füll Tasten.
+Werte für die Nummernpadtasten.
 
 
 
-| Schlüssel               | Wert  |
+| Key               | Wert  |
 |-------------------|--------|
 | 0-9               | 96-105 |
-| NUM-Sperre          | 144    |
-| Dividieren (/)        | 111    |
-| Multiplizieren ( \* )     | 106    |
-| Subtraktion (-)      | 109    |
-| Hinzufügen (+)           | 107    |
-| Trennzeichen (EINGABETASTE) | 108    |
-| Dezimalzahl (.)       | 110    |
+| NUM-SPERRE          | 144    |
+| DIVIDE (/)        | 111    |
+| MULTIPLY ( \* )     | 106    |
+| SUBTRACT (-)      | 109    |
+| ADD (+)           | 107    |
+| SEPARATOR (EINGABETASTE) | 108    |
+| DECIMAL (.)       | 110    |
 
 
 
  
 
-Werte für die Navigationstasten.
+Werte für die Navigationsschlüssel.
 
 
 
-| Schlüssel         | Wert |
+| Key         | Wert |
 |-------------|-------|
 | INSERT      | 45    |
 | Delete      | 46    |
@@ -130,17 +130,17 @@ Werte für die Navigationstasten.
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

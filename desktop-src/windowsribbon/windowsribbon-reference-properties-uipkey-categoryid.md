@@ -1,53 +1,53 @@
 ---
 title: UI_PKEY_CategoryId
-description: Gibt die Benutzeroberflächen- \_ pkey \_ CategoryID-Eigenschaft an.
+description: Identifiziert die \_ PKEY \_ CategoryId-Eigenschaft der Benutzeroberfläche.
 ms.assetid: c1e81b2f-3f89-4bc5-a69b-64e841778790
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be628dfecadf3b927e4a99510f661130bd9d34c3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b5631f74d7db42e81e6723cc810811743dd1dd46e8aa4d1491226a67d56aab25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119441520"
 ---
-# <a name="ui_pkey_categoryid"></a>Benutzeroberflächen- \_ pkey \_ CategoryID
+# <a name="ui_pkey_categoryid"></a>\_PKEY-Kategorie-ID der Benutzeroberfläche \_
 
-Gibt die Benutzeroberflächen- \_ pkey \_ CategoryID-Eigenschaft an.
+Identifiziert die \_ PKEY \_ CategoryId-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_CategoryId
-   shellPKey = UI_PKEY_CategoryId
-   formatID = 00000103-7363-696e-8441798acf5aebb7
-   propID = 103
-   typeInfo
-      type = VT_UI4
+   name = UI_PKEY_CategoryId
+   shellPKey = UI_PKEY_CategoryId
+   formatID = 00000103-7363-696e-8441798acf5aebb7
+   propID = 103
+   typeInfo
+      type = VT_UI4
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Benutzeroberflächen- \_ pkey \_ CategoryID wird von einer Anwendung verwendet, um die IDs der Kategorien abzufragen, die zum Gruppieren verwandter Elemente in einem Katalog-Steuerelement verwendet werden.
+Ui \_ PKEY \_ CategoryId wird von einer Anwendung verwendet, um die IDs der Kategorien abzufragen, die zum Gruppieren verwandter Elemente in einem Katalogsteuerelement verwendet werden.
 
-Der Eigenschafts Wert ist der null basierte Index eines Elements in einer Kategorieauflistung.
+Der Eigenschaftswert ist der nullbasierte Index eines Elements in einer Kategorieauflistung.
 
-Der folgende Screenshot veranschaulicht die Verwendung von Kategorien in einem [**SplitButton**](windowsribbon-element-splitbutton.md) -Menü, bei dem **Auswahl Formen** die ID 0 und **Auswahl Optionen** eine ID von 1 haben.
+Der folgende Screenshot veranschaulicht die Verwendung von Kategorien in einem [**SplitButton-Menü,**](windowsribbon-element-splitbutton.md) in dem **Auswahlformen** die ID 0 und **Auswahloptionen** die ID 1 aufweisen.
 
-![Screenshot, auf dem Kategorien in einem Menüband-Katalog angezeigt werden.](images/properties/ui-pkey-collection-categories2.png)
+![Screenshot: Kategorien in einem Menübandkatalog](images/properties/ui-pkey-collection-categories2.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Sammlungs Eigenschaften](windowsribbon-reference-properties-collection.md)
+[Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 </dt> <dt>
 
-[UI- \_ pkey- \_ Kategorien](windowsribbon-reference-properties-uipkey-categories.md)
+[\_PKEY-Kategorien der Benutzeroberfläche \_](windowsribbon-reference-properties-uipkey-categories.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

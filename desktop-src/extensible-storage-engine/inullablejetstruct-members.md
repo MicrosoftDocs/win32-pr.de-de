@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen: inullablejetstruct-Member'
-title: Inullablejetstruct-Member
+description: Weitere Informationen zu INullableJetStruct-Membern
+title: INullableJetStruct-Member
 TOCTitle: INullableJetStruct members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.INullableJetStruct
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.inullablejetstruct_members(v=EXCHG.10)
 ms:contentKeyID: 39515569
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 370ae205ac243b98dff28d562782e91b935df2d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1bd77db14adf7709de54f8a2e9562c880dd341699c284dab511b1403988ac2bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104552674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119476030"
 ---
-# <a name="inullablejetstruct-members"></a>Inullablejetstruct-Member
+# <a name="inullablejetstruct-members"></a>INullableJetStruct-Member
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Eine Schnittstelle für Jet-Strukturen, die NULL-Werte zulassen (möglicherweise NULL-Werte).
+Schnittstelle für Jet-Strukturen, die NULL-Werte haben können.
 
-Der [inullablejetstruct](./inullablejetstruct-interface.md) -Typ macht die folgenden Member verfügbar.
+Der [INullableJetStruct-Typ](./inullablejetstruct-interface.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -36,8 +36,8 @@ Der [inullablejetstruct](./inullablejetstruct-interface.md) -Typ macht die folge
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="hh577833(v=exchg.10).md">HasValue</a></td>
-<td>Ruft einen Wert ab, der angibt, ob die-Struktur einen NULL-Wert aufweist.</td>
+<td><a href="hh577833(v=exchg.10).md">Hasvalue</a></td>
+<td>Ruft einen Wert ab, der angibt, ob die -Struktur über einen NULL-Wert verfügt.</td>
 </tr>
 </tbody>
 </table>
@@ -45,10 +45,10 @@ Der [inullablejetstruct](./inullablejetstruct-interface.md) -Typ macht die folge
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Inullablejetstruct-Schnittstelle](./inullablejetstruct-interface.md)
+[INullableJetStruct-Schnittstelle](./inullablejetstruct-interface.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

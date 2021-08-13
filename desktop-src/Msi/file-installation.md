@@ -1,27 +1,27 @@
 ---
-description: 'Nachdem die Datei Kosten verarbeitet wurde, verfügt das Installationsprogramm über alle Informationen, die zum Verarbeiten der beiden Datei Bearbeitungs Aktionen erforderlich sind: duplicatefiles und muvefiles.'
+description: 'Nach Abschluss der Dateikosten verfügt das Installationsprogramm über alle Informationen, die zum Verarbeiten der beiden Dateibearbeitungsaktionen erforderlich sind: DuplicateFiles und MoveFiles.'
 ms.assetid: 2e6d6eb3-1e71-46e6-a946-d9cc0b209325
-title: Datei Installation
+title: Dateiinstallation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 472c58db3dc2e9094a26d57f871359a38930877b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 005a987a7e61f646f58abd0ec699ce03bd29d85dfa2ddb01e8f693750acda740
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118636698"
 ---
-# <a name="file-installation"></a>Datei Installation
+# <a name="file-installation"></a>Dateiinstallation
 
-Nachdem die [Datei Kosten](file-costing.md) verarbeitet wurde, verfügt das Installationsprogramm über alle Informationen, die zum Verarbeiten der beiden Datei Bearbeitungs Aktionen erforderlich sind: [duplicatefiles](duplicatefiles-action.md) und [muvefiles](movefiles-action.md).
+Nach Abschluss der [Dateikosten](file-costing.md) verfügt das Installationsprogramm über alle Informationen, die zum Verarbeiten der beiden Dateibearbeitungsaktionen erforderlich sind: [DuplicateFiles](duplicatefiles-action.md) und [MoveFiles.](movefiles-action.md)
 
-Verwenden Sie die [duplicatefiles-Aktion](duplicatefiles-action.md) , um die Dateien anzugeben, die das Installationsprogramm in der [duplicatefile-Tabelle](duplicatefile-table.md)duplizieren soll. Verwenden Sie die [Aktion movefiles](movefiles-action.md), um zu bestimmen, welche Dateien verschoben werden sollen, indem Sie die [MoveFile-Tabelle](movefile-table.md)Abfragen.
+Verwenden Sie die [DuplicateFiles-Aktion,](duplicatefiles-action.md) um die Dateien anzugeben, die das Installationsprogramm in der [DuplicateFile-Tabelle duplizieren](duplicatefile-table.md)soll. Verwenden Sie die [MoveFiles-Aktion,](movefiles-action.md)um zu bestimmen, welche Dateien verschoben werden sollen, indem Sie die [MoveFile-Tabelle](movefile-table.md)abfragen.
 
-Beachten Sie, dass das Options Feld der [Tabelle "muvefile](movefile-table.md) " angibt, ob die ursprüngliche Datei aus Ihrem aktuellen Speicherort gelöscht werden soll. Dateien, die von der Aktion "muvefiles" verschoben oder kopiert werden, werden bei der Installation des Produkts nicht gelöscht.
+Beachten Sie, dass das Feld Optionen der [Tabelle MoveFile](movefile-table.md) angibt, ob die ursprüngliche Datei vom aktuellen Speicherort gelöscht werden soll. Dateien, die von der MoveFiles-Aktion verschoben oder kopiert werden, werden nicht gelöscht, wenn das Produkt deinstalliert wird.
 
-Die [Aktion InstallFiles](installfiles-action.md) wird aufgerufen, sobald alle anderen Datei Bearbeitungsvorgänge abgeschlossen wurden. Die Aktion InstallFiles verarbeitet die [Medien Tabelle](media-table.md), die [Dateitabelle](file-table.md)und die [Komponenten Tabelle](component-table.md) , um zu bestimmen, welche Dateien aus der Quelle in das Ziel kopiert werden.
+Die [InstallFiles-Aktion](installfiles-action.md) wird aufgerufen, sobald alle anderen Dateibearbeitungsvorgänge abgeschlossen sind. Die InstallFiles-Aktion verarbeitet die [Medientabelle,](media-table.md)die [Dateitabelle](file-table.md)und die [Komponententabelle,](component-table.md) um zu bestimmen, welche Dateien aus der Quelle in das Ziel kopiert werden.
 
-Mit der [Aktion InstallFiles](installfiles-action.md) wird die Verzeichnisstruktur erstellt, die für die Installation aller Dateien erforderlich ist. Wenn ein explizit leerer Ordner installiert werden muss, kann die Aktion "up [Folder](createfolders-action.md) " aufgerufen werden, um Sie zu erstellen.
+Die [Aktion InstallFiles](installfiles-action.md) erstellt die Verzeichnisstruktur, die zum Installieren aller Dateien erforderlich ist. Wenn ein explizit leerer Ordner installiert werden muss, kann die [CreateFolders-Aktion](createfolders-action.md) aufgerufen werden, um ihn zu erstellen.
 
  
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentouesf autoincrementvaluesexception-Konstruktor.
-title: Esentoudef autoincrementvaluesexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentOutOfAutoincrementValuesException-Konstruktor'
+title: EsentOutOfAutoincrementValuesException-Konstruktor
 TOCTitle: 'EsentOutOfAutoincrementValuesException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfAutoincrementValuesException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofautoincrementvaluesexception.esentoutofautoincrementvaluesexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 76360bad271d17b76d4496a222f2936e0547d07c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed45aac2dc4c8bd2ddc7611a28655e1f4b14af398c74f4566ffb630bf210ed1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118262811"
 ---
-# <a name="esentoutofautoincrementvaluesexception-constructor"></a>Esentoudef autoincrementvaluesexception-Konstruktor
+# <a name="esentoutofautoincrementvaluesexception-constructor"></a>EsentOutOfAutoincrementValuesException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesf autoincrementvaluesexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfAutoincrementValuesException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentOutOfAutoincrementValuesException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentouto f autoincrementvaluesexception-Klasse](./esentoutofautoincrementvaluesexception-class.md)
+[EsentOutOfAutoincrementValuesException-Klasse](./esentoutofautoincrementvaluesexception-class.md)
 
-[Esentouto fautoincrementvaluesexception-Member](./esentoutofautoincrementvaluesexception-members.md)
+[EsentOutOfAutoincrementValuesException-Member](./esentoutofautoincrementvaluesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

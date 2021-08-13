@@ -1,26 +1,26 @@
 ---
-title: VML-Attribut "CropTop"
-description: VML-Attribut "CropTop"
+title: VML-CropTop-Attribut
+description: VML-CropTop-Attribut
 ms.assetid: b54939b6-0505-43b0-bf82-c3df82dc2633
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea8b2606c7ac5835caeecc145a885de48eaeaf8d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f8c66351941c789216eb484ee2a25c090d95df0d2c67a60133bbe7ac4cab44a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118601507"
 ---
-# <a name="vml-croptop-attribute"></a>VML-Attribut "CropTop"
+# <a name="vml-croptop-attribute"></a>VML-CropTop-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Prozentsatz der Bild Entfernung von der oberen Seite aus. Lese-/Schreibzugriff. **Vgnumber**.
+Definiert den Prozentsatz der Entfernung des Bilds von der oberen Seite. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert den Prozentsatz der Bild Entfernung von der oberen Seite aus. Lese-/Sc
 
 **Tagsyntax**
 
-<v: *Element* CropTop = " *Expression* " >
+<v: *element* croptop=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . CropTop = "*Ausdruck*"
+*element* .croptop="*expression*"
 
-*Ausdruck* = *Element*. CropTop
+*expression* = *Element*.croptop
 
 **Anmerkungen**
 
-Der Wert für das Zuschneiden kann zwischen-1,0 und 1,0 liegen. Der Standardwert ist 0. Beachten Sie, dass bei einem Wert von 1 überhaupt kein Bild angezeigt wird. Negative Werte führen dazu, dass das Bild von der Kante, die zugeschnitten wird, nach innen gedrückt wird (der leere Bereich zwischen dem Bild und dem Rand der Kante wird durch die Füllfarbe der Form aufgefüllt). Positive Werte kleiner als 1 führen dazu, dass das verbleibende Bild so gestreckt wird, dass es der Form entspricht.
+Die Zuschneidemenge kann zwischen -1,0 und 1,0 liegen. Der Standardwert ist 0. Beachten Sie, dass der Wert 1 überhaupt kein Bild anzeigt. Negative Werte führen dazu, dass das Bild von der zugeschnittenen Kante nach innen gezogen wird (der leere Bereich zwischen dem Bild und dem zugeschnittenen Rand wird durch die Füllfarbe der Form gefüllt). Positive Werte kleiner als 1 führen dazu, dass das verbleibende Bild gestreckt wird, um die Form anzupassen.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Das Bild wird am unteren Rand der Form in einen schmalen Farbname gedrückt.
+Das Bild wird am unteren Rand der Form in einen schmalen Slaiver umgewandelt.
 
 
 ```HTML
@@ -61,6 +61,6 @@ Das Bild wird am unteren Rand der Form in einen schmalen Farbname gedrückt.
 
 
 
- 
+ 
 
- 
+ 

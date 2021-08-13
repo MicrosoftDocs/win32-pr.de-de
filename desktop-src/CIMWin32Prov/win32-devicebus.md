@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 devicebus Association" verknüpft einen Systembus und ein logisches Gerät mithilfe des Busses. Diese Klasse wird verwendet, um zu ermitteln, welche Geräte sich auf welchem Bus befinden.
+description: Die \_ WMI-Klasse für die Win32 DeviceBus-Zuordnung verbindet einen Systembus und ein logisches Gerät mithilfe des Bus. Diese Klasse wird verwendet, um zu entdecken, welche Geräte sich in welchem Bus befinden.
 ms.assetid: 2d7d83a5-c058-40c0-aab3-7700f4067a16
 ms.tgt_platform: multiple
 title: Win32_DeviceBus-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 2dde01ee6b3f3be026dbc19f8c4b8e2c238f4ff2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: fc8c6c8cb1d83d31539fa405d09d60db2de68089d82213d08ee9ba8f0491a731
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439160"
 ---
-# <a name="win32_devicebus-class"></a>Win32 \_ devicebus-Klasse
+# <a name="win32_devicebus-class"></a>Win32 \_ DeviceBus-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ devicebus** Association" verknüpft einen Systembus und ein logisches Gerät mithilfe des Busses. Diese Klasse wird verwendet, um zu ermitteln, welche Geräte sich auf welchem Bus befinden.
+Die **WMI-Klasse \_ für die Win32 DeviceBus-Zuordnung** verbindet einen Systembus und ein logisches Gerät mithilfe des Bus. [](/windows/desktop/WmiSdk/retrieving-a-class) Diese Klasse wird verwendet, um zu entdecken, welche Geräte sich in welchem Bus befinden.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ class Win32_DeviceBus : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ devicebus** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ DeviceBus-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ devicebus** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ DeviceBus-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Bus**
+Datentyp: **Win32 \_ Bus**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ Bus")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ Bus")
 </dt> </dl>
 
-Ein [**Win32- \_ Bus**](win32-bus.md) , der die Eigenschaften des Systembus beschreibt, die vom logischen Gerät verwendet werden.
+Ein [**\_ Win32-Bus,**](win32-bus.md) der die Eigenschaften des Systembus beschreibt, der vom logischen Gerät verwendet wird.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -77,16 +77,16 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| CIM \_ LogicalDevice")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das die Eigenschaften des logischen Geräts beschreibt, von dem der Systembus verwendet wird.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) das die Eigenschaften des logischen Geräts beschreibt, das den Systembus verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ devicebus** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **Win32 \_ DeviceBus-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](cim-dependency.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,20 +96,20 @@ Die **Win32 \_ devicebus** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

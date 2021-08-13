@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-Eigenschaft (enablemouse)
-description: Diese Eigenschaft wird nicht unterstützt. | Imsrdpclientadvancedsettings-Eigenschaft (enablemouse)
+title: IMsRdpClientAdvancedSettings EnableMouse-Eigenschaft
+description: Diese Eigenschaft wird nicht unterstützt. | IMsRdpClientAdvancedSettings EnableMouse-Eigenschaft
 ms.assetid: 4f60fdfc-e1b9-4ac2-98e4-49331b072883
 ms.tgt_platform: multiple
 keywords:
-- Enablemouse-Eigenschaft Remotedesktopdienste
-- Enablemouse-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
-- Enablemouse-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, enablemouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
+- EnableMouse-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , EnableMouse-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,14 +54,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0495ba7b48e431efe5746f40b353b5c1ad701d6a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: bb61f7763f92c46a80a7e0e45c5c476f4d3b64e7cbb735ba1e254641d90dae4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118608698"
 ---
-# <a name="imsrdpclientadvancedsettingsenablemouse-property"></a>Imsrdpclientadvancedsettings:: enablemouse-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsenablemouse-property"></a>IMsRdpClientAdvancedSettings::EnableMouse-Eigenschaft
 
 Diese Eigenschaft wird nicht unterstützt.
 
@@ -84,13 +84,13 @@ HRESULT get_EnableMouse(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Funktion zu deaktivieren, oder einen Wert ungleich NULL, um das Feature zu aktivieren.
+Legen Sie diesen Parameter auf 0 fest, um das Feature zu deaktivieren, oder einen Wert ungleich 0 (null), um das Feature zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **" \_ false**" zurück.
+Gibt **S \_ FALSE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,11 +106,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

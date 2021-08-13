@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-CachePolicy-Attribut
-description: Optionen für die Bedarfs gesteuerte Cache Richtlinie.
+title: ms-DFSR-CachePolicy-Attribut
+description: Bedarfsbasierte Cacherichtlinienoptionen.
 ms.assetid: a8754b4f-ebb3-446e-81ca-8b009f55a716
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-CachePolicy-Attribut, AD-Schema
-- msdfsr-CachePolicy-Attribut AD-Schema
+- AD-Schema des ms-DFSR-CachePolicy-Attributs
+- AD-Schema des msDFSR-CachePolicy-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 028803046dd34ac4a1566dd465d12bdca194e80d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c2a428329c9ebf7e6e7154bc7ae30c531bbcd9f42adabd3f10259e5780434ce7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118686056"
 ---
-# <a name="ms-dfsr-cachepolicy-attribute"></a>MS-DFSR-CachePolicy-Attribut
+# <a name="ms-dfsr-cachepolicy-attribute"></a>ms-DFSR-CachePolicy-Attribut
 
-Optionen für die Bedarfs gesteuerte Cache Richtlinie.
+Bedarfsbasierte Cacherichtlinienoptionen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DFSR-CachePolicy                  |
-| LDAP-Display-Name | msdfsr-CachePolicy                   |
+| CN                | ms-DFSR-CachePolicy                  |
+| Ldap-Anzeigename | msDFSR-CachePolicy                   |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.29           |
-| System-ID-GUID    | db7a08e7-fc76-4569-a45f-f5ecb66a88b5 |
+| System-Id-Guid    | db7a08e7-fc76-4569-a45f-f5ecb66a88b5 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,16 +54,16 @@ Optionen für die Bedarfs gesteuerte Cache Richtlinie.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Optionen für die Bedarfs gesteuerte Cache Richtlinie.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Optionen für die Bedarfs gesteuerte Cache Richtlinie.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 

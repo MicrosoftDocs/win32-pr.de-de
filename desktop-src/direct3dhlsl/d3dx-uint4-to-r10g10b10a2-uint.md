@@ -1,6 +1,6 @@
 ---
 title: D3DX_UINT4_to_R10G10B10A2_UINT-Funktion
-description: Packt den angegebenen XMINT4 zurück in ein DXGI- \_ Format \_ R10G10B10A2 \_ uint.
+description: Packt den angegebenen XMINT4 wieder in ein DXGI \_ FORMAT \_ R10G10B10A2 \_ UINT.
 ms.assetid: fe10c62e-2d84-4f6b-886b-247ee344f6c7
 keywords:
 - D3DX_UINT4_to_R10G10B10A2_UINT-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bfc7076b9e44ab1491bb8abbf8d4edb82158282c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c33420ca720ce2e605a378340926f86651a39e6e7f4c787c83d5e4ba2b15a8f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118286475"
 ---
-# <a name="d3dx_uint4_to_r10g10b10a2_uint-function"></a>D3DX \_ UINT4 \_ to \_ R10G10B10A2 \_ uint-Funktion
+# <a name="d3dx_uint4_to_r10g10b10a2_uint-function"></a>D3DX \_ UINT4 \_ bis \_ R10G10B10A2 \_ UINT-Funktion
 
-Packt den angegebenen XMINT4 zurück in ein DXGI- \_ Format \_ R10G10B10A2 \_ uint.
+Packt den angegebenen XMINT4 wieder in ein DXGI \_ FORMAT \_ R10G10B10A2 \_ UINT.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,24 +37,24 @@ UINT D3DX_UINT4_to_R10G10B10A2_UINT(
 
 <dl> <dt>
 
-*unpackedinput* 
+*unpackedInput* 
 </dt> <dd>
 
-Die zu Packungs-Shader-Daten.
+Die zu packenden Shaderdaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die gepackten Shader-Daten.
+Die gepackten Shaderdaten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die gepackten Shader-Daten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

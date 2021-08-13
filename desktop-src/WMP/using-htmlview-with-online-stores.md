@@ -1,25 +1,25 @@
 ---
-title: Verwenden von HtmlView mit Online Stores
-description: Verwenden von HtmlView mit Online Stores
+title: Verwenden von HTMLView mit Onlineshops
+description: Verwenden von HTMLView mit Onlineshops
 ms.assetid: 78de7ef3-400c-4411-8ade-35c421805df8
 keywords:
-- Windows Media Player Online Stores, HtmlView
-- Online Stores, HtmlView
-- Typ 1 Online Stores, HtmlView
-- Typ 2 Online Stores, HtmlView
-- HtmlView, Online Stores
+- Windows Media Player,HTMLView
+- Onlineshops,HTMLView
+- Typ 1 Onlineshops,HTMLView
+- Typ 2 Onlineshops,HTMLView
+- HTMLView,Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d136be4f7866b6911b8b007de7e784d6133c217
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9f3d5e89e2d0eaff2d51f8fa03281bf1ce85878b1863df619c28cdd228beb1eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119465890"
 ---
-# <a name="using-htmlview-with-online-stores"></a>Verwenden von HtmlView mit Online Stores
+# <a name="using-htmlview-with-online-stores"></a>Verwenden von HTMLView mit Onlineshops
 
-In Windows Media Player werden Benutzer aufgefordert, die Berechtigung zum Anzeigen von HtmlView-Inhalt in **jetzt Wiedergabe** anzuzeigen. Online Stores können diese Eingabeaufforderung deaktivieren, indem Sie im **HtmlView** -Element des serviceInfo-Dokuments einen Basis-URL-Wert angeben. Wenn Windows Media Player eine Wiedergabeliste öffnet, die den zu Anzeige enden HtmlView-Inhalt angibt, vergleicht der Player die Basis-URL des serviceInfo-Dokuments des aktuellen aktiven Online Stores mit der Basis-URL des HtmlView-Inhalts. Wenn diese Stimmen, zeigt Windows Media Player den HtmlView-Inhalt an, ohne den Benutzer aufzufordern.
+Windows Media Player fordert Benutzer auf, die Berechtigung zum Anzeigen von HTMLView-Inhalten in **Now Playing zu erteilen.** Onlineshops können diese Eingabeaufforderung deaktivieren, indem sie einen Basis-URL-Wert im **HTMLView-Element** des ServiceInfo-Dokuments angeben. Wenn Windows Media Player eine Wiedergabeliste öffnet, die anzuzeigenden HTMLView-Inhalt angibt, vergleicht der Player die Basis-URL aus dem ServiceInfo-Dokument des aktuellen aktiven Onlineshops mit der Basis-URL des HTMLView-Inhalts. Wenn sie übereinstimmen, Windows Media Player den HTMLView-Inhalt anzeigen, ohne den Benutzer dazu aufforderungen zu müssen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -28,15 +28,15 @@ In Windows Media Player werden Benutzer aufgefordert, die Berechtigung zum Anzei
 [**Anzeigen von Webseiten in Windows Media Player**](displaying-web-pages-in-windows-media-player.md)
 </dt> <dt>
 
-[**HtmlView-Element**](htmlview-element.md)
+[**HTMLView-Element**](htmlview-element.md)
 </dt> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

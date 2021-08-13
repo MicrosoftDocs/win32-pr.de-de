@@ -1,36 +1,36 @@
 ---
-title: COM-Fehler Codes
-description: Die folgenden Themen enthalten eine Liste der Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Header Datei "Winerror. h" definiert.
+title: COM-Fehlercodes
+description: Die folgenden Themen enthalten Listen mit Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Winerror.h-Headerdatei definiert.
 ms.assetid: 373671fe-489e-4f12-afe5-b7541f32441b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8317eb9ad5281f99ccd494c228b03d2d2142c5b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9743eb419c6af179d351ace4784d2cc251b12153da1edb7c3d0a743592eec150
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118550603"
 ---
-# <a name="com-error-codes"></a>COM-Fehler Codes
+# <a name="com-error-codes"></a>COM-Fehlercodes
 
-Die folgenden Themen enthalten eine Liste der Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Header Datei "Winerror. h" definiert.
+Die folgenden Themen enthalten Listen mit Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Winerror.h-Headerdatei definiert.
 
--   [**COM-Fehler Codes (generisch)**](com-error-codes-1.md)
--   [**COM-Fehler Codes (XACT, sched, OLE)**](com-error-codes-2.md)
--   [**COM-Fehler Codes (STG, RPC)**](com-error-codes-3.md)
--   [**COM-Fehler Codes (Sicherheit und Setup)**](com-error-codes-4.md)
--   [**COM-Fehler Codes (COMAdmin, Filter, Grafiken)**](com-error-codes-5.md)
--   [**COM-Fehler Codes (TPM, Pla, f)**](com-error-codes-6.md)
--   [**COM-Fehler Codes ("f", "WS", "NDIS", HyperV)**](com-error-codes-7.md)
--   [**COM-Fehler Codes (VOLMGR, BCD, VHD, sdiag)**](com-error-codes-8.md)
--   [**COM-Fehler Codes (WPN, MBN, P2P, Bluetooth)**](com-error-codes-9.md)
--   [**COM-Fehler Codes (UI, Audiodatei, DirectX, Codec)**](com-error-codes-10.md)
+-   [**COM-Fehlercodes (generisch)**](com-error-codes-1.md)
+-   [**COM-Fehlercodes (XACT, SCHED, OLE)**](com-error-codes-2.md)
+-   [**COM-Fehlercodes (STG, RPC)**](com-error-codes-3.md)
+-   [**COM-Fehlercodes (Sicherheit und Setup)**](com-error-codes-4.md)
+-   [**COM-Fehlercodes (COMADMIN, FILTER, GRAPHICS)**](com-error-codes-5.md)
+-   [**COM-Fehlercodes (TPM, PLA, FVE)**](com-error-codes-6.md)
+-   [**COM-Fehlercodes (FWP, WS, NDIS, HyperV)**](com-error-codes-7.md)
+-   [**COM-Fehlercodes (VOLMGR, BCD, VHD, SDIAG)**](com-error-codes-8.md)
+-   [**COM-Fehlercodes (WPN, MBN, P2P, Bluetooth)**](com-error-codes-9.md)
+-   [**COM-Fehlercodes (Benutzeroberfläche, Audio, DirectX, Codec)**](com-error-codes-10.md)
 
-Wenn Sie Probleme mit einer Anwendung haben, die Sie installieren oder ausführen, wenden Sie sich an den Kundensupport für die Software, die die Fehlermeldung anzeigt. Um Unterstützung für ein Microsoft-Produkt zu erhalten, navigieren Sie zu [https://support.microsoft.com](https://support.microsoft.com) .
+Wenn Sie Probleme mit einer Anwendung haben, die Sie installieren oder ausführen, wenden Sie sich an den Kundensupport für die Software, die die Fehlermeldung angezeigt. Um Support für ein Microsoft-Produkt zu erhalten, wechseln Sie zu [https://support.microsoft.com](https://support.microsoft.com) .
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Security-Element (systempropertiestype)
+title: Security (SystemPropertiesType)-Element
 description: Identifiziert den Benutzer, der das Ereignis protokolliert hat.
 ms.assetid: f421b0c3-96ea-440c-a3b2-0ddd8f327eec
 keywords:
-- Sicherheitselement-Ereignisprotokoll
+- Security-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b793193d7afdfde5fd515252a024432ed45ff8b3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 20aef5465b8790bdba92c50181c0550ca5989c29d66fd53b9ec7ed0f760a2129
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118588286"
 ---
-# <a name="security-systempropertiestype-element"></a>Security-Element (systempropertiestype)
+# <a name="security-systempropertiestype-element"></a>Security (SystemPropertiesType)-Element
 
 Identifiziert den Benutzer, der das Ereignis protokolliert hat.
 
@@ -35,15 +35,15 @@ Identifiziert den Benutzer, der das Ereignis protokolliert hat.
 </xs:element>
 ```
 
-Das **Security** -Element wird durch den komplexen [**systempropertiestype**](eventschema-systempropertiestype-complextype.md) -Typ definiert.
+Das **Security-Element** wird vom komplexen [**SystemPropertiesType-Typ**](eventschema-systempropertiestype-complextype.md) definiert.
 
 ## <a name="attributes"></a>Attributes
 
 
 
-| Name   | type   | BESCHREIBUNG                                                          |
+| Name   | Typ   | BESCHREIBUNG                                                          |
 |--------|--------|----------------------------------------------------------------------|
-| UserID | Zeichenfolge | Die Sicherheits-ID (SID) des Benutzers in Form einer Zeichenfolge.<br/> |
+| UserID | Zeichenfolge | Die Sicherheits-ID (SID) des Benutzers in Zeichenfolgenform.<br/> |
 
 
 
@@ -53,8 +53,8 @@ Das **Security** -Element wird durch den komplexen [**systempropertiestype**](ev
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

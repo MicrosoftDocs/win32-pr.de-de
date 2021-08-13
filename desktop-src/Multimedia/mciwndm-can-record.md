@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_CAN_RECORD Meldung (VFW. h)
-description: Die mciwndm \_ kann die \_ Meldung aufzeichnen, ob ein MCI-Gerät eine Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des mciwndcanrecord-Makros senden.
+title: MCIWNDM_CAN_RECORD-Nachricht (Vfw.h)
+description: Die MCIWNDM \_ CAN \_ RECORD-Nachricht bestimmt, ob ein MCI-Gerät die Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des MCIWndCanRecord-Makros senden.
 ms.assetid: b5a789fa-6a88-487d-a374-8f4798ee5a62
 keywords:
-- MCIWNDM_CAN_RECORD-Nachricht (Multimedia)
+- MCIWNDM_CAN_RECORD Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2acbc9efa3ca973c12112a599d1202ad936107a9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5df46ce0cbffe17f890e50159a13a93192e67f60e323d6ba711bee6af7ac3f79
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119429650"
 ---
-# <a name="mciwndm_can_record-message"></a>Mciwndm \_ kann \_ Nachricht aufzeichnen
+# <a name="mciwndm_can_record-message"></a>MCIWNDM \_ CAN \_ RECORD message
 
-Die **mciwndm \_ kann \_** die Meldung aufzeichnen, ob ein MCI-Gerät eine Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des [**mciwndcanrecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord) -Makros senden.
+Die **MCIWNDM \_ CAN \_ RECORD-Nachricht** bestimmt, ob ein MCI-Gerät die Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndCanRecord-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn das Gerät eine Aufzeichnung unterstützt oder andernfalls **false** .
+Gibt **TRUE** zurück, wenn das Gerät die Aufzeichnung unterstützt, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,15 +46,15 @@ Gibt **true** zurück, wenn das Gerät eine Aufzeichnung unterstützt oder ander
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Mciwndcanrecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord)
+[**MCIWndCanRecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord)
 </dt> </dl>
 
  

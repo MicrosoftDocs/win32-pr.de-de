@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvcolumndefaultvaluenotallowedexception-Klasse'
-title: Esentslvcolumndefaultvaluenotallowedexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentSLVColumnDefaultValueNotAllowedException-Klasse'
+title: EsentSLVColumnDefaultValueNotAllowedException-Klasse
 TOCTitle: EsentSLVColumnDefaultValueNotAllowedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSLVColumnDefaultValueNotAllowedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvcolumndefaultvaluenotallowedexception(v=EXCHG.10)
@@ -24,27 +24,27 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d8540c43e53bc9f2ab36ba5d0897e4cefd39c40d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b74c98e06d6d3e81c5147d0173be67a29450ca2d50bdfe5a34106f85e556bd55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118259849"
 ---
-# <a name="esentslvcolumndefaultvaluenotallowedexception-class"></a>Esentslvcolumndefaultvaluenotallowedexception-Klasse
+# <a name="esentslvcolumndefaultvaluenotallowedexception-class"></a>EsentSLVColumnDefaultValueNotAllowedException-Klasse
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentslvcolumndefaultvaluenotallowedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSLVColumnDefaultValueNotAllowedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,6 +70,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Referenz
 
-[Esentslvcolumndefaultvaluenotallowedexception-Elemente](./esentslvcolumndefaultvaluenotallowedexception-members.md)
+[EsentSLVColumnDefaultValueNotAllowedException-Member](./esentslvcolumndefaultvaluenotallowedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

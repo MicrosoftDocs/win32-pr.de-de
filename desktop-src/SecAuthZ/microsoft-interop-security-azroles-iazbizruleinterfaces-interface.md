@@ -1,7 +1,7 @@
 ---
-description: Links zur Dokumentation für die iazbizruleintergesichter-Interoperabilitäts Wrapper Methoden und-Eigenschaften.
+description: Links zur Dokumentation für die IAzBizRuleInterfaces-Interoperabilitäts-Wrappermethoden und -Eigenschaften.
 ms.assetid: 2c9474e3-01d0-412d-9028-89a377d5592d
-title: Microsoft. Interop. Security. azrollen. iazbizruleinterfaces-Schnittstelle
+title: Microsoft.Interop.Security.AzRoles.IAzBizRuleInterfaces-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -27,37 +27,37 @@ api_type:
 - COM
 api_location:
 - Microsoft.Interop.Security.Azroles.dll
-ms.openlocfilehash: 67ff4b0742eb73eda1495cb8366e36cdfd2c8c3d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e40a637e0c8689999fd22572e704956d5c5e3ac35442a4ca1f93df8fb8d4be49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119414250"
 ---
-# <a name="microsoftinteropsecurityazrolesiazbizruleinterfaces-interface"></a>Microsoft. Interop. Security. azrollen. iazbizruleinterfaces-Schnittstelle
+# <a name="microsoftinteropsecurityazrolesiazbizruleinterfaces-interface"></a>Microsoft.Interop.Security.AzRoles.IAzBizRuleInterfaces-Schnittstelle
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleinterfaces** -Interoperabilitäts Wrapper-Methoden und-Eigenschaften sind unter der com-Version der-Methode oder der-Eigenschaft dokumentiert. Ein Link zur korrelierenden com-Dokumentation folgt den einzelnen Elementnamen.
+Die Interoperabilitäts-Wrappermethoden und -eigenschaften von **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces** sind in der COM-Version der Methode oder Eigenschaft dokumentiert. Auf jeden Membernamen folgt ein Link zur korrelierenden COM-Dokumentation.
 
 ## <a name="members"></a>Member
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleinterfaces** -Schnittstelle verfügt über diese Typen von Membern:
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzBizRuleInterfaces** verfügt über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleinterfaces** -Schnittstelle verfügt über diese Methoden.
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzBizRuleInterfaces** verfügt über diese Methoden.
 
 
 
-| Methode                                                                        | BESCHREIBUNG                                                                                                 |
+| Methode                                                                        | Beschreibung                                                                                                 |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazbizruleinterfaces. AddInterface**      | [**Iazbizruleintergesichter:: AddInterface**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterface)<br/>                  |
-| **Microsoft. Interop. Security. azrollen. iazbizruleintergesichter. addinterfaces**     | [**Iazbizruleintergesichter:: addinterfaces**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterfaces)<br/>         |
-| **Microsoft. Interop. Security. azrollen. iazbizruleintergesichter. getinterfakevalue** | [**Iazbizruleintergesichter:: getinterfakevalue**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-getinterfacevalue)<br/> |
-| **Microsoft. Interop. Security. azrollen. iazbizruleintergesichter. Remove**            | [**Iazbizruleintergesichter:: Remove**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-remove)<br/>                       |
-| **Microsoft. Interop. Security. azrollen. iazbizruleintergesichter. RemoveAll**         | [**Iazbizruleintergesichter:: RemoveAll**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-removeall)<br/>                 |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces.AddInterface**      | [**IAzBizRuleInterfaces::AddInterface**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterface)<br/>                  |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces.AddInterfaces**     | [**IAzBizRuleInterfaces::AddInterfaces**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterfaces)<br/>         |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces.GetInterfaceValue** | [**IAzBizRuleInterfaces::GetInterfaceValue**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-getinterfacevalue)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces.Remove**            | [**IAzBizRuleInterfaces::Remove**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-remove)<br/>                       |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces.RemoveAll**         | [**IAzBizRuleInterfaces::RemoveAll**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-removeall)<br/>                 |
 
 
 
@@ -65,13 +65,13 @@ Die **Microsoft. Interop. Security. azrollen. iazbizruleinterfaces** -Schnittste
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleinterfaces** -Schnittstelle verfügt über diese Eigenschaften.
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzBizRuleInterfaces** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                     | Zugriffstyp          | BESCHREIBUNG                                                                                    |
+| Eigenschaft                                                                     | Zugriffstyp          | Beschreibung                                                                                    |
 |:-----------------------------------------------------------------------------|:---------------------|:-----------------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazbizruleintergesichter. Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von iazbizruleintergesichter**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-get_count)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleInterfaces.Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von IAzBizRuleInterfaces**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-get_count)<br/> |
 
 
 

@@ -1,15 +1,15 @@
 ---
-description: Erstellt ein vom Teststammschlüssel oder einem anderen angegebenen Schlüssel signiertes X.509-Zertifikat, das Ihren Namen an den öffentlichen Teil des Schlüsselpaars bindet. Das Zertifikat wird in einer Datei, in einem Systemzertifikatspeicher oder in beiden gespeichert.
+description: Erstellt ein X.509-Zertifikat, das vom Teststammschlüssel oder einem anderen angegebenen Schlüssel signiert wird, das Ihren Namen an den öffentlichen Teil des Schlüsselpaars bindet. Das Zertifikat wird in einer Datei, einem Systemzertifikatspeicher oder beidem gespeichert.
 ms.assetid: a28e77dd-72c9-42a3-a72d-1b3eaf59d9cf
 title: MakeCert
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 461c15db364066d9edadb6a0c4d2c24dceab5cc9
-ms.sourcegitcommit: dc2f43e0f23f4a4ce239118cf9a5180f3ff0dd1d
+ms.openlocfilehash: acd9f15f942fb6dd7c4c831cb33552b6f59ec2cd6cf9cac9654386d6adc27649
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "108327144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119425740"
 ---
 # <a name="makecert"></a>MakeCert
 
@@ -18,23 +18,23 @@ ms.locfileid: "108327144"
 
  
 
-Das MakeCert-Tool erstellt ein [*X.509-Zertifikat,*](../secgloss/x-gly.md) das vom Teststammschlüssel oder einem anderen angegebenen Schlüssel signiert wurde, das Ihren Namen an den öffentlichen Teil des Schlüsselpaars bindet. Das Zertifikat wird in einer Datei, in einem Systemzertifikatspeicher oder in beiden gespeichert. Das Tool wird im \\ Ordner Bin des Installationspfads microsoft Windows Software Development Kit (SDK) installiert.
+Das MakeCert-Tool erstellt ein [*X.509-Zertifikat,*](../secgloss/x-gly.md) das vom Teststammschlüssel oder einem anderen angegebenen Schlüssel signiert wird, das Ihren Namen an den öffentlichen Teil des Schlüsselpaars bindet. Das Zertifikat wird in einer Datei, einem Systemzertifikatspeicher oder beidem gespeichert. Das Tool wird im Ordner \\ Bin des Installationspfads des Microsoft Windows Software Development Kit (SDK) installiert.
 
 Das MakeCert-Tool verwendet die folgende Befehlssyntax:
 
 **MakeCert** \[ *BasicOptions* \| *ExtendedOptions* \] *OutputFile*
 
-*OutputFile* ist der Name der Datei, in die das Zertifikat geschrieben wird. Sie können *OutputFile* weglassen, wenn das Zertifikat nicht in eine Datei geschrieben werden soll.
+*OutputFile* ist der Name der Datei, in die das Zertifikat geschrieben wird. Sie können *OutputFile weglassen,* wenn das Zertifikat nicht in eine Datei geschrieben werden soll.
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>Tastatur
 
 MakeCert enthält grundlegende und erweiterte Optionen. Meistens werden die Basisoptionen zum Erstellen von Zertifikaten verwendet. Die erweiterten Optionen stellen eine höhere Flexibilität zur Verfügung.
 
 Die Optionen für MakeCert sind auch in drei Funktionsgruppen unterteilt:
 
--   Grundlegende Optionen, die nur für Zertifikatspeichertechnologie spezifisch sind.
+-   Grundlegende Optionen, die nur für die Zertifikatspeichertechnologie spezifisch sind.
 -   Erweiterte Optionen, die nur für SPC-Datei- und Private Key-Technologie spezifisch sind.
--   Erweiterte Optionen für SPC-Datei, privaten Schlüssel und Zertifikatspeichertechnologie.
+-   Erweiterte Optionen, die für SPC-Datei-, private Schlüssel- und Zertifikatspeichertechnologie gelten.
 
 Die in den folgenden Tabellen angegebenen Optionen können nur mit Internet Explorer 4.0 oder höher verwendet werden.
 
@@ -48,7 +48,7 @@ Die in den folgenden Tabellen angegebenen Optionen können nur mit Internet Expl
 <thead>
 <tr class="header">
 <th>Basic-Option</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -86,7 +86,7 @@ Die in den folgenden Tabellen angegebenen Optionen können nur mit Internet Expl
 </tr>
 <tr class="odd">
 <td><strong>-n</strong> <strong>&quot;</strong> <em>Name</em><strong>&quot;</strong></td>
-<td>Name für das Zertifikat des Herausgebers. Dieser Name muss dem <a href="/windows/desktop/SecGloss/x-gly"><em>X.500-Standard</em></a> entsprechen. Die einfachste Methode ist die Verwendung des &quot; CN=<em>MyName-Formats.</em> &quot; Beispiel: <strong>-n &quot; CN=Test &quot; </strong>.</td>
+<td>Name für das Zertifikat des Herausgebers. Dieser Name muss dem <a href="/windows/desktop/SecGloss/x-gly"><em>X.500-Standard</em></a> entsprechen. Die einfachste Methode ist die Verwendung des &quot; Formats CN=<em>MyName.</em> &quot; Beispiel: <strong>-n &quot; CN=Test &quot; </strong>.</td>
 </tr>
 <tr class="even">
 <td><strong>-nscp</strong></td>
@@ -102,15 +102,15 @@ Die in den folgenden Tabellen angegebenen Optionen können nur mit Internet Expl
 </tr>
 <tr class="odd">
 <td><strong>-sc</strong> <strong></strong> <em>SubjectCertFile</em></td>
-<td>Name der Zertifikatdatei mit dem vorhandenen öffentlichen Schlüssel des Antragstellers, der verwendet werden soll.</td>
+<td>Der Name der Zertifikatdatei mit dem vorhandenen öffentlichen Schlüssel des Betreffs, der verwendet werden soll.</td>
 </tr>
 <tr class="even">
 <td><strong>-sk</strong> <strong></strong> <em>SubjectKey</em></td>
-<td>Speicherort des Schlüsselcontainers des Antragstellers, der den <a href="/windows/desktop/SecGloss/p-gly"><em>privaten Schlüssel</em></a>enthält. Wenn kein Schlüsselcontainer vorhanden ist, wird ein Schlüsselcontainer erstellt. Wenn weder die Option <strong>-sk</strong> noch <strong>-sv</strong> verwendet wird, wird standardmäßig ein Standardschlüsselcontainer erstellt und verwendet.</td>
+<td>Speicherort des Schlüsselcontainers des Subjekts, der den <a href="/windows/desktop/SecGloss/p-gly"><em>privaten Schlüssel enthält.</em></a> Wenn kein Schlüsselcontainer vorhanden ist, wird ein Schlüsselcontainer erstellt. Wenn weder <strong>die Option -sk</strong> noch <strong>-sv</strong> verwendet wird, wird standardmäßig ein Standardschlüsselcontainer erstellt und verwendet.</td>
 </tr>
 <tr class="odd">
 <td><strong>-sky</strong> <strong></strong> <em>SubjectKeySpec</em></td>
-<td>Schlüsselspezifikation des Antragstellers. <em>SubjectKeySpec</em> muss einer von drei möglichen Werten sein:<br/>
+<td>Schlüsselspezifikation des Betreffs. <em>SubjectKeySpec</em> muss einer von drei möglichen Werten sein:<br/>
 <ul>
 <li><strong>Signatur</strong> (AT_SIGNATURE Schlüsselspezifikation)</li>
 <li><strong>Exchange</strong> (AT_KEYEXCHANGE Schlüsselspezifikation)</li>
@@ -124,7 +124,7 @@ Weitere Informationen finden Sie im Hinweis, der auf diese Tabelle folgt.<br/></
 </tr>
 <tr class="odd">
 <td><strong>-sr</strong> <strong></strong> <em>SubjectCertStoreLocation</em></td>
-<td>Der Registrierungsspeicherort des Zertifikatspeichers des Subjekts. <em>SubjectCertStoreLocation</em> muss entweder <strong>LocalMachine (Registrierungsschlüssel</strong> HKEY_LOCAL_MACHINE) oder <strong>CurrentUser</strong> (Registrierungsschlüssel)HKEY_CURRENT_USER. <strong>CurrentUser</strong> ist die Standardeinstellung.</td>
+<td>Der Registrierungsspeicherort des Zertifikatspeichers des Subjekts. <em>SubjectCertStoreLocation</em> muss entweder <strong>LocalMachine</strong> (Registrierungsschlüssel HKEY_LOCAL_MACHINE) oder <strong>CurrentUser</strong> (Registrierungsschlüssel)HKEY_CURRENT_USER. <strong>CurrentUser</strong> ist die Standardeinstellung.</td>
 </tr>
 <tr class="even">
 <td><strong>-ss</strong> <strong></strong> <em>SubjectCertStoreName</em></td>
@@ -136,7 +136,7 @@ Weitere Informationen finden Sie im Hinweis, der auf diese Tabelle folgt.<br/></
 </tr>
 <tr class="even">
 <td><strong>-sy</strong> <strong></strong> <em>nSubjectProviderType</em></td>
-<td>CryptoAPI-Anbietertyp für Betreff. Der Standardwert ist <a href="/windows/desktop/SecGloss/p-gly"><em>PROV_RSA_FULL</em></a>. Informationen zu CryptoAPI-Anbietertypen finden Sie in der CryptoAPI 2.0 Dokumentation.</td>
+<td>CryptoAPI-Anbietertyp für Betreff. Der Standardwert ist <a href="/windows/desktop/SecGloss/p-gly"><em>PROV_RSA_FULL.</em></a> Informationen zu CryptoAPI-Anbietertypen finden Sie in der CryptoAPI 2.0 Dokumentation.</td>
 </tr>
 <tr class="odd">
 <td><strong>-#</strong><strong></strong> <em>SerialNumber</em></td>
@@ -144,7 +144,7 @@ Weitere Informationen finden Sie im Hinweis, der auf diese Tabelle folgt.<br/></
 </tr>
 <tr class="even">
 <td><strong>-$</strong><strong></strong> <em>CertificateAuthority</em></td>
-<td>Typ der <a href="/windows/desktop/SecGloss/c-gly"><em>Zertifizierungsstelle.</em></a> <em>CertificateAuthority</em> muss entweder auf <strong>"commercial"</strong> (für Zertifikate, die von kommerziellen Softwareverlegern verwendet werden sollen) oder <strong>"Individual"</strong> (für Zertifikate, die von einzelnen Softwareverlegern verwendet werden sollen) festgelegt werden.</td>
+<td>Typ der <a href="/windows/desktop/SecGloss/c-gly"><em>Zertifizierungsstelle</em></a>. <em>CertificateAuthority</em> muss entweder auf "commercial" <strong>(für</strong> Zertifikate, die von kommerziellen Softwareherausgebern verwendet werden) oder einzeln <strong>(für</strong> Zertifikate, die von einzelnen Softwareherausgebern verwendet werden) festgelegt werden.</td>
 </tr>
 <tr class="odd">
 <td><strong>-?</strong></td>
@@ -162,7 +162,7 @@ Weitere Informationen finden Sie im Hinweis, der auf diese Tabelle folgt.<br/></
  
 
 > [!Note]  
-> Wenn die -sky-Schlüsselspezifikationsoption in Internet Explorer Version 4.0 oder höher verwendet wird, muss die Spezifikation mit der Schlüsselspezifikation übereinstimmen, die durch die Datei mit dem [*privaten Schlüssel*](../secgloss/p-gly.md) oder den [*Privaten Schlüsselcontainer*](../secgloss/k-gly.md)angegeben wird.  Wenn die Schlüsselspezifikationsoption nicht verwendet wird, wird die durch die Datei mit dem privaten Schlüssel oder den Privaten Schlüsselcontainer angegebene Schlüsselspezifikation verwendet. Wenn im Schlüsselcontainer mehrere Schlüsselspezifikationen vorhanden sind, versucht MakeCert zunächst, die AT \_ SIGNATURE-Schlüsselspezifikation zu verwenden. Wenn dies fehlschlägt, versucht MakeCert, AT \_ KEYEXCHANGE zu verwenden. Da die meisten Benutzer entweder über einen AT \_ SIGNATURE-Schlüssel oder einen AT \_ KEYEXCHANGE-Schlüssel verfügen, muss diese Option in den meisten Fällen nicht verwendet werden.
+> Wenn die **Option -sky** key specification in Internet Explorer Version 4.0 oder höher verwendet wird, [](../secgloss/p-gly.md) muss die Spezifikation mit der Schlüsselspezifikation übereinstimmen, die durch die Datei des privaten Schlüssels oder den Privaten Schlüsselcontainer [*angegeben wird.*](../secgloss/k-gly.md) Wenn die Schlüsselspezifikationsoption nicht verwendet wird, wird die von der Datei mit dem privaten Schlüssel oder dem Container für den privaten Schlüssel angegebene Schlüsselspezifikation verwendet. Wenn im Schlüsselcontainer mehrere Schlüsselspezifikationen vorhanden sind, versucht MakeCert zunächst, die AT \_ SIGNATURE-Schlüsselspezifikation zu verwenden. Wenn dies fehlschlägt, versucht MakeCert, AT \_ KEYEXCHANGE zu verwenden. Da die meisten Benutzer entweder über einen AT \_ SIGNATURE-Schlüssel oder einen AT \_ KEYEXCHANGE-Schlüssel verfügen, muss diese Option in den meisten Fällen nicht verwendet werden.
 
  
 
@@ -178,7 +178,7 @@ Die folgenden Optionen gelten nur für SPC-Dateien [*(Software Publisher Certifi
 <thead>
 <tr class="header">
 <th>SPC- und private Schlüsseloption</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -195,22 +195,22 @@ Die folgenden Optionen gelten nur für SPC-Dateien [*(Software Publisher Certifi
 <td>Die Schlüsselspezifikation des Ausstellers, die einer von drei möglichen Werten sein muss:<br/>
 <ul>
 <li><strong>Signatur</strong> (AT_SIGNATURE Schlüsselspezifikation)</li>
-<li><strong>Exchange</strong> (AT_KEYEXCHANGE-Schlüsselspezifikation)</li>
-<li>Eine ganze Zahl, z. <strong>B. 3</strong></li>
+<li><strong>Exchange</strong> (AT_KEYEXCHANGE Schlüsselspezifikation)</li>
+<li>Eine ganze Zahl, z. B. <strong>3</strong></li>
 </ul>
 Weitere Informationen finden Sie im Hinweis, der auf diese Tabelle folgt.<br/></td>
 </tr>
 <tr class="even">
 <td><strong>-ip</strong> <strong></strong> <em>IssuerProviderName</em></td>
-<td>CryptoAPI-Anbieter für Aussteller. Der Standardwert ist der Anbieter des Benutzers. Informationen zu CryptoAPI-Anbietern finden Sie in der CryptoAPI 2.0 Dokumentation.</td>
+<td>CryptoAPI-Anbieter für Aussteller. Der Standardwert ist der Anbieter des Benutzers. Informationen zu CryptoAPI-Anbietern finden Sie in der CryptoAPI 2.0-Dokumentation.</td>
 </tr>
 <tr class="odd">
 <td><strong>-iv</strong> <strong></strong> <em>IssuerKeyFile</em></td>
-<td>Die Datei mit dem privaten Schlüssel des Ausstellers. Der Standardwert ist der Teststamm.</td>
+<td>Datei mit privatem Schlüssel des Ausstellers. Der Standardwert ist der Teststamm.</td>
 </tr>
 <tr class="even">
 <td><strong>-iy</strong> <strong></strong> <em>nIssuerProviderType</em></td>
-<td>CryptoAPI-Anbietertyp für Aussteller. Der Standardwert ist <a href="/windows/desktop/SecGloss/p-gly"><em>PROV_RSA_FULL</em></a>. Informationen zu CryptoAPI-Anbietertypen finden Sie in der CryptoAPI 2.0 Dokumentation.</td>
+<td>CryptoAPI-Anbietertyp für Aussteller. Der Standardwert ist <a href="/windows/desktop/SecGloss/p-gly"><em>PROV_RSA_FULL</em></a>. Informationen zu CryptoAPI-Anbietertypen finden Sie in der CryptoAPI 2.0-Dokumentation.</td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ Weitere Informationen finden Sie im Hinweis, der auf diese Tabelle folgt.<br/></
  
 
 > [!Note]  
-> Wenn die **Option -iky** key specification in Internet Explorer 4.0 oder höher verwendet wird, [](../secgloss/p-gly.md) muss die Spezifikation mit der Schlüsselspezifikation übereinstimmen, die durch die Datei mit dem privaten Schlüssel oder den Privaten Schlüsselcontainer [*angegeben wird.*](../secgloss/k-gly.md) Wenn die Schlüsselspezifikationsoption nicht verwendet wird, wird die von der Datei mit dem privaten Schlüssel oder dem Container für den privaten Schlüssel angegebene Schlüsselspezifikation verwendet. Wenn im Schlüsselcontainer mehrere Schlüsselspezifikationen enthalten sind, versucht MakeCert zunächst, die AT \_ SIGNATURE-Schlüsselspezifikation zu verwenden. Wenn dies fehlschlägt, versucht MakeCert, AT \_ KEYEXCHANGE zu verwenden. Da die meisten Benutzer entweder über einen AT \_ SIGNATURE-Schlüssel oder einen AT \_ KEYEXCHANGE-Schlüssel verfügen, muss diese Option in den meisten Fällen nicht verwendet werden.
+> Wenn die **-iky-Schlüsselspezifikationsoption** in Internet Explorer 4.0 oder höher verwendet wird, muss die Spezifikation mit der Schlüsselspezifikation übereinstimmen, die durch die Datei des privaten [*Schlüssels*](../secgloss/p-gly.md) oder den Privaten [*Schlüsselcontainer*](../secgloss/k-gly.md)angegeben wird. Wenn die Schlüsselspezifikationsoption nicht verwendet wird, wird die durch die Datei des privaten Schlüssels oder den Privaten Schlüsselcontainer angegebene Schlüsselspezifikation verwendet. Wenn im Schlüsselcontainer mehrere Schlüsselspezifikationen vorhanden sind, versucht MakeCert zunächst, die AT \_ SIGNATURE-Schlüsselspezifikation zu verwenden. Wenn dies fehlschlägt, versucht MakeCert, AT \_ KEYEXCHANGE zu verwenden. Da die meisten Benutzer entweder über einen AT \_ SIGNATURE-Schlüssel oder einen AT \_ KEYEXCHANGE-Schlüssel verfügen, muss diese Option in den meisten Fällen nicht verwendet werden.
 
  
 
@@ -228,7 +228,7 @@ Die folgenden Optionen gelten nur für [*Zertifikatspeichertechnologien.*](../se
 
 
 
-| Zertifikatspeicheroption          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                              |
+| Option "Zertifikatspeicher"          | Beschreibung                                                                                                                                                                                                                                                                                                                              |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **-ic** *IssuerCertFile*          | Datei, die das Zertifikat des Ausstellers enthält. MakeCert sucht im Zertifikatspeicher nach einem Zertifikat mit einer genauen Übereinstimmung.                                                                                                                                                                                                        |
 | **-in** *IssuerNameString*        | Allgemeiner Name des Zertifikats des Ausstellers. MakeCert sucht im Zertifikatspeicher nach einem Zertifikat, dessen allgemeiner Name *IssuerNameString* enthält.                                                                                                                                                                                  |

@@ -1,9 +1,9 @@
 ---
-title: Select (QueryType)-Element
-description: Eine XPath-Abfrage, die die Ereignisse identifiziert, die im Resultset der Abfrage enthalten sein sollen.
+title: Select(QueryType)-Element
+description: Eine XPath-Abfrage, die die Ereignisse identifiziert, die in das Abfrageresultset aufgenommen werden sollen.
 ms.assetid: b6aa747b-3586-460b-b51c-52fb112739c3
 keywords:
-- Element "EventLog" auswählen
+- Select-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b1735f5de49853357eed1ce00b8d181edf2279ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b38a4f24746425bcdbea845b1c23ea5dadfdbcbefa41ebc5fa502147aba2ec67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118587403"
 ---
-# <a name="select-querytype-element"></a>Select (QueryType)-Element
+# <a name="select-querytype-element"></a>Select(QueryType)-Element
 
-Eine XPath-Abfrage, die die Ereignisse identifiziert, die im Resultset der Abfrage enthalten sein sollen.
+Eine XPath-Abfrage, die die Ereignisse identifiziert, die in das Abfrageresultset aufgenommen werden sollen.
 
 ``` syntax
 <xs:element name="Select">
@@ -36,15 +36,15 @@ Eine XPath-Abfrage, die die Ereignisse identifiziert, die im Resultset der Abfra
 </xs:element>
 ```
 
-Das **Select** -Element wird durch den komplexen Typ [**QueryType**](queryschema-querytype-complextype.md) definiert.
+Das **Select-Element** wird durch den komplexen [**QueryType-Typ**](queryschema-querytype-complextype.md) definiert.
 
 ## <a name="attributes"></a>Attributes
 
 
 
-| Name | type   | BESCHREIBUNG                                                                              |
+| Name | Typ   | BESCHREIBUNG                                                                              |
 |------|--------|------------------------------------------------------------------------------------------|
-| `Path` | anyURI | Der Name des Kanals oder der Pfad zu der Protokolldatei, in der die Ereignisse enthalten sind.<br/> |
+| `Path` | anyURI | Der Name des Kanals oder der Pfad zur Protokolldatei, die die Ereignisse enthält.<br/> |
 
 
 
@@ -54,8 +54,8 @@ Das **Select** -Element wird durch den komplexen Typ [**QueryType**](queryschema
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/> |
 
 
 
@@ -66,7 +66,7 @@ Das **Select** -Element wird durch den komplexen Typ [**QueryType**](queryschema
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Query (querylisttype)**](queryschema-query-querylisttype-element.md)
+[**Query (QueryListType)**](queryschema-query-querylisttype-element.md)
 </dt> </dl>
 
  

@@ -1,75 +1,75 @@
 ---
-description: BETest ist ein VSS-Anforderer, der erweiterte Sicherungs-und Wiederherstellungs Vorgänge testet.
+description: BETest ist eine VSS-Anfordernde, die erweiterte Sicherungs- und Wiederherstellungsvorgänge testet.
 ms.assetid: a6cc7308-a9fa-4a84-9e7c-4d0adda28db5
-title: Test Tool
+title: BETest-Tool
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7559c304532b337214108435b740595897694f7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd5f37e8bfc224061a8205bf0759cbba4798b0d53227e4f12d89b1e9ddf629d5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119471150"
 ---
-# <a name="betest-tool"></a>Test Tool
+# <a name="betest-tool"></a>BETest-Tool
 
-BETest ist ein VSS-Anforderer, der erweiterte Sicherungs-und Wiederherstellungs Vorgänge testet. Dieses Tool kann verwendet werden, um die Verwendung komplexer VSS-Funktionen einer Anwendung zu testen, wie z. b.:
+BETest ist eine VSS-Anfordernde, die erweiterte Sicherungs- und Wiederherstellungsvorgänge testet. Dieses Tool kann verwendet werden, um zu testen, ob eine Anwendung komplexe VSS-Features wie die folgenden verwendet:
 
--   Inkrementelle Sicherung
--   Komplexe Wiederherstellungsoptionen wie autorisierende Wiederherstellung
--   Roll Forward-Optionen
+-   Inkrementelle und differenzielle Sicherung
+-   Komplexe Wiederherstellungsoptionen, z. B. autoritative Wiederherstellung
+-   Rollforwardoptionen
 
 > [!Note]  
-> BETest ist im Microsoft Windows Software Development Kit (SDK) für Windows Vista und höher enthalten. Das VSS 7,2 SDK enthält eine Version von "BETest", die nur unter Windows Server 2003 ausgeführt wird. In diesem Thema wird die Windows SDK Version von BETest und nicht die Windows Server 2003-Version beschrieben, die im VSS 7,2 SDK enthalten ist. Weitere Informationen zum Herunterladen der Windows SDK und des VSS 7,2 SDK finden Sie unter [Volumeschattenkopie-Dienst](volume-shadow-copy-service-portal.md).
+> BETest ist im Microsoft Windows Software Development Kit (SDK) für Windows Vista und höher enthalten. Das VSS 7.2 SDK enthält eine Version von BETest, die nur auf Windows Server 2003 ausgeführt wird. In diesem Thema wird die Windows SDK-Version von BETest beschrieben, nicht die Windows Server 2003-Version, die im VSS 7.2 SDK enthalten ist. Informationen zum Herunterladen des Windows SDK und des VSS 7.2 SDK finden Sie [unter Volumeschattenkopie-Dienst.](volume-shadow-copy-service-portal.md)
 
  
 
-In der Windows SDK-Installation befindet sich das Tool "BETest" unter `%Program Files(x86)%\Windows Kits\8.1\bin\x64` (für 64-Bit-Windows) und `%Program Files(x86)%\Windows Kits\8.1\bin\x86` (für 32-Bit-Windows).
+In der Windows SDK-Installation finden Sie das BETest-Tool unter `%Program Files(x86)%\Windows Kits\8.1\bin\x64` (für 64-Bit-Windows) und `%Program Files(x86)%\Windows Kits\8.1\bin\x86` (für 32-Bit-Windows).
 
-## <a name="running-the-betest-tool"></a>Ausführen des Tools "BETest"
+## <a name="running-the-betest-tool"></a>Ausführen des BETest-Tools
 
-Verwenden Sie die folgende Syntax, um das Tool "BETest" über die Befehlszeile auszuführen:
+Verwenden Sie die folgende Syntax, um das BETest-Tool über die Befehlszeile auszuführen:
 
-*Befehlszeilenoptionen* für **BETest**
+ *BETest-Befehlszeilenoptionen*
 
-Im folgenden Verwendungs Beispiel wird gezeigt, wie das Tool "BETest" mit dem [VSS-testwriter-Tool](vss-test-writer-tool.md)verwendet wird, das eine VSS Writer ist.
+Das folgende Verwendungsbeispiel zeigt, wie Sie das BETest-Tool zusammen mit dem [VSS Test Writer-Tool](vss-test-writer-tool.md)verwenden, bei dem es sich um einen VSS Writer handelt.
 
-**Verwendungs Beispiel für das BETest-Tool**
+**Beispiel für die Verwendung des BETest-Tools**
 
-1.  Erstellen Sie ein Test Verzeichnis mit dem Namen C: \\ BETest. Kopieren Sie die folgenden Dateien in dieses Verzeichnis:
+1.  Erstellen Sie ein Testverzeichnis mit dem Namen C: \\ BETest. Kopieren Sie die folgenden Dateien in dieses Verzeichnis:
     -   betest.exe
     -   vswriter.exe
     -   [BetestSample.xml](#sample-xml-configuration-file-betestsamplexml)
     -   [VswriterSample.xml](#sample-xml-configuration-file-vswritersamplexml)
-2.  Erstellen Sie ein Verzeichnis mit dem Namen C: \\ TestPath. Fügen Sie einige Test Datendateien in dieses Verzeichnis ein.
-3.  Erstellen Sie ein Verzeichnis mit dem Namen "C: \\ backupdestination". Lassen Sie dieses Verzeichnis leer.
-4.  Öffnen Sie zwei Befehlsfenster mit erhöhten Rechten, und legen Sie für das Arbeitsverzeichnis jeweils C: \\ BETest fest.
-5.  Starten Sie im ersten Befehlsfenster das [VSS-testwriter-Tool](vss-test-writer-tool.md) wie folgt:
+2.  Erstellen Sie ein Verzeichnis mit dem Namen C: \\ TestPath. Speichern Sie einige Testdatendateien in diesem Verzeichnis.
+3.  Erstellen Sie ein Verzeichnis mit dem Namen C: \\ BackupDestination. Lassen Sie dieses Verzeichnis leer.
+4.  Öffnen Sie zwei Befehlsfenster mit erhöhten Rechten, und legen Sie jeweils das Arbeitsverzeichnis auf C: \\ BETest fest.
+5.  Starten Sie im ersten Befehlsfenster das [VSS Test Writer-Tool](vss-test-writer-tool.md) wie folgt:
 
     **vswriter.exe VswriterSample.xml**
 
-    Die vswriterSample.xml Datei konfiguriert das VSS-testwriter-Tool (vswriter) so, dass der Inhalt des Verzeichnisses "c: \\ TestPath" als Vorbereitung für einen Sicherungs Vorgang gemeldet wird. Beachten Sie, dass das VSS-testwriter-Tool erst dann eine Ausgabe erzeugt, wenn es eine Aktivität von einer Anforderer wie z. b. betest Um das VSS-testwriter-Tool anzuhalten, drücken Sie STRG + C.
+    Die vswriterSample.xml-Datei konfiguriert das VSS Test Writer-Tool (vswriter), um den Inhalt des Verzeichnisses c: TestPath als Vorbereitung auf einen \\ Sicherungsvorgang zu melden. Beachten Sie, dass das VSS Test Writer-Tool erst dann eine Ausgabe erzeugt, wenn es Aktivitäten von einem Anfordernden wie BETest erkennt. Drücken Sie STRG+C, um das VSS Test Writer-Tool zu beenden.
 
-6.  Verwenden Sie im zweiten Befehlsfenster das Tool "BETest", um einen Sicherungs Vorgang wie folgt auszuführen:
+6.  Verwenden Sie im zweiten Befehlsfenster das BETest-Tool, um einen Sicherungsvorgang wie folgt auszuführen:
 
-    **betest.exe/B/S backup.xml/D C: \\ backupdestination/X BetestSample.xml**
+    **betest.exe /B /S backup.xml /D C: \\ BackupDestination /X BetestSample.xml**
 
-    Mit "BETest" werden die Dateien aus dem Verzeichnis "c: \\ TestPath" in das Verzeichnis "c: \\ backupdestination" gesichert. Das Sicherungs Komponenten Dokument wird in C: \\ BETest- \\backup.xml gespeichert.
+    BETest gesichert die Dateien aus dem Verzeichnis C: \\ TestPath im Verzeichnis C: \\ BackupDestination. Das Sicherungskomponentendokument wird in C: \\ BETest-backup.xml. \\
 
-7.  Wenn der Sicherungs Vorgang erfolgreich ist, löschen Sie den Inhalt des Verzeichnisses "C: \\ TestPath", und verwenden Sie das Tool "BETest", um einen Wiederherstellungs Vorgang wie folgt auszuführen:
+7.  Wenn der Sicherungsvorgang erfolgreich ist, löschen Sie den Inhalt des Verzeichnisses C: TestPath, und verwenden Sie das BETest-Tool, um einen Wiederherstellungsvorgang \\ wie folgt durchzuführen:
 
-    **betest.exe/R/S backup.xml/D C: \\ backupdestination/X BetestSample.xml**
+    **betest.exe /R /S backup.xml /D C: \\ BackupDestination /X BetestSample.xml**
 
-## <a name="betest-tool-command-line-options"></a>Command-Line Optionen für das betesttool
+## <a name="betest-tool-command-line-options"></a>BETest-Tool Command-Line Optionen
 
-Das Tool "BETest" verwendet die folgenden Befehlszeilenoptionen zur Identifizierung der auszuführenden Aufgaben.
+Das BETest-Tool verwendet die folgenden Befehlszeilenoptionen, um die auszuführende Arbeit zu identifizieren.
 
 <dl> <dt>
 
 <span id="_Auth"></span><span id="_auth"></span><span id="_AUTH"></span>**/Auth**
 </dt> <dd>
 
-Führt einen autorisierenden Wiederherstellungs Vorgang für Active Directory oder Active Directory Anwendungsmodus aus.
+Führt einen autoritativen Wiederherstellungsvorgang für Active Directory oder den Active Directory-Anwendungsmodus aus.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
@@ -78,20 +78,20 @@ Führt einen autorisierenden Wiederherstellungs Vorgang für Active Directory od
 <span id="_B"></span><span id="_b"></span>**/B**
 </dt> <dd>
 
-Führt einen Sicherungs Vorgang aus, führt jedoch keine Wiederherstellung aus.
+Führt einen Sicherungsvorgang aus, führt jedoch keine Wiederherstellung durch.
 
 </dd> <dt>
 
 <span id="_BC"></span><span id="_bc"></span>**/BC**
 </dt> <dd>
 
-Führt nur den Vorgang zum Abschluss der Sicherung aus.
+Führt nur den Sicherungsvorgang aus.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="_C_Filename"></span><span id="_c_filename"></span><span id="_C_FILENAME"></span>**/C** *Dateiname*
+<span id="_C_Filename"></span><span id="_c_filename"></span><span id="_C_FILENAME"></span>**/C Dateiname** 
 </dt> <dd>
 
 > [!Note]  
@@ -99,27 +99,27 @@ Führt nur den Vorgang zum Abschluss der Sicherung aus.
 
  
 
-Wählt die zu sichernden oder wiederherzustellenden Komponenten basierend auf dem Inhalt der durch *filename* angegebenen Konfigurationsdatei aus. Diese Datei darf nur ANSI-Zeichen im Bereich zwischen 0 und 127 enthalten und darf nicht größer als 1 MB sein. Jede Zeile in der Datei muss das folgende Format aufweisen:
+Wählt die Zu sichernden oder wiederherzustellenden Komponenten basierend auf dem Inhalt der Konfigurationsdatei aus, die von *Dateiname angegeben wird.* Diese Datei darf nur ANSI-Zeichen im Bereich von 0 bis 127 enthalten und darf nicht größer als 1 MB sein. Jede Zeile in der Datei muss das folgende Format verwenden:
 
-" *Write ID* ": " *componentname*;"
+*WriterId* : *ComponentName*;
 
-Dabei ist " *Write ID* " die Writer-ID und " *componentname* " der Name einer der Writer-Komponenten. Die Writer-ID und die Komponentennamen müssen in Anführungszeichen stehen, und es muss Leerzeichen vor und nach dem Doppelpunkt (:). Wenn mindestens zwei Komponenten angegeben sind, müssen diese durch Kommas getrennt werden. Beispiel:
+Dabei *ist WriterId* die Writer-ID und *ComponentName* der Name einer der Komponenten des Writers. Die Writer-ID und komponentennamen müssen in Anführungszeichen gesetzt werden, und es müssen Leerzeichen vor und nach dem Doppelpunkt (:). Wenn mindestens zwei Komponenten angegeben werden, müssen sie durch Kommas getrennt werden. Beispiel:
 
-"5affb034-969f -4919-8875-88f 830d0ef89": "TestFiles1", "TestFiles2", "TestFiles3";
+"5affb034-969f-4919-8875-88f830d0ef89" : "TestFiles1", "TestFiles2", "TestFiles3";
 
 </dd> <dt>
 
-<span id="_D_Path"></span><span id="_d_path"></span><span id="_D_PATH"></span>**/D** - *Pfad*
+<span id="_D_Path"></span><span id="_d_path"></span><span id="_D_PATH"></span>**/D-Pfad** 
 </dt> <dd>
 
-Speichern Sie die gesicherten Dateien, oder stellen Sie Sie aus dem durch *path* angegebenen Sicherungs Verzeichnis wieder her.
+Speichern Sie die gesicherten Dateien in dem sicherungsverzeichnis, das unter Pfad angegeben ist, oder stellen Sie sie *wieder her.*
 
 </dd> <dt>
 
 <span id="_NBC"></span><span id="_nbc"></span>**/NBC**
 </dt> <dd>
 
-Lässt den Vorgang zum Abschluss der Sicherung aus.
+Lässt den Sicherungsvorgang aus.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
@@ -128,23 +128,23 @@ Lässt den Vorgang zum Abschluss der Sicherung aus.
 <span id="_O"></span><span id="_o"></span>**/O**
 </dt> <dd>
 
-Gibt an, dass die Sicherung einen Start fähigen Systemstatus enthält.
+Gibt an, dass die Sicherung einen startbaren Systemstatus enthält.
 
 </dd> <dt>
 
 <span id="_P"></span><span id="_p"></span>**/P**
 </dt> <dd>
 
-Erstellt eine persistente Schatten Kopie.
+Erstellt eine persistente Schattenkopie.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="_Pre_Filename"></span><span id="_pre_filename"></span><span id="_PRE_FILENAME"></span>**/Pre** *Dateiname*
+<span id="_Pre_Filename"></span><span id="_pre_filename"></span><span id="_PRE_FILENAME"></span>**/Pre** *Filename*
 </dt> <dd>
 
-Wenn der in der Befehlszeilenoption **/T** angegebene Sicherungstyp inkrementell oder Differenziell ist, legen Sie das Sicherungs Dokument auf die Datei fest, die für eine vorherige vollständige oder inkrementelle Sicherung von *filename*
+Wenn der in der Befehlszeilenoption **/T** angegebene Sicherungstyp INCREMENTAL oder DIFFERENTIAL ist, legen Sie das Sicherungsdokument auf die Datei fest, die durch *Dateiname* für die vorherige vollständige oder inkrementelle Sicherung angegeben wird.
 
 **Windows Server 2003 und Windows XP:** Diese Befehlszeilenoption wird nicht unterstützt.
 
@@ -153,14 +153,14 @@ Wenn der in der Befehlszeilenoption **/T** angegebene Sicherungstyp inkrementell
 <span id="_R"></span><span id="_r"></span>**/R**
 </dt> <dd>
 
-Führt eine Wiederherstellung durch, führt jedoch keine Sicherung aus. Muss in Verbindung mit der Befehlszeilenoption **/S** verwendet werden.
+Führt eine Wiederherstellung durch, führt jedoch keine Sicherung durch. Muss zusammen mit der **Befehlszeilenoption /S** verwendet werden.
 
 </dd> <dt>
 
 <span id="_Rollback"></span><span id="_rollback"></span><span id="_ROLLBACK"></span>**/Rollback**
 </dt> <dd>
 
-Erstellt eine Schatten Kopie, die für das Anwendungs Rollback verwendet werden kann.
+Erstellt eine Schattenkopie, die für das Anwendungsrollback verwendet werden kann.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
@@ -169,14 +169,14 @@ Erstellt eine Schatten Kopie, die für das Anwendungs Rollback verwendet werden 
 <span id="_S_Filename"></span><span id="_s_filename"></span><span id="_S_FILENAME"></span>**/S** *Dateiname*
 </dt> <dd>
 
-Bei der Sicherung speichert das Sicherungs Dokument in der durch *filename* angegebenen Datei. Bei nur Restore wird das Sicherungs Dokument aus dieser Datei geladen.
+Im Falle einer Sicherung speichert das Sicherungsdokument in der Datei, die unter *Dateiname angegeben ist.* Nur bei der Wiederherstellung lädt das Sicherungsdokument aus dieser Datei.
 
 </dd> <dt>
 
 <span id="_Snapshot"></span><span id="_snapshot"></span><span id="_SNAPSHOT"></span>**/Snapshot**
 </dt> <dd>
 
-Erstellt eine Volumeschattenkopie, führt aber keine Sicherung oder Wiederherstellung aus.
+Erstellt eine Volumeschattenkopie, führt aber keine Sicherung oder Wiederherstellung durch.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
@@ -185,16 +185,16 @@ Erstellt eine Volumeschattenkopie, führt aber keine Sicherung oder Wiederherste
 <span id="_StopError"></span><span id="_stoperror"></span><span id="_STOPERROR"></span>**/StopError**
 </dt> <dd>
 
-Beendet Tests, wenn der erste Writer-Fehler auftritt.
+Beendet BETest, wenn der erste Writerfehler auftritt.
 
 **Windows Server 2003:** Diese Befehlszeilenoption wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="_T_BackupType"></span><span id="_t_backuptype"></span><span id="_T_BACKUPTYPE"></span>**/T** *backuptype*
+<span id="_T_BackupType"></span><span id="_t_backuptype"></span><span id="_T_BACKUPTYPE"></span>**/T** *BackupType*
 </dt> <dd>
 
-Gibt den Sicherungstyp an. *Backuptype* kann vollständig, protokolliert, kopiert, inkrementell oder Differenziell sein. Weitere Informationen zu Sicherungs Typen finden Sie unter [**VSS \_ - \_ Sicherungstyp**](/windows/desktop/api/Vss/ne-vss-vss_backup_type).
+Gibt den Sicherungstyp an. *BackupType* kann FULL, LOG, COPY, INCREMENTAL oder DIFFERENTIAL sein. Weitere Informationen zu Sicherungstypen finden Sie unter [**VSS \_ BACKUP \_ TYPE**](/windows/desktop/api/Vss/ne-vss-vss_backup_type).
 
 </dd> <dt>
 
@@ -210,10 +210,10 @@ Generiert eine ausführliche Ausgabe, die für die Problembehandlung verwendet w
 <span id="_X_Filename"></span><span id="_x_filename"></span><span id="_X_FILENAME"></span>**/X** *Dateiname*
 </dt> <dd>
 
-Wählt die zu sichernden oder wiederherzustellenden Komponenten basierend auf dem Inhalt der durch *filename* angegebenen XML-Konfigurationsdatei aus. Diese Datei darf nur ANSI-Zeichen im Bereich von 0 bis 127 enthalten. Das Format der XML-Datei wird durch das Schema in der BETest.xml-Datei definiert. Eine Beispielkonfigurationsdatei finden Sie unter BetestSample.xml. Beide Dateien befinden sich im vshocker-Verzeichnis.
+Wählt die Zu sichernden oder wiederherzustellenden Komponenten basierend auf dem Inhalt der XML-Konfigurationsdatei aus, die von *Dateiname angegeben wird.* Diese Datei darf nur ANSI-Zeichen im Bereich von 0 bis 127 enthalten. Das Format der XML-Datei wird durch das Schema in der datei BETest.xml definiert. Eine Beispielkonfigurationsdatei finden Sie unter BetestSample.xml. Beide Dateien befinden sich im Verzeichnis vsstools.
 
 > [!Note]  
-> Sie können die BETest.xml Datei in Internet Explorer anzeigen. Bevor Sie diese Datei öffnen, stellen Sie sicher, dass sich die Datei XDR-Schema. xsl im gleichen Verzeichnis wie BETest.xml befindet. Die Datei XDR-Schema. xsl enthält Renderinganweisungen, mit denen die BETest.xml-Datei besser lesbar wird.
+> Sie können die BETest.xml-Datei in Internet Explorer anzeigen. Bevor Sie diese Datei öffnen, stellen Sie sicher, dass sich die Datei xdr-schema.xsl im selben Verzeichnis wie BETest.xml befindet. Die Datei xdr-schema.xsl enthält Renderinganweisungen, die die BETest.xml Datei lesbarer machen.
 
  
 
@@ -221,9 +221,9 @@ Wählt die zu sichernden oder wiederherzustellenden Komponenten basierend auf de
 
 </dd> </dl>
 
-## <a name="sample-xml-configuration-file-betestsamplexml"></a>Beispiel-XML-Konfigurationsdatei: BetestSample.xml
+## <a name="sample-xml-configuration-file-betestsamplexml"></a>XML-Beispielkonfigurationsdatei: BetestSample.xml
 
-Die folgende Beispielkonfigurationsdatei (BetestSample.xml) finden Sie im vshocker-Verzeichnis.
+Die folgende Beispielkonfigurationsdatei, BetestSample.xml, befindet sich im Verzeichnis Vsstools.
 
 ``` syntax
 <BETest>
@@ -234,11 +234,11 @@ Die folgende Beispielkonfigurationsdatei (BetestSample.xml) finden Sie im vshock
 </BETest>
 ```
 
-Dieses Beispiel einer einfachen Konfigurationsdatei wählt eine Komponente aus, die gesichert oder wieder hergestellt werden soll.
+In diesem Beispiel einer einfachen Konfigurationsdatei wird eine Komponente ausgewählt, die gesichert oder wiederhergestellt werden soll.
 
-## <a name="sample-xml-configuration-file-vswritersamplexml"></a>Beispiel-XML-Konfigurationsdatei: VswriterSample.xml
+## <a name="sample-xml-configuration-file-vswritersamplexml"></a>XML-Beispielkonfigurationsdatei: VswriterSample.xml
 
-Die folgende Beispielkonfigurationsdatei (VswriterSample.xml) finden Sie im vshocker-Verzeichnis.
+Die folgende Beispielkonfigurationsdatei, VswriterSample.xml, befindet sich im Verzeichnis Vsstools.
 
 ``` syntax
 <TestWriter   usage="USER_DATA"
@@ -256,32 +256,32 @@ Die folgende Beispielkonfigurationsdatei (VswriterSample.xml) finden Sie im vsho
 </TestWriter>
 ```
 
-Das Stamm Element in dieser Konfigurationsdatei hat den Namen testwriter. Alle anderen Elemente werden unter dem testwriter-Element angeordnet.
+Das Stammelement in dieser Konfigurationsdatei heißt TestWriter. Alle anderen Elemente werden unter dem TestWriter-Element angeordnet.
 
-Das erste Attribut, das testwriter zugeordnet ist, ist das Usage-Attribut. Dieses Attribut gibt den Verwendungstyp an, der über die [**ivssexaminewrite Metadata:: GetIdentity**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getidentity) -Methode gemeldet wird. Einer der möglichen Werte für dieses Attribut sind Benutzer \_ Daten.
+Das erste TestWriter-Attribut ist das Verwendungsattribut. Dieses Attribut gibt den Verwendungstyp an, der über die [**IVssExwriterMetadata::GetIdentity-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getidentity) gemeldet wird. Einer der möglichen Werte für dieses Attribut ist USER \_ DATA.
 
-Das zweite Attribut ist das DeleteFiles-Attribut. Dieses Attribut wird unter [Konfigurieren von Writer-Attributen](vss-test-writer-tool.md)beschrieben.
+Das zweite Attribut ist das deleteFiles-Attribut. Dieses Attribut wird unter [Konfigurieren von Writerattributen](vss-test-writer-tool.md)beschrieben.
 
-Das erste untergeordnete Element des Root-Elements ist ein restoremethod-Element. Dieses Element gibt Folgendes an:
+Das erste untergeordnete Element des Stammelements ist ein RestoreMethod-Element. Dieses Element gibt Folgendes an:
 
--   Die Restore-Methode (in diesem Fall Restore \_ , \_ Wenn \_ ersetzt werden kann \_ )
--   Gibt an, ob der Writer Wiederherstellungs Ereignisse erfordert (in diesem Fall immer).
--   Gibt an, ob ein Neustart erforderlich ist, nachdem der Writer wieder hergestellt wurde (in diesem Fall Nein).
+-   Die Wiederherstellungsmethode (in diesem Fall RESTORE \_ IF \_ CAN BE \_ \_ REPLACED)
+-   Gibt an, ob der Writer Wiederherstellungsereignisse erfordert (in diesem Fall immer).
+-   Gibt an, ob nach der Wiederherstellung des Writers ein Neustart erforderlich ist (in diesem Fall nein).
 
-Dieses Element kann optional eine Zuordnung alternativer Orte angeben. (In diesem Fall wird kein alternativer Speicherort angegeben.) Weitere Informationen finden Sie unter [angeben](vss-test-writer-tool.md)von Zuordnungen für Alternative Speicherorte.
+Dieses Element kann optional eine Zuordnung alternativer Speicherorte angeben. (In diesem Fall wird kein alternativer Speicherort angegeben.) Weitere Informationen finden Sie unter [Angeben alternativer Speicherortzuordnungen.](vss-test-writer-tool.md)
 
-Das zweite untergeordnete Element ist ein Komponenten Element. Dieses Element bewirkt, dass der Writer seinen Metadaten eine Komponente hinzufügt. Ein Component-Element enthält Attribute, mit denen die Komponente und die untergeordneten Elemente beschrieben werden, um den Inhalt der Komponente zu beschreiben, wie z. b. Folgendes:
+Das zweite untergeordnete Element ist ein Component-Element. Dieses Element bewirkt, dass der Writer den Metadaten eine Komponente hinzufügt. Ein Component-Element enthält Attribute, um die Komponente und untergeordnete Elemente zu beschreiben, um den Inhalt der Komponente zu beschreiben, z. B.:
 
--   componentType, um anzugeben, ob es sich um eine Datei Gruppe oder eine Datenbank handelt (in diesem Fall eine Datei Gruppe)
--   LogicalPath für den logischen Pfad der Komponente (in diesem Fall ist keine angegeben)
--   componentname für den Namen der Komponente (in diesem Fall "testfiles")
--   auswählbar zum Angeben des Status für die auswählbare Sicherung
+-   componentType, um anzugeben, ob es sich um eine Dateigruppe oder eine Datenbank handelt (in diesem Fall eine Dateigruppe).
+-   logicalPath für den logischen Pfad der Komponente (in diesem Fall wird keine angegeben)
+-   componentName für den Namen der Komponente (in diesem Fall "TestFiles")
+-   Auswählbar, um den Sicherungsstatus anzugeben, der ausgewählt werden kann
 
-Das Component-Element weist auch ein untergeordnetes Element mit dem Namen "componentfile" auf, um dieser Komponente eine Datei Spezifikation hinzuzufügen. (Ein Komponenten Element kann eine beliebige Anzahl von componentfile-Elementen aufweisen, die für jede Komponente angegeben werden können.) Dieses componentfile-Element weist die folgenden Attribute auf:
+Das Component-Element verfügt auch über ein untergeordnetes Element mit dem Namen ComponentFile, um dieser Komponente eine Dateispezifikation hinzuzufügen. (Ein Component-Element kann über eine beliebige Anzahl von ComponentFile-Elementen verfügen, die für jede Komponente angegeben werden können.) Dieses ComponentFile-Element weist die folgenden Attribute auf:
 
--   Path = "c: \\ TestPath"
--   file spec = " \* "
--   rekursiv = "Nein"
+-   path="c: \\ TestPath"
+-   filespec=" \* "
+-   recursive="no"
 
  
 

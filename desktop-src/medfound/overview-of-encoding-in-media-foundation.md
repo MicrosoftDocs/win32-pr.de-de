@@ -1,89 +1,89 @@
 ---
-description: Dieses Thema bietet einen Überblick über die Datei Codierungs-APIs, die in Microsoft Media Foundation bereitgestellt werden.
+description: Dieses Thema enthält eine Übersicht über die dateicodierungs-APIs, die in Microsoft Media Foundation bereitgestellt werden.
 ms.assetid: 69dbef63-e272-4ad2-8d04-ae9366f79b33
 title: Übersicht über die Codierung in Media Foundation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 81882bd6da43f4040614347b662d988844c7b7a6
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: a663260d92aad4eb23902ec35721c252f15fbba64c3404ff97bfb60f0622c674
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104559991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118239766"
 ---
 # <a name="overview-of-encoding-in-media-foundation"></a>Übersicht über die Codierung in Media Foundation
 
-Dieses Thema bietet einen Überblick über die Datei Codierungs-APIs, die in Microsoft Media Foundation bereitgestellt werden.
+Dieses Thema enthält eine Übersicht über die dateicodierungs-APIs, die in Microsoft Media Foundation bereitgestellt werden.
 
 ## <a name="terminology"></a>Begriff
 
-Die *Codierung* ist ein allgemeiner Begriff, der mehrere verschiedene Prozesse abdeckt:
+*Die Codierung* ist ein allgemeiner Begriff, der mehrere verschiedene Prozesse abdeckt:
 
-1.  Codieren eines Audiodaten-oder Videodaten Stroms in komprimierte Formate Beispiel: Codieren eines Videodaten Stroms in H. 264-Video.
-2.  Multiplexing ("muxing") eines oder mehrerer Streams in einen einzelbytestream. In der Regel werden die eingehenden Datenströme zuerst codiert. Dieser Schritt kann die packetisierung der codierten Streams einschließen.
-3.  Schreiben eines Multiplex-Bytestreams in eine Datei, z. b. eine MP4-Datei oder eine ASF-Datei (Advanced Systems Format). Alternativ kann der Multiplex-Stream über das Netzwerk gesendet werden.
+1.  Codieren eines Audio- oder Videodatenstroms in komprimierte Formate. Beispiel: Codieren eines Videostreams in H.264-Video.
+2.  Multiplexing ("Muxing") eines oder mehrerer Streams in einen einzelnen Bytestream. In der Regel werden die eingehenden Datenströme zuerst codiert. Dieser Schritt kann das Packen der codierten Datenströme umfassen.
+3.  Schreiben eines Multiplex-Bytestreams in eine Datei, z. B. eine MP4- oder ASF-Datei (Advanced Systems Format). Alternativ kann der Multiplexstream über das Netzwerk gesendet werden.
 
 Das folgende Diagramm zeigt diese drei Prozesse:
 
-![Diagramm mit den Codierungs-und Multiplexing-Prozessen](images/encoding03.png)
+![Diagramm mit den Codierungs- und Multiplexprozessen](images/encoding03.png)
 
-Zu den Variationen dieses Prozesses zählen Transcodierung und remuxing:
+Zu den Varianten dieses Prozesses gehören Transcodierung und Neubenutzererfahrung:
 
--   *Transcoding* bedeutet, dass eine vorhandene Datei decodiert, die Streams neu codiert und die codierten Streams erneut Multiplexing werden. Die Transcodierung kann durchgeführt werden, um eine Datei von einem Codierungstyp in einen anderen zu konvertieren. So konvertieren Sie z. b. das H. 264-Video in Windows Media Video (WMV). Außerdem kann die codierte Bitrate geändert werden. die Video Frame Größe; die Framerate. oder andere Format Parameter.
--   *Remultiplexing* oder *remuxing* bedeutet, dass eine Datei Demultiplexing und die Streams erneut Multiplexing werden, ohne den Schritt "decodieren/codieren" zu verwenden. Dies kann durchgeführt werden, um zu ändern, wie die Audiodateien bzw. Video Pakete mit einem multiplext versehen werden, um einen Stream zu entfernen oder um Streams aus zwei verschiedenen Quelldateien zu kombinieren
--   *Transrating* ist ein Sonderfall von Transcoding, bei dem die Bitrate geändert wird, ohne den Komprimierungstyp zu ändern. Beispielsweise können Sie eine Datei mit hoher Bitrate in eine niedrigere Bitrate konvertieren. Ein typisches Szenario, in dem die transbewertung verwendet werden kann, ist die Synchronisierung von Medieninhalten von einem PC mit einem tragbaren Gerät. Wenn das portable Gerät keine hohe Bitrate unterstützt, wird die Datei möglicherweise vor dem Kopieren auf das portable Gerät abgehandelt.
+-   *Transcodierung* bedeutet, dass eine vorhandene Datei decodiert, die Streams erneut codiert und die codierten Streams erneut multiplexiert werden. Die Transcodierung kann durchgeführt werden, um eine Datei von einem Codierungstyp in einen anderen zu konvertieren. zum Beispiel, um H.264-Videos in Windows Media Video (WMV) zu konvertieren. Sie können auch die codierte Bitrate ändern. die Videoframegröße; die Bildfrequenz; oder andere Formatparameter.
+-   *Remultiplexing* oder *Remuxing* bedeutet, eine Datei zu demultiplexing und die Streams ohne Decodierungs-/Codierungsschritt erneut zu multiplen. Dies kann geschehen, um zu ändern, wie die Audio-/Videopakete multiplexiert werden, um einen Stream zu entfernen oder Streams aus zwei verschiedenen Quelldateien zu kombinieren.
+-   *Transrating* ist ein Sonderfall der Transcodierung, bei dem die Bitrate geändert wird, ohne den Komprimierungstyp zu ändern. Beispielsweise können Sie eine Datei mit hoher Bitrate in eine niedrigere Bitrate konvertieren. Ein typisches Szenario, in dem die Transratierung verwendet werden kann, ist die Synchronisierung von Medieninhalten von einem PC mit einem portablen Gerät. Wenn das portable Gerät keine hohe Bitrate unterstützt, wird die Datei möglicherweise transratiert, bevor sie auf das portable Gerät kopiert wird.
 
-Das folgende Blockdiagramm zeigt den transcodierungsprozess.
+Das folgende Blockdiagramm zeigt den Transcodierungsprozess.
 
-![Diagramm mit dem Transcodierungs Prozess](images/encoding05.png)
+![Diagramm des Transcodierungsprozesses](images/encoding05.png)
 
-Das folgende Blockdiagramm zeigt den remuxing-Prozess.
+Das folgende Blockdiagramm zeigt den Neubenutzererfahrungsprozess.
 
-![Diagramm, das den remuxing-Prozess anzeigt](images/encoding06.png)
+![Diagramm des Neubenutzererfahrungsprozesses](images/encoding06.png)
 
-In dieser Dokumentation wird manchmal der Begriff *Codierung* verwendet, um sowohl Transcodierung als auch remuxing einzubeziehen. Wenn es wichtig ist, zwischen diesen zu unterscheiden, wird der Unterschied in der Dokumentation festzustellen.
+In dieser Dokumentation wird manchmal der Begriff *Codierung* verwendet, um sowohl transcoding als auch remuxing einzubeziehen. Wenn es wichtig ist, zwischen ihnen zu unterscheiden, wird der Unterschied in der Dokumentation beachtet.
 
-Siehe auch: [Media Foundation: grundlegende Konzepte](media-foundation-programming--essential-concepts.md).
+Siehe auch: [Media Foundation: Grundlegende Konzepte.](media-foundation-programming--essential-concepts.md)
 
-## <a name="media-foundation-encoding-architecture"></a>Media Foundation Codierungs Architektur
+## <a name="media-foundation-encoding-architecture"></a>Media Foundation-Codierungsarchitektur
 
-Auf der untersten Ebene der Media Foundation-Architektur werden die folgenden Typen von Komponenten für die Codierung verwendet:
+Auf der untersten Ebene der Media Foundation-Architektur werden die folgenden Komponententypen für die Codierung verwendet:
 
--   Für die Transcodierung werden [Medienquellen](media-sources.md) verwendet, um die Quelldatei zu dekodieren.
--   Beim Codierungsprozess werden [Media Foundation Transformationen](media-foundation-transforms.md) zum Decodieren und Codieren von Streams verwendet.
--   Für den Multiplexing-Prozess werden [Medien senken](media-sinks.md) verwendet, um die Streams zu Multiplexen und den Multiplexen Stream in eine Datei oder ein Netzwerk zu schreiben.
+-   Für die Transcodierung werden [Medienquellen](media-sources.md) verwendet, um die Quelldatei zu demultiplexen.
+-   Für den Codierungsprozess werden [Media Foundation Transformationen](media-foundation-transforms.md) verwendet, um Streams zu decodieren und zu codieren.
+-   Für den Multiplexprozess werden [Mediensenken](media-sinks.md) verwendet, um die Datenströme zu multiplexieren und den Multiplexstream in eine Datei oder ein Netzwerk zu schreiben.
 
-Das folgende Diagramm zeigt den Datenfluss zwischen diesen Komponenten in einem Transcodierungs Szenario:
+Das folgende Diagramm zeigt den Datenfluss zwischen diesen Komponenten in einem Transcodierungsszenario:
 
-![Diagramm mit den Komponenten, die bei der Transcodierung verwendet werden](images/encoding04.png)
+![Diagramm der bei der Transcodierung verwendeten Komponenten](images/encoding04.png)
 
-Diese Komponenten werden von den meisten Anwendungen nicht direkt verwendet. Stattdessen werden von einer Anwendung APIs auf höherer Ebene verwendet, die diese untergeordneten Komponenten verwalten. Media Foundation bietet zwei APIs auf höherer Ebene für die Codierung:
+Die meisten Anwendungen verwenden diese Komponenten nicht direkt. Stattdessen verwendet eine Anwendung APIs auf höherer Ebene, die diese Komponenten auf niedrigerer Ebene verwalten. Media Foundation bietet zwei übergeordnete APIs für die Codierung:
 
 <dl> <dt>
 
-<span id="Media_Session"></span><span id="media_session"></span><span id="MEDIA_SESSION"></span>[Medien Sitzung](media-session.md)
+<span id="Media_Session"></span><span id="media_session"></span><span id="MEDIA_SESSION"></span>[Mediensitzung](media-session.md)
 </dt> <dd>
 
-Die Medien Sitzung bietet eine End-to-End-Pipeline, mit der Daten aus der Medienquelle, über die Codecs und schließlich in die Medien Senke verschoben werden. Die Anwendung steuert die Medien Sitzung und empfängt Statusereignisse von der Medien Sitzung.
+Die Mediensitzung stellt eine End-to-End-Pipeline bereit, die Daten aus der Medienquelle, über die Codecs und schließlich in die Mediensenke verschiebt. Die Anwendung steuert die Mediensitzung und empfängt Statusereignisse von der Mediensitzung.
 
 </dd> <dt>
 
-<span id="Source_Reader_plus_Sink_Writer"></span><span id="source_reader_plus_sink_writer"></span><span id="SOURCE_READER_PLUS_SINK_WRITER"></span>[Quell Leser](source-reader.md) Plus [Senke Writer](sink-writer.md)
+<span id="Source_Reader_plus_Sink_Writer"></span><span id="source_reader_plus_sink_writer"></span><span id="SOURCE_READER_PLUS_SINK_WRITER"></span>[Quellleser](source-reader.md) plus [Sink Writer](sink-writer.md)
 </dt> <dd>
 
-Der Quell Leser umschließt die Medienquelle und optional die Decoders. Die Anwendung übermittelt entweder codierte oder decodierte Stichproben. Der Senke-Writer umschließt die Medien Senke und optional die Encoder. Die Anwendung übergibt Beispiele an den Senke-Writer.
+Der Quellleser umschließt die Medienquelle und optional die Decoder. Sie stellt entweder codierte oder decodierte Stichproben für die Anwendung bereit. Der Sink Writer umschließt die Mediensenke und optional die Encoder. Die Anwendung übergibt Beispiele an den Sink Writer.
 
 </dd> </dl>
 
-Das folgende Diagramm zeigt die Medien Sitzung:
+Das folgende Diagramm zeigt die Mediensitzung:
 
-![Diagramm, das zeigt, wie die Medien Sitzung die Transcodierung durchführt](images/encoding01.png)
+![Diagramm, das zeigt, wie die Mediensitzung die Transcodierung ausführt](images/encoding01.png)
 
-Die [transcode-API](transcode-api.md) (das blaue schattierte Feld) ist ein Satz von APIs, die in Windows 7 eingeführt wurden, um die Konfiguration der Medien Sitzung für die Codierung zu vereinfachen.
+Die [Transcodierungs-API](transcode-api.md) (das blau schattierte Feld) ist eine Reihe von APIs, die in Windows 7 eingeführt wurden und die Konfiguration der Mediensitzung für die Codierung vereinfachen.
 
-Das nächste Diagramm zeigt den Quell Reader und den Senke-Writer:
+Das nächste Diagramm zeigt den Quellleser und den Senkenwriter:
 
-![Diagramm, das die Transcodierung mit dem Quell-und senderwriter zeigt](images/encoding02.png)
+![Diagramm, das die Transcodierung mit dem Quellleser und dem Senkenwriter zeigt](images/encoding02.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -92,7 +92,7 @@ Das nächste Diagramm zeigt den Quell Reader und den Senke-Writer:
 [Codierung und Dateierstellung](encoding-and-file-authoring.md)
 </dt> <dt>
 
-[Media Foundation Programmierung: grundlegende Konzepte](media-foundation-programming--essential-concepts.md)
+[Media Foundation-Programmierung: Grundlegende Konzepte](media-foundation-programming--essential-concepts.md)
 </dt> </dl>
 
  

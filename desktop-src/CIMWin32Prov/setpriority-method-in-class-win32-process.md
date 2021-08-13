@@ -1,5 +1,5 @@
 ---
-description: Die SetPriority-&\# 32; Die WMI-Klassenmethode versucht, die Ausführungs Priorität des Prozesses zu ändern.
+description: SetPriority&\# 32; Die WMI-Klassenmethode versucht, die Ausführungspriorität des Prozesses zu ändern.
 ms.assetid: ef012e9e-ff65-4881-835e-ddab23af9333
 ms.tgt_platform: multiple
 title: SetPriority-Methode der Win32_Process-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5bf08057ec075448d9912e37c33b6087c381f97d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: decd5892d480e4f236ae9d7acdc1a25c018557166535c963eb35dc3f6f62ffa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118675569"
 ---
-# <a name="setpriority-method-of-the-win32_process-class"></a>SetPriority-Methode der Win32- \_ Prozess Klasse
+# <a name="setpriority-method-of-the-win32_process-class"></a>SetPriority-Methode der Win32 \_ Process-Klasse
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **SetPriority** versucht, die Ausführungs Priorität des Prozesses zu ändern.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **SetPriority** versucht, die Ausführungspriorität des Prozesses zu ändern.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,32 +42,32 @@ uint32 SetPriority(
 
 <dl> <dt>
 
-*Priorität* \[ in\]
+*Priorität* \[ In\]
 </dt> <dd>
 
-Neue Prioritäts Klasse für den Prozess. Beachten Sie, dass sich diese Werte von denen unterscheiden, die in der **Priority** -Eigenschaft des [**Win32- \_ Prozesses**](win32-process.md)explizit angegeben sind
+Neue Prioritätsklasse für den Prozess. Beachten Sie, dass sich diese Werte von denen unterscheiden, die explizit in der **Priority-Eigenschaft** von [**Win32 \_ Process**](win32-process.md)angegeben sind.
 
 <dt>
 
 <span id="Idle"></span><span id="idle"></span><span id="IDLE"></span>
 
-<span id="Idle"></span><span id="idle"></span><span id="IDLE"></span>Im **Leerlauf** (64)
+<span id="Idle"></span><span id="idle"></span><span id="IDLE"></span>**Leerlauf** (64)
 
 
 </dt> <dd>
 
-Wird für einen Prozess mit Threads angegeben, die nur ausgeführt werden, wenn sich das System im Leerlauf befindet. Die Threads des Prozesses werden von den Threads eines Prozesses, der in einer höheren Prioritäts Klasse ausgeführt wird, z. b. einem Bildschirmschoner, vorzeitig entfernt. Die Klasse mit der inaktiven Priorität wird von untergeordneten Prozessen geerbt.
+Wird für einen Prozess mit Threads angegeben, die nur ausgeführt werden, wenn sich das System im Leerlauf befindet. Die Threads des Prozesses werden durch die Threads eines Prozesses vorzeitig beendet, der in einer Klasse mit höherer Priorität ausgeführt wird, z. B. einem Bildschirmschoner. Die Klasse mit Leerlaufpriorität wird von untergeordneten Prozessen geerbt.
 
 </dd> <dt>
 
 <span id="Below_Normal"></span><span id="below_normal"></span><span id="BELOW_NORMAL"></span>
 
-<span id="Below_Normal"></span><span id="below_normal"></span><span id="BELOW_NORMAL"></span>Niedriger als **Normal** (16384)
+<span id="Below_Normal"></span><span id="below_normal"></span><span id="BELOW_NORMAL"></span>Below Normal (16384) **(Unter normal** (16384))
 
 
 </dt> <dd>
 
-Gibt einen Prozess an, der über eine Priorität oberhalb der inaktiven Prioritäts **\_ \_ Klasse**, aber unterhalb der **normalen \_ Prioritäts \_ Klasse**
+Gibt einen Prozess an, der **prioritätsüber IDLE \_ PRIORITY \_ CLASS**, aber unter **NORMAL PRIORITY CLASS \_ \_ verfügt.**
 
 </dd> <dt>
 
@@ -84,12 +84,12 @@ Wird für einen Prozess ohne besondere Planungsanforderungen angegeben.
 
 <span id="Above_Normal"></span><span id="above_normal"></span><span id="ABOVE_NORMAL"></span>
 
-<span id="Above_Normal"></span><span id="above_normal"></span><span id="ABOVE_NORMAL"></span>**Höher als normal** (32768)
+<span id="Above_Normal"></span><span id="above_normal"></span><span id="ABOVE_NORMAL"></span>**Über Normal** (32768)
 
 
 </dt> <dd>
 
-Gibt einen Prozess mit Priorität oberhalb der **normalen \_ Prioritäts \_ Klasse** an, aber unterhalb der **\_ \_ Klasse mit hoher Priorität**.
+Gibt einen Prozess an, der prioritätsmäßig über **NORMAL \_ PRIORITY \_ CLASS**, aber **unterHALB von HIGH PRIORITY CLASS \_ \_ verfügt.**
 
 </dd> <dt>
 
@@ -100,24 +100,24 @@ Gibt einen Prozess mit Priorität oberhalb der **normalen \_ Prioritäts \_ Klas
 
 </dt> <dd>
 
-Wird für einen Prozess angegeben, der zeitkritische Aufgaben ausführt, die sofort ausgeführt werden müssen. Die Threads des Prozesses haben Vorrang vor den Threads von Prozessen in den Prioritätsklassen mit normaler oder Leerlaufpriorität. Ein Beispiel hierfür ist die Aufgabenliste, die beim Aufrufen durch den Benutzer schnell reagieren muss, unabhängig von der Last des Betriebssystems. Verwenden Sie extrem Sorgfalt bei der Verwendung der Klasse mit hoher Priorität, da eine Klasse mit hoher Priorität fast alle verfügbaren CPU-Zeit verwenden kann.
+Wird für einen Prozess angegeben, der zeitkritische Aufgaben ausführt, die sofort ausgeführt werden müssen. Die Threads des Prozesses haben Vorrang vor den Threads von Prozessen in den Prioritätsklassen mit normaler oder Leerlaufpriorität. Ein Beispiel ist die Aufgabenliste, die beim Aufruf durch den Benutzer schnell reagieren muss, unabhängig von der Auslastung des Betriebssystems. Verwenden Sie äußerste Sorgfalt bei der Verwendung der Klasse mit hoher Priorität, da eine Anwendung mit hoher Priorität fast die gesamte verfügbare CPU-Zeit nutzen kann.
 
 </dd> <dt>
 
 <span id="Realtime"></span><span id="realtime"></span><span id="REALTIME"></span>
 
-<span id="Realtime"></span><span id="realtime"></span><span id="REALTIME"></span>**Realtime** (256)
+<span id="Realtime"></span><span id="realtime"></span><span id="REALTIME"></span>**Echtzeit** (256)
 
 
 </dt> <dd>
 
-Wird für einen Prozess mit der höchsten möglichen Priorität angegeben. Die Threads des Prozesses haben Vorrang vor den Threads aller anderen Prozesse, einschließlich der Betriebssystem Prozesse, von denen wichtige Aufgaben ausgeführt werden. Beispielsweise kann ein echt Zeit Prozess, der für mehr als ein sehr kurzes Intervall ausgeführt wird, dazu führen, dass Datenträger Caches nicht geleert werden oder die Maus nicht reagiert.
+Wird für einen Prozess mit der höchsten möglichen Priorität angegeben. Die Threads des Prozesses sind den Threads aller anderen Prozesse voraus, einschließlich Betriebssystemprozessen, die wichtige Aufgaben ausführen. Beispielsweise kann ein Echtzeitprozess, der für mehr als ein sehr kurzes Intervall ausgeführt wird, dazu führen, dass Datenträgercaches nicht geleert werden oder eine Maus nicht reagiert.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder e
 **Unbekannter Fehler** (8)
 </dt> <dt>
 
-Der **Pfad wurde nicht gefunden** (9).
+**Pfad nicht gefunden** (9)
 </dt> <dt>
 
 **Ungültiger Parameter** (21)
@@ -142,13 +142,13 @@ Der **Pfad wurde nicht gefunden** (9).
 **Sonstige** (22 4294967295)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Priorität auf "Realtime" festzulegen, muss der Aufrufer über die Berechtigung " **seinkreasebasepriorityprivilege** " (**SE \_ Inc \_ Base \_ priority \_**) verfügen. Ohne diese Berechtigung kann die höchste Priorität auf "hohe Priorität" festgelegt werden.
+Um die Priorität auf Realtime festzulegen, muss der Aufrufer **über SeIncreaseBasePriorityPrivilege** ( SE INC BASE PRIORITY PRIVILEGE )**\_ \_ \_ \_ verfügen.** Ohne diese Berechtigung kann die höchste Priorität auf "Hohe Priorität" festgelegt werden.
 
 ## <a name="examples"></a>Beispiele
 
-Das Beispiel [Ändern der Priorität eines laufenden Prozesses](https://Gallery.TechNet.Microsoft.Com/23615ee7-cccb-43c2-b994-6106ce2fc05e) VBScript ändert die Priorität einer laufenden Instanz von Notepad.exe von normal auf höher.
+Im VbScript-Beispiel [Ändern der Priorität eines ausgeführten Prozesses](https://Gallery.TechNet.Microsoft.Com/23615ee7-cccb-43c2-b994-6106ce2fc05e) wird die Priorität einer ausgeführten Instanz von Notepad.exe von Normal in Oberhalb von Normal geändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -158,20 +158,20 @@ Das Beispiel [Ändern der Priorität eines laufenden Prozesses](https://Gallery.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Prozess**](win32-process.md)
+[**\_Win32-Prozess**](win32-process.md)
 </dt> </dl>
 
  

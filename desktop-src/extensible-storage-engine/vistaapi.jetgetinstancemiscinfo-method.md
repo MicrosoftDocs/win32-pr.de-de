@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaapi. jetgetinstancefehlinfo-Methode'
-title: Vistaapi. jetgetinstancefehlinfo-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaApi.JetGetInstanceMiscInfo-Methode'
+title: VistaApi.JetGetInstanceMiscInfo-Methode (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'JetGetInstanceMiscInfo method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.VistaApi.JetGetInstanceMiscInfo(Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.JET_SIGNATURE@,Microsoft.Isam.Esent.Interop.Vista.JET_InstanceMiscInfo)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaapi.jetgetinstancemiscinfo(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 204beee343a717d5b45d8003e123bbbe186437d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0e8532d46556bb2d36bff822ce1e68ffe48ab633df925ae26b2ba24e9023417
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119471270"
 ---
-# <a name="vistaapijetgetinstancemiscinfo-method"></a>Vistaapi. jetgetinstancefehlinfo-Methode
+# <a name="vistaapijetgetinstancemiscinfo-method"></a>VistaApi.JetGetInstanceMiscInfo-Methode
 
-Ruft Informationen zu einer-Instanz ab.
+Ruft Informationen zu einer -Instanz ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,30 +65,30 @@ public static void JetGetInstanceMiscInfo(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, über die Informationen erhalten werden.
+    Die -Instanz, zu der Informationen erhalten werden.
 
 <!-- end list -->
 
   - signature  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SIGNATURE](./jet-signature-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SIGNATURE](./jet-signature-structure2.md)  
     
-    Informationen wurden abgerufen.
+    Abgerufene Informationen.
 
 <!-- end list -->
 
-  - infolevel  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_InstanceMiscInfo](./jet-instancemiscinfo-enumeration.md)  
+  - infoLevel  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_InstanceMiscInfo](./jet-instancemiscinfo-enumeration.md)  
     
     Der Typ der abzurufenden Informationen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaapi-Klasse](./vistaapi-class.md)
+[VistaApi-Klasse](./vistaapi-class.md)
 
-[Vistaapi-Member](./vistaapi-members.md)
+[VistaApi-Member](./vistaapi-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

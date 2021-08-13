@@ -1,7 +1,7 @@
 ---
 description: Die Send-Methode sendet eine HTTP-Anforderung an einen HTTP-Server.
 ms.assetid: 4f30d6b7-d1c3-43f1-9829-260b7c84518f
-title: 'Iwinhttprequest:: Send-Methode'
+title: IWinHttpRequest::Send-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 0040ed6c09814a2b2112a91173d84430b8130a30
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47155c946d8f49655bf6336a858d2b0752c70caa80f9dd75e0f415ce18ea94c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118562940"
 ---
-# <a name="iwinhttprequestsend-method"></a>Iwinhttprequest:: Send-Methode
+# <a name="iwinhttprequestsend-method"></a>IWinHttpRequest::Send-Methode
 
-Die **Send** -Methode sendet eine HTTP-Anforderung an einen HTTP-Server.
+Die **Send-Methode** sendet eine HTTP-Anforderung an einen HTTP-Server.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ HRESULT Send(
 
 <dl> <dt>
 
-*Textkörper* \[ in, optional\]
+*Text* \[ in, optional\]
 </dt> <dd>
 
-Die an den Server zu sendenden Daten.
+Daten, die an den Server gesendet werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anforderung, die gesendet werden soll, wurde in einem vorherigen Aufrufder [**Open**](iwinhttprequest-open.md) -Methode definiert. Die aufrufende Anwendung kann Daten bereitstellen, die über den *Body* -Parameter an den Server gesendet werden sollen. Wenn das [*http-Verb*](glossary.md) des [**geöffneten**](iwinhttprequest-open.md) Objekts "Get" ist, sendet diese Methode die Anforderung ohne *Text*, auch wenn Sie von der aufrufenden Anwendung bereitgestellt wird.
+Die zu sendende Anforderung wurde in einem vorherigen Aufruf der [**Open-Methode**](iwinhttprequest-open.md) definiert. Die aufrufende Anwendung kann Daten bereitstellen, die über den *Body-Parameter* an den Server gesendet werden sollen. Wenn das [*HTTP-Verb*](glossary.md) des [**Open-Objekts**](iwinhttprequest-open.md) "GET" ist, sendet diese Methode die Anforderung ohne *Text,* auch wenn sie von der aufrufenden Anwendung bereitgestellt wird.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Startseite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHttp-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und der Antworttext gelesen wird.
+Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und den Antworttext lesen.
 
 
 ```C++
@@ -150,7 +150,7 @@ int main()
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und der Antworttext gelesen wird.
+Das folgende Skriptbeispiel zeigt, wie sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und den Antworttext lesen.
 
 
 ```JScript
@@ -169,7 +169,7 @@ WScript.Echo( WinHttpReq.ResponseText);
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie Sie Daten auf einem HTTP-Server bereitstellen.
+Das folgende Skriptbeispiel zeigt, wie Daten an einen HTTP-Server gesendet werden.
 
 
 ```JScript
@@ -191,20 +191,20 @@ WinHttpReq.Send("Post data");
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

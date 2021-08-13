@@ -4,20 +4,20 @@ ms.assetid: 52a044cc-a471-4951-adbe-32319b8e3129
 title: Alphablending (Windows GDI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4add2aca8ac4e2d7e1b24988eb5d40f80bac259c
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 4eb59f6b628236124305e4564803fa826c279bfdc2353725a62029b293cb1e90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119470130"
 ---
 # <a name="alpha-blending-windows-gdi"></a>Alphablending (Windows GDI)
 
-*Alphablending* wird verwendet, um eine Alphabitmap anzuzeigen, bei der es sich um eine Bitmap mit transparenten oder halbtransparenten Pixeln handelt. Zusätzlich zu einem roten, grünen und blauen Farbkanal verfügt jedes Pixel in einer Alphabitmap über eine Transparenzkomponente, die als *Alphakanal bezeichnet wird.* Der Alphakanal enthält in der Regel so viele Bits wie ein Farbkanal. Beispielsweise kann ein 8-Bit-Alphakanal 256 Transparenzebenen darstellen, von 0 (die gesamte Bitmap ist transparent) bis 255 (die gesamte Bitmap ist nicht transparent).
+*Alphablending* wird verwendet, um eine Alphabitmap anzuzeigen, bei der es sich um eine Bitmap mit transparenten oder halbtransparenten Pixeln handelt. Zusätzlich zu einem roten, grünen und blauen Farbkanal verfügt jedes Pixel in einer Alphabitmap über eine Transparenzkomponente, die als *Alphakanal* bezeichnet wird. Der Alphakanal enthält in der Regel so viele Bits wie ein Farbkanal. Beispielsweise kann ein 8-Bit-Alphakanal 256 Transparenzebenen darstellen, von 0 (die gesamte Bitmap ist transparent) bis 255 (die gesamte Bitmap ist nicht transparent).
 
-Alphablendingmechanismen werden durch Aufrufen von [**AlphaBlend**](/windows/desktop/api/WinGdi/nf-wingdi-alphablend)aufgerufen, das auf die [**BLENDFUNCTION-Struktur**](/windows/desktop/api/Wingdi/ns-wingdi-blendfunction) verweist.
+Alphamischungsmechanismen werden aufgerufen, indem [**AlphaBlend**](/windows/desktop/api/WinGdi/nf-wingdi-alphablend)aufgerufen wird, das auf die [**BLENDFUNCTION-Struktur**](/windows/desktop/api/Wingdi/ns-wingdi-blendfunction) verweist.
 
-Alphawerte pro Pixel werden nur für 32-bpp BI \_ RGB unterstützt. Diese Formel ist definiert als:
+Alphawerte pro Pixel werden nur für BI RGB mit 32 bpp \_ unterstützt. Diese Formel wird wie folgt definiert:
 
 
 ```C++
@@ -63,9 +63,9 @@ Dies wird im Arbeitsspeicher dargestellt, wie in der folgenden Tabelle gezeigt.
     :::column-end:::
 :::row-end:::
 
-Bitmaps können auch mit einem Transparenzfaktor angezeigt werden, der auf die gesamte Bitmap angewendet wird. Jedes Bitmapformat kann mit einem globalen konstanten Alphawert angezeigt werden, indem **SourceConstantAlpha** in der [**BLENDFUNCTION-Struktur festlegen.**](/windows/desktop/api/Wingdi/ns-wingdi-blendfunction) Der globale konstante Alphawert hat 256 Transparenzebenen, von 0 (gesamte Bitmap ist vollständig transparent) bis 255 (die gesamte Bitmap ist vollständig deckend). Der globale konstante Alphawert wird mit dem Alphawert pro Pixel kombiniert.
+Bitmaps können auch mit einem Transparenzfaktor angezeigt werden, der auf die gesamte Bitmap angewendet wird. Jedes Bitmapformat kann mit einem globalen konstanten Alphawert angezeigt werden, indem **SourceConstantAlpha** in der [**BLENDFUNCTION-Struktur**](/windows/desktop/api/Wingdi/ns-wingdi-blendfunction) festgelegt wird. Der alpha-Wert der globalen Konstante weist 256 Transparenzebenen auf, von 0 (die gesamte Bitmap ist vollständig transparent) bis 255 (die gesamte Bitmap ist vollständig deckend). Der globale konstante Alphawert wird mit dem Pro-Pixel-Alphawert kombiniert.
 
-Ein Beispiel finden Sie unter [AlphaBlending a Bitmap (Alphablending einer Bitmap).](alpha-blending-a-bitmap.md)
+Ein Beispiel finden Sie unter [Alpha Blending a Bitmap](alpha-blending-a-bitmap.md).
 
  
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentouesfdatabasespaceexception-Konstruktor.
-title: Esentoudefdatabasespaceexception-Konstruktor
+description: 'Weitere Informationen zu: EsentOutOfDatabaseSpaceException-Konstruktor'
+title: EsentOutOfDatabaseSpaceException-Konstruktor
 TOCTitle: 'EsentOutOfDatabaseSpaceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfDatabaseSpaceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofdatabasespaceexception.esentoutofdatabasespaceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3ba28e2c4340d01dfbbdec7a6965218dbe66d68f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 62bd2440bf18691effe7e0706163e76469e213347d853a5170c6ea1dbb10bc18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118262304"
 ---
-# <a name="esentoutofdatabasespaceexception-constructor"></a>Esentoudefdatabasespaceexception-Konstruktor
+# <a name="esentoutofdatabasespaceexception-constructor"></a>EsentOutOfDatabaseSpaceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesfdatabasespaceexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfDatabaseSpaceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentOutOfDatabaseSpaceException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentouto fdatabasespaceexception-Klasse](./esentoutofdatabasespaceexception-class.md)
+[EsentOutOfDatabaseSpaceException-Klasse](./esentoutofdatabasespaceexception-class.md)
 
-[Esentouto fdatabasespaceexception-Member](./esentoutofdatabasespaceexception-members.md)
+[EsentOutOfDatabaseSpaceException-Member](./esentoutofdatabasespaceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
-description: Schneidet das angegebene Ray mit der angegebenen Mesh-Teilmenge ab. Dies bietet eine ähnliche Funktionalität wie D3DXIntersect.
+description: Überschneidet den angegebenen Strahl mit der angegebenen Netzteilmenge. Dies bietet ähnliche Funktionen wie D3DXIntersect.
 ms.assetid: 4a757b9e-18eb-424e-9f3e-cdf917c23787
-title: D3DXIntersectSubset-Funktion (D3DX9Mesh. h)
+title: D3DXIntersectSubset-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 621f45d7c2a6d8ff162f539ef62153d3ae70f6e9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 95a987730706f32654aab8f63feed61ae87c4d58d27ccccdaed9767d3303bbf8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460380"
 ---
 # <a name="d3dxintersectsubset-function"></a>D3DXIntersectSubset-Funktion
 
-Schneidet das angegebene Ray mit der angegebenen Mesh-Teilmenge ab. Dies bietet eine ähnliche Funktionalität wie [**D3DXIntersect**](d3dxintersect.md).
+Überschneidet den angegebenen Strahl mit der angegebenen Netzteilmenge. Dies bietet ähnliche Funktionen wie [**D3DXIntersect.**](d3dxintersect.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,102 +50,102 @@ HRESULT D3DXIntersectSubset(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBASEMESH**](id3dxbasemesh.md)**
 
-Zeiger auf eine [**ID3DXBaseMesh**](id3dxbasemesh.md) -Schnittstelle, die das zu testende Mesh darstellt. Das Mesh muss Attribut sortiert sein.
+Zeiger auf eine [**ID3DXBaseMesh-Schnittstelle,**](id3dxbasemesh.md) die das zu testete Gitternetz darstellt. Das Gitternetz muss nach Attribut sortiert sein.
 
 </dd> <dt>
 
-*Atungbid* \[ in\]
+*AttribId* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Der Attribut Bezeichner der Teilmenge, mit der Intersect werden soll.
+Attributbezeichner der Teilmenge, mit der die Schnittmenge überschneidet werden soll.
 
 </dd> <dt>
 
-" *praypos* \[ " in\]
+*pRayPos* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den Punkt angibt, an dem das Ray beginnt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) wobei der Punkt angegeben wird, an dem der Strahl beginnt.
 
 </dd> <dt>
 
-" *praydir* \[ " in\]
+*pRayDir* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die Richtung des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3dxvector3.md) unter Angabe der Richtung des Strahls.
 
 </dd> <dt>
 
-*Phit* \[ vorgenommen\]
+*pHit* \[ out\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)\***
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)\***
 
-Zeiger auf einen booleschen Werten. Wenn das Strahl eine Dreiecksfläche im Mesh schneidet, wird dieser Wert auf " **true**" festgelegt. Andernfalls wird dieser Wert auf " **false**" festgelegt.
+Zeiger auf eine BOOL. Wenn der Strahl ein dreieckiges Gesicht im Netz schneidet, wird dieser Wert auf **TRUE festgelegt.** Andernfalls wird dieser Wert auf **FALSE festgelegt.**
 
 </dd> <dt>
 
-*pfakeingedex* \[ vorgenommen\]
+*pFaceIndex* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Zeiger auf einen Indexwert der Oberfläche, die dem Ray-Ursprung am nächsten ist, wenn Phit **true** ist.
+Zeiger auf einen Indexwert des Gesichts, das dem Ray-Ursprung am nächsten ist, wenn pHit **TRUE ist.**
 
 </dd> <dt>
 
-*pU* \[ vorgenommen\]
+*pU* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf eine baryzentrierte Treffer Koordinate, U.
+Zeiger auf eine baryzentrierte Trefferkoordinate, U.
 
 </dd> <dt>
 
-*PV* \[ vorgenommen\]
+*pV* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf eine baryzentrierte Treffer Koordinate, V.
+Zeiger auf eine baryzentrierte Trefferkoordinate, V.
 
 </dd> <dt>
 
-*pdist* \[ vorgenommen\]
+*pDist* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf eine Strahl Schnittstellen-Parameter Entfernung.
+Zeiger auf den Abstand eines Ray-Schnittpunktparameters.
 
 </dd> <dt>
 
-*ppallhits* \[ vorgenommen\]
+*ppAllHits* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Ein Array von [**D3DXINTERSECTINFO**](d3dxintersectinfo.md) -Strukturen, das alle Treffer darstellt, nicht nur die nächstgelegenen Treffer.
+Array von [**D3DXINTERSECTINFO-Strukturen,**](d3dxintersectinfo.md) die alle Treffer darstellen, nicht nur die nächstgelegenen Treffer.
 
 </dd> <dt>
 
-*pgräfin-Steuer Treffer* \[ vorgenommen\]
+*pCountOfHits* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Anzahl von Elementen im Array, die von ppallhits zurückgegeben werden.
+Anzahl der Elemente im Array, die von ppAllHits zurückgegeben werden.
 
 </dd> </dl>
 
@@ -153,17 +153,17 @@ Anzahl von Elementen im Array, die von ppallhits zurückgegeben werden.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Wert sein: E \_ outo-Memory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert folgender Wert sein: E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **D3DXIntersectSubset** -Funktion bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: v1 + U (V2-V1) + V (v3-v1).
+Die **D3DXIntersectSubset-Funktion** bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + U(V2 - V1) + V(V3 - V1).
 
-Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (U, V) dargestellt werden. Mit dem Parameter U wird gesteuert, wie viel v2 in das Ergebnis gewichtet wird. mit dem Parameter V wird gesteuert, wie viel v3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von \[ 1-(U + V), \] wie viel V1 in das Ergebnis gewichtet wird.
+Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrierte Koordinate (U,V) dargestellt werden. Der Parameter U steuert, wie viel V2 in das Ergebnis gewichtet wird, und der Parameter V steuert, wie viel V3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von 1 – (U + V), wie viel \[ \] V1 in das Ergebnis gewichtet wird.
 
-Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von barzentrischen Koordinaten eine Änderung in Koordinatensystemen dar. Was für kartesische Koordinaten true ist, ist für barzentrierte Koordinaten "true".
+Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von baryzentrierten Koordinaten eine Änderung der Koordinatensysteme dar. Was für kartesische Koordinaten zutrifft, gilt für baryzentrierte Koordinaten.
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkt des Dreiecks. Eine detailliertere Beschreibung der baryzentrierten Koordinaten finden Sie unter [Beschreibung der baryzentrierten Koordinaten von Mathworld.](https://mathworld.wolfram.com/BarycentricCoordinates.html)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -171,12 +171,12 @@ In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks def
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

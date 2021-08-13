@@ -1,57 +1,57 @@
 ---
-title: Mittlere und Windows-Runtime Komponenten
-description: Zeigt, wie Metadatendateien (. winmd) erstellt werden, die die API für benutzerdefinierte Windows-Runtime Komponenten darstellen.
+title: MIDLRT- und Windows Runtime-Komponenten
+description: Zeigt, wie Metadatendateien (WINMD) erstellt werden, die die API für benutzerdefinierte Windows Runtime-Komponenten darstellen.
 ms.assetid: 7830A5DB-9696-4A93-948B-51DA46A5143C
 keywords:
-- Mittel l-compilermittell
-- Mittel l-compilermittell, Mittel l und Windows-Runtime WinRT
-- Windows-Runtime-Mittell
+- MIDL-Compiler-MIDL
+- MIDL-Compiler MIDL, MIDL und Windows Runtime winrt
+- Windows Runtime MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4edf4d40b3fc5b0a5ed8eeb9b5fd47a3b87c4543
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 6f827178216bbb7e78c16f2c11fa68b29b2eb50cfc0714a0ed53b02ce5bdc4ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104517216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118642904"
 ---
-# <a name="midlrt-and-windows-runtime-components"></a>Mittlere und Windows-Runtime Komponenten
+# <a name="midlrt-and-windows-runtime-components"></a>MIDLRT- und Windows Runtime-Komponenten
 
-Zeigt, wie Metadatendateien (. winmd) erstellt werden, die die API für benutzerdefinierte Windows-Runtime Komponenten darstellen.
-
-
-Verwenden Sie den-compilercompiler, um Metadatendateien (. winmd) für die benutzerdefinierten Windows-Runtime Komponenten zu erstellen.
-
-Wenn Ihre Metadatendateien generiert werden, können Sie Sie mithilfe des Hilfsprogramms "mdmerge" in ein effizienteres Paket zerlegen. Weitere Informationen finden Sie unter [mdmerge-und Metadatendateien](mdmerge-and-metadata-files.md).
+Zeigt, wie Metadatendateien (WINMD) erstellt werden, die die API für benutzerdefinierte Windows Runtime-Komponenten darstellen.
 
 
-Die Verwendung von "Mittell" ähnelt der Verwendung des compl-Compilers. Führen Sie in der Befehlszeile den folgenden Befehl aus:
+Verwenden Sie den MIDLRT-Compiler, um Metadatendateien (WINMD) für Ihre benutzerdefinierten Windows Runtime-Komponenten zu erstellen.
 
-**mittlere**  *<* **Optionen** _>_ **Dateiname. idl**
-
-Where * < *-**Optionen** _>_ stellt die Befehlszeilenoptionen dar, die Sie verwenden möchten, und filename. idl ist der Name der zu kompilierenden IDL-Datei.
+Wenn Ihre Metadatendateien generiert werden, können Sie sie mithilfe des MDMERGE-Hilfsprogramms in einem effizienteren Paket zusammenstellen. Weitere Informationen finden Sie unter [MDMERGE und Metadatendateien.](mdmerge-and-metadata-files.md)
 
 
-In der folgenden Liste sind die Befehls Zeilenschalter aufgeführt, die von MIDLRT.EXE verwendet werden.
+Die Verwendung von MIDLRT ähnelt der Verwendung des MIDL-Compilers. Führen Sie MIDLRT über die Befehlszeile mit dem folgenden Befehl aus:
+
+**midlrt**  *<* **Optionen** _>_ **filename.idl**
+
+wobei *<*-Optionen _>_ die Befehlszeilenoptionen darstellen, die Sie verwenden möchten, und Filename.idl der Name der zu kompilierenden IDL-Datei ist.
+
+
+Die folgende Liste zeigt die Befehlszeilenschalter, die MIDLRT.EXE verwendet.
 
 <dl>
 
-[**/Enum- \_ Klasse**](-enum-class.md)  
-[**/Metadata \_ dir**](-metadata-dir.md)  
+[**\_/enum-Klasse**](-enum-class.md)  
+[**/metadata \_ dir**](-metadata-dir.md)  
 [**/nomidl**](-nomidl.md)  
 [**/nomd**](-nomd.md)  
-[**/NS- \_ Präfix**](-ns-prefix.md)  
+[**\_/ns-Präfix**](-ns-prefix.md)  
 [**/winmd**](-winmd.md)  
-[**/WinRT**](-winrt.md)  
+[**/winrt**](-winrt.md)  
 </dl>
 
-Eine umfassende Liste mit den Compilerschaltern und-Optionen für den Mittelwert ist verfügbar, wenn Sie den-Compilerschalter [**/Help**](-help-.md) und/? verwenden. Mikro. Die Schalter sind nach Kategorien organisiert. Weitere Informationen finden Sie in der [Referenz zur Mittel l-Command-Line](midl-command-line-reference.md).
+Eine vollständige Liste der MIDLRT-Compilerschalter und -Optionen ist verfügbar, wenn Sie den MIDLRT-Compiler [**/help**](-help-.md) und /? verwenden. Schalter. Die Switches sind nach Kategorien organisiert. Weitere Informationen finden Sie in der [MIDL Command-Line Reference](midl-command-line-reference.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Mdmerge-und Metadatendateien](mdmerge-and-metadata-files.md)
+[MDMERGE- und Metadatendateien](mdmerge-and-metadata-files.md)
 </dt> </dl>
 
  

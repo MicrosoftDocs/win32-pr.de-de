@@ -15,14 +15,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1931b365108bb7b3df4269ae6acbb78292a0401d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4278043511348f3df5f72886f0c96bf18a34158a61b31a4590f880c7a1c0f150
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118647268"
 ---
-# <a name="cim_settingsdefinestate-class"></a>CIM \_ settingsdefinestate-Klasse
+# <a name="cim_settingsdefinestate-class"></a>CIM \_ SettingsDefineState-Klasse
 
 Ordnet Einstellungsdaten einem verwalteten Element zu.
 
@@ -39,20 +39,20 @@ class CIM_SettingsDefineState
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ settingsdefinestate** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SettingsDefineState-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ settingsdefinestate** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SettingsDefineState-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Managedelement"**
+**ManagedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -65,7 +65,7 @@ Das verwaltete Element in der Zuordnung.
 
 </dd> <dt>
 
-**SettingData**
+**Settingdata**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ SettingData**
@@ -90,7 +90,7 @@ Die Einstellungsdaten in der Zuordnung.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

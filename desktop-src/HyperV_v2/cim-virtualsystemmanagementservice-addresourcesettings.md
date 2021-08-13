@@ -1,7 +1,7 @@
 ---
-description: Fügt der Konfiguration eines virtuellen Systems Ressourcen hinzu.
+description: Fügt einer Konfiguration des virtuellen Systems Ressourcen hinzu.
 ms.assetid: c2541571-74f0-48f8-997c-56c152980eea
-title: Adresssourcesettings-Methode der CIM_VirtualSystemManagementService-Klasse
+title: AddResourceSettings-Methode der CIM_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9563b1e8421dfa6724971450b117780435f6f39e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0387d3d46723aede1d0858d647a555db57b3de28e6c1fb5fbb68b6d56342fcb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646468"
 ---
-# <a name="addresourcesettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>Adresssourcesettings-Methode der CIM \_ virtualsystemmanagementservice-Klasse
+# <a name="addresourcesettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>AddResourceSettings-Methode der CIM \_ VirtualSystemManagementService-Klasse
 
-Fügt der Konfiguration eines virtuellen Systems Ressourcen hinzu.
+Fügt einer Konfiguration des virtuellen Systems Ressourcen hinzu.
 
-Wenn Sie auf eine virtuelle Systemkonfiguration vom Typ "State" angewendet werden, werden dem aktiven virtuellen System als Nebeneffekte Ressourcen hinzugefügt.
+Bei Anwendung auf eine Zustandskonfiguration des virtuellen Systems werden dem aktiven virtuellen System als Nebeneffekt Ressourcen hinzugefügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ uint32 AddResourceSettings(
 
 <dl> <dt>
 
-*Affectedconfiguration* \[ in\]
+*AffectedConfiguration* \[ In\]
 </dt> <dd>
 
-Ein [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) -Verweis auf die betroffene virtuelle Systemkonfiguration.
+Ein [**CIM \_ VirtualSystemSettingData-Verweis**](cim-virtualsystemsettingdata.md) auf die betroffene Konfiguration des virtuellen Systems.
 
 </dd> <dt>
 
-*Resourcesettings* \[ in\]
+*ResourceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die jeweils eine eingebettete Instanz der Klasse [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) enthalten, die die virtuellen Aspekte einer virtuellen Ressource beschreibt, die dem virtuellen System hinzugefügt werden soll.
+Array von Zeichenfolgen, die jeweils eine eingebettete Instanz der [**Klasse CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md) enthalten, die die virtuellen Aspekte einer virtuellen Ressource beschreibt, die dem virtuellen System hinzugefügt werden soll.
 
 </dd> <dt>
 
-*Resultingresourcesettings* \[ vorgenommen\]
+*ResultingResourceSettings* \[ out\]
 </dt> <dd>
 
-Array von Verweisen auf Instanzen der Klasse [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) , die virtuelle Aspekte der hinzugefügten virtuellen Ressourcen darstellen.
+Array von Verweisen auf Instanzen der [**Klasse CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) die virtuelle Aspekte der hinzugefügten virtuellen Ressourcen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden. In diesem Fall sind die Instanzen der Klasse " [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) ", die die hinzugefügten Ressourcen Einstellungen darstellen, über die "Association CIM"- **\_ Komponente** aus der Instanz der Klasse " [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) " verfügbar, die die betroffene virtuelle Systemkonfiguration darstellt.
+Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden. In diesem Fall sind die Instanzen der [**Klasse CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) die die hinzugefügten Ressourceneinstellungen darstellt, über die Zuordnung **CIM \_ ConreteComponent** aus der Instanz der Klasse [**CIM \_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md) verfügbar, die die betroffene Konfiguration des virtuellen Systems darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -84,7 +84,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -93,16 +93,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -113,17 +113,17 @@ Fehler **(2** )
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemmanagementservice**](cim-virtualsystemmanagementservice.md)
+[**CIM \_ VirtualSystemManagementService**](cim-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

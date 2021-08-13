@@ -1,9 +1,9 @@
 ---
-title: Eaphostconfig-Element
-description: Enthält das EapMethod-Element und das config-oder configblob-Element. Die Elemente config und configblob können nicht gleichzeitig verwendet werden.
+title: EapHostConfig-Element
+description: Enthält das EapMethod-Element und das Config- oder ConfigBlob-Element. Die Elemente Config und ConfigBlob können nicht gleichzeitig verwendet werden.
 ms.assetid: 6c42d71e-0c61-48e4-a447-cfd1eae90297
 keywords:
-- Eaphostconfig-Element EAPHost
+- EapHostConfig-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 125b5fa2cab8bf3f9da12bd842a1a102beee3fb0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c34ddd1607a59c0425f7ec789bedb4981a05983ead276a14308fbf6aaadf26de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274864"
 ---
-# <a name="eaphostconfig-element"></a>Eaphostconfig-Element
+# <a name="eaphostconfig-element"></a>EapHostConfig-Element
 
-Das **eaphostconfig** -Element enthält das [**EapMethod**](eaphostconfigschema-eapmethod-eaphostconfig-element.md) -Element und das [**config**](eaphostconfigschema-config-eaphostconfig-element.md) -oder [**configblob**](eaphostconfigschema-configblob-eaphostconfig-element.md) -Element.
+Das **EapHostConfig-Element** enthält das [**EapMethod-Element**](eaphostconfigschema-eapmethod-eaphostconfig-element.md) und das [**Config-**](eaphostconfigschema-config-eaphostconfig-element.md) oder [**ConfigBlob-Element.**](eaphostconfigschema-configblob-eaphostconfig-element.md)
 
-Die Elemente [**config**](eaphostconfigschema-config-eaphostconfig-element.md) und [**configblob**](eaphostconfigschema-configblob-eaphostconfig-element.md) können nicht gleichzeitig verwendet werden.
+Die [**Elemente Config**](eaphostconfigschema-config-eaphostconfig-element.md) und [**ConfigBlob**](eaphostconfigschema-configblob-eaphostconfig-element.md) können nicht gleichzeitig verwendet werden.
 
 ``` syntax
 <xs:element name="EapHostConfig">
@@ -57,17 +57,17 @@ Die Elemente [**config**](eaphostconfigschema-config-eaphostconfig-element.md) u
 
 
 
-| Element                                                                    | type                                                                                     | BESCHREIBUNG                                                                                          |
+| Element                                                                    | type                                                                                     | Beschreibung                                                                                          |
 |----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**Einstellungen**](eaphostconfigschema-config-eaphostconfig-element.md)         | [**Baseeapmethodconfig**](baseeapmethodconfigschema-baseeapmethodconfig-complextype.md) | Wird verwendet, wenn die Methoden Konfiguration im XML-Textformular statt in einem binären BLOB erfolgt.<br/>       |
-| [**Configblob**](eaphostconfigschema-configblob-eaphostconfig-element.md) | hexBinary                                                                                | Wird verwendet, wenn die Methoden Konfiguration im binären BLOB-Formular statt im Textformat der Zeichenfolge verwendet wird.<br/> |
-| [**EapMethod**](eaphostconfigschema-eapmethod-eaphostconfig-element.md)   | [**Eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md)                       | Identifiziert die Methode, auf die verwiesen wird. <br/>                                                 |
+| [**Config**](eaphostconfigschema-config-eaphostconfig-element.md)         | [**BaseEapMethodConfig**](baseeapmethodconfigschema-baseeapmethodconfig-complextype.md) | Wird verwendet, wenn die Methodenkonfiguration in XML-Textform und nicht in einem binären BLOB vorliegt.<br/>       |
+| [**ConfigBlob**](eaphostconfigschema-configblob-eaphostconfig-element.md) | hexBinary                                                                                | Wird verwendet, wenn die Methodenkonfiguration in binärer BLOB-Form und nicht in Zeichenfolgentextform vorliegt.<br/> |
+| [**EapMethod**](eaphostconfigschema-eapmethod-eaphostconfig-element.md)   | [**EapMethodType**](eapcommonschema-eapmethodtype-complextype.md)                       | Identifiziert die Methode, auf die verwiesen wird. <br/>                                                 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schemas. Das **processContents** -Element ist optional.
+Das **processContents-Element** ermöglicht zukünftige Erweiterungen des Schemas. Das **processContents-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -84,7 +84,7 @@ Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schema
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaphostconfig-Schema](eaphostconfigschema-schema.md)

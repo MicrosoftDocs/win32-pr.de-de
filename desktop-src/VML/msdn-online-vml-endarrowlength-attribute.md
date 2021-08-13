@@ -1,40 +1,40 @@
 ---
-title: VML-Attribut "tdarrowlength"
-description: VML-Attribut "tdarrowlength"
+title: VML EndArrowLength-Attribut
+description: VML EndArrowLength-Attribut
 ms.assetid: aab898b6-4c59-4471-81fd-621f79610d63
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43d9d8bfbd24a6a1b79208d50d4d2aef956a5bc5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3fb11c07300127acd2446c7c2c643e0a891957d63f7650044514427f3e8535d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118601350"
 ---
-# <a name="vml-endarrowlength-attribute"></a>VML-Attribut "tdarrowlength"
+# <a name="vml-endarrowlength-attribute"></a>VML EndArrowLength-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert eine Pfeilspitzen Länge für das Ende einer Zeile. Lese-/Schreibzugriff. **Vgarrowheadlength**.
+Definiert eine Pfeilkopflänge für das Ende einer Zeile. Lese-/Schreibzugriff. **VgArrowheadLength**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* endarrowlength = " *Expression* " >
+<v: *element* endwlength=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . endarrowlength = "*Ausdruck*"
+*element* .endwlwlength="*expression*"
 
-*Ausdruck* = *Element*. endarrowlength
+*expression* = *.endwlwlength-Element*
 
 **Anmerkungen**
 
@@ -44,7 +44,7 @@ Mögliche Werte:
 -   Mittel (Standard)
 -   Long
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -60,6 +60,6 @@ Eine Linie wird mit einer kurzen klassischen Pfeilspitze am Ende des Strichs gez
 
 
 
- 
+ 
 
- 
+ 

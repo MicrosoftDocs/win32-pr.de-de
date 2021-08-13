@@ -1,23 +1,23 @@
 ---
 title: Renderingereignisse
-description: Um ein Ereignis anzuzeigen, müssen Sie die EvtRender-Funktion aufrufen, um Sie in einem anzeigbaren Format zu erzeugen.
+description: Um ein Ereignis anzuzeigen, müssen Sie die EvtRender-Funktion aufrufen, um sie in einem darstellbaren Formular zu rendern.
 ms.assetid: fc763669-1fbc-4183-a4ff-577a7954d1ca
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d7b1b4e2cbcab564abefb628f9c58f79ade86d8
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: 220c53d4df0d51bf9963e080c192d19a8a915ffbfe33cf113608c0cf6a8fcd39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "104390075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118587305"
 ---
 # <a name="rendering-events"></a>Renderingereignisse
 
-Um ein Ereignis anzuzeigen, müssen Sie die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion aufrufen, um Sie in einem anzeigbaren Format zu erzeugen. Sie können das Ereignis als XML-Zeichenfolge darstellen, oder Sie können einen oder mehrere Werte aus dem Ereignis Rendering. Ein Ereignis kann auch Nachrichten-Zeichen folgen enthalten (z. b. die Meldungs Zeichenfolge des Ereignisses, die Meldungs Zeichenfolge des Kanals oder die Nachrichten Zeichenfolge des Anbieters) Um eine der Nachrichten Zeichenfolgen aus dem Ereignis abzurufen, rufen Sie die [**evtformatmessage**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) -Funktion auf. Weitere Informationen zum erhalten einer Meldungs Zeichenfolge aus dem Ereignis finden Sie unter [Formatieren von Ereignismeldungen](formatting-event-messages.md).
+Um ein Ereignis anzuzeigen, müssen Sie die [**EvtRender-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) aufrufen, um sie in einem darstellbaren Formular zu rendern. Sie können das Ereignis als XML-Zeichenfolge oder einen oder mehrere Werte aus dem Ereignis rendern. Ein Ereignis kann auch Nachrichtenzeichenfolgen enthalten (z. B. die Nachrichtenzeichenfolge des Ereignisses, die Nachrichtenzeichenfolge des Kanals oder die Nachrichtenzeichenfolge des Anbieters). Um eine der Nachrichtenzeichenfolgen aus dem Ereignis abzurufen, rufen Sie die [**EvtFormatMessage-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) auf. Weitere Informationen zum Abrufen einer Nachrichtenzeichenfolge aus dem Ereignis finden Sie unter Formatieren von [Ereignismeldungen.](formatting-event-messages.md)
 
-Um das Ereignis als XML-Zeichenfolge zu Rendering, nennen Sie die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion. Wenn Sie jedoch bestimmte Teile des Ereignisses wiedergeben möchten, müssen Sie zuerst [**evtkreaterendercontext**](/windows/desktop/api/WinEvt/nf-winevt-evtcreaterendercontext) aufrufen, um die Teile des Ereignisses anzugeben, das Sie wiedergeben möchten. Sie können bestimmte Werte aus dem Ereignis, die Werte aus dem Abschnitt Benutzerdaten oder Ereignisdaten des Ereignisses oder die Werte aus den systembezogenen Eigenschaften des Ereignisses darstellen. Ausführliche Informationen zu den Komponenten eines Ereignisses finden Sie unter [Ereignis Schema](eventschema-schema.md).
+Um das Ereignis als XML-Zeichenfolge zu rendern, rufen Sie die [**EvtRender-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) auf. Wenn Sie jedoch bestimmte Teile des Ereignisses rendern möchten, müssen Sie zunächst [**evtCreateRenderContext**](/windows/desktop/api/WinEvt/nf-winevt-evtcreaterendercontext) aufrufen, um die Elemente des Ereignisses anzugeben, die Sie rendern möchten. Sie können bestimmte Werte aus dem Ereignis, die Werte aus den Benutzerdaten oder Ereignisdatenabschnitten des Ereignisses oder die Werte aus den systembezogenen Eigenschaften des Ereignisses rendern. Ausführliche Informationen zu den Komponenten eines Ereignisses finden Sie unter [Ereignisschema](eventschema-schema.md).
 
-Im folgenden Beispiel wird gezeigt, wie ein Ereignis als XML-Zeichenfolge gerenbt wird.
+Das folgende Beispiel zeigt, wie ein Ereignis als XML-Zeichenfolge gerendert wird.
 
 
 ```C++
@@ -68,7 +68,7 @@ cleanup:
 
 
 
-Im folgenden Beispiel wird gezeigt, wie die Eigenschaftswerte aus dem System Abschnitt des-Ereignisses gerenbt werden. Zum Rendern der Eigenschaften von Benutzerdaten oder Ereignisdaten des Ereignisses ersetzen Sie das evtrendercontextsystem-Flag durch das evtrendercontextuser-Flag, wenn Sie den renderingkontext erstellen.
+Das folgende Beispiel zeigt, wie die Eigenschaftswerte aus dem Systemabschnitt des Ereignisses gerendert werden. Ersetzen Sie beim Erstellen des Renderingkontexts das EvtRenderContextSystem-Flag durch das EvtRenderContextUser-Flag, um die Benutzerdaten- oder Ereignisdateneigenschaften des Ereignisses zu rendern.
 
 
 ```C++
@@ -203,7 +203,7 @@ cleanup:
 ```
 
 
-Im folgenden Beispiel wird gezeigt, wie Sie die spezifischen Werte aus dem-Ereignis darstellen. Verwenden Sie einen XPath-Ausdruck, um den spezifischen Knoten oder das abzurufende Attribut anzugeben. Sie können einen oder mehrere Ausdrücke angeben, um einen oder mehrere Werte abzurufen.
+Das folgende Beispiel zeigt, wie die spezifischen Werte aus dem Ereignis gerendert werden. Verwenden Sie einen XPath-Ausdruck, um den bestimmten abzurufenden Knoten oder das Attribut anzugeben. Sie können einen oder mehrere Ausdrücke angeben, um einen oder mehrere Werte abzurufen.
 
 
 ```C++
