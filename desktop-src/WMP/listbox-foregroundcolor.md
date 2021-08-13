@@ -1,9 +1,9 @@
 ---
-title: ListBox. ForegroundColor
-description: Das ForegroundColor-Attribut gibt die Textfarbe im Listenfeld-Steuerelement an oder ruft diese ab.
+title: LISTBOX.foregroundColor
+description: Das foregroundColor-Attribut gibt die Textfarbe im Listenfeld-Steuerelement an oder ruft sie ab.
 ms.assetid: a714a9b5-1735-4a62-b947-6dad194e3bb7
 keywords:
-- ListBox. ForegroundColor-Fenster Media Player
+- LISTBOX.foregroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: caf5d298531700d022b03bc2e22d52beb04282ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9d32cdf1aef883d8dff812c2ba4a74eea09f3582d32975dcedf28ad11dbe3b0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118574992"
 ---
-# <a name="listboxforegroundcolor"></a>ListBox. ForegroundColor
+# <a name="listboxforegroundcolor"></a>LISTBOX.foregroundColor
 
-Das **ForegroundColor** -Attribut gibt die Textfarbe im Listenfeld-Steuerelement an oder ruft diese ab.
+Das **foregroundColor-Attribut** gibt die Textfarbe im Listenfeld-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundColor
@@ -29,7 +29,7 @@ Das **ForegroundColor** -Attribut gibt die Textfarbe im Listenfeld-Steuerelement
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist gleich der Windows-Textfarbe.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er hat einen Standardwert, der der Windows Textfarbe entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,13 +45,13 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**ListBox. BackgroundColor**](listbox-backgroundcolor.md)
+[**LISTBOX.backgroundColor**](listbox-backgroundcolor.md)
 </dt> </dl>
 
  

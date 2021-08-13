@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der esentversion. SupportsWindows8Features-Eigenschaft.
-title: Esentversion. SupportsWindows8Features (Eigenschaft)
+description: 'Weitere Informationen zu: EsentVersion.SupportsWindows8Features-Eigenschaft'
+title: EsentVersion.SupportsWindows8Features-Eigenschaft
 TOCTitle: 'SupportsWindows8Features property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.EsentVersion.SupportsWindows8Features
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentversion.supportswindows8features(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 92de5a008f8a5759865b163f53bc518d9484b60f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c7693a68c93c38a668bf637cdb428782d9bb57cfdbf1c4f048d710c9bbe5001
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119454180"
 ---
-# <a name="esentversionsupportswindows8features-property"></a>Esentversion. SupportsWindows8Features (Eigenschaft)
+# <a name="esentversionsupportswindows8features-property"></a>EsentVersion.SupportsWindows8Features-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die aktuelle Version von ESENT in der Windows 8-Version von ESENT verfügbare Funktionen unterstützt.
+Ruft einen Wert ab, der angibt, ob die aktuelle Version von ESENT Funktionen unterstützt, die in der Windows 8 Version von ESENT verfügbar sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ public static bool SupportsWindows8Features { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentversion-Klasse](./esentversion-class.md)
+[EsentVersion-Klasse](./esentversion-class.md)
 
-[Esentversion-Member](./esentversion-members.md)
+[EsentVersion-Member](./esentversion-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
-description: Entschlüsselt ein einzelnes Secure Sockets Layer Protocol (SSL)-Paket.
+description: Entschlüsselt ein einzelnes SSL-Paket (Secure Sockets Layer Protocol).
 ms.assetid: 22a7dd2b-d023-47b9-8f76-1c17c2dd6466
-title: Ssldecryptpacket-Funktion (sslprovider. h)
+title: SslDecryptPacket-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: cd568596b7e780242c0ff8d9c522a9e1758c60b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b058fbb01183ccf0582c0fa196bec71bfaffa2e8a44739c1ea5fb01a8148174
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906702"
 ---
-# <a name="ssldecryptpacket-function"></a>Ssldecryptpacket-Funktion
+# <a name="ssldecryptpacket-function"></a>SslDecryptPacket-Funktion
 
-die **ssldecryptpacket** -Funktion entschlüsselt ein einzelnes [*Secure Sockets Layer Protocol*](/windows/desktop/SecGloss/s-gly) (SSL)-Paket.
+Die **SslDecryptPacket-Funktion** entschlüsselt ein einzelnes [*SSL-Paket (Secure Sockets Layer Protocol).*](/windows/desktop/SecGloss/s-gly)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,63 +47,63 @@ SECURITY_STATUS WINAPI SslDecryptPacket(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle der SSL-Protokoll Anbieter Instanz.
+Das Handle der SSL-Protokollanbieterinstanz.
 
 </dd> <dt>
 
-*HKEY* \[ in, out\]
+*hKey* \[ in, out\]
 </dt> <dd>
 
 Das Handle für den Schlüssel, der zum Entschlüsseln des Pakets verwendet wird.
 
 </dd> <dt>
 
-*pbinput* \[ in\]
+*pbInput* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den Puffer, der das Paket enthält, das entschlüsselt werden soll.
+Ein Zeiger auf den Puffer, der das zu entschlüsselnde Paket enthält.
 
 </dd> <dt>
 
-*cbinput* \[ in\]
+*cbInput* \[ In\]
 </dt> <dd>
 
-Die Länge des *pbinput* -Puffers in Bytes.
+Die Länge des *pbInput-Puffers* in Bytes.
 
 </dd> <dt>
 
-*pboutput* \[ vorgenommen\]
+*pbOutput* \[ out\]
 </dt> <dd>
 
 Ein Zeiger auf einen Puffer, der das entschlüsselte Paket enthalten soll.
 
 </dd> <dt>
 
-*cboutput* \[ in\]
+*cbOutput* \[ In\]
 </dt> <dd>
 
-Die Länge (Bytes) des *pboutput* -Puffers.
+Die Länge (Bytes) des *pbOutput-Puffers.*
 
 </dd> <dt>
 
-*pcbresult* \[ vorgenommen\]
+*resultsResult* \[ out\]
 </dt> <dd>
 
-Die Anzahl der in den *pboutput* -Puffer geschriebenen Bytes.
+Die Anzahl der Bytes, die in den *pbOutput-Puffer* geschrieben wurden.
 
 </dd> <dt>
 
-*Sequencennummer* \[ in\]
+*SequenceNumber* \[ In\]
 </dt> <dd>
 
 Die Sequenznummer, die diesem Paket entspricht.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -112,25 +112,25 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl> | Eines der bereitgestellten Handles ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl> | Einer der bereitgestellten Handles ist ungültig.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Länge des Pakets kann NULL sein, z. b. Wenn eine "hellorequest"-Meldung entschlüsselt wird.
+Die Länge des Pakets kann 0 (null) sein, z. B. wenn eine "HelloRequest"-Nachricht entschlüsselt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,9 +138,9 @@ Die Länge des Pakets kann NULL sein, z. b. Wenn eine "hellorequest"-Meldung ent
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

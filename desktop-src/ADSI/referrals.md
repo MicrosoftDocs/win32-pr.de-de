@@ -1,58 +1,58 @@
 ---
-title: Verweise (ADSI)
-description: Verweise werden ausgelöst, wenn der Server, den Sie Abfragen, diese Daten nicht enthält, ihn aber finden kann.
+title: Empfehlungen (ADSI)
+description: Empfehlungen treten auf, wenn der Server, den Sie abfragen, diese Daten nicht enthält, sie aber finden kann.
 ms.assetid: 2068ce7a-0b94-4d25-a18f-97f26863bd1d
 ms.tgt_platform: multiple
 keywords:
-- Verweise auf ADSI
+- Empfehlungen ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e79e6b2e8a737f6bb40386effd68f7f31d8d490d
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 1d5fb6ad299c2f47efa9723857b53cf7eee5350589757153eaaae869b2c37e6b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104102330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119444020"
 ---
-# <a name="referrals-adsi"></a>Verweise (ADSI)
+# <a name="referrals-adsi"></a>Empfehlungen (ADSI)
 
-Verweise werden ausgelöst, wenn der Server, den Sie Abfragen, diese Daten nicht enthält, ihn aber finden kann. Der Zielserver gibt das Resultset zurück, das möglicherweise sowohl die eigentlichen Daten als auch einen Verweis auf einen anderen Server enthält, um die zusätzlichen Daten abzurufen. Durch Aktivieren der *Verweis Verfolgung* verwendet der zugrunde liegende ADSI-Client Code diese Verweis Daten, um zu versuchen, das Zielobjekt von dem Server abzurufen, der in den Verweis Daten beschrieben wird. Beachten Sie, dass die Deaktivierung der Verweis Verfolgung möglicherweise zu einem kleineren Resultset führt, während die Aktivierung der Verweis Verfolgung dazu führen kann, dass eine Abfrage viele Server umfasst. Wenn möglich, ist die empfohlene Lösung die Verwendung des globalen Katalogs.
+Empfehlungen treten auf, wenn der Server, den Sie abfragen, diese Daten nicht enthält, sie aber finden kann. Der Zielserver gibt das Ergebnisset zurück, das sowohl die tatsächlichen Daten als auch eine Empfehlung an einen anderen Server enthalten kann, um die zusätzlichen Daten abzurufen. Durch Aktivieren der *Empfehlungsausführung* verwendet der zugrunde liegende ADSI-Clientcode diese Verweisdaten, um zu versuchen, das Zielobjekt von dem in den Verweisdaten beschriebenen Server abzurufen. Beachten Sie, dass die Deaktivierung der Verweisausweitung zu einem kleineren Ergebnisergebnis führen kann, während die Aktivierung der Verweisausweitung dazu führen kann, dass eine Abfrage viele Server umfasst. Die empfohlene Lösung ist nach Möglichkeit die Verwendung des globalen Katalogs.
 
-Weitere Informationen zu Verweise und verweiserweiterverfolgung in Active Directory finden Sie unter " [Verweise](/windows/desktop/AD/referrals)".
+Weitere Informationen zu Empfehlungen und Zur Referenzierung in Active Directory finden Sie unter [Empfehlungen](/windows/desktop/AD/referrals).
 
-Wenn ein Client z. b. Server a (a) anweist, ein Benutzerobjekt (u) abzufragen, kann ein den Client die Suche auf Server b (b) fortsetzen, wenn sich U nicht in einem befindet, aber bekanntermaßen auf B fest. Der Client hat die Möglichkeit, den Verweis nachzuverfolgen. Durch Such Verweise wird der Client von der erweiterten Erkennung der Funktionen der einzelnen Server aufgefordert. Der Client muss jedoch den Typ der Verweise angeben, die ein Server erstellen sollte.
+Wenn ein Client beispielsweise Server A (A) anweisen soll, ein Benutzerobjekt (U) abfragen zu lassen, kann A vorschlagen, dass der Client die Suche auf Server B (B) fortsetzen soll, wenn sich U nicht auf A befindet, aber bekannt ist, dass er sich auf B befindet. Der Client hat die Wahl, die Empfehlung zu erhalten oder nicht. Suchempfehlungen machen es für den Client nicht erforderlich, dass die Funktionen der einzelnen Server erweitert werden. Der Client muss jedoch den Typ der Empfehlungen angeben, die ein Server ausführen soll.
 
-Active Directory bietet Search-Referenz Dienste. Ein Client kann einen der folgenden Arten der Verweis Verfolgung auswählen:
+Active Directory bietet Suchempfehlungsdienste. Ein Client kann eine der folgenden Arten von Empfehlungssuchen auswählen:
 
--   Nie: der Server sollte keinen Verweis an einen Client generieren, auch wenn er erkennt, dass die angeforderten Daten von einem anderen Server gespeichert werden.
--   Extern: der Server sollte Verweise generieren, wenn die Anforderung auf einem anderen Server einer anderen Verzeichnisstruktur aufgelöst werden kann. Ein Client fragt z. b. "OU = Sales, DC = fabrikam, DC = com" auf dem Server "fab01" in der Domäne "fabrikam.com" ab. Das Objekt gehört jedoch nicht zu "fab01", aber es ist bekanntermaßen auf dem Server "arc01" in der Domäne "fabrikam.com". Daher verweist "fab01" auf den Client auf "arc01".
--   Untergeordnet: der Server sollte Verweise generieren, wenn die Anforderung auf einem Server aufgelöst werden kann, dessen Name einen zusammenhängenden Pfad vom ursprünglichen Server bildet. Der Suchbereich muss sich auf der Unterstruktur Ebene befinden.
+-   Nie: Der Server sollte keine Empfehlung an einen Client generieren, obwohl er erkennt, dass die angeforderten Daten von einem anderen Server gespeichert werden.
+-   Extern: Der Server sollte Empfehlungen generieren, wenn die Anforderung auf einem anderen Server einer anderen Verzeichnisstruktur aufgelöst werden kann. Beispielsweise fragt ein Client "OU=Sales,DC=Fabrikam,DC=COM" auf dem Server "fab01" in der Domäne "Fabrikam.com" ab. Das Objekt gehört jedoch nicht zu "fab01", aber es ist bekannt, dass es sich auf dem Server "arc01" in der Domäne "Fabrikam.com" befindet. Daher bezieht "fab01" den Client auf "arc01".
+-   Untergeordneter Server: Der Server sollte Empfehlungen generieren, wenn die Anforderung auf einem Server aufgelöst werden kann, dessen Name einen zusammenhängenden Pfad vom Ursprungsserver bildet. Der Suchbereich muss auf der Unterstrukturebene sein.
 
-    Server A enthält z. b. Objekte in "DC = Sales, DC = fabrikam, DC = com". Server B enthält Objekte in "DC = Seattle, DC = Sales, DC = fabrikam, DC = com". Beachten Sie, dass der Name von Server B einen zusammenhängenden Pfad von Server a bildet. Wenn ein Client eine Verbindung mit Server a herstellt, fordert eine Unterstruktur Suche in "DC = Sales, DC = fabrikam, DC = com" an und gibt den Verweis auf einen untergeordneten Typ an. das folgende Ereignis tritt auf:
+    Beispielsweise enthält Server A Objekte in "DC=Sales,DC=Fabrikam,DC=Com". Server B enthält Objekte in "DC=Seattle,DC=Sales,DC=Fabrikam,DC=Com". Beachten Sie, dass der Name von Server B einen zusammenhängenden Pfad von Server A bildet. Wenn ein Client server A kontaktiert, eine Unterstruktursuche nach "DC=Sales,DC=Fabrikam,DC=Com" angibt und die Empfehlung als untergeordneten Typ angibt, tritt das folgende Ereignis auf:
 
-    -   Server A gibt alle-Objekte zurück, die innerhalb des Gültigkeits Bereichs bekannt sind.
-    -   Server A informiert den Client, dass die Objekte in "DC = Seattle, DC = Sales, DC = fabrikam, DC = com" auf Server B gefunden werden können.
+    -   Server A gibt alle Objekte zurück, die ihm innerhalb seines Bereichs bekannt sind.
+    -   Server A informiert den Client darüber, dass Objekte in "DC=Seattle,DC=Sales,DC=Fabrikam,DC=COM" auf Server B zu finden sind.
 
-    Der Client kann sich für den Kontakt zu Server B entscheiden. Wenn dies der Fall ist, tritt das folgende Ereignis auf:
+    Der Client kann server B kontaktieren. Wenn dies der Fall ist, tritt das folgende Ereignis auf:
 
     -   Server B antwortet mit den angeforderten Objekten.
-    -   Wenn Server B andere Server im zusammenhängenden Benennungs Pfad erkennt und der Prozess fortgesetzt wird.
+    -   Wenn Server B andere Server im zusammenhängenden Namenspfad erkennt und der Prozess fortgesetzt wird.
 
--   Immer: der Server generiert Verweise, wenn die Suche auf der Grundlage des externen Typs oder des untergeordneten Typs aufgelöst werden kann.
+-   Immer: Der Server generiert Empfehlungen, wenn die Suche basierend auf dem externen Typ oder dem untergeordneten Typ aufgelöst werden kann.
 
 > [!Note]  
-> In Active Directory enthält der globale Katalog alle Objekte in einem bestimmten Unternehmen. Durch das Durchsuchen eines globalen Katalog Servers ergibt sich eine bessere Leistung als das Überschreiten von Verweisen von einem Server auf einen anderen.
+> In Active Directory enthält der globale Katalog alle Objekte in einem bestimmten Unternehmen. Das Durchsuchen eines globalen Katalogservers führt zu einer besseren Leistung als das Übertragen von Empfehlungen von einem Server zu einem anderen.
 
- 
+ 
 
-In den meisten Fällen ist die Verweis Verfolgung für den Aufrufer transparent. Wenn der Verweis auf ein Objekt in einer anderen Domäne oder Gesamtstruktur erfolgt, versucht die zugrunde liegende LDAP-API, die aktuellen Anmelde Informationen zum Binden an das Ziel der Referenz zu verwenden. Wenn dies erfolgreich ist, wird die Verweis Verfolgung transparent. Wenn dies nicht erfolgreich ist, werden der Verweis und der Verweis Fehlercode zurückgegeben.
+In den meisten Fällen ist die Weiterleitung von Empfehlungen für den Aufrufer transparent. Wenn die Empfehlung an ein Objekt in einer anderen Domäne oder Gesamtstruktur erfolgt, versucht die zugrunde liegende LDAP-API, die aktuellen Anmeldeinformationen zu verwenden, um eine Bindung an das Ziel der Empfehlung zu erstellen. Wenn dies erfolgreich ist, ist die Empfehlungserkung transparent. Wenn dies nicht erfolgreich ist, werden die Empfehlung und ein Empfehlungsfehlercode zurückgegeben.
 
-Weitere Informationen zur Verwendung der Optionen für die Verweis Verfolgung mit einer bestimmten Suchschnittstelle finden Sie unter:
+Weitere Informationen zur Verwendung der Optionen für die Empfehlungssuche mit einer bestimmten Suchschnittstelle finden Sie unter:
 
--   [Verweis Verfolgung mit idirector ysearch](referral-chasing-with-idirectorysearch.md)
--   [Suchen mit ActiveX Data Objects](searching-with-activex-data-objects-ado.md)
+-   [Empfehlungssuche mit IDirectorySearch](referral-chasing-with-idirectorysearch.md)
+-   [Suchen mit ActiveX Datenobjekten](searching-with-activex-data-objects-ado.md)
 -   [Suchen mit OLE DB](searching-with-ole-db.md)
 
- 
+ 
 
- 
+ 

@@ -1,6 +1,6 @@
 ---
-title: 'Appendstructuredbuffer:: GetDimensions-Funktion'
-description: 'Ruft die Ressourcen Dimensionen ab. | Appendstructuredbuffer:: GetDimensions-Funktion'
+title: AppendStructuredBuffer::GetDimensions-Funktion
+description: Ruft die Ressourcendimensionen ab. | AppendStructuredBuffer::GetDimensions-Funktion
 ms.assetid: 41ed86d5-25c0-48bd-add9-792eb89605c3
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 93db905ae40f1bec7488eca292f4ea44d87950d3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 96f40417834b8e23a9e746e4e4e3df93b96c1fc2affc7cd9147842e389dc99d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118790651"
 ---
-# <a name="appendstructuredbuffergetdimensions-function"></a>Appendstructuredbuffer:: GetDimensions-Funktion
+# <a name="appendstructuredbuffergetdimensions-function"></a>AppendStructuredBuffer::GetDimensions-Funktion
 
-Ruft die Ressourcen Dimensionen ab.
+Ruft die Ressourcendimensionen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ void GetDimensions(
 
 <dl> <dt>
 
-*numstructs* \[ vorgenommen\]
+*numStructs* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -46,7 +46,7 @@ Die Anzahl der Strukturen.
 
 </dd> <dt>
 
-*Stride* \[ vorgenommen\]
+*stride* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -59,13 +59,13 @@ Die Anzahl der Bytes in jedem Element.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -77,10 +77,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Appendstructuredbuffer](sm5-object-appendstructuredbuffer.md)
+[AppendStructuredBuffer](sm5-object-appendstructuredbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

@@ -1,60 +1,60 @@
 ---
-title: Caretzeichen
-description: In diesem Abschnitt werden die Caretzeichen erläutert, die Zeilen, Blöcke oder Bitmaps im Client Bereich eines Fensters blinken.
+title: Carets
+description: In diesem Abschnitt werden Carets erläutert, bei denen es sich um blinkende Linien, Blöcke oder Bitmaps im Clientbereich eines Fensters handelt.
 ms.assetid: vs|winui|~\winui\windowsuserinterface\resources\carets.htm
 keywords:
-- Ressourcen, Caretzeichen
-- Caretzeichen, Info
+- resources,carets
+- Carets,about
 - blinkende Linien
 - blinkende Blöcke
-- blinken von Bitmaps
+- blinkende Bitmaps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50cb99dfc324aa039924fa26683ab0a7674706ea
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: 4ed77a9d7fe315f5cef1be501c6392cce5fcfc3e79c5994f197a9fe6e254d8f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "104393826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118734855"
 ---
-# <a name="carets"></a>Caretzeichen
+# <a name="carets"></a>Carets
 
-Ein *Caretzeichen* ist eine blinkende Zeile, ein Block oder eine Bitmap im Client Bereich eines Fensters. Die Einfügemarke gibt in der Regel den Ort an, an dem Text oder Grafiken eingefügt werden.
+Ein *Caretstrich* ist eine blinkende Linie, ein Block oder eine Bitmap im Clientbereich eines Fensters. Das Caret-Zeichen gibt in der Regel die Stelle an, an der Text oder Grafiken eingefügt werden.
 
-In der folgenden Abbildung werden einige allgemeine Variationen der Darstellung der Einfügemarke veranschaulicht.
+Die folgende Abbildung zeigt einige häufige Variationen in der Darstellung des Caret-Zeichens.
 
-![Zeigt fünf unterschiedliche Möglichkeiten, wie ein Caretzeichen angezeigt werden kann.](images/cscrt-01.png)
+![Zeigt fünf verschiedene Möglichkeiten an, wie ein Caret-Caret-Format angezeigt werden kann.](images/cscrt-01.png)
 
-Anwendungen können eine Einfügemarke erstellen, die Blinkzeit ändern und die Einfügemarke anzeigen, ausblenden oder verschieben.
+Anwendungen können ein Caret-Caret-Caret-Paar erstellen, dessen Blinkzeit ändern und das Caret-Bzw. -Caret anzeigen, ausblenden oder ändern.
 
 ### <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Name                                   | BESCHREIBUNG                                                               |
+| Name                                   | Beschreibung                                                               |
 |----------------------------------------|---------------------------------------------------------------------------|
-| [Informationen zu Caretzeichen](about-carets.md)       | Erläutert Caretzeichen.<br/>                                              |
-| [Verwenden von Caretzeichen](using-carets.md)       | Code Beispiele, die das Ausführen von Aufgaben im Zusammenhang mit Caretzeichen veranschaulichen.<br/> |
-| [Verweis auf Caretzeichen](caret-reference.md) | Enthält die API-Referenz.<br/>                                    |
+| [Informationen zu Carets](about-carets.md)       | Erläutert Carets.<br/>                                              |
+| [Verwenden von Carets](using-carets.md)       | Codebeispiele, die zeigen, wie Aufgaben im Zusammenhang mit Carets durchgeführt werden.<br/> |
+| [Caretreferenz](caret-reference.md) | Enthält die API-Referenz.<br/>                                    |
 
 
 
  
 
-### <a name="caret-functions"></a>Caretzeichen
+### <a name="caret-functions"></a>Caretfunktionen
 
 
 
-| Name                                           | BESCHREIBUNG                                                                                                                                                                                                                                                   |
+| Name                                           | Beschreibung                                                                                                                                                                                                                                                   |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Auflistungs Daten Satz**](/windows/desktop/api/Winuser/nf-winuser-createcaret)             | Erstellt eine neue Form für die System Einfügemarke und weist dem angegebenen Fenster den Besitz der Einfügemarke zu. Die Form des Caretzeichen kann eine Linie, ein Block oder eine Bitmap sein. <br/>                                                                                         |
-| [**DestroyCaret**](/windows/desktop/api/Winuser/nf-winuser-destroycaret)           | Zerstört die aktuelle Form des Caretzeichen, gibt die Einfügemarke aus dem Fenster frei und entfernt die Einfügemarke aus dem Bildschirm. <br/>                                                                                                                                       |
-| [**Getcaretblinktime**](/windows/desktop/api/Winuser/nf-winuser-getcaretblinktime) | Ruft die Zeit ab, die zum Umkehren der Pixel der Einfügemarke benötigt wird. Der Benutzer kann diesen Wert festlegen. <br/>                                                                                                                                                            |
-| [**Getcaretpos**](/windows/desktop/api/Winuser/nf-winuser-getcaretpos)             | Kopiert die Position der Einfügemarke in die angegebene [**Punkt**](/previous-versions//dd162805(v=vs.85)) Struktur. <br/>                                                                                                                                                                    |
-| [**HideCaret**](/windows/desktop/api/Winuser/nf-winuser-hidecaret)                 | Entfernt die Einfügemarke aus dem Bildschirm. Beim Ausblenden einer Einfügemarke wird die aktuelle Form nicht zerstört, oder die Einfügemarke wird ungültig. <br/>                                                                                                                           |
-| [**Setcaretblinktime**](/windows/desktop/api/Winuser/nf-winuser-setcaretblinktime) | Legt die Blinkzeit des Caretzeichen auf die angegebene Anzahl von Millisekunden fest. Die Blink Zeit ist die verstrichene Zeit (in Millisekunden), die erforderlich ist, um die Pixel des Caretzeichen umzukehren. <br/>                                                                                    |
-| [**SetCaretPos**](/windows/desktop/api/Winuser/nf-winuser-setcaretpos)             | Verschiebt die Einfügemarke zu den angegebenen Koordinaten. Wenn das Fenster, das die Einfügemarke besitzt, mit dem **CS- \_ owndc** -Klassen Stil erstellt wurde, unterliegen die angegebenen Koordinaten dem Kartenmodus des Geräte Kontexts, der diesem Fenster zugeordnet ist. <br/> |
-| [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret)                 | Macht das Caretzeichen auf dem Bildschirm an der aktuellen Position des Caretzeichen sichtbar. Wenn das Caretzeichen sichtbar wird, beginnt es automatisch mit dem blinken. <br/>                                                                                                          |
+| [**CreateCaret**](/windows/desktop/api/Winuser/nf-winuser-createcaret)             | Erstellt eine neue Form für das System caret und weist dem angegebenen Fenster den Besitz des Caret-Carets zu. Die Caretform kann eine Linie, ein Block oder eine Bitmap sein. <br/>                                                                                         |
+| [**DestroyCaret**](/windows/desktop/api/Winuser/nf-winuser-destroycaret)           | Zerstört die aktuelle Form des Caret-Carets, gibt das Caret-Caret-Caret aus dem Fenster frei und entfernt das Caret-Caret vom Bildschirm. <br/>                                                                                                                                       |
+| [**GetCaretBlinkTime**](/windows/desktop/api/Winuser/nf-winuser-getcaretblinktime) | Ruft die Zeit ab, die erforderlich ist, um die Pixel des Caret-Carets zurück zu wenden. Der Benutzer kann diesen Wert festlegen. <br/>                                                                                                                                                            |
+| [**GetCaretPos**](/windows/desktop/api/Winuser/nf-winuser-getcaretpos)             | Kopiert die Position des Caret-Carets in die angegebene [**POINT-Struktur.**](/previous-versions//dd162805(v=vs.85)) <br/>                                                                                                                                                                    |
+| [**HideCaret**](/windows/desktop/api/Winuser/nf-winuser-hidecaret)                 | Entfernt das Caret-Caret vom Bildschirm. Das Ausblenden eines Caret-Zeichens zerstört nicht seine aktuelle Form und macht die Einfügemarke nicht ungültig. <br/>                                                                                                                           |
+| [**SetCaretBlinkTime**](/windows/desktop/api/Winuser/nf-winuser-setcaretblinktime) | Legt die Blinkzeit des Caretzeichens auf die angegebene Anzahl von Millisekunden fest. Die Blinkzeit ist die verstrichene Zeit in Millisekunden, die zum Umdrehen der Pixel des Caretstrichs erforderlich ist. <br/>                                                                                    |
+| [**SetCaretPos**](/windows/desktop/api/Winuser/nf-winuser-setcaretpos)             | Verschiebt das Caret-Caret auf die angegebenen Koordinaten. Wenn das Fenster, das das Caretmenü besitzt, mit dem **KLASSENstil CS \_ OWNDC** erstellt wurde, unterliegen die angegebenen Koordinaten dem Zuordnungsmodus des Gerätekontexts, der diesem Fenster zugeordnet ist. <br/> |
+| [**ShowCaret**](/windows/desktop/api/Winuser/nf-winuser-showcaret)                 | Macht das Caret-Zeichen an der aktuellen Position des Caret-Zeichens auf dem Bildschirm sichtbar. Wenn das Caret-Zeichen sichtbar wird, wird es automatisch blinken. <br/>                                                                                                          |
 
 
 

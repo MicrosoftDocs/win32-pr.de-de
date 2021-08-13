@@ -4,12 +4,12 @@ ms.assetid: 3a2e3fa6-2d6a-4ab0-a531-d1c968458e96
 title: RenderExclusiveEventDriven
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75553496219d0a4ddaf6685089de802e034f94cb
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 0c23213e1e60d0fdf77de67a91ea3bba3c928a51f9e562876dd1a4e018595dfb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119216550"
 ---
 # <a name="renderexclusiveeventdriven"></a>RenderExclusiveEventDriven
 
@@ -18,26 +18,26 @@ Diese Beispielanwendung verwendet die Core Audio-APIs, um Audiodaten auf einem v
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Beschreibung](#description)
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
 -   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 In diesem Beispiel werden die folgenden Features veranschaulicht.
 
 -   [MMDevice-API](mmdevice-api.md) für multimediale Geräteenumeration und -auswahl.
 -   WASAPI für Datenstromverwaltungsvorgänge.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Produkt                                                        | Version   |
 |----------------------------------------------------------------|-----------|
-| [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx) | Windows 7 |
+| [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx) | Windows 7 |
 | Visual Studio                                                  | 2008      |
 
 
@@ -62,7 +62,7 @@ Dieses Beispiel ist an den folgenden Speicherorten verfügbar.
 
 Führen Sie die folgenden Schritte aus, um das RenderExclusiveEventDriven-Beispiel zu erstellen:
 
-1.  Öffnen Sie die CMD-Shell für die Windows SDK, und wechseln Sie in das Beispielverzeichnis RenderExclusiveEventDriven.
+1.  Öffnen Sie die CMD-Shell für das Windows SDK, und wechseln Sie in das Beispielverzeichnis RenderExclusiveEventDriven.
 2.  Führen Sie den Befehl `start WASAPIRenderExclusiveEventDriven.sln` im Verzeichnis RenderExclusiveEventDriven aus, um das Projekt WASAPIRenderExclusiveEventDriven im fenster Visual Studio zu öffnen.
 3.  Wählen Sie im Fenster die Konfiguration **Debug-** oder **Releaselösung** aus, wählen Sie in der Menüleiste das Menü **Erstellen** und dann die Option **Erstellen** aus. Wenn Sie Visual Studio nicht über die CMD-Shell für das SDK öffnen, haben Visual Studio keinen Zugriff auf die SDK-Buildumgebung. In diesem Fall wird das Beispiel nur erstellt, wenn Sie die Umgebungsvariable MSSdk explizit festlegen, die in der Projektdatei WASAPIRenderExclusiveEventDriven.vcproj verwendet wird.
 
@@ -74,7 +74,7 @@ Wenn Sie die Demoanwendung erfolgreich erstellen, wird eine ausführbare Datei W
 
 In der folgenden Tabelle sind die Argumente aufgeführt.
 
-| Argument        | Beschreibung                                                |
+| Argument        | BESCHREIBUNG                                                |
 |-----------------|------------------------------------------------------------|
 | -?              | Zeigt Hilfe an.                                                |
 | -H              | Zeigt Hilfe an.                                                |
@@ -99,7 +99,7 @@ Das RenderExclusiveEventDriven-Beispiel veranschaulicht die ereignisgesteuerte P
 -   Ordnen Sie den Client den Beispielen zu, die gerendert werden können, indem Sie ein Ereignishandle für das System bereitstellen, indem Sie die [**IAudioClient::SetEventHandle-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-seteventhandle) aufrufen.
 -   Erstellen Sie einen Renderthread, um Beispiele aus der Audio-Engine zu verarbeiten.
 -   Richten Sie die Puffer ordnungsgemäß an einer 128-Byte-Grenze aus, bevor Sie sie an das Gerät senden. Dies erfolgt durch Anpassen der Periodizität der Engine.
--   Überprüfen Sie das Mischungsformat des Geräteendpunkts, um zu bestimmen, ob die Beispiele gerendert werden können. Wenn das Gerät das Mischungsformat nicht unterstützt, werden die Daten in PCM konvertiert.
+-   Überprüfen Sie das Mischungsformat des Geräteendpunkts, um zu bestimmen, ob die Stichproben gerendert werden können. Wenn das Gerät das Mischungsformat nicht unterstützt, werden die Daten in PCM konvertiert.
 -   Behandeln von Datenstromwechseln.
 
 Nachdem die Renderingsitzung gestartet und der Stream gestartet wurde, signalisiert die Audio-Engine dem bereitgestellten Ereignishandle, dass der Client benachrichtigt wird, wenn ein Puffer für die Verarbeitung durch den Client bereit ist. Die Audiodaten können auch in einer zeitgebergesteuerten Schleife verarbeitet werden. Dieser Modus wird im [RenderExclusiveTimerDriven-Beispiel](renderexclusivetimerdriven.md) veranschaulicht.

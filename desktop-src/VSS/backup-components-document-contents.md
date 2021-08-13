@@ -1,199 +1,199 @@
 ---
-description: Das Dokument mit den Sicherungs Komponenten wird von Instanzen der IVssBackupComponents-Schnittstelle verwaltet.
+description: Das Sicherungskomponentendokument wird von Instanzen der IVssBackupComponents-Schnittstelle verwaltet.
 ms.assetid: 8c7ebba8-58c4-4733-ba59-802abf902c5e
-title: Dokumentinhalte der Sicherungs Komponenten
+title: Inhalt des Sicherungskomponentendokuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e12c88ebffa0037702e1f30dd818d4fd23fe4e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c844f2e9e106817c8201822d000c2f6cb94c0fa272bb5b165d98e4cc48b1c21
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119248340"
 ---
-# <a name="backup-components-document-contents"></a>Dokumentinhalte der Sicherungs Komponenten
+# <a name="backup-components-document-contents"></a>Inhalt des Sicherungskomponentendokuments
 
-Das Dokument mit den Sicherungs Komponenten wird von Instanzen der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle verwaltet. Diese Schnittstelle enthält auch zahlreiche Methoden zum Steuern von Sicherungs Vorgängen, zum Bearbeiten von Schatten Kopien und zum Abfragen des Systemstatus. Allerdings sind nicht alle Dokument Informationen direkt über diese Schnittstelle zugänglich.
+Das Sicherungskomponentendokument wird von Instanzen der [**IVssBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) verwaltet. Diese Schnittstelle enthält auch zahlreiche Methoden zum Steuern von Sicherungsvorgängen, Bearbeiten von Schattenkopien und Abfragen des Systemstatus. Nicht alle Informationen des Dokuments sind jedoch direkt über diese Schnittstelle zugänglich.
 
-Das Dokument mit den Sicherungs Komponenten besteht aus mehreren Datensätzen:
+Das Sicherungskomponentendokument besteht aus mehreren Sätzen von Daten:
 
--   Informationen zu den Komponenten, die explizit in einem Sicherungs-oder Wiederherstellungs Vorgang enthalten waren
--   Eine Darstellung der gespeicherten Komponenten-und Writer-Informationen
--   Zustandsinformationen zum Sicherungs-/Wiederherstellungs Vorgang
+-   Informationen darüber, welche Komponenten explizit in einen Sicherungs- oder Wiederherstellungsvorgang eingeschlossen wurden
+-   Eine Darstellung der gespeicherten Komponenten- und Writerinformationen
+-   Zustandsinformationen zum Sicherungs-/Wiederherstellungsvorgang
 
-Obwohl die Komponenten Informationen sowohl für den Anforderer als auch für den Writer verfügbar sind, hat nur der Writer Zugriff auf die Statusinformationen.
+Während die Komponenteninformationen sowohl für den Anforderer als auch für den Writer verfügbar sind, hat nur der Writer Zugriff auf die Zustandsinformationen.
 
-## <a name="component-inclusion-information"></a>Informationen zur Komponenten Einbindung
+## <a name="component-inclusion-information"></a>Komponenteneinschlussinformationen
 
-Das Dokument mit den Sicherungs Komponenten enthält eine Liste der Komponenten, die von der anfordernden Person explizit in die Sicherung und Wiederherstellung eingeschlossen werden. Die Liste enthält Folgendes:
+Das Sicherungskomponentendokument enthält eine Liste dieser Komponenten, die explizit in die Sicherung und Wiederherstellung durch den Anfordernden eingeschlossen sind. Die Liste enthält Folgendes:
 
--   Explizit [*einwählbare Komponenten*](vssgloss-s.md).
+-   Explizit [*eingeschlossene auswählbare Komponenten.*](vssgloss-s.md)
 
-    Die Aufnahme dieser Dateien in Sicherungs Vorgänge wird durch [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) und in Restore- [**Vorgängen durch IVssBackupComponents:: setselectedforrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)angegeben.
+    Die Einbeziehung dieser Dateien in Sicherungsvorgänge wird durch [**IVssBackupComponents::AddComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) und in Wiederherstellungsvorgängen von [**IVssBackupComponents::SetSelectedForRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)angegeben.
 
--   Nicht auswählbar für Sicherungs Subkomponenten ohne auswählbare für Sicherungs Komponenten Vorgänger.
+-   Für Sicherungsunterkomponenten kann nicht ausgewählt werden, ohne dass ein für den Vorgänger der Sicherungskomponente auswählbar ist.
 
-    Alle diese Komponenten müssen eingeschlossen werden, wenn alle Komponenten des Writers in den Vorgang eingeschlossen werden sollen. Die Aufnahme dieser Dateien in Sicherungs Vorgänge wird durch [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) und in Restore- [**Vorgängen durch IVssBackupComponents:: setselectedforrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)angegeben.
+    Alle diese Komponenten müssen eingeschlossen werden, wenn Komponenten des Writers in den Vorgang einbezogen werden sollen. Die Einbeziehung dieser Dateien in Sicherungsvorgänge wird durch [**IVssBackupComponents::AddComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) und in Wiederherstellungsvorgängen von [**IVssBackupComponents::SetSelectedForRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)angegeben.
 
--   Komponenten, die der Sicherung ([*unter Komponenten*](vssgloss-s.md)) implizit hinzugefügt wurden und [*für die Wiederherstellung ausgewählt*](vssgloss-s.md) sind und der Wiederherstellung explizit hinzugefügt werden.
+-   Komponenten, die der Sicherung implizit hinzugefügt werden [*(Unterkomponenten),*](vssgloss-s.md)die für die [*Wiederherstellung ausgewählt*](vssgloss-s.md) werden können und der Wiederherstellung explizit hinzugefügt werden.
 
-    Diese Komponenten können wählbar oder nicht auswählbar sein, Sie verfügen jedoch über einen auswählbaren Vorgänger, der verwendet wurde, um Sie implizit für die Sicherung auszuwählen. Sie werden dem Dokument mit den Sicherungs Komponenten von [**IVssBackupComponents:: adressstoresubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent)hinzugefügt.
+    Diese Komponenten können entweder auswählbar oder nicht auswählbar sein, verfügen aber über einen auswählbaren Vorgänger, der verwendet wurde, um sie implizit für die Sicherung auszuwählen. Sie werden dem Sicherungskomponentendokument von [**IVssBackupComponents::AddRestoreSubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent)hinzugefügt.
 
-Die Identitäten von Komponenten, die implizit in die Wiederherstellung einbezogen werden, werden nicht im Dokument mit den Sicherungs Komponenten gespeichert.
+Die Identitäten von Komponenten, die implizit in der Wiederherstellung enthalten sind, werden nicht im Dokument sicherungskomponenten gespeichert.
 
-VSS hat Zugriff auf Informationen zur Einbindung von Komponenten: Writer ohne explizit in eine Wiederherstellung oder eine Sicherung enthaltene Komponenten empfangen keine VSS-Ereignisse nach der Generierung der [*PrepareForBackup*](vssgloss-p.md) -oder [*vorab*](vssgloss-p.md) Version-Ereignisse.
+VSS hat Zugriff auf Informationen zum Einbeziehen von Komponenten: Writer ohne Komponenten, die explizit in einer Wiederherstellung oder Sicherung enthalten sind, empfangen nach der Generierung der Ereignisse [*PrepareForBackup*](vssgloss-p.md) oder [*PreRestore*](vssgloss-p.md) keine VSS-Ereignisse.
 
-Writer können diese Informationen nicht direkt abfragen. Dies ist keine wesentliche Einschränkung, da einzelne VSS-Writer Entwurfs bedingt keine detaillierten Informationen über den Status anderer Writer auf dem System benötigen. wie bereits erwähnt, müssen diejenigen ohne enthaltene Komponenten nicht an dem VSS-Vorgang teilnehmen.
+Writer können diese Informationen nicht direkt abfragen. Dies ist keine wesentliche Einschränkung, da einzelne VSS-Writer entwurfsbedingt keine detaillierten Informationen über den Status anderer Writer im System benötigen sollten, und wie oben erwähnt, müssen diejenigen ohne enthaltene Komponenten nicht am VSS-Vorgang teilnehmen.
 
-Ein Anforderer kann ermitteln, welche Komponenten explizit in einen Vorgang eingeschlossen wurden.
+Ein Anforderer kann bestimmen, welche Komponenten explizit in einen Vorgang eingeschlossen wurden.
 
-Die [**IVssBackupComponents:: getwritercomponentscount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponentscount) -Methode gibt die Anzahl der Writer mit Komponenten Informationen zurück, die im Dokument mit den Sicherungs Komponenten gespeichert sind (und nicht die Anzahl der Komponenten im Dokument).
+Die [**IVssBackupComponents::GetWriterComponentsCount-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponentscount) gibt die Anzahl der Writer mit Komponenteninformationen zurück, die im Sicherungskomponentendokument gespeichert sind (und nicht die Anzahl der Komponenten im Dokument).
 
-Der Anforderer indiziert durch die gespeicherten Writer-Informationen mithilfe von [**IVssBackupComponents:: getschreitercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents), der Instanzen der [**ivssschreitercomponentlxt**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) -Schnittstelle zurückgibt. Die **ivsswritercomponentlxt** -Schnittstelle ermöglicht es der anfordernden Person, die [*Writer-Klasse*](vssgloss-w.md) und die [*Writer-Instanz*](vssgloss-w.md) der beteiligten Writer abzurufen und auf Informationen über die im Sicherungs Komponenten Dokument gespeicherten Komponenten zuzugreifen.
+Der Anforderer indiziert die gespeicherten Writerinformationen mithilfe von [**IVssBackupComponents::GetWriterComponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents), die Instanzen der [**IVssWriterComponentsExt-Schnittstelle**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) zurückgibt. Die **IVssWriterComponentsExt-Schnittstelle** ermöglicht dem Anforderer, die [*Writer-Klasse*](vssgloss-w.md) und [*die Writerinstanz*](vssgloss-w.md) der beteiligten Writer abzurufen sowie auf Informationen zu den Komponenten zuzugreifen, die im Sicherungskomponentendokument gespeichert sind.
 
-## <a name="information-on-included-components"></a>Informationen zu enthaltenen Komponenten
+## <a name="information-on-included-components"></a>Informationen zu eingeschlossenen Komponenten
 
-Die Darstellung der Komponenten Daten in der Sicherungs Komponenten (die keine Informationen zu Pfad-und Datei Spezifikationen enthalten), auf die über Instanzen der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle zugegriffen wird.
+Die Darstellung der Komponentendaten im Sicherungskomponentendokument (die keine Pfad- und Dateispezifikationsinformationen enthält), auf die über Instanzen der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) zugegriffen wird.
 
-Anforderer und Writer erhalten auf unterschiedliche Weise Zugriff auf Instanzen der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle.
+Anforderer und Writer erhalten auf unterschiedliche Weise Zugriff auf Instanzen der [**IVssComponent-Schnittstelle.**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent)
 
-Ein Anforderer überprüft die Komponenten Daten eines Writers von Writer, indem er Instanzen der von [**IVssBackupComponents:: getschreitercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents)zurückgegebenen [**ivssschreitercomponentlxt**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) -Schnittstelle verwendet.
+Ein Anforderer untersucht Komponentendaten auf Writer-Basis anhand von Instanzen der [**IVssWriterComponentsExt-Schnittstelle,**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) die von [**IVssBackupComponents::GetWriterComponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents)zurückgegeben wird.
 
-Zusätzlich zu den Writer-Identifikationsinformationen stellt die [**ivsswritercomponentlxt**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) -Schnittstelle ein Array von Instanzen der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle bereit – eines für jeden der ausgewählten Writer, die Komponenten enthalten.
+Zusätzlich zu den Writer-Identifikationsinformationen stellt die [**IVssWriterComponentsExt-Schnittstelle**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) ein Array von Instanzen der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) bereit – eine für jeden der ausgewählten enthaltenen Writerkomponenten.
 
-Wie bereits im [Dokument Lebenszyklus der Sicherungs Komponenten](backup-components-document-life-cycle.md)erwähnt, können die Writer [**bei der Verarbeitung**](/windows/desktop/api/VsWriter/nl-vswriter-ivsswritercomponents) von PrepareForBackup, prepareforsnapshot, PostSnapshot, BackupComplete, PreRestore oder postrestore-Ereignis auf die gleichen Informationen zugreifen.
+Wie unter Lebenszyklus von [Sicherungskomponentendokumenten](backup-components-document-life-cycle.md)erwähnt, können die Writer über die [**IVssWriterComponents-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsswritercomponents) zugriff auf dieselben Informationen erhalten, wenn sie das Ereignis PrepareForBackup, PrepareForSnapshot, PostSnapshot, BackupComplete, PreRestore oder PostRestore behandeln.
 
-[**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) ermöglicht es Writer und Anforderern, die folgenden Informationen zu erhalten:
+[**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) ermöglicht sowohl Writern als auch Anforderern das Abrufen der folgenden Informationen:
 
--   Name, Typ und [*logischer Pfad*](vssgloss-l.md) einer Komponente ([**GetComponentName**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getcomponentname), [**getcomponenttype**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getcomponenttype), [**getlogicalpath**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getlogicalpath))
--   Wie eine Komponente wieder hergestellt werden soll, wie durch das [*Wiederherstellungs Ziel*](vssgloss-r.md) angegeben ([**IVssComponent:: getrestoretarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoretarget))
--   Wenn ein alternativer Speicherort zum Wiederherstellen einer Datei verwendet wurde ([**getalternatelocationmapping**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmapping), [**getalternatelocationmappingcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmappingcount))
--   Neue Ziel Informationen, sofern vorhanden ([**getnewtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtarget), [**getnewtargetcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtargetcount))
--   Fehlermeldungen vor und nach der Wiederherstellung ([**getprerestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getprerestorefailuremsg), [**getpostrestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpostrestorefailuremsg))
--   Wenn eine [*auswählbare for Backup*](vssgloss-s.md) -Komponente, die einen Komponenten Satz definiert, für die Wiederherstellung ausgewählt wurde ([**isselectedforrestore**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-isselectedforrestore))
--   Ob eine Sicherung oder Wiederherstellung erfolgreich war ([**getbackupwar**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded), [**getfilerestorestatus**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus))
--   Alle Writer-spezifischen Sicherungs-oder Wiederherstellungsoptionen, die möglicherweise von [**IVssBackupComponents:: setbackupoptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupoptions) oder [**IVssBackupComponents:: setrestoreoptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrestoreoptions) ([**getbackupoptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupoptions), [**getrestoreoptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoreoptions)) festgelegt wurden.
--   Alle Writer-spezifischen Metadaten zum Sichern oder Wiederherstellen von Metadaten ([**getbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata)), [**getrestoremetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoremetadata))
--   Zeitstempel Informationen ([**getbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp), [**getpreviousbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpreviousbackupstamp))
--   Informationen zu Sicherungs Subkomponenten, die explizit in einer Wiederherstellung enthalten sind ([**getrestoresubcomponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoresubcomponent), [**getrestoresubcomponentcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoresubcomponentcount))
+-   Name, Typ und [*logischer Pfad*](vssgloss-l.md) einer Komponente ([**GetComponentName**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getcomponentname), [**GetComponentType**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getcomponenttype), [**GetLogicalPath**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getlogicalpath))
+-   Wie eine Komponente wiederhergestellt werden soll, wie durch das [*Wiederherstellungsziel*](vssgloss-r.md) angegeben ([**IVssComponent::GetRestoreTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoretarget))
+-   Wenn beim Wiederherstellen einer Datei ein alternativer Speicherort verwendet wurde ([**GetAlternateLocationMapping**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmapping), [**GetAlternateLocationMappingCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmappingcount))
+-   Neue Zielinformationen, sofern vorhanden ([**GetNewTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtarget), [**GetNewTargetCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtargetcount))
+-   Fehlermeldungen vor und nach der Wiederherstellung ([**GetPreRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getprerestorefailuremsg), [**GetPostRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpostrestorefailuremsg))
+-   Wenn für die Wiederherstellung ein [*für die Sicherungskomponente auswählbarer*](vssgloss-s.md) Ausgewählter ausgewählt wurde, der einen Komponentensatz definiert ([**IsSelectedForRestore**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-isselectedforrestore))
+-   Gibt an, ob eine Sicherung oder Wiederherstellung erfolgreich war ([**GetBackupSucceeded,**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded) [**GetFileRestoreStatus**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus))
+-   Alle writerspezifischen Sicherungs- oder Wiederherstellungsoptionen, die möglicherweise von [**IVssBackupComponents::SetBackupOptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupoptions) oder [**IVssBackupComponents::SetRestoreOptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrestoreoptions) ([**GetBackupOptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupoptions), [**GetRestoreOptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoreoptions)) festgelegt wurden
+-   Alle writerspezifischen Metadatensicherungs- oder Wiederherstellungsmetadaten ([**GetBackupMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata)), [**GetRestoreMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoremetadata))
+-   Zeitstempelinformationen ([**GetBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp), [**GetPreviousBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpreviousbackupstamp))
+-   Informationen zu Sicherungsunterkomponenten, die explizit in einer Wiederherstellung enthalten sind ([**GetRestoreSubcomponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoresubcomponent), [**GetRestoreSubcomponentCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoresubcomponentcount))
 
-Anders als bei Anforderern können Writer bestimmte Informationen im Dokument mit den Sicherungs Komponenten über die [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle ändern:
+Im Gegensatz zu Anforderern können Writer bestimmte Informationen im Sicherungskomponentendokument über die [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) ändern:
 
--   Wie eine Komponente wieder hergestellt werden soll, wie vom Wiederherstellungs Ziel angegeben ([**IVssComponent:: abtrestoretarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoretarget))
--   Writer-spezifische Sicherungs-und Wiederherstellungs Metadaten ([**IVssComponent:: setbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupmetadata), [**IVssComponent:: setrestoremetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoremetadata))
--   Zeitstempel Informationen ([**setbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp))
--   Fehlermeldungen vor und nach der Wiederherstellung ([**setprerestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg), [**setpostrestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg))
+-   Wie eine Komponente wiederhergestellt werden soll, wie durch das Wiederherstellungsziel angegeben ([**IVssComponent::SetRestoreTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoretarget))
+-   Writer-spezifische Sicherungs- und Wiederherstellungsmetadaten ([**IVssComponent::SetBackupMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupmetadata), [**IVssComponent::SetRestoreMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoremetadata))
+-   Zeitstempelinformationen ([**SetBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp))
+-   Fehlermeldungen vor und nach der Wiederherstellung ([**SetPreRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg), [**SetPostRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg))
 
-## <a name="requester-state-information"></a>Zustandsinformationen des Anforderers
+## <a name="requester-state-information"></a>Zustandsinformationen des Anfordernden
 
-Anforderer fügt Informationen über den Status eines Sicherungs-oder Wiederherstellungs Vorgangs mithilfe der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle in das Dokument mit den Sicherungs Komponenten ein. Writer-Anwendungen können diese Informationen über die [**CVssWriter**](/windows/desktop/api/VsWriter/nl-vswriter-cvsswriter) -Klasse Abfragen.
+Anforderer fügen Informationen zum Status eines Sicherungs- oder Wiederherstellungsvorgangs mithilfe der [**IVssBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) in das Sicherungskomponentendokument ein. Writer-Anwendungen können diese Informationen über die [**CVssWriter-Klasse**](/windows/desktop/api/VsWriter/nl-vswriter-cvsswriter) abfragen.
 
-Die im Dokument mit den Sicherungs Komponenten gespeicherten Zustandsinformationen umfassen Folgendes:
+Im Sicherungskomponentendokument gespeicherte Zustandsinformationen umfassen Folgendes:
 
 Allgemeine Informationen zur Sicherung
 
--   Der Gesamt Sicherungstyp (inkrementell, Differenziell oder vollständig)<dl> <dt>
+-   Der gesamte Sicherungstyp (inkrementell, differenziell oder vollständig)<dl> <dt>
 
-Wird von Anforderern mithilfe von [ **IVssBackupComponents:: SetBackupState** festgelegt.](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetBackupState**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
 </dt> <dt>
 
-Von Writern mithilfe von [ **CVssWriter:: getbackuptype** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-getbackuptype)
+Von Writern mit [ **CVssWriter::GetBackupType** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-getbackuptype)
 </dt> </dl>
 -   Whether component operations are supported<dl> <dt>
 
-Wird von Anforderern mithilfe von [ **IVssBackupComponents:: SetBackupState** festgelegt.](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetBackupState**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
 </dt> <dt>
 
-Von Writern mithilfe von [ **CVssWriter:: arecomponentssgewählt** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-arecomponentsselected)
+Von Writern mit [ **CVssWriter::AreComponentsSelected abgerufen**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-arecomponentsselected)
 </dt> </dl>
 -   Whether the bootable system state is backed up<dl> <dt>
 
-Wird von Anforderern mithilfe von [ **IVssBackupComponents:: SetBackupState** festgelegt.](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetBackupState**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
 </dt> <dt>
 
-Von Writern mithilfe von [ **CVssWriter:: isbootablestatebackedup** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-isbootablesystemstatebackedup)
+Von Writern mit [ **CVssWriter::IsBootableStateBackedUp** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-isbootablesystemstatebackedup)
 </dt> </dl>
 -   Whether partial file operations are supported<dl> <dt>
 
-Wird von Anforderern mithilfe von [ **IVssBackupComponents:: SetBackupState** festgelegt.](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetBackupState**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupstate)
 </dt> <dt>
 
-Von Writern mithilfe von [ **CVssWriter:: ispartialfilesupportenabled** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-ispartialfilesupportenabled)
+Von Writern mit [ **CVssWriter::IsPartialFileSupportEnabled** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-ispartialfilesupportenabled)
 </dt> </dl>
 
 Allgemeine Informationen zur Wiederherstellung
 
--   Der Gesamt Wiederherstellungstyp (unabhängig davon, ob Restore durch Kopieren oder importieren erfolgt)<dl> <dt>
+-   Der gesamte Wiederherstellungstyp (unabhängig davon, ob die Wiederherstellung per Kopier- oder Importvorgang erfolgt)<dl> <dt>
 
-Festlegen durch requestals mithilfe von [ **IVssBackupComponents:: setrestorestate**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrestorestate)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetRestoreState**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrestorestate)
 </dt> <dt>
 
-Von Writern mithilfe von [ **CVssWriter:: getrestoretype** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-getrestoretype)
+Von Writern mit [ **CVssWriter::GetRestoreType** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-getrestoretype)
 </dt> </dl>
 
 Informationen zu unterstützenden Dateien
 
--   Der Speicherort der Bereichs Dateien, die von einer bestimmten Komponente in partiellen Datei Vorgängen verwendet werden<dl> <dt>
+-   Der Speicherort von Dateien, die von einer bestimmten Komponente in Teildateivorgängen verwendet werden<dl> <dt>
 
-Von Anforderern mithilfe von [ **IVssBackupComponents:: setrangesfilepath** festgelegt](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrangesfilepath)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetRangesFilePath**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrangesfilepath)
 </dt> <dt>
 
-Abgerufen von Writern (oder Anforderern) mithilfe von [ **IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)
+Von Writern (oder Anforderern) mithilfe von [ **IVssComponent::GetPartialFile** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)
 </dt> </dl>
 
 Status der Informationen
 
 -   Geben Sie an, ob eine der Komponenten eines bestimmten Writers erfolgreich gesichert wurde.<dl> <dt>
 
-Von Anforderern mithilfe von [ **IVssBackupComponents:: setbackupwar** festgelegt](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetBackupSucceeded**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded)
 </dt> <dt>
 
-Wird von Writern und Anforderern mithilfe von [ **IVssComponent:: getbackupwar** abgerufen.](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded)
+Von Writern und Anforderern mithilfe von [ **IVssComponent::GetBackupSucceeded abgerufen**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded)
 </dt> </dl>
 -   Indicate whether one of a given writer's components was successfully restored<dl> <dt>
 
-Festlegen durch [ **anfordernde Personen mit IVssBackupComponents:: setfilerestorestatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setfilerestorestatus)
+Festlegung durch Anforderer mithilfe von [ **IVssBackupComponents::SetFileRestoreStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setfilerestorestatus)
 </dt> <dt>
 
-Von Writern und Anforderer mithilfe von [ **IVssComponent:: getfilerestorestatus** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus)
+Von Writern und Anfordernden mithilfe von [ **IVssComponent::GetFileRestoreStatus** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus)
 </dt> </dl>
 
 Writer-Settable Informationen
 
--   Zusätzliche Sicherungs Spezifikation für eine der Komponenten eines bestimmten Writers<dl> <dt>
+-   Zusätzliche Sicherungsspezifikation für eine der Komponenten eines bestimmten Writers<dl> <dt>
 
-Festlegung durch Writer mithilfe von [ **IVssComponent:: setbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupmetadata)
+Festlegung durch Writer mithilfe von [ **IVssComponent::SetBackupMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupmetadata)
 </dt> <dt>
 
-Wird von Writern und Anforderern mithilfe von [ **IVssComponent:: getbackupmetadata** abgerufen.](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata)
+Von Writern und Anforderern mithilfe von [ **IVssComponent::GetBackupMetadata** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata)
 </dt> </dl>
 -   Additional restore specification for one of a given writer's components<dl> <dt>
 
-Festlegung durch Writer mithilfe von [ **IVssComponent:: setrestoremetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoremetadata)
+Festlegung durch Writer mithilfe von [ **IVssComponent::SetRestoreMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoremetadata)
 </dt> <dt>
 
-Von Writern und Anforderern mithilfe von [ **IVssComponent:: getrestoremetadata** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoremetadata)
+Von Writern und Anforderern mithilfe von [ **IVssComponent::GetRestoreMetadata** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoremetadata)
 </dt> </dl>
 -   A backup stamp that indicates, in a writer's own specific format, the time of the current backup of one of its component's backups<dl> <dt>
 
-Festlegung durch Writer mithilfe von [ **IVssComponent:: setbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp)
+Festlegung durch Writer mithilfe von [ **IVssComponent::SetBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp)
 </dt> <dt>
 
-Wird von Writern und Anforderern mithilfe von [ **IVssComponent:: getbackupstamp** abgerufen.](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp)
+Von Writern und Anforderern mithilfe von [ **IVssComponent::GetBackupStamp** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp)
 </dt> </dl>
--   A backup stamp that indicates, in a writer's own specific format, the time of the last backup of one of its components' backups using a backup stamp initially set by <a href="/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp">IVssComponent:: setbackupstamp</a><dl> <dt>
+-   A backup stamp that indicates, in a writer's own specific format, the time of the last backup of one of its components' backups using a backup stamp initially set by <a href="/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp">IVssComponent::SetBackupStamp</a><dl> <dt>
 
-Wird von Anforderern für eine bestimmte Komponente mithilfe von [ **IVssBackupComponents:: setpreviousbackupstamp** gespeichert und festgelegt.](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setpreviousbackupstamp)
+Gespeichert und von Anforderern für eine bestimmte Komponente mit [ **IVssBackupComponents::SetPreviousBackupStamp**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setpreviousbackupstamp)
 </dt> <dt>
 
-Wird von Writern und Anforderern mithilfe von [ **IVssComponent:: getpreviousbackupstamp** abgerufen.](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpreviousbackupstamp)
+Von Writern und Anforderern mithilfe von [ **IVssComponent::GetPreviousBackupStamp** abgerufen](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpreviousbackupstamp)
 </dt> </dl>
 -   Error messages for failure before and after restore operations<dl> <dt>
 
-Wird von Writern mithilfe von [**IVssComponent:: setprerestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg) oder [**IVssComponent:: setpostrestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg) festgelegt.
+Festlegung durch Writer mit [**IVssComponent::SetPreRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg) oder [**IVssComponent::SetPostRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg)
 </dt> <dt>
 
-Wird von Writern und Anforderern mithilfe von [**IVssComponent:: getprerestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getprerestorefailuremsg) oder [**IVssComponent:: getpostrestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpostrestorefailuremsg) abgerufen.
+Von Writern und Anforderern mit [**IVssComponent::GetPreRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getprerestorefailuremsg) oder [**IVssComponent::GetPostRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpostrestorefailuremsg) abgerufen
 </dt> </dl>
 
  

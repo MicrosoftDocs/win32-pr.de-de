@@ -1,33 +1,33 @@
 ---
-description: Geschützte Daten werden als ASN. 1-codiertes BLOB gespeichert.
+description: Geschützte Daten werden als ASN.1-codiertes BLOB gespeichert.
 ms.assetid: 8E287A1F-4EDF-4068-85F7-59A1D73F7BCD
-title: Geschütztes Daten Format
+title: Geschütztes Datenformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bafa230efd704536e9e30b946e5fbf2d403e664
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 07b4985fee02b5c40b9ad51a6645c4e0d9894a358a871c2067e44dd5f90da26c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907406"
 ---
-# <a name="protected-data-format"></a>Geschütztes Daten Format
+# <a name="protected-data-format"></a>Geschütztes Datenformat
 
-Geschützte Daten werden als ASN. 1-codiertes BLOB gespeichert. Die Daten werden als CMS-Inhalte (Certificate Message Syntax) formatiert. Der digitale Umschlag enthält verschlüsselte Inhalte, Empfängerinformationen, die einen verschlüsselten Inhalts Verschlüsselungsschlüssel (CEK) enthalten, und einen Header, der Informationen über den Inhalt enthält, einschließlich der unverschlüsselten Schutz Deskriptor-Regel Zeichenfolge. Dies wird im folgenden Diagramm dargestellt.
+Geschützte Daten werden als ASN.1-codiertes BLOB gespeichert. Die Daten werden als CMS-Inhalt (Certificate Message Syntax) formatiert. Der digitale Umschlag enthält verschlüsselte Inhalte, Empfängerinformationen, die einen verschlüsselten Inhaltsverschlüsselungsschlüssel (Content Encryption Key, CEK) enthalten, und einen Header, der Informationen zum Inhalt enthält, einschließlich der Deskriptorregelzeichenfolge für unverschlüsselten Schutz. Dies wird im folgenden Diagramm veranschaulicht.
 
-![geschützte eingehüllte Daten](images/protecteddatablob.png)
+![geschützte umschlagete Daten](images/protecteddatablob.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[CNG-DPAPI](cng-dpapi.md)
+[CNG DPAPI](cng-dpapi.md)
 </dt> <dt>
 
-[Schutz Deskriptoren](protection-descriptors.md)
+[Schutzdeskriptoren](protection-descriptors.md)
 </dt> <dt>
 
-[Schutz Anbieter](protection-providers.md)
+[Schutzanbieter](protection-providers.md)
 </dt> </dl>
 
  

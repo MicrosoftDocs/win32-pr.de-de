@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcheckpointfilename-FoundException-Konstruktor'
-title: Esentcheckpointfile otfoundexception-Konstruktor
+description: 'Weitere Informationen zu: EsentCheckpointFileNotFoundException-Konstruktor'
+title: EsentCheckpointFileNotFoundException-Konstruktor
 TOCTitle: 'EsentCheckpointFileNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCheckpointFileNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcheckpointfilenotfoundexception.esentcheckpointfilenotfoundexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 40bc813135f056485b2056cb29fb62f6988fbe63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7983b1b862377b382f8d44628e29073b38135be924cb340a8eeb403d9957cb2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118782693"
 ---
-# <a name="esentcheckpointfilenotfoundexception-constructor"></a>Esentcheckpointfile otfoundexception-Konstruktor
+# <a name="esentcheckpointfilenotfoundexception-constructor"></a>EsentCheckpointFileNotFoundException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcheckpointfile Name-Klasse.
+Initialisiert eine neue Instanz der EsentCheckpointFileNotFoundException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentCheckpointFileNotFoundException()
 public EsentCheckpointFileNotFoundException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcheckpointfile topics-Klasse](./esentcheckpointfilenotfoundexception-class.md)
+[EsentCheckpointFileNotFoundException-Klasse](./esentcheckpointfilenotfoundexception-class.md)
 
-[Esentcheckpointfile topics-Elemente](./esentcheckpointfilenotfoundexception-members.md)
+[EsentCheckpointFileNotFoundException-Member](./esentcheckpointfilenotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

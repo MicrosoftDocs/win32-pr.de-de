@@ -1,25 +1,25 @@
 ---
-description: Ein Akkord ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines als "Secant" bezeichneten Linien Segments begrenzt ist. Die folgende Abbildung zeigt einen mit der Funktion "Chord" gezeichneten Akkord.
+description: Ein Chord ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines Liniensegments begrenzt wird, das als Secant bezeichnet wird. Die folgende Abbildung zeigt einen gezeichneten Chord mithilfe der Chord-Funktion.
 ms.assetid: 9aa35b39-06f2-48bf-b32c-3e3e32fab68b
-title: Informationen zu Akkorden
+title: Informationen zu Chords
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18d6310c47a503766e61b9c7936816a5891da89a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc3bad0d17d34386ada7c7c3b46bb1bcc4db5f9a2ce572ce78c33f8f4b6af909
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119400530"
 ---
-# <a name="about-chords"></a>Informationen zu Akkorden
+# <a name="about-chords"></a>Informationen zu Chords
 
-Ein *Akkord* ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines als " *Sekans*" bezeichneten Linien Segments begrenzt ist. Die folgende Abbildung zeigt einen mit der Funktion " [**Chord**](/windows/desktop/api/Wingdi/nf-wingdi-chord) " gezeichneten Akkord.
+Ein *Chord* ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines Liniensegments begrenzt wird, das als *Secant* bezeichnet wird. Die folgende Abbildung zeigt einen gezeichneten Chord mithilfe der [**Chord-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-chord)
 
-![Abbildung einer Elipse, die zwei radiale, eine Secant und einen Akkord anzeigt](images/csfsh-02.png)
+![Abbildung einer Elipse mit zwei Radialen, einem Secant und einem Chord](images/csfsh-02.png)
 
-Beim Aufrufen von " [**Chord**](/windows/win32/api/wingdi/nf-wingdi-chord)" stellt eine Anwendung die Koordinaten der oberen linken und der unteren rechten Ecke des umgebenden Rechtecks der Ellipse sowie die Koordinaten von zwei Punkten bereit, die zwei radiale definieren. Ein radiales ist eine Linie, die aus der Mitte des umgebenden Rechtecks einer Ellipse bis zu einem Punkt auf der Ellipse gezeichnet wird.
+Beim Aufrufen von [**Chord**](/windows/win32/api/wingdi/nf-wingdi-chord)stellt eine Anwendung die Koordinaten der oberen linken und unteren rechten Ecken des umgrenzenden Rechtecks der Ellipse sowie die Koordinaten von zwei Punkten zur Verfügung, die zwei Radiale definieren. Ein radiales ist eine Linie, die aus der Mitte des umgrenzenden Rechtecks einer Ellipse an einen Punkt auf der Ellipse gezeichnet wird.
 
-Wenn das System den gekrümmten Teil des Akkords zeichnet, erfolgt dies mithilfe der aktuellen Bogen Richtung für den angegebenen Gerätekontext. Die Standard-Bogen Richtung ist gegen den Uhrzeigersinn. Sie können festlegen, dass die Anwendung die Bogen Richtung zurücksetzen soll, indem Sie die [**setarcdirection**](/windows/desktop/api/Wingdi/nf-wingdi-setarcdirection) -Funktion aufrufen.
+Wenn das System den gekrümmten Teil des Chord zeichnet, wird hierfür die aktuelle Bogenrichtung für den angegebenen Gerätekontext verwendet. Die Standardrichtung des Bogens ist gegen den Uhrzeigersinn. Sie können ihre Anwendung die Arc-Richtung zurücksetzen lassen, indem Sie die [**SetArcDirection-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setarcdirection) aufrufen.
 
  
 

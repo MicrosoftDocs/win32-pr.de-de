@@ -1,62 +1,62 @@
 ---
-description: In diesem Beispiel wird gezeigt, wie die frei Hand Analyse zum Erstellen einer Formular füllenden Anwendung verwendet wird, wobei das Formular auf einem gescannten Papierformular basiert.
+description: In diesem Beispiel wird gezeigt, wie Sie mit der Ink-Analyse eine Anwendung zum Ausfüllen von Formularen erstellen, bei der das Formular auf einem gescannten Papierformular basiert.
 ms.assetid: 1eae5962-b4e0-4947-a6d2-63713a68198c
-title: Papierformular für die frei Hand Analyse
+title: Gescanntes Papierformular für die Ink-Analyse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e94d366c77e19bd5c32d3d1e4efa286cb3b089ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4069efd5ba8763e00e9b3170ffb0a39a4a70c4d66d07d3c8bf08bc3688f57ed0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118718646"
 ---
-# <a name="ink-analysis-scanned-paper-form"></a>Papierformular für die frei Hand Analyse
+# <a name="ink-analysis-scanned-paper-form"></a>Gescanntes Papierformular für die Ink-Analyse
 
-In diesem Beispiel wird gezeigt, wie die frei Hand Analyse zum Erstellen einer Formular füllenden Anwendung verwendet wird, wobei das Formular auf einem gescannten Papierformular basiert.
+In diesem Beispiel wird gezeigt, wie Sie mit der Ink-Analyse eine Anwendung zum Ausfüllen von Formularen erstellen, bei der das Formular auf einem gescannten Papierformular basiert.
 
 ## <a name="features-demonstrated"></a>Gezeigte Features
 
-Diese Beispielanwendung veranschaulicht die folgenden Features der frei Hand Analyse-API und der Windows Forms Ink-Steuerelemente:
+Diese Beispielanwendung veranschaulicht die folgenden Funktionen der Freihandanalyse-API und der Windows Forms-Freihandsteuerelemente:
 
--   Ein gescanntes Papierformular wird geladen. Im Beispiel wird das Formular aus einem Bild im PNG-Format importiert.
--   Sammeln und Rendern von frei Hand Eingaben über das gescannte Formular.
--   Verwenden eines [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) -Objekts zum Analysieren der Handschrift.
--   Erstellen von [AnalysisHintNode](/previous-versions/ms573018(v=vs.100)) -Objekten zur Verbesserung der Handschrift Ergebnisse.
--   Auffüllen von Textfeldern aus Analyse hinweisen.
--   Erstellen einer grundlegenden Textkorrektur.
+-   Laden eines gescannten Papierformulars. Im Beispiel wird das Formular aus einem Bild im .png Format importiert.
+-   Sammeln und Rendern von Ink auf dem gescannten Formular.
+-   Verwenden eines [InkAnalyzer-Objekts](/previous-versions/ms583671(v=vs.100)) zum Analysieren der Handschrift.
+-   Generieren von [AnalysisHintNode-Objekten](/previous-versions/ms573018(v=vs.100)) zur Verbesserung der Handschriftergebnisse.
+-   Auffüllen von Textfeldern aus Analysehinweisen.
+-   Erstellen einer einfachen Textkorrektur.
 
 ## <a name="project-references"></a>Projektverweise
 
-Das Beispiel ist als Windows Forms oder Windows Presentation Foundation Anwendung verfügbar. Die Verweise auf die Windows Forms-Version:
+Das Beispiel ist als Windows Forms- oder Windows Presentation Foundation-Anwendung verfügbar. Die Windows Forms-Versionsverweise:
 
 -   Microsoft.Ink.dll
 -   Microsoft.Ink.Analysis.dll
 
-Die Windows Presentation Foundation Versions Verweise IAWinFX.dll zusätzlich zu den wichtigsten Windows Presentation Foundation-DLLs.
+Die Windows Presentation Foundation Version verweist IAWinFX.dll zusätzlich zu den Kern-Windows Presentation Foundation-DLLs.
 
 > [!Note]  
-> Die Windows Presentation Foundation Version dieses Beispiels (im XAML-Verzeichnis gefunden) erfordert, dass die Windows Presentation Foundation Erweiterungen für Microsoft Visual Studio 2005 auf dem System installiert sind.
+> Die Windows Presentation Foundation Version dieses Beispiels (im XAML-Verzeichnis zu finden) erfordert, dass die Windows Presentation Foundation-Erweiterungen für Microsoft Visual Studio 2005 auf dem System installiert sind.
 
  
 
 ## <a name="user-interface"></a>Benutzeroberfläche
 
-Die Benutzeroberfläche für diese Anwendung besteht aus einem [TabControl](/dotnet/api/system.windows.forms.tabcontrol?view=netcore-3.1) -Objekt mit zwei zugeordneten [TabPage](/dotnet/api/system.windows.forms.tabpage?view=netcore-3.1) -Objekten: frei Hand Formular und konvertiertes Textformular. Die Registerkarte frei Hand Formular enthält
+Die Benutzeroberfläche für diese Anwendung besteht aus einem [TabControl-Objekt,](/dotnet/api/system.windows.forms.tabcontrol?view=netcore-3.1) dem zwei [TabPage-Objekte](/dotnet/api/system.windows.forms.tabpage?view=netcore-3.1) zugeordnet sind: Freihandformular und konvertiertes Textformular. Die Registerkarte "Ink Form" enthält
 
--   Ein Bereich, der ein Bild eines gescannten Papier Formulars enthält, das zum Übernehmen von Telefonnachrichten verwendet wird.
--   Ein Kontrollkästchen, bei dem die Anwendung die Grenzen des Analyse Hinweises anzeigt, wenn diese Option ausgewählt ist.
--   Ein paar von Schaltflächen, löschen und analysieren, die frei Hand Eingaben aus dem Formular löschen und die Ink-Analyse initialisieren.
+-   Ein Bereich, der ein Bild eines gescannten Papierformulars enthält, das für die Aufnahme von Telefonnachrichten verwendet wird.
+-   Ein Kontrollkästchen, in dem die Anwendung die Begrenzungen der Analysehinweise zeigt, wenn diese ausgewählt sind.
+-   Ein Paar von Schaltflächen ,Löschen und Analysieren', mit denen die Freihand aus dem Formular gelöscht und die Freihandanalyse initialisiert wird.
 
-Das konvertierte Textformular enthält dasselbe Bild und ist die Seite, auf der der erkannte Text von der Anwendung angezeigt wird. Wenn Sie auf analysieren klicken, führt die Anwendung die Handschrift Daten synchron aus, und die Erkennungsergebnisse werden auf der Registerkarte konvertierte Text Formulare angezeigt.
+Das Formular für konvertierten Text enthält das gleiche Bild und ist die Seite, auf der die Anwendung den erkannten Text anzeigt. Wenn Sie auf Analysieren klicken, führt die Anwendung synchron eine Ink-Analyse durch, und die Erkennungsergebnisse werden auf der Registerkarte Konvertiertes Textformular angezeigt.
 
 ## <a name="functionality"></a>Funktionalität
 
-Diese Anwendung verwendet ein [InkOverlay](/previous-versions/ms552322(v=vs.100)) , um Schreibvorgänge zu ermöglichen. Das InkOverlay-Objekt eignet sich gut für die Aufnahme und das einfache schreiben. Der primäre Verwendungszweck dieses Objekts besteht darin, frei Hand Eingaben als frei Hand Eingaben anzuzeigen. Die Hauptklasse für die Ink-Analyse ist die [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) -Klasse. Wenn Sie die [Analyse](/previous-versions/ms568971(v=vs.100)) Methode des InkAnalyzer-Objekts aufzurufen, erfolgt die Handschrifterkennung synchron.
+Diese Anwendung verwendet [inkOverlay,](/previous-versions/ms552322(v=vs.100)) um das Schreiben zu ermöglichen. Das InkOverlay-Objekt eignet sich gut für Notizaufnahme und einfaches Scribbling. Die primäre Verwendung dieses Objekts besteht darin, Ink als Ink anzuzeigen. Die Hauptklasse für die Ink-Analyse ist die [InkAnalyzer-Klasse.](/previous-versions/ms583671(v=vs.100)) Wenn Sie die [Analyze-Methode](/previous-versions/ms568971(v=vs.100)) des InkAnalyzer-Objekts aufrufen, erfolgt die Ink-Analyse synchron.
 
-Die Anwendung initialisiert zwei Arrays, eine der Zeichen folgen und eine der Rechtecke. Das Zeichen folgen Array, `factoidStrings` , besteht aus [Faktoid](/previous-versions/ms583657(v=vs.100)) -Objekten, die als [AnalysisHintNode](/previous-versions/ms573018(v=vs.100)) -Objekte an den [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) übermittelt werden. Die AnalysisHintNode-Objekte übertragen den InkAnalyzer in Bezug auf bestimmte Eingaben. In diesem Beispiel werden die Datums-, Uhrzeit-und Telefon Hinweise sowie einige andere verwendet.
+Die Anwendung initialisiert zwei Arrays, eines von Zeichenfolgen und eines von Rechtecke. Das Zeichenfolgenarray `factoidStrings` besteht aus [Factoid-Objekten,](/previous-versions/ms583657(v=vs.100)) die als [AnalysisHintNode-Objekte](/previous-versions/ms573018(v=vs.100)) an [InkAnalyzer](/previous-versions/ms583671(v=vs.100)) übergeben werden. Die AnalysisHintNode-Objekte verzerren den InkAnalyzer auf eine bestimmte Eingabe. In diesem Beispiel werden datums-, uhrzeit- und telefon-Hinweise sowie einige andere Hinweise verwendet.
 
-Jeder [AnalysisHintNode](/previous-versions/ms573018(v=vs.100)) ist einem bestimmten Bereich der Form zugeordnet. Die Bereiche werden durch das Array der Rechtecke dargestellt `rects` . Wenn Sie für jedes Rechteck ein [Textfeld](/dotnet/api/system.windows.forms.textbox?view=netcore-3.1) erstellen, gibt das Beispiel den erkannten Text an der richtigen Position aus.
+Jeder [AnalysisHintNode](/previous-versions/ms573018(v=vs.100)) ist einem bestimmten Bereich des Formulars zugeordnet. Die Bereiche werden durch das Array von Rechtecke dargestellt, `rects` . Durch Erstellen eines [TextBox-Felds](/dotnet/api/system.windows.forms.textbox?view=netcore-3.1) für jedes Rechteck gibt das Beispiel den erkannten Text an der richtigen Position aus.
 
 
 ```C++
@@ -91,7 +91,7 @@ Jeder [AnalysisHintNode](/previous-versions/ms573018(v=vs.100)) ist einem bestim
 
 
 
-Danach ist es lediglich wichtig, einen Ereignishandler zu erstellen, der die Handschrift Analyse auslöst, wenn der Benutzer auf "analysieren" klickt.
+Danach geht es lediglich darum, einen Ereignishandler zu erstellen, der die Ink-Analyse auslöst, wenn der Benutzer auf Analysieren klickt.
 
 
 ```C++

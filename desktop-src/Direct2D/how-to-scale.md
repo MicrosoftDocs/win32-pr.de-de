@@ -4,27 +4,27 @@ description: Zeigt, wie ein Objekt skaliert wird.
 ms.assetid: 3da749e2-50d5-4f4e-9ccd-8c230efe3436
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d9f46ae37197cb7cbfeb3f86588e1b5298cfc467
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d833ea44e4a38672729dd7647063e8ed9f8de3574d820a3db40d5a848064ef15
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259145"
 ---
 # <a name="how-to-scale-an-object"></a>Skalieren eines Objekts
 
-In diesem Thema wird beschrieben, wie ein Objekt mithilfe der [**Matrix3x2F**](/windows/win32/api/d2d1helper/nl-d2d1helper-matrix3x2f) -Klasse skaliert wird. Das Skalieren eines Objekts bedeutet, dass das Objekt größer oder kleiner wird. Sie können eine der beiden folgenden Methoden zum Skalieren eines Objekts aufzurufen.
+In diesem Thema wird beschrieben, wie ein Objekt mithilfe der [**Matrix3x2F-Klasse**](/windows/win32/api/d2d1helper/nl-d2d1helper-matrix3x2f) skaliert wird. Das Skalieren eines Objekts bedeutet, dass das Objekt größer oder kleiner wird. Sie können eine der beiden folgenden Methoden aufrufen, um ein Objekt zu skalieren.
 
--   **Matrix3x2F:: Scale (D2D1 \_ size \_ F scalefactor, D2D1 \_ Point \_ 2F Centerpoint)**
--   **Matrix3x2F:: Scale (float ScaleX, float ScaleY, D2D1 \_ Point \_ 2F Centerpoint)**
+-   **Matrix3x2F::Scale(D2D1 \_ SIZE \_ F scalefactor, D2D1 \_ POINT \_ 2F centerpoint)**
+-   **Matrix3x2F::Scale(float scalex, float scaley, D2D1 \_ POINT \_ 2F centerpoint)**
 
-Die erste Methode speichert *ScaleX* und *ScaleY* als geordnetes Paar von Gleit Komma Werten in der [**D2D1 \_ size \_ F**](/windows/desktop/Direct2D/d2d1-size-f) -Struktur. Mit der zweiten Methode werden *ScaleX* und *ScaleY* als einzelne Parameter definiert.
+Die erste Methode speichert *scalex* und *scaley* als geordnetes Paar von Gleitkommawerten in der [**D2D1 \_ SIZE \_ F-Struktur.**](/windows/desktop/Direct2D/d2d1-size-f) Die zweite Methode definiert *scalex* und *scaley* als einzelne Parameter.
 
-Unabhängig davon, welche Methode Sie verwenden, müssen Sie sowohl *ScaleX* -als auch *ScaleY* -Faktoren angeben. Der *ScaleX* -Wert ist der Skalierungsfaktor in der x-Richtung. Beispielsweise wird das Objekt von einem *ScaleX* -Wert von 1,5 auf 150 Prozent entlang der x-Achse gestreckt. Ebenso ist der *Skalarwert der Skalierungs* Faktor in der y-Richtung. Beispielsweise verkleinert ein *ScaleY* -Wert von 0,5 die Höhe des Objekts um 50 Prozent entlang der y-Achse.
+Unabhängig davon, welche Methode Sie verwenden, müssen Sie sowohl *Scalex-* als auch *Skalierungsfaktoren* angeben. Der *scalex-Wert* ist der Skalierungsfaktor in x-Richtung. Beispielsweise wird das Objekt mit einem *scalex-Wert* von 1,5 entlang der x-Achse auf 150 Prozent gestreckt. Auf ähnliche Weise ist der *Skalierungswert* der Skalierungsfaktor in y-Richtung. Beispielsweise verkleinert ein *skalierungswert* von 0,5 die Höhe des Objekts entlang der y-Achse um 50 Prozent.
 
-Um einen Punkt als Mittelpunkt des Skalierungs Vorgangs anzugeben, verwenden Sie den *CenterPoint* -Parameter. Standardmäßig wird ein Objekt über den Ursprung (0, 0) zentriert.
+Verwenden Sie den *Parameter centerpoint,* um einen Punkt als Mittelpunkt des Skalierungsvorgangs anzugeben. Standardmäßig wird ein Objekt um seinen Ursprung (0,0) zentriert.
 
-Im folgenden Beispielcode wird eine Skalierungs Transformation erstellt, um die Größe eines Quadrats auf 130% seiner ursprünglichen Größe zu erhöhen. Der Mittel *Punkt* wird auf die obere linke Ecke des ursprünglichen Quadrats festgelegt.
+Der folgende Beispielcode erstellt eine Skalierungstransformation, um die Größe eines Quadrats auf 130 % seiner ursprünglichen Größe zu erhöhen. Der *Mittelpunkt* ist auf die obere linke Ecke des ursprünglichen Quadrats festgelegt.
 
 
 ```C++
@@ -56,9 +56,9 @@ Im folgenden Beispielcode wird eine Skalierungs Transformation erstellt, um die 
 
 
 
-Die folgende Abbildung zeigt die Auswirkung der Anwendung der Skalierungs Transformation auf das Quadrat. Das ursprüngliche Quadrat ist eine gepunktete Gliederung, und das skalierte Quadrat ist ein voll solider Umriss.
+Die folgende Abbildung zeigt die Auswirkungen der Anwendung der Skalierungstransformation auf das Quadrat. Das ursprüngliche Quadrat ist eine gepunktete Kontur, und das skalierte Quadrat ist ein solider Umriss.
 
-![Abbildung der Quadrat Größe, die auf 130% der ursprünglichen Größe angepasst wurde](images/scale-ovw.png)
+![Abbildung der Quadratgröße auf 130 % der ursprünglichen Größe](images/scale-ovw.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -70,6 +70,6 @@ Die folgende Abbildung zeigt die Auswirkung der Anwendung der Skalierungs Transf
 [Direct2D-Referenz](reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: HDN_ITEMKEYDOWN Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Header Steuer Elements, dass eine Taste mit einem ausgewählten Element gedrückt wurde. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: HDN_ITEMKEYDOWN Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Headersteuerelements, dass eine Taste gedrückt und ein Element ausgewählt wurde. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: ab6922ab-907d-44fc-8606-28f395118405
 keywords:
-- Windows-Steuerelemente für HDN_ITEMKEYDOWN Benachrichtigungs
+- HDN_ITEMKEYDOWN Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c4415eb5a026bf96d53884fe2735f3a3fa2e494
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 473222e6cd0da7fd886571db045ee91ea6d8c46ce6bcc20e141af837d5aa92e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435430"
 ---
-# <a name="hdn_itemkeydown-notification-code"></a>Hdn \_ itemkeydown-Benachrichtigungs Code
+# <a name="hdn_itemkeydown-notification-code"></a>HDN \_ ITEMKEYDOWN-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Header Steuer Elements, dass eine Taste mit einem ausgewählten Element gedrückt wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Headersteuerelements, dass eine Taste gedrückt und ein Element ausgewählt wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ HDN_ITEMKEYDOWN
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur, die zusätzliche Informationen über den gedrückten Schlüssel enthält.
+Ein Zeiger auf eine [**NMHEADER-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) die zusätzliche Informationen über den gedrückten Schlüssel enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

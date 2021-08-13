@@ -1,10 +1,10 @@
 ---
-title: Dsbackupgetbackuplogs-Funktion (ntdsbcli. h)
-description: Ruft die Liste der Protokolldateien ab, die für den angegebenen Sicherungs Kontext gesichert werden müssen.
+title: DsBackupGetBackupLogs-Funktion (Ntdsbcli.h)
+description: Erhält die Liste der Protokolldateien, die für den angegebenen Sicherungskontext gesichert werden müssen.
 ms.assetid: 09b3fdac-41ea-471c-a0dd-54414181f6fe
 ms.tgt_platform: multiple
 keywords:
-- Dsbackupgetbackuplogs-Funktion Active Directory
+- DsBackupGetBackupLogs-Funktion Active Directory
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a02c5c7234810623a95dea030f0c623cca92293
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d4a240ef514fc62450a04f512f04d985380b79fa20daaee9ff4b27ccb71027a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118430103"
 ---
-# <a name="dsbackupgetbackuplogs-function"></a>Dsbackupgetbackuplogs-Funktion
+# <a name="dsbackupgetbackuplogs-function"></a>DsBackupGetBackupLogs-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista [Volumeschattenkopie-Dienst (VSS)](../vss/volume-shadow-copy-service-overview.md) .\]
+\[Diese Funktion ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Ab Windows Vista verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **dsbackupgetbackuplogs** -Funktion Ruft die Liste der Protokolldateien ab, die für den angegebenen Sicherungs Kontext gesichert werden müssen.
+Die **DsBackupGetBackupLogs-Funktion** erhält die Liste der Protokolldateien, die für den angegebenen Sicherungskontext gesichert werden müssen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,63 +47,63 @@ HRESULT DsBackupGetBackupLogs(
 
 <dl> <dt>
 
-*HBC* \[ in\]
+*hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Sicherungs Kontext Handle, das mit der [**dsbackupprepare**](dsbackupprepare.md) -Funktion abgerufen wurde.
+Enthält das Mit der [**DsBackupPrepare-Funktion erhaltene Sicherungskontexthand**](dsbackupprepare.md) handle.
 
 </dd> <dt>
 
-*pszbackuplogfiles* \[ vorgenommen\]
+*pszBackupLogFiles* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Zeichen folgen Zeiger, der die Liste der Protokoll Dateinamen als UNC-Pfade empfängt. Initialisieren Sie diesen Wert vor dem Aufrufen von **dsbackupgetbackuplogs** in **null** .
+Zeiger auf einen Zeichenfolgenzeiger, der die Liste der Protokolldateinamen als UNC-Pfade empfängt. Initialisieren Sie diesen Wert auf **NULL,** bevor **Sie DsBackupGetBackupLogs aufrufen.**
 
-Diese Liste empfängt eine mit NULL endend beendete Liste mit einzelnen null-terminierten Zeichen folgen.
+Diese Liste empfängt eine doppelte Null-Terminierungsliste mit einzelnen Zeichenfolgen mit NULL-Terminierung.
 
-Dieser Puffer wird von der **dsbackupgetbackuplogs** -Funktion zugewiesen und muss freigegeben werden, wenn er durch Aufrufen der [**dsbackupfree**](dsbackupfree.md) -Funktion nicht mehr benötigt wird.
+Dieser Puffer wird von der **DsBackupGetBackupLogs-Funktion** zugeordnet und muss durch Aufrufen der [**DsBackupFree-Funktion nicht**](dsbackupfree.md) mehr benötigt werden.
 
-Das erste Zeichen jedes Datei namens enthält eine der [**bft-Konstanten**](bft-constants.md) , die den Typ des Namens identifiziert.
+Das erste Zeichen jedes Dateinamens enthält eine der [**BFT-Konstanten,**](bft-constants.md) die den Typ des Namens identifizieren.
 
 </dd> <dt>
 
-*pcbSize* \[ vorgenommen\]
+*besize* \[ out\]
 </dt> <dd>
 
-Zeiger auf den **DWORD** -Wert, der die Größe des *pszbackuplogfiles* -Puffers in Bytes empfängt.
+Zeiger auf **den DWORD-Wert,** der die Größe des *Puffers pszBackupLogFiles* in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, andernfalls ein Win32-oder RPC-Fehlercode. In der folgenden Liste sind andere mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Win32- oder RPC-Fehlercode. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**Fehler \_ Zugriff \_ verweigert**
+**FEHLER \_ BEIM \_ ZUGRIFF VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die erforderlichen Zugriffsberechtigungen, um diese Funktion aufzurufen. Die [**dssetauthidentity**](dssetauthidentity.md) -Funktion kann verwendet werden, um die Anmelde Informationen festzulegen, die für die Sicherungs-und Wiederherstellungs Funktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Mit [**der DsSetAuthIdentity-Funktion**](dssetauthidentity.md) können die Anmeldeinformationen festgelegt werden, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> <dt>
 
-**Fehler bei \_ ungültigem \_ Parameter**
+**FEHLER \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
-*HBC*, *pszbackuplogfiles* oder *pcbSize* ist ungültig.
+*"hbc",* *"pszBackupLogFiles"* *oder "formatSize" ist* ungültig.
 
 </dd> <dt>
 
-**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**
+**FEHLER: \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**
 </dt> <dd>
 
-Es ist ein Fehler bei der Speicher Belegung aufgetreten.
+Es ist ein Speicherbelegungsfehler aufgetreten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion **dsbackupgetbackuplogs** enthält eine Liste der Protokolldateien, die für eine Sicherung erforderlich sind. Eine vollständige Sicherung besteht aus den Datenbankdateien, die von der Funktion [**dsbackupgetdatabasenames**](dsbackupgetdatabasenames.md) und den Protokolldateien bereitgestellt werden. Inkrementelle Sicherungen von Active Directory Servern werden nicht unterstützt.
+Die **Funktion DsBackupGetBackupLogs enthält** eine Liste der Protokolldateien, die für eine Sicherung erforderlich sind. Eine vollständige Sicherung besteht aus den Datenbankdateien, die von der [**DsBackupGetDatabaseNames-Funktion**](dsbackupgetdatabasenames.md) bereitgestellt werden, und den Protokolldateien. Inkrementelle Sicherungen von Active Directory-Servern werden nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,30 +113,30 @@ Die Funktion **dsbackupgetbackuplogs** enthält eine Liste der Protokolldateien,
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ntdsbcli.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dsbackupgetbackuplogsw** (Unicode) und **dsbackupgetbackuplogsa** (ANSI)<br/>   |
+| Unicode- und ANSI-Name<br/>   | **DsBackupGetBackupLogsW** (Unicode) und **DsBackupGetBackupLogsA** (ANSI)<br/>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Dsbackupfree**](dsbackupfree.md)
+[**DsBackupFree**](dsbackupfree.md)
 </dt> <dt>
 
-[**Dsbackupgetdatabasenames**](dsbackupgetdatabasenames.md)
+[**DsBackupGetDatabaseNames**](dsbackupgetdatabasenames.md)
 </dt> <dt>
 
-[**Bft-Konstanten**](bft-constants.md)
+[**BFT-Konstanten**](bft-constants.md)
 </dt> <dt>
 
-[Sichern eines Active Directory Servers](backing-up-an-active-directory-server.md)
+[Sichern eines Active Directory-Servers](backing-up-an-active-directory-server.md)
 </dt> <dt>
 
-[Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+[Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 </dt> </dl>
 
  

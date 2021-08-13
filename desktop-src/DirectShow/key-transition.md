@@ -1,71 +1,71 @@
 ---
-description: Schlüssel Übergang
+description: Schlüsselübergang
 ms.assetid: 5d1ed2e4-82c2-4364-b8f0-22bba974bc22
-title: Schlüssel Übergang
+title: Schlüsselübergang
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3e4f83bbe26f49989d612efe718c2d838ce7f1d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a9fc5b905b1650b6db6bb98b542193160825b8bd6dd74626ef9bddc91b118118
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118397276"
 ---
-# <a name="key-transition"></a>Schlüssel Übergang
+# <a name="key-transition"></a>Schlüsselübergang
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Der Schlüssel Übergang führt die Schlüssel Erstellung basierend auf RGB-Wert, Alpha-Wert, Farbton oder Leuchtkraft durch.
+Der Schlüsselübergang führt die Tastenbetonung basierend auf RGB-Wert, Alphawert, Farbton oder Leuchtdichte aus.
 
-Die folgende Abbildung zeigt den Schlüssel Übergang:
+Die folgende Abbildung zeigt den Schlüsselübergang:
 
-![Schlüssel Übergang](images/trans-key.png)
+![Schlüsselübergang](images/trans-key.png)
 
-Klassen-ID (CLSID): {C5B19592-145E-11d3-9F04-006008039E37}
+Klassen-ID (CLSID): {C5B19592-145E-11D3-9F04-006008039E37}
 
-CLSID-Variablen Name: CLSID \_ dxtkey
+CLSID-Variablenname: CLSID \_ DxtKey
 
-Anzeige Name: "dxtkey"
+Anzeigename: "DxtKey"
 
 Eigenschaften
 
 
 
-| Eigenschaft   | type  | Gültiger Bereich           | BESCHREIBUNG                                                                                                                                                                                                                                                | Gilt für                     |
+| Eigenschaft   | type  | Gültiger Bereich           | Beschreibung                                                                                                                                                                                                                                                | Gilt für                     |
 |------------|-------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| Farbton        | INT   | 0 – 360                 | Der Farbton Wert, für den der Schlüssel angezeigt werden soll.                                                                                                                                                                                                                             | Farbton                            |
-| Invertierung     | BOOL  | **False** oder **true** | Boolescher Wert, der angibt, ob die Standardoperation des Schlüssels umgekehrt werden soll. Wenn der Wert **false** ist, werden die Pixel im überliegenden Bild standardmäßig transparent gemacht. Wenn **true**, kehrt der Vorgang um.                                                   | Chroma, Hue, Leuchtkraft, nicht rot |
+| Farbton        | INT   | 0–360                 | Der Farbtonwert, für den die Taste geschaltet werden soll.                                                                                                                                                                                                                             | Farbton                            |
+| Invertierung     | BOOL  | **FALSE** oder **TRUE** | Boolescher Wert, der angibt, ob der Standardvorgang des Schlüssels umgekehrt werden soll. False gibt an, dass Pixel im übermäßigen Bild standardmäßig transparent gemacht werden. True gibt an, dass der Vorgang umgekehrt wird.                                                   | Chroma, Hue, Luminance, Nonred |
 | KeyType    | INT   | Siehe Hinweise           | Gibt den Typ des Schlüssels an. Weitere Informationen finden Sie in den Hinweisen.                                                                                                                                                                                              | Alle                            |
-| Luminance  | INT   | 0 – 100                 | Der Wert für die Leuchtkraft, auf den der Schlüssel fest.                                                                                                                                                                                                                       | Luminance                      |
-| RGB        | DWORD | 0x0 – 0xffffff        | Die Farbe, in der der Schlüssel angezeigt werden soll. Der Wert ist eine hexadezimale Zahl mit dem Format 0x *RRGGBB*, wobei *RR* der rote Wert, *GG* der grüne Wert und *BB* der blaue Wert ist. (Rein rot, grün und blau sind 0xFF0000, 0x00FF00 bzw. 0x0000FF.) | Chroma                         |
-| Ähnlichkeit | INT   | 0 – 100                 | Der Bereich der Farbdaten, der transparent wird. Bei höheren Werten ist eine größere Anzahl ähnlicher Farben transparent.                                                                                                                                        | Chroma, nicht rot                 |
+| Luminance  | INT   | 0–100                 | Der Leuchtdichtewert, für den die Taste aktiviert werden soll.                                                                                                                                                                                                                       | Luminance                      |
+| RGB        | DWORD | 0x0 – 0xFFFFFF        | Die Farbe, für die die Taste angezeigt werden soll. Der Wert ist eine Hexadezimalzahl im Format 0x *RRGGBB,* wobei *RR* der rote Wert, *GG* der grüne Wert und *BB* der blaue Wert ist. (Reines Rot, Grün und Blau sind 0xFF0000, 0x00FF00 bzw. 0x0000FF.) | Chroma                         |
+| Ähnlichkeit | INT   | 0–100                 | Der Bereich von Farbdaten, der transparent wird. Bei höheren Werten ist ein größerer Bereich ähnlicher Farben transparent.                                                                                                                                        | Aus, Nicht 10                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Typ des Schlüssels, der ausgeführt wird, hängt vom Wert der **KeyType** -Eigenschaft ab, die einen der folgenden Werte aufweisen muss:
+Der Typ des ausgeführten Schlüssels hängt vom Wert der **KeyType-Eigenschaft** ab, der einer der folgenden sein muss:
 
 
 
 | Wert | Enumeration       | Beschreibung                                           |
 |-------|-------------------|-------------------------------------------------------|
-| 0     | dxtkey \_ RGB       | Chroma-Schlüssel (Schlüssel nach RGB-Wert).                        |
-| 1     | dxtkey \_ nicht rot    | Nicht-rote Taste. (Macht blaue und grüne Bereiche transparent.) |
-| 2     | dxtkey- \_ Leuchtkraft | Der Schlüssel für die Leuchtkraft.                                        |
-| 3     | dxtkey \_ Alpha     | Schlüssel nach Alpha Wert.                                   |
-| 4     | dxtkey- \_ Farbton       | Schlüssel nach Farbton.                                           |
+| 0     | DXTKEY \_ RGB       | Schlüssel des Schlüssels (Schlüssel nach RGB-Wert).                        |
+| 1     | DXTKEY \_ NONRED    | Nicht beredter Schlüssel. (Macht blaue und grüne Bereiche transparent.) |
+| 2     | DXTKEY \_ LUMINANCE | Luminance-Schlüssel.                                        |
+| 3     | DXTKEY \_ ALPHA     | Schlüssel nach Alphawert.                                   |
+| 4     | DXTKEY \_ HUE       | Schlüssel nach Farbton.                                           |
 
 
 
  
 
-Der Schlüsseltyp ist standardmäßig dxtkey \_ alpha.
+Der Schlüsseltyp ist standardmäßig DXTKEY \_ ALPHA.
 
  
 

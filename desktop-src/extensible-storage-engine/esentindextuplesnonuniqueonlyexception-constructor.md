@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentindextuplesnonuniqueonlyexception-Konstruktor'
-title: Esentindextuplesnonuniqueonlyexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentIndexTuplesNonUniqueOnlyException-Konstruktor'
+title: EsentIndexTuplesNonUniqueOnlyException-Konstruktor
 TOCTitle: 'EsentIndexTuplesNonUniqueOnlyException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentIndexTuplesNonUniqueOnlyException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentindextuplesnonuniqueonlyexception.esentindextuplesnonuniqueonlyexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: eed6a6a894fa7889f3151290eef7bd569cedd56b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a075349f7da7de9b3172d9767b4e9d52c578e87b5b3916fe8ed0885541da5a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119236300"
 ---
-# <a name="esentindextuplesnonuniqueonlyexception-constructor"></a>Esentindextuplesnonuniqueonlyexception-Konstruktor
+# <a name="esentindextuplesnonuniqueonlyexception-constructor"></a>EsentIndexTuplesNonUniqueOnlyException-Konstruktor
 
-Initialisiert eine neue Instanz der esentindextuplesnonuniqueonlyexception-Klasse.
+Initialisiert eine neue Instanz der EsentIndexTuplesNonUniqueOnlyException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentIndexTuplesNonUniqueOnlyException()
 public EsentIndexTuplesNonUniqueOnlyException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentindextuplesnonuniqueonlyexception-Klasse](./esentindextuplesnonuniqueonlyexception-class.md)
+[EsentIndexTuplesNonUniqueOnlyException-Klasse](./esentindextuplesnonuniqueonlyexception-class.md)
 
-[Esentindextuplesnonuniqueonlyexception-Member](./esentindextuplesnonuniqueonlyexception-members.md)
+[EsentIndexTuplesNonUniqueOnlyException-Member](./esentindextuplesnonuniqueonlyexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,46 +1,46 @@
 ---
-description: Ein Klassenobjekt Pfad beschreibt den Speicherort einer Klasse innerhalb eines Namespace.
+description: Ein Klassenobjektpfad beschreibt den Speicherort einer Klasse innerhalb eines Namespace.
 ms.assetid: 5ae95707-d023-4102-9b41-140c54b0c5b7
 ms.tgt_platform: multiple
-title: Beschreiben eines Klassenobjekt Pfads
+title: Beschreiben eines Klassenobjektpfads
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1cfd603ea3b6de151d297a7f4b6fc8a2a27dfda
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5afa6801d91c4236a7892d7db121dc02c73d93640b7dbc4969c86db55a8789b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119244400"
 ---
-# <a name="describing-a-class-object-path"></a>Beschreiben eines Klassenobjekt Pfads
+# <a name="describing-a-class-object-path"></a>Beschreiben eines Klassenobjektpfads
 
-Ein Klassenobjekt Pfad beschreibt den Speicherort einer Klasse innerhalb eines Namespace.
+Ein Klassenobjektpfad beschreibt den Speicherort einer Klasse innerhalb eines Namespace.
 
-Mit den folgenden Methoden können Sie einen Objekt Pfad angeben:
+Sie können die folgenden Methoden verwenden, um einen Objektpfad anzugeben:
 
--   Ein vollständiger Objekt Pfad zu einer Klasse fügt den Klassennamen an einen Namespace Pfad an.
+-   Ein vollständiger Objektpfad zu einer Klasse fügt den Klassennamen an einen Namespacepfad an.
 
-    Im folgenden Beispiel wird der Speicherort der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse im \\ root \\ CIMV2-Namespace auf dem Server mit dem Namen admin gezeigt.
+    Das folgende Beispiel zeigt den Speicherort der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) im \\ Cimv2-Stammnamespace auf \\ dem Server mit dem Namen Admin.
 
     ``` syntax
     \\Admin\Root\CimV2:Win32_LogicalDisk
     ```
 
--   Ein relativer Objekt Pfad stellt eine Klasse dar, die sich im aktuellen Namespace befindet. Ein relativer Objekt Pfad zu einer Klasse enthält nur den Klassennamen.
+-   Ein relativer Objektpfad stellt eine Klasse dar, die sich im aktuellen Namespace befindet. Ein relativer Objektpfad zu einer Klasse enthält nur den Klassennamen.
 
-    Das folgende Beispiel zeigt den relativen Pfad zur [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse.
+    Das folgende Beispiel zeigt den relativen Pfad zur [**Win32 \_ LogicalDisk-Klasse.**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)
 
     ``` syntax
     Win32_LogicalDisk
     ```
 
-Wenn Sie einen Klassennamen Abfragen, aber keine Instanzen angeben, gibt WMI die Klassendefinition zurück. Im folgenden Verfahren wird beschrieben, wie eine Klassendefinition in VBScript abgerufen wird.
+Wenn Sie einen Klassennamen abfragen, aber keine Instanzen angeben, gibt WMI die Klassendefinition zurück. Im folgenden Verfahren wird beschrieben, wie eine Klassendefinition in VBScript abgerufen wird.
 
 **So rufen Sie eine Klassendefinition in VBScript ab**
 
--   Sie können die monikerverbindung entweder mit einer Abfrage oder einem [**GetObject**](https://msdn.microsoft.com/library/ebdktb00(v=VS.71).aspx)-Objekt verwenden. Sie können auch " [**Swap Services. Get**](swbemservices-get.md)" verwenden.
+-   Sie können die Monikerverbindung entweder mit einer Abfrage oder [**mit GetObject verwenden.**](https://msdn.microsoft.com/library/ebdktb00(v=VS.71).aspx) Sie können auch [**SWbemServices.Get verwenden.**](swbemservices-get.md)
 
-    Im folgenden Beispiel wird gezeigt, wie [GetObject](/previous-versions//kdccchxa(v=vs.85)) verwendet wird, um eine Klassendefinition zu erhalten.
+    Das folgende Beispiel zeigt, wie [GetObject verwendet](/previous-versions//kdccchxa(v=vs.85)) wird, um eine Klassendefinition zu erhalten.
 
     ```VB
     strComputer = "."
@@ -51,7 +51,7 @@ Wenn Sie einen Klassennamen Abfragen, aber keine Instanzen angeben, gibt WMI die
 
     
 
-    Im folgenden Beispiel wird gezeigt, wie eine-Klassendefinition abgefragt wird.
+    Das folgende Beispiel zeigt, wie eine Klassendefinition abfragen kann.
 
     ```VB
     strComputer = "."
@@ -68,9 +68,9 @@ Sie können eine Klassendefinition in C++ abrufen, indem Sie nur den Klassenname
 
 **So rufen Sie eine Klassendefinition in C++ ab**
 
--   Aufrufen der Funktionen [**IWbemServices:: GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices:: GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) .
+-   Rufen Sie die [**Funktionen IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices::GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) auf.
 
-    Im folgenden Beispiel wird gezeigt, wie die [**IWbemServices:: GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) -Funktion aufgerufen wird.
+    Das folgende Beispiel zeigt, wie sie die [**IWbemServices::GetObject-Funktion**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) aufruft.
 
     ```C++
     IWbemServices* pSvcs = 0;
@@ -82,7 +82,7 @@ Sie können eine Klassendefinition in C++ abrufen, indem Sie nur den Klassenname
 
     
 
-    Das vorherige Codebeispiel erfordert, dass die folgende \# include-Anweisung ordnungsgemäß kompiliert wird.
+    Für das vorherige Codebeispiel ist die folgende \# include-Anweisung erforderlich, um ordnungsgemäß zu kompilieren.
 
     ```C++
     #include <wbemidl.h>

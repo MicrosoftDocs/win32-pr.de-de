@@ -1,5 +1,5 @@
 ---
-description: Das ComponentInfo-Objekt stellt zusätzliche Details zu einer Komponente dar, die über einen-Befehl von msigetcomponentpathex abgerufen werden kann.
+description: Das ComponentInfo-Objekt stellt zusätzliche Details zu einer Komponente dar, die über einen Aufruf von MsiGetComponentPathEx erhalten werden können.
 ms.assetid: 9b0ad0a1-c49f-4b14-817b-0cfc9b228d77
 title: ComponentInfo-Objekt
 ms.topic: reference
@@ -13,36 +13,36 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 1890ff127f60188deae8fdad251e44b3edb614f7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a59aa1d9f7bdc5babc29461ca90c01b6fe604482cb78ba6549e782b1e34d54b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119252000"
 ---
 # <a name="componentinfo-object"></a>ComponentInfo-Objekt
 
-Das ComponentInfo-Objekt stellt zusätzliche Details zu einer Komponente dar, die über einen-Befehl von msigetcomponentpathex abgerufen werden kann.
+Das ComponentInfo-Objekt stellt zusätzliche Details zu einer Komponente dar, die über einen Aufruf von MsiGetComponentPathEx erhalten werden können.
 
-**[Windows Installer 4,5 oder früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt. Dieses Objekt ist ab Windows Installer 5,0 verfügbar.
+**[Windows Installer 4.5 oder früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt. Dieses Objekt ist ab Windows Installer 5.0 verfügbar.
 
 ## <a name="members"></a>Member
 
-Das **ComponentInfo** -Objekt verfügt über diese Typen von Membern:
+Das **ComponentInfo-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **ComponentInfo** -Objekt verfügt über diese Eigenschaften.
+Das **ComponentInfo-Objekt** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                        | BESCHREIBUNG                                                 |
 |:----------------------------------------------------------------|:------------------------------------------------------------|
-| [**Componentcode**](componentinfo-componentcode.md)<br/> | Der Komponenten Code der betreffenden Komponente.<br/> |
-| [**ADS**](componentinfo-componentcode.md)<br/>          | Der Pfad der Komponente.<br/>                       |
-| [**State**](componentinfo-state.md)<br/>                 | Der Status der Komponente.<br/>                      |
+| [**ComponentCode**](componentinfo-componentcode.md)<br/> | Der Komponentencode der in Frage gestellten Komponente.<br/> |
+| [**Pfad**](componentinfo-componentcode.md)<br/>          | Der Pfad der Komponente.<br/>                       |
+| [**State**](componentinfo-state.md)<br/>                 | Der Zustand der Komponente.<br/>                      |
 
 
 
@@ -54,20 +54,20 @@ Das **ComponentInfo** -Objekt verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 oder höher.<br/>                                         |
+| Version<br/> | Windows Installer 5.0 oder höher.<br/>                                         |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl> |
-| IID<br/>     | IID \_ icomponentinfo ist definiert als 000c1099-0000-0000-C000-000000000046<br/>  |
+| IID<br/>     | IID \_ IComponentInfo ist als 000C1099-0000-0000-C000-00000000046 definiert.<br/>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden der Automatisierungsschnittstelle](using-the-automation-interface.md)
+[Verwenden der Automation-Schnittstelle](using-the-automation-interface.md)
 </dt> <dt>
 
-[Skript Beispiele für Windows Installer](windows-installer-scripting-examples.md)
+[Windows Skriptbeispiele für Installer](windows-installer-scripting-examples.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: WM/Jahr
 description: Das WM/Year-Attribut enthält das Jahr, in dem der Inhalt veröffentlicht wurde.
 ms.assetid: 02a4a2da-737c-4ac2-992c-4da9fc7ba26c
 keywords:
-- Windows Media-Format "WM/Jahr"
+- WM/Year windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0536cd86a4bc4eb317735aa993c15ff137c4382c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 832fe6f77bb817d6df131aa42e9a3d680c906fee6d486a8ea15402652d6c973c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118698156"
 ---
 # <a name="wmyear"></a>WM/Jahr
 
-Das **WM/Year-** Attribut enthält das Jahr, in dem der Inhalt veröffentlicht wurde.
+Das **WM/Year-Attribut** enthält das Jahr, in dem der Inhalt veröffentlicht wurde.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmyear
+g \_ wszWMYear
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="example"></a>Beispiel
 
@@ -41,18 +41,18 @@ g \_ wszwmyear
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

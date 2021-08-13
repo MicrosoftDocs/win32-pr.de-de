@@ -1,7 +1,7 @@
 ---
-description: Enthält das Ordner Objekt des Elements, wenn es sich bei dem Element um einen Ordner handelt.
+description: Enthält das Folder-Objekt des Elements, wenn das Element ein Ordner ist.
 ms.assetid: 87afd0b6-245b-4550-9f21-aa0426ba8470
-title: FolderItem. GetFolder-Eigenschaft (shlobj. h)
+title: FolderItem.GetFolder-Eigenschaft (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d08c774b53d1fa0db74a7d8d282c4f88f237cfd4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad1f136fdc59291b36bb5d609269b97e7ab7a5f9d74eccbbedf204d4c2d4e014
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118458880"
 ---
-# <a name="folderitemgetfolder-property"></a>FolderItem. GetFolder (Eigenschaft)
+# <a name="folderitemgetfolder-property"></a>FolderItem.GetFolder-Eigenschaft
 
-Enthält das [**Ordner**](folder.md) Objekt des Elements, wenn es sich bei dem Element um einen Ordner handelt.
+Enthält das [**Folder-Objekt**](folder.md) des Elements, wenn das Element ein Ordner ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ objGetFolder = FolderItem.GetFolder
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) , die das [**Ordner**](folder.md) Objekt empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das [**Folder-Objekt**](folder.md) empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **GetFolder** verwendet, um das [**Ordner**](folder.md) Objekt für den Ordner System32 abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **GetFolder** verwendet, um das [**Folder-Objekt**](folder.md) für den Ordner System32 abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -77,7 +77,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -158,17 +158,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shlobj. h (Include Shldisp. h)</dt> </dl>        |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h (include Shldisp.h)</dt> </dl>        |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
@@ -176,7 +176,7 @@ End Sub
 
 <dl> <dt>
 
-[**Von folderItem**](folderitem.md)
+[**FolderItem**](folderitem.md)
 </dt> <dt>
 
 [**IsFolder**](folderitem-isfolder.md)

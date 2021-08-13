@@ -1,31 +1,31 @@
 ---
-description: Gibt an, ob der Decoder verschachtelte Videorahmen aus dem komprimierten Stream als progressive Frames decodiert.
+description: Gibt an, ob der Decoder Interlaced Videoframes aus dem komprimierten Stream als progressive Frames decodiert.
 ms.assetid: c17d0dda-6141-46da-8921-f83ba40158e2
-title: MFPKEY_DECODER_DEINTERLACING-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DECODER_DEINTERLACING-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e1380a880430988411e54de244ca613f696f4b6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19440a6eb893590bad3c2462b88075137e73c1633955841a66102c7e6faf8d6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738214"
 ---
-# <a name="mfpkey_decoder_deinterlacing-property"></a>Deinterlacing-Eigenschaft des mfpkey- \_ Decoders \_
+# <a name="mfpkey_decoder_deinterlacing-property"></a>\_ \_ MFPKEY-DECODER-DEINTERLACING-Eigenschaft
 
-Gibt an, ob der Decoder verschachtelte Videorahmen aus dem komprimierten Stream als progressive Frames decodiert.
+Gibt an, ob der Decoder Interlaced Videoframes aus dem komprimierten Stream als progressive Frames decodiert.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcdecoderdeinterlacing
+g \_ wszWMVCDecoderDeinterlacing
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="default-value"></a>Standardwert
 
-**Variant \_ false**
+**VARIANT \_ FALSE**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,17 +33,17 @@ g \_ wszwmvcdecoderdeinterlacing
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

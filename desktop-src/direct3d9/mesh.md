@@ -1,19 +1,19 @@
 ---
-description: Definiert ein einfaches Mesh. Das erste Array ist eine Liste von Scheitel Punkten, während das zweite Array die Gesichter des Netzes durch Indizierung in das vertexarray definiert.
+description: Definiert ein einfaches Gitter. Das erste Array ist eine Liste von Scheitelpunkte, und das zweite Array definiert die Gesichter des Gitters durch Indizierung in das Scheitelpunktarray.
 ms.assetid: vs|directx_sdk|~\mesh.htm
 title: Mesh
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ced60785a5f013db7fc26e4d203119a160953b65
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f4ce4cf6fb6a3eee3417a7d0fe1594164c1e22df9d118f4f995955f8070fc015
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119240740"
 ---
 # <a name="mesh"></a>Mesh
 
-Definiert ein einfaches Mesh. Das erste Array ist eine Liste von Scheitel Punkten, während das zweite Array die Gesichter des Netzes durch Indizierung in das vertexarray definiert.
+Definiert ein einfaches Gitter. Das erste Array ist eine Liste von Scheitelpunkte, und das zweite Array definiert die Gesichter des Gitters durch Indizierung in das Scheitelpunktarray.
 
 ``` syntax
 template Mesh
@@ -29,13 +29,13 @@ template Mesh
 
 Hierbei gilt:
 
--   nvertices-Anzahl der Scheitel Punkte.
--   Array Vektor vertices \[ nvertices \] -Array von Vertices, jeweils vom Typ "Vector". Siehe [**Vektor**](vector.md).
--   ngesichter: Anzahl der Flächen.
--   Array meshface Gesichter \[ ngesichter \] -Array von Gesichtern, jeweils vom Typ "meshface". Siehe [**meshface**](meshface.md).
--   \[ ... \] -Eine beliebige x-Datei Vorlage kann hier verwendet werden. Dadurch wird die Architektur erweiterbar. [**Material**](material.md) -und [**texturefilename**](texturefilename.md) -Vorlagen werden in der Regel verwendet.
+-   nVertices: Anzahl der Scheitelzeichen.
+-   array Vector vertices \[ nVertices \] – Array von Scheitelungen, die jeweils vom Typ Vector sind. Siehe [**Vektor**](vector.md).
+-   nFaces: Anzahl der Gesichter.
+-   Array MeshFace faces \[ nFaces \] : Array von Gesichtern, die jeweils vom Typ MeshFace sind. Weitere Informationen [**finden Sie unter MeshFace**](meshface.md).
+-   \[ ... \] – Hier kann eine beliebige X-Dateivorlage verwendet werden. Dadurch wird die Architektur erweiterbar. [**Material-**](material.md) [**und TextureFilename-Vorlagen**](texturefilename.md) werden in der Regel verwendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

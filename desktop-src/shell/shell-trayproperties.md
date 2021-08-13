@@ -1,5 +1,5 @@
 ---
-description: 'Shell.TrayProperties-Methode: Zeigt das Dialogfeld Taskleiste und Eigenschaften des Startmenüs an. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von Eigenschaften.'
+description: 'Shell.TrayProperties-Methode: Zeigt das Dialogfeld Eigenschaften der Taskleiste und des Startmenüs an. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von Eigenschaften.'
 ms.assetid: 0d82d847-9e6f-461e-b938-fe8fd49a636f
 title: Shell.TrayProperties-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: e09f6833fbf07c99fdbce9c02b020bcbb5361408
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3ef9ed639383b468b68f75e43f1b38b2952795ceb1990f580a766174334dadd7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452826"
 ---
 # <a name="shelltrayproperties-method"></a>Shell.TrayProperties-Methode
 
-Zeigt das **Dialogfeld Taskleiste und Eigenschaften des Startmenüs** an. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von **Eigenschaften.**
+Zeigt das Dialogfeld **Taskleiste und Startmenüeigenschaften** an. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von **Eigenschaften.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,9 +47,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **TrayProperties** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt **TrayProperties** in Verwendung. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -103,9 +103,9 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

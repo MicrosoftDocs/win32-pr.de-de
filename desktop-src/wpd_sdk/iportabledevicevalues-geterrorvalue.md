@@ -1,7 +1,7 @@
 ---
-description: Die geterrorvalue-Methode ruft einen HRESULT-Wert (Type VT Error) ab, der \_ durch einen Schlüssel angegeben wird.
+description: Die GetErrorValue-Methode ruft einen HRESULT-Wert (Typ VT \_ ERROR) ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: af57ddbd-5503-4b9b-bd75-ba9c9c202b73
-title: 'Iportabledevicevalues:: geterrorvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetErrorValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 86e5dacfa398cfe2bb57bfd289e4c8e792f14a66
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 594ed35191433ec817f1e37bd4c037652f6b564d3a5c6191d56ad1c5e855ab34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697149"
 ---
-# <a name="iportabledevicevaluesgeterrorvalue-method"></a>Iportabledevicevalues:: geterrorvalue-Methode
+# <a name="iportabledevicevaluesgeterrorvalue-method"></a>IPortableDeviceValues::GetErrorValue-Methode
 
-Die **geterrorvalue** -Methode ruft einen **HRESULT** -Wert (Type VT Error) ab, der \_ durch einen Schlüssel angegeben wird.
+Die **GetErrorValue-Methode** ruft einen **HRESULT-Wert** (Typ VT \_ ERROR) ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetErrorValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **HRESULT** -Wert.
+Zeiger auf den abgerufenen **HRESULT-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                            |
 |------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                       |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **HRESULT** -Typ.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/>   |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die vom *Schlüssel* angegebene Eigenschaft ist kein **HRESULT-Typ.**<br/> |
+| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/>   |
 
 
 
@@ -77,19 +77,19 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: Server-Wert**](iportabledevicevalues-seterrorvalue.md)
+[**IPortableDeviceValues::SetErrorValue**](iportabledevicevalues-seterrorvalue.md)
 </dt> </dl>
 
  

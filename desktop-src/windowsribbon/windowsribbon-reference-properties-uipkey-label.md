@@ -1,51 +1,51 @@
 ---
 title: UI_PKEY_Label
-description: Bezeichnet die Eigenschaft "UI \_ pkey \_ Label".
+description: Identifiziert die \_ \_ PKEY-Bezeichnungseigenschaft der Benutzeroberfläche.
 ms.assetid: 4d704133-bba7-4c32-a552-d748b66455eb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 245ce8d239e1a0893c907a047aa9a48996cbf606
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13506d1609f915c2eab9824a3f5256383c5f2aecf73ed5787e3372f17b44b435
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706431"
 ---
-# <a name="ui_pkey_label"></a>UI- \_ pkey- \_ Bezeichnung
+# <a name="ui_pkey_label"></a>\_PKEY-Bezeichnung der \_ Benutzeroberfläche
 
-Bezeichnet die Eigenschaft "UI \_ pkey \_ Label".
+Identifiziert die \_ \_ PKEY-Bezeichnungseigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_Label
-   shellPKey = UI_PKEY_Label
-   formatID = 00000004-7363-696e-8441798acf5aebb7
-   propID = 4
-   typeInfo
-      type = VT_LPWSTR
+   name = UI_PKEY_Label
+   shellPKey = UI_PKEY_Label
+   formatID = 00000004-7363-696e-8441798acf5aebb7
+   propID = 4
+   typeInfo
+      type = VT_LPWSTR
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Benutzeroberflächen- \_ pkey- \_ Bezeichnung wird von einer Anwendung verwendet, um den Bezeichnungs Text von Registerkarten, Gruppen, Schaltflächen, Galerie Elementen und anderen Menü Band Steuerelementen abzufragen.
-
-> [!Note]  
-> Windows 8 und höher: das Bild der [Anwendungsmenü](windowsribbon-controls-applicationmenu.md) Schaltfläche wurde in Bezeichnung: **File** geändert. Es wird empfohlen, die Datei nicht als Bezeichnung für eine ihrer eigenen Registerkarten zu verwenden.
-
- 
-
-Der Eigenschafts Wert ist eine Zeichenfolge, die auf eine beliebige Sequenz von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruch Zeichen.
+Benutzeroberflächen-PKEY-Bezeichnung wird von einer Anwendung verwendet, um den Bezeichnungstext von Registerkarten, Gruppen, Schaltflächen, Katalogelementen und \_ anderen Menüband-Steuerelementen \_ abfragt.
 
 > [!Note]  
-> Verwenden Sie den XML-Zeichen Verweis Universal Character Set (UCS) `&#xA;` , um einen Zeilenumbruch anzugeben.
+> Windows 8 und neuer: Bild der [Anwendungsmenüschaltfläche](windowsribbon-controls-applicationmenu.md) wurde in Bezeichnung geändert: **Datei**. Es wird empfohlen, datei nicht als Bezeichnung für ihre eigenen Registerkarten zu verwenden.
 
- 
+ 
 
-Die Rechte Ausrichtung wird nicht unterstützt.
+Der -Eigenschaftswert ist eine Zeichenfolge, die auf eine beliebige Folge von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruchzeichen.
 
-Die maximale Länge der UI- \_ pkey- \_ Bezeichnung ist unbegrenzt.
+> [!Note]  
+> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenumbruch anzugeben.
 
-Wenn ein Befehl über ein Menü Element verfügbar gemacht wird und der Wert von [**Command. labeltitle**](windowsribbon-element-command-labeltitle.md) oder UI \_ pkey \_ Label einen Buchstaben enthält, dem ein kaufmännisches und vorangestellt ist, wie im folgenden Beispiel gezeigt, wird dieser Buchstabe sowohl als KeyTip als auch als Tastaturbeschleuniger für diesen Befehl durch das Multifunktionsleisten-Framework behandelt.
+ 
+
+Die richtige Ausrichtung wird nicht unterstützt.
+
+Die maximale Länge der \_ \_ PKEY-Bezeichnung der Benutzeroberfläche ist ungebunden.
+
+Wenn ein Befehl über ein Menüelement verfügbar gemacht wird und der Wert von [**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md) oder UI PKEY Label einen Buchstaben enthält, dem ein ampersand vorangestellt ist, wie im folgenden Beispiel gezeigt, wird dieser Buchstabe sowohl als Tastenkombination als auch als Tastenkombination für diesen Befehl vom Menübandframework \_ \_ behandelt.
 
 
 ```XML
@@ -58,7 +58,7 @@ Wenn ein Befehl über ein Menü Element verfügbar gemacht wird und der Wert von
 
 
 
-Um ein kaufmännisches und-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie die Bezeichnung für Sonderzeichen mit einem doppelten kaufmännisches und-Zeichen ( `&&` ), wie im folgenden Beispiel gezeigt.
+Um ein ampersand-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie die Sonderzeichenbezeichnung mit einem doppelten Ampersand ( ), wie `&&` im folgenden Beispiel gezeigt.
 
 
 ```XML
@@ -75,18 +75,18 @@ Um ein kaufmännisches und-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie
 
 <dl> <dt>
 
-[Ressourcen Eigenschaften](windowsribbon-reference-properties-resource.md)
+[Ressourceneigenschaften](windowsribbon-reference-properties-resource.md)
 </dt> <dt>
 
-[**Command. labeltitle**](windowsribbon-element-command-labeltitle.md)
+[**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md)
 </dt> <dt>
 
-[UI \_ pkey \_ labeldescription](windowsribbon-reference-properties-uipkey-labeldescription.md)
+[UI \_ PKEY \_ LabelDescription](windowsribbon-reference-properties-uipkey-labeldescription.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

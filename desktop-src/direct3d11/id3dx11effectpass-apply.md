@@ -1,10 +1,10 @@
 ---
-title: ID3DX11EffectPass Apply-Methode (D3dx11effect. h)
-description: Legen Sie den in einem Pass enthaltenen Status auf das Gerät fest.
+title: ID3DX11EffectPass Apply-Methode (D3dx11effect.h)
+description: Legen Sie den Zustand fest, der in einer Übergabe an das Gerät enthalten ist.
 ms.assetid: d67fe968-bfb2-4f3a-b393-3f72f680211f
 keywords:
-- Apply-Methode Direct3D 11
-- Apply-Methode Direct3D 11, ID3DX11EffectPass-Schnittstelle
+- Anwenden der Methode Direct3D 11
+- Anwenden der Methode Direct3D 11 , ID3DX11EffectPass-Schnittstelle
 - ID3DX11EffectPass-Schnittstelle Direct3D 11, Apply-Methode
 topic_type:
 - apiref
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a061609953e164524e16722222a5ecea81f275b3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e18d3d546a1bf6381103b7d38f7467fe4d66ed8e0d9702afcf7640197abb5c0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046048"
 ---
-# <a name="id3dx11effectpassapply-method"></a>ID3DX11EffectPass:: Apply-Methode
+# <a name="id3dx11effectpassapply-method"></a>ID3DX11EffectPass::Apply-Methode
 
-Legen Sie den in einem Pass enthaltenen Status auf das Gerät fest.
+Legen Sie den Zustand fest, der in einer Übergabe an das Gerät enthalten ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT Apply(
 *Flags* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Nicht verwendet.
 
@@ -56,9 +56,9 @@ Nicht verwendet.
 *pContext* 
 </dt> <dd>
 
-Typ: **[ **Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)\***
+Typ: **[ **ID3D11DeviceContext**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)\***
 
-Der [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) , auf den die Übergabe angewendet werden soll.
+Der [**ID3D11DeviceContext,**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) auf den der Pass angewendet werden soll.
 
 </dd> </dl>
 
@@ -66,23 +66,23 @@ Der [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

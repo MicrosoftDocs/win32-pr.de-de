@@ -1,10 +1,10 @@
 ---
-title: WINBIO_UNIT_SCHEMA Struktur (winbio \_ types. h)
+title: WINBIO_UNIT_SCHEMA Struktur (Winbio \_ types.h)
 description: Beschreibt die Funktionen einer biometrischen Einheit.
 ms.assetid: b20adf18-2948-481f-9d12-8da17aa152f7
 keywords:
-- WINBIO_UNIT_SCHEMA Struktur Windows-Biometrieframework-API
-- PWINBIO_UNIT_SCHEMA Struktur Zeiger Windows-Biometrieframework API
+- WINBIO_UNIT_SCHEMA Struktur Windows Biometrieframework-API
+- PWINBIO_UNIT_SCHEMA Strukturzeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c217be1e0c6bde740c815f5a990509a6a87ef0f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ae91ae5353aa0e9c02414e90a8364d86bdc56c0cdcc4f4586656f28f92f100ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909169"
 ---
-# <a name="winbio_unit_schema-structure"></a>Struktur des winbio- \_ Einheiten \_ Schemas
+# <a name="winbio_unit_schema-structure"></a>WINBIO \_ UNIT \_ SCHEMA-Struktur
 
-Die Struktur der **winbio- \_ Einheiten \_ Schema** beschreibt die Funktionen einer biometrischen Einheit. Sie wird von der [**winbioenumbiometricunits**](/windows/desktop/api/Winbio/nf-winbio-winbioenumbiometricunits) -Funktion verwendet.
+Die **WINBIO \_ UNIT \_ SCHEMA-Struktur** beschreibt die Funktionen einer biometrischen Einheit. Sie wird von der [**WinBioEnumBiometricUnits-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbioenumbiometricunits) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,25 +51,25 @@ typedef struct _WINBIO_UNIT_SCHEMA {
 
 <dl> <dt>
 
-**Unitid**
+**UnitId**
 </dt> <dd>
 
-Ein-Wert, der die biometrische Einheit identifiziert.
+Ein -Wert, der die biometrische Einheit identifiziert.
 
 </dd> <dt>
 
-**Pooltyp**
+**PoolType**
 </dt> <dd>
 
-Ein **ulong** -Wert, der den Typ der biometrischen Einheit angibt. Mögliche Werte:
+Ein **ULONG-Wert,** der den Typ der biometrischen Einheit angibt. Mögliche Werte:
 
 
 
 | Wert                                                                                                                                                                            | Bedeutung                                                                                                    |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| <span id="WINBIO_POOL_UNKNOWN"></span><span id="winbio_pool_unknown"></span><dl> <dt>**winbio- \_ Pool \_ unbekannt**</dt> </dl> | Der Typ ist unbekannt.<br/>                                                                            |
-| <span id="WINBIO_POOL_SYSTEM"></span><span id="winbio_pool_system"></span><dl> <dt>**winbio- \_ Pool \_ System**</dt> </dl>    | Die Sitzung stellt eine Verbindung mit einer freigegebenen Sammlung von biometrischen Einheiten her, die vom Dienstanbieter verwaltet werden.<br/> |
-| <span id="WINBIO_POOL_PRIVATE"></span><span id="winbio_pool_private"></span><dl> <dt>**privater winbio- \_ Pool \_**</dt> </dl> | Die Sitzung stellt eine Verbindung mit einer Sammlung von biometrischen Einheiten her, die vom Aufrufer verwaltet werden.<br/>         |
+| <span id="WINBIO_POOL_UNKNOWN"></span><span id="winbio_pool_unknown"></span><dl> <dt>**\_WINBIO-POOL \_ UNBEKANNT**</dt> </dl> | Der Typ ist unbekannt.<br/>                                                                            |
+| <span id="WINBIO_POOL_SYSTEM"></span><span id="winbio_pool_system"></span><dl> <dt>**\_WINBIO-POOLSYSTEM \_**</dt> </dl>    | Die Sitzung stellt eine Verbindung mit einer freigegebenen Sammlung biometrischer Einheiten her, die vom Dienstanbieter verwaltet werden.<br/> |
+| <span id="WINBIO_POOL_PRIVATE"></span><span id="winbio_pool_private"></span><dl> <dt>**WINBIO \_ POOL \_ PRIVATE**</dt> </dl> | Die Sitzung stellt eine Verbindung mit einer Sammlung biometrischer Einheiten her, die vom Aufrufer verwaltet werden.<br/>         |
 
 
 
@@ -77,83 +77,83 @@ Ein **ulong** -Wert, der den Typ der biometrischen Einheit angibt. Mögliche Wer
 
 </dd> <dt>
 
-**Biometricfactor**
+**BiometricFactor**
 </dt> <dd>
 
-Ein-Wert, der den Typ der biometrischen Einheit angibt. Derzeit wird nur der **winbio- \_ \_ typfingerabdruck** unterstützt.
+Ein -Wert, der den Typ der biometrischen Einheit angibt. Derzeit wird nur **WINBIO \_ TYPE \_ FINGERPRINT** unterstützt.
 
 </dd> <dt>
 
-**Sensorsubtype**
+**SensorSubType**
 </dt> <dd>
 
-Ein Sensor Untertyp, der für den biometrischen Typ definiert ist, der vom **biometricfactor** -Member angegeben wird. Derzeit werden nur Fingerabdruck Typen (**winbio- \_ \_ typfingerabdruck**) unterstützt. Die folgenden Untertypen sind zurzeit für Fingerabdrücke definiert:
+Ein Sensoruntertyp, der für den vom **BiometricFactor-Member** angegebenen biometrischen Typ definiert ist. Derzeit werden nur Fingerabdrucktypen **(WINBIO \_ TYPE \_ FINGERPRINT)** unterstützt. Die folgenden Untertypen sind derzeit für Fingerabdrücke definiert:
 
--   der winbio- \_ Sensor \_ Untertyp ist \_ unbekannt.
--   winbio- \_ FP- \_ \_ unter Typ \_ schwenken
--   Fingereingabe von winbio \_ FP- \_ Sensor \_ unter Typ \_
+-   WINBIO \_ SENSOR \_ SUBTYPE \_ UNKNOWN
+-   WINBIO \_ FP \_ SENSOR \_ SUBTYPE \_ SWIPE
+-   WINBIO \_ FP \_ SENSOR \_ SUBTYPE \_ TOUCH
 
 </dd> <dt>
 
 **Capabilities**
 </dt> <dd>
 
-Eine Bitmaske der Funktionen des biometrischen Sensors. Hierbei kann es sich um einen bitweisen **oder** um die folgenden Werte handeln:
+Eine Bitmaske der biometrischen Sensorfunktionen. Dies kann ein bitweises **OR** der folgenden Werte sein:
 
--   winbio- \_ Fähigkeits \_ Sensor
--   winbio-Funktions Vergleich \_ \_
--   winbio-Funktions \_ \_ Datenbank
--   Verarbeitung von winbio- \_ Funktionen \_
--   Verschlüsselung von winbio- \_ Funktionen \_
--   Navigation in winbio- \_ Funktionen \_
--   winbio-Funktions \_ \_ Indikator
--   virtueller winbio- \_ Fähigkeits \_ \_ Sensor
+-   \_WINBIO-FUNKTIONSSENSOR \_
+-   \_ \_ WINBIO-FUNKTIONSABGLEICH
+-   \_WINBIO-FUNKTIONSDATENBANK \_
+-   \_WINBIO-FUNKTIONSVERARBEITUNG \_
+-   \_WINBIO-FUNKTIONSVERSCHLÜSSELUNG \_
+-   \_WINBIO-FUNKTIONSNAVIGATION \_
+-   \_WINBIO-FUNKTIONSINDIKATOR \_
+-   \_ \_ VIRTUELLER WINBIO-FUNKTIONSSENSOR \_
     > [!Note]  
-    > Die **\_ \_ virtuelle \_ Sensor Konstante für winbio-Funktionen** gilt nur für Windows 10 und höher.
+    > Die **KONSTANTE WINBIO \_ CAPABILITY VIRTUAL \_ \_ SENSOR** gilt nur für Windows 10 und höher.
 
      
 
 </dd> <dt>
 
-**Geräte-ID**
+**DeviceInstanceId**
 </dt> <dd>
 
-Ein Zeichen folgen Wert, der die Geräte-ID enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen einschließlich eines abschließenden **null** -Zeichens enthalten.
+Ein Zeichenfolgenwert, der die Geräte-ID enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen enthalten, einschließlich eines abschließenden **NULL-Zeichens.**
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd>
 
-Ein Zeichen folgen Wert, der eine Beschreibung der biometrischen Einheit enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen einschließlich eines abschließenden **null** -Zeichens enthalten.
+Ein Zeichenfolgenwert, der eine Beschreibung der biometrischen Einheit enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen enthalten, einschließlich eines abschließenden **NULL-Zeichens.**
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd>
 
-Ein Zeichen folgen Wert, der den Namen des Herstellers enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen einschließlich eines abschließenden **null** -Zeichens enthalten.
+Ein Zeichenfolgenwert, der den Namen des Herstellers enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen enthalten, einschließlich eines abschließenden **NULL-Zeichens.**
 
 </dd> <dt>
 
 **Modell**
 </dt> <dd>
 
-Ein Zeichen folgen Wert, der die Modellnummer der biometrischen Einheit enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen einschließlich eines abschließenden **null** -Zeichens enthalten.
+Ein Zeichenfolgenwert, der die Modellnummer der biometrischen Einheit enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen enthalten, einschließlich eines abschließenden **NULL-Zeichens.**
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd>
 
-Eine **null**-terminierte Unicode-Zeichenfolge, die die Seriennummer der biometrischen Einheit enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen einschließlich eines abschließenden **null** -Zeichens enthalten.
+Eine **Mit NULL** endende Unicode-Zeichenfolge, die die Seriennummer der biometrischen Einheit enthält. Die Zeichenfolge kann bis zu 256 Unicode-Zeichen enthalten, einschließlich eines abschließenden **NULL-Zeichens.**
 
 </dd> <dt>
 
-**Firmwareversion**
+**FirmwareVersion**
 </dt> <dd>
 
-Eine [**winbio- \_ Versions**](winbio-version.md) Struktur, die die Haupt-und neben Versionsnummern für die biometrische Einheit enthält.
+Eine [**\_ WINBIO-VERSIONSstruktur,**](winbio-version.md) die die Haupt- und Nebenversionsnummern für die biometrische Einheit enthält.
 
 </dd> </dl>
 
@@ -163,20 +163,20 @@ Eine [**winbio- \_ Versions**](winbio-version.md) Struktur, die die Haupt-und ne
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Strukturen](client-application-structures.md)
+[Clientanwendungsstrukturen](client-application-structures.md)
 </dt> <dt>
 
-[**Winbioenumbiometricunits**](/windows/desktop/api/Winbio/nf-winbio-winbioenumbiometricunits)
+[**WinBioEnumBiometricUnits**](/windows/desktop/api/Winbio/nf-winbio-winbioenumbiometricunits)
 </dt> </dl>
 
  

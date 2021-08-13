@@ -1,9 +1,9 @@
 ---
-title: "\"Element\"-Element"
-description: Stellt ein UMSCHALT Fläche-Steuerelement dar.
+title: ToggleButton-Element
+description: Stellt ein Umschaltfläche-Steuerelement dar.
 ms.assetid: f26a90e6-9e9a-4fde-8753-50b8b1d09f80
 keywords:
-- Menüband für das Fenster "Element" (Fenster)
+- ToggleButton-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 652ea7b535f41cc3dbb40f25bbe49ab4fe52f5ff
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 2e17c4f9ea6aa557db6c1f9b98aca60b6da351936a70b783a0618217c03ba7b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104314135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119441590"
 ---
-# <a name="togglebutton-element"></a>"Element"-Element
+# <a name="togglebutton-element"></a>ToggleButton-Element
 
-Stellt ein [UMSCHALT Fläche](windowsribbon-controls-togglebutton.md) -Steuerelement dar.
+Stellt ein [Umschaltfläche-Steuerelement](windowsribbon-controls-togglebutton.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -45,26 +45,26 @@ Stellt ein [UMSCHALT Fläche](windowsribbon-controls-togglebutton.md) -Steuerele
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>ApplicationDefaults. IsChecked</strong><br/></td>
+<td><strong>ApplicationDefaults.IsChecked</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Dieses Attribut ist nur gültig, wenn das <strong>ToggleButton</strong> -Element ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>quickaccesstoolbar. ApplicationDefaults</strong></a>ist. <br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<td>Dieses Attribut ist nur gültig, wenn <strong>das ToggleButton-Element</strong> ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults ist.</strong></a> <br/> Auf einen der folgenden Werte beschränkt:<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -81,31 +81,31 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>                                                     |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>                                                     |
 | [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>                                                 |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>                                               |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>                                               |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                                                                   |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                                                           |
-| [**Quickaccesstoolbar. ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)<br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                                                           |
+| [**QuickAccessToolbar.ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)<br/> |
 | [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                                                       |
-| [**SplitButton. buttonitem**](windowsribbon-element-splitbutton-buttonitem.md)<br/>                                 |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/>                                         |
+| [**SplitButton.ButtonItem**](windowsribbon-element-splitbutton-buttonitem.md)<br/>                                 |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>                                         |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Optional oder erforderlich, abhängig vom übergeordneten Element.
+Optional oder erforderlich, je nach übergeordnetem Element.
 
-Kann höchstens einmal für jedes [**SplitButton. buttonitem**](windowsribbon-element-splitbutton-buttonitem.md) -Element auftreten.
+Kann für jedes [**SplitButton.ButtonItem-Element nur einmal auftreten.**](windowsribbon-element-splitbutton-buttonitem.md)
 
-Kann für jedes [**controlgroup**](windowsribbon-element-controlgroup.md)-, [**DropDownButton**](windowsribbon-element-dropdownbutton.md)-, [**Group**](windowsribbon-element-group.md)-, [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)-, [**MenuGroup**](windowsribbon-element-menugroup.md)-, [**quickaccesstoolbar. ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)-, [**SplitButton**](windowsribbon-element-splitbutton.md)-oder [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**Group-,**](windowsribbon-element-group.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**QuickAccessToolbar.ApplicationDefaults-,**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für **das Element "** -Element" veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für das **ToggleButton-Element** veranschaulicht.
 
-Dieser Code Abschnitt zeigt eine **ToggleButton** -Element Deklaration innerhalb des [**quickaccesstoolbar. ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) -Elements.
+Dieser Codeabschnitt zeigt eine **ToggleButton-Elementdeklaration** innerhalb des [**QuickAccessToolbar.ApplicationDefaults-Elements.**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)
 
 
 ```XML
@@ -138,7 +138,7 @@ Dieser Code Abschnitt zeigt eine **ToggleButton** -Element Deklaration innerhalb
 
 <dl> <dt>
 
-[Umschalten des Schaltflächen-Steuer Elements](windowsribbon-controls-togglebutton.md)
+[Schaltflächen-Steuerelement umschalten](windowsribbon-controls-togglebutton.md)
 </dt> </dl>
 
  

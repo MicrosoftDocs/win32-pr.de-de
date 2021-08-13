@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema enthält die Definition des Journal Reader-Schemas.
+description: Dieses Thema enthält die Definition des Journalreaderschemas.
 ms.assetid: 2fa6a5d9-64d6-447f-bf2a-d3bf6ca7c093
-title: Schema Definition des Journal Readers
+title: Schemadefinition des Journallesers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fa38ae5b0bd1d635661e48aea49671182471609
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e749d6b6508fb161ec87a91e8790711f93a3e96e7d647fd314a205cafd07b9e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118716366"
 ---
-# <a name="journal-reader-schema-definition"></a>Schema Definition des Journal Readers
+# <a name="journal-reader-schema-definition"></a>Schemadefinition des Journallesers
 
-Dieses Thema enthält die Definition des Journal Reader-Schemas.
+Dieses Thema enthält die Definition des Journalreaderschemas.
 
 ## <a name="schema"></a>Schema
 

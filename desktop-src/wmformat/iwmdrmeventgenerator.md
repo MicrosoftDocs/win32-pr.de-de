@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmeventgenerator-Schnittstelle
-description: Die iwmdrmeventgenerator-Schnittstelle ist eine Erweiterung der imfmediaeventgenerator-Schnittstelle, die eine Methode zum Abbrechen von asynchronen Vorgängen bereitstellt.
+title: IWMDRMEventGenerator-Schnittstelle
+description: Die IWMDRMEventGenerator-Schnittstelle ist eine Erweiterung der INTERFACESMediaEventGenerator-Schnittstelle, die eine Methode zum Abbrechen asynchroner Vorgänge bereitstellt.
 ms.assetid: 38d8db83-b8f0-4cc2-b426-cb0e46bde51d
 keywords:
-- Iwmdrmeventgenerator-Schnittstelle Windows Media-Format
-- Iwmdrmeventgenerator Interface Windows Media-Format, beschrieben
+- IWMDRMEventGenerator-Schnittstelle windows Media Format
+- IWMDRMEventGenerator-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0e4ef95be2b61e5c244bfaee62c74680d79ecbf8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: dcaae545449425535b97ad1b8f0a986409cae52c021610e5b1d191ffa220ac85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118433679"
 ---
-# <a name="iwmdrmeventgenerator-interface"></a>Iwmdrmeventgenerator-Schnittstelle
+# <a name="iwmdrmeventgenerator-interface"></a>IWMDRMEventGenerator-Schnittstelle
 
-Die **iwmdrmeventgenerator** -Schnittstelle ist eine Erweiterung der **imfmediaeventgenerator** -Schnittstelle, die eine Methode zum Abbrechen von asynchronen Vorgängen bereitstellt.
+Die **IWMDRMEventGenerator-Schnittstelle** ist eine Erweiterung der **INTERFACESMediaEventGenerator-Schnittstelle,** die eine Methode zum Abbrechen asynchroner Vorgänge bereitstellt.
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmeventgenerator** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwmdrmeventgenerator** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMEventGenerator-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWMDRMEventGenerator** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmeventgenerator** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMEventGenerator-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                    | BESCHREIBUNG                                   |
+| Methode                                                                    | Beschreibung                                   |
 |:--------------------------------------------------------------------------|:----------------------------------------------|
-| [**Cancelasyncoperation**](iwmdrmeventgenerator-cancelasyncoperation.md) | Bricht einen asynchronen Vorgang ab.<br/> |
+| [**CancelAsyncOperation**](iwmdrmeventgenerator-cancelasyncoperation.md) | Bricht einen asynchronen Vorgang ab.<br/> |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Beispiel für DRM-Individualisierung**](drm-individualization-example.md)
+[**Beispiel für die DRM-Individualisierung**](drm-individualization-example.md)
 </dt> <dt>
 
 [**Schnittstellen**](drm-interfaces.md)

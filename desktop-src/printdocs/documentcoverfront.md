@@ -1,25 +1,25 @@
 ---
-description: Erfahren Sie mehr über das vom Benutzer konfigurierbare DocumentCoverFront-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das vom Benutzer konfigurierbare DocumentCoverFront-Element. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 25dbd083-5815-4b25-bfdc-4d14f96d2b45
 title: DocumentCoverFront
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 301b67c9a741caa48024646854b208ac5dffbb20
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: f2552ec33acce2d86af824450bdd9c38de8763ab21d7c6202d9b3da646efda78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118732930"
 ---
 # <a name="documentcoverfront"></a>DocumentCoverFront
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt das Front-Cover-Blatt (Anfang). Jedes Dokument enthält ein separates Blatt. Das Titelblatt sollte auf der ersten Seite des Dokuments auf PageMediaSize und PageMediaType gedruckt werden. Das Coversheet sollte in Verarbeitungsoptionen (z. B. DocumentDuplex, DocumentNUp) integriert werden, wie durch die angegebene Option angegeben.
+Beschreibt das vordere (beginnende) Coversheet. Jedes Dokument hat ein separates Blatt. Das Coverblatt sollte auf den Seiten "PageMediaSize" und "PageMediaType" gedruckt werden, die für die erste Seite des Dokuments verwendet werden. Das Coversheet sollte in Verarbeitungsoptionen (z. B. DocumentDuplex, DocumentNUp) integriert werden, wie durch die angegebene Option angegeben.
 
 -   [Elementinformationen](#element-information)
--   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Strukturell](#structural-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,17 +27,17 @@ Beschreibt das Front-Cover-Blatt (Anfang). Jedes Dokument enthält ein separates
 
 | Name | Wert |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Elementtyp <br/>   | Funktion<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Elementtyp <br/>   | Komponente<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Bereichspräfix <br/> | Dokument<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Hinweise <br/>          | XPS-kompatible Benutzer MÜSSEN erzwingen, dass ein URI-Verweis auf eine Ressource, z. B. ein Bild oder Farbprofil, entweder in einem Druckfunktionendokument oder printTicket auf einen Teilenamen (einen relativen URI zum Paketstamm) innerhalb desselben XPS-Dokumentpakets verweisen muss, das das resultierende PrintTicket enthält. Ein kompatibler XPS-Consumer DARF KEINEN URI verwenden, der nicht mit der Partnamenssyntax kompatibel ist. Diese Einstellungen sind XPS-spezifisch. <br/> URIs, auf die entweder in einem Druckfunktionendokument oder printTicket verwiesen wird, DÜRFEN NICHT als URLs aufgelöst werden. Dies ist unsicher, da sie möglicherweise nicht wie beabsichtigt gelöst werden und zu schädlichen Sicherheitsrisiken für treiber und betriebssystem könnten.<br/> |
+| Hinweise <br/>          | XPS-kompatible Consumer MÜSSEN erzwingen, dass ein URI-Verweis auf eine Ressource, z. B. ein Bild oder Farbprofil, entweder in einem Druckfunktionsdokument oder printTicket auf einen Teilnamen (einen relativen URI zum Paketstamm) innerhalb desselben XPS-Dokumentpakets verweisen muss, das das resultierende PrintTicket enthält. Ein kompatibler XPS-Consumer DARF KEINEN URI verwenden, der nicht mit der Partnamenssyntax kompatibel ist. Diese Einstellungen sind XPS-spezifisch. <br/> URIs, auf die in einem Dokument mit Druckfunktionen oder printTicket verwiesen wird, DÜRFEN NICHT als URLs aufgelöst werden. Dies ist unsicher, da sie möglicherweise nicht wie beabsichtigt aufgelöst werden und schädliche Sicherheitsrisiken für Treiber und Betriebssystem darstellen können.<br/> |
 
 
 
  
 
-## <a name="structural-content"></a>Strukturelle Inhalte
+## <a name="structural-content"></a>Strukturell
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:Feature name="psk:DocumentCoverFront">
@@ -59,22 +59,22 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/> |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
-Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:DocumentCoverFront">

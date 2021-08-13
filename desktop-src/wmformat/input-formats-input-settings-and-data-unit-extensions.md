@@ -1,37 +1,37 @@
 ---
-title: Eingabeformate, Eingabeeinstellungen und Dateneinheiten Erweiterungen
-description: Eingabeformate, Eingabeeinstellungen und Dateneinheiten Erweiterungen
+title: Eingabeformate, Eingabe- Einstellungen und Dateneinheitserweiterungen
+description: Eingabeformate, Eingabe- Einstellungen und Dateneinheitserweiterungen
 ms.assetid: 8e8a0ec8-cb7c-4483-86b0-142ea9f2b835
 keywords:
-- Windows Media-Format-SDK, Eingabeformate und-Einstellungen
-- Windows Media-Format-SDK, Dateneinheiten Erweiterungen
-- Windows Media-Format-SDK, Nutz Last Erweiterungs Systeme
-- Advanced Systems Format (ASF), Eingabeformate und Einstellungen
-- ASF (Advanced Systems Format), Eingabeformate und Einstellungen
-- Advanced Systems Format (ASF), Dateneinheiten Erweiterungen
-- ASF (Advanced Systems Format), Dateneinheiten Erweiterungen
-- Advanced Systems Format (ASF), Nutz Last Erweiterungs Systeme
-- ASF (Advanced Systems Format), Nutz Last Erweiterungs Systeme
-- Dateneinheiten Erweiterungen, Informationen zu
-- Nutz Last Erweiterungs Systeme
+- Windows Medienformat-SDK, Eingabeformate und -einstellungen
+- Windows Medienformat-SDK, Dateneinheitserweiterungen
+- Windows Medienformat-SDK, Nutzlasterweiterungssysteme
+- Advanced Systems Format (ASF), Eingabeformate und -einstellungen
+- ASF (Advanced Systems Format), Eingabeformate und -einstellungen
+- Advanced Systems Format (ASF), Dateneinheitserweiterungen
+- ASF (Advanced Systems Format), Dateneinheitserweiterungen
+- Advanced Systems Format (ASF), Nutzlasterweiterungssysteme
+- ASF (Advanced Systems Format), Nutzlasterweiterungssysteme
+- Dateneinheitserweiterungen,Informationen
+- Nutzlasterweiterungssysteme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3c590895fca23a3c668a19ac4e6c5437a35ddb5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 99ba5f24f0776f07d580207d769db384e97461ac89486cfc78c72822bdacc82c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118702012"
 ---
-# <a name="input-formats-input-settings-and-data-unit-extensions"></a>Eingabeformate, Eingabeeinstellungen und Dateneinheiten Erweiterungen
+# <a name="input-formats-input-settings-and-data-unit-extensions"></a>Eingabeformate, Eingabe- Einstellungen und Dateneinheitserweiterungen
 
-Das Writer-Objekt unterstützt Eingabeeinstellungen, Eingabeformate und Dateneinheiten Erweiterungen, die Ihnen alle die Steuerung der Funktionen des Writers ermöglichen. Es ist nicht immer offensichtlich, welche Methoden verwendet werden, um ein bestimmtes Feature zu steuern.
+Das Writer-Objekt unterstützt Eingabeeinstellungen, Eingabeformate und Dateneinheitserweiterungen, die Ihnen alle das Steuern von Funktionen des Writers ermöglichen. Es ist nicht immer offensichtlich, welche Methoden verwendet werden müssen, um ein bestimmtes Feature zu steuern.
 
-Eingabeformate sind Medienformate, in denen die grundlegenden Eigenschaften der Medien beschrieben werden, die Sie für die Codierung an den Writer übergeben. So werden z. b. die Frame Größe und der Farbraum der Eingabe Videos durch das Eingabeformat beschrieben.
+Eingabeformate sind Medienformate, die die grundlegenden Eigenschaften der Medien beschreiben, die Sie zur Codierung an den Writer übergeben. Beispielsweise wird die Framegröße und der Farbraum des Eingabevideos durch das Eingabeformat beschrieben.
 
-Eingabeeinstellungen sind Merkmale der Eingabedaten, die über die Grundlagen hinausgehen, oder Informationen zu Transformationen, die für die Daten durchgeführt werden sollen. Einsprung-Videoeinstellungen und Informationen zu einem Wasserzeichen System sind Beispiele für Eingabeeinstellungen.
+Eingabeeinstellungen sind Merkmale der Eingabedaten, die über die Grundlagen hinausgehen, oder Informationen zu Transformationen, die für die Daten verwendet werden sollen. Interlaced-Videoeinstellungen und Informationen zu einem Wasserzeichensystem sind Beispiele für Eingabeeinstellungen.
 
-Dateneinheiten Erweiterungen, die auch als Nutz Last Erweiterungs Systeme bezeichnet werden, sind Werte, die an einzelne Beispiele im Daten Abschnitt der Datei angefügt werden. SMPTE-Zeit Codes und nicht-quadratische Pixel Informationen sind Beispiele für Dateneinheiten Erweiterungen.
+Dateneinheitserweiterungen, auch als Nutzlasterweiterungssysteme bezeichnet, sind Werte, die einzelnen Beispielen im Datenabschnitt der Datei angefügt werden. SMPTE-Zeitcodes und Informationen zu nicht quadratischen Pixeln sind Beispiele für Dateneinheitserweiterungen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -40,24 +40,24 @@ Dateneinheiten Erweiterungen, die auch als Nutz Last Erweiterungs Systeme bezeic
 [**Konfigurieren von Dateneinheitserweiterung en**](configuring-data-unit-extensions.md)
 </dt> <dt>
 
-[**Dateneinheiten Erweiterungen**](data-unit-extensions.md)
+[**Dateneinheitserweiterungen**](data-unit-extensions.md)
 </dt> <dt>
 
-[**Funktionen zum Schreiben von Dateien**](file-writing-features.md)
+[**Features zum Schreiben von Dateien**](file-writing-features.md)
 </dt> <dt>
 
-[**Eingabe Format-Enumeration**](input-format-enumeration.md)
+[**Eingabeformatenumeration**](input-format-enumeration.md)
 </dt> <dt>
 
-[**Eingabeeinstellungen**](input-settings.md)
+[**Eingabe Einstellungen**](input-settings.md)
 </dt> <dt>
 
 [**Arbeiten mit Eingaben**](working-with-inputs.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

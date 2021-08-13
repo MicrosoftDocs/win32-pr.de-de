@@ -1,23 +1,23 @@
 ---
-description: Sie können dieselbe DLL sowohl in der Ladezeit als auch im Lauf Zeit-Dynamic Linking verwenden.
+description: Sie können dieselbe DLL sowohl bei dynamischen Verknüpfungen zur Ladezeit als auch zur Laufzeit verwenden.
 ms.assetid: 0ffce2b1-ce50-4550-aa68-6628fdcac01a
-title: Verwenden Run-Time dynamischen Verknüpfungen
+title: Verwenden Run-Time dynamischen Verknüpfung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4d6ca65c510433350b81a282d8bf7a3a3825ef1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8c13cc66a34f0fd5938fcdada027b30223ebff0abe6e9ce459d60f93a6546f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119255980"
 ---
-# <a name="using-run-time-dynamic-linking"></a>Verwenden Run-Time dynamischen Verknüpfungen
+# <a name="using-run-time-dynamic-linking"></a>Verwenden Run-Time dynamischen Verknüpfung
 
-Sie können dieselbe DLL sowohl in der Ladezeit als auch im Lauf Zeit-Dynamic Linking verwenden. Im folgenden Beispiel wird die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion verwendet, um ein Handle für die myputs-dll zu erhalten (Weitere Informationen finden Sie unter [Erstellen einer einfachen Dynamic-Link Bibliothek](creating-a-simple-dynamic-link-library.md)). Wenn **LoadLibrary** erfolgreich ist, verwendet das Programm das zurückgegebene Handle in der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion, um die Adresse der myputs-Funktion der dll zu erhalten. Nach dem Aufruf der DLL-Funktion Ruft das Programm die [**FreeLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) -Funktion auf, um die dll zu entladen.
+Sie können dieselbe DLL sowohl bei dynamischen Verknüpfungen zur Ladezeit als auch zur Laufzeit verwenden. Im folgenden Beispiel wird die [**LoadLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) verwendet, um ein Handle für die Myputs-DLL zu erhalten (siehe [Creating a Simple Dynamic-Link Library](creating-a-simple-dynamic-link-library.md)). Wenn **LoadLibrary** erfolgreich ist, verwendet das Programm das zurückgegebene Handle in der [**GetProcAddress-Funktion,**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) um die Adresse der myPuts-Funktion der DLL zu erhalten. Nach dem Aufruf der DLL-Funktion ruft das Programm die [**FreeLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) auf, um die DLL zu entladen.
 
-Da das Programmlauf Zeit dynamische Verknüpfungen verwendet, ist es nicht erforderlich, das Modul mit einer Import Bibliothek für die dll zu verknüpfen.
+Da das Programm dynamisches Verknüpfen zur Laufzeit verwendet, ist es nicht erforderlich, das Modul mit einer Importbibliothek für die DLL zu verknüpfen.
 
-Dieses Beispiel veranschaulicht einen wichtigen Unterschied Zwischenlauf Zeit-und Lade Zeit-dynamischer Verknüpfung. Wenn die dll nicht verfügbar ist, muss die Anwendung, die die dynamische Verknüpfung zur Ladezeit verwendet, einfach beendet werden. Das Beispiel für die dynamische Verknüpfung zur Laufzeit kann jedoch auf den Fehler reagieren.
+In diesem Beispiel wird ein wichtiger Unterschied zwischen der dynamischen Verknüpfung zur Laufzeit und der dynamischen Verknüpfung zur Ladezeit veranschaulicht. Wenn die DLL nicht verfügbar ist, muss die Anwendung, die dynamische Verknüpfungen zur Ladezeit verwendet, einfach beendet werden. Das Beispiel für dynamisches Verknüpfen zur Laufzeit kann jedoch auf den Fehler reagieren.
 
 
 ```C++

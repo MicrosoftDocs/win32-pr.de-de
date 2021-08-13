@@ -1,39 +1,39 @@
 ---
-title: Direkte Erfassung von einem Gerät in eine ASF-Datei (qasf)
-description: Direkte Erfassung von einem Gerät in eine ASF-Datei (qasf)
+title: Direkte Erfassung von einem Gerät in einer ASF-Datei (QASF)
+description: Direkte Erfassung von einem Gerät in einer ASF-Datei (QASF)
 ms.assetid: 684a11e3-d507-4219-bc0b-6dfe5e85dad1
 keywords:
-- Windows Media-Format-SDK, Erfassen von Geräten in ASF-Dateien (qasf)
-- Windows Media-Format-SDK, DirectShow
-- Advanced Systems Format (ASF), Erfassung von Geräten (qasf)
-- ASF (Advanced Systems Format), Erfassung von Geräten (qasf)
-- Advanced Systems Format (ASF), DirectShow
+- Windows Medienformat-SDK, Erfassen von Geräten in ASF-Dateien (QASF)
+- Windows Medienformat-SDK, DirectShow
+- Advanced Systems Format (ASF), Erfassen von Geräten (QASF)
+- ASF (Advanced Systems Format), Erfassen von Geräten (QASF)
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- DirectShow, Erfassen von Geräten in ASF-Dateien (qasf)
-- Windows Media-Format-SDK, qasf
-- Advanced Systems Format (ASF), qasf
-- ASF (Advanced Systems Format), qasf
-- DirectShow, qasf
+- DirectShow,Erfassen von Geräten in ASF-Dateien (QASF)
+- Windows Medienformat-SDK, QASF
+- Advanced Systems Format (ASF), QASF
+- ASF (Advanced Systems Format), QASF
+- DirectShow,QASF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: faaf5ba8df3cffbb2121451d3bd1b456fc994078
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 570e773e39b4c2d76bd95f0a4ac90269be295585ef91e6e50f653b121cbc8d9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339217"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118705089"
 ---
-# <a name="capturing-directly-from-a-device-to-an-asf-file-qasf"></a>Direkte Erfassung von einem Gerät in eine ASF-Datei (qasf)
+# <a name="capturing-directly-from-a-device-to-an-asf-file-qasf"></a>Direkte Erfassung von einem Gerät in einer ASF-Datei (QASF)
 
-Wenn Sie Audiodaten oder Videos direkt in einer ASF-Datei erfassen, sieht das Filter Diagramm in etwa wie das folgende Diagramm aus, abhängig vom Typ des verwendeten Erfassungs Geräts.
+Wenn Audio- oder Videodaten direkt in einer ASF-Datei erfasst werden, sieht das Filterdiagramm in etwa wie im folgenden Diagramm aus, je nachdem, welche Art von Erfassungsgerät verwendet wird.
 
-![Grafik zur WMV-Erfassung](images/asf-webcam.png)
+![webcam to wmv capture graph](images/asf-webcam.png)
 
-In der DirectShow-SDK-Dokumentation wird ausführlich beschrieben, wie Aufzeichnungs Diagramme erstellt werden. es gibt jedoch einen wichtigen Punkt beim Erstellen von Erfassungs Diagrammen mit dem WM-ASF-Writer: der WM-ASF-Writer wird nicht ausgeführt, es sei denn, alle seine Pins sind verbunden. Wenn Sie den WM-ASF-Writer mit dem Standardsystem Profil (nicht empfohlen) oder einem beliebigen Profil mit Audio-und Videostreams konfigurieren, wird eine Eingabe-PIN für jeden Stream erstellt, und jeder dieser Pins muss verbunden sein. Wenn Sie z. b. keine Audiodaten erfassen möchten, stellen Sie sicher, dass Sie den Filter mit einem nur-Video-Profil konfigurieren, sodass keine audiopin erstellt wird.
+In der Dokumentation zum DirectShow SDK wird ausführlich beschrieben, wie Erfassungsdiagramme erstellt werden, aber es gibt einen wichtigen Punkt, der beim Erstellen von Erfassungsdiagrammen mit dem WM ASF Writer zu beachten ist: Der WM ASF Writer wird nur ausgeführt, wenn alle pins verbunden sind. Wenn Sie WM ASF Writer mit dem Standardsystemprofil (nicht empfohlen) oder einem Profil mit Audio- und Videostreams konfigurieren, wird ein Eingabepin für jeden Stream erstellt, und jeder dieser Pins muss verbunden sein. Wenn Sie z. B. keine Audioaufzeichnung beabsichtigen, müssen Sie den Filter mit einem profilbasierten Video konfigurieren, damit kein Audiopin erstellt wird.
 
- 
+ 
 
- 
+ 
 
 
 

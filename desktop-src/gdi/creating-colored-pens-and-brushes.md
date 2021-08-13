@@ -1,19 +1,19 @@
 ---
-description: Obwohl Sie bei der Erstellung eine beliebige Farbe für einen Stift angeben können, werden im System nur die auf dem Gerät verfügbaren Farben verwendet.
+description: Obwohl Sie beim Erstellen eine beliebige Farbe für einen Stift angeben können, verwendet das System nur Farben, die auf dem Gerät verfügbar sind.
 ms.assetid: 2ea32786-f769-4096-8f60-f924c83ca9c8
-title: Erstellen von farbigen stiften und Pinsel
+title: Erstellen farbiger Stifte und Pinsel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15c1678ffb2faf91ef49834471a8124998910e23
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e487338e967f5981eaa28c2f90981f60d7e094df58317fb1af98a447622a4631
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119452260"
 ---
-# <a name="creating-colored-pens-and-brushes"></a>Erstellen von farbigen stiften und Pinsel
+# <a name="creating-colored-pens-and-brushes"></a>Erstellen farbiger Stifte und Pinsel
 
-Obwohl Sie bei der Erstellung eine beliebige Farbe für einen Stift angeben können, werden im System nur die auf dem Gerät verfügbaren Farben verwendet. Dies bedeutet, dass das System die nächste übereinstimmende Farbe verwendet, wenn es den Stift zum Zeichnen erkennt. Beim Erstellen von Pinseln generiert das System eine Dithering-Farbe, wenn Sie eine Farbe angeben, die vom Gerät nicht unterstützt wird. In beiden Fällen können Sie das [**RGB**](/windows/desktop/api/Wingdi/nf-wingdi-rgb) -Makro verwenden, um beim Erstellen eines Stifts oder Pinsels eine Farbe anzugeben.
+Obwohl Sie beim Erstellen eine beliebige Farbe für einen Stift angeben können, verwendet das System nur Farben, die auf dem Gerät verfügbar sind. Dies bedeutet, dass das System die am nächsten passende Farbe verwendet, wenn es den Stift zum Zeichnen erkennt. Beim Erstellen von Pinseln generiert das System eine geblendete Farbe, wenn Sie eine Farbe angeben, die das Gerät nicht unterstützt. In beiden Fällen können Sie das [**RGB-Makro**](/windows/desktop/api/Wingdi/nf-wingdi-rgb) verwenden, um beim Erstellen eines Stifts oder Pinsels eine Farbe anzugeben.
 
 
 ```C++

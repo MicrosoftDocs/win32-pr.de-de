@@ -1,55 +1,55 @@
 ---
-description: Die Funktionen für den ergänzenden Zeilen Dienst sind in den folgenden Themen nach Kategorie aufgelistet.
+description: Die Funktionen des ergänzenden Liniendiensts sind in den folgenden Themen nach Kategorie aufgeführt.
 ms.assetid: d4338b3c-cd84-4abb-b74e-9df895c8355b
-title: Funktionen für ergänzende Zeilen Dienste
+title: Ergänzende Liniendienstfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21a29831369fd6b886d57cfae075b5b8bf7a83b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0f2bdd609f092adebd5270a4cc8a3fe35bedce17ad57d8e4e85b5875001255f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119476343"
 ---
-# <a name="supplementary-line-service-functions"></a>Funktionen für ergänzende Zeilen Dienste
+# <a name="supplementary-line-service-functions"></a>Ergänzende Liniendienstfunktionen
 
-Die Funktionen für den ergänzenden Zeilen Dienst sind in den folgenden Themen nach Kategorie aufgelistet. Eine Funktion wird als [*asynchron*](a-tapgloss.md) identifiziert, wenn Sie die Vervollständigung in einer Antwortmeldung an die Anwendung angibt. Wenn die Funktion das Ergebnis immer sofort an die Anwendung zurückgibt, gilt die Funktion als [*synchron*](s-tapgloss.md).
+Die Funktionen des ergänzenden Liniendiensts sind in den folgenden Themen nach Kategorie aufgeführt. Eine Funktion wird als asynchron [*identifiziert,*](a-tapgloss.md) wenn sie in einer ANTWORT-Nachricht an die Anwendung auf den Abschluss hinweist. Wenn die Funktion ihr Ergebnis immer sofort an die Anwendung zurückgibt, wird die Funktion als synchron [*betrachtet.*](s-tapgloss.md)
 
-Im folgenden finden Sie eine funktionale Gruppierung der Funktionen für den ergänzenden Zeilen Dienst:
+Im Folgenden finden Sie eine funktionale Gruppierung der ergänzenden Liniendienstfunktionen:
 
 -   [Agents](#agents)
--   [Anwendungs Priorität](#application-priority)
--   [Bearermodus und-Rate](#bearer-mode-and-rate)
--   [Akzeptieren und Umleiten von Anrufen](#call-accept-and-redirect)
--   [Rückruf Abschluss](#call-completion)
+-   [Anwendungspriorität](#application-priority)
+-   [Bearermodus und -rate](#bearer-mode-and-rate)
+-   [Annehmen und Umleiten von Aufrufen](#call-accept-and-redirect)
+-   [Aufrufabschluss](#call-completion)
 -   [Telefonkonferenz](#call-conference)
--   [Weiterleitungs Weiterleitung](#call-forwarding)
--   [Halt halten](#call-hold)
+-   [Anrufweiterleitung](#call-forwarding)
+-   [Aufrufen von "Hold"](#call-hold)
 -   [Callpark](#call-park)
--   [Abhol Anrufe](#call-pickup)
--   [Rückruf ablehnen](#call-reject)
--   [Aufrufe übertragen](#call-transfer)
--   [Ziffern Überwachung und-Erfassung](#digit-monitoring-and-gathering)
--   [Erstellen von Inband-Ziffern und-Tönen](#generating-inband-digits-and-tones)
--   [Aufrufen](basic-telephony-services-reference.md)
--   [Mediensteuer Element](#media-control)
+-   [Abholung des Anrufs](#call-pickup)
+-   [Ablehnen aufrufen](#call-reject)
+-   [Anrufübertragung](#call-transfer)
+-   [Überwachung und Erfassung von Ziffern](#digit-monitoring-and-gathering)
+-   [Generieren von Inbandziffern und -tönen](#generating-inband-digits-and-tones)
+-   [Tätigen von Aufrufen](basic-telephony-services-reference.md)
+-   [Mediensteuerung](#media-control)
 -   [Medienüberwachung](#media-monitoring)
 -   [Proxys](#proxies)
 -   [Quality of Service (QoS, Dienstqualität)](#quality-of-service)
--   [Senden von Informationen an eine Remote Partei](#sending-information-to-remote-party)
+-   [Senden von Informationen an eine Remoteparty](#sending-information-to-remote-party)
 -   [Verwaltung von Dienstanbietern](#service-provider-management)
--   [Festlegen eines Terminals für Telefon Konversationen](#setting-a-terminal-for-phone-conversations)
--   [Tone-Überwachung](#tone-monitoring)
+-   [Festlegen eines Terminals für Telefonanrufe](#setting-a-terminal-for-phone-conversations)
+-   [Tonüberwachung](#tone-monitoring)
 
-Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
+Es gibt auch [verschiedene ergänzende](#miscellaneous) Liniendienstfunktionen.
 
-## <a name="bearer-mode-and-rate"></a>Bearermodus und-Rate
+## <a name="bearer-mode-and-rate"></a>Bearermodus und -rate
 
 
 
 | Funktion                                       | BESCHREIBUNG                                                                |
 |------------------------------------------------|----------------------------------------------------------------------------|
-| [**linesetcallparametriams**](/windows/desktop/api/Tapi/nf-tapi-linesetcallparams) | Fordert eine Änderung in den callparametern eines vorhandenen Aufrufes an. Synchronous. |
+| [**lineSetCallParams**](/windows/desktop/api/Tapi/nf-tapi-linesetcallparams) | Fordert eine Änderung der Aufrufparameter eines vorhandenen Aufrufs an. Synchronous. |
 
 
 
@@ -61,96 +61,96 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                     | BESCHREIBUNG                                                                   |
 |----------------------------------------------|-------------------------------------------------------------------------------|
-| [**linemonitormedia**](/windows/desktop/api/Tapi/nf-tapi-linemonitormedia) | Aktiviert oder deaktiviert die Benachrichtigung im Medien Modus für einen angegebenen-Befehl. Synchronous. |
+| [**lineMonitorMedia**](/windows/desktop/api/Tapi/nf-tapi-linemonitormedia) | Aktiviert oder deaktiviert die Medienmodusbenachrichtigung bei einem angegebenen Aufruf. Synchronous. |
 
 
 
  
 
-## <a name="digit-monitoring-and-gathering"></a>Ziffern Überwachung und-Erfassung
+## <a name="digit-monitoring-and-gathering"></a>Ziffernüberwachung und -erfassung
 
 
 
 | Funktion                                       | BESCHREIBUNG                                                                        |
 |------------------------------------------------|------------------------------------------------------------------------------------|
-| [**linemonitordigits**](/windows/desktop/api/Tapi/nf-tapi-linemonitordigits) | Aktiviert oder deaktiviert die Benachrichtigung über die Ziffern Erkennung für einen angegebenen-Befehl. Synchronous. |
-| [**linegather-Ziffern**](/windows/desktop/api/Tapi/nf-tapi-linegatherdigits)   | Führt die gepufferte Erfassung von Ziffern bei einem-Befehl aus. Synchronous.                  |
+| [**lineMonitorDigits**](/windows/desktop/api/Tapi/nf-tapi-linemonitordigits) | Aktiviert oder deaktiviert die Benachrichtigung zur Ziffernerkennung bei einem angegebenen Aufruf. Synchronous. |
+| [**lineGatherDigits**](/windows/desktop/api/Tapi/nf-tapi-linegatherdigits)   | Führt die gepufferte Sammlung von Ziffern für einen Aufruf aus. Synchronous.                  |
 
 
 
  
 
-## <a name="tone-monitoring"></a>Tone-Überwachung
+## <a name="tone-monitoring"></a>Tonüberwachung
 
 
 
 | Funktion                                     | BESCHREIBUNG                                                       |
 |----------------------------------------------|-------------------------------------------------------------------|
-| [**linemonitortones**](/windows/desktop/api/Tapi/nf-tapi-linemonitortones) | Gibt an, welche Töne bei einem angegebenen-Befehl erkannt werden sollen. Synchronous. |
+| [**lineMonitorTones**](/windows/desktop/api/Tapi/nf-tapi-linemonitortones) | Gibt an, welche Töne bei einem angegebenen Aufruf erkannt werden. Synchronous. |
 
 
 
  
 
-## <a name="media-control"></a>Mediensteuer Element
+## <a name="media-control"></a>Mediensteuerung
 
 
 
 | Funktion                                           | BESCHREIBUNG                                                                                                          |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**linesetmediacontrol**](/windows/desktop/api/Tapi/nf-tapi-linesetmediacontrol) | Richtet den Mediendaten Strom eines Aufrufes für das mediensteuer Element ein. Synchronous.                                                        |
-| [**linesetmediamode**](/windows/desktop/api/Tapi/nf-tapi-linesetmediamode)       | Legt die Medien Modi des angegebenen Aufrufes in der [**LINECALLINFO**](/windows/desktop/api/Tapi/ns-tapi-linecallinfo) -Struktur fest. Synchronous. |
+| [**lineSetMediaControl**](/windows/desktop/api/Tapi/nf-tapi-linesetmediacontrol) | Richtet den Medienstream eines Aufrufs für die Mediensteuerung ein. Synchronous.                                                        |
+| [**lineSetMediaMode**](/windows/desktop/api/Tapi/nf-tapi-linesetmediamode)       | Legt die Medienmodus(en) des angegebenen Aufrufs in seiner [**LINECALLINFO-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linecallinfo) fest. Synchronous. |
 
 
 
  
 
-## <a name="generating-inband-digits-and-tones"></a>Erstellen von Inband-Ziffern und-Tönen
+## <a name="generating-inband-digits-and-tones"></a>Generieren von Inbandziffern und -tönen
 
 
 
 | Funktion                                         | BESCHREIBUNG                                                   |
 |--------------------------------------------------|---------------------------------------------------------------|
-| [**linegeneratedigits**](/windows/desktop/api/Tapi/nf-tapi-linegeneratedigits) | Generiert bei einem-aufrufzeichen inbandziffern. Synchronous.               |
-| [**linegeneratetone**](/windows/desktop/api/Tapi/nf-tapi-linegeneratetone)     | Generiert einen angegebenen Satz von Tönen bei einem-Befehl in Inband. Synchronous. |
+| [**lineGenerateDigits**](/windows/desktop/api/Tapi/nf-tapi-linegeneratedigits) | Generiert Inbandziffern bei einem Aufruf. Synchronous.               |
+| [**lineGenerateTone**](/windows/desktop/api/Tapi/nf-tapi-linegeneratetone)     | Generiert einen bestimmten Satz von Tönen inband bei einem Aufruf. Synchronous. |
 
 
 
  
 
-## <a name="call-accept-and-redirect"></a>Akzeptieren und Umleiten von Anrufen
+## <a name="call-accept-and-redirect"></a>Aufrufen von "Annehmen" und "Umleiten"
 
 
 
 | Funktion                             | BESCHREIBUNG                                                                                               |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| [**lineaccept**](/windows/desktop/api/Tapi/nf-tapi-lineaccept)     | Akzeptiert einen angebotenen Aufruf und beginnt mit der Warnung des Aufrufers (Ringback) und der sogenannten Partei (Ring). Asynchron. |
-| [**lineredirect**](/windows/desktop/api/Tapi/nf-tapi-lineredirect) | Leitet einen Angebots Rückruf an eine andere Adresse um. Asynchron.                                              |
+| [**lineAccept**](/windows/desktop/api/Tapi/nf-tapi-lineaccept)     | Akzeptiert einen angebotenen Anruf und beginnt damit, sowohl den Aufrufer (Ringback) als auch die aufgerufene Partei (Ring) zu warnen. Asynchron. |
+| [**lineRedirect**](/windows/desktop/api/Tapi/nf-tapi-lineredirect) | Leitet einen Angebotsaufruf an eine andere Adresse um. Asynchron.                                              |
 
 
 
  
 
-## <a name="call-reject"></a>Rückruf ablehnen
+## <a name="call-reject"></a>Aufrufen von "Reject"
 
 
 
 | Funktion                     | BESCHREIBUNG                                                               |
 |------------------------------|---------------------------------------------------------------------------|
-| [**linedrop**](/windows/desktop/api/Tapi/nf-tapi-linedrop) | Trennt einen-Befehl oder bricht einen aufzurufenden Versuch ab. Asynchron. |
+| [**lineDrop**](/windows/desktop/api/Tapi/nf-tapi-linedrop) | Trennt einen Aufruf oder verabsehrt einen aufrufversuch, der in Bearbeitung ist. Asynchron. |
 
 
 
  
 
-## <a name="call-hold"></a>Halt halten
+## <a name="call-hold"></a>Aufrufen von "Hold"
 
 
 
 | Funktion                         | BESCHREIBUNG                                           |
 |----------------------------------|-------------------------------------------------------|
-| [**linehold**](/windows/desktop/api/Tapi/nf-tapi-linehold)     | Platziert den angegebenen-aufrufungs-. Asynchron. |
-| [**lineunhold**](/windows/desktop/api/Tapi/nf-tapi-lineunhold) | Ruft einen gehaltenen-Befehl ab. Asynchron.                  |
+| [**lineHold**](/windows/desktop/api/Tapi/nf-tapi-linehold)     | Legt den angegebenen Aufruf fest. Asynchron. |
+| [**lineUnhold**](/windows/desktop/api/Tapi/nf-tapi-lineunhold) | Ruft einen gehaltenen Aufruf ab. Asynchron.                  |
 
 
 
@@ -162,22 +162,22 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                 | BESCHREIBUNG                                                                                                              |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [**linesecurecall**](/windows/desktop/api/Tapi/nf-tapi-linesecurecall) | Sichert einen vorhandenen-Rückruf von Störungen durch andere Ereignisse wie z. b. Aufrufe, die auf Datenverbindungen warten. Asynchron. |
+| [**lineSecureCall**](/windows/desktop/api/Tapi/nf-tapi-linesecurecall) | Schützt einen vorhandenen Aufruf vor Störungen durch andere Ereignisse, z. B. Aufrufwartesignale für Datenverbindungen. Asynchron. |
 
 
 
  
 
-## <a name="call-transfer"></a>Aufrufe übertragen
+## <a name="call-transfer"></a>Anrufübertragung
 
 
 
 | Funktion                                             | BESCHREIBUNG                                                                                                    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [**lineSetupTransfer**](/windows/desktop/api/Tapi/nf-tapi-linesetuptransfer)       | Bereitet einen angegebenen-Befehl für die Übertragung an eine andere Adresse vor. Asynchron.                                       |
-| [**linecompletetransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer) | Überträgt einen aufgerufen, der für die Übertragung an einen anderen-Befehl eingerichtet wurde, oder wechselt in eine drei-Wege-Konferenz. Asynchron. |
-| [**lineblintransfer**](/windows/desktop/api/Tapi/nf-tapi-lineblindtransfer)       | Überträgt einen-Rückruf an eine andere Partei. Asynchron.                                                               |
-| [**lineswaphold**](/windows/desktop/api/Tapi/nf-tapi-lineswaphold)                 | Vertauscht den aktiven-Befehl mit dem derzeit bei der Beratung angehaltenen-Rückruf. Asynchron.                              |
+| [**lineSetupTransfer**](/windows/desktop/api/Tapi/nf-tapi-linesetuptransfer)       | Bereitet einen angegebenen Aufruf für die Übertragung an eine andere Adresse vor. Asynchron.                                       |
+| [**lineCompleteTransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer) | Überträgt einen Anruf, der für die Übertragung an einen anderen Anruf eingerichtet wurde, oder nimmt an einer dreistufigen Konferenz teil. Asynchron. |
+| [**lineBlindTransfer**](/windows/desktop/api/Tapi/nf-tapi-lineblindtransfer)       | Überträgt einen Aufruf an eine andere Partei. Asynchron.                                                               |
+| [**lineSwapHold**](/windows/desktop/api/Tapi/nf-tapi-lineswaphold)                 | Tauscht den aktiven Anruf durch den Anruf, der sich derzeit in der Beratungsaufforderung befindet. Asynchron.                              |
 
 
 
@@ -189,73 +189,73 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                                         | BESCHREIBUNG                                                                                                                                                                                          |
 |------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**linesetupconference**](/windows/desktop/api/Tapi/nf-tapi-linesetupconference)               | Bereitet einen angegebenen-Rückruf für das Hinzufügen einer anderen Partei vor. Asynchron.                                                                                                                               |
-| [**lineprepareaddumconference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference) | Bereitet das Hinzufügen einer Partei zu einem bestehenden Konferenzgespräch vor, indem der Konferenzanrufe in den Status "Hold" versetzt und ein Rückruf aufgerufen wird, der später dem Konferenztelefon hinzugefügt werden kann. Asynchron. |
-| [**lineaddumconference**](/windows/desktop/api/Tapi/nf-tapi-lineaddtoconference)               | Fügt einen Rückruf für einen vorhandenen Konferenz Rückruf hinzu. Asynchron.                                                                                                                               |
-| [**lineremovefromconference**](/windows/desktop/api/Tapi/nf-tapi-lineremovefromconference)     | Entfernt eine Partei aus einem Konferenzgespräch. Asynchron.                                                                                                                                                |
+| [**lineSetupConference**](/windows/desktop/api/Tapi/nf-tapi-linesetupconference)               | Bereitet einen bestimmten Aufruf auf das Hinzufügen einer anderen Partei vor. Asynchron.                                                                                                                               |
+| [**linePrepareAddToConference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference) | Bereitet das Hinzufügen einer Partei zu einer vorhandenen Telefonkonferenz vor, indem die Telefonkonferenz in einen Wartezustand gestellt und ein Beratungsaufruf erstellt wird, der später dem Telefonat hinzugefügt werden kann. Asynchron. |
+| [**lineAddToConference**](/windows/desktop/api/Tapi/nf-tapi-lineaddtoconference)               | Fügt einer vorhandenen Telefonkonferenz einen Beratungsanruf hinzu. Asynchron.                                                                                                                               |
+| [**lineRemoveFromConference**](/windows/desktop/api/Tapi/nf-tapi-lineremovefromconference)     | Entfernt eine Partei aus einer Telefonkonferenz. Asynchron.                                                                                                                                                |
 
 
 
  
 
-## <a name="call-park"></a>Callpark
+## <a name="call-park"></a>Call Park
 
 
 
 | Funktion                         | BESCHREIBUNG                                          |
 |----------------------------------|------------------------------------------------------|
-| [**linepark**](/windows/desktop/api/Tapi/nf-tapi-linepark)     | In wird ein angegebener-Rückruf an einer anderen Adresse Asynchron. |
-| [**lineunpark**](/windows/desktop/api/Tapi/nf-tapi-lineunpark) | Ruft einen geparkten-Befehl ab. Asynchron.               |
+| [**linePark**](/windows/desktop/api/Tapi/nf-tapi-linepark)     | Bekommt einen bestimmten Aufruf an einer anderen Adresse. Asynchron. |
+| [**lineUnpark**](/windows/desktop/api/Tapi/nf-tapi-lineunpark) | Ruft einen geparkten Aufruf ab. Asynchron.               |
 
 
 
  
 
-## <a name="call-forwarding"></a>Weiterleitungs Weiterleitung
+## <a name="call-forwarding"></a>Anrufweiterleitung
 
 
 
 | Funktion                           | BESCHREIBUNG                                             |
 |------------------------------------|---------------------------------------------------------|
-| [**lineforward**](/windows/desktop/api/Tapi/nf-tapi-lineforward) | Legt Anforderungs Weiterleitungs Anforderungen fest oder bricht Sie ab. Asynchron. |
+| [**lineForward**](/windows/desktop/api/Tapi/nf-tapi-lineforward) | Legt Aufrufweiterleitungsanforderungen fest oder bricht sie ab. Asynchron. |
 
 
 
  
 
-## <a name="call-pickup"></a>Abhol Anrufe
+## <a name="call-pickup"></a>Anrufannahme
 
 
 
 | Funktion                         | BESCHREIBUNG                                                                                                                                                                                      |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**linepickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup) | Ruft eine aufrufswarnung an einer angegebenen Zieladresse ab und gibt ein-Rückruf Handle für den aufzurufenden-Befehl zurück ([**linepickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup) kann auch für das warten auf Aufrufe verwendet werden). Asynchron. |
+| [**linePickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup) | Ruft eine Anrufwarnung an einer angegebenen Zieladresse ab und gibt ein Aufrufhandle für den übernommenen Aufruf zurück ([**linePickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup) kann auch für wartende Aufrufe verwendet werden). Asynchron. |
 
 
 
  
 
-## <a name="sending-information-to-remote-party"></a>Senden von Informationen an eine Remote Partei
+## <a name="sending-information-to-remote-party"></a>Senden von Informationen an die Remotepartei
 
 
 
 | Funktion                                                   | BESCHREIBUNG                                                                                                         |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [**linereleaseuseruserinfo**](/windows/desktop/api/Tapi/nf-tapi-linereleaseuseruserinfo) | Gibt Benutzer Benutzerinformationen frei und ermöglicht dem System, diesen Speicher mit neuen Informationen zu überschreiben. Asynchron. |
-| [**linesenduseruserinfo**](/windows/desktop/api/Tapi/nf-tapi-linesenduseruserinfo)       | Sendet Benutzer Benutzerinformationen für den angegebenen-Befehl an die Remote Partei. Asynchron.                                |
+| [**lineReleaseUserUserInfo**](/windows/desktop/api/Tapi/nf-tapi-linereleaseuseruserinfo) | Gibt Benutzerinformationen frei, wodurch das System diesen Speicher mit neuen Informationen überschreiben kann. Asynchron. |
+| [**lineSendUserUserInfo**](/windows/desktop/api/Tapi/nf-tapi-linesenduseruserinfo)       | Sendet Benutzer-/Benutzerinformationen an die Remotepartei beim angegebenen Aufruf. Asynchron.                                |
 
 
 
  
 
-## <a name="call-completion"></a>Rückruf Abschluss
+## <a name="call-completion"></a>Aufrufabschluss
 
 
 
 | Funktion                                         | BESCHREIBUNG                                      |
 |--------------------------------------------------|--------------------------------------------------|
-| [**linecompletecall**](/windows/desktop/api/Tapi/nf-tapi-linecompletecall)     | Fügt eine Anforderung zum Abschluss der Anforderung ein. Asynchron.  |
-| [**lineuncompletecall**](/windows/desktop/api/Tapi/nf-tapi-lineuncompletecall) | Bricht eine Anforderung zum Abschließen des Aufrufes ab. Asynchron. |
+| [**lineCompleteCall**](/windows/desktop/api/Tapi/nf-tapi-linecompletecall)     | Platziert eine Anforderung zur Anrufvervollständigung. Asynchron.  |
+| [**lineUncompleteCall**](/windows/desktop/api/Tapi/nf-tapi-lineuncompletecall) | Bricht eine Aufrufabschlussanforderung ab. Asynchron. |
 
 
 
@@ -267,35 +267,35 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                   | BESCHREIBUNG                                                                                                                      |
 |--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [**linesetterminal**](/windows/desktop/api/Tapi/nf-tapi-linesetterminal) | Gibt das Terminal Gerät an, an das die angegebene Zeile, die Adress Ereignisse oder die Ereignisse zum Abrufen von Medienströmen weitergeleitet werden. Asynchron. |
+| [**lineSetTerminal**](/windows/desktop/api/Tapi/nf-tapi-linesetterminal) | Gibt das Terminalgerät an, an das die angegebene Zeile, Adressereignisse oder Aufrufmedienstreamereignisse weitergeleitet werden. Asynchron. |
 
 
 
  
 
-## <a name="application-priority"></a>Anwendungs Priorität
+## <a name="application-priority"></a>Anwendungspriorität
 
 
 
 | Funktion                                         | BESCHREIBUNG                                                                                       |
 |--------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [**linegetapppriority**](/windows/desktop/api/Tapi/nf-tapi-linegetapppriority) | Ruft die Informationen zur Übergabe und/oder zur unterstützten telefoniepriorität für eine Anwendung ab. Synchronous. |
-| [**linesetapppriority**](/windows/desktop/api/Tapi/nf-tapi-linesetapppriority) | Legt die Übergabe und/oder die unterstützte telefoniepriorität für eine Anwendung fest. Synchronous.              |
+| [**lineGetAppPriority**](/windows/desktop/api/Tapi/nf-tapi-linegetapppriority) | Ruft Informationen zur Priorität der Handoff- und/oder Unterstützten Telefonie für eine Anwendung ab. Synchronous. |
+| [**lineSetAppPriority**](/windows/desktop/api/Tapi/nf-tapi-linesetapppriority) | Legt die Priorität der Übergabe und/oder der unterstützten Telefonie für eine Anwendung fest. Synchronous.              |
 
 
 
  
 
-## <a name="service-provider-management"></a>Verwaltung von Dienstanbietern
+## <a name="service-provider-management"></a>Dienstanbieterverwaltung
 
 
 
 | Funktion                                           | BESCHREIBUNG                                                           |
 |----------------------------------------------------|-----------------------------------------------------------------------|
-| [**lineaddprovider**](/windows/desktop/api/Tapi/nf-tapi-lineaddprovider)         | Installiert einen Telefoniedienstanbieter. Synchronous.                   |
-| [**lineconfigprovider**](/windows/desktop/api/Tapi/nf-tapi-lineconfigprovider)   | Zeigt das Konfigurations Dialogfeld eines Dienstanbieters an. Synchronous. |
-| [**lineremoveprovider**](/windows/desktop/api/Tapi/nf-tapi-lineremoveprovider)   | Entfernt einen vorhandenen Telefoniedienstanbieter. Synchronous.          |
-| [**linegetproviderlist**](/windows/desktop/api/Tapi/nf-tapi-linegetproviderlist) | Ruft eine Liste installierter Dienstanbieter ab. Synchronous.         |
+| [**lineAddProvider**](/windows/desktop/api/Tapi/nf-tapi-lineaddprovider)         | Installiert einen Telefoniedienstanbieter. Synchronous.                   |
+| [**lineConfigProvider**](/windows/desktop/api/Tapi/nf-tapi-lineconfigprovider)   | Zeigt das Konfigurationsdialogfeld eines Dienstanbieters an. Synchronous. |
+| [**lineRemoveProvider**](/windows/desktop/api/Tapi/nf-tapi-lineremoveprovider)   | Entfernt einen vorhandenen Telefoniedienstanbieter. Synchronous.          |
+| [**lineGetProviderList**](/windows/desktop/api/Tapi/nf-tapi-linegetproviderlist) | Ruft eine Liste der installierten Dienstanbieter ab. Synchronous.         |
 
 
 
@@ -307,14 +307,14 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                                     | BESCHREIBUNG                                                                                                                             |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| [**lineagentspecific**](/windows/desktop/api/Tapi/nf-tapi-lineagentspecific)               | Ermöglicht der Anwendung den Zugriff auf proprietäre handlerspezifische Funktionen des mit der Adresse verknüpften Agent-Handlers. Asynchron. |
-| [**linegetagentactivitylist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentactivitylista) | Ruft die Liste der Aktivitäten ab, von denen eine Anwendung die Funktionen auswählt, die ein Agent ausführt. Asynchron.                    |
-| [**linegetagentcaps**](/windows/desktop/api/Tapi/nf-tapi-linegetagentcapsa)                 | Ruft die agentbezogenen Funktionen ab, die auf dem angegebenen Zeilen Gerät unterstützt werden. Asynchron.                                            |
-| [**linegetagentgrouplist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentgrouplista)       | Ruft die Liste der Agentgruppen ab, in denen sich ein Agent auf dem automatischen-Anrufs anmelden kann. Asynchron.                      |
-| [**linegetagentstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetagentstatusa)             | Ruft den agentbezogenen Status für die angegebene Adresse ab. Asynchron.                                                                |
-| [**linesetagentactivity**](/windows/desktop/api/Tapi/nf-tapi-linesetagentactivity)         | Legt den Agent-Aktivitäts Code fest, der einer bestimmten Adresse zugeordnet ist. Asynchron.                                                        |
-| [**linesetagentgroup**](/windows/desktop/api/Tapi/nf-tapi-linesetagentgroup)               | Legt die Agentgruppen fest, bei denen der Agent bei einer bestimmten Adresse angemeldet ist. Asynchron.                                              |
-| [**linesetagentstate**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstate)               | Legt den Agent-Status fest, der einer bestimmten Adresse zugeordnet ist. Asynchron.                                                                |
+| [**lineAgentSpecific**](/windows/desktop/api/Tapi/nf-tapi-lineagentspecific)               | Ermöglicht der Anwendung den Zugriff auf proprietäre handlerspezifische Funktionen des Agenthandlers, der der Adresse zugeordnet ist. Asynchron. |
+| [**lineGetAgentActivityList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentactivitylista) | Ruft die Liste der Aktivitäten ab, aus denen eine Anwendung die Funktionen auswählt, die ein Agent ausführt. Asynchron.                    |
+| [**lineGetAgentCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetagentcapsa)                 | Ruft die Agent-bezogenen Funktionen ab, die auf dem angegebenen Zeilengerät unterstützt werden. Asynchron.                                            |
+| [**lineGetAgentGroupList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentgrouplista)       | Ruft die Liste der Agentgruppen ab, bei denen sich ein Agent beim Verteiler für automatische Aufrufe anmelden kann. Asynchron.                      |
+| [**lineGetAgentStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetagentstatusa)             | Ruft den Agent-bezogenen Status für die angegebene Adresse ab. Asynchron.                                                                |
+| [**lineSetAgentActivity**](/windows/desktop/api/Tapi/nf-tapi-linesetagentactivity)         | Legt den Agentaktivitätscode fest, der einer bestimmten Adresse zugeordnet ist. Asynchron.                                                        |
+| [**lineSetAgentGroup**](/windows/desktop/api/Tapi/nf-tapi-linesetagentgroup)               | Legt die Agentgruppen fest, bei denen der Agent an einer bestimmten Adresse angemeldet ist. Asynchron.                                              |
+| [**lineSetAgentState**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstate)               | Legt den Agentzustand fest, der einer bestimmten Adresse zugeordnet ist. Asynchron.                                                                |
 
 
 
@@ -326,8 +326,8 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                       | BESCHREIBUNG                                                                         |
 |------------------------------------------------|-------------------------------------------------------------------------------------|
-| [**lineproxymess**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage)   | Wird von einem registrierten Proxy Anforderungs Handler zum Generieren von TAPI-Nachrichten verwendet. Synchronous.  |
-| [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) | Gibt den Abschluss einer Proxy Anforderung durch einen registrierten Proxy Handler an. Synchronous. |
+| [**lineProxyMessage**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage)   | Wird von einem registrierten Proxyanforderungshandler zum Generieren von TAPI-Nachrichten verwendet. Synchronous.  |
+| [**lineProxyResponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) | Gibt den Abschluss einer Proxyanforderung durch einen registrierten Proxyhandler an. Synchronous. |
 
 
 
@@ -339,21 +339,21 @@ Es gibt auch [verschiedene](#miscellaneous) ergänzende Zeilen Dienstfunktionen.
 
 | Funktion                                                           | BESCHREIBUNG                                                                                |
 |--------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**linesetcallqualityofservice**](/windows/desktop/api/Tapi/nf-tapi-linesetcallqualityofservice) | Fordert eine Änderung der Quality of Service-Parameter für einen vorhandenen-Rückruf an. Asynchron. |
+| [**lineSetCallQualityOfService**](/windows/desktop/api/Tapi/nf-tapi-linesetcallqualityofservice) | Fordert eine Änderung der Dienstqualitätsparameter für einen vorhandenen Aufruf an. Asynchron. |
 
 
 
  
 
-## <a name="miscellaneous"></a>Verschiedenes
+## <a name="miscellaneous"></a>Sonstiges
 
 
 
 | Funktion                                             | BESCHREIBUNG                                                                                           |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| [**linesetcalldata**](/windows/desktop/api/Tapi/nf-tapi-linesetcalldata)           | Legt den **calldata** -Member der [**LINECALLINFO**](/windows/desktop/api/Tapi/ns-tapi-linecallinfo) -Struktur fest. Asynchron. |
-| [**linesetcalltreatment**](/windows/desktop/api/Tapi/nf-tapi-linesetcalltreatment) | Legt die Sounds fest, die der Benutzer erfährt, wenn ein Rückruf nicht offen ist oder angehalten wird. Asynchron.               |
-| [**linesetlinedevstatus**](/windows/desktop/api/Tapi/nf-tapi-linesetlinedevstatus) | Legt den Gerätestatus der Zeile fest. Asynchron.                                                            |
+| [**lineSetCallData**](/windows/desktop/api/Tapi/nf-tapi-linesetcalldata)           | Legt den **CallData-Member** der [**LINECALLINFO-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linecallinfo) fest. Asynchron. |
+| [**lineSetCallTreatment**](/windows/desktop/api/Tapi/nf-tapi-linesetcalltreatment) | Legt die Töne fest, die der Benutzer anhört, wenn ein Aufruf nicht beantwortet oder zurückgehalten wird. Asynchron.               |
+| [**lineSetLineDevStatus**](/windows/desktop/api/Tapi/nf-tapi-linesetlinedevstatus) | Legt den Gerätestatus der Zeile fest. Asynchron.                                                            |
 
 
 

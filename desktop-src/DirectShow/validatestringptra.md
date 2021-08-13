@@ -1,7 +1,7 @@
 ---
-description: Überprüft, ob der aufrufende Prozess über Lesezugriff auf eine ANSI-Zeichenfolge verfügt. Andernfalls ruft das Makro das dbgbreak-Makro auf.
+description: Überprüft, ob der aufrufende Prozess Lesezugriff auf eine ANSI-Zeichenfolge hat. Falls nicht, ruft das Makro das DbgBreak-Makro auf.
 ms.assetid: 44be67f8-9896-4360-82de-083a5f28a3d0
-title: Validatestringptra-Makro (wxdebug. h)
+title: ValidateStringPtrA-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 94ce34393ec494f34cce621afc168a4d6bbe4325
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26a0e000f5b2b8de645924300eb650a05a66a4b57c16c5eda3f124e7bc0903a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432100"
 ---
-# <a name="validatestringptra-macro"></a>Validatestringptra-Makro
+# <a name="validatestringptra-macro"></a>ValidateStringPtrA-Makro
 
-Überprüft, ob der aufrufende Prozess über Lesezugriff auf eine ANSI-Zeichenfolge verfügt. Andernfalls ruft das Makro das [**dbgbreak**](dbgbreak.md) -Makro auf.
+Überprüft, ob der aufrufende Prozess Lesezugriff auf eine ANSI-Zeichenfolge hat. Falls nicht, ruft das Makro das [**DbgBreak-Makro**](dbgbreak.md) auf.
 
 > [!Note]  
-> Dieses Makro ist veraltet. Im Windows SDK für Windows Vista (und höher) führt dieses Makro nichts aus.
+> Dieses Makro ist veraltet. Im Windows SDK für Windows Vista (und höher) führt dieses Makro keine Aktion aus.
 
  
 
@@ -44,10 +44,10 @@ void ValidateStringPtrA(
 
 <dl> <dt>
 
-*cker* 
+*p* 
 </dt> <dd>
 
-Zeiger auf eine mit NULL endende ANSI-Zeichenfolge.
+Zeiger auf eine NULL-terminierte ANSI-Zeichenfolge.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Zeiger auf eine mit NULL endende ANSI-Zeichenfolge.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird definiert, wenn die DirectShow-Basisklassen-Header Datei eingeschlossen wird.
+Dieses Makro wird ignoriert, es sei denn, \_ DEBUG, DEBUG oder VFWROBUST wird definiert, wenn die DirectShow-Basisklassenheaderdatei enthalten ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,15 +65,15 @@ Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird de
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Zeiger Validierungs Makros](pointer-validation-macros.md)
+[Zeigervalidierungsmakros](pointer-validation-macros.md)
 </dt> </dl>
 
  

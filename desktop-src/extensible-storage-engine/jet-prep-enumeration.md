@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_prep-Enumeration'
-title: JET_prep-Enumeration
+description: 'Weitere Informationen finden Sie unter: JET_prep Enumeration'
+title: JET_prep Enumeration
 TOCTitle: JET_prep enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_prep
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_prep(v=EXCHG.10)
@@ -36,19 +36,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: edeaef8144fe6e13674ec6d3dfcb8adf7522e148
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0246114eef784fea2fc145f7cab737c815c17626fc2580b33aa6d09229418066
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118765054"
 ---
-# <a name="jet_prep-enumeration"></a>JET_prep-Enumeration
+# <a name="jet_prep-enumeration"></a>JET_prep Enumeration
 
-Update Typen für jetprepareupdate.
+Updatetypen für JetPrepareUpdate.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,39 +77,39 @@ public enum JET_prep
 <tr class="odd">
 <td></td>
 <td>Einfügen</td>
-<td>Dieses Flag bewirkt, dass der Cursor eine Einfügung eines neuen Datensatzes vorbereitet. Alle Daten werden auf den Standardstatus für den Datensatz initialisiert. Wenn die Tabelle eine automatische Inkrement-Spalte aufweist, wird diesem Datensatz ein neuer Wert zugewiesen, unabhängig davon, ob das Update letztendlich erfolgreich ist, fehlschlägt oder abgebrochen wird.</td>
+<td>Dieses Flag bewirkt, dass sich der Cursor auf ein Einfügen eines neuen Datensatzes vorbereitet. Alle Daten werden mit dem Standardzustand für den Datensatz initialisiert. Wenn die Tabelle über eine Spalte mit automatischer Inkremente verfügt, wird diesem Datensatz unabhängig davon, ob das Update letztendlich erfolgreich ist, fehlschlägt oder abgebrochen wird, ein neuer Wert zugewiesen.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Replace</td>
-<td>Dieses Flag bewirkt, dass der Cursor eine Ersetzung des aktuellen Datensatzes vorbereitet. Wenn die Tabelle eine Versions Spalte aufweist, wird die Versions Spalte auf den nächsten Wert in der zugehörigen Reihenfolge festgelegt. Wenn dieses Update nicht vollständig ausgeführt wird, ist der Versions Wert im Datensatz nicht betroffen. Es wird eine Update Sperre für den Datensatz erstellt, um zu verhindern, dass dieser Datensatz von anderen Sitzungen aktualisiert wird, bevor diese Sitzung abgeschlossen ist.</td>
+<td>Dieses Flag bewirkt, dass sich der Cursor auf einen Austausch des aktuellen Datensatzes vorbereitet. Wenn die Tabelle über eine Versionsspalte verfügt, wird die Versionsspalte auf den nächsten Wert in ihrer Sequenz festgelegt. Wenn dieses Update nicht abgeschlossen wird, ist der Versionswert im Datensatz davon nicht betroffen. Es wird eine Updatesperre für den Datensatz ergriffen, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren, bevor diese Sitzung abgeschlossen wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Abbrechen</td>
-<td>Dieses Flag bewirkt, dass jetprepareupdate das Update für diesen Cursor abbricht.</td>
+<td>Dieses Flag bewirkt, dass JetPrepareUpdate das Update für diesen Cursor abbricht.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Replacumolock</td>
-<td>Dieses Flag ähnelt JET_prepReplace, es wird jedoch keine Sperre erstellt, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren. Stattdessen erhält diese Sitzung möglicherweise JET_errWriteConflict, wenn jetupdate aufgerufen wird, um das Update abzuschließen.</td>
+<td>ReplaceNoLock</td>
+<td>Dieses Flag ähnelt dem JET_prepReplace, es wird jedoch keine Sperre ergriffen, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren. Stattdessen erhält diese Sitzung möglicherweise JET_errWriteConflict, wenn jetUpdate zum Abschließen des Updates aufruft.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>InsertCopy</td>
-<td>Dieses Flag bewirkt, dass der Cursor eine Einfügung einer Kopie des vorhandenen Datensatzes vorbereitet. Wenn diese Option verwendet wird, muss ein aktueller Datensatz vorhanden sein. Der ursprüngliche Zustand des neuen Datensatzes wird aus dem aktuellen Datensatz kopiert. Lange Werte, die außerhalb des Datensatzes gespeichert werden, werden virtuell kopiert.</td>
+<td>Dieses Flag bewirkt, dass sich der Cursor auf das Einfügen einer Kopie des vorhandenen Datensatzes vorbereitet. Wenn diese Option verwendet wird, muss ein aktueller Datensatz verwendet werden. Der Anfangszustand des neuen Datensatzes wird aus dem aktuellen Datensatz kopiert. Lange Werte, die nicht im Datensatz gespeichert werden, werden virtuell kopiert.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Insertcopydeleteoriginal</td>
-<td>Dieses Flag bewirkt, dass der Cursor eine Einfügung desselben Datensatzes und einen Löschvorgang oder den ursprünglichen Datensatz vorbereitet. Sie wird in Fällen verwendet, in denen sich der Primärschlüssel geändert hat.</td>
+<td>InsertCopyDeleteOriginal</td>
+<td>Dieses Flag bewirkt, dass sich der Cursor auf ein Einfügen desselben Datensatzes und einen Lösch- oder den ursprünglichen Datensatz vorbereitet. Sie wird in Fällen verwendet, in denen sich der Primärschlüssel geändert hat.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

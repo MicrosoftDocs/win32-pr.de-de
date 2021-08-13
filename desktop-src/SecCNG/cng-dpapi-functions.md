@@ -1,32 +1,32 @@
 ---
-description: 'Cryptography API: Next Generation (CNG) definiert die folgenden Funktionen für die CNG-Datenschutz-API.'
+description: 'Kryptografie-API: Next Generation (CNG) definiert die folgenden Funktionen für die CNG-Datenschutz-API.'
 ms.assetid: 591C7361-334E-4A65-8616-C0ED3BBC2297
-title: CNG-DPAPI-Funktionen
+title: CNG DPAPI-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 84719009fc7807a9edc0b7a88846530b68caa6c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a3dbc57a0ec63c67733703aada30d60e6230b9209e94cbb44ec3905109ba256f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118908688"
 ---
-# <a name="cng-dpapi-functions"></a>CNG-DPAPI-Funktionen
+# <a name="cng-dpapi-functions"></a>CNG DPAPI-Funktionen
 
-Cryptography API: Next Generation (CNG) definiert die folgenden Funktionen für die CNG-Datenschutz-API.
+Kryptografie-API: Next Generation (CNG) definiert die folgenden Funktionen für die CNG-Datenschutz-API.
 
--   [**Ncryptkreateschutzdescriptor**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcreateprotectiondescriptor)
--   [**Ncryptcloseschutzdescriptor**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcloseprotectiondescriptor)
--   [**Ncryptgetschutzdescriptor Info**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptgetprotectiondescriptorinfo)
--   [**Ncryptprotectsecret**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptprotectsecret)
--   [**Ncryptqueryschutzdescriptor Name**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptqueryprotectiondescriptorname)
--   [**Ncryptregisterschutzdescriptor Name**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptregisterprotectiondescriptorname)
--   [**Ncryptstreamclose**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamclose)
--   [**Ncryptstreamopentoprotect**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamopentoprotect)
--   [**Ncryptstreamopentounprotect**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamopentounprotect)
--   [**Ncryptstreamupdate**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamupdate)
--   [**Ncryptunprotectsecret**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptunprotectsecret)
--   [**Pfncryptstreamoutputcallback**](/windows/desktop/api/NCryptprotect/nc-ncryptprotect-pfncryptstreamoutputcallback)
+-   [**NCryptCreateProtectionDescriptor**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcreateprotectiondescriptor)
+-   [**NCryptCloseProtectionDescriptor**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcloseprotectiondescriptor)
+-   [**NCryptGetProtectionDescriptorInfo**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptgetprotectiondescriptorinfo)
+-   [**NCryptProtectSecret**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptprotectsecret)
+-   [**NCryptQueryProtectionDescriptorName**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptqueryprotectiondescriptorname)
+-   [**NCryptRegisterProtectionDescriptorName**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptregisterprotectiondescriptorname)
+-   [**NCryptStreamClose**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamclose)
+-   [**NCryptStreamOpenToProtect**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamopentoprotect)
+-   [**NCryptStreamOpenToUnprotect**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamopentounprotect)
+-   [**NCryptStreamUpdate**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamupdate)
+-   [**NCryptUnprotectSecret**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptunprotectsecret)
+-   [**PFNCryptStreamOutputCallback**](/windows/desktop/api/NCryptprotect/nc-ncryptprotect-pfncryptstreamoutputcallback)
 
  
 

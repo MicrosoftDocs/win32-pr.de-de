@@ -1,6 +1,6 @@
 ---
-title: EAPHost-Konstanten (eaptypes. h)
-description: Anzeigen einer Liste von EAPHost-Konstanten (eaptypes. h), die von EAPHost-Methoden verwendet werden, und Anzeigen der Anforderungen für deren Verwendung.
+title: EAPHost-Konstanten (Eaptypes.h)
+description: Zeigen Sie eine Liste der EAPHost-Konstanten (Eaptypes.h) an, die von EAPHost-Methoden verwendet werden, und sehen Sie sich die Anforderungen für deren Verwendung an.
 ms.assetid: 56338B98-06E3-4CD3-B1CA-F8F45AA39566
 topic_type:
 - apiref
@@ -23,12 +23,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84704e59ed43466c47435f4804cb4dedc9c3a92d
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: ab336b147557722f1bec72bfe662b12599a64ee1622b31bdad6a92a05af6d92e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119483010"
 ---
 # <a name="eaphost-constants"></a>EAPHost-Konstanten
 
@@ -36,7 +36,7 @@ Die von EAPHost-Methoden verwendeten Konstanten.
 
 <dl> <dt>
 
-<span id="EAP_INTERACTIVE_UI_DATA_VERSION"></span><span id="eap_interactive_ui_data_version"></span>**interaktive EAP- \_ \_ UI- \_ Daten \_ Version**
+<span id="EAP_INTERACTIVE_UI_DATA_VERSION"></span><span id="eap_interactive_ui_data_version"></span>**EAP \_ INTERACTIVE \_ UI \_ DATA \_ VERSION**
 </dt> <dd> <dl> <dt>
 
 0
@@ -44,12 +44,12 @@ Die von EAPHost-Methoden verwendeten Konstanten.
 
 
 
-Die Version der interaktiven EAP-UI-Daten.
+Die Version der interaktiven EAP-Benutzeroberflächendaten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_CREDENTIAL_VERSION"></span><span id="eap_credential_version"></span>**EAP-Anmelde Informations \_ \_ Version**
+<span id="EAP_CREDENTIAL_VERSION"></span><span id="eap_credential_version"></span>**\_EAP-ANMELDEINFORMATIONSVERSION \_**
 </dt> <dd> <dl> <dt>
 
 1
@@ -57,12 +57,12 @@ Die Version der interaktiven EAP-UI-Daten.
 
 
 
-Die Version der EAP-Anmelde Informationen, die der Benutzer bereitgestellt hat.
+Die Version der vom Benutzer bereitgestellten EAP-Anmeldeinformationen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAPHOST_PEER_API_VERSION"></span><span id="eaphost_peer_api_version"></span>**EAPHost- \_ Peer- \_ API- \_ Version**
+<span id="EAPHOST_PEER_API_VERSION"></span><span id="eaphost_peer_api_version"></span>**\_ \_ EAPHOST-PEER-API-VERSION \_**
 </dt> <dd> <dl> <dt>
 
 1
@@ -75,7 +75,7 @@ Die Version der EAPHost-Peer-API.
 
 </dt> </dl> </dd> <dt>
 
-<span id="CERTIFICATE_HASH_LENGTH"></span><span id="certificate_hash_length"></span>**Zertifikat \_ Hash \_ Länge**
+<span id="CERTIFICATE_HASH_LENGTH"></span><span id="certificate_hash_length"></span>**\_ \_ ZERTIFIKATHASHLÄNGE**
 </dt> <dd> <dl> <dt>
 
 20
@@ -88,7 +88,7 @@ Länge des SHA1-Hashs des Zertifikats.
 
 </dt> </dl> </dd> <dt>
 
-<span id="MAX_EAP_CONFIG_INPUT_FIELD_LENGTH"></span><span id="max_eap_config_input_field_length"></span>**maximale \_ Länge der EAP- \_ Konfigurations \_ Eingabe \_ Felder \_**
+<span id="MAX_EAP_CONFIG_INPUT_FIELD_LENGTH"></span><span id="max_eap_config_input_field_length"></span>**MAXIMALE \_ LÄNGE DES \_ EINGABEFELDS FÜR \_ DIE \_ EAP-KONFIGURATION \_**
 </dt> <dd> <dl> <dt>
 
 256
@@ -96,12 +96,12 @@ Länge des SHA1-Hashs des Zertifikats.
 
 
 
-Gibt die maximal unterstützte Länge eines Eingabe Felds an.
+Gibt die maximal unterstützte Länge eines Eingabefelds an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="MAX_EAP_CONFIG_INPUT_FIELD_VALUE_LENGTH"></span><span id="max_eap_config_input_field_value_length"></span>**maximale \_ Länge des Werts für die EAP- \_ Konfigurations \_ Eingabe \_ Felder \_ \_**
+<span id="MAX_EAP_CONFIG_INPUT_FIELD_VALUE_LENGTH"></span><span id="max_eap_config_input_field_value_length"></span>**MAXIMALE \_ LÄNGE DES \_ EAP-EINGABEFELDWERTS \_ \_ FÜR DIE \_ \_ KONFIGURATION**
 </dt> <dd> <dl> <dt>
 
 1024
@@ -109,12 +109,12 @@ Gibt die maximal unterstützte Länge eines Eingabe Felds an.
 
 
 
-Gibt die maximal unterstützte Länge eines Eingabe Felds an.
+Gibt die maximal unterstützte Länge eines Eingabefelds an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_UI_INPUT_FIELD_PROPS_DEFAULT"></span><span id="eap_ui_input_field_props_default"></span>**Standardeigenschaften der EAP-Benutzeroberflächen- \_ \_ Eingabe \_ Felder \_ \_**
+<span id="EAP_UI_INPUT_FIELD_PROPS_DEFAULT"></span><span id="eap_ui_input_field_props_default"></span>**EAP \_ UI \_ INPUT \_ FIELD \_ PROPS \_ DEFAULT**
 </dt> <dd> <dl> <dt>
 
 0X00000000 
@@ -122,12 +122,12 @@ Gibt die maximal unterstützte Länge eines Eingabe Felds an.
 
 
 
-Windows Vista mit SP1 oder höher: stellt den Standard Eigenschafts Wert für Eingabefeld Einträge dar, die auf der Benutzeroberfläche angezeigt werden.
+Windows Vista mit SP1 oder höher: Stellt den Standardeigenschaftswert für Eingabefeldeinträge dar, die auf der Benutzeroberfläche angezeigt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_CONFIG_INPUT_FIELD_PROPS_DEFAULT"></span><span id="eap_config_input_field_props_default"></span>**Standardeigenschaften der EAP- \_ Konfigurations \_ Eingabe \_ Felder \_ \_**
+<span id="EAP_CONFIG_INPUT_FIELD_PROPS_DEFAULT"></span><span id="eap_config_input_field_props_default"></span>**EAP \_ CONFIG \_ INPUT \_ FIELD \_ PROPS \_ DEFAULT**
 </dt> <dd> <dl> <dt>
 
 0X00000000 
@@ -135,12 +135,12 @@ Windows Vista mit SP1 oder höher: stellt den Standard Eigenschafts Wert für Ei
 
 
 
-Stellt den Standard Eigenschafts Wert für Konfigurations Eingabefeld Einträge dar, die auf der Benutzeroberfläche angezeigt werden.
+Stellt den Standardeigenschaftswert für Konfigurationseingabefeldeinträge dar, die auf der Benutzeroberfläche angezeigt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_UI_INPUT_FIELD_PROPS_NON_DISPLAYABLE"></span><span id="eap_ui_input_field_props_non_displayable"></span>**Eingabefeld Eigenschaften für EAP- \_ Benutzeroberfläche \_ \_ \_ \_ nicht \_ anzeigbar**
+<span id="EAP_UI_INPUT_FIELD_PROPS_NON_DISPLAYABLE"></span><span id="eap_ui_input_field_props_non_displayable"></span>**EAP \_ UI \_ INPUT \_ FIELD \_ PROPS \_ NON \_ DISPLAYABLE**
 </dt> <dd> <dl> <dt>
 
 0X00000001 
@@ -148,12 +148,12 @@ Stellt den Standard Eigenschafts Wert für Konfigurations Eingabefeld Einträge 
 
 
 
-Windows Vista mit SP1 oder höher: gibt an, dass Eingabefeld Einträge nicht in der Benutzeroberfläche angezeigt werden (z. b. ein Kennwort oder eine PIN-Nummer).
+Windows Vista mit SP1 oder höher: Gibt an, dass Eingabefeldeinträge nicht auf der Benutzeroberfläche angezeigt werden (z. B. ein Kennwort oder eine PIN-Nummer).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_CONFIG_INPUT_FIELD_PROPS_NON_DISPLAYABLE"></span><span id="eap_config_input_field_props_non_displayable"></span>**die Eigenschaften der EAP- \_ Konfigurations \_ Eingabe \_ Felder sind \_ \_ nicht \_ anzeigbar.**
+<span id="EAP_CONFIG_INPUT_FIELD_PROPS_NON_DISPLAYABLE"></span><span id="eap_config_input_field_props_non_displayable"></span>**\_EAP-KONFIGURATIONSEINGABEFELD \_ \_ \_ PROPS \_ NON \_ DISPLAYABLE**
 </dt> <dd> <dl> <dt>
 
 0X00000001 
@@ -161,12 +161,12 @@ Windows Vista mit SP1 oder höher: gibt an, dass Eingabefeld Einträge nicht in 
 
 
 
-Gibt an, dass die Einträge der Konfigurations Eingabefelder nicht in der Benutzeroberfläche angezeigt werden (z. b. ein Kennwort oder eine PIN-Nummer).
+Gibt an, dass Eingabefeldeinträge für die Konfiguration nicht auf der Benutzeroberfläche angezeigt werden (z. B. ein Kennwort oder eine PIN-Nummer).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_UI_INPUT_FIELD_PROPS_NON_PERSIST"></span><span id="eap_ui_input_field_props_non_persist"></span>**EAP-Benutzeroberflächen- \_ \_ Eingabe \_ Feldeigenschaften \_ \_ nicht \_ persistent speichern**
+<span id="EAP_UI_INPUT_FIELD_PROPS_NON_PERSIST"></span><span id="eap_ui_input_field_props_non_persist"></span>**EAP \_ UI \_ INPUT \_ FIELD \_ PROPS \_ NON \_ PERSIST**
 </dt> <dd> <dl> <dt>
 
 0X00000002 
@@ -174,12 +174,12 @@ Gibt an, dass die Einträge der Konfigurations Eingabefelder nicht in der Benutz
 
 
 
-Windows Vista mit SP1 oder höher: gibt an, dass die EAP-Methode die Felddaten nicht zwischenspeichert. der Supplicant muss die Felddaten für das Roaming Zwischenspeichern.
+Windows Vista mit SP1 oder höher: Gibt an, dass die EAP-Methode die Felddaten nicht zwischenspeichert. der Supplicant muss die Felddaten für das Roaming zwischenspeichern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_UI_INPUT_FIELD_PROPS_READ_ONLY"></span><span id="eap_ui_input_field_props_read_only"></span>**Eingabefeld Eigenschaften für EAP- \_ Benutzeroberfläche schreibgeschützt \_ \_ \_ \_ \_**
+<span id="EAP_UI_INPUT_FIELD_PROPS_READ_ONLY"></span><span id="eap_ui_input_field_props_read_only"></span>**EAP \_ UI \_ INPUT \_ FIELD \_ PROPS \_ READ \_ ONLY**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -187,7 +187,7 @@ Windows Vista mit SP1 oder höher: gibt an, dass die EAP-Methode die Felddaten n
 
 
 
-Windows Vista mit SP1 oder höher: gibt an, dass das Eingabefeld schreibgeschützt ist und nicht bearbeitet werden kann.
+Windows Vista mit SP1 oder höher: Gibt an, dass das Eingabefeld schreibgeschützt ist und nicht bearbeitet werden kann.
 
 
 </dt> </dl> </dd> </dl>
@@ -196,10 +196,10 @@ Windows Vista mit SP1 oder höher: gibt an, dass das Eingabefeld schreibgeschüt
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/> |
-| Server<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | \[Windows 8 Nur Desktop-Apps\]<br/> |
+| Server<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: EN_CHANGE Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer eine Aktion durchgeführt hat, die möglicherweise Text in einem Bearbeitungs Steuerelement geändert hat.
+title: EN_CHANGE Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer eine Aktion ergriffen hat, die möglicherweise Text in einem Bearbeitungssteuerfeld geändert hat.
 ms.assetid: 8a04e6fb-ae9d-4d94-8047-6de96df899f5
 keywords:
-- Windows-Steuerelemente für EN_CHANGE Benachrichtigungs
+- EN_CHANGE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8ef26d1ec4f8ec1dc93e54d46b88c4fe7cc872b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b86dbfb90376a85df09cad854882fa2616e6b7cb247cab4106850608a4b96ad4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119437050"
 ---
-# <a name="en_change-notification-code"></a>EN \_ Änderungs Benachrichtigungs Code
+# <a name="en_change-notification-code"></a>EN \_ CHANGE-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer eine Aktion durchgeführt hat, die möglicherweise Text in einem Bearbeitungs Steuerelement geändert hat. Im Gegensatz zum [en \_ Update](en-update.md) -Benachrichtigungs Code wird dieser Benachrichtigungs Code gesendet, nachdem das System den Bildschirm aktualisiert hat. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn der Benutzer eine Aktion ergriffen hat, die möglicherweise Text in einem Bearbeitungssteuerfeld geändert hat. Im Gegensatz [zum EN \_ UPDATE-Benachrichtigungscode](en-update.md) wird dieser Benachrichtigungscode gesendet, nachdem das System den Bildschirm aktualisiert hat. Das übergeordnete Fenster des Bearbeitungssteuer elements empfängt diesen Benachrichtigungscode über eine [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,22 +42,22 @@ EN_CHANGE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungs Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Bezeichner des Bearbeitungssteuerzeichens. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das Bearbeitungs Steuerelement.
+Ein Handle für das Bearbeitungssteuer steuerelement.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Um \_ Änderungs Benachrichtigungs Codes von en zu erhalten, geben Sie [**ENM- \_ Änderung**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der [**EM \_**](em-seteventmask.md) -Nachricht gesendet wurde. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Umfangreiche Bearbeitung:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Um EN \_ CHANGE-Benachrichtigungscodes zu erhalten, geben Sie [**ENM \_ CHANGE**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der [**EM \_ SETEVENTMASK-Nachricht gesendet**](em-seteventmask.md) wird. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
-Der \_ Änderungs Benachrichtigungs Code von en wird nicht gesendet, wenn der [**\_ mehrzeilige**](edit-control-styles.md) Stil von es verwendet wird und der Text über [**WM \_ SetText**](/windows/desktop/winmsg/wm-settext)gesendet wird.
+Der EN CHANGE-Benachrichtigungscode wird nicht gesendet, wenn das \_ [**ES \_ MULTILINE-Format**](edit-control-styles.md) verwendet wird und der Text über [**WM \_ SETTEXT gesendet wird.**](/windows/desktop/winmsg/wm-settext)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,26 +65,26 @@ Der \_ Änderungs Benachrichtigungs Code von en wird nicht gesendet, wenn der [*
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[EN \_ Aktualisieren](en-update.md)
+[EN \_ UPDATE](en-update.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

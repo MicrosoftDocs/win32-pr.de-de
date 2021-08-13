@@ -1,10 +1,10 @@
 ---
-title: WINBIO_EXTENDED_SENSOR_INFO Struktur (winbio \_ types. h)
-description: Enthält Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit.
+title: WINBIO_EXTENDED_SENSOR_INFO-Struktur (Winbio \_ types.h)
+description: Enthält Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit.
 ms.assetid: 37D8BC57-F68D-487A-98B0-94D62CC091C2
 keywords:
-- WINBIO_EXTENDED_SENSOR_INFO Struktur Windows-Biometrieframework-API
-- PWINBIO_EXTENDED_SENSOR_INFO Struktur Zeiger Windows-Biometrieframework API
+- WINBIO_EXTENDED_SENSOR_INFO Struktur Windows Biometrieframework-API
+- PWINBIO_EXTENDED_SENSOR_INFO Strukturzeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c535ef56eeade897aac3c1d0503477da406935b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dd8c323b4f4e3847c399e314da22048f658fb68c3b07ecf82f71ce0ed327c368
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118910418"
 ---
-# <a name="winbio_extended_sensor_info-structure"></a>\_Struktur erweiterter winbio- \_ Sensor \_ Informationen
+# <a name="winbio_extended_sensor_info-structure"></a>WINBIO \_ EXTENDED \_ SENSOR \_ INFO-Struktur
 
-Enthält Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit.
+Enthält Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,24 +61,24 @@ typedef struct _WINBIO_EXTENDED_SENSOR_INFO {
 
 <dl> <dt>
 
-**Genericsensor-Funktionen**
+**GenericSensorCapabilities**
 </dt> <dd>
 
-Die generischen Funktionen der sensorkomponente, die mit einer bestimmten biometrischen Einheit verbunden ist.
+Die generischen Funktionen der Sensorkomponente, die mit einer bestimmten biometrischen Einheit verbunden ist.
 
 </dd> <dt>
 
 **Aspekt**
 </dt> <dd>
 
-Der Typ der biometrischen Einheit, für die diese Strukturinformationen zu Funktionen und Registrierungsanforderungen des Sensor Adapters enthält. Wenn z. b. der Wert des  **\_ faktermembers winbio- \_ Fingerabdruck** ist, gilt die Struktur **Erweiterter winbio- \_ \_ Sensor \_** für einen Fingerabdruckleser und enthält die relevanten Informationen in der **specifc. Fingerabdruck** -Struktur.
+Der Typ der biometrischen Einheit, für die diese Struktur Informationen zu Funktionen und Registrierungsanforderungen des Sensoradapters enthält. Wenn der Wert des **Factor-Members** beispielsweise **WINBIO \_ TYPE \_ FINGERPRINT** lautet, gilt die **WINBIO \_ EXTENDED SENSOR \_ \_ INFO-Struktur** für einen Fingerabdruckleser und enthält die relevanten Informationen in der **Specifc.Fingerprint-Struktur.**
 
 </dd> <dt>
 
-**Zugeschnitten**
+**Bestimmten**
 </dt> <dd>
 
-Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit im Zusammenhang mit einem bestimmten biometrischen Faktor.
+Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit im Zusammenhang mit einem bestimmten biometrischen Faktor.
 
 <dl> <dt>
 
@@ -89,28 +89,28 @@ Reserviert. Muss Null sein.
 
 </dd> <dt>
 
-**Fakialfeatures**
+**FacialFeatures**
 </dt> <dd>
 
-Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit im Zusammenhang mit Gesichtsmerkmalen.
+Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit im Zusammenhang mit Gesichtsfunktionen.
 
 <dl> <dt>
 
 **FrameSize**
 </dt> <dd>
 
-Die Größe des Kamera Rahmens, angegeben als Länge und Breite in Pixel des **rechten** und **unteren** Members der [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Der Punkt (0,0) stellt die obere linke Ecke des Frames dar.
+Die Größe des Kamerarahmens, die von den **rechten** und **unteren** Membern der [**RECT-Struktur**](/previous-versions//dd162897(v=vs.85)) als Länge und Breite in Pixel angegeben wird. Der Punkt (0, 0) stellt die linke obere Ecke des Frames dar.
 
 </dd> <dt>
 
-**Frameoffset**
+**FrameOffset**
 </dt> <dd>
 
-Der Offset des Kamera Rahmens für das Gesicht von der Videokamera in Pixel. Der Wert (0,0) gibt an, dass sich der Kamera Rahmen für das Gesicht und die Videokamera vollständig überlappt.
+Der Offset des Kamerarahmens für das Gesicht von der Videokamera in Pixel. Der Wert (0, 0) gibt an, dass sich der Kamerarahmen für das Gesicht und die Videokamera vollständig überlappen.
 
 </dd> <dt>
 
-**Mandatoryorientation**
+**MandatoryOrientation**
 </dt> <dd>
 
 Die bevorzugte Ausrichtung für die Kamera.
@@ -120,7 +120,7 @@ Die bevorzugte Ausrichtung für die Kamera.
 **Fingerprint**
 </dt> <dd>
 
-Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit im Zusammenhang mit Fingerabdruck Mustern.
+Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit im Zusammenhang mit Fingerabdruckmustern.
 
 <dl> <dt>
 
@@ -131,28 +131,28 @@ Reserviert.
 
 </dd> </dl> </dd> <dt>
 
-**Augen**
+**Iris**
 </dt> <dd>
 
-Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit im Zusammenhang mit Iris-Mustern.
+Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit im Zusammenhang mit Irismustern.
 
 <dl> <dt>
 
 **FrameSize**
 </dt> <dd>
 
-Die Größe des Kamera Rahmens, angegeben als Länge und Breite in Pixel des **rechten** und **unteren** Members der [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Der Punkt (0,0) stellt die obere linke Ecke des Frames dar.
+Die Größe des Kamerarahmens, die von den **rechten** und **unteren** Membern der [**RECT-Struktur**](/previous-versions//dd162897(v=vs.85)) als Länge und Breite in Pixel angegeben wird. Der Punkt (0, 0) stellt die linke obere Ecke des Frames dar.
 
 </dd> <dt>
 
-**Frameoffset**
+**FrameOffset**
 </dt> <dd>
 
-Der Offset des Kamera Rahmens für die Iris von der Videokamera in Pixel. Der Wert (0,0) gibt an, dass sich der Kamera Rahmen für die Iris und die Videokamera vollständig überlappt.
+Der Offset des Kamerarahmens für die Iris von der Videokamera in Pixel. Der Wert (0, 0) gibt an, dass sich der Kamerarahmen für die Iris und die Videokamera vollständig überlappen.
 
 </dd> <dt>
 
-**Mandatoryorientation**
+**MandatoryOrientation**
 </dt> <dd>
 
 Die bevorzugte Ausrichtung für die Kamera.
@@ -162,7 +162,7 @@ Die bevorzugte Ausrichtung für die Kamera.
 **Voice**
 </dt> <dd>
 
-Informationen zu den Funktionen und Registrierungsanforderungen des Sensor Adapters für eine biometrische Einheit im Zusammenhang mit Sprachmustern.
+Informationen zu den Funktionen und Registrierungsanforderungen des Sensoradapters für eine biometrische Einheit im Zusammenhang mit Stimmmustern.
 
 <dl> <dt>
 
@@ -179,23 +179,23 @@ Reserviert.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h für Client Anwendungen oder winbio \_ Adapters. h für Adapter)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                                                                                     |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h für Clientanwendungen oder Winbio \_ adapters.h für Adapter einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Winbio-Funktions \_ Konstanten**](winbio-capability-constants.md)
+[**WINBIO \_ CAPABILITY-Konstanten**](winbio-capability-constants.md)
 </dt> <dt>
 
-[**Winbio- \_ biometrische \_ Typkonstanten**](winbio-biometric-type-constants.md)
+[**WINBIO \_ BIOMETRIC \_ TYPE-Konstanten**](winbio-biometric-type-constants.md)
 </dt> <dt>
 
-[**Winbio- \_ Orientierungs Konstanten**](winbio-orientation-constants.md)
+[**WINBIO \_ ORIENTATION-Konstanten**](winbio-orientation-constants.md)
 </dt> </dl>
 
  

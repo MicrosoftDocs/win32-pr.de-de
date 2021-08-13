@@ -1,22 +1,22 @@
 ---
 Description: Wird als Signal gesendet, dass ein Fenster oder eine Anwendung beendet werden soll.
 ms.assetid: 19500baf-e0ad-4dfa-804f-6a6e0652cffb
-title: WM_CLOSE Meldung (Winuser. h)
+title: WM_CLOSE (Winuser.h)
 ms.topic: reference
 ms.custom: snippet-project
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f1403050cfd3c98ddf90df4399547158a583c50
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ebe027935391bc1e8946b8691a17f026b39b398ebefee2ea6f6e3765fcaa0c4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118436353"
 ---
-# <a name="wm_close-message"></a>Meldung zum Schließen der WM \_
+# <a name="wm_close-message"></a>WM \_ CLOSE-Meldung
 
 Wird als Signal gesendet, dass ein Fenster oder eine Anwendung beendet werden soll.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -47,7 +47,7 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
 ## <a name="example"></a>Beispiel
 
@@ -73,14 +73,14 @@ LRESULT CALLBACK WindowProc(
     return 0;
 }
 ```
-Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/RadialController/cpp/RadialController.cpp) auf GitHub.
+Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/RadialController/cpp/RadialController.cpp) auf GitHub.
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann den Benutzer vor dem Zerstören eines Fensters zur Bestätigung auffordern, indem er die Meldung **zum \_ Schließen der WM** verarbeitet und die Funktion " [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) " nur dann aufruft, wenn der Benutzer die Auswahl bestätigt.
+Eine Anwendung kann den Benutzer vor dem Zerstören eines Fensters zur Bestätigung auffordern, indem die **WM \_ CLOSE-Nachricht** verarbeitet und die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) nur dann aufruft, wenn der Benutzer die Auswahl bestätigt.
 
-Standardmäßig ruft die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) -Funktion auf, um das Fenster zu zerstören.
+Standardmäßig ruft die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) auf, um das Fenster zu zerstören.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,15 +90,15 @@ Standardmäßig ruft die [**defwindowproc**](/windows/desktop/api/winuser/nf-win
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
@@ -107,7 +107,7 @@ Standardmäßig ruft die [**defwindowproc**](/windows/desktop/api/winuser/nf-win
 [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

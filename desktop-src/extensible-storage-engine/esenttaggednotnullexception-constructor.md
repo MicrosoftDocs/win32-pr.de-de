@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esenttaggednotnullexception-Konstruktor'
-title: Esenttaggednotnullexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTaggedNotNULLException-Konstruktor'
+title: EsentTaggedNotNULLException-Konstruktor
 TOCTitle: 'EsentTaggedNotNULLException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTaggedNotNULLException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttaggednotnullexception.esenttaggednotnullexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ea657c58312b8145b8c7c8f973f002db3da846ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: baca69039c2ea5755046e971a13c1f2700f9b773d76e3bbd83689971d3cbfccf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118769182"
 ---
-# <a name="esenttaggednotnullexception-constructor"></a>Esenttaggednotnullexception-Konstruktor
+# <a name="esenttaggednotnullexception-constructor"></a>EsentTaggedNotNULLException-Konstruktor
 
-Initialisiert eine neue Instanz der esenttaggednotnullexception-Klasse.
+Initialisiert eine neue Instanz der EsentTaggedNotNULLException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentTaggedNotNULLException()
 public EsentTaggedNotNULLException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esenttaggednotnullexception-Klasse](./esenttaggednotnullexception-class.md)
+[EsentTaggedNotNULLException-Klasse](./esenttaggednotnullexception-class.md)
 
-[Esenttaggednotnullexception-Elemente](./esenttaggednotnullexception-members.md)
+[EsentTaggedNotNULLException-Member](./esenttaggednotnullexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,68 +1,68 @@
 ---
-title: Speicher Aliasing und Datenvererbung
-description: Die platzierte und die reservierte Ressource können den physischen Speicher innerhalb eines Heaps als Alias. Platzierte Ressourcen ermöglichen mehr Daten Vererbungs Szenarien als reservierte Ressourcen, wenn für den Heap das Shared-Flag festgelegt wurde oder wenn die Aliasing-Ressourcen vollständig definierte Speicher Layouts aufweisen.
+title: Arbeitsspeicheraliasing und Datenvererbung
+description: Platzierte und reservierte Ressourcen können einen Alias für physischen Speicher innerhalb eines Heaps verwenden. Platzierte Ressourcen ermöglichen mehr Datenvererbungsszenarien als reservierte Ressourcen, wenn auf dem Heap das freigegebene Flag festgelegt ist oder wenn die Ressourcen mit Alias über vollständig definierte Speicherlayouts verfügen.
 ms.assetid: 53C5804B-0F81-41AF-83D2-A96DCDFDC94A
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cace5b5997e2a460406ae72abb247224886f3926
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2b584ef95f4ee89bc98940c8407427203a19f55046134e1d3c15cb672fef8fef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74103401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460920"
 ---
-# <a name="memory-aliasing-and-data-inheritance"></a>Speicher Aliasing und Datenvererbung
+# <a name="memory-aliasing-and-data-inheritance"></a>Arbeitsspeicheraliasing und Datenvererbung
 
-Die platzierte und die reservierte Ressource können den physischen Speicher innerhalb eines Heaps als Alias. Platzierte Ressourcen ermöglichen mehr Daten Vererbungs Szenarien als reservierte Ressourcen, wenn für den Heap das Shared-Flag festgelegt wurde oder wenn die Aliasing-Ressourcen vollständig definierte Speicher Layouts aufweisen.
+Platzierte und reservierte Ressourcen können einen Alias für physischen Speicher innerhalb eines Heaps verwenden. Platzierte Ressourcen ermöglichen mehr Datenvererbungsszenarien als reservierte Ressourcen, wenn auf dem Heap das freigegebene Flag festgelegt ist oder wenn die Ressourcen mit Alias über vollständig definierte Speicherlayouts verfügen.
 
 -   [Aliasing](#memory-aliasing-and-data-inheritance)
 -   [Datenvererbung](#data-inheritance)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="aliasing"></a>Aliase
 
-Zwischen der Verwendung von zwei Ressourcen, die denselben physischen Speicher aufweisen, muss eine Aliasing-Barriere ausgegeben werden, auch wenn keine Datenvererbung gewünscht wird. Einfache Verwendungs Modelle müssen zumindest die Ziel Ressource angeben, die an einem solchen Vorgang beteiligt ist. Weitere Details und erweiterte Verwendungs Modelle finden Sie unter " [**kreateplacedresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource) ".
+Zwischen der Verwendung von zwei Ressourcen, die denselben physischen Speicher gemeinsam nutzen, muss eine Aliasingbarriere ausgegeben werden, auch wenn die Datenvererbung nicht gewünscht ist. Einfache Verwendungsmodelle müssen mindestens die Zielressource bezeichnen, die an einem solchen Vorgang beteiligt ist. Weitere Informationen und erweiterte Verwendungsmodelle finden Sie unter [**CreatePlacedResource.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource)
 
-Nachdem auf eine Ressource zugegriffen wurde, werden alle Ressourcen, die den physischen Speicher für diese Ressource freigeben, ungültig, es sei denn, es ist eine Datenvererbung zulässig. Lesevorgänge für ungültig erklärt Ressourcen führen zu nicht definiertem Ressourcen Inhalt. Schreibvorgänge für ungültig erklärt Ressourcen führen auch zu nicht definiertem Ressourcen Inhalt, es sei denn, es gibt zwei Bedingungen:
+Nachdem auf eine Ressource zugegriffen wurde, werden alle Ressourcen, die physischen Speicher gemeinsam mit dieser Ressource nutzen, ungültig, es sei denn, die Datenvererbung ist zulässig. Leses ungültiger Ressourcen führen zu nicht definierten Ressourceninhalten. Schreibvorgänge in ungültige Ressourcen führen auch zu nicht definierten Ressourceninhalten, es sei denn, es treten zwei Bedingungen auf:
 
--   Die Ressource verfügt weder über das D3D12- \_ \_ ressourcenflag \_ Allow \_ \_ Renderziel noch über das D3D12- \_ \_ ressourcenflag \_ Allow \_ tiefen \_ Schablone.
--   Der Schreibvorgang ist ein Kopier-oder Löschvorgang für eine gesamte untergeordnete Quelle oder Kachel. Die Kachel Initialisierung ist nur für Ressourcen verfügbar, bei denen eine Kachel mit 64-KB \_ -Kacheln nicht \_ definiert ist und die \_ Kachel Standard für 64 KB ist \_ \_ \_ .
+-   Die Ressource verfügt weder über das D3D12-RESSOURCENFLAG ALLOW RENDER TARGET noch \_ \_ über das \_ \_ \_ D3D12 \_ RESOURCE FLAG ALLOW DEPTH \_ \_ \_ \_ STENCIL.
+-   Der Schreibvorgang ist ein Kopier- oder Benachrichtigungsvorgang für eine gesamte Unterressource oder Kachel. Die Kachelin initialisierung ist nur für Ressourcen mit 64 KB \_ TILE \_ UNDEFINED \_ SWIZZLE und 64KB \_ TILE STANDARD \_ \_ SWIZZLE verfügbar.
 
-Überlappende Invalidierungen sind auf kleinere Granularitäten beschränkt, wenn Layouts Informationen zu dem Speicherort an dem Speicherort der texusdaten bereitstellen und wenn sich Ressourcen in bestimmten Übergangs Barrieren befinden. Allerdings können die Invalidierungen nicht kleiner sein als die Granularitäten der Ressourcen Ausrichtung.
+Überlappende Invalidierungen werden auf kleinere Granularitäten abgestuft, wenn Layouts Informationen zum Speicherort der Texeldaten und zu ressourcen in bestimmten Übergangsbarrierenzuständen bereitstellen. Invalidierungen können jedoch nicht kleiner als granulare Ressourcenausrichtungen sein.
 
-Die Granularität der Puffer Ausrichtung beträgt 64 KB, und eine größere Ausrichtungs Granularität hat Vorrang. Dies ist bei der Betrachtung von 4-KB-Texturen wichtig, da sich mehrere 4-KB-Texturen in einem Bereich von 64 KB befinden können, ohne einander zu überlappen Allerdings kann ein Puffer Aliasing desselben 64-KB-Bereichs nicht in Verbindung mit einer dieser 4-KB-Texturen verwendet werden. Die Anwendung kann den Zugriff auf den Puffer nicht zuverlässig von der Schnittmenge der 4-KB-Texturen behalten, da GPUs in einem nicht definierten Musterdaten mit einer Größe von 4 KB innerhalb des 64-KB-Bereichs schwenken dürfen.
+Eine Pufferausrichtungsgranularität beträgt 64 KB, und eine höhere Ausrichtungsgranularität hat Vorrang. Dies ist wichtig, wenn Sie 4-KB-Texturen in Betracht ziehen, da sich mehrere 4-KB-Texturen in einem 64-KB-Bereich befinden können, ohne sich überlappen zu müssen. Ein Puffer, der denselben 64-KB-Bereich als Alias verwendet, kann jedoch nicht zusammen mit einer dieser 4-KB-Texturen verwendet werden. Die Anwendung kann nicht zuverlässig den Zugriff auf den Puffer davon abhalten, die 4-KB-Texturen zu überschneiden, da GPUs 4-KB-Texturdaten innerhalb des 64-KB-Bereich in einem nicht definierten Muster schwenken dürfen.
 
-64-KB \_ -Kachel "nicht \_ definiert" \_ , mit 64-KB \_ -Kacheln \_ Standard \_ -Swizzle und Zeilen \_ haupttextur Layouts wird der Anwendung mitgeteilt, welche sich überlappende Ausrichtungs Granularitäten Beispielsweise kann eine Anwendung ein 2D-Renderziel-Textur Array mit 2 Array Slices, einer einzelnen MIP-Ebene und der 64-KB- \_ Kachel nicht \_ definiertes \_ Swizzle-Layout erstellen. Angenommen, die Anwendung versteht, dass die einzelnen Array Segmente 100 64 KB-Kacheln belegen. Die Anwendung kann mit dem Array Slice 0 fortfahren und den Speicher entweder für einen ~ 6MB-Puffer, eine ~ 6MB-Textur mit nicht definiertem Layout usw. wieder verwenden. Nehmen Sie weiter an, dass die Anwendung nicht mehr die erste Kachel von Array Slice 1 benötigt. Anschließend könnte die Anwendung auch dann einen 64-KB-Puffer finden, bis das Rendering erneut die erste Kachel von Array Slice 1 erfordert. Die Anwendung muss eine vollständige Kachel löschen oder kopieren, um die erste Kachel erneut mit dem Textur Array zu verwenden.
+64 KB \_ TILE \_ UNDEFINED \_ SWIZZLE, 64KB TILE STANDARD SWIZZLE und ROW MAJOR Texturlayouts informieren die Anwendung darüber, welche überlappenden \_ Ausrichtungsgranularitäten \_ \_ ungültig \_ wurden. Beispiel: Eine Anwendung kann ein 2D-Renderzieltexturarray mit zwei Arrayslices, einer einzelnen MIP-Ebene und dem 64-KB-TILE \_ \_ UNDEFINED \_ SWIZZLE-Layout erstellen. Angenommen, die Anwendung versteht, dass jeder Arrayslice 100 Kacheln mit 64 KB belegt. Die Anwendung kann auf die Verwendung von Arrayslice 0 verzichten und diesen Arbeitsspeicher entweder für einen Puffer von ~6 MB, eine ~6 MB-Textur mit nicht definiertem Layout usw. wiederverwendbar machen. Gehen Sie weiter davon aus, dass die Anwendung die erste Kachel des Arrayslices 1 nicht mehr benötigt. Anschließend könnte die Anwendung dort auch einen Puffer mit 64 KB finden, bis das Rendering erneut die erste Kachel des Arrayslices 1 erfordert. Die Anwendung müsste eine vollständige Kachel löschen oder kopieren, um die erste Kachel mit dem Texturarray erneut zu verwenden.
 
-Auch Texturen mit definierten Layouts haben immer noch problematische Fälle. Textur Ressourcen Größen können sich erheblich von der Berechnung der Anwendung selbst unterscheiden, da einige Adapter Architekturen zusätzlichen Arbeitsspeicher für Texturen zuweisen, um die effektive Bandbreite während allgemeiner renderingszenarios zu verringern. Alle Invalidierungen in dieser zusätzlichen Speicher Region bewirken, dass die gesamte Ressource ungültig wird. Weitere Informationen finden Sie unter [**getresourcezucationinfo**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo) .
+Selbst Texturen mit definierten Layouts haben jedoch weiterhin problematische Fälle. Die Größen von Texturressourcen können sich erheblich von dem unterscheiden, was die Anwendung selbst berechnen kann, da einige Adapterarchitekturen zusätzlichen Arbeitsspeicher für Texturen zuordnen, um die effektive Bandbreite in gängigen Renderingszenarien zu reduzieren. Alle Invalidierungen in diesem zusätzlichen Arbeitsspeicherbereich führen dazu, dass die gesamte Ressource ungültig wird. Weitere Informationen finden Sie unter [**GetResourceAllocationInfo.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo)
 
 ## <a name="data-inheritance"></a>Datenvererbung
 
-Platzierte Ressourcen ermöglichen die meisten Datenvererbung für Texturen, auch wenn nicht definierte Speicher Layouts vorhanden sind. Anwendungen können die Daten Vererbungs Funktionen, die freigegebene zugesicherte Ressourcen ermöglichen, imitieren, indem Sie zwei Texturen mit identischen Ressourcen Eigenschaften in demselben Offset in einem freigegebenen Heap suchen. Die gesamte Ressourcen Beschreibung muss identisch sein, einschließlich des optimierten Clear-Werts und des Typs der Methode zur Ressourcen Erstellung (platziert oder reserviert). Beide Ressourcen haben jedoch möglicherweise unterschiedliche anfängliche Übergangs Barrieren.
+Platzierte Ressourcen ermöglichen die größte Datenvererbung für Texturen, auch bei nicht definierten Speicherlayouts. Anwendungen können die Datenvererbungsfunktionen imitieren, die freigegebene, für einen Committed bestimmte Ressourcen ermöglichen, indem sie zwei Texturen mit identischen Ressourceneigenschaften am gleichen Offset in einem freigegebenen Heap suchen. Die gesamte Ressourcenbeschreibung muss identisch sein, einschließlich des optimierten eindeutigen Werts und des Typs der Ressourcenerstellungsmethode (platziert oder reserviert). Aber beide Ressourcen haben möglicherweise unterschiedliche anfängliche Übergangsbarrierenzustände.
 
-Reservierte Ressourcen ermöglichen die Datenvererbung pro Kachel. Einschränkungen sind jedoch häufig für den Zustand der Ressourcen Übergangs Barriere vorhanden.
+Reservierte Ressourcen ermöglichen die Datenvererbung pro Kachel. Für Zustände von Ressourcenübergangsbarrieren gelten jedoch häufig Einschränkungen.
 
-Zum Erben von Daten müssen sich beide Ressourcen in einem kompatiblen Zustand der Ressourcen Übergangs Barriere befinden:
+Zum Erben von Daten müssen sich beide Ressourcen in einem kompatiblen Ressourcenübergangs-Barrierenzustand (Resource Transition Barrier, Barriere) befingen:
 
--   Bei Puffern, gleichzeitigen Zugriffs Texturen und plattformübergreifenden Texturen ist der Zustand des Ressourcen Übergangs nicht wichtig, und alle Zustände sind "kompatibel".
--   Für reservierte Texturen ohne vorherige Eigenschaften oder eine andere Datenvererbung pro Kachel durch eine Kachel mit 64 KB nicht \_ \_ definierte \_ Swizzle-oder 64-KB- \_ Kachel \_ Standard- \_ Swizzle muss der Zustand der Ressourcen Übergangs Barriere, einschließlich der Kachel, den gemeinsamen Status aufweisen.
--   Für alle anderen Texturen, bei denen die Ressourcen Beschreibungen genau übereinstimmen, muss der Status der Ressourcen Übergangs Barriere für jedes entsprechende Paar von unter Berichten wie folgt sein:
-    -   Sie können den Status "Allgemein" aufweisen.
-    -   Gleich sein, wenn der Zustand über das gleiche GPU-Schreib Flag verfügt.
+-   Bei Puffern, Texturen mit gleichzeitigem Zugriff und adapterübergreifenden Texturen ist der Zustand des Ressourcenübergangs nicht wichtig, und alle Zustände sind "kompatibel".
+-   Für reservierte Texturen ohne die vorherigen Eigenschaften oder andere Datenvererbung pro Kachel über 64 KB \_ TILE \_ UNDEFINED \_ SWIZZLE oder 64KB \_ TILE STANDARD \_ \_ SWIZZLE muss der Zustand der Ressourcenübergangsbarriere einschließlich der Kachel den allgemeinen Zustand aufweisen.
+-   Für alle anderen Texturen, bei denen die Ressourcenbeschreibungen genau übereinstimmen, muss der Zustand der Ressourcenübergangsbarriere für jedes entsprechende Paar von Unterressourcen:
+    -   Sie haben den allgemeinen Zustand.
+    -   Ist gleich, wenn der Zustand das gleiche GPU-Schreibflag auf sich hat.
 
-Wenn die GPU Standard-Swizzle unterstützt, werden Puffer und standardswidingtexturen möglicherweise dem gleichen Speicher zugeordnet, und Sie erben Daten zwischen Ihnen. Die Anwendung kann texeln aus der Puffer Darstellung bearbeiten, da das standardmäßige Swizzle-Muster beschreibt, wie texeln im Arbeitsspeicher angeordnet werden. Das CPU-sichtbare Swizzle-Muster entspricht dem in Puffern angezeigten GPU-sichtbaren Swizzle-Muster.
+Wenn die GPU Swizzle Standard unterstützt, können Puffer und Standard-Swizzle-Texturen als Alias für denselben Arbeitsspeicher verwendet werden und Daten zwischen ihnen erben. Die Anwendung kann Texel aus der Pufferdarstellung bearbeiten, da das standardmäßige Swizzle-Muster beschreibt, wie Texel im Arbeitsspeicher angelegt werden. Das CPU-sichtbare Swizzlemuster entspricht dem GPU-sichtbaren Swizzle-Muster in Puffern.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Untergeordnete Zuordnung innerhalb von Heaps](suballocation-within-heaps.md)
+[Unterzuweisung innerhalb von Heaps](suballocation-within-heaps.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

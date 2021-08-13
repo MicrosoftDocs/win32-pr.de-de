@@ -1,10 +1,10 @@
 ---
 title: MDM_SecureAssessment-Klasse
-description: Die MDM \_ securegutamentclass dient zum Bereitstellen von Konfigurationsinformationen für den Secure Assessment-Browser.
+description: Die MDM \_ SecureAssessment-Klasse wird verwendet, um Konfigurationsinformationen für den Browser für die sichere Bewertung bereitzustellen.
 ms.assetid: ad456f01-c77d-428b-a8bf-03e9ae106e60
 keywords:
 - MDM_SecureAssessment-Klasse
-- MDM_SecureAssessment-Klasse, beschrieben
+- MDM_SecureAssessment-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: deef2c8ee832a54775ae9dd51d85414a607ca8b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b2bb6179316a9e101f2ac12ab0cb8b4df26866346e2953d4eaf3bdf2039bcc49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119433290"
 ---
-# <a name="mdm_secureassessment-class"></a>MDM \_ secureassessment-Klasse
+# <a name="mdm_secureassessment-class"></a>MDM \_ SecureAssessment-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ secureassessment**-Klasse wird verwendet, um Konfigurationsinformationen für den Secure Assessment-Browser bereitzustellen.
+Die **MDM \_ SecureAssessment-Klasse** wird verwendet, um Konfigurationsinformationen für den Browser für die sichere Bewertung bereitzustellen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -50,20 +50,20 @@ class MDM_SecureAssessment
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ secureassessment** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ SecureAssessment-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ secureassessment** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ SecureAssessment-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowscreenmonitoring](/windows/client-management/mdm/secureassessment-csp#allowscreenmonitoring)
+[AllowScreenMonitoring](/windows/client-management/mdm/secureassessment-csp#allowscreenmonitoring)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -71,10 +71,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowtextvorschläge](/windows/client-management/mdm/secureassessment-csp#AllowTextSuggestions)
+[AllowTextSuggestions](/windows/client-management/mdm/secureassessment-csp#AllowTextSuggestions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -85,23 +85,23 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "secureassessment".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "SecureAssessment".
 
 </dd> <dt>
 
-[Launchuri](/windows/client-management/mdm/secureassessment-csp#launchuri)
+[LaunchURI](/windows/client-management/mdm/secureassessment-csp#launchuri)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -109,26 +109,26 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/msft/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/".
 
 </dd> <dt>
 
-[Requirements-Druck](/windows/client-management/mdm/secureassessment-csp#requireprinting)
+[RequirePrinting](/windows/client-management/mdm/secureassessment-csp#requireprinting)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -136,10 +136,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Test Konto](/windows/client-management/mdm/secureassessment-csp#testeraccount)
+[TesterAccount](/windows/client-management/mdm/secureassessment-csp#testeraccount)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -153,11 +153,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

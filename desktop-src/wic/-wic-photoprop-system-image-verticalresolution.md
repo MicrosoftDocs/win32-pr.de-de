@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Image. VerticalResolution-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Image.VerticalResolution-Eigenschaft.
 ms.assetid: a58b7463-3572-4ca8-8299-93d92d2f06fb
-title: System. Image. VerticalResolution Photo-metadatenrichtlinie
+title: System.Image.VerticalResolution-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02e895ef9e1181a3ec40b474940c6dfaaa3e1329
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9962a00be34d227756d295e992174d6e80b6d058fc32af29ad9cde58a04ed07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710283"
 ---
-# <a name="systemimageverticalresolution-photo-metadata-policy"></a>System. Image. VerticalResolution Photo-metadatenrichtlinie
+# <a name="systemimageverticalresolution-photo-metadata-policy"></a>System.Image.VerticalResolution-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Image. VerticalResolution](../properties/props-system-image-verticalresolution.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Image.VerticalResolution-Eigenschaft.](../properties/props-system-image-verticalresolution.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Verticalauflösung des pkey- \_ Bilds \_
+\_PKEY-Image \_ VerticalResolution
 
 ### <a name="containers"></a>Container
 
@@ -27,37 +27,37 @@ JPEG, TIFF
 
 Ja.
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert wird vom System generiert und kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert wird vom System generiert und kann nicht direkt geschrieben werden. Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 283} |             |
-| 2     | /XMP/TIFF: YResolution  |             |
+| 1     | /app1/ifd/{ushort=283} |             |
+| 2     | /xmp/tiff:YResolution  |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                        |
 |-------|-----------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 283} |
-| 2     | /XMP/TIFF: YResolution       |
+| 1     | /app1/ifd/exif/{ushort=283} |
+| 2     | /xmp/tiff:yresolution       |
 
 
 
@@ -65,39 +65,39 @@ Dieser Wert wird vom System generiert und kann nicht direkt geschrieben werden. 
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 283}    |             |
-| 2     | /IFD/XMP/TIFF: YResolution |             |
+| 1     | /ifd/exif/{ushort=283}    |             |
+| 2     | /ifd/xmp/tiff:YResolution |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/EXIF/{ushort = 283}    |
-| 2     | /IFD/XMP/TIFF: YResolution |
+| 1     | /ifd/exif/{ushort=283}    |
+| 2     | /ifd/xmp/tiff:yresolution |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Image. VerticalResolution](../properties/props-system-image-verticalresolution.md)
+[System.Image.VerticalResolution](../properties/props-system-image-verticalresolution.md)
 </dt> </dl>
 
  

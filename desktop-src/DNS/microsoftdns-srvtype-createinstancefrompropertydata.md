@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_SRVType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen Dienst Ressourcen Eintrag (SRV).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_SRVType Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen Dienstressourcendatensatz (SRV).
 ms.assetid: ef55faa8-1109-4c96-98ac-2b01b940fa5c
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_SRVType
-- DNS-MicrosoftDNS_SRVType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS , MicrosoftDNS_SRVType-Klasse
+- MicrosoftDNS_SRVType DNS-Klasse, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 607ed606bf12e9e2a6f90a6e7f309aa708b7f230
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92519a3dcd383fca9297323c5217cfdefa997752ede62435b8002af5e151114f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118669088"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_srvtype-class"></a>Die Methode "kreateinstancefrompropertydata" der Klasse "srvtype" von MicrosoftDNS \_
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_srvtype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ SRVType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen Dienst Ressourcen Eintrag (SRV).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen Dienstressourcendatensatz (SRV).
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,31 +51,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone-, Cache- oder RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -83,7 +83,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -92,45 +92,45 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Priorität* \[ in\]
+*Priorität* \[ In\]
 </dt> <dd>
 
-Priorität des im Besitzer Namen angegebenen Zielhosts. Niedrigere Zahlen implizieren höhere Prioritäten.
+Die Priorität des Zielhosts, der im Besitzernamen angegeben ist. Niedrigere Zahlen setzen höhere Prioritäten voraus.
 
 </dd> <dt>
 
-*Gewichtung* \[ in\]
+*Gewichtung* \[ In\]
 </dt> <dd>
 
-Gewichtung des Zielhosts. Dies ist hilfreich bei der Auswahl zwischen Hosts mit der gleichen Priorität. Die Wahrscheinlichkeit, diesen Host zu verwenden, sollte proportional zu seiner Gewichtung sein.
+Gewichtung des Zielhosts. Dies ist nützlich, wenn Sie hosts mit der gleichen Priorität auswählen. Die Wahrscheinlichkeit, dass dieser Host verwendet wird, sollte proportional zu seiner Gewichtung sein.
 
 </dd> <dt>
 
-*Port* \[ in\]
+*Port* \[ In\]
 </dt> <dd>
 
-Port, der auf dem Zielhost eines Protokoll Diensts verwendet wird.
+Auf dem Zielhost eines Protokolldiensts verwendeter Port.
 
 </dd> <dt>
 
-*Srvdomainname* \[ in\]
+*SRVDomainName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Namen des Zielhosts. Ein Ziel von \\ . \\ bedeutet, dass der Dienst in dieser Domäne nicht verfügbar ist.
+FQDN des Zielhosts. Ein Ziel von bedeutet, dass der Dienst in dieser \\ Domäne definitiv nicht verfügbar \\ ist.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue -Objekt.
 
 </dd> </dl>
 
@@ -147,21 +147,21 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ srvtype**](microsoftdns-srvtype.md)
+[**MicrosoftDNS \_ SRVType**](microsoftdns-srvtype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ srvtype-Klasse**](microsoftdns-srvtype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ SRVType-Klasse**](microsoftdns-srvtype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

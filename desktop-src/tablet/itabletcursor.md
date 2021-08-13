@@ -1,7 +1,7 @@
 ---
-description: Stellt ein tablettstiftobjekt dar.
+description: Stellt ein Stiftobjekt dar.
 ms.assetid: c55945b7-59df-49b5-b25f-fa96056889fc
-title: Itabletcursor-Schnittstelle
+title: ITabletCursor-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,46 +14,46 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: eecbebc7090fb57d3794f3d056c24fba61fa5c61
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83a24329b318ec2bb542a3bbb63a28d4db9fce877b99f75aa7091670825fa439
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118716938"
 ---
-# <a name="itabletcursor-interface"></a>Itabletcursor-Schnittstelle
+# <a name="itabletcursor-interface"></a>ITabletCursor-Schnittstelle
 
-Stellt ein tablettstiftobjekt dar.
+Stellt ein Stiftobjekt dar.
 
 ## <a name="members"></a>Member
 
-Die **itabletcursor** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Itabletcursor** verfügt auch über die folgenden Typen von Membern:
+Die **ITabletCursor-Schnittstelle erbt** von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITabletCursor** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itabletcursor** -Schnittstelle verfügt über diese Methoden.
+Die **ITabletCursor-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                 | BESCHREIBUNG                                                            |
+| Methode                                                 | Beschreibung                                                            |
 |:-------------------------------------------------------|:-----------------------------------------------------------------------|
-| [**Getbutton**](itabletcursor-getbutton.md)           | Ruft das angegebene Schaltflächen Objekt aus einem Tablet Tablettstift ab.<br/> |
-| [**Getbuttoncount**](itabletcursor-getbuttoncount.md) | Ruft die Anzahl der Schaltflächen auf dem Tablettstift ab.<br/>       |
-| [**GetId**](itabletcursor-getid.md)                   | Ruft den tablettstiftbezeichner ab.<br/>                            |
+| [**GetButton**](itabletcursor-getbutton.md)           | Ruft das angegebene Schaltflächenobjekt von einem Tablettstift ab.<br/> |
+| [**GetButtonCount**](itabletcursor-getbuttoncount.md) | Ruft die Anzahl der Schaltflächen auf dem Tablettstift ab.<br/>       |
+| [**Getid**](itabletcursor-getid.md)                   | Ruft den Stiftbezeichner ab.<br/>                            |
 | [**GetName**](itabletcursor-getname.md)               | Ruft den Namen des Tablettstifts ab.<br/>                    |
-| [**Isinvertierte**](itabletcursor-isinverted.md)         | Gibt an, ob der Tablettstift aufwärts unten ist.<br/>                     |
+| [**IsInverted**](itabletcursor-isinverted.md)         | Gibt an, ob der Stift auf dem Kopf steht.<br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie diese Schnittstelle nicht.
 
-Im folgenden Code wird beschrieben, wie die **itabletcursor** -Schnittstelle definiert wird.
+Der folgende Code beschreibt, wie die **ITabletCursor-Schnittstelle** definiert wird.
 
 ``` syntax
 [
@@ -91,7 +91,7 @@ interface ITabletCursor : IUnknown
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

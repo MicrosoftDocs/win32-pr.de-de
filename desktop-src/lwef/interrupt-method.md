@@ -4,16 +4,16 @@ description: Interrupt-Methode
 ms.assetid: b8442e25-a629-47c7-acdd-1d28e74d78a2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d58050e181525cc4a4b9f35ec169e92d91ab28e7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 05e66814963bb3de3db95d60cbc25777244626168e95ceee4bd3d8d76992dd72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118749257"
 ---
 # <a name="interrupt-method"></a>Interrupt-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -27,25 +27,25 @@ Unterbricht die Animation für das angegebene Zeichen.
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Interrupt*- *  *Anforderung*
+*agent***. Zeichen ("**_CharacterID_*_"). Interruptanforderung_ *  
 
 
 
-| Teil      | BESCHREIBUNG                                                                  |
+| Teil      | Beschreibung                                                                  |
 |-----------|------------------------------------------------------------------------------|
-| *Anforderung* | Ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt für einen bestimmten Animations Aufruf. |
+| *Anforderung* | Ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) für einen bestimmten Animationsaufruf. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Damit können Sie die Animation zwischen Zeichen synchronisieren. Wenn sich z. b. ein anderes Zeichen in einer Schleifen Animation befindet, beendet diese Methode die Schleife und wechselt zur nächsten Animation in der Warteschlange des Zeichens. Eine Zeichen Animation, die Sie nicht verwenden (die Sie nicht geladen haben), kann nicht unterbrochen werden.
+Sie können dies verwenden, um Animationen zwischen Zeichen zu synchronisieren. Wenn sich beispielsweise ein anderes Zeichen in einer Schleifenanimation befindet, stoppt diese Methode die Schleife und bewegt sich zur nächsten Animation in der Warteschlange des Zeichens. Sie können eine nicht von Ihnen nicht (nicht geladene) Zeichenanimation nicht unterbrechen.
 
-Um den Anforderungs Parameter anzugeben, müssen Sie eine Variable erstellen und die Animations Anforderung zuweisen, die Sie unterbrechen möchten:
+Um den Anforderungsparameter anzugeben, müssen Sie eine Variable erstellen und die Animationsanforderung zuweisen, die Sie unterbrechen möchten:
 
 
 ```
@@ -81,20 +81,20 @@ Um den Anforderungs Parameter anzugeben, müssen Sie eine Variable erstellen und
 
 
 
-Sie können die Animation desselben Zeichen, das Sie in dieser Methode angeben, nicht unterbrechen, da der Server die **Interrupt** -Methode in die Animations Warteschlange dieses Zeichens eingereiht. Daher können Sie nur **Interrupt** verwenden, um die Animation eines anderen Zeichens anzuhalten, das Sie geladen haben.
+Sie können die Animation desselben Zeichens, das Sie in dieser Methode angeben, nicht unterbrechen, da der Server die **Interrupt-Methode** in der Animationswarteschlange dieses Zeichens in die Warteschlange einreiht. Daher können Sie Interrupt nur verwenden, **um** die Animation eines anderen Zeichens anzuhalten, das Sie geladen haben.
 
-Wenn Sie einen Objekt Verweis deklarieren und diesen auf diese Methode festlegen, wird ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt zurückgegeben.
+Wenn Sie einen Objektverweis deklarieren und auf diese Methode festlegen, wird ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurückgegeben.
 
 > [!Note]  
-> Der **Interrupt** leert die Warteschlange des Zeichens nicht. Sie hält die vorhandene Animation an und wechselt zur nächsten Animation in der Warteschlange des Zeichens. Verwenden Sie die Stop-Methode, um die Warteschlange eines Zeichens [**anzuhalten**](stop-method.md) und zu leeren.
+> **Interrupt** leert die Warteschlange des Zeichens nicht. Sie hält die vorhandene Animation an und wechselt zur nächsten Animation in der Warteschlange des Zeichens. Verwenden Sie die Stop-Methode, um die Warteschlange eines Zeichens [**anzuhalten und zu leeren.**](stop-method.md)
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [**Stop-Methode**](stop-method.md)
 
 
- 
+ 
 
- 
+ 

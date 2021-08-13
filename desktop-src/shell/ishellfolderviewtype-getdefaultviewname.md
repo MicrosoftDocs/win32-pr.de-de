@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 99229d13-40dc-4750-81a7-48a2f608b778
-ms.openlocfilehash: 808f68093512e2da602d5e73775b47943b140a46
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 252616bd2391606b9942777caf07a2f5f58627a316f51e481c19fbfcc98599b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119443270"
 ---
 # <a name="ishellfolderviewtypegetdefaultviewname-method"></a>IShellFolderViewType::GetDefaultViewName-Methode
 
-Ruft den Namen der Standardansicht ab. Rufen [**Sie GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) auf, um die Namen der anderen Ansichten abzurufen.
+Ruft den Namen der Standardansicht ab. Rufen [**Sie GetDisplayNameOf auf,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) um die Namen der anderen Ansichten abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Optionale Flags; sollte auf 0 festgelegt werden.
 
 Typ: **LPWSTR \***
 
-Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt. Der Arbeitsspeicher für die Zeichenfolge wird mit [**SHStrDup**](/windows/desktop/api/Shlwapi/nf-shlwapi-shstrdupa)zugeordnet.
+Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt. Der Arbeitsspeicher für die Zeichenfolge wird mit [**SHStrDup zugeordnet.**](/windows/desktop/api/Shlwapi/nf-shlwapi-shstrdupa)
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

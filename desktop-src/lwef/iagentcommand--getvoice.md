@@ -1,19 +1,19 @@
 ---
-title: Iagentcommand getvoice
-description: Iagentcommand getvoice
+title: IAgentCommand GetVoice
+description: IAgentCommand GetVoice
 ms.assetid: 69f3c91b-2ccf-4bea-8034-0c3e0a5e4ec4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2365019f71447e9d9c5a560c6506ee1dae7423df
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 120e27996f06a0446f7aaab944df8638134990fffe951400d94c690f52f78cac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341710"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118750427"
 ---
-# <a name="iagentcommandgetvoice"></a>Iagentcommand:: getvoice
+# <a name="iagentcommandgetvoice"></a>IAgentCommand::GetVoice
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetVoice(
@@ -21,26 +21,26 @@ HRESULT GetVoice(
 );
 ```
 
-Ruft den Wert der [**Voice**](voice-property.md) -Text-Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object)ab.
+Ruft den Wert der [**Voicetext-Eigenschaft**](voice-property.md) für einen [**Befehl ab.**](/windows/desktop/lwef/the-command-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbszVoice"></span><span id="pbszvoice"></span><span id="PBSZVOICE"></span>*pbszvoice*
+<span id="pbszVoice"></span><span id="pbszvoice"></span><span id="PBSZVOICE"></span>*pbszVoice*
 </dt> <dd>
 
-Die Adresse eines BSTR, der die [**Voice**](voice-property.md) -Text-Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object)empfängt.
+Die Adresse eines BSTR, der die [**Voicetext-Eigenschaft**](voice-property.md) für einen [**Befehl empfängt.**](/windows/desktop/lwef/the-command-object)
 
 </dd> </dl>
 
-Ein [**Befehl**](/windows/desktop/lwef/the-command-object) , bei dem der [**Voice**](voice-property.md) -Eigenschaften Satz und seine [**aktivierte**](enabled-property.md) Eigenschaft auf **true** festgelegt sind, sind sprach zugänglich. Wenn die [**Beschriftungs**](caption-property.md) Eigenschaft ebenfalls festgelegt ist, wird Sie im Fenster "Sprachbefehle" angezeigt. Wenn die [**sichtbare**](visible-property.md) Eigenschaft auf **true** festgelegt ist, wird Sie im Popupmenü des Zeichens angezeigt.
+Auf [**einen Befehl,**](/windows/desktop/lwef/the-command-object) dessen [**Voice-Eigenschaft**](voice-property.md) und [**die Enabled-Eigenschaft**](enabled-property.md) auf **True** festgelegt ist, kann auf die Stimme zugegriffen werden. Wenn die [**Caption-Eigenschaft**](caption-property.md) ebenfalls festgelegt ist, wird sie im Fenster Sprachbefehle angezeigt. Wenn die [**Visible-Eigenschaft**](visible-property.md) auf **True festgelegt** ist, wird sie im Popupmenü des Zeichens angezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommand:: setvoice**](iagentcommand--setvoice.md), [**iagentcommands:: Add**](iagentcommands--add.md), [**iagentcommands:: Insert**](iagentcommands--insert.md)
+[**IAgentCommand::SetVoice**](iagentcommand--setvoice.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
- 
+ 
 
- 
+ 

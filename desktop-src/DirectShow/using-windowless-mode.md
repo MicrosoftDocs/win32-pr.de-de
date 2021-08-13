@@ -4,53 +4,53 @@ ms.assetid: f53cecaa-dee7-4b02-a4ac-ffbd917f73aa
 title: Verwenden des fensterlosen Modus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 393b112c6d340c3440521876da08111dd4bb0e81
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5189fb52932a328493baec9a79ccd6598a9a0659c198ee3ce3d4d157574a63c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119271250"
 ---
 # <a name="using-windowless-mode"></a>Verwenden des fensterlosen Modus
 
-Sowohl der [Video Mischungs Filter 7](video-mixing-renderer-filter-7.md) (VMR-7) als auch der [Video Mischungs Filter 9](video-mixing-renderer-filter-9.md) (VMR-9) unterstützen den *fensterlosen Modus*, der eine bedeutende Verbesserung gegenüber der [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Schnittstelle darstellt. In diesem Thema werden die Unterschiede zwischen dem fensterlosen Modus und dem Fenstermodus sowie die Verwendung des fensterlosen Modus beschrieben.
+Sowohl der [Video Mixing Renderer Filter 7](video-mixing-renderer-filter-7.md) (VMR-7) als auch der [Video Mixing Renderer Filter 9](video-mixing-renderer-filter-9.md) (VMR-9) unterstützen den *fensterlosen Modus*, der eine wesentliche Verbesserung gegenüber der [**IVideoWindow-Schnittstelle**](/windows/desktop/api/Control/nn-control-ivideowindow) darstellt. In diesem Thema werden die Unterschiede zwischen dem fensterlosen Modus und dem Fenstermodus sowie die Verwendung des fensterlosen Modus beschrieben.
 
-Um Abwärtskompatibilität mit vorhandenen Anwendungen zu erhalten, wird für VMR standardmäßig der Fenster-Modus verwendet. Im Fenstermodus erstellt der Renderer ein eigenes Fenster, um das Video anzuzeigen. In der Regel legt die Anwendung das Videofenster als untergeordnetes Element des Anwendungsfensters fest. Das vorhanden sein eines separaten Videofensters verursacht jedoch einige Probleme:
+Um abwärtskompatibel mit vorhandenen Anwendungen zu bleiben, wird der VMR standardmäßig in den Fenstermodus versetzt. Im Fenstermodus erstellt der Renderer ein eigenes Fenster zum Anzeigen des Videos. In der Regel legt die Anwendung das Videofenster als untergeordnetes Element des Anwendungsfensters fest. Das Vorhandensein eines separaten Videofensters verursacht jedoch einige Probleme:
 
--   Am wichtigsten ist, dass es zu Deadlocks kommen kann, wenn zwischen Threads Fenster Meldungen gesendet werden.
--   Der Filter Graph-Manager muss bestimmte Fenster Meldungen, z. b \_ . WM Paint, an den Videorenderer weiterleiten. Die Anwendung muss die Implementierung von [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) des Filter Diagramms (und nicht die des Videorenderers) verwenden, damit der Filter Graph-Manager den korrekten internen Zustand beibehält.
--   Um Maus-oder Tastatur Ereignisse aus dem Videofenster zu empfangen, muss die Anwendung eine *Nachrichten Ableitung* festlegen, sodass das Videofenster diese Nachrichten an die Anwendung weiterleiten kann.
--   Um clippingprobleme zu vermeiden, muss das Videofenster über die richtigen Fenster Stile verfügen.
+-   Am wichtigsten ist, dass deadlocks auftreten können, wenn Fenstermeldungen zwischen Threads gesendet werden.
+-   Der Filter Graph Manager muss bestimmte Fenstermeldungen wie WM \_ PAINT an den Videorenderer weiterleiten. Die Anwendung muss die Implementierung von [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) des Filter-Graph-Managers (und nicht die des Videorenderers) verwenden, damit der Filter Graph Manager den richtigen internen Zustand beibehält.
+-   Um Maus- oder Tastaturereignisse aus dem Videofenster zu empfangen, muss die Anwendung einen *Nachrichtenabfluss* festlegen, wodurch das Videofenster diese Nachrichten an die Anwendung weiterleitet.
+-   Um Clippingprobleme zu vermeiden, muss das Videofenster über die richtigen Fensterstile verfügen.
 
-Der fensterlose Modus vermeidet diese Probleme, indem der VMR direkt im Client Bereich des Anwendungsfensters gezeichnet wird. dabei wird DirectDraw zum Ausschneiden des Video Rechtecks verwendet. Der fensterlose Modus verringert die Wahrscheinlichkeit von Deadlocks erheblich. Außerdem muss die Anwendung das Besitzer Fenster oder die Fenster Stile nicht festlegen. Wenn sich VMR im fensterlosen Modus befindet, wird die [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Schnittstelle nicht einmal verfügbar gemacht, da Sie nicht mehr benötigt wird.
+Der fensterlose Modus vermeidet diese Probleme, indem die VMR direkt im Clientbereich des Anwendungsfensters gezeichnet wird, indem DirectDraw zum Beschneiden des Videorechtecks verwendet wird. Der Fensterlose Modus verringert die Wahrscheinlichkeit von Deadlocks erheblich. Außerdem muss die Anwendung das Besitzerfenster oder die Fensterstile nicht festlegen. Wenn sich die VMR im fensterlosen Modus befindet, macht sie nicht einmal die [**IVideoWindow-Schnittstelle**](/windows/desktop/api/Control/nn-control-ivideowindow) verfügbar, die nicht mehr benötigt wird.
 
-Um den fensterlosen Modus zu verwenden, müssen Sie den VMR explizit konfigurieren. Sie werden jedoch feststellen, dass flexibler und einfacher zu verwenden ist als der Fenstermodus.
+Um den fensterlosen Modus zu verwenden, müssen Sie die VMR explizit konfigurieren. Sie werden jedoch feststellen, dass flexibler und einfacher zu verwenden ist als der Fenstermodus.
 
-Der VMR-7-Filter und der VMR-9-Filter machen verschiedene Schnittstellen verfügbar, die Schritte sind jedoch gleichwertig.
+Der VMR-7-Filter und der VMR-9-Filter machen verschiedene Schnittstellen verfügbar, aber die Schritte sind für jede äquivalent.
 
-## <a name="configure-the-vmr-for-windowless-mode"></a>Konfigurieren des VMR für den fensterlosen Modus
+## <a name="configure-the-vmr-for-windowless-mode"></a>Konfigurieren der VMR für den fensterlosen Modus
 
-Um das VMR-Standardverhalten zu überschreiben, konfigurieren Sie VMR vor dem Aufbau des Filter Diagramms:
+Um das Standardverhalten der VMR zu überschreiben, konfigurieren Sie die VMR vor dem Erstellen des Filterdiagramms:
 
 **VMR-7**
 
-1.  Erstellen Sie den Filter Graph-Manager.
-2.  Erstellen Sie VMR-7, und fügen Sie es dem Filter Diagramm hinzu.
-3.  Wenden Sie [**ivmrfilterconfig:: setrenderingmode**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setrenderingmode) für VMR-7 mit dem **\_ Windows-Flag "vmrmode** " an.
-4.  Fragen Sie VMR-7 nach der [**ivmrwindowlesscontrol**](/windows/desktop/api/Strmif/nn-strmif-ivmrwindowlesscontrol) -Schnittstelle ab.
-5.  Aufrufen von [**ivmrwindowlesscontrol:: setvideoclippingwindow**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoclippingwindow) für VMR-7. Geben Sie ein Handle für das Fenster an, in dem das Video angezeigt werden soll.
+1.  Erstellen Sie den Filter Graph Manager.
+2.  Erstellen Sie die VMR-7, und fügen Sie sie dem Filterdiagramm hinzu.
+3.  Rufen Sie [**IVMRFilterConfig::SetRenderingMode**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setrenderingmode) auf der VMR-7 mit dem **VMRMode-Flag \_ "Windowless"** auf.
+4.  Fragen Sie VMR-7 nach der [**IVMRWindowlessControl-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ivmrwindowlesscontrol) ab.
+5.  Rufen Sie [**IVMRWindowlessControl::SetVideoClippingWindow**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoclippingwindow) auf der VMR-7 auf. Geben Sie ein Handle für das Fenster an, in dem das Video angezeigt werden soll.
 
 **VMR-9**
 
-1.  Erstellen Sie den Filter Graph-Manager.
-2.  Erstellen Sie VMR-9, und fügen Sie es dem Filter Diagramm hinzu.
-3.  Wenden Sie [**IVMRFilterConfig9:: setrenderingmode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrfilterconfig9-setrenderingmode) auf VMR-9 mit dem **VMR9Mode \_ Windows less** -Flag an.
-4.  Fragen Sie VMR-9 nach der [**IVMRWindowlessControl9**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrwindowlesscontrol9) -Schnittstelle ab.
-5.  Aufrufen von [**IVMRWindowlessControl9:: setvideoclippingwindow**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoclippingwindow) für VMR-9. Geben Sie ein Handle für das Fenster an, in dem das Video angezeigt werden soll.
+1.  Erstellen Sie den Filter Graph Manager.
+2.  Erstellen Sie die VMR-9, und fügen Sie sie dem Filterdiagramm hinzu.
+3.  Rufen Sie [**IVMRFilterConfig9::SetRenderingMode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrfilterconfig9-setrenderingmode) auf der VMR-9 mit dem **VMR9Mode-Flag \_ "Windowless"** auf.
+4.  Fragen Sie VMR-9 nach der [**IVMRWindowlessControl9-Schnittstelle**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrwindowlesscontrol9) ab.
+5.  Rufen Sie [**IVMRWindowlessControl9::SetVideoClippingWindow**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoclippingwindow) auf der VMR-9 auf. Geben Sie ein Handle für das Fenster an, in dem das Video angezeigt werden soll.
 
-Erstellen Sie jetzt den Rest des Filter Diagramms, indem Sie [**igraphbuilder:: RenderFile**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-renderfile) oder andere Graph-Erstellungs Methoden aufrufen. Der Filter Graph-Manager verwendet automatisch die Instanz von VMR, die Sie dem Diagramm hinzugefügt haben. (Ausführliche Informationen dazu, warum dies geschieht, finden Sie unter [Intelligent Connect](intelligent-connect.md).)
+Erstellen Sie nun den Rest des Filterdiagramms, indem [**Sie IGraphBuilder::RenderFile**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-renderfile) oder andere Grapherstellungsmethoden aufrufen. Der Filter Graph Manager verwendet automatisch die Instanz der VMR, die Sie dem Diagramm hinzugefügt haben. (Ausführliche Informationen dazu, warum dies geschieht, finden Sie unter [Intelligent Verbinden](intelligent-connect.md).)
 
-Der folgende Code zeigt eine Hilfsfunktion, die VMR-7 erstellt, Sie dem Diagramm hinzufügt und den fensterlosen Modus einrichtet.
+Der folgende Code zeigt eine Hilfsfunktion, die VMR-7 erstellt, dem Diagramm hinzufügt und den fensterlosen Modus einrichten kann.
 
 
 ```C++
@@ -114,7 +114,7 @@ HRESULT InitWindowlessVMR(
 
 
 
-Diese Funktion geht davon aus, dass nur einen Videodaten Strom anzeigt und keine statische Bitmap über das Video vermischt. Weitere Informationen finden Sie unter [Windows-VMR-Modus](vmr-windowless-mode.md). Diese Funktion wird wie folgt aufgerufen:
+Diese Funktion geht davon aus, dass nur ein Videostream angezeigt wird und keine statische Bitmap über dem Video gemischt wird. Weitere Informationen finden Sie unter [VMR-Fensterloser Modus.](vmr-windowless-mode.md) Sie würden diese Funktion wie folgt aufrufen:
 
 
 ```C++
@@ -133,19 +133,19 @@ if (SUCCEEDED(hr))
 
 ## <a name="position-the-video"></a>Positionieren des Videos
 
-Nach dem Konfigurieren von VMR ist der nächste Schritt das Festlegen der Position des Videos. Es gibt zwei zu berücksichtigende Rechtecke, das *Quell* Rechteck und das *Ziel* Rechteck. Das Quell Rechteck definiert, welcher Teil des Videos angezeigt werden soll. Das Ziel Rechteck gibt den Bereich im Client Bereich des Fensters an, in dem das Video enthalten sein soll. Die VMR sorgt für das Video Bild für das Quell Rechteck und dehnt das abgeschnittene Bild so aus, dass es an das Ziel Rechteck angepasst wird.
+Nach dem Konfigurieren der VMR wird im nächsten Schritt die Position des Videos festgelegt. Es gibt zwei zu berücksichtigende Rechtecke: das *Quellrechteck* und das *Zielrechteck.* Das Quellrechteck definiert, welcher Teil des Videos angezeigt werden soll. Das Zielrechteck gibt den Bereich im Clientbereich des Fensters an, der das Video enthalten soll. Die VMR fügt das Videobild in das Quellrechteck ein und streckt das zugeschnittene Bild so, dass es dem Zielrechteck entspricht.
 
 **VMR-7**
 
-1.  Um beide Rechtecke anzugeben, können Sie die [**ivmrwindowlesscontrol:: setvideoposition**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoposition) -Methode aufrufen.
-2.  Das Quell Rechteck muss kleiner oder gleich der systemeigenen Videogröße sein. Sie können die [**ivmrwindowlesscontrol:: getnativevideosize**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-getnativevideosize) -Methode verwenden, um die systemeigene Videogröße zu erhalten.
+1.  Rufen Sie die [**IVMRWindowlessControl::SetVideoPosition-Methode**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoposition) auf, um beide Rechtecke anzugeben.
+2.  Das Quellrechteck muss gleich oder kleiner als die native Videogröße sein. Sie können die [**IVMRWindowlessControl::GetNativeVideoSize-Methode**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-getnativevideosize) verwenden, um die native Videogröße abzurufen.
 
 **VMR-9**
 
-1.  Aufrufen der [**IVMRWindowlessControl9:: setvideoposition**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoposition) -Methode, um beide Rechtecke anzugeben.
-2.  Das Quell Rechteck muss kleiner oder gleich der systemeigenen Videogröße sein. Sie können die [**IVMRWindowlessControl9:: getnativevideosize**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-getnativevideosize) -Methode verwenden, um die systemeigene Videogröße zu erhalten.
+1.  Rufen Sie die [**IVMRWindowlessControl9::SetVideoPosition-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoposition) auf, um beide Rechtecke anzugeben.
+2.  Das Quellrechteck muss gleich oder kleiner als die native Videogröße sein. Sie können die [**IVMRWindowlessControl9::GetNativeVideoSize-Methode**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-getnativevideosize) verwenden, um die native Videogröße abzurufen.
 
-Der folgende Code legt z. b. die Quell-und Ziel Rechtecke für VMR-7 fest. Das Quell Rechteck wird auf das gesamte Video Bild festgelegt, und das Ziel Rechteck entspricht dem gesamten Fenster Client Bereich:
+Der folgende Code legt beispielsweise die Quell- und Zielrechtecke für VMR-7 fest. Das Quellrechteck wird auf das gesamte Videobild und das Zielrechteck auf den gesamten Fensterclientbereich festgelegt:
 
 
 ```C++
@@ -170,30 +170,30 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn Sie ein Video mit einem kleineren Teil des Client Bereichs belegen möchten, ändern Sie den *rcdest* -Parameter. Wenn Sie das Video Bild zuschneiden möchten, ändern Sie den *rcsrc* -Parameter.
+Wenn Sie video einen kleineren Teil des Clientbereichs belegen möchten, ändern Sie den *rcDest-Parameter.* Wenn Sie das Videobild zuschneiden möchten, ändern Sie den *rcSrc-Parameter.*
 
-## <a name="handle-window-messages"></a>Fenster Meldungen behandeln
+## <a name="handle-window-messages"></a>Verarbeiten von Fenstermeldungen
 
-Da VMR kein eigenes Fenster hat, muss es benachrichtigt werden, wenn das Video neu gezeichnet oder die Größe des Videos geändert werden muss. Reagieren Sie auf die folgenden Fenster Meldungen, indem Sie die aufgeführten VMR-Methoden aufrufen.
+Da die VMR nicht über ein eigenes Fenster verfügt, muss sie benachrichtigt werden, wenn sie das Video neu malen oder dessen Größe ändern muss. Reagieren Sie auf die folgenden Fenstermeldungen, indem Sie die aufgelisteten VMR-Methoden aufrufen.
 
 **VMR-7**
 
-1.  [**WM \_ Paint**](../gdi/wm-paint.md). Nennen Sie [**ivmrwindowlesscontrol:: repaintvideo**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-repaintvideo). Diese Methode bewirkt, dass VMR-7 den neuesten Videoframe neu zeichnet.
-2.  [**WM \_ Display Change**](../gdi/wm-displaychange.md): der Befehl [**ivmrwindowlesscontrol::D isplaymodechanged**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-displaymodechanged). Diese Methode benachrichtigt VMR-7, dass das Video mit einer neuen Auflösung oder Farbtiefe angezeigt werden muss.
-3.  [**WM \_ Size**](../winmsg/wm-size.md) oder [**WM \_ windowposchge**](../winmsg/wm-windowposchanged.md): Berechnen Sie die Position des Videos neu, und wenden Sie [**ivmrwindowlesscontrol:: setvideoposition**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoposition) an, um die Position bei Bedarf zu aktualisieren.
+1.  [**WM \_ PAINT**](../gdi/wm-paint.md). Rufen Sie [**IVMRWindowlessControl::RepaintVideo**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-repaintvideo)auf. Diese Methode bewirkt, dass VMR-7 den neuesten Videoframe neu malt.
+2.  [**WM \_ DISPLAYCHANGE**](../gdi/wm-displaychange.md): Rufen Sie [**IVMRWindowlessControl::D isplayModeChanged auf.**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-displaymodechanged) Diese Methode benachrichtigt VMR-7, dass das Video mit einer neuen Auflösung oder Farbtiefe angezeigt werden muss.
+3.  [**WM \_ SIZE**](../winmsg/wm-size.md) oder [**WM \_ WINDOWPOSCHANGED:**](../winmsg/wm-windowposchanged.md)Berechnen Sie die Position des Videos neu, und rufen Sie [**IVMRWindowlessControl::SetVideoPosition**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoposition) auf, um die Position bei Bedarf zu aktualisieren.
 
 **VMR-9**
 
-1.  [**WM \_ Paint**](../gdi/wm-paint.md). Nennen Sie [**IVMRWindowlessControl9:: repaintvideo**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-repaintvideo). Diese Methode bewirkt, dass VMR-9 den neuesten Videorahmen neu zeichnet.
-2.  [**WM \_ Display Change**](../gdi/wm-displaychange.md): IVMRWindowlessControl9 aufgerufen [**::D isplaymodechanged**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-displaymodechanged). Diese Methode benachrichtigt VMR-9, dass das Video mit einer neuen Auflösung oder Farbtiefe angezeigt werden muss.
-3.  [**WM \_ Size**](../winmsg/wm-size.md) oder [**WM \_ windowposchangi:**](../winmsg/wm-windowposchanged.md)berechnet die Position des Videos neu und ruft [**IVMRWindowlessControl9:: setvideoposition**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoposition) auf, um die Position bei Bedarf zu aktualisieren.
+1.  [**WM \_ PAINT**](../gdi/wm-paint.md). Rufen Sie [**IVMRWindowlessControl9::RepaintVideo**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-repaintvideo)auf. Diese Methode bewirkt, dass VMR-9 den neuesten Videoframe neu malt.
+2.  [**WM \_ DISPLAYCHANGE**](../gdi/wm-displaychange.md): Rufen Sie [**IVMRWindowlessControl9::D isplayModeChanged auf.**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-displaymodechanged) Diese Methode benachrichtigt VMR-9, dass das Video mit einer neuen Auflösung oder Farbtiefe angezeigt werden muss.
+3.  [**WM \_ SIZE**](../winmsg/wm-size.md) oder [**WM \_ WINDOWPOSCHANGED:**](../winmsg/wm-windowposchanged.md)Berechnen Sie die Position des Videos neu, und rufen Sie [**IVMRWindowlessControl9::SetVideoPosition**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoposition) auf, um die Position bei Bedarf zu aktualisieren.
 
 > [!Note]  
-> Der Standard Handler für die [**WM- \_ windowposchge**](../winmsg/wm-windowposchanged.md) -Nachricht sendet eine [**WM- \_ Größen**](../winmsg/wm-size.md) Nachricht. Wenn Ihre Anwendung jedoch **WM \_ windowposchge** abfängt und Sie nicht an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergibt, sollten Sie **setvideoposition** zusätzlich zu Ihrem WM- **\_ Größen** Handler in Ihrem **WM- \_ windowposchge** -Handler aufrufen.
+> Der Standardhandler für die [**WM \_ WINDOWPOSCHANGED-Nachricht**](../winmsg/wm-windowposchanged.md) sendet eine [**WM \_ SIZE-Nachricht.**](../winmsg/wm-size.md) Wenn Ihre Anwendung jedoch **WM \_ WINDOWPOSCHANGED** abfängt und nicht an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergibt, sollten Sie **SetVideoPosition** in Ihrem **WM \_ WINDOWPOSCHANGED-Handler** zusätzlich zu Ihrem **WM \_ SIZE-Handler** aufrufen.
 
  
 
-Das folgende Beispiel zeigt einen [**WM \_ Paint**](../gdi/wm-paint.md) -Meldungs Handler. Es zeichnet einen Bereich, der durch das Client Rechteck abzüglich des Video Rechtecks definiert wird. Ziehen Sie nicht auf das Video Rechteck, da das VMR darauf zeigt, was zu einem Flimmern führt. Legen Sie aus demselben Grund keinen Hintergrund Pinsel in der Fenster Klasse fest.
+Das folgende Beispiel zeigt einen [**WM \_ PAINT-Meldungshandler.**](../gdi/wm-paint.md) Es zeichnet einen bereich, der durch das Clientrechteck minus dem Videorechteck definiert wird. Zeichnen Sie nicht auf das Videorechteck, da die VMR darauf zeichnet, was zu Flackern führt. Legen Sie aus demselben Grund keinen Hintergrundpinsel in der Fensterklasse fest.
 
 
 ```C++
@@ -235,13 +235,13 @@ void OnPaint(HWND hwnd)
 
 
 
-Obwohl Sie auf [**WM \_ Paint**](../gdi/wm-paint.md) -Meldungen Antworten müssen, müssen Sie zwischen **WM \_ Paint** -Meldungen nichts tun, um das Video zu aktualisieren. Wie in diesem Beispiel gezeigt, können Sie das Video Bild im fensterlosen Modus einfach als selbst Zeichnungs Bereich im Fenster behandeln.
+Obwohl Sie auf [**WM \_ PAINT-Nachrichten**](../gdi/wm-paint.md) reagieren müssen, müssen Sie zwischen **WM \_ PAINT-Nachrichten** nichts unternehmen, um das Video zu aktualisieren. Wie in diesem Beispiel gezeigt, können Sie das Videobild im fensterlosen Modus einfach als selbst zeichnenden Bereich im Fenster behandeln.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Video Mischungs Renderers](using-the-video-mixing-renderer.md)
+[Verwenden des Videomischungsrenderers](using-the-video-mixing-renderer.md)
 </dt> <dt>
 
 [Videorendering](video-rendering.md)

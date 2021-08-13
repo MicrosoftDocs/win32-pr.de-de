@@ -1,9 +1,9 @@
 ---
-title: Meta-Element
-description: Das Meta-Element gibt Metadaten an, die auf die gesamte Wiedergabeliste angewendet werden.
+title: meta-Element
+description: Das Metaelement gibt Metadaten an, die für die gesamte Wiedergabeliste gelten.
 ms.assetid: 7248e1d9-ebd1-48cb-9019-89a35eac27ae
 keywords:
-- Media Player des Meta-Element-Windows
+- meta-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9f3c41c25a0df0895c645c34f97495712b113ffc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b2e4120b3eceea6d2a664edec9b48a46d33ad19b788bb820458a8802dccd2d9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119415740"
 ---
-# <a name="meta-element"></a>Meta-Element
+# <a name="meta-element"></a>meta-Element
 
-Das **Meta** -Element gibt Metadaten an, die auf die gesamte Wiedergabeliste angewendet werden.
+Das **Metaelement** gibt Metadaten an, die für die gesamte Wiedergabeliste gelten.
 
 ``` syntax
 <meta
@@ -35,16 +35,16 @@ Das **Meta** -Element gibt Metadaten an, die auf die gesamte Wiedergabeliste ang
 
 
 
-| Begriff                                                                       | BESCHREIBUNG                                                                                                                       |
+| Begriff                                                                       | Beschreibung                                                                                                                       |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <span id="name"></span><span id="NAME"></span>**Benennen**<br/>          | Der Name eines Elements von Metadaten.<br/>                                                                                       |
-| <span id="content"></span><span id="CONTENT"></span>**inhaltliche**<br/> | Der Wert eines Elements von Metadaten. Wenn das Namensattribut z. b. "Genre" lautet, könnte das Inhalts Attribut "Rock" lauten.<br/> |
+| <span id="name"></span><span id="NAME"></span>**Namen**<br/>          | Der Name eines Metadatenelements.<br/>                                                                                       |
+| <span id="content"></span><span id="CONTENT"></span>**Inhalt**<br/> | Der Wert eines Metadatenelements. Wenn das Name-Attribut beispielsweise "Genre" ist, könnte das Inhaltsattribut "Rock" sein.<br/> |
 
 
 
  
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -59,10 +59,10 @@ Das **Meta** -Element gibt Metadaten an, die auf die gesamte Wiedergabeliste ang
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Ersteller einer Windows-Medienwiedergabe Liste kann das Name-Attribut eines Meta-Elements auf eine beliebige Zeichenfolge festlegen. In der folgenden Liste sind einige typische namens Attribute aufgeführt, die in Windows Media-Wiedergabelisten enthalten sind, die von Windows Media Player und anderen Microsoft-Komponenten erstellt wurden.
+Der Ersteller einer Windows Medienwiedergabeliste kann das Namensattribut eines Metaelements auf eine beliebige Zeichenfolge festlegen. Die folgende Liste enthält einige typische Namensattribute, die sich in Windows Medienwiedergabelisten befinden, die von Windows Media Player und anderen Microsoft-Komponenten erstellt wurden.
 
 -   Autor
--   Category
+-   Kategorie
 -   Genre
 -   UserName
 -   UserRating
@@ -87,18 +87,18 @@ Der Ersteller einer Windows-Medienwiedergabe Liste kann das Name-Attribut eines 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Head-Element**](head-element.md)
+[**head-Element**](head-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

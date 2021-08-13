@@ -1,7 +1,7 @@
 ---
-description: Exportiert das Schlüsselmaterial gemäß RFC 5705-Standard.
+description: Exportiert Schlüsselmaterial gemäß RFC 5705-Standard.
 ms.assetid: 19624852-B1A6-4BB4-96AF-0457834DA294
-title: Sslexportkeyingmaterial-Funktion (sslprovider. h)
+title: SslExportKeyingMaterial-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 906a7535b297f309c0c8471843ce07f43a110a3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39aaebba64f92794e179af95a5a175e2603fccc40410989cfcd427c6a7a1a88e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906618"
 ---
-# <a name="sslexportkeyingmaterial-function"></a>Sslexportkeyingmaterial-Funktion
+# <a name="sslexportkeyingmaterial-function"></a>SslExportKeyingMaterial-Funktion
 
-Exportiert das Schlüsselmaterial gemäß [RFC 5705-Standard](https://tools.ietf.org/html/rfc5705). Diese Funktion verwendet die Funktion "TLS Pseudo Zufalls", um einen Byte Puffer mit Schlüsselmaterial zu erhalten. Es wird ein Verweis auf den geheimen Hauptschlüssel, die Mehrdeutigkeit der ASCII-Bezeichnung, Client-und Server Zufallswerte und optional die Anwendungskontext Daten benötigt.
+Exportiert Schlüsselmaterial gemäß [RFC 5705-Standard.](https://tools.ietf.org/html/rfc5705) Diese Funktion verwendet die TLS-Pseudozufallsfunktion, um einen Bytepuffer mit Schlüsselmaterial zu erzeugen. Sie verwendet einen Verweis auf den geheimen Hauptschlüssel, die eindeutigen ASCII-Bezeichnungen, zufälligen Client- und Serverwerte und optional die Anwendungskontextdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,89 +48,89 @@ SECURITY_STATUS WINAPI SslExportKeyingMaterial(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle der TLS-Protokoll Anbieter Instanz.
+Das Handle der TLS-Protokollanbieterinstanz.
 
 </dd> <dt>
 
-*hmasterkey* \[ in\]
+*hMasterKey* \[ In\]
 </dt> <dd>
 
-Das Handle des Hauptschlüssel Objekts, das verwendet wird, um das Schlüsselmaterial zu erstellen, das von BR exportiert wird.
+Das Handle des Hauptschlüsselobjekts, das zum Erstellen des zu exportierenden Schlüsselmaterials verwendet wird.
 
 </dd> <dt>
 
-*slabel* \[ in\]
+*sLabel* \[ In\]
 </dt> <dd>
 
-eine Zeichenfolge mit einer Zeichenfolge, die eine Zeichenfolge mit Zeichen SChannel entfernt das abschließende NUL-Zeichen, bevor es an die Pseudo Zufalls-Funktion übergeben wird.
+eine AUF NUL endende ASCII-Bezeichnungszeichenfolge. Schannel entfernt das abschließende NUL-Zeichen, bevor es an die Pseudozufallsfunktion übergeben wird.
 
 </dd> <dt>
 
-*pbrandoms* \[ in\]
+*pbRandoms* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine Verkettung der *\_ zufälligen* Zufallswerte des *Clients \_* und des Servers der TLS-Verbindung enthält.
+Ein Zeiger auf einen Puffer, der eine Verkettung der *\_ zufälligen Client-* und *\_ Serverzufallswerte* der TLS-Verbindung enthält.
 
 </dd> <dt>
 
-*cbrandoms* \[ in\]
+*cbRandoms* \[ In\]
 </dt> <dd>
 
-Die Länge des *pbrandoms* -Puffers in Bytes.
+Die Länge des *pbRandoms-Puffers* in Bytes.
 
 </dd> <dt>
 
-*pbcontextvalue* \[ in, optional\]
+*pbContextValue* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Anwendungskontext enthält. Wenn *pbcontextvalue* **null** ist, muss *cbcontextvalue* gleich NULL sein.
+Ein Zeiger auf einen Puffer, der den Anwendungskontext enthält. Wenn *pbContextValue* **NULL** ist, muss *cbContextValue* 0 (null) sein.
 
 </dd> <dt>
 
-*cbcontextvalue* \[ in\]
+*cbContextValue* \[ In\]
 </dt> <dd>
 
-Die Länge des *pbcontextvalue* -Puffers in Bytes.
+Die Länge des *pbContextValue-Puffers* in Bytes.
 
 </dd> <dt>
 
-*pboutput* \[ vorgenommen\]
+*pbOutput* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Puffers, der das exportierte Schlüsselmaterial empfängt. Der *cboutput* -Parameter enthält die Größe dieses Puffers. Dieser Wert darf nicht **null** sein.
+Die Adresse eines Puffers, der das exportierte Schlüsselmaterial empfängt. Der *cbOutput-Parameter* enthält die Größe dieses Puffers. Dieser Wert darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*cboutput* \[ in\]
+*cbOutput* \[ In\]
 </dt> <dd>
 
-Die Länge des *pboutput* -Puffers in Bytes. Muss größer sein als Null.
+Die Länge des *pbOutput-Puffers* in Bytes. Muss größer sein als Null.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Nicht verwendet. Muss auf 0 (null) festgelegt werden.
+Wird nicht verwendet. Muss auf 0 (null) festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl> | Eines der bereitgestellten Handles ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl> | Einer der bereitgestellten Handles ist ungültig.<br/> |
 
 
 
@@ -142,9 +142,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

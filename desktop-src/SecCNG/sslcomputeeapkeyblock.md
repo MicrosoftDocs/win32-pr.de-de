@@ -1,7 +1,7 @@
 ---
-description: Berechnet den Schlüssel Block, der vom EAP (Extensible Authentication Protocol) verwendet wird.
+description: Berechnet den Schlüsselblock, der vom Extensible Authentication Protocol (EAP) verwendet wird.
 ms.assetid: 0f382668-6fc6-440f-ba61-70b1db0f3987
-title: Sslcomputeeapkeyblock-Funktion (sslprovider. h)
+title: SslComputeEapKeyBlock-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: d46c1284b208975126067ff295507b51def9133b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48f657f565c239f797fd67b108ce3b18b692dfabc0248e1005465e9123ac492d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907171"
 ---
-# <a name="sslcomputeeapkeyblock-function"></a>Sslcomputeeapkeyblock-Funktion
+# <a name="sslcomputeeapkeyblock-function"></a>SslComputeEapKeyBlock-Funktion
 
-Die **sslcomputeeapkeyblock** -Funktion berechnet den Schlüssel Block, der vom Extensible Authentication Protocol (EAP) verwendet wird.
+Die **SslComputeEapKeyBlock-Funktion** berechnet den Schlüsselblock, der vom Extensible Authentication Protocol (EAP) verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,65 +46,65 @@ SECURITY_STATUS WINAPI SslComputeEapKeyBlock(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle der Protokoll Anbieter Instanz des [*Secure Sockets Layer Protokolls*](/windows/desktop/SecGloss/s-gly) (SSL).
+Das Handle der SSL-Protokollanbieterinstanz [*(Secure Sockets Layer Protocol).*](/windows/desktop/SecGloss/s-gly)
 
 </dd> <dt>
 
-*hmasterkey* \[ in\]
+*hMasterKey* \[ In\]
 </dt> <dd>
 
-Das Handle des [*Hauptschlüssel*](/windows/desktop/SecGloss/m-gly) Objekts.
+Das Handle des [*Hauptschlüsselobjekts.*](/windows/desktop/SecGloss/m-gly)
 
 </dd> <dt>
 
-*pbrandoms* \[ in\]
+*pbRandoms* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine Verkettung der zufälligen Zufallswerte des Clients \_ und \_ des Servers der SSL-Sitzung enthält.
+Ein Zeiger auf einen Puffer, der eine Verkettung der zufälligen Client- \_ und \_ Serverzufallswerte der SSL-Sitzung enthält.
 
 </dd> <dt>
 
-*cbrandoms* \[ in\]
+*cbRandoms* \[ In\]
 </dt> <dd>
 
-Die Länge des *pbrandoms* -Puffers in Bytes.
+Die Länge des *pbRandoms-Puffers* in Bytes.
 
 </dd> <dt>
 
-*pboutput* \[ Out, optional\]
+*pbOutput* \[ out, optional\]
 </dt> <dd>
 
-Die Adresse eines Puffers, der das Schlüsselblob empfängt. Der *cboutput* -Parameter enthält die Größe dieses Puffers. Wenn dieser Parameter **null** ist, fügt diese Funktion die erforderliche Größe (in Bytes) in das **DWORD** ein, auf das durch den *pcbresult* -Parameter verwiesen wird.
+Die Adresse eines Puffers, der das Schlüsselblob empfängt. Der *cbOutput-Parameter* enthält die Größe dieses Puffers. Wenn dieser Parameter **NULL** ist, wird von dieser Funktion die erforderliche Größe in Bytes in das **DWORD-Objekt** gesetzt, auf das der *parameter "pwResult"* zeigt.
 
 </dd> <dt>
 
-*cboutput* \[ in\]
+*cbOutput* \[ In\]
 </dt> <dd>
 
-Die Länge des *pboutput* -Puffers in Bytes.
+Die Länge des *pbOutput-Puffers* in Bytes.
 
 </dd> <dt>
 
-*pcbresult* \[ vorgenommen\]
+*resultsResult* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **DWORD** -Wert, der die Länge des in den *pboutput* -Puffer geschriebenen Hashs in Bytes angibt.
+Ein Zeiger auf einen **DWORD-Wert,** der die Länge des in den *pbOutput-Puffer* geschriebenen Hashs in Bytes angibt.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Legen Sie auf **NCrypt \_ SSL \_ Server \_ Flag** fest, um anzugeben, dass es sich um einen Server-Befehl handelt.
+Legen Sie auf **NCRYPT \_ SSL \_ SERVER \_ FLAG** fest, um anzugeben, dass es sich um einen Serveraufruf handelt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
@@ -112,7 +112,7 @@ Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgeg
 
 | Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl> | Eines der angegebenen Handles ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl> | Einer der angegebenen Handles ist ungültig.<br/> |
 
 
 
@@ -124,9 +124,9 @@ Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgeg
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

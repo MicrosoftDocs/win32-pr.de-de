@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung sendet die WM- \_ mditile-Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um alle untergeordneten MDI-Fenster in einem Kachel Format anzuordnen.
+description: Eine Anwendung sendet die \_ WM-MDITILE-Nachricht an ein MDI-Clientfenster (Multiple Document Interface), um alle untergeordneten MDI-Fenster in einem Kachelformat anzuordnen.
 ms.assetid: a480ba61-807e-4d0e-bda2-f1876e0bb13c
-title: WM_MDITILE Meldung (Winuser. h)
+title: WM_MDITILE Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cf7ee38fbb3622e2d17bf4cea5a28b6b492a244
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 379394d413c0c9d15b9f63297934b97da6aff65b4ae5d803627cb0107493c4e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118436217"
 ---
-# <a name="wm_mditile-message"></a>WM- \_ mditile-Nachricht
+# <a name="wm_mditile-message"></a>WM \_ MDITILE-Nachricht
 
-Eine Anwendung sendet die **WM- \_ mditile** -Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um alle untergeordneten MDI-Fenster in einem Kachel Format anzuordnen.
+Eine Anwendung sendet die **\_ WM-MDITILE-Nachricht** an ein MDI-Clientfenster (Multiple Document Interface), um alle untergeordneten MDI-Fenster in einem Kachelformat anzuordnen.
 
 
 ```C++
@@ -29,14 +29,14 @@ Eine Anwendung sendet die **WM- \_ mditile** -Nachricht an ein MDI-Client Fenste
 *wParam* 
 </dt> <dd>
 
-Die gezitzungsoption. Dieser Parameter kann einen der folgenden Werte aufweisen, optional kombiniert mit **mditile \_ skipdeaktiviert** , um zu verhindern, dass deaktivierte untergeordnete MDI-Fenster nebeneinander gekachelt werden.
+Die Kacheloption. Dieser Parameter kann einer der folgenden Werte sein, optional kombiniert mit **MDITILE \_ SKIPDISABLED,** um zu verhindern, dass deaktivierte untergeordnete MDI-Fenster gekachelt werden.
 
 
 
 | Wert                                                                                                                                                                                                                                    | Bedeutung                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| <span id="MDITILE_HORIZONTAL"></span><span id="mditile_horizontal"></span><dl> <dt>**Mditile \_ HORIZONTAL**</dt> <dt>0x0001</dt> </dl> | Kacheln Fenster horizontal.<br/> |
-| <span id="MDITILE_VERTICAL"></span><span id="mditile_vertical"></span><dl> <dt>**Mditile \_ Vertikal**</dt> <dt>0x0000</dt> </dl>       | Kacheln Fenster vertikal.<br/>   |
+| <span id="MDITILE_HORIZONTAL"></span><span id="mditile_horizontal"></span><dl> <dt>**MDITILE \_ HORIZONTALE**</dt> <dt>0x0001</dt> </dl> | Kachelfenster horizontal.<br/> |
+| <span id="MDITILE_VERTICAL"></span><span id="mditile_vertical"></span><dl> <dt>**MDITILE \_ VERTICAL**</dt> <dt>0x0000</dt> </dl>       | Kachelfenster vertikal.<br/>   |
 
 
 
@@ -53,11 +53,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **bool**
+Typ: **BOOL**
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert " **true**".
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert **TRUE.**
 
-Wenn die Meldung fehlschlägt, ist der Rückgabewert **false**.
+Wenn die Nachricht fehlschlägt, ist der Rückgabewert **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,27 +67,27 @@ Wenn die Meldung fehlschlägt, ist der Rückgabewert **false**.
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM- \_ mdicascade**](wm-mdicascade.md)
+[**WM \_ MDICASCADE**](wm-mdicascade.md)
 </dt> <dt>
 
-[**WM- \_ mdiiconarrange**](wm-mdiiconarrange.md)
+[**WM \_ MDIICONARRANGE**](wm-mdiiconarrange.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Mehrere Dokument Schnittstellen](multiple-document-interface.md)
+[Schnittstelle für mehrere Dokumente](multiple-document-interface.md)
 </dt> </dl>
 
  

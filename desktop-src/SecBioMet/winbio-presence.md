@@ -1,10 +1,10 @@
 ---
-title: WINBIO_PRESENCE Struktur (winbio \_ types. h)
-description: Enthält Informationen über das vorhanden sein einer Person, deren Anwesenheit überwacht wird.
+title: WINBIO_PRESENCE-Struktur (Winbio \_ types.h)
+description: Enthält Informationen über das Vorhandensein einer Person, deren Vorhandensein überwacht wird.
 ms.assetid: 810D452E-DDFA-4AB2-AEFB-0C170C0C18D4
 keywords:
-- WINBIO_PRESENCE Struktur Windows-Biometrieframework-API
-- PWINBIO_PRESENCE Struktur Zeiger Windows-Biometrieframework API
+- WINBIO_PRESENCE Struktur Windows Biometrieframework-API
+- PWINBIO_PRESENCE Strukturzeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a4a917f09f419ce8dd5eb59c9c277293261bffa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2671faaee7bc277f9389d7c993e4d511dac03db459755b40bf3f659ff5256a56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909578"
 ---
-# <a name="winbio_presence-structure"></a>Winbio- \_ Anwesenheits Struktur
+# <a name="winbio_presence-structure"></a>WINBIO \_ PRESENCE-Struktur
 
-Enthält Informationen über das vorhanden sein einer Person, deren Anwesenheit überwacht wird.
+Enthält Informationen über das Vorhandensein einer Person, deren Vorhandensein überwacht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,42 +51,42 @@ typedef struct _WINBIO_PRESENCE {
 **Aspekt**
 </dt> <dd>
 
-Der biometrische Faktor, der zum Überwachen des Vorhandenseins der einzelnen Person verwendet wird.
+Der biometrische Faktor, der zum Überwachen des Vorhandenseins der Person verwendet wird.
 
 </dd> <dt>
 
-**Teilfaktor**
+**SubFactor**
 </dt> <dd>
 
-Der biometrische unter Faktor Qualifizierer für den biometrischen Faktor, der zum Überwachen des Vorhandenseins der Person verwendet wird.
+Der biometrische Teilfaktorqualifizierer für den biometrischen Faktor, der zum Überwachen des Vorhandenseins der Person verwendet wird.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd>
 
-Der Status des Identifizierungs Verfahrens für die Person.
+Der Status der Identifikationsprozedur für die Person.
 
 </dd> <dt>
 
-**Rejectdetail**
+**RejectDetail**
 </dt> <dd>
 
-Weitere Informationen über den Fehler bei der Erkennung einer einzelnen Person, einschließlich des Feedbacks, das erläutert, wie Sie den Fehler beheben können.
+Zusätzliche Informationen zum Fehler bei der Erkennung einer Person, einschließlich Feedback, in dem erläutert wird, wie der Fehler behoben werden kann.
 
 </dd> <dt>
 
 **Identität**
 </dt> <dd>
 
-Die Identität der Person, deren Anwesenheit überwacht wird, nachdem diese Person identifiziert wurde.
+Die Identität der Person, deren Vorhandensein überwacht wird, sobald diese Person identifiziert wurde.
 
 </dd> <dt>
 
 **TrackingId**
 </dt> <dd>
 
-Eine ganze Zahl, die vom Adapter generiert wird und die einzelne eindeutig identifiziert. Die nach Verfolgungs-ID, die der Adapter einer bestimmten Person zuweist, ist garantiert konstant, solange diese Person im Kamera Rahmen verbleibt.
+Eine ganze Zahl, die vom Adapter generiert wird und die Person eindeutig identifiziert. Der Nachverfolgungsbezeichner, den der Adapter einer bestimmten Person zuweist, ist garantiert konstant, solange diese Person im Kamerarahmen verbleibt.
 
 </dd> <dt>
 
@@ -100,21 +100,21 @@ Reserviert. Wird vom Adapter auf 0 festgelegt.
 **Eigenschaften**
 </dt> <dd>
 
-Faktor spezifische Informationen über die Position einer einzelnen Person.
+Faktorspezifische Informationen zur Position einer Einzelperson.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**engineadapteridentifyall**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_all_fn) -Funktion erstellt ein Array von **winbio- \_ Anwesenheits** Strukturen und sendet dieses Array an den biometrischen Dienst. Der biometrische Dienst verwendet das Array, um das interne Modell der Menschen in der Nähe des Computers zu aktualisieren.
+Die [**EngineAdapterIdentifyAll-Funktion**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_all_fn) erstellt ein Array von **WINBIO \_ PRESENCE-Strukturen** und sendet dieses Array an den biometrischen Dienst. Der biometrische Dienst verwendet das Array, um sein internes Modell von Menschen in der Nähe des Computers zu aktualisieren.
 
-Abhängig von den Ergebnissen dieses Updates kann der biometrische Dienst eine [**winbio \_ Async- \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur für die [**winbiomonitorpresence**](/windows/desktop/api/winbio/nf-winbio-winbiomonitorpresence) -Funktion für alle Clients mit aktiven Anwesenheits Monitoren generieren. Das asynchrone **winbio- \_ \_ Ergebnis. Der Vorgangs** -Member der-Struktur enthält die **Anwesenheit des winbio- \_ Vorgangs \_ Monitors \_** und das asynchrone **winbio- \_ \_ Ergebnis. Der Parameter. monitorpresence. ChangeType** -Member stellt zusätzliche Informationen über den Zustand der einzelnen Person bereit.
+Abhängig von den Ergebnissen dieses Updates kann der biometrische Dienst eine [**WINBIO \_ ASYNC \_ RESULT-Struktur**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) für die [**WinBioMonitorPresence-Funktion**](/windows/desktop/api/winbio/nf-winbio-winbiomonitorpresence) für alle Clients mit Monitoren mit aktiver Präsenz generieren. Das **\_ WINBIO-ASYNCHRONE \_ ERGEBNIS. Der Vorgangsmember** der -Struktur enthält **WINBIO \_ OPERATION MONITOR \_ \_ PRESENCE** und das **WINBIO \_ ASYNC \_ RESULT. Parameters.MonitorPresence.ChangeType-Member** stellt zusätzliche Informationen zum Zustand der Einzelnen bereit.
 
-Wenn eine Person, die der Engine-Adapter einem bestimmten nach Verfolgungs Bezeichner zuordnet, zum ersten Mal im Eingabestream angezeigt wird, generiert der biometrische Dienst eine Client seitige winbio-asynchrone [**\_ \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur, in der das **winbio \_ Async- \_ Ergebnis ist. Parameter. monitorpresence. ChangeType** -Member ist eine **winbio- \_ \_ Änderungstyp \_ Ankunft**. Diese Struktur wird an die Rückruffunktion der Anwendung oder an die Anwendungs Nachrichten Warteschlange gesendet, bevor alle anderen **winbio \_ Async- \_ Ergebnis** Strukturen, in denen das **winbio \_ Async- \_ Ergebnis vorliegt Parameters. monitorpresence. presencearray** enthält eine **winbio- \_ Anwesenheits** Struktur mit dem gleichen Wert für die **winbio- \_ Präsenz. TrackingID**.
+Wenn eine Person, die der Engine-Adapter einem bestimmten Nachverfolgungsbezeichner zuweist, zum ersten Mal im Eingabestream angezeigt wird, generiert der biometrische Dienst eine clientseitige [**\_ WINBIO-ASYNC \_ RESULT-Struktur,**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) in der **WINBIO \_ ASYNC RESULT enthalten \_ ist. Parameters.MonitorPresence.ChangeType** Member ist **WINBIO \_ CHANGE TYPE \_ \_ ARRIVAL**. Diese Struktur wird an Ihre Anwendungsrückruffunktion oder Anwendungsnachrichtenwarteschlange vor allen anderen **WINBIO \_ ASYNC \_ RESULT-Strukturen** gesendet, bei denen **winbio \_ ASYNC \_ RESULT. Parameters.MonitorPresence.PresenceArray** enthält eine **WINBIO \_ PRESENCE-Struktur** mit dem gleichen Wert für **WINBIO \_ PRESENCE. TrackingId**.
 
-Die folgenden Kombinationen von Werten im Array von **winbio- \_ Anwesenheits** Strukturen, die das **winbio \_ Async-Ergebnis hat \_ . Der Parameter. monitorpresence. presencearray** -Member zeigt bestimmte Arten von Änderungen im Zustand einer einzelnen Person an.
+Die folgenden Kombinationen von Werten im Array von **WINBIO \_ PRESENCE-Strukturen,** die das **WINBIO \_ ASYNC RESULT \_ aufweisen. Parameters.MonitorPresence.PresenceArray-Member** geben bestimmte Arten von Änderungen im Zustand einer Einzelperson an.
 
--   Wenn eine Person im Kamera Rahmen sichtbar ist, die Engine aber immer noch versucht, die Person zu identifizieren, haben die Elemente der **winbio- \_ Anwesenheits** Struktur die Werte in der folgenden Tabelle.
+-   Wenn eine Person im Kamerarahmen sichtbar ist, die Engine jedoch weiterhin versucht, die Person zu identifizieren, verfügen die Member der **WINBIO \_ PRESENCE-Struktur** über die Werte in der folgenden Tabelle.
 
     
 
@@ -122,35 +122,35 @@ Die folgenden Kombinationen von Werten im Array von **winbio- \_ Anwesenheits** 
     |-------------------|----------------------------------------------------------|
     | **TrackingId**    | Eine ganze Zahl, die die Person für die Engine identifiziert. |
     | **Status**        | **S \_ OK**                                                |
-    | **Identity. Type** | **winbio- \_ ID- \_ Typ \_ null**                               |
+    | **Identity.Type** | **\_WINBIO-ID-TYP \_ \_ NULL**                               |
 
     
 
      
 
-    In diesem Fall erweitert der biometrische Dienst die Ablaufzeit für die Einzelperson und generiert keine Client seitige winbio-asynchrone [**\_ \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur für den nach Verfolgungs Bezeichner, in dem sich das **winbio \_ Async- \_ Ergebnis befindet. Der Parameter. monitorpresence. ChangeType** -Member ist **vom winbio- \_ \_ Änderungstyp " \_ erkennen**".
+    In diesem Fall verlängert der biometrische Dienst die Ablaufzeit für die Person und generiert keine clientseitige [**\_ WINBIO-ASYNC \_ RESULT-Struktur**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) für den Nachverfolgungsbezeichner, bei dem **winbio \_ ASYNC \_ RESULT vorhanden ist. Parameters.MonitorPresence.ChangeType** member is **WINBIO \_ CHANGE TYPE \_ \_ RECOGNIZE**.
 
-    Beim ersten Mal, wenn [**eine winbio \_ Async- \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur eine **winbio- \_ Anwesenheits** Struktur enthält, bei der das **statusmember** **S \_ OK** und die **Identität ist. Typmember** ist ein **winbio-ID- \_ \_ Typ \_ null** , nachdem mindestens eine **winbio- \_ Async- \_ Ergebnis** Struktur eine **winbio- \_ Anwesenheits** Struktur mit einem **Status** Mitglied von **winbio E ungültige \_ \_ \_ Erfassung** enthielt. der Anwesenheits Monitor generiert eine einzelne **winbio \_ Async- \_ Ergebnis** Struktur für die nach Verfolgungs-ID, bei der das asynchrone **winbio-Ergebnis ist \_ \_ . Parameter. monitorpresence. ChangeType** -Member ist ein **winbio- \_ \_ Änderungstyp \_ Track**. Diese **winbio \_ Async- \_ Ergebnis** Struktur, in der das **winbio \_ Async-Ergebnis ist \_ . Der Parameter. monitorpresence. ChangeType** -Member ist ein **winbio- \_ \_ Änderungstyp \_** , der dem Client mitteilt, dass das Problem, das den Fehler aufgrund eines ungültigen **winbio- \_ \_ \_ Erfassungs** Fehlers verursacht hat Weitere Informationen zu den Fällen, in denen eine **winbio- \_ Anwesenheits** Struktur einen **Status** Mitglied von **winbio E ungültige \_ \_ \_ Erfassung** hat, finden Sie in der Beschreibung der Art und Weise, wie der Engine-Adapter dem Benutzer Feedback zur Behebung von Erkennungs Fehlern bietet, später in diesen hinweisen.
+    Wenn eine [**WINBIO \_ ASYNC \_ RESULT-Struktur**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) zum ersten Mal eine **\_ WINBIO-PRESENCE-Struktur** enthält, bei der der **Statusmember** **S \_ OK** und der **Identity.Type-Member** **WINBIO ID TYPE \_ \_ \_ NULL** ist, nachdem eine oder mehrere **\_ WINBIO-ASYNC \_ RESULT-Strukturen** eine **WINBIO \_ PRESENCE-Struktur** mit einem **Statusmember** von **WINBIO \_ E BAD \_ \_ CAPTURE** enthalten haben, generiert der Anwesenheitsmonitor eine einzelne **WINBIO \_ ASYNC \_ RESULT-Struktur** für den Überwachungsbezeichner, bei dem das **WINBIO ASYNC RESULT enthalten \_ \_ ist. Parameters.MonitorPresence.ChangeType** member is **WINBIO \_ CHANGE TYPE \_ \_ TRACK**. Diese **WINBIO \_ ASYNC \_ RESULT-Struktur,** in der das **\_ WINBIO-ASYNCHRONE \_ ERGEBNIS enthalten ist. Parameters.MonitorPresence.ChangeType** member is **WINBIO \_ CHANGE TYPE \_ \_ TRACK** informiert den Client, dass das Problem, das den **WINBIO E BAD \_ \_ \_ CAPTURE-Fehler** verursacht hat, behoben wurde. Weitere Informationen zu den Umständen, unter denen eine **WINBIO \_ PRESENCE-Struktur** **den Statusmember** von **WINBIO \_ E BAD \_ \_ CAPTURE** aufweist, finden Sie in der Beschreibung dazu, wie der Engine-Adapter dem Benutzer Feedback zum Beheben von Erkennungsfehlern weiter unten in diesen Hinweisen bereitstellt.
 
--   Wenn eine Person im Kamera Rahmen sichtbar ist, die Engine aber immer noch versucht, die Person zu identifizieren, und dem Benutzer Feedback zur Behebung eines Erkennungs Fehlers geben möchte, haben die Elemente der **winbio- \_ Anwesenheits** Struktur die Werte in der folgenden Tabelle.
+-   Wenn eine Person im Kamerarahmen sichtbar ist, die Engine jedoch weiterhin versucht, die Person zu identifizieren, und dem Benutzer Feedback zur Behebung eines Erkennungsfehlers geben möchte, verfügen die Member der **WINBIO \_ PRESENCE-Struktur** über die Werte in der folgenden Tabelle.
 
     
 
     | Member                                                                                                      | Wert                                                                         |
     |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
     | **TrackingId**                                                                                              | Eine ganze Zahl, die die Person für die Engine identifiziert.                      |
-    | **Status**                                                                                                  | **winbio \_ E ungültige \_ \_ Erfassung**                                                   |
-    | **Identity. Type**                                                                                           | **winbio- \_ ID- \_ Typ \_ null**                                                    |
-    | **Properties. fakialfeatures. BoundingBox**, wenn der Wert des **Faktors** **winbio \_ - \_ typgesichts \_ Merkmale** ist | Die Position der Vorderseite der Person innerhalb des Kamera Rahmens.           |
-    | **Properties. IRIS. BoundingBox**, wenn der Wert von **Faktor** **winbio- \_ Typ \_ IRIS** ist                       | Der Speicherort der Iris oder Irises der einzelnen im Kamera Rahmen. |
+    | **Status**                                                                                                  | **WINBIO \_ E \_ BAD \_ CAPTURE**                                                   |
+    | **Identity.Type**                                                                                           | **\_WINBIO-ID-TYP \_ \_ NULL**                                                    |
+    | **Properties.FacialFeatures.BoundingBox**, wenn der Wert von **Factor** **WINBIO \_ TYPE FACIAL \_ \_ FEATURES** ist | Die Position des Gesichts des Einzelnen innerhalb des Kamerarahmens.           |
+    | **Properties.Iris.BoundingBox**, wenn der Wert von **Factor** **WINBIO \_ TYPE \_ IRIS** ist                       | Die Position der Schwertlilien oder Schwertlilien des Einzelnen innerhalb des Kamerarahmens. |
 
     
 
      
 
-    In diesem Fall erweitert der biometrische Dienst die Ablaufzeit für die Einzelperson und generiert eine [**winbio \_ Async- \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur für den nach Verfolgungs Bezeichner, in dem sich das **winbio \_ Async- \_ Ergebnis befindet. Parameter. monitorpresence. ChangeType** -Member ist ein **winbio- \_ \_ Änderungstyp \_ Track**.
+    In diesem Fall verlängert der biometrische Dienst die Ablaufzeit für für die Person und generiert eine [**\_ WINBIO-ASYNC \_ RESULT-Struktur**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) für den Nachverfolgungsbezeichner, wobei **winbio \_ ASYNC \_ RESULT ist. Parameters.MonitorPresence.ChangeType** member is **WINBIO \_ CHANGE TYPE \_ \_ TRACK**.
 
--   Wenn eine Person im Kamera Rahmen sichtbar ist und der Engine-Adapter die Identität der einzelnen Person bestimmt, haben die Elemente der **winbio- \_ Anwesenheits** Struktur die Werte in der folgenden Tabelle.
+-   Wenn eine Person im Kamerarahmen sichtbar ist und der Engine-Adapter die Identität der Person bestimmt, weisen die Member der **WINBIO \_ PRESENCE-Struktur** die Werte in der folgenden Tabelle auf.
 
     
 
@@ -158,32 +158,32 @@ Die folgenden Kombinationen von Werten im Array von **winbio- \_ Anwesenheits** 
     |-------------------------------|----------------------------------------------------------|
     | **TrackingId**                | Eine ganze Zahl, die die Person für die Engine identifiziert. |
     | **Status**                    | **S \_ OK**                                                |
-    | **Identity. Type**             | **winbio- \_ ID- \_ Typ- \_ sid**                                |
-    | **Identity. Value. AccountSid** | Die Sicherheits-ID (SID) der Person.         |
+    | **Identity.Type**             | **\_ \_ WINBIO-ID-TYP-SID \_**                                |
+    | **Identity.Value.AccountSid** | Die Sicherheits-ID (SID) der Einzelperson.         |
 
     
 
      
 
-    In diesem Fall ordnet der biometrische Dienst den Überwachungs Bezeichner der sid für die Person zu und generiert eine Client seitige winbio-asynchrone [**\_ \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur für den nach Verfolgungs Bezeichner, in dem sich das **winbio \_ Async- \_ Ergebnis befindet. Der Parameter. monitorpresence. ChangeType** -Member ist **vom winbio- \_ \_ Änderungstyp " \_ erkennen**". Der biometrische Dienst generiert keine zusätzlichen Client seitigen **winbio \_ Async- \_ Ergebnis** Strukturen für die nach Verfolgungs-ID, es sei denn, die Person verlässt den Kamera Rahmen.
+    In diesem Fall ordnet der biometrische Dienst den Nachverfolgungsbezeichner der SID für die Person zu und generiert eine clientseitige [**WINBIO \_ ASYNC \_ RESULT-Struktur**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) für den Nachverfolgungsbezeichner, bei dem **winbio \_ ASYNC \_ RESULT. Parameters.MonitorPresence.ChangeType** member is **WINBIO \_ CHANGE TYPE \_ \_ RECOGNIZE**. Der biometrische Dienst generiert keine zusätzlichen clientseitigen **\_ WINBIO-ASYNC \_ RESULT-Strukturen** für den Nachverfolgungsbezeichner, es sei denn, die Person verlässt den Kamerarahmen.
 
--   Wenn eine Person im Kamera Rahmen sichtbar ist, der Engine-Adapter jedoch sicherstellt, dass die Person nicht registriert ist, haben die Elemente der **winbio- \_ Anwesenheits** Struktur die Werte in der folgenden Tabelle.
+-   Wenn eine Person im Kamerarahmen sichtbar ist, der Engine-Adapter jedoch bestimmt, dass die Person nicht registriert ist, weisen die Member der **WINBIO \_ PRESENCE-Struktur** die Werte in der folgenden Tabelle auf.
 
     
 
     | Member            | Wert                                                    |
     |-------------------|----------------------------------------------------------|
     | **TrackingId**    | Eine ganze Zahl, die die Person für die Engine identifiziert. |
-    | **Status**        | **winbio \_ E \_ Unknown- \_ ID**                               |
-    | **Identity. Type** | **winbio- \_ ID- \_ Typ \_ null**                               |
+    | **Status**        | **WINBIO \_ E \_ UNKNOWN \_ ID**                               |
+    | **Identity.Type** | **\_WINBIO-ID-TYP \_ \_ NULL**                               |
 
     
 
      
 
-    In diesem Fall ordnet der biometrische Dienst die nach Verfolgungs-ID der Person der Identität unbekannt zu und generiert eine Client seitige winbio-asynchrone [**\_ \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur für den nach Verfolgungs Bezeichner, in dem sich das asynchrone **winbio- \_ Ergebnis befindet \_ . Der Parameter. monitorpresence. ChangeType** -Member ist **vom winbio- \_ \_ Änderungstyp " \_ erkennen**". Der biometrische Dienst generiert keine zusätzlichen Client seitigen **winbio \_ Async- \_ Ergebnis** Strukturen für die nach Verfolgungs-ID, es sei denn, die Person verlässt den Kamera Rahmen.
+    In diesem Fall ordnet der biometrische Dienst den Nachverfolgungsbezeichner der Person der Identität UNKNOWN zu und generiert eine clientseitige [**\_ WINBIO-ASYNC \_ RESULT-Struktur**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) für den Überwachungsbezeichner, wobei **winbio \_ ASYNC \_ RESULT ist. Parameters.MonitorPresence.ChangeType** member is **WINBIO \_ CHANGE TYPE \_ \_ RECOGNIZE**. Der biometrische Dienst generiert keine zusätzlichen clientseitigen **\_ WINBIO-ASYNC \_ RESULT-Strukturen** für den Nachverfolgungsbezeichner, es sei denn, die Person verlässt den Kamerarahmen.
 
-Wenn eine Person, die der Engine-Adapter einem bestimmten nach Verfolgungs Bezeichner zuordnet, den Kamera Rahmen verlässt und in den von der [**engineadapteridentifyall**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_all_fn) -Funktion zurückgegebenen Werten nicht mehr angezeigt wird, läuft die nach Verfolgungs-ID schließlich ab. Wenn die nach Verfolgungs-ID abläuft, generiert der biometrische Dienst eine Client seitige [**winbio \_ Async- \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) Struktur, in der das **winbio \_ Async- \_ Ergebnis ist. Parameter. monitorpresence. ChangeType** -Member ist ein **winbio- \_ \_ Änderungstyp \_**. Der Engine-Adapter kann verhindern, dass der biometrische Dienst diese Struktur mit dem Wert des Werts " **winbio- \_ \_ \_ Änderungstyp** " durch Einschließen einer **winbio- \_ Anwesenheits** Struktur in das Array, das **engineadapteridentifyall** zurückgibt, in der die **winbio-Präsenz zurückgibt \_ . Status** Mitglied ist **S \_ OK** und die **winbio- \_ Präsenz. Identity. Type** -Member ist der **winbio- \_ ID- \_ Typ \_ null** , wie zuvor in diesen Hinweisen beschrieben. Durch diese Aktion wird die Ablaufzeit für die nach Verfolgungs-ID erweitert, ohne dass eine Client seitige Aktivität verursacht wird.
+Wenn eine Person, die vom Engine-Adapter einem bestimmten Nachverfolgungsbezeichner zugeordnet wird, den Kamerarahmen verlässt und in den Von der [**EngineAdapterIdentifyAll-Funktion**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_all_fn) zurückgegebenen Werten nicht mehr angezeigt wird, läuft der Nachverfolgungsbezeichner schließlich ab. Wenn der Nachverfolgungsbezeichner abläuft, generiert der biometrische Dienst eine clientseitige [**\_ WINBIO-ASYNC \_ RESULT-Struktur,**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result) in der **das \_ WINBIO-ASYNCHRONE \_ ERGEBNIS vorhanden ist. Parameters.MonitorPresence.ChangeType-Member** ist **WINBIO \_ CHANGE TYPE \_ \_ VERÄNDERLICHKEIT**. Der Engine-Adapter kann verhindern, dass der biometrische Dienst diese Struktur mit dem **WINBIO \_ CHANGE TYPE \_ \_ ENTF-Wert** generiert, indem er eine **WINBIO \_ PRESENCE-Struktur** in das Array einschließt, das **EngineAdapterIdentifyAll** zurückgibt, wobei **winbio PRESENCE verwendet \_ wird. Statusmember** ist **S \_ OK** und **WINBIO \_ PRESENCE. Identity.Type-Member** ist **WINBIO \_ ID TYPE \_ \_ NULL,** wie weiter oben in diesen Hinweisen beschrieben. Diese Aktion verlängert die Ablaufzeit für den Nachverfolgungsbezeichner, ohne dass eine clientseitige Aktivität verursacht wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -191,23 +191,23 @@ Wenn eine Person, die der Engine-Adapter einem bestimmten nach Verfolgungs Bezei
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h für Client Anwendungen oder winbio \_ Adapters. h für Adapter)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                                                                                     |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h für Clientanwendungen oder Winbio \_ adapters.h für Adapter einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**winbio \_ Async- \_ Ergebnis**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result)
+[**WINBIO \_ \_ ASYNC-ERGEBNIS**](/windows/desktop/api/Winbio/ns-winbio-winbio_async_result)
 </dt> <dt>
 
-[**Winbiomonitorpresence**](/windows/desktop/api/winbio/nf-winbio-winbiomonitorpresence)
+[**WinBioMonitorPresence**](/windows/desktop/api/winbio/nf-winbio-winbiomonitorpresence)
 </dt> <dt>
 
-[**Engineadapteridentifyall**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_all_fn)
+[**EngineAdapterIdentifyAll**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_all_fn)
 </dt> </dl>
 
  

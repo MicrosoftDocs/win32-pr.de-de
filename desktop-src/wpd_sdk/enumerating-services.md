@@ -1,31 +1,31 @@
 ---
-description: Auflisten von Diensten
+description: Aufzählen von Diensten
 ms.assetid: 6ee6eecb-3812-45c6-8b27-7dfd6fa82758
-title: Auflisten von Diensten
+title: Aufzählen von Diensten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2eca8221a9a34bf9e921bcaca00eac99f2a75d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 149384f9c4ab5cf352561d08b28a961c8074cc39c018cef6b5deb64307d107ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697606"
 ---
-# <a name="enumerating-services"></a>Auflisten von Diensten
+# <a name="enumerating-services"></a>Aufzählen von Diensten
 
-Die Anwendung wpdservicesapisample enthält Code, der veranschaulicht, wie eine Anwendung alle Kontakte Dienste auflisten kann, die auf einem der derzeit mit einem Computer verbundenen Geräte gefunden werden.
+Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung alle Kontaktdienste auf einem der Geräte aufzählen kann, die derzeit mit einem Computer verbunden sind.
 
-Wenn der Benutzer die Option "0" in der Befehlszeile auswählt, ruft die Anwendung die **enumeratecontactsservices** -Methode auf, die im serviceenumeration. cpp-Modul zu finden ist. Mit dieser Methode wird eine Liste aller verbundenen Geräte angezeigt, die den Kontakt Dienst unterstützen.
+Wenn der Benutzer die Option "0" in der Befehlszeile auswählt, ruft die Anwendung die **EnumerateContactsServices-Methode** auf, die sich im Modul ServiceEnumeration.cpp befindet. Diese Methode zeigt eine Liste aller verbundenen Geräte an, die den Kontaktdienst unterstützen.
 
-Wenn z. b. "wpdservicesampledriver" das einzige installierte Gerät ist, gibt die Anwendung drei Datenfelder zurück: einen anzeigen Amen ("Beispiel Medium"), einen Hersteller ("Windows-Gruppe für tragbare Geräte") und eine Beschreibung ("Contact Service Device 2000").
+Wenn wpdServiceSampleDriver beispielsweise das einzige installierte Gerät ist, gibt die Anwendung drei Datenfelder zurück: einen Anzeigenamen ("Beispielgerät"), einen Hersteller ("Windows Gruppe portabler Geräte") und eine Beschreibung ("Contacts Service Device 2000").
 
-Die **enumeratecontactsservices** -Methode führt die folgenden Aufgaben aus:
+Die **EnumerateContactsServices-Methode** führt die folgenden Aufgaben aus:
 
--   Erstellt eine [**iportabledebug-Manager**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) -Schnittstelle, um die Enumeration installierter Geräte zu verarbeiten.
--   Erstellt eine [**iportableendviceservicemanager**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager) -Schnittstelle, um die Enumeration der Dienste auf jedem Gerät zu verarbeiten.
--   Durchläuft die installierten Geräte, sucht nach dem Kontakt Dienst und zeigt die Geräteinformationen für jedes Gerät an, das diesen Dienst unterstützt.
+-   Erstellt eine [**IPortableDeviceManager-Schnittstelle,**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) um die Enumeration installierter Geräte zu verarbeiten.
+-   Erstellt eine [**IPortableDeviceServiceManager-Schnittstelle,**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager) um die Enumeration der Dienste auf jedem Gerät zu verarbeiten.
+-   Durchläuft die installierten Geräte, sucht nach dem Dienst Kontakte und zeigt die Geräteinformationen für jedes Gerät an, das diesen Dienst unterstützt.
 
-Der folgende Code veranschaulicht die **enumeratecontactsservices** -Methode.
+Der folgende Code veranschaulicht die **EnumerateContactsServices-Methode.**
 
 
 ```C++
@@ -147,13 +147,13 @@ void EumerateContactsServices(CAtlArray<PWSTR>& ContactsServicePnpIDs)
 
 <dl> <dt>
 
-[**Iportabledebug Manager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager)
+[**IPortableDeviceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager)
 </dt> <dt>
 
-[**Iportabledebug Service Service Manager-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager)
+[**IPortableDeviceServiceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

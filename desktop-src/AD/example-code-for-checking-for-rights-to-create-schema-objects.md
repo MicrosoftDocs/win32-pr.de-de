@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für die Überprüfung der Rechte zum Erstellen von Schema Objekten
-description: Im folgenden C/C++-Codebeispiel wird eine Funktion veranschaulicht, die das Attribut "attribuwedchildclasseseffective" im Schema Container (IADs-Zeiger auf Schema Container wird als Parameter übergeben) für die attributeSchema-Klasse und die classSchema-Klasse überprüft.
+title: Beispielcode für die Überprüfung auf Rechte zum Erstellen von Schemaobjekten
+description: Das folgende C/C++-Codebeispiel zeigt eine Funktion, die das allowedChildClassesEffective-Attribut für den Schemacontainer überprüft (IADs-Zeiger auf Schemacontainer wird als Parameter übergeben) für die AttributeSchema- und classSchema-Klassen.
 ms.assetid: 3abc2351-a3cf-4a6c-9a13-15dd51723883
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Überprüfung der Rechte zum Erstellen von Schema Objekten AD
+- Beispielcode für die Überprüfung auf Rechte zum Erstellen von Schemaobjekten AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bef0d4958313a189a0a50c0b4233fdb4a30aaf75
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0200253fe10f91db1c1e67fbfc727d9165ecb8430aa4e2f648de9d3a1b8c73bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118694482"
 ---
-# <a name="example-code-for-checking-for-rights-to-create-schema-objects"></a>Beispiel Code für die Überprüfung der Rechte zum Erstellen von Schema Objekten
+# <a name="example-code-for-checking-for-rights-to-create-schema-objects"></a>Beispielcode für die Überprüfung auf Rechte zum Erstellen von Schemaobjekten
 
-Im folgenden C/C++-Codebeispiel wird eine Funktion veranschaulicht, die das Attribut " **attribuwedchildclasseseffective** " im Schema Container (IADs-Zeiger auf Schema Container wird als Parameter übergeben) für die **attributeSchema** -Klasse und die **classSchema** -Klasse überprüft. Er gibt **" \_ OK** " zurück, wenn beide Klassen in " **Zuordnungs** Klasse" aufgeführt sind. Wenn beides nicht der Fall ist, wird **S \_ false** zurückgegeben.
+Das folgende C/C++-Codebeispiel zeigt eine Funktion, die das **allowedChildClassesEffective-Attribut** für den Schemacontainer überprüft (IADs-Zeiger auf Schemacontainer wird als Parameter übergeben) für die **AttributeSchema-** und **classSchema-Klassen.** Sie gibt **S \_ OK** zurück, wenn beide Klassen in **allowedChildClassesEffective** aufgeführt sind. Wenn beide nicht sind, wird **S \_ FALSE** zurückgegeben.
 
 
 ```C++
@@ -95,9 +95,9 @@ return hr;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

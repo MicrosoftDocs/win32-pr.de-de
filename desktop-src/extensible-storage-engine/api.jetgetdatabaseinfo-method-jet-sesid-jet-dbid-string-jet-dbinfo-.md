@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetgetdatabaseingefo-Methode (JET_SESID, JET_DBID, Zeichenfolge, JET_DbInfo)'
-title: API. jetgetdatabaseingefo-Methode (JET_SESID, JET_DBID, Zeichenfolge, JET_DbInfo)
+description: Weitere Informationen zur Api.JetGetDatabaseInfo-Methode (JET_SESID, JET_DBID, String, JET_DbInfo)
+title: Api.JetGetDatabaseInfo-Methode (JET_SESID, JET_DBID, String, JET_DbInfo)
 TOCTitle: JetGetDatabaseInfo method (JET_SESID, JET_DBID, String, JET_DbInfo)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetDatabaseInfo(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String@,Microsoft.Isam.Esent.Interop.JET_DbInfo)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetdatabaseinfo(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d07ce09ac97a59936a47103067b32f348ed2ff56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f0c25ca4460937705b8ff5ecd0472db0646ecbe8b88d84b84263a82b7c51d32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118784196"
 ---
-# <a name="apijetgetdatabaseinfo-method-jet_sesid-jet_dbid-string-jet_dbinfo"></a>API. jetgetdatabaseingefo-Methode (JET_SESID, JET_DBID, Zeichenfolge, JET_DbInfo)
+# <a name="apijetgetdatabaseinfo-method-jet_sesid-jet_dbid-string-jet_dbinfo"></a>Api.JetGetDatabaseInfo-Methode (JET_SESID, JET_DBID, String, JET_DbInfo)
 
-Ruft bestimmte Informationen über die angegebene Datenbank ab.
+Ruft bestimmte Informationen zur angegebenen Datenbank ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,40 +63,40 @@ public static void JetGetDatabaseInfo(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
     Der Datenbankbezeichner.
 
 <!-- end list -->
 
   - value  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der abzurufende Wert.
 
 <!-- end list -->
 
-  - infolevel  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DbInfo](./jet-dbinfo-enumeration.md)  
+  - infoLevel  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DbInfo](./jet-dbinfo-enumeration.md)  
     
-    Die Daten, die abgerufen werden sollen.
+    Die spezifischen abzurufende Daten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetgetdatabaseingefo-Überladung](./api.jetgetdatabaseinfo-method.md)
+[JetGetDatabaseInfo-Überladung](./api.jetgetdatabaseinfo-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

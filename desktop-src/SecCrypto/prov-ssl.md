@@ -1,19 +1,19 @@
 ---
-description: Unterstützt das Secure Sockets Layer (SSL)-Protokoll.
+description: Unterstützt das SSL-Protokoll (Secure Sockets Layer).
 ms.assetid: c94d8584-f01b-469b-a0d6-5fb14796b93e
 title: PROV_SSL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 60c03050af4a6ee43e25abd912e30f27fef5874b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3667bbac41f265ac7508560621d471d2c66a0c67d7bd4054eca060afbf5f7e3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118901499"
 ---
-# <a name="prov_ssl"></a>Prov- \_ SSL
+# <a name="prov_ssl"></a>PROV \_ SSL
 
-Der Prov- \_ SSL-Anbietertyp unterstützt das Secure Sockets Layer (SSL)-Protokoll.
+Der PROV \_ SSL-Anbietertyp unterstützt das ssl-Protokoll (Secure Sockets Layer).
 
 ## <a name="algorithms-supported"></a>Unterstützte Algorithmen
 
@@ -23,7 +23,7 @@ Beschreibungen der einzelnen Algorithmen finden Sie im Glossar.
 
 | Zweck      | Unterstützte Algorithmen                                        |
 |--------------|-------------------------------------------------------------|
-| Schlüsselaustausch | [*RSA*](../secgloss/r-gly.md) |
+| Key Exchange | [*RSA*](../secgloss/r-gly.md) |
 | Signatur    | RSA                                                         |
 | Verschlüsselung   | Varies                                                      |
 | Hashing      | Varies                                                      |
@@ -34,7 +34,7 @@ Beschreibungen der einzelnen Algorithmen finden Sie im Glossar.
 
 ## <a name="related-documentation"></a>Verwandte Dokumentationen
 
-Eine Spezifikation, die das SSL-Protokoll erläutert, ist in der Netscape Communications Corporation verfügbar.
+Eine Spezifikation, in der das SSL-Protokoll erläutert wird, ist von der Netscape Communications Corporation verfügbar.
 
  
 

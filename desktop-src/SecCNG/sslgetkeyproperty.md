@@ -1,7 +1,7 @@
 ---
-description: Ruft den Wert einer benannten Eigenschaft für ein SSL-Anbieter Schlüsselobjekt (Secure Sockets Layer Protocol) ab.
+description: Ruft den Wert einer benannten Eigenschaft für ein SSL-Anbieterschlüsselobjekt (Secure Sockets Layer Protokoll) ab.
 ms.assetid: 01a7e82a-3888-4f96-85a2-e07811f1895e
-title: Sslgetkeyproperty-Funktion (sslprovider. h)
+title: SslGetKeyProperty-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 42952b76bfb46eeeb31b9f76b1f677e7b3b8e3e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b86f8a2e76573122bcfcf809d5301bc6bf70690467527f4dc69a5ec12419f56b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906118"
 ---
-# <a name="sslgetkeyproperty-function"></a>Sslgetkeyproperty-Funktion
+# <a name="sslgetkeyproperty-function"></a>SslGetKeyProperty-Funktion
 
-Die **sslgetkeyproperty** -Funktion Ruft den Wert einer benannten Eigenschaft für ein SSL-Anbieter Schlüsselobjekt ( [*Secure Sockets Layer Protocol*](/windows/desktop/SecGloss/s-gly) ) ab.
+Die **SslGetKeyProperty-Funktion** ruft den Wert einer benannten Eigenschaft für ein SSL-Schlüsselobjekt [*(Secure Sockets Layer*](/windows/desktop/SecGloss/s-gly) Protocol) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,35 +43,35 @@ SECURITY_STATUS WINAPI SslGetKeyProperty(
 
 <dl> <dt>
 
-*HKEY* \[ in\]
+*hKey* \[ In\]
 </dt> <dd>
 
 Das Handle des SSL-Anbieters.
 
 </dd> <dt>
 
-*pszproperty* \[ in\]
+*pszProperty* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Unicode-Zeichenfolge, die den Namen der abzurufenden Eigenschaft enthält. Hierbei kann es sich um einen der vordefinierten [**Schlüsselspeicher-Eigenschaften**](key-storage-property-identifiers.md) Bezeichner oder um einen benutzerdefinierten Eigenschaften Bezeichner handeln.
+Ein Zeiger auf eine auf NULL beendete Unicode-Zeichenfolge, die den Namen der abzurufenden Eigenschaft enthält. Dies kann einer der vordefinierten [**Schlüssel-Storage-Eigenschaftsbezeichner oder**](key-storage-property-identifiers.md) ein benutzerdefinierter Eigenschaftenbezeichner sein.
 
 </dd> <dt>
 
-*ppboutput* \[ vorgenommen\]
+*ppbOutput* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Eigenschafts Wert empfängt. Der Aufrufer der Funktion muss diesen Puffer durch Aufrufen der [**sslfreebuffer**](sslfreebuffer.md) -Funktion freigeben.
+Ein Zeiger auf einen Puffer, der den Eigenschaftswert empfängt. Der Aufrufer der Funktion muss diesen Puffer durch Aufrufen der [**SslFreeBuffer-Funktion frei**](sslfreebuffer.md) geben.
 
 </dd> <dt>
 
-*pcboutput* \[ vorgenommen\]
+*vor der Sperre* \[ out\]
 </dt> <dd>
 
-Die Größe des *pboutput* -Puffers in Bytes.
+Die Größe des *pbOutput-Puffers in* Bytes.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -80,18 +80,18 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ist, gibt sie 0 (null) zurück.
 
-Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
+Wenn die Funktion fehlschlägt, gibt sie einen Fehlerwert ungleich 0 (null) zurück.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende:
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                             |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl>    | Eines der bereitgestellten Handles ist ungültig.<br/>    |
-| <dl> <dt>**Ernte \_ Ungültiger \_ Parameter**</dt> <dt>0x80090027l</dt> </dl> | Einer der angegebenen Parameter ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl>    | Eines der bereitgestellten Handles ist ungültig.<br/>    |
+| <dl> <dt>**NTE \_ UNGÜLTIGER \_ PARAMETER**</dt> <dt>0x80090027L</dt> </dl> | Einer der angegebenen Parameter ist ungültig.<br/> |
 
 
 
@@ -103,9 +103,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

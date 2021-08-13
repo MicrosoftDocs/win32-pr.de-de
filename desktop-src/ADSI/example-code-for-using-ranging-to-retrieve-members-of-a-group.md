@@ -1,25 +1,25 @@
 ---
-title: Beispiel Code für die Verwendung von Bereichen zum Abrufen von Mitgliedern einer Gruppe
-description: Im folgenden Codebeispiel wird der Bereich mit den ActiveX-Verzeichnis Objekten (ADO) verwendet, um die Mitglieder einer Gruppe abzurufen.
+title: Beispielcode für die Verwendung von Ranging zum Abrufen von Mitgliedern einer Gruppe
+description: Im folgenden Codebeispiel wird mit ActiveX Directory Objects (ADO) zum Abrufen der Mitglieder einer Gruppe verwendet.
 ms.assetid: baebefd5-7ac6-4d36-a5a4-0796d790abee
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Verwendung von Bereichen zum Abrufen von Mitgliedern einer Gruppe ADSI
-- Beispielcode C/C++ ADSI mit Bereich zum Abrufen von Mitgliedern einer Gruppe
+- Beispielcode für die Verwendung von Ranging zum Abrufen von Mitgliedern einer Gruppen-ADSI
+- Beispielcode C/C++ ADSI mithilfe von ranging zum Abrufen von Mitgliedern einer Gruppe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c596134b8c20bc777c77b65e6fe349884dda25a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 31d68920d19135387ec76003ca621472ea9266102d84930e4af84e13b886335b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691843"
 ---
-# <a name="example-code-for-using-ranging-to-retrieve-members-of-a-group"></a>Beispiel Code für die Verwendung von Bereichen zum Abrufen von Mitgliedern einer Gruppe
+# <a name="example-code-for-using-ranging-to-retrieve-members-of-a-group"></a>Beispielcode für die Verwendung von Ranging zum Abrufen von Mitgliedern einer Gruppe
 
-Im folgenden Codebeispiel wird der Bereich mit den ActiveX-Verzeichnis Objekten (ADO) verwendet, um die Mitglieder einer Gruppe abzurufen.
+Im folgenden Codebeispiel wird mit ActiveX Directory Objects (ADO) zum Abrufen der Mitglieder einer Gruppe verwendet.
 
-Der folgende Code Ausschnitt erfordert einen Verweis auf die Microsoft ActiveX Data Objects 6,0-Bibliothek.
+Der folgende Codeausschnitt erfordert einen Verweis auf die Microsoft ActiveX Data Objects 6.0-Bibliothek.
 
 
 ```VB
@@ -110,9 +110,9 @@ End Module
 
 
 
- 
+ 
 
- 
+ 
 
 
 

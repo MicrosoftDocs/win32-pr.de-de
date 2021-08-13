@@ -1,9 +1,9 @@
 ---
-title: Waveactiveallequal-Funktion
-description: Gibt true zurück, wenn der Ausdruck für jede aktive Strecke in der aktuellen Wave identisch ist (und somit einheitlich ist).
+title: WaveActiveAllEqual-Funktion
+description: Gibt TRUE zurück, wenn der Ausdruck für jede aktive Spur in der aktuellen Welle identisch ist (und somit einheitlich darüber ist).
 ms.assetid: E0A051A8-0ADD-4EC7-8D9A-8820CED9DA9D
 keywords:
-- Waveactiveallequal-Funktion HLSL
+- WaveActiveAllEqual-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 34745e428fcd4453ce7274fc2a5accc6185f5b10
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
+ms.openlocfilehash: f62493a1bf08b85e95acad319bac2d022c30a53d43c28a87d0f5f603e78d300f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103734800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118786110"
 ---
-# <a name="waveactiveallequal-function"></a>Waveactiveallequal-Funktion
+# <a name="waveactiveallequal-function"></a>WaveActiveAllEqual-Funktion
 
-Gibt true zurück, wenn der Ausdruck für jede aktive Strecke in der aktuellen Wave identisch ist (und somit einheitlich ist).
+Gibt TRUE zurück, wenn der Ausdruck für jede aktive Spur in der aktuellen Welle identisch ist (und somit einheitlich darüber ist).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,11 +48,11 @@ Der auszuwertende Ausdruck.
 
 ## <a name="return-value"></a>Rückgabewert
 
-True, wenn der Ausdruck für jede aktive Strecke in der aktuellen Wave gleich ist.
+TRUE, wenn der Ausdruck für jede aktive Spur in der aktuellen Welle identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -62,10 +62,10 @@ Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt.
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

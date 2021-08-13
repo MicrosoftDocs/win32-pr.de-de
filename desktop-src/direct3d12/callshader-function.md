@@ -12,19 +12,19 @@ api_name:
 - CallShader
 api_type:
 - NA
-ms.openlocfilehash: 8c5cdf4e0a71430d6375fd75ca553f92ca9539b9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e411ef61c34eafcef71f3e68f6700651e4b3073423afd40451f139f02826e504
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119280350"
 ---
 # <a name="callshader-function"></a>CallShader-Funktion
 
 Ruft einen anderen Shader innerhalb eines Shaders auf.
 
 ## <a name="syntax"></a>Syntax
-Diese intrinsische Funktionsdefinition entspricht der folgenden Funktions Vorlage:
+Diese systeminterne Funktionsdefinition entspricht der folgenden Funktionsvorlage:
 
 ```
 template<param_t>
@@ -37,20 +37,20 @@ void CallShader(uint ShaderIndex, inout param_t Parameter);
 
 `ShaderIndex`
 
-Eine ganze Zahl ohne Vorzeichen, die den Index in die Aufruf [Bare shadertabelle](callable-shader.md) darstellt, die im Aufruf von [**dispatchrays**] angegeben ist (/Windows/Desktop/API/d3d12/NF-d3d12-id3d12graphicscommandlist4-dispatchrays.
+Eine ganze Zahl ohne Vorzeichen, die den Index in der [aufrufbaren Shadertabelle](callable-shader.md) darstellt, die im Aufruf von [**DispatchRays**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-dispatchrays angegeben ist.
 
 `Parameter`
 
-Die benutzerdefinierten Parameter, die an den Aufruf baren Shader übergeben werden.  Diese Parameter Struktur muss der Parameter Struktur entsprechen, die in dem Aufruf baren Shader verwendet wird, auf den in der Shader-Tabelle verwiesen wird.
+Die benutzerdefinierten Parameter, die an den aufrufbaren Shader übergeben werden sollen.  Diese Parameterstruktur muss mit der Parameterstruktur übereinstimmen, die im aufrufbaren Shader verwendet wird, auf den in der Shadertabelle gezeigt wird.
 
 
 ## <a name="return-value"></a>Rückgabewert
 
 **void**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 * [**Callable-Shader**](callable-shader.md)
 * [**Closest Hit-Shader**](closest-hit-shader.md)
@@ -59,7 +59,7 @@ Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

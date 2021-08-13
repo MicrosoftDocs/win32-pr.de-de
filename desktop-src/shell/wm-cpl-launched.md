@@ -1,6 +1,6 @@
 ---
-description: 'WM_CPL_LAUNCHED: Diese Meldung wird nicht unterstützt.'
-title: WM_CPL_LAUNCHED (Cpl.h)
+description: 'WM_CPL_LAUNCHED Meldung: Diese Meldung wird nicht unterstützt.'
+title: WM_CPL_LAUNCHED-Nachricht (Cpl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: ec63866d-ae1f-49c5-b1fc-d35b3e03ecd9
@@ -13,12 +13,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 2ee7ed5e20931db2752b12083fbc549d3be8b646
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6519807a2c16005667e3949c5c72f496c6427de6ce1e30996a261fe9b690a5da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118451839"
 ---
 # <a name="wm_cpl_launched-message"></a>WM \_ CPL \_ LAUNCHED-Nachricht
 
@@ -26,13 +26,13 @@ Diese Meldung wird nicht unterstützt.
 
 ## <a name="parameters"></a>Parameter
 
-Diese Meldung enthält keine Parameter.
+Diese Nachricht enthält keine Parameter.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>Cpl.h</dt> </dl> |
 

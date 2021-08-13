@@ -1,31 +1,31 @@
 ---
-description: Das Ereignis settargetpath benachrichtigt den Installer, den ausgewählten Pfad zu überprüfen und festzulegen. Wenn der Pfad für den Schreibzugriff nicht gültig ist, blockiert der Installer weitere ControlEvents, die dem Steuerelement zugeordnet sind.
+description: Das SetTargetPath-Ereignis benachrichtigt das Installationsprogramm, den ausgewählten Pfad zu überprüfen und festzulegen. Wenn der Pfad nicht in geschrieben werden kann, blockiert das Installationsprogramm weitere ControlEvents, die dem Steuerelement zugeordnet sind.
 ms.assetid: 5649da99-1541-47ab-9d2e-b33a705998ec
-title: Settargetpath ControlEvent
+title: SetTargetPath ControlEvent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36812d291ab4410b08c577e6d118c3ff9e5dc0b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40e49e9447d7d2e67dce85e7d60638c18a949ecbc87800d12a60bc94d971cb30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118625070"
 ---
-# <a name="settargetpath-controlevent"></a>Settargetpath ControlEvent
+# <a name="settargetpath-controlevent"></a>SetTargetPath ControlEvent
 
-Das Ereignis settargetpath benachrichtigt den Installer, den ausgewählten Pfad zu überprüfen und festzulegen. Wenn der Pfad für den Schreibzugriff nicht gültig ist, blockiert der Installer weitere ControlEvents, die dem Steuerelement zugeordnet sind.
+Das SetTargetPath-Ereignis benachrichtigt das Installationsprogramm, den ausgewählten Pfad zu überprüfen und festzulegen. Wenn der Pfad nicht in geschrieben werden kann, blockiert das Installationsprogramm weitere ControlEvents, die dem Steuerelement zugeordnet sind.
 
-Dieses Ereignis kann von einem [PUSHBUTTON-Steuer](pushbutton-control.md)Element oder einem [SelectionTree-Steuer](selectiontree-control.md)Element veröffentlicht werden. Dieses Ereignis sollte in der [Tabelle ControlEvent](controlevent-table.md)erstellt werden.
+Dieses Ereignis kann von einem [PushButton-Steuerelement](pushbutton-control.md)oder einem [SelectionTree-Steuerelement](selectiontree-control.md)veröffentlicht werden. Dieses Ereignis sollte in der [ControlEvent-Tabelle](controlevent-table.md)erstellt werden.
 
-Diese ControlEvent erfordert, dass die Benutzeroberfläche auf der [*vollständigen*](f-gly.md) Benutzeroberfläche ausgeführt wird. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzer*](r-gly.md) Oberfläche oder [*grundlegender Benutzeroberfläche*](b-gly.md). Weitere Informationen finden Sie unter [Benutzeroberflächen Ebenen](user-interface-levels.md).
+Für dieses ControlEvent muss die Benutzeroberfläche auf [*der vollständigen Benutzeroberflächenebene*](f-gly.md) ausgeführt werden. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzeroberfläche*](r-gly.md) oder [*einer einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Ebenen.](user-interface-levels.md)
 
 ## <a name="published-by"></a>Veröffentlicht von
 
-Diese ControlEvent wird vom Installationsprogramm veröffentlicht.
+Dieses ControlEvent wird vom Installationsprogramm veröffentlicht.
 
 ## <a name="argument"></a>Argument
 
-Der Name der Eigenschaft, die den Pfad enthält. Wenn die Eigenschaft deretendiert ist, wird der Eigenschaftsname in eckige Klammern eingeschlossen.
+Der Name der Eigenschaft, die den Pfad enthält. Wenn die Eigenschaft indirekt ist, wird der Eigenschaftenname in eckige Klammern eingeschlossen.
 
 ## <a name="action-on-subscribers"></a>Aktion auf Abonnenten
 
@@ -33,11 +33,11 @@ Keine.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-Ein [PUSHBUTTON](pushbutton-control.md) -Steuerelement in einem Dialogfeld zum Durchsuchen ist an dieses Ereignis in der Tabelle [ControlEvent](controlevent-table.md) gebunden, um den ausgewählten Pfad vor der Rückgabe zum Auswahl Dialogfeld zu überprüfen.
+Ein [PushButton-Steuerelement](pushbutton-control.md) in einem Dialogfeld zum Durchsuchen ist an dieses Ereignis in der [ControlEvent-Tabelle](controlevent-table.md) gebunden, um den ausgewählten Pfad zu überprüfen, bevor zum Auswahldialogfeld zurückzukehren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Versuchen Sie nicht, den Zielpfad zu konfigurieren, wenn die Komponenten, die diese Pfade verwenden, für den aktuellen Benutzer oder für einen anderen Benutzer bereits installiert sind. Überprüfen Sie die Eigenschaft [**productstate**](productstate.md) vor dem Veröffentlichen von settargetpath ControlEvent, um zu bestimmen, ob das Produkt, das die Komponente enthält, installiert ist.
+Versuchen Sie nicht, den Zielpfad zu konfigurieren, wenn die Komponenten, die diese Pfade verwenden, bereits für den aktuellen Benutzer oder für einen anderen Benutzer installiert sind. Überprüfen Sie die [**ProductState-Eigenschaft,**](productstate.md) bevor Sie setTargetPath ControlEvent veröffentlichen, um zu ermitteln, ob das Produkt, das die Komponente enthält, installiert ist.
 
  
 

@@ -1,26 +1,26 @@
 ---
-description: Clipping wird von Anwendungen auf verschiedene Weise verwendet.
+description: Clipping wird von Anwendungen auf unterschiedliche Weise verwendet.
 ms.assetid: f0ecafcb-2fe4-482f-9333-324419740128
 title: Informationen zum Clipping
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7aeb74973a64e7c46a0a39bda87e0647b685eefe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4ee2747ce1af20ad458a0eefb6b5114178f5099e626d4d1ddc6bd78106727c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119452380"
 ---
 # <a name="about-clipping"></a>Informationen zum Clipping
 
-Clipping wird von Anwendungen auf verschiedene Weise verwendet. Textverarbeitungs-und Tabellenkalkulationsanwendungen schneiden Tastatureingaben aus, damit Sie nicht im Seitenrand einer Seite oder einer Tabelle angezeigt werden. Durch das Computer gestützte Design (CAD) und das Zeichnen von Anwendungen können Sie die Grafikausgabe Ausschneiden, damit die Ränder einer Zeichnung oder eines Bilds nicht überschrieben werden.
+Clipping wird von Anwendungen auf unterschiedliche Weise verwendet. Word-Verarbeitungs- und Tabellenkalkulationsanwendungen beschneiden Tastatureingaben, damit sie nicht an den Rändern einer Seite oder eines Arbeitsblatts angezeigt werden. Computergestütztes Design (CAD) und Zeichnungsanwendungen beschneiden die Grafikausgabe, damit sie die Ränder einer Zeichnung oder eines Bilds nicht überschreibt.
 
-Ein *Clippingbereich* ist ein Bereich mit Kanten, die entweder gerade Linien oder Kurven sind. Ein *Clip Pfad* ist ein Bereich mit Kanten, die gerade Linien, Bézier-Kurven oder Kombinationen aus beidem sind. Weitere Informationen zu Regionen finden Sie unter [Regionen](regions.md). Weitere Informationen zu Pfaden finden Sie unter [Pfade](paths.md).
+Ein *Clippingbereich* ist ein Bereich mit Kanten, die entweder gerade Linien oder Kurven sind. Ein *Clippfad* ist ein Bereich mit Kanten, die gerade Linien, Bézierkurven oder Kombinationen von beidem sind. Weitere Informationen zu Regionen finden Sie unter [Regionen.](regions.md) Weitere Informationen zu Pfaden finden Sie unter [Pfade.](paths.md)
 
 In dieser Übersicht werden die folgenden Themen behandelt:
 
--   [Clipping-Bereiche](clipping-regions.md)
--   [Clip Pfade](clip-paths.md)
+-   [Beschneidungsregionen](clipping-regions.md)
+-   [Clippfade](clip-paths.md)
 
  
 

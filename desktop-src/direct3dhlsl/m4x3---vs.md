@@ -1,6 +1,6 @@
 ---
-title: m4x3-vs
-description: Multipliziert einen 4-Komponenten Vektor mit einer 4X3-Matrix. | m4x3-vs
+title: m4x3 – vs
+description: Multipliziert einen 4-Komponenten-Vektor mit einer 4x3-Matrix. | m4x3 – vs
 ms.assetid: 12dd31bd-2078-44a1-912e-72c8f377bc4c
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7608b1187cc90cf4914bdd42a197cc6044d53734
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: bdf4fb45fd38fe7d5acec95d750a050144a408c7fd1dedc44be858bc00aa58ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119457420"
 ---
-# <a name="m4x3---vs"></a>m4x3-vs
+# <a name="m4x3---vs"></a>m4x3 – vs
 
-Multipliziert einen 4-Komponenten Vektor mit einer 4X3-Matrix.
+Multipliziert einen 4-Komponenten-Vektor mit einer 4x3-Matrix.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| m4x3 DST, src0, Quelle1 |
+| m4x3 dst, src0, src1 |
 |----------------------|
 
 
@@ -33,15 +33,15 @@ Multipliziert einen 4-Komponenten Vektor mit einer 4X3-Matrix.
 
 where
 
--   DST ist das Ziel Register. Das Ergebnis ist ein Vektor mit drei Komponenten.
--   src0 ist ein Quell Register, das einen 4-Komponenten Vektor darstellt.
--   Quelle1 ist ein Quell Register, das eine 4X3-Matrix darstellt, die dem ersten von drei aufeinander folgenden Registern entspricht.
+-   dst ist das Zielregister. Das Ergebnis ist ein 3-Komponenten-Vektor.
+-   src0 ist ein Quellregister, das einen 4-Komponenten-Vektor darstellt.
+-   src1 ist ein Quellregister, das eine 4x3-Matrix darstellt, die dem ersten von drei aufeinanderfolgenden Registern entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | m4x3                   | x    | x    | x    | x     | x    | x     |
 
@@ -49,9 +49,9 @@ where
 
  
 
-Die XYZ-Maske ist für das Ziel Register erforderlich. Negate-und Swizzle-Modifizierern sind für src0, aber nicht für Quelle1 zulässig.
+Die xyz-Maske ist für das Zielregister erforderlich. Negate- und Swizzle-Modifizierer sind für src0 zulässig, aber nicht für src1.
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -62,9 +62,9 @@ dest.z = (src0.x * src3.x) + (src0.y * src3.y) + (src0.z * src3.z) + (src0.w * s
 
 
 
-Der Eingabe Vektor befindet sich im Register src0. Die Eingabe 4X3-Matrix befindet sich im Register Quelle1 und den nächsten zwei höheren Registern, wie in der folgenden Erweiterung gezeigt. Ein 3D-Ergebnis wird erzeugt, wobei das andere Element des Ziel Registers (dest. w) nicht betroffen ist.
+Der Eingabevektor befindet sich im Register src0. Die 4x3-Eingabematrix befindet sich im Register src1 und die nächsten beiden höheren Register, wie in der folgenden Erweiterung gezeigt. Es wird ein 3D-Ergebnis erzeugt, ohne dass das andere Element des Zielregisters (dest.w) davon betroffen ist.
 
-Dieser Vorgang wird häufig verwendet, um einen Positions Vektor durch eine Matrix zu transformieren, die keine Projective Auswirkung hat, wie z. b. bei Transformationen im Modellbereich. Diese Anweisung wird als Paar von Punkt Produkten implementiert, wie unten gezeigt.
+Dieser Vorgang wird häufig zum Transformieren eines Positionsvektors durch eine Matrix verwendet, die keinen projektiven Effekt hat, z. B. bei Modellraumtransformationen. Diese Anweisung wird wie unten gezeigt als Paar von Punktprodukten implementiert.
 
 
 ```
@@ -77,13 +77,13 @@ dp4   r0.z, r1, c2
 
 
 
-Die Modifizierern "Swizzle" und "Negation" sind für das Quelle1 Register ungültig. Das DST-und src0-Register dürfen nicht identisch sein.
+Swizzle- und negate-Modifizierer sind für das Register src1 ungültig. Das Register dst und src0 dürfen nicht identisch sein.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  
