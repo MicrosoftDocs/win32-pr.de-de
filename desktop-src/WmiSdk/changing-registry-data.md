@@ -1,5 +1,5 @@
 ---
-description: 'Die System Registrierungs Anbieter-Klasse StdRegProv für WMI verfügt über Methoden, die Folgendes ausführen:'
+description: 'Die System Registry Provider-Klasse StdRegProv für WMI verfügt über Methoden, die folgende Schritte ausführen:'
 ms.assetid: d42248b3-2f96-4771-aee9-a0db139b149e
 ms.tgt_platform: multiple
 title: Ändern von Registrierungsdaten
@@ -10,44 +10,44 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7b51f3f18eb718dab7c79f31a4b2188dd7afa529
-ms.sourcegitcommit: 3d9eb6638763fee8b87c378657458f814182e36c
+ms.openlocfilehash: 32258fb64e075889a6e423e2b6a3fa2e7b0fdeb0ee5a80e2f45436674ba79c4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106373413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118556945"
 ---
 # <a name="changing-registry-data"></a>Ändern von Registrierungsdaten
 
-Die [System Registrierungs Anbieter](/previous-versions/windows/desktop/regprov/system-registry-provider) -Klasse [**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) für WMI verfügt über Methoden, die Folgendes ausführen:
+Die [System Registry Provider-Klasse](/previous-versions/windows/desktop/regprov/system-registry-provider) [**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) für WMI verfügt über Methoden, die folgende Schritte ausführen:
 
--   Erstellen oder Löschen von Registrierungs Schlüsseln.
+-   Erstellen oder Löschen von Registrierungsschlüsseln.
 
-    Verwenden Sie " [**kreatekey**](/previous-versions/windows/desktop/regprov/createkey-method-in-class-stdregprov) " oder " [**DeleteKey**](/previous-versions/windows/desktop/regprov/deletekey-method-in-class-stdregprov)".
+    Verwenden Sie [**CreateKey**](/previous-versions/windows/desktop/regprov/createkey-method-in-class-stdregprov) oder [**DeleteKey.**](/previous-versions/windows/desktop/regprov/deletekey-method-in-class-stdregprov)
 
--   Erstellen oder löschen Sie benannte Werte, die als Einträge bezeichnet werden, wenn Sie sich Unterschlüssel befinden.
+-   Erstellen oder löschen Sie benannte Werte, die als Einträge bezeichnet werden, wenn sie sich unter Schlüsseln befinden.
 
-    Verwenden Sie den Namen eines neuen Werts und [**SetBinaryValue**](/previous-versions/windows/desktop/regprov/setbinaryvalue-method-in-class-stdregprov), [**SetDWORDValue**](/previous-versions/windows/desktop/regprov/setdwordvalue-method-in-class-stdregprov), [**SetExpandedStringValue**](/previous-versions/windows/desktop/regprov/setexpandedstringvalue-method-in-class-stdregprov), [**SetMultiStringValue**](/previous-versions/windows/desktop/regprov/setmultistringvalue-method-in-class-stdregprov)oder [**SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov) , um einen benannten Wert zu erstellen. Verwenden Sie [**DeleteValue**](/previous-versions/windows/desktop/regprov/deletevalue-method-in-class-stdregprov) , um einen benannten Wert zu löschen.
+    Verwenden Sie den Namen eines neuen Werts und [**SetBinaryValue,**](/previous-versions/windows/desktop/regprov/setbinaryvalue-method-in-class-stdregprov) [**SetDWORDValue,**](/previous-versions/windows/desktop/regprov/setdwordvalue-method-in-class-stdregprov) [**SetExpandedStringValue,**](/previous-versions/windows/desktop/regprov/setexpandedstringvalue-method-in-class-stdregprov) [**SetMultiStringValue**](/previous-versions/windows/desktop/regprov/setmultistringvalue-method-in-class-stdregprov)oder [**SetStringValue,**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov) um einen benannten Wert zu erstellen. Verwenden Sie [**DeleteValue,**](/previous-versions/windows/desktop/regprov/deletevalue-method-in-class-stdregprov) um einen benannten Wert zu löschen.
 
--   Ändern benannter Werte.
+-   Ändern sie benannte Werte.
 
-    Verwenden Sie den Namen eines Werts und die Set-Methoden (im vorherigen aufzurufenen Element identifiziert), um vorhandene benannte Werte unter einem Schlüssel zu ändern. Sie müssen den Namen eines Werts kennen, um ihn zu ändern. Wenn Sie die Wertnamen unter einem Schlüssel nicht kennen, verwenden Sie die [**EnumValues**](/previous-versions/windows/desktop/regprov/enumvalues-method-in-class-stdregprov) -Methode, um die Namen abzurufen.
+    Verwenden Sie den Namen eines Werts und die Set-Methoden (im vorherigen Aufzählungselement identifiziert), um vorhandene benannte Werte unter einem Schlüssel zu ändern. Sie müssen den Namen eines Werts kennen, um ihn zu ändern. Wenn Sie die Wertnamen unter einem Schlüssel nicht kennen, verwenden Sie die [**EnumValues-Methode,**](/previous-versions/windows/desktop/regprov/enumvalues-method-in-class-stdregprov) um die Namen abzurufen.
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
 -   [Erstellen eines Registrierungsschlüssels mit VBScript](#creating-a-registry-key-using-vbscript)
--   [Erstellen eines benannten Registrierungs Werts mithilfe von PowerShell und VBScript](#creating-a-named-registry-value-using-powershell-and-vbscript)
+-   [Erstellen eines benannten Registrierungswerts mit powerShell und VBScript](#creating-a-named-registry-value-using-powershell-and-vbscript)
 
 ## <a name="creating-a-registry-key-using-vbscript"></a>Erstellen eines Registrierungsschlüssels mit VBScript
 
-Da es sich bei der Registrierung um die zentrale Konfigurations Datenbank für das Betriebssystem, Anwendungen und Dienste handelt, sollten Sie Vorsicht walten lassen, wenn Sie Änderungen an Registrierungs Werten schreiben oder Schlüssel löschen.
+Da es sich bei der Registrierung um die zentrale Konfigurationsdatenbank für das Betriebssystem, die Anwendungen und die Dienste handelt, sollten Sie beim Schreiben von Änderungen an Registrierungswerten oder Löschen von Schlüsseln vorsichtshalber vorgehen.
 
 > [!Note]  
-> Der Stamm Unterschlüssel **HKEY \_ - \_ Klassen** des HKEY **\_ Current \_ User (HKCU)** kann nicht überwacht werden. Das Überwachen von **HKEY- \_ Benutzern** wird nicht empfohlen, da die untergeordneten Schlüssel beim Laden von Strukturen angezeigt und ausgeblendet werden.
+> Sie können den **HKEY \_ CLASSES \_ ROOT-Unterschlüssel** von **HKEY \_ CURRENT \_ USER(HKCU)** nicht überwachen. Die Überwachung von **\_ HKEY-BENUTZERN** wird nicht empfohlen, da die Unterschlüssel angezeigt werden und ausgeblendet werden, wenn Hives geladen werden.
 
  
 
-In den folgenden Codebeispielen wird gezeigt, wie ein neuer Registrierungsschlüssel und ein Unterschlüssel erstellt werden.
+Die folgenden Codebeispiele zeigen, wie Sie einen neuen Registrierungsschlüssel und einen Unterschlüssel erstellen.
 
 
 ```VB
@@ -85,9 +85,9 @@ $reg = [wmiclass]"\\$strComputer\root\default:StdRegprov"
 
 
 
-## <a name="creating-a-named-registry-value-using-powershell-and-vbscript"></a>Erstellen eines benannten Registrierungs Werts mithilfe von PowerShell und VBScript
+## <a name="creating-a-named-registry-value-using-powershell-and-vbscript"></a>Erstellen eines benannten Registrierungswerts mit powerShell und VBScript
 
-Im folgenden Codebeispiel wird gezeigt, wie ein benannter Wert mit dem Namen " **multistringvalue** " unter der **HKEY \_ local \_ Machine** \\ **Software** \\ **myKey** \\ **MySubKey** -Schlüssel erstellt wird, den das vorherige Skript erstellt hat. Das Skript ruft [**StdRegProv. SetMultiStringValue**](/previous-versions/windows/desktop/regprov/setmultistringvalue-method-in-class-stdregprov) auf, um Zeichen folgen Werte in einen neuen benannten Wert zu schreiben.
+Das folgende Codebeispiel zeigt, wie Sie einen benannten Wert namens **MultiStringValue** unter dem **Schlüssel HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **MyKey** \\ **MySubKey** erstellen, den das vorherige Skript erstellt. Das Skript ruft [**StdRegProv.SetMultiStringValue**](/previous-versions/windows/desktop/regprov/setmultistringvalue-method-in-class-stdregprov) auf, um Zeichenfolgenwerte in einen neuen benannten Wert zu schreiben.
 
 
 ```VB
@@ -132,4 +132,4 @@ $multiValues = $reg.GetMultiStringValue($HKEY_LOCAL_MACHINE, $strKeyPath, $strVa
 $multiValues.sValue
 ```
 
-Mit WMI können Sie die Zugriffssicherheit für einen Registrierungsschlüssel nicht festlegen. Allerdings vergleicht die [**StdRegProv. CheckAccess**](/previous-versions/windows/desktop/regprov/checkaccess-method-in-class-stdregprov) -Methode die Sicherheitseinstellungen des aktuellen Benutzers mit der Sicherheits Beschreibung eines Registrierungsschlüssels, um zu bestimmen, ob der Benutzer über eine bestimmte Berechtigung verfügt, z. b. einen **Schlüssel \_ Satz \_ Wert**.
+Mithilfe von WMI können Sie die Zugriffssicherheit für einen Registrierungsschlüssel nicht festlegen. Die [**StdRegProv.CheckAccess-Methode**](/previous-versions/windows/desktop/regprov/checkaccess-method-in-class-stdregprov) vergleicht jedoch die Sicherheitseinstellungen des aktuellen Benutzers mit der Sicherheitsbeschreibung für einen Registrierungsschlüssel, um festzustellen, ob der Benutzer über eine bestimmte Berechtigung verfügt, z. B. **KEY SET \_ \_ VALUE**.

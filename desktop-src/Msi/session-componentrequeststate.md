@@ -1,7 +1,7 @@
 ---
-description: Die componentrequeststate-Eigenschaft des Session-Objekts Ruft eine Änderung im Aktionszustand einer Zeile in der Komponenten Tabelle ab oder fordert Sie an.
+description: Die ComponentRequestState-Eigenschaft des Session-Objekts erhält oder fordert eine Änderung des Aktionszustands einer Zeile in der Component-Tabelle an.
 ms.assetid: d0b50c25-dca6-4bdf-8ee9-490e436fcc5b
-title: Session. componentrequeststate (Eigenschaft)
+title: Session.ComponentRequestState(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 17ec77c5498a808e0d7ac0f2881057979d7db0c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3cef17ab3a4781f925e92968bd50dfedddd9a0df8e1781a2f209712fc447ef10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118625236"
 ---
-# <a name="sessioncomponentrequeststate-property"></a>Session. componentrequeststate (Eigenschaft)
+# <a name="sessioncomponentrequeststate-property"></a>Session.ComponentRequestState(Eigenschaft)
 
-Die **componentrequeststate** -Eigenschaft des [**Session**](session-object.md) -Objekts Ruft eine Änderung im Aktionszustand einer Zeile in der [Komponenten Tabelle](component-table.md)ab oder fordert Sie an.
+Die **ComponentRequestState-Eigenschaft** des [**Session-Objekts**](session-object.md) erhält oder fordert eine Änderung des Aktionszustands einer Zeile in der [Component-Tabelle an.](component-table.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,25 +37,25 @@ propVal = Session.ComponentRequestState
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Erforderlicher Zeichen folgen Name des Komponenten Elements, Primärschlüssel der Komponenten Tabelle.
+Erforderlicher Zeichenfolgenname des Komponentenelements, Primärschlüssel der Component-Tabelle.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Auswahl Status        | Wert | BESCHREIBUNG                                                    |
+| Auswahlzustand        | Wert | Beschreibung                                                    |
 |------------------------|-------|----------------------------------------------------------------|
-| Null                   | Null  | Fordert an, dass für dieses Element keine Aktion ausgeführt wird.                |
-| msiinstallstatemissing  | 2     | Das Element muss entfernt werden.                                         |
-| msiinstallstatuelocal   | 3     | Das Element muss lokal installiert werden.                               |
-| msiinstallstaatource  | 4     | Das Element muss installiert und vom Quell Medium aus ausgeführt werden.         |
-| msiinstallstatedefault | 5     | Wenn das Element installiert ist, muss es im selben Zustand neu installiert werden. |
+| Null                   | Null  | Fordert an, dass für dieses Element keine Aktion ergriffen wird.                |
+| msiInstallStateAbsent  | 2     | Das Element muss entfernt werden.                                         |
+| msiInstallStateLocal   | 3     | Das Element muss lokal installiert werden.                               |
+| msiInstallStateSource  | 4     | Das Element muss auf dem Quellmedium installiert und ausgeführt werden.         |
+| msiInstallStateDefault | 5     | Wenn es installiert ist, muss das Element im gleichen Zustand neu installiert werden. |
 
 
 
  
 
-Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mi
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ ISession ist definiert als 000c109e-0000-0000-C000-000000000046<br/>                                                                                                                                                                             |
+| IID<br/>     | IID ISession ist als \_ 000C109E-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                             |
 
 
 

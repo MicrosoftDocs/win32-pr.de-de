@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt sind die Werte aufgeführt, die für die Transit Netzwerk Auswahl verwendet werden
+description: In diesem Abschnitt werden die Werte aufgeführt, die für die Auswahl des Transitnetzwerks verwendet werden.
 ms.assetid: cafb47c0-73ff-47e4-8968-c065c821e646
-title: Transit Netzwerk Auswahl
+title: Auswahl des Transitnetzwerks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d293c9160019ae95ddeda483ea9001b37c45afb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b5da059e7b0d31e0496e2e10b4e7edeb887be7d08693b67848c87bcbde1b3f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118559316"
 ---
-# <a name="transit-network-selection"></a>Transit Netzwerk Auswahl
+# <a name="transit-network-selection"></a>Auswahl des Transitnetzwerks
 
-In diesem Abschnitt sind die Werte aufgeführt, die für die Transit Netzwerk Auswahl verwendet werden
+In diesem Abschnitt werden die Werte aufgeführt, die für die Auswahl des Transitnetzwerks verwendet werden.
 
 ``` syntax
 #include <windows.h>

@@ -1,7 +1,7 @@
 ---
-description: Mit der setStream-Methode des Datensatz-Objekts wird der Inhalt der angegebenen Datei als Streamdaten in das angegebene Daten Satz Feld kopiert. Streamdaten können nicht in temporäre Felder eingefügt werden.
+description: Die SetStream-Methode des Record-Objekts kopiert den Inhalt der angegebenen Datei als Streamdaten in das angegebene Datensatzfeld. Streamdaten können nicht in temporäre Felder eingefügt werden.
 ms.assetid: feb79371-d0c4-4bb0-b539-2f431ee1051b
-title: Record. setStream-Methode
+title: Record.SetStream-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 94ec3d63b3dcd75a13c2c0ff62b624b89979d641
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de443f2d6802fb74e4b0f05b90ca8d3b3f97e328991fde50ec05ff37c203943c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118626970"
 ---
-# <a name="recordsetstream-method"></a>Record. setStream-Methode
+# <a name="recordsetstream-method"></a>Record.SetStream-Methode
 
-Mit der **setStream** -Methode des [**Datensatz**](record-object.md) -Objekts wird der Inhalt der angegebenen Datei als Streamdaten in das angegebene Daten Satz Feld kopiert. Streamdaten können nicht in temporäre Felder eingefügt werden.
+Die **SetStream-Methode** des [**Record-Objekts**](record-object.md) kopiert den Inhalt der angegebenen Datei als Streamdaten in das angegebene Datensatzfeld. Streamdaten können nicht in temporäre Felder eingefügt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ Record.SetStream(
 
 <dl> <dt>
 
-*Flächen* 
+*Feld* 
 </dt> <dd>
 
-Erforderliche Feldnummer des Werts im Datensatz, 1-basiert.
+Erforderliche Feldnummer des Werts innerhalb des Datensatzes, 1-basiert.
 
 </dd> <dt>
 
-*FilePath* 
+*Filepath* 
 </dt> <dd>
 
-Der Speicherort der zu kopierenden Datei. Es wird keine Übersetzung eines beliebigen Typs durchgeführt.
+Der Speicherort der zu kopierende Datei. Es wird keine Übersetzung eines Typs ausgeführt.
 
 </dd> </dl>
 
@@ -58,9 +58,9 @@ Der Speicherort der zu kopierenden Datei. Es wird keine Übersetzung eines belie
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iRecord ist definiert als 000c1093-0000-0000-C000-000000000046<br/>                                                                                                                                                                              |
+| IID<br/>     | IID \_ IRecord ist als 000C1093-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                              |
 
 
 

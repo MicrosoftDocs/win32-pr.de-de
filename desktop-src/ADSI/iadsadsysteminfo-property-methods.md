@@ -1,10 +1,10 @@
 ---
-title: IADsADSystemInfo-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADsADSystemInfo-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsADSystemInfo-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsADSystemInfo-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 1cdaa610-4341-4825-b2f9-dd495a9147ff
 ms.tgt_platform: multiple
 keywords:
-- IADsADSystemInfo-Eigenschaften Methoden ADSI
+- IADsADSystemInfo-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -33,22 +33,22 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8dba53dfda4bb8f4dd3290cb2737cdeb4e8a6d3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 177926924d989686dae33c3403c07bfe5e69d0ba1762dd2a1a1cdee78a2175f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691611"
 ---
-# <a name="iadsadsysteminfo-property-methods"></a>IADsADSystemInfo-Eigenschaften Methoden
+# <a name="iadsadsysteminfo-property-methods"></a>IADsADSystemInfo-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**IADsADSystemInfo**](/windows/desktop/api/Iads/nn-iads-iadsadsysteminfo) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsADSystemInfo-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsadsysteminfo) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Computername**
+**ComputerName**
 </dt> <dd> <dl>
 
 Ruft den Distinguished Name des lokalen Computers ab.
@@ -58,7 +58,7 @@ Ruft den Distinguished Name des lokalen Computers ab.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -76,14 +76,14 @@ HRESULT get_ComputerName(
 **DomainDNSName**
 </dt> <dd> <dl>
 
-Ruft den DNS-Namen der Domäne des lokalen Computers ab, z. b. "domainname.CompanyName.com".
+Ruft den DNS-Namen der Domäne des lokalen Computers ab, z. B. "domainName.companyName.com".
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -98,17 +98,17 @@ HRESULT get_DomainDNSName(
 
 </dt> </dl> </dd> <dt>
 
-**Domainshortname**
+**DomainShortName**
 </dt> <dd> <dl>
 
-Ruft den Kurznamen der Domäne des lokalen Computers ab, z. b. "Domänen Name".
+Ruft den Kurznamen der Domäne des lokalen Computers ab, z. B. "domainName".
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -133,7 +133,7 @@ Ruft den DNS-Namen der Gesamtstruktur des lokalen Computers ab.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -148,17 +148,17 @@ HRESULT get_ForestDNSName(
 
 </dt> </dl> </dd> <dt>
 
-**Isnativemode**
+**IsNativeMode**
 </dt> <dd> <dl>
 
-Bestimmt, ob sich die Domäne des lokalen Computers im einheitlichen oder gemischten Modus befindet.
+Bestimmt, ob sich die Domäne des lokalen Computers im nativ oder gemischten Modus befindet.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **bool**
+Skriptdatentyp: **BOOL**
 </dt> <dt>
 
 
@@ -173,17 +173,17 @@ HRESULT get_IsNativeMode(
 
 </dt> </dl> </dd> <dt>
 
-**PdcRoleOwner**
+**PDCRoleOwner**
 </dt> <dd> <dl>
 
-Ruft den Distinguished Name des Verzeichnisdienst-Agent-Objekts (DSA) für den Domänen Controller ab, der die Rolle des primären Domänen Controllers in der Domäne des lokalen Computers besitzt.
+Ruft den Distinguished Name des DSA-Objekts (Directory Service Agent) für den Domänencontroller ab, der die primäre Domänencontrollerrolle in der Domäne des lokalen Computers besitzt.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -201,14 +201,14 @@ HRESULT get_PDCRoleOwner(
 **SchemaRoleOwner**
 </dt> <dd> <dl>
 
-Ruft den Distinguished Name des Verzeichnisdienst-Agent-Objekts (DSA) für den Domänen Controller ab, der die Schema Master Rolle in der Gesamtstruktur des lokalen Computers besitzt.
+Ruft den Distinguished Name des Verzeichnisdienst-Agent-Objekts (DSA) für den Domänencontroller ab, der die Schemamasterrolle in der Gesamtstruktur des lokalen Computers besitzt.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -233,7 +233,7 @@ Ruft den Standortnamen des lokalen Computers ab.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -251,14 +251,14 @@ HRESULT get_SiteName(
 **UserName**
 </dt> <dd> <dl>
 
-Ruft den Active Directory Distinguished Name des aktuellen Benutzers ab, der der angemeldete Benutzer ist, oder der Benutzer, der vom aufrufenden Thread angenommen wird.
+Ruft den Active Directory-Distinguished Name des aktuellen Benutzers ab. Dabei handelt es sich um den angemeldeten Benutzer oder den Benutzer, dessen Identität vom aufrufenden Thread angenommen wird.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -277,7 +277,7 @@ HRESULT get_UserName(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden C++-Codebeispiel werden die Windows-Systeminformationen abgerufen. Aus Gründen der Übersichtlichkeit wird die Fehlerüberprüfung ausgelassen.
+Im folgenden C++-Codebeispiel werden die Windows abgerufen. Aus Kürze wird die Fehlerüberprüfung weggelassen.
 
 
 ```C++
@@ -333,7 +333,7 @@ int main()
 
 
 
-Im folgenden Visual Basic Codebeispiel werden die Windows-Systeminformationen abgerufen.
+Im folgenden Visual Basic Codebeispiel werden Windows Systeminformationen abgerufen.
 
 
 ```VB
@@ -346,7 +346,7 @@ Debug.print "PDC Role Owner: " & sys.PDCRoleOwner
 
 
 
-Im folgenden VBScript/ASP-Codebeispiel werden die Windows-Systeminformationen abgerufen.
+Im folgenden VBScript/ASP-Codebeispiel werden die Windows abgerufen.
 
 
 ```VB
@@ -370,20 +370,20 @@ Response.Write "PDC Role Owner: " & sys.PDCRoleOwner
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsADSystemInfo ist als 5bb11929-afd1-11d2-9cb9-0000f87a369e definiert.<br/>     |
+| IID<br/>                      | IID \_ IADsADSystemInfo ist als 5BB11929-AFD1-11D2-9CB9-0000F87A369E definiert.<br/>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [**IADsADSystemInfo**](/windows/desktop/api/Iads/nn-iads-iadsadsysteminfo)
 </dt> <dt>
 
-[**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
+[**Cocreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 </dt> </dl>
 
  

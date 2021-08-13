@@ -1,26 +1,26 @@
 ---
-description: Bei einer synchronen Abfrage handelt es sich um eine Abfrage, die die Kontrolle über den Prozess der Anwendung für die Dauer der Abfrage behält.
+description: Eine synchrone Abfrage ist eine Abfrage, die die Kontrolle über den Prozess Ihrer Anwendung für die Dauer der Abfrage behält.
 ms.assetid: 628e9a31-7b0d-4099-bfa5-56330bb4eb6b
 ms.tgt_platform: multiple
 title: Aufrufen einer synchronen Abfrage
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2d4bb2ff61a1c94bf7390a65d51e773ad943a45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f089ac5a2d315aa55fe7af7e648d3b001bae032b92ed5b7d67a1b6b120b96561
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118556118"
 ---
 # <a name="invoking-a-synchronous-query"></a>Aufrufen einer synchronen Abfrage
 
-Bei einer synchronen Abfrage handelt es sich um eine Abfrage, die die Kontrolle über den Prozess der Anwendung für die Dauer der Abfrage behält. Eine synchrone Abfrage erfordert einen einzelnen Schnittstellen Rückruf und ist daher einfacher als ein asynchroner-Befehl. Eine synchrone Abfrage hat jedoch die Möglichkeit, Ihre Anwendung für große Abfragen oder Abfragen über ein Netzwerk zu sperren.
+Eine synchrone Abfrage ist eine Abfrage, die die Kontrolle über den Prozess Ihrer Anwendung für die Dauer der Abfrage behält. Eine synchrone Abfrage erfordert einen einzelnen Schnittstellenaufruf und ist daher einfacher als ein asynchroner Aufruf. Eine synchrone Abfrage hat jedoch das Potenzial, Ihre Anwendung für große Abfragen oder Abfragen über ein Netzwerk zu sperren.
 
-Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilfe von PowerShell ausgegeben wird.
+Im folgenden Verfahren wird beschrieben, wie Sie eine synchrone Datenabfrage mithilfe von PowerShell ausführen.
 
-**So geben Sie eine synchrone Datenabfrage in PowerShell aus**
+**So stellen Sie eine synchrone Datenabfrage in PowerShell aus**
 
--   Beschreiben Sie die WMI-Abfrage mithilfe des WMI-Cmdlets [Get-WMIObject](https://technet.microsoft.com/library/dd315379.aspx) und des *-Query-* Parameters. Das-Cmdlet gibt entweder ein einzelnes-Objekt oder eine Auflistung von-Objekten zurück, abhängig von der Anzahl der Objekte, die der Abfrage entsprechen.
+-   Beschreiben Sie Ihre WMI-Abfrage mithilfe des [WMI-Cmdlets Get-WmiObject](https://technet.microsoft.com/library/dd315379.aspx) und des *Parameters -query.* Das Cmdlet gibt entweder ein einzelnes Objekt oder eine Auflistung von -Objekten zurück, je nachdem, wie viele Objekte zur Abfrage passen.
 
     ```PowerShell
     Get-WmiObject -query "SELECT * FROM Win32_logicalDisk WHERE DeviceID = 'C:'"
@@ -28,11 +28,11 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilf
 
     
 
-Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mit c# ausgegeben wird.
+Im folgenden Verfahren wird beschrieben, wie Eine synchrone Datenabfrage mit C# ausgegeben wird.
 
-**So geben Sie eine synchrone Datenabfrage in c# aus (Microsoft. Management. Infrastructure)**
+**So führen Sie eine synchrone Datenabfrage in C# aus (Microsoft.Management.Infrastructure)**
 
-1.  Beschreiben Sie Ihre Abfrage mit "cimsession. queryinstance" in WMI. Diese Methode gibt eine Auflistung von ciminstance-Objekten zurück.
+1.  Beschreiben Sie Ihre WMI-Abfrage mithilfe von CimSession.QueryInstances. Diese Methode gibt eine Auflistung von CimInstance-Objekten zurück.
 
     ```CSharp
     using Microsoft.Management.Infrastructure;
@@ -45,7 +45,7 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mit c# 
 
     
 
-2.  Verwenden Sie standardmäßige c#-sprach Erfassungs Techniken für den Zugriff auf jedes zurückgegebene Objekt
+2.  Verwenden Sie standardmäßige C#-Sprachsammlungsverfahren, um auf jedes zurückgegebene Objekt zuzugreifen.
 
     ```CSharp
     foreach (CimInstance drive in queryInstances)
@@ -56,13 +56,13 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mit c# 
 
     
 
-Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mit c# ausgegeben wird.
+Im folgenden Verfahren wird beschrieben, wie Eine synchrone Datenabfrage mit C# ausgegeben wird.
 
-**So geben Sie eine synchrone Datenabfrage in c# aus (System. Management)**
+**So führen Sie eine synchrone Datenabfrage in C# aus (System.Management)**
 
-1.  Erstellen Sie die Abfrage mit einem [ManagementObjectSearcher](/dotnet/api/system.management.managementobjectsearcher) -Objekt, und rufen Sie die Informationen mit einem Aufrufen von [ManagementObjectSearcher. Get](/dotnet/api/system.management.managementobjectsearcher.get#System_Management_ManagementObjectSearcher_Get)ab.
+1.  Erstellen Sie die Abfrage mit einem [ManagementObjectSearcher-Objekt,](/dotnet/api/system.management.managementobjectsearcher) und rufen Sie die Informationen mit einem Aufruf von [ManagementObjectSearcher.Get](/dotnet/api/system.management.managementobjectsearcher.get#System_Management_ManagementObjectSearcher_Get)ab.
 
-    Diese Methode gibt ein [ManagementObjectCollection](/dotnet/api/system.management.managementobjectcollection) -Objekt zurück.
+    Diese Methode gibt ein [ManagementObjectCollection-Objekt](/dotnet/api/system.management.managementobjectcollection) zurück.
 
     ```CSharp
     using System.Management;
@@ -73,7 +73,7 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mit c# 
 
     
 
-2.  Verwenden Sie standardmäßige c#-sprach Erfassungs Techniken für den Zugriff auf jedes zurückgegebene Objekt
+2.  Verwenden Sie standardmäßige C#-Sprachsammlungsverfahren, um auf jedes zurückgegebene Objekt zuzugreifen.
 
     ```CSharp
     foreach (ManagementObject drive in objCol)
@@ -84,11 +84,11 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mit c# 
 
     
 
-Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilfe von VBScript ausgegeben wird.
+Im folgenden Verfahren wird beschrieben, wie Sie eine synchrone Datenabfrage mitHILFE von VBScript ausführen.
 
-**So geben Sie eine synchrone Datenabfrage in VBScript aus**
+**So stellen Sie eine synchrone Datenabfrage in VBScript aus**
 
-1.  Beschreiben Sie die WMI-Abfrage mit [**SWbemServices.Execquery**](swbemservices-execquery.md). Diese Methode gibt ein " [**errbemubjectset**](swbemobjectset.md)" zurück.
+1.  Beschreiben Sie Ihre WMI-Abfrage mit [**SWbemServices.ExecQuery**](swbemservices-execquery.md). Diese Methode gibt ein [**SWbemObjectSet**](swbemobjectset.md)zurück.
 
     ```VB
     GetObject("winmgmts:").ExecQuery _
@@ -97,7 +97,7 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilf
 
     
 
-2.  Verwenden Sie Standard Skripts zur [Skript sprach Auflistung](accessing-a-collection.md) , um auf jedes zurückgegebene Objekt zuzugreifen.
+2.  Verwenden Sie Standardmäßige Techniken zur [Skriptsprachsammlung,](accessing-a-collection.md) um auf jedes zurückgegebene Objekt zuzugreifen.
 
     ```VB
     for each Service in _ 
@@ -109,17 +109,17 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilf
 
     
 
-Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilfe von C++ ausgegeben wird.
+Im folgenden Verfahren wird beschrieben, wie Eine synchrone Datenabfrage mit C++ ausgegeben wird.
 
-**So geben Sie eine synchrone Abfrage in C++ aus**
+**So stellen Sie eine synchrone Abfrage in C++ aus**
 
-1.  Beschreiben Sie Ihre Abfrage für WMI durch einen Befehl von [**IWbemServices:: ExecQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery).
+1.  Beschreiben Sie Ihre WMI-Abfrage durch einen Aufruf von [**IWbemServices::ExecQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery).
 
-    Die [**ExecQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery) -Methode nimmt eine WQL-Such Zeichenfolge als Parameter an, der die Abfrage beschreibt. WMI führt die Abfrage aus und gibt einen [**ienumwbemclassobject**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) -Schnittstellen Zeiger zurück. Über die **ienumwbemclassobject** -Schnittstelle können Sie auf die Klassen oder Instanzen zugreifen, aus denen das Resultset besteht.
+    Die [**ExecQuery-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery) verwendet eine WQL-Suchzeichenfolge als Parameter, der Ihre Abfrage beschreibt. WMI führt die Abfrage aus und gibt einen [**IEnumWbemClassObject-Schnittstellenzeiger**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) zurück. Über die **IEnumWbemClassObject-Schnittstelle** können Sie auf die Klassen oder Instanzen zugreifen, die das Resultset bilden.
 
-2.  Nachdem Sie die Abfrage erhalten haben, können Sie die Abfrage mit einem [**ienumwbemclassobject:: Next**](/windows/desktop/api/Wbemcli/nf-wbemcli-ienumwbemclassobject-next)-Rückruf auflisten. Weitere Informationen finden Sie unter Auflisten von [WMI](enumerating-wmi.md).
+2.  Nachdem Sie die Abfrage erhalten haben, können Sie Die Abfrage mit einem Aufruf von [**IEnumWbemClassObject::Next**](/windows/desktop/api/Wbemcli/nf-wbemcli-ienumwbemclassobject-next)auflisten. Weitere Informationen finden Sie unter [Aufzählen von WMI.](enumerating-wmi.md)
 
-    Für das folgende Codebeispiel sind die folgenden Verweise und \# include-Anweisungen erforderlich, um ordnungsgemäß zu kompilieren.
+    Das folgende Codebeispiel erfordert die folgenden Verweise und \# include-Anweisungen, um ordnungsgemäß zu kompilieren.
 
     ```C++
     #include <wbemidl.h>
@@ -129,7 +129,7 @@ Im folgenden Verfahren wird beschrieben, wie eine synchrone Datenabfrage mithilf
 
     
 
-    Im folgenden Codebeispiel wird beschrieben, wie die-Objekte, die die Benutzer und Gruppen in WMI darstellen, abgefragt werden.
+    Im folgenden Codebeispiel wird beschrieben, wie Die Objekte abgefragt werden, die die Benutzer und Gruppen in WMI darstellen.
 
     ```C++
     void ExecQuerySync(IWbemServices *pSvc)

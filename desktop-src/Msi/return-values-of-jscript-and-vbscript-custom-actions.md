@@ -1,40 +1,40 @@
 ---
-description: In JScript oder Visual Basic geschriebene benutzerdefinierte Aktionen, Scripting Edition (VBScript) können eine optionale Funktion aufzurufen. Diese Funktionen müssen einen der in der folgenden Tabelle dargestellten Werte zurückgeben.
+description: Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition (VBScript) geschrieben werden, können eine optionale Funktion aufrufen. Diese Funktionen müssen einen der in der folgenden Tabelle gezeigten Werte zurückgeben.
 ms.assetid: f05d0b94-e79e-440e-9f2b-99fe0e9e2646
-title: Rückgabewerte von benutzerdefinierten JScript-und VBScript-Aktionen
+title: Rückgabewerte von JScript und benutzerdefinierten VBScript-Aktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cae96ecba320914b7b00dfa718deffdd56ae7eaf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d50a2b225c59b0e4d1787f2eaceeb094d6fb2abe7f9d9600822b6295ef2dd273
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118626090"
 ---
-# <a name="return-values-of-jscript-and-vbscript-custom-actions"></a>Rückgabewerte von benutzerdefinierten JScript-und VBScript-Aktionen
+# <a name="return-values-of-jscript-and-vbscript-custom-actions"></a>Rückgabewerte von JScript und benutzerdefinierten VBScript-Aktionen
 
-In JScript oder Visual Basic geschriebene benutzerdefinierte Aktionen, Scripting Edition (VBScript) können eine optionale Funktion aufzurufen. Diese Funktionen müssen einen der in der folgenden Tabelle dargestellten Werte zurückgeben.
+Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition (VBScript) geschrieben werden, können eine optionale Funktion aufrufen. Diese Funktionen müssen einen der in der folgenden Tabelle gezeigten Werte zurückgeben.
 
 
 
-| Rückgabewert              | Wert        | BESCHREIBUNG                                                                                                |
+| Rückgabewert              | Wert        | Beschreibung                                                                                                |
 |---------------------------|--------------|------------------------------------------------------------------------------------------------------------|
-| msidoaction Status-NoAction | 0            | Die Aktion wurde nicht ausgeführt.                                                                                       |
-| msidoaktionstatus-Erfolg  | IDOK = 1     | Die Aktion wurde erfolgreich abgeschlossen.                                                                             |
-| msidoaktionstatus ususerexit | IDCANCEL = 2 | Vorzeitige Beendigung durch den Benutzer.                                                                             |
-| msidoaktionstatus-Fehler  | Idabort = 3  | Nicht BEHEB barer Fehler. Wird zurückgegeben, wenn während der Verarbeitung oder Ausführung von JScript oder VBScript ein Fehler aufgetreten ist. |
-| msidoaktionstatus-Suspend  | Idretry = 4  | Angehaltene Sequenz, die später fortgesetzt werden soll.                                                                    |
-| msidoaktionstatus "beendet" | IDIGNORE = 5 | Verbleibende Aktionen überspringen. Kein Fehler.                                                                      |
+| msiDoActionStatusNoAction | 0            | Die Aktion wurde nicht ausgeführt.                                                                                       |
+| msiDoActionStatusSuccess  | IDOK = 1     | Die Aktion wurde erfolgreich abgeschlossen.                                                                             |
+| msiDoActionStatusUserExit | IDCANCEL = 2 | Vorzeitige Beendigung durch den Benutzer.                                                                             |
+| msiDoActionStatusFailure  | IDABORT = 3  | Nicht behebbarer Fehler. Wird zurückgegeben, wenn während der Analyse oder Ausführung des Skripts oder JScript VBScript ein Fehler auftritt. |
+| msiDoActionStatusSuspend  | IDRETRY = 4  | Angehaltene Sequenz, die später fortgesetzt werden soll.                                                                    |
+| msiDoActionStatusFinished | IDIGNORE = 5 | Überspringen Sie die verbleibenden Aktionen. Kein Fehler.                                                                      |
 
 
 
  
 
-Beachten Sie, dass Windows Installer die Rückgabewerte aller Aktionen übersetzt, wenn der Rückgabewert in die Protokolldatei geschrieben wird. Wenn der Rückgabewert der Aktion z. b. als 1 (eins) in der Protokolldatei angezeigt wird, bedeutet dies, dass die Aktion msidoaction Status-Success zurückgegeben hat. Weitere Informationen zu dieser Übersetzung finden Sie [unter Protokollieren von Aktions Rückgabe Werten](logging-of-action-return-values.md).
+Beachten Sie, Windows Installer die Rückgabewerte aller Aktionen übersetzt, wenn der Rückgabewert in die Protokolldatei geschrieben wird. Wenn der Rückgabewert der Aktion beispielsweise als 1 (eins) in der Protokolldatei angezeigt wird, bedeutet dies, dass die Aktion msiDoActionStatusSuccess zurückgegeben hat. Weitere Informationen zu dieser Übersetzung finden Sie unter [Protokollierung von Aktions-Rückgabewerten.](logging-of-action-return-values.md)
 
-Wenn Sie einen anderen Wert als Success aus einer benutzerdefinierten Skript Aktion zurückgeben möchten, müssen Sie für die benutzerdefinierte Aktion ein Funktions Ziel verwenden. Die Zielfunktion wird in der Ziel Spalte der [CustomAction-Tabelle](customaction-table.md)angegeben.
+Sie müssen ein Funktionsziel für die benutzerdefinierte Aktion verwenden, um einen anderen Wert als erfolgreich aus einer benutzerdefinierten Skriptaktion zurück zu geben. Die Zielfunktion wird in der Spalte Target der [CustomAction-Tabelle angegeben.](customaction-table.md)
 
-Im folgenden Skript Beispiel wird gezeigt, wie Sie Erfolg oder Fehler von einer benutzerdefinierten VBScript-Aktion zurückgeben.
+Im folgenden Skriptbeispiel wird gezeigt, wie Sie eine erfolgreiche oder nicht erfolgreiche Aktion einer benutzerdefinierten VBScript-Aktion zurückgeben.
 
 
 ```VB
@@ -55,13 +55,13 @@ End Function
 
 
 
-Wenn dieses VBScript als MyCA.vbs in die [binäre Tabelle](binary-table.md) des Installationspakets eingebettet wurde, lautet der [CustomAction-Tabellen](customaction-table.md) Eintrag für das Skript wie folgt:
+Wenn dieses VBScript in die [Binärtabelle](binary-table.md) des Installationspakets als MyCA.vbs eingebettet wäre, würde der [CustomAction-Tabelleneintrag](customaction-table.md) für das Skript wie folgt sein:
 
 
 
 | Aktion         | type | `Source`   | Ziel       |
 |----------------|------|----------|--------------|
-| MyCustomAction | 6    | MyCA.vbs | Myvbscriptca |
+| MyCustomAction | 6    | MyCA.vbs | MyVBScriptCA |
 
 
 

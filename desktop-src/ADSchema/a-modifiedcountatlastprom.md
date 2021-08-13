@@ -1,11 +1,11 @@
 ---
-title: Modified-count-at-Last-PROM-Attribut
-description: Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stufung.
+title: Modified-Count-At-Last-Prom-Attribut
+description: Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
 ms.assetid: 9f907997-ad1a-451c-960d-e5d1d462c00a
 ms.tgt_platform: multiple
 keywords:
-- Modified-count-at-Last-PROM-Attribut AD-Schema
-- AD-Schema des modifiedzähltatlastprom-Attributs
+- AD-Schema des modified-Count-At-Last-Prom-Attributs
+- MODIFIEDCountAtLastProm-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc0c049158250d0e19bfa01efb04bb583bc29f17
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: be3f4760c91ea76d4f9806a88c093bf763faab4905ecfc929eec10c6c6a01a3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118687342"
 ---
-# <a name="modified-count-at-last-prom-attribute"></a>Modified-count-at-Last-PROM-Attribut
+# <a name="modified-count-at-last-prom-attribute"></a>Modified-Count-At-Last-Prom-Attribut
 
-Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stufung.
+Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Modified-count-at-Last-PROM          |
-| LDAP-Display-Name | modifiedzähltatlastprom              |
+| CN                | Modified-Count-At-Last-Prom          |
+| Ldap-Anzeigename | modifiedCountAtLastProm              |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.81                |
-| System-ID-GUID    | bf9679c6-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf9679c6-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Ist einwertig       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Ist einwertig       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Seriennummer des Anmeldungs Änderungsprotokolls bei der letzten herauf Stuf
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Ist einwertig       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 

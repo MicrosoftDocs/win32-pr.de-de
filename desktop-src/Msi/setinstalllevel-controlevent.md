@@ -1,31 +1,31 @@
 ---
-description: Das setinstalllevel-Ereignis ändert die Installations Ebene in den durch das-Argument angegebenen Wert.
+description: Das SetInstallLevel-Ereignis ändert die Installationsebene in den vom -Argument angegebenen Wert.
 ms.assetid: 71cfd516-4a92-446c-bd8f-a3a04dba0bb2
-title: Setinstalllevel ControlEvent
+title: SetInstallLevel ControlEvent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 347f54cee1494b2ff91f7dc1701f0b7749d47e4a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b3e7632e666dc169318e04cbcaf979aa82432d028cc6b7230e6a5e711350ef35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118625108"
 ---
-# <a name="setinstalllevel-controlevent"></a>Setinstalllevel ControlEvent
+# <a name="setinstalllevel-controlevent"></a>SetInstallLevel ControlEvent
 
-Das setinstalllevel-Ereignis ändert die Installations Ebene in den durch das-Argument angegebenen Wert.
+Das SetInstallLevel-Ereignis ändert die Installationsebene in den vom -Argument angegebenen Wert.
 
-Dieses Ereignis kann von einem [PUSHBUTTON-Steuer](pushbutton-control.md)Element oder einem [SelectionTree-Steuer](selectiontree-control.md)Element veröffentlicht werden. Dieses Ereignis sollte in der [Tabelle ControlEvent](controlevent-table.md)erstellt werden.
+Dieses Ereignis kann von einem [PushButton-Steuerelement](pushbutton-control.md)oder einem [SelectionTree-Steuerelement](selectiontree-control.md)veröffentlicht werden. Dieses Ereignis sollte in der [ControlEvent-Tabelle](controlevent-table.md)erstellt werden.
 
-Diese ControlEvent erfordert, dass die Benutzeroberfläche auf der [*vollständigen*](f-gly.md) Benutzeroberfläche ausgeführt wird. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzer*](r-gly.md) Oberfläche oder [*grundlegender Benutzeroberfläche*](b-gly.md). Weitere Informationen finden Sie unter [Benutzeroberflächen Ebenen](user-interface-levels.md).
+Für dieses ControlEvent muss die Benutzeroberfläche auf [*der vollständigen Benutzeroberflächenebene*](f-gly.md) ausgeführt werden. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzeroberfläche*](r-gly.md) oder [*einer einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Ebenen.](user-interface-levels.md)
 
 ## <a name="published-by"></a>Veröffentlicht von
 
-Diese ControlEvent wird vom Installationsprogramm veröffentlicht.
+Dieses ControlEvent wird vom Installationsprogramm veröffentlicht.
 
 ## <a name="argument"></a>Argument
 
-Eine ganze Zahl, die den neuen Wert der-Installations Ebene ist.
+Eine ganze Zahl, die der neue Wert der Installationsebene ist.
 
 ## <a name="action-on-subscribers"></a>Aktion auf Abonnenten
 
@@ -33,7 +33,7 @@ Keine.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-Ein [PUSHBUTTON](pushbutton-control.md) -Steuerelement in einem modalen Dialogfeld ist an dieses Ereignis in der Tabelle [ControlEvent](controlevent-table.md) gebunden, um die Installations Ebene zu ändern.
+Ein [PushButton-Steuerelement](pushbutton-control.md) in einem modalen Dialogfeld ist an dieses Ereignis in der [ControlEvent-Tabelle](controlevent-table.md) gebunden, um die Installationsebene zu ändern.
 
  
 

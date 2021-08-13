@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks blendstatuecb-Methode (D3DX12. h)
-description: Ruft den untergeordneten Blend-Zustands Beschreibungs Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+title: ID3DX12PipelineParserCallbacks BlendStateCb-Methode (D3DX12.h)
+description: Ruft den Rückruf des Unterobjekts für die Beschreibung des Blendzustands eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: C00C733B-4123-4795-9A93-973F30BE456B
 keywords:
-- Blendstatuecb-Methode
-- Blendstatuecb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks Interface, blendstatus ECB-Methode
+- BlendStateCb-Methode
+- BlendStateCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, BlendStateCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 119733fbe82203a6e423fb0ef9b07d3ecff70619
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 65a9d84e3648a54668211b8b9e590c653111c93553115aba43b5353f9549bfc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118528978"
 ---
-# <a name="id3dx12pipelineparsercallbacksblendstatecb-method"></a>ID3DX12PipelineParserCallbacks:: blendstatuecb-Methode
+# <a name="id3dx12pipelineparsercallbacksblendstatecb-method"></a>ID3DX12PipelineParserCallbacks::BlendStateCb-Methode
 
-Ruft den untergeordneten Blend-Zustands Beschreibungs Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+Ruft den Rückruf des Unterobjekts für die Beschreibung des Blendzustands eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ void BlendStateCb(
 
 <dl> <dt>
 
-*Blendstate* \[ atur\]
+*BlendState* \[ Ref\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3D12 \_ Blend \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)**
+Typ: **const [**D3D12 \_ BLEND \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)**
 
-Details der Blend-Statusbeschreibung, die aus einem Pipeline Status-Stream analysiert wurde.
+Details des Ausblendzustandsbeschreibungs-Unterobjekts, das aus einem Pipelinezustandsstream analysiert wird.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
@@ -78,7 +78,7 @@ Gibt nichts zurück.
 [**ID3DX12PipelineParserCallbacks**](id3dx12pipelineparsercallbacks.md)
 </dt> <dt>
 
-[**D3D12 \_ Blend- \_ Entsc**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)
+[**D3D12 \_ BLEND \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)
 </dt> </dl>
 
  

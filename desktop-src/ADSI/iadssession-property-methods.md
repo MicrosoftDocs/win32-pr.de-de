@@ -1,10 +1,10 @@
 ---
-title: Iadssession-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadssession-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen und eine allgemeine Erörterung von Eigenschaften Methoden finden Sie unter Interface Property Methods.
+title: IADsSession-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsSession-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Erläuterung zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: b2366da7-c51c-4279-8931-2000d3110d72
 ms.tgt_platform: multiple
 keywords:
-- Iadssession-Eigenschaften Methoden ADSI
+- IADsSession-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -27,16 +27,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cf7dd9abe25d731ba63385cd8d632c4212ea349
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8227c855be1704754be6e2b610f492eff26c8ceb966e3294c6672a8fbeb6dac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118690735"
 ---
-# <a name="iadssession-property-methods"></a>Iadssession-Eigenschaften Methoden
+# <a name="iadssession-property-methods"></a>IADsSession-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**iadssession**](/windows/desktop/api/Iads/nn-iads-iadssession) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen und eine allgemeine Erörterung von Eigenschaften Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsSession-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssession) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Erläuterung zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftenmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -45,14 +45,14 @@ Mit den Eigenschafts Methoden der [**iadssession**](/windows/desktop/api/Iads/nn
 **Computer**
 </dt> <dd> <dl>
 
-Der Name der Client Arbeitsstation.
+Name der Clientarbeitsstation.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -67,17 +67,17 @@ HRESULT get_Computer(
 
 </dt> </dl> </dd> <dt>
 
-**Computer Pfad**
+**ComputerPath**
 </dt> <dd> <dl>
 
-Der ADsPath des Computer Objekts für die Client Arbeitsstation.
+ADsPath des Computerobjekts für die Clientarbeitsstation.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -92,17 +92,17 @@ HRESULT get_ComputerPath(
 
 </dt> </dl> </dd> <dt>
 
-**Connecttime**
+**ConnectTime**
 </dt> <dd> <dl>
 
-Verstrichene Zeit (in Sekunden) seit dem Start der Sitzung.
+Verstrichene Zeit (in Sekunden), seit die Sitzung gestartet wurde.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -120,14 +120,14 @@ HRESULT get_ConnectTime(
 **IdleTime**
 </dt> <dd> <dl>
 
-Leerlaufzeit (in Sekunden) der Sitzung.
+Leerlaufzeit der Sitzung in Sekunden.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -152,7 +152,7 @@ Der Name des Benutzers der Sitzung.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -170,14 +170,14 @@ HRESULT get_User(
 **UserPath**
 </dt> <dd> <dl>
 
-Der ADsPath des Benutzer Objekts für den Benutzer dieser Sitzung.
+Der ADsPath des Benutzerobjekts für den Benutzer dieser Sitzung.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -196,7 +196,7 @@ HRESULT get_UserPath(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie Sitzungen für einen Datei Dienst überprüfen.
+Das folgende Codebeispiel zeigt, wie Sitzungen für einen Dateidienst untersucht werden.
 
 
 ```VB
@@ -223,7 +223,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird eine Auflistung von Sitzungen aufgelistet.
+Im folgenden Codebeispiel wird eine Auflistung von Sitzungen aufzählt.
 
 
 ```C++
@@ -297,20 +297,20 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadssession ist als 398b7da0-4aab-11CF-ae2c-00aa006ebfb9 definiert.<br/>          |
+| IID<br/>                      | IID \_ IADsSession ist als 398B7DA0-4AAB-11CF-AE2C-00AA006EBFB9 definiert.<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iadsfileserviceoperations:: Sessions**](/windows/desktop/api/Iads/nf-iads-iadsfileserviceoperations-sessions)
+[**IADsFileServiceOperations::Sessions**](/windows/desktop/api/Iads/nf-iads-iadsfileserviceoperations-sessions)
 </dt> <dt>
 
-[**Iadssession**](/windows/desktop/api/Iads/nn-iads-iadssession)
+[**IADsSession**](/windows/desktop/api/Iads/nn-iads-iadssession)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: max_is-Attribut
-description: Das Attribut \ Max \_ ist \ bezeichnet den maximalen Wert für einen gültigen Array Index.
+description: Das \_ \max is\-Attribut gibt den Maximalwert für einen gültigen Arrayindex an.
 ms.assetid: 8d09f610-cae6-45f6-815c-5ba916d8a5e7
 keywords:
-- Max_is Attribut-Mittel l
+- max_is-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27f2e2040acbc0e8f65c02f4f4ec7c3ad329959b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ca7dfa7e8cdc5b1df752a3a6eb442524157228d354079f262a27a5514860e335
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118642966"
 ---
-# <a name="max_is-attribute"></a>Max \_ ist Attribut
+# <a name="max_is-attribute"></a>max \_ is attribute
 
-Das **\[ Maximum \_ is \]** -Attribut bestimmt den maximalen Wert für einen gültigen Array Index.
+Das **\[ Attribut max \_ is \]** legt den Maximalwert für einen gültigen Arrayindex an.
 
 ``` syntax
 [max_is(limited-expression-list )]
@@ -31,20 +31,20 @@ Das **\[ Maximum \_ is \]** -Attribut bestimmt den maximalen Wert für einen gü
 
 <dl> <dt>
 
-*begrenzte Ausdrucks Liste* 
+*eingeschränkte Ausdrucksliste* 
 </dt> <dd>
 
-Gibt einen oder mehrere C-sprach Ausdrücke an. Jeder Ausdruck ergibt eine ganze Zahl, die den höchsten gültigen Array Index darstellt. Der mittlerer l-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. "Mittel l" lässt keine Funktionsaufrufe in Ausdrücken zu und lässt keine Inkrement-und Dekrementoperatoren zu. Trennen Sie mehrere Ausdrücke durch Kommas.
+Gibt einen oder mehrere C-Sprachausdrücke an. Jeder Ausdruck wird zu einer ganzen Zahl ausgewertet, die den höchsten gültigen Arrayindex darstellt. Der MIDL-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. MIDL lässt keine Funktionsaufrufe in Ausdrücken und keine Inkrement- und Dekrementoperatoren zu. Trennen Sie mehrere Ausdrücke durch Kommas.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ Maximum \_ is \]** -Attribut entspricht nicht notwendigerweise der Anzahl der Elemente im Array. Für ein Array der Größe *n* in C, bei dem das erste Array Element die Element Nummer 0 (null) ist, ist der maximale Wert für einen gültigen Array Index *n*– 1.
+Das **\[ Attribut max \_ is \]** entspricht nicht notwendigerweise der Anzahl der Elemente im Array. Bei einem Array der Größe *n* in C, bei dem das erste Arrayelement elementnummer 0 ist, beträgt der Höchstwert für einen gültigen Arrayindex *n*–1.
 
-Das **\[ Maximum \_ is \]** -Attribut kann nicht gleichzeitig als Feld Attribut verwendet werden, wenn die **\[** [**Größe Attribute \_ ist**](size-is.md) **\]** .
+Das **\[ Attribut max \_ is \]** kann nicht gleichzeitig mit dem Attribut size **\[** [**\_ is**](size-is.md) als **\]** Feldattribut verwendet werden.
 
-Obwohl es zulässig ist, das **\[ Maximum \_ is \]** -Attribut mit einem konstanten Ausdruck zu verwenden, ist dies ineffizient und unnötig. Verwenden Sie z. b. ein Array mit fester Größe:
+Obwohl es zulässig ist, das **\[ Attribut max \_ is \]** mit einem konstanten Ausdruck zu verwenden, ist dies ineffizient und unnötig. Verwenden Sie beispielsweise ein Array mit fester Größe:
 
 ``` syntax
 /* transmits values of a[0]... a[MAX_SIZE-1] */ 
@@ -79,15 +79,15 @@ HRESULT Proc2(
 [Feldattribute](/windows/desktop/Rpc/field-attributes)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**Min \_ ist**](min-is.md)
+[**min \_ ist**](min-is.md)
 </dt> <dt>
 
-[**Größe \_ :**](size-is.md)
+[**size \_ ist**](size-is.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

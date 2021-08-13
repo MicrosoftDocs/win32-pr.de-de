@@ -1,19 +1,19 @@
 ---
-description: Wird an eine Anwendung gesendet, wenn das Betriebssystem im Begriff ist, den aktuellen IME zu ändern. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+description: Wird an eine Anwendung gesendet, wenn das Betriebssystem den aktuellen IME ändern wird. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: 5559b3ab-8d81-4f33-b0af-d05489371328
-title: WM_IME_SELECT Meldung (Winuser. h)
+title: WM_IME_SELECT (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 940858e12c616b1d6281c23633b2f0f5e9657a9b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 611ff30bac32fbd38c9aef00e459b49f9760d9702c619f7e6e7f55e6e3b10acb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118644620"
 ---
-# <a name="wm_ime_select-message"></a>WM- \_ IME \_ Select-Nachricht
+# <a name="wm_ime_select-message"></a>WM \_ IME \_ SELECT-Meldung
 
-Wird an eine Anwendung gesendet, wenn das Betriebssystem im Begriff ist, den aktuellen IME zu ändern. Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird an eine Anwendung gesendet, wenn das Betriebssystem den aktuellen IME ändern wird. Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,36 +31,36 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für ein Fenster.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Auswahl Indikator. Dieser Parameter gibt **true** an, wenn der angegeben IME ausgewählt ist. Der-Parameter wird auf **false** festgelegt, wenn der angegebene IME nicht mehr ausgewählt ist.
+Auswahlindikator. Dieser Parameter gibt **TRUE an,** wenn der angegebene IME ausgewählt ist. Der Parameter wird auf **FALSE festgelegt,** wenn der angegebene IME nicht mehr ausgewählt ist.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Eingabe Gebiets Schema Bezeichner, der dem IME zugeordnet ist.
+Eingabe-Locale Identifier, der dem IME zugeordnet ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung, die ein IME-Fenster erstellt hat, sollte diese Nachricht an dieses Fenster übergeben, damit Sie das Tastaturlayout-Handle für die neu ausgewählte IME abrufen kann.
+Eine Anwendung, die ein IME-Fenster erstellt hat, sollte diese Meldung an dieses Fenster übergeben, damit sie das Tastaturlayouthand handle an den neu ausgewählten IME abrufen kann.
 
-Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)  -Funktion verarbeitet diese Nachricht, indem Sie die Informationen an das IME-Standardfenster übergibt.
+Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)  verarbeitet diese Meldung, indem sie die Informationen an das STANDARD-IME-Fenster übergabe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,18 +70,18 @@ Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Eingabemethoden-Manager](input-method-manager.md)
+[Eingabemethode-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Meldungen](input-method-manager-messages.md)
+[Meldungen des Eingabemethode-Managers](input-method-manager-messages.md)
 </dt> </dl>
 
  

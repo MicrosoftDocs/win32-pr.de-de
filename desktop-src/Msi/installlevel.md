@@ -1,42 +1,42 @@
 ---
-description: Die INSTALLLEVEL-Eigenschaft ist die Anfangsstufe, bei der die Features &\# 0034; auf&\# 0034; standardmäßig für die Installation ausgewählt werden.
+description: Die INSTALLLEVEL-Eigenschaft ist die anfängliche Ebene, auf der Features &\# 0034;ON&0034; für die Installation standardmäßig \# ausgewählt werden.
 ms.assetid: 5051cc46-837a-4446-a54c-4bd4081a424c
 title: INSTALLLEVEL-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ebc0616fdf49e2c713c65017a202320fa6ea9622
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2e349e8d92a2c480866b04a1ca57885ffa1cdb230d8346b357318fa239ead72a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118629959"
 ---
 # <a name="installlevel-property"></a>INSTALLLEVEL-Eigenschaft
 
-Die **INSTALLLEVEL** -Eigenschaft ist die Anfangsstufe, bei der die Features standardmäßig für die Installation ausgewählt werden. Eine Funktion wird nur installiert, wenn der Wert im Ebenenfeld der [Funktions Tabelle](feature-table.md) kleiner oder gleich dem aktuellen INSTALLLEVEL-Wert ist. Die Installations Ebene für jede Installation wird durch die **INSTALLLEVEL** -Eigenschaft angegeben und kann eine Ganzzahl zwischen 1 und 32.767 sein. Weitere Informationen zu Installations Ebenen finden Sie unter [Feature Table](feature-table.md).
+Die **INSTALLLEVEL-Eigenschaft** ist die anfängliche Ebene, auf der Features standardmäßig für die Installation "ON" ausgewählt werden. Ein Feature wird nur installiert, wenn der Wert im Feld Ebene der [Tabelle Feature](feature-table.md) kleiner oder gleich dem aktuellen INSTALLLEVEL-Wert ist. Die Installationsebene für jede Installation wird von der **INSTALLLEVEL-Eigenschaft** angegeben und kann ein ganzzahlig von 1 bis 32.767 sein. Weitere Informationen zu Den Installationsebenen finden Sie in [der Featuretabelle](feature-table.md).
 
 ## <a name="default-value"></a>Standardwert
 
-Wenn kein Wert angegeben wird, wird für die Installations Ebene der Standardwert 1 verwendet.
+Wenn kein Wert angegeben wird, wird die Installationsebene standardmäßig auf 1 festgelegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von der **INSTALLLEVEL** -Eigenschaft angegebene Installations Ebene kann durch die folgenden Eigenschaften überschrieben werden:
+Die von der **INSTALLLEVEL-Eigenschaft angegebene Installationsebene** kann durch die folgenden Eigenschaften überschrieben werden:
 
 -   [**ADDLOCAL**](addlocal.md)
--   [**Addsource**](addsource.md)
--   [**Adddefault**](adddefault.md)
--   [**Compaddlocal**](compaddlocal.md)
--   [**Compaddsource**](compaddsource.md)
--   [**Fileaddlocal**](fileaddlocal.md)
--   [**Fileaddsource**](fileaddsource.md)
--   [**Aufgeh**](remove.md)
--   [**Installieren Sie**](reinstall.md)
--   [**Benen**](advertise.md)
+-   [**ADDSOURCE**](addsource.md)
+-   [**ADDDEFAULT**](adddefault.md)
+-   [**COMPADDLOCAL**](compaddlocal.md)
+-   [**COMPADDSOURCE**](compaddsource.md)
+-   [**FILEADDLOCAL**](fileaddlocal.md)
+-   [**FILEADDSOURCE**](fileaddsource.md)
+-   [**Entfernen**](remove.md)
+-   [**Installieren**](reinstall.md)
+-   [**Werben**](advertise.md)
 
-Wenn Sie z. b. "ADDLOCAL = ALL" festlegen, werden alle Features unabhängig vom Wert der Eigenschaft " **INSTALLLEVEL** " lokal installiert. Wenn der Wert der Spalte Ebene in der [Featuretabelle](feature-table.md) auf 0 festgelegt ist, ist das Feature nicht installiert und wird nicht auf der Benutzeroberfläche angezeigt.
+Wenn Sie beispielsweise ADDLOCAL=ALL festlegen, werden alle Features lokal installiert, unabhängig vom Wert der **INSTALLLEVEL-Eigenschaft.** Wenn der Wert der Spalte Ebene in der [Featuretabelle](feature-table.md) 0 ist, wird dieses Feature nicht installiert und nicht auf der Benutzeroberfläche angezeigt.
 
-Ein Administrator kann eine Funktion dauerhaft deaktivieren, indem er eine Anpassungs Transformation anwendet, die in der Spalte Ebene für diese Funktion 0 (null) festlegt. Die Anwendung der Anpassungs Transformation verhindert die Installation und Anzeige des Features, auch wenn der Benutzer eine vollständige Installation mithilfe der Benutzeroberfläche auswählt oder ADDLOCAL in der Befehlszeile auf alle festgelegt hat. [Ein Beispiel für eine Anpassungs Transformation](a-customization-transform-example.md)finden Sie hier.
+Ein Administrator kann ein Feature dauerhaft deaktivieren, indem er eine Anpassungstransformation anwenden, die in der Spalte Ebene für dieses Feature einen Wert von 0 (0) festgelegt. Die Anwendung der Anpassungstransformation verhindert die Installation und Anzeige des Features, selbst wenn der Benutzer über die Benutzeroberfläche oder durch Festlegen von ADDLOCAL auf ALL in der Befehlszeile eine vollständige Installation auswählt. Weitere Informationen finden [Sie unter Beispiel für eine Anpassungstransformation.](a-customization-transform-example.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Ein Administrator kann eine Funktion dauerhaft deaktivieren, indem er eine Anpas
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Requirements (Anforderungen für den Windows Installer).<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Control-Attribut
-description: Das \ Control \-Attribut identifiziert eine Co-Klasse oder eine Bibliothek als com-Steuerelement, aus dem eine Container Site zusätzliche Typbibliotheken oder Komponenten Objektklassen ableitet.
+title: Steuerelementattribut
+description: Das Attribut \control\ identifiziert eine Co-Klasse oder Bibliothek als COM-Steuerelement, von dem eine Containerwebsite zusätzliche Typbibliotheken oder Komponentenobjektklassen ableiten wird.
 ms.assetid: c39dd4b6-743f-4888-8954-8b83584bdea5
 keywords:
-- Steuerelement Attribut-Mittel l
+- Steuerelementattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 982327d581ddb606f733e9efbbcb89e2f9972cf4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1b6372ffb7f7d9f19769e419b12c0b109736a9867360224e023f1b622c653854
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103724953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118643679"
 ---
-# <a name="control-attribute"></a>Control-Attribut
+# <a name="control-attribute"></a>Steuerelementattribut
 
-Das **\[ Control \]** -Attribut identifiziert eine [**Co-Klasse**](coclass.md) oder eine [**Bibliothek**](library.md) als com-Steuerelement, aus dem eine Container Site zusätzliche Typbibliotheken oder Komponenten Objektklassen ableitet.
+Das **\[ \] Steuerelementattribut** identifiziert [](library.md) eine [**Co-Klasse**](coclass.md) oder Bibliothek als COM-Steuerelement, von dem eine Containerwebsite zusätzliche Typbibliotheken oder Komponentenobjektklassen ableiten wird.
 
 ``` syntax
 [
@@ -39,34 +39,34 @@ library | coclass lib-or-coclassname
 
 <dl> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die für die [**Library**](library.md) -oder [**Co-Klasse**](coclass.md) -Anweisung gelten. Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die für die Bibliothek [**oder**](library.md) [**coclass-Anweisung gelten.**](coclass.md) Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
-*lib-oder-CoClassname* 
+*lib-or-coclassname* 
 </dt> <dd>
 
-Gibt den Namen der [**Bibliothek**](library.md) oder der [**Co-Klasse**](coclass.md)an.
+Gibt den Namen der Bibliothek oder [**Co-Klasse**](library.md) [**an.**](coclass.md)
 
 </dd> <dt>
 
-*definiert* 
+*Definitionen* 
 </dt> <dd>
 
-Mittel l-Anweisungen, die die Member der [**Bibliothek**](library.md) oder der [**Co-Klasse**](coclass.md)angeben.
+MIDL-Anweisungen, die die Member der Bibliothek [**oder**](library.md) [**Co-Klasse angeben.**](coclass.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit diesem Attribut können Sie Typbibliotheken markieren, die Steuerelemente beschreiben, sodass Sie nicht in Typbrowsern angezeigt werden, die für nicht visuelle Objekte bestimmt sind.
+Mit diesem Attribut können Sie Typbibliotheken markieren, die Steuerelemente beschreiben, sodass sie nicht in Typbrowsern angezeigt werden, die für nichtvisuelle Objekte vorgesehen sind.
 
 ### <a name="flags"></a>Flags
 
-TYPEFLAG-Steuerelement \_ , libflag \_ -Steuerelement
+TYPEFLAG \_ FCONTROL, LIBFLAG \_ FCONTROL
 
 ## <a name="examples"></a>Beispiele
 
@@ -86,16 +86,16 @@ library Hello
 
 <dl> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
 [**coclass**](coclass.md)
@@ -104,6 +104,6 @@ library Hello
 [**Bibliothek**](library.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

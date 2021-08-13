@@ -1,11 +1,11 @@
 ---
-title: Iwmpplaylistcollection (IsDeleted-Methode)
-description: Die IsDeleted-Methode gibt einen Wert zurück, der angibt, ob sich die angegebene Wiedergabeliste im Ordner Gelöschte Elemente befindet.
+title: IWMPPlaylistCollection isDeleted-Methode
+description: Die isDeleted-Methode gibt einen Wert zurück, der angibt, ob sich die angegebene Wiedergabeliste im Ordner gelöschte Elemente befindet.
 ms.assetid: 02bc4b9f-6149-4fe2-8417-6484b22f2d74
 keywords:
-- IsDeleted-Methode (Windows Media Player)
-- IsDeleted-Methode, Windows Media Player, iwmpplaylistcollection-Schnittstelle
-- Iwmpplaylistcollection-Schnittstelle, Windows Media Player, IsDeleted-Methode
+- isDeleted-Methode Windows Media Player
+- isDeleted-Methode Windows Media Player , IWMPPlaylistCollection-Schnittstelle
+- IWMPPlaylistCollection-Schnittstelle Windows Media Player , isDeleted-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d4ce4a314378c5a4a211a52b99ea1b36ae1fda8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7c332a524b334933d587929cdd0e5b5fa61bc15d9110260af8af8e472d7c05fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568477"
 ---
-# <a name="iwmpplaylistcollectionisdeleted-method"></a>Iwmpplaylistcollection:: IsDeleted-Methode
+# <a name="iwmpplaylistcollectionisdeleted-method"></a>IWMPPlaylistCollection::isDeleted-Methode
 
-Die **isDeleted** -Methode gibt einen Wert zurück, der angibt, ob sich die angegebene Wiedergabeliste im Ordner Gelöschte Elemente befindet.
+Die **isDeleted-Methode** gibt einen Wert zurück, der angibt, ob sich die angegebene Wiedergabeliste im Ordner gelöschte Elemente befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,16 +53,16 @@ Implements IWMPPlaylistCollection.isDeleted
 
 <dl> <dt>
 
-*pitem* \[ in\]
+*pItem* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgefragte Wiedergabeliste.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgefragte Wiedergabeliste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Boolean** -Wert, der angibt, ob die Wiedergabeliste gelöscht wurde.
+Ein **System.Boolean,** der angibt, ob die Wiedergabeliste gelöscht wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,20 +70,20 @@ Ein **System. Boolean** -Wert, der angibt, ob die Wiedergabeliste gelöscht wurd
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9 oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player serie 9 oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> </dl>
 
  

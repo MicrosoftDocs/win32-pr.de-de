@@ -1,11 +1,11 @@
 ---
 title: Admin-Description-Attribut
-description: Die auf Administrator Bildschirmen angezeigte Beschreibung.
+description: Die Beschreibung, die auf Administratorbildschirmen angezeigt wird.
 ms.assetid: 4307b85b-f285-4e72-a73f-1f179ebb991a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Admin-Description-Attribut
-- adminDescription-Attribut, AD-Schema
+- Admin-Description AD-Attributschema
+- adminDescription-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 168dfacc2577c14a3c41541f5ca88f63331590dd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9d9da2c892db1ea648df7d0027a92bb5cf1f277e03489615b098628f8951b8ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118688449"
 ---
 # <a name="admin-description-attribute"></a>Admin-Description-Attribut
 
-Die auf Administrator Bildschirmen angezeigte Beschreibung.
+Die Beschreibung, die auf Administratorbildschirmen angezeigt wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Admin-Description                           |
-| LDAP-Display-Name | adminDescription                            |
+| Ldap-Anzeigename | adminDescription                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.2.226                      |
 | System-ID-GUID    | bf967919-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -57,12 +57,12 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
@@ -71,19 +71,19 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
@@ -99,12 +99,12 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
@@ -120,12 +120,12 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
@@ -141,12 +141,12 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
@@ -162,12 +162,12 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
@@ -183,12 +183,12 @@ Die auf Administrator Bildschirmen angezeigte Beschreibung.
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x804a                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x804A                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 0                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |

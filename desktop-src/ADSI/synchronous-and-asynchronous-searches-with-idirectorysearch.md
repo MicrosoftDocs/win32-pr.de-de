@@ -1,31 +1,31 @@
 ---
-title: Synchrone und asynchrone Suchvorgänge mit idirector ysearch
-description: Wenn Sie mithilfe der IDirectorySearch-Schnittstelle eine Suche durchführen, wird die Such Anforderung von der ExecuteSearch-Methode von IDirectorySearch nicht an den Server gesendet.
+title: Synchrone und asynchrone Suchvorgänge mit IDirectorySearch
+description: Wenn Sie eine Suche mithilfe der IDirectorySearch-Schnittstelle ausführen, sendet die ExecuteSearch-Methode IDirectorySearch die Suchanforderung nicht an den Server.
 ms.assetid: c4387202-22a0-497a-af0a-20aa8ede905d
 ms.tgt_platform: multiple
 keywords:
-- Synchrone und asynchrone Suchvorgänge mit idirector ysearch ADSI
-- ADSI, Search, idirector ysearch, andere Suchoptionen, synchrone und asynchrone Suchvorgänge
+- Synchrone und asynchrone Suchvorgänge mit IDirectorySearch ADSI
+- ADSI, Search, IDirectorySearch, Andere Suchoptionen, synchrone und asynchrone Suchvorgänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f369d45aaf4453d310c4bac2259bfa9cd089f567
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b3891351bc7ebb9872938f3022f5397100e0be74ca6cd2d86d21a2535f010cb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104387954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118690197"
 ---
-# <a name="synchronous-and-asynchronous-searches-with-idirectorysearch"></a>Synchrone und asynchrone Suchvorgänge mit idirector ysearch
+# <a name="synchronous-and-asynchronous-searches-with-idirectorysearch"></a>Synchrone und asynchrone Suchvorgänge mit IDirectorySearch
 
-Wenn Sie mithilfe der [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) -Schnittstelle eine Suche durchführen, sendet die [**IDirectorySearch:: ExecuteSearch**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-executesearch) -Methode die Such Anforderung nicht an den Server. Diese Methode speichert nur die Suchparameter. Die Such Anforderung wird tatsächlich gesendet, wenn Sie [**IDirectorySearch:: GetFirstRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getfirstrow) oder [**IDirectorySearch:: GetNextRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getnextrow)aufrufen.
+Wenn Sie eine Suche mithilfe der [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) ausführen, sendet die [**IDirectorySearch::ExecuteSearch-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-executesearch) die Suchanforderung nicht an den Server. Diese Methode speichert nur die Suchparameter. Die Suchanforderung wird tatsächlich gesendet, wenn Sie [**IDirectorySearch::GetFirstRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getfirstrow) oder [**IDirectorySearch::GetNextRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getnextrow)aufrufen.
 
-Bei Active Directory suchen ist der Hauptunterschied zwischen synchronen und asynchronen, wenn die erste Zeile des Ergebnisses zurückgegeben wird, d. h. wenn der erste [**GetFirstRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getfirstrow) -oder [**GetNextRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getnextrow) -Rückruf zurückgegeben wird.
+Bei Active Directory-Suchen besteht der Hauptunterschied zwischen synchron und asynchron darin, dass die erste Zeile des Ergebnisses zurückgegeben wird, d. h. wenn der erste [**GetFirstRow-**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getfirstrow) oder [**GetNextRow-Aufruf**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getnextrow) zurückgegeben wird.
 
-Bei einer synchronen Suche wird die erste Zeile zurückgegeben, wenn der Server erstellt wurde und das gesamte Resultset an den Client zurückgegeben wurde, wenn Paging nicht aktiviert ist. Wenn Paging aktiviert ist, wird die erste Zeile zurückgegeben, wenn die erste Seite des Resultsets zurückgegeben wird.
+Wenn paging in einer synchronen Suche nicht aktiviert ist, wird die erste Zeile zurückgegeben, wenn der Server das gesamte Resultset erstellt und an den Client zurückgegeben hat. Wenn paging aktiviert ist, wird die erste Zeile zurückgegeben, wenn die erste Seite des Resultset zurückgegeben wird.
 
-Bei einer asynchronen Suche wird die erste Zeile zurückgegeben, wenn der Server die erste Zeile des Resultsets erstellt hat, wenn Paging nicht aktiviert ist. Wenn Paging aktiviert ist, wird die erste Zeile zurückgegeben, wenn die erste Seite des Resultsets zurückgegeben wird.
+Wenn paging in einer asynchronen Suche nicht aktiviert ist, wird die erste Zeile zurückgegeben, wenn der Server die erste Zeile des Resultset erstellt hat. Wenn paging aktiviert ist, wird die erste Zeile zurückgegeben, wenn die erste Seite des Resultset zurückgegeben wird.
 
-Der Standard Suchtyp ist synchron. Wenn Sie eine asynchrone Suche angeben möchten, legen Sie die Option für die **\_ \_ asynchrone Suchoption ADS searchpref** mit dem **\_ booleschen adstype** -Wert " **true** " im [**ADS \_ searchpref- \_ Informations**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) Array fest, das an die [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode übermittelt wird. Dieser Vorgang wird im folgenden Codebeispiel gezeigt.
+Der Standardsuchtyp ist synchron. Um eine asynchrone Suche anzugeben, legen Sie eine **ADS \_ SEARCHPREF \_ ASYNCHRONOUS-Suchoption** mit dem **\_ ADSTYPE BOOLEAN-Wert** **TRUE** im [**ADS \_ SEARCHPREF \_ INFO-Array**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) fest, das an die [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) übergeben wird. Dieser Vorgang wird im folgenden Codebeispiel gezeigt.
 
 
 ```C++
@@ -37,9 +37,9 @@ SearchPref.vValue.Boolean = TRUE;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

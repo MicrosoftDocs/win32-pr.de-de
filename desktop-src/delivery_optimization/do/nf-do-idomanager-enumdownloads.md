@@ -1,8 +1,8 @@
 ---
-title: 'Idomanager:: enumdownloads-Methode'
-description: Ruft einen Schnittstellen Zeiger auf ein Enumeratorobjekt ab, das verwendet wird, um vorhandene Downloads aufzulisten.
+title: IDOManager::EnumDownloads-Methode
+description: Ruft einen Schnittstellenzeiger auf ein Enumeratorobjekt ab, das zum Aufzählen vorhandener Downloads verwendet wird.
 keywords:
-- 'Idomanager:: enumdownloads-Methode'
+- IDOManager::EnumDownloads-Methode
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/03/2019
-ms.openlocfilehash: a1e7fed2955fdc1b5ac0c11cfebc34aa95517603
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 5442196b95e654755b4f84fe85375afb8f5b9372ddae453ca4ddffb567882fda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "106338037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118543827"
 ---
-# <a name="idomanagerenumdownloads-method"></a>Idomanager:: enumdownloads-Methode
+# <a name="idomanagerenumdownloads-method"></a>IDOManager::EnumDownloads-Methode
 
-Ruft einen Schnittstellen Zeiger auf ein Enumeratorobjekt ab, das verwendet wird, um vorhandene Downloads aufzulisten.
+Ruft einen Schnittstellenzeiger auf ein Enumeratorobjekt ab, das zum Aufzählen vorhandener Downloads verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ HRESULT EnumDownloads(
 
 `category`
 
-Optional. Der Eigenschaftsname, der als Kategorie für die Aufzählung verwendet werden soll. Durch die Übergabe `nullptr` werden alle vorhandenen Downloads abgerufen. Die folgenden Eigenschaften werden als Kategorie unterstützt.
+Optional. Der Eigenschaftsname, der als Kategorie zum Aufzählen verwendet werden soll. Durch `nullptr` die Übergabe werden alle vorhandenen Downloads abgerufen. Die folgenden Eigenschaften werden als Kategorie unterstützt.
 
 - **DODownloadProperty_Id**
 - **DODownloadProperty_Uri**
@@ -48,16 +48,16 @@ Optional. Der Eigenschaftsname, der als Kategorie für die Aufzählung verwendet
 
 `ppEnum`
 
-Die Adresse eines Schnittstellen Zeigers auf **IEnumUnknown**, der zum Aufzählen vorhandener Downloads verwendet wird. Der Inhalt des Enumerators hängt vom Wert der *Kategorie* ab. Die Downloads, die in der Enumerationsschnittstelle enthalten sind, sind diejenigen, die zuvor vom gleichen Aufrufer dieser Funktion erstellt wurden. 
+Die Adresse eines Schnittstellenzeigers auf **IEnumUnknown,** der zum Aufzählen vorhandener Downloads verwendet wird. Der Inhalt des Enumerators hängt vom Wert der Kategorie *ab.* Die in der Enumerationsschnittstelle enthaltenen Downloads sind diejenigen, die zuvor vom gleichen Aufrufer dieser Funktion erstellt wurden. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](/windows/desktop/com/structure-of-com-error-codes) - [Fehlercode](/windows/desktop/com/com-error-codes-10)zurückgegeben.
+Wenn die Funktion erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein [**HRESULT-Fehlercode**](/windows/desktop/com/structure-of-com-error-codes) [zurückgegeben.](/windows/desktop/com/com-error-codes-10)
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Do. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, version 1809 Win32 applications only (Nur \[ Win32-Anwendungen der Version 1809)\] |
+| **Header** | Do.h |

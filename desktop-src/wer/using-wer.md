@@ -1,90 +1,90 @@
 ---
-title: Verwenden von wer
-description: Ab Windows Vista stellt Windows die Fehlerberichterstattung für Abstürze, nicht-Antworten und Kernel Fehler standardmäßig bereit, ohne dass Änderungen an der Anwendung erforderlich sind.
+title: Verwenden von WER
+description: Ab Windows Vista bietet Windows standardmäßig Absturz-, Nichtantwort- und Kernelfehlerberichte, ohne dass Änderungen an Ihrer Anwendung erforderlich sind.
 ms.assetid: c096cd89-e3a7-4959-a35f-40e6168f277e
 keywords:
-- Windows-Fehlerberichterstattung für die Windows-Fehlerberichterstattung mit
+- Windows fehlerberichterstattung Windows-Fehlerberichterstattung mit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 655bed6d11757d7d4e08cd00ac47479e1246f96b
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 17dfa8bc2235f43770cd177ad3e5d9a7d1aacde36034152b88cb06af3879e8c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104390134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118442240"
 ---
-# <a name="using-wer"></a>Verwenden von wer
+# <a name="using-wer"></a>Verwenden von WER
 
-Ab Windows Vista stellt Windows die Fehlerberichterstattung für Abstürze, nicht-Antworten und Kernel Fehler standardmäßig bereit, ohne dass Änderungen an der Anwendung erforderlich sind. Der Bericht enthält bei Bedarf Minidump-und Heap-Dumpinformationen. Anwendungen verwenden stattdessen die wer-API, um anwendungsspezifische Problemberichte an Microsoft zu senden.
+Ab Windows Vista bietet Windows standardmäßig Absturz-, Nichtantwort- und Kernelfehlerberichte, ohne dass Änderungen an Ihrer Anwendung erforderlich sind. Der Bericht enthält bei Bedarf Minidump- und Heapabbildinformationen. Anwendungen verwenden stattdessen die WER-API, um anwendungsspezifische Problemberichte an Microsoft zu senden.
 
-Da Windows automatisch nicht behandelte Ausnahmen meldet, sollte die Anwendung keine schwerwiegenden Ausnahmen verarbeiten. Wenn der fehlerhafte oder nicht reagierende Prozess interaktiv ist, zeigt wer eine Benutzeroberfläche an, die den Benutzer über das Problem informiert. Eine Anwendung gilt als nicht reagierend, wenn Sie fünf Sekunden lang nicht auf Windows-Meldungen antwortet, während der Benutzer versucht, mit der Anwendung zu interagieren.
+Da Windows automatisch nicht behandelte Ausnahmen meldet, sollte die Anwendung keine schwerwiegenden Ausnahmen behandeln. Wenn der fehlerhafte oder nicht reagierende Prozess interaktiv ist, zeigt WER eine Benutzeroberfläche an, die den Benutzer über das Problem informiert. Eine Anwendung gilt als nicht reagierend, wenn sie fünf Sekunden lang nicht Windows antwortet, während der Benutzer versucht, mit der Anwendung zu interagieren.
 
-## <a name="windows-error-reporting-flow-for-crashes-non-response-and-kernel-faults"></a>Windows-Fehlerberichterstattung Fluss für Abstürze, nicht-Antwort-und Kernel Fehler
+## <a name="windows-error-reporting-flow-for-crashes-non-response-and-kernel-faults"></a>Windows-Fehlerberichterstattung bei Abstürzen, Nichtantwortfehlern und Kernelfehlern
 
-Im folgenden werden die Schritte gezeigt, die für einen Anwendungs Absturz, einen nicht-Antwort-oder einen Kernel Fehler auftreten.
+Im Folgenden werden die Schritte gezeigt, die bei einem Anwendungsabsturz, einer Nichtantwort oder einem Kernelfehler auftreten.
 
-1.  Das Problem Ereignis tritt auf.
-2.  Das Betriebssystem ruft wer auf.
-3.  Wer sammelt die Daten, erstellt einen Bericht und fordert den Benutzer zur Zustimmung auf (falls erforderlich).
-4.  Wer sendet den Bericht an Microsoft (Watson Server), wenn der Benutzer zugestimmt hat.
-5.  Wenn der Watson-Server zusätzliche Daten anfordert, sammelt wer die Daten und fordert den Benutzer zur Zustimmung auf (falls erforderlich).
-6.  Wenn die Anwendung für die Wiederherstellung registriert und neu gestartet wird, führt wer die registrierten Rückruf Funktionen aus, während die Daten komprimiert und an Microsoft gesendet werden (wenn der Benutzer zugestimmt hat).
-7.  Wenn bei Microsoft eine Antwort auf das Problem verfügbar ist, wird der Benutzer benachrichtigt.
+1.  Das Problemereignis tritt auf.
+2.  Das Betriebssystem ruft WER auf.
+3.  WER sammelt die Daten, erstellt einen Bericht und fordert den Benutzer zur Zustimmung auf (falls erforderlich).
+4.  WER sendet den Bericht an Microsoft (Watson Server), wenn der Benutzer zugestimmt hat.
+5.  Wenn der Watson-Server zusätzliche Daten an fordert, sammelt WER die Daten und fordert den Benutzer zur Zustimmung auf (falls erforderlich).
+6.  Wenn sich die Anwendung für die Wiederherstellung und den Neustart registriert hat, führt WER die registrierten Rückruffunktionen aus, während die Daten komprimiert und an Microsoft gesendet werden (wenn der Benutzer zugestimmt hat).
+7.  Wenn eine Antwort auf das Problem von Microsoft verfügbar ist, wird der Benutzer benachrichtigt.
 
-Anwendungen können die folgenden Funktionen verwenden, um den Inhalt des Berichts anzupassen, der an Microsoft gesendet wird. Die Registrierungsfunktionen geben an, dass die bestimmten Dateien und Speicherblöcke in den von ihm erstellten Fehlerbericht eingeschlossen werden sollen.
+Anwendungen können die folgenden Funktionen verwenden, um den Inhalt des Berichts anzupassen, der an Microsoft gesendet wird. Die Registrierungsfunktionen teilen WER mit, dass die spezifischen Dateien und Speicherblöcke in den von ihm erstellten Fehlerbericht enthalten sind.
 
--   [**Werregisterfile**](/windows/desktop/api/Werapi/nf-werapi-werregisterfile)
--   [**Werregistermemoryblock**](/windows/desktop/api/Werapi/nf-werapi-werregistermemoryblock)
--   [**Wersetflags**](/windows/desktop/api/Werapi/nf-werapi-wersetflags)
--   [**Werunregisterfile**](/windows/desktop/api/Werapi/nf-werapi-werunregisterfile)
--   [**Werunregistermemoryblock**](/windows/desktop/api/Werapi/nf-werapi-werunregistermemoryblock)
--   [**Wergetflags**](/windows/desktop/api/Werapi/nf-werapi-wergetflags)
+-   [**WerRegisterFile**](/windows/desktop/api/Werapi/nf-werapi-werregisterfile)
+-   [**WerRegisterMemoryBlock**](/windows/desktop/api/Werapi/nf-werapi-werregistermemoryblock)
+-   [**WerSetFlags**](/windows/desktop/api/Werapi/nf-werapi-wersetflags)
+-   [**WerUnregisterFile**](/windows/desktop/api/Werapi/nf-werapi-werunregisterfile)
+-   [**WerUnregisterMemoryBlock**](/windows/desktop/api/Werapi/nf-werapi-werunregistermemoryblock)
+-   [**WerGetFlags**](/windows/desktop/api/Werapi/nf-werapi-wergetflags)
 
-## <a name="windows-error-reporting-flow-for-generic-event-reporting"></a>Windows-Fehlerberichterstattung Fluss für die generische Ereignis Berichterstattung
+## <a name="windows-error-reporting-flow-for-generic-event-reporting"></a>Windows-Fehlerberichterstattung für die generische Ereignisberichterstattung
 
-Die folgenden Schritte zeigen, wie Anwendungen einen Fehlerbericht für eine nicht schwerwiegende Fehlerbedingung erhalten können.
+Die folgenden Schritte zeigen, wie Anwendungen einen Fehlerbericht für einen nicht schwerwiegenden Fehlerzustand erhalten können.
 
-1.  Das nicht schwerwiegende Problem Ereignis tritt auf.
+1.  Das nicht schwerwiegende Problemereignis tritt auf.
 2.  Die Anwendung erkennt das Ereignis und verwendet die folgende Sequenz von Funktionsaufrufen, um den Bericht zu generieren.
-    1.  Rufen Sie die Funktion " [**werreportcreate**](/windows/desktop/api/Werapi/nf-werapi-werreportcreate) " auf, um den Bericht zu erstellen.
-    2.  Aufrufen der Funktion " [**werreportsetparameter**](/windows/desktop/api/Werapi/nf-werapi-werreportsetparameter) " zum Festlegen der Berichts Parameter.
-    3.  Ruft die Funktion " [**werreportaddfile**](/windows/desktop/api/Werapi/nf-werapi-werreportaddfile) " auf, um dem Bericht Dateien hinzuzufügen.
-    4.  Nennen Sie die Funktion " [**werreportadddump**](/windows/desktop/api/Werapi/nf-werapi-werreportadddump) ", um dem Bericht ein Minidump hinzuzufügen (falls erforderlich).
-    5.  Ruft die Funktion " [**werreportsubmit**](/windows/desktop/api/Werapi/nf-werapi-werreportsubmit) " auf, um den Bericht zu senden.
-    6.  Wenden Sie das [**werreportclosehandle**](/windows/desktop/api/Werapi/nf-werapi-werreportclosehandle) an, um Ressourcen freizugeben.
-3.  Abhängig von den spezifischen Optionen, die beim Aufrufen der Funktionen in Schritt 2 verwendet werden, beendet wer die Fehlerberichterstattung. Wer stellt sicher, dass die Berichterstellung gemäß den vom Benutzer festgelegten Richtlinien durchgeführt wird. Angenommen, der Bericht wird an Microsoft gesendet, der Bericht in die Warteschlange eingereiht und dem Benutzer die entsprechenden Benutzeroberflächen angezeigt.
+    1.  Rufen Sie die [**WerReportCreate-Funktion**](/windows/desktop/api/Werapi/nf-werapi-werreportcreate) auf, um den Bericht zu erstellen.
+    2.  Rufen Sie die [**WerReportSetParameter-Funktion**](/windows/desktop/api/Werapi/nf-werapi-werreportsetparameter) auf, um die Berichtsparameter festlegen.
+    3.  Rufen Sie die [**WerReportAddFile-Funktion**](/windows/desktop/api/Werapi/nf-werapi-werreportaddfile) auf, um dem Bericht Dateien hinzuzufügen.
+    4.  Rufen Sie die [**WerReportAddDump-Funktion**](/windows/desktop/api/Werapi/nf-werapi-werreportadddump) auf, um dem Bericht (falls erforderlich) einen Minidump hinzuzufügen.
+    5.  Rufen Sie die [**WerReportSubmit-Funktion auf,**](/windows/desktop/api/Werapi/nf-werapi-werreportsubmit) um den Bericht zu senden.
+    6.  Rufen Sie [**WerReportCloseHandle auf, um**](/windows/desktop/api/Werapi/nf-werapi-werreportclosehandle) Ressourcen frei zu geben.
+3.  Abhängig von den spezifischen Optionen, die beim Aufrufen der Funktionen in Schritt 2 verwendet werden, beendet WER die Fehlerberichterstattung. WER stellt sicher, dass die Berichterstellung in Übereinstimmung mit den vom Benutzer festgelegten Richtlinien erfolgt. BEISPIELSWEISE sendet WER den Bericht an Microsoft, stellt den Bericht in die Warteschlange und zeigt dem Benutzer die entsprechenden Benutzeroberflächen an.
 
-## <a name="excluding-an-application-from-windows-error-reporting"></a>Ausschließen einer Anwendung von Windows-Fehlerberichterstattung
+## <a name="excluding-an-application-from-windows-error-reporting"></a>Ausschließen einer Anwendung aus Windows-Fehlerberichterstattung
 
-Verwenden Sie die Funktion " [**weraddexcludedappliction"**](/windows/desktop/api/Werapi/nf-werapi-weraddexcludedapplication) , um Ihre Anwendung aus der Windows-Fehlerberichterstattung auszuschließen. Verwenden Sie die Funktion " [**werremoveexcludedappliction"**](/windows/desktop/api/Werapi/nf-werapi-werremoveexcludedapplication) , um die Fehlerberichterstattung für die Anwendung wiederherzustellen.
+Verwenden Sie die [**WerAddExcludedApplication-Windows,**](/windows/desktop/api/Werapi/nf-werapi-weraddexcludedapplication) um Ihre Anwendung von der Fehlerberichterstattung auszuschließen. Verwenden Sie die [**WerRemoveExcludedApplication-Funktion,**](/windows/desktop/api/Werapi/nf-werapi-werremoveexcludedapplication) um die Fehlerberichterstattung für Ihre Anwendung wiederherzustellen.
 
 ## <a name="automatically-recovering-data-and-restarting-a-faulted-application"></a>Automatisches Wiederherstellen von Daten und Neustarten einer fehlerhaften Anwendung
 
-Eine Anwendung kann zum Speichern von Daten-und Zustandsinformationen verwendet werden, bevor die Anwendung aufgrund einer nicht behandelten Ausnahme beendet wird, oder wenn die Anwendung nicht mehr reagiert. Die Anwendung wird bei Bedarf ebenfalls neu gestartet. Weitere Informationen finden Sie unter [Anwendungs Wiederherstellung und Neustart](/windows/desktop/Recovery/application-recovery-and-restart-portal).
+Eine Anwendung kann Application Recovery und Restart verwenden, um Daten und Zustandsinformationen zu speichern, bevor die Anwendung aufgrund einer nicht behandelten Ausnahme beendet wird oder wenn die Anwendung nicht mehr reagiert. Die Anwendung wird auch neu gestartet, wenn dies angefordert wird. Weitere Informationen finden Sie unter [Anwendungswiederherstellung und Neustarten](/windows/desktop/Recovery/application-recovery-and-restart-portal)von .
 
 ## <a name="legacy-api"></a>Legacy-API
 
-Eine Anwendung kann einen Fehler melden, indem Sie die [**reportfault**](/windows/desktop/api/ErrorRep/nf-errorrep-reportfault) -Funktion aufrufen. Sie sollten jedoch nicht die Funktion **Report Fault** verwenden, es sei denn, Sie haben eine sehr spezielle Anforderung, dass das Standardverhalten der Fehlerberichterstattung des Betriebssystems nicht erfüllt werden kann.
+Eine Anwendung kann einen Fehler melden, indem sie die [**ReportFault-Funktion**](/windows/desktop/api/ErrorRep/nf-errorrep-reportfault) aufruft. Sie sollten die **ReportFault-Funktion** jedoch nur verwenden, wenn sie eine sehr spezifische Anforderung haben, dass das Standardverhalten der Fehlerberichterstattung des Betriebssystems nicht erfüllt werden kann.
 
-Wenn die Fehlerberichterstattung aktiviert ist, zeigt das System dem Benutzer ein Dialogfeld an, das anzeigt, dass die Anwendung ein Problem feststellt und geschlossen wird. Wenn ein Debugger im Schlüssel **HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows NT \\ CurrentVersion \\ AEDebug** konfiguriert ist, erhält der Benutzer die Möglichkeit, den Debugger zu starten. Der Benutzer erhält auch die Option, einen Bericht an Microsoft zu senden. Wenn der Benutzer den Bericht sendet, zeigt das System ein weiteres Dialogfeld an, in dem der Benutzer für den Bericht informiert ist, und stellt einen Link zu weiteren Informationen bereit.
+Wenn die Fehlerberichterstattung aktiviert ist, zeigt das System dem Benutzer ein Dialogfeld an, das angibt, dass die Anwendung ein Problem festgestellt hat und geschlossen wird. Wenn in der **HKEY LOCAL \_ \_ MACHINE \\ SOFTWARE Microsoft Windows \\ \\ NT \\ CurrentVersion \\ AeDebug-Taste** ein Debugger konfiguriert ist, erhält der Benutzer die Möglichkeit, den Debugger zu starten. Der Benutzer erhält auch die Möglichkeit, einen Bericht an Microsoft zu senden. Wenn der Benutzer den Bericht sendet, zeigt das System ein weiteres Dialogfeld an, das dem Benutzer für den Bericht dankt und einen Link zu weiteren Informationen enthält.
 
-Das Fehler Berichterstattungs System unterstützt die folgenden Vorgangs Modi:
+Das Fehlerberichterstattungssystem unterstützt die folgenden Betriebsmodi.
 
 
 
 | Betriebsmodus          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                  |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Shared Memory-Berichterstellung | Wenn der Sicherheitskontext der Anwendung mit dem Sicherheitskontext des angemeldeten Benutzers identisch ist, verwendet das Fehler Berichterstattungs System einen Block freigegebenen Speichers für die Kommunikation. Dieser Modus kann nicht mit dem Manifest-Berichtsmodus verwendet werden.<br/>                                                                                               |
-| Manifeste Berichterstellung      | Wenn der Sicherheitskontext der Anwendung nicht mit dem Sicherheitskontext des angemeldeten Benutzers identisch ist, verwendet das Fehler Berichterstattungs System eine Datei für die Kommunikation. Dieser Modus wird auch zum Melden von nicht reagierenden Anwendungen und Kernel Fehlern verwendet. Dieser Modus kann nicht mit dem Berichtsmodus für freigegebenen Speicher verwendet werden.<br/>                      |
-| Internet Berichterstellung      | Das Fehler Berichterstattungs System sendet alle Daten über das Internet an Microsoft. Dies ist der Standardbetriebsmodus. Sie kann nicht mit dem Unternehmensbericht Erstellungs Modus verwendet werden. Dieser Modus wird verwendet, wenn vom Administrator kein Unternehmens hoch Lade Pfad angegeben wird.<br/>                                                                     |
-| Unternehmensbericht Erstellung     | Das Fehler Berichterstattungs System sendet alle Daten an eine Dateifreigabe, anstatt Sie direkt an Microsoft zu hochladen. Dadurch können IT-Manager von Unternehmen Daten überprüfen, bevor Sie an Microsoft gesendet werden. Dieser Modus wird verwendet, wenn ein vom Administrator angegebener unternehmensuploadpfad vorliegt. Sie kann nicht mit dem Internet Bericht Erstellungs Modus verwendet werden.<br/> |
-| Kostenlose Berichterstellung      | Das Fehler Berichterstattungs System zeigt keine Dialogfelder für den Benutzer an. Dadurch können IT-Manager von Unternehmen jederzeit Fehlerberichte von ihren Mitarbeitern sammeln. Dieser Modus wird verwendet, wenn die Berichterstellung vom Administrator aktiviert wird, die Benachrichtigung aber deaktiviert ist. Sie kann nur mit dem Unternehmensbericht Erstellungs Modus verwendet werden.<br/>        |
+| Berichterstellung für freigegebenen Speicher | Wenn der Sicherheitskontext der Anwendung mit dem Sicherheitskontext des angemeldeten Benutzers identisch ist, verwendet das Fehlerberichterstattungssystem einen Block freigegebenen Speichers für die Kommunikation. Dieser Modus kann nicht mit dem Manifestberichtsmodus verwendet werden.<br/>                                                                                               |
+| Manifestberichterstellung      | Wenn der Sicherheitskontext der Anwendung nicht mit dem Sicherheitskontext des angemeldeten Benutzers identisch ist, verwendet das Fehlerberichterstattungssystem eine Datei für die Kommunikation. Dieser Modus wird auch verwendet, um nicht reagierende Anwendungen und Kernelfehler zu melden. Dieser Modus kann nicht mit dem Berichterstellungsmodus für freigegebenen Speicher verwendet werden.<br/>                      |
+| Internetberichterstellung      | Das Fehlerberichterstattungssystem sendet alle Daten über das Internet an Microsoft. Dies ist der Standardbetriebsmodus. Sie kann nicht im Berichterstellungsmodus des Unternehmens verwendet werden. Dieser Modus wird verwendet, wenn vom Administrator kein Unternehmensuploadpfad angegeben wurde.<br/>                                                                     |
+| Unternehmensberichte     | Das Fehlerberichterstattungssystem sendet alle Daten an eine Dateifreigabe, anstatt sie direkt an Microsoft hochzuladen. Auf diese Weise können IT-Manager von Unternehmen Daten überprüfen, bevor sie an Microsoft gesendet werden. Dieser Modus wird verwendet, wenn vom Administrator ein Unternehmensuploadpfad angegeben wird. Sie kann nicht mit dem Internetberichtsmodus verwendet werden.<br/> |
+| Headless Reporting      | Das Fehlerberichterstattungssystem zeigt dem Benutzer keine Dialogfelder an. Auf diese Weise können IT-Manager in Unternehmen jederzeit Fehlerberichte von ihren Mitarbeitern erfassen. Dieser Modus wird verwendet, wenn die Berichterstellung vom Administrator aktiviert wird, die Benachrichtigung jedoch deaktiviert ist. Sie kann nur im Berichterstellungsmodus des Unternehmens verwendet werden.<br/>        |
 
 
 
  
 
-Verwenden Sie die [**adderexcludedappliction-**](/windows/desktop/api/ErrorRep/nf-errorrep-adderexcludedapplicationa) Funktion, um die Anwendung von der Fehlerberichterstattung auszuschließen.
+Um Ihre Anwendung von der Fehlerberichterstattung auszuschließen, verwenden Sie die [**AddERExcludedApplication-Funktion.**](/windows/desktop/api/ErrorRep/nf-errorrep-adderexcludedapplicationa)
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: Proxy Attribut
-description: Das Attribut \ Proxy \ verhindert, dass die Automatisierung als Proxy-/stubhandler für eine duale Schnittstelle registriert wird.
+title: Proxyattribut
+description: Das \proxy\-Attribut verhindert, dass Automation sich als Proxy-/Stubhandler für eine duale Schnittstelle registriert.
 ms.assetid: 88e59938-83c9-436a-931c-f4396fdcf653
 keywords:
-- Proxy Attribut-Mittel l
+- Proxyattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5aa8c9d305b7f51a012ae26d7b1a76d2e3011fd7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 37e81cb7f67f87153825db59d921b6ee9ec7df6cd334ed2228896c8dec5f9d5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118641419"
 ---
-# <a name="proxy-attribute"></a>Proxy Attribut
+# <a name="proxy-attribute"></a>Proxyattribut
 
-Das **\[ Proxy \]** Attribut verhindert, dass die Automatisierung als Proxy-/Stub-Handler für eine duale Schnittstelle registriert wird.
+Das **\[ \] Proxyattribut** verhindert, dass Automation sich als Proxy-/Stubhandler für eine duale Schnittstelle registriert.
 
 ``` syntax
 [ 
@@ -39,62 +39,62 @@ interface interface-name <> : base-interface <>
 
 <dl> <dt>
 
-*Zeichenfolge-UUID* 
+*string-uuid* 
 </dt> <dd>
 
-Gibt eine Zeichenfolge an, die aus 8 hexadezimalen Ziffern gefolgt von einem Bindestrich und dann drei Gruppen von vier hexadezimalen Ziffern gefolgt von einem Bindestrich und dann 12 hexadezimal Ziffern besteht. Sie können die UUID-Zeichenfolge in Anführungszeichen einschließen, es sei denn, Sie verwenden den Mittel l-Compilerschalter [**/OSF**](-osf.md).
+Gibt eine Zeichenfolge an, die aus acht Hexadezimalziffern gefolgt von einem Bindestrich, dann drei Gruppen von vier Hexadezimalziffern gefolgt von einem Bindestrich und dann 12 Hexadezimalziffern besteht. Sie können die UUID-Zeichenfolge in Anführungszeichen setzen, außer wenn Sie den MIDL-Compilerschalter [**/osf verwenden.**](-osf.md)
 
 </dd> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr IDL-Attributen an, die auf die gesamte Schnittstelle angewendet werden. Wenn zwei oder mehr Schnittstellen Attribute vorhanden sind, müssen diese durch Kommas getrennt werden.
+Gibt eine Liste von null oder mehr IDL-Attributen an, die für die Schnittstelle als Ganzes gelten. Wenn mindestens zwei Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
-Der Name der Schnittstelle.
+Name der Schnittstelle.
 
 </dd> <dt>
 
 *Basisschnittstelle* 
 </dt> <dd>
 
-Gibt den Namen einer Schnittstelle an, von der diese abgeleitete Schnittstelle Member-Funktionen, Statuscodes und Schnittstellen Attribute erbt. Die abgeleitete Schnittstelle erbt keine Typdefinitionen. Verwenden Sie hierzu das Schlüsselwort [**Import**](import.md) , um die IDL-Datei der Basisschnittstelle zu importieren.
+Gibt den Namen einer Schnittstelle an, von der diese abgeleitete Schnittstelle Memberfunktionen, Statuscodes und Schnittstellenattribute erbt. Die abgeleitete Schnittstelle erbt keine Typdefinitionen. Verwenden Sie hierzu das Schlüsselwort [**import,**](import.md) um die IDL-Datei der Basisschnittstelle zu importieren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch die Verwendung des \[ **Proxy** \] Attributs für eine duale Schnittstelle wird verhindert, dass der TLB generierte stubfunktionen übernimmt. Wenn dieses Attribut angegeben wird, sollte die Registrierung des Export der Typbibliothek-Proxys nicht aufgehoben werden, wenn die Registrierung des Export der Typbibliothek aufgehoben wird.
+Die Verwendung \[ **des Proxyattributs** für eine duale Schnittstelle \] verhindert, dass der TLB generierte Stubs übernimmt. Wenn dieses Attribut angegeben wird, sollte die Registrierung des typelib-Proxys nicht aufgehoben werden, wenn die Registrierung von typelib aufgehoben wird.
 
 ### <a name="flags"></a>Flags
 
 <dl> <dt>
 
-<span id="TYPEFLAG_PROXY"></span><span id="typeflag_proxy"></span>TYPEFLAG- \_ Proxy
+<span id="TYPEFLAG_PROXY"></span><span id="typeflag_proxy"></span>TYPEFLAG-PROXY \_
 </dt> <dd>
 
-Schnittstellen können mit dem TYPEFLAG \_ -ProxyFlag gekennzeichnet werden, um anzugeben, dass Sie eine Proxy-/Stub-Dynamic Link Library verwenden werden. Dieses Flag gibt an, dass die Registrierung des Export der Typbibliothek-Proxys nicht aufgehoben werden soll, wenn die Registrierung der Typbibliothek aufgehoben
+Schnittstellen können mit dem TYPEFLAG-PROXY-Flag markiert werden, um anzugeben, dass sie eine \_ Proxy-/Stub-Dynamic Link Library verwenden. Dieses Flag gibt an, dass die Registrierung des typelib-Proxys nicht aufgehoben werden soll, wenn die Registrierung der typelib aufgehoben wird.
 
 </dd> </dl>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Erstellen einer Typbibliothek mit "Mittel l"**](generating-a-type-library-with-midl-2.md)
+[**Generieren einer Typbibliothek mit MIDL**](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**Ales**](dual.md)
+[**Dual**](dual.md)
 </dt> <dt>
 
-[**FUNCFLAGS**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[**Typeflags**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

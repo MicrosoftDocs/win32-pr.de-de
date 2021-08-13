@@ -1,11 +1,11 @@
 ---
 title: ms-DS-NC-Type-Attribut
-description: Ein Bitfeld, das Informationen über Aspekte eines NC-Replikats verwaltet, das für die Replikation relevant ist.
+description: Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwaltet, die für die Replikation relevant sind.
 ms.assetid: 8e838e7b-b19f-4c9e-8fb9-cf9f1076af56
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "ms-DS-NC-Type"
-- AD-Schema des msDS-nctype-Attributs
+- AD-Schema des ms-DS-NC-Type-Attributs
+- AD-Schema des msDS-NcType-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd2d5a6fdb3dcf4e21192b59323b3b6630597065
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 01da3f99ae6a3bdef6bb94396da869426a86fa1e09d46098c4831d8ec4c7c8ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118684238"
 ---
 # <a name="ms-ds-nc-type-attribute"></a>ms-DS-NC-Type-Attribut
 
-Ein Bitfeld, das Informationen über Aspekte eines NC-Replikats verwaltet, das für die Replikation relevant ist.
+Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwaltet, die für die Replikation relevant sind.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-NC-Typ                        |
-| LDAP-Display-Name | MSDS-nctype                          |
+| CN                | ms-DS-NC-Type                        |
+| Ldap-Anzeigename | msDS-NcType                          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2024              |
-| System-ID-GUID    | 5a2eacd7-cc2b-48cf-9d9a-b6f1a0024de 9 |
+| System-Id-Guid    | 5a2eacd7-cc2b-48cf-9d9a-b6f1a0024de9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -55,10 +55,10 @@ Ein Bitfeld, das Informationen über Aspekte eines NC-Replikats verwaltet, das f
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -76,10 +76,10 @@ Ein Bitfeld, das Informationen über Aspekte eines NC-Replikats verwaltet, das f
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -97,10 +97,10 @@ Ein Bitfeld, das Informationen über Aspekte eines NC-Replikats verwaltet, das f
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

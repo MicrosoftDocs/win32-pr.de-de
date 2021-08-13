@@ -4,26 +4,26 @@ ms.assetid: da615cb4-d36d-4180-8f97-c9f83c0df1c6
 title: RegisterUser-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 686628d29094f951994b072ad4451a383a405965
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f89d43d18839e806939b7a084d37840b9895fdc81efb79fc03867eebe4c5c57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118626715"
 ---
 # <a name="registeruser-action"></a>RegisterUser-Aktion
 
 Die Aktion RegisterUser registriert die Benutzerinformationen beim Installationsprogramm, um den Benutzer eines Produkts zu identifizieren.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten   |
+| Feld | Beschreibung der Aktionsdaten   |
 |-------|------------------------------|
 | \[1\] | Registrierte Benutzerinformationen. |
 
@@ -31,21 +31,21 @@ Es gibt keine Sequenz Einschränkungen.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Aktion "RegisterUser" wird während einer administrativen Installation nicht durchgeführt. Wenn der vom Benutzer eingegebene Produkt Bezeichner nicht durch die [ValidateProductID-Aktion](validateproductid-action.md)überprüft wurde, ist die [**ProductID-**](productid.md) Eigenschaft nicht festgelegt, und diese Aktion führt keine Aktion aus.
+Die RegisterUser-Aktion wird während einer Administratorinstallation nicht ausgeführt. Wenn der vom Benutzer eingegebene Produktbezeichner nicht von der [ValidateProductID-Aktion](validateproductid-action.md)überprüft wurde, wird die [**ProductID-Eigenschaft**](productid.md) nicht festgelegt, und diese Aktion führt keine Aktion aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**User**](username.md)
+[**Nutzername**](username.md)
 </dt> <dt>
 
-[**CompanyName**](companyname.md)
+[**Companyname**](companyname.md)
 </dt> <dt>
 
-[**ProductID**](productid.md)
+[**Productid**](productid.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
 description: Ruft die Position im Vektor ab, an der die Änderung aufgetreten ist.
 ms.assetid: 00756d77-aae0-45f0-8bd4-cf68af9bdc7c
-title: 'Ivectorchangedeventargs:: get_Index-Methode (ivectorchangedeventargs. h)'
+title: IVectorChangedEventArgs::get_Index-Methode (IVectorChangedEventArgs.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - IVectorChangedEventArgs.h
-ms.openlocfilehash: 5c131567ec7fc2861ce11db9e5d7ec581f6f663a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72df7f0d46e1e3073262c43064daf58b1fefbf43af913bb7f1b912ed22e67a7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118560646"
 ---
-# <a name="ivectorchangedeventargsget_index-method"></a>Ivectorchangedeventargs:: get \_ Index-Methode
+# <a name="ivectorchangedeventargsget_index-method"></a>IVectorChangedEventArgs::get \_ Index-Methode
 
 Ruft die Position im Vektor ab, an der die Änderung aufgetreten ist.
 
@@ -39,20 +39,20 @@ HRESULT get_Index(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*wert* \[ out, retval\]
 </dt> <dd>
 
-Typ: **Ganzzahl ohne Vorzeichen \** _
+Typ: **unsigned \***
 
-Die null basierte Position im Vektor, an der die Änderung aufgetreten ist (falls zutreffend).
+Die nullbasierte Position im Vektor, an der die Änderung aufgetreten ist( falls zutreffend).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,15 +62,15 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                       |
-| Header<br/>                   | <dl> <dt>IVector changedebug-args. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IVectorChangedEventArgs.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**IVector changedebug-args**](ivectorchangedeventargs.md)
+[**IVectorChangedEventArgs**](ivectorchangedeventargs.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: partial_ignore-Attribut
-description: Das ACF-Attribut \ partielle \_ Ignore \ definiert eine spezialisierte Version von \ Unique \-Zeigern, die eine optionale Semantik bereitstellt.
+description: Das ACF-Attribut \partial ignore\ definiert eine spezielle Version von \_ \unique\-Zeigern, die optionale Out-Semantik bietet.
 ms.assetid: 8a8f88b0-4a12-496d-bf77-ee57241b577b
 keywords:
-- partial_ignore Attribut-Mittel l
+- partial_ignore MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82d133275ca77032341d160b51b95b20235c8f2a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: ac751e5b3bdb4a93c003e170333af8956048c9793630419fff0857d61f8c1f2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118641973"
 ---
-# <a name="partial_ignore-attribute"></a>partielles \_ Ignore-Attribut
+# <a name="partial_ignore-attribute"></a>Partial \_ Ignore-Attribut
 
-Das ACF-Attribut **\[ partielle \_ Ignore \]** definiert eine **\[ \]** spezialisierte Version eindeutiger Zeiger, die eine optionale Semantik bereitstellt.
+Das ACF-Attribut **\[ partial \_ ignore \]** definiert eine **\[ \]** spezielle Version eindeutiger Zeiger, die optionale Out-Semantik bietet.
 
 ``` syntax
 [ [function-attribute-list <>] ] type-specifier <> [pointer- <>declarator <>] function-name <>( [ partial_ignore [ , parameter-attribute-list <> ] ] type-specifier <> [declarator <>] , ...);
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Erstellen einer Funktion ist es üblich, Benutzern das Angeben eines nicht-**null** -Zeigers auf optionale Rückgabe Daten zu ermöglichen. Dies wird häufig als optionaler-out-Zeiger bezeichnet. Der Speicher, auf den der Benutzer zeigt, muss in der Regel nicht initialisiert werden. Diese Technik stellt ein Problem dar, wenn die Funktion über RPC verwendet wird.
+Beim Erstellen einer Funktion ist es üblich, Benutzern zu erlauben, einen **Nicht-NULL-Zeiger** auf optionale Rückgabedaten anzugeben, die häufig als optionaler Out-Zeiger bezeichnet werden. Der Arbeitsspeicher, auf den der Benutzer zeigt, muss in der Regel nicht initialisiert werden. Diese Technik stellt ein Problem dar, wenn die Funktion über RPC verwendet wird.
 
-Wenn der optionale-out-Zeiger gültig ist, aber auf nicht initialisierte Daten zeigt, versucht RPC, diese Daten zu Mars Hallen und an den Server zu senden, was dazu führen kann, dass das Marshalling fehlschlägt und den Aufruf abbricht. Auch wenn das Marshalling erfolgreich ist, wird eine potenziell große Menge an nutzlosen Daten an den Server gesendet.
+Wenn der optionale Out-Zeiger gültig ist, aber auf nicht initialisierte Daten verweist, versucht RPC, diese Daten zu marshallen und an den Server zu senden. Dies kann dazu führen, dass das Marshalling fehlschlägt und den Aufruf abbricht. Auch wenn das Marshalling erfolgreich ist, wird eine potenziell große Menge an unbnigen Daten an den Server gesendet.
 
-Diese Probleme werden gelöst, indem der Zeiger als **\[ in, out, Unique, partiell \_ Ignore \]** gekennzeichnet wird. Alle vier Attribute müssen vorhanden sein. Wenn ein **\[ partieller \_ Ignore \]** -Zeiger auf der Clientseite gemarshallt wird, ist ein Indikator, der anzeigt, ob der Zeiger **null** ist. Wenn der Zeiger nicht **null** ist, empfängt die serverseitige Routine einen gültigen Zeiger auf einen Speicherblock, der mit Nullen initialisiert wurde. Wenn der Zeiger **null** ist, empfängt die serverseitige Routine einen **null** -Zeiger.
+Diese Probleme werden gelöst, indem der Zeiger als **\[ in, out, unique, partial ignore \_ markiert wird. \]** Alle vier Attribute müssen vorhanden sein. Wenn ein **\[ zeiger für \_ \] partielles** Ignorieren auf Clientseite gemarshallt wird, sind die einzigen an den Server gesendeten Daten ein Indikator, der angibt, ob der Zeiger **NULL ist.** Wenn der Zeiger nicht NULL **ist,** empfängt die serverseitige Routine einen gültigen Zeiger auf einen Speicherblock, der mit Nullen initialisiert wurde. Wenn der Zeiger NULL **ist,** empfängt die serverseitige Routine einen **NULL-Zeiger.**
 
-In dieser Situation muss die maximale Größe des Zeigers entweder zum Zeitpunkt der Kompilierung oder basierend auf den Eingabe Parametern festgelegt werden, da der Server Speicherplatz für den Speicherbereich zuweisen muss, auf den verwiesen wird. Ein einfacher **\[ Zeichen \]** folgen Zeiger hat z. b. keine klar definierte Größe, da die Zeichenfolge implizit mit einem NULL-Zeichen beendet wird. Wenn in diesem Fall die maximale Größe der Zeichenfolge durch Hinzufügen eines **\[ size \_ is \]** -Attributs angegeben wird, wird die genau definierte Größen Anforderung erreicht.
+In diesem Fall muss die maximale Größe des Zeigers entweder zur Kompilierzeit oder basierend auf Eingabeparametern klar definiert werden, da der Server Speicherplatz für den Speicherort zuordnen muss, auf den verwiesen wird. Beispielsweise hat ein einfacher **\[ \] Zeichenfolgenzeiger** keine klar definierte Größe, da die Zeichenfolge implizit durch ein NULL-Zeichen beendet wird. In diesem Fall würde die Angabe der maximalen **\[ \_ \]** Größe der Zeichenfolge durch Hinzufügen einer Größe das -Attribut sein, um die genau definierte Größenanforderung zu erfüllen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -48,12 +48,12 @@ void MoveLeft([in, out, unique, partial_ignore] long *pPrevPosition);
 
 <dl> <dt>
 
-[**gem**](unique.md)
+[**Einzigartige**](unique.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

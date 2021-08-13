@@ -1,7 +1,7 @@
 ---
 description: Initialisiert eine Farbe mit den Werten (y, u, v).
 ms.assetid: e3091eaf-8639-428c-8dd8-6feeb7d7776e
-title: D3DCOLOR_XYUV-Makro (D3d9types. h)
+title: D3DCOLOR_XYUV Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 12d539e44528c5e54a54209763e4cbe262cd16f7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: caa6bc1eb9586c1526a7af674040fd703ff0a75a5055ce42e13378206e82c879
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118300324"
 ---
-# <a name="d3dcolor_xyuv-macro"></a>D3DCOLOR \_ XYUV-Makro
+# <a name="d3dcolor_xyuv-macro"></a>\_D3DCOLOR-XYUV-Makro
 
 Initialisiert eine Farbe mit den Werten (y, u, v).
 
@@ -44,7 +44,7 @@ D3DCOLOR D3DCOLOR_XYUV(
 *y* 
 </dt> <dd>
 
-Die Leuchtkraft Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
+Leuchtdichtekomponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Blaue Helligkeit der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 </dd> <dt>
 
-*Ramelow* 
+*V* 
 </dt> <dd>
 
 Rote Helligkeit der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
@@ -64,11 +64,11 @@ Rote Helligkeit der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den [**D3DCOLOR**](d3dcolor.md) -Wert zurück, der den angegebenen Werten (y, u, v) entspricht.
+Gibt den [**D3DCOLOR-Wert**](d3dcolor.md) zurück, der den angegebenen Werten (y, u, v) entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine RGB-Farbe kann auf 16 Bits pro Pixel reduziert werden, indem Sie in Leuchtkraft-und Farbunterschiede mit den folgenden Gleichungen konvertiert wird:
+Eine RGB-Farbe kann durch Konvertierung in Leuchtdichte und Farbunterschiede mit den folgenden Gleichungen auf 16 Bits pro Pixel reduziert werden:
 
 
 ```C++
@@ -85,7 +85,7 @@ v = red - luminance
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
@@ -99,7 +99,7 @@ v = red - luminance
 [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md)
 </dt> <dt>
 
-[**D3DCOLOR \_ ayuv**](d3dcolor-ayuv.md)
+[**D3DCOLOR \_ AYUV**](d3dcolor-ayuv.md)
 </dt> </dl>
 
  

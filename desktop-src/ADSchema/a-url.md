@@ -1,11 +1,11 @@
 ---
-title: WWW-Page-other-Attribut
+title: WWW-Page-Other-Attribut
 description: Eine Liste alternativer Webseiten.
 ms.assetid: 834a0020-2f0c-41e5-a0b0-5ef393df2b47
 ms.tgt_platform: multiple
 keywords:
-- WWW-Page-other-Attribut AD-Schema
-- URL-Attribut AD-Schema
+- WWW-Page-Other-Attribut-AD-Schema
+- AD-Schema des URL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0dc607dfb29f1448138d29c47ec8bd17a2fcd00
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6c2f5be844bc10e76ad3bda030922a9cf905696ce67b25acbd8f558dd7e4472b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118680973"
 ---
-# <a name="www-page-other-attribute"></a>WWW-Page-other-Attribut
+# <a name="www-page-other-attribute"></a>WWW-Page-Other-Attribut
 
 Eine Liste alternativer Webseiten.
 
@@ -29,13 +29,13 @@ Eine Liste alternativer Webseiten.
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------------------|
-| CN                | WWW-Page-other                                                              |
-| LDAP-Display-Name | url                                                                         |
+| CN                | WWW-Page-Other                                                              |
+| Ldap-Anzeigename | URL                                                                         |
 | Size              | \-                                                                          |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                      |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt wird, und wenn die Webseite geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                      |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wenn die Webseite geändert werden muss. |
 | Attribute-Id      | 1.2.840.113556.1.4.749                                                      |
-| System-ID-GUID    | 9a9a0221-4a5b-11d1-a9c3-0000t80367c1                                        |
+| System-ID-GUID    | 9a9a0221-4a5b-11d1-a9c3-0000f80367c1                                        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                 |
 
 
@@ -43,7 +43,7 @@ Eine Liste alternativer Webseiten.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Eine Liste alternativer Webseiten.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,11 +100,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,11 +121,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,11 +142,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,11 +163,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -184,11 +184,11 @@ Eine Liste alternativer Webseiten.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8175                          |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

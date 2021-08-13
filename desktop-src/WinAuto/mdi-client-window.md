@@ -1,27 +1,27 @@
 ---
-title: MDI-Client Fenster (MSAA UI-Element Referenz)
-description: Die Multiple Document Interface (MDI) ist eine Spezifikation, die die Standardbenutzer Oberfläche für für Windows geschriebene Anwendungen definiert. Mithilfe einer MDI-Anwendung kann ein Benutzer mehrere Dokumente gleichzeitig bearbeiten.
+title: MDI-Clientfenster (MSAA UI-Elementreferenz)
+description: Die MDI (Multiple Document Interface) ist eine Spezifikation, die die Standardbenutzerschnittstelle für Anwendungen definiert, die für Windows geschrieben wurden. Mit einer MDI-Anwendung kann ein Benutzer mit mehreren Dokumenten gleichzeitig arbeiten.
 ms.assetid: ede2dd19-e4c6-43e8-8f22-f807621dfa0d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1557176752d29b7d429a0c434554df09b69a8e6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cff8279e9934c953e30a7d91710565562cb538d3140d971b1f74ff8963ca7345
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118565131"
 ---
-# <a name="mdi-client-window-msaa-ui-element-reference"></a>MDI-Client Fenster (MSAA UI-Element Referenz)
+# <a name="mdi-client-window-msaa-ui-element-reference"></a>MDI-Clientfenster (MSAA UI-Elementreferenz)
 
-Die Multiple Document Interface (MDI) ist eine Spezifikation, die die Standardbenutzer Oberfläche für für Windows geschriebene Anwendungen definiert. Mithilfe einer MDI-Anwendung kann ein Benutzer mehrere Dokumente gleichzeitig bearbeiten.
+Die MDI (Multiple Document Interface) ist eine Spezifikation, die die Standardbenutzerschnittstelle für Anwendungen definiert, die für Windows geschrieben wurden. Mit einer MDI-Anwendung kann ein Benutzer mit mehreren Dokumenten gleichzeitig arbeiten.
 
-Eine MDI-Anwendung verfügt über drei Arten von Fenstern: ein Rahmen Fenster, ein Client Fenster und eine Reihe von untergeordneten Fenstern. Das Rahmen Fenster ist wie das Hauptfenster einer Anwendung und umgibt das Client Fenster. Das Client Fenster ist ein untergeordnetes Element des Rahmen Fensters und dient als Hintergrund für die untergeordneten Fenster. Das Client Fenster bietet auch Unterstützung für das Erstellen und Bearbeiten der untergeordneten Fenster, in denen Dokumente angezeigt werden.
+Eine MDI-Anwendung verfügt über drei Arten von Fenstern: ein Rahmenfenster, ein Clientfenster und eine Reihe von untergeordneten Fenstern. Das Rahmenfenster ähnelt dem Hauptfenster einer Anwendung und umschließt das Clientfenster. Das Clientfenster ist ein untergeordnetes Element des Rahmenfensters und dient als Hintergrund für die untergeordneten Fenster. Das Clientfenster bietet auch Unterstützung für das Erstellen und Bearbeiten der untergeordneten Fenster, in denen Dokumente angezeigt werden.
 
-Der Fenster Klassenname für ein MDI-Client Fenster lautet "MdiClient".
+Der Fensterklassenname für ein MDI-Clientfenster lautet "MDIClient".
 
 ## <a name="iaccessible-methods"></a>IAccessible-Methoden
 
-Ein MDI-Client Fenster unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden:
+Ein MDI-Clientfenster unterstützt die folgenden [**IAccessible-Methoden:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 -   [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 -   [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)
@@ -30,19 +30,19 @@ Ein MDI-Client Fenster unterstützt die folgenden [**IAccessible**](/windows/des
 
 ## <a name="iaccessible-properties"></a>IAccessible-Eigenschaften
 
-Ein MDI-Client Fenster unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Eigenschaften:
+Ein MDI-Clientfenster unterstützt die folgenden [**IAccessible-Eigenschaften:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 
 
 | Eigenschaft                                                                 | Kommentare                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Die **childCount** -Eigenschaft ist die Anzahl der untergeordneten Fenster, in denen Dokumente angezeigt werden.                                                                                                                                                                                                                                                                                                                                                                              |
-| [**\_Zugriffs Fokus erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [**\_accName erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)             | Die **Name** -Eigenschaft ist "Workspace".                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| [**\_accParent erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Die über **geordnete** Eigenschaft ist das MDI-Rahmen Fenster.                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| [**get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)             | Die **Role** -Eigenschaft ist [**Rollen \_ System \_ Client**](object-roles.md) .                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**\_Zugriffs Auswahl**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accselection)   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [**\_accState erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)           | Die **State** -Eigenschaft ist eine Kombination aus einem oder mehreren der folgenden [Werte](object-state-constants.md): Zustands System nicht [**\_ \_**](object-state-constants.md) \| [**\_ \_ verfüg**](object-state-constants.md) bares Zustands System mit \| [**\_ \_ Fokus**](object-state-constants.md) \| [**\_ \_**](object-state-constants.md)<br/> |
+| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Die **ChildCount-Eigenschaft** ist die Anzahl der untergeordneten Fenster, in denen Dokumente angezeigt werden.                                                                                                                                                                                                                                                                                                                                                                              |
+| [**get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)             | Die **Name-Eigenschaft** ist "Workspace".                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Die **Parent-Eigenschaft** ist das MDI-Rahmenfenster.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)             | Die **Role-Eigenschaft** ist [**ROLE SYSTEM \_ \_ CLIENT.**](object-roles.md)                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**get \_ accSelection**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accselection)   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)           | Die **State-Eigenschaft** ist eine Kombination aus einem oder mehreren der folgenden [Werte:](object-state-constants.md) [**STATE SYSTEM \_ \_ INVISIBLE**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ UNAVAILABLE**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSED**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSABLE**](object-state-constants.md)<br/> |
 
 
 

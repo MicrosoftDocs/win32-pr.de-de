@@ -1,11 +1,11 @@
 ---
-title: Moniker-Attribut
+title: Monikerattribut
 description: Der Name oder Pfad für ein COM-Objekt.
 ms.assetid: e1ddcf9e-f8db-4aa0-a387-352a467a5b2c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des monikerattributs
-- AD-Schema des monikerattributs
+- Monikerattribut AD-Schema
+- Monikerattribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef9d1eeb5d4c635379704a7dc250c3c80a2f9c07
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f73aa1deee1052c070e948da29429f43d98acaf2b3d40d400d87ae0424b1c04d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118687235"
 ---
-# <a name="moniker-attribute"></a>Moniker-Attribut
+# <a name="moniker-attribute"></a>Monikerattribut
 
 Der Name oder Pfad für ein COM-Objekt.
 
@@ -30,10 +30,10 @@ Der Name oder Pfad für ein COM-Objekt.
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Moniker                                               |
-| LDAP-Display-Name | Moniker                                               |
+| Ldap-Anzeigename | Moniker                                               |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.82                                 |
 | System-ID-GUID    | bf9679c7-0de6-11d0-a285-00aa003049e2                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -43,7 +43,7 @@ Der Name oder Pfad für ein COM-Objekt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Der Name oder Pfad für ein COM-Objekt.
 |------------------------|---------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
-| System-Only            | False                                                                                                   |
-| Ist-einwertig       | False                                                                                                   |
-| Ist indiziert             | False                                                                                                   |
-| Im globalen Katalog      | False                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                            |
+| System-Only            | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
 | Range-Lower            | \-                                                                                                      |
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Verbindungspunkt**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Der Name oder Pfad für ein COM-Objekt.
 |------------------------|---------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
-| System-Only            | False                                                                                                   |
-| Ist-einwertig       | False                                                                                                   |
-| Ist indiziert             | False                                                                                                   |
-| Im globalen Katalog      | False                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                            |
+| System-Only            | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
 | Range-Lower            | \-                                                                                                      |
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Verbindungspunkt**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Der Name oder Pfad für ein COM-Objekt.
 |------------------------|---------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
-| System-Only            | False                                                                                                   |
-| Ist-einwertig       | False                                                                                                   |
-| Ist indiziert             | False                                                                                                   |
-| Im globalen Katalog      | False                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                            |
+| System-Only            | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
 | Range-Lower            | \-                                                                                                      |
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Verbindungspunkt**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Der Name oder Pfad für ein COM-Objekt.
 |------------------------|---------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
-| System-Only            | False                                                                                                   |
-| Ist-einwertig       | False                                                                                                   |
-| Ist indiziert             | False                                                                                                   |
-| Im globalen Katalog      | False                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                            |
+| System-Only            | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
 | Range-Lower            | \-                                                                                                      |
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Verbindungspunkt**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Der Name oder Pfad für ein COM-Objekt.
 |------------------------|---------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
-| System-Only            | False                                                                                                   |
-| Ist-einwertig       | False                                                                                                   |
-| Ist indiziert             | False                                                                                                   |
-| Im globalen Katalog      | False                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                            |
+| System-Only            | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
 | Range-Lower            | \-                                                                                                      |
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Verbindungspunkt**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Der Name oder Pfad für ein COM-Objekt.
 |------------------------|---------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
-| System-Only            | False                                                                                                   |
-| Ist-einwertig       | False                                                                                                   |
-| Ist indiziert             | False                                                                                                   |
-| Im globalen Katalog      | False                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                            |
+| System-Only            | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
 | Range-Lower            | \-                                                                                                      |
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Verbindungspunkt**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 

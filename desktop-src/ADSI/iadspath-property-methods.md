@@ -1,10 +1,10 @@
 ---
-title: Iadspath-Eigenschaften Methoden (IADs. h)
-description: Die-Eigenschaften Methode der iadspath-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsPath-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsPath-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 6fc7ce1a-575b-48c4-9f66-3ea22d60c96b
 ms.tgt_platform: multiple
 keywords:
-- Iadspath-Eigenschaften Methoden ADSI
+- IADsPath-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -24,32 +24,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5adcc1c60a9b678e99074ae3547d35c7ac8c7356
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 743410e7ceea97b7066979bf753a4e73afbc8a852b5b36175a9d62109b6d6ef8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691328"
 ---
-# <a name="iadspath-property-methods"></a>Iadspath-Eigenschaften Methoden
+# <a name="iadspath-property-methods"></a>IADsPath-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**iadspath**](/windows/desktop/api/Iads/nn-iads-iadspath) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsPath-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspath) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl>
 
-Pfad zu einem Verzeichnis des Dateisystems.
+Pfad eines Verzeichnisses des Dateisystems.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -67,7 +67,7 @@ HRESULT put_Path(
 
 </dt> </dl> </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl>
 
 Dateityp des Dateisystems.
@@ -77,7 +77,7 @@ Dateityp des Dateisystems.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -95,7 +95,7 @@ HRESULT put_Type(
 
 </dt> </dl> </dd> <dt>
 
-**Volumename**
+**VolumeName**
 </dt> <dd> <dl>
 
 Name eines vorhandenen Volumes des Dateisystems.
@@ -105,7 +105,7 @@ Name eines vorhandenen Volumes des Dateisystems.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -133,20 +133,20 @@ HRESULT put_VolumeName(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadspath ist als B287FCD5-4080-11d1-A3AC-00C04FB950DC definiert.<br/>             |
+| IID<br/>                      | IID \_ IADsPath ist als B287FCD5-4080-11D1-A3AC-00C04FB950DC definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [**IADsPath**](/windows/desktop/api/Iads/nn-iads-iadspath)
 </dt> <dt>
 
-[**ADS- \_ Pfad**](/windows/win32/api/iads/ns-iads-ads_path)
+[**ADS \_ PATH**](/windows/win32/api/iads/ns-iads-ads_path)
 </dt> </dl>
 
  

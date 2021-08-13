@@ -7,66 +7,66 @@ keywords:
 - ADSI für Exchange ADSI
 - ADSI für Exchange ADSI, Postfächer
 - ADSI für Exchange ADSI, Postfächer, erstellen
-- ADSI für Exchange ADSI, Postfächer, löschen
-- ADSI für Exchange ADSI, Postfächer, Festlegen der Sicherheits Beschreibung für
-- ADSI für Exchange ADSI, Postfächer, Suche nach Home Server für
-- ADSI für Exchange ADSI, das erhalten und Ändern von Nachrichten
-- ADSI für Exchange ADSI, Sicherheits Deskriptoren
-- ADSI für Exchange ADSI, Sicherheits Deskriptoren, Bearbeitung
-- ADSI für Exchange ADSI, Sicherheits Deskriptoren, festlegen
-- ADSI für Exchange ADSI, Empfänger Container
-- ADSI für Exchange ADSI, Anzeigen von Exchange-Objekteigenschaften
-- ADSI für Exchange ADSI, Empfängers Container, Custom
-- ADSI für Exchange ADSI, Exchange Server
-- ADSI für Exchange ADSI, Exchange Server, anzeigen und Ändern des Schemas
-- ADSI für Exchange ADSI, Exchange Server, Auflisten der Server Version
-- ADSI für Exchange ADSI, Exchange Server, Organisation und Website Name
-- ADSI für Exchange ADSI, Exchange Server, Suche nach Mailbox Home Server
-- ADSI für Exchange ADSI, e-Mail-Adressen, Abrufen
-- ADSI für Exchange ADSI, Verteilerlisten, erstellen
-- ADSI für Exchange ADSI, verborgene oder gelöschte Einträge
-- ADSI für Exchange ADSI, Abrufen von Verzeichnisdienst Änderungen
+- ADSI for Exchange ADSI ,mailboxes,deleting
+- ADSI für Exchange ADSI, Postfächer, Festlegen des Sicherheitsdeskriptors auf
+- ADSI für Exchange ADSI, Postfächer,Suchen des Heimservers für
+- ADSI für Exchange ADSI, Abrufen und Ändern von Nachrichten
+- ADSI für Exchange ADSI, Sicherheitsdeskriptoren
+- ADSI für Exchange ADSI, Sicherheitsdeskriptoren,Bearbeiten
+- ADSI für Exchange ADSI, Sicherheitsbeschreibungen, Einstellung
+- ADSI für Exchange ADSI, Empfängercontainer
+- ADSI für Exchange ADSI, Anzeigen Exchange Objekteigenschaften
+- ADSI für Exchange ADSI, Empfängercontainer,benutzerdefiniert
+- ADSI for Exchange ADSI ,Exchange Server
+- ADSI für Exchange ADSI,Exchange Server,Anzeigen und Ändern des Schemas
+- ADSI for Exchange ADSI ,Exchange Server,listing server version
+- ADSI für Exchange ADSI, Exchange Server,Organisation und Websitename
+- ADSI for Exchange ADSI ,Exchange Server,finding mailbox home server
+- ADSI für Exchange ADSI, E-Mail-Adressen, Abrufen
+- ADSI für Exchange ADSI, Verteilerlisten, Erstellung
+- ADSI für Exchange ADSI, ausgeblendete oder gelöschte Einträge
+- ADSI für Exchange ADSI, Abrufen von Verzeichnisdienständerungen
 - ADSI für Exchange ADSI, Nachrichtengröße
 - ADSI für Exchange ADSI, Problembehandlung
 - Postfächer ADSI
-- Postfächer ADSI, erstellen
-- Postfächer ADSI, löschen
-- Postfächer ADSI, Festlegen der Sicherheits Beschreibung für
-- Postfächer ADSI, Suche nach Home Server für
-- Nachrichten ADSI, Getting und Modifizierung
-- Exchange ADSI
+- Postfächer ADSI , erstellen
+- Postfächer ADSI , löschen
+- Postfächer ADSI , Festlegen des Sicherheitsdeskriptors auf
+- Postfächer ADSI , Suchen des Homeservers für
+- messages ADSI ,getting and modifying
+- Exchange Adsi
 - Exchange ADSI, Postfächer
 - Exchange ADSI, Postfächer, erstellen
-- Exchange ADSI, Postfächer, löschen
-- Exchange ADSI, Postfächer, Festlegen der Sicherheits Beschreibung für
-- Exchange ADSI, Postfächer, Suche nach Home Server für
-- Exchange ADSI, das erhalten und Ändern von Nachrichten
-- Exchange ADSI, Sicherheits Deskriptoren
-- Exchange ADSI, Sicherheits Deskriptoren, bearbeiten
-- Exchange ADSI, Sicherheits Deskriptoren, festlegen
-- Exchange ADSI, Empfänger Container
-- Exchange ADSI, Anzeigen von Exchange-Objekteigenschaften
-- Exchange ADSI, Empfänger Container, Benutzer definiert
-- Exchange ADSI, Exchange Server
-- Exchange ADSI, Exchange Server, anzeigen und Ändern des Schemas
-- Exchange ADSI, Exchange Server, Auflisten der Server Version
-- Exchange ADSI, Exchange Server, Organisation und Website Name
-- Exchange ADSI, Exchange Server, Suchen des Postfachs Home Server
-- Exchange ADSI, e-Mail-Adressen, Abrufen
-- Exchange ADSI, Verteilerlisten, erstellen
-- Exchange ADSI, verborgene oder gelöschte Einträge
-- Exchange ADSI, Abrufen von Verzeichnisdienst Änderungen
-- Exchange ADSI, Nachrichtengröße
-- Exchange ADSI, Problembehandlung
-- Sicherheits Deskriptoren ADSI für Exchange-Objekte
+- Exchange ADSI , Postfächer, löschen
+- Exchange ADSI , Postfächer, Festlegen des Sicherheitsdeskriptors auf
+- Exchange ADSI , Postfächer, Suchen des Heimservers für
+- Exchange ADSI , Abrufen und Ändern von Nachrichten
+- Exchange ADSI , Sicherheitsdeskriptoren
+- Exchange ADSI, Sicherheitsdeskriptoren, Bearbeiten
+- Exchange ADSI , Sicherheitsdeskriptoren, Einstellung
+- Exchange ADSI , Empfängercontainer
+- Exchange ADSI , Anzeigen Exchange Objekteigenschaften
+- Exchange ADSI , Empfängercontainer, benutzerdefiniert
+- Exchange ADSI , Exchange Server
+- Exchange ADSI,Exchange Server,Anzeigen und Ändern des Schemas
+- Exchange ADSI , Exchange Server, Serverversion auflisten
+- Exchange ADSI, Exchange Server,Organisation und Websitename
+- Exchange ADSI, Exchange Server,Suchen des Postfach-Homeservers
+- Exchange ADSI, E-Mail-Adressen, Abrufen
+- Exchange ADSI , Verteilerlisten, Erstellen
+- Exchange ADSI, ausgeblendete oder gelöschte Einträge
+- Exchange ADSI , Abrufen von Verzeichnisdienständerungen
+- Exchange ADSI , Nachrichtengröße
+- Exchange ADSI , Problembehandlung
+- Sicherheitsdeskriptoren ADSI für Exchange Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 833d60c284a12e759eb74b22c9aa48abc75da463
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 0f48a1015674ea8bf413cb9edbf55f0f64f6211b85bb876baeb6ab47868482ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106337255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118690129"
 ---
 # <a name="using-adsi-with-exchange"></a>Verwenden von ADSI mit Exchange
 
@@ -75,39 +75,39 @@ Für Exchange 2000 sind Informationen zur Verwendung von ADSI mit Exchange im Ex
 Die folgenden Aufgaben finden Sie in diesem Abschnitt:
 
 -   Erstellen einer Benutzer-URL
--   Active Directory Pfade werden aufgebaut.
--   Auflisten von Exchange 2000-Servern mit ADSI
--   Bearbeiten von Erweiterungs Attributen mit ADSI
--   Hinzufügen/Entfernen eines Manager-Objekts mit ADSI
--   Auflisten von Exchange-Objekteigenschaften mit ADSI/ADO
--   Abrufen eines definierten Legacy namens von Exchange mit ADSI
--   Suchen des Namens der Exchange-Organisation mit ADSI
--   Suchen von Exchange-Adresslisten mit ADSI
+-   Erstellen von Active Directory-Pfaden
+-   Aufzählen von Exchange 2000 Servern mit ADSI
+-   Bearbeiten von Erweiterungsattributen mit ADSI
+-   Hinzufügen/Entfernen eines Managerobjekts mit ADSI
+-   Aufzählen Exchange Objekteigenschaften mit ADSI/ADO
+-   Abrufen eines Legacynamens Exchange distinguished name mit ADSI
+-   Suchen des Exchange Organisationsnamens mit ADSI
+-   Suchen Exchange Adresslisten mit ADSI
 -   Erstellen einer Verteilerliste mit CDOEXM und ADSI
--   Festlegen der Nachrichten Einschränkung auf einem virtuellen SMTP-Server mithilfe von ADSI
+-   Festlegen der Nachrichteneinschränkung auf einem virtuellen SMTP-Server mit ADSI
 
-Die ADSI-Referenz und die Verwendung von Informationen für Exchange 5,5 finden Sie im [ADSI Exchange](/previous-versions/office/developer/exchange-server-2007/aa579394(v=exchg.80)) Guide.
+Für Exchange 5.5 finden Sie die ADSI-Referenz und die Verwendungsinformationen im [ADSI-Exchange](/previous-versions/office/developer/exchange-server-2007/aa579394(v=exchg.80)) Leitfaden.
 
 Die folgenden Aufgaben finden Sie in diesem Abschnitt:
 
--   Anzeigen und Ändern des Exchange Server-Schemas
--   Anzeigen der roheigenschaften eines Exchange-Objekts
--   Erstellen eines Exchange-Postfachs
--   Festlegen der Sicherheits Beschreibung für ein Exchange-Postfach
--   Manipulieren von Sicherheits Deskriptoren und SIDs
--   Löschen eines Post Fach Objekts
+-   Anzeigen und Ändern des Exchange Server Schemas
+-   Anzeigen der rohen Eigenschaften eines Exchange Objekts
+-   Erstellen eines Exchange Postfachs
+-   Festlegen der Sicherheitsbeschreibung für ein Exchange Postfach
+-   Bearbeiten von Sicherheitsbeschreibungen und SIDs
+-   Löschen eines Postfachobjekts
 -   Erstellen eines benutzerdefinierten Empfängers
--   Erstellen eines Empfänger Containers
--   Die Organisation und der Standort Name werden von einem Server erhalten.
--   Auflisten der Exchange Server-Version aller Server in der Organisation
--   Suchen des Basis Servers eines Postfachs
--   Abrufen von e-Mail-Adressen
--   Zugreifen auf verborgene oder gelöschte Einträge
--   Abrufen von Änderungen, die an den Verzeichnisdienst vorgenommen wurden
+-   Erstellen eines Empfängercontainers
+-   Abrufen des Organisations- und Standortnamens von einem Server
+-   Auflisten Exchange Serverversion aller Server in der Organisation
+-   Suchen des Homeservers eines Postfachs
+-   Abrufen von E-Mail-Adressen
+-   Zugreifen auf ausgeblendete oder gelöschte Einträge
+-   Abrufen von Änderungen, die am Verzeichnisdienst vorgenommen wurden
 -   Erstellen einer Verteilerliste aus den Ergebnissen einer Abfrage
--   Erhalten oder Ändern der Nachrichtengröße
--   Verwenden von LDAP-Fehlercodes zum Beheben von Problemen
+-   Abrufen oder Ändern der Nachrichtengröße
+-   Verwenden von LDAP-Fehlercodes zur Problembehandlung
 
- 
+ 
 
- 
+ 

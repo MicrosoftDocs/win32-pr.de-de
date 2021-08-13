@@ -1,24 +1,24 @@
 ---
-title: Verwenden der Monitor Konfiguration
-description: Verwenden der Monitor Konfiguration
+title: Verwenden der Monitorkonfiguration
+description: Verwenden der Monitorkonfiguration
 ms.assetid: 2a868890-cc0c-4625-a87c-cafb1ecd5210
 keywords:
-- überwachen, Funktionen
-- Monitor Konfiguration, Funktionen
-- überwachen, Informationen zu
-- Monitor Konfiguration, Informationen zu
+- monitor,functions
+- Überwachen der Konfiguration, Funktionen
+- monitor,about
+- Überwachen der Konfiguration, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 323561f345ce51570f79c4932be3ee4a56a27b33
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 32db2ef6dfe73ab515beba99a9198c795fcd333c071fbc3e13340fe15b914dab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118640604"
 ---
-# <a name="using-monitor-configuration"></a>Verwenden der Monitor Konfiguration
+# <a name="using-monitor-configuration"></a>Verwenden der Monitorkonfiguration
 
-In diesem Abschnitt wird die Verwendung der Überwachungs Konfigurationsfunktionen beschrieben.
+In diesem Abschnitt wird die Verwendung der Überwachungskonfigurationsfunktionen beschrieben.
 
 -   [Verwenden der High-Level Monitor-Konfigurationsfunktionen](using-the-high-level-monitor-configuration-functions.md)
 -   [Verwenden der Low-Level Monitor-Konfigurationsfunktionen](using-the-low-level-monitor-configuration-functions.md)
@@ -27,12 +27,12 @@ In diesem Abschnitt wird die Verwendung der Überwachungs Konfigurationsfunktion
 
 <dl> <dt>
 
-[Monitor Konfiguration](monitor-configuration.md)
+[Überwachen der Konfiguration](monitor-configuration.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

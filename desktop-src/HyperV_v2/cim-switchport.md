@@ -14,14 +14,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cf63843fc5a246012d3af6a059c897956d6f19b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e52fc85f0891c5b8d1bc88f39437b4a70c5a172ba9af3ba02b08cc6b45dd6235
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118647188"
 ---
-# <a name="cim_switchport-class"></a>CIM \_ Switchport-Klasse
+# <a name="cim_switchport-class"></a>CIM \_ SwitchPort-Klasse
 
 Stellt einen Switchport dar, der Datenrahmen sendet und empfängt.
 
@@ -37,29 +37,29 @@ class CIM_SwitchPort : CIM_ProtocolEndpoint
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ Switchport** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SwitchPort-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ Switchport** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SwitchPort-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**PortNumber**
+**Portnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Bridge-MIB. dot1dPort ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dPort")
 </dt> </dl>
 
-Der numerische Bezeichner für den Switchport.
+Der numerische Bezeichner des Switchports.
 
 </dd> </dl>
 
@@ -71,17 +71,17 @@ Der numerische Bezeichner für den Switchport.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ protocolendpoint**](cim-protocolendpoint.md)
+[**CIM \_ ProtocolEndpoint**](cim-protocolendpoint.md)
 </dt> </dl>
 
  

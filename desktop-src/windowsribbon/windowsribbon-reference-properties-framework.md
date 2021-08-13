@@ -1,27 +1,27 @@
 ---
-title: Framework-Eigenschaften
-description: Referenz Dokumentation zu globalen Eigenschafts Schlüsseln für das Menüband-Framework.
+title: Frameworkeigenschaften
+description: Referenzdokumentation zu globalen Eigenschaftsschlüsseln für das Menübandframework.
 ms.assetid: 332a49b3-0634-40b3-a3cd-bc6891e9dbc8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c261c2f044de484ed8966e6ca79e5c10d252d33
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f62ef5974116d2b49506fd3057e92823ac06f83d43e45b47a5d16f3867ef20d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118438785"
 ---
-# <a name="framework-properties"></a>Framework-Eigenschaften
+# <a name="framework-properties"></a>Frameworkeigenschaften
 
-Referenz Dokumentation zu globalen Eigenschafts Schlüsseln für das Menüband-Framework.
+Referenzdokumentation zu globalen Eigenschaftsschlüsseln für das Menübandframework.
 
 
 
 | Thema                                                                                                  | Inhalte                                                            |
 |--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md) | Identifiziert die UI \_ pkey \_ globalbackgroundcolor-Eigenschaft.<br/> |
-| [UI \_ pkey \_ globalhighlightcolor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md)   | Identifiziert die UI \_ pkey \_ globalhighlightcolor-Eigenschaft.<br/>  |
-| [UI \_ pkey \_ globaltextcolor](windowsribbon-reference-properties-uipkey-globaltextcolor.md)             | Bezeichnet die Benutzeroberflächen- \_ pkey \_ Global TextColor-Eigenschaft.<br/>       |
+| [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md) | Identifiziert die \_ PKEY \_ GlobalBackgroundColor-Eigenschaft der Benutzeroberfläche.<br/> |
+| [UI \_ PKEY \_ GlobalHighlightColor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md)   | Identifiziert die \_ PKEY \_ GlobalHighlightColor-Eigenschaft der Benutzeroberfläche.<br/>  |
+| [UI \_ PKEY \_ GlobalTextColor](windowsribbon-reference-properties-uipkey-globaltextcolor.md)             | Identifiziert die \_ PKey \_ GlobalTextColor-Eigenschaft der Benutzeroberfläche.<br/>       |
 
 
 
@@ -31,10 +31,10 @@ Referenz Dokumentation zu globalen Eigenschafts Schlüsseln für das Menüband-F
 
 <dl> <dt>
 
-[Eigenschafts Schlüssel](windowsribbon-reference-properties.md)
+[Eigenschaftsschlüssel](windowsribbon-reference-properties.md)
 </dt> <dt>
 
-[Anpassen von Menü Band Farben](ribbon-color.md)
+[Anpassen von Menübandfarben](ribbon-color.md)
 </dt> </dl>
 
  

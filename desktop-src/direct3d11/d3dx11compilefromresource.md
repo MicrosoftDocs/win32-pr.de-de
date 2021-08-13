@@ -1,6 +1,6 @@
 ---
-title: D3DX11CompileFromResource-Funktion (D3DX11async. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Beachten Sie, dass Sie anstelle dieser Funktion Ressourcen Funktionen verwenden und dann mithilfe des Befehlszeilen Compilers von Fxc.exe offline kompilieren oder eine der HLSL-Kompilierungs-APIs verwenden können, wie z. b. die D3DCompile-API. Kompilieren Sie einen Shader oder einen Effekt aus einer Ressource.
+title: D3DX11CompileFromResource-Funktion (D3DX11async.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Beachten Sie, dass Sie anstelle dieser Funktion Ressourcenfunktionen verwenden und dann offline kompilieren, indem Sie den Fxc.exe Befehlszeilencompiler verwenden oder eine der HLSL-Kompilierungs-APIs wie die D3DCompile-API verwenden. Kompilieren sie einen Shader oder einen Effekt aus einer Ressource.
 ms.assetid: ececa469-f5e3-4cb3-befe-0ed1a5a57671
 keywords:
 - D3DX11CompileFromResource-Funktion Direct3D 11
@@ -15,26 +15,26 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b26eeb825a1d3b6bcda9f77eae24c99c3cec168b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0f3aafa7d504bbbcd99591b45412d63cbf78270ef46ffa63bbf2d34497510802
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118536764"
 ---
 # <a name="d3dx11compilefromresource-function"></a>D3DX11CompileFromResource-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, empfiehlt es sich, [Ressourcen Funktionen](/windows/desktop/menurc/resources-functions)zu verwenden und dann mithilfe des Befehlszeilen Compilers von Fxc.exe offline zu kompilieren oder eine der HLSL-Kompilierungs-APIs wie die [**D3DCompile**](/windows/desktop/direct3dhlsl/d3dcompile) -API zu verwenden.
+> Anstatt diese Funktion zu verwenden, empfiehlt es sich, [Ressourcenfunktionen](/windows/desktop/menurc/resources-functions)zu verwenden und dann offline mit dem Fxc.exe Befehlszeilencompiler zu kompilieren oder eine der HLSL-Kompilierungs-APIs wie die [**D3DCompile-API**](/windows/desktop/direct3dhlsl/d3dcompile) zu verwenden.
 
  
 
-Kompilieren Sie einen Shader oder einen Effekt aus einer Ressource.
+Kompilieren sie einen Shader oder einen Effekt aus einer Ressource.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,120 +63,120 @@ HRESULT D3DX11CompileFromResource(
 
 <dl> <dt>
 
-*hsrcmodule* \[ in\]
+*hSrcModule* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HMODULE**](/windows/desktop/WinProg/windows-data-types)**
 
-Handle für das Ressourcen Modul, das den Shader enthält. HMODULE kann mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
+Handle für das Ressourcenmodul, das den Shader enthält. HMODULE kann mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
 
 </dd> <dt>
 
-*psrkresource* \[ in\]
+*pSrcResource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Name der Ressource, die den Shader enthält. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
+Name der Ressource, die den Shader enthält. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
 
 </dd> <dt>
 
-*psrcfilename* \[ in\]
+*pSrcFileName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Optional. Der Effekt Dateiname, der nur für Fehlermeldungen verwendet wird. Kann **null** sein.
+Optional. Auswirkungsdateiname, der nur für Fehlermeldungen verwendet wird. Kann **NULL** sein.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefine* \[ In\]
 </dt> <dd>
 
-Type: **Konstanten [**d3d10 \_ Shader- \_ Makro**](/windows/desktop/api/d3dcommon/ns-d3dcommon-d3d_shader_macro) \***
+Typ: **const [**D3D10 \_ SHADER \_ MACRO**](/windows/desktop/api/d3dcommon/ns-d3dcommon-d3d_shader_macro) \***
 
-Optional. Zeiger auf ein Array von Makro Definitionen (siehe [**d3d10 \_ Shader \_ Macro**](/windows/desktop/api/d3dcommon/ns-d3dcommon-d3d_shader_macro)). Die letzte Struktur im Array fungiert als Abschluss Zeichen und muss alle Elemente auf 0 (null) festlegen. Wenn Sie nicht verwendet wird, legen Sie *pdefinitionen* auf **null** fest.
+Optional. Zeiger auf ein Array von Makrodefinitionen (siehe [**D3D10 \_ SHADER \_ MACRO**](/windows/desktop/api/d3dcommon/ns-d3dcommon-d3d_shader_macro)). Die letzte Struktur im Array dient als Abschlusszeichen und muss alle Member auf 0 festgelegt haben. Wenn sie nicht verwendet wird, legen Sie *pDefine* auf **NULL** fest.
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3D10INCLUDE**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))**
 
-Optional. Zeiger auf eine-Schnittstelle zum Verarbeiten von Includedateien. Wenn dieser Wert auf **null** festgelegt wird, wird ein Kompilierungsfehler verursacht, wenn ein Shader eine include-Datei \#
+Optional. Zeiger auf eine Schnittstelle für die Behandlung von Includedateien. Wenn sie auf **NULL** festgelegt wird, tritt ein Kompilierungsfehler auf, wenn ein Shader ein \# Include enthält.
 
 </dd> <dt>
 
-*pfunctionname* \[ in\]
+*pFunctionName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Name der Shader-Einstiegspunkt Funktion, bei der die Shader-Ausführung beginnt. Wenn Sie einen Effekt kompilieren,  ignoriert D3DX11CompileFromResource *pfunctionname*;. Es wird empfohlen, *pfunctionname* auf **null** festzulegen, da es eine gute Programmierpraxis ist, einen Zeiger Parameter auf **null** festzulegen, wenn die aufgerufene Funktion ihn nicht verwendet.
+Name der Shader-Einstiegspunktfunktion, bei der die Shaderausführung beginnt. Wenn Sie einen Effekt kompilieren, ignoriert **D3DX11CompileFromResource** *pFunctionName*; Es wird empfohlen, *pFunctionName* auf **NULL** festzulegen, da es sich bei der Programmierung empfiehlt, einen Zeigerparameter auf **NULL** festzulegen, wenn die aufgerufene Funktion ihn nicht verwendet.
 
 </dd> <dt>
 
-*pprofile* \[ in\]
+*pProfile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Eine Zeichenfolge, die das Shadermodell angibt. kann ein beliebiges Profil in Shader Model 2, Shader Model 3, Shader Model 4 oder Shader Model 5 sein. Das Profil kann auch für den Typ "Effect" (z \_ . b. FX 4 \_ 1) sein.
+Eine Zeichenfolge, die das Shadermodell angibt. kann ein beliebiges Profil in Shadermodell 2, Shadermodell 3, Shadermodell 4 oder Shadermodell 5 sein. Das Profil kann auch für den Effekttyp (z. B. fx \_ 4 \_ 1) sein.
 
 </dd> <dt>
 
-*Flags1* \[ in\]
+*Flags1* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Shader- [**Kompilierungs Flags**](/windows/desktop/direct3dhlsl/d3dcompile-constants).
+[**Shaderkompilierungsflags.**](/windows/desktop/direct3dhlsl/d3dcompile-constants)
 
 </dd> <dt>
 
-*Flags2* \[ in\]
+*Flags2* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Effekt [**Kompilierungs Flags**](/windows/desktop/direct3dhlsl/d3dcompile-effect-constants). Wenn Sie einen Shader und keine Effekt Datei kompilieren, ignoriert **D3DX11CompileFromResource** *Flags2*; Es wird empfohlen, *Flags2* auf NULL festzulegen, da es eine gute Programmierpraxis ist, einen Typ-Parameter auf 0 (null) festzulegen, wenn die aufgerufene Funktion ihn nicht verwendet.
+[**Effektkompilierungsflags**](/windows/desktop/direct3dhlsl/d3dcompile-effect-constants). Wenn Sie einen Shader und keine Effektdatei kompilieren, ignoriert **D3DX11CompileFromResource** *Flags2*; Es wird empfohlen, *Flags2* auf 0 (null) festzulegen, da es sich bei der Programmierung empfiehlt, einen Nichtpunkterparameter auf 0 (null) festzulegen, wenn er von der aufgerufenen Funktion nicht verwendet wird.
 
 </dd> <dt>
 
-*ppump* \[ in\]
+*pPump* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX11ThreadPump**](id3dx11threadpump.md)\***
 
-Ein Zeiger auf eine Thread-Pump Schnittstelle (siehe [**ID3DX11ThreadPump Interface**](id3dx11threadpump.md)). Verwenden Sie **null** , um anzugeben, dass diese Funktion erst zurückgegeben werden soll, wenn Sie abgeschlossen ist.
+Ein Zeiger auf eine Threadpumpschnittstelle (siehe [**ID3DX11ThreadPump-Schnittstelle).**](id3dx11threadpump.md) Geben Sie mit **NULL** an, dass diese Funktion erst zurückgegeben werden soll, wenn sie abgeschlossen ist.
 
 </dd> <dt>
 
-*ppshader* \[ vorgenommen\]
+*ppShader* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/desktop/api/d3dcommon/nn-d3dcommon-id3d10blob)\*\***
 
-Ein Zeiger auf den Arbeitsspeicher, der den kompilierten Shader sowie alle eingebetteten Debug-und Symbol Tabelleninformationen enthält.
+Ein Zeiger auf den Arbeitsspeicher, der den kompilierten Shader sowie alle eingebetteten Debug- und Symboltabelleninformationen enthält.
 
 </dd> <dt>
 
-*pperrormsgs* \[ vorgenommen\]
+*ppErrorMsgs* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/desktop/api/d3dcommon/nn-d3dcommon-id3d10blob)\*\***
 
-Ein Zeiger auf den Arbeitsspeicher, der eine Auflistung von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Diese Fehler und Warnungen sind identisch mit der Debugausgabe eines Debuggers.
+Ein Zeiger auf den Arbeitsspeicher, der eine Liste von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Diese Fehler und Warnungen sind mit der Debugausgabe eines Debuggers identisch.
 
 </dd> <dt>
 
-*phresult* \[ vorgenommen\]
+*pHResult* \[ out\]
 </dt> <dd>
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null** ist, muss *phresult* eine gültige Speicheradresse sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann **NULL** sein. Wenn *pPump* nicht **NULL** ist, muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -184,38 +184,38 @@ Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
 
-**D3DX11CompileFromResource** gibt E \_ invalidArg zurück, wenn Sie einen Wert ungleich **null** für den Parameter " *phresult* " angeben, wenn Sie **null** für den *ppump* -Parameter angeben. Weitere Informationen zu dieser Situation finden Sie unter "Hinweise".
+**D3DX11CompileFromResource** gibt E \_ INVALIDARG zurück, wenn Sie nicht **NULL** für den *pHResult-Parameter* angeben, wenn Sie **NULL** für den *pPump-Parameter* angeben. Weitere Informationen zu dieser Situation finden Sie unter Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu **D3DX11CompileFromResource** finden Sie unter [**D3DCompile**](/windows/desktop/direct3dhlsl/d3dcompile).
 
-Sie müssen **null** für den Parameter " *phresult* " angeben, wenn Sie auch **null** für den *ppump* -Parameter angeben. Andernfalls können Sie später keinen Shader erstellen, indem Sie den kompilierten shadercode verwenden, den **D3DX11CompileFromResource** im Speicher zurückgibt, auf den der *ppshader* -Parameter verweist. Zum Erstellen eines Shaders aus dem eingehenden Shader-Code Rufen Sie eine der folgenden [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) -Schnittstellen Methoden auf:
+Sie müssen **null** für den *pHResult-Parameter* angeben, wenn Sie auch **NULL** für den *pPump-Parameter* angeben. Andernfalls können Sie anschließend keinen Shader erstellen, indem Sie den kompilierten Shadercode verwenden, auf den **D3DX11CompileFromResource** im Arbeitsspeicher zurückgibt, auf den der *ppShader-Parameter* zeigt. Um einen Shader aus verzerrbarem Shadercode zu erstellen, rufen Sie eine der folgenden [**ID3D11Device-Schnittstellenmethoden**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) auf:
 
--   [**"Kreatecomputeshader"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createcomputeshader)
--   [**"Kreatedomainshader"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createdomainshader)
--   [**"Kreategeometryshader"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshader)
--   [**"Kreategeometryshaderwithstreamoutput"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput)
--   [**"Kreatehullshader"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createhullshader)
--   [**"Kreatepixelshader"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createpixelshader)
--   [**"Kreatevertexshader"**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createvertexshader)
+-   [**CreateComputeShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createcomputeshader)
+-   [**CreateDomainShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createdomainshader)
+-   [**CreateGeometryShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshader)
+-   [**CreateGeometryShaderWithStreamOutput**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput)
+-   [**CreateHullShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createhullshader)
+-   [**CreatePixelShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createpixelshader)
+-   [**CreateVertexShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createvertexshader)
 
-Wenn Sie einen Wert ungleich **null** *bei der Angabe* von **null** für *ppump* angeben, gibt **D3DX11CompileFromResource** den E \_ invalidArg-Fehlercode zurück.
+Darüber hinaus gibt **D3DX11CompileFromResource**  den E INVALIDARG-Fehlercode zurück, wenn Sie einen Wert ungleich **NULL** für *pHResult* bereitstellen, wenn Sie NULL für *pPump* \_ bereitstellen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11async. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>    |
+| Header<br/>  | <dl> <dt>D3DX11async.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

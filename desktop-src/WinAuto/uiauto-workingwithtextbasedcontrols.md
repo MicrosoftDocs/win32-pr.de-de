@@ -1,39 +1,39 @@
 ---
-title: Arbeiten mit Text basierten Steuerelementen
+title: Arbeiten mit textbasierten Steuerelementen
 ms.assetid: e06e1f6e-8346-4656-b0cb-58e5b9fdaa33
-description: Weitere Informationen finden Sie unter Arbeiten mit Text basierten Steuerelementen
+description: Weitere Informationen finden Sie unter Arbeiten mit textbasierten Steuerelementen.
 keywords:
 - Clients, arbeiten mit textbasierten Steuerelementen
-- Clients, textbasierte Steuerelemente
-- Clients, Textbereiche
-- Clients, Text-Steuerelement Muster
-- Clients, TextRange-Steuerelement Muster
+- Clients,textbasierte Steuerelemente
+- Clients,Textbereiche
+- clients,Text-Steuerelementmuster
+- clients,TextRange-Steuerelementmuster
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 079b77f2151e8e231ea9e431e14be75c81c9630b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d043be6bca078e4ca0bf45d4ed3ac21964e6f29f2a682d8726f24ba4265a3be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118563936"
 ---
-# <a name="working-with-text-based-controls"></a>Arbeiten mit Text basierten Steuerelementen
+# <a name="working-with-text-based-controls"></a>Arbeiten mit textbasierten Steuerelementen
 
-In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die vom **Text** -und **TextRange** -Steuerelement Muster verfügbar gemacht werden, um mit dem Text Inhalt eines textbasierten Steuer Elements zu arbeiten Sie enthält die folgenden Abschnitte:
+In diesem Thema wird beschrieben, wie sie die Schnittstellen verwenden, die von den **Text-** und **TextRange-Steuerelementmustern** verfügbar gemacht werden, um mit dem Textinhalt eines textbasierten Steuerelements zu arbeiten. Sie enthält die folgenden Abschnitte:
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Grundlegendes zum Text Objektmodell für die Benutzeroberflächen Automatisierung](uiauto-understandingtheuiautomationtextobjectmodel.md)
--   [Verwenden von Text Bereichen](uiauto-usingtextrangeobjects.md)
--   [Zugreifen auf den Tabelleninhalt](uiauto-accessingspreadsheetcontent.md)
--   [Behandeln Text bezogener Ereignisse](uiauto-handlingtextrelatedevents.md)
+-   [Grundlegendes zum Benutzeroberflächenautomatisierung Textobjektmodell](uiauto-understandingtheuiautomationtextobjectmodel.md)
+-   [Verwenden von Textbereichen](uiauto-usingtextrangeobjects.md)
+-   [Zugreifen auf Tabellenkalkulationsinhalte](uiauto-accessingspreadsheetcontent.md)
+-   [Behandeln textbezogener Ereignisse](uiauto-handlingtextrelatedevents.md)
 -   [Grundlegendes zu Leistungsproblemen](uiauto-understandingperformanceissues.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Benutzeroberflächenautomatisierungs-Client Programmiererhandbuch](uiauto-clientportal.md)
+[Benutzeroberflächenautomatisierung-Clientprogrammiererhandbuch](uiauto-clientportal.md)
 </dt> </dl>
 
  

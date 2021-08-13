@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der eine CIM \_ resourcezucationsettingdata-Instanz aus einem Ressourcenpool zugewiesen wird.
+description: Stellt eine Zuordnung dar, in der eine CIM \_ ResourceAllocationSettingData-Instanz aus einem Ressourcenpool zugeordnet wird.
 ms.assetid: ca9060e5-4434-4302-a840-a7d9cf5db714
 title: CIM_ResourceAllocationFromPool-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 09bd7b70d49d2304062d35d29586fea886c86a3c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b73dd49232fd7c68ce5fbb52ecdb07d6721fbd83c3e9e60425178e0323b5dbf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118648172"
 ---
-# <a name="cim_resourceallocationfrompool-class"></a>CIM \_ resourcezucationfrompool-Klasse
+# <a name="cim_resourceallocationfrompool-class"></a>CIM \_ ResourceAllocationFromPool-Klasse
 
-Stellt eine Zuordnung dar, in der eine [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) -Instanz aus einem Ressourcenpool zugewiesen wird.
+Stellt eine Zuordnung dar, in der eine [**CIM \_ ResourceAllocationSettingData-Instanz**](cim-resourceallocationsettingdata.md) aus einem Ressourcenpool zugeordnet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_ResourceAllocationFromPool : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ resourcezucationfrompool** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ResourceAllocationFromPool-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ resourcezucationfrompool** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ResourceAllocationFromPool-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ resourcepool**
+Datentyp: **CIM \_ ResourcePool**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Der Ressourcenpool.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ resourcezubesettingdata**
+Datentyp: **CIM \_ ResourceAllocationSettingData**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Die Ressourcen Zuordnungs Daten.
+Die Ressourcenzuordnungsdaten.
 
 </dd> </dl>
 
@@ -89,17 +89,17 @@ Die Ressourcen Zuordnungs Daten.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

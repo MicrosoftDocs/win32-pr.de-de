@@ -1,7 +1,7 @@
 ---
-description: Die "Werbung"-Methode des Installerobjekts gibt ein Installationspaket an.
+description: Die AdvertiseScript-Methode des Installer-Objekts kündigt ein Installationspaket an.
 ms.assetid: 45e5268f-7a5f-412f-b9f6-0abb75b79361
-title: 'Installer:: Werbung-Methode'
+title: Installer::AdvertiseScript-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 7e4ec5afae8d870511c6f91502f8b5844ce135bd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6a3ca8b4c07b4bd19b9f5d5066ed17dcc5aa7edb5828741e32ee05197a83777
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118633217"
 ---
-# <a name="installeradvertisescript-method"></a>Installer:: Werbung-Methode
+# <a name="installeradvertisescript-method"></a>Installer::AdvertiseScript-Methode
 
-Die " **Werbung** "-Methode des [**Installerobjekts**](installer-object.md) gibt ein Installationspaket an.
+Die **AdvertiseScript-Methode** des [**Installer-Objekts**](installer-object.md) kündigt ein Installationspaket an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Die " **Werbung** "-Methode des [**Installerobjekts**](installer-object.md) gibt
 *scriptPath* 
 </dt> <dd>
 
-Der vollständige Pfad zu der Skriptdatei, die von der Methode " [**kreatewerbung**](installer-createadvertisescript.md) " generiert wurde.
+Der vollständige Pfad zur Skriptdatei, die von der [**CreateAdvertiseScript-Methode**](installer-createadvertisescript.md) generiert wurde.
 
 </dd> <dt>
 
-*scriptflags* 
+*scriptFlags* 
 </dt> <dd>
 
 Die Flags, die die Ankündigung steuern. Dieser Parameter kann eine Kombination der folgenden Werte sein.
@@ -57,15 +57,15 @@ Die Flags, die die Ankündigung steuern. Dieser Parameter kann eine Kombination 
 
 | Wert                                                                                                                                                                                                                                                                                                                                                                           | Bedeutung                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="msiAdvertiseScriptCacheInfo"></span><span id="msiadvertisescriptcacheinfo"></span><span id="MSIADVERTISESCRIPTCACHEINFO"></span><dl> <dt>**msiwerbesescriptcacheingefo**</dt> <dt>0x001</dt> </dl>                                                                 | Fügen Sie dieses Flag ein, wenn die Symbole erstellt oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                                                            |
-| <span id="msiAdvertiseScriptShortcuts"></span><span id="msiadvertisescriptshortcuts"></span><span id="MSIADVERTISESCRIPTSHORTCUTS"></span><dl> <dt>**msiwerbesescriptverknüpfungen**</dt> <dt>0x004</dt> </dl>                                                                 | Fügen Sie dieses Flag ein, wenn die Tastenkombinationen erstellt oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                                                        |
-| <span id="msiAdvertiseScriptMachineAssign"></span><span id="msiadvertisescriptmachineassign"></span><span id="MSIADVERTISESCRIPTMACHINEASSIGN"></span><dl> <dt>**msiwerbesescriptmachineassign**</dt> <dt>0x008</dt> </dl>                                                 | Fügen Sie dieses Flag ein, wenn das Produkt einem Computer zugewiesen werden soll.<br/>                                                                                                                                                                                                                                                                                                        |
-| <span id="msiAdvertiseScriptConfigurationRegistration"></span><span id="msiadvertisescriptconfigurationregistration"></span><span id="MSIADVERTISESCRIPTCONFIGURATIONREGISTRATION"></span><dl> <dt>**msiwerbesescriptconfigurationregistration**</dt> <dt>0x020</dt> </dl> | Fügen Sie dieses Flag ein, wenn die Konfigurations-und Verwaltungsinformationen in den Registrierungsdaten geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                   |
-| <span id="msiAdvertiseScriptValidateTransformList"></span><span id="msiadvertisescriptvalidatetransformlist"></span><span id="MSIADVERTISESCRIPTVALIDATETRANSFORMLIST"></span><dl> <dt>**msiwerbesescriptvalidatetransformlist**</dt> <dt>0x040</dt> </dl>                 | Fügen Sie dieses Flag ein, um die Überprüfung der im Skript aufgelisteten Transformationen auf zuvor registrierte Transformationen für dieses Produkt zu erzwingen. Beachten Sie, dass Transformations Konflikte mithilfe eines Zeichen folgen Vergleichs erkannt werden, bei dem die Groß-und Kleinschreibung nicht beachtet wird und die zwischen den Installationen pro Benutzer und Computer übergreifend in allen [Installations Kontexten](installation-context.md)ausgewertet werden<br/> |
-| <span id="msiAdvertiseScriptClassInfoRegistration"></span><span id="msiadvertisescriptclassinforegistration"></span><span id="MSIADVERTISESCRIPTCLASSINFOREGISTRATION"></span><dl> <dt>**msiwerbesescriptclassinforegistration**</dt> <dt>0x080</dt> </dl>                 | Fügen Sie dieses Flag ein, wenn Ankündigungs Informationen in der Registrierung in Bezug auf COM-Klassen geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                    |
-| <span id="msiAdvertiseScriptExtensionInfoRegistration"></span><span id="msiadvertisescriptextensioninforegistration"></span><span id="MSIADVERTISESCRIPTEXTENSIONINFOREGISTRATION"></span><dl> <dt>**msiwerbesescriptextensioninforegistration**</dt> <dt>0x100</dt> </dl> | Fügen Sie dieses Flag ein, wenn Ankündigungs Informationen in der mit einer Erweiterung verknüpften Registrierung geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                   |
-| <span id="msiAdvertiseScriptAppInfo"></span><span id="msiadvertisescriptappinfo"></span><span id="MSIADVERTISESCRIPTAPPINFO"></span><dl> <dt>**msiwerbesescriptappinfo**</dt> <dt>0x180</dt> </dl>                                                                         | Fügen Sie dieses Flag ein, wenn die Ankündigungs Informationen in der Registrierung geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                       |
-| <span id="msiAdvertiseScriptRegData"></span><span id="msiadvertisescriptregdata"></span><span id="MSIADVERTISESCRIPTREGDATA"></span><dl> <dt>**msiwerbesescriptregdata**</dt> <dt>0x1a0</dt> </dl>                                                                         | Fügen Sie dieses Flag ein, wenn die Ankündigungs Informationen in der Registrierung geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                       |
+| <span id="msiAdvertiseScriptCacheInfo"></span><span id="msiadvertisescriptcacheinfo"></span><span id="MSIADVERTISESCRIPTCACHEINFO"></span><dl> <dt>**msiAdvertiseScriptCacheInfo-0x001**</dt> <dt></dt> </dl>                                                                 | Schließen Sie dieses Flag ein, wenn die Symbole erstellt oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                                                            |
+| <span id="msiAdvertiseScriptShortcuts"></span><span id="msiadvertisescriptshortcuts"></span><span id="MSIADVERTISESCRIPTSHORTCUTS"></span><dl> <dt>**msiAdvertiseScriptShortcuts**</dt> <dt>0x004</dt> </dl>                                                                 | Schließen Sie dieses Flag ein, wenn die Verknüpfungen erstellt oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                                                        |
+| <span id="msiAdvertiseScriptMachineAssign"></span><span id="msiadvertisescriptmachineassign"></span><span id="MSIADVERTISESCRIPTMACHINEASSIGN"></span><dl> <dt>**msiAdvertiseScriptMachineAssign**</dt> <dt>0x008</dt> </dl>                                                 | Schließen Sie dieses Flag ein, wenn das Produkt einem Computer zugewiesen werden soll.<br/>                                                                                                                                                                                                                                                                                                        |
+| <span id="msiAdvertiseScriptConfigurationRegistration"></span><span id="msiadvertisescriptconfigurationregistration"></span><span id="MSIADVERTISESCRIPTCONFIGURATIONREGISTRATION"></span><dl> <dt>**msiAdvertiseScriptConfigurationRegistration**</dt> <dt>0x020</dt> </dl> | Schließen Sie dieses Flag ein, wenn die Konfigurations- und Verwaltungsinformationen in den Registrierungsdaten geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                   |
+| <span id="msiAdvertiseScriptValidateTransformList"></span><span id="msiadvertisescriptvalidatetransformlist"></span><span id="MSIADVERTISESCRIPTVALIDATETRANSFORMLIST"></span><dl> <dt>**msiAdvertiseScriptValidateTransformList**</dt> <dt>0x040</dt> </dl>                 | Schließen Sie dieses Flag ein, um die Überprüfung der im Skript aufgeführten Transformationen für zuvor registrierte Transformationen für dieses Produkt zu erzwingen. Beachten Sie, dass Transformationskonflikte mithilfe eines Zeichenfolgenvergleichs erkannt werden, bei dem die Groß-/Kleinschreibung nicht beachtet wird und der zwischen benutzer- und computerbezogenen Installationen in allen [Installationskontexten](installation-context.md)ausgewertet wird.<br/> |
+| <span id="msiAdvertiseScriptClassInfoRegistration"></span><span id="msiadvertisescriptclassinforegistration"></span><span id="MSIADVERTISESCRIPTCLASSINFOREGISTRATION"></span><dl> <dt>**msiAdvertiseScriptClassInfoRegistration**</dt> <dt>0x080</dt> </dl>                 | Schließen Sie dieses Flag ein, wenn Ankündigungsinformationen in der Registrierung im Zusammenhang mit COM-Klassen geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                    |
+| <span id="msiAdvertiseScriptExtensionInfoRegistration"></span><span id="msiadvertisescriptextensioninforegistration"></span><span id="MSIADVERTISESCRIPTEXTENSIONINFOREGISTRATION"></span><dl> <dt>**msiAdvertiseScriptExtensionInfoRegistration**</dt> <dt>0x100</dt> </dl> | Schließen Sie dieses Flag ein, wenn Ankündigungsinformationen in der Registrierung, die sich auf eine Erweiterung beziehen, geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                   |
+| <span id="msiAdvertiseScriptAppInfo"></span><span id="msiadvertisescriptappinfo"></span><span id="MSIADVERTISESCRIPTAPPINFO"></span><dl> <dt>**msiAdvertiseScriptAppInfo**</dt> <dt>0x180</dt> </dl>                                                                         | Schließen Sie dieses Flag ein, wenn die Ankündigungsinformationen in der Registrierung geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                       |
+| <span id="msiAdvertiseScriptRegData"></span><span id="msiadvertisescriptregdata"></span><span id="MSIADVERTISESCRIPTREGDATA"></span><dl> <dt>**msiAdvertiseScriptRegData-0x1A0**</dt> <dt></dt> </dl>                                                                         | Schließen Sie dieses Flag ein, wenn die Ankündigungsinformationen in der Registrierung geschrieben oder entfernt werden müssen.<br/>                                                                                                                                                                                                                                                                       |
 
 
 
@@ -73,7 +73,7 @@ Die Flags, die die Ankündigung steuern. Dieser Parameter kann eine Kombination 
 
 </dd> <dt>
 
-*RemoveItems* 
+*removeItems* 
 </dt> <dd>
 
 TRUE, wenn die angegebenen Elemente entfernt werden sollen, anstatt erstellt zu werden.
@@ -84,13 +84,13 @@ TRUE, wenn die angegebenen Elemente entfernt werden sollen, anstatt erstellt zu 
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Methode " **Werbung** " verwendet die Funktion " [**msiwerbesescript**](/windows/desktop/api/Msi/nf-msi-msiadvertisescripta) ". Die Verwendung der " **Werbung** "-Methode erfordert, dass das Skript in einem lokalen System Prozess ausgeführt wird.
+Die **AdvertiseScript-Methode** verwendet die [**MsiAdvertiseScript-Funktion.**](/windows/desktop/api/Msi/nf-msi-msiadvertisescripta) Die Verwendung der **AdvertiseScript-Methode** erfordert, dass das Skript in einem lokalen Systemprozess ausgeführt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Verwendung der Methode " **Werbung** " veranschaulicht.
+Im folgenden Beispiel wird die Verwendung der **AdvertiseScript-Methode** veranschaulicht.
 
 
 ```VB
@@ -124,20 +124,20 @@ MsgBox Installer.ProductState("{BAE98781-CF88-4309-8E2D-3D8B347F5B53}")
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 4,5 unter Windows Server 2003 und Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 4.5 auf Windows Server 2003 und Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                           |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                                |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Installationsprogramm**](installer-object.md)
+[**Installer**](installer-object.md)
 </dt> <dt>
 
-[Wird in Windows Installer 3,1 und früheren Versionen nicht unterstützt.](not-supported-in-windows-installer-version-3-1.md)
+[Nicht unterstützt in Windows Installer 3.1 und früheren Versionen](not-supported-in-windows-installer-version-3-1.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Protokoll Controller dar, der eine SCSI-Schnittstelle verwaltet.
+description: Stellt einen Protokollcontroller dar, der eine SCSI-Schnittstelle verwaltet.
 ms.assetid: 01ef85fc-2f05-4453-b524-7d63b647f6fb
 title: CIM_SCSIProtocolController-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d6479b405d3ca499615981d62744b1eaf25c7598
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f7e3db8cb1d0aa97446d503aff876c0270ddb16e5908b3b1c53c899c7617a27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118647675"
 ---
-# <a name="cim_scsiprotocolcontroller-class"></a>CIM \_ scsiprotocolcontroller-Klasse
+# <a name="cim_scsiprotocolcontroller-class"></a>CIM \_ SCSIProtocolController-Klasse
 
-Stellt einen Protokoll Controller dar, der eine SCSI-Schnittstelle verwaltet.
+Stellt einen Protokollcontroller dar, der eine SCSI-Schnittstelle verwaltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,29 +39,29 @@ class CIM_SCSIProtocolController : CIM_ProtocolController
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ scsiprotocolcontroller** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SCSIProtocolController-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ scsiprotocolcontroller** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SCSIProtocolController-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **NameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ scsiprotocolcontroller**".**Name**","**CIM \_ scsiprotocolcontroller**.**Othernameformat**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SCSIProtocolController**.**Name**", "**CIM \_ SCSIProtocolController**.**OtherNameFormat**")
 </dt> </dl>
 
-Das Format der **Name** -Eigenschaft von **CIM \_ scsiprotocolcontroller**.
+Das Format der **Name-Eigenschaft** des **\_ CIM-SCSIProtocolControllers.**
 
 <dt>
 
@@ -74,14 +74,14 @@ Das Format der **Name** -Eigenschaft von **CIM \_ scsiprotocolcontroller**.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC_Port_WWN"></span><span id="fc_port_wwn"></span><span id="FC_PORT_WWN"></span>
 
-**FC-WWN** (2)
+**FC Port WWN** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -95,19 +95,19 @@ Das Format der **Name** -Eigenschaft von **CIM \_ scsiprotocolcontroller**.
 
 </dd> <dt>
 
-**Othernameformat**
+**OtherNameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ scsiprotocolcontroller**".**Name**","**CIM \_ scsiprotocolcontroller**.**NameFormat**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SCSIProtocolController**.**Name**", "**CIM \_ SCSIProtocolController**.**NameFormat**")
 </dt> </dl>
 
-Eine Beschreibung der **NameFormat** -Eigenschaft, wenn **NameFormat** auf "1" (sonstige) festgelegt ist.
+Eine Beschreibung der **NameFormat-Eigenschaft,** wenn **NameFormat** auf "1" (andere) festgelegt ist.
 
 </dd> </dl>
 
@@ -119,17 +119,17 @@ Eine Beschreibung der **NameFormat** -Eigenschaft, wenn **NameFormat** auf "1" (
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ protocolcontroller**](cim-protocolcontroller.md)
+[**CIM \_ ProtocolController**](cim-protocolcontroller.md)
 </dt> </dl>
 
  

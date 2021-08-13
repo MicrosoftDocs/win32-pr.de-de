@@ -1,19 +1,19 @@
 ---
-description: Geräte Informations Eigenschaften sind Eigenschaften, die das Setup und die Installation des Geräts beschreiben.
+description: Geräteinformationseigenschaften sind Eigenschaften, die das Setup und die Installation des Geräts beschreiben.
 ms.assetid: d0b2999a-87ff-474b-9e63-ed7d898b1aa0
-title: Geräte Informations Eigenschaften (WIA_DIP_XXXX)
+title: Geräteinformationseigenschaften (WIA_DIP_XXXX)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dbbbe0611cef190af8ec48ddee5efc410e67f5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e306022c49e845ee56e10719db722bc7039ff04dbcdb88ea8a3343f3e6c37f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118442128"
 ---
-# <a name="device-information-properties-wia_dip_xxxx"></a>Geräte Informations Eigenschaften (WIA \_ DIP \_ xxxx)
+# <a name="device-information-properties-wia_dip_xxxx"></a>Geräteinformationseigenschaften (WIA \_ DIP \_ XXXX)
 
-Geräte Informations Eigenschaften sind Eigenschaften, die das Setup und die Installation des Geräts beschreiben. Diese Eigenschaften sind über die [**iwiadevmgr**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) -oder [**IWiaDevMgr2**](-wia-iwiadevmgr2.md) -Schnittstelle und auch über das root-Element verfügbar. Geräte Informations Eigenschaften wird das Präfix WIA \_ DIP (**Geräte Informations Eigenschaft**) vorangestellt und von WIA bereitgestellt. Weitere Informationen finden Sie unter [**Eigenschaften Konstanten für Geräteinformationen**](-wia-wiadeviceinfoprop.md).
+Geräteinformationseigenschaften sind Eigenschaften, die das Setup und die Installation des Geräts beschreiben. Diese Eigenschaften sind über die [**Schnittstellen IWiaDevMgr**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) oder [**IWiaDevMgr2**](-wia-iwiadevmgr2.md) sowie über das Stammelement verfügbar. Geräteinformationseigenschaften haben das Präfix WIA DIP ( Device Information Property ) und \_ werden von WIA bereitgestellt. Weitere Informationen finden Sie unter [**Eigenschaftenkonst constants für Geräteinformationen.**](-wia-wiadeviceinfoprop.md)
 
  
 

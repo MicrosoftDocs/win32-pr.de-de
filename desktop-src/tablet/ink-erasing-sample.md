@@ -1,34 +1,34 @@
 ---
-description: 'Diese Anwendung baut auf dem Beispiel für eine Handschrift Sammlung auf, indem Sie das Löschen von Hand Strichen veranschaulicht. Das Beispiel stellt dem Benutzer ein Menü mit vier Modi zur Auswahl: Ink-fähig, löschen bei Cusp, löschen bei Schnittstellen und Löschen von Strichen.'
+description: 'Diese Anwendung baut auf dem Beispiel für die Ink-Sammlung auf, indem das Löschen von Ink-Strichen demonstriert wird. Das Beispiel stellt dem Benutzer ein Menü zur Verfügung, aus dem vier Modi zur Auswahl stehen: Freischrift aktiviert, Löschen am Cusp, Löschen an Schnittmengen und Löschen von Strichen.'
 ms.assetid: cec912ee-1645-47e1-8988-626719549e55
-title: Ink-Lösch Beispiel
+title: Beispiel für das Löschen von Ink-Daten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46040781d778f936815e57ba96b4ca516617d9a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b56885835a2d42c3f4c050938658cfc7cdf5a5d5463309ae2f0a6d8021c817e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452078"
 ---
-# <a name="ink-erasing-sample"></a>Ink-Lösch Beispiel
+# <a name="ink-erasing-sample"></a>Beispiel für das Löschen von Ink-Daten
 
-Diese Anwendung baut auf dem [Beispiel](ink-collection-sample.md) für eine Handschrift Sammlung auf, indem Sie das Löschen von Hand Strichen veranschaulicht. Das Beispiel stellt dem Benutzer ein Menü mit vier Modi zur Auswahl: Ink-fähig, löschen bei Cusp, löschen bei Schnittstellen und Löschen von Strichen.
+Diese Anwendung baut auf dem [Beispiel für die Ink-Sammlung auf,](ink-collection-sample.md) indem das Löschen von Ink-Strichen demonstriert wird. Das Beispiel stellt dem Benutzer ein Menü zur Verfügung, aus dem vier Modi zur Auswahl stehen: Freischrift aktiviert, Löschen am Cusp, Löschen an Schnittmengen und Löschen von Strichen.
 
-Im frei Hand Eingabe fähigen Modus sammelt das [InkCollector](/previous-versions/ms836493(v=msdn.10)) -Objekt frei Hand Eingaben, wie im frei Hand Eingabe [Beispiel](ink-collection-sample.md)gezeigt.
+Im Ink-fähigen Modus erfasst das [InkCollector-Objekt Ink-Objekte,](/previous-versions/ms836493(v=msdn.10)) wie im [Ink Collection Sample (Ink-Sammlungsbeispiel) gezeigt.](ink-collection-sample.md)
 
-In einem Lösch Modus werden Segmente vorhandener Hand Striche, die der Benutzer mit dem Cursor berührt, gelöscht. Außerdem können die cusps oder Schnittmengen mit einem roten Kreis markiert werden.
+In einem Löschmodus werden Segmente vorhandener Ink-Striche, die der Benutzer mit dem Cursor berührt, gelöscht. Außerdem können die Cusps oder Schnittpunkte mit einem roten Kreis markiert werden.
 
-Die interessantesten Teile dieses Beispiels liegen im `InkErase` -Ereignishandler des Formulars `OnPaint` und in den Löschfunktionen, die vom-Ereignishandler des Formulars aufgerufen werden `OnMouseMove` .
+Die interessantesten Teile dieses Beispiels liegen im Ereignishandler des Formulars und in den Löschen-Funktionen, die vom Ereignishandler des `InkErase` `OnPaint` Formulars `OnMouseMove` aufgerufen werden.
 
-## <a name="circling-the-cusps-and-intersections"></a>Umschließen der cusps und Schnittmengen
+## <a name="circling-the-cusps-and-intersections"></a>Kreisen der Cusps und Schnittmengen
 
-Der- `OnPaint` Ereignishandler des Formulars zeichnet zuerst die Striche, und in Abhängigkeit vom Anwendungsmodus werden möglicherweise alle cusps oder Schnittmengen mit einem kleinen roten Kreis gefunden und markiert. Mit einem Cusp wird der Punkt gekennzeichnet, an dem ein Strich abrupt geändert wird. Eine Schnittmenge markiert einen Punkt, an dem sich ein Strich mit sich selbst oder einem anderen Strich überschneidet.
+Der Ereignishandler des Formulars zeichnet zuerst die Striche und kann je nach Anwendungsmodus alle Cusps oder Schnittpunkte mit einem kleinen roten Kreis suchen `OnPaint` und markieren. Ein Cusp markiert den Punkt, an dem ein Strich die Richtung plötzlich ändert. Eine Schnittmenge markiert einen Punkt, an dem sich ein Strich mit sich selbst oder einem anderen Strich überschneidet.
 
-Das [Paint](/dotnet/api/system.windows.forms.control.paint?view=netcore-3.1) -Ereignis tritt auf, wenn ein Steuerelement neu gezeichnet wird.
+Das [Paint](/dotnet/api/system.windows.forms.control.paint?view=netcore-3.1) tritt auf, wenn ein Steuerelement neu gezeichnet wird.
 
 > [!Note]  
-> Im Beispiel wird das Formular gezwungen, sich selbst neu zu zeichnen, wenn ein Strich gelöscht wird, oder wenn sich der Anwendungsmodus ändert, indem die [Aktualisierungs](/dotnet/api/system.windows.forms.control.refresh?view=netcore-3.1) Methode des Formulars verwendet wird.
+> Das Beispiel erzwingt, dass das Formular sich selbst neu gezeichnet, wenn ein Strich gelöscht wird oder wenn sich der Anwendungsmodus ändert, indem die Refresh-Methode des [Formulars verwendet](/dotnet/api/system.windows.forms.control.refresh?view=netcore-3.1) wird.
 
  
 
@@ -54,7 +54,7 @@ private void InkErase_OnPaint(object sender, PaintEventArgs e)
 
 
 
-In `PaintCusps` durchläuft der Code die einzelnen Cusp in jedem Strich und zeichnet einen roten Kreis herum. Die [PolylineCusps](/previous-versions/ms827853(v=msdn.10)) -Eigenschaft des Strichs gibt die Indizes der Punkte in einem Stoke zurück, die den cusps entsprechen. Beachten Sie auch die [InkSpaceToPixel](/previous-versions/ms828495(v=msdn.10)) -Methode des [rendererobjekts](/previous-versions/ms828481(v=msdn.10)) , die den Punkt in die für die DrawEllipse-Methode relevanten Koordinaten konvertiert.
+In durch iteriert der Code jeden Cusp in jedem Strich und zeichnet einen `PaintCusps` roten Kreis um ihn. Die [PolylineCusps-Eigenschaft](/previous-versions/ms827853(v=msdn.10)) des Strichs gibt die Indizes der Punkte innerhalb eines Strichs zurück, die Cusps entsprechen. Beachten Sie außerdem die [InkSpaceToPixel-Methode](/previous-versions/ms828495(v=msdn.10)) des [Rendererobjekts,](/previous-versions/ms828481(v=msdn.10)) die den Punkt in Koordinaten konvertiert, die für die DrawEllipse-Methode relevant sind.
 
 
 ```C++
@@ -80,7 +80,7 @@ private void PaintCusps(Graphics g, Strokes strokesToPaint)
 
 
 
-In `PaintIntersections` durchläuft der Code jeden Strich, um seine Schnittmengen mit dem gesamten Satz von Strichen zu finden. Beachten Sie, dass die [findinterabschnitts](/previous-versions/ms827856(v=msdn.10)) -Methode des Strichs an eine [Striche](/previous-versions/ms827799(v=msdn.10)) -Auflistung übergeben wird und ein Array von Gleit Komma-Indexwerten zurückgibt, die die Schnittpunkte darstellen. Der Code berechnet dann eine X-Y-Koordinate für jede Schnittmenge und zeichnet einen roten Kreis um.
+In durch iteriert der Code jeden Strich, um seine Schnittmengen mit `PaintIntersections` dem gesamten Satz von Strichen zu finden. Beachten Sie, dass der [FindIntersections-Methode](/previous-versions/ms827856(v=msdn.10)) des Strichs eine [Strokes-Auflistung](/previous-versions/ms827799(v=msdn.10)) übergeben wird und ein Array von Gleitkommaindexwerten zurückgibt, die die Schnittmengen darstellen. Der Code berechnet dann eine X-Y-Koordinate für jede Schnittmenge und zeichnet einen roten Kreis um sie.
 
 
 ```C++
@@ -97,19 +97,19 @@ private void PaintIntersections(Graphics g, Strokes strokesToPaint)
 
 ## <a name="handling-a-pen-that-has-two-ends"></a>Behandeln eines Stifts mit zwei Enden
 
-Für das [InkCollector](/previous-versions/ms836493(v=msdn.10)) -Objekt werden drei Ereignishandler für die Ereignisse " [Cursor](/previous-versions/ms567611(v=vs.100))", " [newpaketen](/previous-versions/ms567621(v=vs.100))" und " [Stroke](/previous-versions/ms567622(v=vs.100)) " definiert. Jeder Ereignishandler überprüft die [invertierte](/previous-versions/ms839525(v=msdn.10)) Eigenschaft des [Cursor](/previous-versions/ms839521(v=msdn.10)) Objekts, um festzustellen, welches Ende des Stifts verwendet wird. Wenn der Stift invertiert ist:
+Für das [InkCollector-Objekt](/previous-versions/ms836493(v=msdn.10)) werden drei Ereignishandler für die [CursorDown-,](/previous-versions/ms567611(v=vs.100)) [NewPackets-](/previous-versions/ms567621(v=vs.100))und [Stroke-Ereignisse](/previous-versions/ms567622(v=vs.100)) definiert. Jeder Ereignishandler überprüft die [Inverted-Eigenschaft](/previous-versions/ms839525(v=msdn.10)) des [Cursorobjekts,](/previous-versions/ms839521(v=msdn.10)) um zu sehen, welches Ende des Stifts verwendet wird. Wenn der Stift invertiert ist:
 
--   Mit der- `myInkCollector_CursorDown` Methode wird der Strich transparent.
--   Die- `myInkCollector_NewPackets` Methode löscht Striche.
--   Die- `myInkCollector_Stroke` Methode bricht das-Ereignis ab. [Newpakete](/previous-versions/ms567621(v=vs.100)) -Ereignisse werden vor dem [Stroke](/previous-versions/ms567622(v=vs.100)) -Ereignis generiert.
+-   Die `myInkCollector_CursorDown` -Methode macht den Strich transparent.
+-   Die `myInkCollector_NewPackets` -Methode löscht Striche.
+-   Die `myInkCollector_Stroke` -Methode bricht das Ereignis ab. [NewPackets-Ereignisse](/previous-versions/ms567621(v=vs.100)) werden vor dem [Stroke-Ereignis](/previous-versions/ms567622(v=vs.100)) generiert.
 
 ## <a name="tracking-the-cursor"></a>Nachverfolgen des Cursors
 
-Unabhängig davon, ob der Benutzer einen Stift oder eine Maus verwendet, werden [MouseMove](/previous-versions/ms567617(v=vs.100)) -Ereignisse generiert. Der MouseMove-Ereignishandler prüft zunächst, ob der aktuelle Modus ein Lösch Modus ist und ob eine Maustaste gedrückt ist, und ignoriert das Ereignis, wenn diese Zustände nicht vorhanden sind. Anschließend konvertiert der Ereignishandler die Pixelkoordinaten für den Cursor mithilfe der [PixelToInkSpace](/previous-versions/ms828505(v=msdn.10)) -Methode des [rendererobjekts](/previous-versions/ms828481(v=msdn.10)) in frei Hand Raumkoordinaten und ruft abhängig vom aktuellen Lösch Modus eine der Löschmethoden des Codes auf.
+Unabhängig davon, ob der Benutzer einen Stift oder eine Maus verwendet, [werden MouseMove-Ereignisse](/previous-versions/ms567617(v=vs.100)) generiert. Der MouseMove-Ereignishandler überprüft zunächst, ob der aktuelle Modus ein Löschmodus ist und ob eine Maustaste gedrückt wird, und ignoriert das Ereignis, wenn diese Zustände nicht vorhanden sind. Anschließend konvertiert der Ereignishandler die Pixelkoordinaten für den Cursor mithilfe der [PixelToInkSpace-Methode](/previous-versions/ms828505(v=msdn.10)) des [Rendererobjekts](/previous-versions/ms828481(v=msdn.10)) in Freiraumkoordinaten und ruft abhängig vom aktuellen Löschmodus eine der Methoden zum Löschen des Codes auf.
 
 ## <a name="erasing-strokes"></a>Löschen von Strichen
 
-Die `EraseStrokes` -Methode übernimmt die Position des Cursors im frei Handzeichen Bereich und generiert eine Auflistung von Strichen, die sich innerhalb von `HitTestRadius` Einheiten befinden. Der- `currentStroke` Parameter gibt ein [Stroke](/previous-versions/ms827842(v=msdn.10)) -Objekt an, das nicht gelöscht werden soll. Anschließend wird die Striche-Auflistung aus dem Collector gelöscht, und das Formular wird neu gezeichnet.
+Die -Methode verwendet die Position des Cursors im Freiraum und generiert eine Auflistung von Strichen, `EraseStrokes` die sich innerhalb von Einheiten `HitTestRadius` befinden. Der `currentStroke` -Parameter gibt ein [Stroke-Objekt](/previous-versions/ms827842(v=msdn.10)) an, das nicht gelöscht werden soll. Anschließend wird die Strichsammlung aus dem Collector gelöscht, und das Formular wird neu gezeichnet.
 
 
 ```C++
@@ -133,11 +133,11 @@ private void EraseStrokes(Point pt, Stroke currentStroke)
 
 
 
-## <a name="erasing-at-intersections"></a>Löschen bei Schnittmengen
+## <a name="erasing-at-intersections"></a>Löschen an Schnittmengen
 
-Die `EraseAtIntersections` -Methode durchläuft jeden Strich, der innerhalb des Test RADIUS liegt, und generiert ein Array von Schnittpunkten zwischen diesem Strich und allen anderen Strichen in der Auflistung. Wenn keine Schnittmengen gefunden werden, wird der gesamte Strich gelöscht. Andernfalls befindet sich der nächste Punkt auf dem Strich zum Testpunkt, und von diesem wird die Schnittstelle auf beiden Seiten des Punkts gefunden, in der das zu entfernende Segment beschrieben wird.
+Die -Methode durch iteriert jeden Strich, der innerhalb des Testradius liegt, und generiert ein Array von Schnittmengen zwischen diesem Strich und allen anderen Strichen `EraseAtIntersections` in der Auflistung. Wenn keine Schnittpunkte gefunden werden, wird der gesamte Strich gelöscht. Andernfalls wird der nächste Punkt auf dem Strich zum Testpunkt gefunden, und von diesem Punkt aus werden die Schnittpunkte auf beiden Seiten des Punkts gefunden, die das zu entfernende Segment beschreiben.
 
-Die [Split](/previous-versions/ms828477(v=msdn.10)) -Methode des [Stroke](/previous-versions/ms827842(v=msdn.10)) -Objekts wird verwendet, um das Segment vom restlichen Strich zu trennen, und dann wird das Segment gelöscht, sodass der restliche Strich intakt bleibt. Wie in `EraseStrokes` wird das Formular neu gezeichnet, bevor die Methode zurückgibt.
+Die [Split-Methode](/previous-versions/ms827842(v=msdn.10)) des [Stroke-Objekts](/previous-versions/ms828477(v=msdn.10)) wird verwendet, um das Segment vom Rest des Strichs zu trennen. Anschließend wird das Segment gelöscht, und der Rest des Strichs bleibt erhalten. Wie in `EraseStrokes` wird das Formular neu gezeichnet, bevor die Methode zurückgegeben wird.
 
 
 ```C++
@@ -160,11 +160,11 @@ private void EraseAtIntersections(Point pt)
 
 
 
-## <a name="erasing-at-cusps"></a>Löschen bei cusps
+## <a name="erasing-at-cusps"></a>Löschen bei Cusps
 
-Für jeden Strich, der innerhalb des Test RADIUS liegt, `EraseAtCusps` Ruft die-Methode das Array von-Daten aus der [PolylineCusps](/previous-versions/ms827853(v=msdn.10)) -Methode des [Stroke](/previous-versions/ms827842(v=msdn.10)) -Objekts ab. Jedes Ende des Strichs ist ebenfalls ein Cusp. wenn der Strich nur zwei cusps hat, wird der gesamte Strich gelöscht. Andernfalls befindet sich der nächste Punkt auf dem Strich zum Testpunkt, und von diesem wird die Schnittstelle auf beiden Seiten des Punkts gefunden, in der das zu entfernende Segment beschrieben wird.
+Für jeden Strich, der innerhalb des Testradius liegt, ruft die -Methode das Array von Cusps aus der `EraseAtCusps` [PolylineCusps-Methode](/previous-versions/ms827853(v=msdn.10)) des [Stroke-Objekts](/previous-versions/ms827842(v=msdn.10)) ab. Jedes Ende des Strichs ist auch ein Cusp. Wenn der Strich also nur zwei Cusps auft, wird der gesamte Strich gelöscht. Andernfalls wird der nächste Punkt auf dem Strich zum Testpunkt gefunden, und von diesem Punkt werden die Schnittpunkte auf beiden Seiten des Punkts gefunden, was das zu entfernende Segment beschreibt.
 
-Die [Split](/previous-versions/ms828477(v=msdn.10)) -Methode des [Stroke](/previous-versions/ms827842(v=msdn.10)) -Objekts wird verwendet, um das Segment vom restlichen Strich zu trennen, und dann wird das Segment gelöscht, sodass der restliche Strich intakt bleibt. Wie in `EraseStrokes` wird das Formular neu gezeichnet, bevor die Methode zurückgibt.
+Die [Split-Methode](/previous-versions/ms827842(v=msdn.10)) des [Stroke-Objekts](/previous-versions/ms828477(v=msdn.10)) wird verwendet, um das Segment vom Rest des Strichs zu trennen. Anschließend wird das Segment gelöscht, und der Rest des Strichs bleibt erhalten. Wie in `EraseStrokes` wird das Formular neu gezeichnet, bevor die Methode zurückgegeben wird.
 
 
 ```C++
@@ -191,7 +191,7 @@ private void EraseAtCusps(Point pt)
 
 ## <a name="closing-the-form"></a>Schließen des Formulars
 
-Die [verwerfen-Methode des Formulars](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) gibt das [InkCollector](/previous-versions/ms836493(v=msdn.10)) -Objekt frei `myInkCollector` .
+Die Dispose-Methode [des Formulars](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) gibt das [InkCollector-Objekt](/previous-versions/ms836493(v=msdn.10)) `myInkCollector` zurück.
 
  
 

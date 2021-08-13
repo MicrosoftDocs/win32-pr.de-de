@@ -1,11 +1,11 @@
 ---
-title: ms-DS-oidtoigroup-Link-BL-Attribut
-description: Rückwärts Verknüpfung für ms-DS-oidtoidgruppenlink. Identifiziert die durch ein Oid-Objekt dargestellte Ausstellungs Richtlinie, die dieser Gruppe zugeordnet ist.
+title: ms-DS-OIDToGroup-Link-BL-Attribut
+description: Rückwärtsverknüpfung für ms-DS-OIDToGroup-Link. Identifiziert die Ausstellungsrichtlinie, dargestellt durch ein OID-Objekt, das dieser Gruppe zugeordnet ist.
 ms.assetid: e8c52b91-faba-4b8e-a378-70b92e2aa6cb
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-oidtoigroup-Link-BL-Attribut AD-Schema
-- AD-Schema des msDS-oidesgrouplinkbl-Attributs
+- MS-DS-OIDToGroup-Link-BL-Attribut AD-Schema
+- MSDS-OIDToGroupLinkBl-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94b0412ce4068d829f7aeba73632e5004a8f5b23
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 21b36d9a7d36ec54492a20602a6f2d83e0f00caea595bcabf510e9a24ab0ee5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118683440"
 ---
-# <a name="ms-ds-oidtogroup-link-bl-attribute"></a>ms-DS-oidtoigroup-Link-BL-Attribut
+# <a name="ms-ds-oidtogroup-link-bl-attribute"></a>ms-DS-OIDToGroup-Link-BL-Attribut
 
-Rückwärts Verknüpfung für [**ms-DS-oidtoidgruppenlink**](a-msds-oidtogrouplink.md). Identifiziert die durch ein Oid-Objekt dargestellte Ausstellungs Richtlinie, die dieser Gruppe zugeordnet ist.
+Rückwärtsverknüpfung für [**ms-DS-OIDToGroup-Link**](a-msds-oidtogrouplink.md). Identifiziert die Ausstellungsrichtlinie, dargestellt durch ein OID-Objekt, das dieser Gruppe zugeordnet ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-oidtoidgruppe-Link-BL                |
-| LDAP-Display-Name | MSDS-oidtgrouplinkbl                   |
+| CN                | ms-DS-OIDToGroup-Link-BL                |
+| Ldap-Anzeigename | msDS-OIDToGroupLinkBl                   |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2052                 |
-| System-ID-GUID    | 1a3d0d20-5844-4199-ad25-0F 5039a76ada    |
+| System-ID-GUID    | 1a3d0d20-5844-4199-ad25-0f5039a76ada    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -54,10 +54,10 @@ Rückwärts Verknüpfung für [**ms-DS-oidtoidgruppenlink**](a-msds-oidtogroupli
 | Link-ID                | 2165                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -75,10 +75,10 @@ Rückwärts Verknüpfung für [**ms-DS-oidtoidgruppenlink**](a-msds-oidtogroupli
 | Link-ID                | 2165                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

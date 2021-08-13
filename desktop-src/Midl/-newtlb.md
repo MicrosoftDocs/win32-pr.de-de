@@ -1,9 +1,9 @@
 ---
-title: /newtlb-Schalter
-description: Dies ist die Standardeinstellung für die Auswahl eines Typbibliotheks Formats.
+title: /newtlb-Switch
+description: Dies ist die Standardeinstellung für die Auswahl eines Typbibliotheksformats.
 ms.assetid: 460bc6bc-0958-42bd-92e0-838b019ec79d
 keywords:
-- /newtlb-Schalter-Mittel l
+- /newtlb switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f864a4bd4d5e4c7c899cda839ae39d95791c7b23
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b15ebed12b968738c1d5b26e264b88879ab61e2e6d4d587663b03365548c8b87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118644028"
 ---
-# <a name="newtlb-switch"></a>/newtlb-Schalter
+# <a name="newtlb-switch"></a>/newtlb-Switch
 
-Dies ist die Standardeinstellung für die Auswahl eines Typbibliotheks Formats.
+Dies ist die Standardeinstellung für die Auswahl eines Typbibliotheksformats.
 
 ``` syntax
 midl /newtlb filename
@@ -29,31 +29,31 @@ midl /newtlb filename
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In neueren Versionen von Windows führt dieser Switch keine Aktion aus. Bei nicht unterstützten Versionen von Windows wird bei Angabe dieses Schalters in der Befehlszeile in der Mitte ein Fehler generiert.
+In aktuellen Versionen von Windows wird mit diesem Schalter nichts ausgeführt. Bei nicht unterstützten Versionen von Windows generiert die Angabe dieses Schalters in der MIDL-Befehlszeile einen Fehler.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/newtlb Dateiname. idl**
+**midl /newtlb filename.idl**
 
-**mittlerer l-Dateiname. idl**
+**midl filename.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
 [**/oldtlb**](-oldtlb.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

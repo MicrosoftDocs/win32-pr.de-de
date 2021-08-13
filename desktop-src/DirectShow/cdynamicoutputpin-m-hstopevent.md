@@ -1,7 +1,7 @@
 ---
-description: Das Ereignis, das signalisiert wird, wenn der Filter beendet wird, oder die PIN leert Daten.
+description: Ereignis, das signalisiert wird, wenn der Filter beendet wird oder der Stecknadel Daten leert.
 ms.assetid: 01edf32e-d44d-4b55-b422-165cbe12324c
-title: 'Cdynamicoutputpin:: m_hStopEvent Member (amfilter. h)'
+title: CDynamicOutputPin::m_hStopEvent-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 742f09872afd65633ed21006aeea5f499ed7b235
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7c8d5e78a5a24ea2edd7fd04e30372da03259ba14f39f9f5c1f1148476c768f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656435"
 ---
-# <a name="cdynamicoutputpinm_hstopevent-member"></a>Cdynamicoutputpin:: m \_ hstopevent-Member
+# <a name="cdynamicoutputpinm_hstopevent-member"></a>CDynamicOutputPin::m \_ hStopEvent-Member
 
-Das Ereignis, das signalisiert wird, wenn der Filter beendet wird, oder die PIN leert Daten.
+Ereignis, das signalisiert wird, wenn der Filter beendet wird oder der Stecknadel Daten leert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HANDLE m_hStopEvent;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

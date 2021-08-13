@@ -1,5 +1,5 @@
 ---
-description: Steuert, wann ein Ereignis Anbieter entladen wird.
+description: Steuert, wann ein Ereignisanbieter entladen wird.
 ms.assetid: 7f11e521-d0f6-4c3c-8bfe-ceed2d106ed3
 ms.tgt_platform: multiple
 title: __EventProviderCacheControl-Klasse
@@ -15,18 +15,18 @@ api_type:
 - Schema
 api_location:
 - Root
-ms.openlocfilehash: c54ec47b1f67d96816cf24a6b6e0108ee0b1de70
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d027fec5aea132524924655047c0f0a8aa8605d1972c6f91b2c2315c5834ad1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118557924"
 ---
-# <a name="__eventprovidercachecontrol-class"></a>\_\_Eventprovidercachecontrol-Klasse
+# <a name="__eventprovidercachecontrol-class"></a>\_\_EventProviderCacheControl-Klasse
 
-Die **\_ \_ eventprovidercachecontrol** -System Klasse steuert, wann ein Ereignis Anbieter entladen wird. Sie befindet sich nur im \\ Root-Namespace.
+Die **\_ \_ Systemklasse EventProviderCacheControl** steuert, wann ein Ereignisanbieter entladen wird. Sie befindet sich nur im \\ Stammnamespace.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,34 +40,34 @@ class __EventProviderCacheControl : __CacheControl
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ eventprovidercachecontrol** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ EventProviderCacheControl-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ eventprovidercachecontrol** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ EventProviderCacheControl-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Clearafter**
+**ClearAfter**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Das Zeitintervall, nach dem Windows-Verwaltungsinstrumentation (WMI) einen Ereignis Anbieter freigibt. Die Uhrzeit liegt im [Intervall Format](interval-format.md)vor. Es kann bis zu einem doppelten Intervall dauern, bis der Anbieter entladen wurde.
+Das Zeitintervall nach Windows WMI (Management Instrumentation) gibt einen Ereignisanbieter frei. Die Zeit hat das [Intervallformat](interval-format.md). Es kann bis zu zweimal das angegebene Intervall dauern, um den Anbieter zu entladen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ eventprovidercachecontrol** -Klasse ist von [**\_ \_ CacheControl**](--cachecontrol.md)abgeleitet.
+Die **\_ \_ EventProviderCacheControl-Klasse** wird von [**\_ \_ CacheControl abgeleitet.**](--cachecontrol.md)
 
-Weitere Informationen zum Verwenden dieser Klasse finden Sie unter [Entladen eines Anbieters](unloading-a-provider.md).
+Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [Entladen eines Anbieters.](unloading-a-provider.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,14 +81,14 @@ Weitere Informationen zum Verwenden dieser Klasse finden Sie unter [Entladen ein
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [**\_\_CacheControl**](/windows/desktop/WmiSdk/--cachecontrol)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: vararg-Attribut
-description: Das Attribut \ vararg \ gibt an, dass die Funktion eine Variable Anzahl von Parametern annimmt. Um dies zu erreichen, muss der letzte Parameter ein sicheres Array vom Variant-Typ sein, das alle verbleibenden Parameter enthält.
+description: Das \fgrg\-Attribut gibt an, dass die Funktion eine variable Anzahl von Parametern verwendet. Um dies zu erreichen, muss der letzte Parameter ein sicheres Array vom Typ VARIANT sein, das alle verbleibenden Parameter enthält.
 ms.assetid: df0995d3-5266-4a13-90aa-d78bfa753e0e
 keywords:
-- vararg-Attribut-Mittel l
+- MIDL-Attribut des fgrg-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c3880a3713daaff13fe827beb989dd377440af4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3848393f6bad82d6793e34ba6f4da803c7dd64803c1c40e4ea05487ea141ec48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118641008"
 ---
 # <a name="vararg-attribute"></a>vararg-Attribut
 
-Das **\[ vararg \]** -Attribut gibt an, dass die Funktion eine Variable Anzahl von Parametern annimmt. Um dies zu erreichen, muss der letzte Parameter ein sicheres Array vom **Variant** -Typ sein, das alle verbleibenden Parameter enthält.
+Das **\[ Attribut \] fgrg** gibt an, dass die Funktion eine variable Anzahl von Parametern verwendet. Um dies zu erreichen, muss der letzte Parameter ein sicheres Array vom **Typ VARIANT** sein, das alle verbleibenden Parameter enthält.
 
 ``` syntax
 [vararg [, optional-attributes]] return-type function-name(
@@ -33,51 +33,51 @@ Das **\[ vararg \]** -Attribut gibt an, dass die Funktion eine Variable Anzahl v
 
 <dl> <dt>
 
-*optionale Attribute* 
+*optional-attributes* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die auf die Funktion angewendet werden sollen. Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die auf die Funktion angewendet werden sollen. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*return-type* 
 </dt> <dd>
 
-Der Typ der Daten, die von der Remote Prozedur nach Abschluss des Vorgangs zurückgegeben werden.
+Der Typ der Daten, die nach Abschluss der Remoteprozedur zurückgegeben werden.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Der Name der Remote Prozedur.
+Der Name der Remoteprozedur.
 
 </dd> <dt>
 
-*optional-param-Attribute* 
+*optional-param-attributes* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die auf den Funktionsparameter direkt nach der Attribut Auflistung angewendet werden sollen.
+Gibt null oder mehr Attribute an, die unmittelbar nach der Attributauflistung auf den Funktionsparameter angewendet werden sollen.
 
 </dd> <dt>
 
-*param-Liste* 
+*param-list* 
 </dt> <dd>
 
-Gibt alle Parameter an, speichert den abschließenden, variierenden Parameter.
+Gibt alle Parameter an, und speichern Sie den endgültigen, variierenden Parameter.
 
 </dd> <dt>
 
-*Last-Param-Name* 
+*last-param-name* 
 </dt> <dd>
 
 Der Name des variierenden Parameters.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\[** [**optionalen**](optional.md) **\]** Attribute oder **\[** [**DefaultValue**](defaultvalue.md) -Attribute können nicht **\]** auf Parameter in einer Funktion angewendet werden, die das **\[ \] vararg** -Attribut aufweist.
+Sie können die **\[** [**optionalen attribute oder**](optional.md) defaultvalue-Attribute nicht auf Parameter in einer Funktion anwenden, die **\]** über das Attribut **\[** [](defaultvalue.md) **\]** **\[ fgrg \]** verfügt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -89,21 +89,21 @@ Die **\[** [**optionalen**](optional.md) **\]** Attribute oder **\[** [**Default
 
 <dl> <dt>
 
-[**DefaultValue**](defaultvalue.md)
+[**Defaultvalue**](defaultvalue.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[**optionale**](optional.md)
+[**Optional**](optional.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

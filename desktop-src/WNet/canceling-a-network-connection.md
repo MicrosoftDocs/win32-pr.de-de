@@ -1,21 +1,21 @@
 ---
 title: Abbrechen einer Netzwerkverbindung
-description: Um eine Verbindung mit einer Netzwerkressource abzubrechen, kann eine Anwendung die WNetCancelConnection2-Funktion wie im folgenden Beispiel gezeigt aufruft.
+description: Um eine Verbindung mit einer Netzwerkressource abzubrechen, kann eine Anwendung die WNetCancelConnection2-Funktion aufrufen, wie im folgenden Beispiel gezeigt.
 ms.assetid: a1c80222-4986-4c51-86a5-a1caacb4b2fe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 22cc5fb9536a5d073a6c99d8b49a00e3c2771546
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cbb5c74faa1e1f8b75d0e3b604d89615c6ad1481384a661253ee204dd3ee6081
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118566920"
 ---
 # <a name="canceling-a-network-connection"></a>Abbrechen einer Netzwerkverbindung
 
-Um eine Verbindung mit einer Netzwerkressource abzubrechen, kann eine Anwendung die [**WNetCancelConnection2**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a) -Funktion wie im folgenden Beispiel gezeigt aufruft.
+Um eine Verbindung mit einer Netzwerkressource abzubrechen, kann eine Anwendung die [**WNetCancelConnection2-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a) aufrufen, wie im folgenden Beispiel gezeigt.
 
-Der **WNetCancelConnection2** -aufrufswert gibt an, dass eine Netzwerkverbindung nicht mehr persistent sein sollte. Das Beispiel ruft einen Anwendungs definierten Fehlerhandler zum Verarbeiten von Fehlern und die [**TextOut**](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion zum Drucken auf.
+Der Aufruf von **WNetCancelConnection2** gibt an, dass eine Netzwerkverbindung nicht mehr persistent sein soll. Im Beispiel wird ein anwendungsdefiniertes Fehlerhandler zum Verarbeiten von Fehlern und die [**TextOut-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-textouta) zum Drucken aufrufen.
 
 
 ```C++
@@ -52,10 +52,10 @@ printf("Connection closed for z: drive.\n");
 
 
 
-Die [**wnetcancelconnection**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnectiona) -Funktion wird für die Kompatibilität mit früheren Versionen von Windows für Arbeitsgruppen unterstützt. Verwenden Sie für neue Anwendungen [**WNetCancelConnection2**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a).
+Die [**WNetCancelConnection-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnectiona) wird aus Kompatibilitätsgründen mit früheren Versionen von Windows für Arbeitsgruppen unterstützt. Verwenden Sie für neue Anwendungen [**WNetCancelConnection2.**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a)
 
-Weitere Informationen zum Verwenden eines Anwendungs definierten Fehler Handlers finden Sie unter [Abrufen von Netzwerkfehlern](retrieving-network-errors.md).
+Weitere Informationen zur Verwendung eines anwendungsdefinierte Fehlerhandlers finden Sie unter [Abrufen von Netzwerkfehlern.](retrieving-network-errors.md)
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
 description: Löscht einen Ressourcenpool.
 ms.assetid: bc3111a4-9687-49ec-890e-190358230c53
-title: Deletepool-Methode der Msvm_ResourcePoolConfigurationService-Klasse
+title: DeletePool-Methode der Msvm_ResourcePoolConfigurationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 84273daa0aa30dca8722d90d4fcec22b88325bad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 110c380973b500e8c89b399cd688a6624e7059dc14c711dd2b1e356c6fb07c1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118645727"
 ---
-# <a name="deletepool-method-of-the-msvm_resourcepoolconfigurationservice-class"></a>Deletepool-Methode der MSVM \_ resourcepoolconfigurationservice-Klasse
+# <a name="deletepool-method-of-the-msvm_resourcepoolconfigurationservice-class"></a>DeletePool-Methode der Msvm \_ ResourcePoolConfigurationService-Klasse
 
-Löscht einen Ressourcenpool. Zum erfolgreichen Löschen eines Ressourcenpools können keine Zuordnungen ausstehend sein, oder der Löschvorgang schlägt mit 32774 (in Verwendung) fehl. Wenn es sich beim Ressourcenpool um einen Stamm Ressourcenpool handelt, werden alle Host Ressourcen an das zugrunde liegende System zurückgegeben.
+Löscht einen Ressourcenpool. Um einen Ressourcenpool erfolgreich zu löschen, können keine Zuordnungen ausstehen, oder das Löschen schlägt mit 32774 (In Gebrauch) fehl. Wenn der Ressourcenpool ein Stammressourcenpool ist, werden alle Hostressourcen an das zugrunde liegende System zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 DeletePool(
 
 <dl> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**CIM \_ resourcepool**](cim-resourcepool.md) -Klasse, die den zu löschenden Pool darstellt.
+Ein Verweis auf eine Instanz der [**CIM \_ ResourcePool-Klasse,**](cim-resourcepool.md) die den zu löschende Pool darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -63,16 +63,16 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Auftrag ohne Fehler abgeschlossen** (0)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -90,34 +90,34 @@ Fehler **(32768** )
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-**Verwendet** (32774)
+**In Verwendung** (32774)
 </dt> <dt>
 
-**Ungültiger Status** (32775)
+**Ungültiger Zustand** (32775)
 </dt> <dt>
 
-**Falscher Ressourcentyp für den Pool** (32776).
+**Falscher Ressourcentyp für den Pool** (32776)
 </dt> <dt>
 
-Nicht **verfügbar** (32777)
+**Nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-**Anbieter reserviert** (32779)
+**Reservierter Anbieter** (32779)
 </dt> <dt>
 
 **Unzureichende Ressourcen** (32780)
 </dt> <dt>
 
-**Objekt nicht gefunden** (32781.. 32787)
+**Objekt nicht gefunden** (32781..32787)
 </dt> <dt>
 
-**Objekt vorhanden** (32788)
+**Objekt ist vorhanden** (32788)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -126,19 +126,19 @@ Nicht **verfügbar** (32777)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MSVM \_ resourcepoolconfigurationservice**](msvm-resourcepoolconfigurationservice.md)
+[**Msvm \_ ResourcePoolConfigurationService**](msvm-resourcepoolconfigurationservice.md)
 </dt> </dl>
 
  

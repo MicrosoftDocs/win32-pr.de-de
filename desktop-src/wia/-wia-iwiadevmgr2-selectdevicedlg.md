@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 60ec24f264b8fe0424f17fc32deaf803e55c3346
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 344b13ec05e6f1d06011b3555e5b455202e5848b5000e799540d9f7c3160653b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108091258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441235"
 ---
 # <a name="iwiadevmgr2selectdevicedlg-method"></a>IWiaDevMgr2::SelectDeviceDlg-Methode
 
-Zeigt ein Dialogfeld an, in dem der Benutzer ein Hardwaregerät für die Imageerfassung auswählen kann.
+Zeigt ein Dialogfeld an, in dem der Benutzer ein Hardwaregerät für die Bilderfassung auswählen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ HRESULT SelectDeviceDlg(
 
 Typ: **HWND**
 
-Gibt das übergeordnete Fenster des Dialogfelds **Gerät auswählen** an.
+Gibt das übergeordnete Fenster des Dialogfelds **Gerät** auswählen an.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Gibt das übergeordnete Fenster des Dialogfelds **Gerät auswählen** an.
 
 Typ: **LONG**
 
-Gibt an, welcher WiA 2.0-Gerätetyp verwendet werden soll. Eine Liste der möglichen Werte finden Sie unter [WIA-Gerätetypspezifizierer.](-wia-wia-device-type-specifiers.md)
+Gibt an, welcher Typ von WIA 2.0-Gerät verwendet werden soll. Eine [Liste der möglichen Werte](-wia-wia-device-type-specifiers.md) finden Sie unter WIA-Gerätetypspezifizierer.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Gibt an, welcher WiA 2.0-Gerätetyp verwendet werden soll. Eine Liste der mögli
 
 Typ: **LONG**
 
-Gibt das Verhalten des Dialogfelds an. Der Wert kann einer der folgenden Sein:
+Gibt das Verhalten des Dialogfelds an. Der Wert kann einer der folgenden sein.
 
 <dt>
 
@@ -88,7 +88,7 @@ Verwendet das Standardverhalten.
 
 </dt> <dd>
 
-Zeigt das Dialogfeld an, obwohl nur ein übereinstimmendes Gerät vorhanden ist.
+Das Dialogfeld wird angezeigt, obwohl es nur ein passendes Gerät gibt.
 
 </dd> </dl> </dd> <dt>
 
@@ -128,16 +128,16 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt und zeigt das **Dialogfeld Gerät** auswählen an, damit der Benutzer ein WIA 2.0-Gerät für die Bilderfassung auswählen kann. Wenn ein Gerät erfolgreich ausgewählt wurde, erstellt die **IWiaDevMgr2::SelectDeviceDlg-Methode** eine hierarchische Struktur von [**IWiaItem2-Objekten**](-wia-iwiaitem2.md) für das Gerät. Er speichert einen Zeiger auf die **IWiaItem2-Schnittstelle** des Stammelements im *Parameter ppItemRoot*.
+Diese Methode erstellt und zeigt das **Dialogfeld** Gerät auswählen an, damit der Benutzer ein WIA 2.0-Gerät für die Bilderfassung auswählen kann. Wenn ein Gerät erfolgreich ausgewählt wurde, erstellt die **IWiaDevMgr2::SelectDeviceDlg-Methode** eine hierarchische Struktur von [**IWiaItem2-Objekten**](-wia-iwiaitem2.md) für das Gerät. Er speichert einen Zeiger auf die **IWiaItem2-Schnittstelle** des Stammelements im *Parameter ppItemRoot*.
 
-Die Anwendung kann die dem Benutzer angezeigten Geräte auf bestimmte Typen beschränken, indem sie die Gerätetypen über den *Parameter lDeviceType* angibt. Wenn nur ein Gerät die Spezifikation erfüllt, zeigt **IWiaDevMgr2::SelectDeviceDlg** das Dialogfeld **Gerät** auswählen nicht an. Stattdessen wird die [**IWiaItem2-Struktur**](-wia-iwiaitem2.md) für das Gerät erstellt und ein Zeiger auf die **IWiaItem2-Schnittstelle** des Stammelements im Parameter *ppItemRoot gespeichert.* Sie können dieses Verhalten überschreiben und **IWiaDevMgr2::SelectDeviceDlg** zwingen, das Dialogfeld anzuzeigen, indem Sie WIA SELECT DEVICE NODEFAULT als Wert für den \_ \_ \_ *lFlags-Parameter* angeben. Wenn mehr als ein WIA 2.0-Gerät mit der Spezifikation übereinstimmt, werden alle übereinstimmenden Geräte im Dialogfeld **Gerät auswählen** angezeigt, damit der Benutzer eines auswählen kann.
+Die Anwendung kann die für den Benutzer angezeigten Geräte auf bestimmte Typen beschränken, indem sie die Gerätetypen über den *Parameter lDeviceType* angibt. Wenn nur ein Gerät die Spezifikation erfüllt, zeigt **IWiaDevMgr2::SelectDeviceDlg** das Dialogfeld **Gerät** auswählen nicht an. Stattdessen wird die [**IWiaItem2-Struktur**](-wia-iwiaitem2.md) für das Gerät erstellt und ein Zeiger auf die **IWiaItem2-Schnittstelle** des Stammelements im Parameter *ppItemRoot gespeichert.* Sie können dieses Verhalten außer Kraft setzen und **IWiaDevMgr2::SelectDeviceDlg** zwingen, das Dialogfeld anzuzeigen, indem Sie WIA SELECT DEVICE NODEFAULT als Wert für den \_ \_ \_ *lFlags-Parameter* angeben. Wenn mehr als ein WIA 2.0-Gerät der Spezifikation entspricht, werden alle übereinstimmenden Geräte im Dialogfeld Gerät auswählen angezeigt, damit der Benutzer eines auswählen kann. 
 
-Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Schnittstellenzeiger aufrufen, die sie über den *ppItemRoot-Parameter* empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode für](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) die Schnittstellenzeigen aufrufen, die sie über den *ppItemRoot-Parameter* erhalten.
 
 > [!Note]  
-> Es wird empfohlen, dass Anwendungen die Geräte- und Bildauswahl über ein Menüelement mit dem Namen **Von Scanner** im Menü **Datei** verfügbar machen.
+> Es wird empfohlen, dass Anwendungen die Geräte- und Bildauswahl über ein Menüelement namens **From scanner** im Menü **Datei verfügbar** machen.
 
  
 
@@ -145,10 +145,10 @@ Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
 | Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 

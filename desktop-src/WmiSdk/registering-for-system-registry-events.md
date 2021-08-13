@@ -1,8 +1,8 @@
 ---
-description: Zum Empfangen von Benachrichtigungen vom System Registrierungs Anbieter muss eine Verwaltungs Anwendung als temporärer Ereignisconsumer registriert werden.
+description: Um Benachrichtigungen vom Systemregistrierungsanbieter zu erhalten, muss sich eine Verwaltungsanwendung als temporärer Ereignisverbraucher registrieren.
 ms.assetid: 4cac5fdd-c842-4d7e-a56e-2e1312df68b4
 ms.tgt_platform: multiple
-title: Registrierung für System Registrierungs Ereignisse
+title: Registrieren für Systemregistrierungsereignisse
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,57 +10,57 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 886046f5ffef366cdba2efb86629019f2ee0b5e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c6f60b21dee729a879aaeab676da67b06ca0a822bcfd6509bc0f406f96fecec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118554245"
 ---
-# <a name="registering-for-system-registry-events"></a>Registrierung für System Registrierungs Ereignisse
+# <a name="registering-for-system-registry-events"></a>Registrieren für Systemregistrierungsereignisse
 
-Zum Empfangen von Benachrichtigungen vom [System Registrierungs](/previous-versions/windows/desktop/regprov/system-registry-provider) Anbieter muss eine Verwaltungs Anwendung als temporärer Ereignisconsumer registriert werden. Die meisten Anforderungen für die Registrierung für den System Registrierungs Anbieter sind identisch mit allen anderen Ereignis Registrierungen, mit dem Unterschied, dass Sie auch das folgende Verfahren ausführen müssen.
+Um Benachrichtigungen vom [Systemregistrierungsanbieter zu](/previous-versions/windows/desktop/regprov/system-registry-provider) erhalten, muss sich eine Verwaltungsanwendung als temporärer Ereignisverbraucher registrieren. Die meisten Anforderungen für die Registrierung für den Systemregistrierungsanbieter sind identisch mit allen anderen Ereignisregistrierungen, mit der Ausnahme, dass Sie auch das folgende Verfahren ausführen müssen.
 
-Der Registrierungs Anbieter stellt Ereignis Klassen für Ereignisse in der Systemregistrierung bereit. Weitere Informationen zur allgemeinen Ereignis Registrierung finden Sie unter [empfangen eines WMI-Ereignisses](receiving-a-wmi-event.md).
+Der Registrierungsanbieter stellt Ereignisklassen für Ereignisse in der Systemregistrierung zur Verfügung. Weitere Informationen zur allgemeinen Ereignisregistrierung finden Sie unter [Empfangen eines WMI-Ereignisses.](receiving-a-wmi-event.md)
 
-Im folgenden Verfahren wird beschrieben, wie Sie sich für System Registrierungs Ereignisse registrieren.
+Im folgenden Verfahren wird beschrieben, wie Sie sich für Systemregistrierungsereignisse registrieren.
 
-**So registrieren Sie sich für System Registrierungs Ereignisse**
+**So registrieren Sie sich für Systemregistrierungsereignisse**
 
-1.  Ruft eine Benachrichtigungs Abfrage Methode auf.
+1.  Rufen Sie eine Benachrichtigungsabfragemethode auf.
 
-    Verwenden Sie entweder in Skript oder C++ eine Benachrichtigungs Abfrage, z. b. [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md) oder [**IWbemServices:: ExecNotificationQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationqueryasync). Erstellen Sie eine Abfrage Zeichenfolge für den *bstrinquery* -Parameter von **IWbemServices:: ExecNotificationQueryAsync** oder die ""- *Abfrage* "im Skript.
+    Verwenden Sie in Skript oder C++ eine Benachrichtigungsabfrage wie [**SWbemServices.ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md) oder [**IWbemServices::ExecNotificationQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationqueryasync). Erstellen Sie eine Abfragezeichenfolge für den *bstrQuery-Parameter* von **IWbemServices::ExecNotificationQueryAsync** oder *strQuery* im Skript.
 
 2.  Bestimmen Sie, welche Art von Ereignis Sie empfangen möchten, und erstellen Sie die Abfrage.
 
-    In der folgenden Tabelle sind die Registrierungs Ereignis Klassen aufgelistet, die Sie verwenden können.
+    In der folgenden Tabelle sind die Registrierungsereignisklassen aufgeführt, die Sie verwenden können.
 
     
 
-    | Ereignisklasse                                                      | Hive-Speicherort        | BESCHREIBUNG                                                 |
+    | Ereignisklasse                                                      | Hive-Speicherort        | Beschreibung                                                 |
     |------------------------------------------------------------------|----------------------|-------------------------------------------------------------|
-    | [**Registryevent**](/previous-versions/windows/desktop/regprov/registryevent)                       | –<br/>       | Abstrakte Basisklasse für Änderungen in der Registrierung.<br/> |
-    | [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent)   | RootPath<br/>  | Überwacht Änderungen an einer Hierarchie von Schlüsseln.<br/>         |
-    | [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent)     | KEYPATH<br/>   | Überwacht Änderungen an einem einzelnen Schlüssel.<br/>                |
+    | [**RegistryEvent**](/previous-versions/windows/desktop/regprov/registryevent)                       | Nicht zutreffend<br/>       | Abstrakte Basisklasse für Änderungen in der Registrierung.<br/> |
+    | [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent)   | Rootpath<br/>  | Überwacht Änderungen an einer Schlüsselhierarchie.<br/>         |
+    | [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent)     | KeyPath<br/>   | Überwacht Änderungen an einem einzelnen Schlüssel.<br/>                |
     | [**RegistryValueChangeEvent**](/previous-versions/windows/desktop/regprov/registryvaluechangeevent) | ValueName<br/> | Überwacht Änderungen an einem einzelnen Wert.<br/>              |
 
     
 
      
 
-    Diese Klassen verfügen über eine Eigenschaft namens **Hive** , die die Hierarchie von Schlüsseln identifiziert, die auf Änderungen überwacht werden sollen, z. b. **HKEY \_ local \_ Machine**.
+    Diese Klassen verfügen über eine Eigenschaft namens **Hive,** die die Hierarchie von Schlüsseln identifiziert, die auf Änderungen überwacht werden sollen, z. B. **HKEY \_ LOCAL \_ MACHINE**.
 
-    Änderungen an den **HKEY \_ - \_ Klassen root** und **HKEY \_ Current \_ User** -Strukturen werden von [**registryevent**](/previous-versions/windows/desktop/regprov/registryevent) oder von ihr abgeleiteten Klassen, z. b. [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent), nicht unterstützt.
+    Änderungen an **den Hives "HKEY \_ CLASSES \_ ROOT"** und **"HKEY \_ CURRENT \_ USER"** werden von [**RegistryEvent**](/previous-versions/windows/desktop/regprov/registryevent) oder von daraus abgeleiteten Klassen wie [**RegistryTreeChangeEvent nicht unterstützt.**](/previous-versions/windows/desktop/regprov/registrytreechangeevent)
 
-3.  Erstellen Sie die WHERE-Klausel für die Ereignis Registrierung.
+3.  Erstellen Sie die WHERE-Klausel für Ihre Ereignisregistrierung.
 
-    Der System Registrierungs Anbieter verfügt über bestimmte Regeln für WHERE-Klauseln. Weitere Informationen finden Sie unter [Erstellen einer richtigen WHERE-Klausel für den Registrierungs Anbieter](creating-a-proper-where-clause-for-the-registry-provider.md). Allgemeine Informationen zum Erstellen einer WHERE-Klausel finden Sie unter [Querying with WQL (Abfragen mit WQL](querying-with-wql.md)).
+    Der Systemregistrierungsanbieter verfügt über bestimmte Regeln für WHERE-Klauseln. Weitere Informationen finden Sie unter [Creating a Proper WHERE Clause for the Registry Provider](creating-a-proper-where-clause-for-the-registry-provider.md). Allgemeinere Informationen zum Erstellen einer WHERE-Klausel finden Sie unter [Abfragen mit WQL.](querying-with-wql.md)
 
 4.  Bestimmen Sie, ob Ihr Consumer Ereignisse empfängt.
 
-    Der System Registrierungs Anbieter garantiert nicht, dass alle gesendeten Ereignisse übermittelt werden. Weitere Informationen finden Sie unter [empfangen von Registrierungs Ereignissen](receiving-registry-events.md).
+    Der Systemregistrierungsanbieter garantiert nicht, dass alle gesendeten Ereignisse übermittelt werden. Weitere Informationen finden Sie unter [Empfangen von Registrierungsereignissen.](receiving-registry-events.md)
 
-Im folgenden VBScript-Codebeispiel wird gezeigt, wie eine Registrierungs Änderung in der HKEY-Software für **\_ lokale \_ Computer** \\  \\ **Microsoft** Hive oder Unterstruktur erkannt wird. Dabei handelt es sich um ein Überwachungs Skript, das zu Demonstrationszwecken in einem Prozess mit dem Namen Wscript.exe ausgeführt wird, bis er im **Task-Manager** beendet, WMI beendet oder das Betriebssystem neu gestartet wird. Das Skript verwendet einen [*semisynchronen*](gloss-s.md) Aufruf von [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md). Weitere Informationen zu semisynchronen aufrufen finden Sie unter [Erstellen eines semisynchronen Aufrufs mit VBScript](making-a-semisynchronous-call-with-vbscript.md).
+Das folgende VBScript-Codebeispiel zeigt, wie Eine Registrierungsänderung in der **HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft-Struktur** oder -Unterstruktur erkannt wird. Dies ist ein Überwachungsskript, das zu Demonstrationszwecken in einem Prozess namens Wscript.exe ausgeführt wird, bis es in **Task-Manager** beendet, WMI beendet oder das Betriebssystem neu gestartet wird. Das Skript verwendet einen [*semisynchronen Aufruf*](gloss-s.md) vonSWbemServices.Exe [**cNotificationQuery.**](swbemservices-execnotificationquery.md) Weitere Informationen zu semisynchronen Aufrufen finden Sie unter Erstellen eines [semisynchronen Aufrufs mit VBScript.](making-a-semisynchronous-call-with-vbscript.md)
 
 
 ```VB
@@ -81,9 +81,9 @@ Wend
 
 
 
-Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie Sie die Änderung der Werte eines Schlüssels überwachen, indem Sie für den Registrierungs Anbieter-Ereignistyp [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent)registrieren. Das Skript ruft eine asynchrone Methode auf, [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md). Weitere Informationen zu asynchronen Aufrufen und zur Sicherheit finden Sie unter [Erstellen eines asynchronen Aufrufs mit VBScript](making-an-asynchronous-call-with-vbscript.md).
+Das folgende VBScript-Codebeispiel zeigt, wie die Änderung der Werte eines Schlüssels durch Registrierung für den Registrierungsanbieterereignistyp [**RegistryKeyChangeEvent überwacht wird.**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) Das Skript ruft eine asynchrone Methode auf,SWbemServices.Exe [**cNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md). Weitere Informationen zu asynchronen Aufrufen und zur Sicherheit finden Sie unter [Making an Asynchronous Call with VBScript](making-an-asynchronous-call-with-vbscript.md).
 
-Das folgende Skript wird unbegrenzt ausgeführt, bis der Computer neu gestartet, WMI beendet oder das Skript beendet wird. Um das Skript manuell anzuhalten, verwenden Sie den Task-Manager, um den Prozess zu unterbinden. Verwenden Sie zum programmgesteuerten beenden die Methode " [**Beenden**](/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process) " in der Win32- \_ Prozess Klasse.
+Das folgende Skript wird unbegrenzt ausgeführt, bis der Computer neu gestartet, WMI beendet oder das Skript beendet wird. Um das Skript manuell zu beenden, verwenden Sie Task-Manager, um den Prozess zu beenden. Verwenden Sie zum programmgesteuerten Beenden die [**Terminate-Methode**](/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process) in der Win32 \_ Process-Klasse.
 
 
 ```VB

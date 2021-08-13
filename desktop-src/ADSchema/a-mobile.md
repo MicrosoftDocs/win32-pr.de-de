@@ -1,11 +1,11 @@
 ---
-title: Phone-Mobile-Primary-Attribut
+title: Telefon-Mobile-Primary-Attribut
 description: Die primäre Mobiltelefonnummer.
 ms.assetid: c35fbaf1-e3f2-45df-98bd-e47ed79373ee
 ms.tgt_platform: multiple
 keywords:
-- "\"Phone-Mobile-Primary Attribute ad Schema\""
-- AD-Schema für Mobile Attribute
+- Telefon-Mobile-Primary-Attribut AD-Schema
+- mobile attribute AD Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d44a6ad48ffa8a592238eca1b0aa1d8cbc873f8f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 65002852c265c53f35abd5ff42a2fb2a74d8c0eade4c96bfc72720cdf30ba2d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118687494"
 ---
-# <a name="phone-mobile-primary-attribute"></a>Phone-Mobile-Primary-Attribut
+# <a name="phone-mobile-primary-attribute"></a>Telefon-Mobile-Primary-Attribut
 
 Die primäre Mobiltelefonnummer.
 
@@ -29,13 +29,13 @@ Die primäre Mobiltelefonnummer.
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | Phone-Mobile-Primary                                                             |
-| LDAP-Display-Name | mobile                                                                           |
+| CN                | Telefon-Mobile-Primary                                                             |
+| Ldap-Anzeigename | mobile                                                                           |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                           |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt und die Telefonnummer geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer sich die Telefonnummer ändern muss. |
 | Attribute-Id      | 0.9.2342.19200300.100.1.41                                                       |
-| System-ID-GUID    | f0f8ffa3-1191-11d0-a060-00aa006c33ed                                             |
+| System-Id-Guid    | f0f8ffa3-1191-11d0-a060-00aa006c33ed                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -43,7 +43,7 @@ Die primäre Mobiltelefonnummer.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Die primäre Mobiltelefonnummer.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1c                                                             |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| MAPI-Id                | 0x3A1C                                                             |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,19 +70,19 @@ Die primäre Mobiltelefonnummer.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a1c                                                                                                                                                   |
-| System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
-| Ist indiziert             | False                                                                                                                                                    |
-| Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| MAPI-Id                | 0x3A1C                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist indiziert             | Falsch                                                                                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -98,12 +98,12 @@ Die primäre Mobiltelefonnummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a1c                                                                                                                                                   |
-| System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
-| Ist indiziert             | False                                                                                                                                                    |
-| Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| MAPI-Id                | 0x3A1C                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist indiziert             | Falsch                                                                                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -119,12 +119,12 @@ Die primäre Mobiltelefonnummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a1c                                                                                                                                                   |
-| System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
-| Ist indiziert             | False                                                                                                                                                    |
-| Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| MAPI-Id                | 0x3A1C                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist indiziert             | Falsch                                                                                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -140,12 +140,12 @@ Die primäre Mobiltelefonnummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a1c                                                                                                                                                   |
-| System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
-| Ist indiziert             | False                                                                                                                                                    |
-| Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| MAPI-Id                | 0x3A1C                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist indiziert             | Falsch                                                                                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -161,12 +161,12 @@ Die primäre Mobiltelefonnummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a1c                                                                                                                                                   |
-| System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
-| Ist indiziert             | False                                                                                                                                                    |
-| Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| MAPI-Id                | 0x3A1C                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist indiziert             | Falsch                                                                                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |

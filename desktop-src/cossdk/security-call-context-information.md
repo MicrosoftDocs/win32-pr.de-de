@@ -1,25 +1,25 @@
 ---
-description: Informationen zum Sicherheits Aufrufkontext
+description: Kontextinformationen zu Sicherheitsaufrufen
 ms.assetid: 8b170c17-f095-4c25-9ee2-480681b7e5f6
-title: Informationen zum Sicherheits Aufrufkontext
+title: Kontextinformationen zu Sicherheitsaufrufen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 213e21d684d004ed18e5b9aa536e03ae8292307e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e0aed07f79fdba16f0ea6139a58cc50871d795e1eacbf94737b04dbf5f1fe900
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118546867"
 ---
-# <a name="security-call-context-information"></a>Informationen zum Sicherheits Aufrufkontext
+# <a name="security-call-context-information"></a>Kontextinformationen zu Sicherheitsaufrufen
 
-Die rollenbasierte Sicherheit basiert auf einem allgemeinen Mechanismus, mit dem Sie Sicherheitsinformationen zu allen upstreamaufrufern in der Kette von Aufrufen Ihrer Komponente abrufen können. Diese Informationen sind nur verfügbar, wenn die Rollen Überprüfung auf Komponentenebene aktiviert ist. Ausführliche Informationen zum Festlegen der Sicherheit auf Komponentenebene finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffs Überprüfungen](setting-a-security-level-for-access-checks.md).
+Die rollenbasierte Sicherheit basiert auf einem allgemeinen Mechanismus, mit dem Sie Sicherheitsinformationen zu allen Upstreamaufrufern in der Kette der Aufrufe an Ihre Komponente abrufen können. Diese Informationen sind nur verfügbar, wenn die Rollenüberprüfung auf Komponentenebene aktiviert ist. Weitere Informationen zum Festlegen der Sicherheit auf Komponentenebene finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffsüberprüfungen.](setting-a-security-level-for-access-checks.md)
 
-Sie können die [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext) -Schnittstelle verwenden, um Programm gesteuert auf Kontextinformationen für den Sicherheits Aufruf zuzugreifen. Eine Beschreibung finden Sie Unterprogramm gesteuerte [Komponentensicherheit](programmatic-component-security.md).
+Sie können die [**ISecurityCallContext-Schnittstelle**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext) verwenden, um programmgesteuert auf Kontextinformationen für Sicherheitsaufrufe zuzugreifen. Eine Beschreibung finden Sie unter [Programmgesteuerte Komponentensicherheit.](programmatic-component-security.md)
 
-Der Kontext für den Sicherheits Aufruf wird bei jedem Überschreiten einer Sicherheitsgrenze weitergegeben. Bei Aufrufen zwischen Komponenten innerhalb einer Anwendung, die sich innerhalb derselben Sicherheitsgrenze befinden, werden keine Aufruf Kontextinformationen übermittelt. Bei Aufrufen zwischen Prozessen oder Anwendungen innerhalb eines Prozesses rufen Sie Kontextinformationen auf.
+Der Sicherheitsaufrufkontext wird jedes Mal übergeben, wenn eine Sicherheitsgrenze überschritten wird. Für Aufrufe zwischen Komponenten innerhalb einer Anwendung, die sich innerhalb derselben Sicherheitsgrenze befinden, werden keine Aufrufkontextinformationen übergeben. Für Aufrufe zwischen Prozessen oder zwischen Anwendungen innerhalb eines Prozesses fließen Aufrufkontextinformationen weiter.
 
-Diese Funktion ist besonders nützlich, wenn Sie eine ausführliche Überwachung und Protokollierung durchführen möchten. Sie können Sicherheitsinformationen für jeden Upstreamaufrufer abrufen und aufzeichnen.
+Diese Einrichtung ist besonders nützlich, wenn Sie eine detaillierte Überwachung und Protokollierung verwenden möchten. Sie können Sicherheitsinformationen für jeden Upstreamaufrufer abrufen und aufzeichnen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -31,10 +31,10 @@ Diese Funktion ist besonders nützlich, wenn Sie eine ausführliche Überwachung
 [Sicherheitsgrenzen](security-boundaries.md)
 </dt> <dt>
 
-[Sicherheitskontext Eigenschaft](security-context-property.md)
+[Sicherheitskontexteigenschaft](security-context-property.md)
 </dt> <dt>
 
-[Verwenden von Rollen für die Client Autorisierung](using-roles-for-client-authorization.md)
+[Verwenden von Rollen für die Clientautorisierung](using-roles-for-client-authorization.md)
 </dt> </dl>
 
  

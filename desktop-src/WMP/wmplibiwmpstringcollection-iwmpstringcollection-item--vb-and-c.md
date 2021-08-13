@@ -1,11 +1,11 @@
 ---
-title: Iwmpstringcollection-Element Methode
+title: IWMPStringCollection Item-Methode
 description: Die Item-Methode gibt die Zeichenfolge am angegebenen Index zurück.
 ms.assetid: 77546cb2-eda5-4bb8-97b9-55270461815f
 keywords:
-- Element-Methoden Fenster Media Player
-- Element-Methode, Windows Media Player, iwmpstringcollection-Schnittstelle
-- Iwmpstringcollection-Schnittstelle, Windows Media Player, Element-Methode
+- Elementmethoden-Windows Media Player
+- Item-Methode Windows Media Player , IWMPStringCollection-Schnittstelle
+- IWMPStringCollection-Schnittstelle Windows Media Player , Item-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f69bdc63448699a595238b9907f4b1253209ad06
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 47928502dce9ed4deb12461763a499de5d962aa1303b4c9cc5eacb02c7619da5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568426"
 ---
-# <a name="iwmpstringcollectionitem-method"></a>Iwmpstringcollection:: Item-Methode
+# <a name="iwmpstringcollectionitem-method"></a>IWMPStringCollection::Item-Methode
 
-Die **Item** -Methode gibt die Zeichenfolge am angegebenen Index zurück.
+Die **Item-Methode** gibt die Zeichenfolge am angegebenen Index zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ Implements IWMPStringCollection.Item
 
 <dl> <dt>
 
-*Lindex* \[ in\]
+*lIndex* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der Index ist.
+Eine **System.Int32,die** der Index ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **System. String** , bei der es sich um die Zeichenfolge am angegebenen Index handelt.
+Eine **System.String,** die die Zeichenfolge am angegebenen Index ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **iwmpstringcollection** -Schnittstelle wird verwendet, um den Satz von Werten abzurufen, die für ein Attribut verfügbar sind. Beispielsweise kann die **iwmpmediacollection. getAttributeStringCollection** -Methode zum Abrufen einer **iwmpstringcollection** -Schnittstelle verwendet werden, die alle Werte für das Genre-Attribut innerhalb des audiomedientyps darstellt. Die **Item** -Methode kann dann zum Durchlaufen aller möglichen Werte für das Genre-Attribut verwendet werden.
+Die **IWMPStringCollection-Schnittstelle** wird verwendet, um den Satz von Werten abzurufen, die für ein Attribut verfügbar sind. Beispielsweise kann die **IWMPMediaCollection.getAttributeStringCollection-Methode** verwendet werden, um eine **IWMPStringCollection-Schnittstelle** abzurufen, die alle Werte für das Genre-Attribut im Audiomedientyp darstellt. Die **Item-Methode** kann dann verwendet werden, um alle möglichen Werte für das Genre-Attribut zu durchlaufen.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,26 +76,26 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iwmpmediacollection. getAttributeStringCollection (VB und c#)**](wmplibiwmpmediacollection-iwmpmediacollection-getattributestringcollection--vb-and-c.md)
+[**IWMPMediaCollection.getAttributeStringCollection (VB und C#)**](wmplibiwmpmediacollection-iwmpmediacollection-getattributestringcollection--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpstringcollection-Schnittstelle (VB und c#)**](iwmpstringcollection--vb-and-c.md)
+[**IWMPStringCollection-Schnittstelle (VB und C#)**](iwmpstringcollection--vb-and-c.md)
 </dt> </dl>
 
  

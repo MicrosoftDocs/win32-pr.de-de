@@ -1,9 +1,9 @@
 ---
-title: String. Content-Eigenschaft
-description: Stellt den Inhalt einer Zeichen folgen Ressource dar.
+title: String.Content-Eigenschaft
+description: Stellt den Inhalt einer Zeichenfolgenressource dar.
 ms.assetid: 86f34cdc-1311-4f52-979f-201d71bbb9e9
 keywords:
-- String. Content-Eigenschaften Fenster (Menüband)
+- String.Content-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8912264e4f55568c190212227d2e305f9d676a1a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 526062956c6ab7498caac8712ba932d6e7ac1f2dd6307359183d2529e35fc8a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439505"
 ---
-# <a name="stringcontent-property"></a>String. Content-Eigenschaft
+# <a name="stringcontent-property"></a>String.Content-Eigenschaft
 
-Stellt den Inhalt einer Zeichen folgen Ressource dar.
+Stellt den Inhalt einer Zeichenfolgenressource dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -43,23 +43,23 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                   |
 |-----------------------------------------------------------|
-| [**Schnür**](windowsribbon-element-string.md)<br/> |
+| [**Schnur**](windowsribbon-element-string.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**Zeichen**](windowsribbon-element-string.md) folgen Element auftreten.
+Kann höchstens einmal für jedes [**String-Element**](windowsribbon-element-string.md) auftreten.
 
-Dieses Element enthält einen Wert vom Typ *xs: String*. Der Wert wird auf eine Zeichenfolge beschränkt, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.
+Dieses Element enthält einen Wert vom Typ *xs:string*. Der Wert ist auf eine Zeichenfolge beschränkt, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.
 
-Die maximale Länge ist unbegrenzt.
+Die maximale Länge ist ungebunden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Markup für ein [**Command. labeltitle**](windowsribbon-element-command-labeltitle.md) -Element mit einer **String. Content** -Deklaration veranschaulicht.
+Im folgenden Beispiel wird das Markup für ein [**Command.LabelTitle-Element**](windowsribbon-element-command-labeltitle.md) mit einer **String.Content-Deklaration** veranschaulicht.
 
 
 ```XML
@@ -80,8 +80,8 @@ Im folgenden Beispiel wird das Markup für ein [**Command. labeltitle**](windows
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

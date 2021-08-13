@@ -1,10 +1,10 @@
 ---
 title: Address-Book-Roots2-Attribut
-description: Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuch Containern, die im MAPI-Adressbuch angezeigt werden. Dieses Attribut für das Exchange-Konfigurationsobjekt listet die Stämme der Adressbuch Container-Strukturen auf. | Address-Book-Roots2-Attribut
+description: Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so, dass sie im MAPI-Adressbuch angezeigt werden. Dieses Attribut im Exchange Config-Objekt listet die Stämme der Containerstrukturen des Adressbuchs auf. | Address-Book-Roots2-Attribut
 ms.assetid: 1ca41a60-b8ba-4489-9238-b469811d68ac
 ms.tgt_platform: multiple
 keywords:
-- Address-Book-Roots2-Attribut AD-Schema
+- AD-Schema des Address-Book-Roots2-Attributs
 - addressBookRoots2-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d3283a0551ac423f836381483d30cb6bd74d946e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 73b2cea979ee8a7c60d1a29a612d60da1acce972cf07bae277219d4a81a0d954
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118688943"
 ---
 # <a name="address-book-roots2-attribute"></a>Address-Book-Roots2-Attribut
 
-Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuch Containern, die im MAPI-Adressbuch angezeigt werden. Dieses Attribut für das Exchange-Konfigurationsobjekt listet die Stämme der Adressbuch Container-Strukturen auf.
+Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so, dass sie im MAPI-Adressbuch angezeigt werden. Dieses Attribut im Exchange Config-Objekt listet die Stämme der Containerstrukturen des Adressbuchs auf.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Address-Book-Roots2                     |
-| LDAP-Display-Name | addressBookRoots2                       |
+| Ldap-Anzeigename | addressBookRoots2                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2046                 |
-| System-ID-GUID    | 508ca374-A511-4e4e-9F 4f -856b7a6b7e4    |
+| System-Id-Guid    | 508ca374-a511-4e4e-9f4f-856f61a6b7e4    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -54,11 +54,11 @@ Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuch Con
 |------------------------|--------------------------------------------------------------------------------------|
 | Link-ID                | 2122                                                                                 |
 | MAPI-Id                | \-                                                                                   |
-| System-Only            | False                                                                                |
-| Ist-einwertig       | False                                                                                |
-| Ist indiziert             | False                                                                                |
-| Im globalen Katalog      | False                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                         |
+| System-Only            | Falsch                                                                                |
+| Is-Single-Valued       | Falsch                                                                                |
+| Ist indiziert             | Falsch                                                                                |
+| Im globalen Katalog      | Falsch                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
 | Range-Lower            | \-                                                                                   |
 | Range-Upper            | \-                                                                                   |
 | Search-Flags           | 0x00000000                                                                           |
@@ -75,11 +75,11 @@ Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuch Con
 |------------------------|--------------------------------------------------------------------------------------|
 | Link-ID                | 2122                                                                                 |
 | MAPI-Id                | \-                                                                                   |
-| System-Only            | False                                                                                |
-| Ist-einwertig       | False                                                                                |
-| Ist indiziert             | False                                                                                |
-| Im globalen Katalog      | False                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                         |
+| System-Only            | Falsch                                                                                |
+| Is-Single-Valued       | Falsch                                                                                |
+| Ist indiziert             | Falsch                                                                                |
+| Im globalen Katalog      | Falsch                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
 | Range-Lower            | \-                                                                                   |
 | Range-Upper            | \-                                                                                   |
 | Search-Flags           | 0x00000000                                                                           |
@@ -96,11 +96,11 @@ Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuch Con
 |------------------------|--------------------------------------------------------------------------------------|
 | Link-ID                | 2122                                                                                 |
 | MAPI-Id                | \-                                                                                   |
-| System-Only            | False                                                                                |
-| Ist-einwertig       | False                                                                                |
-| Ist indiziert             | False                                                                                |
-| Im globalen Katalog      | False                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                         |
+| System-Only            | Falsch                                                                                |
+| Is-Single-Valued       | Falsch                                                                                |
+| Ist indiziert             | Falsch                                                                                |
+| Im globalen Katalog      | Falsch                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
 | Range-Lower            | \-                                                                                   |
 | Range-Upper            | \-                                                                                   |
 | Search-Flags           | 0x00000000                                                                           |

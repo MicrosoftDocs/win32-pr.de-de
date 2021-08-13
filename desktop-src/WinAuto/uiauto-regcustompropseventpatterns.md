@@ -1,71 +1,71 @@
 ---
-title: Registrieren von benutzerdefinierten Eigenschaften, Ereignissen und Steuerelement Mustern
-description: Bevor eine benutzerdefinierte Eigenschaft, ein Ereignis oder ein Steuerelement Muster verwendet werden kann, müssen sowohl der Anbieter als auch der Client die Eigenschaft, das Ereignis oder das Steuerelement Muster zur Laufzeit registrieren.
+title: Registrieren von benutzerdefinierten Eigenschaften, Ereignissen und Steuerelementmustern
+description: Bevor eine benutzerdefinierte Eigenschaft, ein Ereignis oder ein Steuerelementmuster verwendet werden kann, müssen sowohl der Anbieter als auch der Client die Eigenschaft, das Ereignis oder das Steuerelementmuster zur Laufzeit registrieren.
 ms.assetid: ae36e404-8432-46ed-930e-b86dd5a88d6d
 keywords:
-- Benutzeroberflächen Automatisierung, benutzerdefinierte Eigenschaften
-- UI-Automatisierung, Übersicht über Ereignisse
-- UI-Automatisierung, Übersicht über Steuerelement Muster
-- Benutzeroberflächen Automatisierung, registrieren benutzerdefinierter Eigenschaften
-- Benutzeroberflächen Automatisierung, Registrieren von Ereignissen
-- Benutzeroberflächen Automatisierung, Registrieren von Steuerelement Mustern
-- benutzerdefinierte Eigenschaften, registrieren
-- Ereignisse, registrieren
-- Steuerelement Muster, registrieren
-- registrieren, benutzerdefinierte Eigenschaften
-- registrieren, Ereignisse
-- registrieren, Steuerelement Muster
-- Steuerelement Muster, Benutzer definiert
-- Steuerelement Muster, Implementieren von benutzerdefinierten
-- Implementieren von benutzerdefinierten Steuerelement Mustern
-- benutzerdefinierte Steuerelement Muster
-- Client-Wrapper
-- Muster Handler
-- Implementieren von Muster Handlern
+- Benutzeroberflächenautomatisierung, benutzerdefinierte Eigenschaften
+- übersicht über Benutzeroberflächenautomatisierung,Ereignisse
+- Übersicht über Benutzeroberflächenautomatisierung,Steuerelementmuster
+- Benutzeroberflächenautomatisierung,Registrieren benutzerdefinierter Eigenschaften
+- Benutzeroberflächenautomatisierung,Registrieren von Ereignissen
+- Benutzeroberflächenautomatisierung,Registrieren von Steuerelementmustern
+- Benutzerdefinierte Eigenschaften,Registrieren
+- Ereignisse,Registrieren
+- Steuerelementmuster,Registrieren
+- Registrieren, benutzerdefinierte Eigenschaften
+- registering,events
+- Registrieren, Steuern von Mustern
+- Steuerelementmuster, benutzerdefiniert
+- Steuerelementmuster,Implementieren von benutzerdefinierten
+- Implementieren von benutzerdefinierten Steuerelementmustern
+- Benutzerdefinierte Steuerelementmuster
+- Clientwrapper
+- Musterhandler
+- Implementieren von Musterhandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b6b157e8f08a2c0be74af6b9f53d3578d1e4d03
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7205d088f76f235b3078d5a053202f3d39b609389ef6adbc5dbdbca18d9b652b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118564055"
 ---
-# <a name="register-custom-properties-events-and-control-patterns"></a>Registrieren von benutzerdefinierten Eigenschaften, Ereignissen und Steuerelement Mustern
+# <a name="register-custom-properties-events-and-control-patterns"></a>Registrieren von benutzerdefinierten Eigenschaften, Ereignissen und Steuerelementmustern
 
-Bevor eine benutzerdefinierte Eigenschaft, ein Ereignis oder ein Steuerelement Muster verwendet werden kann, müssen sowohl der Anbieter als auch der Client die Eigenschaft, das Ereignis oder das Steuerelement Muster zur Laufzeit registrieren. Die Registrierung wird global innerhalb eines Anwendungsprozesses wirksam und bleibt wirksam, bis der Prozess beendet oder das letzte Microsoft UI Automation-Element Objekt ([**iuiautomation**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) oder [**IRawElementProviderSimple**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple)) innerhalb des Prozesses freigegeben wird.
+Bevor eine benutzerdefinierte Eigenschaft, ein Ereignis oder ein Steuerelementmuster verwendet werden kann, müssen sowohl der Anbieter als auch der Client die Eigenschaft, das Ereignis oder das Steuerelementmuster zur Laufzeit registrieren. Die Registrierung ist global innerhalb eines Anwendungsprozesses wirksam und bleibt wirksam, bis der Prozess geschlossen oder das letzte Microsoft Benutzeroberflächenautomatisierung-Elementobjekt ([**IUIAutomation**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) oder [**IRawElementProviderSimple**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple)) innerhalb des Prozesses freigegeben wird.
 
-Die Registrierung umfasst die Übergabe einer GUID an die Benutzeroberflächen Automatisierung sowie ausführliche Informationen über die benutzerdefinierte Eigenschaft, das Ereignis oder das Steuerelement Muster. Der Versuch, dieselbe GUID ein zweites Mal mit denselben Informationen zu registrieren, ist erfolgreich, aber der Versuch, dieselbe GUID ein zweites Mal zu registrieren, aber mit unterschiedlichen Informationen (z. b. eine benutzerdefinierte Eigenschaft eines anderen Typs) schlägt fehl. Wenn die benutzerdefinierte Spezifikation in Zukunft akzeptiert und in den Benutzeroberflächenautomatisierungs-Kern integriert wird, werden die benutzerdefinierten Registrierungsinformationen von der Benutzeroberflächen Automatisierung überprüft und der bereits registrierte Code anstelle der "offiziellen" Frameworkimplementierung verwendet, wodurch Anwendungs Kompatibilitätsprobleme minimiert werden. Eigenschaften, Ereignisse oder Steuerelement Muster, die bereits registriert sind, können nicht entfernt werden.
+Die Neugistation umfasst die Übergabe einer GUID an Benutzeroberflächenautomatisierung sowie ausführliche Informationen über die benutzerdefinierte Eigenschaft, das Ereignis oder das Steuerelementmuster. Der Versuch, die gleiche GUID ein zweites Mal mit denselben Informationen zu registrieren, ist erfolgreich, aber der Versuch, die gleiche GUID ein zweites Mal zu registrieren, aber mit anderen Informationen (z. B. einer benutzerdefinierten Eigenschaft eines anderen Typs), schlägt fehl. Wenn die benutzerdefinierte Spezifikation akzeptiert und in den Benutzeroberflächenautomatisierung Core integriert wird, werden Benutzeroberflächenautomatisierung in Zukunft die benutzerdefinierten Registrierungsinformationen überprüfen und den bereits registrierten Code anstelle der "offiziellen" Frameworkimplementierung verwenden, wodurch Anwendungskompatibilitätsprobleme minimiert werden. Eigenschaften, Ereignisse oder Steuerelementmuster, die bereits registriert sind, können nicht entfernt werden.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Registrieren von benutzerdefinierten Eigenschaften und Ereignissen](#registering-custom-properties-and-events)
--   [Implementieren von benutzerdefinierten Steuerelement Mustern](#implementing-custom-control-patterns)
-    -   [Der Client-Wrapper und der Muster Handler](#the-client-wrapper-and-the-pattern-handler)
-    -   [Implementieren des Client Wrappers](#implementing-the-client-wrapper)
-    -   [Implementieren des Muster Handlers](#implementing-the-pattern-handler)
-    -   [Registrieren eines benutzerdefinierten Steuerelement Musters](#registering-a-custom-control-pattern)
-    -   [Beispiel Implementierung eines benutzerdefinierten Steuerelement Musters](#example-implementation-of-a-custom-control-pattern)
+-   [Implementieren von benutzerdefinierten Steuerelementmustern](#implementing-custom-control-patterns)
+    -   [Der Clientwrapper und der Musterhandler](#the-client-wrapper-and-the-pattern-handler)
+    -   [Implementieren des Clientwrappers](#implementing-the-client-wrapper)
+    -   [Implementieren des Musterhandlers](#implementing-the-pattern-handler)
+    -   [Registrieren eines benutzerdefinierten Steuerelementmusters](#registering-a-custom-control-pattern)
+    -   [Beispielimplementierungen eines benutzerdefinierten Steuerelementmusters](#example-implementation-of-a-custom-control-pattern)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="registering-custom-properties-and-events"></a>Registrieren von benutzerdefinierten Eigenschaften und Ereignissen
 
-Wenn Sie eine benutzerdefinierte Eigenschaft oder ein Ereignis registrieren, können der Anbieter und der Client eine ID für die Eigenschaft oder das Ereignis abrufen, die dann an verschiedene API-Methoden weitergegeben werden kann, die IDs als Parameter annehmen.
+Durch das Registrieren einer benutzerdefinierten Eigenschaft oder eines benutzerdefinierten Ereignisses können Anbieter und Client eine ID für die Eigenschaft oder das Ereignis abrufen, die dann an verschiedene API-Methoden übergeben werden kann, die IDs als Parameter verwenden.
 
 So registrieren Sie eine Eigenschaft oder ein Ereignis:
 
-1.  Definieren Sie eine GUID für die benutzerdefinierte Eigenschaft oder das Ereignis.
-2.  Füllen Sie eine [**uiautomationpropertyinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpropertyinfo) -oder [**uiautomationeventinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationeventinfo) -Struktur mit Informationen über die Eigenschaft oder das Ereignis aus, einschließlich der GUID und einer nicht lokalisierbaren Zeichenfolge, die den Namen der benutzerdefinierten Eigenschaft oder des Ereignisses enthält. Benutzerdefinierte Eigenschaften erfordern außerdem, dass der Datentyp der Eigenschaft angegeben wird, z. b. ob die Eigenschaft eine ganze Zahl oder eine Zeichenfolge enthält. Der Datentyp muss einer der folgenden Typen sein, die durch die [**uiautomationtype**](/windows/desktop/api/UIAutomationCore/ne-uiautomationcore-uiautomationtype) -Enumeration angegeben werden. Für benutzerdefinierte Eigenschaften werden keine anderen Datentypen unterstützt.
-    -   **Uiautomationtype \_ bool**
-    -   **Uiautomationtype \_ Double**
-    -   **Uiautomationtype- \_ Element**
-    -   **Uiautomationtype \_ int**
-    -   **Uiautomationtype- \_ Punkt**
-    -   **Uiautomationtype- \_ Zeichenfolge**
-3.  Verwenden Sie die [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion, um eine Instanz des [**cuiautomationregistrar**](/previous-versions/windows/desktop/legacy/ff384837(v=vs.85)) -Objekts zu erstellen und einen Zeiger auf die [**iuiautomationregistrar**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationregistrar) -Schnittstelle des Objekts abzurufen.
-4.  Aufrufen der [**iuiautomationregistrar:: registerproperty**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerproperty) -Methode oder der [**registerevent**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerevent) -Methode und übergeben der Adresse der [**uiautomationpropertyinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpropertyinfo) -Struktur oder der [**uiautomationeventinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationeventinfo) -Struktur.
+1.  Definieren Sie eine GUID für die benutzerdefinierte Eigenschaft oder das ereignis.
+2.  Füllen Sie eine [**UIAutomationPropertyInfo-**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpropertyinfo) oder [**UIAutomationEventInfo-Struktur**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationeventinfo) mit Informationen über die Eigenschaft oder das Ereignis aus, einschließlich der GUID und einer nichtlokalisierbaren Zeichenfolge, die den Namen der benutzerdefinierten Eigenschaft oder des ereignisses enthält. Benutzerdefinierte Eigenschaften erfordern auch, dass der Datentyp der Eigenschaft angegeben wird, z. B. ob die Eigenschaft eine ganze Zahl oder eine Zeichenfolge enthält. Der Datentyp muss einer der folgenden Typen sein, der von der [**UIAutomationType-Enumeration**](/windows/desktop/api/UIAutomationCore/ne-uiautomationcore-uiautomationtype) angegeben wird. Für benutzerdefinierte Eigenschaften werden keine anderen Datentypen unterstützt.
+    -   **UIAutomationType \_ Bool**
+    -   **UIAutomationType \_ Double**
+    -   **\_UIAutomationType-Element**
+    -   **UIAutomationType \_ Int**
+    -   **\_UIAutomationType-Punkt**
+    -   **\_UIAutomationType-Zeichenfolge**
+3.  Verwenden Sie die [**CoCreateInstance-Funktion,**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) um eine Instanz des [**CUIAutomationRegistrar-Objekts**](/previous-versions/windows/desktop/legacy/ff384837(v=vs.85)) zu erstellen und einen Zeiger auf die [**IUIAutomationRegistrar-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationregistrar) des Objekts abzurufen.
+4.  Rufen Sie die [**IUIAutomationRegistrar::RegisterProperty-**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerproperty) oder [**RegisterEvent-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerevent) auf, und übergeben Sie die Adresse der [**UIAutomationPropertyInfo-Struktur**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpropertyinfo) oder der [**UIAutomationEventInfo-Struktur.**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationeventinfo)
 
-Die [**iuiautomationregistrar:: registerproperty**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerproperty) -Methode oder die [**registerevent**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerevent) -Methode gibt eine eigen schafts-ID oder Ereignis-ID zurück, die von einer Anwendung an eine beliebige Benutzeroberflächenautomatisierungs-Methode übergeben werden kann. Beispielsweise können Sie eine registrierte eigen schafts-ID an die [**iuiautomationelement:: GetCurrentPropertyValue**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue) -Methode oder an die [**iuiautomation:: deatepropertycondition**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-createpropertycondition) -Methode übergeben.
+Die [**IUIAutomationRegistrar::RegisterProperty-**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerproperty) oder [**RegisterEvent-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerevent) gibt eine Eigenschaften-ID oder Ereignis-ID zurück, die eine Anwendung an jede Benutzeroberflächenautomatisierung Methode übergeben kann, die einen solchen Bezeichner als Parameter annimmt. Beispielsweise können Sie eine registrierte Eigenschaften-ID an die [**IUIAutomationElement::GetCurrentPropertyValue-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue) oder an die [**IUIAutomation::CreatePropertyCondition-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-createpropertycondition) übergeben.
 
 Im folgenden Beispiel wird veranschaulicht, wie eine benutzerdefinierte Eigenschaft registriert wird.
 
@@ -106,45 +106,45 @@ HRESULT RegisterProperty()
 
 
 
-Die von den Methoden [**iuiautomationregistrar:: registerproperty**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerproperty) und [**registerevent**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerevent) abgerufenen Eigenschaften-und Ereignis Bezeichner sind nur im Kontext der Anwendung gültig, von der Sie abgerufen werden, und nur für die Dauer der Anwendungs Lebensdauer. Die Registrierungsmethoden können andere ganzzahlige Werte für dieselbe GUID zurückgeben, wenn Sie über verschiedene Lauf Zeit Instanzen derselben Anwendung aufgerufen werden.
+Die Eigenschaften- und Ereignisbezeichner, die von den Methoden [**IUIAutomationRegistrar::RegisterProperty**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerproperty) und [**RegisterEvent**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerevent) abgerufen werden, sind nur im Kontext der Anwendung gültig, die sie abruft, und nur für die Dauer der Lebensdauer der Anwendung. Die Registrierungsmethoden können verschiedene ganzzahlige Werte für dieselbe GUID zurückgeben, wenn sie über verschiedene Laufzeitinstanzen derselben Anwendung aufgerufen wird.
 
-Es gibt keine Methode, die die Registrierung einer benutzerdefinierten Eigenschaft oder eines Ereignisses abhebt. Stattdessen wird die Registrierung implizit aufgehoben, wenn das letzte Benutzeroberflächenautomatisierungs-Objekt freigegeben wird.
+Es gibt keine Methode, die die Registrierung einer benutzerdefinierten Eigenschaft oder eines benutzerdefinierten Ereignisses auflädt. Stattdessen wird die Registrierung implizit aufgehoben, wenn das letzte Benutzeroberflächenautomatisierung-Objekt freigegeben wird.
 
 > [!IMPORTANT]
-> Wenn es sich bei dem Code um einen MSAA-Client (Microsoft Active Accessibility) handelt, müssen Sie die [**NotifyWinEvent**](/windows/desktop/api/Winuser/nf-winuser-notifywinevent) -Funktion aufzurufen, wenn Sie den Wert einer benutzerdefinierten Eigenschaft ändern.
+> Wenn ihr Code ein MSAA-Client (Microsoft Active Accessibility) ist, müssen Sie die [**NotifyWinEvent-Funktion**](/windows/desktop/api/Winuser/nf-winuser-notifywinevent) aufrufen, wenn Sie den Wert einer benutzerdefinierten Eigenschaft ändern.
 
- 
+ 
 
-## <a name="implementing-custom-control-patterns"></a>Implementieren von benutzerdefinierten Steuerelement Mustern
+## <a name="implementing-custom-control-patterns"></a>Implementieren von benutzerdefinierten Steuerelementmustern
 
-Ein benutzerdefiniertes Steuerelement Muster ist nicht in der Benutzeroberflächenautomatisierungs-API enthalten, wird jedoch von einem Drittanbieter zur Laufzeit bereitgestellt. Entwickler von Client-und Anbieter Anwendungen müssen zusammenarbeiten, um ein benutzerdefiniertes Steuerelement Muster zu definieren, einschließlich der Methoden, Eigenschaften und Ereignisse, die vom Steuerelement Muster unterstützt werden. Nachdem Sie das-Steuerelement Muster definiert haben, müssen sowohl der Client als auch der Anbieter unterstützende Component Object Model (com)-Objekte zusammen mit Code implementieren, um das Steuerelement Muster zur Laufzeit zu registrieren. Ein benutzerdefiniertes Steuerelement Muster erfordert die Implementierung von zwei COM-Objekten: einen Client-Wrapper und einen Muster Handler.
+Ein benutzerdefiniertes Steuerelementmuster ist nicht in der Benutzeroberflächenautomatisierung-API enthalten, wird jedoch von einem Drittanbieter zur Laufzeit bereitgestellt. Entwickler von Client- und Anbieteranwendungen müssen zusammenarbeiten, um ein benutzerdefiniertes Steuerelementmuster zu definieren, einschließlich der Methoden, Eigenschaften und Ereignisse, die das Steuerelementmuster unterstützt. Nach dem Definieren des Steuerelementmusters müssen sowohl der Client als auch der Anbieter unterstützende Component Object Model -Objekte (COM) zusammen mit Code implementieren, um das Steuerelementmuster zur Laufzeit zu registrieren. Ein benutzerdefiniertes Steuerelementmuster erfordert die Implementierung von zwei COM-Objekten: einem Clientwrapper und einem Musterhandler.
 
 > [!Note]  
-> In den Beispielen in den folgenden Themen wird veranschaulicht, wie Sie ein benutzerdefiniertes Steuerelement Muster implementieren, das die Funktionalität des vorhandenen [value](uiauto-implementingvalue.md) -Steuerelement Musters dupliziert. Diese Beispiele sind nur für Lehrzwecke vorgesehen. Ein tatsächliches benutzerdefiniertes Steuerelement Muster sollte Funktionen bereitstellen, die nicht über die standardmäßigen Benutzeroberflächenautomatisierungs-Steuerelement Muster
+> Die Beispiele in den folgenden Themen veranschaulichen, wie sie ein benutzerdefiniertes Steuerelementmuster implementieren, das die Funktionalität des vorhandenen [Value-Steuerelementmusters](uiauto-implementingvalue.md) dupliziert. Diese Beispiele dienen nur zu Anweisungszwecken. Ein tatsächliches benutzerdefiniertes Steuerelementmuster sollte Funktionen bereitstellen, die im Standard-Benutzeroberflächenautomatisierung Steuerelementmustern nicht verfügbar sind.
 
- 
+ 
 
-### <a name="the-client-wrapper-and-the-pattern-handler"></a>Der Client-Wrapper und der Muster Handler
+### <a name="the-client-wrapper-and-the-pattern-handler"></a>Der Clientwrapper und der Musterhandler
 
-Der Client Wrapper implementiert die API, die vom Client verwendet wird, um Eigenschaften abzurufen und Methoden aufzurufen, die durch das benutzerdefinierte Steuerelement Muster verfügbar gemacht werden. Die API wird als COM-Schnittstelle implementiert, die alle Eigenschafts Anforderungen und Methodenaufrufe an den Benutzeroberflächenautomatisierungs-Kern übergibt, der dann die Anforderungen und Aufrufe an den Anbieter marshallst.
+Der Clientwrapper implementiert die API, die vom Client verwendet wird, um Eigenschaften abzurufen und Methoden aufzurufen, die vom benutzerdefinierten Steuerelementmuster verfügbar gemacht werden. Die API wird als COM-Schnittstelle implementiert, die alle Eigenschaftsanforderungen und Methodenaufrufe an den Benutzeroberflächenautomatisierung Core übergibt, der dann die Anforderungen und Aufrufe an den Anbieter marshallt.
 
-Der Code, der ein benutzerdefiniertes Steuerelement Muster registriert, muss eine Klassenfactory bereitstellen, mit der die Benutzeroberflächen Automatisierung Instanzen des Client Wrapper Objekts erstellen kann. Wenn ein benutzerdefiniertes Steuerelement Muster erfolgreich registriert wird, gibt die Benutzeroberflächen Automatisierung einen [**iuiautomationpatterninstance**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatterninstance) -Schnittstellen Zeiger zurück, der vom Client verwendet wird, um Eigenschaften Anforderungen und Methodenaufrufe an den Benutzeroberflächenautomatisierungs-Kern weiterzuleiten.
+Der Code, der ein benutzerdefiniertes Steuerelementmuster registriert, muss eine Klassenfactory bereitstellen, die Benutzeroberflächenautomatisierung verwenden können, um Instanzen des Clientwrapperobjekts zu erstellen. Wenn ein benutzerdefiniertes Steuerelementmuster erfolgreich registriert wurde, gibt Benutzeroberflächenautomatisierung einen [**IUIAutomationPatternInstance-Schnittstellenzeiger**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatterninstance) zurück, der vom Client verwendet wird, um Eigenschaftsanforderungen und Methodenaufrufe an den Benutzeroberflächenautomatisierung Core weiterzuleiten.
 
-Auf der Anbieterseite nimmt der Benutzeroberflächenautomatisierungs-Kern die Eigenschaften Anforderungen und Methodenaufrufe vom Client an und übergibt sie an das musterhandlerobjekt. Der Muster Handler ruft dann die entsprechenden Methoden auf der Anbieter Schnittstelle für das benutzerdefinierte Steuerelement Muster auf.
+Auf Anbieterseite übernimmt der Benutzeroberflächenautomatisierung Core die Eigenschaftsanforderungen und Methodenaufrufe vom Client und übergibt sie an das Musterhandlerobjekt. Der Musterhandler ruft dann die entsprechenden Methoden für die Anbieterschnittstelle für das benutzerdefinierte Steuerelementmuster auf.
 
-Der Code, der ein benutzerdefiniertes Steuerelement Muster registriert, erstellt das musterhandlerobjekt und stellt beim Registrieren des Steuerelement Musters eine Benutzeroberflächen Automatisierung mit einem Zeiger auf die [**iuiautomationpatternhandler**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) -Schnittstelle des Objekts bereit.
+Der Code, der ein benutzerdefiniertes Steuerelementmuster registriert, erstellt das Musterhandlerobjekt und stellt beim Registrieren des Steuerelementmusters Benutzeroberflächenautomatisierung mit einem Zeiger auf die [**IUIAutomationPatternHandler-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) des Objekts bereit.
 
-Das folgende Diagramm zeigt, wie ein Client Eigenschafts Anforderungs-oder-Methodenaufrufe vom Client-Wrapper über die Benutzeroberflächenautomatisierungs-Kernkomponenten an den Muster Handler und dann an die Anbieter Schnittstelle fließt.
+Das folgende Diagramm zeigt, wie eine Clienteigenschaftsanforderung oder ein Methodenaufruf vom Clientwrapper über die Benutzeroberflächenautomatisierung Kernkomponenten zum Musterhandler und dann zur Anbieterschnittstelle fließt.
 
-![Diagramm, das den Flow vom Client-Wrapper zum Muster Handler und-Anbieter anzeigt](images/custompatternsupport.jpg)
+![Diagramm, das den Fluss vom Clientwrapper zum Musterhandler und Anbieter zeigt](images/custompatternsupport.jpg)
 
-Die Objekte, die die Client Wrapper-und musterhandlerschnittstellen implementieren, müssen freigegeben sein. Außerdem muss der Benutzeroberflächenautomatisierungs-Kern in der Lage sein, die Objekte direkt ohne zwischenmarshallingcode aufzurufen.
+Die Objekte, die die Clientwrapper- und Musterhandlerschnittstellen implementieren, müssen free-threaded sein. Außerdem muss der Benutzeroberflächenautomatisierung Core in der Lage sein, die Objekte direkt ohne zwischengeschalteten Marshallingcode aufzurufen.
 
-### <a name="implementing-the-client-wrapper&quot;></a>Implementieren des Client Wrappers
+### <a name="implementing-the-client-wrapper"></a>Implementieren des Clientwrappers
 
-Der Client Wrapper ist ein Objekt, das eine ixxxpattern-Schnittstelle verfügbar macht, mit der der Client Eigenschaften anfordert und Methoden aufruft, die vom benutzerdefinierten Steuerelement Muster unterstützt werden. Die Schnittstelle besteht aus einem Paar von &quot;Getter&quot;-Methoden für jede unterstützte Eigenschaft (&quot;get \_ currentxxx&quot; und &quot;get \_ cachedxxx Method") und einer "Caller"-Methode für jede unterstützte Methode. Wenn das Objekt instanziiert wird, empfängt der Objektkonstruktor einen Zeiger auf die [**iuiautomationpatterninstance**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatterninstance) -Schnittstelle, die vom Benutzeroberflächenautomatisierungs-Kern implementiert wird. Die Methoden der ixxxpattern-Schnittstelle verwenden die [**iuiautomationpatterninstance:: GetProperty**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatterninstance-getproperty) -Methode und die [**CALLMETHOD-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatterninstance-callmethod) , um Eigenschafts Anforderungen und Methodenaufrufe an den Benutzeroberflächenautomatisierungs-Kern weiterzuleiten.
+Der Clientwrapper ist ein Objekt, das eine IXxxPattern-Schnittstelle verfügbar macht, die der Client verwendet, um Eigenschaften anzufordern und Methoden aufzurufen, die vom benutzerdefinierten Steuerelementmuster unterstützt werden. Die Schnittstelle besteht aus einem Paar von Gettermethoden für jede unterstützte Eigenschaft (get \_ CurrentXxx und get \_ CachedXxx-Methode) und einer "Aufrufer"-Methode für jede unterstützte Methode. Wenn das Objekt instanziiert wird, empfängt der Objektkonstruktor einen Zeiger auf die [**IUIAutomationPatternInstance-Schnittstelle,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatterninstance) die vom Benutzeroberflächenautomatisierung Core implementiert wird. Die Methoden der IXxxPattern-Schnittstelle verwenden die Methoden [**IUIAutomationPatternInstance::GetProperty**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatterninstance-getproperty) und [**CallMethod,**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatterninstance-callmethod) um Eigenschaftsanforderungen und Methodenaufrufe an den Benutzeroberflächenautomatisierung Core weiterzuleiten.
 
-Im folgenden Beispiel wird gezeigt, wie ein Client Wrapper Objekt für ein einfaches benutzerdefiniertes Steuerelement Muster implementiert wird, das eine einzelne Eigenschaft unterstützt. Ein komplexeres Beispiel finden Sie unter [Beispiel Implementierung eines benutzerdefinierten Steuerelement Musters](#example-implementation-of-a-custom-control-pattern).
+Das folgende Beispiel zeigt, wie ein Clientwrapperobjekt für ein einfaches benutzerdefiniertes Steuerelementmuster implementiert wird, das eine einzelne Eigenschaft unterstützt. Ein komplexeres Beispiel finden Sie unter [Beispielimplementierungen eines benutzerdefinierten Steuerelementmusters.](#example-implementation-of-a-custom-control-pattern)
 
 
 ```C++
@@ -192,15 +192,15 @@ public:
 
 
 
-### <a name="implementing-the-pattern-handler"></a>Implementieren des Muster Handlers
+### <a name="implementing-the-pattern-handler"></a>Implementieren des Musterhandlers
 
-Der Muster Handler ist ein Objekt, das die [**iuiautomationpatternhandler**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) -Schnittstelle implementiert. Diese Schnittstelle verfügt über zwei Methoden: [**iuiautomationpatternhandler:: kreateclientwrapper**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatternhandler-createclientwrapper) und [**Dispatch**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatternhandler-dispatch). Die Methode " **kreateclientwrapper** " wird vom Benutzeroberflächenautomatisierungs-Kern aufgerufen und empfängt einen Zeiger auf die [**iuiautomationpatterninstance**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatterninstance) -Schnittstelle. " **Anateclientwrapper** " antwortet, indem das Client Wrapper Objekt instanziiert und der **iuiautomationpatterninstance** -Schnittstellen Zeiger an den clientwrapper-Konstruktor übergeben wird.
+Der Musterhandler ist ein Objekt, das die [**IUIAutomationPatternHandler-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) implementiert. Diese Schnittstelle verfügt über zwei Methoden: [**IUIAutomationPatternHandler::CreateClientWrapper**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatternhandler-createclientwrapper) und [**Dispatch**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatternhandler-dispatch). Die **CreateClientWrapper-Methode** wird vom Benutzeroberflächenautomatisierung Core aufgerufen und empfängt einen Zeiger auf die [**IUIAutomationPatternInstance-Schnittstelle.**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatterninstance) **CreateClientWrapper** antwortet, indem das Clientwrapperobjekt instanziiert und der **IUIAutomationPatternInstance-Schnittstellenzeiger** an den Clientwrapperkonstruktor übergeben wird.
 
-Die [**dispatchmethode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatternhandler-dispatch) wird vom Benutzeroberflächenautomatisierungs-Kern verwendet, um Eigenschafts Anforderungen und Methodenaufrufe an die Anbieter Schnittstelle für das benutzerdefinierte Steuerelement Muster zu übergeben. Parameter enthalten einen Zeiger auf die Anbieter Schnittstelle, den NULL basierten Index des aufzurufenden Eigenschaften Getters oder der aufzurufenden Methode und ein Array von [**uiautomationparameter**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationparameter) -Strukturen, die die Parameter enthalten, die an den Anbieter übergeben werden. Der Muster Handler antwortet, indem er den Index-Parameter prüft, um zu bestimmen, welche Anbieter Methode aufgerufen werden soll. Anschließend ruft er die Anbieter Schnittstelle auf und übergibt die in den **uiautomationparameter** -Strukturen enthaltenen Parameter.
+Die [**Dispatch-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationpatternhandler-dispatch) wird vom Benutzeroberflächenautomatisierung Core verwendet, um Eigenschaftsanforderungen und Methodenaufrufe an die Anbieterschnittstelle für das benutzerdefinierte Steuerelementmuster zu übergeben. Parameter umfassen einen Zeiger auf die Anbieterschnittstelle, den nullbasierten Index des aufgerufenen Eigenschaften-Getters oder der aufgerufenen Methode und ein Array von [**UIAutomationParameter-Strukturen,**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationparameter) die die Parameter enthalten, die an den Anbieter übergeben werden sollen. Der Musterhandler antwortet, indem er den Indexparameter überprüft, um zu bestimmen, welche Anbietermethode aufgerufen werden soll, und ruft dann diese Anbieterschnittstelle auf, wobei die in den **UIAutomationParameter-Strukturen** enthaltenen Parameter übergeben werden.
 
-Das musterhandlerobjekt wird durch denselben Code instanziiert, der das benutzerdefinierte Steuerelement Muster registriert, bevor das Steuerelement Muster registriert wird. Der Code muss den [**iuiautomationpatternhandler**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) -Schnittstellen Zeiger des musterhandlerobjekts zum Zeitpunkt der Registrierung an den Benutzeroberflächenautomatisierungs-Kern übergeben.
+Das Musterhandlerobjekt wird durch den gleichen Code instanziiert, der das benutzerdefinierte Steuerelementmuster registriert, bevor das Steuerelementmuster registriert wird. Der Code muss den [**IUIAutomationPatternHandler-Schnittstellenzeiger**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) des Musterhandlerobjekts zur Registrierungszeit an den Benutzeroberflächenautomatisierung Core übergeben.
 
-Im folgenden Beispiel wird gezeigt, wie ein musterhandlerobjekt für ein einfaches benutzerdefiniertes Steuerelement Muster implementiert wird, das eine einzelne Eigenschaft unterstützt. Ein komplexeres Beispiel finden Sie unter [Beispiel Implementierung eines benutzerdefinierten Steuerelement Musters](#example-implementation-of-a-custom-control-pattern).
+Das folgende Beispiel zeigt, wie ein Musterhandlerobjekt für ein einfaches benutzerdefiniertes Steuerelementmuster implementiert wird, das eine einzelne Eigenschaft unterstützt. Ein komplexeres Beispiel finden Sie unter [Beispielimplementierungen eines benutzerdefinierten Steuerelementmusters.](#example-implementation-of-a-custom-control-pattern)
 
 
 ```C++
@@ -246,36 +246,36 @@ public:
 
 
 
-### <a name="registering-a-custom-control-pattern"></a>Registrieren eines benutzerdefinierten Steuerelement Musters
+### <a name="registering-a-custom-control-pattern"></a>Registrieren eines benutzerdefinierten Steuerelementmusters
 
-Bevor Sie verwendet werden kann, muss ein benutzerdefiniertes Steuerelement Muster sowohl vom Anbieter als auch vom Client registriert werden. Die Registrierung stellt dem Benutzeroberflächenautomatisierungs-Kern ausführliche Informationen über das-Steuerelement Muster bereit und stellt dem Anbieter oder Client die Steuerelement Muster-ID und IDs für die Eigenschaften und Ereignisse bereit, die vom-Steuerelement Muster unterstützt werden. Auf der Anbieterseite muss das benutzerdefinierte Steuerelement Muster registriert werden, bevor das zugeordnete Steuerelement die [**WM- \_ GetObject**](wm-getobject.md) -Nachricht oder zur gleichen Zeit behandelt.
+Bevor es verwendet werden kann, muss ein benutzerdefiniertes Steuerelementmuster sowohl vom Anbieter als auch vom Client registriert werden. Die Registrierung stellt den Benutzeroberflächenautomatisierung Core mit detaillierten Informationen zum Steuerelementmuster bereit und stellt dem Anbieter oder Client die Steuerelementmuster-ID sowie IDs für die Eigenschaften und Ereignisse bereit, die vom Steuerelementmuster unterstützt werden. Auf Anbieterseite muss das benutzerdefinierte Steuerelementmuster registriert werden, bevor das zugeordnete Steuerelement die [**WM \_ GETOBJECT-Nachricht**](wm-getobject.md) verarbeitet oder gleichzeitig.
 
-Wenn Sie ein benutzerdefiniertes Steuerelement Muster registrieren, liefert der Anbieter oder Client die folgenden Informationen:
+Beim Registrieren eines benutzerdefinierten Steuerelementmusters stellt der Anbieter oder Client die folgenden Informationen bereit:
 
--   Der GUID des benutzerdefinierten Steuerelement Musters.
--   Eine nicht lokalisierbare Zeichenfolge, die den Namen des benutzerdefinierten Steuerelement Musters enthält.
--   Der GUID der Anbieter Schnittstelle, die das benutzerdefinierte Steuerelement Muster unterstützt.
--   Der GUID der Client Schnittstelle, die das benutzerdefinierte Steuerelement Muster unterstützt.
--   Ein Array von [**uiautomationpropertyinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpropertyinfo) -Strukturen, die die Eigenschaften beschreiben, die vom benutzerdefinierten Steuerelement Muster unterstützt werden. Für jede Eigenschaft müssen die GUID, der Eigenschaftsname und der Datentyp angegeben werden.
--   Ein Array von [**uiautomationmethodinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationmethodinfo) -Strukturen, die die Methoden beschreiben, die vom benutzerdefinierten Steuerelement Muster unterstützt werden. Für jede Methode enthält die-Struktur die folgenden Informationen: den Methodennamen, eine Anzahl von Parametern, eine Liste von Parameter Datentypen und eine Liste der Parameternamen.
--   Ein Array von [**uiautomationeventinfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationeventinfo) -Strukturen, die die Ereignisse beschreiben, die vom benutzerdefinierten Steuerelement Muster ausgelöst werden. Für jedes Ereignis müssen die GUID und der Ereignis Name angegeben werden.
--   Die Adresse der [**iuiautomationpatternhandler**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) -Schnittstelle des musterhandlerobjekts, das das benutzerdefinierte Steuerelement Muster für Clients verfügbar macht.
+-   Die GUID des benutzerdefinierten Steuerelementmusters.
+-   Eine nicht zuordnungsfähige Zeichenfolge, die den Namen des benutzerdefinierten Steuerelementmusters enthält.
+-   Die GUID der Anbieterschnittstelle, die das benutzerdefinierte Steuerelementmuster unterstützt.
+-   Die GUID der Clientschnittstelle, die das benutzerdefinierte Steuerelementmuster unterstützt.
+-   Ein Array von [**UIAutomationPropertyInfo-Strukturen,**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpropertyinfo) die die vom benutzerdefinierten Steuerelementmuster unterstützten Eigenschaften beschreiben. Für jede Eigenschaft müssen die GUID, der Eigenschaftenname und der Datentyp angegeben werden.
+-   Ein Array von [**UIAutomationMethodInfo-Strukturen,**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationmethodinfo) die die vom benutzerdefinierten Steuerelementmuster unterstützten Methoden beschreiben. Für jede Methode enthält die -Struktur die folgenden Informationen: den Methodennamen, die Anzahl der Parameter, eine Liste der Parameterdatentypen und eine Liste der Parameternamen.
+-   Ein Array von [**UIAutomationEventInfo-Strukturen,**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationeventinfo) die die vom benutzerdefinierten Steuerelementmuster ausgelösten Ereignisse beschreiben. Für jedes Ereignis müssen die GUID und der Ereignisname angegeben werden.
+-   Die Adresse der [**IUIAutomationPatternHandler-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationpatternhandler) des Musterhandlerobjekts, das clients das benutzerdefinierte Steuerelementmuster zur Verfügung stellt.
 
-Um das benutzerdefinierte Steuerelement Muster zu registrieren, muss der Anbieter oder Client Code die folgenden Schritte ausführen:
+Um das benutzerdefinierte Steuerelementmuster zu registrieren, muss der Anbieter- oder Clientcode die folgenden Schritte ausführen:
 
-1.  Füllen Sie eine [**uiautomationpatterninfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpatterninfo) -Struktur mit den vorangehenden Informationen aus.
-2.  Verwenden Sie die [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion, um eine Instanz des [**cuiautomationregistrar**](/previous-versions/windows/desktop/legacy/ff384837(v=vs.85)) -Objekts zu erstellen und einen Zeiger auf die [**iuiautomationregistrar**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationregistrar) -Schnittstelle des Objekts abzurufen.
-3.  Aufrufen der [**iuiautomationregistrar:: registerpattern**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerpattern) -Methode, wobei die Adresse der [**uiautomationpatterninfo**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpatterninfo) -Struktur übergeben wird.
+1.  Füllen Sie eine [**UIAutomationPatternInfo-Struktur**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpatterninfo) mit den vorherigen Informationen aus.
+2.  Verwenden Sie die [**CoCreateInstance-Funktion,**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) um eine Instanz des [**CUIAutomationRegistrar-Objekts**](/previous-versions/windows/desktop/legacy/ff384837(v=vs.85)) zu erstellen und einen Zeiger auf die [**IUIAutomationRegistrar-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iuiautomationregistrar) des Objekts abzurufen.
+3.  Rufen Sie die [**IUIAutomationRegistrar::RegisterPattern-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerpattern) auf, und übergeben Sie dabei die Adresse der [**UIAutomationPatternInfo-Struktur.**](/windows/desktop/api/UIAutomationCore/ns-uiautomationcore-uiautomationpatterninfo)
 
-Die [**registerpattern**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerpattern) -Methode gibt eine Steuerelement Muster-ID zusammen mit einer Liste von Eigenschaften-IDs und Ereignis-IDs zurück. Eine Anwendung kann diese IDs an jede Benutzeroberflächen-Automatisierungs Methode übergeben, die einen solchen Bezeichner als Parameter annimmt. Beispielsweise können Sie eine registrierte Muster-ID an die [**iuiautomationelement:: GetCurrentPattern**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpattern) -Methode übergeben, um einen Zeiger auf die Anbieter Schnittstelle für das Steuerelement Muster abzurufen.
+Die [**RegisterPattern-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iuiautomationregistrar-registerpattern) gibt eine Steuerelementmuster-ID zusammen mit einer Liste von Eigenschaften-IDs und Ereignis-IDs zurück. Eine Anwendung kann diese IDs an jede Benutzeroberflächenautomatisierung Methode übergeben, die einen solchen Bezeichner als Parameter annimmt. Beispielsweise können Sie eine registrierte Muster-ID an die [**IUIAutomationElement::GetCurrentPattern-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpattern) übergeben, um einen Zeiger auf die Anbieterschnittstelle für das Steuerelementmuster abzurufen.
 
-Es gibt keine Methode, die die Registrierung eines benutzerdefinierten Steuerelement Musters abhebt. Stattdessen wird die Registrierung implizit aufgehoben, wenn das letzte Benutzeroberflächenautomatisierungs-Objekt freigegeben wird.
+Es gibt keine Methode, die die Registrierung eines benutzerdefinierten Steuerelementmusters auflädt. Stattdessen wird die Registrierung implizit aufgehoben, wenn das letzte Benutzeroberflächenautomatisierung-Objekt freigegeben wird.
 
-Ein Beispiel, das zeigt, wie ein benutzerdefiniertes Steuerelement Muster registriert wird, finden Sie im folgenden Abschnitt.
+Ein Beispiel, das zeigt, wie Sie ein benutzerdefiniertes Steuerelementmuster registrieren, finden Sie im folgenden Abschnitt.
 
-### <a name="example-implementation-of-a-custom-control-pattern"></a>Beispiel Implementierung eines benutzerdefinierten Steuerelement Musters
+### <a name="example-implementation-of-a-custom-control-pattern"></a>Beispielimplementierungen eines benutzerdefinierten Steuerelementmusters
 
-Dieser Abschnitt enthält Beispielcode, der veranschaulicht, wie die clientwrapper-und musterhandlerobjekte für ein benutzerdefiniertes Steuerelement Muster implementiert werden. Im Beispiel wird ein benutzerdefiniertes Steuerelement Muster implementiert, das auf dem [value](uiauto-implementingvalue.md) -Steuerelement Muster basiert.
+Dieser Abschnitt enthält Beispielcode, der veranschaulicht, wie der Clientwrapper und Musterhandlerobjekte für ein benutzerdefiniertes Steuerelementmuster implementiert werden. Im Beispiel wird ein benutzerdefiniertes Steuerelementmuster implementiert, das auf dem [Wert-Steuerelementmuster](uiauto-implementingvalue.md) basiert.
 
 
 ```C++
@@ -519,10 +519,10 @@ HRESULT RegisterPattern()
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Entwerfen von benutzerdefinierten Eigenschaften, Ereignissen und Steuerelement Mustern](uiauto-designingcustompropseventpatterns.md)
+[Entwerfen von benutzerdefinierten Eigenschaften, Ereignissen und Steuerelementmustern](uiauto-designingcustompropseventpatterns.md)
 </dt> <dt>
 
 [Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften](uiauto-propertiesoverview.md)
@@ -534,6 +534,6 @@ HRESULT RegisterPattern()
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

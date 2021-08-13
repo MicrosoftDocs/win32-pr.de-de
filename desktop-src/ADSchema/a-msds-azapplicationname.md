@@ -1,11 +1,11 @@
 ---
-title: ms-DS-AZ-Application-Name-Attribut
-description: Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
+title: ms-DS-Az-Application-Name-Attribut
+description: Eine Zeichenfolge, die ein Anwendungsobjekt eindeutig identifiziert.
 ms.assetid: 693a47f4-d3ae-4fae-8e5e-cbce41d00d45
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-AZ-Application-Name-Attribut
-- AD-Schema des msDS-azapplicationname-Attributs
+- ms-DS-Az-Application-Name-Attribut AD-Schema
+- AD-Schema des msDS-AzApplicationName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24166af15a250ec284eeb600b81bb8bb7d264369
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4a9e095c256ab920c431516f1b103ac3b7d4df4b1552f652762ea6ed06c2a3a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118685695"
 ---
-# <a name="ms-ds-az-application-name-attribute"></a>ms-DS-AZ-Application-Name-Attribut
+# <a name="ms-ds-az-application-name-attribute"></a>ms-DS-Az-Application-Name-Attribut
 
-Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
+Eine Zeichenfolge, die ein Anwendungsobjekt eindeutig identifiziert.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-DS-AZ-Application-Name                   |
-| LDAP-Display-Name | MSDS-azapplicationname                      |
+| CN                | ms-DS-Az-Application-Name                   |
+| Ldap-Anzeigename | msDS-AzApplicationName                      |
 | Size              | 128 Zeichen                              |
-| Berechtigung aktualisieren  | Azrollen-Administrator                               |
-| Aktualisierungshäufigkeit  | Während der Initialisierung oder Richtlinien Änderung.     |
+| Aktualisieren von Berechtigungen  | AzRoles admin                               |
+| Updatehäufigkeit  | Während der Initialisierung oder Richtlinienänderung.     |
 | Attribute-Id      | 1.2.840.113556.1.4.1798                     |
-| System-ID-GUID    | db5b0728-6208-4876-83b7-95d3e5695275        |
+| System-Id-Guid    | db5b0728-6208-4876-83b7-95d3e5695275        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,16 +56,16 @@ Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | 0                                                               |
 | Range-Upper            | 512                                                             |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**ms-DS-AZ-Application**](c-msds-azapplication.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Application**](c-msds-azapplication.md)<br/> |
 
 
 
@@ -77,16 +77,16 @@ Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | 0                                                               |
 | Range-Upper            | 512                                                             |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**ms-DS-AZ-Application**](c-msds-azapplication.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Application**](c-msds-azapplication.md)<br/> |
 
 
 
@@ -98,16 +98,16 @@ Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | 0                                                               |
 | Range-Upper            | 512                                                             |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**ms-DS-AZ-Application**](c-msds-azapplication.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Application**](c-msds-azapplication.md)<br/> |
 
 
 
@@ -119,16 +119,16 @@ Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Ist einwertig       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | 0                                                               |
 | Range-Upper            | 512                                                             |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**ms-DS-AZ-Application**](c-msds-azapplication.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Application**](c-msds-azapplication.md)<br/> |
 
 
 
@@ -140,16 +140,16 @@ Eine Zeichenfolge, die ein Anwendungs Objekt eindeutig identifiziert.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Ist einwertig       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | 0                                                               |
 | Range-Upper            | 512                                                             |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**ms-DS-AZ-Application**](c-msds-azapplication.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Application**](c-msds-azapplication.md)<br/> |
 
 
 

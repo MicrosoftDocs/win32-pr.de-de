@@ -1,6 +1,6 @@
 ---
 title: IDeliveryOptimizationJob2 AddFile-Methode
-description: Die AddFile-Methode fügt einem vorhandenen do-Auftrag eine einzelne Datei hinzu.
+description: Die AddFile-Methode fügt einem vorhandenen DO-Auftrag eine einzelne Datei hinzu.
 keywords:
 - AddFile-Methode
 - AddFile-Methode, IDeliveryOptimizationJob2-Schnittstelle
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 01/18/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8225db8cccb1e1d3bb364ba1dc29f30526fe36b7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e6d27bca855bb9c719b485060fabf1f10b7130bd864569e74f98516ca76b8fb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118544635"
 ---
-# <a name="ideliveryoptimizationjob2addfilewithranges-method"></a>IDeliveryOptimizationJob2:: ADDFILEWITHRANGES-Methode
+# <a name="ideliveryoptimizationjob2addfilewithranges-method"></a>IDeliveryOptimizationJob2::AddFileWithRanges-Methode
 
-Die AddFile-Methode fügt einem vorhandenen do-Auftrag eine einzelne Datei hinzu.
+Die AddFile-Methode fügt einem vorhandenen DO-Auftrag eine einzelne Datei hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,64 +44,64 @@ HRESULT AddFile(
 
 <dl> <dt>
 
-nicht im  \[ in\]
+*fileId* \[ In\]
 </dt> <dd>
 
-Die Datei-ID-Zeichenfolge, die die herunter zuladende Datei eindeutig identifiziert.
+Die Datei-ID-Zeichenfolge, die die herunterzuladende Datei eindeutig identifiziert.
 
 </dd> <dt>
 
-*RemoteURL* \[ in\]
+*remoteUrl* \[ In\]
 </dt> <dd>
 
-Die Datei-URL, die versucht, eine Verbindung herzustellen, um die Datei herunterzuladen.
+Die Datei-URL, die DO versucht, eine Verbindung herzustellen, um die Datei herunterzuladen.
 
 </dd> <dt>
 
-*rangecount* \[ in\]
+*rangeCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der in *Bereichen* enthaltenen Elemente. Ein Wert von 0 (null) bedeutet, dass für die Datei keine Bereiche verwendet werden.
+Die Anzahl der Elemente, die in Bereichen *enthalten sind.* Ein Nullwert bedeutet, dass keine Bereiche für die Datei verwendet werden.
 
 </dd> <dt>
 
-*Bereiche* \[ in\]
+*Bereiche* \[ In\]
 </dt> <dd>
 
-Die optionale Bereichs Liste. Jeder Bereich in der Liste ist eine [**BG_FILE_RANGE**](bg-file-range.md) Struktur.
+Die optionale Bereichsliste. Jeder Bereich in der Liste ist eine [**BG_FILE_RANGE**](bg-file-range.md) Struktur.
 
 </dd> <dt>
 
-*riid* \[ in\]
+*riid* \[ In\]
 </dt> <dd>
 
-Der Typ des Objekts, das im-Objekt enthalten ist. Dies muss vom Typ "IID_IDeliveryOptimizationFile" sein.
+Der Objekttyp, der im -Objekt enthalten ist. Dies muss vom Typ IID_IDeliveryOptimizationFile.
 
 </dd> <dt>
 
-*Objekt* \[ vorgenommen\]
+*Objekt* \[ out\]
 </dt> <dd>
 
-Das ideliveryoptimizationfile-Objekt, das die Downloaddatei darstellt. 
+Das IDeliveryOptimizationFile-Objekt, das die Downloaddatei darstellt. 
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt S_OK bei Erfolg oder einen der standardmäßigen HRESULT-Werte bei einem Fehler zurück.
+Diese Methode gibt S_OK bei Erfolg oder einen der HRESULT-Standardwerte bei einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |---------------------------|---------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)  | Windows 10, Version 1803, \[ nur Desktop-Apps\]                                  |
-| Unterstützte Mindestversion (Server)  | Windows Server, Version 1709, \[ nur Desktop-Apps\]                              |
-| Header                    | Deliveryoptimization. h                                                          |
-| IDL                       | Deliveryoptimization. idl                                                        |
-| Bibliothek                   | Dosvc. lib                                                                       |
+| Unterstützte Mindestversion (Client)  | Windows 10 Desktop-Apps, Version 1803 \[\]                                  |
+| Unterstützte Mindestversion (Server)  | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]                              |
+| Header                    | Deliveryoptimization.h                                                          |
+| Idl                       | DeliveryOptimization.idl                                                        |
+| Bibliothek                   | Dosvc.lib                                                                       |
 | DLL                       | Dosvc.dll                                                                       |
-| IID                       | IID_IDeliveryOptimizationJob ist als EE2584CF-A69C-4848-B633-2649962b3ef7 definiert. |
+| IID                       | IID_IDeliveryOptimizationJob ist als EE2584CF-A69C-4848-B633-2649962B3EF7 definiert. |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 [**IDeliveryOptimizationJob2**](ideliveryoptimizationjob2.md)

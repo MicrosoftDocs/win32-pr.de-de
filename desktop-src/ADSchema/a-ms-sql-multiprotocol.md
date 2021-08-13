@@ -4,8 +4,8 @@ description: Der RPC-Verbindungspunkt.
 ms.assetid: 70cb9f80-7140-4c26-a1a4-f78a60de430f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-SQL-MultiProtocol-Attribut
-- AD-Schema für MS-SQL-MultiProtocol-Attribut
+- AD-Schema des MS-SQL-MultiProtocol-Attributs
+- mS-SQL-MultiProtocol-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8cdfb8e42d8e3d533090b7b0bf49dcefc5492a3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d3edc56c012b062a508c83fa18ed8c45b110d2b2d3b53ca052f357a3edabe3d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106341054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118686648"
 ---
 # <a name="ms-sql-multiprotocol-attribute"></a>MS-SQL-MultiProtocol-Attribut
 
@@ -30,12 +30,12 @@ Der RPC-Verbindungspunkt.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-SQL-MultiProtocol                        |
-| LDAP-Display-Name | MS-SQL-MultiProtocol                        |
+| Ldap-Anzeigename | mS-SQL-MultiProtocol                        |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | Beim Systemstart.                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | Beim Systemstart.                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1375                     |
-| System-ID-GUID    | 8157fa38-CCEE-11d2-9993-0000f 87a57d4        |
+| System-ID-GUID    | 8157fa38-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Der RPC-Verbindungspunkt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Der RPC-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -70,7 +70,7 @@ Der RPC-Verbindungspunkt.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Der RPC-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -99,11 +99,11 @@ Der RPC-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -120,11 +120,11 @@ Der RPC-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -141,11 +141,11 @@ Der RPC-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -162,11 +162,11 @@ Der RPC-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |

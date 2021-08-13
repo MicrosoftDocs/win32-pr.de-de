@@ -1,35 +1,35 @@
 ---
-description: Die Signatur Tabelle enthält die Informationen, die eine Datei Signatur eindeutig identifizieren. Weitere Informationen zu Signaturen finden Sie unter digitale Signaturen und Windows Installer.
+description: Die Signaturtabelle enthält die Informationen, die eine Dateisignatur eindeutig identifizieren. Weitere Informationen zu Signaturen finden Sie unter Digitale Signaturen und Windows Installer.
 ms.assetid: 4780356f-e02a-45d9-883c-4f84867dbdea
-title: Signatur Tabelle
+title: Signaturtabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efb75155c4c7b8ddf4a82706bc38f09d0af75260
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5ddda5c501b24e12498f356c10a1aa2a3549426daca5e4cc3c19c1f62ed04cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118624647"
 ---
-# <a name="signature-table"></a>Signatur Tabelle
+# <a name="signature-table"></a>Signaturtabelle
 
-Die Signatur Tabelle enthält die Informationen, die eine Datei Signatur eindeutig identifizieren. Weitere Informationen zu Signaturen finden Sie unter [digitale Signaturen und Windows Installer](digital-signatures-and-windows-installer.md).
+Die Signaturtabelle enthält die Informationen, die eine Dateisignatur eindeutig identifizieren. Weitere Informationen zu Signaturen finden Sie unter [Digitale Signaturen und Windows Installer.](digital-signatures-and-windows-installer.md)
 
-Die Signatur Tabelle weist die folgenden Spalten auf.
+Die Signaturtabelle enthält die folgenden Spalten.
 
 
 
-| Spalte     | Typ                               | Schlüssel | Nullwerte zulässig |
+| Spalte     | Typ                               | Key | Nullwerte zulässig |
 |------------|------------------------------------|-----|----------|
-| Signatur  | [Bezeichner](identifier.md)       | J   | N        |
+| Signatur  | [Identifier](identifier.md)       | J   | N        |
 | FileName   | [Text](text.md)                   | N   | N        |
-| MinVersion | [Text](text.md)                   | N   | J        |
+| Minversion | [Text](text.md)                   | N   | J        |
 | MaxVersion | [Text](text.md)                   | N   | J        |
-| MinSize    | [Doubleiteger](doubleinteger.md) | N   | J        |
-| MaxSize    | [Doubleiteger](doubleinteger.md) | N   | J        |
-| MinDate    | [Doubleiteger](doubleinteger.md) | N   | J        |
-| MaxDate    | [Doubleiteger](doubleinteger.md) | N   | J        |
-| Sprachen  | [Text](text.md)                   | N   | J        |
+| Minsize    | [DoubleInteger](doubleinteger.md) | N   | J        |
+| MaxSize    | [DoubleInteger](doubleinteger.md) | N   | J        |
+| Mindate    | [DoubleInteger](doubleinteger.md) | N   | J        |
+| Maxdate    | [DoubleInteger](doubleinteger.md) | N   | J        |
+| Languages  | [Text](text.md)                   | N   | J        |
 
 
 
@@ -39,27 +39,27 @@ Die Signatur Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Signature"></span><span id="signature"></span><span id="SIGNATURE"></span>Unter
+<span id="Signature"></span><span id="signature"></span><span id="SIGNATURE"></span>Signatur
 </dt> <dd>
 
-Die Signatur Spalte ist eine eindeutige Datei Signatur.
+Die Spalte Signatur ist eine eindeutige Dateisignatur.
 
 </dd> <dt>
 
-<span id="FileName"></span><span id="filename"></span><span id="FILENAME"></span>Einfügen
+<span id="FileName"></span><span id="filename"></span><span id="FILENAME"></span>Dateiname
 </dt> <dd>
 
 Der Name der Datei.
 
 </dd> <dt>
 
-<span id="MinVersion"></span><span id="minversion"></span><span id="MINVERSION"></span>MinVersion
+<span id="MinVersion"></span><span id="minversion"></span><span id="MINVERSION"></span>Minversion
 </dt> <dd>
 
-Die minimale Version der Datei mit einem sprach Vergleich. Wenn dieses Feld angegeben wird, muss die Datei eine Version aufweisen, die mindestens mit MinVersion identisch ist. Wenn die Datei eine gleiche Version wie der Wert für das MinVersion-Feld aufweist, die in der Spalte Sprachen angegebene Sprache jedoch unterschiedlich ist, erfüllt die Datei die Signatur Filterkriterien nicht.
+Die Mindestversion der Datei mit einem Sprachvergleich. Wenn dieses Feld angegeben ist, muss die Datei über eine Version verfügen, die mindestens minVersion entspricht. Wenn die Datei eine gleiche Version wie der MinVersion-Feldwert aufweist, sich die in der Spalte Sprachen angegebene Sprache jedoch unterscheidet, erfüllt die Datei nicht die Signaturfilterkriterien.
 
 > [!Note]  
-> Die in der Spalte Sprachen angegebene Sprache wird im Vergleich verwendet, und es gibt keine Möglichkeit, die Sprache zu ignorieren. Wenn eine Datei die MinVersion-Feld Anforderung unabhängig von der Sprache erfüllen soll, müssen Sie einen Wert im MinVersion-Feld eingeben, der einen Wert kleiner als der tatsächliche Wert ist. Wenn die Mindestversion für den Filter beispielsweise 2.0.2600.1183 ist, verwenden Sie 2.0.2600.1182, um die Datei zu suchen, ohne die Sprachinformationen zu entsprechen.
+> Die in der Spalte Sprachen angegebene Sprache wird im Vergleich verwendet, und es gibt keine Möglichkeit, sprache zu ignorieren. Wenn eine Datei die MinVersion-Feldanforderung unabhängig von der Sprache erfüllen soll, müssen Sie im Feld MinVersion einen Wert eingeben, der kleiner als der tatsächliche Wert ist. Wenn die Mindestversion für den Filter beispielsweise 2.0.2600.1183 ist, verwenden Sie 2.0.2600.1182, um die Datei ohne Übereinstimmung mit den Sprachinformationen zu suchen.
 
  
 
@@ -68,35 +68,35 @@ Die minimale Version der Datei mit einem sprach Vergleich. Wenn dieses Feld ange
 <span id="MaxVersion"></span><span id="maxversion"></span><span id="MAXVERSION"></span>MaxVersion
 </dt> <dd>
 
-Die maximale Version der Datei. Wenn dieses Feld angegeben wird, muss die Datei eine Version aufweisen, die höchstens MaxVersion entspricht.
+Die maximale Version der Datei. Wenn dieses Feld angegeben wird, muss die Datei über eine Version verfügen, die maximal gleich MaxVersion ist.
 
 </dd> <dt>
 
-<span id="MinSize"></span><span id="minsize"></span><span id="MINSIZE"></span>MinSize
+<span id="MinSize"></span><span id="minsize"></span><span id="MINSIZE"></span>Minsize
 </dt> <dd>
 
-Die minimale Größe der Datei. Wenn dieses Feld angegeben ist, muss die zu überprüfende Datei eine Größe aufweisen, die mindestens MinSize entspricht. Dabei muss es sich um eine nicht negative Zahl handeln.
+Die Mindestgröße der Datei. Wenn dieses Feld angegeben ist, muss die untersuchte Datei mindestens eine Größe aufweisen, die MinSize entspricht. Dies muss eine nicht negative Zahl sein.
 
 </dd> <dt>
 
-<span id="MaxSize"></span><span id="maxsize"></span><span id="MAXSIZE"></span>MaxSize
+<span id="MaxSize"></span><span id="maxsize"></span><span id="MAXSIZE"></span>Maxsize
 </dt> <dd>
 
-Die maximale Größe der Datei. Wenn dieses Feld angegeben ist, muss die zu überprüfende Datei eine Größe aufweisen, die höchstens MaxSize entspricht. Dabei muss es sich um eine nicht negative Zahl handeln.
+Die maximale Größe der Datei. Wenn dieses Feld angegeben ist, muss die Datei, die untersucht wird, eine Größe aufweisen, die maximal maxSize entspricht. Dies muss eine nicht negative Zahl sein.
 
 </dd> <dt>
 
-<span id="MinDate"></span><span id="mindate"></span><span id="MINDATE"></span>MinDate
+<span id="MinDate"></span><span id="mindate"></span><span id="MINDATE"></span>Mindate
 </dt> <dd>
 
-Der minimale Änderungs Zeitpunkt (Datum und Uhrzeit) der Datei. Wenn dieses Feld angegeben ist, muss die zu überprüfende Datei ein Änderungsdatum und eine Uhrzeit aufweisen, die mindestens MinDate entsprechen. Dabei muss es sich um eine nicht negative Zahl handeln. Das Format dieses Felds besteht aus zwei packenden 16-Bit-Werten vom Typ **Word**. Der Wert für das hohe Bestell **Wort** gibt das Datum im MS-DOS-Datumsformat an. Der **Word** -Wert mit niedriger Ordnung gibt die Zeit im MS-DOS-Zeitformat an. Der Wert 0 für den Uhrzeitwert ist Mitternacht. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen.
+Das Minimale Änderungsdatum und die Minimale Änderungszeit der Datei. Wenn dieses Feld angegeben ist, muss die untersuchte Datei ein Änderungsdatum und eine Änderungszeit aufweisen, die mindestens minDate entspricht. Dies muss eine nicht negative Zahl sein. Das Format dieses Felds ist zwei gepackte 16-Bit-Werte vom Typ **WORD**. Der **WORD-Wert** mit hoher Reihenfolge gibt das Datum im MS-DOS-Datumsformat an. Der **WORD-Wert** mit niedriger Reihenfolge gibt die Zeit im MS-DOS-Zeitformat an. Der Wert 0 für den Zeitwert stellt Mitternacht dar. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen.
 
 </dd> <dt>
 
-<span id="MaxDate"></span><span id="maxdate"></span><span id="MAXDATE"></span>MaxDate
+<span id="MaxDate"></span><span id="maxdate"></span><span id="MAXDATE"></span>Maxdate
 </dt> <dd>
 
-Das maximale Erstellungsdatum der Datei. Wenn dieses Feld angegeben ist, muss die zu überprüfende Datei ein Erstellungsdatum aufweisen, das höchstens MaxDate entspricht. Dabei muss es sich um eine nicht negative Zahl handeln. Das Format dieses Felds besteht aus zwei packenden 16-Bit-Werten vom Typ **Word**. Der Wert für das hohe Bestell **Wort** gibt das Datum im MS-DOS-Datumsformat an. Der **Word** -Wert mit niedriger Ordnung gibt die Zeit im MS-DOS-Zeitformat an. Der Wert 0 für den Uhrzeitwert ist Mitternacht. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen.
+Das maximale Erstellungsdatum der Datei. Wenn dieses Feld angegeben ist, muss die Datei, die überprüft wird, über ein Erstellungsdatum verfügen, das maximal maxDate entspricht. Dies muss eine nicht negative Zahl sein. Das Format dieses Felds ist zwei gepackte 16-Bit-Werte vom Typ **WORD**. Der **WORD-Wert** mit hoher Reihenfolge gibt das Datum im MS-DOS-Datumsformat an. Der **WORD-Wert** mit niedriger Reihenfolge gibt die Zeit im MS-DOS-Zeitformat an. Der Wert 0 für den Zeitwert stellt Mitternacht dar. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen.
 
 </dd> <dt>
 
@@ -107,19 +107,19 @@ Die von der Datei unterstützten Sprachen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Tabelle wird mit der [AppSearch-Tabelle](appsearch-table.md)verwendet.
 
-Die Signatur wird mithilfe der [reglocator-Tabelle](reglocator-table.md), der [inilocator](inilocator-table.md)-Tabelle, der [complocator](complocator-table.md)-Tabelle und der [drlocator-Tabelle](drlocator-table.md)durchsucht. Die Spalten dieser Tabelle sind im Allgemeinen nicht lokalisiert. Wenn ein Autor eine Suche nach Produkten in mehreren Sprachen beschließt, kann in der Tabelle für jede Sprache ein separater Eintrag enthalten sein.
+Die Signatur wird mithilfe der [RegLocator-Tabelle,](reglocator-table.md)der [IniLocator-Tabelle,](inilocator-table.md)der [CompLocator-Tabelle](complocator-table.md)und der [DrLocator-Tabelle](drlocator-table.md)durchsucht. Die Spalten dieser Tabelle sind im Allgemeinen nicht lokalisiert. Wenn ein Autor entscheidet, nach Produkten in mehreren Sprachen zu suchen, kann die Tabelle für jede Sprache einen separaten Eintrag enthalten.
 
-Die Signatur Tabelle folgt in der Regel den Windows Installer [Datei Versions Regeln](file-versioning-rules.md). Die in der Spalte Sprachen der Signatur Tabelle angegebenen Sprachen werden nur ausgewertet, wenn die Dateiversionen äquivalent sind. In der Spalte Sprachen wird sichergestellt, dass eine Datei eine bestimmte Sprache hat, wenn Sie die angeforderte Version hat. Es ist keine Methode zum Ignorieren der Spalte Sprachen verfügbar. Ein in die Spalte Sprachen eingegebener NULL-Wert wird als Datei ohne Sprache behandelt und entspricht nicht der Datei Signatur einer Datei, die in der Signatur Tabelle enthalten ist. Im folgenden Beispiel wird nach einer bestimmten Version von MSI.DLL gesucht.
+Die Signaturtabelle folgt im Allgemeinen den Windows Regeln für die [Dateiversionsversionierung](file-versioning-rules.md)des Installationsprogramms. Die in der Spalte Sprachen der Signaturtabelle angegebenen Sprachen werden nur ausgewertet, wenn die Dateiversionen gleichwertig sind. Die Spalte Sprachen stellt sicher, dass eine Datei einer bestimmten Sprache entspricht, wenn sie der angeforderten Version entspricht. Es ist keine Methode verfügbar, um die Spalte Languages zu ignorieren. Ein NULL-Wert, der in die Spalte Languages eingegeben wird, wird als Datei ohne Sprache behandelt und stimmt nicht mit der Dateisignatur einer Datei mit einer Sprache überein, die in der Signaturtabelle angezeigt wird. Im folgenden Beispiel wird nach einer bestimmten Version von MSI.DLL.
 
-[Drlocator-Tabelle](drlocator-table.md)
+[DrLocator-Tabelle](drlocator-table.md)
 
 | Signatur\_ | Parent | Pfad                  | Tiefe |
 |-------------|--------|-----------------------|-------|
-| MsiDll      | normal | c: \\ Windows \\ system32 | 0     |
+| MsiDll      | {null} | c: \\ windows \\ system32 | 0     |
 
 
 
@@ -137,55 +137,55 @@ Die Signatur Tabelle folgt in der Regel den Windows Installer [Datei Versions Re
 
  
 
-Signatur Tabelle
+Signaturtabelle
 
 
 
-| Signatur | FileName | MinVersion    | MaxVersion | MinSize | MaxSize | MinDate | MaxDate | Sprachen |
+| Signatur | FileName | Minversion    | MaxVersion | Minsize | MaxSize | Mindate | Maxdate | Languages |
 |-----------|----------|---------------|------------|---------|---------|---------|---------|-----------|
-| MsiDll    | msi.dll  | 2.0.2600.1106 | normal     | normal  | normal  | normal  | normal  | 0         |
+| MsiDll    | msi.dll  | 2.0.2600.1106 | {null}     | {null}  | {null}  | {null}  | {null}  | 0         |
 
 
 
  
 
-In diesem Fall und unter Windows XP SP1 legt die [AppSearch-Aktion](appsearch-action.md) msidll auf c: \\ Windows System32msi.dll fest, \\ \\ da MSI.DLL eine sprachneutrale Datei ist. Wenn der Wert der Sprachen-Spalte von 0 in 1033 geändert wird, kann die AppSearch-Aktion die übereinstimmende msi.dll nicht finden, und die msidll-Eigenschaft ist nicht definiert.
+In diesem Fall und auf Windows XP SP1 legt die [AppSearch-Aktion](appsearch-action.md) MSIDLL auf c: \\ windows system32msi.dll fest, da MSI.DLL eine sprachneutrale Datei \\ \\ ist. Wenn der Wert der Spalte Languages von 0 in 1033 geändert wird, kann die AppSearch-Aktion die übereinstimmende msi.dll nicht finden, und die MSIDLL-Eigenschaft ist nicht definiert.
 
-Sie können die Signatur Tabelle nicht zum Abfragen von Sprachen allein verwenden. Um nach verschiedenen Sprachversionen einer Datei zu suchen, benötigen Sie einen separaten Eintrag in der Signatur Tabelle für jede Sprachversion. Wenn in der Spalte Sprachen mehrere Sprachen bereitgestellt werden, ist die Suche nach einer Datei, die alle diese Sprachen unterstützt.
+Sie können die Signaturtabelle nicht verwenden, um Abfragen für Sprachen allein auszuführen. Um nach verschiedenen Sprachversionen einer Datei zu suchen, müssen Sie für jede Sprachversion über einen separaten Eintrag in der Signaturtabelle verfügen. Wenn in der Spalte Sprachen mehrere Sprachen angegeben sind, wird nach einer Datei gesucht, die alle diese Sprachen unterstützt.
 
-Das Format der Spalten MinDate und MaxDate sind zwei gepackte 16-Bit-Werte vom Typ **Word**.
+Das Format der Spalten MinDate und MaxDate sind zwei gepackte 16-Bit-Werte vom **Typ WORD**.
 
-Datums **Wort**
+**Word-Datum**
 
 
 
-| Bits | Inhalt                                             |
+| Bits | Content                                             |
 |------|-----------------------------------------------------|
-| 0 – 4  | Tag des Monats (1-31)                             |
-| 5-8  | Monat (1 = Januar, 2 = Februar usw.)        |
-| 9-15 | Jahr Offset von 1980 (Hinzufügen von 1980, um das tatsächliche Jahr zu erhalten) |
+| 0–4  | Tag des Monats (1-31)                             |
+| 5-8  | Monat (1 = Januar, 2 = Februar, und so weiter)        |
+| 9-15 | Jahresoffset von 1980 (addieren Sie 1980, um das tatsächliche Jahr zu erhalten) |
 
 
 
  
 
-Zeit **Wort**
+**Word-Zeit**
 
 
 
-| Bits  | Inhalt                     |
+| Bits  | Content                     |
 |-------|-----------------------------|
-| 0 – 4   | Sekunden geteilt durch 2        |
+| 0–4   | Sekunden geteilt durch 2        |
 | 5-10  | Minuten (0-59)              |
-| 11-15 | Stunde (0 bis 23 Uhr auf 24 Stunden) |
+| 11-15 | Hour(0-23 on 24 hour clock) |
 
 
 
  
 
-Die Formel zum Berechnen der Werte für MinDate und MaxDate ist:
+Die Formel zum Berechnen der MinDate- und MaxDate-Feldwerte ist:
 
-((Jahr-1980) \* 512 + Monat \* 32 + Tag) \* 65536 + Stunden \* 2048 + Minuten \* 32 + Sekunden/2
+( (Jahr - 1980) \* 512 + Monat \* 32 + Tag ) \* 65536 + Stunden \* 2048 + Minuten \* 32 + Sekunden/2
 
 ## <a name="validation"></a>Überprüfen
 

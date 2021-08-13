@@ -1,11 +1,11 @@
 ---
 title: Birth-Location-Attribut
-description: Der Speicherort, an dem der Benutzer geboren wurde.
+description: Der Ort, an dem der Benutzer entstanden ist.
 ms.assetid: 566bdbf0-a298-465a-9dab-f9b013f3d98b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Birth-Location-Attribut
-- birthlocation-Attribut AD-Schema
+- Birth-Location AD-Schema
+- birthLocation-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27d3ea30101c8797a9b12a20eb816e764f931227
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5d743e3a61942f6fecf2a8e8aa1ee267783ca44e3cb95d95e9fc4f4ab060c66c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118688009"
 ---
 # <a name="birth-location-attribute"></a>Birth-Location-Attribut
 
-Der Speicherort, an dem der Benutzer geboren wurde.
+Der Ort, an dem der Benutzer entstanden ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Birth-Location                                        |
-| LDAP-Display-Name | birthlocation                                         |
+| Ldap-Anzeigename | birthLocation                                         |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Domänen Administrator                                  |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                  |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.332                                |
-| System-ID-GUID    | 1F 0075f 9-7E40-11D0-afd6-00c04f 930c9                  |
+| System-Id-Guid    | 1f0075f9-7e40-11d0-afd6-00c04fd930c9                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -70,7 +70,7 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -99,11 +99,11 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -120,11 +120,11 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -141,11 +141,11 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -162,11 +162,11 @@ Der Speicherort, an dem der Benutzer geboren wurde.
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 32                                                             |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000001                                                     |

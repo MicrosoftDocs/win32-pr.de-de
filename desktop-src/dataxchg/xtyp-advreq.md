@@ -1,9 +1,9 @@
 ---
-title: XTYP_ADVREQ Transaktion (Ddeml. h)
-description: Mit der xtipp- \_ advreq-Transaktion wird dem Server mitgeteilt, dass eine Benachrichtigungs Transaktion für den angegebenen Themen Namen und das angegebene Elementnamen paar aussteht und dass die Daten, die dem Themen Namen und dem Elementnamen paar entsprechen, geändert wurden.
+title: XTYP_ADVREQ Transaktion (Ddeml.h)
+description: Die XTYP \_ ADHOUQ-Transaktion informiert den Server darüber, dass eine Advise-Transaktion für das angegebene Paar aus Themenname und Elementname ausstehend ist und dass die Daten, die dem Paar aus Themenname und Elementname entsprechen, geändert wurden.
 ms.assetid: 9bd43e61-cbd6-4d53-bab3-90e85819b16b
 keywords:
-- XTYP_ADVREQ Transaktionsdaten Austausch
+- XTYP_ADVREQ Exchange von Transaktionsdaten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2884e838268342ab10c556c6ae3cfc8349ed5d2c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 18e751f17fb8634b0a105a36af5036f07d0212532349c267e5526d5d41f09367
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118544885"
 ---
-# <a name="xtyp_advreq-transaction"></a>XYP- \_ advreq-Transaktion
+# <a name="xtyp_advreq-transaction"></a>XTYP \_ AD TRANSACTIONQ-Transaktion
 
-Mit der **xtipp- \_ advreq** -Transaktion wird dem Server mitgeteilt, dass eine Benachrichtigungs Transaktion für den angegebenen Themen Namen und das angegebene Elementnamen paar aussteht und dass die Daten, die dem Themen Namen und dem Elementnamen paar entsprechen, geändert wurden. Das System sendet diese Transaktion an die dynamischer Datenaustausch (DDE)-Rückruffunktion [*ddecallback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback), nachdem der Server die [**ddepostadvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) -Funktion aufgerufen hat.
+Die **XTYP \_ ADHOUQ-Transaktion** informiert den Server darüber, dass eine Advise-Transaktion für das angegebene Paar aus Themenname und Elementname ausstehend ist und dass die Daten, die dem Paar aus Themenname und Elementname entsprechen, geändert wurden. Das System sendet diese Transaktion an die DDE-Rückruffunktion (dynamische Daten Exchange), [*DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)nachdem der Server die [**DdePostAdvise-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) aufgerufen hat.
 
 
 ```C++
@@ -45,14 +45,14 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
 Das Format, in dem die Daten an den Client übermittelt werden sollen.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
 Ein Handle für die Konversation.
@@ -62,7 +62,7 @@ Ein Handle für die Konversation.
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen.
+Ein Handle für den Themennamen.
 
 </dd> <dt>
 
@@ -76,35 +76,35 @@ Ein Handle für den Elementnamen, der geändert wurde.
 *hdata* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Die Anzahl der **xD \_ advreq** -Transaktionen im nieder wertigen Wort, die im Kontext des aktuellen Aufrufens der [**ddepostadvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) -Funktion für dasselbe Thema, Element und denselben Format Namen verarbeitet werden. Der Zählerwert ist 0 (null), wenn die aktuelle **xD- \_ advreq** -Transaktion der letzte ist. Ein Server kann diese Anzahl verwenden, um zu bestimmen, ob ein **hdata \_** -Daten Handle für die Empfehlung erstellt werden soll.
+Die Anzahl von **XTYP \_ ADHAPQ-Transaktionen** im Wort mit niedriger Reihenfolge, die im Kontext des aktuellen Aufrufs der [**DdePostAdvise-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) für dasselbe Thema, Dasselbe Element und den gleichen Formatnamen verarbeitet werden müssen. Die Anzahl ist 0 (null), wenn die aktuelle **XTYP \_ AD ZEROQ-Transaktion** die letzte ist. Ein Server kann diese Anzahl verwenden, um zu bestimmen, ob ein **HDATA \_ APPOWNED-Datenhandle** für die Empfehlungsdaten erstellt werden soll.
 
-Das nieder wertige Wort wird auf **cadv \_ lateack** festgelegt, wenn die Ddeml die **xD- \_ advreq** -Transaktion aufgrund einer Nachricht, die eine späte Bestätigung durchläuft, von \_ einem Client, der vom Server entfernt wird, ausgegeben hat.
+Das Wort mit niedriger Reihenfolge wird auf **CADV \_ LATEACK** festgelegt, wenn die DDEML die **XTYP \_ ADACAQ-Transaktion** ausgegeben hat, weil eine DDE-ACK-Nachricht \_ von einem Client, der vom Server ausgehend wird, spät eintrifft.
 
-Das höchst wertige Wort wird nicht verwendet.
+Das Wort in hoher Reihenfolge wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Server sollte zuerst die [**ddecreatedatahandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle) -Funktion aufrufen, um ein Daten Handle zu erstellen, das die geänderten Daten identifiziert und dann das Handle zurückgibt. Der Server sollte **null** zurückgeben, wenn die Transaktion nicht abgeschlossen werden kann.
+Der Server sollte zuerst die [**DdeCreateDataHandle-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle) aufrufen, um ein Datenhandle zu erstellen, das die geänderten Daten identifiziert und dann das Handle zurückgibt. Der Server sollte **NULL** zurückgeben, wenn er die Transaktion nicht abschließen kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des **CBR- \_ Blocks** wird ignoriert.
+Ein Server kann diesen Transaktionstyp nicht blockieren. der **CBR \_ BLOCK-Rückgabecode** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,30 +114,30 @@ Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des *
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Ddecreatedatahandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle)
+[**DdeCreateDataHandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle)
 </dt> <dt>
 
-[**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
+[**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
 </dt> <dt>
 
-[**DDE postadvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise)
+[**DdePostAdvise**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange-Verwaltungsbibliothek](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

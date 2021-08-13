@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixScaling-Funktion (D3DX10Math.h): Erstellt eine Matrix, die entlang der X-Achse, der Y-Achse und der Z-Achse skaliert wird.'
+description: 'D3DXMatrixScaling-Funktion (D3DX10Math.h): Erstellt eine Matrix, die entlang der x-Achse, der y-Achse und der Z-Achse skaliert wird.'
 ms.assetid: 1804bf41-26de-4be1-ad62-7a871d7408e6
 title: D3DXMatrixScaling-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: bf11b2196953775fb41412ad484a77ab00ae578e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b2a3bd8e657dde60ae1714a9696c07ad4d14e182c41bea5521f1009da03a54d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118541143"
 ---
 # <a name="d3dxmatrixscaling-function-d3dx10mathh"></a>D3DXMatrixScaling-Funktion (D3DX10Math.h)
 
@@ -57,7 +57,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis 
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierungsfaktor, der entlang der X-Achse angewendet wird.
+Skalierungsfaktor, der entlang der x-Achse angewendet wird.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
 Zeiger auf die Skalierungstransformation D3DXMATRIX.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixScaling-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -93,14 +93,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

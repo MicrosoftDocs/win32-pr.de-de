@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, bei der ein Dienst eine Komponente eines übergeordneten Dienstanbieter ist, die zusammen einen höheren Dienst bilden.
+description: Stellt eine Zuordnung dar, bei der ein Dienst eine Komponente eines übergeordneten Diensts ist, die zusammen einen übergeordneten Dienst bilden.
 ms.assetid: c629d59d-d9d3-4019-a378-cd1d4d31a5d9
 title: CIM_ServiceComponent-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2bfb9943685f8568674e696a76df94fda502fcb7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7684b22bc7488093702e5050524ac6c36f719dd985f537570e0eb1395756e7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118647545"
 ---
-# <a name="cim_servicecomponent-class"></a>CIM- \_ ServiceComponent-Klasse
+# <a name="cim_servicecomponent-class"></a>CIM \_ ServiceComponent-Klasse
 
-Stellt eine Zuordnung dar, bei der ein Dienst eine Komponente eines übergeordneten Dienstanbieter ist, die zusammen einen höheren Dienst bilden.
+Stellt eine Zuordnung dar, bei der ein Dienst eine Komponente eines übergeordneten Diensts ist, die zusammen einen übergeordneten Dienst bilden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ class CIM_ServiceComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ ServiceComponent** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ServiceComponent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ ServiceComponent** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ServiceComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Dienst**
+Datentyp: **\_ CIM-Dienst**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Aggregieren, Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent") [](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Der übergeordnete Dienst.
@@ -68,16 +68,16 @@ Der übergeordnete Dienst.
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Dienst**
+Datentyp: **\_ CIM-Dienst**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Der Komponenten Dienst.
+Der Komponentendienst.
 
 </dd> </dl>
 
@@ -90,16 +90,16 @@ Der Komponenten Dienst.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> </dl>
 
  

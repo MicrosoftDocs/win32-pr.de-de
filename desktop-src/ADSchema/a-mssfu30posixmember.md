@@ -1,11 +1,11 @@
 ---
-title: msSFU-30-POSIX-Member-Attribut
-description: Enthält den DNS-anzeigen amen des Benutzer Teils einer Gruppe.
+title: msSFU-30-Posix-Member-Attribut
+description: Enthält den DN-Anzeigenamen des Teils des Benutzers einer Gruppe.
 ms.assetid: 3e9f703d-6666-4fa5-8116-d77fee0dd98e
 ms.tgt_platform: multiple
 keywords:
-- msSFU-30-POSIX-Member-Attribut AD-Schema
-- msSFU30PosixMember-Attribut AD-Schema
+- MSSFU-30-Posix-Member-Attribut AD-Schema
+- AD-Schema des msSFU30PosixMember-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ac681da2ec5c2d81646b1c40f5db52dffd557a6
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9797d51f13b37aca6b8747d61e178e707e8c77b3b43cb1a0f6daabbf826c12e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118682476"
 ---
-# <a name="mssfu-30-posix-member-attribute"></a>msSFU-30-POSIX-Member-Attribut
+# <a name="mssfu-30-posix-member-attribute"></a>msSFU-30-Posix-Member-Attribut
 
-Enthält den DNS-anzeigen amen des Benutzer Teils einer Gruppe.
+Enthält den DN-Anzeigenamen des Teils des Benutzers einer Gruppe.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | msSFU-30-POSIX-Member                   |
-| LDAP-Display-Name | msSFU30PosixMember                      |
+| CN                | msSFU-30-Posix-Member                   |
+| Ldap-Anzeigename | msSFU30PosixMember                      |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.346             |
-| System-ID-GUID    | c875d82d-2848-4cec-bb50-3c5486d09d57    |
+| System-Id-Guid    | c875d82d-2848-4cec-bb50-3c5486d09d57    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,11 +55,11 @@ Enthält den DNS-anzeigen amen des Benutzer Teils einer Gruppe.
 |------------------------|-------------------------------------|
 | Link-ID                | 2030                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -76,11 +76,11 @@ Enthält den DNS-anzeigen amen des Benutzer Teils einer Gruppe.
 |------------------------|-------------------------------------|
 | Link-ID                | 2030                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -97,11 +97,11 @@ Enthält den DNS-anzeigen amen des Benutzer Teils einer Gruppe.
 |------------------------|-------------------------------------|
 | Link-ID                | 2030                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -118,11 +118,11 @@ Enthält den DNS-anzeigen amen des Benutzer Teils einer Gruppe.
 |------------------------|-------------------------------------|
 | Link-ID                | 2030                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Ist einwertig       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |

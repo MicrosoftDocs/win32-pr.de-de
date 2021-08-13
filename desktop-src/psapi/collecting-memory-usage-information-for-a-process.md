@@ -1,19 +1,19 @@
 ---
-title: Sammeln von Informationen zur Speicherauslastung für einen Prozess
-description: Um die Effizienz der Anwendung zu ermitteln, können Sie die Speicherauslastung untersuchen. Im folgenden Beispielcode wird die getprocessmemoryinfo-Funktion verwendet, um Informationen über die Speicherauslastung eines Prozesses zu erhalten.
+title: Sammeln von Speicherauslastungsinformationen für einen Prozess
+description: Um die Effizienz Ihrer Anwendung zu ermitteln, sollten Sie die Speicherauslastung untersuchen. Im folgenden Beispielcode wird die GetProcessMemoryInfo-Funktion verwendet, um Informationen zur Speicherauslastung eines Prozesses zu erhalten.
 ms.assetid: 23641bf8-3653-4cb9-8008-cd99137ca268
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ead17b8308424be8b959c4043eec606b18292708
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cf9c2217f01c2c0f3a3ee1d2516b2e531cc243f5ac71c4022632d1b1c4dd4983
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462978"
 ---
-# <a name="collecting-memory-usage-information-for-a-process"></a>Sammeln von Informationen zur Speicherauslastung für einen Prozess
+# <a name="collecting-memory-usage-information-for-a-process"></a>Sammeln von Speicherauslastungsinformationen für einen Prozess
 
-Um die Effizienz der Anwendung zu ermitteln, können Sie die Speicherauslastung untersuchen. Im folgenden Beispielcode wird die [**getprocessmemoryinfo**](/windows/desktop/api/Psapi/nf-psapi-getprocessmemoryinfo) -Funktion verwendet, um Informationen über die Speicherauslastung eines Prozesses zu erhalten.
+Um die Effizienz Ihrer Anwendung zu ermitteln, sollten Sie die Speicherauslastung untersuchen. Im folgenden Beispielcode wird die [**GetProcessMemoryInfo-Funktion**](/windows/desktop/api/Psapi/nf-psapi-getprocessmemoryinfo) verwendet, um Informationen zur Speicherauslastung eines Prozesses zu erhalten.
 
 
 ```C++
@@ -92,8 +92,8 @@ int main( void )
 
 
 
-Die Main-Funktion Ruft mithilfe der [**EnumProcesses**](/windows/desktop/api/Psapi/nf-psapi-enumprocesses) -Funktion eine Liste der Prozesse ab. Main Ruft für jeden Prozess die printmemoryinfo-Funktion auf und übergibt dabei den Prozess Bezeichner. Printmemoryinfo ruft wiederum die [**OpenProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocess) -Funktion auf, um das Prozess Handle abzurufen. Wenn **OpenProcess** fehlschlägt, zeigt die Ausgabe nur die Prozess-ID an. Beispielsweise schlägt **OpenProcess** für die Prozesse im Leerlauf und für CSRSS fehl, da ihre Zugriffsbeschränkungen verhindern, dass Code auf Benutzerebene geöffnet wird. Zum Schluss ruft printmemoryinfo die [**getprocessmemoryinfo**](/windows/desktop/api/Psapi/nf-psapi-getprocessmemoryinfo) -Funktion auf, um die Informationen zur Speicherauslastung zu erhalten.
+Die main-Funktion erhält mithilfe der [**EnumProcesses-Funktion**](/windows/desktop/api/Psapi/nf-psapi-enumprocesses) eine Liste von Prozessen. Für jeden Prozess ruft main die PrintMemoryInfo-Funktion auf und über gibt den Prozessbezeichner weiter. PrintMemoryInfo ruft wiederum die [**OpenProcess-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocess) auf, um das Prozesshand handle zu erhalten. Wenn **OpenProcess fehlschlägt,** zeigt die Ausgabe nur den Prozessbezeichner an. Beispielsweise schlägt **OpenProcess für die Leerlauf-** und CSRSS-Prozesse fehl, da ihre Zugriffseinschränkungen verhindern, dass Code auf Benutzerebene sie öffnet. Schließlich ruft PrintMemoryInfo die [**GetProcessMemoryInfo-Funktion**](/windows/desktop/api/Psapi/nf-psapi-getprocessmemoryinfo) auf, um die Speicherauslastungsinformationen zu erhalten.
 
- 
+ 
 
- 
+ 

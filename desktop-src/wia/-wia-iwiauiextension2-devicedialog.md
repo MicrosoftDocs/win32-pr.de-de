@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Wiadevd.h
-ms.openlocfilehash: 94e717184c936ae85ba1cf345a13b44f9bbdce4d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 582a2fe90e6a455b2c0d0119b749a9d86b912b58150d30f3804466ef5bea2a7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439884"
 ---
 # <a name="iwiauiextension2devicedialog-method"></a>IWiaUIExtension2::D eviceDialog-Methode
 
@@ -44,7 +44,7 @@ HRESULT DeviceDialog(
 
 Typ: **PDEVICEDIALOGDATA2 \***
 
-Verweist auf eine [**DEVICEDIALOGDATA2-Struktur,**](-wia-devicedialogdata2.md) die alle Daten enthält, die zum Implementieren des Gerätedialogs erforderlich sind.
+Verweist auf eine [**DEVICEDIALOGDATA2-Struktur,**](-wia-devicedialogdata2.md) die alle Daten enthält, die zum Implementieren des Gerätedialogfelds erforderlich sind.
 
 </dd> </dl>
 
@@ -52,7 +52,7 @@ Verweist auf eine [**DEVICEDIALOGDATA2-Struktur,**](-wia-devicedialogdata2.md) d
 
 Typ: **HRESULT**
 
-Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn der Benutzer den Dialog abbricht, gibt die Methode S \_ FALSE zurück. Wenn bei der Methode ein Fehler auftritt, wird ein entsprechender Fehlercode zurückgegeben. Die folgende Tabelle zeigt einige der möglichen Rückgabestatuscodes.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn der Benutzer das Dialogfeld abbricht, gibt die Methode S \_ FALSE zurück. Wenn bei der Methode ein Fehler auftritt, wird ein entsprechender Fehlercode zurückgegeben. In der folgenden Tabelle sind einige der möglichen Rückgabestatuscodes aufgeführt.
 
 
 
@@ -65,18 +65,18 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn der Benutzer
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die [**IWiaUIExtension2-Schnittstelle**](-wia-iwiauiextension2.md) implementieren und die Systemoberfläche nicht ersetzen möchten, muss diese Methode weiterhin implementiert werden, sollte aber nur E \_ NOTIMPL zurückgeben.
+Wenn Sie die [**IWiaUIExtension2-Schnittstelle**](-wia-iwiauiextension2.md) implementieren und die Benutzeroberfläche des Systems nicht ersetzen möchten, muss diese Methode weiterhin implementiert werden, sollte aber nur E \_ NOTIMPL zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 
 

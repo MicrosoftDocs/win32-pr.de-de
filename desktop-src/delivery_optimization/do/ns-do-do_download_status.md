@@ -1,8 +1,8 @@
 ---
-title: DO_DOWNLOAD_STATUS Struktur
-description: Dient zum Abrufen des Status eines bestimmten Downloads.
+title: DO_DOWNLOAD_STATUS-Struktur
+description: Wird verwendet, um den Status eines bestimmten Downloads abzurufen.
 keywords:
-- DO_DOWNLOAD_STATUS Struktur
+- DO_DOWNLOAD_STATUS-Struktur
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/03/2019
-ms.openlocfilehash: 5e113bb4866ef1033886dbb1579d21aa296d0e5e
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 8775b7daf55d58698d00bcaa2820b909e302933c9f407d1cb6416d6b095a872b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "106338642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118543734"
 ---
-# <a name="do_download_status-structure"></a>DO_DOWNLOAD_STATUS Struktur
+# <a name="do_download_status-structure"></a>DO_DOWNLOAD_STATUS-Struktur
 
-Die **DO_DOWNLOAD_STATUS** Struktur wird verwendet, um den Status eines bestimmten Downloads abzurufen. Sie wird durch Aufrufen der **idodownload:: GetStatus** -Funktion abgerufen.
+Die **DO_DOWNLOAD_STATUS-Struktur** wird verwendet, um den Status eines bestimmten Downloads abzurufen. Sie wird durch Aufrufen der **IDODownload::GetStatus-Funktion** abgerufen.
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -41,15 +41,15 @@ typedef struct _DO_DOWNLOAD_STATUS
 
 `BytesTotal`
 
-Die Gesamtzahl der herunter zuladenden bytes.
+Die Gesamtzahl der herunterzuladende Bytes.
 
 `BytesTransferred`
 
-Die Anzahl von Bytes, die bereits heruntergeladen wurden.
+Die Anzahl der Bytes, die bereits heruntergeladen wurden.
 
 `State`
 
-Der aktuelle Download Zustand, wie von der **dodownloadstate** -Enumeration definiert.
+Der aktuelle Downloadstatus, wie durch die **DODownloadState-Enumeration** definiert.
 
 `Error`
 
@@ -63,6 +63,6 @@ Die erweiterten Fehlerinformationen (sofern vorhanden), die dem aktuellen Downlo
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Do. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Header** | Do.h |

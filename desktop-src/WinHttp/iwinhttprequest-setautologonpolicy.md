@@ -1,7 +1,7 @@
 ---
 description: Legt die aktuelle Richtlinie für die automatische Anmeldung fest.
 ms.assetid: bc8e8c9c-574e-4392-b336-2c06947022ee
-title: 'Iwinhttprequest:: "abtautologonpolicy"-Methode'
+title: IWinHttpRequest::SetAutoLogonPolicy-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: cad8bd0080d10a1395a0a9d275951ff961a60bf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6375d5c5b6c9b6c8acebcdd05a2ad778bb37e75c067a44100a5c67a92876248
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118562886"
 ---
-# <a name="iwinhttprequestsetautologonpolicy-method"></a>Iwinhttprequest:: "abtautologonpolicy"-Methode
+# <a name="iwinhttprequestsetautologonpolicy-method"></a>IWinHttpRequest::SetAutoLogonPolicy-Methode
 
-Die **setautologonpolicy** -Methode legt die aktuelle [Richtlinie für die automatische Anmeldung](authentication-in-winhttp.md)fest.
+Die **SetAutoLogonPolicy-Methode** legt die aktuelle [Richtlinie für die automatische Anmeldung fest.](authentication-in-winhttp.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT SetAutoLogonPolicy(
 
 <dl> <dt>
 
-*Autologonpolicy* \[ in\]
+*AutoLogonPolicy* \[ In\]
 </dt> <dd>
 
 Gibt die aktuelle Richtlinie für die automatische Anmeldung an.
@@ -49,22 +49,22 @@ Gibt die aktuelle Richtlinie für die automatische Anmeldung an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standard Richtlinie ist [**autologonpolicy \_ onlyifbypassproxy**](winhttprequestautologonpolicy.md).
+Die Standardrichtlinie ist [**AutoLogonPolicy \_ OnlyIfBypassProxy.**](winhttprequestautologonpolicy.md)
 
-Rufen Sie **setautologonpolicy** auf, um die automatische Anmelde Richtlinie festzulegen, bevor [**Sie Send**](iwinhttprequest-send.md) aufrufen, um die Anforderung zu senden.
+Rufen **Sie SetAutoLogonPolicy auf,** um die Richtlinie für die automatische Anmeldung vor dem Aufruf [**von Send**](iwinhttprequest-send.md) zum Senden der Anforderung zu festlegen.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen Windows XP und Windows 2000 finden Sie im Abschnitt Laufzeitanforderungen der [WinHTTP-Startseite.](winhttp-start-page.md)
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispielskript wird veranschaulicht, wie die Richtlinie für die automatische Anmeldung so festgelegt wird, dass NTLM niemals verwendet oder die Authentifizierung automatisch ausgehandelt
+Das folgende Skriptbeispiel zeigt, wie Sie die Richtlinie für die automatische Anmeldung so festlegen, dass die NTLM- oder Negotiate-Authentifizierung nie automatisch verwendet wird.
 
 
 ```JScript
@@ -89,20 +89,20 @@ HttpReq.Send();
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

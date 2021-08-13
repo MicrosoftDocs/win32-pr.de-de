@@ -1,19 +1,19 @@
 ---
-description: Der Installer legt die sharedwindows-Eigenschaft fest, wenn das System als freigegebene Fenster betrieben wird.
+description: Das Installationsprogramm legt die SharedWindows-Eigenschaft fest, wenn das System als Shared Windows verwendet wird.
 ms.assetid: 22dd5ee9-25d3-4bc6-9181-13095497a1d3
-title: Sharedwindows-Eigenschaft
+title: SharedWindows-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 965be70d3d49d4ec73e18cdea713952852ee659e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2e4270f5e486ac79b557f27c77b4d141edd9d85c237a04c74711c7c1f92e987d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118624704"
 ---
-# <a name="sharedwindows-property"></a>Sharedwindows-Eigenschaft
+# <a name="sharedwindows-property"></a>SharedWindows-Eigenschaft
 
-Der Installer legt die **sharedwindows** -Eigenschaft fest, wenn das System als freigegebene Fenster betrieben wird.
+Das Installationsprogramm legt die **SharedWindows-Eigenschaft** fest, wenn das System als Shared Windows verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Der Installer legt die **sharedwindows** -Eigenschaft fest, wenn das System als 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind.<br/> |
 
 
 

@@ -1,29 +1,29 @@
 ---
-description: Die sfpcatalog-Tabelle enthält die von Windows Me verwendeten Kataloge.
+description: Die SFPCatalog-Tabelle enthält die Kataloge, die von Windows Me verwendet werden.
 ms.assetid: e9dc65a9-4ec9-4310-b03a-a2c38720ca8c
-title: Sfpcatalog-Tabelle
+title: SFPCatalog-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08fe887644faf6cf0a5cda626bbf757e9f448ef1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97498ff6437967a4a588be7b957aea130dad201699d55fad3abace6ff094b271
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118624891"
 ---
-# <a name="sfpcatalog-table"></a>Sfpcatalog-Tabelle
+# <a name="sfpcatalog-table"></a>SFPCatalog-Tabelle
 
-Die sfpcatalog-Tabelle enthält die von Windows Me verwendeten Kataloge.
+Die SFPCatalog-Tabelle enthält die Kataloge, die von Windows Me verwendet werden.
 
-Die sfpcatalog-Tabelle weist die folgenden Spalten auf.
+Die SFPCatalog-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte     | Typ                       | Schlüssel | Nullwerte zulässig |
+| Spalte     | Typ                       | Key | Nullwerte zulässig |
 |------------|----------------------------|-----|----------|
-| Sfpcatalog | [Filename](filename.md)   | J   | N        |
+| SFPCatalog | [Filename](filename.md)   | J   | N        |
 | Katalog    | [Binär (Binary)](binary.md)       | N   | N        |
-| Abhängigkeit | [Großformatige](formatted.md) | N   | J        |
+| Abhängigkeit | [Formatiert](formatted.md) | N   | J        |
 
 
 
@@ -33,34 +33,34 @@ Die sfpcatalog-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="SFPCatalog"></span><span id="sfpcatalog"></span><span id="SFPCATALOG"></span>Sfpcatalog
+<span id="SFPCatalog"></span><span id="sfpcatalog"></span><span id="SFPCATALOG"></span>SFPCatalog
 </dt> <dd>
 
-Der kurze Dateiname für den Katalog. Da Kataloge keine Version aufweisen, kann der in dieser Spalte angegebene Katalog einen Katalog überschreiben, der denselben Namen hat und bereits auf dem lokalen System installiert ist. Weitere Informationen finden Sie [im Thema zur Datei Versions](neither-file-has-a-version.md)Verwaltung.
+Der kurze Dateiname für den Katalog. Da Kataloge keine Version aufweisen, kann der in dieser Spalte angegebene Katalog einen Katalog mit dem gleichen Namen überschreiben, der bereits auf dem lokalen System installiert ist. Weitere Informationen finden Sie im Thema Dateiversionsierung. [Keine Datei verfügt über eine Version.](neither-file-has-a-version.md)
 
 </dd> <dt>
 
-<span id="Catalog"></span><span id="catalog"></span><span id="CATALOG"></span>Sieren
+<span id="Catalog"></span><span id="catalog"></span><span id="CATALOG"></span>Katalog
 </dt> <dd>
 
 Binärdaten für den Katalog.
 
 </dd> <dt>
 
-<span id="Dependency"></span><span id="dependency"></span><span id="DEPENDENCY"></span>Gkeit
+<span id="Dependency"></span><span id="dependency"></span><span id="DEPENDENCY"></span>Abhängigkeit
 </dt> <dd>
 
-Der in diesem Feld angegebene Katalog ist das übergeordnete Element des abhängigen Katalogs, der im Feld sfpcatalog angegeben ist. Geben Sie den kurzen Dateinamen des übergeordneten Katalogs in das Abhängigkeits Feld ein. Dieses Feld ist ein Schlüssel zurück in die sfpcatalog-Spalte. Bei der Abhängigkeit wird die Groß-/Kleinschreibung beachtet.
+Der in diesem Feld angegebene Katalog ist das übergeordnete Element des abhängigen Katalogs, der im Feld SFPCatalog angegeben ist. Geben Sie den kurzen Dateinamen des übergeordneten Katalogs in das Feld Abhängigkeit ein. Dieses Feld ist ein Schlüssel zurück in die Spalte SFPCatalog. Bei der Abhängigkeits übereinstimmung wird die Groß-/Kleinschreibung beachtet.
 
-Wenn das Abhängigkeits Feld auf einen anderen Datensatz in dieser sfpcatalog-Tabelle verweist, wird der übergeordnete Katalog vor dem abhängigen Katalog installiert.
+Wenn das Dependency-Feld auf einen anderen Datensatz in dieser SFPCatalog-Tabelle verweist, wird der übergeordnete Katalog vor dem abhängigen Katalog installiert.
 
-Wenn das Abhängigkeits Feld auf einen übergeordneten Katalog verweist, der im Feld sfpcatalog der Tabelle nicht vorhanden ist, und wenn der übergeordnete Katalog nicht bereits installiert ist, tritt bei der Installation ein Fehler auf.
+Wenn das Dependency-Feld auf einen übergeordneten Katalog verweist, der nicht im SFPCatalog-Feld dieser Tabelle vorhanden ist, und wenn der übergeordnete Katalog noch nicht installiert ist, tritt bei der Installation ein Fehler auf.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der [Aktion installsfpcatalogfile](installsfpcatalogfile-action.md) werden die [Komponenten Tabelle](component-table.md), die [Dateitabelle](file-table.md), die [filesfpcatalog-Tabelle](filesfpcatalog-table.md) und die sfpcatalog-Tabelle abgefragt.
+Die [InstallSFPCatalogFile-Aktion](installsfpcatalogfile-action.md) fragt die [Komponententabelle,](component-table.md) [die Dateitabelle,](file-table.md)die [FileSFPCatalog-Tabelle](filesfpcatalog-table.md) und die SFPCatalog-Tabelle ab.
 
 ## <a name="validation"></a>Überprüfen
 

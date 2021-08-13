@@ -1,6 +1,6 @@
 ---
 title: RoFailFastWithErrorContextInternal2-Funktion
-description: Löst im aktuellen Prozess eine nicht fort Setz Bare Ausnahme aus und ermöglicht es Ihnen außerdem, zusätzlichen Fehler Kontext einzuschließen, der noch nicht vom Betriebssystem erfasst wurde.
+description: Löst eine nicht kontinuierbare Ausnahme im aktuellen Prozess aus und ermöglicht ihnen auch das Aufnehmen zusätzlicher Fehlerkontexte, die nicht bereits vom Betriebssystem erfasst wurden.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 03/13/2020
@@ -16,16 +16,16 @@ api_location:
 api_name:
 - RoFailFastWithErrorContextInternal2
 targetos: Windows
-ms.openlocfilehash: 84584c339851ecbf8df5d6dbda2aaa575ca6487b
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: a2e8e2e357b7c4768596ca36cb48cdf1bb2cfdbd839ecc6949a607975d6000c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "106338301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118560626"
 ---
 # <a name="rofailfastwitherrorcontextinternal2-function"></a>RoFailFastWithErrorContextInternal2-Funktion
 
-Löst im aktuellen Prozess eine nicht fort Setz Bare Ausnahme aus und ermöglicht es Ihnen außerdem, zusätzlichen Fehler Kontext einzuschließen, der nicht bereits vom Betriebssystem erfasst wurde.
+Löst eine nicht kontinuierbare Ausnahme im aktuellen Prozess aus und ermöglicht es Ihnen auch, zusätzlichen Fehlerkontext ein include, der nicht bereits vom Betriebssystem erfasst wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ void WINAPI RoFailFastWithErrorContextInternal2(
 
 Typ: **[HRESULT](../../com/structure-of-com-error-codes.md)**
 
-Das **HRESULT** , das dem aktuellen Fehler zugeordnet ist. Die Ausnahme wird für jeden Wert von " *hrError*" ausgelöst.
+Das **HRESULT,** das dem aktuellen Fehler zugeordnet ist. Die Ausnahme wird für jeden Wert von *hrError ausgelöst.*
 
 `cStowedExceptions`
 
-Typ: **[ulong](../../winprog/windows-data-types.md)**
+Typ: **[ULONG](../../winprog/windows-data-types.md)**
 
-Die Anzahl der Elemente im " *astowedexceptionpointer* "-Array.
+Die Anzahl der Elemente im *Array aStowedExceptionPointers.*
 
 `aStowedExceptionPointers`
 
 Typ: **[PSTOWED_EXCEPTION_INFORMATION_V2](../../wer/stowed-exception-information-v2.md)\[\]**
 
-Ein Array von Zeigern auf [**STOWED_EXCEPTION_INFORMATION_V2**](../../wer/stowed-exception-information-v2.md) Strukturen. Jede Struktur enthält Informationen, in denen eine verstaute Ausnahme beschrieben wird. Die Informationen in diesen Strukturen werden dann an Windows-Fehlerberichterstattung (wer) zusammen mit den Informationen über die gestaut-Ausnahme gesendet, die von der Plattform aufgezeichnet wurden.
+Ein Array von Zeigern auf [**STOWED_EXCEPTION_INFORMATION_V2**](../../wer/stowed-exception-information-v2.md) Strukturen. Jede -Struktur enthält Informationen, die eine stowed-Ausnahme beschreiben. Die Informationen in diesen Strukturen werden dann an Windows-Fehlerberichterstattung (WER) zusammen mit den stowed-Ausnahmeinformationen übermittelt, die von der Plattform erfasst wurden.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**RoFailFastWithErrorContextInternal2** ist nicht mit einer Import Bibliothek und einer Header Datei verknüpft. Sie können ihn zuerst mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) -Funktion (Laden `ComBase.dll` ) und dann durch Aufrufen der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen, um die Adresse von **RoFailFastWithErrorContextInternal2** abzurufen.
+**RoFailFastWithErrorContextInternal2** ist weder einer Importbibliothek noch einer Headerdatei zugeordnet. Sie können sie aufrufen, indem Sie zuerst die [**LoadLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) (zum Laden) und dann die GetProcAddress-Funktion aufrufen, um die Adresse von `ComBase.dll` **RoFailFastWithErrorContextInternal2 abzurufen.** [](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)
 
-Weitere Informationen finden Sie unter [rofailfastwitherrorcontext-Funktion](/windows/win32/api/roerrorapi/nf-roerrorapi-rofailfastwitherrorcontext).
+Weitere Informationen finden Sie unter [RoFailFastWithErrorContext-Funktion](/windows/win32/api/roerrorapi/nf-roerrorapi-rofailfastwitherrorcontext).
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Zielplattform** | Windows |
-| **Header** | – |
-| **Bibliothek** | – |
-| **DLL** | ComBase.dll |
+| **Header** | Nicht zutreffend |
+| **Bibliothek** | Nicht zutreffend |
+| **Dll** | ComBase.dll |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-* [Rofailfastwitherrorcontext-Funktion](/windows/win32/api/roerrorapi/nf-roerrorapi-rofailfastwitherrorcontext)
+* [RoFailFastWithErrorContext-Funktion](/windows/win32/api/roerrorapi/nf-roerrorapi-rofailfastwitherrorcontext)

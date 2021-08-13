@@ -1,27 +1,27 @@
 ---
-title: Ideliveryoptimizationjob-Methoden
-description: Die ideliveryoptimizationjob-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IDeliveryOptimizationJob-Methoden
+description: Die IDeliveryOptimizationJob-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: DEFCF117-AECC-4EF5-B935-302081BE7D64
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40b8acaead05c7b60e300dfd5f32378ecd4f761b
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: e3ae079d5155f2e3ecf9499e8f4d6ca3bff43688bea7920b5fc343df917741be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103948340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118542035"
 ---
-# <a name="ideliveryoptimizationjob-methods"></a>Ideliveryoptimizationjob-Methoden
+# <a name="ideliveryoptimizationjob-methods"></a>IDeliveryOptimizationJob-Methoden
 
-Die [**ideliveryoptimizationjob**](ideliveryoptimizationjob.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IDeliveryOptimizationJob-Schnittstelle**](ideliveryoptimizationjob.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                     | BESCHREIBUNG                                                                                         |
+| Thema                                                                                     | Beschreibung                                                                                         |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| [**ADDFILEWITHRANGES-Methode**](ideliveryoptimizationjob-addfilewithranges.md)<br/> | Fügt einem Download Auftrag eine Datei hinzu und gibt die Bereiche der Datei an, die Sie herunterladen möchten.<br/> |
+| [**AddFileWithRanges-Methode**](ideliveryoptimizationjob-addfilewithranges.md)<br/> | Fügt einem Downloadauftrag eine Datei hinzu und gibt die Bereiche der Datei an, die Sie herunterladen möchten.<br/> |
 
 
 
