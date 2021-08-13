@@ -1,5 +1,5 @@
 ---
-description: Die wbemtime-Klasse vereinfacht Konvertierungen zwischen verschiedenen Windows-und ANSI C-Lauf Zeitformaten. Weitere Informationen finden Sie unter wbemtimespan Class Methods.
+description: Die WBEMTime-Klasse ermöglicht Konvertierungen zwischen verschiedenen Windows- und ANSI C-Laufzeitformaten. Weitere Informationen finden Sie auch unter WBEMTimeSpan-Klassenmethoden.
 ms.assetid: b633bc8c-9d02-4bcf-8528-10773fb5ae7a
 ms.tgt_platform: multiple
 title: WBEMTime-Klasse (WbemTime.h)
@@ -15,35 +15,35 @@ api_type:
 api_location:
 - FrameDynOS.dll
 - FrameDyn.dll
-ms.openlocfilehash: 5d2f06b06db998dc18a876e0e5534e1d86c6ae89
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16b4e8933113386e877aec23313f74695b321f932c10f0e2730bcf5888675cc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118553246"
 ---
-# <a name="wbemtime-class"></a>Wbemtime-Klasse
+# <a name="wbemtime-class"></a>WBEMTime-Klasse
 
-\[Die **wbemtime** -Klasse ist Teil des WMI-Anbieter-Frameworks, das jetzt als Endzustand betrachtet wird, und keine weiteren Entwicklungen, Verbesserungen oder Updates für nicht sicherheitsrelevante Probleme verfügbar sind, die diese Bibliotheken betreffen. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die **WBEMTime-Klasse** ist Teil des WMI-Anbieterframeworks, das jetzt als endgültiger Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Erweiterungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
 
-Die **wbemtime** -Klasse vereinfacht Konvertierungen zwischen verschiedenen Windows-und ANSI C-Lauf Zeitformaten. Weitere Informationen finden Sie unter [**wbemtimespan Class Methods**](/windows/desktop/api/WbemTime/nl-wbemtime-wbemtimespan).
+Die **WBEMTime-Klasse** ermöglicht Konvertierungen zwischen verschiedenen Windows- und ANSI C-Laufzeitformaten. Weitere Informationen finden Sie auch unter [**WBEMTimeSpan-Klassenmethoden.**](/windows/desktop/api/WbemTime/nl-wbemtime-wbemtimespan)
 
 ## <a name="members"></a>Member
 
-Die **wbemtime** -Klasse verfügt über diese Typen von Membern:
+Die **WBEMTime-Klasse** verfügt über diese Typen von Membern:
 
 -   [Konstruktoren](#constructors)
 -   [Methoden](#methods)
 
 ### <a name="constructors"></a>Konstruktoren
 
-Die **wbemtime** -Klasse verfügt über diese Konstruktoren.
+Die **WBEMTime-Klasse** verfügt über diese Konstruktoren.
 
 
 
 | Konstruktor                           | BESCHREIBUNG                                                                                                   |
 |:--------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [**Wbemtime**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-wbemtime(constbstr)) | Konstruktor, der Konvertierungen zwischen verschiedenen Windows-und ANSI C-Lauf Zeitformaten erleichtert.<br/> |
+| [**WBEMTime**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-wbemtime(constbstr)) | Konstruktor, der Konvertierungen zwischen verschiedenen Windows und ANSI C-Laufzeitformaten ermöglicht.<br/> |
 
 
 
@@ -51,43 +51,43 @@ Die **wbemtime** -Klasse verfügt über diese Konstruktoren.
 
 ### <a name="methods"></a>Methoden
 
-Die **wbemtime** -Klasse verfügt über diese Methoden.
+Die **WBEMTime-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                                                                            |
+| Methode                                                           | Beschreibung                                                                                                                            |
 |:-----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| [**Klartext**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-clear)                                  | Legt die Zeit im **wbemtime** -Objekt auf eine ungültige Zeit fest.<br/>                                                                |
-| [**GetBSTR**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getbstr)                              | Zeigt die Uhrzeit als **BSTR** -Wert an.<br/>                                                                                      |
-| [**Getdmtf**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getdmtf)                              | Ruft die Zeit als **BSTR** -Wert im CIM-DateTime-Format ab.<br/>                                                                   |
-| [**Getdmtf nonntfs**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getdmtfnonntfs)                | Ruft ein DMTF-Datum ab, das auf einem FAT-oder [Datums-und Uhrzeit Format](date-and-time-format.md) basiert, bei dem die UTC nicht bekannt ist.<br/> |
-| [**' GetFileTime '**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getfiletime)                      | Ruft die Zeit als MFC- **FILETIME** -Struktur ab.<br/>                                                                             |
-| [**Getlocaloffsetfordate**](/previous-versions/windows/desktop/legacy/aa394049(v=vs.85)) | Überladen. Gibt den Offset in Minuten (+ oder-) zwischen GMT und Ortszeit für die im Argument angegebene Zeit zurück.<br/>         |
-| [**Getstructtm**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getstructtm)                      | Ruft die Zeit als ANSI C-Laufzeitstruktur- **TM** -Struktur ab.<br/>                                                                |
-| [**GetSYSTEMTIME**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getsystemtime)                  | Ruft die Zeit als MFC- **Systemzeit** -Struktur ab.<br/>                                                                           |
-| [**GetTime**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-gettime)                              | Ruft die Zeit als 64-Bit-Ganzzahl ab.<br/>                                                                                          |
-| [**GetTime \_ t**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-gettime_t)                         | Ruft die Zeit als ANSI C-Lauf Zeitvariable ab \_ .<br/>                                                                       |
-| [**IsOK**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-isok)                                    | Gibt an, ob das **wbemtime** -Objekt eine gültige Zeit darstellt.<br/>                                                          |
-| [**Setdmtf**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-setdmtf)                              | Legt die Zeit im **wbemtime** -Objekt im CIM-DateTime-Format fest.<br/>                                                            |
+| [**Klar**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-clear)                                  | Legt die Zeit im **WBEMTime-Objekt** auf eine ungültige Zeit fest.<br/>                                                                |
+| [**GetBSTR**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getbstr)                              | Stellt die Zeit als **BSTR-Wert** dar.<br/>                                                                                      |
+| [**GetDMTF**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getdmtf)                              | Ruft die Uhrzeit als **BSTR-Wert** im CIM-datetime-Format ab.<br/>                                                                   |
+| [**GetDMTFNonNtfs**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getdmtfnonntfs)                | Ruft ein DMTF-Datum ab, das auf einem FAT- oder [einem Datums- und Uhrzeitformat](date-and-time-format.md) basiert, bei dem die UTC nicht bekannt ist.<br/> |
+| [**GetFILETIME**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getfiletime)                      | Ruft die Zeit als MFC **FILETIME-Struktur** ab.<br/>                                                                             |
+| [**GetLocalOffsetForDate**](/previous-versions/windows/desktop/legacy/aa394049(v=vs.85)) | Überladen. Gibt den Offset in Minuten (+ oder -) zwischen GMT und Ortszeit für die im Argument angegebene Zeit zurück.<br/>         |
+| [**GetStructtm**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getstructtm)                      | Ruft die Zeit als ANSI **C-Laufzeitstruktur tm-Struktur** ab.<br/>                                                                |
+| [**GetSYSTEMTIME**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-getsystemtime)                  | Ruft die Zeit als **MFC-SYSTEMTIME-Struktur** ab.<br/>                                                                           |
+| [**Gettime**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-gettime)                              | Ruft die Zeit als 64-Bit-Ganzzahl ab.<br/>                                                                                          |
+| [**Gettime \_ t**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-gettime_t)                         | Ruft die Zeit als ANSI C-Laufzeitvariable \_ t ab.<br/>                                                                       |
+| [**IsOk**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-isok)                                    | Gibt an, ob das **WBEMTime-Objekt** eine gültige Zeit darstellt.<br/>                                                          |
+| [**SetDMTF**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-setdmtf)                              | Legt die Uhrzeit im **WBEMTime-Objekt** im CIM-datetime-Format fest.<br/>                                                            |
 
 
 
  
 
-## <a name="wbemtime-overloaded-operators"></a>Überladene wbemtime
+## <a name="wbemtime-overloaded-operators"></a>Überladene WBEMTime-Operatoren
 
-Das **wbemtime** -Objekt definiert die folgenden überladenen Operatoren.
+Das **WBEMTime-Objekt** definiert die folgenden überladenen Operatoren.
 
 
 
-| Überladene wbemtime                                                                                                                                                                                                                                                                                                                                                                                                                                        | BESCHREIBUNG                                                                                                                       |
+| Überladene WBEMTime-Operatoren                                                                                                                                                                                                                                                                                                                                                                                                                                        | Beschreibung                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [**Operator =**](/previous-versions/windows/desktop/legacy/aa394050(v=vs.85))                                                                                                                                                                                                                                                                                                                                                                                                                       | Der *Zuweisungs* Operator vereinfacht Konvertierungen zwischen verschiedenen Windows-und ANSI C-Lauf Zeitformaten.                           |
-| [**Operator +**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-add)                                                                                                                                                                                                                                                                                                                                                                                                                         | Der *Additions Operator erhöht* die Zeit eines Objekts um eine Zeitspanne. Das Ergebnis wird in einem neuen **wbemtime** -Objekt zurückgegeben.              |
-| [**Operator + =**](/windows/win32/api/directxmath/nf-directxmath-operator-add-assign)                                                                                                                                                                                                                                                                                                                                                                                                                  | Der Operator zum *Hinzufügen und zuweisen* erhöht die Zeit eines Objekts um eine Zeitspanne.                                                             |
-| [**KOM**](/previous-versions/windows/desktop/legacy/aa394051(v=vs.85))                                                                                                                                                                                                                                                                                                                                                                                                                       | *Subtraktions* Operator dekrementert die Zeit eines Objekts um die Zeit eines anderen Objekts. Das Ergebnis wird in einem neuen **wbemtime** -Objekt zurückgegeben. |
-| [**Operator-=**](/windows/win32/api/directxmath/nf-directxmath-operator-sub-assign)                                                                                                                                                                                                                                                                                                                                                                                                                 | Der *Subtract-Operator und der Assign-* Operator dekrementierungen die Zeit eines Objekts um eine Zeitspanne.                                                        |
-| [**Operator = =**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-equal-equal-to)-[**Operator! =**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-not-equal-to)<br/> [**Operator >**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-greater-than)<br/> [**Operator >=**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-greater-than-equal-to)<br/> [**Operator <**](/windows/win32/api/wbemtime/nf-wbemtime-wbemtime-operator-less-than)<br/> [**Operator <=**](/windows/win32/api/wbemtime/nf-wbemtime-wbemtime-operator-less-than-equal-to)<br/> | Vergleichs Operatoren vergleichen zwei **wbemtime** -Objekte.                                                                            |
+| [**operator =**](/previous-versions/windows/desktop/legacy/aa394050(v=vs.85))                                                                                                                                                                                                                                                                                                                                                                                                                       | *Der* Zuweisungsoperator ermöglicht Konvertierungen zwischen verschiedenen Windows- und ANSI C-Laufzeitformaten.                           |
+| [**Operator +**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-add)                                                                                                                                                                                                                                                                                                                                                                                                                         | *Additionsoperator* erhöht die Zeit eines Objekts um einen Zeitraum. Das Ergebnis wird in einem neuen **WBEMTime-Objekt** zurückgegeben.              |
+| [**Operator +=**](/windows/win32/api/directxmath/nf-directxmath-operator-add-assign)                                                                                                                                                                                                                                                                                                                                                                                                                  | *Der Add-and-Assign-Operator* erhöht die Zeit eines Objekts um einen Zeitraum.                                                             |
+| [**Operator :**](/previous-versions/windows/desktop/legacy/aa394051(v=vs.85))                                                                                                                                                                                                                                                                                                                                                                                                                       | *Der Subtraktionsoperator* dekrementiert die Zeit eines Objekts um die Zeit eines anderen Objekts. Das Ergebnis wird in einem neuen **WBEMTime-Objekt** zurückgegeben. |
+| [**operator -=**](/windows/win32/api/directxmath/nf-directxmath-operator-sub-assign)                                                                                                                                                                                                                                                                                                                                                                                                                 | *Der Subtraktions- und* Zuweisungsoperator dekrementiert die Zeit eines Objekts um einen Zeitraum.                                                        |
+| [**operator ==**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-equal-equal-to)[**operator !=**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-not-equal-to)<br/> [**operator >**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-greater-than)<br/> [**operator >=**](/windows/desktop/api/WbemTime/nf-wbemtime-wbemtime-operator-greater-than-equal-to)<br/> [**operator <**](/windows/win32/api/wbemtime/nf-wbemtime-wbemtime-operator-less-than)<br/> [**operator <=**](/windows/win32/api/wbemtime/nf-wbemtime-wbemtime-operator-less-than-equal-to)<br/> | Vergleichsoperatoren vergleichen zwei **WBEMTime-Objekte.**                                                                            |
 
 
 
@@ -101,7 +101,7 @@ Das **wbemtime** -Objekt definiert die folgenden überladenen Operatoren.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                                                                                |
-| Header<br/>                   | <dl> <dt>Wbemtime. h</dt> </dl>                                                                         |
+| Header<br/>                   | <dl> <dt>WbemTime.h</dt> </dl>                                                                         |
 | DLL<br/>                      | <dl> <dt>FrameDynOS.dll; </dt> <dt>FrameDyn.dll</dt> </dl> |
 
 

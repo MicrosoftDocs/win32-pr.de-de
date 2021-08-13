@@ -1,19 +1,19 @@
 ---
-description: Listet die Vektor Vergleichsfunktionen auf.
+description: Listet die Vektorvergleichsfunktionen auf.
 ms.assetid: 8caad40f-ab8e-db2f-da11-18f3d3ccf6ef
-title: Vektor Vergleichsfunktionen
+title: Vektorvergleichsfunktionen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a283c9c6510fba76f82e7c5de0741021008aac1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c294388aaa7e29454b189729468076f3266347ab2b0876aed71d9d0b5adad3c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118500360"
 ---
-# <a name="vector-comparison-functions"></a>Vektor Vergleichsfunktionen
+# <a name="vector-comparison-functions"></a>Vektorvergleichsfunktionen
 
-Listet die Vektor Vergleichsfunktionen auf.
+Listet die Vektorvergleichsfunktionen auf.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,17 +21,17 @@ Listet die Vektor Vergleichsfunktionen auf.
 
 | Thema                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Xmvector EQUAL**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequal)<br/>                     | Führt einen komponentenbasierten Test auf Gleichheit von zwei Vektoren aus.<br/>                                                                                                                                                                                                     |
-| [**Xmvector equalint**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequalint)<br/>               | Führt einen Komponenten Test für die Gleichheit von zwei Vektoren durch, wobei jede Komponente als ganze Zahl ohne Vorzeichen behandelt wird.<br/>                                                                                                                                                 |
-| [**Xmvector equalintr**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequalintr)<br/>             | Führt einen komponentenbasierten Test für die Gleichheit von zwei Vektoren durch, wobei jede Komponente als ganze Zahl ohne Vorzeichen behandelt wird. Außerdem legt diese Funktion einen Vergleichswert fest, der mithilfe von Funktionen wie [**xmcomparisonalltrue**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)überprüft werden kann.<br/> |
-| [**Xmvector equalr**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequalr)<br/>                   | Führt einen komponentenbasierten Test auf Gleichheit von zwei Vektoren aus und legt einen Vergleichswert fest, der mithilfe von Funktionen wie [**xmcomparisonalltrue**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)überprüft werden kann.<br/>                                                                         |
-| [**Xmvector Greater**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreater)<br/>                 | Führt einen Komponenten bezogenen Test für größer als zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                            |
-| [**Xmvector greaterOrEqual**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreaterorequal)<br/>   | Führt einen Komponenten Test für einen größer-als-oder-gleich-Wert zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                   |
-| [**Xmvector greaterorequalr**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreaterorequalr)<br/> | Führt einen Komponenten bezogenen Test für größer oder gleich zwischen zwei Vektoren aus und legt einen Vergleichswert fest, der mithilfe von Funktionen wie [**xmcomparisonalltrue**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)überprüft werden kann.<br/>                                                       |
-| [**Xmvector greaterr**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreaterr)<br/>               | Führt einen Komponenten Test für größer als zwischen zwei Vektoren aus und legt einen Vergleichswert fest, der mithilfe von Funktionen wie [**xmcomparisonalltrue**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)überprüft werden kann.<br/>                                                                |
-| [**Xmvector less**](/windows/win32/api/directxmath/nf-directxmath-xmvectorless)<br/>                       | Führt einen Komponenten bezogenen Test für weniger als zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                               |
-| [**Xmvector lessOrEqual**](/windows/win32/api/directxmath/nf-directxmath-xmvectorlessorequal)<br/>         | Führt einen komponentenbasierten Test für einen kleiner-als-oder-gleich-Wert zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                      |
-| [**Xmvector netarequal**](/windows/win32/api/directxmath/nf-directxmath-xmvectornearequal)<br/>             | Führt einen Komponenten Test für die Gleichheit von zwei Vektoren innerhalb eines angegebenen Schwellenwerts aus. <br/>                                                                                                                                                                           |
+| [**XMVectorEqual**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequal)<br/>                     | Führt einen Komponententest auf Gleichheit von zwei Vektoren aus.<br/>                                                                                                                                                                                                     |
+| [**XMVectorEqualInt**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequalint)<br/>               | Führt einen Komponententest auf gleichheit von zwei Vektoren durch und behandelt jede Komponente als ganze Zahl ohne Vorzeichen.<br/>                                                                                                                                                 |
+| [**XMVectorEqualIntR**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequalintr)<br/>             | Führt einen Komponententest auf Gleichheit von zwei Vektoren durch und behandelt jede Komponente als ganze Zahl ohne Vorzeichen. Darüber hinaus legt diese Funktion einen Vergleichswert fest, der mithilfe von Funktionen wie [**XMComparisonAllTrue untersucht werden kann.**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)<br/> |
+| [**XMVectorEqualR**](/windows/win32/api/directxmath/nf-directxmath-xmvectorequalr)<br/>                   | Führt einen Komponententest auf Gleichheit von zwei Vektoren durch und legt einen Vergleichswert fest, der mithilfe von Funktionen wie [**XMComparisonAllTrue untersucht werden kann.**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)<br/>                                                                         |
+| [**XMVectorGreater**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreater)<br/>                 | Führt einen Komponententest für größer als zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                            |
+| [**XMVectorGreaterOrEqual**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreaterorequal)<br/>   | Führt einen Komponententest auf größer als oder gleich zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                   |
+| [**XMVectorGreaterOrEqualR**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreaterorequalr)<br/> | Führt einen Komponententest auf größer als oder gleich zwischen zwei Vektoren aus und legt einen Vergleichswert fest, der mithilfe von Funktionen wie [**XMComparisonAllTrue untersucht werden kann.**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)<br/>                                                       |
+| [**XMVectorGreaterR**](/windows/win32/api/directxmath/nf-directxmath-xmvectorgreaterr)<br/>               | Führt einen Komponententest für größer als zwischen zwei Vektoren aus und legt einen Vergleichswert fest, der mithilfe von Funktionen wie [**XMComparisonAllTrue untersucht werden kann.**](/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue)<br/>                                                                |
+| [**XMVectorLess**](/windows/win32/api/directxmath/nf-directxmath-xmvectorless)<br/>                       | Führt einen Komponententest für kleiner als zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                               |
+| [**XMVectorLessOrEqual**](/windows/win32/api/directxmath/nf-directxmath-xmvectorlessorequal)<br/>         | Führt einen Komponententest auf einen Kleiner-als-oder-Gleich-Wert zwischen zwei Vektoren aus.<br/>                                                                                                                                                                                      |
+| [**XMVectorNearEqual**](/windows/win32/api/directxmath/nf-directxmath-xmvectornearequal)<br/>             | Führt einen Komponententest auf Gleichheit von zwei Vektoren innerhalb eines bestimmten Schwellenwerts aus. <br/>                                                                                                                                                                           |
 
 
 
@@ -41,7 +41,7 @@ Listet die Vektor Vergleichsfunktionen auf.
 
 <dl> <dt>
 
-[Bibliotheks Vektor Funktionen in directxmath](ovw-xnamath-reference-functions-vector.md)
+[Vektorfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector.md)
 </dt> </dl>
 
  

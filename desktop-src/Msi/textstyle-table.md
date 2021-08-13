@@ -1,31 +1,31 @@
 ---
-description: In der TextStyle-Tabelle werden verschiedene Schriftart Stile aufgelistet, die in Steuerelementen mit Text verwendet werden
+description: In der Tabelle TextStyle werden verschiedene Schriftschnitte aufgeführt, die in Steuerelementen mit Text verwendet werden.
 ms.assetid: a351e67a-8f51-41bf-9202-56488b870fa7
 title: TextStyle-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c9993362228e37f01c0e53683755f7bd1310eaa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d6f8a5b3141314722bc5b92e34ea214fa8e1505babfbc8b7f942899e6c6779c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118623488"
 ---
 # <a name="textstyle-table"></a>TextStyle-Tabelle
 
-In der TextStyle-Tabelle werden verschiedene Schriftart Stile aufgelistet, die in Steuerelementen mit Text verwendet werden
+In der Tabelle TextStyle werden verschiedene Schriftschnitte aufgeführt, die in Steuerelementen mit Text verwendet werden.
 
-Die TextStyle-Tabelle weist die folgenden Spalten auf.
+Die TextStyle-Tabelle enthält die folgenden Spalten.
 
 
 
 | Spalte    | Typ                               | Schlüssel | Nullwerte zulässig |
 |-----------|------------------------------------|-----|----------|
-| Textart | [Bezeichner](identifier.md)       | J   | N        |
-| Fakename  | [Text](text.md)                   | N   | N        |
+| TextStyle | [Identifier](identifier.md)       | J   | N        |
+| GesichtsName  | [Text](text.md)                   | N   | N        |
 | Size      | [Integer](integer.md)             | N   | N        |
-| Color     | [Doubleiteger](doubleinteger.md) | N   | J        |
-| Stylebits | [Integer](integer.md)             | N   | J        |
+| Color     | [DoubleInteger](doubleinteger.md) | N   | J        |
+| StyleBits | [Integer](integer.md)             | N   | J        |
 
 
 
@@ -35,51 +35,51 @@ Die TextStyle-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="TextStyle"></span><span id="textstyle"></span><span id="TEXTSTYLE"></span>Textart
+<span id="TextStyle"></span><span id="textstyle"></span><span id="TEXTSTYLE"></span>TextStyle
 </dt> <dd>
 
-Diese Spalte ist der Name des Schriftart Stils. Dieser Name kann in die Text Zeichenfolge eingebettet werden, um eine Formatänderung anzugeben. Beachten Sie, dass der Name des Schriftart Stils, der in diesem Feld verwendet wird, nicht auf die folgenden Zeichen enden muss: \_ UL. Siehe [Hinzufügen von Steuerelementen und Text](adding-controls-and-text.md).
+Diese Spalte ist der Name des Schriftschnitts. Dieser Name kann in die Textzeichenfolge eingebettet werden, um eine Stiländerung anzugeben. Beachten Sie, dass der in diesem Feld verwendete Schriftartstilname nicht mit den folgenden Zeichen enden darf: \_ UL. Weitere Informationen [finden Sie unter Hinzufügen von Steuerelementen und Text.](adding-controls-and-text.md)
 
 </dd> <dt>
 
-<span id="FaceName"></span><span id="facename"></span><span id="FACENAME"></span>Fakename
+<span id="FaceName"></span><span id="facename"></span><span id="FACENAME"></span>FaceName
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen der Schriftart angibt. Die Zeichenfolge darf höchstens 31 Zeichen lang sein.
+Eine Zeichenfolge, die den Namen der Schriftart angibt. Die Zeichenfolge darf nicht länger als 31 Zeichen sein.
 
 </dd> <dt>
 
 <span id="Size"></span><span id="size"></span><span id="SIZE"></span>Größe
 </dt> <dd>
 
-Der Schrift Grad, der in Punkten gemessen wird. Dabei muss es sich um eine nicht negative Zahl handeln.
+Der in Punkten gemessene Schriftgrad. Dies muss eine nicht negative Zahl sein.
 
 </dd> <dt>
 
 <span id="Color"></span><span id="color"></span><span id="COLOR"></span>Farbe
 </dt> <dd>
 
-Diese Spalte gibt die Textfarbe an, die von einem [Text Steuer](text-control.md)Element angezeigt wird. Alle anderen Steuerelement Typen verwenden immer die Standard Textfarbe. Der in dieser Spalte eingegebene Wert sollte mithilfe der folgenden Formel berechnet werden: 65536 \* Blue + 256 \* Green + Red, wobei rot, grün und blau jeweils im Bereich 0-255 angezeigt werden. Der Wert darf nicht größer als 16777215 sein. Dies ist der Wert für weiß. Der Wert ist 0 für schwarz, 255 für Rot, 65280 für Grün, 16711680 für blau und 8421504 für grau. Wenn das Feld leer gelassen wird, wird die Standardfarbe angegeben.
+Diese Spalte gibt die Textfarbe an, die von einem [Textsteuerfeld angezeigt wird.](text-control.md) Alle anderen Steuerelementtypen verwenden immer die Standardtextfarbe. Der in dieser Spalte enthaltene Wert sollte mit der folgenden Formel berechnet werden: 65536 blau + 256 grün + rot, wobei Rot, Grün und Blau jeweils im Bereich von \* \* 0 bis 255 liegen. Der Wert darf den Wert 16777215, der der Wert für Weiß ist, nicht überschreiten. Der Wert ist 0 für Schwarz, 255 für Rot, 65280 für Grün, 16711680 blau und 8421504 grau. Wenn Sie das Feld leer lassen, wird die Standardfarbe angegeben.
 
-Platzieren Sie keine transparenten [Text Steuerelemente](text-control.md) oberhalb von farbigen Bitmaps. Der Text ist möglicherweise nicht sichtbar, wenn der Benutzer das Anzeige Farbschema ändert. Beispielsweise kann Text unsichtbar werden, wenn der Benutzer den hohen Kontrast Parameter für Barrierefreiheit festlegt.
+Platzieren Sie transparente [Textsteuerelemente nicht](text-control.md) über farbigen Bitmaps. Der Text ist möglicherweise nicht sichtbar, wenn der Benutzer das Anzeigefarbschema ändert. Beispielsweise kann Text unsichtbar werden, wenn der Benutzer den Parameter für hohen Kontrast für die Barrierefreiheit festgibt.
 
 </dd> <dt>
 
-<span id="StyleBits"></span><span id="stylebits"></span><span id="STYLEBITS"></span>Stylebits
+<span id="StyleBits"></span><span id="stylebits"></span><span id="STYLEBITS"></span>StyleBits
 </dt> <dd>
 
 Eine Kombination von Bits, die die Formatierung für den Text angibt.
 
-Die einzelnen stilbits weisen die folgenden Werte auf.
+Die einzelnen Stilbits verfügen über die folgenden Werte.
 
 
 
-| Konstante                             | Hexadezimal | Decimal | Stil      |
+| Konstante                             | Hexadezimal | Decimal | Style      |
 |--------------------------------------|-------------|---------|------------|
-| **msidbtextstylestylebisibold**      | 0x001       | 1       | Fett       |
-| **msidbtextstylestylebitsitalic**    | 0x002       | 2       | Kursiv     |
-| **msidbtextstylestylebider-Unterstreichung** | 0x004       | 4       | Underline  |
-| **msidbtextstylestylebisid**    | 0x008       | 8       | Streiken |
+| **msidbTextStyleStyleBitsBold**      | 0x001       | 1       | Fett       |
+| **msidbTextStyleStyleBitsItalic**    | 0x002       | 2       | Kursiv     |
+| **msidbTextStyleStyleBitsUnderline** | 0x004       | 4       | Underline  |
+| **msidbTextStyleStyleBitsStrike**    | 0x008       | 8       | Ausschlagen |
 
 
 

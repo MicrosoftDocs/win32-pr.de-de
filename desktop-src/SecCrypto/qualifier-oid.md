@@ -1,7 +1,7 @@
 ---
 description: Ruft die Objekt-ID des Qualifizierers ab.
 ms.assetid: 58ec2af7-f085-43bc-8ea8-926cb840abe9
-title: Qualifizierer. Oid-Eigenschaft
+title: Qualifier.OID-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: a86aaf7b60b98811e2d1fbef79c520448f1d47f3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 42c2f83d4fa8be31991a98b6fe4cfc6a741e2190cd12d54bfd5e968951472bcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118901050"
 ---
-# <a name="qualifieroid-property"></a>Qualifizierer. Oid-Eigenschaft
+# <a name="qualifieroid-property"></a>Qualifier.OID-Eigenschaft
 
-\[Die **OID** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace, indem Sie den Konstruktor aufrufen, der eine OID als Parameter annimmt, und dann die OID für Zertifikat Richtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinien Informationen in der Zertifikat Richtlinien Erweiterung sind.\]
+\[Die **OID-Eigenschaft** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates,**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) indem Sie den Konstruktor aufrufen, der eine OID als Parameter annimmt, und dann die OID für Zertifikatrichtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinieninformationen in der Zertifikatrichtlinienerweiterung sind.\]
 
-Die **OID** -Eigenschaft ruft die Objekt-ID des Qualifizierers ab. Dies ist die Standard Eigenschaft.
+Die **OID-Eigenschaft** ruft die Objekt-ID des Qualifizierers ab. Dies ist die Standardeigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ Qualifier.OID As OID
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**OID**](oid.md) -Objekt, das den Qualifizierer identifiziert.
+Ein [**OID-Objekt,**](oid.md) das den Qualifizierer identifiziert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,12 +45,12 @@ Ein [**OID**](oid.md) -Objekt, das den Qualifizierer identifiziert.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

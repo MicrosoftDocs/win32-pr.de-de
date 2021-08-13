@@ -1,9 +1,9 @@
 ---
 title: Objektattribut
-description: Das Attribut \ Object \ Interface identifiziert eine COM-Schnittstelle.
+description: Das Schnittstellenattribut \object\identifiziert eine COM-Schnittstelle.
 ms.assetid: 51e34ef3-eea7-45f4-b961-a9f742700fe5
 keywords:
-- Objekt Attribut-Mittel l
+- Objektattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb2c21246282646dcf6ae488411316e07ab62b2f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2ddf51e020cdcd5d13dde6938a58ea5e51f22d9dd03f8632312b3d6b8453a9ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118383508"
 ---
 # <a name="object-attribute"></a>Objektattribut
 
-Das **\[ Object \]** Interface-Attribut identifiziert eine COM-Schnittstelle. (Eine Schnittstellen Attribut Liste, in der das **\[ Object \]** -Attribut nicht enthalten ist, gibt eine DCE-RPC-Schnittstelle an.)
+Das **\[ \] Objektschnittstellenattribut** identifiziert eine COM-Schnittstelle. (Eine Schnittstellenattributliste, die das **\[ \] Objektattribut** nicht enthält, gibt eine DCE-RPC-Schnittstelle an.)
 
 ``` syntax
 [ 
@@ -39,21 +39,21 @@ interface interface-name : base-interface
 
 <dl> <dt>
 
-*Zeichenfolge-UUID* 
+*string-uuid* 
 </dt> <dd>
 
-Eine UUID-Zeichenfolge, die vom Hilfsprogramm uuidgen generiert wird. Sie können die UUID-Zeichenfolge in Anführungszeichen einschließen.
+Eine vom Uuidgen-Hilfsprogramm generierte UUID-Zeichenfolge. Sie können die UUID-Zeichenfolge in Anführungszeichen umschließen.
 
 </dd> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Andere Attribute, die auf die Schnittstelle als Ganzes angewendet werden.
+Andere Attribute, die für die Schnittstelle als Ganzes gelten.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Der Name der Schnittstelle.
@@ -63,17 +63,17 @@ Der Name der Schnittstelle.
 *Basisschnittstelle* 
 </dt> <dd>
 
-Die COM-Schnittstelle, von der diese Schnittstelle abgeleitet ist. Die Basisschnittstelle muss [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown), [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)oder eine andere COM-Schnittstelle sein, die entweder direkt oder indirekt von **IUnknown** oder **IDispatch** abgeleitet ist.
+Die COM-Schnittstelle, von der diese Schnittstelle ableitung. Die Basisschnittstelle muss [**IUnknown,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)oder eine andere COM-Schnittstelle sein, die entweder direkt oder indirekt von **IUnknown** oder **IDispatch abstammt.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Schnittstellen Attribut Liste für eine COM-Schnittstelle muss das **\[** [**UUID**](uuid.md) - **\]** Attribut enthalten, aber das **\[** [**Versions**](version.md) Attribut kann nicht enthalten sein **\]** .
+Eine Schnittstellenattributliste für eine COM-Schnittstelle muss das **\[** [**uuid-Attribut**](uuid.md) enthalten, darf **\]** jedoch nicht das **\[** [**Versionsattribut**](version.md) **\]** enthalten.
 
-Standardmäßig generiert das Kompilieren einer COM-Schnittstelle mit dem Mittell-Compiler die Dateien, die zum Erstellen einer Proxy-dll benötigt werden. Diese DLL enthält den Code, der die Verwendung der benutzerdefinierten COM-Schnittstelle sowohl von Client Anwendungen als auch von Objekt Servern unterstützt. Wenn die Schnittstellen Attribut Liste für eine COM-Schnittstelle jedoch das **\[** [**lokale**](local.md) **\]** Attribut angibt, generiert der Mittel l-Compiler nur die Schnittstellen Header Datei.
+Standardmäßig werden beim Kompilieren einer COM-Schnittstelle mit dem MIDL-Compiler die Dateien generiert, die zum Erstellen einer Proxy-DLL erforderlich sind. Diese DLL enthält den Code zur Unterstützung der Verwendung der benutzerdefinierten COM-Schnittstelle durch Clientanwendungen und Objektserver. Wenn jedoch die Schnittstellenattributliste für eine COM-Schnittstelle das lokale Attribut angibt, generiert der **\[** [](local.md) **\]** MIDL-Compiler nur die Schnittstellenheaderdatei.
 
-Der mittlerer l-Compiler generiert automatisch einen Schnittstellen Datentyp für eine COM-Schnittstelle. Als Alternative können Sie [**typedef**](typedef.md) mit dem [**Interface**](interface.md) -Schlüsselwort verwenden, um einen Schnittstellen Datentyp explizit zu definieren. Die Schnittstellen Spezifikation kann dann den Schnittstellen Datentyp in Funktionsparametern und Rückgabe Werten, [**Struktur**](struct.md) -und [**Union**](union.md) -Membern sowie andere Typdeklarationen verwenden. Das folgende Beispiel veranschaulicht die Verwendung eines automatisch generierten [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Datentyps:
+Der MIDL-Compiler generiert automatisch einen Schnittstellendatentyp für eine COM-Schnittstelle. Alternativ können Sie [**typedef**](typedef.md) mit dem Schlüsselwort [**interface**](interface.md) verwenden, um explizit einen Schnittstellendatentyp zu definieren. Die Schnittstellenspezifikation kann dann den Schnittstellendatentyp in Funktionsparametern und [**Rückgabewerten,**](struct.md) Struktur- und [**Union-Membern**](union.md) und anderen Typdeklarationen verwenden. Das folgende Beispiel veranschaulicht die Verwendung [](/windows/desktop/api/objidl/nn-objidl-istream) eines automatisch generierten IStream-Datentyps:
 
 ``` syntax
 [
@@ -87,13 +87,13 @@ interface IStream : IUnknown
 }
 ```
 
-In einer COM-Schnittstelle werden alle Schnittstellenmember-Funktionen als virtuelle Funktionen angenommen. Eine virtuelle Funktion weist einen impliziten **this** -Zeiger als ersten Parameter auf. Die virtuelle Funktions Tabelle enthält einen Eintrag für jede Schnittstellenmember-Funktion.
+In einer COM-Schnittstelle werden alle Schnittstellen-Memberfunktionen als virtuelle Funktionen angenommen. Eine virtuelle Funktion verfügt über einen **impliziten this-Zeiger** als ersten Parameter. Die virtuelle Funktionstabelle enthält einen Eintrag für jede Schnittstellen-Memberfunktion.
 
-Nicht **\[** [**lokale**](local.md) **\]** objektschnittstellenmember-Funktionen müssen über einen Rückgabewert von HRESULT oder SCODE verfügen. (Beachten Sie, dass in früheren Versionen der in der Mitte zulässigen Member Funktionen " [**void**](void.md)" zurückgegeben wurden. Ab der mittleren Version 3,0 generiert die Rückgabe von **void** jedoch einen Compilerfehler.) Wenn ein Rückgabewert von HRESULT oder SCODE vorhanden ist, wird eine Ausnahme durch die generierten Proxys abgefangen, und der Ausnahme Code wird im Rückgabewert zurückgegeben. Wenn Ihre Anwendung die Fehler ignorieren kann, die während eines Remote Prozedur Aufrufes auftreten, können Sie HRESULT als Rückgabetyp angeben, ohne den Rückgabewert nach dem-Befehl zu überprüfen.
+Memberfunktionen **\[** [**der nicht**](local.md) **\]** lokalen Objektschnittstelle müssen den Rückgabewert HRESULT oder SCODE haben. (Beachten Sie, dass frühere Versionen von MIDL es Memberfunktionen ermöglicht haben, void [**zurück zu geben.**](void.md) Ab MIDL Version 3.0 generiert die Rückgabe von **void** jedoch einen Compilerfehler.) Der Rückgabewert HRESULT oder SCODE bedeutet, dass die generierten Proxys die Ausnahme abfangen und den Ausnahmecode im Rückgabewert zurückgeben, wenn während eines Remoteaufrufs eine Ausnahme generiert wird. Wenn Ihre Anwendung es sich leisten kann, Fehler zu ignorieren, die während eines Remoteprozeduraufrufs auftreten, können Sie HRESULT als Rückgabetyp angeben, ohne den Rückgabewert nach dem Aufruf zu überprüfen.
 
-Wenn Sie eine alte Anwendung neu kompilieren, kann das Ändern der Rückgabe Typen zu Problemen mit der Abwärtskompatibilität führen, wenn der Server das neu eingeführte Ergebnis an den Client sendet. Anstatt den Rückgabetyp zu ändern, können Sie die Funktion, die " [**void**](void.md) " zurückgibt, mit dem " **\[** [**\_ Callas**](call-as.md) "- **\]** Attribut bezeichnen und somit zu einer lokalen Funktion führen. Definieren Sie dann eine zugehörige Remote Funktion mit denselben Parametern, aber mit dem Rückgabetyp HRESULT. Die lokale Funktion kann ggf. eine Ausnahme auf Grundlage dieses HRESULT-Werts auslöst.
+Wenn Sie eine alte Anwendung neu kompilieren, kann das Ändern der Rückgabetypen zu Abwärtskompatibilitätsproblemen führen, wenn der Server das neu eingeführte Ergebnis an den Client sendet. Als Alternative zum Ändern des Rückgabetyps können Sie die Funktion, die [**void**](void.md) zurückgibt, mit dem Aufruf als Attribut bezeichnen, wodurch sie zu einer lokalen **\[** [**\_**](call-as.md) **\]** Funktion wird. Definieren Sie dann eine zugehörige Remotefunktion mit den gleichen Parametern, aber mit dem Rückgabetyp HRESULT. Die lokale Funktion kann bei Bedarf eine Ausnahme basierend auf diesem HRESULT-Wert auslösen.
 
-Das **\[ Object \]** -Attribut ist nicht verfügbar, wenn Sie mit dem/OSF-Schalter des mittleren [](-osf.md) -Compilers kompilieren.
+Das **\[ \] Objektattribut** ist nicht verfügbar, wenn Sie mit dem MIDL-Compilerschalter [**/osf kompilieren.**](-osf.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -122,33 +122,33 @@ interface ILocalInterface : ISomeOldCOMInterface
 
 <dl> <dt>
 
-[**aufzurufen \_ als**](call-as.md)
+[**aufrufen \_ als**](call-as.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**IID \_ ist**](iid-is.md)
+[**iid \_ is**](iid-is.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[**nah**](local.md)
+[**lokal**](local.md)
 </dt> <dt>
 
 [**/osf**](-osf.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> <dt>
 
-[**UUID**](uuid.md)
+[**Uuid**](uuid.md)
 </dt> <dt>
 
 [**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

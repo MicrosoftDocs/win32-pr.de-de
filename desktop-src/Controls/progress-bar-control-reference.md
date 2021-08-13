@@ -1,19 +1,19 @@
 ---
 title: Statusanzeige
-description: Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Statusanzeige-Steuerelementen verwendet werden.
+description: Dieser Abschnitt enthält Informationen zu den Programmierelementen, die mit Statusanzeige-Steuerelementen verwendet werden.
 ms.assetid: vs|controls|~\controls\progbar\reflist.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08b99a31bbbd3b80de0d528d5232c79c28af1e1f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 03c9cd66326336cd3733f881f3f19d82fedc3bf8d8420f83035bf20dc914c7c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118670651"
 ---
 # <a name="progress-bar"></a>Statusanzeige
 
-Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Statusanzeige-Steuerelementen verwendet werden.
+Dieser Abschnitt enthält Informationen zu den Programmierelementen, die mit Statusanzeige-Steuerelementen verwendet werden.
 
 ### <a name="overviews"></a>Übersichten
 
@@ -21,7 +21,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit St
 
 | Thema                                            | Inhalte                                                                                                           |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [Statusanzeige-Steuerelement](progress-bar-control.md) | Eine Statusanzeige ist ein Fenster, mit dem eine Anwendung den Fortschritt eines langwierigen Vorgangs angeben kann.<br/> |
+| [Statusanzeige-Steuerelement](progress-bar-control.md) | Eine Statusanzeige ist ein Fenster, das eine Anwendung verwenden kann, um den Fortschritt eines längeren Vorgangs anzugeben.<br/> |
 
 
 
@@ -33,22 +33,22 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit St
 
 | Thema                                       | Inhalte                                                                                                                                                                                                                                                              |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**PBM-Delta Torys \_**](pbm-deltapos.md)       | Verschiebt die aktuelle Position einer Statusleiste um ein angegebenes Inkrement und zeichnet den Balken neu, um die neue Position widerzuspiegeln. <br/>                                                                                                                                 |
-| [**PBM \_ getbarcolor**](pbm-getbarcolor.md) | Ruft die Farbe der Statusanzeige ab.<br/>                                                                                                                                                                                                                        |
-| [**PBM \_ GetBkColor**](pbm-getbkcolor.md)   | Ruft die Hintergrundfarbe der Statusanzeige ab.<br/>                                                                                                                                                                                                             |
-| [**PBM- \_ GetPos**](pbm-getpos.md)           | Ruft die aktuelle Position der Statusanzeige ab. <br/>                                                                                                                                                                                                       |
-| [**PBM- \_ GetRange**](pbm-getrange.md)       | Ruft Informationen über die aktuellen höchst-und tiefstgrenzen eines angegebenen Statusanzeige-Steuer Elements ab. <br/>                                                                                                                                                              |
-| [**PBM \_ GetState**](pbm-getstate.md)       | Ruft den Status der Statusanzeige ab.<br/>                                                                                                                                                                                                                        |
-| [**PBM- \_ getstep**](pbm-getstep.md)         | Ruft das Schritt Inkrement für eine Statusanzeige ab. Der Schritt Inkrement ist der Betrag, um den die Statusanzeige bei jedem Empfang einer [**PBM- \_ StepIt**](pbm-stepit.md) -Nachricht die aktuelle Position vergrößert.<br/>                                               |
-| [**PBM \_ setbarcolor**](pbm-setbarcolor.md) | Legt die Farbe der Statusanzeige Leiste im Statusanzeige-Steuerelement fest. <br/>                                                                                                                                                                                 |
-| [**PBM \_ SetBkColor**](pbm-setbkcolor.md)   | Legt die Hintergrundfarbe in der Statusanzeige fest. <br/>                                                                                                                                                                                                            |
-| [**PBM \_ setmarquee**](pbm-setmarquee.md)   | Legt die Statusanzeige auf den Marquee-Modus fest. Dies bewirkt, dass die Statusanzeige wie ein Marquee verschoben wird.<br/>                                                                                                                                                                |
-| [**PBM- \_ SetPos**](pbm-setpos.md)           | Legt die aktuelle Position für eine Statusanzeige fest und zeichnet den Balken neu, um die neue Position widerzuspiegeln. <br/>                                                                                                                                                             |
-| [**PBM-über \_ Tragung**](pbm-setrange.md)       | Legt den minimalen und maximalen Wert für eine Statusanzeige fest und zeichnet den Balken neu, um den neuen Bereich widerzuspiegeln.<br/>                                                                                                                                                       |
-| [**PBM \_ SETRANGE32**](pbm-setrange32.md)   | Legt den Bereich eines Statusanzeige-Steuer Elements auf einen 32-Bit-Wert fest. <br/>                                                                                                                                                                                               |
-| [**PBM- \_ SetState**](pbm-setstate.md)       | Legt den Status der Statusanzeige fest.<br/>                                                                                                                                                                                                                        |
-| [**PBM- \_ SetStep**](pbm-setstep.md)         | Gibt das Schritt Inkrement für eine Statusanzeige an. Der Schritt Inkrement ist der Betrag, um den die Statusanzeige bei jedem Empfang einer [**PBM- \_ StepIt**](pbm-stepit.md) -Nachricht die aktuelle Position vergrößert. Standardmäßig ist das Schritt Inkrement auf 10 festgelegt. <br/> |
-| [**PBM- \_ StepIt**](pbm-stepit.md)           | Verschiebt die aktuelle Position für eine Statusanzeige um das Schritt Inkrement und zeichnet den Balken neu, um die neue Position widerzuspiegeln. Eine Anwendung legt das Schritt Inkrement fest, indem die [**PBM- \_ SetStep**](pbm-setstep.md) -Nachricht gesendet wird. <br/>                                |
+| [**PBM \_ DELTAPOS**](pbm-deltapos.md)       | Erhöht die aktuelle Position einer Statusanzeige um ein angegebenes Inkrement und gezeichnet den Balken neu, um die neue Position widerzuspiegeln. <br/>                                                                                                                                 |
+| [**PBM \_ GETBARCOLOR**](pbm-getbarcolor.md) | Ruft die Farbe der Statusanzeige ab.<br/>                                                                                                                                                                                                                        |
+| [**PBM \_ GETBKCOLOR**](pbm-getbkcolor.md)   | Ruft die Hintergrundfarbe der Statusanzeige ab.<br/>                                                                                                                                                                                                             |
+| [**PBM \_ GETPOS**](pbm-getpos.md)           | Ruft die aktuelle Position der Statusanzeige ab. <br/>                                                                                                                                                                                                       |
+| [**PBM \_ GETRANGE**](pbm-getrange.md)       | Ruft Informationen zu den aktuellen hohen und niedrigen Grenzwerten eines bestimmten Statusanzeige-Steuerelements ab. <br/>                                                                                                                                                              |
+| [**PBM \_ GETSTATE**](pbm-getstate.md)       | Ruft den Status der Statusanzeige ab.<br/>                                                                                                                                                                                                                        |
+| [**PBM \_ GETSTEP**](pbm-getstep.md)         | Ruft das Schrittinkrement für eine Statusanzeige ab. Das Schrittinkrement ist der Betrag, um den die Statusanzeige ihre aktuelle Position erhöht, wenn sie eine [**PBM \_ STEPIT-Nachricht**](pbm-stepit.md) empfängt.<br/>                                               |
+| [**PBM \_ SETBARCOLOR**](pbm-setbarcolor.md) | Legt die Farbe der Statusanzeigeleiste im Statusanzeige-Steuerelement fest. <br/>                                                                                                                                                                                 |
+| [**PBM \_ SETBKCOLOR**](pbm-setbkcolor.md)   | Legt die Hintergrundfarbe in der Statusleiste fest. <br/>                                                                                                                                                                                                            |
+| [**PBM \_ SETMARQUEE**](pbm-setmarquee.md)   | Legt die Statusanzeige auf den Festlaufmodus fest. Dies bewirkt, dass sich die Statusanzeige wie ein Marquee bewegt.<br/>                                                                                                                                                                |
+| [**PBM \_ SETPOS**](pbm-setpos.md)           | Legt die aktuelle Position für eine Statusanzeige fest und zeichnet die Leiste neu, um die neue Position widerzuspiegeln. <br/>                                                                                                                                                             |
+| [**PBM \_ SETRANGE**](pbm-setrange.md)       | Legt die Minimal- und Höchstwerte für eine Statusanzeige fest und zeichnet die Leiste neu, um den neuen Bereich widerzuspiegeln.<br/>                                                                                                                                                       |
+| [**PBM \_ SETRANGE32**](pbm-setrange32.md)   | Legt den Bereich eines Statusanzeige-Steuerelements auf einen 32-Bit-Wert fest. <br/>                                                                                                                                                                                               |
+| [**PBM \_ SETSTATE**](pbm-setstate.md)       | Legt den Status der Statusanzeige fest.<br/>                                                                                                                                                                                                                        |
+| [**PBM \_ SETSTEP**](pbm-setstep.md)         | Gibt das Schrittinkrement für eine Statusanzeige an. Das Schrittinkrement ist der Betrag, um den die Statusanzeige ihre aktuelle Position erhöht, wenn sie eine [**PBM \_ STEPIT-Nachricht**](pbm-stepit.md) empfängt. Standardmäßig ist das Schrittinkrement auf 10 festgelegt. <br/> |
+| [**PBM \_ STEPIT**](pbm-stepit.md)           | Erhöht die aktuelle Position für eine Statusanzeige um den Schrittinkrement und gezeichnet den Balken neu, um die neue Position widerzuspiegeln. Eine Anwendung legt das Schrittinkrement fest, indem die [**PBM \_ SETSTEP-Nachricht**](pbm-setstep.md) gesendet wird. <br/>                                |
 
 
 
@@ -60,7 +60,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit St
 
 | Thema                      | Inhalte                                                                                                                                                                 |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Pbrange**](/windows/desktop/api/Commctrl/ns-commctrl-pbrange) | Enthält Informationen zu den höchst-und tiefstgrenzen eines Statusanzeige-Steuer Elements. Diese Struktur wird mit der [**PBM- \_ GetRange**](pbm-getrange.md) -Nachricht verwendet. <br/> |
+| [**PBRANGE**](/windows/desktop/api/Commctrl/ns-commctrl-pbrange) | Enthält Informationen zu den hohen und niedrigen Grenzwerten eines Statusanzeige-Steuerelements. Diese Struktur wird mit der [**PBM \_ GETRANGE-Nachricht**](pbm-getrange.md) verwendet. <br/> |
 
 
 
@@ -72,7 +72,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit St
 
 | Thema                                                          | Inhalte                                                                            |
 |----------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [Stile der Statusanzeige-Steuerelemente](progress-bar-control-styles.md) | Die folgenden Steuerelement Stile werden von den **Status** Anzeige-Steuerelementen unterstützt:<br/> |
+| [Statusleisten-Steuerelementstile](progress-bar-control-styles.md) | Die folgenden Steuerelementstile werden von **Progress Bar-Steuerelementen** unterstützt:<br/> |
 
 
 

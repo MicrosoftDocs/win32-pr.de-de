@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Non-Members-Attribut
-description: Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherheitselement ist, aber für das die Bereichs Regeln gelten.
+description: Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member", jedoch mit angewendeten Bereichsregeln.
 ms.assetid: 11d3d030-3643-4ed2-a52e-a57f32e9597f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-nicht-Members-Attribut
-- AD-Schema für MSDS-nonmembers-Attribut
+- MS-DS-Nicht-Member-Attribut AD-Schema
+- MSDS-NonMembers-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca8ca19af90f2f534f974863aa7d766f6be4624b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 350f5bde228304f991b2c80f51e4e748ba8f2b91209dcf75e39dddad71546ecb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118683724"
 ---
 # <a name="ms-ds-non-members-attribute"></a>ms-DS-Non-Members-Attribut
 
-Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherheitselement ist, aber für das die Bereichs Regeln gelten.
+Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member", jedoch mit angewendeten Bereichsregeln.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-nicht-Member                       |
-| LDAP-Display-Name | MSDS-nonmembers                         |
+| CN                | ms-DS-Non-Members                       |
+| Ldap-Anzeigename | msDS-NonMembers                         |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Azrollen-Administrator                           |
-| Aktualisierungshäufigkeit  | Bei Initialisierung und Richtlinien Änderung.    |
+| Aktualisieren von Berechtigungen  | AzRoles Admin                           |
+| Updatehäufigkeit  | Bei Initialisierung und Richtlinienänderung.    |
 | Attribute-Id      | 1.2.840.113556.1.4.1793                 |
 | System-ID-GUID    | cafcb1de-f23c-46b5-adf7-1e64957bd5db    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -42,13 +42,13 @@ Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherhei
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherhei
 |------------------------|-------------------------------------|
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Ist einwertig       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -77,11 +77,11 @@ Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherhei
 |------------------------|-------------------------------------|
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Ist einwertig       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -98,11 +98,11 @@ Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherhei
 |------------------------|-------------------------------------|
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Ist einwertig       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -119,11 +119,11 @@ Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherhei
 |------------------------|-------------------------------------|
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |
@@ -140,11 +140,11 @@ Dieses Attribut erfüllt den gleichen Zweck wie das Attribut, das kein Sicherhei
 |------------------------|-------------------------------------|
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
-| System-Only            | False                               |
-| Ist-einwertig       | False                               |
-| Ist indiziert             | False                               |
-| Im globalen Katalog      | False                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                        |
+| System-Only            | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
+| Ist indiziert             | Falsch                               |
+| Im globalen Katalog      | Falsch                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                        |
 | Range-Lower            | \-                                  |
 | Range-Upper            | \-                                  |
 | Search-Flags           | 0x00000000                          |

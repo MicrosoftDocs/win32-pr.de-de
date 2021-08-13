@@ -1,7 +1,7 @@
 ---
-description: Die m \_ hpalette-Member-Variable ist ein Handle für die logische Palette, die von diesem Objekt verwaltet wird.
+description: Die m \_ hPalette-Membervariable ist ein Handle für die logische Palette, die von diesem Objekt verwaltet wird.
 ms.assetid: 8c73adc1-0c01-4518-a0dd-17c7bff6c92b
-title: 'Cimagepalette:: m_hPalette Member (winutil. h)'
+title: CImagePalette::m_hPalette-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2009e483c636cc8f4bf68fc561efa64fd0a3e4f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4525b0af31190a6de8bf312f297f4714591818fde1bf61e23798fe1b6e8a3cb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402550"
 ---
-# <a name="cimagepalettem_hpalette-member"></a>Cimagepalette:: m \_ hpalette-Member
+# <a name="cimagepalettem_hpalette-member"></a>CImagePalette::m \_ hPalette-Member
 
-Die Element `m_hPalette` Variable ist ein Handle für die logische Palette, die von diesem Objekt verwaltet wird.
+Die `m_hPalette` Membervariable ist ein Handle für die logische Palette, die von diesem Objekt verwaltet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HPALETTE m_hPalette;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

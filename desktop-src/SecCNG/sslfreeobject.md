@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Schlüssel-, Hash-oder Anbieter Objekt frei.
+description: Gibt ein Schlüssel-, Hash- oder Anbieterobjekt frei.
 ms.assetid: 73fa0a08-4654-4515-bdb2-9951936b689a
-title: Sslfreobject-Funktion (sslprovider. h)
+title: SslFreeObject-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: e7d10059942080e7794da7e6b87613189dcf9844
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7415ac31147f08bec038da5af57e8a4bc0cc4d2d3f39cb3b8391f42dfcff21b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906489"
 ---
-# <a name="sslfreeobject-function"></a>Sslfreobject-Funktion
+# <a name="sslfreeobject-function"></a>SslFreeObject-Funktion
 
-Die **sslfreobject** -Funktion gibt ein Schlüssel-, Hash-oder Anbieter Objekt frei.
+Die **SslFreeObject-Funktion** gibt ein Schlüssel-, Hash- oder Anbieterobjekt frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ SECURITY_STATUS WINAPI SslFreeObject(
 
 <dl> <dt>
 
-*hobject* \[ in\]
+*hObject* \[ In\]
 </dt> <dd>
 
-Das Handle des-Objekts, das freigegeben werden soll.
+Das Handle des frei zu gebenden Objekts.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -56,18 +56,18 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ist, gibt sie 0 (null) zurück.
 
-Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
+Wenn die Funktion fehlschlägt, gibt sie einen Fehlerwert ungleich 0 (null) zurück.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende:
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl>    | Ein internes Handle ist ungültig.<br/>  |
-| <dl> <dt>**Status \_ Ungültiges \_ handle**</dt> <dt>0xc0000008l</dt> </dl> | Das angegebene Handle ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl>    | Ein internes Handle ist ungültig.<br/>  |
+| <dl> <dt>**STATUS \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0xC0000008L</dt> </dl> | Das bereitgestellte Handle ist ungültig.<br/> |
 
 
 
@@ -79,9 +79,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

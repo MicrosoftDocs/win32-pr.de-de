@@ -1,35 +1,35 @@
 ---
-title: Funktionen (Windows-Touchgesten)
-description: Dieser Abschnitt enthält Funktionen für Windows-Touchgesten.
+title: Funktionen (Windows Touchgesten)
+description: Dieser Abschnitt enthält Funktionen für Windows Touchgesten.
 ms.assetid: 830031d1-eb8d-45d4-b66e-3f4fbb96ae13
 keywords:
-- Windows-Fingereingabe, Funktionen
-- Windows-Toucheingabe, Gesten
+- Windows Toucheingabe, Funktionen
+- Windows Toucheingabe, Gesten
 - Gesten, Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2f2c8a1b1a6573cb39907c571ebc053d1efa066
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: f45112d81f80b4c3acba90ee25a65263f0183f296a432d66b3e278a14ae041f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474946"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118435381"
 ---
-# <a name="functions-windows-touch-gestures"></a>Funktionen (Windows-Touchgesten)
+# <a name="functions-windows-touch-gestures"></a>Funktionen (Windows Touchgesten)
 
-Dieser Abschnitt enthält Funktionen für Windows-Touchgesten.
+Dieser Abschnitt enthält Funktionen für Windows Touchgesten.
 
-Die folgenden Funktionen werden für Windows-Touchbewegungen verwendet.
+Die folgenden Funktionen werden für Windows Touchgesten verwendet.
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                                             |
+| Funktion                                                 | Beschreibung                                                                                             |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**CloseGestureInfoHandle**](/windows/desktop/api/winuser/nf-winuser-closegestureinfohandle) | Schließt die einem manuell abgerufenen handle zugeordneten Ressourcen einer Gesten Informationsstruktur.    |
-| [**Getgestureextraargs**](/windows/desktop/api/winuser/nf-winuser-getgestureextraargs)       | Ruft zusätzliche Informationen über eine Geste von seinem [**GESTUREINFO**](/windows/win32/api/winuser/ns-winuser-gestureinfo) -Handle ab.    |
-| [**Getgestureinfo**](/windows/desktop/api/winuser/nf-winuser-getgestureinfo)                 | Ruft manuell eine Gesten Informationsstruktur ab, wenn ein Handle für die Gesten Informationsstruktur angegeben ist. |
-| [**Getgestureconfig**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig)             | Ruft die Gesten Konfigurationsinformationen für ein Fenster ab.                                           |
-| [**Setgestureconfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig)             | Legt die Gesten Konfiguration für ein Fenster fest.                                                            |
+| [**CloseGestureInfoHandle**](/windows/desktop/api/winuser/nf-winuser-closegestureinfohandle) | Schließt die Ressourcen, die einem manuell abgerufenen Handle zugeordnet sind, mit einer Gesteninformationsstruktur.    |
+| [**GetGestureExtraArgs**](/windows/desktop/api/winuser/nf-winuser-getgestureextraargs)       | Ruft zusätzliche Informationen zu einer Geste aus dem [**GESTENINFO-Handle**](/windows/win32/api/winuser/ns-winuser-gestureinfo) ab.    |
+| [**GetGestureInfo**](/windows/desktop/api/winuser/nf-winuser-getgestureinfo)                 | Ruft manuell eine Gesteninformationsstruktur ab, wenn ein Handle für die Gesteninformationsstruktur angegeben wird. |
+| [**GetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig)             | Ruft die Gestenkonfigurationsinformationen für ein Fenster ab.                                           |
+| [**SetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig)             | Legt die Gestenkonfiguration für ein Fenster fest.                                                            |
 
 
 
@@ -39,10 +39,10 @@ Die folgenden Funktionen werden für Windows-Touchbewegungen verwendet.
 
 <dl> <dt>
 
-[Windows-Touchgesten](multi-touch-gestures.md)
+[Windows Touchgesten](multi-touch-gestures.md)
 </dt> <dt>
 
-[Programmier Handbuch für Gesten](guide-multi-touch-gestures.md)
+[Programmierhandbuch für Gesten](guide-multi-touch-gestures.md)
 </dt> </dl>
 
  

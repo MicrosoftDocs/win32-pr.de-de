@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, die es bilden.
+description: Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, aus denen es erstellt wird.
 ms.assetid: 728f25bf-3d52-4b1c-bf72-51e8ed0a4e72
-title: CIM_SystemComponent-Klasse (Hyper-V-Verwaltung)
+title: CIM_SystemComponent -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 79bb7d3807a93b2d29157a3377d6e6a9079bfe16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ca4212f1501fe73981a810e697745a61609ea374f46ab2884c8124fd2b00202
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646718"
 ---
-# <a name="cim_systemcomponent-class-hyper-v-management"></a>CIM_SystemComponent-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_systemcomponent-class-hyper-v-management"></a>CIM_SystemComponent -Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, die es bilden.
+Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, aus denen es erstellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,29 +39,29 @@ class CIM_SystemComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SystemComponent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse SystemComponent** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ SystemComponent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse SystemComponent** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ System**
+Datentyp: **\_ CIM-System**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Aggregieren, Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent") [](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Das [**CIM- \_ System**](cim-system.md) , das die **PartComponent** enthält.
+Das [**\_ CIM-System,**](cim-system.md) das **die PartComponent enthält.**
 
 </dd> <dt>
 
@@ -74,10 +74,10 @@ Datentyp: **CIM \_ ManagedSystemElement**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Das untergeordnete [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) , das eine Komponente des Systems ist.
+Das untergeordnete [**CIM \_ ManagedSystemElement,**](cim-managedsystemelement.md) das eine Komponente des Systems ist.
 
 </dd> </dl>
 
@@ -90,16 +90,16 @@ Das untergeordnete [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> </dl>
 
  

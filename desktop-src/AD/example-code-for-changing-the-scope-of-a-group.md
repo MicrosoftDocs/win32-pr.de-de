@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code zum Ändern des Bereichs einer Gruppe
-description: Dieses Thema enthält Beispielcode zum Ändern des Gültigkeits Bereichs einer Gruppe.
+title: Beispielcode zum Ändern des Bereichs einer Gruppe
+description: Dieses Thema enthält Beispielcode zum Ändern des Bereichs einer Gruppe.
 ms.assetid: 4ae61101-f123-44bd-8bec-bade51d22217
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Ändern des Bereichs einer Gruppe
+- 'Active Directory-Beispiele: Active Directory, Ändern des Bereichs einer Gruppe'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 641ad43604785a6aae5bb250061ff0a3b62c294e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: edbcbfb7e665b4f569fdef6d623bd7bfb947f94ece1de26ee062a70b07757300
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118694543"
 ---
-# <a name="example-code-for-changing-the-scope-of-a-group"></a>Beispiel Code zum Ändern des Bereichs einer Gruppe
+# <a name="example-code-for-changing-the-scope-of-a-group"></a>Beispielcode zum Ändern des Bereichs einer Gruppe
 
-Im folgenden C++-Codebeispiel wird der Gültigkeitsbereich einer Gruppe geändert.
+Im folgenden C++-Codebeispiel wird der Bereich einer Gruppe geändert.
 
 
 ```C++
@@ -54,7 +54,7 @@ Im folgenden C++-Codebeispiel wird der Gültigkeitsbereich einer Gruppe geänder
 
 
 
-Im folgenden Visual Basic Codebeispiel wird der Gültigkeitsbereich einer Gruppe geändert.
+Im folgenden Visual Basic Codebeispiel wird der Bereich einer Gruppe geändert.
 
 
 ```VB
@@ -72,9 +72,9 @@ CleanUp:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

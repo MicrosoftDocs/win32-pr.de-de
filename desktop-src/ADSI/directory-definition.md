@@ -1,36 +1,36 @@
 ---
-title: Verzeichnis Definition
-description: Die Beispiel Anbieter Komponente verwendet einen relativ einfachen Verzeichnis Entwurf, um die Beziehung zwischen den Komponenten zu verdeutlichen und die Mindestanforderungen anzuzeigen, die für einen ADSI-Anbieter erforderlich sind.
+title: Verzeichnisdefinition
+description: Die Beispielanbieterkomponente verwendet einen relativ einfachen Verzeichnisentwurf, um die Beziehung zwischen Komponenten zu verdeutlichen und die Mindestanforderungen anzuzeigen, die erforderlich sind, um ein ADSI-Anbieter zu sein.
 ms.assetid: d8dcd255-4a17-4c80-a749-61c1af605dba
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6156f2e1ab89b34f009f1a86e5de011c20cf9503
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b8a46ee47bfa280fb9cffce32480fdad3164a648eee59a0c0b2740834b1f21cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691948"
 ---
-# <a name="directory-definition"></a>Verzeichnis Definition
+# <a name="directory-definition"></a>Verzeichnisdefinition
 
-Die Beispiel Anbieter Komponente verwendet einen relativ einfachen Verzeichnis Entwurf, um die Beziehung zwischen den Komponenten zu verdeutlichen und die Mindestanforderungen anzuzeigen, die für einen ADSI-Anbieter erforderlich sind.
+Die Beispielanbieterkomponente verwendet einen relativ einfachen Verzeichnisentwurf, um die Beziehung zwischen Komponenten zu verdeutlichen und die Mindestanforderungen anzuzeigen, die erforderlich sind, um ein ADSI-Anbieter zu sein.
 
-Das "Verzeichnis" für die Beispiel Anbieter Komponente besteht aus zwei Stamm Knoten: "Seattle" und "Toronto". Seattle enthält zwei weitere Unterebenen: "Bellevue" und "Redmond". Jeder dieser Einträge enthält mehrere Benutzerkonten. Der Eintrag "Toronto" hat keine weiteren Unterebenen, sondern enthält direkt mehrere Benutzerkonten. In der folgenden Abbildung werden diese beiden Stamm Knoten angezeigt, die mit einem Netzwerk verbunden sind.
+Das "Verzeichnis" für die Beispielanbieterkomponente besteht aus zwei Stammknoten: "Seattle" und "Toronto". Seattle enthält zwei weitere Unterebenen: "Bellevue" und "Redmond". Jeder dieser Einträge enthält mehrere Benutzerkonten. Der Eintrag "Toronto" hat keine weiteren Unterebenen, enthält jedoch direkt mehrere Benutzerkonten. Die folgende Abbildung zeigt diese beiden Stammknoten, die mit einem Netzwerk verbunden sind.
 
-![Verzeichnis Definition](images/dssmdo.png)
+![Verzeichnisdefinition](images/dssmdo.png)
 
-Im hierarchischen Begriffen enthält der Namespace-Knoten "Seattle" und "Toronto". "Seattle" enthält "Bellevue" und "Redmond". "Bellevue" und "Redmond" enthalten jeweils eine Gruppe von Benutzerkonten. "Toronto" enthält direkt die Benutzerkonten ohne zwischengeschaltete Organisations Knoten.
+In hierarchischer Hinsicht enthält der Namespaceknoten "Seattle" und "Toronto". "Seattle" enthält "Bellevue" und "Redmond". "Bellevue" und "Redmond" enthalten jeweils eine Reihe von Benutzerkonten. "Toronto" enthält direkt die Benutzerkonten ohne zwischengeschaltete Organisationsknoten.
 
-Die Beispiel Anbieter Komponente stellt diese Struktur mit nur zwei Active Directory Objekttypen dar: ein Container Objekt und ein Blatt Objekt. "Seattle", "Toronto", "Bellevue" und "Redmond" sind Containerobjekte, und jedes Benutzerkonto ist ein Blatt Objekt.
+Die Beispielanbieterkomponente stellt diese Struktur mit nur zwei Active Directory-Objekttypen dar: einem Containerobjekt und einem Blattobjekt. "Seattle", "Toronto", "Bellevue" und "Redmond" sind Containerobjekte, und jedes Benutzerkonto ist ein Blattobjekt.
 
-Die Beispiel Anbieter Komponente erstellt eine Schema Klasse mit dem Namen "Organisationseinheit" für einen Container Objekttyp und eine Schema Klasse mit dem Namen "User" für ein Benutzerkonto.
+Die Beispielanbieterkomponente erstellt eine Schemaklasse namens "Organisationseinheit" für einen Containerobjekttyp und eine Schemaklasse namens "User" für ein Benutzerkonto.
 
-Die Eigenschaften für jede Schema Klasse, ihre Methoden und die Regeln, die die Einschluss Beziehungen für diese Objekte steuern, sind alle in der [Schema Verwaltung](schema-management.md)definiert.
+Die Eigenschaften für die einzelnen Schemaklassen, ihre Methoden und die Regeln, die die Containmentbeziehungen für diese Objekte steuern, werden alle in [schemaverwaltung definiert.](schema-management.md)
 
- 
+ 
 
- 
+ 
 
 
 

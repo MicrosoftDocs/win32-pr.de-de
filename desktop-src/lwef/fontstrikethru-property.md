@@ -1,54 +1,54 @@
 ---
-title: FontStrikeThru (Eigenschaft)
-description: FontStrikeThru (Eigenschaft)
+title: FontStrikeThru-Eigenschaft
+description: FontStrikeThru-Eigenschaft
 ms.assetid: 2d87fded-2f3e-44cd-b2a5-5f9c76ca1cf5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c9e1ac8874a11832025dd225aa4df4afa91b4d8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 26832699bfdfd74e753e44ba88f89400560d8c93cf010ed6ab35878f31bc8495
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118479258"
 ---
-# <a name="fontstrikethru-property"></a>FontStrikeThru (Eigenschaft)
+# <a name="fontstrikethru-property"></a>FontStrikeThru-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den Schriftart Stil zurück, der zurzeit im Word-sprecherfenster für das angegebene Zeichen angezeigt wird.
+Gibt den Schriftschnitt zurück, der derzeit im Wortsprechblasenfenster für das angegebene Zeichen angezeigt wird.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Sprechblase. FontStrikethru**
+*agent***. Zeichen ("**_CharacterID_*_"). Balloon.FontStrikeThru_*
 
 
 
 | Wert     | BESCHREIBUNG                                             |
 |-----------|---------------------------------------------------------|
-| **True**  | Die Schriftart Sprechblase verwendet den durch Streich Strich.         |
-| **False** | Die Schriftart für die Sprechblase verwendet nicht den durch Streich Strich. |
+| **True**  | Die Sprechblasenschriftart verwendet den Durchstreicheffekt.         |
+| **False** | Die Sprechblasenschriftart verwendet nicht den Durchstreicheffekt. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Standardwert für die Schriftart Einstellungen der Word-Sprechblase eines Zeichens wird im Microsoft-Agent-Zeichen-Editor festgelegt. Außerdem kann der Benutzer die Schriftart Einstellungen für alle Zeichen auf dem Eigenschaften Blatt Microsoft-Agent überschreiben.
+Der Standardwert für die Schriftarteinstellungen der Wortsprechblase eines Zeichens wird im Microsoft Agent-Zeichen-Editor festgelegt. Darüber hinaus kann der Benutzer Schriftarteinstellungen für alle Zeichen im Microsoft Agent-Eigenschaftenblatt überschreiben.
 
- 
+ 
 
- 
+ 
 
 
 

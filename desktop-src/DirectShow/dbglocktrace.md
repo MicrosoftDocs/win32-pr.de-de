@@ -1,7 +1,7 @@
 ---
 description: Aktiviert oder deaktiviert die Debugprotokollierung eines bestimmten kritischen Abschnitts.
 ms.assetid: 6e6e3de4-8bea-4e28-b04e-54a52226b59a
-title: Dbglocktrace-Funktion (wxutil. h)
+title: DbgLockTrace-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8daf3c33b43bda95bb1d54145e9e5aebc6f89c2f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b55736b2efb8fd4cfbca40710caa930c200c84e1ceec9c8c4f7439468c1add1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118654070"
 ---
-# <a name="dbglocktrace-function"></a>Dbglocktrace-Funktion
+# <a name="dbglocktrace-function"></a>DbgLockTrace-Funktion
 
 Aktiviert oder deaktiviert die Debugprotokollierung eines bestimmten kritischen Abschnitts.
 
@@ -43,17 +43,17 @@ void WINAPI DbgLockTrace(
 
 <dl> <dt>
 
-*pccrit* 
+*pcCrit* 
 </dt> <dd>
 
-Zeiger auf einen kritischen [**ccritsec**](ccritsec.md) -Abschnitt.
+Zeiger auf einen [**kritischen CCritSec-Abschnitt.**](ccritsec.md)
 
 </dd> <dt>
 
-*Ablaufverfolgungs-* 
+*fTrace* 
 </dt> <dd>
 
-Wert, der angibt, ob die Protokollierung aktiviert ist. Verwenden Sie **true** , **um die Protokollierung zu aktivieren** .
+Wert, der an gibt, ob die Protokollierung aktiviert ist. Verwenden **Sie TRUE,** um die Protokollierung zu aktivieren, oder **FALSE,** um sie zu deaktivieren.
 
 </dd> </dl>
 
@@ -61,21 +61,21 @@ Wert, der angibt, ob die Protokollierung aktiviert ist. Verwenden Sie **true** ,
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion, um einen bestimmten kritischen Abschnitt zu verfolgen. Standardmäßig ist die Debugprotokollierung kritischer Abschnitte aufgrund der großen Anzahl kritischer Abschnitte deaktiviert.
+Verwenden Sie diese Funktion, um einen bestimmten kritischen Abschnitt nachverfolgung zu verfolgen. Standardmäßig ist die Debugprotokollierung kritischer Abschnitte aufgrund der großen Anzahl kritischer Abschnitte deaktiviert.
 
-Führen Sie die folgenden Schritte aus, um einen kritischen Abschnitt zu verfolgen:
+Führen Sie zum Nachverfolgen eines kritischen Abschnitts die folgenden Schritte aus:
 
-1.  Definieren Sie Debug oder \_ Debug, bevor Sie die DirectShow-Header einschließen.
-2.  Aktivieren Sie die Debugprotokollierung für kritische Abschnitte, indem Sie [**dbgsetmodulelevel**](dbgsetmodulelevel.md) mit dem Protokoll \_ Sperr Flag aufrufen.
-3.  Nennen Sie **dbglocktrace** im kritischen Abschnitt, den Sie verfolgen möchten.
+1.  Definieren Sie DEBUG oder \_ DEBUG, bevor Sie die DirectShow-Header hinzufügen.
+2.  Aktivieren Sie die Debugprotokollierung für kritische Abschnitte, indem [**Sie DbgSetModuleLevel mit**](dbgsetmodulelevel.md) dem LOG \_ LOCKING-Flag aufrufen.
+3.  Rufen **Sie DbgLockTrace für** den kritischen Abschnitt auf, den Sie nachverfolgen möchten.
 
-In Einzelhandels Builds hat die **dbglocktrace** -Funktion keine Auswirkungen.
+In Einzelhandels-Builds hat **die DbgLockTrace-Funktion** keine Auswirkungen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie ein kritischer Abschnitt verfolgt wird.
+Das folgende Codebeispiel zeigt, wie ein kritischer Abschnitt nachverfolgt wird.
 
 
 ```
@@ -104,16 +104,16 @@ DbgTerminate();
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kritische Abschnitts Debuggingfunktionen](critical-section-debugging-functions.md)
+[Wichtige Funktionen für das Debuggen von Abschnitten](critical-section-debugging-functions.md)
 </dt> </dl>
 
  

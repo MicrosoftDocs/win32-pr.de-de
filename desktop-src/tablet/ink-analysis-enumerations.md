@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwendeten Enumerationen.
+description: Dieser Abschnitt enthält Informationen zu den Enumerationen, die in der Ink-Analyse verwendet werden.
 ms.assetid: 536f743d-bfff-4607-a92c-f29e49881b76
-title: Freihand-Analyse Enumerationen
+title: Ink Analysis Enumerations
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 710a1fdbb8c3627ed4856048f8cd27b80112bb16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e730d34031b5967daa83595b44f1f0b5f38fac8aead7609245fb28b6c55ec0e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452107"
 ---
-# <a name="ink-analysis-enumerations"></a>Freihand-Analyse Enumerationen
+# <a name="ink-analysis-enumerations"></a>Ink Analysis Enumerations
 
-Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwendeten Enumerationen.
+Dieser Abschnitt enthält Informationen zu den Enumerationen, die in der Ink-Analyse verwendet werden.
 
 ## <a name="enumerations"></a>Enumerationen
 
@@ -21,13 +21,13 @@ Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwen
 
 | Enumeration                                              | Beschreibung                                                                                                                               |
 |----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**AnalysisModes**](analysismodes.md)                   | Gibt an, wie [**iinkanalyzer**](iinkanalyzer.md) eine Handschrift Analyse ausführt.<br/>                                                  |
-| [**AnalysisWarningCode**](analysiswarningcode.md)       | Gibt den Satz verfügbarer Warnungen an, die während der Handschrift Analyse auftreten können.<br/>                                                    |
-| [**ConfirmationType**](confirmationtype.md)             | Gibt den Typ der Bestätigung an, der in einem [**icontextnode**](icontextnode.md) -Objekt auftreten kann.<br/>                           |
-| [**ContextLinkDirection**](contextlinkdirection.md)     | Gibt die Typen von [**icontextlink**](icontextlink.md) -Objekten an.<br/>                                                           |
-| [**Erkentionconfidence**](recognitionconfidence.md)   | Gibt die Vertrauens Ebene an, die der [**iinkanalyzer**](iinkanalyzer.md) in der Genauigkeit des Erkennungs Ergebnisses hat.<br/> |
-| [**Erkennungsfunktionen**](recognizercapabilities.md) | Gibt die Attribute eines [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md)an.<br/>                                       |
-| [**StrokeType**](stroketype.md)                         | Gibt an, wie der [**iinkanalyzer**](iinkanalyzer.md) während der Analyse einen Strich klassifizieren soll.<br/>                               |
+| [**Analysismodes**](analysismodes.md)                   | Gibt an, wie [**IInkAnalyzer**](iinkanalyzer.md) Freihandanalysen ausführt.<br/>                                                  |
+| [**Analysiswarningcode**](analysiswarningcode.md)       | Gibt den Satz verfügbarer Warnungen an, die während der Freihandanalyse auftreten können.<br/>                                                    |
+| [**ConfirmationType**](confirmationtype.md)             | Gibt den Bestätigungstyp an, der für ein [**IContextNode-Objekt**](icontextnode.md) auftreten kann.<br/>                           |
+| [**Contextlinkdirection**](contextlinkdirection.md)     | Gibt die Typen von [**IContextLink-Objekten**](icontextlink.md) an.<br/>                                                           |
+| [**RecognitionConfidence**](recognitionconfidence.md)   | Gibt den Grad der Zuverlässigkeit an, den [**IInkAnalyzer**](iinkanalyzer.md) in der Genauigkeit des Erkennungsergebnisses hat.<br/> |
+| [**RecognizerCapabilities**](recognizercapabilities.md) | Gibt die Attribute eines [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)an.<br/>                                       |
+| [**Stroketype**](stroketype.md)                         | Gibt an, wie [**IInkAnalyzer**](iinkanalyzer.md) einen Strich während der Analyse klassifizieren soll.<br/>                               |
 
 
 
@@ -37,7 +37,7 @@ Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwen
 
 <dl> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die startpageprinter-Funktion benachrichtigt den Spooler, dass eine Seite auf dem angegebenen Drucker gedruckt werden soll.
+description: Die StartPagePrinter-Funktion benachrichtigt den Spooler, dass eine Seite auf dem angegebenen Drucker gedruckt werden soll.
 ms.assetid: 8ac7c47b-b3a7-4642-bfb7-54e014139fbf
-title: Startpageprinter-Funktion (winspool. h)
+title: StartPagePrinter-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: f8d1c5cc296fae1b166b891fc881a6abcdb6b2af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 974c2f5dcc4c821602d29a4eed7ced5ad1caa48f0e5ded664a705940d88305b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118470132"
 ---
-# <a name="startpageprinter-function"></a>Startpageprinter-Funktion
+# <a name="startpageprinter-function"></a>StartPagePrinter-Funktion
 
-Die **startpageprinter** -Funktion benachrichtigt den Spooler, dass eine Seite auf dem angegebenen Drucker gedruckt werden soll.
+Die **StartPagePrinter-Funktion** benachrichtigt den Spooler, dass eine Seite auf dem angegebenen Drucker gedruckt werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,40 +39,40 @@ BOOL StartPagePrinter(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Handle für einen Drucker. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Handle für einen Drucker. Verwenden Sie [**die OpenPrinter-**](openprinter.md) [**oder AddPrinter-Funktion,**](addprinter.md) um einen Druckerhandpunkt abzurufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Die Reihenfolge für einen Druckauftrag lautet wie folgt:
+Die Sequenz für einen Druckauftrag lautet wie folgt:
 
-1.  Zum Starten eines Druckauftrags aufrufen Sie [**StartDocPrinter**](startdocprinter.md).
-2.  Um jede Seite zu starten, aufrufen Sie **startpageprinter**.
-3.  Um Daten auf eine Seite zu schreiben, müssen Sie " [**Write-Printer**](writeprinter.md)" anrufen.
-4.  Um jede Seite zu beenden, nennen Sie [**endpageprinter**](endpageprinter.md).
-5.  Wiederholen Sie den Vorgang 2, 3 und 4 für beliebig viele Seiten.
-6.  Um den Druckauftrag zu beenden, nennen Sie [**enddocprinter**](enddocprinter.md).
+1.  Um einen Druckauftrag zu starten, rufen [**Sie StartDocPrinter auf.**](startdocprinter.md)
+2.  Um jede Seite zu starten, rufen **Sie StartPagePrinter auf.**
+3.  Um Daten auf eine Seite zu schreiben, rufen Sie [**WritePrinter auf.**](writeprinter.md)
+4.  Um jede Seite zu beenden, rufen Sie [**EndPagePrinter auf.**](endpageprinter.md)
+5.  Wiederholen Sie 2, 3 und 4 für so viele Seiten wie erforderlich.
+6.  Um den Druckauftrag zu beenden, rufen Sie [**EndDocPrinter auf.**](enddocprinter.md)
 
-Wenn eine Seite in einer Spooldatei ungefähr 350 MB überschreitet, kann Sie nicht gedruckt werden, und es wird keine Fehlermeldung gesendet. Dies kann z. b. vorkommen, wenn große EMF-Dateien gedruckt werden. Der Grenzwert für die Seitengröße hängt von vielen Faktoren ab, z. b. von der Menge des verfügbaren virtuellen Speichers, von der durch den Aufruf von Prozessen belegten Arbeitsspeicher Menge und von der Fragmentierung im Prozess Heap.
+Wenn eine Seite in einer Spooldatei ca. 350 MB überschreitet, kann sie nicht gedruckt werden und sendet keine Fehlermeldung. Dies kann beispielsweise beim Drucken großer EMF-Dateien auftreten. Die Seitengrößenbeschränkung hängt von vielen Faktoren ab, einschließlich der Menge des verfügbaren virtuellen Arbeitsspeichers, der Durch aufrufenden Prozesse zugewiesenen Arbeitsspeichermenge und der Fragmentierung im Prozesshap.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wie: Drucken mit der GDI-Druck-API](how-to--print-using-the-gdi-print-api.md).
+Ein Beispielprogramm, das diese Funktion verwendet, finden Sie unter How To: Print Using the GDI Print API (How [To: Drucken mithilfe der GDI-Druck-API).](how-to--print-using-the-gdi-print-api.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,13 +82,13 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -98,10 +98,10 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Enddocprinter**](enddocprinter.md)
+[**EndDocPrinter**](enddocprinter.md)
 </dt> <dt>
 
-[**Endpageprinter**](endpageprinter.md)
+[**EndPagePrinter**](endpageprinter.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
@@ -110,10 +110,10 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 [**StartDocPrinter**](startdocprinter.md)
 </dt> <dt>
 
-[**Startpageprinter**](startpageprinter.md)
+[**StartPagePrinter**](startpageprinter.md)
 </dt> <dt>
 
-[**"Write Printer"**](writeprinter.md)
+[**WritePrinter**](writeprinter.md)
 </dt> </dl>
 
  

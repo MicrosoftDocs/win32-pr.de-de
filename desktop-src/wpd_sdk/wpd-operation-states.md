@@ -1,7 +1,7 @@
 ---
-description: Der WPD-Vorgang gibt an, dass \_ \_ Enumerationswerte den aktuellen Status eines aktuell ausgeführten Vorgangs beschreiben.
+description: Die WPD \_ OPERATION \_ STATES-Enumerationswerte beschreiben den aktuellen Zustand eines ausgeführten Vorgangs.
 ms.assetid: a002f735-e385-4c7c-b734-e70a9c6842ca
-title: WPD_OPERATION_STATES-Enumeration (portabledevice. h)
+title: WPD_OPERATION_STATES-Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 1746ab6a798c74974708ac10b9c4d137bf6c1d42
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3c2bc25fdbc040bd849d60f1e16e5d86d1916ced17eb6670ceb3bc6a75108772
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118696483"
 ---
-# <a name="wpd_operation_states-enumeration"></a>WPD- \_ Operation \_ States-Enumeration
+# <a name="wpd_operation_states-enumeration"></a>WPD \_ OPERATION \_ STATES-Enumeration
 
-Der **WPD \_ - \_ Vorgang** gibt an, dass Enumerationswerte den aktuellen Status eines aktuell ausgeführten Vorgangs beschreiben.
+Die **WPD \_ OPERATION \_ STATES-Enumerationswerte** beschreiben den aktuellen Zustand eines ausgeführten Vorgangs.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,58 +45,58 @@ typedef enum tagWPD_OPERATION_STATES {
 
 <dl> <dt>
 
-<span id="WPD_OPERATION_STATE_UNSPECIFIED"></span><span id="wpd_operation_state_unspecified"></span>**der WPD- \_ Vorgangs \_ Status ist \_ nicht angegeben.**
+<span id="WPD_OPERATION_STATE_UNSPECIFIED"></span><span id="wpd_operation_state_unspecified"></span>**\_WPD-VORGANGSSTATUS \_ \_ NICHT ANGEGEBEN**
 </dt> <dd>
 
-Der aktuelle Vorgang befindet sich in einem nicht angegebenen Zustand (nicht festgelegt) und ist unbekannt.
+Der aktuelle Vorgang befindet sich in einem nicht angegebenen Zustand (nicht festgelegt) und unbekannt.
 
 </dd> <dt>
 
-<span id="WPD_OPERATION_STATE_STARTED"></span><span id="wpd_operation_state_started"></span>**WPD- \_ Vorgangs \_ Status wurde \_ gestartet.**
+<span id="WPD_OPERATION_STATE_STARTED"></span><span id="wpd_operation_state_started"></span>**\_WPD-VORGANGSSTATUS \_ \_ GESTARTET**
 </dt> <dd>
 
 Der Vorgang wird gestartet.
 
 </dd> <dt>
 
-<span id="WPD_OPERATION_STATE_RUNNING"></span><span id="wpd_operation_state_running"></span>**WPD- \_ Vorgangs \_ Status wird \_ ausgeführt**
+<span id="WPD_OPERATION_STATE_RUNNING"></span><span id="wpd_operation_state_running"></span>**\_WPD-VORGANGSSTATUS \_ \_ WIRD AUSGEFÜHRT**
 </dt> <dd>
 
 Der Vorgang wird ausgeführt.
 
 </dd> <dt>
 
-<span id="WPD_OPERATION_STATE_PAUSED"></span><span id="wpd_operation_state_paused"></span>**WPD- \_ Vorgangs \_ Status \_ angehalten**
+<span id="WPD_OPERATION_STATE_PAUSED"></span><span id="wpd_operation_state_paused"></span>**\_WPD-VORGANGSSTATUS \_ \_ ANGEHALTEN**
 </dt> <dd>
 
-Der Vorgang wurde angehalten.
+Der Vorgang wird angehalten.
 
 </dd> <dt>
 
-<span id="WPD_OPERATION_STATE_CANCELLED"></span><span id="wpd_operation_state_cancelled"></span>**WPD- \_ Vorgangs \_ Status \_ abgebrochen**
+<span id="WPD_OPERATION_STATE_CANCELLED"></span><span id="wpd_operation_state_cancelled"></span>**\_WPD-VORGANGSSTATUS \_ \_ ABGEBROCHEN**
 </dt> <dd>
 
 Der Vorgang wird abgebrochen.
 
 </dd> <dt>
 
-<span id="WPD_OPERATION_STATE_FINISHED"></span><span id="wpd_operation_state_finished"></span>**WPD- \_ Vorgangs \_ Status \_ abgeschlossen**
+<span id="WPD_OPERATION_STATE_FINISHED"></span><span id="wpd_operation_state_finished"></span>**\_WPD-VORGANGSSTATUS \_ \_ ABGESCHLOSSEN**
 </dt> <dd>
 
 Der Vorgang ist abgeschlossen.
 
 </dd> <dt>
 
-<span id="WPD_OPERATION_STATE_ABORTED"></span><span id="wpd_operation_state_aborted"></span>**WPD- \_ Vorgangs \_ Status \_ abgebrochen**
+<span id="WPD_OPERATION_STATE_ABORTED"></span><span id="wpd_operation_state_aborted"></span>**\_WPD-VORGANGSSTATUS \_ \_ ABGEBROCHEN**
 </dt> <dd>
 
 Der Vorgang wird abgebrochen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Werte werden im Anwendungs definierten Rückruf ([**iportabledeviceeventcallback**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback)) empfangen.
+Diese Werte werden im anwendungsdefinierte Rückruf empfangen ([**IPortableDeviceEventCallback**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,11 +104,11 @@ Diese Werte werden im Anwendungs definierten Rückruf ([**iportabledeviceeventca
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

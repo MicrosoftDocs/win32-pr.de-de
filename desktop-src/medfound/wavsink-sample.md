@@ -1,36 +1,36 @@
 ---
-description: Beispiel für wavsink
+description: WavSink-Beispiel
 ms.assetid: 9e1af25f-d55c-45db-8c76-abf814e16700
-title: Beispiel für wavsink
+title: WavSink-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e96ecca551b6ea3e6837f211f0afcb34818d635
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d1bd754e426d848e9d84aea337225ea51940d8727c63d1e1c78c93aeea43110
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118737135"
 ---
-# <a name="wavsink-sample"></a>Beispiel für wavsink
+# <a name="wavsink-sample"></a>WavSink-Beispiel
 
-Zeigt, wie eine benutzerdefinierte Medien Senke in Microsoft Media Foundation implementiert wird. Das Beispiel implementiert eine Archive-Senke, die unkomprimierte PCM-Audiodaten in eine WAV-Datei schreibt.
+Veranschaulicht das Implementieren einer benutzerdefinierten Mediensenke in Microsoft Media Foundation. Im Beispiel wird eine Archivsenke implementiert, die unkomprimierte PCM-Audiodaten in eine WAV-Datei schreibt.
 
 ## <a name="apis-demonstrated"></a>Gezeigte APIs
 
-In diesem Beispiel werden die folgenden Media Foundation Schnittstellen veranschaulicht:
+In diesem Beispiel werden die folgenden Media Foundation veranschaulicht:
 
--   [**IMF-staatink**](/windows/desktop/api/mfidl/nn-mfidl-imfclockstatesink)
--   [**Imffinalizablemediasink**](/windows/desktop/api/mfidl/nn-mfidl-imffinalizablemediasink)
--   [**Imfmediasink**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink)
--   [**IMF mediatypeer Handler**](/windows/desktop/api/mfidl/nn-mfidl-imfmediatypehandler)
--   [**IMF-Senke**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamsink)
+-   [**DEADClockStateSink**](/windows/desktop/api/mfidl/nn-mfidl-imfclockstatesink)
+-   [**VEREERBUNGFinalizableMediaSink**](/windows/desktop/api/mfidl/nn-mfidl-imffinalizablemediasink)
+-   [**VERERBUNGMediaSink**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink)
+-   [**DELEGATEMediaTypeHandler**](/windows/desktop/api/mfidl/nn-mfidl-imfmediatypehandler)
+-   [**DURCHSTREAMSTREAMSink**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamsink)
 
 ## <a name="usage"></a>Verbrauch
 
-Das Beispiel wavsink enthält zwei Visual Studio-Projekte:
+Das WavSink-Beispiel enthält zwei Visual Studio Projekte:
 
--   Wavsink. vcproj erstellt eine statische Bibliothek, die die Medien Senke-Implementierung enthält.
--   "Writewavfile. vcproj" erstellt eine Konsolenanwendung, die die Medien Senke verwendet, um eine WAV-Datei zu erstellen. Diese Anwendung ist mit der Bibliothek verknüpft, die vom wavsink-Projekt erstellt wurde.
+-   WavSink.vcproj erstellt eine statische Bibliothek, die die Implementierung der Mediensenke enthält.
+-   WriteWavFile.vcproj erstellt eine Konsolenanwendung, die die Mediensenke verwendet, um eine WAV-Datei zu erstellen. Diese Anwendung ist mit der Bibliothek verknüpft, die vom WavSink-Projekt erstellt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Das Beispiel wavsink enthält zwei Visual Studio-Projekte:
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist im [GitHub-Repository für klassische Windows-Beispiele](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/wavsink)verfügbar.
+Dieses Beispiel ist im [github-Repository Windows klassischen Beispielen verfügbar.](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/wavsink)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -55,7 +55,7 @@ Dieses Beispiel ist im [GitHub-Repository für klassische Windows-Beispiele](htt
 [Media Foundation-SDK-Beispiele](media-foundation-sdk-samples.md)
 </dt> <dt>
 
-[Medien senken](media-sinks.md)
+[Mediensenken](media-sinks.md)
 </dt> </dl>
 
  

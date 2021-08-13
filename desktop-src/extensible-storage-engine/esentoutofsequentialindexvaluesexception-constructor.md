@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentouesf sequentialindexvaluesexception-Konstruktor'
-title: Esentouesf sequentialindexvaluesexception-Konstruktor
+description: 'Weitere Informationen zu: EsentOutOfSequentialIndexValuesException-Konstruktor'
+title: EsentOutOfSequentialIndexValuesException-Konstruktor
 TOCTitle: 'EsentOutOfSequentialIndexValuesException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfSequentialIndexValuesException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofsequentialindexvaluesexception.esentoutofsequentialindexvaluesexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a1a740d82203951298e47a1d57ad7107363bd0bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb04184cf363a0936607749be25e0f6ae68ad3051066703c96759f53bfd638d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118492581"
 ---
-# <a name="esentoutofsequentialindexvaluesexception-constructor"></a>Esentouesf sequentialindexvaluesexception-Konstruktor
+# <a name="esentoutofsequentialindexvaluesexception-constructor"></a>EsentOutOfSequentialIndexValuesException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesf sequentialindexvaluesexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfSequentialIndexValuesException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentOutOfSequentialIndexValuesException()
 public EsentOutOfSequentialIndexValuesException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentouesf sequentialindexvaluesexception-Klasse](./esentoutofsequentialindexvaluesexception-class.md)
+[EsentOutOfSequentialIndexValuesException-Klasse](./esentoutofsequentialindexvaluesexception-class.md)
 
-[Esentouesfsequentialindexvaluesexception-Member](./esentoutofsequentialindexvaluesexception-members.md)
+[EsentOutOfSequentialIndexValuesException-Member](./esentoutofsequentialindexvaluesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

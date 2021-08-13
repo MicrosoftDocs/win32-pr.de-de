@@ -1,6 +1,6 @@
 ---
-title: Sprach Syntax
-description: HLSL-Shader bestehen aus Variablen und Funktionen, die wiederum aus-Anweisungen bestehen.
+title: Sprachsyntax
+description: HLSL-Shader bestehen aus Variablen und Funktionen, die wiederum aus -Anweisungen bestehen.
 ms.assetid: a0058fe5-7692-4c4d-b09a-9698104478f5
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,19 +9,19 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: be411ab93fa9d265963867a4a34a4f2cf567f464
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 997873d9dc7df53fdbbac042300b60458f0ad90405f974da2172fbe7cc24ca02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104975961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118514138"
 ---
-# <a name="language-syntax"></a>Sprach Syntax
+# <a name="language-syntax"></a>Sprachsyntax
 
-HLSL-Shader bestehen aus Variablen und Funktionen, die wiederum aus-Anweisungen bestehen. Die Sprachsyntax dokumentiert, wie Variablen definiert und deklariert werden, wie die Fluss Steuerung hinzugefügt wird, sodass Shader auf der Grundlage von Variablen Lauf Zeit Entscheidungen treffen und benutzerdefinierte Funktionen schreiben können.
+HLSL-Shader bestehen aus Variablen und Funktionen, die wiederum aus -Anweisungen bestehen. Die Sprachsyntax dokumentiert das Definieren und Deklarieren von Variablen, das Hinzufügen der Flusssteuerung, damit Shader Laufzeitentscheidungen basierend auf Variablen treffen und benutzerdefinierte Funktionen schreiben können.
 
 -   [Variablen](dx-graphics-hlsl-variables.md)
--   [Fluss Steuerung](dx-graphics-hlsl-flow-control.md)
+-   [Flow Steuerung](dx-graphics-hlsl-flow-control.md)
 -   [Funktionen](dx-graphics-hlsl-functions.md)
 -   [Anweisungen](dx-graphics-hlsl-statements.md)
 -   [Semantik](dx-graphics-hlsl-semantics.md)
@@ -30,12 +30,12 @@ HLSL-Shader bestehen aus Variablen und Funktionen, die wiederum aus-Anweisungen 
 
 <dl> <dt>
 
-[Verweis für HLSL](dx-graphics-hlsl-reference.md)
+[Referenz für HLSL](dx-graphics-hlsl-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

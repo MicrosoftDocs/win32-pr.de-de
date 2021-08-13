@@ -1,6 +1,6 @@
 ---
-title: break_comp-PS
-description: Unterbrechen Sie die aktuelle Schleife bei den nächstgelegenen ENDLOOP-PS oder ENDREP-PS, basierend auf einem pro-Komponente-Vergleich.
+title: break_comp – ps
+description: Break out of the current loop at the nearest endloop - ps or endrep - ps, based on a per-component comparison.
 ms.assetid: d21e850f-05db-4a29-b15b-85bb1c1410d0
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,63 +9,63 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5088312a16102153ad78afffdcd9ea1275d34e0d
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 2fa79b7aa50bc734ddc1f9fb1fd54e4130c48518dd47ed429b4177b8fb867d95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104101086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118794458"
 ---
-# <a name="break_comp---ps"></a>\_Comp-PS Abbrechen
+# <a name="break_comp---ps"></a>break \_ comp - ps
 
-Unterbrechen Sie die aktuelle Schleife bei den nächstgelegenen [ENDLOOP-PS](endloop---ps.md) oder [ENDREP-PS](endrep---ps.md), basierend auf einem pro-Komponente-Vergleich.
+Break out of the current loop at the nearest [endloop - ps](endloop---ps.md) or [endrep - ps](endrep---ps.md), based on a per-component comparison.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Break \_ Comp src0, Quelle1 |
+| break \_ comp src0, src1 |
 |------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   \_comp ist ein skalarer (oder einzelner) Vergleich zwischen den beiden Quell Registern. Folgende Werte sind möglich: 
+-   \_comp ist ein skalarer (oder einzelner) Vergleich zwischen den beiden Quellregistern. Folgende Werte sind möglich: 
 
     | Syntax | Vergleich            |
     |--------|-----------------------|
-    | \_siegt   | Größer als          |
-    | \_General   | Kleiner als             |
-    | \_Färbung   | Größer als oder gleich |
-    | \_Kirchturm   | Kleiner als oder gleich    |
-    | \_stecken   | Gleich              |
-    | \_NES   | Ungleich          |
+    | \_Gt   | Größer als          |
+    | \_Lt   | Kleiner als             |
+    | \_Ge   | Größer als oder gleich |
+    | \_Le   | Kleiner als oder gleich    |
+    | \_Eq   | Gleich              |
+    | \_Ne   | Ungleich          |
 
     
 
-     
+     
 
--   src0 ist ein Quell Register. Bei der Auswahl einer einzelnen Komponente ist das Replizieren von flüchtigen erforderlich.
--   Quelle1 ist ein Quell Register. Bei der Auswahl einer einzelnen Komponente ist das Replizieren von flüchtigen erforderlich.
+-   src0 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, wenn Sie eine einzelne Komponente auswählen.
+-   src1 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, wenn Sie eine einzelne Komponente auswählen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Anweisung wird in den folgenden Versionen unterstützt.
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| \_Comp Abbrechen           |      |      |      |      |      | x    | x     | x    | x     |
+| break \_ comp           |      |      |      |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Wenn der Vergleich true ist, wird er wie gezeigt aus der aktuellen Schleife unterbrochen.
+Wenn der Vergleich true ist, bricht er wie gezeigt aus der aktuellen Schleife auf.
 
 
 ```
@@ -79,12 +79,12 @@ if (!(src0 comparison src1))
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

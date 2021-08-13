@@ -1,7 +1,7 @@
 ---
-description: Beschreibt eine Regel für den Zugriff auf Elemente, die im geschützten Speicher gespeichert sind.
+description: Beschreibt eine Regel für den Zugriff auf Elemente, die in geschütztem Speicher gespeichert sind.
 ms.assetid: 22aebac3-46e9-4c66-bfaf-e82cf9d494cb
-title: PST_ACCESSRULE Struktur (pstore. h)
+title: PST_ACCESSRULE-Struktur (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Pstore.h
-ms.openlocfilehash: 90a04f2f7a34874a8c076fa55b158944399fac2f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26b4df38c5e5599c13cc52a75c58ea019d786eaa971c8ac3a67a7a8c15651075
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667056"
 ---
-# <a name="pst_accessrule-structure"></a>PST- \_ AccessRule-Struktur
+# <a name="pst_accessrule-structure"></a>PST \_ ACCESSRULE-Struktur
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
-Beschreibt eine Regel für den Zugriff auf Elemente, die im geschützten Speicher gespeichert sind.
+Beschreibt eine Regel für den Zugriff auf Elemente, die in geschütztem Speicher gespeichert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ typedef struct {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
 Die Größe dieser Struktur.
 
 </dd> <dt>
 
-**Accessmodeflags**
+**AccessModeFlags**
 </dt> <dd>
 
-Die Zugriffs Modi, auf die sich ein angegebener Satz von Zugriffs Klauseln bezieht.
+Die Zugriffsmodi, für die ein angegebener Satz von Zugriffsklauseln gilt.
 
 
 
 | Wert                                                                                                                                                                                                         | Bedeutung                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| <span id="PST_READ"></span><span id="pst_read"></span><dl> <dt>**PST \_ Lesen**</dt> von <dt>0x0001</dt> </dl>    | Lese Zugriffsmodus.<br/>  |
-| <span id="PST_WRITE"></span><span id="pst_write"></span><dl> <dt>**PST \_ Schreiben**</dt> von <dt>0x0002</dt> </dl> | Schreibzugriffs Modus.<br/> |
+| <span id="PST_READ"></span><span id="pst_read"></span><dl> <dt>**PST \_ READ**</dt> <dt>0x0001</dt> </dl>    | Lesezugriffsmodus.<br/>  |
+| <span id="PST_WRITE"></span><span id="pst_write"></span><dl> <dt>**PST \_ WRITE**</dt> <dt>0x0002</dt> </dl> | Schreibzugriffsmodus.<br/> |
 
 
 
@@ -69,17 +69,17 @@ Die Zugriffs Modi, auf die sich ein angegebener Satz von Zugriffs Klauseln bezie
 
 </dd> <dt>
 
-**cklauseln**
+**cClauses**
 </dt> <dd>
 
-Die Anzahl der Strukturen im **rgklauseln** -Array.
+Die Anzahl der Strukturen im **rgClauses-Array.**
 
 </dd> <dt>
 
-**rgklauseln**
+**rgClauses**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**PST \_ accessclause**](pst-accessclause.md) -Strukturen.
+Ein Zeiger auf ein Array von [**PST \_ ACCESSCLAUSE-Strukturen.**](pst-accessclause.md)
 
 </dd> </dl>
 
@@ -89,18 +89,18 @@ Ein Zeiger auf ein Array von [**PST \_ accessclause**](pst-accessclause.md) -Str
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**PST- \_ accessclause**](pst-accessclause.md)
+[**PST \_ ACCESSCLAUSE**](pst-accessclause.md)
 </dt> <dt>
 
-[**PST- \_ accessruleset**](pst-accessruleset.md)
+[**PST \_ ACCESSRULESET**](pst-accessruleset.md)
 </dt> </dl>
 
  

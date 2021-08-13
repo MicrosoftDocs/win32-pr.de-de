@@ -1,5 +1,5 @@
 ---
-description: Definiert den Typ, der eine Textzeile enthält.
+description: Definiert den Typ, der eine Absatzzeile enthält.
 ms.assetid: 0c864ca9-7f09-4fea-9490-4e07d82bcf6e
 title: Komplexer LineType-Typ
 ms.topic: reference
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: ec39d81bb3033962896809a629402259b973f5a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ecb845d478374f41af6157749bb7d1306797e23a89ea8a5291cd7eca31df47b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449813"
 ---
 # <a name="linetype-complex-type"></a>Komplexer LineType-Typ
 
-Definiert den Typ, der eine Textzeile enthält.
+Definiert den Typ, der eine Absatzzeile enthält.
 
 ``` syntax
 <xs:complexType name="LineType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der eine Textzeile enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

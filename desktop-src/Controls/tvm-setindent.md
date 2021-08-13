@@ -1,9 +1,9 @@
 ---
-title: TVM_SETINDENT Meldung (kommstrg. h)
-description: Legt die Breite des Einzugs für ein Strukturansicht-Steuerelement fest und zeichnet das Steuerelement neu, um die neue Breite widerzuspiegeln. Sie können diese Nachricht explizit oder mithilfe des TreeView-Makros (TreeView) senden \_ .
+title: TVM_SETINDENT Meldung (Commctrl.h)
+description: Legt die Breite des Einzugs für ein Strukturansicht-Steuerelement fest und zeichnet das Steuerelement neu, um die neue Breite widerzuspiegeln. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ SetIndent-Makros senden.
 ms.assetid: 377da8fe-c8e6-479b-a283-f1811cbc3e58
 keywords:
-- Windows-Steuerelemente für TVM_SETINDENT Meldung
+- TVM_SETINDENT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f85263c7c4330a692dc08949870a0eaa92f2b22c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 538a89439909afe346ae8776d31a2104c7f6014664a33bdd3864bf43b0387e80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118669665"
 ---
-# <a name="tvm_setindent-message"></a>TVM- \_ Meldung
+# <a name="tvm_setindent-message"></a>TVM \_ SETINDENT-Nachricht
 
-Legt die Breite des Einzugs für ein Strukturansicht-Steuerelement fest und zeichnet das Steuerelement neu, um die neue Breite widerzuspiegeln. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ -Makros (TreeView**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setindent) ) senden.
+Legt die Breite des Einzugs für ein Strukturansicht-Steuerelement fest und zeichnet das Steuerelement neu, um die neue Breite widerzuspiegeln. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SetIndent-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setindent) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt die Breite des Einzugs für ein Strukturansicht-Steuerelement fest und zeic
 *wParam* 
 </dt> <dd>
 
-Breite des Einzugs in Pixel. Wenn dieser Parameter kleiner als die vom System definierte Mindestbreite ist, wird die neue Breite auf das vom System definierte Minimalwert festgelegt.
+Breite des Einzugs in Pixel. Wenn dieser Parameter kleiner als die systemdefinierte Mindestbreite ist, wird die neue Breite auf den vom System definierten Mindestwert festgelegt.
 
 </dd> <dt>
 
@@ -43,9 +43,9 @@ Breite des Einzugs in Pixel. Wenn dieser Parameter kleiner als die vom System de
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der vom System definierte minimale Einzugs Wert ist in der Regel fünf Pixel, aber er ist nicht korrigiert. Wenn Sie den genauen Wert für den minimalen Einzug auf einem bestimmten System abrufen möchten, senden Sie eine **TVM- \_ setIndent** -Nachricht, bei der *wParam* auf NULL festgelegt ist. Senden Sie dann eine [**TVM- \_ GetIndent**](tvm-getindent.md) -Nachricht, um den minimalen Einzug Wert abzurufen.
+Der systemdefinierte Mindesteinzugswert beträgt in der Regel fünf Pixel, ist aber nicht fixiert. Um den genauen Wert des minimalen Einzugs auf einem bestimmten System abzurufen, senden Sie eine **TVM \_ SETINDENT-Nachricht,** wobei *wParam* auf 0 (null) festgelegt ist. Senden Sie dann eine [**TVM \_ GETINDENT-Nachricht,**](tvm-getindent.md) um den minimalen Einzugswert abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Der vom System definierte minimale Einzugs Wert ist in der Regel fünf Pixel, ab
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TreeView- \_ Einzug**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setindent)
+[**TreeView \_ SetIndent**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setindent)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Deaktivieren der Methode der SystemRestore-Klasse
+title: Disable-Methode der SystemRestore-Klasse
 description: Deaktiviert die Überwachung auf einem bestimmten Laufwerk.
 ms.assetid: 2ad37dd4-7d80-4697-9dbb-abb329a34ff7
 keywords:
-- Wiederherstellung des Methoden Systems deaktivieren
-- Methoden System Wiederherstellung deaktivieren, SystemRestore-Klasse
-- SystemRestore-Klassen System Wiederherstellung, Methode deaktivieren
+- Deaktivieren der Systemwiederherstellungsmethode
+- Disable-Methode Systemwiederherstellung , SystemRestore-Klasse
+- SystemRestore-Klasse Systemwiederherstellung , Disable-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 19556833684aeab0cc126eff7aff0a258335c8e3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41a05d53ee13e2f06c2f4765d2947f49a417ed798965406185619dfce207cf76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452921"
 ---
-# <a name="disable-method-of-the-systemrestore-class"></a>Deaktivieren der Methode der SystemRestore-Klasse
+# <a name="disable-method-of-the-systemrestore-class"></a>Disable-Methode der SystemRestore-Klasse
 
 Deaktiviert die Überwachung auf einem bestimmten Laufwerk.
 
@@ -42,16 +42,16 @@ uint32 Disable(
 
 <dl> <dt>
 
-*Laufwerk* \[ in\]
+*Laufwerk* \[ In\]
 </dt> <dd>
 
-Das Laufwerk, das deaktiviert werden soll. Die Laufwerks Zeichenfolge muss die Form "C: \\ " aufweisen. Wenn dieser Parameter das Systemlaufwerk oder eine leere Zeichenfolge ("") ist, werden keine Laufwerke überwacht.
+Das zu deaktivierende Laufwerk. Die Laufwerkzeichenfolge sollte das Formular "C: \\ " haben. Wenn dieser Parameter das Systemlaufwerk oder eine leere Zeichenfolge ("") ist, werden keine Laufwerke überwacht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Andernfalls gibt die Methode einen der com-Fehlercodes zurück, die in WinError. h definiert sind.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Andernfalls gibt die -Methode einen der in WinError.h definierten COM-Fehlercodes zurück.
 
 ## <a name="examples"></a>Beispiele
 
@@ -83,14 +83,14 @@ End If
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                         |
-| Namespace<br/>                | \\Standardwert<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>SR. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-Standard<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Sr.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

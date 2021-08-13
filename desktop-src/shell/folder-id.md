@@ -1,61 +1,61 @@
 ---
-description: Bevor Sie ein Namespace Objekt verwenden können, benötigen Sie eine Möglichkeit, es zu identifizieren.
+description: Bevor Sie ein Namespaceobjekt verwenden können, benötigen Sie eine Möglichkeit, es zu identifizieren.
 ms.assetid: 54225481-a147-4d29-a642-24c9b59fc3ac
-title: Die ID eines Ordners wird erhalten.
+title: Abrufen der ID eines Ordners
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb2e62454bf27f2c203f59aecb325cefe6537d2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 67d75051d52f0dfcee54b6365a8f546d2cbda2c3b5f7c0f4b6fbbc19fa1e40c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459009"
 ---
-# <a name="getting-a-folders-id"></a>Die ID eines Ordners wird erhalten.
+# <a name="getting-a-folders-id"></a>Abrufen der ID eines Ordners
 
-Bevor Sie ein Namespace Objekt verwenden können, benötigen Sie eine Möglichkeit, es zu identifizieren. Dies bedeutet, dass entweder der Zeiger auf eine Element Bezeichner Liste (PIDL) oder im Fall von Dateisystemobjekten der Pfad erhalten wird. In diesem Abschnitt werden zwei der einfacheren Methoden zum Abrufen von Objekt-IDs erläutert.
+Bevor Sie ein Namespaceobjekt verwenden können, benötigen Sie eine Möglichkeit, es zu identifizieren. Dies bedeutet, entweder den Zeiger auf eine Elementbezeichnerliste (PIDL) oder im Fall von Dateisystemobjekten den Pfad zu erhalten. In diesem Abschnitt werden zwei der einfacheren Methoden zum Abrufen von Objekt-IDs erläutert.
 
-Verwenden Sie die [**IShellFolder**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) -Schnittstelle für einen leistungsstärkeren Ansatz, der mit einem beliebigen Ordner funktioniert. Weitere [Informationen finden Sie unter Informationen zum Inhalt eines Ordners](folder-info.md) .
+Verwenden Sie die [**IShellFolder-Schnittstelle,**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) um einen leistungsfähigeren Ansatz zu erhalten, der mit jedem Ordner funktioniert. Weitere Informationen finden Sie unter [Abrufen von Informationen zum Inhalt](folder-info.md) eines Ordners.
 
--   [Das Dialog Feld "openfiles"](#the-openfiles-dialog-box)
--   [Das Dialog Feld "shbrowsforfolder"](#the-shbrowseforfolder-dialog-box)
--   [Besondere Ordner und CSIDLs](#special-folders-and-csidls)
--   [Ein einfaches Beispiel für die Verwendung von CSIDLs und shbrowcforfolder](#a-simple-example-of-how-to-use-csidls-and-shbrowseforfolder)
+-   [Dialogfeld "OpenFiles"](#the-openfiles-dialog-box)
+-   [ShBrowseForFolder (Dialogfeld)](#the-shbrowseforfolder-dialog-box)
+-   [Spezielle Ordner und CSIDLs](#special-folders-and-csidls)
+-   [Ein einfaches Beispiel für die Verwendung von CSIDLs und SHBrowseForFolder](#a-simple-example-of-how-to-use-csidls-and-shbrowseforfolder)
 
-## <a name="the-openfiles-dialog-box"></a>Das Dialog Feld "openfiles"
+## <a name="the-openfiles-dialog-box"></a>Dialogfeld "OpenFiles"
 
-Um dem Benutzer zu ermöglichen, im-Namespace zu navigieren und einen Ordner auszuwählen, kann die Anwendung die [**ifiledialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog) -Schnittstelle verwenden. Wenn Sie diese Schnittstelle mit dem Flag " **Fos \_ pickfolders** " aufrufen, wird das Dialogfeld " [Dateien öffnen](../dlgbox/open-and-save-as-dialog-boxes.md) " im Modus "Pick Folders" geöffnet.
+Damit der Benutzer durch den Namespace navigieren und einen Ordner auswählen kann, kann Ihre Anwendung die [**IFileDialog-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog) verwenden. Wenn Sie diese Schnittstelle mit **dem FOS \_ PICKFOLDERS-Flag** aufrufen, wird das allgemeine Dialogfeld Dateien öffnen im Modus "Ordner auswählen" gestartet. [](../dlgbox/open-and-save-as-dialog-boxes.md)
 
 Für Windows Vista und höher ist dies die empfohlene Methode zum Auswählen von Ordnern.
 
-## <a name="the-shbrowseforfolder-dialog-box"></a>Das Dialog Feld "shbrowsforfolder"
+## <a name="the-shbrowseforfolder-dialog-box"></a>ShBrowseForFolder (Dialogfeld)
 
-Um dem Benutzer zu ermöglichen, im-Namespace zu navigieren und einen Ordner auszuwählen, kann die Anwendung einfach [**shbrowseforfolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera)aufrufen. Durch Aufrufen dieser Funktion wird ein Dialogfeld mit einer Benutzeroberfläche gestartet, das ähnlich wie die allgemeinen Dialogfelder [Öffnen oder SaveAs](../dlgbox/open-and-save-as-dialog-boxes.md) funktioniert.
+Damit der Benutzer durch den Namespace navigieren und einen Ordner auswählen kann, kann Ihre Anwendung [**einfach SHBrowseForFolder aufrufen.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) Durch Aufrufen dieser Funktion wird ein Dialogfeld mit einer Benutzeroberfläche gestartet, die ähnlich wie die allgemeinen Dialogfelder Öffnen oder [Speichern Funktioniert.](../dlgbox/open-and-save-as-dialog-boxes.md)
 
-Wenn der Benutzer einen Ordner auswählt, gibt [**shbrowsforfolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) die voll qualifizierte PIDL und den anzeigen amen des Ordners zurück. Wenn sich der Ordner im Dateisystem befindet, kann die Anwendung die PIDL in einen Pfad konvertieren, indem Sie [**shgetpathfromittlerlist**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetpathfromidlista)aufrufen. Die Anwendung kann auch den Bereich der Ordner einschränken, aus denen der Benutzer auswählen kann, indem er einen Stamm Ordner angibt. Nur Ordner, die sich unterhalb des Stamms im-Namespace befinden, werden angezeigt. Die folgende Abbildung zeigt das Dialogfeld **shbrowseforfolder** , wobei der Stamm Ordner auf Programme festgelegt ist.
+Wenn der Benutzer einen Ordner auswählt, [**gibt SHBrowseForFolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) die vollqualifizierte PIDL und den Anzeigenamen des Ordners zurück. Wenn sich der Ordner im Dateisystem befindet, kann die Anwendung die PIDL durch Aufrufen von [**SHGetPathFromIDList**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetpathfromidlista)in einen Pfad konvertieren. Die Anwendung kann auch den Bereich von Ordnern einschränken, aus denen der Benutzer auswählen kann, indem ein Stammordner angegeben wird. Es werden nur Ordner angezeigt, die sich unterhalb dieses Stamms im Namespace befinden. Die folgende Abbildung zeigt das **Dialogfeld SHBrowseForFolder,** bei dem der Stammordner auf Programme festgelegt ist.
 
-![Screenshot des Dialog Felds "Ordner suchen"](images/shell1.png)
+![Screenshot des Dialogfelds "Ordner suchen"](images/shell1.png)
 
-Ein einfaches Beispiel für die Verwendung von " [**shbrowsforfolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) " wird später bereitgestellt.
+Ein einfaches Beispiel für die Verwendung von [**SHBrowseForFolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) wird später bereitgestellt.
 
-## <a name="special-folders-and-csidls"></a>Besondere Ordner und CSIDLs
+## <a name="special-folders-and-csidls"></a>Spezielle Ordner und CSIDLs
 
-Eine Reihe häufig verwendeter Ordner werden vom System als *spezielle* Ordner bezeichnet. Diese Ordner haben einen klar definierten Zweck, und die meisten sind auf allen Systemen vorhanden. Auch wenn Sie nicht anfänglich vorhanden sind, werden Ihre Namen und Speicherorte weiterhin definiert, sodass Sie später hinzugefügt werden können. Die Sammlung spezieller Ordner umfasst alle standardmäßigen virtuellen Ordner des Systems, z. b. Drucker, eigene Dokumente und Netzwerkumgebung. Es enthält auch eine Reihe von standardmäßigen Dateisystem Ordnern, wie z. b. Programme und System.
+Eine Reihe häufig verwendeter Ordner wird vom *System* als speziell festgelegt. Diese Ordner haben einen klar definierten Zweck, und die meisten davon sind auf allen Systemen vorhanden. Auch wenn sie anfänglich nicht vorhanden sind, sind ihre Namen und Speicherorte weiterhin definiert, sodass sie später hinzugefügt werden können. Die Sammlung spezieller Ordner umfasst alle standardmäßigen virtuellen Ordner des Systems, z. B. Drucker, Eigene Dokumente und Netzwerkumgebung. Es enthält auch eine Reihe von Standarddateisystemordnern, z. B. Programme und System.
 
-Obwohl die Ordner eine Standardkomponente aller Systeme sind, können Ihre Namen und Speicherorte im-Namespace variieren. Beispielsweise ist das System Verzeichnis c: \\ Winnt \\ system32 auf einigen Systemen und C: \\ Windows \\ system32 auf anderen Systemen. In der Vergangenheit stellten Umgebungsvariablen den Namen und den Speicherort eines speziellen Ordners auf einem bestimmten System fest. Die Shell bietet nun eine robustere und flexiblere Möglichkeit, spezielle Ordner, [**CSIDLs**](csidl.md), zu identifizieren. Sie sollten Sie in der Regel anstelle von Umgebungsvariablen verwenden.
+Obwohl die Ordner eine Standardkomponente aller Systeme sind, können ihre Namen und Speicherorte im Namespace variieren. Das Verzeichnis System ist beispielsweise C: \\ Winnt System32 auf einigen Systemen \\ und C: \\ Windows \\ System32 auf anderen. In der Vergangenheit boten Umgebungsvariablen eine Möglichkeit, den Namen und Speicherort eines speziellen Ordners auf einem bestimmten System zu bestimmen. Die Shell bietet jetzt eine stabilere und flexiblere Möglichkeit zum Identifizieren von speziellen Ordnern, [**CSIDLs.**](csidl.md) Sie sollten sie im Allgemeinen anstelle von Umgebungsvariablen verwenden.
 
-CSIDLs stellen eine einheitliche Möglichkeit dar, um spezielle Ordner unabhängig von Ihrem Namen oder Speicherort auf einem bestimmten System zu identifizieren und zu lokalisieren. Im Gegensatz zu Umgebungsvariablen können CSIDLs sowohl mit virtuellen Ordnern als auch mit Dateisystem Ordnern verwendet werden. Jedem speziellen Ordner ist eine eindeutige CSIDL zugewiesen. Beispielsweise verfügt der Ordner "Programme Dateisystem" über eine CSIDL von **CSIDL- \_ Programm \_ Dateien**, und der virtuelle Ordner der Netzwerkumgebung verfügt über eine CSIDL des **CSIDL- \_ Netzwerks**.
+CSIDLs bieten eine einheitliche Möglichkeit zum Identifizieren und Suchen von speziellen Ordnern, unabhängig von ihrem Namen oder Speicherort in einem bestimmten System. Im Gegensatz zu Umgebungsvariablen können CSIDLs mit virtuellen Ordnern sowie Dateisystemordnern verwendet werden. Jedem speziellen Ordner ist eine eindeutige CSIDL zugewiesen. Beispielsweise verfügt der Dateisystemordner Programme über eine CSIDL von **CSIDL \_ PROGRAM \_ FILES,** und der virtuelle Ordner Network Neighborhood hat die CSIDL **CSIDL \_ NETWORK.**
 
-Eine CSIDL wird in Verbindung mit einer von mehreren Shellfunktionen verwendet, um die PIDL eines speziellen Ordners oder den Pfad eines speziellen Dateisystem Ordners abzurufen. Wenn der Ordner auf einem System nicht vorhanden ist, kann die Anwendung erzwingen, dass er erstellt wird, indem er die CSIDL mit dem **CSIDL- \_ Flag \_ Create** kombiniert. Die CSIDL kann an die folgenden Funktionen übergeben werden:
+Eine CSIDL wird in Verbindung mit einer von mehreren Shellfunktionen verwendet, um die PIDL eines speziellen Ordners oder den Pfad eines speziellen Dateisystemordners abzurufen. Wenn der Ordner auf einem System nicht vorhanden ist, kann Ihre Anwendung erzwingen, dass er erstellt wird, indem die CSIDL mit **CSIDL \_ FLAG CREATE kombiniert \_ wird.** Die CSIDL kann an die folgenden Funktionen übergeben werden:
 
--   [**Shgetfolderlocation**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetfolderlocation): Ruft die PIDL eines speziellen Ordners ab.
--   [**SHGetFolderPath**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetfolderpatha): Ruft den Pfad eines speziellen Dateisystem Ordners ab.
+-   [**SHGetFolderLocation**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetfolderlocation): Ruft die PIDL eines speziellen Ordners ab.
+-   [**SHGetFolderPath**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetfolderpatha): Ruft den Pfad eines speziellen Dateisystemordners ab.
 
-Beachten Sie, dass diese beiden Funktionen mit Version 5,0 der Shell eingeführt wurden und die Funktionen " [**SHGetSpecialFolderLocation**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetspecialfolderlocation) " und " [**SHGetSpecialFolderPath**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetspecialfolderpatha) " ersetzen.
+Beachten Sie, dass diese beiden Funktionen mit Version 5.0 der Shell eingeführt wurden und die [**ShGetSpecialFolderLocation-**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetspecialfolderlocation) und [**SHGetSpecialFolderPath-Funktionen**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetspecialfolderpatha) ab ersetzt haben.
 
-## <a name="a-simple-example-of-how-to-use-csidls-and-shbrowseforfolder"></a>Ein einfaches Beispiel für die Verwendung von CSIDLs und shbrowcforfolder
+## <a name="a-simple-example-of-how-to-use-csidls-and-shbrowseforfolder"></a>Ein einfaches Beispiel für die Verwendung von CSIDLs und SHBrowseForFolder
 
-Die folgende Beispiel Funktion, pidlbrowse, veranschaulicht die Verwendung von CSIDLs zum Abrufen der PIDL eines Ordners und das Verwenden von [**shbrowsforfolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) , um den Benutzer zum Auswählen eines Ordners zu verwenden. Er gibt die PIDL und den anzeigen amen des ausgewählten Ordners zurück.
+Die folgende Beispielfunktion, PidlBrowse, veranschaulicht die Verwendung von CSIDLs zum Abrufen der PIDL eines Ordners und die Verwendung von [**SHBrowseForFolder,**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) damit der Benutzer einen Ordner auswählt. Sie gibt die PIDL und den Anzeigenamen des ausgewählten Ordners zurück.
 
 
 ```
@@ -96,7 +96,7 @@ LPITEMIDLIST PidlBrowse(HWND hwnd, int nCSIDL, LPSTR pszDisplayName)
 
 
 
-Die aufrufenden Anwendung übergibt ein Fenster Handle, das von [**shbrowseforfolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera)benötigt wird. Der *ncsidl* -Parameter ist eine optionale CSIDL, die verwendet wird, um einen Stamm Ordner anzugeben. Es werden nur Ordner unter dem Stamm Ordner in der Hierarchie angezeigt. Die zuvor gezeigte Abbildung wurde durch Aufrufen dieser Funktion generiert, wobei *ncsidl* auf **CSIDL- \_ Programm \_ Dateien** festgelegt wurde. Die aufrufenden Anwendung übergibt auch den Zeichen folgen Puffer *pszDisplayName*, um den anzeigen amen des ausgewählten Ordners zu speichern, wenn pidlbrowse zurückgibt. Es liegt in der Verantwortung der aufrufenden Anwendung, die von **shbrowseforfolder** zurückgegebene idlist mithilfe von " [**CoTaskMemFree**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)" freizugeben.
+Die aufrufende Anwendung übergibt ein Fensterhand handle, das von [**SHBrowseForFolder benötigt wird.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shbrowseforfoldera) Der *nCSIDL-Parameter* ist eine optionale CSIDL, die zum Angeben eines Stammordners verwendet wird. Nur Ordner unterhalb des Stammordners in der Hierarchie werden angezeigt. Die zuvor gezeigte Abbildung wurde durch Aufrufen dieser Funktion generiert, bei der *nCSIDL* auf **CSIDL \_ PROGRAM FILES festgelegt \_ ist.** Die aufrufende Anwendung übergibt außerdem den Zeichenfolgenpuffer *pszDisplayName,* um den Anzeigenamen des ausgewählten Ordners zu speichern, wenn PidlBrowse zurückgegeben wird. Es liegt in der Verantwortung der aufrufenden Anwendung, die von **SHBrowseForFolder** zurückgegebene IDList mithilfe von [**CoTaskMemFree freizu geben.**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)
 
  
 

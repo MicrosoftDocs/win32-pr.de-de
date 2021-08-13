@@ -1,10 +1,10 @@
 ---
-title: attributecertificateattribute-Attribut
-description: Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attributen. Wird verwendet, um Autorisierungs Informationen an eine Identität zu binden.
+title: attributeCertificateAttribute-Attribut
+description: Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attributen. Wird verwendet, um Autorisierungsinformationen an eine Identität zu binden.
 ms.assetid: 46519f26-01db-4f8e-936d-9255c72cd30c
 ms.tgt_platform: multiple
 keywords:
-- attributecertificateattribute-Attribut AD-Schema
+- attributeCertificateAttribute-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 51005f0c919825a4496437661783857c927b7c6d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1515b8b318df32fb16018f5d2108db7c74288d80761d9ece76017becdd1369f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118688107"
 ---
-# <a name="attributecertificateattribute-attribute"></a>attributecertificateattribute-Attribut
+# <a name="attributecertificateattribute-attribute"></a>attributeCertificateAttribute-Attribut
 
-Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attributen. Wird verwendet, um Autorisierungs Informationen an eine Identität zu binden.
+Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attributen. Wird verwendet, um Autorisierungsinformationen an eine Identität zu binden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | attributecertificateattribute                         |
-| LDAP-Display-Name | attributecertificateattribute                         |
+| CN                | attributeCertificateAttribute                         |
+| Ldap-Anzeigename | attributeCertificateAttribute                         |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 2.5.4.58                                              |
 | System-ID-GUID    | fa4693bb-7bc2-4cb9-81a8-c99c43b7905e                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -41,13 +41,13 @@ Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -55,11 +55,11 @@ Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | False                                 |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Falsch                                 |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -76,11 +76,11 @@ Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | False                                 |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Falsch                                 |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -97,11 +97,11 @@ Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | False                                 |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Falsch                                 |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -118,11 +118,11 @@ Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | False                                 |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Is-Single-Valued       | Falsch                                 |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -139,11 +139,11 @@ Eine Digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | False                                 |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Is-Single-Valued       | Falsch                                 |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |

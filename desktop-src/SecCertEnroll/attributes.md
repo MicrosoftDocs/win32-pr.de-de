@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 93414156c7fa6e46fe80995d8d01eadc28796ec2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: aec93ec47a700902cb1275e25af6649e6988b76f7204b01487249e0130dd35b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118903102"
 ---
 # <a name="attributes-certificate-enrollment-api"></a>Attribute (Zertifikatregistrierungs-API)
 

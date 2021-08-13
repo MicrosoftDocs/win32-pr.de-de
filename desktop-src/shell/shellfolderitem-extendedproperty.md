@@ -1,7 +1,7 @@
 ---
-description: Ruft den Wert einer Eigenschaft aus dem Eigenschaften Satz eines Elements ab. Die-Eigenschaft kann entweder anhand des Namens oder anhand des Format Bezeichners (fmtid) und des Eigenschafts Bezeichners (PID) des Eigenschaften Satzes angegeben werden.
+description: Ruft den Wert einer Eigenschaft aus dem Eigenschaftensatz eines Elements ab. Die Eigenschaft kann entweder durch den Namen oder durch den Formatbezeichner (FMTID) und den Eigenschaftenbezeichner (PID) des Eigenschaftensets angegeben werden.
 ms.assetid: ca787d7b-d95a-45b9-9627-fd505f99f868
-title: Shellfolderitem. ExtendedProperty-Methode (Shldisp. h)
+title: ShellFolderItem.ExtendedProperty-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 614e42512b17a0d8a6950ac96914128b8746c685
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: f5aa8ab3ba61d752cfe4d9f8ecd29bf4fcd06c3dbadde94e51ac9a05a8504b43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452816"
 ---
-# <a name="shellfolderitemextendedproperty-method"></a>Shellfolderitem. ExtendedProperty-Methode
+# <a name="shellfolderitemextendedproperty-method"></a>ShellFolderItem.ExtendedProperty-Methode
 
-Ruft den Wert einer Eigenschaft aus dem Eigenschaften Satz eines Elements ab. Die-Eigenschaft kann entweder anhand des Namens oder anhand des Format Bezeichners (fmtid) und des Eigenschafts Bezeichners (PID) des Eigenschaften Satzes angegeben werden.
+Ruft den Wert einer Eigenschaft aus dem Eigenschaftensatz eines Elements ab. Die Eigenschaft kann entweder durch den Namen oder durch den Formatbezeichner (FMTID) und den Eigenschaftenbezeichner (PID) des Eigenschaftensets angegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,34 +39,34 @@ retVal = ShellFolderItem.ExtendedProperty(
 
 <dl> <dt>
 
-*spropname* \[ in\]
+*sPropName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichen** folgen Wert, der die Eigenschaft angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.
+Ein **Zeichenfolgenwert,** der die -Eigenschaft angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Wenn diese Methode zurückgegeben wird, enthält Sie den Wert der-Eigenschaft, wenn Sie für das angegebene Element vorhanden ist. Der Wert wird vollständig eingegeben – beispielsweise werden Datumsangaben als Datumsangaben, nicht als Zeichen folgen zurückgegeben.
+Enthält nach der Rückgabe dieser Methode den Wert der -Eigenschaft, sofern er für das angegebene Element vorhanden ist. Der Wert enthält eine vollständige Eingabe, z. B. werden Datumsangaben als Datumsangaben und nicht als Zeichenfolgen zurückgegeben.
 
-Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück, wenn die Eigenschaft gültig ist, aber für das angegebene Element nicht vorhanden ist, andernfalls ein Fehlercode.
+Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück, wenn die Eigenschaft gültig ist, aber für das angegebene Element nicht vorhanden ist, oder andernfalls einen Fehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt zwei Möglichkeiten, eine Eigenschaft anzugeben. Der erste besteht darin, _sPropName * den bekannten Namen der Eigenschaft, z. b. "Author" oder "Date", zuzuweisen. Allerdings ist jede Eigenschaft ein Member eines Component Object Model (com)-Eigenschaften Satzes und kann auch durch Angabe der Format-ID (fmtid) und der Eigen schafts-ID (PID) identifiziert werden. Eine [**fmtid**](../stg/structured-storage-serialized-property-set-format.md) ist eine GUID, die den Eigenschaften Satz identifiziert, und eine [**PID**](../stg/structured-storage-serialized-property-set-format.md) ist eine ganze Zahl, die eine bestimmte Eigenschaft innerhalb des Eigenschaften Satzes identifiziert.
+Es gibt zwei Möglichkeiten, eine Eigenschaft anzugeben. Die erste besteht im Zuweisen des bekannten Namens der Eigenschaft, z. B. "Author" oder "Date", *zu sPropName.* Jede Eigenschaft ist jedoch ein Member eines Component Object Model-Eigenschaftensatzes (COM) und kann auch durch Angabe ihrer Format-ID (FMTID) und Eigenschaften-ID (PID) identifiziert werden. Ein [**FMTID**](../stg/structured-storage-serialized-property-set-format.md) ist eine GUID, die den Eigenschaftensatz identifiziert, und eine [**PID**](../stg/structured-storage-serialized-property-set-format.md) ist eine ganze Zahl, die eine bestimmte Eigenschaft innerhalb des Eigenschaftensets identifiziert.
 
-Es ist in der Regel effizienter, eine Eigenschaft anhand der Werte von fmtid/PID anzugeben, als den Namen zu verwenden. Um die fmtid/PID-Werte einer Eigenschaft mit **ExtendedProperty** zu verwenden, müssen Sie in einer scid kombiniert werden. Eine scid ist eine Zeichenfolge, die die fmtid/PID-Werte im Format "*fmtid * * PID*" enthält, wobei "fmtid" das Zeichen folgen Format der GUID des Eigenschafts Satzes ist. Beispielsweise ist die scid der Eigenschaft "Author" der Summary-Informations Eigenschaft "{F29F85E0-4FF9-1068-AB91-08002B27B3D9} 4".
+Die Angabe einer Eigenschaft anhand ihrer FMTID-/PID-Werte ist in der Regel effizienter als die Verwendung ihres Namens. Um die FMTID-/PID-Werte einer Eigenschaft mit **ExtendedProperty** zu verwenden, müssen sie in einer SCID kombiniert werden. Eine SCID ist eine Zeichenfolge, die die FMTID/PID-Werte im Formular *"FMTID**PID"* enthält, wobei FMTID die Zeichenfolgenform der GUID des Eigenschaftensets ist. Beispielsweise ist der SCID der author-Eigenschaft des Eigenschaftssets für Zusammenfassungsinformationen "{F29F85E0-4FF9-1068-AB91-08002B27B3D9} 4".
 
-Eine Liste der von der Shell derzeit unterstützten fmtids und PIDs finden Sie unter [**shcolumnid**](./objects.md).
+Eine Liste der FMTIDs und PIDs, die derzeit von der Shell unterstützt werden, finden Sie unter [**SHCOLUMNID**](./objects.md).
 
 ## <a name="examples"></a>Beispiele
 
-Dieser Beispielcode veranschaulicht die Verwendung von **ExtendedProperty** zum Abrufen der Eigenschaften "Title" und "Autor" aus einem Word-Dokument. Sobald das [**shellfolderitem**](shellfolderitem-object.md) -Objekt mit der Datei verknüpft ist, dann rufen *Sie in diesem* Beispiel den Wert der Eigenschaft ab, indem Sie seinen Namen an **ExtendedProperty** übergeben.
+Dieser Beispielcode veranschaulicht die Verwendung von **ExtendedProperty** zum Abrufen der Eigenschaften "Title" und "Author" aus einem Word-Dokument. Sobald das [**ShellFolderItem-Objekt**](shellfolderitem-object.md) der Datei (in diesem Beispiel *fiWordDoc)* zugeordnet ist, rufen Sie den Wert der Eigenschaft ab, indem Sie ihren Namen **an ExtendedProperty übergeben.**
 
 
 ```none
@@ -78,7 +78,7 @@ Doc_Author=fiWordDoc.ExtendedProperty("Author")
 
 
 
-Ein schnellerer und effizienterer Ansatz besteht darin, eine scid an **ExtendedProperty** zu übergeben.
+Ein schnellerer und effizienterer Ansatz besteht in der Übergeben einer SCID an **ExtendedProperty.**
 
 
 ```none
@@ -97,7 +97,7 @@ Doc_Author=fiWordDoc.ExtendedProperty(SCID_AUTHOR)
 
 Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung dieser Methode für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -128,7 +128,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -199,7 +199,7 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -207,9 +207,9 @@ End Sub
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

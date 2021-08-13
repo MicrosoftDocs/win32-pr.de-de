@@ -1,71 +1,71 @@
 ---
-description: Verschiebungs Zuordnungen ähneln Textur Karten, aber der Vertex-Engine wird darauf zugreifen.
+description: Verschiebungszuordnungen ähneln Texturzuordnungen, werden jedoch von der Scheitelpunkt-Engine aufgerufen.
 ms.assetid: d6f16ff2-5a66-48a3-82c4-523faaafa6ae
-title: Verschiebungs Zuordnung (Direct3D 9)
+title: Verschiebungszuordnung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b687583b0109223d8c2dac807425e235ddf280e4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 87b559c2c4758b773c48c0b556b6d61af54549f1b30e5c2693a24c4c27856c13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523764"
 ---
-# <a name="displacement-mapping-direct3d-9"></a>Verschiebungs Zuordnung (Direct3D 9)
+# <a name="displacement-mapping-direct3d-9"></a>Verschiebungszuordnung (Direct3D 9)
 
-Verschiebungs Zuordnungen ähneln Textur Karten, aber der Vertex-Engine wird darauf zugreifen.
+Verschiebungszuordnungen ähneln Texturzuordnungen, werden jedoch von der Scheitelpunkt-Engine aufgerufen.
 
-## <a name="block-diagram"></a>Block Diagramm
+## <a name="block-diagram"></a>Blockdiagramm
 
-Eine zusätzliche Samplingphase ist im frühen Teil der vertexpipe vorhanden, wie im folgenden Diagramm gezeigt, das eine Verschiebungs Zuordnung zum Bereitstellen von Scheitelpunkt Verschiebungs Daten darstellen kann.
+Im frühen Teil der Scheitelpunktpipe ist eine zusätzliche Samplerphase vorhanden, wie im folgenden Diagramm dargestellt, mit der eine Verschiebungszuordnung entnommen werden kann, um Vertexverschiebungsdaten zu liefern.
 
-![Diagramm der Samplingphase in der Scheitelpunkt Pipe](images/tessellatordx9.png)
+![Diagramm der Samplerphase in der Scheitelpunktpipe](images/tessellatordx9.png)
 
-Der Status des Verschiebungs Karten Samplers kann von [**setsamplerstate**](/windows/desktop/api) mithilfe der Phasen Nummer 256 festgelegt werden. dabei handelt es sich um eine neue Stufen Nummer. Die Struktur der Verschiebungs Zuordnung wird von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)festgelegt.
+Der Zustand des Verschiebungszuordnungs-Samplers kann von [**SetSamplerState**](/windows/desktop/api) mit der Phase 256 festgelegt werden, bei der es sich um eine neue Phasennummer handelt. Die Verschiebungszuordnungstextur wird von [**SetTexture festgelegt.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)
 
-Die Zuordnung kann vorab erstellt werden, d. h., Sie kann so angeordnet werden, dass die Suche nach den Verschiebungs Werten ohne Filterung ermöglicht wird.
+Die Karte kann vorab vorgefertigt werden, was bedeutet, dass sie so geordnet werden kann, dass die Verschiebungswerte ohne Filterung nachschlagen können.
 
--   Verschiebungs Zuordnungen entsprechen Textur Zuordnungen, auf die Vertex-Engine wird jedoch zugegriffen.
--   Eine zusätzliche Samplingphase ist im frühen Teil der vertexpipe vorhanden, die eine Verschiebungs Karte enthalten kann. Auf diese Stufe wird über die übliche setsamplerstate-API zugegriffen, aber die Stufen Nummer ist D3DDMAPSAMPLER = 256.
--   Der Status des Verschiebungs Karten Samplers kann durch setsamplerstate (D3DDMAPSAMPLER,...) festgelegt werden. Found.
--   Die Struktur der Verschiebungs Zuordnung wird von der SetTexture-API (D3DDMAPSAMPLER, Texture) festgelegt.
--   Die Zuordnung kann vorab abgetastet werden. Dies bedeutet, dass Sie auf eine bestimmte Weise angeordnet werden kann, die die Suche nach Verschiebungs Werten ohne Filterung ermöglicht.
--   Die Änderungen in der Deklarations Struktur ermöglichen die Angabe der Textur Koordinate, die verwendet wird, um die Textur Zuordnung zu suchen. Beispielsweise Stream0, Offset, FLOAT2, Lookup, Verschiebungs \_ Wert. Dadurch wird der Mosaik Dienst aufgefordert, den 2D-float-Vektor in stream0 an einem bestimmten Offset als Textur Koordinate zu verwenden, um die Verschiebungs Zuordnung zu suchen und die \_ Verwendungs Semantik der Verschiebungs Werte zuzuordnen. Die Vertex-Shader-Deklaration enthält eine Zeile ähnlich "{DCL \_ Texture0, v0}", die angibt, dass die Texture0-Semantik dem Register "v0 Input" zugeordnet werden soll. Der ersuchte Verschiebungs Wert wird in das Eingabe Register "v0" kopiert.
--   Es gibt eine besondere Art von Verschiebungs Zuordnung, wenn die Textur Zuordnung vorab abgetippt wird. Ein sequenzieller Index generierter Vertices wird als Textur Koordinate für eine Textur Zuordnung verwendet. Beispiel: 0, 0, (D3DDECLTYPE) 0, D3DDECLMETHOD \_ lookuppresampling, Usage, US-Index.
--   Die Ausgabe der Suche ist 4 Gleit Komma Zahlen.
--   Die Verschiebungs Zuordnung wird nur mit N-Patches unterstützt.
--   Treiber müssen D3DDMAPSAMPLER in settexturestagestate ignorieren, wenn Sie keine Verschiebungs Zuordnungen verarbeiten.
--   Der D3DTEXF \_ anisotrope-Filter Modus wird nicht unterstützt.
--   Wenn D3DSAMP \_ MipFilter im Verschiebungs Karten-Sampler nicht D3DTEXF \_ None ist, wird die Detailebene wie folgt berechnet (Beachten Sie, dass der Adaptive Mosaik Zustand auch dann verwendet wird, wenn D3DRS \_ enableadaptivetesellation **false** ist): TMAX = Rendering State D3DRS \_ maxtmeellationlevel.
--   Compute-Mosaik Ebene für einen Vertex VI: (XI, Yi, Zi) auf die gleiche Weise wie im Abschnitt "Adaptive Mosaik" beschrieben. Detailebene L = log2 (TMAX)-log2 (TE).
--   Bei der Textur Filterung und bei Samplings werden die gleichen Regeln befolgt wie für die Pixel Pipeline (detailsgrads (Grad)).
--   Nicht alle Formate können als Verschiebungs Zuordnungen verwendet werden, aber nur diejenigen, die die D3DUSAGE- \_ dmap unterstützen. Die Anwendung kann das CheckDeviceFormat mit CheckDeviceFormat [**Abfragen.**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat)
--   D3DUSAGE \_ dmap muss in " [**kreatetexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createtexture) " angegeben werden, um den Treiber zu benachrichtigen, dass diese Textur als Verschiebungs Zuordnung verwendet werden soll.
--   D3DUSAGE \_ dmap kann nur mit Texturen verwendet werden. Sie kann nicht mit Cubemaps oder Volumes verwendet werden.
--   Texturen und Renderziele, die mit D3DUSAGE dmap erstellt wurden, \_ können in regulären samplingstufen und als Renderziele festgelegt werden
--   Die renderzustände, um den Umbruch Modus für die Texturkoordinaten festzulegen, werden bei der Verschiebungs Zuordnung ignoriert. Im Allgemeinen gibt es keine Wrap-Modi für die Mosaik-Engine.
--   Ein Verschiebungs kartensampler weist ein Verhalten auf, das mit dem des Pixel Textur Samplers identisch ist. Wenn eine Textur mit weniger als vier Kanälen (z. b. R32f) gesucht wird, werden die nach-oben-Werte in den entsprechenden Kanälen des Ziel Registers (dem Vertex-Shader-Eingabe Register, das mit der \_ Beispiel Semantik gekennzeichnet ist) angezeigt, während die anderen Kanäle standardmäßig auf (1, 1, 1) eingestellt sind. Bei der Suche wird D3DFMT \_ L8 in die R-, G-, B-Kanäle und standardmäßig auf 1 übertragen. Der Verweis Raster verfügt über die vollständigen Implementierungsdetails.
+-   Verschiebungszuordnungen sind analog zu Texturzuordnungen, aber der Zugriff erfolgt über die Scheitelpunkt-Engine.
+-   Im frühen Teil der Scheitelpunktpipe ist eine zusätzliche Samplerphase vorhanden, mit der eine Verschiebungskarte entnommen werden kann. Auf diese Phase wird von der üblichen SetSamplerState-API zugegriffen, aber die Phasennummer ist D3DDMAPSAMPLER = 256.
+-   Der Zustand des Verschiebungszuordnungs-Samplers kann durch SetSamplerState(D3DDMAPSAMPLER, ...) festgelegt werden. Api.
+-   Die Verschiebungszuordnungstextur wird von der SetTexture(D3DDMAPSAMPLER, texture)-API festgelegt.
+-   Für die Zuordnung kann eine Vorabstichprobe verwendet werden. Dies bedeutet, dass sie auf eine bestimmte Weise geordnet werden kann, die das Suchen der Verschiebungswerte ohne Filterung ermöglicht.
+-   Die Änderungen in der Deklarationsstruktur ermöglichen die Angabe der Texturkoordinate, die zum Suchen der Texturkarte verwendet wird. Beispiel: Stream0, Offset, FLOAT2, LOOKUP, \_ Verschiebungswert. Dies weist den Mosaikator an, den 2D-Gleitkommavektor in stream0 an einem bestimmten Offset als Texturkoordinate zu verwenden, um die Verschiebungszuordnung nachschlagen und ihr die Semantik der Verschiebungswertverwendung zu \_ zuordnen. Die Vertex-Shaderdeklaration würde eine Zeile ähnlich {dcl texture0, v0} enthalten, die angibt, dass die Texture0-Semantik dem \_ v0-Eingaberegister zugeordnet werden soll. Der nach durchdrungene Verschiebungswert wird in das Eingaberegister v0 kopiert.
+-   Es gibt eine besondere Art von Verschiebungszuordnung, wenn die Texturzuordnung vorab entnommen wird. Der sequenzielle Index generierter Scheitelungen wird als Texturkoordinate für eine Texturkarte verwendet. Beispiel: 0,0,(D3DDECLTYPE)0,D3DDECLMETHOD \_ LOOKUPPRESAMPLED, Usage, UsageIndex.
+-   Die Ausgabe der Suche ist 4 gleitkomma.
+-   Die Zuordnung von Verschiebungen wird nur mit N-Patches unterstützt.
+-   Treiber müssen D3DDMAPSAMPLER in SetTextureStageState ignorieren, wenn sie keine Verschiebungszuordnungen verarbeiten.
+-   Der D3DTEXF \_ ANISOTROPIC-Filtermodus wird nicht unterstützt.
+-   Wenn D3DSAMP MIPFILTER im Verschiebungszuordnungs-Sampler nicht D3DTEXF NONE ist, wird die Detailebene wie folgt berechnet (beachten Sie, dass der adaptive Mosaikzustand auch dann verwendet wird, wenn \_ \_ D3DRS \_ ENABLEADAPTIVETESSELLATION **FALSE** ist): Tmax = Renderzustand D3DRS \_ MAXTESSELLATIONLEVEL
+-   Compute tessellation level Te for a vertex Vi: (Xi, Soll, Zi) auf die gleiche Weise wie im Abschnitt "Adaptive Mosaik" beschrieben. Detailstufe L = log2(Tmax) - log2 (Te).
+-   Texturfilterungs- und Samplingvorgänge folgen den gleichen Regeln wie die Pixelpipeline (LoD-Bias (Level of Detail) wird angewendet usw.).
+-   Nicht alle Formate können als Verschiebungszuordnungen verwendet werden, sondern nur solche, die D3DUSAGE \_ DMAP unterstützen. Die Anwendung kann diese mit checkDeviceFormat [**CheckDeviceFormat abfragen.**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat)
+-   D3DUSAGE \_ DMAP muss in [**CreateTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createtexture) angegeben werden, um den Treiber darüber zu informieren, dass diese Textur als Verschiebungszuordnung verwendet werden soll.
+-   D3DUSAGE \_ DMAP kann nur mit Texturen verwendet werden. Sie kann nicht mit Cubezuordnungen oder Volumes verwendet werden.
+-   Texturen und Renderziele, die mit D3DUSAGE DMAP erstellt wurden, können in regulären \_ Samplerphasen und als Renderziele festgelegt werden.
+-   Die Renderzustände zum Festlegen des Umbruchmodus für die Texturkoordinaten werden in der Verschiebungszuordnung ignoriert. Im Allgemeinen gibt es keine Wrapmodi für die Mosaik-Engine.
+-   Ein Verschiebungszuordnungs-Sampler hat das gleiche Verhalten wie die Pixeltextur-Sampler. Wenn eine Textur mit weniger als vier Kanälen (z. B. R32f) nachschlagen wird, werden die nachschlagenen Werte an die entsprechenden Kanäle des Zielregisters (das Mit der Beispielsemantik markierte Vertex-Shader-Eingaberegister) und die anderen Kanäle standardmäßig \_ (1, 1, 1) angezeigt. Bei der Suche wird D3DFMT L8 in die Kanäle R, G, B übertragen, und \_ A wird standardmäßig auf 1 festgelegt. Der Referenzraster verfügt über die vollständigen Implementierungsdetails.
 
-## <a name="pre-sampled-displacement-mapping"></a>Verschiebungs Zuordnung vor Stichproben
+## <a name="pre-sampled-displacement-mapping"></a>Zuordnung von Verschiebungen vor der Stichprobenentnahme
 
--   Der neue samplerstatus wurde eingeführt: D3DSAMP \_ dmapoffset (DWORD)-Offset (in Scheitel Punkten) in einer vorab komprimierten Verschiebungs Zuordnung.
--   Die neue Deklarations Methode wurde eingeführt: D3DDECLMETHOD \_ lookuppresampling.
--   Das Adaptive Mosaik sollte deaktiviert werden.
--   Textur Filtereinstellungen werden ignoriert. Die Punkt Stichprobe ist abgeschlossen. Es wird angenommen, dass der MIP-Textur Filter D3DTEXF \_ None ist. Alle anderen Textur Filtermodi werden als D3DTEXF Punkt angenommen \_ .
--   Texturkoordinaten werden wie folgt berechnet: U = (Index% texturewidthinpixeles)/(float) (texturewidthinpixeles) V = (Index/texturewidthinpixeles)/(float) (textureturetinpixeles), wobei Index ein sequenzieller Index generierter Vertices Plus TSS \[ D3DSAMP \_ dmapoffset ist \] . Der sequenzielle Index wird am Anfang der einzelnen primitiven auf NULL festgelegt und nach der Generierung eines Scheitel Punkts erweitert.
+-   Neuer Samplerzustand wird eingeführt: D3DSAMP DMAPOFFSET (DWORD) – Offset (in Scheitelten) in einer vorab entnommenen \_ Verschiebungskarte.
+-   Es wird eine neue Deklarationsmethode eingeführt: D3DDECLMETHOD \_ LOOKUPPRESAMPLED.
+-   Adaptives Mosaik sollte deaktiviert werden.
+-   Texturfiltereinstellungen werden ignoriert. Die Punktstichproben werden durchgeführt. Es wird davon ausgegangen, dass der MIP-Texturfilter D3DTEXF \_ NONE ist. Alle anderen Texturfiltermodi werden als D3DTEXF \_ POINT angenommen.
+-   Texturkoordinaten werden berechnet wie: U = (Index % TextureWidthInPixeles) / (float)(TextureWidthInPixeles) V = (Index /TextureWidthInPixeles) / (float)(TextureHeightInPixeles), wobei Index ein sequenzieller Index generierter Scheitelpunkte plus TSS \[ D3DSAMP \_ DMAPOFFSET \] ist. Der sequenzielle Index wird am Anfang jedes Primitiven auf 0 (null) festgelegt und erhöht, nachdem ein Scheitelpunkt generiert wurde.
 
-Dies sind die API-Änderungen, die die Verschiebungs Zuordnung unterstützen.
+Dies sind die API-Änderungen, die die Zuordnung von Verschiebungen unterstützen.
 
--   Es wurde ein einzelnes Kanal Format hinzugefügt, D3DFMT \_ L16.
--   Ein neues nutzungsflag, D3DUSAGE \_ dmap.
--   Eine spezielle Textur Phase, mit der eine Verschiebungs Karten Textur, D3DDMAPSAMPLER, festgelegt wird.
--   Es wurden neue Hardware Obergrenzen hinzugefügt, D3DDEVCAPS2 \_ dmapnpatch und D3DDEVCAPS2 \_ presampleddmapnpatch. Siehe [D3DDEVCAPS2](d3ddevcaps2.md).
+-   Ein hinzugefügtes Einzelkanalformat, D3DFMT \_ L16.
+-   Ein neues Verwendungsflag, D3DUSAGE \_ DMAP.
+-   Eine spezielle Texturstufe, die zum Festlegen einer Verschiebungszuordnungstextur verwendet wird, D3DDMAPSAMPLER.
+-   Es wurden neue Hardware-Caps hinzugefügt: D3DDEVCAPS2 \_ DMAPNPATCH und D3DDEVCAPS2 \_ PRESAMPLEDDMAPNPATCH. Siehe [D3DDEVCAPS2](d3ddevcaps2.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Scheitelpunkt Pipeline](vertex-pipeline.md)
+[Vertexpipeline](vertex-pipeline.md)
 </dt> </dl>
 
  

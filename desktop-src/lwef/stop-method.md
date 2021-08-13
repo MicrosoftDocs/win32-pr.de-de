@@ -1,19 +1,19 @@
 ---
-title: Stopmethode (Features der Legacy-Windows-Umgebung)
+title: Stop-Methode (Legacy Windows Umgebungsfeatures)
 description: Stop-Methode
 ms.assetid: 68372f72-db9c-447c-a3e4-488940c730d7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20192634c197559ca54bb8af3d8a29f37beb53e2
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 572a93db5697aaae0dcfed6b45a834323c106bba447d2d9a8e94109f788af25c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106337280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118745962"
 ---
-# <a name="stop-method-legacy-windows-environment-features"></a>Stopmethode (Features der Legacy-Windows-Umgebung)
+# <a name="stop-method-legacy-windows-environment-features"></a>Stop-Methode (Legacy Windows Umgebungsfeatures)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -27,13 +27,13 @@ Beendet die Animation für das angegebene Zeichen.
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("**_Merkmal-ID_*_")._ *  \[ *Anforderung* Abbrechen\]
+*agent***. Zeichen ("**_CharacterID_*_"). Anforderung_ *  \[ *beenden*\]
 
 
 
-| Teil      | BESCHREIBUNG                                                                                   |
+| Teil      | Beschreibung                                                                                   |
 |-----------|-----------------------------------------------------------------------------------------------|
-| *Anforderung* | Dies ist optional. Ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt, das einen bestimmten Animations Rückruf angibt. |
+| *Anforderung* | Optional. Ein [**Request-Objekt,**](/windows/desktop/lwef/the-request-object) das einen bestimmten Animationsaufruf an gibt. |
 
 
 
@@ -41,11 +41,11 @@ Beendet die Animation für das angegebene Zeichen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den Anforderungs Parameter anzugeben, müssen Sie eine Variable erstellen und die Animations Anforderung zuweisen, die Sie abbrechen möchten. Wenn Sie den **Anforderungs** Parameter nicht festlegen, beendet der Server alle Animationen für das Zeichen, einschließlich [**Get**](get-method.md) -aufrufen in der Warteschlange, und löscht seine Animations Warteschlange, es sei denn, das Zeichen wird gerade ausgeblendet oder **zeigt** **eine Animation** an. Diese Methode beendet keine **Get** -Aufrufe, die nicht in der Warteschlange stehen.
+Um den Anforderungsparameter anzugeben, müssen Sie eine Variable erstellen und die Animationsanforderung zuweisen, die Sie beenden möchten. Wenn Sie den **Request-Parameter** nicht festlegen, beendet der Server alle [](get-method.md) Animationen für das Zeichen, einschließlich get-Aufrufe in der Warteschlange, und bricht seine Animationswarteschlange ab, es sei denn, das Zeichen gibt derzeit seine **Hiding-** oder **Showing-Animation** wieder. Diese Methode stoppt get-Aufrufe, die nicht in der **Warteschlange** stehen, nicht.
 
-Um eine bestimmte Animation oder einen [**Get**](get-method.md) -Befehl zu beenden, deklarieren Sie eine Objekt Variable, und weisen Sie die Animations Anforderung dieser Variablen zu:
+Um eine bestimmte Animation oder einen [**Get-Aufruf**](get-method.md) zu beenden, deklarieren Sie eine Objektvariable, und weisen Sie ihre Animationsanforderung dieser Variablen zu:
 
 
 ```
@@ -69,7 +69,7 @@ Um eine bestimmte Animation oder einen [**Get**](get-method.md) -Befehl zu beend
 
 
 
-Diese Methode generiert kein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt.
+Diese Methode generiert kein [**Request-Objekt.**](/windows/desktop/lwef/the-request-object)
 
 ## <a name="see-also"></a>Weitere Informationen
 

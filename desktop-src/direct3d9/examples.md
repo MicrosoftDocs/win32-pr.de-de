@@ -1,26 +1,26 @@
 ---
-description: Es folgen zwei Beispiele für binäre Vorlagen Definitionen und ein Beispiel für ein binäres Datenobjekt.
+description: Es folgen zwei Binärvorlagendefinitionen und ein Beispiel für ein binäres Datenobjekt.
 ms.assetid: vs|directx_sdk|~\examples.htm
 title: Beispiele (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d26fbb8cbe45881243e17f80fd302c0fb4640685
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 47f8b8e2a9c500042e9b8d7c7fd911ab74b2f428d1ef814aca9e5fda1be7dcab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523097"
 ---
 # <a name="examples-direct3d-9-graphics"></a>Beispiele (Direct3D 9-Grafiken)
 
-Es folgen zwei Beispiele für binäre Vorlagen Definitionen und ein Beispiel für ein binäres Datenobjekt.
+Es folgen zwei Binärvorlagendefinitionen und ein Beispiel für ein binäres Datenobjekt.
 
 > [!Note]  
-> Die Daten werden im Little-Endian-Format gespeichert, das in diesen Beispielen nicht angezeigt wird.
+> Daten werden im Little-Endian-Format gespeichert, was in diesen Beispielen nicht gezeigt wird.
 
  
 
-Die geschlossene Vorlage RGB wird durch die UUID {55b6d780-37ec-11D0-ab39-0020af71e433} identifiziert und verfügt über die drei Member-r, g und b-jeweils den Typ float.
+Die geschlossene Rgb-Vorlage wird durch die UUID {55b6d780-37ec-11d0-ab39-0020af71e433} identifiziert und verfügt über drei Member : r, g und b – jeweils vom Typ float.
 
 
 ```
@@ -34,7 +34,7 @@ TOKEN_CBRACE
 
 
 
-Die geschlossene Vorlage Matrix4x4 wird von der UUID {55b6d781-37ec-11D0-ab39-0020af71e433} identifiziert und verfügt über einen Member, d. h. ein zweidimensionales Array mit dem Namen "Matrix" vom Typ "float".
+Die geschlossene Vorlage Matrix4x4 wird durch die UUID {55b6d781-37ec-11d0-ab39-0020af71e433} identifiziert und verfügt über ein Element vom Typ float – ein zweidimensionales Array mit dem Namen matrix.
 
 
 ```
@@ -48,7 +48,7 @@ TOKEN_CBRACE
 
 
 
-Das folgende binäre Datenobjekt zeigt eine Instanz der RGB-Vorlage an, die zuvor definiert wurde. Das Beispiel Objekt hat den Namen Blue und seine drei Member-r, g und b-besitzen die Werte 0,0, 0,0 und 1,0.
+Das folgende binäre Datenobjekt zeigt eine Instanz der zuvor definierten RGB-Vorlage. Das Beispielobjekt hat den Namen blue, und seine drei Member – r, g und b – haben die Werte 0.0, 0.0 bzw. 1.0.
 
 
 ```

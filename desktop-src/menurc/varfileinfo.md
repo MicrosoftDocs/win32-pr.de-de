@@ -1,9 +1,9 @@
 ---
-title: Varfileingefo-Struktur
-description: Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält Versionsinformationen, die nicht von einer bestimmten Sprache und Codepage kombiniert werden.
+title: VarFileInfo-Struktur
+description: Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält Versionsinformationen, die nicht von einer bestimmten Kombination aus Sprache und Codepage abhängen.
 ms.assetid: 3b667778-fb08-4195-a88e-ac04baf45fee
 keywords:
-- Varfileingefo-Struktur Menüs und weitere Ressourcen
+- VarFileInfo-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 26326403abef41d131bf25acf5d5d8be7728cd0f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ddae8f913e199e0a1219e5ec36012ba3a3eaf24708ca6771ec075b497107418e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118733391"
 ---
-# <a name="varfileinfo-structure"></a>Varfileingefo-Struktur
+# <a name="varfileinfo-structure"></a>VarFileInfo-Struktur
 
-Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält Versionsinformationen, die nicht von einer bestimmten Sprache und Codepage kombiniert werden.
+Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält Versionsinformationen, die nicht von einer bestimmten Kombination aus Sprache und Codepage abhängen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ typedef struct {
 
 <dl> <dt>
 
-**wlength**
+**wLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Länge des gesamten **varfileinfo** -Blocks (in Bytes), einschließlich aller Strukturen, die vom **Children** -Member angegeben werden.
+Die Länge des gesamten **VarFileInfo-Blocks** in Bytes, einschließlich aller Strukturen, die vom **Children-Element angegeben** werden.
 
 </dd> <dt>
 
-**wvaluelength**
+**wValueLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
@@ -69,40 +69,40 @@ Dieser Member ist immer gleich 0 (null).
 **wType**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ der Daten in der Versions Ressource. Dieser Member ist 1, wenn die Versions Ressource Textdaten enthält, und 0, wenn die Versions Ressource binäre Daten enthält.
+Der Datentyp in der Versionsressource. Dieser Member ist 1, wenn die Versionsressource Textdaten enthält, und 0, wenn die Versionsressource Binärdaten enthält.
 
 </dd> <dt>
 
-**szkey**
+**szKey**
 </dt> <dd>
 
 Typ: **WCHAR**
 
 </dd> <dd>
 
-Die Unicode-Zeichenfolge L "varfileingefo".
+Die Unicode-Zeichenfolge L"VarFileInfo".
 
 </dd> <dt>
 
 **Auffüllen**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-So viele Null-Wörter, wie erforderlich, **um den unter** geordneten Member an einer 32-Bit-Grenze auszurichten.
+So viele Nullwörter wie erforderlich, um das **Children-Member** an einer 32-Bit-Grenze auszurichten.
 
 </dd> <dt>
 
 **Children**
 </dt> <dd>
 
-Typ: **[ **var**](var-str.md)**
+Typ: **[ **Var**](var-str.md)**
 
 </dd> <dd>
 
@@ -110,11 +110,11 @@ Enthält in der Regel eine Liste der Sprachen, die von der Anwendung oder DLL un
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist keine echte C-Sprachstruktur, da Sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versions Ressource erstellt und wird nicht in den Header Dateien angezeigt, die im Windows Software Development Kit (SDK) enthalten sind.
+Diese Struktur ist keine echte C-Sprachstruktur, da sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versionsressource erstellt und wird nicht in den Headerdateien angezeigt, die im Lieferumfang des Windows Software Development Kit (SDK) enthalten sind.
 
-Das **unter** geordnete Element der [**vs \_ VERSIONINFO**](vs-versioninfo.md) -Struktur kann NULL oder eine **varfileinfo** -Struktur enthalten.
+Der **Children-Member** der [**VS \_ VERSIONINFO-Struktur**](vs-versioninfo.md) kann null oder eine **VarFileInfo-Struktur** enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,20 +127,20 @@ Das **unter** geordnete Element der [**vs \_ VERSIONINFO**](vs-versioninfo.md) -
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Kreis**](var-str.md)
+[**Var**](var-str.md)
 </dt> <dt>
 
 [**VS \_ VERSIONINFO**](vs-versioninfo.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Versionsinformationen](version-information.md)

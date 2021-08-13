@@ -1,19 +1,19 @@
 ---
 title: IDXCoreAdapter::GetPropertySize
-description: Ruft für eine angegebene Adapter Eigenschaft die Größe des Puffers in Bytes ab, der für den Abruf von [GetProperty](./nf-dxcore_interface-idxcoreadapter-getproperty.md)erforderlich ist.
+description: Ruft für eine angegebene Adaptereigenschaft die Größe des Puffers in Bytes ab, die für einen Aufruf von [GetProperty](./nf-dxcore_interface-idxcoreadapter-getproperty.md)erforderlich ist.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: ff077d3c4c827a55f7fd9b10dfe93f1271649f72
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 525e2657ab7af5fa6f7cee4f527b74604d2674dbc67da232dd6501ddc45b0291
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118279252"
 ---
-# <a name="idxcoreadaptergetpropertysize-method"></a>Idxcoreadapter:: getpropertysize-Methode
+# <a name="idxcoreadaptergetpropertysize-method"></a>IDXCoreAdapter::GetPropertySize-Methode
 
-Ruft für eine angegebene Adapter Eigenschaft die Größe des Puffers in Bytes ab, der für den Abruf von [GetProperty](./nf-dxcore_interface-idxcoreadapter-getproperty.md)erforderlich ist. Bevor Sie **getpropertysize** für einen Eigenschaftentyp aufrufen, rufen Sie [ispropertysupported](./nf-dxcore_interface-idxcoreadapter-ispropertysupported.md) auf, um zu bestätigen, dass der Eigenschaftentyp für diesen Adapter und dieses Betriebssystem verfügbar ist.
+Ruft für eine angegebene Adaptereigenschaft die Größe des Puffers in Bytes ab, die für einen Aufruf von [GetProperty](./nf-dxcore_interface-idxcoreadapter-getproperty.md)erforderlich ist. Rufen Sie vor dem Aufrufen von **GetPropertySize** für einen Eigenschaftentyp [IsPropertySupported](./nf-dxcore_interface-idxcoreadapter-ispropertysupported.md) auf, um zu bestätigen, dass der Eigenschaftstyp für diesen Adapter und das Betriebssystem verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,32 +27,32 @@ virtual HRESULT STDMETHODCALLTYPE GetPropertySize(
 
 ### <a name="property"></a>property
 
-Type: **[dxcoreadapterproperty](./ne-dxcore_interface-dxcoreadapterproperty.md)**
+Typ: **[DXCoreAdapterProperty](./ne-dxcore_interface-dxcoreadapterproperty.md)**
 
-Der Typ der Eigenschaft, deren Größe (in Bytes) abgerufen werden soll.
+Der Typ der Eigenschaft, deren Größe Sie in Bytes abrufen möchten.
 
 ### <a name="buffersize-out"></a>bufferSize [out]
 
 Typ: **size_t \***
 
-Ein Zeiger auf einen **size_t** Wert. Die Funktion dereferenziert den Zeiger und legt den Wert auf die Größe (in Bytes) des Ausgabepuffers fest, den Sie zuordnen und als *PropertyData* -Argument in Ihrem Aufrufen von [GetProperty](./nf-dxcore_interface-idxcoreadapter-getproperty.md)übergeben.
+Ein Zeiger auf einen **size_t** Wert. Die Funktion dereferenziert den Zeiger und legt den Wert auf die Größe des Ausgabepuffers in Bytes fest, den Sie im Aufruf von [GetProperty](./nf-dxcore_interface-idxcoreadapter-getproperty.md)als *propertyData-Argument* zuweisen und übergeben sollten.
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **[HRESULT](../../com/structure-of-com-error-codes.md)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](../../com/structure-of-com-error-codes.md) - [Fehlercode](../../com/com-error-codes-10.md)zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT-Fehlercode**](../../com/structure-of-com-error-codes.md) [](../../com/com-error-codes-10.md)zurückgegeben.
 
-|Rückgabewert|BESCHREIBUNG|
+|Rückgabewert|Beschreibung|
 |-|-|
-|DXGI_ERROR_INVALID_CALL|Der in der- *Eigenschaft* angegebene Eigenschaftentyp wird von diesem Betriebssystem (OS) nicht erkannt. Wenden Sie [ispropertysupported](./nf-dxcore_interface-idxcoreadapter-ispropertysupported.md) an, um zu bestätigen, dass der Eigenschaftentyp für diesen Adapter und dieses Betriebssystem verfügbar ist.|
-|DXGI_ERROR_UNSUPPORTED|Der in der- *Eigenschaft* angegebene Eigenschaftentyp wird vom Adapter nicht unterstützt. Wenden Sie [ispropertysupported](./nf-dxcore_interface-idxcoreadapter-ispropertysupported.md) an, um zu bestätigen, dass der Eigenschaftentyp für diesen Adapter und dieses Betriebssystem verfügbar ist.|
+|DXGI_ERROR_INVALID_CALL|Der in *der -Eigenschaft* angegebene Eigenschaftentyp wird von diesem Betriebssystem (Betriebssystem) nicht erkannt. Rufen Sie [IsPropertySupported](./nf-dxcore_interface-idxcoreadapter-ispropertysupported.md) auf, um zu bestätigen, dass der Eigenschaftstyp für diesen Adapter und das Betriebssystem verfügbar ist.|
+|DXGI_ERROR_UNSUPPORTED|Der in *der -Eigenschaft* angegebene Eigenschaftentyp wird vom Adapter nicht unterstützt. Rufen Sie [IsPropertySupported](./nf-dxcore_interface-idxcoreadapter-ispropertysupported.md) auf, um zu bestätigen, dass der Eigenschaftstyp für diesen Adapter und das Betriebssystem verfügbar ist.|
 |E_POINTER|`nullptr` wurde für *bufferSize* bereitgestellt.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können **getpropertysize** für einen Adapter aufrufen, der nicht mehr gültig ist, da &mdash; die Funktion nicht fehlschlägt.
+Sie können **GetPropertySize** auf einem Adapter aufrufen, der nicht mehr gültig ist. Die &mdash; Funktion schlägt nicht fehl.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

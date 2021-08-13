@@ -1,11 +1,11 @@
 ---
-title: Ideviceicon Width-Methode
+title: IDeviceIcon Width-Methode
 description: Ruft die Breite des Symbols in Pixel ab.
 ms.assetid: 28ADA921-6808-43B8-966E-BA42B1B52931
 keywords:
-- Width-Methode Medien Streaming-API
-- Width-Methode Medien Streaming-API, ideviceicon-Schnittstelle
-- Ideviceicon Interface Medien Streaming-API, Width-Methode
+- Breitenmethode Medienstreaming-API
+- Width-Methode Media Streaming-API, IDeviceIcon-Schnittstelle
+- IDeviceIcon-Schnittstelle Medienstreaming-API , Width-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4b04f8c40cc209ccf1261af0fc2f6cdfd329db88
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cc76fcd7915c350e04cbacfe756e424d31b0d27d5ced38b0ccf8664805fc9bb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104315081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118473462"
 ---
-# <a name="ideviceiconwidth-method"></a>Ideviceicon:: width-Methode
+# <a name="ideviceiconwidth-method"></a>IDeviceIcon::Width-Methode
 
 Ruft die Breite des Symbols in Pixel ab.
 
@@ -41,7 +41,7 @@ HRESULT Width(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf die Breite des Symbols in Pixel.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf die Breite des Symbols in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ideviceicon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon)
+[**IDeviceIcon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon)
 </dt> </dl>
 
  

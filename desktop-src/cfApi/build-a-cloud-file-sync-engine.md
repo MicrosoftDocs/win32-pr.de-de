@@ -1,143 +1,143 @@
 ---
-description: Erfahren Sie, wie Sie eine Cloud Files-Synchronisierungs-Engine erstellen, die Platzhalter Dateien mithilfe der Cloud Files-API verwendet.
-title: Erstellen einer Cloud-Synchronisierungs-Engine, die Platzhalter Dateien unterstützt
+description: Erfahren Sie, wie Sie mithilfe der Clouddatei-API ein Clouddateisynchronisierungsmodul erstellen, das Platzhalterdateien verwendet.
+title: Erstellen eines Cloudsynchronisierungsmoduls, das Platzhalterdateien unterstützt
 ms.topic: article
 ms.date: 11/12/2020
-ms.openlocfilehash: 4f1330285d0c8ef0359639f2be84162f8bc2ef3b
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: d7d1efae4a56e6f52473002953730fb9f1f9459f1ed8dc82e0ba75ddebf05dc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104561419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118551577"
 ---
-# <a name="build-a-cloud-sync-engine-that-supports-placeholder-files"></a>Erstellen einer Cloud-Synchronisierungs-Engine, die Platzhalter Dateien unterstützt
+# <a name="build-a-cloud-sync-engine-that-supports-placeholder-files"></a>Erstellen eines Cloudsynchronisierungsmoduls, das Platzhalterdateien unterstützt
 
-Ein Synchronisierungs Modul ist ein Dienst zum Synchronisieren von Dateien, normalerweise zwischen einem Remote Host und einem lokalen Client. Synchronisierungs-Engines unter Windows stellen diese Dateien häufig über das Windows-Dateisystem und den Datei-Explorer für den Benutzer zur Verfügung. Vor Windows 10, Version 1709, wurde die Synchronisierung von Synchronisierungs Modulen in Windows auf szenariounabhängige Ad-hoc-Oberflächen, wie z. b. Navigationsbereich des Datei-Explorers, Windows-Systemleiste und (für weitere technische Anwendungen), als Dateisystem Filter-Treiber beschränkt.
+Ein Synchronisierungsmodul ist ein Dienst, der Dateien synchronisiert, in der Regel zwischen einem Remotehost und einem lokalen Client. Synchronisierungs-Engines auf Windows stellen diese Dateien dem Benutzer häufig über das Windows Dateisystem und den Datei-Explorer vor. Vor Windows 10 Version 1709 war die Unterstützung des Synchronisierungsmoduls in Windows auf szenariounabhängige Ad-hoc-Oberflächen beschränkt, z. B. den Navigationsbereich des Datei-Explorers, die Windows Taskleiste und (für weitere technische Anwendungen) Dateisystemfiltertreiber.
 
-In Windows 10, Version 1709 (auch als Fall Creators Update bezeichnet), wurde die *Cloud Files-API* eingeführt. Diese API ist eine neue Plattform, die die Unterstützung für Synchronisierungs-Engines formalisiert. Die Cloud Files-API bietet Unterstützung für Synchronisierungs Module auf eine Weise, die Entwicklern und Endbenutzern viele neue Vorteile bietet.
+Windows 10 Version 1709 (auch als Fall Creators Update bezeichnet) wurde die *Clouddateien-API* eingeführt. Diese API ist eine neue Plattform, die die Unterstützung für Synchronisierungsmodule formalisiert. Die Clouddateien-API bietet Unterstützung für Synchronisierungs-Engines auf eine Weise, die Entwicklern und Endbenutzern viele neue Vorteile bietet.
 
-Die Cloud Files-API enthält die folgenden nativen Win32-APIs und Windows-Runtime (WinRT)-APIs:
+Die Clouddateien-API enthält die folgenden nativen Win32-APIs und winRT-APIs (Windows Runtime):
 
-* [Cloud Filter-API](cloud-filter-reference.md): diese Native Win32-API bietet Funktionen an der Grenze zwischen dem Benutzermodus und dem Dateisystem. Diese API behandelt die Erstellung und Verwaltung von Platzhalter Dateien und Verzeichnissen.
-* [Windows. Storage. Provider-Namespace](/uwp/api/windows.storage.provider): Diese WinRT-API ermöglicht es Anwendungen, den cloudspeicheranbieter zu konfigurieren und den Synchronisierungs Stamm beim Betriebssystem zu registrieren.
+* [Cloudfilter-API:](cloud-filter-reference.md)Diese native Win32-API bietet Funktionen an der Grenze zwischen dem Benutzermodus und dem Dateisystem. Diese API übernimmt die Erstellung und Verwaltung von Platzhalterdateien und Verzeichnissen.
+* [Windows. Storage. Anbieternamespace:](/uwp/api/windows.storage.provider)Mit dieser WinRT-API können Anwendungen den Cloudspeicheranbieter konfigurieren und den Synchronisierungsstamm beim Betriebssystem registrieren.
 
 > [!NOTE]
-> Die Cloud Files-API unterstützt derzeit nicht die Implementierung von Cloud Sync Engines in UWP-apps. Cloud Sync Engines müssen in Desktop-Apps implementiert werden.
+> Die Clouddateien-API unterstützt derzeit nicht die Implementierung von Cloudsynchronisierungs-Engines in UWP-Apps. Cloudsynchronisierungsmodule müssen in Desktop-Apps implementiert werden.
 
 ## <a name="supported-features"></a>Unterstützte Features
 
-Die Cloud Files-API bietet die folgenden Features zum Entwickeln von Cloud-Synchronisierungs Modulen.
+Die Clouddateien-API bietet die folgenden Features zum Erstellen von Cloudsynchronisierungs-Engines.
 
-### <a name="placeholder-files"></a>Platzhalter Dateien
+### <a name="placeholder-files"></a>Platzhalterdateien
 
-* Mithilfe von Synchronisierungs Modulen können Platzhalter Dateien erstellt werden, die für den File System-Header nur 1 KB Speicher beanspruchen und unter normalen Verwendungsbedingungen automatisch in vollständige Dateien unterteilt werden. Platzhalter Dateien, die als typische Dateien für apps und Endbenutzer in der Windows-Shell vorhanden sind.
-* Platzhalter Dateien sind vertikal aus dem Windows-Kernel in die Windows-Shell integriert, und die APP-Kompatibilität mit Platzhalter Dateien ist in der Regel kein Problem. Unabhängig davon, ob Sie Dateisystem-APIs, die Eingabeaufforderung oder eine Desktop-oder UWP-App verwenden, um auf eine Platzhalter Datei zuzugreifen, wird die Datei ohne zusätzliche Codeänderungen einfriert, und die Datei kann normalerweise von der APP verwendet werden.
+* Synchronisierungsmodule können Platzhalterdateien erstellen, die nur 1 KB Speicher für den Dateisystemheader belegen und unter normalen Verwendungsbedingungen automatisch in vollständige Dateien hydratisiert werden. Platzhalterdateien, die als typische Dateien für Apps und Endbenutzer in der Windows Shell vorhanden sind.
+* Platzhalterdateien werden vertikal vom Windows Kernel bis zur Windows Shell integriert, und die App-Kompatibilität mit Platzhalterdateien ist im Allgemeinen kein Problem. Unabhängig davon, ob Sie Dateisystem-APIs, die Eingabeaufforderung oder einen Desktop oder eine UWP-App verwenden, um auf eine Platzhalterdatei zuzugreifen, wird die Datei ohne zusätzliche Codeänderungen hydratisiert, und diese App kann die Datei normal verwenden.
 * Dateien können in drei Zuständen vorhanden sein:
-  * **Platzhalter Datei**: eine leere Darstellung der Datei und nur verfügbar, wenn der Synchronisierungs Dienst verfügbar ist.
-  * **Vollständige Datei**: die Datei wurde implizit in die Datei aufgelöst, und Sie könnte durch das System aufgeschbe werden, wenn Speicherplatz benötigt wird.
-  * Angeheftete **vollständige Datei**: die Datei wurde im Datei-Explorer explizit vom Benutzer bereitgestellt und ist garantiert offline verfügbar.
+  * **Platzhalterdatei:** Eine leere Darstellung der Datei und nur verfügbar, wenn der Synchronisierungsdienst verfügbar ist.
+  * **Vollständige Datei:** Die Datei wurde implizit aktiviert und kann vom System dehydratisiert werden, wenn Speicherplatz benötigt wird.
+  * **Angeheftete vollständige Datei:** Die Datei wurde explizit vom Benutzer über den Datei-Explorer aktiviert und ist garantiert offline verfügbar.
 
-In der folgenden Abbildung wird veranschaulicht, wie der Platzhalter, vollständige und angeheftete vollständige Dateistatus im Datei-Explorer angezeigt wird.
+Die folgende Abbildung zeigt, wie der Platzhalter, der vollständige und der angeheftete vollständige Dateizustände im Datei-Explorer angezeigt werden.
 
-  ![Beispiel für drei Datei Zustände im Datei-Explorer](images/cloud-file-states-file-explorer.png)
+  ![Beispiel für drei Dateizustände im Datei-Explorer](images/cloud-file-states-file-explorer.png)
 
-### <a name="standardized-sync-root-registration"></a>Standardisierte Synchronisierungs Stamm Registrierung
+### <a name="standardized-sync-root-registration"></a>Standardisierte Synchronisierungsstammregistrierung
 
-* Das Registrieren eines Synchronisierungs Stamms ist unkompliziert und standardisiert. Dies schließt die Erstellung eines Branding-Knotens im Navigationsbereich des Datei-Explorers ein, wie im folgenden Screenshot gezeigt. Stämme können entweder als einzelne Einträge der obersten Ebene oder als untergeordnete Elemente einer übergeordneten Gruppierung erstellt werden.
+* Das Registrieren eines Synchronisierungsstamms ist einfach und standardisiert. Dies schließt die Erstellung eines Knotens mit Branding im Navigationsbereich des Datei-Explorers ein, wie im folgenden Screenshot gezeigt. Stammarten können entweder als einzelne Einträge der obersten Ebene oder als untergeordnete Elemente einer übergeordneten Gruppierung erstellt werden.
 
-  ![Beispiel für einen Synchronisierungs Stamm Eintrag im Datei-Explorer](images/register-sync-root-file-explorer.png)
+  ![Beispiel für einen Synchronisierungsstammeintrag im Datei-Explorer](images/register-sync-root-file-explorer.png)
 
 ### <a name="shell-integration"></a>Shellintegration
 
-* Zustands Symbole:
-  * Die Cloud Files-API stellt standardisierte, automatische Aktivierungs Zustands Symbole bereit, die im Datei-Explorer und auf dem Windows-Desktop angezeigt werden.
-  * Zusätzlich zu den Standardsymbolen für den Windows-Status, die für den Aktivierungszustand verwendet werden, können Sie benutzerdefinierte Zustands Symbole für zusätzliche Dienst spezifische Eigenschaften bereitstellen.
-  * Ersetzt Legacy-Shellerweiterungen für Symbol Überlagerung.
-* Fortschrittsanzeige:
-  * Wenn Sie eine Platzhalter Datei öffnen, die mehr als ein paar Sekunden für das Hydrat benötigt, wird der Aktivierungs Fortschritt angezeigt. Der Fortschritt wird in Abhängigkeit vom Kontext an einigen Orten angezeigt:
-    * Im Dialogfenster "Kopier-Engine".
-    * Der Inline Fortschritt wird neben der Datei im Datei-Explorer angezeigt.
-    * Wenn die Datei nicht in der spezifischen Anweisung des Benutzers geöffnet ist, wird eine Popup Benachrichtigung angezeigt, um den Benutzer zu informieren und eine Möglichkeit zur Steuerung der unbeabsichtigten Aktivierungs Aktivität bereitzustellen.
+* Statussymbole:
+  * Die Clouddateien-API bietet standardisierte, automatische Symbole für den Zustand der Hydratisierung, die im Datei-Explorer und auf dem Windows Desktop angezeigt werden.
+  * Zusätzlich zu den standardmäßigen Windows Zustandssymbolen, die für den Zustand der Hydratisierung verwendet werden, können Sie benutzerdefinierte Zustandssymbole für zusätzliche dienstspezifische Eigenschaften bereitstellen.
+  * Ersetzt Legacysymbolüberlagerungs-Shellerweiterungen.
+* Statusanzeige:
+  * Wenn Sie eine Platzhalterdatei öffnen, deren Hydratisierung mehr als einige Sekunden dauert, wird der Fortschritt der Hydratisierung angezeigt. Der Fortschritt wird je nach Kontext an einigen Stellen angezeigt:
+    * In einem Dialogfeld der Kopier-Engine.
+    * Der Inlinefortschritt wird neben der Datei im Datei-Explorer angezeigt.
+    * Wenn die Datei nicht in der spezifischen Anweisung des Benutzers geöffnet wird, wird eine Popupbenachrichtigung angezeigt, um den Benutzer zu informieren und eine Möglichkeit zum Steuern der unbeabsichtigten Aktivität zur Hydration bereitzustellen.
 * Miniaturansichten und Metadaten:
-  * Platzhalter Dateien können über umfangreiche, vom Dienst bereitgestellte Miniaturansichten und erweiterte Datei Metadaten verfügen, um dem Benutzer eine nahtlose Datei-Explorer-Benutzerfunktion bereitzustellen.
+  * Platzhalterdateien können umfassende vom Dienst bereitgestellte Miniaturansichten und erweiterte Dateimetadaten enthalten, um dem Benutzer eine nahtlose Datei-Explorer-Erfahrung zu bieten.
 * Navigationsbereich des Datei-Explorers:
-  * Das Registrieren eines Synchronisierungs Stamms mit der Cloud Files-API bewirkt, dass der Synchronisierungs Stamm (mit einem Symbol und einem benutzerdefinierten Namen) im Navigationsbereich des Datei-Explorers angezeigt wird.
-* Kontextmenüs im Datei-Explorer:
-  * Wenn Sie einen Synchronisierungs Stamm mit der Cloud Files-API registrieren, werden im Kontextmenü des Datei-Explorers automatisch mehrere Verben (Menüeinträge) bereitstellt, mit denen der Benutzer den Aktivierungszustand der Datei steuern können.
-  * Diesem Abschnitt des Kontextmenüs können zusätzliche Verben mithilfe von Desktop Bridge kompatiblen APIs hinzugefügt werden.
-* Benutzer Steuerelement der Datei Aktivierung:
-  * Benutzer haben immer die Kontrolle über die Datei Aktivierung, auch wenn die Dateien nicht explizit vom Benutzer aktiviert werden. Ein interaktiver Popup wird angezeigt, um den Benutzer zu warnen und Optionen anzugeben. In der folgenden Abbildung wird eine Popup Benachrichtigung für eine Metadatendatei veranschaulicht.
-    ![Beispiel für einen interaktiven Toast, der für die Aktivierung der Hintergrund Datei angezeigt wird](images/file-hydration-interactive-toast.png)
-  * Wenn ein Benutzer eine APP daran hindert, Dateien durch einen interaktiven Toast zu durchlaufen, kann er die Blockierung der APP auf der Seite **Automatische Dateidownloads** in den **Einstellungen** entsperren.
-    ![Screenshot der Einstellung zum automatischen Herunterladen von Dateien](images/allow-automatic-file-downloads-setting.png)
-* Einbinden von Kopier-Engine-Vorgängen (unterstützt in Windows 10 Insider Preview Build 19624 und höher):
-  * Cloudspeicheranbieter können einen shellkopierhook zum Überwachen von Datei Vorgängen in Ihrem Synchronisierungs Stamm registrieren.
-  * Der Anbieter registriert seinen kopierhook, indem er den **copyhook** -Registrierungs Wert unter Ihrem Synchronisierungs Stamm-Registrierungsschlüssel auf eine CLSID seines lokalen com-Server Objekts festlegt. Dieses lokale Server Objekt implementiert die [istorageprovidercopyhook](../shell/nn-shobjidl-istorageprovidercopyhook.md) -Schnittstelle.
+  * Das Registrieren eines Synchronisierungsstamms bei der Clouddatei-API bewirkt, dass dieser Synchronisierungsstamm (mit einem Symbol und benutzerdefiniertem Namen) im Navigationsbereich des Datei-Explorers angezeigt wird.
+* Kontextmenüs des Datei-Explorers:
+  * Das Registrieren eines Synchronisierungsstamms bei der Clouddatei-API stellt automatisch mehrere Verben (Menüeinträge) im Kontextmenü des Datei-Explorers bereit, mit denen der Benutzer den Zustand der Hydratation seiner Datei steuern kann.
+  * Diesem Abschnitt des Kontextmenüs können mit Desktop-Brücke kompatiblen APIs zusätzliche Verben hinzugefügt werden.
+* Benutzersteuerung der Dateihydratisierung:
+  * Benutzer haben immer die Kontrolle über die Dateihydratisierung, auch wenn die Dateien nicht explizit vom Benutzer aktiviert werden. Ein interaktives Popup wird für die Hintergrundhydratisierung angezeigt, um den Benutzer zu warnen und Optionen bereitzustellen. Die folgende Abbildung zeigt eine Popupbenachrichtigung für eine hydratisierende Datei.
+    ![Beispiel für ein interaktives Popup für die Hintergrunddateihydratation](images/file-hydration-interactive-toast.png)
+  * Wenn ein Benutzer verhindert, dass eine App Dateien über ein interaktives Popup aktiviert, kann er die Blockierung der App auf der Seite **Automatische Dateidownloads** in **Einstellungen** aufheben.
+    ![Screenshot der Einstellung für automatische Dateidownloads](images/allow-automatic-file-downloads-setting.png)
+* Verknüpfen von Kopiermodulvorgängen (unterstützt in Windows 10 Insider Preview Build 19624 und höher):
+  * Cloudspeicheranbieter können einen Shell-Kopierhook zum Überwachen von Dateivorgängen in ihrem Synchronisierungsstamm registrieren.
+  * Der Anbieter registriert den Kopierhook, indem er den **CopyHook-Registrierungswert** unter dem Synchronisierungsstammregistrierungsschlüssel auf die CLSID seines lokalen COM-Serverobjekts festlegt. Dieses lokale Serverobjekt implementiert die [IStorageProviderCopyHook-Schnittstelle.](../shell/nn-shobjidl-istorageprovidercopyhook.md)
 
 ### <a name="desktop-bridge"></a>Desktop-Brücke
 
-* Synchronisierungs-Engines, die die Cloud Files-APIs verwenden, sind darauf ausgelegt, die [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root) als Implementierungs Anforderung zu verwenden.
+* Synchronisierungsmodule, die die Clouddateien-APIs verwenden, sind so konzipiert, dass sie die [Desktop-Brücke](/windows/uwp/porting/desktop-to-uwp-root) als Implementierungsanforderung verwenden.
 
-## <a name="cloud-mirror-sample"></a>Cloud-Spiegelungs Beispiel
+## <a name="cloud-mirror-sample"></a>Cloudspiegel-Beispiel
 
-Das [cloudspiegelungs Beispiel](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/CloudMirror) veranschaulicht, wie Sie eine Lösung erstellen, die die Cloud Files-API verwendet. Sie ist nicht für die Verwendung als Produktionscode vorgesehen. Es fehlt eine robuste Fehlerbehandlung und wird so geschrieben, dass es so leicht verständlich wie möglich ist. Es wird als cloudspiegelung bezeichnet, da es einfach einen lokalen Ordner auf dem lokalen Datenträger widerspiegelt. Sie geben einen Server Ordner an, der Ihren clouddateiserver und einen Client Ordner darstellen soll, der den Synchronisierungs Stamm Pfad angeben soll. Ein Knoten der obersten Ebene wird im Navigationsbereich des Datei-Explorers namens **teststorageproviderdisplayname** angezeigt, und dieser Knoten wird dem angegebenen Client Ordner zugeordnet.
+Das [Cloudspiegelungsbeispiel](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/CloudMirror) veranschaulicht, wie Sie eine Lösung erstellen, die die Clouddateien-API verwendet. Sie ist nicht für die Verwendung als Produktionscode vorgesehen. Es fehlt eine stabile Fehlerbehandlung, und sie ist so geschrieben, dass sie so leicht wie möglich verständlich ist. Sie wird als Cloudspiegel bezeichnet, da sie einfach einen lokalen Ordner auf Ihrem lokalen Datenträger spiegelt. Sie geben einen Serverordner an, der ihren Clouddateiserver darstellen soll, und einen Clientordner, der den Stammpfad der Synchronisierung angeben soll. Im Datei-Explorer wird im Navigationsbereich ein Knoten der obersten Ebene mit dem Namen **TestStorageProviderDisplayName** angezeigt, und dieser Knoten wird dem angegebenen Clientordner zugeordnet.
 
-Bei der Synchronisierung müssen diese Funktionen von einem vollständig entwickelten clouddateisynchronisierungs-Anbieter implementiert werden:
+Bei der Synchronisierung muss ein vollständig entwickelter Clouddateisynchronisierungsanbieter Folgendes implementieren:
 
-* Wenn die Synchronisierungs Stammdatei nur ein Platzhalter ist, ist der Dienst dafür verantwortlich, den Inhalt der Datei zur Aktivierung zu kopieren. Dies wird im Beispiel implementiert.
-* Wenn die Synchronisierungs Stammdatei eine vollständige Datei ist und sich der Inhalt der Datei im clouddienst ändert, ist der Dienst für die Benachrichtigung des lokalen Synchronisierungs Clients der Änderung zuständig, und der lokale Synchronisierungs Client muss Zusammenführungen gemäß ihren eigenen Spezifikationen verarbeiten. Dies ist im Beispiel nicht implementiert.
-* Wenn es sich bei der Synchronisierungs Stammdatei um eine vollständige Datei handelt und der Inhalt der Datei im Synchronisierungs Stamm Pfad (der lokale Client) geändert wird, muss der lokale Synchronisierungs Client den clouddienst Benachrichtigen und Zusammenführungen gemäß ihren eigenen Spezifikationen verarbeiten. Die Benachrichtigung über lokale Dateiänderungen ist im Beispiel implementiert, aber es wird nichts unternommen.
+* Wenn die Synchronisierungsstammdatei nur ein Platzhalter ist, ist der Dienst dafür verantwortlich, den Inhalt der Datei für die Hydration zu kopieren. Dies wird im Beispiel implementiert.
+* Wenn es sich bei der Synchronisierungsstammdatei um eine vollständige Datei handelt und sich der Inhalt der Datei im Clouddienst ändert, ist der Dienst dafür verantwortlich, den lokalen Synchronisierungsclient über die Änderung zu benachrichtigen, und der lokale Synchronisierungsclient muss Merges gemäß ihren eigenen Spezifikationen verarbeiten. Dies ist im Beispiel nicht implementiert.
+* Wenn es sich bei der Synchronisierungsstammdatei um eine vollständige Datei handelt und sich der Inhalt der Datei im Synchronisierungsstammpfad (der lokale Client) ändert, muss der lokale Synchronisierungsclient den Clouddienst benachrichtigen und Zusammenführungen gemäß ihren eigenen Spezifikationen verarbeiten. Die lokale Dateiänderungsbenachrichtigung wird im Beispiel implementiert, aber sie führt keinerlei Maßnahmen aus.
 
 ### <a name="use-the-sample"></a>Verwenden des Beispiels
 
-1. Erstellen Sie zwei Ordner auf der lokalen Festplatte. Einer davon fungiert als Server und der andere als Client.
-2. Fügen Sie dem Server Ordner einige Dateien hinzu. Stellen Sie sicher, dass der Client Ordner leer ist.
-3. Öffnen Sie das Cloud-Spiegel Beispiel in Visual Studio. Legen Sie das Projekt **cloudmirrorpackage** als Startprojekt fest, und erstellen Sie das Beispiel, und führen Sie es aus. Wenn Sie durch das Beispiel dazu aufgefordert werden, geben Sie die beiden Pfade zu Ihren Server-und Client Ordnern ein. Anschließend wird ein Konsolenfenster mit Diagnoseinformationen angezeigt.
-4. Öffnen Sie den Datei-Explorer, und vergewissern Sie sich, dass der Knoten **teststorageproviderdisplayname** und die Platzhalter für alle Dateien angezeigt werden, die Sie in den Server Ordner kopiert haben. Um eine Anwendung zu simulieren, die versucht, Dateien zu öffnen, ohne die Auswahl zu verwenden, kopieren Sie mehrere Images in den Server Ordner. Doppelklicken Sie in ihrem Stamm Ordner für die Synchronisierung auf eine dieser Elemente, und vergewissern Sie sich, dass Sie in der Öffnen Sie dann die Fotos-app. Die APP lädt benachbarte Dateien vorab in den Hintergrund, um die Wahrscheinlichkeit zu erhöhen, dass der Benutzer bei der Betrachtung der anderen Bilder keine Verzögerungen hat. Sie können sehen, dass die Hintergrund Aktivierung über ein-oder im Datei-Explorer erfolgt.
-5. Klicken Sie mit der rechten Maustaste auf eine Datei im Datei-Explorer, um ein Kontextmenü anzuzeigen, und vergewissern Sie sich, dass das Menü Element **TestCommand** angezeigt wird. Wenn Sie auf dieses Menü Element klicken, wird ein Meldungs Feld angezeigt.
-6. Um das Beispiel anzuhalten, legen Sie den Fokus auf die Konsolenausgabe fest, und drücken Sie **STRG + C**. Dadurch wird die Synchronisierung der Stamm Registrierung bereinigt, sodass der Anbieter deinstalliert wird. Wenn das Beispiel abstürzt, ist es möglich, dass der Synchronisierungs Stamm registriert bleibt. Dies bewirkt, dass der Datei-Explorer jedes Mal neu startet, wenn Sie auf etwas klicken, und Sie werden aufgefordert, die falschen Client-und Server Speicherorte zu erhalten. Wenn dies der Fall ist, deinstallieren Sie die **cloudmirrorpackage** -Beispielanwendung von Ihrem Computer.
+1. Erstellen Sie zwei Ordner auf Ihrer lokalen Festplatte. Eine davon fungiert als Server und die andere als Client.
+2. Fügen Sie dem Serverordner einige Dateien hinzu. Stellen Sie sicher, dass der Clientordner leer ist.
+3. Öffnen Sie das Cloudspiegelungs-Beispiel in Visual Studio. Legen Sie das **CloudMirrorPackage-Projekt** als Startprojekt fest, und erstellen Sie dann das Beispiel, und führen Sie es aus. Wenn Sie vom Beispiel dazu aufgefordert werden, geben Sie die beiden Pfade zu Ihrem Server und Ihren Clientordnern ein. Danach wird ein Konsolenfenster mit Diagnoseinformationen angezeigt.
+4. Öffnen Sie den Datei-Explorer, und vergewissern Sie sich, dass der Knoten **TestStorageProviderDisplayName** und die Platzhalter für alle Dateien angezeigt werden, die Sie in den Serverordner kopiert haben. Um eine Anwendung zu simulieren, die versucht, Dateien zu öffnen, ohne die Auswahl zu verwenden, kopieren Sie mehrere Bilder in den Serverordner. Doppelklicken Sie auf einen dieser Dateien in Ihrem Synchronisierungsstammordner, und vergewissern Sie sich, dass er aktiviert wird. Öffnen Sie dann die Fotos-App. Die App lädt angrenzende Dateien vorab im Hintergrund, um die Wahrscheinlichkeit zu verbessern, dass der Benutzer beim Durchsehen der anderen Bilder keine Verzögerungen feststellen kann. Sie können die Hintergrunddehydratation über Popups oder im Datei-Explorer beobachten.
+5. Klicken Sie im Datei-Explorer mit der rechten Maustaste auf eine Datei, um ein Kontextmenü aufzurufen, und vergewissern Sie sich, dass das Menüelement **TestCommand** angezeigt wird. Wenn Sie auf dieses Menüelement klicken, wird ein Meldungsfeld angezeigt.
+6. Um das Beispiel zu beenden, legen Sie den Fokus auf die Konsolenausgabe fest, und drücken **Sie STRG+C.** Dadurch wird die Stammregistrierung der Synchronisierung bereinigt, sodass der Anbieter deinstalliert wird. Wenn das Beispiel abstürzt, bleibt der Synchronisierungsstamm möglicherweise registriert. Dies führt dazu, dass der Datei-Explorer jedes Mal neu gestartet wird, wenn Sie auf etwas klicken, und Sie werden zur Eingabe der falschen Client- und Serverspeicherorte aufgefordert. Deinstallieren Sie in diesem Fall die **CloudMirrorPackage-Beispielanwendung** von Ihrem Computer.
 
-### <a name="sample-architecture"></a>Beispiel Architektur
+### <a name="sample-architecture"></a>Beispielarchitektur
 
-Das Beispiel ist absichtlich einfach. Statische Klassen werden verwendet, um die Übergabe von instanzzeigern unnötig zu machen. Im Beispiel sind die Hauptklassen aufgeführt:
+Das Beispiel ist absichtlich einfach. Sie verwendet statische Klassen, um das Übergeben von Instanzze0ern nicht zu ersparen. Im Folgenden finden Sie die Hauptklassen im Beispiel:
 
-* **Fakecloudprovider**: Diese Klasse der obersten Ebene steuert die folgenden Workerklassen:
-  * **Cloudproviderregistrar**: registriert die Informationen des Synchronisierungs Stamms bei der Windows-Shell.
-  * **Platz** Halter: generiert die Platzhalter Dateien im Synchronisierungs Stammpfad.
-  * **Shellservices**: erstellt die Windows Shell-Anbieter für das Kontextmenü, die Miniaturansichten und andere Dienste.
-  * **Cloudprovidersyncrootwatcher**: instanziiert einen Director-Watcher, um Änderungen am Synchronisierungs Stamm Pfad zu überwachen und Änderungen vorzunehmen.
-  * **Filecopierwithprogress**: kopiert Dateien aus dem Server Ordner langsam in den Client Ordner, um das Herunterladen von einem echten cloudserver zu simulieren. Gibt die Statusanzeige an, sodass der Benutzer von den-und Datei-Explorer-Benutzeroberflächen etwas informativ angezeigt wird.
+* **FakeCloudProvider:** Diese Klasse der obersten Ebene steuert die folgenden Workerklassen:
+  * **CloudProviderRegistrar:** Registriert die Synchronisierungsstamminformationen bei der Windows Shell.
+  * **Platzhalter:** Generiert die Platzhalterdateien im Synchronisierungsstammpfad.
+  * **ShellServices:** Erstellt Windows Shellanbieter für das Kontextmenü, Miniaturansichten und andere Dienste.
+  * **CloudProviderSyncRootWatcher:** Instanziiert eine DirectoryWatcher-Instanz, um Änderungen am Synchronisierungsstammpfad zu überwachen und auf Änderungen zu reagieren.
+  * **FileCopierWithProgress:** Kopiert Dateien langsam in Blocken aus dem Serverordner in den Clientordner, um das Herunterladen von dateien von einem echten Cloudserver zu simulieren. Stellt eine Statusanzeige zur Verfügung, damit Popups und die Benutzeroberfläche des Datei-Explorers dem Benutzer etwas Informatives anzeigen.
 
-Zusätzlich zu den oben genannten Klassen bietet das Beispiel auch mehrere Hilfsklassen, um den Benutzer zur Eingabe von Ordnern und einigen Dienstprogrammen aufzufordern. **Testexplorercommandhandler**, **customstateprovider**, **thumbnailprovider** und **UriSource** sind Beispiele für shelldienstanbieter.
+Zusätzlich zu den oben genannten Klassen enthält das Beispiel auch mehrere Hilfsklassen, um den Benutzer zur Eingabe von Ordnern und einigen Hilfsprogrammen aufforderungen. **TestExplorerCommandHandler,** **CustomStateProvider,** **ThumbnailProvider** und **UriSource** sind Beispiele für Shell-Dienstanbieter.
 
-## <a name="cloud-files-api-architecture"></a>Cloud Files-API-Architektur
+## <a name="cloud-files-api-architecture"></a>CLOUD FILES-API-Architektur
 
-Der Kern des Speicher Stapels in der Cloud Files-API ist ein Dateisystem-Minifilter-Treiber namens "cldflt.sys". Dieser Treiber fungiert als Proxy zwischen den Anwendungen des Benutzers und dem Synchronisierungs Modul. Das Synchronisierungs Modul weiß, wie die Daten bei Bedarf heruntergeladen und hochgeladen werden. in diesem Fall ist es cldflt.sys, mit der Shell zu arbeiten, um Dateien so darzustellen, als wären die clouddaten lokal verfügbar.
+Der Kern des Speicherstapels in der Clouddatei-API ist ein Minifiltertreiber für Dateisysteme namens cldflt.sys. Dieser Treiber fungiert als Proxy zwischen den Anwendungen des Benutzers und Ihrer Synchronisierungs-Engine. Ihr Synchronisierungsmodul weiß, wie die Daten bei Bedarf heruntergeladen und hochgeladen werden, während es aufgabe von cldflt.sys ist, mit der Shell zusammen zu arbeiten, um Dateien so zu präsentieren, als ob die Clouddaten lokal verfügbar wäre.
 
-Cldflt.sys unterstützt derzeit nur NTFS-Volumes, da es von einigen Features abhängig ist, die für NTFS spezifisch sind.
+Cldflt.sys unterstützt derzeit nur NTFS-Volumes, da sie von einigen ntfs-eindeutigen Features abhängig sind.
 
-Es gibt viele Minifilter-Treiber für Dateisysteme in einem System, die auf einem bestimmten Volume gleichzeitig aktiv sein können. Die Treiber, die für die Cloud Files-API am meisten von Interesse sind, sind die antivirendateisystemfilter.
+In einem System gibt es viele Minifiltertreiber für Dateisysteme, die gleichzeitig auf einem bestimmten Volume aktiv sein können. Die Treiber, die für die Clouddatei-API am wichtigsten sind, sind Virenschutzfilter.
 
-Minifilter-Treiber für Dateisysteme werden von einer speziellen Kernelmoduskomponente mit dem Namen Filter-Manager verwaltet und unterstützt. Unter vielen anderen Aufgaben ermöglicht der Filter-Manager die ungefilterte Kommunikation zwischen Filtern und Benutzermoduskomponenten über ein Konstrukt, das als filternachrichtenport bezeichnet wird.
+Minifiltertreiber für Dateisysteme werden von einer speziellen Kernelmoduskomponente verwaltet und unterstützt, die als Filter-Manager bezeichnet wird. Neben vielen anderen Aufgaben ermöglicht der Filter-Manager die ungefilterte Kommunikation zwischen Filtern und Benutzermoduskomponenten über ein Konstrukt, das als Filternachrichtenport bezeichnet wird.
 
-## <a name="hydration-policies"></a>Aktivierungs Richtlinien
+## <a name="hydration-policies"></a>Hydration Policies
 
-Windows unterstützt eine Vielzahl von [primären Aktivierungs Richtlinien](/windows/desktop/api/cfapi/ne-cfapi-cf_hydration_policy_primary) und die richtlinienmodifiziererer für [sekundäre Maßnahmen](/windows/desktop/api/cfapi/ne-cfapi-cf_hydration_policy_modifier) . Primäre Aktivierungs Richtlinien haben folgende Reihenfolge:
+Windows unterstützt eine Vielzahl von primären [Hydrationsrichtlinien](/windows/desktop/api/cfapi/ne-cfapi-cf_hydration_policy_primary) und [sekundären Hydrationsrichtlinienmodifizierern.](/windows/desktop/api/cfapi/ne-cfapi-cf_hydration_policy_modifier) Primäre Hydrationsrichtlinien haben diese Reihenfolge:
 
-  **Immer voll > vollständige > Progressive > partiell**
+  **Immer vollständig > vollständige > Progressive > Partial**
 
-Sowohl Anwendungen als auch Synchronisierungs Module können Ihre bevorzugte primäre Aktivierungs Richtlinie definieren. Wenn nicht angegeben, ist die standardmäßige Aktivierungs Richtlinie für Anwendungen und Synchronisierungs Module progressiv.
+Sowohl Anwendungen als auch Synchronisierungs-Engines können ihre bevorzugte primäre Hydrationsrichtlinie definieren. Wenn nichts angegeben wird, ist die Standard-Hydrationsrichtlinie sowohl für Anwendungen als auch für Synchronisierungs-Engines progressiv.
 
-Die Richtlinie für die Einlösung einer Cloud-Datei wird durch die folgende Formel am Datei Öffnungs Zeitpunkt bestimmt:
+Die Hydrationsrichtlinie einer Clouddatei wird zum Zeitpunkt des Dateiöffnens durch diese Formel bestimmt:
 
   ```File hydration policy = max(app hydration policy, provider hydration policy)```
 
-Nehmen wir beispielsweise an, dass der Benutzer versucht, eine PDF-Datei zu öffnen, die auf dem Fabrikam-cloudlaufwerk mithilfe von "Configuration Manager-Viewer" gespeichert ist, die keine bevorzugte Aktivierungs Richtlinie angibt. Die Richtlinie zur Anwendungs Aktivierung ist folglich progressiv, in diesem Fall standardmäßig. Da es sich bei Fabrikam Cloud Drive jedoch um ein vollständiges Synchronisierungs Modul handelt, wird die endgültige Aktivierungs Richtlinie für die Datei vollständig aktiviert, was dazu führt, dass die Datei beim ersten Zugriff vollständig aktiviert wird. Das gleiche Ergebnis tritt in Fällen auf, in denen das Synchronisierungs Modul eine progressive Aktivierung unterstützt, aber die bevorzugte APP ist vollständig.
+Angenommen, der Benutzer versucht, eine PDF-Datei, die auf dem Fabrikam Cloud Drive gespeichert ist, mithilfe des Contoso PDF Viewers zu öffnen, der keine bevorzugte Hydrationsrichtlinie anberaumt. Die Anwendungsrichtlinie für die Hydration ist daher eine progressive Hydration, in diesem Fall standardmäßig. Da es sich bei Fabrikam Cloud Drive jedoch um ein Synchronisierungsmodul mit vollständiger Hydration handelt, wird die endgültige Hydrationsrichtlinie für die Datei zu einer vollständigen Hydration, was dazu führt, dass die Datei beim ersten Zugriff vollständig auffeucht wird. Das gleiche Ergebnis tritt in Fällen auf, in denen das Synchronisierungsmodul progressive Hydration unterstützt, die App jedoch eine vollständige Hydration bevorzugt.
 
-Beachten Sie, dass die Datei-Aktivierungs Richtlinie nicht geändert werden kann, nachdem die Datei geöffnet wurde.
+Beachten Sie, dass die Dateifeuchtingrichtlinie nach dem Öffnen der Datei nicht mehr geändert werden kann.
 
-## <a name="compatibility-with-applications-that-use-reparse-points"></a>Kompatibilität mit Anwendungen, die Analyse Punkte verwenden
+## <a name="compatibility-with-applications-that-use-reparse-points"></a>Kompatibilität mit Anwendungen, die Aufbereitungspunkte verwenden
 
-Die Cloud Files-API implementiert das Platzhalter System mithilfe von Analyse [Punkten](/windows/desktop/FileIO/reparse-points). Ein gängiges Missverständnis bei Analyse Punkten ist, dass Sie mit symbolischen Verknüpfungen identisch sind. Dieses fehl Konzept wird gelegentlich in Anwendungs Implementierungen widergespiegelt, und infolgedessen stoßen viele vorhandene Anwendungen beim Auftreten eines Analyse Punkts auf Fehler.
+Die Clouddateien-API implementiert das Platzhaltersystem [mithilfe von Reparsepunkten.](/windows/desktop/FileIO/reparse-points) Ein häufiges Missverständnis von Aufbereitungspunkten ist, dass sie mit symbolischen Verknüpfungen identisch sind. Dieses Missverständnis wird gelegentlich in Anwendungsimplementierungen widergespiegelt, und infolgedessen treten bei vielen vorhandenen Anwendungen Fehler auf, wenn ein Reparse point aufgetreten ist.
 
-Um dieses Kompatibilitätsproblem zu mindern, verbirgt die Cloud Files-API immer Ihre Analyse Punkte aus allen Anwendungen, mit Ausnahme von Synchronisierungs Modulen und Prozessen, deren Hauptimage unter **% systemroot%** liegt. Anwendungen, die Analyse Punkte korrekt verstehen, können erzwingen, dass die Plattform clouddateien-API-Analyse Punkte mithilfe von [rtlsetprocessplaceholdercompatibilitymode](/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-rtlsetprocessplaceholdercompatibilitymode) oder [rtlsetthreadprocessplaceholdercompatibilitymode](/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-rtlsetthreadplaceholdercompatibilitymode)verfügbar macht.
+Um dieses Kompatibilitätsproblem zu beheben, blendet die CLOUD-Datei-API ihre Reparsepunkte immer vor allen Anwendungen aus, mit Ausnahme von Synchronisierungs-Engines und Prozessen, deren Hauptimage sich unter **%systemroot% befindet.** Anwendungen, die Aufarbeitungspunkte richtig verstehen, können die Plattform zwingen, API-Reparsepunkte für Clouddateien mithilfe von [RtlSetProcessPlaceholderCompatibilityMode](/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-rtlsetprocessplaceholdercompatibilitymode) oder [RtlSetThreadProcessPlaceholderCompatibilityMode verfügbar](/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-rtlsetthreadplaceholdercompatibilitymode)zu machen.

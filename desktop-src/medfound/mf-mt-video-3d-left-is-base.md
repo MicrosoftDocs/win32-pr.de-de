@@ -1,29 +1,29 @@
 ---
-description: Gibt für ein 3D-Videoformat an, welche Sicht die Basis Ansicht ist.
+description: Bei einem 3D-Videoformat gibt an, welche Ansicht die Basisansicht ist.
 ms.assetid: 11555BA0-D9BE-4239-A857-C9EEE86A8520
-title: MF_MT_VIDEO_3D_LEFT_IS_BASE-Attribut (mfapi. h)
+title: MF_MT_VIDEO_3D_LEFT_IS_BASE-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8f5ece66db7de19cd77d7e686d9665ad239c6d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb03bc12d32b96abc52999ef6a3b21580c4ac1c59125a076b9eb1d620e0bd362
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118741592"
 ---
-# <a name="mf_mt_video_3d_left_is_base-attribute"></a>MF \_ \_ -MT \_ -Video 3D \_ ist das \_ \_ Basis Attribut
+# <a name="mf_mt_video_3d_left_is_base-attribute"></a>MF \_ MT \_ VIDEO \_ 3D \_ LEFT IS \_ \_ BASE-Attribut
 
-Gibt für ein 3D-Videoformat an, welche Sicht die Basis Ansicht ist.
+Bei einem 3D-Videoformat gibt an, welche Ansicht die Basisansicht ist.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig ist die linke Ansicht in einer 3D-Videosequenz die Basis Ansicht. Wenn die Rechte Ansicht die Basis Ansicht ist, legen Sie dieses Attribut auf " **false**" fest.
+Standardmäßig ist die linke Ansicht in einer 3D-Videosequenz die Basisansicht. Wenn die rechte Ansicht die Basisansicht ist, legen Sie dieses Attribut auf **FALSE** fest.
 
-Um das Stereovideo in 2D zu konvertieren, behalten Sie die Basis Ansicht bei und verwerfen die andere Sicht.
+Wenn Sie Stereovideos in 2D konvertieren möchten, behalten Sie die Basisansicht bei, und verwerfen Sie die andere Ansicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,13 +31,13 @@ Um das Stereovideo in 2D zu konvertieren, behalten Sie die Basis Ansicht bei und
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,28 +1,28 @@
 ---
 title: Binden an untergeordnete Objekte
-description: In ADSI macht ein Container Objekt die IADsContainer-Schnittstelle verfügbar.
+description: In ADSI macht ein Containerobjekt die IADsContainer-Schnittstelle verfügbar.
 ms.assetid: 16b913ea-06a4-4e85-ad6c-68817883bbd8
 ms.tgt_platform: multiple
 keywords:
-- ADSI ADSI, using, Bindung an untergeordnete Objekte
+- ADSI ADSI , using, Bindung an untergeordnete Objekte
 - Binden an untergeordnete Objekte
-- Untergeordnete Objekte, binden an
+- Untergeordnete Objekte, Binden an
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a73d7682dedb405c84dfaf048b8b4b2659e7fd3
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: e454da1aaea93acc404e92da4b9c45ac8d67b4c3cee8a4fe9a04027c7533b39c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118429037"
 ---
 # <a name="binding-to-child-objects"></a>Binden an untergeordnete Objekte
 
-In ADSI macht ein Container Objekt die [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) -Schnittstelle verfügbar. Die [**IADsContainer:: GetObject**](/windows/desktop/api/Iads/nf-iads-iadscontainer-getobject) -Methode wird verwendet, um eine direkte Bindung an ein untergeordnetes Objekt herzustellen. Das von **IADsContainer:: GetObject** zurückgegebene Objekt hat denselben Sicherheitskontext wie das Objekt, für das die Methode aufgerufen wurde. Dies bedeutet, dass, wenn alternative Anmelde Informationen verwendet werden, die alternativen Anmelde Informationen nicht erneut an die Bindungs Funktion oder-Methode weitergegeben werden müssen, um dieselben Anmelde Informationen zu erhalten.
+In ADSI macht ein Containerobjekt die [**IADsContainer-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadscontainer) verfügbar. Die [**IADsContainer::GetObject-Methode**](/windows/desktop/api/Iads/nf-iads-iadscontainer-getobject) wird verwendet, um direkt an ein untergeordnetes Objekt zu binden. Das von **IADsContainer::GetObject** zurückgegebene Objekt hat den gleichen Sicherheitskontext wie das Objekt, für das die Methode aufgerufen wurde. Dies bedeutet, dass bei Verwendung alternativer Anmeldeinformationen die alternativen Anmeldeinformationen nicht erneut an die Bindungsfunktion oder -methode übergeben werden müssen, um die gleichen Anmeldeinformationen beizubehalten.
 
-Die [**IADsContainer:: GetObject**](/windows/desktop/api/Iads/nf-iads-iadscontainer-getobject) -Methode nimmt einen relativen Distinguished Name (RDN) auf, der relativ zum aktuellen Objekt ist. Diese Methode nimmt auch einen optionalen Klassennamen an und gibt einen [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstellen Zeiger zurück, der das untergeordnete Objekt darstellt. Rufen Sie zum Abrufen der gewünschten ADSI-Schnittstelle, wie z. b. [**IADs**](/windows/desktop/api/Iads/nn-iads-iads), die [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode dieses **IDispatch** -Schnittstellen Zeigers auf.
+Die [**IADsContainer::GetObject-Methode**](/windows/desktop/api/Iads/nf-iads-iadscontainer-getobject) verwendet einen relativen Distinguished Name (RDN), der relativ zum aktuellen Objekt ist. Diese Methode verwendet auch einen optionalen Klassennamen und gibt einen [**IDispatch-Schnittstellenzeiger**](/windows/win32/api/oaidl/nn-oaidl-idispatch) zurück, der das untergeordnete Objekt darstellt. Um die gewünschte ADSI-Schnittstelle wie [**IADs**](/windows/desktop/api/Iads/nn-iads-iads)abzurufen, rufen Sie die [**QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) dieses **IDispatch-Schnittstellenzeigers** auf.
 
-Im folgenden C++-Codebeispiel wird eine Funktion gezeigt, die ein angegebenes untergeordnetes Objekt abruft.
+Das folgende C++-Codebeispiel zeigt eine Funktion, die ein angegebenes untergeordnetes Objekt abruft.
 
 
 ```C++
@@ -94,6 +94,6 @@ HRESULT GetChildObject(IADs *pObject,
 
 
 
- 
+ 
 
- 
+ 

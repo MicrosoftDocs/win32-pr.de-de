@@ -1,28 +1,28 @@
 ---
-description: Die bevorzugte Methode für Ihre MUI-Anwendung, die Einstellungen für die Anwendungs Sprache festzulegen, ist die Unterstützung desselben Satzes von Benutzeroberflächen Sprachen wie das Ziel Betriebssystem.
+description: Die bevorzugte Methode zum Festlegen von Anwendungsspracheinstellungen für Ihre ANWENDUNG besteht darin, den gleichen Satz von Benutzeroberflächensprachen wie das Zielbetriebssystem zu unterstützen.
 ms.assetid: 6f5f4782-6e9b-4b30-8728-2bff66c3e1b3
-title: Unterstützende System Spracheinstellungen
+title: Unterstützen von systemsprach Einstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e428a2db855ebfa4e15c8249ea85be7d24f034d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 897da3026ee10820e2c0bc44834d276da3573e5aa0b99060b3580130c01ef9ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118389994"
 ---
-# <a name="supporting-system-language-settings"></a>Unterstützende System Spracheinstellungen
+# <a name="supporting-system-language-settings"></a>Unterstützen von systemsprach Einstellungen
 
-Die bevorzugte Methode für Ihre MUI-Anwendung, die Einstellungen für die Anwendungs Sprache festzulegen, ist die Unterstützung desselben Satzes von Benutzeroberflächen Sprachen wie das Ziel Betriebssystem. Die Anwendung hängt einfach davon ab, dass das Betriebssystem die richtige Sprache der Benutzeroberfläche für die Anzeige auswählt. Ein zugeordnetes Beispiel finden Sie im [Beispiel "MUI: System Settings Application Sample](mui-system-settings-application-sample.md)".
+Die bevorzugte Methode zum Festlegen von Anwendungsspracheinstellungen für Ihre ANWENDUNG besteht darin, den gleichen Satz von Benutzeroberflächensprachen wie das Zielbetriebssystem zu unterstützen. Die Anwendung hängt einfach vom Betriebssystem ab, um die richtige Sprache für die Benutzeroberfläche für die Anzeige auszuwählen. Ein zugehöriges Beispiel wird in [DER ÜBERSICHT: System Einstellungen Anwendungsbeispiel bereitgestellt.](mui-system-settings-application-sample.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Festlegen der Einstellungen für die Anwendungs Sprache](setting-application-language-preferences.md)
+[Festlegen von Einstellungen für die Anwendungssprache](setting-application-language-preferences.md)
 </dt> <dt>
 
-[MUI: System Settings-Anwendungsbeispiel](mui-system-settings-application-sample.md)
+[PROGRAMM: Beispiel für system Einstellungen-Anwendung](mui-system-settings-application-sample.md)
 </dt> </dl>
 
  

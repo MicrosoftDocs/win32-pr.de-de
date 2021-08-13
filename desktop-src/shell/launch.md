@@ -1,19 +1,19 @@
 ---
-description: Sobald Ihre Anwendung ein Dateiobjekt gefunden hat, besteht der nächste Schritt häufig in einer bestimmten Weise darauf.
+description: Sobald Ihre Anwendung ein Dateiobjekt gefunden hat, besteht der nächste Schritt häufig in der Umsetzung.
 ms.assetid: d774c3b2-4caf-460a-ac32-0ed603491d5f
 title: Starten von Anwendungen (ShellExecute, ShellExecuteEx, SHELLEXECUTEINFO)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3ae5640acdbf4d959b97607cc66a4fd8fe8ac24
-ms.sourcegitcommit: 89aa14b1f685f8d65d56ecbdb8bef12246c33cf9
+ms.openlocfilehash: 3b871e3560ce1cb0c38e91d6ea3baa7a9364c16e500be949b734f9b4b195a24e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "113508611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118720218"
 ---
 # <a name="launching-applications-shellexecute-shellexecuteex-shellexecuteinfo"></a>Starten von Anwendungen (ShellExecute, ShellExecuteEx, SHELLEXECUTEINFO)
 
-Sobald Ihre Anwendung ein Dateiobjekt gefunden hat, besteht der nächste Schritt häufig in einer bestimmten Weise darauf. Beispielsweise könnte Ihre Anwendung eine andere Anwendung starten, die es dem Benutzer ermöglicht, eine Datendatei zu ändern. Wenn es sich bei der datei von Interesse um eine ausführbare Datei handelt, möchte Ihre Anwendung sie möglicherweise einfach starten. In diesem Dokument wird erläutert, wie [**ShellExecute oder**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea) [**ShellExecuteEx zum**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) Ausführen dieser Aufgaben verwendet wird.
+Sobald Ihre Anwendung ein Dateiobjekt gefunden hat, besteht der nächste Schritt häufig in der Umsetzung. Beispielsweise könnte Ihre Anwendung eine andere Anwendung starten, die es dem Benutzer ermöglicht, eine Datendatei zu ändern. Wenn es sich bei der datei von Interesse um eine ausführbare Datei handelt, möchte Ihre Anwendung sie möglicherweise einfach starten. In diesem Dokument wird erläutert, wie [**ShellExecute oder**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea) [**ShellExecuteEx zum**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) Ausführen dieser Aufgaben verwendet wird.
 
 -   [Verwenden von ShellExecute und ShellExecuteEx](#using-shellexecute-and-shellexecuteex)
     -   [Objektverben](#object-verbs)
@@ -39,7 +39,7 @@ Um herauszufinden, welche Verben für vordefinierte [Shellobjekte verfügbar](ha
 
 **HKEY \_ CLASSES \_ ROOT-Objektnamen-Shellverb** \\ *\_* \\  \\ 
 
-Wobei *\_ Objektname* der Name des vordefinierten Shell-Objekts ist. Auch hier enthält *der Unterschlüssel* des Verbbefehls die Daten, die angeben, was \\  geschieht, wenn dieses Verb aufgerufen wird.
+Wobei *\_ Objektname* der Name des vordefinierten Shellobjekts ist. Auch hier enthält *der Unterschlüssel* des Verbbefehls die Daten, die angeben, was \\  geschieht, wenn dieses Verb aufgerufen wird.
 
 Zu den häufig verfügbaren Verben gehören:
 
@@ -52,11 +52,11 @@ Zu den häufig verfügbaren Verben gehören:
 | öffnen       | Startet eine Anwendung. Wenn es sich bei dieser Datei nicht um eine ausführbare Datei handelt, wird die zugehörige Anwendung gestartet. |
 | print      | Druckt die Dokumentdatei.                                                                                |
 | properties | Zeigt die Eigenschaften des Objekts an.                                                                        |
-| RunAs      | Startet eine Anwendung als Administrator. Die Benutzerkontensteuerung (User Account Control, UAC) fordert den Benutzer zur Zustimmung auf, die Anwendung mit erhöhten Rechten ausführen zu können, oder gibt die Anmeldeinformationen eines Administratorkontos ein, das zum Ausführen der Anwendung verwendet wird. |
+| RunAs      | Startet eine Anwendung als Administrator. Die Benutzerkontensteuerung (User Account Control, UAC) fordert den Benutzer auf, der Ausführung der Anwendung mit erhöhten Rechten zu zustimmen oder die Anmeldeinformationen eines Administratorkontos einzugeben, das zum Ausführen der Anwendung verwendet wird. |
 
 
 
-Jedes Verb entspricht dem Befehl, der zum Starten der Anwendung über ein Konsolenfenster verwendet wird. Das **offene** Verb ist ein gutes Beispiel, da es häufig unterstützt wird. Öffnen .exe, um dateien **zu öffnen,** startet einfach die Anwendung. Es wird jedoch häufiger verwendet, um eine Anwendung zu starten, die für eine bestimmte Datei verwendet wird. Beispielsweise können .txt von Microsoft WordPad geöffnet werden. Das **geöffnete** Verb für eine .txt entspricht daher etwa dem folgenden Befehl:
+Jedes Verb entspricht dem Befehl, der zum Starten der Anwendung über ein Konsolenfenster verwendet wird. Das **offene** Verb ist ein gutes Beispiel, da es häufig unterstützt wird. Öffnen .exe dateien, **startet** einfach die Anwendung. Es wird jedoch häufiger verwendet, um eine Anwendung zu starten, die für eine bestimmte Datei verwendet wird. Beispielsweise können .txt von Microsoft WordPad geöffnet werden. Das **offene** Verb für eine .txt würde daher etwa dem folgenden Befehl entsprechen:
 
 
 ```C++
@@ -65,9 +65,9 @@ C:\Program Files\Windows NT\Accessories\Wordpad.exe" "%1"
 
 
 
-Wenn Sie [**ShellExecute oder**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea) [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) verwenden, um eine .txt zu öffnen, wird Wordpad.exe mit der angegebenen Datei als Argument gestartet. Einige Befehle können zusätzliche Argumente wie Flags enthalten, die nach Bedarf hinzugefügt werden können, um die Anwendung ordnungsgemäß zu starten. Weitere Informationen zu Kontextmenüs und Verben finden Sie unter [Erweitern von Kontextmenüs](context.md).
+Wenn Sie [**ShellExecute oder**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea) [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) verwenden, um eine .txt zu öffnen, wird Wordpad.exe mit der angegebenen Datei als Argument gestartet. Einige Befehle können zusätzliche Argumente enthalten, z. B. Flags, die nach Bedarf hinzugefügt werden können, um die Anwendung ordnungsgemäß zu starten. Weitere Informationen zu Kontextmenüs und Verben finden Sie unter [Erweitern von Kontextmenüs](context.md).
 
-Im Allgemeinen ist der Versuch, die Liste der verfügbaren Verben für eine bestimmte Datei zu bestimmen, etwas kompliziert. In vielen Fällen können Sie einfach den *lpVerb-Parameter* auf **NULL** festlegen, wodurch der Standardbefehl für den Dateityp aufgerufen wird. Dieses Verfahren entspricht in der Regel dem Festlegen *von lpVerb* auf "open", aber einige Dateitypen verfügen möglicherweise über einen anderen Standardbefehl. Weitere Informationen finden Sie unter [Erweitern von Kontextmenüs](context.md) und in der [**Referenzdokumentation zu ShellExecuteEx.**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa)
+Im Allgemeinen ist der Versuch, die Liste der verfügbaren Verben für eine bestimmte Datei zu bestimmen, etwas kompliziert. In vielen Fällen können Sie einfach den *lpVerb-Parameter* auf **NULL** festlegen, wodurch der Standardbefehl für den Dateityp aufgerufen wird. Dieses Verfahren entspricht in der Regel dem Festlegen *von lpVerb* auf "open", aber einige Dateitypen verfügen möglicherweise über einen anderen Standardbefehl. Weitere Informationen finden Sie unter [Erweitern von Kontextmenüs und](context.md) in der [**Referenzdokumentation zu ShellExecuteEx.**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa)
 
 ### <a name="using-shellexecuteex-to-provide-activation-services-from-a-site"></a>Verwenden von ShellExecuteEx zum Bereitstellen von Aktivierungsdiensten von einem Standort
 
@@ -78,7 +78,7 @@ Die Dienste einer Standortkette können viele Verhaltensweisen der Elementaktivi
 
 ### <a name="using-shellexecute-to-launch-the-search-dialog-box"></a>Verwenden von ShellExecute zum Starten des Suchdialogfelds
 
-Wenn ein Benutzer im Explorer mit der rechten Maustaste auf ein Ordnersymbol Windows, ist eines der Menüelemente "Suchen". Wenn sie dieses Element auswählen, startet die Shell ihr Suchprogramm. Dieses Hilfsprogramm zeigt ein Dialogfeld an, in dem Dateien nach einer angegebenen Textzeichenfolge durchsucht werden können. Eine Anwendung kann programmgesteuert das Suchprogramm für ein Verzeichnis starten, indem [**ShellExecute**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea)mit "find" als *lpVerb-Parameter* und dem Verzeichnispfad als *lpFile-Parameter aufruft.* Mit der folgenden Codezeile wird beispielsweise das Hilfsprogramm Suche für das Verzeichnis c: \\ MyPrograms gestartet.
+Wenn ein Benutzer im Explorer mit der rechten Maustaste auf Windows klickt, ist eines der Menüelemente "Suchen". Wenn sie dieses Element auswählen, startet die Shell ihr Suchprogramm. Dieses Hilfsprogramm zeigt ein Dialogfeld an, das zum Durchsuchen von Dateien nach einer angegebenen Textzeichenfolge verwendet werden kann. Eine Anwendung kann programmgesteuert das Suchprogramm für ein Verzeichnis starten, indem [**ShellExecute**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecutea)mit "find" als *lpVerb-Parameter* und dem Verzeichnispfad als *lpFile-Parameter aufruft.* Mit der folgenden Codezeile wird beispielsweise das Hilfsprogramm Suche für das Verzeichnis c: \\ MyPrograms gestartet.
 
 
 ```C++
@@ -160,7 +160,7 @@ main()
 
 Die Anwendung ruft zuerst die PIDL des Windows-Verzeichnisses ab und listet ihren Inhalt auf, bis sie die erste .bmp findet. Im Gegensatz zum früheren Beispiel wird [**IShellFolder::GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) verwendet, um den Analysenamen der Datei anstelle des Anzeigenamens abzurufen. Da es sich um einen Dateisystemordner handelt, ist der Analysename ein vollqualifizierter Pfad, der für [**ShellExecuteEx erforderlich ist.**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa)
 
-Nachdem die erste .bmp gefunden wurde, werden den Membern einer [**SHELLEXECUTEINFO-Struktur entsprechende Werte**](/windows/desktop/api/Shellapi/ns-shellapi-shellexecuteinfoa) zugewiesen. Der **lpFile-Member** wird auf den Analysenamen der Datei und der **lpVerb-Member** auf **NULL** festgelegt, um den Standardvorgang zu starten. In diesem Fall ist der Standardvorgang "open". Die -Struktur wird dann an [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa)übergeben, die den Standardhandler für Bitmapdateien startet, in der Regel MSPaint.exe, um die Datei zu öffnen. Nachdem die Funktion zurückgegeben wurde, werden die PIDLs freigegeben, und Windows [**IShellFolder-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) des Ordners wird freigegeben.
+Nachdem die erste .bmp gefunden wurde, werden den Membern einer [**SHELLEXECUTEINFO-Struktur entsprechende Werte**](/windows/desktop/api/Shellapi/ns-shellapi-shellexecuteinfoa) zugewiesen. Der **lpFile-Member** wird auf den Analysenamen der Datei und der **lpVerb-Member** auf **NULL** festgelegt, um den Standardvorgang zu starten. In diesem Fall ist der Standardvorgang "offen". Die -Struktur wird dann an [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa)übergeben, die den Standardhandler für Bitmapdateien startet, in der Regel MSPaint.exe, um die Datei zu öffnen. Nachdem die Funktion zurückgegeben wurde, werden die PIDLs freigegeben, und Windows [**IShellFolder-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) des Ordners wird freigegeben.
 
  
 

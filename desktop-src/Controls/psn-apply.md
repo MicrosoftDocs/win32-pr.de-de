@@ -1,9 +1,9 @@
 ---
-title: PSN_APPLY Benachrichtigungs Code (prsht. h)
-description: Wird an jede Seite im Eigenschaften Blatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche "OK", "Schließen" oder "übernehmen" geklickt hat und alle Änderungen wirksam werden sollen. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: PSN_APPLY Benachrichtigungscode (Prsht.h)
+description: Wird an jede Seite im Eigenschaftenblatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche OK, Schließen oder Übernehmen geklickt hat und möchte, dass alle Änderungen wirksam werden. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 18da6bdb-9409-49b6-8116-580fedd99a02
 keywords:
-- Windows-Steuerelemente für PSN_APPLY Benachrichtigungs
+- PSN_APPLY Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 13d8206b4e423fb01be3277a9dd0ca3a49b59129
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 522d4a0ea52f4cee495e689e8f0cdc91d7362ec3a1ee37ab81a911bc980d3209
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118410036"
 ---
-# <a name="psn_apply-notification-code"></a>\_Benachrichtigungs Code für PSN-Anwendung
+# <a name="psn_apply-notification-code"></a>PSN \_ APPLY-Benachrichtigungscode
 
-Wird an jede Seite im Eigenschaften Blatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche "OK", "Schließen" oder "übernehmen" geklickt hat und alle Änderungen wirksam werden sollen. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird an jede Seite im Eigenschaftenblatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche OK, Schließen oder Übernehmen geklickt hat und möchte, dass alle Änderungen wirksam werden. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,40 +41,40 @@ PSN_APPLY
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, die Informationen über den Benachrichtigungs Code einschließlich der ID der Seite enthält.
+Zeiger auf eine [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) die Informationen zum Benachrichtigungscode enthält, einschließlich der ID der Seite.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Legen Sie psnret \_ noError fest, um anzugeben, dass die an dieser Seite vorgenommenen Änderungen gültig sind und angewendet wurden. Wenn alle Seiten psnret \_ noError festlegen, kann das Eigenschaften Blatt zerstört werden. Um anzugeben, dass die an dieser Seite vorgenommenen Änderungen ungültig sind, und um zu verhindern, dass das Eigenschaften Blatt zerstört wird, legen Sie einen der folgenden Rückgabewerte fest:
+Legen Sie PSNRET NOERROR fest, um anzugeben, dass die an dieser Seite vorgenommenen Änderungen \_ gültig sind und angewendet wurden. Wenn auf allen Seiten PSNRET \_ NOERROR festgelegt ist, kann das Eigenschaftenblatt zerstört werden. Um anzugeben, dass die an dieser Seite vorgenommenen Änderungen ungültig sind, und um zu verhindern, dass das Eigenschaftenblatt zerstört wird, legen Sie einen der folgenden Rückgabewerte fest:
 
--   psnret ist \_ ungültig. Das Eigenschaften Blatt wird nicht zerstört, und der Fokus wird auf diese Seite zurückgegeben.
--   psnret \_ ungültige \_ nochangepage. Das Eigenschaften Blatt wird nicht zerstört, und der Fokus wird auf die Seite zurückgegeben, die den Fokus hatte, als die Schaltfläche gedrückt wurde.
+-   PSNRET \_ UNGÜLTIG. Das Eigenschaftenblatt wird nicht zerstört, und der Fokus wird auf diese Seite zurückgegeben.
+-   PSNRET \_ INVALID \_ NOCHANGEPAGE. Das Eigenschaftenblatt wird nicht zerstört, und der Fokus wird auf die Seite zurückgegeben, die den Fokus hatte, als die Schaltfläche gedrückt wurde.
 
-Um den Rückgabewert festzulegen, muss die Dialogfeld Prozedur für die Seite die Funktion [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) mit dem DWL \_ -Wert msgresult aufrufen, und die Dialogfeld Prozedur muss **true** zurückgeben.
+Zum Festlegen des Rückgabewerts muss die Dialogfeldprozedur für die Seite die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) mit dem DWL MSGRESULT-Wert aufrufen, und die Dialogfeldprozedur muss \_ **TRUE zurückgeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Benutzer auf die Schaltfläche OK, übernehmen oder schließen klickt, sendet das Eigenschaften Blatt eine [PSN- \_ killactive](psn-killactive.md) -Benachrichtigung an die aktive Seite und gibt dadurch die Möglichkeit, die Änderungen des Benutzers zu überprüfen. Wenn die Änderungen gültig sind, sendet das Eigenschaften Blatt einen "PSN Apply"- \_ Benachrichtigungs Code auf jede Seite und leitet ihn so um, dass die neuen Eigenschaften auf das entsprechende Element angewendet werden.
+Wenn der Benutzer auf die Schaltfläche OK, Übernehmen oder Schließen klickt, sendet das Eigenschaftenblatt eine [PSN \_ KILLACTIVE-Benachrichtigung](psn-killactive.md) an die aktive Seite und gibt ihm die Möglichkeit, die Änderungen des Benutzers zu überprüfen. Wenn die Änderungen gültig sind, sendet das Eigenschaftenblatt einen PSN APPLY-Benachrichtigungscode an jede Seite und leitet ihn an, die neuen Eigenschaften auf das entsprechende \_ Element anzuwenden.
 
 > [!Note]  
-> Das Eigenschaften Blatt bearbeitet die Liste der Seiten, wenn der \_ Benachrichtigungs Code "PSN Apply" gesendet wird. Versuchen Sie nicht, Seiten hinzuzufügen, zu entfernen oder einzufügen, während Sie diese Benachrichtigung verarbeiten. Dies führt zu unvorhersehbaren Ergebnissen.
+> Das Eigenschaftenblatt wird die Liste der Seiten bearbeiten, wenn der PSN \_ APPLY-Benachrichtigungscode gesendet wird. Versuchen Sie nicht, Seiten hinzuzufügen, zu entfernen oder hinzuzufügen, während Sie diese Benachrichtigung behandeln. Dies führt zu unvorhersehbaren Ergebnissen.
 
  
 
-Der **LPARAM** -Member der [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, auf die von *LPARAM* verwiesen wird, ist auf **true** festgelegt, wenn der Benutzer auf die Schaltfläche OK klickt. Sie wird auch auf " **true** " festgelegt, wenn die [**PSM \_ canceldeclose**](psm-canceltoclose.md) -Nachricht gesendet wurde und der Benutzer auf die Schaltfläche "Schließen" klickt. Der Wert ist auf **false** festgelegt, wenn der Benutzer auf die Schaltfläche übernehmen klickt.
+Das **lParam-Member** der [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) auf das *lParam* zeigt, wird auf **TRUE** festgelegt, wenn der Benutzer auf die Schaltfläche OK klickt. Sie wird auch auf **TRUE festgelegt,** wenn die [**PSM \_ CANCELTOCLOSE-Nachricht**](psm-canceltoclose.md) gesendet wurde und der Benutzer auf die Schaltfläche Schließen klickt. Sie wird auf **FALSE festgelegt,** wenn der Benutzer auf die Schaltfläche Anwenden klickt.
 
-Die [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur enthält eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur als ersten Member, **HDR**. Der **hwndfrom** -Member dieser **NMHDR** -Struktur enthält das Handle für das Eigenschaften Blatt.
+Die [**PSHNOTIFY-Struktur**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als ersten Member, **hdr**. Das **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt.
 
-Beim Verarbeiten dieses Benachrichtigungs Codes dürfen Sie die [**EndDialog**](/windows/desktop/api/winuser/nf-winuser-enddialog) -Funktion nicht aufzurufen.
+Rufen Sie die [**EndDialog-Funktion**](/windows/desktop/api/winuser/nf-winuser-enddialog) nicht auf, wenn Sie diesen Benachrichtigungscode verarbeiten.
 
-Ein modales Eigenschaften Blatt wird zerstört, wenn der Benutzer auf die Schaltfläche OK klickt und jede Seite den Wert psnret \_ noError als Antwort auf **PSN \_ Apply** zurückgibt. Wenn eine Seite "psnret \_ invalid" oder "psnret \_ ungültige \_ nochangepage" zurückgibt, wird der Apply-Prozess sofort abgebrochen. Seiten, die auf der Abbruch Seite stehen, erhalten keinen PSN- \_ Benachrichtigungs Code.
+Ein modales Eigenschaftenblatt wird zerstört, wenn der Benutzer auf die Schaltfläche OK klickt und jede Seite den PSNRET NOERROR-Wert als Antwort auf \_ **PSN \_ APPLY zurückgibt.** Wenn eine Seite PSNRET \_ INVALID oder PSNRET INVALID NOCHANGEPAGE zurückgibt, wird der \_ \_ Apply-Prozess sofort abgebrochen. Seiten nach der Abbrichtseite erhalten keinen PSN \_ APPLY-Benachrichtigungscode.
 
-Um diesen Benachrichtigungs Code zu erhalten, muss eine Seite den DWL- \_ msgresult-Wert als Antwort auf den Benachrichtigungs Code " [PSN \_ killactive](psn-killactive.md) " auf " **false** " festlegen.
+Um diesen Benachrichtigungscode zu erhalten, muss eine Seite den DWL MSGRESULT-Wert als Reaktion auf den \_ [PSN KILLACTIVE-Benachrichtigungscode \_](psn-killactive.md) auf **FALSE** festlegen.
 
 > [!Note]  
-> Dieser Benachrichtigungs Code wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> Dieser Benachrichtigungscode wird nicht unterstützt, wenn sie den Stil des Assistenten von Assistenten [**(PSHWIZARD) \_ verwenden.**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)
 
  
 
@@ -84,9 +84,9 @@ Um diesen Benachrichtigungs Code zu erhalten, muss eine Seite den DWL- \_ msgres
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

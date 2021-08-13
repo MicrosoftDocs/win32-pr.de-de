@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4f2ba81650611351970ff4068edaa75d27d34fc4
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: dab377a36cb1323daf450b9566e419b60edc1fb80dde54591a932b2e0f28223a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113130099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118793466"
 ---
 # <a name="dcl---sm2-sm3---ps-asm"></a>dcl - (sm2, sm3 - ps asm)
 
@@ -34,7 +34,7 @@ Hierbei gilt:
 -   dest ist ein Zielregister. Dabei muss es sich entweder um ein [Eingabefarbregister](dx9-graphics-reference-asm-ps-registers-input-color.md) (vn) oder um ein [Texturkoordinatenregister](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) (tn) handelt.
 -   \[.mask \] ist eine optionale Schreibmaske, die steuert, in welche Komponenten des Zielregisters geschrieben werden kann. Weitere Informationen finden Sie unter [Zielregister-Schreibmaske.](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 

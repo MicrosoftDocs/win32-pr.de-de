@@ -1,9 +1,9 @@
 ---
-title: WM/wmcollectiongroupid
-description: Das WM/wmcollectiongroupid-Attribut enthält eine GUID, die die Sammlungs Gruppe identifiziert.
+title: WM/WMCollectionGroupID
+description: Das WM/WMCollectionGroupID-Attribut enthält eine GUID, die die Sammlungsgruppe identifiziert.
 ms.assetid: 5cfa1747-ce3b-4e8d-bcce-84fb719123e8
 keywords:
-- WM/wmcollectiongroupid Windows Media-Format
+- WM/WMCollectionGroupID windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 652007933669db4ed7977474858c7089ca0d577f
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 12b9d89724751e778eb9545b6c743dbfbcf077b860a8d85c5ab9297680deb930
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118698234"
 ---
-# <a name="wmwmcollectiongroupid"></a>WM/wmcollectiongroupid
+# <a name="wmwmcollectiongroupid"></a>WM/WMCollectionGroupID
 
-Das **WM/wmcollectiongroupid-** Attribut enthält eine GUID, die die Sammlungs Gruppe identifiziert.
+Das **WM/WMCollectionGroupID-Attribut** enthält eine GUID, die die Sammlungsgruppe identifiziert.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmwmcollectiongroupid
+g \_ wszWMWMCollectionGroupID
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ- \_ GUID**
+**\_ \_ WMT-TYP-GUID**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Inhalt wird von Windows Media-Technologien mithilfe von drei Werten identifiziert: **WM/wmcollectiongroupid**, **WM/wmcollectionid** und **WM/wmcontentid**. Mit diesen Werten werden der Inhalt, die Auflistung, zu der er gehört, und die Gruppe, zu der die Auflistung gehört, identifiziert. Alle drei Werte werden von Windows Media Player aufgefüllt, wenn Metadaten für den Inhalt abgerufen werden. Sie können festlegen, dass Ihre Anwendung diese Werte aufzeichnen und Sie verwenden, um Inhalte zu identifizieren, Sie sollten Sie jedoch nicht ändern, wenn Sie vorhanden sind.
+Inhalte werden von Windows Medientechnologien anhand von drei Werten identifiziert: **WM/WMCollectionGroupID**, **WM/WMCollectionID** und **WM/WMContentID**. Diese Werte identifizieren den Inhalt, die Auflistung, zu der sie gehört, und die Gruppe, zu der die Auflistung gehört. Alle drei Werte werden durch die Windows Media Player beim Abrufen von Metadaten für den Inhalt aufgefüllt. Sie können ihre Anwendung diese Werte aufzeichnen und verwenden, um Inhalte zu identifizieren. Sie sollten sie jedoch nicht ändern, wenn sie vorhanden sind.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

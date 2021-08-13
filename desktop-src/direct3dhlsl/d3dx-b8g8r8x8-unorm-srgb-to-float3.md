@@ -1,6 +1,6 @@
 ---
 title: D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion
-description: Entpackt DXGI- \_ Format \_ B8G8R8X8 \_ unorm \_ sRGB-Shader-Daten in eine XMFLOAT3. | D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion
+description: Entpackt DXGI \_ FORMAT \_ B8G8R8X8 \_ UNORM \_ SRGB-Shaderdaten in XMFLOAT3. | D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion
 ms.assetid: 9b3c511c-95c2-454c-95b9-ff6ab0920466
 keywords:
 - D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 277f10bc574e03a7bd608a333cba65f95a3e0b43
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2cc5f638d827a7b6ebf3543b3cde212fd56b0ace41ffb69bf4b7f79b56c28dde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118793856"
 ---
-# <a name="d3dx_b8g8r8x8_unorm_srgb_to_float3-function"></a>D3DX \_ B8G8R8X8 \_ unorm \_ sRGB \_ in die \_ FLOAT3-Funktion
+# <a name="d3dx_b8g8r8x8_unorm_srgb_to_float3-function"></a>D3DX \_ B8G8R8X8 \_ UNORM \_ SRGB \_ to \_ FLOAT3-Funktion
 
-Entpackt DXGI- \_ Format \_ B8G8R8X8 \_ unorm \_ sRGB-Shader-Daten in eine XMFLOAT3.
+Entpackt DXGI \_ FORMAT \_ B8G8R8X8 \_ UNORM \_ SRGB-Shaderdaten in XMFLOAT3.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,24 +37,24 @@ XMFLOAT3 D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3(
 
 <dl> <dt>
 
-*packedinput* 
+*packedInput* 
 </dt> <dd>
 
-Die gepackten Shader-Daten.
+Die gepackten Shaderdaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die entpackten Shader-Daten.
+Die entpackten Shaderdaten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die entpackten Shader-Daten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

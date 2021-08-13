@@ -5,7 +5,7 @@ ms.assetid: 13ec6d05-ed17-4a38-b2ae-7ad175f17b52
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des Move-Tree-State-Attributs
-- cschema für das Attribut "muvetreestate"
+- moveTreeState-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3041d54dfcdb97d7c9e1629162908fab1577b60c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c904beee7be1452e9e74470e91eaf43b3f655fdf79c767923ada6ab3fa8f01b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118686991"
 ---
 # <a name="move-tree-state-attribute"></a>Move-Tree-State-Attribut
 
@@ -30,12 +30,12 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Move-Tree-State                                       |
-| LDAP-Display-Name | "muvetreestate"                                         |
+| Ldap-Anzeigename | moveTreeState                                         |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1305                               |
-| System-ID-GUID    | 1F 2ac2c8-3b71-11d2-90cc-00c04f d91ab1                  |
+| System-ID-GUID    | 1f2ac2c8-3b71-11d2-90cc-00c04fd91ab1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Verloren gegangen und gefunden**](c-lostandfound.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Verloren gegangen und gefunden**](c-lostandfound.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Verloren gegangen und gefunden**](c-lostandfound.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Lost-and-Found**](c-lostandfound.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Lost-and-Found**](c-lostandfound.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Lost-and-Found**](c-lostandfound.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Dieses Attribut enthält Zustandsinformationen für eine Verzeichnisstruktur, di
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Falsch                                               |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**Verloren und gefunden**](c-lostandfound.md)<br/> |
+| In verwendete Klassen        | [**Lost-and-Found**](c-lostandfound.md)<br/> |
 
 
 

@@ -1,8 +1,8 @@
 ---
-description: Die Aufruf Methode der CIM \_ copyfileaction-Klasse führt eine bestimmte Aktion aus. Details dazu, wie die Methode die Aktion ausführt, sind Implementierungs spezifisch. Diese Methode wird von der CIM- \_ Aktion geerbt.
+description: Die Invoke-Methode der CIM \_ CopyFileAction-Klasse führt eine bestimmte Aktion aus. Details zur Ausführung der Aktion durch die -Methode sind implementierungsspezifisch. Diese Methode wird von CIM \_ Action geerbt.
 ms.assetid: b948e9ed-332d-4ac5-be7f-88b7f46f5f1d
 ms.tgt_platform: multiple
-title: Aufruf Methode der CIM_CopyFileAction-Klasse
+title: Invoke-Methode der CIM_CopyFileAction Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b88ddafd0420a40af8b815aab26849572cb7c019
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 66b3e66db91be28eb16d92266bc7ab4acba0de56ede57da1b6c375ee91de5adc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118675761"
 ---
-# <a name="invoke-method-of-the-cim_copyfileaction-class"></a>Aufruf Methode der CIM \_ copyfileaction-Klasse
+# <a name="invoke-method-of-the-cim_copyfileaction-class"></a>Invoke-Methode der CIM \_ CopyFileAction-Klasse
 
-Die **Aufruf** Methode der [**CIM \_ copyfileaction**](cim-copyfileaction.md) -Klasse führt eine bestimmte Aktion aus. Details dazu, wie die Methode die Aktion ausführt, sind Implementierungs spezifisch. Diese Methode wird von der [**CIM- \_ Aktion**](cim-action.md)geerbt.
+Die **Invoke-Methode** der [**CIM \_ CopyFileAction-Klasse**](cim-copyfileaction.md) führt eine bestimmte Aktion aus. Details zur Ausführung der Aktion durch die -Methode sind implementierungsspezifisch. Diese Methode wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,13 +47,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,20 +63,20 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ copyfileaction**](invoke-method-in-class-cim-copyfileaction.md)
+[**CIM \_ CopyFileAction**](invoke-method-in-class-cim-copyfileaction.md)
 </dt> <dt>
 
-[**CIM- \_ copyfileaction**](cim-copyfileaction.md)
+[**CIM \_ CopyFileAction**](cim-copyfileaction.md)
 </dt> </dl>
 
  

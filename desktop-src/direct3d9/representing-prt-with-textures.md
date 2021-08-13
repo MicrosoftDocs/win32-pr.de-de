@@ -1,51 +1,51 @@
 ---
-description: Das prtdemo-Beispiel und der prtcmdline-Simulator, die im DirectX SDK enthalten sind, stellen Übertragungs Vektoren an den Scheitel Punkten eines Netzes dar.
+description: Das PRTDemo-Beispiel und der PRTCmdLine-Simulator, die im DirectX SDK enthalten sind, stellen Übertragungsvektoren an den Scheitellinien eines Gitters dar.
 ms.assetid: cee049e8-3245-4fce-ab2f-ba251eacc72a
 title: Darstellen von PRT mit Texturen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4647cfc85451ede9507e007ed556a203a3cd890a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e827e24258d75a91aa75c9eb51ed6563d476ab16f75fedc31a7071bca28a4a78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118797923"
 ---
 # <a name="representing-prt-with-textures-direct3d-9"></a>Darstellen von PRT mit Texturen (Direct3D 9)
 
-Das prtdemo-Beispiel und der prtcmdline-Simulator, die im DirectX SDK enthalten sind, stellen Übertragungs Vektoren an den Scheitel Punkten eines Netzes dar. Damit das PRT-Signal genau dargestellt werden kann, ist dies möglicherweise ein Mosaik, das für aktuelle Spiele nicht praktikabel ist. Das darstellen von Übertragungs Vektoren in Textur Karten ist ein alternativer Ansatz, bei dem die gleichen Datenkosten unabhängig von der Mesh-Komplexität entstehen. Es gibt mehrere Möglichkeiten, Übertragungs Vektor-Textur Zuordnungen mithilfe der D3DX PRT-Bibliothek zu generieren.
+Das PRTDemo-Beispiel und der PRTCmdLine-Simulator, die im DirectX SDK enthalten sind, stellen Übertragungsvektoren an den Scheitellinien eines Gitters dar. Um das PRT-Signal genau darstellen zu können, kann dies Mosaiken erfordern, die für aktuelle Spiele möglicherweise unpraktisch sind. Die Darstellung von Übertragungsvektoren in Texturzuordnungen ist ein alternativer Ansatz, der unabhängig von der Gitternetzkomplexität die gleichen Datenkosten aufweisen kann. Es gibt mehrere Möglichkeiten zum Generieren von Übertragungsvektortexturzuordnungen mithilfe der D3DX PRT-Bibliothek.
 
-## <a name="precomputing-transfer-vectors"></a>Vorab berechnen von Übertragungs Vektoren
+## <a name="precomputing-transfer-vectors"></a>Vorausberechnung von Übertragungsvektoren
 
-Ein Ansatz wäre das Ändern der prtdemo-und prtcmdline-Beispiele, um bei jeder textrisierung einer Oberfläche einen Übertragungs Vektor zu berechnen. Gehen Sie dazu wie folgt vor:
+Ein Ansatz wäre das Ändern der PRTDemo- und PRTCmdLine-Beispiele, um einen Übertragungsvektor bei jedem Texel in einer Parametrisierung einer Oberfläche zu berechnen. Dazu ist Folgendes erforderlich:
 
-1.  Ändern Sie den [**D3DXCreatePRTEngine**](d3dxcreateprtengine.md) -Aufrufwert, um Texturkoordinaten aus dem Mesh zu extrahieren (extractuvs müssen **true** sein).
-2.  Ersetzen Sie [**D3DXCreatePRTBuffer**](d3dxcreateprtbuffer.md) -Aufrufe durch [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md) , indem Sie die gleiche Textur Größe verwenden.
+1.  Ändern Sie den Aufruf von [**D3DXCreatePRTEngine,**](d3dxcreateprtengine.md) um Texturkoordinaten aus dem Gitternetz zu extrahieren (ExtractUVs muss **TRUE sein).**
+2.  Ersetzen [**Sie D3DXCreatePRTBuffer-Aufrufe**](d3dxcreateprtbuffer.md) durch [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md) mit der gleichen Texturgröße.
 
-Alle ID3DXPRTEngine-Methoden können mit Ausnahme von computebounceadaptive, computessadaptive, computess und computedirectlightingshadaptive mit pro-texsimulationen verwendet werden. Während die Textur Raumsimulation das richtige Ergebnis generiert, kann Sie häufig recht langsam sein, da Sie höchstwahrscheinlich Übertragungs Vektoren mit hoher Dichte berechnen wird.
+Alle ID3DXPRTEngine-Methoden funktionieren mit Simulationen pro Texel, mit Ausnahme von ComputeBounceAdaptive, ComputeSSAdaptive, ComputeSS und ComputeDirectLightingSHAdaptive. Die Texturraumsimulation generiert zwar das richtige Ergebnis, kann aber häufig recht langsam sein, da sie wahrscheinlich Übertragungsvektoren mit hoher Dichte berechnen wird.
 
-Ein anderer Ansatz ist die Berechnung einer adaptiven pro-Vertex-PRT-Simulation (mit Texturkoordinaten, die für die pro-tex-Daten verwendet werden) und anschließendem Aufrufs von [**ID3DXPRTEngine:: resamplebuffer**](id3dxprtengine--resamplebuffer.md) (mithilfe eines Ausgabepuffers, der mit [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md) bei entsprechender Auflösung erstellt wurde). Dies funktioniert mit allen D3DX PRT-Funktionen im SDK und ist häufig viel effizienter als das direkte Berechnen eines pro-texübertragungs Puffers.
+Ein weiterer Ansatz besteht in der Berechnung einer adaptiven PRT-Simulation pro Scheitelpunkt (mit Texturkoordinaten, die für die Pro-Texel-Daten verwendet werden) und anschließendes Aufrufen von [**ID3DXPRTEngine::ResampleBuffer**](id3dxprtengine--resamplebuffer.md) (mithilfe eines Ausgabepuffers, der mit [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md) in der entsprechenden Auflösung erstellt wurde). Dies funktioniert mit allen D3DX PRT-Funktionen im SDK und kann häufig viel effizienter sein als das direkte Berechnen eines Übertragungspuffers pro Texel.
 
-## <a name="runtime-calculations"></a>Lauf Zeit Berechnungen
+## <a name="runtime-calculations"></a>Laufzeitberechnungen
 
-Wenn ein einzelner Cluster verwendet wird, können die Ergebnisse gefiltert und MIP-zugeordnet werden, wie jede andere Textur, und der Pixelshader ist identisch mit dem Vertex-Shader-Code, der mit prtdemo ausgeliefert wird.
+Wenn ein einzelner Cluster verwendet wird, können die Ergebnisse wie jede andere Textur gefiltert und Mip zugeordnet werden, und der Pixel-Shader ist identisch mit dem Vertex-Shadercode, der mit PRTDemo enthalten ist.
 
-Wenn bei der Komprimierung mehrere Cluster generiert werden, können die Daten nicht gefiltert oder falsch zugeordnet werden, da Clustering-Indizes nicht kontinuierlich sind. Im folgenden finden Sie einige Alternativen zur Verarbeitung von multiclusterdaten:
+Wenn die Komprimierung mehrere Cluster generiert, können Sie die Daten nicht filtern oder mipmapieren, da Clusteringindizes nicht kontinuierlich sind. Hier sind einige Alternativen für die Verarbeitung von Daten mit mehreren Clustern:
 
--   Führen Sie den gesamten Filter im Pixel-Shader aus. Leider ist dies aus Leistungsgründen in der Regel unpraktisch.
--   Wenn es sich bei den Texturen um nicht MIP-zugeordnete Texturen mit geringer Auflösung handelt (d. h. Licht Maps), ist es höchstwahrscheinlich effizienter, die Beleuchtung direkt im Textur Bereich zu berechnen, wobei keine Filterung stattfindet, und das Objekt mit einer schattierten Textur zu Rendering. Dabei handelt es sich im Wesentlichen um eine dynamische lichtkarte, die vollständig auf der GPU erstellt wird.
--   Wenn ein Textur Atlas verwendet wird (siehe [Verwenden von uvatlas (Direct3D 9)](using-uvatlas.md)), können Sie die Szene manuell gruppieren, indem Sie alle Übertragungs Vektoren in einer verbundenen Komponente im Textur Raum im gleichen Cluster befinden. Auf diese Weise können Sie die Textur filtern, da sich alle zugänglichen texeln durch die Konstruktion im gleichen Cluster befinden würden. Die Cluster-ID für eine bestimmte Fläche kann vom Vertexshader weitergegeben werden.
+-   Nehmen Sie die Filterung selbst im Pixel-Shader vor. Leider ist dies aus Leistungsgründen im Allgemeinen nicht praktikabel.
+-   Wenn es sich bei den Texturen um texturen mit geringer Auflösung handelt, die keine Mip-Mapping-Texturen (d. h. Lichtkarten) sind, ist es höchstwahrscheinlich effizienter, die Beleuchtung direkt im Texturraum zu berechnen, wo keine Filterung erfolgt, und das Objekt mit einer schattierten Textur zu rendern. Dies ist im Wesentlichen eine dynamische Lichtkarte, die vollständig auf der GPU erstellt wird.
+-   Wenn ein Texturatlas verwendet wird (siehe Verwenden von [UVAtlas (Direct3D 9)](using-uvatlas.md)), können Sie die Szene manuell clustern, indem Sie alle Übertragungsvektoren in einer verbundenen Komponente im Texturraum im selben Cluster haben. Auf diese Weise können Sie die Textur filtern, da sich alle Texel, auf die zugegriffen wird, durch Konstruktion im selben Cluster befingen. Die Cluster-ID für ein bestimmtes Gesicht kann vom Vertex-Shader propagiert werden.
 
-Pixel-Shader haben weitaus weniger Konstante Register, die nicht indiziert werden können. Daher unterscheidet sich der Pixelshader etwas von dem Vertexshader. Das Speichern der pro-Cluster-Arbeit in einer dynamischen Textur mit niedriger Auflösung und die Verwendung von Textur Ladungen wäre die effizienteste Methode zum Rendering, wenn mehrere Cluster verwendet werden.
+Pixel-Shader verfügen über wesentlich weniger konstante Register, die nicht indiziert werden können, sodass sich der Pixel-Shader etwas von dem Vertex-Shader unterscheiden kann. Das Speichern pro Cluster funktioniert in einer dynamischen Textur mit niedriger Auflösung und die Verwendung von Texturlasten wäre die effizienteste Möglichkeit zum Rendern, wenn mehrere Cluster verwendet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Voraus berechnete Strahlungs Übertragung](precomputed-radiance-transfer.md)
+[Vorausberechnungs radiance transfer (Vorausberechnungsübertragung)](precomputed-radiance-transfer.md)
 </dt> <dt>
 
-[Beispiel für eine PRT-Demo](https://msdn.microsoft.com/library/Ee418763(v=VS.85).aspx)
+[PRT-Demobeispiel](https://msdn.microsoft.com/library/Ee418763(v=VS.85).aspx)
 </dt> <dt>
 
 [PRT-Simulator (prtcmdline.exe)](https://msdn.microsoft.com/library/Ee418766(v=VS.85).aspx)

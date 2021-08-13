@@ -3,7 +3,7 @@ title: BN_DBLCLK Benachrichtigungscode (Winuser.h)
 description: 'BN_DBLCLK Benachrichtigungscode: Wird gesendet, wenn der Benutzer auf eine Schaltfläche doppelklickt.'
 ms.assetid: 60cc033f-8b84-4aa5-b625-fdee9deb4757
 keywords:
-- windows-Steuerelemente für BN_DBLCLK Benachrichtigungscode
+- BN_DBLCLK Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fdb403f37b8fee9ea36023a7cd2511bbaaa2af81
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7a80886811a5fcc91f4f0a1217754fdd1daf0cca5b39c1158235d77351008788
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118674354"
 ---
 # <a name="bn_dblclk-notification-code"></a>BN \_ DBLCLK-Benachrichtigungscode
 
@@ -44,7 +44,7 @@ BN_DBLCLK
 *wParam* 
 </dt> <dd>
 
-[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner der Schaltfläche. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
+[**LowORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner der Schaltfläche. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Ein Handle für die Schaltfläche.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 BN \_ DBLCLK ist identisch mit dem [BN DOUBLECLICKED-Benachrichtigungscode. \_ ](bn-doubleclicked.md)
 
@@ -63,19 +63,19 @@ BN \_ DBLCLK ist identisch mit dem [BN DOUBLECLICKED-Benachrichtigungscode. \_ ]
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [BN \_ GEKLICKT](bn-clicked.md)

@@ -1,5 +1,5 @@
 ---
-description: 'Registry_V0-Klasse: Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Registry_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 879ac606-f451-4d5d-bf78-3e7fd3093189
 title: Registry_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ee3aa8d5e4f7b7cb557af5eeb4a02c9a10dafbbf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 92aeae3e9859c97a425806f9f24d23ea741d1d32132ac99cefac5fafb9fa7126
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394232"
 ---
 # <a name="registry_v0-class"></a>Registry \_ V0-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Die **Registry \_ V0-Klasse** definiert keine Member.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

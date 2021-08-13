@@ -1,79 +1,79 @@
 ---
-title: So transcodieren Sie Inhalte mit intelligenter Neukomprimierung
-description: So transcodieren Sie Inhalte mit intelligenter Neukomprimierung
+title: So transcodieren Sie Inhalte mit intelligenter Rekomprimierung
+description: So transcodieren Sie Inhalte mit intelligenter Rekomprimierung
 ms.assetid: 02398462-b0a4-4a17-84e3-4c6f9f26639f
 keywords:
-- Windows Media-Format-SDK, Transcodierung von Inhalten
-- Windows Media-Format-SDK, intelligente Neukomprimierung
-- SDK für Windows Media-Format, Neukomprimierung
-- Windows Media-Format-SDK, Windows Media Audio Codecs
-- Advanced Systems Format (ASF), Transcodierung von Inhalten
-- ASF (Advanced Systems Format), Transcodierung von Inhalten
-- Advanced Systems Format (ASF), intelligente Neukomprimierung
-- ASF (Advanced Systems Format), intelligente Neukomprimierung
-- Advanced Systems Format (ASF), Neukomprimierung
-- ASF (Advanced Systems Format), erneute Komprimierung
-- Advanced Systems Format (ASF), Windows Media Audio Codecs
-- ASF (Advanced Systems Format), Windows Media Audio Codecs
-- Transcodieren von Inhalten
-- intelligente Neukomprimierung
-- Neukomprimierung
-- Windows Media Audio Codecs, Transcodierung von Inhalten
-- Codecs, Windows Media Audio Codecs
+- Windows Medienformat-SDK, Transcodieren von Inhalt
+- Windows Medienformat-SDK, intelligente Rekomprimierung
+- Windows Media Format SDK,recompression
+- Windows Medienformat-SDK, Windows Medienaudiocodecs
+- Advanced Systems Format (ASF), Transcodinginhalt
+- ASF (Advanced Systems Format), Transcoding von Inhalt
+- Advanced Systems Format (ASF), intelligente Rekomprimierung
+- ASF (Advanced Systems Format), intelligente Rekomprimierung
+- Advanced Systems Format (ASF), Recompression
+- ASF (Advanced Systems Format), Recompression
+- Advanced Systems Format (ASF), Windows Medienaudiocodecs
+- ASF (Advanced Systems Format), Windows Medienaudiocodecs
+- Transcodieren von Inhalt
+- Intelligente Rekomprimierung
+- Rekomprimierung
+- Windows Codecs für Medienaudio, Transcodieren von Inhalten
+- Codecs,Windows Medienaudiocodecs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a1317989ea9384d4a9747d712af1ce5c61d484c
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: ee1cf363e196feca81ef9757f006b211758c2ff7fbdd1f50b5136992b394f8dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118699091"
 ---
-# <a name="to-transcode-content-with-smart-recompression"></a>So transcodieren Sie Inhalte mit intelligenter Neukomprimierung
+# <a name="to-transcode-content-with-smart-recompression"></a>So transcodieren Sie Inhalte mit intelligenter Rekomprimierung
 
-Mithilfe des SDK für den Windows Media-Format können Sie Inhalte von einer Bitrate in eine andere transcodieren. Normalerweise besteht dies darin, den Inhalt einfach zu decodieren und erneut in die gewünschte Bitrate zu codieren. Der Windows Media Audio 9-Codec unterstützt die intelligente Neukomprimierung, die eine bessere Qualität als normale ermöglicht.
+Sie können Inhalte mithilfe des Windows Media Format SDK von einer Bitrate in eine andere transcodieren. Normalerweise umfasst dies einfach das Decodieren des Inhalts und die Codierung wieder in die gewünschte Bitrate. Der Windows Media Audio 9-Codec unterstützt die intelligente Rekomprimierung, die eine Transcodierung ermöglicht, die eine bessere Qualität als normal erreicht.
 
-Bei der intelligenten Neukomprimierung muss der ursprüngliche Audiostream mit dem Windows Media Audio Codec codiert werden. Alle Codec-Versionen werden unterstützt, aber die spezialisierten audiovercodecs (Windows Media Audio 9 Professional und Windows Media Audio 9 Voice) nicht. Wenn die ursprüngliche Audiodatei mit dem Windows Media Audio 9-Codec ohne Verlust verwendet wurde, ist die Verwendung intelligenter Neukomprimierung nicht erforderlich, da keine Informationen in der ursprünglichen Codierung verloren gegangen sind.
+Für die intelligente Rekomprimierung muss der ursprüngliche Audiodatenstrom mit dem Windows Medienaudiocodec codiert werden. Alle Versionen des Codecs werden unterstützt, die speziellen Audiocodecs (Windows Media Audio 9 Professional und Windows Media Audio 9 Voice) jedoch nicht. Wenn die ursprüngliche Audiodatei mit dem Windows Media Audio 9 Lossless-Codec codiert wurde, ist keine intelligente Rekomprimierung notwendig, da in der ursprünglichen Codierung keine Informationen verloren gegangen sind.
 
-Führen Sie die folgenden Schritte aus, um die intelligente Neukomprimierung zu verwenden.
+Führen Sie die folgenden Schritte aus, um die intelligente Rekomprimierung zu verwenden.
 
-1.  Richten Sie ein Reader-Objekt mit der Quelldatei zum Lesen ein. Weitere Informationen finden Sie unter [Lesen von ASF-Dateien](reading-asf-files.md).
-2.  Richten Sie ein Writer-Objekt ein, das zum transcodieren der Datei verwendet werden soll. Legen Sie den Dateinamen für die neue Datei fest. Wählen Sie ein Profil aus, das für die neue Datei verwendet werden soll. Legen Sie das ausgewählte Profil im Writer-Objekt fest. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien](writing-asf-files.md).
-3.  Abrufen eines Zeigers auf die [**iwmprofile**](iwmprofile.md) -Schnittstelle des Reader-Objekts durch Aufrufen von **iwmreader:: QueryInterface**.
-4.  Rufen Sie die [**iwmstreamconfig**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig) -Schnittstelle für den Audiostream ab, der durch Aufrufen von [**iwmprofile:: GetStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-getstream)transcodiert werden soll.
-5.  Rufen Sie die [**iwmmediarequicenschnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops) für das Datenstrom-Konfigurationsobjekt ab, indem Sie **iwmstreamconfig:: QueryInterface** aufrufen.
-6.  Rufen Sie die [**WM- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) Struktur für den Stream ab, indem Sie zwei Aufrufe an [**iwmmedia-Eigenschaften:: getmediatype**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmediaprops-getmediatype)durchführen. Abrufen der Größe der Struktur beim ersten-Befehl und Zuweisen von Arbeitsspeicher für einen Puffer, der beim zweiten-Befehl übergeben werden soll.
-7.  Rufen Sie einen Zeiger auf die [**iwminputmedia-**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwminputmediaprops) Oberfläche für die Eingabe im Writer auf, indem Sie [**iwmwriter:: GetInput-**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputprops)Eigenschaften aufrufen.
-8.  Rufen Sie die [**iwmpropertyvault**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmpropertyvault) -Schnittstelle für das Eingabemedien Eigenschaften-Objekt durch Aufrufen von **iwminputmediaproperties:: QueryInterface** ab.
-9.  Verwenden Sie die [**iwmpropertyvault:: SetProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmpropertyvault-setproperty) -Methode, um die \_ Eigenschaft g wszoriginalwaveformat festzulegen. Verwenden Sie die in Schritt 6 erhaltene **WaveFormatEx** -Struktur als Wert der-Eigenschaft.
-10. Schließen Sie die an den Eingabemedien Eigenschaften vorgenommenen Änderungen ein, indem Sie [**iwmwriter:: mentinputtial**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setinputprops) aufrufen und einen Zeiger auf die **iwminputmediaproperties** -Schnittstelle übergeben.
-11. Beginnen Sie mit dem Lesen von Beispielen aus der ursprünglichen Datei, und übergeben Sie Sie mit Aufrufen von [**iwmwriter:: Write-ample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample)an den Writer.
+1.  Richten Sie ein Readerobjekt mit der Quelldatei zum Lesen ein. Weitere Informationen finden Sie unter [Lesen von ASF-Dateien.](reading-asf-files.md)
+2.  Richten Sie ein Writerobjekt ein, das zum Transcodieren der Datei verwendet werden soll. Legen Sie den Dateinamen für die neue Datei fest. Wählen Sie ein Profil aus, das für die neue Datei verwendet werden soll. Legen Sie das ausgewählte Profil im Writerobjekt fest. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien.](writing-asf-files.md)
+3.  Rufen Sie einen Zeiger auf die [**IWMProfile-Schnittstelle**](iwmprofile.md) des Readerobjekts ab, indem **Sie IWMReader::QueryInterface aufrufen.**
+4.  Rufen Sie [**die IWMStreamConfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig) für den zu transcodierten Audiodatenstrom ab, indem Sie [**IWMProfile::GetStream aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-getstream)
+5.  Rufen Sie [**die IWMMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops) für das Streamkonfigurationsobjekt ab, indem **Sie IWMStreamConfig::QueryInterface aufrufen.**
+6.  Rufen Sie die [**WM \_ MEDIA \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) für den Stream ab, indem Sie zwei Aufrufe von [**IWMMediaProps::GetMediaType tätigen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmediaprops-getmediatype) Rufen Sie die Größe der -Struktur beim ersten Aufruf ab, und ordnen Sie Arbeitsspeicher zu, damit ein Puffer beim zweiten Aufruf übergeben wird.
+7.  Rufen Sie einen Zeiger auf die [**IWMInputMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwminputmediaprops) für die Eingabe im Writer ab, indem [**Sie IWMWriter::GetInputProps aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputprops)
+8.  Rufen Sie [**die IWMPropertyVault-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmpropertyvault) für das Eingabemedieneigenschaftenobjekt ab, indem **Sie IWMInputMediaProps::QueryInterface aufrufen.**
+9.  Verwenden Sie [**die IWMPropertyVault::SetProperty-Methode,**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmpropertyvault-setproperty) um die g \_ wszOriginalWaveFormat-Eigenschaft festlegen. Verwenden Sie die IN Schritt 6 erhaltene **WAVEFORMATEX-Struktur** als Wert der -Eigenschaft.
+10. Schließen Sie Änderungen an den Eingabemedieneigenschaften ein, indem [**Sie IWMWriter::SetInputProps**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setinputprops) aufrufen und einen Zeiger auf **die IWMInputMediaProps-Schnittstelle** übergeben.
+11. Beginnen Sie mit dem Lesen von Beispielen aus der originalen Datei, und übergeben Sie sie mit Aufrufen von [**IWMWriter::WriteSample an den Writer.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erweiterte Themen**](advanced-topics.md)
+[**Weiterführende Themen**](advanced-topics.md)
 </dt> <dt>
 
-[**Iwminputmediarequiterschnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwminputmediaprops)
+[**IWMInputMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwminputmediaprops)
 </dt> <dt>
 
-[**Iwmmedia-Eigenschaften Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)
+[**IWMMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)
 </dt> <dt>
 
-[**Iwmprofile-Schnittstelle**](iwmprofile.md)
+[**IWMProfile-Schnittstelle**](iwmprofile.md)
 </dt> <dt>
 
-[**Iwmpropertyvault-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmpropertyvault)
+[**IWMPropertyVault-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmpropertyvault)
 </dt> <dt>
 
-[**Iwmstreamconfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)
+[**IWMStreamConfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

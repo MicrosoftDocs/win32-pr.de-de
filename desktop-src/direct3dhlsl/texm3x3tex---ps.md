@@ -1,6 +1,6 @@
 ---
-title: texm3x3tex-PS
-description: Führt eine 3X3-Matrix Multiplikation aus und verwendet das Ergebnis, um eine Textur Suche durchzuführen. texm3x3tex muss mit zwei texm3x3pad-PS-Anweisungen verwendet werden.
+title: texm3x3tex – ps
+description: Führt eine Multiplikation der 3x3-Matrix aus und verwendet das Ergebnis, um eine Textursuche zu erstellen. texm3x3tex muss mit zwei Texm3x3pad - ps-Anweisungen verwendet werden.
 ms.assetid: bb61cd6f-57d0-4b2d-9186-f04f7f4d3516
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,48 +9,48 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a228b61dbed22dc8d285e0fdc833de53b16e7be7
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 2a40c78fddadde5d58186f9a1ebb01f4d021620862f9d3534e535842a848a2e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118787559"
 ---
-# <a name="texm3x3tex---ps"></a>texm3x3tex-PS
+# <a name="texm3x3tex---ps"></a>texm3x3tex – ps
 
-Führt eine 3X3-Matrix Multiplikation aus und verwendet das Ergebnis, um eine Textur Suche durchzuführen. texm3x3tex muss mit zwei [texm3x3pad-PS-](texm3x3pad---ps.md) Anweisungen verwendet werden.
+Führt eine Multiplikation der 3x3-Matrix aus und verwendet das Ergebnis, um eine Textursuche zu erstellen. texm3x3tex muss mit zwei [Texm3x3pad - ps-Anweisungen](texm3x3pad---ps.md) verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texm3x3tex DST, src |
+| texm3x3tex dst, src |
 |---------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texm3x3tex            | x    | x    | x    |      |      |      |       |      |       |
 
 
 
- 
+ 
 
-Diese Anweisung wird als letzte von drei Anweisungen verwendet, die einen 3X3-Matrix Multiplikations Vorgang darstellen, gefolgt von einer Textur Suche. Die 3X3-Matrix besteht aus den Texturkoordinaten der dritten Textur Phase und den beiden vorangehenden Textur Stufen. Der resultierende Vektor mit drei Komponenten (u, v, w) wird verwendet, um eine Stichprobe der Textur in Phase 3 durchführen. Jede Textur, die den vorherigen zwei Textur Stufen zugewiesen ist, wird ignoriert. Die 3X3-Matrix Multiplikation ist in der Regel hilfreich, um einen normalen Vektor auf den richtigen Tangenten Raum für die zu rendernde Oberfläche zu ausrichten.
+Diese Anweisung wird als letzte von drei Anweisungen verwendet, die einen 3x3-Matrix-Multiplikationsvorgang darstellen, gefolgt von einer Textursuche. Die 3x3-Matrix besteht aus den Texturkoordinaten der dritten Texturphase und den beiden vorhergehenden Texturstufen. Der resultierende Dreikomponentenvektor (u,v,w) wird verwendet, um die Textur in Phase 3 zu beproben. Jede Textur, die den beiden vorherigen Texturstufen zugewiesen ist, wird ignoriert. Die Multiplikation der 3x3-Matrix ist in der Regel nützlich, um einen normalen Vektor auf den richtigen Tangensraum für die gerenderte Oberfläche auszurichten.
 
-Diese Anweisung muss mit der texm3x3pad-Anweisung verwendet werden. Textur Register müssen die folgende Sequenz verwenden.
+Diese Anweisung muss mit der Texm3x3pad-Anweisung verwendet werden. Texturregister müssen die folgende Sequenz verwenden.
 
 
 ```
@@ -67,27 +67,27 @@ texm3x3tex t(m+2), t(n)  // Perform third row of matrix multiply to get a
 
 
 
-Hier finden Sie weitere Details dazu, wie die 3X3-Multiplikation durchgeführt wird.
+Hier finden Sie weitere Details dazu, wie die 3x3-Multiplikation erreicht wird.
 
-Die erste texm3x3pad-Anweisung führt die erste Zeile der Multiplikation durch, um u<sup>'</sup>zu suchen.
+Die erste texm3x3pad-Anweisung führt die erste Zeile der Multiplikation aus, um u<sup>'</sup>zu finden.
 
-u<sup>'</sup> = TextureCoordinates (Stufe m)<sub>UVW</sub> \* t (n)<sub>RGB</sub>
+u<sup>'</sup> = TextureCoordinates(stage m)<sub>UVW</sub> \* t(n)<sub>RGB</sub>
 
-Die zweite texm3x3pad-Anweisung führt die zweite Zeile der Multiplikation durch,<sup>um v zu</sup>suchen.
+Die zweite texm3x3pad-Anweisung führt die zweite Zeile der Multiplikation aus, um v<sup>'</sup>zu finden.
 
-v<sup>'</sup> = TextureCoordinates (Stufe m + 1)<sub>UVW</sub> \* t (n)<sub>RGB</sub>
+v<sup>'</sup> = TextureCoordinates(stage m+1)<sub>UVW</sub> \* t(n)<sub>RGB</sub>
 
-Die texm3x3spec-Anweisung führt die dritte Zeile der Multiplikation aus, um w<sup>'</sup>zu suchen.
+Die texm3x3spec-Anweisung führt die dritte Zeile der Multiplikation aus, um w<sup>'</sup>zu finden.
 
-w<sup>'</sup> = TextureCoordinates (Stufe m + 2)<sub>UVW</sub> \* t (n)<sub>RGB</sub>
+w<sup>'</sup> = TextureCoordinates(stage m+2)<sub>UVW</sub> \* t(n)<sub>RGB</sub>
 
-Schließlich wird die texm3x3tex-Anweisung mit t (m + 2) with (u<sup>'</sup>, v<sup>'</sup>, w<sup>'</sup>) und das Ergebnis in t (m + 2) gespeichert.
+Schließlich werden in der texm3x3tex-Anweisung t(m+2) mit (u<sup>'</sup>, v<sup>'</sup>, w<sup>'</sup>) entnommen und das Ergebnis in t(m+2) gespeichert.
 
-t (m + 2)<sub>RGBA</sub> = texturesample (Phase m + 2)<sub>RGBA</sub> mithilfe von (u<sup>'</sup> , v<sup>'</sup> , w<sup>'</sup> ) als Koordinaten.
+t(m+2)<sub>RGBA</sub> = TextureSample(stage m+2)<sub>RGBA</sub> using (u<sup>'</sup> , v<sup>'</sup> , w<sup>'</sup> ) als Koordinaten.
 
 ## <a name="examples"></a>Beispiele
 
-Hier ist ein Beispiel-Shader mit den identifizierten Textur Zuordnungen und den identifizierten Textur Stufen.
+Hier sehen Sie einen Beispiel-Shader mit den identifizierten Texturzuordnungen und den identifizierten Texturstufen.
 
 
 ```
@@ -102,12 +102,12 @@ mov r0, t3            // stage 3 output result
 
 
 
-Für dieses Beispiel ist die folgende Textur Stufen Einrichtung erforderlich.
+Für dieses Beispiel ist die folgende Texturphaseneinrichtung erforderlich.
 
--   Phase 0 wird eine Textur Zuordnung mit normalen Daten zugewiesen. Dies wird häufig als Bump Map bezeichnet. Bei den Daten handelt es sich um (XYZ) normale für jedes texaus. Texturkoordinaten Satz 0 definiert, wie diese normale Karte Stichprobe ist.
--   Der Texturkoordinaten Satz 1 wird Zeile 1 der 3X3-Matrix zugewiesen. Alle der Phase 1 zugewiesenen Textur werden ignoriert.
--   Der Texturkoordinaten Satz 2 wird Zeile 2 der 3X3-Matrix zugewiesen. Alle der Phase 2 zugewiesenen Textur werden ignoriert.
--   Der Texturkoordinaten Satz 3 wird Zeile 3 der 3X3-Matrix zugewiesen. Ein Volume oder eine cubetextur sollte für die Suche nach dem transformierten 3D-Vektor auf Phase 3 festgelegt werden.
+-   Phase 0 wird eine Texturkarte mit normalen Daten zugewiesen. Dies wird häufig als "Bump Map" bezeichnet. Die Daten sind (XYZ)-Normalitäten für jedes Texel. Texturkoordinatensatz 0 definiert die Stichprobenentnahme für diese normale Karte.
+-   Texturkoordinatensatz 1 wird Zeile 1 der 3x3-Matrix zugewiesen. Jede Textur, die Phase 1 zugewiesen ist, wird ignoriert.
+-   Texturkoordinatensatz 2 wird Zeile 2 der 3x3-Matrix zugewiesen. Jede Textur, die Phase 2 zugewiesen ist, wird ignoriert.
+-   Texturkoordinatensatz 3 wird Zeile 3 der 3x3-Matrix zugewiesen. Ein Volume oder eine Cubetextur sollte für die Suche durch den transformierten 3D-Vektor auf Stufe 3 festgelegt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -116,9 +116,9 @@ Für dieses Beispiel ist die folgende Textur Stufen Einrichtung erforderlich.
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

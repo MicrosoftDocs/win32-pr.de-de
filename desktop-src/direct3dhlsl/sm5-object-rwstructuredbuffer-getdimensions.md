@@ -1,6 +1,6 @@
 ---
-title: 'Rwstructuredbuffer:: GetDimensions-Funktion'
-description: 'Ruft die Ressourcen Dimensionen ab. | Rwstructuredbuffer:: GetDimensions-Funktion'
+title: RWStructuredBuffer::GetDimensions-Funktion
+description: Ruft die Ressourcendimensionen ab. | RWStructuredBuffer::GetDimensions-Funktion
 ms.assetid: 842b3d21-2e2b-4906-93ee-0252b2e8cf85
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0e3868f33e372472999c29bffdd8e12bc8ef09b7
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 760a546d7d60afbb41438416a9602ab55981834acd9969bc535c9a82df6e5e50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118789926"
 ---
-# <a name="rwstructuredbuffergetdimensions-function"></a>Rwstructuredbuffer:: GetDimensions-Funktion
+# <a name="rwstructuredbuffergetdimensions-function"></a>RWStructuredBuffer::GetDimensions-Funktion
 
-Ruft die Ressourcen Dimensionen ab.
+Ruft die Ressourcendimensionen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ void GetDimensions(
 
 <dl> <dt>
 
-*numstructs* \[ vorgenommen\]
+*numStructs* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -46,12 +46,12 @@ Die Anzahl der Strukturen in der Ressource.
 
 </dd> <dt>
 
-*Stride* \[ vorgenommen\]
+*stride* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Schritt (in Byte) der einzelnen Strukturelemente.
+Der Schritt jedes Strukturelements in Bytes.
 
 </dd> </dl>
 
@@ -59,13 +59,13 @@ Der Schritt (in Byte) der einzelnen Strukturelemente.
 
 Nichts
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -77,10 +77,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Rwstructuredbuffer](sm5-object-rwstructuredbuffer.md)
+[RWStructuredBuffer](sm5-object-rwstructuredbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

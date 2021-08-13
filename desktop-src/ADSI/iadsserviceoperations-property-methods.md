@@ -1,10 +1,10 @@
 ---
-title: Iadsserviceoperations-Eigenschaften Methoden (IADs. h)
-description: Die Eigenschaften Methoden der iadsserviceoperations-Schnittstelle lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschafts Methoden finden Sie unter Interface Property Methods.
+title: IADsServiceOperations-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsServiceOperations-Schnittstelle lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: ebddfc42-1d2f-495b-b57c-f57419b54ff8
 ms.tgt_platform: multiple
 keywords:
-- Iadsserviceoperations-Eigenschaften Methoden ADSI
+- IADsServiceOperations-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 654a92be1052d4e4c70e0274d719a49be965d8cb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c7f60b8fe1280e257ccd33f505b2b696a0d1a16228ebfaf8b0cabf7f1319964a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118427606"
 ---
-# <a name="iadsserviceoperations-property-methods"></a>Iadsserviceoperations-Eigenschaften Methoden
+# <a name="iadsserviceoperations-property-methods"></a>IADsServiceOperations-Eigenschaftsmethoden
 
-Die Eigenschaften Methoden der [**iadsserviceoperations**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations) -Schnittstelle lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschafts Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsServiceOperations-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations) lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -35,155 +35,155 @@ Die Eigenschaften Methoden der [**iadsserviceoperations**](/windows/desktop/api/
 **Status**
 </dt> <dd> <dl>
 
-Status des Dienstanbieter.
+Status des Diensts.
 
-Die folgenden Werte sind möglich.
+Im Folgenden sind mögliche Werte angegeben.
 
 <dt>
 
 <span id="ADS_SERVICE_STOPPED"></span><span id="ads_service_stopped"></span>
 
-**Anzeigen \_ Der Dienst wurde \_ beendet** (0x00000001).
+**ADS \_ SERVICE \_ STOPPED** (0x00000001)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_START_PENDING"></span><span id="ads_service_start_pending"></span>
 
-**Anzeigen \_ Dienst \_ Start steht \_ aus** (0x00000002)
+**ADS \_ SERVICE \_ START \_ PENDING** (0x00000002)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_STOP_PENDING"></span><span id="ads_service_stop_pending"></span>
 
-**Anzeigen \_ Dienst \_ Beendigung steht \_ aus** (0x00000003)
+**ADS \_ SERVICE \_ STOP \_ PENDING** (0x00000003)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_RUNNING"></span><span id="ads_service_running"></span>
 
-**Anzeigen \_ Dienst wird \_ ausgeführt** (0x00000004)
+**ADS \_ DIENST \_ WIRD AUSGEFÜHRT** (0x00000004)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_CONTINUE_PENDING"></span><span id="ads_service_continue_pending"></span>
 
-**Anzeigen \_ Dienst \_ Fortsetzung steht \_ aus** (0x00000005 bei der)
+**ADS \_ SERVICE \_ CONTINUE \_ PENDING** (0x00000005)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_PAUSE_PENDING"></span><span id="ads_service_pause_pending"></span>
 
-**Anzeigen \_ Dienst \_ Pause steht \_ aus** (0x00000006)
+**ADS \_ SERVICE \_ PAUSE \_ PENDING** (0x00000006)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_PAUSED"></span><span id="ads_service_paused"></span>
 
-**Anzeigen \_ Der Dienst wurde \_ angeh** alten (0x00000007).
+**ADS \_ SERVICE \_ PAUSED** (0x00000007)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_ERROR"></span><span id="ads_service_error"></span>
 
-**Anzeigen \_ Dienst \_ Fehler** (0x00000008)
+**ADS \_ \_DIENSTFEHLER** (0x00000008)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_OWN_PROCESS"></span><span id="ads_service_own_process"></span>
 
-**Anzeigen \_ Dienst \_ eigener \_ Prozess** (0x00000010)
+**ADS \_ SERVICE \_ OWN \_ PROCESS** (0x00000010)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_SHARE_PROCESS"></span><span id="ads_service_share_process"></span>
 
-**Anzeigen \_ Dienst \_ Freigabe \_ Prozess** (0x00000020)
+**ADS \_ SERVICE \_ SHARE \_ PROCESS** (0x00000020)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_KERNEL_DRIVER"></span><span id="ads_service_kernel_driver"></span>
 
-**Anzeigen \_ Dienst \_ Kernel \_ Treiber** (0x00000001)
+**ADS \_ \_ \_ DIENSTKERNELTREIBER** (0x00000001)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_FILE_SYSTEM_DRIVER"></span><span id="ads_service_file_system_driver"></span>
 
-**Anzeigen \_ Dienst \_ Datei \_ System \_ Treiber** (0x00000002)
+**ADS \_ \_ \_ \_ DIENSTDATEISYSTEMTREIBER** (0x00000002)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_BOOT_START"></span><span id="ads_service_boot_start"></span>
 
-**Anzeigen \_ Start des Dienst \_ \_ Starts** ( \_ Start des Dienst \_ Starts)
+**ADS \_ START \_ \_ DES DIENSTS** (STARTSTART \_ DES \_ DIENSTS)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_SYSTEM_START"></span><span id="ads_service_system_start"></span>
 
-**Anzeigen \_ Dienst \_ System \_ Start** (Dienst \_ System \_ Start)
+**ADS \_ SERVICE \_ SYSTEM \_ START** (SERVICE \_ SYSTEM \_ START)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_AUTO_START"></span><span id="ads_service_auto_start"></span>
 
-**Anzeigen \_ \_automatischer Dienst \_ Start** (Automatisches Starten des dienstanzstarts \_ \_ )
+**ADS \_ SERVICE \_ AUTO \_ START** (SERVICE \_ AUTO \_ START)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_DEMAND_START"></span><span id="ads_service_demand_start"></span>
 
-**Anzeigen \_ Service \_ Demand- \_ Start** (Service Demand- \_ \_ Start)
+**ADS \_ SERVICE \_ DEMAND \_ START** (SERVICE \_ DEMAND \_ START)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_DISABLED"></span><span id="ads_service_disabled"></span>
 
-**Anzeigen \_ Dienst \_ deaktiviert** (Dienst \_ deaktiviert)
+**ADS \_ SERVICE \_ DISABLED** (SERVICE \_ DISABLED)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_ERROR_IGNORE"></span><span id="ads_service_error_ignore"></span>
 
-**Anzeigen \_ Dienst \_ Fehler \_ ignorieren** (0)
+**ADS \_ DIENSTFEHLER \_ \_ IGNORE** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_ERROR_NORMAL"></span><span id="ads_service_error_normal"></span>
 
-**Anzeigen \_ Dienst \_ Fehler \_ Normal** (1)
+**ADS \_ DIENSTFEHLER \_ \_ NORMAL** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_ERROR_SEVERE"></span><span id="ads_service_error_severe"></span>
 
-**Anzeigen \_ Dienst \_ Fehler \_ schwerwiegend** (2)
+**ADS \_ DIENSTFEHLER \_ \_ SCHWERWIEGEND** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_ERROR_CRITICAL"></span><span id="ads_service_error_critical"></span>
 
-**Anzeigen \_ Dienst \_ Fehler \_ kritisch** (3)
+**ADS \_ DIENSTFEHLER \_ \_ KRITISCH** (3)
 
 
 </dt> <dd></dd> </dl> <dt>
@@ -191,7 +191,7 @@ Die folgenden Werte sind möglich.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -210,7 +210,7 @@ HRESULT get_Status(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie der Status eines Microsoft-Faxdiensts überprüft wird, der unter Windows 2000 ausgeführt wird.
+Das folgende Codebeispiel zeigt, wie Sie den Status eines Microsoft Fax Service überprüfen, der am Windows 2000 ausgeführt wird.
 
 
 ```VB
@@ -245,7 +245,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird der Status eines Microsoft-Faxdiensts überprüft, der unter Windows 2000 ausgeführt wird.
+Im folgenden Codebeispiel wird der Status eines Microsoft-Faxdiensts überprüft, der am Windows 2000 ausgeführt wird.
 
 
 ```C++
@@ -299,26 +299,26 @@ Cleanup:
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>        |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl>  |
-| IID<br/>                      | IID \_ iadsserviceoperations ist als 5d7b33f0-31ca-11CF-a98a-00aa006bc149 definiert.<br/> |
+| IID<br/>                      | IID \_ IADsServiceOperations ist als 5D7B33F0-31CA-11CF-A98A-00AA006BC149 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadsfileservice**](/windows/desktop/api/Iads/nn-iads-iadsfileservice)
+[**IADsFileService**](/windows/desktop/api/Iads/nn-iads-iadsfileservice)
 </dt> <dt>
 
-[**Iadsfileserviceoperations**](/windows/desktop/api/Iads/nn-iads-iadsfileserviceoperations)
+[**IADsFileServiceOperations**](/windows/desktop/api/Iads/nn-iads-iadsfileserviceoperations)
 </dt> <dt>
 
-[**Iadsservice**](/windows/desktop/api/Iads/nn-iads-iadsservice)
+[**IADsService**](/windows/desktop/api/Iads/nn-iads-iadsservice)
 </dt> <dt>
 
-[**Iadsserviceoperations**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations)
+[**IADsServiceOperations**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ ms.assetid: 1117ac64-653d-4640-97cd-f37b0949dc57
 title: Konfigurieren der Sicherheit für Bibliotheksanwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 102d6a0f102bfd19da0073bca14df8a8211203b1
-ms.sourcegitcommit: bf526e267d3991892733bdd229c66d5365cf244a
+ms.openlocfilehash: 8f0d8b3993a00512c20409f1f029b7402d5f9ace97984cbe9757453b5672125f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "103961056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118548907"
 ---
 # <a name="configuring-security-for-library-applications"></a>Konfigurieren der Sicherheit für Bibliotheksanwendungen
 
@@ -17,53 +17,53 @@ Bei der Konfiguration der rollenbasierten Sicherheit und Authentifizierung für 
 
 ## <a name="enabling-or-disabling-authentication"></a>Aktivieren oder Deaktivieren der Authentifizierung
 
-Einer der Faktoren, die berücksichtigt werden sollten, ist, ob Aufrufer der Bibliotheks Anwendung die Sicherheitsüberprüfungen für den Host Prozess auf Prozessebene unterliegen sollen, d. –. ob die Authentifizierung aktiviert oder deaktiviert werden soll.
+Einer der zu berücksichtigenden Faktoren ist, ob Aufrufer der Bibliotheksanwendung den Sicherheitsüberprüfungen auf Prozessebene des Hostprozesses unterliegen sollten, d.&a0;b. ob die Authentifizierung aktiviert oder deaktiviert werden soll.
 
-Wenn die Bibliotheks Anwendung beispielsweise von einem Browser gehostet wird, muss Sie möglicherweise nicht authentifizierte Rückrufe empfangen. Um diese Anforderung zu erfüllen, können Sie die Authentifizierung deaktivieren, sodass der Hostingprozess keine Sicherheitsüberprüfungen für Aufrufer der Bibliotheks Anwendung ausführt. Wenn Sie die Authentifizierung deaktivieren, wird die Bibliotheks Anwendung effektiv nicht authentifiziert – alle Aufrufe an diese werden erfolgreich ausgeführt. Aufrufer der Bibliotheks Anwendung unterliegen nicht den Sicherheitsüberprüfungen des Hostingprozesses. Im Grunde wird die Bibliotheks Anwendung als "nicht authentifiziert" gekennzeichnet, und Sicherheitsüberprüfungen werden bei Aufrufen der Bibliotheks Anwendung ausgelassen.
+Wenn die Bibliotheksanwendung beispielsweise von einem Browser gehostet wird, muss sie möglicherweise nicht authentifizierte Rückrufe empfangen. Um diesen Bedarf zu erfüllen, können Sie die Authentifizierung deaktivieren, damit der Hostingprozess keine Sicherheitsüberprüfungen für Aufrufer der Bibliotheksanwendung vorsingt. Wenn Sie die Authentifizierung deaktivieren, wird die Bibliotheksanwendung effektiv nicht authentifiziert– alle Aufrufe an sie werden erfolgreich sein. Aufrufer der Bibliotheksanwendung unterliegen nicht den Sicherheitsüberprüfungen des Hostingprozesses. Im Grunde wird die Bibliotheksanwendung als "nicht authentifiziert" gekennzeichnet, und Sicherheitsüberprüfungen werden für Aufrufe der Bibliotheksanwendung ausgelassen.
 
-Informationen zum Aktivieren oder Deaktivieren der Authentifizierung finden Sie unter [Aktivieren der Authentifizierung für eine Bibliotheks Anwendung](enabling-authentication-for-a-library-application.md).
+Informationen zum Aktivieren oder Deaktivieren der Authentifizierung finden Sie unter [Aktivieren der Authentifizierung für eine Bibliotheksanwendung.](enabling-authentication-for-a-library-application.md)
 
-## <a name="enforcing-role-checks"></a>Erzwingen von Rollen Überprüfungen
+## <a name="enforcing-role-checks"></a>Erzwingen von Rollenüberprüfungen
 
-Eine weitere Entscheidung besteht darin, ob die Bibliotheks Anwendung [rollenbasierte Sicherheit](role-based-security-administration.md)verwenden soll. Wenn rollenbasierte Sicherheit verwendet wird, müssen Sie für alle Zugriffs Überprüfungen die Sicherheit auf Komponentenebene verwenden. Die der Bibliotheks Anwendung zugewiesenen Rollen werden in der Prozess Sicherheits Beschreibung nicht widergespiegelt. Die einzige Autorisierung, die von der Bibliotheks Anwendung gesteuert werden kann, ist auf der Komponentenebene. Weitere Informationen zur Sicherheit auf Komponentenebene finden Sie unter [Sicherheitsgrenzen](security-boundaries.md).
+Eine weitere Entscheidung ist, ob die Bibliotheksanwendung [rollenbasierte Sicherheit verwenden soll.](role-based-security-administration.md) Wenn rollenbasierte Sicherheit verwendet wird, müssen Sie sicherheit auf Komponentenebene verwenden, damit Zugriffsüberprüfungen durchgeführt werden können. Die der Bibliotheksanwendung zugewiesenen Rollen werden nicht in der Prozesssicherheitsbeschreibung widergespiegelt. Die einzige Autorisierung, die die Bibliotheksanwendung steuern kann, ist die Komponentenebene. Weitere Informationen zur Sicherheit auf Komponentenebene finden Sie unter [Sicherheitsgrenzen](security-boundaries.md).
 
-Informationen zum Festlegen der Sicherheit auf Komponentenebene finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffs Überprüfungen](setting-a-security-level-for-access-checks.md).
+Informationen zum Festlegen der Sicherheit auf Komponentenebene finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffsüberprüfungen.](setting-a-security-level-for-access-checks.md)
 
 ## <a name="configuration-scenarios"></a>Konfigurationsszenarien
 
-Zum besseren Verständnis der Auswirkungen der Entscheidung, ob die Bibliotheks Anwendung rollenbasierte Sicherheit verwenden soll und ob die Bibliotheks Anwendung nicht authentifiziert werden soll, sollten Sie die folgenden Szenarien beachten:
+Um die Auswirkungen der Entscheidung zu verstehen, ob die Bibliotheksanwendung rollenbasierte Sicherheit verwenden soll und ob die Bibliotheksanwendung nicht authentifiziert werden soll, sollten Sie die folgenden Szenarien in Betracht ziehen:
 
--   **Die Authentifizierung ist aktiviert, und die rollenbasierte Sicherheit wird verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen durch den Hostingprozess vorgenommen, und einigen Aufrufern wird der Zugriff auf Prozessebene verweigert. Außerdem erfolgt die Rollen Überprüfung auf der Anwendungsebene der Bibliothek, sodass einige Aufrufer, die Sie durch die Sicherheitsüberprüfung auf Prozessebene machen, den Zugriff auf die Bibliotheks Anwendung verweigert, wenn die Rollen Mitgliedschaft überprüft wird. Dies ist das übliche Szenario für eine COM+-Bibliotheks Anwendung, die rollenbasierte Sicherheit verwendet.
+-   **Die Authentifizierung ist aktiviert, und die rollenbasierte Sicherheit wird verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen vom Hostingprozess durchgeführt, und einigen Aufrufern wird der Zugriff auf Prozessebene verweigert. Außerdem erfolgt die Rollenüberprüfung auf Bibliotheksanwendungsebene, sodass einigen Aufrufern, die die Sicherheitsüberprüfung auf Prozessebene durchgeführt haben, der Zugriff auf die Bibliotheksanwendung verweigert wird, wenn die Rollenmitgliedschaft überprüft wird. Dies ist das übliche Szenario für eine COM+-Bibliotheksanwendung, die rollenbasierte Sicherheit verwendet.
 
-    Die folgende Abbildung zeigt das Szenario, in dem die Authentifizierung aktiviert ist, und die Rollen Überprüfung verwendet wird.
+    Die folgende Abbildung zeigt das Szenario, in dem die Authentifizierung aktiviert und die Rollenüberprüfung verwendet wird.
 
-    ![Diagramm, das die Authentifizierung in einem Host Prozess anzeigt.](images/18004ed7-e95e-4c66-9e17-f163cdeefd71.png)
+    ![Diagramm, das die Authentifizierung innerhalb eines Hostprozesses zeigt.](images/18004ed7-e95e-4c66-9e17-f163cdeefd71.png)
 
--   **Die Authentifizierung ist aktiviert, und die rollenbasierte Sicherheit wird nicht verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen auf Prozessebene ausgeführt, aber die Rollen Mitgliedschaft wird nicht auf der Ebene der Bibliotheks Anwendung überprüft. Daher erhält jeder Aufrufer der Bibliotheks Anwendung, der die Sicherheitsüberprüfung auf Prozessebene durchführt, Zugriff auf die Bibliotheks Anwendung, da die Rollen Mitgliedschaft nicht überprüft wird. Diese Situation besteht, wenn eine COM-Anwendung, die keine rollenbasierte Sicherheit verwendet, zu einer COM+-Bibliotheks Anwendung migriert wird.
+-   **Die Authentifizierung ist aktiviert, und die rollenbasierte Sicherheit wird nicht verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen auf Prozessebene durchgeführt, die Rollenmitgliedschaft wird jedoch nicht auf bibliotheksanwendungsebene überprüft. Daher erhält jeder Aufrufer der Bibliotheksanwendung, die die Sicherheitsüberprüfung auf Prozessebene durchfingt, Zugriff auf die Bibliotheksanwendung, da die Rollenmitgliedschaft nicht überprüft wird. Diese Situation würde bestehen, wenn eine COM-Anwendung, die keine rollenbasierte Sicherheit verwendet, zu einer COM+-Bibliotheksanwendung migriert wird.
 
-    Die folgende Abbildung zeigt das Szenario, in dem die Authentifizierung aktiviert ist, und die Rollen Überprüfung wird nicht verwendet.
+    Die folgende Abbildung zeigt das Szenario, in dem die Authentifizierung aktiviert ist und die Rollenüberprüfung nicht verwendet wird.
 
-    ![Diagramm, das die Authentifizierung auf Prozessebene für eine Bibliotheks Anwendung innerhalb des Host Prozesses anzeigt.](images/3e5a64c6-39a9-4ff7-b084-8396fe779210.png)
+    ![Diagramm, das die Authentifizierung auf Prozessebene für eine Bibliotheksanwendung innerhalb des Hostprozesses zeigt.](images/3e5a64c6-39a9-4ff7-b084-8396fe779210.png)
 
--   **Die Authentifizierung ist deaktiviert, und die rollenbasierte Sicherheit wird verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen auf Prozessebene ausgeführt, aber Aufrufer der Bibliotheks Anwendung sind nicht authentifiziert. Tatsächlich sind Aufrufer der Bibliotheks Anwendung von der Sicherheitsüberprüfung auf Prozessebene ausgenommen. Da die Rollen Überprüfung aktiviert ist, bestimmt die Rollen Mitgliedschaft allein, wer Zugriff auf die Bibliotheks Anwendung erhält. Dieses Szenario kann sinnvoll sein, wenn die Sicherheitsüberprüfung, die durch den Hostingprozess durchgeführt wird, zu restriktiv ist, Sie jedoch eine bestimmte Zugriffsbeschränkung für die Bibliotheks Anwendung oder bestimmte Schnittstellen oder Methoden benötigen. Dieses Szenario ermöglicht es Ihnen, die Prozesssicherheit effektiv zu deaktivieren und weiterhin mithilfe der rollenbasierten Sicherheit Überprüfungen auf ebenenzugriff zu verfügen.
+-   **Die Authentifizierung ist deaktiviert, und die rollenbasierte Sicherheit wird verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen auf Prozessebene durchgeführt, aber Aufrufer der Bibliotheksanwendung sind nicht authentifiziert. Aufrufer der Bibliotheksanwendung sind von der Sicherheitsüberprüfung auf Prozessebene ausgenommen. Da die Rollenüberprüfung aktiviert ist, bestimmt die Rollenmitgliedschaft allein, wer Zugriff auf die Bibliotheksanwendung erhält. Dieses Szenario kann geeignet sein, wenn die Vom Hostingprozess durchgeführte Sicherheitsüberprüfung zu restriktiv ist, Sie jedoch eine Zugriffseinschränkung für die Bibliotheksanwendung oder für bestimmte Schnittstellen oder Methoden benötigen. In diesem Szenario können Sie die Prozesssicherheit effektiv deaktivieren und dennoch über eine geeignete Ebene für Zugriffsüberprüfungen mithilfe der rollenbasierten Sicherheit verfügen.
 
-    Das Szenario, in dem die Authentifizierung deaktiviert ist und die Rollen Überprüfung verwendet wird, ist in der folgenden Abbildung dargestellt.
+    Das Szenario, in dem die Authentifizierung deaktiviert ist und die Rollenüberprüfung verwendet wird, ist in der folgenden Abbildung dargestellt.
 
-    ![Diagramm, das die "Überprüfung der Rollen Mitgliedschaft" in einer Bibliotheks Anwendung innerhalb eines Host Prozesses anzeigt.](images/e0cc604c-ba86-4087-9a74-1b6fdce8d69a.png)
+    ![Diagramm, das "Überprüfung auf Rollenmitgliedschaft" in einer Bibliotheksanwendung innerhalb eines Hostprozesses zeigt.](images/e0cc604c-ba86-4087-9a74-1b6fdce8d69a.png)
 
--   **Die Authentifizierung ist deaktiviert, und die rollenbasierte Sicherheit wird nicht verwendet.** In diesem Szenario werden Sicherheitsüberprüfungen weiterhin auf Prozessebene durchgeführt, aber wie im vorhergehenden Szenario übergeben Aufrufer der Bibliotheks Anwendung immer diese Sicherheitsüberprüfung. Da die Rollen Überprüfung ebenfalls deaktiviert ist, wird die Rollen Mitgliedschaft nicht auf der Ebene der Bibliotheks Anwendung überprüft. Im Wesentlichen kann jeder die Bibliotheks Anwendung anrufen. Dieses Szenario sollte ausgewählt werden, wenn Ihr COM-Objekt nicht authentifizierte Rückrufe empfangen muss, wie es bei einem ActiveX-Steuerelement der Fall sein kann, das von Internet Explorer und einem Microsoft Management Console-Snap-in gehostet wird. Natürlich muss dieses COM-Objekt vertrauenswürdig sein, damit es sich beim Empfang nicht authentifizierter Aufrufe entsprechend verhält. Beispielsweise sollte er nicht auf beliebige Dateien im Namen seiner Aufrufer zugreifen.
+-   **Die Authentifizierung ist deaktiviert, und die rollenbasierte Sicherheit wird nicht verwendet.** In diesem Szenario werden sicherheitsüberprüfungen weiterhin auf Prozessebene durchgeführt, aber wie im vorherigen Szenario bestehen Aufrufer der Bibliotheksanwendung diese Sicherheitsüberprüfung immer. Da die Rollenüberprüfung ebenfalls deaktiviert ist, wird die Rollenmitgliedschaft nicht auf Bibliotheksanwendungsebene überprüft. Im Wesentlichen kann jeder die Bibliotheksanwendung aufrufen. Dieses Szenario sollte ausgewählt werden, wenn Ihr COM-Objekt nicht authentifizierte Rückrufe empfangen muss, wie dies bei einem ActiveX-Steuerelement der Fall sein kann, das von Internet Explorer und mit einem Microsoft Management Console-Snap-In gehostet wird. Dieses COM-Objekt muss natürlich als vertrauenswürdig eingestuft werden, damit es sich beim Empfangen nicht authentifizierter Aufrufe entsprechend verhält. Beispielsweise sollte er nicht im Namen seiner Aufrufer auf beliebige Dateien zugreifen.
 
-    Das Szenario, in dem die Authentifizierung deaktiviert ist und die Rollen Überprüfung nicht verwendet wird, ist in der folgenden Abbildung dargestellt.
+    Das Szenario, in dem die Authentifizierung deaktiviert und die Rollenüberprüfung nicht verwendet wird, ist in der folgenden Abbildung dargestellt.
 
-    ![Diagramm, das Aufrufe einer Bibliotheks Anwendung anzeigt, die innerhalb des Host Prozesses nicht authentifiziert sind.](images/df3c9a02-52dd-4e07-a5f1-76cef0dab5cb.png)
+    ![Diagramm, das Aufrufe einer Bibliotheksanwendung zeigt, die innerhalb des Hostprozesses nicht authentifiziert sind.](images/df3c9a02-52dd-4e07-a5f1-76cef0dab5cb.png)
 
-Nachdem Sie entschieden haben, ob Sie die Authentifizierung für Ihre COM+-Bibliotheks Anwendung aktivieren oder deaktivieren möchten, finden Sie unter [Aktivieren der Authentifizierung für eine Bibliotheks Anwendung](enabling-authentication-for-a-library-application.md) eine schrittweise Anleitung, in der erläutert wird, wie die Authentifizierung mithilfe des Verwaltungs Programms Komponenten Dienste deaktiviert (oder aktiviert) wird. Wenn Ihre Bibliotheks Anwendung rollenbasierte Sicherheit verwendet, finden Sie weitere Informationen unter [Konfigurieren von Role-Based Sicherheit](configuring-role-based-security.md).
+Nachdem Sie entschieden haben, ob die Authentifizierung für [](enabling-authentication-for-a-library-application.md) Ihre COM+-Bibliotheksanwendung aktiviert oder deaktiviert werden soll, finden Sie unter Aktivieren der Authentifizierung für eine Bibliotheksanwendung eine schritt-für-Schritt-Prozedur, in der erläutert wird, wie die Authentifizierung mit dem Verwaltungstool komponentendienste deaktiviert (oder aktiviert) wird. Wenn Ihre Bibliotheksanwendung rollenbasierte Sicherheit verwendet, finden Sie weitere Informationen unter [Konfigurieren Role-Based Sicherheit.](configuring-role-based-security.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Sicherheit der Bibliothek Anwendungen](library-application-security.md)
+[Sicherheit von Bibliotheksanwendung](library-application-security.md)
 </dt> </dl>
 
  

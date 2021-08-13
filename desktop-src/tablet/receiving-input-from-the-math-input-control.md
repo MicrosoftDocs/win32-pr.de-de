@@ -1,30 +1,30 @@
 ---
-description: In diesem Abschnitt wird erläutert, wie das MathML-Markup mithilfe des Active Template Library (ATL) und des Component Object Model (com) aus dem mathematischen Eingabe Steuerelement abgerufen wird.
+description: In diesem Abschnitt wird erläutert, wie Sie das MathML-Markup aus dem mathematischen Eingabesteuerfeld mithilfe des Active Template Library (ATL) und des Component Object Model (COM) abrufen.
 ms.assetid: 352d2a0c-8275-4fe4-b523-4c74126ffadf
-title: Empfangen von Eingaben aus dem mathematischen Eingabe Steuerelement
+title: Empfangen von Eingaben vom Steuerung für mathematische Eingaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 830c8f57bb7b27c305928cf68b658dcc37ede5d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50325b8e9980907b91f4cd6400ed6cfd0ef3f04367a2bc753e5d4065e189bc44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449330"
 ---
-# <a name="receiving-input-from-the-math-input-control"></a>Empfangen von Eingaben aus dem mathematischen Eingabe Steuerelement
+# <a name="receiving-input-from-the-math-input-control"></a>Empfangen von Eingaben vom Steuerung für mathematische Eingaben
 
-In diesem Abschnitt wird erläutert, wie das MathML-Markup mithilfe des Active Template Library (ATL) und des Component Object Model (com) aus dem mathematischen Eingabe Steuerelement abgerufen wird.
+In diesem Abschnitt wird erläutert, wie Sie das MathML-Markup aus dem mathematischen Eingabesteuerfeld mithilfe des Active Template Library (ATL) und des Component Object Model (COM) abrufen.
 
-Wenn Sie die erkannte mathematische Gleichung aus dem mathematischen Eingabe Steuerelement abrufen möchten, können Sie das Verhalten überschreiben, das beim Drücken der einfügeschaltfläche auftritt. Zu diesem Zweck müssen Sie einen Ereignishandler einrichten, der die verschiedenen Ereignisse implementiert, die von der [**\_ imathinputcontrolevents**](/windows/win32/api/micaut/nn-micaut-_imathinputcontrolevents) -Schnittstelle unterstützt werden. Das Einrichten des Ereignis Handlers umfasst die folgenden Schritte für die Ereignisse, die Sie unterstützen möchten (in diesem Fall einfügen).
+Um die erkannte mathematische Gleichung aus dem mathematischen Eingabesteuerfeld abzurufen, können Sie das Verhalten überschreiben, das beim Drücken der Einfügeschaltfläche eintritt. Hierzu müssen Sie einen Ereignishandler einrichten, der die verschiedenen Ereignisse implementiert, die von der [**\_ IMathInputControlEvents-Schnittstelle unterstützt**](/windows/win32/api/micaut/nn-micaut-_imathinputcontrolevents) werden. Das Einrichten des Ereignishandlers umfasst das Ausführen der folgenden Schritte für die Ereignisse, die Sie unterstützen möchten (in diesem Fall einfügen).
 
--   [Erstellen einer Vorlagen Klasse, die Ereignis senken enthält](#create-a-template-class-that-contains-event-sinks)
--   [Einrichten von Ereignis Handlern](#set-up-the-event-handlers)
+-   [Erstellen einer Vorlagenklasse, die Ereignissenken enthält](#create-a-template-class-that-contains-event-sinks)
+-   [Einrichten der Ereignishandler](#set-up-the-event-handlers)
 -   [Erben der Ereignishandlerklasse in der Hauptklasse](#inherit-the-event-handler-class-in-your-main-class)
--   [Initialisieren der Klasse zum Erben der Ereignis Senke (n)](#initialize-your-class-to-inherit-the-event-sinks)
+-   [Initialisieren der Klasse zum Erben der Ereignissenken](#initialize-your-class-to-inherit-the-event-sinks)
 
-## <a name="create-a-template-class-that-contains-event-sinks"></a>Erstellen einer Vorlagen Klasse, die Ereignis senken enthält
+## <a name="create-a-template-class-that-contains-event-sinks"></a>Erstellen einer Vorlagenklasse, die Ereignissenken enthält
 
-Wenn Sie eine Ereignis Senke implementieren, die das mathematische Eingabe Steuerelement verwendet, müssen Sie zuerst eine Senke-ID angeben. Sie müssen dann eine Vorlagen Klasse erstellen, die von den Ereignis Schnittstellen Ereignis, Ereignis Steuerelement Handler und Math-Eingabesteuerung erbt. Der folgende Code zeigt, wie Sie eine Senke-ID festlegen und eine solche Vorlagen Klasse (cmathinputcontroleventhandler) erstellen, die von den erforderlichen Schnittstellen erbt. Diese Vorlagen Klasse ist auch so eingerichtet, dass Sie über einen privaten unbekannten Schnittstellen Zeiger verfügt, der verwendet wird, um das mathematische Eingabe Steuerelement bei der Initialisierung an das Steuerelement zu übergeben, und das m \_ uladvisecount-Element, um die Anzahl der Aufrufe für "Empfehlung/nicht Empfehlung" zu
+Wenn Sie eine Ereignissenke implementieren, die das mathematische Eingabesteuerfeld verwendet, müssen Sie zunächst eine Senken-ID angeben. Anschließend müssen Sie eine Vorlagenklasse erstellen, die von den Ereignisschnittstellen ereignis, ereignissteuerhandler und math input control erbt. Der folgende Code zeigt, wie Sie eine Senken-ID festlegen und eine solche Vorlagenklasse( CMathInputControlEventHandler) erstellen, die von den erforderlichen Schnittstellen erbt. Diese Vorlagenklasse ist auch so eingerichtet, dass sie einen privaten unbekannten Schnittstellenzeiger hat, der verwendet wird, um das mathematische Eingabesteuerfeld bei der Initialisierung an sie zu übergeben, und das m ulAdviseCount-Member, um die Anzahl der Aufrufe zu zählen, die \_ "advise/unadvise" sind.
 
 
 ```
@@ -46,11 +46,11 @@ private:
 
 
 > [!Note]  
-> Der Member **m \_ pmain** sollte in ihrer Implementierung anders sein, wenn Sie kein Dialogfeld verwenden.
+> Der Member **m \_ pMain sollte** sich in Ihrer Implementierung unterscheiden, wenn Sie kein Dialogfeld verwenden.
 
  
 
-Nachdem Sie nun über die grundlegende Vorlagen Klasse verfügen, müssen Sie eine vorwärts Deklaration für die Ereignishandler, die Sie überschreiben, erstellen und dann eine senkenzuordnung für die Ereignisse einrichten, die Sie behandeln möchten. Der folgende Code zeigt, wie Sie Ereignishandler für die [**Insert**](/previous-versions/windows/desktop/legacy/dd317352(v=vs.85)) -Methode einrichten, die aufgerufen wird, wenn ein Benutzer auf die Schaltfläche Einfügen im math-Eingabe Steuerelement klickt, und die [**Close**](/previous-versions/windows/desktop/legacy/dd317351(v=vs.85)) -Methode, die aufgerufen wird, wenn ein Benutzer auf die Schaltfläche Abbrechen im math-Eingabe Steuerelement klickt.
+Da Sie nun über die grundlegende Vorlagenklasse verfügen, müssen Sie eine Vorwärtsdeklaration für die Ereignishandler geben, die Sie überschreiben werden, und dann eine Senkenzuordnung für die Ereignisse einrichten, die Sie behandeln. Der folgende Code zeigt, wie Ereignishandler für die [**Insert-Methode**](/previous-versions/windows/desktop/legacy/dd317352(v=vs.85)) eingerichtet werden, die aufgerufen wird, wenn ein Benutzer auf die Einfügeschaltfläche des mathematischen Eingabesteuerfelds klickt, und die [**Close-Methode,**](/previous-versions/windows/desktop/legacy/dd317351(v=vs.85)) die aufgerufen wird, wenn ein Benutzer auf die Schaltfläche "Abbrechen" im mathematischen Eingabesteuerfeld klickt.
 
 
 ```
@@ -67,7 +67,7 @@ public:
 
 
 
-Da Sie mit dem mathematischen Eingabe Steuerelement arbeiten werden, ist es hilfreich, einen internen Verweis auf die relevante Schnittstelle festzulegen. Die folgende Utility-Funktion wird in der Beispiel Klasse erstellt, um diesen Verweis festzulegen.
+Da Sie mit dem mathematischen Eingabesteuerfeld arbeiten, ist es hilfreich, einen internen Verweis auf die relevante Schnittstelle zu setzen. Die folgende Hilfsprogrammfunktion wird in der Beispielklasse erstellt, um diesen Verweis zu setzen.
 
 
 ```
@@ -84,9 +84,9 @@ Da Sie mit dem mathematischen Eingabe Steuerelement arbeiten werden, ist es hilf
 
 
 
-## <a name="set-up-the-event-handlers"></a>Einrichten von Ereignis Handlern
+## <a name="set-up-the-event-handlers"></a>Einrichten der Ereignishandler
 
-Nachdem Sie die Ereignis senken eingerichtet haben, müssen Sie Ihre Implementierungen der Ereignis senken erstellen. In beiden Methoden im folgenden Codebeispiel rufen die Ereignis senken ein Handle für die mathematische Eingabe Steuerungs Schnittstelle ab. In der [**Insert**](/previous-versions/windows/desktop/legacy/dd317352(v=vs.85)) -Funktion wird das Erkennungs Ergebnis als MathML angezeigt, und das-Steuerelement ist ausgeblendet. In der [**Close**](/previous-versions/windows/desktop/legacy/dd317351(v=vs.85)) -Funktion wird das mathematische Eingabe Steuerelement ausgeblendet.
+Nachdem Sie die Ereignissenken eingerichtet haben, müssen Sie Ihre Implementierungen der Ereignissenken erstellen. In beiden Methoden im folgenden Codebeispiel rufen die Ereignissenken ein Handle für die Mathematische Eingabesteuerschnittstelle ab. In der [**Insert-Funktion**](/previous-versions/windows/desktop/legacy/dd317352(v=vs.85)) wird das Erkennungsergebnis als MathML angezeigt, und das Steuerelement ist ausgeblendet. In der [**Close-Funktion**](/previous-versions/windows/desktop/legacy/dd317351(v=vs.85)) ist das mathematische Eingabesteuerfeld ausgeblendet.
 
 
 ```
@@ -123,7 +123,7 @@ Nachdem Sie die Ereignis senken eingerichtet haben, müssen Sie Ihre Implementie
 
 ## <a name="inherit-the-event-handler-class-in-your-main-class"></a>Erben der Ereignishandlerklasse in der Hauptklasse
 
-Nachdem Sie die Vorlagen Klasse implementiert haben, müssen Sie Sie in der Klasse erben, in der Sie Ihr mathematisches Eingabe Steuerelement einrichten werden. Im Rahmen dieses Handbuchs ist diese Klasse ein Dialogfeld, CMIC \_ Test \_ eventsdlg. Im Dialog Header müssen die erforderlichen Header eingeschlossen werden, und die von Ihnen erstellte Vorlagen Klasse muss geerbt werden. Die Klasse, die Sie in und den Ereignis Handlern erbt, muss über vorwärts Deklarationen verfügen, damit die Vorlage implementiert werden kann. Das folgende Codebeispiel zeigt, wie dies geschieht.
+Nachdem Sie Ihre Vorlagenklasse implementiert haben, müssen Sie sie in die Klasse erben, in der Sie Ihr mathematisches Eingabesteuerfeld einrichten. Im Rahmen dieses Leitfadens ist diese Klasse ein Dialog, CMIC \_ TEST \_ EVENTSDlg. Im Dialogheader müssen die erforderlichen Header enthalten sein, und die von Ihnen erstellte Vorlagenklasse muss geerbt werden. Die Klasse, in der Sie erben, und die Ereignishandler müssen Vorwärtsdeklarationen haben, damit die Vorlage implementiert werden kann. Das folgende Codebeispiel zeigt, wie dies erfolgt.
 
 
 ```
@@ -156,13 +156,13 @@ class CMIC_TEST_EVENTSDlg : public CDialog,
 
 
 > [!Note]  
-> Der Vorlagentyp **CMIC \_ Test \_ eventsdlg** ist anders, es sei denn, Sie haben die Klasse mit dem Beispiel benannt.
+> Der Vorlagentyp **CMIC \_ TEST \_ EventsDlg** ist anders, es sei denn, Sie haben Ihre Klasse wie im Beispiel benannt.
 
  
 
-## <a name="initialize-your-class-to-inherit-the-event-sinks"></a>Initialisieren der Klasse zum Erben der Ereignis Senke (n)
+## <a name="initialize-your-class-to-inherit-the-event-sinks"></a>Initialisieren der Klasse zum Erben der Ereignissenken
 
-Nachdem Sie Ihre Klasse so eingerichtet haben, dass Sie von der Vorlagen Klasse geerbt wird, können Sie Sie zum Behandeln von Ereignissen einrichten. Dies besteht aus der Initialisierung der-Klasse, um ein Handle für das mathematische Eingabe Steuerelement und die aufrufenden Klasse zu erhalten. Darüber hinaus muss das mathematische Eingabe Steuerelement zum Verarbeiten von Ereignissen von an die dispeventclaim-Methode gesendet werden, die die cmathinputcontroleventhandler-Beispiel Klasse erbt. Der folgende Code wird von der OnInitDialog-Methode in der Example-Klasse aufgerufen, um diese Aktionen auszuführen.
+Nachdem Sie ihre Klasse so eingerichtet haben, dass sie von der Vorlagenklasse erbt, können Sie sie für die Handhabung von Ereignissen einrichten. Dies besteht aus der Initialisierung der -Klasse, um ein Handle für das mathematische Eingabesteuerfeld und die aufrufende Klasse zu erhalten. Darüber hinaus muss das mathematische Eingabesteuerfeld zum Behandeln von Ereignissen von an die DispEventAdvise-Methode gesendet werden, die von der CMathInputControlEventHandler-Beispielklasse geerbt wird. Der folgende Code wird von der OnInitDialog-Methode in der Beispielklasse aufgerufen, um diese Aktionen durchzuführen.
 
 
 ```
@@ -197,7 +197,7 @@ OnInitDialog{
 
 
 > [!Note]  
-> Der Vorlagentyp CMIC \_ Test \_ eventsdlg in diesem Beispiel ist anders, es sei denn, Sie haben die Klasse mit dem Beispiel identisch benannt.
+> Der Vorlagentyp CMIC TEST EventsDlg in diesem Beispiel ist anders, es sei denn, Sie haben Ihre Klasse wie \_ \_ im Beispiel benannt.
 
  
 

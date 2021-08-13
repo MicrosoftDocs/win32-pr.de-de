@@ -1,7 +1,7 @@
 ---
-description: Die m \_ SourceRect-Member-Variable gibt das Quell Rechteck für die Zeichnung an. Der Anfangswert ist ein leeres Rechteck, das angibt, dass das gesamte Bild gezeichnet werden soll.
+description: Die m \_ SourceRect-Membervariable gibt das Quellrechteck zum Zeichnen an. Der Anfangswert ist ein leeres Rechteck, das angibt, dass das gesamte Bild gezeichnet werden soll.
 ms.assetid: 6a13823b-18e0-43fe-80d5-97357fa87fa5
-title: 'Cdrawimage:: m_SourceRect Member (winutil. h)'
+title: CDrawImage::m_SourceRect-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 484764cdc8930e4254a35a49bea96317ca9774e0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e4dde0ff739dd67c43f7fdc7c6fc642668dce1bac31be8626ca70db7bfaea9e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656956"
 ---
-# <a name="cdrawimagem_sourcerect-member"></a>Cdrawimage:: m \_ SourceRect-Member
+# <a name="cdrawimagem_sourcerect-member"></a>CDrawImage::m \_ SourceRect-Member
 
-Die **m \_ SourceRect** -Member-Variable gibt das Quell Rechteck für die Zeichnung an. Der Anfangswert ist ein leeres Rechteck, das angibt, dass das gesamte Bild gezeichnet werden soll.
+Die **m \_ SourceRect-Membervariable** gibt das Quellrechteck zum Zeichnen an. Der Anfangswert ist ein leeres Rechteck, das angibt, dass das gesamte Bild gezeichnet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,19 +42,19 @@ RECT m_SourceRect;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: setsourcerect**](cdrawimage-setsourcerect.md)
+[**CDrawImage::SetSourceRect**](cdrawimage-setsourcerect.md)
 </dt> </dl>
 
  

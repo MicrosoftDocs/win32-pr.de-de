@@ -1,9 +1,9 @@
 ---
-title: Interlockedexchange-Funktion (HLSL-Referenz)
-description: Weist dem dest einen Wert zu und gibt den ursprünglichen Wert zurück.
+title: InterlockedExchange-Funktion (HLSL-Referenz)
+description: Weist dest einen Wert zu und gibt den ursprünglichen Wert zurück.
 ms.assetid: 1e7ce7ff-9e23-47fa-8e76-713f6bf57abf
 keywords:
-- Interlockedexchange-Funktion HLSL
+- InterlockedExchange-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7c39dc4f68429fa3f070d446f998fd528a99af01
-ms.sourcegitcommit: 12e9b14501d51641b690ee0cf764e2b91eb9a140
+ms.openlocfilehash: 3880a85af5658d0d50eb079c2dd1fc300e6a4de4b7f606688ab9d7a317cf321c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "104976584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118511320"
 ---
-# <a name="interlockedexchange-function-hlsl-reference"></a>Interlockedexchange-Funktion (HLSL-Referenz)
+# <a name="interlockedexchange-function-hlsl-reference"></a>InterlockedExchange-Funktion (HLSL-Referenz)
 
-Weist dem dest einen Wert zu und gibt den ursprünglichen Wert zurück.
+Weist dest einen Wert zu und gibt den ursprünglichen Wert zurück.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void InterlockedExchange(
-  in  R dest,
-  in  T value,
-  out T original_value
+  in  R dest,
+  in  T value,
+  out T original_value
 );
 ```
 
@@ -38,7 +38,7 @@ void InterlockedExchange(
 
 <dl> <dt>
 
-*dest* \[ in\]
+*dest* \[ In\]
 </dt> <dd>
 
 Typ: **R**
@@ -47,7 +47,7 @@ Die Zieladresse.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
 Typ: **T**
@@ -56,7 +56,7 @@ Der Eingabewert.
 
 </dd> <dt>
 
-*ursprünglicher \_ Wert* ausgehend \[\]
+*Ursprünglicher \_ Wert* \[ out\]
 </dt> <dd>
 
 Typ: **T**
@@ -69,49 +69,49 @@ Der ursprüngliche Wert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang kann nur für skalartypisierte Ressourcen und Shared Memory-Variablen ausgeführt werden. Es gibt zwei Verwendungsmöglichkeiten für diese Funktion. Der erste ist, wenn R ein Variablentyp für den gemeinsamen Speicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das von dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcen Variablentyp ist. In diesem Szenario führt die Funktion den Vorgang an dem Ressourcen Speicherort aus, auf den "dest" verweist. Dieser Vorgang ist nur verfügbar, wenn R lesbar und beschreibbar ist.
+Dieser Vorgang kann nur für skalare Ressourcen und Freigegebene Speichervariablen ausgeführt werden. Es gibt zwei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für gemeinsam genutzten Arbeitsspeicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das vom Dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion den Vorgang für den Ressourcenspeicherort aus, auf den vom Dest verwiesen wird. Dieser Vorgang ist nur verfügbar, wenn R lesbar und schreibbar ist.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      |  x   | x      |  x       | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

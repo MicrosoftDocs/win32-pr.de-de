@@ -1,9 +1,9 @@
 ---
-title: Class-Anweisung
-description: Definiert die Klasse des Dialog Felds.
+title: CLASS-Anweisung
+description: Definiert die Klasse des Dialogfelds.
 ms.assetid: 7c4325fe-66a4-4bb2-9c99-04b3ff590e7a
 keywords:
-- Klassen Anweisungs Menüs und andere Ressourcen
+- CLASS-Anweisung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d31eba66a1e4527a24a55a24e4623f3c49dc204
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 0a71485603944dc8b7eaf1a3a773051096776e6538aecdd8fb01396a3f0ea5fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118734656"
 ---
-# <a name="class-statement"></a>Class-Anweisung
+# <a name="class-statement"></a>CLASS-Anweisung
 
-Definiert die Klasse des Dialog Felds.
+Definiert die Klasse des Dialogfelds.
 
-Die **Class** -Anweisung wird im optionalen Abschnitt vor dem Hauptabschnitt der [**Dialog**](dialog-resource.md) Feld Anweisung angezeigt. Wenn keine Klasse angegeben wird, wird die Standard Dialogklasse verwendet.
+Die **CLASS-Anweisung** wird im optionalen Abschnitt vor dem Hauptteil einer [**DIALOG-Anweisung**](dialog-resource.md) angezeigt. Wenn keine Klasse angegeben wird, wird die Standarddialogklasse verwendet.
 
 ``` syntax
 CLASS class
@@ -31,35 +31,35 @@ CLASS class
 
 <dl> <dt>
 
-<span id="class"></span><span id="CLASS"></span>*klassi*
+<span id="class"></span><span id="CLASS"></span>*Klasse*
 </dt> <dd>
 
-Eine 16-Bit-Ganzzahl ohne Vorzeichen oder eine Zeichenfolge, die in doppelten Anführungszeichen (") eingeschlossen ist, die die Klasse des Dialog Felds angibt. Wenn die Fenster Prozedur für die Klasse keine an Sie gesendete Nachricht verarbeitet, muss Sie die Funktion [**defdlgproc**](/windows/win32/api/winuser/nf-winuser-defdlgprocw) aufgerufen werden, um sicherzustellen, dass alle Nachrichten ordnungsgemäß für das Dialogfeld verarbeitet werden. Eine private Klasse kann **defdlgproc** als Standardfenster Prozedur verwenden. Die Klasse muss beim **CbWndExtra** -Member der [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) -Struktur, die auf **dlgwindowextra** festgelegt ist, registriert werden.
+Eine 16-Bit-Ganzzahl ohne Vorzeichen oder eine Zeichenfolge, die in doppelte Anführungszeichen () eingeschlossen ist und die Klasse des Dialogfelds identifiziert. Wenn die Fensterprozedur für die Klasse keine an sie gesendete Nachricht verarbeitet, muss sie die [**DefDlgProc-Funktion**](/windows/win32/api/winuser/nf-winuser-defdlgprocw) aufrufen, um sicherzustellen, dass alle Nachrichten ordnungsgemäß für das Dialogfeld verarbeitet werden. Eine private Klasse kann **DefDlgProc** als Standardfensterprozedur verwenden. Die -Klasse muss mit dem **cbWndExtra-Member** der [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) registriert werden, die auf **DLGWINDOWEXTRA** festgelegt ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Class** -Anweisung sollte nur in besonderen Fällen verwendet werden, da Sie die normale Verarbeitung eines Dialog Felds überschreibt. Die **Class** -Anweisung konvertiert ein Dialogfeld in ein Fenster der angegebenen Klasse. abhängig von der-Klasse kann dies zu unerwünschten Ergebnissen führen. Verwenden Sie die neu definierten Steuerelement Klassennamen nicht mit dieser Anweisung.
+Die **CLASS-Anweisung** sollte nur in Sonderfällen verwendet werden, da sie die normale Verarbeitung eines Dialogfelds überschreibt. Die **CLASS-Anweisung** konvertiert ein Dialogfeld in ein Fenster der angegebenen Klasse. Je nach Klasse kann dies zu unerwünschten Ergebnissen führen. Verwenden Sie die neu definierten Namen von Steuerelementklassen nicht mit dieser Anweisung.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Verwendung der **Class** -Anweisung veranschaulicht:
+Im folgenden Beispiel wird die Verwendung der **CLASS-Anweisung** veranschaulicht:
 
 ``` syntax
 CLASS "myclass" 
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Defdlgproc**](/windows/win32/api/winuser/nf-winuser-defdlgprocw)
+[**DefDlgProc**](/windows/win32/api/winuser/nf-winuser-defdlgprocw)
 </dt> <dt>
 
-[**Dialog**](dialog-resource.md)
+[**DIALOG**](dialog-resource.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmindividualizationstatus-Schnittstelle
-description: Die iwmdrmindividualizationstatus-Schnittstelle ermöglicht das Abrufen erweiterter Statusinformationen über den Fortschritt der Individual alisierung. Diese Schnittstelle wird mit mewmdrmindividualizationprogress-Ereignissen geliefert.
+title: IWMDRMIndividualizationStatus-Schnittstelle
+description: Die IWMDRMIndividualizationStatus-Schnittstelle ermöglicht das Abrufen erweiterter Statusinformationen zum Fortschritt der Individualisierung. Diese Schnittstelle wird mit MEWMDRMIndividualizationProgress-Ereignissen bereitgestellt.
 ms.assetid: 3a148005-22fa-4495-a47c-d9463db16293
 keywords:
-- Iwmdrmindividualizationstatus-Schnittstelle Windows Media-Format
-- Iwmdrmindividualizationstatus Interface Windows Media-Format, beschrieben
+- IWMDRMIndividualizationStatus-Schnittstelle windows Media Format
+- IWMDRMIndividualizationStatus-Schnittstelle Windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,34 +14,34 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 19a369bf9b70d9a43af8a48f13f1b8bbb87525b1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fe6242d2c66b165be8c750d71c61020e9a6acc66f68654d73898fd5000ace3c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118701469"
 ---
-# <a name="iwmdrmindividualizationstatus-interface"></a>Iwmdrmindividualizationstatus-Schnittstelle
+# <a name="iwmdrmindividualizationstatus-interface"></a>IWMDRMIndividualizationStatus-Schnittstelle
 
-Die **iwmdrmindividualizationstatus** -Schnittstelle ermöglicht das Abrufen erweiterter Statusinformationen über den Fortschritt der Individual alisierung.
+Die **IWMDRMIndividualizationStatus-Schnittstelle** ermöglicht das Abrufen erweiterter Statusinformationen zum Fortschritt der Individualisierung.
 
-Diese Schnittstelle wird mit mewmdrmindividualizationprogress-Ereignissen geliefert. Viele derartige Ereignisse werden zwischen einem Aufruf von [**iwmdrmsecurity::P erformsecurityupdate**](iwmdrmsecurity-performsecurityupdate.md) und dem Abschluss des Individualisierungs Prozesses generiert, der durch die Generierung eines **mewmdrmindividualizationabgeschlossene** -Ereignisses signalisiert wird.
+Diese Schnittstelle wird mit MEWMDRMIndividualizationProgress-Ereignissen bereitgestellt. Viele dieser Ereignisse werden zwischen einem Aufruf von [**IWMDRMSecurity::P erformSecurityUpdate**](iwmdrmsecurity-performsecurityupdate.md) und dem Abschluss des Individualisierungsprozesses generiert, der durch die Generierung eines **MEWMDRMIndividualizationCompleted-Ereignisses** signalisiert wird.
 
-Wenn Sie einen Zeiger auf eine Instanz der **iwmdrmindividualizationstatus** -Schnittstelle abrufen möchten, müssen Sie zuerst die **imfmediaevent:: GetValue** -Methode des Fortschritts Ereignisses aufrufen. Der Wert, den Sie aus dem Ereignis abrufen, ist ein Zeiger auf die **IUnknown** -Schnittstelle des Objekts, das die **iwmdrmindividualizationstatus** -Schnittstelle implementiert.
+Um einen Zeiger auf eine Instanz der **IWMDRMIndividualizationStatus-Schnittstelle** abzurufen, müssen Sie zunächst die **METHODE "POINTERMediaEvent::GetValue"** des Statusereignisses aufrufen. Der Wert, den Sie aus dem Ereignis abrufen, ist ein Zeiger auf die **IUnknown-Schnittstelle** des Objekts, das die **IWMDRMIndividualizationStatus-Schnittstelle** implementiert.
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmindividualizationstatus** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwmdrmindividualizationstatus** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMIndividualizationStatus-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWMDRMIndividualizationStatus** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmindividualizationstatus** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMIndividualizationStatus-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                       | BESCHREIBUNG                                                        |
+| Methode                                                       | Beschreibung                                                        |
 |:-------------------------------------------------------------|:-------------------------------------------------------------------|
 | [**GetStatus**](iwmdrmindividualizationstatus-getstatus.md) | Ruft ausführliche Informationen zur Individualisierung ab.<br/> |
 
@@ -49,7 +49,7 @@ Die **iwmdrmindividualizationstatus** -Schnittstelle verfügt über diese Method
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

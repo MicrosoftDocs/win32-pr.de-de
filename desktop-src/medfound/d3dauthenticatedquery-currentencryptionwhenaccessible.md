@@ -1,7 +1,7 @@
 ---
-description: Gibt den Verschlüsselungstyp zurück, der angewendet wird, bevor der CPU-oder busbus auf den Inhalt zugreifen kann.
+description: Gibt den Verschlüsselungstyp zurück, der angewendet wird, bevor der Inhalt für die CPU oder den Bus zugänglich wird.
 ms.assetid: 89526bb2-1316-4730-b599-3690b1838c3e
-title: D3DAUTHENTICATEDQUERY_CURRENTENCRYPTIONWHENACCESSIBLE (D3d9types. h)
+title: D3DAUTHENTICATEDQUERY_CURRENTENCRYPTIONWHENACCESSIBLE (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,35 +13,35 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: a8b3374e6d50a50d32b60113318e5d1099083226
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 483058e8b76b7a08929e905b642338c9e8f6aa6a59128907bccfcc1f2b3856f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118742620"
 ---
-# <a name="d3dauthenticatedquery_currentencryptionwhenaccessible"></a>D3DAUTHENTICATEDQUERY \_ currentverschlüsseltion. barrierefreie
+# <a name="d3dauthenticatedquery_currentencryptionwhenaccessible"></a>D3DAUTHENTICATEDQUERY \_ CURRENTENCRYPTIONWHENACCESSIBLE
 
-Gibt den Verschlüsselungstyp zurück, der angewendet wird, bevor der CPU-oder busbus auf den Inhalt zugreifen kann.
+Gibt den Verschlüsselungstyp zurück, der angewendet wird, bevor der Inhalt für die CPU oder den Bus zugänglich wird.
 
 
 
 | Anforderung | Wert |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Abfrage-GUID  | **D3DAUTHENTICATEDQUERY \_ currentverschlüsseltion. barrierefreie**                                                                                   |
-| Eingabedaten  | [**D3DAUTHENTICATEDCHANNEL- \_ Abfrage \_ Eingabe**](d3dauthenticatedchannel-query-input.md)                                                         |
-| Daten zurückgeben | [**D3DAUTHENTICATEDCHANNEL \_ queryuncompressedencryptionlevel- \_ Ausgabe**](d3dauthenticatedchannel-queryuncompressedencryptionlevel-output.md) |
+| Abfrage-GUID  | **D3DAUTHENTICATEDQUERY \_ CURRENTENCRYPTIONWHENACCESSIBLE**                                                                                   |
+| Eingabedaten  | [**D3DAUTHENTICATEDCHANNEL-ABFRAGEEINGABE \_ \_**](d3dauthenticatedchannel-query-input.md)                                                         |
+| Daten zurückgeben | [**D3DAUTHENTICATEDCHANNEL \_ QUERYUNCOMLEVELDENCRYPTIONLEVEL-AUSGABE \_**](d3dauthenticatedchannel-queryuncompressedencryptionlevel-output.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
+Die folgenden Kanaltypen unterstützen diese Abfrage:
 
--   **D3DAUTHENTICATEDCHANNEL- \_ Treiber \_ Hardware**
--   **D3DAUTHENTICATEDCHANNEL- \_ Treiber \_ Software**
+-   **D3DAUTHENTICATEDCHANNEL-TREIBERHARDWARE \_ \_**
+-   **D3DAUTHENTICATEDCHANNEL-TREIBERSOFTWARE \_ \_**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,23 +49,23 @@ Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Content Protection Abfragen](content-protection-queries.md)
 </dt> <dt>
 
-[GPU-basiertes Content Protection](gpu-based-content-protection.md)
+[GPU-basierte Content Protection](gpu-based-content-protection.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
+[**IDirect3DAuthenticatedChannel9::Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 </dt> </dl>
 
  
