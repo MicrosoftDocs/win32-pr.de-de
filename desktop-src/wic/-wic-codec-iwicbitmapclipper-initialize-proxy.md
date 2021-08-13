@@ -1,5 +1,5 @@
 ---
-description: IWICBitmapClipper_Initialize_Proxy- Proxyfunktion für die Initialize-Methode.
+description: 'IWICBitmapClipper_Initialize_Proxy-Funktion: Proxyfunktion für die Initialize-Methode.'
 ms.assetid: 60925f5c-aca4-4f49-96d2-9b58d8310e3c
 title: IWICBitmapClipper_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: ce3c745d27928765fdfdf664c423f7e2146cbd5f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 588b1ae4edf524aaf0f8a9485af0de7bd7a7819e2526c01f19c4e53543f68cc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119331334"
 ---
 # <a name="iwicbitmapclipper_initialize_proxy-function"></a>IWICBitmapClipper Initialize \_ \_ Proxy-Funktion
 
@@ -81,10 +81,10 @@ Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfall
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 

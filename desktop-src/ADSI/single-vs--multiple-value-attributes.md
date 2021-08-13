@@ -1,43 +1,43 @@
 ---
-title: Einzelne Attribute und Attribute mit mehreren Werten
+title: Einzelne und mehrere Wertattribute
 description: Die Attribute, die in einem Verzeichnis vorhanden sein können, werden in der Regel im Schema für das Verzeichnis definiert.
 ms.assetid: ea06ca66-6407-448f-8238-c8de5353663b
 ms.tgt_platform: multiple
 keywords:
-- Einzel-und mehrfach Wert Attribute ADSI
-- Attribute ADSI, Single-und Multiple Value-Attribute
+- Adsi mit einzelnen und mehreren Wertattributen
+- Adsi-Attribute, Einzelne und mehrere Wertattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cdfabd985be3446e4f104d300d75f891ef0ce60
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6dd9442a5365efbe343c2a9af74aa8576928e7a6a383cc131a3384152c2b1c0b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119262030"
 ---
-# <a name="single-vs-multiple-value-attributes"></a>Einzelne Attribute und Attribute mit mehreren Werten
+# <a name="single-vs-multiple-value-attributes"></a>Einzelne und mehrere Wertattribute
 
-Die Attribute, die in einem Verzeichnis vorhanden sein können, werden in der Regel im Schema für das Verzeichnis definiert. Die Schema Definition eines Attributs gibt eine Reihe von Merkmalen des Attributs an, z. b. den Datentyp und ob eine Instanz des Attributs mehrere Werte aufweisen kann.
+Die Attribute, die in einem Verzeichnis vorhanden sein können, werden in der Regel im Schema für das Verzeichnis definiert. Die Schemadefinition eines Attributs gibt eine Reihe von Merkmalen des Attributs an, z. B. den Datentyp und ob eine Instanz des Attributs mehrere Werte aufweisen kann.
 
-Eine Instanz eines einwertigen Attributs kann einen einzelnen Wert enthalten. Eine Instanz eines mehrwertigen Attributs kann entweder einen einzelnen Wert oder mehrere Werte enthalten. Active Directory erstellt keine Attribute mit leeren Werten – entweder enthält das Attribut einen gültigen Wert oder ist im Objekt nicht vorhanden.
+Eine Instanz eines einwertigen Attributs kann einen einzelnen Wert enthalten. Eine Instanz eines mehrwertigen Attributs kann entweder einen einzelnen Wert oder mehrere Werte enthalten. Active Directory erstellt keine Attribute mit leeren Werten. Entweder enthält das Attribut einen gültigen Wert oder ist für das Objekt nicht vorhanden.
 
 > [!Note]  
 > In Active Directory und den meisten anderen LDAP-Servern ist die Reihenfolge der Werte in einem mehrwertigen Attribut nicht definiert. Außerdem muss jeder Wert eines mehrwertigen Attributs eindeutig sein.
 
- 
+ 
 
-ADSI lädt in der Regel Schema Daten, wenn Ihr Verzeichnis ein Schema unterstützt, wie Active Directory. Da ADSI die Syntax von Attributen im Schema kennt, ist es nicht erforderlich, den Attributtyp anzugeben, wenn darauf zugegriffen wird. ADSI Marshalls Attributwerte in den entsprechenden Datentyp, wie im Schema definiert.
+ADSI lädt normalerweise Schemadaten, wenn Ihr Verzeichnis wie Active Directory ein Schema unterstützt. Da ADSI die Syntax von Attributen im Schema kennt, müssen Sie beim Zugriff darauf nicht den Attributtyp angeben. ADSI marshallt Attributwerte an den entsprechenden Datentyp, wie im Schema definiert.
 
-Wenn Ihr Verzeichnis kein Schema aufweist, geben Sie den Datentyp an, wenn Sie auf ein Attribut zugreifen.
+Wenn Ihr Verzeichnis über kein Schema verfügt, geben Sie beim Zugriff auf ein Attribut den Datentyp an.
 
 > [!Note]  
-> Active Directory, Exchange, Windows NT 4,0 und der Standort Server verfügen alle über ein Schema. Außerdem verfügt Active Directory über ein erweiterbares Schema.
+> Active Directory, Exchange, Windows NT 4.0 und Standortserver verfügen über ein Schema. Darüber hinaus verfügt Active Directory über ein erweiterbares Schema.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

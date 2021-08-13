@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClient7 GetStatusText-Methode (OpenService. h)
-description: Ruft den Status Text für den angegebenen Statuscode ab.
+title: IMsRdpClient7 GetStatusText-Methode (Openservice.h)
+description: Ruft den Statustext für den angegebenen Statuscode ab.
 ms.assetid: 1da2280a-c26d-4caa-b227-c289055f3aa9
 ms.tgt_platform: multiple
 keywords:
 - GetStatusText-Methode Remotedesktopdienste
-- GetStatusText-Methode Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, GetStatusText-Methode
-- GetStatusText-Methode Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, GetStatusText-Methode
-- GetStatusText-Methode Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, GetStatusText-Methode
-- GetStatusText-Methode Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10 Interface Remotedesktopdienste, GetStatusText-Methode
+- GetStatusText-Methode Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , GetStatusText-Methode
+- GetStatusText-Methode Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , GetStatusText-Methode
+- GetStatusText-Methode Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , GetStatusText-Methode
+- GetStatusText-Methode Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , GetStatusText-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,16 +26,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 820628bfba59ec980e5128b9d9df3ee21b49a064
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 42ecccb6535afec2d32ff0466428af36c432bc981a1bc23cfa24161ca969a80e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119285190"
 ---
-# <a name="imsrdpclient7getstatustext-method"></a>IMsRdpClient7:: GetStatusText-Methode
+# <a name="imsrdpclient7getstatustext-method"></a>IMsRdpClient7::GetStatusText-Methode
 
-Ruft den Status Text für den angegebenen Statuscode ab.
+Ruft den Statustext für den angegebenen Statuscode ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,23 +53,23 @@ HRESULT GetStatusText(
 
 <dl> <dt>
 
-*Statuscode* \[ in\]
+*statusCode* \[ In\]
 </dt> <dd>
 
-Ein **uint** , der den Statuscode angibt, für den der Text abgerufen werden soll.
+Ein **UINT,** der den Statuscode angibt, für den der Text abgerufen werden soll.
 
 </dd> <dt>
 
-*pbstraustatustext* \[ Out, retval\]
+*pBstrStatusText* \[ out, retval\]
 </dt> <dd>
 
-Die Adresse eines **BSTR** , der den Status Text empfängt.
+Die Adresse eines **BSTR,** der den Statustext empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,14 +79,14 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 7<br/>                                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                        |
-| Header<br/>                   | <dl> <dt>OpenService. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Openservice.h</dt> </dl> |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>   |
 | IID<br/>                      | IID \_ IMsRdpClient7 ist als b2a5b5ce-3461-444a-91d4-add26d070638 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

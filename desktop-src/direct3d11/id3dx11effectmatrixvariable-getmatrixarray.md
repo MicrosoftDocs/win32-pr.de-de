@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectMatrixVariable getmatrixarray-Methode (D3dx11effect. h)
-description: Ein Array von Matrizen erhalten.
+title: ID3DX11EffectMatrixVariable GetMatrixArray-Methode (D3dx11effect.h)
+description: Abrufen eines Arrays von Matrizen.
 ms.assetid: a7598687-a11c-41ad-9fb6-2c16d12f5edc
 keywords:
-- Getmatrixarray-Methode Direct3D 11
-- Getmatrixarray-Methode Direct3D 11, ID3DX11EffectMatrixVariable-Schnittstelle
-- ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11, getmatrixarray-Methode
+- GetMatrixArray-Methode Direct3D 11
+- GetMatrixArray-Methode Direct3D 11 , ID3DX11EffectMatrixVariable-Schnittstelle
+- ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11 , GetMatrixArray-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d4a339bf6918868473966b6d79bcbe6b6aa3eaa
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8747e96469e061b93b063e4b91011e1a1b48bba3a10ba04b6b5eb20f179e0d13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046208"
 ---
-# <a name="id3dx11effectmatrixvariablegetmatrixarray-method"></a>ID3DX11EffectMatrixVariable:: getmatrixarray-Methode
+# <a name="id3dx11effectmatrixvariablegetmatrixarray-method"></a>ID3DX11EffectMatrixVariable::GetMatrixArray-Methode
 
-Ein Array von Matrizen erhalten.
+Abrufen eines Arrays von Matrizen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ HRESULT GetMatrixArray(
 
 <dl> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
 Ein Zeiger auf das erste Element der ersten Matrix in einem Array von Matrizen.
 
@@ -57,7 +57,7 @@ Ein Zeiger auf das erste Element der ersten Matrix in einem Array von Matrizen.
 *Offset* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der Offset (in Anzahl von Matrizen) zwischen dem Anfang des Arrays und der ersten zurückgegebenen Matrix.
 
@@ -66,9 +66,9 @@ Der Offset (in Anzahl von Matrizen) zwischen dem Anfang des Arrays und der erste
 *Count* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl von Matrizen im zurückgegebenen Array.
+Die Anzahl der Matrizen im zurückgegebenen Array.
 
 </dd> </dl>
 
@@ -76,23 +76,23 @@ Die Anzahl von Matrizen im zurückgegebenen Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

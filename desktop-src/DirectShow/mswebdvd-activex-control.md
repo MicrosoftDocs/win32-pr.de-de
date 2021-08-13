@@ -1,17 +1,17 @@
 ---
-description: Mswebdvd-ActiveX-Steuerelement
+description: MSWebDVD ActiveX-Steuerelement
 ms.assetid: 34097283-f5df-46e0-aed2-89505d32ac08
-title: Mswebdvd-ActiveX-Steuerelement
+title: MSWebDVD ActiveX-Steuerelement
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 10a451b7087fd159bb9e8eb2bc295f5d16f214fe
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 481a016c809fa4ca498d291e4a3753bb73cc6646f834ba0a92e9c1118c1e5c2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119302880"
 ---
-# <a name="mswebdvd-activex-control"></a>Mswebdvd-ActiveX-Steuerelement
+# <a name="mswebdvd-activex-control"></a>MSWebDVD ActiveX-Steuerelement
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
@@ -19,16 +19,16 @@ ms.locfileid: "104520523"
  
 
 > [!Note]  
-> Diese Komponente ist veraltet. Weitere Informationen zur DVD-Wiedergabe und-Navigation in DirectShow finden Sie unter [DVD-Anwendungen](dvd-applications.md).
+> Diese Komponente ist veraltet. Informationen zur DVD-Wiedergabe und -Navigation in DirectShow finden Sie unter [DVD-Anwendungen.](dvd-applications.md)
 
  
 
-Das Microsoft® mswebdvd ActiveX®-Steuerelement kann verwendet werden, um eine skriptbasierte DVD-Anwendung zu erstellen. Die folgenden Objekte und Ereignisse werden für eine Anwendung verfügbar gemacht.
+Das Microsoft® MSWebDVD-ActiveX®-Steuerelement kann zum Erstellen einer skriptbasierten DVD-Anwendung verwendet werden. Sie macht die folgenden Objekte und Ereignisse für eine Anwendung verfügbar.
 
--   [Mswebdvd](mswebdvd-object.md)
--   [Msdvdadm](msdvdadm-object.md)
--   [Dvdrect](dvdrect-object.md)
--   [Mswebdvd-Ereignisse](mswebdvd-events.md)
+-   [MSWebDVD](mswebdvd-object.md)
+-   [MSDVDAdm](msdvdadm-object.md)
+-   [DVDRect](dvdrect-object.md)
+-   [MSWebDVD-Ereignisse](mswebdvd-events.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

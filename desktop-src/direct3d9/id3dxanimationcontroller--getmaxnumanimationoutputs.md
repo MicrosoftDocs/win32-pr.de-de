@@ -1,7 +1,7 @@
 ---
-description: Erhalten Sie die maximale Anzahl von Animations Ausgaben, die der Animations Controller unterstützen kann.
+description: Hier können Sie die maximale Anzahl von Animationsausgaben erhalten, die der Animationscontroller unterstützen kann.
 ms.assetid: 32534c92-9f8d-4fab-9f56-fe83368c476a
-title: 'ID3DXAnimationController:: getmaxnumanimationoutputs-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetMaxNumAnimationOutputs-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 44060041bfb9368a8df0509ed72337aacfe3bc8b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3dd1c79d2b9738f5d99ec735c77a8b30b0b20b747e2604064466aff47890e892
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119373160"
 ---
-# <a name="id3dxanimationcontrollergetmaxnumanimationoutputs-method"></a>ID3DXAnimationController:: getmaxnumanimationoutputs-Methode
+# <a name="id3dxanimationcontrollergetmaxnumanimationoutputs-method"></a>ID3DXAnimationController::GetMaxNumAnimationOutputs-Methode
 
-Erhalten Sie die maximale Anzahl von Animations Ausgaben, die der Animations Controller unterstützen kann.
+Hier können Sie die maximale Anzahl von Animationsausgaben erhalten, die der Animationscontroller unterstützen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,9 +40,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die maximale Anzahl von Animations Ausgaben, die der Controller verwalten kann.
+Die maximale Anzahl von Animationsausgabe, die der Controller verwalten kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Die maximale Anzahl von Animations Ausgaben, die der Controller verwalten kann.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

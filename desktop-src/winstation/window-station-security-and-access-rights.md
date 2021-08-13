@@ -1,70 +1,70 @@
 ---
-title: Sicherheit und Zugriffsrechte für die Fenster Station
-description: Mithilfe der Sicherheit können Sie den Zugriff auf Fenster Station-Objekte steuern. Weitere Informationen zur Sicherheit finden Sie unter Access-Control Modell.
+title: Sicherheit und Zugriffsrechte für Die Fensterstation
+description: Mit der Sicherheit können Sie den Zugriff auf Fensterstationsobjekte steuern. Weitere Informationen zur Sicherheit finden Sie unter Access-Control Model.
 ms.assetid: b132da61-26b7-4457-9433-4894ca0e640a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c41bfb6d7990c104b60bd9770fde3f45cee0432
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 04e3b6871fe0e465b4394e871537fbb8ca07f6439577833d61a7fe0c3106685f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118435995"
 ---
-# <a name="window-station-security-and-access-rights"></a>Sicherheit und Zugriffsrechte für die Fenster Station
+# <a name="window-station-security-and-access-rights"></a>Sicherheit und Zugriffsrechte für Die Fensterstation
 
-Mithilfe der Sicherheit können Sie den Zugriff auf Fenster Station-Objekte steuern. Weitere Informationen zur Sicherheit finden Sie unter [Zugriffs Steuerungsmodell](/windows/desktop/SecAuthZ/access-control-model).
+Mit der Sicherheit können Sie den Zugriff auf Fensterstationsobjekte steuern. Weitere Informationen zur Sicherheit finden Sie unter [Access-Control Model](/windows/desktop/SecAuthZ/access-control-model).
 
-Sie können eine [Sicherheits Beschreibung](/windows/desktop/SecAuthZ/security-descriptors) für ein Fenster Station-Objekt angeben, wenn [**Sie die Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowstationa) "Funktion in der Funktion" aufgerufen haben. Wenn Sie NULL angeben, erhält die Fenster Station eine Standard Sicherheits Beschreibung. Die ACLs in der Standard Sicherheits Beschreibung für eine Fenster Station stammen aus dem primären Token oder dem Identitätswechsel Token des Erstellers.
+Sie können einen [Sicherheitsdeskriptor für](/windows/desktop/SecAuthZ/security-descriptors) ein Fensterstationsobjekt angeben, wenn Sie die [**CreateWindowStation-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowstationa) aufrufen. Wenn Sie NULL angeben, erhält die Fensterstation einen Standardsicherheitsdeskriptor. Die ACLs in der Standardsicherheitsbeschreibung für eine Fensterstation stammen aus dem primären Token oder Identitätswechseltoken des Erstellers.
 
-Zum Abrufen oder Festlegen der Sicherheits Beschreibung eines Fenster Stations Objekts aufrufen Sie die Funktionen [**GetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-getsecurityinfo) und [**setsecurityinfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) .
+Rufen Sie die Funktionen [**GetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-getsecurityinfo) und [**SetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) auf, um die Sicherheitsbeschreibung eines Fensterstationsobjekts zu erhalten oder festlegen.
 
-Wenn Sie die [**openwindowstation**](/windows/win32/api/winuser/nf-winuser-openwindowstationa) -Funktion aufrufen, prüft das System die angeforderten Zugriffsrechte auf die Sicherheits Beschreibung des Objekts.
+Wenn Sie die [**OpenWindowStation-Funktion**](/windows/win32/api/winuser/nf-winuser-openwindowstationa) aufrufen, überprüft das System die angeforderten Zugriffsrechte mit dem Sicherheitsdeskriptor des Objekts.
 
-Zu den gültigen Zugriffsrechten für Fenster Stations Objekte gehören die [Standard Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights) und einige objektspezifische Zugriffsrechte. In der folgenden Tabelle sind die standardmäßigen Zugriffsrechte aufgelistet, die von allen Objekten verwendet werden.
+Die gültigen Zugriffsrechte für Fensterstationsobjekte umfassen [die Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights) und einige objektspezifische Zugriffsrechte. In der folgenden Tabelle sind die Standardzugriffsrechte aufgeführt, die von allen -Objekten verwendet werden.
 
 | Wert                       | Bedeutung                                                                                                                                                                                                                                                                              |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Delete (0x00010000l)        | Erforderlich, um das Objekt zu löschen.                                                                                                                                                                                                                                                       |
-| Read- \_ Steuerelement (0x00020000l) | Ist erforderlich, um Informationen in der Sicherheits Beschreibung für das-Objekt zu lesen, ohne die Informationen in der SACL zu einschließen. Um die SACL zu lesen oder zu schreiben, müssen Sie das Zugriffs \_ System- \_ Sicherheits Zugriffsrecht anfordern. Weitere Informationen finden Sie unter [SACL-Zugriffsrecht](/windows/desktop/SecAuthZ/sacl-access-right). |
-| Synchronisieren (0x00100000l)   | Wird für Fenster Station-Objekte nicht unterstützt.                                                                                                                                                                                                                                            |
-| \_DAC schreiben (0x00040000l)    | Erforderlich, um die DACL in der Sicherheits Beschreibung für das-Objekt zu ändern.                                                                                                                                                                                                               |
-| Schreib \_ Besitzer (0x00080000l)  | Erforderlich, um den Besitzer in der Sicherheits Beschreibung für das Objekt zu ändern.                                                                                                                                                                                                              |
+| DELETE (0x00010000L)        | Erforderlich, um das Objekt zu löschen.                                                                                                                                                                                                                                                       |
+| READ \_ CONTROL (0x00020000L) | Erforderlich, um Informationen in der Sicherheitsbeschreibung für das Objekt zu lesen, nicht die Informationen in der SACL. Zum Lesen oder Schreiben der SACL müssen Sie das Zugriffsrecht ACCESS \_ SYSTEM \_ SECURITY anfordern. Weitere Informationen finden Sie unter [SACL Access Right](/windows/desktop/SecAuthZ/sacl-access-right). |
+| SYNCHRONIZE (0x00100000L)   | Wird für Fensterstationsobjekte nicht unterstützt.                                                                                                                                                                                                                                            |
+| WRITE \_ DAC (0x00040000L)    | Erforderlich, um die DACL in der Sicherheitsbeschreibung für das Objekt zu ändern.                                                                                                                                                                                                               |
+| WRITE \_ OWNER (0x00080000L)  | Erforderlich, um den Besitzer in der Sicherheitsbeschreibung für das Objekt zu ändern.                                                                                                                                                                                                              |
 
 
 
- 
+ 
 
-In der folgenden Tabelle sind die Objekt spezifischen Zugriffsrechte aufgeführt.
+In der folgenden Tabelle sind die objektspezifischen Zugriffsrechte aufgeführt.
 
 
 
-| Zugriffsrecht                        | BESCHREIBUNG                                                                                                                                                                                                                                                                   |
+| Zugriffsrechte                        | Beschreibung                                                                                                                                                                                                                                                                   |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Winsta \_ All- \_ Zugriff (0x37f)         | Alle möglichen Zugriffsrechte für die Fenster Station.                                                                                                                                                                                                                            |
-| Winsta \_ accessclipboard (0x0004l)   | Erforderlich, um die Zwischenablage zu verwenden.                                                                                                                                                                                                                                                |
-| Winsta \_ accessglobalatome (0x0020l) | Erforderlich, um globale Atome zu manipulieren.                                                                                                                                                                                                                                          |
-| Winsta \_ -kreatedesktop (0x0008l)     | Erforderlich, um neue Desktop Objekte auf der Fenster Station zu erstellen.                                                                                                                                                                                                                 |
-| Winsta- \_ EnumDesktops (0x0001l)      | Zum Auflisten vorhandener Desktop Objekte erforderlich.                                                                                                                                                                                                                               |
-| Winsta- \_ Enumeration (0x0100l)         | Erforderlich, damit die Fenster Station aufgezählt wird.                                                                                                                                                                                                                             |
-| Winsta- \_ exitwindows (0x0040l)       | Erforderlich, um die [**exitwindows**](/windows/desktop/api/winuser/nf-winuser-exitwindows) -oder [**ExitWindowsEx**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) -Funktion erfolgreich aufzurufen. Fenster Stationen können von Benutzern gemeinsam genutzt werden. mit diesem Zugriffstyp kann verhindert werden, dass andere Benutzer einer Fenster Station sich vom Besitzer der Fenster Station abmelden. |
-| Winsta-Read- \_ Attribute (0x0002l)    | Erforderlich, um die Attribute eines Fenster Station-Objekts zu lesen. Dieses Attribut schließt Farbeinstellungen und andere Eigenschaften der globalen Fenster Station ein.                                                                                                                                |
-| Winsta- \_ Bildschirm (0x0200l)        | Für den Zugriff auf Bildschirminhalte erforderlich.                                                                                                                                                                                                                                           |
-| Winsta- \_ Beschreib teattribute (0x0010l)   | Erforderlich, um die Attribute eines Fenster Station-Objekts zu ändern. Zu den Attributen zählen Farbeinstellungen und andere Eigenschaften der globalen Fenster Station.                                                                                                                               |
+| WINSTA \_ ALL \_ ACCESS (0x37F)         | Alle möglichen Zugriffsrechte für die Fensterstation.                                                                                                                                                                                                                            |
+| WINSTA \_ ACCESSCLIPBOARD (0x0004L)   | Erforderlich, um die Zwischenablage zu verwenden.                                                                                                                                                                                                                                                |
+| WINSTA \_ ACCESSGLOBALATOMS (0x0020L) | Erforderlich, um globale Atome zu bearbeiten.                                                                                                                                                                                                                                          |
+| WINSTA \_ CREATEDESKTOP (0x0008L)     | Erforderlich, um neue Desktopobjekte auf der Fensterstation zu erstellen.                                                                                                                                                                                                                 |
+| WINSTA \_ ENUMDESKTOPS (0x0001L)      | Erforderlich zum Aufzählen vorhandener Desktopobjekte.                                                                                                                                                                                                                               |
+| WINSTA \_ ENUMERATE (0x0100L)         | Erforderlich, damit die Fensterstation aufzählt werden kann.                                                                                                                                                                                                                             |
+| WINSTA \_ EXITWINDOWS (0x0040L)       | Erforderlich, um die [**ExitWindows- oder**](/windows/desktop/api/winuser/nf-winuser-exitwindows) [**ExitWindowsEx-Funktion erfolgreich aufrufen zu**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) können. Fensterstationen können von Benutzern gemeinsam genutzt werden, und dieser Zugriffstyp kann verhindern, dass sich andere Benutzer einer Fensterstation vom Besitzer der Fensterstation abmelden. |
+| WINSTA \_ READATTRIBUTES (0x0002L)    | Erforderlich, um die Attribute eines Fensterstationsobjekts zu lesen. Dieses Attribut enthält Farbeinstellungen und andere globale Fensterstationseigenschaften.                                                                                                                                |
+| WINSTA \_ READSCREEN (0x0200L)        | Erforderlich für den Zugriff auf Bildschirminhalte.                                                                                                                                                                                                                                           |
+| WINSTA \_ WRITEATTRIBUTES (0x0010L)   | Erforderlich, um die Attribute eines Fensterstationsobjekts zu ändern. Zu den Attributen gehören Farbeinstellungen und andere globale Fensterstationseigenschaften.                                                                                                                               |
 
 
 
- 
+ 
 
-Im folgenden finden Sie die [allgemeinen Zugriffsrechte](/windows/desktop/SecAuthZ/generic-access-rights) für das interaktive Fenster Station-Objekt, bei dem es sich um die der Anmelde Sitzung des interaktiven Benutzers zugewiesene Fenster Station handelt.
+Im Folgenden finden Sie die generischen [Zugriffsrechte](/windows/desktop/SecAuthZ/generic-access-rights) für das interaktive Fensterstationsobjekt, bei dem es sich um die Fensterstation handelt, die der Anmeldesitzung des interaktiven Benutzers zugewiesen ist.
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Zugriffsrecht</th>
-<th>BESCHREIBUNG</th>
+<th>Zugriffsrechte</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -111,17 +111,17 @@ WINSTA_WRITEATTRIBUTES<br />
 
 
 
- 
+ 
 
-Im folgenden finden Sie die [allgemeinen Zugriffsrechte](/windows/desktop/SecAuthZ/generic-access-rights) für ein nicht interaktives Fenster Station-Objekt. Das System weist nicht interaktive Fenster Stationen allen anderen Anmelde Sitzungen als der des interaktiven Benutzers zu.
+Im Folgenden finden Sie [die generischen Zugriffsrechte für](/windows/desktop/SecAuthZ/generic-access-rights) ein nichtinteraktives Fensterstationsobjekt. Das System weist allen Anmeldesitzungen außer der des interaktiven Benutzers nicht interaktive Fensterstationen zu.
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Zugriffsrecht</th>
-<th>BESCHREIBUNG</th>
+<th>Zugriffsrechte</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -164,10 +164,10 @@ WINSTA_READATTRIBUTES<br />
 
 
 
- 
+ 
 
-Sie können das Zugriffs \_ System \_ -Sicherheits Zugriffsrecht auf ein Fenster Station-Objekt anfordern, wenn Sie die SACL des Objekts lesen oder schreiben möchten. Weitere Informationen finden Sie unter [Zugriffs Steuerungs Listen (Access Control Lists, ACLs)](/windows/desktop/SecAuthZ/access-control-lists) und [SACL-Zugriffsrecht](/windows/desktop/SecAuthZ/sacl-access-right).
+Sie können das Zugriffsrecht ACCESS \_ SYSTEM SECURITY auf ein \_ Fensterstationsobjekt anfordern, wenn Sie die SACL des Objekts lesen oder schreiben möchten. Weitere Informationen finden Sie unter [Zugriffssteuerungslisten (ACLs)](/windows/desktop/SecAuthZ/access-control-lists) und [SACL-Zugriffsrecht.](/windows/desktop/SecAuthZ/sacl-access-right)
 
- 
+ 
 
- 
+ 

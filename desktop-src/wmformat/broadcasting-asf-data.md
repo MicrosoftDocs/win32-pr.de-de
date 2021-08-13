@@ -3,28 +3,28 @@ title: Übertragungen von ASF-Daten
 description: Übertragungen von ASF-Daten
 ms.assetid: 1b04f361-8147-4f6a-8c9d-d8eeed28550a
 keywords:
-- Windows Media-Format-SDK, Senden von ASF-Daten
-- Advanced Systems Format (ASF), Broadcast von Daten
-- ASF (Advanced Systems Format), Broadcasting Data
-- Windows Media-Format-SDK, Senden von ASF-Daten
+- Windows Medienformat-SDK, Übertragen von ASF-Daten
+- Advanced Systems Format (ASF), Broadcasting Data
+- ASF (Advanced Systems Format), Broadcasting data
+- Windows Medienformat-SDK, Senden von ASF-Daten
 - Advanced Systems Format (ASF), Senden von Daten
 - ASF (Advanced Systems Format), Senden von Daten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42339b4a3e60666c1ea0cb69a07dfdc836b19409
-ms.sourcegitcommit: b04e152a7f51618fc174ffa872654623fe088db2
+ms.openlocfilehash: a44fc9ea0515822c765b0cb3af457254341a64f08e64d566aa9e226a48758e7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "104038665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118434464"
 ---
 # <a name="broadcasting-asf-data"></a>Übertragungen von ASF-Daten
 
-In diesem Thema wird beschrieben, wie Sie mit dem HTTP-Protokoll ASF-Daten über ein Netzwerk senden. Zum Senden von Dateien über ein Netzwerk ist die Verwendung des Writer-Objekts erforderlich. Daher sollten Sie vor dem Lesen dieses Themas über ein allgemeines Verständnis dieses Objekts verfügen. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien](writing-asf-files.md).
+In diesem Thema wird beschrieben, wie ASF-Daten über ein Netzwerk mithilfe des HTTP-Protokolls gesendet werden. Das Senden von Dateien über ein Netzwerk erfordert die Verwendung des Writer-Objekts. Daher sollten Sie dieses Objekt vor dem Lesen dieses Themas allgemein verstehen. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien.](writing-asf-files.md)
 
-Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie folgendermaßen vor:
+Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie wie folgt vor:
 
-1.  Erstellen Sie das Writer-Objekt, indem Sie die [**wmcreatewriter**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatewriter) -Funktion aufrufen. Diese Funktion gibt einen **iwmwriter** -Zeiger zurück.
+1.  Erstellen Sie das Writer-Objekt, indem Sie die [**WMCreateWriter-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatewriter) aufrufen. Diese Funktion gibt einen **IWMWriter-Zeiger** zurück.
     ```C++
     IWMWriter *pWriter;
     hr = WMCreateWriter(NULL, &pWriter);
@@ -32,7 +32,7 @@ Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie folgendermaßen vor:
 
     
 
-2.  Erstellen Sie das netzwerksink-Objekt, indem Sie die [**wmcreateschreiternetworksink**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-wmcreatewriternetworksink) -Funktion aufrufen, die einen **iwmschreiternetworksink** -Zeiger zurückgibt.
+2.  Erstellen Sie das Netzwerksenkenobjekt, indem Sie die [**WMCreateWriterNetworkSink-Funktion**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-wmcreatewriternetworksink) aufrufen, die einen **IWMWriterNetworkSink-Zeiger** zurückgibt.
     ```C++
     IWMWriterNetworkSink *pNetSink;
     hr = WMCreateWriterNetworkSink(&pNetSink);
@@ -40,7 +40,7 @@ Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie folgendermaßen vor:
 
     
 
-3.  Nennen Sie [**iwmschreiternetworksink:: Open**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-open) in der Netzwerk Senke, und geben Sie die Portnummer an, die geöffnet werden soll. Beispiel: 8080. Zum Abrufen der URL des Hosts können Sie optional [**iwmschreiternetworksink:: gethosturl**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-gethosturl) aufrufen. Clients greifen über diese URL auf den Inhalt zu. Sie können auch [**iwmschreiternetworksink:: setmaximumclients**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-setmaximumclients) aufrufen, um die Anzahl der Clients einzuschränken.
+3.  Rufen [**Sie IWMWriterNetworkSink::Open**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-open) in der Netzwerksenke auf, und geben Sie die zu öffnende Portnummer an. Beispiel: 8080. Rufen Sie optional [**IWMWriterNetworkSink::GetHostURL**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-gethosturl) auf, um die URL des Hosts zu erhalten. Clients greifen über diese URL auf den Inhalt zu. Sie können auch [**IWMWriterNetworkSink::SetMaximumClients**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-setmaximumclients) aufrufen, um die Anzahl der Clients einzuschränken.
     ```C++
     DWORD dwPortNum = 8080;
     hr = pNetSink->Open( &dwPortNum)
@@ -48,7 +48,7 @@ Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie folgendermaßen vor:
 
     
 
-4.  Fügen Sie die Netzwerk Senke an den Writer an, indem Sie [**iwmschreiteradvanced:: addsink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-addsink) für den Writer aufrufen, mit einem Zeiger auf die **iwmschreiternetworksink** -Schnittstelle der Netzwerk Senke.
+4.  Fügen Sie die Netzwerksenke an den Writer an, indem Sie [**IWMWriterAdvanced::AddSink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-addsink) für den Writer mit einem Zeiger auf die **IWMWriterNetworkSink-Schnittstelle** der Netzwerksenke aufrufen.
     ```C++
     IWMWriterAdvanced *pWriterAdvanced;
     hr = pWriter->QueryInterface(IID_IWMWriterAdvanced, ( void** ) pWriterAdvanced );
@@ -60,52 +60,52 @@ Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie folgendermaßen vor:
 
     
 
-5.  Legen Sie das ASF-Profil fest, indem Sie die [**iwmwriter:: setprofile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setprofile) -Methode für das Writer-Objekt mit einem [**iwmprofile**](iwmprofile.md) -Zeiger aufrufen. Weitere Informationen zum Erstellen eines Profils finden Sie unter [Arbeiten mit Profilen](working-with-profiles.md).
-6.  Optional können Sie Metadaten mithilfe der [**iwmheaderinfo**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) -Schnittstelle für den Writer angeben.
-7.  Nennen Sie [**iwmwriter:: BeginWrite**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-beginwriting) für den Writer.
+5.  Legen Sie das ASF-Profil fest, indem Sie die [**IWMWriter::SetProfile-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setprofile) für das Writer-Objekt mit einem [**IWMProfile-Zeiger**](iwmprofile.md) aufrufen. Informationen zum Erstellen eines Profils finden Sie unter [Arbeiten mit Profilen.](working-with-profiles.md)
+6.  Geben Sie optional Metadaten mithilfe der [**IWMHeaderInfo-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) auf dem Writer an.
+7.  Rufen [**Sie IWMWriter::BeginWriting für**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-beginwriting) den Writer auf.
     ```C++
     hr = pWriter->BeginWriting();
     ```
 
     
 
-8.  Für jedes Beispiel wird die [**iwmwriter:: schreitesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) -Methode aufgerufen. Geben Sie die Datenstrom Nummer, die Präsentationszeit, die Dauer der Stichprobe und einen Zeiger auf den Beispiel Puffer an. Die Methode " **Write tesample** " komprimiert die Beispiele.
-9.  Wenn Sie den Vorgang abgeschlossen haben, nennen Sie [**iwmwriter:: endwriting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-endwriting) für den Writer.
+8.  Rufen Sie für jedes Beispiel die [**IWMWriter::WriteSample-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) auf. Geben Sie die Streamnummer, die Präsentationszeit, die Dauer des Beispiels und einen Zeiger auf den Beispielpuffer an. Die **WriteSample-Methode** komprimiert die Beispiele.
+9.  Wenn Sie fertig sind, rufen Sie [**IWMWriter::EndWriting für**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-endwriting) den Writer auf.
     ```C++
     hr = pWriter->EndWriting();
     ```
 
     
 
-10. Nennen Sie [**iwmschreiteradvanced:: removesink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-removesink) auf dem Writer, um das netzwerksink-Objekt zu trennen.
+10. Rufen [**Sie IWMWriterAdvanced::RemoveSink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-removesink) für den Writer auf, um das Netzwerksenkenobjekt zu trennen.
     ```C++
     hr = pWriterAdvanced->RemoveSink(pNetSink);
     ```
 
     
 
-11. Nennen Sie [**iwmschreiternetworksink:: Close**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-close) in der Netzwerk Senke, um den Port freizugeben.
+11. Rufen [**Sie IWMWriterNetworkSink::Close**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriternetworksink-close) in der Netzwerksenke auf, um den Port frei zu geben.
     ```C++
     hr = pNetSink->Close();
     ```
 
     
 
-Eine weitere Möglichkeit zum Streamen von ASF-Inhalten über ein Netzwerk besteht darin, Sie aus einer vorhandenen ASF-Datei zu lesen. Das im SDK bereitgestellte wmvnetwrite-Beispiel veranschaulicht diese Vorgehensweise. Führen Sie zusätzlich zu den zuvor aufgeführten Schritten folgende Schritte aus:
+Eine weitere Möglichkeit zum Streamen von ASF-Inhalten über ein Netzwerk ist das Lesen aus einer vorhandenen ASF-Datei. Das im SDK bereitgestellte WMVNetWrite-Beispiel veranschaulicht diesen Ansatz. Führen Sie zusätzlich zu den oben aufgeführten Schritten die folgenden Schritte aus:
 
-1.  Erstellen Sie ein Reader-Objekt, und rufen Sie die **Open** -Methode mit dem Namen der Datei auf.
-2.  Aufrufen von [**iwmreaderadvanced:: setmanualstreamselection**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-setmanualstreamselection) für das Reader-Objekt mit dem Wert " **true**". Dadurch kann die Anwendung jeden Stream in der Datei lesen, einschließlich Streams mit gegenseitigem Ausschluss.
-3.  Fragen Sie den Reader nach der [**iwmprofile**](iwmprofile.md) -Schnittstelle ab. Verwenden Sie diesen Zeiger, wenn Sie [**iwmwriter:: setprofile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setprofile) für das Writer-Objekt aufrufen (Schritt 5 in der vorherigen Prozedur).
-4.  Für jeden Stream, der im Profil definiert ist, können Sie [**iwmprofile:: GetStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-getstream) aufrufen, um die streamnummer abzurufen. Übergeben Sie diese streamnummer an die [**iwmreaderadvanced:: setreceivestreamsamples**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-setreceivestreamsamples) -Methode des Readers. Diese Methode teilt dem Reader mit, komprimierte Beispiele zu liefern, anstatt Sie zu decodieren. Die Beispiele werden mithilfe der [**iwmreadercallbackadvanced:: onstreamsample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreadercallbackadvanced-onstreamsample) -Rückruf Methode der Anwendung an die Anwendung übermittelt.
+1.  Erstellen Sie ein Readerobjekt, und rufen Sie die **Open-Methode** mit dem Namen der Datei auf.
+2.  Rufen [**Sie IWMReaderAdvanced::SetManualStreamSelection**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-setmanualstreamselection) für das Readerobjekt mit dem Wert **TRUE auf.** Dadurch kann die Anwendung jeden Datenstrom in der Datei lesen, einschließlich Streams mit gegenseitigem Ausschluss.
+3.  Fragen Sie den Reader nach der [**IWMProfile-Schnittstelle**](iwmprofile.md) ab. Verwenden Sie diesen Zeiger, wenn Sie [**IWMWriter::SetProfile für**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setprofile) das Writer-Objekt aufrufen (Schritt 5 in der vorherigen Prozedur).
+4.  Rufen Sie für jeden im Profil definierten Stream [**IWMProfile::GetStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-getstream) auf, um die Streamnummer zu erhalten. Übergeben Sie diese Streamnummer an die [**IWMReaderAdvanced::SetReceiveStreamSamples-Methode des Readers.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-setreceivestreamsamples) Diese Methode informiert den Leser, komprimierte Stichproben zu liefern, anstatt sie zu decodieren. Die Beispiele werden über die [**RÜCKRUFMReaderCallbackAdvanced::OnStreamSample-Rückrufmethode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreadercallbackadvanced-onstreamsample) der Anwendung an die Anwendung übermittelt.
 
-    Sie müssen die Codec-Informationen für jeden Datenstrom abrufen, den Sie unkomprimiert gelesen haben, und ihn vor der Übertragung dem Header hinzufügen. Rufen Sie zum Abrufen der Codec-Informationen [**IWMHeaderInfo2:: getcodecinfocount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmheaderinfo2-getcodecinfocount) und [**IWMHeaderInfo2:: getcodecinfo**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo2-getcodecinfo) auf, um die Codecs aufzulisten, die der Datei im Reader zugeordnet sind. Wählen Sie die Codec-Informationen aus, die der Datenstrom Konfiguration entsprechen. Legen Sie dann die Codec-Informationen im Writer durch Aufrufen von [**IWMHeaderInfo3:: addcodecinfo**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo3-addcodecinfo)fest, und übergeben Sie dabei die Informationen, die vom Reader abgerufen werden.
+    Sie müssen Codecinformationen für jeden Stream abrufen, den Sie unkomprimiert lesen, und sie dem Header vor der Übertragung hinzufügen. Um die Codecinformationen zu erhalten, rufen Sie [**IWMHeaderInfo2::GetCodecInfoCount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmheaderinfo2-getcodecinfocount) und [**IWMHeaderInfo2::GetCodecInfo**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo2-getcodecinfo) auf, um die Codecs zu aufzählen, die der Datei im Reader zugeordnet sind. Wählen Sie die Codecinformationen aus, die der Streamkonfiguration entspricht. Legen Sie dann die Codecinformationen im Writer fest, indem [**Sie IWMHeaderInfo3::AddCodecInfo**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo3-addcodecinfo)aufrufen und die vom Reader erhaltenen Informationen übergeben.
 
-5.  Nachdem Sie das Profil für den Writer festgelegt haben, können Sie [**iwmwriter:: getinputcount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputcount) für den Writer aufrufen, um die Anzahl der Eingaben zu erhalten. Geben Sie für jede Eingabe den Wert " [**iwmwriter::**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setinputprops) " mit dem Wert **null** an. Dadurch wird dem Writer-Objekt angezeigt, dass die Anwendung komprimierte Beispiele bereitstellt, sodass der Writer keine Codecs zum Komprimieren der Daten verwenden muss. Stellen Sie sicher, dass Sie vor dem Aufrufen von **beginwriting**"" vor **dem Aufruf von** "
+5.  Nachdem Sie das Profil für den Writer festgelegt haben, rufen Sie [**IWMWriter::GetInputCount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputcount) für den Writer auf, um die Anzahl der Eingaben zu erhalten. Rufen Sie für jede Eingabe [**IWMWriter::SetInputProps mit**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setinputprops) dem Wert **NULL auf.** Dies gibt dem Writer-Objekt an, dass die Anwendung komprimierte Stichproben liefert, sodass der Writer keine Codecs verwenden muss, um die Daten zu komprimieren. Stellen Sie sicher, dass **Sie SetInputProps aufrufen,** bevor **Sie BeginWriting aufrufen.**
 6.  Kopieren Sie optional die Metadatenattribute vom Reader in den Writer.
-7.  Da die Beispiele des Readers bereits komprimiert sind, verwenden Sie die Methode [**iwmschreiteradvanced:: schreitestreamsample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-writestreamsample) , um die Beispiele anstelle der **beschreitesample** -Methode zu schreiben. Die " **Write-streamsample** "-Methode umgeht die üblichen Komprimierungs Prozeduren des Writer-Objekts.
-8.  Wenn der Reader das Ende der Datei erreicht, sendet er eine WMT- \_ Benachrichtigungs Benachrichtigung an die Anwendung.
+7.  Da die Beispiele aus dem Reader bereits komprimiert sind, verwenden Sie anstelle der **WriteSample-Methode** die [**IWMWriterAdvanced::WriteStreamSample-Methode,**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-writestreamsample) um die Beispiele zu schreiben. Die **WriteStreamSample-Methode** umgeht die üblichen Komprimierungsvorgänge des Writerobjekts.
+8.  Wenn der Reader das Ende der Datei erreicht, sendet er eine WMT \_ EOF-Benachrichtigung an die Anwendung.
 
-Außerdem sollte die Anwendung die Uhr auf dem Reader-Objekt steuern, damit der Reader so schnell wie möglich Daten aus der Datei abruft. Rufen Sie hierzu die [**iwmreaderadvanced:: setuserprovidedclock**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-setuserprovidedclock) -Methode für den Reader mit dem Wert " **true**" auf. Nachdem der Reader die WMT \_ Started-Benachrichtigung gesendet hat, rufen Sie [**iwmreaderadvanced::D elivertime**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-delivertime) auf, und geben Sie das Zeitintervall an, das der Reader übermitteln soll. Nachdem der Reader das Zeitintervall gelesen hat, ruft er die [**iwmreadercallbackadvanced:: OnTime**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreadercallbackadvanced-ontime) -Rückruf Methode der Anwendung auf. Die Anwendung sollte **delivertime** erneut abrufen, um das nächste Zeitintervall zu lesen. So können Sie z. b. in Intervallen von einer Sekunde aus der Datei lesen:
+Darüber hinaus sollte die Anwendung die Uhr für das Readerobjekt verwenden, damit der Reader Daten so schnell wie möglich aus der Datei pullt. Rufen Sie hierzu die [**IWMReaderAdvanced::SetUserProvidedClock-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-setuserprovidedclock) auf dem Reader mit dem Wert **TRUE auf.** Nachdem der Reader die WMT STARTED-Benachrichtigung sendet, rufen Sie \_ [**IWMReaderAdvanced::D eliverTime**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreaderadvanced-delivertime) auf, und geben Sie das Zeitintervall an, das der Reader liefern soll. Nachdem der Reader dieses Zeitintervall gelesen hat, ruft er die [**IWMReaderCallbackAdvanced::OnTime-Rückrufmethode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreadercallbackadvanced-ontime) der Anwendung auf. Die Anwendung sollte **DeliverTime erneut aufrufen,** um das nächste Zeitintervall zu lesen. Um beispielsweise in Intervallen von einer Sekunde aus der Datei zu lesen:
 
 
 ```C++
@@ -136,12 +136,12 @@ HRESULT CNetWrite::OnTime(QWORD cnsCurrentTime, void *pvContext)
 [**Senden von ASF-Daten über ein Netzwerk**](sending-asf-data-over-a-network.md)
 </dt> <dt>
 
-[**Arbeiten mit Writer-senken**](working-with-writer-sinks.md)
+[**Arbeiten mit Writer-Senken**](working-with-writer-sinks.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

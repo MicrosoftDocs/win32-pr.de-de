@@ -1,24 +1,24 @@
 ---
-title: Erstellen eines linearen Farbverlaufs Pinsels
-description: Zeigt, wie ein linearer Farbverlaufs Pinsel mit Direct2D erstellt wird.
+title: Erstellen eines Pinsels mit linearem Farbverlauf
+description: Zeigt, wie sie mit Direct2D einen Pinsel mit linearem Farbverlauf erstellen.
 ms.assetid: 3cf5acc6-2f17-49d4-aca5-a84a846d1749
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3a50a6e3ab421e2275644051ed647d5c4501f8e0
-ms.sourcegitcommit: 015fb35e736a235d3c9becff1f6832a0965b4303
+ms.openlocfilehash: 0c9223eb561ecc391014bc4a89c86a634181bec6d1e3917866aeef2723f1510a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259534"
 ---
-# <a name="how-to-create-a-linear-gradient-brush"></a>Erstellen eines linearen Farbverlaufs Pinsels
+# <a name="how-to-create-a-linear-gradient-brush"></a>Erstellen eines Pinsels mit linearem Farbverlauf
 
-Verwenden Sie zum Erstellen eines linearen Farbverlaufs Pinsels die Methode " [**kreatelineargradientbrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlineargradientbrush(constd2d1_linear_gradient_brush_properties__id2d1gradientstopcollection_id2d1lineargradientbrush)) ", und geben Sie die Eigenschaften für den linearen Farbverlaufs Pinsel und die Auflistung für den Mit einigen über Ladungen können Sie die Pinsel Eigenschaften angeben. Der folgende Code zeigt, wie ein linearer Farbverlaufs Pinsel zum Auffüllen eines Quadrats erstellt wird, und ein solider schwarzer Pinsel zum Zeichnen der Kontur des Quadrats.
+Um einen linearen Farbverlaufspinsel zu erstellen, verwenden Sie die [**CreateLinearGradientBrush-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlineargradientbrush(constd2d1_linear_gradient_brush_properties__id2d1gradientstopcollection_id2d1lineargradientbrush)) und geben Sie die Eigenschaften des linearen Farbverlaufpinsels und die Gradientenstoppsammlung an. Mit einigen Überladungen können Sie die Pinseleigenschaften angeben. Der folgende Code zeigt, wie Ein linearer Farbverlaufspinsel zum Füllen eines Quadrats und ein solider schwarzer Pinsel zum Zeichnen der Kontur des Quadrats erstellt wird.
 
 Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
-![Abbildung eines Quadrats mit einem linearen Farbverlaufs Pinsel](images/brushes-ovw-lineargradient.png)
+![Abbildung eines quadratischen, mit einem linearen Farbverlaufspinsel gefüllten Quadrats](images/brushes-ovw-lineargradient.png)
 
 1.  Deklarieren Sie eine Variable vom Typ [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush).
     ```C++
@@ -27,9 +27,9 @@ Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
     
 
-2.  Verwenden Sie die [**ID2D1RenderTarget:: kreategradientstopcollection**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-creategradientstopcollection(constd2d1_gradient_stop_uint32_id2d1gradientstopcollection)) -Methode, um die [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) -Auflistung mit einem deklarierten Array von [**D2D1 Gradient- \_ \_ Stopp**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_gradient_stop) Strukturen zu erstellen, wie im folgenden Code dargestellt.
+2.  Verwenden Sie die [**ID2D1RenderTarget::CreateGradientStopCollection-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-creategradientstopcollection(constd2d1_gradient_stop_uint32_id2d1gradientstopcollection)) um die [**ID2D1GradientStopCollection-Auflistung**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) mit einem deklarierten Array von [**D2D1 \_ GRADIENT \_ STOP-Strukturen**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_gradient_stop) zu erstellen, wie im folgenden Code gezeigt.
     > [!Note]  
-    > Ab Windows 8 können Sie stattdessen die [**ID2D1DeviceContext::**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-creategradientstopcollection) up-Auflistungs Methode verwenden, um eine [**ID2D1GradientStopCollection1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1gradientstopcollection1) -Sammlung zu erstellen. Diese Schnittstelle fügt Farbverläufe mit hoher Farbe und die interpolung von Farbverläufen entweder in geraden oder in den Sonderfarben hinzu. Weitere Informationen finden Sie auf der Seite " **ID2DDeviceContext:: kreategradientstopcollection** ".
+    > Ab Windows 8 können Sie stattdessen die [**ID2D1DeviceContext::CreateGradientStopCollection-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-creategradientstopcollection) verwenden, um eine [**ID2D1GradientStopCollection1-Sammlung**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1gradientstopcollection1) zu erstellen. Diese Schnittstelle fügt farblich hochwertige Farbverläufe und die Interpolation von Farbverläufen in geraden oder prmultipliierten Farben hinzu. Weitere Informationen finden Sie auf der Seite **ID2DDeviceContext::CreateGradientStopCollection.**
 
      
 
@@ -56,7 +56,7 @@ Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
     
 
-3.  Verwenden Sie [**ID2D1RenderTarget:: kreatelineargradientbrush**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlineargradientbrush(constd2d1_linear_gradient_brush_properties__constd2d1_brush_properties__id2d1gradientstopcollection_id2d1lineargradientbrush)) zum Erstellen eines linearen Farbverlaufs Pinsels, füllen Sie das Quadrat mit dem Pinsel aus, und zeichnen Sie das Quadrat mit dem schwarzen Farbpinsel.
+3.  Verwenden Sie [**id2D1RenderTarget::CreateLinearGradientBrush,**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createlineargradientbrush(constd2d1_linear_gradient_brush_properties__constd2d1_brush_properties__id2d1gradientstopcollection_id2d1lineargradientbrush)) um einen Pinsel für linearen Farbverlauf zu erstellen, das Quadrat mit dem Pinsel zu füllen und das Quadrat mit dem schwarzen Farbpinsel zu zeichnen.
     ```C++
     // The line that determines the direction of the gradient starts at
     // the upper-left corner of the square and ends at the lower-right corner.

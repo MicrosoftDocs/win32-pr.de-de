@@ -1,33 +1,33 @@
 ---
-description: "\"Zielstregroupguid\""
+description: PurposeGroupGuid
 MS-HAID: WWAN\_profile\_v4.element\_PurposeGroupGuid
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: "\"Zielstregroupguid\""
+title: PurposeGroupGuid
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d20d6c9d1687ea0e3fca344fd3b534ccc0b3ee57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29ead67e44ac4735d17d97580b6bce5f187422994c9854bac19febf7a988bcbf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119358833"
 ---
-# <a name="span-idwwan_profile_v4element_purposegroupguidspanpurposegroupguid"></a><span id="WWAN_profile_v4.element_PurposeGroupGuid"></span>"Zielstregroupguid"
+# <a name="span-idwwan_profile_v4element_purposegroupguidspanpurposegroupguid"></a><span id="WWAN_profile_v4.element_PurposeGroupGuid"></span>PurposeGroupGuid
 
-Stellt ein Profil in einer Zweck Gruppe von Profilen dar.
+Stellt ein Profil in einer PurposeGroup von Profilen dar.
 
-Profile werden durch Ihren [**guidtype**](simpletype-guidtype.md) -Wert angegeben.
+Profile werden durch ihren [**guidType-Wert**](simpletype-guidtype.md) angegeben.
 
-Vier GUID-Werte werden definiert, wie in der folgenden Tabelle aufgeführt.
+Es werden vier GUID-Werte definiert, wie in der folgenden Tabelle aufgeführt.
 
-| Zweck Gruppe | GUID                                 |
+| Zweckgruppe | GUID                                 |
 |---------------|--------------------------------------|
-| Internet      | 3e5545d2-1137-4dc8-a198-33F & 1c657515f |
-| mms           | 53e2c5d3-D13C-4068-AA38-9c48ff2e55a8 |
-| IMS           | 474d66ed-0e4b-476b-A455-19bb1239ed13 |
-| SUPL          | 6d42669l-52a9-408e-9493-1071dcc437bd |
+| Internet      | 3E5545D2-1137-4DC8-A198-33F1C657515F |
+| mms           | 53E2C5D3-D13C-4068-AA38-9C48FF2E55A8 |
+| IMS           | 474D66ED-0E4B-476B-A455-19BB1239ED13 |
+| SUPL          | 6D42669F-52A9-408E-9493-1071DCC437BD |
 
  
 
@@ -72,9 +72,9 @@ Keine.
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="element-purposegroups.md">Zielstregruppen</a></td>
-<td><p>Eine optionale Liste der Gruppen von Profilen, wobei jede Gruppe Profile enthält, die für einen allgemeinen Zweck verwendet werden.</p>
-<p>Dieses Element ist neu für V4 des Schemas.</p>
+<td><a href="element-purposegroups.md">PurposeGroups</a></td>
+<td><p>Eine optionale Liste von Gruppen von Profilen, wobei jede Gruppe Profile enthält, die für einen gemeinsamen Zweck verwendet werden.</p>
+<p>Dieses Element ist neu für Version 4 des Schemas.</p>
 <p>Ein Profil kann in mehreren Gruppen aufgelistet werden.</p></td>
 </tr>
 </tbody>

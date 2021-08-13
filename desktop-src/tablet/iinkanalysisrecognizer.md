@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht den Zugriff auf Handschrift erkennungsungen für die Verwendung mit der Ink-Analyse.
+description: Ermöglicht den Zugriff auf Handschrifterkennungen für die Verwendung mit Freihandanalysen.
 ms.assetid: de536cca-889e-413e-a6f7-c2229a77c801
-title: Iinkanalysiserkenzer-Schnittstelle (iacom. h)
+title: IInkAnalysisRecognizer-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,49 +13,49 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: b091b47d14929e155548dc057ef0fdb1731133a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d0736288658c57c1cfd346b8337f91353638b8326ed1d0b29687c812db72efba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350880"
 ---
-# <a name="iinkanalysisrecognizer-interface"></a>Iinkanalysiserkenzer-Schnittstelle
+# <a name="iinkanalysisrecognizer-interface"></a>IInkAnalysisRecognizer-Schnittstelle
 
-Ermöglicht den Zugriff auf Handschrift erkennungsungen für die Verwendung mit der Ink-Analyse.
+Ermöglicht den Zugriff auf Handschrifterkennungen für die Verwendung mit Freihandanalysen.
 
 ## <a name="members"></a>Member
 
-Die **iinkanalysiserkenzer** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iinkanalysiserkenzer** verfügt auch über die folgenden Typen von Membern:
+Die **IInkAnalysisRecognizer-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IInkAnalysisRecognizer** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iinkanalysiserkenzer** -Schnittstelle verfügt über diese Methoden.
+Die **IInkAnalysisRecognizer-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                          | BESCHREIBUNG                                                                                                                    |
 |:--------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [**GetCapabilities**](iinkanalysisrecognizer-getcapabilities.md)               | Ruft die Funktionen des Erkennungs Moduls ab.<br/>                                                                       |
-| [**GetGuid**](iinkanalysisrecognizer-getguid.md)                               | Ruft den Globally Unique Identifier (GUID) der Erkennung ab.<br/>                                                  |
-| [**GetLanguages**](iinkanalysisrecognizer-getlanguages.md)                     | Ruft die Bezeichner für die Gebiets Schemas ab, die von diesem **iinkanalysiserkenzer** unterstützt werden.<br/>                            |
+| [**GetCapabilities**](iinkanalysisrecognizer-getcapabilities.md)               | Ruft die Funktionen der Erkennung ab.<br/>                                                                       |
+| [**Getguid**](iinkanalysisrecognizer-getguid.md)                               | Ruft den GUID (Globally Unique Identifier) der Erkennung ab.<br/>                                                  |
+| [**GetLanguages**](iinkanalysisrecognizer-getlanguages.md)                     | Ruft die Bezeichner für die Gebietsschemas ab, die von **IInkAnalysisRecognizer** unterstützt werden.<br/>                            |
 | [**GetName**](iinkanalysisrecognizer-getname.md)                               | Ruft den Namen der Erkennung ab.<br/>                                                                               |
-| [**GetSupportedProperties**](iinkanalysisrecognizer-getsupportedproperties.md) | Ruft die GUIDs (Global Unique Bezeichner) für die Eigenschaften ab, die von diesem **iinkanalysiserkenzer** unterstützt werden.<br/> |
-| [**Getvendor**](iinkanalysisrecognizer-getvendor.md)                           | Ruft den Herstellernamen des **iinkanalysiserkenzer**-Elements ab.<br/>                                                        |
+| [**GetSupportedProperties**](iinkanalysisrecognizer-getsupportedproperties.md) | Ruft die GUIDs (Globally Unique Identifiers) für die Eigenschaften ab, die von **IInkAnalysisRecognizer** unterstützt werden.<br/> |
+| [**GetVendor**](iinkanalysisrecognizer-getvendor.md)                           | Ruft den Herstellernamen des **IInkAnalysisRecognizer** ab.<br/>                                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erkennung verfügt über bestimmte Attribute und Eigenschaften, mit deren Hilfe Sie eine Erkennung durchführen können. Die Eigenschaften einer Erkennung müssen festgelegt werden, bevor eine Erkennung erfolgen kann. Die Typen von Eigenschaften, die von einer Erkennung unterstützt werden, bestimmen, welche Erkennungs Typen Sie ausführen können. Wenn eine Erkennung beispielsweise keine Kursive Handschrift unterstützt, gibt Sie falsche Ergebnisse zurück, wenn ein Benutzer in einem Cursor schreibt.
+Eine Erkennung verfügt über bestimmte Attribute und Eigenschaften, mit denen die Erkennung durchgeführt werden kann. Die Eigenschaften einer Erkennung müssen bestimmt werden, bevor die Erkennung erfolgen kann. Die Typen von Eigenschaften, die eine Erkennung unterstützt, bestimmen die Erkennungstypen, die sie ausführen kann. Wenn eine Erkennung z. B. keine cursive Handschrift unterstützt, gibt sie ungenaue Ergebnisse zurück, wenn ein Benutzer in cursive schreibt.
 
-Eine Erkennung verfügt auch über eine integrierte Funktionalität, mit der viele Aspekte der Handschrift automatisch verwaltet werden. Beispielsweise bestimmt Sie die Metriken für die Zeilen, in denen Striche gezeichnet werden. Sie können die Zeilennummer eines Strichs zurückgeben. Sie müssen jedoch nie angeben, wie diese Zeilenmetriken aufgrund der integrierten Funktionalität der Erkennung bestimmt werden.
+Eine Erkennung verfügt auch über integrierte Funktionen, die viele Aspekte der Handschrift automatisch verwalten. Beispielsweise werden die Metriken für die Linien bestimmt, auf denen Striche gezeichnet werden. Sie können die Zeilennummer eines Strichs zurückgeben, aber Sie müssen aufgrund der integrierten Funktionalität der Erkennung nie angeben, wie diese Linienmetriken bestimmt werden.
 
-[**Iinkanalyzer**](iinkanalyzer.md) verwaltet eine Liste der verfügbaren erkenzer. Um auf diese Liste zuzugreifen, verwenden Sie die [**iinkanalyzer:: getinkanalysiserkenzersbypriority-Methoden**](iinkanalyzer-getinkanalysisrecognizersbypriority.md) Methode.
+[**IInkAnalyzer**](iinkanalyzer.md) verwaltet eine Liste der verfügbaren Erkennungen. Um auf diese Liste zuzugreifen, verwenden Sie die [**IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode.**](iinkanalyzer-getinkanalysisrecognizersbypriority.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,30 +63,30 @@ Eine Erkennung verfügt auch über eine integrierte Funktionalität, mit der vie
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalysiserkenzers**](iinkanalysisrecognizers.md)
+[**IInkAnalysisRecognizers**](iinkanalysisrecognizers.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: kreatecustomerkenzer-Methode**](iinkanalyzer-createcustomrecognizer.md)
+[**IInkAnalyzer::CreateCustomRecognizer-Methode**](iinkanalyzer-createcustomrecognizer.md)
 </dt> <dt>
 
-[Kontext Knoten Typen](context-node-types.md)
+[Kontextknotentypen](context-node-types.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

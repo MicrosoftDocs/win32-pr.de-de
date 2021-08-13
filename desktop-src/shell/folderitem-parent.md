@@ -1,7 +1,7 @@
 ---
-description: Ruft ein-Objekt ab, das das übergeordnete Element des Elements darstellt.
+description: Ruft ein -Objekt ab, das das übergeordnete Element des Elements darstellt.
 ms.assetid: 612e76d8-d8bc-419c-b319-75b1f324840a
-title: FolderItem. Parent-Eigenschaft (Shldisp. h)
+title: FolderItem.Parent-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: f2da3504596c3b351318b33c929dad3b5a958165
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d58a34d4018588d5f0dfd2bfac9cb118677045e7693532008361062bcdc596b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118458791"
 ---
-# <a name="folderitemparent-property"></a>FolderItem. Parent (Eigenschaft)
+# <a name="folderitemparent-property"></a>FolderItem.Parent-Eigenschaft
 
-Ruft ein-Objekt ab, das das übergeordnete Element des Elements darstellt.
+Ruft ein -Objekt ab, das das übergeordnete Element des Elements darstellt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ objParent = FolderItem.Parent
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) , die das übergeordnete Objekt empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das übergeordnete Objekt empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung des über **geordneten** Elements für JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **Parent** für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -76,7 +76,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -145,17 +145,17 @@ Visual Basic:
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

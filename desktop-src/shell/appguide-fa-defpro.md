@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 127855b8cc532d800beda024dea59d17ba7c87ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: edaadb5aa40b9a4eb6654c99bc950c2189cae7bec0610e9857afa181f306819d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119338210"
 ---
 # <a name="guidelines-for-file-associations-and-default-programs"></a>Richtlinien für Dateizuordnungen und Standardprogramme
 
 Dieser Abschnitt zu Anwendungsrichtlinien für Dateizuordnungen und Standardprogramme ist wie folgt organisiert:
 
 -   [Bewährte Methoden für Dateizuordnungen](fa-best-practices.md)
--   [Beispiel für Datei Zuordnung](fa-sample-scenarios.md)
+-   [Dateiassozbeispiel](fa-sample-scenarios.md)
 -   [Verwalten von Standardanwendungen](vista-managing-defaults.md)
 -   [Standardprogramme](default-programs.md)
--   [Festlegen des Programm Zugriffs und der Computer Standardwerte (SPAD)](cpl-setprogramaccess.md)
+-   [Festlegen von Programmzugriff und Computereinstellungen (SPAD)](cpl-setprogramaccess.md)
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
 Verwandte konzeptionelle Hintergrundinformationen finden Sie in den folgenden Themen:
 
--   Weitere Informationen zur Anwendungs Registrierung über die Registrierung, die nicht spezifisch für das Set Program Access Computer defaults (SPAD) oder die System Steuerungselemente der Standardprogramme (SYDP) ist, finden Sie unter [Anwendungs Registrierung](app-registration.md).
--   Weitere Hintergrundinformationen finden Sie unter [Dateitypen und Dateizuordnungen](fa-intro.md).
+-   Informationen zur Anwendungsregistrierung über die Registrierung, die nicht spezifisch für die Elemente Set Program Access Computer Defaults (SPAD) oder Set Your Default Programs (SYDP) Systemsteuerung ist, finden Sie unter [Anwendungsregistrierung](app-registration.md).
+-   Weitere Hintergrundinformationen finden Sie [unter Dateitypen und Dateizuordnungen.](fa-intro.md)
 
  
 

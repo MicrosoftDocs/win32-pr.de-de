@@ -1,11 +1,11 @@
 ---
-title: Iconfigasfwriter setindexmode-Methode
-description: Die setindexmode-Methode ermöglicht der Anwendung, zu steuern, ob die Datei temporell indiziert wird.
+title: IConfigAsfWriter SetIndexMode-Methode
+description: Mit der SetIndexMode-Methode kann die Anwendung steuern, ob die Datei temporal indiziert wird.
 ms.assetid: 104e29f4-a1e5-4e26-a9ef-52ef52d6f5b2
 keywords:
-- Setindexmode-Methode Windows Media-Format
-- Setindexmode-Methode Windows Media-Format, iconfigasfwriter-Schnittstelle
-- Iconfigasfwriter-Schnittstelle Windows Media-Format, setindexmode-Methode
+- SetIndexMode-Methode windows Media Format
+- SetIndexMode-Methode windows Media Format , IConfigAsfWriter-Schnittstelle
+- IConfigAsfWriter-Schnittstelle windows Media Format , SetIndexMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,23 +15,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 25d5f2b985aeca490323aecaef2595d52b99056c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2b65fbd3d279b8a66c132d24476b09b0f897c5993ea9a97d86096cf856832f9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118433611"
 ---
-# <a name="iconfigasfwritersetindexmode-method"></a>Iconfigasfwriter:: setindexmode-Methode
+# <a name="iconfigasfwritersetindexmode-method"></a>IConfigAsfWriter::SetIndexMode-Methode
 
-Die **setindexmode** -Methode ermöglicht der Anwendung, zu steuern, ob die Datei temporell indiziert wird.
+Mit **der SetIndexMode-Methode** kann die Anwendung steuern, ob die Datei temporal indiziert wird.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT SetIndexMode(
-  [in] BOOL bIndexFile
+  [in] BOOL bIndexFile
 );
 ```
 
@@ -41,28 +41,28 @@ HRESULT SetIndexMode(
 
 <dl> <dt>
 
-*bindexfile* \[ in\]
+*bIndexFile* \[ In\]
 </dt> <dd>
 
-Variable vom Typ **bool**; **True** gibt an, dass die Datei temporell indiziert wird.
+Variable vom Typ **BOOL;** **TRUE** gibt an, dass die Datei temporal indiziert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ein Fehler auftritt, wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler auftritt, wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig erstellt der [WM-ASF-Writer](wm-asf-writer-filter.md) Temporale indizierte ASF-Dateien. Die Indizierung wird durchführt, wenn das Diagramm angehalten wird. Sie können dieses Verhalten deaktivieren, wenn Sie eine eigene Frame basierte Indizierung als nach Verarbeitungsschritt ausführen möchten. Um eine Frame indizierte Datei zu erstellen, rufen Sie **setindexmode**(false) auf, erstellen Sie die Datei, und verwenden Sie dann die SDK-Methoden des Windows Media-Formats direkt, um einen Frame basierten Index für die Datei zu erstellen.
+Standardmäßig erstellt der [WM ASF Writer](wm-asf-writer-filter.md) temporal indizierte ASF-Dateien. Sie führt die Indizierung aus, wenn das Diagramm beendet wird. Sie können dieses Verhalten deaktivieren, wenn Sie ihre eigene framebasierte Indizierung als Nachbearbeitungsschritt verwenden möchten. Rufen Sie zum Erstellen einer frameindizierten Datei **SetIndexMode**(FALSE) auf, erstellen Sie die Datei, und verwenden Sie dann direkt die SDK-Methoden für das Windows-Medienformat, um einen framebasierten Index für die Datei zu erstellen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iconfigasfwriter-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743205(v=vs.85))
+[**IConfigAsfWriter-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743205(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

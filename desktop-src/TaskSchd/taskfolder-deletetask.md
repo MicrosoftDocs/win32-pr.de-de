@@ -1,11 +1,11 @@
 ---
-title: Taskfolder. DeleteTask-Methode
-description: Löscht bei der Skripterstellung eine Aufgabe aus dem Ordner.
+title: TaskFolder.DeleteTask-Methode
+description: Löscht für die Skripterstellung einen Task aus dem Ordner.
 ms.assetid: c030b2bf-fbde-4b8b-b38b-763938855d12
 keywords:
 - DeleteTask-Methode Taskplaner
-- DeleteTask-Methode Taskplaner, Task Folder-Objekt
-- Task Folder-Objekt Taskplaner, DeleteTask-Methode
+- DeleteTask-Methode Taskplaner , TaskFolder-Objekt
+- TaskFolder-Objekt Taskplaner , DeleteTask-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aad4cf0a881a62cf5e9c1600653e5df58f3000f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c12b3ca9d66817972d75bd3ffbab61bcdcdff5dcc227e680ed6548f77d1b0de3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119402400"
 ---
-# <a name="taskfolderdeletetask-method"></a>Taskfolder. DeleteTask-Methode
+# <a name="taskfolderdeletetask-method"></a>TaskFolder.DeleteTask-Methode
 
-Löscht bei der Skripterstellung eine Aufgabe aus dem Ordner.
+Löscht für die Skripterstellung einen Task aus dem Ordner.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ TaskFolder.DeleteTask( _
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-Der Name der Aufgabe, die beim Registrieren der Aufgabe angegeben wird. Das Zeichen "." kann nicht verwendet werden, um den aktuellen Aufgaben Ordner und ".." anzugeben. Zeichen können nicht verwendet werden, um den übergeordneten Aufgaben Ordner im Pfad anzugeben.
+Der Name des Tasks, der beim Registrieren des Tasks angegeben wurde. Das Zeichen "." kann nicht zum Angeben des aktuellen Aufgabenordners und des .-Zeichens verwendet werden. -Zeichen können nicht verwendet werden, um den übergeordneten Aufgabenordner im Pfad anzugeben.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Wird nicht unterstützt. Der Wert ist 0.
@@ -67,14 +67,14 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

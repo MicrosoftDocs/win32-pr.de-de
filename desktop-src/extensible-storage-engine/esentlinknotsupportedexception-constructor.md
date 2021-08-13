@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlinklotsupportedexception-Konstruktor'
-title: Esentlinklotsupportedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLinkNotSupportedException-Konstruktor'
+title: EsentLinkNotSupportedException-Konstruktor
 TOCTitle: 'EsentLinkNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLinkNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlinknotsupportedexception.esentlinknotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 77e251a0b542f2e3ef38ea78100cb27007752e8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 126cda1be91e8fcd4b9ba6c08b4fe9e14cc50de7f8106b4c7d2ab1fec5c9793b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118777056"
 ---
-# <a name="esentlinknotsupportedexception-constructor"></a>Esentlinklotsupportedexception-Konstruktor
+# <a name="esentlinknotsupportedexception-constructor"></a>EsentLinkNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlinklotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentLinkNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLinkNotSupportedException()
 public EsentLinkNotSupportedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlinklotsupportedexception-Klasse](./esentlinknotsupportedexception-class.md)
+[EsentLinkNotSupportedException-Klasse](./esentlinknotsupportedexception-class.md)
 
-[Esentlinklotsupportedexception-Elemente](./esentlinknotsupportedexception-members.md)
+[EsentLinkNotSupportedException-Member](./esentlinknotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,11 +1,11 @@
 ---
 title: FRS-Update-Timeout-Attribut
-description: Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgeschlossen ist.
+description: Die maximale Zeit in Minuten, bis ein Update abgeschlossen ist, bevor sie aufgibt.
 ms.assetid: 0c06510e-d4a8-42f8-bf81-13a9f103e237
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des FRS-Update-Timeout-Attributs
-- Attribut "frsupdatetimeout" AD-Schema
+- fRSUpdateTimeout-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 73730ec18942f98c07c0a4756bb8c7716e6abfd2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 711177ae5c676e2a18bd89af772827a52dd475ec3831e11df71ba25c63fbc4c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323370"
 ---
 # <a name="frs-update-timeout-attribute"></a>FRS-Update-Timeout-Attribut
 
-Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgeschlossen ist.
+Die maximale Zeit in Minuten, bis ein Update abgeschlossen ist, bevor sie aufgibt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | FRS-Update-Timeout                   |
-| LDAP-Display-Name | frsupdatetimeout                     |
+| Ldap-Anzeigename | fRSUpdateTimeout                     |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.485               |
-| System-ID-GUID    | 1be8f172-a9ff-11D0-afe2-00c04fd930c9 |
+| System-ID-GUID    | 1be8f172-a9ff-11d0-afe2-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Ist einwertig       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**NTFRS-Mitglied**](c-ntfrsmember.md)<br/> [**NTFRS-Abonnent**](c-ntfrssubscriber.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Member**](c-ntfrsmember.md)<br/> [**NTFRS-Subscriber**](c-ntfrssubscriber.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Ist einwertig       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**NTFRS-Mitglied**](c-ntfrsmember.md)<br/> [**NTFRS-Abonnent**](c-ntfrssubscriber.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Member**](c-ntfrsmember.md)<br/> [**NTFRS-Subscriber**](c-ntfrssubscriber.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Ist einwertig       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**NTFRS-Mitglied**](c-ntfrsmember.md)<br/> [**NTFRS-Abonnent**](c-ntfrssubscriber.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Member**](c-ntfrsmember.md)<br/> [**NTFRS-Subscriber**](c-ntfrssubscriber.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Is-Single-Valued       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**NTFRS-Mitglied**](c-ntfrsmember.md)<br/> [**NTFRS-Abonnent**](c-ntfrssubscriber.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Member**](c-ntfrsmember.md)<br/> [**NTFRS-Subscriber**](c-ntfrssubscriber.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Is-Single-Valued       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**NTFRS-Mitglied**](c-ntfrsmember.md)<br/> [**NTFRS-Abonnent**](c-ntfrssubscriber.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Member**](c-ntfrsmember.md)<br/> [**NTFRS-Subscriber**](c-ntfrssubscriber.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die maximale Zeit (in Minuten), die gewartet werden soll, bis ein Update abgesch
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Is-Single-Valued       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**NTFRS-Mitglied**](c-ntfrsmember.md)<br/> [**NTFRS-Abonnent**](c-ntfrssubscriber.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Member**](c-ntfrsmember.md)<br/> [**NTFRS-Subscriber**](c-ntfrssubscriber.md)<br/> |
 
 
 

@@ -1,33 +1,33 @@
 ---
-description: Gibt die Anzahl der zu codierende Felder an.
+description: Gibt die Anzahl der zu codierenden Felder an.
 ms.assetid: 5848493c-1f8e-4fe2-8261-dfdc8f61b265
-title: Avencvideonooffieldstoencode-Eigenschaft (codecapi. h)
+title: AVEncVideoNoOfFieldsToEncode-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d93b7d2dbf652cc61209d7ada60d47db927258b5
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 525deb0bbacf90eaffe2946ab569e419a68774f42390d6d2c85a355f2f390a7e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119274980"
 ---
-# <a name="avencvideonooffieldstoencode-property"></a>Avencvideonooffieldstoencode (Eigenschaft)
+# <a name="avencvideonooffieldstoencode-property"></a>AVEncVideoNoOfFieldsToEncode-Eigenschaft
 
-Gibt die Anzahl der zu codierende Felder an.
+Gibt die Anzahl der zu codierenden Felder an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideonooffieldstocoitcode**
+**CODECAPI \_ AVEncVideoNoOfFieldsToEncode**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie diese Eigenschaft für progressives Video auf die doppelte Anzahl von Frames fest, die codiert werden sollen.
+Legen Sie für progressives Video diese Eigenschaft auf das Doppelte der Anzahl der zu codierenden Frames fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Legen Sie diese Eigenschaft für progressives Video auf die doppelte Anzahl von 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

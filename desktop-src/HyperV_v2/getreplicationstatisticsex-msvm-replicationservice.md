@@ -1,7 +1,7 @@
 ---
-description: Ruft die Replikations Statistiken ab, die der angegebenen Replikations Beziehung der virtuellen Maschine zugeordnet sind.
+description: Ruft die Replikationsstatistiken ab, die der angegebenen Replikationsbeziehung des virtuellen Computers zugeordnet sind.
 ms.assetid: AB46894A-CBED-40DF-86B9-B578603B0341
-title: 'Msvm_ReplicationService:: getreplicationstatisticsex-Methode'
+title: Msvm_ReplicationService::GetReplicationStatisticsEx-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7fdb60addc94094082fe83e70af06a2f5ae11f06
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4386692dcaf86527e28b82c91415bf858b47cd19bbc4693af6bff12255138c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119253700"
 ---
-# <a name="msvm_replicationservicegetreplicationstatisticsex-method"></a>MSVM \_ replicationservice:: getreplicationstatisticsex-Methode
+# <a name="msvm_replicationservicegetreplicationstatisticsex-method"></a>Msvm \_ ReplicationService::GetReplicationStatisticsEx-Methode
 
-Ruft die Replikations Statistiken ab, die der angegebenen Replikations Beziehung der virtuellen Maschine zugeordnet sind.
+Ruft die Replikationsstatistiken ab, die der angegebenen Replikationsbeziehung des virtuellen Computers zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ uint32 GetReplicationStatisticsEx(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die den virtuellen Computer darstellt, für den die Replikations Statistiken abgerufen werden sollen.
+Ein Verweis auf eine [**\_ CIM-ComputerSysteminstanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den die Replikationsstatistik abgerufen werden soll.
 
 </dd> <dt>
 
-*Replicationrelationship* \[ in\]
+*ReplicationRelationship* \[ In\]
 </dt> <dd>
 
-Eine Zeichen folgen Darstellung einer eingebetteten Instanz der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse, die die Replikations Beziehung definiert, für die die Replikations Statistiken abgerufen werden sollen.
+Eine Zeichenfolgendarstellung einer eingebetteten Instanz der [**Msvm \_ ReplicationRelationship-Klasse,**](msvm-replicationrelationship.md) die die Replikationsbeziehung definiert, für die die Replikationsstatistiken abgerufen werden sollen.
 
 </dd> <dt>
 
-*Replicationstatistics* \[ vorgenommen\]
+*ReplicationStatistics* \[ out\]
 </dt> <dd>
 
-Bei erfolgreicher Ausführung empfängt eine eingebettete Instanz der [**MSVM- \_ replicationstatistics**](msvm-replicationstatistics.md) -Klasse, die die Replikations Statistiken für die angeforderte Replikations Beziehung enthält.
+Bei Erfolg empfängt eine eingebettete Instanz der [**Msvm \_ ReplicationStatistics-Klasse,**](msvm-replicationstatistics.md) die die Replikationsstatistiken für die angeforderte Replikationsbeziehung enthält.
 
 </dd> <dt>
 
-*Replicationhealthissues* \[ vorgenommen\]
+*ReplicationHealthIssues* \[ out\]
 </dt> <dd>
 
-Wenn erfolgreich, wird ein Array von eingebetteten Instanzen der [**MSVM- \_ Fehler**](msvm-error.md) Klasse empfangen, die auf Replikations Warnungen oder Fehler für den angeforderten virtuellen Computer hinweisen.
+Wenn erfolgreich, empfängt ein Array eingebetteter Instanzen der [**Msvm \_ Error-Klasse,**](msvm-error.md) die replikationswarnungen oder -fehler für den angeforderten virtuellen Computer angeben.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird. Dieser Verweis kann **null** sein, wenn der Task beendet ist.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85)) Dieser Verweis kann NULL **sein,** wenn die Aufgabe abgeschlossen ist.
 
 </dd> </dl>
 
@@ -87,10 +87,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -99,31 +99,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -132,22 +132,22 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> <dt>
 
-[**Reinstalltreplicationstatisticsex**](resetreplicationstatisticsex-msvm-replicationservice.md)
+[**ResetReplicationStatisticsEx**](resetreplicationstatisticsex-msvm-replicationservice.md)
 </dt> </dl>
 
  

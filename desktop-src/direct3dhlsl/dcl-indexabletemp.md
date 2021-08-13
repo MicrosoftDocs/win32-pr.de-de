@@ -1,6 +1,6 @@
 ---
-title: dcl_indexableTemp (SM4-ASM)
-description: DCL \_ indexabletemp (SM4-ASM)
+title: dcl_indexableTemp (sm4 – asm)
+description: dcl \_ indexableTemp (sm4 – asm)
 ms.assetid: 32d8e7ce-4b28-48c3-b794-56ace96394f0
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1ec3ef1222cd3bf73b4ea3f9ac6e2c3e706aa18e
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 9f1d6e02b36daef0643910d69404adc0973ebbcf6370ae5f5c11ad2aa7bd3480
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118793446"
 ---
-# <a name="dcl_indexabletemp-sm4---asm"></a>DCL \_ indexabletemp (SM4-ASM)
+# <a name="dcl_indexabletemp-sm4---asm"></a>dcl \_ indexableTemp (sm4 – asm)
 
-Deklariert ein indexbares temporäres Register.
+Deklariert ein indizierbares, temporäres Register.
 
 
 
-| DCL \_ indexabletemp x *N \[ Größe \] , ComponentCount* |
+| dcl \_ indexableTemp x *N \[ size , \] ComponentCount* |
 |-------------------------------------------------|
 
 
@@ -31,19 +31,19 @@ Deklariert ein indexbares temporäres Register.
 
 
 
-| Element                                                                                                                           | BESCHREIBUNG                                                                                 |
+| Element                                                                                                                           | Beschreibung                                                                                 |
 |--------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| <span id="N"></span><span id="n"></span>*Nr*<br/>                                                                         | \[in \] einer Ganzzahl, die die Registernummer angibt.<br/>                              |
-| <span id="_size_"></span><span id="_SIZE_"></span>*\[Größe\]*<br/>                                                        | \[in \] einem optionalen ganzzahligen Wert. Die Anzahl der Elemente im Register Array.<br/>  |
-| <span id="ComponentCount"></span><span id="componentcount"></span><span id="COMPONENTCOUNT"></span>*ComponentCount*<br/> | \[in \] einem optionalen ganzzahligen Wert. Die Anzahl der Komponenten im Register Array.<br/> |
+| <span id="N"></span><span id="n"></span>*N*<br/>                                                                         | \[in \] Eine ganze Zahl, die die Registernummer angibt.<br/>                              |
+| <span id="_size_"></span><span id="_SIZE_"></span>*\[Größe\]*<br/>                                                        | \[in \] Ein optionaler ganzzahliger Wert. Die Anzahl der Elemente im Registerarray.<br/>  |
+| <span id="ComponentCount"></span><span id="componentcount"></span><span id="COMPONENTCOUNT"></span>*ComponentCount*<br/> | \[in \] Ein optionaler ganzzahliger Wert. Die Anzahl der Komponenten im Registerarray.<br/> |
 
 
 
  
 
-Ein Register enthält ausreichend Speicherplatz für einen Wert von 32-Bit-vier Komponenten. die Anzahl der Elemente im Array von temporären Registern (indizierbar und [nicht indizierbar](dcl-temps.md)) darf 4096 nicht überschreiten.
+Ein Register enthält genügend Speicherplatz für einen 32-Bit-Wert mit vier Komponenten. Die Anzahl der Elemente im Array temporärer Register (indexierbar und [nicht indizierbar)](dcl-temps.md)darf 4096 nicht überschreiten.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -55,11 +55,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden finden Sie einige Beispiele für den Code, der für indizierbare Register generiert wurde.
+Im Folgenden finden Sie einige Beispiele für den Code, der für indizierbare Register generiert wurde.
 
 
 ```
@@ -69,20 +69,20 @@ dcl_indexableTemp x1[16], 4 ; // An indexable array of 16, 4-component, 32-bit e
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
@@ -92,7 +92,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

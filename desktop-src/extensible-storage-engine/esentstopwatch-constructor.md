@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentstopwatch-Konstruktor'
-title: Esentstopwatch-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentStopwatch-Konstruktor'
+title: EsentStopwatch-Konstruktor
 TOCTitle: 'EsentStopwatch constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentStopwatch.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentstopwatch.esentstopwatch(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 00f7968760110918a62a1d262b2dea0318ad3a4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 910a932837acb4a7f5c510f5e9785505e23886842daa7f71bab012cc1cc61edf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118769587"
 ---
-# <a name="esentstopwatch-constructor"></a>Esentstopwatch-Konstruktor
+# <a name="esentstopwatch-constructor"></a>EsentStopwatch-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentStopwatch()
 public EsentStopwatch()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentstopwatch-Klasse](./esentstopwatch-class.md)
+[EsentStopwatch-Klasse](./esentstopwatch-class.md)
 
-[Esentstopwatch-Member](./esentstopwatch-members.md)
+[EsentStopwatch-Member](./esentstopwatch-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

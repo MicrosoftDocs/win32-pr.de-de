@@ -1,11 +1,11 @@
 ---
 title: Lockout-Time-Attribut
-description: Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde.
+description: Das Datum und die Uhrzeit (UTC), zu der dieses Konto gesperrt wurde.
 ms.assetid: 4a0a66a3-9f7f-48ec-9b96-a9c3e72b2b6b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Lockout-Time-Attribut
-- AD-Schema des lockoutTime-Attributs
+- Lockout-Time AD-Attributschema
+- lockoutTime-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: adebe8bf76ba04fe4ba774726da7cd5c54e64ab1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 900f605ce6fed989526440dc1c4add9fdff59ca04ca1534ac5d026feb1a3b86a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301610"
 ---
 # <a name="lockout-time-attribute"></a>Lockout-Time-Attribut
 
-Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt. Der Wert 0 (null) bedeutet, dass das Konto zurzeit nicht gesperrt ist.
+Das Datum und die Uhrzeit (UTC), zu der dieses Konto gesperrt wurde. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt. Der Wert 0 bedeutet, dass das Konto derzeit nicht gesperrt ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
 | CN                | Lockout-Time                                                                     |
-| LDAP-Display-Name | lockoutTime                                                                      |
+| Ldap-Anzeigename | lockoutTime                                                                      |
 | Size              | 8 Bytes                                                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                                                             |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt wird und die Sperr Zeit geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                                             |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer sich die Sperrzeit ändern muss. |
 | Attribute-Id      | 1.2.840.113556.1.4.662                                                           |
-| System-ID-GUID    | 28630ebf -41d5-11d1-a9c1-0000 C1                                             |
+| System-ID-GUID    | 28630ebf-41d5-11d1-a9c1-0000f80367c1                                             |
 | Syntax            | [**Intervall**](s-interval.md)                                                   |
 
 
@@ -43,7 +43,7 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -71,7 +71,7 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -101,15 +101,15 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**ms-DS-Bindable-Objekt**](c-msds-bindableobject.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Bindable-Object**](c-msds-bindableobject.md)<br/> |
 
 
 
@@ -122,10 +122,10 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -143,10 +143,10 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -164,10 +164,10 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -185,10 +185,10 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -197,20 +197,20 @@ Das Datum und die Uhrzeit (UTC), an denen dieses Konto gesperrt wurde. Dieser We
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der hohe Teil dieser großen Ganzzahl entspricht dem **dwHighDateTime** -Member der [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Struktur, und der niedrige Teil entspricht dem **dwLowDateTime** -Member der **FILETIME** -Struktur.
+Der hohe Teil dieser großen ganzen Zahl entspricht dem **dwHighDateTime-Member** der [**FILETIME-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) und der untere Teil dem **dwLowDateTime-Member** der **FILETIME-Struktur.**
 
-Dieser Attribut Wert wird nur zurückgesetzt, wenn das Konto erfolgreich bei angemeldet ist. Dies bedeutet, dass dieser Wert möglicherweise nicht NULL ist, aber das Konto nicht gesperrt ist. Um genau festzustellen, ob das Konto gesperrt ist, müssen Sie dieser Zeit die [**Lockout-Dauer**](a-lockoutduration.md) hinzufügen und das Ergebnis mit der aktuellen Zeit vergleichen, wobei lokale Zeitzonen und Sommerzeit berücksichtigt werden.
+Dieser Attributwert wird nur zurückgesetzt, wenn das Konto erfolgreich angemeldet wurde. Dies bedeutet, dass dieser Wert möglicherweise ungleich 0 (null) ist, das Konto jedoch nicht gesperrt ist. Um genau zu bestimmen, ob das Konto gesperrt ist, müssen Sie die [**Sperrdauer**](a-lockoutduration.md) zu diesem Zeitpunkt hinzufügen und das Ergebnis mit der aktuellen Zeit vergleichen, wobei lokale Zeitzonen und Sommerzeit berücksichtigt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)
 </dt> <dt>
 
-[**Sperr Dauer**](a-lockoutduration.md)
+[**Sperrdauer**](a-lockoutduration.md)
 </dt> </dl>
 
  

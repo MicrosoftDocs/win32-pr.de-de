@@ -1,5 +1,5 @@
 ---
-description: Ruft eine Computer unabhängige Beschreibung einer Ausnahme und Informationen zu dem Computer Zustand ab, der für den Thread vorhanden ist, wenn die Ausnahme auftritt. Diese Funktion kann nur innerhalb des Filter Ausdrucks eines Ausnahme Handlers aufgerufen werden.
+description: Ruft eine computerunabhängige Beschreibung einer Ausnahme sowie Informationen zum Computerzustand ab, der für den Thread vorhanden ist, wenn die Ausnahme auftritt. Diese Funktion kann nur innerhalb des Filterausdrucks eines Ausnahmehandlers aufgerufen werden.
 ms.assetid: e982794a-d5f1-4fb4-a2b9-aa8da18cb8ae
 title: GetExceptionInformation-Makro
 ms.topic: reference
@@ -12,19 +12,19 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 243831a94a26b86df29d3a50413bfa9d6830a0e3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 425cfbe10ac2ee66f10e016489ff070b67b6fc243a472f95b4f5809724998a21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279220"
 ---
 # <a name="getexceptioninformation-macro"></a>GetExceptionInformation-Makro
 
-Ruft eine Computer unabhängige Beschreibung einer Ausnahme und Informationen zu dem Computer Zustand ab, der für den Thread vorhanden ist, wenn die Ausnahme auftritt. Diese Funktion kann nur innerhalb des Filter Ausdrucks eines Ausnahme Handlers aufgerufen werden.
+Ruft eine computerunabhängige Beschreibung einer Ausnahme sowie Informationen zum Computerzustand ab, der für den Thread vorhanden ist, wenn die Ausnahme auftritt. Diese Funktion kann nur innerhalb des Filterausdrucks eines Ausnahmehandlers aufgerufen werden.
 
 > [!Note]  
-> Der Microsoft C/C++-Optimierungs Compiler interpretiert diese Funktion als Schlüsselwort, und die Verwendung außerhalb der entsprechenden Syntax zur Ausnahmebehandlung generiert einen Compilerfehler.
+> Der Microsoft C/C++-Optimierungscompiler interpretiert diese Funktion als Schlüsselwort, und die Verwendung außerhalb der entsprechenden Ausnahmebehandlungssyntax generiert einen Compilerfehler.
 
  
 
@@ -39,24 +39,24 @@ LPEXCEPTION_POINTERS GetExceptionInformation(void);
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Makro weist keine Parameter auf.
+Dieses Makro verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine [**Ausnahme \_ Zeiger**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers) Struktur, die Zeiger auf die folgenden zwei-Strukturen enthält:
+Ein Zeiger auf eine [**EXCEPTION \_ POINTERS-Struktur,**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers) die Zeiger auf die folgenden beiden -Strukturen enthält:
 
--   [**Ausnahme \_ Daten Satz**](/windows/desktop/api/WinNT/ns-winnt-exception_record) Struktur, die eine Beschreibung der Ausnahme enthält.
--   Die [**Kontext**](/windows/desktop/api/WinNT/ns-winnt-arm64_nt_context) Struktur, die die Computer Zustandsinformationen enthält.
+-   [**EXCEPTION \_ RECORD-Struktur,**](/windows/desktop/api/WinNT/ns-winnt-exception_record) die eine Beschreibung der Ausnahme enthält.
+-   [**CONTEXT-Struktur,**](/windows/desktop/api/WinNT/ns-winnt-arm64_nt_context) die die Computerzustandsinformationen enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Filter Ausdruck (von dem die Funktion aufgerufen wird) wird ausgewertet, wenn während der Ausführung des **\_ \_ try** -Blocks eine Ausnahme auftritt, und bestimmt, ob der **\_ \_ Ausnahme** Block ausgeführt wird oder nicht.
+Der Filterausdruck (aus dem die Funktion aufgerufen wird) wird ausgewertet, wenn während der Ausführung des **\_ \_ try-Blocks** eine Ausnahme auftritt, und bestimmt, ob der **\_ \_ ausnahme-Block** ausgeführt wird.
 
-Der Filter Ausdruck kann eine Filterfunktion aufrufen. Die Filterfunktion kann **GetExceptionInformation** nicht aufrufen. Der Rückgabewert von **GetExceptionInformation** kann jedoch als Parameter an eine Filterfunktion übergeben werden.
+Der Filterausdruck kann eine Filterfunktion aufrufen. Die Filterfunktion kann **GetExceptionInformation** nicht aufrufen. Der Rückgabewert von **GetExceptionInformation** kann jedoch als Parameter an eine Filterfunktion übergeben werden.
 
-Um die [**Ausnahme \_ Zeiger**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers) Informationen an den Ausnahmehandlerblock zu übergeben, muss der Filter Ausdruck oder die Filterfunktion den Zeiger oder die Daten in den sicheren Speicher kopieren, auf den der Handler später zugreifen kann.
+Um die [**EXCEPTION \_ POINTERS-Informationen**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers) an den Ausnahmehandlerblock zu übergeben, muss der Filterausdruck oder die Filterfunktion den Zeiger oder die Daten in einen sicheren Speicher kopieren, auf den der Handler später zugreifen kann.
 
-Im Fall von schsted Handlern wird jeder Filter Ausdruck ausgewertet, bis ein Filter Ausdruck ausgewertet wird, wenn der **Ausnahme Ausführungs \_ \_ Handler** oder eine **Ausnahme \_ \_ Ausführung fortgesetzt** wird. Jeder Filter Ausdruck kann **GetExceptionInformation** aufrufen, um Ausnahme Informationen zu erhalten.
+Bei geschachtelten Handlern wird jeder Filterausdruck ausgewertet, bis einer als **EXCEPTION \_ EXECUTE \_ HANDLER** oder **EXCEPTION CONTINUE \_ \_ EXECUTION** ausgewertet wird. Jeder Filterausdruck kann **GetExceptionInformation** aufrufen, um Ausnahmeinformationen abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,37 +64,37 @@ Im Fall von schsted Handlern wird jeder Filter Ausdruck ausgewertet, bis ein Fil
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Kontext**](/windows/desktop/api/WinNT/ns-winnt-arm64_nt_context)
 </dt> <dt>
 
-[**Ausnahme \_ Zeiger**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers)
+[**\_AUSNAHMEZEIGER**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers)
 </dt> <dt>
 
-[**Ausnahme \_ Daten Satz**](/windows/desktop/api/WinNT/ns-winnt-exception_record)
+[**EXCEPTION \_ RECORD**](/windows/desktop/api/WinNT/ns-winnt-exception_record)
 </dt> <dt>
 
 [**GetExceptionCode**](getexceptioncode.md)
 </dt> <dt>
 
-[**Getxstatefeaturesmask**](/windows/desktop/api/WinBase/nf-winbase-getxstatefeaturesmask)
+[**GetXStateFeaturesMask**](/windows/desktop/api/WinBase/nf-winbase-getxstatefeaturesmask)
 </dt> <dt>
 
-[Funktionen für die strukturierte Ausnahmebehandlung](structured-exception-handling-functions.md)
+[Strukturierte Funktionen zur Ausnahmebehandlung](structured-exception-handling-functions.md)
 </dt> <dt>
 
 [Übersicht über die strukturierte Ausnahmebehandlung](structured-exception-handling.md)
 </dt> <dt>
 
-[Windows-Unterstützung für Intel AVX aktivieren](../win7appqual/enable-windows-7-support-for-intel-avx.md)
+[Aktivieren der Windows-Unterstützung für Intel AVX](../win7appqual/enable-windows-7-support-for-intel-avx.md)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
-description: Gibt für das Eingabe Video die Konvertierungs Matrix aus dem Farbraum ' ' der ' CR ' CR '-Eigenschaft in den ' g ' B '-Farbraum an.
+description: Gibt die Konvertierungsmatrix vom Farbraum Y'Cb'Cr' in den R'G'B'-Farbraum für das Eingabevideo an.
 ms.assetid: de03f3e6-12c8-4a7c-a424-ef974d223e70
-title: Avencvideoinputcolortransfermatrix-Eigenschaft (codecapi. h)
+title: AVEncVideoInputColorTransferMatrix-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 362c73f5527f5db30e906b46e93a9e6f7c1733fb
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 41927641a43b104d59248cdcba5743dda647cf24afeb3970e9a87cd87b983b54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119275330"
 ---
-# <a name="avencvideoinputcolortransfermatrix-property"></a>Avencvideoinputcolortransfermatrix (Eigenschaft)
+# <a name="avencvideoinputcolortransfermatrix-property"></a>AVEncVideoInputColorTransferMatrix-Eigenschaft
 
-Gibt für das Eingabe Video die Konvertierungs Matrix aus dem Farbraum ' ' der ' CR ' CR '-Eigenschaft in den ' g ' B '-Farbraum an.
+Gibt die Konvertierungsmatrix vom Farbraum Y'Cb'Cr' in den R'G'B'-Farbraum für das Eingabevideo an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoinputcolortransfermatrix**
+**CODECAPI \_ AVEncVideoInputColorTransferMatrix**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencvideocolortransfermatrix**](/windows/desktop/api/codecapi/ne-codecapi-eavencvideocolortransfermatrix) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncVideoColorTransferMatrix-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavencvideocolortransfermatrix)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencvideocolortransfermatrix
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

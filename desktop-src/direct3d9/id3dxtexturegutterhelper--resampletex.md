@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Textur in der Parametrisierung dieses gutterhelper neu.
+description: Resamples für eine Textur in die Parametrisierung dieses Gutterhelpers.
 ms.assetid: a5ace0e4-2e89-471b-bdfb-67d5e85c6f46
-title: 'ID3DXTextureGutterHelper:: resampletex-Methode (D3DX9Mesh. h)'
+title: ID3DXTextureGutterHelper::ResampleTex-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0ad8b4cefe0b368cbf81de4ddc030f32cda8fb17
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f7d3afe8155eb33a37b30abcfc96aae83c0a96461c1ee2dd6118a671701cfed6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118800319"
 ---
-# <a name="id3dxtexturegutterhelperresampletex-method"></a>ID3DXTextureGutterHelper:: resampletex-Methode
+# <a name="id3dxtexturegutterhelperresampletex-method"></a>ID3DXTextureGutterHelper::ResampleTex-Methode
 
-Erstellt eine Textur in der Parametrisierung dieses gutterhelper neu.
+Resamples für eine Textur in die Parametrisierung dieses Gutterhelpers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT ResampleTex(
 
 <dl> <dt>
 
-*ptexturein* \[ in\]
+*pTextureIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Textur, die der ursprünglichen Parametrisierung in pmeshin entspricht. Diese Textur wird zum Erstellen von ptextureout verwendet.
+Textur, die der ursprünglichen Parametrisierung in pMeshIn entspricht. Diese Textur wird zum Erstellen von pTextureOut verwendet.
 
 </dd> <dt>
 
-*pmeshat* \[ in\]
+*pMeshIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Gitter, das die ursprünglichen und neuen parametrizierungen enthält. Die neue Parametrisierung muss in D3DDECLUSAGE \_ texcoord Index 0 gespeichert werden.
+Mesh, das die ursprünglichen und neuen Parametrisierungen enthält. Die neue Parametrisierung muss im D3DDECLUSAGE \_ TEXCOORD-Index 0 gespeichert werden.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Nutzung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DDECLUSAGE**](./d3ddeclusage.md)**
 
-Vertex-Datenverwendung (in Kombination mit usageindex verwendet), die die Komponente der Vertex-Deklaration identifiziert, die die ursprüngliche Parametrisierung in pmeshat enthält. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
+Vertexdatenverwendung (in Kombination mit UsageIndex), die die Komponente der Scheitelpunktdeklaration identifiziert, die die ursprüngliche Parametrisierung in pMeshIn enthält. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
 
 </dd> <dt>
 
-Start *Index* \[ in\]
+*UsageIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-NULL basierter Index (verwendet in Kombination mit der Verwendung), der die Komponente der Vertex-Deklaration identifiziert, die die ursprüngliche Parametrisierung in pmeshat enthält. Die Kombination aus D3DDECLUSAGE \_ texcoord und Index 0 ist für die neue Parametrisierung erforderlich. es kann eine beliebige andere Kombination von Verwendung/Index verwendet werden.
+Nullbasierter Index (wird in Kombination mit Usage verwendet), der die Komponente der Scheitelpunktdeklaration identifiziert, die die ursprüngliche Parametrisierung in pMeshIn enthält. Die Kombination aus D3DDECLUSAGE TEXCOORD und Index 0 ist für die neue Parametrisierung erforderlich. Es kann jede andere Kombination aus Verwendung und \_ Index verwendet werden.
 
 </dd> <dt>
 
-*ptextureout* \[ vorgenommen\]
+*pTextureOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Textur wird erneut entnommen.
+Resampled-Textur.
 
 </dd> </dl>
 
@@ -93,19 +93,19 @@ Textur wird erneut entnommen.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einer Parametrisierung im Fall dieser Funktion handelt es sich um einen Satz von Texturkoordinaten, der die Dreiecke eines Netzes den Dreiecken einer Textur zuordnet. Die neue Parametrisierung ist der Satz von Texturkoordinaten, der in der bundbundhilfsschnittstelle enthalten ist, und die ursprüngliche Parametrisierung ist der Satz von Texturkoordinaten, der im Eingabe Mesh enthalten ist.
+Eine Parametrisierung im Fall dieser Funktion ist eine Reihe von Texturkoordinaten, die die Dreiecke eines Gitters den Dreiecken einer Textur zustellen. Bei der neuen Parametrisierung handelt es sich um den Satz von Texturkoordinaten, die in der Bundsten-Hilfsschnittstelle enthalten sind, und die ursprüngliche Parametrisierung ist der Satz von Texturkoordinaten, die im Eingabegitternetz enthalten sind.
 
-Es wird davon ausgegangen, dass die Texturkoordinaten zwischen 0 und 1 (einschließlich) liegen, und die neue Parametrisierung muss in der Scheitelpunkt Deklaration als Texturkoordinaten Index 0 deklariert werden. Die ursprüngliche Textur und die neu komprimierte Textur müssen dieselbe Breite und Höhe aufweisen.
+Es wird davon ausgegangen, dass Texturkoordinaten zwischen 0 und 1 (einschließlich) liegen, und die neue Parametrisierung muss in der Scheitelpunktdeklaration als Texturkoordinatenindex 0 deklariert werden. Die ursprüngliche Textur und die Neusampledertextur müssen die gleiche Breite und Höhe aufweisen.
 
-So bereiten Sie z. b. die Neuerstellung einer Textur vor:
+So bereiten Sie beispielsweise das Resampling einer Textur vor:
 
--   Erstellen Sie die ursprüngliche Textur Schnittstelle (poriginaltex unten), indem Sie eine Funktion wie [**D3DXCreateTextureFromFile**](d3dxcreatetexturefromfile.md)verwenden.
--   Erstellen Sie die neue Textur Schnittstelle für die neu komprimierte Textur (presampledtex unten). Die Größe dieser Textur muss mit der Größe (Breite und Höhe) der Struktur des bundstehilfsobjekts identisch sein.
--   Rufen Sie [**D3DXCreateTextureGutterHelper**](d3dxcreatetexturegutterhelper.md) auf, um die neue Parametrisierung zu erhalten, wie hier gezeigt:
+-   Erstellen Sie die ursprüngliche Texturschnittstelle (pOriginalTex unten) mithilfe einer Funktion wie [**D3DXCreateTextureFromFile.**](d3dxcreatetexturefromfile.md)
+-   Erstellen Sie die neue Texturschnittstelle für die Neusampledtextur (pResampledTex unten). Die Größe dieser Textur muss mit der Größe (Breite und Höhe) der Textur des Bundster-Hilfsers übereinstimmen.
+-   Rufen [**Sie D3DXCreateTextureGutterHelper auf,**](d3dxcreatetexturegutterhelper.md) um die neue Parametrisierung wie hier gezeigt zu erhalten:
 
 
 ```
@@ -136,7 +136,7 @@ hr = pGutterHelper->ResampleTex(pOriginalTex, pMesh, D3DDECLUSAGE_TEXCOORD,
 
 
 
-Ein häufiges Szenario ist die Verwendung von uvatlas zum Erstellen eines Textur Atlas und die anschließende erneute Stichprobe der Textur mithilfe von resampletex in die neue Parametrisierung. Weitere Informationen zu Atlases finden Sie unter [Verwenden von uvatlas (Direct3D 9)](using-uvatlas.md).
+Ein häufiges Szenario ist die Verwendung von UVAtlas zum Erstellen eines Texturatlas und anschließendes Verwenden von ResampleTex, um die Textur in die neue Parametrisierung neu zu sampeln. Weitere Informationen zu Atlass finden Sie unter [Verwenden von UVAtlas (Direct3D 9).](using-uvatlas.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -144,12 +144,12 @@ Ein häufiges Szenario ist die Verwendung von uvatlas zum Erstellen eines Textur
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,10 +1,10 @@
 ---
-title: meetingurl-Attribut
-description: Die Webadresse für das Meeting.
+title: meetingURL-Attribut
+description: Die Webadresse für die Besprechung.
 ms.assetid: 57784fb9-3983-42f9-9b77-2932af1fca0f
 ms.tgt_platform: multiple
 keywords:
-- Active Directory-Attribut (AD-Schema)
+- MEETINGURL-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29f9bc8a30024eb3f04069880ac3cb200308114a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d6b41b4982864deeab39613d8c486d34a608a2479b3968c6dbfd335ba436a753
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300510"
 ---
-# <a name="meetingurl-attribute"></a>meetingurl-Attribut
+# <a name="meetingurl-attribute"></a>meetingURL-Attribut
 
-Die Webadresse für das Meeting.
+Die Webadresse für die Besprechung.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | meetingurl                                                                       |
-| LDAP-Display-Name | meetingurl                                                                       |
+| CN                | meetingURL                                                                       |
+| Ldap-Anzeigename | meetingURL                                                                       |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt basierend auf der Sicherheit des Objekts, das erstellt wird, aktualisieren. |
-| Aktualisierungshäufigkeit  | \-                                                                               |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt basierend auf der Sicherheit des erstellten Objekts aktualisieren. |
+| Updatehäufigkeit  | \-                                                                               |
 | Attribute-Id      | 1.2.840.113556.1.4.583                                                           |
-| System-ID-GUID    | 11b6cc8c-48C4-11d1-a9c3-0000t80367c1                                             |
+| System-ID-GUID    | 11b6cc8c-48c4-11d1-a9c3-0000f80367c1                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -42,7 +42,7 @@ Die Webadresse für das Meeting.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,19 +57,19 @@ Die Webadresse für das Meeting.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Ist einwertig       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,15 +78,15 @@ Die Webadresse für das Meeting.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Ist einwertig       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Die Webadresse für das Meeting.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Ist einwertig       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Die Webadresse für das Meeting.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Die Webadresse für das Meeting.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -162,15 +162,15 @@ Die Webadresse für das Meeting.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 

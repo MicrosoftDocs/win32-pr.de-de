@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gatherblue (S, float, int)-Funktion'
-description: 'Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Texture2D:: gatherblue (S, float, int)-Funktion'
+title: Texture2D::GatherBlue(S,float,int)-Funktion
+description: Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden. | Texture2D::GatherBlue(S,float,int)-Funktion
 ms.assetid: 6d753ef2-2818-4990-81df-52dda044d21d
 keywords:
-- Gatherblue-Funktion HLSL
+- GatherBlue-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 54885ccd8f31fdf55270b6c9ac2dbafa1805d866
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: caadf785617ee1e28e2bfffef4d7ccb534bff8d760b982ccc2284920475729a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118789815"
 ---
-# <a name="texture2dgatherbluesfloatint-function"></a>Texture2D:: gatherblue (S, float, int)-Funktion
+# <a name="texture2dgatherbluesfloatint-function"></a>Texture2D::GatherBlue(S,float,int)-Funktion
 
-Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ TemplateType GatherBlue(
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **Sampler**
+Typ: **sampler**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinate angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -91,10 +91,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Gatherblue-Methoden](texture2d-gatherblue.md)
+[GatherBlue-Methoden](texture2d-gatherblue.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Handle für den Handshake-Hash ab, der für die Client Authentifizierung verwendet wird.
+description: Ruft ein Handle für den Handshakehash ab, der für die Clientauthentifizierung verwendet wird.
 ms.assetid: 55007ce0-4bf1-4605-9b34-2931935762aa
-title: Sslkreateclientauthhash-Funktion (sslprovider. h)
+title: SslCreateClientAuthHash-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 4ac83d6d8aeea8429812d80b7bf66de7c87062a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 96f1e7fa0de86439f89bf5c4c610bf5b46640533071260852c47321c5a1c6673
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907087"
 ---
-# <a name="sslcreateclientauthhash-function"></a>Sslkreateclientauthhash-Funktion
+# <a name="sslcreateclientauthhash-function"></a>SslCreateClientAuthHash-Funktion
 
-Die **sslkreateclientauthhash** -Funktion Ruft ein Handle für den Handshake- [*Hash*](/windows/desktop/SecGloss/h-gly) ab, der für die Client Authentifizierung verwendet wird.
+Die **SslCreateClientAuthHash-Funktion** ruft ein Handle für den Handshakehash ab, der für die Clientauthentifizierung verwendet wird. [](/windows/desktop/SecGloss/h-gly)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,42 +44,42 @@ SECURITY_STATUS WINAPI SslCreateClientAuthHash(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle der Protokoll Anbieter Instanz des [*Secure Sockets Layer Protokolls*](/windows/desktop/SecGloss/s-gly) (SSL).
+Das Handle der SSL-Protokollanbieterinstanz [*(Secure Sockets Layer Protocol).*](/windows/desktop/SecGloss/s-gly)
 
 </dd> <dt>
 
-*phhandshakehash* \[ vorgenommen\]
+*phHandshakeHash* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine **NCrypt- \_ Hash \_ handle** -Variable, um das Hashhandle zu empfangen.
+Ein Zeiger auf eine **NCRYPT \_ HASH \_ HANDLE-Variable,** um das Hashhandle zu empfangen.
 
 </dd> <dt>
 
-*dwprotocol* \[ in\]
+*dwProtocol* \[ In\]
 </dt> <dd>
 
-Einer der [**CNG-SSL-Anbieter Protokoll-Bezeichnerwerte**](https://msdn.microsoft.com/library/Hh971257(v=VS.85).aspx) .
+Einer der [**CNG SSL Provider Protocol Identifier-Werte.**](https://msdn.microsoft.com/library/Hh971257(v=VS.85).aspx)
 
 </dd> <dt>
 
-*dwciphersuite* \[ in\]
+*dwCipherSuite* \[ In\]
 </dt> <dd>
 
-Einer der [**Cipher Suite-Bezeichnerwerte des CNG-SSL-Anbieters**](https://msdn.microsoft.com/library/Hh971253(v=VS.85).aspx) .
+Einer der [**CNG SSL Provider Cipher Suite Identifier-Werte.**](https://msdn.microsoft.com/library/Hh971253(v=VS.85).aspx)
 
 </dd> <dt>
 
-*pszhashalgid* \[ in\]
+*pszHashAlgId* \[ In\]
 </dt> <dd>
 
-Einer der [**CNG-Algorithmus-Bezeichner**](cng-algorithm-identifiers.md) Werte.
+Einer der [**CNG-Algorithmusbezeichnerwerte.**](cng-algorithm-identifiers.md)
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert und muss auf 0 (null) festgelegt werden.
@@ -88,29 +88,29 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert und muss auf 0 (
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                                                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl>    | Der *hsslprovider* -Parameter enthält einen ungültigen Zeiger.<br/>                |
-| <dl> <dt>**Ernte \_ Ungültiger \_ Parameter**</dt> <dt>0x80090027l</dt> </dl> | Der Parameter " *phhandshakehash* " ist auf **null** festgelegt.<br/>                               |
-| <dl> <dt>**Ernte \_ Nicht \_ unterstützt**</dt> <dt>0x80090029l</dt> </dl>     | Die ausgewählte Funktion wird in der angegebenen Version der Schnittstelle nicht unterstützt.<br/> |
-| <dl> <dt>**Ernte \_ Kein Arbeits \_ Speicher**</dt> <dt>0x8009000el</dt> </dl>         | Nicht genügend Arbeitsspeicher zum Zuordnen von Puffern.<br/>                                          |
-| <dl> <dt>**Ernte \_ Ungültige \_ Flags**</dt> <dt>0x80090009l</dt> </dl>         | Der *dwFlags* -Parameter muss auf 0 (null) festgelegt werden.<br/>                                      |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl>    | Der *hSslProvider-Parameter* enthält einen ungültigen Zeiger.<br/>                |
+| <dl> <dt>**NTE \_ INVALID \_ PARAMETER**</dt> <dt>0x80090027L</dt> </dl> | Der *phHandshakeHash-Parameter* ist auf **NULL** festgelegt.<br/>                               |
+| <dl> <dt>**NTE \_ NICHT \_ UNTERSTÜTZT**</dt> <dt>0x80090029L</dt> </dl>     | Die ausgewählte Funktion wird in der angegebenen Version der Schnittstelle nicht unterstützt.<br/> |
+| <dl> <dt>**NTE \_ NO \_ MEMORY**</dt> <dt>0x8009000EL</dt> </dl>         | Nicht genügend Arbeitsspeicher zum Zuordnen von Puffern.<br/>                                          |
+| <dl> <dt>**NTE \_ BAD \_ FLAGS**</dt> <dt>0x80090009L</dt> </dl>         | Der *dwFlags-Parameter* muss auf 0 (null) festgelegt werden.<br/>                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **sslkreateclientauthhash** -Funktion wird für die Konversationen von [*Transport Layer Security Protocol*](/windows/desktop/SecGloss/t-gly) (TLS) 1,2 oder höher aufgerufen, um Hash Objekte zu erstellen, die zum Hashen von Hand Shake Nachrichten verwendet werden. Sie wird einmal für jeden möglichen [*Hash Algorithmus*](/windows/desktop/SecGloss/h-gly) aufgerufen, der in der Client Authentifizierungs Signatur verwendet werden kann.
+Die **SslCreateClientAuthHash-Funktion** wird für [*Transport Layer Security-Protokoll*](/windows/desktop/SecGloss/t-gly) (TLS) 1.2 oder höher aufgerufen, um Hashobjekte zu erstellen, die zum Hashen von Handshakenachrichten verwendet werden. Sie wird einmal für jeden möglichen [*Hashalgorithmus*](/windows/desktop/SecGloss/h-gly) aufgerufen, der in der Clientauthentifizierungssignatur verwendet werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,9 +118,9 @@ Die **sslkreateclientauthhash** -Funktion wird für die Konversationen von [*Tra
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

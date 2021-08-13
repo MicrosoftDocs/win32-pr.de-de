@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: Store4-Funktion'
+title: RWByteAddressBuffer::Store4-Funktion
 description: Legt vier Werte fest.
 ms.assetid: 261dd270-79a7-4566-9fbd-52bd8dc3e1bf
 keywords:
-- Store4-Funktion (HLSL)
+- Store4-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 219cd04e4f68ad6f0d16d964e6685c558fed98b1
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: bc644647616f6c6654023be23aaa8e420dbb85ad439547d1befd44c0ea7b210c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104389398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118789971"
 ---
 # <a name="store4-function"></a>Store4-Funktion
 
@@ -28,8 +28,8 @@ Legt vier Werte fest.
 
 ``` syntax
 void Store4(
-  in uint address,
-  in uint4 values
+  in uint address,
+  in uint4 values
 );
 ```
 
@@ -37,16 +37,16 @@ void Store4(
 
 <dl> <dt>
 
-*Adresse* \[ in\]
+*address* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> <dt>
 
-*Werte* \[ in\]
+*-Werte* \[ In\]
 </dt> <dd>
 
 Typ: **uint4**
@@ -59,33 +59,33 @@ Vier Eingabewerte.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

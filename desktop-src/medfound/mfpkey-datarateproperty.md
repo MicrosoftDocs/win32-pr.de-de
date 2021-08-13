@@ -4,12 +4,12 @@ ms.assetid: 7f48fa4c-6abd-4c2f-a334-2167660a5a7c
 title: MFPKEY_DATARATE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 574c36202c740ebed4fb3889e172bf01b107f59a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3843bbc9d046c9b8d7309d0b81a7e4063f8e86deee89d156b0b9edfcd2b2bd62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738393"
 ---
 # <a name="mfpkey_datarate-property"></a>MFPKEY \_ DATARATE-Eigenschaft
 
@@ -19,7 +19,7 @@ Diese Eigenschaft ist veraltet und sollte nicht festgelegt werden.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
@@ -29,7 +29,7 @@ Diese Eigenschaft ist veraltet und sollte nicht festgelegt werden.
 
 <dl> <dt>
 
-[Media Foundation Eigenschaften](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

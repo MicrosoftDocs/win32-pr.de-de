@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdrom Auswerfen-Methode
-description: Die Auswerfen-Methode fügt die CD oder DVD vom Laufwerk ein. | Iwmpcdrom Auswerfen-Methode
+title: IWMPC wie die eject-Methode
+description: Die eject-Methode wirft die CD oder DVD vom Laufwerk aus. | IWMPC wie die eject-Methode
 ms.assetid: c0a69252-fd79-452c-bc61-3c3e8bcaaf48
 keywords:
-- Auswerfen-Methode, Windows-Media Player
-- Auswerfen-Methode, Windows Media Player, iwmpcdrom-Schnittstelle
-- Iwmpcdrom-Schnittstelle, Windows Media Player, Auswerfen-Methode
+- eject-Windows Media Player
+- eject method Windows Media Player , IWMPCface interface
+- IWMPCführungsschnittstelle Windows Media Player , eject-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b8ca2403b86b648e98861d91a21db80ddb64aac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 00dbdf22d8eb0ba4073a1b74c25c0d610f3091477e5921dd0856fa835a9bccc1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119246760"
 ---
-# <a name="iwmpcdromeject-method"></a>Iwmpcdrom:: eject-Methode
+# <a name="iwmpcdromeject-method"></a>IWMPC datenträger::eject-Methode
 
-Die **auswerfen** -Methode fügt die CD oder DVD vom Laufwerk ein.
+Die **eject-Methode** wirft die CD oder DVD vom Laufwerk aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,15 +53,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Laufwerks Tür geöffnet ist, schließt diese Methode die Tür.
+Wenn die Laufwerktür geöffnet ist, schließt diese Methode die Tür.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **auswerfen** verwendet, um die Tür des CD-oder DVD-Laufwerks mit dem Index 0 (null) als Reaktion auf das Click-Ereignis einer Schaltfläche zu öffnen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird die Tür des CD- oder DVD-Laufwerks mit dem Index 0 (null) als Reaktion auf das Click-Ereignis einer Schaltfläche mithilfe von **eject** geöffnet. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -91,26 +91,26 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. playstate (VB und c#)**](axwmplib-axwindowsmediaplayer-playstate--vb-and-c.md)
+[**AxWindowsMediaPlayer.playState (VB und C#)**](axwmplib-axwindowsmediaplayer-playstate--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdrom-Schnittstelle (VB und c#)**](iwmpcdrom--vb-and-c.md)
+[**IWMPCwertschnittstelle (VB und C#)**](iwmpcdrom--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

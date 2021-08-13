@@ -1,34 +1,34 @@
 ---
-description: Die MsiAssembly-Tabelle gibt Windows Installer Einstellungen für Microsoft .net Frameworkassemblys und Win32-Assemblys an Weitere Informationen finden Sie unter Installieren von Assemblys im globalen Assemblycache und Installieren von Win32-Assemblys.
+description: Die MsiAssembly-Tabelle gibt Windows Installer-Einstellungen für Microsoft .NET Framework Assemblys und Win32-Assemblys an. Weitere Informationen finden Sie unter Installation von Assemblys im globalen Assemblycache und Installation von Win32-Assemblys.
 ms.assetid: 3a8cd206-0112-4840-8c9d-773483f5c771
 title: MsiAssembly-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b54bd6e58e2ff6d12c582309c23856a7bb825b2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: acda246bd6baba75d0f7e8d53f515a25abb0c163c2d3ef0b1b9705c123b8e69e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119381380"
 ---
 # <a name="msiassembly-table"></a>MsiAssembly-Tabelle
 
-Die MsiAssembly-Tabelle gibt Windows Installer Einstellungen für Microsoft .net Frameworkassemblys und Win32-Assemblys an Weitere Informationen finden Sie unter [Installieren von](installation-of-assemblies-to-the-global-assembly-cache.md) Assemblys im globalen Assemblycache und [Installieren von Win32](installation-of-win32-assemblies.md)-Assemblys.
+Die MsiAssembly-Tabelle gibt Windows Installer-Einstellungen für Microsoft .NET Framework Assemblys und Win32-Assemblys an. Weitere Informationen finden Sie unter [Installation von Assemblys im globalen Assemblycache](installation-of-assemblies-to-the-global-assembly-cache.md) und [Installation von Win32-Assemblys.](installation-of-win32-assemblies.md)
 
-Unter Windows XP können Windows Installer [Win32-Assemblys als parallele](side-by-side-assemblies.md)Assemblys installieren. Weitere Informationen finden Sie in der [API](../sbscs/side-by-side-assembly-api.md)für parallele Assemblys.
+Auf Windows XP kann Windows Installer Win32-Assemblys als [side-by-side-Assemblys installieren.](side-by-side-assemblies.md) Weitere Informationen finden Sie unter [Side-by-Side Assembly API](../sbscs/side-by-side-assembly-api.md).
 
-**Windows 2000:** Diese Funktion wird nicht unterstützt.
+**Windows 2000:** Dieses Feature wird nicht unterstützt.
 
-Die MsiAssembly-Tabelle weist die folgenden Spalten auf.
+Die MsiAssembly-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte            | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte            | Typ                         | Key | Nullwerte zulässig |
 |-------------------|------------------------------|-----|----------|
-| Komponente\_       | [Bezeichner](identifier.md) | J   | N        |
-| Funktion\_         | [Bezeichner](identifier.md) | N   | N        |
-| Datei \_ Manifest    | [Bezeichner](identifier.md) | N   | J        |
-| Datei \_ Anwendung | [Bezeichner](identifier.md) | N   | J        |
+| Komponente\_       | [Identifier](identifier.md) | J   | N        |
+| Komponente\_         | [Identifier](identifier.md) | N   | N        |
+| \_Dateimanifest    | [Identifier](identifier.md) | N   | J        |
+| \_Dateianwendung | [Identifier](identifier.md) | N   | J        |
 | Attribute        | [Integer](integer.md)       | N   | J        |
 
 
@@ -39,60 +39,60 @@ Die MsiAssembly-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Der Schlüssel in der [Komponenten Tabelle](component-table.md) , der die Windows Installer Komponente angibt, die diese Assembly enthält.
+Der Schlüssel in der [Komponententabelle,](component-table.md) der die Windows Installer-Komponente angibt, die diese Assembly enthält.
 
-Der Wert in diesem Feld darf nicht auf NULL festgelegt werden. Das Feld "KEYPATH" der Komponente in der [Komponenten Tabelle](component-table.md) darf nicht NULL sein.
+Der Wert in diesem Feld darf nicht auf NULL festgelegt werden. Das KeyPath-Feld der Komponente in der [Komponententabelle](component-table.md) darf nicht NULL sein.
 
-Bei Win32-Assemblys kann der KEYPATH der Komponente nicht die im Datei Manifest angegebene Manifest-Datei sein \_ . Das Manifest kann der KEYPATH für eine .NET Framework-oder Richtlinienassembly sein.
+Bei Win32-Assemblys kann die Komponente KeyPath nicht die Manifestdatei sein, die im Dateimanifest angegeben \_ ist. Das Manifest kann der Schlüsselpfad für eine .NET Framework- oder Richtlinien-Assembly sein.
 
 </dd> <dt>
 
-<span id="Feature_"></span><span id="feature_"></span><span id="FEATURE_"></span>Befinden\_
+<span id="Feature_"></span><span id="feature_"></span><span id="FEATURE_"></span>Feature\_
 </dt> <dd>
 
-Schlüssel in der [Featuretabelle](feature-table.md).
+Geben Sie den Schlüssel in [die Featuretabelle ein.](feature-table.md)
 
-Wenn die Assembly durch eine Featureinstallation installiert werden muss, installiert Windows Installer das Feature, auf das dieses Feld verweist.
+Wenn die Assembly von einer Featureinstallation installiert werden muss, installiert Windows Installer das Feature, auf das dieses Feld verweist.
 
 </dd> <dt>
 
-<span id="File_Manifest"></span><span id="file_manifest"></span><span id="FILE_MANIFEST"></span>Datei \_ Manifest
+<span id="File_Manifest"></span><span id="file_manifest"></span><span id="FILE_MANIFEST"></span>\_Dateimanifest
 </dt> <dd>
 
-Ein externer Schlüssel in die [Dateitabelle](file-table.md) , der die Datei angibt, die das Manifest für eine .NET Framework Assembly oder eine Win32-Assembly enthält.
+Ein externer Schlüssel in der [Dateitabelle,](file-table.md) der die Datei angibt, die das Manifest für eine .NET Framework oder Win32-Assembly enthält.
 
-Geben Sie diese Datei für eine Win32-Assembly nicht als komponentenschlüsselpfad-Datei im KEYPATH-Feld der [Komponenten Tabelle](component-table.md)an.
+Geben Sie für eine Win32-Assembly diese Datei nicht als Komponentenschlüsselpfaddatei im Feld KeyPath der [Komponententabelle an.](component-table.md)
 
 </dd> <dt>
 
-<span id="File_Application"></span><span id="file_application"></span><span id="FILE_APPLICATION"></span>Datei \_ Anwendung
+<span id="File_Application"></span><span id="file_application"></span><span id="FILE_APPLICATION"></span>\_Dateianwendung
 </dt> <dd>
 
-Wenn Sie die Assembly an einem privaten Speicherort installieren möchten, geben Sie die Schlüssel Pfad Datei für die Assemblykomponente in dieses Feld ein.
+Um die Assembly an einem privaten Speicherort zu installieren, geben Sie die Schlüsselpfaddatei für die Assemblykomponente in dieses Feld ein.
 
-Dies ist der Wert, der im Feld KEYPATH der [Komponenten Tabelle](component-table.md)angezeigt wird. Das Installationsprogramm kann dann die Assembly in der Verzeichnisstruktur der in der [Verzeichnis Tabelle](directory-table.md)angegebenen Komponente installieren. Dieses Feld muss NULL sein, wenn die Assembly im globalen Assemblycache installiert werden soll.
+Dies ist der Wert, der im Feld KeyPath der [Komponententabelle angezeigt wird.](component-table.md) Der Installer kann dann die Assembly in der Verzeichnisstruktur der Komponente installieren, die in der [Verzeichnistabelle angegeben ist.](directory-table.md) Dieses Feld muss NULL sein, wenn die Assembly im globalen Assemblycache installiert werden soll.
 
 </dd> <dt>
 
-<span id="Attributes"></span><span id="attributes"></span><span id="ATTRIBUTES"></span>Legt
+<span id="Attributes"></span><span id="attributes"></span><span id="ATTRIBUTES"></span>Attribute
 </dt> <dd>
 
-Geben Sie einen Wert von 1 (eins) für eine Win32-Assembly ein. Geben Sie für eine .NET Framework Assembly den Wert 0 (null) ein.
+Geben Sie den Wert 1 (eins) für eine Win32-Assembly ein. Geben Sie den Wert 0 (null) für eine .NET Framework ein.
 
-Wenn die Attribut Spalte NULL ist, behandelt das Installationsprogramm die Assembly als .NET Framework Assembly.
+Wenn die Spalte Attribute NULL ist, behandelt der Installer die Assembly als .NET Framework Assembly.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn mindestens ein Eintrag in der MsiAssembly-Tabelle vorhanden ist, muss die [InstallExecuteSequence-Tabelle](installexecutesequence-table.md) die [msipublishassemblyaktion](msipublishassemblies-action.md)und die [msiunpublishassemblyaktion](msiunpublishassemblies-action.md)enthalten.
+Wenn mindestens ein Eintrag in der MsiAssembly-Tabelle enthalten ist, muss die [InstallExecuteSequence-Tabelle](installexecutesequence-table.md) die [MsiPublishAssemblies-Aktion](msipublishassemblies-action.md)und die [MsiUnpublishAssemblies-Aktion enthalten.](msiunpublishassemblies-action.md)
 
-Da für-Assemblys nach dem Commit kein Rollback ausgeführt werden kann, wird in Windows Installer ein zweistufiger Installationsvorgang verwendet. Die Schnittstellen zu den Assemblys werden während der Installations Vorgänge erstellt, die von der [msipublishassemblyaktion](msipublishassemblies-action.md)generiert werden.
+Da assemblys nach dem Ausführen eines Committeds kein Rollback ausführen können, verwendet Windows Installer einen zweistufigen Installationsvorgang. Die Schnittstellen zu den Assemblys werden während der Installationsvorgänge erstellt, die von der [MsiPublishAssemblies-Aktion generiert werden.](msipublishassemblies-action.md)
 
-Die Assemblys werden erst nach erfolgreicher Ausführung der [InstallFinalize-Aktion](installfinalize-action.md)committet. Dies bedeutet Folgendes: Wenn Sie eine benutzerdefinierte Aktion oder Ressource erstellen, die von der Assembly abhängig ist, muss Sie nach der [InstallFinalize-Aktion](installfinalize-action.md)sequenziert werden. Wenn Sie z. b. einen Dienst starten müssen, der von einer Assembly im globalen Assemblycache (GAC) abhängt, müssen Sie den Start des Dienstanbieter nach der [InstallFinalize-Aktion](installfinalize-action.md)planen. Dies bedeutet, dass Sie die [ServiceControl-Tabelle](servicecontrol-table.md) nicht verwenden können, um den Dienst zu starten. stattdessen müssen Sie eine benutzerdefinierte Aktion verwenden, die nach InstallFinalize sequenziert wird.
+Für die Assemblys wird erst dann ein Committed ausgeführt, wenn die [InstallFinalize-Aktion erfolgreich ausgeführt wurde.](installfinalize-action.md) Wenn Sie also eine benutzerdefinierte Aktion oder Ressource erstellen, die auf der Assembly basiert, muss sie nach der [InstallFinalize-Aktion sequenziert werden.](installfinalize-action.md) Wenn Sie beispielsweise einen Dienst starten müssen, der von einer Assembly im globalen Assemblycache (GAC) abhängt, müssen Sie den Start dieses Diensts nach der [InstallFinalize-Aktion planen.](installfinalize-action.md) Dies bedeutet, dass Sie die [ServiceControl-Tabelle](servicecontrol-table.md) nicht verwenden können, um den Dienst zu starten. Stattdessen müssen Sie eine benutzerdefinierte Aktion verwenden, die nach InstallFinalize sequenziert wird.
 
 ## <a name="validation"></a>Überprüfen
 

@@ -1,11 +1,11 @@
 ---
 title: Foreign-Identifier-Attribut
-description: Die von einem fremden System verwendeten Sicherheitseigenschaften.
+description: Die von einem Fremdsystem verwendeten Sicherheitseigenschaften.
 ms.assetid: f39deb69-2e3b-4494-88f0-050ad90242a5
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Foreign-Identifier-Attribut
-- "\"fremdnidentifier\"-Attribut AD-Schema"
+- Foreign-Identifier AD-Schema des Attributs
+- foreignIdentifier-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8feed48410e1bfbd09d0926e2a16a0fb7f94235b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f6c2c73beda34f02594bc8de770efb672772221839fe567f07651c2c42170abc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119306910"
 ---
 # <a name="foreign-identifier-attribute"></a>Foreign-Identifier-Attribut
 
-Die von einem fremden System verwendeten Sicherheitseigenschaften.
+Die von einem Fremdsystem verwendeten Sicherheitseigenschaften.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Foreign-Identifier                                    |
-| LDAP-Display-Name | fremd-nidentifier                                     |
+| Ldap-Anzeigename | foreignIdentifier                                     |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.356                                |
-| System-ID-GUID    | 3e97891e-8c01-11D0-AFDA-00c04f 930c9                  |
+| System-Id-Guid    | 3e97891e-8c01-11d0-afda-00c04fd930c9                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
 | System-Only            | False                                                                       |
-| Ist-einwertig       | Richtig                                                                        |
+| Is-Single-Valued       | True                                                                        |
 | Ist indiziert             | False                                                                       |
 | Im globalen Katalog      | False                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
 | Search-Flags           | 0x00000000                                                                  |
 | System-Flags           | 0x00000010                                                                  |
-| In verwendete Klassen        | [**Fremd Sicherheits Prinzipal**](c-foreignsecurityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Foreign-Security-Principal**](c-foreignsecurityprincipal.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
 | System-Only            | False                                                                       |
-| Ist-einwertig       | Richtig                                                                        |
+| Is-Single-Valued       | True                                                                        |
 | Ist indiziert             | False                                                                       |
 | Im globalen Katalog      | False                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
 | Search-Flags           | 0x00000000                                                                  |
 | System-Flags           | 0x00000010                                                                  |
-| In verwendete Klassen        | [**Fremd Sicherheits Prinzipal**](c-foreignsecurityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Foreign-Security-Principal**](c-foreignsecurityprincipal.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
 | System-Only            | False                                                                       |
-| Ist-einwertig       | Richtig                                                                        |
+| Is-Single-Valued       | True                                                                        |
 | Ist indiziert             | False                                                                       |
 | Im globalen Katalog      | False                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
 | Search-Flags           | 0x00000000                                                                  |
 | System-Flags           | 0x00000010                                                                  |
-| In verwendete Klassen        | [**Fremd Sicherheits Prinzipal**](c-foreignsecurityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Foreign-Security-Principal**](c-foreignsecurityprincipal.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
 | System-Only            | False                                                                       |
-| Ist-einwertig       | Richtig                                                                        |
+| Is-Single-Valued       | True                                                                        |
 | Ist indiziert             | False                                                                       |
 | Im globalen Katalog      | False                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
 | Search-Flags           | 0x00000000                                                                  |
 | System-Flags           | 0x00000010                                                                  |
-| In verwendete Klassen        | [**Fremd Sicherheits Prinzipal**](c-foreignsecurityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Foreign-Security-Principal**](c-foreignsecurityprincipal.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
 | System-Only            | False                                                                       |
-| Ist-einwertig       | Richtig                                                                        |
+| Is-Single-Valued       | True                                                                        |
 | Ist indiziert             | False                                                                       |
 | Im globalen Katalog      | False                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
 | Search-Flags           | 0x00000000                                                                  |
 | System-Flags           | 0x00000010                                                                  |
-| In verwendete Klassen        | [**Fremd Sicherheits Prinzipal**](c-foreignsecurityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Foreign-Security-Principal**](c-foreignsecurityprincipal.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die von einem fremden System verwendeten Sicherheitseigenschaften.
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
 | System-Only            | False                                                                       |
-| Ist-einwertig       | Richtig                                                                        |
+| Is-Single-Valued       | True                                                                        |
 | Ist indiziert             | False                                                                       |
 | Im globalen Katalog      | False                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
 | Search-Flags           | 0x00000000                                                                  |
 | System-Flags           | 0x00000010                                                                  |
-| In verwendete Klassen        | [**Fremd Sicherheits Prinzipal**](c-foreignsecurityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Foreign-Security-Principal**](c-foreignsecurityprincipal.md)<br/> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: 'Die Skip-Methode überspringt eine angegebene Anzahl von Pins in der enumerationssequenz. Diese Methode implementiert die iumumpins:: Skip-Methode.'
+description: Die Skip-Methode überspringt eine angegebene Anzahl von Pins in der Enumerationssequenz. Diese Methode implementiert die IEnumPins::Skip-Methode.
 ms.assetid: d42f958c-f488-4730-ab84-fc4e4150b186
-title: Cenumpins. Skip-Methode (amfilter. h)
+title: CEnumPins.Skip-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1865453a89130303f28f338d8b7567e856c64173
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 02a499c38564fba4671e5c6dbf53bc59dcf9a1acd925f9cef4d558456b675efd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119389640"
 ---
-# <a name="cenumpinsskip-method"></a>Cenumpins. Skip-Methode
+# <a name="cenumpinsskip-method"></a>CEnumPins.Skip-Methode
 
-Die- `Skip` Methode überspringt eine angegebene Anzahl von Pins in der enumerationssequenz. Diese Methode implementiert die [**iumumpins:: Skip**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-skip) -Methode.
+Die `Skip` -Methode überspringt eine angegebene Anzahl von Pins in der Enumerationssequenz. Diese Methode implementiert die [**IEnumPins::Skip-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-skip)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*cpins* 
+*cPins* 
 </dt> <dd>
 
-Anzahl der Pins, die übersprungen werden sollen.
+Anzahl der zu überspringenden Pins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                            |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>                    | Wird über das Ende der Sequenz übersprungen.<br/>                                       |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                    | Übersprungen über das Ende der Sequenz.<br/>                                       |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                                                                    |
-| <dl> <dt>**VFW \_ E \_ Enum \_ nicht \_ \_ synchron**</dt> </dl> | Der Zustand des Filters wurde geändert und ist nun inkonsistent mit dem Enumerator.<br/> |
+| <dl> <dt>**VFW \_ E \_ ENUM \_ OUT \_ OF \_ SYNC**</dt> </dl> | Der Status des Filters hat sich geändert und ist nun mit dem Enumerator inkonsistent.<br/> |
 
 
 
@@ -71,16 +71,16 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cenumpins-Klasse**](cenumpins.md)
+[**CEnumPins-Klasse**](cenumpins.md)
 </dt> </dl>
 
  

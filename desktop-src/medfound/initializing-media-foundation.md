@@ -1,19 +1,19 @@
 ---
-description: Media Foundation wird initialisiert.
+description: Initialisieren Media Foundation
 ms.assetid: e4db81d3-7a9e-47d7-8611-6dac8026259c
-title: Media Foundation wird initialisiert.
+title: Initialisieren Media Foundation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb876ec3493d6c4fac1c2f6d6757ef647c511a98
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 202ab57db5821b252001a723eb8765493eb86362111da5c54e5e16e9fca4219a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106363892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119268920"
 ---
-# <a name="initializing-media-foundation"></a>Media Foundation wird initialisiert.
+# <a name="initializing-media-foundation"></a>Initialisieren Media Foundation
 
-Vor der Verwendung von Microsoft Media Foundation-Objekten oder-Schnittstellen müssen Sie die [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) -Funktion aufruft. Übergeben Sie die Konstante **MF- \_ Version**.
+Vor der Verwendung Microsoft Media Foundation Objekte oder Schnittstellen müssen Sie die [**MFStartup-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) aufrufen. Übergeben Sie die konstante **\_ MF-VERSION**.
 
 
 ```C++
@@ -22,9 +22,9 @@ Vor der Verwendung von Microsoft Media Foundation-Objekten oder-Schnittstellen m
 
 
 
-Die [**MF Startup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) -Funktion initialisiert die Media Foundation Plattform. Wenn **MF Startup** eine Fehler \_ hafte \_ Start Version von MF E zurückgibt \_ \_ , bedeutet dies, dass Ihre Anwendung mit einer Version der Media Foundation-Header kompiliert wurde, die nicht mit den Media Foundation DLLs auf dem System identisch ist.
+Die [**MFStartup-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) initialisiert die Media Foundation Plattform. Wenn **MFStartup** MF E BAD STARTUP VERSION zurückgibt, bedeutet dies, dass Ihre Anwendung mit einer Version der Media Foundation-Header kompiliert wurde, die nicht mit den \_ \_ \_ Media Foundation-DLLs auf Ihrem System \_ übereinstimmen.
 
-Für jeden [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup)-Rückruf muss Ihre Anwendung [**mfshutdown**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown)aufgerufen werden.
+Für jeden Aufruf von [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup)muss Ihre Anwendung [**MFShutdown aufrufen.**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown)
 
 
 ```C++
@@ -40,7 +40,7 @@ MFShutdown();
 [Media Foundation-Architektur](media-foundation-architecture.md)
 </dt> <dt>
 
-[Media Foundation Plattform-APIs](media-foundation-platform-apis.md)
+[Media Foundation-Plattform-APIs](media-foundation-platform-apis.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: Die iinvalidproductlicenabexception-Schnittstelle definiert die folgende Eigenschaft.
+description: Die IInvalidProductLicenseException-Schnittstelle definiert die folgende Eigenschaft.
 ms.assetid: 731c46e3-2529-4a84-854e-04c5330e4acf
-title: Iinvalidproductlicenabexception-Eigenschaften
+title: IInvalidProductLicenseException-Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe944ebda351643e34c34551008d2624a43bfa91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34c2719461f5921101e917f412cd2f8ca4896f05717d31a8bc191d4ad13df75d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119373570"
 ---
-# <a name="iinvalidproductlicenseexception-properties"></a>Iinvalidproductlicenabexception-Eigenschaften
+# <a name="iinvalidproductlicenseexception-properties"></a>IInvalidProductLicenseException-Eigenschaften
 
-Die [**iinvalidproductlicenabexception**](/windows/desktop/api/Wuapi/nn-wuapi-iinvalidproductlicenseexception) -Schnittstelle definiert die folgende Eigenschaft.
+Die [**IInvalidProductLicenseException-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-iinvalidproductlicenseexception) definiert die folgende Eigenschaft.
 
 
 
 | Eigenschaft                                                   | BESCHREIBUNG                                      |
 |------------------------------------------------------------|--------------------------------------------------|
-| [**Produkt**](/windows/desktop/api/Wuapi/nf-wuapi-iinvalidproductlicenseexception-get_product) | Ruft den sprach invarianten Namen des Produkts ab. |
+| [**Produkt**](/windows/desktop/api/Wuapi/nf-wuapi-iinvalidproductlicenseexception-get_product) | Ruft den sprachinvarianten Namen des Produkts ab. |
 
 
 

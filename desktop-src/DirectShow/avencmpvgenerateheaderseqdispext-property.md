@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob der Encoder Sequenz Anzeige-Erweiterungs Header generiert. Diese Eigenschaft gilt für MPEG-Video Encoder.
+description: Gibt an, ob der Encoder Erweiterungsheader für die Sequenzanzeige generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 ms.assetid: 61470caa-cca6-4e7e-91a0-758ec5a9bdb5
-title: Avencmpvgenerateheadercqdispext-Eigenschaft (codecapi. h)
+title: AVEncMPVGenerateHeaderSeqDispExt-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9b3dd17e1a9931f1b5df4cbc87e866346e5f02a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 49cc4efc93df331d4550984135ec13b2d7e7d9f22a027db0c42a9950146fcc02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119276160"
 ---
-# <a name="avencmpvgenerateheaderseqdispext-property"></a>Avencmpvgenerateheadercqdispext (Eigenschaft)
+# <a name="avencmpvgenerateheaderseqdispext-property"></a>AVEncMPVGenerateHeaderSeqDispExt-Eigenschaft
 
-Gibt an, ob der Encoder Sequenz Anzeige-Erweiterungs Header generiert. Diese Eigenschaft gilt für MPEG-Video Encoder.
+Gibt an, ob der Encoder Erweiterungsheader für die Sequenzanzeige generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**Variant \_ bool** (**VT \_ bool**)
+**VARIANT \_ BOOL** (**VT \_ BOOL**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencmpvgenerateheadercqdispext**
+**CODECAPI \_ AVEncMPVGenerateHeaderSeqDispExt**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **Variant \_ true** ist, generiert der Encoder Sequenz Anzeige-Erweiterungs Header.
+Wenn der Wert **VARIANT \_ TRUE** ist, generiert der Encoder Erweiterungsheader für die Sequenzanzeige.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Wenn der Wert **Variant \_ true** ist, generiert der Encoder Sequenz Anzeige-Erw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Die queryfilterinfo-Methode ruft Informationen über den Filter ab. Diese Methode implementiert die ibasefilter:: queryfilterinfo-Methode.'
+description: Die QueryFilterInfo-Methode ruft Informationen zum Filter ab. Diese Methode implementiert die IBaseFilter::QueryFilterInfo-Methode.
 ms.assetid: 0c25aa9e-933c-4c45-a1cc-ffc9253dd561
-title: Cbasefilter. queryfilterinfo-Methode (amfilter. h)
+title: CBaseFilter.QueryFilterInfo-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4a706663c1fb39e0e2e84b4097ec620f9e608843
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 31eb135a29a6e8e1c4f27c28d24b5cbf50eba3bb87b99ba9a1d3a5868c2fbc49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119341740"
 ---
-# <a name="cbasefilterqueryfilterinfo-method"></a>Cbasefilter. queryfilterinfo-Methode
+# <a name="cbasefilterqueryfilterinfo-method"></a>CBaseFilter.QueryFilterInfo-Methode
 
-Die- `QueryFilterInfo` Methode ruft Informationen über den Filter ab. Diese Methode implementiert die [**ibasefilter:: queryfilterinfo**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-queryfilterinfo) -Methode.
+Die `QueryFilterInfo` -Methode ruft Informationen zum Filter ab. Diese Methode implementiert die [**IBaseFilter::QueryFilterInfo-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-queryfilterinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT QueryFilterInfo(
 
 <dl> <dt>
 
-*pinfo* 
+*Pinfo* 
 </dt> <dd>
 
-Zeiger auf eine [**Filter \_ Informations**](/windows/win32/api/strmif/ns-strmif-filter_info) Struktur.
+Zeiger auf eine [**FILTER \_ INFO-Struktur.**](/windows/win32/api/strmif/ns-strmif-filter_info)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den S \_ OK-oder E- \_ Zeiger zurück.
+Gibt S \_ OK oder E \_ POINTER zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kopiert den Filternamen aus der [**cbasefilter:: m \_ PName**](cbasefilter-m-pname.md) -Element Variablen in den " **achname** "-Member der Filter \_ Informationsstruktur. Wenn **m \_ PName** **null** ist, legt die Methode " **achname** " auf L " \\ 0" fest.
+Diese Methode kopiert den Namen des Filters aus der [**CBaseFilter::m pName-Membervariablen \_**](cbasefilter-m-pname.md) in den **member des filtersName** der FILTER \_ INFO-Struktur. Wenn **\_ "m pName"** **NULL ist,** legt die Methode **"namename"** auf "L' \\ 0" fest.
 
-Die-Methode legt den **PGraph** -Member der Filter \_ Info-Struktur gleich der [**cbasefilter:: m \_ PGraph**](cbasefilter-m-pgraph.md) -Element Variablen fest und erhöht den Verweis Zähler. Der Aufrufer muss die-Schnittstelle freigeben.
+Die -Methode legt das **pGraph-Member** der FILTER INFO-Struktur auf die \_ [**CBaseFilter::m \_ pGraph-Membervariable**](cbasefilter-m-pgraph.md) fest und erhöht die Verweisanzahl. Der Aufrufer muss die Schnittstelle frei geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Die-Methode legt den **PGraph** -Member der Filter \_ Info-Struktur gleich der [
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

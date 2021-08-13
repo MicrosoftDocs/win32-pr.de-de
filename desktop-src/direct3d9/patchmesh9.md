@@ -1,19 +1,19 @@
 ---
-description: PatchMesh9 definiert ein durch Bézierpatches definiertes Gitternetz, einschließlich einer Liste von Scheitelpunkte und patches für das Gitternetz durch Indizierung im Scheitelpunktarray.
+description: PatchMesh9 definiert ein durch Bézierpatches definiertes Gitternetz, einschließlich einer Liste von Scheitelpunkten und patches für das Gitternetz durch Indizierung in das Scheitelpunktarray.
 ms.assetid: 642ca513-c83e-4c6d-845c-0eaecc232728
 title: PatchMesh9
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 811e593117f2ec57a4718ea8078d96bcea87e71f
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 20216bcfa33c3e3ef36dea999a6fef10384719254f4874a1da3907aa02551a3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118798536"
 ---
 # <a name="patchmesh9"></a>PatchMesh9
 
-Definiert ein durch Bézierpatches definiertes Gitternetz. Das erste Array ist eine Liste von Scheitelpunkte, und das zweite Array definiert die Patches für das Gitternetz durch Indizierung in das Scheitelpunktarray.
+Definiert ein durch Bézierpatches definiertes Gitternetz. Das erste Array ist eine Liste von Scheitelpunkten, und das zweite Array definiert die Patches für das Gitternetz, indem es in das Scheitelpunktarray indiziert wird.
 
 ``` syntax
 template PatchMesh9
@@ -33,17 +33,17 @@ template PatchMesh9
 Hierbei gilt:
 
 -   Typ: Patchgitternetztyp: Rechteck, Dreieck oder N-Patch.
--   Degree: Grad der Variablen in der Kurvengleichung.
--   Basis: Basistyp einer hochwertigen Patchoberfläche.
--   nVertices: Anzahl der Scheitelzeichen.
--   sctices \[ nVertices \] : Array von Scheiteltices. Siehe [**Vektor**](vector.md).
+-   Degree: Der Grad der Variablen in der Kurvengleichung.
+-   Basis: Basistyp einer Patchoberfläche mit hoher Ordnung.
+-   nVertices: Anzahl der Scheitelpunkte.
+-   Scheitelpunkte \[ nVertices: \] Array von Scheitelpunkten. Weitere Informationen finden Sie unter [**Vektor**](vector.md).
 -   nPatches: Anzahl der Patches.
--   patches \[ nPatches: \] Array von Patches. Weitere Informationen [**finden Sie unter Patchen von**](patch.md).
+-   patches \[ nPatches \] : Array von Patches. Weitere Informationen finden Sie unter [**Patchen**](patch.md)von .
 -   \[ ... \] – Hier kann eine beliebige X-Dateivorlage verwendet werden. Dadurch wird die Architektur erweiterbar.
 
 Die Patches verwenden die Scheitelpunkte im Array von Scheitelpunkten als Kontrollpunkte für jeden Patch.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

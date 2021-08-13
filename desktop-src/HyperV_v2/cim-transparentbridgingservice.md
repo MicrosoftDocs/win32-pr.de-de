@@ -1,5 +1,5 @@
 ---
-description: Stellt den transparenten Überbrückungs Aspekt eines CIM \_ switchservice-Objekts dar.
+description: Stellt den transparenten Bridgingaspekt eines CIM \_ SwitchService-Objekts dar.
 ms.assetid: 24f650ab-22a1-41c8-8498-c6c30e63c83c
 title: CIM_TransparentBridgingService-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ed2c21c0f00bd89b0054667274a559ef25ce9326
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8744bbac256d0cebc6d340ac83c4e8da746c03b298e2e3cd6c542310b3fc4914
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119254980"
 ---
-# <a name="cim_transparentbridgingservice-class"></a>CIM- \_ transparentbridgingservice-Klasse
+# <a name="cim_transparentbridgingservice-class"></a>CIM \_ TransparentBridgingService-Klasse
 
-Stellt den transparenten Überbrückungs Aspekt eines [**CIM \_ switchservice**](cim-switchservice.md) -Objekts dar.
+Stellt den transparenten Bridgingaspekt eines [**CIM \_ SwitchService-Objekts**](cim-switchservice.md) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,42 +39,42 @@ class CIM_TransparentBridgingService : CIM_ForwardingService
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ transparentbridgingservice** " verfügt über diese Typen von Membern:
+Die **CIM \_ TransparentBridgingService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ transparentbridgingservice** " verfügt über diese Eigenschaften.
+Die **CIM \_ TransparentBridgingService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Agingtime**
+**AgingTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("seconds"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Bridge-MIB. dot1dTpAgingTime ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sekunden"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dTpAgingTime")
 </dt> </dl>
 
-Der Timeout Zeitraum (in Sekunden) für das Auslagern dynamisch erlernter Weiterleitungs Informationen. Der 802.1 d-1990-Standard empfiehlt einen Standardwert von 300 Sekunden.
+Der Timeoutzeitraum (in Sekunden) für das Ausreifen dynamisch erlernter Weiterleitungsinformationen. Der Standard 802.1D-1990 empfiehlt einen Standardwert von 300 Sekunden.
 
 </dd> <dt>
 
-**Angestrebt**
+**Fid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Filtern von Daten Bank Bezeichnern, die von VLAN-fähigen Switches verwendet werden, die über mehrere Filter Datenbanken verfügen.
+Filtern des Datenbankbezeichners, der von VLAN-fähigen Switches mit mehreren Filterdatenbanken verwendet wird.
 
 </dd> </dl>
 
@@ -86,17 +86,17 @@ Filtern von Daten Bank Bezeichnern, die von VLAN-fähigen Switches verwendet wer
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ weiterforwardingdienst**](cim-forwardingservice.md)
+[**CIM \_ ForwardingService**](cim-forwardingservice.md)
 </dt> </dl>
 
  

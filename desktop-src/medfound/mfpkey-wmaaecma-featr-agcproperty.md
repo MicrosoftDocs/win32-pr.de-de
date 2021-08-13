@@ -1,54 +1,54 @@
 ---
-description: Gibt an, ob der sprach Erfassungs-DSP eine automatische Steuerungs Steuerung ausführt.
+description: Gibt an, ob der Voice Capture-DSP die automatische Verstärkungssteuerung ausführt.
 ms.assetid: 85ac8de0-ac36-4b34-a93d-0ac792a677b2
-title: MFPKEY_WMAAECMA_FEATR_AGC-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_FEATR_AGC-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f42c7abd854b8fe18b5cfd4fe23ededb28faa6b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f038b18657363677e0953f8fe973c2e3029130ffc2183a08344e1b0cd6905747
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119343810"
 ---
-# <a name="mfpkey_wmaaecma_featr_agc-property"></a>Eigenschaft "mfpkey \_ wmaaecma \_ featr \_ AGC"
+# <a name="mfpkey_wmaaecma_featr_agc-property"></a>MFPKEY \_ WMAAECMA \_ FEATR \_ AGC-Eigenschaft
 
-Gibt an, ob der sprach Erfassungs-DSP eine automatische Steuerungs Steuerung ausführt.
+Gibt an, ob der Voice Capture-DSP die automatische Verstärkungssteuerung ausführt.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mithilfe von [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
 ## <a name="default-value"></a>Standardwert
 
-Variant \_ false
+VARIANT \_ FALSE
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Voice Capture-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die automatische Gewinn Steuerung ist eine DSP-Komponente (Digital Signal Processing, digitale Signalverarbeitung), die den Zuwachs anpasst, sodass die Ausgabe Ebene des Signals innerhalb desselben ungefähren Bereichs verbleibt.
+Die automatische Verstärkungssteuerung ist eine DSP-Komponente (Digital Signal Processing), mit der der Gewinn so angepasst wird, dass die Ausgabeebene des Signals innerhalb des gleichen ungefähren Bereichs bleibt.
 
-Diese Eigenschaft kann die folgenden Werte aufweisen.
+Diese Eigenschaft kann die folgenden Werte haben.
 
 
 
 | Wert          | BESCHREIBUNG                     |
 |----------------|---------------------------------|
-| Variant \_ false | Deaktivieren Sie die automatische Gewinn Steuerung. |
-| Variant \_ true  | Aktivieren Sie die automatische Steuerelement Steuerung.  |
+| VARIANT \_ FALSE | Deaktivieren Sie die automatische Verstärkungssteuerung. |
+| VARIANT \_ TRUE  | Aktivieren Sie die automatische Verstärkungssteuerung.  |
 
 
 
  
 
-Der Standardwert dieser Eigenschaft ist Variant \_ false (deaktiviert). Vor dem Festlegen dieser Eigenschaft müssen Sie die Eigenschaft [mfpkey \_ wmaaecma \_ Feature \_ Mode](mfpkey-wmaaecma-feature-modeproperty.md) auf Variant \_ true festlegen.
+Der Standardwert dieser Eigenschaft ist VARIANT \_ FALSE (deaktiviert). Bevor Sie diese Eigenschaft festlegen, müssen Sie die [MFPKEY \_ WMAAECMA \_ FEATURE \_ MODE-Eigenschaft](mfpkey-wmaaecma-feature-modeproperty.md) auf VARIANT \_ TRUE festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,20 +56,20 @@ Der Standardwert dieser Eigenschaft ist Variant \_ false (deaktiviert). Vor dem 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Voice Capture-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

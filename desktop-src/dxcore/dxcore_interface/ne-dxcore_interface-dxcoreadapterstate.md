@@ -1,19 +1,19 @@
 ---
 title: DXCoreAdapterState
-description: Definiert Konstanten, die Arten von DXCore-Adapter Zuständen angeben.
+description: Definiert Konstanten, die Arten von DXCore-Adapterzuständen angeben.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: e588b75360c141b52989aa14e88c886092af2647
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6878aaccb61fd164fcf834561fcf70f13d2609de595687b6ef6301778c87f81e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119367080"
 ---
-# <a name="dxcoreadapterstate-enum"></a>Dxcoreadapterstate-Aufzählung
+# <a name="dxcoreadapterstate-enum"></a>DXCoreAdapterState-Enum
 
-Definiert Konstanten, die Arten von DXCore-Adapter Zuständen angeben. Übergeben Sie eine dieser Konstanten an die [idxcoreadapter:: querystate](./nf-dxcore_interface-idxcoreadapter-querystate.md) -Methode, um das Adapter Zustands Element für eine Statusart abzurufen. übergeben Sie eine Konstante an die [idxcoreadapter:: SetState](./nf-dxcore_interface-idxcoreadapter-setstate.md) -Methode, um die Informationen eines Adapters für ein Zustands Element festzulegen.
+Definiert Konstanten, die Arten von DXCore-Adapterzuständen angeben. Übergeben Sie eine dieser Konstanten an die [IDXCoreAdapter::QueryState-Methode,](./nf-dxcore_interface-idxcoreadapter-querystate.md) um das Adapterzustandselement für eine Zustandsart abzurufen. übergeben Sie eine Konstante an die [IDXCoreAdapter::SetState-Methode,](./nf-dxcore_interface-idxcoreadapter-setstate.md) um die Informationen eines Adapters für ein Zustandselement zu festlegen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,20 +27,20 @@ enum class DXCoreAdapterState : uint32_t
 
 ## <a name="constants"></a>Konstanten
 
-### <a name="isdriverupdateinprogress"></a>Isdriverupdaterprogress
+### <a name="isdriverupdateinprogress"></a>IsDriverUpdateInProgress
 
-Gibt den <em>isdriverupdateinprogress</em> -Adapter Status an, der `true` angibt, dass ein Treiberupdate auf dem Adapter initiiert, aber noch nicht abgeschlossen wurde. Wenn das Treiberupdate bereits abgeschlossen wurde, wird der Adapter ungültig, und der [querystate](./nf-dxcore_interface-idxcoreadapter-querystate.md) -Rückruf gibt ein <b>HRESULT</b> <b>DXGI_ERROR_DEVICE_REMOVED</b>zurück.
+Gibt den <em>IsDriverUpdateInProgress-Adapterstatus</em> an, der angibt, dass ein Treiberupdate auf dem Adapter initiiert, aber noch `true` nicht abgeschlossen wurde. Wenn das Treiberupdate bereits abgeschlossen wurde, wurde der Adapter ungültig gemacht, und Ihr [QueryState-Aufruf](./nf-dxcore_interface-idxcoreadapter-querystate.md) gibt ein <b>HRESULT</b> von <b>DXGI_ERROR_DEVICE_REMOVED.</b>
 
-Beim Aufrufen von [querystate](./nf-dxcore_interface-idxcoreadapter-querystate.md)hat das <em>isdriverupdateinprogress</em> -Zustands Element den Typ <b>uint8_t</b>, der einen booleschen Wert darstellt.
+Beim Aufrufen [von QueryState](./nf-dxcore_interface-idxcoreadapter-querystate.md)hat das <em>Zustandselement IsDriverUpdateInProgress</em> den Typ uint8_t <b>,</b>der einen booleschen Wert darstellt.
 
-<b>Wichtig</b>. Dieses Zustands Element wird für [SetState](./nf-dxcore_interface-idxcoreadapter-setstate.md)nicht unterstützt.
+<b>Wichtig</b>. Dieses Zustandselement wird für [SetState nicht unterstützt.](./nf-dxcore_interface-idxcoreadapter-setstate.md)
 
-### <a name="adaptermemorybudget"></a>Adaptermemorybudget
+### <a name="adaptermemorybudget"></a>AdapterMemoryBudget
 
-Gibt den <em>adaptermemorybudget</em> -Adapter Status an, der das Arbeitsspeicher Budget des Adapters für den Adapter abruft oder anfordert.
+Gibt den <em>AdapterMemoryBudget-Adapterstatus</em> an, der das Adapterspeicherbudget auf dem Adapter abruft oder angibt.
 
-Beim Aufrufen von [querystate](./nf-dxcore_interface-idxcoreadapter-querystate.md)hat <em>der adaptermemorybudget</em> -Adapter Status den Typ <a href="/windows/win32/dxcore/dxcore_interface/ns-dxcore_interface-dxcoreadaptermemorybudgetnodesegmentgroup">dxcoreadaptermemorybudgetnodesegmentgroup</a> für *inputstatedetails* und den Typ <a href="/windows/win32/dxcore/dxcore_interface/ns-dxcore_interface-dxcoreadaptermemorybudget">dxcoreadaptermemorybudget</a> für *OUTPUTBUFFER*.
+Beim Aufrufen [von QueryState](./nf-dxcore_interface-idxcoreadapter-querystate.md)weist der <em>AdapterMemoryBudget-Adapterstatus</em> den Typ <a href="/windows/win32/dxcore/dxcore_interface/ns-dxcore_interface-dxcoreadaptermemorybudgetnodesegmentgroup">DXCoreAdapterMemoryBudgetNodeSegmentGroup</a> für *inputStateDetails* und <a href="/windows/win32/dxcore/dxcore_interface/ns-dxcore_interface-dxcoreadaptermemorybudget">den Typ DXCoreAdapterMemoryBudget</a> für *outputBuffer auf.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Idxcoreadapter:: querystate](./nf-dxcore_interface-idxcoreadapter-querystate.md), [idxcoreadapter:: SetState](./nf-dxcore_interface-idxcoreadapter-setstate.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapter::QueryState](./nf-dxcore_interface-idxcoreadapter-querystate.md), [IDXCoreAdapter::SetState](./nf-dxcore_interface-idxcoreadapter-setstate.md), [DXCore-Referenz](../dxcore-reference.md), Verwenden von DXCore zum [Aufzählen von Adaptern](../dxcore-enum-adapters.md)

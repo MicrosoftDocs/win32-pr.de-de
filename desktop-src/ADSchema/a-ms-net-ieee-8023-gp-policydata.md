@@ -1,10 +1,10 @@
 ---
-title: ms-net-IEEE-8023-GP-PolicyData-Attribut
-description: Enthält alle Einstellungen und Daten, die eine Gruppenrichtlinie Konfiguration für 802,3-Kabel Netzwerke bilden.
+title: ms-net-ieee-8023-GP-PolicyData-Attribut
+description: Enthält alle Einstellungen und Daten, aus denen eine Gruppenrichtlinie 802.3-Kabelnetzwerke besteht.
 ms.assetid: 9c68252f-cd0c-409f-9c57-1d00be246d20
 ms.tgt_platform: multiple
 keywords:
-- ms-net-IEEE-8023-GP-PolicyData-Attribut AD-Schema
+- ms-net-ieee-8023-GP-PolicyData-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2eb67527b6db64a4c4f3d4a8b216d6dccc51d2f8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bcbe48346861415d298d5e9b4319d1f6aac6f73a403265ca6fac8c1d58ad4b22
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300160"
 ---
-# <a name="ms-net-ieee-8023-gp-policydata-attribute"></a>ms-net-IEEE-8023-GP-PolicyData-Attribut
+# <a name="ms-net-ieee-8023-gp-policydata-attribute"></a>ms-net-ieee-8023-GP-PolicyData-Attribut
 
-Enthält alle Einstellungen und Daten, die eine Gruppenrichtlinie Konfiguration für 802,3-Kabel Netzwerke bilden.
+Enthält alle Einstellungen und Daten, aus denen eine Gruppenrichtlinie 802.3-Kabelnetzwerke besteht.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-net-IEEE-8023-GP-PolicyData              |
-| LDAP-Display-Name | ms-net-IEEE-8023-GP-PolicyData              |
+| CN                | ms-net-ieee-8023-GP-PolicyData              |
+| Ldap-Anzeigename | ms-net-ieee-8023-GP-PolicyData              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1955                     |
-| System-ID-GUID    | 8398948b-7457-4d91-BD4D-8d7ed669c9b7        |
+| System-Id-Guid    | 8398948b-7457-4d91-bd4d-8d7ed669c9f7        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,15 +54,15 @@ Enthält alle Einstellungen und Daten, die eine Gruppenrichtlinie Konfiguration 
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
 | System-Only            | False                                                                             |
-| Ist-einwertig       | Richtig                                                                              |
+| Is-Single-Valued       | True                                                                              |
 | Ist indiziert             | False                                                                             |
 | Im globalen Katalog      | False                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
 | Search-Flags           | 0x00000000                                                                        |
 | System-Flags           | 0x00000010                                                                        |
-| In verwendete Klassen        | [**ms-net-IEEE-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Enthält alle Einstellungen und Daten, die eine Gruppenrichtlinie Konfiguration 
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
 | System-Only            | False                                                                             |
-| Ist-einwertig       | Richtig                                                                              |
+| Is-Single-Valued       | True                                                                              |
 | Ist indiziert             | False                                                                             |
 | Im globalen Katalog      | False                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
 | Search-Flags           | 0x00000000                                                                        |
 | System-Flags           | 0x00000010                                                                        |
-| In verwendete Klassen        | [**ms-net-IEEE-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
 
 
 
@@ -96,15 +96,15 @@ Enthält alle Einstellungen und Daten, die eine Gruppenrichtlinie Konfiguration 
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
 | System-Only            | False                                                                             |
-| Ist-einwertig       | Richtig                                                                              |
+| Is-Single-Valued       | True                                                                              |
 | Ist indiziert             | False                                                                             |
 | Im globalen Katalog      | False                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
 | Search-Flags           | 0x00000000                                                                        |
 | System-Flags           | 0x00000010                                                                        |
-| In verwendete Klassen        | [**ms-net-IEEE-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
 
 
 

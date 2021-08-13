@@ -1,32 +1,32 @@
 ---
-description: Bestimmte Werte, die mit konfigurierbaren Mergemodulen verwendet werden, erfordern spezielle Textverarbeitung.
+description: Bestimmte Werte, die mit konfigurierbaren Mergemodulen verwendet werden, erfordern eine besondere Textbehandlung.
 ms.assetid: b9d41400-f3b5-4f85-8728-56f9b90a50ca
-title: Spezielles cmsm-Format
+title: CMSM-Sonderformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae9b6fa0bc5e84f125d0872a2937db7701f70820
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8521c422d62980da0d222f8a8fc8395afa40b68bfd65c5600298372b1035f97d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119252140"
 ---
-# <a name="cmsm-special-format"></a>Spezielles cmsm-Format
+# <a name="cmsm-special-format"></a>CMSM-Sonderformat
 
-Bestimmte Werte, die mit konfigurierbaren Mergemodulen verwendet werden, erfordern spezielle Textverarbeitung. Eine Text Zeichenfolge, die als "cmsm Special Format" bezeichnet wird, behandelt das Semikolon (;) und sind (=) Zeichen als reservierte Zeichen, die vom clientmerge-Tool oder Mergemod.dll verwendet werden.
+Bestimmte Werte, die mit konfigurierbaren Mergemodulen verwendet werden, erfordern eine besondere Textbehandlung. Eine Textzeichenfolge, die als "CMSM Special Format" (CMSM-Sonderformat) beschrieben wird, behandelt das Semikolon (;) und entspricht (=) Zeichen als reservierte Zeichen, die vom Clientzusammenführungstool oder -Mergemod.dll.
 
-Das spezielle cmsm-Format wird derzeit an den folgenden Speicherorten verwendet:
+Das CMSM-Sonderformat wird derzeit an den folgenden Stellen verwendet:
 
--   Die Zeilen Spalte der [ModuleSubstitution-Tabelle](modulesubstitution-table.md).
--   Die Wert Spalte der [ModuleSubstitution-Tabelle](modulesubstitution-table.md).
--   Die ContextData-Spalte der [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) , wenn Bitfield der Wert in der Format-Spalte ist.
--   Die ContextData-Spalte der [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) , wenn Text der Wert in der Format-Spalte und Enum der Wert in der Type-Spalte ist.
--   Die DefaultValue-Spalte der [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) , wenn key der Wert in der Format-Spalte ist.
--   Konfigurierbare Elemente im Schlüsselformat, das von der [**providetextdata-Methode**](configuremodule-providetextdata.md)verwendet wird.
+-   Die Row-Spalte der [ModuleSubstitution-Tabelle.](modulesubstitution-table.md)
+-   Die Value -Spalte der [ModuleSubs standardwerten -Tabelle.](modulesubstitution-table.md)
+-   Die ContextData-Spalte der [ModuleConfiguration-Tabelle,](moduleconfiguration-table.md) wenn Bitfield der Wert in der Spalte Format ist.
+-   Die ContextData-Spalte der [ModuleConfiguration-Tabelle,](moduleconfiguration-table.md) wenn Text der Wert in der Spalte Format und Enum der Wert in der Spalte Type ist.
+-   Die DefaultValue-Spalte der [ModuleConfiguration-Tabelle,](moduleconfiguration-table.md) wenn Key der Wert in der Spalte Format ist.
+-   Konfigurierbare Elemente im Schlüsselformat, das von der [**ProvideTextData-Methode verwendet wird.**](configuremodule-providetextdata.md)
 
-Um Literale Semikolons oder Gleichheitszeichen in einen Wert im cmsm-Sonderformat einzugeben, stellen Sie dem Zeichen einen umgekehrten Schrägstrich (" \\ ") voran. Ein literaler umgekehrter Schrägstrich kann durch zwei umgekehrte Schrägstriche dargestellt werden. Ein einzelnes Zeichen, dem ein einzelner umgekehrter Schrägstrich vorangestellt ist, wird in das einzelne Zeichen übersetzt, auch wenn das Zeichen nicht als Escapezeichen erforderlich ist.
+Um literale Semikolons oder gleichheitsgleiche Zeichen in einen Wert im CMSM-Sonderformat ein zu geben, stellen Sie dem Zeichen einen zurückgestellten Schrägstrich (' \\ ') voran. Ein literaler schräger Schrägstrich kann durch zwei schräge Schrägstriche dargestellt werden. Ein einzelnes Zeichen, dem ein einzelner schräger Schrägstrich vorangestellt ist, wird in das einzelne Zeichen übersetzt, auch wenn kein Vorzeichen erforderlich ist.
 
-Wenn ein Semikolon oder ein Gleichheitszeichen nicht durch einen umgekehrten Schrägstrich vorangestellt ist, aber nicht über ein definiertes Verhalten im Kontext des Werts verfügt, ist die resultierende Zeichenfolge nicht definiert. Beispielsweise befindet sich die DefaultValue-Spalte der ModuleConfiguration-Tabelle im cmsm-Sonderformat für alle Schlüsselelemente, da das Semikolon das Spalten Trennzeichen ist. Obwohl das Gleichheitszeichen in dieser Zeichenfolge keine besondere Bedeutung hat, müssen Literale gleich Zeichen in dieser Zeichenfolge weiterhin mit Escapezeichen versehen werden.
+Wenn ein Semikolon oder gleichheitsgleiches Zeichen nicht durch einen zurückgestellten Schrägstrich vorangestellt ist, aber kein definiertes Verhalten im Kontext des Werts auft, ist die resultierende Zeichenfolge nicht definiert. Die DefaultValue-Spalte der ModuleConfiguration-Tabelle hat z. B. das CMSM-Sonderformat für alle Schlüsselelemente, da das Semikolon als Spaltentrennzeichen verwendet wird. Obwohl das Gleichheitszeichen in dieser Zeichenfolge keine besondere Bedeutung hat, müssen literale Gleichheitszeichen in dieser Zeichenfolge weiterhin mit Escapezeichen verkettet werden.
 
  
 

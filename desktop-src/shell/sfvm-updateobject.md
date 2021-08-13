@@ -1,6 +1,6 @@
 ---
-description: Aktualisiert ein Objekt durch Übergabe eines Zeigers auf ein Array von zwei Zeigern auf Element Bezeichner Listen (pidls). Wird von der shshellfolderview- \_ Nachricht verwendet.
-title: SFVM_UPDATEOBJECT Meldung (shlobj. h)
+description: Aktualisiert ein Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Elementbezeichnerlisten (PIDLs) übergeben wird. Wird von SHShellFolderView \_ Message verwendet.
+title: SFVM_UPDATEOBJECT (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 3bd68ace-3ccf-446c-8cf9-52f42444674e
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 4367551cdf2d48a06c633329ad850c3f7c2e0976
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e3c4ee64583710e84af0d377999c389f6fe1bfa6876bb150789a5fd118f79f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452844"
 ---
-# <a name="sfvm_updateobject-message"></a>Sfvm- \_ UpdateObject-Nachricht
+# <a name="sfvm_updateobject-message"></a>SFVM \_ UPDATEOBJECT-Meldung
 
-Aktualisiert ein Objekt durch Übergabe eines Zeigers auf ein Array von zwei Zeigern auf Element Bezeichner Listen (pidls). Wird von der [**shshellfolderview- \_ Nachricht**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shshellfolderview_message)verwendet.
+Aktualisiert ein Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Elementbezeichnerlisten (PIDLs) übergeben wird. Wird von [**SHShellFolderView Message \_ verwendet.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shshellfolderview_message)
 
 
 ```C++
@@ -40,22 +40,22 @@ Aktualisiert ein Objekt durch Übergabe eines Zeigers auf ein Array von zwei Zei
 
 <dl> <dt>
 
-*ppidl* \[ in\]
+*dldl* \[ In\]
 </dt> <dd>
 
-Die Adresse eines Arrays mit zwei pidls. Die erste PIDL ist die alte PIDL. Die zweite ist eine Kopie der alten PIDL mit aktualisierten Informationen. Die Kontrolle über die Lebensdauer des Kopiervorgangs gehört der Ansicht nach erfolgreichem Abschluss dieses Aufrufens an.
+Die Adresse eines Arrays von zwei PIDLs. Die erste PIDL ist die alte PIDL. Das zweite ist eine Kopie der alten PIDL mit aktualisierten Informationen. Die Kontrolle über die Lebensdauer der Kopie gehört nach erfolgreichem Abschluss dieses Aufrufs zur Ansicht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die ListView-ID des aktualisierten Objekts zurück, wenn das Update erfolgreich war. Andernfalls wird-1 zurückgegeben.
+Gibt die Listview-ID des aktualisierten Objekts zurück, wenn das Update erfolgreich war. Andernfalls wird -1 zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Update nicht erfolgreich war, muss der Aufrufer den Arbeitsspeicher freigeben.
+Wenn das Update nicht erfolgreich war, muss der Aufrufer den Arbeitsspeicher frei geben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -63,7 +63,7 @@ Wenn das Update nicht erfolgreich war, muss der Aufrufer den Arbeitsspeicher fre
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

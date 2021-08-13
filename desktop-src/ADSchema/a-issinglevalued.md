@@ -1,11 +1,11 @@
 ---
-title: Ist-einwertiges Attribut
-description: TRUE gibt an, dass mit diesem Attribut nur ein Wert gespeichert werden kann.
+title: Is-Single-Valued-Attribut
+description: True gibt an, dass dieses Attribut nur einen Wert speichern kann.
 ms.assetid: 53dd8dfe-2123-4a61-a346-12abe340ea11
 ms.tgt_platform: multiple
 keywords:
-- Is-Single-Wert-Attribut, AD-Schema
-- issinglewertattribut AD-Schema
+- AD-Schema für einwertige Is-Single-Valued-Attribute
+- ISSingleValued-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53a1fafd047afa47b874fb0385a690e2c0d13161
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1677a5a9b412e315be8ec773f8d0b1cc54f341622d2129ca7f6f80252cc950a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119303940"
 ---
-# <a name="is-single-valued-attribute"></a>Ist-einwertiges Attribut
+# <a name="is-single-valued-attribute"></a>Is-Single-Valued-Attribut
 
-**True** gibt an, dass mit diesem Attribut nur ein Wert gespeichert werden kann.
+True **gibt an,** dass dieses Attribut nur einen Wert speichern kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Ist-einwertig                     |
-| LDAP-Display-Name | isSingleValued                       |
+| CN                | Is-Single-Valued                     |
+| Ldap-Anzeigename | isSingleValued                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Schema Administrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.2.33                |
-| System-ID-GUID    | bf967992-0de6-11d0-a285-00aa003049e2 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | bf967992-0de6-11d0-a285-00aa003049e2 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -57,38 +57,38 @@ ms.locfileid: "103859478"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -99,17 +99,17 @@ ms.locfileid: "103859478"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -120,17 +120,17 @@ ms.locfileid: "103859478"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -141,17 +141,17 @@ ms.locfileid: "103859478"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -162,17 +162,17 @@ ms.locfileid: "103859478"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -183,17 +183,17 @@ ms.locfileid: "103859478"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x80c1                                                   |
-| System-Only            | Richtig                                                     |
-| Ist-einwertig       | Richtig                                                     |
+| MAPI-Id                | 0x80C1                                                   |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 

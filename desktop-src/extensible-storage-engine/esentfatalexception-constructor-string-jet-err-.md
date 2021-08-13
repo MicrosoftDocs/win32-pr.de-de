@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfatalexception-Konstruktor (String, JET_err)'
-title: Esentfatalexception-Konstruktor (Zeichenfolge, JET_err)
+description: 'Weitere Informationen finden Sie unter: EsentFatalException-Konstruktor (String, JET_err)'
+title: EsentFatalException-Konstruktor (String, JET_err)
 TOCTitle: EsentFatalException constructor (String, JET_err)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFatalException.#ctor(System.String,Microsoft.Isam.Esent.Interop.JET_err)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfatalexception.esentfatalexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f025b93e626c4b0f2ab6bb7729169aaff1d67707
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f258d291961add7f97fd8f67da46bc2e3e64d57eda942fbffd9aeded7f15aafc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118778508"
 ---
-# <a name="esentfatalexception-constructor-string-jet_err"></a>Esentfatalexception-Konstruktor (Zeichenfolge, JET_err)
+# <a name="esentfatalexception-constructor-string-jet_err"></a>EsentFatalException-Konstruktor (String, JET_err)
 
-Initialisiert eine neue Instanz der esentfatalexception-Klasse.
+Initialisiert eine neue Instanz der EsentFatalException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,25 +60,25 @@ protected EsentFatalException(
 #### <a name="parameters"></a>Parameter
 
   - description  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Die Beschreibung des Fehlers.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+  - Err  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
     
     Der Fehlercode der Ausnahme.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentFatalException-Klasse](./esentfatalexception-class.md)
 
-[Esentfatalexception-Member](./esentfatalexception-members.md)
+[EsentFatalException-Member](./esentfatalexception-members.md)
 
-[Esentfatalexception-Überladung](./esentfatalexception-constructor.md)
+[EsentFatalException-Überladung](./esentfatalexception-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein neues Mesh und füllt es mit den Daten eines zuvor geladenen Mesh.
+description: Erstellt ein neues Gitternetz und füllt es mit den Daten eines zuvor geladenen Gitternetzes auf.
 ms.assetid: 2ce39982-abc0-444b-bc6f-24508f76fe31
-title: 'ID3DX10Mesh:: clonemesh-Methode (d3dx10. h)'
+title: ID3DX10Mesh::CloneMesh-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0f007475ea9f6aeaa6dc0c01bbd721c4a5103adf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 292522e47dbaf6937d871209006134e866e92fdeb27f6edba4f4f71f6d1fad14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119409130"
 ---
-# <a name="id3dx10meshclonemesh-method"></a>ID3DX10Mesh:: clonemesh-Methode
+# <a name="id3dx10meshclonemesh-method"></a>ID3DX10Mesh::CloneMesh-Methode
 
-Erstellt ein neues Mesh und füllt es mit den Daten eines zuvor geladenen Mesh.
+Erstellt ein neues Gitternetz und füllt es mit den Daten eines zuvor geladenen Gitternetzes auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT CloneMesh(
 
 <dl> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Erstellungsflags, die auf das neue Mesh angewendet werden sollen. Siehe [**d3dx10 \_ Mesh**](d3dx10-mesh.md).
+Erstellungsflags, die auf das neue Gitternetz angewendet werden sollen. Siehe [**D3DX10 \_ MESH**](d3dx10-mesh.md).
 
 </dd> <dt>
 
-*ppossemantic* \[ in\]
+*pPosSemantic* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der semantische Name der Positionsdaten.
+Der semantische Name für die Positionsdaten.
 
 </dd> <dt>
 
-*PDE SC* \[ in\]
+*pDesc* \[ In\]
 </dt> <dd>
 
-Type: **Konstanten [**d3d10 \_ input- \_ Element \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \***
+Typ: **const [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \***
 
-Array von d3d10 \_ input- \_ Element- \_ DESC-Strukturen, das das Vertex-Format für das zurückgegebene Mesh beschreibt. Weitere Informationen finden Sie unter [**d3d10 \_ input \_ Element \_ ensc**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc).
+Array von D3D10 \_ INPUT \_ ELEMENT \_ DESC-Strukturen, das das Scheitelpunktformat für das zurückgegebene Gitternetz beschreibt. Siehe [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc).
 
 </dd> <dt>
 
-*Declcount* \[ in\]
+*DeclCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Elemente im PDE-Array.
+Die Anzahl der Elemente im pDesc-Array.
 
 </dd> <dt>
 
-*ppclonemesh* \[ vorgenommen\]
+*ppCloneMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10Mesh**](id3dx10mesh.md)\*\***
 
-Das neue Mesh.
+Das neue Gitternetz.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Das neue Mesh.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,12 +101,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

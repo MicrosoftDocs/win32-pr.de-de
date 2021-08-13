@@ -1,31 +1,31 @@
 ---
-title: Beispiele für die TCP-Kanal Schicht
+title: Beispiele für TCP-Kanalebenen
 ms.assetid: 0672544c-699b-4ab8-8e40-b6aa165daab0
-description: 'Weitere Informationen finden Sie hier: Beispiele für TCP-Kanal Ebenen'
+description: Weitere Informationen finden Sie unter Tcp Channel Layer Examples (Beispiele für TCP-Kanalebenen).
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fbd2b150f1b7fb51a45fb566b681542db594d80
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be0a5226b909375086f7f80ba32156cb19516ac2db319e8694e428c1deda51ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119262320"
 ---
-# <a name="tcp-channel-layer-examples"></a>Beispiele für die TCP-Kanal Schicht
+# <a name="tcp-channel-layer-examples"></a>Beispiele für TCP-Kanalebenen
 
-In den folgenden Beispielen wird die Verwendung von TCP mit der [Kanal Ebene](channel-layer-overview.md)veranschaulicht:
+Die folgenden Beispiele veranschaulichen die Verwendung von TCP mit der [Kanalebene:](channel-layer-overview.md)
 
-Ein TCP-Beispiel, das Nachrichten mit einem unidirektionalen Muster sendet: [onewaytcpclientexample](onewaytcpclientexample.md)[onewaytcpserverexample](onewaytcpserverexample.md)
+Ein TCP-Beispiel, das Nachrichten mit einem einseitigen Muster sendet: [OneWayTcpClientExample](onewaytcpclientexample.md)[OneWayTcpServerExample](onewaytcpserverexample.md)
 
-Ein TCP-Beispiel, das Nachrichten mit einem Anforderung-Antwort-Muster sendet: [requestreplytcpclientexample](requestreplytcpclientexample.md)[requestreplytcpserverexample](requestreplytcpserverexample.md)
+Ein TCP-Beispiel, das Nachrichten mit einem Anforderung-Antwort-Muster sendet: [RequestReplyTcpClientExample](requestreplytcpclientexample.md)[RequestReplyTcpServerExample](requestreplytcpserverexample.md)
 
-Ein TCP-Streaming-Beispiel: [streamingtcpclieintexample](streamingtcpclientexample.md)[streamingtcpserverexample](streamingtcpserverexample.md)
+Ein TCP-Streamingbeispiel: [StreamingTcpClientExample](streamingtcpclientexample.md)[StreamingTcpServerExample](streamingtcpserverexample.md)
 
-Ein Async Streaming TCP-Beispiel: [asyncstreamingtcpclieintexample](asyncstreamingtcpclientexample.md)[asyncstreamingtcpserverexample](asyncstreamingtcpserverexample.md)
+Tcp-Beispiel für asynchrones Streaming: [AsyncStreamingTcpClientExample](asyncstreamingtcpclientexample.md)[AsyncStreamingTcpServerExample](asyncstreamingtcpserverexample.md)
 
-In den folgenden Beispielen wird gezeigt, wie WS-MetadataExchange auf dem [WS- \_ Dienst \_ Host](ws-service-host.md)aktiviert wird.
+Die folgenden Beispiele zeigen, wie sie WS-MetadataExchange auf [WS \_ SERVICE \_ HOST](ws-service-host.md)aktivieren.
 
-TCP-Dienst mit aktiviertem WS-MetadataExchange: [MetadataExchangeSample](metadataexchangesample.md). Der WCF-dienstmonikerclient, der den TCP-Dienst mit aktiviertem WS-MetadataExchange aufruft: [servicemonikersample](servicemonikersample.md).
+TCP-Dienst mit aktivierter WS-MetadataExchange: [MetadataExchangeSample](metadataexchangesample.md). WCF-Dienstmonikerclient, der den TCP-Dienst mit aktivierter WS-MetadataExchange aufruft: [ServiceMonikerSample.](servicemonikersample.md)
 
  
 

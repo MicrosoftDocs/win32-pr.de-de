@@ -1,9 +1,9 @@
 ---
-title: 'Byteaddressbuffer:: Load4 (uint, uint)-Funktion'
+title: ByteAddressBuffer::Load4(uint, uint)-Funktion
 description: Ruft vier Werte und den Status des Vorgangs ab.
 ms.assetid: C814F717-9FD4-4BFC-A91B-319477B7F3DE
 keywords:
-- Load4-Funktion (HLSL)
+- Load4-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ab27ed9002562643ddf4df6b33efe9d8f0454d94
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a9e65738acfa8a795dc1431bc3c6bb6242d810227bcdc40abcc8cfdf43dea934
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118790378"
 ---
-# <a name="load4uint-uint-function"></a>Load4 (uint, uint)-Funktion
+# <a name="load4uint-uint-function"></a>Load4(uint, uint)-Funktion
 
 Ruft vier Werte und den Status des Vorgangs ab.
 
@@ -28,8 +28,8 @@ Ruft vier Werte und den Status des Vorgangs ab.
 
 ``` syntax
 uint4 Load4(
-  in  uint Location,
-  out uint Status
+  in  uint Location,
+  out uint Status
 );
 ```
 
@@ -37,21 +37,21 @@ uint4 Load4(
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
@@ -61,19 +61,19 @@ Typ: **uint4**
 
 Vier Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -82,9 +82,9 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Load4-Methoden](byteaddressbuffer-load4.md)
 </dt> <dt>
 
-[**Byteaddressbuffer**](sm5-object-byteaddressbuffer.md)
+[**ByteAddressBuffer**](sm5-object-byteaddressbuffer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

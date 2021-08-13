@@ -1,10 +1,10 @@
 ---
 title: TextureCubeArray-Objekt
-description: Texturecubearray-Typ (wie in Shader-Modell 4 vorhanden) und Ressourcenvariablen. Dieses Textur Objekt unterstützt diese Methoden zusätzlich zu den Methoden in Shader Model 4.
+description: TextureCubeArray-Typ (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariablen. Dieses Texturobjekt unterstützt diese Methoden zusätzlich zu den Methoden in Shader Model 4.
 ms.assetid: 62AAF0F9-D552-4FFA-B681-749D6DC205BD
 keywords:
-- Texturecubearray-Objekt HLSL
-- Texturecubearray-Objekt HLSL, beschrieben
+- TextureCubeArray-Objekt HLSL
+- TextureCubeArray-Objekt HLSL , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,69 +14,69 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e559214626fadbc08b8e9cd4d5568358f130779c
-ms.sourcegitcommit: 5724b38883e518ac565e1b266defa85ad0941bb2
+ms.openlocfilehash: a0b5687e26ebb8a80dbd75e5849ad95de29dacec90c64e660e59dce71c796b0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "104995246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118786168"
 ---
 # <a name="texturecubearray-object"></a>TextureCubeArray-Objekt
 
-**Texturecubearray** -Typ ([wie in Shader-Modell 4 vorhanden](dx-graphics-hlsl-to-type.md)) und Ressourcenvariablen. Dieses Textur Objekt unterstützt diese Methoden zusätzlich zu den Methoden in Shader Model 4.
+**TextureCubeArray-Typ** ([wie er in Shader Model 4](dx-graphics-hlsl-to-type.md)vorhanden ist) plus Ressourcenvariablen. Dieses Texturobjekt unterstützt diese Methoden zusätzlich zu den Methoden in Shader Model 4.
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Das **texturecubearray** -Objekt verfügt über diese Methoden.
+Das **TextureCubeArray-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                                                                                              |
+| Methode                                                           | Beschreibung                                                                                                                                              |
 |:-----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Informieren**](texturecubearray-gather.md)                         | Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.<br/>                                                                |
-| [**Gatheralpha**](texturecubearray-gatheralpha.md)               | Gibt die Alpha Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.<br/>                                        |
-| [**Gatherblue**](texturecubearray-gatherblue.md)                 | Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.<br/>                                         |
-| [**Gathercmp**](texturecubearray-gathercmp.md)                   | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird der Vergleich mit einem Vergleichswert zurückgegeben.<br/>                      |
-| [**Gathercmpalpha**](texturecubearray-gathercmpalpha.md)         | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der Alpha Komponente mit einem Vergleichswert zurückgegeben.<br/> |
-| [**Gathercmpblue**](texturecubearray-gathercmpblue.md)           | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der blauen Komponente mit einem Vergleichswert zurückgegeben.<br/>  |
-| [**Gathercmpgreen**](texturecubearray-gathercmpgreen.md)         | Für vier textexwerte, die in einem bilinearen Filterungs Vorgang verwendet werden, wird ein Vergleich der grünen Komponente mit einem Vergleichswert zurückgegeben.<br/> |
-| [**Gathercmpred**](texturecubearray-gathercmpred.md)             | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der roten Komponente mit einem Vergleichswert zurückgegeben.<br/>   |
-| [**Gathergrün**](texturecubearray-gathergreen.md)               | Gibt die grünen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.<br/>                                        |
-| [**Gatherred**](texturecubearray-gatherred.md)                   | Gibt die roten Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.<br/>                                          |
-| [**Beispiel**](texturecubearray-sample.md)                         | Stichproben eine Textur.<br/>                                                                                                                                  |
-| [**Samplebias**](texturecubearray-samplebias.md)                 | Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.<br/>                                                                               |
-| [**Samplecmp**](texturecubearray-samplecmp.md)                   | Abtastungen einer Textur mithilfe eines Vergleichs Werts zum ablehnen von Beispielen.<br/>                                                                                      |
-| [**Samplecmplevelzero**](texturecubearray-samplecmplevelzero.md) | Stichproben eine Textur (nur MipMap-Ebene 0) unter Verwendung eines Vergleichs Werts zum ablehnen von Beispielen.<br/>                                                                |
-| [**Samplegrad**](texturecubearray-samplegrad.md)                 | Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der der Beispiel Speicherort berechnet wird<br/>                                                          |
-| [**Samplelevel**](texturecubearray-samplelevel.md)               | Prüft eine Textur auf der angegebenen MipMap-Ebene.<br/>                                                                                                    |
+| [**versammeln**](texturecubearray-gather.md)                         | Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                                                |
+| [**GatherAlpha**](texturecubearray-gatheralpha.md)               | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                        |
+| [**GatherBlue**](texturecubearray-gatherblue.md)                 | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                         |
+| [**GatherCmp**](texturecubearray-gathercmp.md)                   | Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt ihren Vergleich mit einem Vergleichswert zurück.<br/>                      |
+| [**GatherCmpAlpha**](texturecubearray-gathercmpalpha.md)         | Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer Alphakomponente mit einem Vergleichswert zurück.<br/> |
+| [**GatherCmpBlue**](texturecubearray-gathercmpblue.md)           | Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zurück.<br/>  |
+| [**GatherCmpGreen**](texturecubearray-gathercmpgreen.md)         | Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer grünen Komponente mit einem Vergleichswert zurück.<br/> |
+| [**GatherCmpRed**](texturecubearray-gathercmpred.md)             | Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer roten Komponente mit einem Vergleichswert zurück.<br/>   |
+| [**GatherGreen**](texturecubearray-gathergreen.md)               | Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                        |
+| [**GatherRed**](texturecubearray-gatherred.md)                   | Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                          |
+| [**Beispiel**](texturecubearray-sample.md)                         | Stichproben einer Textur.<br/>                                                                                                                                  |
+| [**SampleBias**](texturecubearray-samplebias.md)                 | Samples a texture, after applying the bias value to the mipmap level.<br/>                                                                               |
+| [**SampleCmp**](texturecubearray-samplecmp.md)                   | Samples a texture, using a comparison value to reject samples. (Stichproben werden mithilfe eines Vergleichswerts abgewiesen.)<br/>                                                                                      |
+| [**SampleCmpLevelZero**](texturecubearray-samplecmplevelzero.md) | Stichproben einer Textur (nur Mipmap-Ebene 0) mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.<br/>                                                                |
+| [**SampleGrad**](texturecubearray-samplegrad.md)                 | Samples a texture using a gradient to influence the way the sample location is calculated. (Stichprobenentnahme einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen.)<br/>                                                          |
+| [**SampleLevel**](texturecubearray-samplelevel.md)               | Stichproben einer Textur auf der angegebenen Mipmapebene.<br/>                                                                                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | ja       |
 
 
 
  
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -88,7 +88,7 @@ Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[ShaderModell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
  

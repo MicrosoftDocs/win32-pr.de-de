@@ -1,11 +1,11 @@
 ---
-title: GPC-Funktionalitäts-Version-Attribut
-description: Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
+title: GPC-Functionality-Version-Attribut
+description: Die Version des Gruppenrichtlinie-Editors, der dieses Objekt erstellt hat.
 ms.assetid: 6ea2cb35-ad62-47e1-bafe-591fe875a4c9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für GPC-Funktions-Version-Attribut
-- AD-Schema des gpcfunctionalityversion-Attributs
+- AD-Schema des GPC-Functionality-Version-Attributs
+- gPCFunctionalityVersion-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27df43dfc439bfd0dd5eee1c0626d987c7d19c46
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c7038d8aba24358194225bc762fb5af4e8610fbec62c4cb624044d8f1c7d01ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323160"
 ---
-# <a name="gpc-functionality-version-attribute"></a>GPC-Funktionalitäts-Version-Attribut
+# <a name="gpc-functionality-version-attribute"></a>GPC-Functionality-Version-Attribut
 
-Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
+Die Version des Gruppenrichtlinie-Editors, der dieses Objekt erstellt hat.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | GPC-Funktionsversion            |
-| LDAP-Display-Name | gpcfunctionalityversion              |
+| CN                | GPC-Functionality-Version            |
+| Ldap-Anzeigename | gPCFunctionalityVersion              |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.893               |
 | System-ID-GUID    | f30e3bc0-9ff0-11d1-b603-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die Version des Gruppenrichtlinie-Editors, von dem dieses-Objekt erstellt wurde.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 

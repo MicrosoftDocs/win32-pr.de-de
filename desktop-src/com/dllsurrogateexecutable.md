@@ -1,50 +1,50 @@
 ---
-title: Dllsurrogateausführ Bare Datei
-description: Ermöglicht das Ausführen von DLL-Servern in einem benutzerdefinierten Ersatzprozess in Verbindung mit dem Registrierungs Wert dllersatz. Wenn dllsurrogateexe nicht angegeben wird, übergibt com den Wert NULL als Wert für den ersten Parameter der Funktion "deateprocess".
+title: DllSurrogateExecutable
+description: Ermöglicht die Ausführung von DLL-Servern in einem benutzerdefinierten Ersatzprozess in Verbindung mit dem DllSurrogate-Registrierungswert. Wenn DllSurrogateExecutable nicht angegeben ist, übergibt COM NULL als Wert für den ersten Parameter der CreateProcess-Funktion.
 ms.assetid: faf5dde3-bd67-447b-a88c-e8660dc5228e
 keywords:
-- Dllsurrogateausführ barer Registrierungs Wert com
+- DllSurrogateExecutable-Registrierungswert COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 877297673b0a518006ecf903f447984f9023da34
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 86fc12af22d1f85c2d2e5ff6e75b2904c5fc5eea636a64e314f997ff36a44e38
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106338498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119373380"
 ---
-# <a name="dllsurrogateexecutable"></a>Dllsurrogateausführ Bare Datei
+# <a name="dllsurrogateexecutable"></a>DllSurrogateExecutable
 
-Ermöglicht das Ausführen von DLL-Servern in einem benutzerdefinierten Ersatzprozess in Verbindung mit dem Registrierungs Wert [**dllersatz**](dllsurrogate.md) . Wenn **dllsurrogateexe** nicht angegeben wird, übergibt com den Wert **null** als Wert für den ersten Parameter der Funktion " [**deateprocess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) ".
+Ermöglicht die Ausführung von DLL-Servern in einem benutzerdefinierten Ersatzprozess in Verbindung mit dem [**DllSurrogate-Registrierungswert.**](dllsurrogate.md) Wenn **DllSurrogateExecutable** nicht angegeben ist, übergibt COM **NULL** als Wert für den ersten Parameter der [**CreateProcess-Funktion.**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID
-   {AppID_GUID}
-      DllSurrogateExecutable = file
+   {AppID_GUID}
+      DllSurrogateExecutable = file
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert ist vom Typ **reg \_ SZ**. Dies funktioniert in Verbindung mit dem [**dllersatz**](dllsurrogate.md) -Wert, um Mehrdeutigkeit bei Verwendung [**der Funktion "**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) Funktion" zu vermeiden. **Dllersatz** gibt an, ob ein benutzerdefiniertes Ersatz Zeichen verwendet werden muss. diese Informationen werden als erster Parameter für " **kreateprocess**" übergeben. Abhängig von der Implementierung von " **kreateprocess**" sind diese Informationen möglicherweise mehrdeutig. Wenn **dllsurrogateexe** angegeben wird, übergibt com den Wert als ersten Parameter von " **kreateprocess**". Wenn **dllsurrogateexe** nicht angegeben wird, übergibt com den Wert **null** als Wert für den ersten Parameter von " **kreateprocess**".
+Dieser Wert ist vom Typ **REG \_ SZ.** Er arbeitet mit dem [**DllSurrogate-Wert**](dllsurrogate.md) zusammen, um Mehrdeutigkeiten bei der Verwendung der [**CreateProcess-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) zu vermeiden. **DllSurrogate** gibt an, ob ein benutzerdefiniertes Ersatzzeichen verwendet werden muss, und diese Informationen werden als erster Parameter für **CreateProcess** übergeben. Abhängig von der Implementierung von **CreateProcess** können diese Informationen mehrdeutig sein. Wenn **DllSurrogateExecutable** angegeben ist, übergibt COM den Wert als ersten Parameter von **CreateProcess.** Wenn **DllSurrogateExecutable** nicht angegeben ist, übergibt COM **NULL** als Wert für den ersten Parameter von **CreateProcess.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Coregisterersatz**](/windows/desktop/api/combaseapi/nf-combaseapi-coregistersurrogate)
+[**CoRegisterSurrogate**](/windows/desktop/api/combaseapi/nf-combaseapi-coregistersurrogate)
 </dt> <dt>
 
-[DLL-Surrogates](dll-surrogates.md)
+[DLL-Ersatzzeichen](dll-surrogates.md)
 </dt> <dt>
 
-[**Dllersatz**](dllsurrogate.md)
+[**DllSurrogate**](dllsurrogate.md)
 </dt> <dt>
 
-[**Isurrogate**](/windows/win32/api/objidlbase/nn-objidlbase-isurrogate)
+[**ISurrogate**](/windows/win32/api/objidlbase/nn-objidlbase-isurrogate)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

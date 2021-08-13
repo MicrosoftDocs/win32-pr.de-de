@@ -1,11 +1,11 @@
 ---
 title: Generated-Connection-Attribut
-description: True, wenn diese Verbindung durch die automatische Topologiegenerierung erstellt wurde.
+description: True, wenn diese Verbindung von der automatischen Topologiegenerierung erstellt wurde.
 ms.assetid: aec351d4-b17d-49e6-bbc1-787703fd600b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Generated-Connection-Attribut
-- generatedconnection-Attribut, AD-Schema
+- Generated-Connection AD-Attributschema
+- generatedConnection-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d38570878db9b1b44414bbdd9624cb3b524f19c0
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 23a486c4a072421bfb5ec7565dc786a417b2f730a49da5b21d05eb37481ed76e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106339612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323280"
 ---
 # <a name="generated-connection-attribute"></a>Generated-Connection-Attribut
 
-**True** , wenn diese Verbindung durch die automatische Topologiegenerierung erstellt wurde.
+**True,** wenn diese Verbindung von der automatischen Topologiegenerierung erstellt wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Generated-Connection                 |
-| LDAP-Display-Name | generatedconnection                  |
+| Ldap-Anzeigename | generatedConnection                  |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.41                |
 | System-ID-GUID    | bf96797a-0de6-11d0-a285-00aa003049e2 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |
@@ -71,7 +71,7 @@ ms.locfileid: "106339612"
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |
@@ -101,10 +101,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |
@@ -122,10 +122,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |
@@ -143,10 +143,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |
@@ -164,10 +164,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |
@@ -185,10 +185,10 @@ ms.locfileid: "106339612"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist-einwertig       | Richtig                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                           |
 | Range-Lower            | \-                                                     |
 | Range-Upper            | \-                                                     |
 | Search-Flags           | 0x00000000                                             |

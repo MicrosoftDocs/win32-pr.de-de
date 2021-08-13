@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. getstringcollectionbyquery-Methode
-description: Die getstringcollectionbyquery-Methode ruft ein StringCollection-Objekt ab, das alle Zeichen folgen enthält, die den Abfragebedingungen entsprechen.
+title: MediaCollection.getStringCollectionByQuery-Methode
+description: Die getStringCollectionByQuery-Methode ruft ein StringCollection-Objekt ab, das alle Zeichenfolgen enthält, die den Abfragebedingungen entsprechen.
 ms.assetid: 17442151-7eb1-4256-ac5f-142b11645216
 keywords:
-- getstringcollectionbyquery-Methode, Windows-Media Player
-- getstringcollectionbyquery-Methode, Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, getstringcollectionbyquery-Methode
+- getStringCollectionByQuery-Windows Media Player
+- getStringCollectionByQuery-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , getStringCollectionByQuery-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bf304d22cb207d8a2bfb046522e8704e900d508
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6d9e8f2eae2ce52a566d4db6b8298187df1d4d444432e99dda22d3cacc0ed3ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119390110"
 ---
-# <a name="mediacollectiongetstringcollectionbyquery-method"></a>Mediacollection. getstringcollectionbyquery-Methode
+# <a name="mediacollectiongetstringcollectionbyquery-method"></a>MediaCollection.getStringCollectionByQuery-Methode
 
-Die **getstringcollectionbyquery** -Methode ruft ein **StringCollection** -Objekt ab, das alle Zeichen folgen enthält, die den Abfragebedingungen entsprechen.
+Die **getStringCollectionByQuery-Methode** ruft ein **StringCollection-Objekt** ab, das alle Zeichenfolgen enthält, die den Abfragebedingungen entsprechen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,50 +46,50 @@ retVal = MediaCollection.getStringCollectionByQuery(
 
 <dl> <dt>
 
-*Attribut* \[ in\]
+*Attribut* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Attributnamen enthält.
+**Eine Zeichenfolge,** die den Attributnamen enthält.
 
 </dd> <dt>
 
-*Abfrage* \[ in\]
+*Abfrage* \[ In\]
 </dt> <dd>
 
-**Query** -Objekt.
+**Abfrageobjekt.**
 
 </dd> <dt>
 
-*mediaType* \[ in\]
+*mediaType* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Medientyp enthält. Muss einen der folgenden Werte enthalten: "Audiodatei", "Video", "Photo", "Wiedergabeliste" oder "Other".
+**Eine Zeichenfolge,** die den Medientyp enthält. Muss einen der folgenden Werte enthalten: "audio", "video", "photo", "playlist" oder "other".
 
 </dd> <dt>
 
-*SortAttribute* \[ in\]
+*sortAttribute* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den für die Sortierung verwendeten Attributnamen enthält. Eine leere Zeichenfolge ("") bedeutet, dass keine Sortierung angewendet wird.
+**Eine Zeichenfolge,** die den für die Sortierung verwendeten Attributnamen enthält. Eine leere Zeichenfolge ("") bedeutet, dass keine Sortierung angewendet wird.
 
 </dd> <dt>
 
-*SortAscending* \[ in\]
+*sortAscending* \[ In\]
 </dt> <dd>
 
-**Boolescher** Wert, der angibt, dass die **StringCollection** in aufsteigender Reihenfolge sortiert werden muss.
+**Boolescher Wert**, true, der angibt, dass **die StringCollection** in aufsteigender Reihenfolge sortiert werden muss.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **StringCollection** -Objekt zurück.
+Diese Methode gibt ein **StringCollection-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Verbund Abfragen mit **Abfrage** wird die Groß-/Kleinschreibung nicht beachtet
+Bei zusammengesetzten Abfragen, die **Die Abfrage verwenden,** wird die Zwischenschreibung nicht beachtet.
 
-Wenn die durch den *Abfrage* Parameter angegebene Verbund Abfrage eine Bedingung enthält, die auf dem **mediaType** -Attribut basiert, wird diese Bedingung ignoriert. Der Wert für den *mediaType* -Parameter wird immer verwendet. Wenn die Verbund Abfrage z. b. die Bedingung "MediaType ist mit Audiodaten" enthält und der Wert für den *mediaType* -Parameter "Video" ist, enthält die resultierende Wiedergabeliste nur Video Elemente.
+Wenn die durch den  Abfrageparameter angegebene Verbundabfrage eine Bedingung enthält, die auf dem **MediaType-Attribut** basiert, wird diese Bedingung ignoriert. Der Wert für den *mediaType-Parameter* wird immer verwendet. Wenn die Verbundabfrage beispielsweise die Bedingung "MediaType Gleich Audio" enthält und der Wert für den *mediaType-Parameter* "video" ist, enthält die resultierende Wiedergabeliste nur Videoelemente.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,17 +102,17 @@ Wenn die durch den *Abfrage* Parameter angegebene Verbund Abfrage eine Bedingung
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
 [**MediaType-Attribut**](mediatype-attribute.md)
 </dt> <dt>
 
-[**Query-Objekt**](query-object.md)
+[**Abfrageobjekt**](query-object.md)
 </dt> </dl>
 
  

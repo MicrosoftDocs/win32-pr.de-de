@@ -4,36 +4,36 @@ description: StopAll-Methode
 ms.assetid: 2ce32ff8-4908-45b1-9b83-4d558f67417c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76c99a687c2481d9686e84b7fa5c198e7a4273a2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b138be6ea75135d5ddefdea9e1e5cc120d875ae092478ad3147332720e5a0907
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118745942"
 ---
 # <a name="stopall-method"></a>StopAll-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Beendet alle Animations Anforderungen oder angegebenen Anforderungs Typen für das angegebene Zeichen.
+Beendet alle Animationsanforderungen oder angegebenen Anforderungstypen für das angegebene Zeichen.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). StopAll*- *  \[ *Typ*\]
+*agent***. Zeichen ("**_CharacterID_*_"). StopAll-Typ_ *  \[ \]
 
 
 
 | Teil   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Type* | Dies ist optional. Wenn Sie diesen Parameter verwenden möchten, können Sie einen der folgenden Werte verwenden. Sie können auch mehrere Typen angeben, indem Sie Sie durch Kommas trennen. <br/> "**Get**" <br/> , Um alle [**Get**](get-method.md) -Anforderungen in der Warteschlange anzuhalten.<br/> "**Nonqueuedget**" <br/> Zum Abbrechen aller nicht in die Warteschlange eingereihten [**Get**](get-method.md) -Anforderungen (**Get** -Methode mit **Queue** -Parameter ist auf **false** festgelegt).<br/> "**Verschieben**" <br/> , Um alle in der Warteschlange [**befindlichen Anforderungen für**](moveto-method.md) das Anforderungs Wort anzuhalten<br/> "**Play**" <br/> , Um alle [**Wiedergabe**](play-method.md) Anforderungen in der Warteschlange anzuhalten.<br/> "**Sprechen**" <br/> , Um alle [**sprach**](speak-method.md) Anforderungen in der Warteschlange zu verhindern.<br/> |
+| *Type* | Optional. Um diesen Parameter zu verwenden, können Sie einen der folgenden Werte verwenden. Sie können auch mehrere Typen angeben, indem Sie sie durch Kommas trennen. <br/> "**Get**" <br/> So beenden Sie alle [**Get-Anforderungen in**](get-method.md) der Warteschlange.<br/> "**NonQueuedGet**" <br/> So beenden Sie alle [](get-method.md) Get-Anforderungen, die sich nicht in der Warteschlange befinden ( Get-Methode, bei der **der Queue-Parameter** auf **False festgelegt ist).**<br/> "**Move**" <br/> So beenden Sie alle [**MoveTo-Anforderungen**](moveto-method.md) in der Warteschlange.<br/> "**Play**" <br/> So beenden Sie alle [**Play-Anforderungen in**](play-method.md) der Warteschlange.<br/> "**Speak**" <br/> So beenden Sie alle [**Speak-Anforderungen in**](speak-method.md) der Warteschlange.<br/> |
 
 
 
@@ -41,11 +41,11 @@ Beendet alle Animations Anforderungen oder angegebenen Anforderungs Typen für d
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den **Typparameter** nicht festlegen, hält der Server alle Animationen für das Zeichen an, einschließlich Warteschlangen und nicht in die Warteschlange eingereihte [**Get**](get-method.md) -Anforderungen, und löscht seine Animations Warteschlange. Außerdem wird die Wiedergabe eines Zeichens zum Ausblenden oder Einblenden der Animation angehalten.
+Wenn Sie den **Type-Parameter** nicht festlegen, beendet der Server alle Animationen für [](get-method.md) das Zeichen, einschließlich Get-Anforderungen in der Warteschlange und nicht in der Warteschlange, und entfernt seine Animationswarteschlange. Außerdem wird die Wiedergabe der Animation "Hiding" oder "Showing" eines Zeichens beendet.
 
-Diese Methode generiert kein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt.
+Diese Methode generiert kein [**Request-Objekt.**](/windows/desktop/lwef/the-request-object)
 
 ## <a name="see-also"></a>Weitere Informationen
 

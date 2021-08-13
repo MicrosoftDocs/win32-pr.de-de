@@ -3,56 +3,56 @@ title: Beliebige Streams
 description: Beliebige Streams
 ms.assetid: 81fd3b07-7cf2-4013-97ed-9718142ca4c3
 keywords:
-- Windows Media-Format-SDK, beliebige Streams
+- Windows Medienformat-SDK, beliebige Streams
 - Advanced Systems Format (ASF), beliebige Streams
 - ASF (Advanced Systems Format), beliebige Streams
-- Windows Media-Format-SDK, Streams
+- Windows Medienformat-SDK, Streams
 - Advanced Systems Format (ASF), Streams
 - ASF (Advanced Systems Format), Streams
-- beliebige Streams
+- Beliebige Streams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe28a3b30e0f711c69998b78c81fc1e745fe6360
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1b2cc0587758af8dfa3d4ee05b1a51943a89684629fe2182f5a33fdabbdb68e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118434716"
 ---
 # <a name="arbitrary-streams"></a>Beliebige Streams
 
-Zusätzlich zu den Audio-und Videostreams und bildstreams kann eine ASF-Datei Datenströme aufnehmen, die eine Vielzahl von Daten enthalten. Die Objekte des Windows Media SDK-SDKs unterstützen Skriptstreams, Datei Übertragungsdaten Ströme, Webstreams und beliebige Datenströme. Alle diese Streamtypen sind willkürlich, d. h., es erfolgt keine Datenüberprüfung durch das Lese Objekt. Wenn Sie Streams dieser Typen in Ihre Dateien einschließen, achten Sie darauf, dass die Leseanwendung eine Validierung oder Datenüberprüfung durchführt, um sicherzustellen, dass Ihre Inhalte nicht beschädigt oder absichtlich von einem böswilligen Drittanbieter manipuliert wurden.
+Zusätzlich zu Audio- und Videostreams und Bildstreams kann eine ASF-Datei Datenströme aufnehmen, die eine Vielzahl von Daten enthalten. Die Objekte des Windows Media Format SDK bieten Unterstützung für Skriptstreams, Dateiübertragungsdatenströme, Webstreams und beliebige Datenströme. Alle diese Streamtypen sind willkürlich, d. h., das Leseobjekt führt keine Datenvalidierung durch. Wenn Sie Streams dieser Typen in Ihre Dateien einschließen, stellen Sie sicher, dass die Leseanwendung eine Überprüfung oder Datenüberprüfung durchführt, um sicherzustellen, dass Ihre Inhalte nicht beschädigt oder absichtlich von einem böswilligen Drittanbieter beschädigt wurden.
 
-Obwohl die Objekte dieses SDK die Daten in beliebigen Streams nicht überprüfen oder validieren, werden verschiedene Typen von beliebigen Datenströmen nativ unterstützt. In der folgenden Tabelle sind die vordefinierten willkürlichen Streamtypen aufgeführt. Skript Datenströme werden ebenfalls unterstützt, werden jedoch separat im Abschnitt [Skript Befehle](script-commands.md) behandelt. Weitere Informationen zum Erstellen von benutzerdefinierten Typen finden Sie unter [benutzerdefinierte beliebige Datenströme](custom-arbitrary-data-streams.md).
+Obwohl die Objekte dieses SDK Daten in beliebigen Datenströmen nicht überprüfen oder überprüfen, werden verschiedene Typen beliebiger Datenströme nativ unterstützt. In der folgenden Tabelle sind die vordefinierten beliebigen Streamtypen aufgeführt. Skriptstreams werden ebenfalls unterstützt, aber separat im Abschnitt [Skriptbefehle](script-commands.md) erläutert. Weitere Informationen zum Erstellen benutzerdefinierter Typen finden Sie unter [Custom Arbitrary Data Streams](custom-arbitrary-data-streams.md).
 
 
 
-| Beliebiger Typ                   | BESCHREIBUNG                                                       |
+| Beliebiger Typ                   | Beschreibung                                                       |
 |----------------------------------|-------------------------------------------------------------------|
-| [Textstreams](text-streams.md) | Enthalten Text Zeichenfolgen.                                             |
-| [Dateistreams](file-streams.md) | Enthalten mindestens eine Datendatei.                                   |
-| [Webstreams](web-streams.md)   | Enthalten Datendateien, die der zwischengespeicherten Version von Webseiten entsprechen. |
+| [Textstreams](text-streams.md) | Enthält Textzeichenfolgen.                                             |
+| [Datei Streams](file-streams.md) | Enthält mindestens eine Datendatei.                                   |
+| [Web Streams](web-streams.md)   | Enthalten Datendateien, die der zwischengespeicherten Version von Webseiten entsprechen. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Funktionen der ASF-Datei**](asf-file-features.md)
+[**ASF-Dateifeatures**](asf-file-features.md)
 </dt> <dt>
 
-[**Audiodaten und Videostreams**](audio-and-video-streams.md)
+[**Audio- und Video-Streams**](audio-and-video-streams.md)
 </dt> <dt>
 
 [**Konfigurieren beliebiger Streamtypen**](configuring-arbitrary-stream-types.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,23 +1,23 @@
 ---
-description: In der Praxis ist die Struktur einer von der folgenden Syntax gezeigten CMC-Anforderung relativ komplex, da Sie häufig eine Struktur von Anforderungen enthält.
+description: In der Praxis ist die Struktur einer CMC-Anforderung, die in der folgenden Syntax dargestellt wird, relativ komplex, da sie häufig geschachtelte Anforderungen enthält.
 ms.assetid: faeee338-bce4-4b35-9be9-72a6568fa259
 title: CMC-Attribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e6778575a9359ad5b8764528fb0351b68efc1e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b98e30c257234ebee864a1749ceecee7b79e25a9e11c9f1f190c60f3154ef64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118902063"
 ---
 # <a name="cmc-attributes"></a>CMC-Attribute
 
-In der Praxis ist die Struktur einer von der folgenden Syntax gezeigten CMC-Anforderung relativ komplex, da Sie häufig eine Struktur von Anforderungen enthält. Beispielsweise kann eine CMC-Anforderung NULL oder eine PKCS \# 10-Anforderung in einer **taggedrequest** -Sequenz enthalten, und Sie kann 0 (null) oder eine PKCS \# 7-Nachricht in einer **taggedcontentinfo** -Sequenz enthalten. Jede geduckte PKCS \# 7-Nachricht kann eine CMC-Anforderung enthalten, die wiederum mehr Anforderungen enthalten kann. Die Anzahl der Schachtelungs Ebenen ist theoretisch unbegrenzt, aber die Zertifizierungsstelle (Certification Authority, ca) ist in der Regel so konfiguriert, dass die Größe einer Anforderung beschränkt wird. Attribute können auf die Anforderungen der obersten Ebene oder auf die in der Anforderung verwendeten Anforderungen angewendet werden. Dies wird in den folgenden Abschnitten erläutert.
+In der Praxis ist die Struktur einer CMC-Anforderung, die in der folgenden Syntax dargestellt wird, relativ komplex, da sie häufig geschachtelte Anforderungen enthält. Beispielsweise kann eine CMC-Anforderung null oder eine PKCS \# 10-Anforderung in einer **TaggedRequest-Sequenz** enthalten, und sie kann null oder eine PKCS \# 7-Nachricht in einer **TaggedContentInfo-Sequenz** enthalten. Jede geschachtelte PKCS \# 7-Nachricht kann eine CMC-Anforderung enthalten, die wiederum weitere Anforderungen enthalten kann. Die Anzahl der Schachtelungsebenen ist theoretisch unbegrenzt, aber die Zertifizierungsstelle ist in der Regel so konfiguriert, dass die Größe einer Anforderung begrenzt wird. Attribute können auf die Anforderung der obersten Ebene oder auf die geschachtelten Anforderungen angewendet werden. Dies wird in den folgenden Abschnitten erläutert.
 
-## <a name="cmcdata-structure"></a>Cmcdata-Struktur
+## <a name="cmcdata-structure"></a>CMCData-Struktur
 
-Eine CMC-Anforderung enthält Sequenzen von **taggedattribute**-, **taggedrequest**-und **taggedcontentinfo** ASN. 1-Strukturen.
+Eine CMC-Anforderung enthält Sequenzen der ASN.1-Strukturen **TaggedAttribute,** **TaggedRequest** und **TaggedContentInfo.**
 
 ``` syntax
 CmcData ::= SEQUENCE 
@@ -56,9 +56,9 @@ EncodedObjectID ::= OBJECT IDENTIFIER
 AttributeSetValue ::= SET OF ANY
 ```
 
-## <a name="taggedattribute-structure"></a>Taggedattribute-Struktur
+## <a name="taggedattribute-structure"></a>TaggedAttribute-Struktur
 
-Attribute werden in eine Anforderung eines CMC-Zertifikats eingefügt, indem Sie der **taggedattribute-Auflistung** hinzugefügt werden. Jede Struktur in der Auflistung enthält eine ganzzahlige ID, eine ASN. 1-Objekt Kennung (OID) und einen Satz von Werten. Folgende Werte sind möglich:
+Attribute werden in eine CMC-Zertifikatanforderung eingeschlossen, indem sie der **TaggedAttribute-Auflistung** hinzugefügt werden. Jede Struktur in der Auflistung enthält eine ganzzahlige ID, einen ASN.1-Objektbezeichner (OID) und einen Satz von Werten. Die möglichen Werte können wie folgt sein.
 
 ``` syntax
 CmcAddAttributes ::= SEQUENCE 
@@ -98,25 +98,25 @@ TransactID ::= OCTET STRING
 RegInfo ::= OCTET STRING
 ```
 
-## <a name="cmcaddattributes"></a>Cmcaddattributes
+## <a name="cmcaddattributes"></a>CMCAddAttributes
 
-Wenn die Attribute in dieser Struktur auf eine geduckte PKCS \# 10-Anforderung zutreffen, enthält das Feld **certreferences** die **bodypartid** , die die Anforderung identifiziert. Wenn die Attribute auf eine schsted CMC-Anforderung angewendet werden, enthält das Feld " **pkidatareferenzierung** " die **bodypartid** der Anforderung. Derzeit darf nur eines dieser Felder ungleich NULL sein. Die Attribute, die eingeschlossen werden können, sind im Thema [unterstützte Attribute](supported-attributes.md) aufgeführt.
+Wenn die Attribute in dieser Struktur für eine geschachtelte PKCS \# 10-Anforderung gelten, enthält das Feld **certReferences** die **BodyPartID,** die die Anforderung identifiziert. Wenn die Attribute für eine geschachtelte CMC-Anforderung gelten, enthält das Feld **pkiDataReference** die **BodyPartID** der Anforderung. Derzeit kann nur eines dieser Felder ungleich 0 (null) sein. Die Attribute, die eingeschlossen werden können, sind im Thema [Unterstützte Attribute](supported-attributes.md) aufgeführt.
 
-## <a name="cmcaddextensions"></a>Cmcaddextensions
+## <a name="cmcaddextensions"></a>CmcAddExtensions
 
-Diese Struktur kann X. 509 Version 3-Erweiterungen und Erweiterungen enthalten, die von Microsoft definiert werden. Dieses Attribut wird mithilfe der [**IX509AttributeExtensions**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeextensions) -Schnittstelle definiert. Wenn die Erweiterungen auf eine geduckte PKCS \# 10-Anforderung angewendet werden, enthält das Feld **certreferences** die **bodypartid** , die die Anforderung identifiziert. Wenn die Erweiterungen auf eine schsted CMC-Anforderung angewendet werden, enthält das Feld " **pkidatareferenzierung** " die **bodypartid** der Anforderung. Derzeit darf nur eines dieser Felder ungleich NULL sein.
+Diese Struktur kann X.509 Version 3-Erweiterungen sowie von Microsoft definierte Erweiterungen enthalten. Dieses Attribut wird mithilfe der [**IX509AttributeExtensions-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeextensions) definiert. Wenn die Erweiterungen für eine geschachtelte PKCS \# 10-Anforderung gelten, enthält das Feld **certReferences** die **BodyPartID,** die die Anforderung identifiziert. Wenn die Erweiterungen für eine geschachtelte CMC-Anforderung gelten, enthält das Feld **pkiDataReference** die **BodyPartID** der Anforderung. Derzeit kann nur eines dieser Felder ungleich 0 (null) sein.
 
-## <a name="sendernonce"></a>Sendernonce
+## <a name="sendernonce"></a>SenderNonce
 
-Bei Nonce handelt es sich um zufällige oder pseudo zufällige Binärdaten, die in eine Zertifikat Anforderungs-und Antwort Transaktion eingeschlossen werden können, um sicherzustellen, dass es sich bei der Antwort oder Anforderung nicht um eine Wiederholung einer vorherigen Nachricht handelt. Weitere Informationen finden Sie unter der [**Sendernonce**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_sendernonce) -Eigenschaft.
+Eine Nonce sind zufällige oder pseudozufallsfreie binäre Daten, die in eine Zertifikatanforderung und eine Antworttransaktion eingeschlossen werden können, um sicherzustellen, dass die Antwort oder Anforderung keine Wiederholung einer vorherigen Nachricht ist. Weitere Informationen finden Sie in der [**SenderNonce-Eigenschaft.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_sendernonce)
 
-## <a name="transactid"></a>Transactid
+## <a name="transactid"></a>TransactID
 
-Eine Roundtrip-Zertifikatanforderungs-und-Antwort Transaktion kann mithilfe eines Bezeichners nachverfolgt werden. Der Client generiert eine Transaktions-ID und behält sie bei, bis das Zertifikat oder die Registrierungsstelle mit einer Nachricht antwortet, mit der die Transaktion abgeschlossen wird. Die Antwort enthält den Bezeichner. Weitere Informationen finden Sie unter der [**transaktionid**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_transactionid) -Eigenschaft.
+Eine Roundtrip-Zertifikatanforderung und eine Antworttransaktion können mithilfe eines Bezeichners nachverfolgt werden. Der Client generiert eine Transaktions-ID und behält sie bei, bis das Zertifikat oder die Registrierungsstelle mit einer Meldung antwortet, die die Transaktion abschließt. Die Antwort enthält den Bezeichner. Weitere Informationen finden Sie in der [**TransactionId-Eigenschaft.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_transactionid)
 
-## <a name="reginfo"></a>Reginfo
+## <a name="reginfo"></a>RegInfo
 
-Dieses Attribut kann verwendet werden, um alle Registrierungsinformationen zu enthalten, die vom Client in der CMC-Anforderung abgelegt werden. Der Attribut Wert ist eine Zeichenfolge, die verketteten Name-Wert-Paaren enthält. Weitere Informationen finden Sie unter der [**NameValuePairs**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_namevaluepairs) -Eigenschaft.
+Dieses Attribut kann verwendet werden, um alle Registrierungsinformationen zu enthalten, die der Client für die CMC-Anforderung ausschließt. Der Attributwert ist eine Zeichenfolge, die verkettete Name-Wert-Paare enthält. Weitere Informationen finden Sie unter der [**NameValuePairs-Eigenschaft.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_namevaluepairs)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

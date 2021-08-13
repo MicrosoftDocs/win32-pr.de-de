@@ -1,29 +1,29 @@
 ---
-description: Legt den Schwellenwert fest, bei dem der Encoder ein Video Feld als redundant ansieht.
+description: Legt den Schwellenwert fest, bei dem der Encoder ein Videofeld redundant betrachtet.
 ms.assetid: db6c2f0e-f451-4d2d-984f-b507083e8358
-title: Avencvideoinverabtelecinethreshold-Eigenschaft (codecapi. h)
+title: AVEncVideoInverseTelecineThreshold-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3427a8ff1491277c2e36640560acf728c0ef7208
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 297dae601c5112714272a2d1c2e0b1a7ebeee5faa3aa2fabebc32e79c1745c9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119275179"
 ---
-# <a name="avencvideoinversetelecinethreshold-property"></a>Avencvideoinverabtelecinethreshold (Eigenschaft)
+# <a name="avencvideoinversetelecinethreshold-property"></a>AVEncVideoInverseTelecineThreshold (Eigenschaft)
 
-Legt den Schwellenwert fest, bei dem der Encoder ein Video Feld als redundant ansieht.
+Legt den Schwellenwert fest, bei dem der Encoder ein Videofeld redundant betrachtet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoinverabtelecinethreshold**
+**CODECAPI \_ AVEncVideoInverseTelecineThreshold**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
@@ -33,16 +33,16 @@ Der Wert dieser Eigenschaft hat den folgenden Bereich.
 
 | Wert | BESCHREIBUNG                                                    |
 |-------|----------------------------------------------------------------|
-| 0     | Der Encoder ist weniger wahrscheinlich, dass die Videofelder redundant sind. |
-| 100   | Der Encoder ist eher in der Regel redundant, dass die Videofelder redundant sind. |
+| 0     | Der Encoder betrachtet Videofelder weniger wahrscheinlich als redundant. |
+| 100   | Der Encoder betrachtet Videofelder eher als redundant. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie diese Eigenschaft fest, wenn der Encoder Inverse Telecine mit einer analogen Videoquelle ausführt.
+Legen Sie diese Eigenschaft fest, wenn der Encoder eine umgekehrte Telecine mit einer analogen Videoquelle vorsteuert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,20 +50,20 @@ Legen Sie diese Eigenschaft fest, wenn der Encoder Inverse Telecine mit einer an
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

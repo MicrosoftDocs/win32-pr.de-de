@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ collectedcollections-Klasse ist eine Aggregations Zuordnung, die eine Auflistung verwalteter System Elemente (MSE) darstellt, die in einer Auflistung von MSES enthalten sind.
+description: Die CIM CollectedCollections-Klasse ist eine Aggregationsassoz, die eine Auflistung von \_ verwalteten Systemelementen (Managed System Elements, MSE) darstellt, die in einer Auflistung von MSEs enthalten sind.
 ms.assetid: 7baaf429-1211-4545-ace2-c6312d53c0f6
 ms.tgt_platform: multiple
 title: CIM_CollectedCollections-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e592c7799efc8c280d4cd64c2b54ed8a3ea328f6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cecac67d96aba6b8ad8c5937f098eaef312af89b80c28febaa8073c5f7be26f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322290"
 ---
-# <a name="cim_collectedcollections-class"></a>CIM \_ collectedcollections-Klasse
+# <a name="cim_collectedcollections-class"></a>CIM \_ CollectedCollections-Klasse
 
-Die **CIM \_ collectedcollections** -Klasse ist eine Aggregations Zuordnung, die eine Auflistung verwalteter System Elemente (MSE) darstellt, die in einer Auflistung von MSES enthalten sind.
+Die **CIM \_ CollectedCollections-Klasse** ist eine Aggregationsassoz, die eine Auflistung von verwalteten Systemelementen (Managed System Elements, MSE) darstellt, die in einer Auflistung von MSEs enthalten sind.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,13 +46,13 @@ class CIM_CollectedCollections
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ collectedcollections** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ CollectedCollections-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ collectedcollections** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ CollectedCollections-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -69,7 +69,7 @@ Verweis auf die "höhere Ebene" oder das übergeordnete Element in der Aggregati
 
 </dd> <dt>
 
-**Collectionincollection**
+**CollectionInCollection**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ CollectionOfMSEs**
@@ -78,15 +78,15 @@ Datentyp: **CIM \_ CollectionOfMSEs**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf die **Sammlung**"gesammelt".
+Verweis auf die "gesammelte" **Auflistung**.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

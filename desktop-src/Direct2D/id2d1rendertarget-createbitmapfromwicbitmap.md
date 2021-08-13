@@ -1,9 +1,9 @@
 ---
-title: ID2D1RenderTarget-Methode (Methode)
-description: Erstellt ein ID2D1Bitmap-Element, indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.
+title: ID2D1RenderTarget CreateBitmapFromWicBitmap-Methoden
+description: Erstellt eine ID2D1Bitmap, indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.
 ms.assetid: 463fc2f9-8ec6-47e8-8d48-a9015616e656
 keywords:
-- Methoden der Methode "Direct2D"
+- CreateBitmapFromWicBitmap-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
-ms.openlocfilehash: 23ad055beab9f24c39f032a3e28456c231480c68
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d023db69afdc3cc69535d310cb21fb841c2f1bbe981df98e0aaa22074a46db0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119304340"
 ---
-# <a name="id2d1rendertargetcreatebitmapfromwicbitmap-methods"></a>ID2D1RenderTarget:: kreatebitmapfromwicbitmap-Methoden
+# <a name="id2d1rendertargetcreatebitmapfromwicbitmap-methods"></a>ID2D1RenderTarget::CreateBitmapFromWicBitmap-Methoden
 
-Erstellt ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Element, indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.
+Erstellt eine [**ID2D1Bitmap,**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -30,19 +30,19 @@ Erstellt ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Ele
 
 | Methode                                                                                                                                                                                                              | BESCHREIBUNG                                                                                                                         |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
-| [**"Kreatebitmapfromwicbitmap" (IWICBitmapSource \* , ID2D1Bitmap \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_id2d1bitmap))                                                       | Erstellt ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Element, indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.<br/>  |
-| [**"Kreatebitmapfromwicbitmap" (IWICBitmapSource \* , D2D1 \_ Bitmap \_ Properties&, ID2D1Bitmap \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties1__id2d1bitmap1))  | Erstellt ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Element, indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.<br/> |
-| [**"Kreatebitmapfromwicbitmap" (IWICBitmapSource \* , D2D1 \_ Bitmap \_ Properties \* , ID2D1Bitmap \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties_id2d1bitmap)) | Erstellt ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Element, indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.<br/> |
+| [**CreateBitmapFromWicBitmap(IWICBitmapSource \* ,ID2D1Bitmap \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_id2d1bitmap))                                                       | Erstellt eine [**ID2D1Bitmap,**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.<br/>  |
+| [**CreateBitmapFromWicBitmap(IWICBitmapSource \* ,D2D1 \_ BITMAP PROPERTIES \_&,ID2D1Bitmap \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties1__id2d1bitmap1))  | Erstellt eine [**ID2D1Bitmap,**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.<br/> |
+| [**CreateBitmapFromWicBitmap(IWICBitmapSource \* ,D2D1 \_ BITMAP PROPERTIES \_ \* ,ID2D1Bitmap \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties_id2d1bitmap)) | Erstellt eine [**ID2D1Bitmap,**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) indem die angegebene WIC-Bitmap (Microsoft Windows Imaging Component) kopiert wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Direct2D ein WIC-Image laden kann, muss es in ein unterstütztes Pixel Format und einen Alpha-Modus konvertiert werden. Eine Liste der unterstützten Pixel Formate und Alpha Modi finden Sie [unter Unterstützte Pixel Formate und Alpha-Modi](supported-pixel-formats-and-alpha-modes.md).
+Damit Direct2D ein WIC-Bild laden kann, muss es in ein unterstütztes Pixelformat und einen Alphamodus konvertiert werden. Eine Liste der unterstützten Pixelformate und Alphamodi finden Sie unter [Unterstützte Pixelformate und Alphamodi.](supported-pixel-formats-and-alpha-modes.md)
 
 ## <a name="examples"></a>Beispiele
 
-Beispiele finden Sie unter Gewusst [wie: Laden einer Bitmap aus einer Datei](how-to-load-a-direct2d-bitmap-from-a-file.md) und Gewusst [wie: Laden einer Bitmap aus einer Ressource](how-to-load-a-bitmap-from-a-resource.md).
+Beispiele finden Sie unter [How to Load a Bitmap from a File (Laden einer Bitmap aus einer Datei)](how-to-load-a-direct2d-bitmap-from-a-file.md) und How to Load a Bitmap from a Resource [(Laden einer Bitmap aus einer Ressource).](how-to-load-a-bitmap-from-a-resource.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Beispiele finden Sie unter Gewusst [wie: Laden einer Bitmap aus einer Datei](how
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: StartBoundary (triggerbasetype)-Element
-description: Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an.
+title: StartBoundary (triggerBaseType)-Element
+description: Gibt das Datum und die Uhrzeit der Aktivierung des Triggers an.
 ms.assetid: 95a62ae5-4eba-49df-a25f-0d1181772833
 keywords:
-- StartBoundary-Element Taskplaner
+- StartBoundary-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8d6adf90de2f3b199f98737996fe732f342787b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 32b91557d812888d9bb6e970be37703537bb3d7645c8a0422df19d5d5fe37a5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119401964"
 ---
-# <a name="startboundary-triggerbasetype-element"></a>StartBoundary (triggerbasetype)-Element
+# <a name="startboundary-triggerbasetype-element"></a>StartBoundary (triggerBaseType)-Element
 
-Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an.
+Gibt das Datum und die Uhrzeit der Aktivierung des Triggers an.
 
 ``` syntax
 <xs:element name="StartBoundary"
@@ -30,7 +30,7 @@ Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an.
  />
 ```
 
-Das **StartBoundary** -Element wird durch den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Typ definiert.
+Das **StartBoundary-Element** wird durch den komplexen [**TriggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,27 +38,27 @@ Das **StartBoundary** -Element wird durch den komplexen [**triggerbasetype**](ta
 
 | Element                                                                                     | Abgeleitet von                                                                               | BESCHREIBUNG                                                                                  |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [**Boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen-Fehler an, mit dem eine Aufgabe gestartet wird, wenn das System gestartet wird.<br/>                 |
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/>   |
-| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.<br/>                |
-| [**Idle-Auslösung**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idletriggertype**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der Computer in den Leerlauf wechselt.<br/> |
-| [**Logonauslöst**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen-Vorgang an, der einen Task startet, wenn sich ein Benutzer anmeldet.<br/>                       |
-| [**Registration-Auslösers**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.<br/>               |
-| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timetriggertype**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird<br/>             |
+| [**BootTrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn das System gestartet wird.<br/>                 |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/>   |
+| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/>                |
+| [**IdleTrigger**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idleTriggerType**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Computer in den Leerlaufzustand übergeht.<br/> |
+| [**LogonTrigger**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logonTriggerType**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn sich ein Benutzer anmeldet.<br/>                       |
+| [**RegistrationTrigger**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn die Aufgabe registriert wird.<br/>               |
+| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timeTriggerType**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Trigger aktiviert wird.<br/>             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **<StartBoundary>** -Element ist ein erforderliches Element für Zeit-und Kalender Trigger ( [**<TimeTrigger>**](taskschedulerschema-timetrigger-triggergroup-element.md) und [**<CalendarTrigger>**](taskschedulerschema-calendartrigger-triggergroup-element.md) ).
+Das **<StartBoundary>** -Element ist ein erforderliches Element für Zeit- und Kalendertrigger ( [**<TimeTrigger>**](taskschedulerschema-timetrigger-triggergroup-element.md) und [**<CalendarTrigger>**](taskschedulerschema-calendartrigger-triggergroup-element.md) ).
 
-Bei der Entwicklung von Skripts wird die Endgrenze mithilfe [**der Eigenschaft "" des Typs**](trigger-startboundary.md) "" von "alle Auslöse Objekte" geerbt.
+Für die Skriptentwicklung wird die Endgrenze mithilfe der [**Trigger.StartBoundary-Eigenschaft**](trigger-startboundary.md) angegeben, die von allen Triggerobjekten geerbt wird.
 
-Bei der C++-Entwicklung wird die Endgrenze mithilfe der [**i-Funktion:: StartBoundary**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_startboundary) -Eigenschaft angegeben, die von den all-auslöserschnittstellen geerbt wird.
+Für die C++-Entwicklung wird die Endgrenze mithilfe der [**ITrigger::StartBoundary-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_startboundary) angegeben, die von allen Triggerschnittstellen geerbt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein Start-Auslöserelement, das eine Start Grenze von 1. Januar 2005:8:00 Uhr definiert.
+Der folgende XML-Code definiert ein Starttriggerelement, das eine Startgrenze vom 1. Januar 2005: 8:00 Uhr definiert.
 
 
 ```XML
@@ -80,16 +80,16 @@ Der folgende XML-Code definiert ein Start-Auslöserelement, das eine Start Grenz
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

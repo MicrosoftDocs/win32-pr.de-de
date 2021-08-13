@@ -1,9 +1,9 @@
 ---
-title: TVM_ENDEDITLABELNOW Meldung (kommstrg. h)
-description: Beendet die Bearbeitung der Bezeichnung eines Struktur Ansichts Elements. Sie können diese Nachricht explizit oder mithilfe des TreeView- \_ Makros "tdeditlabelnow" senden.
+title: TVM_ENDEDITLABELNOW Meldung (Commctrl.h)
+description: Beendet die Bearbeitung der Bezeichnung eines Strukturansichtselements. Sie können diese Nachricht explizit oder mithilfe des \_ TreeView-Makros EndEditLabelNow senden.
 ms.assetid: 68de2020-9311-4958-859a-de55f5e41fcf
 keywords:
-- Windows-Steuerelemente für TVM_ENDEDITLABELNOW Meldung
+- TVM_ENDEDITLABELNOW Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f059be20560adeb8cbcb0c63a2555283f6b7051
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 18355edc8efb18ea56a39e60c68361a7ef8d72e39af644707d6d102738fd60c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119387260"
 ---
-# <a name="tvm_endeditlabelnow-message"></a>TVM- \_ Meldung "tdeditlabelnow"
+# <a name="tvm_endeditlabelnow-message"></a>TVM \_ ENDEDITLABELNOW-Nachricht
 
-Beendet die Bearbeitung der Bezeichnung eines Struktur Ansichts Elements. Sie können diese Nachricht explizit oder mithilfe des [**TreeView-Makros " \_ tdeditlabelnow**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_endeditlabelnow) " senden.
+Beendet die Bearbeitung der Bezeichnung eines Strukturansichtselements. Sie können diese Nachricht explizit oder mithilfe des [**\_ TreeView-Makros EndEditLabelNow**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_endeditlabelnow) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Beendet die Bearbeitung der Bezeichnung eines Struktur Ansichts Elements. Sie k�
 *wParam* 
 </dt> <dd>
 
-Eine Variable, die angibt, ob die Bearbeitung abgebrochen wird, ohne dass Sie in der Bezeichnung gespeichert wird. Wenn dieser Parameter **true** ist, bricht das System die Bearbeitung ab, ohne die Änderungen zu speichern. Andernfalls speichert das System die Änderungen an der Bezeichnung.
+Variable, die angibt, ob die Bearbeitung abgebrochen wird, ohne in der Bezeichnung gespeichert zu werden. Wenn dieser Parameter **TRUE** ist, bricht das System die Bearbeitung ab, ohne die Änderungen zu speichern. Andernfalls speichert das System die Änderungen an der Bezeichnung.
 
 </dd> <dt>
 
@@ -41,11 +41,11 @@ Eine Variable, die angibt, ob die Bearbeitung abgebrochen wird, ohne dass Sie in
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung bewirkt, dass der [TVN \_ endlabeledit](tvn-endlabeledit.md) -Benachrichtigungs Code an das übergeordnete Fenster des Strukturansicht-Steuer Elements gesendet wird.
+Diese Meldung bewirkt, dass der [TVN \_ ENDLABELEDIT-Benachrichtigungscode](tvn-endlabeledit.md) an das übergeordnete Fenster des Strukturansichtssteuerelements gesendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Diese Meldung bewirkt, dass der [TVN \_ endlabeledit](tvn-endlabeledit.md) -Bena
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

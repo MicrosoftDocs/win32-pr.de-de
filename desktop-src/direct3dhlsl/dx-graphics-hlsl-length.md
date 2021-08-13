@@ -1,9 +1,9 @@
 ---
 title: length
-description: Gibt die Länge des angegebenen Gleit Komma Vektors zurück.
+description: Gibt die Länge des angegebenen Gleitkommavektors zurück.
 ms.assetid: eb06c87c-d536-448e-becb-762783cc2a77
 keywords:
-- Längen-HLSL
+- length HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a7a93b0a7d225a25273a2ab4f8bf1d24656b6ee1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1d6c361a7ad16216d686ab71747354a9b1ba3184d88759ed1e994c152c7b3636
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791726"
 ---
 # <a name="length"></a>length
 
-Gibt die Länge des angegebenen Gleit Komma Vektors zurück.
+Gibt die Länge des angegebenen Gleitkommavektors zurück.
 
 
 
-| *ret* -Länge (*x*) |
+| *ret* length(*x*) |
 |-------------------|
 
 
@@ -37,9 +37,9 @@ Gibt die Länge des angegebenen Gleit Komma Vektors zurück.
 
 
 
-| Element                                                   | BESCHREIBUNG                                     |
+| Element                                                   | Beschreibung                                     |
 |--------------------------------------------------------|-------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | Der angegebene Gleit Komma Vektor.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | Der angegebene Gleitkommavektor.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Gibt die Länge des angegebenen Gleit Komma Vektors zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Gleit Komma-Skalarwert, der die Länge des *x* -Parameters darstellt.
+Ein Gleitkommaskalar, der die Länge des *x-Parameters* darstellt.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -55,23 +55,23 @@ Ein Gleit Komma-Skalarwert, der die Länge des *x* -Parameters darstellt.
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |-------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| *x*   | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any  |
-| *TZI* | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
+| *x*   | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any  |
+| *Ret* | [**Skalare**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
 
 
 
@@ -81,7 +81,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  
