@@ -1,9 +1,9 @@
 ---
-title: Splitbuttongallery. menugroups (Eigenschaft)
-description: Stellt einen Container für einen Satz von Dropdown Menü Elementen in einem splitbuttongallery-Steuerelement dar.
+title: SplitButtonGallery.MenuGroups (Eigenschaft)
+description: Stellt einen Container für einen Satz von Dropdownmenüelementen in einem SplitButtonGallery-Steuerelement dar.
 ms.assetid: e30fcf9a-488b-423a-8bc4-fccbc78f74de
 keywords:
-- Windows-Menüband "splitbuttongallery. menugroups"
+- SplitButtonGallery.MenuGroups-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72176e7d7e79b076c3a7cf4d1fd847aa4f4e0561
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 931a66ffca192a1655f3eeffc405c4c02c8e298c28fe9cb9d0d8c6612e29d793
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119441719"
 ---
-# <a name="splitbuttongallerymenugroups-property"></a>Splitbuttongallery. menugroups (Eigenschaft)
+# <a name="splitbuttongallerymenugroups-property"></a>SplitButtonGallery.MenuGroups (Eigenschaft)
 
-Stellt einen Container für einen Satz von Dropdown Menü Elementen in einem [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Steuerelement dar.
+Stellt einen Container für einen Satz von Dropdownmenüelementen in einem [**SplitButtonGallery-Steuerelement**](windowsribbon-element-splitbuttongallery.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,9 +39,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                         | BESCHREIBUNG                                     |
+| Element                                                         | Beschreibung                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal vorkommen<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
 
 
@@ -51,21 +51,21 @@ Es gibt keine Attribute.
 
 | Element                                                                           |
 |-----------------------------------------------------------------------------------|
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Muss für jedes [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element genau einmal auftreten.
+Muss genau einmal für jedes [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das **splitbuttongallery. menugroups** -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für das **SplitButtonGallery.MenuGroups-Element** veranschaulicht.
 
-In diesem Code Abschnitt wird die Deklaration des **splitbuttongallery. menugroups** -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die **Steuerelementdeklaration SplitButtonGallery.MenuGroups.**
 
 
 ```XML
@@ -98,19 +98,19 @@ In diesem Code Abschnitt wird die Deklaration des **splitbuttongallery. menugrou
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Steuerelement "Split Button Gallery"](windowsribbon-controls-splitbuttongallery.md)
+[Split Button Gallery-Steuerelement](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> </dl>
 
  

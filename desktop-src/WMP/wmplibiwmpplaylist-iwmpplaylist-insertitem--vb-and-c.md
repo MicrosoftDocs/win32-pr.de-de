@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe InsertItem-Methode
-description: Die InsertItem-Methode fügt ein Medien Element an einem angegebenen Speicherort in eine Wiedergabeliste ein.
+title: IWMPPlaylist insertItem-Methode
+description: Die insertItem-Methode fügt ein Medienelement an einer angegebenen Position in einer Wiedergabeliste ein.
 ms.assetid: 6e472f0a-13df-41d9-8e6f-8430d87fe978
 keywords:
-- InsertItem-Methode, Windows-Media Player
-- InsertItem-Methode, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, InsertItem-Methode
+- insertItem-Methode Windows Media Player
+- insertItem-Methode Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , insertItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1ef167a5f3931f34d4cd6fb91b3d044affb9484
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 10717c0891443aaa663b748be6a0cb57e04e58b96beb91db6b02b2f6a4b5b621
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464930"
 ---
-# <a name="iwmpplaylistinsertitem-method"></a>Iwmpwiedergabe:: InsertItem-Methode
+# <a name="iwmpplaylistinsertitem-method"></a>IWMPPlaylist::insertItem-Methode
 
-Die **InsertItem** -Methode fügt ein Medien Element an einem angegebenen Speicherort in eine Wiedergabeliste ein.
+Die **insertItem-Methode** fügt ein Medienelement an einer angegebenen Position in einer Wiedergabeliste ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Implements IWMPPlaylist.insertItem
 
 <dl> <dt>
 
-*Lindex* \[ in\]
+*lIndex* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** , bei dem es sich um den NULL basierten Index handelt, an dem das Medien Element in die Wiedergabeliste eingefügt wird.
+Eine **System.Int32-Datei,** bei der es sich um den nullbasierten Index handelt, an dem das Medienelement in die Wiedergabeliste eingefügt wird.
 
 </dd> <dt>
 
-*piwmpmedia* \[ in\]
+*pIWMPMedia* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle, die das einzufügende Medien Element darstellt.
+Eine **WMPLib.IWMPMedia-Schnittstelle,** die das einzufügende Medienelement darstellt.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Eine **WMPLib. iwmpmedia** -Schnittstelle, die das einzufügende Medien Element 
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für alle Medienelemente nach dem eingefügten Element werden die Indizes um eins erweitert.
+Für alle Medienelemente nach dem eingefügten Element werden die Indizes um eins erhöht.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,23 +85,23 @@ Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. RemoveItem (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-removeitem--vb-and-c.md)
+[**IWMPPlaylist.removeItem (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-removeitem--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: ms_union-Attribut
-description: Das Schlüsselwort \ MS \_ Union \ wird zum Steuern der NDR-Ausrichtung von nicht gekapselten Unions verwendet.
+description: Das Schlüsselwort \ms \_ union\ wird verwendet, um die NDR-Ausrichtung nicht kapselter Unions zu steuern.
 ms.assetid: 20ac2985-4552-4224-b03b-07378a2c0cdf
 keywords:
-- Ms_union Attribut-Mittel l
+- ms_union MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7ad9b750027163aef806f5a66e51f87874a0ad2
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 860054fe26657c4028c172da08e0c56dbf6ae257ffc98e79905f8420b54e6878
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118642798"
 ---
-# <a name="ms_union-attribute"></a>MS- \_ Union-Attribut
+# <a name="ms_union-attribute"></a>ms \_ union-Attribut
 
-Das Schlüsselwort " \[ **MS \_ Union** " \] wird zum Steuern der NDR-Ausrichtung von nicht gekapselten Unions verwendet.
+Das Schlüsselwort \[ **ms \_ union** \] wird verwendet, um die NDR-Ausrichtung von nicht kapselten Unions zu steuern.
 
 ``` syntax
 [
@@ -40,39 +40,39 @@ interface interface-name
 
 <dl> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Gibt den Namen der Schnittstelle an.
 
 </dd> <dt>
 
-*Prozedurtyp* 
+*procedure-type* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Prozedur an, auf die das Attribut angewendet wird.
 
 </dd> <dt>
 
-*Prozedur Name* 
+*Prozedurname* 
 </dt> <dd>
 
 Gibt den Namen der Prozedur an.
 
 </dd> <dt>
 
-*param-Liste* 
+*param-list* 
 </dt> <dd>
 
 Gibt die Parameterliste der Prozedur an, die möglicherweise leer ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diesen Switch oder dieses Attribut niemals mit neuen Schnittstellen. Dies ist nur ein abwärts Kompatibilitäts Feature. Der mittlerer l-Compiler in dieser Version von Microsoft RPC spiegelt das Verhalten des OSF-DCE-IDL-Compilers für nicht gekapselte Unions wider. Da jedoch frühere Versionen des Mittel l-Compilers dies nicht getan haben, bietet der [**/MS \_ Union**](-ms-union.md) -Switch Kompatibilität mit Schnittstellen, die auf früheren Versionen des Mittel l-Compilers erstellt wurden.
+Verwenden Sie diesen Schalter oder dieses Attribut niemals mit neuen Schnittstellen. Dies ist nur eine Abwärtskompatibilitätsfunktion. Der MIDL-Compiler in dieser Version von Microsoft RPC spiegelt das Verhalten des OSF-DCE-IDL-Compilers für nicht kapselte Unions. Da frühere Versionen des MIDL-Compilers dies jedoch nicht getan haben, bietet der Union-Schalter [**/ms \_**](-ms-union.md) Kompatibilität mit Schnittstellen, die auf früheren Versionen des MIDL-Compilers erstellt wurden.
 
-Die **MS- \_ Union** -Funktion kann als idl-Schnittstellen Attribut, IDL-Typattribut oder als Befehls Zeilenschalter ( [**/MS \_ Union**](-ms-union.md)) verwendet werden.
+Das **ms \_ union-Feature** kann als IDL-Schnittstellenattribut, als IDL-Typattribut oder als Befehlszeilenschalter ( [**/ms union ) verwendet \_ werden.**](-ms-union.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -84,15 +84,15 @@ Die **MS- \_ Union** -Funktion kann als idl-Schnittstellen Attribut, IDL-Typattr
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[Schnittstellendefinitionsdatei (IDL)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**/MS- \_ Union**](-ms-union.md)
+[**/ms \_ union**](-ms-union.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

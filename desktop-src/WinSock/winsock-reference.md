@@ -1,28 +1,28 @@
 ---
-description: Navigationsseite für den Windows Sockets (Winsock)-Referenzbereich.
+description: Windows Sockets (Winsock) – Navigationsseite des Referenzabschnitts.
 ms.assetid: baae2bf9-f505-4365-b60e-e3247a0218c8
 title: Winsock-Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ef3d681d639c443182ae6d6b612dd4e2b27508b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86d86e33b7399bddca65e1c50675e0a50d2c9d096be1d2d2f0f0cde4f2279b4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118558872"
 ---
 # <a name="winsock-reference"></a>Winsock-Referenz
 
-Die Winsock-Referenz ist in die folgenden Abschnitte unterteilt:
+Der Winsock-Verweis ist in die folgenden Abschnitte unterteilt:
 
 -   [**Socketoptionen**](socket-options.md)
--   [**Winsock IOCTLs**](winsock-ioctls.md)
--   [Winsock-Anhänge](winsock-annexes.md)
+-   [**Winsock-IOCTLs**](winsock-ioctls.md)
+-   [Winsock-1600](winsock-annexes.md)
 -   [Winsock-Enumerationen](winsock-enumerations.md)
 -   [Winsock-Funktionen](winsock-functions.md)
 -   [Winsock-Strukturen](winsock-structures.md)
 -   [Winsock SPI](winsock-spi.md)
--   [Windows Sockets-Fehler Codes](windows-sockets-error-codes-2.md)
+-   [Windows Sockets-Fehlercodes](windows-sockets-error-codes-2.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -37,7 +37,7 @@ Die Winsock-Referenz ist in die folgenden Abschnitte unterteilt:
 [Neuerungen bei Windows Sockets](what-s-new-for-windows-sockets-2.md)
 </dt> <dt>
 
-[Winsock-Netzwerkprotokoll Unterstützung in Windows](network-protocol-support-in-windows.md)
+[Winsock-Netzwerkprotokollunterstützung in Windows](network-protocol-support-in-windows.md)
 </dt> </dl>
 
  

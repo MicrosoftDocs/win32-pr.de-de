@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Controller Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die \_ CIM-Controllerklasse macht die folgenden Methoden verfügbar.
 ms.assetid: 4FF60D4B-64E5-4242-8260-78AE14855B37
 ms.tgt_platform: multiple
-title: CIM_Controller Methoden
+title: CIM_Controller-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef17eaf2c8bd22863f0146163e74081bd793de15
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ce98abed2162b288b94ca3ddeb79c8daad9a06749586aa1038b70930412ec80f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439120"
 ---
-# <a name="cim_controller-methods"></a>CIM- \_ Controller Methoden
+# <a name="cim_controller-methods"></a>\_CIM-Controllermethoden
 
-Die [**CIM- \_ Controller**](cim-controller.md) Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**\_ CIM-Controllerklasse**](cim-controller.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

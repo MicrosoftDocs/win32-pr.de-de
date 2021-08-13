@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für die Suche nach Gruppen in einer Domäne
-description: Dieses Thema enthält ein Codebeispiel, in dem die Teilstruktur des angegebenen Containers nach allen Gruppen Objekten durchsucht wird, die über den angegebenen Gruppentyp verfügen.
+title: Beispielcode für die Suche nach Gruppen in einer Domäne
+description: Dieses Thema enthält ein Codebeispiel, in dem die Unterstruktur des angegebenen Containers nach allen Gruppenobjekten mit dem angegebenen Gruppentyp durchsucht wird.
 ms.assetid: 07b27324-4f59-42c2-a42f-8c2cef138928
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, suchen nach Gruppen in einer Domäne
+- 'Active Directory-Beispiele: Active Directory, Suchen nach Gruppen in einer Domäne'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59cb0e6d8e5aa6eb6a45d582b23fe0ee38f3d7dc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e15d2e0957032202e2080f85c71631daeddec70817ec09eb8432415aba47b3d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693339"
 ---
-# <a name="example-code-for-searching-for-groups-in-a-domain"></a>Beispiel Code für die Suche nach Gruppen in einer Domäne
+# <a name="example-code-for-searching-for-groups-in-a-domain"></a>Beispielcode für die Suche nach Gruppen in einer Domäne
 
-Im folgenden C/C++-Codebeispiel wird die Teilstruktur des angegebenen Containers nach allen Gruppen Objekten, die über den angegebenen Gruppentyp verfügen, durchsucht.
+Im folgenden C/C++-Codebeispiel wird die Unterstruktur des angegebenen Containers nach allen Gruppenobjekten mit dem angegebenen Gruppentyp durchsucht.
 
 
 ```C++
@@ -115,7 +115,7 @@ HRESULT PrintGroupsInContainer(LPCWSTR pwszContainerDN, DWORD type)
 
 
 
-Im folgenden Visual Basic Codebeispiel wird die Teilstruktur des angegebenen Containers nach allen Gruppen Objekten durchsucht, die den angegebenen Gruppentyp aufweisen.
+Im folgenden Visual Basic Codebeispiel wird die Unterstruktur des angegebenen Containers nach allen Gruppenobjekten mit dem angegebenen Gruppentyp durchsucht.
 
 
 ```VB
@@ -164,9 +164,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

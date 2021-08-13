@@ -1,9 +1,9 @@
 ---
-title: Durchsuchbar
-description: Das suchbare Attribut ist ein Attribut auf Dateiebene, das angibt, ob eine Anwendung auf Punkte innerhalb des Inhalts suchen kann.
+title: Seekable
+description: Das Seekable-Attribut ist ein Attribut auf Dateiebene, das angibt, ob eine Anwendung nach Punkten innerhalb des Inhalts suchen kann.
 ms.assetid: 9653e368-4782-4506-9c44-54c9406b61b5
 keywords:
-- Suchbares Windows Media-Format
+- Suchbare Fenster – Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,43 +12,43 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4db701be363c194c75bd698062d79a0c0c407cc
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: a254d06b36230bb6920f2f13d646edc5f1cdac75efe15864e0c84ba847cf50f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104314500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118699986"
 ---
-# <a name="seekable"></a>Durchsuchbar
+# <a name="seekable"></a>Seekable
 
-Das suchbare Attribut ist **ein Attribut auf** Dateiebene, das angibt, ob eine Anwendung auf Punkte innerhalb des Inhalts suchen kann.
+Das **Seekable-Attribut** ist ein Attribut auf Dateiebene, das angibt, ob eine Anwendung nach Punkten innerhalb des Inhalts suchen kann.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmseekable
+g \_ wszWMSeekable
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist ein codiertes Attribut.
 
-Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und gibt seine normale Bedeutung nicht an die Objekte des Windows Media Format SDK aus.
+Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und vermittelt den Objekten des Windows Media Format SDK nicht seine normale Bedeutung.
 
-Der Wert dieses Attributs für eine Datei kann variieren, je nachdem, welches Objekt die zum Abrufen verwendete [**iwmheaderinfo**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) -oder [**IWMHeaderInfo3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo3) -Schnittstelle verfügbar macht. Dies liegt daran, dass die Reader-Objekte (sowohl synchrone als auch asynchron) eine gründlichere Überprüfung durchführen als das Metadateneditor-Objekt, um zu ermitteln, ob Sie einen Punkt in einer Datei suchen können. Der **von** einem Reader-Objekt zurückgegebene suchbare Attribut Wert ist präziser.
+Der Wert dieses Attributs für eine Datei kann abhängig von dem Objekt variieren, das die [**IWMHeaderInfo-**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) oder [**IWMHeaderInfo3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo3) verfügbar macht, die zum Abrufen verwendet wird. Dies liegt daran, dass die Readerobjekte (sowohl synchron als auch asynchron) eine gründlichere Überprüfung durchführen als das Metadaten-Editor-Objekt, um festzustellen, ob Sie zu einem Punkt in einer Datei suchen können. Der von einem Readerobjekt zurückgegebene **Seekable-Attributwert** ist genauer.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

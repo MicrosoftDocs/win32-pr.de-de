@@ -1,85 +1,85 @@
 ---
-title: Unterstützung für Unterstützung
-description: Unterstützung für Unterstützung
+title: UNTERSTÜTZUNG FÜR ID3-Tags
+description: UNTERSTÜTZUNG FÜR ID3-Tags
 ms.assetid: 57119b88-5901-4bea-abf6-a67fe71afd1b
 keywords:
-- Windows Media-Format-SDK, Attribute
+- Windows Medienformat-SDK, Attribute
 - Advanced Systems Format (ASF), Attribute
 - ASF (Advanced Systems Format), Attribute
-- Attribute, ID3-Tags
+- Attribute,ID3-Tags
 - ID3-Tags
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4f3dd91119aedf2983e654b4925231b8fd9e4b9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 28fd65ffadb952e9370af609e336c08fc07c9b96f50d09d95c78492bef2163db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118703025"
 ---
-# <a name="id3-tag-support"></a>Unterstützung für Unterstützung
+# <a name="id3-tag-support"></a>UNTERSTÜTZUNG FÜR ID3-Tags
 
-In der folgenden Tabelle sind alle Attribute aufgeführt, die den ID3-Tags entsprechen. Wenn Sie die ID3-Tags als Attribute verwenden möchten, anstatt die Standard Attributnamen zu verwenden, fügen Sie dem Tagnamen das Präfix "ID3/" hinzu. Beispielsweise entspricht "ID3/TPE2" dem **Autor**.
+In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprechen. Wenn Sie die ID3-Tags als Attribute anstelle der Standardattributnamen verwenden möchten, fügen Sie dem Tagnamen das Präfix "ID3/" hinzu. Beispielsweise entspricht "ID3/TPE2" **author**.
 
 
 
-| Attribut                      | ID3v1. x | Id3v 2.2 | Id3v 2.3/v 2.4 |
+| attribute                      | ID3v1.x | ID3v2.2 | ID3v2.3/v2.4 |
 |--------------------------------|---------|---------|--------------|
-| **Autor**                     | Interpret  | TP1     | TPE1         |
-| **Copyright**                  |         | TCR     | TCOP         |
-| **Copyrighturl**               |         | WCP     | Wcop         |
+| **Author**                     | Künstler  | TP1     | TPE1         |
+| **Copyright**                  |         | Tcr     | TCOP         |
+| **CopyrightURL**               |         | Wcp     | WCOP         |
 | **Beschreibung**                | Kommentar | COM     | COMM         |
-| **Dauer**                   |         | Cke     | Tlen         |
-| **FileSize**                   |         |         | Tsiz         |
-| **Titel**                      | Titel   | TT2     | TIT2         |
-| **WM/albumartist**             |         | TP2     | TPE2         |
-| **WM/albumsortor**          |         |         | Tsoa         |
-| **WM/albumtitle**              | Aufzunehmen   | Tisch     | Talb         |
-| **WM/artistsortor der**         |         |         | Wahrheits Satz         |
-| **WM/audiofileurl**            |         | WAF     | Woaf         |
-| **WM/audiosourceurl**          |         | WAS     | Woas         |
-| **WM/authorurl**               |         | WAR     | WOAR         |
-| **WM/beatsperminütlich**          |         |         | Tbpm         |
-| **WM/Binär**                  |         | GEOGRAFISCH     | GeOb         |
+| **Dauer**                   |         | Tle     | TLEN         |
+| **FileSize**                   |         |         | TSIZ         |
+| **Titel**                      | Titel   | TT2     | TIZ2         |
+| **WM/AlbumArtist**             |         | TP2     | TPE2         |
+| **WM/AlbumSortOrder**          |         |         | TSOA         |
+| **WM/AlbumTitle**              | Album   | TAL     | TALB         |
+| **WM/InterpretSortOrder**         |         |         | Tsop         |
+| **WM/AudioFileURL**            |         | WAF     | WOAF         |
+| **WM/AudioSourceURL**          |         | WAS     | WOAS         |
+| **WM/AuthorURL**               |         | WAR     | WOAR         |
+| **WM/BeatsPerMinute**          |         |         | TBPM         |
+| **WM/Binary**                  |         | GEOGRAFISCH     | GEOB         |
 | **WM/Kommentare**                |         | COM     | COMM         |
-| **WM/Composer**                |         | TCM     | Tcom         |
-| **WM/Dirigent**               |         | TP3     | TPE3         |
-| **WM/contentgroupdescription** |         | TT1     | TIT1         |
-| **WM/encodby**               |         | Zehn     | Tenc         |
-| **WM/encodingsettings**        |         | TSS     | TSSE         |
-| **WM/encodingtime**            |         |         | TDas         |
-| **WM/GenreID**                 | GenreID | Gesamtbetriebskosten     | TCON         |
-| **WM/initialkey**              |         |         | TKEY         |
-| **WM/ISRC**                    |         |         | Wahrheits-RC         |
-| **WM/Sprache**                |         | TLA     | Tlan         |
-| **Synchronisierte WM/Liedtexte \_**    |         | SLT     | Dorfes         |
+| **WM/Composer**                |         | TCM     | TCOM         |
+| **WM/2016**               |         | TP3     | TPE3         |
+| **WM/ContentGroupDescription** |         | TT1     | TI1         |
+| **WM/EncodedBy**               |         | Zehn     | TENC         |
+| **WM/EncodingSettings**        |         | Tss     | TSSE         |
+| **WM/EncodingTime**            |         |         | TDEN         |
+| **WM/GenreID**                 | GenreID | Gesamtbetriebskosten     | Tcon         |
+| **WM/InitialKey**              |         |         | Tkey         |
+| **WM/ISRC**                    |         |         | TSRC         |
+| **WM/Sprache**                |         | Tla     | TLAN         |
+| **WM/Synchronisierung \_**    |         | Slt     | Sylt         |
 | **WM/MCDI**                    |         |         | MCDI         |
 | **WM/ModifiedBy**              |         |         | TPE4         |
-| **WM/Stimmung**                    |         |         | Tmoo         |
-| **WM/originalalbumtitle**      |         | ASO     | -         |
-| **WM/originalartist**          |         | Zu einem     | Oben im         |
-| **WM/OriginalFileName**        |         | TOF     | Mit dem-Schalter         |
-| **WM/originallyriker**        |         | Drugs     | Toly         |
-| **WM/originalreleaseyear**     |         | TOR     | Gliche         |
-| **WM/Element Satz**               |         | TPA     | Tpos         |
-| **WM/Bild**                 |         | Bild     | APIC         |
-| **WM/playlistdelay**           |         |         | Nicht ordnungsgemäß         |
-| **WM/Verleger**               |         | TPB     | Tpub         |
-| **WM/radiostationname**        |         | TRN     | Trsn         |
-| **WM/radiostationowner**       |         | Feierte     | Trso         |
-| **WM/setuntertitel**             |         |         | St.         |
-| **WM/Untertitel**                |         | TT3     | TIT3         |
+| **WM/Stimmung**                    |         |         | TMOO         |
+| **WM/Original FormatTitle**      |         | TOT     | Toal         |
+| **WM/OriginalArtist**          |         | Toa     | Tope         |
+| **WM/OriginalFilename**        |         | Tof     | TOFN         |
+| **WM/OriginalLyricist**        |         | Tol     | TOLY         |
+| **WM/OriginalReleaseYear**     |         | TOR     | Tory         |
+| **WM/PartOfSet**               |         | Tpa     | Tpos         |
+| **WM/Picture**                 |         | Pic     | APIC         |
+| **WM/PlaylistDelay**           |         |         | TDLY         |
+| **WM/Publisher**               |         | Tpb     | TPUB         |
+| **WM/RadioStationName**        |         | Trn     | TRSN         |
+| **WM/RadioStationOwner**       |         | Tro     | TRSO         |
+| **WM/SetSubTitle**             |         |         | TSST         |
+| **WM/SubTitle**                |         | TT3     | TI3         |
 | **WM/Text**                    |         | TXX     | TXXX         |
-| **WM/titlesortor der**          |         |         | Tsot         |
-| **WM/tracknumber**             | Track   | TRK     | Trck         |
-| **WM/UniqueFileIdentifier**    |         | UFI     | UFID         |
-| **WM/userweburl**              |         | Wxx     | Wxxx         |
+| **WM/TitleSortOrder**          |         |         | TSOT         |
+| **WM/TrackNumber**             | Track   | TRK     | TRCK         |
+| **WM/UniqueFileIdentifier**    |         | Ufi     | UFID         |
+| **WM/UserWebURL**              |         | WXX     | WXXX         |
 | **WM/Writer**                  |         | TXT     | TEXT         |
-| **WM/Jahr**                    | Year    | Tye     | Tyer         |
+| **WM/Jahr**                    | Jahr    | Tye     | TYER         |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -88,9 +88,9 @@ In der folgenden Tabelle sind alle Attribute aufgeführt, die den ID3-Tags entsp
 [**Attribute**](attributes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

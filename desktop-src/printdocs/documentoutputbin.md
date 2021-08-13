@@ -1,15 +1,15 @@
 ---
-description: Erfahren Sie mehr über DocumentOutputBin, das die vollständige Liste der unterstützten Container für das Gerät beschreibt und die Angabe des Ausgabebehälters pro Dokument ermöglicht.
+description: Erfahren Sie mehr über DocumentOutputBin, das die vollständige Liste der unterstützten Container für das Gerät beschreibt und die Angabe von Ausgabebehältern pro Dokument ermöglicht.
 ms.assetid: 73840548-f68b-4af8-acb4-6f7faa2e8879
 title: DocumentOutputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2afc20f15aed8d3076afb79d755c54791573b393
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 2d3027e405f5fa3c07a1af9aa6ae31aa13c8409bab6b8081d995be8405cd8cf3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118732868"
 ---
 # <a name="documentoutputbin"></a>DocumentOutputBin
 
@@ -29,7 +29,7 @@ Beschreibt die vollständige Liste der unterstützten Container für das Gerät.
 
 | Name | Wert |
 |----------------------------|---------------------|
-| Elementtyp <br/>   | Funktion<br/>  |
+| Elementtyp <br/>   | Komponente<br/>  |
 | Bereichspräfix <br/> | Dokument<br/> |
 | Hinweise <br/>          | Keine<br/>     |
 
@@ -69,7 +69,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                                   | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                             | Zusammenfassung                                                                             |
 |----------------------------------------|--------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name gemäß Definition von https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname . Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
+| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name gemäß Definition von https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname . Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
 | \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                      | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>        |
 | \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | MailBox, Sorter, Stacker, Finisher, None.<br/>                                                                                                                         | Gibt den allgemeinen Typ des Papierkorbs an.<br/>                                   |
 | \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Größer 0<br/>                                                                                                                                                   | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Papierkorbs an.<br/> |
@@ -78,7 +78,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

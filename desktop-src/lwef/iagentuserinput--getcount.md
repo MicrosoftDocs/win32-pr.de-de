@@ -1,19 +1,19 @@
 ---
-title: Iagentuserinput GetCount
-description: Iagentuserinput GetCount
+title: IAgentUserInput GetCount
+description: IAgentUserInput GetCount
 ms.assetid: 9c127387-b680-405a-9a62-ee08cc70813a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ac4b597f7367eff10154bde256698ef371c3619
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9f52c296dd152fd1e31a87e21d80f8b25d52ae880b300487cdcba746e81dfa0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118749517"
 ---
-# <a name="iagentuserinputgetcount"></a>Iagentuserinput:: GetCount
+# <a name="iagentuserinputgetcount"></a>IAgentUserInput::GetCount
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetCount(
@@ -21,7 +21,7 @@ HRESULT GetCount(
 );
 ```
 
-Ruft die Anzahl der [**Befehls**](command-event.md) Alternativen ab, die an einen [**iagentnotifysink:: Command**](iagentnotifysink--command.md) -Rückruf übermittelt werden.
+Ruft die Anzahl der [**Befehlsalternativen**](command-event.md) ab, die an einen [**IAgentNotifySink::Command-Rückruf**](iagentnotifysink--command.md) übergeben werden.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,15 +30,15 @@ Ruft die Anzahl der [**Befehls**](command-event.md) Alternativen ab, die an eine
 <span id="pdwCount"></span><span id="pdwcount"></span><span id="PDWCOUNT"></span>*pdwCount*
 </dt> <dd>
 
-Adresse einer Variablen, die die Anzahl der vom Server identifizierten [**Befehle**](command-event.md) empfängt.
+Adresse einer Variablen, die die Anzahl der vom [**Server**](command-event.md) identifizierten Befehlsalternativen empfängt.
 
 </dd> </dl>
 
-Wenn die Spracheingabe nicht die Quelle für den Befehl war, z. b. wenn der Benutzer den Befehl aus dem Popupmenü des Zeichens ausgewählt hat, gibt **GetCount** den Wert 1 zurück. Wenn **GetCount** NULL (0) zurückgibt, hat die Spracherkennungs-Engine gesprochene Eingaben erkannt, aber festgestellt, dass es keinen übereinstimmenden Befehl gab.
+Wenn die Spracheingabe nicht die Quelle für den Befehl war, z. B. wenn der Benutzer den Befehl aus dem Popupmenü des Zeichens ausgewählt hat, gibt **GetCount** 1 zurück. Wenn **GetCount** null (0) zurückgibt, hat die Spracherkennungs-Engine gesprochene Eingaben erkannt, aber festgestellt, dass kein passender Befehl vorkommt.
 
- 
+ 
 
- 
+ 
 
 
 

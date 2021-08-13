@@ -1,41 +1,41 @@
 ---
-title: Indirektes zeichnen und GPU-culult
-description: Das D3D12ExecuteIndirect-Beispiel veranschaulicht, wie indirekte Befehle zum Zeichnen von Inhalten verwendet werden. Außerdem wird veranschaulicht, wie diese Befehle auf der GPU in einem Compute-Shader bearbeitet werden können, bevor Sie ausgegeben werden.
+title: Indirektes Zeichnen und GPU-Culling
+description: Im Beispiel D3D12ExecuteIndirect wird veranschaulicht, wie Sie indirekte Befehle verwenden, um Inhalte zu zeichnen. Außerdem wird veranschaulicht, wie diese Befehle auf der GPU in einem Compute-Shader bearbeitet werden können, bevor sie ausgegeben werden.
 ms.assetid: 09F90837-D6BF-498E-8018-5C28EDD9BDC3
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b016170fbd3b675d5d5a20c1de87f24b04d4804
-ms.sourcegitcommit: 4c00910ed754d7d0a68c9a833751d714c06e3b39
+ms.openlocfilehash: b1eaab70be1f376856991156fe520919256e8f811c32ead4a5ce937fb4abc185
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "104548651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119280138"
 ---
-# <a name="indirect-drawing-and-gpu-culling"></a>Indirektes zeichnen und GPU-culult
+# <a name="indirect-drawing-and-gpu-culling"></a>Indirektes Zeichnen und GPU-Culling
 
-Das D3D12ExecuteIndirect-Beispiel veranschaulicht, wie indirekte Befehle zum Zeichnen von Inhalten verwendet werden. Außerdem wird veranschaulicht, wie diese Befehle auf der GPU in einem Compute-Shader bearbeitet werden können, bevor Sie ausgegeben werden.
+Im Beispiel D3D12ExecuteIndirect wird veranschaulicht, wie Sie indirekte Befehle verwenden, um Inhalte zu zeichnen. Außerdem wird veranschaulicht, wie diese Befehle auf der GPU in einem Compute-Shader bearbeitet werden können, bevor sie ausgegeben werden.
 
 -   [Definieren der indirekten Befehle](#define-the-indirect-commands)
--   [Erstellen einer Grafik und einer COMPUTE-Stamm Signatur](#create-a-graphics-and-compute-root-signature)
--   [Erstellen einer Shader-Ressourcen Ansicht (SRV) für den Compute-Shader](#create-a-shader-resource-view-srv-for-the-compute-shader)
--   [Erstellen der indirekten Befehls Puffer](#create-the-indirect-command-buffers)
--   [Erstellen der COMPUTE-UAVs](#create-the-compute-uavs)
--   [Zeichnen des Frames](#drawing-the-frame)
+-   [Erstellen einer Grafik- und Computestammsignatur](#create-a-graphics-and-compute-root-signature)
+-   [Erstellen einer Shaderressourcenansicht (SRV) für den Compute-Shader](#create-a-shader-resource-view-srv-for-the-compute-shader)
+-   [Erstellen der indirekten Befehlspuffer](#create-the-indirect-command-buffers)
+-   [Erstellen der Compute-UAVs](#create-the-compute-uavs)
+-   [Zeichnen des Rahmens](#drawing-the-frame)
 -   [Ausführen des Beispiels](#run-the-sample)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-Im Beispiel wird ein Befehls Puffer erstellt, in dem 1024 Draw-Aufrufe beschrieben werden. Jeder zeichnen-Befehl rendert ein Dreieck mit einer zufälligen Farbe, Position und Geschwindigkeit. Die Dreiecke werden endlos auf dem Bildschirm animiert. In diesem Beispiel gibt es zwei Modi. Im ersten Modus überprüft ein Compute-Shader die indirekten Befehle und entscheidet, ob dieser Befehl einer unsortierten Zugriffs Ansicht (UAV) hinzugefügt werden soll, in der beschrieben wird, welche Befehle ausgeführt werden sollen. Im zweiten Modus werden alle Befehle einfach ausgeführt. Durch Drücken der Leertaste wird zwischen den Modi gewechselt.
+Im Beispiel wird ein Befehlspuffer erstellt, der 1024 Zeichnen-Aufrufe beschreibt. Jeder Zeichnen-Aufruf rendert ein Dreieck mit einer zufälligen Farbe, Position und Geschwindigkeit. Die Dreiecke animieren endlos über den Bildschirm. In diesem Beispiel gibt es zwei Modi. Im ersten Modus überprüft ein Compute-Shader die indirekten Befehle und entscheidet, ob dieser Befehl einer ungeordneten Zugriffsansicht (UAV) hinzugefügt werden soll, die beschreibt, welche Befehle ausgeführt werden sollen. Im zweiten Modus werden alle Befehle einfach ausgeführt. Wenn Sie die Leerzeichenleiste drücken, wird zwischen den Modi umschaltet.
 
 ## <a name="define-the-indirect-commands"></a>Definieren der indirekten Befehle
 
-Wir beginnen damit, zu definieren, wie die indirekten Befehle aussehen sollten. In diesem Beispiel werden die folgenden Befehle ausgeführt:
+Zunächst definieren wir, wie die indirekten Befehle aussehen sollen. In diesem Beispiel sollen die folgenden Befehle ausgeführt werden:
 
-<dl> 1. Aktualisieren Sie die Konstante Puffer Ansicht (CBV).  
+<dl> 1. Aktualisieren Sie die Konstantenpufferansicht (CONSTANT Buffer View, CBV).  
 2. Zeichnen Sie das Dreieck.  
 </dl>
 
-Diese Zeichnungs Befehle werden durch die folgende Struktur in der **D3D12ExecuteIndirect** -Klassendefinition dargestellt. Befehle werden sequenziell in der Reihenfolge ausgeführt, in der Sie in dieser Struktur definiert sind.
+Diese Zeichnungsbefehle werden durch die folgende Struktur in der **D3D12ExecuteIndirect-Klassendefinition** dargestellt. Befehle werden sequenziell in der Reihenfolge ausgeführt, in der sie in dieser Struktur definiert sind.
 
 ``` syntax
   
@@ -49,16 +49,16 @@ struct IndirectCommand
 
 
 
-| Aufruffluss                                              | Parameter |
+| Anruffluss                                              | Parameter |
 |--------------------------------------------------------|------------|
-| D3D12 \_ GPU \_ Virtual \_ Address (einfach eine UINT64)         |            |
-| [**D3D12 \_ Zeichnen von \_ Argumenten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_draw_arguments) |            |
+| D3D12 \_ GPU VIRTUAL ADDRESS \_ \_ (einfach ein UINT64)         |            |
+| [**D3D12 \_ \_ DRAW-ARGUMENTE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_draw_arguments) |            |
 
 
 
  
 
-Um die Datenstruktur zu begleiten, wird auch eine Befehls Signatur erstellt, die die GPU anweist, wie die an die [**executeindirect**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) -API weiter gegebenen Daten interpretiert werden sollen. Dieser und der größte Teil des folgenden Codes werden der **loadassets** -Methode hinzugefügt.
+Um die Datenstruktur zu begleiten, wird auch eine Befehlssignatur erstellt, die die GPU anweisen soll, die an die [**ExecuteIndirect-API**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) übergebenen Daten zu interpretieren. Dieser und der größte Teil des folgenden Codes wird der **LoadAssets-Methode** hinzugefügt.
 
 ``` syntax
 // Create the command signature used for indirect drawing.
@@ -80,29 +80,29 @@ Um die Datenstruktur zu begleiten, wird auch eine Befehls Signatur erstellt, die
 
 
 
-| Aufruffluss                                                               | Parameter                                                              |
+| Anruffluss                                                               | Parameter                                                              |
 |-------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [**D3D12 \_ indirektes \_ Argument \_ Entsc**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_indirect_argument_desc) | [**D3D12 \_ indirekter \_ \_ Argumenttyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_indirect_argument_type) |
-| [**D3D12 \_ Befehls \_ Signatur \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc) |                                                                         |
-| [**"Kreatecommandsignature"**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommandsignature)   |                                                                         |
+| [**D3D12 \_ INDIRECT \_ ARGUMENT \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_indirect_argument_desc) | [**INDIREKTER \_ \_ D3D12-ARGUMENTTYP \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_indirect_argument_type) |
+| [**D3D12 \_ COMMAND \_ SIGNATURE \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc) |                                                                         |
+| [**CreateCommandSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommandsignature)   |                                                                         |
 
 
 
  
 
-## <a name="create-a-graphics-and-compute-root-signature"></a>Erstellen einer Grafik und einer COMPUTE-Stamm Signatur
+## <a name="create-a-graphics-and-compute-root-signature"></a>Erstellen einer Grafik- und Computestammsignatur
 
-Außerdem erstellen wir sowohl eine Grafik als auch eine COMPUTE-Stamm Signatur. Die Grafik Stamm Signatur definiert lediglich eine root CBV. Beachten Sie, dass wir den Index dieses Root-Parameters [**im \_ indirekten \_ Argument \_ DESC D3D12**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_indirect_argument_desc) (siehe oben) zuordnen, wenn die Befehls Signatur definiert ist. Die computestammsignatur definiert Folgendes:
+Außerdem erstellen wir sowohl eine Grafik als auch eine Computestammsignatur. Die Grafikstammsignatur definiert lediglich eine Stamm-CBV. Beachten Sie, dass wir den Index dieses Stammparameters in [**D3D12 \_ INDIRECT \_ ARGUMENT \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_indirect_argument_desc) (siehe oben) zuordnen, wenn die Befehlssignatur definiert ist. Die Computestammsignatur definiert:
 
--   Eine gängige Deskriptortabelle mit drei Slots (zwei SRV und eine UAV):
-    -   Ein SRV macht die Konstanten Puffer für den Compute-Shader verfügbar.
-    -   Ein SRV macht den Befehls Puffer für den Compute-Shader verfügbar.
-    -   In der UAV speichert der COMPUTE-Shader die Befehle für die sichtbaren Dreiecke.
--   Vier Stamm Konstanten:
-    -   Halbe Breite einer Seite des Dreiecks
-    -   Die z-Position der Dreieck Scheitel Punkte.
-    -   Der Offset +/-x der cullinger-Ebene im homogenen Raum \[ -1, 1\]
-    -   Die Anzahl der indirekten Befehle im Befehls Puffer.
+-   Eine allgemeine Deskriptortabelle mit drei Slots (zwei SRV und ein UAV):
+    -   Ein SRV macht die konstanten Puffer für den Compute-Shader verfügbar.
+    -   Ein SRV macht den Befehlspuffer für den Compute-Shader verfügbar.
+    -   Im UAV speichert der Compute-Shader die Befehle für die sichtbaren Dreiecke.
+-   Vier Stammkonst konstanten:
+    -   Halb so breit wie eine Seite des Dreiecks
+    -   Die Z-Position der Dreiecksvertices
+    -   Der +/- x-Offset der Cullingebene im homogenen \[ Raum -1,1\]
+    -   Die Anzahl indirekter Befehle im Befehlspuffer
 
 ``` syntax
 // Create the root signatures.
@@ -137,27 +137,27 @@ Außerdem erstellen wir sowohl eine Grafik als auch eine COMPUTE-Stamm Signatur.
 
 
 
-| Aufruffluss                                                             | Parameter                                                            |
+| Anruffluss                                                             | Parameter                                                            |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [**CD3DX12 \_ root- \_ Parameter**](cd3dx12-root-parameter.md)            | [**D3D12- \_ Shader- \_ Sichtbarkeit**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
-| [**CD3DX12 \_ Stamm \_ Signatur \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ root \_ Signature- \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
+| [**CD3DX12 \_ ROOT \_ PARAMETER**](cd3dx12-root-parameter.md)            | [**SICHTBARKEIT DES \_ D3D12-SHADERS \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
+| [**CD3DX12 \_ ROOT \_ SIGNATURE \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ ROOT \_ SIGNATURE \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
 | [**ID3DBlob**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85))                                   |                                                                       |
-| [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**D3D \_ Stamm \_ Signatur \_ Version**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
-| [**"Kreaterootsignature"**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
-| [**CD3DX12- \_ \_ Deskriptorbereich**](cd3dx12-descriptor-range.md)        | [**D3D12- \_ \_ deskriptorbereichstyp \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) |
-| [**CD3DX12 \_ root- \_ Parameter**](cd3dx12-root-parameter.md)            | [**D3D12- \_ Shader- \_ Sichtbarkeit**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
-| [**CD3DX12 \_ Stamm \_ Signatur \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ root \_ Signature- \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
+| [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**\_ \_ D3D-STAMMSIGNATURVERSION \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
+| [**CreateRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
+| [**\_CD3DX12-DESKRIPTORBEREICH \_**](cd3dx12-descriptor-range.md)        | [**\_D3D12-DESKRIPTORBEREICHSTYP \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) |
+| [**CD3DX12 \_ ROOT \_ PARAMETER**](cd3dx12-root-parameter.md)            | [**SICHTBARKEIT DES \_ D3D12-SHADERS \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
+| [**CD3DX12 \_ ROOT \_ SIGNATURE \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ ROOT \_ SIGNATURE \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
 | [**ID3DBlob**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85))                                   |                                                                       |
-| [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**D3D \_ Stamm \_ Signatur \_ Version**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
-| [**"Kreaterootsignature"**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
+| [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**\_ \_ D3D-STAMMSIGNATURVERSION \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
+| [**CreateRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
 
 
 
  
 
-## <a name="create-a-shader-resource-view-srv-for-the-compute-shader"></a>Erstellen einer Shader-Ressourcen Ansicht (SRV) für den Compute-Shader
+## <a name="create-a-shader-resource-view-srv-for-the-compute-shader"></a>Erstellen einer Shaderressourcenansicht (SRV) für den Compute-Shader
 
-Nachdem Sie die Pipeline Zustands Objekte, Vertex-Puffer, eine tiefen Schablone und die Konstanten Puffer erstellt haben, erstellt das Beispiel eine Shader-Ressourcen Ansicht (SRV) des Konstanten Puffers, sodass der COMPUTE-Shader auf die Daten im Konstanten Puffer zugreifen kann.
+Nach dem Erstellen der Pipelinezustandsobjekte, Scheitelpunktpuffer, einer Tiefenschablone und der konstanten Puffer erstellt das Beispiel dann eine Shaderressourcenansicht (Shader Resource View, SRV) des konstanten Puffers, damit der Compute-Shader auf die Daten im konstanten Puffer zugreifen kann.
 
 ``` syntax
 // Create shader resource views (SRV) of the constant buffers for the
@@ -184,7 +184,7 @@ Nachdem Sie die Pipeline Zustands Objekte, Vertex-Puffer, eine tiefen Schablone 
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Anruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -198,10 +198,10 @@ Nachdem Sie die Pipeline Zustands Objekte, Vertex-Puffer, eine tiefen Schablone 
 </tr>
 <tr class="even">
 <td><a href="cd3dx12-cpu-descriptor-handle.md"><strong>CD3DX12_CPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>Getcpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>GetCPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>"Kreateshaderresourceview"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>CreateShaderResourceView</strong></a></td>
 
 </tr>
 </tbody>
@@ -211,9 +211,9 @@ Nachdem Sie die Pipeline Zustands Objekte, Vertex-Puffer, eine tiefen Schablone 
 
  
 
-## <a name="create-the-indirect-command-buffers"></a>Erstellen der indirekten Befehls Puffer
+## <a name="create-the-indirect-command-buffers"></a>Erstellen der indirekten Befehlspuffer
 
-Anschließend erstellen wir die indirekten Befehls Puffer und definieren ihren Inhalt mit dem folgenden Code. Wir zeichnen die gleichen Dreiecks Scheitel Punkte 1024-mal, zeigen aber auf einen anderen Konstanten Puffer Speicherort mit jedem Zeichnen-Befehl.
+Anschließend erstellen wir die indirekten Befehlspuffer und definieren deren Inhalt mithilfe des folgenden Codes. Wir zeichnen die gleichen Dreiecksvertices 1024-mal, zeigen aber bei jedem Zeichnen-Aufruf auf eine andere konstante Pufferposition.
 
 ``` syntax
        D3D12_GPU_VIRTUAL_ADDRESS gpuAddress = m_constantBuffer->GetGPUVirtualAddress();
@@ -237,15 +237,15 @@ Anschließend erstellen wir die indirekten Befehls Puffer und definieren ihren I
 
 
 
-| Aufruffluss                    | Parameter                                                          |
+| Anruffluss                    | Parameter                                                          |
 |------------------------------|---------------------------------------------------------------------|
-| \_Virtuelle GPU \_ - \_ Adresse D3D12 | [**Getgpuvirtualaddress**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress) |
+| D3D12 \_ GPU \_ VIRTUAL \_ ADDRESS | [**GetGPUVirtualAddress**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress) |
 
 
 
  
 
-Nachdem Sie die Befehls Puffer in die GPU hochgeladen haben, erstellen wir auch einen SRV, von dem aus der COMPUTE-Shader gelesen werden kann. Dies ähnelt dem SRV, das durch den konstanten Puffer erstellt wurde.
+Nach dem Hochladen der Befehlspuffer auf die GPU erstellen wir auch eine SRV-Datei, aus der der Compute-Shader lesen kann. Dies ist dem SRV sehr ähnlich, das vom konstanten Puffer erstellt wurde.
 
 ``` syntax
 // Create SRVs for the command buffers.
@@ -271,7 +271,7 @@ Nachdem Sie die Befehls Puffer in die GPU hochgeladen haben, erstellen wir auch 
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Anruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -286,10 +286,10 @@ Nachdem Sie die Befehls Puffer in die GPU hochgeladen haben, erstellen wir auch 
 </tr>
 <tr class="even">
 <td><a href="cd3dx12-cpu-descriptor-handle.md"><strong>CD3DX12_CPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>Getcpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>GetCPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>"Kreateshaderresourceview"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>CreateShaderResourceView</strong></a></td>
 
 </tr>
 </tbody>
@@ -299,9 +299,9 @@ Nachdem Sie die Befehls Puffer in die GPU hochgeladen haben, erstellen wir auch 
 
  
 
-## <a name="create-the-compute-uavs"></a>Erstellen der COMPUTE-UAVs
+## <a name="create-the-compute-uavs"></a>Erstellen der Compute-UAVs
 
-Wir müssen die UAVs erstellen, in denen die Ergebnisse der computearbeit gespeichert werden. Wenn ein Dreieck vom Compute-Shader als sichtbar für das Renderziel angesehen wird, wird es an diese UAV angefügt und dann von der [**executeindirect**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) -API verwendet.
+Wir müssen die UAVs erstellen, die die Ergebnisse der Computearbeit speichern. Wenn vom Compute-Shader angenommen wird, dass ein Dreieck für das Renderziel sichtbar ist, wird es an diesen UAV angefügt und dann von der [**ExecuteIndirect-API**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect) genutzt.
 
 ``` syntax
 CD3DX12_CPU_DESCRIPTOR_HANDLE processedCommandsHandle(m_cbvSrvUavHeap->GetCPUDescriptorHandleForHeapStart(), ProcessedCommandsOffset, m_cbvSrvUavDescriptorSize);
@@ -343,21 +343,21 @@ for (UINT frame = 0; frame < FrameCount; frame++)
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="cd3dx12-cpu-descriptor-handle.md"><strong>CD3DX12_CPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>Getcpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>GetCPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="even">
 <td><a href="cd3dx12-resource-desc.md"><strong>CD3DX12_RESOURCE_DESC</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags"><strong>D3D12_RESOURCE_FLAGS</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>"Kreatecommittedresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>CreateCommittedResource</strong></a></td>
 <td><dl><a href="cd3dx12-heap-properties.md"><strong>CD3DX12_HEAP_PROPERTIES</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type"><strong>D3D12_HEAP_TYPE</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags"><strong>D3D12_HEAP_FLAG</strong></a><br />
@@ -372,7 +372,7 @@ for (UINT frame = 0; frame < FrameCount; frame++)
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createunorderedaccessview"><strong>"Kreateunorderedaccessview"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createunorderedaccessview"><strong>CreateUnorderedAccessView</strong></a></td>
 
 </tr>
 </tbody>
@@ -382,9 +382,9 @@ for (UINT frame = 0; frame < FrameCount; frame++)
 
  
 
-## <a name="drawing-the-frame"></a>Zeichnen des Frames
+## <a name="drawing-the-frame"></a>Zeichnen des Rahmens
 
-Wenn Sie den Frame zeichnen und sich im Modus befinden, wenn der COMPUTE-Shader aufgerufen wird und indirekte Befehle von der GPU verarbeitet werden, verteilen [**wir diese Aufgabe zunächst, um**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch) den Befehls Puffer für [**executeindirect**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect)aufzufüllen. Die folgenden Code Ausschnitte werden der Methode " **populatecommandlists** " hinzugefügt.
+Wenn es an der Zeit ist, den Frame zu zeichnen, wenn wir uns im Modus befinden, wenn der Computeshader aufgerufen wird und indirekte Befehle von der GPU verarbeitet werden, senden wir [**zuerst**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch) dispatch, die zum Auffüllen des Befehlspuffers für [**ExecuteIndirect**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect)funktionieren. Die folgenden Codeausschnitte werden der **PopulateCommandLists-Methode** hinzugefügt.
 
 ``` syntax
 // Record the compute commands that will cull triangles and prevent them from being processed by the vertex shader.
@@ -421,17 +421,17 @@ ThrowIfFailed(m_computeCommandList->Close());
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle"><strong>D3D12_GPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart"><strong>Getgpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart"><strong>GetGPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootsignature"><strong>Setcomputerootsignature</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootsignature"><strong>SetComputeRootSignature</strong></a></td>
 
 </tr>
 <tr class="odd">
@@ -439,11 +439,11 @@ ThrowIfFailed(m_computeCommandList->Close());
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps"><strong>Setdescriptorheaps</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps"><strong>SetDescriptorHeaps</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable"><strong>Setcomputerootdescriptor Table</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable"><strong>SetComputeRootDescriptorTable</strong></a></td>
 <td><a href="cd3dx12-gpu-descriptor-handle.md"><strong>CD3DX12_GPU_DESCRIPTOR_HANDLE</strong></a></td>
 </tr>
 <tr class="even">
@@ -451,7 +451,7 @@ ThrowIfFailed(m_computeCommandList->Close());
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion"><strong>Copybufferregion</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion"><strong>CopyBufferRegion</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -461,7 +461,7 @@ ThrowIfFailed(m_computeCommandList->Close());
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -479,7 +479,7 @@ ThrowIfFailed(m_computeCommandList->Close());
 
  
 
-Anschließend führen wir die Befehle entweder in der UAV (mit aktiviertem GPU-culch) oder im vollständigen Befehls Puffer aus (deaktivierte GPU-culch).
+Anschließend führen wir die Befehle entweder im UAV (GPU-Culling aktiviert) oder im vollständigen Befehlspuffer (GPU-Culling deaktiviert) aus.
 
 ``` syntax
 // Record the rendering commands.
@@ -561,13 +561,13 @@ Anschließend führen wir die Befehle entweder in der UAV (mit aktiviertem GPU-c
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootsignature"><strong>Setgraphicsrootsignature</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootsignature"><strong>SetGraphicsRootSignature</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -575,15 +575,15 @@ Anschließend führen wir die Befehle entweder in der UAV (mit aktiviertem GPU-c
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps"><strong>Setdescriptorheaps</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps"><strong>SetDescriptorHeaps</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-rssetviewports"><strong>Rssetviewports</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-rssetviewports"><strong>RSSetViewports</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-rssetscissorrects"><strong>Rssezcissorrects</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-rssetscissorrects"><strong>RSSetScissorRects</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -593,15 +593,15 @@ Anschließend führen wir die Befehle entweder in der UAV (mit aktiviertem GPU-c
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 
 </tr>
 <tr class="even">
 <td><a href="cd3dx12-cpu-descriptor-handle.md"><strong>CD3DX12_CPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>Getcpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>GetCPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-omsetrendertargets"><strong>Omantrendertargets</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-omsetrendertargets"><strong>OMSetRenderTargets</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -613,19 +613,19 @@ Anschließend führen wir die Befehle entweder in der UAV (mit aktiviertem GPU-c
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_clear_flags"><strong>D3D12_CLEAR_FLAGS</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetprimitivetopology"><strong>Iasetprimitivetopology</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetprimitivetopology"><strong>IASetPrimitiveTopology</strong></a></td>
 <td><a href="/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_primitive_topology"><strong>D3D_PRIMITIVE_TOPOLOGY</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers"><strong>Iasetvertexbuffers</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers"><strong>IASetVertexBuffers</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect"><strong>Executin Direct</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect"><strong>ExecuteIndirect</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states"><strong>D3D12_RESOURCE_STATES</strong></a></td>
 </tr>
 <tr class="even">
@@ -639,7 +639,7 @@ Anschließend führen wir die Befehle entweder in der UAV (mit aktiviertem GPU-c
 
  
 
-Wenn wir uns im GPU-culchmodus befinden, wird die Grafik Befehls Warteschlange gewartet, bis die computearbeit beendet ist, bevor die indirekten Befehle ausgeführt werden. In der **onrendering** -Methode wird der folgende Code Ausschnitt hinzugefügt.
+Wenn wir uns im GPU-Culling-Modus befinden, wartet die Grafikbefehlswarteschlange, bis die Computearbeit abgeschlossen ist, bevor sie mit der Ausführung der indirekten Befehle beginnt. In der **OnRender-Methode** wird der folgende Codeausschnitt hinzugefügt.
 
 ``` syntax
 // Execute the compute work.
@@ -660,14 +660,14 @@ m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
 
 
 
-| Aufruffluss                                                             | Parameter |
+| Aufrufflow                                                             | Parameter |
 |-----------------------------------------------------------------------|------------|
 | [**ID3D12CommandList**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandlist)                        |            |
-| [**Executecommandlists**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists) |            |
-| [**Aussendet**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-signal)                           |            |
+| [**ExecuteCommandLists**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists) |            |
+| [**Signal**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-signal)                           |            |
 | [**Wait**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-wait)                               |            |
 | [**ID3D12CommandList**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandlist)                        |            |
-| [**Executecommandlists**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists) |            |
+| [**ExecuteCommandLists**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists) |            |
 
 
 
@@ -675,25 +675,25 @@ m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
 
 ## <a name="run-the-sample"></a>Ausführen des Beispiels
 
-Das Beispiel mit GPU-primitiver kulalisierung.
+Das Beispiel mit primitivem GPU-Culling.
 
-![Screenshot des indirekten execdi-Beispiels mit GPU-culult](images/executeindirect-withculling.png)
+![Screenshot des indirekten Beispiels "Exectue" mit GPU-Culling](images/executeindirect-withculling.png)
 
-Das Beispiel ohne GPU-primitive-kulalisierung.
+Das Beispiel ohne primitive GPU-Culling.
 
-![Screenshot des indirekten execdi-Beispiels ohne GPU-culult](images/executeindirect-withoutculling.png)
+![Screenshot des indirekten Beispiels "Exectue" ohne GPU-Culling](images/executeindirect-withoutculling.png)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 </dt> <dt>
 
-[Video-Tutorials zu DirectX Advanced Learning: Ausführen indirekter und asynchroner GPU-Berechnungen](https://www.youtube.com/watch?v=fKD-VKJeeds)
+[Videotutorials für erweitertes DirectX-Lernen: Ausführen indirekter und asynchroner GPU-Culling](https://www.youtube.com/watch?v=fKD-VKJeeds)
 </dt> <dt>
 
-[Indirektes zeichnen](indirect-drawing.md)
+[Indirektes Zeichnen](indirect-drawing.md)
 </dt> </dl>
 
  

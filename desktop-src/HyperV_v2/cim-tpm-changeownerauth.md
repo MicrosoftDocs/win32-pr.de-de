@@ -1,7 +1,7 @@
 ---
-description: Ändert die Autorisierungs Anmelde Informationen des Besitzers des TPM-Geräts. Die alten und neuen Autorisierungs Kennwörter für Besitzer sind erforderlich.
+description: Ändert die Anmeldeinformationen für die Besitzerautorisierung des TPM-Geräts. Die alten und neuen Autorisierungskennwörter des Besitzers sind erforderlich.
 ms.assetid: 5b7f1aec-5181-4330-982c-d80a1d5ae9e8
-title: Changebesitzauth-Methode der CIM_TPM-Klasse
+title: ChangeOwnerAuth-Methode der CIM_TPM-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2d5a2895e6a0049b2284b55aea1dc9a1849341c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a92911bcf9c2739d34e8b7602ab5f4cb0032fe5a77376632063971b88f2101d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646662"
 ---
-# <a name="changeownerauth-method-of-the-cim_tpm-class"></a>Changebesitzauth-Methode der CIM \_ TPM-Klasse
+# <a name="changeownerauth-method-of-the-cim_tpm-class"></a>ChangeOwnerAuth-Methode der CIM \_ TPM-Klasse
 
-Ändert die Autorisierungs Anmelde Informationen des Besitzers des TPM-Geräts. Die alten und neuen Autorisierungs Kennwörter für Besitzer sind erforderlich.
+Ändert die Anmeldeinformationen für die Besitzerautorisierung des TPM-Geräts. Die alten und neuen Autorisierungskennwörter des Besitzers sind erforderlich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ uint32 ChangeOwnerAuth(
 
 <dl> <dt>
 
-*Oldownerauth* \[ in\]
+*OldOwnerAuth* \[ In\]
 </dt> <dd>
 
-Stellt die alten Autorisierungs Anmelde Informationen dar, die erforderlich sind, um das TPM-Gerät in Besitz zu nehmen. Die **CIM \_ sharedcredential** -Unterklasse ist möglicherweise mit einem nicht-NULL-Wert von **CIM \_ sharedcredential** erforderlich.**Secret** -Eigenschaft für den-Parameter.
+Stellt die alten Anmeldeinformationen für die Besitzerautorisierung dar, die erforderlich sind, um den Besitz des TPM-Geräts zu übernehmen. Die **CIM \_ SharedCredential-Unterklasse** ist möglicherweise mit einem Wert von nicht NULL des **CIM \_ SharedCredential-Werts erforderlich.****Secret-Eigenschaft** für den -Parameter.
 
 </dd> <dt>
 
-" *Netwownerauth* \[ " in\]
+*NewOwnerAuth* \[ In\]
 </dt> <dd>
 
-Stellt die neuen Autorisierungs Anmelde Informationen dar, die erforderlich sind, um das TPM-Gerät in Besitz zu nehmen. Die **CIM \_ sharedcredential** -Unterklasse ist möglicherweise mit einem nicht-NULL-Wert von **CIM \_ sharedcredential** erforderlich.**Secret** -Eigenschaft für den-Parameter.
+Stellt die neuen Anmeldeinformationen für die Besitzerautorisierung dar, die erforderlich sind, um den Besitz des TPM-Geräts zu übernehmen. Die **CIM \_ SharedCredential-Unterklasse** ist möglicherweise mit einem Wert von nicht NULL des **CIM \_ SharedCredential-Werts erforderlich.****Secret-Eigenschaft** für den Parameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -66,16 +66,16 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-**Unbekannter/nicht** angegebener Fehler (2)
+**Unbekannter/nicht angegebener Fehler** (2)
 </dt> <dt>
 
-**DMTF reserviert** (3.. 4095)
+**DMTF Reserved** (3..4095)
 </dt> <dt>
 
-**Reservierte Methode** (4096.. 32767)
+**Reservierte Methode** (4096..32767)
 </dt> <dt>
 
-**Anbieter angegeben** (32768.. 65535)
+**Hersteller angegeben** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -84,19 +84,19 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ TPM**](cim-tpm.md)
+[**CIM \_ TPM**](cim-tpm.md)
 </dt> </dl>
 
  

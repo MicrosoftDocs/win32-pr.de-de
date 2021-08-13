@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. ElementType
-description: Das ElementType-Attribut ruft den Typ des Elements (z. t. Schaltfläche) ab.
+title: AmbientAttributes.elementType
+description: Das elementType-Attribut ruft den Typ des Elements ab (z. B. BUTTON).
 ms.assetid: afff5a23-d981-4a60-b709-a5b926ea1fc3
 keywords:
-- Ambientattribute. ElementType-Windows-Media Player
+- AmbientAttributes.elementType-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cac3d4fa0914225d8cda540435b4ddb3a7f0691
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 580f88b92ba86d6546a538f98cd939b177644d32aa284751fe2b5a01b97c2d9f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119470070"
 ---
-# <a name="ambientattributeselementtype"></a>Ambientattribute. ElementType
+# <a name="ambientattributeselementtype"></a>AmbientAttributes.elementType
 
-Das **ElementType** -Attribut ruft den Typ des Elements (z. t. Schaltfläche) ab.
+Das **elementType-Attribut** ruft den Typ des Elements ab (z. B. BUTTON).
 
 ``` syntax
         elementID.elementType
@@ -29,11 +29,11 @@ Das **ElementType** -Attribut ruft den Typ des Elements (z. t. Schaltfläche) ab
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge** , die den Namen des Elements angibt.
+Dieses Attribut ist eine schreibgeschützte **Zeichenfolge,** die den Namen des Elements angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist hilfreich, um den Typ des Elements zu bestimmen, das ein Ereignis ausgelöst hat, und einen generischen Ereignishandler für diese Element Klasse zu schreiben.
+Dieses Attribut ist nützlich, um den Elementtyp zu bestimmen, der ein Ereignis ausgelöst hat, und einen generischen Ereignishandler für diese Klasse von Elementen zu schreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,11 +41,11 @@ Dieses Attribut ist hilfreich, um den Typ des Elements zu bestimmen, das ein Ere
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

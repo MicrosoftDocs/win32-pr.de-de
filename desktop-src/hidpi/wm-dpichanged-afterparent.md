@@ -1,9 +1,9 @@
 ---
-title: WM_DPICHANGED_AFTERPARENT Meldung (Winuser. h)
-description: Für Fenster der obersten Ebene von Monitor v2 wird diese Nachricht an alle hwnds in der untergeordneten hwdn-Struktur des Fensters gesendet, das eine dpi-Änderung durchläuft. | WM_DPICHANGED_AFTERPARENT Meldung (Winuser. h)
+title: WM_DPICHANGED_AFTERPARENT-Nachricht (Winuser.h)
+description: Bei Fenstern der obersten Ebene pro Monitor v2 wird diese Meldung an alle HWNDs in der untergeordneten HWDN-Struktur des Fensters gesendet, für das eine DPI-Änderung erfolgt. | WM_DPICHANGED_AFTERPARENT-Nachricht (Winuser.h)
 ms.assetid: FEA1BF07-55B6-4584-ABD3-340515831E0A
 keywords:
-- WM_DPICHANGED_AFTERPARENT Message High dpi
+- 'WM_DPICHANGED_AFTERPARENT Meldung : Hoher DPI-Anteil'
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10cc76602662cefba42f62bd3ed85913ade40f15
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d47f303db19438f1e7e2cd77df60ddace76bec791bb1789bed47e3f09d8a197c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106357209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118759363"
 ---
-# <a name="wm_dpichanged_afterparent-message"></a>WM-dpichanged-nach-über \_ \_ geordnete Nachricht
+# <a name="wm_dpichanged_afterparent-message"></a>WM \_ DPICHANGED \_ AFTERPARENT-Nachricht
 
-Für Fenster der obersten Ebene von [Monitor v2](dpi-awareness-context.md) wird diese Nachricht an alle hwnds in der untergeordneten hwdn-Struktur des Fensters gesendet, das eine dpi-Änderung durchläuft. Diese Meldung tritt auf, nachdem das Fenster der obersten Ebene [**WM \_ dpichanged**](wm-dpichanged.md)empfängt und die untergeordnete Struktur von oben nach unten durchläuft.
+Bei Fenstern der obersten Ebene pro [Monitor v2](dpi-awareness-context.md) wird diese Meldung an alle HWNDs in der untergeordneten HWDN-Struktur des Fensters gesendet, für das eine DPI-Änderung erfolgt. Diese Meldung tritt auf, nachdem das Fenster der obersten Ebene [**WM \_ DPICHANGED**](wm-dpichanged.md)empfängt und die untergeordnete Struktur von oben nach unten durchläuft.
 
 
 ```C++
@@ -54,11 +54,11 @@ Dieser Wert wird nicht verwendet und ist 0 (null).
 
 Dieser Wert wird vom System nicht verwendet und ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In [defwindowproc](/windows/win32/api/winuser/nf-winuser-defwindowproca)gibt es keine Standardbehandlung für diese Nachricht.
+Diese Meldung wird in [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowproca)nicht standardmäßig verarbeitet.
 
-Diese Meldung wird nur gesendet, wenn das Fenster der obersten Ebene den dpi-Kontext PMv2 hat.
+Diese Meldung wird nur gesendet, wenn das Fenster der obersten Ebene über einen DPI-Awareness-Kontext von PMv2 verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,20 +66,20 @@ Diese Meldung wird nur gesendet, wenn das Fenster der obersten Ebene den dpi-Kon
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WM- \_ dpichanged**](wm-dpichanged.md)
+[**WM \_ DPICHANGED**](wm-dpichanged.md)
 </dt> <dt>
 
-[**WM \_ dpichanged \_ beforeparent**](wm-dpichanged-beforeparent.md)
+[**WM \_ DPICHANGED \_ BEFOREPARENT**](wm-dpichanged-beforeparent.md)
 </dt> </dl>
 
  

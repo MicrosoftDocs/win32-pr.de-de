@@ -1,68 +1,68 @@
 ---
-description: Decoder-Schnittstellen
+description: Decoderschnittstellen
 ms.assetid: b88517cc-06fe-4d83-a6a9-76e1f34293f4
-title: Decoder-Schnittstellen
+title: Decoderschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef90ca2dd521c15460295505a6d5b7ea451c4dba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a52a0924f6302e45b10cb32a1d621db04967d33a3251ee39cce359e5030af5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119393524"
 ---
-# <a name="decoder-interfaces"></a>Decoder-Schnittstellen
+# <a name="decoder-interfaces"></a>Decoderschnittstellen
 
-In den folgenden Tabellen werden die von Windows Imaging Component (WIC)-Decodern implementierten Schnittstellen angezeigt, und das Klassendiagramm zeigt die Vererbungs Hierarchie.
+Die folgenden Tabellen zeigen die Schnittstellen, die von Windows WIC-Decodern (Imaging Component) implementiert werden, und das Klassendiagramm zeigt die Vererbungshierarchie.
 
-Container-Level Decoder-Schnittstellen
+Container-Level-Decoderschnittstellen
 
 
 
 | Schnittstelle                                                                                       | Aufgaben                             | Implementierung                                                             |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------------------------------------------|
-| [IWICBitmapDecoder](-wic-imp-iwicbitmapdecoder.md)                                             | Dienste auf Container Ebene                     | Erforderlich                                                                   |
-| [IWICBitmapCodecProgressNotification](-wic-imp-iwicbitmapcodecprogressnotification-decoder.md) | Unterstützung für die Fortschritts Benachrichtigung & Abbruch | Empfohlen                                                                |
-| [IWICMetadataBlockReader](-wic-imp-iwicmetadatablockreader.md)                                 | Metadatenenumeration                         | Optional (nur für Formate erforderlich, die Metadaten auf Container Ebene unterstützen) |
+| [Iwicbitmapdecoder](-wic-imp-iwicbitmapdecoder.md)                                             | Dienste auf Containerebene                     | Erforderlich                                                                   |
+| [IWICBitmapCodecProgressNotification](-wic-imp-iwicbitmapcodecprogressnotification-decoder.md) | Unterstützung für Statusbenachrichtigungen & Abbruch | Empfohlen                                                                |
+| [Iwicmetadatablockreader](-wic-imp-iwicmetadatablockreader.md)                                 | Metadatenenumeration                         | Optional (nur für Formate erforderlich, die Metadaten auf Containerebene unterstützen) |
 
 
 
  
 
-Frame-Level Decoder-Schnittstellen
+Frame-Level-Decoderschnittstellen
 
 
 
 | Schnittstelle                                                           | Aufgaben          | Implementierung                |
 |---------------------------------------------------------------------|---------------------------|-------------------------------|
-| [IWICBitmapFrameDecode](-wic-imp-iwicbitmapframedecode.md)         | Dienste auf Frame-Ebene      | Erforderlich                      |
-| [IWICMetadataBlockReader](-wic-imp-iwicmetadatablockreader.md)     | Metadatenenumeration      | Erforderlich                      |
-| [IWICBitmapSourceTransform](-wic-imp-iwicbitmapsourcetransform.md) | Native Decoder-Transformationen | Empfohlen                   |
-| [IWICDevelopRaw](-wic-imp-iwicdevelopraw.md)                       | Rohverarbeitungs Dienste   | Nur für RAW-Formate erforderlich |
+| [Iwicbitmapframedecode](-wic-imp-iwicbitmapframedecode.md)         | Dienste auf Frameebene      | Erforderlich                      |
+| [Iwicmetadatablockreader](-wic-imp-iwicmetadatablockreader.md)     | Metadatenenumeration      | Erforderlich                      |
+| [IWICBitmapSourceTransform](-wic-imp-iwicbitmapsourcetransform.md) | Transformationen des nativen Decoders | Empfohlen                   |
+| [IWICDevelopRaw](-wic-imp-iwicdevelopraw.md)                       | Rohdatenverarbeitungsdienste   | Nur für Raw-Formate erforderlich |
 
 
 
  
 
-![WIC-Schnittstellen Vererbungs Hierarchie](graphics/wicinterfaces.png)
+![WIC-Schnittstellenvererbungshierarchie](graphics/wicinterfaces.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Implementieren eines WIC-Enabled Decoders](-wic-implementingwicdecoder.md)
+[Implementieren eines WIC-Enabled-Decoders](-wic-implementingwicdecoder.md)
 </dt> <dt>
 
 [Implementieren von IWICBitmapDecoder](-wic-imp-iwicbitmapdecoder.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> </dl>
 
  

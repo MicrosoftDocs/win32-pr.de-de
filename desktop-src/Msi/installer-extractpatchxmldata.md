@@ -1,7 +1,7 @@
 ---
-description: Die extractpatchxmldata-Methode des Installer-Objekts extrahiert Informationen aus einem Patch als XML-Zeichenfolge. Anhand dieser Informationen kann ermittelt werden, ob der Patch auf ein Zielsystem angewendet wird. Diese Methode ruft msiextractpatchxmldata auf.
+description: Die ExtractPatchXMLData-Methode des Installer-Objekts extrahiert Informationen aus einem Patch als XML-Zeichenfolge. Die Informationen können verwendet werden, um zu bestimmen, ob der Patch auf einem Zielsystem angewendet wird. Diese Methode ruft MsiExtractPatchXMLData auf.
 ms.assetid: 85940940-2002-4cb1-8e29-ba2374bf3796
-title: Installer. extractpatchxmldata-Methode
+title: Installer.ExtractPatchXMLData-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 69c17236c0a4cd96820e0366df51b28cf47ecfb0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d9b4df7d2ecedda5e3bac97a1dd80a002571f736ceb2ede6b8deac2f1a5f7802
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118631543"
 ---
-# <a name="installerextractpatchxmldata-method"></a>Installer. extractpatchxmldata-Methode
+# <a name="installerextractpatchxmldata-method"></a>Installer.ExtractPatchXMLData-Methode
 
-Die **extractpatchxmldata** -Methode des [**Installer**](installer-object.md) -Objekts extrahiert Informationen aus einem Patch als XML-Zeichenfolge. Anhand dieser Informationen kann ermittelt werden, ob der Patch auf ein Zielsystem angewendet wird. Diese Methode ruft [**msiextractpatchxmldata**](/windows/desktop/api/Msi/nf-msi-msiextractpatchxmldataa)auf.
+Die **ExtractPatchXMLData-Methode** des [**Installer-Objekts**](installer-object.md) extrahiert Informationen aus einem Patch als XML-Zeichenfolge. Die Informationen können verwendet werden, um zu bestimmen, ob der Patch auf einem Zielsystem angewendet wird. Diese Methode ruft [**MsiExtractPatchXMLData auf.**](/windows/desktop/api/Msi/nf-msi-msiextractpatchxmldataa)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ Installer.ExtractPatchXMLData(
 
 <dl> <dt>
 
-*Patchpfad* 
+*PatchPath* 
 </dt> <dd>
 
-Vollständiger Pfad zum Patch, von dem die anwendbarkeits Informationen extrahiert werden sollen.
+Vollständiger Pfad zum Patch, aus dem die Anwendbarkeitsinformationen extrahiert werden sollen.
 
 </dd> </dl>
 
@@ -56,20 +56,20 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003 oder Windows XP.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003 oder Windows XP.<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                    |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                                         |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Msiextractpatchxmldata**](/windows/desktop/api/Msi/nf-msi-msiextractpatchxmldataa)
+[**MsiExtractPatchXMLData**](/windows/desktop/api/Msi/nf-msi-msiextractpatchxmldataa)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

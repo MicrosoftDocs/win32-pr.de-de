@@ -1,5 +1,5 @@
 ---
-description: Ab Windows 7 werden Cascading-Menüs über den Registrierungs Eintrag Unterbefehle, den extendedsubcommandskey-Registrierungs Eintrag oder die IExplorerCommand-Schnittstelle erstellt.
+description: Ab Windows 7 werden kaskadierenden Menüs über den Registrierungseintrag SubCommands, den Registrierungseintrag ExtendedSubCommandsKey oder die IExplorerCommand-Schnittstelle erstellt.
 title: Erstellen von statischen kaskadierenden Menüs
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,25 +9,25 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: d812b4d3d2fb0754002cb37d72718e4fe861ce15
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22fdc261012697affd99b5a1491ef5829fcc5329d5570ae4e3c37dcd111b457f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104569035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119456330"
 ---
 # <a name="creating-static-cascading-menus"></a>Erstellen von statischen kaskadierenden Menüs
 
-In Windows 7 und höher wird die Cascading-Menü Implementierung durch Registrierungs Einstellungen unterstützt. Vor Windows 7 war die Erstellung von kaskadierenden Menüs nur durch die Implementierung der [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) -Schnittstelle möglich. In Windows 7 und höher sollten Sie nur auf Component Object Model Code basierte Lösungen (com) zugreifen, wenn die statischen Methoden nicht ausreichen.
+In Windows 7 und höher wird die Implementierung des kaskadierenden Menüs über Registrierungseinstellungen unterstützt. Vor Windows 7 war die Erstellung von kaskadierenden Menüs nur über die Implementierung der [**IContextMenu-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) möglich. In Windows 7 und höher sollten Sie nur dann Component Object Model (COM) codebasierte Lösungen verwenden, wenn die statischen Methoden nicht ausreichen.
 
-Der folgende Screenshot zeigt ein Beispiel für ein Cascading-Menü.
+Der folgende Screenshot enthält ein Beispiel für ein kaskadiertes Menü.
 
-![Screenshot mit einem Beispiel für ein Cascading-Menü](images/file-assoc/filecascademenu2ndex.png)
+![Screenshot, der ein Beispiel für ein kaskadiertes Menü zeigt](images/file-assoc/filecascademenu2ndex.png)
 
-In Windows 7 und höher gibt es drei Möglichkeiten, Kaskadierende Menüs zu erstellen, die in den folgenden Abschnitten beschrieben werden.
+In Windows 7 und höher gibt es drei Möglichkeiten zum Erstellen von kaskadierenden Menüs, die in den folgenden Abschnitten beschrieben werden.
 
--   [Erstellen von kaskadierenden Menüs mit dem Registrierungs Eintrag "Unterbefehle"](how-to--create-cascading-menus-with-the-subcommands-registry-entry.md)
--   [Erstellen von kaskadierenden Menüs mit dem Registrierungs Eintrag "extendedsubcommandskey"](how-to-create-cascading-menus-with-the-extendedsubcommandskey-registry-entry.md)
+-   [Erstellen von kaskadierenden Menüs mit dem Registrierungseintrag "SubCommands"](how-to--create-cascading-menus-with-the-subcommands-registry-entry.md)
+-   [Erstellen von kaskadierenden Menüs mit dem Registrierungseintrag ExtendedSubCommandsKey](how-to-create-cascading-menus-with-the-extendedsubcommandskey-registry-entry.md)
 -   [Erstellen von kaskadierenden Menüs mit der IExplorerCommand-Schnittstelle](how-to-create-cascading-menus-with-the-iexplorercommand-interface.md)
 
  

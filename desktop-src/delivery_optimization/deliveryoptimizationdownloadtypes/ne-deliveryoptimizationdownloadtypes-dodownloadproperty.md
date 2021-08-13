@@ -1,8 +1,8 @@
 ---
-title: Dodownloadproperty-Enumeration
-description: Gibt die ID der Eigenschaften für den Downloadvorgang an.
+title: DODownloadProperty-Enumeration
+description: Gibt die ID der Eigenschaften für den DO-Downloadvorgang an.
 keywords:
-- Dodownloadproperty-Enumeration, dodownloadproperty
+- DODownloadProperty-Enumeration, DODownloadProperty
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/02/2019
-ms.openlocfilehash: bb8ec6ad8cc55239522f953c6a81a8bf7b2b62ec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e36dc783a7b2c7da23f4513f198b7871f97fe6576f60ffdd6f0fcbd7a11e3f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118544575"
 ---
-# <a name="dodownloadproperty-enumeration"></a>Dodownloadproperty-Enumeration
+# <a name="dodownloadproperty-enumeration"></a>DODownloadProperty-Enumeration
 
-Die **dodownloadproperty** -Enumeration gibt die ID der Eigenschaften für den Downloadvorgang an. Diese Enumeration wird von der **idodownload** -Schnittstelle verwendet und durch einen Variant-Wert ausgeführt, bei dem der Werttyp enthalten ist.
+Die **DODownloadProperty-Enumeration** gibt die ID der Eigenschaften für den DO-Downloadvorgang an. Diese Enumeration wird von der **IDODownload-Schnittstelle** verwendet und durch einen VARIANT-Wert ausgeführt, in dem der Typ des Werts enthalten ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,33 +59,33 @@ typedef enum _DODownloadProperty
 
 | Anforderung | Wert |
 |-|-|
-| DODownloadProperty_Id | Schreibgeschützt. Verwenden Sie diese Eigenschaft, um die ID zu erhalten, die den Download eindeutig identifiziert. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_Uri | Verwenden Sie diese Eigenschaft, um den Remote-URI-Pfad der herunter zuladenden Ressource festzulegen oder zu erhalten. Diese Eigenschaft ist nur erforderlich, wenn *DODownloadProperty_ContentId* nicht angegeben wird. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_ContentId | Verwenden Sie diese Eigenschaft, um die eindeutige Download-Inhalts-ID festzulegen oder zu erhalten. Diese Eigenschaft ist nur erforderlich, wenn *DODownloadProperty_Uri* nicht angegeben wird. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_DisplayName | Dies ist optional. Verwenden Sie diese Eigenschaft, um den Namen der Download Anzeige festzulegen oder zu erhalten. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_LocalPath | Verwenden Sie diese Eigenschaft, um den Namen des lokalen Pfads zum Speichern der Downloaddatei festzulegen oder zu erhalten. Wenn der Pfad nicht vorhanden ist, wird versucht, ihn unter den Berechtigungen des Aufrufers zu erstellen. Diese Eigenschaft ist nur erforderlich, wenn keine *DODownloadProperty_StreamInterface* bereitgestellt wurde. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_HttpCustomHeaders | Dies ist optional. Verwenden Sie diese Eigenschaft, um benutzerdefinierte HTTP-Anforderungs Header festzulegen oder zu erhalten. Diese Header werden bei http-Datei Anforderungs Vorgängen berücksichtigt. Die Header müssen bereits als Standard-HTTP-Header formatiert sein. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_CostPolicy | Dies ist optional. Verwenden Sie diese Eigenschaft, um einen der **dodownloadcostpolicy** -Enumerationswerte festzulegen oder zu erhalten. Der Varianttyp ist VT_UI4. |
-| DODownloadProperty_SecurityFlags | Optionaler Schreibzugriff. Verwenden Sie diese Eigenschaft, um die standardmäßigen WinHTTP-sicherheitsflags (**WINHTTP_OPTION_SECURITY_FLAGS**) festzulegen oder zu erhalten. Der Varianttyp ist VT_UI4.</br></br>Die folgenden Flags werden unterstützt:</br>SECURITY_FLAG_IGNORE_CERT_CN_INVALID. Ermöglicht einen ungültigen allgemeinen Namen in einem Zertifikat.</br>SECURITY_FLAG_IGNORE_CERT_DATE_INVALID. Ermöglicht ein ungültiges Zertifikat Datum.</br>SECURITY_FLAG_IGNORE_UNKNOWN_CA. Lässt eine ungültige Zertifizierungsstelle zu.</br>SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE. Ermöglicht die Einrichtung der Identität eines Servers mit einem nicht-Serverzertifikat.</br>WINHTTP_ENABLE_SSL_REVOCATION. Ermöglicht SSL-Sperrung. Wenn dieses Flag festgelegt ist, werden die obigen Flags ignoriert. |
-| DODownloadProperty_CallbackFreqPercent | Dies ist optional. Verwenden Sie diese Eigenschaft, um die Rückruf Häufigkeit basierend auf dem Download Prozentsatz festzulegen. Der Varianttyp ist VT_UI4. |
-| DODownloadProperty_CallbackFreqSeconds | Dies ist optional. Verwenden Sie diese Eigenschaft, um die Rückruf Häufigkeit basierend auf der Downloadzeit festzulegen oder zu erhalten. Der Standardwert ist jede Sekunde. Der Varianttyp ist VT_UI4. |
-| DODownloadProperty_NoProgressTimeoutSeconds | Dies ist optional. Verwenden Sie diese Eigenschaft, um die Download Timeout Länge für keinen Fortschritt festzulegen oder zu erhalten. Der minimal zulässige Wert ist 60 Sekunden ohne Download Aktivität. Der Varianttyp ist VT_UI4. |
-| DODownloadProperty_ForegroundPriority | Dies ist optional. Verwenden Sie diese Eigenschaft, um die aktuelle Download Priorität festzulegen oder zu erhalten. VARIANT_TRUE Wert wird der Download mit höherer Priorität in den Vordergrund gebracht. Der Standardwert ist die Hintergrund Priorität. Der Varianttyp ist VT_BOOL. |
-| DODownloadProperty_BlockingMode | Dies ist optional. Verwenden Sie diese Eigenschaft, um den aktuellen Download Blockierungs Modus festzulegen oder zu erhalten. VARIANT_TRUE Wert bewirkt, dass **idodownload:: Start** blockiert wird, bis der Download beendet oder ein Fehler aufgetreten ist. Der Standardwert ist der Modus für die nicht Blockierung. Der Varianttyp ist VT_BOOL. |
-| DODownloadProperty_CallbackInterface | Dies ist optional. Verwenden Sie diese Eigenschaft, um den Zeiger auf die **idodownloadstatus Callback** -Schnittstelle festzulegen, die für Download Rückrufe verwendet wird. Der Varianttyp ist VT_UNKNOWN. |
-| DODownloadProperty_StreamInterface | Dies ist optional. Verwenden Sie diese Eigenschaft, um den Zeiger auf die IStream-Schnittstelle festzulegen, die für den streamdownloadtyp verwendet wird. Der Varianttyp ist VT_UNKNOWN. |
-| DODownloadProperty_SecurityContext | Optionaler Schreibzugriff. Verwenden Sie diese Eigenschaft, um den Zertifikat Kontext festzulegen, der bei HTTP-Anforderungs Vorgängen verwendet werden soll. Der Wert muss aus serialisierten Bytes CERT_CONTEXT bestehen. Der Varianttyp ist (VT_ARRAY \| VT_UI1). |
-| DODownloadProperty_NetworkToken | Optionaler Schreibzugriff. Verwenden Sie diese Eigenschaft, um das Netzwerk Token festzulegen, das bei http-Vorgängen verwendet werden soll. VARIANT_TRUE Wert bewirkt, dass das Identitäts Token des Aufrufers erfasst und VARIANT_FALSE das vorhandene Token löscht. Der Standardwert ist das Token des angemeldeten Benutzers. Der Varianttyp ist VT_BOOL. |
-| DODownloadProperty_CorrelationVector | Dies ist optional. Legt einen spezifischen Korrelations Vektor für Telemetriezwecke fest. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_DecryptionInfo | Optionaler Schreibzugriff. Legt Entschlüsselungs Informationen in Form einer JSON-Zeichenfolge fest. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_IntegrityCheckInfo | Optionaler Schreibzugriff. Legt den Speicherort der Teil Hash Datei (PHF) fest, der von Do verwendet wird, um Lauf Zeit Integritätsprüfungen für den heruntergeladenen Inhalt auszuführen. Der Varianttyp ist VT_BSTR. |
-| DODownloadProperty_IntegrityCheckMandatory | Dies ist optional. Legt ein boolesches Flag fest, das angibt, ob die Verwendung der Teil Hash Datei (PHF) obligatorisch ist. Wenn VARIANT_TRUE, wird der Download abgebrochen, wenn die Integritätsprüfung fehlschlägt. Der Varianttyp ist VT_BOOL. |
-| DODownloadProperty_TotalSizeBytes | Dies ist optional. Gibt die Gesamtgröße des Downloads in Bytes an. Der Varianttyp ist VT_UI8. |
+| DODownloadProperty_Id | Schreibgeschützt. Verwenden Sie diese Eigenschaft, um die ID zu erhalten, die den Download eindeutig identifiziert. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_Uri | Verwenden Sie diese Eigenschaft, um den Remote-URI-Pfad der herunterzuladenden Ressource zu festlegen oder zu erhalten. Diese Eigenschaft ist nur erforderlich, *DODownloadProperty_ContentId* nicht bereitgestellt wird. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_ContentId | Verwenden Sie diese Eigenschaft, um die eindeutige Inhalts-ID für den Download zu festlegen oder zu erhalten. Diese Eigenschaft ist nur erforderlich, *DODownloadProperty_Uri* nicht bereitgestellt wird. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_DisplayName | Optional. Verwenden Sie diese Eigenschaft, um den Anzeigenamen für den Download zu festlegen oder zu erhalten. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_LocalPath | Verwenden Sie diese Eigenschaft, um den Namen des lokalen Pfads zum Speichern der Downloaddatei zu festlegen oder zu erhalten. Wenn der Pfad nicht vorhanden ist, versucht DO, ihn unter den Berechtigungen des Aufrufers zu erstellen. Diese Eigenschaft ist nur erforderlich, *wenn DODownloadProperty_StreamInterface* nicht bereitgestellt wurde. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_HttpCustomHeaders | Optional. Verwenden Sie diese Eigenschaft, um benutzerdefinierte HTTP-Anforderungsheader zu festlegen oder zu erhalten. DO enthält diese Header während HTTP-Dateianforderungsvorgängen. Die Header müssen bereits als HTTP-Standardheader formatiert sein. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_CostPolicy | Optional. Verwenden Sie diese Eigenschaft, um einen der **DODownloadCostPolicy-Enumerationswerte** zu festlegen oder zu erhalten. Der VARIANT-Typ VT_UI4. |
+| DODownloadProperty_SecurityFlags | Optionaler Schreibzugriff. Verwenden Sie diese Eigenschaft, um die WinHTTP-Standardsicherheitsflags ( WINHTTP_OPTION_SECURITY_FLAGS **) zu WINHTTP_OPTION_SECURITY_FLAGS.** Der VARIANT-Typ VT_UI4.</br></br>Die folgenden Flags werden unterstützt:</br>SECURITY_FLAG_IGNORE_CERT_CN_INVALID. Lässt einen ungültigen allgemeinen Namen in einem Zertifikat zu.</br>SECURITY_FLAG_IGNORE_CERT_DATE_INVALID. Lässt ein ungültiges Zertifikatdatum zu.</br>SECURITY_FLAG_IGNORE_UNKNOWN_CA. Lässt eine ungültige Zertifizierungsstelle zu.</br>SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE. Ermöglicht das Herstellen der Identität eines Servers mit einem Nicht-Serverzertifikat.</br>WINHTTP_ENABLE_SSL_REVOCATION. Lässt SSL-Sperrung zu. Wenn dieses Flag festgelegt ist, werden die oben genannten Flags ignoriert. |
+| DODownloadProperty_CallbackFreqPercent | Optional. Verwenden Sie diese Eigenschaft, um die Rückrufhäufigkeit basierend auf dem Downloadprozentsatz zu festlegen oder zu erhalten. Der VARIANT-Typ VT_UI4. |
+| DODownloadProperty_CallbackFreqSeconds | Optional. Verwenden Sie diese Eigenschaft, um die Rückrufhäufigkeit basierend auf der Downloadzeit zu festlegen oder zu erhalten. Der Standardwert ist alle eine Sekunde. Der VARIANT-Typ VT_UI4. |
+| DODownloadProperty_NoProgressTimeoutSeconds | Optional. Verwenden Sie diese Eigenschaft, um die Download-Timeoutlänge für keinen Fortschritt fest- oder zu erhalten. Der akzeptierte Mindestwert beträgt 60 Sekunden ohne Downloadaktivität. Der VARIANT-Typ VT_UI4. |
+| DODownloadProperty_ForegroundPriority | Optional. Verwenden Sie diese Eigenschaft, um die aktuelle Downloadpriorität zu festlegen oder zu erhalten. VARIANT_TRUE-Wert wird der Download mit höherer Priorität in den Vordergrund gestellt. Der Standardwert ist die Hintergrundpriorität. Der VARIANT-Typ VT_BOOL. |
+| DODownloadProperty_BlockingMode | Optional. Verwenden Sie diese Eigenschaft, um den aktuellen Downloadblockierungsmodus zu festlegen oder zu erhalten. VARIANT_TRUE wert verursacht, **dass IDODownload::Start** blockiert wird, bis der Download abgeschlossen ist oder ein Fehler aufgetreten ist. Der Standardwert ist der Nichtblockierungsmodus. Der VARIANT-Typ VT_BOOL. |
+| DODownloadProperty_CallbackInterface | Optional. Verwenden Sie diese Eigenschaft zum Festlegen oder Abrufen des Zeigers auf die **IDODownloadStatusCallback-Schnittstelle,** die für Downloadrückrufe verwendet wird. Der VARIANT-Typ VT_UNKNOWN. |
+| DODownloadProperty_StreamInterface | Optional. Verwenden Sie diese Eigenschaft, um den Zeiger auf die IStream-Schnittstelle für den Streamdownloadtyp zu festlegen oder zu erhalten. Der VARIANT-Typ VT_UNKNOWN. |
+| DODownloadProperty_SecurityContext | Optionaler Schreibzugriff. Verwenden Sie diese Eigenschaft, um den Zertifikatkontext für HTTP-Anforderungsvorgänge zu festlegen. Der Wert muss aus serialisierten Bytes von CERT_CONTEXT. Der VARIANT-Typ ist \| (VT_ARRAY VT_UI1). |
+| DODownloadProperty_NetworkToken | Optionaler Schreibzugriff. Verwenden Sie diese Eigenschaft, um das Netzwerktoken für HTTP-Vorgänge festlegen. VARIANT_TRUE-Wert dazu, dass DO das Identitätstoken des Aufrufers erfasst, und VARIANT_FALSE vorhandene Token löschen. Der Standardwert ist das Token des angemeldeten Benutzers. Der VARIANT-Typ VT_BOOL. |
+| DODownloadProperty_CorrelationVector | Optional. Legt einen bestimmten Korrelationsvektor für Telemetriezwecke fest. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_DecryptionInfo | Optionaler Schreibzugriff. Legt Entschlüsselungsinformationen in Form einer JSON-Zeichenfolge fest. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_IntegrityCheckInfo | Optionaler Schreibzugriff. Legt den Speicherort der Hashdatei (Piece Hash File, PHF) fest, der von DO verwendet wird, um Laufzeitintegritätsprüfungen für den heruntergeladenen Inhalt durchzuführen. Der VARIANT-Typ VT_BSTR. |
+| DODownloadProperty_IntegrityCheckMandatory | Optional. Legt ein boolesches Flag fest, das angibt, ob die Verwendung der Stückhashdatei (PHF) obligatorisch ist. Wenn VARIANT_TRUE, wird der Download abgebrochen, wenn die Integritätsprüfung fehlschlägt. Der VARIANT-Typ VT_BOOL. |
+| DODownloadProperty_TotalSizeBytes | Optional. Gibt die Gesamtgröße des Downloads in Bytes an. Der VARIANT-Typ VT_UI8. |
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Deliveryoptimizationdownloadtypes. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, version 1809 Win32 applications only (Nur \[ Win32-Anwendungen der Version 1809)\] |
+| **Header** | DeliveryOptimizationDownloadTypes.h |

@@ -1,29 +1,29 @@
 ---
-title: Die iaccessibleex-Schnittstelle
-description: Steuerelemente, die nicht über einen Microsoft-Benutzeroberflächenautomatisierungs-Anbieter verfügen, aber IAccessible implementieren, können problemlos aktualisiert werden, um einige Funktionen zur Automatisierung der Benutzeroberfläche durch Implementieren der iaccessibleex-Schnittstelle bereitzustellen
+title: Die IAccessibleEx-Schnittstelle
+description: Steuerelemente, die über keinen Microsoft Benutzeroberflächenautomatisierung-Anbieter verfügen, aber IAccessible implementieren, können problemlos aktualisiert werden, um einige Benutzeroberflächenautomatisierung bereitstellen, indem die IAccessibleEx-Schnittstelle implementiert wird.
 ms.assetid: 5523156e-c9b8-4aad-b568-f3b3c402d33e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a74e7d464acf18244d91bc69199a56004b20beb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1170e6160a05350fa459090b2f51dbedd618ebdb81512a7e9730b50f8533ef95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118566011"
 ---
-# <a name="the-iaccessibleex-interface"></a>Die iaccessibleex-Schnittstelle
+# <a name="the-iaccessibleex-interface"></a>Die IAccessibleEx-Schnittstelle
 
-Steuerelemente, die nicht über einen Microsoft-Benutzeroberflächenautomatisierungs-Anbieter verfügen, aber [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)implementieren, können problemlos aktualisiert werden, um einige Funktionen zur Automatisierung der Benutzeroberfläche durch Implementieren der [**iaccessibleex**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iaccessibleex) -Schnittstelle bereitzustellen Diese Schnittstelle ermöglicht es dem Steuerelement, Benutzeroberflächenautomatisierungs-Eigenschaften und Steuerelement Muster verfügbar zu machen, ohne dass eine vollständige Implementierung von Schnittstellen für Benutzeroberflächenautomatisierungs-Anbieter wie [**IRawElementProviderFragment**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragment) Um **iaccessibleex**, **IRawElementProviderFragment** und alle anderen Benutzeroberflächenautomatisierungs-Schnittstellen zu verwenden, fügen Sie die uiautomation. h-Header Datei in Ihren Quellcode ein.
+Steuerelemente, die keinen Microsoft Benutzeroberflächenautomatisierung-Anbieter haben, aber [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)implementieren, können problemlos aktualisiert werden, um einige Benutzeroberflächenautomatisierung bereitstellen, indem die [**IAccessibleEx-Schnittstelle implementiert**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iaccessibleex) wird. Diese Schnittstelle ermöglicht es dem Steuerelement, Benutzeroberflächenautomatisierung Eigenschaften und Steuerelementmuster verfügbar zu machen, ohne dass eine vollständige Implementierung von Benutzeroberflächenautomatisierung-Anbieterschnittstellen wie [**IRawElementProviderFragment erforderlich ist.**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragment) Um **IAccessibleEx**, **IRawElementProviderFragment** und alle anderen Benutzeroberflächenautomatisierung-Schnittstellen zu verwenden, schließen Sie die Headerdatei UIAutomation.h in Ihren Quellcode ein.
 
-Angenommen, Sie haben ein benutzerdefiniertes Steuerelement, das über einen Bereichs Wert verfügt. Der Microsoft Active Accessibility Server für das Steuerelement definiert die Rolle des Steuer Elements und kann seinen aktuellen Wert zurückgeben. Da in Microsoft Active Accessibility jedoch keine Mindest-und höchst Eigenschaften definiert sind, verfügt der Server nicht über die Möglichkeit, die minimalen und maximalen Werte des Steuer Elements zurückzugeben. Ein Benutzeroberflächenautomatisierungs-Client kann die Rolle, den aktuellen Wert und andere Eigenschaften von Microsoft Active Accessibility abrufen, da der Benutzeroberflächenautomatisierungs-Kern diese über [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)abrufen kann. Ohne Zugriff auf eine [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider) -Schnittstelle für das Objekt kann die Benutzeroberflächen Automatisierung jedoch auch nicht die maximalen und minimalen Werte abrufen.
+Stellen Sie sich beispielsweise ein benutzerdefiniertes Steuerelement vor, das über einen Bereichswert verfügt. Der Microsoft Active Accessibility für das Steuerelement definiert die Rolle des Steuerelements und kann seinen aktuellen Wert zurückgeben. Da Microsoft Active Accessibility jedoch keine minimalen und maximalen Eigenschaften definiert, verfügt der Server nicht über die Möglichkeit, die minimalen und maximalen Werte des Steuerelements zurück zu geben. Ein Benutzeroberflächenautomatisierung-Client kann die Rolle, den aktuellen Wert und andere Microsoft Active Accessibility-Eigenschaften des Steuerelements abrufen, da der Benutzeroberflächenautomatisierung-Kern diese über [**IAccessible abrufen kann.**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Ohne Zugriff auf eine [**IRangeValueProvider-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider) für das -Objekt kann Benutzeroberflächenautomatisierung jedoch auch nicht die maximalen und minimalen Werte abrufen.
 
-Der Steuerelement Entwickler könnte einen kompletten Benutzeroberflächenautomatisierungs-Anbieter für das Steuerelement bereitstellen. Dies würde jedoch bedeuten, dass ein Großteil der vorhandenen Funktionen der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Implementierung duplizieren würde, z. b. Navigation und allgemeine Eigenschaften. Stattdessen kann sich der Entwickler weiterhin auf **IAccessible** verlassen, um diese Funktionalität bereitzustellen, und gleichzeitig Unterstützung für Steuerelement spezifische Eigenschaften durch [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider)hinzufügen.
+Der Steuerelemententwickler könnte einen vollständigen Benutzeroberflächenautomatisierung-Anbieter für das Steuerelement zur Verfügung stellen, aber dies würde bedeuten, einen Großen Teil der vorhandenen Funktionalität der [**IAccessible-Implementierung**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) zu duplizieren: z. B. Navigation und allgemeine Eigenschaften. Stattdessen kann sich der Entwickler weiterhin auf **IAccessible** verlassen, um diese Funktionalität zu bieten, während unterstützung für steuerelementspezifische Eigenschaften über [**IRangeValueProvider hinzugefügt wird.**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Iaccessibleex-Implementierungs Richtlinien](iaccessibleex-implementation-guidelines.md)
--   [Implementieren von iaccessibleex für Anbieter](implementing-iaccessibleex-for-providers.md)
--   [Verwenden von iaccessibleex von einem Client](using-iaccessibleex-from-a-client.md)
+-   [IAccessibleEx-Implementierungsrichtlinien](iaccessibleex-implementation-guidelines.md)
+-   [Implementieren von IAccessibleEx für Anbieter](implementing-iaccessibleex-for-providers.md)
+-   [Verwenden von IAccessibleEx über einen Client](using-iaccessibleex-from-a-client.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -32,9 +32,9 @@ Der Steuerelement Entwickler könnte einen kompletten Benutzeroberflächenautoma
 [Allgemeine Infrastruktur](common-infrastructure.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,29 +1,29 @@
 ---
-title: Anzeigen einer von der APP bereitgestellten Bitmap auf dem zusammengesetzten Image
-description: Anzeigen einer Application-Supplied Bitmap auf dem zusammengesetzten Image
+title: Anzeigen einer von der App bereitgestellten Bitmap auf dem zusammengesetzten Bild
+description: Anzeigen einer Application-Supplied Bitmap auf dem zusammengesetzten Bild
 ms.assetid: c51329d3-e814-4ef9-aad8-a3e60f9fa2a7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06ecd8ac931d0a0bb83eafba09d8ca7dc8263f0d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 90768cc9ba9ed3a7f53336c63b0112f297e1844ba9638799e8badf28588775eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118653516"
 ---
-# <a name="display-an-app-supplied-bitmap-on-the-composited-image"></a>Anzeigen einer von der APP bereitgestellten Bitmap auf dem zusammengesetzten Image
+# <a name="display-an-app-supplied-bitmap-on-the-composited-image"></a>Anzeigen einer von der App bereitgestellten Bitmap auf dem zusammengesetzten Bild
 
-Anwendungen können den Mischungs Modus von VMR verwenden, um Alpha gemischte channellogos, eine Benutzeroberfläche oder Ankündigungen entweder teilweise oder vollständig innerhalb des Video Rechtecks anzuzeigen. Da die Mischung in Hardware durch den Grafikprozessor erfolgt, wirkt sich dies nur minimal auf die Wiedergabe Leistung des Videostreams aus, und es gibt keine erkennbaren Flimmern oder zerreißen von Artefakten. Anwendungen können das Abbild so oft wie gewünscht ändern. Beachten Sie, dass Änderungen nur auf dem Bildschirm angezeigt werden, wenn sich das DirectShow-Filter Diagramm im Status wird ausgeführt befindet.
+Anwendungen können den Mischungsmodus der VMR verwenden, um Alpha-Blending-Kanallogos, eine Benutzeroberfläche oder Ankündigungen entweder teilweise oder vollständig innerhalb des Videorechtecks anzuzeigen. Da das Mischen auf Hardware vom Grafikprozessor durchgeführt wird, wirkt sich dies nur minimal auf die Wiedergabeleistung des Videostreams aus, und es gibt keine erkennbaren Flimmer- oder Löschartefakte. Anwendungen können das angezeigte Bild beliebig häufig ändern. Beachten Sie, dass Änderungen nur auf dem Bildschirm angezeigt werden, wenn sich das DirectShow-Filterdiagramm im Ausführungszustand befindet.
 
-Der VMR verwendet seine Mischungs Komponente, um die Bitmap auf dem zusammengesetzten Bild zu überlagern. Mit VMR-7 muss die Anwendung erzwingen, dass die VMR ihren Mixer lädt, auch wenn nur ein einzelner Videostream vorhanden ist. Dies ist bei VMR-9 nicht erforderlich, da der zugehörige Mixer standardmäßig geladen wird.
+Die VMR verwendet ihre Mixerkomponente, um die Bitmap auf dem zusammengesetzten Image zu überlagern. Mit VMR-7 muss die Anwendung erzwingen, dass die VMR ihren Mixer lädt, auch wenn nur ein einzelner Videostream vorhanden ist. Dies ist bei VMR-9 nicht erforderlich, da der Mixer standardmäßig geladen wird.
 
-Um ein statisches Bitmap-Bild mit dem Videostream zu mischen, erstellt die Anwendung den VMR und fügt Sie dem Diagramm hinzu. Anschließend wird [**ivmrfilterconfig:: setnumofstreams**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setnumberofstreams)aufgerufen. Der an diese Funktion über gegebene Wert identifiziert die Anzahl der Eingabe Pins, die der VMR erstellen sollte. Anwendungen können einen beliebigen Wert zwischen 1 und Max \_ - \_ mischungsstreams angeben. die Angabe des Werts 1 ist gültig, wenn die Anwendung nur einen einzigen Videostream anzeigen soll. Obwohl VMR-7 standardmäßig über eine einzelne Eingabe-PIN verfügt, muss diese Methode aufgerufen werden, um zu erzwingen, dass Sie Ihre Mischungs Komponente lädt. (VMR-9 lädt seinen Mixer und richtet standardmäßig vier Pins ein.)
+Um ein statisches Bitmapbild mit dem Videostream zu kombinieren, erstellt die Anwendung die VMR und fügt sie dem Diagramm hinzu und ruft dann [**IVMRFilterConfig::SetNumberOfStreams**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setnumberofstreams)auf. Der an diese Funktion übergebene Wert gibt die Anzahl der Eingabepins an, die die VMR erstellen soll. Anwendungen können einen beliebigen Wert zwischen 1 und MAX MIXER STREAMS angeben. Die \_ Angabe des \_ Werts 1 ist gültig, wenn die Anwendung nur einen einzelnen Videostream anzeigen möchte. Obwohl VMR-7 standardmäßig über einen einzelnen Eingabepin verfügt, muss diese Methode aufgerufen werden, um das Laden der Mixerkomponente zu erzwingen. (Die VMR-9 lädt ihren Mixer und richtet standardmäßig vier Pins ein.)
 
-Verwenden Sie zum Festlegen der Bitmap die [**ivmrmixerbitmap**](/windows/desktop/api/Strmif/nn-strmif-ivmrmixerbitmap) -Schnittstelle auf der VMR-7-oder [**IVMRMixerBitmap9**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrmixerbitmap9) -Schnittstelle für VMR-9.
+Um die Bitmap festzulegen, verwenden Sie die [**IVMRMixerBitmap-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ivmrmixerbitmap) auf der VMR-7 oder die [**IVMRMixerBitmap9-Schnittstelle**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrmixerbitmap9) auf der VMR-9.
 
-Die Bitmap kann entweder durch ein Handle für einen GDI-Gerätekontext (HDC) oder durch eine DirectDraw-Oberflächen Schnittstelle angegeben werden. Wenn das Bild in der Anwendung eingebettete Alpha Informationen (auch als pro Pixel Alpha bezeichnet) enthalten soll, muss es die Bilddaten in eine DirectDraw-Oberflächen Schnittstelle platzieren. Dies liegt daran, dass es derzeit nicht möglich ist, Pixel bezogene Alpha Informationen mit einem GDI-Gerätekontext zu platzieren. Die DirectDraw-Oberfläche muss entweder "RGB32" oder "ARGB32" lauten und sollte vorzugsweise eine Systemspeicher Oberfläche darstellen. Es ist nicht erforderlich, dass die Oberflächen Dimensionen eine Potenz von 2 sein.
+Die Bitmap kann entweder durch ein Handle für einen GDI-Gerätekontext (hDC) oder durch eine DirectDraw Surface-Schnittstelle angegeben werden. Wenn die Anwendung möchte, dass das Bild eingebettete Alphainformationen (auch als pro Pixel alpha bezeichnet) enthält, muss es die Bilddaten in einer DirectDraw Surface-Schnittstelle platzieren. Dies liegt daran, dass es derzeit nicht möglich ist, Alphainformationen pro Pixel mit einem GDI-Gerätekontext zu platzieren. Die DirectDraw-Oberfläche muss entweder RGB32 oder ARGB32 sein und sollte vorzugsweise eine Systemspeicheroberfläche sein. Es ist nicht erforderlich, dass die Oberflächendimensionen eine Potenz von 2 haben.
 
-Mit VMR können Anwendungen den Speicherort und einen allgemeinen Transparenz Wert für das Image angeben. Der folgende Code zeigt, wie Bilddaten für nachfolgende Blending an den VMR übergeben werden:
+Mit der VMR können Anwendungen den Speicherort und einen Allgemeinen Transparenzwert für das Image angeben. Der folgende Code zeigt, wie Sie Imagedaten für die nachfolgende Mischung an die VMR übergeben:
 
 
 ```C++
@@ -98,23 +98,23 @@ HRESULT BlendApplicationImage(
 
 
 
-Die in diesem Thema erläuterten Konzepte werden in der Beispielanwendung [vmrplayer](vmrplayer-sample.md) veranschaulicht.
+Die in diesem Thema erläuterten Konzepte werden in der [BEISPIELanwendung VMRPlayer](vmrplayer-sample.md) veranschaulicht.
 
-**Erstellen einfacher Animationen mit dem Bitmap-Bild**
+**Erstellen einfacher Animationen mit dem Bitmapbild**
 
-Zum Erstellen eines einfachen animierten Bitmap-Logos platzieren Sie alle Bitmap-Frames in einem einzelnen Bild, wie in der folgenden Abbildung dargestellt.
+Um ein einfaches animiertes Bitmaplogo zu erstellen, platzieren Sie alle Bitmapframes in einem einzelnen Bild, wie in der folgenden Abbildung dargestellt.
 
-![VMR-Bildstreifen](images/vmr-image-strip.png)
+![VMR-Imagestreifen](images/vmr-image-strip.png)
 
-Wenn Sie die Bitmap anfänglich mit [**ivmrmixerbitmap:: setalphabitmap**](/windows/desktop/api/Strmif/nf-strmif-ivmrmixerbitmap-setalphabitmap)festlegen und sich die Bitmap in einem hdc befindet, legen Sie das **rsrc** -Feld der **vmralphabitmap** -Struktur fest, um die Größe der gesamten Bitmap innerhalb des HDC anzugeben. Die **oberen** und **linken** Elemente der-Struktur werden auf 0 festgelegt, und die **Rechte** und **unteren** Elemente sind Breite und Höhe der Bitmap. Wenn sich die Bitmap in einer DirectDraw-Oberfläche befindet, ist die Größe der Oberfläche bekannt, daher ist es nicht erforderlich, rsrc in dieser Methode anzugeben.
+Wenn Sie die Bitmap anfänglich mitHILFE von [**IVMRMixerBitmap::SetAlphaBitmap**](/windows/desktop/api/Strmif/nf-strmif-ivmrmixerbitmap-setalphabitmap)festlegen, wenn sich die Bitmap in einem HDC befindet, legen Sie das **rSrc-Feld** der **VMRALPHABITMAP-Struktur** fest, um die Größe der gesamten Bitmap innerhalb des HDC anzugeben. Die **oberen** und **linken** Elemente der -Struktur werden auf 0 festgelegt, und die **rechten** und **unteren** Member sind die Breite und Höhe der Bitmap. Wenn sich die Bitmap in einer DirectDraw-Oberfläche befindet, ist die Größe der Oberfläche bekannt, sodass es in dieser Methode nicht erforderlich ist, rSrc anzugeben.
 
-Wenn Sie [**ivmrmixerbitmap:: updatealphabitmapparameters**](/windows/desktop/api/Strmif/nf-strmif-ivmrmixerbitmap-updatealphabitmapparameters)aufrufen, verwenden Sie den **rsrc** -Member sowohl für HDC-als auch für DirectDraw-Bitmaps, um den jeweiligen Frame oder das gewünschte Rechteck innerhalb des Bilds anzugeben, das Sie anzeigen möchten, und legen Sie das **vmrbitmap-Flag \_ srcRect** im **dwFlags** -Member fest
+Wenn Sie [**IVMRMixerBitmap::UpdateAlphaBitmapParameters**](/windows/desktop/api/Strmif/nf-strmif-ivmrmixerbitmap-updatealphabitmapparameters)aufrufen, verwenden Sie den **rSrc-Member** für HDC- und DirectDraw-Bitmaps, um den bestimmten Frame oder das Rechteck innerhalb des Bilds anzugeben, das Sie anzeigen möchten, und legen Sie das **VMRBITMAP \_ SRCRECT-Flag** im **dwFlags-Member** fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des VMR-Mischungs Modus](using-vmr-mixing-mode.md)
+[Verwenden des VMR-Gemischtmodus](using-vmr-mixing-mode.md)
 </dt> </dl>
 
  

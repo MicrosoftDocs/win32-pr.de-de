@@ -1,30 +1,30 @@
 ---
-title: Informationen zum Query-Objekt
-description: Informationen zum Query-Objekt
+title: Informationen zum Abfrageobjekt
+description: Informationen zum Abfrageobjekt
 ms.assetid: 41488036-bdcf-4fe6-8f7e-f0897157d3d9
 keywords:
-- Windows Media Player, Abfrageobjekt
+- Windows Media Player,Query-Objekt
 - Windows Media Player-Objektmodell, Abfrageobjekt
 - Objektmodell, Abfrageobjekt
-- Windows Media Player ActiveX-Steuerelement, Abfrageobjekt
-- ActiveX-Steuerelement, Abfrageobjekt
-- Windows Media Player Mobile ActiveX-Steuerelement, Abfrageobjekt
-- Windows Media Player Mobile, Abfrageobjekt
+- Windows Media Player ActiveX,Abfrageobjekt
+- ActiveX,Abfrageobjekt
+- Windows Media Player Mobiles ActiveX-Steuerelement, Abfrageobjekt
+- Windows Media Player Mobil, Abfrageobjekt
 - Query-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54a26f60c38e053b91c7e56f5cbd7ccaf2ba0fe2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13d649263f981d02e106466c6e0fcada99c316054d4bf6e0acc0faca641c75dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119470400"
 ---
-# <a name="about-the-query-object"></a>Informationen zum Query-Objekt
+# <a name="about-the-query-object"></a>Informationen zum Abfrageobjekt
 
-Das **Query** -Objekt stellt eine Verbund Abfrage dar. Sie erstellen ein neues, leeres **Abfrage** Objekt durch Aufrufen von *mediacollection*. " **kreatequery**". Nachdem Sie ein **Abfrage** Objekt erstellt haben, können Sie **addcondition** aufzurufen, um der Verbund Abfrage eine Bedingung hinzuzufügen. Jeder nachfolgende Rückruf von **addcondition** fügt eine neue Bedingung mithilfe der-und der-Logik an die vorhandene Abfrage an.
+Das **Query-Objekt** stellt eine zusammengesetzte Abfrage dar. Sie erstellen ein neues leeres **Abfrageobjekt,** indem Sie *mediaCollection aufrufen.* **createQuery**. Nachdem Sie ein **Query-Objekt erstellt** haben, können Sie **addCondition** aufrufen, um der Verbundabfrage eine Bedingung hinzuzufügen. Bei jedem nachfolgenden Aufruf **von addCondition** wird mithilfe der AND-Logik eine neue Bedingung an die vorhandene Abfrage angefügt.
 
-Nehmen Sie beispielsweise an, Sie möchten eine Abfrage erstellen, die alle digitalen Medien repräsentiert, bei denen **WM/Genre** den Wert "Jazz" hat und der **Autor** "Jim" enthält. Sie können eine Verbund Abfrage erstellen, die diese Bedingungen mithilfe des folgenden JScript-Codes darstellt:
+Angenommen, Sie möchten eine Abfrage erstellen, die alle digitalen Medien darstellt, bei denen **WM/Genre** gleich "Jazz" und **Autor** "Jim" enthält. Sie können eine zusammengesetzte Abfrage erstellen, um diese Bedingungen mit dem folgenden Code JScript darstellen:
 
 
 ```C++
@@ -38,9 +38,9 @@ Query.addCondition("Author", "Contains", "Jim");
 
 
 
-Zum Hinzufügen einer Bedingung zu einer Verbund Abfrage mit der-oder-Logik müssen Sie **Query. beginnextgroup** aufrufen. Diese Methode signalisiert, dass die vorherige Bedingungs Gruppe abgeschlossen ist und dass der nächste **addcondition** -Rückruf den Anfang einer neuen Bedingungs Gruppe darstellt.
+Um einer zusammengesetzten Abfrage mithilfe der OR-Logik eine Bedingung hinzuzufügen, müssen Sie **Query.beginNextGroup aufrufen.** Diese Methode signalisiert, dass die vorherige Bedingungsgruppe abgeschlossen ist und dass der nächste Aufruf von **addCondition** den Anfang einer neuen Bedingungsgruppe darstellt.
 
-Beispielsweise können Sie den folgenden Beispielcode verwenden, um eine Abfrage zu erstellen, die alle digitalen Medien repräsentiert, bei denen **WM/Genre** den Wert "Jazz" hat, und der **Autor** "Jim" oder der **Autor** "Dave" enthält:
+Um beispielsweise eine Abfrage zu erstellen, die alle digitalen Medien darstellt, bei denen **WM/Genre** gleich "Jazz" ist und **Author** "Jim" oder **Author** "Dave" enthält, können Sie den folgenden Beispielcode verwenden:
 
 
 ```C++
@@ -62,24 +62,24 @@ Query.addCondition("Author", "Contains", "Dave");
 
 
 
-Um die Verbund Abfrage auszuführen, nennen Sie **mediacollection. getplaylistbyquery**.
+Rufen Sie **mediaCollection.getPlaylistByQuery** auf, um Ihre Verbundabfrage auszuführen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Mediacollection. getplaylistbyquery**](mediacollection-getplaylistbyquery.md)
+[**MediaCollection.getPlaylistByQuery**](mediacollection-getplaylistbyquery.md)
 </dt> <dt>
 
 [**Player-Objektmodell für Skriptsprachen**](player-object-model-for-scripting-languages.md)
 </dt> <dt>
 
-[**Query-Objekt**](query-object.md)
+[**Abfrageobjekt**](query-object.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

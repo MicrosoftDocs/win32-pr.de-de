@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentossnapshottimeoutexception-Konstruktor'
-title: Esentossnapshottimeoutexception-Konstruktor
+description: 'Weitere Informationen zu: EsentOSSnapshotTimeOutException-Konstruktor'
+title: EsentOSSnapshotTimeOutException-Konstruktor
 TOCTitle: 'EsentOSSnapshotTimeOutException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOSSnapshotTimeOutException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentossnapshottimeoutexception.esentossnapshottimeoutexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 98aac848cc4c8475a73a778adffc4bac5f9f730b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 758fd6448ebcec24019271b3e339f6a5d0b3374c63c58ba5a1c4491a19d77af8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119478550"
 ---
-# <a name="esentossnapshottimeoutexception-constructor"></a>Esentossnapshottimeoutexception-Konstruktor
+# <a name="esentossnapshottimeoutexception-constructor"></a>EsentOSSnapshotTimeOutException-Konstruktor
 
-Initialisiert eine neue Instanz der esentossnapshottimeoutexception-Klasse.
+Initialisiert eine neue Instanz der EsentOSSnapshotTimeOutException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentOSSnapshotTimeOutException()
 public EsentOSSnapshotTimeOutException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentossnapshottimeoutexception-Klasse](./esentossnapshottimeoutexception-class.md)
+[EsentOSSnapshotTimeOutException-Klasse](./esentossnapshottimeoutexception-class.md)
 
-[Esentossnapshottimeoutexception-Elemente](./esentossnapshottimeoutexception-members.md)
+[EsentOSSnapshotTimeOutException-Member](./esentossnapshottimeoutexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

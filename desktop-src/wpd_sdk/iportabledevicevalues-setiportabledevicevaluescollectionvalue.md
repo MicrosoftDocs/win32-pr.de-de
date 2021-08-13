@@ -1,7 +1,7 @@
 ---
-description: Die Methode "* tiportabledevicevaluescollectionvalue" fügt einen neuen iportabledevicevaluescollection-Wert (Typ "VT \_ unknown") hinzu oder überschreibt eine vorhandene.
+description: Die SetIPortableDeviceValuesCollectionValue-Methode fügt einen neuen IPortableDeviceValuesCollection-Wert (Typ VT UNKNOWN) hinzu oder überschreibt einen \_ vorhandenen.
 ms.assetid: 29bdecaa-4820-4b1d-be59-ae82f7715a53
-title: 'Iportabledevicevalues:: tportabledevicevaluescollectionvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetIPortableDeviceValuesCollectionValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 3f0c545a4daceed75971b0e659f85d72eca6d98f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f015333a8d384743d0e8ea16000252a4e60fd24ab0637b92ee3d85ddb42a1c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697088"
 ---
-# <a name="iportabledevicevaluessetiportabledevicevaluescollectionvalue-method"></a>Iportabledevicevalues:: endportabledevicevaluescollectionvalue-Methode
+# <a name="iportabledevicevaluessetiportabledevicevaluescollectionvalue-method"></a>IPortableDeviceValues::SetIPortableDeviceValuesCollectionValue-Methode
 
-Die Methode "* **tiportabledevicevaluescollectionvalue** " fügt einen neuen **iportabledevicevaluescollection** -Wert (Typ "VT \_ unknown") hinzu oder überschreibt eine vorhandene.
+Die **SetIPortableDeviceValuesCollectionValue-Methode** fügt einen neuen **IPortableDeviceValuesCollection-Wert** (Typ VT UNKNOWN) hinzu oder überschreibt einen \_ vorhandenen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetIPortableDeviceValuesCollectionValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY-Objekt,** das das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ in\]
+*pValue* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine **iportableabvicevaluescollection** -Schnittstelle, die den neuen Wert angibt. Das SDK kopiert einen Verweis auf die übermittelte Schnittstelle und ruft die **adressf** auf.
+Zeiger auf eine **IPortableDeviceValuesCollection-Schnittstelle,** die den neuen Wert angibt. Das SDK kopiert einen Verweis auf die übermittelte Schnittstelle und ruft **AddRef darauf** auf.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,9 +69,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
+Wenn ein vorhandener Wert über denselben  Schlüssel verfügt, der vom Schlüsselparameter angegeben wird, überschreibt er den vorhandenen Wert ohne Warnung. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,19 +79,19 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportableendvicevalues:: getiportableervicevaluescollectionvalue**](iportabledevicevalues-getiportabledevicevaluescollectionvalue.md)
+[**IPortableDeviceValues::GetIPortableDeviceValuesCollectionValue**](iportabledevicevalues-getiportabledevicevaluescollectionvalue.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die iscanprofile-Schnittstelle stellt ein einzelnes Überprüfungs Profil dar und ermöglicht Anwendungen das Festlegen und Abrufen der Eigenschaften des Profils.
+description: Die IScanProfile-Schnittstelle stellt ein einzelnes Scanprofil dar und ermöglicht Anwendungen das Festlegen und Abrufen der Eigenschaften des Profils.
 ms.assetid: 5cd76256-d64e-4934-8cc2-0a467c7e34a9
-title: Iscanprofile-Schnittstelle
+title: IScanProfile-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,62 +13,62 @@ api_type:
 - COM
 api_location:
 - Scanprofiles.idl
-ms.openlocfilehash: 2e02352eef16a9b899e4c635f11c5d10b3ab5113
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1de80ac23ffa3e2687e2e6d0449f7a273067d5899204c479f9b62e8571190d61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119450830"
 ---
-# <a name="iscanprofile-interface"></a>Iscanprofile-Schnittstelle
+# <a name="iscanprofile-interface"></a>IScanProfile-Schnittstelle
 
-Die **iscanprofile** -Schnittstelle stellt ein einzelnes Überprüfungs Profil dar und ermöglicht Anwendungen das Festlegen und Abrufen der Eigenschaften des Profils.
+Die **IScanProfile-Schnittstelle** stellt ein einzelnes Scanprofil dar und ermöglicht Anwendungen das Festlegen und Abrufen der Eigenschaften des Profils.
 
 ## <a name="members"></a>Member
 
-Die **iscanprofile** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Iscanprofile** verfügt auch über die folgenden Typen von Mitgliedern:
+Die **IScanProfile-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IScanProfile** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iscanprofile** -Schnittstelle verfügt über diese Methoden.
+Die **IScanProfile-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                     | BESCHREIBUNG                                                                                                                                         |
+| Methode                                                     | Beschreibung                                                                                                                                         |
 |:-----------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getallpropids**](-wia-iscanprofile-getallpropids.md)   | Ruft alle verfügbaren Eigenschaften-IDs in einem Profil ab.<br/>                                                                                            |
+| [**GetAllPropIDs**](-wia-iscanprofile-getallpropids.md)   | Ruft alle verfügbaren Eigenschaften-IDs in einem Profil ab.<br/>                                                                                            |
 | [**GetDeviceID**](-wia-iscanprofile-getdeviceid.md)       | Gibt die ID des Geräts zurück.<br/>                                                                                                            |
 | [**GetGUID**](-wia-iscanprofile-getguid.md)               | Gibt die GUID des Profils zurück.<br/>                                                                                                         |
-| [**GetItem**](-wia-iscanprofile-getitem.md)               | Ruft die GUID der Kategorie des WIA 2,0-Elements ab, dem das Profil zugeordnet ist.<br/>                                                   |
-| [**GetName**](-wia-iscanprofile-getname.md)               | Ruft den anzeigen amen des Profils ab.<br/>                                                                                                   |
-| [**Getnumpropids**](-wia-iscanprofile-getnumpropids.md)   | Ruft die Anzahl der Eigenschaften-IDs in einem Profil ab.<br/>                                                                                            |
-| [**GetProperty**](-wia-iscanprofile-getproperty.md)       | Ruft den Wert der angegebenen untergeordneten Eigenschaften im- `<Properties>` Element eines Scan Profils ab.<br/>                                            |
-| [**IsDefault**](-wia-iscanprofile-isdefault.md)           | Ruft einen Wert ab, der angibt, ob das Profil das Standard Überprüfungs Profil eines zugeordneten [**IWiaItem2**](-wia-iwiaitem2.md) -Geräts ist.<br/> |
-| [**RemoveProperty**](-wia-iscanprofile-removeproperty.md) | Entfernt eine angegebene Liste von untergeordneten Eigenschaften im- `<Properties>` Element eines Scan Profils.<br/>                                            |
-| [**Speichern**](-wia-iscanprofile-save.md)                     | Speichert Änderungen an einem Profil auf der Festplatte.<br/>                                                                                                      |
-| [**-Element**](-wia-iscanprofile-setitem.md)               | Legt die GUID der Kategorie eines WIA-2,0-Elements fest, dem das Profil zugeordnet ist.<br/>                                                       |
-| [**SetName**](-wia-iscanprofile-setname.md)               | Legt den anzeigen amen des Profils fest.<br/>                                                                                                   |
-| [**SetProperty**](-wia-iscanprofile-setproperty.md)       | Legt den Wert der angegebenen untergeordneten Eigenschaften im- `<Properties>` Element eines Scan Profils fest.<br/>                                            |
+| [**GetItem**](-wia-iscanprofile-getitem.md)               | Ruft die GUID der Kategorie des WIA 2.0-Elements ab, dem das Profil zugeordnet ist.<br/>                                                   |
+| [**GetName**](-wia-iscanprofile-getname.md)               | Ruft den Anzeigenamen des Profils ab.<br/>                                                                                                   |
+| [**GetNumPropIDS**](-wia-iscanprofile-getnumpropids.md)   | Ruft die Anzahl der Eigenschaften-IDs in einem Profil ab.<br/>                                                                                            |
+| [**GetProperty**](-wia-iscanprofile-getproperty.md)       | Ruft den Wert der angegebenen untergeordneten Eigenschaften im `<Properties>` -Element eines Scanprofils ab.<br/>                                            |
+| [**IsDefault**](-wia-iscanprofile-isdefault.md)           | Ruft einen Wert ab, der angibt, ob das Profil das Standardscanprofil eines zugeordneten [**IWiaItem2-Geräts**](-wia-iwiaitem2.md) ist.<br/> |
+| [**RemoveProperty**](-wia-iscanprofile-removeproperty.md) | Entfernt eine angegebene Liste untergeordneter Eigenschaften im `<Properties>` -Element eines Scanprofils.<br/>                                            |
+| [**Speichern**](-wia-iscanprofile-save.md)                     | Speichert Änderungen an einem Profil auf dem Datenträger.<br/>                                                                                                      |
+| [**SetItem**](-wia-iscanprofile-setitem.md)               | Legt die GUID der Kategorie des WIA 2.0-Elements fest, dem das Profil zugeordnet ist.<br/>                                                       |
+| [**SetName**](-wia-iscanprofile-setname.md)               | Legt den Anzeigenamen des Profils fest.<br/>                                                                                                   |
+| [**Setproperty**](-wia-iscanprofile-setproperty.md)       | Legt den Wert der angegebenen untergeordneten Eigenschaften im `<Properties>` -Element eines Scanprofils fest.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes [**IWiaItem2**](-wia-iwiaitem2.md) -Gerät kann über ein Überprüfungs Profil verfügen. Allerdings können **IWiaItem2** Items von Typen, \_ die mit einer Kategorie \_ fertiggestellt \_ wurden, die Datei fertiggestellt \_ \_ haben
+Jedes [**IWiaItem2-Gerät**](-wia-iwiaitem2.md) kann über ein Überprüfungsprofil verfügen. **IWiaItem2-Elemente** der Typen WIA \_ CATEGORY \_ FINISHED FILE und WIA CATEGORY ROOT können jedoch \_ keine Profile \_ \_ aufweisen.
 
-Wenn ein Überprüfungs Profil mithilfe der [**iscanprofile:: Save**](-wia-iscanprofile-save.md) -Methode gespeichert wird, wird es als XML-Datei unter% User Profile% \\ Application Data \\ Microsoft \\ Document Center \\ userscanprofiles gespeichert.
+Wenn ein Scanprofil mit der [**IScanProfile::Save-Methode**](-wia-iscanprofile-save.md) gespeichert wird, wird es als XML-Datei unter %USERPROFILE% \\ Anwendungsdaten \\ Microsoft Document Center \\ \\ UserScanProfiles gespeichert.
 
-Um eine Instanz eines **iscanprofile** -Objekts zu erstellen, verwenden Sie die [**iscanprofilemgr:: kreateprofile**](-wia-iscanprofilemgr-createprofile.md) -Methode. Um einen Verweis auf ein Überprüfungs Profil zu erhalten, das bereits auf dem Datenträger gespeichert wurde, verwenden Sie die [**iscanprofilemgr:: openprofile**](-wia-iscanprofilemgr-openprofile.md) -Methode.
+Um eine Instanz eines **IScanProfile-Objekts** zu erstellen, verwenden Sie die [**IScanProfileMgr::CreateProfile-Methode.**](-wia-iscanprofilemgr-createprofile.md) Verwenden Sie die [**IScanProfileMgr::OpenProfile-Methode,**](-wia-iscanprofilemgr-openprofile.md) um einen Verweis auf ein Scanprofil abzurufen, das bereits auf dem Datenträger gespeichert wurde.
 
-Alle Scan Profile verfügen über die folgenden Elemente: `<ProfileGUID>, <DeviceID>, <ProfileName>, <WiaItem>` , und `<Properties>` . Das Standardprofil eines Geräts weist auch ein- `<Default>` Element auf.
+Alle Scanprofile verfügen über die folgenden Elemente: `<ProfileGUID>, <DeviceID>, <ProfileName>, <WiaItem>` und `<Properties>` . Das Standardprofil eines Geräts verfügt auch über ein `<Default>` -Element.
 
-Das `<ProfileGUID>` -Element und das- `<DeviceID>` Element können nicht geändert werden, nachdem das Profil erstellt wurde. Die Werte des `<ProfileName>` -Elements und des- `<WiaItem>` Elements können nach dem Erstellen des Profils geändert werden. Das- `<Default>` Element kann hinzugefügt oder gelöscht werden. Dies kann Programm gesteuert mit den Methoden [**iscanprofile:: SetName**](-wia-iscanprofile-setname.md), [**iscanprofile:: SetItem**](-wia-iscanprofile-setitem.md)und [**iscanprofilemgr:: SetDefault**](-wia-iscanprofilemgr-setdefault.md) erfolgen. Diese Eigenschaften können auch von Benutzern über die [**iscanprofileui:: scanprofiledialog**](-wia-iscanprofileui-scanprofiledialog.md) -Methode geändert werden.
+Die `<ProfileGUID>` Elemente und können nach dem Erstellen des `<DeviceID>` Profils nicht mehr geändert werden. Die Werte des `<ProfileName>` -Elements und des `<WiaItem>` -Elements können nach dem Erstellen des Profils geändert werden. Das `<Default>` Element kann hinzugefügt oder gelöscht werden. Dies kann programmgesteuert mit den Methoden [**IScanProfile::SetName,**](-wia-iscanprofile-setname.md) [**IScanProfile::SetItem**](-wia-iscanprofile-setitem.md)und [**IScanProfileMgr::SetDefault**](-wia-iscanprofilemgr-setdefault.md) erfolgen. Diese Eigenschaften können auch von Benutzern über die [**IScanProfileUI::ScanProfileDialog-Methode**](-wia-iscanprofileui-scanprofiledialog.md) geändert werden.
 
-Das- `<Properties>` Element enthält untergeordnete Elemente `<Property>` . Verwenden Sie diese, um dem Profil eine beliebige WIA 2,0-Element-oder-Geräte Eigenschaft hinzuzufügen. Sie können auch Ihre eigenen Image-Erstell-untergeordneten Elemente entwickeln `<Property>` . Dadurch ist das Scan Profil Schema erweiterbar. (Weitere Informationen zum Erweitern des Schemas finden Sie unter [Definieren von benutzerdefinierten Eigenschaften](-wia-defining-custom-properties.md), [**iscanprofile:: GetProperty**](-wia-iscanprofile-getproperty.md)und [**iscanprofile:: SetProperty**](-wia-iscanprofile-setproperty.md).)
+Das `<Properties>` -Element enthält `<Property>` untergeordnete Elemente. Verwenden Sie diese, um dem Profil alle WIA 2.0-Elemente oder -Geräteeigenschaften hinzuzufügen. Sie können auch eigene untergeordnete Bilder `<Property>` entwickeln. Dadurch wird das Scanprofilschema erweiterbar. (Weitere Informationen zum Erweitern des Schemas finden Sie unter [Definieren von benutzerdefinierten Eigenschaften,](-wia-defining-custom-properties.md) [**IScanProfile::GetProperty**](-wia-iscanprofile-getproperty.md)und [**IScanProfile::SetProperty**](-wia-iscanprofile-setproperty.md).)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,20 +76,20 @@ Das- `<Properties>` Element enthält untergeordnete Elemente `<Property>` . Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

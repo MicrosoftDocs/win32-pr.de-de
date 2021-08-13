@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaapi. jedessnapshottruneureloginstance-Methode'
-title: Vistaapi. jedessnapshottruneureloginstance-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaApi.JetOSSnapshotTruncateLogInstance-Methode'
+title: VistaApi.JetOSSnapshotTruncateLogInstance-Methode (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'JetOSSnapshotTruncateLogInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.VistaApi.JetOSSnapshotTruncateLogInstance(Microsoft.Isam.Esent.Interop.JET_OSSNAPID,Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.Vista.SnapshotTruncateLogGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaapi.jetossnapshottruncateloginstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 75d694629585a730f5c1c7b9b08bb7b06e735cb0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00a30d604aa57aeaff1d97ca8f92397d6919a769f9416eb504b2d22abe186f96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119471220"
 ---
-# <a name="vistaapijetossnapshottruncateloginstance-method"></a>Vistaapi. jedessnapshottruneureloginstance-Methode
+# <a name="vistaapijetossnapshottruncateloginstance-method"></a>VistaApi.JetOSSnapshotTruncateLogInstance-Methode
 
-Verkürzt das Protokoll für eine angegebene-Instanz während einer Momentaufnahme Sitzung.
+Schneidt das Protokoll für eine angegebene Instanz während einer Momentaufnahmesitzung ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,34 +65,34 @@ public static void JetOSSnapshotTruncateLogInstance(
 #### <a name="parameters"></a>Parameter
 
   - Momentaufnahme  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
     
-    Der Momentaufnahme Bezeichner.
+    Der Momentaufnahmebezeichner.
 
 <!-- end list -->
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, für die das Protokoll abgeschnitten werden soll.
+    Die Instanz, für die das Protokoll abgeschnitten werden soll.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Vista. snapshottruneureloggrbit](./snapshottruncateloggrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.SnapshotTruncateLogGrbit](./snapshottruncateloggrbit-enumeration.md)  
     
-    Optionen für diesen-Befehl.
+    Optionen für diesen Aufruf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte nur aufgerufen werden, wenn die Momentaufnahme mit der Option [continueafterthaw](./vistagrbits.continueafterthaw-field.md) erstellt wurde. Andernfalls wird die Momentaufnahme Sitzung nach dem Aufrufe von [jedessnapshotthaw (JET_OSSNAPID, snapshotthawgrbit)](./api.jetossnapshotthaw-method.md)beendet.
+Diese Funktion sollte nur aufgerufen werden, wenn die Momentaufnahme mit der [Option ContinueAfterThaw erstellt](./vistagrbits.continueafterthaw-field.md) wurde. Andernfalls endet die Momentaufnahmesitzung nach dem Aufruf von [JetOSSnapshotThaw(JET_OSSNAPID, SnapshotThawGrbit).](./api.jetossnapshotthaw-method.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaapi-Klasse](./vistaapi-class.md)
+[VistaApi-Klasse](./vistaapi-class.md)
 
-[Vistaapi-Member](./vistaapi-members.md)
+[VistaApi-Member](./vistaapi-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

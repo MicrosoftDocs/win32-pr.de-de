@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie ein shellverb mithilfe der DropTarget-Methode implementiert wird.
+description: Veranschaulicht, wie ein Shellverb mithilfe der DropTarget-Methode implementiert wird.
 title: DropTarget-Verb (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,34 +9,34 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 1f737c951c5bd588760dbb716859c04c0dc062fc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae9ae3edb2d993f2e42a2556899d45cb3b10722fc7d7a9dc5e9786560fc3078f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719532"
 ---
 # <a name="droptarget-verb-sample"></a>DropTarget-Verb (Beispiel)
 
-Veranschaulicht, wie ein shellverb mithilfe der DropTarget-Methode implementiert wird.
+Veranschaulicht, wie ein Shellverb mithilfe der DropTarget-Methode implementiert wird.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Beschreibung](#description)
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-In diesem Beispiel wird gezeigt, wie ein shellverb mithilfe der DropTarget-Methode implementiert wird. Diese Methode wird für Verb Implementierungen bevorzugt, die unter Windows XP funktionieren müssen. In diesem Beispiel wird ein eigenständiges com-Objekt (Local Server Component Object Model) implementiert. es wird jedoch erwartet, dass die Verb-Implementierung in vorhandene Anwendungen integriert wird. Zu diesem Zweck registriert Ihr Haupt Anwendungs Objekt eine Klassenfactory für sich selbst. Dieses Objekt implementiert [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) für die Verben Ihrer Anwendung. Beachten Sie, dass die Anwendung von com gestartet wird, wenn Sie nicht bereits ausgeführt wird, sondern eine Verbindung mit einer laufenden Instanz der Anwendung herstellt, wenn eine vorhanden ist.
+In diesem Beispiel wird gezeigt, wie Ein Shell-Verb mithilfe der DropTarget-Methode implementiert wird. Diese Methode wird für Verbimplementierungen bevorzugt, die auf Windows XP funktionieren müssen. Dieses Beispiel implementiert einen eigenständigen lokalen Server Component Object Model -Objekt (COM), es wird jedoch erwartet, dass die Verbimplementierungen in vorhandene Anwendungen integriert werden. Zu diesem Zweck registriert Ihr Hauptanwendungsobjekt eine Klassenfactory für sich selbst. Dieses Objekt implementiert [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) für die Verben Ihrer Anwendung. Beachten Sie, dass COM Ihre Anwendung startet, wenn sie nicht bereits ausgeführt wird, aber eine Verbindung mit einer ausgeführten Instanz Ihrer Anwendung herstellt, sofern vorhanden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestversion des Produkts |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -49,25 +49,25 @@ In diesem Beispiel wird gezeigt, wie ein shellverb mithilfe der DropTarget-Metho
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Droptargetverb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/DropTargetVerb) |
+| GitHub  | [DropTargetVerb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/DropTargetVerb) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis **droptargetverb** .
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis **DropTargetVerb.**
 2.  Geben Sie `msbuild DropTargetVerb.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum **droptargetverb** -Projektverzeichnis.
-2.  Doppelklicken Sie auf das Symbol für die Datei droptargetverb. sln, um das Projekt in Visual Studio zu öffnen.
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **DropTargetVerb.**
+2.  Doppelklicken Sie auf das Symbol für die Datei DropTargetVerb.sln, um das Projekt in Visual Studio zu öffnen.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows-Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie in der Befehlszeile ein `DropTargetVerb.exe` . Alternativ können Sie in Windows-Explorer auf das Symbol für DropTargetVerb.exe doppelklicken.
+1.  Navigieren Sie über die Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
+2.  Geben Sie in der Befehlszeile `DropTargetVerb.exe` ein. Alternativ können Sie in Windows Explorer auf das Symbol für DropTargetVerb.exe doppelklicken.
 3.  Befolgen Sie die Anweisungen im angezeigten Dialogfeld.
 
  

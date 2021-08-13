@@ -1,25 +1,25 @@
 ---
-description: Der Client und der Server verwenden die gleiche Abfolge von Vorgängen, um SSPI zu initialisieren und ein Sicherheitspaket auszuwählen.
+description: Client und Server verwenden dieselbe Sequenz von Vorgängen, um SSPI zu initialisieren und ein Sicherheitspaket auszuwählen.
 ms.assetid: 21227b11-a089-49fe-83c7-69e5b2ceed34
-title: SSPI wird initialisiert.
+title: Initialisieren von SSPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3456aecbf820c39f3b00b1d23ca1a85acf5a525
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc4f0c9092f6766d35bc61fd680c6a2f6a1bff25edbabedf7a516388c48444ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119482500"
 ---
-# <a name="initializing-sspi"></a>SSPI wird initialisiert.
+# <a name="initializing-sspi"></a>Initialisieren von SSPI
 
-Der Client und der Server verwenden die gleiche Abfolge von Vorgängen, um SSPI zu initialisieren und ein [*Sicherheitspaket*](../secgloss/s-gly.md)auszuwählen.
+Client und Server verwenden dieselbe Sequenz von Vorgängen, um SSPI zu initialisieren und ein [*Sicherheitspaket*](../secgloss/s-gly.md)auszuwählen.
 
 Mit den folgenden Schritten wird SSPI initialisiert:
 
--   [Schreiben und Installieren eines Security Support Provider](writing-and-installing-a-security-support-provider.md)
+-   [Schreiben und Installieren eines Sicherheitssupportanbieters](writing-and-installing-a-security-support-provider.md)
 -   [Initialisieren des Sicherheitspakets](initializing-the-security-package.md)
--   [Informationen zu Sicherheitspaketen erhalten](getting-information-about-security-packages.md)
+-   [Abrufen von Informationen zu Sicherheitspaketen](getting-information-about-security-packages.md)
 -   [Verwenden von Sicherheitspaketen](using-security-packages.md)
 
  

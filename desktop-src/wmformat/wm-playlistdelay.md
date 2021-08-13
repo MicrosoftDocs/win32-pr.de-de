@@ -1,9 +1,9 @@
 ---
-title: WM/playlistdelay
-description: Das WM/playlistdelay-Attribut enthält die Wartezeit in Millisekunden, die der Wiedergabe der Datei in einer Wiedergabeliste vorangestellt wird.
+title: WM/PlaylistDelay
+description: Das WM/PlaylistDelay-Attribut enthält die Anzahl der Millisekundenverzögerung, die der Wiedergabe der Datei in einer Wiedergabeliste vorangehen sollte.
 ms.assetid: 5d39a805-65fa-4e1a-988b-6e605481903a
 keywords:
-- WM/playlistdelay-Windows Media-Format
+- WM/PlaylistDelay windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 548c4910aa47fc435c10fc555fda389e7e2cdb92
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3d81338a2bba62f6ee299a7dd0bdfaa5007e195bb85813f8e817f3070970c10d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118698478"
 ---
-# <a name="wmplaylistdelay"></a>WM/playlistdelay
+# <a name="wmplaylistdelay"></a>WM/PlaylistDelay
 
-Das **WM/playlistdelay-** Attribut enthält die Wartezeit in Millisekunden, die der Wiedergabe der Datei in einer Wiedergabeliste vorangestellt wird.
+Das **WM/PlaylistDelay-Attribut** enthält die Anzahl der Millisekundenverzögerung, die der Wiedergabe der Datei in einer Wiedergabeliste vorangehen sollte.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmplaylistdelay
+g \_ wszWMPlaylistDelay
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nicht alle Medienspieler berücksichtigen die Wiedergabelisten Verzögerung.
+Nicht alle Medienplayer halten sich an die Wiedergabelistenverzögerung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

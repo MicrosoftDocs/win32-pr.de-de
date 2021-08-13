@@ -1,25 +1,25 @@
 ---
-description: Die iassociatedidentityprovider-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IAssociatedIdentityProvider-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: B1BD9C93-7F8A-4946-B5B7-BB0FDE3A9DCA
-title: Iassociatedidentityprovider-Methoden
+title: IAssociatedIdentityProvider-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e83cac414ce161d51554a5caac63b433ff81eecd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d69b19d2a1deb1f11b23a01f6ab3a43695f7af5726baa2b9f20c2fabf6859cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119417760"
 ---
-# <a name="iassociatedidentityprovider-methods"></a>Iassociatedidentityprovider-Methoden
+# <a name="iassociatedidentityprovider-methods"></a>IAssociatedIdentityProvider-Methoden
 
-Die [**iassociatedidentityprovider**](/windows/desktop/api/IdentityProvider/nn-identityprovider-iassociatedidentityprovider) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IAssociatedIdentityProvider-Schnittstelle**](/windows/desktop/api/IdentityProvider/nn-identityprovider-iassociatedidentityprovider) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Associateidentity-Methode**](/windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-associateidentity)
--   [**Changecredential-Methode**](/windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-changecredential)
--   [**Disassociateidentity-Methode**](/windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-disassociateidentity)
+-   [**AssociateIdentity-Methode**](/windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-associateidentity)
+-   [**ChangeCredential-Methode**](/windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-changecredential)
+-   [**DisassociateIdentity-Methode**](/windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-disassociateidentity)
 
  
 

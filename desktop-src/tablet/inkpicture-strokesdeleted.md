@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, nachdem IInkStrokeDisp-Objekte aus der Ink-Eigenschaft gelöscht wurden.
+description: Tritt ein, nachdem IInkStrokeDisp-Objekte aus der Freihandeigenschaft gelöscht wurden.
 ms.assetid: 395544e1-dc93-45d3-ac7a-d54712f3c027
-title: InkPicture. StrokesDeleted-Ereignis (msink AUT. h)
+title: InkPicture.StrokesDeleted-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf98e51196d760f467d507c133429201883b340e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5b2d4f0be69adf6c9c44f3eadec250d8cba3ebb8935bde5c06cd026e478da3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118717359"
 ---
-# <a name="inkpicturestrokesdeleted-event"></a>InkPicture. StrokesDeleted-Ereignis
+# <a name="inkpicturestrokesdeleted-event"></a>InkPicture.StrokesDeleted-Ereignis
 
-Tritt auf, nachdem [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte aus der [**Ink**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_ink) -Eigenschaft gelöscht wurden.
+Tritt ein, nachdem [**IInkStrokeDisp-Objekte**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) aus der [**Freihandeigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_ink) gelöscht wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,17 +26,17 @@ void StrokesDeleted();
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Es sind keine Ereignisdaten vorhanden.
 
-Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ iinkoverlayevents** und **\_ iinkpictureevents** (Dispinterfaces) mit der ID "DISPID \_ ioestrokesdeleted" definiert.
+Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** (dispinterfaces) mit der ID DISPID \_ IOEStrokesDeleted definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,18 +44,18 @@ Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ iinkoverlaye
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

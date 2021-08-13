@@ -1,9 +1,9 @@
 ---
-title: WM/mediaisstereo
-description: Das WM/mediaisstereo-Attribut gibt an, ob der Inhalt mit Stereo Sound übertragen wird.
+title: WM/MediaIsStereo
+description: Das WM/MediaIsStereo-Attribut gibt an, ob der Inhalt mit Stereosound übertragen wird.
 ms.assetid: d9a7ba4a-d46b-4240-92e4-19ec6ea402c7
 keywords:
-- WM/mediaisstereo-Windows Media-Format
+- WM/MediaIsStereo-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dff49bfd611462a01d3dd99eb5bfff1938c474a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a7c96462a3d632740f8e5a80e0c1fff82d7a78af719061b0015eb0a058c41a02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118698668"
 ---
-# <a name="wmmediaisstereo"></a>WM/mediaisstereo
+# <a name="wmmediaisstereo"></a>WM/MediaIsStereo
 
-Das **WM/mediaisstereo-** Attribut gibt an, ob der Inhalt mit Stereo Sound übertragen wird.
+Das **WM/MediaIsStereo-Attribut** gibt an, ob der Inhalt mit Stereosound übertragen wird.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmmediaisstereo
+g \_ wszWMMediaIsStereo
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Broadcast-TV verwendet.
+Dieses Attribut wird für Fernsehsendungen verwendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

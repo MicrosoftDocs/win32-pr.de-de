@@ -1,55 +1,55 @@
 ---
-title: Privater Sensor Pool
-description: Eine Sammlung biometrischer Einheiten, die für die ausschließliche Verwendung durch eine Client Anwendung reserviert sind. Private Pools unterstützen proprietäre Authentifizierungsmethoden und ermöglichen es einer Client Anwendung, mithilfe von vom Hersteller angegebenen Steuerungs Befehlen auf eine biometrische Einheit zuzugreifen.
+title: Privater Sensorpool
+description: Eine Sammlung biometrischer Einheiten, die für die exklusive Verwendung durch eine Clientanwendung reserviert sind. Private Pools unterstützen proprietäre Authentifizierungsmethoden und ermöglichen einer Clientanwendung den Zugriff auf eine biometrische Einheit mithilfe von vom Anbieter angegebenen Steuerungsbefehlen.
 ms.assetid: f0ccbafd-e7a8-4389-bd05-0b062dfc4dc0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf829290b0e412247b5e629a46e8c0efdafb4880
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 306f4e0d4e28cfb29dda694e835348721113a5c23ec51054169537282ae2c365
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119480440"
 ---
-# <a name="private-sensor-pool"></a>Privater Sensor Pool
+# <a name="private-sensor-pool"></a>Privater Sensorpool
 
-Ein privater Sensor Pool ist eine Sammlung von biometrischen Einheiten, die für die ausschließliche Verwendung durch eine Client Anwendung reserviert sind. Private Pools unterstützen proprietäre Authentifizierungsmethoden und ermöglichen es einer Client Anwendung, mithilfe von vom Hersteller angegebenen Steuerungs Befehlen auf eine biometrische Einheit zuzugreifen. Biometrische Einheiten in einem privaten Sensor Pool:
+Ein privater Sensorpool ist eine Sammlung biometrischer Einheiten, die für die exklusive Verwendung durch eine Clientanwendung reserviert sind. Private Pools unterstützen proprietäre Authentifizierungsmethoden und ermöglichen einer Clientanwendung den Zugriff auf eine biometrische Einheit mithilfe von vom Anbieter angegebenen Steuerungsbefehlen. Biometrische Einheiten in einem privaten Sensorpool:
 
--   Sind nur für die Client Anwendung verfügbar, die den Pool erstellt hat.
--   Sendet Ereignis Hinweise, die durch den Abschluss von biometrischen Vorgängen generiert wurden, ohne Berücksichtigung des aktuellen Fenster Fokus direkt an die Anwendung.
+-   Sind nur für die Clientanwendung verfügbar, die den Pool erstellt hat.
+-   Senden Sie Ereignishinweise, die durch den Abschluss biometrischer Vorgänge generiert werden, direkt an die Anwendung, ohne den aktuellen Fensterfokus zu berücksichtigen.
 -   Verwenden Sie GUIDs, um biometrische Vorlagen zu identifizieren.
--   Geben Sie eine einzelne, von der Anwendung ausgewählte Vorlagen Datenbank frei.
+-   Geben Sie eine einzelne, von der Anwendung ausgewählte Vorlagendatenbank frei.
 
-Private Sensor Pools müssen verwendet werden, wenn die Client Anwendung Folgendes:
+Private Sensorpools müssen verwendet werden, wenn die Clientanwendung:
 
--   Verwaltet eine Auflistung dedizierter biometrischer Einheiten, die eine anwendungsspezifische Vorlagen Datenbank verwenden. Betrachten Sie beispielsweise eine Mitarbeiter Anwesenheits Anwendung, bei der Mitarbeiter ihre Ankunft bei der Arbeit signalisieren, indem Sie Ihren Finger auf einen Fingerabdruckleser wischen. Die Mitarbeiter haben keine Windows-Konten auf dem Computer, auf dem die Anwendung ausgeführt wird. Stattdessen werden ihre Fingerabdrücke von GUIDs identifiziert, die von der Anwesenheits Anwendung verwaltet werden.
--   Sammelt biometrische Beispiele anstelle der Zuordnung von Beispielen zu SIDs.
--   Versetzt die Hardware der biometrischen Einheit in den Wartungsmodus, um die Firmware zu aktualisieren.
--   Sendet Hersteller definierte Steuerungsbefehle an die Hardware oder Software für biometrische Geräte.
--   Versucht, eine biometrische Einheit mit dem integrierten Speicher zu konfigurieren, damit Sie im erweiterten Modus ausgeführt werden kann, die Einheit aber die erforderlichen Hash Vorgänge nicht ausführen kann.
--   Wird von einer Remotedesktop Client Sitzung ausgeführt.
+-   Verwaltet eine Sammlung dedizierter biometrischer Einheiten, die eine anwendungsspezifische Vorlagendatenbank verwenden. Stellen Sie sich beispielsweise eine Anwendung zur Mitarbeiterbetätigung vor, bei der Mitarbeiter ihre Ankunft bei der Arbeit signalisieren, indem sie mit dem Finger auf einen Fingerabdruckleser wischen. Die Mitarbeiter verfügen nicht über Windows Konten auf dem Computer, auf dem die Anwendung ausgeführt wird. Stattdessen werden ihre Fingerabdrücke durch GUIDs identifiziert, die von der Attendance-Anwendung verwaltet werden.
+-   Erfasst biometrische Stichproben, anstatt einfach SiDs Stichproben zuzubilden.
+-   Versetzt die Hardware biometrischer Einheiten in den Wartungsmodus, um die Firmware zu aktualisieren.
+-   Sendet vom Hersteller definierte Steuerungsbefehle an die Hardware oder Software der biometrischen Einheit.
+-   Versucht, eine biometrische Einheit mit Integriertem Speicher für den Betrieb im erweiterten Modus zu konfigurieren, aber die Einheit kann die erforderlichen Hashvorgänge nicht ausführen.
+-   Wird über eine Remotedesktop Clientsitzung ausgeführt.
 
 > [!Note]  
-> Anwendungen können private Sensor Pools nur für Fingerabdruck-Biometrie erstellen. Wenn eine Anwendung versucht, eine für etwas anderes zu erstellen (z. b. Gesicht), schlägt die Anforderung fehl.
+> Anwendungen können private Sensorpools nur für biometrische Fingerabdruckdaten erstellen. Wenn eine Anwendung versucht, eine Für andere Zwecke (z. B. Gesichtssuche) zu erstellen, schlägt die Anforderung fehl.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen eines privaten Sensor Pools](creating-a-private-sensor-pool.md)
+[Erstellen eines privaten Sensorpools](creating-a-private-sensor-pool.md)
 </dt> <dt>
 
-[Sensor Pools](sensor-pools.md)
+[Sensorpools](sensor-pools.md)
 </dt> <dt>
 
-[System Sensor Pool](system-sensor-pool.md)
+[Systemsensorpool](system-sensor-pool.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

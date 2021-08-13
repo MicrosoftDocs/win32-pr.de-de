@@ -1,7 +1,7 @@
 ---
-description: Enthält ein-Objekt für jede Rolle, die der Komponente zugeordnet ist, mit der die Auflistung verknüpft ist. Die Rollen müssen bereits auf Anwendungsebene zugewiesen sein.
+description: Enthält ein -Objekt für jede Rolle, die der Komponente zugewiesen ist, mit der die Auflistung verknüpft ist. Die Rollen müssen bereits auf Anwendungsebene zugewiesen sein.
 ms.assetid: c253c72f-908e-4990-ac1a-27e32c99283c
-title: Rolesforcomponent-Sammlung
+title: RolesForComponent-Sammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,38 +12,38 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 701921f8f88656753857707c045da0c8e231e1a0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e0acd1bfd374c4d0cdb2eb43b49288f0527847abeec97d8bb96c0c5aecd74585
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118547007"
 ---
-# <a name="rolesforcomponent-collection"></a>Rolesforcomponent-Sammlung
+# <a name="rolesforcomponent-collection"></a>RolesForComponent-Sammlung
 
-Enthält ein-Objekt für jede Rolle, die der Komponente zugeordnet ist, mit der die Auflistung verknüpft ist. Die Rollen müssen bereits auf Anwendungsebene zugewiesen sein.
+Enthält ein -Objekt für jede Rolle, die der Komponente zugewiesen ist, mit der die Auflistung verknüpft ist. Die Rollen müssen bereits auf Anwendungsebene zugewiesen sein.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts.
+Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **rolesforcomponent** -Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **RolesForComponent-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**Komponenten**](components.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
 -   [Name](#name)
 
@@ -53,21 +53,21 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name der Rolle. Muss bereits eine Rolle sein, die der Anwendung zugewiesen ist (in der Rollen Auflistung angezeigt). Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | WriteOnce                                                                                                                                                                                                                                                                                                                                           |
+| Beschreibung    | Der Name der Rolle. Muss der Anwendung bereits eine Rolle zugewiesen sein (wird in der Sammlung Rollen angezeigt). Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | WriteOnce                                                                                                                                                                                                                                                                                                                                           |
 | type           | String                                                                                                                                                                                                                                                                                                                                              |
 | Standard        | "Neue Rolle"                                                                                                                                                                                                                                                                                                                                          |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                        |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                                                                                        |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

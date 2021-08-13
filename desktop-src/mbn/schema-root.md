@@ -1,10 +1,10 @@
 ---
-description: Mobiles Breitband Profil Schema v4.
+description: Mobiles Breitbandprofilschema v4.
 MS-HAID: WWAN\_profile\_v4.Schema\_Root
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Mobiles Breitband Profil Schema v4
+title: Mobiles Breitbandprofilschema v4
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 0945e34c-74f3-4133-8b36-e45562ce2a88
@@ -13,19 +13,19 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: b10d2ea3e327f54c6a8100f0758d652675b9d4a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fd9b2d5a28abd4c445198d58c589c60f9dba9de786b989c6d97cd74dd461aa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118744201"
 ---
-# <a name="span-idwwan_profile_v4schema_rootspanmobile-broadband-profile-schema-v4"></a><span id="WWAN_profile_v4.Schema_Root"></span>Mobiles Breitband Profil Schema v4
+# <a name="span-idwwan_profile_v4schema_rootspanmobile-broadband-profile-schema-v4"></a><span id="WWAN_profile_v4.Schema_Root"></span>Mobiles Breitbandprofilschema v4
 
-Das Windows 10mobile-Breitband Profil Schema V4 ist im-Namespace verfügbar `https://www.microsoft.com/networking/WWAN/profile/v4` .
+Das Windows 10Mobiles Breitbandprofilschema v4 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v4` verfügbar.
 
--   [Mobile Breitband Profile Schema V4-Elemente](root-elements.md)
--   [Mobile Breitband Profile Schema V4 Simple Types](simple-types.md)
+-   [Schema v4-Elemente für mobile Breitbandprofile](root-elements.md)
+-   [Einfache Typen des Schemas für mobile Breitbandprofile v4](simple-types.md)
 
 ``` syntax
 <xs:schema targetNamespace="https://www.microsoft.com/networking/WWAN/profile/v4"

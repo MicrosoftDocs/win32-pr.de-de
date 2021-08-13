@@ -1,11 +1,11 @@
 ---
-title: Activebasicdevice isaudiosupported-Eigenschaft (playondevice. h)
-description: Ruft einen Wert ab, der angibt, ob das Gerät Audiodaten unterstützt.
+title: ActiveBasicDevice IsAudioSupported-Eigenschaft (PlayToDevice.h)
+description: Ruft einen Wert ab, der angibt, ob das Gerät Audio unterstützt.
 ms.assetid: 22ABB97B-58E7-4C21-B359-C10DFC9C7194
 keywords:
-- Isaudiosupported-Eigenschaft Medien Streaming-API
-- Isaudiosupported-Eigenschaft Medien Streaming-API, activebasicdevice-Schnittstelle
-- Activebasicdevice-Schnittstelle Medien Streaming-API, isaudiosupported-Eigenschaft
+- IsAudioSupported-Eigenschaft Media Streaming-API
+- IsAudioSupported-Eigenschaft Media Streaming-API, ActiveBasicDevice-Schnittstelle
+- ActiveBasicDevice-Schnittstelle Media Streaming-API, IsAudioSupported-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66058da9dcdbac0ed1100b0ef21a4ed530d45a68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 20125114b6cd134d153ad6425af5af410faf524714a2e505a37fbf57dcda21e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119462423"
 ---
-# <a name="activebasicdeviceisaudiosupported-property"></a>Activebasicdevice:: isaudiosupported-Eigenschaft
+# <a name="activebasicdeviceisaudiosupported-property"></a>ActiveBasicDevice::IsAudioSupported-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob das Gerät Audiodaten unterstützt.
+Ruft einen Wert ab, der angibt, ob das Gerät Audio unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -43,9 +43,9 @@ HRESULT get_IsAudioSupported(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf einen **booleschen** Wert, der angibt, ob das Gerät Audiodaten unterstützt.
+Ein Zeiger auf einen **booleschen Wert,** der angibt, ob das Gerät Audio unterstützt.
 
-" **true** ", wenn das Gerät Audiodaten unterstützt. andernfalls **false**.
+**TRUE,** wenn das Gerät Audio unterstützt; andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,19 +53,19 @@ Ein Zeiger auf einen **booleschen** Wert, der angibt, ob das Gerät Audiodaten u
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Playondevice. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Playto Device. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>PlayToDevice.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>PlayToDevice.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Playtodevice.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
+[**ActiveBasicDevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
 </dt> </dl>
 
  

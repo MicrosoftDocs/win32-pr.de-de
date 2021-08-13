@@ -1,38 +1,38 @@
 ---
-description: Die vorgeschlagenen Aktions Sequenzen für eine grundlegende instaluisequence-Tabelle in einer Windows Installer-Datenbank.
+description: Die vorgeschlagenen Aktionssequenzen für eine einfache IninstallUISequence-Tabelle in Windows Installer-Datenbank.
 ms.assetid: f1ddad1e-c075-4054-aa24-f1acdc72da96
-title: Vorgeschlagene InstallUISequence
+title: Empfohlene InstallationUISequence
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1accfc889d51cb75b3928df60931c848b30bcad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eab5c65ed594cf86f86555de235d0ceb0530b9f3e233bfdf5c38d094ca9719a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118624332"
 ---
-# <a name="suggested-installuisequence"></a>Vorgeschlagene InstallUISequence
+# <a name="suggested-installuisequence"></a>Empfohlene InstallationUISequence
 
 
 
 | Aktion                                          | Bedingung                                                                                                  | Sequenz |
 |-------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------|
-| Fatalerrordlg                                   |                                                                                                            | -3       |
-| Userexitdlg                                     |                                                                                                            | -2       |
-| Exitdlg                                         |                                                                                                            | -1       |
+| FatalErrorDlg                                   |                                                                                                            | -3       |
+| UserExitDlg                                     |                                                                                                            | -2       |
+| ExitDlg                                         |                                                                                                            | -1       |
 | [LaunchConditions](launchconditions-action.md) |                                                                                                            | 100      |
-| Preparedlg                                      |                                                                                                            | 140      |
+| PrepareDlg                                      |                                                                                                            | 140      |
 | [AppSearch](appsearch-action.md)               |                                                                                                            | 400      |
-| [Ccpsearch](ccpsearch-action.md)               | Nicht [ **installiert**](installed.md)                                                                         | 500      |
-| [RMCCPSEARCH](rmccpsearch-action.md)           | Nicht [ **installiert**](installed.md)                                                                         | 600      |
-| [Costinitialize](costinitialize-action.md)     |                                                                                                            | 800      |
-| [Datei Kosten](filecost-action.md)                 |                                                                                                            | 900      |
-| [Costfinalize](costfinalize-action.md)         |                                                                                                            | 1000     |
-| Welcomedlg                                      | Nicht [ **installiert**](installed.md)                                                                         | 1230     |
-| Resumedlg                                       | [**Installiert**](installed.md) Und ( [**fort**](resume.md) setzen oder [**vorab ausgewählt**](preselected.md))       | 1240     |
-| Maintenancewelcomedlg                           | [**Installiert**](installed.md) Und nicht [**fortsetzen und nicht**](resume.md) [**vorab ausgewählt**](preselected.md) | 1250     |
+| [CCPSearch](ccpsearch-action.md)               | NICHT [ **installiert**](installed.md)                                                                         | 500      |
+| [RMCCPSearch](rmccpsearch-action.md)           | NICHT [ **installiert**](installed.md)                                                                         | 600      |
+| [CostInitialize](costinitialize-action.md)     |                                                                                                            | 800      |
+| [FileCost](filecost-action.md)                 |                                                                                                            | 900      |
+| [CostFinalize](costfinalize-action.md)         |                                                                                                            | 1000     |
+| WelcomeDlg                                      | NICHT [ **installiert**](installed.md)                                                                         | 1230     |
+| ResumeDlg                                       | [**Installiert**](installed.md) AND ( [**RESUME**](resume.md) OR [**Preselected**](preselected.md))       | 1240     |
+| MaintenanceWelcomeDlg                           | [**Installiert**](installed.md) AND NOT [**RESUME**](resume.md) AND NOT [**Preselected**](preselected.md) | 1250     |
 | ProgressDlg                                     |                                                                                                            | 1280     |
-| [ExecuteAction](executeaction-action.md)       |                                                                                                            | 1300     |
+| [Executeaction](executeaction-action.md)       |                                                                                                            | 1300     |
 
 
 

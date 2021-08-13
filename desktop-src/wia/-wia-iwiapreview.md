@@ -1,7 +1,7 @@
 ---
-description: Die iwiapreview-Schnittstelle speichert ungefilterte Bilder intern zwischen und übergibt sie durch Bild Verarbeitungs Filter.
+description: Die IWiaPreview-Schnittstelle speichert ungefilterte Bilder intern zwischen und übergibt sie über Bildverarbeitungsfilter.
 ms.assetid: 8a51c42b-aa1d-4df0-aba3-6aeb8e1ca2cf
-title: Iwiapreview-Schnittstelle (WIA. h)
+title: IWiaPreview-Schnittstelle (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,53 +13,53 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 5e1c01daae4e86fa18c087b67bf902daaf6f8793
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2672211e5c1a17fa360a6078069ae8260687dc896843ffb6bf572d9b7be8caa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442070"
 ---
-# <a name="iwiapreview-interface"></a>Iwiapreview-Schnittstelle
+# <a name="iwiapreview-interface"></a>IWiaPreview-Schnittstelle
 
-Die **iwiapreview** -Schnittstelle speichert ungefilterte Bilder intern zwischen und übergibt sie durch Bild Verarbeitungs Filter.
+Die **IWiaPreview-Schnittstelle** speichert ungefilterte Bilder intern zwischen und übergibt sie über Bildverarbeitungsfilter.
 
 ## <a name="members"></a>Member
 
-Die **iwiapreview** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwiapreview** verfügt auch über die folgenden Typen von Membern:
+Die **IWiaPreview-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaPreview** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwiapreview** -Schnittstelle verfügt über diese Methoden.
+Die **IWiaPreview-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                  | BESCHREIBUNG                                                                                                                                                                                 |
+| Methode                                                  | Beschreibung                                                                                                                                                                                 |
 |:--------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Klartext**](-wia-iwiapreview-clear.md)                 | Gibt das ungefilterte Bild frei, das von der [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) -Methode zwischengespeichert wird. Außerdem wird der Bild Verarbeitungs Filter freigegeben. <br/>          |
-| [**DetectRegions**](-wia-iwiapreview-detectregions.md) | Ruft den Treiber Segmentierungs Filter auf und übergibt das ungefilterte Bild, das von der [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) -Methode zwischengespeichert wird, an den Filter. <br/> |
-| [**Getnewpreview**](-wia-iwiapreview-getnewpreview.md) | Speichert das vom Treiber zurückgegebene ungefilterte Bild intern zwischen. <br/>                                                                                                                |
-| [**Updatepreview**](-wia-iwiapreview-updatepreview.md) | Ruft das ungefilterte Bild ab, das von der [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) -Methode zwischengespeichert wird. <br/>                                                            |
+| [**Klar**](-wia-iwiapreview-clear.md)                 | Gibt das ungefilterte Image frei, das von der [**IWiaPreview::GetNewPreview-Methode zwischengespeichert**](-wia-iwiapreview-getnewpreview.md) wird. Außerdem wird der Bildverarbeitungsfilter veröffentlicht. <br/>          |
+| [**DetectRegions**](-wia-iwiapreview-detectregions.md) | Ruft den Treibersegmentierungsfilter auf und übergibt das ungefilterte Bild, das von der [**IWiaPreview::GetNewPreview-Methode**](-wia-iwiapreview-getnewpreview.md) zwischengespeichert wurde, an den Filter. <br/> |
+| [**GetNewPreview**](-wia-iwiapreview-getnewpreview.md) | Speichert das vom Treiber zurückgegebene ungefilterte Image intern zwischen. <br/>                                                                                                                |
+| [**UpdatePreview**](-wia-iwiapreview-updatepreview.md) | Ruft das ungefilterte Bild ab, das von der [**IWiaPreview::GetNewPreview-Methode zwischengespeichert**](-wia-iwiapreview-getnewpreview.md) wird. <br/>                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Filter wird automatisch von der [**iwiatransfer::D ownload**](-wia-iwiatransfer-download.md) -Methode aufgerufen.
+Dieser Filter wird automatisch von der [**IWiaTransfer::D ownload-Methode**](-wia-iwiatransfer-download.md) aufgerufen.
 
-Die **iwiapreview** -Schnittstelle erbt wie alle Component Object Model-Schnittstellen (com) die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstellen Methoden.
+Die **IWiaPreview-Schnittstelle** erbt wie alle Component Object Model -Schnittstellen (COM) die [IUnknown-Schnittstellenmethoden.](/windows/win32/api/unknwn/nn-unknwn-iunknown)
 
 
 
-| IUnknown-Methoden                                        | BESCHREIBUNG                               |
+| IUnknown-Methoden                                        | Beschreibung                               |
 |---------------------------------------------------------|-------------------------------------------|
-| [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
-| [IUnknown:: adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
-| [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
+| [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
+| [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
+| [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
 
 
 
@@ -71,10 +71,10 @@ Die **iwiapreview** -Schnittstelle erbt wie alle Component Object Model-Schnitts
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

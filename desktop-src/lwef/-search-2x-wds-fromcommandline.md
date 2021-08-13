@@ -1,28 +1,28 @@
 ---
 title: Aufrufen von WDS über die Befehlszeile
-description: Sie können die Benutzeroberfläche der Microsoft Windows-Desktop Suche (WDS) mit einem bestimmten Filter, einem bestimmten Speicher oder einer Webseite starten, die das Browserhilfsobjekt (BHO) mithilfe der windowssearch.exe Befehlszeilen Syntax verwendet.
+description: Sie können die Benutzeroberfläche von Microsoft Windows Desktop Search (WDS) mit einem bestimmten Filter, Speichern und Abfragen aus einer anderen Anwendung oder einer Webseite starten, die das Browser helper Object (BHO) verwendet, indem Sie die windowssearch.exe-Befehlszeilensyntax verwenden.
 ms.assetid: fd62f7c9-08a9-4e05-b0bc-e2215cfff59e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efae7aebc13f578e9c5c32542b451d3600a93a2b
-ms.sourcegitcommit: b9a94cea8f83153214af4c09509e1cc61a1bb616
+ms.openlocfilehash: 36ba9fa8310af43340ef71c5d7e574f1b95addca86a4f90051dc85f593f43302
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "103724019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118753216"
 ---
 # <a name="calling-wds-from-the-command-line"></a>Aufrufen von WDS über die Befehlszeile
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
 
-Sie können die Benutzeroberfläche der Microsoft Windows-Desktop Suche (WDS) mit einem bestimmten Filter, einem bestimmten Speicher oder einer Webseite starten, die das Browserhilfsobjekt (BHO) mithilfe der windowssearch.exe Befehlszeilen Syntax verwendet. Wenn WDS von der Befehlszeile aufgerufen wird, werden keine Informationen über die Aktionen des Benutzers oder die Auswahl im WDS-Fenster an die aufrufenden Anwendung oder Webseite zurückgegeben.
+Sie können die Benutzeroberfläche von Microsoft Windows Desktop Search (WDS) mit einem bestimmten Filter, Speichern und Abfragen aus einer anderen Anwendung oder einer Webseite starten, die das Browser helper Object (BHO) verwendet, indem Sie die windowssearch.exe-Befehlszeilensyntax verwenden. Beim Aufrufen von WDS über die Befehlszeile werden keine Informationen über die Aktionen oder Die Auswahl des Benutzers im WDS-Fenster an die aufrufende Anwendung oder Webseite zurückgegeben.
 
-Der WDS-Installationspfad wird in der Registrierungs Einstellung INSTALLDIR unter HKEY_LOCAL_MACHINE \\ Software \\ Microsoft \\ Windows-Desktop Suche angegeben. Der Standardpfad, auf windowssearch.exe installiert wird, ist Programme \\ Windows-Desktop Suche.
+Der WDS-Installationspfad wird in der Registrierungseinstellung InstallDir unter HKEY_LOCAL_MACHINE \\ Software Microsoft Windows Desktop Search \\ \\ angegeben. Der Standardpfad, in windowssearch.exe installiert ist, ist Programmdateien \\ Windows Desktopsuche.
 
 ## <a name="command-line-syntax"></a>Befehlszeilensyntax
 
-Die folgende Syntax gilt für die Befehlszeilenschnittstelle der Windows-Desktop Suche 2. x.
+Die folgende Syntax gilt für die Windows Desktop Search 2.x-Befehlszeilenschnittstelle.
 
 
 
@@ -43,41 +43,41 @@ Die folgende Syntax gilt für die Befehlszeilenschnittstelle der Windows-Desktop
 <tr class="odd">
 <td>/startup</td>
 
-<td>Initialisiert die Windows-Desktop Suche.</td>
+<td>Initialisiert Windows Desktopsuche</td>
 </tr>
 <tr class="even">
 <td>/indexnow</td>
 
-<td>Deaktiviert die Indizierung und schaltet alle Index Speicherorte um.</td>
+<td>Deaktiviert das Indizierungs-Back-Off und scannt alle Indexpositionen erneut.</td>
 </tr>
 <tr class="odd">
 <td>/showstatus</td>
 
-<td>Zeigt das Fenster "Index Status" an</td>
+<td>Zeigt das Indizierungsstatusfenster an.</td>
 </tr>
 <tr class="even">
-<td>/launchsearchwindow oder/URL</td>
+<td>/launchsearchwindow oder /url</td>
 
 <td>Öffnet ein WDS-Fenster mit einer leeren Abfrage.</td>
 </tr>
 <tr class="odd">
 <td>/url</td>
-<td>Search: [Store | Show | Abfrage] Abfrage Zeichenfolge</td>
-<td>Öffnet ein WDS-Fenster mit einer Abfrage und einem Filter basierend auf den folgenden Parametern:
+<td>search:[store|show|query] abfragezeichenfolge</td>
+<td>Öffnet ein WDS-Fenster mit einer Abfrage und filtert basierend auf den folgenden Parametern:
 <ul>
-<li><p>Store: gibt die Datenquelle für die Abfrage an: Dateien, Outlook, OutlookExpress. Wenn nicht angegeben, werden alle Geschäfte durchsucht. <br/></p>
+<li><p>store: Gibt die datenquelle an, die sie abfragen soll: files, outlook, outlookexpress. Wenn nicht angegeben, werden alle Filialen durchsucht. <br/></p>
 <blockquote>
 [!Note]<br />
-Obwohl die Erweiterte Abfrage Syntax das verweisen auf Microsoft Outlook als ' OE ' unterstützt, muss der Store-Parameter in der Befehlszeile ' OutlookExpress ' lauten.
+Die erweiterte Abfragesyntax unterstützt zwar das Verweisen auf Microsoft Outlook als "oe", der store-Parameter in der Befehlszeile muss jedoch "outlookexpress" sein.
 </blockquote>
 <p><br/></p></li>
-<li><p>Show: gibt an, welche wahrgenommenen Ergebnisse zurückgegeben werden sollen. Eine umfassende Liste der Typen finden Sie unter <a href="-search-2x-wds-perceivedtype.md">wahrgenommene Typen</a> . Wenn nicht angegeben, werden alle Typen zurückgegeben. <br/></p>
+<li><p>show: Gibt an, welcher wahrgenommene Ergebnistyp zurückgeben werden soll. Eine <a href="-search-2x-wds-perceivedtype.md">vollständige Liste der Typen</a> finden Sie unter Wahrgenommene Typen. Wenn kein Wert angegeben wird, werden alle Typen zurückgegeben. <br/></p>
 <blockquote>
 [!Note]<br />
-Es gibt drei Unterschiede zwischen den wahrgenommenen Typwerten und den Werten für "anzeigen". Verwenden Sie für <code>show</code> "Dokumente" anstelle von "doc", "Bilder" anstelle von "Fotos" und "textdocuments" anstelle von "Text".
+Es gibt drei Unterschiede zwischen den wahrgenommenen Typwerten und den Werten für show. Verwenden <code>show</code> Sie für "Dokumente" anstelle von "doc", "pictures" anstelle von "pics" und "textdocuments" anstelle von "text".
 </blockquote>
 <p><br/></p></li>
-<li>Query: gibt die Suchkriterien an. Dieser Wert unterstützt <a href="-search-2x-wds-aqsreference.md">Erweiterte Abfrage Syntax</a> Parameter, um die Ergebnisse zu verfeinern. Der Abfrage Parameter muss der letzte Parameter in der URL sein.</li>
+<li>query: Gibt die Suchkriterien an. Dieser Wert unterstützt <a href="-search-2x-wds-aqsreference.md">Erweiterte Abfragesyntaxparameter,</a> um die Ergebnisse zu verfeinern. Der Abfrageparameter muss der letzte Parameter in der URL sein.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -89,7 +89,7 @@ Es gibt drei Unterschiede zwischen den wahrgenommenen Typwerten und den Werten f
 
 ## <a name="example"></a>Beispiel
 
-Verwenden Sie beispielsweise den folgenden Befehl, um alle Dateien nach Bildern zu durchsuchen, die mit den Kriterien für das Hintergrund übereinstimmen:
+Um beispielsweise alle Dateien nach Bildern zu durchsuchen, die den Kriterien "Hintergrund" entsprechen, verwenden Sie den folgenden Befehl:
 
 `WindowsSearch.exe /url search:store=files&show=pictures&query=wallpaper`
 
@@ -106,7 +106,7 @@ Verwenden Sie beispielsweise den folgenden Befehl, um alle Dateien nach Bildern 
 [Wahrgenommene Typen](-search-2x-wds-perceivedtype.md)
 </dt> <dt>
 
-[Aufrufen von WDS von Webseiten](-search-2x-wds-browserhelpobject.md)
+[Aufrufen von WDS über Webseiten](-search-2x-wds-browserhelpobject.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: WM/Genre
 description: Das WM/Genre-Attribut enthält das Genre des Inhalts.
 ms.assetid: 50279c96-e8f2-40a3-9d5b-5827eb91b61e
 keywords:
-- WM/Genre Windows Media-Format
+- WM/Genre windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c56319210e34b580a358c7083b03a45ea01c076
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 049334091c4dc4be533e1438468561c97c383f5c9cc7c57c607512cbf09e99cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106338430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118699030"
 ---
 # <a name="wmgenre"></a>WM/Genre
 
-Das **WM/Genre-** Attribut enthält das Genre des Inhalts.
+Das **WM/Genre-Attribut** enthält das Genre des Inhalts.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmgenre
+g \_ wszWMGenre
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist das bevorzugte Attribut zum Angeben des Inhalts Genres.
+Dies ist das bevorzugte Attribut zum Angeben des Genres von Inhalten.
 
-Wenn Sie in einer MP3-Datei entweder **WM/Genre** oder **WM/GenreID** ändern, wird das andere Attribut entsprechend geändert.
+Wenn Sie **WM/Genre** oder **WM/GenreID** in einer MP3-Datei ändern, wird das andere Attribut entsprechend geändert.
 
 ### <a name="example"></a>Beispiel
 
@@ -43,23 +43,23 @@ Wenn Sie in einer MP3-Datei entweder **WM/Genre** oder **WM/GenreID** ändern, w
 
 | Dateityp | Beispielwert |
 |-----------|---------------|
-| Audio     | Tiefpunkt        |
-| Video     | K       |
+| Audio     | "Rock"        |
+| Video     | "Soll"       |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

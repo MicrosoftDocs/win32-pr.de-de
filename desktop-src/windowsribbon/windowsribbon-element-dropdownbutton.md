@@ -3,7 +3,7 @@ title: DropDownButton-Element
 description: Stellt ein standardmäßiges Drop-Down Button-Steuerelement dar.
 ms.assetid: 41031be2-43bc-4f75-b37a-1dcecc1635e1
 keywords:
-- DropDownButton-Element Windows-Menüband
+- DropDownButton-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a42b8ffb6d39c1da8993972c0b25995f778bdaca
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 3275e6de398c42d29424b2a1f9b0c750989357ef21c10d5db1e1680e7adb0836
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111442961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118707268"
 ---
 # <a name="dropdownbutton-element"></a>DropDownButton-Element
 
-Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribbon-controls-dropdownbutton.md) dar.
+Stellt ein [standardmäßiges Dropdownschaltfläche-Steuerelement](windowsribbon-controls-dropdownbutton.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <DropDownButton
@@ -48,9 +48,9 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -58,15 +58,15 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 <td><strong>ApplicationModes</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Nur gültig, wenn <a href="windowsribbon-element-menugroup.md"><strong>MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Trennzeichen getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerraum ist gültig und wird ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
+<td>Nur gültig, <a href="windowsribbon-element-menugroup.md"><strong>wenn MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Komma getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerzeichen sind gültig und werden ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -77,7 +77,7 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 
 
 
-| Element                                                                             | BESCHREIBUNG                                        |
+| Element                                                                             | Beschreibung                                        |
 |-------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**Schaltfläche**](windowsribbon-element-button.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
@@ -112,15 +112,15 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 
 Optional oder erforderlich, je nach übergeordnetem Element.
 
-Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) **DropDownButton-,** [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-, MenuGroup-,**](windowsribbon-element-menugroup.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten. [](windowsribbon-element-group.md)
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) **DropDownButton-,** [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
-**DropDownButton** unterstützt [Anwendungsmodi,](ribbon-applicationmodes.md) wenn es in der linken Spalte des Anwendungsmenüs gehostet wird.
+**DropDownButton unterstützt** [Anwendungsmodi,](ribbon-applicationmodes.md) wenn sie in der linken Spalte des Anwendungsmenüs gehostet werden.
 
-[**DropDownGallery**](windowsribbon-element-dropdowngallery.md) und [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von **DropDownButton,** wenn **DropDownButton** ein Nachfolger von [**ApplicationMenu**](windowsribbon-element-applicationmenu.md)ist.
+[**DropDownGallery**](windowsribbon-element-dropdowngallery.md) und [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von **DropDownButton,** wenn **DropDownButton** ein Nachfolger von [**ApplicationMenu ist.**](windowsribbon-element-applicationmenu.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für **dropDownButton** veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für **dropDownButton veranschaulicht.**
 
 Dieser Codeabschnitt zeigt die **DropDownButton-Befehlsdeklarationen** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **DropDownButton-Element** fungiert.
 
@@ -147,7 +147,7 @@ Dieser Codeabschnitt zeigt die **DropDownButton-Befehlsdeklarationen** mit einer
 
 
 
-Dieser Codeabschnitt zeigt die **DropDownButton-Steuerelementdeklarationen.**
+In diesem Codeabschnitt werden die **DropDownButton-Steuerelementdeklarationen** gezeigt.
 
 
 ```XML
@@ -170,7 +170,7 @@ Dieser Codeabschnitt zeigt die **DropDownButton-Steuerelementdeklarationen.**
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

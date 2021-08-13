@@ -1,7 +1,7 @@
 ---
-description: Mit der clearsourcelist-Methode des Installer-Objekts werden alle Netzwerk Quellen aus der Quell Liste entfernt.
+description: Die ClearSourceList-Methode des Installer-Objekts entfernt alle Netzwerkquellen aus der Quellliste.
 ms.assetid: a4e4beb2-a4d7-48e7-9c8d-dd1ae19fe92a
-title: Installer. clearsourcelist-Methode
+title: Installer.ClearSourceList-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 3f9468775c75533b766a160a390410908d04bf6d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f16cc37556d217a217b814b5ce87cb705cd3105d4a8c2ad3f503d617aeda2cb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118633038"
 ---
-# <a name="installerclearsourcelist-method"></a>Installer. clearsourcelist-Methode
+# <a name="installerclearsourcelist-method"></a>Installer.ClearSourceList-Methode
 
-Mit der **clearsourcelist** -Methode des [**Installer**](installer-object.md) -Objekts werden alle Netzwerk Quellen aus der Quell Liste entfernt.
+Die **ClearSourceList-Methode** des [**Installer-Objekts**](installer-object.md) entfernt alle Netzwerkquellen aus der Quellliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Gibt den Produktcode an.
 *Benutzer* 
 </dt> <dd>
 
-Benutzername für die Installation pro Benutzer NULL oder eine leere Zeichenfolge für die Installation pro Computer.
+Benutzername für die Installation pro Benutzer; NULL oder eine leere Zeichenfolge für die Installation pro Computer.
 
 </dd> </dl>
 
@@ -64,20 +64,20 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Msisourcelistclearall**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearalla)
+[**MsiSourceListClearAll**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearalla)
 </dt> <dt>
 
-[Quellen Resilienz](source-resiliency.md)
+[Quellresilienz](source-resiliency.md)
 </dt> </dl>
 
  

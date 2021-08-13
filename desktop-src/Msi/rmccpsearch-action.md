@@ -1,39 +1,39 @@
 ---
-description: Die RMCCPSEARCH-Aktion verwendet Datei Signaturen, um zu überprüfen, ob qualifizierte Produkte auf einem System installiert sind, bevor eine Upgrade-Installation durchgeführt wird.
+description: Die RMCCPSearch-Aktion verwendet Dateisignaturen, um zu überprüfen, ob qualifizierte Produkte auf einem System installiert sind, bevor eine Upgradeinstallation durchgeführt wird.
 ms.assetid: d37b2434-86eb-4c6e-b817-77c75dcebbf5
-title: RMCCPSEARCH-Aktion
+title: RMCCPSearch-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c273ccb03bb77e0346edf73177d938d6002878a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d18431a6806d055c824bf51331d6390a6f669100aa9a33db9665b9d7b37008c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118625899"
 ---
-# <a name="rmccpsearch-action"></a>RMCCPSEARCH-Aktion
+# <a name="rmccpsearch-action"></a>RMCCPSearch-Aktion
 
-Die RMCCPSEARCH-Aktion verwendet Datei Signaturen, um zu überprüfen, ob qualifizierte Produkte auf einem System installiert sind, bevor eine Upgrade-Installation durchgeführt wird.
+Die RMCCPSearch-Aktion verwendet Dateisignaturen, um zu überprüfen, ob qualifizierte Produkte auf einem System installiert sind, bevor eine Upgradeinstallation durchgeführt wird.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die RMCCPSEARCH-Aktion sollte in der Tabelle " [InstallUISequence](installuisequence-table.md) " und der [Tabelle "InstallExecuteSequence](installexecutesequence-table.md)" erstellt werden. Das Installationsprogramm verhindert, dass RMCCPSEARCH in der InstallExecuteSequence-Sequenz ausgeführt wird, wenn die Aktion bereits in der InstallUISequence-Sequenz ausgeführt wurde.
+Die RMCCPSearch-Aktion sollte in der [InstallUISequence-Tabelle](installuisequence-table.md) und der [InstallExecuteSequence-Tabelle erstellt werden.](installexecutesequence-table.md) Das Installationsprogramm verhindert, dass RMCCPSearch in der InstallExecuteSequence-Sequenz ausgeführt wird, wenn die Aktion bereits in der InstallUISequence-Sequenz ausgeführt wurde.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen enthalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die RMCCPSEARCH-Aktion erfordert [*, dass die*](v-gly.md) Eigenschaft des [**CCP- \_ Laufwerks**](ccp-drive.md) auf den Stammpfad auf dem Wechsel Datenträger festgelegt wird, der über die Installation der qualifizierenden Produkte verfügt.
+Für die RMCCPSearch-Aktion muss die [**EIGENSCHAFT DRIVE \_ DRIVE**](ccp-drive.md) auf [](v-gly.md) den Stammpfad auf dem Wechseldatenträger festgelegt werden, auf dem die Installation für eines der qualifizierenden Produkte installiert ist.
 
-Jede Datei Signatur in der ccpsearch-Tabelle wird unter dem Pfad gesucht, auf den die Eigenschaft des [**CCP- \_ Laufwerks**](ccp-drive.md) mithilfe der [drlocator](drlocator-table.md) -Tabelle verweist. Das Fehlen der Signatur aus der [Signatur](signature-table.md) Tabelle deutet auf ein Verzeichnis hin. Wenn eine Signatur so bestimmt ist, dass Sie vorhanden ist, wird die RMCCPSEARCH-Aktion beendet.
+Jede Dateisignatur in der TABELLE "SIGNATURESearch" wird mithilfe der [DrLocator-Tabelle](drlocator-table.md) unter dem Pfad gesucht, auf den durch die [**EIGENSCHAFT DRIVE drive \_**](ccp-drive.md) verwiesen wird. Das Fehlen der Signatur in der [Signaturtabelle](signature-table.md) gibt ein Verzeichnis an. Wenn festgestellt wird, dass eine Signatur vorhanden ist, wird die RMCCPSearch-Aktion beendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ccpsearch-Tabelle](ccpsearch-table.md)
+[TABELLE "SOLLSUCHE"](ccpsearch-table.md)
 </dt> </dl>
 
  

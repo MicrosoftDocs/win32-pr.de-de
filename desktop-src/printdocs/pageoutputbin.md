@@ -1,15 +1,15 @@
 ---
-description: Erfahren Sie mehr über das benutzerkonfigurierbare PageOutputBin-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das vom Benutzer konfigurierbare PageOutputBin-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: c5050804-0e77-4d26-bf00-5d9690102b18
 title: PageOutputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a9963bf2ca7a2dd60be37c797a27c6ff09b1206
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: 4f72f15997329c8013d23e02665f9c5566cf13cd7c659cdeb29b871324683160
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113548998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118732283"
 ---
 # <a name="pageoutputbin"></a>PageOutputBin
 
@@ -19,7 +19,7 @@ Beschreibt die vollständige Liste der unterstützten Behälter für das Gerät.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Beschreibt die vollständige Liste der unterstützten Behälter für das Gerät.
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Seite<br/>    |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -68,15 +68,15 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | Name                                   | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                             |
 |----------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
-| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | n/v<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>        |
-| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | n/v<br/>        | FaceDownTray, FaceUpTray, MailBox, Sorter, Stacker, Finisher None.<br/>                                                                                                         | Gibt den allgemeinen Typ des Bin-Werts an.<br/>                                   |
+| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>        |
+| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | FaceDownTray, FaceUpTray, MailBox, Sorter, Stacker, Finisher None.<br/>                                                                                                         | Gibt den allgemeinen Typ des Bin-Werts an.<br/>                                   |
 | \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Größer 0<br/>                                                                                                                                                            | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Bin-Werts an.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

@@ -1,28 +1,28 @@
 ---
-description: Eine WS-Transfer Meldung, die verwendet wird, um auf eine metadatenanforderung zu reagieren.
+description: Eine WS-Transfer Meldung, die verwendet wird, um auf eine Anforderung für Metadaten zu antworten.
 ms.assetid: aff05317-35db-4ea6-9692-1e09e4682fe7
-title: GetResponse-Meldung (Metadatenaustausch)
+title: GetResponse-Nachricht (Metadata Exchange)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b91546076698f17a25b8a87444ae3eca71d65a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 11bc76038a32d28f4ed773a937654e6d159ab75460e8cb6d6d5af60f614fa7e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118552401"
 ---
-# <a name="getresponse-metadata-exchange-message"></a>GetResponse-Meldung (Metadatenaustausch)
+# <a name="getresponse-metadata-exchange-message"></a>GetResponse-Nachricht (Metadata Exchange)
 
-Eine GetResponse-Nachricht ist eine WS-Transfer Nachricht, die verwendet wird, um auf eine metadatenanforderung zu reagieren. Weitere Informationen zu GetResponse-Nachrichten finden Sie im Abschnitt 3,1 der [WS-Transfer-Spezifikation](https://specs.xmlsoap.org/ws/2004/09/transfer/WS-Transfer.pdf).
+Eine GetResponse-Nachricht ist eine WS-Transfer Nachricht, die verwendet wird, um auf eine Anforderung von Metadaten zu antworten. Weitere Informationen zu GetResponse-Nachrichten finden Sie in Abschnitt 3.1 der [WS-Transfer Specification](https://specs.xmlsoap.org/ws/2004/09/transfer/WS-Transfer.pdf).
 
-Alle DPWS-Anwendungen, die [Get](get--metadata-exchange--http-request-and-message.md) -Nachrichten senden, empfangen GetResponse-Nachrichten.
+Jede DPWS-Anwendung, die [Get-Nachrichten](get--metadata-exchange--http-request-and-message.md) sendet, empfängt GetResponse-Nachrichten.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine GetResponse-Beispiel Nachricht.
+Die folgende SOAP-Nachricht zeigt eine GetResponse-Beispielnachricht.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -110,7 +110,7 @@ Die folgende SOAP-Nachricht zeigt eine GetResponse-Beispiel Nachricht.
 </soap:Envelope>
 ```
 
-Eine GetResponse-Nachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine GetResponse-Nachricht hat die folgenden Fokuspunkte.
 
 
 
@@ -124,30 +124,30 @@ Eine GetResponse-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 <tr class="header">
 <th>Fokuspunkt</th>
 <th>XML</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>GetResponse</td>
+<td>Getresponse</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2004/09/transfer/GetResponse
 </wsa:Action></code></pre></td>
-<td>Die GetResponse-SOAP-Aktion identifiziert die Nachricht als GetResponse-Nachricht.</td>
+<td>Die SOAP-Aktion GetResponse identifiziert die Nachricht als GetResponse-Nachricht.</td>
 </tr>
 <tr class="even">
 <td>RelatesTo</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:RelatesTo>
     urn:uuid:027bec45-c37c-466c-936c-68f648abe2bb
 </wsa:RelatesTo></code></pre></td>
-<td>Der Bezeichner der Nachricht, auf die das Gerät antwortet. Dieser Header entspricht der MessageId in der <a href="get--metadata-exchange--http-request-and-message.md">Get</a> -Nachricht.</td>
+<td>Der Bezeichner der Nachricht, auf die das Gerät reagiert. Dieser Header entspricht der <a href="get--metadata-exchange--http-request-and-message.md"></a> MessageID in der Get-Nachricht.</td>
 </tr>
 <tr class="odd">
 <td>Adresse</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Address>
     https://192.168.0.2:5357/37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsa:Address></code></pre></td>
-<td>Enthält die Endpunkt Adresse der auf diesem Gerät gehosteten Dienste.</td>
+<td>Enthält die Endpunktadresse der dienste, die auf diesem Gerät gehostet werden.</td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +160,7 @@ Eine GetResponse-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
 [Get Message](get--metadata-exchange--http-request-and-message.md)

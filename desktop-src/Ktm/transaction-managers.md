@@ -1,50 +1,50 @@
 ---
-description: Ein Transaktions-Manager (TM) ist eine Instanz eines Protokolls. In KTM geben die TM-Objekte das Protokoll und einige Funktionen der TM-Funktionalität an. Es gibt in der Regel viele TM-Objekte auf einem bestimmten Knoten. Ressourcen-Manager (RMS) müssen mit einem bestimmten TM verknüpft werden.
+description: Ein Transaktions-Manager (TM) ist eine Instanz eines Protokolls. In KTM geben die TM-Objekte das Protokoll und einige Funktionen des TM an. Es gibt in der Regel viele TM-Objekte auf einem bestimmten Knoten. Ressourcen-Manager (RMs) müssen einem bestimmten TM zugeordnet sein.
 ms.assetid: 8d43977a-84cf-4109-b7db-f9c94a226c5d
 title: Transaktions-Manager
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 313215816642201c75ae5f0facae3bf98799c8d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0ea492a3eb10d95002d4e0a61500e7f1e74e87da21bc90daf680a2899e3fa67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119424440"
 ---
 # <a name="transaction-managers"></a>Transaktions-Manager
 
-Ein Transaktions-Manager (TM) ist eine Instanz eines Protokolls. In KTM geben die TM-Objekte das Protokoll und einige Funktionen der TM-Funktionalität an. Es gibt in der Regel viele TM-Objekte auf einem bestimmten Knoten. Ressourcen-Manager (RMS) müssen mit einem bestimmten TM verknüpft werden. Es gibt drei Arten von TMS:
+Ein Transaktions-Manager (TM) ist eine Instanz eines Protokolls. In KTM geben die TM-Objekte das Protokoll und einige Funktionen des TM an. Es gibt in der Regel viele TM-Objekte auf einem bestimmten Knoten. Ressourcen-Manager (RMs) müssen einem bestimmten TM zugeordnet sein. Es gibt drei Arten von TMs:
 
--   Ein flüchtiges TM ohne Protokoll.
--   Ein reguläres TM, das über ein Protokoll verfügt und zum Koordinieren der Transaktionen von einem oder mehreren RMS verwendet wird.
--   Ein übergeordneter Transaktions-Manager.
+-   Ein flüchtiger TM, der über kein Protokoll verfügt.
+-   Ein reguläres TM, das über ein Protokoll verfügt und zum Koordinieren der Transaktionen von mindestens einem RMs verwendet wird.
+-   Ein überlegener Transaktions-Manager.
 
 ## <a name="volatile-transaction-managers"></a>Flüchtige Transaktions-Manager
 
-Ein flüchtiges TM ist ein TM für Schreib geschütztes oder flüchtiges RMS. Sie verfügt nicht über ein Protokoll und speichert den Status von Transaktionen nicht über Systemneustarts hinweg.
+Ein flüchtiges TM ist ein TM für schreibgeschützte oder flüchtige RMs. Es verfügt nicht über ein Protokoll und bleibt den Status von Transaktionen bei Systemneustarts nicht erhalten.
 
 ## <a name="transaction-managers"></a>Transaktions-Manager
 
-TMS verfügen über ein Protokoll, mindestens ein dauerhaftes oder flüchtiges RMS oder beides. Der TM speichert den Status einer Transaktion über Systemneustarts hinweg, bis die Transaktionen abgeschlossen sind. Ein mutmaßliches Abbruch Modell wird verwendet, sodass Transaktionen, die aktiv sind, aber nicht vorbereitet sind, wenn das TM-Objekt heruntergefahren wird, ein Rollback ausgeführt werden. Wenn Sie ein TM zum ersten Mal öffnen, müssen Sie das TM durch Aufrufen der Funktion " [**Recover transaktionmanager**](/windows/desktop/api/Ktmw32/nf-ktmw32-recovertransactionmanager) " wiederherstellen.
+TMs verfügen über ein Protokoll, mindestens ein dauerhaftes oder flüchtiges RMs oder beides. Der TM wird den Status einer Transaktion über Systemneustarts hinweg beibehalten, bis die Transaktionen abgeschlossen sind. Ein presumed-abort-Modell wird verwendet, sodass ein Rollback für Transaktionen, die aktiv waren, aber nicht vorbereitet wurden, wenn das TM-Objekt heruntergefahren wird. Wenn Sie einen TM zum ersten Mal öffnen, müssen Sie den TM wiederherstellen, indem Sie die [**RecoverTransactionManager-Funktion**](/windows/desktop/api/Ktmw32/nf-ktmw32-recovertransactionmanager) aufrufen.
 
-## <a name="superior-transaction-managers"></a>Übergeordnete Transaktions-Manager
+## <a name="superior-transaction-managers"></a>Überlegene Transaktions-Manager
 
-Ein überlegenes TM ist eine TM-Datei für andere TMS. Es koordiniert Transaktionen. Außerdem werden Benachrichtigungs Benachrichtigungen für **Transaktionen \_ \_** an den Kerneltransaktions-Manager (KTM) ausgegeben. Ein Beispiel für einen übergeordneten TM ist die Microsoft Distributed Transaction Coordinator (DTC). Diese Möglichkeit ist mit einer zusätzlichen Wiederherstellungszeit verantwortlich. Während der Wiederherstellung muss der RM zuerst die [**openenlistment**](/windows/desktop/api/Ktmw32/nf-ktmw32-openenlistment) -Funktion zum erneuten Öffnen der Eintragung aufzurufen. Außerdem muss das Ergebnis der Transaktion bereitgestellt (oder erneut übertragen) werden, wenn für die Transaktion ein Commit ausgeführt wurde. Es ist kostenlos, ein Ergebnis durch Aufrufen der [**CommitTransaction**](/windows/desktop/api/Ktmw32/nf-ktmw32-committransaction) -Funktion oder der [**RollbackTransaction**](/windows/desktop/api/Ktmw32/nf-ktmw32-rollbacktransaction) -Funktion bereitzustellen. Diese Verpflichtung endet nicht, bis Sie ein zugeordnetes Transaktions Benachrichtigungs- **\_ \_ Commit \_ abgeschlossen** oder ein **\_ \_ Rollback \_** für eine Transaktions Benachrichtigung abgeschlossen hat. Wenn ein übergeordnetes TM diese Vorgänge nicht zur Wiederherstellungszeit ausführt, bereinigt KTM alle Transaktionen, die nach Ende der Wiederherstellungs Phase keine Ergebnisse empfangen haben. Dies kann jedoch zu inkonsistenten Transaktions Ergebnissen führen.
+Ein überlegener TM ist ein TM für andere TMs. Er koordiniert Transaktionen. Außerdem werden **TRANSACTION \_ NOTIFY \_ PREPARE-Benachrichtigungen** an den Kerneltransaktions-Manager (KTM) gesendet. Ein Beispiel für ein überlegenes TM ist Microsoft Distributed Transaction Coordinator (DTC). Diese Fähigkeit ist mit einer zusätzlichen Wiederherstellungszeit verantwortlich. Während der Wiederherstellung muss der RM zunächst die [**OpenEnlistment-Funktion**](/windows/desktop/api/Ktmw32/nf-ktmw32-openenlistment) aufrufen, um die Eintragung erneut zu öffnen. Sie muss auch das Transaktionsergebnis liefern (oder erneut liefern), wenn für die Transaktion ein Committed ausgeführt wurde. Es ist kostenlos, ein Ergebnis zu liefern, indem entweder die [**CommitTransaction-Funktion**](/windows/desktop/api/Ktmw32/nf-ktmw32-committransaction) oder die [**RollbackTransaction-Funktion aufruft.**](/windows/desktop/api/Ktmw32/nf-ktmw32-rollbacktransaction) Diese Verpflichtung endet erst, wenn sie ein zugeordnetes **TRANSACTION \_ NOTIFY COMMIT \_ \_ COMPLETE-** oder **TRANSACTION NOTIFY \_ \_ ROLLBACK \_ COMPLETE-Benachrichtigungsereignis** empfangen hat. Wenn ein übergeordnetes TM diese Vorgänge zur Wiederherstellungszeit nicht ausführen kann, bereinigt das KTM alle Transaktionen, die bis zum Ende der Wiederherstellungsphase keine Ergebnisse erhalten haben. Dies kann jedoch zu inkonsistenten Transaktionsergebnissen führen.
 
-## <a name="transaction-manager-functions"></a>Transaktions-Manager-Funktionen
+## <a name="transaction-manager-functions"></a>Transaction Manager-Funktionen
 
-Die folgenden Funktionen werden mit dem Transaktions-Manager verwendet.
+Die folgenden Funktionen werden mit Transaktions-Managern verwendet.
 
 
 
-| Funktion                                                                            | BESCHREIBUNG                                                                                    |
+| Funktion                                                                            | Beschreibung                                                                                    |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [**"Kreatetransaktionmanager"**](/windows/desktop/api/Ktmw32/nf-ktmw32-createtransactionmanager)                        | Erstellt ein neues Transaktions-Manager-Objekt (TM) und gibt ein Handle mit dem angegebenen Zugriff zurück.  |
-| [**Getcurrentclocktransaktionmanager**](/windows/desktop/api/Ktmw32/nf-ktmw32-getcurrentclocktransactionmanager) | Erhält einen virtuellen Uhrzeitwert von einem Transaktions-Manager.                                      |
-| [**Gettransaktionmanagerid**](/windows/desktop/api/Ktmw32/nf-ktmw32-gettransactionmanagerid)                          | Ruft einen Bezeichner für den angegebenen Transaktions-Manager ab.                                   |
-| [**Opentransactionmanager**](/windows/desktop/api/Ktmw32/nf-ktmw32-opentransactionmanager)                            | Öffnet einen vorhandenen Transaktions-Manager.                                                         |
-| [**Wiederherstellbarkeits-Manager**](/windows/desktop/api/Ktmw32/nf-ktmw32-recovertransactionmanager)                      | Stellt den Status eines Transaktions-Managers aus seiner Protokolldatei wieder her.                                      |
-| [**Rollforwardtransaktionmanager**](/windows/desktop/api/KtmW32/nf-ktmw32-rollforwardtransactionmanager)              | Stellt den Status eines Transaktions-Managers aus seiner Protokolldatei in den angegebenen virtuellen Uhrzeitwert wieder her. |
+| [**CreateTransactionManager**](/windows/desktop/api/Ktmw32/nf-ktmw32-createtransactionmanager)                        | Erstellt ein neues Tm-Objekt (Transaction Manager) und gibt ein Handle mit dem angegebenen Zugriff zurück.  |
+| [**GetCurrentClockTransactionManager**](/windows/desktop/api/Ktmw32/nf-ktmw32-getcurrentclocktransactionmanager) | Erhält einen Virtuellen Uhrwert von einem Transaktions-Manager.                                      |
+| [**GetTransactionManagerId**](/windows/desktop/api/Ktmw32/nf-ktmw32-gettransactionmanagerid)                          | Erhält einen Bezeichner für den angegebenen Transaktions-Manager.                                   |
+| [**OpenTransactionManager**](/windows/desktop/api/Ktmw32/nf-ktmw32-opentransactionmanager)                            | Öffnet einen vorhandenen Transaktions-Manager.                                                         |
+| [**RecoverTransactionManager**](/windows/desktop/api/Ktmw32/nf-ktmw32-recovertransactionmanager)                      | Stellt den Status eines Transaktions-Managers aus seiner Protokolldatei wieder wieder auf.                                      |
+| [**RollforwardTransactionManager**](/windows/desktop/api/KtmW32/nf-ktmw32-rollforwardtransactionmanager)              | Stellt den Status eines Transaktions-Managers aus seiner Protokolldatei auf den angegebenen Wert der virtuellen Uhr wieder wieder auf. |
 
 
 

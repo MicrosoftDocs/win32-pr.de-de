@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn das InkPicture-Steuerelement das erneute zeichnen selbst abgeschlossen hat.
+description: Tritt ein, wenn das InkPicture-Steuerelement die Neuzeichnung abgeschlossen hat.
 ms.assetid: a8194cff-ed94-402e-8564-08d370f958b4
-title: InkPicture. gezeichnet-Ereignis (msink AUT. h)
+title: InkPicture.Painted-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 60188ef87d88ba7412a07300e708718bedc947fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 201027ba2626cd3a3dd8d76a8794a1a5430785e0e1602633ee9f39ac36caa023
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118451054"
 ---
-# <a name="inkpicturepainted-event"></a>InkPicture. gezeichnet-Ereignis
+# <a name="inkpicturepainted-event"></a>InkPicture.Painted-Ereignis
 
-Tritt auf, wenn das [InkPicture](inkpicture-control-reference.md) -Steuerelement das erneute zeichnen selbst abgeschlossen hat.
+Tritt ein, wenn das [InkPicture-Steuerelement](inkpicture-control-reference.md) die Neuzeichnung selbst abgeschlossen hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,17 +31,17 @@ void Painted(
 
 <dl> <dt>
 
-*hdc* \[ in\]
+*hDC* \[ In\]
 </dt> <dd>
 
 Der Gerätekontext, in dem das Ereignis aufgetreten ist.
 
 </dd> <dt>
 
-*Rect* \[ in\]
+*Rect* \[ In\]
 </dt> <dd>
 
-Das [**inkrechteck**](inkrectangle-class.md) , das neu gezeichnet wurde.
+Der [**neu gepainte InkRectangle.**](inkrectangle-class.md)
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Das [**inkrechteck**](inkrectangle-class.md) , das neu gezeichnet wurde.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den **\_ iinkoverlayevents** -und **\_ iinkpictureevents** -DISP mit der ID DISPID \_ ioegezeichnet definiert.
+Diese Ereignismethode wird in den **\_ Disp-Interfaces IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ IOEPainted definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,18 +59,18 @@ Diese Ereignismethode wird in den **\_ iinkoverlayevents** -und **\_ iinkpicture
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

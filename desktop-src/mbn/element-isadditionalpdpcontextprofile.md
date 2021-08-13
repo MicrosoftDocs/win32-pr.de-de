@@ -1,29 +1,29 @@
 ---
-description: Isadditionalpdpcontextprofile
+description: IsAdditionalPdpContextProfile
 MS-HAID: WWAN\_profile\_v3.element\_IsAdditionalPdpContextProfile
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Isadditionalpdpcontextprofile
+title: IsAdditionalPdpContextProfile
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 169aa9a34a561f65eed5dfc315e7711ef6bb9bf9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a075916144971196433d1a490a9076c4d40ddb86b363d2904d1affce63a5995
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118745122"
 ---
-# <a name="span-idwwan_profile_v3element_isadditionalpdpcontextprofilespanisadditionalpdpcontextprofile"></a><span id="WWAN_profile_v3.element_IsAdditionalPdpContextProfile"></span>Isadditionalpdpcontextprofile
+# <a name="span-idwwan_profile_v3element_isadditionalpdpcontextprofilespanisadditionalpdpcontextprofile"></a><span id="WWAN_profile_v3.element_IsAdditionalPdpContextProfile"></span>IsAdditionalPdpContextProfile
 
-Das **isadditionalpdpcontextprofile** -Element enthält einen **booleschen** Wert, der **true** ist, wenn es sich um ein "zusätzliches PDP (Packet Data Protocol)"-Kontext Profil handelt, andernfalls " **false**". Die Standardeinstellung lautet **false**.
+Das **IsAdditionalPdpContextProfile-Element** enthält einen **booleschen Wert,** der **true** ist, wenn dies ein "zusätzlicher PDP(Packet Data Protocol)"-Kontextprofil und **false** ist, andernfalls . Die Standardeinstellung lautet **false**.
 
-Ein "zusätzliches PDP-Kontext Profil" ist ein Profil, das nicht über den Standardport des physischen Adapters aktiviert wird. Wenn dieses Element auf "true" festgelegt wird, wird sichergestellt, dass dieses Profil nicht unpassend in der Benutzeroberfläche angezeigt wird.
+Ein Profil mit "zusätzlichem PDP-Kontext" ist ein Profil, das nicht über den Standardport des physischen Adapters aktiviert wird. Durch Festlegen dieses Elements auf TRUE wird sichergestellt, dass dieses Profil nicht unangemessen auf der Benutzeroberfläche angezeigt wird.
 
-Beachten Sie Folgendes: Wenn dieses Element auf "true" festgelegt ist, muss Folgendes ebenfalls zutreffen:
+Beachten Sie Folgendes, wenn dieses Element auf TRUE festgelegt ist.
 
--   Das [**IsDefault**](./schema-isdefault-mbnprofile-element.md) -Element muss nicht angegeben werden, oder es muss auf **false** festgelegt werden, damit das Profil gültig ist.
--   Das [**ConnectionMode**](./schema-connectionmode-mbnprofile-element.md) -Element muss nicht angegeben werden oder auf " **Manual** " festgelegt sein, damit das Profil gültig ist.
+-   Das [**IsDefault-Element**](./schema-isdefault-mbnprofile-element.md) muss nicht angegeben oder auf **FALSE** festgelegt sein, damit das Profil gültig ist.
+-   Das [**ConnectionMode-Element**](./schema-connectionmode-mbnprofile-element.md) muss nicht angegeben oder auf **manuell** festgelegt sein, damit das Profil gültig ist.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -51,7 +51,7 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-Dieses äußerste (Dokument-) Element darf nicht in anderen Elementen enthalten sein.
+Dieses äußerste Element (Dokument) darf nicht in anderen Elementen enthalten sein.
 
 ## <a name="requirements"></a>Anforderungen
 

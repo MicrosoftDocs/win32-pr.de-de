@@ -1,7 +1,7 @@
 ---
-description: Führt einen DXVA-Decodierungs Vorgang (DirectX Video Acceleration) aus.
+description: Führt einen Decodierungsvorgang der DirectX-Videobeschleunigung (DXVA) aus.
 ms.assetid: cb87a087-ca53-470e-ab46-f4022cfd7869
-title: 'IDirect3DDXVADevice9:: Execute-Methode (DXVA. h)'
+title: IDirect3DDXVADevice9::Execute-Methode (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - dxva.h
-ms.openlocfilehash: d624146c32b5f7eaeb4e680cf03878e8d065ee5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac00e5f78e4281523c006216f3173745ba26bc6429ddfdd9d74c9abbe616b89a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119465960"
 ---
-# <a name="idirect3ddxvadevice9execute-method"></a>IDirect3DDXVADevice9:: Execute-Methode
+# <a name="idirect3ddxvadevice9execute-method"></a>IDirect3DDXVADevice9::Execute-Methode
 
-Führt einen DXVA-Decodierungs Vorgang (DirectX Video Acceleration) aus.
+Führt einen Decodierungsvorgang der DirectX-Videobeschleunigung (DXVA) aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ HRESULT Execute(
 
 <dl> <dt>
 
-*Functionnum* 
+*FunctionNum* 
 </dt> <dd>
 
-Ein **DWORD** , das mindestens eine DXVA-Funktions Nummer enthält. Weitere Informationen finden Sie in der [DXVA 1,0-Spezifikation](/windows-hardware/drivers/display/directx-video-acceleration).
+Ein **DWORD,** das mindestens eine DXVA-Funktionsnummer enthält. Weitere Informationen finden Sie in der [DXVA 1.0-Spezifikation.](/windows-hardware/drivers/display/directx-video-acceleration)
 
 </dd> <dt>
 
-*pinputdata* 
+*pInputData* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der Eingabedaten für den Decodierungs Vorgang enthält. Die Bedeutung dieser Daten hängt vom Surface-Typ und der Funktions Nummer ab.
+Ein Zeiger auf einen Puffer, der Eingabedaten für den Decodierungsvorgang enthält. Die Bedeutung dieser Daten hängt vom Oberflächentyp und der Funktionsnummer ab.
 
 </dd> <dt>
 
-*Input size* 
+*InputSize* 
 </dt> <dd>
 
 Die Größe der Eingabedaten in Bytes.
@@ -69,34 +69,34 @@ Die Größe der Eingabedaten in Bytes.
 *OutputData* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, in den die Video Zugriffstaste Ausgabedaten schreibt.
+Zeiger auf einen Puffer, in den der Videobeschleuniger Ausgabedaten schreibt.
 
 </dd> <dt>
 
-*Outputsize* 
+*OutputSize* 
 </dt> <dd>
 
-Die Größe des *outputData* -Puffers in Bytes.
+Die Größe des *OutputData-Puffers* in Bytes.
 
 </dd> <dt>
 
-*Numbuffers* 
+*NumBuffers* 
 </dt> <dd>
 
-Die Anzahl der Elemente im *pbufferinfo* -Array.
+Die Anzahl der Elemente im *pBufferInfo-Array.*
 
 </dd> <dt>
 
-*pbufferinfo* 
+*pBufferInfo* 
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**dxvabufferinfo**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvabufferinfo) -Strukturen.
+Ein Zeiger auf ein Array von [**DXVABufferInfo-Strukturen.**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvabufferinfo)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,13 +104,13 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

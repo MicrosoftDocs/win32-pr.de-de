@@ -1,19 +1,19 @@
 ---
-description: Enthält das ursprüngliche Wave-Formattag für einen Audiodatenstrom.
+description: Enthält das ursprüngliche WAVE-Formattag für einen Audiostream.
 ms.assetid: 2b30a1c2-4a42-4b09-acb6-b76267cc7ed0
-title: MF_MT_ORIGINAL_WAVE_FORMAT_TAG-Attribut (mfapi. h)
+title: MF_MT_ORIGINAL_WAVE_FORMAT_TAG -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba89171f9ae2bf3ab99df05bd3ae64b7d52be6d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a89f05086858f54c619e3896f5978cf81005e9b1e80e858bc89c71e951ab48b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118741665"
 ---
-# <a name="mf_mt_original_wave_format_tag-attribute"></a>Das MF \_ MT-Tag- \_ Attribut für ursprüngliches \_ Wellen \_ Format \_
+# <a name="mf_mt_original_wave_format_tag-attribute"></a>\_Tagattribut "MF MT \_ ORIGINAL \_ WAVE \_ \_ FORMAT"
 
-Enthält das ursprüngliche Wave-Formattag für einen Audiodatenstrom.
+Enthält das ursprüngliche WAVE-Formattag für einen Audiostream.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,27 +21,27 @@ Enthält das ursprüngliche Wave-Formattag für einen Audiodatenstrom.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**BESCHRIFTUNGMediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Abhängig von der Quelldatei kann die AVI-Medienquelle dieses Attribut auf den Medientypen festlegen, die es anbietet.
+Je nach Quelldatei kann die AVI-Medienquelle dieses Attribut für die von ihr angebotenen Medientypen festlegen.
 
-Eine AVI-Datei enthält einen Streamheader für jeden Stream in der Datei. Die AVI-Medienquelle übersetzt den Datenstrom Header in einen Medientyp. Für Audiostreams enthält der Stream-Header ein Formattag, das das Audioformat identifiziert. (Das Formattag ist im **wformattag** -Member der [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85)) -Struktur enthalten.) In den meisten Fällen konvertiert die AVI-Medienquelle das Formattag direkt in eine Untertyp-GUID, wie im Thema [**audiountertyp-GUIDs**](audio-subtype-guids.md)beschrieben. In einigen Fällen wird das ursprüngliche Formattag jedoch einem anderen Format-Tag zugeordnet, das Äquivalent ist. Wenn dies der Fall ist, speichert die Medienquelle das ursprüngliche Formatierungstag im Medientyp unter Verwendung des "MF \_ MT \_ Original \_ Wave Format"- \_ \_ tagattributs.
+Eine AVI-Datei enthält einen Streamheader für jeden Stream in der Datei. Die AVI-Medienquelle übersetzt den Streamheader in einen Medientyp. Für Audiostreams enthält der Streamheader ein Formattag, das das Audioformat identifiziert. (Das Formattag ist im **wFormatTag-Member** der [**WAVEFORMATEX-Struktur**](/previous-versions/dd757713(v=vs.85)) enthalten.) In den meisten Fällen konvertiert die AVI-Medienquelle das Formattag direkt in eine Untertyp-GUID, wie im Thema [**Audio Subtype GUIDs beschrieben.**](audio-subtype-guids.md) In einigen Fällen ordnet sie jedoch das ursprüngliche Formattag einem anderen Formattag zu, das äquivalent ist. In diesem Zustand speichert die Medienquelle das ursprüngliche Formattag im Medientyp unter Verwendung des TAG-Attributs MF \_ MT \_ ORIGINAL WAVE \_ \_ \_ FORMAT.
 
-Die Format Zuordnungen werden in der Registrierung unter dem folgenden Schlüssel gespeichert:
+Die Formatzuordnungen werden in der Registrierung unter dem folgenden Schlüssel gespeichert:
 
-**HKEY \_ Klassen \_** Stamm \\ **mediafoundung** \\ **mapaudioformattag**
+**HKEY \_ CLASSES \_ ROOT** \\ **MediaFoundation** \\ **MapAudioFormatTag**
 
-Jeder Eintrag ist ein **DWORD** -Wert. Der Name des Eintrags ist die Dezimal Darstellung des Formattags. Der Wert des Eintrags ist das entsprechende Formattag.
+Jeder Eintrag ist ein **DWORD-Wert.** Der Name des Eintrags ist die Dezimaldarstellung des Formattags. Der Wert des Eintrags ist das entsprechende Formattag.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,20 +49,20 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

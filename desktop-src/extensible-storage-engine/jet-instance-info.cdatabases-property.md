@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_INSTANCE_INFO. cdatenbanken-Eigenschaft'
-title: JET_INSTANCE_INFO. cdatenbanken (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_INSTANCE_INFO.cDatabases-Eigenschaft'
+title: JET_INSTANCE_INFO.cDatabases-Eigenschaft
 TOCTitle: 'cDatabases property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INSTANCE_INFO.cDatabases
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_instance_info.cdatabases(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc6d81fc4389caf57ae5375a5548a1832b0cebfe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd24092d039bc7cfc1c32a48068e1a5e3694c57dc42e7754998d06abe298cc14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118765709"
 ---
-# <a name="jet_instance_infocdatabases-property"></a>JET_INSTANCE_INFO. cdatenbanken (Eigenschaft)
+# <a name="jet_instance_infocdatabases-property"></a>JET_INSTANCE_INFO.cDatabases-Eigenschaft
 
-Ruft die Anzahl der Datenbanken ab, die an die Daten Bank Instanz angefügt sind.
+Ruft die Anzahl der Datenbanken ab, die an die Datenbankinstanz angefügt sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cDatabases { get; private set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INSTANCE_INFO-Klasse](./jet-instance-info-class.md)
 
-[Mitglieder JET_INSTANCE_INFO](./jet-instance-info-members.md)
+[JET_INSTANCE_INFO Member](./jet-instance-info-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getdevicemodels-Methode.
+description: Proxyfunktion für die GetDeviceModels-Methode.
 ms.assetid: de8f91f7-fef7-48bc-94fc-34c43175248b
 title: IWICBitmapCodecInfo_GetDeviceModels_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: b8fa6d6df6984569aa3fe49fc734f7699aa504d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 659ca401384f907e0bad1a86dd79e61bad55cf2612bb45713246b26711e57d9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118711986"
 ---
-# <a name="iwicbitmapcodecinfo_getdevicemodels_proxy-function"></a>Iwicbitmapcodecinfo \_ getdevicemodels- \_ Proxy Funktion
+# <a name="iwicbitmapcodecinfo_getdevicemodels_proxy-function"></a>IWICBitmapCodecInfo \_ GetDeviceModels-Proxyfunktion \_
 
-Proxy Funktion für die [**getdevicemodels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-getdevicemodels) -Methode.
+Proxyfunktion für die [**GetDeviceModels-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-getdevicemodels)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,47 +43,47 @@ HRESULT IWICBitmapCodecInfo_GetDeviceModels_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapcodecinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo) \** _
+Typ: **[ **IWICBitmapCodecInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)\***
 
-Zeiger auf dieses [_ *iwicbitmapcodecinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo) -Objekt.
+Zeiger auf dieses [**IWICBitmapCodecInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)
 
 </dd> <dt>
 
-*cchdevicemodels* \[ in\]
+*cchDeviceModels* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Größe des Gerätemodell Puffers.
+Die Größe des Gerätemodellpuffers.
 
 </dd> <dt>
 
-*wzdevicemodels* \[ in, out\]
+*wzDeviceModels* \[ in, out\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
-Ein Zeiger, der eine durch Trennzeichen getrennte Liste von Gerätemodell Namen empfängt, die dem Codec zugeordnet sind.
+Ein Zeiger, der eine durch Trennzeichen getrennte Liste von Gerätemodellnamen empfängt, die dem Codec zugeordnet sind.
 
 </dd> <dt>
 
-_pcchActual * \[ in, out\]
+*pcchActual* \[ in, out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Die tatsächliche Puffergröße, die zum Abrufen aller Gerätemodell Namen benötigt wird.
+Die tatsächliche Puffergröße, die zum Abrufen aller Gerätemodellnamen erforderlich ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,9 +93,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

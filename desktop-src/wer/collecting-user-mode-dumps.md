@@ -4,12 +4,12 @@ description: Ab Windows Server 2008 und Windows Vista mit Service Pack 1 (SP1) k
 ms.assetid: 8dad892b-04df-4aeb-b6c4-82f7676d382a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e6291d3ad8dfeb641582a93f6789ca7844594ad
-ms.sourcegitcommit: 892997f4126d44df413286074e08a9c6065313ec
+ms.openlocfilehash: 4597c4bf1fd583b647e7ad74b7f1cb2cd41be9c0118226d502932c61f481cedd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114300185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118442364"
 ---
 # <a name="collecting-user-mode-dumps"></a>Sammeln von User-Mode Dumps
 
@@ -28,7 +28,7 @@ Diese Funktion ist standardmäßig nicht aktiviert. Zum Aktivieren des Features 
 <tr class="header">
 <th>Wert</th>
 <th>BESCHREIBUNG</th>
-<th>Typ</th>
+<th>type</th>
 <th>Standardwert</th>
 </tr>
 </thead>
@@ -68,7 +68,7 @@ Diese Funktion ist standardmäßig nicht aktiviert. Zum Aktivieren des Features 
 >[!NOTE]
 > Ein Absturzabbild wird nicht erfasst, wenn Sie [das automatische Debuggen für **Anwendungsabstürze**](../debug/configuring-automatic-debugging.md#configuring-automatic-debugging-for-application-crashes)festlegen. 
 
-Diese Registrierungswerte stellen die globalen Einstellungen dar. Sie können auch Anwendungsspezifische Einstellungen angeben, die die globalen Einstellungen außer Kraft setzen. Um eine Anwendungseinstellung zu erstellen, erstellen Sie einen neuen Schlüssel für Ihre Anwendung unter **HKEY \_ LOCAL MACHINE Software Microsoft Windows Windows-Fehlerberichterstattung \_ \\ \\ \\ \\ \\ LocalDumps** (z.B. **HKEY LOCAL MACHINE Software \_ Microsoft Windows Windows-Fehlerberichterstattung \_ \\ \\ \\ \\ \\ LocalDumps \\MyApplication.exe**). Fügen Sie Ihre Speicherabbildeinstellungen unter dem **MyApplication.exe** Schlüssel hinzu. Wenn Ihre Anwendung abstürzt, liest WER zuerst die globalen Einstellungen und überschreibt dann alle Einstellungen mit Ihren anwendungsspezifischen Einstellungen.
+Diese Registrierungswerte stellen die globalen Einstellungen dar. Sie können auch Anwendungsspezifische Einstellungen angeben, die die globalen Einstellungen außer Kraft setzen. Um eine Anwendungseinstellung zu erstellen, erstellen Sie einen neuen Schlüssel für Ihre Anwendung unter **HKEY \_ LOCAL MACHINE Software Microsoft Windows Windows-Fehlerberichterstattung \_ \\ \\ \\ \\ \\ LocalDumps** (z.B. **HKEY LOCAL MACHINE Software \_ Microsoft Windows Windows-Fehlerberichterstattung \_ \\ \\ \\ \\ \\ LocalDumps \\MyApplication.exe**). Fügen Sie Ihre Speicherabbildeinstellungen unter dem **schlüsselMyApplication.exe** hinzu. Wenn Ihre Anwendung abstürzt, liest WER zuerst die globalen Einstellungen und überschreibt dann alle Einstellungen mit Ihren anwendungsspezifischen Einstellungen.
 
 Nach dem Absturz einer Anwendung und vor dem Beenden überprüft das System die Registrierungseinstellungen, um zu ermitteln, ob ein lokales Speicherabbild erfasst werden soll. Nach Abschluss der Speicherabbildsammlung kann die Anwendung normal beendet werden. Wenn die Anwendung die Wiederherstellung unterstützt, wird das lokale Speicherabbild erfasst, bevor der Wiederherstellungsrückruf aufgerufen wird.
 

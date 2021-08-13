@@ -1,7 +1,7 @@
 ---
-description: Ruft das nächste oder mehrere iportabledeviceconnector-Objekte in der enumerationssequenz ab.
+description: Ruft das nächste oder mehrere IPortableDeviceConnector-Objekte in der Enumerationssequenz ab.
 ms.assetid: 5aed563a-5ecc-49c0-8a0c-622405453896
-title: 'Ienumportabledeviceconnectors:: Next-Methode (devpkey. h)'
+title: IEnumPortableDeviceConnectors::Next-Methode (Devpkey.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGuids.lib
 - PortableDeviceGuids.dll
-ms.openlocfilehash: 709e938c28f9bf09e34d918eea7be3029c7a11e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 868f13f220dbd5d5867e5ee2bbb54c1ef946e267d87e9ea0aa625108b945d537
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697295"
 ---
-# <a name="ienumportabledeviceconnectorsnext-method"></a>Ienumportabledeviceconnectors:: Next-Methode
+# <a name="ienumportabledeviceconnectorsnext-method"></a>IEnumPortableDeviceConnectors::Next-Methode
 
-Die **Next** -Methode ruft das nächste oder mehrere [**iportabledeviceconnector**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) -Objekte in der enumerationssequenz ab.
+Die **Next-Methode** ruft das nächste oder mehrere [**IPortableDeviceConnector-Objekte**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) in der Enumerationssequenz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ HRESULT Next(
 
 <dl> <dt>
 
-durch *forwalte* \[ in\]
+*cRequested* \[ In\]
 </dt> <dd>
 
-Die Anzahl der angeforderten Geräte. Dieser Wert gibt auch die Anzahl der Elemente im vom Aufrufer zugeordneten Array an, das durch den *pconnectors* -Parameter angegeben wird.
+Die Anzahl der angeforderten Geräte. Dieser Wert gibt auch die Anzahl der Elemente im vom Aufrufer zugewiesenen Array an, die durch den *pConnectors-Parameter* angegeben werden.
 
 </dd> <dt>
 
-*pconnectors* \[ vorgenommen\]
+*pConnectors* \[ out\]
 </dt> <dd>
 
-Ein Array von [**iportablede viceconnector**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) -Zeigern, das jeweils ein gekoppeltes MTP-Bluetooth-Gerät angibt. Der Aufrufer muss ein Array von **iportablede viceconnector** -Zeigern zuordnen, wobei die Array Länge durch den *erstellten Parameter angegeben* wird. Bei erfolgreicher Rückgabe muss der Aufrufer sowohl das Array als auch den zurückgegebenen Zeiger freigeben. Die **iportabledeviceconnector** -Schnittstellen werden durch Aufrufen der **IUnknown:: Release** -Methode freigegeben.
+Ein Array von [**IPortableDeviceConnector-Zeigern,**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) die jeweils ein gekoppeltes MTP-Bluetooth Gerät angeben. Der Aufrufer muss ein Array von **IPortableDeviceConnector-Zeigern** mit der vom *cRequested-Parameter angegebenen* Arraylänge zuordnen. Bei erfolgreicher Rückgabe muss der Aufrufer sowohl das Array als auch die zurückgegebenen Zeiger freigeben. Die **IPortableDeviceConnector-Schnittstellen** werden durch Aufrufen der **IUnknown::Release-Methode** freigegeben.
 
 </dd> <dt>
 
-*pcfetch* \[ in, out\]
+*pcFetched* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl von [**iportabledeviceconnector**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) -Schnittstellen, die tatsächlich abgerufen werden. Wenn keine **iportabledeviceconnector** -Schnittstellen abgerufen werden und der Rückgabewert **S \_ false** ist, sind keine weiteren **iportabledeviceconnector** -Schnittstellen für die Enumeration vorhanden.
+Die Anzahl der [**IPortableDeviceConnector-Schnittstellen,**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) die tatsächlich abgerufen werden. Wenn keine **IPortableDeviceConnector-Schnittstellen** abgerufen werden und der Rückgabewert **S \_ FALSE** lautet, müssen keine **IPortableDeviceConnector-Schnittstellen** mehr aufzählen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                      |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Die Methode wurde erfolgreich ausgeführt.<br/>                                 |
-| <dl> <dt>**S \_ false**</dt> </dl> | Es sind keine weiteren MTP-Bluetooth-Geräte zur Enumeration vorhanden.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Es sind keine MTP-Bluetooth geräte mehr aufzuzählen.<br/> |
 
 
 
@@ -80,7 +80,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie diese Methode verwendet wird, um gekoppelte MTP/Bluetooth-Geräte aufzuzählen und eine asynchrone Verbindungsanforderung an jede zu senden.
+Im folgenden Beispiel wird die Verwendung dieser Methode veranschaulicht, um gekoppelte MTP-/Bluetooth-Geräte aufzuzählen und jeweils eine asynchrone Verbindungsanforderung zu senden.
 
 
 ```C++
@@ -122,19 +122,19 @@ IEnumPortableDeviceConnectors* pEnum = NULL;
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                                                              |
-| Header<br/>                   | <dl> <dt>Devpkey. h; </dt> <dt>Portablede viceconnectapi. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Portablede viceconnectapi. idl</dt> </dl>                                                                |
-| Bibliothek<br/>                  | <dl> <dt>Portabledeviceguids. lib</dt> </dl>                                                                     |
+| Header<br/>                   | <dl> <dt>Devpkey.h; </dt> <dt>Portabledeviceconnectapi.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Portabledeviceconnectapi.idl</dt> </dl>                                                                |
+| Bibliothek<br/>                  | <dl> <dt>PortableDeviceGuids.lib</dt> </dl>                                                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienumportablede viceconnectors**](ienumportabledeviceconnectors.md)
+[**IEnumPortableDeviceConnectors**](ienumportabledeviceconnectors.md)
 </dt> </dl>
 
  

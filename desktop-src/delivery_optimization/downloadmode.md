@@ -1,6 +1,6 @@
 ---
-title: Downloadmode-Enumeration (deliveryoptimization. h)
-description: Definiert die verschiedenen Download Modi, die von der Übermittlungs Optimierung verwendet werden.
+title: DownloadMode-Enumeration (Deliveryoptimization.h)
+description: Definiert die verschiedenen Downloadmodi, die Übermittlungsoptimierung verwenden.
 ms.assetid: 7E9407C6-A22F-459E-B316-5E7809F0067A
 keywords:
 - In diesem Modus wird die Übermittlungsoptimierung umgangen und stattdessen BITS verwendet. Sie können diesen Modus beispielsweise auswählen, damit Clients BranchCache verwenden können. Enumeration
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0cde44a3d211040e2cc1dd62afd54f8284f5493e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ea753ef47dc2e6655d7e707466d7b0448bee7bec1f090b1baf4de04799283d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118543724"
 ---
-# <a name="downloadmode-enumeration"></a>Downloadmode-Enumeration
+# <a name="downloadmode-enumeration"></a>DownloadMode-Enumeration
 
-Definiert die verschiedenen Download Modi, die von der Übermittlungs Optimierung verwendet werden.
+Definiert die verschiedenen Downloadmodi, die Übermittlungsoptimierung verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ typedef enum _DownloadMode {
 <span id="DownloadMode_CdnOnly"></span><span id="downloadmode_cdnonly"></span><span id="DOWNLOADMODE_CDNONLY"></span>**DownloadMode_CdnOnly**
 </dt> <dd>
 
-Mit dieser Einstellung wird die Peer-zu-Peer-Zwischenspeicherung deaktiviert, aber dennoch ist es möglich, Inhalte von Microsoft-Servern herunterzuladen. Dieser Modus verwendet zusätzliche Metadaten, die von den Clouddiensten für die Übermittlungs Optimierung bereitgestellt werden, um eine zuverlässige und effiziente Download Leistung zu erzielen.
+Diese Einstellung deaktiviert die Peer-zu-Peer-Zwischenspeicherung, ermöglicht Übermittlungsoptimierung das Herunterladen von Inhalten von Microsoft-Servern. In diesem Modus werden zusätzliche Metadaten verwendet, die von Übermittlungsoptimierung Clouddiensten bereitgestellt werden, um eine zuverlässige und effiziente Peerless-Downloaderfahrung zu ermöglichen.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Dieser Standardbetriebsmodus für die Übermittlungsoptimierung aktiviert die Fr
 <span id="DownloadMode_Group"></span><span id="downloadmode_group"></span><span id="DOWNLOADMODE_GROUP"></span>**DownloadMode_Group**
 </dt> <dd>
 
-Wenn der Gruppenmodus festgelegt ist, wird die Gruppe automatisch basierend auf den Geräten Active Directory Domain Services (AD DS) (Windows 10, Version 1607) oder der Domäne, bei der das Gerät authentifiziert wird, ausgewählt (Windows 10, Version 1511). Im Gruppenmodus erfolgt die Peerfreigabe über interne Subnetze zwischen Geräten, die zur gleichen Gruppe gehören, einschließlich Geräten in Zweigstellen. Sie können die GroupID-Option verwenden, um eine eigene benutzerdefinierte Gruppe zu erstellen, unabhängig von Domänen und AD DS-Sites. Der Downloadmodus „Gruppe“ wird den meisten Organisationen empfohlen, die die beste Bandbreitenoptimierung mit Übermittlungsoptimierung anstreben.
+Wenn der Gruppenmodus festgelegt ist, wird die Gruppe automatisch basierend auf dem Active Directory Domain Services-Standort (AD DS) des Geräts (Windows 10, Version 1607) oder der Domäne ausgewählt, bei der das Gerät authentifiziert wird (Windows 10, Version 1511). Im Gruppenmodus erfolgt die Peerfreigabe über interne Subnetze zwischen Geräten, die zur gleichen Gruppe gehören, einschließlich Geräten in Zweigstellen. Sie können die GroupID-Option verwenden, um eine eigene benutzerdefinierte Gruppe zu erstellen, unabhängig von Domänen und AD DS-Sites. Der Downloadmodus „Gruppe“ wird den meisten Organisationen empfohlen, die die beste Bandbreitenoptimierung mit Übermittlungsoptimierung anstreben.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Lässt Peerquellen im Internet für die Übermittlungsoptimierung zu.
 <span id="DownloadMode_Simple"></span><span id="downloadmode_simple"></span><span id="DOWNLOADMODE_SIMPLE"></span>**DownloadMode_Simple**
 </dt> <dd>
 
-Im Einfachmodus wird die Verwendung von Clouddiensten für die Übermittlungsoptimierung vollständig deaktiviert (für Offlineumgebungen). Die Übermittlungs Optimierung wechselt automatisch in diesen Modus, wenn die Clouddienste für die Übermittlungs Optimierung nicht verfügbar sind, nicht erreichbar sind oder wenn die Größe der Inhalts Datei weniger als 10 MB beträgt. In diesem Modus bietet die Übermittlungs Optimierung einen zuverlässigen Download, ohne Peer-zu-Peer-Caching.
+Im Einfachmodus wird die Verwendung von Clouddiensten für die Übermittlungsoptimierung vollständig deaktiviert (für Offlineumgebungen). Übermittlungsoptimierung automatisch in diesen Modus wechselt, wenn die Übermittlungsoptimierung-Clouddienste nicht verfügbar, nicht erreichbar oder die Größe der Inhaltsdatei kleiner als 10 MB ist. In diesem Modus bietet Übermittlungsoptimierung eine zuverlässige Downloaderfahrung ohne Peer-zu-Peer-Zwischenspeicherung.
 
 </dd> <dt>
 
@@ -92,6 +92,6 @@ In diesem Modus wird die Übermittlungsoptimierung umgangen und stattdessen BITS
 
 | Anforderung | Wert |
 |-------------------------------|----------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>  |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>  |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>               |

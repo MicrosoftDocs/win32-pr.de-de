@@ -1,23 +1,23 @@
 ---
-description: 'Sie können einen frei Hand Sammler (InkCollector, InkOverlay oder InkPicture) verwenden, um direkt auf die standardmäßige Microsoft-Gestenerkennung zuzugreifen. So verwenden Sie einen Ink Collector für den Zugriff auf die Gestenerkennung: Legen Sie die CollectionMode-Eigenschaft des Ink Collector entweder auf den inkandgesten-oder den GestureOnly-Modus fest. InkOverlay. CollectionMode = CollectionMode. GestureOnly; Wählen Sie die Geste aus, die Sie unterstützen möchten. InkOverlay. SetGestureStatus (applicationgesten. allgesten, true); implementieren Sie einen Ereignishandler, der Gesten Benachrichtigungen empfängt. Im-Ereignishandler müssen Sie die Aktion implementieren, die den einzelnen empfangenen Ereignissen entspricht. Hinweis der gemischte Modus unterstützt nur Single-Stroke-Gesten. Der Gesten Modus unterstützt mehrere Strich Gesten. InkOverlay. Gesten + = New InkCollector gestureeventhandler (InkOverlay- \_ Geste); im inkandgesten-Modus wird jeder einzelne Strich an die Microsoft Gestenerkennung gesendet. Wenn Sie als Geste erkannt wird, die Sie aktiviert haben, wird eine Ereignis Benachrichtigung gesendet. Wenn die Anwendung die Ereignis Benachrichtigung annimmt, wird der Strich gelöscht. Wenn die Anwendung die Benachrichtigung nicht akzeptiert oder der Strich nicht als Geste erkannt wird, wird der Strich im Ink-Objekt gespeichert. Im GestureOnly-Modus werden die Striche durch Timeouts vor und nach den Strichen getrennt. Die im Timeout gesammelten Striche werden an die Erkennung gesendet. Wenn die Striche als Geste erkannt werden, die Sie aktiviert haben, wird eine Ereignis Benachrichtigung gesendet. Die Anwendung kann das Ereignis annehmen oder ablehnen, wobei die entsprechende Aktion wirksam wird oder nicht. Im Modus "nur Gesten" werden die Striche niemals im frei Hand Objekt gespeichert.'
+description: 'Sie können einen Ink Collector (InkCollector, InkOverlay oder InkPicture) verwenden, um direkt auf die Standardmäßige Microsoft-Gestenerkennung zuzugreifen. So verwenden Sie einen Freihandsammler für den Zugriff auf die Gestenerkennung: Legen Sie die CollectionMode-Eigenschaft des Freihandsammlers entweder auf den InkAndGesture-Modus oder den GestureOnly-Modus.inkOverlay.CollectionMode = CollectionMode.GestureOnly fest. Wählen Sie die Geste aus, die Sie unterstützen möchten.inkOverlay.SetGestureStatus(ApplicationGesture.AllGestures, true); Implementieren Sie einen Ereignishandler, der Gestenbenachrichtigungen empfängt. Im Ereignishandler müssen Sie die Aktion implementieren, die jedem empfangenen Ereignis entspricht. Hinweis Gemischter Modus unterstützt nur Gesten mit nur einem Strich. Der Gestenmodus unterstützt mehrere Strichgesten. inkOverlay.Gesture += new InkCollectorGestureEventHandler(inkOverlay \_ Gesture);Im InkAndGesture-Modus wird jeder einzelne Strich an die Microsoft-Gestenerkennung gesendet. Wenn sie als aktivierte Geste erkannt wird, wird eine Ereignisbenachrichtigung gesendet. Wenn die Anwendung die Ereignisbenachrichtigung akzeptiert, wird der Strich gelöscht. Wenn die Anwendung die Benachrichtigung nicht akzeptiert oder der Strich nicht als Geste erkannt wird, wird der Strich im Ink-Objekt gespeichert. Im GestureOnly-Modus werden die Striche durch Timeouts vor und nach den Strichen getrennt. Die im Timeout erfassten Striche werden an die Erkennung gesendet. Wenn die Striche als aktivierte Geste erkannt werden, wird eine Ereignisbenachrichtigung gesendet. Die Anwendung kann das Ereignis akzeptieren oder ablehnen, was die entsprechende Aktion bewirkt oder nicht. Im reinen Gestenmodus werden die Striche nie im Ink-Objekt gespeichert.'
 ms.assetid: 3f5f00a3-1f2c-4fa2-9738-bc5fb56e2208
-title: Nur die Gestenerkennung von Microsoft verwenden
+title: Nur mithilfe der Microsoft-Gestenerkennung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80504e8b32c0b9596936bb4f07d029cd4ea8ddbd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08d7b27ae30e0bba98ee2c9db57cc0da2d6491932d0137cc5cd4d2b6f86420ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118715177"
 ---
-# <a name="using-the-microsoft-gesture-recognizer-only"></a>Nur die Gestenerkennung von Microsoft verwenden
+# <a name="using-the-microsoft-gesture-recognizer-only"></a>Nur mithilfe der Microsoft-Gestenerkennung
 
-Sie können einen frei Hand Sammler ([**InkCollector**](inkcollector-class.md), [**InkOverlay**](inkoverlay-class.md)oder [InkPicture](inkpicture-control-reference.md)) verwenden, um direkt auf die standardmäßige Microsoft-Gestenerkennung zuzugreifen.
+Sie können einen Ink Collector [**(InkCollector,**](inkcollector-class.md) [**InkOverlay**](inkoverlay-class.md)oder [InkPicture)](inkpicture-control-reference.md)verwenden, um direkt auf die Standardmäßige Microsoft-Gestenerkennung zuzugreifen.
 
-So verwenden Sie einen Ink Collector, um auf die Gestenerkennung zuzugreifen:
+So verwenden Sie einen Freihandsammler für den Zugriff auf die Gestenerkennung:
 
--   Legen Sie für die [**CollectionMode**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode) -Eigenschaft des Ink Collector entweder den **inkandgesten** -oder den **GestureOnly** -Modus fest.
+-   Legen Sie die [**CollectionMode-Eigenschaft**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode) des Ink-Collectors entweder auf den **InkAndGesture-Modus** oder **den GestureOnly-Modus** fest.
 
 `inkOverlay.CollectionMode = CollectionMode.GestureOnly;`
 
@@ -25,29 +25,29 @@ So verwenden Sie einen Ink Collector, um auf die Gestenerkennung zuzugreifen:
 
 `inkOverlay.SetGestureStatus(ApplicationGesture.AllGestures, true);`
 
--   Implementieren Sie einen Ereignishandler, der Gesten Benachrichtigungen empfängt. Im-Ereignishandler müssen Sie die Aktion implementieren, die den einzelnen empfangenen Ereignissen entspricht.
+-   Implementieren Sie einen Ereignishandler, der Gestenbenachrichtigungen empfängt. Im Ereignishandler müssen Sie die Aktion implementieren, die jedem empfangenen Ereignis entspricht.
     > [!Note]  
-    > Der gemischte Modus unterstützt nur Bewegungen mit nur einem Strich. Der Gesten Modus unterstützt mehrere Strich Gesten.
+    > Der gemischte Modus unterstützt nur Gesten mit einem Strich. Der Gestenmodus unterstützt mehrere Strichgesten.
 
      
 
 `inkOverlay.Gesture += new InkCollectorGestureEventHandler(inkOverlay_Gesture);`
 
-Im **inkandgesten** -Modus wird jeder einzelne Strich an die Microsoft Gestenerkennung gesendet. Wenn Sie als Geste erkannt wird, die Sie aktiviert haben, wird eine Ereignis Benachrichtigung gesendet. Wenn die Anwendung die Ereignis Benachrichtigung annimmt, wird der Strich gelöscht. Wenn die Anwendung die Benachrichtigung nicht akzeptiert oder der Strich nicht als Geste erkannt wird, wird der Strich im [**Ink**](inkdisp-class.md) -Objekt gespeichert.
+Im **InkAndGesture-Modus** wird jeder einzelne Strich an die Microsoft-Gestenerkennung gesendet. Wenn sie als aktivierte Geste erkannt wird, wird eine Ereignisbenachrichtigung gesendet. Wenn die Anwendung die Ereignisbenachrichtigung akzeptiert, wird der Strich gelöscht. Wenn die Anwendung die Benachrichtigung nicht akzeptiert oder der Strich nicht als Geste erkannt wird, wird der Strich im [**Ink-Objekt**](inkdisp-class.md) gespeichert.
 
-Im **GestureOnly** -Modus werden die Striche durch Timeouts vor und nach den Strichen getrennt. Die im Timeout gesammelten Striche werden an die Erkennung gesendet. Wenn die Striche als Geste erkannt werden, die Sie aktiviert haben, wird eine Ereignis Benachrichtigung gesendet. Die Anwendung kann das Ereignis annehmen oder ablehnen, wobei die entsprechende Aktion wirksam wird oder nicht. Im Modus "nur Gesten" werden die Striche niemals im frei Hand [**Objekt gespeichert**](inkdisp-class.md) .
+Im **GestureOnly-Modus** werden die Striche durch Timeouts vor und nach den Strichen getrennt. Die im Timeout erfassten Striche werden an die Erkennung gesendet. Wenn die Striche als aktivierte Geste erkannt werden, wird eine Ereignisbenachrichtigung gesendet. Die Anwendung kann das Ereignis akzeptieren oder ablehnen, was die entsprechende Aktion bewirkt oder nicht. Im reinen Gestenmodus werden die Striche nie im [**Ink-Objekt**](inkdisp-class.md) gespeichert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Microsoft. Ink. InkCollector. CollectionMode](/previous-versions/ms836497(v=msdn.10))
+[Microsoft.Ink.InkCollector.CollectionMode](/previous-versions/ms836497(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. Ink. InkOverlay. CollectionMode](/previous-versions/ms833092(v=msdn.10))
+[Microsoft.Ink.InkOverlay.CollectionMode](/previous-versions/ms833092(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. Ink. InkPicture. CollectionMode](/previous-versions/ms582182(v=vs.100))
+[Microsoft.Ink.InkPicture.CollectionMode](/previous-versions/ms582182(v=vs.100))
 </dt> </dl>
 
  

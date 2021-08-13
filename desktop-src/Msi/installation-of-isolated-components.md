@@ -1,35 +1,35 @@
 ---
-description: Windows Installer führt die folgenden Aktionen während der Installation einer Anwendung aus, wenn das Paket isolierte Komponenten enthält. In der Regel \_ handelt es sich bei der gemeinsam genutzten Komponente um eine DLL, die von Komponenten \_ Anwendungen und anderen ausführbaren Client Dateien gemeinsam genutzt wird
+description: Windows Das Installationsprogramm führt während der Installation einer Anwendung die folgenden Aktionen aus, wenn das Paket isolierte Komponenten enthält. In der Regel ist "Komponente \_ freigegeben" eine DLL, die von der \_ Komponentenanwendung und anderen ausführbaren Clientdateien gemeinsam genutzt wird.
 ms.assetid: fbc5dd86-5d38-4ce8-ab38-03c84cc77e80
 title: Installation isolierter Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3c1b9a7e21c212474701409e887d0afd5517774
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82f842f626775dce436abedace96549fd55079c577885aad81492df861cd1a68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118634125"
 ---
 # <a name="installation-of-isolated-components"></a>Installation isolierter Komponenten
 
-Windows Installer führt die folgenden Aktionen während der Installation einer Anwendung aus, wenn das Paket isolierte Komponenten enthält. In der Regel \_ handelt es sich bei der gemeinsam genutzten Komponente um eine DLL, die von Komponenten \_ Anwendungen und anderen ausführbaren Client Dateien gemeinsam genutzt wird
+Windows Das Installationsprogramm führt während der Installation einer Anwendung die folgenden Aktionen aus, wenn das Paket isolierte Komponenten enthält. In der Regel ist "Komponente \_ freigegeben" eine DLL, die von der \_ Komponentenanwendung und anderen ausführbaren Clientdateien gemeinsam genutzt wird.
 
 ## <a name="installation"></a>Installation
 
--   Kopieren Sie die Dateien der frei \_ gegebenen Komponente in denselben Ordner wie die Komponenten \_ Anwendung, wenn auch die Komponenten \_ Anwendung installiert wird.
--   Erstellen Sie eine 0-Byte-Datei mit dem kurzen Dateinamen der Schlüsseldatei der Komponenten \_ Anwendung. Suchen Sie diese Datei im selben Ordner wie die Komponenten \_ Anwendung. Fügen Sie die Erweiterung an. Lokal mit diesem Dateinamen.
--   Erhöhen Sie SHAREDDLL refcount, wenn das msidbcomponentattributesshareddllrefcount-Bit in der Attribute-Spalte der [Komponenten Tabelle](component-table.md)festgelegt ist.
--   Registrieren \_ Sie die Komponenten Anwendung als Client der \_ gemeinsam genutzten Komponente, und registrieren Sie einen Schlüssel Pfad, der auf den freigegebenen Speicherort der freigegebenen Komponente verweist \_ .
--   Installieren Sie alle Ressourcen der Komponenten \_ Anwendung wie gewohnt.
+-   Kopieren Sie die Dateien von Komponente \_ freigegeben nur dann in denselben Ordner wie \_ Komponentenanwendung, wenn \_ die Komponentenanwendung ebenfalls installiert wird.
+-   Erstellen Sie eine 0-Byte-Datei mit dem kurzen Dateinamen der Schlüsseldatei der \_ Komponentenanwendung. Suchen Sie diese Datei im gleichen Ordner wie \_ komponentenanwendung. Fügen Sie die Erweiterung an. LOCAL für diesen Dateinamen.
+-   Erhöhen Sie den SharedDLL-Refcount, wenn das Bit msidbComponentAttributesSharedDllRefCount in der Attributes -Spalte der [Component-Tabelle](component-table.md)festgelegt ist.
+-   Registrieren Sie die \_ Komponentenanwendung als Client der \_ Komponente Freigegeben, und registrieren Sie einen Schlüsselpfad, der auf den freigegebenen Speicherort von Komponente \_ Freigegeben verweist.
+-   Installieren Sie wie gewohnt alle Ressourcen der \_ Komponentenanwendung.
 
-Wenn \_ die freigegebene Komponente oder die zugehörige Schlüsseldatei bereits auf dem Computer installiert ist, kopieren Sie keine Dateien an den freigegebenen Speicherort der freigegebenen Komponente \_ .
+Wenn Komponente \_ freigegeben oder die zugehörige Schlüsseldatei bereits auf dem Computer installiert ist, kopieren Sie keine Dateien an den freigegebenen Speicherort von Komponente \_ freigegeben.
 
-Wenn \_ die freigegebene Komponente oder die zugehörige Schlüsseldatei noch nicht auf dem Computer installiert ist:
+Wenn Komponente \_ freigegeben oder ihre Schlüsseldatei noch nicht auf dem Computer installiert ist:
 
--   Kopieren Sie die Dateien der frei \_ gegebenen Komponente in den freigegebenen Speicherort.
--   Alle Installations Aktionen für freigegebene Komponenten verarbeiten \_ .
--   Wenn die \_ freigegebene Komponente eine COM-Komponente ist, registrieren Sie den vollständigen com-Pfad so, dass die Syntax \[ $Component \] und \[ \# File Key \] auf den freigegebenen Speicherort der freigegebenen Komponente verweisen \_ .
+-   Kopieren Sie die Dateien der Komponente \_ Freigegeben an den freigegebenen Speicherort.
+-   Verarbeiten Sie alle Installationsaktionen für \_ Komponenten freigegeben.
+-   Wenn Component \_ Shared eine COM-Komponente ist, registrieren Sie den vollständigen COM-Pfad, sodass die Syntax \[ $Component und \] \[ \# FileKey auf den \] freigegebenen Speicherort der Komponente Shared \_ verweisen.
 
  
 

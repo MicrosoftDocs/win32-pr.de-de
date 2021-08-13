@@ -3,7 +3,7 @@ title: AUTO3STATE-Steuerelement
 description: Definiert ein automatisches Kontrollkästchen mit drei Zuständen.
 ms.assetid: 8b27367c-30d0-4591-93d0-756c65255b26
 keywords:
-- AUTO3STATE-Steuerelement Menüs und andere Ressourcen
+- AUTO3STATE-Steuerelementmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de184a639de7beee7ac05bdf63609ae29a0f034b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 318d43f0b6d8a16d6e76ae3d12f934e41e265197690a955cfe148dd71176f440
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118735212"
 ---
 # <a name="auto3state-control"></a>AUTO3STATE-Steuerelement
 
-Definiert ein automatisches Kontrollkästchen mit drei Zuständen. Das-Steuerelement ist ein geöffnetes Feld mit dem angegebenen Text, der rechts neben dem Feld positioniert ist. Wenn diese Option ausgewählt ist, wechselt das Feld automatisch zwischen drei Zuständen: aktiviert, deaktiviert und deaktiviert (grau). Das-Steuerelement sendet eine Meldung an das übergeordnete Element, wenn der Benutzer das Steuerelement auswählt.
+Definiert ein automatisches Kontrollkästchen mit drei Zuständen. Das Steuerelement ist ein offenes Feld mit dem angegebenen Text, der rechts neben dem Feld positioniert ist. Wenn diese Option aktiviert ist, wird das Kontrollkästchen automatisch zwischen drei Zuständen erweitert: aktiviert, deaktiviert und deaktiviert (grau). Das Steuerelement sendet immer dann eine Nachricht an sein übergeordnetes Element, wenn der Benutzer das Steuerelement ausgibt.
 
 ``` syntax
 AUTO3STATE text, id, x, y, width, height [, style [, extended-style]]
@@ -29,18 +29,18 @@ AUTO3STATE text, id, x, y, width, height [, style [, extended-style]]
 
 <dl> <dt>
 
-<span id="style"></span><span id="STYLE"></span>*Vorbild*
+<span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Stile für das-Steuerelement, bei dem es sich um eine Kombination aus dem **\_ AUTO3STATE** -Format und den folgenden Stilen handeln kann: **WS \_ Tabstopps**, **WS- \_ Deaktivierte** und **WS- \_ Gruppe**.
+Stile für das Steuerelement, die eine Kombination aus dem **BS \_ AUTO3STATE-Stil** und den folgenden Stilen sein können: **WS \_ TABSTOP**, **WS \_ DISABLED** und **WS \_ GROUP**.
 
-Wenn Sie keinen Stil angeben, ist der Standardstil `BS_AUTO3STATE | WS_TABSTOP` .
+Wenn Sie keinen Stil angeben, lautet der Standardstil `BS_AUTO3STATE | WS_TABSTOP` .
 
 </dd> </dl>
 
-Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter allgemeine [Steuerelement Parameter](common-control-parameters.md).
+Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter [Allgemeine Steuerungsparameter.](common-control-parameters.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -50,10 +50,10 @@ Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie 
 [Kontrollkästchen](https://www.bing.com/search?q=Check+Boxes)
 </dt> <dt>
 
-[**Markieren**](checkbox-control.md)
+[**Checkbox**](checkbox-control.md)
 </dt> <dt>
 
-[**Steuerelement**](control-control.md)
+[**Steuerung**](control-control.md)
 </dt> <dt>
 
 [**STATE3**](state3-control.md)
@@ -62,6 +62,6 @@ Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie 
 [Fensterstile](/windows/desktop/winmsg/window-styles)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

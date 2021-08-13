@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. slideto
-description: Die Methode "diasto" verschiebt das Steuerelement an eine neue Position. Das-Steuerelement bewegt sich im angegebenen Zeitraum nicht linear.
+title: AmbientAttributes.slideTo
+description: Die slideTo-Methode verschiebt das Steuerelement an eine neue Position. Das Steuerelement wird im angegebenen Zeitraum nicht linear bewegt.
 ms.assetid: 06dd610b-cb58-4b60-9f4b-8929c54c3c33
 keywords:
-- Ambientattribute. slideto Windows-Media Player
+- AmbientAttributes.slideTo Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: deb214046ace59094b6bd5c362dfa716b9fceb57
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3f199a2786adbd63313c3f500d589f9f51e2b8ca2fa8120a8fdf75021041115
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119469910"
 ---
-# <a name="ambientattributesslideto"></a>Ambientattribute. slideto
+# <a name="ambientattributesslideto"></a>AmbientAttributes.slideTo
 
-Die Methode " **diasto** " verschiebt das Steuerelement an eine neue Position. Das-Steuerelement bewegt sich im angegebenen Zeitraum nicht linear.
+Die **slideTo-Methode** verschiebt das Steuerelement an eine neue Position. Das Steuerelement wird im angegebenen Zeitraum nicht linear bewegt.
 
 ``` syntax
         elementID.slideTo(newX, newY, moveTime)
@@ -31,24 +31,24 @@ Die Methode " **diasto** " verschiebt das Steuerelement an eine neue Position. D
 
 <dl> <dt>
 
-<span id="newX"></span><span id="newx"></span><span id="NEWX"></span>*newx*
+<span id="newX"></span><span id="newx"></span><span id="NEWX"></span>*newX*
 </dt> <dd>
 
-**Number** (**Long**) gibt den neuen Wert für das **linke** Attribut des Steuer Elements an.
+**Number** (**long**) gibt den neuen Wert für das **linke Attribut** des Steuerelements an.
 
 </dd> <dt>
 
-<span id="newY"></span><span id="newy"></span><span id="NEWY"></span>*Newy*
+<span id="newY"></span><span id="newy"></span><span id="NEWY"></span>*newY*
 </dt> <dd>
 
-**Number** (**Long**) gibt den neuen Wert für das **Top** -Attribut des Steuer Elements an.
+**Number** (**long**) gibt den neuen Wert für das **oberste Attribut** des Steuerelements an.
 
 </dd> <dt>
 
-<span id="moveTime"></span><span id="movetime"></span><span id="MOVETIME"></span>*-Zeit*
+<span id="moveTime"></span><span id="movetime"></span><span id="MOVETIME"></span>*moveTime*
 </dt> <dd>
 
-**Number** (**Long**) gibt die Zeit in Millisekunden an, die das Steuerelement benötigt, um zum neuen Speicherort zu wechseln.
+**Number** (**long**) gibt die Zeit in Millisekunden an, die das Steuerelement benötigt, um an seine neue Position zu wechseln.
 
 </dd> </dl>
 
@@ -56,9 +56,9 @@ Die Methode " **diasto** " verschiebt das Steuerelement an eine neue Position. D
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode unterscheidet sich von " **muveto**", wodurch beim Verschieben des Steuer Elements eine lineare Bewegung erstellt wird. Die nichtlineare Bewegung, die von dieser Methode erstellt wird, ist eine gleitende Bewegung, die sich am Anfang der Bewegung von einer Geschwindigkeit von NULL beschleunigt und am Ende wieder auf 0 (null) zurücksetzt, um einen Smooth-Vorgang zu beenden.
+Diese Methode ist anders als **moveTo,** das beim Verschieben des Steuerelements eine lineare Bewegung erstellt. Die nicht lineare Bewegung, die von dieser Methode erstellt wird, ist eine gleitende Bewegung, die von einer Geschwindigkeit von 0 (null) am Anfang der Bewegung beschleunigt und am Ende wieder auf 0 (null) zurückgesetzt wird und zu einem reibungslosen Ende kommt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,17 +70,17 @@ Diese Methode unterscheidet sich von " **muveto**", wodurch beim Verschieben des
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Ambient-Attribute**](ambient-attributes.md)
 </dt> <dt>
 
-[**Ambientattribute. Left**](ambientattributes-left.md)
+[**AmbientAttributes.left**](ambientattributes-left.md)
 </dt> <dt>
 
-[**Ambientattribute. muveto**](ambientattributes-moveto.md)
+[**AmbientAttributes.moveTo**](ambientattributes-moveto.md)
 </dt> <dt>
 
 [**AmbientAttributes.top**](ambientattributes-top.md)

@@ -1,9 +1,9 @@
 ---
-title: WM_SIZECLIPBOARD Meldung (Winuser. h)
-description: Wird von einem Fenster der Zwischenablage Anzeige an den Besitzer der Zwischenablage gesendet, wenn die Zwischenablage Daten im CF \_ -Besitzer Anzeige Format enthält und der Client Bereich der Zwischenablage-Viewer die Größe geändert hat.
+title: WM_SIZECLIPBOARD (Winuser.h)
+description: Wird von einem Zwischenablage-Viewerfenster an den Besitzer der Zwischenablage gesendet, wenn die Zwischenablage Daten im CF OWNERDISPLAY-Format enthält und sich die Größe des Clientbereichs des Zwischenablage-Viewers \_ geändert hat.
 ms.assetid: 95991d03-8677-4dde-b72a-082dec4834b3
 keywords:
-- WM_SIZECLIPBOARD Nachrichten Datenaustausch
+- WM_SIZECLIPBOARD der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 235de630b20757a571b1917a975d1425bee06cde
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 778caa6538992d927a0451518fcb28b82891773563614ba97c9d9df121fb69f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118545319"
 ---
-# <a name="wm_sizeclipboard-message"></a>WM- \_ sizeclipboard-Meldung
+# <a name="wm_sizeclipboard-message"></a>WM \_ SIZECLIPBOARD-Nachricht
 
-Wird von einem Fenster der Zwischenablage Anzeige an den Besitzer der Zwischenablage gesendet, wenn die Zwischenablage Daten im CF-Besitzer [**\_ Anzeige**](standard-clipboard-formats.md) Format enthält und der Client Bereich der Zwischenablage-Viewer die Größe geändert hat.
+Wird von einem Zwischenablage-Viewerfenster an den Besitzer der Zwischenablage gesendet, wenn die Zwischenablage Daten im [**CF \_ OWNERDISPLAY-Format**](standard-clipboard-formats.md) enthält und sich die Größe des Clientbereichs des Zwischenablage-Viewers geändert hat.
 
 
 ```C++
@@ -39,26 +39,26 @@ Wird von einem Fenster der Zwischenablage Anzeige an den Besitzer der Zwischenab
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Fenster der Zwischenablage Anzeige.
+Ein Handle für das Viewerfenster der Zwischenablage.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für ein globales Speicher Objekt, das eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur enthält. Die-Struktur gibt die neuen Dimensionen des Client Bereichs der Zwischenablage Anzeige an.
+Ein Handle für ein globales Speicherobjekt, das eine [**RECT-Struktur**](/previous-versions//dd162897(v=vs.85)) enthält. Die -Struktur gibt die neuen Dimensionen des Clientbereichs des Zwischenablage-Viewers an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Fenster der Zwischenablage Anzeige zerstört oder seine Größe geändert wird, wird eine **WM- \_ sizeclipboard** -Meldung mit einem NULL-Rechteck (0, 0, 0, 0) als neue Größe gesendet. Dadurch wird es dem Besitzer der Zwischenablage ermöglicht, seine Anzeige Ressourcen freizugeben.
+Wenn das Viewerfenster der Zwischenablage zerstört oder seine Größe geändert werden soll, wird eine **WM \_ SIZECLIPBOARD-Nachricht** mit einem NULL-Rechteck (0, 0, 0, 0) als neue Größe gesendet. Dadurch kann der Besitzer der Zwischenablage seine Anzeigeressourcen frei geben.
 
-Der Besitzer der Zwischenablage muss die [**GlobalLock**](/windows/desktop/api/winbase/nf-winbase-globallock) -Funktion verwenden, um das Speicher Objekt zu sperren, das [**Rect**](/previous-versions//dd162897(v=vs.85))enthält. Vor der Rückgabe muss der Besitzer der Zwischenablage das Objekt mithilfe der [**globalunlock**](/windows/desktop/api/winbase/nf-winbase-globalunlock) -Funktion entsperren.
+Der Besitzer der Zwischenablage muss die [**GlobalLock-Funktion**](/windows/desktop/api/winbase/nf-winbase-globallock) verwenden, um das Speicherobjekt zu sperren, das [**RECT enthält.**](/previous-versions//dd162897(v=vs.85)) Vor der Rückgabe muss der Besitzer der Zwischenablage das Objekt mithilfe der [**GlobalUnlock-Funktion entsperren.**](/windows/desktop/api/winbase/nf-winbase-globalunlock)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,15 +68,15 @@ Der Besitzer der Zwischenablage muss die [**GlobalLock**](/windows/desktop/api/w
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Zwischenablage](clipboard.md)

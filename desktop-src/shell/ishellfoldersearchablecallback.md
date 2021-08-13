@@ -1,5 +1,5 @@
 ---
-description: Macht Rückrufroutinen verfügbar, um den Suchvorgang zu überwachen.
+description: Macht Rückrufroutinen verfügbar, um den Suchprozess zu überwachen.
 title: IShellFolderSearchableCallback-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,20 +13,20 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 3412a01b-d5ea-44e1-819c-f10f81fac391
-ms.openlocfilehash: cf1a3b03eed2a15e82e1313875a4ab8584243190
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 620acb5d5a3486b721cac3818c57b8392174436f68a304a8788ef62bccae28b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119443290"
 ---
 # <a name="ishellfoldersearchablecallback-interface"></a>IShellFolderSearchableCallback-Schnittstelle
 
-Macht Rückrufroutinen verfügbar, um den Suchvorgang zu überwachen.
+Macht Rückrufroutinen verfügbar, um den Suchprozess zu überwachen.
 
 ## <a name="members"></a>Member
 
-Die **IShellFolderSearchableCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IShellFolderSearchableCallback** verfügt auch über diese Typen von Membern:
+Die **IShellFolderSearchableCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IShellFolderSearchableCallback** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
@@ -36,7 +36,7 @@ Die **IShellFolderSearchableCallback-Schnittstelle** verfügt über diese Method
 
 
 
-| Methode                                                      | BESCHREIBUNG                                      |
+| Methode                                                      | Beschreibung                                      |
 |:------------------------------------------------------------|:-------------------------------------------------|
 | [**RunBegin**](ishellfoldersearchablecallback-runbegin.md) | Gibt an, dass eine Suche gestartet wurde.<br/>  |
 | [**RunEnd**](ishellfoldersearchablecallback-runend.md)     | Gibt an, dass eine Suche abgeschlossen wurde.<br/> |
@@ -47,7 +47,7 @@ Die **IShellFolderSearchableCallback-Schnittstelle** verfügt über diese Method
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle ist nicht in öffentlichen Headerdateien definiert. Wenn Sie diese Schnittstelle implementieren möchten, können Sie den folgenden C/C++-Code verwenden, um die zugehörigen Methoden zu deklarieren.
+Diese Schnittstelle ist in öffentlichen Headerdateien nicht definiert. Wenn Sie diese Schnittstelle implementieren möchten, können Sie den folgenden C/C++-Code verwenden, um die Methoden zu deklarieren.
 
 
 ```

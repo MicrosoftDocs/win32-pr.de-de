@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Momentaufnahme einer virtuellen System Sammlung.
+description: Erstellt eine Momentaufnahme einer Sammlung virtueller Systeme.
 ms.assetid: 2512d82f-06b9-4613-b920-d3a9be884a75
-title: Kreatesnapshot-Methode der Msvm_CollectionSnapshotService-Klasse
+title: CreateSnapshot-Methode der Msvm_CollectionSnapshotService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 653dae65cc5fe50416b069da6a66e8c678c1b512
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 251213d0ff7a98d922a4dec761252479f911e66e2304596a97858fe0b7dc5fbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119426910"
 ---
-# <a name="createsnapshot-method-of-the-msvm_collectionsnapshotservice-class"></a>Die Methode "kreatesnapshot" der Klasse "MSVM \_ collectionsnapshotservice"
+# <a name="createsnapshot-method-of-the-msvm_collectionsnapshotservice-class"></a>CreateSnapshot-Methode der Msvm \_ CollectionSnapshotService-Klasse
 
-Erstellt eine Momentaufnahme einer virtuellen System Sammlung.
+Erstellt eine Momentaufnahme einer Sammlung virtueller Systeme.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 CreateSnapshot(
 
 <dl> <dt>
 
-*Sammlung* \[ in\]
+*Sammlung* \[ In\]
 </dt> <dd>
 
-Verweis auf einen [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) , der die betroffene Sammlung virtueller Systeme beschreibt.
+Verweis auf eine [**\_ CIM-CollectionOfMSEs,**](cim-collectionofmses.md) die die betroffene Sammlung virtueller Systeme beschreibt.
 
 </dd> <dt>
 
-*Snapshotsettings* \[ in\]
+*SnapshotSettings* \[ In\]
 </dt> <dd>
 
 Enthält die Parametereinstellungen.
 
 </dd> <dt>
 
-*Snapshottype* \[ in\]
+*SnapshotType* \[ In\]
 </dt> <dd>
 
-Angeforderter snapshottyp:
+Angeforderter Momentaufnahmetyp:
 
 <dt>
 
@@ -73,57 +73,57 @@ Angeforderter snapshottyp:
 
 <span id="Standard_Snapshot"></span><span id="standard_snapshot"></span><span id="STANDARD_SNAPSHOT"></span>
 
-<span id="Standard_Snapshot"></span><span id="standard_snapshot"></span><span id="STANDARD_SNAPSHOT"></span>**Standard Momentaufnahme** (1)
+<span id="Standard_Snapshot"></span><span id="standard_snapshot"></span><span id="STANDARD_SNAPSHOT"></span>**Standardmomentaufnahme** (1)
 
 
 </dt> <dd>
 
-Standard Momentaufnahme des virtuellen Systems.
+Standardmomentaufnahme des virtuellen Systems.
 
 </dd> <dt>
 
 <span id="Recovery_Snapshot"></span><span id="recovery_snapshot"></span><span id="RECOVERY_SNAPSHOT"></span>
 
-<span id="Recovery_Snapshot"></span><span id="recovery_snapshot"></span><span id="RECOVERY_SNAPSHOT"></span>**Wiederherstellungs Momentaufnahme** (2)
+<span id="Recovery_Snapshot"></span><span id="recovery_snapshot"></span><span id="RECOVERY_SNAPSHOT"></span>**Wiederherstellungsmomentaufnahme** (2)
 
 
 </dt> <dd>
 
-Momentaufnahme für Wiederherstellungs Szenarien, einschließlich failoverreplikation und Sicherung.
+Momentaufnahme für Wiederherstellungsszenarien, einschließlich Failoverreplikation und Sicherung.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-<span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>**Hersteller spezifisch** (32768.65535)
+<span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Resultingsnapshotcollection* \[ in, out\]
+*ResultingSnapshotCollection* \[ in, out\]
 </dt> <dd>
 
-Bei Erfolg wird ein [**CIM- \_ Sammlungs**](cim-collection.md) Verweis mit der Momentaufnahme des virtuellen Systems zurückgegeben.
+Bei Erfolg wird ein [**\_ CIM-Sammlungsverweis**](cim-collection.md) zurückgegeben, der die Momentaufnahme des virtuellen Systems enthält.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein optionaler Verweis, der zurückgegeben wird, wenn der Vorgang asynchron ausgeführt wird. Falls vorhanden, kann der zurückgegebene Verweis auf eine Instanz von [**CIM \_ concretejob**](cim-concretejob.md) verwendet werden, um den Fortschritt zu überwachen und das Ergebnis der Methode abzurufen.
+Ein optionaler Verweis, der zurückgegeben wird, wenn der Vorgang asynchron ausgeführt wird. Falls vorhanden, kann der zurückgegebene Verweis auf eine Instanz von [**CIM \_ ConcreteJob**](cim-concretejob.md) verwendet werden, um den Fortschritt zu überwachen und das Ergebnis der -Methode zu erhalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird entweder 0 (abgeschlossen) oder 4096 (Auftrag gestartet) zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg wird entweder 0 (Abgeschlossen) oder 4096 (Auftrag gestartet) zurückgegeben. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Bei Erfolg wird entweder 0 (abgeschlossen) oder 4096 (Auftrag gestartet) zurück
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -142,22 +142,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -166,19 +166,19 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MSVM \_ collectionsnapshotservice**](msvm-collectionsnapshotservice.md)
+[**Msvm \_ CollectionSnapshotService**](msvm-collectionsnapshotservice.md)
 </dt> </dl>
 
  

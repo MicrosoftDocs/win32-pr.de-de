@@ -1,6 +1,6 @@
 ---
-description: Legt die Netzwerk Adresstypen fest, die von einem angegebenen Netzwerk Adress Steuerelement akzeptiert werden.
-title: NCM_SETALLOWTYPE Meldung (shellapi. h)
+description: Legt die Netzwerkadresstypen fest, die ein angegebenes Netzwerkadresssteuerelement akzeptiert.
+title: NCM_SETALLOWTYPE-Nachricht (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: FD998452-047A-4aea-A08E-8F6F8C30115B
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d9cc822e07022a01439fbe7e41243bd1b78e636b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3fc6b8ceb848d4738ff2d77b4441a29354bf09248e0de88008072dbf867e8a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719924"
 ---
-# <a name="ncm_setallowtype-message"></a>NCM- \_ Nachricht vom Typ "logatlowtype"
+# <a name="ncm_setallowtype-message"></a>NCM \_ SETALLOWTYPE-Meldung
 
-Legt die Netzwerk Adresstypen fest, die von einem angegebenen Netzwerk Adress Steuerelement akzeptiert werden.
+Legt die Netzwerkadresstypen fest, die ein angegebenes Netzwerkadresssteuerelement akzeptiert.
 
 
 ```C++
@@ -41,31 +41,31 @@ NCM_SETALLOWTYPE
 
 <dl> <dt>
 
-*addrmask* \[ in\]
-</dt> <dd>Gibt die Netzwerk Adresstypen als eine oder mehrere der <a href="net-string.md">**net \_ String**</a> -Konstanten an.</dd> <dt>
+*addrMask* \[ In\]
+</dt> <dd>Gibt die Netzwerkadresstypen als eine oder mehrere NET <a href="net-string.md">**\_ STRING-Konstanten**</a> an.</dd> <dt>
 
 *lParam* 
 </dt> <dd>Muss Null sein.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlerwert zurück.
+Gibt S \_ OK zurück, wenn erfolgreich, oder andernfalls einen Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Masken Satz ist das Kriterium, das verwendet wird, um eine Netzwerkadresse in der [**NCM- \_ GetAddress**](ncm-getaddress.md) -Nachricht zu überprüfen.
+Der Maskensatz ist das Kriterium, das zum Überprüfen einer Netzwerkadresse in der [**NCM \_ GETADDRESS-Nachricht**](ncm-getaddress.md) verwendet wird.
 
-Verwenden Sie diese Meldung nur für ein Netzwerk Adress Steuerelement. Verwenden Sie zum Instanziieren die in shellapi. h definierte Klasse **msctls- \_ netaddress** . Ruft vor dem Senden dieser Nachricht [**initnetworkaddresscontrol**](/windows/desktop/api/Shellapi/nf-shellapi-initnetworkaddresscontrol) zur Laufzeit auf. Dadurch wird die Bibliothek der allgemeinen Steuerelemente initialisiert, die das Netzwerk Adress Steuerelement enthält.
+Verwenden Sie diese Meldung nur für ein Netzwerkadresssteuerelement. Verwenden Sie zum Instanziieren die in Shellapi.h definierte Klasse **msctls \_ netaddress.** Rufen Sie [**InitNetworkAddressControl**](/windows/desktop/api/Shellapi/nf-shellapi-initnetworkaddresscontrol) zur Laufzeit auf, bevor Sie diese Nachricht senden. Dadurch wird die Bibliothek für allgemeine Steuerelemente initialisiert, die das Netzwerkadresssteuerelement enthält.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 
@@ -73,10 +73,10 @@ Verwenden Sie diese Meldung nur für ein Netzwerk Adress Steuerelement. Verwende
 
 <dl> <dt>
 
-[**NCM- \_ getallowtype**](ncm-getallowtype.md)
+[**NCM \_ GETALLOWTYPE**](ncm-getallowtype.md)
 </dt> <dt>
 
-[**NETADDR- \_ Typ**](/windows/desktop/api/Shellapi/nf-shellapi-netaddr_setallowtype)
+[**NetAddr \_ SetAllowType**](/windows/desktop/api/Shellapi/nf-shellapi-netaddr_setallowtype)
 </dt> </dl>
 
  

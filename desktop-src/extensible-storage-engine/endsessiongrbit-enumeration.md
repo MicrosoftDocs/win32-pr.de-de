@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen: endsessiongrbit-Enumeration'
-title: Endsessiongrbit-Enumeration
+description: Weitere Informationen finden Sie unter EndSessionGrbit-Enumeration.
+title: EndSessionGrbit-Enumeration
 TOCTitle: EndSessionGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EndSessionGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.endsessiongrbit(v=EXCHG.10)
@@ -26,21 +26,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c99b9ff6e048297c0297eaa7b7241b23972e1aa8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25732e23ff7c20242a7688eaacc0a4836b946e6a363a6369c058ad2ada9c1bb8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119454930"
 ---
-# <a name="endsessiongrbit-enumeration"></a>Endsessiongrbit-Enumeration
+# <a name="endsessiongrbit-enumeration"></a>EndSessionGrbit-Enumeration
 
-Optionen für jetendsession.
+Optionen für JetEndSession.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,8 +77,8 @@ public enum EndSessionGrbit
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

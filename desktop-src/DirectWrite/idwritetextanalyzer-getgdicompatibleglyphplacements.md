@@ -1,11 +1,11 @@
 ---
-title: Idwrite Test Textanalyzer getgdicompatibleglyphplacement-Methode
-description: Platzieren Sie die Glyphen-Ausgabe der getglyphs-Methode gemäß der Schriftart und den Renderingregeln des Schreibsystems.
+title: IDWriteTextAnalyzer GetGdiCompatibleGlyphPlacements-Methode
+description: Platzieren Sie die Glyphenausgabe der GetGlyphs-Methode gemäß der Schriftart und den Renderingregeln des Schreibensystems.
 ms.assetid: 49312b03-9ee9-44ef-b3eb-a35631a6e693
 keywords:
-- Getgdicompatibleglyphplacement-Methode direkt Schreibvorgang
-- Getgdicompatibleglyphplacement-Methode Direct Write, idwrite tetextanalyzer-Schnittstelle
-- Idwrite tetextanalyzer-Schnittstelle Direct Write, getgdicompatibleglyphplacement-Methode
+- GetGdiCompatibleGlyphPlacements-Methode – Direkter Schreibzugriff
+- GetGdiCompatibleGlyphPlacements-Methode Direct Write, IDWriteTextAnalyzer-Schnittstelle
+- IDWriteTextAnalyzer-Schnittstelle Direct Write, GetGdiCompatibleGlyphPlacements-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f548e5fd20ce8814dc59657ff7bb422387c959fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8d05fcf5595500f34730a720e4a4c2e80d68922929d8055b754a26a1dc92f63c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118650010"
 ---
-# <a name="idwritetextanalyzergetgdicompatibleglyphplacements-method"></a>Idwrite Test Textanalyzer:: getgdicompatibleglyphplacement-Methode
+# <a name="idwritetextanalyzergetgdicompatibleglyphplacements-method"></a>IDWriteTextAnalyzer::GetGdiCompatibleGlyphPlacements-Methode
 
-Platzieren Sie die Glyphen-Ausgabe der [**getglyphs**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs) -Methode gemäß der Schriftart und den Renderingregeln des Schreibsystems.
+Platzieren Sie die Glyphenausgabe der [**GetGlyphs-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs) gemäß der Schriftart und den Renderingregeln des Schreibensystems.
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,192 +62,192 @@ virtual HRESULT GetGdiCompatibleGlyphPlacements(
 
 <dl> <dt>
 
-*Textstring* \[ in\]
+*textString* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **WCHAR \***
+Typ: **const \* WCHAR**
 
-Ein Array von Zeichen, das die Original Zeichenfolge enthält, aus der die Symbole stammen.
+Ein Array von Zeichen, das die ursprüngliche Zeichenfolge enthält, aus der die Glyphen stammten.
 
 </dd> <dt>
 
-*ClusterMap* \[ in\]
+*clusterMap* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten UInt16 \***
+Typ: **const UINT16 \***
 
-Ein Zeiger auf die Zuordnung von Zeichen Bereichen zu Symbol Bereichen. Dies wird von " [**getglyphs**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)" zurückgegeben.
+Ein Zeiger auf die Zuordnung von Zeichenbereichen zu Glyphenbereichen. Dies wird von [**GetGlyphs zurückgegeben.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)
 
 </dd> <dt>
 
-*Texteigenschaften* \[ in\]
+*textProps* \[ In\]
 </dt> <dd>
 
-Type: **[ **dwrite-Strukturierungs \_ Text- \_ \_ Eigenschaften**](/windows/win32/api/dwrite/ns-dwrite-dwrite_shaping_text_properties)\***
+Typ: **[ **\_ DWRITE-SHAPING-TEXTEIGENSCHAFTEN \_ \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_shaping_text_properties)\***
 
-Ein Zeiger auf ein Array von-Strukturen, das Strukturierungs Eigenschaften für jedes Zeichen enthält. Diese Struktur wird von " [**getglyphs**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)" zurückgegeben.
+Ein Zeiger auf ein Array von -Strukturen, das Strukturierungseigenschaften für jedes Zeichen enthält. Diese Struktur wird von [**GetGlyphs zurückgegeben.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)
 
 </dd> <dt>
 
-*TextLength* 
+*textLength* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Die Textlänge von *Textstring*.
+Die Textlänge von *textString*.
 
 </dd> <dt>
 
-*GlyphIndices* \[ in\]
+*glyphIndices* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten UInt16 \***
+Typ: **const UINT16 \***
 
-Ein Array von Glyphe-Indizes, die von [**getglyphs**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)zurückgegeben werden.
+Ein Array von Glyphenindizes, die von [**GetGlyphs zurückgegeben werden.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)
 
 </dd> <dt>
 
-*Glyph-* \[ Eigenschaften in\]
+*glyphProps* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**dwrite- \_ Formen \_ Glyphe- \_ Eigenschaften**](/windows/win32/api/dwrite/ns-dwrite-dwrite_shaping_glyph_properties) \***
+Typ: **const [**DWRITE \_ SHAPING \_ GLYPH \_ PROPERTIES**](/windows/win32/api/dwrite/ns-dwrite-dwrite_shaping_glyph_properties) \***
 
-Ein Zeiger auf ein Array von-Strukturen, die für jedes Symbol, das von [**getglyphs**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)zurückgegeben wird, Strukturierungs Eigenschaften enthalten.
+Ein Zeiger auf ein Array von -Strukturen, die Strukturierungseigenschaften für jedes von [**GetGlyphen zurückgegebene Glyphen enthalten.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)
 
 </dd> <dt>
 
-*GlyphCount* 
+*glyphCount* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Die Anzahl von Symbolen, die von [**getglyphs**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)zurückgegeben werden.
+Die Anzahl der von [**GetGlyphs zurückgegebenen Glyphen.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-getglyphs)
 
 </dd> <dt>
 
-*fontface* \[ in\]
+*fontFace* \[ In\]
 </dt> <dd>
 
-Typ: **[ **idschreitefontface**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface)\***
+Typ: **[ **IDWriteFontFace**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface)\***
 
-Ein Zeiger auf die Schriftart, bei der es sich um die Quelle für die Ausgabe Symbole handelt.
+Ein Zeiger auf das Schriftartgesicht, das die Quelle für die Ausgabe-Glyphen ist.
 
 </dd> <dt>
 
-*fontemsize* 
+*fontEmSize* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
-Die logische Schriftgröße in Dips.
+Der logische Schriftgrad in DIPs.
 
 </dd> <dt>
 
-*Pixel sperdip* 
+*pixelsPerDip* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Die Anzahl der physischen Pixel pro DIP.
 
 </dd> <dt>
 
-*Transformation* \[ in, optional\]
+*transformieren* \[ in, optional\]
 </dt> <dd>
 
-Typ: Konstante **[**dwrite- \_ Matrix**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \***
+Typ: **const [**DWRITE \_ MATRIX**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \***
 
-Eine optionale Transformation, die auf die Symbole und deren Positionen angewendet wird. Diese Transformation wird nach der durch Schriftart Größe und *pixelsperdip* angegebenen Skalierung angewendet.
+Eine optionale Transformation, die auf die Glyphen und ihre Positionen angewendet wird. Diese Transformation wird nach der Skalierung angewendet, die durch den Schriftgrad und *pixelsPerDip angegeben wird.*
 
 </dd> <dt>
 
-*usegdinatural* 
+*useGdiNatural* 
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
-Wenn diese Einstellung auf " **false**" festgelegt ist, sind die Metriken mit den Metriken des GDI-Alias Texts identisch. Wenn diese Eigenschaft auf " **true**" festgelegt ist, sind die Metriken identisch mit den Metriken von Text, der von GDI mithilfe einer mit **ClearType \_ Natural \_ Quality** erstellten Schriftart gemessen wird.
+Wenn false festgelegt **ist,** sind die Metriken mit den Metriken des GDI-Aliastexts identisch. Wenn diese Eigenschaft **auf TRUE** festgelegt ist, sind die Metriken identisch mit den Metriken von Text, der von GDI mithilfe einer Schriftart gemessen wird, die mit **CLEARTYPE NATURAL QUALITY erstellt \_ \_ wurde.**
 
 </dd> <dt>
 
- *issientways* 
+ *isSideways* 
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
-Ein boolesches Flag, das auf **true** festgelegt ist, wenn der Text vertikal gezeichnet werden soll.
+Ein boolesches Flag, das auf **TRUE festgelegt** ist, wenn der Text vertikal gezeichnet werden soll.
 
 </dd> <dt>
 
- *IsRightToLeft* 
+ *isRightToLeft* 
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
-Ein boolesches Flag, das für Text von rechts nach links auf **true** festgelegt ist.
+Ein boolesches Flag, das für Text von rechts nach links auf **TRUE** festgelegt ist.
 
 </dd> <dt>
 
- *scriptanalysis* \[ in\]
+ *scriptAnalysis* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**dwrite- \_ Skript \_ Analyse**](/windows/win32/api/dwrite/ns-dwrite-dwrite_script_analysis) \***
+Typ: **const [**DWRITE SCRIPT \_ \_ ANALYSIS**](/windows/win32/api/dwrite/ns-dwrite-dwrite_script_analysis) \***
 
-Ein Zeiger auf ein Skript Analyseergebnis eines [**AnalyzeScript**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-analyzescript) -Aufrufes.
+Ein Zeiger auf ein Skriptanalyseergebnis aus einem [**AnalyzeScript-Aufruf.**](/windows/win32/api/dwrite/nf-dwrite-idwritetextanalyzer-analyzescript)
 
 </dd> <dt>
 
- *localename* \[ in, optional\]
+ *localeName* \[ in, optional\]
 </dt> <dd>
 
-Typ: Konstante **WCHAR \***
+Typ: **const \* WCHAR**
 
-Ein Array von Zeichen, das das zu verwendende Gebiets Schema enthält, wenn Symbole ausgewählt werden. Beispielsweise kann das gleiche Zeichen anderen Symbolen für ja-JP und zh-CHS zugeordnet werden. Wenn dieser Wert **null** ist, wird die auf dem Skript basierende Standard Zuordnung verwendet.
+Ein Array von Zeichen, das das beim Auswählen von Glyphen zu verwendende Locale enthält. Beispielsweise kann das gleiche Zeichen verschiedenen Glyphen für ja-jp im Vergleich zu zh-chs zuordnen. Wenn dies **NULL ist,** wird die auf dem Skript basierende Standardzuordnung verwendet.
 
 </dd> <dt>
 
  *Features* \[ in, optional\]
 </dt> <dd>
 
-Typ: Konstante **[**dwrite- \_ Typografiefunktionen \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_typographic_features) \* \***
+Typ: **const [**DWRITE \_ TYPOGRAPHIC \_ FEATURES**](/windows/win32/api/dwrite/ns-dwrite-dwrite_typographic_features) \* \***
 
-Ein Array von Zeigern auf die Sätze von typografischen Features, die in jedem Featurebereich verwendet werden sollen.
-
-</dd> <dt>
-
- *featurerangelengths* \[ in, optional\]
-</dt> <dd>
-
-Typ: **Konstanten UInt32 \***
-
-Die Länge der einzelnen Funktionsbereiche in Zeichen. Die Summe aller Längen muss gleich " *TextLength*" sein.
+Ein Array von Zeigern auf die Sätze typografischer Features, die in jedem Featurebereich verwendet werden.
 
 </dd> <dt>
 
- *featureranges* 
+ *featureRangeLengths* \[ in, optional\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **const UINT32 \***
 
-Die Anzahl von Funktionsbereichen.
+Die Länge jedes Featurebereichs in Zeichen. Die Summe aller Längen sollte gleich *textLength sein.*
 
 </dd> <dt>
 
- *glyphadvanzen* \[ vorgenommen\]
+ *featureRanges* 
 </dt> <dd>
 
-Typ: **float \***
+Typ: **UINT32**
 
-Wenn diese Methode zurückgegeben wird, enthält Sie die voraus Breite jedes Symbols.
+Die Anzahl der Featurebereiche.
 
 </dd> <dt>
 
- *Glyphosat-ffsets* \[ vorgenommen\]
+ *glyphAdvances* \[ out\]
 </dt> <dd>
 
-Typ: **[ **dwrite- \_ Glyphe \_ Offset**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_offset)\***
+Typ: **\* FLOAT**
 
-Wenn diese Methode zurückgegeben wird, enthält Sie den Offset des Ursprungs der einzelnen Glyphe.
+Wenn diese Methode zurückgegeben wird, enthält sie die vorrückliche Breite der einzelnen Glyphen.
+
+</dd> <dt>
+
+ *glyphOffsets* \[ out\]
+</dt> <dd>
+
+Typ: **[ **DWRITE \_ GLYPH \_ OFFSET**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_offset)\***
+
+Enthält nach der Rückkehr dieser Methode den Offset des Ursprungs der einzelnen Glyphen.
 
 </dd> </dl>
 
@@ -255,7 +255,7 @@ Wenn diese Methode zurückgegeben wird, enthält Sie den Offset des Ursprungs de
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -263,16 +263,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Idschreitetextanalyzer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextanalyzer)
+[**IDWriteTextAnalyzer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextanalyzer)
 </dt> </dl>
 
  

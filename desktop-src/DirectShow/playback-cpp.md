@@ -1,19 +1,19 @@
 ---
-description: Dieser Artikel enthält Code für die Datei playback.cpp für das Tutorial Audio-/Videowiedergabe in DirectShow.
+description: Dieser Artikel enthält Code für die Datei "playback.cpp" für das Tutorial Audio-/Videowiedergabe in DirectShow.
 ms.assetid: 3acd0428-e623-4c6a-81b3-de49c7e0fa3b
 title: playback.cpp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe08d0d6ef9b04a5f6e2a2b46d68baafb3999660
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 0d4e62088636b13f7c48e42f89b5fb19e4e66581089cfde9cd064de65172dd09
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432206"
 ---
 # <a name="playbackcpp"></a>playback.cpp
 
-Dieses Thema enthält Code für das Tutorial [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md).
+Dieses Thema enthält Code für das Tutorial [Audio/Video Playback in DirectShow](audio-video-playback-in-directshow.md).
 
 
 ```C++
@@ -402,7 +402,7 @@ done:
 [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md)
 </dt> <dt>
 
-[Beispiel für DirectShow-Wiedergabe](directshow-playback-example.md)
+[DirectShow-Wiedergabebeispiel](directshow-playback-example.md)
 </dt> </dl>
 
  

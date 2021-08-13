@@ -1,31 +1,31 @@
 ---
-title: Erstellen von Geometrie Gruppen
-description: In diesem Thema wird beschrieben, wie Geometrie Gruppen erstellt werden.
+title: Erstellen von Geometriegruppen
+description: In diesem Thema wird beschrieben, wie Geometriegruppen erstellt werden.
 ms.assetid: be364440-75ab-4d8f-a359-39da275272fd
 keywords:
-- Direct2D, Beispiel für Füll Modus
-- Geometrie Gruppen
-- Direct2D, Geometrie Gruppen
+- Direct2D, Beispiel für den Füllmodus
+- Geometry-Gruppen
+- Direct2D,geometry-Gruppen
 - Pfadgeometrien
 - Direct2D, Pfadgeometrien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ceb4a0e63a3274473153e1871a8a085bb04d5146
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5540d96b9befddaa8eb6eef7fcc61e3e6c7665a7319de1ea123c9ce94281f101
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259250"
 ---
-# <a name="how-to-create-geometry-groups"></a>Erstellen von Geometrie Gruppen
+# <a name="how-to-create-geometry-groups"></a>Erstellen von Geometriegruppen
 
-In diesem Thema wird beschrieben, wie Geometrie Gruppen erstellt werden.
+In diesem Thema wird beschrieben, wie Geometriegruppen erstellt werden.
 
-Um eine Geometrie Gruppe zu erstellen, rufen Sie die [**ID2D1Factory:: deategeometrygroup**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-creategeometrygroup) -Methode auf, und geben Sie ein Array von Geometrien und einen Füll Modus an.
+Um eine Geometriegruppe zu erstellen, rufen Sie die [**ID2D1Factory::CreateGeometryGroup-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-creategeometrygroup) auf, und geben Sie ein Array von Geometrien und einen Füllmodus an.
 
-Wenn Sie Geometrien in einer Geometrie Gruppe kombinieren, stellen Sie sicher, dass die Geometrien ähnlich ausgerichtet sind. Wenn Sie sich nicht sicher sind, wie die Geometrien ausgerichtet sind, müssen Sie [**ID2D1Geometry:: Outline**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__float_id2d1simplifiedgeometrysink)) für jede einzelne einzeln aufrufen und dann die resultierenden Geometrien in die Geometrie Gruppe einfügen.
+Wenn Sie Geometrien zu einer Geometriegruppe kombinieren, stellen Sie sicher, dass die Geometrien ähnlich ausgerichtet sind. Wenn Sie sich nicht sicher sind, wie die Geometrien ausgerichtet sind, rufen Sie [**ID2D1Geometry::Outline**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__float_id2d1simplifiedgeometrysink)) einzeln auf, und fügen Sie dann die resultierenden Geometrien in die Geometriegruppe ein.
 
-Das folgende Codebeispiel zeigt die Erstellung von vier konzentrischen Kreisen: der erste Kreis weist einen Radius von 25, das zweite 50, das dritte 75 und das vierte 100 auf. Der Code zeigt auch die Instanziierung eines Arrays von Geometrien sowie die zwei Aufrufe von " [**kreategeometrygroup**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-creategeometrygroup)".
+Das folgende Codebeispiel zeigt die Erstellung von vier konzentrierten Kreisen: Der erste Kreis hat einen Radius von 25, den zweiten 50, den dritten 75 und den vierten 100. Der Code zeigt auch die Instanziierung eines Arrays von Geometrien sowie die beiden Aufrufe von [**CreateGeometryGroup.**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-creategeometrygroup)
 
 
 ```C++
@@ -121,9 +121,9 @@ HRESULT DemoApp::CreateGeometryResources()
 
 
 
-## <a name="drawing-and-filling-of-geometry-groups"></a>Zeichnen und Auffüllen von Geometrie Gruppen
+## <a name="drawing-and-filling-of-geometry-groups"></a>Zeichnen und Auffüllen von Geometriegruppen
 
-Verwenden Sie die [**ID2D1RenderTarget:: fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode und die [**ID2D1RenderTarget::D rawgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) -Methode, um eine Geometrie Gruppe zu zeichnen und auszufüllen. Im folgenden Codebeispiel wird gezeigt, wie eine Geometrie Gruppe gezeichnet und ausgefüllt wird.
+Verwenden Sie zum Zeichnen und Ausfüllen einer Geometriegruppe die Methoden [**ID2D1RenderTarget::FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) und [**ID2D1RenderTarget::D rawGeometry.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) Das folgende Codebeispiel zeigt, wie sie eine Geometriegruppe zeichnen und ausfüllen.
 
 
 ```C++
@@ -202,8 +202,8 @@ HRESULT DemoApp::OnRender()
 
 Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
-![Abbildung von zwei Sätzen von vier konzentrischen Kreisen, von denen eine mit dem zweiten und vierten Ringen gefüllt ist und eine mit allen Ringen gefüllt ist](images/create-geometry-group.png)
+![Abbildung von zwei Sätzen von vier konzentrierten Kreisen, einer mit gefüllten zweiten und vierten Ringen und einer mit gefüllten Ringen](images/create-geometry-group.png)
 
- 
+ 
 
- 
+ 

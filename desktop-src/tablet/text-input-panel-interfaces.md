@@ -1,22 +1,22 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den Schnittstellen, die verwendet werden, um die Darstellung und das Verhalten des Tablet PC-Eingabe Bereichs zu steuern.
+description: Dieser Abschnitt enthält Informationen zu den Schnittstellen, die zum Steuern der Darstellung und des Verhaltens des Tablet PC-Eingabebereichs verwendet werden.
 ms.assetid: 58f49d5b-8b38-45e7-94e1-8a4434d6e13b
-title: Schnittstellen für Text Eingabebereich
+title: Schnittstellen des Texteingabebereichs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 798dc60f34171ce7254bca74c27a51fa12eaba65
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f2dcffe1eb67f00b4fe4d2ed3f371af003e040a30213516ae93eab73def6ef2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118715406"
 ---
-# <a name="text-input-panel-interfaces"></a>Schnittstellen für Text Eingabebereich
+# <a name="text-input-panel-interfaces"></a>Schnittstellen des Texteingabebereichs
 
-Dieser Abschnitt enthält Informationen zu den Schnittstellen, die verwendet werden, um die Darstellung und das Verhalten des Tablet PC-Eingabe Bereichs zu steuern.
+Dieser Abschnitt enthält Informationen zu den Schnittstellen, die zum Steuern der Darstellung und des Verhaltens des Tablet PC-Eingabebereichs verwendet werden.
 
 > [!Note]  
-> Die Schnittstellen für den Text Eingabebereich sind nicht Automation-kompatibel.
+> Die Schnittstellen des Texteingabebereichs sind nicht automatisierungskonform.
 
  
 
@@ -26,12 +26,12 @@ Dieser Abschnitt enthält Informationen zu den Schnittstellen, die verwendet wer
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                                                                                                  |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ihandwrite-textinsertion-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-ihandwrittentextinsertion) | Wird vom benutzerdefinierten Texteingabe Code der Anwendung verwendet, um den Text in das Textfeld und den Text Dienste-Unterstützungs Speicher einzufügen.<br/> |
-| [**Itextinputpanel-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel)                     | Bietet Kontrolle über den Tablet PC-Eingabebereich.<br/>                                                                                  |
-| [**Itextinputpaneleventsink-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpaneleventsink)   | Definiert Methoden, die die [**itextinputpanel-Schnittstellen**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel) Ereignisse behandeln.<br/>                                      |
-| [**Itextinputpanelruninfo-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanelruninfo)       | Stellt eine Methode bereit, um zu bestimmen, ob der Text Eingabebereich gerade ausgeführt wird.<br/>                                                      |
-| [**Itipauwebcompleteclient-Schnittstelle**](itipautocompleteclient.md)       | Ermöglicht dem Client, das Auto Vervollständigen-Anbieter Objekt der Anwendung für den Text Eingabebereich aufzurufen.<br/>                                      |
-| [**Itipauescompleteprovider-Schnittstelle**](itipautocompleteprovider.md)   | Verwaltet die Seite der Anwendung der automatischen vollständigen Integration des Text Eingabe Bereichs.<br/>                                                 |
+| [**IHandWrittenTextInsertion-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-ihandwrittentextinsertion) | Wird vom benutzerdefinierten Texteintragscode der Anwendung verwendet, um den Text sowohl in das Textfeld als auch in den Text services-Backing-Store zu einfügen.<br/> |
+| [**ITextInputPanel-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel)                     | Ermöglicht die Steuerung des Tablet PC-Eingabebereichs.<br/>                                                                                  |
+| [**ITextInputPanelEventSink-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpaneleventsink)   | Definiert Methoden, die die [**ITextInputPanel-Schnittstellenereignisse**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel) behandeln.<br/>                                      |
+| [**ITextInputPanelRunInfo-Schnittstelle**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanelruninfo)       | Stellt eine Methode zur Ermittlung zur Ermittlung der ausführungs aktuell ausgeführten Texteingabebereichs zur<br/>                                                      |
+| [**ITipAutocompleteClient-Schnittstelle**](itipautocompleteclient.md)       | Ermöglicht dem Client das Aufrufen des Anbieterobjekts für den automatischen Abschluss des Texteingabebereichs der Anwendung.<br/>                                      |
+| [**ITipAutocompleteProvider-Schnittstelle**](itipautocompleteprovider.md)   | Verwaltet die Anwendungsseite der automatischen Integration des Texteingabebereichs.<br/>                                                 |
 
 
 
@@ -41,7 +41,7 @@ Dieser Abschnitt enthält Informationen zu den Schnittstellen, die verwendet wer
 
 <dl> <dt>
 
-[Verweis auf Text Eingabe Panel](text-input-panel-reference.md)
+[Referenz zum Texteingabebereich](text-input-panel-reference.md)
 </dt> </dl>
 
  

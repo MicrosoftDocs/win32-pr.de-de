@@ -1,6 +1,6 @@
 ---
-title: Ausgabe Register
-description: Ausgabe Register
+title: Ausgaberegister
+description: Ausgaberegister
 ms.assetid: 44148185-1051-44b9-afde-a2ecd76c829f
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,117 +9,117 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e4a0b397d17b841877796bd9c33432896208ed6d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
-ms.translationtype: HT
+ms.openlocfilehash: 3cfa17c09315f4cdca98f5c5fc10f7ab15541eb8b774835963b06169c4afe225
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104992751"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119457770"
 ---
-# <a name="output-registers"></a>Ausgabe Register
+# <a name="output-registers"></a>Ausgaberegister
 
--   Vertex-Farb Register
--   Nebelregister
--   Positions \_ Register
--   Punkt \_ Größe \_ registrieren
--   Textur \_ Koordinaten \_ Register
+-   Vertexfarbregister
+-   Register "Register"
+-   \_Positionsregister
+-   \_ \_ Punktgrößenregister
+-   \_Texturkoordinatenregister \_
 
-Register Namen wird ein Kleinbuchstabe o vorangestellt, der angibt, dass die Ausgabe Register schreibgeschützt sind.
+Registernamen wird ein Kleinbuchstabe o vorangestellt, der angibt, dass die Ausgaberegister schreibgeschränkt sind.
 
-## <a name="vertex-color-register---od0-od1"></a>Vertex-Farb Register-oD0, oD1
+## <a name="vertex-color-register---od0-od1"></a>Vertexfarbregister – oD0, oD1
 
-oD0 ist das diffuse Farbregister. oD1 ist das Glanz Farben Register. Der oD0-Wert wird interpoliert und in das Eingabe Farbregister 0 (V0) des Pixel-Shaders geschrieben. Der oD1-Wert wird interpoliert und in das Eingabe Farbregister 1 (v1) des Pixel-Shaders geschrieben. Weitere Informationen zu Pixel-Shader-Farb Registern finden Sie unter Registern.
+oD0 ist das diffuse Farbregister. oD1 ist das Specular Color Register. Der oD0-Wert wird interpoliert und in das Eingabefarbregister 0 (v0) des Pixel-Shaders geschrieben. Der oD1-Wert wird interpoliert und in das Eingabefarbregister 1 (v1) des Pixelshader geschrieben. Weitere Informationen zu Farbregistern für Pixelshader finden Sie unter Register.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|-------|------|------|-------|
-| Vertex-Farb Register  | x    | x    | x     | x    |      |       |
+| Vertexfarbregister  | x    | x    | x     | x    |      |       |
 
 
 
- 
+ 
 
-## <a name="fog-register---ofog"></a>Nebelregister-ofog
+## <a name="fog-register---ofog"></a>Register "Register" für Register : oFog
 
-Der Ausgabe Nebel Wert wird registriert. Der Wert ist der zu interinterdende Nebel Faktor und wird dann an die Tabelle mit den Nebel geroutet. Es wird nur die skalarx-Komponente des Nebels verwendet. Werte werden zwischen null und eins geklammert, bevor Sie an den Rasterizer übergeben werden.
+Der Ausgabewert wird registriert. Der Wert ist der Faktor, der interpoliert und dann an die Tabellentabelle weitergeleitet werden soll. Es wird nur die skalare x-Komponente des Skalars verwendet. Werte werden vor der Übergabe an den Rasterizer zwischen 0 und 1 klammern.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|-------|------|------|-------|
-| Nebelregister           | x    | x    | x     | x    |      |       |
+| Register "Register"           | x    | x    | x     | x    |      |       |
 
 
 
- 
+ 
 
-## <a name="position-register---opos"></a>Positions Register-OPOS
+## <a name="position-register---opos"></a>Positionsregister – oPos
 
-Die Ausgabe Position wird registriert. Der Wert ist die Position im homogenen Clippingbereich. Dieser Wert muss vom Vertex-Shader geschrieben werden.
+Die Ausgabeposition wird registriert. Der Wert ist die Position im homogenen Clippingbereich. Dieser Wert muss vom Vertex-Shader geschrieben werden.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|-------|------|------|-------|
-| Positions Register      | x    | x    | x     | x    |      |       |
+| Positionsregister      | x    | x    | x     | x    |      |       |
 
 
 
- 
+ 
 
-## <a name="point-size-register---opts"></a>Punktgröße registrieren-OPTS
+## <a name="point-size-register---opts"></a>Punktgrößenregister – oPts
 
-Die Ausgabepunkt Größen Register. Es wird nur die skalare x-Komponente der Punktgröße verwendet.
+Die Ausgabepunktgröße wird registriert. Es wird nur die skalare x-Komponente der Punktgröße verwendet.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|-------|------|------|-------|
-| Punktgröße registrieren    | x    | x    | x     | x    |      |       |
+| Punktgrößenregister    | x    | x    | x     | x    |      |       |
 
 
 
- 
+ 
 
-## <a name="texture-coordinate-register---ot0-to-ot7"></a>Texturkoordinaten Register-oT0 to oT7
+## <a name="texture-coordinate-register---ot0-to-ot7"></a>Texturkoordinatenregister – oT0 zu oT7
 
-Die Ausgabe Texturkoordinaten werden registriert. Dabei handelt es sich hierbei um ein Array von Ausgabedaten Registern, die durchlaufen und als Texturkoordinaten durch die Textur-samplingphasen zum Weiterleiten von Daten an den Pixelshader verwendet werden.
+Die Ausgabetexturkoordinaten registrieren sich. Dabei handelt es sich insbesondere um ein Array von Ausgabedatenregistern, die durchlaufen und von den Textursamplingstufen als Texturkoordinaten verwendet werden, die Daten an den Pixelshader weiterleiten.
 
 
 
-| Vertex-Shader-Versionen      | 1\_1 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen      | 1\_1 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |-----------------------------|------|------|-------|------|------|-------|
-| Texturkoordinaten Register | x    | x    | x     | x    |      |       |
+| Texturkoordinatenregister | x    | x    | x     | x    |      |       |
 
 
 
- 
+ 
 
-Beim Schreiben in ein Texturkoordinaten Register wird empfohlen, nur so viele Gleit Komma Werte wie die Dimension der entsprechenden Textur Zuordnung zu übergeben. Steuern der mit einem-Modifizierer bestandenen Werte. Verwenden Sie beispielsweise. XY für eine 2D-Textur Zuordnung.
+Beim Schreiben in ein Texturkoordinatenregister wird empfohlen, nur so viele Gleitkommawerte wie die Dimension der entsprechenden Texturkarte zu übergeben. Steuern Sie die werte, die mit einem Modifizierer übergeben werden. Verwenden Sie beispielsweise XY für eine 2D-Texturkarte.
 
-Wenn die Textur Projektion für eine Textur Phase aktiviert ist, müssen alle vier Gleit Komma Werte in das entsprechende Textur Register geschrieben werden.
+Wenn die Texturprojektion für eine Texturphase aktiviert ist, müssen alle vier Gleitkommawerte in das entsprechende Texturregister geschrieben werden.
 
-Jedes der D3DTTFF \* Textur Transformations Flags sollte NULL sein, wenn die programmierbare Pipeline verwendet wird.
+Jedes der \* D3DTTFF-Texturtransformationsflags sollte null sein, wenn die programmierbare Pipeline verwendet wird.
 
-### <a name="texture-coordinate-range"></a>Texturkoordinaten Bereich
+### <a name="texture-coordinate-range"></a>Texturkoordinatenbereich
 
-Objekt-Vertex-Daten liefern Eingabe Texturkoordinaten. Objekte, die keine gekachelten Texturen verwenden, weisen häufig Texturkoordinaten im Bereich von \[ 0 bis 1 auf \] . Objekte mit Kacheln, wie z. b. Terrain, haben in der Regel Texturkoordinaten, die von \[ -?, +? ab liegen \] ? kann eine große Gleit Komma Zahl sein.
+Objektvertexdaten liefern Eingabetexturkoordinaten. Objekte, die keine gekachelten Texturen verwenden, weisen häufig Texturkoordinaten im Bereich \[ von 0,1 \] auf. Objekte, die kachelte Texturen verwenden, z. B. Gelände, weisen in der Regel Texturkoordinaten auf, die von \[ -?,+? wo \] ? kann eine große Gleitkommazahl sein.
 
-Die Texturkoordinaten Interpolation wird für Scheitelpunkt Daten für die rasterisierung ausgeführt. Während der rasterisierung werden Texturkoordinaten zwischen Objekt Scheitel Punkten interpoliert, durch Textur Umbrüchen geändert und durch die Textur Größe (auch durch Berücksichtigung des Textur Adress Modus) skaliert, sodass ein ganzzahliger Index erzeugt wird. Der Index wird dann verwendet, um eine Textur Suche auszuführen. Mit MaxTextureRepeat kann bestimmt werden, wie oft eine Textur gekachelt werden kann.
+Die Texturkoordinateninterpolation wird für Scheitelpunktdaten für die Rasterung durchgeführt. Während der Rasterung werden Texturkoordinaten zwischen Objektvertices interpoliert, durch Texturumbruch geändert und durch die Texturgröße skaliert (auch unter Berücksichtigung des Texturadressmodus), um einen ganzzahligen Index zu erzeugen. Der Index wird dann verwendet, um eine Textursuche durchzuführen. MaxTextureRepeat kann verwendet werden, um zu bestimmen, wie oft eine Textur gekachelt werden kann.
 
-Wenn Texturkoordinaten direkt in einem Pixelshader (mit texcoord oder texcrd) gelesen werden, hängt der Bereich der Textur Koordinate von der Anweisung und der Pixel-Shader-Version ab.
+Wenn Texturkoordinaten direkt in einen Pixel-Shader gelesen werden (mithilfe von Texcoord oder Texcrd), hängt der Texturkoordinatenbereich von der Anweisung und der Pixelshaderversion ab.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Shader-Register](dx9-graphics-reference-asm-vs-registers.md)
+[Vertex-Shaderregister](dx9-graphics-reference-asm-vs-registers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

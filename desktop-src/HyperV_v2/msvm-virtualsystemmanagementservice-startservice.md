@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6ebb07240fdd95d98269056eca4eefe691f52077
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5eb8ed4d3d4cbb589efc803c7afa0c14bececf90178ae7705ca9e75e392e464c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119426170"
 ---
 # <a name="startservice-method-of-the-msvm_virtualsystemmanagementservice-class"></a>StartService-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
@@ -53,7 +53,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -63,7 +63,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

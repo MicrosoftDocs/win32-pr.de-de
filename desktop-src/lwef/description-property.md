@@ -1,19 +1,19 @@
 ---
-title: Description-Eigenschaft (Features der Legacy-Windows-Umgebung)
+title: Description-Eigenschaft (Legacy Windows Umgebungsfeatures)
 description: Description-Eigenschaft
 ms.assetid: 81ac4bc7-ef0c-4e7c-b57e-acc4ad315515
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b4fb60b20a57f56a914c7e44ced957d91bf7085
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: da7ff293af98303fa0dab97aca76ed169123ea229c1fc70c156ef2c099472157
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118751992"
 ---
-# <a name="description-property-legacy-windows-environment-features"></a>Description-Eigenschaft (Features der Legacy-Windows-Umgebung)
+# <a name="description-property-legacy-windows-environment-features"></a>Description-Eigenschaft (Legacy Windows Umgebungsfeatures)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -27,13 +27,13 @@ Gibt eine Zeichenfolge zurück, die die Beschreibung für das angegebene Zeichen
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent*. **Zeichen ("**_Merkmal-ID_*_"). Description_* - \[  =  *Zeichenfolge*\]
+*-Agent.* **Characters("**_CharacterID_*_")._* \[  =  *Beschreibungszeichenfolge*\]
 
 
 
-| Teil     | BESCHREIBUNG                                                                                    |
+| Teil     | Beschreibung                                                                                    |
 |----------|------------------------------------------------------------------------------------------------|
-| *string* | Ein Zeichen folgen Wert, der der Beschreibung des Zeichens entspricht (in der aktuellen Spracheinstellung). |
+| *string* | Ein Zeichenfolgenwert, der der Beschreibung des Zeichens (in der aktuellen Spracheinstellung) entspricht. |
 
 
 
@@ -41,12 +41,12 @@ Gibt eine Zeichenfolge zurück, die die Beschreibung für das angegebene Zeichen
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Beschreibung** eines Zeichens hängt möglicherweise von der **LanguageID** -Einstellung des Zeichens ab. Der Name eines Zeichens in einer Sprache kann anders sein oder andere Zeichen als in einem anderen verwenden. Die Standard **Beschreibung** des Zeichens für eine bestimmte Sprache wird definiert, wenn das Zeichen mit dem Microsoft-Agent-Zeichen-Editor kompiliert wird.
+Die Beschreibung eines **Zeichens** kann von der **LanguageID-Einstellung** des Zeichens abhängen. Der Name eines Zeichens in einer Sprache kann sich unterscheiden oder andere Zeichen als in einer anderen verwenden. Die Standardbeschreibung des Zeichens **für** eine bestimmte Sprache wird definiert, wenn das Zeichen mit dem Microsoft Agent-Zeichen-Editor kompiliert wird.
 
 > [!Note]  
-> Die **Description** -Eigenschaften Einstellung ist optional und kann nicht für alle Zeichen angegeben werden.
+> Die **Eigenschaftseinstellung** Beschreibung ist optional und wird möglicherweise nicht für alle Zeichen angegeben.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Legt den Verschlüsselungs Grad fest, der vor dem Zugriff auf geschützte Inhalte für die CPU oder den Bus ausgeführt wird.
+description: Legt die Verschlüsselungsebene fest, die vor dem Zugriff auf geschützte Inhalte für die CPU oder den Bus ausgeführt wird.
 ms.assetid: 6de6c4a3-705a-4420-b9f4-8d4d442b23bf
-title: D3DAUTHENTICATEDCONFIGURE_ENCRYPTIONWHENACCESSIBLE (D3d9types. h)
+title: D3DAUTHENTICATEDCONFIGURE_ENCRYPTIONWHENACCESSIBLE (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,34 +13,34 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 8b624c26c81549372e0e09b4a08ce73f6cd3dd27
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f785931cf70ae48082cb45c436dd1c50b7c329fef61619738a3ef0a08240d7b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118742647"
 ---
-# <a name="d3dauthenticatedconfigure_encryptionwhenaccessible"></a>D3DAUTHENTICATEDCONFIGURE \_ verschlüsselt
+# <a name="d3dauthenticatedconfigure_encryptionwhenaccessible"></a>D3DAUTHENTICATEDCONFIGURE \_ ENCRYPTIONWHENACCESSIBLE
 
-Legt den Verschlüsselungs Grad fest, der vor dem Zugriff auf geschützte Inhalte für die CPU oder den Bus ausgeführt wird.
+Legt die Verschlüsselungsebene fest, die vor dem Zugriff auf geschützte Inhalte für die CPU oder den Bus ausgeführt wird.
 
 
 
 | Anforderung | Wert |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------|
-| Befehls-GUID | **D3DAUTHENTICATEDCONFIGURE \_ verschlüsselt**                                                                     |
-| Eingabedaten   | [**D3DAUTHENTICATEDCHANNEL \_ Konfiguration reuncompressedencryption**](d3dauthenticatedchannel-configureuncompressedencryption.md) |
+| Befehls-GUID | **D3DAUTHENTICATEDCONFIGURE \_ ENCRYPTIONWHENACCESSIBLE**                                                                     |
+| Eingabedaten   | [**D3DAUTHENTICATEDCHANNEL \_ CONFIGUREUNCOMGABEDENCRYPTION**](d3dauthenticatedchannel-configureuncompressedencryption.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
+Die folgenden Kanaltypen unterstützen diese Abfrage:
 
--   **D3DAUTHENTICATEDCHANNEL- \_ Treiber \_ Hardware**
--   **D3DAUTHENTICATEDCHANNEL- \_ Treiber \_ Software**
+-   **D3DAUTHENTICATEDCHANNEL-TREIBERHARDWARE \_ \_**
+-   **D3DAUTHENTICATEDCHANNEL-TREIBERSOFTWARE \_ \_**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,23 +48,23 @@ Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Content Protection-Befehle](content-protection-commands.md)
 </dt> <dt>
 
-[GPU-basiertes Content Protection](gpu-based-content-protection.md)
+[GPU-basierte Content Protection](gpu-based-content-protection.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Configure**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-configure)
+[**IDirect3DAuthenticatedChannel9::Configure**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-configure)
 </dt> </dl>
 
  

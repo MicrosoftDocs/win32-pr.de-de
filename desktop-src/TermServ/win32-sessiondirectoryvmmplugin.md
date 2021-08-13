@@ -1,11 +1,11 @@
 ---
 title: Win32_SessionDirectoryVMMPlugin-Klasse
-description: Stellt ein VMM-Plug-in (Virtual Machine Manager) dar, das bei einem Sitzungs Broker registriert ist.
+description: Stellt ein VMM-Plug-In (Virtual Machine Manager) dar, das bei einem Sitzungsbroker registriert ist.
 ms.assetid: b5c5deb1-6c1b-4547-a24a-db3ce6654144
 ms.tgt_platform: multiple
 keywords:
-- Win32_SessionDirectoryVMMPlugin-Klasse Remotedesktopdienste
-- Win32_SessionDirectoryVMMPlugin Klasse Remotedesktopdienste, beschrieben
+- Win32_SessionDirectoryVMMPlugin-Klassen-Remotedesktopdienste
+- Win32_SessionDirectoryVMMPlugin-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c5fc6b899eaa264357527eb107e11ad5a40ad67
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7481022951664b49b912b854e96e2d30895b0716ee67b6eb01ce1a9f1b1561ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422360"
 ---
-# <a name="win32_sessiondirectoryvmmplugin-class"></a>Win32- \_ Klasse "sessiondirectoryvmmplugin"
+# <a name="win32_sessiondirectoryvmmplugin-class"></a>Win32 \_ SessionDirectoryVMMPlugin-Klasse
 
-Stellt ein VMM-Plug-in (Virtual Machine Manager) dar, das bei einem Sitzungs Broker registriert ist.
+Stellt ein VMM-Plug-In (Virtual Machine Manager) dar, das bei einem Sitzungsbroker registriert ist.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -52,27 +52,27 @@ class Win32_SessionDirectoryVMMPlugin
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ sessiondirectoryvmmplugin** " verfügt über diese Typen von Membern:
+Die **Win32 \_ SessionDirectoryVMMPlugin-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ sessiondirectoryvmmplugin** " verfügt über diese Methoden.
+Die **Win32 \_ SessionDirectoryVMMPlugin-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                             | BESCHREIBUNG                                                   |
+| Methode                                                                             | Beschreibung                                                   |
 |:-----------------------------------------------------------------------------------|:--------------------------------------------------------------|
-| [**Getcurrentvmmplugin**](getcurrentvmmplugin-win32-sessiondirectoryvmmplugin.md) | Ruft das Plug-in mit der höchsten Priorität ab, das aktiviert ist.<br/> |
-| [**Registervmmplugin**](registervmmplugin-win32-sessiondirectoryvmmplugin.md)     | Registriert ein neues VMM-Plug-in.<br/>                       |
-| [**Abgeleitete**](setenabled-win32-sessiondirectoryvmmplugin.md)                   | Aktiviert oder deaktiviert das Plug-in.<br/>                   |
-| [**SetName**](setname-win32-sessiondirectoryvmmplugin.md)                         | Legt den Namen des Plug-ins fest.<br/>                      |
-| [**SetPriority**](setpriority-win32-sessiondirectoryvmmplugin.md)                 | Legt die Priorität des Plug-ins fest.<br/>                  |
-| [**Setprovider**](setprovider-win32-sessiondirectoryvmmplugin.md)                 | Legt den Anbieter Namen des Plug-ins fest.<br/>             |
-| [**Setservicelokation**](setservicelocation-win32-sessiondirectoryvmmplugin.md)   | Legt den Speicherort des Plug-Ins für den Dienst fest.<br/>          |
-| [**Unregistervmmplugin**](unregistervmmplugin-win32-sessiondirectoryvmmplugin.md) | Hebt die Registrierung des Plug-Ins auf.<br/>                           |
+| [**GetCurrentVMMPlugin**](getcurrentvmmplugin-win32-sessiondirectoryvmmplugin.md) | Ruft das Plug-In mit der höchsten Priorität ab, das aktiviert ist.<br/> |
+| [**RegisterVMMPlugin**](registervmmplugin-win32-sessiondirectoryvmmplugin.md)     | Registriert ein neues VMM-Plug-In.<br/>                       |
+| [**SetEnabled**](setenabled-win32-sessiondirectoryvmmplugin.md)                   | Aktiviert oder deaktiviert das Plug-In.<br/>                   |
+| [**SetName**](setname-win32-sessiondirectoryvmmplugin.md)                         | Legt den Namen des Plug-Ins fest.<br/>                      |
+| [**SetPriority**](setpriority-win32-sessiondirectoryvmmplugin.md)                 | Legt die Priorität des Plug-Ins fest.<br/>                  |
+| [**SetProvider**](setprovider-win32-sessiondirectoryvmmplugin.md)                 | Legt den Anbieternamen des Plug-Ins fest.<br/>             |
+| [**SetServiceLocation**](setservicelocation-win32-sessiondirectoryvmmplugin.md)   | Legt den Dienstspeicherort des Plug-Ins fest.<br/>          |
+| [**UnregisterVMMPlugin**](unregistervmmplugin-win32-sessiondirectoryvmmplugin.md) | Aufheben der Registrierung des Plug-Ins.<br/>                           |
 
 
 
@@ -80,20 +80,20 @@ Die Win32-Klasse " **\_ sessiondirectoryvmmplugin** " verfügt über diese Metho
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ sessiondirectoryvmmplugin** " verfügt über diese Eigenschaften.
+Die **Win32 \_ SessionDirectoryVMMPlugin-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiviert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das Plug-in aktiviert oder deaktiviert ist. **True** , wenn das Plug-in aktiviert ist, andernfalls **false** . Das Plug-in ist standardmäßig deaktiviert.
+Gibt an, ob das Plug-In aktiviert oder deaktiviert ist. **True,** wenn das Plug-In aktiviert ist, **andernfalls FALSE.** Das Plug-In ist standardmäßig deaktiviert.
 
 </dd> <dt>
 
@@ -106,62 +106,62 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die Priorität des Plug-ins. Je höher der Wert ist, desto höher ist die Priorität des Plug-ins. Der Standardwert ist 0 (null).
+Die Priorität des Plug-Ins. Je höher der Wert, desto höher ist die Priorität des Plug-Ins. Die Priorität ist standardmäßig 0 (null).
 
 </dd> <dt>
 
-**sclassid**
+**sClassID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Klassen Bezeichner des Plug-ins.
+Der Klassenbezeichner des Plug-Ins.
 
 </dd> <dt>
 
 **sName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Plug-ins.
+Der Name des Plug-Ins.
 
 </dd> <dt>
 
-**sprovider**
+**sProvider**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Plug-in-Anbieters.
+Der Name des Plug-In-Anbieters.
 
 </dd> <dt>
 
-**sservicelokation**
+**sServiceLocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Dienst Speicherort, den das Plug-in kontaktieren soll.
+Der Dienststandort, an den das Plug-In sich wenden soll.
 
 </dd> </dl>
 
@@ -174,7 +174,7 @@ Der Dienst Speicherort, den das Plug-in kontaktieren soll.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 

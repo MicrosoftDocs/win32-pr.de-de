@@ -1,10 +1,10 @@
 ---
-title: Iadsproperty-Eigenschaften Methoden (IADs. h)
+title: IADsProperty-Eigenschaftsmethoden (Iads.h)
 description: Lesen und schreiben Sie die in der folgenden Tabelle beschriebenen Eigenschaften.
 ms.assetid: dd348a3c-0386-4fa2-984d-cdea6f09bd72
 ms.tgt_platform: multiple
 keywords:
-- Iadsproperty-Eigenschaften Methoden ADSI
+- IADsProperty-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -30,32 +30,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 233bd5411e1c82956ef745255418a1b176af5900
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0bc0e15589b54fc6ca568a385e1a3806d5f0be206eedb6c263546bbd24e81274
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691059"
 ---
-# <a name="iadsproperty-property-methods"></a>Iadsproperty-Eigenschaften Methoden
+# <a name="iadsproperty-property-methods"></a>IADsProperty-Eigenschaftenmethoden
 
-Die Eigenschaften Methoden der [**iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty) -Schnittstelle lesen und schreiben die in der folgenden Tabelle beschriebenen Eigenschaften. Weitere Informationen zu Eigenschafts Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsProperty-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsproperty) lesen und schreiben die in der folgenden Tabelle beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftenmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Maxrange**
+**MaxRange**
 </dt> <dd> <dl>
 
-Obere Grenze der Werte.
+Obergrenze der Werte.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -73,17 +73,17 @@ HRESULT put_MaxRange(
 
 </dt> </dl> </dd> <dt>
 
-**Minrange**
+**MinRange**
 </dt> <dd> <dl>
 
-Niedrigerer Grenzwert für Werte.
+Untere Wertegrenze.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -104,14 +104,14 @@ HRESULT put_MinRange(
 **Mehrwertigen**
 </dt> <dd> <dl>
 
-Gibt an, ob eine Eigenschaft einzelne oder mehrere Werte unterstützt
+Gibt an, ob die Eigenschaft einzelne oder mehrere Werte unterstützt.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant \_ bool**
+Skriptdatentyp: **VARIANT \_ BOOL**
 </dt> <dt>
 
 
@@ -129,17 +129,17 @@ HRESULT put_MultiValued(
 
 </dt> </dl> </dd> <dt>
 
-**OID**
+**Oid**
 </dt> <dd> <dl>
 
-Verzeichnis spezifischer Objekt Bezeichner.
+Verzeichnisspezifischer Objektbezeichner.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -160,14 +160,14 @@ HRESULT put_OID(
 **Syntax**
 </dt> <dd> <dl>
 
-Relativer Pfad des Syntax Objekts.
+Relativer Pfad des Syntaxobjekts.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -189,7 +189,7 @@ HRESULT put_Syntax(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das **OperatingSystem** -Attribut eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht.
+Im folgenden Codebeispiel wird das **OperatingSystem-Attribut** eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht.
 
 
 ```VB
@@ -223,7 +223,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird das **OperatingSystem** -Attribut eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht. Aus Gründen der Übersichtlichkeit wird die Fehlerüberprüfung ausgelassen.
+Im folgenden Codebeispiel wird das **OperatingSystem-Attribut** eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht. Aus Kürze wird die Fehlerüberprüfung weggelassen.
 
 
 ```C++
@@ -315,23 +315,23 @@ CoUninitialize();
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsproperty ist als C8F93DD3-4AE0-11CF-9E73-00AA004A5691 definiert.<br/>         |
+| IID<br/>                      | IID \_ IADsProperty ist als C8F93DD3-4AE0-11CF-9E73-00AA004A5691 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
+[**IADsClass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
 </dt> <dt>
 
-[**Iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty)
+[**IADsProperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty)
 </dt> <dt>
 
-[**Iadssyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax)
+[**IADsSyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Iwmpplaylistarray-Schnittstelle (VB und C) (WMP. h)
-description: Stellt eine Eigenschaft und eine Methode für den Zugriff auf eine Auflistung von iwmpwiedergabe-Schnittstellen nach Indexnummer bereit. Die iwmpplaylistarray-Schnittstelle macht die folgende Eigenschaft verfügbar.
+title: IWMPPlaylistArray-Schnittstelle (VB und C) (Wmp.h)
+description: Stellt eine Eigenschaft und eine Methode für den Zugriff auf eine Auflistung von IWMPPlaylist-Schnittstellen nach Indexnummer bereit. Die IWMPPlaylistArray-Schnittstelle macht die folgende Eigenschaft verfügbar.
 ms.assetid: 8a7477ee-58c5-41b2-9259-d1976433ae02
 keywords:
-- Windows Media Player der iwmpplaylistarray-Schnittstelle (VB und C)
-- Iwmpplaylistarray (VB und C) Interface Windows Media Player, beschrieben
+- IWMPPlaylistArray-Schnittstelle (VB und C) Windows Media Player
+- IWMPPlaylistArray-Schnittstelle (VB und C) Windows Media Player beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,35 +15,35 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c3c926545635e1e83c7ba18eac99b2e96da59f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de9cd5db545e75aaf03c488608e825c92645f7cfaeaf0f645cc764fc6e886ecd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119468430"
 ---
-# <a name="iwmpplaylistarray-vb-and-c-interface"></a>Iwmpplaylistarray-Schnittstelle (VB und c#)
+# <a name="iwmpplaylistarray-vb-and-c-interface"></a>IWMPPlaylistArray-Schnittstelle (VB und C#)
 
-Stellt eine Eigenschaft und eine Methode für den Zugriff auf eine Auflistung von **iwmpwiedergabe** -Schnittstellen nach Indexnummer bereit.
+Stellt eine Eigenschaft und eine Methode für den Zugriff auf eine Auflistung von **IWMPPlaylist-Schnittstellen** nach Indexnummer bereit.
 
-Die **iwmpplaylistarray** -Schnittstelle macht die folgende Eigenschaft verfügbar.
+Die **IWMPPlaylistArray-Schnittstelle** macht die folgende Eigenschaft verfügbar.
 
 ## <a name="members"></a>Member
 
-Die **iwmpplaylistarray-Schnittstelle (VB und c#)** verfügt über diese Typen von Membern:
+Die **IWMPPlaylistArray-Schnittstelle (VB und C#)** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmpplaylistarray-Schnittstelle (VB und c#)** verfügt über diese Methoden.
+Die **IWMPPlaylistArray-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
 | Methode                                                                   | BESCHREIBUNG                                                                                        |
 |:-------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| [**Element**](wmplibiwmpplaylistarray-iwmpplaylistarray-item--vb-and-c.md) | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die die Wiedergabeliste am angegebenen Index darstellt.<br/> |
+| [**Element**](wmplibiwmpplaylistarray-iwmpplaylistarray-item--vb-and-c.md) | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die die Wiedergabeliste am angegebenen Index darstellt.<br/> |
 
 
 
@@ -51,25 +51,25 @@ Die **iwmpplaylistarray-Schnittstelle (VB und c#)** verfügt über diese Methode
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **iwmpplaylistarray-Schnittstelle (VB und c#)** verfügt über diese Eigenschaften.
+Die **IWMPPlaylistArray-Schnittstelle (VB und C#)** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                              | Zugriffstyp          | BESCHREIBUNG                                                   |
 |:--------------------------------------------------------------------------------------|:---------------------|:--------------------------------------------------------------|
-| [**count**](wmplibiwmpplaylistarray-iwmpplaylistarray-count--vb-and-c.md)<br/> | Schreibgeschützt<br/> | Ruft die Anzahl der Wiedergabelisten im Wiedergabelisten Array ab.<br/> |
+| [**Count**](wmplibiwmpplaylistarray-iwmpplaylistarray-count--vb-and-c.md)<br/> | Schreibgeschützt<br/> | Ruft die Anzahl der Wiedergabelisten im Wiedergabelistenarray ab.<br/> |
 
 
 
  
 
-Verwenden Sie die folgenden Methoden, um eine **iwmpplaylistarray** -Schnittstelle zu erhalten.
+Abrufen einer **IWMPPlaylistArray-Schnittstelle** mithilfe der folgenden Methoden.
 
 
 
 | Schnittstelle                                                      | Methode                                                                                                                                                                               |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Iwmpplaylistcollection](iwmpplaylistcollection--vb-and-c.md) | [**GetAll**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getall--vb-and-c.md), [ **getByName**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getbyname--vb-and-c.md) |
+| [IWMPPlaylistCollection](iwmpplaylistcollection--vb-and-c.md) | [**getAll**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getall--vb-and-c.md), [ **getByName**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getbyname--vb-and-c.md) |
 
 
 
@@ -81,18 +81,18 @@ Verwenden Sie die folgenden Methoden, um eine **iwmpplaylistarray** -Schnittstel
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

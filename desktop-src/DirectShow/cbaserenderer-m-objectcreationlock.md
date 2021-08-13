@@ -1,7 +1,7 @@
 ---
-description: Sperre zum Schutz der Erstellung von Objekten innerhalb des Filters.
+description: Sperren Sie , um die Erstellung von Objekten innerhalb des Filters zu schützen.
 ms.assetid: ad1d2584-0d9e-42a8-83ea-0c1907ddcf33
-title: 'Cbaserenderer:: m_ObjectCreationLock Member (renbase. h)'
+title: CBaseRenderer::m_ObjectCreationLock-Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e344b20b4924ac26ebe6253f5388136b350abefe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6b0925aab0345d5eed8da19e12f355c417d66c1f36a1384a05950a87d4c95b3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119429310"
 ---
-# <a name="cbaserendererm_objectcreationlock-member"></a>Cbaserenderer:: m \_ objectkreationlock-Member
+# <a name="cbaserendererm_objectcreationlock-member"></a>CBaseRenderer::m \_ ObjectCreationLock-Member
 
-Sperre zum Schutz der Erstellung von Objekten innerhalb des Filters. Der Filter enthält diese Sperre, wenn er die Eingabe-PIN ([**cbaserenderer:: m \_ pinputpin**](cbaserenderer-m-pinputpin.md)) oder das [**crendererpospassthru**](crendererpospassthru.md) -Objekt ([**cbaserenderer:: m \_ pposition**](cbaserenderer-m-pposition.md)) erstellt. Diese Sperre verhindert, dass mehrere Threads gleichzeitig versuchen, eines dieser Objekte zu erstellen.
+Sperren Sie , um die Erstellung von Objekten innerhalb des Filters zu schützen. Der Filter hält diese Sperre bei der Erstellung des Eingabepins ([**CBaseRenderer::m \_ pInputPin**](cbaserenderer-m-pinputpin.md)) oder des [**CRendererPosPassThru-Objekts**](crendererpospassthru.md) ([**CBaseRenderer::m \_ pPosition**](cbaserenderer-m-pposition.md)) bei. Diese Sperre verhindert, dass mehrere Threads gleichzeitig versuchen, eines dieser Objekte zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CCritSec m_ObjectCreationLock;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

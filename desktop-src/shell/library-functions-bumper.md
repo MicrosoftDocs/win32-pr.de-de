@@ -9,27 +9,27 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: bec002a402be390f6e9f9e0be955b6a2626267e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce9fbc13531135aa5cee3b0a8d7252adeef97c9e66a3f2093dd1dbdff4b93fad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118720146"
 ---
 # <a name="library-functions"></a>Bibliotheksfunktionen
 
-In diesem Abschnitt werden Funktionen im Zusammenhang mit shellbibliotheken beschrieben, die in Windows 7 eingeführt wurden.
+In diesem Abschnitt werden Funktionen im Zusammenhang mit Shellbibliotheken beschrieben, die in Windows 7 eingeführt wurden.
 
--   [**"Shaddfolderpathdelibrary"**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shaddfolderpathtolibrary)
--   [**Shup-brary**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shcreatelibrary)
--   [**Shloadlibraryfromitem**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shloadlibraryfromitem)
--   [**Shloadlibraryfromknownfolder**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shloadlibraryfromknownfolder)
--   [**Shloadlibraryfromparamedusingname**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shloadlibraryfromparsingname)
--   [**Shremovefolderpathfromlibrary**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shremovefolderpathfromlibrary)
--   [**"Shresolvefolderpythinlibrary"**](/windows/desktop/api/Shobjidl/nf-shobjidl-shresolvefolderpathinlibrary)
--   [**"Shresolvelibrary"**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shresolvelibrary)
--   [**Shsavelibraryinfolderpath**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shsavelibraryinfolderpath)
--   [**Shshowmanagelibraryui**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shshowmanagelibraryui)
+-   [**SHAddFolderPathToLibrary**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shaddfolderpathtolibrary)
+-   [**SHCreateLibrary**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shcreatelibrary)
+-   [**SHLoadLibraryFromItem**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shloadlibraryfromitem)
+-   [**SHLoadLibraryFromKnownFolder**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shloadlibraryfromknownfolder)
+-   [**SHLoadLibraryFromParsingName**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shloadlibraryfromparsingname)
+-   [**SHRemoveFolderPathFromLibrary**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shremovefolderpathfromlibrary)
+-   [**SHResolveFolderPathInLibrary**](/windows/desktop/api/Shobjidl/nf-shobjidl-shresolvefolderpathinlibrary)
+-   [**SHResolveLibrary**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shresolvelibrary)
+-   [**SHSaveLibraryInFolderPath**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shsavelibraryinfolderpath)
+-   [**SHShowManageLibraryUI**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shshowmanagelibraryui)
 
  
 

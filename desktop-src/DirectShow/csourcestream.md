@@ -1,7 +1,7 @@
 ---
-description: Die csourcestream-Klasse stellt eine Ausgabe-PIN für die CSource-Filterklasse bereit.
+description: Die CSourceStream-Klasse stellt einen Ausgabepin für die CSource-Filterklasse bereit.
 ms.assetid: 5ccfb129-93e2-4773-9398-5f59f2914ba7
-title: Csourcestream-Klasse (Quelle. h)
+title: CSourceStream-Klasse (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,66 +16,66 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 36b9085df8c15e765c751be8b5fcdfd4f4a02140
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0f7563cabff97626ac45a150e9a763033d9ce9261e5ae528e83d174e35d4f0d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119428784"
 ---
-# <a name="csourcestream-class"></a>Csourcestream-Klasse
+# <a name="csourcestream-class"></a>CSourceStream-Klasse
 
 ![csourcestream-Klassenhierarchie](images/source02.png)
 
-Die **csourcestream** -Klasse stellt eine Ausgabe-PIN für die [**CSource**](csource.md) -Filterklasse bereit.
+Die **CSourceStream-Klasse** stellt einen Ausgabepin für die [**CSource-Filterklasse**](csource.md) bereit.
 
-Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [**CSource**](csource.md). Diese Klasse erbt die Klasse " [**camthread**](camthread.md) ", die einen Arbeits Thread zum Streamen von Daten aus der PIN bereitstellt. Die **csourcestream** -Klasse implementiert die folgenden Hilfsmethoden, um Anforderungen an den Thread zu senden:
+Informationen zur Verwendung dieser Klasse finden Sie unter [**CSource**](csource.md). Diese Klasse erbt die [**KLASSE CABThread,**](camthread.md) die einen Arbeitsthread zum Streamen von Daten vom Pin bereitstellt. Die **CSourceStream-Klasse** implementiert die folgenden Hilfsmethoden, um Anforderungen an den Thread zu senden:
 
--   [**Csourcestream:: Exit**](csourcestream-exit.md)
--   [**Csourcestream:: init**](csourcestream-init.md)
--   [**Csourcestream::P ause**](csourcestream-pause.md)
--   [**Csourcestream:: Run**](csourcestream-run.md)
--   [**Csourcestream:: Beendigung**](csourcestream-stop.md)
+-   [**CSourceStream::Exit**](csourcestream-exit.md)
+-   [**CSourceStream::Init**](csourcestream-init.md)
+-   [**CSourceStream::P ause**](csourcestream-pause.md)
+-   [**CSourceStream::Run**](csourcestream-run.md)
+-   [**CSourceStream::Stop**](csourcestream-stop.md)
 
-Die erste Anforderung an den Thread muss [**Init**](csourcestream-init.md)sein. Die [**Beendigungs Anforderung beendet den Thread**](csourcestream-exit.md) . In der Praxis ist es nicht notwendig, eine dieser Methoden direkt aufzurufen, da die [**csourcestream:: Active**](csourcestream-active.md) -und [**csourcestream:: ininaktiven**](csourcestream-inactive.md) -Methoden der PIN diese bei Bedarf aufrufen.
+Die erste Anforderung an den Thread muss [**Init lauten.**](csourcestream-init.md) Die [**Exit-Anforderung**](csourcestream-exit.md) beendet den Thread. In der Praxis ist es nicht erforderlich, eine dieser Methoden direkt aufzurufen, da sie von den [**Methoden CSourceStream::Active**](csourcestream-active.md) und [**CSourceStream::Inactive**](csourcestream-inactive.md) des Pins bei Bedarf aufgerufen werden.
 
-Die Klasse stellt auch mehrere "Handlermethoden" bereit:
+Die -Klasse stellt auch mehrere Handlermethoden bereit:
 
--   [**Csourcestream:: onthreadcreate**](csourcestream-onthreadcreate.md)
--   [**Csourcestream:: onthreaddestroy**](csourcestream-onthreaddestroy.md)
--   [**Csourcestream:: onthreadstartplay**](csourcestream-onthreadstartplay.md)
+-   [**CSourceStream::OnThreadCreate**](csourcestream-onthreadcreate.md)
+-   [**CSourceStream::OnThreadDestroy**](csourcestream-onthreaddestroy.md)
+-   [**CSourceStream::OnThreadStartPlay**](csourcestream-onthreadstartplay.md)
 
-Diese Aktionen werden in der Basisklasse nicht durchgesetzt, aber die abgeleitete Klasse kann Sie überschreiben.
+Diese tun nichts in der Basisklasse, aber die abgeleitete Klasse kann sie überschreiben.
 
 
 
-| Geschützte Member-Variablen                                             | BESCHREIBUNG                                                                                                                       |
+| Geschützte Membervariablen                                             | Beschreibung                                                                                                                       |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [**m \_ pFilter**](csourcestream-m-pfilter.md)                          | Zeiger auf den Filter, der diese PIN enthält.                                                                                     |
-| Geschützte Methoden                                                      | BESCHREIBUNG                                                                                                                       |
-| [**Onthreadcreate**](csourcestream-onthreadcreate.md)                 | Wird aufgerufen, wenn der streamingindthread initialisiert wird. Virtu.                                                                         |
-| [**Onthreaddestroy**](csourcestream-onthreaddestroy.md)               | Wird aufgerufen, wenn der streamingthread gerade beendet wird. Virtu.                                                                       |
-| [**Onthreadstartplay**](csourcestream-onthreadstartplay.md)           | Wird am Anfang der [**csourcestream::D obufferprocessingloop**](csourcestream-dobufferprocessingloop.md) -Methode aufgerufen. Virtu. |
-| [**Aktiv**](csourcestream-active.md)                                 | Benachrichtigt die PIN, dass der Filter jetzt aktiv ist.                                                                                   |
-| [**Inaktiv**](csourcestream-inactive.md)                             | Benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist.                                                                             |
-| [**GetRequest**](csourcestream-getrequest.md)                         | Wartet auf die nächste Thread Anforderung.                                                                                                |
-| [**Check Request**](csourcestream-checkrequest.md)                     | Überprüft, ob eine Thread Anforderung vorhanden ist, ohne zu blockieren.                                                                            |
-| [**ThreadProc**](csourcestream-threadproc.md)                         | Thread Prozedur. Virtu.                                                                                                        |
-| [**Dobufferprocessingloop**](csourcestream-dobufferprocessingloop.md) | Generiert Mediendaten und übergibt sie an die downstreameingabepin. Virtu.                                                        |
-| [**Checkmediatype**](csourcestream-checkmediatype.md)                 | Bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert. Virtu.                                                                     |
-| [**Getmediatype**](csourcestream-getmediatype.md)                     | Ruft einen bevorzugten Medientyp ab. Virtu.                                                                                        |
-| Öffentliche Methoden                                                         | BESCHREIBUNG                                                                                                                       |
-| [**Csourcestream**](csourcestream-csourcestream.md)                   | Konstruktormethode.                                                                                                               |
-| [**~ Csourcestream**](csourcestream--csourcestream.md)                | Dekonstruktormethode. Virtu.                                                                                                       |
-| [**Init**](csourcestream-init.md)                                     | Initialisiert den streamingthread.                                                                                                 |
-| [**Beenden**](csourcestream-exit.md)                                     | Signalisiert dem streamingthread, den Vorgang zu beenden.                                                                                             |
-| [**Ausführen**](csourcestream-run.md)                                       | Signalisiert, dass der streamingthread ausgeführt werden soll.                                                                                              |
-| [**Anhalten**](csourcestream-pause.md)                                   | Signalisiert, dass der streamingingthread aktiv wird.                                                                                    |
-| [**Stop**](csourcestream-stop.md)                                     | Signalisiert, dass der Streaminginhalt beendet werden soll.                                                                                             |
-| Reine virtuelle Methoden                                                   | BESCHREIBUNG                                                                                                                       |
-| [**FillBuffer**](csourcestream-fillbuffer.md)                         | Füllt ein Medien Beispiel mit Daten.                                                                                                   |
-| IPin-Methoden                                                           | BESCHREIBUNG                                                                                                                       |
-| [**QueryId**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid)                                        | Ruft einen Bezeichner für die PIN ab.                                                                                              |
+| [**m \_ pFilter**](csourcestream-m-pfilter.md)                          | Zeiger auf den Filter, der diese Stecknadel enthält.                                                                                     |
+| Geschützte Methoden                                                      | Beschreibung                                                                                                                       |
+| [**OnThreadCreate**](csourcestream-onthreadcreate.md)                 | Wird aufgerufen, wenn der Streamingthread initialisiert wird. Virtuellen.                                                                         |
+| [**OnThreadDestroy**](csourcestream-onthreaddestroy.md)               | Wird aufgerufen, wenn der Streamingthread gerade beendet wird. Virtuellen.                                                                       |
+| [**OnThreadStartPlay**](csourcestream-onthreadstartplay.md)           | Wird am Anfang der [**CSourceStream::D oBufferProcessingLoop-Methode**](csourcestream-dobufferprocessingloop.md) aufgerufen. Virtuellen. |
+| [**Aktiv**](csourcestream-active.md)                                 | Benachrichtigt den Pin, dass der Filter jetzt aktiv ist.                                                                                   |
+| [**Inaktiv**](csourcestream-inactive.md)                             | Benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.                                                                             |
+| [**GetRequest**](csourcestream-getrequest.md)                         | Wartet auf die nächste Threadanforderung.                                                                                                |
+| [**CheckRequest**](csourcestream-checkrequest.md)                     | Überprüft, ob eine Threadanforderung ohne Blockierung vorhanden ist.                                                                            |
+| [**ThreadProc**](csourcestream-threadproc.md)                         | Threadprozedur. Virtuellen.                                                                                                        |
+| [**DoBufferProcessingLoop**](csourcestream-dobufferprocessingloop.md) | Generiert Mediendaten und übermittelt sie an den nachgeschalteten Eingabepin. Virtuellen.                                                        |
+| [**CheckMediaType**](csourcestream-checkmediatype.md)                 | Bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert. Virtuellen.                                                                     |
+| [**GetMediaType**](csourcestream-getmediatype.md)                     | Ruft einen bevorzugten Medientyp ab. Virtuellen.                                                                                        |
+| Öffentliche Methoden                                                         | Beschreibung                                                                                                                       |
+| [**CSourceStream**](csourcestream-csourcestream.md)                   | Konstruktormethode.                                                                                                               |
+| [**~ CSourceStream**](csourcestream--csourcestream.md)                | Destruktormethode. Virtuellen.                                                                                                       |
+| [**Init**](csourcestream-init.md)                                     | Initialisiert den Streamingthread.                                                                                                 |
+| [**Beenden**](csourcestream-exit.md)                                     | Signalisiert dem Streamingthread das Beenden.                                                                                             |
+| [**Ausführung**](csourcestream-run.md)                                       | Signalisiert dem Streamingthread die Ausführung.                                                                                              |
+| [**Anhalten**](csourcestream-pause.md)                                   | Signalisiert dem Streamingthread, dass er aktiv wird.                                                                                    |
+| [**Beenden**](csourcestream-stop.md)                                     | Signalisiert dem Streamingthread das Beenden.                                                                                             |
+| Reine virtuelle Methoden                                                   | Beschreibung                                                                                                                       |
+| [**FillBuffer**](csourcestream-fillbuffer.md)                         | Füllt ein Medienbeispiel mit Daten.                                                                                                   |
+| IPin-Methoden                                                           | Beschreibung                                                                                                                       |
+| [**QueryId**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid)                                        | Ruft einen Bezeichner für den Stecknadel ab.                                                                                              |
 
 
 
@@ -87,16 +87,16 @@ Diese Aktionen werden in der Basisklasse nicht durchgesetzt, aber die abgeleitet
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Schreiben von Quell Filtern](writing-source-filters.md)
+[Schreiben von Quellfiltern](writing-source-filters.md)
 </dt> </dl>
 
  

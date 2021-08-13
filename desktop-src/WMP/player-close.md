@@ -1,11 +1,11 @@
 ---
-title: Player. Close-Methode
-description: Die Close-Methode gibt Windows Media Player-Ressourcen frei.
+title: Player.close-Methode
+description: Die close-Methode gibt Windows Media Player Ressourcen frei.
 ms.assetid: 15bd5a05-dbfa-4bea-90c2-afd9f69631e0
 keywords:
-- Schließen von Methoden Fenstern Media Player
-- Close-Methode, Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, Close-Methode
+- close-Methode Windows Media Player
+- close-Methode Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , close-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: debc2667c42da92b3a2639e0f14c767d2b5b0651
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a29e68aed11b095dff80c8c91c88410f98b9a236bbcadcbff75da0fc0de392fa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119467880"
 ---
-# <a name="playerclose-method"></a>Player. Close-Methode
+# <a name="playerclose-method"></a>Player.close-Methode
 
-Die **Close** -Methode gibt Windows Media Player-Ressourcen frei.
+Die **close-Methode** gibt Windows Media Player Ressourcen frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode schließt die aktuelle digitale Mediendatei, nicht Windows Media Player selbst.
+Diese Methode schließt die aktuelle digitale Mediendatei, nicht Windows Media Player sich selbst.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das beim Klicken auf die Wiedergabe in Windows-Media Player beendet und die verwendeten Ressourcen freigibt. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das beim Klicken die Wiedergabe in Windows Media Player beendet und die verwendeten Ressourcen freigibt. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -70,12 +70,12 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das beim Kl
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

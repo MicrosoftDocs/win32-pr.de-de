@@ -1,59 +1,59 @@
 ---
 title: Häufige Fehler (ADSI)
-description: Alle ADSI-spezifischen Fehler haben eine hexadezimale Form von 80005xxx. Die häufigsten Fehlercodes sind in der folgenden Tabelle aufgeführt.
+description: Alle ADSI-spezifischen Fehler haben eine Hexadezimalform von 80005xxx. Die am häufigsten aufgetretenen Fehlercodes sind in der folgenden Tabelle aufgeführt.
 ms.assetid: fdee4f0a-b39e-4011-af4f-9fe408f6ca6c
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bd870871d7a8e2939cda546178e2f31fe92644d
-ms.sourcegitcommit: 8ea1a82717bd3dbb3457be0697329aa37fb13f08
+ms.openlocfilehash: 0efcbbbce67d9928c9ecda3840f34a1cbf6faae79ca4d9fe72830a5b57881177
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "104314021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118692194"
 ---
 # <a name="common-errors-adsi"></a>Häufige Fehler (ADSI)
 
-Alle ADSI-spezifischen Fehler haben eine hexadezimale Form von 80005xxx. Die häufigsten Fehlercodes sind in der folgenden Tabelle aufgeführt.
+Alle ADSI-spezifischen Fehler haben eine Hexadezimalform von 80005xxx. Die am häufigsten aufgetretenen Fehlercodes sind in der folgenden Tabelle aufgeführt.
 
 
 
-| ADSI Hex-Fehlercode | BESCHREIBUNG                                                                                                                                         |
+| ADSI hexadezimaler Fehlercode | Beschreibung                                                                                                                                         |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 80005000<br/> | Es wurde ein ungültiger ADSI-Pfadname übermittelt. Dieser Fehler ergibt sich aus der Übergabe eines schlecht formatierten ADsPath an **GetObject** beim Binden an ein-Objekt.<br/> |
-| 8000500D<br/> | Die ADSI-Eigenschaft wurde im Eigenschaften Cache nicht gefunden.<br/>                                                                                 |
-| 8000500e<br/> | Das ADSI-Objekt ist vorhanden. Wenn Sie versuchen, ein ADSI-Objekt mit dem gleichen Namen wie ein vorhandenes ADSI-Objekt zu erstellen, tritt dieser Fehler auf.<br/>    |
+| 80005000<br/> | Ein ungültiger ADSI-Pfadname wurde übergeben. Dieser Fehler resultiert aus der Übergabe eines schlecht gebildeten ADsPath an **GetObject bei** der Bindung an ein Objekt.<br/> |
+| 8000500D<br/> | Die ADSI-Eigenschaft wurde im Eigenschaftencache nicht gefunden.<br/>                                                                                 |
+| 8000500E<br/> | Das ADSI-Objekt ist vorhanden. Wenn Sie versuchen, ein ADSI-Objekt mit dem gleichen Namen wie ein vorhandenes ADSI-Objekt zu erstellen, tritt dieser Fehler auf.<br/>    |
 
 
 
  
 
-Eine umfassende Liste der ADSI-Fehlercodes finden Sie unter [generische ADSI-Fehlercodes](generic-adsi-error-codes.md).
+Eine vollständige Liste der ADSI-Fehlercodes finden Sie unter [Generische ADSI-Fehlercodes](generic-adsi-error-codes.md).
 
 ## <a name="com-errors"></a>COM-Fehler
 
-Da ADSI aus COM-Objekten besteht, werden Standard-COM-Fehlercodes zurückgegeben. In der folgenden Tabelle sind die com-Fehlercodes aufgelistet, die in der ADSI-Programmierung am häufigsten auftreten.
+Da ADSI aus COM-Objekten besteht, werden standardmäßige COM-Fehlercodes zurückgegeben. In der folgenden Tabelle sind die COM-Fehlercodes aufgeführt, die am häufigsten bei der ADSI-Programmierung auftreten.
 
 
 
-| COM-Hex-Fehlercode  | BESCHREIBUNG                                                                                                                   |
+| COM-Hexadezimalfehlercode  | Beschreibung                                                                                                                   |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| 80004005<br/> | Unbekannter Fehler. Die Ursache des COM-Objekt Fehlers ist von ADSI unbestimmt. <br/>                                  |
-| 800041e4<br/> | Objekt konnte nicht gefunden werden. Dieser Fehler tritt hauptsächlich auf, wenn die ADsPath-Zeichenfolge beim Binden an ein-Objekt falsch geschrieben wird.<br/> |
+| 80004005<br/> | Unbekannter Fehler. Die Ursache des COM-Objektfehlers ist durch ADSI unbestimmt. <br/>                                  |
+| 800041E4<br/> | Objekt konnte nicht gefunden werden. Dieser Fehler tritt hauptsächlich auf, weil die ADsPath-Zeichenfolge bei der Bindung an ein Objekt falsch geschrieben wurde.<br/> |
 
 
 
  
 
-Weitere Beispiele für COM-Fehler, die möglicherweise bei der ADSI-Programmierung auftreten, finden Sie unter [generische com-Fehler Codes](generic-com-error-codes.md) .
+Weitere [Beispiele für COM-Fehler,](generic-com-error-codes.md) die bei der ADSI-Programmierung auftreten können, finden Sie unter Generische COM-Fehlercodes.
 
 ## <a name="win32-errors"></a>Win32-Fehler
 
-Jeder Fehlercode der hexadezimalen Form 8007xxxx ist ein standardmäßiger Win32-Fehlercode. Wenn Sie die letzten vier Ziffern von "hexadezimal" in "Decimal" konvertieren, können Sie über die Windows 2000-Befehlszeile auf den Fehler zugreifen:
+Jeder Fehlercode der Hexadezimalform 8007xxxx ist ein Win32-Standardfehlercode. Wenn Sie die letzten vier Ziffern von hexadezimal in dezimal konvertieren, können Sie über die Befehlszeile Windows 2000 auf den Fehler zugreifen:
 
 **net helpmsg <number>**
 
-In der obigen Befehlszeile ist " &lt; Number &gt; " die Dezimalzahl, die durch die typumrechnung der letzten vier Ziffern des Fehlercodes aus dem Hexadezimalwert abgerufen wird. Diese Befehlszeile enthält eine ausführlichere Beschreibung des Win32-Fehlers, der beim Debuggen des Skripts sehr hilfreich sein kann.
+In der obigen Befehlszeile ist " number " die Dezimalzahl, die durch Konvertieren der letzten vier Ziffern des Fehlercodes aus &lt; &gt; hexadezimalen Zahlen ermittelt wird. Diese Befehlszeile enthält eine nützlichere Beschreibung des Win32-Fehlers, was beim Debuggen Ihres Skripts hilfreich sein kann.
 
  
 

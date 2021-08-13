@@ -1,11 +1,11 @@
 ---
-title: Iwmpdvd-Back-Methode
-description: Die Methode "Back" ändert die Anzeige von einem Untermenü in das übergeordnete Menü.
+title: IWMPDVD back-Methode
+description: Die back-Methode ändert die Anzeige von einem Untermenü in das übergeordnete Menü.
 ms.assetid: 81d033d4-f570-44a5-898a-e419101c04fa
 keywords:
-- Windows-Media Player der Back-Methode
-- Back-Methode, Windows Media Player, iwmpdvd-Schnittstelle
-- Iwmpdvd Interface, Windows Media Player, Back-Methode
+- Back-Windows Media Player
+- back-Windows Media Player , IWMPDVD-Schnittstelle
+- IWMPDVD-Schnittstelle Windows Media Player , back-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cd31cd6365843a6905760c4447ea679e15e70ed
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 483e8e36f8ac5e539925306a53c04d144fb6de1281878840fc598c96c814f002
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119414560"
 ---
-# <a name="iwmpdvdback-method"></a>Iwmpdvd:: Back-Methode
+# <a name="iwmpdvdback-method"></a>IWMPDVD::back-Methode
 
-Die Methode " **Back** " ändert die Anzeige von einem Untermenü in das übergeordnete Menü.
+Die **back-Methode** ändert die Anzeige von einem Untermenü in das übergeordnete Menü.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,9 +53,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede DVD wird unterschiedlich verfasst. Einige DVDs werden so erstellt, dass die- `back` Methode über das Root-Menü verfügbar ist, aber wenn Sie aufgerufen wird, wird keine Aktion durchführen.
+Jede DVD wird anders verfasst. Einige DVDs werden so verfasst, dass die -Methode über das Stammmenü verfügbar ist, aber wenn sie aufgerufen `back` wird, wird sie nichts tun.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,17 +63,17 @@ Jede DVD wird unterschiedlich verfasst. Einige DVDs werden so erstellt, dass die
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iwmpdvd-Schnittstelle (VB und c#)**](iwmpdvd--vb-and-c.md)
+[**IWMPDVD-Schnittstelle (VB und C#)**](iwmpdvd--vb-and-c.md)
 </dt> </dl>
 
  

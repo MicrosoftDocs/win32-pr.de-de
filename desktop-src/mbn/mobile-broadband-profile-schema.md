@@ -1,23 +1,23 @@
 ---
-description: Mobiles Breitband Profil Schema v1.
+description: Mobiles Breitbandprofilschema v1.
 ms.assetid: e55775d2-1166-4f14-9553-207c69202b69
-title: Mobiles Breitband Profil Schema v1
+title: Mobiles Breitbandprofilschema v1
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8f02be0cf77923b6802ea1bc58944eb26108858
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6b34e8e45218666cebf320a03bb3051f0f945930387c3773e2d7bc941cd31e38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118744612"
 ---
-# <a name="mobile-broadband-profile-schema-v1"></a>Mobiles Breitband Profil Schema v1
+# <a name="mobile-broadband-profile-schema-v1"></a>Mobiles Breitbandprofilschema v1
 
-Das Windows 7 Mobile-Breitband Profil Schema v1 ist im-Namespace verfügbar `https://www.microsoft.com/networking/WWAN/profile/v1` .
+Das Windows 7Schema für mobiles Breitbandprofil v1 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v1` verfügbar.
 
--   [Mobile Breitband Profile Schema v1-Elemente](schema-elements.md)
--   [Einfache Typen für das mobile Breitband Profil Schema v1](schema-simple-types.md)
--   [Komplexe Typen für das mobile Breitband Profil Schema v1](schema-complex-types.md)
+-   [Schema v1-Elemente für mobiles Breitbandprofil](schema-elements.md)
+-   [Einfache Typen des Schemas für mobile Breitbandprofile v1](schema-simple-types.md)
+-   [Komplexe Typen des Mobilen Breitbandprofilschemas v1](schema-complex-types.md)
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" ?>

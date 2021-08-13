@@ -1,9 +1,9 @@
 ---
-title: Text. ForegroundColor
-description: Das ForegroundColor-Attribut gibt die Textfarbe für das Text Steuerelement an oder ruft diese ab.
+title: TEXT.foregroundColor
+description: Das foregroundColor-Attribut gibt die Textfarbe für das Text-Steuerelement an oder ruft sie ab.
 ms.assetid: 1ddbad93-fbff-4be6-9797-6594b5f09a1e
 keywords:
-- Text. ForegroundColor-Fenster Media Player
+- TEXT.foregroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e452a18a085337e8cbf0ec88567d6a57a0a498a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2b134058fdc39b653982f752f2623c6cd69b192e24e417ac012a02813a38334a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119467070"
 ---
-# <a name="textforegroundcolor"></a>Text. ForegroundColor
+# <a name="textforegroundcolor"></a>TEXT.foregroundColor
 
-Das **ForegroundColor** -Attribut gibt die Textfarbe für das Text Steuerelement an oder ruft diese ab.
+Das **foregroundColor-Attribut** gibt die Textfarbe für das Text-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundColor
@@ -29,11 +29,11 @@ Das **ForegroundColor** -Attribut gibt die Textfarbe für das Text Steuerelement
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist "schwarz".
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Der Standardwert ist "black".
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden, finden Sie im [Value-Attribut.](text-value.md)
 
-Wenn Sie **AlphaBlend** oder **alphablendto** mit einem **Text** Element verwenden, für das keine **BackgroundColor** angegeben ist, wird eine Hintergrundfarbe von Schwarz verwendet. Wenn die Vordergrundfarbe ebenfalls schwarz ist (Dies ist der Standardwert für das **ForegroundColor** -Attribut), wird der Text möglicherweise nicht lesbar. Um dies zu verhindern, geben Sie immer das **BackgroundColor** -Attribut an, oder legen Sie **ForegroundColor** auf eine andere Farbe als schwarz fest.
+Wenn Sie **alphaBlend** oder **alphaBlendTo** mit einem **TEXT-Element** verwenden, für das nicht **backgroundColor** angegeben ist, wird eine Hintergrundfarbe von Schwarz verwendet. Wenn die Vordergrundfarbe ebenfalls schwarz ist (der Standardwert für das **foregroundColor-Attribut),** kann ihr Text unlesbar werden. Um dies zu verhindern, geben Sie immer das **backgroundColor-Attribut** an, oder legen Sie **foregroundColor** auf eine andere Farbe als Schwarz fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,27 +41,27 @@ Wenn Sie **AlphaBlend** oder **alphablendto** mit einem **Text** Element verwend
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ambientattribute. AlphaBlend**](ambientattributes-alphablend.md)
+[**AmbientAttributes.alphaBlend**](ambientattributes-alphablend.md)
 </dt> <dt>
 
-[**Ambientattribute. alphablendto**](ambientattributes-alphablendto.md)
+[**AmbientAttributes.alphaBlendTo**](ambientattributes-alphablendto.md)
 </dt> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. BackgroundColor**](text-backgroundcolor.md)
+[**TEXT.backgroundColor**](text-backgroundcolor.md)
 </dt> </dl>
 
  

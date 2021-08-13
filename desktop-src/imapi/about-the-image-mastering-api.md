@@ -1,44 +1,44 @@
 ---
-title: Informationen zur Image-Mastering-API
+title: Informationen zur Bildmaster-API
 description: Diese Dokumentation konzentriert sich auf eine Beschreibung der Adaptec-Implementierung von IMAPI für Microsoft (IMAPIv1).
 ms.assetid: 596ec3ea-17d1-4e60-8789-528ff00ae421
 keywords:
-- Image Mastering API IMAPI, beschrieben
+- Bildmastering-API IMAPI , beschrieben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3db1dc7846d2e47483abf2ca8856d593b874467f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ccb16ab8c542e7c4686c7a3f4d027169a520495a8d3fab9927f11ed974deeef6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104564548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451904"
 ---
-# <a name="about-the-image-mastering-api"></a>Informationen zur Image-Mastering-API
+# <a name="about-the-image-mastering-api"></a>Informationen zur Bildmaster-API
 
-Diese Dokumentation konzentriert sich auf eine Beschreibung der Adaptec-Implementierung von IMAPI für Microsoft (IMAPIv1). Daher sind die Beschreibungen der vier Haupt-com-Objekte und deren Schnittstellen in diesem Dokument enthalten. Die vier Hauptobjekte lauten wie folgt: **msdiscmasterobj**, **msdiscrecorderobj**, **msdiscstashobj** und **msburnengineobj**.
+Diese Dokumentation konzentriert sich auf eine Beschreibung der Adaptec-Implementierung von IMAPI für Microsoft (IMAPIv1). Daher sind Beschreibungen der vier com-Hauptobjekte und deren Schnittstellen in diesem Dokument enthalten. Die vier Hauptobjekte lauten wie folgt: **MSDiscMasterObj,** **MSDiscRecorderObj,** **MSDiscStashObj** und **MS WiegeEngineObj**.
 
-Es können mehrere **msdiscmasterobj** -Objekte auf einem System instanziiert werden, aber nur eine Anwendung kann gleichzeitig auf einen Recorder zugreifen. **Msdiscmasterobj** implementiert mehrere Schnittstellen, wie im folgenden Objekt Diagramm gezeigt.
+Auf einem System können **mehrere MSDiscMasterObj-Objekte** instanziiert werden, aber nur eine Anwendung kann gleichzeitig auf eine Aufzeichnung zugreifen. **MSDiscMasterObj implementiert** mehrere Schnittstellen, wie im folgenden Objektdiagramm dargestellt.
 
 ![msdiscmasterobj implementiert mehrere Schnittstellen](images/imapi.png)
 
-Anwendungen verwenden die [**idiscmaster**](/windows/desktop/api/Imapi/nn-imapi-idiscmaster) -Benutzeroberfläche, um die folgenden Aufgaben auszuführen:
+Anwendungen verwenden die [**IDiscMaster-Schnittstelle,**](/windows/desktop/api/Imapi/nn-imapi-idiscmaster) um die folgenden Aufgaben auszuführen:
 
--   IMAPI öffnen
--   Unterstützte Formate auflisten (Joliet und Redbook)
--   Format auswählen
--   Eine Liste der Recorder erhalten
--   Aufzeichnung auswählen
--   Brennen starten
+-   Öffnen von IMAPI
+-   Aufzählen unterstützter Formate (Joliet und Redbook)
+-   Auswählen eines Formats
+-   Anzeigen einer Liste von Aufzeichnungen
+-   Auswählen einer Aufzeichnung
+-   Starten einer Brandung
 
-Wenn ein Format ausgewählt ist, werden die Schnittstellen [**ijolietdiscmaster**](/windows/desktop/api/Imapi/nn-imapi-ijolietdiscmaster) und [**iredbookdiscmaster**](/windows/desktop/api/Imapi/nn-imapi-iredbookdiscmaster) an eine Anwendung über die [**idiscmaster**](/windows/desktop/api/Imapi/nn-imapi-idiscmaster) -Schnittstelle zurückgegeben. Diese Schnittstellen steuern den Inhalt eines Datenträgers bzw. eines audiodatenträgers. Es wird nicht erwartet, dass jede Anwendung die spezifischen Format Schnittstellen versteht. Anwendungen können auf generische Eigenschaften der **ijolietdiscmaster** -Schnittstelle zugreifen, wie z. b. Volumename oder Legacy Dateiname.
+Die [**Schnittstellen IJolietDiscMaster**](/windows/desktop/api/Imapi/nn-imapi-ijolietdiscmaster) und [**IRedbookDiscMaster**](/windows/desktop/api/Imapi/nn-imapi-iredbookdiscmaster) werden über die [**IDiscMaster-Schnittstelle**](/windows/desktop/api/Imapi/nn-imapi-idiscmaster) an eine Anwendung zurückgegeben, wenn ein Format ausgewählt wird. Diese Schnittstellen steuern den Inhalt eines Daten- bzw. Audiodaten datenträgers. Es wird nicht erwartet, dass jede Anwendung die spezifischen Formatschnittstellen versteht. Anwendungen können auf generische Eigenschaften der **IJolietDiscMaster-Schnittstelle** zugreifen, z. B. Volumename oder Legacydateiname.
 
-Der Zugriff auf **msdiscrecorderobj** -Objekte erfolgt über die [**idiscrecorder**](/windows/desktop/api/Imapi/nn-imapi-idiscrecorder) -Schnittstelle. Jedes CD-R-oder CD-RW-Gerät, das mit IMAPI kompatibel ist, verfügt über ein entsprechendes **msdiscrecorderobj** -Objekt. Eine Anwendung verwendet Zeiger auf die **idiscrecorder** -Schnittstelle für diese Objekte, um auszuwählen, welches Gerät von IMAPI zum Aufzeichnen einer CD verwendet werden soll. Darüber hinaus können Anwendungen über **idiscrecorder** auf generische Eigenschaften einer Aufzeichnung zugreifen. Dies schließt Eigenschaften wie die Writer-Geschwindigkeit oder andere Verbrauchs Parameter ein.
+**Auf MSDiscRecorderObj-Objekte** wird über die [**IDiscRecorder-Schnittstelle**](/windows/desktop/api/Imapi/nn-imapi-idiscrecorder) zugegriffen. Jedes CD-R- oder CD-RW-Gerät, das mit IMAPI kompatibel ist, verfügt über ein entsprechendes **MSDiscRecorderObj-Objekt.** Eine Anwendung verwendet Zeiger auf die **IDiscRecorder-Schnittstelle** für diese Objekte, um auszuwählen, welches Gerät von IMAPI zum Aufzeichnen einer CD verwendet wird. Darüber hinaus können Anwendungen über **IDiscRecorder** auf generische Eigenschaften eines Recorders zugreifen. Dies schließt Eigenschaften wie Schreibgeschwindigkeit oder andere Burn-Parameter ein.
 
-Bei den verbleibenden Objekten, **msdiscstashobj** und **msburnengineobj**, handelt es sich um interne Objekte, auf die von IMAPI zugegriffen wird. Sie werden nur hier erwähnt, um die IMAPI-Architektur zu verdeutlichen. **Msdiscstashobj** stellt (über die **idiscstash** -Schnittstelle) eine Rohdatendatei mit einer Größe von bis zu 800 MB dar, die von **msdiscmasterobj** verwendet wird, um audiobilder oder zu bereinigende Datenscheiben zu erstellen. Der Stash wird an **msburnengineobj** (über die **imsburnengine** -Schnittstelle) übermittelt, wenn ein Burn-Wert von der untergeordneten Engine angefordert wird. Das **msburnengineobj** -Objekt erwartet, dass der Inhalt des Stash in einem bekannten Format vorliegt. In dieser Hinsicht haben **msdiscmasterobj** und **msburnengineobj** einen Vertrag bezüglich des Inhalts der Stash.
+Bei den verbleibenden **Objekten MSDiscStashObj** und **MSIghEngineObj** handelt es sich um interne Objekte, auf die von IMAPI zugegriffen wird. Sie werden hier nur erwähnt, um die IMAPI-Architektur zu verdeutlichen. **MSDiscStashObj** stellt (über die **IDiscStash-Schnittstelle)** eine Unformatierte Datei mit einer Größe von bis zu 800 MB dar, die von **MSDiscMasterObj** zum Erstellen von Audiobildern oder Zu verwendenden Datenträgern verwendet wird. Der Stash wird (über die **IMSEjEngine-Schnittstelle)** an **MS WiegineObj** übergeben, wenn eine Brandung von der Engine auf niedrigerer Ebene angefordert wird. Das **MSEjEngineObj-Objekt** erwartet, dass der Inhalt des Stashs in einem bekannten Format vor sich geht. In dieser Hinsicht verfügen **MSDiscMasterObj** und **MSEjEngineObj** über einen Vertrag in Bezug auf den Inhalt des Stashs.
 
- 
+ 
 
- 
+ 
 
 
 

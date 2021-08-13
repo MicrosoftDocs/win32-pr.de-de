@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice FriendlyName-Methode
-description: Ruft den anzeigen amen des Geräts ab.
+title: IBasicDevice FriendlyName-Methode
+description: Ruft den Anzeigenamen des Geräts ab.
 ms.assetid: 693806E1-CA66-457D-A25B-D79064776965
 keywords:
-- FriendlyName-Methode Medien Streaming-API
-- FriendlyName-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, FriendlyName-Methode
+- 'FriendlyName-Methode: Medienstreaming-API'
+- FriendlyName-Methode Media Streaming-API, IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , FriendlyName-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ec2b2edfa3a98dfdbbdd1d236acb6e1f1433f141
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 35084fafb92b3716208aa6062f065cc4e25a45d2d1a412083076b9e355d2ce43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118735610"
 ---
-# <a name="ibasicdevicefriendlyname-method"></a>Ibasicdevice:: FriendlyName-Methode
+# <a name="ibasicdevicefriendlyname-method"></a>IBasicDevice::FriendlyName-Methode
 
-Ruft den anzeigen amen des Geräts ab.
+Ruft den Anzeigenamen des Geräts ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT FriendlyName(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf den anzeigen amen des Geräts.
+Empfängt einen Zeiger auf den Anzeigenamen des Geräts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

@@ -1,35 +1,35 @@
 ---
-description: Enthält Flags für ein Media Foundation Transform-Aktivierungs Objekt (MFT).
+description: Enthält Flags für ein MFT-Aktivierungsobjekt (Media Foundation Transformation).
 ms.assetid: de377132-19b0-4c8c-882e-193c31420739
-title: MF_TRANSFORM_FLAGS_Attribute-Attribut (MF Transform. h)
+title: MF_TRANSFORM_FLAGS_Attribute-Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2f3e334b83bbe8ce50f8770eb33e1e7a4c799c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d54d8775cb58980e0b5b4a8557ae4a3e8082b045eb3e87330841f75dfd057774
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118739228"
 ---
-# <a name="mf_transform_flags_attribute-attribute"></a>MF \_ - \_ Attribut Attribut für Transformations Flags \_
+# <a name="mf_transform_flags_attribute-attribute"></a>MF \_ TRANSFORM \_ \_ FLAGS-Attributattribut
 
-Enthält Flags für ein Media Foundation Transform-Aktivierungs Objekt (MFT).
+Enthält Flags für ein MFT-Aktivierungsobjekt (Media Foundation Transformation).
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Der Wert ist ein bitweises **or** -Flag aus der Enumeration des [**\_ MFT \_ \_**](/windows/win32/api/mfapi/ne-mfapi-_mft_enum_flag) -Enumerationsflags.
+Der Wert ist ein bitweises **OR** von Flags aus der [**\_ \_ MFT-ENUM \_ FLAG-Enumeration.**](/windows/win32/api/mfapi/ne-mfapi-_mft_enum_flag)
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger festgelegt, die von der [**motenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) -Funktion zurückgegeben werden. Das-Attribut enthält Flags, die die MFT beschreiben.
+Dieses Attribut wird für die VON der [**MFTEnumEx-Funktion zurückgegebenen**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) [**POINTERActivate-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) festgelegt. Das -Attribut enthält Flags, die den MFT beschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,20 +37,20 @@ Dieses Attribut wird für die [**imfaktivate**](/windows/desktop/api/mfobjects/n
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

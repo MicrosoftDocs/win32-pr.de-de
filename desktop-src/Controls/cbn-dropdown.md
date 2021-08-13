@@ -1,9 +1,9 @@
 ---
-title: CBN_DROPDOWN Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn das Listenfeld eines Kombinations Felds sichtbar gemacht wird. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: CBN_DROPDOWN Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn das Listenfeld eines Kombinationsfelds sichtbar gemacht wird. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: 2ee9bb19-951b-46bb-a90d-1ade92c2d76c
 keywords:
-- Windows-Steuerelemente für CBN_DROPDOWN Benachrichtigungs
+- CBN_DROPDOWN Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 018dac2a17a656c11ac697836390ee64e55875db
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 978ac01818f3e9ed7da9f3f1decc7398ab4af32df8f884041bec327640a8014d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119438300"
 ---
-# <a name="cbn_dropdown-notification-code"></a>CBN- \_ Dropdown-Benachrichtigungs Code
+# <a name="cbn_dropdown-notification-code"></a>\_CBN-DROPDOWN-Benachrichtigungscode
 
-Wird gesendet, wenn das Listenfeld eines Kombinations Felds sichtbar gemacht wird. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn das Listenfeld eines Kombinationsfelds sichtbar gemacht wird. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,20 +42,20 @@ CBN_DROPDOWN
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner des Kombinations Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Steuerelementbezeichner des Kombinationsfelds. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Kombinations Feld.
+Handle für das Kombinationsfeld.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Benachrichtigungs Code wird nur gesendet, wenn das Kombinations Feld den "CBS"- [**\_ Dropdown**](combo-box-styles.md) oder den [**CBS- \_ DropDownList**](combo-box-styles.md) -Stil enthält.
+Dieser Benachrichtigungscode wird nur gesendet, wenn das Kombinationsfeld über das [**DROPDOWN- \_**](combo-box-styles.md) oder [**\_ CBS-DROPDOWNLIST-Format verfügt.**](combo-box-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,20 +63,20 @@ Dieser Benachrichtigungs Code wird nur gesendet, wenn das Kombinations Feld den 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[CBN- \_ Schließung](cbn-closeup.md)
+[CBN \_ CLOSEUP](cbn-closeup.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -88,7 +88,7 @@ Dieser Benachrichtigungs Code wird nur gesendet, wenn das Kombinations Feld den 
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
-description: Dies ist eine schreibgeschützte temporäre Tabelle, die zum Anzeigen von Transformationen mit dem Transformations Ansichtsmodus verwendet wird. Diese Tabelle wird nie vom Installationsprogramm persistent gespeichert.
+description: Dies ist eine schreibgeschützte temporäre Tabelle, die zum Anzeigen von Transformationen im Transformationsansichtsmodus verwendet wird. Diese Tabelle wird vom Installationsprogramm nie beibehalten.
 ms.assetid: 4763ac0e-900f-45f1-bee5-34d413c5e401
-title: _TransformView Tabelle
+title: _TransformView-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08cc513b1aae388d01cda178bfbefdc88874f6d9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92b3254c7419ed5d4964377a466ecd557429a22450a9ba84fdd892822fca86c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118640465"
 ---
-# <a name="_transformview-table"></a>\_Transformview-Tabelle
+# <a name="_transformview-table"></a>\_TransformView-Tabelle
 
-Dies ist eine schreibgeschützte temporäre Tabelle, die zum Anzeigen von Transformationen mit dem Transformations Ansichtsmodus verwendet wird. Diese Tabelle wird nie vom Installationsprogramm persistent gespeichert.
+Dies ist eine schreibgeschützte temporäre Tabelle, die zum Anzeigen von Transformationen im Transformationsansichtsmodus verwendet wird. Diese Tabelle wird vom Installationsprogramm nie beibehalten.
 
-Um den Transformations Ansichtsmodus aufzurufen, rufen Sie ein Handle ab, und öffnen Sie die Verweis Datenbank. Siehe Abrufen [eines Daten Bank Handles](obtaining-a-database-handle.md). [**Msidatabaseapplytransform**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseapplytransforma) mit msitransform- \_ Fehler \_ viewtransform abrufen. Dadurch wird verhindert, dass die Transformation auf die Datenbank angewendet wird, und der Transformations Inhalt wird in die \_ transformview-Tabelle integriert. Auf die Daten in der Tabelle kann mithilfe von SQL-Abfragen zugegriffen werden. Siehe [Arbeiten mit Abfragen](working-with-queries.md).
+Rufen Sie zum Aufrufen des Transformationsansichtsmodus ein Handle ab, und öffnen Sie die Verweisdatenbank. Weitere Informationen finden [Sie unter Abrufen eines Datenbankhandle.](obtaining-a-database-handle.md) Rufen Sie [**MsiDatabaseApplyTransform**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseapplytransforma) mit MSITRANSFORM \_ ERROR \_ VIEWTRANSFORM auf. Dadurch wird verhindert, dass die Transformation auf die Datenbank angewendet wird, und der Transformationsinhalt wird in der \_ Tabelle TransformView gespeichert. Auf die Daten in der Tabelle kann mithilfe SQL Abfragen zugegriffen werden. Weitere Informationen finden Sie unter [Arbeiten mit Abfragen.](working-with-queries.md)
 
-Die \_ transformview-Tabelle wird nicht gelöscht, wenn eine andere Transformation angewendet wird. Die Tabelle spiegelt die kumulative Auswirkung aufeinander folgender Anwendungen wider. Um die Transformationen separat anzuzeigen, müssen Sie die Tabelle freigeben.
+Die \_ TransformView-Tabelle wird nicht gelöscht, wenn eine andere Transformation angewendet wird. Die Tabelle spiegelt die kumulativen Auswirkungen aufeinander folgender Anwendungen wider. Um die Transformationen separat anzuzeigen, müssen Sie die Tabelle freigeben.
 
-Die \_ transformview-Tabelle weist die folgenden Spalten auf.
+Die \_ TransformView-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte  | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte  | Typ                         | Key | Nullwerte zulässig |
 |---------|------------------------------|-----|----------|
-| Tabelle   | [Bezeichner](identifier.md) | J   | N        |
+| Tabelle   | [Identifier](identifier.md) | J   | N        |
 | Column  | [Text](text.md)             | J   | N        |
 | Zeile     | [Text](text.md)             | J   | J        |
 | Daten    | [Text](text.md)             | N   | J        |
@@ -39,96 +39,96 @@ Die \_ transformview-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Table"></span><span id="table"></span><span id="TABLE"></span>Glaub
+<span id="Table"></span><span id="table"></span><span id="TABLE"></span>Tabelle
 </dt> <dd>
 
-Der Name einer geänderten Datenbanktabelle.
+Name einer geänderten Datenbanktabelle.
 
 </dd> <dt>
 
-<span id="Column"></span><span id="column"></span><span id="COLUMN"></span>Kolumne
+<span id="Column"></span><span id="column"></span><span id="COLUMN"></span>Spalte
 </dt> <dd>
 
-Der Name einer geänderten Tabellenspalte oder INSERT, DELETE, CREATE oder Drop.
+Name einer geänderten Tabellenspalte oder INSERT, DELETE, CREATE oder DROP.
 
 </dd> <dt>
 
 <span id="Row"></span><span id="row"></span><span id="ROW"></span>Zeile
 </dt> <dd>
 
-Eine Liste der Primärschlüssel Werte, die durch Registerkarten getrennt sind. NULL-Primärschlüssel Werte werden durch ein einzelnes Leerzeichen dargestellt. Ein NULL-Wert in dieser Spalte gibt eine Schema Änderung an.
+Eine Liste der Primärschlüsselwerte, die durch Registerkarten getrennt sind. NULL-Primärschlüsselwerte werden durch ein einzelnes Leerzeichen dargestellt. Ein NULL-Wert in dieser Spalte gibt eine Schemaänderung an.
 
 </dd> <dt>
 
-<span id="Data"></span><span id="data"></span><span id="DATA"></span>Vorrats
+<span id="Data"></span><span id="data"></span><span id="DATA"></span>Daten
 </dt> <dd>
 
-Daten, Name eines Datenstroms oder Spaltendefinition.
+Daten, Name eines Datenstroms oder einer Spaltendefinition.
 
 </dd> <dt>
 
-<span id="Current"></span><span id="current"></span><span id="CURRENT"></span>Strömung
+<span id="Current"></span><span id="current"></span><span id="CURRENT"></span>Aktuellen
 </dt> <dd>
 
-Aktueller Wert aus Verweis Datenbank oder Spalte a-Nummer.
+Aktueller Wert aus der Verweisdatenbank oder Spalte einer Zahl.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die \_ transformview wird durch eine Sperr Anzahl im Arbeitsspeicher gespeichert, die mit dem folgenden SQL-Befehl freigegeben werden kann.
+\_TransformView wird durch eine Sperre im Arbeitsspeicher gehalten, die mit dem folgenden Befehl SQL freigegeben werden kann.
 
-"Alter Table \_ transformview Free".
+"ALTER TABLE \_ TransformView FREE".
 
-Auf die Daten in der Tabelle kann mithilfe von SQL-Abfragen zugegriffen werden. Die SQL-Sprache verfügt über zwei Hauptbereiche: Datendefinitionssprache (Data Definition Language, DDL), die zum Definieren aller Objekte in einer SQL-Datenbank verwendet wird, und DML (Data Manipulation Language), die zum auswählen, einfügen, aktualisieren und Löschen von Daten in den Objekten verwendet werden, die mithilfe von DDL definiert wurden.
+Auf die Daten in der Tabelle kann mithilfe SQL Abfragen zugegriffen werden. Die SQL-Sprache verfügt über zwei Hauptbereiche: DDL (Data Definition Language), die zum Definieren aller Objekte in einer SQL Datenbank verwendet wird, und Data Manipulation Language (DML), die zum Auswählen, Einfügen, Aktualisieren und Löschen von Daten in den mit DDL definierten Objekten verwendet wird.
 
-Die Transformations Vorgänge der Daten Bearbeitungs Sprache (DML) werden wie folgt angegeben. DML (Data Manipulation Language) sind die Anweisungen in SQL, die im Gegensatz zum Definieren von Daten bearbeitet werden.
+Die DmL-Transformationsvorgänge (Data Manipulation Language) sind wie folgt angegeben. Die Datenbearbeitungssprache (Data Manipulation Language, DML) sind anweisungen in SQL, die Daten bearbeiten und nicht definieren.
 
 
 
-| Transformations Vorgang | SQL-Ergebnis                                    |
+| Transformationsvorgang | SQL Ergebnis                                    |
 |---------------------|-----------------------------------------------|
-| Ändern von Daten         | glaub Kolumne Zeile Vorrats {Aktueller Wert} |
-| Zeile einfügen          | glaub "Insert" {Row} NULL NULL              |
-| Zeile löschen          | glaub "Delete" {Row} NULL NULL              |
+| Ändern von Daten         | {table} {column} {row} {data} {aktueller Wert} |
+| Zeile einfügen          | {table} "INSERT" {row} NULL NULL              |
+| Zeile löschen          | {table} "DELETE" {row} NULL NULL              |
 
 
 
  
 
-Die DDL-Transformations Vorgänge (Data Definition Language, Datendefinitionssprache) werden wie folgt angegeben. DDL (Data Definition Language) sind die Anweisungen in SQL, die definieren, dass Daten nicht bearbeitet werden können.
+Die DDL-Transformationsvorgänge (Data Definition Language) sind wie folgt angegeben. Die Datendefinitionssprache (Data Definition Language, DDL) sind anweisungen in SQL, die Daten definieren, anstatt sie zu bearbeiten.
 
 
 
-| Transformations Vorgang | SQL-Ergebnis                                   |
+| Transformationsvorgang | SQL Ergebnis                                   |
 |---------------------|----------------------------------------------|
-| Hinzufügen einer Spalte          | glaub Kolumne NULL {DEFN} {Spaltennummer} |
-| Tabelle hinzufügen           | glaub "Create" Null Null Null              |
-| Löschen einer Tabelle          | glaub "Drop" Null Null Null                |
+| Hinzufügen einer Spalte          | {table} {column} NULL {defn} {Spaltennummer} |
+| Tabelle hinzufügen           | {table} "CREATE" NULL NULL NULL              |
+| Löschen einer Tabelle          | {table} "DROP" NULL NULL NULL                |
 
 
 
  
 
-Wenn die Anwendung einer Transformation diese Tabelle hinzufügt, empfängt das Datenfeld Text, der als 16-Bit-Ganzzahl interpretiert werden kann. Der Wert beschreibt die Spalte mit dem Namen im Feld Spalte. Sie können den ganzzahligen Wert mit den Konstanten in der folgenden Tabelle vergleichen, um die Definition der geänderten Spalte zu bestimmen.
+Wenn die Anwendung einer Transformation diese Tabelle hinzufügt, empfängt das Datenfeld Text, der als 16-Bit-Ganzzahlwert interpretiert werden kann. Der Wert beschreibt die Spalte mit dem Namen im Feld Spalte. Sie können den ganzzahligen Wert mit den Konstanten in der folgenden Tabelle vergleichen, um die Definition der geänderten Spalte zu bestimmen.
 
 
 
 | bit                                                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                              |
 |-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="Bits_07"></span><span id="bits_07"></span><span id="BITS_07"></span>Bits 0 7<br/>         | Hexadezimalwert: 0x0000 0x0100<br/> Dezimalzahl: 0 255<br/> Spaltenbreite<br/>                                                                                                                                                                                                                                  |
-| <span id="Bit_8"></span><span id="bit_8"></span><span id="BIT_8"></span>Bit 8<br/>                  | Hexadezimalwert: 0x0100<br/> Dezimalzahl: 256<br/> Eine persistente Spalte. NULL bedeutet eine temporäre Spalte. <br/>                                                                                                                                                                                                   |
-| <span id="Bit_9"></span><span id="bit_9"></span><span id="BIT_9"></span>Bit 9<br/>                  | Hexadezimalwert: 0x0200<br/> Dezimalzahl: 1023<br/> Eine lokalisierbare Spalte. NULL bedeutet, dass die Spalte nicht lokalisiert werden kann.<br/>                                                                                                                                                                                      |
-| <span id="Bits_1011"></span><span id="bits_1011"></span><span id="BITS_1011"></span>Bits 10 11<br/> | Hexadezimalwert: 0x0000<br/> Dezimalwert: 0<br/> Lange ganze Zahl<br/> Hexadezimalwert: 0x0400<br/> Dezimalzahl: 1024<br/> Kurze Ganzzahl<br/> Hexadezimalwert: 0x0800<br/> Dezimalzahl: 2048<br/> Binary-Objekt<br/> Hexadezimal: 0x0c00<br/> Dezimalzahl: 3072<br/> String<br/> |
-| <span id="Bit_12"></span><span id="bit_12"></span><span id="BIT_12"></span>Bit 12<br/>              | Hexadezimalwert: 0x1000<br/> Dezimalzahl: 4096<br/> Nullable-Spalte. NULL bedeutet, dass die Spalte keine NULL-Werte zulässt.<br/>                                                                                                                                                                                               |
-| <span id="Bit_13"></span><span id="bit_13"></span><span id="BIT_13"></span>Bit 13<br/>              | Hexadezimalwert: 0x2000<br/> Dezimalzahl: 8192<br/> Primärschlüssel Spalte. NULL bedeutet, dass diese Spalte kein Primärschlüssel ist.<br/>                                                                                                                                                                                      |
-| <span id="Bits_1415"></span><span id="bits_1415"></span><span id="BITS_1415"></span>Bits 14 15<br/> | Hexadezimalwert: 0x4000 0X8000<br/> Dezimalzahl: 16384 32768<br/> Reserviert<br/>                                                                                                                                                                                                                                |
+| <span id="Bits_07"></span><span id="bits_07"></span><span id="BITS_07"></span>Bits 0 7<br/>         | Hexadezimal: 0x0000 0x0100<br/> Dezimal: 0 255<br/> Spaltenbreite<br/>                                                                                                                                                                                                                                  |
+| <span id="Bit_8"></span><span id="bit_8"></span><span id="BIT_8"></span>Bit 8<br/>                  | Hexadezimal: 0x0100<br/> Dezimal: 256<br/> Eine persistente Spalte. 0 (null) bedeutet eine temporäre Spalte. <br/>                                                                                                                                                                                                   |
+| <span id="Bit_9"></span><span id="bit_9"></span><span id="BIT_9"></span>Bit 9<br/>                  | Hexadezimal: 0x0200<br/> Dezimal: 1023<br/> Eine lokalisierbare Spalte. Null bedeutet, dass die Spalte nicht lokalisiert werden kann.<br/>                                                                                                                                                                                      |
+| <span id="Bits_1011"></span><span id="bits_1011"></span><span id="BITS_1011"></span>Bits 10 11<br/> | Hexadezimal: 0x0000<br/> Dezimal: 0<br/> Lange ganze Zahl<br/> Hexadezimal: 0x0400<br/> Dezimal: 1024<br/> Kurze ganze Zahl<br/> Hexadezimal: 0x0800<br/> Dezimalzahl: 2048<br/> Binäres Objekt<br/> Hexadezimal: 0x0C00<br/> Dezimal: 3072<br/> String<br/> |
+| <span id="Bit_12"></span><span id="bit_12"></span><span id="BIT_12"></span>Bit 12<br/>              | Hexadezimal: 0x1000<br/> Dezimalzahl: 4096<br/> Nullable-Spalte. Null bedeutet, dass die Spalte nicht NULL-Werte zu enthalten hat.<br/>                                                                                                                                                                                               |
+| <span id="Bit_13"></span><span id="bit_13"></span><span id="BIT_13"></span>Bit 13<br/>              | Hexadezimal: 0x2000<br/> Dezimalzahl: 8192<br/> Primärschlüsselspalte. Null bedeutet, dass diese Spalte kein Primärschlüssel ist.<br/>                                                                                                                                                                                      |
+| <span id="Bits_1415"></span><span id="bits_1415"></span><span id="BITS_1415"></span>Bits 14 15<br/> | Hexadezimal: 0x4000 0x8000<br/> Dezimalzahl: 16384 32768<br/> Reserviert<br/>                                                                                                                                                                                                                                |
 
 
 
  
 
-Ein Skript Beispiel, in dem die \_ transformview-Tabelle veranschaulicht wird, finden Sie unter [View a Transform](view-a-transform.md).
+Ein Skriptbeispiel, das die \_ TransformView-Tabelle veranschaulicht, finden Sie unter [Anzeigen einer Transformation.](view-a-transform.md)
 
  
 

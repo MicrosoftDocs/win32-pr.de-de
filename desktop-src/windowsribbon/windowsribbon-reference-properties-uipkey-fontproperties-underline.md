@@ -4,14 +4,14 @@ description: Identifiziert die \_ PKEY \_ FontProperties \_ Underline-Eigenschaf
 ms.assetid: 88492558-ab19-4606-8fe0-5f100677b88a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 066027e5f62416667619937eea7dbe493a3ff279
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: b75142e08549c2084ebcd37e82943ed63fdfb5b278faef01c4ad79441fa36915
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706720"
 ---
-# <a name="ui_pkey_fontproperties_underline"></a>UI \_ PKEY \_ FontProperties \_ Underline
+# <a name="ui_pkey_fontproperties_underline"></a>\_PKEY-Schriftart \_ der BenutzeroberflächeEigenschaften \_ unterstrich
 
 Identifiziert die \_ PKEY \_ FontProperties \_ Underline-Eigenschaft der Benutzeroberfläche.
 
@@ -27,25 +27,25 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ FontProperties \_ Underline wird von einer Anwendung verwendet, um den Status der Schaltfläche **Unterstreichung** abzufragen.
+PKEY FontProperties Underline auf der Benutzeroberfläche wird von einer Anwendung verwendet, um den Zustand \_ \_ der Schaltfläche \_ **Unterstrichen** abfragt.
 
-Der Eigenschaftswert stammt aus der [**\_ FONTUNDERLINE-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontunderline)
+Der -Eigenschaftswert ist aus der [**\_ FONTUNDERLINE-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontunderline)
 
-Standardwert: `UI_FONTUNDERLINE_NOTSET`.
+Der Standardwert ist `UI_FONTUNDERLINE_NOTSET`.
 
-Der folgende Screenshot zeigt die Schaltfläche **Unterstreichung** des [**Menübands FontControl**](windowsribbon-element-fontcontrol.md).
+Der folgende Screenshot zeigt die Schaltfläche **Unterstrichen** des [**FontControl-Menübands.**](windowsribbon-element-fontcontrol.md)
 
 ![Screenshot des fontcontrol-Elements mit dem richfont-Attribut, das auf TRUE festgelegt ist.](images/markup/fontcontrol-underline.png)
 
-In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächenergebnis beschrieben.
+In der folgenden Tabelle werden die Eigenschaften und das Ergebnis der Benutzeroberfläche beschrieben.
 
 
 
 |      Eigenschaft                   |       Ergebnis der Benutzeroberfläche                                                          |
 |---------------------------------|--------------------------------------------------------------------------|
-| `UI_FONTUNDERLINE_NOTAVAILABLE` | Die Schaltfläche **Unterstreichung** ist deaktiviert und kann nur von der Anwendung festgelegt werden. |
-| `UI_FONTUNDERLINE_NOTSET`       | Die Schaltfläche **Unterstreichung** ist nicht ausgewählt.                                    |
-| `UI_FONTUNDERLINE_SET`          | Die Schaltfläche **Unterstreichung** ist ausgewählt.                                        |
+| `UI_FONTUNDERLINE_NOTAVAILABLE` | **Die** Schaltfläche "Unterstrichen" ist deaktiviert und kann nur von der Anwendung festgelegt werden. |
+| `UI_FONTUNDERLINE_NOTSET`       | **Die Schaltfläche** "Unterstrichen" ist nicht ausgewählt.                                    |
+| `UI_FONTUNDERLINE_SET`          | **Die Schaltfläche** "Unterstrichen" ist ausgewählt.                                        |
 
 
 
@@ -55,13 +55,13 @@ In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächener
 
 <dl> <dt>
 
-[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftartsteuersteuer steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
-[**UI \_ FONTUNDERLINE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontunderline)
+[**\_BENUTZEROBERFLÄCHENSCHRIFTARTUNDERLINE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontunderline)
 </dt> <dt>
 
-[Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)
+[Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
  

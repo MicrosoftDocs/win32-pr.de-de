@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmsecurity checkcertforwiderruf-Methode (wmdrmsdk. h)
-description: Die checkcertforwiderruf-Methode bestimmt, ob ein Zertifikat gesperrt wurde.
+title: IWMDRMSecurity CheckCertForRevocation-Methode (Wmdrmsdk.h)
+description: Die CheckCertForRevocation-Methode bestimmt, ob ein Zertifikat widerrufen wurde.
 ms.assetid: 3efde398-f2ba-486e-b017-6787ca402e4c
 keywords:
-- Checkcertforwiderruf-Methode Windows Media-Format
-- Checkcertforwiderruf-Methode Windows Media-Format, iwmdrmsecurity-Schnittstelle
-- Iwmdrmsecurity-Schnittstelle Windows Media-Format, checkcertforwiderruf-Methode
+- CheckCertForRevocation-Methode windows Media Format
+- CheckCertForRevocation-Methode windows Media Format , IWMDRMSecurity-Schnittstelle
+- IWMDRMSecurity-Schnittstelle windows Media Format , CheckCertForRevocation-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a2439085c6483720e84956ef9932f4f1ab95535
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e090dfb655837ad2cf36cf45486488fde1440b499b73f16fdfbdaf2989532687
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118700786"
 ---
-# <a name="iwmdrmsecuritycheckcertforrevocation-method"></a>Iwmdrmsecurity:: checkcertforwiderruf-Methode
+# <a name="iwmdrmsecuritycheckcertforrevocation-method"></a>IWMDRMSecurity::CheckCertForRevocation-Methode
 
-Die **checkcertforwiderruf** -Methode bestimmt, ob ein Zertifikat gesperrt wurde.
+Die **CheckCertForRevocation-Methode** bestimmt, ob ein Zertifikat widerrufen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,18 +46,18 @@ HRESULT CheckCertForRevocation(
 
 <dl> <dt>
 
-*rguidrevocationlist* \[ in\]
+*rguidRevocationList* \[ In\]
 </dt> <dd>
 
-GUID, die die zu verwendende Sperr Liste identifiziert. Legen Sie auf einen der Werte in der folgenden Tabelle fest.
+GUID, die die zu verwendende Sperrliste identifiziert. Legen Sie auf einen der Werte in der folgenden Tabelle fest.
 
 
 
-| GUID-Konstante                 | BESCHREIBUNG                                                                                |
+| GUID-Konstante                 | Beschreibung                                                                                |
 |-------------------------------|--------------------------------------------------------------------------------------------|
-| WMDRM- \_ revocationtype- \_ App    | Gibt die Sperr Liste für das Anwendungs Zertifikat an.                                     |
-| WMDRM- \_ revocationtype- \_ Gerät | Gibt die Zertifikat Sperr Liste für das Gerät an.                                          |
-| WMDRM \_ revocationtype \_ Cardea | Gibt die Zertifikat Sperr Liste für Microsoft Windows Media DRM für Netzwerkgeräte an. |
+| WMDRM \_ \_ REVOCATIONTYPE-APP    | Gibt die Sperrliste des Anwendungszertifikats an.                                     |
+| WMDRM \_ REVOCATIONTYPE \_ DEVICE | Gibt die Sperrliste des Gerätezertifikats an.                                          |
+| WMDRM \_ REVOCATIONTYPE \_ CARDEA | Gibt die Zertifikatsperrliste microsoft Windows Media DRM für Netzwerkgeräte an. |
 
 
 
@@ -65,30 +65,30 @@ GUID, die die zu verwendende Sperr Liste identifiziert. Legen Sie auf einen der 
 
 </dd> <dt>
 
-*pbcert* \[ in\]
+*pbCert* \[ In\]
 </dt> <dd>
 
-Puffer, der das zu überprüfen Zertifikat enthält.
+Puffer, der das zu suchde Zertifikat enthält.
 
 </dd> <dt>
 
-*cbcert* \[ in\]
+*cbCert* \[ In\]
 </dt> <dd>
 
-Größe des Puffers *pbcert*(in Bytes).
+Größe des Puffers *pbCert* in Bytes.
 
 </dd> <dt>
 
-*frei.* \[ vorgenommen\]
+*fRevoked* \[ out\]
 </dt> <dd>
 
-Gibt bei Ausgabe an, ob das Zertifikat in der Sperr Liste vorhanden ist.
+Gibt in der Ausgabe an, ob das Zertifikat in der Sperrliste vorhanden ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -106,16 +106,16 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmsecurity-Schnittstelle**](iwmdrmsecurity.md)
+[**IWMDRMSecurity-Schnittstelle**](iwmdrmsecurity.md)
 </dt> </dl>
 
  

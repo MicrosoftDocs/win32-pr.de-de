@@ -1,7 +1,7 @@
 ---
-description: 'Der wiatransferparameams wird während einer Datenübertragung durch das Windows-Abbild Erfassungs Laufzeitsystem (WIA) an die iwiatransfercallback:: transfercallback-Methode an eine Anwendung übertragen.'
+description: WiaTransferParams wird während einer Datenübertragung vom WIA-Laufzeitsystem (Windows Image Acquisition) an die IWiaTransferCallback::TransferCallback-Methode an eine Anwendung übertragen.
 ms.assetid: 4f1bbacf-e9fd-4129-ab05-3edaeecfaf43
-title: Wiatransferparameams-Struktur (WIA. h)
+title: WiaTransferParams-Struktur (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wia.h
-ms.openlocfilehash: 4c432cab14e08d89a49234dd7c6de059cc9d72c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d128a39ff5d9d29bf0766273adaace7eae86b10c9556284c1f5b6f1c9285d30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119449905"
 ---
-# <a name="wiatransferparams-structure"></a>Wiatransferparameams-Struktur
+# <a name="wiatransferparams-structure"></a>WiaTransferParams-Struktur
 
-Der **wiatransferparameams** wird während einer Datenübertragung durch das Windows-Abbild Erfassungs Laufzeitsystem (WIA) an die [**iwiatransfercallback:: transfercallback**](-wia-iwiatransfercallback-transfercallback.md) -Methode an eine Anwendung übertragen.
+**WiaTransferParams** wird während einer Datenübertragung vom WIA-Laufzeitsystem (Windows Image Acquisition) an die [**IWiaTransferCallback::TransferCallback-Methode**](-wia-iwiatransfercallback-transfercallback.md) an eine Anwendung übertragen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ typedef struct _WiaTransferParams {
 **lMessage**
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 </dd> <dd>
 
@@ -55,43 +55,43 @@ Gibt den Status der Datenübertragung an.
 
 <span id="WIA_TRANSFER_MSG_STATUS"></span><span id="wia_transfer_msg_status"></span>
 
-<span id="WIA_TRANSFER_MSG_STATUS"></span><span id="wia_transfer_msg_status"></span>**Status der WIA- \_ Übertragungs Meldung \_ \_**
+<span id="WIA_TRANSFER_MSG_STATUS"></span><span id="wia_transfer_msg_status"></span>**WIA \_ TRANSFER \_ MSG \_ STATUS**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WIA_TRANSFER_MSG_END_OF_STREAM"></span><span id="wia_transfer_msg_end_of_stream"></span>
 
-<span id="WIA_TRANSFER_MSG_END_OF_STREAM"></span><span id="wia_transfer_msg_end_of_stream"></span>**\_ \_ \_ Ende \_ des Daten \_ Stroms der WIA-Übertragungs Nachricht**
+<span id="WIA_TRANSFER_MSG_END_OF_STREAM"></span><span id="wia_transfer_msg_end_of_stream"></span>**WIA \_ TRANSFER \_ MSG \_ END \_ OF \_ STREAM**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WIA_TRANSFER_MSG_END_OF_TRANSFER"></span><span id="wia_transfer_msg_end_of_transfer"></span>
 
-<span id="WIA_TRANSFER_MSG_END_OF_TRANSFER"></span><span id="wia_transfer_msg_end_of_transfer"></span>**\_ \_ \_ Ende \_ der \_ Übertragung der WIA-Übertragungs Nachricht**
+<span id="WIA_TRANSFER_MSG_END_OF_TRANSFER"></span><span id="wia_transfer_msg_end_of_transfer"></span>**WIA \_ TRANSFER \_ MSG \_ END \_ OF \_ TRANSFER**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WIA_TRANSFER_MSG_DEVICE_STATUS"></span><span id="wia_transfer_msg_device_status"></span>
 
-<span id="WIA_TRANSFER_MSG_DEVICE_STATUS"></span><span id="wia_transfer_msg_device_status"></span>**\_ \_ \_ Geräte \_ Status der WIA-Übertragungs Meldung**
+<span id="WIA_TRANSFER_MSG_DEVICE_STATUS"></span><span id="wia_transfer_msg_device_status"></span>**WIA \_ TRANSFER \_ MSG \_ DEVICE \_ STATUS**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WIA_TRANSFER_MSG_NEW_PAGE"></span><span id="wia_transfer_msg_new_page"></span>
 
-<span id="WIA_TRANSFER_MSG_NEW_PAGE"></span><span id="wia_transfer_msg_new_page"></span>**Seite "WIA \_ Transfer \_ msg \_ New \_ "**
+<span id="WIA_TRANSFER_MSG_NEW_PAGE"></span><span id="wia_transfer_msg_new_page"></span>**\_WIA TRANSFER \_ MSG \_ – NEUE \_ SEITE**
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-**lprozentuabgeschlossen**
+**lPercentComplete**
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 </dd> <dd>
 
@@ -99,7 +99,7 @@ Gibt den Fortschritt der Datenübertragung als Prozentsatz an.
 
 </dd> <dt>
 
-**ultransferredbytes**
+**ulTransferredBytes**
 </dt> <dd>
 
 Typ: **ULONG64**
@@ -110,14 +110,14 @@ Gibt die Menge der übertragenen Daten an.
 
 </dd> <dt>
 
-**hrerrorstatus**
+**hrErrorStatus**
 </dt> <dd>
 
 Typ: **HRESULT**
 
 </dd> <dd>
 
-Der Status oder Fehlerzustand des Geräts, das vom Treiber festgelegt wird. beispielsweise "Aufwärmphase".
+Der Status oder Fehlerzustand des geräts, das vom Treiber festgelegt wurde. z. B. "aufwärmen".
 
 </dd> </dl>
 
@@ -127,9 +127,9 @@ Der Status oder Fehlerzustand des Geräts, das vom Treiber festgelegt wird. beis
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl> |
 
 
 

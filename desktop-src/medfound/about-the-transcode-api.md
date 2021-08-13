@@ -1,50 +1,50 @@
 ---
-description: Informationen zur transcode-API
+description: Informationen zur Transcodierungs-API
 ms.assetid: 54733364-f10c-4c1d-9800-75e283ba4be4
-title: Informationen zur transcode-API
+title: Informationen zur Transcodierungs-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30d2d49a33a97bbb538888173db78705061583ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cca7a5c39ebb4527a615c4c488239a1da4b88283f66199d25f6613a8d1f9bd82
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104565505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119449774"
 ---
-# <a name="about-the-transcode-api"></a>Informationen zur transcode-API
+# <a name="about-the-transcode-api"></a>Informationen zur Transcodierungs-API
 
-Das folgende Diagramm zeigt, wie sich die transcodieren-API auf den Rest der Media Foundation Codierungs Pipeline bezieht.
+Das folgende Diagramm zeigt, wie sich die Transcodierungs-API auf den Rest der Media Foundation-Codierungspipeline bezieht.
 
-![ein Diagramm, das die transcodieren-API anzeigt.](images/encoding08.png)
+![Ein Diagramm, das die Transcodierungs-API zeigt.](images/encoding08.png)
 
-Die Codierungs Pipeline enthält die folgenden Datenverarbeitungs Objekte:
+Die Codierungspipeline enthält die folgenden Datenverarbeitungsobjekte:
 
 -   Medienquelle
 -   Decoder
--   Video Resizer oder audioresampler
+-   Video-Resizer oder Audio-Resampler
 -   Encoder
--   Medien Senke
+-   Mediensenke
 
-Die Video Resizer ist nur erforderlich, wenn die Größe des Ausgabevideos von der Quelle abweicht. Der audioresampler ist nur erforderlich, wenn die Audiodatei vor der Codierung erneut erstellt werden muss. Das Decoder-/encoderpaar ist für die Transcodierung erforderlich, aber nicht für das remuxing.
+Die Videogrößeänderung ist nur erforderlich, wenn sich die Größe des Ausgabevideos von der Quelle unterscheidet. Der Audio-Resampler wird nur benötigt, wenn die Audiodaten vor der Codierung neu gesampelt werden müssen. Das Decoder-Encoder-Paar ist für die Transcodierung erforderlich, jedoch nicht für die Neucodierung.
 
-Bei der Codierungs *Topologie* handelt es sich um den Satz von Pipeline Objekten (Quelle, Decoder, Resizer, Resampler, Encoder und Medien Senke) sowie die Verbindungspunkte zwischen Ihnen. Weitere Informationen zu Topologien finden Sie unter [Topologien](topologies.md).
+Die *Codierungstopologie* ist der Satz von Pipelineobjekten (Quelle, Decoder, Resizer, Resampler, Encoder und Mediensenke) sowie die Verbindungspunkte zwischen ihnen. Weitere Informationen zu Topologien finden Sie unter [Topologien.](topologies.md)
 
-Verschiedene Komponenten sind für das Erstellen der verschiedenen Pipeline Objekte verantwortlich:
+Verschiedene Komponenten sind für die Erstellung der verschiedenen Pipelineobjekte verantwortlich:
 
--   Die Anwendung verwendet in der Regel den [quellresolver](source-resolver.md) , um die Medienquelle zu erstellen.
--   Die [Medien Sitzung](media-session.md) lädt und konfiguriert den Decoder, den Video Resizer und den audioresampler. Intern wird hierfür das topologielader verwendet (siehe [**imftopoloader**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader)).
--   Die transcodieren-API lädt und konfiguriert den Encoder und die Medien Senke.
+-   Die Anwendung verwendet in der Regel den [Quell-Resolver,](source-resolver.md) um die Medienquelle zu erstellen.
+-   Die [Mediensitzung](media-session.md) lädt und konfiguriert den Decoder, den Video-Resizer und den Audio-Resampler. Intern wird hierzu das Topologieladeprogramm verwendet (siehe [**ZULASTENTopoLoader).**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader)
+-   Die Transcodierungs-API lädt und konfiguriert den Encoder und die Mediensenke.
 
-Erweiterte Anwendungen können den Encoder und die Medien Senke direkt konfigurieren, anstatt die transcodieren-API zu verwenden.
+Erweiterte Anwendungen können den Encoder und die Mediensenke direkt konfigurieren, anstatt die Transcodierungs-API zu verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Transcode-API](transcode-api.md)
+[Transcodieren der API](transcode-api.md)
 </dt> <dt>
 
-[Verwenden der transcode-API](fast-transcode-objects.md)
+[Verwenden der Transcode-API](fast-transcode-objects.md)
 </dt> </dl>
 
  

@@ -1,34 +1,34 @@
 ---
-description: Dienst Objekt
+description: Dienstobjekt
 ms.assetid: 4ce4e7f7-579d-41a5-a4e1-935ba0afce83
-title: Dienst Objekt
+title: Dienstobjekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a3aabfc4e4366c54a5d30dbe5825f178378133d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2587ca25e1e9fc225a0b555263bf3f3f4e725c83e5f9b01e716fd6fa191fc270
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119445583"
 ---
-# <a name="service-object"></a>Dienst Objekt
+# <a name="service-object"></a>Dienstobjekt
 
-Das Dienst Objekt muss die folgenden Eigenschaften unterstützen.
+Das Dienstobjekt muss die folgenden Eigenschaften unterstützen.
 
 
 
 | Eigenschaftsname                                                                                                                      | Erforderlich oder optional                                                                  |
 |------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [WPD- \_ Objekt- \_ ID](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                         | Erforderlich. .                                                                           |
-| [übergeordnete WPD- \_ Objekt- \_ \_ ID](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                   | Erforderlich.                                                                             |
-| [WPD- \_ Objekt \_ Name](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                   | Erforderlich.                                                                             |
-| [\_ \_ persistente \_ eindeutige \_ ID für WPD-Objekt](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85)) | Erforderlich.                                                                             |
-| [WPD- \_ Objekt \_ IsHidden](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich, wenn das Dienst Objekt dem Benutzer nicht angezeigt werden soll.                       |
-| [WPD- \_ Objekt \_ IsSystem](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich, wenn das Objekt ein Systemobjekt ist (z. b. eine Systemdatei). |
-| [WPD- \_ Funktions \_ Objekt \_ Kategorie](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))     | Erforderlich. Dies stellt den Geräte Diensttyp dar, z. b. Dienst Kontakte.          |
-| [WPD- \_ Dienst \_ Version](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich.                                                                             |
-| [WPD \_ - \_ Speichertyp](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                | Erforderlich, wenn der Dienst zum Speichern von Objekten verwendet wird.                                     |
-| [WPD- \_ Speicher \_ Kapazität](/previous-versions/windows/hardware/drivers/ff597865(v=vs.85))                                    | Erforderlich, wenn der Dienst zum Speichern von Objekten verwendet wird.                                     |
+| [\_ \_ WPD-OBJEKT-ID](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                         | Erforderlich. .                                                                           |
+| [ÜBERGEORDNETE ID \_ DES WPD-OBJEKTS \_ \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                   | Erforderlich.                                                                             |
+| [\_WPD-OBJEKTNAME \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                   | Erforderlich.                                                                             |
+| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85)) | Erforderlich.                                                                             |
+| [\_WPD-OBJEKT \_ ISHIDDEN](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich, wenn das Dienstobjekt dem Benutzer nicht angezeigt werden soll.                       |
+| [\_WPD-OBJEKT \_ ISSYSTEM](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich, wenn das -Objekt ein Systemobjekt ist (z. B. stellt es eine Systemdatei dar). |
+| [WPD \_ FUNCTIONAL \_ OBJECT \_ CATEGORY](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))     | Erforderlich. Dies stellt den Gerätediensttyp dar, z. B. SERVICE Contacts.          |
+| [\_WPD-DIENSTVERSION \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich.                                                                             |
+| [\_WPD-SPEICHERTYP \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                | Erforderlich, wenn der Dienst zum Speichern von Objekten verwendet wird.                                     |
+| [\_ \_ WPD-SPEICHERKAPAZITÄT](/previous-versions/windows/hardware/drivers/ff597865(v=vs.85))                                    | Erforderlich, wenn der Dienst zum Speichern von Objekten verwendet wird.                                     |
 
 
 
@@ -36,13 +36,13 @@ Das Dienst Objekt muss die folgenden Eigenschaften unterstützen.
 
 ## <a name="typical-resources"></a>Typische Ressourcen
 
-Diese Objekte Hosten in der Regel keine Ressourcen.
+Diese Objekte hosten in der Regel keine Ressourcen.
 
 ## <a name="typical-formats"></a>Typische Formate
 
-In der folgenden Liste werden typische Formate identifiziert, die vom Dienst Objekt verwendet werden. Dieses Objekt ist jedoch nicht auf diese Formate beschränkt.
+In der folgenden Liste sind typische Formate aufgeführt, die vom Dienstobjekt verwendet werden. Dieses Objekt ist jedoch nicht auf diese Formate beschränkt.
 
--   Das WPD- \_ Objekt \_ Format ist \_ nicht angegeben.
+-   \_ \_ WPD-OBJEKTFORMAT \_ NICHT ANGEGEBEN
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
