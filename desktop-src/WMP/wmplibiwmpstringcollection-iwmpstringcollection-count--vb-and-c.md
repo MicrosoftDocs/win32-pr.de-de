@@ -1,11 +1,11 @@
 ---
-title: Iwmpstringcollection-Anzahl (Eigenschaft)
-description: Die Count-Eigenschaft ruft die Anzahl der Elemente in der Zeichen folgen Auflistung ab.
+title: IWMPStringCollection count-Eigenschaft
+description: Die count-Eigenschaft ruft die Anzahl der Elemente in der Zeichenfolgenauflistung ab.
 ms.assetid: 0ba2d158-fa54-46a8-9124-8a412e71bd09
 keywords:
-- Anzahl der Eigenschaften Fenster Media Player
-- Count-Eigenschaft, Windows Media Player, iwmpstringcollection-Schnittstelle
-- Iwmpstringcollection-Schnittstelle, Windows Media Player, Count-Eigenschaft
+- count-Eigenschaft Windows Media Player
+- count-Eigenschaft Windows Media Player , IWMPStringCollection-Schnittstelle
+- IWMPStringCollection-Schnittstelle Windows Media Player , count-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00c520ab346737d1599d79d80ea3acd36c9b84fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 18e4147d1fbae6c98458c460df34d365d84fe0b2a9f23d508bff4eccb75935de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568456"
 ---
-# <a name="iwmpstringcollectioncount-property"></a>Iwmpstringcollection:: count (Eigenschaft)
+# <a name="iwmpstringcollectioncount-property"></a>IWMPStringCollection::count-Eigenschaft
 
-Die **count** -Eigenschaft ruft die Anzahl der Elemente in der Zeichen folgen Auflistung ab.
+Die **count-Eigenschaft** ruft die Anzahl der Elemente in der Zeichenfolgenauflistung ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,11 +49,11 @@ Public ReadOnly Property count As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl der Elemente in der Zeichen folgen Auflistung ist.
+Eine **System.Int32,die** die Anzahl der Elemente in der Zeichenfolgenauflistung ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,23 +61,23 @@ Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibl
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpstringcollection-Schnittstelle (VB und c#)**](iwmpstringcollection--vb-and-c.md)
+[**IWMPStringCollection-Schnittstelle (VB und C#)**](iwmpstringcollection--vb-and-c.md)
 </dt> </dl>
 
  

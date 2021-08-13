@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Sammlung virtueller Systeme dar.
+description: Stellt eine Auflistung virtueller Systeme dar.
 ms.assetid: acf51beb-1103-43a4-8dc5-1a7f2a0482be
 title: Msvm_VirtualSystemCollection-Klasse
 ms.topic: reference
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: a9746356744f2743a8d6656ef4c61044223be113
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04bb39e0c3ecb73facf09e962d2d189bd6ac59449908c0ed9e0214aa5551595e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118644817"
 ---
-# <a name="msvm_virtualsystemcollection-class"></a>MSVM \_ virtualsystemcollection-Klasse
+# <a name="msvm_virtualsystemcollection-class"></a>Msvm \_ VirtualSystemCollection-Klasse
 
-Stellt eine Sammlung virtueller Systeme dar.
+Stellt eine Auflistung virtueller Systeme dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -53,61 +53,61 @@ class Msvm_VirtualSystemCollection : CIM_CollectionOfMSEs
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemcollection** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemCollection-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemcollection** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemCollection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sammlungs**
+**CollectionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("CollectionId"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CollectionID"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Die eindeutige Identifikation des Auflistungs Objekts.
+Die eindeutige Identifikation des Auflistungsobjekts.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Elementname")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("ElementName")
 </dt> </dl>
 
-Ein benutzerdefinierter Name für die Auflistung. Beachten Sie, dass dies nicht unbedingt eindeutig ist.
+Ein benutzerdefinierter Name für die Auflistung. Beachten Sie, dass dies nicht garantiert eindeutig ist.
 
 </dd> <dt>
 
-**Failedoverreplicationtype**
+**FailedOverReplicationType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Typ des Failovers, der für die virtuelle System Sammlung ausgeführt wurde.
+Typ des Failovers, das für die Sammlung des virtuellen Systems ausgeführt wurde.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10 Version 1703.
 
  
 
@@ -115,14 +115,14 @@ Typ des Failovers, der für die virtuelle System Sammlung ausgeführt wurde.
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**Keine** (0)
+**None** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Regular"></span><span id="regular"></span><span id="REGULAR"></span>
 
-**Regulär** (1)
+**Normal** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -139,16 +139,16 @@ Typ des Failovers, der für die virtuelle System Sammlung ausgeführt wurde.
 **LastApplyConsistencyLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Konsistenz Ebene des zuletzt angewendeten Deltas.
+Konsistenzebene des zuletzt angewendeten Deltas.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10 Version 1703.
 
  
 
@@ -163,70 +163,70 @@ Die Konsistenz Ebene des zuletzt angewendeten Deltas.
 
 <span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>
 
-<span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>**Anwendungs konsistent** (1)
+<span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>**Anwendungskonsens** (1)
 
 
 </dt> <dd>
 
-Das zuletzt angewendete Delta zeigt einen Zeitpunkt an, zu dem sich das virtuelle System im Anwendungs konsistenten Zustand befunden hat.
+Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich das virtuelle System im anwendungskonsistenten Zustand befand.
 
 </dd> <dt>
 
 <span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>
 
-<span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>**Absturz konsistent** (2)
+<span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>**Absturzkons konsistent** (2)
 
 
 </dt> <dd>
 
-Das zuletzt angewendete Delta zeigt einen Zeitpunkt an, zu dem sich das virtuelle System in einem Absturz konsistenten Zustand befunden hat.
+Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich das virtuelle System im absturzkonsistenten Zustand befand.
 
 </dd> <dt>
 
 <span id="Group_Crash_Consistent"></span><span id="group_crash_consistent"></span><span id="GROUP_CRASH_CONSISTENT"></span>
 
-<span id="Group_Crash_Consistent"></span><span id="group_crash_consistent"></span><span id="GROUP_CRASH_CONSISTENT"></span>**Gruppen Absturz konsistent** (3)
+<span id="Group_Crash_Consistent"></span><span id="group_crash_consistent"></span><span id="GROUP_CRASH_CONSISTENT"></span>**Gruppenabsturz konsistent** (3)
 
 
 </dt> <dd>
 
-Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem die Gruppe einen Absturz konsistenten Zustand hatte.
+Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich die Gruppe im absturzkonsistenten Zustand befand.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Lastapplytime**
+**LastApplyTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DateTime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem die letzte Replikation auf die Wiederherstellung für die virtuelle System Sammlung angewendet wird.
+Der Zeitpunkt, zu dem die letzte Replikation auf die Wiederherstellung für die virtuelle Systemsammlung angewendet wird.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10 Version 1703.
 
  
 
 </dd> <dt>
 
-**Lastapplyvirtualmachineids**
+**LastApplyVirtualMachineIds**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Array von VM-IDs, die im letzten Apply-Cycle erfolgreich angewendet wurden.
+Array von VM-IDs, die im letzten Anwendungszyklus erfolgreich angewendet wurden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10 Version 1703.
 
  
 
@@ -235,16 +235,16 @@ Array von VM-IDs, die im letzten Apply-Cycle erfolgreich angewendet wurden.
 **ReplicationMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Replikationstyp für die virtuelle System Sammlung.
+Replikationstyp für die Sammlung des virtuellen Systems.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10 Version 1703.
 
  
 
@@ -252,7 +252,7 @@ Der Replikationstyp für die virtuelle System Sammlung.
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**Keine** (0)
+**None** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -273,7 +273,7 @@ Der Replikationstyp für die virtuelle System Sammlung.
 
 <span id="Test_Replica"></span><span id="test_replica"></span><span id="TEST_REPLICA"></span>
 
-**Test Replikat** (3)
+**Testreplikat** (3)
 
 
 </dt> <dd></dd> </dl>
@@ -283,16 +283,16 @@ Der Replikationstyp für die virtuelle System Sammlung.
 **ReplicationState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Replikations Status für die virtuelle System Sammlung.
+Replikationsstatus für die Sammlung des virtuellen Systems.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10 Version 1703.
 
  
 
@@ -307,14 +307,14 @@ Replikations Status für die virtuelle System Sammlung.
 
 <span id="Ready_for_replication"></span><span id="ready_for_replication"></span><span id="READY_FOR_REPLICATION"></span>
 
-**Bereit für Replikation** (1)
+**Bereit für die Replikation** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>
 
-**Warten auf Abschluss der ersten Replikation** (2)
+**Warten auf den Abschluss der ersten Replikation** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -328,28 +328,28 @@ Replikations Status für die virtuelle System Sammlung.
 
 <span id="Failover_initiated"></span><span id="failover_initiated"></span><span id="FAILOVER_INITIATED"></span>
 
-**Initiiertes Failover** (4)
+**Failover initiiert** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Recovered"></span><span id="recovered"></span><span id="RECOVERED"></span>
 
-**Wieder hergestellt** (5)
+**Wiederhergestellt** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Committed"></span><span id="committed"></span><span id="COMMITTED"></span>
 
-Commit **ausgeführt (6** )
+**Commit** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>
 
-Angeh **alten (7** )
+**Angehalten** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -377,7 +377,7 @@ Angeh **alten (7** )
 
 <span id="Planned_failover_initiatedRepurpose_initiatedTest_failover_initiatedPartially_enabled"></span><span id="planned_failover_initiatedrepurpose_initiatedtest_failover_initiatedpartially_enabled"></span><span id="PLANNED_FAILOVER_INITIATEDREPURPOSE_INITIATEDTEST_FAILOVER_INITIATEDPARTIALLY_ENABLED"></span>
 
-**Geplantes Failover initiatedrepurpose initiatedtest Failover initiatedteilweise aktiviert** (11)
+**Geplantes Failover initiiertRepurpose-initiiertTestfailover initiiertPartially aktiviert** (11)
 
 
 </dt> <dd></dd> <dt>
@@ -391,7 +391,7 @@ Angeh **alten (7** )
 
 <span id="Partially_recovered"></span><span id="partially_recovered"></span><span id="PARTIALLY_RECOVERED"></span>
 
-**Teilweise wieder hergestellt** (13)
+**Teilweise wiederhergestellt** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -425,15 +425,15 @@ Angeh **alten (7** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

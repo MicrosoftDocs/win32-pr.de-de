@@ -1,9 +1,9 @@
 ---
-title: TVM_GETTEXTCOLOR Meldung (kommstrg. h)
-description: Ruft die aktuelle Textfarbe des-Steuer Elements ab. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ gettextcolor-Makros senden.
+title: TVM_GETTEXTCOLOR Meldung (Commctrl.h)
+description: Ruft die aktuelle Textfarbe des Steuerelements ab. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetTextColor-Makros senden.
 ms.assetid: fe1aa2e8-fdf2-48d1-936b-6d6bc8e589f4
 keywords:
-- Windows-Steuerelemente für TVM_GETTEXTCOLOR Meldung
+- TVM_GETTEXTCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 899fc68847fea937a6f62bff6367eeac5570a5a6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 65a578753b6f86d2ceaa6a664fe6e6e0ff88475dccfb953ae6c6f652bc2dffbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118669711"
 ---
-# <a name="tvm_gettextcolor-message"></a>TVM \_ gettextcolor-Meldung
+# <a name="tvm_gettextcolor-message"></a>TVM \_ GETTEXTCOLOR-Nachricht
 
-Ruft die aktuelle Textfarbe des-Steuer Elements ab. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ gettextcolor**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_gettextcolor) -Makros senden.
+Ruft die aktuelle Textfarbe des Steuerelements ab. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ GetTextColor-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_gettextcolor) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die aktuelle Textfarbe des-Steuer Elements ab. Sie können diese Nachricht 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die aktuelle Textfarbe darstellt. Wenn dieser Wert-1 ist, verwendet das Steuerelement die System Farbe für die Textfarbe.
+Gibt einen [**COLORREF-Wert**](/windows/desktop/gdi/colorref) zurück, der die aktuelle Textfarbe darstellt. Wenn dieser Wert -1 ist, verwendet das Steuerelement die Systemfarbe für die Textfarbe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TVM \_ SetTextColor**](tvm-settextcolor.md)
+[**TVM \_ SETTEXTCOLOR**](tvm-settextcolor.md)
 </dt> </dl>
 
  

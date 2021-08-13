@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die Einstellungsdaten für einen virtuellen Ethernet-Switch.
+description: Beschreibt Einstellungsdaten für einen virtuellen Ethernet-Switch.
 ms.assetid: 462cff06-5ba6-410a-b091-5c6abab13f03
 title: CIM_VirtualEthernetSwitchSettingData-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 64d7053364aebe1fab5739cd75389b1a9343efe0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6243e86ec53213f959ea0b8f420543a9dca619de9d12593a73619aab2805091d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646458"
 ---
-# <a name="cim_virtualethernetswitchsettingdata-class"></a>CIM \_ virtualethernetzwitchsettingdata-Klasse
+# <a name="cim_virtualethernetswitchsettingdata-class"></a>CIM \_ VirtualEthernetSwitchSettingData-Klasse
 
-Beschreibt die Einstellungsdaten für einen virtuellen Ethernet-Switch.
+Beschreibt Einstellungsdaten für einen virtuellen Ethernet-Switch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,46 +41,46 @@ class CIM_VirtualEthernetSwitchSettingData : CIM_VirtualSystemSettingData
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ virtualethernetzwitchsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualEthernetSwitchSettingData-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ virtualethernetzwitchsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ VirtualEthernetSwitchSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Associatedresourcepool**
+**AssociatedResourcePool**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die derzeit zugeordneten Host Ressourcenpools enthält, oder, die dem Ethernet-Switch zugeordnet werden sollen, um Ethernet-Verbindungen zwischen dem Ethernet-Switch und einem virtuellen Computer zuzuordnen. Jeder Wert, der nicht NULL ist, muss mit dem **WBEM- \_ URI \_ untypedinstancepath** übereinstimmen, wie in der DMTF-Spezifikation "DSP0207" definiert.
+Ein Array, das die Hostressourcenpools enthält, die derzeit zugeordnet sind, oder das dem Ethernet-Switch zugeordnet werden soll, um Ethernetverbindungen zwischen dem Ethernet-Switch und einem virtuellen Computer zuzuordnen. Jeder Wert ungleich NULL dieser Eigenschaft muss dem **WBEM-URI \_ \_ UntypedInstancePath** entsprechen, wie in der DMTF-Spezifikation "DSP0207" definiert.
 
 </dd> <dt>
 
-**Maxnummacaddress**
+**MaxNumMACAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der eindeutigen MAC-Adressen, die der Switch für Mac-Address Learning erlernen kann, wie im IEEE 802,1-Standard definiert.
+Die Anzahl eindeutiger MAC-Adressen, die der Switch für das Lernen von MAC-Adressen erlernen kann, wie im IEEE 802.1-Standard definiert.
 
 </dd> <dt>
 
-**Vlanconnection**
+**VLANConnection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -98,17 +98,17 @@ Ein Array, das die VLAN-IDs enthält, auf die der Switch zugreifen kann.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md)
+[**CIM \_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md)
 </dt> </dl>
 
  

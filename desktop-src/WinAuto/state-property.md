@@ -1,29 +1,29 @@
 ---
 title: State-Eigenschaft
-description: Die State-Eigenschaft beschreibt den Status eines Objekts zu einem bestimmten Zeitpunkt. Alle-Objekte unterstützen die State-Eigenschaft.
+description: Die State-Eigenschaft beschreibt den Status eines Objekts zu einem zeitpunkt. Alle -Objekte unterstützen die State-Eigenschaft.
 ms.assetid: 6a56070f-7913-45b2-b693-3c0a8b7fa2f4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d151f09fca6c31abaaa98a19139d3e22eb28ec90
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e174e938dd6252852ded6de957a54f6f94264aa811bd5bb76094af7bbba61f48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118564418"
 ---
 # <a name="state-property"></a>State-Eigenschaft
 
-Die **State** -Eigenschaft beschreibt den Status eines Objekts zu einem bestimmten Zeitpunkt. Alle-Objekte unterstützen die **State** -Eigenschaft.
+Die **State-Eigenschaft** beschreibt den Status eines Objekts zu einem zeitpunkt. Alle -Objekte unterstützen die **State-Eigenschaft.**
 
-Die **State** -Eigenschaft wird durch Aufrufen von [**IAccessible:: get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)abgerufen.
+Die **State-Eigenschaft** wird durch Aufrufen von [**IAccessible::get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)abgerufen.
 
-Microsoft Active Accessibility bietet in Oleacc. h definierte [Objekt Zustands Konstanten](object-state-constants.md), die zum Identifizieren des Zustands eines Objekts kombiniert werden. Es wird empfohlen, dass Server Entwickler diese vordefinierten Zustands Werte verwenden. Wenn vordefinierte Zustands Werte zurückgegeben werden, wird [**getstatetext**](/windows/desktop/api/Oleacc/nf-oleacc-getstatetexta) von Clients verwendet, um eine lokalisierte Zeichenfolge abzurufen, die den Zustand beschreibt.
+Microsoft Active Accessibility stellt in oleacc.h definierte [Objektzustandskonstanten](object-state-constants.md)bereit, die kombiniert werden, um den Zustand eines Objekts zu identifizieren. Es wird empfohlen, dass Serverentwickler diese vordefinierten Zustandswerte verwenden. Wenn vordefinierte Zustandswerte zurückgegeben werden, verwenden Clients [**GetStateText,**](/windows/desktop/api/Oleacc/nf-oleacc-getstatetexta) um eine lokalisierte Zeichenfolge abzurufen, die den Zustand beschreibt.
 
-Für Grafiken, die gelegentlich animiert werden, sollte die Eigenschaft **State** auf [**State \_ System \_ animiert**](object-state-constants.md) und die [**Role**](role-property.md) -Eigenschaft auf [**Role System- \_ \_ Grafik**](object-roles.md)festgelegt sein.
+Bei Grafiken, die gelegentlich animiert werden, sollte die **State-Eigenschaft** auf [**STATE SYSTEM \_ \_ ANIMATED**](object-state-constants.md) und die [**Role-Eigenschaft**](role-property.md) auf [**ROLE SYSTEM \_ \_ GRAPHIC**](object-roles.md)festgelegt sein.
 
- 
+ 
 
- 
+ 
 
 
 

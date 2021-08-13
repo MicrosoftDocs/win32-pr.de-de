@@ -1,9 +1,9 @@
 ---
-title: /ms_ext Schalter
-description: Ab der mittleren l-Version 3,0 sind die vom MS ext-Schalter aktivierten Funktionen \_ nun der Standardmodus für den Mittelwert Compiler.
+title: /ms_ext Switch
+description: Ab MIDL Version 3.0 sind die durch den ms ext-Switch aktivierten Funktionen \_ jetzt der Standardmodus für den MIDL-Compiler.
 ms.assetid: 175894c9-fa7e-4907-966d-e9df5a8e2745
 keywords:
-- /ms_ext-Schalter-Mittel l
+- /ms_ext Switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bbccf1205c9a937b78b08c46f31bc09aa3b75c70
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 73bee998e96d26c0f5bb2a1e0f28446433681a7175ff181556ad7976c58af356
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118644559"
 ---
-# <a name="ms_ext-switch"></a>/MS \_ ext-Schalter
+# <a name="ms_ext-switch"></a>Schalter "/ms \_ ext"
 
-Ab der mittleren l-Version 3,0 sind die vom **MS \_ ext** -Schalter aktivierten Funktionen nun der Standardmodus für den Mittelwert Compiler.
+Ab MIDL Version 3.0 sind die durch den ms **\_ ext-Switch** aktivierten Funktionen jetzt der Standardmodus für den MIDL-Compiler.
 
 ``` syntax
 midl /ms_ext
@@ -29,42 +29,42 @@ midl /ms_ext
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Schalter verwenden, wird kein Compilerfehler generiert, sodass Sie keine Verweise auf **/MS \_ ext** oder [**/c \_ ext**](-c-ext.md) aus einem vorhandenen Makefile entfernen müssen.
+Wenn Sie den Schalter verwenden, wird kein Compilerfehler generiert, sodass Sie verweise auf **/ms \_ ext** oder [**/c \_ ext**](-c-ext.md) nicht aus einem vorhandenen Makefile entfernen müssen.
 
-Die folgenden Microsoft-Erweiterungen für OSF-DCE sind nun standardmäßig verfügbar:
+Die folgenden Microsoft-Erweiterungen für OSF DCE sind jetzt standardmäßig verfügbar:
 
--   Schnittstellendefinitionen für OLE-Objekte. Weitere Informationen zu den für OLE-Schnittstellen generierten Dateien finden Sie unter für [eine COM-Schnittstelle generierte Dateien](files-generated-for-a-com-interface.md) .
--   Ein [**\[ Rückruf \]**](callback.md) Attribut, das eine statische Rückruffunktion auf dem Client angibt.
--   [**cpp- \_ Zitat**](cpp-quote.md)(*\_ Zeichenfolge* in Anführungszeichen) und [**\# pragma-Mittell- \_ Echo**](pragma.md)
--   [**WCHAR \_ t**](wchar-t.md) -breit Zeichen Typen,-Konstanten und-Zeichen folgen
--   [**enumerationsinitialisierung**](enum.md) (Sparse-Enumeratoren)
--   Ausdrücke als Größen-und diskriminatorspezifiker
+-   Schnittstellendefinitionen für OLE-Objekte. Weitere Informationen zu den für OLE-Schnittstellen generierten Dateien finden Sie unter [Für eine COM-Schnittstelle generierte Dateien.](files-generated-for-a-com-interface.md)
+-   Ein [**\[ \] Rückrufattribut,**](callback.md) das eine statische Rückruffunktion auf dem Client angibt
+-   [**\_ CPP-Anführungszeichen**](cpp-quote.md)*\_ (Zeichenfolge in Anführungszeichen)* und [**\# Pragma midl \_ echo**](pragma.md)
+-   [**wchar \_ t**](wchar-t.md) Breitzeichentypen, Konstanten und Zeichenfolgen
+-   [**Enumerationsinitialisierung**](enum.md) (Sparseenumeratoren)
+-   Ausdrücke als Größen- und Diskriminatorspezifizierer
 -   [Behandeln von Erweiterungen](/windows/desktop/Rpc/microsoft-rpc-binding-handle-extensions)
--   [Vererbung von Attributtypen](/windows/desktop/Rpc/pointer-attribute-type-inheritance)
+-   [Zeigerattributtypvererbung](/windows/desktop/Rpc/pointer-attribute-type-inheritance)
 -   [Mehrere Schnittstellen](/windows/desktop/Rpc/registering-interfaces)
--   Definitionen außerhalb des Schnittstellen Blocks
--   Sie können [direktionale Attribute](/windows/desktop/Rpc/directional-parameter-attributes) \[ [**in**](in.md), [**out**](out-idl.md) weglassen.\]
+-   Definitionen außerhalb des Schnittstellenblocks
+-   Sie können [richtungsale Attribute](/windows/desktop/Rpc/directional-parameter-attributes) \[ [**in**](in.md)auslassen. [](out-idl.md)\]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[Vererbung von Attributtypen](/windows/desktop/Rpc/pointer-attribute-type-inheritance)
+[Zeigerattributtypvererbung](/windows/desktop/Rpc/pointer-attribute-type-inheritance)
 </dt> <dt>
 
-[**/APP- \_ Konfiguration**](-app-config.md)
+[**\_/app-Konfiguration**](-app-config.md)
 </dt> <dt>
 
 [**/osf**](-osf.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

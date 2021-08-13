@@ -1,7 +1,7 @@
 ---
-description: Fügen Sie dem Batch von Sprites, die gerendert werden sollen, ein Array von Sprites hinzu.
+description: Fügen Sie dem Zu rendernden Sprites-Batch ein Array von Sprites hinzu.
 ms.assetid: e6a9f806-7244-4139-b47e-c46dfab38a31
-title: ID3DX10Sprite::D rawspritesbuffered-Methode (d3dx10. h)
+title: ID3DX10Sprite::D rawSpritesBuffered-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 72893f6a8c3cf82c67f014b4bdbb9a92453de319
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bee3fd9344e393d2b5b9ddf6162286507fac918ea15f9abde2abcc2f80a5b65d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540037"
 ---
-# <a name="id3dx10spritedrawspritesbuffered-method"></a>ID3DX10Sprite::D rawspritesbuffered-Methode
+# <a name="id3dx10spritedrawspritesbuffered-method"></a>ID3DX10Sprite::D rawSpritesBuffered-Methode
 
-Fügen Sie dem Batch von Sprites, die gerendert werden sollen, ein Array von Sprites hinzu. Dies muss zwischen Aufrufen von [**ID3DX10Sprite:: begin**](id3dx10sprite-begin.md) und [**ID3DX10Sprite:: End**](id3dx10sprite-end.md)aufgerufen werden, und [**ID3DX10Sprite:: Flush**](id3dx10sprite-flush.md) muss vor Ende aufgerufen werden, um alle Batch Sprites zum Rendering an das Gerät zu senden. Diese Draw-Methode ist besonders nützlich, wenn Sie eine kleine Anzahl von Sprites zeichnen möchten, die Sie in einem großen Batch, wie z. b. Schriftarten, gepuffert werden
+Fügen Sie dem Zu rendernden Sprites-Batch ein Array von Sprites hinzu. Dies muss zwischen Aufrufen von [**ID3DX10Sprite::Begin**](id3dx10sprite-begin.md) und [**ID3DX10Sprite::End**](id3dx10sprite-end.md)aufgerufen werden, und [**ID3DX10Sprite::Flush**](id3dx10sprite-flush.md) muss vor End aufgerufen werden, um alle Batch-Sprites zum Rendern an das Gerät zu senden. Diese Draw-Methode ist besonders nützlich beim Zeichnen einer kleinen Anzahl von Sprites, die in einen großen Batch gepuffert werden sollen, z. B. Schriftarten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT DrawSpritesBuffered(
 
 <dl> <dt>
 
-*psprites* \[ in\]
+*pSprites* \[ In\]
 </dt> <dd>
 
-Typ: **[ **d3dx10 \_ Sprite**](d3dx10-sprite.md)\***
+Typ: **[ **D3DX10 \_ SPRITE**](d3dx10-sprite.md)\***
 
-Das Array von Sprites, das gezeichnet werden soll. Siehe [**d3dx10 \_ Sprite**](d3dx10-sprite.md).
+Das Zu zeichnende Array von Sprites. Siehe [**D3DX10 \_ SPRITE**](d3dx10-sprite.md).
 
 </dd> <dt>
 
-*csprites* \[ in\]
+*cSprites* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Sprites in psprites.
+Die Anzahl der Sprites in pSprites.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Die Anzahl der Sprites in psprites.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

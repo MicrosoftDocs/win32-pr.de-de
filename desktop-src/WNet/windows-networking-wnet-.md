@@ -1,30 +1,30 @@
 ---
-title: Windows-Netzwerke (WNET)
-description: Mit den Windows-Netzwerkfunktionen (WNET) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne eine bestimmte Netzwerkanbieter-oder physische Netzwerk Implementierung zu berücksichtigen.
+title: Windows Netzwerk (WNet)
+description: Mit Windows -Netzwerkfunktionen (WNet) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne Berechtigungen für einen bestimmten Netzwerkanbieter oder eine physische Netzwerkimplementierung zu übernehmen.
 ms.assetid: 7668ac55-7104-4ddb-88eb-920cfe4e36fd
 keywords:
-- WNET für Windows-Netzwerke
-- WNET-WNET
+- Windows Netzwerk-WNET
+- WNet WNet
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4d436ec5c5daec52d73a3a6f7942bcc76ef4251
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 48b177a3b873584a06429b2a9a033d316851b43df7bb3af524fe393224c6b0c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118566413"
 ---
-# <a name="windows-networking-wnet"></a>Windows-Netzwerke (WNET)
+# <a name="windows-networking-wnet"></a>Windows Netzwerk (WNet)
 
-Mit den Windows-Netzwerkfunktionen (WNET) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne eine bestimmte Netzwerkanbieter-oder physische Netzwerk Implementierung zu berücksichtigen. Dies liegt daran, dass die WNET-Funktionen Netzwerk unabhängig sind.
+Mit Windows -Netzwerkfunktionen (WNet) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne Berechtigungen für einen bestimmten Netzwerkanbieter oder eine physische Netzwerkimplementierung zu übernehmen. Dies liegt daran, dass die WNet-Funktionen netzwerkunabhängig sind.
 
--   [Informationen über Windows-Netzwerke](about-windows-networking.md)
--   [Verwenden der Windows-Netzwerke](using-windows-networking.md)
--   [Windows-Netzwerk Referenz](windows-networking-reference.md)
+-   [Informationen Windows Netzwerk](about-windows-networking.md)
+-   [Verwenden Windows Netzwerk](using-windows-networking.md)
+-   [Windows Netzwerkreferenz](windows-networking-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

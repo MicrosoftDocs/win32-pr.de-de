@@ -1,32 +1,32 @@
 ---
-description: Die Tabelle "targetfiles \_ OptionalData" enthält Informationen zu bestimmten Dateien in einem Zielimage. Diese Tabelle ist in der Datenbank für die Patcherstellung (PCP-Datei) optional und wird von der uikreatepatchpackageex-Funktion verwendet.
+description: Die Tabelle TargetFiles \_ OptionalData enthält Informationen zu bestimmten Dateien in einem Zielimage. Diese Tabelle ist in der Patcherstellungsdatenbank (PCP-Datei) optional und wird von der UiCreatePatchPackageEx-Funktion verwendet.
 ms.assetid: 577b1674-1e44-42e1-b011-c0fb561b514c
-title: TargetFiles_OptionalData Tabelle (Patchwiz.dll)
+title: TargetFiles_OptionalData-Tabelle (Patchwiz.dll)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 859ac2e03f68c28eff5ebf7f5afa2bf53ab69299
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5664e2e21968cb3fee5ce3d606dd07008f2436c4b649a7bcefeebd77df9cf6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118623735"
 ---
-# <a name="targetfiles_optionaldata-table-patchwizdll"></a>Targetfiles \_ (OptionalData-Tabelle) (Patchwiz.dll)
+# <a name="targetfiles_optionaldata-table-patchwizdll"></a>TargetFiles \_ OptionalData-Tabelle (Patchwiz.dll)
 
-Die Tabelle "targetfiles \_ OptionalData" enthält Informationen zu bestimmten Dateien in einem Zielimage. Diese Tabelle ist in der Datenbank für die Patcherstellung (PCP-Datei) optional und wird von der [uikreatepatchpackageex](uicreatepatchpackageex--patchwiz-dll-.md) -Funktion verwendet.
+Die Tabelle TargetFiles \_ OptionalData enthält Informationen zu bestimmten Dateien in einem Zielimage. Diese Tabelle ist in der Patcherstellungsdatenbank (PCP-Datei) optional und wird von der [UiCreatePatchPackageEx-Funktion](uicreatepatchpackageex--patchwiz-dll-.md) verwendet.
 
-Die Tabelle "targetfiles \_ OptionalData" enthält die folgenden Spalten.
+Die Tabelle TargetFiles \_ OptionalData weist die folgenden Spalten auf.
 
 
 
-| Spalte        | Typ | Schlüssel | Nullwerte zulässig |
+| Spalte        | Typ | Key | Nullwerte zulässig |
 |---------------|------|-----|----------|
 | Ziel        | text | J   | N        |
 | FTK           | text | J   | N        |
-| SymbolPath   | text |     | J        |
-| Ignoreoffsets | text |     | J        |
-| Ignorelengths | text |     | J        |
-| Retainoffsets | text |     | J        |
+| SymbolPaths   | text |     | J        |
+| IgnoreOffsets | text |     | J        |
+| IgnoreLengths | text |     | J        |
+| RetainOffsets | text |     | J        |
 
 
 
@@ -36,51 +36,51 @@ Die Tabelle "targetfiles \_ OptionalData" enthält die folgenden Spalten.
 
 <dl> <dt>
 
-<span id="Target"></span><span id="target"></span><span id="TARGET"></span>Spar
+<span id="Target"></span><span id="target"></span><span id="TARGET"></span>Ziel
 </dt> <dd>
 
-Fremdschlüssel für die Ziel Spalte der [TargetImages-Tabelle (Patchwiz.dll)](targetimages-table-patchwiz-dll-.md).
+Fremdschlüssel für die Spalte Target der [TargetImages-Tabelle (Patchwiz.dll).](targetimages-table-patchwiz-dll-.md)
 
 </dd> <dt>
 
 <span id="FTK"></span><span id="ftk"></span>FTK
 </dt> <dd>
 
-Fremdschlüssel in die [Dateitabelle](file-table.md) des zielbilds.
+Fremdschlüssel in die [Dateitabelle](file-table.md) des Zielimages.
 
 </dd> <dt>
 
-<span id="SymbolPaths"></span><span id="symbolpaths"></span><span id="SYMBOLPATHS"></span>SymbolPath
+<span id="SymbolPaths"></span><span id="symbolpaths"></span><span id="SYMBOLPATHS"></span>SymbolPaths
 </dt> <dd>
 
-Der Wert in diesem Feld wird der durch Semikolons getrennten Liste der Ordner in der SymbolPath-Spalte der [TargetImages-Tabelle (Patchwiz.dll)](targetimages-table-patchwiz-dll-.md) hinzugefügt, wenn der Patch generiert wird, und kann zum Hinzufügen von Symbol Dateien für eine bestimmte Datei verwendet werden.
+Der Wert in diesem Feld wird der durch Semikolons getrennten Liste von Ordnern in der Spalte SymbolPaths der [TargetImages-Tabelle (Patchwiz.dll)](targetimages-table-patchwiz-dll-.md) hinzugefügt, wenn der Patch generiert wird, und kann verwendet werden, um Symboldateien für eine bestimmte Datei hinzuzufügen.
 
 </dd> <dt>
 
-<span id="IgnoreOffsets"></span><span id="ignoreoffsets"></span><span id="IGNOREOFFSETS"></span>Ignoreoffsets
+<span id="IgnoreOffsets"></span><span id="ignoreoffsets"></span><span id="IGNOREOFFSETS"></span>IgnoreOffsets
 </dt> <dd>
 
-Der Wert in diesem Feld ist eine durch Trennzeichen getrennte Liste von Bereichs Offset Zahlen für die Bereiche, die in der Zieldatei ignoriert werden sollen. Die Reihenfolge und die Anzahl der Bereiche in der Liste müssen mit den Elementen in der Spalte ignorelengths identisch sein. Diese Spalte ist optional.
+Der Wert in diesem Feld ist eine durch Kommas getrennte Liste von Bereichsoffsetnummern für die Bereiche, die in der Zieldatei ignoriert werden sollen. Reihenfolge und Anzahl der Bereiche in der Liste müssen mit den Elementen in der IgnoreLengths-Spalte übereinstimmen. Diese Spalte ist optional.
 
-Die Werte können Decimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn der Wert "0x" vorangestellt ist. Die Spalten sind Zeichen folgen Spalten, und Patchwiz.dll konvertiert die Werte in ulongs.
+Die Werte können dezimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn ihm das Präfix "0x" vorangestellt ist. Die Spalten sind Zeichenfolgenspalten, und Patchwiz.dll konvertiert die Werte in ULONGs.
 
 </dd> <dt>
 
-<span id="IgnoreLengths"></span><span id="ignorelengths"></span><span id="IGNORELENGTHS"></span>Ignorelengths
+<span id="IgnoreLengths"></span><span id="ignorelengths"></span><span id="IGNORELENGTHS"></span>IgnoreLengths
 </dt> <dd>
 
-Der Wert in diesem Feld ist eine durch Trennzeichen getrennte Liste von Bereichs Längen in Bytes für die Bereiche, die in der Zieldatei ignoriert werden sollen. Die Reihenfolge und die Anzahl der Bereiche in der Liste müssen mit den Elementen in der ignoreoffsets-Spalte identisch sein. Diese Spalte ist optional.
+Der Wert in diesem Feld ist eine durch Kommas getrennte Liste von Bereichslängen in Bytes für die Bereiche, die in der Zieldatei ignoriert werden sollen. Die Reihenfolge und Anzahl der Bereiche in der Liste muss mit den Elementen in der IgnoreOffsets -Spalte übereinstimmen. Diese Spalte ist optional.
 
-Die Werte können Decimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn der Wert "0x" vorangestellt ist. Die Spalten sind Zeichen folgen Spalten, und Patchwiz.dll konvertiert die Werte in ulongs.
+Die Werte können dezimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn ihm das Präfix "0x" vorangestellt ist. Die Spalten sind Zeichenfolgenspalten, und Patchwiz.dll konvertiert die Werte in ULONGs.
 
 </dd> <dt>
 
-<span id="RetainOffsets"></span><span id="retainoffsets"></span><span id="RETAINOFFSETS"></span>Retainoffsets
+<span id="RetainOffsets"></span><span id="retainoffsets"></span><span id="RETAINOFFSETS"></span>RetainOffsets
 </dt> <dd>
 
-Der Wert in diesem Feld ist eine durch Trennzeichen getrennte Liste von Bereichs Offset Zahlen für die Bereiche, die in der Zieldatei beibehalten werden sollen. Die Reihenfolge und die Anzahl der Bereiche in der Liste müssen mit den Elementen in der Spalte "retainoffsets" des entsprechenden Datensatzes in der [Tabelle "familyfileranges" (Patchwiz.dll)](familyfileranges-table-patchwiz-dll-.md) übereinstimmen.
+Der Wert in diesem Feld ist eine durch Kommas getrennte Liste von Bereichsoffsetnummern für die Bereiche, die in der Zieldatei beibehalten werden sollen. Reihenfolge und Anzahl der Bereiche in der Liste müssen mit den Elementen in der RetainOffsets-Spalte des entsprechenden Datensatzes in der [FamilyFileRanges-Tabelle (Patchwiz.dll) übereinstimmen.](familyfileranges-table-patchwiz-dll-.md)
 
-Die Werte können Decimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn der Wert "0x" vorangestellt ist. Die Spalten sind Zeichen folgen Spalten, und Patchwiz.dll konvertiert die Werte in ulongs.
+Die Werte können dezimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn ihm das Präfix "0x" vorangestellt ist. Die Spalten sind Zeichenfolgenspalten, und Patchwiz.dll konvertiert die Werte in ULONGs.
 
 </dd> </dl>
 

@@ -1,9 +1,9 @@
 ---
 title: propput-Attribut
-description: Das Attribut \ propput \ gibt eine Eigenschafts Einstellungs Funktion an. Die-Eigenschaft muss den gleichen Namen wie die Funktion aufweisen.
+description: Das \propput\-Attribut gibt eine Eigenschaftseinstellungsfunktion an. Die Eigenschaft muss den gleichen Namen wie die Funktion aufweisen.
 ms.assetid: ffd8af15-42a4-4852-a29b-1fc66f673978
 keywords:
-- propput-Attribut-Mittel l
+- Propput-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79bf5520a3f4f4872801145064f49a8108cf602a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 5f0e34d4826abfa2df6cd1262ccd4bcec04344f4500ddf5c146816d23f6261c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118641933"
 ---
 # <a name="propput-attribute"></a>propput-Attribut
 
-Das **\[ PROPPUT \]** -Attribut gibt eine Eigenschafts Einstellungs Funktion an. Die-Eigenschaft muss den gleichen Namen wie die Funktion aufweisen *.*
+Das **\[ \] Propput-Attribut** gibt eine Eigenschaftseinstellungsfunktion an. Die -Eigenschaft muss den gleichen Namen wie die Funktion *aufweisen.*
 
 ``` syntax
 [propput [,optional-property-attributes]] return-type function-name( parameters);
@@ -31,45 +31,45 @@ Das **\[ PROPPUT \]** -Attribut gibt eine Eigenschafts Einstellungs Funktion an.
 
 <dl> <dt>
 
-*optionale-Property-Attribute* 
+*optional-property-attributes* 
 </dt> <dd>
 
-NULL oder mehr Eigenschafts Attribute.
+Null oder mehr Eigenschaftsattribute.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*rückgabetyp* 
 </dt> <dd>
 
-Der Typ der Daten, die von der Remote Prozedur zurückgegeben werden.
+Der Typ der von der Remoteprozedur zurückgegebenen Daten.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Der Name der Remote Prozedur.
+Der Name der Remoteprozedur.
 
 </dd> <dt>
 
 *parameters* 
 </dt> <dd>
 
-NULL oder mehr Parameter für die Remote Prozedur.
+Null oder mehr Parameter für die Remoteprozedur.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Funktion, die über das **\[ PROPPUT \]** -Attribut verfügt, muss ebenfalls als letzten Parameter einen Parameter haben, der das **\[** [**in**](in.md) - **\]** Attribut aufweist.
+Eine Funktion, die über das **\[ \] Propput-Attribut** verfügt, muss als letzter Parameter auch einen Parameter mit dem **\[** [**in-Attribut**](in.md) **\]** aufweisen.
 
-**\[** Für eine Funktion kann höchstens ein [**propget**](propget.md) **\]** -, **\[ PROPPUT \]** -und **\[** [**PROPPUTREF**](propputref.md) -Konstruktor **\]** angegeben werden.
+Höchstens eines von **\[** [**propget,**](propget.md) **\]** **\[ propput \]** und **\[** [**propputref**](propputref.md) kann für eine Funktion angegeben **\]** werden.
 
-Wenn das **\[** [**LCID**](lcid.md) - **\]** Attribut in der Parameterliste einer Funktion verwendet wird, die einen Parameter mit dem **\[ PROPPUT \]** -Attribut enthält, muss der **\[ LCID \]** -Parameter den Wert Second bis The Last aufweisen.
+Wenn das **\[** [**lcid-Attribut**](lcid.md) **\]** in der Parameterliste einer Funktion verwendet wird, die einen Parameter mit dem **\[ propput-Attribut \]** enthält, muss der **\[ lcid-Parameter \]** vor dem letzten Parameter liegen.
 
 ### <a name="flags"></a>Flags
 
-\_PropertyPut aufrufen
+INVOKE \_ PROPERTYPUT
 
 ## <a name="examples"></a>Beispiele
 
@@ -90,24 +90,24 @@ interface InMyFace : IDispatch
 
 <dl> <dt>
 
-[Unterschiede zwischen "Mittel l" und "MkTypLib"](differences-between-midl-and-mktyplib.md)
+[Unterschiede zwischen MIDL und MKTYPLIB](differences-between-midl-and-mktyplib.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
 [**propget**](propget.md)
 </dt> <dt>
 
-[**propputref**](propputref.md)
+[**Propputref**](propputref.md)
 </dt> <dt>
 
-[**FUNCFLAGS**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[**Typeflags**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

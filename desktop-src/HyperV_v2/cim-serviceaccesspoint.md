@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Dienst Zugriffspunkt (SAP) dar, der einen Dienst verwenden oder aufrufen kann. SAPS geben an, dass ein Dienst für andere zu verwendende Entitäten verfügbar ist.
+description: Stellt einen Dienstzugriffspunkt (SAP) dar, der einen Dienst nutzen oder aufrufen kann. SAPs geben an, dass ein Dienst für andere Entitäten verfügbar ist.
 ms.assetid: 09349c95-3f7e-46c5-bea1-c3d14ee16a2a
 title: CIM_ServiceAccessPoint-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: e3e27fc667c55cd101b06a34f9140cb9eed8923f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aad557ed5ec13e56a53912a44b11a69a69febf118bb3c2bf9aa68971cfd88de0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118647556"
 ---
 # <a name="cim_serviceaccesspoint-class-hyper-v-management"></a>CIM_ServiceAccessPoint-Klasse (Hyper-V-Verwaltung)
 
-Stellt einen Dienst Zugriffspunkt (SAP) dar, der einen Dienst verwenden oder aufrufen kann. SAPS geben an, dass ein Dienst für andere zu verwendende Entitäten verfügbar ist.
+Stellt einen Dienstzugriffspunkt (SAP) dar, der einen Dienst nutzen oder aufrufen kann. SAPs geben an, dass ein Dienst für andere Entitäten verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,77 +43,77 @@ class CIM_ServiceAccessPoint : CIM_EnabledLogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ serviceaccesspoint** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ServiceAccessPoint-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ serviceaccesspoint** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ServiceAccessPoint-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Klassenname, der verwendet wird, um eine Instanz dieser Klasse zu erstellen. " **Kreationclassname** " wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und ihrer Unterklassen eindeutig zu identifizieren.
+Der Klassenname, der zum Erstellen einer Instanz dieser Klasse verwendet wird. **CreationClassName** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und deren Unterklassen eindeutig zu identifizieren.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der eindeutige Name des SAP, der die von SAP unterstützten Funktionen angibt.
+Der eindeutige Name des SAP, der die von SAP unterstützten Features angibt.
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**")
 </dt> </dl>
 
-Der Klassenname, der zum Erstellen einer Instanz des Systems verwendet wird, das den SAP enthält. **Systemkreationclassname** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und ihrer Unterklassen eindeutig zu identifizieren.
+Der Klassenname, der zum Erstellen einer Instanz des Systems verwendet wird, das sap enthält. **SystemCreationClassName** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und deren Unterklassen eindeutig zu identifizieren.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ System**](cim-system.md).**Name**")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**Name**")
 </dt> </dl>
 
-Der Name des Systems, das den SAP enthält.
+Der Name des Systems, das sap enthält.
 
 </dd> </dl>
 
@@ -125,17 +125,17 @@ Der Name des Systems, das den SAP enthält.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)
+[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Fullscreenmode-Methode ruft den aktuellen Vollbildmodus ab.
+description: Die \_ Get FullScreenMode-Methode ruft den aktuellen Vollbildmodus ab.
 ms.assetid: 351af361-5cfd-4e82-bd8a-92f629bd270d
-title: CBaseControlWindow.get_FullScreenMode-Methode (ctlutil. h)
+title: CBaseControlWindow.get_FullScreenMode-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fc77b43db2bb420e6cfe2eace44e96e1ab43b0cb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cebd74fd51551249c339100ac2dd3eda4a171cc316cca575f27f5194480978ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118660533"
 ---
-# <a name="cbasecontrolwindowget_fullscreenmode-method"></a>Cbasecontrolwindow. get \_ Fullscreenmode-Methode
+# <a name="cbasecontrolwindowget_fullscreenmode-method"></a>CBaseControlWindow.get \_ FullScreenMode-Methode
 
-Die- `get_FullScreenMode` Methode ruft den aktuellen Vollbildmodus ab.
+Die `get_FullScreenMode` -Methode ruft den aktuellen Vollbildmodus ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT get_FullScreenMode(
 
 <dl> <dt>
 
-*Fullscreenmode* 
+*FullScreenMode* 
 </dt> <dd>
 
 Zeiger auf den aktuellen Vollbildmodus.
@@ -51,11 +51,11 @@ Zeiger auf den aktuellen Vollbildmodus.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion gibt \_ standardmäßig E notimpl zurück. Dadurch wird dem [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Plug-in-Verteiler mitgeteilt, dass dieser Renderer keinen Vollbild-Renderer implementiert.
+Diese Memberfunktion gibt standardmäßig E \_ NOTIMPL zurück. Dadurch wird der [**IVideoWindow-Plug-In-Verteiler**](/windows/desktop/api/Control/nn-control-ivideowindow) darüber informiert, dass dieser Renderer keinen Vollbildrenderer implementiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Member-Funktion gibt \_ standardmäßig E notimpl zurück. Dadurch wird de
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

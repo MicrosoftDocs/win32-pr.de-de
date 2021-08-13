@@ -1,31 +1,31 @@
 ---
-description: ICE57 überprüft, ob einzelne Komponenten nicht Computer-und benutzerspezifische Daten kombinieren. Diese benutzerdefinierte Ice-Aktion überprüft Registrierungseinträge, Dateien, Verzeichnis Schlüssel Pfade und nicht angekündigte Verknüpfungen.
+description: ICE57 überprüft, ob einzelne Komponenten nicht computer- und benutzerspezifische Daten mischen. Diese benutzerdefinierte ICE-Aktion überprüft Registrierungseinträge, Dateien, Verzeichnisschlüsselpfade und nicht angekündigte Verknüpfungen.
 ms.assetid: 3c82efa7-9cf3-4bcd-8ec4-b81d1d7aa0a6
 title: ICE57
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a59d609e5d7de0011666be0b5cc5e76417d8e67d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d875264ed1fbc0f7dedac863c21801e5180ae879c9c255af7cf4b36e5d402970
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118635161"
 ---
 # <a name="ice57"></a>ICE57
 
-ICE57 überprüft, ob einzelne Komponenten nicht Computer-und benutzerspezifische Daten kombinieren. Diese benutzerdefinierte Ice-Aktion überprüft Registrierungseinträge, Dateien, Verzeichnis Schlüssel Pfade und nicht angekündigte Verknüpfungen.
+ICE57 überprüft, ob einzelne Komponenten nicht computer- und benutzerspezifische Daten mischen. Diese benutzerdefinierte ICE-Aktion überprüft Registrierungseinträge, Dateien, Verzeichnisschlüsselpfade und nicht angekündigte Verknüpfungen.
 
-Das Kombinieren von Benutzer-und computerspezifischen Daten in der gleichen Komponente kann dazu führen, dass die Komponente für einige Benutzer in einer Umgebung mit mehreren Benutzern nur teilweise installiert wird.
+Das Kombinieren von Benutzer- und Computerdaten in derselben Komponente kann zu einer nur teilweisen Installation der Komponente für einige Benutzer in einer Umgebung mit mehreren Benutzern führen.
 
-Siehe die Eigenschaft " [**ALLUSERS**](allusers.md) ".
+Weitere Informationen finden Sie in der [**ALLUSERS-Eigenschaft.**](allusers.md)
 
 ## <a name="result"></a>Ergebnis
 
-ICE57 gibt einen Fehler aus, wenn eine Komponente gefunden wird, die sowohl Computer-als auch benutzerspezifische Registrierungseinträge, Dateien, Verzeichnis Schlüssel Pfade oder nicht angekündigte Verknüpfungen enthält.
+ICE57 gibt einen Fehler aus, wenn eine Komponente gefunden wird, die sowohl Computer- als auch Benutzerregistrierungseinträge, Dateien, Verzeichnisschlüsselpfade oder nicht angekündigte Verknüpfungen enthält.
 
 ## <a name="example"></a>Beispiel
 
-ICE57reports die folgenden Fehler für das gezeigte Beispiel.
+ICE57 gibt die folgenden Fehler für das gezeigte Beispiel an.
 
 ``` syntax
 Component 'Component1' has both per-user and per-machine 
@@ -41,31 +41,31 @@ Component 'Component4' has both per-user data and
     a keypath that can be either per-user or per-machine.
 ```
 
-[Komponenten Tabelle](component-table.md) (partiell)
+[Komponententabelle](component-table.md) (teilweise)
 
 
 
-| Komponente  | Verzeichnis  | Attribute | KEYPATH |
+| Komponente  | Verzeichnis  | Attribute | KeyPath |
 |------------|------------|------------|---------|
-| Component1 | Directoren | 0          | Mit der   |
-| Component2 | Directoren | 4          | Regkeyb |
-| Component3 | Directoren | 0          | Filec   |
-| Component4 | Directoren | 4          | Regkeyd |
+| Komponente1 | DirectoryA | 0          | Filea   |
+| Component2 | DirectoryA | 4          | RegKeyB |
+| Component3 | DirectoryA | 0          | FileC   |
+| Komponente4 | DirectoryA | 4          | RegKeyD |
 
 
 
  
 
-[Registrierungs Tabelle](registry-table.md) (partiell)
+[Registrierungstabelle](registry-table.md) (partiell)
 
 
 
 | Registrierung | Root | Komponente\_ |
 |----------|------|-------------|
-| Regkeya  | 1    | Component1  |
-| Regkeyb  | 1    | Component2  |
-| Regkeyc  | -1   | Component3  |
-| Regkeyd  | -1   | Component4  |
+| RegKeyA  | 1    | Komponente1  |
+| RegKeyB  | 1    | Component2  |
+| RegKeyC  | -1   | Component3  |
+| RegKeyD  | -1   | Komponente4  |
 
 
 
@@ -75,39 +75,39 @@ Component 'Component4' has both per-user data and
 
 
 
-| File  | Komponente\_ |
+| Datei  | Komponente\_ |
 |-------|-------------|
-| Mit der | Component1  |
-| FileB | Component2  |
-| Filec | Component3  |
-| Fassung | Component4  |
+| Filea | Komponente1  |
+| Fileb | Component2  |
+| FileC | Component3  |
+| Abgelegt | Komponente4  |
 
 
 
  
 
-[Verzeichnis Tabelle](directory-table.md)
+[Verzeichnistabelle](directory-table.md)
 
 
 
-| Verzeichnis  | Über \_ geordnetes Verzeichnis | DefaultDir |
+| Verzeichnis  | \_Übergeordnetes Verzeichnis | DefaultDir |
 |------------|-------------------|------------|
-| TARGETDIR  |                   | SourceDir  |
-| Directoren | TARGETDIR         | Directoren |
+| Targetdir  |                   | SourceDir  |
+| DirectoryA | Targetdir         | DirectoryA |
 
 
 
  
 
-Um die Fehler zu beheben, müssen Sie die Anwendung so neu organisieren, dass jede Komponente nur Benutzer-oder Computer spezifische Ressourcen und nicht beides enthält.
+Um die Fehler zu beheben, organisieren Sie die Anwendung so, dass jede Komponente nur Benutzer- oder Computerressourcen und nicht beide enthält.
 
-Die erste Fehlermeldung wird gepostet, weil Component1 die Datei (pro Computer) und den HKCU-Registrierungsschlüssel regkeya (pro Benutzer) enthält.
+Die erste Fehlermeldung wird gesendet, da Component1 FileA (pro Computer) und den HKCU-Registrierungsschlüssel RegKeyA (pro Benutzer) enthält.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

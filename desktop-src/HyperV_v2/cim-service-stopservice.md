@@ -1,7 +1,7 @@
 ---
-description: Der Dienst wird in den Zustand "beendet" versetzt.
+description: Paces the service in the stopped state.
 ms.assetid: d7469643-bccc-4f55-b2fc-d2bc2e392d84
-title: Stop Service-Methode der CIM_Service-Klasse (Hyper-V-Verwaltung)
+title: StopService-Methode der CIM_Service -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f4eb354a48b074bad8adac4d5635e204844c31b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b36cab1054e99ac306fb1b21fe9f08e0820974a0883e90655a180b07035b7f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118647583"
 ---
-# <a name="stopservice-method-of-the-cim_service-class-hyper-v-management"></a>Stop Service-Methode der CIM_Service-Klasse (Hyper-V-Verwaltung)
+# <a name="stopservice-method-of-the-cim_service-class-hyper-v-management"></a>StopService-Methode der CIM_Service -Klasse (Hyper-V-Verwaltung)
 
-Der Dienst wird in den Zustand "beendet" versetzt.
+Paces the service in the stopped state.
 
 > [!Note]
 >
-> Die Semantik dieser Methode überschneidet sich mit der **requestStateChange** -Methode, die von [**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)geerbt wird. Diese Methode wird beibehalten, da Sie weitgehend implementiert wurde und ihre einfache "Ende"-Semantik praktisch verwendet werden kann.
+> Die Semantik dieser Methode überschneidet sich mit der **RequestStateChange-Methode,** die von [**CIM \_ EnabledLogicalElement geerbt wird.**](cim-enabledlogicalelement.md) Diese Methode wird beibehalten, da sie weit verbreitet implementiert wurde und ihre einfache "Stopp"-Semantik praktisch zu verwenden ist.
 
  
 
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,16 +56,16 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

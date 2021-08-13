@@ -1,7 +1,7 @@
 ---
-description: Zerstört eine vorhandene Momentaufnahme eines virtuellen Systems. Diese Methode kann als Nebeneffekt andere Momentaufnahmen zerstören, die von der betroffenen Momentaufnahme abhängig sind.
+description: Zerstören sie eine vorhandene Momentaufnahme des virtuellen Systems. Diese Methode kann als Nebeneffekt andere Momentaufnahmen zerstören, die von der betroffenen Momentaufnahme abhängig sind.
 ms.assetid: 69f60d0e-50ef-4a38-ad4b-88534b7fb3f8
-title: Destroysnapshot-Methode der CIM_VirtualSystemSnapshotService-Klasse
+title: DestroySnapshot-Methode der CIM_VirtualSystemSnapshotService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 80d618374d2da4a12f2ce31284d7b3fa36ba65ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 986ffe6a7a5bd6ac18d47bcbebe40ac038ea86cdc096173704d30515067fcccc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646369"
 ---
-# <a name="destroysnapshot-method-of-the-cim_virtualsystemsnapshotservice-class"></a>Destroysnapshot-Methode der CIM \_ virtualsystemsnapshotservice-Klasse
+# <a name="destroysnapshot-method-of-the-cim_virtualsystemsnapshotservice-class"></a>DestroySnapshot-Methode der CIM \_ VirtualSystemSnapshotService-Klasse
 
-Zerstört eine vorhandene Momentaufnahme eines virtuellen Systems. Diese Methode kann als Nebeneffekt andere Momentaufnahmen zerstören, die von der betroffenen Momentaufnahme abhängig sind.
+Zerstören sie eine vorhandene Momentaufnahme des virtuellen Systems. Diese Methode kann als Nebeneffekt andere Momentaufnahmen zerstören, die von der betroffenen Momentaufnahme abhängig sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ uint32 DestroySnapshot(
 
 <dl> <dt>
 
-*Affectedsnapshot* \[ in\]
+*AffectedSnapshot* \[ In\]
 </dt> <dd>
 
-Ein [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) -Verweis auf die betroffene virtuelle System Momentaufnahme.
+Ein [**CIM \_ VirtualSystemSettingData-Verweis**](cim-virtualsystemsettingdata.md) auf die betroffene Momentaufnahme des virtuellen Systems.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM-" \_ concretejob**](cim-concretejob.md) " zurückgegeben werden, der den Auftrag darstellt.
+Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob**](cim-concretejob.md) zurückgegeben werden, der den Auftrag darstellt.
 
 > [!Note]  
-> Dieser Parameter war in Windows 8.1 mit Lese-/Schreibzugriff.
+> Dieser Parameter wurde in der -Windows 8.1.
 
  
 
@@ -61,7 +61,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM-" \_ concretej
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -71,7 +71,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -80,22 +80,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,16 +107,16 @@ Fehler **(2** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemsnapshotservice**](cim-virtualsystemsnapshotservice.md)
+[**CIM \_ VirtualSystemSnapshotService**](cim-virtualsystemsnapshotservice.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: /Old-Schalter
-description: Dieser Schalter ist veraltet und wurde durch die Option/oldtlb ersetzt.
+title: /old switch
+description: Dieser Schalter ist veraltet und wurde durch die Option /oldtlb ersetzt.
 ms.assetid: 7c38aebd-d2bb-4b2c-b515-66de6ada2cb1
 keywords:
-- /Old-Schalter-Mittel l
+- /old switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,20 +12,20 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 749ac01a75a491527ad0b7c0d692ecd39dc682c9
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 89532b774daccd10c2f8d4c486d04a7687c30360b90df667249b50e1c6fc29d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104388918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118643892"
 ---
-# <a name="old-switch"></a>/Old-Schalter
+# <a name="old-switch"></a>/old switch
 
-Dieser Schalter ist veraltet und wurde durch die Option [**/oldtlb**](-oldtlb.md) ersetzt.
+Dieser Schalter ist veraltet und wurde durch die [**Option /oldtlb**](-oldtlb.md) ersetzt.
 
- 
+ 
 
- 
+ 
 
 
 

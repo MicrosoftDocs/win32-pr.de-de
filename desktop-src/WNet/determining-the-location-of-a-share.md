@@ -1,32 +1,32 @@
 ---
-title: Bestimmen des Speicher Orts einer Freigabe
-description: Im folgenden Beispiel wird veranschaulicht, wie die wnetgetuniversalname-Funktion aufgerufen wird, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu ermitteln.
+title: Bestimmen des Speicherorts einer Freigabe
+description: Im folgenden Beispiel wird veranschaulicht, wie die WNetGetUniversalName-Funktion aufgerufen wird, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu bestimmen.
 ms.assetid: ce57fecb-8b14-4514-a3fd-45d7ef6eee89
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c50c0d46e9ac2e520f7be15812b2f541fd3e588f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 90a881d452c6aa9eac5eea85d4ef0e9ddce83524f001294d2a6d6d6307f5ff1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118566893"
 ---
-# <a name="determining-the-location-of-a-share"></a>Bestimmen des Speicher Orts einer Freigabe
+# <a name="determining-the-location-of-a-share"></a>Bestimmen des Speicherorts einer Freigabe
 
-Im folgenden Beispiel wird veranschaulicht, wie die [**wnetgetuniversalname**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetuniversalnamea) -Funktion aufgerufen wird, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu ermitteln.
+Im folgenden Beispiel wird veranschaulicht, wie die [**WNetGetUniversalName-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetuniversalnamea) aufgerufen wird, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu bestimmen.
 
-Zuerst Ruft das Codebeispiel die **wnetgetuniversalname** -Funktion auf und gibt die [**Universal \_ Name \_ Info**](/windows/desktop/api/Winnetwk/ns-winnetwk-universal_name_infoa) -Informationsebene an, um einen Zeiger auf eine Universal Naming Convention (UNC)-namens Zeichenfolge für die Ressource abzurufen. Im Beispiel wird **wnetgetuniversalname** ein zweites Mal aufgerufen. dabei wird die Informationsebene " [**Remote \_ Name \_ Info**](/windows/desktop/api/Winnetwk/ns-winnetwk-remote_name_infoa) " angegeben, um zwei zusätzliche Verbindungs Informations Zeichenfolgen für die Netzwerkverbindung abzurufen. Wenn die Aufrufe erfolgreich sind, gibt das Beispiel den Speicherort der Freigabe aus.
+Zuerst ruft das Codebeispiel die **WNetGetUniversalName-Funktion** auf und gibt die [**Informationsebene UNIVERSAL \_ NAME \_ INFO**](/windows/desktop/api/Winnetwk/ns-winnetwk-universal_name_infoa) an, um einen Zeiger auf eine Universal Naming Convention (UNC)-Namenszeichenfolge für die Ressource abzurufen. Anschließend ruft das Beispiel **WNetGetUniversalName** ein zweites Mal auf und gibt die [**Informationsebene REMOTE \_ NAME \_ INFO**](/windows/desktop/api/Winnetwk/ns-winnetwk-remote_name_infoa) an, um zwei zusätzliche Netzwerkverbindungsinformationszeichenfolgen abzurufen. Wenn die Aufrufe erfolgreich sind, gibt das Beispiel den Speicherort der Freigabe aus.
 
-Um das folgende Codebeispiel zu testen, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um das folgende Codebeispiel zu testen:
 
-1.  Nennen Sie das Codebeispiel getuni. cpp.
-2.  Fügen Sie das Beispiel einer Konsolenanwendung mit dem Namen getuni hinzu.
-3.  Verknüpfen Sie die Bibliotheken shell32. lib, MPR. lib und Netapi32. lib mit der compilerliste der Bibliotheken.
-4.  Wechseln Sie an der Eingabeaufforderung in das Verzeichnis getuni.
-5.  Kompilieren Sie getuni. cpp.
-6.  Führen Sie die Datei GetUni.exe gefolgt von einem Laufwerk Buchstaben und einem Doppelpunkt aus, wie hier:
+1.  Nennen Sie das Codebeispiel GetUni.cpp.
+2.  Fügen Sie das Beispiel einer Konsolenanwendung namens GetUni hinzu.
+3.  Verknüpfen Sie die Bibliotheken Shell32.lib, Mpr.lib und NetApi32.lib mit der Compilerliste der Bibliotheken.
+4.  Wechseln Sie an der Eingabeaufforderung in das Verzeichnis GetUni.
+5.  Kompilieren Sie GetUni.cpp.
+6.  Führen Sie die Datei GetUni.exe gefolgt von einem Laufwerkbuchstaben und Doppelpunkt wie folgt aus:
 
-    **Getuni H:\\**
+    **GetUni H:\\**
 
 
 ```C++
@@ -95,6 +95,6 @@ void main( int argc, char *argv[] )
 
 
 
- 
+ 
 
- 
+ 

@@ -1,23 +1,23 @@
 ---
-description: Ein Administrator kann erzwingen, dass eine com-Client Anwendung immer dieselbe Kopie eines COM-Servers in einem vorhandenen Paket&8212, ohne dass sich dies auf \# andere Anwendungen auswirkt&\# 8212; durch Angeben einer isolierten Komponenten Beziehung zwischen dem com-Server und dem Client.
+description: Ein Administrator kann erzwingen, dass eine COM-Clientanwendung immer dieselbe Kopie eines COM-Servers in einem vorhandenen Paket&8212; verwendet, ohne dass sich dies auf andere Anwendungen&8212; ausdrungen hat, indem er eine Isolierte Komponentenbeziehung zwischen dem COM-Server und dem Client \# \# ankämmt.
 ms.assetid: 814eca94-2bb5-4aff-8de3-473da71d4400
-title: Erstellen einer COM-Komponente in einem vorhandenen Paket
+title: Erstellen einer COM-Komponente in einem vorhandenen Paket als privat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4935d20c5034af81a52c18d35454553b04cfb97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5119e2d9417f51bb815fe9c76cd47be496e4c03cab81e4e0ccd2b7c49c7b8b63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118629031"
 ---
-# <a name="make-a-com-component-in-an-existing-package-private"></a>Erstellen einer COM-Komponente in einem vorhandenen Paket
+# <a name="make-a-com-component-in-an-existing-package-private"></a>Erstellen einer COM-Komponente in einem vorhandenen Paket als privat
 
-Ein Administrator kann erzwingen, dass eine com-Client Anwendung immer dieselbe Kopie eines COM-Servers in einem vorhandenen Paket verwendet – ohne dass sich dies auf andere Anwendungen auswirkt – indem eine [isolierte Komponenten](isolated-components.md) Beziehung zwischen dem com-Server und dem Client angegeben wird. Dadurch wird eine private Kopie der com-Serverkomponente an einem Speicherort installiert, der ausschließlich von der Client Anwendung verwendet wird. Der-Administrator muss mit Transformationen oder einem Paket Erstellungs Tool wie folgt vorgehen:
+Ein Administrator kann erzwingen, dass eine COM-Clientanwendung immer dieselbe Kopie eines COM-Servers in einem [](isolated-components.md) vorhandenen Paket verwendet – ohne Auswirkungen auf andere Anwendungen – indem er eine Isolierte Komponentenbeziehung zwischen COM-Server und -Client ankämmt. Dadurch wird eine private Kopie der COM-Serverkomponente an einem Speicherort installiert, der ausschließlich von der Clientanwendung verwendet wird. Der Administrator muss Transformationen oder ein Paketerstellungstool verwenden, um Folgendes zu tun:
 
--   Platzieren Sie die com-Server-DLL und den exe-Client in separaten Komponenten.
--   Geben Sie einen Datensatz in der [isolatedcomponent-Tabelle](isolatedcomponent-table.md) mit der com-Client-Komponente in der frei \_ gegebenen Komponenten Spalte und der Client Anwendung in der \_ Spalte Komponenten Anwendung ein. Schließen Sie die [isolatecomponents-Aktion](isolatecomponents-action.md) in die Sequenz Tabellen ein.
--   Legen Sie das **msidbcomponentattributesshareddllrefcount** -Bit im [Komponenten Tabellen](component-table.md) Daten Satz für die freigegebene Komponente fest \_ . Das Installationsprogramm erfordert diesen globalen refcount am freigegebenen Speicherort, um die freigegebenen Dateien und die Registrierung in Fällen zu schützen, in denen die Freigabe mit anderen Installationstechnologien erfolgt.
+-   Legen Sie die COM-Server-DLL und den .exe-Client in separaten Komponenten ab.
+-   Geben Sie in der [Tabelle IsolatedComponent](isolatedcomponent-table.md) einen Datensatz mit der COM-Clientkomponente in der Spalte Freigegebene Komponente und der Clientanwendung \_ in der Spalte \_ Komponentenanwendung ein. Schließen Sie [die Aktion IsolateComponents](isolatecomponents-action.md) in die Sequenztabellen ein.
+-   Legen Sie **das Bit msidbComponentAttributesSharedDllRefCount** im Komponententabellendatensatz für Freigegebene Komponente [](component-table.md) \_ fest. Das Installationsprogramm erfordert diese globale Refcount am freigegebenen Speicherort, um die freigegebenen Dateien und die Registrierung in Fällen zu schützen, in denen die Freigabe mit anderen Installationstechnologien besteht.
 
  
 

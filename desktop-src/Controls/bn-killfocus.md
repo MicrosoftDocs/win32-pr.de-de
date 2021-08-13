@@ -1,9 +1,9 @@
 ---
-title: BN_KILLFOCUS Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn eine Schaltfläche den Tastaturfokus verliert. Die Schaltfläche muss den Typ "b Benachrichtigen" aufweisen \_ , um diesen Benachrichtigungs Code zu senden. Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: BN_KILLFOCUS Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn eine Schaltfläche den Tastaturfokus verliert. Die Schaltfläche muss das Format BS \_ NOTIFY aufweisen, um diesen Benachrichtigungscode zu senden. Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: 740154ba-47fd-4084-8b86-6166f1e1b39f
 keywords:
-- Windows-Steuerelemente für BN_KILLFOCUS Benachrichtigungs
+- BN_KILLFOCUS Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3fb6737d88ccddedbba6db58ffd0f713da7a8a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f312ba2282c72b7db30c170b44528bd469591bbb0a4b4a2e14bb797d2be67f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118674086"
 ---
-# <a name="bn_killfocus-notification-code"></a>BN- \_ killfokus-Benachrichtigungs Code
+# <a name="bn_killfocus-notification-code"></a>BN \_ KILLFOCUS-Benachrichtigungscode
 
-Wird gesendet, wenn eine Schaltfläche den Tastaturfokus verliert. Die Schaltfläche muss den Typ " [**b \_ Benachrichtigen**](button-styles.md) " aufweisen, um diesen Benachrichtigungs Code zu senden.
+Wird gesendet, wenn eine Schaltfläche den Tastaturfokus verliert. Die Schaltfläche muss das [**Format BS \_ NOTIFY**](button-styles.md) aufweisen, um diesen Benachrichtigungscode zu senden.
 
-Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -44,7 +44,7 @@ BN_KILLFOCUS
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner der Schaltfläche. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LowORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner der Schaltfläche. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -61,17 +61,17 @@ Ein Handle für die Schaltfläche.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[BN- \_ SetFocus](bn-setfocus.md)
+[BN \_ SETFOCUS](bn-setfocus.md)
 </dt> </dl>
 
  

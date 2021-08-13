@@ -1,117 +1,117 @@
 ---
-description: In diesem Abschnitt wird beschrieben, wie Sie der Windows Installer Verknüpfungs Tabelle Ressourcen Zeichenfolgen zur Verwendung mit mehrsprachigen Benutzeroberflächen (MUI) hinzufügen.
+description: In diesem Abschnitt wird beschrieben, wie Sie der Windows Installer-Verknüpfungstabelle Ressourcenzeichenfolgen für die Verwendung mit mehrsprachigen Benutzeroberflächen (MULTILINGUAL) hinzufügen.
 ms.assetid: f521cfb8-32a8-4b62-b258-5b99cc3e0416
-title: Beispiel für eine MUI-Verknüpfung
+title: Beispiel für eine SHORTCUT-Verknüpfung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0392713c1eaedabaa989baecd79478a9b329e955
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b3b38f674a63e854fbcd4439229c5aded5b0efe6cfc17d3e475f8a52f30db949
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118640287"
 ---
-# <a name="a-mui-shortcut-example"></a>Beispiel für eine MUI-Verknüpfung
+# <a name="a-mui-shortcut-example"></a>Beispiel für eine SHORTCUT-Verknüpfung
 
-In diesem Abschnitt wird beschrieben, wie Sie [der Windows Installer](shortcut-table.md) Verknüpfungs Tabelle Ressourcen Zeichenfolgen zur Verwendung mit mehrsprachigen Benutzeroberflächen (MUI) hinzufügen.
+In diesem Abschnitt wird beschrieben, wie Sie der Windows [Installer-Verknüpfungstabelle](shortcut-table.md) Ressourcenzeichenfolgen für die Verwendung mit mehrsprachigen Benutzeroberflächen (MULTILINGUAL) hinzufügen.
 
-**Windows Installer 2,0 und Windows Installer 3,0:** Nicht unterstützt. Für dieses Beispiel ist Windows Installer 4,0 erforderlich.
+**Windows Installer 2.0 und Windows Installer 3.0:** Nicht unterstützt. Dieses Beispiel erfordert Windows Installer 4.0.
 
-Weitere Informationen zum Entwickeln von MUI-fähigen Anwendungen finden Sie in der Dokumentation für die [mehrsprachige Benutzeroberfläche (MUI)](/windows/desktop/Intl/multilingual-user-interface) .
+Informationen zum [Entwickeln von ANWENDUNGEN, die FÜR DIE -Anwendung aktiviert](/windows/desktop/Intl/multilingual-user-interface) sind, finden Sie in der DOKUMENTATION zum mehrsprachige Benutzeroberfläche ().
 
-So fügen Sie die von den mehrsprachigen Windows Vista-Benutzeroberflächen verwendeten Ressourcen Zeichenfolgen zu einem Windows Installer Paket hinzu:
+So fügen Sie die ressourcenzeichenfolgen, die von Windows Vista Multilingual User Interfaces verwendet werden, einem Windows Installer-Paket hinzu:
 
-1.  Fügen Sie der [Dateitabelle](file-table.md)die Informationen für alle sprach neutralen Dateien und Sprachdateien hinzu. Beispielsweise können die Dateien aus sprach neutralen Dateien (msimsg.dll) und Sprachdateien für Englisch (msimsgen.dll. MUI), Japanisch (msimsgja.dll. MUI) und Chinesisch (msimsgcs.dll. MUI) bestehen. Jede Datei kann zu einer anderen Komponente gehören. Jede Datei kann sowohl einen langen als auch einen kurzen Dateinamen haben. Im Fall dieses Beispiels können der [Dateitabelle](file-table.md)die folgenden Informationen hinzugefügt werden.
+1.  Fügen Sie der Dateitabelle die Informationen für alle sprachneutralen Dateien und [Sprachdateien hinzu.](file-table.md) Die Dateien können z. B. aus einer sprachneutralen Datei (msimsg.dll) und Sprachdateien für Englisch (msimsgen.dll.soll), Japanisch (msimsgja.dll.soll) und Chinesisch (msimsgcs.dll.soll enthalten sein). Jede Datei kann zu einer anderen Komponente gehören. Jede Datei kann sowohl einen langen als auch einen kurzen Dateinamen haben. Im Fall dieses Beispiels können der Dateitabelle die folgenden [Informationen hinzugefügt werden.](file-table.md)
 
     [Dateitabelle](file-table.md) (partiell)
 
     
 
-    | File        | Komponente\_     | FileName                     |
+    | Datei        | Komponente\_     | FileName                     |
     |-------------|-----------------|------------------------------|
-    | msimsgmuija | msimsg \_ MUI \_ Ja | msimsgja.dll\|msimsg.dll. MUI |
-    | msimsgmuics | msimsg- \_ MUI- \_ CS | msimsgcs.dll\|msimsg.dll. MUI |
-    | msimsgmuien | msimsg- \_ MUI \_ | msimsgen.dll\|msimsg.dll. MUI |
-    | msimsgdll   | Msimsg          | msimsg.dll                   |
+    | msimsgmusprogramms | \_MSIMSG-MSI-JA \_ | msimsgja.dll\|msimsg.dll.soll |
+    | msimsgmuics | MSIMSG \_ MUI \_ CS | msimsgcs.dll\|msimsg.dll.soll |
+    | msimsgmuien | MSIMSG \_ MSIMSG MSI \_ EN | msimsgen.dll\|msimsg.dll.soll |
+    | msimsgdll   | MSIMSG          | msimsg.dll                   |
 
     
 
      
 
-2.  Fügen Sie der Komponenten [Tabelle](component-table.md) Informationen für diese Komponenten hinzu. Jede Komponente verfügt über einen eindeutigen GUID-Bezeichner, der in das Feld "ComponentId" der Komponenten Tabelle eingegeben werden sollte. Die Datei, die zur Komponente gehört, kann als KEYPATH für diese Komponente fungieren. Das Verzeichnis, das die einzelnen Komponenten enthält, kann im Verzeichnis \_ Feld angegeben werden. Die folgenden Informationen können der Component-Tabelle hinzugefügt werden.
+2.  Fügen Sie der [Component-Tabelle Informationen für](component-table.md) diese Komponenten hinzu. Jede Komponente verfügt über einen eindeutigen GUID-Bezeichner, der in das Feld ComponentId der Tabelle Component eingegeben werden soll. Die Datei, die zur Komponente gehört, kann als KeyPath für diese Komponente dienen. Das Verzeichnis, das die einzelnen Komponenten enthält, kann im Feld Verzeichnis angegeben \_ werden. Die folgenden Informationen können der Component-Tabelle hinzugefügt werden.
 
-    [Komponenten Tabelle](component-table.md) (partiell)
+    [Komponententabelle](component-table.md) (partiell)
 
     
 
-    | Komponente       | Verzeichnis\_   | KEYPATH     |
+    | Komponente       | Verzeichnis\_   | KeyPath     |
     |-----------------|---------------|-------------|
-    | msimsg \_ MUI \_ Ja | Muifolder- \_ Ja | msimsgmuija |
-    | msimsg- \_ MUI- \_ CS | Muifolder- \_ CS | msimsgmuics |
-    | msimsg- \_ MUI \_ | Muifolder \_ | msimsgmuien |
-    | Msimsg          | Muifolder     | msimsgdll   |
+    | \_MSIMSG-MSI-JA \_ | VERBINDEOrdner \_ JA | msimsgmusprogramms |
+    | MSIMSG \_ MUI \_ CS | VERBINDer \_ CS | msimsgmuics |
+    | MSIMSG \_ MSIMSG MSI \_ EN | VERBINDEOrdner \_ EN | msimsgmuien |
+    | MSIMSG          | BAUFolder     | msimsgdll   |
 
     
 
      
 
-3.  Bearbeiten Sie die [Verzeichnis](directory-table.md) Tabelle so, dass die Komponenten in den richtigen Verzeichnissen installiert werden. Stellen Sie sicher, dass Sie Informationen zu dem Verzeichnis einschließen, in dem die Verknüpfung installiert wird. Die folgenden Informationen können z. b. zur Verzeichnis Tabelle eines Pakets hinzugefügt werden, mit dem die Komponenten installiert werden, sowie eine Verknüpfung im Desktop Folder-Verzeichnis.
+3.  Bearbeiten Sie [die Directory-Tabelle,](directory-table.md) damit die Komponenten in den richtigen Verzeichnissen installiert werden. Stellen Sie sicher, dass Sie Informationen zu dem Verzeichnis hinzufügen, in dem die Verknüpfung installiert wird. Beispielsweise können der Verzeichnistabelle eines Pakets, das die Komponenten installiert, und einer Verknüpfung im Verzeichnis DesktopFolder die folgenden Informationen hinzugefügt werden.
 
-    [Verzeichnis Tabelle](directory-table.md) (partiell)
+    [Verzeichnistabelle](directory-table.md) (partiell)
 
     
 
-    | Verzeichnis     | Über \_ geordnetes Verzeichnis | DefaultDir |
+    | Verzeichnis     | Übergeordnetes Verzeichnis \_ | DefaultDir |
     |---------------|-------------------|------------|
-    | TARGETDIR     |                   | SourceDir  |
-    | Msitest       | TARGETDIR         | Msitest:.  |
-    | Muifolder     | Msitest           | MUI        |
-    | Muifolder- \_ CS | Muifolder         | cs-CZ      |
-    | Muifolder \_ | Muifolder         | de-DE      |
-    | Muifolder- \_ Ja | Muifolder         | ja-JP      |
-    | DesktopFolder | TARGETDIR         | .          |
+    | Targetdir     |                   | SourceDir  |
+    | MsiTest       | Targetdir         | MsiTest:  |
+    | BAUFolder     | MsiTest           | Mui        |
+    | VERBINDer \_ CS | BAUFolder         | cs-CZ      |
+    | VERBINDEOrdner \_ EN | BAUFolder         | en-US      |
+    | VERBINDEOrdner \_ JA | BAUFolder         | ja-JP      |
+    | DesktopFolder | Targetdir         | .          |
 
     
 
      
 
-4.  Fügen Sie der Verknüpfungs Tabelle für [jede Verknüpfung eine](shortcut-table.md) Zeile hinzu. Beispielsweise könnte die Verknüpfungs Tabelle die folgenden Informationen für zwei Verknüpfungen, Quick1 und Quick2, enthalten [, die im](shortcut-table.md) Verzeichnis directoryfolder installiert sind. Jede Verknüpfung gehört zu der Funktion, die im Zielfeld angegeben ist. Das der Verknüpfung zugeordnete Symbol kann im Symbol \_ Feld und in der [Symbol](icon-table.md) Tabelle angegeben werden.
+4.  Fügen Sie der Verknüpfungstabelle [für jede Verknüpfung](shortcut-table.md) eine Zeile hinzu. Die [Verknüpfungstabelle](shortcut-table.md) kann beispielsweise die folgenden Informationen für die beiden Tastenkombinationen Quick1 und Quick2 enthalten, die im Verzeichnis DirectoryFolder installiert sind. Jede Verknüpfung gehört zu dem Feature, das im Feld Ziel angegeben ist. Das symbol, das der Verknüpfung zugeordnet ist, kann im Feld Symbol und in \_ der Tabelle Symbol [angegeben](icon-table.md) werden.
 
-    Verknüpfungs [Tabelle](shortcut-table.md) (partiell)
+    [Verknüpfungstabelle](shortcut-table.md) (partiell)
 
     
 
-    | Abkürzung | Verzeichnis\_   | Komponente\_ | Ziel               | Symbol             |
+    | Verknüpfung | Verzeichnis\_   | Komponente\_ | Ziel               | Symbol             |
     |----------|---------------|-------------|----------------------|------------------|
-    | Quick1   | DesktopFolder | Msimsg      | FeatureChild1 \_ lokal | HelpFileIcon.exe |
-    | Quick2   | DesktopFolder | Msimsg      | FeatureChild1 \_ lokal | HelpFileIcon.exe |
+    | Quick1   | DesktopFolder | MSIMSG      | FeatureChild1 \_ Local | HelpFileIcon.exe |
+    | Quick2   | DesktopFolder | MSIMSG      | FeatureChild1 \_ Local | HelpFileIcon.exe |
 
     
 
      
 
-5.  Fügen Sie der [featuretabellentabelle](feature-table.md) Informationen für die Funktion hinzu, zu der die Verknüpfung gehört. Wenn die Verknüpfung aktiviert ist, überprüft das Installationsprogramm, ob alle Komponenten, die zu dieser Funktion gehören, installiert sind, bevor die Schlüsseldatei der in der Spalte Komponente der Verknüpfungs Tabelle angegebenen Komponente gestartet wird \_ . [](shortcut-table.md) Im Fall dieses Beispiels können der Tabelle Funktions Tabelle für das lokale Feature FeatureParent1 die folgenden Informationen hinzugefügt werden \_ .
+5.  Fügen Sie der Tabelle ["Featuretabelle" Informationen](feature-table.md) für die Verknüpfung feature owns hinzu. Wenn die Verknüpfung aktiviert ist, überprüft das Installationsprogramm, ob alle Komponenten, die zu diesem Feature gehören, installiert sind, bevor die Schlüsseldatei der Komponente gestartet wird, die in der Spalte Komponente der Verknüpfungstabelle \_ [angegeben](shortcut-table.md) ist. Im Fall dieses Beispiels können der Tabelle Feature Table für das FeatureParent1 Local-Feature die folgenden \_ Informationen hinzugefügt werden.
 
-    [Funktions Tabelle](feature-table.md) (partiell)
+    [Featuretabelle](feature-table.md) (partiell)
 
     
 
-    | Funktion               | Über \_ geordnetes Element       | Titel                 | Attribute |
+    | Komponente               | Übergeordnetes \_ Feature       | Titel                 | Attribute |
     |-----------------------|-----------------------|-----------------------|------------|
-    | FeatureParent1 \_ lokal |                       | FeatureParent1 \_ lokal | 16         |
-    | FeatureChild1 \_ lokal  | FeatureParent1 \_ lokal | FeatureParent1 \_ lokal | 0          |
+    | FeatureParent1 \_ Lokal |                       | FeatureParent1 \_ Lokal | 16         |
+    | FeatureChild1 \_ Local  | FeatureParent1 \_ Lokal | FeatureParent1 \_ Lokal | 0          |
 
     
 
      
 
-6.  Fügen Sie für jede neue Verknüpfung die Informationen der Ressourcen Zeichenfolge zu den Feldern displayresourcedll, displayresourceid, descriptionresourcedll und descriptionresourceid der Verknüpfungs [Tabelle](shortcut-table.md)hinzu. Die Felder displayresourcedll und descriptionresourcedll enthalten die Ressourcen Zeichenfolge im Format der [formatierten](formatted.md) Zeichenfolge. Die formatierte Zeichenfolge kann die \[ \# *filekey* - \] Konvention des [formatierten](formatted.md) Formats verwenden. Fügen Sie die Anzeige-und Beschreibungs Indizes für die Ressourcen Zeichenfolgen in den Feldern displayresourceid und descriptionresourceid hinzu.
+6.  Fügen Sie für jede neue Verknüpfung die Ressourcenzeichenfolgeninformationen den Feldern DisplayResourceDLL, DisplayResourceId, DescriptionResourceDLL und DescriptionResourceId der [Verknüpfungstabelle hinzu.](shortcut-table.md) Die Felder DisplayResourceDLL und DescriptionResourceDLL enthalten die Ressourcenzeichenfolge im [formatierten](formatted.md) Zeichenfolgenformat. Die formatierte Zeichenfolge kann die \[ \# *Dateischlüsselkonvention* \] des [formatierten Formats](formatted.md) verwenden. Fügen Sie die Anzeige- und Beschreibungsindizes für die Ressourcenzeichenfolgen in den Feldern DisplayResourceId und DescriptionResourceId hinzu.
 
-    Verknüpfungs [Tabelle](shortcut-table.md) (partiell)
+    [Verknüpfungstabelle](shortcut-table.md) (partiell)
 
     
 
-    | Abkürzung | Displayresourcedll | Displayresourceid | Deskriptionresourcedll | Deskriptionresourceid |
+    | Verknüpfung | DisplayResourceDLL | DisplayResourceId | DescriptionResourceDLL | DescriptionResourceId |
     |----------|--------------------|-------------------|------------------------|-----------------------|
     | Quick1   | \[\#msimsgdll\]    | 36                | \[\#msimsgdll\]        | 37                    |
     | Quick2   | \[\#msimsgdll\]    | 38                | \[\#msimsgdll\]        | 39                    |
@@ -120,7 +120,7 @@ So fügen Sie die von den mehrsprachigen Windows Vista-Benutzeroberflächen verw
 
      
 
-7.  Nachdem Sie das Paket installiert haben, testen Sie, um sicherzustellen, dass die mehrsprachige Benutzeroberfläche erwartungsgemäß funktioniert.
+7.  Testen Sie nach der Installation des Pakets, um sicherzustellen, dass mehrsprachige Benutzeroberfläche wie erwartet funktioniert.
 
  
 

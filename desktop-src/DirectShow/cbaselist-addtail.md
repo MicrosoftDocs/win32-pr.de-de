@@ -1,7 +1,7 @@
 ---
-description: Die AddTail-Methode fügt am Ende dieser Liste eine andere Liste an.
+description: Die AddTail-Methode fügt eine weitere Liste an das Ende dieser Liste an.
 ms.assetid: 996523cd-d9ba-406a-afdf-494d328dc9dd
-title: Cbaselist. AddTail-Methode (wxlist. h)
+title: CBaseList.AddTail-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 36d42f0b80703457032e5dde37f6d1549da089c5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5663a69d803def2b37f9a1ba677966a5b26a8bfc6f7b6eb1eb98eef85bcd961d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118659153"
 ---
-# <a name="cbaselistaddtail-method"></a>Cbaselist. AddTail-Methode
+# <a name="cbaselistaddtail-method"></a>CBaseList.AddTail-Methode
 
-Die- `AddTail` Methode fügt am Ende dieser Liste eine andere Liste an.
+Die `AddTail` -Methode fügt eine weitere Liste an das Ende dieser Liste an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL AddTail(
 
 <dl> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
-Ein Zeiger auf die anzufügende Liste.
+Zeiger auf die anzufügende Liste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode fehlschlägt, wurden möglicherweise einige Elemente zur Liste hinzugefügt.
+Wenn die Methode fehlschlägt, wurden der Liste möglicherweise einige Elemente hinzugefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Wenn die Methode fehlschlägt, wurden möglicherweise einige Elemente zur Liste 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

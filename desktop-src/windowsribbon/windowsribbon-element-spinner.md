@@ -3,7 +3,7 @@ title: Spinner-Element
 description: Stellt ein Spinner-Steuerelement dar.
 ms.assetid: 6a174ec9-0fde-4171-a363-0e330ac31a8b
 keywords:
-- Spinner-Element Windows-Menüband
+- Spinner-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d1ec2e074271e125199ddfd4ff8fac7b2af80c33
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 847806e395998f8bc82c302f4403c5bc2b651323ec6c7089803bc66e5f18dc4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439515"
 ---
 # <a name="spinner-element"></a>Spinner-Element
 
 Stellt ein [Spinner-Steuerelement](windowsribbon-controls-spinner.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <Spinner
@@ -45,7 +45,7 @@ Stellt ein [Spinner-Steuerelement](windowsribbon-controls-spinner.md) dar.
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -55,8 +55,8 @@ Stellt ein [Spinner-Steuerelement](windowsribbon-controls-spinner.md) dar.
 <td><strong>CommandName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -83,15 +83,15 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann ein oder mehrere Male für jedes [**ControlGroup-**](windowsribbon-element-controlgroup.md) oder [**Group-Element**](windowsribbon-element-group.md) auftreten.
+Kann ein oder mehrere Male für jedes [**ControlGroup- oder**](windowsribbon-element-controlgroup.md) [**Group-Element**](windowsribbon-element-group.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für den [Spinner](windowsribbon-controls-spinner.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für [spinner veranschaulicht.](windowsribbon-controls-spinner.md)
 
-Dieser Codeabschnitt zeigt die **Spinner** Command-Deklarationen mit einem [**Group-Element,**](windowsribbon-element-group.md) das als übergeordneter Container für das **Spinner-Element** fungiert.
+Dieser Codeabschnitt zeigt die **Spinner** Command-Deklarationen mit einem [**Group-Element,**](windowsribbon-element-group.md) das als übergeordneter Container für das **Spinner-Element fungiert.**
 
 
 ```XML
@@ -109,7 +109,7 @@ Dieser Codeabschnitt zeigt die **Spinner** Command-Deklarationen mit einem [**Gr
 
 
 
-Dieser Codeabschnitt zeigt die Spinner-Steuerelementdeklarationen. 
+In diesem Codeabschnitt werden die **Spinner-Steuerelementdeklarationen** gezeigt.
 
 
 ```XML
@@ -127,7 +127,7 @@ Dieser Codeabschnitt zeigt die Spinner-Steuerelementdeklarationen.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
 description: Sortiert eine Liste von IP-Adressen.
 ms.assetid: 1266d6f3-e9f5-4e6b-9431-7329df156f0a
-title: menpaddresslist-Funktion
+title: sortIpAddressList-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,14 +12,14 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 600d87a58248aafdef5b0a8a7f284f4094c95780
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3144ecf044f832a49dd6aa4d9fabf76ce8e81c79c195ec101d294c432a8081e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118562447"
 ---
-# <a name="sortipaddresslist-function"></a>menpaddresslist-Funktion
+# <a name="sortipaddresslist-function"></a>sortIpAddressList-Funktion
 
 Sortiert eine Liste von IP-Adressen.
 
@@ -27,7 +27,7 @@ Sortiert eine Liste von IP-Adressen.
 
 <dl> <dt>
 
-*Ipaddresslist* 
+*IpAddressList* 
 </dt> <dd>
 
 Eine durch Semikolons getrennte Zeichenfolge, die IP-Adressen enthält.
@@ -36,11 +36,11 @@ Eine durch Semikolons getrennte Zeichenfolge, die IP-Adressen enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Liste von durch Trennzeichen getrennten, durch Semikola getrennten IP-Adressen oder eine leere Zeichenfolge, wenn die IP-Adressliste nicht sortiert werden kann.
+Eine Liste sortierter durch Semikolons getrennter IP-Adressen oder eine leere Zeichenfolge, wenn die IP-Adressliste nicht sortiert werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Findproxyforurlex-Implementierer sollten Code hinzufügen, der die Zeichenfolge von durch Semikola getrennten IP-Adressen in separate Adressen unterbricht.
+FindProxyforURLEx-Implementierer sollten Code hinzufügen, der die Zeichenfolge von durch Semikolons getrennten IP-Adressen in separate Adressen unterbricht.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,10 +56,10 @@ sortIpAddressList(2001:4898:28:3:201:2ff:feea:fc14;
 
 <dl> <dt>
 
-[IPv6-abhängige proxyhilfsobjekts-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
+[IPv6-fähige Proxyhilfs-API-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
 </dt> <dt>
 
-[IPv6-Erweiterungen für das Auto-config-Datei Format des Navigators](ipv6-extensions-to-navigator-auto-config-file-format.md)
+[IPv6-Erweiterungen für das Navigator-Dateiformat für die automatische Konfiguration](ipv6-extensions-to-navigator-auto-config-file-format.md)
 </dt> </dl>
 
  

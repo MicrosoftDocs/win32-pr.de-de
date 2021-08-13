@@ -1,7 +1,7 @@
 ---
-description: Die activatewindow-Methode passt das Fenster entsprechend den Anforderungen der abgeleiteten Klasse an.
+description: Die ActivateWindow-Methode größent das Fenster entsprechend den Anforderungen der abgeleiteten Klasse.
 ms.assetid: 39e23080-e4ae-46d5-bb3f-306c92bbfe14
-title: Cbasewindow. activatewindow-Methode (winutil. h)
+title: CBaseWindow.ActivateWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f747f108bb6c7e42e90a0ff8503ec59a83c59699
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e00c3ccc43e2583ce8664e62967a22f753148cfa271dd1995e2374c2bfa53c71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658244"
 ---
-# <a name="cbasewindowactivatewindow-method"></a>Cbasewindow. activatewindow-Methode
+# <a name="cbasewindowactivatewindow-method"></a>CBaseWindow.ActivateWindow-Methode
 
-Die- `ActivateWindow` Methode passt die Größe des Fensters gemäß den Anforderungen der abgeleiteten Klasse an.
+Die `ActivateWindow` -Methode größent das Fenster entsprechend den Anforderungen der abgeleiteten Klasse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                              |
 |-----------------------------------------------------------------------------------------|------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Das Fenster wurde bereits aktiviert.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Das Fenster wurde bereits aktiviert.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**cbasewindow:: getdefaultrect**](cbasewindow-getdefaultrect.md) -Methode auf, um die Fenstergröße zu bestimmen. Die abgeleitete Klasse sollte **getdefaultrect** überschreiben, um die Größe der angezeigten Bilder zurückzugeben.
+Diese Methode ruft die [**CBaseWindow::GetDefaultRect-Methode**](cbasewindow-getdefaultrect.md) auf, um die Fenstergröße zu bestimmen. Die abgeleitete Klasse sollte **GetDefaultRect** überschreiben, um die Größe der bilder zurückzugeben, die angezeigt werden.
 
-Wenn das Fenster bereits aktiv ist, wird `ActivateWindow` beim Aufrufen von das Fenster an den Anfang der Z-Reihenfolge verschoben, aber die Größe des Fensters wird nicht geändert. Das gleiche gilt, wenn das Fenster über ein übergeordnetes Element verfügt.
+Wenn das Fenster bereits aktiv ist, verschiebt der Aufruf `ActivateWindow` von das Fenster an den Anfang der Z-Reihenfolge, ändert jedoch nicht die Größe des Fensters. Dasselbe gilt, wenn das Fenster über ein übergeordnetes Element verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Wenn das Fenster bereits aktiv ist, wird `ActivateWindow` beim Aufrufen von das 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

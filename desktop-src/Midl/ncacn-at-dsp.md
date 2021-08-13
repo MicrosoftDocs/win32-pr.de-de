@@ -1,9 +1,9 @@
 ---
 title: ncacn_at_dsp-Attribut
-description: Das Schlüsselwort ncacn \_ unter \_ DSP identifiziert AppleTalk DSP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+description: Das Schlüsselwort ncacn \_ at \_ dsp identifiziert AppleTalk DSP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 ms.assetid: 3165e4f6-8869-4eff-af65-53e85f78a949
 keywords:
-- ncacn_at_dsp Attribut-Mittel l
+- ncacn_at_dsp-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9149cd7270c2e82e760c24b4af1fed54c2c08622
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cb021f9212f1034f0b3c235ad77d9ad270325af914887252494316f9ae1c41b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118642771"
 ---
-# <a name="ncacn_at_dsp-attribute"></a>ncacn \_ beim \_ DSP-Attribut
+# <a name="ncacn_at_dsp-attribute"></a>ncacn \_ am \_ dsp-Attribut
 
-Das Schlüsselwort **ncacn \_ unter \_ DSP** identifiziert AppleTalk DSP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+Das **Schlüsselwort ncacn \_ at \_ dsp** identifiziert AppleTalk DSP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 
 ``` syntax
 endpoint("ncacn_at_dsp:[port-name]")
@@ -34,13 +34,13 @@ endpoint("ncacn_at_dsp:[port-name]")
 *Portname* 
 </dt> <dd>
 
-Gibt eine Zeichenfolge mit einer Länge von bis zu 22 Bytes an.
+Gibt eine Zeichenfolge mit einer Länge von bis zu 22 Byte an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Syntax der Port Zeichenfolge für den AppleTalk-DSP wird, wie alle Port Zeichenfolgen, von der Transport Implementierung definiert und ist von der IDL-Spezifikation unabhängig. Der mittlerer l-Compiler führt eine eingeschränkte Syntax Überprüfung durch, gewährleistet jedoch nicht, dass die Endpunkt Spezifikation korrekt ist. Einige Klassen von Fehlern können zur Laufzeit und nicht zur Kompilierzeit gemeldet werden.
+Die Syntax der AppleTalk DSP-Portzeichenfolge wird wie alle Portzeichenfolgen von der Transportimplementierungen definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 
 ## <a name="examples"></a>Beispiele
 
@@ -60,15 +60,15 @@ interface iface
 
 <dl> <dt>
 
-[**Dreher**](endpoint.md)
+[**Endpunkt**](endpoint.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**Zeichen folgen Bindung**](/windows/desktop/Rpc/string-binding)
+[**Zeichenfolgenbindung**](/windows/desktop/Rpc/string-binding)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

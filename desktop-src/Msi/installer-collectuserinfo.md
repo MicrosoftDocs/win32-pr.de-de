@@ -1,7 +1,7 @@
 ---
-description: Die collectuserinfo-Methode des Installer-Objekts Ruft eine Assistenten Sequenz für eine Benutzeroberfläche auf, die sowohl Benutzerinformationen als auch den Produktcode sammelt und speichert.
+description: Die CollectUserInfo-Methode des Installer-Objekts ruft eine Benutzeroberflächen-Assistentensequenz auf, die sowohl Benutzerinformationen als auch den Produktcode sammelt und speichert.
 ms.assetid: 2faacf38-1af1-4e8a-a3f6-87733104614e
-title: Installer. collectuserinfo-Methode
+title: Installer.CollectUserInfo-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: d7286fdbc9fab6b3db6752284bf86db05f920bd7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 255f9c5bfbd9f7ed476314e8ac1c9ed58568c083b8f6ea7704bbe5cfef15b769
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118632917"
 ---
-# <a name="installercollectuserinfo-method"></a>Installer. collectuserinfo-Methode
+# <a name="installercollectuserinfo-method"></a>Installer.CollectUserInfo-Methode
 
-Die **collectuserinfo** -Methode des [**Installer**](installer-object.md) -Objekts Ruft eine Assistenten Sequenz für eine Benutzeroberfläche auf, die sowohl Benutzerinformationen als auch den Produktcode sammelt und speichert.
+Die **CollectUserInfo-Methode** des [**Installer-Objekts**](installer-object.md) ruft eine Benutzeroberflächen-Assistentensequenz auf, die sowohl Benutzerinformationen als auch den Produktcode sammelt und speichert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Installer.CollectUserInfo(
 *Produkt* 
 </dt> <dd>
 
-Gibt den [**Produktcode**](productcode.md) des Produkts an.
+Gibt den [**Produktcode des**](productcode.md) Produkts an.
 
 </dd> </dl>
 
@@ -50,11 +50,11 @@ Gibt den [**Produktcode**](productcode.md) des Produkts an.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte die Methode **collectuserinfo** beim ersten Ausführen aufzurufen. Mit der **collectuserinfo** -Methode wird das Installationspaket des Produkts geöffnet, und es wird eine erstellte Assistenten Sequenz aufgerufen, die Benutzerinformationen sammelt. Nach Abschluss der Assistenten Sequenz werden die gesammelten Benutzerinformationen registriert. Die [**uilevel**](installer-uilevel.md) -Eigenschaft sollte auf msiuilevelfull festgelegt werden, da diese API eine erstellte Benutzeroberfläche erfordert.
+Eine Anwendung sollte die **CollectUserInfo-Methode bei** der ersten Ausführung aufrufen. Die **CollectUserInfo-Methode** öffnet das Installationspaket des Produkts und ruft eine Sequenz des Assistenten für die benutzeroberfläche auf, die Benutzerinformationen sammelt. Nach Abschluss der Assistentensequenz werden die gesammelten Benutzerinformationen registriert. Die [**UILevel-Eigenschaft**](installer-uilevel.md) sollte auf msiUILevelFull festgelegt werden, da für diese API eine benutzeroberfläche erforderlich ist.
 
-Die **collectuserinfo** -Methode ruft das [FIRSTRUN-Dialog](firstrun-dialog.md)Feld auf.
+Die **CollectUserInfo-Methode** ruft den [FirstRun-Dialog auf.](firstrun-dialog.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,17 +62,17 @@ Die **collectuserinfo** -Methode ruft das [FIRSTRUN-Dialog](firstrun-dialog.md)F
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Msicollectuserinfo**](/windows/desktop/api/Msi/nf-msi-msicollectuserinfoa)
+[**MsiCollectUserInfo**](/windows/desktop/api/Msi/nf-msi-msicollectuserinfoa)
 </dt> </dl>
 
  

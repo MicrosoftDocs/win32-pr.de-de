@@ -1,23 +1,23 @@
 ---
 title: Behandeln von Fehlern (Windows Internet)
-description: Die GetLastError-Funktion Ruft den letzten Fehlercode für alle WinInet-Funktionen ab.
+description: Die GetLastError-Funktion ruft den letzten Fehlercode für alle WinINet-Funktionen ab.
 ms.assetid: ee619803-b2a3-4a99-a3e6-120e147843f7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc175c80fd8bd10b6a3807376e1a207d805aee65
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 6ef5c40a2a7b018c1da25932ecbea24259f2bcdb18eff1e424500dcda60dc208
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104213698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118562350"
 ---
 # <a name="handling-errors-windows-internet"></a>Behandeln von Fehlern (Windows Internet)
 
-Die [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion Ruft den letzten Fehlercode für alle WinInet-Funktionen ab. Wenn " [**Error \_ Internet \_ Extended \_ Error**](wininet-errors.md) " zurückgegeben wird, gibt es eine Zeichenfolge oder einen Puffer, die eine ausführliche Fehlermeldung enthält. Rufen Sie die Funktion [**InternetGetLastResponseInfo**](/windows/desktop/api/Wininet/nf-wininet-internetgetlastresponseinfoa) auf, um den erweiterten Fehlertext abzurufen.
+Die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) ruft den letzten Fehlercode für alle WinINet-Funktionen ab. Wenn [**ERROR INTERNET EXTENDED \_ \_ \_ ERROR**](wininet-errors.md) zurückgegeben wird, gibt es eine Zeichenfolge oder einen Puffer, die eine ausführliche Fehlermeldung enthält. Rufen Sie die [**Funktion InternetGetLastResponseInfo**](/windows/desktop/api/Wininet/nf-wininet-internetgetlastresponseinfoa) auf, um den erweiterten Fehlertext abzurufen.
 
-Um den Fehlertext für einen Fehler zu erhalten, rufen Sie die Funktion [**FormatMessage**](/windows/desktop/api/winbase/nf-winbase-formatmessage) auf, und übergeben Sie Ihr ein **HMODULE** -Handle an Wininet.dll, das mit der [GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) -Funktion abgerufen werden kann.
+Um den Fehlertext für einen Fehler abzurufen, rufen Sie die [**FormatMessage-Funktion**](/windows/desktop/api/winbase/nf-winbase-formatmessage) auf, und übergeben Sie ihr ein **HMODULE-Handle** an Wininet.dll, das mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) abgerufen werden kann.
 
-Im folgenden finden Sie ein Beispiel für eine Fehler Behandlungs Funktion.
+Im Folgenden wird ein Beispiel für eine Fehlerbehandlungsfunktion angezeigt.
 
 
 ```C++
@@ -186,7 +186,7 @@ void WINAPI addLastErrorToMsg( LPTSTR szMsgBuffer, DWORD dwSize )
 
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierungen. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP-Dienste (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
  
 

@@ -4,12 +4,12 @@ ms.assetid: 238c95eb-951e-43d3-8125-86e849cd31d7
 title: Shell (Windows-Eigenschaftensystem)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d10f49fa956826977195c167a927da1bb25f78bd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 75750ac7c93c7c47cff59960596a8d674c24189a7b308dd135274a87a5598b97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118463895"
 ---
 # <a name="shell-windows-property-system"></a>Shell (Windows-Eigenschaftensystem)
 
@@ -17,10 +17,10 @@ ms.locfileid: "108113818"
 
 
 
-| Thema                                                                                                  | BESCHREIBUNG                                                                                                                 |
+| Thema                                                                                                  | Beschreibung                                                                                                                 |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | [System.DescriptionID](./props-system-descriptionid.md)<br/>                               | Der Inhalt einer [**SHDESCRIPTIONID-Struktur,**](/windows/win32/api/shlobj_core/ns-shlobj_core-shdescriptionid) dargestellt als Bytepuffer.<br/> |
-| [System.InternalName](./props-system-internalname.md)<br/>                                 | Der Name einer EXE- oder DLL-Datei, wie er in einem Ressourcenabschnitt in dieser Datei gespeichert ist.<br/>                                |
+| [System.InternalName](./props-system-internalname.md)<br/>                                 | Der Name eines .exe oder .dll, wie er in einem Ressourcenabschnitt in dieser Datei gespeichert ist.<br/>                                |
 | [System.LibraryLocationsCount](props-system-librarylocationscount.md)<br/>                      | Gibt die Anzahl der Bibliotheksstandorte an.<br/>                                                                       |
 | [System.Link.TargetSFGAOFlagsStrings](./props-system-link-targetsfgaoflagsstrings.md)<br/> | Drückt die SFGAO-Flags eines Links als Zeichenfolgenwerte aus und wird als Abfrageoptimierung verwendet.<br/>                       |
 | [System.Link.TargetUrl](./props-system-link-targeturl.md)<br/>                             |                                                                                                                             |

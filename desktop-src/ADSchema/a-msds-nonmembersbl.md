@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Non-Members-BL-Attribut
-description: Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu AZ Groups, die mit ihm verknüpft sind (dieselbe Funktion wie nicht Security-Member-BL).
+description: Abwärtslink von einer Gruppe oder einem Benutzer, die kein Mitglied ist, zu Az-Gruppen, die eine Verknüpfung damit erstellen (gleiche Funktionalität wie Non-Security-Member-BL).
 ms.assetid: 51725a95-a9c0-4c88-a390-b8e35b8fd3e1
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Non-Members-BL-Attribut
-- AD-Schema des msDS-nonmembership-Attributs
+- AD-Schema des ms-DS-Non-Members-BL-Attributs
+- AD-Schema des msDS-NonMembersBL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88483757e5c9f87771ce8d71f21d26ea3154f975
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 87426328f9c2c5618374ebdd9c355693e6fff3303e83a44aba55eef7a333d954
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118683634"
 ---
 # <a name="ms-ds-non-members-bl-attribute"></a>ms-DS-Non-Members-BL-Attribut
 
-Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu AZ Groups, die mit ihm verknüpft sind (dieselbe Funktion wie nicht Security-Member-BL).
+Abwärtslink von einer Gruppe oder einem Benutzer, die kein Mitglied ist, zu Az-Gruppen, die eine Verknüpfung damit erstellen (gleiche Funktionalität wie Non-Security-Member-BL).
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | ms-DS-Non-Members-BL                    |
-| LDAP-Display-Name | MSDS-nonmembership                       |
+| Ldap-Anzeigename | msDS-NonMembersBL                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.        |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.        |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1794                 |
-| System-ID-GUID    | 2a8c68fc-3a7a-4e87-8720-fe77c51cbe74    |
+| System-Id-Guid    | 2a8c68fc-3a7a-4e87-8720-fe77c51cbe74    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,10 +57,10 @@ Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -78,10 +78,10 @@ Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -99,10 +99,10 @@ Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -120,10 +120,10 @@ Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -141,10 +141,10 @@ Rückwärts Verknüpfung von einer nicht-Mitgliedergruppe oder einem Benutzer zu
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

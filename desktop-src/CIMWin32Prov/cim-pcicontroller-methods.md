@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ PCIController-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ PCIController-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: C1FE1B8B-2146-4A00-B6BA-A32CD3D269E7
 ms.tgt_platform: multiple
-title: CIM_PCIController Methoden
+title: CIM_PCIController-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b061d56cb8d509e9173e944c385a624a3e33a5e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5344e76e068886e0cef888c8c73541e880a43ada5ecaa7abaf2cec8c9eb24be9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118678950"
 ---
 # <a name="cim_pcicontroller-methods"></a>CIM \_ PCIController-Methoden
 
-Die [**CIM \_ PCIController**](cim-pcicontroller.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ PCIController-Klasse**](cim-pcicontroller.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

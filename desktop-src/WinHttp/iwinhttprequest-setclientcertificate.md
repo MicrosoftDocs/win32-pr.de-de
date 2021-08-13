@@ -1,7 +1,7 @@
 ---
-description: Wählt ein Client Zertifikat aus, das an einen HTTPS-Server (Secure Hypertext Transfer Protocol) gesendet werden soll.
+description: Wählt ein Clientzertifikat aus, das an einen HTTPS-Server (Secure Hypertext Transfer Protocol) gesendet werden soll.
 ms.assetid: e76f1e76-5efe-46f2-9a21-064aa06fb3a8
-title: 'Iwinhttprequest:: setclientcertificate-Methode'
+title: IWinHttpRequest::SetClientCertificate-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 0b346451e87b62116d7202b476e554c84604ea48
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f878b93fe0db24334f406c2a6c85663e7f37a05095998f157cbf44878b39daf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118562896"
 ---
-# <a name="iwinhttprequestsetclientcertificate-method"></a>Iwinhttprequest:: setclientcertificate-Methode
+# <a name="iwinhttprequestsetclientcertificate-method"></a>IWinHttpRequest::SetClientCertificate-Methode
 
-Mit der **setclientcertificate** -Methode wird ein Client Zertifikat ausgewählt, das an einen HTTPS-Server (Secure Hypertext Transfer Protocol) gesendet werden soll.
+Die **SetClientCertificate-Methode** wählt ein Clientzertifikat aus, das an einen HTTPS-Server (Secure Hypertext Transfer Protocol) gesendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,35 +40,35 @@ HRESULT SetClientCertificate(
 
 <dl> <dt>
 
-*ClientCertificate* \[ in\]
+*ClientCertificate* \[ In\]
 </dt> <dd>
 
-Gibt den Speicherort, den [*Zertifikat Speicher*](glossary.md)und den Betreff eines Client Zertifikats an.
+Gibt den Speicherort, [*den Zertifikatspeicher*](glossary.md)und den Antragsteller eines Clientzertifikats an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die im *ClientCertificate* -Parameter angegebene Zeichenfolge besteht aus dem Zertifikat Speicherort, dem Zertifikat Speicher und dem Antragsteller Namen, die durch umgekehrte Schrägstriche getrennt sind. Weitere Informationen zu den Komponenten der Zertifikat Zeichenfolge finden Sie unter [Client Zertifikate](ssl-in-winhttp.md).
+Die im *ClientCertificate-Parameter* angegebene Zeichenfolge besteht aus dem Zertifikatspeicherort, dem Zertifikatspeicher und dem Antragstellernamen, die durch umgekehrte Schrägstriche getrennt sind. Weitere Informationen zu den Komponenten der Zertifikatzeichenfolge finden Sie unter [Clientzertifikate.](ssl-in-winhttp.md)
 
-Der Name und Speicherort des Zertifikat Speicher sind optional. Wenn Sie jedoch einen Zertifikat Speicher angeben, müssen Sie auch den Speicherort dieses Zertifikat Speicher angeben. Der Standard Speicherort ist aktueller \_ Benutzer und der Standard Zertifikat Speicher "My". Ein leerer Betreff gibt an, dass das erste Zertifikat im Zertifikat Speicher verwendet werden soll.
+Name und Speicherort des Zertifikatspeichers sind optional. Wenn Sie jedoch einen Zertifikatspeicher angeben, müssen Sie auch den Speicherort dieses Zertifikatspeichers angeben. Der Standardspeicherort ist CURRENT \_ USER, und der Standardzertifikatspeicher ist "MY". Ein leerer Antragsteller gibt an, dass das erste Zertifikat im Zertifikatspeicher verwendet werden soll.
 
-Rufen Sie **setclientcertificate** auf, um ein Zertifikat auszuwählen, bevor [**Sie Send**](iwinhttprequest-send.md) aufrufen, um die Anforderung zu senden.
+Rufen **Sie SetClientCertificate** auf, um ein Zertifikat auszuwählen, bevor [**Sie Senden**](iwinhttprequest-send.md) aufrufen, um die Anforderung zu senden.
 
-Microsoft Windows HTTP-Dienste (WinHTTP) stellen keine Client Zertifikate für Proxy Server bereit, die Zertifikate für die Authentifizierung anfordern.
+Microsoft Windows HTTP Services (WinHTTP) stellt keine Clientzertifikate für Proxyserver bereit, die Zertifikate für die Authentifizierung anfordern.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Skript Beispiel wird gezeigt, wie Sie ein Client Zertifikat auswählen, das mit einer Anforderung gesendet werden soll. Ein Zertifikat mit dem Betreff "My Middle-Tier Certificate" wird aus dem Zertifikat Speicher "persönlich" in der Registrierung unter **HKEY \_ local \_ Machine** ausgewählt. Da dieses Codebeispiel spezifisch für Microsoft JScript ist, das den umgekehrten Schrägstrich als Escapezeichen verwendet, sind zwei aufeinander folgende umgekehrte Schrägstriche erforderlich, um die Komponenten der Zertifikat Zeichenfolge zu begrenzen.
+Das folgende Skriptbeispiel zeigt, wie Sie ein Clientzertifikat auswählen, das mit einer Anforderung gesendet werden soll. Ein Zertifikat mit dem Betreff "Mein Middle-Tier Zertifikat" wird aus dem "persönlichen" Zertifikatspeicher in der Registrierung unter **HKEY \_ LOCAL \_ MACHINE** ausgewählt. Da dieses Codebeispiel spezifisch für Microsoft JScript ist, das den umgekehrten Schrägstrich als Escapezeichen verwendet, sind zwei angrenzende umgekehrte Schrägstriche erforderlich, um Komponenten der Zertifikatzeichenfolge zu begrenzen.
 
 
 ```JScript
@@ -94,20 +94,20 @@ HttpReq.Send();
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

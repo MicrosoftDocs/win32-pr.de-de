@@ -1,41 +1,41 @@
 ---
-title: VersionIndependentProgId
-description: Ordnet eine ProgID einer CLSID zu. Dieser Wert wird verwendet, um die neueste Version einer Objekt Anwendung zu bestimmen.
+title: VersionIndependentProgID
+description: Ordnet eine ProgID einer CLSID zu. Dieser Wert wird verwendet, um die neueste Version einer Objektanwendung zu bestimmen.
 ms.assetid: 5d188db9-ea4f-47fe-882f-a6caa7e86a25
 keywords:
-- Registrierungsschlüssel für versionindependent dentprogid com
+- VersionIndependentProgID-Registrierungsschlüssel COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5774dfa5202521bb5055bab6a62aa7c6a60b3cc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4fe1defaa52df5251d6c021655d6e84c90677e2a2d57f0bfb67f925e0ffa5bc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118549716"
 ---
-# <a name="versionindependentprogid"></a>VersionIndependentProgId
+# <a name="versionindependentprogid"></a>VersionIndependentProgID
 
-Ordnet eine ProgID einer CLSID zu. Dieser Wert wird verwendet, um die neueste Version einer Objekt Anwendung zu bestimmen.
+Ordnet eine ProgID einer CLSID zu. Dieser Wert wird verwendet, um die neueste Version einer Objektanwendung zu bestimmen.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID
-   {CLSID}
-      VersionIndependentProgID = Program.Component
+   {CLSID}
+      VersionIndependentProgID = Program.Component
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ SZ** -Wert, der die neueste Version der Objekt Anwendung angibt.
+Dies ist ein **REG \_ SZ-Wert,** der die neueste Version der Objektanwendung angibt.
 
-Die Versions unabhängige ProgID wird nur durch den Anwendungscode gespeichert und verwaltet. Wenn die Versions unabhängige ProgID angegeben ist, gibt die [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) -Funktion die CLSID der aktuellen Version zurück.
+Die versionsunabhängige ProgID wird ausschließlich vom Anwendungscode gespeichert und verwaltet. Wenn die versionsunabhängige ProgID angegeben wird, gibt die [**CLSIDFromProgID-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) die CLSID der aktuellen Version zurück.
 
-Sie können [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) und [**progidfromclsid**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid) verwenden, um zwischen diesen beiden Darstellungen zu konvertieren.
+Sie können [**CLSIDFromProgID**](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) und [**ProgIDFromCLSID**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid) verwenden, um zwischen diesen beiden Darstellungen zu konvertieren.
 
- 
+ 
 
- 
+ 
 
 
 

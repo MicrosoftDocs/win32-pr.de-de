@@ -1,7 +1,7 @@
 ---
-description: Stellt einen Satz von Komponenten dar, die als einzelne Entität auf hoher Ebene fungieren.
+description: Stellt einen Satz von Komponenten dar, die als einzelne entität auf hoher Ebene funktionieren.
 ms.assetid: 784cee32-e0ae-4632-8dac-e5110513f5c9
-title: CIM_System-Klasse (Hyper-V-Verwaltung)
+title: CIM_System -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: a51e56ad3e8f91200fbe5bc7e09ac2f14c4ee232
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 143e2514ae22528c695542ad67024a4ef9a75532c0e734b69f3c9e6772777a70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646794"
 ---
-# <a name="cim_system-class-hyper-v-management"></a>CIM_System-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_system-class-hyper-v-management"></a>CIM_System -Klasse (Hyper-V-Verwaltung)
 
-Stellt einen Satz von Komponenten dar, die als einzelne Entität auf hoher Ebene fungieren.
+Stellt einen Satz von Komponenten dar, die als einzelne entität auf hoher Ebene funktionieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,58 +51,58 @@ class CIM_System : CIM_EnabledLogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ System** Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Systemklasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ System** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Systemklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Klassenname, der verwendet wird, um eine Instanz dieser Klasse zu erstellen. " **Kreationclassname** " wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und ihrer Unterklassen eindeutig zu identifizieren.
+Der Klassenname, der zum Erstellen einer Instanz dieser Klasse verwendet wird. **CreationClassName** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und ihrer Unterklassen eindeutig zu identifizieren.
 
 </dd> <dt>
 
 **IdentifyingDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ System**".**"OtherIdentifyingInfo**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-System**.**OtherIdentifyingInfo**")
 </dt> </dl>
 
-Ein Array, das Beschreibungen der Werte in der Eigenschaft " **OtherIdentifyingInfo** " enthält. Die Array Elemente in **identifyingbeschreibungen** entsprechen den Elementen in der **identifyingbeschreibungen** -Eigenschaft.
+Ein Array, das Beschreibungen der Werte in der **OtherIdentifyingInfo-Eigenschaft** enthält. Die Arrayelemente in **IdentifyingDescriptions** entsprechen den Elementen in der **IdentifyingDescriptions-Eigenschaft.**
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Überschreibung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Der Schlüssel dieser Instanz in einer Unternehmensumgebung.
@@ -112,61 +112,61 @@ Der Schlüssel dieser Instanz in einer Unternehmensumgebung.
 **NameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Die Namenskonvention, die von der Name-Eigenschaft verwendet wird, um sicherzustellen, dass die **namens** Werte eindeutig sind
+Die Namenskonvention, die von der Name-Eigenschaft verwendet wird, um sicherzustellen, **dass Name-Werte** eindeutig sind.
 
 </dd> <dt>
 
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ System**".**Identifyingbeschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ System**.**IdentifyingDescriptions**")
 </dt> </dl>
 
-Ein Array, das einen Satz zusätzlicher Daten enthält, die über Systemnamen Informationen hinausgehen und zur Identifizierung eines Computer Systems verwendet werden könnten.
+Ein Array, das eine Reihe zusätzlicher Daten über Systemnamensinformationen hinaus enthält, die zum Identifizieren eines Computersystems verwendet werden können.
 
 </dd> <dt>
 
 **PrimaryOwnerContact**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Allgemeine Informationen zu DMTF \| \| 001,4 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| General Information \| 001.4")
 </dt> </dl>
 
-Eine Zeichenfolge, die Informationen darüber bereitstellt, wie der primäre Systembesitzer erreicht werden kann (z. b. Telefonnummer, e-Mail-Adresse usw.).
+Eine Zeichenfolge, die Informationen dazu enthält, wie der primäre Systembesitzer erreicht werden kann (z. B. Telefonnummer, E-Mail-Adresse und so weiter).
 
 </dd> <dt>
 
-**Primaryownername**
+**PrimaryOwnerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Allgemeine Informationen zu DMTF \| \| 001,3 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| General Information \| 001.3")
 </dt> </dl>
 
 Der Name des primären Benutzers des Systems.
@@ -176,7 +176,7 @@ Der Name des primären Benutzers des Systems.
 **Rollen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -195,16 +195,16 @@ Ein Array, das die Rollen enthält, die vom System in einer Unternehmensumgebung
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)
+[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md)
 </dt> </dl>
 
  

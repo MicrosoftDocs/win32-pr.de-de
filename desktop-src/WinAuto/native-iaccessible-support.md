@@ -1,27 +1,27 @@
 ---
 title: Native IAccessible-Unterstützung
-description: Oleacc.dll implementiert iaccidentity im Namen von objID- \_ Client \ 160; IAccessible-Schnittstellen Zeigern und deren unmittelbaren, einfachen untergeordneten Elementen.
+description: Oleacc.dll implementiert IAccIdentity im Auftrag von OBJID \_ CLIENT \ 160;IAccessible-Schnittstellenzeiger und deren unmittelbar untergeordnete Elemente.
 ms.assetid: 98c6d68b-b64d-44d4-93c3-6c7c6732d59d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 606261a642f57c85f3f23a80257b7cdc498b927b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ad499b96c668349cc481efd388a780ba094eff2ef6eb4ae52ab041aabea70fa6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118565050"
 ---
 # <a name="native-iaccessible-support"></a>Native IAccessible-Unterstützung
 
-Oleacc.dll implementiert [**iaccidentity**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) für den [**objID- \_ Client**](object-identifiers.md), der  [**ibarrierefreie**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Schnittstellen Zeiger und seine unmittelbaren einfachen untergeordneten Elemente. Ein **objID- \_ Client**, der  **IAccessible** -Schnittstellen Zeiger ist, wird zurückgegeben, wenn [**WM \_ GetObject**](wm-getobject.md) mit *LPARAM*  =  **objID- \_ Client** an ein **HWND** gesendet wird, das den Client Bereich des Fensters oder das Steuerelement als Ganzes darstellt. **Das über** geordnete Element eines solchen **IAccessible** -Schnittstellen Zeigers verfügt in der Regel über eine Rolle des [**Rollen \_ System \_ Fensters**](object-roles.md) und ist das Objekt, das zurückgegeben wird, wenn **WM \_ GetObject** mit *LPARAM*  =  [**objID- \_ Fenster**](object-identifiers.md) an ein HWND gesendet wird.
+Oleacc.dll implementiert [**IAccIdentity**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) im Namen von [**OBJID \_ CLIENT**](object-identifiers.md) IAccessible-Schnittstellenzeigern und deren unmittelbar untergeordneten Elementen. [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Ein **OBJID \_ CLIENT** **IAccessible-Schnittstellenzeiger** wird zurückgegeben, wenn WM [**\_ GETOBJECT**](wm-getobject.md) mit *lParam*  =  **OBJID \_ CLIENT** an ein **HWND** gesendet wird, das den Clientbereich des Fensters oder des Steuerelements als Ganzes darstellt. Das übergeordnete Element eines solchen **IAccessible-Schnittstellenzeigers** hat in der Regel die Rolle [**ROLE SYSTEM \_ \_ WINDOW**](object-roles.md) und ist das **IAccessible-Objekt,** das zurückgegeben wird, wenn **WM \_ GETOBJECT** mit *lParam*  =  [**OBJID \_ WINDOW**](object-identifiers.md) an einen hwnd gesendet wird.
 
-Diese [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstellen Zeiger treten in der Regel auf, wenn ein Oleacc.dll Proxy untergeordnet ist oder wenn ein einfaches benutzerdefiniertes  Steuerelement (z. b 
+Diese [**IAccessible-Schnittstellenzeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) treten in der Regel auf, wenn ein Oleacc.dll Proxy untergliedert ist oder wenn ein einfaches benutzerdefiniertes Steuerelement (z. B. ein Container **IAccessible** plus eine Ebene einfacher Elementelemente) eine native **IAccessible-Implementierung** bereitstellt.
 
-Komplexere systemeigene [**ibarrierefreie**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Implementierungen, wie z. b. das vorhanden sein einer Hierarchie von **IAccessible**-Objekten oder die Verwendung von benutzerdefinierten Objekt-IDs, müssen [**iaccidentity**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) selbst implementieren
+Kompliziertere native [**IAccessible-Implementierungen,**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) z. B. wo eine Hierarchie von **IAccessible** s vorhanden ist oder wo benutzerdefinierte Objekt-IDs verwendet werden, müssen [**IAccIdentity**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) selbst implementieren.
 
- 
+ 
 
- 
+ 
 
 
 

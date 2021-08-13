@@ -1,5 +1,5 @@
 ---
-description: Stellt einen switchdienst dar.
+description: Stellt einen Switchdienst dar.
 ms.assetid: cf6319fa-7d69-4820-b0e0-775aad8b190c
 title: CIM_SwitchService-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9abe6869c5b8ac61630091315e476ae232630717
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1cae4f157073721dc7cdd87585b39e1dbdb4c73b03a4aaf82a8ffd26796cbc78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118646782"
 ---
-# <a name="cim_switchservice-class"></a>CIM \_ switchservice-Klasse
+# <a name="cim_switchservice-class"></a>CIM \_ SwitchService-Klasse
 
-Stellt einen switchdienst dar.
+Stellt einen Switchdienst dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,51 +43,51 @@ class CIM_SwitchService : CIM_ForwardingService
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ switchservice** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SwitchService-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ switchservice** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SwitchService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bridgeaddress**
+**BridgeAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (32), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Bridge-MIB. dot1dBaseBridgeAddress "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ switchservice**".**Bridgeadresssstype**")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (32), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dBaseBridgeAddress"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SwitchService**.**BridgeAddressType**")
 </dt> </dl>
 
-Die Adresse des Switch-Dienstanbieter, der Teil des eindeutigen Bezeichners des Dienstanbieter ist.
+Die Adresse des Switchdiensts, bei dem es sich um einen Teil des eindeutigen Bezeichners des Diensts handelt.
 
 </dd> <dt>
 
-**Bridgeadresssstype**
+**BridgeAddressType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ switchservice**".**Bridgeaddress**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SwitchService**.**BridgeAddress**")
 </dt> </dl>
 
-Das Adressierungs Format, das für die Bridge und die **bridgeaddress** -Eigenschaft verwendet wird.
+Das Adressierungsformat, das für die Bridge und die **BridgeAddress-Eigenschaft** verwendet wird.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -108,33 +108,33 @@ Das Adressierungs Format, das für die Bridge und die **bridgeaddress** -Eigensc
 
 <span id="MAC"></span><span id="mac"></span>
 
-**Mac** (4)
+**MAC** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="MAC___Spanning_Tree_Priority"></span><span id="mac___spanning_tree_priority"></span><span id="MAC___SPANNING_TREE_PRIORITY"></span>
 
-**Mac +** Aufteilungs Struktur Priorität (5)
+**MAC + Spanning Tree Priority** (5)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Bridgetype**
+**BridgeType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Bridge-MIB. dot1dBaseType ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dBaseType")
 </dt> </dl>
 
-Der Typ des auszuführenden Wechsel Dienstanbieter.
+Der Typ des auszuführende Dienstwechseldiensts.
 
 <dt>
 
@@ -168,19 +168,19 @@ Der Typ des auszuführenden Wechsel Dienstanbieter.
 
 </dd> <dt>
 
-**Numports**
+**NumPorts**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Bridge-MIB. dot1dBaseNumPorts ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dBaseNumPorts")
 </dt> </dl>
 
-Die Anzahl der Switchports, die von diesem Wechseldienst gesteuert werden.
+Die Anzahl der Switchports, die von diesem Switchdienst gesteuert werden.
 
 </dd> </dl>
 
@@ -192,17 +192,17 @@ Die Anzahl der Switchports, die von diesem Wechseldienst gesteuert werden.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ weiterforwardingdienst**](cim-forwardingservice.md)
+[**CIM \_ ForwardingService**](cim-forwardingservice.md)
 </dt> </dl>
 
  

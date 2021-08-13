@@ -1,7 +1,7 @@
 ---
-description: Die onpalettechange-Methode verarbeitet palettenänderungs Meldungen.
+description: Die OnPaletteChange-Methode verarbeitet Palettenänderungsmeldungen.
 ms.assetid: 2abae4f1-fbd0-4a32-8772-012fa96b6d6c
-title: Cbasewindow. onpalettechange-Methode (winutil. h)
+title: CBaseWindow.OnPaletteChange-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9abcb2d9f5cdc875f70f5c1db1fd2f625ce911f0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c881c519706ca0288847a7dc603cf513a99cdd76e4c83f0e53bec16df840e509
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118657953"
 ---
-# <a name="cbasewindowonpalettechange-method"></a>Cbasewindow. onpalettechange-Methode
+# <a name="cbasewindowonpalettechange-method"></a>CBaseWindow.OnPaletteChange-Methode
 
-Die `OnPaletteChange` -Methode verarbeitet palettenänderungs Meldungen.
+Die `OnPaletteChange` -Methode verarbeitet Palettenänderungsmeldungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,27 +43,27 @@ virtual LRESULT OnPaletteChange(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Handle für das Fenster.
+Handle zum Fenster.
 
 </dd> <dt>
 
 *Meldung* 
 </dt> <dd>
 
-Nachrichten-ID.
+Nachrichtenbezeichner.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn die Meldung verarbeitet wurde, oder 1, wenn die Meldung nicht verarbeitet wurde.
+Gibt 0 zurück, wenn die Nachricht verarbeitet wurde, oder 1, wenn die Nachricht nicht verarbeitet wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode verarbeitet die \_ Nachrichten "WM palettechanged" und "WM \_ querynewpalette". Die [**cbasewindow::D orealisetpalette**](cbasewindow-dorealisepalette.md) -Methode wird aufgerufen, um die neue Palette zu erkennen.
+Diese Methode verarbeitet WM \_ PALETTECHANGED- und WM \_ QUERYNEWPALETTE-Meldungen. Sie ruft die [**CBaseWindow::D oRealisePalette-Methode**](cbasewindow-dorealisepalette.md) auf, um die neue Palette zu realisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Diese Methode verarbeitet die \_ Nachrichten "WM palettechanged" und "WM \_ quer
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

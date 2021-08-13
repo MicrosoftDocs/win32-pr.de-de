@@ -1,7 +1,7 @@
 ---
-description: Gibt Informationen zum Speicher Anbieter zurück.
+description: Gibt Informationen zum Speicheranbieter zurück.
 ms.assetid: bdacb5bb-a37a-4970-add7-57625bec1ce0
-title: 'Ipstore:: GetInfo-Methode (pstore. h)'
+title: IPStore::GetInfo-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 7747c3acf15a60f5556a8855ef4825715ef5050b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 118f346acf550a8d4835931102a26d70f0c41fad7cc23ac706268b7778c31b56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106363218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667271"
 ---
-# <a name="ipstoregetinfo-method"></a>Ipstore:: GetInfo-Methode
+# <a name="ipstoregetinfo-method"></a>IPStore::GetInfo-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
-Gibt Informationen zum Speicher Anbieter zurück.
+Gibt Informationen zum Speicheranbieter zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT GetInfo(
 
 <dl> <dt>
 
-*ppproperties* \[ vorgenommen\]
+*ppProperties* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine **ppst \_ ProviderInfo** -Struktur, die Informationen über den Speicher Anbieter enthält.
+Ein Zeiger auf eine **PPST \_ PROVIDERINFO-Struktur,** die Informationen zum Speicheranbieter enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
+Der Rückgabewert ist ein **HRESULT-Wert.** Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,16 +58,16 @@ Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ipstore**](ipstore.md)
+[**IPStore**](ipstore.md)
 </dt> </dl>
 
  

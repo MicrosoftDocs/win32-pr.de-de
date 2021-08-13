@@ -1,19 +1,19 @@
 ---
-description: Erfahren Sie Windows Installer Konzepte, die mit dem Buchstaben S beginnen, z. B. Sequenztabellen und Quelllisten.
+description: Erfahren Sie Windows Installer-Konzepte, die mit dem Buchstaben S beginnen, z. B. Sequenztabellen und Quellliste.
 ms.assetid: 8570bf99-e7db-4af1-acc5-abc236a640d6
 title: S (Windows Installer)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 93e288396a35a90346ffc6581653f32a4478e535
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: 17d0bc61230433857a903476dab7ba25e1a75e3a6c405944731b73bfbb29ad78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112010883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118625550"
 ---
 # <a name="s-windows-installer"></a>S (Windows Installer)
 
-[A](a-gly.md) [B](b-gly.md) [C](c-gly.md) [D](d-gly.md) [E](e-gly.md) F [G](f-gly.md) [](g-gly.md) H [I](i-gly.md) J K L [M](m-gly.md) N [O](o-gly.md) [P](p-gly.md) [Q](q-gly.md) [R](r-gly.md) S T [](t-gly.md) [U](u-gly.md) [V](v-gly.md) W X Y Z
+[A](a-gly.md) [B](b-gly.md) [C](c-gly.md) [D](d-gly.md) [E](e-gly.md) F [G](f-gly.md) [](g-gly.md) H [I](i-gly.md) J K L [M](m-gly.md) N [O](o-gly.md) [P](p-gly.md) [Q](q-gly.md) [R](r-gly.md) S [T](t-gly.md) [U](u-gly.md) [V](v-gly.md) W X Y Z
 
 <dl> <dt>
 
@@ -34,7 +34,7 @@ Gibt die Speicherorte an, an denen das Installationsprogramm nach externen [*Que
 <span id="_msi_standard_action_gly"></span><span id="_MSI_STANDARD_ACTION_GLY"></span>**Standardaktion**
 </dt> <dd>
 
-Integrierte Aktion [*der*](a-gly.md) Windows Installer. Weitere Informationen finden Sie unter [Standardaktionen](standard-actions.md).
+Integrierte Aktion [*des Windows*](a-gly.md) Installers. Weitere Informationen finden Sie unter [Standardaktionen](standard-actions.md).
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Benutzer ohne Administratorrechte.
 
 </dd> <dt>
 
-<span id="_msi_structured_query_language_gly"></span><span id="_MSI_STRUCTURED_QUERY_LANGUAGE_GLY"></span>**Structured Query Language (SQL)**
+<span id="_msi_structured_query_language_gly"></span><span id="_MSI_STRUCTURED_QUERY_LANGUAGE_GLY"></span>**strukturierte Abfragesprache (SQL)**
 </dt> <dd>
 
 Sprache, die zum Verarbeiten von Daten in einer relationalen Datenbank verwendet wird. Sie können SQL verwenden, um Abfragen an die Installer-Datenbank zu stellen. Weitere Informationen finden Sie unter [Arbeiten mit Abfragen.](working-with-queries.md)
@@ -55,7 +55,7 @@ Sprache, die zum Verarbeiten von Daten in einer relationalen Datenbank verwendet
 <span id="_msi_summary_information_stream_gly"></span><span id="_MSI_SUMMARY_INFORMATION_STREAM_GLY"></span>**Zusammenfassungsinformationsstream**
 </dt> <dd>
 
-Speicherort in der.msi [*für*](m-gly.md) Informationen, die mit Microsoft-Windows-Explorer. Weitere Informationen finden Sie unter [Informationen zum Zusammenfassungsinformationsstream.](about-the-summary-information-stream.md)
+Storage Speicherort in [*der*](m-gly.md).msi, um Informationen zu erhalten, die mit dem Microsoft Windows Explorer angezeigt werden können. Weitere Informationen finden Sie unter [Informationen zum Zusammenfassungsinformationsstream.](about-the-summary-information-stream.md)
 
 </dd> <dt>
 

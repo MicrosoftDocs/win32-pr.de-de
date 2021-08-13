@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixRotationZ-Funktion (D3DX10Math.h): Erstellt eine Matrix, die um die Z-Achse gedreht wird.'
+description: 'D3DXMatrixRotationZ-Funktion (D3DX10Math.h): Erstellt eine Matrix, die sich um die Z-Achse dreht.'
 ms.assetid: a168ea24-0cec-4e1b-a128-e9dadedf190b
 title: D3DXMatrixRotationZ-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: b952e310dd463d07a35fb294c4a50168361658a7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ee87285765ccecd6a31e6a5ee8ae68bf59a45cea0ffc4fc52e11351e20b62388
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118541260"
 ---
 # <a name="d3dxmatrixrotationz-function-d3dx10mathh"></a>D3DXMatrixRotationZ-Funktion (D3DX10Math.h)
 
-Erstellt eine Matrix, die um die Z-Achse gedreht wird.
+Erstellt eine Matrix, die sich um die Z-Achse dreht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,9 +63,9 @@ Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie von d
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die um die Z-Achse gedreht wurde.
+Zeiger auf eine um die Z-Achse gedrehte D3DXMATRIX-Struktur.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixRotationZ-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -73,14 +73,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,37 +1,37 @@
 ---
-description: Dieses Steuerungs Ereignis führt eine angegebene Datei aus. Wenn die Datei nicht vorhanden ist oder das Ereignis fehlschlägt, protokolliert Windows Installer den Fehler im ausführlichen Protokoll, ohne dass ein Dialogfeld mit einer Fehlermeldung angezeigt wird.
+description: Dieses Steuerelementereignis führt eine angegebene Datei aus. Wenn die Datei nicht vorhanden ist oder das Ereignis fehlschlägt, protokolliert Windows Installer den Fehler im ausführlichen Protokoll, ohne ein Dialogfeld mit einer Fehlermeldung anzuzeigen.
 ms.assetid: a185c5a1-6584-4916-967a-313e6b7cf97c
-title: Msilaunchapp ControlEvent
+title: MsiLaunchApp ControlEvent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 298867868a80eb2cb831a2304325d14355adc669
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 982152d58748ba8b1b8f9d302766e1e9c55eb2ee3c9fa0ce7582507c017dc9b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118627788"
 ---
-# <a name="msilaunchapp-controlevent"></a>Msilaunchapp ControlEvent
+# <a name="msilaunchapp-controlevent"></a>MsiLaunchApp ControlEvent
 
-Dieses Steuerungs Ereignis führt eine angegebene Datei aus. Wenn die Datei nicht vorhanden ist oder das Ereignis fehlschlägt, protokolliert Windows Installer den Fehler im ausführlichen Protokoll, ohne dass ein Dialogfeld mit einer Fehlermeldung angezeigt wird.
+Dieses Steuerelementereignis führt eine angegebene Datei aus. Wenn die Datei nicht vorhanden ist oder das Ereignis fehlschlägt, protokolliert Windows Installer den Fehler im ausführlichen Protokoll, ohne ein Dialogfeld mit einer Fehlermeldung anzuzeigen.
 
-**[Windows Installer 4,5 oder früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt. Dieses ControlEvent ist ab Windows Installer 5,0 verfügbar.
+**[Windows Installer 4.5 oder früher:](not-supported-in-windows-installer-4-5.md)** Wird nicht unterstützt. Dieses ControlEvent ist ab Windows Installer 5.0 verfügbar.
 
 ## <a name="published-by"></a>Veröffentlicht von
 
-Diese ControlEvent wird vom Installationsprogramm veröffentlicht.
+Dieses ControlEvent wird vom Installationsprogramm veröffentlicht.
 
 ## <a name="argument"></a>Argument
 
-Die Felder des Argument Werts sind durch Leerzeichen begrenzt. Das erste Feld enthält einen Zeichen folgen Wert, der die Datei angibt, die ausgeführt werden soll. Verwenden Sie den Zeichen folgen Wert \[ \# *filekey* \] , um die Datei zu identifizieren und *filekey* durch den Bezeichner der Datei zu ersetzen, der in der Datei Spalte der [Datei](file-table.md) Tabelle angezeigt wird. Alle verbleibenden Felder des Arguments können Parameter enthalten, die von der Datei verwendet werden, die ausgeführt wird.
+Die Felder des Argumentwerts werden durch Leerzeichen getrennt. Das erste Feld enthält einen Zeichenfolgenwert, der die auszuführende Datei angibt. Verwenden Sie den Zeichenfolgenwert \[ \# *filekey,* \] um die Datei zu identifizieren, und ersetzen Sie *filekey* durch den Dateibezeichner, der in der Spalte Datei der [Dateitabelle](file-table.md) angezeigt wird. Alle verbleibenden Felder des Arguments können Parameter enthalten, die von der ausgeführten Datei verwendet werden.
 
 ## <a name="action-on-subscribers"></a>Aktion auf Abonnenten
 
-Diese ControlEvent führt keine Aktionen für Abonnenten aus.
+Dieses ControlEvent führt keine Aktionen auf Abonnenten aus.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-, Um es einem Benutzer zu ermöglichen, eine Datei am Ende einer-Installation auszuführen. Dieses Ereignis kann auf eine Eigenschaft festgelegt werden, die durch ein [CheckBox](checkbox-control.md) -Steuerelement festgelegt wird, das im abschließenden Dialogfeld der Installation angezeigt wird. Beim Entfernen des Pakets sollte das CheckBox-Steuerelement nicht angezeigt werden.
+So ermöglichen Sie es einem Benutzer, eine Datei am Ende einer Installation auszuführen. Dieses Ereignis kann auf eine Eigenschaft festgelegt werden, die von einem [CheckBox-Steuerelement](checkbox-control.md) festgelegt wird, das im letzten Dialogfeld der Installation angezeigt wird. Das CheckBox-Steuerelement sollte während des Entfernens des Pakets nicht angezeigt werden.
 
  
 

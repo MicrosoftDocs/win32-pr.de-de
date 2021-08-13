@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Principal-Name-Attribut
-description: Der Kontoname für den Sicherheits Prinzipal (erstellt).
+description: Kontoname für den Sicherheitsprinzipal (konstruiert).
 ms.assetid: f7e0fa7a-8b5f-48e1-bcb9-a4c6879a8297
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Principal-Name-Attribut
-- AD-Schema des msDS-PrincipalName-Attributs
+- MS-DS-Principal-Name-Attribut AD-Schema
+- MSDS-PrincipalName-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b8bb2f4cd9b0ef90a966c8be0e98a5960632ef9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e6f1471f7fe0f685cb1cf827032beac15591dd55d7069245fd3f7eeecda7fb8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118683366"
 ---
 # <a name="ms-ds-principal-name-attribute"></a>ms-DS-Principal-Name-Attribut
 
-Der Kontoname für den Sicherheits Prinzipal (erstellt).
+Kontoname für den Sicherheitsprinzipal (konstruiert).
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | ms-DS-Principal-Name                        |
-| LDAP-Display-Name | msDS-PrincipalName                          |
+| Ldap-Anzeigename | msDS-PrincipalName                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1865                     |
-| System-ID-GUID    | 564e9325-d057-c143-9e3b-4f 9e5ef46f 93        |
+| System-ID-GUID    | 564e9325-d057-c143-9e3b-4f9e5ef46f93        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,16 +55,16 @@ Der Kontoname für den Sicherheits Prinzipal (erstellt).
 |------------------------|---------------------------------------------------------|
 | Link-ID                | \-                                                      |
 | MAPI-Id                | \-                                                      |
-| System-Only            | False                                                   |
-| Ist-einwertig       | Richtig                                                    |
-| Ist indiziert             | False                                                   |
-| Im globalen Katalog      | False                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                            |
+| System-Only            | Falsch                                                   |
+| Ist einwertig       | Richtig                                                    |
+| Ist indiziert             | Falsch                                                   |
+| Im globalen Katalog      | Falsch                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                            |
 | Range-Lower            | \-                                                      |
 | Range-Upper            | \-                                                      |
 | Search-Flags           | 0x00000000                                              |
 | System-Flags           | 0x00000014                                              |
-| In verwendete Klassen        | [**ms-DS-BIND-Proxy**](c-msds-bindproxy.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Bind-Proxy**](c-msds-bindproxy.md)<br/> |
 
 
 
@@ -76,11 +76,11 @@ Der Kontoname für den Sicherheits Prinzipal (erstellt).
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -97,11 +97,11 @@ Der Kontoname für den Sicherheits Prinzipal (erstellt).
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -118,11 +118,11 @@ Der Kontoname für den Sicherheits Prinzipal (erstellt).
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

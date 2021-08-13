@@ -1,11 +1,11 @@
 ---
 title: ms-DS-NC-RO-Replica-Locations-BL-Attribut
-description: Rückwärts Verknüpfungs Attribut für ms-DS-NC-RO-Replica-Locations.
+description: Abwärtslinkattribut für ms-DS-NC-RO-Replica-Locations.
 ms.assetid: 2dc1356c-e259-4f53-8849-286146d9d7ef
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-NC-RO-Replica-Locations-BL\"-Attribut AD-Schema"
-- MSDS-NC-RO-Replica-Locations-BL-Attribut AD-Schema
+- MS-DS-NC-RO-Replica-Locations-BL-Attribut AD-Schema
+- AD-Schema des msDS-NC-RO-Replica-Locations-BL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a88f0d811a36d3fe81f0edc9427ef0f2263ace5d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5ce4ee6b4353893b647705f475b5375e25bcb56599230a8e294c5d2c808157fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118684524"
 ---
 # <a name="ms-ds-nc-ro-replica-locations-bl-attribute"></a>ms-DS-NC-RO-Replica-Locations-BL-Attribut
 
-Rückwärts Verknüpfungs Attribut für [**ms-DS-NC-RO-Replica-Locations**](a-msds-nc-ro-replica-locations.md).
+Abwärtslinkattribut [**für ms-DS-NC-RO-Replica-Locations**](a-msds-nc-ro-replica-locations.md).
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | ms-DS-NC-RO-Replica-Locations-BL        |
-| LDAP-Display-Name | MSDS-NC-RO-Replica-Locations-BL         |
+| Ldap-Anzeigename | msDS-NC-RO-Replica-Locations-BL         |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1968                 |
-| System-ID-GUID    | f547511c-5b2a-44cc-8358-992a88258164    |
+| System-Id-Guid    | f547511c-5b2a-44cc-8358-992a88258164    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -54,11 +54,11 @@ Rückwärts Verknüpfungs Attribut für [**ms-DS-NC-RO-Replica-Locations**](a-ms
 |------------------------|---------------------------------|
 | Link-ID                | 2115                            |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -75,11 +75,11 @@ Rückwärts Verknüpfungs Attribut für [**ms-DS-NC-RO-Replica-Locations**](a-ms
 |------------------------|---------------------------------|
 | Link-ID                | 2115                            |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -96,11 +96,11 @@ Rückwärts Verknüpfungs Attribut für [**ms-DS-NC-RO-Replica-Locations**](a-ms
 |------------------------|---------------------------------|
 | Link-ID                | 2115                            |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

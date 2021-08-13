@@ -1,211 +1,211 @@
 ---
-description: Um Windows Installer in der Anwendung zu aktivieren, müssen Sie die Installer-Funktionen verwenden. In den Tabellen in diesem Thema werden die Funktionen nach Kategorie identifiziert.
+description: Um Windows Installer in Ihrer Anwendung zu aktivieren, müssen Sie die Installerfunktionen verwenden. Die Tabellen in diesem Thema identifizieren die Funktionen nach Kategorie.
 ms.assetid: 05a16915-6b47-4d51-b62a-5a4d92b87e50
-title: Installationsfunktionsverweis
+title: Referenz zur Installerfunktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9261789f21bd559e49c4e5718ef68ce9d0bb41c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 05ab6a77bd3aa02be85f0d2a3cb11a864861535360f5741c6566f77e9fc1aa11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118630545"
 ---
-# <a name="installer-function-reference"></a>Installationsfunktionsverweis
+# <a name="installer-function-reference"></a>Referenz zur Installerfunktion
 
-Um Windows Installer in der Anwendung zu aktivieren, müssen Sie die Installer-Funktionen verwenden. In den Tabellen in diesem Thema werden die Funktionen nach Kategorie identifiziert.
+Um Windows Installer in Ihrer Anwendung zu aktivieren, müssen Sie die Installerfunktionen verwenden. Die Tabellen in diesem Thema identifizieren die Funktionen nach Kategorie.
 
-## <a name="user-interface-and-logging-functions"></a>Benutzeroberfläche und Protokollierungsfunktionen
+## <a name="user-interface-and-logging-functions"></a>Benutzeroberfläche- und Protokollierungsfunktionen
 
 
 
-| Name                                                     | BESCHREIBUNG                                                                           |
+| Name                                                     | Beschreibung                                                                           |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [**MsiSetInternalUI**](/windows/desktop/api/Msi/nf-msi-msisetinternalui)             | Aktiviert die interne Benutzeroberfläche des Installers.                                 |
-| [**Msiseeltexternalui**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia)             | Aktiviert einen externen Benutzerschnittstellen Handler, der Nachrichten in einem Zeichen folgen Format empfängt. |
-| [**Msiseeltexternaluirecord**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) | Aktiviert einen externen Benutzerschnittstellen Handler, der Nachrichten in einem Daten Satz Format empfängt. |
-| [**Msienablelog**](/windows/desktop/api/Msi/nf-msi-msienableloga)                     | Legt den Protokollmodus für alle Installationen im aufrufenden Prozess fest.                       |
+| [**MsiSetInternalUI**](/windows/desktop/api/Msi/nf-msi-msisetinternalui)             | Aktiviert die interne Benutzeroberfläche des Installationsprogramms.                                 |
+| [**MsiSetExternalUI**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia)             | Aktiviert einen externen Benutzeroberflächenhandler, der Nachrichten in einem Zeichenfolgenformat empfängt. |
+| [**MsiSetExternalUIRecord**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) | Aktiviert einen externen Benutzeroberflächenhandler, der Nachrichten in einem Datensatzformat empfängt. |
+| [**MsiEnableLog**](/windows/desktop/api/Msi/nf-msi-msienableloga)                     | Legt den Protokollmodus für alle Installationen im aufrufenden Prozess fest.                       |
 
 
 
  
 
-## <a name="handle-management-functions"></a>Verwalten von Verwaltungsfunktionen
+## <a name="handle-management-functions"></a>Behandeln von Verwaltungsfunktionen
 
 
 
-| Name                                             | BESCHREIBUNG                                                   |
+| Name                                             | Beschreibung                                                   |
 |--------------------------------------------------|---------------------------------------------------------------|
-| [**Msiclosehandle**](/windows/desktop/api/Msi/nf-msi-msiclosehandle)         | Schließt ein geöffnetes Installations handle.                           |
-| [**Msicloseallhandles**](/windows/desktop/api/Msi/nf-msi-msicloseallhandles) | Schließt alle geöffneten Installations Handles. Verwenden Sie nicht für Cleanup. |
+| [**MsiCloseHandle**](/windows/desktop/api/Msi/nf-msi-msiclosehandle)         | Schließt ein geöffnetes Installationshandle.                           |
+| [**MsiCloseAllHandles**](/windows/desktop/api/Msi/nf-msi-msicloseallhandles) | Schließt alle geöffneten Installationshandles. Verwenden Sie nicht für die Bereinigung. |
 
 
 
  
 
-## <a name="installation-and-configuration-functions"></a>Installations-und Konfigurationsfunktionen
+## <a name="installation-and-configuration-functions"></a>Installations- und Konfigurationsfunktionen
 
 
 
-| Name                                                                     | BESCHREIBUNG                                                                                                                                                                                                                  |
+| Name                                                                     | Beschreibung                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Msiankündigen-Produkt**](/windows/desktop/api/Msi/nf-msi-msiadvertiseproducta)                       | Gibt ein Produkt an.                                                                                                                                                                                                        |
-| [**Msiankündigen-productex**](/windows/desktop/api/Msi/nf-msi-msiadvertiseproductexa)                   | Gibt ein Produkt an.                                                                                                                                                                                                        |
-| [**Msiwerbesescript**](/windows/desktop/api/Msi/nf-msi-msiadvertisescripta)                         | Kopiert eine Ankündigungs Skriptdatei an angegebene Speicherorte.                                                                                                                                                                    |
-| [**Msiinstallproduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta)                           | Installiert oder entfernt eine Anwendung oder Anwendungssuite.                                                                                                                                                                     |
-| [**Msikonfigurireproduct**](/windows/desktop/api/Msi/nf-msi-msiconfigureproducta)                       | Installiert oder entfernt eine Anwendung oder Anwendungssuite.                                                                                                                                                                     |
-| [**Msikonfigurireproduktions-ctex**](/windows/desktop/api/Msi/nf-msi-msiconfigureproductexa)                   | Installiert oder entfernt eine Anwendung oder Anwendungssuite. Es kann eine Produkt Befehlszeile angegeben werden.                                                                                                                            |
-| [**Msireinstallproduct**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta)                       | Installiert oder repariert eine Installation.                                                                                                                                                                                       |
-| [**Msikonfigurierfeature**](/windows/desktop/api/Msi/nf-msi-msiconfigurefeaturea)                       | Konfiguriert den installierten Zustand einer Funktion.                                                                                                                                                                                 |
-| [**Msireinstallfeature**](/windows/desktop/api/Msi/nf-msi-msireinstallfeaturea)                       | Überprüft oder repariert Features.                                                                                                                                                                                               |
-| [**Msiinstallmissingcomponent**](/windows/desktop/api/Msi/nf-msi-msiinstallmissingcomponenta)         | Installiert fehlende Komponenten.                                                                                                                                                                                                 |
-| [**Msiinstallmissingfile**](/windows/desktop/api/Msi/nf-msi-msiinstallmissingfilea)                   | Installiert fehlende Dateien.                                                                                                                                                                                                      |
-| [**Msinotif ysidchange**](/windows/desktop/api/Msi/nf-msi-msinotifysidchangea)                         | Benachrichtigt und aktualisiert die Windows Installer internen Informationen mit Änderungen an Benutzer-SIDs. Verfügbar ab Windows Installer 3,1.                                                                                   |
-| [**Msiprocesswerbung**](/windows/desktop/api/Msi/nf-msi-msiprocessadvertisescripta)           | Verarbeitet eine Ankündigungs Skriptdatei an angegebenen Speicherorten.                                                                                                                                                                 |
-| [**Msisourcelistaddsource**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourcea)                 | Fügt die Quellen eines Patches oder Produkts in einem angegebenen Kontext hinzu oder ordnet sie neu zu.                                                                                                                                                   |
-| [**Msisourcelistaddsourceex**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa)             | Fügt die Quellen eines Patches oder Produkts in einem angegebenen Kontext hinzu oder ordnet sie neu zu. Erstellt eine Quell Liste für einen Patch, der in einem angegebenen Kontext nicht vorhanden ist. Verfügbar in Windows Installer 3,0.                                |
-| [**Msisourcelistclearsource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)             | Entfernt eine vorhandene Quelle für ein Produkt oder einen Patch in einem angegebenen Kontext. Verfügbar in Windows Installer 3,0.                                                                                                               |
-| [**Msisourcelistclearall**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearalla)                   | Entfernt alle vorhandenen Quellen eines bestimmten Quell Typs für eine angegebene Produkt Instanz.                                                                                                                                 |
-| [**Msisourcelistclearallex**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearallexa)               | Entfernt alle vorhandenen Quellen eines bestimmten Quell Typs für eine angegebene Produkt Instanz. Verfügbar in Windows Installer 3,0.                                                                                            |
-| [**Msisourcelistforceresolution**](/windows/desktop/api/Msi/nf-msi-msisourcelistforceresolutiona)     | Entfernt die Registrierung der aktuellen Quelle des Produkts oder Patches, die als die Eigenschaft "LastUsedSource" registriert ist. Diese Funktion hat keine Auswirkung auf die registrierte Quell Liste.                                      |
-| [**Msisourcelistforceresolutionex**](/windows/desktop/api/Msi/nf-msi-msisourcelistforceresolutionexa) | Entfernt die Registrierung der aktuellen Quelle des Produkts oder Patches, die als die Eigenschaft "LastUsedSource" registriert ist. Diese Funktion hat keine Auswirkung auf die registrierte Quell Liste. Verfügbar in Windows Installer 3,0. |
-| [**Msisourcelistgetinfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistgetinfoa)                     | Ruft Informationen zur Quell Liste für ein Produkt oder einen Patch in einem bestimmten Kontext ab.                                                                                                                                    |
-| [**Msisourcelisteintinfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistsetinfoa)                     | Legt die zuletzt verwendete Quelle für ein Produkt oder einen Patch in einem angegebenen Kontext fest. Verfügbar in Windows Installer 3,0.                                                                                                       |
-| [**Msisourcelistenumschlag mediadisks**](/windows/desktop/api/Msi/nf-msi-msisourcelistenummediadisksa)       | Listet die Datenträger auf, die für die Medienquelle für einen Patch oder ein Produkt registriert sind. Verfügbar in Windows Installer 3,0.                                                                                                    |
-| [**Msisourcelistaddmediadisk**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddmediadiska)           | Hiermit wird ein Datenträger der Medienquelle eines registrierten Produkts oder Patches hinzugefügt oder aktualisiert. Verfügbar in Windows Installer 3,0.                                                                                                            |
-| [**Msisourcelistclearmediadisk**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearmediadiska)      | Entfernt einen vorhandenen registrierten Datenträger unter der Medienquelle für ein Produkt oder einen Patch in einem bestimmten Kontext. Verfügbar in Windows Installer 3,0.                                                                                |
-| [**Msisourcelistenumschlag Quellen**](/windows/desktop/api/Msi/nf-msi-msisourcelistenumsourcesa)             | Listet die Quellen in der Quell Liste eines angegebenen Patches oder Produkts auf. Verfügbar in Windows Installer 3,0.                                                                                                              |
+| [**MsiAdvertiseProduct**](/windows/desktop/api/Msi/nf-msi-msiadvertiseproducta)                       | Kündigt ein Produkt an.                                                                                                                                                                                                        |
+| [**MsiAdvertiseProductEx**](/windows/desktop/api/Msi/nf-msi-msiadvertiseproductexa)                   | Kündigt ein Produkt an.                                                                                                                                                                                                        |
+| [**MsiAdvertiseScript**](/windows/desktop/api/Msi/nf-msi-msiadvertisescripta)                         | Kopiert eine Ankündigen-Skriptdatei an angegebene Speicherorte.                                                                                                                                                                    |
+| [**MsiInstallProduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta)                           | Installiert oder entfernt eine Anwendung oder Anwendungssuite.                                                                                                                                                                     |
+| [**MsiConfigureProduct**](/windows/desktop/api/Msi/nf-msi-msiconfigureproducta)                       | Installiert oder entfernt eine Anwendung oder Anwendungssuite.                                                                                                                                                                     |
+| [**MsiConfigureProductEx**](/windows/desktop/api/Msi/nf-msi-msiconfigureproductexa)                   | Installiert oder entfernt eine Anwendung oder Anwendungssuite. Eine Produktbefehlszeile kann angegeben werden.                                                                                                                            |
+| [**MsiReinstallProduct**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta)                       | Installiert eine Installation neu oder repariert sie.                                                                                                                                                                                       |
+| [**MsiConfigureFeature**](/windows/desktop/api/Msi/nf-msi-msiconfigurefeaturea)                       | Konfiguriert den installierten Zustand eines Features.                                                                                                                                                                                 |
+| [**MsiReinstallFeature**](/windows/desktop/api/Msi/nf-msi-msireinstallfeaturea)                       | Überprüft oder repariert Features.                                                                                                                                                                                               |
+| [**MsiInstallMissingComponent**](/windows/desktop/api/Msi/nf-msi-msiinstallmissingcomponenta)         | Installiert fehlende Komponenten.                                                                                                                                                                                                 |
+| [**MsiInstallMissingFile**](/windows/desktop/api/Msi/nf-msi-msiinstallmissingfilea)                   | Installiert fehlende Dateien.                                                                                                                                                                                                      |
+| [**MsiNotifySidChange**](/windows/desktop/api/Msi/nf-msi-msinotifysidchangea)                         | Benachrichtigt und aktualisiert die internen Informationen des Windows Installers mit Änderungen an Benutzer-SIDs. Verfügbar ab Windows Installer 3.1.                                                                                   |
+| [**MsiProcessAdvertiseScript**](/windows/desktop/api/Msi/nf-msi-msiprocessadvertisescripta)           | Verarbeitet eine Ankündigen-Skriptdatei an angegebenen Speicherorten.                                                                                                                                                                 |
+| [**MsiSourceListAddSource**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourcea)                 | Fügt die Quellen eines Patches oder Produkts in einem angegebenen Kontext hinzu oder ordnet sie neu an.                                                                                                                                                   |
+| [**MsiSourceListAddSourceEx**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa)             | Fügt die Quellen eines Patches oder Produkts in einem angegebenen Kontext hinzu oder ordnet sie neu an. Erstellt eine Quellliste für einen Patch, der in einem angegebenen Kontext nicht vorhanden ist. Verfügbar in Windows Installer 3.0.                                |
+| [**MsiSourceListClearSource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)             | Entfernt eine vorhandene Quelle für ein Produkt oder einen Patch in einem angegebenen Kontext. Verfügbar in Windows Installer 3.0.                                                                                                               |
+| [**MsiSourceListClearAll**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearalla)                   | Entfernt alle vorhandenen Quellen eines bestimmten Quelltyps für eine angegebene Produktinstanz.                                                                                                                                 |
+| [**MsiSourceListClearAllEx**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearallexa)               | Entfernt alle vorhandenen Quellen eines bestimmten Quelltyps für eine angegebene Produktinstanz. Verfügbar in Windows Installer 3.0.                                                                                            |
+| [**MsiSourceListForceResolution**](/windows/desktop/api/Msi/nf-msi-msisourcelistforceresolutiona)     | Entfernt die Registrierung der aktuellen Quelle des Produkts oder Patches, die als Eigenschaft "LastUsedSource" registriert ist. Diese Funktion wirkt sich nicht auf die Liste der registrierten Quellen aus.                                      |
+| [**MsiSourceListForceResolutionEx**](/windows/desktop/api/Msi/nf-msi-msisourcelistforceresolutionexa) | Entfernt die Registrierung der aktuellen Quelle des Produkts oder Patches, die als Eigenschaft "LastUsedSource" registriert ist. Diese Funktion wirkt sich nicht auf die Liste der registrierten Quellen aus. Verfügbar in Windows Installer 3.0. |
+| [**MsiSourceListGetInfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistgetinfoa)                     | Ruft Informationen zur Quellliste für ein Produkt oder einen Patch in einem bestimmten Kontext ab.                                                                                                                                    |
+| [**MsiSourceListSetInfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistsetinfoa)                     | Legt die zuletzt verwendete Quelle für ein Produkt oder patchen in einem angegebenen Kontext fest. Verfügbar in Windows Installer 3.0.                                                                                                       |
+| [**MsiSourceListEnumMediaDisks**](/windows/desktop/api/Msi/nf-msi-msisourcelistenummediadisksa)       | Listet die Datenträger auf, die für die Medienquelle für einen Patch oder ein Produkt registriert sind. Verfügbar in Windows Installer 3.0.                                                                                                    |
+| [**MsiSourceListAddMediaDisk**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddmediadiska)           | Fügt einen Datenträger der Medienquelle eines registrierten Produkts oder Patches hinzu oder aktualisiert sie. Verfügbar in Windows Installer 3.0.                                                                                                            |
+| [**MsiSourceListClearMediaDisk**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearmediadiska)      | Entfernt einen vorhandenen registrierten Datenträger unter der Medienquelle für ein Produkt oder patchen in einem bestimmten Kontext. Verfügbar in Windows Installer 3.0.                                                                                |
+| [**MsiSourceListEnumSources**](/windows/desktop/api/Msi/nf-msi-msisourcelistenumsourcesa)             | Listet die Quellen in der Quellliste eines angegebenen Patches oder Produkts auf. Verfügbar in Windows Installer 3.0.                                                                                                              |
 
 
 
  
 
-## <a name="component-specific-functions"></a>Component-Specific Funktionen
+## <a name="component-specific-functions"></a>Component-Specific Functions
 
 
 
-| Name                                                                     | BESCHREIBUNG                                                                                                                                                                                                                   |
+| Name                                                                     | Beschreibung                                                                                                                                                                                                                   |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Msiproviabassembly**](/windows/desktop/api/Msi/nf-msi-msiprovideassemblya)                         | Installiert den vollständigen Komponenten Pfad für eine Assembly und gibt diesen zurück.                                                                                                                                                                 |
-| [**MsiProvideComponent**](/windows/desktop/api/Msi/nf-msi-msiprovidecomponenta)                       | Installiert den vollständigen Komponenten Pfad einer Komponente und gibt diesen zurück.                                                                                                                                                                  |
-| [**Msiprovidequalifiedcomponent**](/windows/desktop/api/Msi/nf-msi-msiprovidequalifiedcomponenta)     | Installiert den vollständigen Komponenten Pfad einer qualifizierten Komponente und gibt diesen zurück.                                                                                                                                                        |
-| [**Msiprovide qualifiedcomponumtex**](/windows/desktop/api/Msi/nf-msi-msiprovidequalifiedcomponentexa) | Installiert den vollständigen Komponenten Pfad einer qualifizierten Komponente, die von einem Produkt veröffentlicht wird, und gibt diesen zurück.                                                                                                                         |
-| [**MsiGetComponentPath**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpatha)                       | Gibt den vollständigen Pfad oder den Registrierungsschlüssel für eine installierte Komponente zurück.                                                                                                                                                              |
-| [**Msigetcomponentpathex**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpathexa)                   | Gibt den vollständigen Pfad oder den Registrierungsschlüssel für eine installierte Komponente über Benutzerkonten und Installations Kontext hinweg zurück. **[Windows Installer 4,5 und früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt.<br/> |
-| [**Msilocatecomponent**](/windows/desktop/api/Msi/nf-msi-msilocatecomponenta)                         | Gibt den vollständigen Pfad zu einer installierten Komponente ohne Produktcode zurück.                                                                                                                                                       |
-| [**Msiquerycomponentstate**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)                 | Gibt den installierten Zustand für eine Komponente zurück. Kann Komponenten einer Instanz eines Produkts Abfragen, die unter Benutzerkonten mit Ausnahme des aktuellen Benutzers installiert sind. Verfügbar in Windows Installer 3,0 oder höher.                        |
+| [**MsiProvideAssembly**](/windows/desktop/api/Msi/nf-msi-msiprovideassemblya)                         | Installiert und gibt den vollständigen Komponentenpfad für eine Assembly zurück.                                                                                                                                                                 |
+| [**MsiProvideComponent**](/windows/desktop/api/Msi/nf-msi-msiprovidecomponenta)                       | Installiert den vollständigen Komponentenpfad einer Komponente und gibt diesen zurück.                                                                                                                                                                  |
+| [**MsiProvideQualifiedComponent**](/windows/desktop/api/Msi/nf-msi-msiprovidequalifiedcomponenta)     | Installiert den vollständigen Komponentenpfad einer qualifizierten Komponente und gibt diesen zurück.                                                                                                                                                        |
+| [**MsiProvideQualifiedComponentEx**](/windows/desktop/api/Msi/nf-msi-msiprovidequalifiedcomponentexa) | Installiert den vollständigen Komponentenpfad einer qualifizierten Komponente, die von einem Produkt veröffentlicht wird, und gibt diesen zurück.                                                                                                                         |
+| [**MsiGetComponentPath**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpatha)                       | Gibt den vollständigen Pfad oder Registrierungsschlüssel an eine installierte Komponente zurück.                                                                                                                                                              |
+| [**MsiGetComponentPathEx**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpathexa)                   | Gibt den vollständigen Pfad oder Registrierungsschlüssel für eine installierte Komponente über Benutzerkonten und Installationskontext hinweg zurück. **[Windows Installer 4.5 und früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt.<br/> |
+| [**MsiLocateComponent**](/windows/desktop/api/Msi/nf-msi-msilocatecomponenta)                         | Gibt den vollständigen Pfad zu einer installierten Komponente ohne Produktcode zurück.                                                                                                                                                       |
+| [**MsiQueryComponentState**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)                 | Gibt den installierten Zustand für eine Komponente zurück. Kann Komponenten einer Instanz eines Produkts abfragen, das unter anderen Benutzerkonten als dem aktuellen Benutzer installiert ist. Verfügbar in Windows Installer 3.0 oder höher.                        |
 
 
 
  
 
-## <a name="application-only-functions"></a>Application-Only Funktionen
+## <a name="application-only-functions"></a>Application-Only Functions
 
 
 
-| Name                                             | BESCHREIBUNG                                                            |
+| Name                                             | Beschreibung                                                            |
 |--------------------------------------------------|------------------------------------------------------------------------|
-| [**Msicollectuserinfo**](/windows/desktop/api/Msi/nf-msi-msicollectuserinfoa) | Speichert Benutzerinformationen von einem Installations-Assistenten.                   |
-| [**Msiusefeature**](/windows/desktop/api/Msi/nf-msi-msiusefeaturea)           | Erhöht die Verwendungs Anzahl für eine Funktion und gibt den Installationsstatus an. |
-| [**Msiusefeatureex**](/windows/desktop/api/Msi/nf-msi-msiusefeatureexa)       | Erhöht die Verwendungs Anzahl für eine Funktion und gibt den Installationsstatus an. |
-| [**Msigetproductcode**](/windows/desktop/api/Msi/nf-msi-msigetproductcodea)   | Gibt den Produktcode mithilfe des Komponenten Codes zurück.                         |
+| [**MsiCollectUserInfo**](/windows/desktop/api/Msi/nf-msi-msicollectuserinfoa) | Speichert Benutzerinformationen aus einem Installations-Assistenten.                   |
+| [**MsiUseFeature**](/windows/desktop/api/Msi/nf-msi-msiusefeaturea)           | Erhöht die Nutzungsanzahl für ein Feature und gibt den Installationsstatus an. |
+| [**MsiUseFeatureEx**](/windows/desktop/api/Msi/nf-msi-msiusefeatureexa)       | Erhöht die Nutzungsanzahl für ein Feature und gibt den Installationsstatus an. |
+| [**MsiGetProductCode**](/windows/desktop/api/Msi/nf-msi-msigetproductcodea)   | Gibt den Produktcode mithilfe des Komponentencodes zurück.                         |
 
 
 
  
 
-## <a name="system-status-functions"></a>System Status Funktionen
+## <a name="system-status-functions"></a>Systemstatusfunktionen
 
 
 
-| Name                                                             | BESCHREIBUNG                                                                                                                                                                                                                       |
+| Name                                                             | Beschreibung                                                                                                                                                                                                                       |
 |------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Msienumschlag Produkte**](/windows/desktop/api/Msi/nf-msi-msienumproductsa)                       | Listet angekündigte Produkte auf.                                                                                                                                                                                                   |
-| [**Msienumschlag**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa)                   | Listet alle Instanzen von angekündigten oder installierten Produkten in einem angegebenen Kontext auf. Verfügbar in Windows Installer 3,0 oder höher.                                                                                    |
-| [**Msienumrelatedproducts**](/windows/desktop/api/Msi/nf-msi-msienumrelatedproductsa)         | Listet die aktuell installierten Produkte auf, die über einen angegebenen UpgradeCode verfügen.                                                                                                                                                          |
-| [**Msienumschlag-Features**](/windows/desktop/api/Msi/nf-msi-msienumfeaturesa)                       | Listet veröffentlichte Funktionen auf.                                                                                                                                                                                                    |
-| [**Msienumschlag Components**](/windows/desktop/api/Msi/nf-msi-msienumcomponentsa)                   | Listet die installierten Komponenten auf.                                                                                                                                                                                              |
-| [**Msienumschlag**](/windows/desktop/api/Msi/nf-msi-msienumcomponentsexa)               | Listet die installierten Komponenten über Benutzerkonten und den Installations Kontext auf. **[Windows Installer 4,5 und früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt.<br/>                                 |
-| [**Msienumschlag Clients**](/windows/desktop/api/Msi/nf-msi-msienumclientsa)                         | Listet die Clients einer installierten Komponente auf.                                                                                                                                                                                 |
-| [**Msienumschlag clientsex**](/windows/desktop/api/Msi/nf-msi-msienumclientsexa)                     | Listet die Clients einer installierten Komponente über Benutzerkonten und den Installations Kontext auf. **[Windows Installer 4,5 und früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt.<br/>                    |
-| [**Msienumschlag componentqualifizierer**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa) | Listet die angekündigten Qualifizierer für eine Komponente auf.                                                                                                                                                                             |
-| [**MsiQueryFeatureState**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestatea)             | Gibt den installierten Zustand einer Funktion zurück.                                                                                                                                                                                         |
-| [**Msiqueryfeaturestateex**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)         | Gibt den installierten Zustand für eine Produkt Funktion zurück. Kann Funktionen einer Instanz eines Produkts Abfragen, die unter Benutzerkonten mit Ausnahme des aktuellen Benutzers installiert ist. Verfügbar in Windows Installer 3,0 oder höher.                        |
-| [**Msiqueryproductstate**](/windows/desktop/api/Msi/nf-msi-msiqueryproductstatea)             | Gibt den installierten Zustand für eine Anwendung oder Anwendungs Sammlung zurück.                                                                                                                                                              |
-| [**Msigetfeatureusage**](/windows/desktop/api/Msi/nf-msi-msigetfeatureusagea)                 | Gibt nutzungsmetriken für eine Funktion zurück.                                                                                                                                                                                              |
-| [**Msigetproductinfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)                   | Gibt Produktinformationen für veröffentlichte und installierte Produkte zurück.                                                                                                                                                                 |
-| [**Msigetproductinfoex**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoexa)               | Gibt Produktinformationen für angekündigte und installierte Produkte zurück. Kann Informationen zu einer Instanz eines Produkts abrufen, die unter einem anderen Benutzerkonto als dem aktuellen Benutzer installiert ist. Verfügbar in Windows Installer 3,0 oder höher. |
-| [**Msigetuserinfo**](/windows/desktop/api/Msi/nf-msi-msigetuserinfoa)                         | Gibt registrierte Benutzerinformationen für ein installiertes Produkt zurück.                                                                                                                                                                     |
+| [**MsiEnumProducts**](/windows/desktop/api/Msi/nf-msi-msienumproductsa)                       | Aufzählt angekündigte Produkte.                                                                                                                                                                                                   |
+| [**MsiEnumProductsEx**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa)                   | Durchzählt alle Instanzen von angekündigten oder installierten Produkten in einem angegebenen Kontext. Verfügbar in Windows Installer 3.0 oder höher.                                                                                    |
+| [**MsiEnumRelatedProducts**](/windows/desktop/api/Msi/nf-msi-msienumrelatedproductsa)         | Hier werden derzeit installierte Produkte mit einem angegebenen Upgradecode aufzählt.                                                                                                                                                          |
+| [**MsiEnumFeatures**](/windows/desktop/api/Msi/nf-msi-msienumfeaturesa)                       | Enumeriert veröffentlichte Features.                                                                                                                                                                                                    |
+| [**MsiEnumComponents**](/windows/desktop/api/Msi/nf-msi-msienumcomponentsa)                   | Enumeriert die installierten Komponenten.                                                                                                                                                                                              |
+| [**MsiEnumComponentsEx**](/windows/desktop/api/Msi/nf-msi-msienumcomponentsexa)               | Enumeriert die installierten Komponenten über Benutzerkonten und Installationskontext hinweg. **[Windows Installer 4.5 und früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt.<br/>                                 |
+| [**MsiEnumClients**](/windows/desktop/api/Msi/nf-msi-msienumclientsa)                         | Enumeriert die Clients einer installierten Komponente.                                                                                                                                                                                 |
+| [**MsiEnumClientsEx**](/windows/desktop/api/Msi/nf-msi-msienumclientsexa)                     | Enumeriert die Clients einer installierten Komponente über Benutzerkonten und Installationskontext hinweg. **[Windows Installer 4.5 und früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt.<br/>                    |
+| [**MsiEnumComponentQualifiers**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa) | Enumeriert die angekündigten Qualifizierer für eine Komponente.                                                                                                                                                                             |
+| [**MsiQueryFeatureState**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestatea)             | Gibt den installierten Zustand eines Features zurück.                                                                                                                                                                                         |
+| [**MsiQueryFeatureStateEx**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)         | Gibt den installierten Zustand für ein Produktfeature zurück. Kann Funktionen einer Instanz eines Produkts abfragen, das unter anderen Benutzerkonten als dem aktuellen Benutzer installiert ist. Verfügbar in Windows Installer 3.0 oder höher.                        |
+| [**MsiQueryProductState**](/windows/desktop/api/Msi/nf-msi-msiqueryproductstatea)             | Gibt den installierten Zustand für eine Anwendung oder Anwendungssammlung zurück.                                                                                                                                                              |
+| [**MsiGetFeatureUsage**](/windows/desktop/api/Msi/nf-msi-msigetfeatureusagea)                 | Gibt Nutzungsmetriken für ein Feature zurück.                                                                                                                                                                                              |
+| [**MsiGetProductInfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)                   | Gibt Produktinformationen für veröffentlichte und installierte Produkte zurück.                                                                                                                                                                 |
+| [**MsiGetProductInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoexa)               | Gibt Produktinformationen für angekündigte und installierte Produkte zurück. Kann Informationen zu einer Instanz eines Produkts abrufen, das unter einem anderen Benutzerkonto als dem aktuellen Benutzer installiert ist. Verfügbar in Windows Installer 3.0 oder höher. |
+| [**MsiGetUserInfo**](/windows/desktop/api/Msi/nf-msi-msigetuserinfoa)                         | Gibt registrierte Benutzerinformationen für ein installiertes Produkt zurück.                                                                                                                                                                     |
 
 
 
  
 
-## <a name="product-query-functions"></a>Product Query-Funktionen
+## <a name="product-query-functions"></a>Produktabfragefunktionen
 
 
 
-| Name                                                               | BESCHREIBUNG                                                                            |
+| Name                                                               | Beschreibung                                                                            |
 |--------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | [**MsiOpenProduct**](/windows/desktop/api/Msi/nf-msi-msiopenproducta)                           | Öffnet ein Produkt, das mit den Funktionen verwendet werden soll, die auf die Datenbank zugreifen.                    |
-| [**Msiopenpackage**](/windows/desktop/api/Msi/nf-msi-msiopenpackagea)                           | Öffnet ein Paket für die Verwendung mit den Funktionen, die auf die Datenbank zugreifen.                    |
-| [**Msiopenpackageex**](/windows/desktop/api/Msi/nf-msi-msiopenpackageexa)                       | Öffnet ein Paket für die Verwendung mit den Funktionen, die auf die Datenbank zugreifen.                    |
-| [**Msiisproductelevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)               | Überprüft, ob das Produkt mit erhöhten Rechten installiert ist.                      |
-| [**Msigetproductinfofromscript**](/windows/desktop/api/Msi/nf-msi-msigetproductinfofromscripta) | Gibt Produktinformationen für eine Installationsskript Datei zurück.                              |
-| [**Msigetproductproperty**](/windows/desktop/api/Msi/nf-msi-msigetproductpropertya)             | Ruft Eigenschaften in der Produktdatenbank ab.                                          |
-| [**Msigetshortcuttarget**](/windows/desktop/api/Msi/nf-msi-msigetshortcuttargeta)               | Untersucht eine Verknüpfung und gibt, sofern verfügbar, das Produkt, den Funktionsnamen und die Komponente zurück. |
-| [**Msigetfeatureinfo**](/windows/desktop/api/Msi/nf-msi-msigetfeatureinfoa)                     | Gibt beschreibende Informationen zu einer Funktion zurück.                                         |
-| [**Msiverifypackage**](/windows/desktop/api/Msi/nf-msi-msiverifypackagea)                       | Überprüft, ob es sich bei der angegebenen Datei um ein Installationspaket handelt.                             |
+| [**MsiOpenPackage**](/windows/desktop/api/Msi/nf-msi-msiopenpackagea)                           | Öffnet ein Paket, das mit den Funktionen verwendet werden soll, die auf die Datenbank zugreifen.                    |
+| [**MsiOpenPackageEx**](/windows/desktop/api/Msi/nf-msi-msiopenpackageexa)                       | Öffnet ein Paket, das mit den Funktionen verwendet werden soll, die auf die Datenbank zugreifen.                    |
+| [**MsiIsProductElevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)               | Überprüft, ob das Produkt mit erhöhten Rechten installiert ist.                      |
+| [**MsiGetProductInfoFromScript**](/windows/desktop/api/Msi/nf-msi-msigetproductinfofromscripta) | Gibt Produktinformationen für eine Installationsskriptdatei zurück.                              |
+| [**MsiGetProductProperty**](/windows/desktop/api/Msi/nf-msi-msigetproductpropertya)             | Ruft Eigenschaften in der Produktdatenbank ab.                                          |
+| [**MsiGetShortcutTarget**](/windows/desktop/api/Msi/nf-msi-msigetshortcuttargeta)               | Überprüft eine Verknüpfung und gibt das Produkt, den Featurenamen und die Komponente zurück, falls verfügbar. |
+| [**MsiGetFeatureInfo**](/windows/desktop/api/Msi/nf-msi-msigetfeatureinfoa)                     | Gibt beschreibende Informationen für ein Feature zurück.                                         |
+| [**MsiVerifyPackage**](/windows/desktop/api/Msi/nf-msi-msiverifypackagea)                       | Überprüft, ob eine angegebene Datei ein Installationspaket ist.                             |
 
 
 
  
 
-## <a name="patching-functions"></a>Patching von Funktionen
+## <a name="patching-functions"></a>Patchen von Funktionen
 
 
 
-| Name                                                                   | BESCHREIBUNG                                                                                                                                                        |
+| Name                                                                   | Beschreibung                                                                                                                                                        |
 |------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Msiapplypatch**](/windows/desktop/api/Msi/nf-msi-msiapplypatcha)                                 | Ruft eine Installation auf und wendet ein Patchpaket an.                                                                                                               |
-| [**Msienumschlag**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddmediadiska)                    | Gibt die GUID für jeden Patch, der auf ein Produkt angewendet wird, und eine Liste der Transformationen aus jedem Patch zurück, die für das Produkt gelten.                                  |
-| [**Msigetpatchinfo**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoa)                             | Gibt Informationen zu einem Patch zurück.                                                                                                                                 |
-| [**Msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)                           | Deinstalliert einen Patch von einem Produkt. Verfügbar in Windows Installer 3,0.                                                                                             |
-| [**Msideterminepatchsequence**](/windows/desktop/api/Msi/nf-msi-msideterminepatchsequencea)         | Bestimmt die beste Anwendungs Sequenz für eine Gruppe von Patches und Produkten. Verfügbar in Windows Installer 3,0.                                                     |
-| [**Msiapplymultiplepatches**](/windows/desktop/api/Msi/nf-msi-msiapplymultiplepatchesa)             | Wendet ein oder mehrere Patches auf Produkte an. Verfügbar in Windows Installer 3,0.                                                                                       |
-| [**Msienum patchesex**](/windows/desktop/api/Msi/nf-msi-msienumpatchesexa)                           | Listet alle Patches auf, die für ein Produkt in einem bestimmten Kontext oder in allen Kontexten angewendet wurden. Verfügbar in Windows Installer 3,0.                                   |
-| [**Msigetpatchfilelist**](/windows/desktop/api/Msi/nf-msi-msigetpatchfilelista)                     | Wenn eine Liste von MSP-Dateien bereitgestellt wird, ruft diese Funktion die Liste der Dateien ab, die von den Patches für die Targe aktualisiert werden können. Verfügbar in Windows Installer 4,0. |
-| [**Msigetpatchinfoex**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa)                         | Fragt Informationen über die Anwendung eines angegebenen Patches für ein bestimmtes Produkt ab. Verfügbar in Windows Installer 3,0.                                     |
-| [**Msiextractpatchxmldata**](/windows/desktop/api/Msi/nf-msi-msiextractpatchxmldataa)               | Extrahiert Informationen aus einem Patch. Verfügbar in Windows Installer 3,0.                                                                                             |
-| [**Msidetermineapplicablepatches**](/windows/desktop/api/Msi/nf-msi-msidetermineapplicablepatchesa) | Bestimmt den besten Satz von Patches, die zum Aktualisieren eines Produkts oder einer Gruppe von Produkten erforderlich sind. Verfügbar in Windows Installer 3,0.                                            |
+| [**MsiApplyPatch**](/windows/desktop/api/Msi/nf-msi-msiapplypatcha)                                 | Ruft eine Installation auf und wendet ein Patchpaket an.                                                                                                               |
+| [**MsiEnumPatches**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddmediadiska)                    | Gibt die GUID für jeden Patch zurück, der auf ein Produkt angewendet wird, sowie eine Liste der Transformationen aus jedem Patch, der für das Produkt gilt.                                  |
+| [**MsiGetPatchInfo**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoa)                             | Gibt Informationen zu einem Patch zurück.                                                                                                                                 |
+| [**MsiRemovePatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)                           | Deinstalliert einen Patch aus einem Produkt. Verfügbar in Windows Installer 3.0.                                                                                             |
+| [**MsiDeterminePatchSequence**](/windows/desktop/api/Msi/nf-msi-msideterminepatchsequencea)         | Bestimmt die beste Anwendungssequenz für eine Reihe von Patches und Produkten. Verfügbar in Windows Installer 3.0.                                                     |
+| [**MsiApplyMultiplePatches**](/windows/desktop/api/Msi/nf-msi-msiapplymultiplepatchesa)             | Wendet ein oder mehrere Patches auf Produkte an. Verfügbar in Windows Installer 3.0.                                                                                       |
+| [**MsiEnumPatchesEx**](/windows/desktop/api/Msi/nf-msi-msienumpatchesexa)                           | Enumeriert alle Patches, die für ein Produkt in einem bestimmten Kontext oder in allen Kontexten angewendet werden. Verfügbar in Windows Installer 3.0.                                   |
+| [**MsiGetPatchFileList**](/windows/desktop/api/Msi/nf-msi-msigetpatchfilelista)                     | Wenn eine Liste von MSP-Dateien bereitgestellt wird, ruft diese Funktion die Liste der Dateien ab, die durch die Patches für den Targe aktualisiert werden können. Verfügbar in Windows Installer 4.0. |
+| [**MsiGetPatchInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa)                         | Fragt Informationen zur Anwendung eines angegebenen Patches auf ein angegebenes Produkt ab. Verfügbar in Windows Installer 3.0.                                     |
+| [**MsiExtractPatchXMLData**](/windows/desktop/api/Msi/nf-msi-msiextractpatchxmldataa)               | Extrahiert Informationen aus einem Patch. Verfügbar in Windows Installer 3.0.                                                                                             |
+| [**MsiDetermineApplicablePatches**](/windows/desktop/api/Msi/nf-msi-msidetermineapplicablepatchesa) | Bestimmt den besten Satz von Patches, die zum Aktualisieren eines Produkts oder einer Gruppe von Produkten erforderlich sind. Verfügbar in Windows Installer 3.0.                                            |
 
 
 
  
 
-## <a name="file-query-functions"></a>Datei Abfragefunktionen
+## <a name="file-query-functions"></a>Dateiabfragefunktionen
 
 
 
-| Name                                                                     | BESCHREIBUNG                                                                                                 |
+| Name                                                                     | Beschreibung                                                                                                 |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [**Msigetflehash**](/windows/desktop/api/Msi/nf-msi-msigetfilehasha)                                 | Nimmt den Pfad zu einer Datei an und gibt einen 128-Bit-Hash dieser Datei zurück.                                           |
-| [**Msigetfilesignatureinformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa) | Nimmt den Pfad zu einer Datei an, die digital signiert wurde, und gibt das Signatur Geber Zertifikat und den Hash der Datei zurück. |
-| [**Msigetfileversion**](/windows/desktop/api/Msi/nf-msi-msigetfileversiona)                           | Gibt die Versions Zeichenfolge und die Zeichenfolge zurück.                                                             |
+| [**MsiGetFileHash**](/windows/desktop/api/Msi/nf-msi-msigetfilehasha)                                 | Verwendet den Pfad zu einer Datei und gibt einen 128-Bit-Hash dieser Datei zurück.                                           |
+| [**MsiGetFileSignatureInformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa) | Verwendet den Pfad zu einer Datei, die digital signiert wurde, und gibt das Signaturzertifikat und den Hash der Datei zurück. |
+| [**MsiGetFileVersion**](/windows/desktop/api/Msi/nf-msi-msigetfileversiona)                           | Gibt die Versionszeichenfolge und die Sprachzeichenfolge zurück.                                                             |
 
 
 
  
 
-## <a name="transaction-management-functions"></a>Transaktions Verwaltungsfunktionen
+## <a name="transaction-management-functions"></a>Transaktionsverwaltungsfunktionen
 
 
 
-| Name                                               | BESCHREIBUNG                                                                                                                                                                                         |
+| Name                                               | Beschreibung                                                                                                                                                                                         |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Msibegintransaction**](/windows/desktop/api/Msi/nf-msi-msibegintransactiona) | Startet die Transaktionsverarbeitung einer Installation mit mehreren Paketen und gibt einen Bezeichner für die Transaktion zurück. Diese Funktion ist ab Windows Installer 4,5 verfügbar.                    |
-| [**Msijointransaction**](/windows/desktop/api/Msi/nf-msi-msijointransaction)   | Fordert an, dass die Windows Installer den aktuellen Prozess zum Besitzer der Transaktion machen, die eine Installation mit mehreren Paketen installiert. Diese Funktion ist ab Windows Installer 4,5 verfügbar. |
-| [**Msiendtransaction**](/windows/desktop/api/Msi/nf-msi-msiendtransaction)     | Führt einen Commit oder Rollback für alle Installationen aus, die zur Transaktion gehören. Diese Funktion ist ab Windows Installer 4,5 verfügbar.                                                          |
+| [**MsiBeginTransaction**](/windows/desktop/api/Msi/nf-msi-msibegintransactiona) | Startet die Transaktionsverarbeitung einer Installation mit mehreren Paketen und gibt einen Bezeichner für die Transaktion zurück. Diese Funktion ist ab Windows Installer 4.5 verfügbar.                    |
+| [**MsiJoinTransaction**](/windows/desktop/api/Msi/nf-msi-msijointransaction)   | Fordert an, dass Windows Installer den aktuellen Prozess zum Besitzer der Transaktion macht, die eine Installation mit mehreren Paketen installiert. Diese Funktion ist ab Windows Installer 4.5 verfügbar. |
+| [**MsiEndTransaction**](/windows/desktop/api/Msi/nf-msi-msiendtransaction)     | Führt einen Commit oder rollback für alle Installationen aus, die zur Transaktion gehören. Diese Funktion ist ab Windows Installer 4.5 verfügbar.                                                          |
 
 
 
@@ -213,11 +213,11 @@ Um Windows Installer in der Anwendung zu aktivieren, müssen Sie die Installer-F
 
 ## <a name="database-functions"></a>Datenbankfunktionen
 
-Zusätzlich zu den in den vorherigen Tabellen identifizierten Windows Installer Funktionen können Sie Informationen in der Installations Datenbank mithilfe der Datenbankzugriffs Funktionen, die im Abschnitt [Datenbankfunktionen](database-functions.md) beschrieben werden, bearbeiten.
+Zusätzlich zu den Windows Installer-Funktionen, die in den vorherigen Tabellen identifiziert wurden, können Sie Informationen in der Installationsdatenbank mithilfe der Datenbankzugriffsfunktionen bearbeiten, die im Abschnitt [Datenbankfunktionen beschrieben](database-functions.md) werden.
 
-## <a name="installer-structures"></a>Installer-Strukturen
+## <a name="installer-structures"></a>Installerstrukturen
 
-Außerdem werden einige Informationen in der Installations Datenbank mithilfe der im Abschnitt [installerstrukturen](installer-structures.md) beschriebenen Strukturen behandelt.
+Darüber hinaus werden einige Informationen in der Installationsdatenbank mithilfe der im Abschnitt Installationsstrukturen [beschriebenen Strukturen](installer-structures.md) verarbeitet.
 
  
 

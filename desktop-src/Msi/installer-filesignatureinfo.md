@@ -1,7 +1,7 @@
 ---
-description: Die filesignatureinfo-Methode des Installer-Objekts nimmt den Pfad zu einer Datei an und gibt ein SafeArray von Bytes zurück, die den Hash oder das codierte Zertifikat darstellen.
+description: Die FileSignatureInfo-Methode des Installer-Objekts nimmt den Pfad zu einer Datei und gibt ein SAFEARRAY von Bytes zurück, die den Hash oder das codierte Zertifikat darstellen.
 ms.assetid: ab34bc46-8a8f-4b48-a1d1-d824ff36a9cc
-title: Installer. filesignatureinfo-Methode
+title: Installer.FileSignatureInfo-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 5dbb758118b7612aaef3f7cca744674bca1c768d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 670b5ba6deb4a53429180e832c2a49e4968c53efbe7c54cdf50e62e20bf5503b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118630781"
 ---
-# <a name="installerfilesignatureinfo-method"></a>Installer. filesignatureinfo-Methode
+# <a name="installerfilesignatureinfo-method"></a>Installer.FileSignatureInfo-Methode
 
-Die **filesignatureinfo** -Methode des [**Installer**](installer-object.md) -Objekts nimmt den Pfad zu einer Datei an und gibt ein SafeArray von Bytes zurück, die den Hash oder das codierte Zertifikat darstellen. Die Werte können dann verwendet werden, um die Tabellen [msidigitalsignature](msidigitalsignature-table.md), [MsiPatchCertificate](msipatchcertificate-table.md)und [msidigitalcertificate](msidigitalcertificate-table.md) aufzufüllen.
+Die **FileSignatureInfo-Methode** des [**Installer-Objekts**](installer-object.md) verwendet den Pfad zu einer Datei und gibt ein SAFEARRAY von Bytes zurück, die den Hash oder das codierte Zertifikat darstellen. Die Werte können dann verwendet werden, um die Tabellen [MsiDigitalSignature,](msidigitalsignature-table.md) [MsiPatchCertificate](msipatchcertificate-table.md)und [MsiDigitalCertificate zu](msidigitalcertificate-table.md) füllen.
 
-Weitere Informationen finden Sie unter dem [**SAFEARRAY-Datentyp**](/windows/win32/api/oaidl/ns-oaidl-safearray).
+Weitere Informationen finden Sie unter [**SAFEARRAY-Datentyp.**](/windows/win32/api/oaidl/ns-oaidl-safearray)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,25 +43,25 @@ Installer.FileSignatureInfo(
 
 <dl> <dt>
 
-*FilePath* 
+*Filepath* 
 </dt> <dd>
 
 Vollständiger Pfad zu einer Datei, die digital signiert ist.
 
-Beim Auffüllen der Tabellen [msidigitalsignature](msidigitalsignature-table.md) und [msidigitalcertificate](msidigitalcertificate-table.md) verweist *FilePath* auf eine Digital signierte CAB-Datei. Beim Auffüllen der [MsiPatchCertificate](msipatchcertificate-table.md) -und msidigitalcertificate-Tabellen zeigt *FilePath* auf einen digital signierten Patch.
+Beim Aufpopulieren der [Tabellen MsiDigitalSignature](msidigitalsignature-table.md) und [MsiDigitalCertificate](msidigitalcertificate-table.md) verweist *FilePath* auf einen digital signierten Schränk. Beim Aufstellen der [Tabellen MsiPatchCertificate](msipatchcertificate-table.md) und MsiDigitalCertificate verweist *FilePath* auf einen digital signierten Patch.
 
 </dd> <dt>
 
 *Optionen* 
 </dt> <dd>
 
-Spezielle fehlerfallflags.
+Spezielle Fehlerfallflags.
 
 
 
 | Flag                                                                                                                                                                                                                                                                                                                                    | Bedeutung                                                                                                                                                                                                                                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="msiSignatureOptionInvalidHashFatal"></span><span id="msisignatureoptioninvalidhashfatal"></span><span id="MSISIGNATUREOPTIONINVALIDHASHFATAL"></span><dl> <dt>**msisignatureoptioninvalidhashfatal**</dt> <dt>1</dt> </dl> | Wenn die *Optionen* auf msisignatureoptioninvalidhashfatal festgelegt sind, gibt **filesignatureinfo** immer einen schwerwiegenden Fehler für einen ungültigen Hash zurück. <br/> Wenn die *Optionen* nicht auf msisignatureoptioninvalidhashfatal festgelegt sind und *Format* auf msiSignatureInfoCertificate festgelegt ist, gibt **filesignatureinfo** keinen Fehler für einen ungültigen Hash zurück.<br/> |
+| <span id="msiSignatureOptionInvalidHashFatal"></span><span id="msisignatureoptioninvalidhashfatal"></span><span id="MSISIGNATUREOPTIONINVALIDHASHFATAL"></span><dl> <dt>**msiSignatureOptionInvalidHashFatal**</dt> <dt>1</dt> </dl> | Wenn *Optionen* auf msiSignatureOptionInvalidHashFatal festgelegt sind, gibt **FileSignatureInfo** immer einen schwerwiegenden Fehler für einen ungültigen Hash zurück. <br/> Wenn *Options* nicht auf msiSignatureOptionInvalidHashFatal und *Format* auf msiSignatureInfoCertificate festgelegt ist, gibt **FileSignatureInfo** keinen Fehler für einen ungültigen Hash zurück.<br/> |
 
 
 
@@ -72,14 +72,14 @@ Spezielle fehlerfallflags.
 *Format* 
 </dt> <dd>
 
-Die angeforderten Signatur Informationen.
+Die angeforderten Signaturinformationen.
 
 
 
 | Flag                                                                                                                                                                                                                                                                                                        | Bedeutung                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| <span id="msiSignatureInfoCertificate"></span><span id="msisignatureinfocertificate"></span><span id="MSISIGNATUREINFOCERTIFICATE"></span><dl> <dt>**msiSignatureInfoCertificate**</dt> <dt>0</dt> </dl> | Gibt ein SafeArray von Bytes zurück, die das codierte Zertifikat darstellen.<br/> |
-| <span id="msiSignatureInfoHash"></span><span id="msisignatureinfohash"></span><span id="MSISIGNATUREINFOHASH"></span><dl> <dt>**msisignatureinfohash**</dt> <dt>1</dt> </dl>                             | Gibt ein SafeArray von Bytes zurück, die den Hash darstellen.<br/>                |
+| <span id="msiSignatureInfoCertificate"></span><span id="msisignatureinfocertificate"></span><span id="MSISIGNATUREINFOCERTIFICATE"></span><dl> <dt>**msiSignatureInfoCertificate**</dt> <dt>0</dt> </dl> | Gibt ein SAFEARRAY von Bytes zurück, die das codierte Zertifikat darstellen.<br/> |
+| <span id="msiSignatureInfoHash"></span><span id="msisignatureinfohash"></span><span id="MSISIGNATUREINFOHASH"></span><dl> <dt>**msiSignatureInfoHash**</dt> <dt>1</dt> </dl>                             | Gibt ein SAFEARRAY von Bytes zurück, die den Hash darstellen.<br/>                |
 
 
 
@@ -89,11 +89,11 @@ Die angeforderten Signatur Informationen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung gibt die Methode ein [SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray) von Bytes zurück, das entweder den Hash oder das codierte Zertifikat enthält.
+Bei Erfolg gibt die Methode ein [SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray) von Bytes zurück, die entweder das Hashzertifikat oder das codierte Zertifikat enthalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um eine vollständig verifizierte signierte Installation mithilfe von Automation zu erstellen, verwenden Sie die **filesignatureinfo** -Methode, um die Tabellen [msidigitalcertificate](msidigitalcertificate-table.md), [MsiPatchCertificate](msipatchcertificate-table.md)und [msidigitalsignature](msidigitalsignature-table.md) aufzufüllen. Weitere Informationen finden Sie unter [Erstellen einer vollständig verifizierten signierten Installation mithilfe von Automation](authoring-a-fully-verified-signed-installation-using-automation.md).
+Verwenden Sie zum Erstellen einer vollständig überprüften signierten Installation mithilfe der Automatisierung die **FileSignatureInfo-Methode,** um die Tabellen [MsiDigitalCertificate,](msidigitalcertificate-table.md) [MsiPatchCertificate](msipatchcertificate-table.md)und [MsiDigitalSignature](msidigitalsignature-table.md) zu füllen. Weitere Informationen finden Sie unter [Erstellen einer vollständig überprüften signierten Installation mithilfe von Automation.](authoring-a-fully-verified-signed-installation-using-automation.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,23 +101,23 @@ Um eine vollständig verifizierte signierte Installation mithilfe von Automation
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [Erstellen einer vollständig überprüften signierten Installation mithilfe von Automation](authoring-a-fully-verified-signed-installation-using-automation.md)
 </dt> <dt>
 
-[Digitale Signaturen und Windows Installer](digital-signatures-and-windows-installer.md)
+[Digital Signatures and Windows Installer](digital-signatures-and-windows-installer.md)
 </dt> <dt>
 
-[**Msigetfilesignatureinformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)
+[**MsiGetFileSignatureInformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um die Sammlung von Metriken für ein verwaltetes Element oder Elemente zu steuern.
+description: Wird verwendet, um die Sammlung von Metriken für ein verwaltetes Element oder ein verwaltetes Element zu steuern.
 ms.assetid: 3DC043ED-A790-4322-BF80-55961E9946C2
-title: Controlmetrics-Methode der Msvm_MetricService-Klasse
+title: ControlMetrics-Methode der Msvm_MetricService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: b12fbf71b860571bb3bb5ee06cb58483e782f479
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 051a08f261432c817bc0e56cab323c56cd11935c1541c40357b6b151a14f4074
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118645846"
 ---
-# <a name="controlmetrics-method-of-the-msvm_metricservice-class"></a>Controlmetrics-Methode der MSVM \_ metricservice-Klasse
+# <a name="controlmetrics-method-of-the-msvm_metricservice-class"></a>ControlMetrics-Methode der Msvm \_ MetricService-Klasse
 
-Wird verwendet, um die Sammlung von Metriken für ein verwaltetes Element oder Elemente zu steuern.
+Wird verwendet, um die Sammlung von Metriken für ein verwaltetes Element oder ein verwaltetes Element zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ControlMetrics(
 
 <dl> <dt>
 
-*Betreff* \[ in\]
+*Betreff* \[ In\]
 </dt> <dd>
 
-Eine [**CIM \_ managedelements**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Instanz, die die verwalteten Elemente identifiziert, für die Metriken erfasst werden. Wenn dieser Parameter **null** ist, werden die Metriken für alle verwalteten Elemente, die dem *Definitions* Parameter zugeordnet sind, gesammelt.
+Eine [**CIM \_ ManagedElement-Instanz,**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) die die verwalteten Elemente identifiziert, für die Metriken gesammelt werden. Wenn dieser Parameter **NULL** ist, werden die Metriken für alle verwalteten Elemente erfasst, die dem *Definition-Parameter* zugeordnet sind.
 
 </dd> <dt>
 
-*Definition* \[ in\]
+*Definition* \[ In\]
 </dt> <dd>
 
-Eine [**MSVM \_ basemetricdefinition**](msvm-basemetricdefinition.md) -Instanz, die angibt, welche Metriken erfasst werden. Wenn dieser Parameter **null** ist, werden die Metriken für alle Definitionen, die dem verwalteten Element zugeordnet sind, das durch den *Subject* -Parameter identifiziert wird, erfasst.
+Eine [**Msvm \_ BaseMetricDefinition-Instanz,**](msvm-basemetricdefinition.md) die angibt, welche Metriken gesammelt werden. Wenn dieser Parameter **NULL** ist, werden die Metriken für alle Definitionen erfasst, die dem vom *Subject-Parameter* identifizierten verwalteten Element zugeordnet sind.
 
 </dd> <dt>
 
-*Metriccollectionaktivierte* \[ in\]
+*MetricCollectionEnabled* \[ In\]
 </dt> <dd>
 
-Gibt den Vorgang an, der für die metriksammlung auszuführen ist. Dabei muss es sich um einen der folgenden Werte handeln:
+Gibt den Vorgang an, der für die Metriksammlung ausgeführt werden soll. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -69,7 +69,7 @@ Gibt den Vorgang an, der für die metriksammlung auszuführen ist. Dabei muss es
 
 </dt> <dd>
 
-Aktivieren Sie die metriksammlung.
+Aktivieren Sie die Metriksammlung.
 
 </dd> <dt>
 
@@ -80,7 +80,7 @@ Aktivieren Sie die metriksammlung.
 
 </dt> <dd>
 
-Deaktivieren Sie die metrikauflistung.
+Deaktivieren Sie die Metriksammlung.
 
 </dd> <dt>
 
@@ -97,14 +97,14 @@ Zurücksetzen von Metrikwerten.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> </dl>
@@ -121,22 +121,22 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Reservierte Methode** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Methode tritt in den folgenden Fällen ein Fehler auf:
+Diese Methode schlägt in den folgenden Instanzen fehl:
 
--   Die Parameter " *Subject* " und " *Definition* " sind beide **null**.
--   Die Parameter " *Subject* " und " *Definition* " sind nicht **null** , und es ist keine Instanz von [**MSVM \_ metricdefforme**](msvm-metricdefforme.md) vorhanden, die die beiden Instanzen verknüpft.
--   Der *Definitions* Parameter ist ein Verweis auf eine Instanz von [**MSVM \_ basemetricdefinition**](msvm-basemetricdefinition.md) , die nicht mit MSVM [**\_ metricservice**](msvm-metricservice.md) über [**MSVM \_ serviceaffectselements**](msvm-serviceaffectselement.md)verknüpft ist.
+-   Die Parameter *Subject* und *Definition* sind beide **NULL.**
+-   Die Parameter *Subject* und *Definition* sind nicht **NULL,** und es gibt keine Instanz von [**Msvm \_ MetricDefForME,**](msvm-metricdefforme.md) die die beiden Instanzen zuweist.
+-   Der *Definition-Parameter* ist ein Verweis auf eine Instanz von [**Msvm \_ BaseMetricDefinition,**](msvm-basemetricdefinition.md) die [**msvm \_ MetricService**](msvm-metricservice.md) nicht über [**Msvm \_ ServiceAffectsElement**](msvm-serviceaffectselement.md)zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -144,19 +144,19 @@ Bei dieser Methode tritt in den folgenden Fällen ein Fehler auf:
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MSVM \_ metricservice**](msvm-metricservice.md)
+[**Msvm \_ MetricService**](msvm-metricservice.md)
 </dt> </dl>
 
  

@@ -1,72 +1,72 @@
 ---
-description: Verbessern der Leistung durch Objekt Pooling
+description: Verbessern der Leistung mit Objektpooling
 ms.assetid: 7a8a38d8-6549-4686-a298-f3b427b380e3
-title: Verbessern der Leistung durch Objekt Pooling
+title: Verbessern der Leistung mit Objektpooling
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 398b9140080d3a439293b5152b4da7251978e800
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 68ce6a86e76f7a97395973cc9cab4c4e9e81177f4312a389c2b01ec2d88eb7a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118547847"
 ---
-# <a name="improving-performance-with-object-pooling"></a>Verbessern der Leistung durch Objekt Pooling
+# <a name="improving-performance-with-object-pooling"></a>Verbessern der Leistung mit Objektpooling
 
-Das Objekt Pooling kann unter bestimmten Umständen äußerst effektiv sein, was zu einer erheblichen Leistungssteigerung bei der Leistung. Die allgemeine Idee für die Wiederverwendung von Objekten, die am besten genutzt werden sollten, besteht darin, so viele Ressourcen wie möglich zu bündeln, die Initialisierung von der eigentlichen ausgeführten Arbeit zu gestalten und dann die Pool Merkmale zum Zeitpunkt der Bereitstellung administrativ an die tatsächliche Hardware anzupassen. Das heißt, Sie sollten gemäß den folgenden Schritten fortfahren:
+Objektpooling kann unter bestimmten Umständen äußerst effektiv sein und zu erheblichen Leistungssteigerungen führen. Die allgemeine Idee, Objekte wiederzuverwenden, um den besten Vorteil zu bieten, besteht darin, so viele Ressourcen wie möglich zusammenzufassen, die Initialisierung aus der tatsächlich ausgeführten Arbeit herauszustützen und dann die Pooleigenschaften zur Bereitstellungszeit administrativ an die tatsächliche Hardware anzupassen. Das heißt, Sie sollten mit den folgenden Schritten fortfahren:
 
-1.  Schreiben Sie das-Objekt, um die teure Initialisierung und Ressourcen Erfassung zu berücksichtigen, die für jeden Client als Voraussetzung für die tatsächliche Arbeit im Auftrag des Clients ausgeführt wird. Schreiben Sie große Objektkonstruktoren, um so viele Ressourcen wie möglich zu bündeln, damit diese vom Objekt aufbewahrt werden und sofort verfügbar sind, wenn Clients ein Objekt aus dem Pool erhalten.
-2.  Konfigurieren Sie den Pool administrativ, um das beste Gleichgewicht in verfügbaren Hardware Ressourcen zu erzielen. verwenden Sie in der Regel den Arbeitsspeicher, der für die Verwaltung eines Pools mit einer bestimmten Größe in Exchange reserviert ist, um den Client Zugriff zu beschleunigen und An einem bestimmten Punkt erzielt das Pooling abnehmende Rückgaben, und Sie können eine gute Leistung erzielen, während Sie mögliche Ressourcennutzung durch eine bestimmte Komponente begrenzen.
+1.  Schreiben Sie das -Objekt, um die teure Initialisierung und den Ressourcenerwerb zu berücksichtigen, die für jeden Client als Voraussetzung für die tatsächliche Arbeit im Auftrag des Clients ausgeführt werden. Schreiben Sie umfangreiche Objektkonstruktoren in den Pool so viele Ressourcen wie möglich, damit diese vom Objekt gehalten werden und sofort verfügbar sind, wenn Clients ein Objekt aus dem Pool erhalten.
+2.  Konfigurieren Sie den Pool administrativ, um ein optimales Gleichgewicht bei den verfügbaren Hardwareressourcen zu erzielen. In der Regel wird der Speicher, der für die Verwaltung eines Pools einer bestimmten Größe reserviert ist, im Austausch für einen schnelleren Clientzugriff und die Verwendung von Objekten getauscht. Zu einem bestimmten Zeitpunkt erzielt das Pooling eine abnehmende Rendite, und Sie können eine ausreichend gute Leistung erzielen und gleichzeitig die mögliche Ressourcennutzung durch eine bestimmte Komponente einschränken.
 
-## <a name="doing-actual-work-or-acquiring-resources"></a>Tatsächliche Arbeit oder Ressourcenbeschaffung
+## <a name="doing-actual-work-or-acquiring-resources"></a>Durchführen tatsächlicher Arbeit oder Abrufen von Ressourcen
 
-Wenn Sie über eine-Komponente verfügen, die von Clients kurz und in schneller Folge verwendet wird, in der ein erheblicher Teil der Objekt Verwendung für den Ressourcen Abruf oder die Initialisierung aufgewendet wird, bevor bestimmte Aufgaben für den Client ausgeführt werden, ist es wahrscheinlich, dass das Schreiben der Komponente zur Verwendung von Objekt Pooling ein großer Gewinn ist.
+Wenn Sie über eine Komponente verfügen, die Clients kurz und in schneller Folge verwenden, wobei ein erheblicher Teil der Objektnutzungszeit für das Abrufen von Ressourcen oder die Initialisierung vor der spezifischen Arbeit für den Client aufgewendet wird, ist es wahrscheinlich, dass das Schreiben Ihrer Komponente zur Verwendung des Objektpoolings ein großer Gewinn für Sie ist.
 
-Sie können die Komponente so schreiben, dass Sie im Konstruktor des Objekts den zeitaufwändigen Arbeitsaufwand ausführen, der für alle Clients möglichst einheitlich ist – das Abrufen von einer oder mehreren Verbindungen, das Ausführen von Skripts, das Abrufen von Initialisierungs Daten aus Dateien oder über ein Netzwerk usw. Dies hat Auswirkungen auf das Pooling der einzelnen Ressourcen. Sie bündeln die Kombination von Ressourcen und dem generischen Zustand, der für die Durchführung einiger Aufgaben erforderlich ist.
+Sie können die Komponente so schreiben, dass Sie im Konstruktor des Objekts so viel zeitaufwendige Arbeit ausführen, die für alle Clients wie möglich gleich ist: Abrufen einer oder mehrerer Verbindungen, Ausführen von Skripts, Abrufen von Initialisierungsdaten aus Dateien oder über ein Netzwerk usw. Dies hat den Effekt, dass jede solche Ressource in einem Pool zusammengefasst wird. Sie poolen die Kombination aus Ressourcen und dem generischen Zustand, die zum Ausführen einiger Aufgaben erforderlich sind.
 
-Wenn Clients ein Objekt aus dem Pool erhalten, sind diese Ressourcen in dieser Situation sofort verfügbar. Normalerweise verwenden Sie das-Objekt, um eine kleine Arbeitseinheit auszuführen, Daten zu übertragen oder zu übertragen. Anschließend ruft das Objekt [**IObjectContext:: SetComplete**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) oder [**IObjectContext:: SetAbort**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setabort) auf und gibt zurück. Mit schnell Feuer-Verwendungs Mustern wie diesem führt das Pooling zu hervorragenden Leistungsvorteilen. Sie können die Einfachheit des Zustands losen automatischen Transaktions Programmierungs Modells voll ausschöpfen und gleichzeitig die Leistung der herkömmlichen Zustands behafteten Komponenten steigern.
+Wenn Clients in diesem Fall ein Objekt aus dem Pool erhalten, stehen ihnen diese Ressourcen sofort zur Verfügung. In der Regel verwenden sie das -Objekt, um eine kleine Arbeitseinheit auszuführen, Daten zu pushen oder zu pullen, und dann ruft das Objekt [**IObjectContext::SetComplete**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) oder [**IObjectContext::SetAbort**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setabort) auf und gibt zurück. Mit solchen Mustern für schnelles Fire-Fire-Einsatz bietet Pooling hervorragende Leistungsvorteile. Sie können die Einfachheit des zustandslosen automatischen Transaktionsprogrammiermodells voll nutzen und dennoch eine Leistung erzielen, die mit herkömmlichen zustandslosen Komponenten vergleichbar ist.
 
-Wenn Clients jedoch für einen längeren Zeitraum ein Objekt verwenden, wird das Pooling weniger sinnvoll. Der Geschwindigkeitsvorteil, den Sie gewinnen, ist marginal, da die Anwendungszeit relativ zur Initialisierungs Zeit zunimmt. Sie erhalten abnehmende Rückgaben, die möglicherweise nicht die Kosten für den Arbeitsspeicher rechtfertigen, der zum Speichern eines Pools aktiver Objekte erforderlich ist.
+Wenn Clients jedoch jedes Mal, wenn sie es aufrufen, ein Objekt für lange Zeit verwenden, ist das Pooling weniger sinnvoll. Der Geschwindigkeitsvorteil, den Sie erhalten, ist geringfügig, da die Nutzungszeit relativ zur Initialisierungszeit zunimmt. Sie erhalten abnehmende Rückgaben, die möglicherweise nicht die Kosten des Arbeitsspeichers rechtfertigen, der zum Speichern eines Pools aktiver Objekte erforderlich ist.
 
-## <a name="sharing-cost-across-multiple-clients"></a>Gemeinsame Nutzung von Kosten über mehrere Clients
+## <a name="sharing-cost-across-multiple-clients"></a>Gemeinsame Nutzung von Kosten auf mehrere Clients
 
-Eine Variation bei der Umgestaltung der Initialisierung besteht darin, dass Sie das Pooling verwenden können, um die Kosten für den Erwerb kostspieliger Ressourcen statistisch amortisieren. Wenn Sie die Übernahme oder Initialisierung einmal durchführen und dann das Objekt wieder verwenden, teilen Sie diese Kosten für alle Clients, die das Objekt während ihrer Lebensdauer verwenden. Hohe Konstruktions Dauer wird nur einmal pro Objekt anfallen.
+Eine Variation bei der Out-Initialisierung besteht darin, dass Sie pooling verwenden können, um die Kosten für den Erwerb teurer Ressourcen statistisch zu amortisieren. Wenn Sie den Treffer für den Erwerb oder die Initialisierung einmal verwenden und dann das Objekt wiederverwenden, teilen Sie diese Kosten für alle Clients, die das Objekt während seiner Lebensdauer verwenden. Eine hohe Konstruktionszeit fällt nur einmal pro Objekt an.
 
-## <a name="preallocating-objects"></a>Vorab zuordnen von Objekten
+## <a name="preallocating-objects"></a>Vorabverlegung von Objekten
 
-Wenn Sie eine minimale Poolgröße ungleich NULL angeben, wird diese Mindestanzahl von Objekten erstellt und in einem Pool zusammengefasst, wenn die Anwendung gestartet wird. Dies ist für alle Clients bereit, die in der Anwendung aufgerufen werden.
+Wenn Sie eine Minimale Poolgröße ungleich 0 (null) angeben, wird diese Mindestanzahl von Objekten erstellt und beim Starten der Anwendung in einem Pool zusammengefasst, der für alle Clients bereit ist, die die Anwendung aufrufen.
 
-## <a name="governing-resource-use-with-pool-management"></a>Steuern der Ressourcenverwendung mit der Pool Verwaltung
+## <a name="governing-resource-use-with-pool-management"></a>Verwalten der Ressourcenverwendung mit der Poolverwaltung
 
-Sie können die maximale Poolgröße verwenden, um genau zu steuern, wie Sie Ressourcen verwenden. Wenn Sie z. b. eine bestimmte Anzahl von Datenbankverbindungen lizenziert haben, können Sie steuern, wie viele Verbindungen Sie jederzeit geöffnet haben.
+Sie können die maximale Poolgröße verwenden, um sehr genau zu steuern, wie Ressourcen verwendet werden. Wenn Sie beispielsweise eine bestimmte Anzahl von Datenbankverbindungen lizenziert haben, können Sie steuern, wie viele Verbindungen Sie jederzeit geöffnet haben.
 
-Wenn Sie die Client Verwendungs Muster, Objekt Verwendungs Merkmale und physische Ressourcen wie z. b. Arbeitsspeicher und Verbindungen berücksichtigen, werden Sie bei der Leistungsoptimierung wahrscheinlich einen optimalen Saldo erzielen. Beim Pooling von Objekten ergeben sich nach einem bestimmten Punkt abnehmende Rückgaben. Sie können bestimmen, welche Leistungsstufe Sie benötigen, und wie Sie die Ressourcen abwägen, die für die Erreichung erforderlich sind.
+Wenn Sie Die Clientnutzungsmuster, Objektverwendungsmerkmale und physische Ressourcen wie Arbeitsspeicher und Verbindungen berücksichtigen, werden Sie wahrscheinlich einen optimalen Balancepunkt finden, wenn Sie eine Leistungsoptimierung durchführen. Poolingobjekte führen zu abnehmenden Rückgaben nach einem bestimmten Punkt. Sie können bestimmen, welche Leistungsstufe Sie benötigen, und dies mit den Ressourcen abwägen, die erforderlich sind, um dies zu erreichen.
 
-Um die Leistungsoptimierung beim Konfigurieren des Objekt Pooling zu vereinfachen, können Sie Objekt Statistiken für die Komponenten in einer Anwendung überwachen. Weitere Informationen finden Sie unter über [Wachen von Objekt Statistiken](monitoring-object-statistics.md).
+Um die Leistungsoptimierung beim Konfigurieren des Objektpoolings zu vereinfachen, können Sie Objektstatistiken für die Komponenten in einer Anwendung überwachen. Weitere Informationen finden Sie unter Überwachen von [Objektstatistiken.](monitoring-object-statistics.md)
 
 ## <a name="improve-performance-of-jit-activated-components"></a>Verbessern der Leistung von JIT-Activated-Komponenten
 
-Das Objekt Pooling funktioniert sehr gut mit dem [Just-in-Time-Aktivierungs Dienst von com+](com--just-in-time-activation.md) . Durch das Pooling von Objekten, die JIT-aktiviert sind, können Sie die Objekt Reaktivierung beschleunigen. Sie profitieren von den Vorteilen, dass der Kanal durch die JIT-Aktivierung geöffnet ist und gleichzeitig die Kosten der erneuten Aktivierung verringert werden. In diesem Fall können Sie das Pooling verwenden, um zu steuern, wie viel Arbeitsspeicher Sie Objekten zuordnen möchten, die über Verweise verfügen.
+Objektpooling funktioniert sehr gut mit dem [COM+-Just-In-Time-Aktivierungsdienst.](com--just-in-time-activation.md) Durch das Pooling von Objekten, die JIT-aktiviert werden, können Sie die Objektreaktivierung beschleunigen. Sie profitieren von den Vorteilen, den Kanal durch JIT-Aktivierung geöffnet zu halten und gleichzeitig die Kosten für die Reaktivierung zu verringern. Sie können pooling in diesem Fall verwenden, um zu steuern, wie viel Arbeitsspeicher Sie Objekten zuordnen möchten, für die Verweise aktiv sind.
 
-Es ist höchstwahrscheinlich, dass JIT-aktivierte Komponenten gebündelt werden, wenn diese transaktional sind. Das Objekt Pooling ist für die Verarbeitung von Transaktions Komponenten optimiert. Weitere Informationen finden Sie unter [Pooling von transaktionalen Objekten](pooling-transactional-objects.md).
+Es ist sehr wahrscheinlich, dass Jit-aktivierte Komponenten in einem Pool zusammengefasst werden, wenn sie transaktional sind. Objektpooling ist für die Verarbeitung von Transaktionskomponenten optimiert. Weitere Informationen finden Sie unter [Pooling Transactional Objects](pooling-transactional-objects.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Com+-objektkonstruktorzeichenfolgen](com--object-constructor-strings.md)
+[COM+-Objektkonstruktorzeichenfolgen](com--object-constructor-strings.md)
 </dt> <dt>
 
-[Steuern der Objekt Lebensdauer und des Zustands](controlling-object-lifetime-and-state.md)
+[Steuern der Lebensdauer und des Zustands von Objekten](controlling-object-lifetime-and-state.md)
 </dt> <dt>
 
-[Funktionsweise des Objekt Pooling](how-object-pooling-works.md)
+[Funktionsweise von Objektpooling](how-object-pooling-works.md)
 </dt> <dt>
 
-[Pooling von transaktionalen Objekten](pooling-transactional-objects.md)
+[Pooling von Transaktionsobjekten](pooling-transactional-objects.md)
 </dt> <dt>
 
-[Anforderungen für in einem Pool Bare Objekte](requirements-for-poolable-objects.md)
+[Anforderungen für poolfähige Objekte](requirements-for-poolable-objects.md)
 </dt> </dl>
 
  

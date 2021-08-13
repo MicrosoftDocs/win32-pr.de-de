@@ -1,11 +1,11 @@
 ---
-title: IDWriteTextLayout3 setlinespacingmethode
-description: Zeilenabstand festlegen. | IDWriteTextLayout3 setlinespacingmethode
+title: IDWriteTextLayout3 SetLineSpacing-Methode
+description: Legen Sie den Zeilenabstand fest. | IDWriteTextLayout3 SetLineSpacing-Methode
 ms.assetid: 1bfca257-189c-4d18-628c-aff8217d2775
 keywords:
-- Setlinespacingmethode direkt schreiben
-- Setlinespacingmethod Direct Write, IDWriteTextLayout3-Schnittstelle
-- IDWriteTextLayout3 Interface Direct Write, setlinespacingmethode
+- SetLineSpacing-Methode – Direkter Schreibzugriff
+- SetLineSpacing-Methode Direct Write, IDWriteTextLayout3-Schnittstelle
+- IDWriteTextLayout3-Schnittstelle Direct Write , SetLineSpacing-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 794df5b0dc993688c8bab15c927ae2c03bc18d69
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4d1c054fd63beb85303a7d163a16b55f07613b687085be53e22d814b0003c63c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106371848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118649378"
 ---
-# <a name="idwritetextlayout3setlinespacing-method"></a>IDWriteTextLayout3:: setlinespacingmethode
+# <a name="idwritetextlayout3setlinespacing-method"></a>IDWriteTextLayout3::SetLineSpacing-Methode
 
-Zeilenabstand festlegen.
+Legen Sie den Zeilenabstand fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT SetLineSpacing(
 
 <dl> <dt>
 
-*linespacingoptions* \[ in\]
+*lineSpacingOptions* \[ In\]
 </dt> <dd>
 
-So verwalten Sie den Leerraum zwischen Zeilen
+Verwalten des Speicherplatzes zwischen Zeilen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,15 +59,15 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

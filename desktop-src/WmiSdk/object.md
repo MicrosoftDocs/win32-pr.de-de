@@ -1,22 +1,22 @@
 ---
-description: Der Objekt Datentyp ist ein WMI-Klassenobjekt, das zum Deklarieren von schwach typisierten Zuordnungen und eingebetteten Objekten verwendet wird.
+description: Der OBJECT-Datentyp ist ein WMI-Klassenobjekt, das verwendet wird, um schwach typierte Zuordnungen und eingebettete Objekte zu deklarieren.
 ms.assetid: 1ad99b92-dfd4-4147-abf5-045edceaa97d
 ms.tgt_platform: multiple
 title: OBJECT
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c257b45833204a873292da467d484fab97b22b0a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4c26b8b6ff77f788aeed607057541d19d80fea4c105b53d492c1f1e8468b319
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118554929"
 ---
 # <a name="object"></a>OBJECT
 
-Der Objekt Datentyp ist ein WMI-Klassenobjekt, das zum Deklarieren von schwach typisierten Zuordnungen und eingebetteten Objekten verwendet wird. Die spezifische Klasse für ein schwach typisiertes Objekt wird erst definiert, wenn Sie eine Instanz der Klasse erstellen. Eingebettete Objekte, die mit dem Object-Datentyp definiert sind, können Instanzen einer beliebigen WMI-Klasse enthalten. Weitere Informationen finden Sie unter [eingebettete Objekte](embedded-objects.md).
+Der OBJECT-Datentyp ist ein WMI-Klassenobjekt, das verwendet wird, um schwach typierte Zuordnungen und eingebettete Objekte zu deklarieren. Sie definieren die spezifische Klasse für ein schwach typiertes Objekt erst, wenn Sie eine Instanz der -Klasse erstellen. Eingebettete Objekte, die mit dem OBJECT-Datentyp definiert sind, können Instanzen einer beliebigen WMI-Klasse enthalten. Weitere Informationen finden Sie unter [Eingebettete Objekte.](embedded-objects.md)
 
-Im folgenden Beispiel werden Instanzen von zwei Klassen definiert und erstellt, von denen eine ein eingebettetes Objekt vom Typ "Object" enthält:
+Im folgenden Beispiel werden Instanzen von zwei Klassen definiert und erstellt, von denen eine ein eingebettetes Objekt vom Typ OBJECT enthält:
 
 ``` syntax
 #pragma namespace("\\\\.\\root")

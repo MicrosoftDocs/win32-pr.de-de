@@ -1,33 +1,33 @@
 ---
-description: Die Hyper-V-Migrations-API definiert die folgenden Programmier Elemente.
+description: Die Hyper-V-Migrations-API definiert die folgenden Programmierelemente.
 ms.assetid: E1FE7351-2F14-4C8F-AF5C-9009CC61CE22
 title: Referenz zur Hyper-V-Migrations-API
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e40a05bc976cf1722aba558eeca9c7b04cdf7287
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c6a188e369ba6f99860721b8ebc84d886bad6833a94ce06958be4af617e9bdc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118645277"
 ---
 # <a name="hyper-v-migration-api-reference"></a>Referenz zur Hyper-V-Migrations-API
 
-Die Hyper-V-Migrations-API definiert die folgenden Programmier Elemente.
+Die Hyper-V-Migrations-API definiert die folgenden Programmierelemente.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                                                                | BESCHREIBUNG                                                                                                                                                                                         |
+| Thema                                                                                                                                | Beschreibung                                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**MSVM \_ migrationjob**](msvm-migrationjob.md)<br/>                                                                           | Diese Klasse stellt einen Migrations Vorgangs Auftrag dar, der für die Migration des virtuellen System Migrations Dienstanbieter oder des virtuellen Systems erstellt wurde.<br/>                                                 |
-| [**MSVM \_ virtualsystemmigrationfunktionen**](msvm-virtualsystemmigrationcapabilities.md)<br/>                               | Definiert die Möglichkeiten, mit denen ein Client die vom Migrationsdienst bereitgestellten Methoden und den gültigen Bereich der Einstellungsdaten für die virtuelle System Migration ermitteln kann.<br/>                                |
-| [**MSVM \_ virtualsystemmigrationnetworksettingdata**](msvm-virtualsystemmigrationnetworksettingdata.md)<br/>                   | Stellt das Netzwerk dar, auf dem der Dienst für die Migration des virtuellen Systems auf die Migration eingehender virtueller Systeme lauscht.<br/>                                                                 |
-| [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md)<br/>                                         | Stellt den Dienst für die virtuelle System Migration dar. Sie wird zum Migrieren eines virtuellen Systems oder zum Migrieren des Speichers eines virtuellen Systems von einer Virtualisierungsplattform zu einem anderen verwendet.<br/> |
-| [**MSVM \_ virtualsystemmigrationservicesettingdata**](msvm-virtualsystemmigrationservicesettingdata.md)<br/>                   | Stellt die Einstellungen für den Dienst für die virtuelle System Migration auf einem Host dar.<br/>                                                                                                              |
-| [**MSVM \_ virtualsystemmigrationservicesettingdatacomponent**](msvm-virtualsystemmigrationservicesettingdatacomponent.md)<br/> | Eine Zuordnung, die verwendet wird, um die Netzwerkeinstellungen der virtuellen System Migration des virtuellen System Migrations Dienstanbieter darzustellen.<br/>                                                                      |
-| [**MSVM \_ virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md)<br/>                                 | Stellt die Migrations Einstellungen zum Migrieren eines virtuellen Systems und des Speichers dar, der an ein virtuelles System angeschlossen ist.<br/>                                                                           |
+| [**Msvm \_ MigrationJob**](msvm-migrationjob.md)<br/>                                                                           | Diese Klasse stellt einen Migrationsvorgangauftrag dar, der für die Speicher- oder Migration des virtuellen Systems durch den Migrationsdienst des virtuellen Systems erstellt wurde.<br/>                                                 |
+| [**Msvm \_ VirtualSystemMigrationCapabilities**](msvm-virtualsystemmigrationcapabilities.md)<br/>                               | Definiert die Methoden, mit denen ein Client die vom Migrationsdienst bereitgestellten Methoden und einen gültigen Bereich von Daten zu Migrationseinstellungen für virtuelle Systeme ermitteln kann.<br/>                                |
+| [**Msvm \_ VirtualSystemMigrationNetworkSettingData**](msvm-virtualsystemmigrationnetworksettingdata.md)<br/>                   | Stellt das Netzwerk dar, in dem der Migrationsdienst des virtuellen Systems auf die eingehende Migration des virtuellen Systems lauscht.<br/>                                                                 |
+| [**Msvm \_ VirtualSystemMigrationService**](msvm-virtualsystemmigrationservice.md)<br/>                                         | Stellt den Migrationsdienst des virtuellen Systems dar. Es wird zum Migrieren eines virtuellen Systems oder zum Migrieren des Speichers eines virtuellen Systems von einer Virtualisierungsplattform zu einer anderen verwendet.<br/> |
+| [**Msvm \_ VirtualSystemMigrationServiceSettingData**](msvm-virtualsystemmigrationservicesettingdata.md)<br/>                   | Stellt die Einstellungen für den Migrationsdienst des virtuellen Systems auf einem Host dar.<br/>                                                                                                              |
+| [**Msvm \_ VirtualSystemMigrationServiceSettingDataComponent**](msvm-virtualsystemmigrationservicesettingdatacomponent.md)<br/> | Eine Zuordnung, die verwendet wird, um die Netzwerkeinstellungen des Migrationsnetzwerks des virtuellen Systems darzustellen.<br/>                                                                      |
+| [**Msvm \_ VirtualSystemMigrationSettingData**](msvm-virtualsystemmigrationsettingdata.md)<br/>                                 | Stellt die Migrationseinstellungen für die Migration eines virtuellen Systems und des Speichers dar, der an ein virtuelles System angefügt ist.<br/>                                                                           |
 
 
 

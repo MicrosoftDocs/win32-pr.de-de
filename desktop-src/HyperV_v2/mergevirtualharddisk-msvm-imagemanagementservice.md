@@ -1,7 +1,7 @@
 ---
 description: Führt eine untergeordnete virtuelle Festplatte in einer differenzierenden Kette mit einer oder mehreren übergeordneten virtuellen Festplatten in der Kette zusammen.
 ms.assetid: 10633176-F0C3-4CA0-8E7B-2B11FF93B0EA
-title: Mergevirtualharddisk-Methode der Msvm_ImageManagementService-Klasse
+title: MergeVirtualHardDisk-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 347e11d55357a8b3366aeb09badc53c1afad9e01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa9867222cf27e6ca23a4d96a04a6b94b558e7c043f182fdf8d8331ad73010c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118644872"
 ---
-# <a name="mergevirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>Mergevirtualharddisk-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="mergevirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>MergeVirtualHardDisk-Methode der Msvm \_ ImageManagementService-Klasse
 
-Führt eine untergeordnete virtuelle Festplatte in einer differenzierenden Kette mit einer oder mehreren übergeordneten virtuellen Festplatten in der Kette zusammen. Weitere Informationen zu Nutzungseinschränkungen für diese Methode finden Sie unter Hinweise.
+Führt eine untergeordnete virtuelle Festplatte in einer differenzierenden Kette mit einer oder mehreren übergeordneten virtuellen Festplatten in der Kette zusammen. Informationen zu Verwendungseinschränkungen für diese Methode finden Sie unter Hinweise.
 
-Wenn der Benutzer, der diese Funktion ausführt, nicht über die Berechtigung zum Aktualisieren der virtuellen Maschinen verfügt, schlägt diese Funktion fehl.
+Wenn der Benutzer, der diese Funktion ausführt, nicht über die Berechtigung zum Aktualisieren der virtuellen Computer verfügt, tritt bei dieser Funktion ein Fehler auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,36 +43,36 @@ uint32 MergeVirtualHardDisk(
 
 <dl> <dt>
 
-*SourcePath* \[ in\]
+*SourcePath* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Ein voll qualifizierter Pfad, der den Speicherort der virtuellen Festplatten Datei angibt, die zusammengeführt werden soll.
+Ein vollqualifizierten Pfad, der den Speicherort der zusammenzuführenden virtuellen Festplattendatei angibt.
 
 </dd> <dt>
 
-*DestinationPath* \[ in\]
+*DestinationPath* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Ein voll qualifizierter Pfad, der den Speicherort der übergeordneten virtuellen Festplatten Datei angibt, in der Daten zusammengeführt werden sollen. Dabei kann es sich um die unmittelbar übergeordnete virtuelle Festplatte der zusammen zufügenden Datei oder das Image des übergeordneten Datenträgers handeln. ein paar Ebenen der differenzierenden Kette.
+Ein vollqualifizierten Pfad, der den Speicherort der übergeordneten virtuellen Festplattendatei angibt, mit der Daten zusammengeführt werden sollen. Dies kann die unmittelbar übergeordnete virtuelle Festplatte der zusammenführenden Datei oder das übergeordnete Datenträgerimage ein paar Ebenen in der differenzierenden Kette sein.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Typ: **[ **CIM \_ bettejob**](/previous-versions//cc136808(v=vs.85))**
+Typ: **[ **CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))**
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode kann einen der folgenden Werte zurückgeben.
 
@@ -81,10 +81,10 @@ Diese Methode kann einen der folgenden Werte zurückgeben.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -93,7 +93,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -105,35 +105,35 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die untergeordnete virtuelle Festplatte muss offline sein.
 
-Mit dieser Methode können nur die folgenden Typen von virtuellen Festplatten verwendet werden:
+Mit dieser Methode können nur die folgenden Arten von virtuellen Festplatten verwendet werden:
 
 -   Differenzierende VHD
--   Differenzierende vhdx
+-   Differenzierende VHDX
 
-Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird eine virtuelle Festplatten Datei erweitert. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird eine virtuelle Festplattendatei erweitert. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -178,22 +178,22 @@ public static void MergeVirtualHardDisk(string ChildPath, string ParentPath)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ concretejob**](/previous-versions//cc136808(v=vs.85))
+[**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))
 </dt> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

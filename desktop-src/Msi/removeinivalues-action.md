@@ -1,34 +1,34 @@
 ---
-description: Die RemoveIniValues-Aktion entfernt die zum Entfernen angegebenen ini-Dateiinformationen in der removeinifile-Tabelle, wenn die Komponente für die lokale Installation oder die Ausführung aus der Quelle festgelegt ist.
+description: Die RemoveIniValues-Aktion entfernt .ini Dateiinformationen, die zum Entfernen in der RemoveIniFile-Tabelle angegeben sind, wenn die Komponente so festgelegt ist, dass sie lokal installiert oder aus der Quelle ausgeführt wird.
 ms.assetid: a30793c8-4154-4990-a42a-d022e69f960a
 title: RemoveIniValues-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7dfb847d911e847de00ede6eab30ac3a86615eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 095985165bf6d9629aa0cae67a5b3f7975d817151ac4b04de40a08d5c2bab4d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118626389"
 ---
 # <a name="removeinivalues-action"></a>RemoveIniValues-Aktion
 
-Die RemoveIniValues-Aktion entfernt die zum Entfernen angegebenen ini-Dateiinformationen in der [removeinifile-Tabelle](removeinifile-table.md) , wenn die Komponente für die lokale Installation oder die Ausführung aus der Quelle festgelegt ist. Die RemoveIniValues-Aktion entfernt ini-Dateiinformationen, die einer Komponente in der Tabelle " [IniFile](inifile-table.md)" zugeordnet wurden. Mit dieser Aktion werden auch ini-Dateiinformationen entfernt, wenn die Informationen von der [Aktion "Write-einivalues](writeinivalues-action.md) " geschrieben und die Komponente deinstalliert werden soll.
+Die RemoveIniValues-Aktion entfernt .ini, die zum Entfernen in der [RemoveIniFile-Tabelle](removeinifile-table.md) angegeben sind, wenn die Komponente so festgelegt ist, dass sie lokal installiert oder aus der Quelle ausgeführt wird. Die RemoveIniValues-Aktion entfernt .ini Dateiinformationen, die einer Komponente in der [IniFile-Tabelle zugeordnet wurden.](inifile-table.md) Diese Aktion entfernt auch .ini Dateiinformationen, wenn die Informationen von der [WriteIniValues-Aktion](writeinivalues-action.md) geschrieben wurden und die Deinstallation der Komponente geplant ist.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die [InstallValidate](installvalidate-action.md) -Aktion muss vor der RemoveIniValues-Aktion aufgerufen werden. Wenn eine " [Write](writeinivalues-action.md) "-Aktion in der Sequenz verwendet wird, muss Sie nach "RemoveIniValues" angezeigt werden.
+Die [InstallValidate-Aktion](installvalidate-action.md) muss vor der RemoveIniValues-Aktion aufgerufen werden. Wenn eine [WriteIniValues-Aktion](writeinivalues-action.md) in der Sequenz verwendet wird, muss sie nach RemoveIniValues angezeigt werden.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten    |
+| Feld | Beschreibung der Aktionsdaten    |
 |-------|-------------------------------|
-| \[1\] | Bezeichner der INI-Datei.      |
-| \[2\] | Der Schlüssel Abschnitt der INI-Datei.     |
-| \[3\] | Das Element wurde aus der INI-Datei entfernt.  |
-| \[4\] | Der Wert wurde aus der INI-Datei entfernt. |
+| \[1\] | Bezeichner .ini Datei.      |
+| \[2\] | Ein .ini Dateischlüsselabschnitt.     |
+| \[3\] | Aus der .ini entferntes Element.  |
+| \[4\] | Aus der .ini entfernter Wert. |
 
 
 
@@ -38,13 +38,13 @@ Die [InstallValidate](installvalidate-action.md) -Aktion muss vor der RemoveIniV
 
 <dl> <dt>
 
-[Removeinifile-Tabelle](removeinifile-table.md)
+[RemoveIniFile-Tabelle](removeinifile-table.md)
 </dt> <dt>
 
-[INIFILE-Tabelle](inifile-table.md)
+[IniFile-Tabelle](inifile-table.md)
 </dt> <dt>
 
-[Aktion "Write-einivalues"](writeinivalues-action.md)
+[WriteIniValues-Aktion](writeinivalues-action.md)
 </dt> <dt>
 
 [InstallValidate](installvalidate-action.md)

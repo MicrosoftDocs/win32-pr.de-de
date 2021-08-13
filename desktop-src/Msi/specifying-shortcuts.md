@@ -1,45 +1,45 @@
 ---
-description: Die Verknüpfungs Tabelle und die zugehörigen Tabellen der Installations Datenbank enthalten Informationen, die für die Installation von Verknüpfungen erforderlich sind. Weitere Informationen finden Sie in der Gruppe "Programm Informationstabellen" und unter Bearbeiten der
+description: Die Verknüpfungstabelle und die zugehörigen Tabellen der Installationsdatenbank enthalten Informationen, die zum Installieren von Verknüpfungen erforderlich sind. Weitere Informationen finden Sie unter Program Information Tables Group (Programminformationstabellen) und Editing Installer Shortcuts (Verknüpfungen zum Bearbeiten des Installationsprogramms).
 ms.assetid: 0f3adf78-e650-414f-b85d-b53b986eafda
 title: Angeben von Verknüpfungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29edf10a51827880a67826320d7f8415e70ea52a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a67b43a104ee05b3711ac98395098acf9393faab8e046296e58d93df4d6b9218
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118624684"
 ---
 # <a name="specifying-shortcuts"></a>Angeben von Verknüpfungen
 
-Die Verknüpfungs [Tabelle](shortcut-table.md) und die zugehörigen Tabellen der Installations Datenbank enthalten Informationen, die für die Installation von Verknüpfungen erforderlich sind. Weitere Informationen finden Sie in der [Gruppe "Programm Informationstabellen](program-information-tables-group.md) " und unter [Bearbeiten](editing-installer-shortcuts.md)der
+Die [Verknüpfungstabelle](shortcut-table.md) und die zugehörigen Tabellen der Installationsdatenbank enthalten Informationen, die zum Installieren von Verknüpfungen erforderlich sind. Weitere Informationen finden Sie unter [Program Information Tables Group (Programminformationstabellen)](program-information-tables-group.md) und Editing Installer [Shortcuts (Verknüpfungen des Bearbeitungsinstallationsprogramms).](editing-installer-shortcuts.md)
 
-In diesem Abschnitt fügen Sie Informationen hinzu, die angekündigte und nicht angekündigte Verknüpfungen für das Notepad-Beispiel angeben.
+In diesem Abschnitt fügen Sie Informationen hinzu, die angekündigte und nicht angekündigte Verknüpfungen für das Editor Beispiel angeben.
 
-Öffnen Sie MNP2000.msi mit dem Datenbank-Editor, und geben Sie die folgenden Daten in die Verknüpfungs Tabelle ein.
+Öffnen Sie in Ihrem Datenbank-Editor MNP2000.msi, und geben Sie die folgenden Daten in die Tabelle Verknüpfung ein.
 
-[Verknüpfungs Tabelle](shortcut-table.md)
+[Verknüpfungstabelle](shortcut-table.md)
 
 
 
-| Abkürzung  | Verzeichnis\_ | Name         | Komponente\_ | Ziel             | Argumente | BESCHREIBUNG | Hotkey | Symbol\_         | IconIndex | ShowCmd | Wkdir |
+| Verknüpfung  | Verzeichnis\_ | Name         | Komponente\_ | Ziel             | Argumente | Beschreibung | Hotkey | Symbol\_         | IconIndex | ShowCmd | WkDir |
 |-----------|-------------|--------------|-------------|--------------------|-----------|-------------|--------|----------------|-----------|---------|-------|
-| sbaseball | Menudir     | Baseball.txt | Ball    | Ball           |           |             |        | Orca- \_icon.exe |           |         |       |
-| sconcert  | Menudir     | Concert.txt  | Konzert     | \[\#Concert.txt\]  |           |             |        |                |           |         |       |
-| sdance    | Menudir     | Dance.txt    | Abhängigkeit       | \[\#Dance.txt\]    |           |             |        |                |           |         |       |
-| sfußball | Menudir     | Football.txt | Verbandes    | \[\#Football.txt\] |           |             |        |                |           |         |       |
-| sHelp     | Menudir     | Help.txt     | Hilfe        | \[\#Help.txt\]     |           |             |        |                |           |         |       |
-| sjanuar  | Menudir     | January.txt  | January     | \[\#January.txt\]  |           |             |        |                |           |         |       |
-| snewyears | Menudir     | NewYears.txt | Newyears    | \[\#NewYears.txt\] |           |             |        |                |           |         |       |
-| SNotepad  | Menudir     | Redpark.exe  | Editor     | \[\#Redpark.exe\]  |           |             |        |                |           |         |       |
-| sInfo   | Menudir     | Readme.txt   | Editor     | \[\#Readme.txt\]   |           |             |        |                |           |         |       |
+| sBaseball | MENUDIR     | Baseball.txt | Baseball    | Baseball           |           |             |        | orca \_icon.exe |           |         |       |
+| sConcert  | MENUDIR     | Concert.txt  | Konzert     | \[\#Concert.txt\]  |           |             |        |                |           |         |       |
+| sDance    | MENUDIR     | Dance.txt    | Tanz       | \[\#Dance.txt\]    |           |             |        |                |           |         |       |
+| sFootball | MENUDIR     | Football.txt | Fußball    | \[\#Football.txt\] |           |             |        |                |           |         |       |
+| sHelp     | MENUDIR     | Help.txt     | Hilfe        | \[\#Help.txt\]     |           |             |        |                |           |         |       |
+| sJanuary  | MENUDIR     | January.txt  | January     | \[\#January.txt\]  |           |             |        |                |           |         |       |
+| sNewYears | MENUDIR     | NewYears.txt | NewYears    | \[\#NewYears.txt\] |           |             |        |                |           |         |       |
+| sNotepad  | MENUDIR     | Redpark.exe  | Editor     | \[\#Redpark.exe\]  |           |             |        |                |           |         |       |
+| sReadme   | MENUDIR     | Readme.txt   | Editor     | \[\#Readme.txt\]   |           |             |        |                |           |         |       |
 
 
 
  
 
-Die Beispiel Installation erfordert die Installation einer angekündigten Verknüpfung für das Baseball Feature. Hierfür muss ein Schlüssel für die Symboltabelle in der Symbol Spalte der Verknüpfungs Tabelle angegeben werden \_ . Im Rahmen dieses Beispiels können Sie das Symbol für den mit dem Windows Installer SDK bereitgestellten Daten Bank Editor für Orca kopieren. Exportieren Sie die [Symboltabelle](icon-table.md) aus Orca.msi, und führen Sie diese Tabelle dann mithilfe von Orca oder einem anderen Mergetool in der MNP2000.msi Datenbank zusammen. Von Orca wird auch ein Verzeichnis mit dem Namen Icon im Verzeichnis erstellt, das MNP2000.msi enthält, und die binäre Symbol Datei "Orca \_icon.exe. ibd" wird hinzugefügt. Informationen finden Sie in der Datenspalte in der Symboltabelle. Die fertige Symboltabelle sollte wie folgt aussehen, wenn Sie in Orca angezeigt wird.
+Die Beispielinstallation muss die Installation einer angekündigten Verknüpfung für das Baseball-Feature aktivieren. Dies erfordert die Angabe eines Schlüssels für die Symboltabelle in der \_ Symbolspalte der Verknüpfungstabelle. Für dieses Beispiel können Sie das Symbol für den Orca-Datenbank-Editor kopieren, der mit dem Windows Installer SDK bereitgestellt wird. Exportieren Sie die [Tabelle Symbol](icon-table.md) aus Orca.msi, und führen Sie diese Tabelle dann mit orca oder einem anderen Mergetool in die MNP2000.msi-Datenbank zusammen. Orca erstellt außerdem ein Verzeichnis mit dem Namen Icon in dem Verzeichnis, das MNP2000.msi enthält, und fügt die Binärdatendatei orca \_icon.exe.ibd hinzu. Weitere Informationen finden Sie in der Spalte Daten in der Tabelle Symbol. Die fertige Symboltabelle sollte bei der Anzeige in Orca wie folgt aussehen.
 
 [Symboltabelle](icon-table.md)
 
@@ -47,7 +47,7 @@ Die Beispiel Installation erfordert die Installation einer angekündigten Verkn�
 
 | Name           | Daten            |
 |----------------|-----------------|
-| Orca- \_icon.exe | \[Binärdaten\] |
+| orca \_icon.exe | \[Binärdaten\] |
 
 
 
@@ -59,7 +59,7 @@ Die Beispiel Installation erfordert die Installation einer angekündigten Verkn�
 
 <dl> <dt>
 
-[Bearbeiten von Installationsprogramm Kombinationen](editing-installer-shortcuts.md)
+[Bearbeiten von Installerverknüpfungen](editing-installer-shortcuts.md)
 </dt> </dl>
 
  

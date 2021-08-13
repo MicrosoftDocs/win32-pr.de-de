@@ -1,11 +1,11 @@
 ---
-title: MS-IIS-FTP-Root-Attribut
-description: Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS-IIS-FTP-dir verwendet, um das Start Verzeichnis des FTP-Benutzers zu bestimmen.
+title: ms-IIS-FTP-Root-Attribut
+description: Dieses Attribut bestimmt die Dateiserverfreigabe. Sie wird in Verbindung mit ms-IIS-FTP-Dir verwendet, um das Stammverzeichnis des FTP-Benutzers zu bestimmen.
 ms.assetid: b86dcafb-0b0d-4225-924c-690f739092a8
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-IIS-FTP-Root-Attribut
-- AD-Schema des msIIS-FTPRoot-Attributs
+- MS-IIS-FTP-Root-Attribut AD-Schema
+- MSIIS-FTPRoot-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e7c55980b8b08865889f7567fa6bdb4dcf7bde1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: aa4def81aa39c9df5aaa336a05514ab4581aa14533917fad008fc9c49d32d13e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118682524"
 ---
-# <a name="ms-iis-ftp-root-attribute"></a>MS-IIS-FTP-Root-Attribut
+# <a name="ms-iis-ftp-root-attribute"></a>ms-IIS-FTP-Root-Attribut
 
-Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS-IIS-FTP-dir verwendet, um das Start Verzeichnis des FTP-Benutzers zu bestimmen.
+Dieses Attribut bestimmt die Dateiserverfreigabe. Sie wird in Verbindung mit ms-IIS-FTP-Dir verwendet, um das Stammverzeichnis des FTP-Benutzers zu bestimmen.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| CN                | MS-IIS-FTP-Root                                                                                                                 |
-| LDAP-Display-Name | msIIS-FTPRoot                                                                                                                   |
-| Size              | 30-50 Zeichen (15-25 Unicode-Zeichen für jede Eigenschaft)                                                                   |
-| Berechtigung aktualisieren  | Domänen Administrator & lokales System                                                                                             |
-| Aktualisierungshäufigkeit  | Diese Eigenschaft wird festgelegt, wenn der Administrator die Website erstellt und die FTP-Isolation festlegt. Es wird nur selten geändert. |
+| CN                | ms-IIS-FTP-Root                                                                                                                 |
+| Ldap-Anzeigename | msIIS-FTPRoot                                                                                                                   |
+| Size              | 30 bis 50 Zeichen (15 bis 25 Unicode-Zeichen für jede Eigenschaft)                                                                   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator & lokales System                                                                                             |
+| Updatehäufigkeit  | Diese Eigenschaft wird festgelegt, wenn der Administrator die Website erstellt und die FTP-Isolation festlegt. Danach ändert sich dies nur selten. |
 | Attribute-Id      | 1.2.840.113556.1.4.1785                                                                                                         |
 | System-ID-GUID    | 2a7827a4-1483-49a5-9d84-52e3812156b4                                                                                            |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                                                                     |
@@ -42,13 +42,13 @@ Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 1                                 |
 | Range-Upper            | 256                               |
 | Search-Flags           | 0x00000000                        |
@@ -77,11 +77,11 @@ Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 1                                 |
 | Range-Upper            | 256                               |
 | Search-Flags           | 0x00000000                        |
@@ -98,11 +98,11 @@ Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 1                                 |
 | Range-Upper            | 256                               |
 | Search-Flags           | 0x00000000                        |
@@ -119,11 +119,11 @@ Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 1                                 |
 | Range-Upper            | 256                               |
 | Search-Flags           | 0x00000000                        |
@@ -140,11 +140,11 @@ Dieses Attribut bestimmt die Dateiserver Freigabe. Sie wird in Verbindung mit MS
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 1                                 |
 | Range-Upper            | 256                               |
 | Search-Flags           | 0x00000000                        |

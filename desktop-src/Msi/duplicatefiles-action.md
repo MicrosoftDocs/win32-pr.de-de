@@ -1,47 +1,47 @@
 ---
-description: Die duplicatefiles-Aktion dupliziert Dateien, die von der InstallFiles-Aktion installiert wurden. Die doppelten Dateien können in dasselbe Verzeichnis mit einem anderen Namen oder in ein anderes Verzeichnis mit dem ursprünglichen Namen kopiert werden.
+description: Die DuplicateFiles-Aktion dupliziert Dateien, die von der InstallFiles-Aktion installiert wurden. Die duplizierten Dateien können in dasselbe Verzeichnis mit einem anderen Namen oder in ein anderes Verzeichnis mit dem ursprünglichen Namen kopiert werden.
 ms.assetid: 51cc0b3f-aa01-4f4d-9a4d-add832698061
-title: Duplicatefiles-Aktion
+title: DuplicateFiles-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 711f6bbd4716beb227dea348826bc302e2f4ba2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7969440aed4361ad264baa0d30a9c1d16f0ca673c72a2a7c3c1326e5d393ffc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118637712"
 ---
-# <a name="duplicatefiles-action"></a>Duplicatefiles-Aktion
+# <a name="duplicatefiles-action"></a>DuplicateFiles-Aktion
 
-Die duplicatefiles-Aktion dupliziert Dateien, die von der [InstallFiles](installfiles-action.md) -Aktion installiert wurden. Die doppelten Dateien können in dasselbe Verzeichnis mit einem anderen Namen oder in ein anderes Verzeichnis mit dem ursprünglichen Namen kopiert werden.
+Die DuplicateFiles-Aktion dupliziert Dateien, die von der [InstallFiles-Aktion installiert](installfiles-action.md) wurden. Die duplizierten Dateien können in dasselbe Verzeichnis mit einem anderen Namen oder in ein anderes Verzeichnis mit dem ursprünglichen Namen kopiert werden.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion "duplicatefiles" muss nach der [Aktion "InstallFiles](installfiles-action.md)" erfolgen. Die duplicatefiles-Aktion muss auch nach der [PATCHFILES-Aktion](patchfiles-action.md) erfolgen, um zu verhindern, dass die nicht gepatchte Version der Datei duplizieren.
+Die DuplicateFiles-Aktion muss nach der [InstallFiles-Aktion kommen.](installfiles-action.md) Die DuplicateFiles-Aktion muss auch nach der [PatchFiles-Aktion](patchfiles-action.md) angezeigt werden, um zu verhindern, dass die ungepatchte Version der Datei dupliziert wird.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten                       |
+| Feld | Beschreibung der Aktionsdaten                       |
 |-------|--------------------------------------------------|
 | \[1\] | Bezeichner der duplizierten Datei.                   |
 | \[6\] | Größe der duplizierten Datei.                         |
-| \[9\] | Der Bezeichner des Verzeichnisses, das die doppelte Datei enthält. |
+| \[9\] | Bezeichner des Verzeichnisses, das eine duplizierte Datei enthält. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die duplicatefiles-Aktion verarbeitet einen [duplicatefile-Tabellen](duplicatefile-table.md) Eintrag nur dann, wenn die mit diesem Eintrag verknüpfte Komponente lokal installiert wird. Weitere Informationen finden Sie unter [Component Table](component-table.md).
+Die DuplicateFiles-Aktion verarbeitet einen [DuplicateFile-Tabelleneintrag](duplicatefile-table.md) nur, wenn die mit diesem Eintrag verknüpfte Komponente lokal installiert wird. Weitere Informationen finden Sie in der [Komponententabelle](component-table.md).
 
-Die Zeichenfolge im Feld "destfolder" ist ein Eigenschaftsname, dessen Wert in einen voll qualifizierten Pfad aufgelöst werden soll. Diese Eigenschaft kann entweder ein beliebiger Verzeichniseintrag in der [Verzeichnis](directory-table.md) Tabelle, eine vordefinierte Ordner Eigenschaft (z. b.[**CommonFilesFolder**](commonfilesfolder.md)) oder eine Eigenschaft sein, die von einem beliebigen Eintrag in der [AppSearch](appsearch-table.md) -Tabelle festgelegt wird. Wenn die **destfolder** -Eigenschaft nicht als gültiger Pfad ausgewertet wird, führt die duplicatefiles-Aktion für diesen Eintrag keine Aktion aus.
+Die Zeichenfolge im Feld DestFolder ist ein Eigenschaftsname, dessen Wert in einen vollqualifizierten Pfad aufzulösen ist. Diese Eigenschaft kann entweder einer der [](directory-table.md) Verzeichniseinträge in der Directory-Tabelle, eine vordefinierte Ordnereigenschaft (z. B.[**CommonFilesFolder)**](commonfilesfolder.md)oder eine Eigenschaft sein, die durch einen beliebigen Eintrag in der [AppSearch-Tabelle](appsearch-table.md) festgelegt wird. Wenn die **DestFolder-Eigenschaft** nicht zu einem gültigen Pfad ausgewertet wird, führt die DuplicateFiles-Aktion nichts für diesen Eintrag aus.
 
-Wenn der Name der Zieldatei in der Spalte destname der duplicatefile-Tabelle leer bleibt, entspricht der Name der Ziel Datei dem ursprünglichen Dateinamen.
+Wenn der Name der Zieldatei in der Spalte DestName der DuplicateFile-Tabelle leer gelassen wird, ist der Name der Zieldatei mit dem ursprünglichen Dateinamen identisch.
 
-Dateien, die von der duplicatefiles-Aktion installiert werden, werden bei Bedarf von der Aktion " [RemoveDuplicateFiles](removeduplicatefiles-action.md) " entfernt.
+Dateien, die von der DuplicateFiles-Aktion installiert werden, werden gegebenenfalls durch die [RemoveDuplicateFiles-Aktion](removeduplicatefiles-action.md) entfernt.
 
  
 
