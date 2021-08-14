@@ -1,30 +1,30 @@
 ---
-description: Im folgenden Beispiel wird eine nicht standardmäßige Zertifikat Ketten-Engine erstellt und installiert. Die-Engine wird zum Erstellen von Zertifikat Ketten für jedes der Zertifikate in einem Zertifikat Speicher verwendet.
+description: Im folgenden Beispiel wird eine nicht standardmäßige Zertifikatketten-Engine erstellt und installiert. Die Engine wird verwendet, um Zertifikatketten für jedes der Zertifikate in einem Zertifikatspeicher zu erstellen.
 ms.assetid: 960f2bb9-130f-494f-9af0-0ab8ae3eb6e2
-title: 'Beispiel C-Programm: Erstellen einer Zertifikat Kette'
+title: 'C-Beispielprogramm: Erstellen einer Zertifikatkette'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1857540f16cddfa754a0765d273a944e9a4a9044
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59bbc8e447a23a950280cb4cb9b9f20e7a7d4d09bb2384de19ca510c403dedd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765564"
 ---
-# <a name="example-c-program-creating-a-certificate-chain"></a>Beispiel C-Programm: Erstellen einer Zertifikat Kette
+# <a name="example-c-program-creating-a-certificate-chain"></a>C-Beispielprogramm: Erstellen einer Zertifikatkette
 
-Im folgenden Beispiel wird eine nicht standardmäßige Zertifikat Ketten-Engine erstellt und installiert. Die-Engine wird zum Erstellen von Zertifikat Ketten für jedes der Zertifikate in einem [*Zertifikat Speicher*](../secgloss/c-gly.md)verwendet.
+Im folgenden Beispiel wird eine nicht standardmäßige Zertifikatketten-Engine erstellt und installiert. Die Engine wird verwendet, um Zertifikatketten für jedes der Zertifikate in einem [*Zertifikatspeicher*](../secgloss/c-gly.md)zu erstellen.
 
-In diesem Beispiel werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) veranschaulicht:
 
--   Vorbereiten der Erstellung einer nicht standardmäßigen Zertifikat Ketten-Engine durch Deklarieren und Initialisieren einer Datenstruktur der Datenstruktur der Zertifikat [**\_ Ketten- \_ Engine \_**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_chain_engine_config) .
--   Erstellen der Suchmaschine mithilfe von " [**certkreatecertificatechainengine**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcreatecertificatechainengine)".
--   Verwenden von [**certoptsystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea) , um den eigenen Systemspeicher zu öffnen.
--   Abrufen aller Zertifikate aus dem geöffneten Speicher mithilfe von [**certenumcertifikatesinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore) in einer Schleife.
--   Rufen Sie für jedes Zertifikat im geöffneten Speicher den Antragsteller Namen mithilfe von [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)aus dem Zertifikat ab.
--   Das Aufbauen einer Zertifikat Kette für jedes Zertifikat mit [**CertGetCertificateChain**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatechain).
--   Erstellen eines Duplikats der Zertifikat Kette mithilfe von [**certduplicatecertificatechain**](/windows/desktop/api/Wincrypt/nf-wincrypt-certduplicatecertificatechain).
--   Verwenden von " [**certfreecertificatechain**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatechain) " zum Freigeben der einzelnen Ketten, bevor die nächste Kette erstellt wird.
+-   Vorbereiten der Erstellung einer nicht standardmäßigen Zertifikatketten-Engine durch Deklarieren und Initialisieren einer [**CERT \_ CHAIN ENGINE \_ \_ CONFIG-Datenstruktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_chain_engine_config)
+-   Erstellen der Suchmaschine mit [**CertCreateCertificateChainEngine**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcreatecertificatechainengine).
+-   Verwenden sie [**CertOpenSystemStore,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea) um den Systemspeicher My zu öffnen.
+-   Abrufen aller Zertifikate aus dem geöffneten Speicher mithilfe von [**CertEnumCertificatesInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore) in einer Schleife.
+-   Ruft für jedes Zertifikat im geöffneten Speicher mithilfe von [**CertGetNameString**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)den Antragstellernamen aus dem Zertifikat ab.
+-   Erstellen einer Zertifikatkette für jedes Zertifikat mithilfe von [**CertGetCertificateChain**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatechain).
+-   Erstellen eines Duplikats der Zertifikatkette mithilfe von [**CertDuplicateCertificateChain**](/windows/desktop/api/Wincrypt/nf-wincrypt-certduplicatecertificatechain).
+-   Verwenden von [**CertFreeCertificateChain,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatechain) um jede Kette freizugeben, bevor die nächste Kette erstellt wird.
 
 
 ```C++

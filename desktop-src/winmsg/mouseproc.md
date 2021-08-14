@@ -1,7 +1,7 @@
 ---
 UID: ''
-title: Mousproc-Rückruffunktion
-description: Das System ruft diese Funktion auf, wenn eine Anwendung eine Nachrichten Funktion aufruft und eine zu verarbeitende Maus Nachricht vorhanden ist.
+title: MouseProc-Rückruffunktion
+description: Das System ruft diese Funktion auf, wenn eine Anwendung eine Nachrichtenfunktion aufruft und eine Mausnachricht verarbeitet werden soll.
 old-location: ''
 ms.assetid: na
 ms.date: 04/05/2019
@@ -32,22 +32,22 @@ api_name: ''
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: abdd74b5fed93e2c2ddbc8d037a657b779a62a05
-ms.sourcegitcommit: 61bde60d4c3bc09defc3dcdb64c0ddadf52b214e
+ms.openlocfilehash: fa1528ce2910e563e3fe930fe19960aa43b437b22c53c03d0febc51b98bcc55b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "106338654"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200691"
 ---
-# <a name="mouseproc-function"></a>Mousproc-Funktion
+# <a name="mouseproc-function"></a>MouseProc-Funktion
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Eine von der Anwendung definierte oder Bibliotheks definierte Rückruffunktion, die mit der [SetWindowsHookEx](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) -Funktion verwendet wird.
-Das System ruft diese Funktion immer dann auf, wenn eine Anwendung die [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage) -oder die [Peer Message](/windows/desktop/api/winuser/nf-winuser-peekmessagew) -Funktion aufruft und eine zu verarbeitende Maus Nachricht vorhanden ist.
+Eine anwendungs- oder bibliotheksdefinierte Rückruffunktion, die mit der [SetWindowsHookEx-Funktion verwendet](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) wird.
+Das System ruft diese Funktion auf, wenn eine Anwendung die [GetMessage-](/windows/desktop/api/winuser/nf-winuser-getmessage) oder [PeekMessage-Funktion](/windows/desktop/api/winuser/nf-winuser-peekmessagew) aufruft und eine Mausnachricht verarbeitet werden soll.
 
-Der **HookProc** -Typ definiert einen Zeiger auf diese Rückruffunktion.
-**Mouseproc** ist ein Platzhalter für den Anwendungs definierten oder Bibliotheks definierten Funktionsnamen.
+Der **HOOKPROC-Typ** definiert einen Zeiger auf diese Rückruffunktion.
+**MouseProc ist** ein Platzhalter für den anwendungs- oder bibliotheksdefinierten Funktionsnamen.
 
 ```cpp
 LRESULT CALLBACK MouseProc(
@@ -63,53 +63,53 @@ LRESULT CALLBACK MouseProc(
 
 Typ: **int**
 
-Ein Code, den die Hook-Prozedur verwendet, um zu bestimmen, wie die Nachricht verarbeitet werden soll.
-Wenn *nCode* kleiner als 0 (null) ist, muss die Hook-Prozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex) -Funktion übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
+Ein Code, der von der Hookprozedur verwendet wird, um zu bestimmen, wie die Nachricht zu verarbeiten ist.
+Wenn *nCode* kleiner als 0 (null) ist, muss die Hookprozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx-Funktion](/windows/desktop/api/winuser/nf-winuser-callnexthookex) übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
 Dieser Parameter kann einen der folgenden Werte annehmen.
 
 | Wert | Bedeutung |
 |-------|---------|
-| **HC_ACTION** 0 | Der *wParam* -Parameter und der *LPARAM* -Parameter enthalten Informationen über eine Maus Meldung. |
-| **HC_NOREMOVE** 3 | Der *wParam* -Parameter und der *LPARAM* -Parameter enthalten Informationen über eine Maus Meldung, und die Maus Nachricht wurde nicht aus der Nachrichten Warteschlange entfernt. (Eine Anwendung, die die Funktion " **Peer Message** " genannt wird und das **PM_NOREMOVE** Flag angibt.) |
+| **HC_ACTION** 0 | Die *Parameter wParam* *und lParam* enthalten Informationen zu einer Mausmeldung. |
+| **HC_NOREMOVE** 3 | Die *Parameter wParam* und *lParam* enthalten Informationen zu einer Mausmeldung, und die Mausnachricht wurde nicht aus der Nachrichtenwarteschlange entfernt. (Eine Anwendung namens **PeekMessage-Funktion,** die das **PM_NOREMOVE** an.) |
 
 ### <a name="wparam-in"></a>wParam [in]
 
-Typ: **wParam**
+Typ: **WPARAM**
 
-Der Bezeichner der Maus Nachricht.
+Der Bezeichner der Mausmeldung.
 
-### <a name="lparam-in"></a>LParam [in]
+### <a name="lparam-in"></a>lParam [in]
 
 Typ: **LPARAM**
 
-Ein Zeiger auf eine [mouethuokstruct](/windows/desktop/api/winuser/ns-winuser-mousehookstruct) -Struktur.
+Ein Zeiger auf eine [MOUSEHOOKSTRUCT-Struktur.](/windows/desktop/api/winuser/ns-winuser-mousehookstruct)
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **LRESULT**
 
-Wenn *nCode* kleiner als 0 (null) ist, muss die Hook-Prozedur den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
+Wenn *nCode kleiner* als 0 (null) ist, muss die Hookprozedur den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
 
-Wenn *nCode* größer als oder gleich 0 (null) ist und die Hook-Prozedur die Nachricht nicht verarbeitet hat, wird dringend empfohlen, **CallNextHookEx** aufzurufen und den zurückgegebenen Wert zurückzugeben. Andernfalls erhalten andere Anwendungen, die [WH_MOUSE](about-hooks.md) Hooks installiert haben, keine Hook-Benachrichtigungen und können sich daher fälschlicherweise Verhalten.
-Wenn die Hook-Prozedur die Nachricht verarbeitet hat, kann Sie einen Wert ungleich 0 (null) zurückgeben, um zu verhindern, dass das System die Nachricht an die Zielfenster Prozedur übergibt.
+Wenn *nCode* größer oder gleich 0 (null) ist und die Hookprozedur die Nachricht nicht verarbeiten konnte, wird dringend empfohlen, **CallNextHookEx** auf aufruft und den zurückgegebenen Wert zurückgibt. Andernfalls erhalten andere [](about-hooks.md) Anwendungen, die WH_MOUSE Hooks installiert haben, keine Hookbenachrichtigungen und verhalten sich möglicherweise falsch.
+Wenn die Hookprozedur die Nachricht verarbeitet hat, wird möglicherweise ein Wert ungleich 0 (null) zurückgeben, um zu verhindern, dass das System die Nachricht an die Zielfensterprozedur übergehen kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung installiert die Hook-Prozedur, indem Sie den WH_MOUSE Hooktyp und einen Zeiger auf die Hook-Prozedur in einem Aufrufen der **SetWindowsHookEx** -Funktion angibt.
+Eine Anwendung installiert die Hookprozedur, indem WH_MOUSE Hooktyp und einen Zeiger auf die Hookprozedur in einem Aufruf der **SetWindowsHookEx-Funktion** angeben.
 
-Die Hook-Prozedur darf keine [WH_JOURNALPLAYBACK](about-hooks.md) Rückruffunktion installieren.
+Die Hookprozedur darf keine [WH_JOURNALPLAYBACK](about-hooks.md) Rückruffunktion installieren.
 
 Dieser Hook kann im Kontext des Threads aufgerufen werden, der ihn installiert hat.
-Der-Befehl wird aufgerufen, indem eine Nachricht an den Thread gesendet wird, der den Hook installiert hat.
-Der Thread, der den Hook installiert hat, muss daher über eine Nachrichten Schleife verfügen.
+Der Aufruf erfolgt durch Senden einer Nachricht an den Thread, der den Hook installiert hat.
+Daher muss der Thread, der den Hook installiert hat, über eine Meldungsschleife verfügen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex)
 
 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)
 
-[Mouselhuokstruct](/windows/desktop/api/winuser/ns-winuser-mousehookstruct)
+[MOUSEHOOKSTRUCT](/windows/desktop/api/winuser/ns-winuser-mousehookstruct)
 
 [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagew)
 

@@ -1,37 +1,37 @@
 ---
-description: Ist das Windows-Modul, das die interaktive Anmeldung für eine Anmelde Sitzung ausführt. Das Winlogon-Verhalten kann durch Implementieren und Registrieren eines Anmelde Informationsanbieters angepasst werden.
+description: Das Windows Modul, das die interaktive Anmeldung für eine Anmeldesitzung ausführt. Das Winlogon-Verhalten kann angepasst werden, indem ein Anmeldeinformationsanbieter implementiert und registriert wird.
 ms.assetid: 6721367b-e200-4297-897b-4772226203b0
-title: Winlogon-und Anmelde Informationsanbieter
+title: Winlogon- und Anmeldeinformationsanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce72e533f7cee6bc89bc2f995b94b7881448734d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5a110c741289de9fdd08f1f5d5c820e9695f057b1d74db2e56f014f5da28eb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785770"
 ---
-# <a name="winlogon-and-credential-providers"></a>Winlogon-und Anmelde Informationsanbieter
+# <a name="winlogon-and-credential-providers"></a>Winlogon- und Anmeldeinformationsanbieter
 
-[*Winlogon*](../secgloss/w-gly.md) ist das Windows-Modul, das die interaktive Anmeldung für eine [*Anmelde Sitzung*](../secgloss/l-gly.md)ausführt. Das Winlogon-Verhalten kann durch Implementieren und Registrieren eines Anmelde Informationsanbieters angepasst werden.
+[*Winlogon*](../secgloss/w-gly.md) ist das Windows Modul, das die interaktive Anmeldung für eine [*Anmeldesitzung*](../secgloss/l-gly.md)ausführt. Das Winlogon-Verhalten kann angepasst werden, indem ein Anmeldeinformationsanbieter implementiert und registriert wird.
 
-Weitere Informationen zum Implementieren eines Anmelde Informationsanbieters finden Sie in den folgenden Themen.
+Informationen zum Implementieren eines Anmeldeinformationsanbieter finden Sie in den folgenden Themen.
 
 
 
 | Thema                                                                                                           | BESCHREIBUNG                                                                                            |
 |-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [Vom Anmelde Informationsanbieter gesteuerte Windows-Anmeldevorgang](https://go.microsoft.com/fwlink/?LinkId=717287)<br/> | Übersicht über die Winlogon-und Anmelde Informationsanbieter-Architektur und einen Beispiel-Anmelde Informationsanbieter.<br/> |
-| [Shellschnittstellen](../shell/samples-usingthumbnailproviders.md)<br/>                                                                | Referenz zur Anmelde Informationsanbieter-Schnittstelle.<br/>                                                    |
-| [Anmelde Informationsanbieter in Windows 10](credential-providers-in-windows.md)<br/>                            | Drittanbieter-Anmelde Informationsanbieter und System Anmelde Informationsanbieter in Windows 10.<br/>             |
+| [Anmeldeinformationsanbieter-gesteuerte Windows-Anmeldung](https://go.microsoft.com/fwlink/?LinkId=717287)<br/> | Übersicht über die Winlogon- und Anmeldeinformationsanbieter-Architektur und eine Beispiel-Anmeldeinformationsanbieter.<br/> |
+| [Shellschnittstellen](../shell/samples-usingthumbnailproviders.md)<br/>                                                                | Anmeldeinformationsanbieter Schnittstellenreferenz.<br/>                                                    |
+| [Anmeldeinformationsanbieter in Windows 10](credential-providers-in-windows.md)<br/>                            | Anbieter von Anmeldeinformationen von Drittanbietern und Anbieter von Systemanmeldeinformationen in Windows 10.<br/>             |
 
 
 
  
 
-Eine Beispiel Implementierung für den Anmelde Informationsanbieter finden Sie im Beispiel im Windows SDK-Installationsverzeichnis unter \\ Samples \\ Security \\ kredentialprovider.
+Ein Beispiel Anmeldeinformationsanbieter Implementierung finden Sie im Beispiel im Installationsverzeichnis des Windows SDK unter \\ Samples \\ Security \\ CredentialProvider.
 
-**Windows Server 2003 und Windows XP:** Anmelde Informationsanbieter werden nicht unterstützt. Weitere Informationen zum Anpassen von Winlogon finden Sie unter [Winlogon und Gina](winlogon-and-gina.md).
+**Windows Server 2003 und Windows XP:** Anmeldeinformationsanbieter werden nicht unterstützt. Informationen zum Anpassen von Winlogon finden Sie unter [Winlogon und GINA.](winlogon-and-gina.md)
 
  
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 6dd0d1159132e594b6d48ea6799da5846eeb626e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8023b9db00834b10fcce84510df5ccbafec0c7a2f6654ef73d71754e7c563044
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118365580"
 ---
 # <a name="iespstart-method"></a>IESP::Start-Methode
 
@@ -49,7 +49,7 @@ Zeiger auf den Namen der [*Erfassungsdatei,*](c.md) die zum Speichern der Netzwe
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -57,18 +57,18 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                            |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung wird angehalten und muss beendet werden, bevor sie neu gestartet werden kann. Rufen [Sie IESP::Stop auf,](iesp-stop.md) um die Erfassung zu beenden.<br/> |
-| <dl> <dt>**NMERR-ERFASSUNG \_**</dt> </dl>       | Die Erfassung wurde bereits gestartet.<br/>                                                                                             |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IESP::Connect auf,](iesp-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/>          |
-| <dl> <dt>**NMERR \_ NICHT \_ ESP**</dt> </dl>        | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IESP::Connect-Methode.](iesp-connect.md)<br/>                              |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung wird angehalten und muss beendet werden, bevor sie neu gestartet werden kann. Rufen Sie [IESP::Stop](iesp-stop.md) auf, um die Erfassung zu beenden.<br/> |
+| <dl> <dt>**\_NMERR-ERFASSUNG**</dt> </dl>       | Die Erfassung wurde bereits gestartet.<br/>                                                                                             |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IESP::Verbinden](iesp-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/>          |
+| <dl> <dt>**NMERR \_ NOT \_ ESP**</dt> </dl>        | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IESP::Verbinden-Methode.](iesp-connect.md)<br/>                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Speicherort der [*Erfassungsdatei wird*](c.md) in der Windows-Registrierung angegeben. Sie können jedoch Netzwerkmonitor verzeichnisspeicherort ändern.
+Der Speicherort der [*Erfassungsdatei*](c.md) wird in der Windows-Registrierung angegeben. Sie können jedoch Netzwerkmonitor verwenden, um den Verzeichnisspeicherort zu ändern.
 
 Wenn Sie die Erfassung mithilfe der Methoden IESP::Start und [IESP::Stop](iesp-stop.md) neu starten, müssen Sie die [IESP::Configure-Methode](iesp-configure.md) aufrufen, um die Verbindung jedes Mal neu zu konfigurieren, wenn Sie IESP::Start aufrufen, um die Erfassungsdaten neu zu starten. Wenn Sie die Erfassung mit diesen drei Methoden starten und beenden, wird bei jedem Start der Erfassung eine neue Erfassungsdatei erstellt.
 
@@ -81,7 +81,7 @@ Wenn Sie die Erfassung mithilfe der Methoden IESP::Start und [IESP::Stop](iesp-s
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -100,7 +100,7 @@ Wenn Sie die Erfassung mithilfe der Methoden IESP::Start und [IESP::Stop](iesp-s
 [IESP::Configure](iesp-configure.md)
 </dt> <dt>
 
-[IESP::Connect](iesp-connect.md)
+[IESP::Verbinden](iesp-connect.md)
 </dt> <dt>
 
 [IESP::P ause](iesp-pause.md)

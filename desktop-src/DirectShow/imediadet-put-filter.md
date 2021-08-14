@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ Filter-Methode gibt einen Quell Filter an, der vom Medien Detektor verwendet werden soll.
+description: Die put \_ Filter-Methode gibt einen Quellfilter an, der von der Medienerkennung verwendet werden soll.
 ms.assetid: 59382cb0-c472-48b8-9cc5-52f9dbc61a07
-title: Imediadet::p ut_Filter-Methode (qedit. h)
+title: IMediaDet::p ut_Filter-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,24 +14,24 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: dd07ee3e2a18dcceae752e3923fd5fbdc88c0313
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a118baae251bd4456dfe0097afa091e0084e41ad96d96c9847006b8ce9c58d82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118398117"
 ---
-# <a name="imediadetput_filter-method"></a>Imediadet::p UT- \_ Filter Methode
+# <a name="imediadetput_filter-method"></a>IMediaDet::p ut-Filtermethode \_
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `put_Filter` Methode gibt einen Quell Filter an, der vom Medien Detektor verwendet werden soll.
+Die `put_Filter` -Methode gibt einen Quellfilter für die zu verwendende Medienerkennung an.
 
 > [!IMPORTANT]
-> Fügen Sie den Quell Filter nicht zu Ihrem eigenen Filter Diagramm hinzu, oder verwenden Sie einen Filter, der bereits in einem Filter Diagramm vorhanden ist. Das Medien Erkennungs Objekt erstellt automatisch ein internes Filter Diagramm, und das Platzieren des Filters in einem anderen Diagramm kann zu unerwarteten Ergebnissen führen.
+> Fügen Sie den Quellfilter nicht Ihrem eigenen Filterdiagramm hinzu, oder verwenden Sie keinen Filter, der sich bereits in einem Filterdiagramm befindet. Das Medienerkennungsobjekt erstellt automatisch einen internen Filtergraphen, und das Setzen des Filters in ein anderes Diagramm kann zu unerwarteten Ergebnissen führen.
 
  
 
@@ -50,40 +50,40 @@ HRESULT put_Filter(
 
 <dl> <dt>
 
-*NewVal* \[ in\]
+*newVal* \[ In\]
 </dt> <dd>
 
-Zeiger auf die **IUnknown** -Schnittstelle des Quell Filters.
+Zeiger auf die **IUnknown-Schnittstelle** des Quellfilters.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                     |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                             |
-| <dl> <dt>**E \_ nointerface**</dt> </dl> | *NewVal* verweist nicht auf einen Filter.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument.<br/>           |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl> | *newVal* verweist nicht auf einen Filter.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | **NULL-Zeigerargument.**<br/>           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei den meisten Anwendungen ist es einfacher, die [**\_ Dateiname-Methode imediadet::p UT**](imediadet-put-filename.md) mit dem Namen einer Quelldatei aufzurufen.
+Für die meisten Anwendungen ist es einfacher, die [**Methode IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) mit dem Namen einer Quelldatei aufzurufen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -93,19 +93,19 @@ Bei den meisten Anwendungen ist es einfacher, die [**\_ Dateiname-Methode imedia
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

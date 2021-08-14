@@ -1,19 +1,19 @@
 ---
-title: Zuordnung von Dienst Beschreibungs Datentypen zu IDL-Datentypen
-description: Die folgende Tabelle zeigt die Zuordnung der in einer Dienst Beschreibung angegebenen XML-Datentypen zu den entsprechenden Datentypen, die in IDL verwendet werden.
+title: Zuordnen von Dienstbeschreibungsdatentypen zu IDL-Datentypen
+description: Die folgende Tabelle zeigt die Zuordnung der in einer Dienstbeschreibung angegebenen XML-Datentypen zu den entsprechenden in IDL verwendeten Datentypen.
 ms.assetid: eeb86177-8c3b-47f1-bbe1-f9aabd2dde76
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6b5fac697c41f54279ecde7436900434895ff23
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 22a34a5ec9ee092091dc00c7cc420b4474a38d8cba0d41c2691943c7dcd5b35e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118347630"
 ---
-# <a name="mapping-service-description-data-types-to-idl-data-types"></a>Zuordnung von Dienst Beschreibungs Datentypen zu IDL-Datentypen
+# <a name="mapping-service-description-data-types-to-idl-data-types"></a>Zuordnen von Dienstbeschreibungsdatentypen zu IDL-Datentypen
 
-Die folgende Tabelle zeigt die Zuordnung der in einer Dienst Beschreibung angegebenen XML-Datentypen zu den entsprechenden Datentypen, die in IDL verwendet werden.
+Die folgende Tabelle zeigt die Zuordnung der in einer Dienstbeschreibung angegebenen XML-Datentypen zu den entsprechenden in IDL verwendeten Datentypen.
 
 
 
@@ -21,8 +21,8 @@ Die folgende Tabelle zeigt die Zuordnung der in einer Dienst Beschreibung angege
 |---------------|----------------|
 | bin.base64    | SAFEARRAY      |
 | bin.hex       | SAFEARRAY      |
-| boolean       | Variant \_ bool  |
-| char          | WCHAR \_ t       |
+| boolean       | VARIANT \_ BOOL  |
+| char          | wchar \_ t       |
 | date          | DATE           |
 | dateTime      | DATE           |
 | dateTime.tz   | DATE           |
@@ -42,15 +42,15 @@ Die folgende Tabelle zeigt die Zuordnung der in einer Dienst Beschreibung angege
 | ui2           | unsigned short |
 | ui4           | unsigned long  |
 | uri           | BSTR           |
-| uuid          | BSTR           |
+| UUID          | BSTR           |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

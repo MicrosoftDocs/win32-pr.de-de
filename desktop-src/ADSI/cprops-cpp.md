@@ -1,46 +1,46 @@
 ---
-title: C-Eigenschaften. CPP
-description: In der Beispiel Anbieter Komponente ist ein Beispiel für eine Implementierung des Eigenschafts Caches in "crequicpp" zu finden. In der folgenden Tabelle sind die unterstützten Methoden aufgeführt.
+title: CPROPS. Cpp
+description: In der Beispielanbieterkomponente finden Sie ein Beispiel für eine Implementierung des Eigenschaftencaches in cprops.cpp. Die unterstützten Methoden sind in der folgenden Tabelle aufgeführt.
 ms.assetid: 51c9aa05-ca30-4d61-b3e3-d2f17a02b28f
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77b9f4fddfea6900fd8d7a06bee9979744eefd30
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 66394b7375779f50a97505128178ec35106187c076ca5d6741375a7f71b8ec46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428999"
 ---
-# <a name="cpropscpp"></a>C-Eigenschaften. CPP
+# <a name="cpropscpp"></a>CPROPS. Cpp
 
-In der Beispiel Anbieter Komponente ist ein Beispiel für eine Implementierung des Eigenschafts Caches in "crequicpp" zu finden. In der folgenden Tabelle sind die unterstützten Methoden aufgeführt.
+In der Beispielanbieterkomponente finden Sie ein Beispiel für eine Implementierung des Eigenschaftencaches in cprops.cpp. Die unterstützten Methoden sind in der folgenden Tabelle aufgeführt.
 
 
 
 | Methode                                           | BESCHREIBUNG                                                                                                         |
 |--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| **Cpropertycache:: AddProperty**                  | Erweitern Sie den Eigenschaften Cache durch Hinzufügen eines neuen.                                                                      |
-| **Cpropertycache:: updateproperty**               | Suchen Sie die-Eigenschaft, und verwenden Sie den Inhalt, und verwenden Sie stattdessen neue Werte. Markieren Sie dann den Cache, der für diese Eigenschaft geändert wurde. |
-| **Cpropertycache:: FindProperty**                 | Diese Eigenschaft nach Name suchen; Speichern Sie den Index.                                                                      |
-| **Cpropertycache:: GetProperty**                  | Suchen Sie die Eigenschaft im Cache, falls verfügbar, und wenden Sie andernfalls **GetInfo** an. Legen Sie den Index fest, und kopieren Sie die neuen Werte.  |
-| **Cpropertycache::p utproperty**                  | Suchen Sie die-Eigenschaft. Geben Sie an, was vorhanden ist, und geben Sie neue Werte ein.                                                       |
-| **Cpropertycache:: cpropertycache**               | Standardkonstruktor.                                                                                               |
-| **Cpropertycache:: ~ cpropertycache**              | Standardedekonstruktor.                                                                                                |
-| **Cpropertycache:: kreatepropertycache**          | Erstellen Sie den Cache.                                                                                                   |
-| **Cpropertycache:: unboundgetproperty**           | Suchen Sie die Eigenschaft im Cache, und legen Sie Sie auf diese Werte fest.                                                          |
-| **Cpropertycache:: sampledsmarshallproperties**   | Mars Hallen von Eigenschaften Daten und-Werten.                                                                                   |
-| **Cpropertycache:: marshallproperty**             | Marshallt eine Eigenschaft.                                                                                                 |
-| **Cpropertycache:: sampledsunmarshallproperties** | Marshalling von Eigenschaften Daten und-Werten.                                                                                 |
-| **Cpropertycache:: unmarshallproperty**           | Marshalling einer Eigenschaft.                                                                                               |
+| **CPropertyCache::addproperty**                  | Erweitern Sie den Eigenschaftencache, indem Sie einen neuen hinzufügen.                                                                      |
+| **CPropertyCache::updateproperty**               | Suchen Sie die Eigenschaft, lassen Sie ihren Inhalt frei, und verwenden Sie stattdessen neue Werte. markieren Sie dann den geänderten Cache für diese Eigenschaft. |
+| **CPropertyCache::findproperty**                 | Suchen Sie diese Eigenschaft nach Namen. Speichern Sie den Index.                                                                      |
+| **CPropertyCache::getproperty**                  | Suchen Sie die Eigenschaft im Cache, falls verfügbar, andernfalls **Rufen Sie GetInfo** auf. Legen Sie den Index fest, und kopieren Sie die neuen Werte.  |
+| **CPropertyCache::p utproperty**                  | Suchen Sie die -Eigenschaft. Geben Sie frei, was vorhanden war, und geben Sie neue Werte ein.                                                       |
+| **CPropertyCache::CPropertyCache**               | Standardkonstruktor.                                                                                               |
+| **CPropertyCache::~CPropertyCache**              | Standard-Destruktor.                                                                                                |
+| **CPropertyCache::createpropertycache**          | Erstellen Sie den Cache.                                                                                                   |
+| **CPropertyCache::unboundgetproperty**           | Suchen Sie die Eigenschaft im Cache, und legen Sie sie auf diese Werte fest.                                                          |
+| **CPropertyCache::SampleDSMarshallProperties**   | Marshallen von Eigenschaftsdaten und -werten.                                                                                   |
+| **CPropertyCache::marshallproperty**             | Marshallen einer Eigenschaft.                                                                                                 |
+| **CPropertyCache::SampleDSUnMarshallProperties** | Unmarshal-Eigenschaftsdaten und -werte.                                                                                 |
+| **CPropertyCache::unmarshallproperty**           | Aufheben desMarshals einer Eigenschaft.                                                                                               |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die renderoutputpins-Methode erstellt den Teil der Vorschau des Filter Diagramms.
+description: Die RenderOutputPins-Methode erstellt den Vorschaubereich des Filterdiagramms.
 ms.assetid: 66bcb698-cd85-4c22-bfef-2e51973958f1
-title: 'Unenderengine:: renderoutputpins-Methode (qedit. h)'
+title: IRenderEngine::RenderOutputPins-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: e7356df1bb79aa3b1901ee6d3de22510a6df1a9a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b81ea650d805c8ed2e42797f4dffdd9851eb3f072cff0abb05f54c4581684bea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818562"
 ---
-# <a name="irenderenginerenderoutputpins-method"></a>Unenderengine:: renderoutputpins-Methode
+# <a name="irenderenginerenderoutputpins-method"></a>IRenderEngine::RenderOutputPins-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `RenderOutputPins` Methode erstellt den Teil der Vorschau des Filter Diagramms.
+Die `RenderOutputPins` -Methode erstellt den Vorschaubereich des Filterdiagramms.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,37 +45,37 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt **HRESULT-Werte** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                                                  | Beschreibung                                                                |
 |--------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                         | Erfolg.<br/>                                                        |
-| <dl> <dt>**VFW \_ S \_ -Audiodatei \_ nicht \_ gerendert**</dt> </dl>  | Der Audiostream kann nicht wiedergegeben werden.<br/>                              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>                 | Ungültiges Argument.<br/>                                               |
-| <dl> <dt>**E- \_ Rendering- \_ Engine \_ ist \_ beschädigt.**</dt> </dl> | Fehler beim Vorgang, da das Projekt nicht erfolgreich gerendert wurde.<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>                 | Unerwarteter Fehler.<br/>                                               |
+| <dl> <dt>**VFW \_ S AUDIO NOT RENDERED (VFW-S-AUDIO \_ NICHT \_ \_ GERENDERT)**</dt> </dl>  | Der Audiostream kann nicht wieder verwendet werden.<br/>                              |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>                 | Ungültiges Argument.<br/>                                               |
+| <dl> <dt>**DIE \_ \_ RENDER-ENGINE \_ IST \_ BESCHÄDIGT.**</dt> </dl> | Fehler beim Vorgang, weil das Projekt nicht erfolgreich gerendert wurde.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>                 | Unerwarteter Fehler.<br/>                                               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie vor dem Aufrufen dieser Methode " [**irienderengine:: connectfrontend**](irenderengine-connectfrontend.md) " auf, um das Front-End des Diagramms zu erstellen. Um einen anderen Vorgang als die Vorschau auszuführen, dürfen Sie diese Methode nicht aufzurufen. Rufen Sie stattdessen " [**irienderengine:: getgroupoutputpin**](irenderengine-getgroupoutputpin.md) " auf, um Zeiger auf die Ausgabe Pins zu erhalten.
+Rufen Sie vor dem Aufrufen dieser Methode [**IRenderEngine::ConnectFrontEnd**](irenderengine-connectfrontend.md) auf, um das Front-End des Graphen zu erstellen. Um einen anderen Vorgang als die Vorschau durchzuführen, rufen Sie diese Methode nicht auf. Rufen Sie stattdessen [**IRenderEngine::GetGroupOutputPin**](irenderengine-getgroupoutputpin.md) auf, um Zeiger auf die Ausgabepins zu erhalten.
 
-Wenn auf dem Computer des Benutzers keine Soundkarte vorhanden ist, gibt diese Methode VFW \_ s \_ -Audiodaten zurück, die \_ nicht \_ gerendert werden. In diesem Fall wird keine Audiovorschau angezeigt, aber die Video Vorschau ist nicht betroffen.
+Wenn auf dem Computer des Benutzers keine Soundkarte angezeigt wird, gibt diese Methode VFW \_ S \_ AUDIO NOT \_ \_ RENDERED zurück. In diesem Fall gibt es keine Audiovorschau, die Videovorschau ist jedoch nicht betroffen.
 
-Wenn die PIN aus einer Videogruppe besteht, erstellt diese Methode ein Videofenster. Der aufrufenden Thread muss Nachrichten verteilen – beispielsweise, um das Fenster zu verschieben oder auf Mausklicks im Client Bereich des Fensters zu reagieren.
+Wenn die Stecknadel aus einer Videogruppe besteht, erstellt diese Methode ein Videofenster. Der aufrufende Thread muss Nachrichten senden, z. B. um das Fenster zu verschieben oder auf Mausklicks im Clientbereich des Fensters zu reagieren.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -85,19 +85,19 @@ Wenn die PIN aus einer Videogruppe besteht, erstellt diese Methode ein Videofens
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Schnittstelle ""**](irenderengine.md)
+[**IRenderEngine-Schnittstelle**](irenderengine.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

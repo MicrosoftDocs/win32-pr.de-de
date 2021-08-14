@@ -1,9 +1,9 @@
 ---
-title: Ribbon. quickaccesstoolbar (Eigenschaft)
-description: Stellt einen Container für die Symbolleiste für den schnell Zugriff (QAT) dar.
+title: Ribbon.QuickAccessToolbar-Eigenschaft
+description: Stellt einen Container für die Quick Access Toolbar (QAT) dar.
 ms.assetid: 8a873a48-4f8b-439d-acad-7da2081fbf40
 keywords:
-- Menüband. quickaccesstoolbar-Eigenschaften Fenster (Menüband)
+- Ribbon.QuickAccessToolbar-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad0e09b220bd60b60ccbb8ee05c2da9c4317ba78
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83e1fa4cb5de43be2b7316d4ed1786c2a1325fa4468538e2ffea41d5d8c9ef0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118202317"
 ---
-# <a name="ribbonquickaccesstoolbar-property"></a>Ribbon. quickaccesstoolbar (Eigenschaft)
+# <a name="ribbonquickaccesstoolbar-property"></a>Ribbon.QuickAccessToolbar-Eigenschaft
 
-Stellt einen Container für die Symbolleiste für den schnell Zugriff (QAT) dar.
+Stellt einen Container für die Quick Access Toolbar (QAT) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                                           | BESCHREIBUNG                                    |
 |-----------------------------------------------------------------------------------|------------------------------------------------|
-| [**Quickaccesstoolbar**](windowsribbon-element-quickaccesstoolbar.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
+| [**QuickAccessToolbar**](windowsribbon-element-quickaccesstoolbar.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
 
 
@@ -55,15 +55,15 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Kann für jedes [**Menüband**](windowsribbon-element-ribbon.md)einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**Menüband**](windowsribbon-element-ribbon.md)auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel veranschaulicht das einfache Markup für das **Ribbon. quickaccesstoolbar** -Element.
+Im folgenden Beispiel wird das grundlegende Markup für das **Ribbon.QuickAccessToolbar-Element** veranschaulicht.
 
 
 ```XML
@@ -87,8 +87,8 @@ Das folgende Beispiel veranschaulicht das einfache Markup für das **Ribbon. qui
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

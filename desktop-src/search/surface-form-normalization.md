@@ -1,58 +1,58 @@
 ---
-description: Obwohl sich Wörter und linguistische Regeln erheblich unterscheiden, gibt es einige Überlegungen, wie z. b. Zahlen, Datumsangaben und Uhrzeiten, die konsistent über alle Wörter Trennungen hinweg behandelt werden.
+description: Obwohl Wörter und linguistische Regeln sich erheblich unterscheiden, gibt es einige Überlegungen, z. B. Zahlen, Datumsangaben und Zeiten, die über alle Wörterbrechen hinweg konsistent behandelt werden.
 ms.assetid: 62545566-f0ba-4876-93da-e6c2b9c23484
-title: Normalisierung des Oberflächen Formulars
+title: Oberflächenformnormalisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b058be00e046ffc17ebd6c13178313267a47079
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f96ce5c90075c49608ad386b64514e4d003e5b5b4c6fc582441fd7e110d1921
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117862434"
 ---
-# <a name="surface-form-normalization"></a>Normalisierung des Oberflächen Formulars
+# <a name="surface-form-normalization"></a>Oberflächenformnormalisierung
 
-Obwohl sich Wörter und linguistische Regeln erheblich unterscheiden, gibt es einige Überlegungen, wie z. b. Zahlen, Datumsangaben und Uhrzeiten, die konsistent über alle Wörter Trennungen hinweg behandelt werden. In diesem Thema werden normalisierungs Aspekte beschrieben, die sich auf Ihre Implementierung der Wörter Trennung auswirken können
+Obwohl Wörter und linguistische Regeln sich erheblich unterscheiden, gibt es einige Überlegungen, z. B. Zahlen, Datumsangaben und Zeiten, die über alle Wörterbrechen hinweg konsistent behandelt werden. In diesem Thema werden Normalisierungsüberlegungen beschrieben, die sich möglicherweise auf die Implementierung der Wörterumbruch-Funktion auswirken.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Silben Trennung](#hyphenation)
--   [Possessiv Formen](#possessives)
+-   [Hyphenation](#hyphenation)
+-   [Possessives](#possessives)
 -   [Diakritische Zeichen](#diacritics)
--   [Clitik](#clitics)
+-   [Clitics](#clitics)
 
-## <a name="hyphenation"></a>Silben Trennung
+## <a name="hyphenation"></a>Hyphenation
 
-Bindestriche (-) werden zwischen den Teilen eines zusammengesetzten Worts oder Namens verwendet. Sie werden auch zwischen den Silben eines Worts verwendet, wenn das Wort am Ende einer Textzeile aufgeteilt ist. In englischer Sprache werden Wörter mit Bindestrichen verknüpft, um eine spezielle Beziehung im Kontext anzugeben. diese Wörter werden jedoch normalerweise in anderen Kontexten nicht als Bindestriche angezeigt. beispielsweise "Schritt für Schritt". Während der Indexerstellung sollte die Wörter Trennung den Bindestrich als Wort Trennzeichen behandeln. Beispielsweise würde "Data-Base" als "Data" Plus "Base" gespeichert werden. Zum Zeitpunkt der Abfrage sollte ein Bindestrich durch zwei Alternativen ersetzt werden: die zwei-Wort-Variante und die echte Verbund-. Beispielsweise würde "Data-Base" durch "Data" Plus "Base" und "Database" ersetzt werden. Dieser Unterschied zwischen Index-und Abfragezeit erhöht die Kombinationen von Darstellungen für hyphenierte Wörter und erleichtert das Abgleichen von Wörtern in einer Abfrage.
+Bindestriche (-) werden zwischen den Teilen eines zusammengesetzten Worts oder Namens verwendet. Sie werden auch zwischen den Silben eines Worts verwendet, wenn das Wort am Ende einer Textzeile geteilt wird. Im Englischen werden Wörter mit Bindestrichen verbunden, um eine besondere Beziehung im Kontext anzugeben, aber diese Wörter sind normalerweise in anderen Kontexten möglicherweise nicht mit Bindestrichen verbunden. Beispiel: "Schritt für Schritt". Während der Indexerstellung sollte die Wörtertrennung den Bindestrich als Worttrennzeichen behandeln. Beispielsweise würde "data-base" als "data" plus "base" gespeichert. Zur Abfragezeit sollte ein bindestrichierter Ausdruck durch zwei Alternativen ersetzt werden: die Zwei-Wort-Variante und die true-Verbindung. Beispielsweise würde "data-base" durch "data" plus "base" und "database" ersetzt. Dieser Unterschied zwischen Index- und Abfragezeit erhöht die Kombinationen von Darstellungen für Wörter mit Bindestrichen und erleichtert die Übereinstimmung der Wörter in einer Abfrage.
 
-In der folgenden Tabelle wird gezeigt, wie die Behandlung von Bindestrichen als Wort Trennzeichen in englischer Sprache die Anzahl der übereinstimmenden Abfrage Begriffe für jeden im Index enthaltenen Begriff erhöht.
+Die folgende Tabelle zeigt, wie die Behandlung von Bindestrichen als Worttrennzeichen in der englischen Sprache die Anzahl der übereinstimmenden Abfragebegriffe für jeden im Index enthaltenen Begriff erhöht.
 
 
 
-| Im Index enthaltene Begriffe | Abfragezeit Übereinstimmungen   |
+| Im Index enthaltene Begriffe | Übereinstimmungen zur Abfragezeit   |
 |-----------------------------|----------------------|
-| Datenbasis                   | Data Base, Datenbasis |
-| Datenbasis                   | Data Base, Datenbasis |
-| Datenbank                    | Data-Base, Datenbank  |
+| Datenbank                   | -Datenbank, -Datenbank |
+| Data-Base                   | -Datenbank, -Datenbank |
+| Datenbank                    | Datenbank, Datenbank  |
 
 
 
  
 
-## <a name="possessives"></a>Possessiv Formen
+## <a name="possessives"></a>Possessives
 
-Possessiven sind Variationen in einem Substantiv, die den Besitz angeben. Englische Besitztümer werden dargestellt, indem ein Apostroph (') oder ein Apostroph und ein s (es) an ein Wort angehängt werden. Um z. b. den Besitz anzugeben, wird das Wort "Mary" als "Mary es" dargestellt. Die Wörter Trennung generiert zum Zeitpunkt der Abfrage sowohl das Apostroph-als auch das Apostroph-s-Formular. Abfragen für "Mary" sollten sowohl "Mary" als auch "Mary es" entsprechen.
+Possessives sind Variationen in einem Nomen, die den Besitz angeben. Englische Possessive werden durch Anfügen eines Apostrophs (') oder eines Apostrophs und eines s (s) an ein Wort dargestellt. Um beispielsweise den Besitz anzugeben, wird das Wort "Mary" als "Marys" dargestellt. Die Wörterpause generiert zur Abfragezeit sowohl das Apostroph als auch das Apostroph. Abfragen für "Mary" sollten sowohl mit "Mary" als auch mit "Mary's" übereinstimmen.
 
 ## <a name="diacritics"></a>Diakritische Zeichen
 
-Diakritik sind Markierungen, die einem Buchstaben oder Phonem hinzugefügt werden, um einen speziellen phonetischen Wert für die Aussprache anzugeben. Die Diakritik kann Wörter unterscheiden, die anderweitig grafisch identisch sind. Beispiel: "Resume" und "Resumé" in englischer Sprache. Das Speichern der Diakritik im Index erhöht jedoch die Anzahl eindeutiger Wort Schlüssel im Index, was die Abfrageleistung verlangsamt. Wenn die Diakritik nur minimal in einer Sprache verwendet wird, sollte Sie von der Wörter Trennung für diese Sprache während der Indexerstellung und-Abfrage entfernt werden. Beispielsweise generiert die englische Wörter Trennung "Resume", wenn "Resumé" verarbeitet wird, was nur minimale Auswirkung auf die Relevanz der Abfrageergebnisse verursacht.
+Diakritische Zeichen sind Markierungen, die einem Buchstaben oder Phonem hinzugefügt werden, um einen speziellen phonetischen Wert für die Aussprache anzugeben. Diakritische Zeichen können Wörter unterscheiden, die ansonsten grafisch identisch sind. beispielsweise "resume" und "resumé" auf Englisch. Das Speichern von diakritischen Zeichen im Index erhöht jedoch die Anzahl eindeutiger Wortschlüssel im Index, wodurch die Abfrageleistung verlangsamt wird. Wenn diakritische Zeichen nur minimal in einer Sprache verwendet werden, sollten sie in der Wörterpause für diese Sprache sowohl während der Indexerstellung als auch bei Abfragen entfernt werden. Beispielsweise generiert die englische Wörterpause "resume" bei der Verarbeitung von "resumé", was nur minimale Auswirkungen auf die Relevanz der Abfrageergebnisse hat.
 
-## <a name="clitics"></a>Clitik
+## <a name="clitics"></a>Clitics
 
-Ein clitic ist ein nicht ausgefülltes Wort, das nicht eigenständig stehen und an ein gebetontes Wort angehängt werden kann, um eine einzelne Einheit zu bilden. Clitics kann nicht einfach als phonologisch, syntaktisch oder morphologisch klassifiziert werden. Clitics gibt es in zwei Typen: *proclitics* und *interclitik*. Die proclitik hängt an den Anfang eines Worts an. Die enclitik hängt an das Ende eines Worts an.
+Eine Clitic ist ein unstressiertes Wort, das nicht allein stehen kann und an ein heftbares Wort angefügt wird, um eine einzelne Einheit zu bilden. Clitics können nicht einfach als morphologisch, syntaktisch oder ungespähnt klassifiziert werden. Clitics gibt es in zwei Typen: *proklidische* und *enklidische*. Proklidische Zeichen fügen sich an den Anfang eines Worts an. Enclitics fügen sich selbst an das Ende eines Worts an.
 
-Das Analysieren von clitics in Sprachen wie z. b. Spanisch ist schwieriger. Ein spanisches Verb kann je nach Spannung viele Oberflächen Formulare generieren. Es müssen Überlegungen zwischen dem Entfernen der clitic während der Indexerstellung und dem Erzeugen der Oberflächen Formen durch Wort Stamm Erkennung zum Zeitpunkt der Abfrage vorgenommen werden. Das Entfernen von clitics in Fällen, in denen die Morphologie der clitischen Komposition mehrdeutig ist, kann zu unvorhersehbaren Ergebnissen führen. Das Erstellen einer großen Anzahl von Oberflächen Formularen für ein Wort erhöht die Größe des voll Text Indexes und verlangsamt möglicherweise die Abfrageleistung. Es wird empfohlen, dass die Wort Stamm Erkennung nur eine kleine Anzahl von Oberflächen Formularen generiert.
+Clitics sind in Sprachen wie Spanisch schwieriger zu analysieren. Ein spanischer Verb kann je nach Angespann viele Oberflächenformen generieren. Es muss zwischen dem Entfernen der Clitic während der Indexerstellung und dem Generieren der Oberflächenformulare durch Diemung zur Abfragezeit berücksichtigt werden. Das Entfernen von Clitics in Fällen, in denen die Ungutigkeit der clitic composition mehrdeutig ist, kann zu unvorhersehbaren Ergebnissen führen. Das Generieren einer großen Anzahl von Oberflächenformen für ein Wort erhöht die Größe des Volltextindexes und kann die Abfrageleistung verlangsamen. Es wird empfohlen, dass der Stemmer nur eine kleine Anzahl von Oberflächenformen generiert.
 
  
 

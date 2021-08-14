@@ -1,19 +1,19 @@
 ---
-description: Listet die in Autorisierungs-APIs verwendeten Konstanten auf.
+description: Listet die Konstanten auf, die in Autorisierungs-APIs verwendet werden.
 ms.assetid: be5637e3-0932-49b6-a5af-a542060545e0
-title: Autorisierungs Konstanten (Autorisierung)
+title: Autorisierungskonst konstanten (Autorisierung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 764021e27d627146c10a8a344646df0991ed98d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbc4d1e6a089a95aa7e445042d73ff2027695119ec313ce21b4040dc88d34311
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117784368"
 ---
-# <a name="authorization-constants-authorization"></a>Autorisierungs Konstanten (Autorisierung)
+# <a name="authorization-constants-authorization"></a>Autorisierungskonst konstanten (Autorisierung)
 
-Autorisierungs Konstanten werden gemäß der Verwendung wie folgt kategorisiert.
+Autorisierungskonst constants werden nach Verwendung wie folgt kategorisiert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,11 +21,11 @@ Autorisierungs Konstanten werden gemäß der Verwendung wie folgt kategorisiert.
 
 | Thema                                                                         | BESCHREIBUNG                                                                                                                                                                                                                                                          |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Konto Rechte Konstanten**](account-rights-constants.md)<br/>       | Konto Rechte bestimmen den Typ der Anmeldung, die von einem Benutzerkonto durchgeführt werden kann. Ein Administrator weist Benutzer-und Gruppenkonten Konto Rechte zu. Zu den Konto rechten jedes Benutzers gehören die Berechtigungen, die dem Benutzer erteilt wurden, und die Gruppen, zu denen der Benutzer gehört.<br/> |
-| [**App-Container-sid-Konstanten**](app-container-sid-constants.md)<br/> | Legen Sie die Anwendungspaket Autorität an.<br/>                                                                                                                                                                                                                |
-| [**Überwachungs Konstanten**](auditing-constants.md)<br/>                   | Stellt Kategorien und Unterkategorien von Überwachungs Richtlinien Ereignissen dar.<br/>                                                                                                                                                                                            |
-| [**Funktionsid-Konstanten**](capability-sid-constants.md)<br/>       | Definieren Sie für Anwendungen bekannte Funktionen mithilfe der Funktion " [**Zuordnungs-initializesid**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-allocateandinitializesid) ".<br/>                                                                                                                       |
-| [**Berechtigungs Konstanten**](privilege-constants.md)<br/>                 | Berechtigungen bestimmen den Typ der System Vorgänge, die ein Benutzerkonto ausführen kann. Ein Administrator weist Benutzer-und Gruppenkonten Berechtigungen zu. Zu den Berechtigungen des Benutzers gehören die Berechtigungen, die dem Benutzer gewährt wurden, sowie die Gruppen, zu denen der Benutzer gehört.<br/> |
+| [**Kontorechtekonst constants**](account-rights-constants.md)<br/>       | Kontorechte bestimmen den Anmeldetyp, den ein Benutzerkonto ausführen kann. Ein Administrator weist Benutzer- und Gruppenkonten Kontorechte zu. Zu den Kontorechten jedes Benutzers gehören diejenigen, die dem Benutzer und den Gruppen gewährt werden, zu denen der Benutzer gehört.<br/> |
+| [**App-Container-SID-Konstanten**](app-container-sid-constants.md)<br/> | Geben Sie die Autorität des Anwendungspakets vor.<br/>                                                                                                                                                                                                                |
+| [**Überwachungskonst constants**](auditing-constants.md)<br/>                   | Stellt Kategorien und Unterkategorien von Audit-Policy-Ereignissen dar.<br/>                                                                                                                                                                                            |
+| [**Funktions-SID-Konstanten**](capability-sid-constants.md)<br/>       | Definieren Sie bekannte Funktionen für Anwendungen mithilfe der [**AllocateAndInitializeSid-Funktion.**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-allocateandinitializesid)<br/>                                                                                                                       |
+| [**Berechtigungskonst constants**](privilege-constants.md)<br/>                 | Berechtigungen bestimmen den Typ der Systemvorgänge, die ein Benutzerkonto ausführen kann. Ein Administrator weist Benutzer- und Gruppenkonten Berechtigungen zu. Die Berechtigungen jedes Benutzers umfassen die Berechtigungen, die dem Benutzer und den Gruppen gewährt werden, zu denen der Benutzer gehört.<br/> |
 
 
 

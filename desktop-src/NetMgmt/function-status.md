@@ -1,23 +1,23 @@
 ---
-title: Funktions Status
-description: Die Netzwerk Verwaltungsfunktionen geben bei Erfolg 0 zurück. Ein Rückgabecode ungleich NULL weist auf einen Fehler hin. Da die Netzwerk Verwaltungsfunktionen RPC verwenden, enthalten die Fehler Definitionen RPC-Fehlercodes. Weitere Informationen finden Sie unter Fehler Codes für die Netzwerkverwaltung.
+title: Funktionsstatus
+description: Die Netzwerkverwaltungsfunktionen geben bei Erfolg 0 (null) zurück. Ein Rückgabecode ungleich 0 (null) gibt einen Fehler an. Da die Netzwerkverwaltungsfunktionen RPC verwenden, enthalten die Fehlerdefinitionen RPC-Fehlercodes. Weitere Informationen finden Sie unter Fehlercodes für die Netzwerkverwaltung.
 ms.assetid: 193ffba5-ff8f-48fb-839e-a162aae58a8f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 363d4d45cd0d6a8f0445b24e10b24c7da04a3f72
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2d4d9f88593d15a1a1aca8af596c5576433aad3af97ae23fa5f455fda3474411
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797346"
 ---
-# <a name="function-status"></a>Funktions Status
+# <a name="function-status"></a>Funktionsstatus
 
-Die Netzwerk Verwaltungsfunktionen geben bei Erfolg 0 zurück. Ein Rückgabecode ungleich NULL weist auf einen Fehler hin. Da die Netzwerk Verwaltungsfunktionen RPC verwenden, enthalten die Fehler Definitionen RPC-Fehlercodes. Weitere Informationen finden Sie unter [Fehler Codes für die Netzwerkverwaltung](network-management-error-codes.md).
+Die Netzwerkverwaltungsfunktionen geben bei Erfolg 0 (null) zurück. Ein Rückgabecode ungleich 0 (null) gibt einen Fehler an. Da die Netzwerkverwaltungsfunktionen RPC verwenden, enthalten die Fehlerdefinitionen RPC-Fehlercodes. Weitere Informationen finden Sie unter Fehlercodes für die [Netzwerkverwaltung.](network-management-error-codes.md)
 
- 
+ 
 
- 
+ 
 
 
 

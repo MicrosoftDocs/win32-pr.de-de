@@ -1,62 +1,62 @@
 ---
-title: Übersicht über das Windows Media-Format-SDK
-description: Übersicht über das Windows Media-Format-SDK
+title: Übersicht über das Windows Media Format SDK
+description: Übersicht über das Windows Media Format SDK
 ms.assetid: 9e5d6254-6261-4ca8-84d6-38050c93db22
 keywords:
-- Windows Media-Format-SDK, Erstellung und Bearbeitung von ASF-Dateien
-- Advanced Systems Format (ASF), Dateierstellung und-Bearbeitung
-- ASF (Advanced Systems Format), Dateierstellung und-Bearbeitung
+- Windows Medienformat-SDK, Erstellen und Bearbeiten von ASF-Dateien
+- Advanced Systems Format (ASF), Dateierstellung und -bearbeitung
+- ASF (Advanced Systems Format), Dateierstellung und -bearbeitung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb4f58be5d377e44fc0f68c89ad580a554902c58
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b80436415a6017d0429493b1d4b5be92dcb682f572796e5e9e1c3cfaa8795e66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117846426"
 ---
-# <a name="overview-of-the-windows-media-format-sdk"></a>Übersicht über das Windows Media-Format-SDK
+# <a name="overview-of-the-windows-media-format-sdk"></a>Übersicht über das Windows Media Format SDK
 
-Das SDK für den Windows Media-Format enthält Objekte zum Ausführen von Aufgaben an drei Punkten während der Lebensdauer einer ASF-Datei: Erstellung, Bearbeitung und Wiedergabe. Bei einigen Anwendungen, insbesondere bei der Videobearbeitung, werden die allgemeinen Funktionen des Windows Media Format SDK verwendet, um den Inhalt von ASF-Dateien zu lesen, den Inhalt zu ändern und die Ergebnisse in eine neue Datei zu schreiben. Es ist jedoch am einfachsten, dieses SDK in den drei Phasen der Erstellung, Bearbeitung und Wiedergabe von Dateien zu betrachten.
+Das Windows Media Format SDK enthält Objekte zum Ausführen von Aufgaben an drei Stellen in der Lebensdauer einer ASF-Datei: Erstellung, Bearbeitung und Wiedergabe. Einige Anwendungen, insbesondere anwendungen für die Videobearbeitung, verwenden die umfassende Funktionalität des Windows Media Format SDK, um den Inhalt von ASF-Dateien zu lesen, diesen Inhalt zu ändern und die Ergebnisse in eine neue Datei zu schreiben. Es ist jedoch am einfachsten, sich dieses SDK in den drei Phasen der Dateierstellung, -bearbeitung und -wiedergabe zu vorstellen.
 
-## <a name="asf-file-creation-with-the-windows-media-format-sdk"></a>Erstellen von ASF-Dateien mit dem Windows Media-Format-SDK
+## <a name="asf-file-creation-with-the-windows-media-format-sdk"></a>ASF-Dateierstellung mit dem Windows Media Format SDK
 
-Das Schreiben von ASF-Dateien mit dem Windows Media-Format SDK ist auf hoher Ebene recht einfach. Die Dateierstellung wird von einem Writer-Objekt verwaltet. Sie teilen dem Writer-Objekt mit, welche Art von Datei Sie erstellen möchten, indem Sie ein Profil Objekt für die Verwendung angeben. Jedes Profil Objekt enthält die Einstellungen für eine ASF-Datei. Einige Profile sind in diesem SDK enthalten, und die Unterstützung der Profilbearbeitung wird durch eine Reihe von Objekten bereitgestellt. Wenn Sie ein Profil für das zu verwendende Writer-Objekt festgelegt haben, können Sie damit beginnen, die Beispiele zur Verarbeitung an den Writer zu übergeben. In den meisten Fällen ist ein Beispiel ein Teil von Audiodaten oder Videos, die nicht komprimiert sind, aber ein Beispiel kann ein beliebiger Datentyp sein.
+Das Schreiben von ASF-Dateien mit dem Windows Media Format SDK ist auf hoher Ebene recht einfach. Die Dateierstellung wird von einem Writer-Objekt verwaltet. Sie teilen dem Writer-Objekt mit, welche Art von Datei Sie erstellen möchten, indem Sie ein Profilobjekt für die Verwendung angeben. Jedes Profilobjekt enthält die Einstellungen für eine ASF-Datei. Einige Profile sind in diesem SDK enthalten, und die Unterstützung für die Profilbearbeitung wird von einer Reihe von -Objekten bereitgestellt. Wenn Sie ein Profil für das zu verwendende Writer-Objekt festgelegt haben, können Sie mit der Übergabe von Beispielen zur Verarbeitung an den Writer beginnen. In den meisten Fällen ist ein Beispiel ein Audio- oder Videoteil, das nicht komprimiert ist, aber ein Beispiel kann eine beliebige Art von Daten sein.
 
-Intern führt der Writer drei Hauptaufgaben aus. Erstens: Wenn der Stream, zu dem ein Beispiel gehört, komprimiert werden soll, kommuniziert der Writer mit dem Codierungs Teil des Codecs (Kompressor/Dekompressor), um das Beispiel zu komprimieren. Sobald die Beispiele in der vom Profil angegebenen Form vorliegen, unterbricht der Writer die Beispiele in Pakete mit entsprechender Größe, die über ein Netzwerk gestreamt werden. Schließlich werden die Daten aus den verschiedenen Streams multiplext oder verschachtelt, sodass sich Beispiele mit ähnlichen Präsentations Zeiten über alle Streams hinweg im Daten Abschnitt der ASF-Datei befinden.
+Intern führt der Writer drei Hauptaufgaben aus. Erstens: Wenn der Stream, zu dem ein Beispiel gehört, komprimiert werden soll, kommuniziert der Writer mit dem Codierungsteil des Codecs (Entsprechung/Dekomprimierung), um das Beispiel zu komprimieren. Sobald die Beispiele in der vom Profil angegebenen Form vorliegen, unterteilt der Writer die Stichproben in Pakete mit entsprechender Größe, die über ein Netzwerk gestreamt werden sollen. Schließlich werden die Daten aus den verschiedenen Streams multiplexiert oder verschachtelt, sodass Stichproben mit ähnlichen Präsentationszeiten in allen Streams im Datenabschnitt der ASF-Datei nah beieinander liegen.
 
-Das Writer-Objekt schreibt tatsächlich keine Datei selbst. Er kommuniziert mit einem oder mehreren Objekten namens senken, die die Daten vom Writer an das Ziel übermitteln. Bei lokalen Dateien verwaltet eine dateisenke das Schreiben der Daten in die Datei. Sie können Netzwerk senken auch so konfigurieren, dass die ASF-Daten über ein Netzwerk übertragen werden. Häufig wird mehr als eine Senke verwendet. Beispielsweise kann eine Anwendung eine Datei über ein Netzwerk streamen und eine Kopie als Datei auf einem lokalen Datenträger gleichzeitig speichern. Mithilfe einer Push-Senke können Sie Inhalte von der Schreib Anwendung an einen oder mehrere Server übertragen, auf denen Windows Media Services ausgeführt wird, die die Inhalte dann an Benutzer verteilen.
+Das Writer-Objekt schreibt keine Datei selbst. Es kommuniziert mit einem oder mehreren Objekten, die als Senken bezeichnet werden und die Daten vom Writer an das Ziel übermitteln. Bei lokalen Dateien verwaltet eine Dateisenke das Schreiben der Daten in die Datei. Sie können auch Netzwerksenken konfigurieren, um die ASF-Daten über ein Netzwerk zu übermitteln. In der Regel werden mehr als eine Senke verwendet. Beispielsweise kann eine Anwendung eine Datei über ein Netzwerk streamen und eine Kopie gleichzeitig als Datei auf einem lokalen Datenträger speichern. Mithilfe einer Pushsenke können Sie Inhalte aus Ihrer Schreibanwendung an einen oder mehrere Server übertragen, auf denen Windows Media-Dienste ausgeführt wird. Dadurch werden die Inhalte dann an Benutzer verteilt.
 
-## <a name="asf-file-editing-with-the-windows-media-format-sdk-metadata-editing"></a>ASF-Dateibearbeitung mit dem Windows Media-Format-SDK (Metadatenbearbeitung)
+## <a name="asf-file-editing-with-the-windows-media-format-sdk-metadata-editing"></a>ASF-Dateibearbeitung mit dem Windows Media Format SDK (Metadatenbearbeitung)
 
-Wenn Sie den Inhalt des Daten Abschnitts einer ASF-Datei bearbeiten, muss die Datei neu geschrieben werden. Das Windows Media-Format-SDK stellt keine Objekte bereit, die den Daten Abschnitt direkt bearbeiten. Für einfache bearbeitvorgänge, z. b. das Verketten von zwei Dateien oder das Ausschnitten von Inhalten aus einer Datei, können Sie Beispiele lesen, ohne Sie zu dekomprimieren, und Sie dann in eine neue Datei mit denselben Header Informationen schreiben. Kompliziertere Bearbeitungen umfassen das vornehmen von Änderungen am Profil, das für die neue Datei verwendet wird.
+Zum Bearbeiten des Inhalts des Datenabschnitts einer ASF-Datei muss die Datei neu geschrieben werden. Das Windows Media Format SDK stellt keine Objekte bereit, die den Datenabschnitt an Ort und Stelle bearbeiten. Für einfache Bearbeitungen, z. B. das Verketten von zwei Dateien oder das Ausschneiden von Inhalten aus einer Datei, können Sie Beispiele lesen, ohne sie zu dekomprimieren, und sie dann mit den gleichen Headerinformationen in eine neue Datei schreiben. Kompliziertere Änderungen umfassen das Vornehmen von Änderungen am Profil, das für die neue Datei verwendet wird.
 
-Das Windows Media-Format-SDK unterstützt das Bearbeiten von Teilen des Header Abschnitts, ohne die Datei neu zu schreiben. Der Header einer ASF-Datei enthält viele verschiedene Arten von Daten. Die am häufigsten bearbeiteten Elemente sind Metadatenattribute, bei denen es sich um Name-Wert-Paare handelt, die Aspekte des Inhalts und die damit verbundenen Personen beschreiben. Sie können Metadaten mithilfe des Metadaten-Editor-Objekts des Windows Media SDK-Objekts bearbeiten. Dieses Objekt öffnet eine ASF-Datei, sodass Sie einige Inhalte der Kopfzeile ändern, die Änderungen in die Datei schreiben und die Datei schließen können. Die Metadatenbearbeitung ist sehr unkompliziert, mit einfachen Methoden aufrufen zum Abrufen und Festlegen von Werten.
+Das Windows Media Format SDK unterstützt die Bearbeitung von Teilen des Headerabschnitts, ohne die Datei neu zu schreiben. Der Header einer ASF-Datei enthält viele verschiedene Datentypen. Die am häufigsten bearbeiteten Metadatenattribute sind Name-Wert-Paare, die Aspekte des Inhalts und die Personen beschreiben, die an der Erstellung beteiligt sind. Sie können Metadaten mit dem Metadaten-Editor-Objekt des Windows Media Format SDK bearbeiten. Dieses Objekt öffnet eine ASF-Datei, ermöglicht es Ihnen, einen Teil des Inhalts des Headers zu ändern, die Änderungen in die Datei zu schreiben und die Datei zu schließen. Die Bearbeitung von Metadaten ist sehr einfach, mit einfachen Methodenaufrufen zum Abrufen und Festlegen von Werten.
 
-## <a name="asf-file-reading-with-the-windows-media-format-sdk"></a>Einlesen von ASF-Dateien mit dem Windows Media-Format-SDK
+## <a name="asf-file-reading-with-the-windows-media-format-sdk"></a>Lesen von ASF-Dateien mit dem Windows Media Format SDK
 
-Das Windows Media-Format SDK bietet zwei unterschiedliche Objekte zum Lesen von ASF-Dateien: das Reader-Objekt und das synchrone Reader-Objekt. Das Reader-Objekt ist in allen Versionen des SDK verfügbar, während das synchrone Reader-Objekt das Windows Media-SDK der Serie 9 oder eine höhere Version benötigt. Der Hauptunterschied zwischen den beiden besteht darin, dass das Reader-Objekt der Anwendung Beispiele zur Verfügung stellt, indem Ereignisse für eine Rückruf Methode ausgelöst werden, während der synchrone Reader einzelne Beispiele als Reaktion auf Methodenaufrufe bereitstellt.
+Das Windows Media Format SDK stellt zwei unterschiedliche Objekte zum Lesen von ASF-Dateien bereit: das Readerobjekt und das synchrone Readerobjekt. Das Readerobjekt ist in allen Versionen des SDK verfügbar, während das synchrone Readerobjekt das Windows Media Format 9 Series SDK oder eine höhere Version erfordert. Der Hauptunterschied zwischen den beiden besteht darin, dass das Readerobjekt Stichproben an Ihre Anwendung übermittelt, indem Ereignisse an eine Rückrufmethode ausgelöst werden, während der synchrone Reader als Reaktion auf Methodenaufrufe einzelne Stichproben bereitstellt.
 
-Um das Reader-Objekt verwenden zu können, müssen Sie mehrere Rückruf Methoden implementieren, um auf Status-und Beispiel Meldungen des Reader-Objekts zu reagieren. Sie konfigurieren den Reader so, dass der Inhalt wie gewünscht bereitstellt wird, starten Sie den Reader, und warten Sie auf die Beispiel Nachrichten. Der Prozess des Abrufens von Beispielen aus einer ASF-Datei ist im Grunde das Gegenteil des Schreibvorgangs. Das Reader-Objekt kommuniziert mit den Codecs, die zum Decodieren sämtlicher komprimierter Streams erforderlich sind, und liefert nicht komprimierte Daten an die Anwendung. Sie können das Reader-Objekt auch so konfigurieren, dass es Stichproben im komprimierten Zustand bereitstellt, damit Sie einen zuvor codierten Stream in eine neue Datei einfügen können.
+Um das Readerobjekt zu verwenden, müssen Sie mehrere Rückrufmethoden implementieren, um auf Status- und Beispielmeldungen aus dem Readerobjekt zu reagieren. Sie konfigurieren den Reader so, dass er den Inhalt nach Belieben übermittelt, den Reader startet und auf die Beispielmeldungen wartet. Der Prozess des Abrufens von Beispielen aus einer ASF-Datei ist im Grunde das Gegenteil des Schreibvorgangs. Das Readerobjekt kommuniziert mit den Codecs, die zum Decodieren komprimierter Datenströme erforderlich sind, und übermittelt unkomprimierte Daten an Ihre Anwendung. Sie können das Readerobjekt auch so konfigurieren, dass es Stichproben im komprimierten Zustand übermittelt, sodass Sie einen zuvor codierten Stream in eine neue Datei einschließen können.
 
-Das synchrone Reader-Objekt funktioniert auf die gleiche Weise wie das Reader-Objekt. Anstatt Rückrufe zu konfigurieren, müssen Sie jedoch jede Stichprobe vom synchronen Reader einzeln anfordern. Die Verwendung des synchronen Readers erfordert nur einen einzigen Thread, während für die Verwendung des Readers mehrere Threads benötigt werden. Das synchrone Reader-Objekt hat unter bestimmten Umständen mehrere Vorteile gegenüber dem Reader-Objekt, hauptsächlich für Anwendungen zur Inhalts Bearbeitung, die schnell auf verschiedene Teile einer Datei zugreifen und Daten zwischen Dateien kopieren müssen. Das synchrone Reader-Objekt ist viel einfacher zu verwenden und macht das Suchen nach bestimmten Stellen im Daten Abschnitt leicht. Der synchrone Reader unterstützt jedoch nicht das Lesen von Dateien über ein Netzwerk und unterstützt Digital Rights Management nicht.
+Das synchrone Readerobjekt funktioniert in etwa auf die gleiche Weise wie das Readerobjekt. Anstatt Rückrufe zu konfigurieren, müssen Sie jedoch jedes Beispiel vom synchronen Reader einzeln anfordern. Die Verwendung des synchronen Readers erfordert nur einen einzelnen Thread, während die Verwendung des Readers mehrere Threads erfordert. Das synchrone Readerobjekt hat unter bestimmten Umständen mehrere Vorteile gegenüber dem Readerobjekt, hauptsächlich für Inhaltsbearbeitungsanwendungen, die schnell auf verschiedene Teile einer Datei zugreifen und Daten zwischen Dateien kopieren müssen. Das synchrone Readerobjekt ist viel einfacher zu verwenden und erleichtert die Suche nach bestimmten Stellen im Datenabschnitt. Der synchrone Reader unterstützt jedoch nicht das Lesen von Dateien über ein Netzwerk und keine Verwaltung digitaler Rechte.
 
-## <a name="other-operations-with-the-windows-media-format-sdk"></a>Weitere Vorgänge mit dem Windows Media-Format-SDK
+## <a name="other-operations-with-the-windows-media-format-sdk"></a>Andere Vorgänge mit dem Windows Media Format SDK
 
-Zusätzlich zu den drei wesentlichen Funktionsbereichen, die soeben beschrieben werden, verfügt das Windows Media Format SDK über Objekte zum Ausführen anderer Vorgänge im Zusammenhang mit den ASF-Dateien. Das Profil-Manager-Objekt wird verwendet, um Profile zu erstellen und darauf zuzugreifen und Sie zu speichern. Das Indexer-Objekt erstellt Index Objekte in ASF-Dateien, die das Suchen in Videodateien ermöglichen. Schließlich unterstützen das Reader-Objekt und das Writer-Objekt Digital Rights Management, um die geistigen Rechte der Inhalts Ersteller zu schützen.
+Zusätzlich zu den drei soeben beschriebenen Hauptfunktionsbereichen verfügt das Windows Media Format SDK über Objekte, mit denen andere Vorgänge im Zusammenhang mit ASF-Dateien ausgeführt werden können. Das Profil-Manager-Objekt wird verwendet, um Profile zu erstellen und darauf zuzugreifen und sie zu speichern. Das Indexerobjekt erstellt Indexobjekte in ASF-Dateien, die das Suchen in Videodateien ermöglichen. Schließlich unterstützen das Readerobjekt und das Writer-Objekt die Verwaltung digitaler Rechte, um die geistigen Rechte von Inhaltserstellern zu schützen.
 
-**Hinweis** Der Zweck der ASF-Dateistruktur und dieses SDK im Allgemeinen ist die Erstellung digitaler Mediendateien, die Audiodaten und Videos enthalten, und diese Dokumentation wird in diesem Sinne geschrieben. Die Struktur der ASF-Datei kann jedoch auch für andere Inhaltstypen verwendet werden. Möglicherweise finden Sie viele Anwendungen für ASF-Dateien, die sich nicht auf Audiodaten und Videos beziehen.
+**Hinweis** Die Absicht der ASF-Dateistruktur und dieses SDK im Allgemeinen besteht darin, digitale Mediendateien mit Audio und Video zu erstellen. Diese Dokumentation wird zu diesem Zweck geschrieben. Die ASF-Dateistruktur funktioniert jedoch auch für andere Inhaltstypen. Möglicherweise finden Sie viele Anwendungen für ASF-Dateien, die sich nicht auf Audio und Video beziehen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zum Windows Media-Format-SDK**](about-the-windows-media-format-sdk.md)
+[**Informationen zum Windows Media Format SDK**](about-the-windows-media-format-sdk.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

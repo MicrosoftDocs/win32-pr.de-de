@@ -1,31 +1,31 @@
 ---
-description: In der Tabelle PublishComponent werden die in der Component-Tabelle aufgeführten Komponenten mit einer qualifizierertextzeichenfolge und einer Kategorie-ID-GUID verknüpft.
+description: Die PublishComponent-Tabelle ordnet komponenten, die in der Component-Tabelle aufgelistet sind, einer Textzeichenfolge für den Qualifizierer und einer Kategorie-ID-GUID zu.
 ms.assetid: 4a6be647-3e73-47a1-acfa-7d6d0a2fb2f4
 title: PublishComponent-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9bb0edfd811873242629c36257fdce5a80fe9d91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c0abd7567e8327aa36a120fd5a13115cb191e1660566e9d480446295dca53cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118376383"
 ---
 # <a name="publishcomponent-table"></a>PublishComponent-Tabelle
 
-In der Tabelle PublishComponent werden die in der [Component-Tabelle](component-table.md) aufgeführten Komponenten mit einer qualifizierertextzeichenfolge und einer Kategorie-ID-GUID verknüpft. Komponenten mit paralleler Funktionalität, die auf diese Weise gruppiert wurden, werden als qualifizierte Komponenten bezeichnet. Siehe [qualifizierte Komponenten](qualified-components.md). Dadurch erhält das Installationsprogramm eine Methode für eine Dereferenzierung auf einer einzelnen Ebene, wenn auf Komponenten verwiesen wird. Siehe [verwenden qualifizierter Komponenten](using-qualified-components.md).
+Die PublishComponent-Tabelle ordnet [](component-table.md) komponenten, die in der Component-Tabelle aufgelistet sind, einer Textzeichenfolge für den Qualifizierer und einer Kategorie-ID-GUID zu. Komponenten mit paralleler Funktionalität, die auf diese Weise gruppiert wurden, werden als qualifizierte Komponenten bezeichnet. Weitere Informationen [finden Sie unter Qualifizierte Komponenten.](qualified-components.md) Dies stellt dem Installationsprogramm eine Methode für die Deskription auf ein ebener Ebene zur Auswahl, wenn auf Komponenten bezugsweise verwendet wird. Weitere Informationen [finden Sie unter Verwenden von qualifizierten Komponenten.](using-qualified-components.md)
 
-Die PublishComponent-Tabelle weist die folgenden Spalten auf.
+Die PublishComponent-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
-| ComponentID | [GUID](guid.md)             | J   | N        |
+| Componentid | [GUID](guid.md)             | J   | N        |
 | Qualifizierer   | [Text](text.md)             | J   | N        |
-| Komponente\_ | [Bezeichner](identifier.md) | J   | N        |
+| Komponente\_ | [Identifier](identifier.md) | J   | N        |
 | AppData     | [Text](text.md)             | N   | J        |
-| Funktion\_   | [Bezeichner](identifier.md) | N   | N        |
+| Komponente\_   | [Identifier](identifier.md) | N   | N        |
 
 
 
@@ -35,46 +35,46 @@ Die PublishComponent-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="ComponentId"></span><span id="componentid"></span><span id="COMPONENTID"></span>ComponentID
+<span id="ComponentId"></span><span id="componentid"></span><span id="COMPONENTID"></span>Componentid
 </dt> <dd>
 
-Eine Zeichen folgen- [GUID](guid.md) , die die Kategorie der Komponenten darstellt, die gruppiert werden. Beachten Sie, dass der Titel dieser Spalte irreführend ist. Dies ist die GUID für die Kategorie qualifizierter Komponenten und ist nicht dieselbe GUID, die in der ComponentID-Spalte der [Component-Tabelle](component-table.md)angezeigt wird. Hier bezieht es sich auf einen Server, der die Funktionalität einer Komponente für externe Clients anstelle der Komponente selbst bereitstellt.
+Eine [Zeichenfolgen-GUID,](guid.md) die die Kategorie der zu gruppierenden Komponenten darstellt. Beachten Sie, dass der Titel dieser Spalte irreführend ist. Dies ist die GUID für die Kategorie der qualifizierten Komponenten und nicht die gleiche GUID, die in der ComponentId -Spalte der [Component-Tabelle angezeigt wird.](component-table.md) Hier bezieht sie sich auf einen Server, der die Funktionalität einer Komponente für externe Clients und nicht für die Komponente selbst zur Verfügung stellt.
 
 </dd> <dt>
 
-<span id="Qualifier"></span><span id="qualifier"></span><span id="QUALIFIER"></span>Turnier
+<span id="Qualifier"></span><span id="qualifier"></span><span id="QUALIFIER"></span>Qualifizierer
 </dt> <dd>
 
-Eine Text Zeichenfolge, die den Wert in der ComponentID-Spalte qualifiziert. Ein Qualifizierer wird verwendet, um mehrere Formen derselben Komponente, z. b. eine Komponente, die in mehreren Sprachen implementiert ist, zu unterscheiden. Dabei handelt es sich um die von [**msienbicomponentqualifier**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)zurückgegebenen qualifizierertextzeichenfolgen.
+Eine Textzeichenfolge, die den Wert in der ComponentId -Spalte qualifiziert. Ein Qualifizierer wird verwendet, um mehrere Formen derselben Komponente zu unterscheiden, z. B. eine Komponente, die in mehreren Sprachen implementiert ist. Dies sind die Textzeichenfolgen des Qualifizierers, die von [**MsiEnumComponentQualifiers zurückgegeben werden.**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)
 
 </dd> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Externer Schlüssel in Spalte 1 der [Komponenten Tabelle](component-table.md). Dieser Bezeichner verweist auf den Daten Satz der qualifizierten Komponente in der Component-Tabelle.
+Externer Schlüssel in Spalte 1 der [Komponententabelle](component-table.md). Dieser Bezeichner verweist auf den Datensatz der qualifizierten Komponente in der Component-Tabelle.
 
 </dd> <dt>
 
-<span id="AppData"></span><span id="appdata"></span><span id="APPDATA"></span>APPDATA
+<span id="AppData"></span><span id="appdata"></span><span id="APPDATA"></span>Appdata
 </dt> <dd>
 
-Ein optionaler Lokalisier barer Text, der die qualifizierte Komponente dieses Datensatzes beschreibt. Die Zeichenfolge wird häufig von der Anwendung analysiert und kann dem Benutzer angezeigt werden. Die qualifizierte Komponente sollte beschrieben werden. Dies kann mit [**msienumschlag componentqualifizierern**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)abgerufen werden.
+Ein optionaler lokalisierbarer Text, der die qualifizierte Komponente dieses Datensatzes beschreibt. Die Zeichenfolge wird häufig von der Anwendung analysiert und kann dem Benutzer angezeigt werden. Sie sollte die qualifizierte Komponente beschreiben. Dies kann mit [**MsiEnumComponentQualifiers abgerufen werden.**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)
 
 </dd> <dt>
 
-<span id="Feature_"></span><span id="feature_"></span><span id="FEATURE_"></span>Befinden\_
+<span id="Feature_"></span><span id="feature_"></span><span id="FEATURE_"></span>Feature\_
 </dt> <dd>
 
 Externer Schlüssel in Spalte 1 der [Featuretabelle](feature-table.md). Dies ist das Feature, das diese qualifizierte Komponente verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf diese Tabelle wird verwiesen, wenn die [PublishComponents-Aktion](publishcomponents-action.md) oder die [unpublishcomponents-Aktion](unpublishcomponents-action.md) ausgeführt wird.
+Auf diese Tabelle wird verwiesen, wenn die [PublishComponents-Aktion](publishcomponents-action.md) oder die [UnpublishComponents-Aktion](unpublishcomponents-action.md) ausgeführt wird.
 
-Beachten Sie, dass der Name dieser Tabelle irreführend ist. Diese Tabelle ist nicht erforderlich, um Ankündigungen zu erstellen. Informationen dazu, wie Sie den Installationsstatus von Komponenten für die Ankündigung festlegen, finden Sie in der Spalte Attribute der [Komponenten Tabelle](component-table.md) und [Funktions Tabelle](feature-table.md) .
+Beachten Sie, dass der Name dieser Tabelle irreführend ist. Diese Tabelle ist nicht erforderlich, um Ankündigungen zu erstellen. Informationen zum Festlegen des Installationszustands von komponenten, die angekündigt werden, finden Sie in der Spalte Attribute der Tabelle [Komponente](component-table.md) und in der [Featuretabelle.](feature-table.md)
 
 ## <a name="validation"></a>Überprüfen
 

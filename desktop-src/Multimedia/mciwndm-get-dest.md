@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GET_DEST Meldung (VFW. h)
-description: Die mciwndm \_ get \_ dest-Nachricht Ruft die Koordinaten des Ziel Rechtecks ab, das zum Zoomen oder Strecken der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mithilfe des Makros mciwndgetdest senden.
+title: MCIWNDM_GET_DEST (Vfw.h)
+description: Die MCIWNDM GET DEST-Nachricht ruft die Koordinaten des Zielrechtecks ab, das zum Zoomen oder Strecken der Bilder einer AVI-Datei während der Wiedergabe \_ \_ verwendet wird. Sie können diese Nachricht explizit oder mithilfe des Makros MCIWndGetDest senden.
 ms.assetid: d4d8a3eb-aad4-4435-a23b-7a9c55fc194d
 keywords:
-- MCIWNDM_GET_DEST-Nachricht (Multimedia)
+- MCIWNDM_GET_DEST von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab5f16b434caef56e6c6aa97bfd767770dc05ee1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b4a6326485bece572b03ceeca687ca4468b6d866c25c738c32d13763fd0931a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117802904"
 ---
-# <a name="mciwndm_get_dest-message"></a>Mciwndm- \_ get- \_ dest-Meldung
+# <a name="mciwndm_get_dest-message"></a>MCIWNDM \_ GET \_ DEST-Nachricht
 
-Die **mciwndm \_ get \_ dest** -Nachricht Ruft die Koordinaten des Ziel Rechtecks ab, das zum Zoomen oder Strecken der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mithilfe des Makros [**mciwndgetdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest) senden.
+Die **MCIWNDM \_ GET \_ DEST-Nachricht** ruft die Koordinaten des Zielrechtecks ab, das zum Zoomen oder Strecken der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**Makros MCIWndGetDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest) senden.
 
 
 ```C++
@@ -38,16 +38,16 @@ lParam = (LPARAM) (LPRECT) prc;
 
 <dl> <dt>
 
-<span id="prc"></span><span id="PRC"></span>*PRC*
+<span id="prc"></span><span id="PRC"></span>*Vr china*
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, um die Koordinaten des Ziel Rechtecks zurückzugeben.
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) um die Koordinaten des Zielrechtecks zurückgibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,15 +57,15 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mciwndgetdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest)
+[**MCIWndGetDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest)
 </dt> </dl>
 
  

@@ -1,117 +1,117 @@
 ---
-description: Die lineaddressstate \_ -Bitflag-Konstanten beschreiben verschiedene Adress Status Elemente.
+description: Die \_ LINEADDRESSSTATE-Bitflagkonst constants beschreiben verschiedene Adressstatuselemente.
 ms.assetid: f06140d0-f41a-4228-93c5-21d609af5473
-title: LINEADDRESSSTATE_ Konstanten (TAPI. h)
+title: LINEADDRESSSTATE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 483ac665c41989c65b43419442601dfb70667dc2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ddf746d98328df51497374b990eb23f3885516ee1374d9cfdafb8799d016fb74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761852"
 ---
-# <a name="lineaddressstate_-constants"></a>Lineaddressstate- \_ Konstanten
+# <a name="lineaddressstate_-constants"></a>LINEADDRESSSTATE-Konstanten \_
 
-Die **lineaddressstate \_** -Bitflag-Konstanten beschreiben verschiedene Adress Status Elemente.
+Die **\_ LINEADDRESSSTATE-Bitflagkonst** constants beschreiben verschiedene Adressstatuselemente.
 
 <dl> <dt>
 
-<span id="LINEADDRESSSTATE_CAPSCHANGE"></span><span id="lineaddressstate_capschange"></span>**lineaddressstate \_ capschange**
+<span id="LINEADDRESSSTATE_CAPSCHANGE"></span><span id="lineaddressstate_capschange"></span>**LINEADDRESSSTATE \_ CAPSCHANGE**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, dass ein oder mehrere der Elemente in der [**lineaddresscaps**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) -Struktur für die Adresse aufgrund von Konfigurationsänderungen, die vom Benutzer oder anderen Bedingungen vorgenommen wurden, geändert wurden. Die Anwendung sollte [**linegetaddresscaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps) zum Lesen der aktualisierten Struktur verwenden. Wenn ein Dienstanbieter eine [**Zeile \_ addressstate**](line-addressstate.md) -Nachricht mit diesem Wert an TAPI sendet, übergibt TAPI ihn an Anwendungen, die die TAPI-Version 1,4 oder höher ausgehandelt haben. Anwendungen, die eine vorherige API-Version aushandeln, erhalten [**Zeilen- \_ linedevstate**](line-linedevstate.md) -Nachrichten, die linedevstate \_ REIT enthalten, sodass diese die aktualisierten Informationen Herunterfahren und erneut initialisieren müssen.
+Gibt an, dass sich aufgrund von Konfigurationsänderungen, die vom Benutzer oder anderen Umständen vorgenommen wurden, mindestens ein Member in der [**LINEADDRESSCAPS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) für die Adresse geändert hat. Die Anwendung sollte [**lineGetAddressCaps verwenden,**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps) um die aktualisierte Struktur zu lesen. Wenn ein Dienstanbieter eine [**LINE \_ ADDRESSSTATE-Nachricht**](line-addressstate.md) mit diesem Wert an TAPI sendet, überträgt TAPI diese an Anwendungen, die TAPI-Version 1.4 oder höher ausgehandelt haben. Anwendungen, die eine frühere API-Version aushandeln, empfangen [**LINE \_ LINEDEVSTATE-Nachrichten,**](line-linedevstate.md) die LINEDEVSTATE REINIT angeben. Daher müssen sie ihre Verbindung mit TAPI herunterfahren und erneut initialisieren, um die aktualisierten Informationen zu \_ erhalten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_DEVSPECIFIC"></span><span id="lineaddressstate_devspecific"></span>**lineaddressstate \_ DevSpecific**
+<span id="LINEADDRESSSTATE_DEVSPECIFIC"></span><span id="lineaddressstate_devspecific"></span>**LINEADDRESSSTATE \_ DEVSPECIFIC**
 </dt> <dd> <dl> <dt>
 
 
 
-Das gerätespezifische Element des Adress Status hat sich geändert.
+Das gerätespezifische Element des Adressstatus wurde geändert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_FORWARD"></span><span id="lineaddressstate_forward"></span>**lineaddressstate \_ Vorwärts**
+<span id="LINEADDRESSSTATE_FORWARD"></span><span id="lineaddressstate_forward"></span>**LINEADDRESSSTATE \_ FORWARD**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Weiterleitungs Status der Adresse hat sich geändert, einschließlich der Anzahl der Ringe zum Ermitteln der Bedingung "keine Antwort". Die Anwendung sollte den Adress Status überprüfen, um Details zum aktuellen Weiterleitungs Status der Adresse zu ermitteln.
+Der Weiterleitungsstatus der Adresse hat sich geändert, einschließlich möglicherweise der Anzahl von Ringen zum Bestimmen einer Bedingung ohne Antwort. Die Anwendung sollte den Adressstatus überprüfen, um Details zum aktuellen Weiterleitungsstatus der Adresse zu ermitteln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_INUSEMANY"></span><span id="lineaddressstate_inusemany"></span>**lineaddressstate \_ inusemany**
+<span id="LINEADDRESSSTATE_INUSEMANY"></span><span id="lineaddressstate_inusemany"></span>**LINEADDRESSSTATE \_ INUSEMANY**
 </dt> <dd> <dl> <dt>
 
 
 
-Die überwachte oder überbrückte Adresse wurde von einer Station in der Verwendung durch mehr als eine Station geändert.
+Die überwachte oder überbrückte Adresse wurde von einer Station in mehr als einer Station verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_INUSEONE"></span><span id="lineaddressstate_inuseone"></span>**lineaddressstate \_ inuseone**
+<span id="LINEADDRESSSTATE_INUSEONE"></span><span id="lineaddressstate_inuseone"></span>**LINEADDRESSSTATE \_ INUSEONE**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Adresse hat sich im Leerlauf geändert oder von vielen überbrückten Stationen verwendet, um von nur einer Station verwendet zu werden.
+Die Adresse wurde von leeren oder von vielen Bridged Stations verwendet, um von nur einer Station verwendet zu werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_INUSEZERO"></span><span id="lineaddressstate_inusezero"></span>**lineaddressstate \_ inusezero**
+<span id="LINEADDRESSSTATE_INUSEZERO"></span><span id="lineaddressstate_inusezero"></span>**LINEADDRESSSTATE \_ INUSEZERO**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Adresse wurde in den Leerlauf geändert (Sie wird von keiner Station verwendet).
+Die Adresse wurde in "Im Leerlauf" geändert (sie wird von keinen Stationen verwendet).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_NUMCALLS"></span><span id="lineaddressstate_numcalls"></span>**lineaddressstate- \_ numrufe**
+<span id="LINEADDRESSSTATE_NUMCALLS"></span><span id="lineaddressstate_numcalls"></span>**LINEADDRESSSTATE \_ NUMCALLS**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Anzahl der Aufrufe für die Adresse hat sich geändert. Dies ist das Ergebnis von Ereignissen, z. b. einem neuen eingehenden-Befehl, einem ausgehenden-Rückruf für die Adresse oder einem-Rückruf, der seinen Haltezeit ändert. Dieses Flag deckt die Änderungen in allen Membern **dwnumactivecalls**, **dwnumonholdcalls** und **dwnumonholdcudingcalls** in der [**lineaddressstatus**](/windows/desktop/api/Tapi/ns-tapi-lineaddressstatus) -Struktur ab. Die Anwendung sollte alle drei Member überprüfen, wenn Sie eine [**Zeile \_ addressstate**](line-addressstate.md) (numcalls) empfängt.
+Die Anzahl der Aufrufe für die Adresse hat sich geändert. Dies ist das Ergebnis von Ereignissen wie einem neuen eingehenden Anruf, einem ausgehenden Anruf für die Adresse oder einem Anruf, der seinen Hold-Status ändert. Dieses Flag deckt Änderungen in den Membern **dwNumActiveCalls,** **dwNumOnHoldCalls** und **dwNumOnHoldPendingCalls** in der [**LINEADDRESSSTATUS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-lineaddressstatus) ab. Die Anwendung sollte alle drei Member überprüfen, wenn sie eine [**LINE ADDRESSSTATE(numCalls)-Nachricht \_**](line-addressstate.md) empfängt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_OTHER"></span><span id="lineaddressstate_other"></span>**lineaddressstate \_ other**
+<span id="LINEADDRESSSTATE_OTHER"></span><span id="lineaddressstate_other"></span>**LINEADDRESSSTATE \_ OTHER**
 </dt> <dd> <dl> <dt>
 
 
 
-Address-Status Elemente, die nicht den unten aufgeführten unterliegen, wurden geändert. Die Anwendung sollte den aktuellen Adress Status überprüfen, um zu bestimmen, welche Elemente geändert wurden.
+Andere Adressstatuselemente als die unten aufgeführten wurden geändert. Die Anwendung sollte den aktuellen Adressstatus überprüfen, um zu ermitteln, welche Elemente geändert wurden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSSTATE_TERMINALS"></span><span id="lineaddressstate_terminals"></span>**lineaddressstate- \_ Terminals**
+<span id="LINEADDRESSSTATE_TERMINALS"></span><span id="lineaddressstate_terminals"></span>**LINEADDRESSSTATE-TERMINALS \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Terminal Einstellungen für die Adresse wurden geändert.
+Die Terminaleinstellungen für die Adresse wurden geändert.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
-Eine Anwendung wird über Änderungen an diesen Status Elementen in der [**Zeile \_ addressstate**](line-addressstate.md) -Nachricht benachrichtigt. Die Gerätefunktionen der Adresse geben an, welche Adressen Zustandsänderungen für diese Adresse möglicherweise gemeldet werden können.
+Eine Anwendung wird über Änderungen an diesen Statuselementen in der [**LINE \_ ADDRESSSTATE-Nachricht**](line-addressstate.md) benachrichtigt. Die Gerätefunktionen der Adresse geben an, welche Adressstatusänderungen möglicherweise für diese Adresse gemeldet werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,28 +119,28 @@ Eine Anwendung wird über Änderungen an diesen Status Elementen in der [**Zeile
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Zeile \_ addressstate**](line-addressstate.md)
+[**LINE \_ ADDRESSSTATE**](line-addressstate.md)
 </dt> <dt>
 
-[**\_linienlinedevstate**](line-linedevstate.md)
+[**LINE \_ LINEDEVSTATE**](line-linedevstate.md)
 </dt> <dt>
 
-[**Lineaddresscaps**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps)
+[**LINEADDRESSCAPS**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps)
 </dt> <dt>
 
-[**Lineaddressstatus**](/windows/desktop/api/Tapi/ns-tapi-lineaddressstatus)
+[**LINEADDRESSSTATUS**](/windows/desktop/api/Tapi/ns-tapi-lineaddressstatus)
 </dt> <dt>
 
-[**linegetaddresscaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps)
+[**lineGetAddressCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps)
 </dt> </dl>
 
  

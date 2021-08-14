@@ -1,25 +1,25 @@
 ---
-description: Com+-anwendungspoolingaufgaben
+description: COM+-Anwendungspoolingtasks
 ms.assetid: c6884cd3-a98a-431b-9bae-37880fa4cfa6
-title: Com+-anwendungspoolingaufgaben
+title: COM+-Anwendungspoolingtasks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7441ecce0b0566876934b71015df56d899f23a4e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: eed5f43c52a89737dd91253e3fc6f600c511c410657281597b82c1c8d69adb12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118308183"
 ---
-# <a name="com-application-pooling-tasks"></a>Com+-anwendungspoolingaufgaben
+# <a name="com-application-pooling-tasks"></a>COM+-Anwendungspoolingtasks
 
-Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwendung des com+-Anwendungs Pooling.
+Die folgenden Themen enthalten schrittweise Anweisungen für die Verwendung von COM+-Anwendungspooling.
 
 
 
 | Thema                                                                                          | BESCHREIBUNG                                                                |
 |------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [Konfigurieren von com+-Anwendungs Pooling-Werten](configuring-com--application-pooling-values.md) | Beschreibt, wie com+-anwendungspoolingwerte für Ihre Anwendung festgelegt werden. |
+| [Konfigurieren von COM+-Anwendungspoolingwerten](configuring-com--application-pooling-values.md) | Beschreibt, wie COM+-Anwendungspoolingwerte für Ihre Anwendung festgelegt werden. |
 
 
 
@@ -29,10 +29,10 @@ Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwend
 
 <dl> <dt>
 
-[Konzepte für das com+-Anwendungs Pooling](com--application-pooling-concepts.md)
+[COM+-Anwendungspoolingkonzepte](com--application-pooling-concepts.md)
 </dt> <dt>
 
-[Com+-Anwendungs Wiederverwendungs Tasks](com--application-recycling-tasks.md)
+[COM+-Aufgaben zur Anwendungswiederverwendung](com--application-recycling-tasks.md)
 </dt> </dl>
 
  

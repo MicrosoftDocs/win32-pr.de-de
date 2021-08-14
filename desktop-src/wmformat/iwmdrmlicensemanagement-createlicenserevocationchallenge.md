@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicencmanagement | atelicenserevocationchallenge-Methode (wmdrmsdk. h)
-description: Die Methode "samatelicenserevocationchallenge" generiert eine Lizenz Sperr Aufforderung.
+title: IWMDRMLicenseManagement CreateLicenseRevocationChallenge-Methode (Wmdrmsdk.h)
+description: Die CreateLicenseRevocationChallenge-Methode generiert eine Lizenzsperrungsaufforderung.
 ms.assetid: 31fcf7a7-1af8-4474-abac-eddb1070975b
 keywords:
-- Methode "samatelicenserevocationchallenge" Windows Media Format
-- Methode "samatelicenserevocationchallenge" Windows Media-Format, iwmdrmlicenermanagement-Schnittstelle
-- Iwmdrmlicencmanagement-Schnittstelle Windows Media-Format, Methode "kreatelicenserevocationchallenge"
+- CreateLicenseRevocationChallenge-Methode windows Media Format
+- CreateLicenseRevocationChallenge-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , CreateLicenseRevocationChallenge-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e7fd0acb41b9a2548e5be708611529bea92e131
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 851233229d7dde113cf21cfb38419067679843b34ae59ece0e32e326c2a91c46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117846953"
 ---
-# <a name="iwmdrmlicensemanagementcreatelicenserevocationchallenge-method"></a>Iwmdrmlicenabmanagement:: samatelicenserevocationchallenge-Methode
+# <a name="iwmdrmlicensemanagementcreatelicenserevocationchallenge-method"></a>IWMDRMLicenseManagement::CreateLicenseRevocationChallenge-Methode
 
-Die Methode " **samatelicenserevocationchallenge** " generiert eine Lizenz Sperr Aufforderung.
+Die **CreateLicenseRevocationChallenge-Methode** generiert eine Lizenzsperrungsaufforderung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,51 +47,51 @@ HRESULT CreateLicenseRevocationChallenge(
 
 <dl> <dt>
 
-*pbmachineid* \[ in\]
+*pbMachineID* \[ In\]
 </dt> <dd>
 
-Vom Benutzer angegebener Computer Bezeichner. Dieser Wert wird verwendet, um eine Lizenz auf dem Server abzufragen, und muss dem vom Lizenzserver verwendeten Format entsprechen.
+Vom Benutzer angegebener Computerbezeichner. Dieser Wert wird zum Abfragen einer Lizenz auf dem Server verwendet und muss dem vom Lizenzserver verwendeten Format entsprechen.
 
 </dd> <dt>
 
-*cbmachineid* \[ in\]
+*cbMachineID* \[ In\]
 </dt> <dd>
 
-Größe (in Bytes) des Computer Bezeichners.
+Größe des Computerbezeichners in Bytes.
 
 </dd> <dt>
 
-*pbchallenge* \[ in\]
+*pbChallenge* \[ In\]
 </dt> <dd>
 
-Vom Benutzer angegebene Abfrage Daten. Diese Daten werden zusätzlich zum Computer Bezeichner verwendet, um den Lizenzserver abzufragen, damit Lizenzen widerrufen werden.
+Benutzerdefinierte Abfragedaten. Diese Daten werden zusätzlich zum Computerbezeichner verwendet, um den Lizenzserver nach lizenzen abzufragen, die widerrufen werden sollen.
 
 </dd> <dt>
 
-*cbchallenge* \[ in\]
+*cbChallenge* \[ In\]
 </dt> <dd>
 
-Größe der Abfrage Daten in Bytes.
+Größe der Abfragedaten in Bytes.
 
 </dd> <dt>
 
-*ppbherausfordergeoutput* \[ vorgenommen\]
+*ppbChallengeOutput* \[ out\]
 </dt> <dd>
 
-Adresse eines Zeigers, der die Adresse der Challenge-Ausgabe empfängt. Dieser Puffer stellt die Daten dar, die an den Lizenz Sperr Dienst gesendet werden. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie " **CoTaskMemFree**" aufrufen.
+Adresse eines Zeigers, der die Adresse der Abfrageausgabe empfängt. Bei diesem Puffer handelt es sich um die Daten, die an den Lizenzsperrdienst gesendet werden. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie **CoTaskMemFree** aufrufen.
 
 </dd> <dt>
 
-*pcbherausfordergeoutput* \[ vorgenommen\]
+*pwChallengeOutput* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Größe der zugeordneten Challenge-Ausgabedaten in Bytes empfängt.
+Adresse einer Variablen, die die Größe der ausgabedaten der zugeordneten Abfrage in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -113,15 +113,15 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

@@ -1,67 +1,67 @@
 ---
 title: Multicast-Gruppen-Manager-Funktionen
-description: Die folgenden Funktionen werden für die Registrierung beim Multicast Gruppen-Manager verwendet.
+description: Die folgenden Funktionen werden verwendet, um sich beim Multicastgruppen-Manager zu registrieren.
 ms.assetid: d4374ced-06ea-49dd-8f52-0d06612aa4c3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9bbc3dbcfe24e63283907e5e68f211fd1f4cb6e3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8d32ecaa5bc30aa9563ac15383cf17d9308c6c17b416b31a6c2b03b8b55d0710
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790384"
 ---
 # <a name="multicast-group-manager-functions"></a>Multicast-Gruppen-Manager-Funktionen
 
-Die folgenden Funktionen werden verwendet, um sich beim Multicast-Gruppen-Manager zu registrieren:
+Die folgenden Funktionen werden verwendet, um sich beim Multicastgruppen-Manager zu registrieren:
 
-[**Mgmregistermprotocol**](/windows/desktop/api/Mgm/nf-mgm-mgmregistermprotocol)
+[**MgmRegisterMProtocol**](/windows/desktop/api/Mgm/nf-mgm-mgmregistermprotocol)
 
-[**Mgmderegistermprotocol**](/windows/desktop/api/Mgm/nf-mgm-mgmderegistermprotocol)
+[**MgmDeRegisterMProtocol**](/windows/desktop/api/Mgm/nf-mgm-mgmderegistermprotocol)
 
-Die folgenden Funktionen werden verwendet, um den Schnittstellen Besitz zu verwalten:
+Die folgenden Funktionen werden verwendet, um den Schnittstellenbesitz zu verwalten:
 
-[**Mgmgetprotocoloninterface**](/windows/desktop/api/Mgm/nf-mgm-mgmgetprotocoloninterface)
+[**MgmGetProtocolOnInterface**](/windows/desktop/api/Mgm/nf-mgm-mgmgetprotocoloninterface)
 
-[**Mgmtakeinterfaceownership**](/windows/desktop/api/Mgm/nf-mgm-mgmtakeinterfaceownership)
+[**MgmTakeInterfaceOwnership**](/windows/desktop/api/Mgm/nf-mgm-mgmtakeinterfaceownership)
 
-[**Mgmreleaseingeterfaceownership**](/windows/desktop/api/Mgm/nf-mgm-mgmreleaseinterfaceownership)
+[**MgmReleaseInterfaceOwnership**](/windows/desktop/api/Mgm/nf-mgm-mgmreleaseinterfaceownership)
 
-Die folgenden Funktionen werden verwendet, um die Gruppenmitgliedschaft zu verwalten:
+Die folgenden Funktionen werden zum Verwalten der Gruppenmitgliedschaft verwendet:
 
-[**Mgmaddgroupmembership shipentry**](/windows/desktop/api/Mgm/nf-mgm-mgmaddgroupmembershipentry)
+[**MgmAddGroupMembershipEntry**](/windows/desktop/api/Mgm/nf-mgm-mgmaddgroupmembershipentry)
 
-[**Mgmdeletegroupmembership shipentry**](/windows/desktop/api/Mgm/nf-mgm-mgmdeletegroupmembershipentry)
+[**MgmDeleteGroupMembershipEntry**](/windows/desktop/api/Mgm/nf-mgm-mgmdeletegroupmembershipentry)
 
-Die folgenden Funktionen werden zum Abrufen von Multicast Weiterleitungs Einträgen (MFEs) und MFE-Statistiken verwendet:
+Die folgenden Funktionen werden verwendet, um Multicastweiterleitungseinträge (MFEs) und MFE-Statistiken zu erhalten:
 
-[**Mgmgetfirstmfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfe)
+[**MgmGetFirstMfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfe)
 
-[**Mgmgetnextmfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetnextmfe)
+[**MgmGetNextMfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetnextmfe)
 
-[**Mgmgetmfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetmfe)
+[**MgmGetMfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetmfe)
 
-[**Mgmgetfirstmfestats**](/windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfestats)
+[**MgmGetFirstMfeStats**](/windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfestats)
 
-[**Mgmgetnextmfestats**](/windows/desktop/api/Mgm/nf-mgm-mgmgetnextmfestats)
+[**MgmGetNextMfeStats**](/windows/desktop/api/Mgm/nf-mgm-mgmgetnextmfestats)
 
-[**Mgmgetmfestats**](/windows/desktop/api/Mgm/nf-mgm-mgmgetmfestats)
+[**MgmGetMfeStats**](/windows/desktop/api/Mgm/nf-mgm-mgmgetmfestats)
 
 Die folgende Funktion wird verwendet, um MFEs zu ändern:
 
-[**Mgmabtmfe**](/windows/desktop/api/Mgm/nf-mgm-mgmsetmfe)
+[**MgmSetMfe**](/windows/desktop/api/Mgm/nf-mgm-mgmsetmfe)
 
-Die folgenden Funktionen werden verwendet, um eine Liste der Gruppen abzurufen, die verknüpft wurden:
+Die folgenden Funktionen werden verwendet, um eine Liste von Gruppen zu erhalten, die beigetreten sind:
 
-[**Mgmgroupvererationstart**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationstart)
+[**MgmGroupEnumerationStart**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationstart)
 
-[**Mgmgroupvererationgetnext**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext)
+[**MgmGroupEnumerationGetNext**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext)
 
-[**Mgmgroupenerationend**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationend)
+[**MgmGroupEnumerationEnd**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationend)
 
- 
+ 
 
- 
+ 
 
 
 

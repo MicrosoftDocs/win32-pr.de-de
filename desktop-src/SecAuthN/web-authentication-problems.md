@@ -4,12 +4,12 @@ ms.assetid: 25A024AA-9A70-40A5-BF5E-452FD148D0D2
 title: Webauthentifizierungsprobleme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f996527c58b9620b8417ac3e6cdd6e0f61bd5217
-ms.sourcegitcommit: 6377cd944d1f09f2dfe5727170ca8b330c8235bf
+ms.openlocfilehash: 7c722aefa35849485d2c8958e17c654b5bb6477479ac1765e76e648fe15f9826
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "113353663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785868"
 ---
 # <a name="web-authentication-problems"></a>Webauthentifizierungsprobleme
 
@@ -17,11 +17,11 @@ In diesem Thema werden Tipps zur Problembehandlung für die Verwendung der Webau
 
 -   [Betriebsprotokolle](#operational-logs)
 -   [Verwenden von Fiddler mit dem Webauthentifizierungsbroker](#using-fiddler-with-web-authentication-broker)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="operational-logs"></a>Betriebsprotokolle
 
-Häufig können Sie anhand der Betriebsprotokolle ermitteln, was nicht funktioniert. Es gibt einen dedizierten Ereignisprotokollkanal Microsoft-Windows-WebAuth Operational, mit dem Websiteentwickler verstehen können, wie ihre Webseiten vom \\ Webauthentifizierungsbroker verarbeitet werden. Um sie zu aktivieren, starten Sie eventvwr.exe, und aktivieren Sie das Betriebsprotokoll unter Anwendung und Dienste \\ Microsoft \\ Windows \\ WebAuth. Außerdem fügt der Webauthentifizierungsbroker eine eindeutige Zeichenfolge an die Benutzer-Agent-Zeichenfolge an, um sich auf dem Webserver zu identifizieren. Die Zeichenfolge lautet „MSAuthHost/1.0“. Beachten Sie, dass sich die Versionsnummer ändern kann. Verlassen Sie sich also in Ihrem Code nicht auf diese Versionsnummer. Ein Beispiel für die vollständige Benutzer-Agent-Zeichenfolge lautet wie folgt:
+Häufig können Sie anhand der Betriebsprotokolle ermitteln, was nicht funktioniert. Es gibt einen dedizierten Ereignisprotokollkanal Microsoft-Windows-WebAuth Operational, mit dem Websiteentwickler verstehen können, wie ihre Webseiten vom \\ Webauthentifizierungsbroker verarbeitet werden. Starten Sie zum Aktivieren dieses eventvwr.exe, und aktivieren Sie das Betriebsprotokoll unter Anwendung und Dienste \\ Microsoft \\ Windows \\ WebAuth. Außerdem fügt der Webauthentifizierungsbroker eine eindeutige Zeichenfolge an die Benutzer-Agent-Zeichenfolge an, um sich auf dem Webserver zu identifizieren. Die Zeichenfolge lautet „MSAuthHost/1.0“. Beachten Sie, dass sich die Versionsnummer ändern kann. Verlassen Sie sich also in Ihrem Code nicht auf diese Versionsnummer. Ein Beispiel für die vollständige Benutzer-Agent-Zeichenfolge lautet wie folgt:
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 

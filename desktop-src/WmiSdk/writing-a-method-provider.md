@@ -1,51 +1,51 @@
 ---
-description: Ein Methoden Anbieter ermöglicht dem WMI-Zugriff auf die Methoden einer Klasse. Beispielsweise kann eine-Klasse, die eine Anwendung darstellt, über eine-Methode verfügen, die die Anwendung beendet.
+description: Ein Methodenanbieter ermöglicht WMI-Zugriff auf die Methoden einer Klasse. Beispielsweise kann eine Klasse, die eine Anwendung darstellt, über eine Methode verfügen, die die Anwendung beendet.
 ms.assetid: bce87e65-5cba-4eef-91da-a3e13c80b8a6
 ms.tgt_platform: multiple
-title: Schreiben eines Methoden Anbieters
+title: Schreiben eines Methodenanbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8626e2e16fe5424a0b05df81e2444a72ecb8841f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea5121d4a9438744ad62b666e62d4ffa90c39428020d3e39c80a6de26e295959
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118311929"
 ---
-# <a name="writing-a-method-provider"></a>Schreiben eines Methoden Anbieters
+# <a name="writing-a-method-provider"></a>Schreiben eines Methodenanbieters
 
-Ein Methoden Anbieter ermöglicht dem WMI-Zugriff auf die Methoden einer Klasse. Beispielsweise kann eine-Klasse, die eine Anwendung darstellt, über eine-Methode verfügen, die die Anwendung beendet.
+Ein Methodenanbieter ermöglicht WMI-Zugriff auf die Methoden einer Klasse. Beispielsweise kann eine Klasse, die eine Anwendung darstellt, über eine Methode verfügen, die die Anwendung beendet.
 
-Das Ändern der Reihenfolge der Eingabe-und Ausgabeparameter der Methode beim Aktualisieren eines vorhandenen Methoden Anbieters kann zu Fehlern bei Anwendungen führen, die die-Methode aufruft. Die Reihenfolge der Eingabe-oder Ausgabeparameter wird durch den Wert des [**ID**](standard-wmi-qualifiers.md) -Qualifizierers für jeden Parameter festgelegt. Der erste Parameter hat den **ID** -Wert 0 (null). Fügen Sie am Ende der vorhandenen Parameter neue Eingabeparameter hinzu, anstatt Sie in die bereits festgelegte Sequenz einzufügen.
+Das Ändern der Reihenfolge der Eingabe- und Ausgabeparameter der Methode beim Aktualisieren eines vorhandenen Methodenanbieters kann zu Fehlern bei Anwendungen führen, die die Methode aufrufen. Die Reihenfolge der Eingabe- oder Ausgabeparameter wird durch den Wert des [**ID-Qualifizierers**](standard-wmi-qualifiers.md) für jeden Parameter festgelegt. Der erste Parameter hat den **ID-Wert** 0 (null). Fügen Sie neue Eingabeparameter am Ende der vorhandenen Parameter hinzu, anstatt sie in die bereits eingerichtete Sequenz einzufügen.
 
-Im folgenden Verfahren wird beschrieben, wie ein Methoden Anbieter implementiert wird.
+Im folgenden Verfahren wird beschrieben, wie ein Methodenanbieter implementiert wird.
 
-**So implementieren Sie einen Methoden Anbieter**
+**So implementieren Sie einen Methodenanbieter**
 
-1.  Entwerfen und registrieren Sie den Klassen Anbieter bei WMI.
+1.  Entwerfen und registrieren Sie Ihren Klassenanbieter mit WMI.
 
-    Klassen Anbieter werden bei WMI registriert, indem eine [**\_ \_ Win32Provider**](--win32provider.md) -Instanz und eine [**\_ \_ methodproviderregistration**](--methodproviderregistration.md) -Klasse erstellt werden. Weitere Informationen finden Sie unter [Registrieren eines Methoden Anbieters](registering-a-method-provider.md).
+    Klassenanbieter registrieren sich bei WMI, indem sie eine [**\_ \_ Win32Provider-Instanz**](--win32provider.md) und eine [**\_ \_ MethodProviderRegistration-Klasse**](--methodproviderregistration.md) erstellen. Weitere Informationen finden Sie unter [Registrieren eines Methodenanbieters.](registering-a-method-provider.md)
 
-2.  Implementieren Sie die [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) -Schnittstelle für Ihren Anbieter.
+2.  Implementieren Sie die [**IWbemProviderInit-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) für Ihren Anbieter.
 
     > [!Note]  
-    > Methoden Anbietern wird dringend empfohlen, das Multithreading-Modell "both" zu verwenden.
+    > Methodenanbietern wird dringend empfohlen, das Multithreadmodell "Beide" zu verwenden.
 
      
 
-3.  Implementieren Sie die [**IWbemServices:: ExecMethodAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execmethodasync) -Methode für Ihren Anbieter.
+3.  Implementieren Sie die [**IWbemServices::ExecMethodAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execmethodasync) für Ihren Anbieter.
 
-    Die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstelle ist die primäre Schnittstelle für einen Methoden Anbieter. Weitere Informationen finden Sie unter [Implementieren der primären Schnittstelle für einen Methoden Anbieter](implementing-the-primary-interface-for-a-method-provider.md).
+    Die [**IWbemServices-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) ist die primäre Schnittstelle für einen Methodenanbieter. Weitere Informationen finden Sie unter [Implementieren der primären Schnittstelle für einen Methodenanbieter.](implementing-the-primary-interface-for-a-method-provider.md)
 
 4.  Fügen Sie zusätzlichen Code hinzu, der für Ihren Anbieter erforderlich ist.
 
-    Wenn Sie Ihren Anbieter entwerfen, müssen Sie wahrscheinlich WMI-Schnittstellen abrufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md) und Verwalten von [Sicherheitsstufen in einem Anbieter](impersonating-a-client.md).
+    Beim Entwerfen Ihres Anbieters müssen Sie wahrscheinlich WMI-Schnittstellen aufrufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md) und Verwalten von [Sicherheitsstufen in einem Anbieter.](impersonating-a-client.md)
 
-    Beim Abrufen von Informationen für einen Client müssen Sie möglicherweise auf die Sicherheitsebenen für diesen Client zugreifen. Weitere Informationen finden Sie unter Annehmen der Identität [eines Clients](impersonating-a-client.md).
+    Beim Abrufen von Informationen für einen Client müssen Sie möglicherweise auf die Sicherheitsstufen für diesen Client zugreifen. Weitere Informationen finden Sie unter Annehmen der [Identität eines Clients.](impersonating-a-client.md)
 
-5.  Ersetzen Sie den bereits vorhandenen Anbieter durch den neuen Code.
+5.  Ersetzen Sie den bereits vorhandenen Anbieter durch Ihren neuen Code.
 
-    Sie müssen diesen Schritt nicht ausführen, wenn Sie nicht über einen vorhandenen Anbieter verfügen, der kopiert werden soll. Weitere Informationen finden Sie unter [Aktualisieren eines Anbieters](updating-a-provider.md).
+    Sie müssen diesen Schritt nicht ausführen, wenn Sie keinen bereits vorhandenen Anbieter zum Kopieren haben. Weitere Informationen finden Sie unter [Aktualisieren eines Anbieters.](updating-a-provider.md)
 
  
 

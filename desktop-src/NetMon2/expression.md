@@ -1,7 +1,7 @@
 ---
-description: Enthält eine Gruppe von als Peers bewerteten andexp-Arrays.
+description: Enthält eine Gruppe von ANDEXP-Arrays, die als Peers ausgewertet werden.
 ms.assetid: 14fa568c-9535-4415-923d-7e93ba4d2e80
-title: Ausdrucks Struktur (Netmon. h)
+title: EXPRESSION-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: b6565c294c0d8e0a7a277769404cb8b1b206380e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4efa1f79477e3dcc13bedfddb2cdca7fd660f5430b7d7f2b87dbd9d4b4425098
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118366838"
 ---
-# <a name="expression-structure"></a>Ausdrucks Struktur
+# <a name="expression-structure"></a>EXPRESSION-Struktur
 
-Die **Ausdrucks** Struktur enthält eine Gruppe von **andexp** -Arrays, die als Peers in logischen Ausdrücken und Ausdrücken ausgewertet werden, die das Format aufweisen.
+Die **EXPRESSION-Struktur** enthält eine Gruppe von **ANDEXP-Arrays,** die als Peers in logischen AND-Ausdrücken ausgewertet werden, die das Format aufweisen.
 
-(Andexp 1 && andexp 2 && andexp 3).
+(ANDEXP 1 && ANDEXP 2 && ANDEXP 3).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ typedef struct _EXPRESSION {
 
 <dl> <dt>
 
-**nandexps**
+**nAndExps**
 </dt> <dd>
 
-Anzahl von **andexp** -Mustern.
+Anzahl von **ANDEXP-Mustern.**
 
 </dd> <dt>
 
-**Andexp**
+**AndExp**
 </dt> <dd>
 
-Array von **andexp** -Mustern. Der Erfassungs Filter ordnet alle Zeilen dieses Arrays als logische and-Anweisungen an. Beachten Sie, dass jede Ausdrucks Struktur maximal vier **andexp** -Muster enthalten kann.
+Array von **ANDEXP-Mustern.** Der Erfassungsfilter ordnet alle Zeilen dieses Arrays als logische AND-Anweisungen an. Beachten Sie, dass jede EXPRESSION-Struktur maximal vier **ANDEXP-Muster** enthalten kann.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum Implementieren dieser Struktur als Teil eines Erfassungs Filters finden Sie unter [Capture Filters (Erfassen von Filtern](capture-filters.md)).
+Weitere Informationen zum Implementieren dieser Struktur als Teil eines Erfassungsfilters finden Sie unter [Erfassungsfilter.](capture-filters.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Weitere Informationen zum Implementieren dieser Struktur als Teil eines Erfassun
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Andexp](andexp.md)
+[ANDEXP](andexp.md)
 </dt> <dt>
 
-[Capturefilter](capturefilter.md)
+[CAPTUREFILTER](capturefilter.md)
 </dt> </dl>
 
  

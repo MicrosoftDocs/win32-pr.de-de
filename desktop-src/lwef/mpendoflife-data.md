@@ -1,10 +1,10 @@
 ---
-title: MPENDOFLIFE_DATA Struktur (mpclient. h)
-description: '\ 0034; Ende des Lebenszyklus \ 0034; Benachrichtigungs Daten.'
+title: MPENDOFLIFE_DATA-Struktur (MpClient.h)
+description: '\ 0034; Ende der Lebensdauer \ 0034; Benachrichtigungsdaten.'
 ms.assetid: 00C2E707-9034-4BBC-99CF-3DFA4B8C08D9
 keywords:
-- MPENDOFLIFE_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPENDOFLIFE_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPENDOFLIFE_DATA struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPENDOFLIFE_DATA Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e209b9b35a089523815c353e8a750152bf4af75
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 532ee5f80e76de49c2c20bb01958e95fc13603b8f4b65666639834c5cad0fa72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118476282"
 ---
-# <a name="mpendoflife_data-structure"></a>\_Mpendomelife-Datenstruktur
+# <a name="mpendoflife_data-structure"></a>MPENDOFLIFE \_ DATA-Struktur
 
-"Lebensdauer"-Benachrichtigungs Daten.
+Benachrichtigungsdaten zum Ende der Lebensdauer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,47 +44,47 @@ typedef struct tagMPENDOFLIFE_DATA {
 
 <dl> <dt>
 
-**ftsignatureablauf**
+**ftSignatureExpiry**
 </dt> <dd>
 
 Typ: **FILETIME**
 
 </dd> <dd>
 
-Zeitpunkt, zu dem die Signatur abläuft.
+Der Zeitpunkt, zu dem die Signatur abläuft.
 
 </dd> <dt>
 
-**ftplatformexpiry**
+**ftPlatformExpiry**
 </dt> <dd>
 
 Typ: **FILETIME**
 
 </dd> <dd>
 
-Uhrzeit, zu der die Plattform abläuft.
+Der Zeitpunkt, zu dem die Plattform abläuft.
 
 </dd> <dt>
 
-**fadminkontrollierten**
+**fAdminControlled**
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
 </dd> <dd>
 
-True, wenn der Administrator die Richtlinie zur Anzeige der Benachrichtigung steuert. Wenn dieser Wert festgelegt ist, weist die Benutzeroberfläche an, die EOL-Benachrichtigung nicht anzuzeigen.
+True, wenn der Administrator die Richtlinie zum Anzeigen der Benachrichtigung steuert. Wenn diese Einstellung festgelegt ist, weist dies die Benutzeroberfläche an, die EOL-Benachrichtigung nicht anzuzeigen.
 
 </dd> <dt>
 
-**fendoflifeimpumdingorpast**
+**fEndOfLifeImpendingOrPast**
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
 </dd> <dd>
 
-True, wenn "Ende des Lebenszyklus" aussteht oder überschreitet. False gibt an, dass die Benutzeroberfläche und die Clients alle EOL-bezogenen Zustände löschen können.
+True, wenn "End of Life" aussteht oder abgelaufen ist. False gibt an, dass Benutzeroberflächen und Clients alle EOL-bezogenen Zustände löschen können.
 
 </dd> </dl>
 
@@ -94,9 +94,9 @@ True, wenn "Ende des Lebenszyklus" aussteht oder überschreitet. False gibt an, 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

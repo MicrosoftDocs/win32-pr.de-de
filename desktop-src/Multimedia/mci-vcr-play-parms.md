@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_PLAY_PARMS Struktur (VCR. h)
-description: Die MCI- \_ VCR- \_ Wiedergabe \_ Parameter Struktur enthält Parameter für den MCI \_ -Wiedergabe Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_PLAY_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ PLAY \_ PARMS-Struktur enthält Parameter für den MCI \_ PLAY-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: e180c203-3113-4fdb-bcf1-ea3e45e646e2
 keywords:
 - MCI_VCR_PLAY_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae15eedc69accc88ef7a58a6d7ad435e872de7ea
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6f2e725ca3dc04fa13dd89aff0a5fbd60ede66f83154740803c98679eb77aec1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374359"
 ---
-# <a name="mci_vcr_play_parms-structure"></a>MCI \_ VCR-Wiedergabe-Parametern- \_ \_ Struktur
+# <a name="mci_vcr_play_parms-structure"></a>MCI \_ VCR \_ PLAY \_ PARMS-Struktur
 
-Die **MCI- \_ VCR- \_ Wiedergabe \_** Parameter Struktur enthält Parameter für den [**MCI- \_ Wiedergabe**](mci-play.md) Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ PLAY \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ PLAY-Befehl**](mci-play.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ typedef struct tagMCI_VCR_PLAY_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwfrom**
+**dwFrom**
 </dt> <dd>
 
-Wiedergabe Position
+Position, aus der wiedergegeben werden soll.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position der Wiedergabe.
+Position, an der wiedergegeben werden soll.
 
 </dd> <dt>
 
-**dwat**
+**dwAt**
 </dt> <dd>
 
-Der Uhrzeitwert, der sich auf den Befehl [**MCI \_ Play**](mci-play.md) oder [**\_ MCI**](mci-cue.md) -Hinweis auswirkt. Bei der Wiedergabe von [**MCI \_ ist**](mci-play-parms.md)dies der Zeitpunkt, zu dem die Wiedergabe beginnt. Bei **MCI \_**-Hinweis ist dies die Zeit, zu der das cubegerät die in **dwfrom** angegebene Position erreicht.
+Zeitwert, der sich auf den [**MCI \_ PLAY-**](mci-play.md) oder [**MCI \_ CUE-Befehl**](mci-cue.md) auswirkt. Für [**MCI \_ PLAY**](mci-play-parms.md)ist dies der Zeitpunkt, zu dem die Wiedergabe beginnt. Für **MCI \_ CUE** ist dies der Zeitpunkt, zu dem das gerät mit dem Cuing die in **dwFrom** angegebene Position erreicht.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Positionen werden im aktuellen Zeitformat angegeben.
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,24 +85,24 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI \_ -Hinweis**](mci-cue.md)
+[**MCI \_ CUE**](mci-cue.md)
 </dt> <dt>
 
-[**MCI- \_ Play**](mci-play.md)
+[**MCI \_ PLAY**](mci-play.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

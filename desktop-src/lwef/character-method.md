@@ -4,42 +4,42 @@ description: Character-Methode
 ms.assetid: 07ee529f-f9d8-4dbc-9ab3-a44c1bc0a7e8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8573d1cc72290510982073331530d9a13f2ebf9d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: af38f21f509835f33788c1911183dbc2c7a8f1ac234ded2dde73ce619180280b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118480627"
 ---
 # <a name="character-method"></a>Character-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt ein [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objekt in einer [**Zeichen**](/windows/desktop/lwef/the-characters-object) Auflistung zurück.
+Gibt ein [**Character-Objekt**](/windows/desktop/lwef/the-characters-object) in einer [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) zurück.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen. Zeichen "*** Merkmal-ID * * *"**
+*agent***. Characters.Character "**_CharacterID_*_"_*
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode können Sie auf die Methoden und Eigenschaften eines [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objekts zugreifen.
+Mit dieser Methode können Sie auf die Methoden und Eigenschaften eines [**Character-Objekts**](/windows/desktop/lwef/the-characters-object) zugreifen.
 
 > [!Note]  
-> Diese Methode ist möglicherweise für einige Programmiersprachen erforderlich, die keine Auflistungen unterstützen. Dies ist für VBScript oder Visual Basic nicht erforderlich. Weitere Informationen zum Angeben von [**Zeichen**](/windows/desktop/lwef/the-characters-object) Methoden finden Sie unter Zeichen Objektmethoden.
+> Diese Methode ist möglicherweise für einige Programmiersprachen erforderlich, die keine Auflistungen unterstützen. Dies ist für VBScript oder Visual Basic. Weitere Informationen zum Angeben von [**Zeichenmethoden finden**](/windows/desktop/lwef/the-characters-object) Sie unter Zeichenobjektmethoden.
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -1,63 +1,63 @@
 ---
-description: Diese ixpsomprintticketresource-Schnittstelle der XPS-Dokument-API ermöglicht den Zugriff auf ein vorhandenes Druck Ticket sowie die Möglichkeit, in einem XPS-OM ein Druck Ticket zu erstellen.
+description: Diese IXpsOMPrintTicketResource-Schnittstelle der XPS-Dokument-API bietet Zugriff auf ein vorhandenes Druckticket sowie die Möglichkeit, ein Druckticket in einer XPS OM zu erstellen.
 ms.assetid: 53c95da0-1601-4945-83a1-e3266d251aee
-title: Schnittstellen für XPS-OM-Druck Tickets
+title: XPS OM–Druckticketschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 646089455e7106b1be3716c0ccf0774be361f130
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: f629e716db7098f8f6999df758fd3b73e3f82b83308a3dd68d5f247d6cd709a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106353282"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117867756"
 ---
-# <a name="xps-om-print-ticket-interfaces"></a>Schnittstellen für XPS-OM-Druck Tickets
+# <a name="xps-om-print-ticket-interfaces"></a>XPS OM–Druckticketschnittstellen
 
-Diese [**ixpsomprintticketresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) -Schnittstelle der XPS-Dokument-API ermöglicht den Zugriff auf ein vorhandenes Druck Ticket sowie die Möglichkeit, in einem XPS-OM ein Druck Ticket zu erstellen.
+Diese [**IXpsOMPrintTicketResource-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) der XPS-Dokument-API bietet Zugriff auf ein vorhandenes Druckticket sowie die Möglichkeit, ein Druckticket in einer XPS OM zu erstellen.
 
-## <a name="print-ticket-resources"></a>Drucken von Ticket Ressourcen
+## <a name="print-ticket-resources"></a>Drucken von Ticketressourcen
 
-Die [**ixpsomprintticketresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) -Schnittstelle ermöglicht einem Programm das Lesen des Inhalts eines vorhandenen Druck Tickets durch Aufrufen der **getprintticketresource** -Methode einer Schnittstelle, die ein Druck Ticket unterstützt. Neue Druck Ticket Ressourcen können einem Dokument Teil hinzugefügt werden, indem **setprintticketresource** aufgerufen wird.
+Mit der [**IXpsOMPrintTicketResource-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) kann ein Programm den Inhalt eines vorhandenen Drucktickets lesen, indem es die **GetPrintTicketResource-Methode** einer Schnittstelle aufruft, die ein Druckticket unterstützt. Neue Druckticketressourcen können einem Dokumentteil durch Aufrufen von **SetPrintTicketResource** hinzugefügt werden.
 
-Es gibt drei Druck Ticket Ebenen, die den Bereich des Druck Tickets angeben. Die Druck Ticket Stufen lauten wie folgt: die Ebene des Auftrags (oder Pakets), die Dokument Ebene und die Seitenebene. Die folgende Tabelle zeigt die Beziehung zwischen der Druck Ticket Ebene, der entsprechenden XPS OM-Schnittstelle und den Methoden, die für den Zugriff auf die Ressource "Print Ticket" verwendet werden.
+Es gibt drei Druckticketebenen, die den Bereich des Drucktickets angeben. Die Druckticketebenen sind: Auftrags- (oder Paketebene), Dokumentebene und Seitenebene. Die folgende Tabelle zeigt die Beziehung zwischen der Druckticketebene, der entsprechenden XPS OM-Schnittstelle und den Methoden für den Zugriff auf die Druckticketressource.
 
-| Druck Ticket Ebene | Schnittstelle                                                | Get-Methode                                                                      | Set-Methode                                                                      |
+| Druckticketebene | Schnittstelle                                                | Get-Methode                                                                      | Set-Methode                                                                      |
 |--------------------|----------------------------------------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Auftrag                | [**Ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence) | [**Getprintticketresource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-getprintticketresource) | [**Setprintticketresource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-setprintticketresource) |
-| Dokument           | [**Ixpsomdocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)                 | [**Getprintticketresource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getprintticketresource)         | [**Setprintticketresource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-setprintticketresource)         |
-| Seite               | [**Ixpsompagereferenzierung**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)       | [**Getprintticketresource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getprintticketresource)    | [**Setprintticketresource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setprintticketresource)    |
+| Auftrag                | [**IXpsOMDocumentSequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence) | [**GetPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-getprintticketresource) | [**SetPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-setprintticketresource) |
+| Dokument           | [**IXpsOMDocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)                 | [**GetPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getprintticketresource)         | [**SetPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-setprintticketresource)         |
+| Seite               | [**IXpsOMPageReference**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)       | [**GetPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getprintticketresource)    | [**SetPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setprintticketresource)    |
 
 
 
  
 
-## <a name="print-ticket-content"></a>Ticket Inhalt drucken
+## <a name="print-ticket-content"></a>Drucken von Ticketinhalten
 
-Der Zugriff auf den Inhalt einer vorhandenen Ressource "Print Ticket" kann durchlesen aus dem Stream erfolgen, der der Ressource zugeordnet ist. Die [**GetStream**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomprintticketresource-getstream) -Methode der [**ixpsomprintticketresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) -Schnittstelle gibt den Zeiger auf einen schreibgeschützten Datenstrom zurück, der den XML-formatierten Inhalt des Druck Tickets enthält. Das Format des Druck Ticket Inhalts wird in der [Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)beschrieben.
+Sie können auf den Inhalt einer vorhandenen Druckticketressource zugreifen, indem Sie aus dem Stream lesen, der der Ressource zugeordnet ist. Die [**GetStream-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomprintticketresource-getstream) der [**IXpsOMPrintTicketResource-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) gibt den Zeiger auf einen schreibgeschützten Stream zurück, der den XML-formatierten Inhalt des Drucktickets enthält. Das Format des Druckticketinhalts wird in der [Druckschemaspezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)beschrieben.
 
-Eine neue Druck Ticket Ressource kann erstellt werden, indem Sie eine neue [**ixpsomprintticketresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) -Schnittstelle erstellen. Ein gültiges, XML-formatiertes Druck Ticket wird in einen Stream geschrieben, und es wird ein Teil-URI erstellt, um den Druck Ticket Teil zu identifizieren. Weitere Informationen zum Inhalt eines gültigen Druck Tickets finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip). Der Stream und der Teil-URI werden als Parameter des [**setContent**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomprintticketresource-setcontent) -Aufrufs zur Festlegung der neuen Ressource "Print Ticket" und der Ressource "Print Ticket" durch Aufrufen der **setprintticketresource** -Methode, die in der obigen Tabelle angezeigt wird, hinzugefügt.
+Eine neue Druckticketressource kann durch Erstellen einer neuen [**IXpsOMPrintTicketResource-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource) erstellt werden. Ein gültiges, XML-formatiertes Druckticket wird in einen Stream geschrieben, und ein Teile-URI wird erstellt, um den Druckticketteil zu identifizieren. Weitere Informationen zum Inhalt eines gültigen Drucktickets finden Sie in der [Druckschemaspezifikation.](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip) Der Stream und der Part-URI werden als Parameter des [**SetContent-Aufrufs**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomprintticketresource-setcontent) übergeben, um die neue Druckticketressource festzulegen, und die Druckticketressource wird dem entsprechenden Dokumentteil hinzugefügt, indem die in der vorherigen Tabelle **gezeigte SetPrintTicketResource-Methode** aufgerufen wird.
 
-## <a name="print-ticket-inheritance"></a>Druck Ticket Vererbung
+## <a name="print-ticket-inheritance"></a>Vererbung von Drucktickets
 
-Druck Tickets erben die Eigenschaften von Druck Tickets mit größerem Bereich. Ein Druck Ticket auf Dokument Ebene erbt z. b. die Eigenschaften des Druck Tickets auf Auftrags Ebene, das mit der Dokument Sequenz des Dokuments verknüpft ist. Ebenso erbt ein Druck Ticket auf Seitenebene die Eigenschaften des Druck Tickets auf Dokument Ebene, das dem Dokument der Seite zugeordnet ist. In diesem Vererbungs Prozess überschreiben Eigenschaften, die im Druck Ticket auf niedrigerer Ebene angegeben werden, die entsprechenden Eigenschaften, die andernfalls von dem höheren Druck Ticket geerbt werden.
+Drucktickets erben die Eigenschaften von Drucktickets mit größerem Umfang. Beispielsweise erbt ein Druckticket auf Dokumentebene die Eigenschaften des Drucktickets auf Auftragsebene, das der Dokumentsequenz des Dokuments zugeordnet ist. Ebenso erbt ein Druckticket auf Seitenebene die Eigenschaften des Drucktickets auf Dokumentebene, das dem Dokument der Seite zugeordnet ist. Bei diesem Vererbungsprozess überschreiben Eigenschaften, die im Druckticket auf niedrigerer Ebene angegeben sind, die entsprechenden Eigenschaften, die andernfalls vom Übergeordneten Druckticket geerbt würden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> <dt>
 
-[**Ixpsomdocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)
+[**IXpsOMDocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)
 </dt> <dt>
 
-[**Ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)
+[**IXpsOMDocumentSequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)
 </dt> <dt>
 
-[**Ixpsompagereferenzierung**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)
+[**IXpsOMPageReference**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)
 </dt> <dt>
 
-[**Ixpsomprintticketresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource)
+[**IXpsOMPrintTicketResource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

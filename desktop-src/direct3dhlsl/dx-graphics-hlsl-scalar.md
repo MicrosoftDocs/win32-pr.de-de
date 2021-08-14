@@ -3,7 +3,7 @@ title: Skalare Typen
 description: Skalare Typen
 ms.assetid: bf24d27f-2720-4268-bc74-fc46afedb9aa
 keywords:
-- Skalare Typen HLSL
+- Skalartypen HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,35 +13,35 @@ api_type:
 ms.topic: reference
 ms.custom: snippet-project
 ms.date: 07/29/2020
-ms.openlocfilehash: 7198932c6edb91e6f797b232b6c980976f3696a7
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 39097dd358fcf9da1685be517742291ef96332f2307f255274445da70e4fc050
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "103761895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725934"
 ---
 # <a name="scalar-types"></a>Skalare Typen
 
 
 HLSL unterstützt mehrere skalare Datentypen:
 
--   **bool** -true oder false.
--   **int** -32-Bit-Ganzzahl mit Vorzeichen.
--   **uint** -32-Bit-Ganzzahl ohne Vorzeichen.
--   **DWORD** -32-Bit-Ganzzahl ohne Vorzeichen.
--   **halb** -16-Bit-Gleit Komma Wert. Dieser Datentyp wird nur für die sprach Kompatibilität bereitgestellt. Direct3D 10-Shader-Ziele ordnen alle halb Datentypen float-Datentypen zu. Ein halber Datentyp kann nicht für eine einheitliche globale Variable verwendet werden (verwenden Sie das/GEC-Flag, wenn diese Funktion gewünscht ist).
--   Gleit Komma Wert **float** -32-Bit.
--   **Double** -64-Bit-Gleit Komma Wert. Werte mit doppelter Genauigkeit können nicht als Eingaben und Ausgaben für einen Stream verwendet werden. Um Werte mit doppelter Genauigkeit zwischen Shadern zu übergeben, deklarieren Sie jedes **Double** als Paar von **uint** -Datentypen. Verwenden Sie dann die [**asuint**](asuint.md) -Funktion, um jedes **Double** in das Paar **von uint** s und die [**AsDouble**](asdouble.md) -Funktion zu packen, um das Paar von **uint** s wieder in den **Double**-Typ zu entpacken.
+-   **bool:** true oder false.
+-   **int** : 32-Bit-Ganzzahl mit Vorzeichen.
+-   **uint:** 32-Bit-Ganzzahl ohne Vorzeichen.
+-   **dword:** 32-Bit-Ganzzahl ohne Vorzeichen.
+-   **half** – 16-Bit-Gleitkommawert. Dieser Datentyp wird nur aus Gründen der Sprachkompatibilität bereitgestellt. Direct3D 10-Shaderziele ordnen alle halben Datentypen float-Datentypen zu. Ein halber Datentyp kann nicht für eine einheitliche globale Variable verwendet werden (verwenden Sie das /Gec-Flag, wenn diese Funktionalität gewünscht ist).
+-   **float:** 32-Bit-Gleitkommawert.
+-   **double** : 64-Bit-Gleitkommawert. Sie können keine Werte mit doppelter Genauigkeit als Eingaben und Ausgaben für einen Stream verwenden. Um Werte mit doppelter Genauigkeit zwischen Shadern zu übergeben, deklarieren Sie jeden **Double-Wert** als paarweise **uint-Datentypen.** Verwenden Sie dann die [**asuint-Funktion,**](asuint.md) um jedes **Double** in das Paar von **uint** s zu packen, und die [**Asdouble-Funktion,**](asdouble.md) um das Paar von **uint** s wieder in das **doppelte** zu entpacken.
 
-Ab Windows 8 unterstützt HLSL auch skalare Datentypen mit minimaler Genauigkeit. Grafiktreiber können Skalardatentypen mit minimaler Genauigkeit implementieren, indem Sie eine beliebige Genauigkeit angeben, die größer oder gleich der angegebenen bitgenauigkeit ist. Es wird empfohlen, sich nicht auf das Spannen-oder Wrapping Verhalten zu verlassen, das von einer bestimmten zugrunde liegenden Genauigkeit abhängt Beispielsweise kann der Grafiktreiber Arithmetik für einen **min16float** -Wert mit vollständiger 32-Bit-Genauigkeit ausführen.
+Ab Windows 8 UNTERSTÜTZT HLSL auch Skalardatentypen mit minimaler Genauigkeit. Grafiktreiber können skalare Datentypen mit minimaler Genauigkeit implementieren, indem sie eine beliebige Genauigkeit verwenden, die größer oder gleich der angegebenen Bitgenauigkeit ist. Es wird empfohlen, sich nicht auf das Klammer- oder Umbruchverhalten zu verlassen, das von einer bestimmten zugrunde liegenden Genauigkeit abhängt. Beispielsweise kann der Grafiktreiber arithmetische Arithmetik für einen **min16float-Wert** mit vollständiger 32-Bit-Genauigkeit ausführen.
 
--   **min16float** -minimaler 16-Bit-Gleit Komma Wert.
--   **min10float** -minimaler 10-Bit-Gleit Komma Wert.
--   **min16int** -minimale 16-Bit-Ganzzahl mit Vorzeichen.
--   **min12int** -minimale 12-Bit-Ganzzahl mit Vorzeichen.
--   **min16uint** -minimale 16-Bit-Ganzzahl ohne Vorzeichen.
+-   **min16float:** Mindestens 16-Bit-Gleitkommawert.
+-   **min10float:** mindester 10-Bit-Gleitkommawert.
+-   **min16int:** mindestens 16-Bit-Ganzzahl mit Vorzeichen.
+-   **min12int:** mindestens 12-Bit-Ganzzahl mit Vorzeichen.
+-   **min16uint:** mindestens 16-Bit-Ganzzahl ohne Vorzeichen.
 
-Weitere Informationen zu skalaren literalen finden Sie unter [Grammatik](dx-graphics-hlsl-appendix-grammar.md).
+Weitere Informationen zu skalaren Literalen finden Sie unter [Grammatik.](dx-graphics-hlsl-appendix-grammar.md)
 
 
 
@@ -51,12 +51,12 @@ Weitere Informationen zu skalaren literalen finden Sie unter [Grammatik](dx-grap
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Unterschiede zwischen Direct3D 9 und Direct3D 10:<br/> In Direct3D 10 sind die folgenden Typen Modifizierer für den float-Typ.<br/>
+<td>Unterschiede zwischen Direct3D 9 und Direct3D 10:<br/> In Direct3D 10 sind die folgenden Typen Modifizierer für den Float-Typ.<br/>
 <ul>
-<li><strong>snorm float</strong> - IEEE 32-Bit mit Vorzeichen-normalisierter Gleit Komma Zahl im Bereich von 1 bis 1 einschließlich.</li>
-<li><strong>unorm float</strong> - IEEE 32-Bit ohne Vorzeichen-normalisierte Gleit Komma Zahl im Bereich von 0 bis 1 einschließlich.</li>
+<li><strong>snorm float</strong> - IEEE 32-Bit-Gleitkommawert mit Vorzeichen im Bereich von -1 bis einschließlich 1.</li>
+<li><strong>unorm float</strong> - IEEE 32-Bit unsigned-normalized float im Bereich von 0 bis einschließlich 1.</li>
 </ul>
-Hier sehen Sie z. b. eine 4-komponentendeklaration mit Vorzeichen und normalisierte float-Variablen.<br/> <span data-codelanguage=""></span>
+Hier sehen Sie beispielsweise eine Deklaration mit 4 Komponenten mit Vorzeichen und normalisierter Floatvariable.<br/> <span data-codelanguage=""></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -78,7 +78,7 @@ Hier sehen Sie z. b. eine 4-komponentendeklaration mit Vorzeichen und normalisie
 
 ## <a name="string-type"></a>Zeichenfolgentyp
 
-HLSL unterstützt auch einen **Zeichen** Folgentyp, der eine ASCII-Zeichenfolge ist. Es sind keine Vorgänge oder Zustände vorhanden, die Zeichen folgen akzeptieren, aber Effekte können Zeichen folgen Parameter und Anmerkungen Abfragen.
+HLSL unterstützt auch einen **Zeichenfolgentyp,** bei dem es sich um eine ASCII-Zeichenfolge handelt. Es gibt keine Vorgänge oder Zustände, die Zeichenfolgen akzeptieren, aber Effekte können Zeichenfolgenparameter und Anmerkungen abfragen.
 
 ## <a name="example"></a>Beispiel
 
@@ -105,5 +105,5 @@ void function2()
 
 
 
-* [Deklarieren von skalaren Typen](./dx-graphics-hlsl-writing-shaders-9.md#declaring-shader-variables)
+* [Deklarieren von Skalartypen](./dx-graphics-hlsl-writing-shaders-9.md#declaring-shader-variables)
 * [Datentypen (DirectX HLSL)](dx-graphics-hlsl-data-types.md)

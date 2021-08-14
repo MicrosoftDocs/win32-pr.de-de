@@ -1,23 +1,23 @@
 ---
-description: Der &\# 0034; Bitfield&\# 0034; geben Sie ohne Kontext Anforderungen ein, dass der Benutzer eine ganze Zahl bereitstellt, deren Wert verwendet wird, um ein oder mehrere Bits in einem Bitfeld festzulegen. Dieser Text kann in jeder Sprache vorliegen, die mit der Codepage der Datenbank kompatibel ist.
+description: Der &\# 0034; Bitfield&\# 0034; geben Sie ohne Kontextanforderungen ein, dass der Benutzer eine ganze Zahl bereitstellt, deren Wert verwendet wird, um ein oder mehrere Bits in einem Bitfeld festzulegen. Dieser Text kann in einer beliebigen Sprache enthalten sein, die mit der Codepage der Datenbank kompatibel ist.
 ms.assetid: 28e1bdb9-a42d-46ce-ad24-71bc22e2d92a
 title: Beliebiger Bitfeldtyp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6571b8585c94577927df8cfedaded802a67d125
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 842c9d1725b2bfe9ef0585cafd085ac1ceba33554899909ae3317af38fd7caac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118381384"
 ---
 # <a name="arbitrary-bitfield-type"></a>Beliebiger Bitfeldtyp
 
-Der Bitfield-Typ ohne Kontext Anforderungen, dass der Benutzer eine ganze Zahl bereitstellt, mit deren Wert ein oder mehrere Bits in einem Bitfeld festgelegt werden. Dieser Text kann in jeder Sprache vorliegen, die mit der Codepage der Datenbank kompatibel ist.
+Der Typ "Bitfield" ohne Kontext fordert an, dass der Benutzer eine ganze Zahl bereitstellt, deren Wert verwendet wird, um ein oder mehrere Bits in einem Bitfeld festzulegen. Dieser Text kann in einer beliebigen Sprache enthalten sein, die mit der Codepage der Datenbank kompatibel ist.
 
-Der beliebige Bitfeldtyp des [semantischen Typs](semantic-types.md) ist einer der Bitfield-Typen. Dieser Typ besteht aus einer vom Benutzer ausgewählten Ganzzahl aus einem Satz von Optionen. Das Merge-Tool ersetzt die ausgewählte Ganzzahl in den Vorlagen, die in der Spalte Wert der [Tabelle ModuleSubstitution](modulesubstitution-table.md)angegeben sind. Wenn Sie ein konfigurierbares Element dieses Typs angeben möchten, geben Modul Autoren den Namen des Elements in die Spalte Name ein, geben Sie "3" in die Spalte Format ein, lassen Sie die Spalte Typ leer, und geben Sie die Liste möglicher ganzer Zahlen in der Spalte "ContextData" der [Tabelle "ModuleConfiguration](moduleconfiguration-table.md)" ein.
+Der beliebige Bitfeldtyp des [semantischen Typs](semantic-types.md) ist einer der Bitfield-Typen. Dieser Typ besteht aus einer ganzen Zahl, die vom Benutzer aus einer Reihe von Auswahlmöglichkeiten ausgewählt wird. Das Mergetool ersetzt die ausgewählte ganze Zahl in die Vorlagen, die in der Spalte Wert der [Tabelle ModuleSubsdatenbank](modulesubstitution-table.md)angegeben sind. Um ein konfigurierbares Element dieses Typs anzugeben, sollten Modulautoren den Namen des Elements in die Spalte Name eingeben, "3" in die Spalte Format eingeben, die Spalte Typ leer lassen und die Liste der möglichen ganzen Zahlen in der ContextData-Spalte der [ModuleConfiguration-Tabelle](moduleconfiguration-table.md)eingeben.
 
-Die Typspalte ist reserviert und muss NULL sein. Der Eintrag in der ContextData-Spalte für alle Bitfield-Format Typen muss das Format aufweisen <mask> .<Name>=<value>;<Name>=<value>.... ", wobei <mask> ein ganzzahliger Wert ist, der die Bits von Interesse angibt, <Name> ist ein Lokalisier barer Anzeige Name für die Auswahl, und <value> ist ein ganzzahliger ganzzahliger Wert. Die Kontext Spalte verwendet das [spezielle cmsm-Format](cmsm-special-format.md) und für alle Bitfeld-Typen. Ein literales Zeichen "=" oder ";" kann im Feld eingegeben werden, <Name> indem es einem umgekehrten Schrägstrich ("") vorangestellt wird \\ .
+Die Spalte Typ ist reserviert und muss NULL sein. Der Eintrag in der ContextData-Spalte für alle Bitfield-Formattypen muss das Format " <mask> aufweisen.<Name>=<value>;<Name>=<value>....", wobei <mask> ein ganzzahliger Wert ist, der die interessanten Bits angibt, <Name> ein lokalisierbarer Anzeigename für die Auswahl ist und <value> ist ein ganzzahliger Dezimalwert. Die Kontextspalte wird im [CMSM-Sonderformat](cmsm-special-format.md) und für alle Bitfeldtypen verwendet. Ein Literalzeichen "=" oder ";" kann in das Feld eingegeben werden, <Name> indem ihm ein umgekehrter Schrägstrich (' ') vorangestellt \\ wird.
 
  
 

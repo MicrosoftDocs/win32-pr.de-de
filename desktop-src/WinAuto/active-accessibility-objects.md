@@ -1,32 +1,32 @@
 ---
-title: Active Accessibility Objekte
-description: Active Accessibility Objekte
+title: Active Accessibility-Objekte
+description: Active Accessibility-Objekte
 ms.assetid: 903a1cde-0164-4913-a14a-cae0c58e2692
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df530b24da485a8ef9d383429dc0d3f06bfeeb45
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4c519dd05cadf2df36d7da298e52ea58992df5c4e8035ea04d114a04b0e7dd6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118327050"
 ---
-# <a name="active-accessibility-objects"></a>Active Accessibility Objekte
+# <a name="active-accessibility-objects"></a>Active Accessibility-Objekte
 
-In der Terminologie von Microsoft Active Accessibility sind *barrierefreie Objekte* und *einfache Elemente* vorhanden. Obwohl die meisten Anwendungen beide enthalten, sind barrierefreie Objekte häufiger als einfache Elemente. In diesem Abschnitt werden barrierefreie Objekte und einfache Elemente definiert und erläutert, und es werden entsprechende Benutzeroberflächen Beispiele bereitstellt.
+In Microsoft Active Accessibility Terminologie gibt es *barrierefreie Objekte* und *einfache Elemente.* Obwohl die meisten Anwendungen beides enthalten, sind barrierefreie Objekte häufiger als einfache Elemente. In diesem Abschnitt werden barrierefreie Objekte und einfache Elemente definiert und erläutert, und es werden entsprechende Beispiele für die Benutzeroberfläche vorgestellt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Barrierefreie Objekte](accessible-objects.md)
 -   [Einfache Elemente](simple-elements.md)
--   [Verwendung von untergeordneten IDs in Parametern](how-child-ids-are-used-in-parameters.md)
--   [Benutzerdefinierte Benutzeroberflächen Elemente](custom-user-interface-elements.md)
+-   [Verwendung untergeordneter IDs in Parametern](how-child-ids-are-used-in-parameters.md)
+-   [Benutzerdefinierte Benutzeroberfläche-Elemente](custom-user-interface-elements.md)
 -   [Duale Schnittstellen: IAccessible und IDispatch](dual-interfaces--iaccessible-and-idispatch.md)
--   [Vom System bereitgestellte Benutzeroberflächen Elemente](system-provided-user-interface-elements.md)
+-   [Vom System bereitgestellte Benutzeroberfläche-Elemente](system-provided-user-interface-elements.md)
 
- 
+ 
 
- 
+ 
 
 
 

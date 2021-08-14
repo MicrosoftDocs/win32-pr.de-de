@@ -1,25 +1,25 @@
 ---
 title: Überprüfen von Präprozessoroptionen
-description: Der mittlerer l-Compiler ruft implizit den Präprozessor auf und zeigt seine präprozessorswitches nicht an.
+description: Der MIDL-Compiler ruft implizit den Präprozessor auf und zeigt seine Präprozessorschalter nicht an.
 ms.assetid: 2f402af4-18d7-480c-a8d2-d16f402ef87a
 keywords:
-- Mittel l-compilermittell, überprüfen von Präprozessoroptionen
+- MIDL-Compiler MIDL , Überprüfen von Präprozessoroptionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19a047980c9f2f9dc8deffdcf85de767e4dc8705
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: acb9f5055623a44e88ed57b5ed0cadd0034c6962e160a081c7a55a9a51ca9e13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118382763"
 ---
 # <a name="verifying-preprocessor-options"></a>Überprüfen von Präprozessoroptionen
 
-Der mittlerer l-Compiler ruft implizit den Präprozessor auf und zeigt seine präprozessorswitches nicht an. Wenn der [**/cpp \_**](-cpp-opt.md) -Schalter (Mittelwert) nicht vorhanden ist, besteht die präprozessorbefehlszeile aus allen [**/I**](-i.md)-, [**/D**](-d.md) -und [**/U**](-u.md) -Switches, die in der mittleren Befehlszeile verwendet werden, sowie aus **/E** -und [**/nologo**](-nologo.md) -Switches. Verwenden Sie den [**/Confirm**](-confirm.md) -Schalter des Compilers, um die an den Präprozessor weiter gegebenen Switches anzuzeigen.
+Der MIDL-Compiler ruft implizit den Präprozessor auf und zeigt seine Präprozessorschalter nicht an. Wenn der MIDL-Schalter [**/cpp \_ opt**](-cpp-opt.md) fehlt, besteht die Präprozessorbefehlszeile aus allen Schaltern [**/I,**](-i.md) [**/D**](-d.md) und [**/U,**](-u.md) die in der MIDL-Befehlszeile verwendet werden, sowie aus den Schaltern **/E** und [**/nologo.**](-nologo.md) Verwenden Sie den Schalter [**/confirm**](-confirm.md) des Compilers, um die an den Präprozessor übergebenen Schalter zu sehen.
 
-Beispielsweise die folgende Zeile
+Beispiel: Die folgende Zeile
 
-**midl.exe-D \_ Win32 \_ Winnt = 0x501-robust-dntenv = 1-ID: \\ NT \\ Public \\ SDK \\ Inc-Confirm-Oicf-ERV Win32-out x86 Stub. idl**
+**midl.exe -D \_ WIN32 \_ WINNT=0x501 -robust -DNTENV=1 -Id: \\ nt public sdk inc \\ \\ \\ -confirm -Oicf -env win32 -out x86 stub.idl**
 
 erzeugt die folgende Ausgabe:
 
@@ -58,9 +58,9 @@ E -nologo
                   Zp -  8
 ```
 
- 
+ 
 
- 
+ 
 
 
 

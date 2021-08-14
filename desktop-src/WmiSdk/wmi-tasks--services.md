@@ -1,8 +1,8 @@
 ---
-description: WMI-Tasks für Dienste erhalten Informationen zu Diensten, einschließlich abhängiger oder Vorgänger Dienste. Weitere Beispiele finden Sie im technet scriptcenter unter https://www.microsoft.com/technet .
+description: WMI-Tasks für Dienste rufen Informationen zu Diensten ab, einschließlich abhängiger oder Vorgängerdienste. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
 ms.assetid: 1cd92981-c074-4ff7-a32c-ce492e6d6aa5
 ms.tgt_platform: multiple
-title: 'WMI-Tasks: Dienste'
+title: 'WMI-Aufgaben: Dienste'
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,34 +10,34 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b786ce0e358a59922728be4e90bc8cdeaa37a298
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e96080dfde59ac5ca910082b764700b9ce51149dce82d87e8a716cfdcf73027
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117738829"
 ---
-# <a name="wmi-tasks-services"></a>WMI-Tasks: Dienste
+# <a name="wmi-tasks-services"></a>WMI-Aufgaben: Dienste
 
-WMI-Tasks für Dienste erhalten Informationen zu Diensten, einschließlich abhängiger oder Vorgänger Dienste. Weitere Beispiele finden Sie im technet scriptcenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+WMI-Tasks für Dienste rufen Informationen zu Diensten ab, einschließlich abhängiger oder Vorgängerdienste. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele rufen Daten nur vom lokalen Computer ab. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird beschrieben, wie Ein Skript ausgeführt wird.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass ihr Text-Editor der Datei keine .txt Erweiterung hinzufüg.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben Sie an der Eingabeaufforderung **cscript filename.vbs** ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen von Ausgaben erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben Sie **cscript filename.vbs > outfile.txt** an der Eingabeaufforderung ein, um die Ausgabe des *filename.vbs* Skripts an *outfile.txt* umzuleiten.
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -50,13 +50,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... bestimmen, welche Dienste ausgeführt werden und welche nicht?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse, um den Status aller Dienste zu überprüfen. Mithilfe der State-Eigenschaft können Sie festzustellen, ob ein Dienst beendet oder ausgeführt wird.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... ermitteln, welche Dienste ausgeführt werden und welche nicht?</td>
+<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse, um den Status aller Dienste zu überprüfen. Die Zustandseigenschaft informiert Sie darüber, ob ein Dienst beendet oder ausgeführt wird.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -96,8 +96,8 @@ Next</code></pre></td>
 </td>
 </tr>
 <tr class="even">
-<td>... verhindern, dass Hauptbenutzer bestimmte Dienste starten?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/changestartmode-method-in-class-win32-service"><strong>ChangeStartMode</strong></a> -Methode, um die <strong>StartMode</strong> -Eigenschaft auf "deaktiviert" festzulegen. Deaktivierte Dienste können nicht gestartet werden, und Poweruser können den Start Modus eines Diensts standardmäßig nicht ändern.</p>
+<td>... Verhindern Sie, dass Power Users bestimmte Dienste startet?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/changestartmode-method-in-class-win32-service"><strong>ChangeStartMode-Methode,</strong></a> um die <strong>StartMode-Eigenschaft</strong> auf Disabled festzulegen. Deaktivierte Dienste können nicht gestartet werden, und standardmäßig können Power Users den Startmodus eines Diensts nicht ändern.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -142,8 +142,8 @@ Next</code></pre></td>
 </div></td>
 </tr>
 <tr class="odd">
-<td>... Dienste starten und Abbrechen?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/stopservice-method-in-class-win32-service"><strong>Stop Service</strong></a> -Methode und die <a href="/windows/desktop/CIMWin32Prov/startservice-method-in-class-win32-service"><strong>StartService</strong></a> -Methode.</p>
+<td>... Dienste starten und beenden?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/stopservice-method-in-class-win32-service"><strong>Methoden StopService</strong></a> und <a href="/windows/desktop/CIMWin32Prov/startservice-method-in-class-win32-service"><strong>StartService.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -189,8 +189,8 @@ Next
 </div></td>
 </tr>
 <tr class="even">
-<td>... Dienst Konto Kennwörter mithilfe eines Skripts ändern?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse und die- <a href="/windows/desktop/CIMWin32Prov/change-method-in-class-win32-service"><strong>Änderungs</strong></a> Methode.</p>
+<td>... Ändern von Dienstkonto-Kennwörtern mithilfe eines Skripts?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/change-method-in-class-win32-service"><strong>Change-Methode.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -219,8 +219,8 @@ Next</code></pre></td>
 </div></td>
 </tr>
 <tr class="odd">
-<td>.. Legen Sie fest, welche Dienste ich unterbinden kann?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse, und überprüfen Sie den Wert der Eigenschaft " <strong>Accept-Stopps</strong> ".</p>
+<td>.. ermitteln, welche Dienste ich beenden kann?</td>
+<td><p>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong></strong></a> Sie die Win32_Service-Klasse, und überprüfen Sie den Wert der <strong>AcceptStop-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -264,8 +264,8 @@ Next</code></pre></td>
 </div></td>
 </tr>
 <tr class="even">
-<td>... Suchen Sie die Dienste, die ausgeführt werden müssen, bevor der DHCP-Dienst gestartet werden kann?</td>
-<td><p>Abfragen <a href="associators-of-statement.md">von assoziatoren der</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> Klasse mit dem Namen "DHCP" &quot; , die &quot; sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService</strong></a> -Klasse befinden und &quot; von &quot; der <strong>Role</strong> -Eigenschaft abhängig sind. <strong>Role</strong> bezeichnet die Rolle des DHCP-Diensts: in diesem Fall hängt sie von den anderen Diensten ab, die gestartet werden.</p>
+<td>... finden Sie die Dienste, die ausgeführt werden müssen, bevor ich den DHCP-Dienst starten kann?</td>
+<td><p>Fragen Sie <a href="associators-of-statement.md">ASSOCIATORS DER</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse namens &quot; DHCP &quot; ab, die sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService-Klasse</strong></a> befinden und abhängig in &quot; der &quot; <strong>Role-Eigenschaft</strong> aufweisen. <strong>Rolle</strong> bedeutet die Rolle des DHCP-Diensts: In diesem Fall ist sie von den anderen Diensten abhängig, die gestartet werden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -312,8 +312,8 @@ Get-WmiObject -Query $query -Namespace &quot;root\cimv2&quot; | format-list Disp
 </div></td>
 </tr>
 <tr class="odd">
-<td>... Suchen Sie die Dienste, für die der WMI-Dienst (Winmgmt) ausgeführt werden muss, bevor der Dienst gestartet werden kann?</td>
-<td><p>Abfragen <a href="associators-of-statement.md">von assoziatoren der</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> Klasse mit dem Namen "DHCP" &quot; , die &quot; sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService</strong></a> -Klasse befinden und über &quot; Vorgänger &quot; in der <strong>Role</strong> -Eigenschaft verfügen. <strong>Role</strong> bezeichnet die Rolle des rasman-Diensts: in diesem Fall muss vor den abhängigen Diensten gestartet werden.</p>
+<td>... Finden Sie die Dienste, die die Ausführung des WMI-Diensts (Winmgmt) erfordern, bevor sie gestartet werden können?</td>
+<td><p>Fragen Sie <a href="associators-of-statement.md">ASSOCIATORS DER</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse namens &quot; DHCP &quot; ab, die sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService-Klasse</strong></a> befinden und in &quot; der &quot; <strong>Role-Eigenschaft</strong> über Antecendent verfügen. <strong>Rolle</strong> bedeutet die Rolle des Rasman-Diensts: In diesem Fall muss er vor den abhängigen Diensten gestartet werden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -371,13 +371,13 @@ Get-WmiObject -Query $query -Namespace &quot;root\cimv2&quot; | format-list Name
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[WMI C++-Anwendungsbeispiele](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 
  

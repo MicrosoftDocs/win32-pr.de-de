@@ -1,25 +1,25 @@
 ---
-description: Gibt an, wie die ASF-Medien Senke Windows Media DRM anwenden soll.
+description: Gibt an, wie die ASF-Mediensenke Windows Medien-DRM angewendet werden soll.
 ms.assetid: 5f81294b-859a-4325-98dd-6267c736e1f1
-title: MFPKEY_ASFMEDIASINK_DRMACTION-Eigenschaft (mspdl. h)
+title: MFPKEY_ASFMEDIASINK_DRMACTION-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80906a5ac6e5d12bd59dd57445d33b100fee1aef
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 4ed62f62a5d03d7fe938101d9837bd8ed9bccefe69b2bf30e0566ea0b471e37f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103761478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117874344"
 ---
-# <a name="mfpkey_asfmediasink_drmaction-property"></a>Mfpkey \_ asfmediasink \_ drmaction (Eigenschaft)
+# <a name="mfpkey_asfmediasink_drmaction-property"></a>MFPKEY \_ ASFMEDIASINK \_ DRMACTION-Eigenschaft
 
-Gibt an, wie die ASF-Medien Senke Windows Media DRM anwenden soll.
+Gibt an, wie die ASF-Mediensenke Windows Medien-DRM angewendet werden soll.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -31,15 +31,15 @@ VT \_ UI4
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieser Eigenschaft ist ein Member der [**mfsink \_ wmdrmaction**](/windows/win32/api/wmcontainer/ne-wmcontainer-mfsink_wmdrmaction) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**MFSINK \_ WMDRMACTION-Enumeration.**](/windows/win32/api/wmcontainer/ne-wmcontainer-mfsink_wmdrmaction)
 
-Sie können dieses Attribut verwenden, um die ASF-Medien Senke zu konfigurieren. Die Verwendung hängt von der Funktion ab, die Sie zum Erstellen der ASF-Medien Senke aufzurufen:
+Sie können dieses Attribut verwenden, um die ASF-Mediensenke zu konfigurieren. Die Verwendung hängt davon ab, welche Funktion Sie aufrufen, um die ASF-Mediensenke zu erstellen:
 
--   [**Mfkreateasfmediasink**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasink): fragt den abgerufenen [**imfmediasink**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink) -Zeiger für die **IPropertyStore** -Schnittstelle ab.
+-   [**MFCreateASFMediaSink:**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasink)Fragen Sie den abgerufenen [**POINTERMediaSink-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink) für die **IPropertyStore-Schnittstelle** ab.
 
--   [**Mfkreateasfmediasinkaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasinkactivate): Aufrufen von [**imfasfcontentinfo:: getencodingconfigurationpropertystore**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getencodingconfigurationpropertystore) für den [**imfasfcontentinfo**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfcontentinfo) -Zeiger, der im *pcontentinfo* -Parameter angegeben ist.
+-   [**MFCreateASFMediaSinkActivate:**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasinkactivate)Rufen Sie [**IMFASFContentInfo::GetEncodingConfigurationPropertyStore**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getencodingconfigurationpropertystore) für den im *pContentInfo-Parameter* angegebenen [**IMFASFContentInfo-Zeiger**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfcontentinfo) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,17 +47,17 @@ Sie können dieses Attribut verwenden, um die ASF-Medien Senke zu konfigurieren.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

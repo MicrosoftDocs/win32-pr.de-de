@@ -1,7 +1,7 @@
 ---
 description: Speichert alle Änderungen am Link.
 ms.assetid: 4c776c82-8eca-4c9b-9487-4a835affd2d8
-title: Shelllinkobject. Save-Methode (Shldisp. h)
+title: ShellLinkObject.Save-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 0283b839069464a1a059bd11ef52b522f7ec7072
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4d0d03b10aca45fadb5a0072eb94114103ab37d0c478c8a90241b5ab97ec36a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857169"
 ---
-# <a name="shelllinkobjectsave-method"></a>Shelllinkobject. Save-Methode
+# <a name="shelllinkobjectsave-method"></a>ShellLinkObject.Save-Methode
 
 Speichert alle Änderungen am Link.
 
@@ -44,7 +44,7 @@ iRetVal = ShellLinkObject.Save(
 
 Typ: **Variant**
 
-Ein Zeichen folgen Wert, der den voll qualifizierten Pfad der Datei enthält, in der die neuen Link Informationen gespeichert werden sollen. Wenn keine Datei angegeben ist, wird die aktuelle Datei verwendet.
+Ein Zeichenfolgenwert, der den vollqualifizierten Pfad der Datei enthält, in der die neuen Linkinformationen gespeichert werden sollen. Wenn keine Datei angegeben wird, wird die aktuelle Datei verwendet.
 
 </dd> </dl>
 
@@ -52,7 +52,7 @@ Ein Zeichen folgen Wert, der den voll qualifizierten Pfad der Datei enthält, in
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -90,7 +90,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -166,17 +166,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000-Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

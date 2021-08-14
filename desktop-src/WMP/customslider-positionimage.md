@@ -1,9 +1,9 @@
 ---
-title: Customslider. positionImage
-description: Das positionImage-Attribut gibt die ImageMap an oder ruft Sie ab, um zu bestimmen, welches Positions Bild aus der Bilddatei angezeigt werden soll.
+title: BIKESLIDER.positionImage
+description: Das attribut positionImage gibt die Bildzuordnung an, mit der bestimmt wird, welches Positionsbild aus der anzuzeigenden Bilddatei angezeigt werden soll, oder ruft sie ab.
 ms.assetid: 7e99dc21-ebba-438a-a983-190dbe429578
 keywords:
-- Windows-Media Player "customslider. positionImage"
+- WINDOWS MEDIA PLAYER
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dc92a9c263e2b450e64d526ccfc7976fdd6227a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 727601ceb7ed078e40a284ab291f2e182a4270682b5f1db104515e31d3dbe2ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749991"
 ---
-# <a name="customsliderpositionimage"></a>Customslider. positionImage
+# <a name="customsliderpositionimage"></a>BIKESLIDER.positionImage
 
-Das **positionImage** -Attribut gibt die ImageMap an oder ruft Sie ab, um zu bestimmen, welches Positions Bild aus der Bilddatei angezeigt werden soll.
+Das **attribut positionImage** gibt die Bildzuordnung an, mit der bestimmt wird, welches Positionsbild aus der anzuzeigenden Bilddatei angezeigt werden soll, oder ruft sie ab.
 
 ``` syntax
         elementID.positionImage
@@ -30,29 +30,29 @@ Das **positionImage** -Attribut gibt die ImageMap an oder ruft Sie ab, um zu bes
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen einer Bilddatei enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die den Namen einer Bilddatei enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Attribut ist erforderlich und muss angegeben werden.
 
-Das **positionImage** wird nicht angezeigt. Stattdessen dient sie als Karte, die die durch Klicken aktivierbaren Bereiche des angezeigten Bilds definiert. Das angezeigte Bild ist eines der untergeordneten Bilder der Bilddatei und stellt den tatsächlichen Zustand des Schiebereglers dar. Das **positionImage** enthält eine Reihe von grauen Skalierungs Regionen, die der Anzahl dieser untergeordneten Images entsprechen. Die untergeordneten Bilder müssen die gleichen Dimensionen wie das **positionImage** aufweisen, oder der benutzerdefinierte Schieberegler funktioniert nicht ordnungsgemäß.
+**PositionImage** wird nicht angezeigt. Stattdessen dient es als Karte, die die klickbaren Bereiche des angezeigten Bilds definiert. Das angezeigte Bild ist eines der Unterbilder der Bilddatei und stellt den tatsächlichen Zustand des Schiebereglers dar. **PositionImage** enthält eine Reihe von grauen Skalierungsbereichen, die der Anzahl dieser Unterbilder entsprechen. Die Unterbilder müssen die gleichen Dimensionen wie **positionImage** aufweisen, da der benutzerdefinierte Schieberegler nicht ordnungsgemäß funktioniert.
 
-Alle Regionen, die nicht Graustufen sind, können nicht geklickt werden. Die durch Klicken aktivierbaren Bereiche sollten auf Farbwerte festgelegt werden, die gleichmäßig über das graue Skalierungs Spektrum reichen, von Schwarz bis weiß, wobei die erste Region rein schwarz und die letzte Region rein weiß ist. Die Farbwerte für jeden aufeinander folgenden Bereich sollten um einen Wert von 255 (dividiert durch die Gesamtzahl der Regionen minus 1) erhöht werden, wobei auf die nächste ganze Zahl gerundet wird.
+Alle Regionen, die sich nicht in grauer Skala befinden, können nicht angeklickt werden. Die klickbaren Bereiche sollten auf Farbwerte festgelegt werden, die gleichmäßig über das graue Skalierungsspektrum von Schwarz bis Weiß reichen, wobei der erste Bereich rein schwarz und der letzte Bereich rein weiß ist. Die Farbwerte jedes aufeinanderfolgenden Bereichs sollten um einen Wert erhöht werden, der gleich 255 ist, geteilt durch die Gesamtzahl der Regionen minus 1, wobei auf die nächste ganze Zahl gerundet wird.
 
-Wenn z. b. sechs Regionen vorhanden sind, ist das Inkrement 51 (255 dividiert durch 5), und die sechs Graustufen Werte lauten 0, 51, 102, 153, 204 und 255. Bei den hexadezimalen Farbwerten für die sechs Regionen handelt es sich dann um \# 000000, \# 333333, \# 666666, \# 999999, \# cccccc und \# FFFFFF.
+Wenn beispielsweise sechs Regionen vorhanden sind, würde das Inkrement 51 (255 geteilt durch 5) und die sechs grauen Skalierungswerte 0, 51, 102, 153, 204 und 255 sein. Die Hexadezimalfarbwerte für die sechs Regionen wären dann \# 000000, \# 333333, \# 666666, \# 999999, \# CABCCC und \# FFFFFF.
 
-Auf diese Weise wird für die Regionen eine Sequenz durch ihre Graustufen Farbwerte vorgegeben, und diese Sequenz entspricht der Sequenz von Unterbildern in der Bilddatei. Wenn auf eine der Regionen geklickt wird, wird das entsprechende untergeordnete Bild angezeigt, und der **Wert** des benutzerdefinierten Schiebereglers wird entsprechend aktualisiert.
+Auf diese Weise verfügen die Regionen über eine Sequenz, die durch ihre grauen Farbwerte vorgegeben wird, und diese Sequenz entspricht der Sequenz von Unterbildern in der Bilddatei. Wenn auf einen der Regionen geklickt wird, wird das entsprechende Unterbild angezeigt, und der **Wert** des benutzerdefinierten Schiebereglers wird entsprechend aktualisiert.
 
-Die unterstützten Bild Dateitypen sind BMP, JPG, PNG und GIF (keine animierten GIFs).
+Die unterstützten Bilddateitypen sind BMP, JPG, PNG und GIF (ohne animierte GIFs).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie ein Beispiel für ein benutzerdefiniertes **Positions Bild** für den Schieberegler. Das entsprechende Bild wird im Beispiel Abschnitt der **Image** -Eigenschaft angezeigt.
+Im Folgenden ist ein Beispiel für einen benutzerdefinierten Schieberegler **positionImage .** Das entsprechende Bild wird im Beispielabschnitt der **image-Eigenschaft** angezeigt.
 
-![Beispiel Grafik für "positionImage"](images/dialmap.png)
+![BeispielpositionBildgrafik](images/dialmap.png)
 
-Der folgende Code veranschaulicht die Verwendung von **customslider** -Attributen.
+Der folgende Code veranschaulicht die Verwendung von **ATTRIBUTEn VOM ATTRIBUTENLIDER.**
 
 
 ```XML
@@ -140,18 +140,18 @@ Der folgende Code veranschaulicht die Verwendung von **customslider** -Attribute
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Customslider-Element**](customslider-element.md)
+[**ELEMENTSLIDER-Element**](customslider-element.md)
 </dt> <dt>
 
-[**Customslider. Image**](customslider-image.md)
+[**MSILIDER.image**](customslider-image.md)
 </dt> </dl>
 
  

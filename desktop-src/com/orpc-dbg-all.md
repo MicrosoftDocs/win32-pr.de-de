@@ -1,10 +1,10 @@
 ---
 title: ORPC_DBG_ALL Struktur
-description: Die ORPC \_ dbg \_ all-Struktur wird verwendet, um Parameter an die Methoden der iorpcdebugnotify-Schnittstelle zu übergeben.
+description: Die ORPC \_ DBG \_ ALL-Struktur wird verwendet, um Parameter an die Methoden der IOrpcDebugNotify-Schnittstelle zu übergeben.
 ms.assetid: 05371beb-9202-40a6-96d2-4b91497e2ee9
 keywords:
-- COM für ORPC_DBG_ALL Struktur
-- LPORPC_DBG_ALL Struktur Zeiger com
+- 'ORPC_DBG_ALL-Struktur: COM'
+- LPORPC_DBG_ALL-Strukturzeiger COM
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a17f5b09e5fe2f668bf2bcd21e2e7fe6f0f766a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 359e3b3ec2530917c6a502da90ea86771238319687f8dcf8e9b7862e4ddf1954
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118310304"
 ---
-# <a name="orpc_dbg_all-structure"></a>ORPC \_ dbg \_ all-Struktur
+# <a name="orpc_dbg_all-structure"></a>ORPC \_ DBG \_ ALL-Struktur
 
-Die **ORPC \_ dbg \_ all** -Struktur wird verwendet, um Parameter an die Methoden der [**iorpcdebugnotify**](iorpcdebugnotify.md) -Schnittstelle zu übergeben.
+Die **ORPC \_ DBG \_ ALL-Struktur** wird verwendet, um Parameter an die Methoden der [**IOrpcDebugNotify-Schnittstelle**](iorpcdebugnotify.md) zu übergeben.
 
 > [!Note]  
-> Jede Methode der [**iorpcdebugnotify**](iorpcdebugnotify.md) -Schnittstelle verwendet eine andere Kombination der nachfolgenden Elemente. Wenn ein Member nicht als von einer Methode verwendet angegeben wird, ist er nicht definiert, wenn er an diese Methode übermittelt wird.
+> Jede Methode der [**IOrpcDebugNotify-Schnittstelle**](iorpcdebugnotify.md) verwendet eine andere Kombination der folgenden Member. Wenn ein Member nicht als von einer Methode verwendet angegeben wird, ist er nicht definiert, wenn er an diese Methode übergeben wird.
 
  
 
@@ -57,24 +57,24 @@ typedef struct ORPC_DBG_ALL {
 
 <dl> <dt>
 
-**psignature**
+**pSignature**
 </dt> <dd>
 
-Ein Zeiger auf einen **Byte** Puffer, der Folgendes enthält:
+Ein Zeiger auf einen **BYTE-Puffer,** der Folgendes enthält:
 
--   Die ersten vier Bytes: die ASCII-Zeichen "Marb" in zunehmender Speicher Reihenfolge.
--   Nächste 16 Bytes: eine **GUID** , die die aufgerufene Benachrichtigung identifiziert. Sie enthält eine der folgenden:
-    1.  [**Clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md): 9ed14f 80-9673-101A-b07b-00dd01113f
-    2.  [**Clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md):D a45f3e0-9673-101 a-B07B-00dd01113f 11
-    3.  [**Clientnotify**](iorpcdebugnotify-clientnotify.md): 4b60e540-9674-101A-b07b-00dd01113f
-    4.  [**Servernotify**](iorpcdebugnotify-servernotify.md): 1084fa00-9674-101A-b07b-00dd01113voll ständig verfügbar
-    5.  [**Servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md): 22080240-9674-101A-b07b-00dd01113f
-    6.  [**Serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md): 2fc09500-9674-101A-b07b-00dd01113f
--   Nächste vier Bytes: für die zukünftige Verwendung reserviert.
+-   Die ersten vier Bytes: die ASCII-Zeichen "MARB" in zunehmender Speicherreihenfolge.
+-   Nächste 16 Bytes: Eine **GUID,** die die aufgerufene Benachrichtigung identifiziert. Sie enthält eine der folgenden Angaben:
+    1.  [**ClientGetBufferSize:**](iorpcdebugnotify-clientgetbuffersize.md)9ED14F80-9673-101A-B07B-00DD01113F11
+    2.  [**ClientFillBuffer**](iorpcdebugnotify-clientfillbuffer.md):D A45F3E0-9673-101A-B07B-00DD01113F11
+    3.  [**ClientNotify**](iorpcdebugnotify-clientnotify.md):4F60E540-9674-101A-B07B-00DD01113F11
+    4.  [**ServerNotify**](iorpcdebugnotify-servernotify.md):1084FA00-9674-101A-B07B-00DD01113F11
+    5.  [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md):22080240-9674-101A-B07B-00DD01113F11
+    6.  [**ServerFillBuffer**](iorpcdebugnotify-serverfillbuffer.md):2FC09500-9674-101A-B07B-00DD01113F11
+-   Nächste vier Bytes: Für die zukünftige Verwendung reserviert.
 
 > [!Note]
 >
-> Wird von allen Methoden der [**iorpcdebugnotify**](iorpcdebugnotify.md) -Schnittstelle verwendet.
+> Wird von allen Methoden der [**IOrpcDebugNotify-Schnittstelle**](iorpcdebugnotify.md) verwendet.
 
  
 
@@ -83,24 +83,24 @@ Ein Zeiger auf einen **Byte** Puffer, der Folgendes enthält:
 **pMessage**
 </dt> <dd>
 
-Ein Zeiger auf eine [**rpcolemess**](/windows/win32/api/objidlbase/ns-objidlbase-rpcolemessage) -Struktur, die Informationen zu RPC-Daten Marshalling enthält.
+Ein Zeiger auf eine [**RPCOLEMESSAGE-Struktur,**](/windows/win32/api/objidlbase/ns-objidlbase-rpcolemessage) die RPC-Daten marshallinginformationen enthält.
 
 > [!Note]
 >
-> Wird von den Methoden [**clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md), [**clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md), [**clientnotify**](iorpcdebugnotify-clientnotify.md), [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md), [**servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md)und [**servernotify**](iorpcdebugnotify-servernotify.md) verwendet.
+> Wird von den Methoden [**ClientFillBuffer,**](iorpcdebugnotify-clientfillbuffer.md) [**ClientGetBufferSize,**](iorpcdebugnotify-clientgetbuffersize.md) [**ClientNotify,**](iorpcdebugnotify-clientnotify.md) [**ServerFillBuffer,**](iorpcdebugnotify-serverfillbuffer.md) [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
 </dd> <dt>
 
-**REFIID**
+**Refiid**
 </dt> <dd>
 
-Ein Zeiger auf die IID der [**iorpcdebug**](iorpcdebugnotify.md) -Schnittstelle.
+Ein Zeiger auf die IID der [**IOrpcDebugNotify-Schnittstelle.**](iorpcdebugnotify.md)
 
 > [!Note]
 >
-> Wird von den Methoden [**clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md), [**clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md), [**clientnotify**](iorpcdebugnotify-clientnotify.md), [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md), [**servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md)und [**servernotify**](iorpcdebugnotify-servernotify.md) verwendet.
+> Wird von den Methoden [**ClientFillBuffer,**](iorpcdebugnotify-clientfillbuffer.md) [**ClientGetBufferSize,**](iorpcdebugnotify-clientgetbuffersize.md) [**ClientNotify,**](iorpcdebugnotify-clientnotify.md) [**ServerFillBuffer,**](iorpcdebugnotify-serverfillbuffer.md) [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
@@ -109,37 +109,37 @@ Ein Zeiger auf die IID der [**iorpcdebug**](iorpcdebugnotify.md) -Schnittstelle.
 **pChannel**
 </dt> <dd>
 
-Ein Zeiger auf die Schnittstelle " [**iripcchannelbuffer**](/windows/win32/api/objidlbase/nn-objidlbase-irpcchannelbuffer) " der com-RPC-Kanal Implementierung auf dem Server.
+Ein Zeiger auf die [**IRpcChannelBuffer-Schnittstelle**](/windows/win32/api/objidlbase/nn-objidlbase-irpcchannelbuffer) der COM RPC-Kanalimplementierungen auf dem Server.
 
 > [!Note]
 >
-> Wird von der [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md)-, [**servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md)-und [**servernotify**](iorpcdebugnotify-servernotify.md) -Methode verwendet.
+> Wird von den Methoden [**ServerFillBuffer,**](iorpcdebugnotify-serverfillbuffer.md) [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
 </dd> <dt>
 
-**punkproxymgr**
+**pUnkProxyMgr**
 </dt> <dd>
 
-Ein Zeiger auf die [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) -Schnittstelle des Objekts, das an diesem Debugger-Aufruf beteiligt ist. Kann **null** sein. Dadurch wird jedoch die Debugger-Funktionalität reduziert.
+Ein Zeiger auf die [**IUnknown-Schnittstelle**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) des Objekts, das an diesem Debuggeraufruf beteiligt ist. Kann **NULL** sein, dies reduziert jedoch die Debuggerfunktionalität.
 
 > [!Note]
 >
-> Wird von den Methoden [**clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md), [**clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md)und [**clientnotify**](iorpcdebugnotify-clientnotify.md) verwendet.
+> Wird von den Methoden [**ClientFillBuffer,**](iorpcdebugnotify-clientfillbuffer.md) [**ClientGetBufferSize**](iorpcdebugnotify-clientgetbuffersize.md)und [**ClientNotify**](iorpcdebugnotify-clientnotify.md) verwendet.
 
  
 
 </dd> <dt>
 
-**pinterface**
+**pInterface**
 </dt> <dd>
 
-Ein Zeiger auf die COM-Schnittstelle der Methode, die von diesem RPC aufgerufen wird. Darf nicht **null** sein.
+Ein Zeiger auf die COM-Schnittstelle der Methode, die von diesem RPC aufgerufen wird. Darf nicht **NULL** sein.
 
 > [!Note]
 >
-> Wird von der [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md)-, [**servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md)-und [**servernotify**](iorpcdebugnotify-servernotify.md) -Methode verwendet.
+> Wird von den Methoden [**ServerFillBuffer,**](iorpcdebugnotify-serverfillbuffer.md) [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
@@ -148,75 +148,75 @@ Ein Zeiger auf die COM-Schnittstelle der Methode, die von diesem RPC aufgerufen 
 **pUnkObject**
 </dt> <dd>
 
-Muss **null** sein.
+Muss **NULL** sein.
 
 > [!Note]
 >
-> Wird von der [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md)-, [**servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md)-und [**servernotify**](iorpcdebugnotify-servernotify.md) -Methode verwendet.
+> Wird von den Methoden [**ServerFillBuffer,**](iorpcdebugnotify-serverfillbuffer.md) [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
 </dd> <dt>
 
-**HRESULT**
+**Hresult**
 </dt> <dd>
 
-Der Zweck dieses Members ändert sich für jede der folgenden Benachrichtigungen:
+Der Zweck dieses Mitglieds ändert sich für jede der folgenden Benachrichtigungen:
 
-[**Clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md): die Anzahl von Bytes, die vom Client Debugger an den Server Debugger übertragen werden. Wenn der Wert NULL ist, müssen keine Informationen übertragen werden.
+[**ClientGetBufferSize:**](iorpcdebugnotify-clientgetbuffersize.md)Die Anzahl der Bytes, die der Clientdebugger an den Serverdebugger überträgt. Bei 0 (null) müssen keine Informationen übertragen werden.
 
-[**Clientnotify**](iorpcdebugnotify-clientnotify.md): das **HRESULT** des letzten RPC.
+[**ClientNotify:**](iorpcdebugnotify-clientnotify.md)das **HRESULT** des letzten RPC.
 
-[**Servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md): die Anzahl von Bytes, die vom Client Debugger an den Server Debugger übertragen werden. Wenn der Wert NULL ist, müssen keine Informationen übertragen werden.
+[**ServerGetBufferSize:**](iorpcdebugnotify-servergetbuffersize.md)Die Anzahl der Bytes, die der Clientdebugger an den Serverdebugger überträgt. Bei 0 (null) müssen keine Informationen übertragen werden.
 
 > [!Note]
 >
-> Wird von der [**clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md)-, [**clientnotify**](iorpcdebugnotify-clientnotify.md)-und [**servergetbuffersize**](iorpcdebugnotify-servergetbuffersize.md) -Methode verwendet.
+> Wird von den [**Methoden ClientGetBufferSize,**](iorpcdebugnotify-clientgetbuffersize.md) [**ClientNotify**](iorpcdebugnotify-clientnotify.md)und [**ServerGetBufferSize**](iorpcdebugnotify-servergetbuffersize.md) verwendet.
 
  
 
 </dd> <dt>
 
-**umschließt**
+**pvBuffer**
 </dt> <dd>
 
-Ein Zeiger auf eine [**ORPC \_ dbg- \_ Puffer**](orpc-dbg-buffer.md) Struktur, die die per RPC gemarshallte Debuginformationen enthält. Ist nicht definiert, wenn **cbbuffer** NULL ist.
+Ein Zeiger auf eine [**ORPC \_ DBG \_ BUFFER-Struktur,**](orpc-dbg-buffer.md) die die debuginformationen für rpc-Marshalling enthält. Ist nicht definiert, wenn **cbBuffer** 0 (null) ist.
 
 > [!Note]
 >
-> Wird von der [**clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md)-, [**clientnotify**](iorpcdebugnotify-clientnotify.md)-, [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md)-und [**servernotify**](iorpcdebugnotify-servernotify.md) -Methode verwendet.
+> Wird von den Methoden [**ClientFillBuffer,**](iorpcdebugnotify-clientfillbuffer.md) [**ClientNotify,**](iorpcdebugnotify-clientnotify.md) [**ServerFillBuffer**](iorpcdebugnotify-serverfillbuffer.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
 </dd> <dt>
 
-**cbbuffer**
+**cbBuffer**
 </dt> <dd>
 
-Die Länge (in Byte) der Daten, auf die von **pvbuffer** verwiesen wird.
+Die Länge der Daten, auf die **pvBuffer** verweist, in Bytes.
 
 > [!Note]
 >
-> Wird von der [**clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md)-, [**clientnotify**](iorpcdebugnotify-clientnotify.md)-, [**serverfillbuffer**](iorpcdebugnotify-serverfillbuffer.md)-und [**servernotify**](iorpcdebugnotify-servernotify.md) -Methode verwendet.
+> Wird von den Methoden [**ClientFillBuffer,**](iorpcdebugnotify-clientfillbuffer.md) [**ClientNotify,**](iorpcdebugnotify-clientnotify.md) [**ServerFillBuffer**](iorpcdebugnotify-serverfillbuffer.md)und [**ServerNotify**](iorpcdebugnotify-servernotify.md) verwendet.
 
  
 
 </dd> <dt>
 
-**lpcbbuffer**
+**lpcbBuffer**
 </dt> <dd>
 
-Die Anzahl von Bytes, die vom Client Debugger an den Server Debugger übertragen werden. Wenn der Wert NULL ist, müssen keine Informationen übertragen werden. Dieser Wert ersetzt den Wert, der in **HRESULT** zurückgegeben wird.
+Die Anzahl der Bytes, die der Clientdebugger an den Serverdebugger überträgt. Bei 0 (null) müssen keine Informationen übertragen werden. Dieser Wert ersetzt den in **hresult** zurückgegebenen Wert.
 
 > [!Note]
 >
-> Wird von der [**clientfillbuffer**](iorpcdebugnotify-clientfillbuffer.md)-Methode, der [**clientgetbuffersize**](iorpcdebugnotify-clientgetbuffersize.md) -Methode verwendet.
+> Wird von den [**ClientFillBuffer-,**](iorpcdebugnotify-clientfillbuffer.md) [**ClientGetBufferSize-Methoden**](iorpcdebugnotify-clientgetbuffersize.md) verwendet.
 
  
 
 </dd> <dt>
 
-**bleiben**
+**reserved**
 </dt> <dd>
 
 Reserviert. Darf nicht verwendet werden.
@@ -235,20 +235,20 @@ Reserviert. Darf nicht verwendet werden.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ORPC \_ dbg- \_ Puffer**](orpc-dbg-buffer.md)
+[**\_ORPC-DBG-PUFFER \_**](orpc-dbg-buffer.md)
 </dt> <dt>
 
-[**ORPC-init-Argumente \_ \_**](orpc-init-args.md)
+[**ORPC \_ INIT \_ ARGS**](orpc-init-args.md)
 </dt> <dt>
 
-[**Dlldebugobjectrpchook**](dlldebugobjectrpchook.md)
+[**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md)
 </dt> <dt>
 
-[**Iorpcdebug-Benachrichtigung**](iorpcdebugnotify.md)
+[**IOrpcDebugNotify**](iorpcdebugnotify.md)
 </dt> </dl>
 
  

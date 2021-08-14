@@ -1,24 +1,24 @@
 ---
-title: So suchen Sie Audioformate
-description: So suchen Sie Audioformate
+title: So suchen Sie Nach Audioformaten
+description: So suchen Sie Nach Audioformaten
 ms.assetid: f2001ed5-f07d-45a5-a566-45697024870e
 keywords:
-- Streams, suchen nach Audioformaten
-- Audiostreams, suchen nach Audioformaten
+- Streams,Suchen von Audioformaten
+- Audiostreams,Suchen von Audioformaten
 - Streams, Audioformate
-- Audiodatenströme, Audioformate
+- Audiostreams,Audioformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d85897d4d76a3bdb1e99902eb4f52336a3ad0874
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5c596c8efc1fc5315ad68bad51676888823ac4b3518232ec948ce38b2fb77075
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118196506"
 ---
-# <a name="to-find-audio-formats"></a>So suchen Sie Audioformate
+# <a name="to-find-audio-formats"></a>So suchen Sie Nach Audioformaten
 
-Der folgende Beispielcode veranschaulicht, wie Sie ein Audioformat suchen, das den von Ihnen angegebenen Kriterien entspricht. Die **findaudioformat** -Funktion akzeptiert einen Zeiger auf eine [**WaveFormatEx**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) -Struktur, die die Anzahl der Kanäle, Bits pro Stichprobe und die gewünschte Stichprobenrate enthält. Die-Funktion sucht nach dem Format, das diesen Anforderungen entspricht, und verfügt über die höchste Bitrate, die den *dwmaxrate* -Parameter nicht überschreitet. Wenn Sie *favsync* auf **true** festlegen, überprüft die Funktion nur Formate, die mit Video synchronisiert werden können. Der Einfachheit halber funktioniert diese Funktion nur mit 1-Pass-CBR-Formaten.
+Der folgende Beispielcode veranschaulicht, wie Sie ein Audioformat finden, das den von Ihnen angegebenen Kriterien entspricht. Die **FindAudioFormat-Funktion** akzeptiert einen Zeiger auf eine [**WAVEFORMATEX-Struktur,**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) die die Anzahl der Kanäle, Bits pro Stichprobe und abtastrate enthält, die Sie verwenden möchten. Die Funktion sucht das Format, das diesen Anforderungen entspricht, und hat die höchste Bitrate, die den *dwMaxRate-Parameter nicht* überschreitet. Wenn Sie *fAVSync auf* **TRUE festlegen,** überprüft die Funktion nur Formate, die mit Video synchronisiert werden können. Der Einfachheit halber funktioniert diese Funktion nur mit 1-Pass-CBR-Formaten.
 
 
 ```C++
@@ -245,12 +245,12 @@ Exit:
 
 <dl> <dt>
 
-[**Konfigurieren von Audiodatenströmen**](configuring-audio-streams.md)
+[**Konfigurieren von Audiodaten Streams**](configuring-audio-streams.md)
 </dt> <dt>
 
-[**So zählen Sie Codec-Formate auf**](to-enumerate-codec-formats.md)
+[**So aufzählen Sie Codecformate**](to-enumerate-codec-formats.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

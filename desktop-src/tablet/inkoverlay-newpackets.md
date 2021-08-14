@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn der frei Hand Collecto ein Paket empfängt.
+description: Tritt ein, wenn das Ink-Collecto ein Paket empfängt.
 ms.assetid: 26d5a3eb-430a-4e21-8a3f-fdec5005cd6e
-title: InkOverlay. newpakets-Ereignis (msink AUT. h)
+title: InkOverlay.NewPackets-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43743b47d007b44d4f2460266e7198266c36afd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea2571e7c8f97881da5bbbef6cdab093ce2d3107b5482def5b62d2dfa141c7e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219197"
 ---
-# <a name="inkoverlaynewpackets-event"></a>InkOverlay. newpackt-Ereignis
+# <a name="inkoverlaynewpackets-event"></a>InkOverlay.NewPackets-Ereignis
 
-Tritt auf, wenn das frei Hand Collecto-Paket ein Paket empfängt.
+Tritt auf, wenn der Ink collecto rreceives ein Paket empfängt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,24 +33,24 @@ void NewPackets(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das das Ereignis " [**nwinairpakete**](inkcollector-newinairpackets.md) " generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**NewInAirPackets-Ereignis**](inkcollector-newinairpackets.md) generiert hat.
 
 </dd> <dt>
 
-*Strich* \[ in\]
+*Strich* \[ In\]
 </dt> <dd>
 
-Gibt das [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt an.
+Gibt das [**IInkStrokeDisp-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) an.
 
 </dd> <dt>
 
-*PacketCount* \[ in\]
+*PacketCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der für ein [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt empfangenen Pakete.
+Die Anzahl der empfangenen Pakete für ein [**IInkStrokeDisp-Objekt.**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp)
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Die Anzahl der für ein [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-ms
 
 Ein Array, das die ausgewählten Daten für das Paket enthält.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
 
 </dd> </dl>
 
@@ -67,15 +67,15 @@ Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-B
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pakete werden empfangen, während ein Strich erfasst wird. Paket Ereignisse treten schnell auf, und ein [**newpacket**](inkcollector-newpackets.md) -Ereignishandler muss schnell sein, oder die Leistung ist beeinträchtigt.
+Pakete werden empfangen, während ein Strich erfasst wird. Paketereignisse treten schnell auf, und ein [**NewPackets-Ereignishandler**](inkcollector-newpackets.md) muss schnell sein oder die Leistung beeinträchtigt werden.
 
-Diese Ereignismethode wird in den \_ Schnittstellen iinkcollectorevents, \_ iinkoverlayevents und \_ iinkpictureevents Dispatch-only (Dispinterfaces) mit der ID DISPID \_ icenewpakete definiert.
+Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICENewPackets definiert.
 
-Dieses Ereignis sollte sorgfältig verwendet werden, da es eine negative Auswirkung auf die Handschrift Leistung haben kann, wenn zu viel Code in den Ereignis Handlern ausgeführt wird.
+Dieses Ereignis sollte sorgfältig verwendet werden, da es negative Auswirkungen auf die Ink-Leistung haben kann, wenn zu viel Code in den Ereignishandlern ausgeführt wird.
 
-Verwenden Sie die [**DesiredPacketDescription**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_desiredpacketdescription) -Eigenschaft des Ink Collector-Objekts, um festzulegen, welche Eigenschaften in diesem Array enthalten sind. Das Array, das der *packetData* -Parameter zurückgibt, enthält die Daten für diese Eigenschaften.
+Verwenden Sie die [**DesiredPacketDescription-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_desiredpacketdescription) des Ink-Collectorobjekts, um festzulegen, welche Eigenschaften in diesem Array enthalten sind. Das Array, das der *PacketData-Parameter* zurückgibt, enthält die Daten für diese Eigenschaften.
 
 > [!Note]  
 > Obwohl Sie die Paketdaten ändern können, werden diese Änderungen nicht beibehalten oder verwendet.
@@ -88,24 +88,24 @@ Verwenden Sie die [**DesiredPacketDescription**](/windows/desktop/api/msinkaut/n
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**"Nwinairpakete"-Ereignis**](inkcollector-newinairpackets.md)
+[**NewInAirPackets-Ereignis**](inkcollector-newinairpackets.md)
 </dt> <dt>
 
-[**Iinkcursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
+[**IInkCursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
 </dt> <dt>
 
 [**IInkStrokeDisp-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp)

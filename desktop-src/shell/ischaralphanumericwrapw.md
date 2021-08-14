@@ -1,7 +1,7 @@
 ---
 description: Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist.
 ms.assetid: d4b01ba5-e42a-4040-a763-ecef0c73977f
-title: Ischaralpha anumschlag wrapw-Funktion
+title: IsCharAlphaNumericWrapW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Shlwapi.dll
-ms.openlocfilehash: bf7f1b4db54cc5374214ff45b51579556dc22062
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: bf0a9752162c1593928e1bed270859ec4166230fe1f7e2d46d979c5c989ca237
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452995"
 ---
-# <a name="ischaralphanumericwrapw-function"></a>Ischaralpha anumschlag wrapw-Funktion
+# <a name="ischaralphanumericwrapw-function"></a>IsCharAlphaNumericWrapW-Funktion
 
-\[**Ischaralpha anumschlag wrapw** ist für die Verwendung in Windows XP verfügbar. Sie wird in nachfolgenden Versionen nicht verfügbar sein. Sie sollten [**ischaralpha annumericw**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) anstelle von verwenden.\]
+\[**IsCharAlphaNumericWrapW** ist für die Verwendung in Windows XP verfügbar. Sie ist in nachfolgenden Versionen nicht verfügbar. Sie sollten [**isCharAlphaNumericW**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) verwenden.\]
 
-Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die während des Setups oder über die Systemsteuerung vom Benutzer ausgewählt wurde.
+Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung.
 
 > [!Note]  
-> **Ischaralpha anumericwrapw** ist ein Wrapper für die **ischaralpha anumericw** -Funktion. Weitere Hinweise zur Verwendung finden Sie auf der [**ischaralpha numerischen**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) Seite.
+> **IsCharAlphaNumericWrapW** ist ein Wrapper für die **IsCharAlphaNumericW-Funktion.** Weitere Hinweise zur Verwendung finden Sie auf der Seite [**IsCharAlphaNumeric.**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica)
 
  
 
@@ -46,38 +46,38 @@ BOOL IsCharAlphaNumericWrapW(
 
 <dl> <dt>
 
-*ch* \[ in\]
+*ch* \[ In\]
 </dt> <dd>
 
 Typ: **WCHAR**
 
-Das zu testende Unicode-Zeichen.
+Das unicode-Zeichen, das getestet werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **bool**
+Typ: **BOOL**
 
-Wenn das Zeichen alphanumerisch ist, ist der Rückgabewert ungleich 0 (null).
+Wenn das Zeichen alphanumerisch ist, ist der Rückgabewert ungleich null.
 
 Wenn das Zeichen nicht alphanumerisch ist, ist der Rückgabewert 0 (null). Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-**Ischaralpha anenumericwrapw** bietet die Möglichkeit, Unicode-Zeichen folgen in älteren Betriebssystemen als Windows XP zu verwenden. Die bevorzugte Methode ist die Verwendung von [**ischaralpha annumericw**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) in Verbindung mit der Microsoft-Schicht für Unicode (MSLU).
+**IsCharAlphaNumericWrapW** bietet die Möglichkeit, Unicode-Zeichenfolgen in Betriebssystemen vor Windows XP zu verwenden. Die bevorzugte Methode ist die Verwendung [**von IsCharAlphaNumericW**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) in Verbindung mit der Microsoft Layer for Unicode (MSLU).
 
-**Ischaralpha anumschlag wrapw** muss direkt aus Shlwapi.dll aufgerufen werden, und zwar mithilfe von Ordnungszahl 28.
+**IsCharAlphaNumericWrapW** muss mithilfe der Ordnungszahl 28 direkt aus Shlwapi.dll aufgerufen werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Wenn das Zeichen nicht alphanumerisch ist, ist der Rückgabewert 0 (null). Um er
 
 <dl> <dt>
 
-[**Ischaralpha numerisch**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica)
+[**IsCharAlphaNumeric**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica)
 </dt> </dl>
 
  

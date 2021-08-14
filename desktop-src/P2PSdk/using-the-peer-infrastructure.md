@@ -1,36 +1,36 @@
 ---
-description: In diesem Abschnitt werden praktische Überlegungen zum Entwickeln von Anwendungen mit der Peer Infrastruktur sowie spezifische Techniken zur effizienteren Verwendung der APIs erläutert.
+description: In diesem Abschnitt werden praktische Überlegungen zur Entwicklung von Anwendungen mit der Peerinfrastruktur sowie bestimmte Techniken zur effizienteren Verwendung der APIs erläutert.
 ms.assetid: 5ce0f8a6-ab61-4091-809f-2e4a990f4886
-title: Verwenden der Peer Infrastruktur
+title: Verwenden der Peerinfrastruktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a6cbcaab4044aa1f0b3e3ca017c824bf304f634
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52e759eecf59eee04274db564e488bbf5778755f171da04967401d10f1ea3d24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117794143"
 ---
-# <a name="using-the-peer-infrastructure"></a>Verwenden der Peer Infrastruktur
+# <a name="using-the-peer-infrastructure"></a>Verwenden der Peerinfrastruktur
 
-In diesem Abschnitt werden praktische Überlegungen zum Entwickeln von Anwendungen mit der Peer Infrastruktur sowie spezifische Techniken zur effizienteren Verwendung der APIs erläutert.
+In diesem Abschnitt werden praktische Überlegungen zur Entwicklung von Anwendungen mit der Peerinfrastruktur sowie bestimmte Techniken zur effizienteren Verwendung der APIs erläutert.
 
-In den folgenden Themen finden Sie Lösungen für häufige Aufgaben zum Entwickeln von Anwendungen mit der Peer Infrastruktur.
+In den folgenden Themen werden Lösungen für allgemeine Aufgaben zum Entwickeln von Anwendungen mithilfe der Peerinfrastruktur identifiziert.
 
 
 
 | Thema                                                                                                        | BESCHREIBUNG                                                                                                             |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [Installieren der Peer Infrastruktur](installing-the-peer-infrastructure.md)                                 | Gibt an, wie die Peer Infrastruktur in Windows XP installiert wird.                                                        |
-| [Überlegungen zur Programmierung](programming-considerations.md)                                                 | Identifiziert wichtige Programmier Überlegungen für die Entwicklung von Anwendungen mit der Peer Infrastruktur.              |
-| [Sicherheitshinweise](security-considerations.md)                                                       | Identifiziert wichtige Sicherheitsüberlegungen für die Entwicklung von Anwendungen, die die Peer Infrastruktur verwenden.                 |
-| [Daten Bank Import und-Export](database-import-and-export.md)                                                 | Gibt an, wie Daten Satz Datenbanken importiert und exportiert werden.                                                                   |
-| [Direkte Verbindungen](direct-connections.md)                                                                 | Gibt an, wie direkte Verbindungen zwischen und in Peers innerhalb der Peer-Graphing-und Gruppierungs-APIs verwendet werden. |
-| [Enumerationen](enumerations.md)                                                                             | Gibt an, wie die von der Peer Infrastruktur verwendeten Enumerationsfunktionen verwendet werden.                                |
-| [Freigeben von Peer Daten](freeing-peer-data.md)                                                                   | Gibt an, wie die zurückgegebenen gemeinsamen Peer Infrastruktur Funktionsaufrufe freigegeben werden.                                      |
-| [Ereignis Infrastruktur](peer-events-infrastructure.md)                                                      | Gibt an, wie mit den Peer Ereignissen gearbeitet werden kann, und interpretiert die Ereignisse, die von den Peer-und graphingapis definiert werden.  |
-| [Importieren und Exportieren von Identitäts-und Gruppen Konfigurationen](identity-and-group-configuration-import-and-export.md) | Gibt an, wie Peer-Identitäts-und Gruppen Identitäts Konfigurationen importiert und exportiert werden.                                    |
-| [Datensätze](records.md)                                                                                       | Gibt an, wie Sie mit Peer Datensätzen und der datensatzdatenbank arbeiten.                                                       |
+| [Installieren der Peerinfrastruktur](installing-the-peer-infrastructure.md)                                 | Gibt an, wie die Peerinfrastruktur in Windows XP installiert wird.                                                        |
+| [Überlegungen zur Programmierung](programming-considerations.md)                                                 | Identifiziert wichtige Überlegungen zur Programmierung bei der Entwicklung von Anwendungen mithilfe der Peerinfrastruktur.              |
+| [Sicherheitshinweise](security-considerations.md)                                                       | Identifiziert wichtige Sicherheitsüberlegungen für die Entwicklung von Anwendungen mithilfe der Peerinfrastruktur.                 |
+| [Datenbankimport und -export](database-import-and-export.md)                                                 | Gibt an, wie Datensatzdatenbanken importiert und exportiert werden.                                                                   |
+| [Direkte Verbindungen](direct-connections.md)                                                                 | Gibt an, wie direkte Verbindungen zwischen und zwischen Peers innerhalb der Peer graphing- und grouping-APIs verwendet werden. |
+| [Enumerationen](enumerations.md)                                                                             | Gibt an, wie sie mit den Enumerationsfunktionen arbeiten, die von der Peerinfrastruktur verwendet werden.                                |
+| [Freeing Peer Data](freeing-peer-data.md)                                                                   | Gibt an, wie allgemeine Peerinfrastruktur-Funktionsaufrufe von Daten veröffentlicht werden, die zurückgegeben werden.                                      |
+| [Ereignisinfrastruktur](peer-events-infrastructure.md)                                                      | Identifiziert die Arbeit mit den Peerereignissen und interpretiert die Ereignisse, die von den Peergraphing- und Graphing-APIs definiert werden.  |
+| [Importieren und Exportieren der Identitäts- und Gruppenkonfiguration](identity-and-group-configuration-import-and-export.md) | Gibt an, wie Peeridentitäts- und Gruppenidentitätskonfigurationen importiert und exportiert werden.                                    |
+| [Datensätze](records.md)                                                                                       | Identifiziert die Arbeit mit Peerdatensätzen und der Datensatzdatenbank.                                                       |
 
 
 

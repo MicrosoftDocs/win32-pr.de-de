@@ -1,9 +1,9 @@
 ---
-title: Controls. currentaudiolanguage
-description: Die currentaudiolanguage-Eigenschaft gibt den Gebiets Schema Bezeichner (Locale Identifier, LCID) der Audiosprache für die Wiedergabe an oder ruft ihn ab.
+title: Controls.currentAudioLanguage
+description: Die currentAudioLanguage-Eigenschaft gibt den Gebietsschemabezeichner (LCID) der Audiosprache für die Wiedergabe an oder ruft sie ab.
 ms.assetid: 628845df-add3-4068-9c3d-b4a9b818808c
 keywords:
-- Steuerelemente. currentaudiolanguage Windows Media Player
+- Controls.currentAudioLanguage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f1bc84c7d4c14bb742a6db37feca59fb9d0db0e1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 63c5eb53c9f408a9d50a7f738434e5dcd30fc804970b3e1ea95c985c90d62063
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117750612"
 ---
-# <a name="controlscurrentaudiolanguage"></a>Controls. currentaudiolanguage
+# <a name="controlscurrentaudiolanguage"></a>Controls.currentAudioLanguage
 
-Die **currentaudiolanguage** -Eigenschaft gibt den Gebiets Schema Bezeichner (Locale Identifier, LCID) der Audiosprache für die Wiedergabe an oder ruft ihn ab.
+Die **currentAudioLanguage-Eigenschaft** gibt den Gebietsschemabezeichner (LCID) der Audiosprache für die Wiedergabe an oder ruft sie ab.
 
 ``` syntax
 player.controls.currentAudioLanguage
@@ -32,17 +32,17 @@ player.controls.currentAudioLanguage
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese-/schreibzahl (**Long**). 
+Diese Eigenschaft ist eine Lese-/Schreibnummer (**long**). 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine LCID identifiziert eindeutig einen bestimmten Sprach Dialekt, der als Gebiets Schema bezeichnet wird.
+Eine LCID identifiziert eindeutig einen bestimmten Sprachdialekt, der als Gebietsschema bezeichnet wird.
 
-Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
+Für Windows Medienbasierte Inhalte unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
 
-Beim Arbeiten mit DVD-Inhalten bewirkt die Angabe einer LCID, dass die erste verfügbare Audiospur mit der angegebenen Sprach-ID ausgewählt wird.
+Wenn Sie mit DVD-Inhalten arbeiten, führt die Angabe einer LCID dazu, dass die erste verfügbare Audiospur mit der angegebenen Sprach-ID ausgewählt wird.
 
-**Windows Media Player 10 Mobile:** Diese Eigenschaft akzeptiert nur die sprachneutrale LCID (0) oder gibt Sie zurück.
+**Windows Media Player 10 Mobile:** Diese Eigenschaft akzeptiert nur die sprachneutrale LCID (0) oder gibt sie zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,31 +50,31 @@ Beim Arbeiten mit DVD-Inhalten bewirkt die Angabe einer LCID, dass die erste ver
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Controls. audiolanguagecount**](controls-audiolanguagecount.md)
+[**Controls.audioLanguageCount**](controls-audiolanguagecount.md)
 </dt> <dt>
 
-[**Controls. currentaudiolanguageindex**](controls-currentaudiolanguageindex.md)
+[**Controls.currentAudioLanguageIndex**](controls-currentaudiolanguageindex.md)
 </dt> <dt>
 
-[**Controls. getaudiolanguagedescription**](controls-getaudiolanguagedescription.md)
+[**Controls.getAudioLanguageDescription**](controls-getaudiolanguagedescription.md)
 </dt> <dt>
 
-[**Controls. getaudiolanguageid**](controls-getaudiolanguageid.md)
+[**Controls.getAudioLanguageID**](controls-getaudiolanguageid.md)
 </dt> <dt>
 
-[**Controls. getlanguagename**](controls-getlanguagename.md)
+[**Controls.getLanguageName**](controls-getlanguagename.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: ms-DS-keyversionnumber-Attribut
+title: ms-DS-KeyVersionNumber-Attribut
 description: Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies ist ein konstruiertes Attribut.
 ms.assetid: 21bd40d9-df90-4f46-90e7-582e86eef760
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-keyversionnumber\"-Attribut, AD-Schema"
-- AD-Schema des msDS-keyversionnumber-Attributs
+- AD-Schema des ms-DS-KeyVersionNumber-Attributs
+- AD-Schema des msDS-KeyVersionNumber-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6caa860b01b2cefc9509a234af62d6ea57487048
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 488edc2feed2b7a9e7b4974e60d67b4338ebc90e34a9f928be2cc38e207d2f2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118425846"
 ---
-# <a name="ms-ds-keyversionnumber-attribute"></a>ms-DS-keyversionnumber-Attribut
+# <a name="ms-ds-keyversionnumber-attribute"></a>ms-DS-KeyVersionNumber-Attribut
 
 Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies ist ein konstruiertes Attribut.
 
@@ -29,26 +29,26 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-keyversionnumber               |
-| LDAP-Display-Name | MSDS-keyversionnumber                |
+| CN                | ms-DS-KeyVersionNumber               |
+| Ldap-Anzeigename | msDS-KeyVersionNumber                |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1782              |
-| System-ID-GUID    | c523e9c0-33b5-4ac8-8923-b57b927f42f6 |
+| System-Id-Guid    | c523e9c0-33b5-4ac8-8923-b57b927f42f6 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,16 +56,16 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Richtig                                                         |
-| Ist-einwertig       | Richtig                                                         |
+| System-Only            | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -77,16 +77,16 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Richtig                                                         |
-| Ist-einwertig       | Richtig                                                         |
+| System-Only            | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -98,16 +98,16 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Richtig                                                         |
-| Ist-einwertig       | Richtig                                                         |
+| System-Only            | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -119,16 +119,16 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Richtig                                                         |
-| Ist-einwertig       | Richtig                                                         |
+| System-Only            | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -140,16 +140,16 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Richtig                                                         |
-| Ist-einwertig       | Richtig                                                         |
+| System-Only            | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 

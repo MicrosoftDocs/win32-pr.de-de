@@ -1,9 +1,9 @@
 ---
-title: komplexer dailyscheduletype-Typ
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das schedulebyday-Element.
+title: Komplexer DailyScheduleType-Typ
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das ScheduleByDay-Element.
 ms.assetid: e0b1b09f-d72a-4a85-9059-4a917bc0104a
 keywords:
-- komplexer dailyscheduletype-Typ Taskplaner
+- komplexer dailyScheduleType-Typ Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5982ab7e72a79dc909a4e91fafe363ca4703639d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 881442d4aa6d6b22fb443a2670aac379b39bfed064089b95dd1bd07ba80a1f11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118357176"
 ---
-# <a name="dailyscheduletype-complex-type"></a>komplexer dailyscheduletype-Typ
+# <a name="dailyscheduletype-complex-type"></a>Komplexer DailyScheduleType-Typ
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das [**schedulebyday**](taskschedulerschema-schedulebyday-calendartriggertype-element.md) -Element.
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das [**ScheduleByDay-Element.**](taskschedulerschema-schedulebyday-calendartriggertype-element.md)
 
 ``` syntax
 <xs:complexType name="dailyScheduleType">
@@ -53,7 +53,7 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 | Element                                                                            | type | BESCHREIBUNG                                                          |
 |------------------------------------------------------------------------------------|------|----------------------------------------------------------------------|
-| [**Daysinterval**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) |      | Gibt das Intervall zwischen den Tagen im Zeitplan an. <br/> |
+| [**DaysInterval**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) |      | Gibt das Intervall zwischen den Tagen im Zeitplan an. <br/> |
 
 
 
@@ -63,16 +63,16 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Schematypen Taskplaner](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

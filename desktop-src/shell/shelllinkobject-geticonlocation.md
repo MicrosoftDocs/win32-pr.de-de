@@ -1,7 +1,7 @@
 ---
-description: Ruft den Speicherort des Symbols ab, das dem Link zugewiesen ist.
+description: Ruft die Position des Symbols ab, das dem Link zugewiesen ist.
 ms.assetid: 3bb7f0f0-7ab9-41e6-b738-274efbcd52ab
-title: Shelllinkobject. getikonlocation-Methode (shlobj \_ Core. h)
+title: ShellLinkObject.GetIconLocation-Methode (Shlobj \_ core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: ef2f502d30116def68aa43269b3020d404ce177d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09ace233291d5eac285ac1115866a54cb9792c85aefbb8faa5a2d1f6c37393e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857581"
 ---
-# <a name="shelllinkobjectgeticonlocation-method"></a>Shelllinkobject. getikonlocation-Methode
+# <a name="shelllinkobjectgeticonlocation-method"></a>ShellLinkObject.GetIconLocation-Methode
 
-Ruft den Speicherort des Symbols ab, das dem Link zugewiesen ist.
+Ruft die Position des Symbols ab, das dem Link zugewiesen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ iRetVal = ShellLinkObject.GetIconLocation(
 
 <dl> <dt>
 
-*Spath* \[ vorgenommen\]
+*sPath* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**BSTR**](/previous-versions/windows/desktop/automat/bstr) \** _
+Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)\***
 
-Wenn diese Methode zurückgegeben wird, enthält Sie den voll qualifizierten Pfad der Datei, die das Symbol enthält.
+Wenn diese Methode zurückgegeben wird, enthält sie den vollqualifizierten Pfad der Datei, die das Symbol enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _*Integer \**_
+Typ: **\* Integer**
 
-Gibt den Index des Symbols in der durch _sPath * angegebenen Datei zurück.
+Gibt den Index des Symbols in der durch *sPath angegebenen Datei zurück.*
 
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -95,7 +95,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -169,17 +169,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shlobj \_ Core. h (Include Shldisp. h)</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj \_ core.h (include Shldisp.h)</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -187,10 +187,10 @@ End Sub
 
 <dl> <dt>
 
-[**Shelllinkobject**](shelllinkobject-object.md)
+[**ShellLinkObject**](shelllinkobject-object.md)
 </dt> <dt>
 
-[**Standort Standort**](shelllinkobject-seticonlocation.md)
+[**SetIconLocation**](shelllinkobject-seticonlocation.md)
 </dt> </dl>
 
  

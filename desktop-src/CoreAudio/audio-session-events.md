@@ -4,31 +4,31 @@ ms.assetid: 6943b405-0807-412b-a149-fc3a8ece1b48
 title: Audiositzungsereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90ec5de18c883f817c2f650ccfc48ad0149ac84e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cf0c3441a7f6f6835070a530c4ebb8985354b2701f312f2f085c5e449f12cbf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118407224"
 ---
 # <a name="audio-session-events"></a>Audiositzungsereignisse
 
-Eine Anwendung, die Audiodatenströme im freigegebenen Modus verwaltet, kann beim Auftreten von Sitzungs Ereignissen registriert werden, um Benachrichtigungen zu empfangen. Wie bereits erläutert, gehört jeder Stream zu einer [Audiositzung](audio-sessions.md). Ein Sitzungs Ereignis wird durch eine Änderung des Status einer Audiositzung initiiert.
+Eine Anwendung, die Audiostreams im freigegebenen Modus verwaltet, kann sich registrieren, um Benachrichtigungen zu empfangen, wenn Sitzungsereignisse auftreten. Wie bereits erläutert, gehört jeder Stream zu einer [Audiositzung.](audio-sessions.md) Ein Sitzungsereignis wird durch eine Änderung des Status einer Audiositzung initiiert.
 
-Eine Client Anwendung kann sich registrieren, um Benachrichtigungen über die folgenden Sitzungs Ereignis Typen zu erhalten:
+Eine Clientanwendung kann sich registrieren, um Benachrichtigungen über die folgenden Arten von Sitzungsereignissen zu empfangen:
 
--   Die Master Volume-Ebene oder der stumm Schaltung-Status der Sitzungs teilmischung hat sich geändert.
--   Die Volumeebene eines oder mehrerer Kanäle der Sitzungs teilmischung hat sich geändert.
+-   Die Mastervolumeebene oder der Mutingzustand des Sitzungsuntermix wurde geändert.
+-   Die Volumeebene eines oder mehrerer Kanäle des Sitzungsuntermix wurde geändert.
 -   Die Sitzung wurde getrennt.
--   Der Aktivitätsstatus der Sitzung wurde in "aktiv", "inaktiv" oder "abgelaufen" geändert.
--   Der Sitzung wurde ein neuer Gruppierungs Parameter zugewiesen.
--   Eine Benutzeroberflächen Eigenschaft der Sitzung (Symbol oder Anzeige Name) wurde geändert.
+-   Der Aktivitätsstatus der Sitzung wurde in aktiv, inaktiv oder abgelaufen geändert.
+-   Der Sitzung wurde ein neuer Gruppierungsparameter zugewiesen.
+-   Eine Benutzeroberflächeneigenschaft der Sitzung (Symbol oder Anzeigename) wurde geändert.
 
-Der Client empfängt Benachrichtigungen über diese Ereignisse über die Methoden in der Implementierung der [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle. Im Gegensatz zu den anderen Schnittstellen in WASAPI, die vom WASAPI-Systemmodul implementiert werden, implementiert der Client **iaudiosessionevents**. Die Methoden in dieser Schnittstelle empfangen Rückrufe vom WASAPI-Systemmodul, wenn Sitzungs Ereignisse auftreten.
+Der Client empfängt Benachrichtigungen über diese Ereignisse über die Methoden in seiner Implementierung der [**IAudioSessionEvents-Schnittstelle.**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) Im Gegensatz zu den anderen Schnittstellen in WASAPI, die vom WASAPI-Systemmodul implementiert werden, implementiert der Client **IAudioSessionEvents.** Die Methoden in dieser Schnittstelle empfangen Rückrufe vom WASAPI-Systemmodul, wenn Sitzungsereignisse auftreten.
 
-Um mit dem Empfang von Benachrichtigungen zu beginnen, ruft der Client die [**iaudiosessioncontrol:: registeraudiosessionnotification**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessioncontrol-registeraudiosessionnotification) -Methode auf, um die [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle zu registrieren. Wenn der Client keine Benachrichtigungen mehr erfordert, ruft er die [**iaudiosessioncontrol:: unregisteraudiosessionnotification**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessioncontrol-unregisteraudiosessionnotification) -Methode auf, um die Registrierung zu löschen.
+Um mit dem Empfangen von Benachrichtigungen zu beginnen, ruft der Client die [**IAudioSessionControl::RegisterAudioSessionNotification-Methode**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessioncontrol-registeraudiosessionnotification) auf, um die [**IAudioSessionEvents-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) zu registrieren. Wenn der Client keine Benachrichtigungen mehr benötigt, ruft er die [**IAudioSessionControl::UnregisterAudioSessionNotification-Methode**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessioncontrol-unregisteraudiosessionnotification) auf, um die Registrierung zu löschen.
 
-Im folgenden Codebeispiel wird eine mögliche Implementierung der [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle veranschaulicht:
+Das folgende Codebeispiel zeigt eine mögliche Implementierung der [**IAudioSessionEvents-Schnittstelle:**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents)
 
 
 ```C++
@@ -195,13 +195,13 @@ public:
 
 
 
-Die caudiosessionevents-Klasse im vorangehenden Codebeispiel ist eine Implementierung der [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle. Diese spezielle Implementierung ist möglicherweise Teil einer Konsolenanwendung, die Informationen zu Sitzungs Ereignissen in einem Eingabe Aufforderungs Fenster ausgibt. Da **iaudiosessionevents** von [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown)erbt, enthält die Klassendefinition Implementierungen der **IUnknown** -Methoden [**adressf**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)und [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). Die übrigen öffentlichen Methoden in der Klassendefinition sind spezifisch für die **iaudiosessionevents** -Schnittstelle.
+Die CAudioSessionEvents-Klasse im vorherigen Codebeispiel ist eine Implementierung der [**IAudioSessionEvents-Schnittstelle.**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) Diese spezielle Implementierung kann Teil einer Konsolenanwendung sein, die Informationen zu Sitzungsereignissen in einem Eingabeaufforderungsfenster ausgibt. Da **IAudioSessionEvents** von [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown)erbt, enthält die Klassendefinition Implementierungen der **IUnknown-Methoden** [**AddRef,**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)und [**QueryInterface.**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) Die verbleibenden öffentlichen Methoden in der Klassendefinition sind spezifisch für die **IAudioSessionEvents-Schnittstelle.**
 
-Einige Clients sind möglicherweise nicht für die Überwachung aller Typen von Sitzungs Ereignissen interessiert. Im vorangehenden Codebeispiel führen verschiedene Benachrichtigungs Methoden in der caudiosessionevents-Klasse keine Aktion aus. Beispielsweise führt die [**onchannelvolumechaning**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onchannelvolumechanged) -Methode keine Ausnahme aus, wenn der Statuscode "OK" zurückgegeben wird \_ . Von dieser Anwendung werden keine kanalvolumes überwacht, da die kanalvolumes nicht geändert werden (durch Aufrufen der Methoden in der Schnittstelle [**ichannelaudiovolume**](/windows/desktop/api/Audioclient/nn-audioclient-ichannelaudiovolume) ) und die Sitzung nicht mit anderen Anwendungen gemeinsam genutzt wird, die möglicherweise die kanalvolumes ändern.
+Einige Clients sind möglicherweise nicht an der Überwachung aller Arten von Sitzungsereignissen interessiert. Im vorherigen Codebeispiel haben mehrere Benachrichtigungsmethoden in der CAudioSessionEvents-Klasse nichts zu tun. Die [**OnChannelVolumeChanged-Methode**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onchannelvolumechanged) gibt beispielsweise nur den Statuscode S \_ OK zurück. Diese Anwendung überwacht keine Kanalvolumes, da sie die Kanalvolumes nicht ändert (durch Aufrufen der Methoden in der [**IChannelAudioVolume-Schnittstelle),**](/windows/desktop/api/Audioclient/nn-audioclient-ichannelaudiovolume) und sie gibt die Sitzung nicht für andere Anwendungen frei, die die Kanalvolumes ändern können.
 
-Die einzigen drei Methoden in der caudiosessionevents-Klasse, die den Benutzer über Sitzungs Ereignisse benachrichtigen, sind [**onsimplevolumechaning**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onsimplevolumechanged), [**OnStateChanged**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onstatechanged)und [**onsessiongetrennte**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onsessiondisconnected). Wenn der Benutzer z. b. das System Volume-Control-Programm, sndvol, ausführt und das Volume-Steuerelement in sndvol verwendet, um die Volumeebene der Anwendung zu ändern, `OnSimpleVolumeChanged` druckt sofort die neue Volumeebene.
+Die einzigen drei Methoden in der CAudioSessionEvents-Klasse, die den Benutzer über Sitzungsereignisse benachrichtigen, sind [**OnSimpleVolumeChanged,**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onsimplevolumechanged) [**OnStateChanged**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onstatechanged)und [**OnSessionDisconnected.**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessionevents-onsessiondisconnected) Wenn der Benutzer beispielsweise das Systemvolume-Steuerungsprogramm Sndvol ausführt und die Volumesteuerung in Sndvol verwendet, um die Volumeebene der Anwendung zu ändern, `OnSimpleVolumeChanged` gibt sofort die neue Volumeebene aus.
 
-Ein Codebeispiel, in dem die [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle eines Clients registriert und die Registrierung aufgehoben wird, finden Sie unter [Audioereignisse für Legacy-Audioanwendungen](audio-events-for-legacy-audio-applications.md).
+Ein Codebeispiel zum Registrieren und Aufheben der Registrierung der [**IAudioSessionEvents-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) eines Clients finden Sie unter [Audioereignisse für Legacyaudioanwendungen.](audio-events-for-legacy-audio-applications.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob der Audioinhalt Musik oder Sprache enthält.
+description: Gibt an, ob der Audioinhalt Musik oder Stimme enthält.
 ms.assetid: 10e35d7f-06b8-427f-9309-167358ccbd6f
-title: Avencaudioinputcontent-Eigenschaft (codecapi. h)
+title: AVEncAudioInputContent-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0a2006efa769169e0fe3debc7c025bc829a3586
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 38e5132e276d5e526e83a84415f50f22e4a6bce1bc985d830285825e4a1c72a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117824210"
 ---
-# <a name="avencaudioinputcontent-property"></a>Avencaudioinputcontent (Eigenschaft)
+# <a name="avencaudioinputcontent-property"></a>AVEncAudioInputContent-Eigenschaft
 
-Gibt an, ob der Audioinhalt Musik oder Sprache enthält.
+Gibt an, ob der Audioinhalt Musik oder Stimme enthält.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencaudioinputcontent**
+**CODECAPI \_ AVEncAudioInputContent**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencaudioinputcontent**](/windows/win32/api/codecapi/ne-codecapi-eavencaudioinputcontent) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncAudioInputContent-Enumeration.**](/windows/win32/api/codecapi/ne-codecapi-eavencaudioinputcontent)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencaudioinputcontent**](/wi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

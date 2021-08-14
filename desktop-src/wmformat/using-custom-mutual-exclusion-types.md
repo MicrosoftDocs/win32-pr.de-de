@@ -1,70 +1,70 @@
 ---
-title: Verwenden benutzerdefinierter gegenseitiger Ausschluss Typen
-description: Verwenden benutzerdefinierter gegenseitiger Ausschluss Typen
+title: Verwenden benutzerdefinierter gegenseitiger Ausschlusstypen
+description: Verwenden benutzerdefinierter gegenseitiger Ausschlusstypen
 ms.assetid: 9a4d760c-80af-4c67-823d-6da2732671ff
 keywords:
-- Iwmmutualexclusion
-- gegenseitiger Ausschluss, iwmmutualexclusion-Schnittstelle
-- gegenseitiger Ausschluss, benutzerdefinierte Typen
-- Profile, benutzerdefinierte gegenseitige Ausschluss Typen
+- IWMMutualExclusion
+- gegenseitiger Ausschluss,IWMMutualExclusion-Schnittstelle
+- Gegenseitiger Ausschluss,benutzerdefinierte Typen
+- Profile,benutzerdefinierte gegenseitige Ausschlusstypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 051e95bfb3f5ef8e39af31368227cf4918b897d2
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 7162b8d0588031e934e55425af03cd0d2e8d0a58524b19251521ec2ab6848094
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104101262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117845078"
 ---
-# <a name="using-custom-mutual-exclusion-types"></a>Verwenden benutzerdefinierter gegenseitiger Ausschluss Typen
+# <a name="using-custom-mutual-exclusion-types"></a>Verwenden benutzerdefinierter gegenseitiger Ausschlusstypen
 
-Sie können Objekte mit gegenseitigem Ausschluss in einem Profil verwenden, um die Anforderungen von benutzerdefinierten Szenarios zu erfüllen. Wenn Sie den GUID-Wert CLSID \_ wmmutex \_ Unknown an [**iwmmutualexclusion:: settype**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-settype)übergeben, informieren Sie das gegenseitige Ausschluss Objekt, dass Sie ein benutzerdefiniertes Szenario verwenden.
+Sie können objekte für gegenseitigen Ausschluss in einem Profil verwenden, um die Anforderungen benutzerdefinierter Szenarien zu erfüllen. Durch Übergeben des GUID-Werts CLSID \_ WMMUTEX Unknown an \_ [**IWMMutualExclusion::SetType**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-settype)informieren Sie das Objekt für gegenseitigen Ausschluss darüber, dass Sie ein benutzerdefiniertes Szenario verwenden.
 
-Sie müssen die Streamauswahl manuell steuern, wenn Sie eine Datei mit einem benutzerdefinierten gegenseitigen Ausschluss Wert lesen. Das Reader-Objekt verwendet den ersten Stream, den Sie dem gegenseitigen Ausschluss als Standardwert hinzufügen.
+Sie müssen die Streamauswahl manuell steuern, wenn Sie eine Datei mit einem benutzerdefinierten wert für gegenseitigen Ausschluss lesen. Das Readerobjekt verwendet den ersten Stream, den Sie dem gegenseitigen Ausschluss als Standard hinzufügen.
 
-Verwenden Sie die folgenden Schritte, um ein benutzerdefiniertes gegenseitiges Ausschluss Objekt zu erstellen und es einem Profil hinzuzufügen:
+Führen Sie die folgenden Schritte aus, um ein benutzerdefiniertes Objekt für gegenseitigen Ausschluss zu erstellen und es einem Profil hinzuzufügen:
 
-1.  Erstellen Sie einen Profil-Manager, indem Sie die [**wmcreateprofilemanager**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreateprofilemanager) -Funktion aufrufen.
-2.  Beginnen Sie mit einem vorhandenen Profil, oder erstellen Sie ein völlig neues Profil.
-    -   Wenn Sie ein vorhandenes Profil verwenden, können Sie eine der Load-Methoden der [**iwmprofilemanager**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager) -Schnittstelle abrufen. Fahren Sie dann mit Schritt 4 fort.
-    -   Wenn Sie ein vollständig neues Profil erstellen, nennen Sie [**iwmprofilemanager:: | ateemptyprofile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-createemptyprofile).
-3.  Fügen Sie dem neuen Profildaten Ströme durch Aufrufen von [**iwmprofile:: createnewstream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-createnewstream)hinzu. Konfigurieren Sie die Streams nach Bedarf mithilfe der Methoden von [**iwmstreamconfig**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig). Sie können auch **QueryInterface** aufrufen, um auf andere Schnittstellen im Datenstrom-Konfigurationsobjekt zuzugreifen.
+1.  Erstellen Sie einen Profil-Manager, indem Sie die [**WMCreateProfileManager-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreateprofilemanager) aufrufen.
+2.  Beginnen Sie entweder mit einem vorhandenen Profil, oder erstellen Sie ein völlig neues.
+    -   Wenn Sie ein vorhandenes Profil verwenden, rufen Sie eine der Lademethoden der [**IWMProfileManager-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager) auf. Fahren Sie dann mit Schritt 4 fort.
+    -   Wenn Sie ein völlig neues Profil erstellen, rufen Sie [**IWMProfileManager::CreateEmptyProfile auf.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-createemptyprofile)
+3.  Fügen Sie dem neuen Profil Streams hinzu, indem [**Sie IWMProfile::CreateNewStream aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-createnewstream) Konfigurieren Sie die Streams nach Bedarf mithilfe der [**Methoden von IWMStreamConfig**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig). Sie können **queryInterface auch aufrufen,** um auf andere Schnittstellen im Streamkonfigurationsobjekt zu zugreifen.
 
-    " **Kreatenewstream** " erstellt nur ein streamkonfigurationsobjekt und wirkt sich nicht auf das Profil aus. Nachdem ein Stream ordnungsgemäß konfiguriert wurde, müssen Sie [**iwmprofile:: addstream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-addstream) zum Hinzufügen des Streams zum Profil aufruft.
+    **CreateNewStream** erstellt nur ein Streamkonfigurationsobjekt und wirkt sich nicht auf das Profil aus. Nachdem ein Stream ordnungsgemäß konfiguriert wurde, müssen Sie [**IWMProfile::AddStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-addstream) aufrufen, um den Stream zum Profil hinzuzufügen.
 
-4.  Erstellen Sie ein gegenseitiges Ausschluss Objekt durch Aufrufen von [**iwmprofile:: createnewmutualexclusion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-createnewmutualexclusion).
-5.  Fügen Sie die gewünschten Datenströme dem gegenseitigen Ausschluss Objekt hinzu, indem Sie [**iwmstreamlist:: addstream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamlist-addstream) aufrufen (verfügbar direkt von [**iwmmutualexclusion**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmutualexclusion), das von [**iwmstreamlist**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamlist)erbt).
-6.  Legen Sie den Typ des gegenseitigen Ausschlusses auf Custom fest, indem Sie [**iwmmutualexclusion:: settype**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-settype)aufrufen. Übergeben Sie die CLSID \_ wmmutex \_ Unknown als GUID-Typ.
-7.  Fügen Sie dem Profil das konfigurierte Objekt für den gegenseitigen Ausschluss hinzu, indem Sie [**iwmprofile:: addmutualexclusion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-addmutualexclusion)aufrufen.
+4.  Erstellen Sie ein Objekt für gegenseitigen Ausschluss, indem [**Sie IWMProfile::CreateNewMutualExclusion aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-createnewmutualexclusion)
+5.  Fügen Sie dem Objekt für gegenseitigen Ausschluss die gewünschten Streams hinzu, indem Sie [**IWMStreamList::AddStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamlist-addstream) aufrufen (direkt über [**IWMMutualExclusion**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmutualexclusion)verfügbar, das [**von IWMStreamList erbt).**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamlist)
+6.  Legen Sie den Typ des gegenseitigen Ausschlusses auf custom fest, indem [**Sie IWMMutualExclusion::SetType aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-settype) Übergeben Sie die CLSID \_ WMMUTEX \_ Unknown als Typ-GUID.
+7.  Fügen Sie das konfigurierte Objekt für gegenseitigen Ausschluss zum Profil hinzu, indem [**Sie IWMProfile::AddMutualExclusion aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-addmutualexclusion)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmmutualexclusion-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmutualexclusion)
+[**IWMMutualExclusion-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmutualexclusion)
 </dt> <dt>
 
-[**Iwmprofile-Schnittstelle**](iwmprofile.md)
+[**IWMProfile-Schnittstelle**](iwmprofile.md)
 </dt> <dt>
 
-[**Iwmprofilemanager-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager)
+[**IWMProfileManager-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager)
 </dt> <dt>
 
-[**Iwmstreamconfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)
+[**IWMStreamConfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)
 </dt> <dt>
 
-[**Iwmstreamlist-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamlist)
+[**IWMStreamList-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamlist)
 </dt> <dt>
 
-[**Verwenden von gegenseitigem Ausschluss**](using-mutual-exclusion.md)
+[**Verwenden des gegenseitigen Ausschlusses**](using-mutual-exclusion.md)
 </dt> <dt>
 
-[**Wmkreateprofilemanager**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreateprofilemanager)
+[**WMCreateProfileManager**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreateprofilemanager)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

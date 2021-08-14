@@ -4,12 +4,12 @@ ms.assetid: 2377763b-9b3b-49ec-ab6c-476b8009ddcb
 title: Zuständigkeiten der Verbraucher des PrintCapabilities-Dokuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec123509515de32b88c7352dcf0fc2c2b54504ff
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: f49cd8f843bfa39a4313b0958fe9874f1263403e3fb3b2f22e2c965927bf6f25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118470252"
 ---
 # <a name="responsibilities-of-consumers-of-the-printcapabilities-document"></a>Zuständigkeiten der Verbraucher des PrintCapabilities-Dokuments
 

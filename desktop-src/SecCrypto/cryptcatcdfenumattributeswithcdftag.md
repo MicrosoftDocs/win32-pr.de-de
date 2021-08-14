@@ -1,7 +1,7 @@
 ---
-description: Listet die Attribute der Element Dateien im catalogfiles-Abschnitt einer Katalog Definitionsdatei (CDF) auf.
+description: Führt die Attribute von Memberdateien im Abschnitt CatalogFiles einer Katalogdefinitionsdatei (CDF) auf.
 ms.assetid: 056a5186-a37c-4255-aaa5-4c6e60f5392e
-title: Cryptovcdfenumschlag attributeswithcdftag-Funktion
+title: CryptCATCDFEnumAttributesWithCDFTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Wintrust.dll
-ms.openlocfilehash: bd3c5905c57d234d42cd89d18c2a141c4026250f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f1bffd01865b524b0f06003a6a46b8f81542d7f6113f98db55202e08d8dd7ee9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117768895"
 ---
-# <a name="cryptcatcdfenumattributeswithcdftag-function"></a>Cryptovcdfenumschlag attributeswithcdftag-Funktion
+# <a name="cryptcatcdfenumattributeswithcdftag-function"></a>CryptCATCDFEnumAttributesWithCDFTag-Funktion
 
-\[Die Funktion " **cryptccdfenumschlag attributeswithcdftag** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[Die **Funktion CryptCATCDFEnumAttributesWithCDFTag** steht für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Die Funktion **crypt-cdfenumattributeswithcdftag** listet die Attribute der Element Dateien im Abschnitt **catalogfiles** einer Katalog Definitionsdatei (CDF) auf. **Crypt-cdfenüberattributeswithcdftag** wird von [MakeCat](makecat.md)aufgerufen.
+Die **Funktion CryptCATCDFEnumAttributesWithCDFTag** führt die Attribute von Memberdateien im **Abschnitt CatalogFiles** einer Katalogdefinitionsdatei (CDF) auf. **CryptCATCDFEnumAttributesWithCDFTag** wird von [MakeCat aufgerufen.](makecat.md)
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mssign32.dll.
 
  
 
@@ -50,52 +50,52 @@ CRYPTCATATTRIBUTE* WINAPI CryptCATCDFEnumAttributesWithCDFTag(
 
 <dl> <dt>
 
-*PCDF* \[ in\]
+*pCDF* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**cryptstreamcdf**](/windows/win32/api/mscat/ns-mscat-cryptcatcdf) -Struktur.
+Ein Zeiger auf eine [**CRYPTCATCDF-Struktur.**](/windows/win32/api/mscat/ns-mscat-cryptcatcdf)
 
 </dd> <dt>
 
-*pwszmitgliedungstag* \[ in\]
+*pwszMemberTag* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine **null**-terminierte Zeichenfolge, die das Katalog dateimember identifiziert.
+Ein Zeiger auf eine mit **NULL beendete** Zeichenfolge, die das Katalogdateimitglied identifiziert.
 
 </dd> <dt>
 
-*pmember* \[ in\]
+*pMember* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**cryptsinmember**](/windows/win32/api/mscat/ns-mscat-cryptcatmember) -Struktur, die die Element Informationen enthält.
+Ein Zeiger auf eine [**CRYPTCATMEMBER-Struktur,**](/windows/win32/api/mscat/ns-mscat-cryptcatmember) die die Memberinformationen enthält.
 
 </dd> <dt>
 
-*pprevattr* \[ in\]
+*pPrevAttr* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**cryptstreamattribute**](/windows/win32/api/mscat/ns-mscat-cryptcatattribute) -Struktur für ein dateimember-Attribut in der CDF, auf das von *PCDF* verwiesen wird.
+Ein Zeiger auf eine [**CRYPTCATATTRIBUTE-Struktur**](/windows/win32/api/mscat/ns-mscat-cryptcatattribute) für ein Dateimitgliedsattribut in der CDF, auf das *pCDF zeigt.*
 
 </dd> <dt>
 
-*pfnparser-Fehler* \[ in\]
+*pfnParseError* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine benutzerdefinierte Funktion zum Behandeln von Dateianalyse Fehlern.
+Ein Zeiger auf eine benutzerdefinierte Funktion zum Behandeln von Dateiparsenfehlern.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt diese Funktion einen Zeiger auf eine [**crypttorattribute**](/windows/win32/api/mscat/ns-mscat-cryptcatattribute) -Struktur zurück. Die **cryptstreamcdfenumattributeswithcdftag** -Funktion gibt einen **null** -Zeiger zurück, wenn ein Fehler auftritt.
+Bei Erfolg gibt diese Funktion einen Zeiger auf eine [**CRYPTCATATTRIBUTE-Struktur**](/windows/win32/api/mscat/ns-mscat-cryptcatattribute) zurück. Die **CryptCATCDFEnumAttributesWithCDFTag-Funktion** gibt bei einem Fehler einen **NULL-Zeiger** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird in der Regel in einer Schleife aufgerufen, um alle Attribute der Katalog Dateielemente in einer CDF aufzulisten. Legen Sie *pprevattr* vor der Eingabe der Schleife auf **null** fest. Die-Funktion gibt einen Zeiger auf das erste Attribut zurück. Legen Sie *pprevattr* auf den Rückgabewert der Funktion für nachfolgende Iterationen der Schleife fest.
+In der Regel rufen Sie diese Funktion in einer Schleife auf, um alle Memberattribute der Katalogdatei in einer CDF aufzählen. Legen Sie *pPrevAttr* vor dem Eintritt in die Schleife auf **NULL fest.** Die Funktion gibt einen Zeiger auf das erste Attribut zurück. Legen *Sie pPrevAttr* auf den Rückgabewert der Funktion für nachfolgende Iterationen der Schleife fest.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die korrekte Reihenfolge der Zuweisungen für den *pprevattr* -Parameter ( `pAttr` ).
+Das folgende Beispiel zeigt die richtige Sequenz von Zuweisungen für den *pPrevAttr-Parameter* ( `pAttr` ).
 
 
 ```C++
@@ -141,26 +141,26 @@ Das folgende Beispiel zeigt die korrekte Reihenfolge der Zuweisungen für den *p
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Wintrust.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [MakeCat](makecat.md)
 </dt> <dt>
 
-[**Crypt-Attribute**](/windows/win32/api/mscat/ns-mscat-cryptcatattribute)
+[**CRYPTCATATTRIBUTE**](/windows/win32/api/mscat/ns-mscat-cryptcatattribute)
 </dt> <dt>
 
-[**Cryptalisicdf**](/windows/win32/api/mscat/ns-mscat-cryptcatcdf)
+[**CRYPTCATCDF**](/windows/win32/api/mscat/ns-mscat-cryptcatcdf)
 </dt> <dt>
 
-[**Cryptkatamember**](/windows/win32/api/mscat/ns-mscat-cryptcatmember)
+[**CRYPTCATMEMBER**](/windows/win32/api/mscat/ns-mscat-cryptcatmember)
 </dt> <dt>
 
 [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)

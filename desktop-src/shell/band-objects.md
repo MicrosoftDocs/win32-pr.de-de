@@ -1,5 +1,5 @@
 ---
-description: Die Explorer-Leiste wurde mit Microsoft Internet Explorer 4,0 eingeführt, um einen Anzeigebereich neben dem Browserbereich bereitzustellen.
+description: Die Explorer-Leiste wurde mit Microsoft Internet Explorer 4.0 eingeführt, um einen Anzeigebereich neben dem Browserbereich zu bieten.
 title: Erstellen von benutzerdefinierten Explorer-Leisten, Tool-Bändern und Desk-Bändern
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,133 +9,133 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: b4adeaaf089c22bd3e1db3d60d552ccc3252545a
-ms.sourcegitcommit: ee06501cc29132927ade9813e0888aaa4decc487
+ms.openlocfilehash: 9a57cc5bc8afa3e973c6d4d99b8bcee186287a6c9278407b900f84500d7d0e51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "104571323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118461741"
 ---
-# <a name="creating-custom-explorer-bars-tool-bands-and-desk-bands"></a>Erstellen von benutzerdefinierten Explorer-leisten, Toolbands und Desk-Bändern
+# <a name="creating-custom-explorer-bars-tool-bands-and-desk-bands"></a>Erstellen von benutzerdefinierten Explorer-Balken, Toolbändern und Deskbändern
 
-Die Explorer-Leiste wurde mit Microsoft Internet Explorer 4,0 eingeführt, um einen Anzeigebereich neben dem Browserbereich bereitzustellen. Es handelt sich im Grunde um ein untergeordnetes Fenster innerhalb des Windows Internet Explorer-Fensters, das zum Anzeigen von Informationen und zum interagieren mit dem Benutzer auf die gleiche Weise verwendet werden kann. Explorer-Balken werden am häufigsten als vertikaler Bereich auf der linken Seite des Browser Bereichs angezeigt. Eine Explorer-Leiste kann jedoch auch horizontal unter dem Browserbereich angezeigt werden.
+Die Explorer-Leiste wurde mit Microsoft Internet Explorer 4.0 eingeführt, um einen Anzeigebereich neben dem Browserbereich zu bieten. Im Grunde handelt es sich um ein untergeordnetes Fenster innerhalb Windows Internet Explorer Fensters, und es kann verwendet werden, um Informationen anzuzeigen und auf die gleiche Weise mit dem Benutzer zu interagieren. Explorer-Balken werden am häufigsten als vertikaler Bereich auf der linken Seite des Browserbereichs angezeigt. Eine Explorer-Leiste kann jedoch auch horizontal unterhalb des Browserbereichs angezeigt werden.
 
-![Screenshot, in dem die vertikalen und horizontalen Explorer-Leisten angezeigt werden.](images/expl1.jpg)
+![Screenshot der vertikalen und horizontalen Explorer-Balken](images/expl1.jpg)
 
-Es gibt eine breite Palette möglicher Verwendungsmöglichkeiten für die Explorer-Leiste. Benutzer können auf verschiedene Arten auswählen, welche Option angezeigt werden soll. Sie können Sie auch im Untermenü der **Explorer-Leiste** des Menüs **Ansicht** auswählen oder auf eine Symbolleisten Schaltfläche klicken. Internet Explorer bietet einige Standard-Explorer-leisten, einschließlich Favoriten und suchen.
+Es gibt eine Vielzahl von möglichen Verwendungsmöglichkeiten für die Explorer-Leiste. Benutzer können auf verschiedene Arten auswählen, welche Option sie anzeigen  möchten, z.  B. im Untermenü Explorer-Leiste des Menüs Ansicht oder durch Klicken auf eine Symbolleistenschaltfläche. Internet Explorer bietet mehrere Standardmäßige Explorer-Balken, einschließlich Favoriten und Suche.
 
-Eine der Möglichkeiten, wie Sie Internet Explorer anpassen können, besteht darin, eine benutzerdefinierte Explorer-Leiste hinzuzufügen. Wenn Sie implementiert und registriert ist, wird Sie dem Untermenü der **Explorer-Leiste** im Menü **Ansicht** hinzugefügt. Wenn Sie vom Benutzer ausgewählt wird, kann der Anzeigebereich der Explorer-Leiste verwendet werden, um Informationen anzuzeigen und die Benutzereingaben auf die gleiche Weise wie ein normales Fenster zu übernehmen.
+Eine der Möglichkeiten zum Anpassen von Internet Explorer ist das Hinzufügen einer benutzerdefinierten Explorer-Leiste. Wenn sie implementiert und registriert ist, wird sie dem **Untermenü Explorer-Leiste** des Menüs **Ansicht** hinzugefügt. Wenn diese Option vom Benutzer ausgewählt wird, kann der Anzeigebereich der Explorer-Leiste verwendet werden, um Informationen anzuzeigen und Benutzereingaben auf die gleiche Weise wie ein normales Fenster zu übernehmen.
 
-![Screenshot der Explorer-leisten](images/expl2.jpg)
+![Screenshot der Explorer-Balken](images/expl2.jpg)
 
-Um eine benutzerdefinierte Explorer-Leiste zu erstellen, müssen Sie ein *Band Objekt* implementieren und registrieren. Band Objekte wurden mit Version 4,71 der Shell eingeführt und bieten ähnliche Funktionen wie normale Fenster. Da es sich jedoch um Component Object Model (com)-Objekte handelt, die entweder in Internet Explorer oder in der Shell enthalten sind, werden Sie etwas anders implementiert. Einfache Band Objekte wurden verwendet, um die Beispiel-Explorer-leisten zu erstellen, die in der ersten Grafik angezeigt werden. Die Implementierung des Beispiels für die vertikale Explorer-Leiste wird in einem späteren Abschnitt ausführlich erläutert.
+Um eine benutzerdefinierte Explorer-Leiste zu erstellen, müssen Sie ein *Bandobjekt implementieren und registrieren.* Bandobjekte wurden mit Version 4.71 der Shell eingeführt und bieten Ähnliches wie normale Fenster. Da sie jedoch Component Object Model (COM) sind und entweder in Internet Explorer shell enthalten sind, werden sie etwas anders implementiert. Einfache Bandobjekte wurden verwendet, um die in der ersten Grafik angezeigten Explorer-Beispielleisten zu erstellen. Die Implementierung des vertikalen Explorer-Balkenbeispiels wird in einem späteren Abschnitt ausführlich erläutert.
 
-## <a name="tool-bands"></a>Tool Bänder
+## <a name="tool-bands"></a>Toolbänder
 
-Ein *Toolband* ist ein Band Objekt, das mit Microsoft Internet Explorer 5 eingeführt wurde, um die Windows Radio Toolbar-Funktion zu unterstützen. Die Internet Explorer-Symbolleiste ist tatsächlich ein Grund leisten-Steuerelement, das mehrere Toolbar- [Steuer](../controls/rebar-controls.md) [Elemente](../controls/toolbar-control-reference.md)enthält. Wenn Sie ein Toolband erstellen, können Sie ein Band zu diesem Grund leisten-Steuerelement hinzufügen. Ähnlich wie Explorer-Balken ist ein Toolband jedoch ein allgemeines Fenster.
+Ein *Toolband* ist ein Bandobjekt, das mit Microsoft Internet Explorer 5 eingeführt wurde, um die Windows-Symbolleistenfunktion zu unterstützen. Die Internet Explorer symbolleiste ist tatsächlich ein Steuerelement für die [Symbolleiste,](../controls/rebar-controls.md) das mehrere Symbolleistensteuerelemente [enthält.](../controls/toolbar-control-reference.md) Indem Sie ein Toolband erstellen, können Sie diesem Rebar-Steuerelement ein Band hinzufügen. Wie Explorer-Balken ist ein Toolband jedoch ein allgemeines Fenster.
 
-![Screenshot der Tool Bänder](images/toolband1.jpg)
+![Screenshot von Toolbändern](images/toolband1.jpg)
 
-Benutzer zeigen eine Symbolleiste an, indem Sie Sie im Untermenü "Symbolleisten" des Menüs **Ansicht** oder im Kontextmenü auswählen, das angezeigt wird, indem Sie mit der rechten Maustaste auf den Symbol **leisten** Bereich klicken.
+Benutzer zeigen eine Symbolleiste an, indem sie sie  im Untermenü Symbolleisten des **Menüs** Ansicht oder im Kontextmenü auswählen, das durch Klicken mit der rechten Maustaste auf den Symbolleistenbereich angezeigt wird.
 
-## <a name="desk-bands"></a>Desk-Bänder
+## <a name="desk-bands"></a>DeskBands
 
-Mithilfe von Band Objekten können auch Desk- *Bänder* erstellt werden. Während die grundlegende Implementierung von Explorer-leisten vergleichbar ist, sind die Desk-Bänder nicht mit Internet Explorer verknüpft. Ein Desk-Band ist im Grunde genommen eine Möglichkeit, ein Andock bares Fenster auf dem Desktop zu erstellen. Der Benutzer wählt ihn aus, indem er mit der rechten Maustaste auf die Taskleiste klickt und ihn aus dem Untermenü **Symbolleisten** auswählt.
+Bandobjekte können auch zum Erstellen von *Deskbändern verwendet werden.* Die grundlegende Implementierung ähnelt Explorer-Balken, aber Desk-Bänder stehen nicht mit Internet Explorer. Eine Deskband ist im Grunde eine Möglichkeit, ein andockbares Fenster auf dem Desktop zu erstellen. Der Benutzer wählt sie aus, indem er mit der rechten Maustaste auf die Taskleiste klickt und sie im Untermenü **Symbolleisten** auswählt.
 
-![Screenshot, der ein Beispiel für einen Desk-Band anzeigt.](images/desk2.png)
+![Screenshot, der eine Beispieldesk desk-Band zeigt.](images/desk2.png)
 
-Anfänglich werden die Desk-Bänder auf der Taskleiste angedockt.
+Anfangs werden Die Deskbänder an die Taskleiste angedockt.
 
-![Screenshot, in dem die in der Taskleiste angedockten Desk-Bänder angezeigt werden.](images/desk1.jpg)
+![Screenshot: An der Taskleiste angedockte Deskbänder](images/desk1.jpg)
 
-Der Benutzer kann dann das Desk-Band auf den Desktop ziehen und als normales Fenster angezeigt werden.
+Der Benutzer kann dann das Deskband auf den Desktop ziehen und wird als normales Fenster angezeigt.
 
-![Screenshot der Desk-Bänder](images/desk3.png)
+![Screenshot von Deskbändern](images/desk3.png)
 
-## <a name="implementing-band-objects"></a>Implementieren von Band Objekten
+## <a name="implementing-band-objects"></a>Implementieren von Bandobjekten
 
-Die folgenden Themen werden erörtert.
+Die folgenden Themen werden erläutert.
 
--   [Grundlagen zu Band Objekten](#band-object-basics)
--   [Band Registrierung](#band-registration)
+-   [Grundlagen zu Bandobjekten](#band-object-basics)
+-   [Bandregistrierung](#band-registration)
 -   [Ein einfaches Beispiel für eine benutzerdefinierte Explorer-Leiste](#a-simple-example-of-a-custom-explorer-bar)
 
-### <a name="band-object-basics"></a>Grundlagen zu Band Objekten
+### <a name="band-object-basics"></a>Grundlagen zu Bandobjekten
 
-Obwohl Sie ähnlich wie normale Fenster verwendet werden können, handelt es sich bei Band Objekten um COM-Objekte, die in einem Container vorhanden sind. Explorer-Balken sind in Internet Explorer enthalten, und Desk-Bänder sind in der Shell enthalten. Obwohl Sie unterschiedliche Funktionen bedienen, ist Ihre grundlegende Implementierung sehr ähnlich. Der Hauptunterschied besteht darin, wie das Band Objekt registriert wird, das wiederum den Objekttyp und den zugehörigen Container steuert. In diesem Abschnitt werden die Aspekte der Implementierung erläutert, die allen Band Objekten gemeinsam sind. Weitere Implementierungsdetails finden Sie [in einem einfachen Beispiel für eine benutzerdefinierte Explorer-Leiste](#a-simple-example-of-a-custom-explorer-bar) .
+Obwohl sie ähnlich wie normale Fenster verwendet werden können, sind Bandobjekte COM-Objekte, die in einem Container vorhanden sind. Explorer-Balken sind in Internet Explorer, und Deskbänder sind in der Shell enthalten. Obwohl sie verschiedene Funktionen erfüllen, ist ihre grundlegende Implementierung sehr ähnlich. Der Hauptunterschied besteht in der Registrierung des Bandobjekts, das wiederum den Typ des Objekts und dessen Container steuert. In diesem Abschnitt werden die Aspekte der Implementierung erläutert, die allen Bandobjekten gemeinsam sind. Weitere [Implementierungsdetails finden Sie unter](#a-simple-example-of-a-custom-explorer-bar) Ein einfaches Beispiel für eine benutzerdefinierte Explorer-Leiste.
 
-Zusätzlich zu [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) und [**IClassFactory**](/windows/win32/api/unknwn/nn-unknwn-iclassfactory)müssen alle Band Objekte die folgenden Schnittstellen implementieren.
+Zusätzlich zu [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) und [**IClassFactory**](/windows/win32/api/unknwn/nn-unknwn-iclassfactory)müssen alle Bandobjekte die folgenden Schnittstellen implementieren.
 
--   [**Ideskband**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)
--   [**IObjectWithSite**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)
--   [**IPersistStream**](/windows/win32/api/objidl/nn-objidl-ipersiststream)
+-   [**IDeskBand**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)
+-   [**Iobjectwithsite**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)
+-   [**Ipersiststream**](/windows/win32/api/objidl/nn-objidl-ipersiststream)
 
-Zusätzlich zum Registrieren Ihres Klassen Bezeichners (CLSID) müssen die Explorer-Leiste und die Desk-Band-Objekte auch für die entsprechende Komponenten Kategorie registriert werden. Beim Registrieren der Komponenten Kategorie wird der Objekttyp und der zugehörige Container bestimmt. Toolbänder verwenden eine andere Registrierungs Prozedur und verfügen nicht über einen Kategoriebezeichner (CATID). Die CATIDs für die drei-Band-Objekte, die Sie benötigen, sind:
+Zusätzlich zum Registrieren des Klassenbezeichners (CLSID) müssen die Explorer-Balken- und Deskbandobjekte auch für die entsprechende Komponentenkategorie registriert werden. Das Registrieren der Komponentenkategorie bestimmt den Objekttyp und dessen Container. Toolgruppen verwenden ein anderes Registrierungsverfahren und verfügen nicht über einen Kategoriebezeichner (CATID). Die CATIDs für die drei Bandobjekte, die sie erfordern, sind:
 
 
 
 | Bandtyp               | Komponentenkategorie |
 |-------------------------|--------------------|
-| Vertikale Explorer-Leiste   | CATID- \_ Infoband    |
-| Horizontale Explorer-Leiste | CATID- \_ Kommas    |
-| Desk-Band               | CATID \_ Desktop    |
+| Vertikale Explorer-Leiste   | CATID \_ InfoBand    |
+| Horizontale Explorer-Leiste | CATID \_ CommBand    |
+| Desk Band               | CATID \_ DeskBand    |
 
 
 
  
 
-Weitere Informationen zum Registrieren von Band Objekten finden Sie unter [Band Registrierung](#band-registration) .
+Weitere [Informationen zum Registrieren von](#band-registration) Bandobjekten finden Sie unter Bandregistrierung.
 
-Wenn das Band Objekt Benutzereingaben akzeptieren soll, muss auch [**iinputobject**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject)implementiert werden. Zum Hinzufügen von Elementen zum Kontextmenü für Explorer-oder-Desk-Bänder muss das Band Objekt [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu)exportieren. Tool Bänder unterstützen keine Kontextmenüs.
+Wenn das Bandobjekt Benutzereingaben akzeptieren soll, muss es auch [**IInputObject implementieren.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject) Zum Hinzufügen von Elementen zum Kontextmenü für Explorer-Balken- oder -Deskbänder muss das Bandobjekt [**IContextMenu exportieren.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) Toolbänder unterstützen keine Kontextmenüs.
 
-Da ein untergeordnetes Fenster von Band Objekten implementiert wird, müssen Sie auch eine Fenster Prozedur zum Verarbeiten von Windows-Messaging implementieren.
+Da Bandobjekte ein untergeordnetes Fenster implementieren, müssen sie auch eine Fensterprozedur implementieren, um Windows verarbeiten.
 
-Band Objekte können über die [**IOleCommandTarget**](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) -Schnittstelle des Containers Befehle an ihren Container senden. Um den Schnittstellen Zeiger zu erhalten, rufen Sie die [**iinputobjectsite:: QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode des Containers auf, und Fragen Sie IID \_ IOleCommandTarget. Anschließend senden Sie mit [**IOleCommandTarget:: exec**](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)Befehle an den Container. Die Befehlsgruppe ist "cgid \_ Deskband". Wenn die [**ideskband:: GetBandInfo**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) -Methode eines Band Objekts aufgerufen wird, verwendet der Container den *dwbandid* -Parameter, um dem Band Objekt einen Bezeichner zuzuweisen, der für drei der Befehle verwendet wird. Vier **IOleCommandTarget:: exec** -Befehls-IDs werden unterstützt.
+Bandobjekte können Befehle über die [**IOleCommandTarget-Schnittstelle**](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) des Containers an ihren Container senden. Um den Schnittstellenzeiger zu erhalten, rufen Sie die [**IInputObjectSite::QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) des Containers auf, und fragen Sie nach IID \_ IOleCommandTarget. Anschließend senden Sie Befehle mit [**IOleCommandTarget::Exec**](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)an den Container. Die Befehlsgruppe ist CGID \_ DeskBand. Wenn die [**IDeskBand::GetBandInfo-Methode**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) eines Bandobjekts aufgerufen wird, verwendet der Container den *dwBandID-Parameter,* um dem Bandobjekt einen Bezeichner zu zuweisen, der für drei der Befehle verwendet wird. Vier **IOleCommandTarget::Exec-Befehls-IDs** werden unterstützt.
 
--   DBID \_ bandinfochanged
+-   DBID \_ BANDINFOCHANGED
 
-    Die Informationen des Bands wurden geändert. Legen Sie den *pvaIn* -Parameter auf den Bezeichner des Bands fest, der beim letzten Aufruf von [**ideskband:: GetBandInfo**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)empfangen wurde. Der Container Ruft die **ideskband:: GetBandInfo** -Methode des Band Objekts auf, um die aktualisierten Informationen anzufordern.
+    Die Bandinformationen haben sich geändert. Legen Sie *den pvaIn-Parameter* auf den Bandbezeichner fest, der beim letzten Aufruf von [**IDeskBand::GetBandInfo empfangen wurde.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) Der Container aufruft die **IDeskBand::GetBandInfo-Methode** des Bandobjekts, um die aktualisierten Informationen an fordern.
 
--   DBID \_ maximizeband
+-   DBID \_ MAXIMIZEBAND
 
-    Maximieren Sie das Band. Legen Sie den *pvaIn* -Parameter auf den Bezeichner des Bands fest, der beim letzten Aufruf von [**ideskband:: GetBandInfo**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)empfangen wurde.
+    Maximieren Sie das Band. Legen Sie *den pvaIn-Parameter* auf den Bandbezeichner fest, der beim letzten Aufruf von [**IDeskBand::GetBandInfo empfangen wurde.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)
 
--   DBID \_ showonly
+-   DBID \_ SHOWONLY
 
-    Schalten Sie andere Bänder im Container ein oder aus. Legen Sie den *pvaIn* -Parameter auf den unbekannten VT- \_ Typ mit einem der folgenden Werte fest:
+    Aktivieren oder deaktivieren Sie andere Bänder im Container. Legen Sie *den pvaIn-Parameter* mit einem der folgenden Werte auf den Typ VT \_ UNKNOWN fest:
 
     
 
-    | Wert | BESCHREIBUNG                                                                                                 |
+    | Wert | Beschreibung                                                                                                 |
     |-------|-------------------------------------------------------------------------------------------------------------|
-    | Kro  | Ein Zeiger auf die [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle des Band Objekts. Alle anderen Desk-Bänder werden ausgeblendet. |
-    | 0     | Alle Desk-Bänder ausblenden.                                                                                        |
-    | 1     | Alle Desk-Bänder anzeigen.                                                                                        |
+    | Punk  | Ein Zeiger auf die [**IUnknown-Schnittstelle des Bandobjekts.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) Alle anderen Deskbänder werden ausgeblendet. |
+    | 0     | Blendet alle Deskbänder aus.                                                                                        |
+    | 1     | Alle Deskbands anzeigen.                                                                                        |
 
     
 
      
 
--   DBID- \_ pushchevron
+-   DBID \_ PUSHCHEVRON
 
-    [Version 5](versions.md). Zeigen Sie ein Chevron-Menü an. Der Container sendet eine [**RB- \_ pushchevron**](../controls/rb-pushchevron.md) -Nachricht, und das Band Objekt empfängt eine [RBN \_ chevronpush](../controls/rbn-chevronpushed.md) -Benachrichtigung, die ihn auffordert, das Chevron-Menü anzuzeigen. Legen Sie den *nCmdexecopt* -Parameter der [**IOleCommandTarget:: exec**](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) -Methode auf den Band Bezeichner fest, der beim letzten Aufruf von [**ideskband:: GetBandInfo**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)empfangen wurde. Legen Sie den *pvaIn* -Parameter der **IOleCommandTarget:: exec** -Methode auf den VT \_ I4-Typ mit einem von der Anwendung definierten Wert fest. Es wird als Wert des *lappvalue* der RBN-chevronpushbenachrichtigung an das Band Objekt übergeben \_ .
+    [Version 5.](versions.md) Anzeigen eines Chevronmenüs. Der Container sendet eine [**RB \_ PUSHCHEVRON-Nachricht,**](../controls/rb-pushchevron.md) und das Bandobjekt empfängt eine [RBN-CHEVRONPUSHED-Benachrichtigung, \_](../controls/rbn-chevronpushed.md) die ihn zur Anzeige des Chevronmenüs aufgefordert. Legen Sie den *Parameter nCmdExecOpt* der [**IOleCommandTarget::Exec-Methode**](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) auf den Bandbezeichner fest, der beim letzten Aufruf von [**IDeskBand::GetBandInfo empfangen wurde.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) Legen Sie den *pvaIn-Parameter* der **IOleCommandTarget::Exec-Methode** auf den Typ VT \_ I4 mit einem anwendungsdefinierten Wert fest. Es wird als *lAppValue-Wert* der RBN-CHEVRONPUSHED-Benachrichtigung an das Bandobjekt \_ übergeben.
 
-### <a name="band-registration"></a>Band Registrierung
+### <a name="band-registration"></a>Bandregistrierung
 
-Ein Band Objekt muss als OLE-Prozess interner Server registriert werden, der das Apartment Threading unterstützt. Der Standardwert für den Server ist eine Menü Text Zeichenfolge. Bei Explorer-leisten wird diese im Untermenü der **Explorer-Leiste** im Internet Explorer- **Ansichts** Menü angezeigt. Für Tool Bänder wird es im Menü " **Symbolleisten** " im Menü " **Ansicht** " von Internet Explorer angezeigt. Für Desk-Bänder wird Sie im Untermenü **Symbolleisten** des Kontextmenüs der Taskleiste angezeigt. Wie bei Menü Ressourcen führt das Platzieren eines kaufmännischen und-Zeichens (&) vor einem Buchstaben zu unterstrichen und ermöglicht Tastenkombinationen. Beispielsweise ist die Menü Zeichenfolge für die vertikale Explorer-Leiste, die in der ersten Grafik angezeigt wird, "Sample &Vertical Explorer Bar".
+Ein Bandobjekt muss als OLE-Prozessserver registriert werden, der Apartmentthreading unterstützt. Der Standardwert für den Server ist eine Menütextzeichenfolge. Für Explorer-Balken wird sie im Untermenü **Explorer-Leiste** des **menüs** ansicht Internet Explorer angezeigt. Für Toolbänder wird sie im Untermenü **Symbolleisten** des  Menüs ansicht Internet Explorer angezeigt. Für Desk-Bänder wird sie im Untermenü **Symbolleisten** des Kontextmenüs der Taskleiste angezeigt. Wie bei Menüressourcen führt das Platzieren eines ampersand (&) vor einem Buchstaben dazu, dass es unterstrichen wird und Tastenkombinationen aktiviert wird. Die Menüzeichenfolge für die vertikale Explorer-Leiste, die in der ersten Grafik angezeigt wird, ist beispielsweise "Sample &Vertical Explorer Bar".
 
-Zunächst ruft Internet Explorer mithilfe der Komponenten Kategorien eine Enumeration der registrierten Explorer-Balken Objekte aus der Registrierung ab. Um die Leistung zu verbessern, wird diese Enumeration zwischengespeichert, sodass anschließend die hinzugefügten Explorer-leisten übersehen werden. Wenn Sie erzwingen möchten, dass Windows Internet Explorer den Cache neu erstellt und eine neue Explorer-Leiste erkennt, löschen Sie die folgenden Registrierungsschlüssel während der Registrierung der neuen Explorer-Leiste:
+Anfänglich ruft Internet Explorer mithilfe der Komponentenkategorien eine Enumeration der registrierten Explorer-Bar-Objekte aus der Registrierung ab. Um die Leistung zu erhöhen, wird diese Enumeration zwischengespeichert, sodass anschließend hinzugefügte Explorer-Balken übersehen werden. Um zu erzwingen, dass Windows Internet Explorer den Cache neu erstellen und eine neue Explorer-Leiste erkennen, löschen Sie die folgenden Registrierungsschlüssel während der Registrierung der neuen Explorer-Leiste:
 
-**HKEY \_ Aktuelle \_ Benutzer** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Explorer** \\ **verwerfbare** \\ **postsetup**- \\ **Komponenten Kategorien** \\ **{00021493-0000-0000-C000-000000000046}-Aufzählung** \\ 
+**HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Explorer** \\ **Discardable** \\ **PostSetup** \\ **Component Categories** \\ **{00021493-0000-0000-C000-0000000000046}** \\ **Enum**
 
-**HKEY \_ Aktuelle \_ Benutzer** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Explorer** \\ **verwerfbare** \\ **postsetup**- \\ **Komponenten Kategorien** \\ **{00021494-0000-0000-C000-000000000046}-Aufzählung** \\ 
+**HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Explorer** \\ **Discardable** \\ **PostSetup** \\ **Component Categories** \\ **{00021494-0000-0000-C000-0000000000046}** \\ **Enum**
 
 > [!Note]  
-> Da für jeden Benutzer ein Explorer-leisten Cache erstellt wird, muss Ihre Setup Anwendung möglicherweise alle Benutzer Registrierungs Strukturen auflisten oder einen Stub pro Benutzer hinzufügen, der ausgeführt wird, wenn sich der Benutzer zum ersten Mal anmeldet.
+> Da für jeden Benutzer ein Explorer-Balkencache erstellt wird, muss Ihre Setupanwendung möglicherweise alle Benutzerregistrierungsstrukturen auflisten oder einen pro Benutzer ausgeführten Stub hinzufügen, wenn sich der Benutzer zum ersten Mal anmeldet.
 
  
 
-Im Allgemeinen wird der grundlegende Registrierungs Eintrag für ein Band Objekt folgendermaßen angezeigt.
+Im Allgemeinen wird der grundlegende Registrierungseintrag für ein Bandobjekt wie folgt angezeigt.
 
 ```
 HKEY_CLASSES_ROOT
@@ -147,7 +147,7 @@ HKEY_CLASSES_ROOT
             ThreadingModel = Apartment
 ```
 
-Bei Toolbands muss auch die CLSID Ihres Objekts bei Internet Explorer registriert sein. Weisen Sie zu diesem Zweck einen Wert unter **HKEY \_ local \_ Machine** \\ **Software** \\ **Microsoft** \\ **Internet Explorer** \\ **Toolbar** mit dem Namen der CLSID-GUID des toolbandobjekts zu, wie hier gezeigt. Der Datenwert wird ignoriert, sodass der Werttyp unwichtig ist.
+Toolbänder müssen auch die CLSID ihres Objekts bei Internet Explorer registriert haben. Weisen Sie hierzu einen Wert unter **HKEY \_ LOCAL \_ MACHINE** \\ **Software** \\ **Microsoft** \\ **Internet Explorer** \\ **Toolbar** mit dem Namen mit der CLSID-GUID des Toolbandobjekts zu, wie hier gezeigt. Sein Datenwert wird ignoriert, sodass der Werttyp unwichtig ist.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -158,7 +158,7 @@ HKEY_LOCAL_MACHINE
                {Your Band Object's CLSID GUID}
 ```
 
-Es gibt mehrere optionale Werte, die auch der Registrierung hinzugefügt werden können. Der folgende Wert ist z. b. erforderlich, wenn Sie die Explorer-Leiste zum Anzeigen von HTML verwenden möchten. der angezeigte Wert ist kein Beispiel, sondern der tatsächliche Wert, der verwendet werden soll.
+Es gibt mehrere optionale Werte, die auch der Registrierung hinzugefügt werden können. Beispielsweise ist der folgende Wert erforderlich, wenn Sie die Explorer-Leiste zum Anzeigen von HTML verwenden möchten. Der angezeigte Wert ist kein Beispiel, sondern der tatsächliche Wert, der verwendet werden soll.
 
 ```
 HKEY_CLASSES_ROOT
@@ -169,7 +169,7 @@ HKEY_CLASSES_ROOT
                (Default) = {4D5C8C2A-D075-11D0-B416-00C04FB90376}
 ```
 
-Wenn Sie in Verbindung mit dem oben gezeigten Wert verwendet werden, ist auch der folgende optionale Wert erforderlich, wenn Sie die Explorer-Leiste zum Anzeigen von HTML verwenden möchten. Dieser Wert sollte auf den Speicherort der Datei festgelegt werden, die den HTML-Inhalt für die Explorer-Leiste enthält.
+In Verbindung mit dem oben gezeigten Wert ist auch der folgende optionale Wert erforderlich, wenn Sie die Explorer-Leiste zum Anzeigen von HTML verwenden möchten. Dieser Wert sollte auf den Speicherort der Datei festgelegt werden, die den HTML-Inhalt für die Explorer-Leiste enthält.
 
 ```
 HKEY_CLASSES_ROOT
@@ -180,7 +180,7 @@ HKEY_CLASSES_ROOT
                Url
 ```
 
-Ein weiterer Optionaler Wert definiert die Standardbreite oder Höhe der Explorer-Leiste, je nachdem, ob es sich um vertikal bzw. horizontal handelt.
+Ein anderer optionaler Wert definiert die Standardbreite oder -höhe der Explorer-Leiste, je nachdem, ob sie vertikal oder horizontal ist.
 
 ```
 HKEY_CURRENT_USER
@@ -192,9 +192,9 @@ HKEY_CURRENT_USER
                   BarSize
 ```
 
-Der barsize-Wert muss auf die Breite oder Höhe des Balkens festgelegt werden. Der Wert erfordert acht Bytes und wird in der Registrierung als binärer Wert abgelegt. Die ersten vier Bytes geben die Größe im Hexadezimal Format in Pixel an, beginnend ab dem äußersten linken Byte. Die letzten vier Bytes sind reserviert und sollten auf 0 (null) festgelegt werden.
+Der BarSize-Wert sollte auf die Breite oder Höhe des Balkens festgelegt werden. Der Wert erfordert acht Bytes und wird als Binärwert in der Registrierung platziert. Die ersten vier Bytes geben die Größe in Pixel im Hexadezimalformat an, beginnend mit dem ganz links liegenden Byte. Die letzten vier Bytes sind reserviert und sollten auf 0 (null) festgelegt werden.
 
-Beispielsweise werden hier die vollständigen Registrierungseinträge für eine HTML-fähige Explorer-Leiste mit einer Standardbreite von 291 (0x123) Pixel angezeigt.
+Beispielsweise werden hier die vollständigen Registrierungseinträge für eine HTML-fähige Explorer-Leiste mit einer Standardbreite von 291 Pixeln (0x123) angezeigt.
 
 ```
 HKEY_CLASSES_ROOT
@@ -218,60 +218,60 @@ HKEY_CURRENT_USER
                   BarSize = 23 01 00 00 00 00 00 00
 ```
 
-Die Registrierung der CATID eines Band Objekts kann Programm gesteuert behandelt werden. Erstellen Sie ein Komponenten Kategorien-Manager-Objekt (CLSID \_ stdcomponentcategoriesmgr), und fordern Sie einen Zeiger auf seine [**ikatregister**](/windows/win32/api/comcat/nn-comcat-icatregister) -Schnittstelle an. Übergeben Sie die CLSID und die CATID des Band Objekts an [**iskiregister:: registerclassimplcategories**](/windows/win32/api/comcat/nf-comcat-icatregister-registerclassimplcategories).
+Sie können die Registrierung der CATID eines Bandobjekts programmgesteuert verarbeiten. Erstellen Sie ein Komponentenkategorien-Manager-Objekt (CLSID \_ StdComponentCategoriesMgr), und fordern Sie einen Zeiger auf die [**zugehörige ICatRegister-Schnittstelle**](/windows/win32/api/comcat/nn-comcat-icatregister) an. Übergeben Sie die CLSID und CATID des Bandobjekts an [**ICatRegister::RegisterClassImplCategories**](/windows/win32/api/comcat/nf-comcat-icatregister-registerclassimplcategories).
 
 ### <a name="a-simple-example-of-a-custom-explorer-bar"></a>Ein einfaches Beispiel für eine benutzerdefinierte Explorer-Leiste
 
-Dieses Beispiel durchläuft die Implementierung der vertikalen Beispiel-Explorer-Leiste, die in der Einführung gezeigt wird.
+Dieses Beispiel durchläuft die Implementierung der vertikalen Explorer-Leiste, die in der Einführung gezeigt wird.
 
-Das grundlegende Verfahren zum Erstellen einer benutzerdefinierten Explorer-Leiste sieht wie folgt aus.
+Das grundlegende Verfahren zum Erstellen einer benutzerdefinierten Explorer-Leiste lautet wie folgt.
 
-1.  [Implementieren Sie die Funktionen, die von der DLL benötigt werden](#dll-functions).
+1.  [Implementieren Sie die funktionen, die von der DLL benötigt werden.](#dll-functions)
 2.  [Implementieren Sie die erforderlichen COM-Schnittstellen.](#required-interface-implementations)
-3.  [Implementieren Sie alle gewünschten optionalen com-Schnittstellen.](#optional-interface-implementations)
-4.  [Registrieren Sie die CLSID des Objekts und ggf. die Komponenten Kategorie.](#clsid-registration)
-5.  Erstellen Sie ein untergeordnetes Fenster von Internet Explorer, dessen Größenanpassung an den Anzeigebereich der Explorer-Leiste angepasst ist.
+3.  [Implementieren Sie alle gewünschten optionalen COM-Schnittstellen.](#optional-interface-implementations)
+4.  [Registrieren Sie die CLSID des Objekts und bei Bedarf die Komponentenkategorie.](#clsid-registration)
+5.  Erstellen Sie ein untergeordnetes Fenster mit Internet Explorer größe, das an den Anzeigebereich der Explorer-Leiste angepasst ist.
 6.  [Verwenden Sie das untergeordnete Fenster, um Informationen anzuzeigen und mit dem Benutzer zu interagieren.](#the-window-procedure)
 
-Die sehr einfache Implementierung, die im Explorer-leisten Beispiel verwendet wird, kann tatsächlich für den Typ der Explorer-Leiste oder einen Desk-Band verwendet werden, indem Sie Sie einfach für die entsprechende Komponenten Kategorie registrieren. Anspruchsvollere Implementierungen müssen für den Anzeigebereich und Container jedes Objekt Typs angepasst werden. Allerdings kann ein Großteil dieser Anpassung erreicht werden, indem der Beispielcode übernommen und erweitert wird, indem vertraute Windows-Programmiertechniken auf das untergeordnete Fenster angewendet werden. Beispielsweise können Sie Steuerelemente für Benutzerinteraktion oder Grafiken hinzufügen, um eine umfassendere Anzeige zu erhalten.
+Die sehr einfache Implementierung, die im Explorer-Balkenbeispiel verwendet wird, kann tatsächlich für einen Der-Explorer-Bar-Typ oder ein Desk-Band verwendet werden, indem sie einfach für die entsprechende Komponentenkategorie registriert wird. Komplexere Implementierungen müssen für die Anzeigeregion und den Container jedes Objekttyps angepasst werden. Ein Großteil dieser Anpassung kann jedoch erreicht werden, indem der Beispielcode verwendet und erweitert wird, indem vertraute Windows Programmiertechniken auf das untergeordnete Fenster angewendet werden. Beispielsweise können Sie Steuerelemente für die Benutzerinteraktion oder Grafiken für eine umfangreichere Anzeige hinzufügen.
 
 ### <a name="dll-functions"></a>DLL-Funktionen
 
-Alle drei Objekte werden in einer einzelnen DLL verpackt, die die folgenden Funktionen verfügbar macht.
+Alle drei Objekte sind in einer einzelnen DLL gepackt, die die folgenden Funktionen verfügbar macht.
 
 -   [**DllMain**](../dlls/dllmain.md)
 -   [**DllCanUnloadNow**](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)
--   [**DllGetClassObject**](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject)
--   [**DllRegisterServer**](/windows/win32/api/olectl/nf-olectl-dllregisterserver)
+-   [**Dllgetclassobject**](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject)
+-   [**Dllregisterserver**](/windows/win32/api/olectl/nf-olectl-dllregisterserver)
 
-Die ersten drei Funktionen sind Standard Implementierungen und werden hier nicht erläutert. Die Klassenfactoryimplementierung ist auch Standard.
+Die ersten drei Funktionen sind Standardimplementierungen und werden hier nicht erläutert. Die Class Factory-Implementierung ist ebenfalls standard.
 
-### <a name="required-interface-implementations"></a>Erforderliche Schnittstellen Implementierungen
+### <a name="required-interface-implementations"></a>Erforderliche Schnittstellenimplementierungen
 
-Das Beispiel für die vertikale Explorer-Leiste implementiert die vier erforderlichen Schnittstellen: [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown), [**IObjectWithSite**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite), [**IPersistStream**](/windows/win32/api/objidl/nn-objidl-ipersiststream)und [**ideskband**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) als Teil der cexplorerbar-Klasse. Die Implementierungen Konstruktor, Dekonstruktor und **IUnknown** sind unkompliziert und werden hier nicht erläutert. Sehen Sie sich den Beispielcode an, um ausführliche Informationen zu erhalten.
+Das vertikale Explorer-Balkenbeispiel implementiert die vier erforderlichen Schnittstellen: [**IUnknown,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) [**IObjectWithSite,**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) [**IPersistStream**](/windows/win32/api/objidl/nn-objidl-ipersiststream)und [**IDeskBand**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) als Teil der CExplorerBar-Klasse. Die Konstruktor-, Destruktor- und **IUnknown-Implementierungen** sind unkompliziert und werden hier nicht erläutert. Sehen Sie sich den Beispielcode an, um ausführliche Informationen zu erhalten.
 
 Die folgenden Schnittstellen werden ausführlich erläutert.
 
--   [IObjectWithSite](#iobjectwithsite)
--   [IPersistStream](#ipersiststream)
--   [Ideskband](#ideskband)
+-   [Iobjectwithsite](#iobjectwithsite)
+-   [Ipersiststream](#ipersiststream)
+-   [IDeskBand](#ideskband)
 
-### <a name="iobjectwithsite"></a>IObjectWithSite
+### <a name="iobjectwithsite"></a>Iobjectwithsite
 
-Wenn der Benutzer eine Explorer-Leiste auswählt, ruft der Container die [**IObjectWithSite:: SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) -Methode des entsprechenden Band Objekts auf. Der Parameter " *pUnkSite* " wird auf den [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Zeiger der Site festgelegt.
+Wenn der Benutzer eine Explorer-Leiste auswählt, ruft der Container die [**IObjectWithSite::SetSite-Methode**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) des entsprechenden Bandobjekts auf. Der *Parameter "libSite"* wird auf den [**IUnknown-Zeiger**](/windows/win32/api/unknwn/nn-unknwn-iunknown) der Website festgelegt.
 
-Im Allgemeinen sollte eine [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) -Implementierung die folgenden Schritte ausführen:
+Im Allgemeinen sollte eine [**SetSite-Implementierung**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) die folgenden Schritte ausführen:
 
-1.  Geben Sie einen beliebigen Website Zeiger frei, der derzeit aufbewahrt wird.
-2.  Wenn der an [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) über gegebene Zeiger auf **null** festgelegt ist, wird das Band entfernt. **SetSite** kann S OK zurückgeben \_ .
-3.  Wenn der an [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) über gegebene Zeiger nicht **null** ist, wird eine neue Site festgelegt. **SetSite** sollte folgende Aktionen ausführen:
-    1.  Ruft [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf der Site für die [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) -Schnittstelle auf.
-    2.  Rufen Sie [**IOleWindow:: GetWindow**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) auf, um das Handle des übergeordneten Fensters zu erhalten. Speichern Sie das Handle für die spätere Verwendung. Release [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) , wenn es nicht mehr benötigt wird.
-    3.  Erstellen Sie das Fenster des Band Objekts als untergeordnetes Element des Fensters, das Sie im vorherigen Schritt abgerufen haben. Erstellen Sie Sie nicht als sichtbares Fenster.
-    4.  Wenn das Band Objekt [**iinputobject**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject)implementiert, nennen Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für die [**iinputobjectsite**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) -Schnittstelle auf der Website. Speichern Sie den Zeiger auf diese Schnittstelle, um Sie später zu verwenden.
-    5.  Wenn alle Schritte erfolgreich sind, geben Sie S \_ OK zurück. Andernfalls wird der OLE-definierte Fehlercode zurückgegeben, der den Fehler angibt.
+1.  Geben Sie alle Sitezeiger frei, die derzeit gehalten werden.
+2.  Wenn der an [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) übergebene Zeiger auf **NULL** festgelegt ist, wird das Band entfernt. **SetSite** kann S \_ OK zurückgeben.
+3.  Wenn der an [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) übergebene Zeiger ungleich **NULL** ist, wird eine neue Website festgelegt. **SetSite** sollte folgende Schritte ausführen:
+    1.  Rufen Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf der Website für die [**IOleWindow-Schnittstelle**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) auf.
+    2.  Rufen Sie [**IOleWindow::GetWindow**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) auf, um das Handle des übergeordneten Fensters abzurufen. Speichern Sie das Handle zur späteren Verwendung. Geben Sie [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) frei, wenn es nicht mehr benötigt wird.
+    3.  Erstellen Sie das Fenster des Bandobjekts als untergeordnetes Element des Im vorherigen Schritt abgerufenen Fensters. Erstellen Sie es nicht als sichtbares Fenster.
+    4.  Wenn das Bandobjekt [**IInputObject**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject)implementiert, rufen Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf der Website für seine [**IInputObjectSite-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) auf. Store den Zeiger auf diese Schnittstelle zur späteren Verwendung.
+    5.  Wenn alle Schritte erfolgreich sind, geben Sie S \_ OK zurück. Falls nicht, geben Sie den OLE-definierten Fehlercode zurück, der angibt, was fehlgeschlagen ist.
 
-Das Beispiel für eine Explorer-Leiste implementiert [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) auf folgende Weise. Im folgenden Code ist " *m \_ psite* " eine private Member-Variable, die den [**iinputobjectsite**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) -Zeiger enthält und *m \_ hwndParent* das Handle des übergeordneten Fensters enthält. In diesem Beispiel wird auch die Fenster Erstellung behandelt. Wenn das Fenster nicht vorhanden ist, erstellt diese Methode das Fenster der Explorer-Leiste als untergeordnetes Element des übergeordneten Fensters, das von **SetSite** abgerufen wird. Das Handle des untergeordneten Fensters wird in *m \_ HWND* gespeichert.
+Im Beispiel der Explorer-Leiste wird [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) wie folgt implementiert. Im folgenden Code ist *m \_ pSite* eine private Membervariable, die den [**IInputObjectSite-Zeiger**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) und *m \_ hwndParent* das Handle des übergeordneten Fensters enthält. In diesem Beispiel wird auch die Fenstererstellung behandelt. Wenn das Fenster nicht vorhanden ist, erstellt diese Methode das Fenster der Explorer-Leiste als entsprechend dimensioniertes untergeordnetes Element des übergeordneten Fensters, das von **SetSite** abgerufen wird. Das Handle des untergeordneten Fensters wird in *m \_ hwnd* gespeichert.
 
 
 ```C++
@@ -336,7 +336,7 @@ STDMETHODIMP CDeskBand::SetSite(IUnknown *pUnkSite)
 
 
 
-Die [**GetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) -Implementierung des Beispiels umschließt einfach einen Aufrufen der [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode der Site und verwendet dabei den von [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)gespeicherten Website Zeiger.
+Die [**GetSite-Implementierung**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) des Beispiels umschließt einfach einen Aufruf der [**QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) der Website mithilfe des von [**SetSite**](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)gespeicherten Standortzeigers.
 
 
 ```C++
@@ -359,31 +359,31 @@ STDMETHODIMP CDeskBand::GetSite(REFIID riid, void **ppv)
 
 
 
-### <a name="ipersiststream"></a>IPersistStream
+### <a name="ipersiststream"></a>Ipersiststream
 
-Internet Explorer Ruft die [**IPersistStream**](/windows/win32/api/objidl/nn-objidl-ipersiststream) -Schnittstelle der Explorer-Leiste auf, damit die Explorer-Leiste persistente Daten laden oder speichern kann. Wenn keine persistenten Daten vorhanden sind, müssen die Methoden weiterhin einen Erfolgs Code zurückgeben. Die **IPersistStream** -Schnittstelle erbt von [**ipersistent**](/windows/win32/api/objidl/nn-objidl-ipersist), sodass fünf Methoden implementiert werden müssen.
+Internet Explorer ruft die [**IPersistStream-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ipersiststream) der Explorer-Leiste auf, damit die Explorer-Leiste persistente Daten laden oder speichern kann. Wenn keine persistenten Daten vorhanden sind, müssen die Methoden trotzdem einen Erfolgscode zurückgeben. Die **IPersistStream-Schnittstelle** erbt von [**IPersist,**](/windows/win32/api/objidl/nn-objidl-ipersist)sodass fünf Methoden implementiert werden müssen.
 
--   [**Ipersistent:: GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid)
--   [**IPersistStream:: IsDirty**](/windows/win32/api/objidl/nf-objidl-ipersiststream-isdirty)
--   [**IPersistStream:: Load**](/windows/win32/api/objidl/nf-objidl-ipersiststream-load)
--   [**IPersistStream:: Save**](/windows/win32/api/objidl/nf-objidl-ipersiststream-save)
--   [**IPersistStream:: GetSizeMax**](/windows/win32/api/objidl/nf-objidl-ipersiststream-getsizemax)
+-   [**IPersist::GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid)
+-   [**IPersistStream::IsDirty**](/windows/win32/api/objidl/nf-objidl-ipersiststream-isdirty)
+-   [**IPersistStream::Load**](/windows/win32/api/objidl/nf-objidl-ipersiststream-load)
+-   [**IPersistStream::Save**](/windows/win32/api/objidl/nf-objidl-ipersiststream-save)
+-   [**IPersistStream::GetSizeMax**](/windows/win32/api/objidl/nf-objidl-ipersiststream-getsizemax)
 
-Im Beispiel für eine Explorer-Leiste werden keine persistenten Daten verwendet, und es ist nur eine minimale Implementierung von [**IPersistStream**](/windows/win32/api/objidl/nn-objidl-ipersiststream)vorhanden. [**Ipersistent:: GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) gibt die CLSID des Objekts (CLSID \_ sampleexplor\) zurück, und der Rest gibt entweder s \_ OK, s \_ false oder E \_ notimpl zurück.
+Das Explorer-Balkenbeispiel verwendet keine persistenten Daten und verfügt nur über eine minimale Implementierung von [**IPersistStream**](/windows/win32/api/objidl/nn-objidl-ipersiststream). [**IPersist::GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) gibt die CLSID (CLSID \_ SampleExplorerBar) des Objekts zurück, und der Rest gibt entweder S \_ OK, S \_ FALSE oder E \_ NOTIMPL zurück.
 
-### <a name="ideskband"></a>Ideskband
+### <a name="ideskband"></a>IDeskBand
 
-Die [**ideskband**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) -Schnittstelle ist spezifisch für Band Objekte. Zusätzlich zu seiner einzigen Methode erbt sie von [**idockingwindow**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow), das wiederum von [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow)erbt.
+Die [**IDeskBand-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband) ist spezifisch für Bandobjekte. Zusätzlich zu ihrer einzigen Methode erbt sie von [**IDockingWindow**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow), das wiederum von [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow)erbt.
 
-Es gibt zwei [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) -Methoden: [**GetWindow**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) und [**IOleWindow:: ContextSensitiveHelp**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp). Die Implementierung von **GetWindow** in der Explorer-Leiste gibt das untergeordnete Fenster Handle der Explorer-Leiste ( *m \_ HWND*) zurück. Die kontextbezogene Hilfe ist nicht implementiert, sodass **ContextSensitiveHelp** **E \_ notimpl** zurückgibt.
+Es gibt zwei [**IOleWindow-Methoden:**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) [**GetWindow**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) und [**IOleWindow::ContextSensitiveHelp.**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Die Implementierung von **GetWindow** im Explorer-Balkenbeispiel gibt das untergeordnete Fensterhandle der Explorer-Leiste m *\_ hwnd zurück.* Kontextbezogene Hilfe ist nicht implementiert, **sodass ContextSensitiveHelp** **E \_ NOTIMPL** zurückgibt.
 
-Die [**idockingwindow**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) -Schnittstelle verfügt über drei Methoden.
+Die [**IDockingWindow-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) verfügt über drei Methoden.
 
--   [**Idockingwindow:: showdw**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-showdw)
--   [**Idockingwindow:: closedw**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-closedw)
--   [**Idockingwindow:: resizeborderdw**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-resizeborderdw)
+-   [**IDockingWindow::ShowDW**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-showdw)
+-   [**IDockingWindow::CloseDW**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-closedw)
+-   [**IDockingWindow::ResizeBorderDW**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-resizeborderdw)
 
-Die [**resizeborderdw**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-resizeborderdw) -Methode wird nicht mit einem beliebigen Typ von Band Objekt verwendet und sollte immer E \_ notimpl zurückgeben. Die [**showdw**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-showdw) -Methode zeigt das Fenster der Explorer-Leiste an oder blendet es aus, abhängig vom Wert des Parameters.
+Die [**ResizeBorderDW-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-resizeborderdw) wird nicht mit einem Bandobjekttyp verwendet und sollte immer E \_ NOTIMPL zurückgeben. Die [**ShowDW-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-showdw) zeigt das Fenster der Explorer-Leiste abhängig vom Wert ihres Parameters an oder blendet es aus.
 
 
 ```C++
@@ -400,7 +400,7 @@ STDMETHODIMP CDeskBand::ShowDW(BOOL fShow)
 
 
 
-Die [**closedw**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-closedw) -Methode zerstört das Fenster der Explorer-Leiste.
+Die [**CloseDW-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-idockingwindow-closedw) zerstört das Fenster der Explorer-Leiste.
 
 
 ```C++
@@ -419,7 +419,7 @@ STDMETHODIMP CDeskBand::CloseDW(DWORD)
 
 
 
-Die verbleibende Methode [**GetBandInfo**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)ist für **ideskband** spezifisch. Internet Explorer verwendet es, um den Bezeichner und den Anzeigemodus der Explorer-Leiste anzugeben. Internet Explorer kann auch eine oder mehrere Informationen von der Explorer-Leiste anfordern, indem er den **dwMask** -Member der [**deskbandinfo**](/windows/desktop/api/shobjidl_core/ns-shobjidl_core-deskbandinfo) -Struktur ausfüllt, der als dritter Parameter übergeben wird. **GetBandInfo** sollte den Bezeichner und den Anzeigemodus speichern und die **deskbandinfo** -Struktur mit den angeforderten Daten ausfüllen. Das Beispiel für eine Explorer-Leiste implementiert **GetBandInfo** , wie im folgenden Codebeispiel gezeigt.
+Die verbleibende Methode, [**GetBandInfo,**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ideskband)ist für **IDeskBand** spezifisch. Internet Explorer verwendet sie, um den Bezeichner und anzeigemodus der Explorer-Leiste anzugeben. Internet Explorer können auch informationen von der Explorer-Leiste anfordern, indem sie den **dwMask-Member** der [**DESKBANDINFO-Struktur**](/windows/desktop/api/shobjidl_core/ns-shobjidl_core-deskbandinfo) ausfüllen, der als dritter Parameter übergeben wird. **GetBandInfo** sollte den Bezeichner und den Anzeigemodus speichern und die **DESKBANDINFO-Struktur** mit den angeforderten Daten füllen. Im Beispiel für die Explorer-Leiste wird **GetBandInfo** implementiert, wie im folgenden Codebeispiel gezeigt.
 
 
 ```C++
@@ -479,25 +479,25 @@ STDMETHODIMP CDeskBand::GetBandInfo(DWORD dwBandID, DWORD, DESKBANDINFO *pdbi)
 
 
 
-### <a name="optional-interface-implementations"></a>Optionale Schnittstellen Implementierungen
+### <a name="optional-interface-implementations"></a>Optionale Schnittstellenimplementierungen
 
-Es gibt zwei Schnittstellen, die nicht erforderlich sind. Dies kann jedoch nützlich sein, um Folgendes zu implementieren: [**iinputobject**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject) und [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu). Das Beispiel für eine Explorer-Leiste implementiert **iinputobject**. Informationen zum Implementieren von **IContextMenu** finden Sie in der Dokumentation.
+Es gibt zwei Schnittstellen, die nicht erforderlich sind, aber für die Implementierung nützlich sein können: [**IInputObject**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject) und [**IContextMenu.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) Im Explorer-Balkenbeispiel wird **IInputObject** implementiert. Informationen zum Implementieren von **IContextMenu** finden Sie in der Dokumentation.
 
-### <a name="iinputobject"></a>Iinputobject
+### <a name="iinputobject"></a>IInputObject
 
-Die [**iinputobject**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject) -Schnittstelle muss implementiert werden, wenn ein Band Objekt Benutzereingaben akzeptiert. Internet Explorer implementiert [**iinputobjectsite**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) und verwendet **iinputobject** , um den richtigen Benutzereingabe Fokus zu erhalten, wenn es mehr als ein eigenständiges Fenster hat. Es gibt drei Methoden, die von einer Explorer-Leiste implementiert werden müssen.
+Die [**IInputObject-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinputobject) muss implementiert werden, wenn ein Bandobjekt Benutzereingaben akzeptiert. Internet Explorer implementiert [**IInputObjectSite**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) und verwendet **IInputObject,** um den Richtigen Benutzereingabefokus beizubehalten, wenn mehr als ein enthaltenes Fenster enthalten ist. Es gibt drei Methoden, die von einer Explorer-Leiste implementiert werden müssen.
 
--   [**Iinputobject:: uiactivateio**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-uiactivateio)
--   [**Iinputobject:: hasfocusio**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-hasfocusio)
--   [**Iinputobject:: translateacceleratorio**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-translateacceleratorio)
+-   [**IInputObject::UIActivateIO**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-uiactivateio)
+-   [**IInputObject::HasFocusIO**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-hasfocusio)
+-   [**IInputObject::TranslateAcceleratorIO**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-translateacceleratorio)
 
-Internet Explorer ruft [**uiactivateio**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-uiactivateio) auf, um der Explorer-Leiste mitzuteilen, dass Sie aktiviert oder deaktiviert wird. Wenn diese aktiviert ist, ruft das Explorer-Balken Beispiel [**SetFocus**](/windows/win32/api/winuser/nf-winuser-setfocus) auf, um den Fokus auf das Fenster festzulegen.
+Internet Explorer ruft [**UIActivateIO**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-uiactivateio) auf, um die Explorer-Leiste darüber zu informieren, dass sie aktiviert oder deaktiviert wird. Bei Aktivierung ruft das Beispiel für die Explorer-Leiste [**SetFocus**](/windows/win32/api/winuser/nf-winuser-setfocus) auf, um den Fokus auf das Fenster festzulegen.
 
-Internet Explorer ruft [**hasfocusio**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-hasfocusio) auf, wenn versucht wird, zu bestimmen, welches Fenster den Fokus besitzt. Wenn das Fenster der Explorer-Leiste oder einer der untergeordneten Elemente den Fokus besitzt, sollte **hasfocusio** den Wert s OK zurückgeben \_ . Wenn dies nicht der Fall ist, sollte der Wert S false zurückgeben \_
+Internet Explorer ruft [**HasFocusIO**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-hasfocusio) auf, wenn versucht wird, zu bestimmen, welches Fenster den Fokus besitzt. Wenn das Fenster der Explorer-Leiste oder eines seiner Nachfolger den Fokus hat, sollte **HasFocusIO** S \_ OK zurückgeben. Falls nicht, sollte S FALSE zurückgegeben \_ werden.
 
-[**Translateacceleratorio**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-translateacceleratorio) ermöglicht dem Objekt die Verarbeitung von Tastatur Accelerators. Das Beispiel für eine Explorer-Leiste implementiert diese Methode nicht, daher gibt es "false" zurück \_ .
+[**TranslateAcceleratorIO**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinputobject-translateacceleratorio) ermöglicht dem Objekt die Verarbeitung von Tastaturbeschleunigungen. Im Explorer-Balkenbeispiel wird diese Methode nicht implementiert, daher wird S \_ FALSE zurückgegeben.
 
-Die Implementierung von [**iinputobjectsite**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) in der Beispiel Leiste sieht wie folgt aus.
+Die Implementierung von [**IInputObjectSite**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite) in der Beispielleiste sieht wie folgt aus.
 
 
 ```C++
@@ -526,7 +526,7 @@ STDMETHODIMP CDeskBand::TranslateAcceleratorIO(MSG *)
 
 ### <a name="clsid-registration"></a>CLSID-Registrierung
 
-Wie bei allen COM-Objekten muss die CLSID der Explorer-Leiste registriert werden. Damit das-Objekt ordnungsgemäß mit Internet Explorer funktioniert, muss es auch für die entsprechende Komponenten Kategorie (CATID \_ Infoband) registriert werden. Der relevante Code Abschnitt für die Explorer-Leiste wird im folgenden Codebeispiel gezeigt.
+Wie bei allen COM-Objekten muss die CLSID der Explorer-Leiste registriert werden. Damit das Objekt ordnungsgemäß mit Internet Explorer funktioniert, muss es auch für die entsprechende Komponentenkategorie (CATID \_ InfoBand) registriert werden. Der entsprechende Codeabschnitt für die Explorer-Leiste wird im folgenden Codebeispiel gezeigt.
 
 
 ```C++
@@ -600,9 +600,9 @@ HRESULT RegisterServer()
 
 
 
-Bei der Registrierung von Band Objekten im Beispiel werden normale com-Prozeduren verwendet.
+Die Registrierung von Bandobjekten im Beispiel verwendet normale COM-Prozeduren.
 
-Zusätzlich zur CLSID muss der-Band Objekt Server auch für eine oder mehrere Komponenten Kategorien registriert werden. Dies ist der Hauptunterschied in der Implementierung zwischen vertikalen und horizontalen Explorer-Balken Beispielen. Dieser Prozess wird durch das Erstellen eines Komponenten Kategorien-Manager-Objekts (CLSID \_ stdcomponentcategoriesmgr) und das Verwenden der [**icatregister:: registerclassimplcategories**](/windows/win32/api/comcat/nf-comcat-icatregister-registerclassimplcategories) -Methode zum Registrieren des Band Objekt Servers behandelt. In diesem Beispiel wird die Registrierung der Komponenten Kategorie behandelt, indem die CLSID und die CATID des Explorer-Balken Beispiels an eine private Funktion –**registercomcat**– übergeben werden, wie im folgenden Codebeispiel gezeigt.
+Zusätzlich zur CLSID muss der Bandobjektserver auch für eine oder mehrere Komponentenkategorien registriert werden. Dies ist tatsächlich der Hauptunterschied in der Implementierung zwischen den vertikalen und horizontalen Explorer-Balkenbeispielen. Dieser Prozess wird behandelt, indem ein Komponentenkategorien-Manager-Objekt (CLSID \_ StdComponentCategoriesMgr) erstellt und die [**ICatRegister::RegisterClassImplCategories-Methode**](/windows/win32/api/comcat/nf-comcat-icatregister-registerclassimplcategories) verwendet wird, um den Bandobjektserver zu registrieren. In diesem Beispiel wird die Registrierung der Komponentenkategorie verarbeitet, indem die CLSID und CATID des Explorer-Balkenbeispiels an eine private Funktion (**RegisterComCat)** übergeben werden, wie im folgenden Codebeispiel gezeigt.
 
 
 ```C++
@@ -622,17 +622,17 @@ HRESULT RegisterComCat()
 
 
 
-### <a name="the-window-procedure"></a>Die Fenster Prozedur
+### <a name="the-window-procedure"></a>Die Fensterprozedur
 
-Da ein Band Objekt ein untergeordnetes Fenster für seine Anzeige verwendet, muss es eine Fenster Prozedur zum Verarbeiten von Windows-Messaging implementieren. Das Band Beispiel verfügt über minimale Funktionalität, sodass die Fenster Prozedur nur fünf Nachrichten verarbeitet:
+Da ein Bandobjekt ein untergeordnetes Fenster für seine Anzeige verwendet, muss es eine Fensterprozedur implementieren, um Windows Messaging zu verarbeiten. Das Bandbeispiel verfügt über minimale Funktionalität, sodass die Fensterprozedur nur fünf Nachrichten verarbeitet:
 
--   [**WM- \_ nccreate**](../winmsg/wm-nccreate.md)
--   [**WM- \_ Paint**](../gdi/wm-paint.md)
--   [**WM- \_ Befehl**](../menurc/wm-command.md)
--   [**WM- \_ SetFocus**](../inputdev/wm-setfocus.md)
--   [**WM- \_ killfokus**](../inputdev/wm-killfocus.md)
+-   [**WM \_ NCCREATE**](../winmsg/wm-nccreate.md)
+-   [**WM \_ PAINT**](../gdi/wm-paint.md)
+-   [**\_WM-BEFEHL**](../menurc/wm-command.md)
+-   [**WM \_ SETFOCUS**](../inputdev/wm-setfocus.md)
+-   [**WM \_ KILLFOCUS**](../inputdev/wm-killfocus.md)
 
-Die Prozedur kann problemlos erweitert werden, um weitere Nachrichten zur Unterstützung weiterer Funktionen zu bieten.
+Das Verfahren kann problemlos erweitert werden, um zusätzliche Nachrichten aufzunehmen, um weitere Features zu unterstützen.
 
 
 ```C++
@@ -685,7 +685,7 @@ LRESULT CALLBACK CDeskBand::WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM 
 
 
 
-Der WM- \_ Befehls Handler gibt einfach NULL zurück. Der WM-Zeichnungs \_ Handler erstellt die einfache Textanzeige, die im Beispiel der Explorer-Leiste in der Einführung angezeigt wird.
+Der WM \_ COMMAND-Handler gibt einfach 0 (null) zurück. Der WM \_ PAINT-Handler erstellt die einfache Textanzeige, die im Beispiel der Explorer-Leiste in der Einführung gezeigt wird.
 
 
 ```C++
@@ -757,7 +757,7 @@ void CDeskBand::OnPaint(const HDC hdcIn)
 
 
 
-Die "WM \_ SetFocus"-und "WM \_ killfocus"-Handler informieren die Website über eine Fokus Änderung, indem Sie die [**iinputobjectsite:: onfocuschangeis**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinputobjectsite-onfocuschangeis) -Methode der Site aufrufen.
+Die WM \_ SETFOCUS- und WM \_ KILLFOCUS-Handler informieren die Website über eine Fokusänderung, indem sie die [**IInputObjectSite::OnFocusChangeIS-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinputobjectsite-onfocuschangeis) der Website aufrufen.
 
 
 ```C++
@@ -774,7 +774,7 @@ void CDeskBand::OnFocus(const BOOL fFocus)
 
 
 
-Band Objekte bieten eine flexible und leistungsstarke Möglichkeit, die Funktionen von Internet Explorer zu erweitern, indem benutzerdefinierte Explorer-leisten erstellt werden. Durch die Implementierung eines Desk-Bands können Sie die Funktionen von normalen Fenstern erweitern. Obwohl einige COM-Programmierung erforderlich ist, ist es letztendlich, ein untergeordnetes Fenster für Ihre Benutzeroberfläche bereitzustellen. Von dort aus kann der Großteil der Implementierung vertraute Windows-Programmiertechniken verwenden. Das hier beschriebene Beispiel verfügt zwar nur über eingeschränkte Funktionalität, veranschaulicht aber alle notwendigen Features eines Band Objekts und kann problemlos erweitert werden, um eine eindeutige und leistungsstarke Benutzeroberfläche zu erstellen.
+Bandobjekte bieten eine flexible und leistungsstarke Möglichkeit, die Funktionen von Internet Explorer zu erweitern, indem sie benutzerdefinierte Explorer-Balken erstellen. Durch die Implementierung einer Deskband können Sie die Funktionen von normalen Fenstern erweitern. Obwohl eine COM-Programmierung erforderlich ist, dient sie letztendlich dazu, ein untergeordnetes Fenster für Ihre Benutzeroberfläche bereitzustellen. Von dort aus kann der Großteil der Implementierung vertraute Windows Programmiertechniken verwenden. Obwohl das hier beschriebene Beispiel nur eingeschränkte Funktionen aufweist, veranschaulicht es alle erforderlichen Features eines Bandobjekts und kann leicht erweitert werden, um eine eindeutige und leistungsfähige Benutzeroberfläche zu erstellen.
 
  
 

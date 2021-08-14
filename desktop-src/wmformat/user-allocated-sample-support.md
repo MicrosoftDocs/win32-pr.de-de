@@ -1,42 +1,42 @@
 ---
-title: Vom Benutzer zugewiesene Beispiel Unterstützung
-description: Vom Benutzer zugewiesene Beispiel Unterstützung
+title: Vom Benutzer zugewiesene Beispielunterstützung
+description: Vom Benutzer zugewiesene Beispielunterstützung
 ms.assetid: c747139e-e157-4ea0-9132-256dc70e2b15
 keywords:
-- Windows Media-Format-SDK, vom Benutzer zugewiesene Beispiel Unterstützung
-- Advanced Systems Format (ASF), vom Benutzer zugeordnete Beispiel Unterstützung
-- ASF (Advanced Systems Format), vom Benutzer zugeordnete Beispiel Unterstützung
-- vom Benutzer zugewiesene Beispiel Unterstützung
+- Windows Medienformat-SDK, Vom Benutzer zugewiesene Beispielunterstützung
+- Advanced Systems Format (ASF), Vom Benutzer zugewiesene Beispielunterstützung
+- ASF (Advanced Systems Format), Vom Benutzer zugewiesene Beispielunterstützung
+- Vom Benutzer zugewiesene Beispielunterstützung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d80d6a0d9a7e19b46940093fc370bd2c8c70590d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3b8cba2d20586cc47845d961e5c92a0138a37d5d0db07feb23dbb68dda1b72eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117845254"
 ---
-# <a name="user-allocated-sample-support"></a>Vom Benutzer zugewiesene Beispiel Unterstützung
+# <a name="user-allocated-sample-support"></a>Vom Benutzer zugewiesene Beispielunterstützung
 
-Unter normalen Umständen erstellen sowohl das Reader-Objekt als auch das synchrone Reader-Objekt ein neues Buffer-Objekt für jedes Beispiel, das an die Anwendung übermittelt wird. Dies liegt daran, dass das Lese Objekt nicht weiß, wie Ihre Anwendung die Beispiele durchführt, nachdem Sie sie abgerufen haben. Obwohl viele Anwendungen nur Beispiele lesen, um Sie sofort zu Rendering, müssen einige Anwendungen möglicherweise lange Zeit Beispiele verwalten. Das Lese Objekt kann daher keinen der von ihm zugewiesenen Puffer wieder verwenden. Sie werden an Ihre Anwendung übermittelt, die dann die Kontrolle darüber hat.
+Unter normalen Umständen erstellen sowohl das Readerobjekt als auch das synchrone Readerobjekt ein neues Pufferobjekt für jedes Beispiel, das an Ihre Anwendung übermittelt wird. Dies liegt daran, dass das Leseobjekt nicht wissen kann, was Ihre Anwendung mit den Beispielen macht, nachdem es sie erhält. Obwohl viele Anwendungen Beispiele nur lesen, um sie sofort zu rendern, müssen einige Anwendungen die Stichproben möglicherweise über einen längeren Zeitraum warten. Das Leseobjekt kann daher keinen der Puffer wiederverwenden, die es zuordnet. sie werden an Ihre Anwendung übermittelt, die dann die Kontrolle über sie hat.
 
-Das Problem bei diesem Ansatz besteht darin, dass eine Datei eine immense Anzahl von Stichproben enthalten kann. Wenn für jedes von Ihnen ein neues Puffer Objekt erstellt werden muss, wird die Zuordnung und Freigabe von Arbeitsspeicher viel Prozessorzeit verschwendet. Bei zeitsensiblen Anwendungen, wie z. b. Media Players, kann sich dieser Aufwand stark auf die Leistung auswirken.
+Das Problem bei diesem Ansatz besteht darin, dass eine Datei eine große Anzahl von Stichproben enthalten kann. Wenn für jede dieser Objekte ein neues Pufferobjekt erstellt werden muss, wird viel Prozessorzeit mit der Zuweisung und Freigabe von Arbeitsspeicher verschwendet. In zeitkritischen Anwendungen wie Media Playern kann dieser Mehraufwand die Leistung beeinträchtigen.
 
-Um die Leistungsprobleme der von Lesern zugewiesenen Beispiele zu verringern, unterstützen sowohl der Reader als auch der synchrone Reader vom Benutzer zugeordnete Beispiele. Um die von der Anwendung zugeordneten Beispiele verwenden zu können, führt das Lese Objekt Aufrufe an eine von Ihnen implementierte Beispiel-Zuweisungs Rückruf Methode aus. Die Logik, die vom Rückruf verwendet wird, um Puffer an das Lese Objekt zu übermitteln, ist vollständig. Sie können einen Pufferpool für die gesamte Datei verwenden oder mehrere Pufferpools verwenden, einen für jede Ausgabe oder einen Stream bzw. ein beliebiges anderes Schema, das für Ihre Anwendung geeignet ist.
+Um leistungsbezogene Probleme bei vom Reader zugeordneten Stichproben zu beheben, unterstützen sowohl der Reader als auch der synchrone Reader benutzerseitig zugeordnete Beispiele. Um von Ihrer Anwendung zugeordnete Beispiele zu verwenden, ruft das Leseobjekt eine von Ihnen implementierte Rückrufmethode für die Stichprobenzuordnung auf. Die Logik, die vom Rückruf zum Übermitteln von Puffern an das Leseobjekt verwendet wird, liegt vollständig bei Ihnen. Sie können einen Pool von Puffern für die gesamte Datei oder mehrere Pufferpools verwenden, einen für jede Ausgabe oder jeden Stream oder ein anderes Schema, das für Ihre Anwendung funktioniert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Puffer für Datei Lesevorgänge werden zugewiesen.**](allocating-buffers-for-file-reading.md)
+[**Zuordnen von Puffern zum Lesen von Dateien**](allocating-buffers-for-file-reading.md)
 </dt> <dt>
 
 [**Funktionen zum Lesen von Dateien**](file-reading-features.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,8 +1,8 @@
 ---
-description: Die Ableitung- \_ Eigenschaft des "errbemubject"-Objekts enthält ein Array von Zeichen folgen, die die Klassen abderivations Hierarchie für die Instanz beschreiben, auf die verwiesen wird.
+description: Die Ableitungseigenschaft \_ des SWbemObject-Objekts enthält ein Array von Zeichenfolgen, die die Hierarchie der Klassenableitung für die Instanz beschreiben, auf die verwiesen wird.
 ms.assetid: 8a4daab0-7d10-4a37-aacd-1f3f499b859a
 ms.tgt_platform: multiple
-title: SWbemObject.Derivation_-Eigenschaft (wbemdisp. h)
+title: SWbemObject.Derivation_-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 84e7b4e53a1a5544c92bb5116f3f83189789487f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 35195a6e3067fa68db747f04df8ec2c70480d297e4780c48059a1ba7f031e453
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313902"
 ---
-# <a name="swbemobjectderivation_-property"></a>Errbemubject. derivations ( \_ Eigenschaft)
+# <a name="swbemobjectderivation_-property"></a>SWbemObject.Derivation-Eigenschaft \_
 
-Die **Ableitung \_** -Eigenschaft des " [**errbemubject**](swbemobject.md) "-Objekts enthält ein Array von Zeichen folgen, die die Klassen abderivations Hierarchie für die Instanz beschreiben, auf die verwiesen wird. Das erste Element im Array definiert die übergeordnete Klasse, und das letzte Element definiert die Klasse "Dynastie". Diese Eigenschaft ist schreibgeschützt.
+Die **Ableitungseigenschaft \_** des [**SWbemObject-Objekts**](swbemobject.md) enthält ein Array von Zeichenfolgen, die die Hierarchie der Klassenableitung für die Instanz beschreiben, auf die verwiesen wird. Das erste Element im Array definiert die übergeordnete Klasse, und das letzte Element definiert die klasse "classy". Diese Eigenschaft ist schreibgeschützt.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ SWbemObject.Derivation_ As String
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Beispiel wird beschrieben, wie die Klassenhierarchie für Win32 \_ LogicalDisk abgerufen wird.
+Im folgenden VBScript-Beispiel wird beschrieben, wie die Klassenhierarchie für win32 logicaldisk abgerufen \_ wird.
 
 
 ```VB
@@ -64,7 +64,7 @@ end if
 
 
 
-Im folgenden Perl-Beispiel wird beschrieben, wie die Klassenhierarchie für Win32 \_ LogicalDisk abgerufen wird.
+Im folgenden Perl-Beispiel wird beschrieben, wie die Klassenhierarchie für win32 logicaldisk abgerufen \_ wird.
 
 
 ```
@@ -105,11 +105,11 @@ else
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Objekt<br/>                                                           |
-| IID<br/>                      | IID \_ iswbemujekt<br/>                                                            |
+| CLSID<br/>                    | CLSID \_ SWbemObject<br/>                                                           |
+| IID<br/>                      | IID \_ ISWbemObject<br/>                                                            |
 
 
 
