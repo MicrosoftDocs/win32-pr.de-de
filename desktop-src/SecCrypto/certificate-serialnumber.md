@@ -1,7 +1,7 @@
 ---
 description: Ruft eine Zeichenfolge ab, die die Seriennummer des Zertifikats enthält.
 ms.assetid: d08be744-4ae8-49f9-8b00-48e76c296f2b
-title: Certificate. SerialNumber (Eigenschaft)
+title: Certificate.SerialNumber(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 6dbd9485891cc89e686cef118e12dd43ec400f60
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f69836534dc9a45bcdecd88be83d9051c24852d966c0d0a4949016ff7feea3e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117771271"
 ---
-# <a name="certificateserialnumber-property"></a>Certificate. SerialNumber (Eigenschaft)
+# <a name="certificateserialnumber-property"></a>Certificate.SerialNumber(Eigenschaft)
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **serialNumber** -Eigenschaft ruft eine Zeichenfolge ab, die die Seriennummer des Zertifikats enthält.
+Die **SerialNumber-Eigenschaft** ruft eine Zeichenfolge ab, die die Seriennummer des Zertifikats enthält.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,7 +49,7 @@ Eine Zeichenfolge, die die Seriennummer des Zertifikats enthält.
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

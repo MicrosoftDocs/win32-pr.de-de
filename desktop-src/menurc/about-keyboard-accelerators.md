@@ -14,12 +14,12 @@ keywords:
 - Zugriffstastentabellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88e97f0b4997d15d55601e571270276e7d7a3bd4
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 1b81240feb0ca21028c9d1813f4c8004e1c3bb932fe1ec8767e3719c26e7a5db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117870731"
 ---
 # <a name="about-keyboard-accelerators"></a>Informationen zu Tastenkombinationen
 
@@ -28,7 +28,7 @@ Zugriffstasten sind eng mit Menüs verknüpft– beide ermöglichen dem Benutzer
 In diesem Abschnitt werden die folgenden Themen behandelt.
 
 -   [Zugriffstastentabellen](#accelerator-tables)
--   [Accelerator-Table-Erstellung](#accelerator-table-creation)
+-   [Erstellung von Acceleratortabellen](#accelerator-table-creation)
 -   [Tastenkombinationszuweisungen](#accelerator-keystroke-assignments)
 -   [Zugriffstasten und Menüs](#accelerators-and-menus)
 -   [Benutzeroberflächenzustand](#ui-state)
@@ -39,15 +39,15 @@ Eine Zugriffstastentabelle besteht aus einem Array von [**ACCEL-Strukturen,**](/
 
 -   Die Tastenkombination des Accelerators.
 -   Der Bezeichner der Zugriffstaste.
--   Verschiedene Flags. Dies schließt einen Wert ein, der angibt, ob das System visuelles Feedback bereitstellen soll, indem das entsprechende Menüelement hervorgehoben wird( falls verfügbar), wenn die Zugriffstaste verwendet wird.
+-   Verschiedene Flags. Dies schließt einen ein, der angibt, ob das System visuelles Feedback bereitstellen soll, indem bei Verwendung der Zugriffstaste das entsprechende Menüelement hervorgehoben wird( falls dies der Fall ist).
 
-Um Zugriffstasteneingaben für einen angegebenen Thread zu verarbeiten, muss der Entwickler die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) in der Meldungsschleife aufrufen, die der Nachrichtenwarteschlange des Threads zugeordnet ist. Die **TranslateAccelerator-Funktion** überwacht Tastatureingaben in die Nachrichtenwarteschlange und prüft auf Tastenkombinationen, die mit einem Eintrag in der Zugriffstastentabelle übereinstimmen. Wenn **TranslateAccelerator** eine Übereinstimmung findet, übersetzt er die Tastatureingabe (d. h. die [**WM \_ KEYUP-**](/windows/desktop/inputdev/wm-keyup) und [**WM \_ KEYDOWN-Meldungen)**](/windows/desktop/inputdev/wm-keydown) in eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) und sendet die Nachricht dann an die Fensterprozedur des angegebenen Fensters. Die folgende Abbildung zeigt, wie Zugriffstasten verarbeitet werden.
+Um Zugriffstasteneingaben für einen angegebenen Thread zu verarbeiten, muss der Entwickler die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) in der Meldungsschleife aufrufen, die der Nachrichtenwarteschlange des Threads zugeordnet ist. Die **TranslateAccelerator-Funktion** überwacht Tastatureingaben in die Nachrichtenwarteschlange und überprüft, ob Tastenkombinationen mit einem Eintrag in der Zugriffstastentabelle übereinstimmen. Wenn **TranslateAccelerator** eine Übereinstimmung findet, übersetzt er die Tastatureingabe (d. h. die [**WM \_ KEYUP-**](/windows/desktop/inputdev/wm-keyup) und [**WM \_ KEYDOWN-Meldungen)**](/windows/desktop/inputdev/wm-keydown) in eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) und sendet die Nachricht dann an die Fensterprozedur des angegebenen Fensters. Die folgende Abbildung zeigt, wie Zugriffstasten verarbeitet werden.
 
 ![Verarbeitungsmodell für die Tastaturbeschleunigung](images/cskac-01.png)
 
 Die [**WM \_ COMMAND-Meldung**](wm-command.md) enthält den Bezeichner der Zugriffstaste, die dazu führte, dass [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) die Nachricht generiert hat. Die Fensterprozedur untersucht den Bezeichner, um die Quelle der Nachricht zu bestimmen, und verarbeitet die Nachricht dann entsprechend.
 
-Zugriffstastentabellen sind auf zwei verschiedenen Ebenen vorhanden. Das System verwaltet eine einzelne, systemweite Zugriffstastentabelle, die für alle Anwendungen gilt. Eine Anwendung kann die Systembeschleunigungstabelle nicht ändern. Eine Beschreibung der Zugriffstasten, die von der Systembeschleunigungstabelle bereitgestellt werden, finden Sie unter [Tastenkombinationszuweisungen](#accelerator-keystroke-assignments).
+Zugriffstastentabellen sind auf zwei verschiedenen Ebenen vorhanden. Das System verwaltet eine einzelne systemweite Zugriffstastentabelle, die für alle Anwendungen gilt. Eine Anwendung kann die Systembeschleunigungstabelle nicht ändern. Eine Beschreibung der Zugriffstasten, die von der Systembeschleunigungstabelle bereitgestellt werden, finden Sie unter [Tastenkombinationszuweisungen](#accelerator-keystroke-assignments).
 
 Das System verwaltet auch Zugriffstastentabellen für jede Anwendung. Eine Anwendung kann eine beliebige Anzahl von Zugriffstastentabellen für die Verwendung mit eigenen Fenstern definieren. Jede Tabelle wird durch ein eindeutiges 32-Bit-Handle (**HACCEL**) identifiziert. Für einen angegebenen Thread kann jedoch immer nur eine Zugriffstastentabelle gleichzeitig aktiv sein. Das Handle für die Zugriffstastentabelle, die an die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben wird, bestimmt, welche Zugriffstastentabelle für einen Thread aktiv ist. Die Aktive Zugriffstastentabelle kann jederzeit geändert werden, indem ein anderes Handle für die Zugriffstastentabelle an **TranslateAccelerator übergeben wird.**
 
@@ -63,17 +63,17 @@ Eine vorhandene Zugriffstastentabelle kann kopiert und geändert werden. Die vor
 
 ## <a name="accelerator-keystroke-assignments"></a>Tastenkombinationszuweisungen
 
-Ein ASCII-Zeichencode oder ein virtueller Schlüsselcode kann verwendet werden, um die Zugriffstaste zu definieren. Bei einem ASCII-Zeichencode wird die Schreibung der Zugriffstaste beachtet. Daher definiert die Verwendung des ASCII-Zeichens "C" den Beschleuniger als ALT+C anstelle von ALT+C. Die Verwendung von Zugriffstasten, bei der die Schreibung der Schreibung beachtet wird, kann jedoch verwirrend sein. Beispielsweise wird der ALT+C-Beschleuniger generiert, wenn die CAPS LOCK-Taste heruntergefahren ist oder die UMSCHALTTASTE aus ist, aber nicht, wenn beide nicht mehr gedrückt sind.
+Ein ASCII-Zeichencode oder ein Virtueller Schlüsselcode kann verwendet werden, um die Zugriffstaste zu definieren. Bei einem ASCII-Zeichencode wird die Schreibung der Zugriffstaste beachtet. Daher definiert die Verwendung des ASCII-Zeichens "C" den Beschleuniger als ALT+C anstelle von ALT+C. Die Verwendung von Zugriffstasten, bei der die Schreibung der Schreibung beachtet wird, kann jedoch verwirrend sein. Beispielsweise wird der ALT+C-Beschleuniger generiert, wenn die CAPS LOCK-Taste heruntergefahren ist oder die UMSCHALTTASTE gedrückt ist, aber nicht, wenn beide nicht mehr gedrückt sind.
 
-In der Regel muss bei Zugriffstasten die Kleinschreibung nicht beachtet werden, sodass die meisten Anwendungen Codes mit virtuellen Schlüsseln anstelle von ASCII-Zeichencodes für Zugriffstasten verwenden.
+In der Regel müssen Beschleuniger nicht die Kleinschreibung beachtet werden, sodass die meisten Anwendungen Codes mit virtuellen Schlüsseln für Zugriffstasten anstelle von ASCII-Zeichencodes verwenden.
 
-Vermeiden Sie Zugriffstasten, die mit den Mnemoniemenüs einer Anwendung in Konflikt stehen, da der Accelerator das mnemonische -Verhalten überschreibt, was den Benutzer verwirren kann. Weitere Informationen zu mnemonischen Menüs finden Sie unter [Menüs](menus.md).
+Vermeiden Sie Zugriffstasten, die mit den mnemonischen Menüs einer Anwendung in Konflikt stehen, da der Accelerator das mnemonische Überschreiben überschreibt, was den Benutzer verwirren kann. Weitere Informationen zu mnemonischen Menüs finden Sie unter [Menüs](menus.md).
 
 Wenn eine Anwendung einen Accelerator definiert, der auch in der SystemBeschleunigungstabelle definiert ist, überschreibt der anwendungsdefinierte Accelerator den Systembeschleuniger, jedoch nur innerhalb des Kontexts der Anwendung. Vermeiden Sie diese Vorgehensweise jedoch, da sie verhindert, dass der Systembeschleuniger seine Standardrolle auf der Benutzeroberfläche ausführen kann. Die systemweiten Zugriffstasten werden in der folgenden Liste beschrieben:
 
 
 
-| Accelerator                 | Beschreibung                                                                                                      |
+| Accelerator                 | BESCHREIBUNG                                                                                                      |
 |------------------|-------------------------------------------------------------------------------------------------------|
 | ALT+ESC          | Wechselt zur nächsten Anwendung.                                                                     |
 | ALT+F4           | Schließt eine Anwendung oder ein Fenster.                                                                    |
@@ -82,7 +82,7 @@ Wenn eine Anwendung einen Accelerator definiert, der auch in der SystemBeschleun
 | ALT+LEERTASTE     | Öffnet das **Menü** Fenster für das Hauptfenster der Anwendung.                                          |
 | ALT+TAB          | Wechselt zur nächsten Anwendung.                                                                     |
 | STRG+ESC         | Wechselt zum **Startmenü.**                                                                       |
-| STRG+F4          | Schließt das aktive Gruppen- oder Dokumentfenster.                                                           |
+| STRG+F4          | Schließt die aktive Gruppe oder das Aktive Dokumentfenster.                                                           |
 | F1               | Startet die Hilfedatei der Anwendung, sofern vorhanden.                                                    |
 | DRUCKBILDSCHIRM     | Kopiert ein Bild auf dem Bildschirm in die Zwischenablage.                                                     |
 | UMSCHALT+ALT+TAB    | Wechselt zur vorherigen Anwendung. Der Benutzer muss ALT+UMSCHALT gedrückt halten, während er die TAB-TASTE drückt. |
@@ -93,7 +93,7 @@ Wenn eine Anwendung einen Accelerator definiert, der auch in der SystemBeschleun
 
 ## <a name="accelerators-and-menus"></a>Zugriffstasten und Menüs
 
-Die Verwendung einer Zugriffstaste entspricht der Auswahl eines Menüelements: Beide Aktionen bewirken, dass das System eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) an die entsprechende Fensterprozedur sendet. Die **WM \_ COMMAND-Nachricht** enthält einen Bezeichner, den die Fensterprozedur überprüft, um die Quelle der Nachricht zu bestimmen. Wenn eine Zugriffstaste die **WM \_ COMMAND-Nachricht** generiert hat, ist der Bezeichner der Bezeichner der Zugriffstaste. Wenn ein Menüelement die **WM \_ COMMAND-Meldung** generiert hat, entspricht der Bezeichner dem des Menüelements. Da eine Zugriffstaste eine Verknüpfung zum Auswählen eines Befehls aus einem Menü bereitstellt, weist eine Anwendung der Zugriffstaste und dem entsprechenden Menüelement in der Regel den gleichen Bezeichner zu.
+Die Verwendung einer Zugriffstaste entspricht der Auswahl eines Menüelements: Beide Aktionen bewirken, dass das System eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) an die entsprechende Fensterprozedur sendet. Die **WM \_ COMMAND-Nachricht** enthält einen Bezeichner, den die Fensterprozedur überprüft, um die Quelle der Nachricht zu ermitteln. Wenn eine Zugriffstaste die **WM \_ COMMAND-Nachricht** generiert hat, entspricht der Bezeichner der Zugriffstaste. Wenn ein Menüelement die **WM \_ COMMAND-Meldung** generiert hat, entspricht der Bezeichner dem des Menüelements. Da eine Zugriffstaste eine Verknüpfung zum Auswählen eines Befehls aus einem Menü bereitstellt, weist eine Anwendung der Zugriffstaste und dem entsprechenden Menüelement in der Regel den gleichen Bezeichner zu.
 
 Eine Anwendung verarbeitet eine [**WM \_ COMMAND-Zugriffstaste**](wm-command.md) genauso wie die entsprechende **WM \_ COMMAND-Meldung** des Menüelements. Die **WM \_ COMMAND-Nachricht** enthält jedoch ein Flag, das angibt, ob die Nachricht von einer Zugriffstaste oder einem Menüelement stammt, falls Zugriffstasten anders als die entsprechenden Menüelemente verarbeitet werden müssen. Die [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) enthält dieses Flag nicht.
 
@@ -107,7 +107,7 @@ Eine Zugriffstaste, die einem Menüelement entspricht, sollte im Text des Menüe
 
 ## <a name="ui-state"></a>Benutzeroberflächenstatus
 
-Mit Windows können Anwendungen verschiedene Features auf der Benutzeroberfläche ausblenden oder anzeigen. Diese Einstellungen werden als Benutzeroberflächenzustand bezeichnet. Der Benutzeroberflächenzustand umfasst die folgenden Einstellungen:
+Windows ermöglicht Es Anwendungen, verschiedene Features in der Benutzeroberfläche auszublenden oder anzuzeigen. Diese Einstellungen werden als Benutzeroberflächenzustand bezeichnet. Der Benutzeroberflächenzustand umfasst die folgenden Einstellungen:
 
 -   Fokusindikatoren (z. B. Fokusrechtecke auf Schaltflächen)
 -   Tastenkombinationen (gekennzeichnet durch Unterstreichungen in Steuerelementbeschriftungen)
@@ -128,7 +128,7 @@ Ein Fenster kann Nachrichten senden, um eine Änderung des Benutzeroberflächenz
 
 Standardmäßig werden alle untergeordneten Fenster eines Fensters der obersten Ebene mit demselben Benutzeroberflächenzustand wie das übergeordnete Fenster erstellt.
 
-Das System verarbeitet den Benutzeroberflächenzustand für Steuerelemente in Dialogfeldern. Beim Erstellen des Dialogfelds initialisiert das System den Benutzeroberflächenzustand entsprechend. Alle untergeordneten Steuerelemente erben diesen Zustand. Nachdem das Dialogfeld erstellt wurde, überwacht das System die Tastatureingaben des Benutzers. Wenn die Benutzeroberflächenzustandseinstellungen ausgeblendet sind und der Benutzer über die Tastatur navigiert, aktualisiert das System den Benutzeroberflächenzustand. Wenn der Benutzer beispielsweise die TAB-TASTE drückt, um den Fokus auf das nächste Steuerelement zu verschieben, ruft das System [**WM \_ CHANGEUISTATE**](wm-changeuistate.md) auf, um die Fokusindikatoren sichtbar zu machen. Wenn der Benutzer die ALT-TASTE drückt, ruft das System **WM \_ CHANGEUISTATE** auf, um die Tastenkombinationen sichtbar zu machen.
+Das System verarbeitet den Benutzeroberflächenzustand für Steuerelemente in Dialogfeldern. Beim Erstellen des Dialogfelds initialisiert das System den Benutzeroberflächenzustand entsprechend. Alle untergeordneten Steuerelemente erben diesen Zustand. Nachdem das Dialogfeld erstellt wurde, überwacht das System die Tastatureingaben des Benutzers. Wenn die Einstellungen für den Benutzeroberflächenzustand ausgeblendet sind und der Benutzer über die Tastatur navigiert, aktualisiert das System den Benutzeroberflächenzustand. Wenn der Benutzer beispielsweise die TAB-TASTE drückt, um den Fokus auf das nächste Steuerelement zu verschieben, ruft das System [**WM \_ CHANGEUISTATE**](wm-changeuistate.md) auf, um die Fokusindikatoren sichtbar zu machen. Wenn der Benutzer die ALT-TASTE drückt, ruft das System **WM \_ CHANGEUISTATE** auf, um die Tastenkombinationen sichtbar zu machen.
 
 Wenn ein Steuerelement die Navigation zwischen den darin enthaltenen Benutzeroberflächenelementen unterstützt, kann es seinen eigenen Benutzeroberflächenzustand aktualisieren. Das Steuerelement kann [**WM \_ QUERYUISTATE**](wm-queryuistate.md) aufrufen, um den anfänglichen Benutzeroberflächenzustand abzurufen und zwischenzuspeichern. Wenn das Steuerelement eine [**WM \_ UPDATEUISTATE-Nachricht**](wm-updateuistate.md) empfängt, kann es seinen Benutzeroberflächenzustand aktualisieren und eine [**WM \_ CHANGEUISTATE-Nachricht**](wm-changeuistate.md) an das übergeordnete Element senden. Jedes Fenster sendet die Nachricht weiterhin an sein übergeordnetes Element, bis es das Fenster der obersten Ebene erreicht. Das Fenster der obersten Ebene sendet die **WM \_ UPDATEUISTATE-Meldung** an die Fenster in der Fensterstruktur. Wenn ein Fenster die **WM \_ CHANGEUISTATE-Nachricht** nicht übergibt, wird das Fenster der obersten Ebene nicht erreicht, und der Benutzeroberflächenzustand wird nicht aktualisiert.
 

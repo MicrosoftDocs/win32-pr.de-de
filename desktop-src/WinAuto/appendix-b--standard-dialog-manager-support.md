@@ -1,29 +1,29 @@
 ---
-title: Anhang B-Unterstützung für Standard Dialogfelder
-description: Microsoft Active Accessibility bietet umfassende Unterstützung für SDM-Dialogfeld-Steuerelemente (Standard Dialogfeld-Manager).
+title: Anhang B– Unterstützung für Standarddialog-Manager
+description: Microsoft Active Accessibility bietet vollständige Unterstützung für DIALOGFELD-Steuerelemente im Standarddialog-Manager (Standard Dialog Manager, SDM).
 ms.assetid: cdec2dbd-943b-4160-ae22-c16198cc192a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a710b7f35a242badbff6295d1af0d08cada13fa7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 02b6500cabf4820fffe12b7ef160f2e494e43db067f6b96409dee02bbfd6119e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118326821"
 ---
-# <a name="appendix-b-standard-dialog-manager-support"></a>Anhang B: Unterstützung von Standard Dialog-Manager
+# <a name="appendix-b-standard-dialog-manager-support"></a>Anhang B: Unterstützung des Standarddialog-Managers
 
-Microsoft Active Accessibility bietet umfassende Unterstützung für SDM-Dialogfeld-Steuerelemente (Standard Dialogfeld-Manager). SDM ist eine interne Microsoft-Code Bibliothek, mit der Microsoft-Anwendungen ein gewisses Maß an Unabhängigkeit von den Unterschieden zwischen Macintosh-und Microsoft Windows-Betriebssystemen bereitgestellt werden. SDM wird hauptsächlich für Dialogfelder in Microsoft Excel und Microsoft Word verwendet.
+Microsoft Active Accessibility bietet vollständige Unterstützung für DIALOGFELD-Steuerelemente im Standarddialog-Manager (Standard Dialog Manager, SDM). SDM ist eine interne Microsoft-Codebibliothek, die Microsoft-Anwendungen ein gewisses Maß an Abhängigkeit von den Unterschieden zwischen macintosh- und microsoft Windows bietet. SDM wird hauptsächlich für Dialogfelder in Microsoft Excel und Microsoft Word.
 
-SDM stellt Probleme für Barrierefreiheits Hilfen dar, da es nicht standardmäßige Implementierungen von Dialogfeldern verwendet. Beispielsweise verwenden SDM-Dialogfeld Schaltflächen keine Fenster Handles auf die gleiche Weise wie die standardmäßigen Benutzeroberflächen Elemente. Sie können keine Nachrichten an Schaltflächen senden, und Schaltflächen sind nicht in der Fensterliste enthalten. Eine Anwendung, die SDM verwendet, kommuniziert über eine private Schnittstelle mit dem-Steuerelement.
+SDM stellt Probleme bei Barrierefreiheitshilfen vor, da nicht standardmäßige Implementierungen von Dialogfeldern verwendet werden. Beispielsweise verwenden SDM-Dialogfeldschaltflächen fensterhandles nicht auf die gleiche Weise wie die Standardelemente der Benutzeroberfläche. Sie können keine Nachrichten an Schaltflächen senden, und Schaltflächen sind nicht in der Fensterliste enthalten. Eine Anwendung, die SDM verwendet, kommuniziert über eine private Schnittstelle mit dem Steuerelement.
 
-Die folgende Abbildung zeigt ein Beispiel Dialogfeld aus Word. Obwohl es sich um ein normales Windows-Dialogfeld handelt, das das Registerkarten-Steuerelement verwendet, handelt es sich tatsächlich um ein SDM-Dialogfeld.
+Die folgende Abbildung zeigt ein Beispieldialogfeld aus Word. Obwohl es wie ein reguläres Windows, das das Registerkarten-Steuerelement verwendet, ist es tatsächlich ein SDM-Dialogfeld.
 
-![Screenshot des Dialog Felds "Optionen" mit ausgewählter Registerkarte "Ansicht"](images/dialog.gif)
+![Screenshot des Dialogfelds "Optionen" mit ausgewählter Registerkarte "Ansicht"](images/dialog.gif)
 
- 
+ 
 
- 
+ 
 
 
 

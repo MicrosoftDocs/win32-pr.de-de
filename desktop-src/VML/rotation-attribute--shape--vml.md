@@ -1,58 +1,58 @@
 ---
-title: Rotation-Attribut (Form) (VML)
-description: Rotation-Attribut (Form) (VML)
+title: Rotationsattribut (Shape)(VML)
+description: Rotationsattribut (Shape)(VML)
 ms.assetid: e1a648a4-1e87-4bec-90b2-6d3a57c0dba0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f03b114c885cbeaf5392068e79cd7f63bbc1fc52
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d0f73b55b57a7b9d9d7f14cdae4ec71a38a1e38246a4430339db23f35a339430
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754135"
 ---
-# <a name="rotation-attribute-shapevml"></a>Rotation-Attribut (Form) (VML)
+# <a name="rotation-attribute-shapevml"></a>Rotationsattribut (Shape)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Winkel, in dem eine Form gedreht wird. Lese-/Schreibzugriff. [Vganglin Grad](msdn-online-vml-vgangleindegrees-data-type.md).
+Definiert den Winkel, in dem eine Form gedreht wird. Lese-/Schreibzugriff. [VgAngleInDegrees](msdn-online-vml-vgangleindegrees-data-type.md).
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "Rotation: *Expression* " >
+<v: *element* style="rotation: *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Rotation = "*Ausdruck*"
+*element* .rotation="*expression*"
 
-*Ausdruck* = *Element*. Drehung
+*expression* = *Elementrotation*
 
 **Anmerkungen**
 
-Der Wert in Grad kann positiv oder negativ sein, und Werte, die größer als 360 sind, werden auf einen 360-Grad-Kreis modularisiert. Positive Winkel sind im Uhrzeigersinn. Der Standardwert ist 0.
+Der Wert in Grad kann positiv oder negativ sein, und Werte größer als 360 werden in einen 360-Grad-Kreis modularisiert. Positive Winkel sind im Uhrzeigersinn. Der Standardwert ist 0.
 
-Beachten Sie, dass die Form nach der Drehung neu positioniert wird, um die neuen Begrenzungsfeld Koordinaten widerzuspiegeln.
+Beachten Sie, dass die Form nach der Drehung neu positioniert wird, um die neuen Begrenzungsfeldkoordinaten widerzuspiegeln.
 
-Beachten Sie außerdem, dass für die Skripterstellung das **Format Attribut nicht** verwendet wird und dass die **Drehung** als direktes Attribut der Form behandelt wird.
+Beachten Sie außerdem, dass  für die Skripterstellung das Formatattribut nicht verwendet wird und **rotation** als direktes Attribut der Form behandelt wird.
 
-Das **Rotations** Attribut ähnelt dem Standard-HTML- **Rotations** Attribut für Stile.
+Das **Rotation-Attribut** ähnelt dem Standardmäßigen **HTML-Rotationsattribut** für Stile.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
 **Beispiel**
 
-Das Rechteck wird um 45 Grad gekippt.
+Das Rechteck wird um 45 Grad geneigt.
 
 
 ```HTML
@@ -63,8 +63,8 @@ Das Rechteck wird um 45 Grad gekippt.
 
 
 
-[Beispiel für das Rotations Attribut](/previous-versions/bb264091(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Rotationsattribut – Beispiel.](/previous-versions/bb264091(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

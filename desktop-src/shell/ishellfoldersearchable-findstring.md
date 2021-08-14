@@ -1,7 +1,7 @@
 ---
-description: Startet eine Suche nach einer angegebenen Such Zeichenfolge.
+description: Beginnt eine Suche nach einer angegebenen Suchzeichenfolge.
 ms.assetid: 6ecad03c-e8e0-45ba-8def-b55a029992f2
-title: 'Ishellfoldersearchable:: FindString-Methode (MMC. h)'
+title: IShellFolderSearchable::FindString-Methode (Mmc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 3e256329bc235f7fe5a0428ba33710fa6b838f04
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 947cda4094491702fa0f847e6a8abd4fed7bcbe9bd3504c5f8aec2097b0d6b8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220936"
 ---
-# <a name="ishellfoldersearchablefindstring-method"></a>Ishellfoldersearchable:: FindString-Methode
+# <a name="ishellfoldersearchablefindstring-method"></a>IShellFolderSearchable::FindString-Methode
 
-Startet eine Suche nach einer angegebenen Such Zeichenfolge.
+Beginnt eine Suche nach einer angegebenen Suchzeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,39 +42,39 @@ HRESULT FindString(
 
 <dl> <dt>
 
-*pwsztarget* \[ in\]
+*pwszTarget* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine Zeichenfolge, die das Schlüsselwort für die Suche angibt.
+Ein Zeiger auf eine Zeichenfolge, die das Suchschlüsselwort angibt.
 
 </dd> <dt>
 
-*pdwflags* \[ in\]
+*pdwFlags* \[ In\]
 </dt> <dd>
 
-Typ: **DWORD \** _
+Typ: **DWORD \***
 
-Zurzeit sind keine Flags definiert. Legen Sie auf _ * NULL * * fest.
+Derzeit sind keine Flags definiert. auf **NULL festgelegt.**
 
 </dd> <dt>
 
-*punkonasyncsearch* \[ in\]
+*dateiOnAsyncSearch* \[ In\]
 </dt> <dd>
 
-Typ: **[**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) \** _
+Typ: **[ **IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)\***
 
-Ein Zeiger auf ein Objekt vom Typ [_ *IUnknown* *](/windows/win32/api/unknwn/nn-unknwn-iunknown). Dieses Objekt muss die [**ishellfoldersearchablecallback**](ishellfoldersearchablecallback.md) -Schnittstelle unterstützen. Auf **null** festgelegt, wenn kein Rückruf erforderlich ist.
+Ein Zeiger auf ein Objekt vom Typ [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown). Dieses Objekt muss die [**IShellFolderSearchableCallback-Schnittstelle**](ishellfoldersearchablecallback.md) unterstützen. Wird auf **NULL festgelegt,** wenn kein Rückruf erforderlich ist.
 
 </dd> <dt>
 
-*ppidlout* \[ vorgenommen\]
+*dldlOut* \[ out\]
 </dt> <dd>
 
-Typ: **lpitemittellist**
+Typ: **LPITEMIDLIST**
 
-Ein Zeiger auf eine [**itemittel List**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) -Struktur für den Suchordner.
+Ein Zeiger auf eine [**ITEMIDLIST-Struktur**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) für den Suchordner.
 
 </dd> </dl>
 
@@ -82,9 +82,9 @@ Ein Zeiger auf eine [**itemittel List**](/windows/desktop/api/Shtypes/ns-shtypes
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -92,7 +92,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>MMC. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Mmc.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Shell32.dll</dt> </dl> |
 
 

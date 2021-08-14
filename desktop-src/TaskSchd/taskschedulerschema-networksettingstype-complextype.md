@@ -1,9 +1,9 @@
 ---
-title: komplexer networksettingstype-Typ
-description: Definiert die Elemente, die die Einstellungen bereitstellen, die vom Taskplaner-Dienst zum Abrufen eines Netzwerk Profils verwendet werden.
+title: komplexer networkSettingsType-Typ
+description: Definiert die Elemente, die die Einstellungen bereitstellen, die der Taskplaner verwendet, um ein Netzwerkprofil zu erhalten.
 ms.assetid: e5df1dda-b691-47ff-a956-50ff1ce9c7cc
 keywords:
-- komplexer networksettingstype-Typ Taskplaner
+- komplexes networkSettingsType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bb2a8389b1e1f368bedf03fa38dce9c8e262a401
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d9969e4e3827d926d8c295d4e1a3ce7b77550804eb4995a267a920a16871837f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758470"
 ---
-# <a name="networksettingstype-complex-type"></a>komplexer networksettingstype-Typ
+# <a name="networksettingstype-complex-type"></a>komplexer networkSettingsType-Typ
 
-Definiert die Elemente, die die Einstellungen bereitstellen, die vom Taskplaner-Dienst zum Abrufen eines Netzwerk Profils verwendet werden.
+Definiert die Elemente, die die Einstellungen bereitstellen, die der Taskplaner verwendet, um ein Netzwerkprofil zu erhalten.
 
 ``` syntax
 <xs:complexType name="networkSettingsType">
@@ -45,8 +45,8 @@ Definiert die Elemente, die die Einstellungen bereitstellen, die vom Taskplaner-
 
 | Element                                                              | type                                                        | BESCHREIBUNG                                                                                 |
 |----------------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| [**Name**](taskschedulerschema-id-networksettingstype-element.md)     | [**guidtype**](taskschedulerschema-guidtype-simpletype.md) | Gibt einen GUID-Wert an, der ein Netzwerk Profil identifiziert. <br/>                       |
-| [**Name**](taskschedulerschema-name-networksettingstype-element.md) | nonEmptyString                                              | Gibt den Namen eines Netzwerk Profils an. Der Name wird zu Anzeige Zwecken verwendet. <br/> |
+| [**Id**](taskschedulerschema-id-networksettingstype-element.md)     | [**guidType**](taskschedulerschema-guidtype-simpletype.md) | Gibt einen GUID-Wert an, der ein Netzwerkprofil identifiziert. <br/>                       |
+| [**Name**](taskschedulerschema-name-networksettingstype-element.md) | nonEmptyString                                              | Gibt den Namen eines Netzwerkprofils an. Der Name wird zu Anzeigezwecken verwendet. <br/> |
 
 
 
@@ -56,8 +56,8 @@ Definiert die Elemente, die die Einstellungen bereitstellen, die vom Taskplaner-
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

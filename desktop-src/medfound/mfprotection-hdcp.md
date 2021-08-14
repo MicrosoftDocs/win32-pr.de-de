@@ -1,19 +1,19 @@
 ---
-description: Gibt den HDCP-Schutz (High-Bandwidth digitaler Content Protection) an.
+description: Gibt den HDCPHigh-Bandwidth Digital Content Protection(HDCP)-Schutz an.
 ms.assetid: 3C4B6E66-D68B-4BE9-A821-8F91EF28B70B
-title: MFPROTECTION_HDCP-Attribut (mspdl. h)
+title: MFPROTECTION_HDCP -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5126bbab3c030a07cfee3d5b3a1f187079e1f869
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ed0f0412165f1376a298486894654b2282143113e05d99d3b167cbe8fcc8163
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117872474"
 ---
-# <a name="mfprotection_hdcp-attribute"></a>MF-Schutz- \_ HDCP-Attribut
+# <a name="mfprotection_hdcp-attribute"></a>MFPROTECTION \_ HDCP-Attribut
 
-Gibt den HDCP-Schutz (High-Bandwidth digitaler Content Protection) an.
+Gibt den HDCPHigh-Bandwidth Digital Content Protection(HDCP)-Schutz an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,17 +25,17 @@ Gibt den HDCP-Schutz (High-Bandwidth digitaler Content Protection) an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

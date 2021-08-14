@@ -1,19 +1,19 @@
 ---
-description: Legt die Größe und Bildschirmposition einer appbar fest.
+description: Legt die Größe und Bildschirmposition einer App-Leiste fest.
 ms.assetid: b3c56278-b9a2-4e08-bf98-7b3e4c8bd082
-title: ABM_SETPOS Meldung (shellapi. h)
+title: ABM_SETPOS (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6886249f42638745ca038aa1f216ddc995f0e7f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 431bbdc02ed202c94d66b6b93ce43aba0ebd40f1fb7058583f56c027cfc29b70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117861602"
 ---
-# <a name="abm_setpos-message"></a>ABM- \_ SetPos-Nachricht
+# <a name="abm_setpos-message"></a>ABM \_ SETPOS-Nachricht
 
-Legt die Größe und Bildschirmposition einer appbar fest. Die Meldung gibt eine Bildschirm Kante und das umgebende Rechteck für die appbar an. Das System kann das umgebende Rechteck so anpassen, dass die APP-Leiste die Windows-Taskleiste oder andere appbars nicht beeinträchtigt.
+Legt die Größe und Bildschirmposition einer App-Leiste fest. Die Meldung gibt einen Bildschirmrand und das umrandende Rechteck für die App-Leiste an. Das System kann das umgebundene Rechteck so anpassen, dass die App-Leiste die Windows oder andere Appbars nicht beeinträchtigt.
 
 
 ```C++
@@ -29,27 +29,27 @@ SHAppBarMessage(ABM_SETPOS, pabd);
 *pabd* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**appbardata**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) -Struktur. Der **uedge** -Member gibt einen Bildschirmrand an, und das **RC** -Element enthält das umgebende Rechteck. Wenn die [**SHAppBarMessage**](/windows/desktop/api/Shellapi/nf-shellapi-shappbarmessage) -Funktion zurückgegeben wird, enthält **RC** das genehmigte umschließende Rechteck. Sie müssen die Member **CBSIZE**, **HWND**, **uedge** und **RC** angeben, wenn Sie diese Nachricht senden. alle anderen Member werden ignoriert.
+Ein Zeiger auf eine [**APPBARDATA-Struktur.**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) Das **uEdge-Element** gibt einen Bildschirmrand an, und der **rc-Member** enthält das umrandende Rechteck. Wenn die [**SHAppBarMessage-Funktion**](/windows/desktop/api/Shellapi/nf-shellapi-shappbarmessage) zurückgegeben wird, **enthält rc** das genehmigte umgebundene Rechteck. Sie müssen beim Senden dieser Nachricht **die Member cbSize,** **hWnd,** **uEdge** und **rc** angeben. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer **true** zurück.
+Gibt immer **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung bewirkt, dass das System die [**ABN \_**](abn-poschanged.md) -Benachrichtigungs Meldung an alle appbars sendet.
+Diese Meldung bewirkt, dass das System die [**ABN \_ POSCHANGED-Benachrichtigungsnachricht**](abn-poschanged.md) an alle App-Leisten sendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

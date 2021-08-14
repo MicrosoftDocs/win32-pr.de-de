@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. JetCreateInstance2-Methode.
-title: API. JetCreateInstance2-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetCreateInstance2-Methode'
+title: Api.JetCreateInstance2-Methode
 TOCTitle: 'JetCreateInstance2 method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetCreateInstance2(Microsoft.Isam.Esent.Interop.JET_INSTANCE@,System.String,System.String,Microsoft.Isam.Esent.Interop.CreateInstanceGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetcreateinstance2(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4d21974d5c3bd5ca6dfbab2ac493d19b202ca6ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46313c3307db53084b88cd1d8b495a4368abe4412ed9ab99f76430d48435dfed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117719258"
 ---
-# <a name="apijetcreateinstance2-method"></a>API. JetCreateInstance2-Methode
+# <a name="apijetcreateinstance2-method"></a>Api.JetCreateInstance2-Methode
 
-Weisen Sie eine neue Instanz der Datenbank-Engine für die Verwendung in einem einzelnen Prozess mit einem angegebenen anzeigen Amen zu.
+Zuordnen einer neuen Instanz der Datenbank-Engine zur Verwendung in einem einzelnen Prozess mit einem angegebenen Anzeigenamen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,37 +68,37 @@ public static void JetCreateInstance2(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
     Gibt die neu erstellte Instanz zurück.
 
 <!-- end list -->
 
   - name  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Gibt einen eindeutigen Zeichen folgen Bezeichner für die Instanz an, die erstellt werden soll. Diese Zeichenfolge muss innerhalb eines bestimmten Prozesses, der die Datenbank-Engine gehostet, eindeutig sein.
+    Gibt einen eindeutigen Zeichenfolgenbezeichner für die zu erstellende Instanz an. Diese Zeichenfolge muss innerhalb eines bestimmten Prozesses, der die Datenbank-Engine hostet, eindeutig sein.
 
 <!-- end list -->
 
   - displayName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Ein Anzeige Name für die zu erstellende-Instanz. Diese wird in EventLog-Einträgen verwendet.
+    Ein Anzeigename für die zu erstellende Instanz. Dies wird in Ereignisprotokolleinträgen verwendet.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. kreateinstancegrbit](./createinstancegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.CreateInstanceGrbit](./createinstancegrbit-enumeration.md)  
     
     Erstellungsoptionen,
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,10 +1,10 @@
 ---
-title: WMDRMNET_POLICY_TRANSCRYPTPLAY Struktur (wmdrmsdk. h)
-description: Die transryptplay-Struktur der wmdrmnet- \_ Richtlinie \_ enthält die Richtlinien Informationen für die Wiedergabe von Inhalten mithilfe von Windows Media DRM für Netzwerkgeräte.
+title: WMDRMNET_POLICY_TRANSCRYPTPLAY -Struktur (Wmdrmsdk.h)
+description: Die WMDRMNET POLICY TRANSCRYPTPLAY-Struktur enthält die Richtlinieninformationen für die Wiedergabe von Inhalten mithilfe Windows \_ \_ Media DRM für Netzwerkgeräte.
 ms.assetid: 95671c58-a593-40bb-856e-28ad1cba340e
 keywords:
-- WMDRMNET_POLICY_TRANSCRYPTPLAY Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- WMDRMNET_POLICY_TRANSCRYPTPLAY struktur windows media format
+- Strukturfenster-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0681251428b87b323c9ad3e73277ec8cdd2b95f0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8fe64c796a1f2f15e4733e7dd3d82e918306fb95d78c61fb85ad2d813d946d60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118195505"
 ---
-# <a name="wmdrmnet_policy_transcryptplay-structure"></a>\_Transryptplay-Struktur der wmdrmnet-Richtlinie \_
+# <a name="wmdrmnet_policy_transcryptplay-structure"></a>WMDRMNET \_ POLICY \_ TRANSCRYPTPLAY-Struktur
 
-Die **\_ \_ transryptplay-Struktur der wmdrmnet-Richtlinie** enthält die Richtlinien Informationen für die Wiedergabe von Inhalten mithilfe von Windows Media DRM für Netzwerkgeräte.
+Die **WMDRMNET \_ POLICY \_ TRANSCRYPTPLAY-Struktur** enthält die Richtlinieninformationen für die Wiedergabe von Inhalten mithilfe Windows Media DRM für Netzwerkgeräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ typedef struct WMDRMNET_POLICY_TRANSCRYPTPLAY {
 **Globals**
 </dt> <dd>
 
-Globale Richtlinien Struktur.
+Globale Richtlinienstruktur.
 
 </dd> <dt>
 
-**playopls**
+**playOPLs**
 </dt> <dd>
 
-Ausgabe Schutz Ebenen für die Wiedergabe. **Wmdrmnet \_ Die Richtlinien \_ Wiedergabe- \_ OPL** ist ein Typ, der als [**DRM \_ Play \_ OPL \_ Ex**](drm-play-opl-ex.md)definiert ist.
+Ausgabeschutzebenen für die Wiedergabe. **WMDRMNET \_ POLICY \_ PLAY \_ OPL ist** ein Typ, der als [**DRM PLAY \_ \_ OPL EX definiert \_ ist.**](drm-play-opl-ex.md)
 
 </dd> </dl>
 
@@ -66,18 +66,18 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Strukturen**](drm-structures.md)
 </dt> <dt>
 
-[**wmdrmnet- \_ Richtlinie**](wmdrmnet-policy.md)
+[**WMDRMNET-RICHTLINIE \_**](wmdrmnet-policy.md)
 </dt> </dl>
 
  

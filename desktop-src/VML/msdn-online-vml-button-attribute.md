@@ -1,38 +1,38 @@
 ---
-title: VML-Schaltflächen Attribut
-description: VML-Schaltflächen Attribut
+title: VML-Schaltflächenattribut
+description: VML-Schaltflächenattribut
 ms.assetid: 273024ac-683f-48d2-b6a0-574824f4c05d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f2760fceaf52e3f9ee217d4c3d249fb670a845f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c505feebbf4614f7e56c856fa2c757e93160823d8bcd2fd5d539da80c436f32b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754975"
 ---
-# <a name="vml-button-attribute"></a>VML-Schaltflächen Attribut
+# <a name="vml-button-attribute"></a>VML-Schaltflächenattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob eine Form als Schaltfläche verarbeitet wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob eine Form als Schaltfläche verarbeitet wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* o:Button = " *Ausdruck* " >
+<v: *Element* o:button=" *Ausdruck* ">
 
 **Anmerkungen**
 
-Der Standardwert ist **False**. **True** gibt an, dass die Form als Schaltfläche verarbeitet wird.
+Der Standardwert ist **False**. True **gibt an,** dass die Form als Schaltfläche verarbeitet wird.
 
 *Microsoft Office Extensions-Attribut*
 
@@ -49,6 +49,6 @@ Die Form ist eine Schaltfläche.
 
 
 
- 
+ 
 
- 
+ 

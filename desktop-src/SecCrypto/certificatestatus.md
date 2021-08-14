@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen zum Erstellen einer Zertifikats Vertrauenskette.
+description: Enthält Informationen zum Erstellen einer Zertifikatvertrauenskette.
 ms.assetid: 120cd79e-7c9b-45f3-8596-091b674e73d8
 title: CertificateStatus-Objekt
 ms.topic: reference
@@ -13,37 +13,37 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: e9a6cb31a00f4d2943e68670930e6cbc4436b6b1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0c0c228a06da9d0a4dd93491908af0c0a2d0693125be57b675ca64e10378f253
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117769999"
 ---
 # <a name="certificatestatus-object"></a>CertificateStatus-Objekt
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Das **CertificateStatus** -Objekt enthält Informationen zum Erstellen einer Zertifikats Vertrauenskette.
+Das **CertificateStatus-Objekt** enthält Informationen zum Erstellen einer Zertifikatvertrauenskette.
 
 ## <a name="members"></a>Member
 
-Das **CertificateStatus** -Objekt verfügt über diese Typen von Membern:
+Das **CertificateStatus-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **CertificateStatus** -Objekt verfügt über diese Methoden.
+Das **CertificateStatus-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                                                               | BESCHREIBUNG                                                                                                                                  |
 |:---------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Applicationpolicies**](certificatestatus-applicationpolicies.md) | Gibt eine [**OIDs**](oids.md) -Auflistung zurück, die die OIDs der Anwendungs Richtlinie darstellt.<br/>                                           |
-| [**Certificatepolicies**](certificatestatus-certificatepolicies.md) | Gibt eine [**OIDs**](oids.md) -Auflistung zurück, die die während der Ketten Bildung verwendeten Zertifikat Richtlinien-OIDs darstellt.<br/>                |
-| [**EKU**](certificatestatus-eku.md)                                 | Gibt das [**EKU**](eku.md) -Objekt zurück, mit dem die EKU-Elemente festgelegt werden, die beim Einrichten des Gültigkeits Status eines Zertifikats überprüft werden.<br/> |
+| [**ApplicationPolicies**](certificatestatus-applicationpolicies.md) | Gibt eine [**OIDs-Auflistung**](oids.md) zurück, die die OIDs der Anwendungsrichtlinie darstellt.<br/>                                           |
+| [**CertificatePolicies**](certificatestatus-certificatepolicies.md) | Gibt eine [**OIDs-Auflistung**](oids.md) zurück, die die Zertifikatrichtlinien-OIDs darstellt, die beim Erstellen der Kette verwendet werden.<br/>                |
+| [**EKU**](certificatestatus-eku.md)                                 | Gibt das [**EKU-Objekt**](eku.md) zurück, mit dem die EKU-Elemente festgelegt werden, die beim Festlegen des Gültigkeitsstatus eines Zertifikats überprüft werden sollen.<br/> |
 
 
 
@@ -51,27 +51,27 @@ Das **CertificateStatus** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **CertificateStatus** -Objekt verfügt über diese Eigenschaften.
+Das **CertificateStatus-Objekt** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                        | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                                                                                       |
 |:--------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Zertifikate**](certificatestatus-certificates.md)<br/>               | Lesen/Schreiben<br/> | Legt die Auflistung der Zertifikate fest, die zum Erstellen der Zertifikat Kette verwendet werden können, oder ruft diese ab.<br/> **CAPICOM 2.0.0.3 und früher:** Die Eigenschaft [**Zertifikate**](certificatestatus-certificates.md) wird nicht unterstützt.<br/>                    |
-| [**Checkflag**](certificatestatus-checkflag.md)<br/>                     | Lesen/Schreiben<br/> | Flag zum Überprüfen der Gültigkeit. Werte können mithilfe eines logischen **or** -Operators verknüpft werden. Das Standardflag für die Überprüfung lautet [**CAPICOM \_ \_ Online \_ alle überprüfen**](capicom-check-flag.md).<br/>                                                                                     |
-| [**Dadurch**](certificatestatus-result.md)<br/>                           | Schreibgeschützt<br/>  | Gibt an, ob das Zertifikat gültig ist. Die Gültigkeit des Zertifikats wird mithilfe der aktuellen Einstellung der Eigenschaft [**checkflag**](certificatestatus-checkflag.md) und den Richtlinien Einstellungen des Zertifikats überprüft. Dies ist die Standard Eigenschaft.<br/> |
-| [**UrlRetrievalTimeout**](certificatestatus-urlretrievaltimeout.md)<br/> | Lesen/Schreiben<br/> | Legt die Zeitspanne fest, nach der eine URL als nicht erreichbar festgelegt wird, oder ruft Sie ab.<br/>                                                                                                                                                                     |
-| [**VerificationTime**](certificatestatus-verificationtime.md)<br/>       | Lesen/Schreiben<br/> | Legt die Uhrzeit fest, zu der das Zertifikat überprüft wurde, oder ruft diese ab.<br/>                                                                                                                                                                                          |
+| [**Zertifikate**](certificatestatus-certificates.md)<br/>               | Lesen/Schreiben<br/> | Legt die Auflistung von Zertifikaten fest, die zum Erstellen der Zertifikatkette verwendet werden können, oder ruft sie ab.<br/> **CAPICOM 2.0.0.3 und früher:** Die [**Certificates-Eigenschaft**](certificatestatus-certificates.md) wird nicht unterstützt.<br/>                    |
+| [**CheckFlag**](certificatestatus-checkflag.md)<br/>                     | Lesen/Schreiben<br/> | Gültigkeitsprüfungsflag. Werte können mithilfe eines logischen **OR-Operators verbunden** werden. Das Standardüberprüfungsflag [**ist CAPICOM \_ CHECK ONLINE \_ \_ ALL.**](capicom-check-flag.md)<br/>                                                                                     |
+| [**Ergebnis**](certificatestatus-result.md)<br/>                           | Schreibgeschützt<br/>  | Gibt an, ob das Zertifikat gültig ist. Die Gültigkeit des Zertifikats wird mithilfe der aktuellen Einstellung der [**CheckFlag-Eigenschaft**](certificatestatus-checkflag.md) und der Richtlinieneinstellungen des Zertifikats überprüft. Dies ist die Standardeigenschaft.<br/> |
+| [**UrlRetrievalTimeout**](certificatestatus-urlretrievaltimeout.md)<br/> | Lesen/Schreiben<br/> | Legt die Zeitdauer fest oder ruft sie ab, bevor eine URL als nicht erreichbar bestimmt wird.<br/>                                                                                                                                                                     |
+| [**VerificationTime**](certificatestatus-verificationtime.md)<br/>       | Lesen/Schreiben<br/> | Legt den Zeitpunkt fest, zu dem das Zertifikat überprüft wurde, oder ruft diesen ab.<br/>                                                                                                                                                                                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **CertificateStatus** -Objekt kann nicht erstellt werden.
+Das **CertificateStatus-Objekt** kann nicht erstellt werden.
 
-Das **CertificateStatus** -Objekt wird von der [**Certificate. IsValid**](certificate-isvalid.md) -Methode zurückgegeben.
+Das **CertificateStatus-Objekt** wird von der [**Certificate.IsValid-Methode**](certificate-isvalid.md) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,19 +81,19 @@ Das **CertificateStatus** -Objekt wird von der [**Certificate. IsValid**](certif
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Kryptografieobjekte**](cryptography-objects.md)
 </dt> <dt>
 
-[**Ketten**](chain.md)
+[**Kette**](chain.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Idlesettings. restartondle (Eigenschaft)
-description: Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, ob der Task neu gestartet wird, wenn der Computer mehrmals in eine Leerlauf Bedingung wechselt, oder legt diesen fest.
+title: IdleSettings.RestartOnIdle-Eigenschaft
+description: Ruft für die Skripterstellung einen booleschen Wert ab, der angibt, ob der Task neu gestartet wird, wenn der Computer mehr als einmal in eine Leerlaufbedingung übergeht, oder legt diesen fest.
 ms.assetid: c77b6f5f-659c-4aa0-a5f7-39c01e5ca65e
 keywords:
-- Restartondle-Eigenschaft Taskplaner
-- Restartondle-Eigenschaft Taskplaner, idlesettings-Objekt
-- Idlesettings-Objekt Taskplaner, restartondle-Eigenschaft
+- RestartOnIdle-Eigenschaft Taskplaner
+- RestartOnIdle-Eigenschaft Taskplaner , IdleSettings-Objekt
+- IdleSettings-Objekt Taskplaner , RestartOnIdle-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 18e80b2e523f2f19222292eac7752847a72291c4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aa405ce4090a080106ec030acbe0ca7211b1c6f94e5874729226ce6adfafa652
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117760077"
 ---
-# <a name="idlesettingsrestartonidle-property"></a>Idlesettings. restartondle (Eigenschaft)
+# <a name="idlesettingsrestartonidle-property"></a>IdleSettings.RestartOnIdle-Eigenschaft
 
-Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, ob der Task neu gestartet wird, wenn der Computer mehrmals in eine Leerlauf Bedingung wechselt, oder legt diesen fest.
+Ruft für die Skripterstellung einen booleschen Wert ab, der angibt, ob der Task neu gestartet wird, wenn der Computer mehr als einmal in eine Leerlaufbedingung übergeht, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,13 +38,13 @@ IdleSettings.RestartOnIdle As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der angibt, ob die Aufgabe neu gestartet werden muss, wenn der Computer mehrmals in eine Leerlauf Bedingung wechselt. Die Standardeinstellung lautet „false“.
+Ein boolescher Wert, der angibt, ob der Task neu gestartet werden muss, wenn der Computer mehr als einmal in eine Leerlaufbedingung eintritt. Die Standardeinstellung lautet „false“.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird nur verwendet, wenn die [**idlesettings. stoponidleend**](idlesettings-stoponidleend.md) -Eigenschaft auf true festgelegt ist.
+Diese Eigenschaft wird nur verwendet, wenn die [**IdleSettings.StopOnIdleEnd-Eigenschaft**](idlesettings-stoponidleend.md) auf True festgelegt ist.
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**restartondle**](taskschedulerschema-restartonidle-idlesettingstype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**RestartOnIdle-Element**](taskschedulerschema-restartonidle-idlesettingstype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,21 +52,21 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Idlesettings**](idlesettings.md)
+[**IdleSettings**](idlesettings.md)
 </dt> </dl>
 
  

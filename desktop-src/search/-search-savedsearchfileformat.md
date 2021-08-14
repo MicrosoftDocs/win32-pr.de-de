@@ -1,41 +1,41 @@
 ---
-description: Windows-Benutzer können Suchvorgänge als Suchordner speichern, der von einer XML-Datei generiert wird, die die Abfrage in einer Form speichert, die vom Windows Search-Subsystem verwendet werden kann.
+description: Windows Können Suchvorgänge als Suchordner speichern, der von einer XML-Datei generiert wird, in der die Abfrage in einem Formular gespeichert wird, das vom Windows verwendet werden kann.
 ms.assetid: 1c73e220-a999-4243-879c-ac7310151def
-title: Format der gespeicherten Such Datei
+title: Gespeichertes Suchdateiformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d19cf936f78b045814bf7cba31a123c40d61927a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 614eb357a82d2c70e068a9fa5258974423d755c48e779d5f5fe8be184a864d9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117863723"
 ---
-# <a name="saved-search-file-format"></a>Format der gespeicherten Such Datei
+# <a name="saved-search-file-format"></a>Gespeichertes Suchdateiformat
 
-In Windows Vista und höher können Benutzer Suchvorgänge als Suchordner speichern, der von einer XML-Datei generiert wird, in der die Abfrage in einer Form gespeichert wird, die vom Windows Search-Subsystem verwendet werden kann. Dieses Thema beschreibt das Dateiformat ( \* . Search-MS) und umfasst die folgenden Abschnitte:
+In Windows Vista und höher können Benutzer Suchvorgänge als Suchordner speichern, der von einer XML-Datei generiert wird, die die Abfrage in einem Formular speichert, das vom Windows verwendet werden kann. Dieses Thema beschreibt das Dateiformat ( \* .search-ms) und enthält die folgenden Abschnitte:
 
 - [Übersicht über gespeicherte Suchvorgänge](#overview-of-saved-searches)
 - [\<viewInfo>-Element](/windows)
-  - [\<viewInfo> Legt](/windows)
+  - [\<viewInfo> Attribute](/windows)
   - [\<viewInfo> Untergeordnete Elemente](/windows)
 - [\<query>-Element](/windows)
   - [\<query> Untergeordnete Elemente](/windows)
 - [\<properties>-Element](/windows)
-- [Vollständige Spezifikation des Search-MS-Datei Formats](#full-specification-of-the-search-ms-file-format)
+- [Vollständige Spezifikation des Dateiformats search-ms](#full-specification-of-the-search-ms-file-format)
 - [Beispiele für gespeicherte Suchvorgänge](#examples-of-saved-searches)
 
 ## <a name="overview-of-saved-searches"></a>Übersicht über gespeicherte Suchvorgänge
 
-Benutzer können eine Suchabfrage als Suchordner speichern, ein virtueller Ordner, der im Windows-Explorer unter dem Ordner "Suchvorgänge" angezeigt wird. Beim Öffnen eines Such Ordners wird die gespeicherte Suche ausgeführt, und es werden aktuelle Ergebnisse angezeigt. In der gespeicherten Suchdatei wird die Abfrage in einem Format gespeichert, auf das Windows-Suche reagieren kann. dabei wird angegeben, was gesucht werden soll, wo gesucht werden soll und wie die Ergebnisse angezeigt werden.
+Benutzer können eine Suchabfrage als Suchordner speichern, einen virtuellen Ordner, der im Windows Explorer unter dem Ordner Suchen angezeigt wird. Beim Öffnen eines Suchordners wird die gespeicherte Suche ausgeführt und aktuelle Ergebnisse angezeigt. In der gespeicherten Suchdatei wird die Abfrage in einem Format gespeichert, Windows die Suche ausgeführt werden kann. Dabei wird angegeben, nach was gesucht werden soll, wo gesucht werden soll und wie die Ergebnisse präsentiert werden.
 
-Die gespeicherte Suche wird aus einer XML-Datei ( \* . Search-MS) im Ordner "% User Profile% Such" generiert \\ . Die Daten sind in drei primäre Elemente in der XML-Datei unterteilt:
+Die gespeicherte Suche wird aus einer \* XML-Datei ( .search-ms) im Ordner %userprofile% \\ Searches generiert. Die Daten sind in drei primäre Elemente in der XML-Datei unterteilt:
 
-- \<viewInfo> gibt Präsentationsinformationen an.
-- \<query> gibt (Suchabfrage Informationen an)
-- \<properties> gibt Eigenschaften der \* . Search-MS-Datei an.
+- \<viewInfo> gibt Präsentationsinformationen an
+- \<query> gibt an (Suchabfrageinformationen)
+- \<properties> gibt die Eigenschaften der \* .search-ms-Datei selbst an.
 
-Das folgende Beispiel zeigt die Struktur einer gespeicherten Suchdatei auf hoher Ebene.
+Das folgende Beispiel zeigt die obere Struktur einer gespeicherten Suchdatei.
 
 ```XML
 <?xml version="1.0"?>
@@ -58,7 +58,7 @@ Das folgende Beispiel zeigt die Struktur einer gespeicherten Suchdatei auf hoher
 
 ## <a name="viewinfo-element"></a>\<viewInfo>-Element
 
-Das- \<viewInfo> Element gibt an, wie die Ergebnisse für den Endbenutzer angezeigt werden. Das folgende Beispiel zeigt die Struktur des-Elements.
+Das \<viewInfo> -Element gibt an, wie die Ergebnisse dem Endbenutzer angezeigt werden. Das folgende Beispiel zeigt die Struktur des -Elements.
 
 ```XML
 ...
@@ -97,36 +97,36 @@ Das- \<viewInfo> Element gibt an, wie die Ergebnisse für den Endbenutzer angeze
 ...
 ```
 
-### <a name="viewinfo-attributes"></a>\<viewInfo> Legt
+### <a name="viewinfo-attributes"></a>\<viewInfo> Attribute
 
 In der folgenden Tabelle werden die Attribute des Elements \<viewInfo> beschrieben.
 
-| Attribut     | BESCHREIBUNG                                                                     | Werte                     |
+| attribute     | BESCHREIBUNG                                                                     | Werte                     |
 |---------------|---------------------------------------------------------------------------------|----------------------------|
-| viewMode      | Gibt die Ordneransicht an.                                                      | Kachel "Detail \| Symbole" \|  |
-| iconSize      | Steuert die Standardgröße der Symbole und Miniaturansichten für Elemente, wenn Sie nicht als Stapel angezeigt werden. | Ganzzahl zwischen 16 und 256 |
-| stackiconsize | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
+| Viewmode      | Gibt die Ordneransicht an.                                                      | \| \| Detailsymbolkacheln  |
+| iconSize      | Steuert die Standardgröße der Symbole und Miniaturansichten für Elemente, wenn sie nicht gestapelt sind. | Ganze Zahl zwischen 16 und 256 |
+| stackIconSize | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
 | displayName   | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
-| autolistflags | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
-| FolderFlags   | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
-| taskflags     | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
+| autoListFlags | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
+| folderFlags   | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
+| taskFlags     | Nur zur internen Verwendung. Darf nicht verwendet werden.                                              | –                        |
 
 ### <a name="viewinfo-child-elements"></a>\<viewInfo> Untergeordnete Elemente
 
-Die untergeordneten Elemente des- \<viewInfo> Elements geben an, welche Spalten in den Windows Explorer-Suchergebnissen angezeigt werden und wie die Ergebnisse gruppiert und sortiert werden. Jedes untergeordnete Element enthält eine geordnete Gruppe von Spalten, die durch kanonische Namen der Systemeigenschaften (z. b. System. Display Name) identifiziert wird. Wenn Sie nicht in der gespeicherten Suchdatei definiert sind, werden die Suchergebnisse mit einem Standardsatz von Spalten angezeigt, die für die angezeigten Dateitypen geeignet sind.
+Die untergeordneten Elemente des -Elements geben an, welche Spalten in den Suchergebnissen des Windows Explorers angezeigt werden und wie die Ergebnisse \<viewInfo> gruppiert und sortiert werden. Jedes untergeordnete Element enthält eine geordnete Gruppe von Spalten, die durch kanonische Namen von Systemeigenschaften (z. B. System.DisplayName) identifiziert werden. Wenn dies nicht in der gespeicherten Suchdatei definiert ist, wird den Suchergebnissen ein Standardsatz von Spalten angezeigt, die für die angezeigten Dateitypen geeignet sind.
 
 | Element               | BESCHREIBUNG                                                                                        | Werte                                                       |
 |-----------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| visiblecolumns        | Gibt eine geordnete Liste von Spalten an, die in der Ergebnis Ansicht angezeigt werden sollen. Der Benutzer kann diese Liste ändern. | Eine beliebige System Eigenschaft.                                         |
-| frequentlyusedcolumns | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                 | –                                                          |
-| columnchoosercolumns  | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                 | –                                                          |
-| GroupBy               | Gibt eine einzelne System Eigenschaft an, nach der die Ergebnisse gruppiert werden sollen. Der Benutzer kann diesen Wert ändern.  | Eine beliebige System Eigenschaft.                                         |
-| SortList              | Gibt eine geordnete Liste von Spalten an, nach denen die Ergebnisse sortiert werden sollen.                                       | Bis zu vier Systemeigenschaften. Der Benutzer kann diese Liste ändern. |
-| Stacklist             | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                 | –                                                          |
+| visibleColumns        | Gibt eine geordnete Liste von Spalten an, die in der Ergebnisansicht angezeigt werden sollen. Der Benutzer kann diese Liste ändern. | Eine beliebige Systemeigenschaft.                                         |
+| frequentlyUsedColumns | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                 | –                                                          |
+| columnChooserColumns  | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                 | –                                                          |
+| Groupby               | Gibt eine einzelne Systemeigenschaft an, nach der die Ergebnisse gruppiert werden. Der Benutzer kann diesen Wert ändern.  | Eine beliebige Systemeigenschaft.                                         |
+| Sortlist              | Gibt eine sortierte Liste von Spalten an, nach der die Ergebnisse sortiert werden sollen.                                       | Bis zu vier Systemeigenschaften. Der Benutzer kann diese Liste ändern. |
+| stackList             | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                 | –                                                          |
 
 ## <a name="query-element"></a>\<query>-Element
 
-Das- \<query> Element gibt die Attribute an, die definieren, wie die Ergebnisse abgefragt werden. Das folgende Beispiel zeigt die Struktur des-Elements.
+Das \<query> -Element gibt die Attribute an, die definieren, wie die Ergebnisse abgefragt werden. Das folgende Beispiel zeigt die Struktur des -Elements.
 
 ```XML
 ...
@@ -170,15 +170,15 @@ Die folgende Tabelle beschreibt die untergeordneten Elemente des \<scope>-Elemen
 |------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | providers  | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                                        | –                                                                                                                                                                                                                                                            |
 | Unterabfragen | Nur zur internen Verwendung. Darf nicht verwendet werden.                                                                                        | –                                                                                                                                                                                                                                                            |
-| Bereich      | Identifiziert Standorte, die in die Suche eingeschlossen oder ausgeschlossen werden sollen.                                                                 | Entweder ein Pfad oder eine [bekannte Ordner-ID](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iknownfolder-getid) des Speicher Orts, der eingeschlossen oder ausgeschlossen werden soll. Dieses Element kann auch angeben, ob die Suche untergeordnete Pfade einschließen/ausschließen soll (eine flache oder eine Tiefe Suche). |
-| kindlist   | Gibt die Art der Datei (en) an, nach der gesucht werden soll.                                                                             | Ein beliebiger System. Kind-Wert.                                                                                                                                                                                                                                         |
-| Bedingungen | Gibt Regeln zum Filtern von Ergebnissen an. Beispielsweise können die Ergebnisse auf e-Mails beschränkt werden, die von oder an eine bestimmte Person gesendet werden. | AndCondition, OrCondition, NotCondition, leafcondition.                                                                                                                                                                                                        |
+| Bereich      | Identifiziert Orte, die in die Suche ein- oder ausgeschlossen werden.                                                                 | Entweder ein Pfad oder eine [bekannte Ordner-ID](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iknownfolder-getid) des ein- oder auszuschließenden Speicherorts. Dieses Element kann auch angeben, ob die Suche untergeordnete Pfade (flache oder tiefe Suche) ein- bzw. ausschließen soll. |
+| kindList   | Gibt die Art der zu suchden Dateien an.                                                                             | Ein beliebiger System.Kind-Wert.                                                                                                                                                                                                                                         |
+| Bedingungen | Gibt Regeln zum Filtern von Ergebnissen an. Die Ergebnisse können beispielsweise auf E-Mails beschränkt werden, die von oder an eine bestimmte Person gesendet werden. | andCondition, orCondition, notCondition, leafCondition.                                                                                                                                                                                                        |
 
 ### <a name="scope-element"></a>\<scope>-Element
 
-Das- \<scope> Element identifiziert die Orte, die von der Suche eingeschlossen oder ausgeschlossen werden sollen. Das \<scope> -Element muss mindestens ein untergeordnetes \<include> Element enthalten und kein oder mehrere- \<exclude> Elemente. Die Speicherorte können entweder als Pfad (Umgebungsvariablen werden unterstützt) oder als [bekannter Ordner Bezeichner](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iknownfolder-getid)angegeben werden. Außerdem kann angegeben werden, dass jeder dieser Speicherorte tief oder flach durchsucht werden soll, indem die nicht rekursive Einstellung auf "true" oder "false" festgelegt wird (der Standardwert ist rekursiv). Teile der enthaltenen Speicherorte können ausgeschlossen werden, indem Ausschluss Elemente angegeben werden.
+Das \<scope> -Element identifiziert die Orte, die in die Suche ein- oder ausgeschlossen werden. Das \<scope> Element muss mindestens ein untergeordnetes Element und null oder mehr Elemente \<include> \<exclude> enthalten. Die Speicherorte können entweder als Pfad (Umgebungsvariablen werden unterstützt) oder als bekannter [Ordnerbezeichner angegeben werden.](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iknownfolder-getid) Darüber hinaus kann jeder dieser Orte so angegeben werden, dass er tief oder flach durchsucht wird, indem "nonRecursive" auf "true" oder "false" festgelegt wird (der Standardwert ist rekursiv). Teile der eingeschlossenen Liste von Speicherorten können ausgeschlossen werden, indem Exclude-Elemente angegeben werden.
 
-Das folgende Beispiel zeigt ein \<scope> -Element, das den Ordner "Dokumente", aber nicht seine untergeordneten Elemente durchsucht, das Volume "e:" und seine untergeordneten Elemente, aber nicht das Verzeichnis "e: \\ Windows" oder eines seiner untergeordneten Elemente:
+Das folgende Element zeigt ein -Element, das den speziellen Ordner der Dokumente durchsucht, jedoch nicht seine unteren Elemente, das Volume "E:" und seine unteren Elemente, aber nicht das Verzeichnis "E: windows" oder eines seiner unteren \<scope> \\ Elemente:
 
 ```XML
 ...
@@ -205,28 +205,28 @@ Diese Elemente definieren die Vereinigung der "Art" von Elementen, die in der Bi
 - email
 - feed
 - folder
-- Modi
-- sofortige Nachricht
-- Nacht
+- Spiel
+- instantmessage
+- Journal
 - link
-- Saal
+- Film
 - music
 - Hinweis:
 - picture
 - Programm
-- recordebug
-- SearchFolder
+- recordedtv
+- searchfolder
 - task
 - video
 - webhistory
 - item
-- andere
+- Sonstige
 
 ### <a name="conditions-element"></a>\<conditions>-Element
 
-Bedingungen sind Filter, mit denen die Suchergebnisse verglichen werden. Beispielsweise können Sie Ergebnisse filtern, die bestimmte Kriterien erfüllen, wie z. b. den Namen des Autors oder der Dateigröße. Der Satz von Bedingungen wird in eine einzelne Bedingungs Struktur mit logischen and-, or-und Not branches integriert.
+Bedingungen sind Filter, mit denen Suchergebnisse verglichen werden. Beispielsweise können Sie Ergebnisse filtern, die bestimmte Kriterien erfüllen, z. B. Den Namen des Autors oder die Dateigröße. Der Satz von Bedingungen ist in eine einzelne Bedingungsstruktur mit logischen VERZWEIGUNGEN UND, OR und NOT integriert.
 
-Das folgende Beispiel zeigt die Struktur des- \<condition> Elements.
+Das folgende Beispiel zeigt die Struktur des \<condition> -Elements.
 
 ```XML
 ...
@@ -243,20 +243,20 @@ Das folgende Beispiel zeigt die Struktur des- \<condition> Elements.
 ...
 ```
 
-Der Bedingungstyp kann eine der folgenden sein:
+Der Bedingungstyp kann einer der folgenden sein:
 
 | type          | BESCHREIBUNG                                 | Verfügbare Attribute                               |
 |---------------|---------------------------------------------|----------------------------------------------------|
-| andCondition  | Verbindung von mindestens zwei untergeordneten Bedingungen | –                                                |
-| OrCondition   | Disjunktion von zwei untergeordneten Bedingungen | –                                                |
-| NotCondition  | Negation einer untergeordneten Bedingung               | –                                                |
-| leafcondition | Vergleicht eine Eigenschaft mit einem Wert.                | Property, PropertyType, Operator, Value, ValueType |
+| Andcondition  | Konjunktion von zwei oder mehr untergeordneten Bedingungen | –                                                |
+| Orcondition   | Disjunktion von zwei von mehr untergeordneten Bedingungen | –                                                |
+| Notcondition  | Negation einer untergeordneten Bedingung               | –                                                |
+| leafCondition | Vergleicht eine Eigenschaft mit dem Wert                | property, propertyType, operator, value, valuetype |
 
-Die \<leafCondition> Attribute des Elements geben die Eigenschaften und Werte an, anhand derer die Ergebnisse gefiltert werden.
+Die \<leafCondition> Attribute des Elements identifizieren die Eigenschaften und Werte, nach deren Filterung die Ergebnisse gefiltert werden.
 
 ### <a name="example-conditions-element"></a>Beispiel: \<conditions> Element
 
-Im folgenden Beispiel werden die Ergebnisse für alle von John erstellten ungelesenen Elemente gefiltert. Das heißt, die System. isread-Eigenschaft ist false, und die Zeichenfolge "John" wird in den Eigenschaften System. Author oder System. itemauthors angezeigt.
+Im folgenden Beispiel werden die Ergebnisse für alle ungelesenen Elemente, die von John verfasst wurden, filtert. Das heißt, die System.IsRead-Eigenschaft ist false, und die Zeichenfolge "john" wird in den Eigenschaften System.Author oder System.ItemAuthors angezeigt.
 
 ```XML
 ...
@@ -299,11 +299,11 @@ Im folgenden Beispiel werden die Ergebnisse für alle von John erstellten ungele
 
 ## <a name="properties-element"></a>\<properties>-Element
 
-Das- \<properties> Element beschreibt die Eigenschaften der gespeicherten Suche selbst. Gespeicherte Suchdateien unterstützen vier Eigenschaften: \<author> , \<kind> , \<description> und \<tags> . Diese sind nur für die interne Verwendung vorgesehen.
+Das \<properties> -Element beschreibt die Eigenschaften der gespeicherten Suche selbst. Gespeicherte Suchdateien unterstützen vier Eigenschaften: \<author> \<kind> , , und \<description> \<tags> . Diese sind nur für die interne Verwendung.
 
-## <a name="full-specification-of-the-search-ms-file-format"></a>Vollständige Spezifikation des Search-MS-Datei Formats
+## <a name="full-specification-of-the-search-ms-file-format"></a>Vollständige Spezifikation des Dateiformats search-ms
 
-Im folgenden finden Sie ein Beispiel für den vollständigen XML-Code einer gespeicherten Suchdatei.
+Im Folgenden finden Sie ein Beispiel für den vollständigen XML-Code für eine gespeicherte Suchdatei.
 
 ```XML
 <?xml version="1.0"?>
@@ -385,9 +385,9 @@ Im folgenden finden Sie ein Beispiel für den vollständigen XML-Code einer gesp
 
 ## <a name="examples-of-saved-searches"></a>Beispiele für gespeicherte Suchvorgänge
 
-Im folgenden finden Sie Beispiele für \* . Search-MS-Dateien.
+Im Folgenden finden Sie Beispiele für \* SEARCH-MS-Dateien.
 
-### <a name="recent-documentssearch-ms"></a>Zuletzt verwendete Dokumente. Search-MS
+### <a name="recent-documentssearch-ms"></a>Recent Documents.search-ms
 
 ```XML
 <?xml version="1.0"?>
@@ -412,7 +412,7 @@ Im folgenden finden Sie Beispiele für \* . Search-MS-Dateien.
 </persistedQuery>
 ```
 
-### <a name="recent-musicsearch-ms"></a>Neueste Musik. Search-MS
+### <a name="recent-musicsearch-ms"></a>Zuletzt Musik.search-ms
 
 ```XML
 <?xml version="1.0"?>
@@ -437,7 +437,7 @@ Im folgenden finden Sie Beispiele für \* . Search-MS-Dateien.
 </persistedQuery>
 ```
 
-### <a name="recently-shared-by-mesearch-ms"></a>Vor kurzem von mir freigegeben. Suchen Sie nach MS
+### <a name="recently-shared-by-mesearch-ms"></a>Kürzlich von Me.search-ms freigegeben
 
 ```XML
 <?xml version="1.0"?>

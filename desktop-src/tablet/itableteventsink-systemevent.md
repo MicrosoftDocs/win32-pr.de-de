@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, wenn ein System Ereignis verfügbar ist.
+description: Tritt ein, wenn ein Systemereignis verfügbar ist.
 ms.assetid: 3d9e98f0-b11e-4a65-a544-9e1998a80d5f
-title: 'Itableteventsink:: systemevent-Methode'
+title: ITabletEventSink::SystemEvent-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 71b5882fd9e19df43581e00cce55c2af5faa432b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d2e636b5e0b70d13ae33850518e744fbc9425bd65c20002a89b6d38e56dbc50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118041742"
 ---
-# <a name="itableteventsinksystemevent-method"></a>Itableteventsink:: systemevent-Methode
+# <a name="itableteventsinksystemevent-method"></a>ITabletEventSink::SystemEvent-Methode
 
-Tritt auf, wenn ein System Ereignis verfügbar ist.
+Tritt ein, wenn ein Systemereignis verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ HRESULT SystemEvent(
 
 <dl> <dt>
 
-*TCID* \[ in\]
+*tcid* \[ In\]
 </dt> <dd>
 
 Der Bezeichner des Tablets.
 
 </dd> <dt>
 
-*CID* \[ in\]
+*cid* \[ in\]
 </dt> <dd>
 
-Der Bezeichner des Tablettstifts.
+Der Bezeichner des Stifts.
 
 </dd> <dt>
 
-*Ereignis* \[ in\]
+*event* \[ In\]
 </dt> <dd>
 
-Der System Ereignis Code.
+Der Systemereigniscode.
 
 </dd> <dt>
 
-*EventData* \[ in\]
+*eventdata* \[ In\]
 </dt> <dd>
 
-Die System Ereignisdaten.
+Die Systemereignisdaten.
 
 </dd> </dl>
 
@@ -80,30 +80,30 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgende Liste enthält die gültigen Werte für den Ereignis Parameter.
+Die folgende Liste enthält die gültigen Werte für den Ereignisparameter.
 
--   SE \_ tippen
--   SE \_ DBL \_ Tap
--   SE \_ right \_ Tap
--   SE \_ ziehen
--   \_Drag right \_ Drag
--   SE \_ Hold- \_ EINGABETASTE
--   SE \_ Hold \_ Leave
--   SE \_ Hover \_ EINGABETASTE
--   SE- \_ Hover \_ verlassen
--   SE \_ mittlere \_ Maustaste
--   SE- \_ Taste
--   SE- \_ \_ Modifizierertaste
--   SE- \_ Gesten \_ Modus
--   SE- \_ Cursor
+-   \_SE Tippen
+-   \_SE DBL \_ TAP
+-   \_SE TIPPEN \_ MIT DER RECHTEN
+-   \_SE Ziehen
+-   \_SE ZIEHEN NACH \_ RECHTS
+-   \_SE HALTEN SIE DIE \_ EINGABETASTE.
+-   \_SE HOLD \_ LEAVE
+-   \_SE \_HOVER-EINGABETASTE
+-   \_SE HOVER \_ LEAVE
+-   \_SE MITTLERES \_ KLICKEN
+-   \_SE Schlüssel
+-   \_SE MODIFIZIERERTASTE \_
+-   \_SE \_GESTENMODUS
+-   \_SE Cursor
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,17 +111,17 @@ Die folgende Liste enthält die gültigen Werte für den Ereignis Parameter.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itableteventsink-Schnittstelle**](itableteventsink.md)
+[**ITabletEventSink-Schnittstelle**](itableteventsink.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Erweiterte Telefondienste (oder gerätespezifische Telefondienste) beinhalten alle Erweiterungen von TSPI, die vom Dienstanbieter definiert werden.
+description: Die erweiterten Telefon Dienste (oder gerätespezifische Telefondienste) enthalten alle vom Dienstanbieter definierten TSPI-Erweiterungen.
 ms.assetid: 309d77e6-7517-4547-9c56-a471657b64bd
-title: Erweiterte Telefondienste
+title: Erweiterte Telefon Services
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e9f01c12e01b9a843da8a489a8a78e66f8c2cecd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57ae5aca1a28da767aa024803a3fa589d432da57466d1686074ccab538761962
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117763094"
 ---
-# <a name="extended-phone-services"></a>Erweiterte Telefondienste
+# <a name="extended-phone-services"></a>Erweiterte Telefon Services
 
-Erweiterte Telefondienste (oder gerätespezifische Telefondienste) beinhalten alle Erweiterungen von TSPI, die vom Dienstanbieter definiert werden. TSPI definiert einen Mechanismus, mit dem Anbieter von Dienstanbietern TSPI mithilfe von gerätespezifischen Erweiterungen erweitern können. TSPI definiert nur den Erweiterungsmechanismus und bietet dadurch Zugriff auf gerätespezifische Erweiterungen, deren Verhalten vollständig vom Dienstanbieter definiert wird.
+Die erweiterten Telefon Dienste (oder gerätespezifische Telefondienste) enthalten alle vom Dienstanbieter definierten TSPI-Erweiterungen. TSPI definiert einen Mechanismus, mit dem Anbieter von Dienstanbietern TSPI mit gerätespezifischen Erweiterungen erweitern können. TSPI definiert nur den Erweiterungsmechanismus und ermöglicht dadurch den Zugriff auf gerätespezifische Erweiterungen, deren Verhalten vollständig vom Dienstanbieter definiert wird.
 
-TSPI besteht aus skalaren und Bitflag-Daten Konstanten Definitionen, Datenstrukturen, Funktionen und Rückruf Nachrichten. Es werden Prozeduren definiert, die es einem Anbieter ermöglichen, die meisten dieser Erweiterungen zu erweitern, wie in den Themen in diesem Abschnitt beschrieben.
+TSPI besteht aus Skalar- und Bitflag-Datenkonstantendefinitionen, Datenstrukturen, Funktionen und Rückrufmeldungen. Es werden Verfahren definiert, die es einem Anbieter ermöglichen, die meisten dieser Verfahren zu erweitern, wie in den Themen in diesem Abschnitt beschrieben.
 
  
 

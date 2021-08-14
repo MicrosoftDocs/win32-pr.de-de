@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob der sprach Erfassungs-DSP die Vorverarbeitung eines mikrofonarrays ausführt.
+description: Gibt an, ob der Spracherfassungs-DSP die Vorverarbeitung des Mikrofonarrays ausführt.
 ms.assetid: 0f197165-e6e5-456b-9615-1edc8ada7bb5
-title: MFPKEY_WMAAECMA_FEATR_MICARR_PREPROC-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_FEATR_MICARR_PREPROC-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f992d8d26ba547eb1b5d1eac470536a963209f56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ebbba5faeb1a1e70feb1ef6182d3ac2a397a52c4a56f27e767be93f4a3fff773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117873014"
 ---
-# <a name="mfpkey_wmaaecma_featr_micarr_preproc-property"></a>Mfpkey \_ wmaaecma \_ featr \_ micarr \_ Preproc-Eigenschaft
+# <a name="mfpkey_wmaaecma_featr_micarr_preproc-property"></a>MFPKEY \_ WMAAECMA \_ FEATR \_ MICARR \_ PREPROC-Eigenschaft
 
-Gibt an, ob der sprach Erfassungs-DSP die Vorverarbeitung eines mikrofonarrays ausführt.
+Gibt an, ob der Spracherfassungs-DSP die Vorverarbeitung des Mikrofonarrays ausführt.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -21,19 +21,19 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
 ## <a name="default-value"></a>Standardwert
 
-Variant \_ true
+VARIANT \_ TRUE
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Spracherfassungs-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Vorverarbeitung können Sie stationäre Töne entfernen, die die Verarbeitung beeinträchtigen, z. b. ein Ton mit fester Größe.
+Bei der Vorverarbeitung können stehende Töne entfernt werden, die die Verarbeitung beeinträchtigen, z. B. ein Ton mit fester Tonhöhe.
 
 Diese Eigenschaft kann die folgenden Werte aufweisen.
 
@@ -41,16 +41,16 @@ Diese Eigenschaft kann die folgenden Werte aufweisen.
 
 | Wert          | BESCHREIBUNG            |
 |----------------|------------------------|
-| Variant \_ false | Deaktivieren Sie die Vorverarbeitung. |
-| Variant \_ true  | Aktivieren der Vorverarbeitung.  |
+| VARIANT \_ FALSE | Deaktivieren Sie die Vorverarbeitung. |
+| VARIANT \_ TRUE  | Aktivieren Sie die Vorverarbeitung.  |
 
 
 
  
 
-Der Standardwert dieser Eigenschaft ist Variant \_ true (aktiviert). Vor dem Festlegen dieser Eigenschaft müssen Sie die Eigenschaft [mfpkey \_ wmaaecma \_ Feature \_ Mode](mfpkey-wmaaecma-feature-modeproperty.md) auf Variant \_ true festlegen.
+Der Standardwert dieser Eigenschaft ist VARIANT \_ TRUE (aktiviert). Bevor Sie diese Eigenschaft festlegen, müssen Sie die [MFPKEY \_ WMAAECMA \_ FEATURE \_ MODE-Eigenschaft](mfpkey-wmaaecma-feature-modeproperty.md) auf VARIANT \_ TRUE festlegen.
 
-Der DSP verwendet diese Eigenschaft nur, wenn die Verarbeitung von mikrofonarrays aktiviert ist.
+Der DSP verwendet diese Eigenschaft nur, wenn die Mikrofonarrayverarbeitung aktiviert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,20 +58,20 @@ Der DSP verwendet diese Eigenschaft nur, wenn die Verarbeitung von mikrofonarray
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Spracherfassungs-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

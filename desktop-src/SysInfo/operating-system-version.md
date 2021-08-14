@@ -1,27 +1,27 @@
 ---
-description: Die Versions-API-Hilfsfunktionen werden verwendet, um die Version des Betriebssystems zu ermitteln, die derzeit ausgeführt wird. Weitere Informationen finden Sie unter erhalten der System Version.
+description: Die Versions-API-Hilfsfunktionen werden verwendet, um die Version des Betriebssystems zu bestimmen, das derzeit ausgeführt wird. Weitere Informationen finden Sie unter Abrufen der Systemversion.
 ms.assetid: 1a70b1d9-ed66-4201-9921-4e26e4001020
 title: Version des Betriebssystems
 ms.topic: article
 ms.date: 09/15/2020
-ms.openlocfilehash: 73eb9a81880f29f9292713af46c5c79a7e9eb2de
-ms.sourcegitcommit: 7ea69db68bca2b1592802e676ada8432a2583410
+ms.openlocfilehash: ae90f4eac5546fccd7513d781234896fbbbda93ff3723a9ac1db438321ecf214
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "104039789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117763952"
 ---
 # <a name="operating-system-version"></a>Version des Betriebssystems
 
-Die [Versions-API-Hilfsfunktionen](version-helper-apis.md) werden verwendet, um die Version des Betriebssystems zu ermitteln, die derzeit ausgeführt wird. Weitere Informationen finden Sie unter [erhalten der System Version](getting-the-system-version.md).
+Die [Versions-API-Hilfsfunktionen](version-helper-apis.md) werden verwendet, um die Version des Betriebssystems zu bestimmen, das derzeit ausgeführt wird. Weitere Informationen finden Sie unter [Abrufen der Systemversion](getting-the-system-version.md).
 
-In der folgenden Tabelle werden die aktuellen Versionsnummern des Betriebssystems zusammengefasst.
+In der folgenden Tabelle sind die neuesten Betriebssystemversionsnummern zusammengefasst.
 
 | Betriebssystem | Versionsnummer |
 |------------------|----------------|
-| Windows 10       | 10,0\*         |
-| Windows Server 2019 | 10,0\*      |
-| Windows Server 2016 | 10,0\*      |
+| Windows 10       | 10.0\*         |
+| Windows Server 2019 | 10.0\*      |
+| Windows Server 2016 | 10.0\*      |
 | Windows 8.1      | 6.3\*          |
 | Windows Server 2012 R2 | 6.3\*    |
 | Windows 8        | 6.2            |
@@ -31,24 +31,24 @@ In der folgenden Tabelle werden die aktuellen Versionsnummern des Betriebssystem
 | Windows Server 2008 | 6.0         |
 | Windows Vista    | 6.0            |
 | Windows Server 2003 R2 | 5,2      |
-| Windows Server 2003 | 5,2         |
-| Windows XP 64-Bit-Edition | 5,2   |
+| Windows Server 2003 | 5,2         |
+| Windows XP 64-Bit Edition | 5,2   |
 | Windows XP | 5,1                  |
-| Windows 2000     | 5.0            |
+| Windows 2000     | 5.0            |
 
-**\*** Für Anwendungen, die sich für Windows 8.1 oder Windows 10 manifestieren. Anwendungen, die nicht für Windows 8.1 oder Windows 10 angezeigt werden, geben den Wert für die Windows 8-Betriebssystemversion (6,2) zurück. Informationen zum manifestieren Ihrer Anwendungen für Windows 8.1 oder Windows 10 finden Sie unter [Zielanwendung für Windows](targeting-your-application-at-windows-8-1.md).<br/>
+**\*** Für Anwendungen, die für die Windows 8.1 oder Windows 10. Anwendungen, die sich nicht für Windows 8.1 oder Windows 10 manifestieren, geben den wert Windows 8 Betriebssystemversion (6.2) zurück. Informationen zum Manifestieren Ihrer Anwendungen für Windows 8.1 oder Windows 10 Sie unter [Targeting your application for Windows](targeting-your-application-at-windows-8-1.md).<br/>
 
-Die Identifizierung des aktuellen Betriebssystems ist in der Regel nicht die beste Methode, um zu bestimmen, ob ein bestimmtes Betriebssystem Feature vorhanden ist. Dies liegt daran, dass dem Betriebssystem möglicherweise neue Features in einer verteilbaren dll hinzugefügt wurden. Anstatt die Version der- [API](version-helper-apis.md) -Hilfsobjekte zum Ermitteln der Betriebssystem Plattform oder der Versionsnummer zu verwenden, testen Sie, ob das Feature selbst vorhanden ist.
+Die Identifizierung des aktuellen Betriebssystems ist in der Regel nicht die beste Möglichkeit, um zu bestimmen, ob ein bestimmtes Betriebssystemfeature vorhanden ist. Dies liegt daran, dass dem Betriebssystem möglicherweise neue Features in einer verteilbaren DLL hinzugefügt wurden. Anstatt die [Versions-API-Hilfsfunktionen](version-helper-apis.md) zu verwenden, um die Betriebssystemplattform oder Versionsnummer zu bestimmen, testen Sie, ob das Feature selbst verfügbar ist.
 
-Um die beste Methode zum Testen auf eine Funktion zu ermitteln, lesen Sie die Dokumentation für das relevante Feature. In der folgenden Liste werden einige gängige Techniken für die Funktionserkennung erläutert:
+Informationen zum Ermitteln der besten Methode zum Testen eines Features finden Sie in der Dokumentation zu dem für Sie interessanten Feature. In der folgenden Liste werden einige gängige Techniken für die Featureerkennung erläutert:
 
-- Sie können überprüfen, ob die einem Feature zugeordneten Funktionen vorhanden sind. Um zu testen, ob eine Funktion in einer System-DLL vorhanden ist, müssen Sie die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion zum Laden der DLL-Datei aufzurufen. Anschließend können Sie die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen, um zu bestimmen, ob die gewünschte Funktion in der dll vorhanden ist. Verwenden Sie den von **GetProcAddress** zurückgegebenen Zeiger zum Aufrufen der Funktion. Beachten Sie, dass auch dann, wenn die Funktion vorhanden ist, ein Stub ist, der nur einen Fehlercode zurückgibt, wie z \_ \_ . b \_ . nicht implementierte Fehler Aufrufe.
-- Sie können das vorhanden sein einiger Features mithilfe der [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion bestimmen. Beispielsweise können Sie mehrere Anzeige Monitore durch Aufrufen von **GetSystemMetrics**(SM \_ cmonitors) erkennen.
-- Es gibt mehrere Versionen der verteilbaren DLLs, die Shell und allgemeine Steuerungsfunktionen implementieren. Informationen zum Bestimmen der Versionen, die auf dem System vorhanden sind, auf dem Ihre Anwendung ausgeführt wird, finden Sie im Thema [Shell-und Common Controls-Versionen](/previous-versions/windows/desktop/legacy/bb776779(v=vs.85)).
+- Sie können testen, ob die einem Feature zugeordneten Funktionen vorliegen. Um das Vorhandensein einer Funktion in einer System-DLL zu testen, rufen Sie die [**LoadLibrary-Funktion**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) auf, um die DLL zu laden. Rufen Sie dann die [**GetProcAddress-Funktion**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) auf, um zu bestimmen, ob die funktion von Interesse in der DLL vorhanden ist. Verwenden Sie den von **GetProcAddress** zurückgegebenen Zeiger, um die Funktion aufzurufen. Beachten Sie, dass es sich selbst dann, wenn die Funktion vorhanden ist, um einen Stub handelt, der nur einen Fehlercode zurückgibt, z. B. ERROR \_ CALL \_ NOT \_ IMPLEMENTED.
+- Sie können das Vorhandensein einiger Features mithilfe der [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) bestimmen. Beispielsweise können Sie mehrere Anzeigemonitore erkennen, indem **Sie GetSystemMetrics**(SM \_ CMONITORS) aufrufen.
+- Es gibt mehrere Versionen der verteilbaren DLLs, die Shell- und allgemeine Steuerungsfeatures implementieren. Informationen zum Bestimmen, welche Versionen auf dem System vorhanden sind, auf dem Ihre Anwendung ausgeführt wird, finden Sie im Thema [Shell- und Common Controls-Versionen](/previous-versions/windows/desktop/legacy/bb776779(v=vs.85)).
 
-Wenn Sie ein bestimmtes Betriebssystem benötigen, achten Sie darauf, dass Sie es als unterstützte Mindestversion verwenden, anstatt den Test für das einzige Betriebssystem zu entwerfen. Auf diese Weise kann der Erkennungs Code weiterhin in zukünftigen Versionen von Windows verwendet werden.
+Wenn Sie ein bestimmtes Betriebssystem benötigen, stellen Sie sicher, dass Sie es als unterstützte Mindestversion verwenden, anstatt den Test für das einzige Betriebssystem zu entwerfen. Auf diese Weise funktioniert Ihr Erkennungscode weiterhin mit zukünftigen Versionen von Windows.
 
-Beachten Sie, dass eine 32-Bit-Anwendung erkennen kann, ob Sie unter WOW64 ausgeführt wird, indem Sie die [**IsWow64Process**](/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process) -Funktion aufrufen. Sie kann zusätzliche Prozessor Informationen abrufen, indem Sie die [**GetNativeSystemInfo**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getnativesysteminfo) -Funktion aufrufen.
+Beachten Sie, dass eine 32-Bit-Anwendung erkennen kann, ob sie unter WOW64 ausgeführt wird, indem sie die [**IsWow64Process-Funktion**](/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process) aufruft. Sie kann zusätzliche Prozessorinformationen abrufen, indem sie die [**GetNativeSystemInfo-Funktion**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getnativesysteminfo) aufruft.
 
-Weitere Informationen finden Sie unter [Windows 10-Releaseinformationen](/windows/release-information/) und [Windows Lifecycle-Faktenblatt](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+Weitere Informationen finden Sie unter [Windows 10 Releaseinformationen](/windows/release-information/) und [Windows Lifecycle Fact Sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 

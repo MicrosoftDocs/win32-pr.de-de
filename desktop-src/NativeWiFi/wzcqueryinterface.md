@@ -1,7 +1,7 @@
 ---
-description: Stellt ausführliche Informationen für eine drahtlose LAN-Schnittstelle bereit, die vom drahtlos Konfigurations Dienst für drahtlose Netzwerke verwaltet wird.
+description: Enthält ausführliche Informationen zu einer WLAN-Schnittstelle, die vom Wireless Zero Configuration-Dienst verwaltet wird.
 ms.assetid: e1d2260b-a71f-481e-b505-b5d1a17ee221
-title: Wzcqueryinterface-Funktion (wzcsapi. h)
+title: WZCQueryInterface-Funktion (Wzcsapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Wzcsapi.dll
-ms.openlocfilehash: 36457eebf5c38b32bb46eb8cfa44cae104f1bc6b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3dd7ce876501486b9bec4dbad63ce5812b910b32b9dcdaa1eb80aff3e7cc415e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797410"
 ---
-# <a name="wzcqueryinterface-function"></a>Wzcqueryinterface-Funktion
+# <a name="wzcqueryinterface-function"></a>WZCQueryInterface-Funktion
 
-\[**Wzcqueryinterface** wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die Funktion [**wlanqueryinterface**](/windows/desktop/api/Wlanapi/nf-wlanapi-wlanqueryinterface) . Weitere Informationen finden Sie unter Informationen zur [nativen WiFi-API](about-the-native-wifi-api.md). \]
+\[**WZCQueryInterface** wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie [**stattdessen die WlanQueryInterface-Funktion.**](/windows/desktop/api/Wlanapi/nf-wlanapi-wlanqueryinterface) Weitere Informationen finden Sie unter [Informationen zur Native Wifi-API.](about-the-native-wifi-api.md) \]
 
-Die **wzcqueryinterface** -Funktion stellt ausführliche Informationen für eine drahtlose LAN-Schnittstelle bereit, die vom drahtlos Konfigurations Dienst für drahtlose Daten verwaltet wird.
+Die **WZCQueryInterface-Funktion** enthält ausführliche Informationen zu einer wlan-Schnittstelle, die vom Wireless Zero Configuration-Dienst verwaltet wird.
 
 Stellt ausführliche Informationen für eine bestimmte Schnittstelle bereit.
 
@@ -46,35 +46,35 @@ DWORD WZCQueryInterface(
 
 <dl> <dt>
 
-*psrvaddr* \[ in\]
+*pSrvAddr* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen des Computers enthält, auf dem diese Funktion ausgeführt werden soll. Wenn dieser Parameter **null** ist, wird der Konfigurations Dienst für drahtlose NULL auf dem lokalen Computer abgefragt.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Computers enthält, auf dem diese Funktion ausgeführt werden soll. Wenn dieser Parameter **NULL ist,** wird der Wireless Zero Configuration-Dienst auf dem lokalen Computer abgefragt.
 
-Wenn der angegebene *psrvaddr* -Parameter ein Remote Computer ist, muss der Remote Computer Remote-RPC-Aufrufe unterstützen.
+Wenn der *angegebene pSrvAddr-Parameter* ein Remotecomputer ist, muss der Remotecomputer REMOTE-RPC-Aufrufe unterstützen.
 
 </dd> <dt>
 
-*dwInFlags* \[ in\]
+*dwInFlags* \[ In\]
 </dt> <dd>
 
-Die Felder, die abgefragt werden sollen. Dabei handelt es sich um eine Bitmaske, die eine beliebige Kombination der folgenden Flags enthalten kann.
+Die felder, die abgefragt werden sollen. Dies ist eine Bitmaske, die eine beliebige Kombination der folgenden Flags enthalten kann.
 
 
 
 | Wert                                                                                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="INTF_DYNFLAGS"></span><span id="intf_dynflags"></span><dl> <dt>**INTF \_ Dynflags**</dt> <dt>0x00000010</dt> </dl>             | Gibt den Wert für den **dwdynflags** -Member in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf den der *pintf* -Parameter verweist.<br/>                                                                                                          |
-| <span id="INTF_DESCR"></span><span id="intf_descr"></span><dl> <dt>**INTF \_ Descr**</dt> <dt>0x00010000 bis</dt> </dl>                      | Gibt den Wert für den **wszdescr** -Member in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf den der *pintf* -Parameter verweist.<br/>                                                                                                            |
-| <span id="INTF_NDISMEDIA"></span><span id="intf_ndismedia"></span><dl> <dt>**INTF \_ Ndismedia**</dt> <dt>0x00020000</dt> </dl>          | Gibt die Werte für die Member **ulmediastate**, **ulmediatype** und **ulphysicalmediatype** in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf die durch den *pintf* -Parameter verwiesen wird.<br/>                                                        |
-| <span id="INTF_PREFLIST"></span><span id="intf_preflist"></span><dl> <dt>**INTF \_ Preflist**</dt> <dt>0x00040000</dt> </dl>             | Gibt die bevorzugte Liste von Netzwerken im **rdstssidlist** -Member der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf die durch den *pintf* -Parameter verwiesen wird.<br/>                                                                                    |
-| <span id="INTF_CAPABILITIES"></span><span id="intf_capabilities"></span><dl> <dt>**INTF \_ Funktionen**</dt> <dt>0x00080000</dt> </dl> | Gibt die Werte für die **DW-Funktionen** und die **rdniccapabili-** Elemente in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf die durch den *pintf* -Parameter verwiesen wird.<br/>                                                                      |
-| <span id="INTF_INFRAMODE"></span><span id="intf_inframode"></span><dl> <dt>**INTF \_ Inframode**</dt> <dt>0x00200000</dt> </dl>          | Gibt den Wert für das **ninframode** -Element in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf die durch den *pintf* -Parameter verwiesen wird.<br/> Der **ninframode** -Member ist nur in einigen Schnittstellen Kontext Zuständen gültig.<br/>                     |
-| <span id="INTF_AUTHMODE"></span><span id="intf_authmode"></span><dl> <dt>**INTF \_ Authmode**</dt> <dt>0x00400000</dt> </dl>             | Gibt den Wert für den **nauthmode** -Member in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf den der *pintf* -Parameter verweist. <br/> Der **nauthmode** -Member ist nur in einigen Schnittstellen Kontext Zuständen gültig.<br/>                      |
-| <span id="INTF_WEPSTATUS"></span><span id="intf_wepstatus"></span><dl> <dt>**INTF \_ Wepstatus**</dt> <dt>0x00800000</dt> </dl>          | Gibt den Wert für den **nwepstatus** -Member in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf den der *pintf* -Parameter verweist. <br/> Der **nwepstatus** -Member ist nur in bestimmten Schnittstellen Kontext Zuständen gültig.<br/>                    |
-| <span id="INTF_SSID"></span><span id="intf_ssid"></span><dl> <dt>**INTF \_ SSID**</dt> <dt>0x01000000</dt> </dl>                         | Gibt den Wert für den **rdssid-** Member in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf den der *pintf* -Parameter verweist.<br/> Der **rdssid-** Member ist nur in einigen Schnittstellen Kontext Zuständen gültig.<br/>                             |
-| <span id="INTF_BSSID"></span><span id="intf_bssid"></span><dl> <dt>**INTF \_ BSSID**</dt> <dt>0x02000000</dt> </dl>                      | Gibt den Wert für den **rdbssid-** Member in der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf den der *pintf* -Parameter verweist.<br/> Der **rdbssid-** Member ist nur in einigen Schnittstellen Kontext Zuständen gültig.<br/>                           |
-| <span id="INTF_BSSIDLIST"></span><span id="intf_bssidlist"></span><dl> <dt>**INTF \_ Bssidlist**</dt> <dt>0x04000000</dt> </dl>          | Gibt die sichtbare Liste der Netzwerke im **rdbssidlist** -Member der [**INTF- \_ Eintrags**](intf-entry.md) Struktur zurück, auf die durch den *pintf* -Parameter verwiesen wird.<br/> Der **rdbssidlist** -Member ist nur in einigen Schnittstellen Kontext Zuständen gültig.<br/> |
+| <span id="INTF_DYNFLAGS"></span><span id="intf_dynflags"></span><dl> <dt>**INTF \_ DYNFLAGS-0x00000010**</dt> <dt></dt> </dl>             | Gibt den Wert für den **dwDynFlags-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/>                                                                                                          |
+| <span id="INTF_DESCR"></span><span id="intf_descr"></span><dl> <dt>**INTF \_ DESCR**</dt> <dt>0x00010000</dt> </dl>                      | Gibt den Wert für den **wszDescr-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/>                                                                                                            |
+| <span id="INTF_NDISMEDIA"></span><span id="intf_ndismedia"></span><dl> <dt>**INTF \_ NDISMEDIA-0x00020000**</dt> <dt></dt> </dl>          | Gibt die Werte für **die Member ulMediaState,** **ulMediaType** und **ulPhysicalMediaType** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/>                                                        |
+| <span id="INTF_PREFLIST"></span><span id="intf_preflist"></span><dl> <dt>**INTF \_ PREFLIST-0x00040000**</dt> <dt></dt> </dl>             | Gibt die bevorzugte Liste der Netzwerke im **rdStSSIDList-Member** der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/>                                                                                    |
+| <span id="INTF_CAPABILITIES"></span><span id="intf_capabilities"></span><dl> <dt>**INTF \_ CAPABILITIES**</dt> <dt>0x00080000</dt> </dl> | Gibt die Werte für **die dwCapabilities-** und **rdNicCapabilities-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter zeigt.*<br/>                                                                      |
+| <span id="INTF_INFRAMODE"></span><span id="intf_inframode"></span><dl> <dt>**INTF \_ INFRAMODE-0x00200000**</dt> <dt></dt> </dl>          | Gibt den Wert für den **nInfraMode-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/> Der **nInfraMode-Member** ist nur in einigen Schnittstellenkontextzuständen gültig.<br/>                     |
+| <span id="INTF_AUTHMODE"></span><span id="intf_authmode"></span><dl> <dt>**INTF \_ AUTHMODE-0x00400000**</dt> <dt></dt> </dl>             | Gibt den Wert für den **nAuthMode-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt. <br/> Der **nAuthMode-Member** ist nur in einigen Schnittstellenkontextzuständen gültig.<br/>                      |
+| <span id="INTF_WEPSTATUS"></span><span id="intf_wepstatus"></span><dl> <dt>**INTF \_ WEPSTATUS-0x00800000**</dt> <dt></dt> </dl>          | Gibt den Wert für das **nWepStatus-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt. <br/> Der **nWepStatus-Member** ist nur in einigen Schnittstellenkontextzuständen gültig.<br/>                    |
+| <span id="INTF_SSID"></span><span id="intf_ssid"></span><dl> <dt>**INTF \_ SSID-0x01000000**</dt> <dt></dt> </dl>                         | Gibt den Wert für den **rdSSID-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/> Der **rdSSID-Member** ist nur in einigen Schnittstellenkontextzuständen gültig.<br/>                             |
+| <span id="INTF_BSSID"></span><span id="intf_bssid"></span><dl> <dt>**INTF \_ BSSID-0x02000000**</dt> <dt></dt> </dl>                      | Gibt den Wert für das **rdBSSID-Member** in der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf das der *pIntf-Parameter* zeigt.<br/> Der **rdBSSID-Member** ist nur in einigen Schnittstellenkontextzuständen gültig.<br/>                           |
+| <span id="INTF_BSSIDLIST"></span><span id="intf_bssidlist"></span><dl> <dt>**INTF \_ BSSIDLIST-0x04000000**</dt> <dt></dt> </dl>          | Gibt die sichtbare Liste der Netzwerke im **rdBSSIDList-Member** der [**INTF \_ ENTRY-Struktur**](intf-entry.md) zurück, auf die der *pIntf-Parameter* zeigt.<br/> Der **rdBSSIDList-Member** ist nur in einigen Schnittstellenkontextzuständen gültig.<br/> |
 
 
 
@@ -82,23 +82,23 @@ Die Felder, die abgefragt werden sollen. Dabei handelt es sich um eine Bitmaske,
 
 </dd> <dt>
 
-*pintf* \[ in, out\]
+*pIntf* \[ in, out\]
 </dt> <dd>
 
-Bei Eingabe ein Zeiger auf den Schlüssel der abzufragende Schnittstelle. Bei der Ausgabe ein Zeiger auf die angeforderten Schnittstellen Daten. Dieser Parameter ist ein Zeiger auf eine [**INTF- \_ Eintrags**](intf-entry.md) Struktur.
+Bei der Eingabe ein Zeiger auf den Schlüssel der zu abfragenden Schnittstelle. Bei der Ausgabe ein Zeiger auf die angeforderten Schnittstellendaten. Dieser Parameter ist ein Zeiger auf eine [**INTF \_ ENTRY-Struktur.**](intf-entry.md)
 
 </dd> <dt>
 
-*pdwOutFlags* \[ vorgenommen\]
+*pdwOutFlags* \[ out\]
 </dt> <dd>
 
-Eine Reihe von Feldern, die erfolgreich abgerufen wurden.
+Ein Satz von Feldern wurde erfolgreich abgerufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
 Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Rückgabecodes sein.
 
@@ -106,30 +106,30 @@ Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Rück
 
 | Rückgabecode                                                                                               | Beschreibung                                                                                                                                                                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Fehler-Arena wurde durchlaufen \_ \_**</dt> </dl>      | Die Speicher Kontroll Blöcke wurden zerstört. Dieser Fehler wird zurückgegeben, wenn der Konfigurations Dienst für drahtlose NULL keine internen Objekte initialisiert hat.<br/>                                                                                                                      |
-| <dl> <dt>**Fehler \_ Datei \_ nicht \_ gefunden.**</dt> </dl>    | Die angegebene Datei wurde nicht gefunden. Dieser Fehler wird zurückgegeben, wenn die GUID im **wszguid** -Member der [**INTF- \_ Eintrags**](intf-entry.md) Struktur, auf die durch den *pintf* -Parameter verwiesen wird, nicht mit einer der Drahtlos-LAN-Schnittstellen auf dem lokalen Computer entsprach. <br/> |
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl>  | Ein Parameter ist falsch. Dieser Fehler wird zurückgegeben, wenn der *pintf* -Parameter **null** ist. Dieser Fehler wird zurückgegeben, wenn das **wszguid** -Element der [**INTF- \_ Eintrags**](intf-entry.md) Struktur, auf die durch den *pintf* -Parameter verwiesen wird, **null** ist. <br/>                            |
-| <dl> <dt>**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um diese Anforderung zu verarbeiten und Arbeitsspeicher für die Abfrageergebnisse zuzuweisen.<br/>                                                                                                                                                                       |
-| <dl> <dt>**RPC- \_ Status**</dt> </dl>                | Verschiedene Fehlercodes.<br/>                                                                                                                                                                                                                                                    |
+| <dl> <dt>**FEHLER \_ BEIM \_ PAPIERKORB**</dt> </dl>      | Die Speicherkontrollblöcke wurden zerstört. Dieser Fehler wird zurückgegeben, wenn der Wireless Zero Configuration-Dienst keine internen Objekte initialisiert hat.<br/>                                                                                                                      |
+| <dl> <dt>**FEHLERDATEI \_ \_ NICHT \_ GEFUNDEN**</dt> </dl>    | Die angegebene Datei wurde nicht gefunden. Dieser Fehler wird zurückgegeben, wenn die GUID im **wszGuid-Member** der [**INTF \_ ENTRY-Struktur,**](intf-entry.md) auf die der *pIntf-Parameter* verweist, nicht mit einer der WLAN-Schnittstellen auf dem lokalen Computer übereinstimmen. <br/> |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl>  | Ein Parameter ist falsch. Dieser Fehler wird zurückgegeben, wenn *der pIntf-Parameter* **NULL ist.** Dieser Fehler wird zurückgegeben, wenn der **wszGuid-Member** der [**INTF \_ ENTRY-Struktur,**](intf-entry.md) auf die der *pIntf-Parameter* verweist, **NULL ist.** <br/>                            |
+| <dl> <dt>**FEHLER: \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um diese Anforderung zu verarbeiten und Arbeitsspeicher für die Abfrageergebnisse zu reservieren.<br/>                                                                                                                                                                       |
+| <dl> <dt>**\_RPC-STATUS**</dt> </dl>                | Verschiedene Fehlercodes.<br/>                                                                                                                                                                                                                                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **wszguid** -Member der [**INTF- \_ Eintrags**](intf-entry.md) Struktur, auf den der *pintf* -Parameter verweist, muss eine Schnittstellen-GUID für eine drahtlose LAN-Schnittstelle enthalten. Eine Liste der Drahtlos-LAN-Schnittstellen kann durch Aufrufen der [**wzcenumschlag Interfaces**](wzcenuminterfaces.md) -Funktion abgerufen werden.
+Der **wszGuid-Member** der [**INTF \_ ENTRY-Struktur,**](intf-entry.md) auf die der *pIntf-Parameter* zeigt, muss eine Schnittstellen-GUID für eine DRAHTLOSE LAN-Schnittstelle enthalten. Eine Liste der WLAN-Schnittstellen kann durch Aufrufen der [**WZCEnumInterfaces-Funktion abgerufen**](wzcenuminterfaces.md) werden.
 
-Die folgenden Member der [**INTF- \_ Eintrags**](intf-entry.md) Struktur, auf die von *pintf* verwiesen wird, müssen vor einem **wzcqueryinterface** -Befehl auf 0 festgelegt werden: **rdssid**, **rdbssid**, **rdbssidlist**, **rdstssidlist** und **rdctrldata**.
+Die folgenden Member der [**INTF \_ ENTRY-Struktur,**](intf-entry.md) auf die *pIntf* zeigt, müssen vor einem Aufruf der **WZCQueryInterface-Funktion** auf 0 festgelegt werden: **rdSSID,** **rdBSSID,** **rdBSSIDList,** **rdStSSIDList** und **rdCtrlData**.
 
-Der Konfigurations Dienst für drahtlose NULL-Werte aktualisiert den Medien Status nicht in einer Weise, auch wenn Medien verbundene und getrennte Ereignisse empfangen werden. Eine Anwendung sollte eine Medien Zustands Aktualisierung erzwingen, indem Sie die [**wzcrefreshinterface**](wzcrefreshinterface.md) -Funktion aufrufen, bevor Sie die **wzcqueryinterface** -Funktion aufrufen, wenn der NDIS-Medien Zustand angefordert werden soll (Das INTF \_ ndismedia-Bit wird im *dwInFlags* -Parameter festgelegt).
+Der Drahtlose Zero Configuration-Dienst aktualisiert den Medienzustand selbst dann nicht automatisch, wenn ereignisse empfangen werden, die mit medien verbundenen und getrennten Medien verbunden sind. Eine Anwendung sollte eine Aktualisierung des Medienzustands erzwingen, indem sie die [**WZCRefreshInterface-Funktion**](wzcrefreshinterface.md) aufruft, bevor sie die **WZCQueryInterface-Funktion** aufruft, wenn der NDIS-Medienzustand angefordert werden soll (das INTF NDISMEDIA-Bit wird im \_ *dwInFlags-Parameter* festgelegt).
 
-Wenn der *dwInFlags* -Parameter **INTF- \_ bssidlist** enthält, legt die **wzcqueryinterface** -Funktion nicht die-Eigenschaft " *dwoutflags* " mit **INTF \_ bssidlist** fest, wenn die sichtbare Liste der Netzwerke leer ist. Wenn der *dwInFlags* -Parameter **INTF \_ SSID** enthält, werden die *dwoutflags* von der **wzcqueryinterface** -Funktion nicht mit **INTF \_ SSID** festgelegt, wenn keine SSID verfügbar ist.
+Wenn der *dwInFlags-Parameter* **INTF \_ BSSIDLIST** enthält, wird von der **WZCQueryInterface-Funktion** nicht *dwOutFlags* mit **INTF \_ BSSIDLIST** festgelegt, wenn die sichtbare Liste der Netzwerke leer ist. Wenn der *dwInFlags-Parameter* **INTF \_ SSID** enthält, wird von der **WZCQueryInterface-Funktion** *nicht dwOutFlags* mit **INTF \_ SSID** festgelegt, wenn keine SSID verfügbar ist.
 
-Wenn die **wzcqueryinterface** -Funktion den Fehler Erfolg zurückgibt \_ , sollte der Aufrufer die [**LocalFree**](/windows/win32/api/winbase/nf-winbase-localfree) -Funktion mit dem *pintf* -Parameter aufrufen, um die für die zurückgegebenen Daten zugewiesenen internen Puffer freizugeben, sobald diese Informationen nicht mehr benötigt werden. Dadurch werden die Puffer freigegeben, die von den Elementen **rdssid**, **rdbssid**, **rdbssidlist**, **rdstssidlist** und **rdctrldata** der [**INTF- \_ Eintrags**](intf-entry.md) Struktur verwendet werden, auf die durch den *pintf* -Parameter verwiesen wird.
+Wenn die **WZCQueryInterface-Funktion** ERROR SUCCESS zurückgibt, sollte der Aufrufer die LocalFree-Funktion mit dem \_ *pIntf-Parameter* aufrufen, um die internen Puffer frei zu geben, die für die zurückgegebenen Daten zugeordnet sind, sobald diese Informationen nicht mehr benötigt werden. [](/windows/win32/api/winbase/nf-winbase-localfree) Dadurch werden die Puffer, die von den **RdSSID-,** **rdBSSID-,** **rdBSSIDList-,** **rdStSSIDList-** und **rdCtrlData-Membern** der [**INTF \_ ENTRY-Struktur**](intf-entry.md) verwendet werden, auf die vom *pIntf-Parameter* verwiesen wird, frei.
 
 > [!Note]  
-> Die Header Datei " *wzcsapi. h* " und die Datei " *wzcsapi. lib* Import Library" sind im Windows SDK nicht verfügbar.
+> Die *Wzcsapi.h-Headerdatei* und *die Wzcsapi.lib-Importbibliotheksdatei* sind im Windows SDK nicht verfügbar.
 
  
 
@@ -139,30 +139,30 @@ Wenn die **wzcqueryinterface** -Funktion den Fehler Erfolg zurückgibt \_ , soll
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP3<br/>                                                         |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Wzcsapi. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Wzcsapi. lib</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Wzcsapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Wzcsapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wzcsapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**INTF- \_ Eintrag**](intf-entry.md)
+[**\_INTF-EINTRAG**](intf-entry.md)
 </dt> <dt>
 
-[**Wzceapolgetinterfaceparametriams**](wzceapolgetinterfaceparams.md)
+[**WZCEapolGetInterfaceParams**](wzceapolgetinterfaceparams.md)
 </dt> <dt>
 
-[**Wzcenumschlag-Schnittstellen**](wzcenuminterfaces.md)
+[**WZCEnumInterfaces**](wzcenuminterfaces.md)
 </dt> <dt>
 
-[**Wzkrefreshinterface**](wzcrefreshinterface.md)
+[**WZCRefreshInterface**](wzcrefreshinterface.md)
 </dt> </dl>
 
  

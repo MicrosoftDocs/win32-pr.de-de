@@ -1,28 +1,28 @@
 ---
-title: Festlegen von Dateneinheiten Erweiterungen
-description: Festlegen von Dateneinheiten Erweiterungen
+title: Festlegen von Dateneinheitserweiterungen
+description: Festlegen von Dateneinheitserweiterungen
 ms.assetid: 28328c9e-8590-48b8-92b6-1c0475978246
 keywords:
-- Advanced Systems Format (ASF), Dateneinheiten Erweiterungen
-- ASF (Advanced Systems Format), Dateneinheiten Erweiterungen
-- Erweiterungen für Dateneinheiten, festlegen
-- Streams, Dateneinheiten Erweiterungen
+- Advanced Systems Format (ASF), Dateneinheitserweiterungen
+- ASF (Advanced Systems Format), Dateneinheitserweiterungen
+- Dateneinheitserweiterungen,Einstellung
+- Streams, Dateneinheitserweiterungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 822a05a6e6bcbb9f0101d32eed05f2b6c5c68dc8
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: f1bb88e9aa0c3bc00d4c21a1c262b7ff4a44fbc2f426f139b3b782a0bbdb7b83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104516664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118197482"
 ---
-# <a name="setting-data-unit-extensions"></a>Festlegen von Dateneinheiten Erweiterungen
+# <a name="setting-data-unit-extensions"></a>Festlegen von Dateneinheitserweiterungen
 
-Einige Streams sind für die Verwendung von dateneinheits Erweiterungen konfiguriert, um ergänzenden Daten einzelnen Beispielen zuzuordnen. Weitere Informationen zu erweiterten Beispielen finden Sie unter [Dateneinheiten Erweiterungen](data-unit-extensions.md).
+Einige Datenströme sind für die Verwendung von Dateneinheitserweiterungen konfiguriert, um ergänzende Daten einzelnen Beispielen zu zuordnen. Weitere Informationen zu erweiterten Beispielen finden Sie unter [Data Unit Extensions](data-unit-extensions.md).
 
-Die meisten Dateneinheiten Erweiterungs Systeme erfordern eine Erweiterung in jedem Beispiel im Stream. Wenn Sie keine Erweiterung der richtigen Größe angeben, wird das Beispiel vom Writer abgelehnt.
+Die meisten Dateneinheitserweiterungssysteme erfordern eine Erweiterung für jedes Beispiel im Stream. Wenn Sie keine Erweiterung der richtigen Größe bereitstellen, lehnt der Writer das Beispiel ab.
 
-Wenn Sie einem Beispiel erweiterte Daten hinzufügen möchten, verwenden Sie die [**INSSBuffer3:: SetProperty**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer3-setproperty) -Methode. Informationen zu den für einen Stream konfigurierten Dateneinheiten Erweiterungen finden Sie unter Verwendung der Methoden [**IWMStreamConfig2:: getdataunitextensioncount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-getdataunitextensioncount) und [**IWMStreamConfig2:: getdataunitextension**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-getdataunitextension) .
+Um einem Beispiel erweiterte Daten hinzuzufügen, verwenden Sie die [**INSSBuffer3::SetProperty-Methode.**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer3-setproperty) Mithilfe der [**Methoden IWMStreamConfig2::GetDataUnitExtensionCount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-getdataunitextensioncount) und [**IWMStreamConfig2::GetDataUnitExtension**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-getdataunitextension) können Sie Informationen zu den für einen Stream konfigurierten Dateneinheitserweiterungen erhalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -34,9 +34,9 @@ Wenn Sie einem Beispiel erweiterte Daten hinzufügen möchten, verwenden Sie die
 [**Schreiben von ASF-Dateien**](writing-asf-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

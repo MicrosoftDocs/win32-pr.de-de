@@ -4,16 +4,16 @@ description: Referenz zur Paketressourcenindizierung (PRI)
 ms.assetid: 15f41d83-d729-45e4-a6bb-5f8c6b78293c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef99acafe4fbdadef26c5947145ad734ec44b7bd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: aaf308ff3040588e18797d242a5872d3396c87fd8426b98e32c0acf6a61267a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117870031"
 ---
 # <a name="package-resource-indexing-pri-reference"></a>Referenz zur Paketressourcenindizierung (PRI)
 
-Eine Reihe von APIs für die Arbeit mit einem Ressourcenindexer. Ein Ressourcenindexer wird verwendet, um PRI-Dateien (Package Resource Index) für eine UWP-App zu generieren. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für [die Paketressourcenindizierung (PRI) und benutzerdefinierte Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
+Eine Gruppe von APIs für die Arbeit mit einem Ressourcenindexer. Ein Ressourcenindexer wird verwendet, um Paketressourcenindexdateien (PRI) für eine UWP-App zu generieren. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

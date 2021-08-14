@@ -1,9 +1,9 @@
 ---
-title: komplexer weekstype-Typ
-description: Definiert das untergeordnete Element und die Sequenzierungs Informationen für das Week-Element.
+title: weeksType Complex Type
+description: Definiert das untergeordnete Element und Sequenzierungsinformationen für das Week-Element.
 ms.assetid: c9e8814c-b8f9-426d-943d-ca3efa5d914b
 keywords:
-- komplexer weekstype-Typ Taskplaner
+- weeksType complex type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 597cc72c043a478a414187f63a9aa89516dee658
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 876d798acdf1f8684fc4f2cecac8e77bceb73dddd0036f2117d4bb55a77a71ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757987"
 ---
-# <a name="weekstype-complex-type"></a>komplexer weekstype-Typ
+# <a name="weekstype-complex-type"></a>weeksType Complex Type
 
-Definiert das untergeordnete Element und die Sequenzierungs Informationen für das [**Week**](taskschedulerschema-week-weekstype-element.md) -Element.
+Definiert das untergeordnete Element und [](taskschedulerschema-week-weekstype-element.md) Sequenzierungsinformationen für das Week-Element.
 
 ``` syntax
 <xs:complexType name="weeksType">
@@ -42,7 +42,7 @@ Definiert das untergeordnete Element und die Sequenzierungs Informationen für d
 
 | Element                                                    | type                                                        | BESCHREIBUNG                                             |
 |------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------|
-| [**Mitte**](taskschedulerschema-week-weekstype-element.md) | [**weektype**](taskschedulerschema-weektype-simpletype.md) | Gibt die Woche an, in der die Aufgabe ausgeführt wird.<br/> |
+| [**Woche**](taskschedulerschema-week-weekstype-element.md) | [**weekType**](taskschedulerschema-weektype-simpletype.md) | Gibt die Woche an, in der der Task ausgeführt wird.<br/> |
 
 
 
@@ -52,12 +52,12 @@ Definiert das untergeordnete Element und die Sequenzierungs Informationen für d
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

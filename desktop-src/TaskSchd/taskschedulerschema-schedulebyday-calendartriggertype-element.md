@@ -1,10 +1,10 @@
 ---
-title: Schedulebyday (calendartriggertype)-Element
+title: ScheduleByDay -Element (calendarTriggerType)
 description: Gibt einen täglichen Zeitplan an.
 ms.assetid: 5a6097ce-a855-4b08-84c5-71f06343805e
 keywords:
-- täglicher Taskplaner des Auslösers, XML-Element
-- Schedulebyday-Element Taskplaner
+- täglicher Trigger Taskplaner , XML-Element
+- ScheduleByDay-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 614777ede63605dc7ed6936bda952c6071bda371
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f29cc4b702ba93aec44e3460279976f50c5563463accfb58b920ad79b757126a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131582"
 ---
-# <a name="schedulebyday-calendartriggertype-element"></a>Schedulebyday (calendartriggertype)-Element
+# <a name="schedulebyday-calendartriggertype-element"></a>ScheduleByDay -Element (calendarTriggerType)
 
-Gibt einen täglichen Zeitplan an. Der Task wird z. b. täglich um 8:00 Uhr täglich, täglich, an jedem dritten Tag usw. gestartet.
+Gibt einen täglichen Zeitplan an. Die Aufgabe beginnt beispielsweise täglich um 8:00 Uhr, jeden zweiten Tag, jeden dritten Tag usw.
 
 ``` syntax
 <xs:element name="ScheduleByDay"
@@ -31,7 +31,7 @@ Gibt einen täglichen Zeitplan an. Der Task wird z. b. täglich um 8:00 Uhr täg
  />
 ```
 
-Das **schedulebyday** -Element wird durch den komplexen Typ [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
+Das **ScheduleByDay-Element** wird durch den komplexen [**calendarTriggerType-Typ**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,7 +39,7 @@ Das **schedulebyday** -Element wird durch den komplexen Typ [**calendartriggerty
 
 | Element                                                                             | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/> |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/> |
 
 
 
@@ -49,23 +49,23 @@ Das **schedulebyday** -Element wird durch den komplexen Typ [**calendartriggerty
 
 | Element                                                                            | type             | BESCHREIBUNG                                                         |
 |------------------------------------------------------------------------------------|------------------|---------------------------------------------------------------------|
-| [**Daysinterval**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) | **unsignedByte** | Gibt das Intervall zwischen den Tagen im Zeitplan an.<br/> |
+| [**DaysInterval**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) | **unsignedByte** | Gibt das Intervall zwischen den Tagen im Zeitplan an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das zuvor aufgeführte untergeordnete Element wird von den komplexen Elementtypen [**dailyscheduletype**](taskschedulerschema-dailyscheduletype-complextype.md) definiert.
+Das zuvor aufgeführte untergeordnete Element wird durch die komplexen Elementtypen [**dailyScheduleType**](taskschedulerschema-dailyscheduletype-complextype.md) definiert.
 
-Die Uhrzeit, zu der die Aufgabe gestartet wird, wird durch das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element festgelegt.
+Die Tageszeit, zu der der Task gestartet wird, wird vom [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) festgelegt.
 
-Bei der Skripterstellung wird ein täglicher-Fehler mithilfe des [**Daily-auslöserobjekts**](weeklytrigger.md) angegeben.
+Für die Skriptentwicklung wird ein täglicher Trigger mit dem [**DailyTrigger-Objekt**](weeklytrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird ein täglicher-Fehler mithilfe der [**idaily-**](/windows/desktop/api/taskschd/nn-taskschd-idailytrigger) Schnittstelle angegeben.
+Für die C++-Entwicklung wird ein täglicher Trigger mithilfe der [**IDailyTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-idailytrigger) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen täglichen Kalender--Auslösers, der die Aufgabe täglich startet.
+Der folgende XML-Code definiert einen täglichen Kalendertrigger, der die Aufgabe täglich startet.
 
 
 ```XML
@@ -80,7 +80,7 @@ Der folgende XML-Code definiert einen täglichen Kalender--Auslösers, der die A
 
 
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen täglichen Zeitplan angibt, finden Sie unter Beispiel für das [tägliche Beispiel (XML)](daily-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen täglichen Zeitplan angibt, finden Sie unter Beispiel für [täglichen Trigger (XML).](daily-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,16 +88,16 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen täglich
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

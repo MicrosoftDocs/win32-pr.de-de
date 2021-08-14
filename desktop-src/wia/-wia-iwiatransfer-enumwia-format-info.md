@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen Enumerator für die Übertragungs Formate, die vom Windows-Abbild Erfassungsgerät (WIA) 2,0 unterstützt werden.
+description: Erstellt einen Enumerator für die Übertragungsformate, die vom wia 2.0-Gerät (Windows Image Acquisition) unterstützt werden.
 ms.assetid: 70fffc7b-b500-4404-9d94-76d1828ddc8c
-title: 'Iwiatransfer:: EnumWIA_FORMAT_INFO-Methode (WIA. h)'
+title: IWiaTransfer::EnumWIA_FORMAT_INFO-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 66f3c91d6023655daf85b2a0d726d98a685b001b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e497d389646249c03bfaa4ac8625ce2a440b97f4ff6b8c0b0942ec957d0901e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117669475"
 ---
-# <a name="iwiatransferenumwia_format_info-method"></a>Iwiatransfer:: enumwia- \_ Format \_ Info-Methode
+# <a name="iwiatransferenumwia_format_info-method"></a>IWiaTransfer::EnumWIA \_ FORMAT \_ INFO-Methode
 
-Erstellt einen Enumerator für die Übertragungs Formate, die vom Windows-Abbild Erfassungsgerät (WIA) 2,0 unterstützt werden.
+Erstellt einen Enumerator für die Übertragungsformate, die vom wia 2.0-Gerät (Windows Image Acquisition) unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT EnumWIA_FORMAT_INFO(
 
 <dl> <dt>
 
-*ppiumum* \[ vorgenommen\]
+*ppIEnum* \[ out\]
 </dt> <dd>
 
-Typ: **[ **ienumwia- \_ Format \_ Informationen**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_format_info)\*\***
+Typ: **[ **IEnumWIA \_ FORMAT \_ INFO**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_format_info)\*\***
 
-Die Adresse des Zeigers auf die [**ienumwia- \_ Format \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_format_info) -Schnittstelle für den Enumerator.
+Die Adresse des Zeigers auf die [**IEnumWIA \_ FORMAT \_ INFO-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_format_info) für den Enumerator.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Die Adresse des Zeigers auf die [**ienumwia- \_ Format \_ Info**](/windows/deskt
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für den Schnittstellen Zeiger aufrufen, der über den *ppienum* -Parameter empfangen wurde.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für den Schnittstellenzeiger aufrufen, der über den *ppIEnum-Parameter* empfangen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,11 +65,11 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 

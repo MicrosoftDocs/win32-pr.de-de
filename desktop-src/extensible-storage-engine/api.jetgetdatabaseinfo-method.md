@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetdatabaseingefo-Methode.
-title: API. jetgetdatabaseingefo-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetDatabaseInfo-Methode'
+title: Api.JetGetDatabaseInfo-Methode
 TOCTitle: 'JetGetDatabaseInfo method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.JetGetDatabaseInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetdatabaseinfo(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 5baacf9d05b9847c17408df31cf2c5ccc0ab3cf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 989122728591ed231cedc5bbcc6ae351753f9c5790b869c885d309ffbba52130
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104566310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117719164"
 ---
-# <a name="apijetgetdatabaseinfo-method"></a>API. jetgetdatabaseingefo-Methode
+# <a name="apijetgetdatabaseinfo-method"></a>Api.JetGetDatabaseInfo-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,18 +39,18 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292162(v=exchg.10).md">Jetgetdatabaseingefo (JET_SESID, JET_DBID, JET_DBINFOMISC, JET_DbInfo)</a></td>
-<td>Ruft bestimmte Informationen über die angegebene Datenbank ab.</td>
+<td><a href="dn292162(v=exchg.10).md">JetGetDatabaseInfo(JET_SESID, JET_DBID, JET_DBINFOMISC, JET_DbInfo)</a></td>
+<td>Ruft bestimmte Informationen zur angegebenen Datenbank ab.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292164(v=exchg.10).md">Jetgetdatabaseingefo (JET_SESID, JET_DBID, Int32, JET_DbInfo)</a></td>
-<td>Ruft bestimmte Informationen über die angegebene Datenbank ab.</td>
+<td><a href="dn292164(v=exchg.10).md">JetGetDatabaseInfo(JET_SESID, JET_DBID, Int32, JET_DbInfo)</a></td>
+<td>Ruft bestimmte Informationen zur angegebenen Datenbank ab.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292167(v=exchg.10).md">Jetgetdatabaseingefo (JET_SESID, JET_DBID, Zeichenfolge, JET_DbInfo)</a></td>
-<td>Ruft bestimmte Informationen über die angegebene Datenbank ab.</td>
+<td><a href="dn292167(v=exchg.10).md">JetGetDatabaseInfo(JET_SESID, JET_DBID, String, JET_DbInfo)</a></td>
+<td>Ruft bestimmte Informationen zur angegebenen Datenbank ab.</td>
 </tr>
 </tbody>
 </table>
@@ -58,12 +58,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

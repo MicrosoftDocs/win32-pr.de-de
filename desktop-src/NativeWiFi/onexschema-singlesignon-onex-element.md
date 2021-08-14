@@ -1,7 +1,7 @@
 ---
-description: Gibt Single Sign-on Netzwerk Konfigurationsinformationen (SSO) an.
+description: Gibt Netzwerkkonfigurationsinformationen für einmaliges Anmelden (Single Sign-On, SSO) an.
 ms.assetid: c0a26f15-77fd-43e9-a6af-54e9b46f03fa
-title: SingleSignOn (Onex)-Element
+title: singleSignOn-Element (OneX)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: fd25767ed311e9a6f0e75f8dec090d4b80d3f0af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d0e002133366527624a0954df9054272cc08d894ba8dc3121b8a86b807caab6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117798031"
 ---
-# <a name="singlesignon-onex-element"></a>SingleSignOn (Onex)-Element
+# <a name="singlesignon-onex-element"></a>singleSignOn-Element (OneX)
 
-Das Element SingleSignOn (Onex) gibt Single Sign-on Netzwerk Konfigurationsinformationen (SSO) an.
+Das SingleSignOn-Element (OneX) gibt Netzwerkkonfigurationsinformationen für einmaliges Anmelden (Single Sign-On, SSO) an.
 
-Dieses Element ist optional. Verwenden Sie das SingleSignOn-Element nicht in einem Profil, wenn es vom Netzwerk nicht benötigt wird.
+Dieses Element ist optional. Verwenden Sie das singleSignOn-Element nicht in einem Profil, wenn es für das Netzwerk nicht erforderlich ist.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
 
 ``` syntax
 <xs:element name="singleSignOn">
@@ -72,7 +72,7 @@ Dieses Element ist optional. Verwenden Sie das SingleSignOn-Element nicht in ein
 </xs:element>
 ```
 
-Das **SingleSignOn** -Element wird durch das [**Onex**](onexschema-onex-element.md) -Element definiert.
+Das **singleSignOn-Element** wird durch das [**OneX-Element**](onexschema-onex-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -80,15 +80,15 @@ Das **SingleSignOn** -Element wird durch das [**Onex**](onexschema-onex-element.
 
 | Element                                                                            | type    | BESCHREIBUNG                                                                                                                                                                                                                  |
 |------------------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**MaxDelay**](onexschema-maxdelay-singlesignon-element.md)                       |         | Gibt die maximale Verzögerung in Sekunden an, bevor der Single Sign-on Verbindungsversuch fehlschlägt.<br/>                                                                                                                      |
-| [**Sorte**](onexschema-type-singlesignon-element.md)                               |         | Gibt an, wann Single Sign-on ausgeführt wird. Wenn diese Einstellung auf festgelegt `preLogon` ist, wird Single Sign-on ausgeführt, bevor sich der Benutzer anmeldet. Wenn diese Einstellung auf festgelegt `postLogon` ist, wird Single Sign-on sofort nach der Anmeldung des Benutzers ausgeführt.<br/> |
-| [**userbasedvirtuallan**](onexschema-userbasedvirtuallan-singlesignon-element.md) | boolean | Gibt an, ob das vom Gerät verwendete virtuelle LAN (VLAN) basierend auf den Anmelde Informationen des Benutzers geändert wird.<br/>                                                                                                                   |
+| [**maxDelay**](onexschema-maxdelay-singlesignon-element.md)                       |         | Gibt die maximale Verzögerung in Sekunden an, bevor der Verbindungsversuch für einmaliges Anmelden fehlschlägt.<br/>                                                                                                                      |
+| [**Typ**](onexschema-type-singlesignon-element.md)                               |         | Gibt an, wann einmaliges Anmelden ausgeführt wird. Wenn auf festgelegt `preLogon` ist, wird einmaliges Anmelden ausgeführt, bevor sich der Benutzer anmeldet. Wenn dies auf festgelegt ist, erfolgt `postLogon` das einmalige Anmelden unmittelbar nach der Anmeldung des Benutzers.<br/> |
+| [**userBasedVirtualLan**](onexschema-userbasedvirtuallan-singlesignon-element.md) | boolean | Gibt an, ob sich das vom Gerät verwendete virtuelle LAN (VLAN) basierend auf den Anmeldeinformationen des Benutzers ändert.<br/>                                                                                                                   |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Parameter kann über die Befehlszeile mit dem **Netsh WLAN Set ProfileParameter** -Befehl festgelegt werden. Weitere Informationen finden Sie unter [Netsh Commands for Wireless Local Area Network (WLAN)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755301(v=ws.10)).
+Dieser Parameter kann über die Befehlszeile mit dem Befehl **netsh wlan set profileparameter festgelegt** werden. Weitere Informationen finden Sie unter [Netsh Commands for Wireless Local Area Network (WLAN).](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755301(v=ws.10))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,22 +96,22 @@ Dieser Parameter kann über die Befehlszeile mit dem **Netsh WLAN Set ProfilePar
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)

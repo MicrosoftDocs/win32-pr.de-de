@@ -1,27 +1,27 @@
 ---
 description: Wird verwendet, um zu überprüfen, ob eine Nachricht während der Übertragung nicht geändert wurde.
 ms.assetid: a4bb67fb-8217-4e76-b1bf-461ccd39f58a
-title: 'Beispiel-C-Programm: Erstellen eines HMAC'
+title: 'C-Beispielprogramm: Erstellen eines HMAC'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a18da226c9e88d535b34fe9c319a042132749e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25d4f6a91025ed159e580cfcb9780527536a31f4f72ae54d5a821a328d45abec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765888"
 ---
-# <a name="example-c-program-creating-an-hmac"></a>Beispiel-C-Programm: Erstellen eines HMAC
+# <a name="example-c-program-creating-an-hmac"></a>C-Beispielprogramm: Erstellen eines HMAC
 
-Ein Hashwert für die Nachrichten Authentifizierung (HMAC) wird normalerweise verwendet, um zu überprüfen, ob eine Nachricht während der Übertragung nicht geändert wurde. Beide Parteien der Nachricht müssen über einen gemeinsamen geheimen Schlüssel verfügen. Der Absender kombiniert den Schlüssel und die Nachricht zu einer Zeichenfolge, erstellt einen Digest der Zeichenfolge mithilfe eines Algorithmus wie SHA-1 oder MD5 und überträgt die Nachricht und den Digest. Der Empfänger kombiniert den gemeinsam verwendeten Schlüssel mit der Nachricht, wendet den entsprechenden Algorithmus an und vergleicht den Digest, der vom Absender übermittelt wurde. Wenn die Digests exakt identisch sind, wurde die Nachricht nicht manipuliert.
+Eine Hashmeldungs-Authentifizierungsprüfsumme (HMAC) wird in der Regel verwendet, um zu überprüfen, ob eine Nachricht während der Übertragung nicht geändert wurde. Beide Parteien der Nachricht müssen über einen gemeinsam verwendeten geheimen Schlüssel verfügen. Der Absender kombiniert den Schlüssel und die Nachricht in einer Zeichenfolge, erstellt mithilfe eines Algorithmus wie SHA-1 oder MD5 einen Digest der Zeichenfolge und überträgt die Nachricht und den Digest. Der Empfänger kombiniert den gemeinsam verwendeten Schlüssel mit der Nachricht, wendet den entsprechenden Algorithmus an und vergleicht den So erhaltenen Digest mit dem vom Absender übertragenen. Wenn die Digests identisch sind, wurde die Nachricht nicht manipuliert.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen veranschaulicht:
 
 -   Abrufen eines Handles für einen [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) durch Aufrufen von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta).
--   Ableiten eines symmetrischen Schlüssels aus einer Byte Zeichenfolge durch Aufrufen von " [**cryptcreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash)", " [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata)" und " [**CryptDeriveKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey)".
--   Verwenden Sie den symmetrischen Schlüssel, um ein HMAC-Hash Objekt durch Aufrufen von " [**cryptcreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) " und " [**cryptsethashparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsethashparam)" zu erstellen.
--   Hashwert einer Nachricht durch Aufrufen von " [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata)".
--   Abrufen des Hashs durch Aufrufen von [**cryptgethashparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgethashparam).
+-   Ableiten eines symmetrischen Schlüssels aus einer Bytezeichenfolge durch Aufrufen von [**CryptCreateHash,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata)und [**CryptDeriveKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey).
+-   Verwenden des symmetrischen Schlüssels zum Erstellen eines HMAC-Hashobjekts durch Aufrufen von [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) und [**CryptSetHashParam.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsethashparam)
+-   Hashing einer Nachricht durch Aufrufen von [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata).
+-   Abrufen des Hashs durch Aufrufen von [**CryptGetHashParam.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgethashparam)
 
 
 ```C++

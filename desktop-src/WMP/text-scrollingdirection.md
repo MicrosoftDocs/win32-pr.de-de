@@ -1,9 +1,9 @@
 ---
-title: Text. scrollingdirection
-description: Das scrollingdirection-Attribut gibt die Richtung des scrolltexts an oder ruft diese ab.
+title: TEXT.scrollingDirection
+description: Das scrollingDirection-Attribut gibt die Richtung des Bildlauftexts an oder ruft sie ab.
 ms.assetid: b7f6daf3-3180-4937-93e6-266d875dbbfd
 keywords:
-- Text. scrollingdirection-Fenster Media Player
+- TEXT.scrollingDirection Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a729b2b917f38e12639fb1acda8eeb36808be990
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73652b1eda6fb05c9e058a47bb988ab3098e451facc898d55bcd89257bec958b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118240"
 ---
-# <a name="textscrollingdirection"></a>Text. scrollingdirection
+# <a name="textscrollingdirection"></a>TEXT.scrollingDirection
 
-Das **scrollingdirection** -Attribut gibt die Richtung des scrolltexts an oder ruft diese ab.
+Das **scrollingDirection-Attribut** gibt die Richtung des Bildlauftexts an oder ruft sie ab.
 
 ``` syntax
         elementID.scrollingDirection
@@ -29,24 +29,24 @@ Das **scrollingdirection** -Attribut gibt die Richtung des scrolltexts an oder r
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
 
 
 | Wert | BESCHREIBUNG                         |
 |-------|-------------------------------------|
 | Links  | Standard. Scrollen Sie von rechts nach links. |
-| Rechts | Scrollen Sie von links nach rechts.          |
+| Right | Scrollen Sie von links nach rechts.          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **Scroll** auf false festgelegt ist, wird **scrollingdirection** ignoriert.
+Wenn **scrolling** auf FALSE festgelegt ist, wird **scrollingDirection** ignoriert.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden, finden Sie im [Value-Attribut.](text-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,18 +54,18 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. Scroll**](text-scrolling.md)
+[**TEXT.scrolling**](text-scrolling.md)
 </dt> </dl>
 
  

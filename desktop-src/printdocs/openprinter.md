@@ -1,7 +1,7 @@
 ---
-description: Die OpenPrinter-Funktion Ruft ein Handle für den angegebenen Drucker oder Druckserver oder andere Typen von Handles im Druck Subsystem ab.
+description: Die OpenPrinter-Funktion ruft ein Handle für den angegebenen Drucker oder Druckerserver oder andere Handles im Drucksubsystem ab.
 ms.assetid: 96763220-d851-46f0-8be8-403f3356edb9
-title: OpenPrinter-Funktion (winspool. h)
+title: OpenPrinter-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,16 +19,16 @@ api_location:
 - Ext-MS-Win-printer-Winspool-l1-1-1.dll
 - Ext-MS-Win-Printer-WinSpool-l1-1-2.dll
 - Ext-MS-Win-Printer-WinSpool-L1-1-3.dll
-ms.openlocfilehash: 02cd6f6b5d56eec525bd00e2feef50f4d5f07734
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48f25f9c8aec314b997a4600335e22bea2f0bbd8eefa78235ddbb25192f556f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117868602"
 ---
 # <a name="openprinter-function"></a>OpenPrinter-Funktion
 
-Die **OpenPrinter** -Funktion Ruft ein Handle für den angegebenen Drucker oder Druckserver oder andere Typen von Handles im Druck Subsystem ab.
+Die **OpenPrinter-Funktion** ruft ein Handle für den angegebenen Drucker oder Druckerserver oder andere Handles im Drucksubsystem ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,82 +47,82 @@ BOOL OpenPrinter(
 
 <dl> <dt>
 
-*pprintername* \[ in\]
+*pPrinterName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Druckers oder Druck Servers, das Drucker Objekt, den xcvmonitor oder den xcvport angibt.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Druckers oder Druckerservers, des Druckerobjekts, des XcvMonitor oder des XcvPort angibt.
 
-Verwenden Sie für ein Drucker Objekt: PrinterName, Job xxxx. Verwenden Sie für einen xcvmonitor Folgendes: Servername, xcvmonitor Monitorname. Verwenden Sie für einen xcvport: Servername, xcvport PORTNAME.
+Verwenden Sie für ein Druckerobjekt: PrinterName, Job xxxx. Verwenden Sie für einen XcvMonitor ServerName, XcvMonitor MonitorName. Verwenden Sie für einen XcvPort ServerName, XcvPort PortName.
 
-Wenn der Wert **null** ist, wird der lokale Drucker Server angegeben.
+Wenn **DER WERT NULL** ist, wird der lokale Druckerserver angegeben.
 
 </dd> <dt>
 
-*phprinter* \[ vorgenommen\]
+*phPrinter* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die ein Handle (nicht Thread sicher) für den geöffneten Drucker oder das Druckserver Objekt empfängt.
+Ein Zeiger auf eine Variable, die ein Handle (nicht threadsicher) auf das geöffnete Drucker- oder Druckerserverobjekt empfängt.
 
-Der Parameter " *phprinter* " kann ein XCV-Handle für die Verwendung mit der XcvData-Funktion zurückgeben. Weitere Informationen zu XcvData finden Sie unter DDK.
+Der *phPrinter-Parameter* kann ein Xcv-Handle für die Verwendung mit der XcvData-Funktion zurückgeben. Weitere Informationen zu XcvData finden Sie im DDK.
 
 </dd> <dt>
 
-*pdefault* \[ in\]
+*pDefault* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Drucker \_ Standard**](printer-defaults.md) Struktur. Dieser Wert kann **null** sein.
+Ein Zeiger auf eine [**PRINTER \_ DEFAULTS-Struktur.**](printer-defaults.md) Dieser Wert kann NULL **sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode darf nicht in [**DllMain**](/windows/desktop/Dlls/dllmain)aufgerufen werden.
+Rufen Sie diese Methode nicht in [**DllMain auf.**](/windows/desktop/Dlls/dllmain)
 
 > [!Note]  
-> Ein Handle, das für einen Remote Drucker durch einen **OpenPrinter** -aufrufbefehl für einen Remote Drucker abgerufen wird, greift über einen lokalen Cache im Druckspoolerdienst auf den Drucker zu. Dieser Cache ist nicht echt Zeit genau. Um genaue Daten zu erhalten, ersetzen Sie den OpenPrinter-Befehl durch [**OpenPrinter2**](openprinter2.md) durch poptions. dwFlags, die auf Drucker \_ Option \_ kein Cache festgelegt sind \_ . Beachten Sie, dass nur OpenPrinter2W funktionsfähig ist. Die-Funktion gibt ein Drucker Handle zurück, das andere Druck-API-Aufrufe verwendet und den lokalen Cache umgeht. Diese Methode blockiert, während auf die Netzwerkkommunikation mit dem Remote Drucker gewartet wird, sodass Sie möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, wird die Anwendung möglicherweise nicht mehr reagiert.
+> Ein Handle, das durch einen Aufruf von **OpenPrinter** für einen Remotedrucker ermittelt wurde, greifen über einen lokalen Cache im Druckspoolerdienst auf den Drucker zu. Dieser Cache ist nicht in Echtzeit präzise. Um genaue Daten zu erhalten, ersetzen Sie den OpenPrinter-Aufruf durch [**OpenPrinter2**](openprinter2.md) durch pOptions.dwFlags, der auf PRINTER \_ OPTION NO CACHE festgelegt \_ \_ ist. Beachten Sie, dass nur OpenPrinter2W funktionsfähig ist. Die Funktion gibt ein Druckerhand handle zurück, das andere Druck-API-Aufrufe verwendet und den lokalen Cache umgeht. Diese Methode blockiert, während auf die Netzwerkkommunikation mit dem Remotedrucker gewartet wird, sodass sie möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Wenn Sie diese Funktion aus einem Thread aufrufen, der die Interaktion mit der Benutzeroberfläche verwaltet, reagiert die Anwendung möglicherweise nicht mehr.
 
  
 
 > [!Note]  
-> Ein Handle, das durch einen **OpenPrinter** -Aufrufvorgang für einen Remote Drucker abgerufen wird, greift über einen lokalen Cache im Druckspoolerdienst auf den Drucker zu. Bei diesem Cache handelt es sich nicht um echtzeitgenauigkeit. Wenn Sie genaue Daten abrufen müssen, ersetzen Sie den **OpenPrinter** -Befehl durch [**OpenPrinter2**](openprinter2.md) durch " *poptions. dwFlags* ", der auf " [**Printer \_ Option \_ No \_ Cache**](printer-options.md)" festgelegt ist. Beachten Sie, dass nur **OpenPrinter2W** funktionsfähig ist. Dadurch gibt die Funktion ein Drucker Handle zurück, das andere Druck-API-Aufrufe ausführt, um den lokalen Cache zu umgehen. Beachten Sie, dass diese Vorgehensweise beim Warten auf die Roundtrip-Netzwerkkommunikation mit dem Remote Drucker blockiert wird, sodass Sie möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von den Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Druckertreiber Implementierung: Faktoren, die beim Schreiben einer Anwendung schwer vorhergesagt werden können. Wenn Sie diese Funktion aus einem Thread aufrufen, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte es vorkommen, dass die Anwendung nicht mehr reagiert.
+> Ein Handle, das durch einen Aufruf von **OpenPrinter** für einen Remotedrucker ermittelt wird, wird über einen lokalen Cache im Druckspoolerdienst auf den Drucker zugreifen. Dieser Cache ist entwurfsweise nicht in Echtzeit genau. Wenn Sie genaue Daten abrufen müssen, ersetzen Sie den **OpenPrinter-Aufruf** durch [**OpenPrinter2**](openprinter2.md) durch *pOptions.dwFlags,* der auf [**PRINTER OPTION NO CACHE festgelegt \_ \_ \_ ist.**](printer-options.md) Beachten Sie, dass **nur OpenPrinter2W** funktionsfähig ist. Dadurch gibt die Funktion einen Druckerhandpunkt zurück, der andere Druck-API-Aufrufe zum Umgehen des lokalen Caches vorgibt. Beachten Sie, dass dieser Ansatz blockiert wird, während auf die Roundtrip-Netzwerkkommunikation mit dem Remotedrucker gewartet wird, sodass er möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Druckertreiberimplementierung ab– Faktoren, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Daher kann das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Das Handle, auf das von *phprinter* verwiesen wird, ist nicht Thread sicher. Wenn Aufrufer Sie gleichzeitig für mehrere Threads verwenden müssen, müssen Sie den benutzerdefinierten Synchronisierungs Zugriff auf das Drucker Handle mithilfe der [Synchronisierungs Funktionen](/windows/desktop/Sync/synchronization-functions)bereitstellen. Um das Schreiben von benutzerdefiniertem Code zu vermeiden, kann die Anwendung bei Bedarf ein Drucker Handle für jeden Thread öffnen.
+Das Handle, auf das *phPrinter zeigt,* ist nicht threadsicher. Wenn Aufrufer sie gleichzeitig auf mehreren Threads verwenden müssen, müssen sie mithilfe der Synchronisierungsfunktionen benutzerdefinierten Synchronisierungszugriff auf das [Druckerhandler bereitstellen.](/windows/desktop/Sync/synchronization-functions) Um das Schreiben von benutzerdefiniertem Code zu vermeiden, kann die Anwendung bei Bedarf ein Druckerhandpunkt für jeden Thread öffnen.
 
-Mit dem *pdefault* -Parameter können Sie die Werte für Datentyp und Geräte Modus angeben, die zum Drucken von Dokumenten verwendet werden, die von der [**StartDocPrinter**](startdocprinter.md) -Funktion übermittelt werden. Sie können diese Werte jedoch überschreiben, indem Sie die Funktion [**setjob**](setjob.md) verwenden, nachdem ein Dokument gestartet wurde.
+Mit *dem Parameter pDefault* können Sie den Datentyp und die Gerätemoduswerte angeben, die zum Drucken von Dokumenten verwendet werden, die von der [**StartDocPrinter-Funktion übermittelt**](startdocprinter.md) werden. Sie können diese Werte jedoch mithilfe der [**SetJob-Funktion**](setjob.md) überschreiben, nachdem ein Dokument gestartet wurde.
 
-Die [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Einstellungen, die in der [**Drucker \_ Standard**](printer-defaults.md) Struktur des *pdefault* -Parameters definiert sind, werden nicht verwendet, wenn der Wert des *pdatatype* -Members der [**doc \_ Info \_ 1**](doc-info-1.md) -Struktur, die im *pdocinfo* -Parameter des [**StartDocPrinter**](startdocprinter.md) -Aufrufes übergeben wurde, "RAW" lautet. Wenn ein Dokument auf hoher Ebene (z. b. eine Adobe PDF-oder Microsoft Word-Datei) oder andere Druckerdaten (z. b. PCL, PS oder HPGL) direkt an einen Drucker gesendet werden, bei dem *pdatatype* auf "RAW" festgelegt ist, muss das Dokument die Einstellungen des Druckauftrags im **DEVMODE**-Stil in der Sprache beschreiben, die von
+Die [**DEVMODE-Einstellungen,**](/windows/win32/api/wingdi/ns-wingdi-devmodea) die in der [**PRINTER \_ DEFAULTS-Struktur**](printer-defaults.md) des *pDefault-Parameters* definiert sind, werden nicht verwendet, wenn der Wert des *pDatatype-Members* der [**DOC INFO \_ \_ 1-Struktur,**](doc-info-1.md) der im *pDocInfo-Parameter* des [**StartDocPrinter-Aufrufs**](startdocprinter.md) übergeben wurde, "RAW" ist. Wenn ein Dokument auf hoher Ebene (z. B. eine Adobe PDF- oder Microsoft Word-Datei) oder andere Druckerdaten (z. B. PCL, PS oder HPGL) direkt an einen Drucker gesendet werden, bei dem *pDatatype* auf "RAW" festgelegt ist, muss das Dokument die DevMODE-Druckauftragseinstellungen in der sprache, die von der Hardware verstanden wird, vollständig beschreiben. 
 
-Sie können die **OpenPrinter** -Funktion aufrufen, um ein Handle für einen Drucker Server zu öffnen oder um die Zugriffsrechte zu ermitteln, die ein Client auf einen Druckserver hat. Geben Sie hierzu den Namen des Drucker Servers im *pprintername* -Parameter an, legen Sie die **pdatatype** -und **pdevmode** -Member der [**\_ Standard**](printer-defaults.md) Struktur der Drucker Standards auf **null** fest, und legen Sie das **desiredAccess** -Element auf einen Server Zugriffs Maskenwert fest, wie z \_ . b. Zugriff auf den Server \_ . Wenn Sie mit dem Handle fertig sind, übergeben Sie es an die [**closeprinter**](closeprinter.md) -Funktion, um es zu schließen.
+Sie können die **OpenPrinter-Funktion** aufrufen, um ein Handle für einen Druckerserver zu öffnen oder um die Zugriffsrechte zu bestimmen, die ein Client für einen Druckerserver hat. Geben Sie dazu den Namen des Druckerservers im *Parameter pPrinterName* an, legen Sie die Member **pDatatype** und **pDevMode** der [**PRINTER \_ DEFAULTS-Struktur**](printer-defaults.md) auf **NULL** fest, und legen Sie das **DesiredAccess-Element** so fest, dass ein Serverzugriffsmaskenwert wie SERVER ALL ACCESS angegeben \_ \_ wird. Wenn Sie mit dem Handle fertig sind, übergeben Sie es an die [**ClosePrinter-Funktion,**](closeprinter.md) um es zu schließen.
 
-Verwenden Sie das **desiredAccess** -Mitglied [**der \_ Drucker Standard**](printer-defaults.md) Struktur, um die Zugriffsrechte anzugeben, die Sie für den Drucker benötigen. Die Zugriffsrechte können eines der folgenden sein: (Wenn *pdefault* den Wert **null** hat, sind die Zugriffsrechte Drucker \_ . Zugriffs \_ Verwendung.)
+Verwenden Sie **das DesiredAccess-Mitglied** der [**PRINTER \_ DEFAULTS-Struktur,**](printer-defaults.md) um die Zugriffsrechte anzugeben, die Sie für den Drucker benötigen. Die Zugriffsrechte können wie folgt sein. (Wenn *pDefault* **NULL ist,** sind die Zugriffsrechte PRINTER. \_ ACCESS \_ USE.)
 
 
 
-| Gewünschter Zugriffs Wert                        | Bedeutung                                                                                                                                                                                      |
+| Desired Access-Wert                        | Bedeutung                                                                                                                                                                                      |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Drucker \_ Zugriffs \_ Verwaltung                 | Zum Ausführen administrativer Aufgaben, wie z. b. die von [**SetPrinter**](setprinter.md)bereitgestellten.                                                                                                 |
-| Drucker \_ Zugriffs \_ Verwendung                        | Zum Ausführen grundlegender Druckvorgänge.                                                                                                                                                        |
-| Drucker \_ \_ Zugriff                        | Zum Ausführen aller Verwaltungsaufgaben und grundlegenden Druckvorgänge mit Ausnahme von Synchronisierung (siehe [Standard Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)).                                     |
-| Drucker \_ Zugriff \_ mit \_ eingeschränkter Verwaltung            | Zum Ausführen administrativer Aufgaben, wie z. b. die von [**SetPrinter**](setprinter.md) und [**setprinterdata**](setprinterdata.md)bereitgestellten. Dieser Wert ist ab Windows 8.1 verfügbar. |
-| generische Sicherheitswerte, z. b. \_ DAC schreiben | , Um bestimmte Zugriffsrechte für das Steuerelement zuzulassen. Siehe [Standard Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights).                                                                                      |
+| \_ \_ DRUCKERZUGRIFFSVERWALTUNG                 | So führen Sie administrative Aufgaben aus, z. B. die von [**SetPrinter bereitgestellten.**](setprinter.md)                                                                                                 |
+| \_ \_ DRUCKERZUGRIFFSNUTZUNG                        | So führen Sie grundlegende Druckvorgänge aus.                                                                                                                                                        |
+| DRUCKERZUGRIFF \_ \_ AUF ALLE                        | So führen Sie alle administrativen Aufgaben und grundlegenden Druckvorgänge mit Ausnahme von SYNCHRONIZE aus (siehe [Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)).                                     |
+| DRUCKERZUGRIFF \_ \_ VERWALTEN \_ EINGESCHRÄNKT            | Zum Ausführen administrativer Aufgaben, z. B. der von [**SetPrinter**](setprinter.md) und [**SetPrinterData bereitgestellten.**](setprinterdata.md) Dieser Wert ist ab dem Windows 8.1. |
+| Generische Sicherheitswerte, z. B. WRITE \_ DAC | So lassen Sie bestimmte Zugriffsberechtigungen für die Steuerung zu. Weitere Informationen [finden Sie unter Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights).                                                                                      |
 
 
 
  
 
-Wenn ein Benutzer nicht berechtigt ist, einen angegebenen Drucker oder Druckserver mit dem gewünschten Zugriff zu öffnen, schlägt der **OpenPrinter** -Rückruf mit dem Rückgabewert NULL fehl, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den Wert für den Fehler \_ Zugriff verweigert zurück \_ .
+Wenn ein Benutzer nicht über die Berechtigung verfügt, einen angegebenen Drucker oder Druckerserver mit dem gewünschten Zugriff zu öffnen, tritt beim **OpenPrinter-Aufruf** ein Fehler mit dem Rückgabewert 0 auf, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den Wert ERROR \_ ACCESS \_ DENIED zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wie: Drucken mit der GDI-Druck-API](how-to--print-using-the-gdi-print-api.md).
+Ein Beispielprogramm, das diese Funktion verwendet, finden Sie unter How To: Print Using the GDI Print API (How [To: Drucken mithilfe der GDI-Druck-API).](how-to--print-using-the-gdi-print-api.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -132,14 +132,14 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Openprinterw** (Unicode) und **openprintera** (ANSI)<br/>                                         |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **OpenPrinterW** (Unicode) und **OpenPrinterA** (ANSI)<br/>                                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -149,16 +149,16 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**"Write Printer"**](writeprinter.md)
+[**WritePrinter**](writeprinter.md)
 </dt> <dt>
 
-[**Closeprinter**](closeprinter.md)
+[**ClosePrinter**](closeprinter.md)
 </dt> <dt>
 
-[**Drucker \_ Standardwerte**](printer-defaults.md)
+[**\_DRUCKEREINSTELLUNGEN**](printer-defaults.md)
 </dt> <dt>
 
-[**Setjob**](setjob.md)
+[**SetJob**](setjob.md)
 </dt> <dt>
 
 [**SetPrinter**](setprinter.md)

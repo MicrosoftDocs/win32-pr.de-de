@@ -1,41 +1,41 @@
 ---
 title: Netzwerkbandbreite
-description: Bei Hintergrund Übertragungen wird nur die Netzwerkbandbreite im Leerlauf verwendet, um die interaktive Benutzererfahrung mit anderen Netzwerkanwendungen, wie z. b. Internet Explorer, zu erhalten.
+description: Hintergrundübertragungen verwenden nur Netzwerkbandbreite im Leerlauf, um die interaktive Benutzererfahrung des Benutzers mit anderen Netzwerkanwendungen wie Internet Explorer beizubehalten.
 ms.assetid: c0b92a33-7afc-4250-8549-54cc46013239
 ms.topic: article
 ms.date: 10/09/2018
-ms.openlocfilehash: 39a38a0efd5f2caea432fc9d13f7a958b6bcd407
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 57b6583a99c16748c027fca1666571fc04d9e9aebe27fd104f7ab1215fa27a60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118173361"
 ---
 # <a name="network-bandwidth"></a>Netzwerkbandbreite
 
-Bei Hintergrund Übertragungen wird nur die Netzwerkbandbreite im Leerlauf verwendet, um die interaktive Benutzererfahrung mit anderen Netzwerkanwendungen wie Webbrowsern beizubehalten. Bits passt die Verwendung der Bandbreite an, wenn der Benutzer die Bandbreite erhöht oder verringert. Beachten Sie, dass Bits während einer hohen Netzwerk Verwendung weiterhin eine kleine Menge von Daten überträgt, um sicherzustellen, dass BITS-Aufträge Fortschritte machen.
+Bei Hintergrundübertragungen wird nur die Netzwerkbandbreite im Leerlauf genutzt, um die interaktive Benutzeroberfläche des Benutzers mit anderen Netzwerkanwendungen wie Webbrowsern beizubehalten. BITS passt die Verwendung der Bandbreite an, wenn der Benutzer die Bandbreitennutzung erhöht oder verringert. Beachten Sie, dass BITS bei hoher Netzwerknutzung immer noch eine kleine Datenmenge überträgt, um sicherzustellen, dass BITS-Aufträge fortschritten.
 
-Bits überwacht den Netzwerk Datenverkehr auf dem Internet Gateway-Gerät (IGD) oder der Netzwerkschnittstellenkarte (NIC) des Clients und verwendet nur den Leerlauf Bereich der Netzwerkbandbreite. Bits aktiviert auch [ledbat](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/) auf http-Verbindungen, um die Überlastung des Netzwerks zu unterstützen.
+BITS überwacht den Netzwerkdatenverkehr auf dem Internetgatewaygerät (IGD) oder der Netzwerkschnittstellenkarte (Network Interface Card, NIC) des Clients und verwendet nur den Leerlaufteil der Netzwerkbandbreite. BITS aktiviert auch [LEDBAT](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/) für HTTP-Verbindungen, um netzwerküberlastet zu werden.
 
-Wenn BITS den Datenverkehr mithilfe der Netzwerkschnittstellenkarte misst und keine Netzwerkanwendungen auf dem Client ausgeführt werden, verbraucht Bits die meiste verfügbare Bandbreite. Dies bedeutet nicht, dass sich das Netzwerk über dem Client im Leerlauf befindet. das Netzwerk kann eine vollständige Kapazität aufweisen.
+Wenn BITS die Netzwerkschnittstellenkarte zum Messen des Datenverkehrs verwendet und keine Netzwerkanwendungen auf dem Client ausgeführt werden, verbraucht BITS den größten Teil der verfügbaren Bandbreite. Dies bedeutet nicht, dass sich das Netzwerk außerhalb des Clients im Leerlauf befindet. Das Netzwerk kann voll ausgelastet sein.
 
-Dies kann ein Problem sein, wenn der Client über einen schnellen Netzwerkadapter verfügt, die vollständige Internetverbindung jedoch über eine langsame Verbindung (z. b. einen DSL-Router) erfolgt, da Bits für die vollständige Bandbreite konkurriert, anstatt nur die verfügbare Bandbreite auf der langsamen Verbindung zu verwenden. Bits hat keinen Einblick in den Netzwerk Datenverkehr, der über den Client hinausgeht.
+Dies kann ein Problem sein, wenn der Client über einen schnellen Netzwerkadapter verfügt, die vollständige Internetverbindung jedoch über eine langsame Verbindung (z. B. einen DSL-Router) erfolgt, da BITS um die vollständige Bandbreite konkurrieren wird, anstatt nur die verfügbare Bandbreite für die langsame Verbindung zu verwenden. BITS hat keine Sichtbarkeit des Netzwerkdatenverkehrs über den Client hinaus.
 
-Ein Gatewaygerät, das Leistungsindikatoren unterstützt, kann dieses Problem vermeiden, weil Bits den Datenverkehr auf der langsamen Verbindung messen und die Bandbreite entsprechend verwenden würde. Wenn das Gerät keine Leistungsindikatoren unterstützt, können Sie die Auswirkung dieses Verbindungs Typs verringern, indem Sie die **MaxInternetBandwidth** -Richtlinie verwenden, um die Bandbreite zu begrenzen, die Bits auf dem Client Computer verwendet. Weitere Informationen finden Sie unter [Gruppenrichtlinien](group-policies.md).
+Ein Gatewaygerät, das Indikatoren unterstützt, kann dieses Problem beseitigen, da BITS den Datenverkehr auf der langsamen Verbindung messen und die Bandbreite entsprechend verwenden würde. Wenn das Gerät keine Leistungsindikatoren unterstützt, können Sie die Auswirkungen dieser Art von Verbindung verringern, indem Sie die **MaxInternetBandwidth-Richtlinie** verwenden, um die Bandbreite einzuschränken, die BITS auf dem Clientcomputer verwendet. Weitere Informationen finden Sie unter [Gruppenrichtlinien.](group-policies.md)
 
-Wenn der Computer mehrere Netzwerkschnittstellen enthält, z. b. ein Modem, ein virtuelles privates Netzwerk (VPN) und mehrere Netzwerkschnittstellenkarten (NIC), ruft Bits die IP-Hilfsfunktion [**getbestinterfaceex**](/windows/desktop/api/iphlpapi/nf-iphlpapi-getbestinterfaceex)auf, um die Schnittstelle zu ermitteln, die die beste Route zu der angegebenen IP-Adresse hat. Bits überwacht dann die Bandbreitennutzung für diese Schnittstelle.
+Wenn der Computer mehrere Netzwerkschnittstellen enthält, z. B. ein Modem, ein virtuelles privates Netzwerk (VPN) und mehrere Netzwerkschnittstellenkarten (NIC), ruft BITS die IP-Hilfsfunktion [**GetBestInterfaceEx**](/windows/desktop/api/iphlpapi/nf-iphlpapi-getbestinterfaceex)auf, um die Schnittstelle zu bestimmen, die die beste Route zur angegebenen IP-Adresse auf hat. BITS überwacht dann die Bandbreitennutzung auf dieser Schnittstelle.
 
-## <a name="using-an-internet-gateway-device-igd-to-determine-usage"></a>Verwenden eines Internet Gateway-Geräts (IGD) zum Bestimmen der Verwendung
+## <a name="using-an-internet-gateway-device-igd-to-determine-usage"></a>Ermitteln der Nutzung mithilfe eines Internetgatewaygeräts (IGD)
 
-Damit ein Gatewaygerät verwendet werden kann, muss das Gerät Byte Zähler unterstützen (das Gerät muss auf die Aktionen gettotalbytess und gettotalbytescount reagieren), und Universal Plug & Play (UPnP) muss aktiviert sein.
+Um ein Gatewaygerät zu verwenden, muss das Gerät Bytezähler unterstützen (das Gerät muss auf die Aktionen GetTotalBytesSent und GetTotalBytesReceived reagieren), und universelle Plug & Play (UPnP) muss aktiviert sein.
 
-Bits verwendet die Netzwerkschnittstellenkarte, wenn Folgendes gilt:
+BITS verwendet die Netzwerkschnittstellenkarte, wenn:
 
--   Die Leistungsindikatoren werden vom Gatewaygerät nicht unterstützt.
--   UPnP ist nicht aktiviert.
--   Der Server befindet sich im gleichen Subnetz.
--   Das Gatewaygerät gibt die Zählers Daten nicht in weniger als 200 Ticks zurück.
+-   Das Gatewaygerät unterstützt die Leistungsindikatoren nicht.
+-   UPnP ist nicht aktiviert
+-   Der Server befindet sich im selben Subnetz.
+-   Das Gatewaygerät gibt die Indikatordaten nicht in weniger als 200 Ticks zurück.
 
-Wenn der Benutzer ein öffentliches Netzwerk Profil verwendet, muss das Profil UPnP zulassen. Standardmäßig lassen die privaten und Domänen-Netzwerk Profile UPnP zu.
+Wenn der Benutzer ein öffentliches Netzwerkprofil verwendet, muss das Profil UPnP zulassen. Standardmäßig lassen die privaten Netzwerkprofile und Domänennetzwerkprofile UPnP zu.
 
-Wenn eine VPN-Verbindung verwendet wird, verwendet Bits das erste von UPnP zurückgegebene Gerät.
+Wenn eine VPN-Verbindung verwendet wird, verwendet BITS das erste Gerät, das UPnP zurückgibt.

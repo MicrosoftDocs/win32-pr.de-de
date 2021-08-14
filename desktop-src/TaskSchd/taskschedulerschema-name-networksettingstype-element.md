@@ -1,6 +1,6 @@
 ---
-title: Name (networksettingstype)-Element
-description: Enthält den Namen eines Netzwerk Profils. Der Name wird zu Anzeige Zwecken verwendet.
+title: Name (networkSettingsType)-Element
+description: Enthält den Namen eines Netzwerkprofils. Der Name wird zu Anzeigezwecken verwendet.
 ms.assetid: 86e4e68d-3c36-41eb-8563-d7d5125a5957
 keywords:
 - Name-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ed877b731b64ee8f2d807067b59399decc0eefe4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c41b92c7e63a820c2a2a34378b041bec3a49f432b52887a732c3f3bfd360b10f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758500"
 ---
-# <a name="name-networksettingstype-element"></a>Name (networksettingstype)-Element
+# <a name="name-networksettingstype-element"></a>Name (networkSettingsType)-Element
 
-Enthält den Namen eines Netzwerk Profils. Der Name wird zu Anzeige Zwecken verwendet.
+Enthält den Namen eines Netzwerkprofils. Der Name wird zu Anzeigezwecken verwendet.
 
 ``` syntax
 <xs:element name="Name"
@@ -31,7 +31,7 @@ Enthält den Namen eines Netzwerk Profils. Der Name wird zu Anzeige Zwecken verw
  />
 ```
 
-Das **Name** -Element wird durch den komplexen Typ [**networksettingstype**](taskschedulerschema-networksettingstype-complextype.md) definiert.
+Das **Name-Element** wird durch den komplexen [**networkSettingsType-Typ**](taskschedulerschema-networksettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,15 +39,15 @@ Das **Name** -Element wird durch den komplexen Typ [**networksettingstype**](tas
 
 | Element                                                                                            | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Network Settings (settingstype)**](taskschedulerschema-networksettings-settingstype-element.md) | [**Network settingstype**](taskschedulerschema-networksettingstype-complextype.md) | Enthält die Einstellungen, die vom Taskplaner-Dienst zum Abrufen eines Netzwerk Profils verwendet werden. Der Taskplaner Dienst prüft die Verfügbarkeit dieses Netzwerks, wenn das [**runonlyifnetworkavailable**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) -Element auf " **true**" festgelegt ist.<br/> |
+| [**NetworkSettings (settingsType)**](taskschedulerschema-networksettings-settingstype-element.md) | [**networkSettingsType**](taskschedulerschema-networksettingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner Dienst zum Abrufen eines Netzwerkprofils verwendet. Der Taskplaner-Dienst überprüft die Verfügbarkeit dieses Netzwerks, wenn das [**RunOnlyIfNetworkAvailable-Element**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) auf **True** festgelegt ist.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Name-Eigenschaft von inetworksettings**](/windows/desktop/api/taskschd/nf-taskschd-inetworksettings-get_name).
+Informationen zur C++-Entwicklung finden Sie unter [**Name-Eigenschaft von INetworkSettings.**](/windows/desktop/api/taskschd/nf-taskschd-inetworksettings-get_name)
 
-Informationen zur Skript Entwicklung finden Sie unter [**NetworkSettings.Name**](networksettings-name.md).
+Informationen zur Skriptentwicklung finden Sie unter [**NetworkSettings.Name**](networksettings-name.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,8 +55,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**NetworkSettings.Name**]
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

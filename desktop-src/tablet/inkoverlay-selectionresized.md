@@ -4,12 +4,12 @@ ms.assetid: 606d4bdf-b02e-459f-a4cf-050daac6c309
 title: InkOverlay.SelectionResized-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f3dd3cf1bdda004733dde99bb66150710044310
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 39b5de8e38dc9b11fcd3e46c26a7970181c97d3af07864e346c0e30a2d829f36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218646"
 ---
 # <a name="inkoverlayselectionresized-event"></a>InkOverlay.SelectionResized-Ereignis
 
@@ -33,7 +33,7 @@ void SelectionResized(
 *OldSelectionRect* \[ In\]
 </dt> <dd>
 
-Das umgebundene Rechteck der ausgewählten [InkStrokes-Auflistung,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) wie es vor dem **Ausgelösten SelectionResized-Ereignis vorhanden** war.
+Das umgebundene Rechteck der ausgewählten [InkStrokes-Auflistung,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) wie es vor dem **Ereignis SelectionResized vorhanden** war.
 
 > [!Note]  
 > Dieses Rechteck wird in Freiraumkoordinaten angegeben, was Rückgängig-Szenarien ermöglicht.
@@ -46,7 +46,7 @@ Das umgebundene Rechteck der ausgewählten [InkStrokes-Auflistung,](/previous-ve
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Ereignismethode wird in den \_ \_ dispatch-only-Schnittstellen (dispinterfaces) von IInkOverlayEvents und IInkPictureEvents mit der ID DISPID \_ IOESelectionResized definiert.
 
@@ -54,9 +54,9 @@ Diese Ereignismethode wird in den \_ \_ dispatch-only-Schnittstellen (dispinterf
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps für Windows XP Tablet PC \[ Edition\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |

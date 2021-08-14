@@ -1,69 +1,69 @@
 ---
-title: Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup
-description: Das Windows-Menü Band Framework verwendet eine Markup Sprache, die auf Extensible Application Markup Language (XAML) basiert, um die Darstellung einer Menü Bandanwendung deklarativ zu implementieren.
+title: Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup
+description: Das Windows Menübandframework verwendet eine Markupsprache, die auf Extensible Application Markup Language (XAML) basiert, um die Darstellung einer Menübandanwendung deklarativ zu implementieren.
 ms.assetid: 76bacfb3-ecaf-47b3-be97-afa5e7e52330
 keywords:
-- Windows-Menüband, Markup Struktur
-- Menüband, Markup Struktur
-- Windows-Menüband, Trennen der Präsentation von der Befehls Logik
-- Multifunktionsleiste, Trennen der Präsentation von der Befehls Logik
-- Windows-Menüband, Komponenten
-- Multifunktionsleiste, Komponenten
-- Befehlssystem für Windows-Menüband
-- Steuerelemente für Windows-Menüband
+- Windows Menüband, Markupstruktur
+- Menüband, Markupstruktur
+- Windows Menüband, Trennen der Präsentation von der Befehlslogik
+- Menüband, Trennen der Präsentation von der Befehlslogik
+- Windows Menüband, Komponenten
+- Menüband, Komponenten
+- Befehlssystem für Windows Menüband
+- Steuerelemente für Windows Menüband
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c97c5c193332ce217709c825a58f0ae546c03c9c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 20ae6c8d62012fac240c6d044c688295d89d8d5899e3673a3b914d8d142111d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118201322"
 ---
-# <a name="declaring-commands-and-controls-with-ribbon-markup"></a>Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup
+# <a name="declaring-commands-and-controls-with-ribbon-markup"></a>Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup
 
-Das Windows-Menü Band Framework verwendet eine Markup Sprache, die auf Extensible Application Markup Language (XAML) basiert, um die Darstellung einer Menü Bandanwendung deklarativ zu implementieren.
+Das Windows Menübandframework verwendet eine Markupsprache, die auf Extensible Application Markup Language (XAML) basiert, um die Darstellung einer Menübandanwendung deklarativ zu implementieren.
 
--   [Trennen der Präsentation von der Befehls Logik](#separating-presentation-from-command-logic)
--   [Markup Struktur](#markup-structure)
--   [Menü Band Komponenten](#ribbon-components)
+-   [Trennen von Präsentation und Befehlslogik](#separating-presentation-from-command-logic)
+-   [Markupstruktur](#markup-structure)
+-   [Menübandkomponenten](#ribbon-components)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="separating-presentation-from-command-logic"></a>Trennen der Präsentation von der Befehls Logik
+## <a name="separating-presentation-from-command-logic"></a>Trennen von Präsentation und Befehlslogik
 
-Die Trennung von Präsentations-und visuellen Attributen von der Befehls Logik im Menüband-Framework erfolgt über zwei unterschiedliche, aber abhängige Entwicklungsplattformen. Steuerelement Layouts, Skalierungs Verhalten, Befehls Deklarationen und Ressourcen Spezifikationen sind die Entwurfszeit Domäne einer deklarativen Markup Syntax, die auf der [Extensible Application Markup Language (XAML)](/dotnet/framework/wpf/advanced/xaml-in-wpf) -Spezifikation basiert. Funktionen auf niedriger Ebene, Anwendungs Hooks und Befehls Handler werden in Component Object Model (com)-basierten Schnittstellen Implementierungen definiert.
+Die Trennung von Darstellungs- und visuellen Attributen von der Befehlslogik im Menübandframework erfolgt über zwei unterschiedliche, aber abhängige Entwicklungsplattformen. Steuerungslayouts, Skalierungsverhalten, Befehlsdeklarationen und Ressourcenspezifikationen sind die Entwurfszeitdomäne einer deklarativen Markupsyntax, die auf der [XAML-Spezifikation (Extensible Application Markup Language)](/dotnet/framework/wpf/advanced/xaml-in-wpf) basiert. Funktionen auf niedriger Ebene, Anwendungshooks und Befehlshandler werden in COM-basierten Schnittstellenimplementierungen (Component Object Model) definiert.
 
 Diese Trennung von Präsentation und Logik bietet die folgenden Vorteile:
 
--   Ein effizienterer Anwendungs Entwicklungs Cycle, mit dem Benutzeroberflächen Entwickler und Designer die GUI der Menüband-Anwendung unabhängig von der Kern Anwendungs Funktionalität implementieren können. Diese Kernfunktionen können dedizierten Softwareentwicklern überlassen werden.
--   Kostengünstigere Wartung, da Änderungen an der GUI ohne Änderungen an der Kernfunktionalität (und umgekehrt) möglich sind.
--   Einfache Angabe von Zeichen folgen-und Bild Ressourcen durch Markup.
+-   Ein effizienterer Anwendungsentwicklungszyklus, der es Benutzeroberflächenentwicklern und Designern ermöglicht, die GRAFISCHE Benutzeroberfläche der Menübandanwendung unabhängig von der Kernanwendungsfunktionalität zu implementieren. Diese Kernfunktionen können dedizierten Softwareentwicklern überlassen werden.
+-   Kostengünstigere Wartung, da Änderungen an der grafischen Benutzeroberfläche ohne Änderungen an der Kernfunktionalität (und umgekehrt) möglich sind.
+-   Einfache Angabe von Zeichenfolgen- und Bildressourcen durch Markup.
 -   Einfache Prototyperstellung.
 
-## <a name="markup-structure"></a>Markup Struktur
+## <a name="markup-structure"></a>Markupstruktur
 
-Innerhalb der Struktur von Multifunktionsleisten-Frameworks sind zwei unterschiedliche Verzweigungen vorhanden.
+Innerhalb der Struktur des Menübandframeworkmarkups sind zwei unterschiedliche Verzweigungen vorhanden.
 
-Der erste Branch enthält ein Manifest von Befehls-und Ressourcen Deklarationen (Zeichen folgen und Bilder). Jeder Befehls Eintrag wird vom Framework verwendet, um ein Menüband-Steuerelement über eine Befehls-ID an einen Befehls Handler zu binden, der im Anwendungscode definiert ist.
+Der erste Branch enthält ein Manifest von Befehls- und Ressourcendeklarationen (Zeichenfolgen und Images). Jeder Befehlseintrag wird vom Framework verwendet, um ein Menüband-Steuerelement über eine Befehls-ID an einen im Anwendungscode definierten Befehlshandler zu binden.
 
-Die zweite Verzweigung enthält die tatsächlichen Steuerelement Deklarationen. Jedes Steuerelement ist einem Befehl über ein *CommandName* -Attribut zugeordnet, das einem *namens* Attribut zugeordnet ist, das in jeder Befehls Deklaration angegeben ist.
+Die zweite Verzweigung enthält die tatsächlichen Steuerelementdeklarationen. Jedes Steuerelement wird einem Befehl über ein *CommandName-Attribut* zugeordnet, das einem *Name-Attribut* zugeordnet ist, das in jeder Befehlsdeklaration angegeben ist.
 
-## <a name="ribbon-components"></a>Menü Band Komponenten
+## <a name="ribbon-components"></a>Menübandkomponenten
 
-Die Benutzeroberfläche des Multifunktionsleisten-Frameworks wird durch [Ansichten](windowsribbon-reference-elements-view.md)verfügbar gemacht Eine Sicht ist im Wesentlichen ein Container, z. b. das [**Menüband**](windowsribbon-element-ribbon.md) und [**contextpopup**](windowsribbon-element-contextpopup.md), das verwendet wird, um frameworksteuerelemente und die Befehle darzustellen, an die Sie gebunden sind.
+Die Benutzeroberflächenfunktionalität des Menübandframeworks wird über [Ansichten](windowsribbon-reference-elements-view.md)verfügbar gemacht. Eine Ansicht ist im Wesentlichen ein Container, z. [**B. das Menüband**](windowsribbon-element-ribbon.md) und [**ContextPopup**](windowsribbon-element-contextpopup.md), der verwendet wird, um Frameworksteuerelemente und die Befehle darzustellen, an die sie gebunden sind.
 
-Die Ansicht " [**Menüband**](windowsribbon-element-ribbon.md) " besteht aus mehreren Komponenten, die ein [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)enthalten, der [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-quickaccesstoolbar.md) zum Anzeigen häufig verwendeter Befehle von der Multifunktionsleisten-Benutzeroberfläche, von Kern-und Kontext [Registerkarten](windowsribbon-controls-tab.md) , die [Gruppen](windowsribbon-controls-group.md) von Steuerelementen enthalten, und vom umfangreichen Kontextmenü System von [**contextpopup**](windowsribbon-element-contextpopup.md).
+Die [**Menübandansicht**](windowsribbon-element-ribbon.md) besteht aus mehreren Komponenten, die ein [Anwendungsmenü,](windowsribbon-controls-applicationmenu.md)die [Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT)](windowsribbon-controls-quickaccesstoolbar.md) zum Anzeigen häufig verwendeter Befehle über die Menübandbenutzeroberfläche, kernbezogene und kontextbezogene [Registerkarten,](windowsribbon-controls-tab.md) die [Gruppen](windowsribbon-controls-group.md) von Steuerelementen enthalten, und das umfangreiche Kontextmenüsystem von [**ContextPopup**](windowsribbon-element-contextpopup.md)enthalten.
 
-Alle Multifunktionsleistenkomponenten werden in einer eigenständigen Markup Datei deklariert:
+Alle Menübandkomponenten werden in einer eigenständigen Markupdatei deklariert, die:
 
 -   Gibt die grundlegenden Eigenschaften für jedes Element an.
--   Zeigt hierarchische Beziehungen eindeutig an.
--   Liefert Layouteinstellungen und Skalierungs Hinweise. Weitere Informationen zu Menüband-frameworklayoutvorlagen finden Sie unter [Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md).
--   Bietet eine Möglichkeit, Ressourcen wie Bilder und Bezeichnungen zu definieren. Weitere Informationen zu Bild Ressourcen finden Sie unter [Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md).
+-   Zeigt hierarchische Beziehungen deutlich an.
+-   Stellt Layouteinstellungen und Skalierungshinweise zur Verfügung. Weitere Informationen zu Layoutvorlagen für Menübandframeworks finden Sie unter [Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien.](windowsribbon-templates.md)
+-   Bietet eine Möglichkeit, Ressourcen wie Bilder und Bezeichnungen zu definieren. Weitere Informationen zu Bildressourcen finden Sie unter [Angeben von Menübandbildressourcen.](windowsribbon-imageformats.md)
 
-Die beiden folgenden Beispiele für Menü Band Markierungen veranschaulichen, wie ein Satz von Menü Elementen der Menü Bandanwendung jeweils mit einem Befehlsnamen und einer ID verknüpft ist.
+Die folgenden beiden Menübandmarkupbeispiele veranschaulichen, wie ein Satz von Menübandanwendungsmenüelementen jeweils einem Befehlsnamen und einer ID zugeordnet wird.
 
-1.  In diesem Abschnitt werden die für ein Anwendungsmenü erforderlichen Befehls Deklarationen mit grundlegenden Befehlen wie "New", "Open" und "Save" angezeigt.
+1.  In diesem Abschnitt werden die Befehlsdeklarationen angezeigt, die für ein Anwendungsmenü mit grundlegenden Befehlen wie Neu, Öffnen und Speichern erforderlich sind.
     ```XML
     <!-- Command declarations for the Application Menu. -->
     <Command Name="cmdFileMenu"
@@ -114,7 +114,7 @@ Die beiden folgenden Beispiele für Menü Band Markierungen veranschaulichen, wi
 
     
 
-2.  Dieser Abschnitt zeigt die zugeordneten Steuerelement Deklarationen.
+2.  In diesem Abschnitt werden die zugeordneten Control-Deklarationen angezeigt.
     ```XML
     <!-- Control declarations for Application Menu items. -->
     <Ribbon.ApplicationMenu>
@@ -139,9 +139,9 @@ Die beiden folgenden Beispiele für Menü Band Markierungen veranschaulichen, wi
 
     
 
-Wenn das Markup mit dem UI-Befehls Compiler (UICC) kompiliert wird, werden die Befehlsnamen und IDs in einer von der Menüband-Host Anwendung verwendeten Header Datei abgelegt.
+Wenn das Markup mit dem UICC-Tool (UICC) kompiliert wird, werden die Befehlsnamen und IDs in einer Headerdatei platziert, die von der Menübandhostanwendung verwendet wird.
 
-Im folgenden finden Sie ein Beispiel für eine Header Datei, die von UICC generiert wurde.
+Im Folgenden ist ein Beispiel für eine header-Datei angegeben, die von UICC generiert wurde.
 
 
 ```
@@ -172,9 +172,9 @@ Im folgenden finden Sie ein Beispiel für eine Header Datei, die von UICC generi
 [Extensible Application Markup Language (XAML)](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 </dt> <dt>
 
-[Kompilieren von Menü Band Markup](windowsribbon-intentcl.md)
+[Kompilieren von Menübandmarkup](windowsribbon-intentcl.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

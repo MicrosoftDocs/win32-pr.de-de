@@ -1,9 +1,9 @@
 ---
-title: TB_SETCOLORSCHEME Meldung (kommstrg. h)
-description: Legt die Farbschema Informationen für das Symbolleisten-Steuerelement fest.
+title: TB_SETCOLORSCHEME (Commctrl.h)
+description: Legt die Farbschemainformationen für das Symbolleisten-Steuerelement fest.
 ms.assetid: 96cf6464-b760-46af-910f-984e41dbfca5
 keywords:
-- Windows-Steuerelemente für TB_SETCOLORSCHEME Meldung
+- TB_SETCOLORSCHEME von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b4ed278ea31dfa156dcc8a64afdb98a2ae3b938
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 58c6a07c186fd3f5a521719ba0f75f8e468c3868d8ebfaa0595679d48b45089f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118167500"
 ---
-# <a name="tb_setcolorscheme-message"></a>TB \_ SetColorScheme-Meldung
+# <a name="tb_setcolorscheme-message"></a>TB \_ SETCOLORSCHEME-Nachricht
 
-Legt die Farbschema Informationen für das Symbolleisten-Steuerelement fest.
+Legt die Farbschemainformationen für das Symbolleisten-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,19 +35,19 @@ Legt die Farbschema Informationen für das Symbolleisten-Steuerelement fest.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**ColorScheme**](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur, die die Farbschema Informationen enthält.
+Zeiger auf eine [**COLORSCHEME-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-colorscheme) die die Farbschemainformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Symbolleisten-Steuerelement verwendet beim Zeichnen der 3D-Elemente im-Steuerelement die Farbschema Informationen.
+Das Symbolleisten-Steuerelement verwendet die Farbschemainformationen beim Zeichnen der 3D-Elemente im Steuerelement.
 
-Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
+Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,17 +55,17 @@ Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TB \_ getcolorscheme**](tb-getcolorscheme.md)
+[**TB \_ GETCOLORSCHEME**](tb-getcolorscheme.md)
 </dt> </dl>
 
  

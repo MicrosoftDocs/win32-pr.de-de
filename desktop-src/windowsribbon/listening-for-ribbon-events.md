@@ -1,35 +1,35 @@
 ---
-title: Lauschen auf Menü Band Ereignisse
-description: Das Windows-Menü Band Framework verwendet die Infrastruktur der Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw), damit Entwickler lernen können, wie Benutzer mit dem Menüband Ihrer Anwendung interagieren.
+title: Lauschen auf Menübandereignisse
+description: Das Windows-Menübandframework verwendet die ETW-Infrastruktur (Event Tracing for Windows), damit Entwickler erfahren können, wie Benutzer mit dem Menüband ihrer Anwendung interagieren.
 ms.assetid: F29A8E41-C902-410E-BD28-653E078320E9
 keywords:
-- Windows-Menüband, Ereignisse
-- Multifunktionsleiste, Ereignisse
+- Windows Menüband,Ereignisse
+- Menüband,Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fcbfb2c6417c1423cb785b6b80de4396146535c2
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: f9519553a40cd613085949d4650c2689e817f387e47e9ab4380b629464e90d2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104316616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118202970"
 ---
-# <a name="listening-for-ribbon-events"></a>Lauschen auf Menü Band Ereignisse
+# <a name="listening-for-ribbon-events"></a>Lauschen auf Menübandereignisse
 
-Das Windows-Menü Band Framework verwendet die Infrastruktur der [Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw)](../etw/event-tracing-portal.md) , damit Entwickler lernen können, wie Benutzer mit dem Menüband Ihrer Anwendung interagieren.
+Das Windows-Menübandframework verwendet die [ETW-Infrastruktur (Event Tracing for Windows),](../etw/event-tracing-portal.md) damit Entwickler erfahren können, wie Benutzer mit dem Menüband ihrer Anwendung interagieren.
 
 ## <a name="introduction"></a>Einführung
 
-Der Menüband Framework-Ereignis Mechanismus ist so konzipiert, dass das Framework Multifunktionsleisten-Benutzeroberflächen Ereignisse an die Anwendung meldet, damit Sie die Benutzeraktivität überwachen, ihre Interaktionsmuster erlernen und Verwendungs Trends bewerten können. Diese Informationen können verwendet werden, um die Benutzer Funktionen für zukünftige Iterationen der Menüband-APP zu verfeinern.
+Der Ereignismechanismus für das Menübandframework ist so konzipiert, dass das Framework Ereignisse der Menübandbenutzeroberfläche an die Anwendung meldet, sodass Sie Benutzeraktivitäten überwachen, ihre Interaktionsmuster erlernen und Nutzungstrends bewerten können. Diese Informationen können verwendet werden, um die Benutzerfreundlichkeit für zukünftige Iterationen Ihrer Menüband-App zu optimieren.
 
-Die Verwendung der Menü Band Framework-Ereignisse umfasst Folgendes:
+Die Verwendung der Frameworkereignisse des Menübands umfasst Folgendes:
 
-1.  Die Multifunktionsleistenanwendung muss einen [etw-Listener (Event Tracing for Windows, Ereignis Ablauf Verfolgung für Windows)](../etw/event-tracing-portal.md) registrieren, um Benachrichtigungen über das Menüband-Ereignis Benachrichtigungen
-2.  Das Menüband Framework löst Ereignis Rückrufe für Multifunktionsleisten-Benutzeroberflächen zur Laufzeit aus, wenn die Anwendung einen [etw-Listener (Event Tracing for Windows)](../etw/event-tracing-portal.md) registriert hat.
+1.  Die Menübandanwendung muss einen [ETW-Listener (Event Tracing for Windows)](../etw/event-tracing-portal.md) registrieren, um Menübandereignisbenachrichtigungen vom Menübandframework zu empfangen.
+2.  Das Menübandframework gibt Ereignisrückrufe der Menübandbenutzeroberfläche zur Laufzeit aus, wenn die Anwendung einen [ETW-Listener (Event Tracing for Windows) registriert](../etw/event-tracing-portal.md) hat.
 
 ## <a name="supported-events"></a>Unterstützte Ereignisse
 
-Die für Menüband-Anwendungen verfügbar gemachten Ereignisse werden in der folgenden Tabelle beschrieben. 
+Die Ereignisse, die für Menübandanwendungen verfügbar gemacht werden, werden in der folgenden Tabelle beschrieben. 
 
 <table>
 <colgroup>
@@ -44,82 +44,82 @@ Die für Menüband-Anwendungen verfügbar gemachten Ereignisse werden in der fol
 </thead>
 <tbody>
 <tr class="odd">
-<td>Aktivierte Registerkarte</td>
-<td>Befehls-ID<br/> Befehlsname<br/> Ereignis Verb<br/></td>
+<td>Tabulator aktiviert</td>
+<td>Befehls-ID<br/> Befehlsname<br/> Ereignisverb<br/></td>
 </tr>
 <tr class="even">
-<td>Kontext Registerkarte aktiviert</td>
-<td>Befehls-ID<br/> Befehlsname<br/> Ereignis Verb<br/></td>
+<td>Kontextbezogene Registerkarte aktiviert</td>
+<td>Befehls-ID<br/> Befehlsname<br/> Ereignisverb<br/></td>
 </tr>
 <tr class="odd">
 <td>Anwendungsmenü geöffnet</td>
-<td>Ereignis Verb<br/></td>
+<td>Ereignisverb<br/></td>
 </tr>
 <tr class="even">
 <td>Anwendungsmenü geschlossen</td>
-<td>Ereignis Verb<br/></td>
+<td>Ereignisverb<br/></td>
 </tr>
 <tr class="odd">
-<td>Menü (regulär oder Galerie) geöffnet</td>
-<td>Befehls-ID<br/> Befehlsname<br/> Ereignis Verb<br/>
+<td>Menü (normal oder Katalog) geöffnet</td>
+<td>Befehls-ID<br/> Befehlsname<br/> Ereignisverb<br/>
 <blockquote>
 [!Note]<br />
-QAT-Menü Ereignisse werden nicht verfügbar gemacht.
+QAT-Menüereignisse werden nicht verfügbar gemacht.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>Menü (regulär oder Katalog) geschlossen</td>
-<td>Befehls-ID<br/> Befehlsname<br/> Ereignis Verb<br/>
+<td>Menü (normal oder Katalog) geschlossen</td>
+<td>Befehls-ID<br/> Befehlsname<br/> Ereignisverb<br/>
 <blockquote>
 [!Note]<br />
-QAT-Menü Ereignisse werden nicht verfügbar gemacht.
+QAT-Menüereignisse werden nicht verfügbar gemacht.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td>Get-Help</td>
-<td>Befehls-ID<br/> Befehlsname<br/> Ereignis Verb<br/> Einer der folgenden Ereignisspeicher Orte:
+<td>Befehl</td>
+<td>Befehls-ID<br/> Befehlsname<br/> Ereignisverb<br/> Einer der folgenden Ereignisstandorte:
 <ul>
-<li>Band</li>
-<li>Quickaccesstoolbar</li>
-<li>Applicationmenu</li>
-<li>Contextpopup</li>
+<li>Bändchen</li>
+<li>QUICKACCESSTOOLBAR</li>
+<li>APPLICATIONMENU</li>
+<li>CONTEXTPOPUP</li>
 </ul>
-<br/> ID des übergeordneten Befehls<br/> Name des übergeordneten Befehls<br/> Eine der folgenden Methoden zum Aufrufen:
+<br/> Id des übergeordneten Befehls<br/> Name des übergeordneten Befehls<br/> Eine der folgenden Aufrufmethoden:
 <ul>
 <li>KLICKEN</li>
-<li>KEYTIP</li>
-<li>Gewünschte</li>
-<li>Ansprechen</li>
+<li>Keytip</li>
+<li>Tastatur</li>
+<li>Touch</li>
 </ul>
 <br/>
 <blockquote>
 [!Note]<br />
-Element Kataloge und Kombinations Felder enthalten den ausgewählten Element Index, enthalten aber keine Zeichen folgen-und ganzzahligen Werte. Spinner enthalten nicht den ganzzahligen Wert.
+Elementgalerien und Kombinationsfelder enthalten den ausgewählten Elementindex, jedoch keine Zeichenfolgen- und Ganzzahlwerte. Spinner enthalten nicht den ganzzahligen Wert.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>Multifunktionsleiste minimiert</td>
-<td>Ereignis Verb<br/></td>
+<td>Menüband minimiert</td>
+<td>Ereignisverb<br/></td>
 </tr>
 <tr class="odd">
-<td>Menü Band erweitert (erweitern Sie die Schaltfläche, auf die geklickt wird oder tippen</td>
-<td>Ereignis Verb<br/></td>
+<td>Erweitertes Menüband (Schaltfläche erweitern angeklickt oder angeheftet)</td>
+<td>Ereignisverb<br/></td>
 </tr>
 <tr class="even">
-<td>Anwendungsmodus gewechselt</td>
-<td>Ereignis Verb<br/> Mode-ID (durch <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setmodes"><strong>setmodes</strong></a>fest gelegungswert)<br/>
+<td>Anwendungsmodus umgeschaltet</td>
+<td>Ereignisverb<br/> Modus-ID (Durch <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setmodes"><strong>SetModes festgelegter Wert)</strong></a><br/>
 <blockquote>
 [!Note]<br />
-Die Anwendung ist dafür verantwortlich, diese Ganzzahl zu entpacken, um zu bestimmen, welche Modi festgelegt wurden.
+Die Anwendung ist dafür verantwortlich, diese ganze Zahl zu entpacken, um zu bestimmen, welche Modi festgelegt wurden.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td>QuickInfo angezeigt</td>
-<td>Ereignis Verb<br/> ID des übergeordneten Befehls<br/> Name des übergeordneten Befehls<br/></td>
+<td>Ereignisverb<br/> Id des übergeordneten Befehls<br/> Name des übergeordneten Befehls<br/></td>
 </tr>
 </tbody>
 </table>
@@ -132,15 +132,15 @@ Die Anwendung ist dafür verantwortlich, diese Ganzzahl zu entpacken, um zu best
 
 <dl> <dt>
 
-[Entwickler Handbücher für Windows Ribbon Framework](windowsribbon-guides-entry.md)
+[Windows Entwicklerhandbücher für Menübandframework](windowsribbon-guides-entry.md)
 </dt> <dt>
 
-[Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup](./windowsribbon-schema.md)
+[Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup](./windowsribbon-schema.md)
 </dt> <dt>
 
-[Multifunktionsleisten-Benutzeroberflächen Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx)
+[Richtlinien für die Benutzerfreundlichkeit des Menübands](https://msdn.microsoft.com/library/cc872782.aspx)
 </dt> <dt>
 
-[Menüband-Entwurfsprozess](https://msdn.microsoft.com/library/cc872781.aspx)
+[Menübandentwurfsprozess](https://msdn.microsoft.com/library/cc872781.aspx)
 </dt> </dl>
 

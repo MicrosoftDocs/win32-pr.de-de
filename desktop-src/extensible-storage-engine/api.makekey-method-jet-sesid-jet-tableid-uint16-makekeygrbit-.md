@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. Makekey-Methode (JET_SESID, JET_TABLEID, UInt16, makekeygrbit)'
-title: API. Makekey-Methode (JET_SESID, JET_TABLEID, UInt16, makekeygrbit)
+description: Weitere Informationen zur Api.MakeKey-Methode (JET_SESID, JET_TABLEID, UInt16, MakeKeyGrbit)
+title: Api.MakeKey-Methode (JET_SESID, JET_TABLEID, UInt16, MakeKeyGrbit)
 TOCTitle: MakeKey method (JET_SESID, JET_TABLEID, UInt16, MakeKeyGrbit)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.MakeKey(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.UInt16,Microsoft.Isam.Esent.Interop.MakeKeyGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.makekey(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 41df8909993b6c274d1a85737b13c2f618bc8fd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87387d035e85c392be00e144e961f370207b9313a092bf792479651fcd393dcb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117718303"
 ---
-# <a name="apimakekey-method-jet_sesid-jet_tableid-uint16-makekeygrbit"></a>API. Makekey-Methode (JET_SESID, JET_TABLEID, UInt16, makekeygrbit)
+# <a name="apimakekey-method-jet_sesid-jet_tableid-uint16-makekeygrbit"></a>Api.MakeKey-Methode (JET_SESID, JET_TABLEID, UInt16, MakeKeyGrbit)
 
-Erstellt einen Suchschlüssel, der von [JetSeek (JET_SESID, JET_TABLEID, seekgrbit)](./api.jetseek-method.md) und [jetsetindexrange (JET_SESID, JET_TABLEID, setindexrangegrbit)](./api.jetsetindexrange-method.md)verwendet werden kann.
+Erstellt einen Suchschlüssel, der dann von [JetSeek(JET_SESID, JET_TABLEID, SeekGrbit)](./api.jetseek-method.md) und [JetSetIndexRange(JET_SESID, JET_TABLEID, SetIndexRangeGrbit)](./api.jetsetindexrange-method.md)verwendet werden kann.
 
 Diese API ist nicht CLS-kompatibel. 
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,40 +67,40 @@ public static void MakeKey(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, auf dem der Schlüssel erstellt werden soll.
+    Der Cursor, für den der Schlüssel erstellt werden soll.
 
 <!-- end list -->
 
-  - Daten  
-    Typ: [System. UInt16](/dotnet/api/system.uint16)  
+  - data  
+    Typ: [System.UInt16](/dotnet/api/system.uint16)  
     
-    Spaltendaten für die aktuelle Schlüssel Spalte des aktuellen Index.
+    Spaltendaten für die aktuelle Schlüsselspalte des aktuellen Indexes.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. makekeygrbit](./makekeygrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.MakeKeyGrbit](./makekeygrbit-enumeration.md)  
     
     Schlüsseloptionen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Makekey-Überladung](./api.makekey-method.md)
+[MakeKey-Überladung](./api.makekey-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

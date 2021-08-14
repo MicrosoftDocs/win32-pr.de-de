@@ -1,21 +1,21 @@
 ---
-description: Führt keinen Vorgang aus. Eine Anwendung sendet die WM- \_ null-Nachricht, wenn Sie eine Nachricht veröffentlichen möchte, die vom Empfänger Fenster ignoriert wird.
+description: Führt keinen Vorgang aus. Eine Anwendung sendet die WM NULL-Nachricht, wenn sie eine Nachricht veröffentlichen \_ möchte, die das Empfängerfenster ignoriert.
 ms.assetid: edbcfba6-7b79-4d53-84e3-2e4227e17369
-title: WM_NULL Meldung (Winuser. h)
+title: WM_NULL (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b445e13200bdeb2947e4d8fd363a1a39f0c86db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9ade89ee83a7d0d0b9d012248da729facbd07d269387a86cd4dfac873b76be3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118199946"
 ---
-# <a name="wm_null-message"></a>WM- \_ null Meldung
+# <a name="wm_null-message"></a>WM \_ NULL-Nachricht
 
-Führt keinen Vorgang aus. Eine Anwendung sendet die **WM- \_ null** -Nachricht, wenn Sie eine Nachricht veröffentlichen möchte, die vom Empfänger Fenster ignoriert wird.
+Führt keinen Vorgang aus. Eine Anwendung sendet die **WM \_ NULL-Nachricht,** wenn sie eine Nachricht veröffentlichen möchte, die das Empfängerfenster ignoriert.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -46,13 +46,13 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Eine Anwendung gibt 0 (null) zurück, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung gibt 0 (null) zurück, wenn sie diese Nachricht verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung z. b. einen " **WH \_ GetMessage** "-Hook installiert hat und verhindern möchte, dass eine Nachricht verarbeitet wird, kann die [**getmsgproc**](/previous-versions/windows/desktop/legacy/ms644981(v=vs.85)) -Rückruffunktion die Nachrichtennummer in **WM \_ null** ändern, sodass der Empfänger Sie ignoriert.
+Wenn eine Anwendung beispielsweise einen **WH \_ GETMESSAGE-Hook** installiert hat und verhindern möchte, dass eine Nachricht verarbeitet wird, kann die [**GetMsgProc-Rückruffunktion**](/previous-versions/windows/desktop/legacy/ms644981(v=vs.85)) die Nachrichtennummer in **WM \_ NULL** ändern, damit der Empfänger sie ignoriert.
 
-Ein weiteres Beispiel ist, dass eine Anwendung überprüfen kann, ob ein Fenster auf Nachrichten reagiert, indem die **WM- \_ null** -Nachricht mit der [**SendMessageTimeout**](/windows/win32/api/winuser/nf-winuser-sendmessagetimeouta) -Funktion gesendet wird.
+Als weiteres Beispiel kann eine Anwendung überprüfen, ob ein Fenster auf Nachrichten reagiert, indem die **WM \_ NULL-Nachricht** mit der [**SendMessageTimeout-Funktion gesendet**](/windows/win32/api/winuser/nf-winuser-sendmessagetimeouta) wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,15 +62,15 @@ Ein weiteres Beispiel ist, dass eine Anwendung überprüfen kann, ob ein Fenster
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über Windows](windows.md)
+[Windows Übersicht](windows.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidcolumnexception. Message-Eigenschaft'
-title: Esentinvalidcolumnexception. Message-Eigenschaft
+description: 'Weitere Informationen zu: EsentInvalidColumnException.Message-Eigenschaft'
+title: EsentInvalidColumnException.Message-Eigenschaft
 TOCTitle: 'Message property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.EsentInvalidColumnException.Message
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcolumnexception.message(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bffc813114c14b9d7c103ec92809e09bc7359eb4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43743d35ee23a8b099d8397040796ae0bceda94e9938089bd3a3197ec8bb56f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117709490"
 ---
-# <a name="esentinvalidcolumnexceptionmessage-property"></a>Esentinvalidcolumnexception. Message-Eigenschaft
+# <a name="esentinvalidcolumnexceptionmessage-property"></a>EsentInvalidColumnException.Message-Eigenschaft
 
-Ruft eine Text Meldung ab, die die Ausnahme beschreibt.
+Ruft eine Textnachricht ab, die die Ausnahme beschreibt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,18 +58,18 @@ public override string Message { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 #### <a name="implements"></a>Implementiert
 
-[_Exception. Meldung](/dotnet/api/system.runtime.interopservices._exception.message#System_Runtime_InteropServices__Exception_Message)  
+[_Exception.Message](/dotnet/api/system.runtime.interopservices._exception.message#System_Runtime_InteropServices__Exception_Message)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidcolumnexception-Klasse](./esentinvalidcolumnexception-class.md)
+[EsentInvalidColumnException-Klasse](./esentinvalidcolumnexception-class.md)
 
-[Esentinvalidcolumnexception-Elemente](./esentinvalidcolumnexception-members.md)
+[EsentInvalidColumnException-Member](./esentinvalidcolumnexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

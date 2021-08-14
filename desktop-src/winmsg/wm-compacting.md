@@ -1,24 +1,24 @@
 ---
-description: Wird an alle Fenster der obersten Ebene gesendet, wenn das System mehr als 12,5 Prozent der Systemzeit über ein Intervall von 30 bis 60 Sekunden erkennt. Dies weist darauf hin, dass der Systemspeicher gering ist.
+description: Wird an alle Fenster der obersten Ebene gesendet, wenn das System in einem Intervall von 30 bis 60 Sekunden mehr als 12,5 Prozent der Systemzeit erkennt, um Arbeitsspeicher zu komprimieren. Dies gibt an, dass der Systemspeicher gering ist.
 ms.assetid: e8adc655-0252-4a43-8a62-b08e96f5744e
-title: WM_COMPACTING Meldung (Winuser. h)
+title: WM_COMPACTING (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fb94e77a1c6b27701b26ed4b7e6e01f326aaa40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 553662bccb223ed7fb987df5d2918e3d8d1c6ab95f125cbacbd50c1e2484c0c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200571"
 ---
-# <a name="wm_compacting-message"></a>Mit der WM \_ komprimierende Nachricht
+# <a name="wm_compacting-message"></a>WM \_ COMPACTING-Meldung
 
-Wird an alle Fenster der obersten Ebene gesendet, wenn das System mehr als 12,5 Prozent der Systemzeit über ein Intervall von 30 bis 60 Sekunden erkennt. Dies weist darauf hin, dass der Systemspeicher gering ist.
+Wird an alle Fenster der obersten Ebene gesendet, wenn das System in einem Intervall von 30 bis 60 Sekunden mehr als 12,5 Prozent der Systemzeit erkennt, um Arbeitsspeicher zu komprimieren. Dies gibt an, dass der Systemspeicher gering ist.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 > [!Note]  
-> Diese Meldung wird nur für die Kompatibilität mit 16-Bit-Windows-basierten Anwendungen bereitgestellt.
+> Diese Meldung wird nur zur Kompatibilität mit 16-Bit-Windows-basierten Anwendungen bereitgestellt.
 
  
 
@@ -36,7 +36,7 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Das Verhältnis der CPU-Zeit (Central Processing Unit), die zurzeit vom System für das System zur CPU-Zeit aufgewendet wird, das zurzeit vom System für andere Vorgänge aufgewendet wird. Beispielsweise steht 0X8000 für 50 Prozent der CPU-Zeit, die für den Komprimierungs Speicher aufgewendet wurde.
+Das Verhältnis der CPU-Zeit (Central Processing Unit), die derzeit vom System für die Dichte des Arbeitsspeichers auf die CPU-Zeit des Systems, das andere Vorgänge ausgeführt hat, verwendet wird. Beispielsweise stellt 0x8000 50 Prozent der CPU-Zeit dar, die für das Komprimieren des Arbeitsspeichers ausgegeben wurde.
 
 </dd> <dt>
 
@@ -51,11 +51,11 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung diese Nachricht empfängt, sollte so viel Arbeitsspeicher wie möglich freigegeben werden. dabei wird die aktuelle Aktivität der Anwendung und die Gesamtzahl der Anwendungen berücksichtigt, die auf dem System ausgeführt werden.
+Wenn eine Anwendung diese Nachricht empfängt, sollte sie so viel Arbeitsspeicher wie möglich frei geben, unter Berücksichtigung der aktuellen Aktivitätsebene der Anwendung und der Gesamtzahl der anwendungen, die auf dem System ausgeführt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,15 +65,15 @@ Wenn eine Anwendung diese Nachricht empfängt, sollte so viel Arbeitsspeicher wi
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über Windows](windows.md)
+[Windows Übersicht](windows.md)
 </dt> </dl>
 
  

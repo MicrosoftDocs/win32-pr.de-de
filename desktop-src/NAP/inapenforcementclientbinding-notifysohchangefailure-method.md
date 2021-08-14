@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientbinding notifysohchangefailure-Methode (napforcementclient. h)
-description: Wird vom Erzwingungs Client verwendet, um den NAPAgent darüber zu informieren, dass ein vorheriger inapenforcementclientcallback notifysohchange nicht verarbeitet werden konnte.
+title: INapEnforcementClientBinding NotifySoHChangeFailure-Methode (NapEnforcementClient.h)
+description: Wird vom Erzwingungsclient verwendet, um napAgent darüber zu informieren, dass er eine vorherige INapEnforcementClientCallback NotifySoHChange nicht verarbeiten konnte.
 ms.assetid: 2de1626c-ffda-4191-90c4-72d0275965d9
 keywords:
-- Notifysohchangefailure-Methode NAP
-- Notifysohchangefailure-Methode NAP, inapenforcementclientbinding-Schnittstelle
-- Inapenforcementclientbinding-Schnittstelle NAP, notifysohchangefailure-Methode
+- NotifySoHChangeFailure-Methode NAP
+- NotifySoHChangeFailure-Methode NAP, INapEnforcementClientBinding-Schnittstelle
+- INapEnforcementClientBinding-Schnittstelle NAP , NotifySoHChangeFailure-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af23fd41e5a8b97064c089062eae13e93cf9ff0d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2f91ae79656ec8909a8bff041e3ddc2714f1cbd17a65362e08731e9ca411d57f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134218"
 ---
-# <a name="inapenforcementclientbindingnotifysohchangefailure-method"></a>Inapenforcementclientbinding:: notifysohchangefailure-Methode
+# <a name="inapenforcementclientbindingnotifysohchangefailure-method"></a>INapEnforcementClientBinding::NotifySoHChangeFailure-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientbinding:: notifysohchangefailure** -Methode wird vom Erzwingungs Client verwendet, um den NAPAgent darüber zu informieren, dass ein vorheriger [**inapenforcementclientcallback:: notifysohchange**](inapenforcementclientcallback-notifysohchange-method.md)nicht verarbeitet werden konnte.
+Die **INapEnforcementClientBinding::NotifySoHChangeFailure-Methode** wird vom Erzwingungsclient verwendet, um den NapAgent darüber zu informieren, dass er einen [**vorherigen INapEnforcementClientCallback::NotifySoHChange**](inapenforcementclientcallback-notifysohchange-method.md)nicht verarbeiten konnte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,26 +47,26 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                        |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl>         | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>          | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
-| <dl> <dt>**NAP \_ E \_ nicht \_ Initialisiert**</dt> </dl> | Der Enforcer wurde nicht bereits initialisiert.<br/>       |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>         | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>          | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
+| <dl> <dt>**NAP \_ E \_ NICHT \_ INITIALISIERT**</dt> </dl> | Der Enforcer wurde zuvor nicht initialisiert.<br/>       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Als Ergebnis dieses Methoden Aufrufs versucht NAPAgent, die SoH-Änderung zu einem späteren Zeitpunkt zu übernehmen, indem [**inapenforcementclientcallback:: notifysohchange**](inapenforcementclientcallback-notifysohchange-method.md) erneut aufgerufen wird. Nachdem der Erzwingungs Client [**inapenforcementclientbinding:: getsohrequest**](inapenforcementclientbinding-getsohrequest-method.md)aufgerufen hat, muss er die Änderung anwenden, d. h., nach diesem Punkt werden keine Fehler von der NAPAgent behandelt.
+Als Ergebnis dieser Methode rufen Sie die NapAgent-Wiederholungen auf, indem Sie die SoH-Änderung zu einem späteren Zeitpunkt anwenden, indem [**Sie INapEnforcementClientCallback::NotifySoHChange**](inapenforcementclientcallback-notifysohchange-method.md) erneut aufrufen. Sobald der Erzwingungsclient [**INapEnforcementClientBinding::GetSoHRequest**](inapenforcementclientbinding-getsohrequest-method.md)aufgerufen hat, muss er die Änderung anwenden, d. h., nach diesem Punkt werden keine Fehler vom NapAgent behandelt.
 
-Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](inapenforcementclientbinding-initialize-method.md) -Methode aufrufen, bevor diese oder eine andere Methode der [**inapenforcementclientbinding**](inapenforcementclientbinding.md) -Schnittstelle aufgerufen wird.
+Der Erzwingungsclient muss die [**INapEnforcementClientBinding::Initialize-Methode**](inapenforcementclientbinding-initialize-method.md) aufrufen, bevor er diese oder eine andere Methode der [**INapEnforcementClientBinding-Schnittstelle aufruft.**](inapenforcementclientbinding.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,28 +74,28 @@ Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 
 </dt> <dt>
 
-[**Inapenforcementclientbinding**](inapenforcementclientbinding.md)
+[**INapEnforcementClientBinding**](inapenforcementclientbinding.md)
 </dt> <dt>
 
-[**Inapenforcementclientbinding:: getsohrequest**](inapenforcementclientbinding-getsohrequest-method.md)
+[**INapEnforcementClientBinding::GetSoHRequest**](inapenforcementclientbinding-getsohrequest-method.md)
 </dt> <dt>
 
-[**Inapenforcementclientcallback:: notifysohchange**](inapenforcementclientcallback-notifysohchange-method.md)
+[**INapEnforcementClientCallback::NotifySoHChange**](inapenforcementclientcallback-notifysohchange-method.md)
 </dt> </dl>
 
  

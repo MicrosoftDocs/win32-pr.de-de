@@ -1,35 +1,35 @@
 ---
-description: Definieren von Dateityp Attributen in der Registrierung.
+description: Definieren von Dateitypattributen in der Registrierung.
 ms.assetid: EE35E3E7-0573-45CA-A21A-89E50B86487D
-title: Definieren von Dateityp Attributen
+title: Definieren von Dateitypattributen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7844c65191d6513a06625a28c47accd3df5cc82f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e0a89f5770b55521ccdf51859bdde69ed58d05f864385e46f1d76e482319c63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118223574"
 ---
-# <a name="how-to-define-file-type-attributes"></a>Definieren von Dateityp Attributen
+# <a name="how-to-define-file-type-attributes"></a>Definieren von Dateitypattributen
 
-Durch das Zuweisen von Dateityp Attributen zu einer zugeordneten ProgID können Sie einige Aspekte des Verhaltens des Dateityps steuern. Vor Windows Vista konnten diese Attribute Ihnen ermöglichen, den Umfang zu beschränken, in dem der Benutzer die Eigenschaften Registerkarte **Ordneroptionen** verwenden könnte, um verschiedene Aspekte des Dateityps zu ändern, z. b. das Symbol oder die Verben.
+Durch das Zuweisen von Dateitypattributen zu einer zugeordneten ProgID können Sie einige Aspekte des Verhaltens des Dateityps steuern. Vor Windows Vista konnten Sie mit diesen Attributen einschränken, in welchem  Umfang der Benutzer die Eigenschaftenregisterkarte Ordneroptionen verwenden kann, um verschiedene Aspekte des Dateityps zu ändern, z. B. das Symbol oder verben.
 
-Dateityp Attribute sind binäre Flags, die als **reg \_ DWORD** -oder **reg- \_ Binär** Werte im zugeordneten ProgID-Unterschlüssel des Dateityps angegeben werden.
+Dateitypattribute sind binäre Flags, die als **REG \_ DWORD-** oder **REG \_ BINARY-Werte** im zugeordneten ProgID-Unterschlüssel des Dateityps angegeben werden.
 
-Um Attribute für einen Dateityp zuzuweisen, führen Sie die folgenden Schritte aus.
+Führen Sie die folgenden Schritte aus, um Attribute für einen Dateityp zu zuweisen.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1"></a>Schritt 1:
 
-Fügen Sie dem zugeordneten ProgID-Unterschlüssel des Dateityps einen EditFlags-Eintrag hinzu.
+Fügen Sie dem zugeordneten Unterschlüssel ProgID des Dateityps einen EditFlags-Eintrag hinzu.
 
 ### <a name="step-2"></a>Schritt 2:
 
-Legen Sie den Eintrag auf den entsprechenden Attribut Wert fest.
+Legen Sie den Eintrag auf den entsprechenden Attributwert fest.
 
-Im folgenden Beispiel werden die \_ für den MYP-Dateityp festgelegten Attribute "FTA NoRemove (0x00000010)" und "FTA \_ nonewverb (0x00000020)" gezeigt.
+Das folgende Beispiel zeigt die \_ FTA-Attribute NoRemove (0x00000010) und FTA \_ NoNewVerb (0x00000020), die für den .myp-Dateityp festgelegt sind.
 
 ```
 HKEY_CLASSES_ROOT
@@ -40,11 +40,11 @@ HKEY_CLASSES_ROOT
       EditFlags = 0x00000030
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Flags können mit einem logischen OR kombiniert werden, um den Wert eines einzelnen Attributs zu bilden.
+Die Flags können mit einem logischen OR kombiniert werden, um den einzelnen Attributwert zu bilden.
 
-Eine Liste der möglichen Dateityp Attribute und ihrer hexadezimalen Werte sowie weitere Informationen zum programmgesteuerten abrufen und Festlegen dieser Werte finden Sie unter [**filetypeattributeflags**](/windows/desktop/api/Shlwapi/ne-shlwapi-filetypeattributeflags).
+Eine Liste der möglichen Dateitypattribute und deren Hexadezimalwerte sowie weitere Details zum programmgesteuerten Abrufen und Festlegen dieser Werte finden Sie unter [**FILETYPEATTRIBUTEFLAGS**](/windows/desktop/api/Shlwapi/ne-shlwapi-filetypeattributeflags).
 
  
 

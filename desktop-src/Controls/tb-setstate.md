@@ -1,9 +1,9 @@
 ---
-title: TB_SETSTATE Meldung (kommstrg. h)
+title: TB_SETSTATE (Commctrl.h)
 description: Legt den Zustand für die angegebene Schaltfläche in einer Symbolleiste fest.
 ms.assetid: 68633b58-8d21-4931-b01f-32a66bda37b1
 keywords:
-- Windows-Steuerelemente für TB_SETSTATE Meldung
+- TB_SETSTATE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7aa46dc68d9af5559e580e697bf6893b15051cff
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aa9ee112e4bbbe9c64ceab6205d67ecd6ae9653df97be55991be38eb5d181d3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118167470"
 ---
-# <a name="tb_setstate-message"></a>TB- \_ SetState-Meldung
+# <a name="tb_setstate-message"></a>TB \_ SETSTATE-Nachricht
 
 Legt den Zustand für die angegebene Schaltfläche in einer Symbolleiste fest.
 
@@ -32,20 +32,20 @@ Legt den Zustand für die angegebene Schaltfläche in einer Symbolleiste fest.
 *wParam* 
 </dt> <dd>
 
-Der Befehls Bezeichner der Schaltfläche.
+Befehlsbezeichner der Schaltfläche.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist eine Kombination von Werten, die in den Status der Symbolleisten- [Schalt](toolbar-button-states.md)Flächen Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) muss NULL sein.
+Das [**LOWORD ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine Kombination von Werten, die unter Symbolleisten-Schaltflächenzustände [aufgeführt sind.](toolbar-button-states.md) Das [**HIWORD muss**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

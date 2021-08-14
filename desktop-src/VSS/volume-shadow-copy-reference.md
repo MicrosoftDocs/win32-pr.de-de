@@ -1,37 +1,37 @@
 ---
-description: Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von com-und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen auf dem System (als Writer bezeichnet) weiterhin auf den Volumes schreiben.
+description: Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von COM- und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen auf dem System (als Writer bezeichnet) weiterhin auf die Volumes schreiben.
 ms.assetid: 94d9504b-2838-4516-8031-daa7bd9d2fec
-title: Volumen Schatten Kopie-API-Referenz
+title: Referenz zur Volumeschattenkopie-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea8651c987c01ce67f1383f2ab1a24ca3fea8bbc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fbc2d0bec6d68572a67a1dc80327fb80028d7f8d98487f24fec24e2c2e65f95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751527"
 ---
-# <a name="volume-shadow-copy-api-reference"></a>Volumen Schatten Kopie-API-Referenz
+# <a name="volume-shadow-copy-api-reference"></a>Referenz zur Volumeschattenkopie-API
 
-Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von com-und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen auf dem System (als Writer bezeichnet) weiterhin auf den Volumes schreiben.
+Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von COM- und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen auf dem System (als Writer bezeichnet) weiterhin auf die Volumes schreiben.
 
-VSS unterstützt diese Sicherungen durch die Erstellung von Schatten Kopien, ein Duplikat des ursprünglichen Volumes zu einem bestimmten Zeitpunkt.
+VSS unterstützt diese Sicherungen durch die Erstellung von Schattenkopien, einem Duplikat des ursprünglichen Volumes zu einem bestimmten Zeitpunkt.
 
-Entwickler von Drittanbietern können mit der VSS-API Anforderer (z. b. eine Sicherungs Anwendung) zum Erstellen und Verwalten von Schatten Kopien erstellen.
+Drittanbieterentwickler können die VSS-API verwenden, um Anforderer (z. B. eine Sicherungsanwendung) zum Erstellen und Verwalten von Schattenkopien zu erstellen und zu verwalten.
 
-Die tatsächliche Erstellung und Darstellung von Schatten Kopien erfolgt durch Anwendungen auf Systemebene, die als Anbieter bezeichnet werden.
+Die eigentliche Arbeit zum Erstellen und Darstellen von Schattenkopien wird von Anwendungen auf Systemebene durchgeführt, die als Anbieter bezeichnet werden.
 
-Entwickler können die API auch zum Erstellen von Writern verwenden: VSS-fähige Anwendungen, die e/a-Vorgänge mit der Erstellung und Bearbeitung von Schatten Kopien koordinieren können.
+Entwickler können die API auch verwenden, um Writer zu erstellen: VSS-fähige Anwendungen, die E/A-Vorgänge mit der Erstellung und Bearbeitung von Schattenkopien koordinieren können.
 
--   [Volumen Schatten Kopie-API-Klassen](volume-shadow-copy-api-classes.md)
--   [Datentypen der Volumeschattenkopie-API](volume-shadow-copy-api-data-types.md)
+-   [Volumeschattenkopie-API-Klassen](volume-shadow-copy-api-classes.md)
+-   [Volumeschattenkopie-API-Datentypen](volume-shadow-copy-api-data-types.md)
 -   [Volumeschattenkopie-API-Enumerationen](volume-shadow-copy-api-enumeration-types.md)
--   [Volumen Schatten Kopie-API-Funktionen](volume-shadow-copy-api-functions.md)
--   [Volumeschattenkopie-API](volume-shadow-copy-api-interfaces.md)
--   [Volumen Schatten Kopie-API-Strukturen](volume-shadow-copy-api-structures.md)
--   [Glossar der Volumeschattenkopie](volume-shadow-copy-glossary.md)
+-   [Volumeschattenkopie-API-Funktionen](volume-shadow-copy-api-functions.md)
+-   [Volumeschattenkopie-API-Schnittstellen](volume-shadow-copy-api-interfaces.md)
+-   [Volumeschattenkopie-API-Strukturen](volume-shadow-copy-api-structures.md)
+-   [Volumeschattenkopie–Glossar](volume-shadow-copy-glossary.md)
 
-Weitere Informationen zum Schreiben von Anforderern und Writern finden [Sie unter Verwenden der Volumeschattenkopie-Dienst](using-the-volume-shadow-copy-service.md).
+Weitere Informationen zum Schreiben von Anforderern und Writern finden Sie unter [Verwenden der Volumeschattenkopie-Dienst](using-the-volume-shadow-copy-service.md).
 
  
 

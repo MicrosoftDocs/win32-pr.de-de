@@ -1,23 +1,23 @@
 ---
-description: Benachrichtigt ein Fenster, dass sein nicht-Client Bereich zerstört wird. Die DestroyWindow-Funktion sendet die WM \_ ncdestroy-Meldung an das Fenster nach der WM-Lösch \_ Nachricht.
+description: Benachrichtigt ein Fenster, dass sein Nicht-Clientbereich zerstört wird. Die DestroyWindow-Funktion sendet die WM \_ NCDESTROY-Nachricht an das Fenster nach der WM \_ DESTROY-Nachricht.
 ms.assetid: 64ab268d-0e90-4401-81d3-a4da64196001
-title: WM_NCDESTROY Meldung (Winuser. h)
+title: WM_NCDESTROY (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a462f679a29f471638299e037749adaf32a85dea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a2e74db0abf22fc2fb3d2a16b5cc63187514d1bee26079490c8d19eae13787e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200046"
 ---
-# <a name="wm_ncdestroy-message"></a>WM- \_ ncdestroy-Meldung
+# <a name="wm_ncdestroy-message"></a>WM \_ NCDESTROY-Meldung
 
-Benachrichtigt ein Fenster, dass sein nicht-Client Bereich zerstört wird. Die [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) -Funktion sendet die **WM \_ ncdestroy** -Meldung an das Fenster nach der WM-Lösch Nachricht. [**\_**](wm-destroy.md) [**Die WM- \_ Zerstörung**](wm-destroy.md) wird verwendet, um das zugeordnete Speicher Objekt freizugeben, das dem Fenster zugeordnet ist.
+Benachrichtigt ein Fenster, dass sein Nicht-Clientbereich zerstört wird. Die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) sendet die **WM \_ NCDESTROY-Nachricht** an das Fenster nach der [**WM \_ DESTROY-Nachricht.**](wm-destroy.md) [**WM \_ DESTROY wird**](wm-destroy.md) verwendet, um das zugeordnete Speicherobjekt frei zu geben, das dem Fenster zugeordnet ist.
 
-Die **WM \_ ncdestroy** -Nachricht wird gesendet, nachdem die untergeordneten Fenster zerstört wurden. Im Gegensatz dazu wird die [**WM- \_ Zerstörung**](wm-destroy.md) gesendet, bevor die untergeordneten Fenster zerstört werden.
+Die **WM \_ NCDESTROY-Nachricht** wird gesendet, nachdem die untergeordneten Fenster zerstört wurden. Im Gegensatz dazu wird [**WM \_ DESTROY**](wm-destroy.md) gesendet, bevor die untergeordneten Fenster zerstört werden.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -48,11 +48,11 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung gibt den Arbeitsspeicher frei, der intern für das Fenster reserviert wurde.
+Diese Meldung gibt jeglichen internen Speicher frei, der für das Fenster zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,27 +62,27 @@ Diese Meldung gibt den Arbeitsspeicher frei, der intern für das Fenster reservi
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow)
 </dt> <dt>
 
-[**WM \_ zerstören**](wm-destroy.md)
+[**WM \_ DESTROY**](wm-destroy.md)
 </dt> <dt>
 
-[**WM- \_ nccreate**](wm-nccreate.md)
+[**WM \_ NCCREATE**](wm-nccreate.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

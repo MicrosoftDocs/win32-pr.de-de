@@ -1,87 +1,87 @@
 ---
-description: Die \_ Bit-Flag-Konstanten von phonebuttonmode beschreiben die Schaltflächen Klassen.
+description: Die \_ PHONEBUTTONMODE-Bitflagkonstanten beschreiben die Schaltflächenklassen.
 ms.assetid: 7bf337ee-acda-42fe-b50b-370aad50dc03
-title: PHONEBUTTONMODE_ Konstanten (TAPI. h)
+title: PHONEBUTTONMODE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a4ee5e9835b7df06773bc1429641c91597c15e6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9424c23a9fe6497c657081dd9e197526dc5eb897ad773b1e03fb33c9f08113df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761302"
 ---
-# <a name="phonebuttonmode_-constants"></a>Phonebuttonmode- \_ Konstanten
+# <a name="phonebuttonmode_-constants"></a>PHONEBUTTONMODE-Konstanten \_
 
-Die Bit-Flag-Konstanten von **phonebuttonmode \_** beschreiben die Schaltflächen Klassen.
+Die **\_ PHONEBUTTONMODE-Bitflagkonstanten** beschreiben die Schaltflächenklassen.
 
 <dl> <dt>
 
-<span id="PHONEBUTTONMODE_CALL"></span><span id="phonebuttonmode_call"></span>**phonebuttonmode \_ -Befehl**
+<span id="PHONEBUTTONMODE_CALL"></span><span id="phonebuttonmode_call"></span>**PHONEBUTTONMODE \_ CALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Schaltfläche wird einer aufrufdarstellung zugewiesen.
+Die Schaltfläche wird einer Aufrufdarstellung zugewiesen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONMODE_DISPLAY"></span><span id="phonebuttonmode_display"></span>**phonebuttonmode- \_ Anzeige**
+<span id="PHONEBUTTONMODE_DISPLAY"></span><span id="phonebuttonmode_display"></span>**\_PHONEBUTTONMODE-ANZEIGE**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Schaltfläche ist eine "weiche" Schaltfläche, die der Telefonanzeige zugeordnet ist. Ein Telefon Satz kann NULL oder mehr Anzeige Schaltflächen enthalten.
+Die Schaltfläche ist eine "soft"-Schaltfläche, die der Anzeige des Telefons zugeordnet ist. Ein Smartphonesatz kann über 0 (null) oder mehr Anzeigeschaltflächen verfügen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONMODE_DUMMY"></span><span id="phonebuttonmode_dummy"></span>**phonebuttonmode- \_ Dummy**
+<span id="PHONEBUTTONMODE_DUMMY"></span><span id="phonebuttonmode_dummy"></span>**PHONEBUTTONMODE \_ DUMMY**
 </dt> <dd> <dl> <dt>
 
 
 
-Dieser Wert wird verwendet, um eine Schaltfläche/Lamp-Position zu beschreiben, die keine entsprechende Schaltfläche hat, aber nur über eine Lamp verfügt.
+Dieser Wert wird verwendet, um eine Schaltflächen-/Laternenposition zu beschreiben, die keine entsprechende Schaltfläche, sondern nur eine Lampe hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONMODE_FEATURE"></span><span id="phonebuttonmode_feature"></span>**phonebuttonmode- \_ Funktion**
+<span id="PHONEBUTTONMODE_FEATURE"></span><span id="phonebuttonmode_feature"></span>**\_PHONEBUTTONMODE-FEATURE**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Schaltfläche wird den anfordernden Features des Schalters zugewiesen, z. b. Halt, Konferenz und Übertragung.
+Die Schaltfläche wird zugewiesen, um Features vom Switch anzufordern, z. B. Halten, Konferenz und Übertragung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONMODE_KEYPAD"></span><span id="phonebuttonmode_keypad"></span>**phonebuttonmode- \_ Keypad**
+<span id="PHONEBUTTONMODE_KEYPAD"></span><span id="phonebuttonmode_keypad"></span>**PHONEBUTTONMODE \_ KEYPAD**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Schaltfläche ist eine der zwölf Tastatur-Schaltflächen, 0 bis 9, ' \* ' und ' \# '.
+Die Schaltfläche ist eine der zwölf Tastendrucktasten 0 bis 9, \* ' ' und ' \# '.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONMODE_LOCAL"></span><span id="phonebuttonmode_local"></span>**phonebuttonmode \_ lokal**
+<span id="PHONEBUTTONMODE_LOCAL"></span><span id="phonebuttonmode_local"></span>**PHONEBUTTONMODE \_ LOCAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Schaltfläche ist eine lokale Funktions Schaltfläche, z. b. stumm-oder volumesteuerung.
+Die Schaltfläche ist eine lokale Funktionsschaltfläche, z. B. Stummschaltfläche oder Lautstärkeregler.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
-Dieser Enumerationstyp wird in der [**phonecaps**](/windows/desktop/api/Tapi/ns-tapi-phonecaps) -Datenstruktur verwendet, um die Bedeutung der Schaltflächen des Telefons zu beschreiben.
+Dieser Enumerationstyp wird in der [**PHONECAPS-Datenstruktur**](/windows/desktop/api/Tapi/ns-tapi-phonecaps) verwendet, um die Bedeutung zu beschreiben, die den Schaltflächen des Telefons zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Dieser Enumerationstyp wird in der [**phonecaps**](/windows/desktop/api/Tapi/ns-
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

@@ -1,33 +1,33 @@
 ---
-description: Der Netzwerk Lademodus (Asynchronous Transfer Mode, ATM) basiert auf dem Rechenzentrum, und die Unterstützung für ATM wurde vielen Teilen des Betriebssystems hinzugefügt.
+description: AtM-Netzwerke (Asynchronous Transfer Mode) werden zum Mainstream des Computings, und die Unterstützung für ATM wurde zu vielen Teilen des Betriebssystems hinzugefügt.
 ms.assetid: 0ca0ecf3-2b67-4925-a6fc-3edfaad2c0e2
-title: Quality of Service (telefonieapi)
+title: Quality of Service (Telefonie-API)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6525ced0b29d35482244c3c37f8382edbfcb9fd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 131f54d69cd44799f9ea694fe83d50f28fded0ac7c8c15dabfd7a2db499b2293
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761231"
 ---
-# <a name="quality-of-service-telephony-api"></a>Quality of Service (telefonieapi)
+# <a name="quality-of-service-telephony-api"></a>Quality of Service (Telefonie-API)
 
-Der Netzwerk Lademodus (Asynchronous Transfer Mode, ATM) basiert auf dem Rechenzentrum, und die Unterstützung für ATM wurde vielen Teilen des Betriebssystems hinzugefügt. TAPI unterstützt auch Schlüssel Attribute der Einrichtung von Anrufen in ATM-Einrichtungen. Die wichtigste davon aus der Anwendungsperspektive ist die Möglichkeit, Quality of Service (QoS)-Parameter für eingehende und ausgehende Aufrufe anzufordern, zu aushandeln, zu aushandeln und Anzeichen dafür zu erhalten.
+AtM-Netzwerke (Asynchronous Transfer Mode) werden zum Mainstream des Computings, und die Unterstützung für ATM wurde zu vielen Teilen des Betriebssystems hinzugefügt. TAPI unterstützt auch wichtige Attribute zum Einrichten von Aufrufen für ATM-Einrichtungen. Das Wichtigste aus Sicht der Anwendung ist die Möglichkeit, Bei eingehenden und ausgehenden Aufrufen Hinweise auf Quality of Service Parameter (QOS) anzufordern, auszuhandeln, neu auszuhandeln und zu empfangen.
 
-QoS-Informationen in TAPI werden zwischen Anwendungen und Dienstanbietern in [**Flowspec**](/windows/desktop/api/qos/ns-qos-flowspec) -Strukturen ausgetauscht, die in Windows Sockets 2,0 definiert sind.
+QOS-Informationen in TAPI werden zwischen Anwendungen und Dienstanbietern in [**FLOWSPEC-Strukturen**](/windows/desktop/api/qos/ns-qos-flowspec) ausgetauscht, die in Windows Sockets 2.0 definiert sind.
 
-Anwendungen fordern QoS für ausgehende Aufrufe an, indem Sie die Sitzungs Informationswerte festlegen, bevor Sie eine Kommunikationssitzung starten. Der Dienstanbieter versucht, die angegebene QoS anzugeben, und schlägt fehl, wenn dies nicht möglich ist. Die Anwendung kann dann Ihre Parameter anpassen und den Rückruf erneut versuchen. Nachdem ein-Rückruf erstellt wurde, kann eine Anwendung eine Änderung im QoS anfordern.
+Anwendungen fordern QOS bei ausgehenden Aufrufen an, indem sitzungsinformationswerte festgelegt werden, bevor eine Kommunikationssitzung gestartet wird. Der Dienstanbieter versucht, das angegebene QOS bereitzustellen, und schlägt den Aufruf fehl, wenn dies nicht der Lage ist. Die Anwendung kann dann ihre Parameter anpassen und den Aufruf erneut versuchen. Nachdem ein Aufruf eingerichtet wurde, kann eine Anwendung eine Änderung im QOS anfordern.
 
-TAPI stellt Ereignis Benachrichtigungen für den Besitzer oder die Überwachung von Anwendungen bereit, wenn eine Änderung der QoS-Ebenen vorliegt.
+TAPI stellt Ereignisbenachrichtigungen für Besitzer- oder Überwachungsanwendungen bereit, wenn sich die QOS-Ebenen ändern.
 
-Die Unterstützung für QoS ist nicht auf ATM-Transporte beschränkt. Jeder Dienstanbieter kann QoS-Funktionen implementieren.
+Die Unterstützung für QOS ist nicht auf ATM-Transporte beschränkt. jeder Dienstanbieter kann QOS-Features implementieren.
 
 Nicht alle Dienstanbieter unterstützen die Verwendung dieser Informationen.
 
-* * TAPI 2. x: * *[**linesetcallqualityofservice**](/windows/win32/api/tapi/nf-tapi-linesetcallqualityofservice), [**linegetcallinfo**](/windows/win32/api/tapi/nf-tapi-linegetcallinfo), **dwsendingflowspecsize**, **dwsendingflowspecoffset**, **dwreceivingflowspecsize** und **dwreceivingflowspecoffset** Member von [**linecallpara**](/windows/win32/api/tapi/ns-tapi-linecallparams) Metern
+**TAPI 2.x: **[**lineSetCallQualityOfService**](/windows/win32/api/tapi/nf-tapi-linesetcallqualityofservice), [**lineGetCallInfo**](/windows/win32/api/tapi/nf-tapi-linegetcallinfo), **dwSendingFlowspecSize**, **dwSendingFlowspecOffset,** **dwReceivingFlowspecSize** und **dwReceivingFlowspecOffset-Elemente** von [**LINECALLPARAMS**](/windows/win32/api/tapi/ns-tapi-linecallparams)
 
-* * TAPI 3. x: * *[**itbasiccallcontrol:: setqos**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-setqos), [**itqosevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itqosevent)
+**TAPI 3.x: **[**ITBasicCallControl::SetQOS**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-setqos), [**ITQOSEvent**](/windows/desktop/api/tapi3if/nn-tapi3if-itqosevent)
 
  
 

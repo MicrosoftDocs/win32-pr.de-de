@@ -1,7 +1,7 @@
 ---
-description: Zeigt dem Benutzer ein Dialogfeld an, in dem die Bild Erfassung vorbereitet werden soll.
+description: Zeigt dem Benutzer ein Dialogfeld an, um sich auf die Imageerfassung vorzubereiten.
 ms.assetid: 2d7246ec-fb90-4538-b717-b9e3813c1696
-title: IWiaItem2::D evicedlg-Methode (WIA. h)
+title: IWiaItem2::D eviceDlg-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 3337e74a621b6431b5bbfa429692717def447c82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9eaab17f0a76bfc5c6ac919a9abef92ca7288539c9705ca30c02b1dd0a8d1ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118035221"
 ---
-# <a name="iwiaitem2devicedlg-method"></a>IWiaItem2::D evicedlg-Methode
+# <a name="iwiaitem2devicedlg-method"></a>IWiaItem2::D eviceDlg-Methode
 
-Zeigt dem Benutzer ein Dialogfeld an, in dem die Bild Erfassung vorbereitet werden soll.
+Zeigt dem Benutzer ein Dialogfeld an, um sich auf die Imageerfassung vorzubereiten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,16 +45,16 @@ HRESULT DeviceDlg(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt einen Satz von Flags an, die den Vorgang des Dialog Felds steuern. Der Wert kann entweder 0 (null) sein, um das Standardverhalten darzustellen, oder eines der WIA- \_ Geräte \_ Dialogfelder, die in [**wiaflag**](-wia-wiaflag.md)beschrieben werden.
+Gibt einen Satz von Flags an, die den Vorgang des Dialogfelds steuern. Der Wert kann entweder 0 sein, um das Standardverhalten darzustellen, oder eines der \_ \_ in [**WiaFlag**](-wia-wiaflag.md)beschriebenen WIA DEVICE DIALOG-Flags.
 
 </dd> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
@@ -63,39 +63,39 @@ Ein Handle für das übergeordnete Fenster.
 
 </dd> <dt>
 
-*bstrinfoldername* \[ in\]
+*bstrFolderName* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Gibt den Namen des Ordners an, in den die Dateien übertragen werden sollen.
+Gibt den Ordnernamen an, in den die Dateien übertragen werden sollen.
 
 </dd> <dt>
 
-*bstrauch filename* \[ in\]
+*bstrFilename* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Gibt den Namen der Vorlagen Datei an.
+Gibt den Namen der Vorlagendatei an.
 
 </dd> <dt>
 
-*plnumfiles* \[ in\]
+*plNumFiles* \[ In\]
 </dt> <dd>
 
-Type: **Long \** _
+Typ: **\* LONG**
 
-Ein Zeiger auf die Anzahl der Elemente im _ppbstrFilePaths *-Array.
+Ein Zeiger auf die Anzahl der Elemente im *ppbstrFilePaths-Array.*
 
 </dd> <dt>
 
-*ppbstraufilepfade* \[ in, out\]
+*ppbstrFilePaths* \[ in, out\]
 </dt> <dd>
 
 Typ: **BSTR \* \***
 
-Die Adresse eines Zeigers auf ein Array von Pfaden für die gescannten Dateien. Initialisieren Sie den Zeiger, um auf ein Array der Größe 0 (null) vor IWiaItem2 zu zeigen **::D evicedlg** aufgerufen wird.
+Die Adresse eines Zeigers auf ein Array von Pfaden für die gescannten Dateien. Initialisieren Sie den Zeiger so, dass er auf ein Array der Größe 0 (null) zeigt, bevor **IWiaItem2::D eviceDlg** aufgerufen wird.
 
 </dd> <dt>
 
@@ -104,7 +104,7 @@ Die Adresse eines Zeigers auf ein Array von Pfaden für die gescannten Dateien. 
 
 Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\*\***
 
-Die Adresse eines Arrays von Zeigern auf [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstellen.
+Die Adresse eines Arrays von Zeigern auf [**IWiaItem2-Schnittstellen.**](-wia-iwiaitem2.md)
 
 </dd> </dl>
 
@@ -112,15 +112,15 @@ Die Adresse eines Arrays von Zeigern auf [**IWiaItem2**](-wia-iwiaitem2.md) -Sch
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode zeigt dem Benutzer ein Dialogfeld an, das von einer Anwendung verwendet wird, um alle für die Image Erfassung erforderlichen Informationen zu sammeln. Sie wird auch verwendet, um Bild Scan Eigenschaften anzugeben, z. b. Helligkeit und Kontrast.
+Diese Methode zeigt dem Benutzer ein Dialogfeld an, in dem eine Anwendung alle für die Imageerfassung erforderlichen Informationen erfasst. Es wird auch verwendet, um Bildscaneigenschaften wie Helligkeit und Kontrast anzugeben.
 
-Nachdem diese Methode zurückgegeben wurde, kann die Anwendung die [**iwiatransfer**](-wia-iwiatransfer.md) -Schnittstelle verwenden, um das Image abzurufen.
+Nachdem diese Methode zurückgegeben wurde, kann die Anwendung die [**IWiaTransfer-Schnittstelle**](-wia-iwiatransfer.md) verwenden, um das Bild zu erhalten.
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für jedes Element im Array von Schnittstellen Zeigern aufrufen, die über den *ppIWiaItem2* -Parameter empfangen werden. Anwendungen müssen das Array auch mit " [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)" freigeben.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für jedes Element im Array von Schnittstellenzeigern aufrufen, die sie über den *ppIWiaItem2-Parameter* empfangen. Anwendungen müssen das Array auch mit [coTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)freigeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -128,10 +128,10 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

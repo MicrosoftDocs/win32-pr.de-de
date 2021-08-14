@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientcallback GetConnections-Methode (napforcementclient. h)
-description: Wird von NAPAgent aufgerufen und vom Erzwingungs Client implementiert, um einen Satz von Verbindungen zurückzugeben.
+title: INapEnforcementClientCallback GetConnections-Methode (NapEnforcementClient.h)
+description: Wird vom NapAgent aufgerufen und vom Erzwingungsclient implementiert, um eine Reihe von Verbindungen zurück zu geben.
 ms.assetid: 8f697217-5799-48e4-9f0b-715f516e48d9
 keywords:
 - GetConnections-Methode NAP
-- GetConnections-Methode NAP, inapenforcementclientcallback-Schnittstelle
-- Inapenforcementclientcallback-Schnittstelle NAP, GetConnections-Methode
+- GetConnections-Methode NAP, INapEnforcementClientCallback-Schnittstelle
+- INapEnforcementClientCallback-Schnittstelle NAP, GetConnections-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9acdc68dbc69cabe710414f3fa2501585f3e384e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4f6c6fdb4adc416cb25fa0e402c8fee2d8baf3270400f15a8de67966eff7a9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134029"
 ---
-# <a name="inapenforcementclientcallbackgetconnections-method"></a>Inapenforcementclientcallback:: GetConnections-Methode
+# <a name="inapenforcementclientcallbackgetconnections-method"></a>INapEnforcementClientCallback::GetConnections-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapenforcementclientcallback:: GetConnections** -Rückruf Methode wird von NAPAgent aufgerufen und vom Erzwingungs Client implementiert, um einen Satz von Verbindungen zurückzugeben.
+Die **INapEnforcementClientCallback::GetConnections-Rückrufmethode** wird vom NapAgent aufgerufen und vom Erzwingungsclient implementiert, um eine Reihe von Verbindungen zurück zu geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,23 +47,23 @@ HRESULT GetConnections(
 
 <dl> <dt>
 
-*Verbindungen* \[ vorgenommen\]
+*Verbindungen* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den aktuellen Satz von verwalteten [**Verbindungen**](connections-struct.md).
+Ein Zeiger auf den aktuellen Satz verwalteter [**Verbindungen.**](connections-struct.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Rückruf Methode muss einen der folgenden Fehlercodes zurückgeben.
+Diese Rückrufmethode muss einen der folgenden Fehlercodes zurückgeben.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                                                                                                                                           |
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>                       | Gibt diesen Wert zurück, wenn der Vorgang erfolgreich ausgeführt wurde.<br/>                                                                                                                                                              |
-| <dl> <dt>**RPC \_ S- \_ Server nicht \_ verfügbar**</dt> </dl> | Durch das zurückgeben dieses Werts wird der Enforcer aus der gebundenen SHA-Liste entfernt, und der entsprechende NAPAgent-Cache Eintrag, der geleert werden soll. Der fehlerhafte SHA kann dann mit dem NAPAgent erneut initialisiert werden.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>                       | Gibt diesen Wert zurück, wenn der Vorgang erfolgreich war.<br/>                                                                                                                                                              |
+| <dl> <dt>**\_ \_ RPC-S-SERVER \_ NICHT VERFÜGBAR**</dt> </dl> | Die Rückgabe dieses Werts bewirkt, dass der Erzwinger aus der Bound-SHA-Liste entfernt und der entsprechende NapAgent-Cacheeintrag geleert wird. Der fehlerhafte SHA kann sich dann mit dem NapAgent erneut initialisieren.<br/> |
 
 
 
@@ -75,18 +75,18 @@ Diese Rückruf Methode muss einen der folgenden Fehlercodes zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapenforcementclientcallback**](inapenforcementclientcallback.md)
+[**INapEnforcementClientCallback**](inapenforcementclientcallback.md)
 </dt> </dl>
 
  

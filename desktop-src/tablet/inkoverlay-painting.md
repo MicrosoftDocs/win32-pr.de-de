@@ -1,19 +1,19 @@
 ---
-description: Tritt ein, bevor das InkOverlay-Objekt oder InkPicture das erneute Zeichnen von sich selbst abgeschlossen hat.
+description: Tritt ein, bevor das InkOverlay-Objekt oder InkPicture die Neuzeichnung abgeschlossen hat.
 ms.assetid: abfd37fb-2d2b-4d60-96a1-08f68b73417b
-title: InkOverlay. Paint-Ereignis (msink AUT. h)
+title: InkOverlay.Painting-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fc056667f88c0631e84a76767fc97f90ca05a98
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42075f6ae8641c895611196b80a904228cc27c45e5d84bdc798b5cc9242e7c7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218942"
 ---
-# <a name="inkoverlaypainting-event"></a>InkOverlay. Paint-Ereignis
+# <a name="inkoverlaypainting-event"></a>InkOverlay.Painting-Ereignis
 
-Tritt ein, bevor das [**InkOverlay**](inkoverlay-class.md) -Objekt oder [InkPicture](inkpicture-control-reference.md) das erneute Zeichnen von sich selbst abgeschlossen hat.
+Tritt ein, bevor das [**InkOverlay-Objekt**](inkoverlay-class.md) oder [InkPicture](inkpicture-control-reference.md) die Neuzeichnung abgeschlossen hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,24 +32,24 @@ void Painting(
 
 <dl> <dt>
 
-*hdc* \[ in\]
+*hDC* \[ In\]
 </dt> <dd>
 
-Der Gerätekontext, auf dem gezeichnet werden soll.
+Der Gerätekontext, in dem das Zeichnen ausgeführt wird.
 
 </dd> <dt>
 
-*Rect* \[ in\]
+*Rect* \[ In\]
 </dt> <dd>
 
-Das Rechteck, das neu gezeichnet werden soll.
+Das Rechteck, das neu maliert werden soll.
 
 </dd> <dt>
 
 *Zulassen* \[ in, out\]
 </dt> <dd>
 
-Gibt an, ob der Repaint-Vorgang ausgeführt wird.
+Gibt an, ob der neu strich ausgeführt wird.
 
 </dd> </dl>
 
@@ -57,9 +57,9 @@ Gibt an, ob der Repaint-Vorgang ausgeführt wird.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID DISPID \_ ioepaint definiert.
+Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IOEPainting definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,14 +67,14 @@ Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayeve
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,51 +1,51 @@
 ---
 title: UI_PKEY_ItemsSource
-description: Identifiziert die \_ \_ ItemsSource-Eigenschaft der UI pkey.
+description: Identifiziert die \_ PKEY \_ ItemsSource-Eigenschaft der Benutzeroberfläche.
 ms.assetid: f5e99d2a-f50a-4932-ae77-581037cb9ac8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67bdc52a7688648f59be74c22516ee790d109dd2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 017a3fc8f05c24c8d1996202b1db08a459f1a3747e3f787b521a70e6e3a25df0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118201570"
 ---
-# <a name="ui_pkey_itemssource"></a>UI- \_ pkey \_ ItemsSource
+# <a name="ui_pkey_itemssource"></a>UI \_ PKEY \_ ItemsSource
 
-Identifiziert die \_ \_ ItemsSource-Eigenschaft der UI pkey.
+Identifiziert die \_ PKEY \_ ItemsSource-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_ItemsSource
-   shellPKey = UI_PKEY_ItemsSource
-   formatID = 00000101-7363-696e-8441798acf5aebb7
-   propID = 101
-   typeInfo
-      type = IUICollection
+   name = UI_PKEY_ItemsSource
+   shellPKey = UI_PKEY_ItemsSource
+   formatID = 00000101-7363-696e-8441798acf5aebb7
+   propID = 101
+   typeInfo
+      type = IUICollection
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-UI \_ pkey \_ ItemsSource wird von einer Anwendung verwendet, um die Auflistung von Elementen in einem Katalog-Steuerelement abzufragen, z. b. die Symbolleiste für den schnell Zugriff (QAT).
+Ui \_ PKEY \_ ItemsSource wird von einer Anwendung verwendet, um die Sammlung von Elementen in einem Katalogsteuerelement abzufragen, z. B. die Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT).
 
-Der Eigenschafts Wert ist ein [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt.
+Der Eigenschaftswert ist ein [**IUICollection-Objekt.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection)
 
-Jedes Element in dieser [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) muss [**iuisimplepropertyset**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) implementieren, um die schreibgeschützten Eigenschaften, die dem Element zugeordnet sind, wie z. b. die Bezeichnung oder das Bild verfügbar zu machen.
+Jedes Element in dieser [**IUICollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) muss [**IUISimplePropertySet**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) implementieren, um die schreibgeschützten Eigenschaften verfügbar zu machen, die dem Element zugeordnet sind, z. B. die Bezeichnung oder das Bild.
 
-Um Elemente in einem Katalog-Steuerelement zur Laufzeit hinzuzufügen oder zu löschen, verwenden Sie die [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Methoden.
+Verwenden Sie zum Hinzufügen oder Löschen von Elementen in einem Katalogsteuerelement zur Laufzeit die [**IUICollection-Methoden.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection)
 
-Der folgende Screenshot veranschaulicht eine Sammlung von Elementen in einem [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Menü.
+Der folgende Screenshot veranschaulicht eine Auflistung von Elementen in einem [**SplitButtonGallery-Menü.**](windowsribbon-element-splitbuttongallery.md)
 
-![Screenshot mit Kategorien in einem Menüband-Katalog](images/markup/splitbutton-gallery-control.png)
+![Screenshot: Kategorien in einem Menübandkatalog](images/markup/splitbutton-gallery-control.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Sammlungs Eigenschaften](windowsribbon-reference-properties-collection.md)
+[Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

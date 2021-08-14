@@ -1,47 +1,47 @@
 ---
-title: Arbeiten mit Sperr Listen
-description: Arbeiten mit Sperr Listen
+title: Arbeiten mit Sperrlisten
+description: Arbeiten mit Sperrlisten
 ms.assetid: 4463abb5-f48f-484f-b837-512313572c0a
 keywords:
-- Windows Media-Format-SDK, Sperr Listen
-- Advanced Systems Format (ASF), Sperr Listen
-- ASF (Advanced Systems Format), Sperr Listen
-- Sperr Listen
-- Digital Rights Management (DRM), Sperr Listen
-- DRM (Digital Rights Management), Sperr Listen
+- Windows Medienformat-SDK, Sperrlisten
+- Advanced Systems Format (ASF), Sperrlisten
+- ASF (Advanced Systems Format), Sperrlisten
+- Sperrlisten
+- Digital Rights Management (DRM), Sperrlisten
+- DRM (Digital Rights Management), Sperrlisten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75f4eca82dd82c9225406a85034ff2a6df227fce
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 3d022b9b55a1a14b147d76d289efeac956bae8f1858d155f138efa579d533fa9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104516580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118194880"
 ---
-# <a name="working-with-revocation-lists"></a>Arbeiten mit Sperr Listen
+# <a name="working-with-revocation-lists"></a>Arbeiten mit Sperrlisten
 
-Um auf Sicherheitsverletzungen zu reagieren und sicherzustellen, dass Player-Anwendungen, die bekanntermaßen beschädigt oder kompromittiert sind, keine geschützten Dateien wiedergeben oder verwenden können, enthält jede ausgegebene Lizenz eine Sperr Liste. Eine Sperr Liste enthält die Anwendungs Zertifikate aller Player-Anwendungen, die bekanntermaßen beschädigt oder beschädigt sind. Beim Empfang einer neuen Lizenz wird von der DRM-Komponente der Player Anwendung eine Sperr Liste geprüft. Wenn eine neue gefunden wird, die aktueller als die derzeit auf dem Computer ist, wird die neuere Liste gespeichert. Wenn der Consumer das nächste Mal eine geschützte ASF-Datei abspielt, vergleicht die DRM-Komponente die Player Anwendung mit der Sperr Liste. Wenn die Player Anwendung widerrufen wird, sendet die DRM-Komponente eine Fehlermeldung an die Anwendung.
+Um auf Sicherheitsverletzungen zu reagieren und sicherzustellen, dass Playeranwendungen, von denen bekannt ist, dass sie beschädigt oder kompromittiert sind, keine geschützten Dateien wiederverfolgen oder verwenden können, enthält jede ausgestellte Lizenz eine Sperrliste. Eine Sperrliste enthält die Anwendungszertifikate aller Playeranwendungen, die bekannterlich fehlerhaft oder beschädigt sind. Wenn eine neue Lizenz empfangen wird, sucht die DRM-Komponente der Playeranwendung nach einer Sperrliste. Wenn eine neuere Liste gefunden wird als die, die sich derzeit auf dem Computer befindet, wird die neuere Liste gespeichert. Wenn der Consumer das nächste Mal eine geschützte ASF-Datei abspielt, vergleicht die DRM-Komponente die Playeranwendung mit der Sperrliste. Wenn die Playeranwendung widerrufen wird, sendet die DRM-Komponente eine Fehlermeldung an die Anwendung.
 
-Spieler Anwendungen können in den folgenden Szenarien eine Sperr Fehlermeldung erhalten:
+Playeranwendungen können in den folgenden Szenarien eine Sperrfehlermeldung erhalten:
 
--   Die Fehlermeldung wird empfangen, nachdem die Anwendung die [**iwmdrmreader:: AcquireLicense**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-acquirelicense) -Methode für eine geschützte Datei aufgerufen hat. Der-Befehl schlägt fehl, wenn der **HRESULT** -Code NS \_ E \_ DRM \_ appcert \_ widerrufen wurde, der für die **OnStatus** -Rückruffunktion mit dem WMT-Abruf \_ Lizenzstatus bereitgestellt wird \_ . Wenn dieser **HRESULT** -Code ignoriert wird, treten Fehler weiterhin auf.
--   Die Fehlermeldung wird empfangen, wenn die Anwendung den DRM-fähigen Reader erstellt und die [**iwmreader:: Open**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-open) -Methode für eine geschützte Datei aufruft. Der-Befehl schlägt fehl, wenn der **HRESULT** -Code NS \_ E \_ DRM \_ appcert \_ widerrufen wurde, der für die [**iwmstatuscallback:: OnStatus**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) -Rückruf Methode mit dem geöffneten WMT-Status bereitgestellt wird \_ . Wenn eine Player Anwendung diese Fehlermeldung empfängt, sollte Sie von der Anwendung benachrichtigt und eine Möglichkeit zum Wiederherstellen der Funktionalität für Ihren Player bereitgestellt werden. Die Anwendung kann z. b. eine URL öffnen, in der Endbenutzer ein Upgrade für die kompromittierte Anwendung herunterladen können.
+-   Die Fehlermeldung wird empfangen, nachdem die Anwendung die [**IWMDRMReader::AcquireLicense-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-acquirelicense) für eine geschützte Datei aufruft. Der Aufruf schlägt mit **dem HRESULT-Code** NS E DRM APPCERT REVOKED fehl, der für die OnStatus-Rückruffunktion mit \_ dem \_ \_ \_ WMT ACQUIRE  \_ \_ LICENSE-Status bereitgestellt wird. Wenn dieser **HRESULT-Code** ignoriert wird, treten weiterhin Fehler auf.
+-   Die Fehlermeldung wird empfangen, wenn die Anwendung den DRM-fähigen Reader erstellt und die [**IWMReader::Open-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-open) für eine geschützte Datei aufruft. Der Aufruf schlägt mit dem **HRESULT-Code** NS E DRM APPCERT REVOKED fehl, der an die \_ \_ \_ \_ [**IWMStatusCallback::OnStatus-Rückrufmethode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) mit dem WMT OPENED-Status übergeben \_ wird. Wenn eine Playeranwendung diese Fehlermeldung empfängt, sollte die Anwendung Endbenutzer benachrichtigen und ihnen eine Möglichkeit bieten, die Funktionalität für ihren Player wiederherzustellen. Beispielsweise kann die Anwendung eine URL öffnen, über die Endbenutzer ein Upgrade für die kompromittierte Anwendung herunterladen können.
 
-**Hinweis** DRM wird von der x64-basierten Version dieses SDK nicht unterstützt.
+**Hinweis:** DRM wird von der x64-basierten Version dieses SDK nicht unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Features digitaler Rights Management**](digital-rights-management-features.md)
+[**Digital Rights Management Features**](digital-rights-management-features.md)
 </dt> <dt>
 
-[**Behandeln von Lizenz Erwerbs Ereignissen**](handling-license-acquisition-events.md)
+[**Behandeln von Lizenzerwerbsereignissen**](handling-license-acquisition-events.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
