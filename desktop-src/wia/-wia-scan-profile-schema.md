@@ -1,31 +1,31 @@
 ---
-description: Das Überprüfungs Profil Schema definiert ein XML-Format, das verwendet werden kann, um die Eigenschaften von Elementen der Windows-Abbild Erfassung (WIA), wie z. b. Scanner und Kameras, zu speichern.
+description: Das Scanprofilschema definiert ein XML-Format, das verwendet werden kann, um die Eigenschaften Windows WIA-Elemente (Image Acquisition) wie Scanner und Kameras zu speichern.
 ms.assetid: e0848db3-652a-45be-a18b-99b82420c586
-title: Profil Schema überprüfen
+title: Scanprofilschema
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 331c52e933e1e6b771c477bdc8a38f1c5f749448
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81091e75269206b6b3b5a89f86c6f92da5c1d2080d90382ac6af48c6d1cc32ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208016"
 ---
-# <a name="scan-profile-schema"></a>Profil Schema überprüfen
+# <a name="scan-profile-schema"></a>Scanprofilschema
 
-Das Überprüfungs Profil Schema definiert ein XML-Format, das verwendet werden kann, um die Eigenschaften von Elementen der Windows-Abbild Erfassung (WIA), wie z. b. Scanner und Kameras, zu speichern. Mit diesen permanenten Dateien können Anwendungen automatische Scans bereitstellen, ohne dass sich die Benutzer an die Eigenschafts Einstellungen der Elemente erinnern müssen.
+Das Scanprofilschema definiert ein XML-Format, das verwendet werden kann, um die Eigenschaften Windows WIA-Elemente (Image Acquisition) wie Scanner und Kameras zu speichern. Diese persistenten Dateien ermöglichen Anwendungen die automatische Überprüfung, ohne dass benutzer sich die Eigenschafteneinstellungen der Elemente merken müssen.
 
-Jedes [**IWiaItem2**](-wia-iwiaitem2.md) -Gerät kann über ein Überprüfungs Profil verfügen. Allerdings können **IWiaItem2** Items von Typen, \_ die mit einer Kategorie \_ fertiggestellt \_ wurden, die Datei fertiggestellt \_ \_ haben
+Jedes [**IWiaItem2-Gerät**](-wia-iwiaitem2.md) kann über ein Überprüfungsprofil verfügen. **IWiaItem2-Elemente** der Typen WIA \_ CATEGORY \_ FINISHED FILE und WIA CATEGORY ROOT können jedoch \_ keine Profile \_ \_ aufweisen.
 
-Scan Profile werden über die Schnittstellen [**iscanprofile**](-wia-iscanprofile.md), [**iscanprofilemgr**](-wia-iscanprofilemgr.md)und [**iscanprofileui**](-wia-iscanprofileui.md) erstellt und verwaltet. Benutzer Ihrer Anwendung können Profile in eingeschränkter Weise mithilfe der [**iscanprofileui:: scanprofiledialog**](-wia-iscanprofileui-scanprofiledialog.md) -Methode ändern.
+Scanprofile werden über die Schnittstellen [**IScanProfile,**](-wia-iscanprofile.md) [**IScanProfileMgr**](-wia-iscanprofilemgr.md)und [**IScanProfileUI**](-wia-iscanprofileui.md) erstellt und verwaltet. Benutzer Ihrer Anwendung können Profile auf eingeschränkte Weise mithilfe der [**IScanProfileUI::ScanProfileDialog-Methode**](-wia-iscanprofileui-scanprofiledialog.md) ändern.
 
-Alle Scan Profile verfügen über die folgenden Elemente: `<ProfileGUID>, <DeviceID>, <ProfileName>, <WiaItem>` , und `<Properties>` . Das Standardprofil eines Geräts weist auch ein- `<Default>` Element auf.
+Alle Scanprofile verfügen über die folgenden Elemente: `<ProfileGUID>, <DeviceID>, <ProfileName>, <WiaItem>` und `<Properties>` . Das Standardprofil eines Geräts verfügt auch über ein `<Default>` -Element.
 
-Das `<ProfileGUID>` -Element und das- `<DeviceID>` Element können nicht geändert werden, nachdem das Scan Profil erstellt wurde. Die Werte des `<ProfileName>` -Elements und des- `<WiaItem>` Elements können geändert werden. Das- `<Default>` Element kann hinzugefügt oder gelöscht werden. Dies kann Programm gesteuert mithilfe der Methoden [**iscanprofile:: SetName**](-wia-iscanprofile-setname.md), [**iscanprofile:: SetItem**](-wia-iscanprofile-setitem.md)und [**iscanprofilemgr:: SetDefault**](-wia-iscanprofilemgr-setdefault.md) erfolgen. Diese Eigenschaften können auch von Benutzern über die [**iscanprofileui:: scanprofiledialog**](-wia-iscanprofileui-scanprofiledialog.md) -Methode geändert werden.
+Das `<ProfileGUID>` -Element und das `<DeviceID>` -Element können nach dem Erstellen des Scanprofils nicht mehr geändert werden. Die Werte des `<ProfileName>` -Elements und des `<WiaItem>` -Elements können geändert werden. Das `<Default>` Element kann hinzugefügt oder gelöscht werden. Dies kann programmgesteuert mithilfe der Methoden [**IScanProfile::SetName,**](-wia-iscanprofile-setname.md) [**IScanProfile::SetItem**](-wia-iscanprofile-setitem.md)und [**IScanProfileMgr::SetDefault**](-wia-iscanprofilemgr-setdefault.md) erfolgen. Diese Eigenschaften können auch von Benutzern über die [**IScanProfileUI::ScanProfileDialog-Methode**](-wia-iscanprofileui-scanprofiledialog.md) geändert werden.
 
-Das- `<Properties>` Element enthält untergeordnete Elemente `<Property>` . Verwenden Sie diese, um dem Profil eine beliebige WIA-Element-oder Geräte Eigenschaft hinzuzufügen. Sie können auch Ihre eigenen Image-Erstell-untergeordneten Elemente entwickeln `<Property>` . Dadurch ist das Scan Profil Schema erweiterbar. (Weitere Informationen zum Erweitern des Schemas finden Sie unter [Definieren von benutzerdefinierten Eigenschaften](-wia-defining-custom-properties.md), [**iscanprofile:: GetProperty**](-wia-iscanprofile-getproperty.md)und [**iscanprofile:: SetProperty**](-wia-iscanprofile-setproperty.md).)
+Das `<Properties>` -Element enthält `<Property>` untergeordnete Elemente. Verwenden Sie diese, um dem Profil alle WIA-Elemente oder Geräteeigenschaften hinzuzufügen. Sie können auch eigene untergeordnete Bilder `<Property>` entwickeln. Dadurch wird das Scanprofilschema erweiterbar. (Weitere Informationen zum Erweitern des Schemas finden Sie unter [Definieren von benutzerdefinierten Eigenschaften,](-wia-defining-custom-properties.md) [**IScanProfile::GetProperty**](-wia-iscanprofile-getproperty.md)und [**IScanProfile::SetProperty**](-wia-iscanprofile-setproperty.md).)
 
-Hier ist das komplette Überprüfungs Profil Schema. Ein Beispiel Profil folgt.
+Hier ist das vollständige Scanprofilschema angegeben. Es folgt ein Beispielprofil.
 
 
 ```
@@ -71,7 +71,7 @@ Hier ist das komplette Überprüfungs Profil Schema. Ein Beispiel Profil folgt.
 
 
 
-Klicken Sie auf **Beispiel anzeigen** , um ein Beispiel Profil anzuzeigen.
+Klicken Sie auf **Beispiel anzeigen,** um ein Beispielprofil anzuzeigen.
 
 
 ```
@@ -117,16 +117,16 @@ Klicken Sie auf **Beispiel anzeigen** , um ein Beispiel Profil anzuzeigen.
 **Referenz**
 </dt> <dt>
 
-[**Iscanprofile:: GetProperty**](-wia-iscanprofile-getproperty.md)
+[**IScanProfile::GetProperty**](-wia-iscanprofile-getproperty.md)
 </dt> <dt>
 
-[**Iscanprofile:: SetProperty**](-wia-iscanprofile-setproperty.md)
+[**IScanProfile::SetProperty**](-wia-iscanprofile-setproperty.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[WIA-Eigenschafts Konstanten](-wia-wia-property-constants.md)
+[WIA-Eigenschaftenkonstanten](-wia-wia-property-constants.md)
 </dt> <dt>
 
 [Definieren von benutzerdefinierten Eigenschaften](-wia-defining-custom-properties.md)

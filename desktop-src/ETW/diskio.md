@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Datenträger-e/a-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die übergeordnete Klasse für Datenträger-E/A-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 630fb6c6-b505-4384-ab7b-ee898d95bd41
-title: Diskio-Klasse
+title: DiskIo-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 97f9907e4da51675bb1a5f562931e471ee0e133e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e91f5e8b84d77b0938f35da69a84c26fa0f34a4da63bce40330484a29e19b5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118395301"
 ---
-# <a name="diskio-class"></a>Diskio-Klasse
+# <a name="diskio-class"></a>DiskIo-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Datenträger-e/a-Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Datenträger-E/A-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,50 +36,50 @@ class DiskIo : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **diskio** -Klasse definiert keine Member.
+Die **DiskIo-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie Datenträger-e/a-Ereignisse in einer NT-Kernel Protokollierungs Sitzung aktivieren möchten, geben Sie das Flag für die Ereignis Ablaufverfolgungsflag für Datenträger- [](/windows/win32/api/evntrace/nf-evntrace-starttracea) e/a im **enableflags** -Member einer Eigenschaften Struktur der [**Ereignis Ablauf \_ Verfolgung \_**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an **\_ \_ \_ \_** Sie können auch eines oder mehrere der folgenden Flags angeben:
+Um Datenträger-I/0-Ereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie das **EVENT TRACE FLAG DISK \_ \_ \_ \_ IO-Flag** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an, wenn Sie die [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) aufrufen. Sie können auch eines oder mehrere der folgenden Flags angeben:
 
--   **Ereignis \_ Ablauf \_ Verfolgung \_ Flag \_ Daten \_ Träger-e/a**
--   **Ereignis Ablauf Verfolgungs Kennzeichen- \_ \_ \_ Treiber**
+-   **\_EREIGNISABLAUFVERFOLGUNGSFLAG \_ \_ \_ DATENTRÄGER-E/A-INIT \_**
+-   **\_ \_ \_ EREIGNISABLAUFVERFOLGUNGSFLAGTREIBER**
 
-Consumer der Ereignis Ablauf Verfolgung können eine spezielle Verarbeitung für Datenträger-e/a-Ereignisse implementieren, indem Sie die Funktion [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**diskioguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie die folgenden Ereignis Typen, um das tatsächliche Datenträger-e/a-Ereignis beim Verarbeiten von Ereignissen zu identifizieren.
+Consumer der Ereignisablaufverfolgung können eine spezielle Verarbeitung für Datenträger-E/A-Ereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**DiskIoGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Datenträger-E/A-Ereignis beim Nutzen von Ereignissen zu identifizieren.
 
 
 
 | Ereignistyp                                                                      | BESCHREIBUNG                                                                                                                                                   |
 |---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ereignis \_ E \_ \_ \_**/a-Ablaufverfolgungstyp<br/>             | Lese Ereignis. Die [**diskio \_ TypeGroup1**](diskio-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                              |
-| **Ereignis \_ E/a-Schreibvorgänge des \_ \_ ablaufverfolgungstyps \_**<br/>            | Schreib Ereignis. Die [**diskio \_ TypeGroup1**](diskio-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                             |
-| **Ereignis \_ Ablaufverfolgungstyp-e/a \_ \_ \_ Lesen \_ Init**(Ereignistyp ist 12)<br/>       | Lese Ereignis initialisieren. Die [**diskio \_ TypeGroup2**](diskio-typegroup2.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                   |
-| **Ereignis \_ E/a- \_ \_ \_ \_ Ablaufverfolgungstyp**<br/>      | Initialisieren Sie das Schreib Ereignis. Die [**diskio \_ TypeGroup2**](diskio-typegroup2.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                  |
-| **Ereignis \_ E \_ \_ \_**/a-Leerung des Ablauf Verfolgungs Typs (Ereignistyp ist 14<br/>            | Initialisieren Sie das Schreib Ereignis. Die [**diskio \_ TypeGroup3**](diskio-typegroup3.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                  |
-| **Ereignis \_ Ablauf Verfolgungs Typen-e/a-Leerungs- \_ \_ \_ \_ Init**<br/>      | Lösch Ereignis initialisieren. Die [**diskio \_ TypeGroup2**](diskio-typegroup2.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                  |
-| **Ereignis \_ \_ \_ \_ Umgeleiteter \_** e/a-Ablaufverfolgungstyp<br/> | Initialisieren Sie das umgeleitete Ereignis. Umgeleitete e/a-Ereignisse werden verwendet, um die Datenträger-e/a-Vorgänge in einem Windows-Abbild Format (WIM) dem Dateinamen                  |
-| Der Ereignistyp Wert ist 52<br/>                                               | Anforderungs Ereignis für Treiber Abschluss. Die " [**drivercompleterequest**](drivercompleterequest.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                    |
-| Der Ereignistyp Wert ist 53<br/>                                               | Das Anforderungs Rückgabe Ereignis des Treibers wurde beendet. Die " [**drivercompleterequestreturn**](drivercompleterequestreturn.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis. |
-| Der Ereignistyp Wert ist 37<br/>                                               | Routine Ereignis für Treiber Abschluss. Die MOF-Klasse [**drivercompletionroutine**](drivercompletionroutine.md) definiert die Ereignisdaten für dieses Ereignis.              |
-| Der Ereignistyp Wert ist 34<br/>                                               | Ereignis des Haupt Funktions aufrufdes Treibers. Die " [**drivermajorfunctioncallmof**](drivermajorfunctioncall.md) "-Klasse definiert die Ereignisdaten für dieses Ereignis.             |
-| Der Ereignistyp Wert ist 35<br/>                                               | Ereignis für den Haupt Funktions Rückruf des Treibers. Die " [**drivermajorfunctionreturn**](drivermajorfunctionreturn.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.  |
+| **EVENT \_ TRACE \_ TYPE \_ IO \_ READ**(Ereignistypwert ist 10)<br/>             | Leseereignis. Die [**DiskIo \_ TypeGroup1**](diskio-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                              |
+| **EVENT \_ TRACE \_ TYPE \_ IO \_ WRITE**(Ereignistypwert ist 11)<br/>            | Write-Ereignis. Die [**DiskIo \_ TypeGroup1**](diskio-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                             |
+| **EVENT \_ TRACE \_ TYPE IO READ \_ \_ \_ INIT**(Ereignistypwert ist 12)<br/>       | Initialisieren des Leseereignisses. Die [**DiskIo \_ TypeGroup2**](diskio-typegroup2.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                   |
+| **EVENT \_ TRACE \_ TYPE IO WRITE \_ \_ \_ INIT**(Ereignistypwert ist 13)<br/>      | Initialisieren des Schreibereignisses. Die [**DiskIo \_ TypeGroup2**](diskio-typegroup2.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                  |
+| **EVENT \_ TRACE \_ TYPE \_ IO \_ FLUSH**(Ereignistypwert ist 14)<br/>            | Initialisieren des Schreibereignisses. Die [**DiskIo \_ TypeGroup3**](diskio-typegroup3.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                  |
+| **EVENT \_ TRACE \_ TYPE IO FLUSH \_ \_ \_ INIT**(Ereignistypwert ist 15)<br/>      | Initialisieren des Leerungsereignisses. Die [**DiskIo \_ TypeGroup2**](diskio-typegroup2.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                  |
+| **EVENT \_ TRACE \_ TYPE \_ IO \_ REDIRECTED \_ INIT**(Ereignistypwert ist 16)<br/> | Initialisieren des umgeleiteten Ereignisses. Umgeleitete E/A-Ereignisse werden verwendet, um Datenträger-IOs einem Windows Imaging Format (WIM) dem Dateinamen innerhalb des WIM zuzuordnen.                  |
+| Der Ereignistypwert ist 52.<br/>                                               | Anforderungsereignis zum Abschließen des Treibers. Die [**MOF-Klasse DriverCompleteRequest**](drivercompleterequest.md) definiert die Ereignisdaten für dieses Ereignis.                    |
+| Der Ereignistypwert ist 53.<br/>                                               | Anforderungsrückgabeereignis zum Abschließen des Treibers. Die [**MOF-Klasse DriverCompleteRequestReturn**](drivercompleterequestreturn.md) definiert die Ereignisdaten für dieses Ereignis. |
+| Der Ereignistypwert ist 37.<br/>                                               | Ereignis der Treiberabschlussroutine. Die [**MOF-Klasse DriverCompletionRoutine**](drivercompletionroutine.md) definiert die Ereignisdaten für dieses Ereignis.              |
+| Der Ereignistypwert ist 34.<br/>                                               | Ereignis zum Aufrufen der Hauptfunktion des Treibers. Die [**DriverMajorFunctionCall**](drivermajorfunctioncall.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.             |
+| Der Ereignistypwert ist 35.<br/>                                               | Rückgabeereignis des Hauptfunktionsaufrufs des Treibers. Die [**MOF-Klasse DriverMajorFunctionReturn**](drivermajorfunctionreturn.md) definiert die Ereignisdaten für dieses Ereignis.  |
 
 
 
  
 
-Der Datenträger-e/a-Anbieter kann nicht ermitteln, welche Datei während eines Datenträger-e/a-Ereignisses gelesen oder geschrieben wird. Aktivieren Sie den Datei-e/a-Ereignis Anbieter, um den Namen der Datei abzurufen, die dem Datenträger-e/a-Ereignis zugeordnet ist.
+Der Datenträger-E/A-Anbieter kann nicht identifizieren, welche Datei während eines Datenträger-E/A-Ereignisses gelesen oder geschrieben wird. Aktivieren Sie den Datei-E/A-Ereignisanbieter, um den Namen der Datei abzurufen, die dem Datenträger-E/A-Ereignis zugeordnet ist.
 
-Datenträger-e/a-Ereignisse werden zum Zeitpunkt des e/a-Abschlusses aufgezeichnet. Um zu ermitteln, wann der e/a-Vorgang begonnen hat, verwenden Sie die Initialisierungs Ereignisse, z. b. den Ereignis Ablauf \_ Verfolgungs \_ Typ \_ IO \_ Read \_ init.
+Datenträger-E/A-Ereignisse werden zur E/A-Abschlusszeit aufgezeichnet. Um zu bestimmen, wann der E/A-Vorgang begonnen hat, verwenden Sie die Initialisierungsereignisse, z. B. EVENT \_ TRACE TYPE IO READ \_ \_ \_ \_ INIT.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -87,28 +87,28 @@ Datenträger-e/a-Ereignisse werden zum Zeitpunkt des e/a-Abschlusses aufgezeichn
 
 <dl> <dt>
 
-[**Diskio \_ TypeGroup1**](diskio-typegroup1.md)
+[**DiskIo \_ TypeGroup1**](diskio-typegroup1.md)
 </dt> <dt>
 
-[**Diskio \_ TypeGroup2**](diskio-typegroup2.md)
+[**DiskIo \_ TypeGroup2**](diskio-typegroup2.md)
 </dt> <dt>
 
-[**Diskio \_ TypeGroup3**](diskio-typegroup3.md)
+[**DiskIo \_ TypeGroup3**](diskio-typegroup3.md)
 </dt> <dt>
 
-[**Drivercompleterequest**](drivercompleterequest.md)
+[**DriverCompleteRequest**](drivercompleterequest.md)
 </dt> <dt>
 
-[**Drivercompleterequestreturn**](drivercompleterequestreturn.md)
+[**DriverCompleteRequestReturn**](drivercompleterequestreturn.md)
 </dt> <dt>
 
-[**Drivercompletionroutine**](drivercompletionroutine.md)
+[**DriverCompletionRoutine**](drivercompletionroutine.md)
 </dt> <dt>
 
-[**Drivermajorfunctioncallcenter**](drivermajorfunctioncall.md)
+[**DriverMajorFunctionCall**](drivermajorfunctioncall.md)
 </dt> <dt>
 
-[**Drivermajorfunctionreturn**](drivermajorfunctionreturn.md)
+[**DriverMajorFunctionReturn**](drivermajorfunctionreturn.md)
 </dt> </dl>
 
  

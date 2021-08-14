@@ -1,384 +1,384 @@
 ---
-title: Remotedesktop ActiveX-Steuerelement Schnittstellen
-description: Schnittstellen, die Sie zum Erstellen und Bereitstellen von Skript fähigen virtuellen Kanälen innerhalb Remotedesktopdienste Webanwendungen verwenden können.
+title: Remotedesktop ActiveX-Steuerelementschnittstellen
+description: Schnittstellen, die Sie zum Erstellen und Bereitstellen skriptfähiger virtueller Kanäle innerhalb Remotedesktopdienste Webanwendungen verwenden können.
 ms.assetid: 8258411e-eef6-4dcf-a7a2-7d04b0ea3744
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, Remotedesktopprotokoll-Schnittstellen (RDP)
-- Remotedesktopprotokoll (RDP) Remotedesktopdienste, Schnittstellen
+- Remotedesktopdienste Remotedesktopdienste , Remotedesktopprotokoll (RDP)
+- Remotedesktopprotokoll (RDP) Remotedesktopdienste , Schnittstellen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a80c80dcf9799efe2eb5609f54142fd0780cfe54
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: feac7c2ab5d836191f5321d87fafc50350f1d5713bf18cb27dbb879aff127271
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988670"
 ---
-# <a name="remote-desktop-activex-control-interfaces"></a>Remotedesktop ActiveX-Steuerelement Schnittstellen
+# <a name="remote-desktop-activex-control-interfaces"></a>Remotedesktop ActiveX-Steuerelementschnittstellen
 
-Das Remotedesktop ActiveX-Steuerelement unterstützt die folgenden Skript fähigen und nicht Skript fähigen Schnittstellen, die entsprechend der Vererbungs Hierarchie gruppiert sind.
+Das Remotedesktop ActiveX-Steuerelement unterstützt die folgenden skript- und nicht skriptierbaren Schnittstellen, die gemäß der Vererbungshierarchie gruppiert werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**imstscax**](imstscax-interface.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsTscAx-Schnittstelle**](imstscax-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**imsrdpclient**](imsrdpclient-interface.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient-Schnittstelle**](imsrdpclient-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient3**](imsrdpclient3.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient2**](imsrdpclient2.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient2-Schnittstelle**](imsrdpclient2.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient4**](imsrdpclient4.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient3**](imsrdpclient3.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient3-Schnittstelle**](imsrdpclient3.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient5**](imsrdpclient5.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient4**](imsrdpclient4.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient4-Schnittstelle**](imsrdpclient4.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient6**](imsrdpclient6.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient5**](imsrdpclient5.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient5-Schnittstelle**](imsrdpclient5.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient7**](imsrdpclient7.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient6**](imsrdpclient6.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient6-Schnittstelle**](imsrdpclient6.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient8**](imsrdpclient8.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient7**](imsrdpclient7.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient7-Schnittstelle**](imsrdpclient7.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient8**](imsrdpclient8.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient8-Schnittstelle**](imsrdpclient8.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClient10**](imsrdpclient10.md)
 </dt> <dd>
 
-Stellt die Methoden und Eigenschaften bereit, die zum Konfigurieren und Verwenden des Client Steuer Elements erforderlich sind. Wird von der [**IMsRdpClient9**](imsrdpclient9.md) -Schnittstelle abgeleitet.
+Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clientsteuer steuerelements zur Anwendung. Wird von der [**IMsRdpClient9-Schnittstelle**](imsrdpclient9.md) ableiten.
 
 </dd> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dd>
 
-Verwaltet erweiterte Client Einstellungen. Wird von der [**imstscadvancedsettings**](imstscadvancedsettings-interface.md) -Schnittstelle abgeleitet.
+Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsTscAdvancedSettings-Schnittstelle**](imstscadvancedsettings-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
 </dt> <dd>
 
-Verwaltet erweiterte Client Einstellungen. Wird von der [**imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md) -Schnittstelle abgeleitet.
+Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsRdpClientAdvancedSettings-Schnittstelle**](imsrdpclientadvancedsettings-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings3**](imsrdpclientadvancedsettings3.md)
 </dt> <dd>
 
-Verwaltet erweiterte Client Einstellungen. Wird von der [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md) -Schnittstelle abgeleitet.
+Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsRdpClientAdvancedSettings2-Schnittstelle**](imsrdpclientadvancedsettings2.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings4**](imsrdpclientadvancedsettings4.md)
 </dt> <dd>
 
-Verwaltet erweiterte Client Einstellungen. Wird von der [**IMsRdpClientAdvancedSettings3**](imsrdpclientadvancedsettings3.md) -Schnittstelle abgeleitet.
+Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsRdpClientAdvancedSettings3-Schnittstelle**](imsrdpclientadvancedsettings3.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings5**](imsrdpclientadvancedsettings5.md)
 </dt> <dd>
 
-Verwaltet erweiterte Client Einstellungen. Wird von der [**IMsRdpClientAdvancedSettings4**](imsrdpclientadvancedsettings4.md) -Schnittstelle abgeleitet.
+Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsRdpClientAdvancedSettings4-Schnittstelle**](imsrdpclientadvancedsettings4.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings6**](imsrdpclientadvancedsettings6.md)
 </dt> <dd>
 
-Macht Eigenschaften verfügbar, die erweiterte Einstellungen des ActiveX-Steuer Elements verwalten.
+Macht Eigenschaften verfügbar, die erweiterte Einstellungen ActiveX verwalten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings7**](imsrdpclientadvancedsettings7.md)
 </dt> <dd>
 
-Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des ActiveX-Steuer Elements verwalten.
+Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des steuerelements ActiveX verwalten.
 
 </dd> <dt>
 
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dd>
 
-Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des Remotedesktop ActiveX-Steuer Elements verwalten.
+Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des steuerelements Remotedesktop ActiveX verwalten.
 
 </dd> <dt>
 
-[**Imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md)
+[**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> <dd>
 
-Bietet Zugriff auf die nicht Skript fähigen Eigenschaften der Remote Sitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der [**imstscnonscriptable**](imstscnonscriptable-interface.md) -Schnittstelle abgeleitet.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsTscNonScriptable-Schnittstelle**](imstscnonscriptable-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md)
 </dt> <dd>
 
-Bietet Zugriff auf die nicht Skript fähigen Eigenschaften der Remote Sitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der [**imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md) -Schnittstelle abgeleitet.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable-Schnittstelle**](imsrdpclientnonscriptable-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable3**](imsrdpclientnonscriptable3.md)
 </dt> <dd>
 
-Bietet Zugriff auf die nicht Skript fähigen Eigenschaften der Remote Sitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md) -Schnittstelle abgeleitet.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable2-Schnittstelle**](imsrdpclientnonscriptable2.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable4**](imsrdpclientnonscriptable4.md)
 </dt> <dd>
 
-Bietet Zugriff auf die nicht Skript fähigen Eigenschaften der Remote Sitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der [**IMsRdpClientNonScriptable3**](imsrdpclientnonscriptable3.md) -Schnittstelle abgeleitet.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable3-Schnittstelle**](imsrdpclientnonscriptable3.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dd>
 
-Bietet Zugriff auf die nicht Skript fähigen Eigenschaften der Remote Sitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der [**IMsRdpClientNonScriptable4**](imsrdpclientnonscriptable4.md) -Schnittstelle abgeleitet.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable4-Schnittstelle**](imsrdpclientnonscriptable4.md) ableiten.
 
 </dd> <dt>
 
-[**Imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md)
+[**IMsRdpClientSecuredSettings**](imsrdpclientsecuredsettings-interface.md)
 </dt> <dd>
 
-Enthält Methoden zum Abrufen und Festlegen der Eigenschaften des Remotedesktop ActiveX-Steuer Elements, die auf bestimmte Internet Explorer-URL-Sicherheitszonen beschränkt sind.
+Enthält Methoden zum Abrufen und Festlegen von Eigenschaften des Remotedesktop ActiveX Steuerelements, die auf bestimmte url Internet Explorer sicherheitszonen beschränkt sind.
 
 </dd> <dt>
 
 [**IMsRdpClientSecuredSettings2**](imsrdpclientsecuredsettings2.md)
 </dt> <dd>
 
-Definiert zusätzliche Eigenschaften des Remotedesktop ActiveX-Steuer Elements, die auf bestimmte Internet Explorer-URL-Sicherheitszonen beschränkt sind.
+Definiert zusätzliche Eigenschaften des Remotedesktop ActiveX-Steuerelements, die auf bestimmte URL Internet Explorer Sicherheitszonen beschränkt sind.
 
 </dd> <dt>
 
-[**Imsrdpclientshell**](imsrdpclientshell.md)
+[**IMsRdpClientShell**](imsrdpclientshell.md)
 </dt> <dd>
 
-Remotedesktopverbindung (RDC)-Client Einstellungen, die verwendet werden, um den Client über Remotedesktop Webzugriff (RD Webzugriff) oder andere Webportale zu starten.
+Remotedesktopverbindung Clienteinstellungen (RDC), die zum Starten des Clients über Remotedesktop Webzugriff (RD Webzugriff) oder über andere Webportale verwendet werden.
 
 </dd> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> <dd>
 
-Verwaltet die Client Transport Einstellungen für den Remotedesktop Gateway-Server (RD-Gateway).
+Verwaltet Clienttransporteinstellungen für den Remotedesktop Gatewayserver (RD-Gateway).
 
 </dd> <dt>
 
 [**IMsRdpClientTransportSettings2**](imsrdpclienttransportsettings2.md)
 </dt> <dd>
 
-Verwaltet die Client Transport Einstellungen für den RD-Gateway-Server.
+Verwaltet Clienttransporteinstellungen für den RD-Gatewayserver.
 
 </dd> <dt>
 
 [**IMsRdpClientTransportSettings3**](imsrdpclienttransportsettings3.md)
 </dt> <dd>
 
-Definiert zusätzliche Eigenschaften für den RD-Gateway Server.
+Definiert zusätzliche Eigenschaften für den RD-Gatewayserver.
 
 </dd> <dt>
 
 [**IMsRdpClientTransportSettings4**](imsrdpclienttransportsettings4.md)
 </dt> <dd>
 
-Definiert zusätzliche Eigenschaften für den RD-Gateway Server.
+Definiert zusätzliche Eigenschaften für den RD-Gatewayserver.
 
 </dd> <dt>
 
-[**Imsrdpdevice**](imsrdpdevice.md)
+[**IMsRdpDevice**](imsrdpdevice.md)
 </dt> <dd>
 
-Enthält Informationen zu einem Geräte Objekt.
+Enthält Informationen zu einem Geräteobjekt.
 
 </dd> <dt>
 
 [**IMsRdpDeviceV2**](imsrdpdevicev2.md)
 </dt> <dd>
 
-Enthält Informationen zu einem Geräte Objekt. Dies ist eine Erweiterung der [**imsrdpdevice**](imsrdpdevice.md) -Schnittstelle.
+Enthält Informationen zu einem Geräteobjekt. Dies ist eine Erweiterung der [**IMsRdpDevice-Schnittstelle.**](imsrdpdevice.md)
 
 </dd> <dt>
 
-[**Imsrdpde vicecollection**](imsrdpdevicecollection.md)
+[**IMsRdpDeviceCollection**](imsrdpdevicecollection.md)
 </dt> <dd>
 
-Stellt eine Auflistung von Geräte Objekten dar.
+Stellt eine Auflistung von Geräteobjekten dar.
 
 </dd> <dt>
 
 [**IMsRdpDeviceCollection2**](imsrdpdevicecollection2.md)
 </dt> <dd>
 
-Stellt eine Auflistung von Geräte Objekten dar. Dies ist eine Erweiterung der [**imsrdpdebug**](imsrdpdevicecollection.md) -Schnittstelle.
+Stellt eine Auflistung von Geräteobjekten dar. Dies ist eine Erweiterung der [**IMsRdpDeviceCollection-Schnittstelle.**](imsrdpdevicecollection.md)
 
 </dd> <dt>
 
-[**Imsrdpdrive**](imsrdpdrive.md)
+[**IMsRdpDrive**](imsrdpdrive.md)
 </dt> <dd>
 
-Enthält Informationen zu einem Laufwerks Objekt.
+Enthält Informationen zu einem Laufwerkobjekt.
 
 </dd> <dt>
 
 [**IMsRdpDriveV2**](imsrdpdrivev2.md)
 </dt> <dd>
 
-Enthält Informationen zu einem Laufwerks Objekt. Dies ist eine Erweiterung der [**imsrdpdrive**](imsrdpdrive.md) -Schnittstelle.
+Enthält Informationen zu einem Laufwerkobjekt. Dies ist eine Erweiterung der [**IMsRdpDrive-Schnittstelle.**](imsrdpdrive.md)
 
 </dd> <dt>
 
-[**Imsrdpdrivecollection**](imsrdpdrivecollection.md)
+[**IMsRdpDriveCollection**](imsrdpdrivecollection.md)
 </dt> <dd>
 
-Stellt eine Auflistung von Laufwerk Objekten dar.
+Stellt eine Auflistung von Laufwerksobjekten dar.
 
 </dd> <dt>
 
-[**Imsrdpextendedsettings**](imsrdpextendedsettings.md)
+[**IMsRdpExtendedSettings**](imsrdpextendedsettings.md)
 </dt> <dd>
 
-Wird verwendet, um benannte Eigenschaften für das Client Steuerelement festzulegen und abzurufen.
+Wird zum Festlegen und Abrufen benannter Eigenschaften für das Clientsteuersatz verwendet.
 
 </dd> <dt>
 
-[**Imsrdpinputsink**](imsrdpinputsink.md)
+[**IMsRdpInputSink**](imsrdpinputsink.md)
 </dt> <dd>
 
-Eingabe Senke für Remote Desktop.
+Remotedesktop-Eingabesenke.
 
 </dd> <dt>
 
-[**Imsrdppreferredredirectioninfo**](imsrdppreferredredirectioninfo.md)
+[**IMsRdpPreferredRedirectionInfo**](imsrdppreferredredirectioninfo.md)
 </dt> <dd>
 
-Stellt eine Eigenschaft bereit, die mithilfe eines Umleitungs Servers gesteuert werden soll.
+Stellt eine Eigenschaft zum Steuern mithilfe eines Umleitungsservers zur Anwendung.
 
 </dd> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> <dd>
 
-Enthält Methoden zum Abrufen und Festlegen von Eigenschaften, die das Zwischenspeichern von Bitmaps, die Komprimierung und die Umleitung von Druckern und Zwischenablage aktivieren
+Enthält Methoden zum Abrufen und Festlegen von Eigenschaften, die Bitmapzwischenspeicherung, Komprimierung und Drucker- und Zwischenablageumleitung ermöglichen.
 
 </dd> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> <dd>
 
-Ermöglicht das Herstellen einer Verbindung und Trennen der Verbindung mit dem Client Steuerelement, das Erstellen von virtuellen Kanal Objekten und das Senden von Daten über einen virtuellen Kanal.
+Ermöglicht es Ihnen, das Clientsteuerobjekt zu verbinden und zu trennen, virtuelle Kanalobjekte zu erstellen und Daten über einen virtuellen Kanal zu senden.
 
 </dd> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> <dd>
 
-Schließt Methoden ein, die Informationen vom Server empfangen, die mit Client Steuerungs Ereignissen verknüpft sind.
+Schließt Methoden ein, die Informationen vom Server empfangen, die mit Clientsteuerungsereignissen verknüpft sind.
 
 </dd> <dt>
 
-[**Imstscnonscriptable**](imstscnonscriptable-interface.md)
+[**IMsTscNonScriptable**](imstscnonscriptable-interface.md)
 </dt> <dd>
 
-Enthält Eigenschaften und Methoden, die sich auf die Anwendung eines Kennworts für das Remotedesktop ActiveX-Steuerelement beziehen.
+Enthält Eigenschaften und Methoden, die sich auf die Anwendung eines Kennworts auf das Remotedesktop ActiveX beziehen.
 
 </dd> <dt>
 
-[**Imstscsecuredsettings**](imstscsecuredsettings-interface.md)
+[**IMsTscSecuredSettings**](imstscsecuredsettings-interface.md)
 </dt> <dd>
 
-Enthält Methoden zum Abrufen und Festlegen der Eigenschaften des Remotedesktop ActiveX-Steuer Elements, die auf bestimmte Internet Explorer-URL-Sicherheitszonen beschränkt sind.
+Enthält Methoden zum Abrufen und Festlegen von Eigenschaften des Remotedesktop ActiveX Steuerelements, die auf bestimmte url Internet Explorer sicherheitszonen beschränkt sind.
 
 </dd> <dt>
 
-[**Iremotedesktopclient**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclient)
+[**IRemoteDesktopClient**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclient)
 </dt> <dd>
 
-Stellt Methoden und Eigenschaften zum Konfigurieren und Verwenden des-Remotedesktopprotokoll (RDP)-app-Container-Client Steuer Elements bereit.
+Stellt Methoden und Eigenschaften zum Konfigurieren und Verwenden des Clientsteuer steuerelements für Remotedesktopprotokoll-App (RDP) zur Anwendung zur Anwendung.
 
 </dd> <dt>
 
-[**Iremotedesktopclientactions**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclientactions)
+[**IRemoteDesktopClientActions**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclientactions)
 </dt> <dd>
 
-Stellt die Methoden bereit, die für die Interaktion mit dem-App-Container-Client Steuerelement (Remotedesktopprotokoll) verwendet werden.
+Stellt die Methoden für die Interaktion mit dem Clientsteuer Remotedesktopprotokoll-App (RDP) zur Interaktion zur Anwendung zur Anwendung.
 
 </dd> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> <dd>
 
-Stellt Methoden bereit, die Informationen vom Server empfangen, die mit Client Steuerungs Ereignissen verknüpft sind.
+Stellt Methoden zum Empfangen von Informationen vom Server im Zusammenhang mit Clientsteuerungsereignissen zur Verfügung.
 
 </dd> <dt>
 
-[**Iremotedesktopclientsettings**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclientsettings)
+[**IRemoteDesktopClientSettings**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclientsettings)
 </dt> <dd>
 
-Stellt die Methoden bereit, die zum Konfigurieren der Verbindungseinstellungen für das Client Steuerelement für die Remotedesktopprotokoll-app (RDP) erforderlich sind.
+Stellt die Methoden zur Konfiguration der Verbindungseinstellungen für das Clientsteuersteuersystem des Remotedesktopprotokoll-App (RDP) zur Anwendung zur Anwendung zur Konfiguration von .
 
-Verwenden Sie die Eigenschaft [**iremotedesktopclient**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclient)[**Settings**](iremotedesktopclient-settings.md) , um einen Zeiger auf diese Schnittstelle zu erhalten.
+Verwenden Sie [**die IRemoteDesktopClient Einstellungen eigenschaft,**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclient)[](iremotedesktopclient-settings.md) um einen Zeiger auf diese Schnittstelle zu erhalten.
 
 </dd> <dt>
 
-[**Iremotedesktopclienttouchpointer**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclienttouchpointer)
+[**IRemoteDesktopClientTouchPointer**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclienttouchpointer)
 </dt> <dd>
 
-Stellt die Eigenschaften bereit, die zum Steuern der Fingerabdruck Funktion Remotedesktopprotokoll des Windows-Steuer Elements (RDP)-app-Container-Steuer Elements erforderlich sind
+Stellt die Eigenschaften zur Steuerung des Touchzeigerfeatures des Remotedesktopprotokoll-App-Containerclientsteuerfelds (RDP) zur Steuerung zur Anwendung.
 
 </dd> <dt>
 
-[**Itsremoteprogram**](itsremoteprogram.md)
+[**ITSRemoteProgram**](itsremoteprogram.md)
 </dt> <dd>
 
-Enthält Methoden zum Festlegen und Abrufen des RemoteApp-Modus und der Startparameter für ein RemoteApp-Programm, z. b. den Pfad der ausführbaren Datei und das Arbeitsverzeichnis.
+Enthält Methoden zum Festlegen und Abrufen des RemoteApp-Modus und der Startparameter für ein RemoteApp-Programm, z. B. den Pfad der ausführbaren Datei und des Arbeitsverzeichnisses.
 
 </dd> <dt>
 
@@ -398,9 +398,9 @@ Definiert Eigenschaften und Methoden für die Verwendung mit einer RemoteApp.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
-Eine allgemeine Erörterung von Eigenschaften Methoden finden Sie unter [Schnittstellen Eigenschafts Methoden](/windows/desktop/ADSI/interface-property-methods).
+Eine allgemeine Erörterung von Eigenschaftenmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden](/windows/desktop/ADSI/interface-property-methods).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -409,6 +409,6 @@ Eine allgemeine Erörterung von Eigenschaften Methoden finden Sie unter [Schnitt
 [Remotedesktopdienste Referenz](terminal-services-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 82be6bd5-a46c-48b3-a1f0-a92b9454c35e
-ms.openlocfilehash: f5c7c6b75c89711a69ac578b3d04a72362b1eac9
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 57e053321bbd17c90fbe82832cdb01e9acb6994438d22cb72ef62bf1e7143dd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220308"
 ---
 # <a name="ishellfolderviewtypegetviewtypeproperties-method"></a>IShellFolderViewType::GetViewTypeProperties-Methode
 
@@ -54,7 +54,7 @@ EINE PIDL.
 
 Typ: **DWORD \***
 
-Ein Zeiger auf eine ganzzahlige Variable ohne Vorzeichen, die die Ansichtseigenschaften empfängt, die angeben, was bei Auswahl der Ansicht zu tun ist. Flags können eine beliebige Kombination der folgenden Werte sein.
+Ein Zeiger auf eine Ganzzahlvariable ohne Vorzeichen, die die Ansichtseigenschaften empfängt, die angeben, was bei Auswahl der Ansicht zu tun ist. Flags können eine beliebige Kombination der folgenden Werte sein.
 
 <dt>
 

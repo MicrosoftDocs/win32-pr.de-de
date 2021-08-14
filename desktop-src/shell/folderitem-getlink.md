@@ -1,7 +1,7 @@
 ---
-description: Enthält das shelllinkobject-Objekt des Elements, wenn das Element eine Verknüpfung ist.
+description: Enthält das ShellLinkObject-Objekt des Elements, wenn das Element eine Verknüpfung ist.
 ms.assetid: 6444476a-a065-4f69-9330-584e30dbe30d
-title: FolderItem. getlink-Eigenschaft (Shldisp. h)
+title: FolderItem.GetLink-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d12c0fbd296610174c8b8363602288f59fcb9714
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f4eaf3019ad46599fe572cdc403738d281f97eecd0b09752cdcc35335abb856
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118224064"
 ---
-# <a name="folderitemgetlink-property"></a>FolderItem. getlink (Eigenschaft)
+# <a name="folderitemgetlink-property"></a>FolderItem.GetLink-Eigenschaft
 
-Enthält das [**shelllinkobject**](shelllinkobject-object.md) -Objekt des Elements, wenn das Element eine Verknüpfung ist.
+Enthält das [**ShellLinkObject-Objekt**](shelllinkobject-object.md) des Elements, wenn das Element eine Verknüpfung ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ objGetLink = FolderItem.GetLink
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) , die das [**shelllinkobject**](shelllinkobject-object.md) -Objekt empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das [**ShellLinkObject-Objekt**](shelllinkobject-object.md) empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **getlink** verwendet, um das [**shelllinkobject**](shelllinkobject-object.md) -Objekt für eine Verknüpfung zu Internet Explorer abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **GetLink** verwendet, um das [**ShellLinkObject-Objekt**](shelllinkobject-object.md) für eine Verknüpfung zum Internet Explorer abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -77,7 +77,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -157,17 +157,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
@@ -175,10 +175,10 @@ End Sub
 
 <dl> <dt>
 
-[**Von folderItem**](folderitem.md)
+[**FolderItem**](folderitem.md)
 </dt> <dt>
 
-[**IsLink**](folderitem-islink.md)
+[**Islink**](folderitem-islink.md)
 </dt> </dl>
 
  

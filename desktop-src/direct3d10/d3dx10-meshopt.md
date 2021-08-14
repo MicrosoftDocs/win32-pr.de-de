@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Mesh.h
-ms.openlocfilehash: 7b3085cf9970f2c1f6fe3748cc4db8f4fb2b2a78
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 193bf832f00c9812a515ae9b5c478f6baed637d87605e9f8d04349a12d79aac6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989220"
 ---
 # <a name="d3dx10_meshopt-enumeration"></a>D3DX10 \_ MESHOPT-Enumeration
 
@@ -87,24 +87,24 @@ Teilen Sie bei der Attributsortierung keine Scheitelungen auf, die von Attributg
 
 </dd> <dt>
 
-<span id="D3DX10_MESHOPT_DEVICE_INDEPENDENT"></span><span id="d3dx10_meshopt_device_independent"></span>**D3DX10 \_ MESHOPT \_ DEVICE \_ INDEPENDENT**
+<span id="D3DX10_MESHOPT_DEVICE_INDEPENDENT"></span><span id="d3dx10_meshopt_device_independent"></span>**D3DX10 \_ MESHOPT \_ \_ GERÄTEUNABHÄNGIG**
 </dt> <dd>
 
 Wirkt sich auf die Größe des Scheitelpunktcaches aus. Mit diesem Flag wird eine Standardgröße für den Scheitelpunktcache angegeben, die auf Legacyhardware gut funktioniert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die D3DXMESHOPT \_ STRIPREORDER- und D3DXMESHOPT \_ VERTEXCACHE-Optimierungsflags schließen sich gegenseitig aus.
 
-Das D3DXMESHOPT \_ SHAREVB-Flag wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in D3DXMESH.
+Das SHAREVB-Flag D3DXMESHOPT \_ wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in D3DXMESH.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Mesh.h</dt> </dl> |
 

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Flash Energy-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.FlashEnreal-Eigenschaft.
 ms.assetid: d10a4de9-16fe-4920-aa7f-b2f95fb23045
-title: System. Photo. Flash Energy-Foto-metadatenrichtlinie
+title: System.Photo.FlashEnmetadatenrichtlinie für Foto
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c272b4d6d14bf2f2e81d0964a3dc4395ba62dc3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1faebdcd32eaae346a44de9d1fa19f6954cb9d74ee9d79a09645216660845d16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118204929"
 ---
-# <a name="systemphotoflashenergy-photo-metadata-policy"></a>System. Photo. Flash Energy-Foto-metadatenrichtlinie
+# <a name="systemphotoflashenergy-photo-metadata-policy"></a>System.Photo.FlashEnmetadatenrichtlinie für Foto
 
-Die fotometadatenrichtlinie für die [System. Photo. Flash Energy](../properties/props-system-photo-flashenergy.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.FlashEnreal-Eigenschaft.](../properties/props-system-photo-flashenergy.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ Photo \_ Flash Energy
+PKEY \_ Photo \_ FlashEnmedia
 
 ### <a name="containers"></a>Container
 
@@ -31,46 +31,46 @@ Ja
 
 Double
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41483} |             |
-| 2     | /XMP/EXIF: Flash Energy         |             |
+| 1     | /app1/ifd/exif/{ushort=41483} |             |
+| 2     | /xmp/exif:FlashEn usb         |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41483} |             |
-| 2     | /XMP/EXIF: Flash Energy         |             |
+| 1     | /app1/ifd/exif/{ushort=41483} |             |
+| 2     | /xmp/exif:FlashEn usb         |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41483} |
-| 2     | /XMP/EXIF: Flash Energy         |
+| 1     | /app1/ifd/exif/{ushort=41483} |
+| 2     | /xmp/exif:flashenspeichern         |
 
 
 
@@ -78,52 +78,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41483}  |             |
-| 2     | /IFD/XMP/EXIF: Flash Energy |             |
+| 1     | /ifd/exif/{ushort=41483}  |             |
+| 2     | /ifd/xmp/exif:FlashEn usb |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41483}  |             |
-| 2     | /IFD/XMP/EXIF: Flash Energy |             |
+| 1     | /ifd/exif/{ushort=41483}  |             |
+| 2     | /ifd/xmp/exif:FlashEn usb |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/EXIF/{ushort = 41483}  |
-| 2     | /IFD/XMP/EXIF: Flash Energy |
+| 1     | /ifd/exif/{ushort=41483}  |
+| 2     | /ifd/xmp/exif:flashenkapsel |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Flash Energy](../properties/props-system-photo-flashenergy.md)
+[System.Photo.FlashEnreal](../properties/props-system-photo-flashenergy.md)
 </dt> </dl>
 
  

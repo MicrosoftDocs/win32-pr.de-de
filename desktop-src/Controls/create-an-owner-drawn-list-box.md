@@ -1,41 +1,41 @@
 ---
-title: So erstellen Sie ein Owner-Drawn Listenfeld
+title: Erstellen eines Owner-Drawn Listenfelds
 description: In diesem Thema wird veranschaulicht, wie ein vom Besitzer gezeichnetes Listenfeld implementiert wird.
 ms.assetid: AE6E8943-DC03-4A21-9F0A-9C70C6BD7481
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 81b48a56ca188fb2c277cc822dcb9a343205a331
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 2994c88aec9f3c11ae856136103cf3327d53a2b72c5b2e8903e187ece01bf0f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118413198"
 ---
-# <a name="how-to-create-an-owner-drawn-list-box"></a>So erstellen Sie ein Owner-Drawn Listenfeld
+# <a name="how-to-create-an-owner-drawn-list-box"></a>Erstellen eines Owner-Drawn Listenfelds
 
 In diesem Thema wird veranschaulicht, wie ein vom Besitzer gezeichnetes Listenfeld implementiert wird.
 
-Das C++-Codebeispiel in diesem Thema veranschaulicht, wie ein Listenfeld gezeichnet wird, das fünf vom Besitzer gezeichnete Elemente enthält: vier Zeichen implementiert und eine Verzweigung. Jedes Listenelement wird als Bitmap angezeigt, gefolgt vom Namen des Objekts. Eine Schaltfläche fordert den Benutzer auf, ein Element auszuwählen, das nicht den anderen entspricht. Wenn Sie die Schaltfläche mit der ausgewählten Verzweigung auswählen, wird eine "Sie sind richtig!" angezeigt. Meldung und schließen Sie das Dialogfeld. Wenn Sie die Schaltfläche mit einem beliebigen anderen Listenelement auswählen, wird ein "Wiederholen!" angezeigt. ausgegeben wird.
+Im C++-Codebeispiel in diesem Thema wird veranschaulicht, wie ein Listenfeld gezeichnet wird, das fünf vom Besitzer gezeichnete Elemente enthält: vier Zeichnungs implementiert und einen Fork. Jedes Listenelement wird als Bitmap gefolgt vom Namen des Objekts angezeigt. Über eine Schaltfläche wird der Benutzer aufgefordert, ein Element auszuwählen, das nicht mit dem anderen Element aussieht. Wenn Sie die Schaltfläche mit dem ausgewählten Fork auswählen, wird die Meldung "You're right!" angezeigt. und schließt das Dialogfeld. Wenn Sie die Schaltfläche mit einem anderen ausgewählten Listenelement auswählen, wird die Meldung "Try again!" (Wiederholen Sie den Vorgang) angezeigt. Vorgang nicht gefunden werden konnte.
 
-Das Listenfeld enthält zusätzlich zu den standardmäßigen Listenfeld Stilen die Stile " [**lbs \_ "**](list-box-styles.md) und " [**lbs \_ hasstrings**](list-box-styles.md) ".
+Das Listenfeld enthält zusätzlich zu den standardmäßigen Listenfeldstilen die Formate [**LBS \_ OWNERDRAWFIXED**](list-box-styles.md) und [**LBS \_ HASSTRINGS.**](list-box-styles.md)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Um ein vom Besitzer gezeichnetes Listenfeld zu initialisieren, muss Ihre Anwendung die Text Zeichenfolge und die zugehörige Bitmap für jedes Listenfeld Element laden.
+Um ein vom Besitzer gezeichnetes Listenfeld zu initialisieren, muss Ihre Anwendung die Textzeichenfolge und die zugeordnete Bitmap für jedes Listenfeldelement laden.
 
-Im folgenden C++-Codebeispiel initialisiert die Dialogfeld Prozedur das Listenfeld " **IDC \_ List \_ stuff**", indem die LB- [**\_ AddString**](lb-addstring.md) -Nachricht zum Festlegen des Texts gesendet und dann die [**lb- \_ SetItemData**](lb-setitemdata.md) -Nachricht gesendet wird, um jedem Listenfeld Element eine Bitmap zuzuordnen. Der Code legt auch die Höhe jedes Listenfeld Elements fest, indem die [**WM \_ MeasureItem**](wm-measureitem.md) -Nachricht verarbeitet wird, und zeichnet den Text und die Bitmap für jedes Element, indem die [**WM- \_ DrawItem**](wm-drawitem.md) -Nachricht verarbeitet wird.
+Im folgenden C++-Codebeispiel initialisiert die Dialogfeldprozedur das Listenfeld **IDC \_ LIST \_ STUFF,** indem die [**LB \_ ADDSTRING-Nachricht**](lb-addstring.md) zum Festlegen des Texts gesendet wird, und sendet dann die [**LB \_ SETITEMDATA-Nachricht,**](lb-setitemdata.md) um jedem Listenfeldelement eine Bitmap zu zuordnen. Der Code legt auch die Höhe jedes Listenfeldelements fest, indem die [**WM \_ MEASUREITEM-Nachricht**](wm-measureitem.md) verarbeitet wird, und zeichnet den Text und die Bitmap für jedes Element, indem die [**WM \_ DRAWITEM-Nachricht verarbeitet**](wm-drawitem.md) wird.
 
 
 
@@ -268,7 +268,7 @@ INT_PTR CALLBACK DlgDrawProc(HWND hDlg, UINT message,
 
 <dl> <dt>
 
-[Listenfeld-Steuerelement Verweis](bumper-list-box-list-box-control-reference.md)
+[Referenz zum Listenfeld-Steuerelement](bumper-list-box-list-box-control-reference.md)
 </dt> <dt>
 
 [Informationen zu Listenfeldern](about-list-boxes.md)

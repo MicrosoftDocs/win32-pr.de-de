@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für das Auflisten der ACL eines Objekts in Active Directory Domain Services
-description: Die folgenden Codebeispiele können zum Auflisten der Zugriffs Steuerungs Liste (Access Control List, ACL) eines Objekts in Active Directory Domain Services verwendet werden.
+title: Beispielcode zum Aufzählen der ACL eines Objekts in Active Directory Domain Services
+description: Die folgenden Codebeispiele können verwendet werden, um die Zugriffssteuerungsliste (Access Control List, ACL) eines Objekts in einer Active Directory Domain Services.
 ms.assetid: 3629ffde-c516-4566-8b40-a913b8355656
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für das Auflisten der ACL einer Active Directory Objekt-Werbe einblens
+- Beispielcode zum Aufzählen der ACL eines Active Directory-Objekt-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61c30bdec125d0f7bbc40fe6903460165722a614
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 17ff3a28b66b0217e2b10037ec5a6ebb817aec33780a5ad1ba4efa6092a3cbe5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190628"
 ---
-# <a name="example-code-for-enumerating-the-acl-of-an-object-in-active-directory-domain-services"></a>Beispiel Code für das Auflisten der ACL eines Objekts in Active Directory Domain Services
+# <a name="example-code-for-enumerating-the-acl-of-an-object-in-active-directory-domain-services"></a>Beispielcode zum Aufzählen der ACL eines Objekts in Active Directory Domain Services
 
-Die folgenden Codebeispiele können zum Auflisten der Zugriffs Steuerungs Liste (Access Control List, ACL) eines Objekts in Active Directory Domain Services verwendet werden.
+Die folgenden Codebeispiele können verwendet werden, um die Zugriffssteuerungsliste (Access Control List, ACL) eines Objekts in einer Active Directory Domain Services.
 
-Das folgende Codebeispiel zeigt eine Funktion, die den Treuhänder eines Objekts auflistet.
+Das folgende Codebeispiel zeigt eine Funktion, die die Vertrauenshänder eines Objekts aufzählt.
 
 
 ```C++
@@ -171,7 +171,7 @@ HRESULT EnumAccessInfo(IADs *pads)
 
 
 
-Das folgende Codebeispiel zeigt eine Funktion, die den Treuhänder eines Objekts auflistet.
+Das folgende Codebeispiel zeigt eine Funktion, die die Vertrauenshänder eines Objekts aufzählt.
 
 
 ```VB
@@ -202,9 +202,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

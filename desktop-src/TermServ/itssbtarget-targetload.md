@@ -1,14 +1,14 @@
 ---
-title: Itssbtarget targetload-Eigenschaft
-description: Ruft die relative Auslastung eines Ziels ab.
+title: ITsSbTarget-TargetLoad-Eigenschaft
+description: Ruft die relative Last auf einem Ziel ab.
 ms.assetid: 56618dcf-1319-4310-80ba-7ed71b8b02e8
 ms.tgt_platform: multiple
 keywords:
-- Targetload-Eigenschaft Remotedesktopdienste
-- Targetload-Eigenschaft Remotedesktopdienste, itssbtarget-Schnittstelle
-- Itssbtarget-Schnittstelle Remotedesktopdienste, targetload-Eigenschaft
-- Targetload-Eigenschaft Remotedesktopdienste, itssbtargetex-Schnittstelle
-- Itssbtargetex-Schnittstelle Remotedesktopdienste, targetload-Eigenschaft
+- TargetLoad-Remotedesktopdienste
+- TargetLoad-Remotedesktopdienste , ITsSbTarget-Schnittstelle
+- ITsSbTarget-Schnittstelle Remotedesktopdienste , TargetLoad-Eigenschaft
+- TargetLoad-Remotedesktopdienste , ITsSbTargetEx-Schnittstelle
+- ITsSbTargetEx-Schnittstelle Remotedesktopdienste , TargetLoad-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -22,16 +22,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ddfc9be9805406ab76b166e2a34bc47a7f5e9ab5
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3c367e9c00caff78bb3e64263c1622de45fa6e640e78d88239e1ed25a6f68558
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989860"
 ---
-# <a name="itssbtargettargetload-property"></a>Itssbtarget:: targetload-Eigenschaft
+# <a name="itssbtargettargetload-property"></a>ITsSbTarget::TargetLoad (Eigenschaft)
 
-Ruft die relative Auslastung eines Ziels ab. Dieser Wert basiert auf der Anzahl der vorhandenen und ausstehenden Sitzungen. Standardmäßig hat eine ausstehende Sitzung denselben Wert wie eine vorhandene Sitzung.
+Ruft die relative Last auf einem Ziel ab. Dieser Wert basiert auf der Anzahl der vorhandenen und ausstehenden Sitzungen. Standardmäßig hat eine ausstehende Sitzung den gleichen Wert wie eine vorhandene Sitzung.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -48,13 +48,13 @@ HRESULT get_TargetLoad(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zahl, die die relative Auslastung eines Ziels darstellt.
+Eine Zahl, die die relative Last auf einem Ziel darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Gewichtung einer ausstehenden Sitzung in Relation zu einer aktiven Sitzung kann geändert werden, indem der Wert des *lb- \_ connectionmenshmentpenalty* -Parameters für den Verbindungs Broker festgelegt wird. Dieser Parameter befindet sich unter dem Registrierungsschlüssel "**HKLM \\ System \\ CurrentControlSet \\ Services \\ Tssdis \\ para** meters". Der Standardwert 1 gibt an, dass ausstehende Sitzungen dieselbe Gewichtung aufweisen wie aktive Sitzungen.
+Die Gewichtung einer ausstehenden Sitzung relativ zu einer aktiven Sitzung kann durch Festlegen des Werts des *LB \_ ConnectionEstablishmentPenalty-Parameters* für den Verbindungsbroker geändert werden. Dieser Parameter befindet sich unter dem **Registrierungsschlüssel HKLM \\ System \\ CurrentControlSet \\ Services \\ Tssdis \\ Parameters.** Der Standardwert 1 gibt an, dass ausstehende Sitzungen die gleiche Gewichtung wie aktive Sitzungen haben.
 
-Diese Eigenschaft ist auf Windows Server 2012 R2 mit installiertem [KB3091411](https://support.microsoft.com/kb/3091411) in der [**itssbtargetex**](itssbtargetex.md) -Schnittstelle verfügbar.
+Diese Eigenschaft ist auf Windows Server 2012 R2 mit [KB3091411](https://support.microsoft.com/kb/3091411) verfügbar, das in der [**ITsSbTargetEx-Schnittstelle installiert**](itssbtargetex.md) ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,15 +75,15 @@ Diese Eigenschaft ist auf Windows Server 2012 R2 mit installiertem [KB3091411](h
 <td>Windows Server 2016<br/></td>
 </tr>
 <tr class="odd">
-<td>IDL<br/></td>
-<td><dl> <dt>Sbtsv. idl</dt> </dl></td>
+<td>Idl<br/></td>
+<td><dl> <dt>Sbtsv.idl</dt> </dl></td>
 </tr>
 <tr class="even">
 <td>IID<br/></td>
-<td>IID_ITsSbTarget ist definiert als:
+<td>IID_ITsSbTarget ist wie:
 <ul>
-<li>16616ecc-272d-411d-b324-126893033856</li>
-<li>e85e10ea-db0b-4752-b456-5sd5840901c0 unter Windows Server 2008 R2</li>
+<li>16616ECC-272D-411D-B324-126893033856</li>
+<li>e85e10ea-db0b-4752-b456-5fd5840901c0 auf Windows Server 2008 R2</li>
 </ul></td>
 </tr>
 </tbody>
@@ -91,14 +91,14 @@ Diese Eigenschaft ist auf Windows Server 2012 R2 mit installiertem [KB3091411](h
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itssbtargetex**](itssbtargetex.md)
+[**ITsSbTargetEx**](itssbtargetex.md)
 </dt> <dt>
 
-[**Itssbtarget**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtarget)
+[**ITsSbTarget**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtarget)
 </dt> </dl>
 
  

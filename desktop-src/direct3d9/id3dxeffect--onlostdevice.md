@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 1aacdbae268b58a966256a99081b9943d0bfcc92
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d198cb06461fc377933f2dc90c1e3fb687559ef7b83cc7becd9f04bdf1b78d1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118521216"
 ---
 # <a name="id3dxeffectonlostdevice-method"></a>ID3DXEffect::OnLostDevice-Methode
 
@@ -44,7 +44,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode sollte immer dann aufgerufen werden, wenn das Gerät verloren geht oder bevor der Benutzer [**IDirect3DDevice9::Reset**](/windows/desktop/api)aufruft. Auch wenn das Gerät nicht verloren gegangen ist, ist **ID3DXEffect::OnLostDevice** für das Freigeben von Zustandssperren und anderen Ressourcen verantwortlich, die vor dem Zurücksetzen des Geräts freigegeben werden müssen. Daher kann das Schriftartobjekt nicht erneut verwendet werden, bevor **IDirect3DDevice9::Reset** und dann [**ID3DXEffect::OnResetDevice**](id3dxeffect--onresetdevice.md)aufgerufen werden.
 
@@ -52,7 +52,7 @@ Diese Methode sollte immer dann aufgerufen werden, wenn das Gerät verloren geht
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

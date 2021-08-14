@@ -1,31 +1,31 @@
 ---
-title: Windows-Codierungs Konventionen
-description: Wenn Sie mit der Windows-Programmierung noch nicht vertraut sind, kann es zu einer displanung kommen, wenn ein Windows-Programm angezeigt wird.
+title: Windows Codierungskonventionen
+description: Wenn Sie noch nicht mit Windows arbeiten, kann es versirrend sein, wenn Sie zum ersten Mal ein Windows sehen.
 ms.assetid: 466a66db-7681-4fce-9672-07849cd1b096
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 365a9c8509d7cb799bafdfa70c326f1074b64d93
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b78c24f38f9f2f410c044637ca3aa59d4baa39e9b671b3485c5b85899b69c2fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118387395"
 ---
-# <a name="windows-coding-conventions"></a>Windows-Codierungs Konventionen
+# <a name="windows-coding-conventions"></a>Windows Codierungskonventionen
 
-Wenn Sie mit der Windows-Programmierung noch nicht vertraut sind, kann es zu einer displanung kommen, wenn ein Windows-Programm angezeigt wird. Der Code wird mit seltsamen Typdefinitionen wie **DWORD \_ ptr** und **lprect** gefüllt, und Variablen haben Namen wie *HWND* und *Pwsz* (als ungarische Notation bezeichnet). Es lohnt sich, einige der Windows-Codierungs Konventionen kennenzulernen.
+Wenn Sie noch nicht mit Windows arbeiten, kann es versirrend sein, wenn Sie zum ersten Mal ein Windows sehen. Der Code ist mit ungewöhnlichen Typdefinitionen wie **DWORD \_ PTR** und **LPRECT** gefüllt, und Variablen verfügen über Namen wie *hWnd* und *pwsz* (als "Ink malische Notation" bezeichnet). Es lohnt sich, sich einen Moment Zeit zu nehmen, um einige der Windows programmieren zu lernen.
 
-Die meisten Windows-APIs bestehen aus Funktionen oder Component Object Model (com)-Schnittstellen. Nur wenige Windows-APIs werden als C++-Klassen bereitgestellt. (Eine wichtige Ausnahme ist GDI+, eine der 2D-Grafik-APIs.)
+Die überwiegende Mehrheit Windows APIs besteht entweder aus Funktionen oder Component Object Model (COM)-Schnittstellen. Nur sehr wenige Windows-APIs werden als C++-Klassen bereitgestellt. (Eine wichtige Ausnahme ist GDI+, eine der 2D-Grafik-APIs.)
 
 ## <a name="typedefs"></a>TypeDefs
 
-Die Windows-Header enthalten zahlreiche Typedefs. Viele davon sind in der Header Datei WINDEF. h definiert. Im folgenden finden Sie einige, auf die Sie häufig stoßen werden.
+Die Windows-Header enthalten viele Typedefs. Viele davon sind in der Headerdatei WinDef.h definiert. Hier sind einige, auf die Sie häufig stoßen werden.
 
 ### <a name="integer-types"></a>Ganzzahltypen
 
 
 
-| Datentyp     | Size    | Ebenes?  |
+| Datentyp     | Size    | Unterzeichnet?  |
 |---------------|---------|----------|
 | **BYTE**      | 8 Bit  | Ohne Vorzeichen |
 | **DWORD**     | 32 Bit | Ohne Vorzeichen |
@@ -41,13 +41,13 @@ Die Windows-Header enthalten zahlreiche Typedefs. Viele davon sind in der Header
 
 
 
- 
+ 
 
-Wie Sie sehen können, gibt es eine gewisse Redundanz in diesen Typedefs. Einige dieser Überschneidungen sind lediglich auf den Verlauf der Windows-APIs zurückzuführen. Die hier aufgeführten Typen haben eine fester Größe, und die Größen sind in 32-Bit-und 64-Anwendungen identisch. Beispielsweise ist der **DWORD** -Typ immer 32 Bits breit.
+Wie Sie sehen können, gibt es eine gewisse Redundanz in diesen Typedefs. Ein Teil dieser Überlappung ist einfach auf den Verlauf der Windows-APIs zurück. Die hier aufgeführten Typen haben eine feste Größe, und die Größen sind in 32-Bit- und 64-Anwendungen identisch. Der **DWORD-Typ** ist beispielsweise immer 32 Bit breit.
 
 ### <a name="boolean-type"></a>Boolescher Typ
 
-**Bool** ist eine typedef für einen ganzzahligen Wert, der in einem booleschen Kontext verwendet wird. Die Header Datei WINDEF. h definiert auch zwei Werte für die Verwendung mit **bool**.
+**BOOL** ist eine Typedef für einen ganzzahligen Wert, der in einem booleschen Kontext verwendet wird. Die Headerdatei WinDef.h definiert außerdem zwei Werte für die Verwendung mit **BOOL.**
 
 
 ```C++
@@ -57,7 +57,7 @@ Wie Sie sehen können, gibt es eine gewisse Redundanz in diesen Typedefs. Einige
 
 
 
-Trotz dieser Definition von **true** können die meisten Funktionen, die einen **booleschen** Typ zurückgeben, einen Wert ungleich 0 (null) zurückgeben, um die boolesche Wahrheit anzugeben. Daher sollten Sie immer Folgendes schreiben:
+Trotz dieser Definition von **TRUE** können die meisten Funktionen, die einen **BOOL-Typ** zurückgeben, jeden Wert zurückgeben, der nicht 0 (null) ist, um die boolesche Wahrheit anzugeben. Daher sollten Sie immer dies schreiben:
 
 
 ```C++
@@ -71,7 +71,7 @@ if (result)
 
 
 
-und nicht:
+und nicht dies:
 
 
 ```C++
@@ -84,11 +84,11 @@ if (result == TRUE)
 
 
 
-Beachten Sie, dass **bool** ein ganzzahliger Typ ist und nicht mit dem C++ **bool** -Typ austauschbar ist.
+Beachten Sie, dass **BOOL** ein ganzzahliger Typ ist und nicht mit dem **bool-Typ** C++ austauschbar ist.
 
-### <a name="pointer-types"></a>Zeiger Typen
+### <a name="pointer-types"></a>Zeigertypen
 
-Windows definiert viele Datentypen des Formular *Zeigers auf X*. Diese haben in der Regel das Präfix *P-* oder *LP-* in den Namen. Beispielsweise ist **lprect** ein Zeiger auf ein [**Rect**](/previous-versions//dd162897(v=vs.85)), wobei **Rect** eine Struktur ist, die ein Rechteck beschreibt. Die folgenden Variablen Deklarationen sind gleichwertig.
+Windows definiert viele Datentypen des *Formularzeigers auf X.* Diese haben in der Regel *das Präfix P-* *oder LP-* im Namen. **LPRECT** ist beispielsweise ein Zeiger auf ein [**RECT,**](/previous-versions//dd162897(v=vs.85))wobei **RECT** eine Struktur ist, die ein Rechteck beschreibt. Die folgenden Variablendeklarationen sind gleichwertig.
 
 
 ```C++
@@ -99,34 +99,34 @@ PRECT  rect;  // Also the same.
 
 
 
-In der Vergangenheit steht *P* für "Zeiger" und " *LP* " für "Long-Zeiger". Lange Zeiger (auch als " *weite Zeiger*" bezeichnet) sind eine Holdover von 16-Bit-Fenstern, wenn Sie benötigt werden, um Speicherbereiche außerhalb des aktuellen Segments zu beheben. Das *LP* -Präfix wurde beibehalten, um das Portieren von 16-Bit-Code auf 32-Bit-Windows zu vereinfachen. Heute gibt es keinen Unterschied – ein Zeiger ist ein Zeiger.
+In der Vergangenheit *steht P* für "zeiger" und *LP* für "long pointer". Lange Zeiger (auch als Far-Zeiger *bezeichnet)* sind ein Holdover von 16-Bit-Windows, wenn sie benötigt wurden, um Speicherbereiche außerhalb des aktuellen Segments zu adressieren. Das *LP-Präfix* wurde beibehalten, um das Portieren von 16-Bit-Code auf 32-Bit-Windows. Heute gibt es keinen Unterschied– ein Zeiger ist ein Zeiger.
 
-### <a name="pointer-precision-types"></a>Zeiger Genauigkeits Typen
+### <a name="pointer-precision-types"></a>Zeigergenauigkeitstypen
 
-Die folgenden Datentypen sind immer die Größe eines Zeigers – d. h. 32 Bits Wide in 32-Bit-Anwendungen und 64 Bits Wide in 64-Bit-Anwendungen. Die Größe wird zur Kompilierzeit bestimmt. Wenn eine 32-Bit-Anwendung auf 64-Bit-Windows ausgeführt wird, sind diese Datentypen weiterhin 4 Bytes breit. (Eine 64-Bit-Anwendung kann nicht auf 32-Bit-Fenstern ausgeführt werden, sodass keine umgekehrte Situation auftritt.)
+Die folgenden Datentypen weisen immer die Größe eines Zeigers auf, d. &a. 32 Bit Breite in 32-Bit-Anwendungen und 64 Bit Breite in 64-Bit-Anwendungen. Die Größe wird zur Kompilierzeit bestimmt. Wenn eine 32-Bit-Anwendung auf 64-Bit-Windows ausgeführt wird, sind diese Datentypen immer noch 4 Byte breit. (Eine 64-Bit-Anwendung kann nicht auf 32-Bit-Windows ausgeführt werden, sodass die umgekehrte Situation nicht eintritt.)
 
--   **DWORD \_ ptr**
--   **INT \_ ptr**
--   **Long- \_ ptr**
--   **ULONG \_ ptr**
--   **uint \_ ptr**
+-   **DWORD \_ PTR**
+-   **INT \_ PTR**
+-   **LONG \_ PTR**
+-   **ULONG \_ PTR**
+-   **UINT \_ PTR**
 
-Diese Typen werden in Situationen verwendet, in denen eine Ganzzahl in einen-Zeiger umgewandelt werden kann. Sie werden auch verwendet, um Variablen für Zeigerarithmetik zu definieren und Schleifen Zähler zu definieren, die den gesamten Bereich von Bytes in Speicher Puffern durchlaufen. Im Allgemeinen werden Sie an Stellen angezeigt, an denen ein vorhandener 32-Bit-Wert auf 64 Bits auf 64-Bit-Fenstern erweitert wurde.
+Diese Typen werden in Situationen verwendet, in denen eine ganze Zahl in einen Zeiger konvertiert werden kann. Sie werden auch verwendet, um Variablen für Zeigerarithmetik zu definieren und Schleifenzähler zu definieren, die den gesamten Bytebereich in Speicherpuffern durchlaufen. Im Allgemeinen werden sie an Stellen angezeigt, an denen ein vorhandener 32-Bit-Wert auf 64 Bit auf 64 Bit erweitert Windows.
 
-## <a name="hungarian-notation"></a>Ungarische Notation
+## <a name="hungarian-notation"></a>Notation (Deutsch)
 
-In der *ungarischen Schreib* Weise werden den Namen von Variablen Präfixe hinzugefügt, um zusätzliche Informationen zur Variablen zu erhalten. (Der Erfinder der Notation, Charles Simonyi, war Ungarisch und daher sein Name).
+*Bei der notieren Notation* handelt es sich um das Hinzufügen von Präfixen zu den Namen von Variablen, um zusätzliche Informationen über die Variable zu erhalten. (Der Rausch der Notation, Charles Simonyi, war", daher der Name".
 
-In der ursprünglichen Form gibt die ungarische Notation *semantische* Informationen zu einer Variablen an und gibt Ihnen die beabsichtigte Verwendung. Beispiels *Weise bedeutet dies* , dass ein Index, *CB* , eine Größe in Byte ("count of bytes") und die Zeilen-und Spalten Nummern von *RW* und *Col* bedeuten. Diese Präfixe sind so konzipiert, dass die versehentliche Verwendung einer Variablen im falschen Kontext vermieden wird. Wenn Sie z. b. den Ausdruck gesehen haben `rwPosition +  cbTable` , wissen Sie, dass eine Zeilennummer zu einer Größe hinzugefügt wird, was fast sicherlich ein Fehler im Code ist.
+In der ursprünglichen Form liefert die notation -Notation *semantische* Informationen zu einer Variablen, die Ihnen die beabsichtigte Verwendung angibt. Beispielsweise bedeutet *"i"* einen Index, *"cb"* eine Größe in Bytes ("Anzahl von Bytes") und *"rw"* und *"col"* die mittleren Zeilen- und Spaltennummern. Diese Präfixe sind so konzipiert, dass die versehentliche Verwendung einer Variablen im falschen Kontext vermieden wird. Wenn Sie beispielsweise den Ausdruck gesehen haben, wissen Sie, dass einer Größe eine Zeilennummer hinzugefügt wird. Dies ist mit sicherheit ein `rwPosition +  cbTable` Fehler im Code.
 
-Eine allgemeinere Form der ungarischen Notation verwendet Präfixe, um *Typinformationen* anzugeben – beispielsweise *DW* für **DWORD** und *w* für **Word**.
+In einer gängigeren Form der notation -Notation werden Präfixe verwendet, um Typinformationen zu geben, z. B. *dw* für **DWORD** und *w* für **WORD**. 
 
-Wenn Sie im Web nach "ungarischer Notation" suchen, finden Sie viele Meinungen darüber, ob die ungarische Notation gut oder schlecht ist. Einige Programmierer haben eine sehr hohe Abneigung gegen die ungarische Notation. Andere finden es hilfreich. Unabhängig davon verwenden viele der Codebeispiele auf MSDN die ungarische Notation, aber Sie müssen nicht die Präfixe beachten, um den Code zu verstehen.
+Wenn Sie im Web nach "Inkungszeichen" suchen, finden Sie viele Meinung darüber, ob die notation-Notation gut oder schlecht ist. Einige Programmierer haben eine intensive Abneigung gegen die Notation "Deutsch". Andere finden es hilfreich. Unabhängig davon verwenden viele der Codebeispiele auf MSDN die notation -Notation, aber Sie müssen sich die Präfixe nicht merken, um den Code zu verstehen.
 
 ## <a name="next"></a>Nächste
 
-[Arbeiten mit Zeichen folgen](working-with-strings.md)
+[Arbeiten mit Zeichenfolgen](working-with-strings.md)
 
- 
+ 
 
- 
+ 

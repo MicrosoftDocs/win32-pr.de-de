@@ -1,40 +1,40 @@
 ---
-description: Eine Anwendung kann eine von zwei Methoden verwenden, um die Textausrichtung bereitzustellen.
+description: Um eine Textgrundstellung anzugeben, kann eine Anwendung eine von zwei Methoden verwenden.
 ms.assetid: 1190baed-5959-4f7a-8946-ac3b3da85821
 title: Verarbeiten komplexer Skripts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87bea5b75e87afc4177b03c03f4263ba2592a0e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 987c58cd1d6e8979573b47bbf3e2e7ff248617b12907f81ef70761c08403a067
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118390424"
 ---
 # <a name="processing-complex-scripts"></a>Verarbeiten komplexer Skripts
 
-Eine Anwendung kann eine von zwei Methoden verwenden, um die Textausrichtung bereitzustellen. Für eine einfache Implementierung der mehrsprachigen Begründung sollte die Anwendung [**scriptrecht**](/windows/desktop/api/Usp10/nf-usp10-scriptjustify)nennen. Er generiert das Delta-DX-Array, indem er Kashida, den Abstand zwischen den Wort interwörtern und den intercharacter-Abstand berücksichtigt. Für eine anspruchsvollere Begründung kann die Anwendung ein aktualisiertes Delta-DX-Array generieren, das das eigene Sprachwissen und die von [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) abgerufenen Informationen im [**Skript " \_ visattr**](/windows/win32/api/usp10/ns-usp10-script_visattr) "-Array verwendet.
+Um eine Textgrundstellung anzugeben, kann eine Anwendung eine von zwei Methoden verwenden. Für eine einfache Implementierung der mehrsprachigen Begründung sollte die Anwendung [**ScriptJustify**](/windows/desktop/api/Usp10/nf-usp10-scriptjustify)aufrufen. Es generiert das Delta-Dxarray, indem kashida, dann Interwordabstand und dann Intercharacterabstand berücksichtigt werden. Zur komplexeren Begründung kann die Anwendung ein aktualisiertes Delta dx-Array mit eigenen Sprachkenntnissen und den informationen generieren, die von [**ScriptShape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) im [**SCRIPT \_ DXTTR-Array**](/windows/win32/api/usp10/ns-usp10-script_visattr) abgerufen werden.
 
-Es sollte ein Ausrichtungstyp oder ein Kashida eingefügt werden, wenn er vom Benutzer **definierten Member von** [**Skript " \_ visattr**](/windows/win32/api/usp10/ns-usp10-script_visattr)" identifiziert wird Bei der Durchführung der Zeichen übergreifenden Ausrichtung sollte die Anwendung zusätzlichen Leerraum erst einfügen, nachdem Symbole mit dem Zeichen "Skript rechtfertigen" gekennzeichnet wurden \_ \_ .
+Der Begründungsbereich oder die Kashida sollte eingefügt werden, wenn sie durch den **uJustification-Member** von [**SCRIPT \_ CSVTTR**](/windows/win32/api/usp10/ns-usp10-script_visattr)identifiziert wird. Beim Ausführen einer Zeichenübergreifenden Begründung sollte die Anwendung zusätzlichen Platz nur nach Glyphen einfügen, die mit SCRIPT JUSTIFY CHARACTER markiert \_ \_ sind.
 
-Die Anwendung führt die Platzierung von Caretzeichen und Treffer Tests mithilfe von [**scriptxeincp**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) und [**scriptcptox**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox)durch. Weitere Informationen finden Sie unter [Verwalten der Platzierung von Caretzeichen und Treffer Tests](managing-caret-placement-and-hit-testing.md).
+Die Anwendung führt die Platzierung von Caretzeichen und Treffertests mithilfe von [**ScriptXtoCP**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) und [**ScriptCXaX durch.**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) Weitere Informationen finden Sie unter [Verwalten von Caretplatzierung und Treffertests.](managing-caret-placement-and-hit-testing.md)
 
-Um breiten auf Schriftart unabhängige Weise zu erhalten, ruft die Anwendung [**scriptgetlogicalbreiten**](/windows/desktop/api/Usp10/nf-usp10-scriptgetlogicalwidths)auf. Durch die Übergabe der logischen Breite an [**scriptapplylogicalwidth**](/windows/desktop/api/Usp10/nf-usp10-scriptapplylogicalwidth)kann ein TextBlock in denselben Grenzen mit akzepziellem Verlust der Qualität erneut angezeigt werden, auch wenn die ursprüngliche Schriftart nicht verfügbar ist. Es generiert ein Array von Symbol breiten ([voraus Breite](uniscribe-glossary.md)), die für die Übergabe an [**scripttextout**](/windows/desktop/api/Usp10/nf-usp10-scripttextout)geeignet sind. Das Aufzeichnen und erneute Anwenden von Informationen zur vorab Breite auf Schriftart unabhängige Weise kann in Situationen nützlich sein, in denen ein Anwendungs definiertes Format vorliegt.
+Um Breiten auf schriftartunabhängige Weise abzurufen, ruft die Anwendung [**ScriptGetLogicalWidths auf.**](/windows/desktop/api/Usp10/nf-usp10-scriptgetlogicalwidths) Durch Übergeben der logischen Breite an [**ScriptApplyLogicalWidth**](/windows/desktop/api/Usp10/nf-usp10-scriptapplylogicalwidth)kann ein Textblock in den gleichen Grenzen mit akzeptablem Qualitätsverlust erneut angezeigt werden, auch wenn die ursprüngliche Schriftart nicht verfügbar ist. Es generiert ein Array von Glyphenbreiten ([Vorausbreiten](uniscribe-glossary.md)), das für die Übergabe an [**ScriptTextOut**](/windows/desktop/api/Usp10/nf-usp10-scripttextout)geeignet ist. Eine solche Aufzeichnung und erneute Anwendung von Informationen über die breite Breite auf schriftartunabhängige Weise kann in Situationen wie metafiles in einem von der Anwendung definierten Format nützlich sein.
 
 > [!Note]  
-> Metadateien unterstützen keine Glyphe-Indizes. Zum Schreiben in eine erweiterte Metadatei sollte die Anwendung [**exttextout**](/windows/win32/api/wingdi/nf-wingdi-exttextouta) verwenden und die logischen Zeichen direkt schreiben. Mithilfe dieses Mechanismus werden das Generieren und Platzieren von Symbolen erst nach dem Wiedergeben des Texts angezeigt.
+> Metadateien unterstützen keine Glyphenindizes. Um in eine erweiterte Metadatei zu schreiben, sollte die Anwendung [**ExtTextOut**](/windows/win32/api/wingdi/nf-wingdi-exttextouta) verwenden und die logischen Zeichen direkt schreiben. Mit diesem Mechanismus erfolgt die Generierung und Platzierung von Glyphen erst, wenn der Text wiedergegeben wird.
 
  
 
-Zum Abrufen der spezifischen Symbole, die für die Standard-, Leerzeichen, Kashida usw. für die aktuelle Schriftart verwendet werden, sollte die Anwendung [**scriptgetfontproperties**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontproperties)aufrufen. Wenn Sie bestimmen möchten, welche Zeichen in einer Testlauf von der ausgewählten Schriftart unterstützt werden, ruft die Anwendung [**scriptgetcmap**](/windows/desktop/api/Usp10/nf-usp10-scriptgetcmap)auf. Zeichen, die nicht verfügbar sind, haben das Standard Symbol im Symbol Puffer. Beachten Sie, dass diese Methode fehlschlägt, wenn eine Schriftart ein Zeichen mit einer Kombination von Symbolen anstelle eines einzelnen Symbols rendert. Beispielsweise 00c9; Der lateinische Großbuchstabe E mit dem akuten kann mithilfe eines Großbuchstaben und eines akuten Symbols gerendert werden. Zum Ermitteln der Schriftart Unterstützung für eine Zeichenfolge, die diese Arten von Code Punkten enthält, kann die Anwendung [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)aufruft. Weitere Informationen finden Sie unter [verwenden](using-shaping-engines.md)von Strukturierungs Modulen.
+Die Anwendung sollte [**ScriptGetFontProperties**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontproperties)aufrufen, um die spezifischen Glyphen abzurufen, die für die Standard-, Leer- und Kashida-Eigenschaft usw. für die aktuelle Schriftart verwendet werden. Um zu bestimmen, welche Zeichen in einer Ausführung von der ausgewählten Schriftart unterstützt werden, ruft die Anwendung [**ScriptGetCMap**](/windows/desktop/api/Usp10/nf-usp10-scriptgetcmap)auf. Zeichen, die nicht verfügbar sind, weisen das Standardglyphen im Glyphenpuffer auf. Beachten Sie, dass diese Methode fehlschlägt, wenn eine Schriftart ein Zeichen mithilfe einer Kombination von Glyphen anstelle eines einzelnen Glyphen rendert. Beispiel: 00C9; LATIN CAPITAL LETTER E WITH LETTER kann mit einem großgeschriebenen E-Glyphen und einem schärferen Glyphen gerendert werden. Um die Schriftartunterstützung für eine Zeichenfolge zu bestimmen, die diese Arten von Codepunkten enthält, kann die Anwendung [**ScriptShape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)aufrufen. Weitere Informationen finden Sie unter [Verwenden von Strukturierungs-Engines.](using-shaping-engines.md)
 
-Die [**scriptcachegetheight**](/windows/desktop/api/Usp10/nf-usp10-scriptcachegetheight) -Funktion gibt die Höhe der Schriftart aus dem Schriftart Cache zurück. [**Scriptgetproperties**](/windows/desktop/api/Usp10/nf-usp10-scriptgetproperties) enthält Informationen zur speziellen Verarbeitung, die für alle Skripts erforderlich ist, die durch das Skript indiziert werden. Sie enthält beispielsweise die dem Skript zugeordnete primäre Sprache, Daten, die angeben, ob das Skript numerisch ist, und Daten, die angeben, ob das Skript ein komplexes Skript ist.
+Die [**ScriptCacheGetHeight-Funktion**](/windows/desktop/api/Usp10/nf-usp10-scriptcachegetheight) gibt die Höhe der Schriftart aus dem Schriftartcache zurück. [**ScriptGetProperties**](/windows/desktop/api/Usp10/nf-usp10-scriptgetproperties) enthält Informationen zur speziellen Verarbeitung, die für alle Skripts erforderlich ist, indiziert nach Skript. Beispielsweise enthält sie die primäre Sprache, die dem Skript zugeordnet ist, Daten, die angeben, ob das Skript numerisch ist, und Daten, die angeben, ob das Skript ein komplexes Skript ist.
 
-[**Scriptgetglyphabcwidth**](/windows/desktop/api/Usp10/nf-usp10-scriptgetglyphabcwidth) gibt die [ABC-Breite](uniscribe-glossary.md) eines bestimmten Symbols zurück, was für das Zeichnen von Symbol Diagrammen nützlich sein kann. Es sollte jedoch nicht für die normale Formatierung komplexer Skript Text verwendet werden.
+[**ScriptGetGlyphABCWidth**](/windows/desktop/api/Usp10/nf-usp10-scriptgetglyphabcwidth) gibt die [ABC-Breite](uniscribe-glossary.md) eines bestimmten Glyphens zurück, was beim Zeichnen von Glyphendiagrammen nützlich sein kann. Sie sollte jedoch nicht für normale komplexe Skripttextformatierungen verwendet werden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Verwenden von uniscri](using-uniscribe.md)
+[Verwenden von Uniscribe](using-uniscribe.md)
 
 
  

@@ -1,32 +1,32 @@
 ---
-description: ICE95 überprüft die Tabelle "Control Table" und die Tabelle "bbcontrol", um zu überprüfen, ob die Billboard-Steuerelemente auf alle
+description: ICE95 überprüft die Tabelle "Control" und "BBControl", um sicherzustellen, dass die Kontrollelemente in alle Würfe passen.
 ms.assetid: 8ba73536-65a5-4658-846c-76356f16b81c
 title: ICE95
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14144c7739dfcc1f1b5e66d92d8e6c1c46ed49fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8f0f7d44554385c33648036f314406971193afc079b5aa8e72cf595695797ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119315260"
 ---
 # <a name="ice95"></a>ICE95
 
-ICE95 überprüft die Tabelle " [Control Table](control-table.md) " und die [Tabelle "bbcontrol](bbcontrol-table.md) ", um zu überprüfen, ob die Billboard-Steuerelemente auf alle
+ICE95 überprüft die [Tabelle "Control"](control-table.md) und ["BBControl",](bbcontrol-table.md) um sicherzustellen, dass die Kontrollelemente in alle Würfe passen.
 
 ## <a name="result"></a>Ergebnis
 
-Wenn einer der folgenden Punkte zutrifft, kann ein Billboard-Steuerelement nicht in ein Plakat eingefügt werden. ICE95 gibt die folgenden Warnungen aus.
+Wenn einer der folgenden Punkte zutrifft, passt ein Steuerelement nicht auf einen Automat. ICE95 gibt die folgenden Warnungen aus.
 
 
 
 | ICE95-Warnung                                                                                                                                                                                                              | BESCHREIBUNG                                                                                |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| Das bbcontrol-Element ' \[ 1 \] . \[ 2 \] ' in der Tabelle ' bbcontrol ' ist nicht in alle Billboard-Steuerelemente in der Steuerelement Tabelle passt. Die X-Koordinate überschreitet die Grenze der Mindestbreite des Billboard-Steuer Elements% s.                   | Die X-Koordinate des Steuer Elements liegt außerhalb der Breite des Billboard.                          |
-| Das bbcontrol-Element ' \[ 1 \] . \[ 2 \] ' in der Tabelle ' bbcontrol ' ist nicht in alle Billboard-Steuerelemente in der Steuerelement Tabelle passt. Die Y-Koordinate überschreitet die Grenze der minimalen Größe des Billboard-Steuer Elements% s.                  | Die Y-Koordinate des Steuer Elements befindet sich unter dem unteren Rand des Billboard.                           |
-| Das bbcontrol-Element ' \[ 1 \] . \[ 2 \] ' in der Tabelle ' bbcontrol ' ist nicht in alle Billboard-Steuerelemente in der Steuerelement Tabelle passt. Die X-Koordinate und die zusammen kombinierte Breite überschreiten die Mindestbreite des Billboard-Steuer Elements% s.   | Die X-Koordinate des Steuer Elements und die Breite des Steuer Elements liegen außerhalb der Breite des Billboard. |
-| Das bbcontrol-Element ' \[ 1 \] . \[ 2 \] ' in der Tabelle ' bbcontrol ' ist nicht in alle Billboard-Steuerelemente in der Steuerelement Tabelle passt. Die Y-Koordinate und die kombinierte Höhe überschreiten die minimale Größe des Billboard-Steuer Elements% s. | Die Y-Koordinate des Steuer Elements und die Höhe des Steuer Elements liegen unter dem unteren Rand des Billboard. |
+| Das BBControl-Element ' \[ 1 \] . \[ 2 \] ' in der BBControl-Tabelle passt nicht in alle Steuerelementsteuerelemente in der Control-Tabelle. Die X-Koordinate überschreitet die Grenze der Minimalbreite des Steuerelements %s.                   | Die X-Koordinate des Steuerelements liegt außerhalb der Breite des Gerüsts.                          |
+| Das BBControl-Element ' \[ 1 \] . \[ 2 \] ' in der BBControl-Tabelle passt nicht in alle Steuerelementsteuerelemente in der Control-Tabelle. Die Y-Koordinate überschreitet die Grenze der minimalen Höhe der Steuerelementgröße %s.                  | Die Y-Koordinate des Steuerelements befindet sich unterhalb des unteren Rands des Strichs.                           |
+| Das BBControl-Element ' \[ 1 \] . \[ 2 \] ' in der BBControl-Tabelle passt nicht in alle Steuerelementsteuerelemente in der Control-Tabelle. Die X-Koordinate und die Breite zusammen überschreiten die minimale Breite des Steuerelements %s.   | Die X-Koordinate des Steuerelements plus die Breite des Steuerelements liegt außerhalb der Breite des Steuerelements. |
+| Das BBControl-Element ' \[ 1 \] . \[ 2 \] ' in der BBControl-Tabelle passt nicht in alle Steuerelementsteuerelemente in der Control-Tabelle. Die Y-Koordinate und die Höhe zusammen überschreiten die minimale Steuerhöhe %s. | Die Y-Koordinate des Steuerelements plus die Höhe des Steuerelements befindet sich unterhalb des unteren Rands des Strichs. |
 
 
 
@@ -43,7 +43,7 @@ The BBControl item 'billboard1.bbcontrol3' in the BBControl table does not fit i
 The BBControl item 'billboard1.bbcontrol4' in the BBControl table does not fit in all the billboard controls in the Control table. The Y coordinate and the height combined together exceeds the minimum billboard control height 100
 ```
 
-Control-Tabelle (partiell) (partiell)
+Steuertabelle (teilweise) (teilweise)
 
 
 
@@ -56,16 +56,16 @@ Control-Tabelle (partiell) (partiell)
 
  
 
-[Bbcontrol-Tabelle](bbcontrol-table.md)
+[BBControl-Tabelle](bbcontrol-table.md)
 
 
 
-| Billboard\_ | Bbcontrol  | X   | J   | Breite | Höhe |
+| Billboard\_ | BBControl  | X   | J   | Breite | Höhe |
 |-------------|------------|-----|-----|-------|--------|
-| billboard1  | bbcontrol1 | 200 | 0   | 100   | 100    |
-| billboard1  | bbcontrol2 | 0   | 200 | 100   | 100    |
-| billboard1  | bbcontrol3 | 50  | 0   | 100   | 50     |
-| billboard1  | bbcontrol4 | 0   | 50  | 50    | 100    |
+| 1  | bbcontrol1 | 200 | 0   | 100   | 100    |
+| 1  | bbcontrol2 | 0   | 200 | 100   | 100    |
+| 1  | bbcontrol3 | 50  | 0   | 100   | 50     |
+| 1  | bbcontrol4 | 0   | 50  | 50    | 100    |
 
 
 
@@ -75,7 +75,7 @@ Control-Tabelle (partiell) (partiell)
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

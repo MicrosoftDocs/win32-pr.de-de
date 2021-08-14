@@ -1,31 +1,31 @@
 ---
-description: Playcap-Beispiel
+description: PlayCap-Beispiel
 ms.assetid: 3faba514-23b7-4107-aca6-5b113a0ca164
-title: Playcap-Beispiel
+title: PlayCap-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f916ac1241410eee5046e1ad24a9350bf4256c83
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 27acecdfd0757d4fd9b085b7d09d1372ead0a33b2aebd95684e1a33367b57765
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982590"
 ---
-# <a name="playcap-sample"></a>Playcap-Beispiel
+# <a name="playcap-sample"></a>PlayCap-Beispiel
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Einfache Erfassungs Anwendung.
+Einfache Erfassungsanwendung.
 
-Diese Anwendung erstellt ein Vorschau Fenster für das erste Video Erfassungsgerät, das im System des Benutzers (falls vorhanden) gesucht wird. Es wird ein einfaches Beispiel für die Verwendung der [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Schnittstelle und der [**ikreatedevenum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) -Schnittstelle zum Erstellen eines Aufzeichnungs Diagramms veranschaulicht.
+Diese Anwendung erstellt ein Vorschaufenster für das erste Videoaufnahmegerät, das auf dem System des Benutzers (sofern verfügbar) gefunden wird. Es zeigt ein einfaches Beispiel für die Verwendung der [**Schnittstellen ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) und [**ICreateDevEnum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) zum Erstellen eines Erfassungsdiagramms.
 
-Eine Beispiel Erfassungs Anwendung, die weitere Funktionen unterstützt, finden Sie unter [amcap Sample](amcap-sample.md).
+Eine Beispielerfassungsanwendung, die weitere Features unterstützt, finden Sie unter [AmCap-Beispiel](amcap-sample.md).
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Um die DirectShow SDK-Beispiele herunterzuladen, installieren Sie die neueste Version des [Windows SDK.](https://msdn.microsoft.com/windowsvista/bb980924.aspx)
 
-Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK Root \]* \\ Samples \\ Multimedia \\ DirectShow \\ Capture \\ playcap.
+Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK \] Root* Samples Multimedia \\ \\ \\ DirectShow Capture \\ \\ PlayCap.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

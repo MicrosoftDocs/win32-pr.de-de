@@ -1,7 +1,7 @@
 ---
-description: 'Die SetMediaLength2-Methode gibt die Dauer der Quelldatei an. Diese Methode entspricht iamtimelinesrc:: setmedialength, aber nimmt einen reftime-Wert an.'
+description: Die SetMediaLength2-Methode gibt die Dauer der Quelldatei an. Diese Methode entspricht IAMTimelineSrc::SetMediaLength, verwendet jedoch einen REFTIME-Wert.
 ms.assetid: 1a1dcf23-2041-4791-bce7-0ecbe33df592
-title: 'Iamtimelinesrc:: SetMediaLength2-Methode (qedit. h)'
+title: IAMTimelineSrc::SetMediaLength2-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 4deb42cdd917fe7d79a420b15247b4bdf5ee52bf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2541639841792b5f46f486e602dd8c870b8a90b3c327a7a8f06277c3fdbeb163
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119256650"
 ---
-# <a name="iamtimelinesrcsetmedialength2-method"></a>Iamtimelinesrc:: SetMediaLength2-Methode
+# <a name="iamtimelinesrcsetmedialength2-method"></a>IAMTimelineSrc::SetMediaLength2-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SetMediaLength2` Methode gibt die Dauer der Quelldatei an. Diese Methode entspricht [**iamtimelinesrc:: setmedialength**](iamtimelinesrc-setmedialength.md), aber nimmt einen [**reftime**](reftime.md) -Wert an.
+Die `SetMediaLength2` -Methode gibt die Dauer der Quelldatei an. Diese Methode entspricht [**IAMTimelineSrc::SetMediaLength,**](iamtimelinesrc-setmedialength.md)verwendet jedoch einen [**REFTIME-Wert.**](reftime.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ HRESULT SetMediaLength2(
 *Länge* 
 </dt> <dd>
 
-Medien Länge in Sekunden.
+Medienlänge in Sekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,19 +74,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

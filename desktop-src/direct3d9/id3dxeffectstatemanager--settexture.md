@@ -1,7 +1,7 @@
 ---
-description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um eine Textur festzulegen.
+description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um eine Textur festlegen zu können.
 ms.assetid: 971802f4-ea7a-4906-83b8-0cd83111716e
-title: 'ID3DXEffectStateManager:: SetTexture-Methode (D3DX9Effect. h)'
+title: ID3DXEffectStateManager::SetTexture-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: b395c19b65bb39b8328da24f727292f7dbe2a0f2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 96ed2d8abfd7cb815292c81e6cc9feb2ae84c184cded3b5c5a808dbb4456598f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118521246"
 ---
-# <a name="id3dxeffectstatemanagersettexture-method"></a>ID3DXEffectStateManager:: SetTexture-Methode
+# <a name="id3dxeffectstatemanagersettexture-method"></a>ID3DXEffectStateManager::SetTexture-Methode
 
-Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um eine Textur festzulegen.
+Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um eine Textur festlegen zu können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetTexture(
 
 <dl> <dt>
 
-*Stage* \[in\]
+*Phase* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Die Stufe, der die Textur zugewiesen wird. Dies ist der Indexwert in [**IDirect3DDevice9:: SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) oder [**IDirect3DDevice9:: settexturestagestate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate).
+Die Stufe, der die Textur zugewiesen wird. Dies ist der Indexwert in [**IDirect3DDevice9::SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) oder [**IDirect3DDevice9::SetTextureStageState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate).
 
 </dd> <dt>
 
-*ptexture* \[ in\]
+*pTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DBASETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)**
 
-Ein Zeiger auf das Textur Objekt. Dabei kann es sich um einen beliebigen Direct3D-Textur Typen (Cube, Volume usw.) handeln. Siehe [**IDirect3DBaseTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9).
+Ein Zeiger auf das Texturobjekt. Dies kann jeder der Direct3D-Texturtypen (Cube, Volume usw.) sein. Siehe [**IDirect3DBaseTexture9.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Ein Zeiger auf das Textur Objekt. Dabei kann es sich um einen beliebigen Direct3
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Geräte Zustands fehlschlägt, wird eine der folgenden Aktionen ausgeführt:
+Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Gerätestatus fehlschlägt, tritt eine der folgenden Bedingungen auf:
 
--   Der Effekt schlägt während [**ID3DXEffect:: beginpass**](id3dxeffect--beginpass.md)fehl.
--   Der dynamische Effekt Zustands Aufrufe (z. b. [**IDirect3DDevice9:: SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)) schlägt fehl.
+-   Die Auswirkung tritt während [**ID3DXEffect::BeginPass auf.**](id3dxeffect--beginpass.md)
+-   Der Dynamische Effektzustandsaufruf (z. B. [**IDirect3DDevice9::SetTexture)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)tritt ein Fehler auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,12 +74,12 @@ Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der R�
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

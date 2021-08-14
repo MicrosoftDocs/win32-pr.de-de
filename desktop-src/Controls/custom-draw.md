@@ -1,21 +1,21 @@
 ---
 title: Benutzerdefiniertes Zeichnen
-description: Das benutzerdefinierte Zeichnen ist kein gängiges Steuerelement. Es handelt sich um einen Dienst, den viele gängige Steuerelemente bereitstellen.
+description: Benutzerdefiniertes Zeichnen ist kein gängiges Steuerelement. Es handelt sich um einen Dienst, der von vielen gängigen Steuerelementen zur Verfügung steht.
 ms.assetid: vs|controls|~\controls\custdraw\custdraw.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5184d06dbb8e04185bf12a43c6c71dd96b933a6a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 16271e915a942e21f3f3763237a25c37a8b934fc1a44a016bb7e3938491a3c66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118413178"
 ---
 # <a name="custom-draw"></a>Benutzerdefiniertes Zeichnen
 
-Das benutzerdefinierte Zeichnen ist kein gängiges Steuerelement. Es handelt sich um einen Dienst, den viele gängige Steuerelemente bereitstellen. Der benutzerdefinierte Draw-Dienst ermöglicht einer Anwendung eine größere Flexibilität beim Anpassen der Darstellung eines Steuer Elements. Die Anwendung kann benutzerdefinierte Zeichnungs Benachrichtigungen nutzen, um die Schriftart, die zum Anzeigen von Elementen verwendet wird, zu ändern oder ein Element manuell zu zeichnen, ohne dass ein vollständiger Besitzer gezeichnet werden muss.
+Benutzerdefiniertes Zeichnen ist kein gängiges Steuerelement. Es handelt sich um einen Dienst, der von vielen gängigen Steuerelementen zur Verfügung steht. Der benutzerdefinierte Zeichnen-Dienst ermöglicht einer Anwendung eine größere Flexibilität beim Anpassen der Darstellung eines Steuerelements. Ihre Anwendung kann benutzerdefinierte Zeichnen-Benachrichtigungen nutzen, um die Schriftart, die zum Anzeigen von Elementen verwendet wird, einfach zu ändern oder ein Element manuell zu zeichnen, ohne einen vollständigen Besitzer zeichnen zu müssen.
 
-Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit benutzerdefiniertem Zeichnen verwendet werden.
+Dieser Abschnitt enthält Informationen zu den Programmierelementen, die mit benutzerdefiniertem Zeichnen verwendet werden.
 
 ## <a name="overviews"></a>Übersichten
 
@@ -23,8 +23,8 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit be
 
 | Thema                                      | Inhalte                                                                                                                                                               |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Informationen zum benutzerdefinierten Zeichnen](about-custom-draw.md) | Dieser Abschnitt enthält allgemeine Informationen über benutzerdefinierte Zeichnungsfunktionen und bietet eine konzeptionelle Übersicht darüber, wie eine Anwendung benutzerdefiniertes Zeichnen unterstützen kann.<br/> |
-| [Verwenden benutzerdefinierter zeichnen](using-custom-draw.md) | Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie benutzerdefiniertes Zeichnen implementiert wird. <br/>                                                                              |
+| [Informationen zum benutzerdefinierten Zeichnen](about-custom-draw.md) | Dieser Abschnitt enthält allgemeine Informationen zu benutzerdefinierten Draw-Funktionen und bietet eine konzeptionelle Übersicht darüber, wie eine Anwendung benutzerdefiniertes Zeichnen unterstützen kann.<br/> |
+| [Verwenden von benutzerdefiniertem Zeichnen](using-custom-draw.md) | Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie benutzerdefiniertes Zeichnen implementiert wird. <br/>                                                                              |
 
 
 
@@ -36,7 +36,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit be
 
 | Thema                               | Inhalte                                                                                                                                                                 |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [NM \_ customdraw](nm-customdraw.md) | Benachrichtigt das übergeordnete Fenster eines Steuer Elements über benutzerdefinierte Zeichnungsvorgänge. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/> |
+| [NM \_ CUSTOMDRAW](nm-customdraw.md) | Benachrichtigt das übergeordnete Fenster eines Steuerelements über benutzerdefinierte Zeichnungsvorgänge. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/> |
 
 
 
@@ -48,7 +48,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit be
 
 | Thema                                | Inhalte                                                                                              |
 |--------------------------------------|-------------------------------------------------------------------------------------------------------|
-| [**Nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) | Enthält Informationen, die für einen [nm \_ customdraw](nm-customdraw.md) -Benachrichtigungs Code spezifisch sind.<br/> |
+| [**NMCUSTOMDRAW**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) | Enthält spezifische Informationen für einen [NM CUSTOMDRAW-Benachrichtigungscode. \_ ](nm-customdraw.md)<br/> |
 
 
 

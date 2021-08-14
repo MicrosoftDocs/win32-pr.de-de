@@ -1,11 +1,11 @@
 ---
-title: Activebasicdevice getcachedextrasink protocolinfo-Methode (playtodevice. h)
-description: Ruft zusätzliche Informationen zum zwischengespeicherten senkenprotokoll für das Gerät ab.
+title: ActiveBasicDevice GetCachedExtraSinkProtocolInfo-Methode (PlayToDevice.h)
+description: Ruft zusätzliche zwischengespeicherte Senkenprotokollinformationen für das Gerät ab.
 ms.assetid: 97112921-1C1D-4FC9-8FE6-1381F3773351
 keywords:
-- Getcachedextrasink protocolinfo-Methode Medien Streaming-API
-- Getcachedextrasink protocolinfo-Methode Medien Streaming-API, activebasicdevice-Schnittstelle
-- Activebasicdevice-Schnittstelle Medien Streaming-API, getcachedextrasink protocolinfo-Methode
+- GetCachedExtraSinkProtocolInfo-Methode Medienstreaming-API
+- GetCachedExtraSinkProtocolInfo-Methode Media Streaming-API, ActiveBasicDevice-Schnittstelle
+- ActiveBasicDevice-Schnittstelle Media Streaming-API, GetCachedExtraSinkProtocolInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be5bb013d1356d5ff02e709a92f01eceff6c2e0f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1bf4508c40fd0abcb0df809216a9bae1d8811c8a8bd79bfb31dfbbd5062ddce1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118736406"
 ---
-# <a name="activebasicdevicegetcachedextrasinkprotocolinfo-method"></a>Activebasicdevice:: getcachedextrasink protocolinfo-Methode
+# <a name="activebasicdevicegetcachedextrasinkprotocolinfo-method"></a>ActiveBasicDevice::GetCachedExtraSinkProtocolInfo-Methode
 
-Ruft zusätzliche Informationen zum zwischengespeicherten senkenprotokoll für das Gerät ab.
+Ruft zusätzliche zwischengespeicherte Senkenprotokollinformationen für das Gerät ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetCachedExtraSinkProtocolInfo(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*value* \[ out, retval\]
 </dt> <dd>
 
-Die zusätzlichen zwischengespeicherten senkenprotokollinformationen für das Gerät.
+Die zusätzlichen zwischengespeicherten Senkenprotokollinformationen für das Gerät.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,19 +59,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Playondevice. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Playto Device. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>PlayToDevice.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>PlayToDevice.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Playtodevice.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
+[**ActiveBasicDevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
 </dt> </dl>
 
  

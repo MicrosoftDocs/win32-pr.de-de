@@ -1,9 +1,9 @@
 ---
 title: dispinterface-Attribut
-description: Die dispinterface-Anweisung definiert einen Satz von Eigenschaften und Methoden, auf die Sie IDispatch aufrufen können.
+description: Die dispinterface-Anweisung definiert eine Reihe von Eigenschaften und Methoden, für die Sie IDispatch Invoke aufrufen können.
 ms.assetid: d85a8e2b-0155-4d68-bb38-e86f4807e7de
 keywords:
-- Attribut für Dispinterface-Attribut
+- MIDL des Dispinterface-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f7cc2b6087b53ff81aa7270a209266dd8248884
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3df65adc3bfa486907df0465f2fca5a1427f6d0b1eb89b5c02e6f199be71e9e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384667"
 ---
 # <a name="dispinterface-attribute"></a>dispinterface-Attribut
 
-Die **dispinterface** -Anweisung definiert einen Satz von Eigenschaften und Methoden, auf die Sie **IDispatch:: Aufrufen** aufrufen können. Eine dispinterface kann definiert werden, indem der Satz unterstützter Methoden und Eigenschaften (Syntax 1) explizit aufgelistet oder eine einzelne Schnittstelle aufgelistet wird (Syntax 2).
+Die **dispinterface-Anweisung** definiert einen Satz von Eigenschaften und Methoden, für die Sie **IDispatch::Invoke** aufrufen können. Eine Disp-Schnittstelle kann durch explizites Auflisten der unterstützten Methoden und Eigenschaften (Syntax 1) oder durch Auflisten einer einzelnen Schnittstelle (Syntax 2) definiert werden.
 
 ``` syntax
 [
@@ -51,65 +51,65 @@ dispinterface dispinterface-name
 *attributes* 
 </dt> <dd>
 
-Gibt Attribute an, die auf die gesamte **dispinterface** angewendet werden. Die folgenden Attribute werden akzeptiert: **\[** [**HelpString**](helpstring.md) **\]** , **\[** [**HelpContext**](helpcontext.md) **\]** , **\[** [**HelpFile**](helpfile.md) **\]** , **\[** [**Hidden**](hidden.md) **\]** , **\[** [**nonextensible**](nonextensible.md) **\]** , **\[** [**oleautomation**](oleautomation.md) **\]** , **\[** [**restricted**](restricted.md) **\]** , **\[** [**UUID**](uuid.md) **\]** und **\[** [**Version**](version.md) **\]** .
+Gibt Attribute an, die für die gesamte **Disp-Schnittstelle** gelten. Die folgenden Attribute werden akzeptiert: **\[** [**helpstring**](helpstring.md) **\]** , **\[** [**helpcontext**](helpcontext.md) **\]** , **\[** [**helpfile**](helpfile.md), **\]** **\[** [**hidden**](hidden.md), **\]** **\[** [**nonextensible**](nonextensible.md), **\]** **\[** [**oleautomation**](oleautomation.md), **\]** **\[** [**restricted**](restricted.md) **\]** , **\[** [**uuid**](uuid.md)und **\]** **\[** [**version**](version.md) **\]** .
 
 </dd> <dt>
 
-*dispinterface-Name* 
+*dispinterface-name* 
 </dt> <dd>
 
-Der Name, mit dem die **dispinterface** in der Typbibliothek bekannt ist. Dieser Name muss innerhalb der Typbibliothek eindeutig sein.
+Der Name, mit dem die **Disp-Schnittstelle** in der Typbibliothek bekannt ist. Dieser Name muss innerhalb der Typbibliothek eindeutig sein.
 
 </dd> <dt>
 
-*Eigenschaften Liste* 
+*property-list* 
 </dt> <dd>
 
-(Syntax 1) Eine optionale Liste der Eigenschaften, die vom-Objekt unterstützt und in Form von Variablen deklariert werden. Dies ist die Kurzform zum Deklarieren der Eigenschafts Funktionen in der Methoden Liste. Weitere Informationen finden Sie im Abschnitt "Kommentare".
+(Syntax 1) Eine optionale Liste von Eigenschaften, die vom -Objekt unterstützt werden und in Form von Variablen deklariert werden. Dies ist die Kurzform zum Deklarieren der Eigenschaftenfunktionen in der Methodenliste. Weitere Informationen finden Sie im Abschnitt "Kommentare".
 
 </dd> <dt>
 
-*Methoden Liste* 
+*Methodenliste* 
 </dt> <dd>
 
-(Syntax 1) Eine Liste, die einen Funktionsprototyp für jede Methode und Eigenschaft in der **dispinterface** enthält. Eine beliebige Anzahl von Funktionsdefinitionen kann in " *methlist*" angezeigt werden. Eine Funktion in " *methlist* " weist die folgende Form auf:
+(Syntax 1) Eine Liste, die einen Funktionsprototyp für jede Methode und Eigenschaft in der **Disp-Schnittstelle** enthält. Eine beliebige Anzahl von Funktionsdefinitionen kann in *methlist* angezeigt werden. Eine Funktion in *methlist* hat die folgende Form:
 
-**\[  Attribute \]** *returnType methname Type paramName ***(*** Parametern * * *);**
+**\[**_Attribute_ *_\]_* *returntype methname type paramname***(**_params_*_);_*
 
-Die folgenden Attribute werden für eine Methode in einer " **dispinterface**"-Methode akzeptiert: **\[ HelpString \]**, **\[ HelpContext \]**, **\[** [**propget**](propget.md) **\]** , **\[** [**PROPPUT**](propput.md) **\]** , **\[** [**PROPPUTREF**](propputref.md) **\]** , **\[** [**String**](string.md) **\]** und **\[** [**vararg**](vararg.md) **\]** . Wenn **\[ vararg \]** angegeben ist, muss der letzte Parameter ein sicheres Array vom **Variant** -Typ sein.
+Die folgenden Attribute werden für eine Methode in einer **Dispinterface** akzeptiert: **\[ helpstring \]**, **\[ helpcontext \]**, **\[** [**propget**](propget.md) **\]** , **\[** [**propput**](propput.md), **\]** **\[** [**propputref**](propputref.md), **\]** **\[** [**string**](string.md)und **\]** **\[** [**lvarg**](vararg.md) **\]** . Wenn **\[ lvarg \]** angegeben wird, muss der letzte Parameter ein **sicheres** Array vom Variant-Typ sein.
 
-Die Parameterliste ist eine durch Trennzeichen getrennte Liste, von der jedes Element die folgende Form aufweist:
+Die Parameterliste ist eine durch Kommas getrennte Liste, von der jedes Element die folgende Form hat:
 
-**\[***legt***\]**
+**\[**_Attribute_*_\]_*
 
 Der *Typ* kann ein beliebiger deklarierter oder integrierter Typ oder ein Zeiger auf einen beliebigen Typ sein. Attribute für Parameter sind:
 
-**\[**[**in**](in.md) **\]** , **\[** [**out**](out-idl.md) **\]** , **\[** [**optional**](optional.md) **\]** , **\[ Zeichen \] Folge**
+**\[**[**in**](in.md) **\]** , **\[** [**out**](out-idl.md) **\]** , **\[** [**optional,**](optional.md) **\]** **\[ Zeichenfolge \]**
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 (Syntax 2) Der Name der Schnittstelle, die als IDispatch-Schnittstelle deklariert werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der mittlerer l-Compiler akzeptiert die folgende Parameter Reihenfolge (von links nach rechts):
+Der MIDL-Compiler akzeptiert die folgende Parameterreihenfolge (von links nach rechts):
 
-1.  Erforderliche Parameter (Parameter, die nicht über das \[ DefaultValue \] - \[ Attribut oder optionale \] Attribute verfügen)
-2.  optionale Parameter mit oder ohne das \[ DefaultValue- \] Attribut
-3.  Parameter mit dem \[ optionalen \] -Attribut und ohne das \[ DefaultValue- \] Attribut
-4.  \[[**LCID**](lcid.md) - \] Parameter (falls vorhanden)
-5.  \[[**retval**](retval.md) \] Parame
+1.  Erforderliche Parameter (Parameter ohne \[ defaultvalue- \] oder \[ optionale \] Attribute)
+2.  optionale Parameter mit oder ohne das \[ \] defaultvalue-Attribut,
+3.  Parameter mit dem \[ optionalen \] Attribut und ohne das \[ \] defaultvalue-Attribut,
+4.  \[[](lcid.md) \] lcid-Parameter, falls vorhanden,
+5.  \[[**retval**](retval.md) \] Parameter
 
-Methoden Funktionen werden genau so angegeben, wie Sie auf der Referenzseite für das [**Modul**](module.md) beschrieben werden, außer dass das \[ Attribut [**Entry**](entry.md) \] nicht zulässig ist. Beachten Sie, dass STDOLE32. TLB (stdole). TLB auf 16-Bit-Systemen) muss importiert werden, da eine **dispinterface** von IDispatch erbt.
+Methodenfunktionen werden genau wie auf der Referenzseite für [**das Modul**](module.md) beschrieben angegeben, mit der Ausnahme, dass das \[ [](entry.md) \] Eintragsattribut nicht zulässig ist. Beachten Sie, dass STDOLE32. TLB (STDOLE. TLB auf 16-Bit-Systemen) muss importiert werden, da eine **Disp-Schnittstelle** von IDispatch erbt.
 
-Sie können Eigenschaften in den Listen Eigenschaften oder Methoden deklarieren. Das Deklarieren von Eigenschaften in der Eigenschaften Liste gibt nicht den Zugriffstyp an, den die Eigenschaft unterstützt (d. h. Get, Put oder PutRef). Geben Sie das Attribut "schreibgeschützt" \[ [](readonly.md) \] für Eigenschaften an, die Put oder PutRef nicht unterstützen. Wenn Sie die Eigenschaften Funktionen in der Liste der Methoden deklarieren, haben Funktionen für eine Eigenschaft alle denselben Bezeichner.
+Sie können Eigenschaften entweder in den Eigenschaften- oder Methodenlisten deklarieren. Das Deklarieren von Eigenschaften in der Eigenschaftenliste gibt nicht den Typ des Zugriffs an, der von der Eigenschaft unterstützt wird (also get, put oder putref). Geben Sie das \[ [**schreibgeschützte**](readonly.md) \] Attribut für Eigenschaften an, die put oder putref nicht unterstützen. Wenn Sie die Eigenschaftenfunktionen in der Methodenliste deklarieren, weisen Alle Funktionen für eine Eigenschaft den gleichen Bezeichner auf.
 
-Mithilfe der ersten Syntax sind die-und-Methoden: Tags erforderlich. Das \[ [**ID**](id.md) - \] Attribut ist auch für jedes Element erforderlich. Beispiel:
+Mit der ersten Syntax sind die Eigenschaften und Methoden: Tags erforderlich. Das \[ [**ID-Attribut**](id.md) \] ist auch für jedes Element erforderlich. Beispiel:
 
 ``` syntax
 properties: 
@@ -118,9 +118,9 @@ methods:
     [id(1)] HRESULT Show();
 ```
 
-Anders als bei Schnittstellenmembern können dispinterface-Member das [**retval**](retval.md) -Attribut nicht verwenden, um einen Wert zusätzlich zu einem HRESULT-Fehlercode zurückzugeben. Das \[ [**LCID**](lcid.md) - \] Attribut ist für dispinterfaces ebenso ungültig, da IDispatch:: Aufrufen eine LCID übergibt. Es ist jedoch möglich, eine Schnittstelle, die diese Attribute verwendet, erneut zu deklarieren.
+Im Gegensatz zu Schnittstellenmembern können dispinterface-Member das [**Attribut retval**](retval.md) nicht verwenden, um zusätzlich zu einem HRESULT-Fehlercode einen Wert zurückzugeben. Das \[ [**lcid-Attribut**](lcid.md) \] ist für dispinterfaces ebenfalls ungültig, da IDispatch::Invoke eine LCID übergibt. Es ist jedoch möglich, eine Schnittstelle erneut zu deklarieren, die diese Attribute verwendet.
 
-Mithilfe der zweiten Syntax können Schnittstellen, die IDispatch unterstützen und zuvor in einem ODL-Skript deklariert wurden, wie folgt als IDispatch-Schnittstellen neu deklariert werden:
+Mit der zweiten Syntax können Schnittstellen, die IDispatch unterstützen und zuvor in einem ODL-Skript deklariert wurden, wie folgt als IDispatch-Schnittstellen erneut deklariert werden:
 
 ``` syntax
 dispinterface helloPro 
@@ -129,14 +129,14 @@ dispinterface helloPro
 };
 ```
 
-Im vorherigen Beispiel werden alle Member von Hello und alle Member deklariert, die Hello als Unterstützung von IDispatch erbt. In diesem Fall \[ \] \[ \] würde MkTypLib jeden \[ LCID- \] Parameter und den HRESULT-Rückgabetyp entfernen und stattdessen den Rückgabetyp als den \[ retval- \] Parameter markieren, wenn Hello früher mit LCID-und retval-Membern deklariert wurde, die HRESULTs zurückgegeben haben.
+Im vorherigen Beispiel werden alle Member von hello und alle Member, die hello erbt, als unterstützend für IDispatch deklariert. Wenn hello in diesem Fall zuvor mit \[ \] lcid- und \[ retval-Membern deklariert wurde, die \] HRESULTs zurückgegeben haben, entfernt MkTypLib jeden \[ lcid-Parameter \] und HRESULT-Rückgabetyp und markiert den Rückgabetyp stattdessen als den des \[ retval-Parameters. \]
 
 > [!Note]  
-> Das Mktyplib.exe Tool ist veraltet. Verwenden Sie stattdessen den Mittel l-Compiler.
+> Das Mktyplib.exe Tool ist veraltet. Verwenden Sie stattdessen den MIDL-Compiler.
 
- 
+ 
 
-Die Eigenschaften und Methoden einer dispinterface sind nicht Teil der VTBL von dispinterface. Folglich können [](/windows/win32/api/oleauto/nf-oleauto-createstddispatch) mit "" "" " [](/windows/win32/api/oleauto/nf-oleauto-dispinvoke) " "" "" "" "" "" "" mit "" "" "" " Die dispinterface wird verwendet, wenn eine Anwendung vorhandene nicht-VTBL-Funktionen über Automation verfügbar machen muss. Diese Anwendungen können IDispatch:: Call implementieren, indem Sie den dispidmember-Parameter untersuchen und die entsprechende Funktion direkt aufrufen.
+Die Eigenschaften und Methoden einer Disp-Schnittstelle sind nicht Teil der VTBL der Disp-Schnittstelle. Daher können [CreateStdDispatch](/windows/win32/api/oleauto/nf-oleauto-createstddispatch) und [DispInvoke](/windows/win32/api/oleauto/nf-oleauto-dispinvoke) nicht zum Implementieren von IDispatch::Invoke verwendet werden. Die Disp-Schnittstelle wird verwendet, wenn eine Anwendung vorhandene Nicht-VTBL-Funktionen über Automation verfügbar machen muss. Diese Anwendungen können IDispatch::Invoke implementieren, indem sie den dispidMember-Parameter untersuchen und die entsprechende Funktion direkt aufrufen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -193,31 +193,31 @@ dispinterface MyObject
 [**helpstring**](helpstring.md)
 </dt> <dt>
 
-[**verbirgt**](hidden.md)
+[**Versteckte**](hidden.md)
 </dt> <dt>
 
-[**in**](in.md)
+[**In**](in.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**optionale**](optional.md)
+[**Optional**](optional.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> <dt>
 
 [**nonextensible**](nonextensible.md)
@@ -226,30 +226,30 @@ dispinterface MyObject
 [**propget**](propget.md)
 </dt> <dt>
 
-[**propput**](propput.md)
+[**Propput**](propput.md)
 </dt> <dt>
 
-[**propputref**](propputref.md)
+[**Propputref**](propputref.md)
 </dt> <dt>
 
 [**oleautomation**](oleautomation.md)
 </dt> <dt>
 
-[**begrenz**](restricted.md)
+[**Beschränkt**](restricted.md)
 </dt> <dt>
 
-[**Zeichenfolge**](string.md)
+[**Schnur**](string.md)
 </dt> <dt>
 
-[**UUID**](uuid.md)
+[**Uuid**](uuid.md)
 </dt> <dt>
 
 [**vararg**](vararg.md)
 </dt> <dt>
 
-[**version**](version.md)
+[**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

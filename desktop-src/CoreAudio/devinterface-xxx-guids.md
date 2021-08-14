@@ -1,62 +1,62 @@
 ---
-description: Die devinterface \_ xxx-GUIDs werden verwendet, um die GUIDs für Geräteschnittstellen darzustellen.
+description: Die DEVINTERFACE \_ XXX-GUIDs werden verwendet, um die GUIDs für Geräteschnittstellen zu darstellen.
 ms.assetid: 2503463B-D7C6-4C82-8421-424D79FD1C2A
-title: DEVINTERFACE_XXX GUIDs (mmdeviceapi. h)
+title: DEVINTERFACE_XXX GUIDs (Mmdeviceapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 796f113d26ebc351a4d576ed76485d24d89fdb04
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2cef6a105ed8e34519a2ca0a06d9d4f43a7aa91495fae9f54eedfa44d79b043c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118406793"
 ---
-# <a name="devinterface_xxx-guids"></a>Devinterface \_ xxx-GUIDs
+# <a name="devinterface_xxx-guids"></a>DEVINTERFACE \_ XXX-GUIDs
 
-Die devinterface \_ xxx-GUIDs werden verwendet, um die GUIDs für Geräteschnittstellen darzustellen.
+Die DEVINTERFACE \_ XXX-GUIDs werden verwendet, um die GUIDs für Geräteschnittstellen zu darstellen.
 
 <dl> <dt>
 
-<span id="DEVINTERFACE_AUDIO_CAPTURE"></span><span id="devinterface_audio_capture"></span>**devinterface \_ - \_ Audioerfassung**
+<span id="DEVINTERFACE_AUDIO_CAPTURE"></span><span id="devinterface_audio_capture"></span>**\_DEVINTERFACE-AUDIOAUFNAHME \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt die Abfrage Zeichenfolge an, mit der alle audioerfassungs Geräte im System aufgelistet werden. Dieser Wert wird von [**mediadevice:: getaudiocaptureselector**](/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)zurückgegeben.
+Gibt die Abfragezeichenfolge an, die zum Aufzählen aller Audioaufnahmegeräte im System verwendet wird. Dieser Wert wird von [**MediaDevice::GetAudioCaptureSelector zurückgegeben.**](/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)
 
-Wenn Sie diesen Wert an [**activateaudiointerfaceasync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) übergeben, wird die angeforderte Schnittstelle auf dem standardmäßigen audioerfassungs Gerät aktiviert.
+Wenn Sie diesen Wert an [**ActivateAudioInterfaceAsync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) übergeben, wird die angeforderte Schnittstelle auf dem Standardgerät für die Audioaufnahme aktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DEVINTERFACE_AUDIO_RENDER"></span><span id="devinterface_audio_render"></span>**devinterface \_ - \_ audiorendering**
+<span id="DEVINTERFACE_AUDIO_RENDER"></span><span id="devinterface_audio_render"></span>**DEVINTERFACE \_ AUDIO \_ RENDER**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt die Abfrage Zeichenfolge an, mit der alle audiorendering-Geräte auf dem System aufgelistet werden. Dieser Wert wird von [**mediadevice:: getaudiorenderselector**](/uwp/api/windows.media.devices.mediadevice.getaudiorenderselector)zurückgegeben.
+Gibt die Abfragezeichenfolge an, die zum Aufzählen aller Audiorenderinggeräte im System verwendet wird. Dieser Wert wird von [**MediaDevice::GetAudioRenderSelector zurückgegeben.**](/uwp/api/windows.media.devices.mediadevice.getaudiorenderselector)
 
-Wenn Sie diesen Wert an [**activateaudiointerfaceasync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) übergeben, wird die angeforderte Schnittstelle auf dem standardaudiorendering-Gerät aktiviert.
+Durch Übergeben dieses Werts [**an ActivateAudioInterfaceAsync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) wird die angeforderte Schnittstelle auf dem Standardaudiorendergerät aktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DEVINTERFACE_MIDI_INPUT"></span><span id="devinterface_midi_input"></span>**devinterface- \_ MIDI- \_ Eingabe**
+<span id="DEVINTERFACE_MIDI_INPUT"></span><span id="devinterface_midi_input"></span>**\_DEVINTERFACE-EINGANGSEINGABE \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt die Abfrage Zeichenfolge an, die verwendet wird, um alle [**MIDIINPORT**](/uwp/api/Windows.Devices.Midi.MidiInPort) -Objekte im System aufzuzählen. Dieser Wert wird von [**MIDIINPORT:: getdeviceselector**](/uwp/api/windows.devices.midi.midiinport.getdeviceselector)zurückgegeben.
+Gibt die Abfragezeichenfolge an, die zum Aufzählen [**allerPort-Objekte**](/uwp/api/Windows.Devices.Midi.MidiInPort) im System verwendet wird. Dieser Wert wird von [**EinerPort::GetDeviceSelector zurückgegeben.**](/uwp/api/windows.devices.midi.midiinport.getdeviceselector)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DEVINTERFACE_MIDI_OUTPUT"></span><span id="devinterface_midi_output"></span>**Ausgabe von devinterface- \_ MIDI \_**
+<span id="DEVINTERFACE_MIDI_OUTPUT"></span><span id="devinterface_midi_output"></span>**\_DEVINTERFACE-AUSGABE \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt die Abfrage Zeichenfolge an, die verwendet wird, um alle [**midioutport**](/uwp/api/Windows.Devices.Midi.MidiOutPort) -Objekte im System aufzuzählen. Dieser Wert wird von [**midioutport:: getdeviceselector**](/uwp/api/windows.devices.midi.midioutport.getdeviceselector)zurückgegeben.
+Gibt die Abfragezeichenfolge an, die zum Aufzählen aller [**AttributoutPort-Objekte**](/uwp/api/Windows.Devices.Midi.MidiOutPort) im System verwendet wird. Dieser Wert wird von [**Einerport::GetDeviceSelector zurückgegeben.**](/uwp/api/windows.devices.midi.midioutport.getdeviceselector)
 
 
 </dt> </dl> </dd> </dl>
@@ -67,7 +67,7 @@ Gibt die Abfrage Zeichenfolge an, die verwendet wird, um alle [**midioutport**](
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Mmdeviceapi. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mmdeviceapi.h</dt> </dl> |
 
 
 

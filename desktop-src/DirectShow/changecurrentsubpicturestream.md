@@ -1,24 +1,24 @@
 ---
-description: Das changecurrentsubpicturestream-Ereignis wird gesendet, wenn die Festplatte das Ändern des subbildstreams aktiviert oder deaktiviert.
+description: Das ChangeCurrentSubpictureStream-Ereignis wird gesendet, wenn der Datenträger das Ändern des Unterbilddatenstroms aktiviert oder deaktiviert.
 ms.assetid: f55e63b6-b3ad-4cf3-a7c4-6636b5375b12
-title: Changecurrentsubpicturestream (Segment. h)
+title: ChangeCurrentSubpictureStream (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cc589c5261a9e449187101853372b987a3a966d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a2d60e76dbd6ba9470598a346de4a294dbed17f88792bc225fb4387dacd93dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999380"
 ---
-# <a name="changecurrentsubpicturestream"></a>Changecurrentsubpicturestream
+# <a name="changecurrentsubpicturestream"></a>ChangeCurrentSubpictureStream
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das- `ChangeCurrentSubpictureStream` Ereignis wird gesendet, wenn die Festplatte das Ändern des subbildstreams aktiviert oder deaktiviert.
+Das Ereignis wird gesendet, wenn der Datenträger das Ändern des `ChangeCurrentSubpictureStream` Unterbilddatenstroms aktiviert oder deaktiviert.
 
 ``` syntax
 ChangeCurrentSubpictureStream(bEnabled)
@@ -28,7 +28,7 @@ ChangeCurrentSubpictureStream(bEnabled)
 
 <dl> <dt>
 
-<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*benabled*
+<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*bEnabled*
 </dt> <dd>
 
 Gibt an, ob der Vorgang als boolescher Wert aktiviert oder deaktiviert ist.
@@ -41,7 +41,7 @@ Gibt an, ob der Vorgang als boolescher Wert aktiviert oder deaktiviert ist.
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 

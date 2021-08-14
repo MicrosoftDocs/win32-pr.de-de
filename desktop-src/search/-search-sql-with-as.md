@@ -1,19 +1,19 @@
 ---
-description: Spalten Gruppen Aliase bieten eine Möglichkeit, kürzere Namen anstelle des Namens einer Spalte oder einer Gruppe von Spalten zu verwenden. Das optionale Gruppenalias-Prädikat ist Teil der WHERE-Klausel.
+description: Spaltengruppenaliase bieten eine Möglichkeit, kürzere Namen anstelle des Namens einer Spalte oder einer Gruppe von Spalten zu verwenden. Das optionale Gruppenaliasprädikat ist Teil der WHERE-Klausel.
 ms.assetid: 7782ac24-ea6c-4a97-b1b6-982f276fcefc
-title: WITH--as Group Alias-Prädikat
+title: WITH – AS-Gruppenaliasprädikat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29218e11fbffe5f47128eeefba3a7fe847a5b21d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ed77072c83d1c28dcc3ec63396b46a21a57c4a97d9c6dcd70259bd861d19762
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118226733"
 ---
-# <a name="with----as-group-alias-predicate"></a>WITH--as Group Alias-Prädikat
+# <a name="with----as-group-alias-predicate"></a>WITH – AS-Gruppenaliasprädikat
 
-Spalten Gruppen Aliase bieten eine Möglichkeit, kürzere Namen anstelle des Namens einer Spalte oder einer Gruppe von Spalten zu verwenden. Das optionale Gruppenalias-Prädikat ist Teil der WHERE-Klausel. Die Syntax folgt:
+Spaltengruppenaliase bieten eine Möglichkeit, kürzere Namen anstelle des Namens einer Spalte oder einer Gruppe von Spalten zu verwenden. Das optionale Gruppenaliasprädikat ist Teil der WHERE-Klausel. Die Syntax lautet wie folgt:
 
 
 ```
@@ -23,13 +23,13 @@ Spalten Gruppen Aliase bieten eine Möglichkeit, kürzere Namen anstelle des Nam
 
 
 
-Sie können mehr als einen Gruppenalias angeben, indem Sie den durch... Als Prädikate durch Kommas.
+Sie können mehrere Gruppenaliase angeben, wobei Sie with... AS-Prädikate durch Kommas.
 
-Wenn in einem WHERE-Klausel-Prädikat auf einen gruppeneralias verwiesen wird, wird die Bedingung auf jede Spalte in der Gruppe angewendet. Die logischen Werte, die sich aus der Übereinstimmung der einzelnen Spalten ergeben, werden mithilfe des logischen **or** -Operators kombiniert.
+Wenn in einem WHERE-Klauselprädikat auf einen Gruppenalias verwiesen wird, wird die Bedingung auf jede Spalte in der Gruppe angewendet. Die logischen Werte, die sich aus dem Abgleich der einzelnen Spalten ergeben, werden mithilfe des logischen **OR-Operators** kombiniert.
 
-Ein Alias muss definiert werden, bevor er verwendet werden kann, und er kann nur innerhalb der WHERE-Klausel verwendet werden. Der Aliasname muss ein regulärer Bezeichner sein, dem ein erforderliches Nummern Zeichen () vorangestellt ist \# .
+Ein Alias muss definiert werden, bevor er verwendet werden kann, und er kann nur innerhalb der WHERE-Klausel verwendet werden. Der Aliasname muss ein regulärer Bezeichner sein, dem ein erforderliches Nummernzeichen ( ) vorangestellt \# ist.
 
-Der Spalten Bezeichner kann einen oder mehrere Spalten Spezifizierer enthalten, die durch Kommas getrennt sind. Die Liste der Spalten muss in Klammern eingeschlossen werden, und jeder kann eine Gewichtung zugewiesen werden. Jede Spalte weist die folgende Syntax auf:
+Der Spaltenspezifizierer kann einen oder mehrere Spaltenspezifizierer enthalten, die durch Kommas getrennt sind. Die Liste der Spalten muss in Klammern eingeschlossen werden, und jeder Spalte kann eine Gewichtung zugewiesen werden. Jede Spalte weist die folgende Syntax auf:
 
 
 ```
@@ -38,13 +38,13 @@ Der Spalten Bezeichner kann einen oder mehrere Spalten Spezifizierer enthalten, 
 
 
 
-Weitere Informationen zum Angeben von Spalten Gewichtungen finden Sie unter frei [Text Prädikat](-search-sql-freetext.md) und [enthält Prädikat](-search-sql-contains.md).
+Informationen zum Angeben von Spaltengewichtungen finden Sie unter [FREETEXT-Prädikat](-search-sql-freetext.md) und [CONTAINS-Prädikat.](-search-sql-contains.md)
 
-Der Spalten Bezeichner kann regulär oder getrennt sein.
+Der Spaltenbezeichner kann normal oder durch Trennzeichen getrennt sein.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden WHERE-klauselbeispiele veranschaulichen, wann und wie Sie das Gruppenalias Prädikat verwenden können. Das erste Beispiel zeigt eine immer wiederkehrende WHERE-Klausel, die keine Gruppen Aliasing verwendet.
+Die folgenden WHERE-Klauselbeispiele veranschaulichen, wann und wie Sie das Gruppenaliasprädikat verwenden können. Das erste Beispiel zeigt eine sich wiederholende WHERE-Klausel, die kein Gruppenaliasing verwendet.
 
 
 ```
@@ -70,7 +70,7 @@ Das vorherige Beispiel kann mithilfe eines Gruppenalias vereinfacht werden, wie 
 
 
 
-Im folgenden finden Sie ein Beispiel für eine positive Gewichtung, bei der die **Title** -Eigenschaft bei der Bestimmung des relativen Rangs stärker gewichtet wird.
+Im Folgenden ist ein Beispiel für eine positive Gewichtung angegeben, bei der die **Title-Eigenschaft** bei der Bestimmung des relativen Rangs eine größere Gewichtung erhält.
 
 
 ```
@@ -83,7 +83,7 @@ Im folgenden finden Sie ein Beispiel für eine positive Gewichtung, bei der die 
 
 
 
-Im folgenden finden Sie ein Beispiel für eine negative Gewichtung, bei der die **Title** -Eigenschaft mit Gewichtung von 0 nicht berücksichtigt wird.
+Es folgt ein Beispiel für eine negative Gewichtung, bei der die **Title-Eigenschaft** mit der Gewichtung 0 nicht berücksichtigt wird.
 
 
 ```
@@ -103,16 +103,16 @@ Im folgenden finden Sie ein Beispiel für eine negative Gewichtung, bei der die 
 **Referenz**
 </dt> <dt>
 
-[Frei Text Prädikat](-search-sql-freetext.md)
+[FREETEXT-Prädikat](-search-sql-freetext.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Voll Text Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Nicht-voll Text Prädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)
 </dt> </dl>
 
  

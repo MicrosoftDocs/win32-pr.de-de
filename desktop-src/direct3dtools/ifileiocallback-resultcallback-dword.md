@@ -1,10 +1,10 @@
 ---
-description: Eine Rückruffunktion, die verwendet wird, um den Host von Fehlern während der Erfassung oder Wiedergabe zu benachrichtigen.
+description: Eine Rückruffunktion, die verwendet wird, um den Host während der Erfassung oder Wiedergabe über Fehler zu benachrichtigen.
 MS-HAID: vspixengine.IFileIOCallback\_ResultCallback\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ifleiocallback:: resultCallback-Methode'
+title: IFileIOCallback::ResultCallback-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: E4418A63-47C6-4F12-94FA-0F1B5465FE84
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 751c4d0b57165e148002218ae2151aaba69e48f8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f1adc4fdc72cd26e317a2d8dc4a82049a2ef6ad99734d5e8bfc631bffdf4df99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981520"
 ---
-# <a name="span-idvspixengineifileiocallback_resultcallback_dwordspanifileiocallbackresultcallback-method"></a><span id="vspixengine.ifileiocallback_resultcallback_dword"></span>Ifleiocallback:: resultCallback-Methode
+# <a name="span-idvspixengineifileiocallback_resultcallback_dwordspanifileiocallbackresultcallback-method"></a><span id="vspixengine.ifileiocallback_resultcallback_dword"></span>IFileIOCallback::ResultCallback-Methode
 
-Eine Rückruffunktion, die verwendet wird, um den Host von Fehlern während der Erfassung oder Wiedergabe zu benachrichtigen.
+Eine Rückruffunktion, die verwendet wird, um den Host während der Erfassung oder Wiedergabe über Fehler zu benachrichtigen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ HRESULT ResultCallback(
 
 ## <a name="parameters"></a>Parameter
 
-*resultstate*   
+*resultState*   
 Gibt die Art des aufgetretenen Fehlers an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**IFI-ocallback**](/windows/desktop/direct3dtools/ifileiocallback)
+[**IFileIOCallback**](/windows/desktop/direct3dtools/ifileiocallback)
 
  
 

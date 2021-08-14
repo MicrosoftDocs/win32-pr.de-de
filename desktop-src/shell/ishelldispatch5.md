@@ -13,25 +13,25 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 9170340a-0f11-4ec9-877d-fb7fef9888b2
-ms.openlocfilehash: 26c3112faa748aa443526fbe9cb493af67502cd7
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 325fef2c56ec4f2fa31508c0f9b0f34f63097161e3ef7d4ecb835fe62c8c4fb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220403"
 ---
 # <a name="ishelldispatch5-object"></a>IShellDispatch5-Objekt
 
-Erweitert das [**IShellDispatch4-Objekt.**](ishelldispatch4.md) Zusätzlich zu den von **IShellDispatch4** unterstützten Eigenschaften und Methoden fügt **IShellDispatch5** eine Methode hinzu, die geöffnete Fenster in einem 3D-Stapel anzeigt.
+Erweitert das [**IShellDispatch4-Objekt.**](ishelldispatch4.md) Zusätzlich zu den Eigenschaften und Methoden, die von **IShellDispatch4** unterstützt werden, fügt **IShellDispatch5** eine Methode hinzu, die geöffnete Fenster in einem 3D-Stapel anzeigt.
 
 > [!Note]  
-> **IShellDispatch5** wird implementiert und über das [**Shell-Objekt**](shell.md) aufgerufen.
+> **IShellDispatch5 wird** implementiert und über das [**Shell-Objekt aufgerufen.**](shell.md)
 
  
 
 ## <a name="members"></a>Member
 
-Das **IShellDispatch5-Objekt** verfügt über diese Typen von Membern:
+Das **IShellDispatch5-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
@@ -43,7 +43,7 @@ Das **IShellDispatch5-Objekt** verfügt über diese Methoden.
 
 | Methode                                                   | BESCHREIBUNG                                                                    |
 |:---------------------------------------------------------|:-------------------------------------------------------------------------------|
-| [**WindowSwitcher**](ishelldispatch5-windowswitcher.md) | Zeigt die geöffneten Fenster in einem 3D-Stapel an, den Sie durchlaufen können.<br/> |
+| [**WindowSwitcher**](ishelldispatch5-windowswitcher.md) | Zeigt Ihre geöffneten Fenster in einem 3D-Stapel an, den Sie durchblättern können.<br/> |
 
 
 
@@ -55,15 +55,15 @@ Das **IShellDispatch5-Objekt** verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

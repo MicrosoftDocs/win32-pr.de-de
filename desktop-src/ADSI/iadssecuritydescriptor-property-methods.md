@@ -1,10 +1,10 @@
 ---
-title: IADsSecurityDescriptor-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADsSecurityDescriptor-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften abgerufen oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsSecurityDescriptor-Eigenschaftenmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsSecurityDescriptor-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: e0c50740-de98-4913-b3df-6fd53263bcc8
 ms.tgt_platform: multiple
 keywords:
-- IADsSecurityDescriptor-Eigenschaften Methoden ADSI
+- IADsSecurityDescriptor-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -45,16 +45,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c5c07213a2d2a3a1b64621dbc40f707b0900703
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4a795195af94e248f304747ba7edcf4f7a55e11e051e1cb66937242de1d732bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118427626"
 ---
-# <a name="iadssecuritydescriptor-property-methods"></a>IADsSecurityDescriptor-Eigenschaften Methoden
+# <a name="iadssecuritydescriptor-property-methods"></a>IADsSecurityDescriptor-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**IADsSecurityDescriptor**](/windows/desktop/api/Iads/nn-iads-iadssecuritydescriptor) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften abgerufen oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsSecurityDescriptor-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssecuritydescriptor) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -63,14 +63,14 @@ Mit den Eigenschafts Methoden der [**IADsSecurityDescriptor**](/windows/desktop/
 **Steuerung**
 </dt> <dd> <dl>
 
-Flags, die die Bedeutung der Sicherheits Beschreibung qualifizieren. Werte werden aus der Win32- [**Sicherheits \_ \_ deskriptorsteuerungstruktur**](/windows/desktop/SecAuthZ/security-descriptor-control) entnommen.
+Flags, die die Bedeutung des Sicherheitsdeskriptors qualifizieren. Werte werden aus der Win32 [**SECURITY \_ DESCRIPTOR \_ CONTROL-Struktur**](/windows/desktop/SecAuthZ/security-descriptor-control) übernommen.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -88,17 +88,17 @@ HRESULT put_Control(
 
 </dt> </dl> </dd> <dt>
 
-**Dacldefdefault**
+**DaclDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des booleschen Typs, der angibt, ob die DACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter der Sicherheits Beschreibung bereitgestellt zu werden. Wenn der Ersteller eines Objekts z. b. keine DACL angibt, empfängt das Objekt die Standard-DACL vom Zugriffs Token des Erstellers. Dieses Flag kann beeinflussen, wie das System die DACL behandelt, in Bezug auf die ACE-Vererbung. Das System ignoriert dieses Flag, wenn das \_ Flag "SE DACL \_ Present" nicht festgelegt ist.
+Ein Flag des BOOL-Typs, das angibt, ob die DACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden. Wenn der Ersteller eines Objekts z. B. keine DACL an gibt, empfängt das Objekt die Standard-DACL aus dem Zugriffstoken des Erstellers. Dieses Flag kann sich darauf auswirken, wie das System die DACL in Bezug auf die ACE-Vererbung behandelt. Das System ignoriert dieses Flag, wenn SE \_ DACL \_ PRESENT-Flag nicht festgelegt ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant \_ bool**
+Skriptdatentyp: **VARIANT \_ BOOL**
 </dt> <dt>
 
 
@@ -116,17 +116,17 @@ HRESULT put_DaclDefaulted(
 
 </dt> </dl> </dd> <dt>
 
-**Diskretionaryacl**
+**Discretionaryacl**
 </dt> <dd> <dl>
 
-Eine freigegebene Zugriffs Steuerungs Liste (DACL), die die Zugriffs Typen angibt, die dem-Objekt für angegebene Benutzer und Gruppen gewährt werden. Weitere Informationen zu DACLs finden Sie unter [null-DACLs und leere DACLs](/windows/desktop/AD/null-dacls-and-empty-dacls).
+DACL (Discretionary Access Control List), die die Zugriffstypen angibt, die dem Objekt für angegebene Benutzer und Gruppen gewährt werden. Weitere Informationen zu DACLs finden Sie unter [NULL-DACLs und Leere DACLs.](/windows/desktop/AD/null-dacls-and-empty-dacls)
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **IDispatch**
+Skriptdatentyp: **IDispatch**
 </dt> <dt>
 
 
@@ -144,17 +144,17 @@ HRESULT put_DiscretionaryAcl(
 
 </dt> </dl> </dd> <dt>
 
-**Gruppieren**
+**Gruppe**
 </dt> <dd> <dl>
 
-Die Gruppe, zu der die Sicherheits-ID des Besitzers gehört.
+Gruppe, zu der die Sicherheits-ID des Besitzers gehört.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -172,17 +172,17 @@ HRESULT put_Group(
 
 </dt> </dl> </dd> <dt>
 
-**Gruppen Standard**
+**GroupDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des booleschen Typs, der angibt, ob die Gruppendaten von einem Standardmechanismus abgeleitet werden, anstatt explizit vom ursprünglichen Anbieter der Sicherheits Beschreibung bereitgestellt zu werden.
+Ein Flag des BOOL-Typs, das angibt, ob die Gruppendaten von einem Standardmechanismus abgeleitet sind, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant \_ bool**
+Skriptdatentyp: **VARIANT \_ BOOL**
 </dt> <dt>
 
 
@@ -210,7 +210,7 @@ Objektbesitzer.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -228,17 +228,17 @@ HRESULT put_Owner(
 
 </dt> </dl> </dd> <dt>
 
-**Besitzer Standard**
+**OwnerDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des booleschen Typs, das angibt, dass die Besitzer Daten von einem Standardmechanismus abgeleitet werden, anstatt explizit vom ursprünglichen Anbieter der Sicherheits Beschreibung bereitgestellt zu werden.
+Ein Flag des BOOL-Typs, das angibt, dass die Besitzerdaten von einem Standardmechanismus abgeleitet werden, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant \_ bool**
+Skriptdatentyp: **VARIANT \_ BOOL**
 </dt> <dt>
 
 
@@ -256,17 +256,17 @@ HRESULT put_OwnerDefaulted(
 
 </dt> </dl> </dd> <dt>
 
-**Novel**
+**Revision**
 </dt> <dd> <dl>
 
-Revisions Ebene der Sicherheits Beschreibung. Dieser Wert wird aus der Win32- [**ACL- \_ Revisions \_ Informations**](/windows/desktop/api/winnt/ns-winnt-acl_revision_information) Struktur entnommen. Alle ACEs in einer ACL müssen die gleiche Revisions Ebene aufweisen.
+Revisionsebene der Sicherheitsbeschreibung. Dieser Wert wird aus der [**Win32-Struktur ACL \_ REVISION \_ INFORMATION**](/windows/desktop/api/winnt/ns-winnt-acl_revision_information) übernommen. Alle ACEs in einer ACL müssen auf derselben Revisionsebene sein.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -284,17 +284,17 @@ HRESULT put_Revision(
 
 </dt> </dl> </dd> <dt>
 
-**Sacldefault**
+**SaclDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des booleschen Typs, das angibt, dass die SACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter der Sicherheits Beschreibung bereitgestellt zu werden. Dieses Flag kann Einfluss darauf haben, wie das System die SACL verarbeitet, in Bezug auf die ACE-Vererbung. Das System ignoriert dieses Flag, wenn das \_ Flag für die SE SACL \_ Present nicht festgelegt ist.
+Ein Flag des BOOL-Typs, das angibt, dass die SACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden. Dieses Flag kann sich darauf auswirken, wie das System die SACL in Bezug auf die ACE-Vererbung behandelt. Das System ignoriert dieses Flag, wenn SE \_ SACL \_ PRESENT-Flag nicht festgelegt ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant \_ bool**
+Skriptdatentyp: **VARIANT \_ BOOL**
 </dt> <dt>
 
 
@@ -312,17 +312,17 @@ HRESULT put_SaclDefaulted(
 
 </dt> </dl> </dd> <dt>
 
-**SystemAcl**
+**Systemacl**
 </dt> <dd> <dl>
 
-System Zugriffs Steuerungs Liste, die verwendet wird, um Überwachungsdaten Sätze für das-Objekt zu generieren.
+Systemzugriffssteuerungsliste, die zum Generieren von Überwachungsdatensätzen für das Objekt verwendet wird.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **IDispatch**
+Skriptdatentyp: **IDispatch**
 </dt> <dt>
 
 
@@ -344,7 +344,7 @@ HRESULT put_SystemAcl(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie eine vorhandene Sicherheits Beschreibung auflisten.
+Das folgende Codebeispiel zeigt, wie sie einen vorhandenen Sicherheitsdeskriptor aufzählen.
 
 
 ```VB
@@ -385,13 +385,13 @@ Cleanup:
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>         |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl>   |
 | IID<br/>                      | IID \_ IADsSecurityDescriptor ist als B8C787CA-9BDD-11D0-852C-00C04FD8D503 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

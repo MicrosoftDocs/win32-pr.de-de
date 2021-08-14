@@ -1,7 +1,7 @@
 ---
-description: Die bezeichnete \_ bitstruktur definiert ein Bezeichnungs bitpaar.
+description: Die LABELED \_ BIT-Struktur definiert ein BIT-Bezeichnungspaar.
 ms.assetid: 500b5159-bf9f-49d4-8567-d8e462015eb0
-title: LABELED_BIT Struktur (Netmon. h)
+title: LABELED_BIT-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 24a56e832600b551dd3ab43ea93d59c5805af630
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe08288929a5f14c4a920c52121c2ccfbdb35888f2ed220291e30e53a3ef0c6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364835"
 ---
-# <a name="labeled_bit-structure"></a>Bezeichnete \_ bitstruktur
+# <a name="labeled_bit-structure"></a>BEZEICHNETE \_ BIT-Struktur
 
-Die **bezeichnete \_ bitstruktur** definiert ein Bezeichnungs bitpaar.
+Die **LABELED \_ BIT-Struktur** definiert ein BIT-Bezeichnungspaar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,32 +41,32 @@ typedef struct _LABELED_BIT {
 
 <dl> <dt>
 
-**Bitzahl**
+**BitNumber**
 </dt> <dd>
 
-Bitnummer des Bezeichnungs bitpaars. Die Werte reichen von 0 bis 255. Legen Sie den **bitnumber** -Member auf das Bit fest, das beim Vergleich des Eigenschafts Werts verwendet wird.
+BIT-Nummer des BIT-Bezeichnungspaars. Die Werte liegen zwischen 0 und 255. Legen Sie den **Bitnumber-Member** auf das BIT fest, das beim Vergleich des Eigenschaftswerts verwendet wird.
 
 </dd> <dt>
 
-**Labeloff**
+**LabelOff**
 </dt> <dd>
 
-Eine Zeichenfolge oder Bezeichnung, die angezeigt wird, wenn das in **bitnumber** angegebene Bit 0 (null) ist. Eine mögliche Bezeichnung ist beispielsweise "Bit Off".
+Zeichenfolge oder Bezeichnung, die angezeigt wird, wenn der in **BitNumber** angegebene BIT gleich 0 (null) ist. Eine mögliche Bezeichnung ist beispielsweise "Bit OFF".
 
 </dd> <dt>
 
-**Labelon**
+**LabelOn**
 </dt> <dd>
 
-Eine Zeichenfolge oder Bezeichnung, die angezeigt wird, wenn das in **bitnumber** angegebene Bit 1 entspricht. Eine mögliche Bezeichnung ist beispielsweise "Bit ein".
+Zeichenfolge oder Bezeichnung, die angezeigt wird, wenn das in **BitNumber** angegebene BIT gleich 1 ist. Eine mögliche Bezeichnung ist beispielsweise "Bit ON".
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Array mit **beschrifteten \_ bitstrukturen** wird verwendet, um einen Satz von Bezeichnungs Bit Paaren zu definieren. Ein Zeiger auf das Array wird im **lplabeledbit** -Member der [set](set.md) -Struktur angegeben. Die Paare werden verwendet, wenn Sie eine Bezeichnung auf der Grundlage der Einstellung der einzelnen Bits anzeigen möchten. In der Regel wird dieser Typ von Set verwendet, um den ein-oder ausschalten-Wert von Bits anzugeben.
+Ein Array von **LABELED \_ BIT-Strukturen** wird verwendet, um einen Satz von Bezeichnungs-BIT-Paaren zu definieren. Ein Zeiger auf das Array wird im **lpLabeledBit-Member** der [SET-Struktur](set.md) angegeben. Die Paare werden verwendet, wenn Sie eine Bezeichnung basierend auf der Einstellung der einzelnen BIT-Bits anzeigen möchten. In der Regel wird dieser Satztyp verwendet, um den ON- oder OFF-Wert von BITs anzugeben.
 
-Wenn ein Bit festgelegt wird, zeigt Netzwerkmonitor nur die Bits an, die im Array der **Mengen Strukturen enthalten** sind. Bits, die sich nicht in der **Set** -Struktur befinden, werden nicht angezeigt.
+Wenn ein BIT-Satz angegeben wird, zeigt Netzwerkmonitor nur die BITs an, die im Array von **SET-Strukturen** enthalten sind. BITs, die sich nicht in der **SET-Struktur** befinden, werden nicht angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,11 +76,11 @@ Wenn ein Bit festgelegt wird, zeigt Netzwerkmonitor nur die Bits an, die im Arra
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3CatmullRom-Funktion (D3DX10Math.h): Führt eine Catmull-Rom-Interpolation mithilfe der angegebenen 3D-Vektoren aus.'
+description: 'D3DXVec3CatmullRom-Funktion (D3DX10Math.h): Führt eine Catmull-Rom Interpolation mit den angegebenen 3D-Vektoren aus.'
 ms.assetid: 324bd4b5-b0df-4dd3-b370-3c365c9f2db1
 title: D3DXVec3CatmullRom-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: a09d61e9c43624f441975eca1a131a82f8092587
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 89907a014d7f3729bf564410447a5832597bd1b42a7f59aad93082e79469b2bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989650"
 ---
 # <a name="d3dxvec3catmullrom-function-d3dx10mathh"></a>D3DXVec3CatmullRom-Funktion (D3DX10Math.h)
 
@@ -104,9 +104,9 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Zeiger auf eine D3DXVECTOR3-Struktur, die das Ergebnis der Catmull-Rom Interpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Suchen Sie bei vier Punkten (p1, p2, p3, p4) eine Funktion Q(s) so, dass:
+Bei vier Punkten (p1, p2, p3, p4) suchen Sie eine Funktion Q(s) so, dass:
 
 
 ```
@@ -118,7 +118,7 @@ Q(s) is parallel to the line joining p2 to p4 when s is 1.
 
 
 
-Die Catmull-Rom Spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
+Der Catmull-Rom Spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
 
 
 ```
@@ -149,7 +149,7 @@ Q(s) = (2s3 - 3s2 + 1)v1 + (-2s3 + 3s2)v2 + (s3 - 2s2 + s)t1 + (s3 - s2)t2
 
 
 
-und Ersetzen durch v1, v2, t1, t2 ergibt:
+und ersetzen durch v1, v2, t1, t2 und ergeben:
 
 
 ```
@@ -158,7 +158,7 @@ Q(s) = (2s3 - 3s2 + 1)p2 + (-2s3 + 3s2)p3 + (s3 - 2s2 + s)(p3 - p1) / 2 + (s3 - 
 
 
 
-Dies kann wie hier erläutert neu angeordnet werden:
+Dies kann wie hier angezeigt neu angeordnet werden:
 
 
 ```
@@ -171,7 +171,7 @@ Q(s) = [(-s3 + 2s2 - s)p1 + (3s3 - 5s2 + 2)p2 + (-3s3 + 4s2 + s)p3 + (s3 - s2)p4
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 

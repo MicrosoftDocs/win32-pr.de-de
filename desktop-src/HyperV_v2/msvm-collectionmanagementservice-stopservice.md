@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f46b7416a3f17788cbfc0af5aacba014d680dbf6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cfbd33b1c16cabbe7196283b0afac31fbe28aba7b6d5b3f82b067b3bfbe7e8fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980410"
 ---
 # <a name="stopservice-method-of-the-msvm_collectionmanagementservice-class"></a>StopService-Methode der Msvm \_ CollectionManagementService-Klasse
 
@@ -53,9 +53,9 @@ Gibt bei Erfolg 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |

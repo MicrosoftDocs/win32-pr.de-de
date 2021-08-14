@@ -1,7 +1,7 @@
 ---
 description: Startet einen Auftrag zum Hinzufügen von Ressourcen zu einem Ressourcenpool.
 ms.assetid: b163619a-19bd-43d7-ba35-ec4bd8192100
-title: Adresssourcestoresourcepool-Methode der CIM_ResourcePoolConfigurationService-Klasse
+title: AddResourcesToResourcePool-Methode der CIM_ResourcePoolConfigurationService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: d3aed59267bd064e95b62431064fbd54bb9168aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55191f3ddce5672d1b76987b8a7c2ce1f87b9cca330a7ba14aa4ae10bacc5b67
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980930"
 ---
-# <a name="addresourcestoresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>Adresssourcestoresourcepool-Methode der CIM \_ resourcepoolconfigurationservice-Klasse
+# <a name="addresourcestoresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>AddResourcesToResourcePool-Methode der \_ CIM-Klasse "ResourcePoolConfigurationService"
 
 Startet einen Auftrag zum Hinzufügen von Ressourcen zu einem Ressourcenpool.
 
@@ -41,34 +41,34 @@ uint32 AddResourcesToResourcePool(
 
 <dl> <dt>
 
-" *Hustresources* \[ " in\]
+*HostResources* \[ In\]
 </dt> <dd>
 
-Array von [**CIM \_ LogicalDevice**](cim-logicaldevice.md) -Instanzen, die dem Pool hinzugefügt werden sollen.
+Array von [**CIM \_ LogicalDevice-Instanzen,**](cim-logicaldevice.md) die dem Pool hinzugefügt werden.
 
 </dd> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
-Ein [**CIM- \_ resourcepool**](cim-resourcepool.md) , der den Pool darstellt, dem die Ressourcen hinzugefügt werden sollen.
+Ein [**\_ CIM-Ressourcenpool,**](cim-resourcepool.md) der den Pool darstellt, dem die Ressourcen hinzugefügt werden.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein [**CIM- \_ bettejob**](cim-concretejob.md) , der auf den Auftrag verweist (kann **null** sein, wenn der Auftrag abgeschlossen ist).
+Ein [**CIM \_ ConcreteJob,**](cim-concretejob.md) der auf den Auftrag verweist (kann **NULL sein,** wenn der Auftrag abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
-**Auftrag ohne Fehler abgeschlossen** (0)
+**Auftrag ohne Fehler** abgeschlossen (0)
 </dt> <dt>
 
 **Nicht unterstützt** (1)
@@ -80,31 +80,31 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Timeout** (3)
 </dt> <dt>
 
-Fehler **(4** )
+**Fehler** (4)
 </dt> <dt>
 
 **Ungültiger Parameter** (5)
 </dt> <dt>
 
-**In Gebrauch** (6)
+**Wird verwendet** (6)
 </dt> <dt>
 
-**Falscher ResourceType für den Pool** (7).
+**Falscher ResourceType für den Pool** (7)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Größe nicht unterstützt** (4097)
 </dt> <dt>
 
-**Reservierte Methode** (4098.32767)
+**Reservierte Methode** (4098..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -116,16 +116,16 @@ Fehler **(4** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ resourcepoolconfigurationservice**](cim-resourcepoolconfigurationservice.md)
+[**CIM \_ ResourcePoolConfigurationService**](cim-resourcepoolconfigurationservice.md)
 </dt> </dl>
 
  

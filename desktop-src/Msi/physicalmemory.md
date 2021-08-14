@@ -1,19 +1,19 @@
 ---
-description: Der Installer legt die PhysicalMemory-Eigenschaft auf die Größe des installierten RAM in Megabyte fest.
+description: Das Installationsprogramm legt die PhysicalMemory-Eigenschaft auf die Größe des installierten RAM in Megabyte fest.
 ms.assetid: ef0b5b2c-7a43-41d5-8495-8bd1d44a04d1
-title: PhysicalMemory (Eigenschaft)
+title: PhysicalMemory-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68abaed9386ff16217b1b943448322ffe3ba63eb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 956d639edffe1f3053e0ea53a4dc7f2e9142f5f85d5475733147ec4d0b9eaa5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118377498"
 ---
-# <a name="physicalmemory-property"></a>PhysicalMemory (Eigenschaft)
+# <a name="physicalmemory-property"></a>PhysicalMemory-Eigenschaft
 
-Der Installer legt die **PhysicalMemory** -Eigenschaft auf die Größe des installierten RAM in Megabyte fest.
+Das Installationsprogramm legt die **PhysicalMemory-Eigenschaft** auf die Größe des installierten RAM in Megabyte fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Der Installer legt die **PhysicalMemory** -Eigenschaft auf die Größe des insta
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

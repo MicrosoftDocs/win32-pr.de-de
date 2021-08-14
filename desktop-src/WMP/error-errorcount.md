@@ -1,9 +1,9 @@
 ---
-title: Fehler. errorCount
-description: Die errorCount-Eigenschaft ruft die Anzahl der Fehler in der Fehler Warteschlange ab.
+title: Error.errorCount
+description: Die errorCount-Eigenschaft ruft die Anzahl der Fehler in der Fehlerwarteschlange ab.
 ms.assetid: 64d9bb0a-fcc4-401b-a7bd-529e1a517f3b
 keywords:
-- 'Fehler: errorCount Windows Media Player'
+- Error.errorCount Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94848023d2cd331545f97d3bea6d92f2fcd4b49c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c99275930155724f47b77de4f85905b92de9d7a7eb612ab713d725a16c1239d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339802"
 ---
-# <a name="errorerrorcount"></a>Fehler. errorCount
+# <a name="errorerrorcount"></a>Error.errorCount
 
-Die **errorCount** -Eigenschaft ruft die Anzahl der Fehler in der Fehler Warteschlange ab.
+Die **errorCount-Eigenschaft** ruft die Anzahl der Fehler in der Fehlerwarteschlange ab.
 
 ``` syntax
 player.error.errorCount
@@ -32,15 +32,15 @@ player.error.errorCount
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie sollten *Einstellungen* festlegen. **enableerrordialogs** auf false, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Sie sollten *Einstellungen* festlegen. **enableErrorDialogs** wird auf FALSE festgelegt, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird ein *Fehler* verwendet. **errorCount** in einem Ereignishandler, um den Benutzer über den letzten Fehler in der Fehler Warteschlange zu informieren. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *Fehler verwendet.* **errorCount** in einem Ereignishandler, um den Benutzer über den letzten Fehler in der Fehlerwarteschlange zu informieren. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -68,12 +68,12 @@ alert(errDesc);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

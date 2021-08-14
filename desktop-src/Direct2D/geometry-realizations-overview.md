@@ -1,89 +1,89 @@
 ---
 title: Übersicht über Geometrierealisierungen
-description: In diesem Thema wird beschrieben, wie Sie mithilfe von Direct2D-Geometrie-neufunktionen in bestimmten Szenarien die Leistung der Geometrie Leistung Ihrer APP verbessern.
+description: In diesem Thema wird beschrieben, wie Direct2D-Geometrierealisierungen verwendet werden, um die Leistung des Geometrierenderings Ihrer App in bestimmten Szenarien zu verbessern.
 ms.assetid: E8C4C4E5-3102-4F53-847E-A4C2D12A6921
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b903e047ee58a803a7584aaca407281fc803e30
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5108537e9ea9b38bebaab590178d990b44e611e56e82690e9d91ad9b56c19372
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340911"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119260134"
 ---
 # <a name="geometry-realizations-overview"></a>Übersicht über Geometrierealisierungen
 
-In diesem Thema wird beschrieben, wie Sie mithilfe von [Direct2D](direct2d-portal.md) -Geometrie-neufunktionen in bestimmten Szenarien die Leistung der Geometrie Leistung Ihrer APP verbessern.
+In diesem Thema wird beschrieben, wie [Direct2D-Geometrierealisierungen](direct2d-portal.md) verwendet werden, um die Leistung des Geometrierenderings Ihrer App in bestimmten Szenarien zu verbessern.
 
 Sie enthält die folgenden Abschnitte:
 
--   [Was sind Geometrie-neusetzungen?](#what-are-geometry-realizations)
--   [Gründe für die Verwendung von Geometrie-Neumessungen](#why-use-geometry-realizations)
--   [Verwendungszwecke von Geometrie-Neumessungen](#when-to-use-geometry-realizations)
--   [Erstellen von Geometrie-Neumessungen](#creating-geometry-realizations)
--   [Zeichnen von Geometrie-Neumessungen](#drawing-geometry-realizations)
--   [Skalieren von Geometry-Neuerungen](#scaling-geometry-realizations)
-    -   [Verwenden von Geometrie-Neuerungen in apps, die nicht skaliert werden](#using-geometry-realizations-in-apps-that-do-not-scale)
-    -   [Verwenden von Geometrie-Neuerungen in apps, die sich um eine kleine Menge skalieren](#using-geometry-realizations-in-apps-that-scale-by-a-small-amount)
-    -   [Verwenden von Geometrie-Neuerungen in apps, die sich um eine große Menge skalieren](#using-geometry-realizations-in-apps-that-scale-by-a-large-amount)
+-   [Was sind Geometrierealisierungen?](#what-are-geometry-realizations)
+-   [Gründe für die Verwendung von Geometrierealisierungen](#why-use-geometry-realizations)
+-   [Einsatz von Geometrierealisierungen](#when-to-use-geometry-realizations)
+-   [Erstellen von Geometrierealisierungen](#creating-geometry-realizations)
+-   [Zeichnungsgeometrierealisierungen](#drawing-geometry-realizations)
+-   [Skalierung von Geometrierealisierungen](#scaling-geometry-realizations)
+    -   [Verwenden von Geometrierealisierungen in Apps, die nicht skaliert werden](#using-geometry-realizations-in-apps-that-do-not-scale)
+    -   [Verwenden von Geometrierealisierungen in Apps, die um eine kleine Menge skaliert werden](#using-geometry-realizations-in-apps-that-scale-by-a-small-amount)
+    -   [Verwenden von Geometrierealisierungen in Apps, die um eine große Menge skaliert werden](#using-geometry-realizations-in-apps-that-scale-by-a-large-amount)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="what-are-geometry-realizations"></a>Was sind Geometrie-neusetzungen?
+## <a name="what-are-geometry-realizations"></a>Was sind Geometrierealisierungen?
 
-In Windows 8.1 eingeführte Geometrie-Real Messungen sind eine neue Art von Zeichnungs primitiven, die es [Direct2D](direct2d-portal.md) -apps erleichtern, die Leistung von Geometrie Rendering in bestimmten Fällen zu verbessern. Geometrie-Neumessungen werden durch die [**ID2D1GeometryRealization**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization) -Schnittstelle dargestellt.
+Geometrierealisierungen, die in Windows 8.1 eingeführt wurden, sind eine neue Art von Zeichnungsprimitive, die [es Direct2D-Apps](direct2d-portal.md) einfach macht, die Leistung des Geometrierenderings in bestimmten Fällen zu verbessern. Geometrierealisierungen werden durch die [**ID2D1GeometryRealization-Schnittstelle**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization) dargestellt.
 
-## <a name="why-use-geometry-realizations"></a>Gründe für die Verwendung von Geometrie-Neumessungen
+## <a name="why-use-geometry-realizations"></a>Gründe für die Verwendung von Geometrierealisierungen
 
-Wenn [Direct2D](direct2d-portal.md) ein [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) -Objekt rendert, muss es diese Geometrie in ein Formular konvertieren, das die Grafikhardware durch einen Prozess mit dem Namen "Mosaik" versteht. In der Regel muss Direct2D die Geometrie jedes Frame, das Sie gezeichnet hat, verändern, auch wenn sich die Geometrie nicht ändert. Wenn Ihre APP die gleiche Geometrie jedes Frame rendert, stellt die wiederholte Wiederholung einen verlorenen Berechnungs Aufwand dar. Es ist rechnerisch effizienter, das Mosaik oder sogar die vollständige rasterisierung der Geometrie zwischenzuspeichern und die zwischengespeicherte Darstellung jedes Frames zu zeichnen, anstatt wiederholt zu werden.
+Wenn [Direct2D](direct2d-portal.md) ein [**ID2D1Geometry-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) rendert, muss es diese Geometrie in eine Form konvertieren, die die Grafikhardware durch einen Prozess namens Mosaik versteht. In der Regel muss Direct2D für jeden gezeichneten Rahmen geometrietesseln, auch wenn sich die Geometrie nicht ändert. Wenn Ihre App bei jedem Frame die gleiche Geometrie rendert, stellt das wiederholte Neusesseln verschwendeten Rechenaufwand dar. Es ist recheneffizienter, das Mosaik oder sogar die vollständige Rasterung der Geometrie zwischenspeichern und diese zwischengespeicherte Darstellung für jeden Frame zu zeichnen, anstatt das Mosaik wiederholt neu zu erstellen.
 
-Eine gängige Methode, mit der Entwickler dieses Problem lösen können, ist das Zwischenspeichern der vollständigen rasterisierung der Geometrie. Insbesondere ist es üblich, eine neue Bitmap zu erstellen, die Geometrie auf diese Bitmap zu setzen und diese Bitmap nach Bedarf in die Szene zu zeichnen. (Dieser Ansatz wird im Abschnitt [Geometrie Rendering](improving-direct2d-performance.md) unter Verbessern der Leistung von Direct2D-apps beschrieben.) Dieser Ansatz ist zwar sehr Rechen effizient, hat jedoch einige Nachteile:
+Entwickler lösen dieses Problem häufig, wenn sie die vollständige Rasterung der Geometrie zwischenspeichern. Insbesondere ist es üblich, eine neue Bitmap zu erstellen, die Geometrie in diese Bitmap zu rastern und diese Bitmap dann bei Bedarf in die Szene zu zeichnen. (Dieser Ansatz wird im Abschnitt [Geometrierendering](improving-direct2d-performance.md) unter Verbessern der Leistung von Direct2D-Apps beschrieben.) Dieser Ansatz ist zwar sehr recheneffizient, hat jedoch einige Nachteile:
 
--   Die zwischengespeicherte Bitmap ist sensibel für Änderungen in der Transformation, die auf die Szene angewendet wird. Beispielsweise kann das Skalieren der rasterisierung zu merkbaren Skalierungs Artefakten führen. Das Verringern dieser Artefakte mit hochwertigen Skalierungs Algorithmen kann Rechen intensiv sein.
--   Die zwischengespeicherte Bitmap beansprucht eine beträchtliche Menge an Arbeitsspeicher, insbesondere, wenn Sie mit hoher Auflösung gerengt wird.
+-   Die zwischengespeicherte Bitmap ist empfindlich auf Änderungen in der Transformation, die auf die Szene angewendet wird. Beispielsweise kann das Skalieren der Rasterung zu einer spürbaren Skalierung von Artefakten führen. Das Abmildern dieser Artefakte mit hochwertigen Skalierungsalgorithmen kann rechenintensiv sein.
+-   Die zwischengespeicherte Bitmap verbraucht viel Arbeitsspeicher, insbesondere, wenn sie mit hoher Auflösung rastert wird.
 
-Geometry-Neueinstellungen stellen eine alternative Möglichkeit zum Zwischenspeichern von Geometrie dar, die die obigen Nachteile vermeidet. Geometrie-Neuberechnungen werden nicht durch Pixel dargestellt (wie bei einer vollständigen rasterisierung), sondern durch Punkte auf einer mathematischen Ebene. Aus diesem Grund sind Sie weniger sensibel als vollständige rasterierungen bei der Skalierung und anderen Manipulationen, und Sie verbrauchen erheblich weniger Arbeitsspeicher.
+Geometrierealisierungen stellen eine alternative Möglichkeit zum Zwischenspeichern der Geometrie dar, die die oben genannten Nachteile vermeidet. Geometrierealisierungen werden nicht durch Pixel dargestellt (wie bei einer vollständigen Rasterung), sondern durch Punkte auf einer mathematischen Ebene. Aus diesem Grund sind sie weniger empfindlich als vollständige Rasterungen für Skalierung und andere Bearbeitungen und verbrauchen deutlich weniger Arbeitsspeicher.
 
-## <a name="when-to-use-geometry-realizations"></a>Verwendungszwecke von Geometrie-Neumessungen
+## <a name="when-to-use-geometry-realizations"></a>Einsatz von Geometrierealisierungen
 
-Sie sollten die Verwendung von Geometrie-Neuerungen in Erwägung ziehen, wenn Ihre APP komplexe Geometrien rendert, deren Formen selten geändert werden, die jedoch veränderliche Transformationen unterliegen
+Erwägen Sie die Verwendung von Geometrierealisierungen, wenn Ihre App komplexe Geometrien rendert, deren Formen sich selten ändern, die jedoch möglicherweise sich ändernden Transformationen unterliegen.
 
-Stellen Sie sich z. b. eine Zuordnungs Anwendung vor, die eine statische Zuordnung anzeigt, die dem Benutzer jedoch das Vergrößern und verkleinern ermöglicht. Diese APP kann von der Verwendung von Geometrie-Neumessungen profitieren. Da die zu rendernden Geometrien statisch bleiben, ist es sinnvoll, Sie zwischenzuspeichern, um Mosaik Vorgänge zu speichern. Da die Zuordnungen jedoch skaliert werden, wenn der Benutzer vergrößert wird, ist das Zwischenspeichern einer vollständigen rasterisierung aufgrund von Skalierungs Artefakten nicht ideal. Durch das Zwischenspeichern von Geometrie Vorgängen kann die APP eine Wiederholung vermeiden, während gleichzeitig eine hohe visuelle Qualität während der Skalierung gewährleisten wird.
+Stellen Sie sich beispielsweise eine Zuordnungsanwendung vor, die eine statische Karte zeigt, der Benutzer jedoch das Vergrößern und Verkleinern ermöglicht. Diese App kann von der Verwendung von Geometrierealisierungen profitieren. Da die gerenderten Geometrien statisch bleiben, ist es hilfreich, sie zwischenspeichern, um Mosaikarbeit zu sparen. Da die Karten jedoch skaliert werden, wenn der Benutzer zoomt, ist das Zwischenspeichern einer vollständigen Rasterung aufgrund von Skalierungsartefakten nicht ideal. Durch das Zwischenspeichern von Geometrierealisierungen kann die App Neusesseln vermeiden und gleichzeitig während der Skalierung eine hohe visuelle Qualität aufrechterhalten.
 
-Nehmen wir andererseits eine Kaleidoskop-App mit animierter Geometrie, die sich ständig ändert. Diese APP wäre wahrscheinlich nicht von der Verwendung von Geometrie-Neumessungen profitieren. Da sich die Formen selbst von Frame zu Frame ändern, ist es nicht sinnvoll, die Mosaik Vorgänge zwischenzuspeichern. Der beste Ansatz für diese APP besteht darin, [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) -Objekte direkt zu zeichnen.
+Betrachten Sie andererseits eine Idoscope-App mit animierter Geometrie, die sich ständig ändert. Diese App würde wahrscheinlich nicht von der Verwendung von Geometrierealisierungen profitieren. Da sich die Formen selbst von Frame zu Frame ändern, ist es nicht sinnvoll, ihre Mosaiken zwischenspeichern. Der beste Ansatz für diese App ist das direkte [**Zeichnen von ID2D1Geometry-Objekten.**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry)
 
-## <a name="creating-geometry-realizations"></a>Erstellen von Geometrie-Neumessungen
+## <a name="creating-geometry-realizations"></a>Erstellen von Geometrierealisierungen
 
-Ein [**ID2D1GeometryRealization**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization) -Objekt muss aus einem vorhandenen [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) -Objekt erstellt werden. Um eine Geometrie zu erstellen, rufen Sie die Methode " [**kreatefilledgeometryrealisation**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createfilledgeometryrealization) " oder die Methode " [**kreatestrokedgeometryrealisation**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createstrokedgeometryrealization) " auf, und übergeben Sie die **ID2D1Geometry** , um Sie zu realisieren.
+Ein [**ID2D1GeometryRealization-Objekt**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization) muss aus einem vorhandenen [**ID2D1Geometry-Objekt erstellt**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) werden. Rufen Sie zum Erstellen einer Geometrierealisierung die [**CreateFilledGeometryRealization-Methode**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createfilledgeometryrealization) oder die [**CreateStrokedGeometryRealization-Methode**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createstrokedgeometryrealization) auf, und übergeben Sie die zu realisierende **ID2D1Geometry.**
 
--   [**Createfilledgeometryrealisation**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createfilledgeometryrealization) erstellt eine Realisierung des Inneren der Form: der Bereich, der durch den Aufruf von [**fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry)gezeichnet wird.
--   [**Createstrokedgeometryrealisation**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createstrokedgeometryrealization) erstellt eine Realisierung des Strichs der Form: der Bereich, der durch den Aufruf von [**DrawGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry)gezeichnet wird.
+-   [**CreateFilledGeometryRealization**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createfilledgeometryrealization) erstellt eine Realisierung des Inneren der Form: der Bereich, der durch Aufrufen von [**FillGeometry gezeichnet wird.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry)
+-   [**CreateStrokedGeometryRealization**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-createstrokedgeometryrealization) erstellt eine Realisierung des Strichs der Form: der Bereich, der durch Aufrufen von [**DrawGeometry gezeichnet wird.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry)
 
-Beide Arten der Geometrie-Realisierung werden durch die [**ID2D1GeometryRealization**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization) -Schnittstelle dargestellt.
+Beide Arten der Geometrierealisierung werden durch die [**ID2D1GeometryRealization-Schnittstelle**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization) dargestellt.
 
-Beim Erstellen einer Geometry-Realisierung muss [Direct2D](direct2d-portal.md) alle Kurven in der bereitgestellten Geometrie in polygonale Näherungen vereinfachen. Sie müssen einen vereinfachten Toleranzparameter für die Erstellungs Methode angeben – Dies gibt den maximalen Abstand zwischen der true-Kurve der Geometrie und der polygonalen Näherung in geräteunabhängigen Pixeln (Device-Independent Pixels, Dips) an. Je niedriger die von Ihnen bereitgestellte Vereinfachungs Toleranz ist, desto höher ist die Genauigkeit des resultierenden Geometrie-Realisierungs Objekts. Entsprechend ergibt sich durch die Bereitstellung einer höheren Vereinfachungs Toleranz eine niedrigere Geometrie-Realisierung. Beachten Sie, dass das Zeichnen von Geometrie mit höherer Genauigkeit teurer ist als bei niedrigerer Genauigkeit, aber Sie können auch weiter skaliert werden, bevor sichtbare Artefakte eingeführt werden. Hinweise zur Verwendung von Vereinfachungs Toleranzen finden Sie weiter unten unter [Skalieren von Geometrie](#scaling-geometry-realizations) -Real Messungen.
+Beim Erstellen einer Geometrierealisierung muss [Direct2D](direct2d-portal.md) alle Kurven in der bereitgestellten Geometrie auf polygonale Näherungen abflachen. Sie müssen einen Flachungstoleranzparameter für die Erstellungsmethode bereitstellen. Dadurch wird der maximale Abstand in geräteunabhängigen Pixeln (DEVICE-Independent Pixels, DIPs) zwischen der wahren Kurve der Geometrie und ihrer polygonalen Näherung angegeben. Je niedriger die von Ihnen zur Verfügung stellende Flachkeitstoleranz, desto höher ist die Genauigkeit des resultierenden Geometrierealisierungsobjekts. Auf ähnliche Weise führt die Bereitstellung einer höheren Flachkeitstoleranz zu einer Geometrieerreichung mit geringerer Genauigkeit. Beachten Sie, dass Geometrierealisierungen mit höherer Genauigkeit teurer zu zeichnen sind als diejenigen mit geringerer Genauigkeit, aber sie können vor der Einführung sichtbarer Artefakte weiter skaliert werden. Eine Anleitung zur Verwendung von Flachkeitstoleranzen finden Sie weiter unten unter [Skalieren von Geometrierealisierungen.](#scaling-geometry-realizations)
 
 > [!Note]  
-> Geometry-Realisierungs Objekte sind einem bestimmten Grafikgerät zugeordnet: Sie sind Geräte abhängige Ressourcen.
+> Geometrierealisierungsobjekte sind einem bestimmten Grafikgerät zugeordnet: Es handelt sich um geräteabhängige Ressourcen.
 
- 
+ 
 
-## <a name="drawing-geometry-realizations"></a>Zeichnen von Geometrie-Neumessungen
+## <a name="drawing-geometry-realizations"></a>Zeichnungsgeometrierealisierungen
 
-Das Zeichnen von Geometrie-Neuzuordnungen ähnelt dem Zeichnen anderer [Direct2D](direct2d-portal.md) primitiver, wie z. b. Bitmaps. Um dies zu tun, müssen Sie die [**drawgeometryrealisation**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-drawgeometryrealization) -Methode abrufen und ihr das zu zeichende Geometrie-Geometry-Objekt und den zu verwendenden Pinsel übergeben. Wie bei anderen Direct2D Drawing-Methoden müssen Sie **drawgeometryrealisation** zwischen Aufrufen von [**beginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) und [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)aufrufen.
+Das Zeichnen von Geometrierealisierungen ähnelt dem Zeichnen anderer [Direct2D-Primitive](direct2d-portal.md) wie Bitmaps. Rufen Sie dazu die [**DrawGeometryRealization-Methode**](/windows/win32/api/d2d1_2/nf-d2d1_2-id2d1devicecontext1-drawgeometryrealization) auf, und übergeben Sie ihr das zu zeichnende Geometrierealisierungsobjekt und den zu verwendenden Pinsel. Wie bei anderen Direct2D-Zeichnungsmethoden müssen Sie **DrawGeometryRealization** zwischen Aufrufen von [**BeginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) und [**EndDraw aufrufen.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)
 
-## <a name="scaling-geometry-realizations"></a>Skalieren von Geometry-Neuerungen
+## <a name="scaling-geometry-realizations"></a>Skalierung von Geometrierealisierungen
 
-Geometry-neueinrichtungen, wie andere [Direct2D](direct2d-portal.md) -primitive, berücksichtigen den Transformations Satz für den Gerätekontext. Obwohl Übersetzungs-und Drehungs Transformationen keine Auswirkung auf die visuelle Qualität von Geometrie-neueffekten haben, können Skalierungs Transformationen visuelle Artefakte liefern.
+Geometrierealisierungen, wie andere [Direct2D-Primitive,](direct2d-portal.md) achten auf den Transformationssatz im Gerätekontext. Obwohl Übersetzungs- und Drehungstransformationen keine Auswirkungen auf die visuelle Qualität von Geometrierealisierungen haben, können Skalierungstransformationen visuelle Artefakte erzeugen.
 
-Insbesondere kann das Anwenden einer großen ausreichenden Skala auf eine Geometrie-Realisierung die polygonale Näherung der echten Kurven darstellen. Das Bild hier zeigt ein paar elliptischer Geometrie-Neuerungen (Fill und Stroke), die zu weit hochskaliert wurden. Die Kurven vereinfachen die Elemente.
+Insbesondere kann das Anwenden einer ausreichend großen Skala auf jede Geometrierealisierung die polygonale Näherung der wahren Kurven zeigen. Die Abbildung zeigt ein Paar elliptischer Geometrierealisierungen (Füllung und Strich), die zu weit hochskaliert wurden. Kurvenflachende Artefakte sind sichtbar.
 
-![ein paar elliptischer Geometrie-Neuerungen (Fill und Stroke), die zu weit hochskaliert wurden. die Kurven vereinfachen die Elemente.](images/zoomed-in.png)
+![ein Paar elliptischer Geometrierealisierungen (Füllung und Strich), die zu weit hochskaliert wurden. Kurvenverflachende Artefakte sind sichtbar.](images/zoomed-in.png)
 
-Apps, die für die visuelle Qualität sensibel sind, sollten Maßnahmen ergreifen, um sicherzustellen, dass dies nicht geschieht. Wie Sie die Skalierung handhaben, hängt von den Anforderungen Ihrer APP ab. Im folgenden finden Sie einige empfohlene Vorgehensweisen für verschiedene Arten von apps.
+Apps, die für die visuelle Qualität sensibel sind, sollten Maßnahmen ergreifen, um sicherzustellen, dass dies nicht geschieht. Wie Sie die Skalierung handhaben, hängt von den Anforderungen Ihrer App ab. Im Folgenden finden Sie mehrere empfohlene Ansätze für verschiedene App-Typen.
 
-### <a name="using-geometry-realizations-in-apps-that-do-not-scale"></a>Verwenden von Geometrie-Neuerungen in apps, die nicht skaliert werden
+### <a name="using-geometry-realizations-in-apps-that-do-not-scale"></a>Verwenden von Geometrierealisierungen in Apps, die nicht skaliert werden
 
-Wenn Ihre APP keine Skalierung der Geometrie-Neuerungen ausführt, ist es sicher, die Neuerungen nur einmal zu erstellen, indem Sie eine einzige vereinfachte Toleranz verwenden. (Nicht skalierbare Transformationen wirken sich nicht auf die visuelle Qualität von gerenderten Geometrie-Neuerungen aus.) Verwenden Sie die [**computevereinfachingtolerance**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) -Funktion, um die entsprechende Vereinfachungs Toleranz für den dpi-Vorgang zu berechnen:
+Wenn Ihre App keine Skalierung der Geometrierealisierungen vor sich geht, ist es sicher, die Realisierungen nur einmal mithilfe einer einzelnen Flachungstoleranz zu erstellen. (Transformationen ohne Skalierung wirken sich nicht auf die visuelle Qualität gerenderter Geometrierealisierungen aus.) Verwenden Sie [**die ComputeFlatteningTolerance-Funktion,**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) um die entsprechende Flatteningtoleranz für den DPI zu berechnen:
 
 
 ```C++
@@ -99,11 +99,11 @@ Wenn Ihre APP keine Skalierung der Geometrie-Neuerungen ausführt, ist es sicher
 
 
 
-### <a name="using-geometry-realizations-in-apps-that-scale-by-a-small-amount"></a>Verwenden von Geometrie-Neuerungen in apps, die sich um eine kleine Menge skalieren
+### <a name="using-geometry-realizations-in-apps-that-scale-by-a-small-amount"></a>Verwenden von Geometrierealisierungen in Apps, die um eine kleine Menge skaliert werden
 
-Wenn Ihre APP eine Geometry-Realisierung nur mit einem kleinen Betrag (z. b. bis zu 2 x oder 3 x) skalieren kann, ist es möglicherweise sinnvoll, die Geometrie Realisierung einmalig zu erstellen, und zwar mit einer proportional geringeren reduzierungstoleranz als die Standardeinstellung. Dadurch wird eine Erkenntnis mit höherer Genauigkeit erstellt, die vor dem Einfügen skalieringartefakte erheblich hochskaliert werden kann. der Nachteil ist, dass das Zeichnen der höhere Treue-Erkenntnis mehr Arbeit erfordert.
+Wenn Ihre App eine Geometrierealisierung nur um einen kleinen Betrag hochskalieren kann (z. B. bis zu 2x oder 3x), kann es sinnvoll sein, einfach einmal die Geometrierealisierung zu erstellen, mit einer proportional geringeren Vereinfachttoleranz als der Standard. Dies führt zu einer höheren Genauigkeitsrealisierung, die vor dem Auftreten von Skalierungsartefakten erheblich hochskaliert werden kann. der Vor- und Abkniff ist, dass das Zeichnen der höheren Genauigkeitsrealisierung mehr Arbeit erfordert.
 
-Angenommen, Sie wissen, dass Ihre APP nie eine Geometry-Realisierung um mehr als 2X skaliert. Ihre APP kann die Geometrie-Realisierung mithilfe einer vereinfachten Toleranz erstellen, die die Hälfte des Standardwerts ist, und die Realisierung einfach nach Bedarf skalieren. Verwenden Sie die [**computevereinfachingtolerance**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) -Funktion, um die entsprechende Vereinfachungs Toleranz zu berechnen, indem Sie 2,0 als *maxzoomfactor* -Parameter übergeben:
+Angenommen, Sie wissen, dass Ihre App eine Geometrierealisierung nie um mehr als das 2-Fache skalieren wird. Ihre App kann die Geometrierealisierung mithilfe einer vereinfachten Toleranz erstellen, die die Hälfte des Standardwerts ist, und die Umsetzung einfach nach Bedarf auf das 2-fache skalieren. Verwenden Sie [**die ComputeFlatteningTolerance-Funktion,**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) um die entsprechende Flatteningtoleranz zu berechnen, indem Sie 2,0 als *maxZoomFactor-Parameter* übergeben:
 
 
 ```C++
@@ -120,26 +120,26 @@ Angenommen, Sie wissen, dass Ihre APP nie eine Geometry-Realisierung um mehr als
 
 
 
-### <a name="using-geometry-realizations-in-apps-that-scale-by-a-large-amount"></a>Verwenden von Geometrie-Neuerungen in apps, die sich um eine große Menge skalieren
+### <a name="using-geometry-realizations-in-apps-that-scale-by-a-large-amount"></a>Verwenden von Geometrierealisierungen in Apps, die um eine große Menge skaliert werden
 
-Wenn Ihre APP eine Geometry-Realisierung durch große Mengen zentral hoch-oder Herunterskalieren kann (z. b. um Zehnfache oder mehr), ist die Verarbeitung der Skalierung entsprechend komplizierter.
+Wenn Ihre App eine Geometrierealisierung um große Mengen hoch- oder herunterskalieren kann (z. B. um das Zehn- oder Mehr), ist die entsprechende Skalierung komplizierter.
 
-Bei den meisten dieser apps empfiehlt es sich, die Geometrie Realisierung beim horizontalen hochskalieren der Szene mit progressiver geringer Geschwindigkeit zu erstellen, um die visuelle Genauigkeit aufrechtzuerhalten und Artefakte zu vermeiden. Ebenso, wenn die Szene herunterskaliert wird, sollte die APP die Geometry-Neueinstellungen bei progressiv höheren Vereinfachungs Toleranzen neu erstellen, um das nicht sichtbare Debuggen von Details zu vermeiden. Die APP sollte die Geometrie neustellungen nicht jedes Mal neu erstellen, wenn sich die Skalierung ändert, da dadurch der Zweck der Zwischenspeicherung der Mosaikarbeit nicht mehr besteht. Stattdessen sollte die APP die Geometry-Neuerungen seltener neu erstellen, z. b. nach jeder 2X-Vergrößerung oder-Verkleinerung.
+Für die meisten dieser Apps wird empfohlen, die Geometrierealisierung bei progressiv niedrigeren Flatteningtoleranzen neu zu erstellen, während die Szene hochskaliert wird, um die visuelle Genauigkeit zu erhalten und die Skalierung von Artefakten zu vermeiden. Ebenso sollte die App beim herunterskalierten Herunterskalieren der Szene die Geometrierealisierungen bei progressiv höheren Flatteningtoleranzen neu erstellen, um zu vermeiden, dass Details verschwendet gerendert werden, die nicht sichtbar sind. Die App sollte die Geometrierealisierungen nicht bei jeder Skalierungsänderung neu erstellen, da dies den Zweck der Zwischenspeicherung der Mosaikarbeit verfängt. Stattdessen sollte die App die Geometrierealisierungen seltener neu erstellen, z. B. nach jeder 2-fachen Erhöhung oder Verringerung der Skalierung.
 
-Jedes Mal, wenn sich die Skalierung in einer App als Reaktion auf eine Benutzerinteraktion ändert, könnte die APP die neue Skala mit der Skala vergleichen, bei der die Geometrie-neustellungen zuletzt erstellt wurden (z. b. in einem **m \_ lastscale** -Member). Wenn die beiden Werte close sind (in diesem Fall innerhalb eines Faktors von 2), wird keine weitere Aktion durchgeführt. Wenn die beiden Werte jedoch nicht geschlossen werden, werden die Geometrie-Neueinstellungen neu erstellt. Die [**computevereinfachingtolerance**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) -Funktion wird verwendet, um eine vereinfachte Toleranz für die neue Skalierung zu berechnen, und **m \_ lastscale** wird auf die neue Skalierung aktualisiert.
+Jedes Mal, wenn sich die Skalierung in einer App als Reaktion auf die Benutzerinteraktion ändert, könnte die App die neue Skala mit der Skala vergleichen, auf der die Geometrierealisierungen zuletzt erstellt wurden (z. B. in einem **m \_ lastScale-Member** gespeichert). Wenn die beiden Werte nahe liegen (in diesem Fall innerhalb des Faktors 2), wird keine weitere Aktion ergriffen. Wenn die beiden Werte jedoch nicht nahe liegen, werden die Geometrierealisierungen neu erstellt. Die [**ComputeFlatteningTolerance-Funktion**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) wird verwendet, um eine für die neue Skalierung geeignete Flatteningtoleranz zu berechnen, und **m \_ lastScale** wird auf die neue Skala aktualisiert.
 
-Außerdem erstellt die APP immer mit einer geringeren Toleranz, als normalerweise für die neue Skala verwendet würde, indem der Wert 2 als *maxzoomfactor* -Parameter an [**computevereinfachingtolerance**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85))übergeben wird. Dadurch können die neuen Geometrie-Neuerungen um einen zusätzlichen Faktor von 2 zentral hochskaliert werden, ohne dass die Skalierung von Artefakten durchlaufen wird.
+Darüber hinaus erstellt die App immer Mithilfe einer geringeren Toleranz als die, die normalerweise für die neue Skala verwendet wird, indem sie den Wert 2 als *maxZoomFactor-Parameter* an [**ComputeFlatteningTolerance übergibt.**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85)) Dadurch können die neuen Geometrierealisierungen um einen zusätzlichen Faktor von 2 hochskaliert werden, ohne dass Skalierungsartefakte entstehen.
 
 > [!Note]  
-> Der hier beschriebene Ansatz eignet sich möglicherweise nicht für alle apps. Wenn Ihre APP beispielsweise zulässt, dass die Szene sehr schnell von sehr großen Faktoren skaliert wird (wenn Sie z. b. einen "Zoom"-Schieberegler enthält, der in der Spanne von einigen Frames von 100% auf 1 Million% verschoben werden kann), kann dieser Ansatz zu einer übermäßigen Arbeit führen, indem die Geometrie-neustellungen jedes Frame neu erstellt werden. Ein alternativer Ansatz besteht darin, die Geometrie-neueinrichtungen erst neu zu erstellen, nachdem jede Bearbeitung der Szene der Szene abgeschlossen wurde (z. b. Nachdem der Benutzer eine Pinsel Bewegung abgeschlossen hat).
+> Der hier beschriebene Ansatz ist möglicherweise nicht für alle Apps geeignet. Wenn Ihre App beispielsweise zulässt, dass die Szene sehr schnell um sehr große Faktoren skaliert werden kann (z. B. wenn sie einen Schieberegler "Zoom" enthält, der von 100 % auf 1.000.000 % in der Spanne von einigen Frames verschoben werden kann), kann dieser Ansatz zu übermäßiger Arbeit führen, indem die Geometrierealisierungen jedes Frames neu erstellen. Ein alternativer Ansatz besteht in der Neuerstellung der Geometrierealisierungen erst, nachdem jede Bearbeitung der Skalierung der Szene abgeschlossen wurde (z. B. nachdem der Benutzer eine Heftbewegung abgeschlossen hat).
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 [Übersicht über Geometrien](direct2d-geometries-overview.md)
 
-[Verbessern der Leistung von Direct2D-apps](improving-direct2d-performance.md)
+[Verbessern der Leistung von Direct2D-Apps](improving-direct2d-performance.md)
 
 [Allgemeine Richtlinien zum Rendern komplexer statischer Inhalte](improving-direct2d-performance.md)
 
@@ -147,4 +147,4 @@ Außerdem erstellt die APP immer mit einer geringeren Toleranz, als normalerweis
 
 [**ID2D1GeometryRealization**](/windows/win32/api/d2d1_2/nn-d2d1_2-id2d1geometryrealization)
 
-[**Computevereinfachingtolerance-Funktion**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85))
+[**ComputeFlatteningTolerance-Funktion**](/previous-versions/windows/desktop/legacy/dn280327(v=vs.85))

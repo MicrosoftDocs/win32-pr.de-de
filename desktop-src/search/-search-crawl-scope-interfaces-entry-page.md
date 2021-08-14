@@ -4,17 +4,17 @@ ms.assetid: 3e91974d-4868-4646-95fd-da6e63551973
 title: Durchforstungsbereichsschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d1166a2f8c0adba2b73da6a1911f407d6f8197d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 219723e7fc5a13f4ae3f782afa151abb2e871297895fe908f29cc63026ea9e34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118463125"
 ---
 # <a name="crawl-scope-interfaces"></a>Durchforstungsbereichsschnittstellen
 
 
-Dieser Windows Search besteht aus den folgenden Schnittstellen für den Durchforstungsbereich:
+Dieser Windows Abschnitt Search reference besteht aus den folgenden Schnittstellen für den Durchforstungsbereich:
 
 [**IEnumSearchRoots**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchroots)
 

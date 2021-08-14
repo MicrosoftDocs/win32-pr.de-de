@@ -1,11 +1,11 @@
 ---
-title: Itssbresourcepluginstoreex-Schnittstelle
-description: Macht Methoden verfügbar, mit denen Ressourcen-Plug-ins Objekte wie Sitzungen und Ziele speichern können.
+title: ITsSbResourcePluginStoreEx-Schnittstelle
+description: Macht Methoden verfügbar, mit denen Ressourcen-Plug-Ins Objekte wie Sitzungen und Ziele speichern können.
 ms.assetid: 768a5a4e-8221-417a-ad65-9a213a176eca
 ms.tgt_platform: multiple
 keywords:
-- Itssbresourcepluginstoreex-Schnittstelle Remotedesktopdienste
-- Itssbresourcepluginstoreex-Schnittstelle Remotedesktopdienste, beschrieben
+- ITsSbResourcePluginStoreEx-Remotedesktopdienste
+- ITsSbResourcePluginStoreEx-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,57 +15,57 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a192b90f38d9b306c59f275d1fed3933d5cbd56a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 23c3ba6689f52d592d9c9799b6c7bec0acd58e1afcbc8e7a18e0cb9dbe6db98b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118351291"
 ---
-# <a name="itssbresourcepluginstoreex-interface"></a>Itssbresourcepluginstoreex-Schnittstelle
+# <a name="itssbresourcepluginstoreex-interface"></a>ITsSbResourcePluginStoreEx-Schnittstelle
 
-Macht Methoden verfügbar, mit denen Ressourcen-Plug-ins Objekte wie Sitzungen und Ziele speichern können. Mit diesen Methoden werden diese Objekte hinzugefügt, gelöscht und abgefragt.
+Macht Methoden verfügbar, mit denen Ressourcen-Plug-Ins Objekte wie Sitzungen und Ziele speichern können. Diese Methoden fügen diese Objekte hinzu, löschen und fragen sie ab.
 
-Diese Schnittstelle ist nur unter Windows Server 2012 R2 mit installiertem [KB3091411](https://support.microsoft.com/kb/3091411) verfügbar. Die Methoden [**acquiretargetlock**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-acquiretargetlock) und [**releasetargetlock**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-releasetargetlock) der [**itssbresourcepluginstore**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore) -Schnittstelle sind ab Windows Server 2016 verfügbar.
+Diese Schnittstelle ist nur auf Windows Server 2012 R2 mit [installierter KB3091411](https://support.microsoft.com/kb/3091411) verfügbar. Die [**AcquireTargetLock-**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-acquiretargetlock) [**und ReleaseTargetLock-Methoden**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-releasetargetlock) der [**ITsSbResourcePluginStore-Schnittstelle**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore) sind ab Windows Server 2016.
 
 ## <a name="members"></a>Member
 
-Die **itssbresourcepluginstoreex** -Schnittstelle erbt von [**itssbresourcepluginstore**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore). **Itssbresourcepluginstoreex** verfügt auch über die folgenden Typen von Membern:
+Die **ITsSbResourcePluginStoreEx-Schnittstelle** erbt von [**ITsSbResourcePluginStore.**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore) **ITsSbResourcePluginStoreEx** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itssbresourcepluginstoreex** -Schnittstelle verfügt über diese Methoden.
+Die **ITsSbResourcePluginStoreEx-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                            | BESCHREIBUNG                                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
-| [**Acquiretargetlock**](itssbresourcepluginstoreex-acquiretargetlock.md)                                         | Sperrt ein Ziel.<br/>                                                                                      |
-| [**Addenvironmentonstore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addenvironmenttostore)                                   | Fügt dem Ressourcen-Plug-in-Speicher eine Umgebung hinzu.<br/>                                                   |
-| [**Addsessionto Store**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addsessiontostore)                                           | Fügt dem Ressourcen-Plug-in-Speicher eine neue Sitzung hinzu.<br/>                                                    |
-| [**AddTarget-Store**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addtargettostore)                                             | Fügt dem Ressourcen-Plug-in-Speicher ein Ziel hinzu.<br/>                                                         |
+| [**AcquireTargetLock**](itssbresourcepluginstoreex-acquiretargetlock.md)                                         | Sperrt ein Ziel.<br/>                                                                                      |
+| [**AddEnvironmentToStore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addenvironmenttostore)                                   | Fügt dem Ressourcen-Plug-In-Speicher eine Umgebung hinzu.<br/>                                                   |
+| [**AddSessionToStore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addsessiontostore)                                           | Fügt dem Ressourcen-Plug-In-Speicher eine neue Sitzung hinzu.<br/>                                                    |
+| [**AddTargetToStore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addtargettostore)                                             | Fügt dem Ressourcen-Plug-In-Speicher ein Ziel hinzu.<br/>                                                         |
 | [**DeleteTarget**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-deletetarget)                                                     | Löscht ein Ziel.<br/>                                                                                    |
-| [**Enumerateenvironment**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumerateenvironments)                                   | Gibt ein Array zurück, das die Umgebungen enthält, die im Ressourcen-Plug-in-Speicher vorhanden sind.<br/>               |
-| [**Enumeratefarms**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumeratefarms)                                                 | Listet alle Farmen auf, die dem Ressourcen-Plug-in-Speicher hinzugefügt wurden.<br/>                         |
-| [**Enumeratesessions**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumeratesessions)                                           | Listet eine angegebene Gruppe von Sitzungen auf.<br/>                                                              |
-| [**Enumeratetargets**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumeratetargets)                                             | Gibt ein Array zurück, das die angegebenen Ziele enthält, die im Ressourcen-Plug-in-Speicher vorhanden sind.<br/> |
-| [**Getfarmproperty**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-getfarmproperty)                                               | Ruft eine Eigenschaft einer Farm ab.<br/>                                                                      |
-| [**Queryenvironment**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-queryenvironment)                                             | Gibt das angegebene Umgebungs Objekt zurück.<br/>                                                            |
-| [**Querysessionbysessionid**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-querysessionbysessionid)                               | Gibt das Sitzungs Objekt zurück, das über die angegebene Sitzungs-ID verfügt.<br/>                                        |
-| [**Querytarget**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-querytarget)                                                       | Gibt das Ziel mit dem angegebenen Zielnamen und dem Namen der Farm zurück.<br/>                                 |
-| [**Releasetargetlock**](itssbresourcepluginstoreex-releasetargetlock.md)                                         | Gibt eine Sperre für ein Ziel frei.<br/>                                                                         |
-| [**Removeumgebfromstore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-removeenvironmentfromstore)                         | Entfernt die angegebene Umgebung aus dem Ressourcen-Plug-in-Speicher.<br/>                                   |
-| [**Saveenvironment**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-saveenvironment)                                               | Speichert eine Umgebung.<br/>                                                                                |
-| [**Savesession**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-savesession)                                                       | Speichert eine Sitzung.<br/>                                                                                     |
-| [**Savetarget**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-savetarget)                                                         | Speichert ein Ziel.<br/>                                                                                      |
-| [**"Abtenvironmentproperty"**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-setenvironmentproperty)                                 | Legt eine Eigenschaft für eine Umgebung fest.<br/>                                                                   |
-| [**"Abtenvironmentpropertywithversioncheck"**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-setenvironmentpropertywithversioncheck) | Legt eine Eigenschaft für eine Umgebung fest.<br/>                                                                   |
-| [**"Endessionstate"**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-setsessionstate)                                               | Legt den Status einer Sitzung fest<br/>                                                                         |
+| [**EnumerateEnvironments**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumerateenvironments)                                   | Gibt ein Array zurück, das die umgebungen enthält, die im Ressourcen-Plug-In-Speicher vorhanden sind.<br/>               |
+| [**EnumerateFarms**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumeratefarms)                                                 | Enumeriert alle landwirtschaftlichen Betriebe, die dem Ressourcen-Plug-In-Speicher hinzugefügt wurden.<br/>                         |
+| [**EnumerateSessions**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumeratesessions)                                           | Enumeriert einen angegebenen Satz von Sitzungen.<br/>                                                              |
+| [**EnumerateTargets**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-enumeratetargets)                                             | Gibt ein Array zurück, das die angegebenen Ziele enthält, die im Ressourcen-Plug-In-Speicher vorhanden sind.<br/> |
+| [**GetFarmProperty**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-getfarmproperty)                                               | Ruft eine Eigenschaft einer Farm ab.<br/>                                                                      |
+| [**QueryEnvironment**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-queryenvironment)                                             | Gibt das angegebene Umgebungsobjekt zurück.<br/>                                                            |
+| [**QuerySessionBySessionId**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-querysessionbysessionid)                               | Gibt das Sitzungsobjekt zurück, das über die angegebene Sitzungs-ID verfügt.<br/>                                        |
+| [**QueryTarget**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-querytarget)                                                       | Gibt das Ziel zurück, das über den angegebenen Zielnamen und Farmnamen verfügt.<br/>                                 |
+| [**ReleaseTargetLock**](itssbresourcepluginstoreex-releasetargetlock.md)                                         | Gibt eine Sperre für ein Ziel frei.<br/>                                                                         |
+| [**RemoveEnvironmentFromStore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-removeenvironmentfromstore)                         | Entfernt die angegebene Umgebung aus dem Ressourcen-Plug-In-Speicher.<br/>                                   |
+| [**SaveEnvironment**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-saveenvironment)                                               | Speichert eine Umgebung.<br/>                                                                                |
+| [**SaveSession**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-savesession)                                                       | Speichert eine Sitzung.<br/>                                                                                     |
+| [**SaveTarget**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-savetarget)                                                         | Speichert ein Ziel.<br/>                                                                                      |
+| [**SetEnvironmentProperty**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-setenvironmentproperty)                                 | Legt eine Eigenschaft für eine Umgebung fest.<br/>                                                                   |
+| [**SetEnvironmentPropertyWithVersionCheck**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-setenvironmentpropertywithversioncheck) | Legt eine Eigenschaft für eine Umgebung fest.<br/>                                                                   |
+| [**SetSessionState**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-setsessionstate)                                               | Legt den Status einer Sitzung fest<br/>                                                                         |
 | [**SetTargetProperty**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-settargetproperty)                                           | Legt eine Eigenschaft für ein Ziel fest.<br/>                                                                         |
-| [**Settargetpropertywithversioncheck**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-settargetpropertywithversioncheck)           | Legt eine Eigenschaft für ein Ziel fest.<br/>                                                                         |
-| [**Settargetstate**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-settargetstate)                                                 | Legt den Zustand eines Ziels fest.<br/>                                                                          |
+| [**SetTargetPropertyWithVersionCheck**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-settargetpropertywithversioncheck)           | Legt eine Eigenschaft für ein Ziel fest.<br/>                                                                         |
+| [**SetTargetState**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-settargetstate)                                                 | Legt den Zustand eines Ziels fest.<br/>                                                                          |
 
 
 
@@ -80,15 +80,15 @@ Die **itssbresourcepluginstoreex** -Schnittstelle verfügt über diese Methoden.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                             |
 | Ende des Supports (Server)<br/>    | Windows Server 2012 R2<br/>                                                             |
-| IID<br/>                      | IID \_ itssbresourcepluginstoreex ist als 80b83ffd-625d-11e5-bea1-a0481c7e9064 definiert<br/> |
+| IID<br/>                      | IID \_ ITsSbResourcePluginStoreEx ist als 80b83ffd-625d-11e5-bea1-a0481c7e9064 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itssbresourcepluginstore**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore)
+[**ITsSbResourcePluginStore**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore)
 </dt> <dt>
 
 [Remotedesktop Virtualisierungsschnittstellen](remote-desktop-virtualization-interfaces.md)

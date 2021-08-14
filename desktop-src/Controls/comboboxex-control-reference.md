@@ -1,19 +1,19 @@
 ---
 title: ComboBoxEx-Steuerelement
-description: Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit ComboBoxEx-Steuerelementen verwendet werden.
+description: Dieser Abschnitt enthält Informationen zu den Programmierelementen, die mit ComboBoxEx-Steuerelementen verwendet werden.
 ms.assetid: vs|controls|~\controls\comboex\reflist.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d5a926ccf2f9f5b5bb68e040731d6b9d8e37ee8
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ded6ff945424f63baaf0063ce5d8897f84883d5063989aa6c7a9fb1a4f76a704
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118413463"
 ---
 # <a name="comboboxex-control"></a>ComboBoxEx-Steuerelement
 
-Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit ComboBoxEx-Steuerelementen verwendet werden.
+Dieser Abschnitt enthält Informationen zu den Programmierelementen, die mit ComboBoxEx-Steuerelementen verwendet werden.
 
 ### <a name="overviews"></a>Übersichten
 
@@ -21,7 +21,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Co
 
 | Thema                                                | Inhalte                                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| [Informationen zu ComboBoxEx-Steuerelementen](comboboxex-controls.md) | ComboBoxEx-Steuerelemente sind Kombinations Feld-Steuerelemente, die native Unterstützung für Element Bilder bereitstellen.<br/> |
+| [Informationen zu ComboBoxEx-Steuerelementen](comboboxex-controls.md) | ComboBoxEx-Steuerelemente sind Kombinationsfeldsteuerelemente, die native Unterstützung für Elementbilder bereitstellen.<br/> |
 | [Verwenden von ComboBoxEx-Steuerelementen](using-comboboxex.md)    | Dieser Abschnitt enthält Beispielcode und Informationen zur Verwendung von ComboBoxEx-Steuerelementen.<br/> |
 
 
@@ -34,22 +34,22 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Co
 
 | Thema                                                   | Inhalte                                                                                                                                                                                                   |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CBEM \_ DeleteItem**](cbem-deleteitem.md)             | Entfernt ein Element aus einem ComboBoxEx-Steuerelement. <br/>                                                                                                                                                     |
-| [**CBEM \_ getcombocontrol**](cbem-getcombocontrol.md)   | Ruft das Handle für das untergeordnete Kombinations Feld-Steuerelement ab. <br/>                                                                                                                                                |
-| [**CBEM \_ geteditcontrol**](cbem-geteditcontrol.md)     | Ruft das Handle für den Bearbeitungs Steuerelement Teil eines ComboBoxEx-Steuer Elements ab. Ein ComboBoxEx-Steuerelement verwendet ein Bearbeitungsfeld, wenn es auf den [**CBS- \_ Dropdown**](combo-box-styles.md) Stil festgelegt ist. <br/> |
-| [**CBEM \_ GetExtendedStyle**](cbem-getextendedstyle.md) | Ruft die erweiterten Stile ab, die für ein ComboBoxEx-Steuerelement verwendet werden. <br/>                                                                                                                             |
-| [**CBEM \_ GetImageList**](cbem-getimagelist.md)         | Ruft das Handle für eine Bildliste ab, die einem ComboBoxEx-Steuerelement zugewiesen ist. <br/>                                                                                                                             |
-| [**CBEM- \_ GetItem**](cbem-getitem.md)                   | Ruft Element Informationen für ein bestimmtes ComboBoxEx-Element ab.<br/>                                                                                                                                              |
-| [**CBEM \_ getunicodeformat**](cbem-getunicodeformat.md) | Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. <br/>                                                                                                                                        |
-| [**CBEM \_ haseditchanged**](cbem-haseditchanged.md)     | Bestimmt, ob der Benutzer den Text eines ComboBoxEx-Bearbeitungs Steuer Elements geändert hat.<br/>                                                                                                                  |
-| [**CBEM \_ InsertItem**](cbem-insertitem.md)             | Fügt ein neues Element in einem ComboBoxEx-Steuerelement ein. <br/>                                                                                                                                                    |
-| [**CBEM- \_ killcombofocus**](cbem-killcombofocus.md)     | Diese Meldung ist nicht implementiert. <br/>                                                                                                                                                               |
-| [**CBEM \_ setcombofocus**](cbem-setcombofocus.md)       | Diese Meldung ist nicht implementiert. <br/>                                                                                                                                                               |
-| [**CBEM- \_ textendedstyle**](cbem-setextendedstyle.md) | Legt erweiterte Stile innerhalb eines ComboBoxEx-Steuer Elements fest. <br/>                                                                                                                                              |
-| [**CBEM \_ SetImageList**](cbem-setimagelist.md)         | Legt eine Bildliste für ein ComboBoxEx-Steuerelement fest. <br/>                                                                                                                                                   |
-| [**CBEM \_ -Element**](cbem-setitem.md)                   | Legt die Attribute für ein Element in einem ComboBoxEx-Steuerelement fest. <br/>                                                                                                                                       |
-| [**CBEM- \_ Code Format**](cbem-setunicodeformat.md) | Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Diese Meldung ermöglicht es Ihnen, den Zeichensatz zu ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen. <br/>      |
-| [**CBEM \_ SetWindowTheme**](cbem-setwindowtheme.md)     | Legt den visuellen Stil eines ComboBoxEx-Steuer Elements fest.<br/>                                                                                                                                                  |
+| [**CBEM \_ DELETEITEM**](cbem-deleteitem.md)             | Entfernt ein Element aus einem ComboBoxEx-Steuerelement. <br/>                                                                                                                                                     |
+| [**CBEM \_ GETCOMBOCONTROL**](cbem-getcombocontrol.md)   | Ruft das Handle für das untergeordnete Kombinationsfeld-Steuerelement ab. <br/>                                                                                                                                                |
+| [**CBEM \_ GETEDITCONTROL**](cbem-geteditcontrol.md)     | Ruft das Handle für den Bearbeitungssteuerelementteil eines ComboBoxEx-Steuerelements ab. Ein ComboBoxEx-Steuerelement verwendet ein Bearbeitungsfeld, wenn es auf den [**\_ CBS-DROPDOWN-Stil**](combo-box-styles.md) festgelegt ist. <br/> |
+| [**CBEM \_ GETEXTENDEDSTYLE**](cbem-getextendedstyle.md) | Ruft die erweiterten Stile ab, die für ein ComboBoxEx-Steuerelement verwendet werden. <br/>                                                                                                                             |
+| [**CBEM \_ GETIMAGELIST**](cbem-getimagelist.md)         | Ruft das Handle für eine Bildliste ab, die einem ComboBoxEx-Steuerelement zugewiesen ist. <br/>                                                                                                                             |
+| [**CBEM \_ GETITEM**](cbem-getitem.md)                   | Ruft Elementinformationen für ein bestimmtes ComboBoxEx-Element ab.<br/>                                                                                                                                              |
+| [**CBEM \_ GETUNICODEFORMAT**](cbem-getunicodeformat.md) | Ruft das UNICODE-Zeichenformatflag für das -Steuerelement ab. <br/>                                                                                                                                        |
+| [**CBEM \_ HASEDITCHANGED**](cbem-haseditchanged.md)     | Bestimmt, ob der Benutzer den Text eines ComboBoxEx-Bearbeitungssteuerelements geändert hat.<br/>                                                                                                                  |
+| [**CBEM \_ INSERTITEM**](cbem-insertitem.md)             | Fügt ein neues Element in ein ComboBoxEx-Steuerelement ein. <br/>                                                                                                                                                    |
+| [**CBEM \_ KILLCOMBOFOCUS**](cbem-killcombofocus.md)     | Diese Meldung ist nicht implementiert. <br/>                                                                                                                                                               |
+| [**CBEM \_ SETCOMBOFOCUS**](cbem-setcombofocus.md)       | Diese Meldung ist nicht implementiert. <br/>                                                                                                                                                               |
+| [**CBEM \_ SETEXTENDEDSTYLE**](cbem-setextendedstyle.md) | Legt erweiterte Stile in einem ComboBoxEx-Steuerelement fest. <br/>                                                                                                                                              |
+| [**CBEM \_ SETIMAGELIST**](cbem-setimagelist.md)         | Legt eine Bildliste für ein ComboBoxEx-Steuerelement fest. <br/>                                                                                                                                                   |
+| [**CBEM \_ SETITEM**](cbem-setitem.md)                   | Legt die Attribute für ein Element in einem ComboBoxEx-Steuerelement fest. <br/>                                                                                                                                       |
+| [**CBEM \_ SETUNICODEFORMAT**](cbem-setunicodeformat.md) | Legt das UNICODE-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen. <br/>      |
+| [**CBEM \_ SETWINDOWTHEME**](cbem-setwindowtheme.md)     | Legt den visuellen Stil eines ComboBoxEx-Steuerelements fest.<br/>                                                                                                                                                  |
 
 
 
@@ -61,13 +61,13 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Co
 
 | Thema                                                      | Inhalte                                                                                                                                                                                                                                                     |
 |------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [cben \_ BeginEdit](cben-beginedit.md)                      | Wird gesendet, wenn der Benutzer die Dropdown Liste aktiviert oder in das Bearbeitungsfeld des Steuer Elements klickt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/>                                                                    |
-| [cben \_ DeleteItem](cben-deleteitem.md)                    | Wird gesendet, wenn ein Element gelöscht wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/>                                                                                                                     |
-| [cben \_ dragbegin](cben-dragbegin.md)                      | Wird gesendet, wenn der Benutzer mit dem Ziehen des Bilds des Elements beginnt, das im Bearbeitungsbereich des Steuer Elements angezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/>                                                  |
-| [cben \_ EndEdit](cben-endedit.md)                          | Wird gesendet, wenn der Benutzer einen Vorgang innerhalb des Bearbeitungs Felds abgeschlossen hat oder ein Element aus der Dropdown Liste des Steuer Elements ausgewählt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.<br/>                             |
-| [cben \_ getdispinfo](cben-getdispinfo.md)                  | Wird gesendet, um Anzeigeinformationen zu einem Rückruf Element abzurufen. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/>                                                                                             |
-| [cben \_ InsertItem](cben-insertitem.md)                    | Wird gesendet, wenn ein neues Element in das Steuerelement eingefügt wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/>                                                                                                  |
-| [NM \_ setcursor (ComboBoxEx)](nm-setcursor-comboboxex-.md) | Benachrichtigt das übergeordnete Fenster eines ComboBoxEx-Steuer Elements, dass das-Steuerelement den Cursor als Antwort auf eine [**WM- \_ SetCursor**](/windows/desktop/menurc/wm-setcursor) -Nachricht festlegt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet. <br/> |
+| [CBEN \_ BEGINEDIT](cben-beginedit.md)                      | Wird gesendet, wenn der Benutzer die Dropdownliste aktiviert oder im Bearbeitungsfeld des Steuerelements klickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/>                                                                    |
+| [CBEN \_ DELETEITEM](cben-deleteitem.md)                    | Wird gesendet, wenn ein Element gelöscht wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/>                                                                                                                     |
+| [CBEN \_ DRAGBEGIN](cben-dragbegin.md)                      | Wird gesendet, wenn der Benutzer mit dem Ziehen des Bilds des Elements beginnt, das im Bearbeitungsteil des Steuerelements angezeigt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/>                                                  |
+| [CBEN \_ ENDEDIT](cben-endedit.md)                          | Wird gesendet, wenn der Benutzer einen Vorgang im Bearbeitungsfeld abgeschlossen oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.<br/>                             |
+| [CBEN \_ GETDISPINFO](cben-getdispinfo.md)                  | Wird gesendet, um Anzeigeinformationen zu einem Rückrufelement abzurufen. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/>                                                                                             |
+| [CBEN \_ INSERTITEM](cben-insertitem.md)                    | Wird gesendet, wenn ein neues Element in das Steuerelement eingefügt wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/>                                                                                                  |
+| [NM \_ SETCURSOR (ComboBoxEx)](nm-setcursor-comboboxex-.md) | Benachrichtigt das übergeordnete Fenster eines ComboBoxEx-Steuerelements, dass das Steuerelement den Cursor als Reaktion auf eine [**WM \_ SETCURSOR-Nachricht**](/windows/desktop/menurc/wm-setcursor) festlegt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. <br/> |
 
 
 
@@ -80,9 +80,9 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Co
 | Thema                                    | Inhalte                                                                                                                                                                                     |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) | Enthält Informationen zu einem Element in einem ComboBoxEx-Steuerelement.<br/>                                                                                                                       |
-| [**Nmcbedragbegin**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbedragbegina) | Enthält Informationen, die mit dem [cben \_ dragbegin](cben-dragbegin.md) -Benachrichtigungs Code verwendet werden. <br/>                                                                                      |
-| [**Nmcbeendedit**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbeendedita)     | Enthält Informationen zum Abschluss eines Bearbeitungsvorgangs innerhalb eines ComboBoxEx-Steuer Elements. Diese Struktur wird mit dem [cben \_ EndEdit](cben-endedit.md) -Benachrichtigungs Code verwendet. <br/> |
-| [**Nmcomboboxex**](/windows/desktop/api/Commctrl/ns-commctrl-nmcomboboxexa)     | Enthält Informationen, die speziell für ComboBoxEx-Elemente zur Verwendung mit Benachrichtigungs Codes gelten. <br/>                                                                                               |
+| [**NMCBEDRAGBEGIN**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbedragbegina) | Enthält Informationen, die mit dem [CBEN \_ DRAGBEGIN-Benachrichtigungscode](cben-dragbegin.md) verwendet werden. <br/>                                                                                      |
+| [**NMCBEENDEDIT**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbeendedita)     | Enthält Informationen zum Abschluss eines Bearbeitungsvorgangs innerhalb eines ComboBoxEx-Steuerelements. Diese Struktur wird mit dem [CBEN ENDEDIT-Benachrichtigungscode \_ ](cben-endedit.md) verwendet. <br/> |
+| [**NMCOMBOBOXEX**](/windows/desktop/api/Commctrl/ns-commctrl-nmcomboboxexa)     | Enthält spezifische Informationen zu ComboBoxEx-Elementen für die Verwendung mit Benachrichtigungscodes. <br/>                                                                                               |
 
 
 
@@ -94,7 +94,7 @@ Dieser Abschnitt enthält Informationen zu den Programmier Elementen, die mit Co
 
 | Thema                                                                        | Inhalte                                                                                                                  |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Erweiterte Stile des ComboBoxEx-Steuer Elements](comboboxex-control-extended-styles.md) | Unterstützen Sie die erweiterten Stile, die in diesem Abschnitt aufgeführt sind, sowie die meisten Standardformate für Kombinations Feld-Steuerelemente.<br/> |
+| [Erweiterte Stile des ComboBoxEx-Steuerelements](comboboxex-control-extended-styles.md) | Unterstützt die erweiterten Stile, die in diesem Abschnitt aufgeführt sind, sowie die meisten standard-Kombinationsfeld-Steuerelementstile.<br/> |
 
 
 

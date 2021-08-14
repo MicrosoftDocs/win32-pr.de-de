@@ -1,44 +1,44 @@
 ---
 description: Diese Dokumentation bezieht sich speziell auf die Windows Vista-Erweiterungen für DirectX-Grafiken.
 ms.assetid: 3cc0b08c-e126-4f1b-b5d1-0d6c1ebeb0c5
-title: Funktions Zusammenfassung (Direct3D 9 für Windows Vista)
+title: Funktionszusammenfassung (Direct3D 9 für Windows Vista)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d5cf2447297b7f24edf7d0200e640d5aef90bff
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 242af80fa4d6f00c1e55d4852884f9fbbf8de287c6792b3b4aaaad196a6cd113
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523077"
 ---
-# <a name="feature-summary-direct3d-9-for-windows-vista"></a>Funktions Zusammenfassung (Direct3D 9 für Windows Vista)
+# <a name="feature-summary-direct3d-9-for-windows-vista"></a>Funktionszusammenfassung (Direct3D 9 für Windows Vista)
 
-Diese Dokumentation bezieht sich speziell auf die Windows Vista-Erweiterungen für DirectX-Grafiken. Um die Leistungsfähigkeit von DirectX für Windows Vista zu entwickeln, müssen Sie sowohl das Windows Vista SDK als auch das DirectX SDK installieren. Anwendungen, die DirectX für Windows Vista verwenden, müssen Hardware verwenden, die den WDDM-Treiber (Windows-Gerätetreiber Modell) im Gegensatz zum XPDM (XP-Treibermodell) verwendet. Treiber, die die WDDM nicht implementieren, können Windows Vista DirectX-Grafik Schnittstellen nicht instanziieren.
+Diese Dokumentation bezieht sich speziell auf die Windows Vista-Erweiterungen für DirectX-Grafiken. Um die Leistungsfähigkeit von DirectX für Windows Vista zu entwickeln, müssen Sie das Windows Vista SDK sowie das DirectX SDK installieren. Anwendungen, die DirectX für Windows Vista verwenden, müssen Hardware verwenden, die den WDDM-Treiber (Windows Gerätetreibermodell) im Gegensatz zum XPDM (XP-Treibermodell) verwendet. -Treiber, die das WDDM nicht implementieren, können Windows Vista DirectX-Grafikschnittstellen nicht instanziieren.
 
-Entdecken Sie die neuen DirectX-Grafik Features in Windows Vista in einem der folgenden Abschnitte:
+Entdecken Sie die neuen DirectX-Grafikfeatures in Windows Vista in einem der folgenden Abschnitte:
 
 -   [Änderungen am Geräteverhalten](#device-behavior-changes)
--   [Deaktivieren der Verarbeitung von Multithreaded-Software Scheitel Punkten](#disabling-multithreaded-software-vertex-processing)
--   [Eine bitfläche](#one-bit-surfaces)
--   [Lesetiefe/Schablonen Puffer](#reading-depthstencil-buffers)
+-   [Deaktivieren der Multithreadverarbeitung von Softwarevertex](#disabling-multithreaded-software-vertex-processing)
+-   [One-Bit-Oberflächen](#one-bit-surfaces)
+-   [Lesen von Tiefen-/Schablonenpuffern](#reading-depthstencil-buffers)
 -   [Freigeben von Ressourcen](#sharing-resources)
 -   [sRGB-Konvertierung vor dem Mischen](#srgb-conversion-before-blending)
--   [Verbesserungen bei stretchrect](#stretchrect-improvements)
--   [Textur Erstellung im System Speicher](#texture-creation-in-system-memory)
+-   [StretchRect-Verbesserungen](#stretchrect-improvements)
+-   [Texturerstellung im Systemspeicher](#texture-creation-in-system-memory)
 
 ## <a name="device-behavior-changes"></a>Änderungen am Geräteverhalten
 
-Geräte gehen nun in zwei Fällen verloren: Wenn die Hardware zurückgesetzt wird, weil Sie nicht mehr angezeigt wird, und wenn der Gerätetreiber angehalten wird. Wenn die Hardware nicht mehr reagiert, kann das Gerät durch Aufrufen von [**retartex**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-resetex)zurückgesetzt werden. Wenn die Hardware nicht mehr vorhanden ist, geht der Texturspeicher verloren.
+Geräte gehen jetzt nur unter zwei Umständen verloren: , wenn die Hardware zurückgesetzt wird, weil sie hängt, und wenn der Gerätetreiber beendet wird. Wenn die Hardware hängt, kann das Gerät durch Aufrufen von [**ResetEx**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-resetex)zurückgesetzt werden. Wenn die Hardware hängt, geht der Texturspeicher verloren.
 
-Nach dem Beenden eines Treibers muss das IDirect9Ex-Objekt neu erstellt werden, um das Rendering fortzusetzen.
+Nachdem ein Treiber beendet wurde, muss das IDirect9Ex-Objekt neu erstellt werden, um das Rendering fortzusetzen.
 
-Wenn der Präsentationsbereich von einem anderen Fenster im Fenstermodus verdeckt wird oder wenn eine Vollbildanwendung minimiert wird, gibt der [**presentex**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-presentex) S \_ D3DPRESENTATIONOCCLUDED zurück. Vollbildanwendungen können das Rendering fortsetzen, wenn Sie eine [**WM \_ activateapp**](../winmsg/wm-activateapp.md) -Rückruf Meldung erhalten.
+Wenn der Präsentationsbereich von einem anderen Fenster im Fenstermodus verdeckt wird oder eine Vollbildanwendung minimiert wird, gibt [**PresentEx**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-presentex) S \_ D3DPRESENTATIONOCCLUDED zurück. Vollbildanwendungen können das Rendering fortsetzen, wenn sie eine [**WM \_ ACTIVATEAPP-Rückrufmeldung**](../winmsg/wm-activateapp.md) erhalten.
 
-In früheren Versionen von DirectX war die einzige Möglichkeit zur Wiederherstellung, das Gerät zurückzusetzen und alle Videospeicher Ressourcen und Austausch Ketten neu zu erstellen. Mit DirectX für Windows Vista bewirkt das Aufrufen von Reset nach einer Modusänderung nicht, dass Texturspeicher Oberflächen, Texturen und Zustandsinformationen verloren gehen und diese Ressourcen nicht neu erstellt werden müssen.
+In früheren Versionen von DirectX bestand die einzige Möglichkeit zur Wiederherstellung darin, das Gerät zurückzusetzen und alle Videospeicherressourcen und Tauschketten neu zu erstellen, wenn eine Anwendung einen Moduswechsel hatte. Bei DirectX für Windows Vista führt das Aufrufen von Reset nach einer Modusänderung nicht dazu, dass Texturspeicheroberflächen, Texturen und Zustandsinformationen verloren gehen und diese Ressourcen nicht neu erstellt werden müssen.
 
-## <a name="disabling-multithreaded-software-vertex-processing"></a>Deaktivieren der Verarbeitung von Multithreaded-Software Scheitel Punkten
+## <a name="disabling-multithreaded-software-vertex-processing"></a>Deaktivieren der Multithreadverarbeitung von Softwarevertex
 
-Ein neues Caps-Bit (D3DCREATE \_ deaktiviert \_ PSGP- \_ Threading) wurde hinzugefügt, das Multithreading für die Verarbeitung von Software Scheitel Punkten (Report tex Processing, Swap) deaktiviert. Verwenden Sie dieses Makro, um ein verhaltensflag für IDirect3D9:: kreatedevice zu generieren.
+Es wurde ein neues Caps-Bit (D3DCREATE \_ DISABLE \_ PSGP \_ THREADING) hinzugefügt, das Multithreading für die Softwarevertexverarbeitung (Swvp) deaktiviert. Verwenden Sie dieses Makro, um ein Verhaltensflag für IDirect3D9::CreateDevice zu generieren.
 
 
 ```
@@ -47,64 +47,64 @@ Ein neues Caps-Bit (D3DCREATE \_ deaktiviert \_ PSGP- \_ Threading) wurde hinzug
 
 
 
-## <a name="one-bit-surfaces"></a>Eine bitfläche
+## <a name="one-bit-surfaces"></a>One-Bit-Oberflächen
 
-Es gibt einen neuen ein-Bit-Oberflächen Formattyp, der für die Verarbeitung von Text Symbolen besonders nützlich sein kann. Das neue Format wird als D3DFMT \_ a1 bezeichnet. Eine einmal-Oberfläche ist für die Verwendung als pixelbasierte Textur oder die renderzielausgabe vorgesehen, die von composerects oder ColorFill generiert wurde. Es gibt keine separaten Obergrenzen für die Breite und Höhe der Oberfläche. eine-Implementierung muss eine einzelne Größen Oberfläche unterstützen, bei der es sich um 2K texeln x 8K texeln handelt.
+Es gibt einen neuen Ein-Bit-Oberflächenformattyp, der besonders nützlich für die Verarbeitung von Textglyphen sein kann. Das neue Format heißt D3DFMT \_ A1. Eine Ein-Bit-Oberfläche ist so konzipiert, dass sie entweder als Pixeltextur oder als Renderzielausgabe verwendet wird, die von ComposeRects oder ColorFill generiert wird. Es gibt keine separaten Obergrenzen für die Breite und Höhe der Oberfläche. Eine Implementierung muss eine einzelne Oberfläche mit 2K Texel x 8K Texel unterstützen.
 
-Eine 1-Bit-Oberfläche verfügt über ein Bit pro Texttyp. Daher bedeutet eine solche, dass alle Komponenten (r, g, b, a) eines Pixels 1 sind, und 0 bedeutet, dass alle Komponenten gleich 0 sind. Sie können eine-Bit-Oberfläche mit den folgenden APIs verwenden: ColorFill, updatesurface und UpdateTexture.
+Eine Ein-Bit-Oberfläche verfügt über ein Bit pro Texel. daher würde ein -Wert bedeuten, dass alle Komponenten (r,g,b,a) eines Pixels 1 und 0 (null) bedeuten würden, dass alle Komponenten gleich 0 sind. Sie können One-Bit-Oberflächen mit den folgenden APIs verwenden: ColorFill, UpdateSurface und UpdateTexture.
 
-Wenn eine einmalige Oberfläche gelesen wird, kann die Laufzeit entweder eine Punkt-oder eine Zugriffsfilterung durchführen. Der Verbindungs Filter kann angepasst werden (siehe [**SetConfiguration-monokernel**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-setconvolutionmonokernel)).
+Wenn eine One-Bit-Oberfläche gelesen wird, kann die Laufzeit entweder Punktstichproben oder Konvolutionsfilterung ausführen. Der Konvolutionsfilter kann angepasst werden (siehe [**SetConvolutionMonoKernel**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-setconvolutionmonokernel)).
 
-Es gibt einige Einschränkungen für die einzelnen-Bit-Oberflächen:
+Es gibt einige Einschränkungen für One-Bit-Oberflächen:
 
--   MIP-Zuordnung wird nicht unterstützt.
--   sRGB-Daten können nicht auf einer 1-Bit-Oberfläche gelesen oder geschrieben werden.
--   Eine einmalige Oberfläche kann nicht als Scheitelpunkt Textur oder für Multisampling verwendet werden.
+-   Mip-Zuordnung wird nicht unterstützt
+-   sRGB-Daten können nicht gelesen oder in eine Ein-Bit-Oberfläche geschrieben werden.
+-   Eine Ein-Bit-Oberfläche kann nicht als Scheitelpunkttextur oder für Multisampling verwendet werden.
 
-## <a name="reading-depthstencil-buffers"></a>Lesetiefe/Schablonen Puffer
+## <a name="reading-depthstencil-buffers"></a>Lesen von Tiefen-/Schablonenpuffern
 
-Verwenden Sie IDirect3DDevice9:: updatesurface, um Tiefe/Schablone-Daten aus Oberflächen zu lesen oder zu schreiben, die von IDirect3DDevice9:: an-DepthStencilSurface oder IDirect3DDevice9:: getdepthstencilsurface abgerufen wurden.
+Verwenden Sie IDirect3DDevice9::UpdateSurface, um Tiefen-/Schablonendaten von Oberflächen zu lesen oder zu schreiben, die von IDirect3DDevice9::CreateDepthStencilSurface oder IDirect3DDevice9::GetDepthStencilSurface abgerufen wurden.
 
-Erstellen Sie zuerst mit IDirect3DDevice9:: foateoffscreenplainsurface eine Oberfläche für Lockable, Tiefe oder Schablone. Verwenden Sie eines der folgenden Formate:
+Erstellen Sie zunächst mithilfe von IDirect3DDevice9::CreateOffscreenPlainSurface eine besperrbare Oberfläche, nur Tiefe oder Schablone. Verwenden Sie eines der folgenden Formate:
 
--   D3DFMT \_ D16 \_ Lockable
--   D3DFMT \_ D32F \_ Lockable
--   D3DFMT \_ d32 \_ Lockable
--   D3DFMT \_ S8 \_ Sperr fähig
+-   D3DFMT \_ D16 \_ LOCKABLE
+-   D3DFMT \_ D32F \_ LOCKABLE
+-   D3DFMT \_ D32 \_ LOCKABLE
+-   D3DFMT \_ S8 \_ LOCKABLE
 
-Übertragen Sie die Daten zwischen dem tiefen-/Stencil-Puffer und der neu erstellten Sperr baren Tiefe oder Schablone-Oberfläche. Die Übertragung erfolgt mithilfe von IDirect3DDevice9:: updatesurface.
+Übertragen Sie zweitens Daten zwischen dem Tiefen-/Schablonenpuffer und der neu erstellten sperrbaren Tiefe oder Schablonenoberfläche. Die Übertragung erfolgt mit IDirect3DDevice9::UpdateSurface.
 
-Updatesurface schlägt fehl, wenn beide Oberflächen ein Sperr bares Format aufweisen oder beide nicht sperrbar sind.
+UpdateSurface schlägt fehl, wenn beide Oberflächen ein LOCKABLE-Format aufweisen oder beide nicht sperrbar sind.
 
-Wenn Sie nicht vorhandene Daten übertragen, führt dies zu einem Fehler (z. b. bei der Übertragung von einer nicht Sperr baren tiefen Oberfläche auf eine \_ Sperr Bare D3DFMT S8- \_ Oberfläche).
+Das Übertragen nicht vorhandener Daten führt zu einem Fehler (z.B. übertragung von einer nicht sperrbaren Tiefenoberfläche auf eine D3DFMT \_ S8 \_ LOCKABLE-Oberfläche).
 
-Die restlichen Einschränkungen für IDirect3DDevice9:: updatesurface gelten weiterhin.
+Die restlichen Einschränkungen für IDirect3DDevice9::UpdateSurface gelten weiterhin.
 
 ## <a name="sharing-resources"></a>Freigeben von Ressourcen
 
-Direct3D-Ressourcen können jetzt von Geräten oder Prozessen gemeinsam genutzt werden. Dies gilt für alle Direct3D-Ressourcen wie z. b. Texturen, Vertex-Puffer, Index Puffer oder Oberflächen (z. b. Renderziele, tiefen Schablone oder außerhalb des Bildschirms). Um freigegeben zu werden, müssen Sie zum Zeitpunkt der Erstellung eine Ressource für die Freigabe festlegen und die Ressource im Standard Pool (D3DPOOL \_ Default) suchen. Nachdem eine Ressource für die Freigabe erstellt wurde, kann Sie auf allen Geräten innerhalb eines Prozesses freigegeben oder über Prozesse hinweg gemeinsam genutzt werden.
+Direct3D-Ressourcen können jetzt von Geräten oder Prozessen gemeinsam genutzt werden. Dies gilt für alle Direct3D-Ressourcen, einschließlich Texturen, Scheitelpunktpuffer, Indexpuffer oder Oberflächen (z. B. Renderziele, Tiefenschablonenpuffer oder einfache Oberflächen außerhalb des Bildschirms). Um freigegeben zu werden, müssen Sie zum Zeitpunkt der Erstellung eine Ressource für die Freigabe festlegen und die Ressource im Standardpool (D3DPOOL \_ DEFAULT) suchen. Sobald eine Ressource für die Freigabe erstellt wurde, kann sie geräteübergreifend innerhalb eines Prozesses oder prozessübergreifend freigegeben werden.
 
-Um freigegebene Ressourcen zu aktivieren, verfügen die ressourcenerstellungs-APIs über einen zusätzlichen handle-Parameter. Dies ist ein Handle, das auf die freigegebene Ressource verweist. In früheren Revisionen von DirectX war dieses Argument Teil der API-Signatur, wurde jedoch nicht verwendet und muss auf **null** festgelegt werden. Ab Windows Vista verwenden Sie psharedhandle wie folgt:
+Um freigegebene Ressourcen zu aktivieren, verfügen die RESSOURCENerstellungs-APIs über einen zusätzlichen Handleparameter. Dies ist ein HANDLE, das auf die freigegebene Ressource verweist. In früheren Revisionen von DirectX war dieses Argument Teil der API-Signatur, wurde jedoch nicht verwendet und muss auf **NULL** festgelegt werden. Ab Windows Vista können Sie pSharedHandle wie folgt verwenden:
 
--   Legen Sie den Zeiger (psharedhandle) auf **null** fest, um keine Ressource freizugeben. Dies entspricht dem Verhalten von DirectX vor Windows Vista.
--   Um eine freigegebene Ressource zu erstellen, rufen Sie eine beliebige ressourcenerstellungs-API (siehe unten) mit einem nicht initialisierten Handle auf (der Zeiger selbst ist nicht **null** (psharedhandle! = **null**), aber der Zeiger verweist auf einen **null** -Wert ( \* psharedhandle = = **null**)). Die API generiert eine freigegebene Ressource und gibt ein gültiges Handle zurück.
--   Wenn Sie eine zuvor erstellte freigegebene Ressource mithilfe eines freigegebenen Ressourcen Handles, das nicht NULL ist, öffnen und darauf zugreifen möchten, legen Sie psharedhandle auf die Adresse dieses Handles fest. Nachdem Sie die zuvor erstellte freigegebene Ressource auf diese Weise geöffnet haben, können Sie die zurückgegebene Schnittstelle in der Direct3D 9-oder Direct3D 9Ex-API verwenden, als ob die Schnittstelle eine typische Ressource dieses Typs wäre.
+-   Legen Sie den Zeiger (pSharedHandle) auf **NULL** fest, um keine Ressource freizugeben. Dies entspricht dem Verhalten von DirectX vor Windows Vista.
+-   Um eine freigegebene Ressource zu erstellen, rufen Sie eine beliebige API zum Erstellen von Ressourcen (siehe unten) mit einem nicht initialisierten Handle auf (der Zeiger selbst ist nicht **NULL** (pSharedHandle != **NULL**), aber der Zeiger zeigt auf einen **NULL-Wert** ( \* pSharedHandle == **NULL**)). Die API generiert eine freigegebene Ressource und gibt ein gültiges Handle zurück.
+-   Legen Sie pSharedHandle auf die Adresse dieses Handles fest, um eine zuvor erstellte freigegebene Ressource mit einem freigegebenen Ressourcenhandle ohne NULL zu öffnen und darauf zuzugreifen. Nachdem Sie die zuvor erstellte freigegebene Ressource auf diese Weise geöffnet haben, können Sie die zurückgegebene Schnittstelle in der Direct3D 9- oder Direct3D 9Ex-API verwenden, als wäre die Schnittstelle eine typische Ressource dieses Typs.
 
-Ressourcenerstellungs-APIs enthalten "-up [**Texture**](/windows/desktop/api)", " [**kreatevolumetexture**](/windows/desktop/api)", " [**deecubetexture**](/windows/desktop/api)", " [**kreaterendertarget**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget)", " [**kreatevertexbuffer**](/windows/desktop/api)", " [**kreateindexbuffer**](/windows/desktop/api)", " [**kreatedepthstencilsurface**](/windows/desktop/api)", " [**kreateoffscreenplainsurface**](/windows/desktop/api)", [**"**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-createrendertargetex) [**kreatedepthstencilsurfaceex**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-createdepthstencilsurfaceex)", " [**kreateoffscreenplainsurfaceex**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-createoffscreenplainsurfaceex)"
+Ressourcenerstellungs-APIs umfassen [**: CreateTexture,**](/windows/desktop/api) [**CreateVolumeTexture,**](/windows/desktop/api) [**CreateCubeTexture,**](/windows/desktop/api) [**CreateRenderTarget,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget) [**CreateVertexBuffer,**](/windows/desktop/api) [**CreateIndexBuffer,**](/windows/desktop/api) [**CreateDepthStencilSurface,**](/windows/desktop/api) [**CreateOffscreenPlainSurface,**](/windows/desktop/api) [**CreateDepthStencilSurfaceEx,**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-createdepthstencilsurfaceex) [**CreateOffscreenPlainSurfaceEx**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-createoffscreenplainsurfaceex)und [**CreateRenderTargetEx**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-createrendertargetex).
 
-Es gibt einige Einschränkungen für die Verwendung von freigegebenen Ressourcen. Dazu gehören:
+Es gibt einige Einschränkungen für die Verwendung freigegebener Ressourcen. Dazu gehören:
 
--   Die API, mit der Sie eine freigegebene Ressource öffnen, muss mit der API, die Sie zum Erstellen der freigegebenen Ressource verwendet haben, identisch sein. Wenn Sie z. b. zum Erstellen einer freigegebenen Ressource " [**kreatetexture**](/windows/desktop/api) " verwendet haben, müssen Sie die freigegebene Ressource mithilfe von " **kreatetexture** " öffnen. Wenn Sie mit " [**anaterendertarget**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget) " eine freigegebene Ressource erstellt haben, müssen Sie die freigegebene Ressource mithilfe von " **anaterendertarget** " öffnen usw.
--   Wenn Sie eine freigegebene Ressource öffnen, müssen Sie D3DPOOL \_ default angeben.
--   \_Bei der gemeinsamen Nutzung kann es zu Leistungseinbußen kommen, wenn die Ressourcen freigegeben werden. Lockable Rendertargets kann nicht auf Hardware freigegeben werden.
--   Verweise auf eine prozessübergreifende freigegebene Ressource müssen die gleichen Dimensionen wie die ursprüngliche Ressource aufweisen. Wenn Sie ein Handle Prozess übergreifend übergeben, schließen Sie die Dimensions Informationen ein, damit der Verweis identisch erstellt werden kann.
--   Freigegebene prozessübergreifende Oberflächen bieten keine Synchronisierungs Mechanismen. Lese-/schreibänderungen an einer freigegebenen Oberfläche spiegeln möglicherweise nicht die Ansicht der Oberfläche eines verweisenden Prozesses wider, wenn dies erwartet wird. Verwenden Sie zum Bereitstellen der Synchronisierung Ereignis Abfragen, oder Sperren Sie die Textur.
--   Nur der Prozess, der anfänglich eine freigegebene Ressource erstellt, kann Sie Sperren (jeder Prozess, der einen Verweis auf diese freigegebene Ressource öffnet), kann Sie sperren.
--   Wenn eine freigegebene Ressource gesperrt ist, können andere Prozesse nicht überprüfen, ob die Ressource verfügbar ist.
+-   Die API, die Sie zum Öffnen einer freigegebenen Ressource verwenden, muss mit der API übereinstimmen, die Sie zum Erstellen der freigegebenen Ressource verwendet haben. Wenn Sie beispielsweise [**CreateTexture**](/windows/desktop/api) zum Erstellen einer freigegebenen Ressource verwendet haben, müssen Sie **CreateTexture** verwenden, um diese freigegebene Ressource zu öffnen. Wenn Sie [**CreateRenderTarget**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget) zum Erstellen einer freigegebenen Ressource verwendet haben, müssen Sie **CreateRenderTarget** verwenden, um diese freigegebene Ressource zu öffnen usw.
+-   Wenn Sie eine freigegebene Ressource öffnen, müssen Sie D3DPOOL \_ DEFAULT angeben.
+-   Sperrbare Ressourcen (z.B. Texturen mit D3DUSAGE \_ DYNAMIC, Scheitelpunktpuffer und Indexpuffer) können bei der Freigabe eine schlechte Leistung aufweisen. Sperrbare Renderziele können auf einigen Hardwarekomponenten nicht freigegeben werden.
+-   Verweise auf eine prozessübergreifende freigegebene Ressource müssen die gleichen Dimensionen wie die ursprüngliche Ressource aufweisen. Schließen Sie beim Übergeben eines Handles über den Prozess die Dimensionsinformationen ein, damit der Verweis identisch erstellt werden kann.
+-   Freigegebene prozessübergreifende Oberflächen bieten keinen Synchronisierungsmechanismus. Lese-/Schreibänderungen an einer freigegebenen Oberfläche spiegeln möglicherweise nicht wie erwartet die Ansicht eines verweisenden Prozesses der Oberfläche wider. Um eine Synchronisierung bereitzustellen, verwenden Sie Ereignisabfragen, oder sperren Sie die Textur.
+-   Nur der Prozess, der anfänglich eine freigegebene Ressource erstellt, kann sie sperren (jeder Prozess, der einen Verweis auf diese freigegebene Ressource öffnet, kann sie nicht sperren).
+-   Wenn eine freigegebene Ressource gesperrt ist, gibt es keine Überprüfung für andere Prozesse, um zu wissen, ob die Ressource verfügbar ist.
 
 ## <a name="srgb-conversion-before-blending"></a>sRGB-Konvertierung vor dem Mischen
 
-Sie können jetzt überprüfen, ob das Gerät Pipeline Daten in sRGB konvertieren kann, bevor das Frame Puffer gemischt wird. Dies impliziert, dass das Gerät die renderzielwerte aus sRGB konvertiert. Um festzustellen, ob die Konvertierung von der Hardware unterstützt wird, überprüfen Sie diese Obergrenze:
+Sie können nun überprüfen, ob das Gerät Pipelinedaten vor dem Einfügen von Framepuffern in sRGB konvertieren kann. Dies bedeutet, dass das Gerät die Renderzielwerte aus sRGB konvertiert. Um festzustellen, ob die Konvertierung von der Hardware unterstützt wird, überprüfen Sie diese Obergrenze:
 
 
 ```
@@ -113,24 +113,24 @@ D3DPMISCCAPS_POSTBLENDSRGBCONVERT
 
 
 
-Diese Obergrenze identifiziert Hardware, die vor dem mischen die Konvertierung in sRGB unterstützt. Diese Funktion ist wichtig für das hochwertige Rendering von FP16-Frame Puffern im Desktop Fenster-Manager (DWM).
+Diese Obergrenze identifiziert Hardware, die die Konvertierung in sRGB vor dem Mischen unterstützt. Diese Funktion ist wichtig für das qualitativ hochwertige Rendering aus fp16-Framepuffern im Desktopfenster-Manager (DWM).
 
-## <a name="stretchrect-improvements"></a>Verbesserungen bei stretchrect
+## <a name="stretchrect-improvements"></a>StretchRect-Verbesserungen
 
-In früheren Versionen von DirectX hat stretchrect viele Einschränkungen, um unterschiedliche Treiber zu unterstützen (siehe IDirect3DDevice9:: stretchrect). Windows Vista baut auf dem Windows-Gerätetreiber Modell (WDDM) auf. Dieses neue Treibermodell ist weitaus robuster und ermöglicht es den Treibern, bestimmte Fälle in der Hardware zu verarbeiten.
+In früheren Versionen von DirectX gelten für StretchRect viele Einschränkungen für verschiedene Treiber (siehe IDirect3DDevice9::StretchRect). Windows Vista basiert auf dem Windows Device Driver Model (WDDM). Dieses neue Treibermodell ist wesentlich robuster und ermöglicht es Treibern, Sonderfälle in der Hardware zu verarbeiten.
 
-Im Allgemeinen besteht die einzige verbleibende Einschränkung darin, dass das Renderziel mit der Verwendung von " \_ Renderziel" (D3DUSAGE renderTarget) erstellt werden muss. Diese Einschränkung wird aufgehoben, wenn Sie eine einfache Kopie durchlaufen (wobei Quelle und dest dasselbe Format aufweisen, dieselbe Größe und keine unter Rechtecke vorhanden sind).
+Im Allgemeinen besteht die einzige verbleibende Einschränkung darin, dass das Renderziel mit Renderzielverwendung (D3DUSAGE RENDERTARGET) erstellt worden sein \_ muss. Diese Einschränkung wird aufgehoben, wenn Sie eine einfache Kopie erstellen (wobei Quelle und Dest das gleiche Format, dieselbe Größe aufweisen und keine Unterrechtecke vorhanden sind).
 
-## <a name="texture-creation-in-system-memory"></a>Textur Erstellung im System Speicher
+## <a name="texture-creation-in-system-memory"></a>Texturerstellung im Systemspeicher
 
-Anwendungen, die mehr Flexibilität in Bezug auf die Verwendung, Zuweisung und Löschung des System Arbeitsspeichers benötigen, können jetzt Texturen aus einem Systemspeicher Zeiger erstellen. Eine Anwendung kann z. b. eine Direct3D-Textur aus einem GDI-Bitmap-Zeiger für System Arbeitsspeicher erstellen.
+Anwendungen, die mehr Flexibilität hinsichtlich der Verwendung, Zuordnung und Löschung des Systemspeichers benötigen, können jetzt Texturen aus einem Systemspeicherzeiger erstellen. Beispielsweise könnte eine Anwendung eine Direct3D-Textur aus einem GDI-Systemspeicherbitmapzeiger erstellen.
 
-Sie müssen zwei Dinge durchführen, um eine solche Textur zu erstellen:
+Sie müssen zwei Dinge tun, um eine solche Textur zu erstellen:
 
--   Weisen Sie genügend System Arbeitsspeicher zum Speichern der Textur Oberfläche zu. Die Mindestanzahl von Bytes beträgt Breite x Höhe x Bytes pro Pixel.
--   Übergeben Sie die Adresse eines Zeigers an die Systemspeicher Oberfläche für den Handle- \* Parameter an IDirect3DDevice9:: foatetexture.
+-   Ordnen Sie genügend Systemspeicher für die Texturoberfläche zu. Die Mindestanzahl von Bytes ist Breite x Höhe x Bytes pro Pixel.
+-   Übergeben Sie die Adresse eines Zeigers auf die Systemspeicheroberfläche für den \* HANDLE-Parameter an IDirect3DDevice9::CreateTexture.
 
-Hier sehen Sie den Funktionsprototyp für IDirect3DDevice9:: kreatetexture:
+Hier ist der Funktionsprototyp für IDirect3DDevice9::CreateTexture:
 
 
 ```
@@ -141,13 +141,13 @@ STDMETHOD(CreateTexture)(THIS_ UINT Width, UINT Height, UINT Levels,
 
 
 
-Eine systemarbeits Speicher-Textur weist die folgenden Einschränkungen auf:
+Für eine Textur des Systemspeichers gelten die folgenden Einschränkungen:
 
--   Die Textur Breite muss der Textur Breite und der Anzahl der Bytes pro Pixel entsprechen.
--   Wenn Sie komprimierte Formate (DXT-Formate) verwenden, ist die Anwendung für die Zuordnung der richtigen Größe verantwortlich.
--   Nur Texturen mit einer einzelnen MipMap-Ebene werden unterstützt.
--   Der Wert, der für das Pool-Argument an "kreatetexture" übergeben wird, muss D3DPOOL \_ SystemMem sein.
--   Diese API umschließt den bereitgestellten Speicher in eine Textur. Teilen Sie diesen Arbeitsspeicher erst auf, wenn Sie diesen Vorgang abgeschlossen haben.
+-   Die Texturhöhe muss der Texturbreite entsprechen, die der Anzahl der Bytes pro Pixel entspricht.
+-   Bei Verwendung komprimierter Formate (DXT-Formate) ist die Anwendung für die Zuordnung der richtigen Größe verantwortlich.
+-   Nur Texturen mit einer einzelnen Mipmapebene werden unterstützt.
+-   Der wert, der für das Pool-Argument an CreateTexture übergeben wird, muss D3DPOOL \_ SYSTEMMEM sein.
+-   Diese API umschließt den bereitgestellten Speicher in einer Textur. Geben Sie die Zuordnung dieses Arbeitsspeichers erst wieder auf, wenn Sie damit fertig sind.
 
  
 

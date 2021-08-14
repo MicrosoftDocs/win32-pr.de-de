@@ -5,34 +5,34 @@ ms.assetid: 4E35825D-B247-41C0-917C-D7FCA4A8ABFA
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5db69f6f7d47173c63779279916a5cee304bc38f
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: cd0dd3e2a98fd3b9aece71de586e128b67ede97862a6de613bc387f14a3f6693
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118352147"
 ---
 # <a name="imsrdpclientnonscriptable3-properties"></a>IMsRdpClientNonScriptable3-Eigenschaften
 
-Die [**IMsRdpClientNonScriptable3**](imsrdpclientnonscriptable3.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IMsRdpClientNonScriptable3-Schnittstelle**](imsrdpclientnonscriptable3.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Connectionbartext-Eigenschaft**](imsrdpclientnonscriptable3-connectionbartext.md)
--   [**Eigenschaft "de vicecollection"**](imsrdpclientnonscriptable3-devicecollection.md)
--   [**Drivecollection (Eigenschaft)**](imsrdpclientnonscriptable3-drivecollection.md)
--   [**Enablekredsspsupport (Eigenschaft)**](imsrdpclientnonscriptable3-enablecredsspsupport.md)
--   [**Aushandatesecuritylayer (Eigenschaft)**](imsrdpclientnonscriptable3-negotiatesecuritylayer.md)
--   [**Promptforanmelde-Eigenschaft**](imsrdpclientnonscriptable3-promptforcredentials.md)
--   [**Redirectdynamicdevices (Eigenschaft)**](imsrdpclientnonscriptable3-redirectdynamicdevices.md)
--   [**Redirectdynamicdrives (Eigenschaft)**](imsrdpclientnonscriptable3-redirectdynamicdrives.md)
--   [**Showredirectionwarningdialog (Eigenschaft)**](imsrdpclientnonscriptable3-showredirectionwarningdialog.md)
--   [**Warnaboutclipboardredirection (Eigenschaft)**](imsrdpclientnonscriptable3-warnaboutclipboardredirection.md)
--   [**Warnaboutsending-Anmelde Informationen (Eigenschaft)**](imsrdpclientnonscriptable3-warnaboutsendingcredentials.md)
+-   [**ConnectionBarText-Eigenschaft**](imsrdpclientnonscriptable3-connectionbartext.md)
+-   [**DeviceCollection-Eigenschaft**](imsrdpclientnonscriptable3-devicecollection.md)
+-   [**DriveCollection-Eigenschaft**](imsrdpclientnonscriptable3-drivecollection.md)
+-   [**EnableCredSspSupport-Eigenschaft**](imsrdpclientnonscriptable3-enablecredsspsupport.md)
+-   [**NegotiateSecurityLayer-Eigenschaft**](imsrdpclientnonscriptable3-negotiatesecuritylayer.md)
+-   [**PromptForCredentials-Eigenschaft**](imsrdpclientnonscriptable3-promptforcredentials.md)
+-   [**RedirectDynamicDevices-Eigenschaft**](imsrdpclientnonscriptable3-redirectdynamicdevices.md)
+-   [**RedirectDynamicDrives-Eigenschaft**](imsrdpclientnonscriptable3-redirectdynamicdrives.md)
+-   [**ShowRedirectionWarningDialog-Eigenschaft**](imsrdpclientnonscriptable3-showredirectionwarningdialog.md)
+-   [**WarnAboutClipboardRedirection-Eigenschaft**](imsrdpclientnonscriptable3-warnaboutclipboardredirection.md)
+-   [**WarnAboutSendingCredentials-Eigenschaft**](imsrdpclientnonscriptable3-warnaboutsendingcredentials.md)
 
- 
+ 
 
- 
+ 
 
 
 

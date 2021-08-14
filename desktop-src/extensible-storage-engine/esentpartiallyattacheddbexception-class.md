@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentpartiallyattacheddbexception-Klasse'
-title: Esentpartiallyattacheddbexception-Klasse
+description: 'Weitere Informationen zu: EsentPartiallyAttachedDBException-Klasse'
+title: EsentPartiallyAttachedDBException-Klasse
 TOCTitle: EsentPartiallyAttachedDBException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentPartiallyAttachedDBException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentpartiallyattacheddbexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 96ff15d9a2becb937c88f6e0bec689e68ddc39d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 220b09fb6301c074f6cff21943b41192b7161535aa5b80bdc5e5db7ebe734c13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118492161"
 ---
-# <a name="esentpartiallyattacheddbexception-class"></a>Esentpartiallyattacheddbexception-Klasse
+# <a name="esentpartiallyattacheddbexception-class"></a>EsentPartiallyAttachedDBException-Klasse
 
-Basisklasse für JET_err. Partiallyattacheddb-Ausnahmen.
+Basisklasse für JET_err. PartiallyAttachedDB-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentpartiallyattacheddbexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentPartiallyAttachedDBException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentPartiallyAttachedDBException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentpartiallyattacheddbexception-Elemente](./esentpartiallyattacheddbexception-members.md)
+[EsentPartiallyAttachedDBException-Member](./esentpartiallyattacheddbexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Die hwconfig- \_ NIC-Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse der Netzwerkschnittstellenkarte. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die \_ HWConfig-NIC-Klasse ist die Ereignistypklasse für Netzwerkschnittstellenkarten-Konfigurationsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: e544a27b-17f8-402c-9c92-578cf2a38ca8
 title: HWConfig_NIC-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: df3897c67ed65eeec5ace49dac1088ca35223a35
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d9b82f8a97c1ca47734b5bb0a1db09167510978c53f86870df01f2acc59b2ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394724"
 ---
-# <a name="hwconfig_nic-class"></a>Hwconfig- \_ NIC-Klasse
+# <a name="hwconfig_nic-class"></a>\_HWConfig-NIC-Klasse
 
-Die **hwconfig- \_ NIC** -Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse der Netzwerkschnittstellenkarte.
+Die **\_ HWConfig-NIC-Klasse** ist die Ereignistypklasse für Netzwerkschnittstellenkarten-Konfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,39 +38,39 @@ class HWConfig_NIC : HWConfig
 
 ## <a name="members"></a>Member
 
-Die **hwconfig- \_ NIC** -Klasse verfügt über diese Typen von Membern:
+Die **\_ HWConfig-NIC-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **hwconfig- \_ NIC** -Klasse verfügt über diese Eigenschaften.
+Die **\_ HWConfig-NIC-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-NICNAME
+NICName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(1), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Der Name der Netzwerkschnittstellenkarte.
+Name der Netzwerkschnittstellenkarte.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
@@ -79,7 +79,7 @@ Der Name der Netzwerkschnittstellenkarte.
 
 <dl> <dt>
 
-[**Hwconfig**](hwconfig.md)
+[**HWConfig**](hwconfig.md)
 </dt> </dl>
 
  

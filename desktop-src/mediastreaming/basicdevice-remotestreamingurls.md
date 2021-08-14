@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. remotestreamingurls (Eigenschaft)
+title: BasicDevice.RemoteStreamingUrls (Eigenschaft)
 description: Ruft einen Vektor von Remotestreaming-URLs ab.
 ms.assetid: E0F05E04-FED0-42E7-BC42-AFFA9780C366
 keywords:
-- Remotestreamingurls-Eigenschaft Medien Streaming-API
-- Remotestreamingurls-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, remotestreamingurls (Eigenschaft)
+- RemoteStreamingUrls-Eigenschaft Media Streaming-API
+- RemoteStreamingUrls-Eigenschaft Media Streaming-API, BasicDevice-Schnittstelle
+- BasicDevice-Schnittstelle Media Streaming-API, RemoteStreamingUrls-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ca1d5695c22c8b514475c6336c29ee70caa01f93
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f708c3f230b0345a9799abd617205864ec737f1bb2fb2a448fd3ba639d5bacb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104473005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118736216"
 ---
-# <a name="basicdeviceremotestreamingurls-property"></a>Basicdevice. remotestreamingurls (Eigenschaft)
+# <a name="basicdeviceremotestreamingurls-property"></a>BasicDevice.RemoteStreamingUrls (Eigenschaft)
 
 Ruft einen Vektor von Remotestreaming-URLs ab.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_RemoteStreamingUrls(
-  [out] IVector< HSTRING > **value
+  [out] IVector< HSTRING > **value
 );
 ```
 
@@ -41,15 +41,15 @@ HRESULT get_RemoteStreamingUrls(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Aufzähl Bare Auflistung von Zeigern auf Remote Streaming-URLs.
+Eine aufzählbare Auflistung von Zeigern auf Remotestreaming-URLs.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,10 +1,10 @@
 ---
-title: carlicense-Attribut
-description: Fahrzeug Lizenz oder Registrierungs Platte.
+title: carLicense-Attribut
+description: Fahrzeuglizenz oder Nummernschild.
 ms.assetid: 09505889-3dcc-46a3-851d-d9594c3a2ccb
 ms.tgt_platform: multiple
 keywords:
-- carlicense-Attribut, AD-Schema
+- CARLICENSE-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00a9b9a249b5076bf821c17156b090466aefe3ab
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a1308fd63f675d8d58d7450999032b0330bac8a0b8635319bb4bb89da4ad47bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118427595"
 ---
-# <a name="carlicense-attribute"></a>carlicense-Attribut
+# <a name="carlicense-attribute"></a>carLicense-Attribut
 
-Fahrzeug Lizenz oder Registrierungs Platte.
+Fahrzeuglizenz oder Nummernschild.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | carlicense                                  |
-| LDAP-Display-Name | carlicense                                  |
+| CN                | carLicense                                  |
+| Ldap-Anzeigename | carLicense                                  |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 2.16.840.1.113730.3.1.1                     |
-| System-ID-GUID    | d4159c92-957d-4a87-8a67-8d2934e01649        |
+| System-Id-Guid    | d4159c92-957d-4a87-8a67-8d2934e01649        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,10 +56,10 @@ Fahrzeug Lizenz oder Registrierungs Platte.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -77,10 +77,10 @@ Fahrzeug Lizenz oder Registrierungs Platte.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -98,10 +98,10 @@ Fahrzeug Lizenz oder Registrierungs Platte.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -119,10 +119,10 @@ Fahrzeug Lizenz oder Registrierungs Platte.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -140,10 +140,10 @@ Fahrzeug Lizenz oder Registrierungs Platte.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |

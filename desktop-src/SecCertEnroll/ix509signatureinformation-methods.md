@@ -1,23 +1,23 @@
 ---
-description: Die IX509SignatureInformation-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IX509SignatureInformation-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 92B8C2C5-286A-462A-AE6E-1E3D4BE42FC4
 title: IX509SignatureInformation-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d110099f8709672a3d299ccf2d4f415ebe8b929
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4146c6a0d270438e78a662dd6c9123d6cc1deb94f8c7944a501e8abe9b1bad0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993520"
 ---
 # <a name="ix509signatureinformation-methods"></a>IX509SignatureInformation-Methoden
 
-Die [**IX509SignatureInformation**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509signatureinformation) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IX509SignatureInformation-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509signatureinformation) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Getsignaturealgorithm-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509signatureinformation-getsignaturealgorithm)
+-   [**GetSignatureAlgorithm-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509signatureinformation-getsignaturealgorithm)
 -   [**SetDefaultValues-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509signatureinformation-setdefaultvalues)
 
  

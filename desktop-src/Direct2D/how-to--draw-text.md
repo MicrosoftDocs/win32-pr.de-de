@@ -4,22 +4,22 @@ description: Zeigt, wie Text mit Direct2D gerendert wird.
 ms.assetid: 914dd9d0-78c8-44a3-8504-837faf3201d2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd841f3b07edbde5e3fc6ed70f679cd58b3725f4
-ms.sourcegitcommit: d5f16b9d3d5d2e2080ba7b6837eb37250fa67a30
+ms.openlocfilehash: 6edd9b98417d81cf1cd3222faf771f56cb009f9a327c44f0f0962feb9bf41cf5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "111349969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259980"
 ---
 # <a name="how-to-draw-text"></a>Zeichnen von Text
 
-Verwenden Sie zum Zeichnen von Text mit Direct2D die [**ID2D1RenderTarget::D rawText-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) für Text mit einem einzelnen Format. Oder verwenden Sie die [**ID2D1RenderTarget::D rawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) für mehrere Formate, erweiterte OpenType-Features oder Treffertests. Diese Methoden verwenden die DirectWrite-API, um eine hochwertige Textanzeige zu ermöglichen.
+Verwenden Sie zum Zeichnen von Text mit Direct2D die [**ID2D1RenderTarget::D rawText-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) für Text mit einem einzelnen Format. Verwenden Sie alternativ die [**ID2D1RenderTarget::D rawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) für mehrere Formate, erweiterte OpenType-Features oder Treffertests. Diese Methoden verwenden die DirectWrite-API, um eine hochwertige Textanzeige bereitzustellen.
 
 ## <a name="the-drawtext-method"></a>Die DrawText-Methode
 
-Verwenden Sie zum Zeichnen von Text mit einem einzelnen Format die [**DrawText-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) Um diese Methode zu verwenden, verwenden Sie zunächst eine [**IDWriteFactory,**](/windows/desktop/api/dwrite/nn-dwrite-idwritefactory) um eine [**IDWriteTextFormat-Instanz zu**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextformat) erstellen.
+Verwenden Sie die [**DrawText-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) um Text mit einem einzelnen Format zu zeichnen. Um diese Methode zu verwenden, verwenden Sie zunächst eine [**IDWriteFactory,**](/windows/desktop/api/dwrite/nn-dwrite-idwritefactory) um eine [**IDWriteTextFormat-Instanz**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextformat) zu erstellen.
 
-Der folgende Code erstellt ein [**IDWriteTextFormat-Objekt**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) und speichert es in der *Variablen m \_ pTextFormat.*
+Der folgende Code erstellt ein [**IDWriteTextFormat-Objekt**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) und speichert es in der Variablen *m \_ pTextFormat.*
 
 
 ```C++
@@ -75,9 +75,9 @@ HRESULT DemoApp::CreateDeviceIndependentResources()
 
 
 
-Da [**es sich bei IDWriteFactory-**](/windows/desktop/api/dwrite/nn-dwrite-idwritefactory) und [**IDWriteTextFormat-Objekten**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) um geräteunabhängige Ressourcen handelt, können Sie die Leistung einer Anwendung verbessern, indem Sie sie nur einmal erstellen, anstatt sie jedes Mal neu zu erstellen, wenn ein Frame gerendert wird. [](resources-and-resource-domains.md)
+Da [**idWriteFactory-**](/windows/desktop/api/dwrite/nn-dwrite-idwritefactory) und [**IDWriteTextFormat-Objekte**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) [geräteunabhängige Ressourcen](resources-and-resource-domains.md)sind, können Sie die Leistung einer Anwendung verbessern, indem Sie sie nur einmal erstellen, anstatt sie jedes Mal neu zu erstellen, wenn ein Frame gerendert wird.
 
-Nachdem Sie das Textformatobjekt erstellt haben, können Sie es mit einem Renderziel verwenden. Der folgende Code zeichnet den Text mithilfe der [**DrawText-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) des Renderziels *(die Variable m \_ pRenderTarget).*
+Nachdem Sie das Textformatobjekt erstellt haben, können Sie es mit einem Renderziel verwenden. Der folgende Code zeichnet den Text mithilfe der [**DrawText-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) des Renderziels (variable *m \_ pRenderTarget).*
 
 
 ```C++
@@ -133,13 +133,13 @@ HRESULT DemoApp::OnRender()
 
 ## <a name="the-drawtextlayout-method"></a>Die DrawTextLayout-Methode
 
-Die [**DrawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) rendert ein [**IDWriteTextLayout-Objekt.**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) Verwenden Sie diese Methode, um mehrere Formate auf einen Textblock anzuwenden (z. B. das Unterlining eines Teils des Texts), erweiterte OpenType-Features zu verwenden oder Treffertests zu unterstützen.
+Die [**DrawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) rendert ein [**IDWriteTextLayout-Objekt.**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) Verwenden Sie diese Methode, um mehrere Formate auf einen Textblock anzuwenden (z. B. um einen Teil des Texts zu unterlinten), erweiterte OpenType-Features zu verwenden oder Treffertests durchzuführen.
 
-Die [**DrawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) bietet auch Leistungsvorteile für das wiederholte Zeichnen desselben Texts. Das [**IDWriteTextLayout-Objekt**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) misst und legt seinen Text fest, wenn Sie es erstellen. Wenn Sie ein **IDWriteTextLayout-Objekt** nur einmal erstellen und jedes Mal wiederverwenden, wenn Sie den Text neu gezeichnet haben, verbessert sich die Leistung, da das System den Text nicht erneut messen und neu erstellen muss.
+Die [**DrawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) bietet auch Leistungsvorteile beim wiederholten Zeichnen desselben Texts. Das [**IDWriteTextLayout-Objekt**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) misst und legt seinen Text beim Erstellen fest. Wenn Sie ein **IDWriteTextLayout-Objekt** nur einmal erstellen und es jedes Mal wiederverwenden, wenn Sie den Text neu zeichnen müssen, verbessert sich die Leistung, da das System den Text nicht erneut messen und neu erstellen muss.
 
-Bevor Sie die [**DrawTextLayout-Methode verwenden**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) können, müssen Sie [**eine IDWriteFactory**](/windows/desktop/api/dwrite/nn-dwrite-idwritefactory) verwenden, um [**IDWriteTextFormat-**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) und [**IDWriteTextLayout-Objekte zu**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) erstellen. Nachdem diese Objekte erstellt wurden, rufen Sie die **DrawTextLayout-Methode** auf.
+Bevor Sie die [**DrawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) verwenden können, müssen Sie [**idWriteFactory**](/windows/desktop/api/dwrite/nn-dwrite-idwritefactory) verwenden, um [**IDWriteTextFormat-**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) und [**IDWriteTextLayout-Objekte**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) zu erstellen. Nachdem diese Objekte erstellt wurden, rufen Sie die **DrawTextLayout-Methode** auf.
 
-Weitere Informationen und Beispiele finden Sie in der [Übersicht über Textformatierung und Layout.](/windows/desktop/DirectWrite/text-formatting-and-layout)
+Weitere Informationen und Beispiele finden Sie in der Übersicht über [Textformatierung und Layout.](/windows/desktop/DirectWrite/text-formatting-and-layout)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

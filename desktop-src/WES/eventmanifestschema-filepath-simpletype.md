@@ -1,9 +1,9 @@
 ---
-title: Dateipfad simple-Typ
-description: Definiert eine Zeichenfolge, die einen voll qualifizierten Pfad zu einer Datei enthält.
+title: filePath Simple Type
+description: Definiert eine Zeichenfolge, die einen vollqualifizierten Pfad zu einer Datei enthält.
 ms.assetid: a9b8f40a-fecd-4325-b068-a5aca3133134
 keywords:
-- Dateipfad für einfachen Ereignisprotokoll
+- filePath simple type EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 492580634c1a48c88df6f50de2582c215ec7ecb9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d3929db5643ef7a68f2cd33f1d194c80b4dbc1e99e2f667b7c6e43dde8652dff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118343996"
 ---
-# <a name="filepath-simple-type"></a>Dateipfad simple-Typ
+# <a name="filepath-simple-type"></a>filePath Simple Type
 
-Definiert eine Zeichenfolge, die einen voll qualifizierten Pfad zu einer Datei enthält. Der Pfad kann Umgebungsvariablen enthalten.
+Definiert eine Zeichenfolge, die einen vollqualifizierten Pfad zu einer Datei enthält. Der Pfad kann Umgebungsvariablen enthalten.
 
 ``` syntax
 <xs:simpleType name="filePath">
@@ -38,8 +38,8 @@ Definiert eine Zeichenfolge, die einen voll qualifizierten Pfad zu einer Datei e
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

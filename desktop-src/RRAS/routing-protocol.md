@@ -1,35 +1,35 @@
 ---
-title: Routing Protokoll
-description: Bei einem Routing Protokoll handelt es sich um einen Clienttyp, der beim Routing Tabellen-Manager registriert wird. Router verwenden Routing Protokolle zum Austauschen von Informationen zu Routen zu einem Ziel.
+title: Routingprotokoll
+description: Ein Routingprotokoll ist ein Clienttyp, der beim Routingtabellen-Manager registriert wird. Router verwenden Routingprotokolle, um Informationen zu Routen zu einem Ziel austauschen.
 ms.assetid: 957ec896-94e3-4bdb-801a-12b861460fff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e64d12912494d0d6c20f484eba588b47670a808
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 879d540662db7d1a1603bf40818101d0e7f9cb6988d4c0065f922fdc8f73e381
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977843"
 ---
-# <a name="routing-protocol"></a>Routing Protokoll
+# <a name="routing-protocol"></a>Routingprotokoll
 
-Bei einem Routing Protokoll handelt es sich um einen Clienttyp, der beim Routing Tabellen-Manager registriert wird. Router verwenden Routing Protokolle zum Austauschen von Informationen zu Routen zu einem Ziel.
+Ein Routingprotokoll ist ein Clienttyp, der beim Routingtabellen-Manager registriert wird. Router verwenden Routingprotokolle, um Informationen zu Routen zu einem Ziel austauschen.
 
-Routing Protokolle sind entweder Unicast oder Multicast. Routing Protokolle ankündigen Routen zu einem Ziel.
+Routingprotokolle sind entweder Unicast oder Multicast. Routingprotokolle geben Routen für ein Ziel an.
 
-Eine unicastroute zu einem Ziel wird von einem Unicastrouting-Protokoll verwendet, um Unicastdaten an dieses Ziel weiterzuleiten. Beispiele für Unicast-Routing Protokolle sind: Routing Information Protocol (RIP), Open kürzeste Path First (OSPF) und Border Gateway Protocol (BGP).
+Eine Unicastroute zu einem Ziel wird von einem Unicastroutingprotokoll zum Weiterleiten von Unicastdaten an dieses Ziel verwendet. Beispiele für Unicastroutingprotokolle sind: Routing Information Protocol (RIP), Open Shortest Path First (OSPF) und Border Gateway Protocol (BGP).
 
-Eine Multicast Route zu einem Ziel wird von einigen Multicast Routing Protokollen verwendet, um die Informationen zu erstellen, die zum Weiterleiten von Multicast Daten von Hosts im Zielnetzwerk der Route verwendet werden (als umgekehrte Pfad Weiterleitung bezeichnet). Beispiele für Multicast-Routing Protokolle: Multicast Open kürzeste Path First (MUF), Distance Vector Multicast Routing Protocol (DVMRP) und Protocol Independent Multicast (PIM).
+Eine Multicastroute zu einem Ziel wird von einigen Multicastroutingprotokollen verwendet, um die Informationen zu erstellen, die zum Weiterleiten von Multicastdaten von Hosts im Zielnetzwerk der Route verwendet werden (auch als Reversepfadweiterleitung bekannt). Beispiele für Multicastroutingprotokolle sind: Multicast Open Shortest Path First (MOSPF), Distance Vector Multicast Routing Protocol (DVMRP) und Protocol Independent Multicast (PIM).
 
-Der Routing Tabellen-Manager unterstützt mehrere Instanzen desselben Protokolls (z. b. die Implementierung von OSPF von Microsoft und eine OSPF eines Drittanbieters), die auf dem Router ausgeführt werden. Dadurch können Router die verschiedenen Funktionen jeder Version verwenden. Diese Protokolle verfügen über unterschiedliche Protokoll Bezeichner.
+Der Routingtabellen-Manager unterstützt mehrere Instanzen desselben Protokolls (z. B. die Microsoft-Implementierung von OSPF und eines Drittanbieter-OSPF), die auf dem Router ausgeführt werden. Dadurch können Router die verschiedenen Funktionen der einzelnen Versionen verwenden. Diese Protokolle verfügen über unterschiedliche Protokollbezeichner.
 
-Protokoll Bezeichner bestehen aus einer Hersteller-ID und einem Protokoll spezifischen Bezeichner. Der Protokoll spezifische Bezeichner ist für verschiedene Implementierungen des Protokolls identisch, wie z. b. die Implementierung von OSPF von Microsoft und die Implementierung von OSPF von Drittanbietern. Nur wenn der Anbieter und die Protokoll spezifischen Bezeichner kombiniert werden, gibt es einen eindeutigen Bezeichner für ein Routing Protokoll.
+Protokollbezeichner bestehen aus einem Anbieterbezeichner und einem protokollspezifischen Bezeichner. Der protokollspezifische Bezeichner ist für verschiedene Implementierungen des Protokolls identisch, z. B. die Microsoft-Implementierung von OSPF und eine Drittanbieterimplementierung von OSPF. Nur wenn hersteller- und protokollspezifische Bezeichner kombiniert werden, gibt es einen eindeutigen Bezeichner für ein Routingprotokoll.
 
-Ein Protokoll mit der gleichen Protokoll Kennung (d. h. dem gleichen Hersteller Bezeichner und Protokoll spezifischen Bezeichner) kann mehrmals beim Routing Tabellen-Manager registriert werden. Jedes Mal wird das Protokoll mithilfe eines anderen protokollinstanzbezeichners registriert. Beispielsweise kann eine Implementierung von OSPF von einem bestimmten Hersteller als "Vendor-OSPF-1" und "Vendor-OSPF-2" registriert werden. Dies ermöglicht einer bestimmten Protokoll Implementierung, die in der Routing Tabelle beibehaltenen Informationen zu partitionieren.
+Ein Protokoll mit demselben Protokollbezeichner (d. h. demselben Anbieterbezeichner und protokollspezifischen Bezeichner) kann mehrmals beim Routingtabellen-Manager registriert werden. Jedes Mal wird das Protokoll mit einem anderen Protokollinstanzbezeichner registriert. Beispielsweise kann eine Implementierung von OSPF von einem bestimmten Anbieter als Vendor-OSPF-1 und Vendor-OSPF-2 registriert werden. Dadurch kann eine bestimmte Protokollimplementierung die Informationen partitionieren, die in der Routingtabelle enthalten sind.
 
- 
+ 
 
- 
+ 
 
 
 

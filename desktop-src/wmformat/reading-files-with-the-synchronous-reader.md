@@ -3,67 +3,67 @@ title: Lesen von Dateien mit dem synchronen Reader
 description: Lesen von Dateien mit dem synchronen Reader
 ms.assetid: 18c6c0cd-478f-4325-b23e-571c33779a96
 keywords:
-- Windows Media-Format-SDK, Lesen von Dateien
-- SDK für den Windows Media-Format, synchrone Reader
+- Windows Medienformat-SDK, Lesen von Dateien
+- Windows Medienformat-SDK, synchrone Reader
 - Advanced Systems Format (ASF), synchrone Reader
 - ASF (Advanced Systems Format), synchrone Reader
 - Advanced Systems Format (ASF), Lesen von Dateien
 - ASF (Advanced Systems Format), Lesen von Dateien
-- synchrone Reader, iwmreadercallback-Schnittstelle
-- Iwmreadercallback, synchrone Reader
-- synchrone Leser, Lesen von Dateien
+- Synchrone Reader,IWMReaderCallback-Schnittstelle
+- IWMReaderCallback, synchrone Reader
+- Synchrone Reader,Lesen von Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 893a1bd324cdc91968e423f2084bfdba5ef57c8e
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: c30ed2f9af78c9643f269adb24f740f2fe9227bc2e5b8a36d5c9d29606564176
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118197472"
 ---
 # <a name="reading-files-with-the-synchronous-reader"></a>Lesen von Dateien mit dem synchronen Reader
 
-Sie können den synchronen Reader verwenden, um eine ASF-Datei mit synchronen Aufrufen anstelle der asynchronen Methoden im Reader-Objekt zu lesen. Die Verwendung von synchronen Aufrufen reduziert die Anzahl der Threads, die zum Lesen einer Datei erforderlich sind. Der asynchrone Reader verwendet mehrere Threads, um Datenströme zu verarbeiten. Für Dateien mit mehreren Streams kann die Anzahl der verwendeten Threads sehr groß werden. Der synchrone Reader verwendet nur einen Thread.
+Sie können den synchronen Reader verwenden, um eine ASF-Datei mit synchronen Aufrufen anstelle der asynchronen Methoden im Readerobjekt zu lesen. Die Verwendung synchroner Aufrufe reduziert die Anzahl der Threads, die zum Lesen einer Datei erforderlich sind. Der asynchrone Reader verwendet mehrere Threads für die Verarbeitung von Datenströmen. Bei Dateien mit mehreren Streams kann die Anzahl der verwendeten Threads sehr groß werden. Der synchrone Reader verwendet nur einen Thread.
 
-Der synchrone Reader wurde entwickelt, um die Anforderungen der Inhaltserstellung und der Datei Bearbeitungsanwendungen zu erfüllen. Sie können den synchronen Reader für andere Anwendungen verwenden, seine Funktionalität ist jedoch begrenzt.
+Der synchrone Reader wurde entwickelt, um die Anforderungen der Inhaltserstellungs- und Dateibearbeitungsanwendungen zu erfüllen. Sie können den synchronen Reader für andere Anwendungen verwenden, seine Funktionalität ist jedoch eingeschränkt.
 
-Der synchrone Reader kann lokale Dateien oder Dateien in einem Netzwerk mithilfe des UNC-Pfadnamens öffnen (z \\ \\ . b. "someshare \\ somedirectory \\ somefile. wmv"). Sie können keine Dateien an den synchronen Reader streamen oder Dateien von einem Internet Speicherort aus öffnen. Der synchrone Reader bietet auch Unterstützung für die Verwendung der **IStream** -com-Schnittstelle als Quelle.
+Der synchrone Reader kann dateien öffnen, die lokal sind, oder Dateien in einem Netzwerk mithilfe des UNC-Pfadnamens (z.B. \\ \\ "someshare \\ \\ somedirectory somefile.wmv"). Sie können keine Dateien an den synchronen Reader streamen oder Dateien von einem Internetspeicherort aus öffnen. Der synchrone Reader bietet auch Unterstützung für die Verwendung der **IStream** COM-Schnittstelle als Quelle.
 
-Der synchrone Reader bietet mehr Flexibilität beim Abrufen von Beispielen aus einer ASF-Datei als der asynchrone Reader. Der synchrone Reader kann Beispiele nach streamnummer und Ausgabe bereitzustellen. Die von der Datenstrom Nummer übermittelten Beispiele können komprimiert oder dekomprimiert werden. Der synchrone Reader kann während der Wiedergabe auch zwischen komprimierter und nicht komprimierter Übermittlung wechseln. Diese Funktion wird als "schnelles bearbeiten" bezeichnet. Diese Funktion ermöglicht es einer Bearbeitungs Anwendung, Windows Media-basierte Inhalte zu lesen und direkt an den Writer weiterzuleiten, bis ein gewünschter Frame erreicht wird. An diesem Punkt kann die Anwendung den Reader anweisen, nicht komprimierte Inhalte bereitzustellen, die von der Anwendung dann geändert und zur erneuten Komprimierung an den Writer übergeben werden können. Wenn die Anwendung das Ändern der angegebenen Frames abgeschlossen hat, kann Sie den Reader anweisen, mit der Übermittlung von komprimierten Frames zu beginnen.
+Der synchrone Reader bietet mehr Flexibilität beim Abrufen von Beispielen aus einer ASF-Datei als der asynchrone Reader. Der synchrone Reader kann Stichproben nach Streamnummer und Ausgabe liefern. Beispiele, die nach Streamnummer übermittelt werden, können komprimiert oder unkomprimiert werden. Der synchrone Reader kann auch während der Wiedergabe zwischen komprimierter und nicht komprimierter Übermittlung wechseln. dieses Feature wird als "schnelle Bearbeitung" bezeichnet. Mit diesem Feature kann eine Bearbeitungsanwendung medienbasierten Windows lesen und direkt an den Writer übergeben, bis ein gewünschter Frame erreicht ist. An diesem Punkt kann die Anwendung dem Leser mitteilen, dass er damit beginnen soll, unkomprimierten Inhalt zu liefern, den die Anwendung dann ändern und zur Erneutkomprimierung an den Writer übergeben kann. Wenn die Anwendung die Änderung der angegebenen Frames abgeschlossen hat, kann sie den Reader anraten, mit der Bereitstellung komprimierter Frames erneut zu beginnen.
 
-Die grundlegende Funktionalität des synchronen Reader-Objekts kann in die folgenden Schritte aufgeteilt werden. In den folgenden Schritten bezieht sich "die Anwendung" auf das Programm, das Sie mit dem Windows Media-Format-SDK schreiben.
+Die grundlegendsten Funktionen des synchronen Readerobjekts können in die folgenden Schritte aufgeschlüsselt werden. In diesen Schritten bezieht sich "die Anwendung" auf das Programm, das Sie mit dem Windows Media Format SDK schreiben.
 
-1.  Die Anwendung übergibt dem synchronen Reader den Namen einer zu lesenden Datei. Wenn die Datei vom synchronen Reader geöffnet wird, wird jedem Stream eine Ausgabe Nummer zugewiesen. Wenn die Datei einen gegenseitigen Ausschluss verwendet, weist der Reader eine einzelne Ausgabe für alle sich gegenseitig ausschließenden Streams zu.
-2.  Die Anwendung ruft Informationen zur Konfiguration der verschiedenen Ausgaben des Readers ab. Die gesammelten Informationen ermöglichen der Anwendung das ordnungsgemäße Rendering von Medien Beispielen.
-3.  Die Anwendung beginnt, nacheinander Beispiele vom synchronen Reader anzufordern. Der synchrone Reader stellt jedes Beispiel in einem Puffer Objekt bereit, für das es die [**inssbuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) -Schnittstelle übermittelt.
-4.  Die Anwendung ist für das Rendern von Daten verantwortlich, nachdem Sie vom Reader zugestellt wurde. Das Windows Media-Format-SDK stellt keine renderingroutinen bereit. In der Regel verwenden Anwendungen andere SDKs zum Rendering von Daten, z. b. das Microsoft Direct X SDK, oder die Multimedia-Funktionen des Microsoft Windows Platform SDK.
+1.  Die Anwendung übergibt den Namen einer zu lesenden Datei an den synchronen Reader. Wenn der synchrone Reader die Datei öffnet, weist er jedem Stream eine Ausgabenummer zu. Wenn die Datei gegenseitigen Ausschluss verwendet, weist der Reader eine einzelne Ausgabe für alle sich gegenseitig ausschließenden Streams zu.
+2.  Die Anwendung ruft Informationen zur Konfiguration der verschiedenen Ausgaben vom Reader ab. Die gesammelten Informationen ermöglichen der Anwendung das ordnungsgemäße Rendern von Medienbeispielen.
+3.  Die Anwendung beginnt mit dem Anfordern von Stichproben nach dem anderen vom synchronen Reader. Der synchrone Reader stellt jedes Beispiel in einem Pufferobjekt bereit, für das er die [**INSSBuffer-Schnittstelle**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) übergibt.
+4.  Die Anwendung ist für das Rendern von Daten verantwortlich, nachdem sie vom Reader übermittelt wurden. Das Windows Media Format SDK stellt keine Renderingroutinen bereit. In der Regel verwenden Anwendungen andere SDKs zum Rendern von Daten, z. B. das Microsoft Direct X SDK oder die Multimediafunktionen des Microsoft Windows Platform SDK.
 
-Diese Schritte werden in der Beispielanwendung wmsynkreader veranschaulicht. Weitere Informationen finden Sie unter [Beispielanwendungen](sample-applications.md).
+Diese Schritte werden in der WMSyncReader-Beispielanwendung veranschaulicht. Weitere Informationen finden Sie unter [Beispielanwendungen](sample-applications.md).
 
-Der synchrone Reader unterstützt auch erweiterte Funktionen. Der synchrone Reader ermöglicht Ihnen Folgendes:
+Der synchrone Reader unterstützt auch erweiterte Funktionen. Der synchrone Reader ermöglicht Folgendes:
 
--   Geben Sie einen Bereich von Stichproben an, die nach Zeit oder nach Frame Nummer abgerufen werden sollen.
+-   Geben Sie einen Bereich von Stichproben an, der nach Zeit oder Framenummer abgerufen werden soll.
 -   Steuern der Streamauswahl für sich gegenseitig ausschließende Streams.
--   Öffnen Sie eine Datei mit der Standard-COM-Schnittstelle **IStream**.
+-   Öffnen Sie eine Datei mithilfe der COM-Standardschnittstelle **IStream**.
 -   Liest Profildaten aus dem Dateiheader.
--   Lesen von Metadaten aus dem Dateiheader.
--   Wechsel zwischen Stream-und Ausgabe Beispielen während der Wiedergabe.
--   Zwischen komprimierten und unkomprimierten streambeispielen während der Wiedergabe wechseln.
+-   Liest Metadaten aus dem Dateiheader.
+-   Wechseln Sie während der Wiedergabe zwischen Stream- und Ausgabebeispielen.
+-   Wechseln zwischen komprimierten und unkomprimierten Streambeispielen während der Wiedergabe.
 
-In den folgenden Abschnitten wird die Verwendung des synchronen Reader-Objekts ausführlich beschrieben.
+In den folgenden Abschnitten wird die Verwendung des synchronen Readerobjekts ausführlich beschrieben.
 
 -   [So erstellen Sie einen synchronen Reader und öffnen eine Datei](to-create-a-synchronous-reader-and-open-a-file.md)
--   [So suchen Sie nach streamnummern und Ausgabe Nummern](to-find-stream-numbers-and-output-numbers.md)
--   [So rufen Sie Medien Beispiele mit dem synchronen Reader ab](to-retrieve-media-samples-with-the-synchronous-reader.md)
+-   [So suchen Sie Datenstromnummern und Ausgabenummern](to-find-stream-numbers-and-output-numbers.md)
+-   [So rufen Sie Medienbeispiele mit dem synchronen Reader ab](to-retrieve-media-samples-with-the-synchronous-reader.md)
 -   [So suchen Sie nach Zeit mithilfe des synchronen Readers](to-seek-by-time-using-the-synchronous-reader.md)
--   [So suchen Sie nach Frame Nummer mithilfe des synchronen Readers](to-seek-by-frame-number-using-the-synchronous-reader.md)
--   [So suchen Sie nach SMPTE-Zeit Code mithilfe des synchronen Readers](to-seek-by-smpte-time-code-using-the-synchronous-reader.md)
--   [So rufen Sie streambeispiele mit dem synchronen Reader ab](to-retrieve-stream-samples-with-the-synchronous-reader.md)
+-   [So suchen Sie nach Framenummer mithilfe des synchronen Readers](to-seek-by-frame-number-using-the-synchronous-reader.md)
+-   [So suchen Sie mithilfe des synchronen Readers nach SMPTE-Zeitcode](to-seek-by-smpte-time-code-using-the-synchronous-reader.md)
+-   [So rufen Sie Streambeispiele mit dem synchronen Reader ab](to-retrieve-stream-samples-with-the-synchronous-reader.md)
 -   [So rufen Sie komprimierte Beispiele mit dem synchronen Reader ab](to-retrieve-compressed-samples-with-the-synchronous-reader.md)
 
-**Beispiel Code**
+**Beispielcode**
 
-Der folgende Beispielcode zeigt, wie Sie mit dem synchronen Reader Beispiele aus einer ASF-Datei lesen. Er gibt nach Frame Nummer einen Bereich von zu über liegende Stichproben an.
+Der folgende Beispielcode zeigt, wie Sie Beispiele aus einer ASF-Datei mit dem synchronen Reader lesen. Er gibt nach Framenummer einen Bereich von Beispielen an, die zu liefern sind.
 
 
 ```C++
@@ -130,7 +130,7 @@ pSyncReader = NULL;
 
 <dl> <dt>
 
-[**Iwmsynkreader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
+[**IWMSyncReader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
 </dt> <dt>
 
 [**Lesen von ASF-Dateien**](reading-asf-files.md)
@@ -139,9 +139,9 @@ pSyncReader = NULL;
 [**Synchrones Reader-Objekt**](synchronous-reader-object.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

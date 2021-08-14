@@ -1,25 +1,25 @@
 ---
-title: Ibackgroundcopycallback-Methoden (Do)
-description: Die ibackgroundcopycallback-Schnittstelle stellt die folgenden Methoden zur Verfügung. | Ibackgroundcopycallback-Methoden (Do)
+title: IBackgroundCopyCallback-Methoden (DO)
+description: Die IBackgroundCopyCallback-Schnittstelle macht die folgenden Methoden verfügbar. | IBackgroundCopyCallback-Methoden (DO)
 ms.assetid: 7AA71381-5ACA-4953-A3D1-804285DAD610
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a069caee49f00344ef69cff23c494adbd3477e3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 90087761985d6c2f114a63e6961c8e3379c6c04aac0bd6cbfdd4d2d01059e3a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106367298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990340"
 ---
-# <a name="ibackgroundcopycallback-methods-do"></a>Ibackgroundcopycallback-Methoden (Do)
+# <a name="ibackgroundcopycallback-methods-do"></a>IBackgroundCopyCallback-Methoden (DO)
 
-Die [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IBackgroundCopyCallback-Schnittstelle**](ibackgroundcopycallback.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Joberror-Methode**](ibackgroundcopycallback-joberror-method.md)
--   [**Jobänderungs-Methode**](ibackgroundcopycallback-jobmodification-method.md)
--   [**Jobübertragene Methode**](ibackgroundcopycallback-jobtransferred.md)
+-   [**JobError-Methode**](ibackgroundcopycallback-joberror-method.md)
+-   [**JobModification-Methode**](ibackgroundcopycallback-jobmodification-method.md)
+-   [**JobTransferred-Methode**](ibackgroundcopycallback-jobtransferred.md)
 
  
 

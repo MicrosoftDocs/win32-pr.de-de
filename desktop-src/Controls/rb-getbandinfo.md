@@ -1,9 +1,9 @@
 ---
-title: RB_GETBANDINFO Meldung (kommstrg. h)
-description: Ruft Informationen zu einem angegebenen Band in einem Grund leisten-Steuerelement ab.
+title: RB_GETBANDINFO-Nachricht (Commctrl.h)
+description: Ruft Informationen zu einem angegebenen Band in einem Rebar-Steuerelement ab.
 ms.assetid: c2a76c91-7d44-4278-823d-bd263520e7a8
 keywords:
-- Windows-Steuerelemente für RB_GETBANDINFO Meldung
+- RB_GETBANDINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b87715cf61b4eb2726eab83d500330721f41719f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3b0ae509699c23ad24b9b97451178f4711ab52176a9c15aeef757bab85c861c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118409441"
 ---
-# <a name="rb_getbandinfo-message"></a>RB \_ GetBandInfo-Meldung
+# <a name="rb_getbandinfo-message"></a>RB \_ GETBANDINFO-Meldung
 
-Ruft Informationen zu einem angegebenen Band in einem Grund leisten-Steuerelement ab.
+Ruft Informationen zu einem angegebenen Band in einem Rebar-Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,20 +34,20 @@ Ruft Informationen zu einem angegebenen Band in einem Grund leisten-Steuerelemen
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des Bands, für das die Informationen abgerufen werden.
+Nullbasierter Index des Bands, für das die Informationen abgerufen werden.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**REBARBANDINFO**](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfoa) -Struktur, die die angeforderten Bandinformationen empfängt. Vor dem Senden dieser Nachricht müssen Sie das **CBSIZE** -Element dieser Struktur auf die Größe der **REBARBANDINFO** -Struktur festlegen und das **fmask** -Element auf die Elemente festlegen, die Sie abrufen möchten. Außerdem müssen Sie den **CCH** -Member der **REBARBANDINFO** -Struktur auf die Größe des **lpText** -Puffers festlegen, wenn rbbim- \_ Text angegeben wird.
+Zeiger auf eine [**REBARBANDINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfoa) die die angeforderten Bandinformationen empfängt. Bevor Sie diese Nachricht senden, müssen Sie den **cbSize-Member** dieser Struktur auf die Größe der **REBARBANDINFO-Struktur** und den **fMask-Member** auf die Elemente festlegen, die Sie abrufen möchten. Darüber hinaus müssen Sie den **cch-Member** der **REBARBANDINFO-Struktur** auf die Größe des **lpText-Puffers** festlegen, wenn RBBIM \_ TEXT angegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,18 +55,18 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **RB \_ Getbandinfow** (Unicode) und **RB \_ getbandinfoa** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **RB \_ GETBANDINFOW** (Unicode) und **RB \_ GETBANDINFOA** (ANSI)<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**RB \_ SetBandInfo**](rb-setbandinfo.md)
+[**RB \_ SETBANDINFO**](rb-setbandinfo.md)
 </dt> </dl>
 
  

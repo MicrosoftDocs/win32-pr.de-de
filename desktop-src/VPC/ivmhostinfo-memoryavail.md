@@ -1,11 +1,11 @@
 ---
-title: Ivmhostinfo Memory-Eigenschaft (vpccominterfaces. h)
-description: Ruft die Menge des verfügbaren physischen Speichers auf dem Host Computer (in Megabyte) ab.
+title: IVMHostInfo MemoryAvail-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft die Menge des verfügbaren physischen Arbeitsspeichers auf dem Hostcomputer in Megabyte ab.
 ms.assetid: cb593d02-cdb9-40f6-b57f-72fc3278f1bb
 keywords:
-- Memory-Eigenschaft virtueller PC
-- Memorytoproperty Virtual PC, ivmhostinfo-Schnittstelle
-- Ivmhostinfo Interface Virtual PC, Memory-Eigenschaft
+- MemoryAvail-Eigenschaft Virtueller PC
+- MemoryAvail-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- IVMHostInfo-Schnittstelle Virtueller PC, MemoryAvail-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1df6be8bf62595720d01372ee891184952a0dd5d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dc22c9808e0498b50a140951380788ed23b6d9baee32376d416f817b851077bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118345683"
 ---
-# <a name="ivmhostinfomemoryavail-property"></a>Ivmhostinfo:: Memory-Eigenschaft
+# <a name="ivmhostinfomemoryavail-property"></a>IVMHostInfo::MemoryAvail-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die Menge des verfügbaren physischen Speichers auf dem Host Computer (in Megabyte) ab.
+Ruft die Menge des verfügbaren physischen Arbeitsspeichers auf dem Hostcomputer in Megabyte ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_MemoryAvail(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der verfügbare physische Speicher in Megabyte. Dieser Wert ist eine **Variante** vom Typ VT \_ Decimal.
+Der verfügbare physische Arbeitsspeicher in Megabyte. Dieser Wert ist eine **VARIANT** vom Typ VT \_ DECIMAL.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ Der verfügbare physische Speicher in Megabyte. Dieser Wert ist eine **Variante*
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,20 +65,20 @@ Der verfügbare physische Speicher in Megabyte. Dieser Wert ist eine **Variante*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmhostinfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmhostinfo**](ivmhostinfo.md)
+[**IVMHostInfo**](ivmhostinfo.md)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
-title: Kombinieren von Array Attributen
-description: Feld Attribute können in verschiedenen Kombinationen angegeben werden, solange der Stub die Informationen verwenden kann, um die Größe des Arrays und die Anzahl von Bytes zu bestimmen, die an den Server übertragen werden sollen.
+title: Kombinieren von Arrayattributen
+description: Feldattribute können in verschiedenen Kombinationen bereitgestellt werden, solange der Stub die Informationen verwenden kann, um die Größe des Arrays und die Anzahl von Bytes zu bestimmen, die an den Server übertragen werden sollen.
 ms.assetid: ff4f971f-9e46-4454-9d57-d8ebdf70b261
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffc60777caeb3950e37fe167fe09ecc181d88b8f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fd440251a658dd5b888df7275f578369419d4b8b2d4f920b263bc5095c4bd948
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931753"
 ---
-# <a name="combining-array-attributes"></a>Kombinieren von Array Attributen
+# <a name="combining-array-attributes"></a>Kombinieren von Arrayattributen
 
-Feld Attribute können in verschiedenen Kombinationen angegeben werden, solange der Stub die Informationen verwenden kann, um die Größe des Arrays und die Anzahl von Bytes zu bestimmen, die an den Server übertragen werden sollen. Die Beziehungen zwischen den Attributen werden mithilfe der folgenden Formeln definiert:
+Feldattribute können in verschiedenen Kombinationen bereitgestellt werden, solange der Stub die Informationen verwenden kann, um die Größe des Arrays und die Anzahl von Bytes zu bestimmen, die an den Server übertragen werden sollen. Die Beziehungen zwischen den Attributen werden mithilfe der folgenden Formeln definiert:
 
 ``` syntax
 size_is = max_is + 1;
 length_is = last_is - first_is + 1;
 ```
 
-Die den Attributen zugeordneten Werte müssen mehrere allgemeine, auf diesen Formeln basierende Regeln einhalten. Zu diesen Regeln gehören:
+Die werte, die den Attributen zugeordnet sind, müssen auf grundlage dieser Formeln mehrere Regeln des allgemeinen Sinns einhalten. Zu diesen Regeln gehören:
 
--   Geben Sie nicht an, dass ein \[ [**erster \_**](/windows/desktop/Midl/first-is) \] Index Wert kleiner als 0 (null) ist oder wenn ein \[ [**Letzter \_**](/windows/desktop/Midl/last-is) \] Wert größer als \[ [**Max \_ ist**](/windows/desktop/Midl/max-is) \] .
--   Geben Sie keine negative Größe für ein Array an. Definieren Sie das erste und das letzte Element, sodass Sie einen Längen Wert von 0 (null) oder größer ergeben. Definieren Sie den \[ Wert [**Max \_ ist**](/windows/desktop/Midl/max-is) \] Wert, sodass die Größe 0 (null) oder größer ist. Wenn mit der [**/Error**](/windows/desktop/Midl/-error) Bounds-Option "Mittelwert" aufgerufen wurde \_ , löst der Stub eine Ausnahme aus, wenn die Größe kleiner als 0 (null) ist, oder wenn die übertragene Länge kleiner als 0 (null) ist.
--   Verwenden Sie nicht die \[ [**Länge \_ ist**](/windows/desktop/Midl/length-is) \] und die \[ [**Last \_ sind**](/windows/desktop/Midl/last-is) \] Attribute gleichzeitig, und die \[ **Größe \_ ist** gleich \] \[ **\_** \] zeitig Attribute.
+-   Geben Sie nicht \[ [**an, dass first \_ ein Indexwert**](/windows/desktop/Midl/first-is) kleiner als 0 (null) oder ein \] letzter \[ [**\_ wert**](/windows/desktop/Midl/last-is) \] größer als max \[ [**\_ ist.**](/windows/desktop/Midl/max-is) \]
+-   Geben Sie keine negative Größe für ein Array an. Definieren Sie das erste und das letzte Element so, dass sie zu einem Längenwert von 0 (null) oder größer führen. Definieren Sie \[ [**den Wert max \_ is**](/windows/desktop/Midl/max-is) \] value, sodass die Größe 0 (null) oder größer ist. Wenn MIDL mit der Option [**/error**](/windows/desktop/Midl/-error) bounds check aufgerufen wurde, löst der Stub eine Ausnahme aus, wenn die Größe kleiner als 0 (null) oder die übertragene Länge kleiner als 0 (null) \_ ist.
+-   Verwenden Sie nicht \[ [**die Attribute length \_ is**](/windows/desktop/Midl/length-is) und last is zur gleichen Zeit, und die Größe ist nicht, und last ist Attribute \] \[ [**\_**](/windows/desktop/Midl/last-is) \] \[ **\_** \] \[ **\_** \] gleichzeitig.
 
-Aufgrund der Close-Beziehung zwischen Arrays und Zeigern in C können Sie mithilfe von "Mittel l" auch Arrays in Parameterlisten mithilfe der Zeiger Notation deklarieren. In der Mitte wird ein Parameter, bei dem es sich um einen Zeiger auf einen Typ handelt, als Array dieses Typs behandelt, wenn der Parameter über eines der Attribute verfügt, die häufig mit Arrays verknüpft sind.
+Aufgrund der engen Beziehung zwischen Arrays und Zeigern in C können Sie mit MIDL auch Arrays in Parameterlisten mit zeigeriger Notation deklarieren. MIDL behandelt einen Parameter, der ein Zeiger auf einen Typ ist, als Array dieses Typs, wenn der Parameter über eines der Attribute verfügt, die häufig Arrays zugeordnet sind.
 
 ``` syntax
 /* IDL file */
@@ -43,8 +43,8 @@ interface arraytest
 }
 ```
 
-Im vorherigen Beispiel sind die Array-und Zeiger Parameter in den Funktionen fArray6 und fArray7 Äquivalent.
+Im vorherigen Beispiel sind die Array- und Zeigerparameter in den Funktionen fArray6 und fArray7 gleichwertig.
 
- 
+ 
 
- 
+ 

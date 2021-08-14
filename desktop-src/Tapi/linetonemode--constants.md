@@ -1,77 +1,77 @@
 ---
-description: Die linetonemode- \_ Konstanten beschreiben verschiedene Auswahlmöglichkeiten, die beim Erzeugen von Zeilen Tönen verwendet werden.
+description: Die \_ LINETONEMODE-Konstanten beschreiben verschiedene Auswahlen, die beim Generieren von Linienfarben verwendet werden.
 ms.assetid: 7bfc7d4e-2ab3-44ec-a936-f2d7dcfce263
-title: LINETONEMODE_ Konstanten (TAPI. h)
+title: LINETONEMODE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9e1b5a8d49c927dfa3d5ec87f9a4830a91d79d0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 268d8a20d9cceaad732b3ef99cf8a8e7a3c4e7de4d841feff07f0b606cf4d314
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119404910"
 ---
-# <a name="linetonemode_-constants"></a>Linetonemode- \_ Konstanten
+# <a name="linetonemode_-constants"></a>\_LINETONEMODE-Konstanten
 
-Die **linetonemode- \_ Konstanten** beschreiben verschiedene Auswahlmöglichkeiten, die beim Erzeugen von Zeilen Tönen verwendet werden.
+Die **\_ LINETONEMODE-Konstanten** beschreiben verschiedene Auswahlen, die beim Generieren von Linienfarben verwendet werden.
 
 <dl> <dt>
 
-<span id="LINETONEMODE_BEEP"></span><span id="linetonemode_beep"></span>**linetonemode \_ Beep**
+<span id="LINETONEMODE_BEEP"></span><span id="linetonemode_beep"></span>**LINETONEMODE \_ BEEP**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Ton ist ein Signal, z. b., das zum Ankündigen des Anfangs einer Aufzeichnung verwendet wird. Die genaue Definition ist Dienstanbieter definiert.
+Der Ton ist ein Signalton, der z. B. verwendet wird, um den Anfang einer Aufzeichnung ankündigen. Die genaue Definition ist vom Dienstanbieter definiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETONEMODE_BILLING"></span><span id="linetonemode_billing"></span>**linetonemode- \_ Abrechnung**
+<span id="LINETONEMODE_BILLING"></span><span id="linetonemode_billing"></span>**\_LINETONEMODE-ABRECHNUNG**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Ton ist ein Abrechnungs Informations Ton, z. b. ein Kreditkarten-Eingabe Aufforderungs-Ton. Die genaue Definition ist Dienstanbieter definiert.
+Der Ton ist ein Tonfall für Abrechnungsinformationen, z. B. ein Kreditkarten-Eingabeaufforderungston. Die genaue Definition ist vom Dienstanbieter definiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETONEMODE_BUSY"></span><span id="linetonemode_busy"></span>**linetonemode \_ ausgelastet**
+<span id="LINETONEMODE_BUSY"></span><span id="linetonemode_busy"></span>**LINETONEMODE \_ AUSGELASTET**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Ton ist ein ausgelasteter Ton. Die genaue Definition ist Dienstanbieter definiert.
+Der Ton ist ein starker Ton. Die genaue Definition ist vom Dienstanbieter definiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETONEMODE_CUSTOM"></span><span id="linetonemode_custom"></span>**linetonemode \_ Custom**
+<span id="LINETONEMODE_CUSTOM"></span><span id="linetonemode_custom"></span>**LINETONEMODE \_ CUSTOM**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Ton ist ein benutzerdefinierter Ton, der durch seine Komponenten Frequenzen des Typs [**linegeneratetone**](/windows/desktop/api/Tapi/ns-tapi-linegeneratetone)definiert wird.
+Der Ton ist ein benutzerdefinierter Ton, der durch seine Komponentenhäufigkeiten vom Typ [**LINEGENERATETONE definiert wird.**](/windows/desktop/api/Tapi/ns-tapi-linegeneratetone)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETONEMODE_RINGBACK"></span><span id="linetonemode_ringback"></span>**linetonemode- \_ Ringback**
+<span id="LINETONEMODE_RINGBACK"></span><span id="linetonemode_ringback"></span>**LINETONEMODE \_ RINGBACK**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Ton ist ein ringbackton. Die genaue Definition ist Dienstanbieter definiert.
+Der Ton ist der Ringbackton. Die genaue Definition ist vom Dienstanbieter definiert.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die höherwertigen 16 Bits können für gerätespezifische Erweiterungen zugewiesen werden. Die nieder wertigen 16 Bits sind reserviert.
+Die hochwertigen 16 Bits können für gerätespezifische Erweiterungen zugewiesen werden. Die niedrigen 16 Bits sind reserviert.
 
-Diese Konstanten werden verwendet, um die zu generierenden Töne zu definieren, die bei einem Remote Partei aufrufenden aufgerufen werden. Beachten Sie, dass bei der Ton Erkennung von Nichtbenutzer definierten Tönen diese Konstanten nicht verwendet werden.
+Diese Konstanten werden verwendet, um Töne zu definieren, die inband über einen Aufruf der Remoteparty generiert werden sollen. Beachten Sie, dass die Tonerkennung von nicht benutzerdefinierten Tönen diese Konstanten nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Diese Konstanten werden verwendet, um die zu generierenden Töne zu definieren, 
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

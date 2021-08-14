@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ protectedspaceblock-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ ProtectedSpaceExtent-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: C715B0F1-488E-4A9E-AFD1-A0146D02DE6D
 ms.tgt_platform: multiple
-title: CIM_ProtectedSpaceExtent Methoden
+title: CIM_ProtectedSpaceExtent-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8704f8a45ce970749d9e9c248e4c8a998c9ee0b9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 27609c890c490ab94b311ac34cd0e3f396a8c360a365a742e6c9848401db5ad5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118421301"
 ---
-# <a name="cim_protectedspaceextent-methods"></a>CIM \_ protectedspaceblock-Methoden
+# <a name="cim_protectedspaceextent-methods"></a>CIM \_ ProtectedSpaceExtent-Methoden
 
-Die [**CIM \_ protectedspaceblock**](cim-protectedspaceextent.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ ProtectedSpaceExtent-Klasse**](cim-protectedspaceextent.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

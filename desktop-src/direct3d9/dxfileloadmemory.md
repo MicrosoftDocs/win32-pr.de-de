@@ -1,7 +1,7 @@
 ---
-description: Identifiziert Arbeitsspeicher Daten. Veraltet.
+description: Identifiziert Speicherdaten. Veraltet.
 ms.assetid: fe791e13-d5de-425f-b68f-80db8b332cc6
-title: Dxfileloadmemory-Struktur (dxfile. h)
+title: DXFILELOADMEMORY-Struktur (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - DXFile.h
-ms.openlocfilehash: 02424abd354811a6522b58dd0011ecdddce24564
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3de6db80e12197f3ad61dd845519be7f532d320765c491cba7a8219ee701af05
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119407460"
 ---
-# <a name="dxfileloadmemory-structure"></a>Dxfileloadmemory-Struktur
+# <a name="dxfileloadmemory-structure"></a>DXFILELOADMEMORY-Struktur
 
-Identifiziert Arbeitsspeicher Daten. Veraltet.
+Identifiziert Speicherdaten. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ typedef struct DXFILELOADMEMORY {
 
 <dl> <dt>
 
-**lpmemory**
+**lpMemory**
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
@@ -51,7 +51,7 @@ Zeiger auf einen Speicherblock, der geladen werden soll.
 
 </dd> <dt>
 
-**dsize**
+**dSize**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -62,9 +62,9 @@ Größe des zu ladenden Speicherblocks in Bytes.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur identifiziert eine Ressource, die geladen werden soll, wenn eine Anwendung die Methode " [**kreateenumubject**](idirectxfile--createenumobject.md) " verwendet und dxfileload \_ frommemory angibt.
+Diese Struktur identifiziert eine Zu ladende Ressource, wenn eine Anwendung die [**CreateEnumObject-Methode**](idirectxfile--createenumobject.md) verwendet, und gibt DXFILELOAD \_ FROMMEMORY an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,21 +72,21 @@ Diese Struktur identifiziert eine Ressource, die geladen werden soll, wenn eine 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dxfile. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DXFile.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [X-Dateistrukturen](dx9-graphics-reference-x-file-structures.md)
 </dt> <dt>
 
-[**"Kreateendumuject"**](idirectxfile--createenumobject.md)
+[**CreateEnumObject**](idirectxfile--createenumobject.md)
 </dt> <dt>
 
-[Dxfile-Konstanten](dxfile.md)
+[DXFILE-Konstanten](dxfile.md)
 </dt> </dl>
 
  

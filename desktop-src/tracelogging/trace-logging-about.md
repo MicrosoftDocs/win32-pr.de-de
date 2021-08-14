@@ -1,59 +1,59 @@
 ---
-title: Informationen zu tracelogging
-description: Tracelogging ist die neue Windows 10-Ereignis Ablauf Verfolgung für Benutzermodusanwendungen und Kernelmodustreiber.
+title: Informationen zu TraceLogging
+description: TraceLogging ist die neue Windows 10 Ereignisablaufverfolgung für Benutzermodusanwendungen und Kernelmodustreiber.
 ms.assetid: 8C6A9E91-98F9-4D6B-A937-A22BA7CEB1E4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6c2b1ca72385a51df1e0cd82f3e91c198f15b5d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 16cc38210bf4c3ed1ed0b1ebf56ca22a0597b9288fc30ae4c0231d5317465644
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218391"
 ---
-# <a name="about-tracelogging"></a>Informationen zu tracelogging
+# <a name="about-tracelogging"></a>Informationen zu TraceLogging
 
-Tracelogging ist die neue Windows 10-Ereignis Ablauf Verfolgung für Benutzermodusanwendungen und Kernelmodustreiber. Tracelogging ist ein Format für die selbst beschreibende Ereignis Ablauf Verfolgung für Windows (ETW). Tracelogging basiert auf der Ereignis Ablauf Verfolgung für Windows (ETW) und bietet eine vereinfachte Möglichkeit, Code zu instrumentieren.
+TraceLogging ist die neue Windows 10 Ereignisablaufverfolgung für Benutzermodusanwendungen und Kernelmodustreiber. TraceLogging ist ein Format für die selbstbeschreibende Ereignisablaufverfolgung für Windows (ETW). TraceLogging baut auf der Ereignisablaufverfolgung für Windows (ETW) auf und bietet eine vereinfachte Möglichkeit zum Instrumentieren von Code.
 
-Tracelogging bietet die Einfachheit des Windows-Software-Trace-präprozessorcodes (WPP) mit dem zusätzlichen Vorteil, dass es möglich ist, strukturierte Daten mit Ereignissen, der Funktion der korrelierenden Ereignisse und ohne eine separate XML-Datei des Instrumentierungs Manifests einzubeziehen. Ereignisse sind selbst beschreibend. Dies bedeutet, dass eine Binärdatei, die das Instrumentations Manifest enthält, nicht auf dem System registriert werden muss, um die TDH-APIs (Trace Data Helper) zum Decodieren und Anzeigen von Ereignissen zu verwenden.
+TraceLogging bietet die Einfachheit des Windows-Software-Ablaufverfolgungs-Präprozessors (Software Trace Preprocessor, WPP) mit dem zusätzlichen Vorteil, dass strukturierte Daten mit Ereignissen, der Funktion zum Korrelieren von Ereignissen und ohne separate Instrumentierungsmanifest-XML-Datei aufgenommen werden können. Ereignisse sind selbstbeschreibend, was bedeutet, dass eine Binärdatei, die das Instrumentierungsmanifest enthält, nicht auf dem System registriert werden muss, um die TDH-APIs (Trace Data Helper) zum Decodieren und Anzeigen von Ereignissen zu verwenden.
 
-Die Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw) wurde mit Windows 2000 eingeführt und in Windows Vista aktualisiert. Tracelogging baut auf den Windows Vista-ETW-APIs auf. Anbieter können die tracelogging-Technologie verwenden und weiterhin unter Windows Vista arbeiten. Vorhandene Controller (mit Windows vistaapis) können verwendet werden, um tracelogging-Anbieter zu steuern.
+Die Ereignisablaufverfolgung für Windows (ETW) wurde mit Windows 2000 eingeführt und in Windows Vista aktualisiert. Die Ablaufverfolgung baut auf den Windows Vista-ETW-APIs auf. Anbieter können die TraceLogging-Technologie verwenden und weiterhin auf Windows Vista arbeiten. Vorhandene Controller (mit Windows VistaAPIs) können verwendet werden, um TraceLogging-Anbieter zu steuern.
 
-Tracelogging ist auch mit vorhandenen Tools kompatibel. Anbieter, die Manifest-basiertes etw verwenden, werden weiterhin unterstützt. Sie müssen keine manifestressourcenbasierten ETW-Anbieter in tracelogging-Anbieter konvertieren, es sei denn, Sie möchten die Einfachheit, die tracelogging bietet, nutzen. Die WPP-Ablauf Verfolgung wird auch weiterhin unterstützt.
+TraceLogging ist auch mit vorhandenen Tools kompatibel. Anbieter, die manifestbasierte ETW verwenden, werden weiterhin unterstützt. Sie müssen manifestbasierte ETW-Anbieter nur dann in TraceLogging-Anbieter konvertieren, wenn Sie die Einfachheit von TraceLogging nutzen möchten. Die WPP-Ablaufverfolgung wird ebenfalls weiterhin unterstützt.
 
-Tracelogging basiert auf etw, führt jedoch einige wichtige Verbesserungen durch:
+TraceLogging baut auf ETW auf, führt aber einige wichtige Verbesserungen ein:
 
--   Die Ablauf Verfolgung eines Ereignisses ist so einfach wie ein API-Aufrufe.
--   Ereignisse sind selbst beschreibend und erfordern keine zusätzlichen Binärdateien, die das kompilierte Ereignis Manifest enthalten, um das Ereignis zu interpretieren. Alle Metadaten über das Ereignis werden im Ereignis aufgezeichnet.
--   Aktivitäten innerhalb eines einzelnen Prozesses können problemlos durch Start-und Endereignisse ausgedrückt werden.
--   Tracelogging ist mit vorhandener Instrumentations Unterstützung kompatibel. Die neuen ETW-APIs unterstützen weiterhin die alten Anbieter. Sie können in die neuen ETW-APIs für strategische Szenarien investieren und ihre alten Instrumentations Punkte unverändert lassen.
--   Tracelogging bietet dieselbe API für die Ereignis Ablauf Verfolgung für Windows 10, Xbox One und Windows 10 Mobile.
--   Die tracelogging-APIs sind über C, C++, .net und Windows-Runtime zugänglich.
+-   Die Ablaufverfolgung eines Ereignisses ist so einfach wie ein API-Aufruf.
+-   Ereignisse sind selbstbeschreibend und erfordern keine zusätzlichen Binärdateien, die das kompilierte Ereignismanifest enthalten, um das Ereignis zu interpretieren. Alle Metadaten zum Ereignis werden im Ereignis aufgezeichnet.
+-   Aktivitäten innerhalb eines einzelnen Prozesses können einfach durch Start- und Stoppereignisse ausgedrückt werden.
+-   TraceLogging ist mit der vorhandenen Instrumentierungsunterstützung kompatibel. Die neuen ETW-APIs unterstützen weiterhin die alten Anbieter. Sie können in die neuen ETW-APIs für strategische Szenarien investieren, während Sie Ihre alten Instrumentierungspunkte erhalten.
+-   TraceLogging bietet die gleiche Ereignisablaufverfolgungs-API für Windows 10, Xbox One und Windows 10 Mobile.
+-   TraceLogging-APIs sind über C, C++, .NET und Windows Runtime zugänglich.
 
-## <a name="api-high-level-overview"></a>Allgemeine API-Übersicht
+## <a name="api-high-level-overview"></a>Übersicht über die API auf hoher Ebene
 
-Es gibt drei separate tracelogging-APIs, die unterschiedliche Entwickler Zielgruppen als Ziel haben. Jede API ist so konzipiert, dass Sie unterschiedliche Sätze von Anforderungen erfüllt, die für die Zielgruppe dieser API geeignet sind.
+Es gibt drei separate TraceLogging-APIs, die für verschiedene Entwicklerzielgruppe gelten. Jede API wurde so konzipiert, dass sie unterschiedliche Anforderungen erfüllt, die für die Zielgruppe dieser API geeignet sind.
 
 Für WinRT-Entwickler:
 
--   [**Loggingchannel**](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) wurde in Windows 10 erweitert, um die selbst Beschreibungs Ereignisse der Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw) zu protokollieren, ohne ein Manifest zu benötigen.
--   [**Loggingactivity**](/windows/win32/api/traceloggingactivity/nl-traceloggingactivity-traceloggingactivity) wurde in Windows 10 erweitert, um Aktivitäts Start-und-Endmethoden bereitzustellen, die die Kontrolle über das Format und den Inhalt der Start-und Endereignisse ermöglichen. Darüber hinaus können Aktivitäten in eine andere Liste eingefügt werden.
+-   [**LoggingChannel wurde**](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) in Windows 10 erweitert, um selbstbeschreibende Ereignisablaufverfolgung für Windows-Ereignisse (ETW) zu protokollieren, ohne dass ein Manifest benötigt wird.
+-   [**LoggingActivity**](/windows/win32/api/traceloggingactivity/nl-traceloggingactivity-traceloggingactivity) wurde in Windows 10 erweitert, um Methoden zum Starten und Beenden von Aktivitäten zu bieten, die die Kontrolle über das Format und den Inhalt der Start- und Stop-Ereignisse bieten. Darüber hinaus können Aktivitäten geschachtelt werden.
 
 Für C/C++-Entwickler:
 
--   Traceloggingprovider. h enthält die effizienteste API. diese API eignet sich jedoch nicht gut für die Verwendung in dynamischen (Skript gesteuerten) Szenarios wie JavaScript. Diese API kann im Benutzermodus und im Kernel Modus-Code verwendet werden.
+-   TraceLoggingProvider.h enthält die effizienteste API, aber diese API eignet sich nicht gut für die Verwendung in dynamischen (skriptierten) Szenarien wie JavaScript. Diese API kann im Benutzermodus- und Kernelmoduscode verwendet werden.
 
 Für Entwickler von verwaltetem Code (Microsoft .NET Framework):
 
--   Die [eventSource](/dotnet/api/system.diagnostics.tracing.eventsource) -Klasse, die mit früheren Versionen des-.NET Framework ausgeliefert wurde, hat bereits das Schreiben von ETW-Ereignissen unterstützt: Automatisches Erstellen des Manifests und Einbetten des Manifests in den Ereignisdaten Strom. Der Entwickler musste jedoch weiterhin das Manifest nachverfolgen, um die Ereignisse zu decodieren (es sei denn, Sie arbeiten in einem Szenario, in dem das eingebettete Manifest unterstützt wurde). Tracelogging ermöglicht das vollständige eliminieren des Manifests.
+-   Die [EventSource-Klasse,](/dotnet/api/system.diagnostics.tracing.eventsource) die mit früheren Versionen des .NET Framework ausgeliefert wurde, hat bereits das Schreiben von ETW-Ereignissen unterstützt. Das Manifest wird automatisch generiert und in den Ereignisstream eingebettet. Der Entwickler musste das Manifest jedoch weiterhin nachverfolgen, um die Ereignisse zu decodieren (es sei denn, er arbeitet in einem Szenario, in dem das eingebettete Manifest unterstützt wurde). TraceLogging ermöglicht es, das Manifest vollständig zu entfernen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur Ereignis Ablauf Verfolgung](/windows/desktop/ETW/about-event-tracing)
+[Informationen zur Ereignisablaufverfolgung](/windows/desktop/ETW/about-event-tracing)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

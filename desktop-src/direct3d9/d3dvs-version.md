@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie ein Vertex-Shader-Versionsnummern Token.
+description: Erstellen Sie ein Vertex-Shader-Versionsnummerntoken.
 ms.assetid: c3aa6b01-7949-4171-a8b5-2f453fd7a422
-title: D3DVS_VERSION-Makro (D3d9types. h)
+title: D3DVS_VERSION Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 915d5b843287602c80572d739d8b369d8c301770
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 861295c9068bee9e40174d877a78628aa405b9cfa5d46414190fbb7b37904e89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118527256"
 ---
-# <a name="d3dvs_version-macro"></a>D3DVS- \_ Versions Makro
+# <a name="d3dvs_version-macro"></a>\_D3DVS-VERSIONSmakro
 
-Erstellen Sie ein Vertex-Shader-Versionsnummern Token.
+Erstellen Sie ein Vertex-Shader-Versionsnummerntoken.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,37 +40,37 @@ DWORD D3DVS_VERSION(
 
 <dl> <dt>
 
-*\_Wichtige* 
+*\_Hauptversion* 
 </dt> <dd>
 
-Die Hauptversion des Vertex-Shaders. Entsprechende Werte finden Sie unter "Hinweise".
+Die Hauptversion des Vertex-Shaders. Entsprechende Werte finden Sie in den Hinweisen.
 
 </dd> <dt>
 
 *\_Nebenversion* 
 </dt> <dd>
 
-Die kleinere Scheitelpunkt-Shader-Version. Entsprechende Werte finden Sie unter "Hinweise".
+Die Nebenversion des Vertex-Shaders. Entsprechende Werte finden Sie in den Hinweisen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen DWORD-Wert zurück, der eine Scheitelpunkt-Shader-Version ist.
+Gibt einen DWORD-Wert zurück, der eine Vertex-Shaderversion ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Versionsnummern
 
-Die Versionsnummer ist eine Kombination aus der Hauptversion und den kleineren Scheitelpunkt-Shader-Versionsnummern. In der Tabelle werden gültige Zahlen angezeigt.
+Die Versionsnummer ist eine Kombination aus der Hauptversion und den Nebenversionsnummern des Vertex-Shaders. Gültige Zahlen werden in der Tabelle angezeigt.
 
 
 
 | Hauptversion | Nebenversion | Beispiel             |
 |-------|-------|---------------------|
-| 1     | 1     | D3DVS- \_ Version (1, 1) |
-| 2     | 0     | D3DVS- \_ Version (2, 0) |
-| 3     | 0     | D3DVS- \_ Version (3, 0) |
+| 1     | 1     | D3DVS \_ VERSION(1,1) |
+| 2     | 0     | D3DVS \_ VERSION(2,0) |
+| 3     | 0     | D3DVS \_ VERSION(3,0) |
 
 
 
@@ -82,11 +82,11 @@ Die Versionsnummer ist eine Kombination aus der Hauptversion und den kleineren S
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

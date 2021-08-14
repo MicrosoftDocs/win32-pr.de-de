@@ -1,8 +1,8 @@
 ---
-description: Die logfileeventconsumer-Klasse schreibt angepasste Zeichen folgen in eine Text Protokolldatei, wenn Ereignisse an Sie übermittelt werden.
+description: Die LogFileEventConsumer-Klasse schreibt benutzerdefinierte Zeichenfolgen in eine Textdatei, wenn Ereignisse an sie übermittelt werden.
 ms.assetid: 8934b60e-3763-4b85-89fd-58fe6136dff6
 ms.tgt_platform: multiple
-title: Logfileeventconsumer-Klasse
+title: LogFileEventConsumer-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 api_location:
 - Wbemcons.dll
-ms.openlocfilehash: 462989b740aaf6a6bd78968c951b7c676038cea5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbcf0f90a8bca0cf1f648f74d1b58d7037b79fa8bc9d2d13c4fe2c6dc8306eba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996520"
 ---
-# <a name="logfileeventconsumer-class"></a>Logfileeventconsumer-Klasse
+# <a name="logfileeventconsumer-class"></a>LogFileEventConsumer-Klasse
 
-Die **logfileeventconsumer** -Klasse schreibt angepasste Zeichen folgen in eine Text Protokolldatei, wenn Ereignisse an Sie übermittelt werden. Die Zeichen folgen werden durch zeilige Zeilen voneinander getrennt. Diese Klasse ist einer der standardereignisconsumer, die von WMI bereitstellt werden. Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Die **LogFileEventConsumer-Klasse** schreibt benutzerdefinierte Zeichenfolgen in eine Textdatei, wenn Ereignisse an sie übermittelt werden. Die Zeichenfolgen werden durch Zeilenendesequenzen getrennt. Diese Klasse ist einer der Standardereignis-Consumer, die WMI bereitstellt. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,96 +52,96 @@ class LogFileEventConsumer : __EventConsumer
 
 ## <a name="members"></a>Member
 
-Die **logfileeventconsumer** -Klasse verfügt über diese Typen von Membern:
+Die **LogFileEventConsumer-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **logfileeventconsumer** -Klasse verfügt über diese Eigenschaften.
+Die **LogFileEventConsumer-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Kreatorsid"**
+**CreatorSID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Sicherheits-ID (SID), die den Benutzer, der einen Filter erstellt, eindeutig identifiziert. WMI speichert die SID des Benutzers, der eine Instanz von [**\_ \_ eventconsumer**](--eventconsumer.md) oder die Administrator-SID erstellt, je nach Betriebssystem. Weitere Informationen finden Sie unter [Binden eines Ereignis Filters mit einem logischen Consumer](binding-an-event-filter-with-a-logical-consumer.md) und über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Sicherheits-ID (SID), die den Benutzer eindeutig identifiziert, der einen Filter erstellt. WMI speichert die SID des Benutzers, der je nach Betriebssystem eine Instanz von [**\_ \_ EventConsumer**](--eventconsumer.md) erstellt, oder die Administrator-SID. Weitere Informationen finden Sie unter [Binden eines Ereignisfilters mit einem logischen Consumer](binding-an-event-filter-with-a-logical-consumer.md) und Überwachen und Reagieren auf Ereignisse mit [Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Diese Eigenschaft wird von [**\_ \_ eventconsumer**](--eventconsumer.md)geerbt.
+Diese Eigenschaft wird von [**\_ \_ EventConsumer**](--eventconsumer.md)geerbt.
 
 </dd> <dt>
 
 **Filename**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name einer Datei, die den Pfad enthält, an den die Protokolleinträge angehängt werden. Wenn die Datei nicht vorhanden ist, versucht **logfileeventconsumer** , Sie zu erstellen. Der Consumer schlägt fehl, wenn der Pfad nicht vorhanden ist oder wenn der Benutzer, der den Consumer erstellt, nicht über Schreibberechtigungen für die Datei oder den Pfad verfügt.
+Name einer Datei, die den Pfad enthält, an den die Protokolleinträge angefügt werden. Wenn die Datei nicht vorhanden ist, versucht **LogFileEventConsumer,** sie zu erstellen. Der Consumer schlägt fehl, wenn der Pfad nicht vorhanden ist oder wenn der Benutzer, der den Consumer erstellt, nicht über Schreibberechtigungen für die Datei oder den Pfad verfügt.
 
 </dd> <dt>
 
-**Isunicode**
+**IsUnicode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass die Protokolldatei eine Unicode-Textdatei ist. Wenn der Wert **false** ist, ist die Protokolldatei eine Multibytezeichen-Code Textdatei. Wenn die Datei vorhanden ist, wird diese Eigenschaft ignoriert, und die aktuelle Datei Einstellung wird verwendet. Wenn **isunicode** beispielsweise **false** ist, die vorhandene Datei jedoch eine Unicode-Datei ist, wird Unicode verwendet. Wenn **isunicode** **true** ist, aber die Datei multibytecode ist, wird multibytecode verwendet.
+True gibt an, dass die Protokolldatei eine Unicode-Textdatei ist. **False** gibt an, dass die Protokolldatei eine Multibytecode-Textdatei ist. Wenn die Datei vorhanden ist, wird diese Eigenschaft ignoriert, und die aktuelle Dateieinstellung wird verwendet. Wenn **IsUnicode** beispielsweise **FALSE** ist, die vorhandene Datei jedoch eine Unicode-Datei ist, wird Unicode verwendet. Wenn **IsUnicode** **TRUE** ist, die Datei aber Multibytecode ist, wird Multibytecode verwendet.
 
 </dd> <dt>
 
 **MachineName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Computers, an den Windows-Verwaltungsinstrumentation (WMI) Ereignisse sendet.
+Name des Computers, an den Windows Management Instrumentation (WMI) Ereignisse sendet.
 
-Diese Eigenschaft wird von [**\_ \_ eventconsumer**](--eventconsumer.md)geerbt.
+Diese Eigenschaft wird von [**\_ \_ EventConsumer**](--eventconsumer.md)geerbt.
 
 </dd> <dt>
 
 **MaximumFileSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Maximale Größe einer Protokolldatei in Bytes. Wenn die primäre Datei die maximale Größe überschreitet, wird der Inhalt in eine andere Datei verschoben, und die primäre Datei wird geleert. Der Wert 0 (null) bedeutet, dass es keine Größenbeschränkung gibt. Der Standardwert ist 65.535 bytes. Die Größe der Datei wird vor einem Schreibvorgang geprüft. Daher können Sie eine Datei haben, die etwas größer als die angegebene Größenbeschränkung ist. Beim nächsten Schreibvorgang wird die Datei abgefangen und eine neue Datei gestartet.
+Maximale Größe einer Protokolldatei in Bytes. Wenn die primäre Datei die maximale Größe überschreitet, wird der Inhalt in eine andere Datei verschoben, und die primäre Datei wird geleert. Der Wert 0 (null) bedeutet, dass keine Größenbeschränkung vorhanden ist. Der Standardwert ist 65.535 Bytes. Die Größe der Datei wird vor einem Schreibvorgang überprüft. Daher können Sie über eine Datei verfügen, die etwas größer als die angegebene Größenbeschränkung ist. Der nächste Schreibvorgang fängt sie ab und startet eine neue Datei.
 
-In der folgenden Liste ist die Benennungs Struktur für die Sicherungsdatei angegeben:
+In der folgenden Liste wird die Namensstruktur für die Sicherungsdatei identifiziert:
 
--   Wenn der ursprüngliche Dateiname 8,3 ist, wird die Erweiterung durch eine Zeichenfolge im Format "001", "002" usw. ersetzt, wobei die kleinste Zahl größer als alle zuvor verwendeten und ausgewählten Zahlen ist. Wenn "999" verwendet wird, ist die ausgewählte Zahl die kleinste nicht verwendete Zahl.
--   Wenn der ursprüngliche Dateiname nicht 8,3 ist, wird eine Zeichenfolge im Format "001", "002" usw. an den Dateinamen angehängt.
+-   Wenn der ursprüngliche Dateiname 8.3 ist, wird die Erweiterung durch eine Zeichenfolge im Format "001", "002" usw. durch die kleinste Zahl ersetzt, die größer als alle zuvor verwendeten und ausgewählten Zahlen ist. Wenn "999" verwendet wird, ist die ausgewählte Zahl die kleinste nicht verwendete Zahl.
+-   Wenn der ursprüngliche Dateiname nicht 8.3 ist, wird eine Zeichenfolge im Format "001", "002" usw. an den Dateinamen angefügt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **MaximumQueueSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -149,20 +149,20 @@ Zugriffstyp: Schreibgeschützt
 
 Maximale Warteschlange für einen bestimmten Consumer in Bytes.
 
-Diese Eigenschaft wird von [**\_ \_ eventconsumer**](--eventconsumer.md)geerbt.
+Diese Eigenschaft wird von [**\_ \_ EventConsumer**](--eventconsumer.md)geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](key-qualifier.md)
+Qualifizierer: [ **key**](key-qualifier.md)
 </dt> </dl>
 
 Eindeutiger Name für diesen Consumer.
@@ -172,28 +172,28 @@ Eindeutiger Name für diesen Consumer.
 **Text**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Standard Zeichen folgen [Vorlage](using-standard-string-templates.md) für den Text eines Protokoll Eintrags.
+[Standardzeichenfolgenvorlage](using-standard-string-templates.md) für den Text eines Protokolleintrags.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Protokolldatei wird von **logfileeventconsumer** nicht gesichert. Wenn Sie **logfileeventconsumer** konfigurieren, ist es daher wichtig, ein Verzeichnis anzugeben, das auf der gewünschten Ebene gesichert ist.
+> **LogFileEventConsumer** schützt die Protokolldatei nicht. Daher ist es beim Konfigurieren von **LogFileEventConsumer** wichtig, ein Verzeichnis anzugeben, das auf der erforderlichen Ebene geschützt ist.
 
  
 
-Die **logfileeventconsumer** -Klasse wird von der [**\_ \_ eventconsumer**](--eventconsumer.md) abstract-Klasse abgeleitet.
+Die **LogFileEventConsumer-Klasse** wird von der [**\_ \_ abstrakten EventConsumer-Klasse**](--eventconsumer.md) abgeleitet.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung von **logfileeventconsumer** , um einen Consumer zu erstellen, finden Sie unter [Schreiben in eine Protokolldatei auf Grundlage eines Ereignisses](writing-to-a-log-file-based-on-an-event.md).
+Ein Beispiel für die Verwendung von **LogFileEventConsumer** zum Erstellen eines Consumers finden Sie unter Schreiben in [eine Protokolldatei basierend auf einem Ereignis.](writing-to-a-log-file-based-on-an-event.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -203,29 +203,29 @@ Ein Beispiel für die Verwendung von **logfileeventconsumer** , um einen Consume
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Stamm \\ Abonnement<br/>                                                           |
-| MOF<br/>                      | <dl> <dt>Wbemcons. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stammabonnement<br/>                                                           |
+| MOF<br/>                      | <dl> <dt>Wbemcons.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemcons.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Standard Consumer-Klassen](standard-consumer-classes.md)
+[Standard-Consumerklassen](standard-consumer-classes.md)
 </dt> <dt>
 
-[Schreiben in eine Protokolldatei auf Grundlage eines Ereignisses](writing-to-a-log-file-based-on-an-event.md)
+[Schreiben in eine Protokolldatei basierend auf einem Ereignis](writing-to-a-log-file-based-on-an-event.md)
 </dt> <dt>
 
 [Erstellen eines logischen Consumers](creating-a-logical-consumer.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen zu allen Zeitpunkten](receiving-events-at-all-times.md)
+[Empfangen von Ereignissen zu jedem Zeitpunkt](receiving-events-at-all-times.md)
 </dt> <dt>
 
-[**\_\_Eventconsumer**](--eventconsumer.md)
+[**\_\_EventConsumer**](--eventconsumer.md)
 </dt> </dl>
 
  

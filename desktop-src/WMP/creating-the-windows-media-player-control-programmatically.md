@@ -1,39 +1,39 @@
 ---
-title: Programm gesteuertes Erstellen des Windows Media Player-Steuer Elements
-description: Programm gesteuertes Erstellen des Windows Media Player-Steuer Elements
+title: Programmgesteuertes Erstellen des Windows Media Player-Steuerelements
+description: Programmgesteuertes Erstellen des Windows Media Player-Steuerelements
 ms.assetid: 9a4856ce-6a44-47fb-b863-59ce4deb0597
 keywords:
-- Windows Media Player, Programm gesteuertes Erstellen eines ActiveX-Steuer Elements
-- Windows Media Player-Objektmodell, Programm gesteuertes Erstellen eines ActiveX-Steuer Elements
-- Objektmodell, Programm gesteuertes Erstellen eines ActiveX-Steuer Elements
-- Windows Media Player Mobile, Programm gesteuertes Erstellen eines ActiveX-Steuer Elements
-- Windows Media Player ActiveX-Steuerelement, Programm gesteuertes erstellen
-- Windows Media Player Mobile ActiveX-Steuerelement, erstellen Programm gesteuert
-- ActiveX-Steuerelement, Programm gesteuertes erstellen
-- programmgesteuerte Erstellung des ActiveX-Steuer Elements
+- Windows Media Player,programmgesteuertes Erstellen ActiveX Steuerelements
+- Windows Media Player Objektmodell, programmgesteuertes Erstellen ActiveX Steuerelements
+- Objektmodell, programmgesteuertes Erstellen ActiveX Steuerelements
+- Windows Media Player Mobil, programmgesteuertes Erstellen ActiveX-Steuerelements
+- Windows Media Player ActiveX-Steuerelement,Programmgesteuertes Erstellen
+- Windows Media Player Mobiles ActiveX-Steuerelement, programmgesteuertes Erstellen
+- ActiveX Steuerelement, programmgesteuertes Erstellen
+- Programmgesteuertes Erstellen ActiveX Steuerelements
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 222c207b33dcc13a5392f79dad267d6ee82a677c
-ms.sourcegitcommit: e22adfb0dd3bb989e59455baedb4d905a877a240
+ms.openlocfilehash: 6f57b3f4ba9d8c297aee9feb14fc05a35306e1a85d8a718aef6721b92475e19c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "104311682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340963"
 ---
-# <a name="creating-the-windows-media-player-control-programmatically"></a>Programm gesteuertes Erstellen des Windows Media Player-Steuer Elements
+# <a name="creating-the-windows-media-player-control-programmatically"></a>Programmgesteuertes Erstellen des Windows Media Player-Steuerelements
 
-Wenn Sie das Windows Media Player-Steuerelement einem Formular aus der Toolbox hinzufügen, wird ein Objekt der Klasse " **AxWMPLib. AxWindowsMediaPlayer** " erstellt. Diese Wrapper Klasse gibt dem Player die gesamte Funktionalität eines ActiveX-Steuer Elements, einschließlich des Zugriffs auf Benutzeroberflächen Eigenschaften, z. b. **Speicherort** und **Größe**.
+Wenn Sie einem Formular aus der Toolbox das Windows Media Player-Steuerelement hinzufügen, wird ein Objekt der **Klasse AxWMPLib.AxWindowsMediaPlayer** erstellt. Diese Wrapperklasse bietet dem Player alle Funktionen eines ActiveX-Steuerelements, einschließlich des Zugriffs auf Benutzeroberflächeneigenschaften wie **Standort** und **Größe.**
 
-Wenn Sie die von **AxWindowsMediaPlayer** verfügbar gemachten Eigenschaften nicht benötigen oder wenn die Anwendung nicht über eine grafische Benutzeroberfläche verfügt, können Sie ein Player-Steuerelement Programm gesteuert erstellen. In diesem Fall erstellen Sie ein Objekt der **WMPLib. windowsmediaplayer** -Klasse.
+Wenn Sie die von **AxWindowsMediaPlayer** verfügbar gemachten Eigenschaften nicht benötigen oder ihre Anwendung keine grafische Benutzeroberfläche hat, können Sie programmgesteuert ein Player-Steuerelement erstellen. In diesem Fall erstellen Sie ein Objekt der **WMPLib.WindowsMediaPlayer-Klasse.**
 
 > [!Note]  
-> Da das **windowsmediaplayer** -Objekt nicht als ActiveX-Steuerelement umschließt ist, verfügt es nicht über Eigenschaften, die von **System. Windows. Forms. Control** geerbt werden. Folglich wird die Steuerelement **Eigenschaft nicht** in **ctlcontrols** umbenannt, wie Sie in **AxWindowsMediaPlayer** der Fall ist.
+> Da das **WindowsMediaPlayer-Objekt** nicht als ActiveX-Steuerelement umschlossen ist, verfügt es nicht über Eigenschaften, die von System.Windows geerbt **wurden. Forms.Control**. Daher wird die **Controls-Eigenschaft** nicht wie in **AxWindowsMediaPlayer** in **CtlControls** umbenannt.
 
- 
+ 
 
-Um das Windows Media Player-Steuerelement Programm gesteuert zu erstellen, müssen Sie zunächst einen Verweis auf wmp.dll hinzufügen, der im \\ Ordner Windows System32 zu finden ist \\ . Wenn Sie diesen Verweis hinzufügen, wird WMPLib.dll im Projektordner erstellt, und in Projektmappen-Explorer wird ein Verweis auf WMPLib angezeigt.
+Um das Windows Media Player-Steuerelement programmgesteuert zu erstellen, müssen Sie zunächst einen Verweis auf wmp.dll hinzufügen, der sich im \\ Ordner Windows \\ system32 befindet. Durch Hinzufügen dieses Verweises wird WMPLib.dll in Ihrem Projektordner erstellt, und ein Verweis auf WMPLib wird in Projektmappen-Explorer angezeigt.
 
-Der folgende Beispielcode, Teil einer Form1-Klasse, zeigt, wie ein **Player** -Objekt erstellt und eine Datei wiedergegeben wird. Wenn die Wiedergabe beendet wird, oder wenn die Datei nicht wiedergegeben werden kann, wird das Formular geschlossen.
+Der folgende Beispielcode, der Teil einer Form1-Klasse ist, zeigt, wie Sie ein **Player-Objekt** erstellen und eine Datei wiedergeben. Wenn die Wiedergabe endet oder die Datei nicht wiedergegeben werden kann, wird das Formular geschlossen.
 
 
 ```VB
@@ -112,12 +112,12 @@ private void Player_MediaError(object pMediaObject)
 
 <dl> <dt>
 
-[**Einbetten des Windows Media Player-Steuer Elements in eine .NET Framework Lösung**](using-the-windows-media-player-control-in-a--net-framework-solution.md)
+[**Einbetten des Windows Media Player-Steuerelements in eine .NET Framework-Projektmappe**](using-the-windows-media-player-control-in-a--net-framework-solution.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

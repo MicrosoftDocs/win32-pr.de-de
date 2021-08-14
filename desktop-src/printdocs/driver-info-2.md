@@ -1,7 +1,7 @@
 ---
-description: Die Treiber \_ Info \_ 2-Struktur identifiziert einen Druckertreiber, die Treiber Versionsnummer, die Umgebung, für die der Treiber geschrieben wurde, den Namen der Datei, in der der Treiber gespeichert ist, usw.
+description: Die \_ DRIVER INFO \_ 2-Struktur identifiziert einen Druckertreiber, die Versionsnummer des Treibers, die Umgebung, für die der Treiber geschrieben wurde, den Namen der Datei, in der der Treiber gespeichert ist usw.
 ms.assetid: cca1227d-69b9-44df-8dac-384c2f8843ae
-title: DRIVER_INFO_2 Struktur (winspool. h)
+title: DRIVER_INFO_2-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: a88caf5aa10828b81dccefbe8118b3a57aebce97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dcb65f066286b5f5cd2fec935fb2223c25cf87fcc64d17de274b9b182a372440
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118732858"
 ---
-# <a name="driver_info_2-structure"></a>Struktur der Treiber \_ Info \_ 2
+# <a name="driver_info_2-structure"></a>DRIVER \_ INFO \_ 2-Struktur
 
-Die **Treiber \_ Info \_ 2** -Struktur identifiziert einen Druckertreiber, die Treiber Versionsnummer, die Umgebung, für die der Treiber geschrieben wurde, den Namen der Datei, in der der Treiber gespeichert ist, usw.
+Die **DRIVER \_ INFO \_ 2-Struktur** identifiziert einen Druckertreiber, die Versionsnummer des Treibers, die Umgebung, für die der Treiber geschrieben wurde, den Namen der Datei, in der der Treiber gespeichert ist usw.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ typedef struct _DRIVER_INFO_2 {
 
 <dl> <dt>
 
-**cversion**
+**cVersion**
 </dt> <dd>
 
 Die Betriebssystemversion, für die der Treiber geschrieben wurde. Der unterstützte Wert ist 3.
@@ -56,35 +56,35 @@ Die Betriebssystemversion, für die der Treiber geschrieben wurde. Der unterstü
 **pName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Treibers angibt (z. b. "QMS 810").
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Treibers angibt (z. B. "QMS 810").
 
 </dd> <dt>
 
-**nach-oben**
+**pEnvironment**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die die Umgebung angibt, für die der Treiber geschrieben wurde (z. b. Windows x86, Windows ia64 und Windows x64).
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die die Umgebung angibt, für die der Treiber geschrieben wurde (z. B. Windows x86, Windows IA64 und Windows x64).
 
 </dd> <dt>
 
-**pdriverpath**
+**pDriverPath**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die einen Dateinamen, einen vollständigen Pfad und einen Dateinamen für die Datei angibt, die den Gerätetreiber enthält (z. b. "c: \\ Drivers \\pscript.dll").
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Datei angibt, die den Gerätetreiber enthält (z. B. "c: \\ drivers \\pscript.dll").
 
 </dd> <dt>
 
-**pdatafile**
+**pDataFile**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Datei angibt, die Treiber Daten enthält (z. b. "c: \\ Drivers \\ Qms810. PPD").
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Datei angibt, die Treiberdaten enthält (z. B. "c: \\ drivers \\ Qms810.ppd").
 
 </dd> <dt>
 
-**pconfigfile**
+**pConfigFile**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Configuration. dll des Gerätetreibers angibt (z. b. "c: \\ Drivers \\Pscrptui.dll").
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Konfiguration des Gerätetreibers .dll angibt (z. B. "c: \\ drivers \\Pscrptui.dll").
 
 </dd> </dl>
 
@@ -96,25 +96,25 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die einen Dateinamen oder ein
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Treiber \_ Informationen \_ 2W** (Unicode) und **\_ Treiber \_ Info \_ 2a** (ANSI)<br/>                             |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ DRIVER \_ INFO \_ 2W** (Unicode) und **\_ DRIVER INFO \_ \_ 2A** (ANSI)<br/>                             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Addprinterdriver**](addprinterdriver.md)
+[**AddPrinterDriver**](addprinterdriver.md)
 </dt> <dt>
 
-[**Getprinterdriver**](getprinterdriver.md)
+[**GetPrinterDriver**](getprinterdriver.md)
 </dt> </dl>
 
  

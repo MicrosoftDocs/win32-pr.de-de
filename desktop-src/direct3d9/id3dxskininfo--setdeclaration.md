@@ -1,7 +1,7 @@
 ---
-description: Legt die Scheitelpunkt Deklaration fest.
+description: Legt die Scheitelpunktdeklaration fest.
 ms.assetid: cbb802ac-f0ba-41e6-8c67-a787982f975f
-title: 'ID3DXSkinInfo:: setdeclaration-Methode (D3DX9Mesh. h)'
+title: ID3DXSkinInfo::SetDeclaration-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 821801647ca1aee3deabe69d911bd1cab5f7eb4f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d7189abac9041e1abad67ea60558f5ec33714ae47d50225d362ad3bc09e6d1d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985260"
 ---
-# <a name="id3dxskininfosetdeclaration-method"></a>ID3DXSkinInfo:: setdeclaration-Methode
+# <a name="id3dxskininfosetdeclaration-method"></a>ID3DXSkinInfo::SetDeclaration-Methode
 
-Legt die Scheitelpunkt Deklaration fest.
+Legt die Scheitelpunktdeklaration fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetDeclaration(
 
 <dl> <dt>
 
-*pdeclaration* \[ in\]
+*pDeclaration* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Zeiger auf ein Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen.
+Zeiger auf ein Array von [**D3DVERTEXELEMENT9-Elementen.**](d3dvertexelement9.md)
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf ein Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elemente
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,19 +61,19 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXSkinInfo](id3dxskininfo.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: getDeclaration**](id3dxskininfo--getdeclaration.md)
+[**ID3DXSkinInfo::GetDeclaration**](id3dxskininfo--getdeclaration.md)
 </dt> </dl>
 
  

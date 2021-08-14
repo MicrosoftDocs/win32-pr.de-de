@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für feste Seiten Fehlerereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Hartseitenfehlerereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 9837cc45-6485-46c3-a5d9-0d33e443cd32
 title: PageFault_HardFault-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 08afd3df20260a8ede63f4d741b3045ce3a39c1c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fdabfab80eadc75fa05ffe148363a85cb5ddefad9abb626cfa4e1c3fa6fe2a37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394613"
 ---
-# <a name="pagefault_hardfault-class"></a>Pagefault \_ Hardfault-Klasse
+# <a name="pagefault_hardfault-class"></a>PageFault \_ HardFault-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für feste Seiten Fehlerereignisse.
+Diese Klasse ist die Ereignistypklasse für Hartseitenfehlerereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,120 +48,120 @@ class PageFault_HardFault : PageFault_V2
 
 ## <a name="members"></a>Member
 
-Die **Pagefault \_ Hardfault** -Klasse verfügt über diese Typen von Membern:
+Die **PageFault \_ HardFault-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Pagefault \_ Hardfault** -Klasse verfügt über diese Eigenschaften.
+Die **PageFault \_ HardFault-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ByteCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Die Menge der aus dem leseoffset gelesenen Daten, um den Fehler zu beheben.
+Menge der aus ReadOffset gelesenen Daten, um den Fehler zu erfüllen.
 
 </dd> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in einem [**FileIO- \_ namens**](fileio-name.md) Ereignis, um den Namen der Datei zu bestimmen.
+Übereinstimmung mit dem Wert dieses Zeigers auf den **FileObject-Zeigerwert** in einem [**FileIo \_ Name-Ereignis,**](fileio-name.md) um den Namen der Datei zu bestimmen.
 
 </dd> <dt>
 
-**Initialtime**
+**InitialTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Erweiterung ("wmitime")
+Qualifizierer: WmiDataId(1), Extension("WmiTime")
 </dt> </dl>
 
-Der Start Zeitstempel, an dem der Seiten Fehler aufgetreten ist.
+Startzeitstempel, bei dem ein Seitenfehler aufgetreten ist.
 
 </dd> <dt>
 
-**Read Offset**
+**ReadOffset**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
-Der Dateioffset, von dem aus Daten gelesen wurden, um Fehler zu beheben.
+Dateioffset, aus dem Daten gelesen wurden, um den Fehler zu erfüllen.
 
 </dd> <dt>
 
-**Tthreadid**
+**TThreadId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Format ("x")
+Qualifizierer: WmiDataId(5), Format("x")
 </dt> </dl>
 
-Thread Bezeichner des Threads, der auf den Seiten Fehler gestoßen ist.
+Threadbezeichner des Threads, in dem der Seitenfehler aufgetreten ist.
 
 </dd> <dt>
 
 **VirtualAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Fehleradressadresse.
+Fehleradresse.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -169,7 +169,7 @@ Fehleradressadresse.
 
 <dl> <dt>
 
-[**Pagefault \_ v2**](pagefault-v2.md)
+[**PageFault \_ V2**](pagefault-v2.md)
 </dt> </dl>
 
  

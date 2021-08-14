@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHRotateZ-Funktion (D3DX10.h): Rotiert den SH-Vektor (Pherical Rotation) in der Z-Achse um den angegebenen Winkel.'
+description: 'D3DXSHRotateZ-Funktion (D3DX10.h): Rotiert den SH-Vektor (Sphärisch) in der Z-Achse um den angegebenen Winkel.'
 ms.assetid: 7c4bec55-4a4c-4f7e-8849-1cac373a2340
 title: D3DXSHRotateZ-Funktion (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 55e4663057bd25ac9768a5913963a5511b662f11
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2ea15bf7bbcbea68fabf592ec8bad409990038d03fb1f4014f760b92d124408b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990020"
 ---
 # <a name="d3dxshrotatez-function-d3dx10h"></a>D3DXSHRotateZ-Funktion (D3DX10.h)
 
-Dreht den SH-Vektor (Pherical Rotation) in der Z-Achse um den angegebenen Winkel.
+Rotiert den SH-Vektor (Spherical Vector) in der Z-Achse um den angegebenen Winkel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ FLOAT* D3DXSHRotateZ(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabekoeffizienten (Spherical- oder Pherical-Rumpf). Die Auswertung generiert Order Koeffizienten. Dieser Zeiger sollte keinen Alias mit pIn verwenden. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten (Spherical Veralten). Die Auswertung generiert Order²-Koeffizienten. Dieser Zeiger sollte keinen Alias mit pIn verwenden. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf SH-Ausgabekoeffizienten (Spherical- oder Pherical-Rumpf). Die Auswert
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
@@ -96,7 +96,7 @@ Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m +
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

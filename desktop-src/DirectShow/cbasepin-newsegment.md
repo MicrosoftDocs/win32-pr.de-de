@@ -1,7 +1,7 @@
 ---
-description: 'Die newsegment-Methode benachrichtigt die PIN, dass Medien Beispiele, die nach diesem-aufrufempfang empfangen werden, als Segment gruppiert werden. Implementiert die IPin:: newsegment-Methode.'
+description: Die NewSegment-Methode benachrichtigt den Pin, dass medienbeispiele, die nach diesem Aufruf empfangen wurden, als Segment gruppiert werden. Implementiert die IPin::NewSegment-Methode.
 ms.assetid: e334d5a7-0398-496c-882c-bf73e6545867
-title: Cbasepin. newsegment-Methode (amfilter. h)
+title: CBasePin.NewSegment-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1f128ce8cb2fee5479efeddd5932d0392b92a6fc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ed3ffc9cc0656509b29a6c32baeaf7311437a79e8402fbae0727cf9f93a30abe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119384550"
 ---
-# <a name="cbasepinnewsegment-method"></a>Cbasepin. newsegment-Methode
+# <a name="cbasepinnewsegment-method"></a>CBasePin.NewSegment-Methode
 
-Die- `NewSegment` Methode benachrichtigt die PIN, dass nach diesem-aufrufempfang empfangene Medien Beispiele als Segment gruppiert werden. Implementiert die [**IPin:: newsegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) -Methode.
+Die -Methode benachrichtigt den Pin, dass medienbeispiele, die nach diesem Aufruf empfangen `NewSegment` wurden, als Segment gruppiert werden. Implementiert die [**IPin::NewSegment-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ HRESULT NewSegment(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Start Medien Position des Segments in 100-Nanosecond-Einheiten.
+Startmedienposition des Segments in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*tstopps* 
+*tStop* 
 </dt> <dd>
 
-Die endmedien Position des Segments in 100-Nanosecond-Einheiten.
+Endmedienposition des Segments in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*drate* 
+*dRate* 
 </dt> <dd>
 
-Die Rate, mit der dieses Segment verarbeitet werden soll, als Prozentsatz der ursprünglichen Rate.
+Rate, mit der dieses Segment verarbeitet werden soll, als Prozentsatz der ursprünglichen Rate.
 
 </dd> </dl>
 
@@ -69,9 +69,9 @@ Die Rate, mit der dieses Segment verarbeitet werden soll, als Prozentsatz der ur
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt die Element Variablen [**cbasepin:: m \_ tSTART**](cbasepin-m-tstart.md), [**cbasepin:: m \_ tstoppt**](cbasepin-m-tstop.md)und [**cbasepin:: m \_ drate**](cbasepin-m-drate.md) fest. Überschreiben Sie diese Methode in der abgeleiteten Klasse, um die Benachrichtigung zu übergeben.
+Diese Methode legt die [**Membervariablen CBasePin::m \_ tStart,**](cbasepin-m-tstart.md) [**CBasePin::m \_ tStop**](cbasepin-m-tstop.md)und [**CBasePin::m \_ dRate**](cbasepin-m-drate.md) fest. Überschreiben Sie in der abgeleiteten Klasse diese Methode, um die Benachrichtigung nachgelagert zu übergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,16 +79,16 @@ Diese Methode legt die Element Variablen [**cbasepin:: m \_ tSTART**](cbasepin-m
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
 description: Der Name der Stadt.
 ms.assetid: f072d5a5-4403-4a6f-9fa3-2e3549656972
-title: LocationDisp. dispcivicaddressreport. City (Eigenschaft)
+title: LocationDisp.DispCivicAddressReport.City-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 6ae0a36beb395f1ea5994e65bb3d34c1c47cdbfc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa6808265fefc50cd0831807eb876a6ebb2917b1257f270a56d02865c0a03259
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118387151"
 ---
-# <a name="locationdispdispcivicaddressreportcity-property"></a>LocationDisp. dispcivicaddressreport. City (Eigenschaft)
+# <a name="locationdispdispcivicaddressreportcity-property"></a>LocationDisp.DispCivicAddressReport.City-Eigenschaft
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Location API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Um von einer Desktopanwendung aus auf den Speicherort zuzugreifen, verwenden Sie die [**Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation)\]
 
 Der Name der Stadt.
 
@@ -38,11 +38,11 @@ strCity = LocationDisp.DispCivicAddressReport.City
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie in [einem einfachen Beispiel für einen Bericht über den öffentlichen Adress Bericht](/uwp/api/Windows.Devices.Geolocation).
+Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [A Simple Civic Address Report Example](/uwp/api/Windows.Devices.Geolocation).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie in [einem einfach
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

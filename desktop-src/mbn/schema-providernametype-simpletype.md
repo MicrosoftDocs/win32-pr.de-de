@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Zeichen Folgentyp für das ProviderName-Element im mobilen Breitband Profil.
+description: Definiert einen Zeichenfolgentyp für das ProviderName-Element im Mobile Broadband-Profil.
 ms.assetid: 1644ded2-f931-4920-848d-e0405d8723e3
-title: providernametype simple-Typ
+title: providerNameType Simple Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name:
 - providerNameType
 api_type:
 - Schema
-ms.openlocfilehash: df61473358a9ed4453bc28f1b5c7974082e515bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e0a1a0c999eebe8d4ac9922564a28f3b8abce90397fbbda3556bf7726c7355cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118744389"
 ---
-# <a name="providernametype-simple-type"></a>providernametype simple-Typ
+# <a name="providernametype-simple-type"></a>providerNameType Simple Type
 
-Der einfache Typ **providernametype** definiert einen Zeichen Folgentyp für das [**providerName**](schema-providername-providertype-element.md) -Element im mobilen Breitband Profil. Bei dieser Zeichenfolge handelt es sich um mindestens ein Zeichen, das höchstens 20 Zeichen lang ist.
+Der **einfache Typ providerNameType** definiert einen Zeichenfolgentyp für das [**ProviderName-Element**](schema-providername-providertype-element.md) im Mobile Broadband-Profil. Diese Zeichenfolge ist mindestens ein Zeichen lang und mindestens 20 Zeichen lang.
 
 ``` syntax
 <xs:simpleType name="providerNameType">
@@ -43,7 +43,7 @@ Der einfache Typ **providernametype** definiert einen Zeichen Folgentyp für das
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 

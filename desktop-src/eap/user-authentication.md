@@ -1,25 +1,25 @@
 ---
 title: Benutzerauthentifizierung
-description: Das Authentifizierungsprotokoll selbst kann den Benutzer über das geschützte EAP (PEAP) authentifizieren.
+description: Das Authentifizierungsprotokoll selbst kann den Benutzer über protected EAP (PEAP) authentifizieren.
 ms.assetid: 7e0ff5e3-3274-4b52-8c53-101ad01e3034
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e10de1d08a0daffe7fb415c3eab4ba939afa9387
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 8d3f5d377163f2519d97de847d8d14b5bd96925577a8133988adf8fbf950b283
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103719571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978370"
 ---
 # <a name="user-authentication"></a>Benutzerauthentifizierung
 
-Das Authentifizierungsprotokoll selbst kann den Benutzer über das geschützte EAP (PEAP) authentifizieren. Es gibt auch zwei Authentifizierungs Anbieter, die in das Betriebssystem integriert sind: Windows-Domänen Authentifizierung (Zugriff über Verzeichnisdienste) und RAS (Remote Access Dial-in User Service).
+Das Authentifizierungsprotokoll selbst kann den Benutzer über protected EAP (PEAP) authentifizieren. Es gibt auch zwei Authentifizierungsanbieter, die in das Betriebssystem integriert sind: Windows Domänenauthentifizierung (Zugriff über Verzeichnisdienste) und REMOTE ACCESS DIAL-In User Service (RADIUS).
 
-Wenn RADIUS der Authentifizierungs Anbieter ist, wird das EAP-Plug-in auf dem RADIUS-Server und nicht auf dem drahtlos Zugriffspunkt-Server (z. b. einem RAS-Server) installiert. Der AP-Server übergibt EAP-Pakete direkt vom Client an den Authentifizierungsdienst auf dem RADIUS-Server. Der AP-Server verarbeitet keine der Informationen in den EAP-Paketen, er muss jedoch die vom serverseitigen, vollständigen PEAP generierten Verschlüsselungsschlüssel (256 Bit) akzeptieren, um die sichere Verbindung zu erstellen.
+Wenn RADIUS der Authentifizierungsanbieter ist, wird das EAP-Plug-In auf dem RADIUS-Server und nicht auf dem DRAHTLOSEN Zugriffspunktserver (z. B. einem RAS-Server) installiert. Der AP-Server übergibt EAP-Pakete direkt vom Client an den Authentifizierungsdienst auf dem RADIUS-Server. Der AP-Server verarbeitet keine der Informationen in den EAP-Paketen, muss jedoch die serverseitigen, vollständigen PeAP-verschlüsselungsschlüssel (256 Bit) akzeptieren, um die sichere Verbindung herzustellen.
 
- 
+ 
 
- 
+ 
 
 
 

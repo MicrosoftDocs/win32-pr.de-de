@@ -1,9 +1,9 @@
 ---
-title: Image. Source (Eigenschaft)
+title: Image.Source-Eigenschaft
 description: Stellt den Verzeichnispfad eines Bilds dar.
 ms.assetid: 174a518a-e9a3-4461-a9a3-d61b62d2b718
 keywords:
-- Bild. Quell Eigenschaft (Windows-Menüband)
+- Image.Source-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ace2a907280a11c54452b54bfb6172539980e38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 20612f0d25f914cb4c80ae77bb001a678af79e4605c3e1358ed7e33f6b19d805
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118202405"
 ---
-# <a name="imagesource-property"></a>Image. Source (Eigenschaft)
+# <a name="imagesource-property"></a>Image.Source-Eigenschaft
 
 Stellt den Verzeichnispfad eines Bilds dar.
 
@@ -47,17 +47,17 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann höchstens einmal für jedes [**Image**](windowsribbon-element-image.md)auftreten.
 
-Dieses Element enthält einen Wert vom Typ *xs: anyURI* oder eine beliebige Sequenz von Zeichen, die einen Uniform Resource Identifier (URI) darstellt. Der URI-Wert ist eine absolute oder relative (für den Menü Band Markup Datei) Verzeichnispfad einer Bildressource des Typs Bitmap (BMP).
+Dieses Element enthält einen Wert vom Typ *xs:anyURI* oder eine beliebige Zeichenfolge, die einen Uniform Resource Identifier (URI) darstellt. Der URI-Wert ist ein absoluter oder relativer Verzeichnispfad (zur Menübandmarkupdatei) einer Bildressource vom Typ Bitmap (BMP).
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren von über einen Satz von [**Bild**](windowsribbon-element-image.md) Elementen erforderlich ist, eine Auflistung von Bild Ressourcen, die für die Unterstützung von vier bestimmten Bildschirm DPI-Einstellungen entworfen wurden. Die **Image. Source** -Eigenschaft wird verwendet, um den Pfad zur Bildressource anzugeben.
+Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren einer Sammlung von Bildressourcen durch eine Reihe von [**Bildelementen**](windowsribbon-element-image.md) erforderlich ist, die vier spezifische Bildschirm-DPI-Einstellungen unterstützen. Die **Image.Source-Eigenschaft** wird verwendet, um den Pfad zur Imageressource anzugeben.
 
 
 ```C++
@@ -90,8 +90,8 @@ Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren von über einen 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
