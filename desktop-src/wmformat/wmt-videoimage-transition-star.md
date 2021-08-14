@@ -1,9 +1,9 @@
 ---
-title: WMT_VIDEOIMAGE_TRANSITION_STAR (wmsdkidl. h)
-description: Der Stern Übergang zeigt das neue Bild auf einem fünf-Spitzen-Stern innerhalb des Frames.
+title: WMT_VIDEOIMAGE_TRANSITION_STAR (Wmsdkidl.h)
+description: Der Sternübergang zeigt das neue Bild in einem fünfzackigen Stern innerhalb des Frames an.
 ms.assetid: d16f73ce-0fa8-47b4-8146-32f276e6d16c
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_STAR Windows Media-Format
+- WMT_VIDEOIMAGE_TRANSITION_STAR windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af064682c4488153823164433bd432a9080336fd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2fd5a00c7cf68feea13dc0e617e5fe2adb34551032c8ec54bda6e0810fbb092e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118195170"
 ---
-# <a name="wmt_videoimage_transition_star"></a>WMT \_ Videoimage \_ \_ -Übergangs Stern
+# <a name="wmt_videoimage_transition_star"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ STAR
 
-Der Stern Übergang zeigt das neue Bild auf einem fünf-Spitzen-Stern innerhalb des Frames.
+Der Sternübergang zeigt das neue Bild in einem fünfzackigen Stern innerhalb des Frames an.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Übergang verwendet werden, und es werden die Elemente der [**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) -Struktur aufgelistet, der Sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Elemente der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgelistet, der sie zugewiesen sind.
 
 
 
@@ -58,15 +58,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 <tr class="odd">
 <td>Radius</td>
 <td><strong>fEffectPara2</strong></td>
-<td>Der RADIUS (in Pixel) des Kreises, der durch die Punkte des Sterns definiert ist.</td>
+<td>Radius des durch die Punkte des Sterns definierten Kreises in Pixel.</td>
 </tr>
 <tr class="even">
 <td>Aufbau</td>
 <td><strong>fEffectPara3</strong></td>
-<td>Legen Sie einen der folgenden Werte fest:
+<td>Legen Sie auf einen der folgenden Werte fest:
 <ul>
-<li>0-gibt die normale Komposition an, in der das vorherige Bild den Hintergrund ist, und das aktuelle Bild ist der Vordergrund.</li>
-<li>1: gibt eine umgekehrte Komposition an, in der das aktuelle Bild das Hintergrundbild ist, und das vorherige Bild ist der Vordergrund.</li>
+<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li>
+<li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -82,15 +82,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmsdkidl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmsdkidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video Bild Übergänge**](video-image-transitions.md)
+[**Videobildübergänge**](video-image-transitions.md)
 </dt> </dl>
 
  

@@ -1,47 +1,47 @@
 ---
-title: Hinzufügen einer Ereignis Quelle zu einem vom Collector initiierten Abonnement
-description: Um ein weiter geleiteter Ereignis von einem Ereignis Abonnement zu empfangen, können Sie ein vom Collector initiiertes Abonnement auf dem lokalen Computer erstellen.
+title: Hinzufügen einer Ereignisquelle zu einem vom Collector initiierten Abonnement
+description: Um ein weitergeleitetes Ereignis von einem Ereignisabonnement zu erhalten, können Sie ein vom Collector initiiertes Abonnement auf dem lokalen Computer erstellen.
 ms.assetid: f0100938-1702-4ef7-b20e-a0e8df224d18
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88c639b496a00f56a38a0f9f8e72b9d099e58c17
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 905dd9b5a250f9ab12397f851f79a8374c6847235acb34013972dea445f3622b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118344211"
 ---
-# <a name="adding-an-event-source-to-a-collector-initiated-subscription"></a>Hinzufügen einer Ereignis Quelle zu einem vom Collector initiierten Abonnement
+# <a name="adding-an-event-source-to-a-collector-initiated-subscription"></a>Hinzufügen einer Ereignisquelle zu einem vom Collector initiierten Abonnement
 
-Um ein weiter geleiteter Ereignis von einem Ereignis Abonnement zu empfangen, können Sie ein vom Collector initiiertes Abonnement auf dem lokalen Computer erstellen. Weitere Informationen zum Erstellen eines vom Collector initiierten Abonnements finden Sie im C++-Codebeispiel unter [Erstellen eines Event Collector-Abonnements](creating-an-event-collector-subscription.md).
+Um ein weitergeleitetes Ereignis von einem Ereignisabonnement zu erhalten, können Sie ein vom Collector initiiertes Abonnement auf dem lokalen Computer erstellen. Weitere Informationen zum Erstellen eines vom Collector initiierten Abonnements finden Sie im C++-Codebeispiel unter [Erstellen eines Event Collector-Abonnements.](creating-an-event-collector-subscription.md)
 
-Nachdem ein vom Collector initiiertes Abonnement erstellt wurde, können Sie dem Abonnement Ereignis Quellen hinzufügen. Sie müssen einem Abonnement mindestens eine Ereignis Quelle hinzufügen, um Ereignisse zu erfassen.
+Nachdem ein vom Collector initiiertes Abonnement erstellt wurde, können Sie dem Abonnement Ereignisquellen hinzufügen. Sie müssen einem Abonnement mindestens eine Ereignisquelle hinzufügen, um Ereignisse zu sammeln.
 
 > [!Note]
 >
-> Sie können dieses Codebeispiel verwenden, um einem Abonnement eine Ereignis Quelle hinzuzufügen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+> Sie können dieses Codebeispiel verwenden, um einem Abonnement eine Ereignisquelle hinzuzufügen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 >
-> **wecutil SS** *Abonnement Name*  * */ESA: * * * eventsourceaddress* **/AES/ESE**
+> **wecutil ss** *SubscriptionName* **/industries:**_EventSourceAddress_ **/aes /ese**
 >
-> *Eventsourceaddress* kann entweder "localhost" für den lokalen Computer oder ein voll qualifizierter Domänen Name für einen Remote Computer sein.
+> *EventSourceAddress kann* entweder localhost für den lokalen Computer oder ein vollqualifizierter Domänenname für einen Remotecomputer sein.
 
- 
+ 
 
-Weitere Informationen zum Hinzufügen von Ereignis Quellen zu einem von der Quelle initiierten Abonnement finden Sie unter [Einrichten eines von der Quelle initiierten Abonnements](setting-up-a-source-initiated-subscription.md).
+Weitere Informationen zum Hinzufügen von Ereignisquellen zu einem von der Quelle initiierten Abonnement finden Sie unter Einrichten eines von der Quelle [initiierten Abonnements.](setting-up-a-source-initiated-subscription.md)
 
-In diesem Beispiel wird eine Reihe von Schritten zum Hinzufügen einer Ereignis Quelle zu einem vom Collector initiierten Abonnement befolgt.
+Dieses Beispiel folgt einer Reihe von Schritten, um einem vom Collector initiierten Abonnement eine Ereignisquelle hinzuzufügen.
 
-**So fügen Sie einem vom Collector initiierten Abonnement eine Ereignis Quelle hinzu**
+**So fügen Sie einem vom Collector initiierten Abonnement eine Ereignisquelle hinzu**
 
-1.  Öffnen Sie das vorhandene Abonnement, indem Sie den Abonnement Namen und die Zugriffsrechte als Parameter für die [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) -Funktion angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows-Ereignis Sammler Konstanten**](windows-event-collector-constants.md).
-2.  Rufen Sie das Ereignis Quellen Array des Abonnements ab, indem Sie die [**ecgetabonneptionproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty) -Funktion aufrufen. Weitere Informationen zu Abonnement Eigenschaften, die abgerufen werden können, finden Sie unter der [**\_ \_ Eigenschaft \_ ID**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id) -Enumeration für das EC-Abonnement.
-3.  Fügen Sie dem Ereignis Quellen Array des Abonnements eine neue Ereignis Quelle hinzu, indem Sie die [**ecinsertobjectarrayelement**](/windows/desktop/api/Evcoll/nf-evcoll-ecinsertobjectarrayelement) -Funktion aufrufen.
-4.  Legen Sie die Eigenschaften der Ereignis Quelle fest, indem Sie die [**ecsetobjectarrayproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecsetobjectarrayproperty) -Funktion aufrufen. Die **ecabonneptioneventsourceaddress** -Eigenschaft ist entweder auf eine Adresse für den lokalen Computer (localhost) oder auf einen voll qualifizierten Domänen Namen für einen Remote Computer festgelegt. Weitere Informationen zu den Eigenschaften der Ereignis Quelle, die festgelegt werden können, finden Sie unter der **\_ \_ Eigenschaft \_ ID** -Enumeration des EC-Abonnements.
-5.  Speichern Sie das Abonnement, indem Sie die [**ecsavesub-**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) Funktion aufrufen.
-6.  Schließen Sie das Abonnement, indem Sie die [**ecclose**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) -Funktion aufrufen.
+1.  Öffnen Sie das vorhandene Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten**](windows-event-collector-constants.md).
+2.  Rufen Sie das Ereignisquellenarray des Abonnements ab, indem Sie die [**EcGetSubscriptionProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty) aufrufen. Weitere Informationen zu Abonnementeigenschaften, die abgerufen werden können, finden Sie in der [**EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id)
+3.  Fügen Sie dem Ereignisquellenarray des Abonnements eine neue Ereignisquelle hinzu, indem Sie die [**EcInsertObjectArrayElement-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecinsertobjectarrayelement) aufrufen.
+4.  Legen Sie die Ereignisquelleneigenschaften fest, indem Sie die [**EcSetObjectArrayProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsetobjectarrayproperty) aufrufen. Die **EcSubscriptionEventSourceAddress-Eigenschaft** wird entweder auf eine Adresse für den lokalen Computer (Localhost) oder auf einen vollqualifizierten Domänennamen für einen Remotecomputer festgelegt. Weitere Informationen zu Ereignisquelleneigenschaften, die festgelegt werden können, finden Sie in der **EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**
+5.  Speichern Sie das Abonnement, indem Sie die [**EcSaveSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) aufrufen.
+6.  Schließen Sie das Abonnement, indem Sie die [**EcClose-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) aufrufen.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie einem vom Collector initiierten Abonnement eine Ereignis Quelle hinzugefügt wird:
+Das folgende C++-Codebeispiel zeigt, wie Sie einem vom Collector initiierten Abonnement eine Ereignisquelle hinzufügen:
 
 
 ```C++
@@ -298,15 +298,15 @@ DWORD GetProperty(EC_HANDLE hSubscription,
 
 <dl> <dt>
 
-[Konfigurieren von Computern zum Weiterleiten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
+[Konfigurieren von Computern zum Weitergeleiteten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 </dt> <dt>
 
 [Erstellen eines Event Collector-Abonnements](creating-an-event-collector-subscription.md)
 </dt> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Referenz zum Ereignissammler](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

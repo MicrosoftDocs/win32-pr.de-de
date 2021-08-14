@@ -1,25 +1,25 @@
 ---
-description: Com+-Synchronisierungs Tasks
+description: COM+-Synchronisierungsaufgaben
 ms.assetid: e653e00c-313e-4ae1-ba72-d37e0d4fd6d9
-title: Com+-Synchronisierungs Tasks
+title: COM+-Synchronisierungsaufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7502165b365f4c681201d204ced525e2ca9d9f2f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8c9869475e4053f1702d468947e80ac975751846f1fdc16a4385c02ffa11b097
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118307842"
 ---
-# <a name="com-synchronization-tasks"></a>Com+-Synchronisierungs Tasks
+# <a name="com-synchronization-tasks"></a>COM+-Synchronisierungsaufgaben
 
-Die folgenden Themen in diesem Abschnitt enthalten Schritt-für-Schritt-Anleitungen für die Verwendung der com+-Synchronisierung.
+Die folgenden Themen in diesem Abschnitt enthalten schritt-für-Schritt-Anweisungen für die Verwendung der COM+-Synchronisierung.
 
 
 
 | Thema                                                                                         | BESCHREIBUNG                                                                          |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [Festlegen des Synchronisierungs Attributs](setting-the-synchronization-attribute.md)<br/> | Schritt-für-Schritt-Anleitungen zum Festlegen des com+-Synchronisierungs Attributs.<br/> |
+| [Festlegen des Synchronisierungsattributs](setting-the-synchronization-attribute.md)<br/> | Schritt-für-Schritt-Anweisungen zum Festlegen des COM+-Synchronisierungsattributs.<br/> |
 
 
 
@@ -29,7 +29,7 @@ Die folgenden Themen in diesem Abschnitt enthalten Schritt-für-Schritt-Anleitun
 
 <dl> <dt>
 
-[Com+-Synchronisierungs Konzepte](com--synchronization-concepts.md)
+[COM+-Synchronisierungskonzepte](com--synchronization-concepts.md)
 </dt> </dl>
 
  

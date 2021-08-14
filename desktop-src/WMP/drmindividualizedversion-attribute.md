@@ -1,9 +1,9 @@
 ---
-title: Drmindividualizedversion-Attribut
-description: Die drmindividualizedversion gibt die Version des Digital Rights Management (DRM) an, die für die digitale Mediendatei erforderlich ist.
+title: DRMIndividualizedVersion-Attribut
+description: DrmIndividualizedVersion gibt die DRM-Version (Digital Rights Management) an, die für die digitale Mediendatei erforderlich ist.
 ms.assetid: eb31122e-9be8-4ebe-91a8-d9d4288dc772
 keywords:
-- Drmindividualizedversion-Attribut, Windows Media Player
+- DRMIndividualizedVersion-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,25 +12,25 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1cb825a58c284c44a83e79285905e08efed9b6a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e001d350b47b4762c79d78e8d54c49b91976a9255bfa2c49a99945aca7c67861
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340207"
 ---
-# <a name="drmindividualizedversion-attribute"></a>Drmindividualizedversion-Attribut
+# <a name="drmindividualizedversion-attribute"></a>DRMIndividualizedVersion-Attribut
 
-Die **drmindividualizedversion** gibt die Version des Digital Rights Management (DRM) an, die für die digitale Mediendatei erforderlich ist.
+**DrmIndividualizedVersion** gibt die DRM-Version (Digital Rights Management) an, die für die digitale Mediendatei erforderlich ist.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,11 +42,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

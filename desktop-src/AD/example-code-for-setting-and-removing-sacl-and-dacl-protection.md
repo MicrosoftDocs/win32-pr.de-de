@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für das Festlegen und Entfernen von SACL-und DACL-Schutz
-description: Dieses Thema enthält ein Codebeispiel, das zum Festlegen und Entfernen von SACL-und DACL-Schutz verwendet wird.
+title: Beispielcode zum Festlegen und Entfernen von SACL- und DACL-Schutz
+description: Dieses Thema enthält ein Codebeispiel zum Festlegen und Entfernen des SACL- und DACL-Schutzes.
 ms.assetid: 1982ee9a-022a-4e5d-be9c-fab8894afa9e
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, festlegen und Entfernen von SACL-Schutz
+- 'Active Directory-Beispiele: Active Directory, Festlegen und Entfernen des SACL-Schutzes'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28c77cb1da29aa650fe4559c3da27c6a00f59e98
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 6c3ed7c32ebdeb7408037e2e3fcff294f0750fb6a8dcd19837ee9154c65f0c66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106340896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190152"
 ---
-# <a name="example-code-for-setting-and-removing-sacl-and-dacl-protection"></a>Beispiel Code für das Festlegen und Entfernen von SACL-und DACL-Schutz
+# <a name="example-code-for-setting-and-removing-sacl-and-dacl-protection"></a>Beispielcode zum Festlegen und Entfernen von SACL- und DACL-Schutz
 
-Dieses Thema enthält ein Codebeispiel, das zum Festlegen und Entfernen von SACL-und DACL-Schutz verwendet wird.
+Dieses Thema enthält ein Codebeispiel zum Festlegen und Entfernen des SACL- und DACL-Schutzes.
 
-Im folgenden C-und C++-Codebeispiel werden die von " **SE \_ DACL \_ Protected** " und " **SE \_ SACL" \_ geschützten** Elemente in der [**IADsSecurityDescriptor. Control**](/windows/desktop/ADSI/iadssecuritydescriptor-property-methods) -Eigenschaft einer Objekt Sicherheits Beschreibung festgelegt und entfernt.
+Im folgenden C- und C++-Codebeispiel werden die **SE \_ DACL \_ PROTECTED-** und **SE \_ SACL \_ PROTECTED-Elemente** in der [**IADsSecurityDescriptor.Control-Eigenschaft**](/windows/desktop/ADSI/iadssecuritydescriptor-property-methods) eines Objektsicherheitsdeskriptors festgelegt und entfernt.
 
 
 ```C++
@@ -131,6 +131,6 @@ HRESULT SetSDInheritProtect(IADs *pObject, long lControl)
 
 
 
- 
+ 
 
- 
+ 

@@ -1,12 +1,12 @@
 ---
-title: Cancelpatch-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Bricht einen Bereitstellungs Auftrag für Software Updates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
+title: CancelPatch-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
+description: Bricht einen Auftrag zur Bereitstellung von Softwareupdates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
 ms.assetid: fb0d6831-5c69-4017-b725-1a5038ad69f5
 ms.tgt_platform: multiple
 keywords:
-- Cancelpatch-Methode Remotedesktopdienste
-- Cancelpatch-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, cancelpatch-Methode
+- CancelPatch-Methode Remotedesktopdienste
+- CancelPatch-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection Klasse Remotedesktopdienste , CancelPatch-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e56f33a819da976187fba823ac30fada9ff38730
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 04e355051fd1ef9ceca2925ab3e499824dabe605670ee9e732a08809e474f5ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131329"
 ---
-# <a name="cancelpatch-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Cancelpatch-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="cancelpatch-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>CancelPatch-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Bricht einen Bereitstellungs Auftrag für Software Updates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
+Bricht einen Auftrag zur Bereitstellung von Softwareupdates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

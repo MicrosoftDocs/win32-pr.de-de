@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen Enumerator mit Eigenschafts Informationen für jedes verfügbare Windows-Abbild Erfassungsgerät (WIA) 2,0.
+description: Erstellt einen Enumerator von Eigenschafteninformationen für jedes verfügbare Windows Wia 2.0-Gerät( Image Acquisition).
 ms.assetid: e37b73d5-5192-46e4-bb1c-bd1ef41f1d6c
-title: 'IWiaDevMgr2:: enumdevicumfo-Methode (WIA. h)'
+title: IWiaDevMgr2::EnumDeviceInfo-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: bd9e9281b625f4cec5377537d82a304045b95a3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b646c494d9793986373d45db2d89dfde91e744196d86d28aceab35874f504d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208722"
 ---
-# <a name="iwiadevmgr2enumdeviceinfo-method"></a>IWiaDevMgr2:: enumdevicumfo-Methode
+# <a name="iwiadevmgr2enumdeviceinfo-method"></a>IWiaDevMgr2::EnumDeviceInfo-Methode
 
-Erstellt einen Enumerator mit Eigenschafts Informationen für jedes verfügbare Windows-Abbild Erfassungsgerät (WIA) 2,0.
+Erstellt einen Enumerator von Eigenschafteninformationen für jedes verfügbare Windows Wia 2.0-Gerät( Image Acquisition).
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,43 +40,43 @@ HRESULT EnumDeviceInfo(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt den Typ der aufzuzählenden WIA 2,0-Geräte an.
+Gibt den Typ der aufzuzählenden WIA 2.0-Geräte an.
 
 <dt>
 
 <span id="WIA_DEVINFO_ENUM_LOCAL"></span><span id="wia_devinfo_enum_local"></span>
 
-<span id="WIA_DEVINFO_ENUM_LOCAL"></span><span id="wia_devinfo_enum_local"></span>**WIA-Aufzählung ( \_ \_ \_ lokal)**
+<span id="WIA_DEVINFO_ENUM_LOCAL"></span><span id="wia_devinfo_enum_local"></span>**WIA \_ DEVINFO \_ ENUM \_ LOCAL**
 
 
 </dt> <dd>
 
-Nur lokal verbundene aktive Überprüfungs Geräte werden aufgezählt.
+Nur lokal verbundene aktive Scannergeräte werden aufzählt.
 
 </dd> <dt>
 
 <span id="WIA_DEVINFO_ENUM_ALL"></span><span id="wia_devinfo_enum_all"></span>
 
-<span id="WIA_DEVINFO_ENUM_ALL"></span><span id="wia_devinfo_enum_all"></span>**WIA-Aufzählung \_ \_ \_ alle**
+<span id="WIA_DEVINFO_ENUM_ALL"></span><span id="wia_devinfo_enum_all"></span>**WIA \_ DEVINFO \_ ENUM \_ ALL**
 
 
 </dt> <dd>
 
-Alle Geräte werden sowohl lokal als auch Remote aufgelistet, einschließlich inaktiver (nicht verbundener) Geräte und Legacy-Geräte mit nur-STI-Geräten.
+Alle Geräte werden sowohl lokal als auch remote aufzählt, einschließlich inaktiver (getrennter) Geräte und legacy-STI-geräte.
 
 </dd> </dl> </dd> <dt>
 
-*ppiumum* \[ Out, retval\]
+*ppIEnum* \[ out, retval\]
 </dt> <dd>
 
-Typ: **[ **ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info)\*\***
+Typ: **[ **IEnumWIA \_ DEV \_ INFO**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info)\*\***
 
-Empfängt die Adresse eines Zeigers auf die [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Schnittstelle.
+Empfängt die Adresse eines Zeigers auf die [**IEnumWIA \_ DEV \_ INFO-Schnittstelle.**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info)
 
 </dd> </dl>
 
@@ -84,13 +84,13 @@ Empfängt die Adresse eines Zeigers auf die [**ienumwia \_ dev \_ Info**](/windo
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **IWiaDevMgr2:: enumdeviceinfo** -Methode erstellt ein Enumeratorobjekt, das die [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Schnittstelle unterstützt. Die-Methode speichert einen Zeiger auf die **ienumwia \_ dev \_ Info** -Schnittstelle im Parameter *ppienumum*. Anwendungen können den **ienumwia \_ dev \_ Info** -Schnittstellen Zeiger verwenden, um die Eigenschaften jedes WIA 2,0-Geräts aufzulisten, das mit dem Computer des Benutzers verbunden ist.
+Die **IWiaDevMgr2::EnumDeviceInfo-Methode** erstellt ein Enumeratorobjekt, das die [**IEnumWIA \_ DEV \_ INFO-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) unterstützt. Die -Methode speichert einen Zeiger auf die **IEnumWIA \_ DEV \_ INFO-Schnittstelle** im *Parameter ppIEnum*. Anwendungen können den **IEnumWIA \_ DEV INFO-Schnittstellenzeiger \_** verwenden, um die Eigenschaften jedes WIA 2.0-Geräts aufzulisten, das an den Computer des Benutzers angefügt ist.
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Schnittstellen Zeiger aufrufen, die Sie über den *ppienum* -Parameter empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Schnittstellenzeiger aufrufen, die sie über den *ppIEnum-Parameter* empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,10 +98,10 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

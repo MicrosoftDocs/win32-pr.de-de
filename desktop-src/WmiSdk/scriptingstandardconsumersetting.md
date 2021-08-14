@@ -1,8 +1,8 @@
 ---
-description: Die Singleton scriptingstandardconsumersetting-Klasse stellt Registrierungsdaten bereit, die allen Instanzen der activescripteventconsumer Standard-Consumerklasse gemeinsam sind.
+description: Die Singleton ScriptingStandardConsumerSetting-Klasse stellt Registrierungsdaten bereit, die allen Instanzen der ActiveScriptEventConsumer-Standardconsumer-Consumerklasse gemeinsam sind.
 ms.assetid: d217e058-3529-4173-b896-ebff3d7b05c6
 ms.tgt_platform: multiple
-title: Scriptingstandardconsumersetting-Klasse
+title: ScriptingStandardConsumerSetting-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,18 +19,18 @@ api_type:
 - DllExport
 api_location:
 - Scrcons.exe
-ms.openlocfilehash: 43eae14eea445f546f731605c94b38e770b08691
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a69d30511d01fba2df39483d1f76616bfae7c92812ce75989fd0c23558558b33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118316204"
 ---
-# <a name="scriptingstandardconsumersetting-class"></a>Scriptingstandardconsumersetting-Klasse
+# <a name="scriptingstandardconsumersetting-class"></a>ScriptingStandardConsumerSetting-Klasse
 
-Die Singleton **scriptingstandardconsumersetting** -Klasse stellt Registrierungsdaten bereit, die allen Instanzen der [**activescripteventconsumer**](activescripteventconsumer.md) Standard-Consumerklasse gemeinsam sind. Eine **activescripteventconsumer** -Instanz verwendet die Eigenschaften **maximumscripts** und **Timeout** . Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Die Singleton **ScriptingStandardConsumerSetting-Klasse** stellt Registrierungsdaten bereit, die allen Instanzen der [**ActiveScriptEventConsumer-Standardconsumer-Consumerklasse**](activescripteventconsumer.md) gemeinsam sind. Eine **ActiveScriptEventConsumer-Instanz** verwendet die **Eigenschaften MaximumScripts** und **Timeout.** Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,78 +48,78 @@ class ScriptingStandardConsumerSetting : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **scriptingstandardconsumersetting** -Klasse verfügt über diese Typen von Membern:
+Die **ScriptingStandardConsumerSetting-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **scriptingstandardconsumersetting** -Klasse verfügt über diese Eigenschaften.
+Die **ScriptingStandardConsumerSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](standard-qualifiers.md) (64)
 </dt> </dl>
 
-Eine kurze Beschreibung eines Objekts mit einer Zeilen Zeichenfolge. Enthält die Zeichenfolge **scriptingstandardconsumersetting** , da es sich hierbei um eine Singleton-Klasse handelt.
+Eine kurze Beschreibung eines Objekts, eine einzeilige Zeichenfolge. Enthält die Zeichenfolge **ScriptingStandardConsumerSetting,** da dies eine Singletonklasse ist.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Textbeschreibung eines-Objekts.
+Eine Textbeschreibung eines Objekts.
 
 </dd> <dt>
 
-**Maximumscripts**
+**MaximumScripts**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Maximale Anzahl von Skripts, die ausgeführt werden, bevor ein Consumer eine neue Instanz startet. Wenn Sie Speicher Verluste aus Skripts löschen möchten, fahren Sie den Consumer regelmäßig herunter. Der Standardwert ist 300.
+Maximale Anzahl von Skripts, die ausgeführt werden, bevor ein Consumer eine neue Instanz startet. Fahren Sie den Consumer regelmäßig herunter, um Speicherverluste durch Skripts zu löschen. Der Standardwert ist 300.
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Bezeichner für das Einstellungs Objekt.
+Bezeichner für das Einstellungsobjekt.
 
 </dd> <dt>
 
 **Timeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -128,13 +128,13 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [**Einheiten**](standard-qualifiers.md) ("Minuten")
 </dt> </dl>
 
-Maximale Anzahl von Minuten, bevor ein Consumer eine neue Instanz startet. Wenn 0 (null), steuert die **maximumscripts** -Eigenschaft die Verbraucher Lebensdauer. Der gültige Bereich für das **Timeout** liegt zwischen 0 und 71.000, und der Standardwert ist 0 (null).
+Maximale Anzahl von Minuten, bevor ein Consumer eine neue Instanz startet. Bei 0 (null) steuert die **MaximumScripts-Eigenschaft** die Lebensdauer des Consumers. Der gültige Bereich für **Timeout** ist 0 bis 71.000, und der Standardwert ist 0 (null).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die einzelne Instanz der **scriptingstandardconsumersetting** -Klasse befindet sich im root \\ CIMV2-Namespace.
+Die einzelne Instanz der **ScriptingStandardConsumerSetting-Klasse** befindet sich im \\ cimv2-Stammnamespace.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -144,32 +144,32 @@ Die einzelne Instanz der **scriptingstandardconsumersetting** -Klasse befindet s
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | Stamm \\ Abonnement<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Scrcons. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stammabonnement<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Scrcons.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scrcons.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](/windows/desktop/CIMWin32Prov/cim-setting)
+[**\_CIM-Einstellung**](/windows/desktop/CIMWin32Prov/cim-setting)
 </dt> <dt>
 
-[Standard Consumer-Klassen](standard-consumer-classes.md)
+[Standard-Consumerklassen](standard-consumer-classes.md)
 </dt> <dt>
 
-[Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md)
+[Ausführen eines Skripts basierend auf einem Ereignis](running-a-script-based-on-an-event.md)
 </dt> <dt>
 
 [Erstellen eines logischen Consumers](creating-a-logical-consumer.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen zu allen Zeitpunkten](receiving-events-at-all-times.md)
+[Empfangen von Ereignissen zu jedem Zeitpunkt](receiving-events-at-all-times.md)
 </dt> <dt>
 
-[**\_\_Eventconsumer**](--eventconsumer.md)
+[**\_\_EventConsumer**](--eventconsumer.md)
 </dt> </dl>
 
  

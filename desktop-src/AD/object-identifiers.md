@@ -1,48 +1,48 @@
 ---
-title: Objekt Bezeichner (AD DS)
-description: Objekt-IDs (OIDs) sind eindeutige numerische Werte, die von verschiedenen ausstellenden Behörden ausgegeben werden, um Datenelemente, Syntaxen und andere Teile verteilter Anwendungen eindeutig zu identifizieren.
+title: Objektbezeichner (AD DS)
+description: Objektbezeichner (Object Identifiers, OIDs) sind eindeutige numerische Werte, die von verschiedenen ausstellenden Stellen ausgegeben werden, um Datenelemente, Syntaxen und andere Teile verteilter Anwendungen eindeutig zu identifizieren.
 ms.assetid: a8f5a1c7-eda3-4430-b959-daef13c00a1b
 ms.tgt_platform: multiple
 keywords:
-- Objekt Bezeichner AD
+- Objektbezeichner AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2253a6173e06f5d7b0c136a520db3e1e5a5e798e
-ms.sourcegitcommit: 8ea1a82717bd3dbb3457be0697329aa37fb13f08
+ms.openlocfilehash: af458a003c5a5a8586c32449674019fb6b241d52c4300e107898d91c75047214
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "106339036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118185511"
 ---
-# <a name="object-identifiers-ad-ds"></a>Objekt Bezeichner (AD DS)
+# <a name="object-identifiers-ad-ds"></a>Objektbezeichner (AD DS)
 
-Objekt-IDs (OIDs) sind eindeutige numerische Werte, die von verschiedenen ausstellenden Behörden ausgegeben werden, um Datenelemente, Syntaxen und andere Teile verteilter Anwendungen eindeutig zu identifizieren. OIDs finden Sie in OSI-Anwendungen, X. 500-Verzeichnissen, SNMP und anderen Anwendungen, in denen die Eindeutigkeit wichtig ist. OIDs basieren auf einer Baumstruktur, in der eine übergeordnete ausstellende Zertifizierungsstelle, wie z. b. das ISO, eine Verzweigung der Struktur einer untergeordneten Zertifizierungsstelle zuordnet, die wiederum untergeordnete branches zuordnen kann.
+Objektbezeichner (Object Identifiers, OIDs) sind eindeutige numerische Werte, die von verschiedenen ausstellenden Stellen ausgegeben werden, um Datenelemente, Syntaxen und andere Teile verteilter Anwendungen eindeutig zu identifizieren. OIDs befinden sich in OSI-Anwendungen, X.500-Verzeichnissen, SNMP und anderen Anwendungen, bei denen Eindeutigkeit wichtig ist. OIDs basieren auf einer Struktur, in der eine übergeordnete Ausstellende Stelle, z. B. die ISO, einen Branch der Struktur einer Unterautorität zuordt, die wiederum Unterbranches zuordnen kann.
 
-Das LDAP-Protokoll (RFC 2251) erfordert einen Verzeichnisdienst, um Objektklassen, Attribute und Syntaxen mit OIDs zu identifizieren. Dies ist Teil der LDAP X. 500-Legacy-Version.
+Das LDAP-Protokoll (RFC 2251) erfordert einen Verzeichnisdienst, um Objektklassen, Attribute und Syntaxen mit OIDs zu identifizieren. Dies ist Teil des LDAP X.500-Legacy.
 
-OIDs in Active Directory Domain Services enthalten einige von der ISO-Ausgabe für X. 500-Klassen und-Attribute sowie einige von Microsoft und anderen ausstellenden Behörden ausgestellten. Die OID-Notation ist eine gepunktete Zeichenfolge von Zahlen, z. b. "1.2.840.113556.1.5.9", die in der folgenden Tabelle beschrieben wird.
+OIDs in Active Directory Domain Services enthalten einige, die von der ISO für X.500-Klassen und -Attribute ausgestellt wurden, und einige von Microsoft und anderen ausstellenden Stellen. Die OID-Notation ist eine gepunktete Zahlenzeichenfolge, z.B. "1.2.840.113556.1.5.9", die in der folgenden Tabelle beschrieben wird.
 
 
 
-| Wert  | Bedeutung          | BESCHREIBUNG                                              |
+| Wert  | Bedeutung          | Beschreibung                                              |
 |--------|------------------|----------------------------------------------------------|
-| 1      | ISO              | Identifiziert die Stamm Zertifizierungsstelle.                           |
-| 2      | ANSI             | Von ISO zugewiesene Gruppen Bezeichnung.                       |
-| 840    | USA              | Die von der Gruppe zugewiesene Bezeichnung für Land/Region.        |
-| 113556 | Microsoft        | Organisations Bezeichnung, die vom Land/der Region zugewiesen wird. |
+| 1      | ISO              | Identifiziert die Stammzertifizierungsstelle.                           |
+| 2      | ANSI             | Durch ISO zugewiesene Gruppenbezeichnung.                       |
+| 840    | USA              | Von der Gruppe zugewiesene Länder-/Regionbezeichnung.        |
+| 113556 | Microsoft        | Organisationsbezeichnung, die durch das Land bzw. die Region zugewiesen ist. |
 | 1      | Active Directory | Wird von der Organisation zugewiesen.                            |
 | 5      | Klassen          | Wird von der Organisation zugewiesen.                            |
-| 9      | **Benutzer** Klasse   | Wird von der Organisation zugewiesen.                            |
+| 9      | **user-Klasse**   | Wird von der Organisation zugewiesen.                            |
 
 
 
- 
+ 
 
-Weitere Informationen und eine Erörterung zweier Prozeduren, mit denen gültige OIDs zum Erweitern des Active Directory Schemas abgerufen werden, finden Sie unter Abrufen [eines Objekt Bezeichners](obtaining-an-object-identifier.md).
+Weitere Informationen und eine Erörterung von zwei Verfahren zum Abrufen gültiger OIDs für die Erweiterung des Active Directory-Schemas finden Sie unter [Abrufen eines Objektbezeichners.](obtaining-an-object-identifier.md)
 
- 
+ 
 
- 
+ 
 
 
 

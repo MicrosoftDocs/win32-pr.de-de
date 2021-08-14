@@ -1,7 +1,7 @@
 ---
-description: Enthält Methoden, mit denen die Monitor Helligkeit verwaltet wird.
+description: Enthält Methoden, die die Überwachung der Helligkeit verwalten.
 ms.assetid: e7e4139e-b985-4163-9c95-03008a2cc8cb
-title: Wmimonitorbrightnessmethods-Klasse
+title: WmiMonitorBrightnessMethods-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 36fe823703d5d5e4f1f6008d02c600828fe2b53f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 255cfa75ab892739ce211432ef81d32da4e1cbb3205e5467045e2d81f156d102
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118321362"
 ---
-# <a name="wmimonitorbrightnessmethods-class"></a>Wmimonitorbrightnessmethods-Klasse
+# <a name="wmimonitorbrightnessmethods-class"></a>WmiMonitorBrightnessMethods-Klasse
 
-Die **wmimonitorbrightnessmethods** -WMI-Klasse enthält Methoden, mit denen die Monitor Helligkeit verwaltet wird.
+Die WMI-Klasse **WmiMonitorBrightnessMethods** enthält Methoden, die die Helligkeit des Monitors verwalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,23 +38,23 @@ class WmiMonitorBrightnessMethods
 
 ## <a name="members"></a>Member
 
-Die **wmimonitorbrightnessmethods** -Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorBrightnessMethods-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#wmimonitorbrightnessmethods-class)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **wmimonitorbrightnessmethods** -Klasse verfügt über diese Methoden.
+Die **WmiMonitorBrightnessMethods-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                         | BESCHREIBUNG                                                    |
 |:---------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------|
-| [**Wmireverttopolicyhelligkeit**](wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md) | Legt die Helligkeit auf die Richtlinien Einstellung zurück.<br/>     |
-| [**WMI-talshelligkeit**](wmisetalsbrightness-method-in-class-wmimonitorbrightnessmethods.md)                 | Legt den Wert für Umgebungslichtsensor-Helligkeit fest.<br/>     |
-| [**Wmiantalsbrightnessstate**](wmisetalsbrightnessstate-method-in-class-wmimonitorbrightnessmethods.md)       | Steuert den Helligkeit-Zustand des Umgebungslicht Sensors.<br/> |
-| [**Wmisethelligkeit**](wmisetbrightness-method-in-class-wmimonitorbrightnessmethods.md)                       | Legt die Helligkeit des Monitors fest.<br/>                        |
+| [**WmiRevertToPolicyBrightness**](wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md) | Legt die Helligkeit wieder auf die Richtlinieneinstellung fest.<br/>     |
+| [**WmiSetALSBrightness**](wmisetalsbrightness-method-in-class-wmimonitorbrightnessmethods.md)                 | Legt den Helligkeitswert des Umgebungslichtsensors fest.<br/>     |
+| [**WmiSetALSBrightnessState**](wmisetalsbrightnessstate-method-in-class-wmimonitorbrightnessmethods.md)       | Steuert den Helligkeitszustand des Umgebungslichtsensors.<br/> |
+| [**WmiSetBrightness**](wmisetbrightness-method-in-class-wmimonitorbrightnessmethods.md)                       | Legt die Helligkeit des Monitors fest.<br/>                        |
 
 
 
@@ -62,14 +62,14 @@ Die **wmimonitorbrightnessmethods** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **wmimonitorbrightnessmethods** -Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorBrightnessMethods-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -82,7 +82,7 @@ Gibt den aktiven Monitor an.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -91,7 +91,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Überwachungsinstanz.
 
 </dd> </dl>
 
@@ -103,13 +103,13 @@ Der Name der spezifischen Monitor Instanz.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: 'Für Windows 7 unterstützt tragbare Windows-Geräte die folgenden Attribute für Ereignisse eines Geräte Dienstanbieter. Diese Attribute werden von der iportabledeviceservicecapabili:: geteventattributormethode zurückgegeben.'
+description: Für Windows 7 unterstützt Windows Portable Devices die folgenden Attribute für Ereignisse eines Gerätediensts. Diese Attribute werden von der IPortableDeviceServiceCapabilities::GetEventAttributes-Methode zurückgegeben.
 ms.assetid: 2c71c3ec-842b-44f7-b127-5750883b33ba
-title: Ereignis Attribute (portabledevice. h)
+title: Ereignisattribute (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,25 +13,25 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 68a5964a4f64899d4aa116002b1feb14ce360498
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9ee6fe335d5e3906a923dfe5c470142cdf36fb1e521c3498963e478369a9b251
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118193291"
 ---
-# <a name="event-attributes-portabledeviceh"></a>Ereignis Attribute (portabledevice. h)
+# <a name="event-attributes-portabledeviceh"></a>Ereignisattribute (PortableDevice.h)
 
-Für Windows 7 unterstützt tragbare Windows-Geräte die folgenden Attribute für Ereignisse eines Geräte Dienstanbieter. Diese Attribute werden von der [**iportabledeviceservicecapabili:: geteventattributormethode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-geteventattributes) zurückgegeben.
-
-
+Für Windows 7 unterstützt Windows Portable Devices die folgenden Attribute für Ereignisse eines Gerätediensts. Diese Attribute werden von der [**IPortableDeviceServiceCapabilities::GetEventAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-geteventattributes) zurückgegeben.
 
 
-| Attribut                             | VarType         | BESCHREIBUNG                                                                                                              |
+
+
+| attribute                             | VarType         | BESCHREIBUNG                                                                                                              |
 |---------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------|
-| **Name des WPD- \_ Ereignis \_ Attributs \_**       | **VT \_ LPWSTR**  | Eine Zeichenfolge, die den Skript freundlichen Namen des Ereignisses angibt. Gültige Zeichen sind alphanumerisch \[ a-Za-z0-9 \] und ' \_ '. |
-| **Optionen für das WPD- \_ Ereignis \_ Attribut \_**    | **VT \_ unbekannt** | Ein [**iportabledevicevalues**](iportabledevicevalues.md) -Element, das die Ereignis Optionen enthält.                               |
-| **Parameter für WPD- \_ Ereignis \_ Attribute \_** | **VT \_ unbekannt** | Eine [**iportabledevicekeycollection**](iportabledevicekeycollection.md) , die die Ereignis Parameter enthält.              |
+| **\_ \_ WPD-EREIGNISATTRIBUTNAME \_**       | **VT \_ LPWSTR**  | Eine Zeichenfolge, die den skriptfreundlichen Namen des Ereignisses angibt. Gültige Zeichen sind alphanumerische \[ Zeichen a-zA-Z0-9 \] und ' \_ '. |
+| **OPTIONEN FÜR \_ WPD-EREIGNISATTRIBUTE \_ \_**    | **VT \_ UNKNOWN** | Ein [**IPortableDeviceValues-Wert,**](iportabledevicevalues.md) der die Ereignisoptionen enthält.                               |
+| **\_ \_ WPD-EREIGNISATTRIBUTPARAMETER \_** | **VT \_ UNKNOWN** | Eine [**IPortableDeviceKeyCollection,**](iportabledevicekeycollection.md) die die Ereignisparameter enthält.              |
 
 
 
@@ -43,11 +43,11 @@ Für Windows 7 unterstützt tragbare Windows-Geräte die folgenden Attribute fü
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

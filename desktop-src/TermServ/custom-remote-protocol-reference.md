@@ -1,44 +1,44 @@
 ---
-title: Remotedesktopprotokoll Anbieter Referenz
-description: Enthält Schnittstellen, Strukturen, Unions und Enumerationstypen, die es Ihnen ermöglichen, eine benutzerdefinierte Remotedesktopprotokoll (RDP) zu erstellen.
+title: Remotedesktopprotokoll Anbieterreferenz
+description: Enthält Schnittstellen, Strukturen, Unions und Enumerationstypen, mit denen Sie eine benutzerdefinierte Remotedesktopprotokoll (RDP) erstellen können.
 ms.assetid: 8b115329-a63d-4c1e-b344-a0aa74c40e13
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, Remotedesktopprotokoll Anbieter Verweis
-- Remotedesktopprotokoll (RDP) Remotedesktopdienste, Anbieter Verweis
+- Remotedesktopdienste Remotedesktopdienste , Remotedesktopprotokoll Anbieterreferenz
+- Remotedesktopprotokoll (RDP) Remotedesktopdienste , Anbieterreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 557647b05dc48d3878144f8ab225ddcd77727323
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4b90f4ae544fc502550e85336c1b3851e9aedbe7a90ebb9f1e2b2d331252d302
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131130"
 ---
-# <a name="remote-desktop-protocol-provider-reference"></a>Remotedesktopprotokoll Anbieter Referenz
+# <a name="remote-desktop-protocol-provider-reference"></a>Remotedesktopprotokoll Anbieterreferenz
 
-Die Remotedesktopprotokoll Anbieter-API kann verwendet werden, um ein Protokoll zu erstellen, mit dem die Interaktion zwischen dem Remotedesktopdienste-Dienst und den Desktop Clients angepasst wird. Weitere Informationen finden Sie in den nachfolgenden Themen.
+Die Remotedesktopprotokoll-Anbieter-API kann verwendet werden, um ein Protokoll zu erstellen, das die Interaktion zwischen dem Remotedesktopdienste-Dienst und Desktopclients anpasst. Weitere Informationen finden Sie in den folgenden Themen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Remotedesktopprotokoll Anbieter Enumerationen](custom-remote-protocol-enumerations.md)
--   [Remotedesktopprotokoll Anbieter Schnittstellen](custom-remote-protocol-interfaces.md)
--   [Remotedesktopprotokoll Anbieter Strukturen](custom-remote-protocol-structures.md)
+-   [Remotedesktopprotokoll-Anbieterenumerationen](custom-remote-protocol-enumerations.md)
+-   [Remotedesktopprotokoll-Anbieterschnittstellen](custom-remote-protocol-interfaces.md)
+-   [Remotedesktopprotokoll Anbieterstrukturen](custom-remote-protocol-structures.md)
 -   [Remotedesktopprotokoll Anbieter-Unions](custom-remote-protocol-unions.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen eines Remotedesktopprotokoll Anbieters](creating-a-custom-remote-protocol.md)
+[Erstellen eines Remotedesktopprotokoll-Anbieters](creating-a-custom-remote-protocol.md)
 </dt> <dt>
 
 [Benutzerdefinierte Remotedesktop Protokolle](custom-remote-desktop-protocols.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

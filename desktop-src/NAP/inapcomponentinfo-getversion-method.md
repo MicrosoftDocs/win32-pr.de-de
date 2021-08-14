@@ -1,11 +1,11 @@
 ---
-title: Inapcomponentinfo GetVersion-Methode (napcommon. h)
-description: Wird vom NAP-System verwendet, um die Version eines Integritäts Clients zu erhalten.
+title: INapComponentInfo GetVersion-Methode (NapCommon.h)
+description: Wird vom NAP-System verwendet, um die Version eines Integritätsclients abzurufen.
 ms.assetid: aabd13d9-d2ad-4554-a9f6-7845e6775ccd
 keywords:
 - GetVersion-Methode NAP
-- GetVersion-Methode NAP, inapcomponentinfo-Schnittstelle
-- Inapcomponentinfo Interface NAP, GetVersion-Methode
+- GetVersion-Methode NAP, INapComponentInfo-Schnittstelle
+- INapComponentInfo-Schnittstelle NAP , GetVersion-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa1d62c22acf778430bfc2f9dc0e969887c7b306
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 38e815c7d92ba9a33c07ba4d8d68c588ed0014019d0d173e0304c4a10204d4d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118368382"
 ---
-# <a name="inapcomponentinfogetversion-method"></a>Inapcomponentinfo:: GetVersion-Methode
+# <a name="inapcomponentinfogetversion-method"></a>INapComponentInfo::GetVersion-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapcomponentinfo:: GetVersion** -Rückruf Methode wird vom NAP-System verwendet, um die Version eines Integritäts Clients zu erhalten.
+Die **Rückrufmethode INapComponentInfo::GetVersion** wird vom NAP-System verwendet, um die Version eines Integritätsclients abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT GetVersion(
 
 <dl> <dt>
 
-*Version* \[ vorgenommen\]
+*Version* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**MessageId**](nap-datatypes.md) , die die Ressourcen-ID der Version enthält.
+Ein Zeiger auf eine [**MessageId,**](nap-datatypes.md) die die Ressourcen-ID der Version enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen dieser Fehlercodes basierend auf dem Ergebnis dieses Vorgangs zurück.
+Gibt basierend auf dem Ergebnis dieses Vorgangs einen dieser Fehlercodes zurück.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -76,21 +76,21 @@ Gibt einen dieser Fehlercodes basierend auf dem Ergebnis dieses Vorgangs zurück
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 
 </dt> <dt>
 
-[**Inapcomponentinfo**](inapcomponentinfo.md)
+[**INapComponentInfo**](inapcomponentinfo.md)
 </dt> </dl>
 
  

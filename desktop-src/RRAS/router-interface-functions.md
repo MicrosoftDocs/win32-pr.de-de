@@ -1,17 +1,17 @@
 ---
-title: Funktionen der Routerschnittstelle
+title: Routerschnittstellenfunktionen
 description: Verwenden Sie die folgenden Funktionen, um Schnittstellen auf dem Router zu verwalten.
 ms.assetid: e988753e-908a-4c42-aad3-dd9f641c90a9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3a5318eedfbc3a04c13549012fda3bd4d93b4d9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9bcaaf257e31623036a075c21da66d4665b3afe7e821f8f246f6a225e02b8272
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117787836"
 ---
-# <a name="router-interface-functions"></a>Funktionen der Routerschnittstelle
+# <a name="router-interface-functions"></a>Routerschnittstellenfunktionen
 
 Verwenden Sie die folgenden Funktionen, um Schnittstellen auf dem Router zu verwalten.
 
@@ -19,26 +19,26 @@ Verwenden Sie die folgenden Funktionen, um Schnittstellen auf dem Router zu verw
 
 | Verwaltungsfunktion                                          | Konfigurationsfunktion                                             |
 |------------------------------------------------------------------|--------------------------------------------------------------------|
-| [**Mpradmininterfakecreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate)       | [**Mprconfiginterfaecreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacecreate)       |
-| [**Mpradmininterfacedelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete)       | [**Mprconfiginterfacedelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacedelete)       |
-| [**Mpradmininterfaceerum**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceenum)           | [**Mprconfiginterfacereum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfaceenum)           |
-| [**Mpradmininterfacegethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegethandle) | [**Mprconfiginterfacegethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegethandle) |
-| [**Mpradmininterfacegetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetinfo)     | [**Mprconfiginterfacegetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegetinfo)     |
-| [**Mpradmininterfakesetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetinfo)     | [**Mprconfiginterfakesetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacesetinfo)     |
+| [**MprAdminInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate)       | [**MprConfigInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacecreate)       |
+| [**MprAdminInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete)       | [**MprConfigInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacedelete)       |
+| [**MprAdminInterfaceEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceenum)           | [**MprConfigInterfaceEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfaceenum)           |
+| [**MprAdminInterfaceGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegethandle) | [**MprConfigInterfaceGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegethandle) |
+| [**MprAdminInterfaceGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetinfo)     | [**MprConfigInterfaceGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegetinfo)     |
+| [**MprAdminInterfaceSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetinfo)     | [**MprConfigInterfaceSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacesetinfo)     |
 
 
 
- 
+ 
 
-Diese Funktionen wirken sich auf die Schnittstellen selbst aus, nicht auf Clients, die auf den Schnittstellen Aus diesem Grund erfordert keine der Funktionen, dass der Aufrufer einen bestimmten Transport (IP oder IPX) angibt. Obwohl Clients (z. b. Routing Protokolle) bestimmten Transporten zugeordnet sind, sind die Schnittstellen nicht selbst.
+Diese Funktionen wirken sich auf die Schnittstellen selbst aus, nicht auf Clients, die auf den Schnittstellen ausgeführt werden. Aus diesem Grund muss der Aufrufer für keine der Funktionen einen bestimmten Transport (IP oder IPX) angeben. Obwohl Clients (z. B. Routingprotokolle) bestimmten Transporten zugeordnet sind, ist dies bei den Schnittstellen selbst nicht der Fall.
 
-Diese Funktionen werden direkt von Dim verarbeitet. Die Router-Manager werden nicht verwendet.
+Diese Funktionen werden direkt von DIM verarbeitet. Die Router-Manager werden nicht verwendet.
 
-Die [**mpradmininterfacecreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate) -und [**mpradmininterfacedelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete) -Funktionen können keine LAN-Schnittstellen erstellen oder löschen. Sie können nur Schnittstellen mit Bedarf erstellen oder löschen. Eine Liste der Schnittstellentypen finden Sie unter [**Router \_ Interface \_ Type**](/windows/desktop/api/Mprapi/ne-mprapi-router_interface_type) .
+Die [**Funktionen MprAdminInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate) und [**MprAdminInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete) können KEINE LAN-Schnittstellen erstellen oder löschen. Sie können nur Schnittstellen für die Wahl nach Bedarf erstellen oder löschen. Eine [**Liste der \_ \_ Schnittstellentypen**](/windows/desktop/api/Mprapi/ne-mprapi-router_interface_type) finden Sie unter ROUTER INTERFACE TYPE .
 
- 
+ 
 
- 
+ 
 
 
 

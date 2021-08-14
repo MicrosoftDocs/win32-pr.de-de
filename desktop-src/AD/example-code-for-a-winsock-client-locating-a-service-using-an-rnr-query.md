@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für die Suche nach einem Dienst mithilfe einer RNR-Abfrage
-description: Im folgenden Codebeispiel wird der Winsock-Beispiel Dienst und eine Verbindung mit dem Beispiel angezeigt.
+title: Beispielcode zum Suchen eines Diensts mithilfe einer RnR-Abfrage
+description: Im folgenden Codebeispiel wird der Winsock-Beispieldienst gefunden und eine Verbindung damit herstellt.
 ms.assetid: c05c7f69-d510-4feb-b426-1ae3a3ed5e16
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Suche nach einem Dienst mithilfe einer RNR-Abfrage Anzeige
-- Windows Sockets-Registrierung und-Lösung, Beispiel Code, Suchen eines diensmithilfe einer RNR-Abfrage
-- Suchen eines Dienstanbieter mithilfe einer RNR-Abfrage Anzeige, Beispiel Code
+- Beispielcode zum Suchen eines Diensts mithilfe eines RnR-Abfrage-AD
+- Windows Sockets Registration and Resolution AD , Beispielcode, Suchen eines Diensts mithilfe einer RnR-Abfrage
+- Suchen eines Diensts mithilfe eines RnR-Abfrage-AD , Beispielcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ee1202c981de8b4f1e0bd4f4299b1aabf1be520d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 076bf1cbd2c421c9d76b595a381f2884a398c0db42002e9deedfdd2e5084095d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191377"
 ---
-# <a name="example-code-for-locating-a-service-using-an-rnr-query"></a>Beispiel Code für die Suche nach einem Dienst mithilfe einer RNR-Abfrage
+# <a name="example-code-for-locating-a-service-using-an-rnr-query"></a>Beispielcode zum Suchen eines Diensts mithilfe einer RnR-Abfrage
 
-Im folgenden Codebeispiel wird der Winsock-Beispiel Dienst und eine Verbindung mit dem Beispiel angezeigt.
+Im folgenden Codebeispiel wird der Winsock-Beispieldienst gefunden und eine Verbindung damit herstellt.
 
 
 ```C++
@@ -97,9 +97,9 @@ int main(void)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

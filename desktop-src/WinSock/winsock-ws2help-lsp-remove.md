@@ -1,5 +1,5 @@
 ---
-description: Änderungs Ereignis für den Winsock-Katalog für einen mehrstufigen Dienstanbieter (LSP).
+description: Winsock-Katalogänderungsereignis für einen LSP-Entfernungsvorgang (Layered Service Provider).
 ms.assetid: 86FF17F7-8CCF-4A03-899F-42BFACDF3F54
 title: WINSOCK_WS2HELP_LSP_REMOVE Ereignis
 ms.topic: reference
@@ -12,21 +12,21 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 597cd2f8cfc3bb7727301e64af53671bafbd9469
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0ac13a5404dcbbfe5fb5f5d8c2a5f17d43edeb72ba135abfc7e85ad9e5227a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118321592"
 ---
-# <a name="winsock_ws2help_lsp_remove-event"></a>Winsock \_ WS2HELP \_ LSP- \_ Entfernungs Ereignis
+# <a name="winsock_ws2help_lsp_remove-event"></a>WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Ab Windows 8 und Windows Server 2012 verwenden Sie die [Windows-Filter Plattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrstufige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 und Windows Server 2012 [Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Das **Winsock \_ WS2HELP \_ LSP- \_ Entfernungs** Ereignis ist ein Winsock-Katalog Änderungs Ereignis für einen überlappenden Dienstanbieter (LSP).
+Das **WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis** ist ein Winsock-Katalogänderungsereignis für einen LSP-Entfernungsvorgang (Layered Service Provider).
 
 
 ```C++
@@ -42,41 +42,41 @@ const EVENT_DESCRIPTOR WINSOCK_WS2HELP_LSP_REMOVE = {0x2, 0x0, 0x10, 0x0, 0x0, 0
 *LSP-Name* 
 </dt> <dd>
 
-Der Name des LSP, der vom **szprotocol** -Member der [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur für den zu entfernenden LSP abgerufen wird.
+Der Name des LSP, der aus dem **szProtocol-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den LSP abgerufen wurde, der entfernt wird.
 
 </dd> <dt>
 
 *Katalog* 
 </dt> <dd>
 
-Der Winsock-Katalog (32 Bit oder 64 Bit), in dem der LSP entfernt wird. Dies ist ein ganzzahliger Wert, der entweder 32 oder 64 ist.
+Der Winsock-Katalog (32-Bit oder 64-Bit), aus dem der LSP entfernt wird. Dies ist ein ganzzahliger Wert, der entweder 32 oder 64 ist.
 
 </dd> <dt>
 
 *Installationsprogramm* 
 </dt> <dd>
 
-Der Modul Dateiname der Anwendung, die den LSP-Befehl zum Entfernen aufruft.
+Der Moduldateiname der Anwendung, die den LSP-Entfernungsaufruf vornimmt.
 
 </dd> <dt>
 
 *GUID* 
 </dt> <dd>
 
-Der GUID-Wert des Winsock-Transport Anbieters, aus dem der LSP entfernt wird.
+Der GUID-Wert des Winsock-Transportanbieters, aus dem der LSP entfernt wird.
 
 </dd> <dt>
 
 *Kategorie* 
 </dt> <dd>
 
-Der **dwcatalogentryid** -Member der [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur für den LSP, der entfernt wird.
+Der **dwCatalogEntryId-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den LSP, der entfernt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Winsock \_ WS2HELP \_ LSP- \_ Entfernungs** Ereignis wird für einen LSP-Entfernungs Vorgang nachverfolgt, wenn ein Protokolleintrag aus dem Winsock-Katalog entfernt wird.
+Das **WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis** wird für einen LSP-Entfernungsvorgang nachverfolgt, wenn ein Protokolleintrag aus dem Winsock-Katalog entfernt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,25 +84,25 @@ Das **Winsock \_ WS2HELP \_ LSP- \_ Entfernungs** Ereignis wird für einen LSP-E
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kontrolle über die Winsock-Ablauf Verfolgung](control-of-winsock-tracing.md)
+[Steuerung der Winsock-Ablaufverfolgung](control-of-winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
+[Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> <dt>
 
-[Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+[Details zur Ablaufverfolgung von Winsock-Katalogänderungen](winsock-layered-service-provider-tracing-event-details.md)
 </dt> </dl>
 
  

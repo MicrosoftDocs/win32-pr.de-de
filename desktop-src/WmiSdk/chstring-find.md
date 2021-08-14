@@ -1,23 +1,23 @@
 ---
-description: Mit der Find-Methode wird eine Zeichenfolge nach der ersten Entsprechung einer Teil Zeichenfolge durchsucht.
+description: Die Find-Methode durchsucht eine Zeichenfolge nach der ersten Übereinstimmung einer Teilzeichenfolge.
 audience: developer
 ms.assetid: 98a7c5ad-5bc7-4918-b978-45d2b439f250
 ms.tgt_platform: multiple
-title: 'Chstring:: Find-Methoden (chstring. h)'
+title: CHString::Find-Methoden (ChString.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 5996ca5c06e2101fad834ce2e37df31ee435fbb3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7f326b202d107dc192683517508446b3c785266c675e5cf27d92577311d453a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118319994"
 ---
-# <a name="chstringfind-methods"></a>Chstring:: Find-Methoden
+# <a name="chstringfind-methods"></a>CHString::Find-Methoden
 
-\[Die [**chstring**](chstring.md) -Klasse ist Teil des WMI-Anbieter-Frameworks, das jetzt im Endzustand behandelt wird, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Probleme verfügbar sein, die diese Bibliotheken betreffen. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CHString-Klasse**](chstring.md) ist Teil des WMI-Anbieterframework, das jetzt als endgültig betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
 
-Mit der **Find** -Methode wird eine Zeichenfolge nach der ersten Entsprechung einer Teil Zeichenfolge durchsucht.
+Die **Find-Methode** durchsucht eine Zeichenfolge nach der ersten Übereinstimmung einer Teilzeichenfolge.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -25,8 +25,8 @@ Mit der **Find** -Methode wird eine Zeichenfolge nach der ersten Entsprechung ei
 
 | Methode                                          | BESCHREIBUNG                                             |
 |:------------------------------------------------|:--------------------------------------------------------|
-| [**Suchen (WChar)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr))     | Sucht in dieser Zeichenfolge nach dem **WSTR** .<br/>    |
-| [**Suchen (LPCWSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr)) | Sucht in dieser Zeichenfolge nach **LPCWSTR** .<br/> |
+| [**Find(WCHAR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr))     | Sucht in dieser **Zeichenfolge nach dem WSTR.**<br/>    |
+| [**Find(LPCWSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr)) | Sucht in dieser **Zeichenfolge nach LPCWSTR.**<br/> |
 
 
 
@@ -38,8 +38,8 @@ Mit der **Find** -Methode wird eine Zeichenfolge nach der ersten Entsprechung ei
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                                                                                |
-| Header<br/>                   | <dl> <dt>Chstring. h (Include-Datei "f")</dt> </dl>                                                    |
-| Bibliothek<br/>                  | <dl> <dt>Framedyn. lib</dt> </dl>                                                                       |
+| Header<br/>                   | <dl> <dt>ChString.h (include FwCommon.h)</dt> </dl>                                                    |
+| Bibliothek<br/>                  | <dl> <dt>FrameDyn.lib</dt> </dl>                                                                       |
 | DLL<br/>                      | <dl> <dt>FrameDynOS.dll; </dt> <dt>FrameDyn.dll</dt> </dl> |
 
 

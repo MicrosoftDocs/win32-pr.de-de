@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: MofDeserializerSchemaValidationOption-Enumeration'
+description: 'Weitere Informationen zu: MofDeserializerSchemaValidationOption-Enumeration'
 title: MofDeserializerSchemaValidationOption-Enumeration (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: MofDeserializerSchemaValidationOption enumeration (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: T:Microsoft.Management.Infrastructure.Serialization.MofDeserializerSchemaValidationOption
@@ -38,12 +38,12 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: 18baf6fa3ab837a82d725b72b8b60e3b33b7175f
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 8892b145ebf03fdd995de8ef414394a79bb9b6b67514cde37a461003483534d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444971"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118317186"
 ---
 # <a name="mofdeserializerschemavalidationoption-enumeration"></a>MofDeserializerSchemaValidationOption-Enumeration
 
@@ -74,9 +74,9 @@ Friend Enumeration MofDeserializerSchemaValidationOption
 
 |Membername|Beschreibung|
 |-|-|
-|Standard|Gibt die Standardschemaüberprüfung an.|
-|Strict|Gibt die strenge Schemavalidierung an.|
-|Lose|Gibt eine lose Schemavalidierung an.|
+|Standard|Gibt die Standardmäßige Schemavalidierung an.|
+|Strict|Gibt eine strenge Schemavalidierung an.|
+|Lose|Gibt die lose Schemavalidierung an.|
 |IgnorePropertyType|Gibt an, dass die Schemavalidierung Eigenschaftstypen ignorieren soll.|
 |Ignorieren|Gibt an, dass die Schemavalidierung ignoriert werden soll.|
 

@@ -1,36 +1,36 @@
 ---
-description: 'Eine der Hauptaufgaben von IWbemLocator:: ConnectServer für WMI ist die Rückgabe eines Zeigers auf einen IWbemServices-Proxy.'
+description: Eine der Hauptaufgaben von IWbemLocator::ConnectServer für WMI ist die Rückgabe eines Zeigers auf einen IWbemServices-Proxy.
 ms.assetid: bbff43b7-79f8-4c7b-a772-d3d962cf3859
 ms.tgt_platform: multiple
-title: Festlegen der Authentifizierung mithilfe von C++
+title: Festlegen der Authentifizierung mit C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 293d317ac521d36bf7ff616a0340f86c364ce885
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d7b0ef3bcd1e9908815c94dacc3815fec77eaea33f2da48119dbe3178563eae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315617"
 ---
-# <a name="setting-authentication-using-c"></a>Festlegen der Authentifizierung mithilfe von C++
+# <a name="setting-authentication-using-c"></a>Festlegen der Authentifizierung mit C++
 
-Eine der Hauptaufgaben von [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) für WMI ist die Rückgabe eines Zeigers auf einen [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy. Über den **IWbemServices** -Proxy können Sie auf die Funktionen der WMI-Infrastruktur zugreifen. Der Zeiger auf den **IWbemServices** -Proxy hat jedoch die Identität des Client Anwendungsprozesses und nicht die Identität des **IWbemServices** -Prozesses. Wenn Sie also versuchen, mit dem-Zeiger auf **IWbemServices** zuzugreifen, können Sie einen Zugriff verweigerten Code wie z. b. " **E \_ AccessDenied**" erhalten. Um den Fehler "Zugriff verweigert" zu vermeiden, müssen Sie die Identität des neuen Zeigers mit einem Aufrufen der [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) -Schnittstelle festlegen.
+Eine der Hauptaufgaben von [**IWbemLocator::ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) für WMI ist die Rückgabe eines Zeigers auf einen [**IWbemServices-Proxy.**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) Über den **IWbemServices-Proxy** können Sie auf die Funktionen der WMI-Infrastruktur zugreifen. Der Zeiger auf den **IWbemServices-Proxy** weist jedoch die Identität des Clientanwendungsprozesses und nicht die Identität des **IWbemServices-Prozesses** auf. Wenn Sie daher versuchen, mit dem Zeiger auf **IWbemServices** zuzugreifen, können Sie einen vom Zugriff verweigerten Code wie **E \_ ACCESSDENIED** erhalten. Um den Fehler "Zugriff verweigert" zu vermeiden, müssen Sie die Identität des neuen Zeigers mit einem Aufruf der [**CoSetProxyBlanket-Schnittstelle**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) festlegen.
 
-Ein Anbieter kann die Sicherheit für einen Namespace so festlegen, dass keine Daten zurückgegeben werden, es sei denn, Sie verwenden den Paket Datenschutz (**PKTPRIVACY**) in der Verbindung mit diesem Namespace. Dadurch wird sichergestellt, dass die Daten beim Überschreiten des Netzwerks verschlüsselt werden. Wenn Sie versuchen, eine niedrigere Authentifizierungs Ebene festzulegen, erhalten Sie die Meldung "Zugriff verweigert". Weitere Informationen finden Sie unter [Festlegen von namepace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md).
+Ein Anbieter kann die Sicherheit für einen Namespace so festlegen, dass keine Daten zurückgegeben werden, es sei denn, Sie verwenden den Paketdatenschutz (**PktPrivacy**) in Ihrer Verbindung mit diesem Namespace. Dadurch wird sichergestellt, dass Daten verschlüsselt werden, während sie das Netzwerk passieren. Wenn Sie versuchen, eine niedrigere Authentifizierungsebene festzulegen, erhalten Sie die Meldung Zugriff verweigert. Weitere Informationen finden Sie unter [Setting Namepace Security Descriptors](setting-namespace-security-descriptors.md).
 
-Weitere Informationen zum Festlegen der Authentifizierung bei der Skripterstellung finden [Sie unter Festlegen der standardmäßigen Prozess Sicherheitsstufe mithilfe von VBScript](setting-the-default-process-security-level-using-vbscript.md).
+Weitere Informationen zum Festlegen der Authentifizierung in Skripts finden Sie unter [Festlegen der Standardprozesssicherheitsstufe mit VBScript.](setting-the-default-process-security-level-using-vbscript.md)
 
-## <a name="setting-security-on-a-remote-iunknown-interface"></a>Festlegen der Sicherheit für eine IUnknown-Remote Schnittstelle
+## <a name="setting-security-on-a-remote-iunknown-interface"></a>Festlegen der Sicherheit auf einer IUnknown-Remoteschnittstelle
 
-In einigen Situationen ist mehr Zugriff auf einen Server als nur ein Zeiger auf einen Proxy erforderlich. Manchmal müssen Sie möglicherweise eine sichere Verbindung mit der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle des Proxys herstellen. Mithilfe von **IUnknown** können Sie das Remote System nach Schnittstellen und anderen notwendigen Techniken Abfragen.
+In einigen Situationen ist mehr Zugriff auf einen Server als nur ein Zeiger auf einen Proxy erforderlich. Manchmal müssen Sie möglicherweise eine sichere Verbindung mit der [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) des Proxys herstellen. Mithilfe von **IUnknown** können Sie das Remotesystem nach Schnittstellen und anderen erforderlichen Techniken abfragen.
 
-Wenn sich ein Proxy auf einem Remote Computer befindet, delegiert der Server alle Aufrufe an die [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle des Proxys an die **IUnknown** -Schnittstelle. Wenn Sie z. b. [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf einem Proxy aufzurufen und die angeforderte Schnittstelle nicht Teil des Proxys ist, sendet der Proxy den-Aufrufe an den Remote Server. Der Remote Server überprüft wiederum die entsprechende Schnittstellen Unterstützung. Wenn der Server die-Schnittstelle unterstützt, Marshalls com einen neuen Proxy zurück an den Client, damit die Anwendung die neue-Schnittstelle verwenden kann.
+Wenn sich ein Proxy auf einem Remotecomputer befindet, delegiert der Server alle Aufrufe an die [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) des Proxys an die **IUnknown-Schnittstelle.** Wenn Sie beispielsweise [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für einen Proxy aufrufen und die angeforderte Schnittstelle nicht Teil des Proxys war, sendet der Proxy den Aufruf an den Remoteserver. Der Remoteserver überprüft wiederum die entsprechende Schnittstellenunterstützung. Wenn der Server die -Schnittstelle unterstützt, marshallt COM einen neuen Proxy zurück an den Client, damit die Anwendung die neue Schnittstelle verwenden kann.
 
-Es treten Probleme auf, wenn der Client keine Zugriffsberechtigungen für den Remote Server hat, sondern die Anmelde Informationen eines Benutzers verwendet, der das verwendet. In dieser Situation tritt beim Versuch, auf die [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf dem Remote Server zuzugreifen, ein Fehler auf. Die endgültige Version des Proxys schlägt ebenfalls fehl, da der aktuelle Benutzer keinen Zugriff auf den Remote Server hat. Ein Symptom hierfür ist eine Verzögerung von einem oder zwei Sekunden, bevor die Client Anwendung die endgültige Proxy Version misslingt. Der Fehler tritt auf, weil com versucht hat, unter Verwendung der Standard Sicherheitseinstellungen des aktuellen Benutzers auf den Remote Server zuzugreifen, die nicht die geänderten Anmelde Informationen enthalten, die den Zugriff auf den Server an erster Stelle zugelassen haben. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für IWbemServices und andere](setting-the-security-on-iwbemservices-and-other-proxies.md)Proxys.
+Probleme treten auf, wenn der Client nicht über Zugriffsberechtigungen für den Remoteserver verfügt, jedoch die Anmeldeinformationen eines Benutzers verwendet, der dies tut. In diesem Fall schlägt jeder Versuch fehl, auf [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf dem Remoteserver zuzugreifen. Die endgültige Version auf dem Proxy schlägt ebenfalls fehl, da der aktuelle Benutzer keinen Zugriff auf den Remoteserver hat. Ein Symptom hierfür ist eine Verzögerung von ein oder zwei Sekunden, bevor die Clientanwendung die endgültige Proxyversion ausfällt. Der Fehler tritt auf, weil COM versucht hat, mithilfe der Standardsicherheitseinstellungen des aktuellen Benutzers auf den Remoteserver zuzugreifen, die nicht die geänderten Anmeldeinformationen enthalten, die den Zugriff auf den Server überhaupt erlaubt haben. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für IWbemServices und andere Proxys.](setting-the-security-on-iwbemservices-and-other-proxies.md)
 
-Um die fehlgeschlagene Verbindung zu vermeiden, legen Sie mit [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) die Sicherheits Authentifizierung für den von [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)zurückgegebenen Zeiger explizit fest. Mithilfe von **CoSetProxyBlanket** können Sie sicherstellen, dass der Remote Server die richtige Authentifizierungs Identität erhält.
+Um die fehlgeschlagene Verbindung zu vermeiden, verwenden [**Sie CoSetProxyBlanket,**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) um die Sicherheitsauthentifizierung für den von [**IUnknown zurückgegebenen**](/windows/win32/api/unknwn/nn-unknwn-iunknown)Zeiger explizit festzulegen. Mit **CoSetProxyBlanket** können Sie sicherstellen, dass der Remoteserver die richtige Authentifizierungsidentität empfängt.
 
-Im folgenden Codebeispiel wird gezeigt, wie [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) verwendet wird, um auf eine [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Remote Schnittstelle zuzugreifen.
+Das folgende Codebeispiel zeigt, wie [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) verwendet wird, um auf eine [**IUnknown-Remoteschnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) zuzugreifen.
 
 
 ```C++
@@ -118,7 +118,7 @@ delete pAuthIdentity;
 
 
 > [!Note]  
-> Wenn Sie die Sicherheit für die [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle eines Proxys festlegen, erstellt com eine Kopie des Proxys, die nicht freigegeben werden kann, bis Sie die [**entiinitialisierung**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)aufruft.
+> Wenn Sie die Sicherheit für die [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) eines Proxys festlegen, erstellt COM eine Kopie des Proxys, die erst freigegeben werden kann, wenn Sie [**CoUninitialize**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)aufrufen.
 
  
 

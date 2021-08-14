@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Flash Model-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.FlashModel-Eigenschaft.
 ms.assetid: ef322823-1b87-40ea-a5e3-e7551f14e44d
-title: System. Photo. Flash Model-fotometadatenrichtlinie
+title: System.Photo.FlashModel-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01ade3769cb0d852239af84b769b85d5b3849589
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15c9e45e1ef759f2bee0d383cde3bcdabe8be67dc55a463ab6c9f7e6e05889a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118204881"
 ---
-# <a name="systemphotoflashmodel-photo-metadata-policy"></a>System. Photo. Flash Model-fotometadatenrichtlinie
+# <a name="systemphotoflashmodel-photo-metadata-policy"></a>System.Photo.FlashModel-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. Photo. Flash Model](../properties/props-system-photo-flashmodel.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.FlashModel-Eigenschaft.](../properties/props-system-photo-flashmodel.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto- \_ Flash Modell
+PKEY \_ Photo \_ FlashModel
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,9 +35,9 @@ VT \_ LPWSTR
 
 Eine Zeichenfolge.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="precedence-of-paths-jpeg"></a>Rangfolge von Pfaden (JPEG)
 
@@ -45,35 +45,35 @@ Wenn die Datei im JPEG-Format vorliegt, verwendet der Handler beim Lesen oder Sc
 
 
 
-| Auftrag | Pfad                           | Datenträger Format | Datenformat | Erforderlich |
+| Auftrag | Pfad                           | Datenträgerformat | Datenformat | Erforderlich |
 |-------|--------------------------------|-------------|-------------|----------|
-| 1     | /XMP/MicrosoftPhoto: Flash Model | Unicode     |             | Ja      |
+| 1     | /xmp/MicrosoftPhoto:FlashModel | Unicode     |             | Ja      |
 
 
 
  
 
-### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (TIFF)
+### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (Precedence of Paths, TIFF)
 
 Wenn die Datei im TIFF-Format vorliegt, verwendet der Handler beim Lesen oder Schreiben der Daten die folgende Rangfolge.
 
 
 
-| Auftrag | Pfad                               | Datenträger Format | Datenformat | Erforderlich |
+| Auftrag | Pfad                               | Datenträgerformat | Datenformat | Erforderlich |
 |-------|------------------------------------|-------------|-------------|----------|
-| 1     | /IFD/XMP/MicrosoftPhoto: Flash Model | Unicode     |             | Ja      |
+| 1     | /ifd/xmp/MicrosoftPhoto:FlashModel | Unicode     |             | Ja      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Flash Model](../properties/props-system-photo-flashmodel.md)
+[System.Photo.FlashModel](../properties/props-system-photo-flashmodel.md)
 </dt> </dl>
 
  

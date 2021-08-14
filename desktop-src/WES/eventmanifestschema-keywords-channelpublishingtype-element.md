@@ -1,9 +1,9 @@
 ---
-title: Keywords-Element (channelpublishingtype)
+title: keywords (ChannelPublishingType)-Element
 description: Eine Bitmaske, die die Kategorie der Ereignisse bestimmt, die in den Kanal geschrieben werden.
 ms.assetid: 5157e63f-3e46-4248-b0ca-116a5d5ada2c
 keywords:
-- Keywords-Element (EventLog)
+- Keywords-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2d86508b5c20b735dc229d298cfe5cd42644d0bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 99a4cba08db707914c8378b53c3dccb49e4222e803a8359fe3bcb24918277309
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118343593"
 ---
-# <a name="keywords-channelpublishingtype-element"></a>Keywords-Element (channelpublishingtype)
+# <a name="keywords-channelpublishingtype-element"></a>keywords (ChannelPublishingType)-Element
 
 Eine Bitmaske, die die Kategorie der Ereignisse bestimmt, die in den Kanal geschrieben werden.
 
@@ -30,7 +30,7 @@ Eine Bitmaske, die die Kategorie der Ereignisse bestimmt, die in den Kanal gesch
  />
 ```
 
-Das **Keywords** -Element wird durch den komplexen [**channelpublishingtype**](eventmanifestschema-channelpublishingtype-complextype.md) -Typ definiert.
+Das **Keywords-Element** wird vom komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **Keywords** -Element wird durch den komplexen [**channelpublishingtype**](e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Veröffentlichung (channelType)**](eventmanifestschema-publishing-channeltype-element.md)
+[**publishing (ChannelType)**](eventmanifestschema-publishing-channeltype-element.md)
 </dt> </dl>
 
  

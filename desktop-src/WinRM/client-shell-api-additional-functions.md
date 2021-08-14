@@ -1,37 +1,37 @@
 ---
 title: Zusätzliche Funktionen der ClientShell-API
-description: In der folgenden Tabelle finden Sie eine Übersicht über die nicht-Kernfunktionen für die-Windows-Remoteverwaltung (WinRM)-ClientShell-API (Application Programming Interface).
+description: Die folgende Tabelle enthält eine Übersicht über die Nicht-Kernfunktionen für die Windows Remoteverwaltung (WinRM) Client Shell Application Programming Interface (API).
 ms.assetid: ea90e314-12c1-42e7-bafa-15dd8ce63aa6
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86804191966191778eedbe758c5e4a4b48b4027a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: af95ded69de88d886b655938206682eb7964b6421d842c9f3318e175d288f6ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118323999"
 ---
 # <a name="client-shell-api-additional-functions"></a>Zusätzliche Funktionen der ClientShell-API
 
-In der folgenden Tabelle finden Sie eine Übersicht über die nicht-Kernfunktionen für die-Windows-Remoteverwaltung (WinRM)-ClientShell-API (Application Programming Interface).
+Die folgende Tabelle enthält eine Übersicht über die Nicht-Kernfunktionen für die Windows Remoteverwaltung (WinRM) Client Shell Application Programming Interface (API).
 
 
 
 | Zusätzliche Funktionen                                                   | BESCHREIBUNG                       |
 |------------------------------------------------------------------------|-----------------------------------|
-| [**Wsmangeterrormessage**](/windows/desktop/api/Wsman/nf-wsman-wsmangeterrormessage)                   | Ruft Fehlermeldungen ab.              |
-| [**Wsmangeungessionoptionasdword**](/windows/desktop/api/Wsman/nf-wsman-wsmangetsessionoptionasdword)   | Ruft Sitzungs Optionen als DWORD ab.  |
-| [**Wsmangeungessionoptionasstring**](/windows/desktop/api/Wsman/nf-wsman-wsmangetsessionoptionasstring) | Ruft Sitzungs Optionen als Zeichenfolge ab. |
-| [**Wsmansessionoption**](/windows/desktop/api/Wsman/nf-wsman-wsmansetsessionoption)                 | Legt Sitzungs Optionen fest.             |
+| [**WSManGetErrorMessage**](/windows/desktop/api/Wsman/nf-wsman-wsmangeterrormessage)                   | Ruft Fehlermeldungen ab.              |
+| [**WSManGetSessionOptionAsDword**](/windows/desktop/api/Wsman/nf-wsman-wsmangetsessionoptionasdword)   | Ruft Sitzungsoptionen als DWORD ab.  |
+| [**WSManGetSessionOptionAsString**](/windows/desktop/api/Wsman/nf-wsman-wsmangetsessionoptionasstring) | Ruft Sitzungsoptionen als Zeichenfolge ab. |
+| [**WSManSetSessionOption**](/windows/desktop/api/Wsman/nf-wsman-wsmansetsessionoption)                 | Legt Sitzungsoptionen fest.             |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

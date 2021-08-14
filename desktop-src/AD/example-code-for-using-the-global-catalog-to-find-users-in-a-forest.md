@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für die Verwendung des globalen Katalogs zum Suchen nach Benutzern in einer Gesamtstruktur
-description: Dieses Thema enthält Codebeispiele, die für die Suche nach Benutzern in einer Gesamtstruktur verwendet werden.
+title: Beispielcode für die Verwendung des globalen Katalogs zum Suchen von Benutzern in einer Gesamtstruktur
+description: Dieses Thema enthält Codebeispiele für die Suche nach Benutzern in einer Gesamtstruktur.
 ms.assetid: bdcbfb7e-e1ea-4275-96b0-1c895e28e176
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, verwenden des globalen Katalogs für die Suche nach Benutzern in einer Gesamtstruktur
+- Active Directory-Beispiele für Active Directory mithilfe des globalen Katalogs zum Suchen von Benutzern in einer Gesamtstruktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bea13ac3dbc4455d10dbd56f78e50c0f2ea27301
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ac868537e1bbb8d4b2400f5cd32dd0d55efeb448b10b40ae88aaf5a35bfb2d8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189713"
 ---
-# <a name="example-code-for-using-the-global-catalog-to-find-users-in-a-forest"></a>Beispiel Code für die Verwendung des globalen Katalogs zum Suchen nach Benutzern in einer Gesamtstruktur
+# <a name="example-code-for-using-the-global-catalog-to-find-users-in-a-forest"></a>Beispielcode für die Verwendung des globalen Katalogs zum Suchen von Benutzern in einer Gesamtstruktur
 
-Dieses Thema enthält Codebeispiele, die für die Suche nach Benutzern in einer Gesamtstruktur verwendet werden.
+Dieses Thema enthält Codebeispiele für die Suche nach Benutzern in einer Gesamtstruktur.
 
-Im folgenden Visual Basic Codebeispiel wird gezeigt, wie ADSI verwendet wird, um nach Benutzern in einer Gesamtstruktur zu suchen.
+Das folgende Visual Basic Codebeispiel zeigt, wie Sie ADSI verwenden, um nach Benutzern in einer Gesamtstruktur zu suchen.
 
 
 ```VB
@@ -233,9 +233,9 @@ HRESULT PrintAllUsersInGlobalCatalog()
 
 
 
- 
+ 
 
- 
+ 
 
 
 

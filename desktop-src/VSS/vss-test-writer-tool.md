@@ -1,46 +1,46 @@
 ---
-description: Der testwriter ist ein Hilfsprogramm, das Sie zum Testen von VSS-Anforderer-Anwendungen verwenden können.
+description: Der Test Writer ist ein Hilfsprogramm, mit dem Sie VSS-Anforderungsanwendungen testen können.
 ms.assetid: 02434cb9-390c-4cf0-9941-b833ace55685
-title: VSS-testwriter-Tool
+title: VSS Test Writer-Tool
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61ffdbb513697a701866be5ceeb40168e8c28368
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b93f0b81bd5e27db9fdfb70ca52e6f43bbb1e853af87bc12e1d76f01d7966ef3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118344233"
 ---
-# <a name="vss-test-writer-tool"></a>VSS-testwriter-Tool
+# <a name="vss-test-writer-tool"></a>VSS Test Writer-Tool
 
-Der testwriter ist ein Hilfsprogramm, das Sie zum Testen von VSS-Anforderer-Anwendungen verwenden können. Dieser Writer kann so konfiguriert werden, dass er fast alle Aktionen durchführt, die von einem VSS Writer durchgeführt werden können. Außerdem führt der testwriter umfassende Prüfungen durch, um sicherzustellen, dass die anfordernde Person diese Writer-Aktionen ordnungsgemäß verarbeitet hat.
+Der Test Writer ist ein Hilfsprogramm, mit dem Sie VSS-Anforderungsanwendungen testen können. Dieser Writer kann so konfiguriert werden, dass er fast alle Aktionen ausführen kann, die ein VSS Writer ausführen kann. Darüber hinaus führt der Test Writer umfangreiche Überprüfungen durch, um sicherzustellen, dass die anfordernde Personen mit diesen Writeraktionen ordnungsgemäß umgegangen sind.
 
-Jede Instanz des Writers wird mit einer XML-Konfigurationsdatei initialisiert, die genau beschreibt, welche Komponenten der Writer meldet und wie sich der Writer verhält. Der Writer kann so konfiguriert werden, dass er über verschiedene Arten von Szenarien berichtet, einschließlich komplizierterer Szenarien mithilfe der inkrementellen und differenziellen Schnittstellen. Der Writer führt während des Prozesses Überprüfungen an verschiedenen Punkten durch, um sicherzustellen, dass sich der Anforderer ordnungsgemäß verhält. Nachdem die Wiederherstellung abgeschlossen ist, überprüft der Writer, ob alle erforderlichen Dateien ohne Beschädigung wieder hergestellt wurden. Der Writer kann auch konfiguriert werden, um andere Vorgänge auszuführen, z. b. fehlerhafte Ereignisse.
+Jede Instanz des Writer wird mit einer XML-Konfigurationsdatei initialisiert, die genau beschreibt, über welche Komponenten der Writer berichten wird und wie sich der Writer verhält. Der Writer kann so konfiguriert werden, dass er über verschiedene Arten von Szenarien berichtet, einschließlich komplizierterer Szenarien mithilfe der inkrementellen und differenziellen Schnittstellen. Der Writer führt während des Prozesses überprüfungen an verschiedenen Stellen durch, um sicherzustellen, dass sich der Anfordernde ordnungsgemäß verhält. Nach Abschluss der Wiederherstellung überprüft der Writer, ob alle erforderlichen Dateien ohne Beschädigung wiederhergestellt wurden. Der Writer kann auch so konfiguriert werden, dass er andere Vorgänge wie fehlerspezifische Ereignisse ausführen kann.
 
 > [!Note]  
-> Dieses Tool ist im Microsoft Windows Software Development Kit (SDK) für Windows Vista und höher enthalten. Sie können die Windows SDK von herunterladen [https://msdn.microsoft.com/windowsvista](https://msdn.microsoft.com/windows/default.aspx) .
+> Dieses Tool ist im Microsoft Windows Software Development Kit (SDK) für Windows Vista und höher enthalten. Sie können das Windows SDK von [https://msdn.microsoft.com/windowsvista](https://msdn.microsoft.com/windows/default.aspx) herunterladen.
 
  
 
-In der Windows SDK-Installation befindet sich das Tool vsssampleprovider in `%Program Files(x86)%\Windows Kits\8.1\bin\x64` (für 64-Bit-Windows) und `%Program Files(x86)%\Windows Kits\8.1\bin\x86` .
+In der Windows SDK-Installation finden Sie das VssSampleProvider-Tool unter `%Program Files(x86)%\Windows Kits\8.1\bin\x64` (für 64-Bit-Windows) und `%Program Files(x86)%\Windows Kits\8.1\bin\x86` .
 
-## <a name="running-the-test-writer-tool"></a>Ausführen des testwriter-Tools
+## <a name="running-the-test-writer-tool"></a>Ausführen des Test Writer-Tools
 
-Um den testwriter zu starten, geben Sie Folgendes an der Eingabeaufforderung ein:
+Geben Sie an der Eingabeaufforderung Folgendes ein, um den Test Writer zu starten:
 
-**vswriter.exe** *config-Datei*
+**vswriter.exe** *config-file*
 
-Dabei ist *config-file* der Pfad zu einer Konfigurationsdatei, die das Verhalten dieses Writers angibt.
+dabei *ist config-file* der Pfad zu einer Konfigurationsdatei, die das Verhalten dieses Writer angibt.
 
-Drücken Sie STRG + C, um den testwriter anzuhalten.
+Drücken Sie STRG+C, um den TestWriter zu beenden.
 
-Mehrere Instanzen des testwriters können gleichzeitig ausgeführt werden. Jede Instanz des Writers meldet jedoch dieselbe Writer-Klassen-ID (aber eine andere Writer-Instanz-ID), sodass logische Pfade und Komponentennamen für alle gleichzeitig auszulaufenden Instanzen des Writers eindeutig sein müssen.
+Mehrere Instanzen des TestWriters können gleichzeitig ausgeführt werden. Jede Instanz des Writers gibt jedoch die gleiche Writerklassen-ID (jedoch eine andere Writerinstanz-ID) an, sodass logische Pfade und Komponentennamen für alle instanzen des Writers, die gleichzeitig ausgeführt werden, eindeutig sein müssen.
 
-Um sicherzustellen, dass der Writer ordnungsgemäß überprüfen kann, ob der Anforderer die Spezifikationen der Ausschluss Datei berücksichtigt hat, sollten alle Dateien, die gesichert wurden, aus dem ursprünglichen Volume gelöscht werden, bevor versucht wird, Sie wiederherzustellen. Es wird empfohlen, dass eine Vorlage für jedes Writer-Szenario gespeichert wird, damit das Szenario leicht neu erstellt werden kann.
+Um sicherzustellen, dass der Writer ordnungsgemäß überprüfen kann, ob der Anfordernde die Ausschlussdateispezifikationen erfüllt hat, sollten alle gesicherten Dateien aus dem ursprünglichen Volume gelöscht werden, bevor sie wiederhergestellt werden. Es wird empfohlen, eine Vorlage für jedes Writerszenario zu speichern, damit das Szenario problemlos neu erstellt werden kann.
 
 ## <a name="using-a-configuration-file"></a>Verwenden einer Konfigurationsdatei
 
-Die folgende Beispielkonfigurationsdatei, vswriter \_ -config.xml, finden Sie unter `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\vsstools` auf x86-Plattformen und `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\x64\vsstools` auf x64-Plattformen.
+Die folgende Beispielkonfigurationsdatei, vswriterconfig.xml, finden Sie \_ auf `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\vsstools` x86-Plattformen und `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\x64\vsstools` auf x64-Plattformen.
 
 ``` syntax
 <TestWriter usage="USER_DATA">
@@ -63,38 +63,38 @@ Die folgende Beispielkonfigurationsdatei, vswriter \_ -config.xml, finden Sie un
 </TestWriter>
 ```
 
-Das Stamm Element in dieser Konfigurationsdatei hat den Namen testwriter. Alle anderen Elemente werden unter dem testwriter-Element angeordnet.
+Das Stammelement in dieser Konfigurationsdatei heißt TestWriter. Alle anderen Elemente werden unter dem TestWriter-Element angeordnet.
 
-Eines der Attribute, das testwriter zugeordnet ist, ist das Usage-Attribut. Dieses Attribut gibt den Verwendungstyp an, der über [**ivssexamineschreibmetadata:: GetIdentity**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getidentity)gemeldet wird. Einer der möglichen Werte für dieses Attribut sind Benutzer \_ Daten.
+Eines der Attribute, die TestWriter zugeordnet sind, ist das Verwendungsattribut. Dieses Attribut gibt den Verwendungstyp an, der über [**IVssExerklärwriterMetadata::GetIdentity gemeldet wird.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getidentity) Einer der möglichen Werte für dieses Attribut ist USER \_ DATA.
 
-Das erste untergeordnete Element des Root-Elements muss immer ein restoremethod-Element sein. Dieses Element gibt Folgendes an:
+Das erste untergeordnete Element des Stammelements muss immer ein RestoreMethod-Element sein. Dieses Element gibt Folgendes an:
 
--   Die Restore-Methode (in diesem Fall Restore \_ , \_ Wenn \_ ersetzt werden kann \_ )
--   Gibt an, ob der Writer Wiederherstellungs Ereignisse erfordert (in diesem Fall immer).
--   Gibt an, ob ein Neustart erforderlich ist, nachdem der Writer wieder hergestellt wurde (in diesem Fall Nein).
+-   Die Wiederherstellungsmethode (in diesem Fall RESTORE \_ IF \_ CAN BE \_ \_ REPLACED)
+-   Gibt an, ob der Writer Wiederherstellungsereignisse erfordert (in diesem Fall immer).
+-   Gibt an, ob nach der Wiederherstellung des Writers ein Neustart erforderlich ist (in diesem Fall nein).
 
-Dieses Element kann optional eine Zuordnung alternativer Orte angeben. (In diesem Fall wird kein alternativer Speicherort angegeben.)
+Dieses Element kann optional eine Alternative-Location-Zuordnung angeben. (In diesem Fall ist kein alternativer Speicherort angegeben.)
 
-Das zweite untergeordnete Element ist ein EXCLUDEFILE-Element. Dieses Element bewirkt, dass der Writer eine Datei oder einen Satz von Dateien aus einer Sicherung ausschließt.
+Das zweite untergeordnete Element ist ein ExcludeFile-Element. Dieses Element bewirkt, dass der Writer eine Datei oder einen Satz von Dateien aus der Sicherung ausschließt.
 
-Das dritte untergeordnete Element ist ein Komponenten Element. Dieses Element bewirkt, dass der Writer seinen Metadaten eine Komponente hinzufügt. Ein Component-Element enthält Attribute, mit denen die Komponente und die untergeordneten Elemente beschrieben werden, um den Inhalt der Komponente zu beschreiben, wie z. b. Folgendes:
+Das dritte untergeordnete Element ist ein Component-Element. Dieses Element bewirkt, dass der Writer seinen Metadaten eine Komponente hinzufüge. Ein Component-Element enthält Attribute, um die Komponente und die untergeordneten Elemente zu beschreiben, um den Inhalt der Komponente zu beschreiben, z. B.:
 
--   componentType, um anzugeben, ob es sich um eine Datei Gruppe oder eine Datenbank handelt
--   LogicalPath für den logischen Pfad der Komponente
--   componentname für den Namen der Komponente
--   auswählbar zum Angeben des Status für die auswählbare Sicherung
+-   componentType, um anzugeben, ob es sich um eine Dateigruppe oder eine Datenbank handelt
+-   logicalPath für den logischen Pfad der Komponente
+-   componentName für den Namen der Komponente
+-   Auswählbar, um den Status "Selectable-for-Backup" anzugeben
 
-Das Component-Element weist auch ein untergeordnetes Element mit dem Namen "componentfile" auf, um dieser Komponente eine Datei Spezifikation hinzuzufügen. (Ein Komponenten Element kann eine beliebige Anzahl von componentfile-Elementen aufweisen, die für jede Komponente angegeben werden können.) Dieses componentfile-Element weist die folgenden Attribute auf:
+Das Component-Element verfügt auch über ein untergeordnetes Element namens ComponentFile, um dieser Komponente eine Dateispezifikation hinzuzufügen. (Ein Component-Element kann eine beliebige Anzahl von ComponentFile-Elementen enthalten, die für jede Komponente angegeben werden können.) Dieses ComponentFile-Element verfügt über die folgenden Attribute:
 
--   Path = "c: \\ Schreibdaten \\ myfileshere"
--   file spec = " \* "
--   rekursiv = "Nein"
+-   path="c: \\ writerData \\ myFilesHere"
+-   filespec=" \* "
+-   recursive="no"
 
-Obwohl der testwriter das requestverhalten überprüft, überprüft er nicht, ob die Konfigurationsdatei stets die dokumentierte Semantik für einen Writer verwaltet. Es gibt viele Vorgänge, die ein gut verhaltener Writer nicht ausführen sollte (z. b. die gleiche Datei in mehreren Komponenten melden), und es liegt an dem Autor der XML-Konfigurationsdatei, diese Semantik beizubehalten.
+Obwohl der Test Writer das Verhalten des Anfordernden überprüft, wird nicht überprüft, ob die Konfigurationsdatei immer die dokumentierte Semantik für einen Writer verwaltet. Es gibt viele Vorgänge, die ein gut verhaltener Writer nicht tun sollte (z. B. die gleiche Datei in mehreren Komponenten melden), und es liegt in der Obrung des Autors der XML-Konfigurationsdatei, diese Semantik zu verwalten.
 
-## <a name="configuring-writer-attributes"></a>Konfigurieren von Writer-Attributen
+## <a name="configuring-writer-attributes"></a>Konfigurieren von Writerattributen
 
-Das testwriter-Stamm Element enthält Attribute, die verschiedene Verhaltensweisen des Writers bestimmen. Einige der Verhaltensweisen, die geändert werden können, sind die folgenden:
+Das TestWriter-Stammelement enthält Attribute, die verschiedene Verhaltensweisen des Writers bestimmen. Einige der Verhaltensweisen, die geändert werden können, sind die folgenden:
 
 
 
@@ -105,39 +105,39 @@ Das testwriter-Stamm Element enthält Attribute, die verschiedene Verhaltensweis
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
+<th>attribute</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><span id="verbosity"></span><span id="VERBOSITY"></span>Ausführlichkeit<br/></td>
-<td>Der Writer druckt den Status auf der Konsole, während er Ereignisse empfängt und verarbeitet. Die angezeigte ausführlichkeits Stufe wird durch das Ausführlichkeit-Attribut angegeben. Es gibt drei ausführlichkeits Grade, aus denen Sie auswählen können:<br/> <dl> <dt><span id="low"></span><span id="LOW"></span>Preis</dt> <dd> Nur Fehler im Writer oder falsches Verhalten der Anforderer werden gedruckt.<br/> </dd> <dt><span id="medium"></span><span id="MEDIUM"></span>Mittelalter</dt> <dd> Alle Elemente auf der Ebene mit niedriger Ausführlichkeit werden zusätzlich zu zusätzlichen Statusinformationen gedruckt, z. b. wenn Ereignisse empfangen werden. Dies ist der Standardebene.<br/> </dd> <dt><span id="high"></span><span id="HIGH"></span>hochrangiger</dt> <dd> Ausführliche Statusinformationen zum Vorgang des Writers werden gemeldet.<br/> </dd> </dl></td>
+<td>Der Writer gibt den Status an die Konsole aus, während er Ereignisse empfängt und verarbeitet. Die angezeigte Ausführlichkeitsstufe wird durch das Ausführlichkeitsattribut angegeben. Es stehen drei Ausführlichkeitsstufen zur Auswahl:<br/> <dl> <dt><span id="low"></span><span id="LOW"></span>Niedrig</dt> <dd> Es werden nur Fehler im Writer oder falsches Verhalten des Anfordernden gedruckt.<br/> </dd> <dt><span id="medium"></span><span id="MEDIUM"></span>Mittel</dt> <dd> Zusätzlich zu zusätzlichen Statusinformationen, z. B. beim Empfangen von Ereignissen, wird alles auf niedriger Ausführlichkeitsebene gedruckt. Dies ist der Standardebene.<br/> </dd> <dt><span id="high"></span><span id="HIGH"></span>Hoch</dt> <dd> Detaillierte Statusinformationen zum Vorgang des Writers werden gemeldet.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><span id="deleteFiles"></span><span id="deletefiles"></span><span id="DELETEFILES"></span>DeleteFiles<br/></td>
-<td>Wenn Sie eine zusätzliche Überprüfung ausführen möchten, legen Sie dieses Attribut auf Ja fest, damit &quot; &quot; der Writer alle seine Dateien sofort nach dem Erstellen der Volumeschattenkopie löscht. Der Anforderer muss dann die Dateien aus der Schatten Kopie kopieren, da Sie auf dem ursprünglichen Volume nicht mehr vorhanden sind. <br/>
+<td><span id="deleteFiles"></span><span id="deletefiles"></span><span id="DELETEFILES"></span>deleteFiles<br/></td>
+<td>Um eine zusätzliche Überprüfung durchzuführen, legen Sie dieses Attribut auf Ja fest, damit der Writer alle Dateien sofort nach dem Erstellen der &quot; &quot; Volumeschattenkopie löscht. Der Anfordernde muss dann die Dateien aus der Schattenkopie kopieren, da sie nicht mehr auf dem ursprünglichen Volume vorhanden sind. <br/>
 <blockquote>
 [!Note]<br />
-Im Fall von spuckwritern werden die Dateien am ursprünglichen Speicherort nach dem Spit gelöscht, aber bevor die Schatten Kopie erstellt wird. Nachdem die Schatten Kopie erstellt wurde, werden die Dateien aus dem Verzeichnis "Spit" gelöscht.
+Im Fall von Schreibern werden die Dateien am ursprünglichen Speicherort nach dem Schreiber gelöscht, aber bevor die Schattenkopie erstellt wird. Nachdem die Schattenkopie erstellt wurde, werden die Dateien aus dem Verzeichnis "directory" gelöscht.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td><span id="deletePartialFiles"></span><span id="deletepartialfiles"></span><span id="DELETEPARTIALFILES"></span>deletepartialfiles<br/></td>
-<td>Zum Löschen von partiellen Dateien legen Sie dieses Attribut auf "Ja" fest &quot; &quot; .<br/></td>
+<td><span id="deletePartialFiles"></span><span id="deletepartialfiles"></span><span id="DELETEPARTIALFILES"></span>deletePartialFiles<br/></td>
+<td>Um Teildateien zu löschen, legen Sie dieses Attribut auf ja &quot; &quot; fest.<br/></td>
 </tr>
 <tr class="even">
-<td><span id="deleteDifferencedFiles"></span><span id="deletedifferencedfiles"></span><span id="DELETEDIFFERENCEDFILES"></span>deletedifferencedfiles<br/></td>
-<td>Um differenzierte Dateien zu löschen, legen Sie dieses Attribut auf "Ja" fest &quot; &quot; .<br/></td>
+<td><span id="deleteDifferencedFiles"></span><span id="deletedifferencedfiles"></span><span id="DELETEDIFFERENCEDFILES"></span>deleteDifferencedFiles<br/></td>
+<td>Um differenzierte Dateien zu löschen, legen Sie dieses Attribut auf &quot; ja &quot; fest.<br/></td>
 </tr>
 <tr class="odd">
-<td><span id="checkIncludes"></span><span id="checkincludes"></span><span id="CHECKINCLUDES"></span>checkincludes<br/></td>
-<td>Legen Sie dieses Attribut auf &quot; Ja fest &quot; , damit der Writer prüft, ob jede zu sichernde Datei an einem geeigneten Speicherort wieder hergestellt wurde und dass die Datei nicht beschädigt wurde. Teil Dateien und differenzierende Dateien werden ebenfalls ordnungsgemäß behandelt.<br/></td>
+<td><span id="checkIncludes"></span><span id="checkincludes"></span><span id="CHECKINCLUDES"></span>checkIncludes<br/></td>
+<td>Legen Sie dieses Attribut auf Ja fest, damit der Writer überprüft, ob jede datei, die sichern wurde, an einem geeigneten Speicherort wiederhergestellt wurde und dass die Datei nicht &quot; &quot; beschädigt wurde. Teildateien und differenzierte Dateien werden ebenfalls ordnungsgemäß verarbeitet.<br/></td>
 </tr>
 <tr class="even">
-<td><span id="checkExcludes"></span><span id="checkexcludes"></span><span id="CHECKEXCLUDES"></span>Check-Ausschlüsse<br/></td>
-<td>Legen Sie dieses Attribut auf &quot; Ja fest &quot; , damit der Writer prüft, ob Dateien, die einer Datei Spezifikation in der Ausschlussliste entsprechen, nicht wieder hergestellt werden. Damit dies ordnungsgemäß funktioniert, müssen die Wiederherstellungs Verzeichnisse vor der Wiederherstellung geleert werden.<br/></td>
+<td><span id="checkExcludes"></span><span id="checkexcludes"></span><span id="CHECKEXCLUDES"></span>checkExcludes<br/></td>
+<td>Legen Sie dieses Attribut auf Ja fest, damit der Writer überprüft, ob Dateien, die einer Dateispezifikation in der &quot; &quot; Ausschlussliste entsprechen, nicht wiederhergestellt werden. Damit dies ordnungsgemäß funktioniert, müssen die Wiederherstellungsverzeichnisse vor der Wiederherstellung geleert werden.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -146,11 +146,11 @@ Im Fall von spuckwritern werden die Dateien am ursprünglichen Speicherort nach 
 
  
 
-## <a name="specifying-alternate-location-mappings"></a>Angeben von alternativen Speicherort Zuordnungen
+## <a name="specifying-alternate-location-mappings"></a>Angeben alternativer Standortzuordnungen
 
-Eine Alternative Speicherort Zuordnung gibt einen Speicherort für die Wiederherstellung an, wenn die Wiederherstellungsmethode \_ \_ an einem \_ alternativen Speicherort wieder hergestellt wird \_ \_ oder wenn die normale Wiederherstellung einer Komponente fehlschlägt. Ein Writer kann seine alternativen Speicherort Zuordnungen mithilfe der [**ivssexaminewrite Metadata:: getalternatelocationmapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getalternatelocationmapping) -Methode an den Anforderer melden. Sie können der Test-Writer-Konfigurationsdatei Alternative Speicherort Zuordnungen hinzufügen, indem Sie dem restoremethod-Element Alternative unter Elemente für die Zuordnung hinzufügen.
+Eine alternative Speicherortzuordnung gibt einen Speicherort für die Wiederherstellung an, wenn die Wiederherstellungsmethode VSS WRE RESTORE TO ALTERNATE LOCATION ist oder die normale Wiederherstellung einer \_ \_ Komponente \_ \_ \_ fehlschlägt. Ein Writer kann seine alternativen Speicherortzuordnungen mithilfe der [**IVssExwriterMetadata::GetAlternateLocationMapping-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getalternatelocationmapping) an den Anfordernden melden. Sie können der Test Writer-Konfigurationsdatei alternative Speicherortzuordnungen hinzufügen, indem Sie dem RestoreMethod-Element AlternateLocationMapping-Unterelemente hinzufügen.
 
-Das folgende restoremethod-Element enthält ein untergeordnetes Element von "Alternative".
+Das folgende RestoreMethod-Element enthält ein AlternateLocationMapping-Unterelement.
 
 ``` syntax
 <RestoreMethod method="RESTORE_IF_CAN_REPLACE"
@@ -163,13 +163,13 @@ Das folgende restoremethod-Element enthält ein untergeordnetes Element von "Alt
 </RestoreMethod>
 ```
 
-Dieses Beispiel gibt an, dass die anfordernde Person zuerst versuchen soll, alle Dateien, die mit "c: \\ Files. txt" übereinstimmen \\ \* , im Verzeichnis "c: Files" wiederherzustellen \\ . Wenn eine dieser Dateien nicht ersetzt werden kann, sollte der Anforderer stattdessen alle Dateien im Verzeichnis "c: altfiles" Wiederherstellen \\ . Der Anforderer sollte diese Alternative Speicherort Zuordnung mithilfe der [**IVssBackupComponents:: addalternativelocationmapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping) -Methode speichern. Wenn der testwriter so konfiguriert ist, dass er überprüft, ob Dateien wieder hergestellt wurden, überprüft er auch, ob der Anforderer **addalternativelocationmapping** aufgerufen hat.
+In diesem Beispiel wird angegeben, dass der Anfordernde zunächst versuchen soll, alle Dateien wiederherzustellen, die mit c: files übereinstimmen,.txt verzeichnis \\ \\ \* c: \\ files. Wenn eine dieser Dateien nicht ersetzt werden kann, sollte der Anfordernde stattdessen alle Dateien im Verzeichnis c: \\ altfiles wiederherstellen. Der Anfordernde sollte diese alternative Standortzuordnung mithilfe der [**IVssBackupComponents::AddAlternativeLocationMapping-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping) speichern. Wenn der Test Writer so konfiguriert ist, dass überprüft wird, ob Dateien wiederhergestellt wurden, wird auch überprüft, ob der Anfordernde **AddAlternativeLocationMapping aufgerufen hat.**
 
 ## <a name="specifying-files-to-be-excluded"></a>Angeben von auszuschließenden Dateien
 
-Jeder Writer kann eine Liste mit Datei Spezifikationen angeben, die Dateien angeben, die der Anforderer von der Sicherung ausschließen soll. Sie können diese Datei Spezifikationen der Test-Writer-Konfigurationsdatei hinzufügen, indem Sie dem testwriter-Stamm Element die unter Elemente "EXCLUDEFILE" hinzufügen.
+Jeder Writer kann eine Liste von Dateispezifikationen angeben, die Dateien angeben, die der Anfordernde aus der Sicherung ausschließen soll. Sie können diese Dateispezifikationen der Test Writer-Konfigurationsdatei hinzufügen, indem Sie dem TestWriter-Stammelement die ExcludeFile-Unterelemente hinzufügen.
 
-Im folgenden finden Sie ein Beispiel für ein EXCLUDEFILE-Unterelement, das alle Dateien im Verzeichnis "c: Files" ausschließt \\ , die mit "c: Temp" identisch sind. \\ \* \*
+Hier ist ein Beispiel für ein ExcludeFile-Unterelement, das alle Dateien im Verzeichnis C: Files ausschließt, die \\ mit C: \\ temp \* \* übereinstimmen.
 
 ``` syntax
     <ExcludeFile path="c:\files" 
@@ -177,11 +177,11 @@ Im folgenden finden Sie ein Beispiel für ein EXCLUDEFILE-Unterelement, das alle
                  recursive="no"/>
 ```
 
-## <a name="backing-up-spit-writers"></a>Sichern von spuckwritern
+## <a name="backing-up-spit-writers"></a>Sichern von Writern
 
-Viele Writer fungieren als "spuckwriter". Ein spuchwriter erstellt zwischen Dateien, die auf einem ursprünglichen Satz von Dateien basieren, oder "spuckt Dateien", und legt die spuatendateien zum Zeitpunkt der Sicherung an einem alternativen Speicherort ab. Der Writer verwendet die [**ivsswmfiledesc:: getalternateloations**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getalternatelocation) -Methode, um den Anforderer zu benachrichtigen, dass er diese Dateien vom alternativen Speicherort aus sichern soll. Diese Dateien sollten jedoch weiterhin am aktiven Speicherort der ursprünglichen Dateien wieder hergestellt werden. Der testwriter kann so konfiguriert werden, dass er als spuckwriter für eine bestimmte Datei Spezifikation fungiert.
+Viele Writer fungieren als "autoritische Writer". Ein autorisierter Writer erstellt Zwischendateien oder "Dateidateien" basierend auf einem ursprünglichen Satz von Dateien und legt die Dateien zur Sicherungszeit an einem alternativen Speicherort ab. Der Writer verwendet die [**IVssWMFiledesc::GetAlternateLocation-Methode,**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getalternatelocation) um den Anfordernden zu benachrichtigen, dass er diese Dateien vom alternativen Speicherort aus sichern soll. Diese Dateien sollten jedoch weiterhin am aktiven Speicherort der ursprünglichen Dateien wiederhergestellt werden. Der TestWriter kann so konfiguriert werden, dass er als Autor für eine bestimmte Dateispezifikation verwendet wird.
 
-Das folgende componentfile-Element enthält ein "Alternative Path"-Attribut:
+Das folgende ComponentFile-Element enthält ein alternatePath-Attribut:
 
 ``` syntax
     <ComponentFile path="c:\files"
@@ -190,13 +190,13 @@ Das folgende componentfile-Element enthält ein "Alternative Path"-Attribut:
                    alternatePath="c:\files\spit" />
 ```
 
-In diesem Beispiel wird der Test-Writer so konfiguriert, dass alle Dateien, die mit "c: \\ Files. txt" übereinstimmen \\ \* , \\ \\ unmittelbar vor dem Erstellen der Volumeschattenkopie in das Verzeichnis "c: files Der Anforderer muss die Dateien aus dem Verzeichnis "c: \\ Files Spit" sichern \\ . Wenn der testwriter zum Löschen von Dateien konfiguriert ist, werden die ursprünglichen Dateien vor der Erstellung der Schatten Kopie gelöscht, sodass Sie nicht im Verzeichnis c: \\ Files auf dem schattenkopiespeichervolume angezeigt werden. In diesem Fall werden die Dateien in "c: Files"- \\ Dateien \\ nach dem Erstellen der Schatten Kopie gelöscht. Daher müssen Sie aus dem Verzeichnis "c \\ : Files \\ ..." auf dem schattenkopiespeichervolume gesichert werden.
+In diesem Beispiel wird der Test Writer so konfiguriert, dass alle Dateien kopiert werden, die mit c: files.txt in das Verzeichnis c: files verzeichnis unmittelbar vor dem Erstellen der \\ \\ \* \\ \\ Volumeschattenkopie vorhanden sind. Der Anfordernde muss die Dateien aus dem Verzeichnis c: \\ files \\ directory sichern. Wenn der Test Writer zum Löschen von Dateien konfiguriert ist, werden die ursprünglichen Dateien gelöscht, bevor die Schattenkopie erstellt wird, sodass sie nicht im Verzeichnis c: files auf dem Schattenkopie-Volume \\ angezeigt werden. In diesem Fall werden die Dateien in "c:files" gelöscht, nachdem die Schattenkopie erstellt wurde. Daher müssen sie aus dem \\ Verzeichnis "c:files" auf dem Schattenkopie-Volume \\ gespeichert \\ \\ werden.
 
-## <a name="reporting-component-dependencies"></a>Abhängigkeiten der Berichtskomponente
+## <a name="reporting-component-dependencies"></a>Berichterstellungskomponentenabhängigkeiten
 
-Writer können eine Abhängigkeit zwischen einer lokalen Komponente und einer Komponente angeben, die in einem anderen Writer vorhanden ist. Diese Abhängigkeiten werden dem Anforderer mithilfe von [**ivsswmcomponent:: getdependengemeldet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivsswmcomponent-getdependency). Der testwriter kann so konfiguriert werden, dass diese Abhängigkeiten gemeldet werden, indem dem Component-Element mindestens ein Abhängigkeits Unterelement hinzugefügt wird.
+Writer können eine Abhängigkeit zwischen einer lokalen Komponente und einer Komponente angeben, die in einem anderen Writer vorhanden ist. Diese Abhängigkeiten werden dem Anfordernden mithilfe von [**IVssWMComponent::GetDependency gemeldet.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivsswmcomponent-getdependency) Der Test Writer kann so konfiguriert werden, dass er diese Abhängigkeiten berichtet, indem dem Component-Element mindestens ein Dependency-Unterelement hinzugefügt wird.
 
-Das folgende Component-Element enthält ein Abhängigkeits Unterelement:
+Das folgende Component-Element enthält ein Dependency-Unterelement:
 
 ``` syntax
     <Component componentType="filegroup"
@@ -209,48 +209,48 @@ Das folgende Component-Element enthält ein Abhängigkeits Unterelement:
     </Component>
 ```
 
-Die Abhängigkeit wird als Attribute des Abhängigkeits Elements angegeben. "Write ID" ist die Klassen-ID des Writers, der das Ziel der Abhängigkeit enthält. "LogicalPath" ist der logische Pfad zur Komponente in diesem Writer, und "componentname" ist der Name der Komponente. Wenn der Anforderer "Write Component" im aktuellen Writer sichert, sollte in diesem Fall auch die Komponente "componentpath \\ Writer2Component" im zielwriter gesichert werden.
+Die Abhängigkeit wird als Attribute des Dependency-Elements angegeben. writerId ist die Klassen-ID des Writers, der das Ziel der Abhängigkeit enthält, logicalPath ist der logische Pfad zur Komponente in diesem Writer, und componentName ist der Name der Komponente. Wenn der Anfordernde in diesem Fall "WriterComponent" im aktuellen Writer sichern möchte, sollte er auch die Komponente "ComponentPath \\ Writer2Component" im Zielwriter sichern.
 
 > [!Note]  
-> Der testwriter führt keine Überprüfung durch, um sicherzustellen, dass Abhängigkeiten berücksichtigt werden.
+> Der Test Writer führt keine Überprüfung durch, um sicherzustellen, dass Abhängigkeiten erfüllt werden.
 
  
 
 ## <a name="failing-events"></a>Fehlerhafte Ereignisse
 
-Der testwriter kann so konfiguriert werden, dass er die normalen Ereignisse, die ein Writer empfängt, fehlschlägt. Diese Ereignisse lauten wie folgt:
+Der Test Writer kann so konfiguriert werden, dass eines der normalen Ereignisse, die ein Writer empfängt, fehlschlägt. Diese Ereignisse lauten wie folgt:
 
 
 
 | Ereignis                                                                                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="Identify"></span><span id="identify"></span><span id="IDENTIFY"></span>Identifizieren<br/>                                     | Als Antwort auf einen [**IVssBackupComponents:: gatherschreibmetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) -Aufrufvorgang empfangen. Bei diesem Fehler wird der Writer nicht gemeldet.<br/>                                                                 |
-| <span id="PrepareForBackup"></span><span id="prepareforbackup"></span><span id="PREPAREFORBACKUP"></span>PrepareForBackup<br/>     | Wird als Antwort an den Anforderer empfangen, der [**IVssBackupComponents::P Analyse forbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)aufruft.<br/>                                                                                                                 |
-| <span id="PrepareForSnapsot"></span><span id="prepareforsnapsot"></span><span id="PREPAREFORSNAPSOT"></span>Prepareforsnapsot<br/> | Wird empfangen, wenn der Anforderer [**IVssBackupComponents aufruft::D osnapshotset**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset), aber bevor die Schatten Kopie erstellt wird.<br/>                                                                                              |
-| <span id="Freeze"></span><span id="freeze"></span><span id="FREEZE"></span>Ge<br/>                                             | Wird unmittelbar nach [*prepareforsnapshot*](vssgloss-p.md)empfangen, aber noch bevor die Schatten Kopie erstellt wird.<br/>                                                                                                      |
-| <span id="Thaw"></span><span id="thaw"></span><span id="THAW"></span>Reaktivieren<br/>                                                     | Wird nach Abschluss der Erstellung der Schatten Kopie empfangen.<br/>                                                                                                                                                                                                     |
-| <span id="PostSnapshot"></span><span id="postsnapshot"></span><span id="POSTSNAPSHOT"></span>PostSnapshot<br/>                     | Wird empfangen, nachdem das abaw abgeschlossen ist, aber vor [**IVssBackupComponents::D osnapshotset**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset) abgeschlossen ist.<br/>                                                                                                                   |
-| <span id="Abort"></span><span id="abort"></span><span id="ABORT"></span>Abbruch<br/>                                                 | Wird empfangen, wenn zu viel Zeit zwischen [*Einfrieren*](vssgloss-f.md) und [*durch*](vssgloss-t.md) sucht wird, oder wenn der Anforderer [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufruft.<br/> |
-| <span id="BackupComplete"></span><span id="backupcomplete"></span><span id="BACKUPCOMPLETE"></span>BackupComplete<br/>             | Wird empfangen, wenn der Anforderer beendet wird. Hier werden keine Fehler gemeldet.<br/>                                                                                                                                                                                 |
-| <span id="PreRestore"></span><span id="prerestore"></span><span id="PRERESTORE"></span>Vorabversion<br/>                             | Wird empfangen, wenn der Anforderer [**IVssBackupComponents aufruft::P erneut**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore)ausgeführt.<br/>                                                                                                                                           |
-| <span id="PostRestore"></span><span id="postrestore"></span><span id="POSTRESTORE"></span>Postrestore<br/>                         | Wird empfangen, wenn der Anforderer [**IVssBackupComponents aufruft::P ostrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-postrestore).<br/>                                                                                                                                         |
+| <span id="Identify"></span><span id="identify"></span><span id="IDENTIFY"></span>Identifizieren<br/>                                     | Empfangen als Antwort auf einen [**IVssBackupComponents::GatherWriterMetadata-Aufruf.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) Ein Fehler hier verursacht, dass der Writer nicht gemeldet wird.<br/>                                                                 |
+| <span id="PrepareForBackup"></span><span id="prepareforbackup"></span><span id="PREPAREFORBACKUP"></span>PrepareForBackup<br/>     | Empfangen als Antwort an den Anfordernden, der [**IVssBackupComponents::P repareForBackup aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)<br/>                                                                                                                 |
+| <span id="PrepareForSnapsot"></span><span id="prepareforsnapsot"></span><span id="PREPAREFORSNAPSOT"></span>PrepareForSnapsot<br/> | Wird empfangen, wenn der Anfordernde [**IVssBackupComponents::D oSnapshotSet aufruft,**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)aber bevor die Schattenkopie erstellt wird.<br/>                                                                                              |
+| <span id="Freeze"></span><span id="freeze"></span><span id="FREEZE"></span>Einfrieren<br/>                                             | Wird unmittelbar nach [*PrepareForSnapshot empfangen,*](vssgloss-p.md)aber noch bevor die Schattenkopie erstellt wird.<br/>                                                                                                      |
+| <span id="Thaw"></span><span id="thaw"></span><span id="THAW"></span>Tauwetter<br/>                                                     | Wird empfangen, nachdem die Erstellung der Schattenkopie abgeschlossen ist.<br/>                                                                                                                                                                                                     |
+| <span id="PostSnapshot"></span><span id="postsnapshot"></span><span id="POSTSNAPSHOT"></span>PostSnapshot<br/>                     | Empfangen nach Abschluss von Thaw, aber vor Abschluss von [**IVssBackupComponents::D oSnapshotSet.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)<br/>                                                                                                                   |
+| <span id="Abort"></span><span id="abort"></span><span id="ABORT"></span>Abbrechen<br/>                                                 | Wird empfangen, wenn zwischen [](vssgloss-f.md) Freeze und [*Thaw*](vssgloss-t.md) zu viel Zeit verstrichen ist oder wenn der Anfordernde [**IVssBackupComponents::AbortBackup aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)<br/> |
+| <span id="BackupComplete"></span><span id="backupcomplete"></span><span id="BACKUPCOMPLETE"></span>BackupComplete<br/>             | Wird empfangen, wenn der Anfordernde beendet wird. Fehler werden hier nie gemeldet.<br/>                                                                                                                                                                                 |
+| <span id="PreRestore"></span><span id="prerestore"></span><span id="PRERESTORE"></span>PreRestore<br/>                             | Wird empfangen, wenn der Anfordernde [**IVssBackupComponents::P reRestore aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore)<br/>                                                                                                                                           |
+| <span id="PostRestore"></span><span id="postrestore"></span><span id="POSTRESTORE"></span>PostRestore<br/>                         | Wird empfangen, wenn der Anfordernde [**IVssBackupComponents::P ostRestore aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-postrestore)<br/>                                                                                                                                         |
 
 
 
  
 
-Diese Fehler werden durch Hinzufügen eines oder mehrerer failevent-unter Elemente zum testwriter-Stamm Element konfiguriert. Es gibt zwei Klassen von Fehlern, die festgelegt werden können: Wiederholungs fähig und nicht wiederholbar. Wiederholbare Fehler sind Fehler, die möglicherweise nicht mehr auftreten, wenn der gesamte Sicherungs Vorgang wiederholt wird, während nicht wiederholbare Fehler wahrscheinlich nicht verschwinden. Der Fehlertyp für das Ereignis wird basierend auf dem wiederholbaren Attribut ausgewählt.
+Diese Fehler werden konfiguriert, indem dem TestWriter-Stammelement mindestens ein FailEvent-Unterelement hinzugefügt wird. Es gibt zwei Fehlerklassen, die festgelegt werden können: retryable und non-retryable. Wiederverwiederherstellungsfehler sind Fehler, die möglicherweise nicht mehr auftreten, wenn der gesamte Sicherungsprozess wiederholt wird, während nicht wieder zu wiederholende Fehler wahrscheinlich nicht mehr auftreten. Der Fehlertyp für das Ereignis wird basierend auf dem retryable-Attribut ausgewählt.
 
-Im folgenden finden Sie ein Beispiel für einen einfachen nicht wiederholbaren Fehler:
+Im Folgenden finden Sie ein Beispiel für einen grundlegenden, nicht wieder zu wiederholenden Fehler:
 
 ``` syntax
     <FailEvent writerEvent="Freeze"
                retryable="no" />
 ```
 
-Dieses Beispiel führt dazu, dass der Writer während des [*Freeze*](vssgloss-f.md) -Ereignisses fehlschlägt. [**IVssBackupComponents:: gatherschreibstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) meldet, dass der Writer fehlschlägt, wenn VSS \_ E \_ Beschreib tererror \_ nicht wiederholbar ist.
+Dieses Beispiel verursacht, dass der Writer während des [*Freeze-Ereignisses fehlschlägt.*](vssgloss-f.md) [**IVssBackupComponents::GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) gibt an, dass der Writerfehler VSS \_ E \_ WRITERERROR \_ NONRETRYABLE ist.
 
-Im folgenden finden Sie ein Beispiel für einen einfachen Wiederholungs fähigen Fehler:
+Im Folgenden finden Sie ein Beispiel für einen einfachen wiederverversuchbaren Fehler:
 
 ``` syntax
     <FailEvent writerEvent="Freeze"
@@ -258,25 +258,25 @@ Im folgenden finden Sie ein Beispiel für einen einfachen Wiederholungs fähigen
                numFailures="2"/>
 ```
 
-Dieses Beispiel bewirkt, dass der Writer das erste Mal fehlschlägt, wenn er ein [*Freeze*](vssgloss-f.md) -Ereignis empfängt. Nach den ersten beiden vorkommen wird der Writer immer erfolgreich ausgeführt. Der von [**gatherschreiterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) gemeldete Writer-Fehler ist ein zufälliger Wiederholungs Fehlercode.
+Dieses Beispiel verursacht, dass der Writer die ersten beiden Male einen Fehler verursacht, wenn er ein [*Freeze-Ereignis*](vssgloss-f.md) empfängt. Nach den ersten beiden Malen ist der Writer immer erfolgreich. Der writer-Fehler, der [**über GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) gemeldet wird, ist ein zufälliger, wieder zu wiederholenden Fehlercode.
 
-## <a name="declaring-supported-backup-types"></a>Deklarieren unterstützter Sicherungs Typen
+## <a name="declaring-supported-backup-types"></a>Deklarieren unterstützter Sicherungstypen
 
-Writer kommunizieren, welche Sicherungs Typen durch den Aufruf von [**ivssexaminewritermetadata:: getbackupschema**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getbackupschema)der Anforderer unterstützt werden. Das testwriter-Stamm Element enthält Attribute für jeden Sicherungstyp, um die Unterstützung anzugeben. Diese Attribute sind supportscopy, supportsdifferential, supportsinkremental und supportslog. Legen Sie das entsprechende Attribut auf "yes" fest, um die Unterstützung für einen bestimmten Sicherungstyp anzugeben.
+Writer kommunizieren, welche Sicherungstypen durch den aufrufenden [**IVssExwriterMetadata::GetBackupSchema**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getbackupschema)des Anfordernden unterstützt werden. Das Stammelement TestWriter enthält Attribute für jeden Sicherungstyp, um die Unterstützung anzugeben. Diese Attribute sind supportsCopy, supportsDifferential, supportsIncremental und supportsLog. Um die Unterstützung für einen bestimmten Sicherungstyp anzugeben, legen Sie das entsprechende Attribut auf "yes" fest.
 
-Wenn der Anforderer den Sicherungstyp auf einen Sicherungstyp festlegt, der vom Writer nicht unterstützt wird, wird dieser Fakt während der [**Vorbereitung von PrepareForBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)festgelegt, ansonsten aber ordnungsgemäß funktionieren.
+Wenn der Anfordernde den Sicherungstyp auf einen Sicherungstyp fest legt, der vom Writer nicht unterstützt wird, notiert der Writer diese Tatsache während [**PrepareForBackup,**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)funktioniert aber andernfalls ordnungsgemäß.
 
-## <a name="indicating-the-file-backup-type"></a>Angeben des Datei Sicherungs Typs
+## <a name="indicating-the-file-backup-type"></a>Angeben des Dateisicherungstyps
 
-Die [**ivsswmfiledesc:: getbackuptypemask**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getbackuptypemask) -Methode gibt eine Bitmaske an den Anforderer zurück, die angibt, wie eine Datei gesichert werden soll. Dies gibt an, ob eine Datei für bestimmte Sicherungs Typen erforderlich oder nicht erforderlich ist und ob eine Schatten Kopie bei bestimmten Sicherungs Typen erforderlich ist. Die Sicherungs Typen in dieser Bitmaske werden in der [Rolle dokumentanforderer bei der Sicherung komplexer Filialen](requestor-role-in-backing-up-complex-stores.md)ausführlicher erläutert.
+Die [**IVssWMFiledesc::GetBackupTypeMask-Methode**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getbackuptypemask) gibt eine Bitmaske an den Anfordernden zurück, die angibt, wie eine Datei sichern werden soll. Dies gibt an, ob eine Datei während bestimmter Sicherungstypen erforderlich oder nicht erforderlich ist und ob bei bestimmten Sicherungstypen eine Schattenkopie erforderlich ist. Die Sicherungstypen in dieser Bitmaske werden im Dokument [Requester Role in Backing Up Complex Stores](requestor-role-in-backing-up-complex-stores.md)(Rolle des Anfordernden in Sichern komplexer Speicher) ausführlich erläutert.
 
-Im testwriter werden die Elemente dieser Bitmaske durch Festlegen von Attributen in jedem componentfile-Element angegeben. Die Attribute "fullbackuprequired", "diffbackuprequired", "incbackuprequired" und "logbackuprequired" geben an, wann eine Datei gesichert werden muss. Die Attribute "fullsnapshotrequired", "diffsnapshotrequired", "incsnapshotrequired" und "logsnapshotrequired" geben an, wann eine Datei von einer Schatten Kopie eines Volumes (und nie vom ursprünglichen Volume) gesichert werden muss. Der Standardwert für alle diese Werte ist "yes", was darauf hinweist, dass eine Datei immer gesichert werden muss und aus einer Schatten Kopie eines Volumes gesichert werden muss.
+Im Test Writer werden die Elemente dieser Bitmaske durch Festlegen von Attributen in jedem ComponentFile-Element angegeben. Die Attribute fullBackupRequired, diffBackupRequired, incBackupRequired und logBackupRequired geben an, wann eine Datei sichern werden muss. Die Attribute fullSnapshotRequired, diffSnapshotRequired, incSnapshotRequired und logSnapshotRequired geben an, wann eine Datei aus einer Schattenkopie eines Volumes (und nie aus dem ursprünglichen Volume) sichern werden muss. Der Standardwert für alle diese Werte ist "yes". Dies bedeutet, dass eine Datei immer sichern und aus einer Schattenkopie eines Volumes sichern muss.
 
-## <a name="adding-partial-files"></a>Hinzufügen von Teil Dateien
+## <a name="adding-partial-files"></a>Hinzufügen von Teildateien
 
-Während der Verarbeitung von [**DoSnapshotSet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)kann ein Writer jeder Komponente partielle Dateien hinzufügen. Diese partiellen Dateien werden mithilfe von [**IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)gemeldet. Der testwriter kann so konfiguriert werden, dass partielle Dateien hinzugefügt werden, indem partialfile-unter Elemente in einem Component-Element angegeben werden.
+Während der Verarbeitung von [**DoSnapshotSet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)hat ein Writer die Möglichkeit, jeder Komponente Teildateien hinzuzufügen. Diese Teildateien werden mithilfe von [**IVssComponent::GetPartialFile gemeldet.**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) Der Test Writer kann so konfiguriert werden, dass partielle Dateien hinzugefügt werden, indem Teildateiunterelemente in einem Component-Element angegeben werden.
 
-Im folgenden finden Sie ein Beispiel für ein Komponenten Element mit zwei partialfile-unter Elementen:
+Hier ist ein Beispiel für ein Component-Element mit zwei PartialFile-Unterelementen:
 
 ``` syntax
     <Component componentType="filegroup"
@@ -295,15 +295,15 @@ Im folgenden finden Sie ein Beispiel für ein Komponenten Element mit zwei parti
     </Component>
 ```
 
-Nur partielle Dateien, die teilweise mit einer vorhandenen componentfile-Datei übereinstimmen (wie in der ersten partiellen Datei im Beispiel), oder neue Teil Dateien, die sich auf demselben Volume wie eine vorhandene componentfile-Datei (wie in der zweiten partiellen Datei) befinden, sollten auf diese Weise angegeben werden. Für diese Komponente muss die anfordernde Person vollständig alle Dateien, die mit "c: files. txt" übereinstimmen, vollständig sichern, \\ \\ \* außer partial.txt. Der Anforderer muss dann die angegebenen Bereiche (wobei ein Bereich eine Abweichung gefolgt von einer Länge ist) für die Dateien c: \\ Files \\partial.txt und c: \\ files2partial.txt sichern \\ .
+Nur partielle Dateien, die teilweise mit einer vorhandenen ComponentFile übereinstimmen (wie in der ersten Teildatei im Beispiel), oder neue Teildateien, die sich auf demselben Volume wie eine vorhandene ComponentFile befinden (wie in der zweiten Teildatei), sollten auf diese Weise angegeben werden. Für diese Komponente muss der Anfordernde alle Dateien, die mit c: Dateien übereinstimmen, vollständig.txt mit Ausnahme von \\ \\ \* partial.txt. Der Anfordernde muss dann die angegebenen Bereiche (wobei ein Bereich ein Offset gefolgt von einer Länge ist) für die Dateien c: \\ files \\partial.txt und c: \\ files2 \\partial.txt.
 
-Wenn der Writer zum Überprüfen von Datei Wiederherstellungen konfiguriert ist, werden nur die gesicherten Bereiche der partiellen Datei zur Wiederherstellungszeit überprüft. Änderungen an anderen Teilen der Datei werden unbemerkt bleiben. Wenn das deletepartialfiles-Attribut des testwriter-Stamm Elements festgelegt ist, werden die partiellen Dateien sofort nach der Erstellung der Schatten Kopie aus dem ursprünglichen Volume gelöscht.
+Wenn der Writer zum Überprüfen von Dateiwiederherstellungen konfiguriert ist, werden zum Zeitpunkt der Wiederherstellung nur die sicherungsbasierten Bereiche der Teildatei überprüft. Änderungen an anderen Teilen der Datei werden nicht angezeigt. Wenn das deletePartialFiles-Attribut des TestWriter-Stammelements festgelegt ist, werden die Teildateien unmittelbar nach dem Erstellen der Schattenkopie aus dem ursprünglichen Volume gelöscht.
 
-## <a name="adding-differenced-files"></a>Hinzufügen differenzierter Dateien
+## <a name="adding-differenced-files"></a>Hinzufügen differenzisierter Dateien
 
-Während der Verarbeitung von [**DoSnapshotSet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)kann ein Writer jeder Komponente differenzierte Dateien hinzufügen. Diese differenzierten Dateien werden mithilfe von [**IVssComponent:: getdifferencedfile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdifferencedfile)gemeldet. Der testwriter kann so konfiguriert werden, dass differenzierte Dateien hinzugefügt werden, indem differencedfile-unter Elemente in einem Component-Element angegeben werden.
+Während der Verarbeitung von [**DoSnapshotSet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)kann ein Writer jeder Komponente differenzierte Dateien hinzufügen. Diese differenzierten Dateien werden mithilfe von [**IVssComponent::GetDifferencedFile gemeldet.**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdifferencedfile) Der Test Writer kann so konfiguriert werden, dass differenzierte Dateien hinzugefügt werden, indem Die DifferencedFile-Unterelemente in einem Component-Element angegeben werden.
 
-Im folgenden finden Sie ein Beispiel für ein Komponenten Element, das zwei differencedfile-unter Elemente aufweist:
+Hier ist ein Beispiel für ein Component-Element mit zwei DifferencedFile-Unterelementen:
 
 ``` syntax
     <Component componentType="filegroup"
@@ -332,19 +332,19 @@ Im folgenden finden Sie ein Beispiel für ein Komponenten Element, das zwei diff
     </Component>
 ```
 
-Anders als bei partiellen Dateien sollten differenzierte Dateien nie teilweise mit einer componentfile-Spezifikation identisch sein. Die Datei Spezifikation in einem differencedfile-Element muss entweder genau mit einer componentfile übereinstimmen (wie in der ersten differenzierten Datei im Beispiel), oder Sie sollte überhaupt nicht übereinstimmen, aber auf einem Volume, auf das in einer componentfile-Datei verwiesen wird (wie in der zweiten differenzierten Datei). Die Datums-und Uhrzeitwerte sollten relativ zur lokalen Zeitzone sein, Sie werden jedoch in GMT konvertiert, bevor Sie an den Anforderer gemeldet werden. Im Beispiel werden nur Dateien, die mit "c: \\ Files \\ \* . txt" oder "c: \\ files2. txt" übereinstimmen \\ \* , die seit 1/22/2003:12:44:17 geändert wurden, gesichert.
+Im Gegensatz zu Teildateien sollten differenzierte Dateien nie teilweise mit einer ComponentFile-Spezifikation übereinstimmen. Die Dateispezifikation in einem DifferencedFile-Element sollte entweder genau mit einer ComponentFile übereinstimmen (wie in der ersten Differenzdatei im Beispiel), oder sie sollte überhaupt nicht übereinstimmen, sondern sich auf einem Volume, auf das in einer ComponentFile verwiesen wird (wie in der zweiten differenzierten Datei). Die Datums- und Uhrzeitwerte sollten relativ zur lokalen Zeitzone sein, werden jedoch in GMT konvertiert, bevor sie dem Anfordernden gemeldet werden. Im Beispiel werden nur Dateien, die mit c: files.txt oder c: files2.txt übereinstimmen, die seit dem \\ \\ \* \\ \\ \* 22.1.2003:12:44:17 geändert wurden, sichern.
 
-Wenn der testwriter zum Überprüfen von Datei Wiederherstellungen konfiguriert ist, werden nur die geänderten Dateien auf die Wiederherstellung überprüft. Wenn das deletedifferencedfiles-Attribut des testwriter-Stamm Elements festgelegt ist, werden die differenzierten Dateien sofort nach dem Erstellen der Schatten Kopie aus dem ursprünglichen Volume gelöscht.
+Wenn der Test Writer für die Überprüfung von Dateiwiederherstellungen konfiguriert ist, werden nur die geänderten Dateien auf die Wiederherstellung überprüft. Wenn das deleteDifferencedFiles-Attribut des TestWriter-Stammelements festgelegt ist, werden die differenzierten Dateien unmittelbar nach dem Erstellen der Schattenkopie aus dem ursprünglichen Volume gelöscht.
 
 ## <a name="new-targets"></a>Neue Ziele
 
-Bestimmte Writer gestatten dem Anforderer, ihn darüber zu informieren, dass ein neuer Speicherort zum Wiederherstellen bestimmter Dateien ausgewählt wurde. Der Writer weist darauf hin, dass dieser Modus als Teil der Bitmaske unterstützt wird, die von [**ivssexaminescriptermetadata:: getbackupschema**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getbackupschema)zurückgegeben wird. Standardmäßig unterstützt der testwriter immer neue Ziele. Diese Unterstützung kann deaktiviert werden, indem das supportsnewtarget-Attribut im testwriter-Stamm Element auf "No" festgelegt wird.
+Bestimmte Writer ermöglichen es dem Anfordernden, sie darüber zu informieren, dass ein neuer Speicherort ausgewählt wurde, an dem bestimmte Dateien wiederhergestellt werden sollen. Der Writer gibt an, dass dieser Modus als Teil der bitmask unterstützt wird, die von [**IVssEx kernelWriterMetadata::GetBackupSchema zurückgegeben wird.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getbackupschema) Standardmäßig unterstützt der Test Writer immer neue Ziele. Diese Unterstützung kann deaktiviert werden, indem sie das supportsNewTarget-Attribut im TestWriter-Stammelement auf "no" festlegen.
 
-Wenn ein Writer neue Ziele unterstützt, kann der Antragsteller den Writer über neue Ziele informieren, indem [**IVssBackupComponents:: addnewtarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)aufgerufen wird. Der Writer prüft dann den neuen Zielort, um die Wiederherstellung anstelle des ursprünglichen Speicher Orts zu überprüfen.
+Wenn ein Writer neue Ziele unterstützt, kann der Anfordernde den Writer über neue Ziele informieren, indem er [**IVssBackupComponents::AddNewTarget aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget) Der Writer überprüft dann den neuen Zielspeicherort, um die Wiederherstellung anstelle des ursprünglichen Speicherorts zu überprüfen.
 
 ## <a name="more-information"></a>Weitere Informationen
 
-Der testwriter unterstützt weitere Konfigurationsoptionen, die hier nicht beschrieben werden. Das vollständige Schema für alle Konfigurationsfunktionen des testwriters wird in swriter.xml in `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\x64\vsstools` (für 64-Bit-Windows) und `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\vsstools` (für 32-Bit-Windows) angegeben. Diese Datei enthält ein XML-Schema, in dem alle Elemente und Attribute, aus denen eine Konfigurationsdatei besteht, vollständig beschrieben werden. Jedes Element und jedes Attribut in dieser Datei wird mit einer Beschreibung kommentiert, die die Verwendung dieses Elements oder des Attributs dokumentiert.
+Der Test Writer unterstützt weitere Konfigurationsoptionen, die hier nicht beschrieben werden. Das vollständige Schema für alle Konfigurationsfunktionen des TestWriters wird in swriter.xml in `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\x64\vsstools` (für 64-Bit-Windows) und `%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\vsstools` (für 32-Bit-Windows) angegeben. Diese Datei enthält ein XML-Schema, das alle Elemente und Attribute, aus denen eine Konfigurationsdatei besteht, vollständig beschreibt. Jedes Element und jedes Attribut in dieser Datei wird mit einer Beschreibung kommentiert, die die Verwendung dieses Elements oder Attributs dokumentiert.
 
  
 

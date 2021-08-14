@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte definieren die folgenden Konstanten.
+description: Windows Portable Geräte definieren die folgenden Konstanten.
 ms.assetid: ad7ad1d1-53da-41b7-a847-852ecfeaff20
-title: Allgemeine Konstanten (portabledevice. h)
+title: Allgemeine Konstanten (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 1f22c279d51eae8cc9e3ab7bbd83d4ed802e5872
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cd6b4efebef96a30e19431d63d3e41bb167b2d6886e7e3610918b6f25a293302
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118194730"
 ---
 # <a name="general-constants"></a>Allgemeine Konstanten
 
-Tragbare Windows-Geräte definieren die folgenden Konstanten.
+Windows Portable Geräte definieren die folgenden Konstanten.
 
 
 
 | Konstante                                                                                                                                                                             | BESCHREIBUNG                                                                        |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-| <span id="WPD_MESSAGE"></span><span id="wpd_message"></span><dl> <dt>**WPD- \_ Nachricht**</dt> </dl>                              | Treiber verwenden diese Konstante, um zu überprüfen, ob ein Befehl ein WPD-Befehl ist.<br/>    |
-| <span id="WPD_DEVICE_OBJECT_ID"></span><span id="wpd_device_object_id"></span><dl> <dt>**Objekt-ID des WPD- \_ Geräts \_ \_**</dt> </dl> | Ein konstanter Wert, der als Bezeichner für das angegebene Gerät fungiert.<br/> |
+| <span id="WPD_MESSAGE"></span><span id="wpd_message"></span><dl> <dt>**\_WPD-NACHRICHT**</dt> </dl>                              | Treiber verwenden diese Konstante, um zu überprüfen, ob ein Befehl ein WPD-Befehl ist.<br/>    |
+| <span id="WPD_DEVICE_OBJECT_ID"></span><span id="wpd_device_object_id"></span><dl> <dt>**\_ \_ WPD-GERÄTEOBJEKT-ID \_**</dt> </dl> | Ein konstanter Wert, der als Bezeichner für das angegebene Gerät fungiert.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Tragbare Windows-Geräte definieren die folgenden Konstanten.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

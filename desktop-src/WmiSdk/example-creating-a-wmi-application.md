@@ -1,34 +1,34 @@
 ---
-description: Mithilfe der Prozeduren und Codebeispiele in diesem Thema können Sie eine vollständige WMI-Client Anwendung erstellen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten liest und bereinigt.
+description: Sie können die Prozedur- und Codebeispiele in diesem Thema verwenden, um eine vollständige WMI-Clientanwendung zu erstellen, die die COM-Initialisierung durchführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, einige Daten liest und bereinigt.
 ms.assetid: d80bcf9f-e57c-499f-b7b8-cf25678c5a82
 ms.tgt_platform: multiple
 title: 'Beispiel: Erstellen einer WMI-Anwendung'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e76836090d09ecee413da34d9a15381b9d0a891
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49e7633c666beb900da4cdbe41909880d9766c903be0fc8b6aa1d4e45be8d90f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118319309"
 ---
 # <a name="example-creating-a-wmi-application"></a>Beispiel: Erstellen einer WMI-Anwendung
 
-Mithilfe der Prozeduren und Codebeispiele in diesem Thema können Sie eine vollständige WMI-Client Anwendung erstellen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten liest und bereinigt. [Beim Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md) wird beschrieben, wie Sie Daten von Remote Computern abrufen.
+Sie können die Prozedur- und Codebeispiele in diesem Thema verwenden, um eine vollständige WMI-Clientanwendung zu erstellen, die die COM-Initialisierung durchführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, einige Daten liest und bereinigt. [Unter Herstellen einer Verbindung mit WMI auf einem Remotecomputer](connecting-to-wmi-on-a-remote-computer.md) wird beschrieben, wie Sie Daten von Remotecomputern abrufen.
 
-Das folgende Verfahren enthält alle Schritte, die für alle C++-WMI-Anwendungen erforderlich sind.
+Dieses folgende Verfahren umfasst alle Schritte, die für alle C++-WMI-Anwendungen erforderlich sind.
 
-1.  Initialisieren von com-Parametern mit einem [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)-Rückruf.
+1.  Initialisieren Sie COM-Parameter mit einem Aufruf von [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex).
 
-    Weitere Informationen finden Sie unter [Initialisieren von com für eine WMI-Anwendung](initializing-com-for-a-wmi-application.md).
+    Weitere Informationen finden Sie unter [Initialisieren von COM für eine WMI-Anwendung.](initializing-com-for-a-wmi-application.md)
 
-2.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity).
+2.  Initialisieren Sie die COM-Prozesssicherheit, indem [**Sie CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)aufrufen.
 
-    Weitere Informationen finden Sie unter [Festlegen der standardmäßigen Prozess Sicherheitsstufe mithilfe von C++](setting-the-default-process-security-level-using-c-.md).
+    Weitere Informationen finden Sie unter [Festlegen der Standardprozesssicherheitsstufe mit C++](setting-the-default-process-security-level-using-c-.md).
 
-3.  Abrufen eines Zeigers auf [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) für einen Namespace auf einem angegebenen Host Computer – der lokale Computer im einfachen Fall – durch Aufrufen von [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver).
+3.  Rufen Sie einen Zeiger auf [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) für einen Namespace auf einem angegebenen Hostcomputer (im einfachen Fall der lokale Computer) ab, indem [**Sie IWbemLocator::ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)aufrufen.
 
-    Verwenden Sie zum Herstellen einer Verbindung mit einem Remote Computer, z. b. Computer \_ a, den folgenden Objekt Pfad Parameter:
+    Verwenden Sie den folgenden Objektpfadparameter, um eine Verbindung mit einem Remotecomputer herzustellen, z. B. Computer \_ A:
 
     ```C++
     _bstr_t(L"\\COMPUTER_A\ROOT\\CIMV2")
@@ -36,21 +36,21 @@ Das folgende Verfahren enthält alle Schritte, die für alle C++-WMI-Anwendungen
 
     
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-4.  Legen Sie die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy Sicherheit fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)annehmen kann.
+4.  Legen Sie die [**IWbemServices-Proxysicherheit**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) fest, damit der WMI-Dienst die Identität des Clients annehmen kann, indem [**Er coSetProxyBlanket aufruft.**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)
 
-    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsstufen für eine WMI-Verbindung](setting-the-security-levels-on-a-wmi-connection.md).
+    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsstufen für eine WMI-Verbindung.](setting-the-security-levels-on-a-wmi-connection.md)
 
-5.  Verwenden Sie den [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Zeiger, um WMI-Anforderungen zu stellen. Beispielsweise Abfragen für alle [**Win32- \_ Dienst**](/windows/desktop/CIMWin32Prov/win32-service) Instanzen, um zu bestimmen, welche Dienste beendet werden.
+5.  Verwenden Sie den [**IWbemServices-Zeiger,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) um WMI-Anforderungen zu stellen. Beispiel: Abfragen aller [**\_ Win32-Dienstinstanzen,**](/windows/desktop/CIMWin32Prov/win32-service) um zu bestimmen, welche Dienste beendet werden.
 
-    Weitere Informationen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md), [Abfragen von WMI](querying-wmi.md)und [empfangen eines WMI-Ereignisses](receiving-a-wmi-event.md).
+    Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen,](manipulating-class-and-instance-information.md) [Abfragen von WMI](querying-wmi.md)und [Empfangen eines WMI-Ereignisses.](receiving-a-wmi-event.md)
 
-6.  Bereinigen Sie Objekte und com.
+6.  Bereinigen sie Objekte und COM.
 
-    Weitere Informationen finden Sie unter [Bereinigen und Herunterfahren einer WMI-Anwendung](cleaning-up-and-shutting-down-a-wmi-application.md).
+    Weitere Informationen finden Sie unter [Bereinigen und Herunterfahren einer WMI-Anwendung.](cleaning-up-and-shutting-down-a-wmi-application.md)
 
-Der folgende Beispielcode ist eine komplette WMI-Client Anwendung.
+Der folgende Beispielcode ist eine vollständige WMI-Clientanwendung.
 
 
 ```C++

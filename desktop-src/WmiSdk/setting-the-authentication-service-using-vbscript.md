@@ -1,8 +1,8 @@
 ---
-description: Beim Zugriff auf einen Windows-Verwaltungsinstrumentation (WMI)-Server mit einem Skript können Sie zwischen NT LAN Manager (NTLM)-oder Kerberos-Authentifizierungs Protokollen wählen.
+description: Beim Zugriff auf einen WMI-Server (Windows Management Instrumentation) mit einem Skript können Sie zwischen NT LAN-Manager (NTLM) oder Kerberos-Authentifizierungsprotokollen wählen.
 ms.assetid: db2dc750-bfdd-4f6c-859b-e104814f0800
 ms.tgt_platform: multiple
-title: Festlegen des Authentifizierungs Dienstanbieter mithilfe von VBScript
+title: Festlegen des Authentifizierungsdiensts mit VBScript
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,29 +10,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bd2cf444560aac7ebce96b52d9abaa528bdcaa76
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 837a69df251b5bbb6cc8bef5ac0b882349fde74646ac6ed33149978b8f69ad7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353971"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315387"
 ---
-# <a name="setting-the-authentication-service-using-vbscript"></a>Festlegen des Authentifizierungs Dienstanbieter mithilfe von VBScript
+# <a name="setting-the-authentication-service-using-vbscript"></a>Festlegen des Authentifizierungsdiensts mit VBScript
 
-Beim Zugriff auf einen Windows-Verwaltungsinstrumentation (WMI)-Server mit einem Skript können Sie zwischen NT LAN Manager (NTLM)-oder Kerberos-Authentifizierungs Protokollen wählen. Die Angabe von Kerberos ist nicht erforderlich, außer bei der Verwendung der Delegierung. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer dritten Computer Delegierung](connecting-to-a-3rd-computer-delegation.md).
+Beim Zugriff auf einen WMI-Server (Windows Management Instrumentation) mit einem Skript können Sie zwischen NT LAN-Manager (NTLM) oder Kerberos-Authentifizierungsprotokollen wählen. Die Angabe von Kerberos ist nur bei Verwendung der Delegierung erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer dritten Computerdelegierung.](connecting-to-a-3rd-computer-delegation.md)
 
-Da sich die Betriebssystemversionen von dem verwendeten Authentifizierungsdienst unterscheiden, wird empfohlen, beim Herstellen einer Verbindung mit einem Remote System keinen Wert für das Feld "Authority" anzugeben. Verwenden Sie stattdessen das Betriebssystem und die verteilte Version von Component Object Model (DCOM), um NTLM oder Kerberos auszuwählen. Wenn ein Authentifizierungsdienst angegeben wird, ist für die Syntax der Server Prinzipal Name erforderlich. Dies ist der Name des Ziel Computers anstelle des Domänen Controllers.
+Da sich die Betriebssystemversionen darin unterscheiden, welcheN Authentifizierungsdienst sie verwenden, wird empfohlen, beim Herstellen einer Verbindung mit einem Remotesystem keinen Wert für das Autoritätsfeld anzugeben. Lassen Sie stattdessen zu, dass das Betriebssystem und die verteilte Version von Component Object Model (DCOM) NTLM oder Kerberos auswählen. Wenn ein Authentifizierungsdienst angegeben wird, erfordert die Syntax den Serverprinzipalnamen, d. h. den Namen des Zielcomputers anstelle des Domänencontrollers.
 
-Sie können den Authority-Parameter nur mit Verbindungen mit Remote-WMI-Servern verwenden. Beim Verbindungsversuch tritt ein Fehler auf, wenn Sie versuchen, Autorisierungs Ebenen als Teil eines Monikers oder durch einen Aufruf von " [**Swap-Locator. ConnectServer**](swbemlocator-connectserver.md) " für eine lokale Verbindung festzulegen.
+Sie können den Authority-Parameter nur mit Verbindungen mit WMI-Remoteservern verwenden. Der Verbindungsversuch schlägt fehl, wenn Sie versuchen, Autorisierungsebenen als Teil eines Monikers oder mit einem Aufruf von [**SWbemLocator.ConnectServer**](swbemlocator-connectserver.md) für eine lokale Verbindung festzulegen.
 
-Führen Sie das folgende Verfahren aus, um den Authentifizierungsdienst anzugeben, den Sie im Parameter " *stranauthority* " der Methode " [**Swap. ConnectServer**](swbemlocator-connectserver.md) " oder der [Monikerzeichenfolge](constructing-a-moniker-string.md) verwenden möchten.
+Führen Sie das folgende Verfahren aus, um den Authentifizierungsdienst anzugeben, den Sie im *strAuthority-Parameter* der [**SWbemLocator.ConnectServer-Methode**](swbemlocator-connectserver.md) oder der [Monikerzeichenfolgenverbindung](constructing-a-moniker-string.md) verwenden möchten.
 
-**So geben Sie die NTLM-oder Kerberos-Authentifizierung mit der Skript-API für WMI an**
+**So geben Sie die NTLM- oder Kerberos-Authentifizierung mit der Skripterstellungs-API für WMI an**
 
-1.  Wenn der Parameter " *stranauthority* " mit der Zeichenfolge "Kerberos:" beginnt, geht WMI davon aus, dass die Zeichenfolge auf einen Kerberos-Prinzipal Namen verweist und die Kerberos-Authentifizierung verwendet wird. Wenn der Parameter " *strauauthority* " mit der Zeichenfolge "ntlmdomain:" beginnt, verwendet WMI stattdessen die NTLM-Authentifizierung.
-2.  Alternativ können Sie den Authority-Teil eines Monikers verwenden, um den Authentifizierungstyp anzugeben, der zum Herstellen der Verbindung mit WMI verwendet wird. Wenn Sie die Kerberos-Authentifizierung verwenden möchten, wenn Sie einen Moniker verwenden, schließen Sie die Zeichenfolge "Authority = Kerberos:" gefolgt vom Prinzipal Namen ein. Um die NTLM-Authentifizierung zu verwenden, schließen Sie die Zeichenfolge "Authority = ntlmdomain:" gefolgt vom NTLM-Domänen Namen ein.
+1.  Wenn der *strAuthority-Parameter* mit der Zeichenfolge "kerberos:" beginnt, geht WMI davon aus, dass die Zeichenfolge auf einen Kerberos-Prinzipalnamen verweist und die Kerberos-Authentifizierung verwendet wird. Wenn der *strAuthority-Parameter* mit der Zeichenfolge "ntlmdomain:" beginnt, verwendet WMI stattdessen die NTLM-Authentifizierung.
+2.  Alternativ können Sie den Autoritätsteil eines Monikers verwenden, um den Authentifizierungstyp anzugeben, der zum Herstellen einer Verbindung mit WMI verwendet wird. Um die Kerberos-Authentifizierung bei Verwendung eines Monikers zu verwenden, schließen Sie die Zeichenfolge "authority=kerberos:" gefolgt vom Prinzipalnamen ein. Um die NTLM-Authentifizierung zu verwenden, schließen Sie die Zeichenfolge "authority=ntlmdomain:" gefolgt vom NTLM-Domänennamen ein.
 
-    Das folgende Beispiel zeigt einen Moniker, der die Kerberos-Authentifizierung mit dem Prinzipal "mydomain \\ Server" anfordert.
+    Das folgende Beispiel zeigt einen Moniker, der die Kerberos-Authentifizierung mithilfe des Prinzipals "mydomain \\ server" anfordert.
 
     ```VB
     winmgmts:{impersonationLevel=delegate, _
@@ -42,7 +42,7 @@ Führen Sie das folgende Verfahren aus, um den Authentifizierungsdienst anzugebe
 
     
 
-    Im Gegensatz dazu zeigt das folgende Beispiel einen Moniker, der die NTLM-Authentifizierung mithilfe der Domäne "mydomain" anfordert.
+    Im gegensatz dazu zeigt das folgende Beispiel einen Moniker, der die NTLM-Authentifizierung mithilfe der Domäne "mydomain" anfordert.
 
     ```VB
     winmgmts:{impersonationLevel=impersonate, _

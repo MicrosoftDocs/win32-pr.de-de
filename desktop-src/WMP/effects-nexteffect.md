@@ -1,9 +1,9 @@
 ---
-title: Effekte. nexteffect
-description: Die nexteffect-Methode zeigt die erste Voreinstellung der nächsten Visualisierung an und überspringt dazwischenliegende Voreinstellungen.
+title: EFFECTS.nextEffect
+description: Die nextEffect-Methode zeigt die erste Voreinstellung der nächsten Visualisierung an und überspringt dazwischen liegende Voreinstellungen.
 ms.assetid: dedd8e8b-2337-46f5-91a8-43ef54c86012
 keywords:
-- Effekte. nexteffect Windows Media Player
+- EFFECTS.nextEffect Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b84d7ec4d6095ffdac2a0f0592aa3f3e832e68e0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 359571dde65c8cb65f422de58667c715cb7a3099e79a443dd64777edbf8767d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339985"
 ---
-# <a name="effectsnexteffect"></a>Effekte. nexteffect
+# <a name="effectsnexteffect"></a>EFFECTS.nextEffect
 
-Die **nexteffect** -Methode zeigt die erste Voreinstellung der nächsten Visualisierung an und überspringt dazwischenliegende Voreinstellungen.
+Die **nextEffect-Methode** zeigt die erste Voreinstellung der nächsten Visualisierung an und überspringt dazwischen liegende Voreinstellungen.
 
 ``` syntax
         elementID.nextEffect()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode zeigt die erste Voreinstellung der nächsten Visualisierung in der Erstellungs Reihenfolge an. Wenn die aktuelle Visualisierung die letzte in der Erstellungs Reihenfolge ist, und wenn " **Zuweisung** " den Wert "false" hat, wird die erste Visualisierung aktuell gemacht.
+Diese Methode zeigt die erste Voreinstellung der nächsten Visualisierung in der Erstellungsreihenfolge an. Wenn die aktuelle Visualisierung die letzte in der Erstellungsreihenfolge ist und **allowAll** false ist, wird die erste Visualisierung als aktuell festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,21 +46,21 @@ Diese Methode zeigt die erste Voreinstellung der nächsten Visualisierung in der
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Zuweisung**](effects-allowall.md)
+[**EFFECTS.allowAll**](effects-allowall.md)
 </dt> <dt>
 
-[**Effekte. previouseffect**](effects-previouseffect.md)
+[**EFFECTS.previousEffect**](effects-previouseffect.md)
 </dt> </dl>
 
  

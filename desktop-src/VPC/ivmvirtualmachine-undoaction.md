@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachine UndoAction-Eigenschaft (vpccominterfaces. h)
-description: Standardaktion, die auf allen rückgängig-Laufwerken ausgeführt werden soll, wenn der virtuelle Computer heruntergefahren wird.
+title: IVMVirtualMachine UndoAction-Eigenschaft (VPCCOMInterfaces.h)
+description: Standardaktion, die auf allen rückgängig machenden Laufwerken ausgeführt werden soll, wenn der virtuelle Computer heruntergefahren wird.
 ms.assetid: fcdd5217-4909-435a-b11d-63578ab46e37
 keywords:
-- UndoAction-Eigenschaft virtueller PC
-- UndoAction-Eigenschaft Virtual PC, ivmvirtualmachine-Schnittstelle
-- Ivmvirtualmachine Interface Virtual PC, UndoAction-Eigenschaft
+- UndoAction-Eigenschaft Virtueller PC
+- UndoAction-Eigenschaft Virtueller PC, IVMVirtualMachine-Schnittstelle
+- IVMVirtualMachine-Schnittstelle Virtual PC , UndoAction-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 039a9e65863e41ba2c7edc1befd2598aa16bb362
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ed32b0864e1a22b196001c5f75ba7e58711e7a9b6d6b2781a5f75ae0c3ced5ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118344545"
 ---
-# <a name="ivmvirtualmachineundoaction-property"></a>Ivmvirtualmachine:: UndoAction (Eigenschaft)
+# <a name="ivmvirtualmachineundoaction-property"></a>IVMVirtualMachine::UndoAction-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Hiermit wird die Standardaktion abgerufen und festgelegt, die auf allen rückgängig-Laufwerken ausgeführt werden soll, wenn der virtuelle Computer mithilfe der [**Turnoff**](ivmvirtualmachine-turnoff.md) -Methode ausgeschaltet oder mithilfe der [**Shutdown**](ivmguestos-shutdown.md) -Methode heruntergefahren oder innerhalb des Gast Betriebssystems ausgeschaltet wird.
+Ruft die Standardaktion ab, die auf allen rückgängig gemachten Laufwerken ausgeführt werden soll, wenn der virtuelle Computer (VM) mithilfe der [**TurnOff-Methode**](ivmvirtualmachine-turnoff.md) deaktiviert oder mithilfe der [**Shutdown-Methode**](ivmguestos-shutdown.md) heruntergefahren oder aus dem Gastbetriebssystem ausgeschaltet wird, und legt diese fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -50,7 +50,7 @@ HRESULT get_UndoAction(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt die Standardaktion an, die auf allen rückgängig-Laufwerken ausgeführt werden soll, wenn der virtuelle Computer innerhalb des Gast Betriebssystems heruntergefahren wird. Eine Liste der Werte finden Sie unter [**vmundoaction**](vmundoaction.md).
+Gibt die Standardaktion an, die auf allen rückgängig machenden Laufwerken ausgeführt werden soll, wenn der virtuelle Computer aus dem Gastbetriebssystem heruntergefahren wird. Eine Liste der Werte finden Sie unter [**VMUndoAction**](vmundoaction.md).
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -59,10 +59,10 @@ Gibt die Standardaktion an, die auf allen rückgängig-Laufwerken ausgeführt we
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>E \_ InvalidArg</dt> <dt>0x80000003</dt> </dl>      | Der Parameter ist ungültig.<br/>       |
-| <dl> <dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt> </dl> | Die Konfiguration ist unbekannt.<br/>     |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>E \_ INVALIDARG-0x80000003</dt> <dt></dt> </dl>      | Der Parameter ist ungültig.<br/>       |
+| <dl> <dt>VM \_ E \_ VM \_ UNKNOWN</dt> <dt>0xA0040207</dt> </dl> | Die Konfiguration ist unbekannt.<br/>     |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -72,20 +72,20 @@ Gibt die Standardaktion an, die auf allen rückgängig-Laufwerken ausgeführt we
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualMachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmvirtualmachine**](ivmvirtualmachine.md)
+[**IVMVirtualMachine**](ivmvirtualmachine.md)
 </dt> </dl>
 
  

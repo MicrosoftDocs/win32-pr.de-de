@@ -1,7 +1,7 @@
 ---
 description: Gibt eine Zeichenfolge zurück, die den Statuscode beschreibt.
 ms.assetid: d3007f3e-46e1-4ab6-8ce3-c4e38f87ce61
-title: 'Iwiaerrorhandler:: GetStatus Description-Methode (WIA. h)'
+title: IWiaErrorHandler::GetStatusDescription-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: da23e413ee238f43ae577a51b18a542dc1b0768c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 963dc0059cf4fd45dffb0fc406cb6b2849aef456309cf15e80bf094c2ce01d20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208302"
 ---
-# <a name="iwiaerrorhandlergetstatusdescription-method"></a>Iwiaerrorhandler:: GetStatus Description-Methode
+# <a name="iwiaerrorhandlergetstatusdescription-method"></a>IWiaErrorHandler::GetStatusDescription-Methode
 
 Gibt eine Zeichenfolge zurück, die den Statuscode beschreibt.
 
@@ -44,48 +44,48 @@ HRESULT GetStatusDescription(
 
 <dl> <dt>
 
-*punkitem* \[ in\]
+*-Item* \[ In\]
 </dt> <dd>
 
-Typ: **[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) \** _
+Typ: **[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)\***
 
-Zeiger auf das [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) des übertragenen Elements. Dieses Objekt implementiert mindestens [_ *IWiaItem2* *](-wia-iwiaitem2.md) und [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer).
+Zeiger auf die [IUnknown des](/windows/win32/api/unknwn/nn-unknwn-iunknown) zu übertragenden Elements. Dieses Objekt implementiert [**IWiaItem2**](-wia-iwiaitem2.md) und [**IWiaDataTransfer minimal.**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer)
 
 </dd> <dt>
 
-*hrStatus* \[ in\]
+*hrStatus* \[ In\]
 </dt> <dd>
 
 Typ: **HRESULT**
 
-**HRESULT** , das der von [**BandedDataCallback**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)empfangene Statuscode ist.
+**HRESULT,** bei dem es sich um den Statuscode handelt, der von [**BandedDataCallback empfangen wird.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)
 
 </dd> <dt>
 
-*cbreslength* \[ in\]
+*cbResLength* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-**Long** , d. h. die Größe der Daten, auf die von *pbData* verwiesen wird.
+**LONG,** das die Größe der Daten ist, auf die von *pbData verwiesen wird.*
 
 </dd> <dt>
 
-*pbData* \[ in\]
+*pbData* \[ In\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
-Zeiger auf den Datenpuffer, wie von [_ *banbeddatacallback* *](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)empfangen.
+Zeiger auf den Datenpuffer, der von [**BandedDataCallback empfangen wird.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)
 
 </dd> <dt>
 
-*pbstraudescription* \[ vorgenommen\]
+*pbstrDescription* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **BSTR \** _
+Typ: **BSTR \***
 
-_ *BSTR**, das eine Beschreibung des Status oder Fehlers erhält, der während der Datenübertragung aufgetreten ist. Dieser Parameter darf nicht **null** sein. Der Aufrufer muss die Zeichenfolge mit [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)freigeben, und der implemenor muss die Zeichenfolge mithilfe von " [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)" zuordnen.
+**BSTR,** der eine Beschreibung des Status oder Fehlers empfängt, der während der Datenübertragung aufgetreten ist. Dieser Parameter darf nicht **NULL sein.** Der Aufrufer muss die Zeichenfolge mit [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)frei geben, und der Implementor muss die Zeichenfolge mit [SysAllocString zuordnen.](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)
 
 </dd> </dl>
 
@@ -99,8 +99,8 @@ Gibt einen der folgenden Werte zurück.
 
 | Rückgabecode                                                                             | Beschreibung                                                        |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>    | *pbstraudescription* enthält einen gültigen **BSTR** -Zeiger. <br/>  |
-| <dl> <dt>**S \_ false**</dt> </dl> | *hrStatus* ist unbekannt, und es ist keine Beschreibung verfügbar. <br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>    | *pbstrDescription enthält* einen gültigen **BSTR-Zeiger.** <br/>  |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | *hrStatus* ist unbekannt, und es ist keine Beschreibung verfügbar. <br/> |
 
 
 
@@ -112,11 +112,11 @@ Gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 

@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code zum Aktualisieren des Schema Caches
-description: Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schema Masters (getschemamasterdnsname) und aktualisieren den Schema Cache im Schema Master (updateschemamastercache).
+title: Beispielcode zum Aktualisieren des Schemacaches
+description: Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schemamasters (GetSchemaMasterDNSName) und aktualisieren den Schemacache am Schemamaster (UpdateSchemaMasterCache).
 ms.assetid: e955588d-a92c-4406-a197-bb8c36329f88
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code zum Aktualisieren des Schema Cache AD
+- Beispielcode zum Aktualisieren des Schemacache-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c9ebbf721bc8d3e960b02de14ac7f9179bf5787
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 267c0090a04e6831b395f566762c2d80526cfd754d367acda235f257eaf76195
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189791"
 ---
-# <a name="example-code-for-updating-the-schema-cache"></a>Beispiel Code zum Aktualisieren des Schema Caches
+# <a name="example-code-for-updating-the-schema-cache"></a>Beispielcode zum Aktualisieren des Schemacaches
 
-Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schema Masters (getschemamasterdnsname) und aktualisieren den Schema Cache im Schema Master (updateschemamastercache). Um diese Funktionen zu verwenden, müssen Sie getschemamasterdnsname aufrufen, um den DNS-Namen des Schema Masters abzurufen, den DNS-Namen des Schema Masters an updateschemamastercache zu übergeben, CoTaskMemFree für eine Zeichenfolge mit dem DNS-Namen des Schema Masters aufrufen.
+Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schemamasters (GetSchemaMasterDNSName) und aktualisieren den Schemacache am Schemamaster (UpdateSchemaMasterCache). Um diese Funktionen zu verwenden, rufen Sie GetSchemaMasterDNSName auf, um den DNS-Namen des Schemamasters abzurufen, übergeben Sie den DNS-Namen des Schemamasters an UpdateSchemaMasterCache, und rufen Sie CoTaskMemFree für die Zeichenfolge auf, die den DNS-Namen des Schemamasters enthält.
 
-Weitere Informationen finden Sie unter [Aktualisieren des Schema Caches](updating-the-schema-cache.md).
+Weitere Informationen finden Sie unter [Aktualisieren des Schemacaches.](updating-the-schema-cache.md)
 
 
 ```C++
@@ -165,9 +165,9 @@ return hr;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

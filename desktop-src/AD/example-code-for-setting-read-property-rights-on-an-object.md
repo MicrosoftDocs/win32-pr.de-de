@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Festlegen von Leseeigenschaften rechten für ein Objekt
-description: Das folgende Codebeispiel enthält eine Funktion, die einen ACE erstellt, der dem angegebenen Vertrauens nehmer Lesezugriff auf alle Eigenschaften des Objekts zuweist.
+title: Beispielcode zum Festlegen von Leseeigenschaftsrechten für ein Objekt
+description: Das folgende Codebeispiel enthält eine Funktion, die einen ACE erstellt, der dem angegebenen Vertrauenshänder Lesezugriff auf alle Eigenschaften des Objekts zuweist.
 ms.assetid: 343538d7-fef4-492d-a385-37433ce1250b
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Festlegen der Berechtigung zum Lesen von Eigenschaften für ein Objekt
+- Active Directory-Beispiele Active Directory , Festlegen von Leseeigenschaftsrechten für ein Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c6228b3485c47b2ed3d972d2490a70ad264c8ac
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 487fb7179db8b754f603a65ca58bd242087101497c4c4c3692b4b2766ad4d424
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190078"
 ---
-# <a name="example-code-for-setting-read-property-rights-on-an-object"></a>Beispiel Code für das Festlegen von Leseeigenschaften rechten für ein Objekt
+# <a name="example-code-for-setting-read-property-rights-on-an-object"></a>Beispielcode zum Festlegen von Leseeigenschaftsrechten für ein Objekt
 
-Das folgende Codebeispiel enthält eine Funktion, die einen ACE erstellt, der dem angegebenen Vertrauens nehmer Lesezugriff auf alle Eigenschaften des Objekts zuweist.
+Das folgende Codebeispiel enthält eine Funktion, die einen ACE erstellt, der dem angegebenen Vertrauenshänder Lesezugriff auf alle Eigenschaften des Objekts zuweist.
 
 
 ```C++
@@ -116,9 +116,9 @@ HRESULT CreateAceEffectiveReadAllProperties(LPWSTR pwszTrustee,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

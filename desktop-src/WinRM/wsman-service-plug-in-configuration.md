@@ -1,22 +1,22 @@
 ---
-title: Konfiguration des WinRM-Dienst-Plug-ins
-description: Ein Windows-Remoteverwaltung-Plug-in (WinRM) muss im WinRM-Katalog registriert sein, damit die Infrastruktur den Satz der verfügbaren Plug-ins und die von Ihnen unterstützten Ressourcen-URIs dynamisch ermitteln kann.
+title: WinRM-Dienst-Plug-In-Konfiguration
+description: Ein winRM-Plug-In (Windows Remote Management) muss im WinRM-Katalog registriert werden, damit die Infrastruktur die verfügbaren Plug-Ins und ressourcen-URIs, die sie unterstützen, dynamisch bestimmen kann.
 ms.assetid: d71cd244-3f10-40e3-a756-36cdf41b9cad
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 60bf618d71e55c6afd28de918198725895088559
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: 08b82b24b8631cd6a47a879a6fa0684b9b2ac9c542699396d0f0997afe14cac8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104316736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118323719"
 ---
-# <a name="winrm-service-plug-in-configuration"></a>Konfiguration des WinRM-Dienst-Plug-ins
+# <a name="winrm-service-plug-in-configuration"></a>WinRM-Dienst-Plug-In-Konfiguration
 
-Ein Windows-Remoteverwaltung-Plug-in (WinRM) muss im WinRM-Katalog registriert sein, damit die Infrastruktur den Satz der verfügbaren Plug-ins und die von Ihnen unterstützten [*Ressourcen-URIs*](windows-remote-management-glossary.md) dynamisch ermitteln kann. Alle [*Ressourcen-URIs*](windows-remote-management-glossary.md) für WinRM-Plug-Ins müssen dem Format entsprechen, das in RFC 3986 ( [https://www.ietf.org/rfc/rfc3986.txt](https://www.ietf.org/rfc/rfc3986.txt) ) definiert ist. Die Konfiguration erfolgt über den WinRM-Hauptdienst.
+Ein winRM-Plug-In (Windows Remote Management) muss im WinRM-Katalog registriert werden, damit die Infrastruktur die verfügbaren Plug-Ins und [*ressourcen-URIs,*](windows-remote-management-glossary.md) die sie unterstützen, dynamisch bestimmen kann. Alle [*Ressourcen-URIs*](windows-remote-management-glossary.md) für WinRM-Plug-Ins müssen dem format entsprechen, das in RFC 3986 ( ) definiert [https://www.ietf.org/rfc/rfc3986.txt](https://www.ietf.org/rfc/rfc3986.txt) ist. Die Konfiguration erfolgt über den WinRM-Hauptdienst.
 
-Der folgende Befehl registriert eine Plug-in-Konfiguration beim WinRM-Dienst:
+Der folgende Befehl registriert eine Plug-In-Konfiguration beim WinRM-Dienst:
 
 ```console
 winrm create http://schemas.microsoft.com/wbem/wsman/1/config/plugin?name=MyPlugIn -file:myplugin.xml
@@ -25,7 +25,7 @@ winrm create http://schemas.microsoft.com/wbem/wsman/1/config/plugin?name=MyPlug
 > [!NOTE]
 > Der WinRM-Dienst muss neu gestartet werden, um die neu registrierten Plug-Ins verfügbar zu machen.
 
-Die Plug-in-Konfiguration ist in XML angegeben. Im Folgenden finden Sie ein Beispiel.
+Die Plug-In-Konfiguration wird in XML angegeben. Im Folgenden finden Sie ein Beispiel.
 
 ```XML
 <PlugInConfiguration xmlns="http://schemas.microsoft.com/wbem/wsman/1/config/PluginConfiguration" 
@@ -62,156 +62,156 @@ Die Plug-in-Konfiguration ist in XML angegeben. Im Folgenden finden Sie ein Beis
 
 
 
-In der folgenden Liste werden die XML-Elemente ausführlicher beschrieben, und es folgt das als XSD angegebene Konfigurations Schema.
+In der folgenden Liste werden die XML-Elemente ausführlicher beschrieben, gefolgt von dem als XSD angegebenen Konfigurationsschema.
 
 <dl> <dt>
 
-<span id="PlugInConfiguration_OperationsConfiguration"></span><span id="pluginconfiguration_operationsconfiguration"></span><span id="PLUGINCONFIGURATION_OPERATIONSCONFIGURATION"></span>**Pluginconfiguration** / **Operationsconfiguration**
+<span id="PlugInConfiguration_OperationsConfiguration"></span><span id="pluginconfiguration_operationsconfiguration"></span><span id="PLUGINCONFIGURATION_OPERATIONSCONFIGURATION"></span>**PlugInConfiguration** / **OperationsConfiguration**
 </dt> <dd>
 
-Gibt den Dateinamen des Vorgangs-Plug-ins an. Alle Umgebungsvariablen, die in diesen Eintrag eingefügt werden, werden im Kontext des Benutzers erweitert, wenn eine Anforderung empfangen wird. Jeder Benutzer kann über eine andere Version derselben Umgebungsvariablen verfügen, sodass jeder Benutzer ein anderes Plug-in haben könnte. Dieser Eintrag darf nicht leer sein und muss auf ein gültiges Plug-in zeigen.
+Gibt den Dateinamen des Operations-Plug-Ins an. Alle Umgebungsvariablen, die in diesem Eintrag enthalten sind, werden im Kontext des Benutzers erweitert, wenn eine Anforderung eingeht. Jeder Benutzer kann über eine andere Version derselben Umgebungsvariablen verfügen, sodass jeder Benutzer ein anderes Plug-In verwenden kann. Dieser Eintrag darf nicht leer sein und muss auf ein gültiges Plug-In verweisen.
 
 </dd> <dt>
 
-<span id="PlugInConfiguration_Name"></span><span id="pluginconfiguration_name"></span><span id="PLUGINCONFIGURATION_NAME"></span>**Pluginconfiguration** / **Name**
+<span id="PlugInConfiguration_Name"></span><span id="pluginconfiguration_name"></span><span id="PLUGINCONFIGURATION_NAME"></span>**PlugInConfiguration** / **Name**
 </dt> <dd>
 
-Gibt den anzeigen Amen an, der für das Plug-in verwendet werden soll. Wenn vom Plug-in ein Fehler zurückgegeben wird, wird dieser Name in die Fehler-XML-Datei eingefügt, die an die Client Anwendung zurückgegeben wird. Der Name gilt für kein bestimmtes Gebietsschema.
+Gibt den Anzeigenamen an, der für das Plug-In verwendet werden soll. Wenn vom Plug-In ein Fehler zurückgegeben wird, wird dieser Name in die Fehler-XML-Datei aufgenommen, die an die Clientanwendung zurückgegeben wird. Der Name gilt für kein bestimmtes Gebietsschema.
 
 </dd> <dt>
 
-<span id="PlugInConfiguration_Architecture"></span><span id="pluginconfiguration_architecture"></span><span id="PLUGINCONFIGURATION_ARCHITECTURE"></span>**Pluginconfiguration** / **Architektur**
+<span id="PlugInConfiguration_Architecture"></span><span id="pluginconfiguration_architecture"></span><span id="PLUGINCONFIGURATION_ARCHITECTURE"></span>**PlugInConfiguration** / **Architektur**
 </dt> <dd>
 
-Gibt an, ob das Operations-Plug-in 32-Bit oder 64-Bit ist. Wenn dieses Element nicht angegeben ist, wird der Wert standardmäßig auf x86-Systemen auf "32" und auf 64-Bit-Systemen auf "64" festgelegt. Für x86-Systeme ist der einzige gültige Wert "32". Wenn der Wert "32" auf einem 64-Bit-System ist, muss die WOW64-Umleitung beim Eingeben der **Dateiname** -Informationen berücksichtigt werden. Das zugrunde liegende Dateisystem verwendet die WOW64-Umleitung zum Übersetzen von system32 in syswow64. Wenn der **Dateiname** z. b. "% windir% \\ system32 \\myplugin.dll" und die **Architektur** den Wert "32" hat, befindet sich die tatsächliche Plug-in-Datei unter "% windir% \\ syswow64 \\myplugin.dll".
+Gibt an, ob das Betriebs-Plug-In 32-Bit oder 64-Bit ist. Wenn dieses Element nicht angegeben ist, wird der Wert auf x86-Systemen standardmäßig auf "32" und auf 64-Bit-Systemen auf "64" festgelegt. Für x86-Systeme ist der einzige gültige Wert "32". Wenn der Wert in einem 64-Bit-System "32" ist, muss bei der Eingabe der **Dateinameninformationen** die Wow64-Umleitung berücksichtigt werden. Das zugrunde liegende Dateisystem verwendet die Wow64-Umleitung, um system32 in syswow64 zu übersetzen. Wenn der **Dateiname** beispielsweise "%windir% \\ system32 \\myplugin.dll" und die **Architektur** "32" lautet, befindet sich die tatsächliche Plug-In-Datei unter "%windir% \\ syswow64 \\myplugin.dll".
 
 </dd> <dt>
 
-<span id="PlugInConfiguration_XmlRenderingType"></span><span id="pluginconfiguration_xmlrenderingtype"></span><span id="PLUGINCONFIGURATION_XMLRENDERINGTYPE"></span>**Pluginconfiguration** / **Xmlrenderingtype**
+<span id="PlugInConfiguration_XmlRenderingType"></span><span id="pluginconfiguration_xmlrenderingtype"></span><span id="PLUGINCONFIGURATION_XMLRENDERINGTYPE"></span>**PlugInConfiguration** / **XmlRenderingType**
 </dt> <dd>
 
-Konfiguriert das Format, in dem XML an Plug-ins über das [**WSMAN- \_ Daten**](/windows/desktop/api/Wsman/ns-wsman-wsman_data) Objekt übermittelt wird. Folgende Dateitypen sind verfügbar:
+Konfiguriert das Format, in dem XML über das [**WSMAN \_ DATA-Objekt**](/windows/desktop/api/Wsman/ns-wsman-wsman_data) an Plug-Ins übergeben wird. Folgende Dateitypen sind verfügbar:
 
 <dl> <dt>
 
 <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
 </dt> <dd>
 
-Eingehende XML-Daten sind in der Text Struktur eines WSMAN- \_ \_ Datentyps enthalten \_ , der den XML-Code als **pcwstr** -Arbeitsspeicher Puffer darstellt.
+Eingehende XML-Daten sind in einer WSMAN \_ DATA \_ TYPE \_ TEXT-Struktur enthalten, die den XML-Code als **PCWSTR-Speicherpuffer** darstellt.
 
 </dd> <dt>
 
-<span id="XMLReader"></span><span id="xmlreader"></span><span id="XMLREADER"></span>XmlReader
+<span id="XMLReader"></span><span id="xmlreader"></span><span id="XMLREADER"></span>Xmlreader
 </dt> <dd>
 
-Eingehende XML-Daten sind in \_ der WS XML Reader-Struktur eines WSMAN- \_ Datentyps enthalten \_ , der \_ den XML-Code \_ als **XmlReader** -Objekt darstellt, das in der Header Datei "Webservices. h" definiert ist.
+Eingehende XML-Daten sind in einer \_ WSMAN DATA \_ TYPE \_ WS XML \_ \_ READER-Struktur enthalten, die den XML-Code als **XmlReader-Objekt** darstellt, das in der WebServices.h-Headerdatei definiert ist.
 
 </dd> </dl> </dd> <dt>
 
-<span id="PlugInConfiguration_InitializationXml"></span><span id="pluginconfiguration_initializationxml"></span><span id="PLUGINCONFIGURATION_INITIALIZATIONXML"></span>**Pluginconfiguration** / **Initializationxml**
+<span id="PlugInConfiguration_InitializationXml"></span><span id="pluginconfiguration_initializationxml"></span><span id="PLUGINCONFIGURATION_INITIALIZATIONXML"></span>**PlugInConfiguration** / **InitializationXml**
 </dt> <dd>
 
-Dieser Knoten ist optional und ermöglicht einem Plug-in das Konfigurieren zusätzlicher XML-Daten, die an die [**wsmanpluginstartup**](/windows/desktop/api/Wsman/nc-wsman-wsman_plugin_startup)-Methode übermittelt werden. Die meisten Plug-Ins benötigen diese zusätzlichen Informationen nicht. Wenn jedoch ein Plug-in in mehr als einem Szenario verwendet werden muss, das eine andere Lauf Zeit Semantik erfordert, gibt dieser XML-Code dem Plug-in die Flexibilität.
+Dieser Knoten ist optional und ermöglicht einem Plug-In die Konfiguration zusätzlicher XML-Daten, die an die [**WSManPluginStartup-Methode**](/windows/desktop/api/Wsman/nc-wsman-wsman_plugin_startup)übergeben werden. Die meisten Plug-Ins benötigen diese zusätzlichen Informationen nicht, aber wenn ein Plug-In in mehr als einem Szenario verwendet werden muss, das eine andere Laufzeitsemantik erfordert, bietet dieses XML dem Plug-In die Flexibilität, dies zu tun.
 
 </dd> <dt>
 
-<span id="PlugInConfiguration_Resources"></span><span id="pluginconfiguration_resources"></span><span id="PLUGINCONFIGURATION_RESOURCES"></span>**Pluginconfiguration** / **Ressourcen**
+<span id="PlugInConfiguration_Resources"></span><span id="pluginconfiguration_resources"></span><span id="PLUGINCONFIGURATION_RESOURCES"></span>**PlugInConfiguration** / **Ressourcen**
 </dt> <dd>
 
-Gibt eine Liste von [*Ressourcen-URIs*](windows-remote-management-glossary.md)an, die dieses Plug-in unterstützt. Mindestens ein **resourceUri**-Eintrag muss angegeben werden. Andernfalls wird der XML-Code zurückgewiesen.
+Gibt eine Liste der [*Ressourcen-URIs*](windows-remote-management-glossary.md)an, die dieses Plug-In unterstützt. Mindestens ein **ResourceUri-Eintrag** muss angegeben werden. Andernfalls wird der XML-Code abgelehnt.
 
 </dd> <dt>
 
-<span id="PlugInConfiguration_Resources_Resource"></span><span id="pluginconfiguration_resources_resource"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE"></span>**Pluginconfiguration** / **Ressourcen** / **Ressource**
+<span id="PlugInConfiguration_Resources_Resource"></span><span id="pluginconfiguration_resources_resource"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE"></span>**PlugInConfiguration** / **Ressourcen** / **Ressource**
 </dt> <dd>
 
-Stellt eine einzelne [*Ressourcen-URI*](windows-remote-management-glossary.md)-Konfiguration dar.
+Stellt eine einzelne [*Ressourcen-URI-Konfiguration*](windows-remote-management-glossary.md)dar.
 
 > [!Note]  
-> Das **supportsoptions**-Attribut kann auf "false" festgelegt werden. Wenn **supportsoptions** auf false festgelegt ist, wird dieses Attribut nicht aufgelistet, wenn die Ressource aufgezählt wird.
+> Das **SupportsOptions-Attribut** kann auf FALSE festgelegt werden. Wenn **SupportsOptions** auf FALSE festgelegt ist, wird dieses Attribut nicht aufgelistet, wenn die Ressource aufgezählt wird.
 
- 
-
-</dd> <dt>
-
-<span id="PlugInConfiguration_Resources_Resource_ResourceUri"></span><span id="pluginconfiguration_resources_resource_resourceuri"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_RESOURCEURI"></span>**Pluginconfiguration** / **Ressourcen** / **Ressource** / **ResourceUri**
-</dt> <dd>
-
-Gibt einen einzelnen [*Ressourcen-URI*](windows-remote-management-glossary.md) entweder vollständig oder als partielle Vergleichs Zeichenfolge basierend auf dem **exactMatch** -Attribut an. Wenn " **exactMatch** " nicht vorhanden ist, wird standardmäßig " **false**" verwendet. Dies bedeutet, dass der WinRM-SOAP-Prozessor eine partielle Entsprechung zum Anfang des *Ressourcen-URI* findet und eine Entsprechung an das Plug-in übergibt. Das **supportsoptions** -Attribut kann angegeben werden, wenn für diesen *Ressourcen-URI* alle Optionen übermittelt werden dürfen. Standardmäßig werden keine Optionen unterstützt, und wenn in der Client Anforderung eine vorhanden ist, wird ein Fehler zurückgegeben. Wenn Optionen vom Plug-in unterstützt werden, ist es wichtig, dass das Plug-in den korrekten Fehler zurückgibt, wenn eine Option vorhanden ist, die das Plug-in nicht versteht, wenn das **MustUnderstand** -Flag auf **true** festgelegt ist.
+ 
 
 </dd> <dt>
 
-<span id="PlugInConfiguration_Resources_Resource_Capability"></span><span id="pluginconfiguration_resources_resource_capability"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_CAPABILITY"></span>**Pluginconfiguration** / **Ressourcen** / **Ressource** / **Funktion**
+<span id="PlugInConfiguration_Resources_Resource_ResourceUri"></span><span id="pluginconfiguration_resources_resource_resourceuri"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_RESOURCEURI"></span>**PlugInConfiguration** / **Ressourcen** / **Ressource** / **ResourceUri**
 </dt> <dd>
 
-Gibt eine Funktion an, die für diesen [*Ressourcen-URI*](windows-remote-management-glossary.md)verfügbar ist. Es gibt einen Eintrag für jeden Vorgangstyp, den er unterstützt. Die folgenden Optionen sind verfügbar:
+Gibt einen einzelnen [*Ressourcen-URI*](windows-remote-management-glossary.md) entweder vollständig oder als partielle Übereinstimmungszeichenfolge basierend auf dem **ExactMatch-Attribut** an. Wenn **ExactMatch** nicht vorhanden ist, wird standardmäßig **False** verwendet. Dies bedeutet, dass der WinRM-SOAP-Prozessor eine partielle Übereinstimmung mit dem Anfang des *Ressourcen-URI* vorgibt und diese an das Plug-In übergibt, wenn eine Übereinstimmung vorhanden ist. Das **SupportsOptions-Attribut** kann angegeben werden, wenn für diesen *Ressourcen-URI* Optionen übergeben werden dürfen. Standardmäßig werden keine Optionen unterstützt, und wenn eine der Optionen in der Clientanforderung vorhanden ist, wird ein Fehler zurückgegeben. Wenn Optionen vom Plug-In unterstützt werden, ist es wichtig, dass das Plug-In den richtigen Fehler zurückgibt, wenn eine Option vorhanden ist, die das Plug-In nicht versteht, wenn das **mustUnderstand-Flag** auf **True** festgelegt ist.
+
+</dd> <dt>
+
+<span id="PlugInConfiguration_Resources_Resource_Capability"></span><span id="pluginconfiguration_resources_resource_capability"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_CAPABILITY"></span>**PlugInConfiguration** / **Ressourcen** / **Ressource** / **Funktion**
+</dt> <dd>
+
+Gibt eine Funktion an, die für diesen [*Ressourcen-URI*](windows-remote-management-glossary.md)verfügbar ist. Es gibt einen Eintrag für jeden Vorgangstyp, der unterstützt wird. Die folgenden Optionen sind verfügbar:
 
 <dl> <dt>
 
 <span id="Get"></span><span id="get"></span><span id="GET"></span>Erhalten
 </dt> <dd>
 
-Get-Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird verwendet, wenn der Get-Vorgang das Konzept unterstützt. Das **supportfiltering** -Attribut ist ungültig und sollte auf false festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Get-Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird verwendet, wenn der get-Vorgang das Konzept unterstützt. Das **SupportFiltering-Attribut** ist ungültig und sollte auf FALSE festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
-<span id="Put"></span><span id="put"></span><span id="PUT"></span>Stellte
+<span id="Put"></span><span id="put"></span><span id="PUT"></span>Put
 </dt> <dd>
 
-Put-Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment**-Attribut wird verwendet, wenn der Put-Vorgang das Konzept unterstützt. Das **supportfiltering** -Attribut ist ungültig und sollte auf **false** festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Put-Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird verwendet, wenn der Put-Vorgang das Konzept unterstützt. Das **SupportFiltering-Attribut** ist ungültig und sollte auf **False** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
-<span id="Create"></span><span id="create"></span><span id="CREATE"></span>Stelle
+<span id="Create"></span><span id="create"></span><span id="CREATE"></span>Erstellen
 </dt> <dd>
 
-Erstellungs Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird verwendet, wenn der Create-Vorgang das Konzept unterstützt. Das **supportfiltering** -Attribut ist ungültig und sollte auf **false** festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Erstellungsvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird verwendet, wenn der Erstellungsvorgang das Konzept unterstützt. Das **SupportFiltering-Attribut** ist ungültig und sollte auf **False** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
-<span id="Delete"></span><span id="delete"></span><span id="DELETE"></span>Lösch
+<span id="Delete"></span><span id="delete"></span><span id="DELETE"></span>Löschen
 </dt> <dd>
 
-Löschvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird verwendet, wenn der DELETE-Vorgang das Konzept unterstützt. Das **supportfiltering** -Attribut ist ungültig und sollte auf **false** festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Löschvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird verwendet, wenn der Löschvorgang das Konzept unterstützt. Das **SupportFiltering-Attribut** ist ungültig und sollte auf **False** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
-<span id="Invoke"></span><span id="invoke"></span><span id="INVOKE"></span>Blaze
+<span id="Invoke"></span><span id="invoke"></span><span id="INVOKE"></span>Aufrufen
 </dt> <dd>
 
-Startvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird für Aufruf Vorgänge nicht unterstützt und sollte auf false festgelegt werden. Das **supportfiltering** -Attribut ist ungültig und sollte auf **false** festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Aufrufvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird für Aufrufvorgänge nicht unterstützt und sollte auf FALSE festgelegt werden. Das **SupportFiltering-Attribut** ist ungültig und sollte auf **False** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
 <span id="Enumerate"></span><span id="enumerate"></span><span id="ENUMERATE"></span>Auflisten
 </dt> <dd>
 
-Enumeringvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird für auflisten-Vorgänge nicht unterstützt und sollte auf **false** festgelegt werden. Das **supportfiltering** -Attribut ist gültig, und wenn das Plug-in das Filtern unterstützt, sollte dieses Attribut auf " **true**" festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Aufzählvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird für Aufzählungsvorgänge nicht unterstützt und sollte auf **False** festgelegt werden. Das **SupportFiltering-Attribut** ist gültig, und wenn das Plug-In das Filtern unterstützt, sollte dieses Attribut auf **True** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
 <span id="Subscribe"></span><span id="subscribe"></span><span id="SUBSCRIBE"></span>Abonnieren
 </dt> <dd>
 
-Abonnement Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird für abonnieren-Vorgänge nicht unterstützt und sollte auf **false** festgelegt werden. Das **supportfiltering** -Attribut ist ungültig und sollte auf **false** festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* ungültig, wenn Shellvorgänge ebenfalls unterstützt werden.
+Abonnieren-Vorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird für Subscribe-Vorgänge nicht unterstützt und sollte auf **FALSE** festgelegt werden. Das **SupportFiltering-Attribut** ist ungültig und sollte auf **False** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch Shellvorgänge unterstützt werden.
 
 </dd> <dt>
 
-<span id="Shell"></span><span id="shell"></span><span id="SHELL"></span>Schel
+<span id="Shell"></span><span id="shell"></span><span id="SHELL"></span>Muschel
 </dt> <dd>
 
-Shellvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **supportfragment** -Attribut wird für Shellvorgänge nicht unterstützt und sollte auf **false** festgelegt werden. Das **supportfiltering** -Attribut ist ungültig und sollte auf **false** festgelegt werden. Diese Funktion ist für einen Ressourcen- *URI* nicht gültig, wenn eine andere Vorgangs Funktion ebenfalls unterstützt wird. Wenn eine shellvorgangsaktionen für einen *Ressourcen-URI* konfiguriert ist, werden Get-, Put-, CREATE-, DELETE-, Aufruf-und auflisten-Vorgänge intern im WinRM-Dienst verarbeitet, um Shells zu verwalten. Folglich kann das Plug-in nicht mit den Vorgängen selbst umgehen.
+Shellvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glossary.md)unterstützt. Das **Attribut SupportFragment** wird für Shellvorgänge nicht unterstützt und sollte auf **False** festgelegt werden. Das **SupportFiltering-Attribut** ist ungültig und sollte auf **False** festgelegt werden. Diese Funktion ist für einen *Ressourcen-URI* ungültig, wenn auch eine andere Vorgangsfunktion unterstützt wird. Wenn eine Shell-Vorgangsfunktion für einen *Ressourcen-URI* konfiguriert ist, werden Vorgänge zum Abrufen, Put, Erstellen, Löschen, Aufrufen und Aufzählen intern innerhalb des WinRm-Diensts verarbeitet, um Shells zu verwalten. Daher kann das Plug-In die Vorgänge selbst nicht behandeln.
 
 </dd> </dl> </dd> <dt>
 
-<span id="PlugInConfiguration_Resources_Resource_Security"></span><span id="pluginconfiguration_resources_resource_security"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_SECURITY"></span>**Pluginconfiguration** / **Ressourcen** / **Ressource** / **Sicherheit**
+<span id="PlugInConfiguration_Resources_Resource_Security"></span><span id="pluginconfiguration_resources_resource_security"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_SECURITY"></span>**PlugInConfiguration** / **Ressourcen** / **Ressource** / **Sicherheit**
 </dt> <dd>
 
-Dieses Element definiert die Sicherheits Beschreibung (über das **SDDL** -Attribut), die angewendet werden soll, um den Zugriff auf einen bestimmten [*Ressourcen-URI*](windows-remote-management-glossary.md) zu bestimmen (über das **URI** -Attribut). Wenn **exactMatch** nicht vorhanden ist, wird das **Sicherheits** Element standardmäßig auf **false** festgelegt. Dies bedeutet, dass die **SDDL** für alle *Ressourcen-URIs* gilt, die **URI** als Präfix freigeben. Wenn **exactMatch** auf true festgelegt ist, gilt die **SDDL** nur für den angegebenen **URI** . Wenn mehrere **Sicherheits** Einträge vorhanden sind, die auf einen bestimmten *Ressourcen-URIs* angewendet werden können, wird der entsprechende **SDDL** mit der längsten Präfix Übereinstimmung bestimmt. Wenn ein **URI** -Eintrag mit dem längsten Präfix vorhanden ist, wird er immer als entsprechendes Sicherheitselement ausgewählt.
+Dieses Element definiert den Sicherheitsdeskriptor (über das **Sddl-Attribut),** der angewendet werden soll, um den Zugriff auf einen bestimmten [*Ressourcen-URI*](windows-remote-management-glossary.md) (über das **URI-Attribut)** zu bestimmen. Wenn **ExactMatch** nicht vorhanden ist, wird das **Security-Element** standardmäßig auf **False** festgelegt. Dies bedeutet, dass die **Sddl** für alle *Ressourcen-URIs* gilt, die **den URI** als Präfix verwenden. Wenn **ExactMatch** auf TRUE festgelegt ist, gilt **die Sddl** nur für den genauen angegebenen **URI.** Wenn mehrere **Sicherheitseinträge** vorhanden sind, die auf eine bestimmte *Ressourcen-URIs* angewendet werden können, wird die längste Präfixübereinsprechung verwendet, um die entsprechende **Sddl** zu bestimmen. Wenn ein **URI-Eintrag** mit exakter Übereinstimmung vorhanden ist, wird er aufgrund der längsten Präfixübereinführung immer als entsprechendes Security-Element ausgewählt.
 
 </dd> </dl>
 
-Im folgenden wird das Plug-in-Konfigurations Schema als XSD angegeben.
+Im Folgenden wird das Plug-In-Konfigurationsschema als XSD angegeben.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>
@@ -306,9 +306,9 @@ Im folgenden wird das Plug-in-Konfigurations Schema als XSD angegeben.
 </xs:schema>
 ```
 
- 
+ 
 
- 
+ 
 
 
 

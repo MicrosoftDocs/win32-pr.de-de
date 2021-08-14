@@ -1,36 +1,36 @@
 ---
-description: Die Dateiwiederherstellung auf einem laufenden System kann problematisch sein. Es ist wichtig, dass ausgestellte Anwendungen (Writer) angeben, was zu tun ist, wenn während der Wiederherstellung Probleme auftreten, beispielsweise, wenn die wieder herzustellende Datei zurzeit verwendet wird.
+description: Die Dateiwiederherstellung auf einem ausgeführten System kann problematisch sein. Es ist wichtig, dass ausgeführte Anwendungen (Writer) angeben, was zu tun ist, wenn probleme während der Wiederherstellung auftreten, z. B. wenn die wiederhergestellte Datei derzeit verwendet wird.
 ms.assetid: 2cb963a8-7077-4419-96d8-cba0fd011e4f
-title: VSS-Wiederherstellungs Konfigurationen
+title: VSS-Wiederherstellungskonfigurationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f13acfc59f250a859e9c62f2df2e1b1b982608ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f48b3486128c6a91f601a89d697a4db9d8ab27fe9d3ac4cbef28dc870928d37d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118344199"
 ---
-# <a name="vss-restore-configurations"></a>VSS-Wiederherstellungs Konfigurationen
+# <a name="vss-restore-configurations"></a>VSS-Wiederherstellungskonfigurationen
 
-Die Dateiwiederherstellung auf einem laufenden System kann problematisch sein. Es ist wichtig, dass ausgestellte Anwendungen (Writer) angeben, was zu tun ist, wenn während der Wiederherstellung Probleme auftreten, beispielsweise, wenn die wieder herzustellende Datei zurzeit verwendet wird.
+Die Dateiwiederherstellung auf einem ausgeführten System kann problematisch sein. Es ist wichtig, dass ausgeführte Anwendungen (Writer) angeben, was zu tun ist, wenn probleme während der Wiederherstellung auftreten, z. B. wenn die wiederhergestellte Datei derzeit verwendet wird.
 
-Unter VSS haben Writer zwei ergänzende Möglichkeiten zur Verwaltung von [*Wiederherstellungen – Wiederherstellungsmethoden*](vssgloss-r.md) und [*Wiederherstellungs Ziele*](vssgloss-r.md).
+Unter VSS verfügen Writer über zwei sich ergänzende Methoden zum Verwalten von Wiederherstellungen:[*Wiederherstellungsmethoden*](vssgloss-r.md) und [*Wiederherstellungsziele.*](vssgloss-r.md)
 
-Außerdem können Anforderer die Dateien an zuvor nicht angegebenen Speicherorten wiederherstellen und Writer Benachrichtigen (Weitere Informationen finden Sie unter [**IVssBackupComponents:: addnewtarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)).
+Darüber hinaus können Anforderer Dateien an zuvor nicht angegebenen Speicherorten wiederherstellen und Writer benachrichtigen (siehe [**IVssBackupComponents::AddNewTarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)).
 
-Die Restore-Methode (auch das ursprüngliche Wiederherstellungs Ziel) wird von einem Writer zum Zeitpunkt der Sicherung angegeben und legt eine Writer-weite Definition der Methode fest, die zum Wiederherstellen aller ihrer Komponenten in der Zukunft verwendet werden soll. Alle Dateien und Komponenten, die von einem Writer verwaltet werden, verwenden dieselbe Wiederherstellungsmethode.
+Die Wiederherstellungsmethode (auch das ursprüngliche Wiederherstellungsziel aufrufen) wird von einem Writer zu einem Sicherungszeitpunkt angegeben und legt eine writerweite Definition der Methode fest, die in Zukunft zum Wiederherstellen aller komponenten verwendet werden soll. Alle Dateien und Komponenten, die von einem Writer verwaltet werden, verwenden dieselbe Wiederherstellungsmethode.
 
-Mit Wiederherstellungs Zielen können Writer die Art und Weise ändern, wie bestimmte Komponenten zum Zeitpunkt der Wiederherstellung wieder hergestellt werden. Im Gegensatz zu Restore-Methoden werden Wiederherstellungs Ziele für einen Komponenten Satz definiert.
+Mit Wiederherstellungszielen können Writer ändern, wie bestimmte Komponenten zum Zeitpunkt der Wiederherstellung wiederhergestellt werden sollen. Im Gegensatz zu Wiederherstellungsmethoden werden Wiederherstellungsziele für einen Komponentensatz definiert.
 
-Eine ausführliche Erläuterung der Verwendung von Wiederherstellungsmethoden und Wiederherstellungs Zielen finden Sie in den folgenden Themen:
+Eine ausführliche Erläuterung der Verwendung von Wiederherstellungsmethoden und Wiederherstellungszielen finden Sie in den unten aufgeführten Themen:
 
--   [VSS-Wiederherstellungs Status](vss-restore-state.md)
+-   [VSS-Wiederherstellungsstatus](vss-restore-state.md)
 -   [Festlegen von VSS-Wiederherstellungsmethoden](setting-vss-restore-methods.md)
--   [Festlegen von VSS-Wiederherstellungs Zielen](setting-vss-restore-targets.md)
--   [Festlegen der VSS-Wiederherstellungsoptionen](setting-vss-restore-options.md)
+-   [Festlegen von VSS-Wiederherstellungszielen](setting-vss-restore-targets.md)
+-   [Festlegen von VSS-Wiederherstellungsoptionen](setting-vss-restore-options.md)
 
-(Informationen zu Wiederherstellungen, bei denen diese Mechanismen nicht verwendet werden, finden Sie unter wieder [herstellen ohne Writer-Teilnahme](restores-without-writer-participation.md).)
+(Informationen zu Wiederherstellungen, die diese Mechanismen nicht verwenden, finden Sie unter [Wiederherstellungen ohne Schreibteilnahme.)](restores-without-writer-participation.md)
 
  
 

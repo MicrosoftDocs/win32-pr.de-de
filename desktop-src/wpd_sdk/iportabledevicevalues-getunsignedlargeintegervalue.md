@@ -1,7 +1,7 @@
 ---
-description: Die getunsignedlargeintegervalue-Methode ruft einen ULONGLONG-Wert (Typ VT UI8) ab, der \_ von einem Schlüssel angegeben wird.
+description: Die GetUnsignedLargeIntegerValue-Methode ruft einen ULONGLONG-Wert (Typ VT \_ UI8) ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: de37c49b-a5f4-424d-8320-1de2d5a624aa
-title: 'Iportabledevicevalues:: getunsignedlargeingetegervalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetUnsignedLargeIntegerValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 48f6093f32d43737b1999c3474f74569ecd3f8cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df10faa20094623940e9694a5612c4f49b45f3c979d7e05df3239512cb021ab2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118194029"
 ---
-# <a name="iportabledevicevaluesgetunsignedlargeintegervalue-method"></a>Iportabledevicevalues:: getunsignedlargeingetegervalue-Methode
+# <a name="iportabledevicevaluesgetunsignedlargeintegervalue-method"></a>IPortableDeviceValues::GetUnsignedLargeIntegerValue-Methode
 
-Die **getunsignedlargeintegervalue** -Methode ruft einen **ULONGLONG** -Wert (Typ VT UI8) ab, der \_ von einem Schlüssel angegeben wird.
+Die **GetUnsignedLargeIntegerValue-Methode** ruft einen **ULONGLONG-Wert** (Typ VT \_ UI8) ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetUnsignedLargeIntegerValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **ULONGLONG** -Wert.
+Zeiger auf den abgerufenen **ULONGLONG-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                             |
 |------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                        |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **ULONGLONG** -Typ.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/>    |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch *key* angegebene Eigenschaft ist kein **ULONGLONG-Typ.**<br/> |
+| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/>    |
 
 
 
@@ -77,19 +77,19 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportableendvicevalues:: Abbild-ID-Wert**](iportabledevicevalues-setunsignedlargeintegervalue.md)
+[**IPortableDeviceValues::SetUnsignedLargeIntegerValue**](iportabledevicevalues-setunsignedlargeintegervalue.md)
 </dt> </dl>
 
  

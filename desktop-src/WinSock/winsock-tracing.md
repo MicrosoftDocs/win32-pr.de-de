@@ -1,39 +1,39 @@
 ---
-description: Winsock-Ablauf Verfolgung
+description: Winsock-Ablaufverfolgung
 ms.assetid: 0c430fc2-28e7-4537-a887-4c36d24fedee
-title: Winsock-Ablauf Verfolgung
+title: Winsock-Ablaufverfolgung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 803be6220d4d2d440811033786b0f043fab0ff9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb2d9593f4c2cea47e722075f1611151fb276cdf2646a2c9898a9c8d7d156098
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118321670"
 ---
-# <a name="winsock-tracing"></a>Winsock-Ablauf Verfolgung
+# <a name="winsock-tracing"></a>Winsock-Ablaufverfolgung
 
 ## <a name="introduction"></a>Einführung
 
-Die Winsock-Ablauf Verfolgung ist ein Feature zur Problembehandlung, das in Binärdateien im Einzelhandel aktiviert werden kann, um bestimmte Windows Socket-Ereignisse mit minimalem mehr Aufwand Das Ziel, Windows Sockets eine Einzelhandels Ablauf Verfolgung hinzuzufügen, besteht darin, für Entwickler und den Produktsupport bessere Diagnosefunktionen zu ermöglichen. Die Winsock-Netzwerk Ereignis Ablauf Verfolgung unterstützt Ablaufverfolgungs-Socketvorgänge für IPv4-und IPv6 Die Ablauf Verfolgung der Winsock-Katalog Änderung unterstützt die Ablauf Verfolgung von Änderungen, die an den Winsock-Katalog durch mehrstufige Dienstanbieter (LSPs Die Winsock-Ablauf Verfolgung wird unter Windows Vista und höher unterstützt.
+Die Winsock-Ablaufverfolgung ist ein Problembehandlungsfeature, das in Binärdateien für den Einzelhandel aktiviert werden kann, um bestimmte Windows Socketereignisse mit minimalem Mehraufwand zu verfolgen. Das Ziel des Hinzufügens der Einzelhandelsablaufverfolgung zu Windows Sockets besteht im Ermöglichen besserer Diagnosefunktionen für Entwickler und Produktsupport. Die Winsock-Netzwerkereignisablaufverfolgung unterstützt die Ablaufverfolgung von Socketvorgängen für IPv4- und IPv6-Anwendungen. Die Winsock-Katalogänderungsablaufverfolgung unterstützt die Ablaufverfolgung von Änderungen, die von mehrschichtigen Dienstanbietern (Layered Service Providers, LSPs) am Winsock-Katalog vorgenommen wurden. Die Winsock-Ablaufverfolgung wird unter Windows Vista und höher unterstützt.
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Ab Windows 8 und Windows Server 2012 verwenden Sie die [Windows-Filter Plattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrschichtige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 Windows Server 2012 Filterplattform [Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Wenn bei einem Socket ein unerwarteter Fehler auftritt, wird der Fehlercode zurückgegeben, um das Problem zu diagnostizieren. Der zurückgegebene Fehlercode erläutert häufig nicht, warum der Fehler aufgetreten ist. Dies gilt insbesondere, wenn der Fehler vom zugrunde liegenden Netzwerk Transport initiiert wird. Die Winsock-Ablauf Verfolgung bietet eine ausführlichere Ablauf Verfolgungs Ebene, die zusätzliche Informationen protokollieren kann, um Puffer Beschädigungen und schlecht geschriebene Anwendungen abzufangen.
+Wenn bei einem Socket ein unerwarteter Fehler auftritt, ist der zurückgegebene Fehlercode der wichtigste Hinweis zur Diagnose des Problems. Sehr häufig erklärt der zurückgegebene Fehlercode nicht, warum der Fehler aufgetreten ist, insbesondere wenn der Fehler vom zugrunde liegenden Netzwerktransport initiiert wird. Die Winsock-Ablaufverfolgung bietet eine ausführlichere Ablaufverfolgungsebene, mit der zusätzliche Informationen protokolliert werden können, um Pufferbeschädigungen und schlecht geschriebene Anwendungen zu abfangen.
 
-Die Winsock-Ablauf Verfolgung verwendet die Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw), eine allgemeine, hoch Geschwindigkeits Ablauf Verfolgungs Funktion des Betriebssystems. Mit einem in dem Kernel implementierten Puffer-und Protokollierungs Mechanismus stellt ETW einen Ablauf Verfolgungs Mechanismus für Ereignisse bereit, die von Anwendungen im Benutzermodus und im Kernel Modus-Gerätetreibern ausgelöst werden. Außerdem haben Sie mit etw die Möglichkeit, die Protokollierung dynamisch zu aktivieren und zu deaktivieren, sodass Sie die detaillierte Ablauf Verfolgung in Produktionsumgebungen ohne Neustarts oder Anwendungs Neustarts problemlos durchführen können. Der Protokollierungs Mechanismus verwendet Puffer, die von einem asynchronen Writer-Thread auf den Datenträger geschrieben werden. Dadurch können umfangreiche Server Anwendungen Ereignisse mit minimaler Störung schreiben. Etw wurde erstmals unter Windows 2000 eingeführt. Unterstützung für die Winsock-Ablauf Verfolgung mit etw wurde unter Windows Vista und höher hinzugefügt. Allgemeine Informationen zu etw finden Sie unter verbessertes [Debugging und Leistungsoptimierung mit etw](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
+Die Winsock-Ablaufverfolgung verwendet die Windows (Event Tracing for Windows, ETW), eine allgemeine, vom Betriebssystem bereitgestellte Hochgeschwindigkeits-Ablaufverfolgungseinrichtung. Mithilfe eines im Kernel implementierten Pufferungs- und Protokollierungsmechanismus bietet ETW einen Ablaufverfolgungsmechanismus für Ereignisse, die sowohl von Benutzermodusanwendungen als auch von Gerätetreibern im Kernelmodus ausgelöst werden. Darüber hinaus bietet ETW Ihnen die Möglichkeit, die Protokollierung dynamisch zu aktivieren und zu deaktivieren, wodurch es einfach ist, eine detaillierte Ablaufverfolgung in Produktionsumgebungen durchzuführen, ohne dass Neustarts oder Neustarts der Anwendung erforderlich sind. Der Protokollierungsmechanismus verwendet Puffer, die von einem asynchronen Writerthread auf den Datenträger geschrieben werden. Dies ermöglicht es großen Serveranwendungen, Ereignisse mit minimaler Beeinträchtigung zu schreiben. ETW wurde erstmals am Windows 2000 eingeführt. Unterstützung für die Winsock-Ablaufverfolgung mit ETW wurde auf Windows Vista und höher hinzugefügt. Allgemeine Informationen zu ETW finden Sie unter [Improve Debugging and Performance Tuning With ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
 
-Die Winsock-Ablauf Verfolgung kann nur auf Betriebssystemebene für alle Prozesse und Threads aktiviert werden, die auf einem Computer ausgeführt werden. Die Winsock-Ablauf Verfolgung kann derzeit nur für einen einzelnen Prozess oder Thread aktiviert werden. Wenn die Winsock-Netzwerk Ereignis Ablauf Verfolgung aktiviert ist, werden alle Socketanwendungen (sowohl IPv4 als auch IPv6) auf einem Computer nachverfolgt.
+Die Winsock-Ablaufverfolgung kann nur auf Betriebssystemebene für alle Prozesse und Threads aktiviert werden, die auf einem Computer ausgeführt werden. Die Winsock-Ablaufverfolgung kann derzeit nicht nur für einen einzelnen Prozess oder Thread aktiviert werden. Wenn die Winsock-Netzwerkereignisablaufverfolgung aktiviert ist, werden alle Socketanwendungen (sowohl IPv4 als auch IPv6) auf einem Computer nachverfolgt.
 
-In den folgenden Themen wird die Winsock-Ablauf Verfolgung ausführlicher beschrieben:
+In den folgenden Themen wird die Winsock-Ablaufverfolgung ausführlicher beschrieben:
 
--   [Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
--   [Kontrolle über die Winsock-Ablauf Verfolgung](control-of-winsock-tracing.md)
--   [Details der Winsock-Netzwerk Ereignis Ablauf Verfolgung](winsock-tracing-event-details.md)
--   [Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+-   [Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
+-   [Steuerung der Winsock-Ablaufverfolgung](control-of-winsock-tracing.md)
+-   [Details zur Winsock Network-Ereignisablaufverfolgung](winsock-tracing-event-details.md)
+-   [Details zur Ablaufverfolgung für Winsock-Katalogänderung](winsock-layered-service-provider-tracing-event-details.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,7 +42,7 @@ In den folgenden Themen wird die Winsock-Ablauf Verfolgung ausführlicher beschr
 [Verbessertes Debugging und Leistungsoptimierung mit ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 </dt> <dt>
 
-[Debug-und Ablauf Verfolgungs Funktionen](debug-and-trace-facilities-2.md)
+[Debug- und Ablaufverfolgungs-Funktionen](debug-and-trace-facilities-2.md)
 </dt> </dl>
 
  

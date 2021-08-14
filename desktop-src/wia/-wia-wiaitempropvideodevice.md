@@ -1,7 +1,7 @@
 ---
-description: Der standardmäßige Windows-Abbild Erfassungs-(WIA)-Videotreiber (wiavusd.dll) unterstützt die folgenden Eigenschaften für Streaming-Videogeräte.
+description: Der standardmäßige WIA-Videotreiber (Windows Image Acquisition) (wiavusd.dll) unterstützt die folgenden Eigenschaften für Streamingvideogeräte.
 ms.assetid: 24fa7e02-c409-49ec-b1a9-309f7c95e292
-title: Video-WIA-Geräte Eigenschafts Konstanten (wiadef. h)
+title: WIA-Geräteeigenschaftskonstanten für Video (Wiadef.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,32 +16,32 @@ api_type:
 - HeaderDef
 api_location:
 - wiadef.h
-ms.openlocfilehash: f02991cb5c2b8cc15eb89e335ef1e46442c89510
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9652ac72d6e73a9c44d2f4b299823dad9cc566bb1c7c0129af497ea213a6e5d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118207368"
 ---
-# <a name="video-wia-device-property-constants"></a>Video-WIA-Geräte Eigenschafts Konstanten
+# <a name="video-wia-device-property-constants"></a>WIA-Geräteeigenschaftskonstanten für Video
 
-Der standardmäßige Windows-Abbild Erfassungs-(WIA)-Videotreiber (wiavusd.dll) unterstützt die folgenden Eigenschaften für Streaming-Videogeräte.
+Der standardmäßige WIA-Videotreiber (Windows Image Acquisition) (wiavusd.dll) unterstützt die folgenden Eigenschaften für Streamingvideogeräte.
 
 > [!Note]  
-> WIA unterstützt keine Videogeräte in Windows Server 2003, Windows Vista oder höher. Verwenden Sie für diese Versionen von Windows [DirectShow](/previous-versions//ms783323(v=vs.85)) zum Abrufen von Bildern aus Videos.
+> WIA unterstützt keine Videogeräte in Windows Server 2003, Windows Vista oder höher. Verwenden Sie für diese Versionen der Windows [DirectShow,](/previous-versions//ms783323(v=vs.85)) um Bilder aus Videos zu erhalten.
 
  
 
-Das Präfix "WIA \_ DPV \_ " gibt eine Geräte Eigenschaft für Video Geräte an und ist die Benennungs Konvention, die in C/C++ verwendet wird. Bei der Skripterstellung verwenden diese Konstanten das Präfix "VideoDevice" und sind Teil des enumerierten Typs [wiaitempropertyid](-wia-wiaitempropertyid.md) . Der entsprechende Elementname aus dieser Skript Enumeration wird in Klammern neben dem Konstanten Namen C/C++ in der folgenden Liste angezeigt.
+Das Präfix "WIA \_ \_ DPV" gibt eine Geräteeigenschaft für Videogeräte an und ist die benennungskonvention, die in C/C++ verwendet wird. Zu Skriptzwecken verwenden diese Konstanten das Präfix "VideoDevice" und sind Teil des Aufzählungstyps [WiaItemPropertyId.](-wia-wiaitempropertyid.md) Der entsprechende Membername aus dieser Skriptenumeration wird in Klammern neben dem C/C++-Konstantennamen in der folgenden Liste angezeigt.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                          |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="WIA_DPV_LAST_PICTURE_TAKEN"></span><span id="wia_dpv_last_picture_taken"></span><dl> <dt>**WIA \_ \_Letzte \_ Abbildung \_ von DPV**</dt> <dt>videodevicelastpicturetaken</dt> </dl> | Diese Eigenschaft wird verwendet, um den WIA-Treiber zu benachrichtigen, dass ein neues Bild hinzugefügt wurde. Anwendungen sollten den Wert dieser Eigenschaft auf den Namen der Bilddatei festlegen, die als Ergebnis eines erfolgreichen Aufrufens der [**iwiavideo:: takepicture**](/windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-takepicture) -Methode erstellt wurde. <br/> Typ: VT \_ BSTR, Access: Lesen/Schreiben<br/>                                    |
-| <span id="WIA_DPV_IMAGES_DIRECTORY"></span><span id="wia_dpv_images_directory"></span><dl> <dt>**WIA \_ DPV- \_ Abbild \_ Verzeichnis**</dt> <dt>videoenviceimagesdirectory</dt> </dl>         | Diese Eigenschaft wird vom Standard-WIA-Video-Benutzermodus-Treiber (wiavusd.dll) verfügbar gemacht. Der Wert dieser Eigenschaft ist der vollständige Pfad des Verzeichnisses, in dem der WIA-Videotreiber standardmäßig Bilder einfügt. Anwendungen sollten die [**iwiavideo:: imagesdirectory**](/windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-get_imagesdirectory) -Eigenschaft auf diesen Wert festlegen. <br/> Typ: VT \_ BSTR, Zugriff: schreibgeschützt<br/> |
-| <span id="WIA_DPV_DSHOW_DEVICE_PATH"></span><span id="wia_dpv_dshow_device_path"></span><dl> <dt>**WIA \_ DPV \_ \_ ddisplay-Geräte \_ Pfad**</dt> <dt>videodebug-showdevicepath</dt> </dl>     | Der vollständige Pfad des DirectShow-Geräts. <br/> Typ: VT \_ BSTR, Zugriff: schreibgeschützt<br/>                                                                                                                                                                                                                                                                                     |
-| <span id="WIA_DPF_MOUNT_POINT"></span><span id="wia_dpf_mount_point"></span><dl> <dt>**WIA \_ DPF \_ - \_ Bereitstellungspunkt**</dt> <dt>filedevicemountpoint</dt> </dl>                              | Nicht implementiert. <br/> Type: **VT \_ I4**, Access: Read Only, gültige Werte: [WIA \_ Prop \_ None](-wia-property-attributes.md)<br/>                                                                                                                                                                                                                                           |
+| <span id="WIA_DPV_LAST_PICTURE_TAKEN"></span><span id="wia_dpv_last_picture_taken"></span><dl> <dt>**WIA \_ DPV \_ LAST \_ PICTURE \_ TAKEN**</dt> <dt>VideoDeviceLastPictureTaken</dt> </dl> | Diese Eigenschaft wird verwendet, um den WIA-Treiber zu benachrichtigen, dass ein neues Image hinzugefügt wurde. Anwendungen sollten den Wert dieser Eigenschaft auf den Namen der Imagedatei festlegen, die als Ergebnis eines erfolgreichen Aufrufs der [**IWiaVideo::TakePicture-Methode**](/windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-takepicture) erstellt wurde. <br/> Typ: VT \_ BSTR, Zugriff: Lesen/Schreiben<br/>                                    |
+| <span id="WIA_DPV_IMAGES_DIRECTORY"></span><span id="wia_dpv_images_directory"></span><dl> <dt>**WIA \_ DPV \_ IMAGES \_ DIRECTORY**</dt> <dt>VideoDeviceImagesDirectory</dt> </dl>         | Diese Eigenschaft wird vom standardmäßigen WIA-Videobenutzermodustreiber (wiavusd.dll) verfügbar gemacht. Der Wert dieser Eigenschaft ist der vollständige Pfad des Verzeichnisses, in dem der WIA-Videotreiber standardmäßig Bilder ablegt. Anwendungen sollten die [**IWiaVideo::ImagesDirectory-Eigenschaft**](/windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-get_imagesdirectory) auf diesen Wert festlegen. <br/> Typ: VT \_ BSTR, Zugriff: Schreibgeschützte<br/> |
+| <span id="WIA_DPV_DSHOW_DEVICE_PATH"></span><span id="wia_dpv_dshow_device_path"></span><dl> <dt>**WIA \_ DPV \_ DSHOW \_ DEVICE \_ PATH**</dt> <dt>VideoDeviceDShowDevicePath</dt> </dl>     | Der vollständige Pfad des DirectShow-Geräts. <br/> Typ: VT \_ BSTR, Zugriff: Schreibgeschützte<br/>                                                                                                                                                                                                                                                                                     |
+| <span id="WIA_DPF_MOUNT_POINT"></span><span id="wia_dpf_mount_point"></span><dl> <dt>**WIA \_ DPF \_ MOUNT \_ POINT**</dt> <dt>FileDeviceMountPoint</dt> </dl>                              | Nicht implementiert. <br/> Typ: **VT \_ I4**, Zugriff: Schreibzugriff, Gültige Werte: [WIA \_ PROP \_ NONE](-wia-property-attributes.md)<br/>                                                                                                                                                                                                                                           |
 
 
 
@@ -51,9 +51,9 @@ Das Präfix "WIA \_ DPV \_ " gibt eine Geräte Eigenschaft für Video Geräte an
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Wiadef. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Wiadef.h</dt> </dl> |
 
 
 

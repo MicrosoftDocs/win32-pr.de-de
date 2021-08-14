@@ -1,27 +1,27 @@
 ---
-description: Wenn eine Windows-Abbild Erfassungs Schnittstelle (WIA) in mehr als einem Thread innerhalb eines einzelnen Prozesses verwendet wird, muss eine Anwendung Marshalling für diese Schnittstelle bereitstellen.
+description: Wenn Sie eine WIA-Schnittstelle (Windows Image Acquisition) in mehr als einem Thread innerhalb eines einzelnen Prozesses verwenden, muss eine Anwendung Marshalling für diese Schnittstelle bereitstellen.
 ms.assetid: b125b36e-1428-4aa6-b367-eac78291c88e
 title: Verwenden mehrerer Threads in einer WIA-Anwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebb1dbfa552e72dc068aff63a0a316d9af680ed1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 707adbfe6cd24152209e318bed73a0b6d7fee54b6cfa1e8fbcfecac67e272082
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208006"
 ---
 # <a name="using-multiple-threads-in-a-wia-application"></a>Verwenden mehrerer Threads in einer WIA-Anwendung
 
-Wenn eine Windows-Abbild Erfassungs Schnittstelle (WIA) in mehr als einem Thread innerhalb eines einzelnen Prozesses verwendet wird, muss eine Anwendung Marshalling für diese Schnittstelle bereitstellen. Wenn ein Thread einen Schnittstellen Zeiger erstellt, können Sie diesen Zeiger nicht in einem anderen Thread verwenden, ohne Marshalling zu müssen.
+Wenn Sie eine WIA-Schnittstelle (Windows Image Acquisition) in mehr als einem Thread innerhalb eines einzelnen Prozesses verwenden, muss eine Anwendung Marshalling für diese Schnittstelle bereitstellen. Wenn ein Thread einen Schnittstellenzeiger erstellt, können Sie diesen Zeiger nicht ohne Marshalling in einem anderen Thread verwenden.
 
-Wenn ein Thread in einer Anwendung z. b. einen Zeiger auf die [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -oder [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstelle erhält, kann ein separater Thread diesen Schnittstellen Zeiger nicht ohne Marshalling verwenden.
+Wenn beispielsweise ein Thread in einer Anwendung einen Zeiger auf die [**IWiaItem-**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) oder [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) erhält, kann ein separater Thread diesen Schnittstellenzeiger nicht ohne Marshalling verwenden.
 
-Ein gängiges Verfahren, mit dem dieses Marshalling erreicht wird, ist die Verwendung der globalen Schnittstellen Tabelle. Die globale Schnittstellen Tabelle ist eine Tabelle, die in einem einzelnen Prozess über alle Threads hinweg verwaltet wird. Alle Threads, die innerhalb des Prozesses ausgeführt werden, können Schnittstellen abrufen, die für die globale Schnittstellen Tabelle registriert sind. Diese Methode vermeidet das Erstellen von Streams zum Übergeben von Schnittstellen zwischen Threads.
+Ein gängiges Verfahren, um dieses Marshalling zu erreichen, ist die Verwendung der globalen Schnittstellentabelle. Die globale Schnittstellentabelle ist eine Tabelle, die über alle Threads innerhalb eines einzelnen Prozesses hinweg verwaltet wird. Alle Threads, die innerhalb des Prozesses ausgeführt werden, können Schnittstellen abrufen, die für die globale Schnittstellentabelle registriert sind. Diese Technik vermeidet die Notwendigkeit, Datenströme für die Übergabe von Schnittstellen zwischen Threads zu erstellen.
 
-Informationen zur Verwendung der globalen Schnittstellen Tabelle finden Sie unter [iglobalinterfaketable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
+Informationen zur Verwendung der globalen Schnittstellentabelle finden Sie unter [IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 
-Auch wenn Sie nicht beabsichtigen, mehrere Threads in einer WIA-Anwendung zu verwenden, müssen Sie davon ausgehen, dass alle Datenübertragungs-oder Geräte Ereignis Rückruf Funktionen in separaten Threads ausgeführt werden.
+Auch wenn Sie nicht beabsichtigen, mehrere Threads in einer WIA-Anwendung zu verwenden, müssen Sie davon ausgehen, dass alle Datenübertragungs- oder Geräteereignisrückruffunktionen in separaten Threads ausgeführt werden.
 
  
 

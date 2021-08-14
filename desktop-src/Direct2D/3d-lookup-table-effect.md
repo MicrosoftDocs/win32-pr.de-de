@@ -1,39 +1,39 @@
 ---
-title: 3D-Such Tabellen Effekt
-description: Eine 3D-Nachschlage Tabelle ist ein allgemeiner Effekt, der verwendet wird, um jeden 1 1-Abbild Erstellungs Effekt zu kapseln, indem im Voraus berechnet wird, wie der Effekt Eingaben zu Ausgaben für eine Teilmenge aller Eingabewerte zuordnet.
+title: 3D-Lookuptabelleneffekt
+description: Eine 3D-Nachschlagen-Tabelle ist ein allgemeiner Effekt, der zum Kapseln von 1 1 Imageeffekten verwendet wird, indem vorab berechnet wird, wie der Effekt Eingaben Ausgaben für eine Teilmenge aller Eingabewerte zuteilt.
 ms.assetid: 2f0b4b6d-f371-101c-918a-bf564778e593
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d0c6c5df1aa873d3458345d77a46f6f3fdae40b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d5b6d7cee4d21af5f7bc56ee4982f64523e892e616263b3cf5ed7ea84294fbb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118161025"
 ---
-# <a name="3d-lookup-table-effect"></a>3D-Such Tabellen Effekt
+# <a name="3d-lookup-table-effect"></a>3D-Lookuptabelleneffekt
 
-Eine 3D-Nachschlage Tabelle ist ein allgemeiner Effekt, der verwendet wird, um jeden 1:1-Abbild Erstellungs Effekt zu kapseln, indem im Voraus berechnet wird, wie der Effekt Eingaben zu Ausgaben für eine Teilmenge aller Eingabewerte zuordnet.
+Eine 3D-Nachschlagen-Tabelle ist ein allgemeiner Effekt, der verwendet wird, um alle 1:1-Bildbearbeitungseffekte zu kapseln, indem vorab berechnet wird, wie der Effekt Eingaben Ausgaben für eine Teilmenge aller Eingabewerte zuteilt.
 
-Mit dem Text der 3D-Such Tabelle (LUT) wird ein Eingabebild geändert, indem der RGB-Farbwert des Bilds zum Indizieren einer 3D-Textur verwendet wird, wobei die Textur einen vorab berechneten Ausgabewert einer beliebigen Effekt Pipeline enthält.
+Der Effekt 3D-Lookuptabelle (3D Lookup Table) ändert ein Eingabebild, indem der RGB-Farbwert des Bilds verwendet wird, um eine 3D-Textur zu indizieren, bei der die Textur einen vorausberechnen Ausgabewert einer Pipeline mit beliebigen Effekten enthält.
 
-Der 3D-LUT muss in eine GPU-Textur Ressource geladen werden, damit er gerendert werden kann. Dies kann in Abhängigkeit von der Größe der Textur und den Gerätefunktionen teuer sein. Anwendungsentwickler können angeben, wann diese Kosten mithilfe der [**ID2D1LookupTable3D**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1lookuptable3d) D2D-Ressource abgerechnet werden sollen. **ID2D1LookupTable3D** hat die folgenden Attribute:
+Die 3D-TEXTUR muss in eine GPU-Texturressource geladen werden, damit sie gerendert werden kann. Dies kann je nach Größe der Textur und den Gerätefunktionen teuer sein. Anwendungsentwickler können mithilfe der Ressource [**ID2D1LookupTable3D D2D**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1lookuptable3d) angeben, wann diese Kosten zu bezahlen sind. **ID2D1LookupTable3D** weist die folgenden Attribute auf:
 
--   Stellt eine abstrahierte Darstellung der GPU-Ressource von 3D-LUT bereit.
--   Abhängig von den Gerätefunktionen wird entweder eine 2D-oder 3D-Textur erstellt und mit den bereitgestellten LUT-Daten gefüllt.
--   Kann zum Rendering an die-Eigenschaft des 3D-LUT-Effekts übermittelt werden.
+-   Stellt eine abstrahierte Darstellung der GPU-Ressource von 3D GPU bereit.
+-   Abhängig von den Gerätefunktionen wird entweder eine 2D- oder eine 3D-Textur erstellt und mit den bereitgestellten MSI-Daten gefüllt.
+-   Kann zum Rendern an die -Eigenschaft des 3D-AUSWIRKUNG-Effekts übergeben werden.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1LookupTable3D.
 
 -   [Beispielbild](#example-image)
 -   [Beispielcode](#sample-code)
--   [Effekt Eigenschaften](#effect-properties)
--   [Anforderungen](#requirements)
+-   [Effekteigenschaften](#effect-properties)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-![Beispiel für Effekte Ausgabe](images/3dlookuptable-effect.png)
+![Beispiel für die Effektausgabe](images/3dlookuptable-effect.png)
 
 ## <a name="sample-code"></a>Beispielcode
 
@@ -116,9 +116,9 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1LookupTable3D.
     IFR(sp3dLutEffect->SetValue(D2D1_LOOKUPTABLE3D_PROP_LUT, _spLut));
 ```
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
-Die Eigenschaften für den 3D-Such Tabellen Effekt werden durch die [**D2D1 \_ LOOKUPTABLE3D \_ Prop**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_lookuptable3d_prop) -Enumeration definiert.
+Die Eigenschaften für den 3D-Lookuptabelleneffekt werden durch die [**D2D1 \_ LOOKUPTABLE3D \_ PROP-Enumeration**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_lookuptable3d_prop) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -126,10 +126,10 @@ Die Eigenschaften für den 3D-Such Tabellen Effekt werden durch die [**D2D1 \_ L
 
 | Anforderung | Wert |
 |--------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 10 \[ Desktop Apps- \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 10 \[ Desktop Apps- \| Windows Store-Apps\] |
-| Header                   | d2d1effects \_ 2. h                                  |
-| Bibliothek                  | d2d1. lib, dxguid. lib                              |
+| Unterstützte Mindestversion (Client) | \[Windows 10 Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | \[Windows 10 Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects \_ 2.h                                  |
+| Bibliothek                  | d2d1.lib, dxguid.lib                              |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

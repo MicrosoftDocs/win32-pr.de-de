@@ -1,44 +1,44 @@
 ---
-title: Ivmvirtualpc-Methoden
-description: Die ivmvirtualpc-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IVMVirtualPC-Methoden
+description: Die IVMVirtualPC-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 3098D0ED-B16F-4CA1-A76B-83B4988CB6B3
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 197ba4ea639fc6c82fc6501a03a73122af9975b5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 102fe792e2656a45c997dec0d6e955044864837c0aa7c9366407e86810db8641
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118344297"
 ---
-# <a name="ivmvirtualpc-methods"></a>Ivmvirtualpc-Methoden
+# <a name="ivmvirtualpc-methods"></a>IVMVirtualPC-Methoden
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmvirtualpc**](ivmvirtualpc.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IVMVirtualPC-Schnittstelle**](ivmvirtualpc.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Methode "kreatedifferencingvirtualharddisk"**](ivmvirtualpc-createdifferencingvirtualharddisk.md)
--   [**Methode "kreatedynamicvirtualharddisk"**](ivmvirtualpc-createdynamicvirtualharddisk.md)
--   [**Methode "kreatefixedvirtualharddisk"**](ivmvirtualpc-createfixedvirtualharddisk.md)
--   [**Methode "kreatefloppydiskimage"**](ivmvirtualpc-createfloppydiskimage.md)
--   [**Methode "kreatevirtualmachine"**](ivmvirtualpc-createvirtualmachine.md)
--   [**Deletevirtualmachine-Methode**](ivmvirtualpc-deletevirtualmachine.md)
--   [**Findvirtualmachine-Methode**](ivmvirtualpc-findvirtualmachine.md)
--   [**Findvirtualnetwork-Methode**](ivmvirtualpc-findvirtualnetwork.md)
--   [**Getconfigurationvalue-Methode**](ivmvirtualpc-getconfigurationvalue.md)
--   [**Getdvdfiles-Methode**](ivmvirtualpc-getdvdfiles.md)
--   [**Getfloppydiskfiles-Methode**](ivmvirtualpc-getfloppydiskfiles.md)
--   [**Getfloppydiskimagetype-Methode**](ivmvirtualpc-getfloppydiskimagetype.md)
--   [**Getharddisk-Methode**](ivmvirtualpc-getharddisk.md)
--   [**Getharddiskfiles-Methode**](ivmvirtualpc-getharddiskfiles.md)
--   [**Getvirtualmachinefiles-Methode**](ivmvirtualpc-getvirtualmachinefiles.md)
--   [**Registervirtualmachine-Methode**](ivmvirtualpc-registervirtualmachine.md)
--   [**Removeconfigurationvalue-Methode**](ivmvirtualpc-removeconfigurationvalue.md)
--   [**Setconfigurationvalue-Methode**](ivmvirtualpc-setconfigurationvalue.md)
--   [**Unregistervirtualmachine-Methode**](ivmvirtualpc-unregistervirtualmachine.md)
+-   [**CreateDifferencingVirtualHardDisk-Methode**](ivmvirtualpc-createdifferencingvirtualharddisk.md)
+-   [**CreateDynamicVirtualHardDisk-Methode**](ivmvirtualpc-createdynamicvirtualharddisk.md)
+-   [**CreateFixedVirtualHardDisk-Methode**](ivmvirtualpc-createfixedvirtualharddisk.md)
+-   [**CreateFloppyDiskImage-Methode**](ivmvirtualpc-createfloppydiskimage.md)
+-   [**CreateVirtualMachine-Methode**](ivmvirtualpc-createvirtualmachine.md)
+-   [**DeleteVirtualMachine-Methode**](ivmvirtualpc-deletevirtualmachine.md)
+-   [**FindVirtualMachine-Methode**](ivmvirtualpc-findvirtualmachine.md)
+-   [**FindVirtualNetwork-Methode**](ivmvirtualpc-findvirtualnetwork.md)
+-   [**GetConfigurationValue-Methode**](ivmvirtualpc-getconfigurationvalue.md)
+-   [**GetDVDFiles-Methode**](ivmvirtualpc-getdvdfiles.md)
+-   [**GetFloppyDiskFiles-Methode**](ivmvirtualpc-getfloppydiskfiles.md)
+-   [**GetFloppyDiskImageType-Methode**](ivmvirtualpc-getfloppydiskimagetype.md)
+-   [**GetHardDisk-Methode**](ivmvirtualpc-getharddisk.md)
+-   [**GetHardDiskFiles-Methode**](ivmvirtualpc-getharddiskfiles.md)
+-   [**GetVirtualMachineFiles-Methode**](ivmvirtualpc-getvirtualmachinefiles.md)
+-   [**RegisterVirtualMachine-Methode**](ivmvirtualpc-registervirtualmachine.md)
+-   [**RemoveConfigurationValue-Methode**](ivmvirtualpc-removeconfigurationvalue.md)
+-   [**SetConfigurationValue-Methode**](ivmvirtualpc-setconfigurationvalue.md)
+-   [**UnregisterVirtualMachine-Methode**](ivmvirtualpc-unregistervirtualmachine.md)
 
- 
+ 
 
- 
+ 

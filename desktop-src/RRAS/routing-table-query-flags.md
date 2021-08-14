@@ -1,43 +1,43 @@
 ---
-title: Abfrage-Flags für Routing Tabelle
-description: Verwenden Sie diese Konstanten für routertabellenabfragen.
+title: Routingtabellenabfrageflags
+description: Verwenden Sie diese Konstanten für Routertabellenabfragen.
 ms.assetid: 345a8edc-c2aa-483e-8685-15a692bbfd56
 keywords:
-- Abfrage-Flags für Routing Tabelle
+- Routingtabellenabfrageflags
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b37ab647efb192e29aae421e02bef1dec065e3b2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 307dd91e9b3d248e5b2b69869ee1e7d14ae17834f7fe57d9e136da16ba3f6b0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103857027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117787448"
 ---
-# <a name="routing-table-query-flags"></a>Abfrage-Flags für Routing Tabelle
+# <a name="routing-table-query-flags"></a>Routingtabellenabfrageflags
 
-Verwenden Sie diese Konstanten für routertabellenabfragen.
+Verwenden Sie diese Konstanten für Routertabellenabfragen.
 
 
 
 | Konstante              | Wert      | BESCHREIBUNG                                                                |
 |-----------------------|------------|----------------------------------------------------------------------------|
-| RTM- \_ Übereinstimmung \_      | 0x00000000 | Entspricht keinem der Kriterien. Alle Routen für das Ziel werden zurückgegeben. |
-| RTM-Übereinstimmungs \_ \_ Besitzer     | 0x00000001 | Entspricht Routen mit demselben Besitzer.                                            |
-| RTM- \_ Treffer \_ Nachbar | 0x00000002 | Entspricht Routen mit demselben Nachbar.                                     |
-| RTM \_ - \_ abgleichpref      | 0x00000004 | Entspricht Routen mit der gleichen Einstellung.                              |
-| RTM-Entsprechung für \_ \_ nexthop   | 0x00000008 | Entspricht Routen mit dem gleichen nächsten Hop.                                |
-| RTM-Übereinstimmungs \_ \_ Schnittstelle | 0x00000010 | Entspricht Routen, die sich auf derselben Schnittstelle befinden.                             |
-| RTM- \_ Übereinstimmung \_ voll      | 0X0000FFFF | Entspricht Routen mit allen Kriterien.                                          |
-| Bestes RTM- \_ \_ Protokoll   | 0          | Gibt eine Route zurück, unabhängig davon, welchem Protokoll Sie gehört.                      |
-| RTM \_ dieses \_ Protokoll   | ~0         | Gibt die beste Route für das Aufruf Protokoll zurück.                           |
+| RTM \_ MATCH \_ NONE      | 0x00000000 | Entspricht keinem der Kriterien. Alle Routen für das Ziel werden zurückgegeben. |
+| RTM \_ MATCH \_ OWNER     | 0x00000001 | Entspricht Routen mit demselben Besitzer.                                            |
+| RTM \_ MATCH \_ 2016 | 0x00000002 | Gleicht Routen mit demselben Nachbarn ab.                                     |
+| RTM \_ MATCH \_ PREF      | 0x00000004 | Entspricht Routen, die die gleiche Einstellung haben.                              |
+| RTM \_ MATCH \_ NEXTHOP   | 0x00000008 | Entspricht Routen, die denselben nächsten Hop haben.                                |
+| RTM \_ \_ MATCH-SCHNITTSTELLE | 0x00000010 | Entspricht Routen, die sich auf derselben Schnittstelle befinden.                             |
+| RTM \_ MATCH \_ FULL      | 0x0000FFFF | Entspricht Routen mit allen Kriterien.                                          |
+| RTM \_ BEST \_ PROTOCOL   | 0          | Gibt eine Route zurück, unabhängig davon, welches Protokoll sie besitzt.                      |
+| RTM \_ THIS \_ PROTOCOL   | ~0         | Gibt die beste Route für das aufrufende Protokoll zurück.                           |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

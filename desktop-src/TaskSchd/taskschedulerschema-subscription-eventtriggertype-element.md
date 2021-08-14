@@ -1,9 +1,9 @@
 ---
-title: Abonnement (eventtriggertype)-Element
-description: Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den-Triggern auslöst.
+title: Subscription (eventTriggerType)-Element
+description: Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den Trigger auslöst.
 ms.assetid: ea351a55-c6f9-4e39-b15e-c2a1027a1360
 keywords:
-- Abonnement Element Taskplaner
+- Subscription-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: efe38f2e825e2de566391a7b1707ce1f8cfbbc68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ec45a9c240a9dd5d30d2089f98216fc165af13fe418424f5b85feed5e022b67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131555"
 ---
-# <a name="subscription-eventtriggertype-element"></a>Abonnement (eventtriggertype)-Element
+# <a name="subscription-eventtriggertype-element"></a>Subscription (eventTriggerType)-Element
 
-Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den-Triggern auslöst.
+Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den Trigger auslöst.
 
 ``` syntax
 <xs:element name="Subscription"
@@ -30,7 +30,7 @@ Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den-Triggern ausl
  />
 ```
 
-Das **Abonnement** Element wird durch den komplexen Typ [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md) definiert.
+Das **Subscription-Element** wird vom komplexen [**eventTriggerType-Typ**](taskschedulerschema-eventtriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,15 +38,15 @@ Das **Abonnement** Element wird durch den komplexen Typ [**eventtriggertype**](t
 
 | Element                                                                       | Abgeleitet von                                                                 | BESCHREIBUNG                                                                   |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) | [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md) | Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.<br/> |
+| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird das Ereignis Abonnement durch die [**EventTrigger. Abonnement**](eventtrigger-subscription.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird das Ereignisabonnement durch die [**EventTrigger.Subscription-Eigenschaft**](eventtrigger-subscription.md) angegeben.
 
-Bei der C++-Entwicklung wird das Ereignis Abonnement durch die [**ieventvent:: Abonnement**](/windows/desktop/api/taskschd/nf-taskschd-ieventtrigger-get_subscription) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird das Ereignisabonnement durch die [**IEventTrigger::Subscription-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ieventtrigger-get_subscription) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Bei der C++-Entwicklung wird das Ereignis Abonnement durch die [**ieventvent:: A
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

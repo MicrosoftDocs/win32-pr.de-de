@@ -1,8 +1,8 @@
 ---
-description: Die Clone- \_ Methode des-Objekts von "taubemlasterror" gibt ein neues-Objekt zurück, das ein Klon des aktuellen "taubemlasterror"-Objekts ist.
+description: Die Clone-Methode des SWbemLastError-Objekts gibt ein neues -Objekt zurück, das ein Klon \_ des aktuellen SWbemLastError-Objekts ist.
 ms.assetid: 577be060-309f-40a2-a4db-c0a477c21f11
 ms.tgt_platform: multiple
-title: SWbemLastError.Clone_-Methode (wbemdisp. h)
+title: SWbemLastError.Clone_ -Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 7d4d43f73ab42021235db39adba0a77bc783b97a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 162944eeb4ee7ca0c72102b704e9f75851bbfb41885e6b79e86d1a438487473f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118314666"
 ---
-# <a name="swbemlasterrorclone_-method"></a>Methode ' Swap. Clone ' \_
+# <a name="swbemlasterrorclone_-method"></a>SWbemLastError.Clone-Methode \_
 
-Die **Clone \_** -Methode des-Objekts von " [**taubemlasterror**](swbemlasterror.md) " gibt ein neues-Objekt zurück, das ein Klon des aktuellen " **taubemlasterror** "-Objekts ist.
+Die **\_ Clone-Methode** des [**SWbemLastError-Objekts**](swbemlasterror.md) gibt ein neues -Objekt zurück, das ein Klon des aktuellen **SWbemLastError-Objekts** ist.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,40 +45,40 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **Klon \_** Methode erfolgreich ist, gibt Sie ein neues-Objekt mit dem Wert " [**taubemlasterror**](swbemlasterror.md) " zurück.
+Wenn die **\_ Clone-Methode** erfolgreich ist, wird ein neues [**SWbemLastError-Objekt**](swbemlasterror.md) zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **Klon \_** Methode kann das **Err** -Objekt einen der folgenden Fehlercodes enthalten.
+Nach Abschluss der **\_ Clone-Methode** kann das **Err-Objekt** einen der folgenden Fehlercodes enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
 Ein angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **die \_ Clone** -Methode, um eine Klassendefinition oder-Instanz zu duplizieren. Diese Methode ist nützlich, wenn Sie die ursprüngliche Kopie des Objekts sichern müssen, während Sie eine neue Kopie ändern. Verwenden Sie diese Methode auch, um viele neue Instanzen aus einer einzelnen Quell Instanz zu erstellen. Verwenden Sie z [**. b. "errbeapbject. \_ SpawnInstance**](swbemobject-spawninstance-.md) ", um eine einzelne Start Instanz zu erstellen, und verwenden Sie " **taubemlasterror. Clone \_** ", um 100 Kopien der Instanz schnell zu erstellen. Anschließend können Sie die Objekte ändern und jedem Objekt bestimmte Werte erteilen.
+Verwenden Sie die **\_ Clone-Methode,** um eine Klassendefinition oder -instanz zu duplizieren. Diese Methode ist nützlich, wenn Sie die ursprüngliche Kopie des Objekts sichern müssen, während Sie eine neue Kopie ändern. Verwenden Sie diese Methode auch, um viele neue Instanzen aus einer einzelnen Quellinstanz zu erstellen. Verwenden Sie beispielsweise [**SWbemObject.SpawnInstance, \_**](swbemobject-spawninstance-.md) um eine einzelne Startinstanz zu erstellen, und verwenden **Sie SWbemLastError.Clone, \_** um schnell 100 Kopien der Instanz zu erstellen. Anschließend können Sie die Objekte ändern und jedem Objekt bestimmte Werte geben.
 
-Es ist nicht möglich, diese Methode zu verwenden, um eine Klassendefinition in eine-Instanz zu konvertieren oder um eine Instanz in eine Klassendefinition zu konvertieren.
+Es ist nicht möglich, diese Methode zu verwenden, um eine Klassendefinition in eine -Instanz oder eine -Instanz in eine Klassendefinition zu konvertieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,11 +88,11 @@ Es ist nicht möglich, diese Methode zu verwenden, um eine Klassendefinition in 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Fehler<br/>                                                        |
-| IID<br/>                      | IID \_ iswbemlasterror<br/>                                                         |
+| CLSID<br/>                    | CLSID \_ SWbemLastError<br/>                                                        |
+| IID<br/>                      | IID \_ ISWbemLastError<br/>                                                         |
 
 
 

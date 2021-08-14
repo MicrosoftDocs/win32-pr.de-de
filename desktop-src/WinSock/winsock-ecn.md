@@ -1,34 +1,34 @@
 ---
 title: Explizite Winsock-Überlastungsbenachrichtigung (ECN)
-description: Einige Anwendungen und/oder Protokolle, die auf dem User Datagram Protocol (UDP) basieren (z. B. QUIC), versuchen, die Verwendung expliziter ECN-Codepunkte (Congestion Notification) zu nutzen, um die Latenz und jittern in überlasteten Netzwerken zu verbessern.
+description: Einige Anwendungen und/oder Protokolle, die auf dem User Datagram Protocol (UDP) (z. B. QUIC) basieren, versuchen, die Verwendung expliziter ECN-Codepunkte (Congestion Notification) zu nutzen, um die Latenz und jittern in überlasteten Netzwerken zu verbessern.
 ms.topic: article
 ms.date: 11/13/2020
-ms.openlocfilehash: 090ac9b0575cb491aa6d726e7507223156460ace
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 79b38611cd0301d0b5d301592eec02b68c02353246c67a6c94528417623834f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110559971"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118322023"
 ---
 # <a name="winsock-explicit-congestion-notification-ecn"></a>Explizite Winsock-Überlastungsbenachrichtigung (ECN)
 
 ## <a name="introduction"></a>Einführung
 
-Einige Anwendungen und/oder Protokolle, die auf dem User Datagram Protocol (UDP) basieren (z. B. QUIC), versuchen, die Verwendung expliziter ECN-Codepunkte (Congestion Notification) zu nutzen, um die Latenz und jittern in überlasteten Netzwerken zu verbessern.
+Einige Anwendungen und/oder Protokolle, die auf dem User Datagram Protocol (UDP) (z. B. QUIC) basieren, versuchen, die Verwendung expliziter ECN-Codepunkte (Congestion Notification) zu nutzen, um die Latenz und jittern in überlasteten Netzwerken zu verbessern.
 
 Die Winsock ECN-APIs erweitern die **getsockopt** / **setsockopt-Schnittstelle** sowie die &mdash; [**WSASendMsg**](/windows/win32/api/winsock2/nf-winsock2-wsasendmsg) / [**LPFN_WSARECVMSG-Steuerungsnachrichtenschnittstelle (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) um Unterstützung für das Ändern und Empfangen von &mdash; ECN-Codepunkten in IP-Headern. Mit der bereitgestellten Funktionalität können Sie ECN-Codepunkte pro Paket erhalten und festlegen.
 
 Weitere Informationen zu ECN finden Sie unter [The Addition of Explicit Congestion Notification (ECN) to IP](https://tools.ietf.org/html/rfc3168).
 
-Ihre Anwendung darf beim Senden von Datagrammen nicht den Ce-Codepunkt (Congestion Encountered) angeben. Das Senden wird mit dem Fehler **WSAEINVAL zurückgegeben.**
+Ihre Anwendung darf beim Senden von Datagrammen nicht den Ce-Codepunkt (Congestion Encountered) angeben. Der Sendecode wird mit dem Fehler **WSAEINVAL zurückgegeben.**
 
 ## <a name="query-ecn-with-wsagetrecvipecn"></a>Abfragen von ECN mit WSAGetRecvIPEcn
 
 [**WSAGetRecvIPEcn ist**](/windows/win32/api/ws2tcpip/nf-ws2tcpip-wsagetrecvipecn) eine in definierte Inlinefunktion. `ws2tcpip.h`
 
-Rufen Sie **WSAGetRecvIPEcn** auf, um die aktuelle Aktivierung des Empfangs der **IP_ECN-Steuernachricht** (oder **IPV6_ECN)** über LPFN_WSARECVMSG [**(WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)zu abfragen.
+Rufen **Sie WSAGetRecvIPEcn** auf, um die aktuelle Aktivierung des Empfangs der IP_ECN-Steuerungsnachricht (oder **IPV6_ECN)** über [**LPFN_WSARECVMSG (WSARecvMsg) zu**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)abfragen. 
 
-Siehe auch [**die WSAMSG-Struktur.**](/windows/win32/api/ws2def/ns-ws2def-wsamsg)
+Siehe auch die [**WSAMSG-Struktur.**](/windows/win32/api/ws2def/ns-ws2def-wsamsg)
 
 - **Protokoll:** IPv4
 - **Cmsg_level**: IPPROTO_IP
@@ -38,15 +38,15 @@ Siehe auch [**die WSAMSG-Struktur.**](/windows/win32/api/ws2def/ns-ws2def-wsamsg
 - **Protokoll:** IPv6
 - **Cmsg_level**: IPPROTO_IPV6
 - **Cmsg_type**: IPV6_ECN (50 Dezimalstellen)
-- **Beschreibung:** Gibt ECN-Codepunkt im IPv6-Headerfeld der Datenverkehrsklasse an/empfängt.
+- **Beschreibung:** Gibt den ECN-Codepunkt im IPv6-Headerfeld der Traffic Class an/empfängt.
 
-## <a name="specify-ecn-with-wsasetrecvipecn"></a>Angeben des ECN mit WSASetRecvIPEcn
+## <a name="specify-ecn-with-wsasetrecvipecn"></a>Angeben von ECN mit WSASetRecvIPEcn
 
-[**WSASetRecvIPEcn**](/windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetrecvipecn) ist eine in definierte `ws2tcpip.h` Inlinefunktion.
+[**WSASetRecvIPEcn ist**](/windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetrecvipecn) eine in definierte Inlinefunktion. `ws2tcpip.h`
 
-Rufen Sie **WSASetRecvIPEcn** auf, um anzugeben, ob der IP-Stapel den Steuerungspuffer mit einer Nachricht auffüllen soll, die den ECN-Codepunkt des IPv4-Headerfelds vom Typ des Diensts (oder des IPv6-Headerfelds der Datenverkehrsklasse) für ein empfangenes Datagramm enthält. Bei Festlegung auf `TRUE` gibt die [**LPFN_WSARECVMSG -Funktion (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) optionale Steuerdaten zurück, die den ECN-Codepunkt des empfangenen Datagramms enthalten. Der zurückgegebene Steuernachrichtentyp wird **IP_ECN** (oder **IPV6_ECN**) mit **IPPROTO_IP** ebene (oder **IPPROTO_IPV6**). Die Steuernachrichtendaten werden als **INT** zurückgegeben. Diese Option ist nur für Datagrammsockets gültig (der Sockettyp muss **SOCK_DGRAM** sein).
+Rufen **Sie WSASetRecvIPEcn** auf, um anzugeben, ob der IP-Stapel den Steuerungspuffer mit einer Nachricht auffüllen soll, die den ECN-Codepunkt des IPv4-Headerfelds des Diensttyps (oder des IPv6-Headerfelds der Datenverkehrsklasse) für ein empfangenes Datagramm enthält. Wenn diese Option auf festgelegt ist, gibt die `TRUE` [**funktion LPFN_WSARECVMSG (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) optionale Steuerungsdaten zurück, die den ECN-Codepunkt des empfangenen Datagramms enthalten. Der zurückgegebene Steuerelementmeldungstyp **wird** IP_ECN **(oder** IPV6_ECN ) mit **ebener** IPPROTO_IP **(oder** IPPROTO_IPV6). Die Steuermeldungsdaten werden als **INT zurückgegeben.** Diese Option ist nur für Datagrammsockets gültig (der Sockettyp muss auf **SOCK_DGRAM.**
 
-## <a name="code-example-1mdashapplication-advertising-ecn-support"></a>Codebeispiel 1: Anwendung zur Ankündigung der &mdash; ECN-Unterstützung
+## <a name="code-example-1mdashapplication-advertising-ecn-support"></a>Codebeispiel 1: &mdash; Werbeanwendung für ECN-Unterstützung
 
 ```cpp
 #define ECN_ECT_0 2
@@ -93,7 +93,7 @@ void sendEcn(SOCKET sock, PSOCKADDR_STORAGE addr, LPFN_WSASENDMSG sendmsg, PCHAR
 }
 ```
 
-## <a name="code-example-2mdashapplication-detecting-congestion"></a>Codebeispiel &mdash; 2: Anwendung, die Überlastung erkennt
+## <a name="code-example-2mdashapplication-detecting-congestion"></a>Codebeispiel 2: &mdash; Anwendung, die Überlastung erkennt
 
 ```cpp
 #define ECN_ECT_CE 3
@@ -182,7 +182,7 @@ void receiver(SOCKET sock, PSOCKADDR_STORAGE addr, LPFN_WSARECVMSG recvmsg)
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [WSAGetRecvIPEcn](/windows/win32/api/ws2tcpip/nf-ws2tcpip-wsagetrecvipecn)
 * [WSASetRecvIPEcn](/windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetrecvipecn)

@@ -1,46 +1,46 @@
 ---
-description: System Administratoren können WMI zum Überwachen von Ereignissen in einem Netzwerk verwenden.
+description: Systemadministratoren können WMI verwenden, um Ereignisse in einem Netzwerk zu überwachen.
 ms.assetid: 871d4add-a7b1-4ec9-a202-3821fdf09e9f
 ms.tgt_platform: multiple
 title: Überwachen von Ereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ea5d9fc6f9a12f4aa1fb7bc0ff6f66fc4dd4a7e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb90a0a6eef87f88543e8f2414bc38bdea4f7d89c577471d79d23393f331b053
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118317114"
 ---
 # <a name="monitoring-events"></a>Überwachen von Ereignissen
 
-System Administratoren können WMI zum Überwachen von Ereignissen in einem Netzwerk verwenden. Beispiel:
+Systemadministratoren können WMI verwenden, um Ereignisse in einem Netzwerk zu überwachen. Beispiel:
 
 -   Ein Dienst wird unerwartet beendet.
--   Ein Server steht nicht mehr zur Verfügung.
--   Ein Laufwerk füllt die Kapazität von 80% aus.
--   Sicherheitsereignisse werden einem NT-Ereignisprotokoll gemeldet.
+-   Ein Server ist nicht mehr verfügbar.
+-   Ein Laufwerk füllt eine Kapazität von 80 %.
+-   Sicherheitsereignisse werden an ein NT-Ereignisprotokoll gemeldet.
 
-WMI unterstützt Ereigniserkennung und-Übermittlung an Ereignisconsumer, da einige WMI-Anbieter Ereignis Anbieter sind. Weitere Informationen finden Sie unter [empfangen eines WMI-Ereignisses](receiving-a-wmi-event.md).
+WMI unterstützt die Ereigniserkennung und -übermittlung an Ereignisverbraucher, da einige WMI-Anbieter Ereignisanbieter sind. Weitere Informationen finden Sie unter [Empfangen eines WMI-Ereignisses.](receiving-a-wmi-event.md)
 
-[*Ereignisconsumer*](gloss-e.md) sind Anwendungen oder Skripts, die eine Benachrichtigung über Ereignisse anfordern und dann Aufgaben ausführen, wenn bestimmte Ereignisse auftreten. Sie können Ereignis Überwachungs Skripts oder-Anwendungen erstellen, die vorübergehend überwachen, wann Ereignisse auftreten. WMI stellt außerdem eine Reihe vorinstallierter dauerhafter Ereignis Anbieter und die permanenten Consumerklassen bereit, die es Ihnen ermöglichen, Ereignisse dauerhaft zu überwachen. Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+[*Ereignisverbraucher*](gloss-e.md) sind Anwendungen oder Skripts, die Benachrichtigungen über Ereignisse anfordern und dann Aufgaben ausführen, wenn bestimmte Ereignisse auftreten. Sie können Skripts oder Anwendungen für die Ereignisüberwachung erstellen, die vorübergehend überwachen, wann Ereignisse auftreten. WMI stellt auch eine Reihe von vorinstallierten permanenten Ereignisanbietern und die permanenten Consumerklassen zur Verfügung, mit denen Sie Ereignisse dauerhaft überwachen können. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
 In diesem Thema werden die folgenden Abschnitte erläutert:
 
--   [Verwenden temporärer Ereignisconsumer](#using-temporary-event-consumers)
+-   [Verwenden temporärer Ereignisverbraucher](#using-temporary-event-consumers)
 -   [Verwenden von permanenten Ereignisverbrauchern](#using-permanent-event-consumers)
 
-## <a name="using-temporary-event-consumers"></a>Verwenden temporärer Ereignisconsumer
+## <a name="using-temporary-event-consumers"></a>Verwenden temporärer Ereignisverbraucher
 
-Temporäre Ereignisconsumer sind Skripts oder Anwendungen, die die Ereignisse zurückgeben, die einer Ereignis Abfrage oder einem Filter entsprechen. Temporäre Ereignis Abfragen verwenden in der Regel entweder [**IWbemServices:: ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) in C++-Anwendungen oder [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md) in Skripts und Visual Basic.
+Temporäre Ereignisverbraucher sind Skripts oder Anwendungen, die die Ereignisse zurückgeben, die mit einer Ereignisabfrage oder einem Ereignisfilter übereinstimmen. Temporäre Ereignisabfragen verwenden in der Regel [**entweder IWbemServices::ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) in C++-Anwendungen oder [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md) in Skripts und Visual Basic.
 
-Eine Ereignis Abfrage fordert Instanzen einer Ereignisklasse an, die einen bestimmten Ereignistyp angibt, z. b. [**Win32 \_ processtrace**](/previous-versions/windows/desktop/krnlprov/win32-processtrace) oder [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent).
+Eine Ereignisabfrage fordert Instanzen einer Ereignisklasse an, die einen bestimmten Ereignistyp angibt, z. B. [**Win32 \_ ProcessTrace**](/previous-versions/windows/desktop/krnlprov/win32-processtrace) oder [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent).
 
-Im folgenden VBScript-Codebeispiel wird eine Benachrichtigung angefordert, wenn eine Instanz von [**Win32 \_ processtrace**](/previous-versions/windows/desktop/krnlprov/win32-processtrace) erstellt wird. Eine Instanz dieser Klasse wird generiert, wenn ein Prozess gestartet oder beendet wird.
+Das folgende VBScript-Codebeispiel fordert eine Benachrichtigung an, wenn eine Instanz von [**Win32 \_ ProcessTrace**](/previous-versions/windows/desktop/krnlprov/win32-processtrace) erstellt wird. Eine Instanz dieser Klasse wird generiert, wenn ein Prozess gestartet oder beendet wird.
 
-Um das Skript auszuführen, kopieren Sie es in eine Datei mit dem Namen event.vbs, und verwenden Sie die folgende Befehlszeile: **cscript event.vbs**. Sie können die Ausgabe des Skripts anzeigen, indem Sie Notepad.exe oder einen anderen Prozess starten. Das Skript wird beendet, nachdem fünf Prozesse gestartet oder beendet wurden.
+Um das Skript auszuführen, kopieren Sie es in eine Datei namens event.vbs und verwenden die folgende **Befehlszeile: cscript event.vbs**. Sie können die Ausgabe des Skripts sehen, indem Sie Notepad.exe oder einen anderen Prozess starten. Das Skript wird beendet, nachdem fünf Prozesse gestartet oder beendet wurden.
 
-Dieses Skript ruft [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md)auf, bei dem es sich um die [*semisynchrone*](gloss-s.md) Version der-Methode handelt. Im nächsten Skript finden Sie ein Beispiel für das Einrichten eines asynchronen temporären Ereignis Abonnements durch Aufrufen von [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md). Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md). Das Skript ruft die Datei " [**errbemeventsource. NextEvent**](swbemeventsource-nextevent.md) " auf, um jedes Ereignis beim Eintreffen abzurufen und zu verarbeiten. Speichern Sie das Skript in einer Datei mit der Erweiterung. VSB, und führen Sie das Skript mit cscript: **cscript file.vbs** in einer Befehlszeile aus.
+Dieses Skript ruft [**SWbemServices.ExecNotificationQuery auf.**](swbemservices-execnotificationquery.md)Dies ist die [*semisynchrone*](gloss-s.md) Version der -Methode. Im nächsten Skript finden Sie ein Beispiel für das Einrichten eines asynchronen temporären Ereignisabonnements durch AufrufenSWbemServices.Exe [**cNotificationQueryAsync.**](swbemservices-execnotificationqueryasync.md) Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md) Das Skript ruft [**SWbemEventSource.NextEvent auf,**](swbemeventsource-nextevent.md) um jedes Ereignis beim Eintreffen zu erhalten und zu verarbeiten. Speichern Sie das Skript in einer Datei mit der Erweiterung .vbs, und führen Sie das Skript über die Befehlszeile aus, indem Sie CScript: **cscript** file.vbs.
 
 
 ```VB
@@ -67,50 +67,50 @@ Loop
 
 
 
-Temporäre Ereignisconsumer müssen manuell gestartet werden und müssen nicht über WMI-Neustarts oder Betriebssystem Neustarts hinweg beibehalten werden. Ein temporärer Ereignisconsumer kann Ereignisse nur verarbeiten, während er ausgeführt wird.
+Temporäre Ereignisverbraucher müssen manuell gestartet werden und dürfen nicht über WMI-Neustarts oder Betriebssystemneustarts hinweg beibehalten werden. Ein temporärer Ereignisverbraucher kann Ereignisse nur verarbeiten, während er ausgeführt wird.
 
-Im folgenden Verfahren wird beschrieben, wie ein temporärer Ereignisconsumer erstellt wird.
+Im folgenden Verfahren wird beschrieben, wie ein temporärer Ereignisverbraucher erstellt wird.
 
-**So erstellen Sie einen temporären Ereignisconsumer**
+**So erstellen Sie einen temporären Ereignisverbraucher**
 
-1.  Entscheiden Sie, welche Programmiersprache verwendet werden soll.
+1.  Entscheiden Sie, welche Programmiersprache sie verwenden soll.
 
     Die Programmiersprache bestimmt die zu verwendende API.
 
-    -   Verwenden Sie für die Programmiersprache C++ die [com-API für WMI](com-api-for-wmi.md).
-    -   Verwenden Sie für Visual Basic-oder Skriptsprachen die [Skript-API für WMI](scripting-api-for-wmi.md).
+    -   Verwenden Sie für die Programmiersprache C++ die [COM-API für WMI.](com-api-for-wmi.md)
+    -   Verwenden Visual Basic Skripterstellungs-API für WMI für [Skriptsprachen oder Skriptsprachen.](scripting-api-for-wmi.md)
 
-2.  Beginnen Sie mit dem Programmieren einer temporären ereignisconsumeranwendung auf dieselbe Weise, wie Sie eine WMI-Anwendung starten.
+2.  Beginnen Sie mit dem Codieren einer temporären Ereignisverbraucheranwendung auf die gleiche Weise wie beim Starten einer WMI-Anwendung.
 
-    Die ersten Schritte der Codierung hängen von der Programmiersprache ab. In der Regel melden Sie sich bei WMI an und richten die Sicherheitseinstellungen ein. Weitere Informationen finden Sie unter [Erstellen einer WMI-Anwendung oder eines Skripts](creating-a-wmi-application-or-script.md).
+    Die ersten Schritte der Programmierung hängen von der Programmiersprache ab. In der Regel melden Sie sich bei WMI an und richten die Sicherheitseinstellungen ein. Weitere Informationen finden Sie unter [Erstellen einer WMI-Anwendung oder Skript.](creating-a-wmi-application-or-script.md)
 
-3.  Definieren Sie die Ereignis Abfrage, die Sie verwenden möchten.
+3.  Definieren Sie die Ereignisabfrage, die Sie verwenden möchten.
 
-    Um einige Arten von Leistungsdaten zu erhalten, müssen Sie möglicherweise Klassen verwenden, die von Hochleistungs Anbietern bereitgestellt werden. Weitere Informationen finden Sie unter über [Wachen von Leistungsdaten](monitoring-performance-data.md), [bestimmen der Art des](determining-the-type-of-event-to-receive.md)empfangenden Ereignisses und [Abfragen mit WQL](querying-with-wql.md).
+    Um einige Arten von Leistungsdaten zu erhalten, müssen Sie möglicherweise Klassen verwenden, die von Hochleistungsanbietern bereitgestellt werden. Weitere Informationen finden Sie unter Überwachen von [Leistungsdaten](monitoring-performance-data.md), [Bestimmen des](determining-the-type-of-event-to-receive.md)Typs des zu empfangenden Ereignisses und [Abfragen mit WQL.](querying-with-wql.md)
 
-4.  Entscheiden Sie sich für einen asynchronen oder einen semisynchronen aufrufsbefehl, und wählen Sie die API-Methode aus.
+4.  Entscheiden Sie sich für einen asynchronen aufruf oder einen semisynchronen Aufruf, und wählen Sie die API-Methode aus.
 
-    Mit asynchronen aufrufen können Sie den Aufwand für das Abrufen von Daten vermeiden. Semisynchrone Aufrufe bieten jedoch eine ähnliche Leistung mit größerer Sicherheit. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+    Mit asynchronen Aufrufen können Sie den Mehraufwand für das Abrufen von Daten vermeiden. Semisynchrone Aufrufe bieten jedoch eine ähnliche Leistung mit höherer Sicherheit. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-5.  Führen Sie den asynchronen oder semisynchronen Methoden aufrufsbefehl aus, und schließen Sie eine Ereignis Abfrage *als den Parameter* "" "
+5.  Nehmen Sie den asynchronen oder semisynchronen Methodenaufruf vor, und schließen Sie eine Ereignisabfrage als *strQuery-Parameter* ein.
 
-    Für C++-Anwendungen werden die folgenden Methoden aufgerufen:
+    Rufen Sie für C++-Anwendungen die folgenden Methoden auf:
 
-    -   [**IWbemServices:: ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery)
-    -   [**IWbemServices:: ExecNotificationQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationqueryasync)
+    -   [**IWbemServices::ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery)
+    -   [**IWbemServices::ExecNotificationQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationqueryasync)
 
-    Bei Skripts werden die folgenden Methoden aufgerufen:
+    Rufen Sie für Skripts die folgenden Methoden auf:
 
-    -   [**CnotificationquerySWbemServices.Exe**](swbemservices-execnotificationquery.md)
-    -   [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md)
+    -   [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md)
+    -   [**SWbemServices.ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md)
 
-6.  Schreiben Sie den Code, um das zurückgegebene Ereignis Objekt zu verarbeiten.
+6.  Schreiben Sie den Code, um das zurückgegebene Ereignisobjekt zu verarbeiten.
 
-    Fügen Sie für asynchrone Ereignis Abfragen den Code in die verschiedenen Methoden oder Ereignisse der Objekt Senke ein. Bei semisynchronen Ereignis Abfragen wird jedes Objekt zurückgegeben, da es von WMI abgerufen wird, sodass sich der Code in der Schleife befinden muss, die jedes Objekt verarbeitet.
+    Legen Sie für asynchrone Ereignisabfragen den Code in die verschiedenen Methoden oder Ereignisse der Objektsenke ein. Bei semisynchronen Ereignisabfragen wird jedes Objekt zurückgegeben, wenn WMI es erhält, sodass sich der Code in der Schleife befindet, die jedes Objekt behandelt.
 
-Das folgende Skriptcode Beispiel ist eine asynchrone Version des [**Win32 \_ processtrace**](/previous-versions/windows/desktop/krnlprov/win32-processtrace) -Skripts. Da asynchrone Vorgänge sofort zurückgegeben werden, wird das Skript in einem Dialogfeld aktiv, während es auf Ereignisse wartet.
+Das folgende Skriptcodebeispiel ist eine asynchrone Version des [**Win32 \_ ProcessTrace-Skripts.**](/previous-versions/windows/desktop/krnlprov/win32-processtrace) Da asynchrone Vorgänge sofort zurückgeben, hält ein Dialogfeld das Skript aktiv, während es auf Ereignisse wartet.
 
-Anstatt " [**slibemeventsource. NextEvent**](swbemeventsource-nextevent.md) " aufzurufen, um die einzelnen Ereignisse zu empfangen, verfügt das Skript über einen Ereignishandler für das Ereignis " [**slibemsink onobjectready**](swbemsink-onobjectready.md) ".
+Anstatt [**SWbemEventSource.NextEvent auf**](swbemeventsource-nextevent.md) aufruft, um jedes Ereignis zu empfangen, verfügt das Skript über einen Ereignishandler für das [**SWbemSink OnObjectReady-Ereignis.**](swbemsink-onobjectready.md)
 
 
 ```VB
@@ -141,64 +141,64 @@ End Sub
 
 > [!Note]
 >
-> Ein asynchroner Rückruf (z. b. ein Rückruf, der von der `SINK_OnObjectReady` Unterroutine verarbeitet wird) ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Verwenden Sie für eine bessere Sicherheit entweder die semisynchrone Kommunikation oder die synchrone Kommunikation. Weitere Informationen finden Sie unter den folgenden Themen:
+> Ein asynchroner Rückruf, z. B. ein Rückruf, der von der Unterroutine verarbeitet wird, ermöglicht es einem nicht authentifizierten Benutzer, Daten für die `SINK_OnObjectReady` Senke zur Verfügung zu stellen. Verwenden Sie für eine bessere Sicherheit entweder die semisynchrone Kommunikation oder die synchrone Kommunikation. Weitere Informationen finden Sie in den folgenden Themen:
 >
-> -   [Erstellen eines semisynchronen Aufrufes mit C++](making-a-semisynchronous-call-with-c--.md)
-> -   [Erstellen eines semisynchronen Aufrufes mit VBScript](making-a-semisynchronous-call-with-vbscript.md)
-> -   [Erstellen eines asynchronen Aufrufes mit C++](making-an-asynchronous-call-with-c--.md)
-> -   [Erstellen eines asynchronen Aufrufes mit VBScript](making-an-asynchronous-call-with-vbscript.md)
-> -   [Festlegen der Sicherheit für einen asynchronen-Befehl](setting-security-on-an-asynchronous-call.md)
-> -   [Sichern von Skript Clients](securing-scripting-clients.md)
+> -   [Semisynchroner Aufruf mit C++](making-a-semisynchronous-call-with-c--.md)
+> -   [Semisynchroner Aufruf mit VBScript](making-a-semisynchronous-call-with-vbscript.md)
+> -   [Ausführen eines asynchronen Aufrufs mit C++](making-an-asynchronous-call-with-c--.md)
+> -   [Ausführen eines asynchronen Aufrufs mit VBScript](making-an-asynchronous-call-with-vbscript.md)
+> -   [Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md)
+> -   [Sichern von Skriptclients](securing-scripting-clients.md)
 
  
 
 ## <a name="using-permanent-event-consumers"></a>Verwenden von permanenten Ereignisverbrauchern
 
-Ein dauerhafter Ereignisconsumer wird ausgeführt, bis die Registrierung explizit abgebrochen wird, und startet dann, wenn WMI oder das System neu gestartet wird.
+Ein permanenter Ereignisverbraucher wird ausgeführt, bis seine Registrierung explizit abgebrochen wird, und startet dann, wenn WMI oder das System neu gestartet wird.
 
-Ein dauerhafter Ereignisconsumer ist eine Kombination aus WMI-Klassen,-Filtern und COM-Objekten in einem System.
+Ein permanenter Ereignisverbraucher ist eine Kombination aus WMI-Klassen, Filtern und COM-Objekten auf einem System.
 
-In der folgenden Liste sind die erforderlichen Komponenten zum Erstellen eines permanenten Ereignisconsumers aufgeführt:
+In der folgenden Liste sind die Teile aufgeführt, die zum Erstellen eines permanenten Ereignisverbraucher erforderlich sind:
 
 -   Ein COM-Objekt, das den Code enthält, der den permanenten Consumer implementiert.
 -   Eine neue permanente Consumerklasse.
--   Eine Instanz der permanenten Consumer-Klasse.
+-   Eine Instanz der permanenten Consumerklasse.
 -   Ein Filter, der die Abfrage für Ereignisse enthält.
--   Eine Verknüpfung zwischen dem Consumer und dem Filter.
+-   Ein Link zwischen dem Consumer und dem Filter.
 
-Weitere Informationen finden Sie [unter empfangen von Ereignissen zu allen Zeit](--filtertoconsumerbinding.md)Punkten.
+Weitere Informationen finden Sie unter [Empfangen von Ereignissen zu allen Zeiten.](--filtertoconsumerbinding.md)
 
-WMI bietet mehrere permanente Consumer. Die Consumerklassen und das COM-Objekt, das den Code enthält, sind vorinstalliert. Beispielsweise können Sie eine Instanz der [**activescripteventconsumer**](activescripteventconsumer.md) -Klasse erstellen und konfigurieren, um ein Skript auszuführen, wenn ein Ereignis auftritt. Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern. Ein Beispiel für die Verwendung von **activescripteventconsumer** finden Sie unter [Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md).
+WMI bietet mehrere permanente Verbraucher. Die Consumerklassen und das COM-Objekt, die den Code enthalten, sind vorinstalliert. Beispielsweise können Sie eine Instanz der [**ActiveScriptEventConsumer-Klasse**](activescripteventconsumer.md) erstellen und konfigurieren, um ein Skript auszuführen, wenn ein Ereignis auftritt. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md) Ein Beispiel für die Verwendung von **ActiveScriptEventConsumer finden** Sie unter [Ausführen eines Skripts basierend auf einem Ereignis.](running-a-script-based-on-an-event.md)
 
-Im folgenden Verfahren wird beschrieben, wie ein dauerhafter Ereignisconsumer erstellt wird.
+Im folgenden Verfahren wird beschrieben, wie ein permanenter Ereignisverbraucher erstellt wird.
 
-**So erstellen Sie einen permanenten Ereignisconsumer**
+**So erstellen Sie einen permanenten Ereignisverbraucher**
 
-1.  [Registrieren Sie den Ereignis Anbieter](registering-a-provider.md) bei dem Namespace, den Sie verwenden.
+1.  [Registrieren Sie den Ereignisanbieter](registering-a-provider.md) mit dem Namespace, den Sie verwenden.
 
-    Einige Ereignis Anbieter können nur einen bestimmten Namespace verwenden. [**\_ \_ Instancecreationevent**](--instancecreationevent.md) ist beispielsweise ein System internes Ereignis, das vom Win32- [Anbieter](/windows/desktop/CIMWin32Prov/win32-provider) unterstützt wird und standardmäßig mit dem \\ root \\ CIMV2-Namespace registriert wird.
+    Einige Ereignisanbieter können nur einen bestimmten Namespace verwenden. [**\_ \_ InstanceCreationEvent**](--instancecreationevent.md) ist beispielsweise ein systeminternes Ereignis, das vom [Win32-Anbieter](/windows/desktop/CIMWin32Prov/win32-provider) unterstützt wird und standardmäßig beim \\ \\ Cimv2-Stammnamespace registriert wird.
 
     > [!Note]  
-    > Sie können die **eventnamespace** -Eigenschaft des [**\_ \_ eventfilters**](--eventfilter.md) verwenden, die in der Registrierung verwendet wird, um ein Cross-Namespace-Abonnement zu erstellen. Weitere Informationen finden Sie unter [Implementieren von Abonnements für permanente Namespace-Ereignisse](implementing-cross-namespace-permanent-event-subscriptions.md).
+    > Sie können die **EventNamespace-Eigenschaft** des in der Registrierung verwendeten [**\_ \_ EventFilter**](--eventfilter.md) verwenden, um ein namespaceübergreifendes Abonnement zu erstellen. Weitere Informationen finden Sie unter [Implementing Cross-Namespace Permanent Event Subscriptions](implementing-cross-namespace-permanent-event-subscriptions.md).
 
      
 
-2.  [Registrieren Sie den ereignishandleranbieter](registering-an-event-consumer-provider.md) bei dem Namespace, in dem sich Ereignis Klassen befinden.
+2.  [Registrieren Sie den Ereignisverbraucheranbieter](registering-an-event-consumer-provider.md) mit dem Namespace, in dem sich Ereignisklassen befinden.
 
-    WMI verwendet einen Ereignisconsumeranbieter, um einen permanenten Ereignisconsumer zu finden. Der permanente Ereignisconsumer ist die Anwendung, die von WMI beim Empfang eines Ereignisses gestartet wird. Um Ereignisconsumer zu registrieren, erstellen Anbieter Instanzen von [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md).
+    WMI verwendet einen Ereignisverbraucheranbieter, um einen dauerhaften Ereignis consumer zu finden. Der permanente Ereignisverbraucher ist die Anwendung, die WMI startet, wenn ein Ereignis empfangen wird. Zum Registrieren des Ereignisconsumers erstellen Anbieter Instanzen von [**\_ \_ EventConsumerProviderRegistration**](--eventconsumerproviderregistration.md).
 
-3.  Erstellen Sie eine Instanz der-Klasse, die den dauerhaften Ereignisconsumer darstellt, den Sie verwenden möchten.
+3.  Erstellen Sie eine Instanz der -Klasse, die den dauerhaften Ereignisverbraucher darstellt, den Sie verwenden möchten.
 
-    Ereignisconsumerklassen werden von der [**\_ \_ eventconsumer**](--eventconsumer.md)-Klasse abgeleitet. Legen Sie die Eigenschaften fest, die die ereignisconsumerinstanz benötigt.
+    Ereignisconsumerklassen werden von der [**\_ \_ Klasse EventConsumer**](--eventconsumer.md)abgeleitet. Legen Sie die Eigenschaften fest, die für die Ereignisverbraucherinstanz erforderlich sind.
 
-4.  Registrieren Sie den Consumer mit com mithilfe des **regsvr32** -Hilfsprogramms.
-5.  Erstellen Sie eine Instanz der Ereignis Filterklasse [**\_ \_ EventFilter**](--eventfilter.md).
+4.  Registrieren Sie den Consumer mithilfe des Hilfsprogramms **regsvr32** bei COM.
+5.  Erstellen Sie eine Instanz der Ereignisfilterklasse [**\_ \_ EventFilter**](--eventfilter.md).
 
-    Legen Sie die erforderlichen Felder für die Ereignis Filter Instanz fest. Die erforderlichen Felder für [**\_ \_ EventFilter**](--eventfilter.md) sind " **Name**", " **QueryLanguage**" und " **Query**". Die **Name** -Eigenschaft kann ein beliebiger eindeutiger Name für eine Instanz dieser Klasse sein. Die **QueryLanguage** -Eigenschaft ist immer auf "WQL" festgelegt. Die **Query** -Eigenschaft ist eine Zeichenfolge, die eine Ereignis Abfrage enthält. Ein Ereignis wird generiert, wenn die Abfrage eines permanenten Ereignisconsumers fehlschlägt. Die Quelle des Ereignisses ist WinMgmt, die Ereignis-ID ist 10, und der Ereignistyp ist Fehler.
+    Legen Sie die erforderlichen Felder für die Ereignisfilterinstanz fest. Die erforderlichen Felder für [**\_ \_ EventFilter**](--eventfilter.md) sind **Name,** **QueryLanguage** und **Query.** Die **Name-Eigenschaft** kann ein beliebiger eindeutiger Name für eine Instanz dieser Klasse sein. Die **QueryLanguage-Eigenschaft** ist immer auf "WQL" festgelegt. Die **Query-Eigenschaft** ist eine Zeichenfolge, die eine Ereignisabfrage enthält. Ein Ereignis wird generiert, wenn die Abfrage eines permanenten Ereignisverbrauchers fehlschlägt. Die Quelle des Ereignisses ist WinMgmt, die Ereignis-ID ist 10, und der Ereignistyp ist Error.
 
-6.  Erstellen Sie eine Instanz der [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) -Klasse, um einen logischen Ereignisconsumer einem Ereignis Filter zuzuordnen.
+6.  Erstellen Sie eine Instanz der [**\_ \_ FilterToConsumerBinding-Klasse,**](--filtertoconsumerbinding.md) um einem Ereignisfilter einen logischen Ereignisconsumer zuzuordnen.
 
-    WMI verwendet eine Zuordnung, um den Ereignisconsumer zu finden, der dem Ereignis zugeordnet ist, das den im Ereignis Filter angegebenen Kriterien entspricht. WMI verwendet den Ereignisconsumeranbieter, um zu starten, um die Anwendung für die permanente Ereignisconsumer zu finden
+    WMI verwendet eine Zuordnung, um den Ereignisverbraucher zu suchen, der dem Ereignis zugeordnet ist, das den im Ereignisfilter angegebenen Kriterien entspricht. WMI verwendet den Ereignisverbraucheranbieter, um die permanente Ereignisverbraucheranwendung zu suchen, die gestartet werden soll.
 
  
 

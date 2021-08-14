@@ -1,10 +1,10 @@
 ---
-title: Inapcertrelyingparty-Schnittstelle (napcertrelyingparty. h)
-description: Zertifikat abhängige Seiten müssen für die Kommunikation mit dem NAPAgent verwenden.
+title: INapCertRelyingParty-Schnittstelle (NapCertRelyingParty.h)
+description: Zertifikatvertrauliche Parteien müssen verwenden, um mit napAgent zu kommunizieren.
 ms.assetid: e5ae0f4d-24fa-4049-82d9-1c9baeb34e32
 keywords:
-- Inapcertrelyingparty-Schnittstelle NAP
-- Inapcertrelyingparty-Schnittstelle NAP, beschrieben
+- INapCertRelyingParty-Schnittstelle NAP
+- INapCertRelyingParty-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,39 +15,39 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85b4439389c6ee65076f710bb6ea752c73a51ecd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d2a68c6ce910fa63588df1fa7bc1834f6ed537a2a2c9b85f24d383497a8d463
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118368609"
 ---
-# <a name="inapcertrelyingparty-interface"></a>Inapcertrelyingparty-Schnittstelle
+# <a name="inapcertrelyingparty-interface"></a>INapCertRelyingParty-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapcertrelyingparty** -Schnittstelle stellt Methoden bereit, die von Zertifikat vertrauenden Seiten für die Kommunikation mit dem NAPAgent verwendet werden müssen.
+Die **INapCertRelyingParty-Schnittstelle** stellt Methoden bereit, die von zertifikatvertrauenden Seiten für die Kommunikation mit NapAgent verwendet werden müssen.
 
 ## <a name="members"></a>Member
 
-Die **inapcertrelyingparty** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapcertrelyingparty** verfügt auch über die folgenden Typen von Membern:
+Die **INapCertRelyingParty-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapCertRelyingParty** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapcertrelyingparty** -Schnittstelle verfügt über diese Methoden.
+Die **INapCertRelyingParty-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                        | BESCHREIBUNG                                                                     |
 |:--------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
-| [**Inapcertrelyingparty:: getabonbedrelyingparties**](inapcertrelyingparty-getsubscribedrelyingparties.md) | Ruft eine Liste der vertrauenden Seiten ab, die abonniert haben.<br/>                 |
-| [**Inapcertrelyingparty:: abonnebecertbygroup**](inapcertrelyingparty-subscribecertbygroup.md)               | Abonniert einen bereits registrierten Integritäts Zertifikat Server (HCS).<br/> |
-| [**Inapcertrelyingparty:: unabonnebecertbygroup**](inapcertrelyingparty-unsubscribecertbygroup.md)           | Kündigen von einem HCS-Server.<br/>                                     |
+| [**INapCertRelyingParty::GetSubscribedRelyingLöschs**](inapcertrelyingparty-getsubscribedrelyingparties.md) | Ruft eine Liste der vertrauenden Seiten ab, die abonniert haben.<br/>                 |
+| [**INapCertRelyingParty::SubscribeCertByGroup**](inapcertrelyingparty-subscribecertbygroup.md)               | Abonniert einen bereits registrierten Integritätszertifikatserver (HCS).<br/> |
+| [**INapCertRelyingParty::UnSubscribeCertByGroup**](inapcertrelyingparty-unsubscribecertbygroup.md)           | Kündigen des Abonnements von einem HCS-Server.<br/>                                     |
 
 
 
@@ -59,14 +59,14 @@ Die **inapcertrelyingparty** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                               |
-| Header<br/>                   | <dl> <dt>Napcertrelyingparty. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcertrelyingparty. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                               |
+| Header<br/>                   | <dl> <dt>NapCertRelyingParty.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCertRelyingParty.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

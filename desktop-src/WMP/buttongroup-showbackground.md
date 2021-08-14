@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. showbackground
-description: Mit dem showbackground-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob in der ButtonGroup nur die Schaltflächen angezeigt werden, oder es wird die im Image-Attribut angegebene vollständige Bitmap angezeigt.
+title: BUTTONGROUP.showBackground
+description: Das showBackground-Attribut gibt einen Wert an, der angibt, ob buttongroup nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im Imageattribut angegeben ist, oder ruft einen Wert ab.
 ms.assetid: 5c3fc873-937c-4dad-ac18-e7a37004ee1e
 keywords:
-- ButtonGroup. showbackground-Fenster Media Player
+- BUTTONGROUP.showBackground Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31cc87260d4b0fca74d6063c757e6c3dae0db850
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bb95b707fa7e14b00e86c5a65949ff9fba3ce3db32745116fa65ca4c53ac1998
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118342673"
 ---
-# <a name="buttongroupshowbackground"></a>ButtonGroup. showbackground
+# <a name="buttongroupshowbackground"></a>BUTTONGROUP.showBackground
 
-Mit dem **showbackground** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob in der **ButtonGroup** nur die Schaltflächen angezeigt werden, oder es wird die im **Image** -Attribut angegebene vollständige Bitmap angezeigt.
+Das **showBackground-Attribut** gibt einen Wert an, der angibt, ob **buttongroup** nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im **Imageattribut** angegeben ist, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.showBackground
@@ -29,24 +29,24 @@ Mit dem **showbackground** -Attribut wird ein Wert angegeben oder abgerufen, der
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                                                                                |
 |-------|--------------------------------------------------------------------------------------------|
-| true  | Schaltflächen werden angezeigt, und der Bereich, der nicht von Schaltflächen besetzt ist, wird aus der Bild Bitmap gezeichnet. |
-| false | Standard. Es werden nur die Schaltflächen angezeigt.                                                   |
+| true  | Schaltflächen werden angezeigt, und der Bereich, der nicht von Schaltflächen belegt ist, wird aus der Bildbitmap gezeichnet. |
+| false | Standard. Nur die Schaltflächen werden angezeigt.                                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **showbackground** den Wert true hat, wird das gesamte **Hauptbild** angezeigt.
+Wenn **showBackground** true ist, wird das gesamte **Hauptbild** angezeigt.
 
-Wenn **showbackground** den Wert false hat, werden nur die Bereiche gerendert, die den zugewiesenen **mappingImage** -Farben entsprechen. Das heißt, dass nur **buttonelements** mit ihrer zugewiesenen **mappingColor** sichtbar sind.
+Wenn **showBackground** false ist, werden nur die Bereiche gerendert, die zugewiesenen **MappingImage-Farben** entsprechen. Anders ausgedrückt: Nur **BUTTONELEMENTs,** deren **mappingColor** zugewiesen ist, sind sichtbar.
 
 Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten.
 
@@ -56,24 +56,24 @@ Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonElement. mappingColor**](buttonelement-mappingcolor.md)
+[**BUTTONELEMENT.mappingColor**](buttonelement-mappingcolor.md)
 </dt> <dt>
 
-[**ButtonGroup. Image**](buttongroup-image.md)
+[**BUTTONGROUP.image**](buttongroup-image.md)
 </dt> <dt>
 
-[**ButtonGroup. mappingImage**](buttongroup-mappingimage.md)
+[**BUTTONGROUP.mappingImage**](buttongroup-mappingimage.md)
 </dt> </dl>
 
  

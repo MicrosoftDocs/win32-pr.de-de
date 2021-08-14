@@ -1,9 +1,9 @@
 ---
-title: Cdtrackaktiviertes Attribut
-description: Das cdtrackaktivierte-Attribut gibt an, ob der Titel für die Wiedergabe aktiviert ist.
+title: CDTrackEnabled-Attribut
+description: Das CDTrackEnabled-Attribut gibt an, ob die Spur für die Wiedergabe aktiviert ist.
 ms.assetid: ebbc42bd-2d6c-47ae-9a3f-c6256b120d35
 keywords:
-- Cdtrackaktiviertes Attribut Windows Media Player
+- CDTrackEnabled-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c81c231dbdfc432ea7aa510a19b1f85e0826c836
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8a86c94c2c1b44327cdbfb35544c3e0b5b34d25885215d78dbec0ec084d056e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118342683"
 ---
-# <a name="cdtrackenabled-attribute"></a>Cdtrackaktiviertes Attribut
+# <a name="cdtrackenabled-attribute"></a>CDTrackEnabled-Attribut
 
-Das **cdtrackaktivierte** -Attribut gibt an, ob der Titel für die Wiedergabe aktiviert ist.
+Das **CDTrackEnabled-Attribut** gibt an, ob die Spur für die Wiedergabe aktiviert ist.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [CD-Spuren](cd-track-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur im Bibliotheks Cache gespeichert.
+Dieses Attribut wird nur im Bibliothekscache gespeichert.
 
-Bei der Wiedergabe einer CD in Windows Media Player kann der Benutzer eine Spur auswählen und angeben, dass er nicht wiedergegeben werden soll. Dieser Wert dieses Attributs ist true, wenn der Titel wiedergegeben werden kann, oder false, wenn der Benutzer angegeben hat, dass der Titel nicht wiedergegeben werden soll.
+Beim Wiedergeben einer CD in Windows Media Player kann der Benutzer einen Titel auswählen und angeben, dass er nicht wiedergegeben werden soll. Dieser Wert dieses Attributs ist True, wenn die Spur wiedergegeben werden kann, oder False, wenn der Benutzer angegeben hat, dass die Spur nicht wiedergegeben werden soll.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,15 +41,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

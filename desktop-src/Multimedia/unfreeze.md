@@ -1,9 +1,9 @@
 ---
-title: Befehl zum Einfrieren aufheben
-description: Mit dem Befehl zum Aufheben der Fixierung wird die Video Erfassung im Frame Puffer wieder aktiviert, nachdem Sie durch den Freeze-Befehl deaktiviert wurde. Dieser Befehl wird von digitalen Video-, VCR-und Video Überlagerungs Geräten erkannt.
+title: Unfreeze-Befehl
+description: Der Befehl unfreeze aktiviert die Videoerfassung erneut in den Framepuffer, nachdem er durch den Freeze-Befehl deaktiviert wurde. Digitalvideo-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: ca90c299-2003-44cb-a879-4bc767480965
 keywords:
-- Befehl zum Aufheben der Fixierung von Windows Multimedia
+- Befehl "unfreeze" Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 155ba6b65fb08411d8404920c8f3337d1bddbcb1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 88fe45b1346872483a4012c5f5d161dcd61020c64349fee254ae4bf337b4be8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118370810"
 ---
-# <a name="unfreeze-command"></a>Befehl zum Einfrieren aufheben
+# <a name="unfreeze-command"></a>Unfreeze-Befehl
 
-Mit dem Befehl zum Aufheben der Fixierung wird die Video Erfassung im Frame Puffer wieder aktiviert, nachdem Sie durch den [Freeze](freeze.md) -Befehl deaktiviert wurde. Dieser Befehl wird von digitalen Video-, VCR-und Video Überlagerungs Geräten erkannt.
+Der Befehl unfreeze aktiviert die Videoerfassung erneut in den Framepuffer, nachdem er durch den [Freeze-Befehl](freeze.md) deaktiviert wurde. Digitalvideo-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,39 +39,39 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszUnfreeze"></span><span id="lpszunfreeze"></span><span id="LPSZUNFREEZE"></span>*lpszunfreeze*
+<span id="lpszUnfreeze"></span><span id="lpszunfreeze"></span><span id="LPSZUNFREEZE"></span>*lpszUnfreeze*
 </dt> <dd>
 
-Flag zum erneuten Aktivieren der Video Erfassung für den Frame Puffer. In der folgenden Tabelle sind die Gerätetypen aufgeführt **, die den Befehl zum** Aufheben der Fixierung und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag für die erneute Videoerfassung in den Framepuffer. In der folgenden Tabelle sind die Gerätetypen aufgeführt, die den Befehl **unfreeze** und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 | Wert        | Bedeutung        |
 |--------------|----------------|
-| Digitalvideo | at- *Rechteck* |
-| overlay      | at- *Rechteck* |
-| VCR          | Eingabe Ausgabe   |
+| digitalvideo | am *Rechteck* |
+| overlay      | am *Rechteck* |
+| Vcr          | Eingabeausgabe   |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszunfreeze** -Parameter und deren Bedeutung angegeben werden können.
+Die folgende Tabelle enthält die Flags, die im **lpszUnfreeze-Parameter** angegeben werden können, und ihre Bedeutungen.
 
 
 
 | Wert          | Bedeutung                                                                                                                                                                                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| at- *Rechteck* | Gibt die Region an, in der die Video Beschaffung erneut aktiviert wird. Das Rechteck ist relativ zum Video Puffer Ursprung und wird als *x1 y1 x2 Y2* angegeben. Die Koordinaten *x1 y1* geben die linke obere Ecke des Rechtecks an, und die Koordinaten *x2 Y2* geben die Breite und Höhe an. |
-| input          | Heben Sie die Fixierung des Eingabe Bilds auf.                                                                                                                                                                                                                                                                  |
-| output         | Entsperrung des Ausgabe Bilds. Wenn weder "Input" noch "Output" angegeben wird, wird "Output" angenommen.                                                                                                                                                                                                  |
+| am *Rechteck* | Gibt die Region an, in der die Videoerfassung wieder einseniert werden soll. Das Rechteck ist relativ zum Ursprung des Videopuffers und wird als *X1 Y1 X2 Y2* angegeben. Die Koordinaten *X1 Y1* geben die obere linke Ecke des Rechtecks und die Koordinaten *X2 Y2* die Breite und Höhe an. |
+| input          | Aufheben des Fixierens des Eingabebilds.                                                                                                                                                                                                                                                                  |
+| output         | Aufheben der Freigabe des Ausgabebilds. Wenn weder "input" noch "output" angegeben ist, wird "output" angenommen.                                                                                                                                                                                                  |
 
 
 
@@ -79,20 +79,20 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszunfreeze** -
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für DigitalVideo- und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl entfriert einen Bereich des Video Puffers.
+Der folgende Befehl entpackt einen Bereich des Videopuffers.
 
 ``` syntax
 unfreeze vboard at 10 20 90 165
@@ -109,17 +109,17 @@ unfreeze vboard at 10 20 90 165
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
-[ge](freeze.md)
+[Einfrieren](freeze.md)
 </dt> </dl>
 
  

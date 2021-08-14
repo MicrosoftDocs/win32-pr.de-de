@@ -1,11 +1,11 @@
 ---
-title: Controls. FastForward-Methode
-description: Die FastForward-Methode startet die schnelle Wiedergabe des Medien Elements in Vorwärtsrichtung. | Controls. FastForward-Methode
+title: Controls.fastForward-Methode
+description: Die fastForward-Methode startet die schnelle Wiedergabe des Medienelements in Vorwärtsrichtung. | Controls.fastForward-Methode
 ms.assetid: 69cee803-f76b-4a8c-a2c2-1870665afaf9
 keywords:
-- FastForward-Methoden Fenster Media Player
-- FastForward-Methode, Windows Media Player, Controls-Klasse
-- Steuerelemente-Klasse, Windows Media Player, FastForward-Methode
+- fastForward-Methode Windows Media Player
+- fastForward-Methode Windows Media Player , Controls-Klasse
+- Steuert die Klasse Windows Media Player , fastForward-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 20d033b8b025955e57a9c3ebed00a6d7a92a666e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8b35c2a31c26259a12638d09c968b90ea42f93c692bf4c24af9dc987a6df3bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118341816"
 ---
-# <a name="controlsfastforward-method"></a>Controls. FastForward-Methode
+# <a name="controlsfastforward-method"></a>Controls.fastForward-Methode
 
-Die **FastForward** -Methode startet die schnelle Wiedergabe des Medien Elements in Vorwärtsrichtung.
+Die **fastForward-Methode** startet die schnelle Wiedergabe des Medienelements in Vorwärtsrichtung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,15 +44,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **FastForward** -Methode gibt den Clip mit dem fünf fachen der normalen Geschwindigkeit wieder. Durch Aufrufen von **FastForward** werden die *Einstellungen* geändert. **bewerten** Sie die-Eigenschaft auf 5,0. Wenn die **Rate** anschließend geändert wird **oder wenn "** wiedergeben" oder " **Beenden** " aufgerufen wird, wird die schnelle Weiterleitung von Windows Media Player beendet.
+Die **fastForward-Methode** gibt den Clip um das Fünffache der Normalgeschwindigkeit wieder. Durch den Aufruf von **fastForward** wird die *Einstellungen* geändert. **rate-Eigenschaft** auf 5,0. Wenn **die Rate** anschließend geändert wird oder **Wiedergabe** oder **Beendigung** aufgerufen wird, beenden Windows Media Player die schnelle Weiterleitung.
 
-Die **FastForward** -Methode funktioniert nicht für Live-Übertragungen und bestimmte Medientypen. Um zu ermitteln, ob Sie sich in einem Clip schnell vorwärts befinden, nennen Sie **IsAvailable**("FastForward").
+Die **fastForward-Methode** funktioniert nicht für Liveübertragungen und bestimmte Medientypen. Rufen Sie **isAvailable**("FastForward") auf, um zu ermitteln, ob Sie in einem Clip schnell vorwärts vorwärtskommen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **FastForward** verwendet, um die schnelle Wiedergabe des Medien Elements zu starten. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **fastForward** verwendet, um die schnelle Wiedergabe des Medienelements zu starten. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -75,28 +75,28 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **FastF
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Controls. IsAvailable**](controls-isavailable.md)
+[**Controls.isAvailable**](controls-isavailable.md)
 </dt> <dt>
 
-[**Controls. Play**](controls-play.md)
+[**Controls.play**](controls-play.md)
 </dt> <dt>
 
-[**Controls. Pause**](controls-stop.md)
+[**Controls.stop**](controls-stop.md)
 </dt> <dt>
 
-[**"Settings. Rate"**](settings-rate.md)
+[**Einstellungen.rate**](settings-rate.md)
 </dt> </dl>
 
  

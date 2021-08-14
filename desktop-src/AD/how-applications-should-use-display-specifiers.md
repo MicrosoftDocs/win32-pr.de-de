@@ -1,38 +1,38 @@
 ---
-title: Verwendung von Anzeige Spezifikations Anwendungen durch Anwendungen
-description: Verwenden Sie zum Anzeigen von Active Directory-Domäne Dienst Objekten die Anzeige Spezifizierer, um lokalisierte Anzeigedaten für Klassen-und Attribut Objekte abzurufen.
+title: Verwenden von Anzeigespezifizierern in Anwendungen
+description: Um Active Directory-Domäne Service-Objekte anzuzeigen, verwenden Sie Anzeigespezifizierer, um lokalisierte Anzeigedaten für Klassen- und Attributobjekte abzurufen.
 ms.assetid: 2ba62906-47ae-4aab-8cb1-a5734eae5984
 ms.tgt_platform: multiple
 keywords:
-- Verwendung von Anzeige spezifiken in Anwendungen
-- Anzeige spezifiker anzeigen, wie Anwendungen Anzeige spezifiken verwenden sollten
+- So sollten Anwendungen Anzeigespezifizierer AD verwenden?
+- Anzeigespezifizierer AD , wie Anwendungen Anzeigespezifizierer verwenden sollen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41f7045b03da282a9c64b216031e3da03a427268
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 12b2083b55a23ed3f0c1a82ba4524ba3f27445840da3d19812d26c7e05af92ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103734817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188259"
 ---
-# <a name="how-applications-should-use-display-specifiers"></a>Verwendung von Anzeige Spezifikations Anwendungen durch Anwendungen
+# <a name="how-applications-should-use-display-specifiers"></a>Verwenden von Anzeigespezifizierern in Anwendungen
 
-Verwenden Sie zum Anzeigen von Active Directory-Domäne Dienst Objekten die Anzeige Spezifizierer, um lokalisierte Anzeigedaten für Klassen-und Attribut Objekte abzurufen. Dies ermöglicht die Verwendung lokalisierter Anzeige Namen und Symbole und vermeidet unnötige Lokalisierung der Anzeigedaten.
+Um Active Directory-Domäne Service-Objekte anzuzeigen, verwenden Sie Anzeigespezifizierer, um lokalisierte Anzeigedaten für Klassen- und Attributobjekte abzurufen. Dadurch können lokalisierte Anzeigenamen und Symbole verwendet werden, und eine unnötige Lokalisierung der Anzeigedaten wird vermieden.
 
-## <a name="display-names"></a>Anzeigen Amen
+## <a name="display-names"></a>Anzeigenamen
 
-Die Eigenschaften **classdisplayname** und **attributeDisplayNames** der Anzeige spezifiziererobjekte für das entsprechende Gebiets Schema sollten verwendet werden, um Anzeige Text für Klassen-und Attributnamen abzurufen. Verwenden Sie die Eigenschaften " **CN**", " **classdisplayname** " oder " **ldapDisplayName** " der **classSchema** -oder **attributeSchema** -Objekte nicht zum Abrufen von Anzeige Text Bezeichnungen, da diese Werte nicht lokalisiert sind. Weitere Informationen zum Abrufen von lokalisiertem Text für ein Klassenobjekt finden Sie im folgenden Beispielcode.
+Die Eigenschaften **classDisplayName** und **attributeDisplayNames** der Anzeigespezifiziererobjekte für das entsprechende Gebietsschema sollten verwendet werden, um Anzeigetext für Klassen- und Attributnamen abzurufen. Verwenden Sie nicht die Eigenschaften **cn**, **classDisplayName** oder **ldapDisplayName** der **Objekte classSchema** oder **attributeSchema,** um Anzeigetextbezeichnungen abzurufen, da diese Werte nicht lokalisiert sind. Weitere Informationen zum Abrufen von lokalisierten Text für ein Klassenobjekt finden Sie im folgenden Beispielcode.
 
 ## <a name="icons"></a>Symbole
 
-Die **IconPath** -Eigenschaft der anzeigespezifiziererobjekte für das entsprechende Gebiets Schema sollte verwendet werden, um das Symbol abzurufen, das für ein Klassenobjekt angezeigt werden soll. Weitere Informationen finden Sie unter [Klassen Symbole](class-icons.md). Wenn kein lokalisiertes Symbol für ein Klassenobjekt angegeben wird, sollte für das Element ein Standard Symbol angezeigt werden.
+Die **iconPath-Eigenschaft** der Anzeigespezifiziererobjekte für das entsprechende Gebietsschema sollte verwendet werden, um das Symbol abzurufen, das für ein Klassenobjekt angezeigt werden soll. Weitere Informationen finden Sie unter [Klassensymbole.](class-icons.md) Wenn kein lokalisiertes Symbol für ein Klassenobjekt angegeben ist, sollte ein Standardsymbol für das Element angezeigt werden.
 
 ## <a name="creating-new-objects"></a>Erstellen neuer Objekte
 
-Verwenden Sie nach Möglichkeit die entsprechenden Objekterstellungs-Assistenten, um neue Objekte zu erstellen. Weitere Informationen finden Sie unter [Aufrufen von Erstellungs-Assistenten aus Ihrer Anwendung](invoking-creation-wizards-from-your-application.md).
+Verwenden Sie nach Möglichkeit die entsprechenden Objekterstellungs-Assistenten, um neue Objekte zu erstellen. Weitere Informationen finden Sie unter Aufrufen [von Erstellungs-Assistenten aus Ihrer Anwendung.](invoking-creation-wizards-from-your-application.md)
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie den Anzeige Text für eine Klasse und ein Attribut einer Klasse abrufen.
+Das folgende Codebeispiel zeigt, wie sie den Anzeigetext für eine Klasse und ein Attribut einer Klasse abrufen.
 
 
 ```C++

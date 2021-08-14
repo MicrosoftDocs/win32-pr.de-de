@@ -1,7 +1,7 @@
 ---
-description: Die meisten der Eigenschaften Konstanten für die Windows-Abbild Erfassung (WIA) werden in einem Enumerationsdatentyp (wiaitempropertyid) für Skript Autoren gruppiert.
+description: 'Die meisten wia-Eigenschaftskonstanten (Windows Image Acquisition) sind in einem enumerationierten Datentyp gruppiert: WiaItemPropertyId für Skriptautoren.'
 ms.assetid: d0fd6bd1-c646-4ed8-a6b2-43b424af8288
-title: Wiaitempropertyid
+title: WiaItemPropertyId
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,34 +9,34 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6ced5d213d68fa3c4386ecf6f05783bd303bad05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dedd11a35d52d19a4fcff4299dce688e8163ecd19d2bf9e4b49e19cb1997b293
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118207507"
 ---
-# <a name="wiaitempropertyid"></a>Wiaitempropertyid
+# <a name="wiaitempropertyid"></a>WiaItemPropertyId
 
-Die meisten der Eigenschaften Konstanten für die Windows-Abbild Erfassung (WIA) werden in einem Enumerationsdatentyp (wiaitempropertyid) für Skript Autoren gruppiert.
+Die meisten wia-Eigenschaftskonstanten (Windows Image Acquisition) sind in einem enumerationierten Datentyp gruppiert: WiaItemPropertyId für Skriptautoren.
 
-Die folgende Tabelle zeigt die Zuordnung zwischen den Benennungs Konventionen, die in Skripterstellung und C++ verwendet werden. Im Skript wird das Präfix "cameradevice" z. b. dem Präfix "WIA \_ DPC" für die entsprechende C++-Konstante zugeordnet. In einem spezifischeren Beispiel entspricht die Eigenschaft "cameradeviceflash Mode" der C++-Konstante "WIA \_ DPC \_ Flash \_ Mode". Beschreibungen der einzelnen Eigenschaften finden Sie in den entsprechenden Themen zu Eigenschafts Konstanten. 
+In der folgenden Tabelle wird die Zuordnung zwischen den benennungskonventionen dargestellt, die in der Skripterstellung und in C++ verwendet werden. Beispielsweise wird im Skript das Präfix "CameraDevice" dem Präfix "WIA \_ DPC" für die entsprechende C++-Konstante zugeordnet. In einem spezifischeren Beispiel entspricht die Eigenschaft "CameraDeviceFlashMode" der C++-Konstante "WIA \_ DPC \_ FLASH \_ MODE". Beschreibungen der einzelnen Eigenschaften finden Sie in den entsprechenden Themen zu Eigenschaftenkonstanten. 
 
-| Skript Präfix  | C++ Topic (Präfix)                                                                    |
+| Skriptpräfix  | C++-Thema (Präfix)                                                                    |
 |----------------|---------------------------------------------------------------------------------------|
-| Sicherungsmedium         | [**Allgemeine Geräte Eigenschafts Konstanten (WIA- \_ DPA)**](-wia-wiaitempropcommondevice.md)   |
-| Cameradevice   | [**Eigenschaften Konstanten für Kamerageräte (WIA \_ DPC)**](-wia-wiaitempropcameradevice.md)   |
-| Scannerdevice  | [**Überprüfung der Geräte Eigenschafts Konstanten (WIA \_ DPS)**](-wia-wiaitempropscannerdevice.md) |
-| VideoDevice    | [**Video-WIA-Geräte Eigenschafts Konstanten (WIA \_ DPV)**](-wia-wiaitempropvideodevice.md) |
-| Picture        | [**Allgemeine WIA-Element Eigenschaften Konstanten (WIA \_ IPA)**](-wia-wiaitempropcommonitem.md)   |
-| Camerapicture  | [**Eigenschaften Konstanten für Kamera-WIA-Elemente (WIA \_ IPC)**](-wia-wiaitempropcameraitem.md)   |
-| Scannerbild | [**Eigenschaften Konstanten für Scanner-WIA-Elemente (WIA- \_ IPS)**](-wia-wiaitempropscanneritem.md) |
+| Gerät         | [**Common Device Property Constants (WIA \_ DPA)**](-wia-wiaitempropcommondevice.md)   |
+| CameraDevice   | [**Kamerageräteeigenschaftskonstanten (WIA \_ DPC)**](-wia-wiaitempropcameradevice.md)   |
+| ScannerGeräte  | [**Eigenschaftenkonstanten für Scannergeräte (WIA \_ DPS)**](-wia-wiaitempropscannerdevice.md) |
+| VideoDevice    | [**WIA-Geräteeigenschaftskonstanten (WIA DPV) im Video \_**](-wia-wiaitempropvideodevice.md) |
+| Picture        | [**Allgemeine WIA-Elementeigenschaftskonstanten (WIA \_ IPA)**](-wia-wiaitempropcommonitem.md)   |
+| CameraPicture  | [**WIA-Elementeigenschaftskonstanten (WIA IPC) der Kamera \_**](-wia-wiaitempropcameraitem.md)   |
+| ScannerPicture | [**Wia-Elementeigenschaftskonstanten (WIA \_ IPS) des Scanners**](-wia-wiaitempropscanneritem.md) |
 
 
 
  
 
-Im folgenden Beispiel wird der gesamte enumerierte Typ mit den entsprechenden Namen bereitgestellt.
+Das folgende Beispiel stellt den vollständigen aufzählenden Typ mit den entsprechenden Namen bereit.
 
 
 ```JScript

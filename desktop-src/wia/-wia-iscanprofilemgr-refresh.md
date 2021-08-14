@@ -1,7 +1,7 @@
 ---
-description: Listet alle Scan Profile im System erneut auf.
+description: Enumeriert alle Scanprofile im System erneut.
 ms.assetid: f5e49645-e81a-4750-8ea5-f0c698a61752
-title: 'Iscanprofilemgr:: Refresh-Methode (scanprofilemgr. h)'
+title: IScanProfileMgr::Refresh-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: e4af44e95889abf35fe13e1669411513458a16c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5bb343d310be3aa352c4777275c231f6264d6d25fe5ad88cde559995da915aa9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208943"
 ---
-# <a name="iscanprofilemgrrefresh-method"></a>Iscanprofilemgr:: Refresh-Methode
+# <a name="iscanprofilemgrrefresh-method"></a>IScanProfileMgr::Refresh-Methode
 
-Listet alle Scan Profile im System erneut auf.
+Enumeriert alle Scanprofile im System erneut.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, wenn mehrere [**iscanprofilemgr**](-wia-iscanprofilemgr.md) -Objekte gleichzeitig Profile erstellen oder löschen.
+Verwenden Sie diese Methode, wenn mehrere [**IScanProfileMgr-Objekte**](-wia-iscanprofilemgr.md) profile gleichzeitig erstellen oder löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,21 +53,21 @@ Verwenden Sie diese Methode, wenn mehrere [**iscanprofilemgr**](-wia-iscanprofil
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

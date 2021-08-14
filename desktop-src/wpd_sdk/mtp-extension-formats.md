@@ -1,25 +1,25 @@
 ---
-description: MTP-Erweiterungs Formate
+description: MTP-Erweiterungsformate
 ms.assetid: 318b7267-f4ba-43ad-aa24-8cfacf056558
-title: MTP-Erweiterungs Formate
+title: MTP-Erweiterungsformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff86265e47071fce9fe523cfbb64f2e355ed541e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a490c29c98b454b7d563e8af46131b040f123b9de2ef689ea5ede1a2ac100ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118193956"
 ---
-# <a name="mtp-extension-formats"></a>MTP-Erweiterungs Formate
+# <a name="mtp-extension-formats"></a>MTP-Erweiterungsformate
 
-Das Format einer Datei auf einem Gerät kann durch einen GUID-Wert beschrieben werden. Dieser Wert wird von der Eigenschaft WPD- \_ Objekt \_ Format angegeben.
+Das Format einer Datei auf einem Gerät kann mit einem GUID-Wert beschrieben werden. Dieser Wert wird von der WPD \_ OBJECT \_ FORMAT-Eigenschaft angegeben.
 
-## <a name="vendor-extended-formats"></a>Vom Hersteller erweiterte Formate
+## <a name="vendor-extended-formats"></a>Erweiterte Formate des Anbieters
 
-Wenn ein Gerätehersteller das vom Hersteller erweiterte Format unterstützt, kombiniert der Treiber den Format Code des Herstellers (UInt16) mit den höchsten 16 Bits des **\_ \_ \_ nicht spezifizierten GUID des WPD-Objekt Formats** .
+Wenn ein Gerätehersteller ein vom Hersteller erweitertes Format unterstützt, kombiniert der Treiber den Formatcode des Herstellers (UINT16) mit den höchsten 16 Bits der **WPD \_ OBJECT FORMAT \_ \_ UNSPECIFIED** GUID.
 
-Wenn beispielsweise der erweiterte Code des Anbieters 0xb001 ist, würde die resultierende GUID wie im folgenden Beispiel gezeigt lauten:
+Wenn der vom Anbieter erweiterte Code beispielsweise 0xB001 ist, würde die resultierende GUID wie im folgenden Beispiel gezeigt sein:
 
 
 ```C++

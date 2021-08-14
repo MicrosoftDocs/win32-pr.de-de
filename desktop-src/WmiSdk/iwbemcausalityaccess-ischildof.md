@@ -1,8 +1,8 @@
 ---
-description: Die ischildof-Methode bestimmt, ob eine Anforderung ein untergeordnetes Element einer angegebenen Anforderung (pId) ist.
+description: Die IsChildOf-Methode bestimmt, ob eine Anforderung ein untergeordnetes Teil einer angegebenen Anforderung (pId) ist.
 ms.assetid: 7be52496-7dcf-41c0-853a-859810a57d21
 ms.tgt_platform: multiple
-title: 'Iwbemkausalityaccess:: ischildof-Methode (wbemint. h)'
+title: IWbemCausalityAccess::IsChildOf-Methode (Wbemint.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Fastprox.dll
-ms.openlocfilehash: 6deec7521ceb58a76db3dbf8064ccc444019cb9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 509508d5e1a273dc681cf3c9f645ead1037408d6ecfe5ed666186ba6e2a2c0d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118318292"
 ---
-# <a name="iwbemcausalityaccessischildof-method"></a>Iwbemkausalityaccess:: ischildof-Methode
+# <a name="iwbemcausalityaccessischildof-method"></a>IWbemCausalityAccess::IsChildOf-Methode
 
-Die **ischildof** -Methode bestimmt, ob eine Anforderung ein untergeordnetes Element einer angegebenen Anforderung (pId) ist. Eine übergeordnete Anforderung kann über mehrere untergeordnete Anforderungen verfügen. Jede Anforderung wird durch einen global eindeutigen Bezeichner (GUID) identifiziert und kann über eine übergeordnete Anforderung verfügen oder eine Top-Anforderung sein. Eine GUID ist eine eindeutige 128-Bit-Zahl.
+Die **IsChildOf-Methode** bestimmt, ob eine Anforderung ein untergeordnetes Teil einer angegebenen Anforderung (pId) ist. Eine übergeordnete Anforderung kann mehrere untergeordnete Anforderungen haben. Jede Anforderung wird durch einen Globally Unique Identifier (GUID) identifiziert und kann über eine übergeordnete Anforderung verfügen oder eine oberste Anforderung sein. Eine GUID ist eine eindeutige 128-Bit-Zahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT IsChildOf(
 
 <dl> <dt>
 
-*pId* \[ in\]
+*pId* \[ In\]
 </dt> <dd>
 
 Der GUID-Wert, der eine Anforderung eindeutig identifiziert. Beispiel: 5b2fc63a-8af4-44cb-960c-aefdced908d6.
@@ -49,7 +49,7 @@ Der GUID-Wert, der eine Anforderung eindeutig identifiziert. Beispiel: 5b2fc63a-
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt erfolgreich zurück, wenn die angegebene Anforderung ein untergeordnetes Element der Anforderung ist, die die **ischildof** -Methode aufgerufen hat.
+Gibt erfolgreich zurück, wenn die angegebene Anforderung ein untergeordnetes Teil der Anforderung ist, die die **IsChildOf-Methode** aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,16 +59,16 @@ Gibt erfolgreich zurück, wenn die angegebene Anforderung ein untergeordnetes El
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemint. h</dt> </dl>    |
+| Header<br/>                   | <dl> <dt>Wbemint.h</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>Fastprox.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwbemkausalityaccess**](iwbemcausalityaccess.md)
+[**IWbemCausalityAccess**](iwbemcausalityaccess.md)
 </dt> </dl>
 
  

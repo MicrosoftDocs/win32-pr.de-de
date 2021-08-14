@@ -1,9 +1,9 @@
 ---
-title: Effekte. previouseffect
-description: Die Methode previouabffect zeigt die vorherige Visualisierung an und überspringt die Voreinstellungen.
+title: EFFECTS.previousEffect
+description: Die previousEffect-Methode zeigt die vorherige Visualisierung an und überspringt Voreinstellungen.
 ms.assetid: f1cfef29-0241-4028-b047-4f17bf0e9250
 keywords:
-- Effekte. previouseffect Windows Media Player
+- EFFECTS.previousEffect Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b5482e7c202d6d35f3a833b5bafc8a41dca38956
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a7e73ab00fa5092f4b67f659c30705a9e7b57a1a159d4a41017783c1f1ee91dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339975"
 ---
-# <a name="effectspreviouseffect"></a>Effekte. previouseffect
+# <a name="effectspreviouseffect"></a>EFFECTS.previousEffect
 
-Die Methode **previouabffect** zeigt die vorherige Visualisierung an und überspringt die Voreinstellungen.
+Die **previousEffect-Methode** zeigt die vorherige Visualisierung an und überspringt Voreinstellungen.
 
 ``` syntax
         elementID.previousEffect()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode zeigt die vorherige Visualisierung in der Erstellungs Reihenfolge an. Wenn die aktuelle Visualisierung die erste in der Erstellungs Reihenfolge ist, und wenn " **Zuweisung** " den Wert "false" hat, wird die letzte Visualisierung aktuell gemacht.
+Diese Methode zeigt die vorherige Visualisierung in der Erstellungsreihenfolge an. Wenn die aktuelle Visualisierung die erste in der Erstellungsreihenfolge ist und **allowAll** false ist, wird die letzte Visualisierung als aktuell festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,21 +46,21 @@ Diese Methode zeigt die vorherige Visualisierung in der Erstellungs Reihenfolge 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. nexteffect**](effects-nexteffect.md)
+[**EFFECTS.nextEffect**](effects-nexteffect.md)
 </dt> <dt>
 
-[**Effekte. Zuweisung**](effects-allowall.md)
+[**EFFECTS.allowAll**](effects-allowall.md)
 </dt> </dl>
 
  

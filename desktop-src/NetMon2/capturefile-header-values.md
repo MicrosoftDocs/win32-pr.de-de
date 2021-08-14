@@ -1,7 +1,7 @@
 ---
-description: Definiert die Struktur der Netzwerkmonitor-Header Datei.
+description: Definiert die Netzwerkmonitor Headerdateistruktur.
 ms.assetid: 944980c9-ebaa-4042-a112-d32b7a28ba21
-title: CAPTUREFILE_HEADER_VALUES Struktur (Netmon. h)
+title: CAPTUREFILE_HEADER_VALUES-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 2597b3f83a65dafd2da0198aade5243acc1184fc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29ee0ab0a9a927b3860760877457735198465b7c28789a542c040fc9e9e788a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118367416"
 ---
-# <a name="capturefile_header_values-structure"></a>Capturefile- \_ Header \_ Werte-Struktur
+# <a name="capturefile_header_values-structure"></a>CAPTUREFILE \_ HEADER \_ VALUES-Struktur
 
-Die **capturefile- \_ Header \_ Werte** Struktur definiert die Struktur der Netzwerkmonitor-Header Datei.
+Die **CAPTUREFILE \_ HEADER \_ VALUES-Struktur** definiert die Netzwerkmonitor Headerdateistruktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,21 +58,21 @@ typedef struct _CAPTUREFILE_HEADER_VALUES {
 **Signature**
 </dt> <dd>
 
-Eindeutiger Bezeichner: ' gmbu.
+Eindeutiger Bezeichner: 'GMBU.
 
 </dd> <dt>
 
-**Bcdverminor**
+**BCDVerMinor**
 </dt> <dd>
 
-Binary, Coded Decimal (Minor). Der Wert dieses Members sollte NULL (0) sein.
+Binär, codierte Dezimalzahl (Nebenversion). Der Wert dieses Members sollte 0 (null) sein.
 
 </dd> <dt>
 
-**Bcdvermajor**
+**BCDVerMajor**
 </dt> <dd>
 
-Binary Coded Decimal (Major). Dieser Wert sollte 2 lauten.
+Binär codierte Dezimalzahl (Hauptzeichen). Dieser Wert sollte 2 sein.
 
 </dd> <dt>
 
@@ -83,91 +83,91 @@ Topologietyp.
 
 </dd> <dt>
 
-**Zeitstempel**
+**Timestamp**
 </dt> <dd>
 
-Erfassungs Zeit.
+Zeitpunkt der Erfassung.
 
 </dd> <dt>
 
-**Frametableoffset**
+**FrameTableOffset**
 </dt> <dd>
 
-Tabelle für Frame index.
+Rahmenindextabelle.
 
 </dd> <dt>
 
-**Frametablelength**
+**FrameTableLength**
 </dt> <dd>
 
-Tabellengröße für Frame index.
+Größe der Frameindextabelle.
 
 </dd> <dt>
 
-**Userdataoffset**
+**UserDataOffset**
 </dt> <dd>
 
-Offset von Benutzerdaten.
+Benutzerdatenoffset.
 
 </dd> <dt>
 
-**User DATALENGTH**
+**UserDataLength**
 </dt> <dd>
 
-Benutzerdaten Länge.
+Länge der Benutzerdaten.
 
 </dd> <dt>
 
-**Commentdataoffset**
+**CommentDataOffset**
 </dt> <dd>
 
-Kommentar Daten Offset.
+Kommentardatenoffset.
 
 </dd> <dt>
 
-**Commentdatalength**
+**CommentDataLength**
 </dt> <dd>
 
-Länge der Kommentar Daten.
+Länge der Kommentardaten.
 
 </dd> <dt>
 
-**Statisticsoffset**
+**StatisticsOffset**
 </dt> <dd>
 
-Offset zur **Statistik** Struktur.
+Offset zur **STATISTICS-Struktur.**
 
 </dd> <dt>
 
-**Statisticslength**
+**StatisticsLength**
 </dt> <dd>
 
-Länge der **Statistik** Struktur.
+Länge der **STATISTICS-Struktur.**
 
 </dd> <dt>
 
-**Networkinfooffset**
+**NetworkInfoOffset**
 </dt> <dd>
 
-Offset zur **networkinfo** -Struktur.
+Offset zur **NETWORKINFO-Struktur.**
 
 </dd> <dt>
 
-**Networkinfolength**
+**NetworkInfoLength**
 </dt> <dd>
 
-Länge der **networkinfo** -Struktur.
+Länge der **NETWORKINFO-Struktur.**
 
 </dd> <dt>
 
-**Conversationstatusoffset**
+**ConversationStatsOffset**
 </dt> <dd>
 
 Dieser Member wird nicht verwendet.
 
 </dd> <dt>
 
-**Conversationstatuslength**
+**ConversationStatsLength**
 </dt> <dd>
 
 Dieser Member wird nicht verwendet.
@@ -182,7 +182,7 @@ Dieser Member wird nicht verwendet.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

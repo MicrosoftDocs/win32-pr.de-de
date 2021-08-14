@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
-description: In den folgenden C-und C++-Codebeispielen wird ein ACE erstellt, der dem angegebenen Vertrauens nehmer Lese-und Schreibzugriff auf die Attribute des Eigenschaften Satzes für persönliche Informationen von Benutzer Objekten zuweist.
+title: Beispielcode zum Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
+description: In den folgenden C- und C++-Codebeispielen wird ein ACE erstellt, der dem angegebenen Vertrauenshänder Lese- und Schreibzugriff auf die Attribute des Eigenschaftensatzes "Persönliche Informationen" von Benutzerobjekten zu weist.
 ms.assetid: 46d53b41-02eb-4830-b625-2d9ffa21a312
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
+- Active Directory-Beispiele Active Directory , Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fb45e75aaab9399fc2962b95397380f4bb4eeb3
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 220a9f306a4691aed53ec5c769405ae5db9f9c53fcb192cc383fbf9e8235def4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103948572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190098"
 ---
-# <a name="example-code-for-setting-permissions-on-a-group-of-properties"></a>Beispiel Code für das Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
+# <a name="example-code-for-setting-permissions-on-a-group-of-properties"></a>Beispielcode zum Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
 
-In den folgenden C-und C++-Codebeispielen wird ein ACE erstellt, der dem angegebenen Vertrauens nehmer Lese-und Schreibzugriff auf die Attribute des Eigenschaften Satzes für [**persönliche Informationen**](/windows/desktop/ADSchema/r-personal-information) von Benutzer Objekten zuweist.
+In den folgenden C- und C++-Codebeispielen wird ein ACE erstellt, der dem angegebenen Vertrauenshänder Lese- und Schreibzugriff auf die Attribute des Eigenschaftensatzes [**"Persönliche**](/windows/desktop/ADSchema/r-personal-information) Informationen" von Benutzerobjekten zu weist.
 
 
 ```C++
@@ -132,6 +132,6 @@ HRESULT CreateAceChangePersonalInfoPropGroupOfUsers(LPWSTR pwszTrustee,
 
 
 
- 
+ 
 
- 
+ 
