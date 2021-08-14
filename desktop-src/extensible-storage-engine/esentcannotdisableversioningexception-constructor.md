@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcannotdisableversioningexception-Konstruktor'
-title: Esentcannotdisableversioningexception-Konstruktor
+description: 'Weitere Informationen zu: EsentCannotDisableVersioningException-Konstruktor'
+title: EsentCannotDisableVersioningException-Konstruktor
 TOCTitle: 'EsentCannotDisableVersioningException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCannotDisableVersioningException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcannotdisableversioningexception.esentcannotdisableversioningexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 71061cb340168c7edbe1c495eec132061de31b34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6655a4c89f5321a2962c7afe4028df8a35c115013113271a0b3a70868d15c97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117715007"
 ---
-# <a name="esentcannotdisableversioningexception-constructor"></a>Esentcannotdisableversioningexception-Konstruktor
+# <a name="esentcannotdisableversioningexception-constructor"></a>EsentCannotDisableVersioningException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcannotdisableversioningexception-Klasse.
+Initialisiert eine neue Instanz der EsentCannotDisableVersioningException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentCannotDisableVersioningException()
 public EsentCannotDisableVersioningException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcannotdisableversioningexception-Klasse](./esentcannotdisableversioningexception-class.md)
+[EsentCannotDisableVersioningException-Klasse](./esentcannotdisableversioningexception-class.md)
 
-[Esentcannotdisableversioningexception-Elemente](./esentcannotdisableversioningexception-members.md)
+[EsentCannotDisableVersioningException-Member](./esentcannotdisableversioningexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

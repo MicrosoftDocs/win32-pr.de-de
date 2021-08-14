@@ -1,5 +1,5 @@
 ---
-description: Methode zum Verschieben, migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.
+description: Methode zum Verschieben, Migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.
 ms.assetid: 210d31f1-093f-4fd5-afd7-5f028b4cb343
 title: MigrateVirtualSystemToSystem-Methode der CIM_VirtualSystemMigrationService-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1459d80785725914cbaa5dda5b81e8d2fabad5c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b60e691f2f873a26a52f59def32b35005d45914f7fe379af14b5260b02a0c43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118393418"
 ---
-# <a name="migratevirtualsystemtosystem-method-of-the-cim_virtualsystemmigrationservice-class"></a>MigrateVirtualSystemToSystem-Methode der CIM \_ virtualsystemmigrationservice-Klasse
+# <a name="migratevirtualsystemtosystem-method-of-the-cim_virtualsystemmigrationservice-class"></a>MigrateVirtualSystemToSystem-Methode der CIM \_ VirtualSystemMigrationService-Klasse
 
-Methode zum Verschieben, migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.
+Methode zum Verschieben, Migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.
 
-Rückgabecode Beschreibung:
+Rückgabecodebeschreibung:
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,74 +47,74 @@ uint32 MigrateVirtualSystemToSystem(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Das zu migrierende virtuelle Quellcomputer System.
+Virtuelles Quellcomputersystem, das migriert werden soll.
 
 </dd> <dt>
 
-*DestinationSystem* \[ in\]
+*DestinationSystem* \[ In\]
 </dt> <dd>
 
-Ziel Host System für die Migration des virtuellen Systems.
+Zielhostsystem, in das das virtuelle System migriert werden soll.
 
 </dd> <dt>
 
-*Migrationsettingdata* \[ in\]
+*MigrationSettingData* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ virtualsystemmigrationsettingdata**](cim-virtualsystemmigrationsettingdata.md) -Klasse enthält, die für den Migrations Vorgang geltende Migrations Einstellungen darstellt.
+Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ VirtualSystemMigrationSettingData-Klasse**](cim-virtualsystemmigrationsettingdata.md) enthält, die migrationseinstellungen darstellt, die für den Migrationsvorgang gelten.
 
 </dd> <dt>
 
-*Newsystemsettingdata* \[ in\]
+*NewSystemSettingData* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) -Klasse enthält, die neue Eigenschaften darstellt, die für das virtuelle System nach der Migration gelten.
+Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ VirtualSystemSettingData-Klasse**](cim-virtualsystemsettingdata.md) enthält, die neue Eigenschaften darstellt, die nach der Migration auf das virtuelle System anwendbar sind.
 
 </dd> <dt>
 
-*Newresourcesettingdata* \[ in\]
+*NewResourceSettingData* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, das eine eingebettete Instanz der [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) -Klasse enthält, die neue Eigenschaften darstellt, die für virtuelle Ressourcen im Bereich des virtuellen Systems nach der Migration gelten.
+Array von Zeichenfolgen, die jeweils eine eingebettete Instanz der [**CIM \_ ResourceAllocationSettingData-Klasse**](cim-resourceallocationsettingdata.md) enthalten, die neue Eigenschaften darstellen, die nach der Migration auf virtuelle Ressourcen im Bereich des virtuellen Systems anwendbar sind.
 
 </dd> <dt>
 
-*Newcomputersystem* \[ vorgenommen\]
+*NewComputerSystem* \[ out\]
 </dt> <dd>
 
-Verweis auf eine Instanz der [**CIM \_ Computersystem**](cim-computersystem.md) -Klasse, die das virtuelle Computersystem nach der Migration darstellt.
+Verweis auf eine Instanz der [**CIM \_ ComputerSystem-Klasse, die**](cim-computersystem.md) das virtuelle Computersystem nach der Migration darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM-" \_ concretejob**](cim-concretejob.md) " zurückgegeben werden, der den Auftrag darstellt.
+Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob**](cim-concretejob.md) zurückgegeben werden, der den Auftrag darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                    | Das virtuelle System wurde migriert.<br/>                                                                                                                                                                                                                                                                    |
-| <dl> <dt>**Nicht unterstützt**</dt> <dt>1</dt> </dl>                              | Die Methode wird von der Implementierung nicht unterstützt.<br/>                                                                                                                                                                                                                                                         |
-| <dl> <dt></dt> Fehler <dt>2</dt> </dl>                                     | Die Migration des virtuellen Systems ist aus unbekannten Gründen fehlgeschlagen.<br/>                                                                                                                                                                                                                                        |
-| <dl> <dt>**Timeout**</dt> <dt>3</dt> </dl>                                    | Timeout bei der Migration virtueller Systeme; der Status des virtuellen Systems ist unbekannt.<br/>                                                                                                                                                                                                                         |
-| <dl> <dt>**Ungültiger Parameter**</dt> <dt>4</dt> </dl>                          | Mindestens ein Parameter ist formal ungültig, z. b., wenn der Wert des Ziel System Parameters keinen gültigen Objekt Pfad enthält.<br/>                                                                                                                                                    |
-| <dl> <dt>**Ungültiger Status**</dt> <dt>5</dt> </dl>                              | Das virtuelle Quellsystem, das Quell Host System oder das Ziel Host System befinden sich in einem Zustand, der die Initiierung der angeforderten Migration des virtuellen Systems zulässt. Dabei kann es sich um eine temporäre Bedingung handeln.<br/>                                                                                             |
-| <dl> Nicht <dt>**kompatible Parameter**</dt> <dt>6</dt> </dl>                    | Mindestens ein Eingabeparameter ist nicht als Satz oder in Bezug auf den Zielhost inkompatibel. Beispielsweise enthält der Wert des *migrationnewsettingdata* -Parameters Eigenschaften, die vom Ziel Host System, das durch den Wert des *DestinationSystem* -Parameters identifiziert wird, nicht unterstützt werden.<br/> |
-| <dl> <dt>**DMTF reserviert**</dt> <dt>..</dt> </dl>                             |                                                                                                                                                                                                                                                                                                            |
-| <dl> <dt>**Methoden Parameter aktiviert-Auftrag gestartet**</dt> <dt>4096</dt> </dl> |                                                                                                                                                                                                                                                                                                            |
-| <dl> <dt>**Reservierte Methode**</dt> <dt>4097.. 32767</dt> </dl>                  |                                                                                                                                                                                                                                                                                                            |
-| <dl> <dt>**Hersteller spezifischer**</dt> <dt>32768.. 65535</dt> </dl>                 |                                                                                                                                                                                                                                                                                                            |
+| <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                    | Virtuelles System wurde migriert.<br/>                                                                                                                                                                                                                                                                    |
+| <dl> <dt>**Nicht unterstützt**</dt> <dt>1</dt> </dl>                              | Die -Methode wird von der -Implementierung nicht unterstützt.<br/>                                                                                                                                                                                                                                                         |
+| <dl> <dt>**Fehler**</dt> <dt>2</dt> </dl>                                     | Fehler bei der Migration des virtuellen Systems aus unbekannten Gründen.<br/>                                                                                                                                                                                                                                        |
+| <dl> <dt>**Timeout**</dt> <dt>3</dt> </dl>                                    | Time out für die Migration des virtuellen Systems; Der virtuelle Systemstatus ist unbekannt.<br/>                                                                                                                                                                                                                         |
+| <dl> <dt>**Ungültiger Parameter**</dt> <dt>4</dt> </dl>                          | Mindestens ein Parameter ist formal ungültig. Der Wert des Zielsystemparameters enthält beispielsweise keinen gültigen Objektpfad.<br/>                                                                                                                                                    |
+| <dl> <dt>**Ungültiger Zustand**</dt> <dt>5</dt> </dl>                              | Das virtuelle Quellsystem, das Quellhostsystem oder das Zielhostsystem befinden sich in einem Zustand, der die Initiierung der angeforderten Migration des virtuellen Systems zulässt. Dies kann eine temporäre Bedingung sein.<br/>                                                                                             |
+| <dl> <dt>**Inkompatible Parameter**</dt> <dt>6</dt> </dl>                    | Mindestens ein Eingabeparameter ist als Satz oder in Bezug auf den Zielhost nicht kompatibel. Der Wert des *MigrationsNewSettingData-Parameters* enthält beispielsweise Eigenschaften, die nicht vom Zielhostsystem unterstützt werden, das durch den Wert des *DestinationSystem-Parameters* identifiziert wird.<br/> |
+| <dl> <dt>**DMTF Reserved**</dt> <dt>..</dt> </dl>                             |                                                                                                                                                                                                                                                                                                            |
+| <dl> <dt>**Methodenparameter überprüft**</dt> – Auftrag gestartet <dt>4096</dt> </dl> |                                                                                                                                                                                                                                                                                                            |
+| <dl> <dt>**Reservierte Methode**</dt> <dt>4097..32767</dt> </dl>                  |                                                                                                                                                                                                                                                                                                            |
+| <dl> <dt>**Herstellerspezifisch**</dt> <dt>32768..65535</dt> </dl>                 |                                                                                                                                                                                                                                                                                                            |
 
 
 
@@ -128,17 +128,17 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md)
+[**CIM \_ VirtualSystemMigrationService**](cim-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

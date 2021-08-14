@@ -1,7 +1,7 @@
 ---
-description: Die ifindcompressorcb-Schnittstelle wird nicht unterstützt.
+description: Die IFindCompressorCB-Schnittstelle wird nicht unterstützt.
 ms.assetid: 5d5bc006-a13f-48e7-84e8-f4bd6e74e76c
-title: Ifindcompressorcb-Schnittstelle
+title: IFindCompressorCB-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,17 +12,17 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 113b128ce9b372d077056692c0956f86e1412f9e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7009c44cb91d9b0e7db6510884d56ad4a8421a1e8382eb378eb67b8cf81f95d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118399150"
 ---
-# <a name="ifindcompressorcb-interface"></a>Ifindcompressorcb-Schnittstelle
+# <a name="ifindcompressorcb-interface"></a>IFindCompressorCB-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
@@ -30,13 +30,13 @@ Die `IFindCompressorCB`-Schnittstelle wird nicht unterstützt.
 
 ## <a name="members"></a>Member
 
-Die **ifindcompressorcb** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **IFindCompressorCB-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[DirectShow-Bearbeitungs Dienste C++ Referenz](directshow-editing-services-c---reference.md)
+[C++-Referenz zu DirectShow Editing Services](directshow-editing-services-c---reference.md)
 </dt> </dl>
 
  

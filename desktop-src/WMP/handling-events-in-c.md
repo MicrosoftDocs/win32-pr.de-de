@@ -3,38 +3,38 @@ title: Behandeln von Ereignissen in C++
 description: Behandeln von Ereignissen in C++
 ms.assetid: 5d9eb1c7-7022-4442-b67a-6a96fe5ce97f
 keywords:
-- Windows Media Player, C++
+- Windows Media Player,C++
 - Windows Media Player-Objektmodell, C++
 - Objektmodell, C++
-- Windows Media Player Mobile, C++
+- Windows Media Player Mobil, C++
 - Windows Media Player ActiveX-Steuerelement, C++
-- Windows Media Player Mobile ActiveX-Steuerelement, C++
+- Windows Media Player Mobiles ActiveX-Steuerelement, C++
 - ActiveX-Steuerelement, C++
-- C++-Programm Einbettung
-- einbetten, C++-Programme
-- Windows Media Player ActiveX-Steuerelement, Ereignis Behandlung
-- Windows Media Player Mobile ActiveX-Steuerelement, Ereignis Behandlung
-- ActiveX-Steuerelement, Ereignis Behandlung
+- Einbetten von C++-Programmen
+- Einbetten, C++-Programme
+- Windows Media Player ActiveX-Steuerelement, Ereignisbehandlung
+- Windows Media Player Mobile ActiveX-Steuerelement, Ereignisbehandlung
+- ActiveX-Steuerelement, Ereignisbehandlung
 - Ereignisse, C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16cbef547ab2604244c5c204707a08eb87a6b70a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cf5d50be4622cee9ee455710f8b9d2e4cafc63d6560e08faf5c3deaddcdaccc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748405"
 ---
 # <a name="handling-events-in-c"></a>Behandeln von Ereignissen in C++
 
-Sie können Ereignisse von Windows Media Player auf zweierlei Weise empfangen.
+Sie können Ereignisse von Windows Media Player auf zwei Arten empfangen.
 
--   Über **IDispatch** mithilfe der **\_ wmpocxevents** -Schnittstelle. Dies ist die Schnittstelle, die für die meisten Einbettungs Szenarien verwendet wird.
--   Über die **iwmpevents** -Schnittstelle. Diese Schnittstelle ist verfügbar, wenn Ihr Code mit dem vollmodusplayer verbunden ist, z. b. beim Remoting des Windows Media Player-Steuer Elements oder eines UI-Plug-ins.
+-   Über **IDispatch** mithilfe der **\_ WMPOCXEvents-Schnittstelle.** Dies ist die Schnittstelle, die für die meisten Einbettungsszenarien verwendet werden soll.
+-   Über die **IWMPEvents-Schnittstelle.** Diese Schnittstelle ist verfügbar, wenn Ihr Code mit dem Vollmodus-Player verbunden ist, z. B. beim Remoting des Windows Media Player-Steuerelements oder in einem Benutzeroberflächen-Plug-In.
 
-In jedem Szenario beginnen Sie mit dem lauschen an Ereignissen mithilfe von com-Verbindungs Punkten.
+In jedem Szenario beginnen Sie mit dem Lauschen auf Ereignisse, indem Sie COM-Verbindungspunkte verwenden.
 
-Der folgende Beispielcode verwendet drei Element Variablen:
+Im folgenden Beispielcode werden drei Membervariablen verwendet:
 
 
 ```C++
@@ -46,7 +46,7 @@ DWORD                       m_dwAdviseCookie;
 
 
 
-Zum Abrufen eines Verbindungs Punkts müssen Sie zuerst **QueryInterface** für den Verbindungspunkt Container durchsuchen.
+Um einen Verbindungspunkt abzurufen, müssen Sie zunächst **QueryInterface** für den Verbindungspunktcontainer erstellen.
 
 
 ```C++
@@ -60,7 +60,7 @@ hr = m_spWMPPlayer->QueryInterface(&spConnectionContainer);
 
 
 
-Fordern Sie als nächstes den Verbindungspunkt für die Ereignis Schnittstelle an, die Sie verwenden möchten. Der folgende Beispielcode versucht zunächst, **iwmpevents** zu verwenden. Wenn diese Schnittstelle nicht verfügbar ist, verwendet Sie **\_ wmpocxevents**.
+Fordern Sie als Nächstes den Verbindungspunkt für die Ereignisschnittstelle an, die Sie verwenden möchten. Im folgenden Beispielcode wird zunächst versucht, **IWMPEvents** zu verwenden. Wenn diese Schnittstelle nicht verfügbar ist, wird **\_ WMPOCXEvents** verwendet.
 
 
 ```C++
@@ -79,7 +79,7 @@ if(SUCCEEDED(hr))
 
 
 
-Zum Schluss wird **IConnectionPoint:: Empfehlung** aufgerufen, um Ereignisse anzufordern.
+Rufen Sie abschließend **IConnectionPoint::Advise** auf, um Ereignisse anzufordern.
 
 
 ```C++
@@ -92,7 +92,7 @@ if(SUCCEEDED(hr))
 
 
 
-Im vorherigen Beispiel geht der erste Parameter davon aus, dass die aufrufende Klasse sowohl **iwmpevents** als auch **\_ wmpocxevents** implementiert. Der zweite Parameter ist ein Rückgabewert, den Sie verwenden, um das Lauschen auf Ereignisse zu beenden, z. b. wenn das Programm beendet wird, indem Sie Code wie den folgenden verwenden:
+Im vorherigen Beispiel geht der erste Parameter davon aus, dass die aufrufende Klasse sowohl **IWMPEvents** als auch **\_ WMPOCXEvents** implementiert. Der zweite Parameter ist ein Rückgabewert, den Sie verwenden, um das Lauschen auf Ereignisse zu beenden, z. B. wenn das Programm beendet wird, indem Sie Code wie den folgenden verwenden:
 
 
 ```C++
@@ -108,7 +108,7 @@ if (m_spConnectionPoint)
 
 
 
-Das Implementieren von Ereignis Handlern für **iwmpevents** und **\_ wmpocxevents** ist unterschiedlich. Für **iwmpevents** müssen Sie eine Funktion implementieren, die jedes von der-Schnittstelle definierte Ereignis behandelt, auch wenn Sie nicht beabsichtigen, das-Ereignis zu verwenden.
+Die Implementierung der Ereignishandler für **IWMPEvents** und **\_ WMPOCXEvents** unterscheidet sich. Für **IWMPEvents** müssen Sie eine Funktion implementieren, um jedes von der Schnittstelle definierte Ereignis zu behandeln, auch wenn Sie nicht beabsichtigen, das Ereignis zu verwenden.
 
 
 ```C++
@@ -122,7 +122,7 @@ void STDMETHODCALLTYPE AudioLanguageChange( long LangID ){ return; }
 
 
 
-Zum Implementieren von **\_ wmpocxevents** -Handlern müssen Sie **IDispatch:: Aufrufen** verwenden, bei dem es sich um eine Implementierung eines einzelnen Ereignis Handlers für alle Ereignisse handelt, die in der **IDispatch** -Schnittstelle auftreten. Dies bedeutet, dass Sie auswählen können, dass nur bestimmte Ereignisse behandelt und andere ignoriert werden. Der folgende Beispielcode zeigt einen **\_ wmpocxevents** -Handler, der den **Aufruf** verwendet, der nur die Ereignisse **OpenStateChange** und **PlayStateChange** behandelt:
+Um **\_ WMPOCXEvents-Handler** zu implementieren, müssen Sie **IDispatch::Invoke** verwenden. Dabei handelt es sich um eine einzelne Ereignishandlerimplementierung für alle Ereignisse, die auf der **IDispatch-Schnittstelle** stattfinden. Dies bedeutet, dass Sie nur bestimmte Ereignisse behandeln und andere ignorieren können. Der folgende Beispielcode zeigt einen **\_ WMPOCXEvents-Handler** unter Verwendung von **Invoke,** der nur die **Ereignisse OpenStateChange** und **PlayStateChange** behandelt:
 
 
 ```C++
@@ -164,15 +164,15 @@ HRESULT CMyClass::Invoke(
 
 
 
-Im vorangehenden Beispielcode ruft jeder Fall einfach bis zum **iwmpevents** -Handler für das entsprechende-Ereignis auf. Wenn Ihr Code nur **\_ wmpocxevents** behandelt, können Sie einfach eine benutzerdefinierte Funktion oder das Ereignis nach der **Case** -Anweisung Inline verarbeiten.
+Im vorherigen Beispielcode ruft jeder Fall einfach den **IWMPEvents-Handler** für das entsprechende Ereignis auf. Wenn Ihr Code nur **\_ WMPOCXEvents** verarbeitet, können Sie einfach eine benutzerdefinierte Funktion aufrufen oder das Ereignis inline nach der **case-Anweisung** behandeln.
 
 ## <a name="receiving-events-from-windows-media-player-10-mobile"></a>Empfangen von Ereignissen von Windows Media Player 10 Mobile
 
-Das Windows Media Player 10 Mobile-Steuerelement unterstützt nur das Empfangen bestimmter Ereignisse über **\_ wmpocxevents** und **iwmpevents**. Weitere Informationen finden Sie in der Dokumentation zu **iwmpevents**.
+Das Windows Media Player 10 Mobile-Steuerelement unterstützt nur das Empfangen bestimmter Ereignisse über **\_ WMPOCXEvents** und **IWMPEvents.** Weitere Informationen finden Sie in der Dokumentation zu **IWMPEvents.**
 
 ## <a name="samples"></a>Beispiele
 
-Das Windows Media Player Setup-Paket installiert ein Beispiel, das die Ereignis Behandlung veranschaulicht. Weitere Informationen finden Sie im wmphost-Beispiel.
+Das setup-Paket Windows Media Player installiert ein Beispiel, das die Ereignisbehandlung veranschaulicht. Weitere Informationen finden Sie im WMPHost-Beispiel.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -181,12 +181,12 @@ Das Windows Media Player Setup-Paket installiert ein Beispiel, das die Ereignis 
 [**Beispiele**](samples.md)
 </dt> <dt>
 
-[**Verwenden des Windows Media Player-Steuer Elements in einem C++-Programm**](using-the-windows-media-player-control-in-a-c---program.md)
+[**Verwenden des Windows Media Player-Steuerelements in einem C++-Programm**](using-the-windows-media-player-control-in-a-c---program.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

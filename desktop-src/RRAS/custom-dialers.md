@@ -1,68 +1,68 @@
 ---
-title: Benutzerdefinierte-diker
-description: Windows 2000 und spätere Betriebssysteme ermöglichen es Entwicklern, eigene benutzerdefinierte dbugatoren bereitzustellen, die mit dem Remote Zugriffs Dienst (RAS) funktionieren.
+title: Benutzerdefinierte Wählhilfen
+description: Windows Betriebssystem 2000 und höher ermöglichen Es Entwicklern, ihre eigenen benutzerdefinierten Dialer bereitzustellen, die mit dem Ras-Ras-Dienst (RAS) arbeiten.
 ms.assetid: ad94f38d-812f-4329-8055-6274a21a3242
 keywords:
-- Benutzerdefinierte-diker
+- Benutzerdefinierte Wählhilfen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35293de408a2a0faa146b93f9b5d5ebccf447acc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 69b23edd8501929181a54b1b511f365945f8e1c6277056e068cf58fb67bd26c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117791500"
 ---
-# <a name="custom-dialers"></a>Benutzerdefinierte-diker
+# <a name="custom-dialers"></a>Benutzerdefinierte Wählhilfen
 
-Windows 2000 und spätere Betriebssysteme ermöglichen es Entwicklern, eigene benutzerdefinierte dbugatoren bereitzustellen, die mit dem Remote Zugriffs Dienst (RAS) funktionieren. Die benutzerdefinierte Einwählprogramm ist als einzelne Dynamic Link Library (dll) implementiert, die die folgenden Einstiegspunkte exportiert:
+Windows Betriebssystem 2000 und höher ermöglichen Es Entwicklern, ihre eigenen benutzerdefinierten Dialer bereitzustellen, die mit dem Ras-Ras-Dienst (RAS) arbeiten. Das benutzerdefinierte Dialer wird als einzelne DLL (Dynamic Link Library) implementiert, die die folgenden Einstiegspunkte exportiert:
 
--   [**Rascustomdial**](/windows/desktop/api/Ras/nc-ras-rascustomdialfn)
--   [**Rascustomdialdlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomdialdlgfn)
--   [**Rascustomhangup**](/windows/desktop/api/Ras/nc-ras-rascustomhangupfn)
--   [**Rascustomentrydlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomentrydlgfn)
--   [**Rascustomdeleteentrynotify**](/windows/desktop/api/Ras/nc-ras-rascustomdeleteentrynotifyfn)
+-   [**RasCustomDial**](/windows/desktop/api/Ras/nc-ras-rascustomdialfn)
+-   [**RasCustomDialDlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomdialdlgfn)
+-   [**RasCustomHangup**](/windows/desktop/api/Ras/nc-ras-rascustomhangupfn)
+-   [**RasCustomEntryDlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomentrydlgfn)
+-   [**RasCustomDeleteEntryNotify**](/windows/desktop/api/Ras/nc-ras-rascustomdeleteentrynotifyfn)
 
-Die benutzerdefinierte DFÜ-dll muss alle diese Einstiegspunkte exportieren und die Einstiegspunkte als Unicode-Funktionen implementieren. Weitere Informationen zu diesen Funktionen finden Sie auf der Referenzseite für jede Funktion in der Windows SDK RAS-Dienst Referenz.
+Die DLL für benutzerdefiniertes Wählen muss alle diese Einstiegspunkte exportieren und die Einstiegspunkte als Unicode-Funktionen implementieren. Weitere Informationen zu diesen Funktionen finden Sie auf der Referenzseite für jede Funktion in der Referenz zum WINDOWS SDK-Remotezugriffsdienst.
 
-Damit eine RAS-Verbindung die benutzerdefinierte Dialer verwendet, muss der Telefonbucheintrag für die Verbindung den Pfad zur benutzerdefinierten dll enthalten. Verwenden Sie die RAS-API-Funktionen " [**rasgetentryproperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa) " und " [**rassetentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) ", um diesen Pfad im **szcustomdialdll** -Member der " [**rasentry**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) "-Struktur für den Telefonbucheintrag festzulegen.
+Damit eine RAS-Verbindung das benutzerdefinierte Dialer verwenden kann, muss der Telefonbucheintrag für die Verbindung den Pfad zur DLL für benutzerdefiniertes Wählen enthalten. Verwenden Sie die RAS-API-Funktionen [**RasGetEntryProperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa) und [**RasSetEntryProperties,**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) um diesen Pfad im **szCustomDialDll-Element** der [**RASENTRY-Struktur**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) für den Telefonbucheintrag festzulegen.
 
-## <a name="updating-the-registry-for-custom-dialers"></a>Aktualisieren der Registrierung für benutzerdefinierte Dialekte
+## <a name="updating-the-registry-for-custom-dialers"></a>Aktualisieren der Registrierung für benutzerdefinierte Wählhilfen
 
-Damit das System eine Verbindung wählen kann, die eine benutzerdefinierte Dialer verwendet, muss der Pfad zur benutzerdefinierten DFÜ-dll im folgenden Registrierungs Wert vorhanden sein.
+Damit das System eine Verbindung wählen kann, die ein benutzerdefiniertes Dialer verwendet, muss der Pfad zur DLL für benutzerdefinierte Wähle im folgenden Registrierungswert vorhanden sein.
 
 ```
 HKEY_LOCAL_MACHINE
-   System
-      CurrentControlSet
-         Services
-            Rasman
-               Parameters
-                  CustomDLL<dl>
+   System
+      CurrentControlSet
+         Services
+            Rasman
+               Parameters
+                  CustomDLL<dl>
 <dt>
 
-                  Data type
+                  Data type
 </dt>
-<dd>                  REG_MULTI_SZ</dd>
+<dd>                  REG_MULTI_SZ</dd>
 </dl>
 ```
 
-Da **CustomDLL** den Typ **reg \_ \_ MultiSZ** hat, kann es Pfade zu mehreren benutzerdefinierten DLLs enthalten. Sie müssen den Pfad zu der benutzerdefinierten DFÜ-dll in diesem Registrierungs Wert zusätzlich zum Telefonbucheintrag für die Verbindung festlegen.
+Da **CustomDLL** vom Typ **REG MULTI \_ \_ SZ** ist, kann es Pfade zu mehreren DLLs mit benutzerdefiniertem Wählvorgang enthalten. Sie müssen den Pfad zur DLL mit benutzerdefiniertem Wählvorgang in diesem Registrierungswert zusätzlich zum Telefonbucheintrag für die Verbindung festlegen.
 
-Standardmäßig kann dieser Registrierungs Wert nur von einem Benutzer mit Administrator-oder System Berechtigungen geschrieben werden. Ändern Sie die Berechtigungen für diesen Registrierungsschlüssel aus Sicherheitsgründen nicht.
+Standardmäßig kann dieser Registrierungswert nur von einem Benutzer mit Administrator- oder Systemberechtigungen geschrieben werden. Ändern Sie aus Sicherheitsgründen nicht die Berechtigungen für diesen Registrierungsschlüssel.
 
-## <a name="using-custom-dialers-at-system-logon"></a>Verwenden von benutzerdefinierten dialtoren bei der System Anmeldung
+## <a name="using-custom-dialers-at-system-logon"></a>Verwenden von benutzerdefinierten Wählern bei der Systemanmeldung
 
-Windows 2000 und spätere Betriebssysteme ermöglichen es einem Benutzer, zum Zeitpunkt der Anmeldung eine RAS-Verbindung herzustellen. Zu diesem Zweck überprüft der Benutzer die **Anmeldung mithilfe des Einwählnetzwerks** im Dialogfeld **Anmelde Informationen** . Nachdem der Benutzer auf die Schaltfläche "OK" geklickt hat, zeigt das System die verfügbaren Verbindungen an.
+Windows Betriebssystem 2000 und höher ermöglicht es einem Benutzer, zum Zeitpunkt der Anmeldung eine RAS-Verbindung herzustellen. Dazu überprüft der Benutzer im Dialogfeld **Anmeldeinformationen** die Anmeldung mithilfe von **DFÜ-Netzwerken.** Nachdem der Benutzer auf die Schaltfläche Ok geklickt hat, zeigt das System die verfügbaren Verbindungen an.
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-In den meisten Fällen arbeitet eine benutzerdefinierte Einwählprogramm mit den Sicherheits Privilegien des Benutzers, der ihn aufruft. Wenn jedoch die benutzerdefinierte Einwählprogramm bei der Anmeldung aufgerufen wird, wird Sie mit System Privilegien betrieben. Daher sollten Sie die benutzerdefinierte Einwählprogramm so entwerfen, dass Sie nicht zur Verletzung der Systemsicherheit verwendet werden kann. Beispielsweise sollte die Einwählprogramm keine Benutzeroberfläche präsentieren, die dem Benutzer den Schreibzugriff auf das Dateisystem des Computers ermöglicht. Zu den Benutzeroberflächen, die diesen Zugriff bereitstellen, gehören das Dialogfeld " **Find-File** ", das Dialogfeld " **Datei öffnen** " und die Windows- **Hilfe**
+In den meisten Fällen arbeitet ein benutzerdefiniertes Dialer mit den Sicherheitsberechtigungen des Benutzers, der es aufruft. Wenn das benutzerdefinierte Dialer jedoch bei der Anmeldung aufgerufen wird, wird es mit Systemberechtigungen betrieben. Entwerfen Sie daher das benutzerdefinierte Dialer so, dass es nicht verwendet werden kann, um die Systemsicherheit zu verletzen. Beispielsweise sollte die Wählhilfe keine Benutzeroberfläche darstellen, die dem Benutzer Schreibzugriff auf das Dateisystem des Computers ermöglicht. Zu den Benutzeroberflächen, die diesen Zugriff ermöglichen, gehören das Dialogfeld **"Datei suchen",** das dialogfeld **"Datei öffnen"** und Windows **Hilfe.**
 
-## <a name="custom-dialer-user-interface-must-support-idcancel"></a>Benutzerdefinierte Dialer-Benutzeroberfläche muss IDCANCEL unterstützen
+## <a name="custom-dialer-user-interface-must-support-idcancel"></a>Benutzerdefinierte Wählhilfe Benutzeroberfläche IDCANCEL unterstützen muss
 
-Wenn die benutzerdefinierte Einwählprogramm eine Benutzeroberfläche anzeigt, muss die Benutzeroberfläche die WM-befehlsnachrichten unterstützen, \_ wobei LoWord (*wParam*) gleich IDCANCEL ist.
+Wenn das benutzerdefinierte Wählfeld eine Benutzeroberfläche anzeigt, muss die Benutzeroberfläche WM \_ COMMAND-Meldungen unterstützen, bei denen LOWORD(*wParam*) gleich IDCANCEL ist.
 
- 
+ 
 
- 
+ 

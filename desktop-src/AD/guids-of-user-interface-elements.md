@@ -1,36 +1,36 @@
 ---
-title: GUIDs von Elementen der Benutzeroberfläche
-description: In der folgenden Tabelle wird der Klassen Bezeichner (ausgedrückt als GUID) für von einem Verzeichnisdienst implementierte Benutzeroberflächen Objekte aufgelistet.
+title: GUIDs von Benutzeroberfläche-Elementen
+description: Die folgende Tabelle enthält den Klassenbezeichner, ausgedrückt als GUID, für Benutzeroberflächenobjekte, die von einem Verzeichnisdienst implementiert werden.
 ms.assetid: df90cf6b-d68f-488f-8c36-a6b61b399fe2
 ms.tgt_platform: multiple
 keywords:
-- GUIDs von Benutzeroberflächen Elementen AD
+- GUIDs von Benutzeroberfläche Elements AD
 - CLSID_DsFolderProperties
 - CLSID_DsPropertyPages
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc84c6a94fab2be8c6635437dd2f17900bda6047
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: ea94c964a85b052a6dbeb78db6d2976f0425a9bf36edf1e0792577a8b6b01c10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106338449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188654"
 ---
-# <a name="guids-of-user-interface-elements"></a>GUIDs von Elementen der Benutzeroberfläche
+# <a name="guids-of-user-interface-elements"></a>GUIDs von Benutzeroberfläche-Elementen
 
-In der folgenden Tabelle wird der Klassen Bezeichner (ausgedrückt als GUID) für von einem Verzeichnisdienst implementierte Benutzeroberflächen Objekte aufgelistet.
+Die folgende Tabelle enthält den Klassenbezeichner, ausgedrückt als GUID, für Benutzeroberflächenobjekte, die von einem Verzeichnisdienst implementiert werden.
 
 
 
-| Klassen Bezeichner              | BESCHREIBUNG                                                                                                                                                                                                                                                                 |
+| Klassenbezeichner              | BESCHREIBUNG                                                                                                                                                                                                                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **CLSID \_ dsfolderproperties** | Reserviert. In "DSClient. h" deklariert.                                                                                                                                                                                                                                           |
-| **CLSID- \_ dspropertypages**    | Dieses Objekt stellt die Schnittstellen [**ishellextinit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit), [**ishellpropsheetext**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellpropsheetext)und [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) zur Verwendung mit vom System bereitgestellten Verzeichnisdienst Objekten bereit. In "DSClient. h" deklariert. |
+| **CLSID \_ DsFolderProperties** | Reserviert. Deklariert in Dsclient.h.                                                                                                                                                                                                                                           |
+| **CLSID \_ DsPropertyPages**    | Dieses Objekt stellt die [**Schnittstellen IShellExtInit,**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) [**IShellPropSheetExt**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellpropsheetext)und [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) für die Verwendung mit vom System bereitgestellten Verzeichnisdienstobjekten bereit. Deklariert in Dsclient.h. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

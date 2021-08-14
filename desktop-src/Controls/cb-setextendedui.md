@@ -1,9 +1,9 @@
 ---
-title: CB_SETEXTENDEDUI Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB \_ setextendedui-Nachricht, um entweder die Standardbenutzer Oberfläche oder die erweiterte Benutzeroberfläche für ein Kombinations Feld mit dem Format CBS \_ Dropdown oder CBS \_ DropDownList auszuwählen.
+title: CB_SETEXTENDEDUI Meldung (Winuser.h)
+description: Eine Anwendung sendet eine CB \_ SETEXTENDEDUI-Nachricht, um entweder die Standard-Benutzeroberfläche oder die erweiterte Benutzeroberfläche für ein Kombinationsfeld auszuwählen, das den \_ CBS-DROPDOWN- oder \_ CBS-DROPDOWNLIST-Stil auflistet.
 ms.assetid: c489e484-777e-4afa-996b-1ec3eb6552ab
 keywords:
-- Windows-Steuerelemente für CB_SETEXTENDEDUI Meldung
+- CB_SETEXTENDEDUI Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f94c31c8bc5457799d0038ecd8340c03c55aed91
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 36b77e67e555628475b9e40e78b7b0391d0b631fd77e6ff7f549700a553fa507
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118414222"
 ---
-# <a name="cb_setextendedui-message"></a>CB- \_ messagetendedui-Nachricht
+# <a name="cb_setextendedui-message"></a>CB \_ SETEXTENDEDUI-Meldung
 
-Eine Anwendung sendet eine **CB \_ setextendedui** -Nachricht, um entweder die Standardbenutzer Oberfläche oder die erweiterte Benutzeroberfläche für ein Kombinations Feld mit dem Format [**CBS \_ Dropdown**](combo-box-styles.md) oder [**CBS \_ DropDownList**](combo-box-styles.md) auszuwählen.
+Eine Anwendung sendet eine **CB \_ SETEXTENDEDUI-Nachricht,** um entweder die Standard-Benutzeroberfläche oder die erweiterte Benutzeroberfläche für ein Kombinationsfeld auszuwählen, das den [**\_ CBS-DROPDOWN-**](combo-box-styles.md) oder [**\_ CBS-DROPDOWNLIST-Stil**](combo-box-styles.md) auflistet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet eine **CB \_ setextendedui** -Nachricht, um entweder die S
 *wParam* 
 </dt> <dd>
 
-Ein **boolescher** Wert, der angibt, ob für das Kombinations Feld die erweiterte Benutzeroberfläche (**true**) oder die Standardbenutzer Oberfläche (**false**) verwendet wird.
+Eine **BOOL,** die angibt, ob das Kombinationsfeld die erweiterte Benutzeroberfläche **(TRUE)** oder die Standardbenutzeroberfläche **(FALSE)** verwendet.
 
 </dd> <dt>
 
@@ -45,11 +45,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich ist, ist der Rückgabewert CB \_ okay. Wenn ein Fehler auftritt, ist es CB \_ Err.
+Wenn der Vorgang erfolgreich ist, lautet der Rückgabewert CB \_ OK. Wenn ein Fehler auftritt, handelt es sich um CB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig wird die Liste mit dem F4-Schlüssel geöffnet oder geschlossen, und der nach-unten-Pfeil ändert die aktuelle Auswahl. In der erweiterten Benutzeroberfläche ist die F4-Taste deaktiviert, und die nach-unten-Taste öffnet die Dropdown Liste. Das Mausrad, das normalerweise durch die Elemente in der Liste führt, hat keine Auswirkung, wenn die erweiterte Benutzeroberfläche festgelegt ist.
+Standardmäßig wird die Liste mit der Taste F4 geöffnet oder geschlossen, und der NACH-UNTEN-PFEIL ändert die aktuelle Auswahl. Auf der erweiterten Benutzeroberfläche ist die Taste F4 deaktiviert, und die NACH-UNTEN-TASTE öffnet die Dropdownliste. Das Mausrad, das normalerweise durch die Elemente in der Liste scrollt, hat keine Auswirkungen, wenn die erweiterte Benutzeroberfläche festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,26 +57,26 @@ Standardmäßig wird die Liste mit dem F4-Schlüssel geöffnet oder geschlossen,
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ getextendedui**](cb-getextendedui.md)
+[**CB \_ GETEXTENDEDUI**](cb-getextendedui.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Kombinations Feld-Features](combo-box-features.md)
+[Kombinationsfeldfeatures](combo-box-features.md)
 </dt> </dl>
 
  

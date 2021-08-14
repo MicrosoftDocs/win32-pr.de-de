@@ -1,26 +1,26 @@
 ---
-title: Beispiel Code für die Implementierung des Eigenschaften Blatts-com-Objekts
-description: Das folgende Codebeispiel kann verwendet werden, um eine Active Directory Eigenschaften Blatt Erweiterung zu implementieren.
+title: Beispielcode für die Implementierung des COM-Objekts des Eigenschaftenblatts
+description: Das folgende Codebeispiel kann verwendet werden, um eine Active Directory-Eigenschaftenblatterweiterung zu implementieren.
 ms.assetid: aeee870e-1a0e-437f-a724-0bbac30f5e34
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Implementierung des Eigenschaften Blatts com-Objekt AD
+- Beispielcode für die Implementierung des EIGENSCHAFTENBLATT-COM-Objekts AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01ea28b3c1de9fa69d14db3168db821d8b38cfc5
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: a4eefc6cc047224caa22bfda1ab17fca4c3732e35c78b09c34d6b3c697b2947c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190601"
 ---
-# <a name="example-code-for-implementation-of-the-property-sheet-com-object"></a>Beispiel Code für die Implementierung des Eigenschaften Blatts-com-Objekts
+# <a name="example-code-for-implementation-of-the-property-sheet-com-object"></a>Beispielcode für die Implementierung des COM-Objekts des Eigenschaftenblatts
 
-Das folgende Codebeispiel kann verwendet werden, um eine Active Directory Eigenschaften Blatt Erweiterung zu implementieren.
+Das folgende Codebeispiel kann verwendet werden, um eine Active Directory-Eigenschaftenblatterweiterung zu implementieren.
 
-## <a name="ishellextinit-implementation"></a>Ishellextinit-Implementierung
+## <a name="ishellextinit-implementation"></a>IShellExtInit-Implementierung
 
-Das folgende C++-Codebeispiel kann verwendet werden, um die [**ishellextinit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) -Methoden zu implementieren.
+Das folgende C++-Codebeispiel kann verwendet werden, um die [**IShellExtInit-Methoden**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) zu implementieren.
 
 
 ```C++
@@ -129,9 +129,9 @@ STDMETHODIMP CPropSheetExt::Initialize( LPCITEMIDLIST pidlFolder,
 
 
 
-## <a name="ishellpropsheetext-implementation"></a>Ishellpropsheetext-Implementierung
+## <a name="ishellpropsheetext-implementation"></a>IShellPropSheetExt-Implementierung
 
-Das folgende C++-Codebeispiel kann verwendet werden, um die [**ishellpropsheetext**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellpropsheetext) -Methoden zu implementieren.
+Das folgende C++-Codebeispiel kann verwendet werden, um die [**IShellPropSheetExt-Methoden**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellpropsheetext) zu implementieren.
 
 
 ```C++
@@ -202,9 +202,9 @@ STDMETHODIMP CPropSheetExt::ReplacePage(    UINT uPageID,
 
 
 
-## <a name="miscellaneous-implementation"></a>Sonstige Implementierung
+## <a name="miscellaneous-implementation"></a>Verschiedene Implementierungen
 
-Das folgende C++-Codebeispiel kann verwendet werden, um die im vorherigen Codebeispiel verwendeten Dienstprogramm Methoden und-Funktionen zu implementieren.
+Das folgende C++-Codebeispiel kann verwendet werden, um die Hilfsprogrammmethoden und -funktionen zu implementieren, die im vorherigen Codebeispiel verwendet wurden.
 
 
 ```C++
@@ -424,6 +424,6 @@ UINT CALLBACK CPropSheetExt::PageCallbackProc(  HWND hWnd,
 
 
 
- 
+ 
 
- 
+ 

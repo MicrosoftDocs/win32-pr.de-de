@@ -1,19 +1,19 @@
 ---
-description: WPD \_ - \_ Inhaltstyp \_ Termin
+description: WPD \_ CONTENT \_ TYPE \_ APPOINTMENT
 ms.assetid: d41c26ef-9f51-4ba7-b1a4-57abec91925e
 title: WPD_CONTENT_TYPE_APPOINTMENT
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b1ec4a316690241372bc7d0fa13789731dde925
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 159f80246b14c121e386f1122a70dce27e717481ec02897c06b9061821a8c0fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118193544"
 ---
-# <a name="wpd_content_type_appointment"></a>WPD \_ - \_ Inhaltstyp \_ Termin
+# <a name="wpd_content_type_appointment"></a>WPD \_ CONTENT \_ TYPE \_ APPOINTMENT
 
-Ein Objekt, das seinen Typ als WPD \_ - \_ Inhaltstyp Termin beschreibt, \_ stellt einen Termin in einem Kalender dar.
+Ein Objekt, das seinen Typ als WPD \_ CONTENT \_ TYPE APPOINTMENT \_ beschreibt, stellt einen Termin in einem Kalender dar.
 
 Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 
@@ -21,42 +21,42 @@ Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 
 | Eigenschaftsname                                                                                                         | Erforderlich oder optional                                                           |
 |-----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [WPD- \_ Objekt- \_ ID](object-properties.md)                                                                | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zum Zeitpunkt der Erstellung nicht festlegen. |
-| [übergeordnete WPD- \_ Objekt- \_ \_ ID](object-properties.md)                                                 | Erforderlich.                                                                      |
-| [WPD- \_ Objekt \_ Name](object-properties.md)                                                            | Erforderlich, wenn das-Objekt eine Datei darstellt.                                      |
-| [\_ \_ persistente \_ eindeutige \_ ID für WPD-Objekt](object-properties.md)                          | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zum Zeitpunkt der Erstellung nicht festlegen. |
-| [WPD- \_ Objekt \_ Format](object-properties.md)                                                        | Erforderlich.                                                                      |
-| [Inhaltstyp für WPD- \_ Objekt \_ \_](object-properties.md)                                           | Erforderlich.                                                                      |
-| [WPD- \_ Objekt \_ IsHidden](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                              |
-| [WPD- \_ Objekt \_ IsSystem](object-properties.md)                                                    | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).          |
-| [WPD- \_ Objekt \_ Größe](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                              |
-| [\_ \_ ursprünglicher \_ Dateiname \_ des WPD-Objekts](object-properties.md)                              | Erforderlich, wenn das-Objekt eine Datei darstellt.                                      |
-| [WPD- \_ Objekt \_ nicht \_ verwendbar](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.          |
-| [Verweise auf WPD- \_ Objekte \_](object-properties.md)                                                | Erforderlich, wenn das-Objekt über Verweise auf andere-Objekte verfügt.                        |
-| [WPD- \_ Objekt \_ Schlüsselwörter](object-properties.md)                                                    | Dies ist optional.                                                                      |
-| [WPD- \_ Objekt \_ Synchronisierungs- \_ ID](object-properties.md)                                                     | Dies ist optional.                                                                      |
-| [WPD- \_ Objekt \_ ist DRM- \_ \_ geschützt](object-properties.md)                                  | Erforderlich, wenn das Objekt durch DRM-Technologie geschützt wird.                         |
-| [\_ \_ Erstellungsdatum des WPD-Objekts \_](object-properties.md)                                           | Dies ist optional.                                                                      |
-| [Datum des WPD- \_ Objekts \_ \_ geändert](object-properties.md)                                         | Empfohlen.                                                                   |
-| [erstelltes WPD- \_ Objekt \_ Datum \_](object-properties.md)                                         | Dies ist optional.                                                                      |
-| [\_ \_ zurück \_ Verweise auf WPD-Objekte](object-properties.md)                                                                | Empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                     |
-| [\_ \_ \_ Funktions \_ Objekt- \_ ID des WPD-Objekt Containers](object-properties.md)     | Dies ist optional.                                                                      |
-| [WPD \_ - \_ Objekt \_ generieren \_ der Miniaturansicht aus der \_ Ressource](object-properties.md) | Dies ist optional.                                                                      |
-| [WPD- \_ Termin \_ Speicherort](appointment-properties.md)                                     | Erforderlich.                                                                      |
-| [WPD- \_ Objekt \_ kann \_ Löschen](object-properties.md)                                                                     | Erforderlich, wenn das Objekt gelöscht werden kann.                                         |
-| [Gebiets Schema der WPD- \_ Objekt \_ Sprache \_](object-properties.md)                                                                | Dies ist optional.                                                                      |
-| [häufig verwendeter WPD- \_ \_ Informations \_ Betreff](object-properties.md)                                                            | Erforderlich.                                                                      |
-| [Text für den allgemeinen WPD- \_ \_ Informations \_ \_ Text](object-properties.md)                                                         | Empfohlen.                                                                   |
-| [Allgemeine WPD- \_ \_ Informations \_ Priorität](object-properties.md)                                                           | Empfohlen.                                                                   |
-| [WPD- \_ allgemeine \_ Informationen \_ Start \_ DateTime](object-properties.md)                                                    | Empfohlen.                                                                   |
-| [DateTime-Wert für WPD- \_ allgemeine \_ Informationen \_ \_](object-properties.md)                                                      | Empfohlen.                                                                   |
-| [\_Allgemeine Informationen zu \_ WPD \_](object-properties.md)                                                              | Dies ist optional.                                                                      |
-| [WPD- \_ Termin \_ Speicherort](object-properties.md)                                                                   | Erforderlich.                                                                      |
-| [WPD \_ - \_ ereigtentyp](appointment-properties.md)                                             | Dies ist optional.                                                                      |
-| [für WPD- \_ Termin \_ erforderliche \_ Teilnehmer](appointment-properties.md)                | Dies ist optional.                                                                      |
-| [\_ \_ optionale \_ Teilnehmer für WPD-Termin](appointment-properties.md)                | Dies ist optional.                                                                      |
-| [der WPD- \_ Termin \_ akzeptierte \_ Teilnehmer](appointment-properties.md)                | Dies ist optional.                                                                      |
-| [WPD- \_ Termin \_ Ressourcen](appointment-properties.md)                                   | Dies ist optional.                                                                      |
+| [\_ \_ WPD-OBJEKT-ID](object-properties.md)                                                                | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft nicht festlegen, auch nicht zum Zeitpunkt der Erstellung. |
+| [ÜBERGEORDNETE ID DES \_ \_ WPD-OBJEKTS \_](object-properties.md)                                                 | Erforderlich.                                                                      |
+| [\_WPD-OBJEKTNAME \_](object-properties.md)                                                            | Erforderlich, wenn das -Objekt eine Datei darstellt.                                      |
+| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](object-properties.md)                          | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft nicht festlegen, auch nicht zum Zeitpunkt der Erstellung. |
+| [\_WPD-OBJEKTFORMAT \_](object-properties.md)                                                        | Erforderlich.                                                                      |
+| [\_ \_ WPD-OBJEKTINHALTSTYP \_](object-properties.md)                                           | Erforderlich.                                                                      |
+| [\_WPD-OBJEKT \_ ISHIDDEN](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                              |
+| [\_WPD-OBJEKT \_ ISSYSTEM](object-properties.md)                                                    | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).          |
+| [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                              |
+| [\_WPD-OBJEKT \_ \_ URSPRÜNGLICHER \_ DATEINAME](object-properties.md)                              | Erforderlich, wenn das -Objekt eine Datei darstellt.                                      |
+| [\_WPD-OBJEKT \_ NICHT \_ VERWENDBAR](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.          |
+| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                | Erforderlich, wenn das -Objekt Verweise auf andere Objekte enthält.                        |
+| [\_WPD-OBJEKTSCHLÜSSELWÖRTER \_](object-properties.md)                                                    | Optional.                                                                      |
+| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                     | Optional.                                                                      |
+| [\_WPD-OBJEKT \_ IST \_ \_ DRM-GESCHÜTZT](object-properties.md)                                  | Erforderlich, wenn das Objekt durch DRM-Technologie geschützt ist.                         |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                           | Optional.                                                                      |
+| [\_WPD-OBJEKTDATUM \_ \_ GEÄNDERT](object-properties.md)                                         | Empfohlen.                                                                   |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Optional.                                                                      |
+| [WPD \_ OBJECT BACK REFERENCES (WPD-OBJEKTVERWEISE \_ \_ ZURÜCK)](object-properties.md)                                                                | Wird empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                     |
+| [\_ \_ WPD-OBJEKTCONTAINER \_ FUNKTIONALE \_ \_ OBJEKT-ID](object-properties.md)     | Optional.                                                                      |
+| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHT AUS \_ RESSOURCE](object-properties.md) | Optional.                                                                      |
+| [\_WPD-TERMINORT \_](appointment-properties.md)                                     | Erforderlich.                                                                      |
+| [\_WPD-OBJEKT \_ KANN GELÖSCHT \_ WERDEN](object-properties.md)                                                                     | Erforderlich, wenn das Objekt gelöscht werden kann.                                         |
+| [WPD \_ OBJECT \_ LANGUAGE \_ LOCALE](object-properties.md)                                                                | Optional.                                                                      |
+| [WPD \_ COMMON \_ INFORMATION \_ SUBJECT](object-properties.md)                                                            | Erforderlich.                                                                      |
+| [WPD \_ COMMON \_ INFORMATION \_ BODY \_ TEXT](object-properties.md)                                                         | Empfohlen.                                                                   |
+| [WPD \_ COMMON \_ INFORMATION \_ PRIORITY](object-properties.md)                                                           | Empfohlen.                                                                   |
+| [WPD \_ COMMON \_ INFORMATION \_ START \_ DATETIME](object-properties.md)                                                    | Empfohlen.                                                                   |
+| [WPD \_ COMMON \_ INFORMATION \_ END \_ DATETIME](object-properties.md)                                                      | Empfohlen.                                                                   |
+| [WPD \_ – ALLGEMEINE INFORMATIONEN \_ \_ HINWEISE](object-properties.md)                                                              | Optional.                                                                      |
+| [\_WPD-TERMINORT \_](object-properties.md)                                                                   | Erforderlich.                                                                      |
+| [\_WPD-TERMINTYP \_](appointment-properties.md)                                             | Optional.                                                                      |
+| [\_WPD-TERMIN– \_ \_ ERFORDERLICHE TEILNEHMER](appointment-properties.md)                | Optional.                                                                      |
+| [\_WPD-TERMIN \_ – \_ OPTIONALE TEILNEHMER](appointment-properties.md)                | Optional.                                                                      |
+| [\_WPD-TERMIN– \_ \_ AKZEPTIERTE TEILNEHMER](appointment-properties.md)                | Optional.                                                                      |
+| [\_WPD-TERMINRESSOURCEN \_](appointment-properties.md)                                   | Optional.                                                                      |
 
 
 
@@ -64,7 +64,7 @@ Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 
 ## <a name="typical-resources"></a>Typische Ressourcen
 
-Diese Objekte Hosten in der Regel keine Ressourcen.
+Diese Objekte hosten in der Regel keine Ressourcen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

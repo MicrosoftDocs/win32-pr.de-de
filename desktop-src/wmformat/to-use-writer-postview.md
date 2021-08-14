@@ -1,52 +1,52 @@
 ---
-title: So verwenden Sie die Writer-Postview
-description: So verwenden Sie die Writer-Postview
+title: So verwenden Sie writer postview
+description: So verwenden Sie writer postview
 ms.assetid: 9da3c749-f6bd-43b5-9eff-3a637ddef048
 keywords:
 - Advanced Systems Format (ASF), Writer-Postview
 - ASF (Advanced Systems Format), Writer-Postview
-- Advanced Systems Format (ASF), nach Anzeige
-- ASF (Advanced Systems Format), Post View
+- Advanced Systems Format (ASF), Postviewing
+- ASF (Advanced Systems Format), Postviewing
 - Writer-Postview
-- nach Anzeige
+- Postviewing
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: abb3c1c83ebd38ff04c2022e529693d3d43b8b35
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 7800f3ba50f9f1d61793a0d2ada2db0c03d6b88551ac1147e17872aa8e428c39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104516670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118196404"
 ---
-# <a name="to-use-writer-postview"></a>So verwenden Sie die Writer-Postview
+# <a name="to-use-writer-postview"></a>So verwenden Sie writer postview
 
-Das Writer-Objekt bietet Funktionen für die Post Anzeige, sodass Sie geschriebene Inhalte überprüfen können, ohne das Reader-Objekt einrichten zu müssen. Das Writer-Objekt unterstützt keine Postview für Audioinhalte.
+Das Writer-Objekt bietet Postviewingfunktionen, sodass Sie geschriebene Inhalte überprüfen können, ohne das Readerobjekt einrichten zu müssen. Das Writer-Objekt unterstützt keine Postviewing für Audioinhalte.
 
-Der Writer-postviewer funktioniert auf die gleiche Weise wie das asynchrone Reader-Objekt, nur mit weniger Features. Ausführliche Informationen zum Lesen digitaler Medien finden Sie unter [Lesen von ASF-Dateien](reading-asf-files.md).
+Der Writer-Postviewer funktioniert auf die gleiche Weise wie das asynchrone Readerobjekt, nur mit weniger Features. Ausführliche Informationen zum Lesen digitaler Medien finden Sie unter [Lesen von ASF-Dateien.](reading-asf-files.md)
 
-Führen Sie die folgenden Schritte aus, um den postviewer zu implementieren.
+Führen Sie die folgenden Schritte aus, um den Postviewer zu implementieren.
 
-1.  Implementieren Sie den-Rückruf [**iwmschreiterpostviewcallback:: onpostviewsample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostviewcallback-onpostviewsample) . Diese Methode ist im Grunde mit [**iwmreadercallback:: onsample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreadercallback-onsample) identisch, mit der Ausnahme, dass Sie streamnummern anstelle von Ausgaben angibt.
-2.  Richten Sie wie gewohnt zum Schreiben ein.
-3.  Abrufen eines Zeigers auf die [**iwmschreiterpostview**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriterpostview) -Schnittstelle des Writer-Objekts durch Aufrufen von **iwmwriter:: QueryInterface**.
-4.  Legen Sie den Rückruf für den postviewer fest, der durch Aufrufen von [**iwmschreiterpostview:: setpostviewcallback**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostview-setpostviewcallback)verwendet werden soll.
-5.  Für jeden Datenstrom, für den Sie Postview-Beispiele erhalten möchten, nennen Sie [**iwmschreiterpostview:: setreceivepostviewsamples**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostview-setreceivepostviewsamples). Sie können überprüfen, ob ein Stream zum Empfangen von Postview-Beispielen festgelegt ist, indem Sie [**iwmschreiterpostview:: getreceivepostviewsamples**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostview-getreceivepostviewsamples)aufrufen.
-6.  Sie können die Beispiel Formate genau wie die Ausgabeformate im Reader-Objekt oder im synchronen Reader-Objekt bearbeiten.
-7.  Wenn Sie mit dem Schreiben der Datei beginnen, beginnen Sie mit dem Empfang von Beispielen in der Implementierung der **onpostviewsample** -Rückruf Methode.
+1.  Implementieren Sie [**den IWMWriterPostViewCallback::OnPostViewSample-Rückruf.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostviewcallback-onpostviewsample) Diese Methode ist im Wesentlichen identisch mit [**IWMReaderCallback::OnSample,**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreadercallback-onsample) außer dass sie Datenstromnummern anstelle von Ausgaben angibt.
+2.  Richten Sie wie gewohnt für das Schreiben ein.
+3.  Rufen Sie einen Zeiger auf die [**IWMWriterPostView-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriterpostview) des Writerobjekts ab, indem **Sie IWMWriter::QueryInterface aufrufen.**
+4.  Legen Sie den Rückruf für die Verwendung durch den Postviewer fest, indem [**Sie IWMWriterPostView::SetPostViewCallback aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostview-setpostviewcallback)
+5.  Rufen Sie für jeden Stream, für den Sie Postview-Beispiele erhalten möchten, [**IWMWriterPostView::SetReceivePostViewSamples auf.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostview-setreceivepostviewsamples) Sie können überprüfen, ob ein Stream für den Empfang von Postview-Beispielen festgelegt ist, indem Sie [**IWMWriterPostView::GetReceivePostViewSamples aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriterpostview-getreceivepostviewsamples)
+6.  Sie können die Beispielformate genau wie die Ausgabeformate im Readerobjekt oder synchronen Readerobjekt bearbeiten.
+7.  Wenn Sie mit dem Schreiben der Datei beginnen, erhalten Sie Beispiele in Ihrer Implementierung der **OnPostViewSample-Rückrufmethode.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmschreiterpostviewcallback-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriterpostviewcallback)
+[**IWMWriterPostViewCallback-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriterpostviewcallback)
 </dt> <dt>
 
 [**Schreiben von ASF-Dateien**](writing-asf-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

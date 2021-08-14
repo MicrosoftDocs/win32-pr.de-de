@@ -1,7 +1,7 @@
 ---
-description: Die ksquerymediums-Methode ruft die von einer PIN unterstützten Medien ab.
+description: Die KsQueryMediums-Methode ruft die von einem Pin unterstützten Medien ab.
 ms.assetid: 554bf968-6054-4f9d-95db-facf0444641f
-title: 'Ikspin:: ksquerymediums-Methode (ksproxy. h)'
+title: IKsPin::KsQueryMediums-Methode (Ksproxy.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Strmiids.lib
 - Strmiids.dll
-ms.openlocfilehash: f037317b49bc54f5ea9db5b7a4ae039ec0a9970d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 33edb7cb2ca959080878f7ce735930ceec9d95dc2f829aef6d50f72d764f2f00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118398936"
 ---
-# <a name="ikspinksquerymediums-method"></a>Ikspin:: ksquerymediums-Methode
+# <a name="ikspinksquerymediums-method"></a>IKsPin::KsQueryMediums-Methode
 
-Die- `KsQueryMediums` Methode ruft die von einer PIN unterstützten Medien ab.
+Die `KsQueryMediums` -Methode ruft die von einem Pin unterstützten Medien ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,28 +40,28 @@ HRESULT KsQueryMediums(
 
 <dl> <dt>
 
-*ppmi* \[ vorgenommen\]
+*ppmi* \[ out\]
 </dt> <dd>
 
-Adresse eines Zeigers auf eine [**ksmultiple- \_ Element**](ksmultiple-item.md) Struktur.
+Adresse eines Zeigers auf eine [**KSMULTIPLE \_ ITEM-Struktur.**](ksmultiple-item.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ein Fehler auftritt, wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler auftritt, wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt eine Aufgabe zugeordnete [**ksmultiple- \_ Element**](ksmultiple-item.md) Struktur zurück, auf die 0 (null) oder mehr [**regpinmedium**](/windows/desktop/api/strmif/ns-strmif-regpinmedium) -Strukturen folgt. Der **count** -Member der **ksmultiple- \_ Element** Struktur gibt die Anzahl der **regpinmedium** -Strukturen an. Jede **regpinmedium** -Struktur definiert ein Medium, das von der PIN unterstützt wird.
+Diese Methode gibt eine aufgabenbasierte [**KSMULTIPLE \_ ITEM-Struktur**](ksmultiple-item.md) zurück, auf die 0 (null) oder mehr [**REGPINMEDIUM-Strukturen**](/windows/desktop/api/strmif/ns-strmif-regpinmedium) folgen. Das **Count-Element** der **KSMULTIPLE \_ ITEM-Struktur** gibt die Anzahl der **REGPINMEDIUM-Strukturen** an. Jede **REGPINMEDIUM-Struktur** definiert ein Medium, das vom Pin unterstützt wird.
 
-Der Aufrufer muss die zurückgegebenen Strukturen mit der **CoTaskMemFree** -Funktion freigeben.
+Der Aufrufer muss die zurückgegebenen Strukturen mithilfe der **CoTaskMemFree-Funktion** frei geben.
 
-Sie müssen "KS. h" vor "ksproxy. h" einschließen.
+Sie müssen Ks.h vor Ksproxy.h angeben.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgende Hilfsfunktion versucht, eine PIN mit einem angegebenen Medium abzugleichen.
+Die folgende Hilfsfunktion versucht, eine Stecknadel mit einem angegebenen Medium zu ab stimmen.
 
 
 ```C++
@@ -111,22 +111,22 @@ HRESULT FindMatchingMedium(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Ksproxy. h</dt> </dl>    |
-| Bibliothek<br/>                  | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ksproxy.h</dt> </dl>    |
+| Bibliothek<br/>                  | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**Ikspin-Schnittstelle**](ikspin.md)
+[**IKsPin-Schnittstelle**](ikspin.md)
 </dt> <dt>
 
-[WDM-Klassen Treiber Filter](wdm-class-driver-filters.md)
+[WDM-Klassentreiberfilter](wdm-class-driver-filters.md)
 </dt> </dl>
 
  

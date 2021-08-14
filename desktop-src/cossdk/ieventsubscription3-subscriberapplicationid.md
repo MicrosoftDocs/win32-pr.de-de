@@ -1,7 +1,7 @@
 ---
 description: Die Anwendungs-GUID des Abonnenten.
 ms.assetid: 46c91cae-ca31-4eac-baa8-d36910917f0f
-title: 'IEventSubscription3:: abonniert ApplicationId (Eigenschaft)'
+title: IEventSubscription3::SubscriberApplicationID (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: c2e726d97821a7a7143f4971a4918227235adb9c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 723a64b4e34c58b49f0ffa0851af836a536ff86ea23ee1b966a8ec243267950c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118306368"
 ---
-# <a name="ieventsubscription3subscriberapplicationid-property"></a>IEventSubscription3:: abonniert ApplicationId (Eigenschaft)
+# <a name="ieventsubscription3subscriberapplicationid-property"></a>IEventSubscription3::SubscriberApplicationID (Eigenschaft)
 
 Die Anwendungs-GUID des Abonnenten.
 
@@ -44,11 +44,11 @@ HRESULT get_SubscriberApplicationID(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die die GUID der Abonnenten Anwendung enthält.
+Eine Zeichenfolge, die die GUID der Abonnentenanwendung enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemory, e \_ unerwartet, e \_ Fail und S OK \_ zurückgeben.
+Diese Methode kann die Standard-Rückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemor
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpplaylistarray count (Eigenschaft)
-description: Die Count-Eigenschaft ruft die Anzahl der Wiedergabelisten im Wiedergabelisten Array ab.
+title: IWMPPlaylistArray count-Eigenschaft
+description: Die count-Eigenschaft ruft die Anzahl der Wiedergabelisten im Wiedergabelistenarray ab.
 ms.assetid: 24603d05-4016-4aac-a623-75be668065c8
 keywords:
-- Anzahl der Eigenschaften Fenster Media Player
-- Count-Eigenschaft, Windows Media Player, iwmpplaylistarray-Schnittstelle
-- Iwmpplaylistarray Interface, Windows Media Player, Count-Eigenschaft
+- count-Windows Media Player
+- count-Windows Media Player , IWMPPlaylistArray-Schnittstelle
+- IWMPPlaylistArray-Schnittstelle Windows Media Player , count-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 174636364fc0c5e0805ed2d1bdd822ff97c63a1a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bffea9aa34a614a720ac6e3293167a746cc31c628d9ed22389dab651d03bf715
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118331127"
 ---
-# <a name="iwmpplaylistarraycount-property"></a>Iwmpplaylistarray:: count (Eigenschaft)
+# <a name="iwmpplaylistarraycount-property"></a>IWMPPlaylistArray::count-Eigenschaft
 
-Die **count** -Eigenschaft ruft die Anzahl der Wiedergabelisten im Wiedergabelisten Array ab.
+Die **count-Eigenschaft** ruft die Anzahl der Wiedergabelisten im Wiedergabelistenarray ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public ReadOnly Property count As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl der Wiedergabelisten im Array ist.
+Ein **System.Int32,** das die Anzahl der Wiedergabelisten im Array ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,17 +58,17 @@ Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibl
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9 oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player 9-Serie oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpplaylistarray-Schnittstelle (VB und c#)**](iwmpplaylistarray--vb-and-c.md)
+[**IWMPPlaylistArray-Schnittstelle (VB und C#)**](iwmpplaylistarray--vb-and-c.md)
 </dt> </dl>
 
  

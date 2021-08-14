@@ -1,19 +1,19 @@
 ---
-description: Sie können das Dialogfeld Schriftart (allgemein) verwenden, um verfügbare Schriftarten anzuzeigen.
+description: Sie können das Dialogfeld Schriftart allgemein verwenden, um verfügbare Schriftarten anzuzeigen.
 ms.assetid: 317ea311-0592-432a-87b5-58296de003aa
 title: Erstellen einer logischen Schriftart
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4398f426ae2dd0f18c21409422dfbcb53f0e6ee8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fb491a1af055963053e8b0247ecaa212547a750a7bd0a35db0ae983695a2420
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117887470"
 ---
 # <a name="creating-a-logical-font"></a>Erstellen einer logischen Schriftart
 
-Sie können das Dialogfeld **Schriftart** (allgemein) verwenden, um verfügbare Schriftarten anzuzeigen. Das Dialogfeld **Auswahl Schriftart** wird angezeigt, nachdem eine Anwendung die Member einer [**choosefont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) -Struktur initialisiert und die [**choosefont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) -Funktion aufgerufen hat. Nachdem der Benutzer eine der verfügbaren Schriftarten ausgewählt und die Schaltfläche " **OK** " gedrückt hat, initialisiert die Funktion " **choorofont** " eine [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur mit den relevanten Daten. Die Anwendung kann dann die Funktion " [**kreatefontindirekte**](/windows/desktop/api/Wingdi/nf-wingdi-createfontindirecta) " aufrufen und eine logische Schriftart basierend auf der Anforderung des Benutzers erstellen. Dies wird im folgenden Beispiel veranschaulicht.
+Sie können das Dialogfeld **Schriftart** allgemein verwenden, um verfügbare Schriftarten anzuzeigen. Das Dialogfeld **ChooseFont** wird angezeigt, nachdem eine Anwendung die Member einer [**CHOOSEFONT-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) initialisiert und die [**CHOOSEFONT-Funktion aufruft.**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) Nachdem der Benutzer eine der verfügbaren Schriftarten ausgewählt und die Schaltfläche **OK** gedrückt hat, initialisiert die **ChooseFont-Funktion** eine [**LOGFONT-Struktur**](/windows/win32/api/wingdi/ns-wingdi-logfonta) mit den relevanten Daten. Ihre Anwendung kann dann die [**CreateFontIndirect-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-createfontindirecta) aufrufen und basierend auf der Anforderung des Benutzers eine logische Schriftart erstellen. Im folgenden Beispiel wird veranschaulicht, wie dies erfolgt.
 
 
 ```C++

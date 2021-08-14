@@ -1,24 +1,24 @@
 ---
-description: Unter Windows 2000 ist es üblich, dass ein Installations Dienstprogramm die aktuelle und die maximale Größe der Registrierung überprüft, um zu ermitteln, ob genügend Speicherplatz für die neuen Daten vorhanden ist, die hinzugefügt werden.
+description: Bei Windows 2000 ist es üblich, dass ein Installationshilfsprogramm die aktuelle und maximale Größe der Registrierung überprüft, um festzustellen, ob genügend Speicherplatz für die neuen Daten verfügbar ist, die hinzugefügt werden.
 ms.assetid: 87e7b9de-d571-41e4-817e-29023546e9bd
-title: Festlegen der Registrierungs Größe
+title: Bestimmen der Registrierungsgröße
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4434b519625cf21c9e0076dc7c21d71e27c01778
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88e26fbeedf13ea66c93f7a13426819fb84df6ffa3f75c908462dcef8f8dcb54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117764502"
 ---
-# <a name="determining-the-registry-size"></a>Festlegen der Registrierungs Größe
+# <a name="determining-the-registry-size"></a>Bestimmen der Registrierungsgröße
 
-Unter Windows 2000 ist es üblich, dass ein Installations Dienstprogramm die aktuelle und die maximale Größe der Registrierung überprüft, um zu ermitteln, ob genügend Speicherplatz für die neuen Daten vorhanden ist, die hinzugefügt werden. In diesem Beispiel wird veranschaulicht, wie dies Programm gesteuert mithilfe des Leistungs Zählers "%-Registrierungs Kontingent verwendet" innerhalb des System Objekts erfolgen kann.
+Bei Windows 2000 ist es üblich, dass ein Installationshilfsprogramm die aktuelle und maximale Größe der Registrierung überprüft, um festzustellen, ob genügend Speicherplatz für die neuen Daten verfügbar ist, die hinzugefügt werden. In diesem Beispiel wird veranschaulicht, wie dies programmgesteuert mithilfe des Leistungsindikators "% Registry Quota In Use" im System-Objekt durchgeführt wird.
 
-Im folgenden Beispiel wird das Leistungsdaten-Hilfsprogramm (PDH) zum Abrufen des Leistungs Zählers verwendet. Er muss mit "PDH. lib" verknüpft werden. PDH ist ein allgemeiner Satz von APIs, die zum Abrufen von Leistungsdaten verwendet werden.
+Im folgenden Beispiel wird das Leistungsdatenhilfs-Hilfsmuster (PDH) verwendet, um den Indikatorwert abzurufen. Sie muss mit Pdh.lib verknüpft sein. PDH ist ein hoher Satz von APIs, die zum Abrufen von Leistungsdaten verwendet werden.
 
 > [!Note]  
-> Es ist nicht erforderlich, diese Registrierungs Größenüberprüfung unter Windows Server 2003 oder Windows XP zu implementieren, da Sie nicht über ein Registrierungs Kontingent Limit verfügen.
+> Es ist nicht erforderlich, diese Überprüfung der Registrierungsgröße auf Windows Server 2003 oder Windows XP zu implementieren, da sie keine Registrierungskontingentgrenze haben.
 
  
 

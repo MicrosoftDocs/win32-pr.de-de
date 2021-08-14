@@ -1,11 +1,11 @@
 ---
 title: Win32_TSDeploymentSettings-Klasse
-description: Definiert die Standardeinstellungen, die der RemoteApp-Manager verwendet, wenn Remotedesktopprotokoll (RDP)-Dateien erstellt werden.
+description: Definiert die Standardeinstellungen, die der RemoteApp-Manager beim Erstellen von Remotedesktopprotokoll (RDP)-Dateien verwendet.
 ms.assetid: b3eeef86-e6cb-40ea-99f8-200c5993f31e
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSDeploymentSettings-Klasse Remotedesktopdienste
-- Win32_TSDeploymentSettings Klasse Remotedesktopdienste, beschrieben
+- Win32_TSDeploymentSettings-Remotedesktopdienste
+- Win32_TSDeploymentSettings klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -39,16 +39,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f254363968099ab73c5f3f14f1f15ab8554f62a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a3f5b5cde779cbd9b8120fa648138611236935080f3517a28a6f19dcee8864b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118349308"
 ---
-# <a name="win32_tsdeploymentsettings-class"></a>Win32-Klasse "t \_ deploymentsettings"
+# <a name="win32_tsdeploymentsettings-class"></a>Win32 \_ TSDeploymentSettings-Klasse
 
-Definiert die Standardeinstellungen, die der RemoteApp-Manager verwendet, wenn Remotedesktopprotokoll (RDP)-Dateien erstellt werden. Diese Einstellungen wirken sich nicht auf veröffentlichte Anwendungen oder Desktops aus.
+Definiert die Standardeinstellungen, die der RemoteApp-Manager beim Erstellen von Remotedesktopprotokoll (RDP)-Dateien verwendet. Diese Einstellungen wirken sich nicht auf veröffentlichte Anwendungen oder Desktops aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -83,26 +83,26 @@ class Win32_TSDeploymentSettings : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zdeploymentsettings** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSDeploymentSettings-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse "t- **\_ deploymentsettings** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSDeploymentSettings-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Allowfonsitzmoothing**
+**AllowFontSmoothing**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Schriftart Glättung zulässig ist.
+Gibt an, ob die Schriftartglättung zulässig ist.
 
 </dd> <dt>
 
@@ -115,16 +115,16 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Certificateexpireson**
+**CertificateExpiresOn**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -133,14 +133,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Das Datum, an dem das Zertifikat abläuft. Dieser Wert wird als 64-Bit- [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Format gespeichert.
+Das Datum, an dem das Zertifikat abläuft. Dieser Wert wird als [**64-Bit-FILETIME-Format**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) gespeichert.
 
 </dd> <dt>
 
 **CertificateHash**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -150,7 +150,7 @@ Der Fingerabdruck des Zertifikats, das zum Signieren von RDP-Dateien verwendet w
 
 </dd> <dt>
 
-**Certifi-eissuedby**
+**CertificateIssuedBy**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -163,7 +163,7 @@ Gibt an, von wem das Zertifikat ausgestellt wird.
 
 </dd> <dt>
 
-**Certifi-eissuedto**
+**CertificateIssuedTo**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -176,7 +176,7 @@ Gibt an, für wen das Zertifikat ausgestellt wird.
 
 </dd> <dt>
 
-**Colorbittiefe**
+**ColorBitDepth**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -185,11 +185,11 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die farbbit Tiefe der Anzeige. Mögliche Werte sind 4, 8, 15, 16, 24 und 32.
+Die Farbbittiefe der Anzeige. Mögliche Werte sind 4, 8, 15, 16, 24 und 32.
 
 </dd> <dt>
 
-**Customrdpsettings**
+**CustomRDPSettings**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -198,11 +198,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Inhalt der RDP-Datei, die den benutzerdefinierten RDP-Einstellungen in RemoteApp-Manager entspricht.
+Der Inhalt der RDP-Datei, die dem benutzerdefinierten RDP-Einstellungen in RemoteApp-Manager.
 
 </dd> <dt>
 
-**Bereitstellerentrdpsettings**
+**DeploymentRDPSettings**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -211,7 +211,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Inhalt der RDP-Datei, die den Bereitstellungs Einstellungen in RemoteApp-Manager entspricht. Wenn dieser Wert festgelegt ist, ersetzen die RDP-Bereitstellungs Einstellungen die Standardeinstellungen in dieser Klasse. Wenn Sie z. b. die **gatewayauthmode** -Eigenschaft in dieser Klasse festlegen und die **bereitstellerentrdpsettings** -Eigenschaft festlegen, wird die **gatewayauthmode** -Eigenschaft dieser Klasse ignoriert, und der **gatewayauthmode** -Wert aus der bereitstellerentrdpsettings wird verwendet. 
+Der Inhalt der RDP-Datei, die den Bereitstellungseinstellungen in RemoteApp-Manager. Wenn dieser Wert festgelegt ist, werden die Standardeinstellungen in dieser Klasse durch die RDP-Bereitstellungseinstellungen ersetzt. Wenn Sie beispielsweise die **GatewayAuthMode-Eigenschaft** in dieser Klasse und die **DeploymentRDPSettings-Eigenschaft** festlegen, wird die **GatewayAuthMode-Eigenschaft** dieser Klasse ignoriert, und der **GatewayAuthMode-Wert** aus **DeploymentRDPSettings** wird verwendet.
 
 </dd> <dt>
 
@@ -226,11 +226,11 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Farmname**
+**FarmName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -239,11 +239,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Name des RD-Sitzungshost Servers oder der voll qualifizierte Domänen Name (Fully Qualified Domain Name, FQDN) der RD-Sitzungshost Serverfarm.
+Der Name des RD-Sitzungshost Servers oder der vollqualifizierte Domänenname (Fully Qualified Domain Name, FQDN) der RD-Sitzungshost Serverfarm.
 
 </dd> <dt>
 
-**Gatewayauthmode**
+**GatewayAuthMode**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -252,7 +252,7 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die RD-Gateway Authentifizierungsmethode. Die folgenden Werte sind möglich.
+Die RD-Gatewayauthentifizierungsmethode. Die folgenden Werte sind möglich.
 
 <dt>
 
@@ -273,13 +273,13 @@ Smartcard
 4
 </dt> <dd>
 
-Ermöglicht es Benutzern, während der Verbindung auszuwählen.
+Ermöglicht dem Benutzer die Auswahl während der Verbindung.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Gatewayname**
+**GatewayName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -288,11 +288,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Name des zu verwendenden RD-Gateway Servers.
+Der Name des zu verwendenden RD-Gatewayservers.
 
 </dd> <dt>
 
-**Gatewayusage**
+**GatewayUsage**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -301,57 +301,57 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob ein RD-Gateway Server verwendet werden soll, um eine Verbindung mit dem Ziel RD-Sitzungshost Server über eine Firewall herzustellen. Die folgenden Werte sind möglich.
+Gibt an, ob ein RD-Gatewayserver verwendet werden soll, um eine Verbindung mit dem Zielserver RD-Sitzungshost firewallübergreifend herzustellen. Die folgenden Werte sind möglich.
 
 <dt>
 
 0
 </dt> <dd>
 
-Verwenden Sie keinen RD-Gateway Server.
+Verwenden Sie keinen RD-Gatewayserver.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Verwenden Sie einen RD-Gateway Server. Umgehen Sie den RD-Gateway Server für lokale Adressen.
+Verwenden Sie einen RD-Gatewayserver. Umgehen Sie den RD-Gatewayserver für lokale Adressen.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Verwenden Sie einen RD-Gateway Server.
+Verwenden Sie einen RD-Gatewayserver.
 
 </dd> <dt>
 
 3
 </dt> <dd>
 
-RD-Gateway Servereinstellungen automatisch erkennen.
+Automatisches Erkennen von RD-Gatewayservereinstellungen.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Gatewayusecachedkreds**
+**GatewayUseCachedCreds**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Verwenden Sie nach Möglichkeit die gleichen Benutzer Anmelde Informationen für den RD-Gateway Server und den RD-Sitzungshost Server.
+Verwenden Sie nach Möglichkeit die gleichen Benutzeranmeldeinformationen für den RD-Gatewayserver und den RD-Sitzungshost Server.
 
 </dd> <dt>
 
-**Hascertificate**
+**HasCertificate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -364,16 +364,16 @@ Gibt an, ob ein Zertifikat zum Signieren der RDP-Dateien verwendet werden soll.
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -382,7 +382,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -407,7 +407,7 @@ Der zu verwendende RDP-Port.
 
 </dd> <dt>
 
-**Redirectionoptions**
+**RedirectionOptions**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -416,94 +416,94 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die Optionen für die Geräte-und Ressourcen Umleitung für RemoteApp-Verbindungen an. Flags für **redirectionoptions** können kombiniert werden. Die folgenden Werte sind möglich.
+Gibt die Optionen für die Geräte- und Ressourcenumleitung für RemoteApp-Verbindungen an. Flags für **RedirectionOptions** können kombiniert werden. Die folgenden Werte sind möglich.
 
 <dt>
 
 0
 </dt> <dd>
 
-Keine Geräte-oder Ressourcen Umleitung.
+Keine Geräte- oder Ressourcenumleitung.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Umleiten von Laufwerken
+Leiten Sie Datenträgerlaufwerke um.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Umleiten von Druckern
+Umleiten von Druckern.
 
 </dd> <dt>
 
 4
 </dt> <dd>
 
-Umleiten der Zwischenablage.
+Leiten Sie die Zwischenablage um.
 
 </dd> <dt>
 
 8
 </dt> <dd>
 
-Umleitung Plug & Play Geräten unterstützt.
+Umleiten unterstützter Plug & Play Geräte.
 
 </dd> <dt>
 
 16
 </dt> <dd>
 
-Umleiten von Smartcards.
+Smartcards umleiten.
 
 </dd> <dt>
 
 32
 </dt> <dd>
 
-Umleiten von Audiodaten
+Audio umleiten.
 
 </dd> <dt>
 
 64
 </dt> <dd>
 
-Serielle Ports umleiten.
+Serielle Anschlüsse umleiten.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Requirements serverauth**
+**RequireServerAuth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Server Authentifizierung erforderlich ist.
+Gibt an, ob eine Serverauthentifizierung erforderlich ist.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -567,10 +567,10 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Usemultimon**
+**UseMultimon**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -580,16 +580,16 @@ Gibt an, ob mehrere Monitore für den Desktop aktiviert sind.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um Eigenschaften mithilfe dieser Klasse festzulegen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um Eigenschaften mit dieser Klasse festzulegen.
 
-Wenn "Requirements **serverauth** " auf " **true**" festgelegt ist, sollten Sie Folgendes beachten:
+Wenn **RequireServerAuth** auf **TRUE** festgelegt ist, sollten Sie Folgendes berücksichtigen:
 
--   Wenn das RemoteApp-Programm für die Intranetverwendung vorgesehen ist und auf allen Client Computern entweder Windows Server 2008 oder Windows Vista ausgeführt wird, müssen Sie den RD-Sitzungshost Server nicht für die Verwendung eines SSL-Zertifikats konfigurieren. In diesem Fall wird Authentifizierung auf Netzwerkebene verwendet.
--   Sie müssen den voll qualifizierten Namen des Servers oder der Farm für den Wert der **Farmname** -Eigenschaft angeben.
+-   Wenn das RemoteApp-Programm für die Intranetverwendung vorgesehen ist und auf allen Clientcomputern entweder Windows Server 2008 oder Windows Vista ausgeführt wird, müssen Sie den RD-Sitzungshost Server nicht für die Verwendung eines SSL-Zertifikats konfigurieren. In diesem Fall wird Authentifizierung auf Netzwerkebene verwendet.
+-   Sie müssen den FQDN des Servers oder der Farm für den Wert der **FarmName-Eigenschaft** angeben.
 
-Zum Herstellen einer Verbindung mit dem \\ Namespace "CIMV2 TerminalServices" muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene für den **\_ \_ \_ \_ Pkt- \_ Datenschutz auf RPC-C-Ebene**, die mithilfe der com-Funktion [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) festgelegt werden kann. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem Namespace "CIMV2 \\ TerminalServices" herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC C \_ \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**, die mithilfe der [**COM-Funktion CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) festgelegt werden kann. Bei Visual Basic- und Skriptaufrufen ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -600,7 +600,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. Sie werden auf dem Computer installiert, wenn Sie die zugehörige Rolle hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation -Klassen (WMI). Sie werden auf dem Computer installiert, wenn Sie die zugeordnete Rolle hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -611,7 +611,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tsallow. MOF</dt> </dl>  |
+| MOF<br/>                      | <dl> <dt>Tsallow.mof</dt> </dl>  |
 | DLL<br/>                      | <dl> <dt>TsPubWmi.dll</dt> </dl> |
 
 

@@ -1,55 +1,55 @@
 ---
-description: Eine DLL kann optional eine Einstiegspunkt Funktion angeben.
+description: Eine DLL kann optional eine Einstiegspunktfunktion angeben.
 ms.assetid: ec035fc6-0a6f-4e52-a4cc-8d7a25a94366
-title: Entry-Point Funktion der Dynamic-Link-Bibliothek
+title: Dynamic-Link Library Entry-Point Function
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b62bff557bfa2aa792b420e8fe1856bbe0726921
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6289f705a11dad58eca8b047ba469ee07320dedef762024cbfa04046a0677f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117815838"
 ---
-# <a name="dynamic-link-library-entry-point-function"></a>Entry-Point Funktion der Dynamic-Link-Bibliothek
+# <a name="dynamic-link-library-entry-point-function"></a>Dynamic-Link Library Entry-Point Function
 
-Eine DLL kann optional eine Einstiegspunkt Funktion angeben. Falls vorhanden, ruft das System die Einstiegspunkt Funktion immer dann auf, wenn ein Prozess oder Thread die dll lädt oder entlädt. Sie kann verwendet werden, um einfache Initialisierungs-und Bereinigungs Aufgaben auszuführen. So kann beispielsweise ein lokaler Thread Speicher eingerichtet werden, wenn ein neuer Thread erstellt wird, und bereinigt, wenn der Thread beendet wird.
+Eine DLL kann optional eine Einstiegspunktfunktion angeben. Falls vorhanden, ruft das System die Einstiegspunktfunktion auf, wenn ein Prozess oder Thread die DLL lädt oder entlädt. Sie kann verwendet werden, um einfache Initialisierungs- und Bereinigungsaufgaben auszuführen. Beispielsweise kann er lokalen Threadspeicher einrichten, wenn ein neuer Thread erstellt wird, und ihn bereinigen, wenn der Thread beendet wird.
 
-Wenn Sie die DLL mit der C-Lauf Zeit Bibliothek verknüpfen, stellt Sie möglicherweise eine Einstiegspunkt Funktion bereit und ermöglicht es Ihnen, eine separate Initialisierungsfunktion bereitzustellen. Weitere Informationen finden Sie in der Dokumentation zur Lauf Zeit Bibliothek.
+Wenn Sie Ihre DLL mit der C-Laufzeitbibliothek verknüpfen, stellt sie möglicherweise eine Einstiegspunktfunktion für Sie zur Verfügung und ermöglicht es Ihnen, eine separate Initialisierungsfunktion zur Verfügung zu stellen. Weitere Informationen finden Sie in der Dokumentation zu Ihrer Laufzeitbibliothek.
 
-Wenn Sie einen eigenen Einstiegspunkt bereitstellen, finden Sie weitere Informationen unter der [**DllMain**](dllmain.md) -Funktion. Der Name **DllMain** ist ein Platzhalter für eine benutzerdefinierte Funktion. Sie müssen den tatsächlichen Namen angeben, den Sie beim Erstellen der DLL verwenden. Weitere Informationen finden Sie in der Dokumentation, die in ihren Entwicklungs Tools enthalten ist.
+Wenn Sie einen eigenen Einstiegspunkt bereitstellen, lesen Sie die [**DllMain-Funktion.**](dllmain.md) Der Name **DllMain** ist ein Platzhalter für eine benutzerdefinierte Funktion. Sie müssen den tatsächlichen Namen angeben, den Sie beim Erstellen der DLL verwenden. Weitere Informationen finden Sie in der Dokumentation zu Ihren Entwicklungstools.
 
 ## <a name="calling-the-entry-point-function"></a>Aufrufen der Entry-Point-Funktion
 
-Das System ruft die Einstiegspunkt Funktion immer dann auf, wenn eines der folgenden Ereignisse eintritt:
+Das System ruft die Einstiegspunktfunktion auf, wenn eines der folgenden Ereignisse eintritt:
 
--   Ein Prozess lädt die dll. Für Prozesse, die dynamische Verknüpfungen zur Ladezeit verwenden, wird die dll während der Prozess Initialisierung geladen. Für Prozesse, die Lauf Zeit Verknüpfungen verwenden, wird die dll vor der Rückgabe von [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) oder [**LoadLibraryEx**](/windows/desktop/api/LibLoaderAPI/nf-libloaderapi-loadlibraryexa) geladen.
--   Ein Prozess entlädt die dll. Die dll wird entladen, wenn der Prozess beendet wird oder die [**FreeLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) -Funktion aufruft und der Verweis Zähler 0 (null) ist. Wenn der Prozess aufgrund der [**TerminateProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminateprocess) -oder [**TerminateThread**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) -Funktion beendet wird, ruft das System die DLL-Einstiegspunkt Funktion nicht auf.
--   Ein neuer Thread wird in einem Prozess erstellt, der die dll geladen hat. Sie können die [**DisableThreadLibraryCalls**](/windows/win32/api/libloaderapi/nf-libloaderapi-disablethreadlibrarycalls) -Funktion verwenden, um die Benachrichtigung zu deaktivieren, wenn Threads erstellt werden.
--   Ein Thread eines Prozesses, der die dll geladen hat, wird normal beendet, nicht mithilfe von [**TerminateThread**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) oder [**TerminateProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminateprocess). Wenn ein Prozess die dll entlädt, wird die Einstiegspunkt Funktion nur einmal für den gesamten Prozess und nicht für jeden vorhandenen Thread des Prozesses aufgerufen. Sie können [**DisableThreadLibraryCalls**](/windows/win32/api/libloaderapi/nf-libloaderapi-disablethreadlibrarycalls) verwenden, um die Benachrichtigung zu deaktivieren, wenn Threads beendet werden.
+-   Ein Prozess lädt die DLL. Bei Prozessen, die dynamische Verknüpfungen zur Ladezeit verwenden, wird die DLL während der Prozessin initialisierung geladen. Bei Prozessen mit Laufzeitverknüpfung wird die DLL geladen, bevor [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) oder [**LoadLibraryEx zurückgegeben**](/windows/desktop/api/LibLoaderAPI/nf-libloaderapi-loadlibraryexa) wird.
+-   Ein Prozess entlädt die DLL. Die DLL wird entladen, wenn der Prozess die [**FreeLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) beendet oder aufruft und der Verweiszähler 0 (null) wird. Wenn der Prozess als Ergebnis der [**TerminateProcess-**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminateprocess) oder [**TerminateThread-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) beendet wird, wird die DLL-Einstiegspunktfunktion nicht vom System aufruft.
+-   Ein neuer Thread wird in einem Prozess erstellt, der die DLL geladen hat. Sie können die [**DisableThreadLibraryCalls-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-disablethreadlibrarycalls) verwenden, um die Benachrichtigung zu deaktivieren, wenn Threads erstellt werden.
+-   Ein Thread eines Prozesses, der die DLL geladen hat, wird normal beendet, ohne [**TerminateThread oder**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) [**TerminateProcess zu verwenden.**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminateprocess) Wenn ein Prozess die DLL entlädt, wird die Einstiegspunktfunktion nur einmal für den gesamten Prozess und nicht einmal für jeden vorhandenen Thread des Prozesses aufgerufen. Sie können [**DisableThreadLibraryCalls**](/windows/win32/api/libloaderapi/nf-libloaderapi-disablethreadlibrarycalls) verwenden, um Benachrichtigungen zu deaktivieren, wenn Threads beendet werden.
 
-Die Einstiegspunkt Funktion kann jeweils nur von einem Thread aufgerufen werden.
+Die Einstiegspunktfunktion kann nur von einem Thread gleichzeitig aufgerufen werden.
 
-Das System ruft die Einstiegspunkt Funktion im Kontext des Prozesses oder Threads auf, der bewirkt hat, dass die Funktion aufgerufen wird. Dadurch kann eine DLL die Einstiegspunkt Funktion verwenden, um Speicher im virtuellen Adressraum des aufrufenden Prozesses zuzuweisen, oder um Handles zu öffnen, auf die der Prozess Zugriff hat. Die Einstiegspunkt Funktion kann auch Arbeitsspeicher zuweisen, der einem neuen Thread mithilfe von Thread lokalem Speicher (TLS) privat ist. Weitere Informationen zum lokalen Thread Speicher finden Sie unter [Thread lokaler Speicher](/windows/desktop/ProcThread/thread-local-storage).
+Das System ruft die Einstiegspunktfunktion im Kontext des Prozesses oder Threads auf, der den Aufruf der Funktion verursacht hat. Dadurch kann eine DLL ihre Einstiegspunktfunktion zum Zuordnen von Arbeitsspeicher im virtuellen Adressraum des aufrufenden Prozesses oder zum Öffnen von Handles verwenden, auf die der Prozess zugriff kann. Die Einstiegspunktfunktion kann einem neuen Thread auch privaten Speicher mithilfe des lokalen Threadspeichers (THREAD Local Storage, TLS) zuordnen. Weitere Informationen zum lokalen Threadspeicher finden Sie unter [Thread Local Storage](/windows/desktop/ProcThread/thread-local-storage).
 
-## <a name="entry-point-function-definition"></a>Definition der Entry-Point Funktion
+## <a name="entry-point-function-definition"></a>Entry-Point Funktionsdefinition
 
-Die DLL-Einstiegspunkt Funktion muss mit der Standard Aufruf Konvention deklariert werden. Wenn der DLL-Einstiegspunkt nicht ordnungsgemäß deklariert ist, wird die dll nicht geladen, und das System zeigt eine Meldung an, die angibt, dass der DLL-Einstiegspunkt mit WinAPI deklariert werden muss.
+Die DLL-Einstiegspunktfunktion muss mit der Standardaufrufaufrufkonvention deklariert werden. Wenn der DLL-Einstiegspunkt nicht ordnungsgemäß deklariert ist, wird die DLL nicht geladen, und das System zeigt eine Meldung an, die angibt, dass der DLL-Einstiegspunkt mit WINAPI deklariert werden muss.
 
-Im Hauptteil der-Funktion können Sie eine beliebige Kombination der folgenden Szenarien verarbeiten, in denen der DLL-Einstiegspunkt aufgerufen wurde:
+Im Text der Funktion können Sie eine beliebige Kombination der folgenden Szenarien behandeln, in denen der DLL-Einstiegspunkt aufgerufen wurde:
 
--   Ein Prozess lädt die dll (**dll- \_ Prozess \_ Anfügen**).
--   Der aktuelle Prozess erstellt einen neuen Thread (**\_ \_ Anfügen eines dll-Threads**).
--   Ein Thread wird normal beendet **( \_ \_ Trennen des dll-Threads**).
--   Ein Prozess entlädt die dll (**dll \_ - \_ Prozess** Trennung).
+-   Ein Prozess lädt die DLL (**DLL \_ PROCESS \_ ATTACH**).
+-   Der aktuelle Prozess erstellt einen neuen Thread (**DLL \_ THREAD \_ ATTACH**).
+-   Ein Thread wird normal beendet (**DLL \_ THREAD \_ DETACH**).
+-   Ein Prozess entlädt die DLL (**DLL \_ PROCESS \_ DETACH**).
 
-Die Einstiegspunkt Funktion sollte nur einfache Initialisierungs Tasks ausführen. Die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion oder die [**LoadLibraryEx**](/windows/desktop/api/LibLoaderAPI/nf-libloaderapi-loadlibraryexa) -Funktion (oder eine Funktion, die diese Funktionen aufruft) darf nicht aufgerufen werden, da dadurch Abhängigkeits Schleifen in der dll-Lade Reihenfolge erstellt werden können. Dies kann dazu führen, dass eine DLL verwendet wird, bevor das System den Initialisierungs Code ausgeführt hat. Ebenso darf die Einstiegspunkt Funktion die [**FreeLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) -Funktion (oder eine Funktion, die **FreeLibrary** aufruft) während der Prozess Beendigung nicht aufrufen, da dies dazu führen kann, dass eine DLL verwendet wird, nachdem das System den Beendigungs Code ausgeführt hat.
+Die Einstiegspunktfunktion sollte nur einfache Initialisierungsaufgaben ausführen. Es darf nicht die [**LoadLibrary-**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) oder [**LoadLibraryEx-Funktion**](/windows/desktop/api/LibLoaderAPI/nf-libloaderapi-loadlibraryexa) (oder eine Funktion, die diese Funktionen aufruft) aufrufen, da dies Abhängigkeitsschleifen in der DLL-Lade reihenfolge erstellen kann. Dies kann dazu führen, dass eine DLL verwendet wird, bevor das System seinen Initialisierungscode ausgeführt hat. Ebenso darf die Einstiegspunktfunktion die [**FreeLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) (oder eine Funktion, die **FreeLibrary** aufruft) während der Prozessbeendigung nicht aufrufen, da dies dazu führen kann, dass eine DLL verwendet wird, nachdem das System seinen Beendigungscode ausgeführt hat.
 
-Da Kernel32.dll im Prozess Adressraum garantiert geladen wird, wenn die Einstiegspunkt Funktion aufgerufen wird, führt das Aufrufen von Funktionen in Kernel32.dll nicht dazu, dass die dll verwendet wird, bevor Ihr Initialisierungs Code ausgeführt wurde. Daher kann die Einstiegspunkt Funktion [Synchronisierungs Objekte](/windows/desktop/Sync/synchronization-objects) erstellen, z. b. kritische Abschnitte und Mutexen, und TLS verwenden, da sich diese Funktionen in Kernel32.dll befinden. Es ist z. b. nicht sicher, die Registrierungsfunktionen aufzurufen, da Sie sich in Advapi32.dll befinden.
+Da Kernel32.dll beim Aufruf der Einstiegspunktfunktion garantiert in den Prozessadressenbereich geladen wird, führt das Aufrufen von Funktionen in Kernel32.dll nicht dazu, dass die DLL verwendet wird, bevor ihr Initialisierungscode ausgeführt wurde. Daher kann die Einstiegspunktfunktion [](/windows/desktop/Sync/synchronization-objects) Synchronisierungsobjekte wie kritische Abschnitte und Mutexe erstellen und TLS verwenden, da sich diese Funktionen in Kernel32.dll. Es ist beispielsweise nicht sicher, die Registrierungsfunktionen auf aufruft, da sie sich in Advapi32.dll.
 
-Das Aufrufen anderer Funktionen kann zu Problemen führen, die schwer zu diagnostizieren sind. Das Aufrufen von Benutzer-, Shell-und com-Funktionen kann z. b. zu Zugriffs Verletzungs Fehlern führen, da einige Funktionen in ihren DLLs [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) aufrufen, um andere Systemkomponenten zu laden. Umgekehrt kann das Aufrufen dieser Funktionen während der Beendigung zu Zugriffs Verletzungs Fehlern führen, da die entsprechende Komponente möglicherweise bereits entladen oder nicht initialisiert wurde.
+Das Aufrufen anderer Funktionen kann zu Problemen führen, die schwer zu diagnostizieren sind. Beispielsweise kann das Aufrufen von User-, Shell- und COM-Funktionen zu Zugriffsverletzungsfehlern führen, da einige Funktionen in ihren DLLs [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) aufrufen, um andere Systemkomponenten zu laden. Umgekehrt kann das Aufrufen dieser Funktionen während der Beendigung zu Zugriffsverletzungsfehlern führen, da die entsprechende Komponente möglicherweise bereits entladen oder nicht initialisiert wurde.
 
-Im folgenden Beispiel wird veranschaulicht, wie die-DLL-Einstiegspunkt Funktion strukturiert wird.
+Im folgenden Beispiel wird veranschaulicht, wie die DLL-Einstiegspunktfunktion strukturiert wird.
 
 ``` syntax
 BOOL WINAPI DllMain(
@@ -81,9 +81,9 @@ BOOL WINAPI DllMain(
 }
 ```
 
-## <a name="entry-point-function-return-value"></a>Rückgabewert der Entry-Point Funktion
+## <a name="entry-point-function-return-value"></a>Entry-Point-Rückgabewert der Funktion
 
-Wenn eine DLL-Einstiegspunkt Funktion aufgerufen wird, weil ein Prozess geladen wird, gibt die Funktion **true** zurück, um den Erfolg anzugeben. Bei Prozessen, die das Lade Zeit Verknüpfungen verwenden, bewirkt der Rückgabewert **false** , dass die Prozess Initialisierung fehlschlägt und der Prozess beendet wird. Für Prozesse, die Lauf Zeit Verknüpfungen verwenden, bewirkt der Rückgabewert FALSE, dass die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion oder die [**LoadLibraryEx**](/windows/desktop/api/LibLoaderAPI/nf-libloaderapi-loadlibraryexa) -Funktion **null** zurückgibt, was auf einen Fehler hinweist. (Das System ruft sofort die Einstiegspunkt Funktion mit dem **dll \_ - \_ Prozess** ab und entlädt die dll.) Der Rückgabewert der Einstiegspunkt Funktion wird ignoriert, wenn die Funktion aus einem anderen Grund aufgerufen wird.
+Wenn eine DLL-Einstiegspunktfunktion aufgerufen wird, weil ein Prozess geladen wird, gibt die Funktion **TRUE** zurück, um den Erfolg anzugeben. Bei Prozessen, die die Verknüpfung zur Ladezeit verwenden, führt der Rückgabewert **FALSE** dazu, dass die Prozessin initialisierung fehlschlägt und der Prozess beendet wird. Bei Prozessen, die die Laufzeitverknüpfung verwenden, bewirkt der Rückgabewert FALSE, dass die [**LoadLibrary-**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) oder [**LoadLibraryEx-Funktion**](/windows/desktop/api/LibLoaderAPI/nf-libloaderapi-loadlibraryexa) **NULL** zurückgibt, was auf einen Fehler hinweist. (Das System ruft die Einstiegspunktfunktion sofort mit **DLL \_ PROCESS \_ DETACH** auf und entlädt die DLL.) Der Rückgabewert der Einstiegspunktfunktion wird ignoriert, wenn die Funktion aus einem anderen Grund aufgerufen wird.
 
  
 

@@ -1,12 +1,12 @@
 ---
-title: Imsrdpdrive redirectionstate (Eigenschaft)
-description: Gibt den Umleitungs Status des Laufwerks an.
+title: IMsRdpDrive RedirectionState-Eigenschaft
+description: Gibt den Umleitungsstatus des Laufwerks an.
 ms.assetid: 05333671-460d-4c07-8b7e-fbb7bc215353
 ms.tgt_platform: multiple
 keywords:
-- Redirectionstate-Eigenschaft Remotedesktopdienste
-- Redirectionstate-Eigenschaft Remotedesktopdienste, imsrdpdrive-Schnittstelle
-- Imsrdpdrive-Schnittstelle Remotedesktopdienste, redirectionstate-Eigenschaft
+- RedirectionState-Eigenschaft Remotedesktopdienste
+- RedirectionState-Eigenschaft Remotedesktopdienste , IMsRdpDrive-Schnittstelle
+- IMsRdpDrive-Schnittstelle Remotedesktopdienste , RedirectionState-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7561190e976e0b8190553376f5e9f7a5b2de2550
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6069ec911210fac3f4334bdf9e84da080e5536a4f4b6cfc7aca0e54fe0bd2228
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118351958"
 ---
-# <a name="imsrdpdriveredirectionstate-property"></a>Imsrdpdrive:: redirectionstate-Eigenschaft
+# <a name="imsrdpdriveredirectionstate-property"></a>IMsRdpDrive::RedirectionState-Eigenschaft
 
-Gibt den Umleitungs Status des Laufwerks an.
+Gibt den Umleitungsstatus des Laufwerks an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,11 +49,11 @@ HRESULT get_RedirectionState(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf **Variant \_ false** fest. , wenn Umleitung oder **Variant \_ true** deaktiviert werden soll. , um die Umleitung zu aktivieren.
+Legen Sie diesen Parameter auf **VARIANT \_ FALSE fest.** , um die Umleitung oder **VARIANT \_ TRUE** zu deaktivieren. , um die Umleitung zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,15 +65,15 @@ Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere 
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpdrive ist als d28b5458-f694-47a8-8e61-40356a767e46 definiert.<br/>         |
+| IID<br/>                      | IID \_ IMsRdpDrive ist als d28b5458-f694-47a8-8e61-40356a767e46 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpdrive**](imsrdpdrive.md)
+[**IMsRdpDrive**](imsrdpdrive.md)
 </dt> </dl>
 
  

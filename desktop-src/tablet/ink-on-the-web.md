@@ -1,27 +1,27 @@
 ---
-description: Mit dem Windows Vista Software Development Kit und Windows XP Tablet PC Edition Development Kit können Sie frei Hand fähige Webanwendungen für Tablet PC-Benutzer erstellen, die auf Remote Anwendungen zugreifen müssen.
+description: Mit dem Windows Vista Software Development Kit und Windows XP Tablet PC Edition Development Kit können Sie ink-fähige Webanwendungen für Tablet PC-Benutzer erstellen, die auf Remoteanwendungen zugreifen müssen.
 ms.assetid: 4ba1ab4b-57d2-40da-a7c7-2402f8845ff5
-title: Frei Hand Eingaben im Web
+title: Ink im Web
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4c3584fdc0f19cbf9ac1a60e8f1607971165077
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e916f35e81bdced9e5b57871529f010c8ab0b11bdf205b0a51c070730bd7adcb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220803"
 ---
-# <a name="ink-on-the-web"></a>Frei Hand Eingaben im Web
+# <a name="ink-on-the-web"></a>Ink im Web
 
-Mit dem Windows Vista Software Development Kit und Windows XP Tablet PC Edition Development Kit können Sie frei Hand fähige Webanwendungen für Tablet PC-Benutzer erstellen, die auf Remote Anwendungen zugreifen müssen. Hierfür gibt es zwei grundlegende Verfahren: eine Bereitstellung ohne Benutzereingriff, mit der .NET-Anwendungen von einem Web-oder Dateiserver bereitgestellt werden können, und der andere besteht darin, frei Hand aktivierte Webseiten mit Windows Forms-Steuerelementen zu erstellen. In beiden Fällen wird die frei Hand Eingabe auf dem Client und nicht auf dem Server behandelt. Beachten Sie, dass die com-API für das Web nicht unterstützt wird.
+Mit dem Windows Vista Software Development Kit und Windows XP Tablet PC Edition Development Kit können Sie ink-fähige Webanwendungen für Tablet PC-Benutzer erstellen, die auf Remoteanwendungen zugreifen müssen. Hierfür gibt es zwei grundlegende Techniken: eine ist eine No-Touch-Bereitstellung, die die Bereitstellung von .NET-Anwendungen über einen Web- oder Dateiserver ermöglicht, und die andere besteht darin, Freihandwebseiten mit Windows Forms-Steuerelementen zu erstellen. In beiden Fällen wird die Ink-Datei nicht auf dem Server, sondern auf dem Client verarbeitet. Beachten Sie, dass die COM-API für das Web nicht unterstützt wird.
 
-Um die Client seitige Verarbeitung über das Internet zu verwenden, müssen Sie das .net-Sicherheitsmodell verstehen und wissen, wie sich der Betrieb mit teilweiser Vertrauenswürdigkeit auf Ihre Anwendung auswirkt. Aus diesem Grund werden Sicherheit und Vertrauensstellung für Tablet PC-Anwendungen ebenfalls erläutert.
+Um die clientseitige Verarbeitung über das Web zu verwenden, müssen Sie das .NET-Sicherheitsmodell verstehen und wissen, wie sich das Arbeiten mit teilweiser Vertrauenswürdigkeit auf Ihre Anwendung auswirkt. Aus diesem Grund werden auch Sicherheit und Vertrauen für Tablet PC-Anwendungen erläutert.
 
-Die folgenden Themen enthalten Hinweise auf verschiedene Methoden zum Erstellen von frei Hand fähigen Webanwendungen.
+Die folgenden Themen enthalten Hinweise zu verschiedenen Möglichkeiten zum Erstellen von Ink-fähigen Webanwendungen.
 
--   [Keine Berührungs Bereitstellung](no-touch-deployment.md)
--   [Websteuer Elemente](web-controls.md)
--   [Frei Hand fähige Webanwendungen](ink-enabled-web-applications.md)
+-   [Keine Touchbereitstellung](no-touch-deployment.md)
+-   [Websteuerelemente](web-controls.md)
+-   [Ink-fähige Webanwendungen](ink-enabled-web-applications.md)
 -   [Sicherheit und Vertrauenswürdigkeit](security-and-trust.md)
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die Execute-Methode des View-Objekts verwendet das Fragezeichen Token zum Darstellen von Parametern in einer SQL-Anweisung. Weitere Informationen finden Sie unter SQL-Syntax. Die Werte dieser Parameter werden als die entsprechenden Felder eines Parameterdaten Satzes übergeben.
+description: Die Execute-Methode des View-Objekts verwendet das Fragezeichentoken, um Parameter in einer SQL darstellen. Weitere Informationen finden Sie unter SQL Syntax. Die Werte dieser Parameter werden als entsprechende Felder eines Parameterdatensatz übergeben.
 ms.assetid: 4f2b2cb8-8f59-4e4a-ba09-6cb092ef81d6
-title: View.Exeniedliche Methode
+title: View.Execute-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 939d1aa5216085d701fb728ad5e5e9aa9e07e702
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9bfd1120382ea06f6046f4435d0143024422ff6345959099326ab4a5428d26d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117804028"
 ---
-# <a name="viewexecute-method"></a>View.Exeniedliche Methode
+# <a name="viewexecute-method"></a>View.Execute-Methode
 
-Die **Execute** -Methode des [**View**](view-object.md) -Objekts verwendet das Fragezeichen Token zum Darstellen von Parametern in einer SQL-Anweisung. Weitere Informationen finden Sie unter [SQL-Syntax](sql-syntax.md). Die Werte dieser Parameter werden als die entsprechenden Felder eines Parameterdaten Satzes übergeben.
+Die **Execute-Methode** des [**View-Objekts**](view-object.md) verwendet das Fragezeichentoken, um Parameter in einer SQL darstellen. Weitere Informationen finden Sie unter [SQL Syntax](sql-syntax.md). Die Werte dieser Parameter werden als entsprechende Felder eines Parameterdatensatz übergeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ View.Execute(
 *record* 
 </dt> <dd>
 
-Optionale [**Datensatz**](record-object.md) -Objekte, die die Werte enthalten, die die Parameter Token (?) in der SQL-Abfrage ersetzen.
+Optionale [**Datensatzobjekte,**](record-object.md) die die Werte enthalten, die die Parametertoken (?) in der SQL ersetzen.
 
 </dd> </dl>
 
@@ -50,25 +50,25 @@ Optionale [**Datensatz**](record-object.md) -Objekte, die die Werte enthalten, d
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss vor allen Aufrufen der [**Fetch**](view-fetch.md) -Methode aufgerufen werden.
+Diese Methode muss aufgerufen werden, bevor die [**Fetch-Methode aufgerufen**](view-fetch.md) wird.
 
-Wenn die SQL-Abfrage Werte mit Parameter Markierungen (?) angibt, muss ein Datensatz angegeben werden, der alle Ersetzungs Werte enthält, die sich in der gleichen Reihenfolge und dem gleichen Datentyp wie die Parameter Markierungen befinden müssen. Wenn diese Methode mit INSERT-und Update-Abfragen verwendet wird, müssen die Fragezeichen Token allen nicht parametrisierten Werten vorangestellt sein.
+Wenn die SQL-Abfrage Werte mit Parametermarkierungen (?) angibt, muss ein Datensatz bereitgestellt werden, der alle Ersetzungswerte enthält, die in der gleichen Reihenfolge und vom gleichen Datentyp wie die Parametermarker sein müssen. Wenn diese Methode mit INSERT- und UPDATE-Abfragen verwendet wird, müssen die Fragezeichentoken allen nicht parametrisierten Werten voran stehen.
 
-Diese Abfragen sind z. b. gültig:
+Diese Abfragen sind beispielsweise gültig:
 
-Aktualisieren von {Table-List} Set {Column} =? , {Column} = {Constant}
+UPDATE {table-list} SET {column}= ? , {column}= {constant}
 
-INSERT INTO {TABLE} ({Column-List})-Werte (?, {Constant-List})
+INSERT INTO {table} ({column-list}) VALUES (?, {constant-list})
 
 Diese Abfragen sind jedoch ungültig:
 
-Aktualisieren von {Table-List} Set {Column} = {Constant}, {Column} =?
+UPDATE {table-list} SET {column}= {constant}, {column}=?
 
-INSERT INTO {TABLE} ({Column-List})-Werte ({Constant-List},? )
+INSERT INTO {table} ({column-list}) VALUES ({constant-list}, ? )
 
-Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn bei der Methode ein Fehler auftritt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iView ist definiert als 000c109c-0000-0000-C000-000000000046<br/>                                                                                                                                                                                |
+| IID<br/>     | IID IView ist als \_ 000C109C-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                |
 
 
 

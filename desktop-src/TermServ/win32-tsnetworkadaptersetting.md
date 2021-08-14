@@ -1,11 +1,11 @@
 ---
 title: Win32_TSNetworkAdapterSetting-Klasse
-description: Definiert verschiedene Konfigurationseinstellungen für die Win32- \_ Terminal Klasse einschließlich Eigenschaften im Zusammenhang mit dem Netzwerkadapter und die maximal zulässige Anzahl von Verbindungen.
+description: Definiert verschiedene Konfigurationseinstellungen für die Win32 \_ Terminal-Klasse, einschließlich Eigenschaften im Zusammenhang mit dem Netzwerkadapter und der maximal zulässigen Anzahl von Verbindungen.
 ms.assetid: b8a757e6-801b-4349-902e-76596b06df1f
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSNetworkAdapterSetting-Klasse Remotedesktopdienste
-- Win32_TSNetworkAdapterSetting Klasse Remotedesktopdienste, beschrieben
+- Win32_TSNetworkAdapterSetting-Klassen-Remotedesktopdienste
+- Win32_TSNetworkAdapterSetting-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -29,18 +29,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f2f2f1ac7d6bf4b1fd3fb5f5a92fc4fd5260a92
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9bddc43fc651b8107d56b63876b251f7973c6a11ecbdbbd5ee22e6dfec4338f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118348545"
 ---
-# <a name="win32_tsnetworkadaptersetting-class"></a>Win32-Klasse "t \_ Network adaptersetting"
+# <a name="win32_tsnetworkadaptersetting-class"></a>Win32 \_ TSNetworkAdapterSetting-Klasse
 
-Die Win32-Klasse "t- **\_ networkadaptersetting** " definiert verschiedene Konfigurationseinstellungen für die [**Win32- \_ Terminal**](win32-terminal.md) Klasse, einschließlich Eigenschaften für den Netzwerkadapter und die maximal zulässige Anzahl von Verbindungen.
+Die WMI-Klasse **Win32 \_ TSNetworkAdapterSetting** definiert verschiedene Konfigurationseinstellungen für die [**Win32 \_ Terminal-Klasse,**](win32-terminal.md) einschließlich Eigenschaften im Zusammenhang mit dem Netzwerkadapter und der maximal zulässigen Anzahl von Verbindungen.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und umfasst alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu-Methoden finden Sie in der Tabelle mit den Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird aus MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,22 +66,22 @@ class Win32_TSNetworkAdapterSetting : Win32_TerminalSetting
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse "t **\_ Network adaptersetting** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSNetworkAdapterSetting-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ znetworkadaptersetting** " verfügt über diese Methoden.
+Die **Win32 \_ TSNetworkAdapterSetting-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                     | BESCHREIBUNG                                                                                              |
 |:-------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------|
-| [**Selectallnetworkadapters**](win32-tsnetworkadaptersetting-selectallnetworkadapters.md) | Wählt alle Netzwerkadapter aus.<br/>                                                                 |
-| [**Selectnetworkadapterip**](win32-tsnetworkadaptersetting-selectnetworkadapterip.md)     | Wählt einen Netzwerkadapter auf der Grundlage der IP-Adresse des Adapters aus.<br/>                                  |
-| [**Setnetworkadapterlanaid**](setnetworkadapterlanaid-win32-tsnetworkadaptersetting.md)   | Gibt die NetBIOS-Nummer des lokalen Netzwerkadapters (Lana) des festzulegenden Netzwerkadapters an.<br/> |
+| [**Wählen SieAllNetworkAdapters aus.**](win32-tsnetworkadaptersetting-selectallnetworkadapters.md) | Wählt alle Netzwerkadapter aus.<br/>                                                                 |
+| [**Wählen SieNetworkAdapterIP aus.**](win32-tsnetworkadaptersetting-selectnetworkadapterip.md)     | Wählt einen Netzwerkadapter basierend auf der IP-Adresse des Adapters aus.<br/>                                  |
+| [**SetNetworkAdapterLanaID**](setnetworkadapterlanaid-win32-tsnetworkadaptersetting.md)   | Gibt die LANA-Nummer (Local Area Network Adapter) des festzulegenden Netzwerkadapters für NetBIOS an.<br/> |
 
 
 
@@ -89,23 +89,23 @@ Die Win32-Klasse " **\_ znetworkadaptersetting** " verfügt über diese Methoden
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse "t **\_ Network adaptersetting** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSNetworkAdapterSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilige Zeichenfolge) des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -114,7 +114,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -126,32 +126,32 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Geräteliste**
+**DeviceIDList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen Array von verfügbaren Geräte-IDs, die in der Reihenfolge der physischen Netzwerkadapter zurückgegeben werden, die im **NetworkAdapterList** -Eigenschafts Array Der Geräte-ID-Wert ist die **DeviceID** -Eigenschaft im [**Win32- \_ NetworkAdapter**](/windows/desktop/CIMWin32Prov/win32-networkadapter) .
+Zeichenfolgenarray der verfügbaren Geräte-IDs, die in der Reihenfolge der physischen Netzwerkadapter zurückgegeben werden, die im **Eigenschaftenarray NetworkAdapterList** zurückgegeben werden. Der Geräte-ID-Wert ist die **DeviceID-Eigenschaft** in [**Win32 \_ NetworkAdapter.**](/windows/desktop/CIMWin32Prov/win32-networkadapter)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -160,20 +160,20 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **MaximumConnections**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die maximal zulässige Anzahl von Verbindungen. Der Wert **MAXINT** deutet auf eine unbegrenzte Anzahl von Verbindungen hin.
+Die maximale Anzahl zulässiger Verbindungen. Der Wert **MAXINT** gibt eine unbegrenzte Anzahl von Verbindungen an.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -188,65 +188,65 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **NetworkAdapterID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die GUID, die die ID des festzulegenden Netzwerkadapters darstellt. Eine **GUID** , die aus allen Nullen besteht, bezeichnet alle Netzwerkadapter.
+Die GUID, die die ID des festzulegende Netzwerkadapters darstellt. Eine **GUID,** die aus allen Nullen besteht, kennzeichnet alle Netzwerkadapter.
 
 </dd> <dt>
 
-**Networkadapterlanaid**
+**NetworkAdapterLanaID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-NetBIOS-Nummer des lokalen Netzwerkadapters (Lana) des Netzwerkadapters, der zum Identifizieren des dem Terminal zugewiesenen Netzwerkadapters verwendet wird.
+NetBIOS-LANA-Nummer (Local Area Network Adapter) des Netzwerkadapters, der zum Identifizieren des Netzwerkadapters verwendet wird, der dem Terminal zugewiesen ist.
 
 </dd> <dt>
 
-**Network Adapter List**
+**NetworkAdapterList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen Array von verfügbaren physischen Netzwerkadaptern und den entsprechenden Geräte-IDs. Die Geräte-IDs sind die **DeviceID** -Eigenschaft im [**Win32- \_ NetworkAdapter**](/windows/desktop/CIMWin32Prov/win32-networkadapter).
+Zeichenfolgenarray der verfügbaren physischen Netzwerkadapter und der entsprechenden Geräte-IDs. Die Geräte-IDs sind die **DeviceID-Eigenschaft** in [**Win32 \_ NetworkAdapter**](/windows/desktop/CIMWin32Prov/win32-networkadapter).
 
 </dd> <dt>
 
-**Network Adapter Name**
+**NetworkAdapterName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Beschreibung des festzulegenden Netzwerkadapters. Dieser Wert ist in [**Win32 \_ networkadapterconfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration).
+Beschreibung des festzulegende Netzwerkadapters. Dieser Wert befindet sich in [**Win32 \_ NetworkAdapterConfiguration.**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration)
 
 </dd> <dt>
 
 **PolicySourceMaximumConnections**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **MaximumConnections** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **MaximumConnections-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -276,16 +276,16 @@ Standard
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -349,10 +349,10 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Terminal Name**
+**TerminalName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -360,15 +360,15 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Terminals.
 
-Diese Eigenschaft wird von [**Win32 \_ TerminalSetting**](win32-terminalsetting.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ TerminalSetting geerbt.**](win32-terminalsetting.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass die der Konsolen Sitzung zugeordneten Winstations nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn ein Versuch unternommen wird, indem "Console" als Wert der Terminalname-Eigenschaft angegeben wird, geben die Methoden dieses Objekts **WBEM \_ E \_ nicht \_ unterstützt** zurück. Dieser Fehlercode wird auch zurückgegeben, wenn eine Fenster Station versucht, Methoden dieses Objekts aufzurufen, um die Sicherheitseigenschaften der Konten "LocalSystem", "LocalService" oder "Network Service" hinzuzufügen oder zu ändern.
+Beachten Sie, dass Winstations, die der Konsolensitzung zugeordnet sind, nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn versucht wird, dies zu tun, indem "Console" als Wert der TerminalName-Eigenschaft angegeben wird, geben Methoden dieses Objekts **WBEM \_ E NOT SUPPORTED \_ \_ zurück.** Dieser Fehlercode wird auch zurückgegeben, wenn eine Fensterstation versucht, Methoden dieses Objekts auf aufruft, um die Sicherheitseigenschaften der Konten LocalSystem, LocalService oder NetworkService hinzuzufügen oder zu ändern.
 
-Zum Herstellen einer Verbindung mit dem \\ Namespace "root cimv2 \\ TerminalServices" muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem Namespace "Root \\ CIMV2 TerminalServices" herzustellen, muss die \\ Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -379,7 +379,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -389,26 +389,26 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ NetworkAdapter**](/windows/desktop/CIMWin32Prov/win32-networkadapter)
+[**Win32 \_ NetworkAdapter**](/windows/desktop/CIMWin32Prov/win32-networkadapter)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration)
+[**Win32 \_ NetworkAdapterConfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration)
 </dt> <dt>
 
 [**Win32 \_ TerminalSetting**](win32-terminalsetting.md)
 </dt> <dt>
 
-[**Win32-Datei "t-Network \_ adapterlistsetting"**](win32-tsnetworkadapterlistsetting.md)
+[**Win32 \_ TSNetworkAdapterListSetting**](win32-tsnetworkadapterlistsetting.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: RCP-PS
-description: Berechnet die gegenseitige des Quell Skalars. | RCP-PS
+title: rcp – ps
+description: Berechnet den Kehrwert des Quellskalars. | rcp – ps
 ms.assetid: d8dfc2b3-4404-47ec-aeaf-1adb7e7a342e
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2df8ad2d673d96dced84630b1a641c7e4f27ceb2
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fba443d4a2e05794f8c1965e46a61c65edae50b95845f0f80faa0c0ab6c6bf71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118510955"
 ---
-# <a name="rcp---ps"></a>RCP-PS
+# <a name="rcp---ps"></a>rcp – ps
 
-Berechnet die gegenseitige des Quell Skalars.
+Berechnet den Kehrwert des Quellskalars.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| RCP DST, src |
+| rcp dst, src |
 |--------------|
 
 
@@ -33,14 +33,14 @@ Berechnet die gegenseitige des Quell Skalars.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register. Das Quell Register erfordert die explizite Verwendung von replizierten Strichen, d. h. genau einer der x-, y-,. z-,. w-Swizzle-Komponenten (oder r,. g,. b,. a-äquivalente) muss angegeben werden.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von replicate swizzle, d.h. genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) muss angegeben werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | rcp                   |      |      |      |      | x    | x    | x     | x    | x     |
 
@@ -50,15 +50,15 @@ where
 
 Die Ausgabe muss genau 1,0 sein, wenn die Eingabe genau 1,0 ist. Eine Quelle von 0,0 ergibt unendlich.
 
-Das skalare Ergebnis wird in allen Kanälen in der Ziel Schreib Maske repliziert.
+Das skalare Ergebnis wird in alle Kanäle in der Ziel-Schreibmaske repliziert.
 
-Die Genauigkeit muss mindestens 1.0/(2 ² ²) absolute Fehler im Bereich (1,0, 2,0) betragen, da allgemeine Implementierungen die Mantisse und den Exponenten voneinander trennen.
+Die Genauigkeit sollte mindestens 1,0/(2): absoluter Fehler über dem Bereich (1,0, 2,0) liegen, da allgemeine Implementierungen Mantisse und Exponent trennen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

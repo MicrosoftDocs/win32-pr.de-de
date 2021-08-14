@@ -1,21 +1,21 @@
 ---
-description: LOCALE \_ sdate
+description: LOCALE \_ SDATE
 ms.assetid: 18b62bee-b167-4499-aae4-21e215cb6377
 title: LOCALE_SDATE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 257a6da36b3d3e756c01468dec51526e56c7ec8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 76e55e232d5b5a6960e15b648703b9bd6accb6cb7f89353670d02c3c2b789f93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118391536"
 ---
-# <a name="locale_sdate"></a>LOCALE \_ sdate
+# <a name="locale_sdate"></a>LOCALE \_ SDATE
 
-Zeichen für das Datums Trennzeichen. Die maximal zulässige Anzahl von Zeichen für diese Zeichenfolge ist vier, einschließlich eines abschließenden NULL-Zeichens.
+Zeichen für das Datumstrennzeichen. Die maximale Anzahl von Zeichen, die für diese Zeichenfolge zulässig sind, beträgt vier, einschließlich eines beendenden NULL-Zeichens.
 
-**Windows Vista und höher:** Diese Konstante ist veraltet. Verwenden Sie stattdessen [locale \_ sshortdate](locale-sshortdate.md) . Ein benutzerdefiniertes Gebiets Schema darf nicht über ein einzelnes, einheitliches Trennzeichen verfügen. Beispielsweise ist ein Format wie z. b. "12/31, 2006" gültig.
+**Windows Vista und höher:** Diese Konstante ist veraltet. Verwenden [Sie stattdessen LOCALE \_ SSHORTDATE.](locale-sshortdate.md) Ein benutzerdefiniertes Locale hat möglicherweise kein einzelnes, einheitliches Trennzeichen. Beispielsweise ist ein Format wie "12/31, 2006" gültig.
 
  
 

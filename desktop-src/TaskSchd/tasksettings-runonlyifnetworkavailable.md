@@ -1,11 +1,11 @@
 ---
-title: Tasksettings. runonlyifnetworkavailable (Eigenschaft)
-description: Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, dass die Taskplaner den Task nur dann ausführen, wenn ein Netzwerk verfügbar ist, oder legt diesen fest.
+title: TaskSettings.RunOnlyIfNetworkAvailable (Eigenschaft)
+description: Für die Skripterstellung ruft einen booleschen Wert ab, der angibt, dass der Taskplaner die Aufgabe nur dann ausführen wird, wenn ein Netzwerk verfügbar ist, oder legt diesen fest.
 ms.assetid: 1a2b085f-0572-47d3-ac1f-0032c8427af0
 keywords:
-- Runonlyifnetworkavailable-Eigenschaft Taskplaner
-- Runonlyifnetworkavailable-Eigenschaft Taskplaner, tasksettings-Objekt
-- Tasksettings-Objekt Taskplaner, runonlyifnetworkavailable-Eigenschaft
+- RunOnlyIfNetworkAvailable-Eigenschaft Taskplaner
+- RunOnlyIfNetworkAvailable-Eigenschaft Taskplaner , TaskSettings-Objekt
+- TaskSettings-Taskplaner , RunOnlyIfNetworkAvailable-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8225d836e5bc87abd5ce9b6c311b4af527561d41
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 193d235276ffc37513c95b5ae0a4cef5a6e84cd0bc7d8bea7fab67a262110080
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118354847"
 ---
-# <a name="tasksettingsrunonlyifnetworkavailable-property"></a>Tasksettings. runonlyifnetworkavailable (Eigenschaft)
+# <a name="tasksettingsrunonlyifnetworkavailable-property"></a>TaskSettings.RunOnlyIfNetworkAvailable (Eigenschaft)
 
-Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, dass die Taskplaner den Task nur dann ausführen, wenn ein Netzwerk verfügbar ist, oder legt diesen fest.
+Für die Skripterstellung ruft einen booleschen Wert ab, der angibt, dass der Taskplaner die Aufgabe nur dann ausführen wird, wenn ein Netzwerk verfügbar ist, oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -40,11 +40,11 @@ TaskSettings.RunOnlyIfNetworkAvailable As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Wenn true, gibt die-Eigenschaft an, dass die Taskplaner die Aufgabe nur dann ausführen soll, wenn ein Netzwerk verfügbar ist. Die Standardeinstellung lautet „false“.
+True gibt an, dass der Taskplaner task nur dann ausgeführt wird, wenn ein Netzwerk verfügbar ist. Die Standardeinstellung lautet „false“.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**runonlyifnetworkavailable**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**RunOnlyIfNetworkAvailable-Element**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,14 +52,14 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

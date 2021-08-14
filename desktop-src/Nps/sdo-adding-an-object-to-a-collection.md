@@ -5,16 +5,16 @@ ms.assetid: fc62698d-0bb9-478c-91cf-9f8fec36dba4
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1990829e88d54838dbce2658c914ceff602d8e8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a0f359df40b864c6dcbc1e251e35661b137990ebb9473a177423fbf18acb43e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118362262"
 ---
 # <a name="adding-an-object-to-a-collection"></a>Hinzufügen eines Objekts zu einer Auflistung
 
-Mit dem folgenden Code wird der IAS-Richtlinien Auflistung eine neue Richtlinie hinzugefügt. Die Variable "pclientscollection" verweist auf eine [**isdocollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection) -Schnittstelle für die Auflistung. Informationen zum Abrufen des Sammlungs Objekts finden Sie unter [Abrufen einer](/windows/desktop/Nps/sdo-retrieving-a-collection) Auflistung.
+Der folgende Code fügt der SAMMLUNG DER IAS-Richtlinien eine neue Richtlinie hinzu. Die Variable pClientsCollection verweist auf eine [**ISdoCollection-Schnittstelle**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection) für die Auflistung. Informationen zum Abrufen des Sammlungsobjekts finden Sie unter [Abrufen einer](/windows/desktop/Nps/sdo-retrieving-a-collection) Sammlung.
 
 
 ```C++
@@ -111,21 +111,21 @@ Mit dem folgenden Code wird der IAS-Richtlinien Auflistung eine neue Richtlinie 
 
 <dl> <dt>
 
-[\_BSTR \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278286(v=vs.60))
+[\_bstr \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278286(v=vs.60))
 </dt> <dt>
 
-[**Isdocollection:: Add**](/windows/desktop/api/sdoias/nf-sdoias-isdocollection-add)
+[**ISdoCollection::Add**](/windows/desktop/api/sdoias/nf-sdoias-isdocollection-add)
 </dt> <dt>
 
-[**Isdocollection:: IsNameUnique**](/windows/desktop/api/sdoias/nf-sdoias-isdocollection-isnameunique)
+[**ISdoCollection::IsNameUnique**](/windows/desktop/api/sdoias/nf-sdoias-isdocollection-isnameunique)
 </dt> <dt>
 
-[Abrufen einer Sammlung](/windows/desktop/Nps/sdo-retrieving-a-collection)
+[Abrufen einer Auflistung](/windows/desktop/Nps/sdo-retrieving-a-collection)
 </dt> <dt>
 
-[**Konfigur**](/windows/win32/api/oaidl/ns-oaidl-variant)
+[**Variante**](/windows/win32/api/oaidl/ns-oaidl-variant)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

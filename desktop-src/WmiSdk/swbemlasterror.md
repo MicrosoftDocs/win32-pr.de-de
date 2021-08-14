@@ -1,8 +1,8 @@
 ---
-description: Die-Methoden und-Eigenschaften des-Objekts von "taubemlasterror" enthalten Fehler Objekte und bearbeiten diese.
+description: Die Methoden und Eigenschaften des SWbemLastError-Objekts enthalten und bearbeiten Fehlerobjekte.
 ms.assetid: 11a652fa-29e8-437b-8e62-e28e56a8a38d
 ms.tgt_platform: multiple
-title: Taubemlasterror-Objekt (wbemdisp. h)
+title: SWbemLastError-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -39,53 +39,53 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: a00d8e3421800acab7cc4958ddc1e6a75f101958
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a73312c38857b57f3ffeec8fcaf8a9ea5847001393d0a03d4916da76ffcb8c0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118314459"
 ---
-# <a name="swbemlasterror-object"></a>Taubemlasterror-Objekt
+# <a name="swbemlasterror-object"></a>SWbemLastError-Objekt
 
-Die-Methoden und-Eigenschaften des-Objekts von " **taubemlasterror** " enthalten Fehler Objekte und bearbeiten diese. Die Methoden und Eigenschaften dieses Objekts sind identisch mit denen des WS [**-Objekts,**](swbemobject.md) werden jedoch verwendet, um Fehlerinformationen anstelle von WMI-Klassen Informationen zu enthalten. Dieses Objekt kann durch den VBScript-Befehl "up- **Object** " erstellt werden.
+Die Methoden und Eigenschaften des **SWbemLastError-Objekts** enthalten und bearbeiten Fehlerobjekte. Die Methoden und Eigenschaften dieses Objekts sind identisch mit denen des [**SWbemObject-Objekts,**](swbemobject.md) werden jedoch verwendet, um Fehlerinformationen anstelle von WMI-Klasseninformationen zu enthalten. Dieses Objekt kann durch den VBScript **CreateObject-Aufruf erstellt** werden.
 
-Sie können das Fehler Objekt " **taubemlasterror** " erstellen, um die erweiterten Fehlerinformationen zu überprüfen, die einem vorherigen Methoden Aufruftyp zugeordnet sind. Wenn keine Fehlerinformationen verfügbar sind, tritt beim Versuch, ein Fehler Objekt zu erstellen, ein Fehler auf. Wenn der-Vorgang erfolgreich ist und ein Fehler Objekt zurückgibt, wird der Status des Objekts zurückgesetzt. Weitere Versuche, ein Fehler Objekt abzurufen, schlagen fehl, bis ein neuer Fehler auftritt. Wenn Sie einen asynchronen-Rückruf ausführen, der fehlschlägt, kann ein " **slibemlasterror** "-Objekt vom Ereignis " [**slibemsink. onabgeschlossene**](swbemsink-oncompleted.md) " im Parameter " *objWbemErrorObject* " zurückgegeben werden.
+Sie können ein **SWbemLastError-Fehlerobjekt** erstellen, um die erweiterten Fehlerinformationen zu überprüfen, die einem vorherigen Methodenaufruf zugeordnet sind. Wenn keine Fehlerinformationen verfügbar sind, tritt beim Erstellen eines Fehlerobjekts ein Fehler auf. Wenn der Aufruf erfolgreich ist und ein Fehlerobjekt zurückgegeben wird, wird der Status des Objekts zurückgesetzt. Bei weiteren Versuchen, ein Fehlerobjekt abzurufen, tritt ein Fehler auf, bis ein neuer Fehler auftritt. Wenn Sie einen asynchronen Aufruf ausführen, bei dem ein Fehler auftritt, wird ihnen möglicherweise ein **SWbemLastError-Objekt** vom [**SWbemSink.OnCompleted-Ereignis**](swbemsink-oncompleted.md) im *objWbemErrorObject-Parameter* zurückgegeben.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **taubemlasterror** " verfügt über diese Typen von Membern:
+Das **SWbemLastError-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **taubemlasterror** -Objekt verfügt über diese Methoden.
+Das **SWbemLastError-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                                                   | BESCHREIBUNG                                                                                  |
 |:---------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| **ASSOCIATORS\_**                                        | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Associatorsasync\_**                                   | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| [**Klon\_**](swbemlasterror-clone-.md)                 | Erstellt eine Kopie des aktuellen-Objekts.<br/>                                               |
-| [**CompareTo\_**](swbemlasterror-compareto-.md)         | Testet zwei-Objekte auf Gleichheit.<br/>                                                   |
-| **Lösch\_**                                             | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **DeleteAsync\_**                                        | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **ExecMethod\_**                                         | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **ExecMethodAsync\_**                                    | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| [**Getobjecttext\_**](swbemlasterror-getobjecttext-.md) | Ruft die Textdarstellung des-Objekts ab, das mit der MOF-Syntax geschrieben wurde.<br/>       |
-| **Instanzen\_**                                          | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Instancesasync\_**                                     | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Stellte\_**                                                | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Putasync\_**                                           | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **References\_**                                         | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Referencesasync\_**                                    | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **SpawnDerivedClass\_**                                  | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **SpawnInstance\_**                                      | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Unterklassen von  werden erstellt.\_**                                         | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
-| **Subclassesasync\_**                                    | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/> |
+| **Associators\_**                                        | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **AssociatorsAsync\_**                                   | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| [**Klon\_**](swbemlasterror-clone-.md)                 | Erstellt eine Kopie des aktuellen -Objekts.<br/>                                               |
+| [**Compareto\_**](swbemlasterror-compareto-.md)         | Testet zwei -Objekte auf Gleichheit.<br/>                                                   |
+| **Löschen\_**                                             | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **DeleteAsync\_**                                        | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **ExecMethod\_**                                         | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **ExecMethodAsync\_**                                    | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| [**GetObjectText\_**](swbemlasterror-getobjecttext-.md) | Ruft die Textdarstellung des Objekts ab, das mit MOF-Syntax geschrieben wurde.<br/>       |
+| **Instanzen\_**                                          | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **InstancesAsync\_**                                     | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **Put\_**                                                | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **PutAsync\_**                                           | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **Literatur\_**                                         | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **ReferencesAsync\_**                                    | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **SpawnDerivedClass\_**                                  | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **SpawnInstance\_**                                      | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **Unterklassen von  werden erstellt.\_**                                         | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
+| **UnterklassenAsync\_**                                    | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
 
 
 
@@ -93,18 +93,18 @@ Das **taubemlasterror** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **taubemlasterror** -Objekt verfügt über diese Eigenschaften.
+Das **SWbemLastError-Objekt** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                      | Zugriffstyp          | BESCHREIBUNG                                                                                                                                                   |
 |:--------------------------------------------------------------|:---------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ableitung\_**<br/>                                   | Schreibgeschützt<br/> | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/>                                                                  |
-| **Methoden\_** <br/>                                     | Schreibgeschützt<br/> | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/>                                                                  |
-| [**ADS\_**](swbemlasterror-path-.md)<br/>             | Schreibgeschützt<br/> | Enthält ein " [**errbemubjectpath**](swbemobjectpath.md) "-Objekt, das den Objekt Pfad der aktuellen Klasse oder Instanz darstellt.<br/>                    |
-| [**Eigenschaften\_**](swbemlasterror-properties-.md)<br/> | Schreibgeschützt<br/> | Stellt die Auflistung von Eigenschaften des-Objekts von " **Swap LastError** " dar. Bei dieser Eigenschaft handelt es sich um ein Objekt vom [**typaustausch**](swbempropertyset.md) .<br/> |
-| **Qualifikation\_**<br/>                                   | Schreibgeschützt<br/> | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/>                                                                  |
-| **Sicherheit\_**<br/>                                     | Schreibgeschützt<br/> | Nicht verwendet. Das [**errbemujeject**](swbemobject.md) -Objekt bietet dieselbe Methode.<br/>                                                                  |
+| **Ableitung\_**<br/>                                   | Schreibgeschützt<br/> | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/>                                                                  |
+| **Methoden\_** <br/>                                     | Schreibgeschützt<br/> | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/>                                                                  |
+| [**Pfad\_**](swbemlasterror-path-.md)<br/>             | Schreibgeschützt<br/> | Enthält ein [**SWbemObjectPath-Objekt,**](swbemobjectpath.md) das den Objektpfad der aktuellen Klasse oder Instanz darstellt.<br/>                    |
+| [**Eigenschaften\_**](swbemlasterror-properties-.md)<br/> | Schreibgeschützt<br/> | Stellt die Auflistung der Eigenschaften des **SWbemLastError-Objekts** dar. Diese Eigenschaft ist ein [**SWbemPropertySet-Objekt.**](swbempropertyset.md)<br/> |
+| **Qualifikation\_**<br/>                                   | Schreibgeschützt<br/> | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/>                                                                  |
+| **Sicherheit\_**<br/>                                     | Schreibgeschützt<br/> | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/>                                                                  |
 
 
 
@@ -112,7 +112,7 @@ Das **taubemlasterror** -Objekt verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende VBScript-Beispiel veranschaulicht, wie Fehler-und Fehler Objektinformationen überprüft werden.
+Im folgenden VBScript-Beispiel wird veranschaulicht, wie Fehler- und Fehlerobjektinformationen überprüft werden.
 
 
 ```VB
@@ -172,7 +172,7 @@ End If
 
 
 
-Das folgende perl-Beispiel veranschaulicht, wie Fehler-und Fehler Objektinformationen überprüft werden.
+Im folgenden Perl-Beispiel wird veranschaulicht, wie Fehler- und Fehlerobjektinformationen überprüft werden.
 
 
 ```
@@ -246,19 +246,19 @@ else
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Fehler<br/>                                                        |
-| IID<br/>                      | IID \_ iswbemlasterror<br/>                                                         |
+| CLSID<br/>                    | CLSID \_ SWbemLastError<br/>                                                        |
+| IID<br/>                      | IID \_ ISWbemLastError<br/>                                                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  

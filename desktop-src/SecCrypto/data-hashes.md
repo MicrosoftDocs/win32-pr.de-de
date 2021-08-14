@@ -1,27 +1,27 @@
 ---
-description: Ein Hash eines Texts oder einer anderen Byte Zeichenfolge ist ein zugeordneter, statistisch eindeutiger Wert mit fester Länge.
+description: Ein Hash eines Texts oder einer anderen Bytezeichenfolge ist ein zugeordneter, statistisch eindeutiger Wert fester Länge.
 ms.assetid: e54d5a3b-cae1-47dd-a565-7bf1ccef7f52
 title: Datenhashes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed785c79bef67f5a54b0d91c0c2686f8fd1b967f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b2a998c2172f6bd3b48bb3cdc94f1ed2207384606950dd9d6e8b6f3152149eaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117767768"
 ---
 # <a name="data-hashes"></a>Datenhashes
 
-Ein [*Hash*](../secgloss/h-gly.md) eines Texts oder einer anderen Byte Zeichenfolge ist ein zugeordneter, statistisch eindeutiger Wert mit fester Länge. In einigen Dokumenten wird ein *Hashwert* eines Texts auch als Digest bezeichnet. in dieser Dokumentation wird jedoch immer der Begriff Hash verwendet. CryptoAPI-Funktionen bieten die Möglichkeit, einen Hashwert für beliebige Text oder andere Zeichen folgen zu erstellen. Dieser Hash kann dann als eindeutiger Bezeichner der zugehörigen Daten verwendet werden.
+Ein [*Hash*](../secgloss/h-gly.md) eines Texts oder einer anderen Bytezeichenfolge ist ein zugeordneter, statistisch eindeutiger Wert fester Länge. In einigen Dokumenten wird ein *Hash* eines Texts auch als Digest bezeichnet. In dieser Dokumentation wird jedoch immer der Begriff Hash verwendet. CryptoAPI-Funktionen bieten eine Möglichkeit, einen Hash für beliebigen Text oder eine andere Bytezeichenfolge zu erstellen. Dieser Hash kann dann als eindeutiger Bezeichner der zugeordneten Daten verwendet werden.
 
-Um die [*Integrität*](../secgloss/i-gly.md) eines Texts sicherzustellen, kann ein [*Hash*](../secgloss/h-gly.md) eines Texts an den Text gesendet werden. Der Empfänger kann dann einen Hashwert für die empfangenen Daten berechnen und den mit dem empfangenen Hash berechneten Hash vergleichen. Wenn die beiden Übereinstimmungen vorliegen, müssen die empfangenen Daten mit den Daten übereinstimmen, aus denen der empfangene Hash erstellt wurde.
+Um die [*Integrität*](../secgloss/i-gly.md) eines Texts sicherzustellen, kann ein [*Hash*](../secgloss/h-gly.md) eines Texts gesendet werden, um den Text zu begleitet. Der Empfänger kann dann einen Hash für die empfangenen Daten berechnen und den berechneten Hash mit dem empfangenen Hash vergleichen. Wenn die beiden übereinstimmen, müssen die empfangenen Daten mit den Daten übereinstimmen, aus denen der empfangene Hash erstellt wurde.
 
-Um einen Hashwert zu erhalten, erstellen Sie mithilfe von " [**cryptkreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash)" ein Hash Objekt. Mit diesem Objekt werden die zu überprüfenden Daten gesammelt. Die Daten werden dann mit der [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata) -Funktion dem Hash Objekt hinzugefügt.
+Um einen Hashwert abzurufen, erstellen Sie mit [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash)ein Hashobjekt. Dieses Objekt sammelt die zu überprüfenden Daten. Die Daten werden dann dem Hashobjekt mit der [**CryptHashData-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata) hinzugefügt.
 
-Nachdem der letzte Datenblock dem Hash hinzugefügt wurde, wird die [**cryptgethashparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgethashparam) -Funktion verwendet, um den Hashwert der Daten abzurufen.
+Nachdem der letzte Datenblock dem Hash hinzugefügt wurde, wird die [**CryptGetHashParam-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgethashparam) verwendet, um den Hashwert der Daten abzurufen.
 
-Eine bessere Sicherheit wird gewährleistet, indem das Hash Objekt mit [**cryptdestroyhash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroyhash) zerstört wird, sobald der Hashwert abgerufen wurde.
+Die Sicherheit wird verbessert, indem das Hashobjekt mit [**CryptDestroyHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroyhash) zerstört wird, sobald der Hashwert abgerufen wurde.
 
  
 

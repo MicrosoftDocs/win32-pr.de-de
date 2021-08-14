@@ -1,23 +1,23 @@
 ---
-description: Anwendungen können Ereignis Objekte in einer Reihe von Situationen verwenden, um einen wartenden Thread über das Auftreten eines Ereignisses zu benachrichtigen.
+description: Anwendungen können Ereignisobjekte in einer Reihe von Situationen verwenden, um einen wartenden Thread über das Auftreten eines Ereignisses zu benachrichtigen.
 ms.assetid: f3f455bb-7563-4920-a728-f75fa5854dc9
-title: Verwenden von Ereignis Objekten (Synchronisierung)
+title: Verwenden von Ereignisobjekten (Synchronisierung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3c0c7ee5f58b8359e989b19ffc9c016dd1a6593
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8466ca1104a4d8e6ddaaed3e0618bea3db68bd1954aaf3b859f66fb93a3aac79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765331"
 ---
-# <a name="using-event-objects-synchronization"></a>Verwenden von Ereignis Objekten (Synchronisierung)
+# <a name="using-event-objects-synchronization"></a>Verwenden von Ereignisobjekten (Synchronisierung)
 
-Anwendungen können [Ereignis Objekte](event-objects.md) in einer Reihe von Situationen verwenden, um einen wartenden Thread über das Auftreten eines Ereignisses zu benachrichtigen. Beispielsweise wird bei überlappenden e/a-Vorgängen für Dateien, Named Pipes und Kommunikationsgeräte ein Ereignis Objekt verwendet, um den Abschluss zu signalisieren. Weitere Informationen zur Verwendung von Ereignis Objekten in überlappenden e/a-Vorgängen finden Sie unter [Synchronisierung und überlappende Eingabe und Ausgabe](synchronization-and-overlapped-input-and-output.md).
+Anwendungen können [Ereignisobjekte](event-objects.md) in einer Reihe von Situationen verwenden, um einen wartenden Thread über das Auftreten eines Ereignisses zu benachrichtigen. Beispielsweise verwenden überlappende E/A-Vorgänge für Dateien, Named Pipes und Kommunikationsgeräte ein Ereignisobjekt, um ihren Abschluss zu signalisieren. Weitere Informationen zur Verwendung von Ereignisobjekten in überlappende E/A-Vorgänge finden Sie unter [Synchronization and Overlapped Input and Output](synchronization-and-overlapped-input-and-output.md).
 
-Im folgenden Beispiel werden Ereignis Objekte verwendet, um zu verhindern, dass mehrere Threads aus einem freigegebenen Speicherpuffer lesen, während ein Master Thread in diesen Puffer schreibt. Zuerst verwendet der Master Thread die Funktion " [**forateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa) ", um ein Ereignis Objekt für manuelles Zurücksetzen zu erstellen, dessen ursprünglicher Zustand nicht signalisiert ist. Anschließend werden mehrere Lesethreads erstellt. Der Master Thread führt einen Schreibvorgang aus und legt dann das Ereignis Objekt auf den signalisierten Zustand fest, wenn der Schreibvorgang abgeschlossen ist.
+Im folgenden Beispiel werden Ereignisobjekte verwendet, um zu verhindern, dass mehrere Threads aus einem Shared Memory-Puffer lesen, während ein Masterthread in diesen Puffer schreibt. Zunächst verwendet der Masterthread die [**CreateEvent-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-createeventa) um ein Ereignisobjekt mit manueller Zurücksetzung zu erstellen, dessen Anfangszustand nicht signalisiert ist. Anschließend werden mehrere Readerthreads erstellt. Der Masterthread führt einen Schreibvorgang aus und legt dann das Ereignisobjekt auf den signalisierten Zustand fest, wenn das Schreiben abgeschlossen ist.
 
-Vor dem Starten eines Lesevorgangs verwendet jeder Lesethread [**WaitForSingleObject**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) , um zu warten, bis das Ereignis Objekt für manuelles Zurücksetzen signalisiert wird. Wenn **WaitForSingleObject** zurückgibt, gibt dies an, dass der Haupt Thread bereit ist, damit er mit dem Lesevorgang beginnen kann.
+Bevor ein Lesevorgang gestartet wird, verwendet jeder Readerthread [**WaitForSingleObject,**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) um zu warten, bis das Ereignisobjekt für manuelles Zurücksetzen signalisiert wird. Wenn **WaitForSingleObject** zurückgegeben wird, gibt dies an, dass der Hauptthread bereit ist, mit dem Lesevorgang zu beginnen.
 
 
 ```C++

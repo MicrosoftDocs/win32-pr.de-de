@@ -14,12 +14,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 2428fe6696ff5949a0b25487437c8f3408b95f65
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d1035ae82a8caf4c9ada5a859663d0d20286b433a9bf527831c29157d8dd6894
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860935"
 ---
 # <a name="dfm_gethelptext-message"></a>DFM \_ GETHELPTEXT-Nachricht
 
@@ -52,11 +52,11 @@ Das niedrige Wort dieses Parameters enthält die Befehls-ID. Das obere Wort enth
 *pszText* \[ out\]
 </dt> <dd>
 
-Eine AUF NULL beendete ANSI-Zeichenfolge, die den Hilfetext enthält.
+Eine auf NULL beendete ANSI-Zeichenfolge, die den Hilfetext enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Meldung wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie das Standardkontextmenüobjekt erstellt wird. Es gibt zwei APIs für die Erstellung: [**CDefFolderMenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**SHCreateDefaultContextMenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
 
@@ -66,10 +66,10 @@ Diese Meldung wird entweder an die Rückruffunktion oder das Rückrufobjekt gese
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
 | Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **DFM \_ GETHELPTEXT** (ANSI)<br/>                                              |
 

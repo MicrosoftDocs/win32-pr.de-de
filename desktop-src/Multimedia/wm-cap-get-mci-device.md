@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_GET_MCI_DEVICE Meldung (VFW. h)
-description: Die "WM \_ Cap \_ get \_ MCI Device"- \_ Meldung Ruft den Namen eines MCI-Geräts ab, das zuvor mit der "WM \_ Cap \_ Set \_ MCI \_ Device"-Meldung festgelegt wurde. Sie können diese Nachricht explizit oder mithilfe des capgetmcidevicename-Makros senden.
+title: WM_CAP_GET_MCI_DEVICE (Vfw.h)
+description: Die WM CAP GET MCI DEVICE-Nachricht ruft den Namen eines MCI-Geräts ab, das zuvor mit der \_ \_ WM CAP SET \_ \_ \_ \_ \_ MCI \_ DEVICE-Nachricht festgelegt wurde. Sie können diese Nachricht explizit oder mithilfe des Makros capGetMCIDeviceName senden.
 ms.assetid: c5d7d955-ab6a-4959-b79e-9ff35a282ba2
 keywords:
-- WM_CAP_GET_MCI_DEVICE-Nachricht (Multimedia)
+- WM_CAP_GET_MCI_DEVICE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0960ff9aa1366802611f444383212c4bcc45bcb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b9471177693bfbd5646d93e8487395cdf330b8281a1f43fa00d79dc690e6d718
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117800653"
 ---
-# <a name="wm_cap_get_mci_device-message"></a>WM- \_ Cap- \_ \_ MCI- \_ Geräte Nachricht erhalten
+# <a name="wm_cap_get_mci_device-message"></a>WM CAP GET MCI DEVICE message (WM \_ CAP \_ GET \_ MCI \_ DEVICE-Nachricht)
 
-Die " **WM \_ Cap \_ get \_ MCI \_ Device** "-Meldung Ruft den Namen eines MCI-Geräts ab, das zuvor mit der " [**WM \_ Cap \_ Set \_ MCI \_ Device**](wm-cap-set-mci-device.md) "-Meldung festgelegt wurde. Sie können diese Nachricht explizit oder mithilfe des [**capgetmcidevicename**](/windows/desktop/api/Vfw/nf-vfw-capgetmcidevicename) -Makros senden.
+Die **WM CAP GET \_ \_ \_ MCI \_ DEVICE-Nachricht** ruft den Namen eines MCI-Geräts ab, das zuvor mit der [**WM CAP SET \_ \_ \_ MCI \_ DEVICE-Nachricht festgelegt**](wm-cap-set-mci-device.md) wurde. Sie können diese Nachricht explizit oder mithilfe des [**Makros capGetMCIDeviceName**](/windows/desktop/api/Vfw/nf-vfw-capgetmcidevicename) senden.
 
 
 ```C++
@@ -38,23 +38,23 @@ lParam = (LPARAM) (LPVOID) (LPSTR) (szName);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Länge (in Byte) des Puffers, auf den von **szName** verwiesen wird.
+Länge des Puffers in Bytes, auf den **szName verweist.**
 
 </dd> <dt>
 
-<span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*szName*
+<span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*Szname*
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den MCI-Gerätenamen enthält.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die den MCI-Gerätenamen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,18 +64,18 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

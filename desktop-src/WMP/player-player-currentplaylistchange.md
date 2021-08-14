@@ -1,11 +1,11 @@
 ---
-title: Player. currentplaylistchange-Ereignis
-description: Das currentplaylistchange-Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert. | Player. currentplaylistchange-Ereignis
+title: Player.CurrentPlaylistChange-Ereignis
+description: Das CurrentPlaylistChange-Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert. | Player.CurrentPlaylistChange-Ereignis
 ms.assetid: 5270373e-e401-40c6-bf8c-ef0557610372
 keywords:
-- Currentplaylistchange-Ereignisfenster Media Player
-- Currentplaylistchange-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, currentplaylistchange-Ereignis
+- CurrentPlaylistChange-Ereignis Windows Media Player
+- CurrentPlaylistChange-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , CurrentPlaylistChange-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4722db224285587198e3ddb021022ec5d8f2cea6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 672ff739e60efe73e1d30670dec5bc956f9fdd56506464b036add6f52cc6fc34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118338146"
 ---
-# <a name="playercurrentplaylistchange-event"></a>Player. currentplaylistchange-Ereignis
+# <a name="playercurrentplaylistchange-event"></a>Player.CurrentPlaylistChange-Ereignis
 
-Das **currentplaylistchange** -Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert.
+Das **CurrentPlaylistChange-Ereignis** tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Player.CurrentPlaylistChange(
 *change* 
 </dt> <dd>
 
-**Zahl** (**Long**), die angibt, welche Art von Änderung in der Wiedergabeliste aufgetreten ist. Siehe den *Player*. **Playlistchange** -Ereignis für eine Tabelle mit möglichen Werten.
+**Number** (**long**), die angibt, welcher Änderungstyp an der Wiedergabeliste aufgetreten ist. Weitere Informationen finden Sie unter *Player*. **PlaylistChange-Ereignis** für eine Tabelle möglicher Werte.
 
 </dd> </dl>
 
@@ -53,15 +53,15 @@ Player.CurrentPlaylistChange(
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis tritt nicht auf, wenn eine andere Wiedergabeliste zur aktuellen Wiedergabeliste wird. Sie tritt nur auf, wenn eine Änderung innerhalb der aktuellen Wiedergabeliste erfolgt, z. b. ein Medien Element, das an die Wiedergabeliste angefügt wird.
+Dieses Ereignis tritt nicht auf, wenn eine andere Wiedergabeliste zur aktuellen Wiedergabeliste wird. Sie tritt nur auf, wenn eine Änderung innerhalb der aktuellen Wiedergabeliste erfolgt, z. B. wenn ein Medienelement an die Wiedergabeliste angefügt wird.
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird der Text in einem HTML div-Element mit dem Namen "plitems" aktualisiert, um die Namen der Medienelemente in der aktuellen Wiedergabeliste anzuzeigen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird der Text in einem HTML-DIV-Element namens PlItems aktualisiert, um die Namen der Medienelemente in der aktuellen Wiedergabeliste anzuzeigen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -95,22 +95,22 @@ Im folgenden JScript-Beispiel wird der Text in einem HTML div-Element mit dem Na
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. currentwiedergabe**](player-currentplaylist.md)
+[**Player.currentPlaylist**](player-currentplaylist.md)
 </dt> <dt>
 
-[**Player. playlistchange**](player-player-playlistchange.md)
+[**Player.PlaylistChange**](player-player-playlistchange.md)
 </dt> </dl>
 
  

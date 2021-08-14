@@ -1,9 +1,9 @@
 ---
-title: glmultmatrixd Function (GL. h)
-description: Die Funktion "glmultmatrixd" multipliziert die aktuelle Matrix mit einer beliebigen Matrix. | glmultmatrixd Function (GL. h)
+title: glMultMatrixd-Funktion (Gl.h)
+description: Die glMultMatrixd-Funktion multipliziert die aktuelle Matrix mit einer beliebigen Matrix. | glMultMatrixd-Funktion (Gl.h)
 ms.assetid: 1f6cf4e4-e7bd-470c-b1f4-b9ccc1fb756e
 keywords:
-- glmultmatrixd-Funktion OpenGL
+- glMultMatrixd-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e24993fe5873be0af8713e3d127b86a7c593cd82
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fd31b3f84bbc8c75a3622b7b87f7a7577a33927bd489a06b8691377badaf0b56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118358798"
 ---
-# <a name="glmultmatrixd-function"></a>glmultmatrixd-Funktion
+# <a name="glmultmatrixd-function"></a>glMultMatrixd-Funktion
 
-Die Funktionen " **glmultmatrixd** " und " [**glmultmatrixf**](glmultmatrixf.md) " multiplizieren die aktuelle Matrix mit einer beliebigen Matrix.
+Die Funktionen **glMultMatrixd** und [**glMultMatrixf**](glmultmatrixf.md) multiplizieren die aktuelle Matrix mit einer beliebigen Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glMultMatrixd(
 *m* 
 </dt> <dd>
 
-Ein Zeiger auf eine 4 x 4-Matrix, die in Spalten Hauptreihen Folge als 16 aufeinander folgende Werte gespeichert ist.
+Ein Zeiger auf eine 4x4-Matrix, die in Spaltenhauptreihenfolge als 16 aufeinander folgende Werte gespeichert ist.
 
 </dd> </dl>
 
@@ -53,35 +53,35 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glmultmatrix** -Funktion multipliziert die aktuelle Matrix mit der in *m* angegebenen. Das heißt, wenn m die aktuelle Matrix und T die an **glmultmatrix** weiter gegebene Matrix ist, wird m durch m T ersetzt.
+Die **glMultMatrix-Funktion** multipliziert die aktuelle Matrix mit der in *m* angegebenen Matrix. Das heißt, wenn M die aktuelle Matrix und T die an **glMultMatrix** übergebene Matrix ist, wird M durch M T ersetzt.
 
-Die aktuelle Matrix ist die Projektions Matrix, die Modelview-Matrix oder die Textur Matrix, die durch den aktuellen Matrix Modus bestimmt wird (siehe [**glMatrixMode**](glmatrixmode.md)).
+Die aktuelle Matrix ist die Projektionsmatrix, Modellansichtsmatrix oder Texturmatrix, die durch den aktuellen Matrixmodus bestimmt wird (siehe [**glMatrixMode**](glmatrixmode.md)).
 
-Der *m* -Parameter verweist auf eine 4 x 4-Matrix mit Gleit Komma Werten mit einfacher Genauigkeit oder Gleit Komma Werten mit doppelter Genauigkeit, die in der Spalte-Haupt Reihenfolge gespeichert sind. Das heißt, die Matrix wird wie in der folgenden Abbildung dargestellt gespeichert.
+Der *m-Parameter* zeigt auf eine 4x4-Matrix von Gleitkommawerten mit einfacher oder doppelter Genauigkeit, die in Spaltenhauptreihenfolge gespeichert sind. Das heißt, die Matrix wird wie in der folgenden Abbildung dargestellt gespeichert.
 
-![! [Diagramm mit der 4 x 4-Matrix, auf die der m-Parameter zeigt.]](images/multi01.png)
+![! [Diagramm der 4x4-Matrix, auf die der m-Parameter zeigt.]](images/multi01.png)
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glmultmatrix** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMultMatrix** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
 
-**glget** mit dem Argument GL \_ Modelview \_ Matrix
+**glGet** mit argument GL \_ MODELVIEW \_ MATRIX
 
-**glget** mit dem Argument GL- \_ Projektions \_ Matrix
+**glGet** mit argument GL \_ PROJECTION \_ MATRIX
 
-**glget** mit Argument GL- \_ Textur \_ Matrix
+**glGet** mit argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,13 +91,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glmultma
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -110,7 +110,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glmultma
 [**glLoadIdentity**](glloadidentity.md)
 </dt> <dt>
 
-[**glloadmatrix**](glloadmatrix.md)
+[**glLoadMatrix**](glloadmatrix.md)
 </dt> <dt>
 
 [**glMatrixMode**](glmatrixmode.md)

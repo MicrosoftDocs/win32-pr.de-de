@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9a10d8bba48902ed2d6fd66da8483cea1ba9aacc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 03c45979437c153e70aea16c6b6e48b052b0d84491dcd1880075c66c77c777d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822225"
 ---
 # <a name="cdeferredcommandcdeferredcommand-constructor"></a>CDeferredCommand.CDeferredCommand-Konstruktor
 
@@ -78,7 +78,7 @@ Zeiger auf einen zurückgegebenen **HRESULT-Wert.**
 *pUnkExecutor* 
 </dt> <dd>
 
-Zeiger auf das Objekt, von dem dieser Befehl ausgeführt wird.
+Zeiger auf das Objekt, das diesen Befehl ausführen wird.
 
 </dd> <dt>
 
@@ -149,9 +149,9 @@ Wert, der angibt, ob die verzögerte Befehlszeit in der Streamzeit (**TRUE**) od
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

@@ -1,27 +1,27 @@
 ---
-title: Abrufen eines Objekt Bezeichners
-description: Zwei der gängigsten Methoden zum Aufrufen eines Objekt Bezeichners (OID) finden Sie in den folgenden Themen.
+title: Abrufen eines Objektbezeichners
+description: In den folgenden Themen werden zwei der gängigsten Methoden zum Erhalten eines Objektbezeichners (Object Identifier, OID) erläutert.
 ms.assetid: 0c505790-ba20-432a-8786-de4e1ad03f0a
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e4768f02172d558a7125c4a76bcd5fa6d775dd8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 14c95a20b369b7f4f0291b96d1f4668d5607ebdb29f24807e22673ad6209070a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855395"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118185454"
 ---
-# <a name="obtaining-an-object-identifier"></a>Abrufen eines Objekt Bezeichners
+# <a name="obtaining-an-object-identifier"></a>Abrufen eines Objektbezeichners
 
-Zwei der gängigsten Methoden zum erhalten eines Objekt Bezeichners (OID) werden in den folgenden Themen erläutert:
+In den folgenden Themen werden zwei der gängigsten Methoden zum Erhalten eines Objektbezeichners (Object Identifier, OID) erläutert:
 
--   [Abrufen einer Stamm-OID von einer ISO-namens Registrierungsstelle](obtaining-a-root-oid-from-an-iso-name-registration-authority.md)
--   [Abrufen eines Objekt Bezeichners von Microsoft](obtaining-an-object-identifier-from-microsoft.md)
+-   [Abrufen einer Stamm-OID von einer ISO-Namenregistrierungsstelle](obtaining-a-root-oid-from-an-iso-name-registration-authority.md)
+-   [Abrufen eines Objektbezeichners von Microsoft](obtaining-an-object-identifier-from-microsoft.md)
 
- 
+ 
 
- 
+ 
 
 
 

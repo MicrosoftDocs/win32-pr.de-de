@@ -4,51 +4,51 @@ ms.assetid: 4ab16355-1341-4c7a-b570-bd33f11dde00
 title: Kryptografieobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ea3476e7edad1d32fe1e11635bd65622d2a8375
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ff5e9495d64c38272bac54ffac03d1d087b9286887b4e4e520c6a447765efac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117768372"
 ---
 # <a name="cryptography-objects"></a>Kryptografieobjekte
 
-Kryptografieobjekte werden gemäß der Verwendung wie folgt kategorisiert:
+Kryptografieobjekte werden nach Verwendung wie folgt kategorisiert:
 
--   [Zertifikat Speicher Objekte](#certificate-store-objects)
--   [Digitale Signatur Objekte](#digital-signature-objects)
--   [Eingeschlossene Datenobjekte](#enveloped-data-objects)
--   [Daten Verschlüsselungs Objekte](#data-encryption-objects)
+-   [Certificate Store Objects](#certificate-store-objects)
+-   [Digitale Signaturobjekte](#digital-signature-objects)
+-   [Umschlagdatenobjekte](#enveloped-data-objects)
+-   [Datenverschlüsselungsobjekte](#data-encryption-objects)
 -   [Hilfsobjekte](#auxiliary-objects)
--   [Zertifikat Registrierungs Objekte](#certificate-enrollment-objects)
+-   [Zertifikatregistrierungsobjekte](#certificate-enrollment-objects)
 
-## <a name="certificate-store-objects"></a>Zertifikat Speicher Objekte
+## <a name="certificate-store-objects"></a>Certificate Store Objects
 
-Die folgenden Objekte funktionieren mit [*Zertifikat speichern*](../secgloss/c-gly.md) und den Zertifikaten in diesen speichern. CAPICOM unterstützt die Verwendung aktueller Benutzer, lokaler Computer, Arbeitsspeicher und Active Directory Zertifikat Speicher.
+Die folgenden Objekte funktionieren mit [*Zertifikatspeichern*](../secgloss/c-gly.md) und den Zertifikaten in diesen Speichern. CAPICOM unterstützt die Verwendung von Aktuellen Benutzer-, lokalen Computer-, Arbeitsspeicher- und Active Directory-Zertifikatspeichern.
 
 
 
 | Object                                             | BESCHREIBUNG                                                                                                             |
 |----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**Stellt**](certificate.md)                 | Ein einzelnes digitales Zertifikat.                                                                                           |
-| [**Certificatepolicies**](certificatepolicies.md) | Eine Auflistung von [**policyinformation**](policyinformation.md) -Objekten.                                                 |
-| [**Zertifikate**](certificates.md)               | Sammlung von [**Zertifikat**](certificate.md) Objekten.                                                               |
-| [**CertificateStatus**](certificatestatus.md)     | Stellt Statusinformationen zu einem Zertifikat bereit.                                                                           |
-| [**Ketten**](chain.md)                             | Erstellt und überprüft eine Zertifikat Validierungs Kette auf der Grundlage eines digitalen Zertifikats.                                       |
-| [**ExtendedProperties**](extendedproperties.md)   | Stellt eine Auflistung von [**ExtendedProperty**](extendedproperty.md) -Objekten dar.                                        |
-| [**ExtendedProperty**](extendedproperties.md)     | Stellt eine von Microsoft erweiterte Eigenschaft dar.                                                                               |
-| [**Erweiterung**](extension.md)                     | Stellt eine einzelne Zertifikat Erweiterung dar.                                                                              |
-| [**Erweiterungen**](extensions.md)                   | Stellt eine Auflistung von [**Erweiterungs**](extension.md) Objekten dar.                                                      |
+| [**Zertifikat**](certificate.md)                 | Ein einzelnes digitales Zertifikat.                                                                                           |
+| [**CertificatePolicies**](certificatepolicies.md) | Eine Auflistung von [**PolicyInformation-Objekten.**](policyinformation.md)                                                 |
+| [**Zertifikate**](certificates.md)               | Sammlung von [**Zertifikatobjekten.**](certificate.md)                                                               |
+| [**CertificateStatus**](certificatestatus.md)     | Stellt Statusinformationen zu einem Zertifikat zur Verfügung.                                                                           |
+| [**Kette**](chain.md)                             | Erstellt und überprüft eine Zertifikatvalidierungskette basierend auf einem digitalen Zertifikat.                                       |
+| [**Extendedproperties**](extendedproperties.md)   | Stellt eine Auflistung von [**ExtendedProperty-Objekten**](extendedproperty.md) dar.                                        |
+| [**Extendedproperty**](extendedproperties.md)     | Stellt eine von Microsoft erweiterte Eigenschaft dar.                                                                               |
+| [**Erweiterung**](extension.md)                     | Stellt eine einzelne Zertifikaterweiterung dar.                                                                              |
+| [**Erweiterungen**](extensions.md)                   | Stellt eine Auflistung von [**Extension-Objekten**](extension.md) dar.                                                      |
 | [**PrivateKey**](privatekey.md)                   | Stellt einen privaten Schlüssel dar.                                                                                               |
-| [**PublicKey**](publickey.md)                     | Stellt einen öffentlichen Schlüssel in einem [**Zertifikat**](certificate.md) Objekt dar.                                                 |
-| [**Speicher**](store.md)                             | Stellt die Eigenschaften und Methoden bereit, mit denen Sie Zertifikat Speicher und die Zertifikate in diesen speichern auswählen, verwalten und verwenden können. |
-| [**Vorlage**](template.md)                       | Stellt die Zertifikat Erweiterungs Vorlage des Zertifikats dar.                                                       |
+| [**Publickey**](publickey.md)                     | Stellt einen öffentlichen Schlüssel in einem [**Certificate-Objekt**](certificate.md) dar.                                                 |
+| [**Speicher**](store.md)                             | Stellt die Eigenschaften und Methoden zum Auswählen, Verwalten und Verwenden von Zertifikatspeichern und Zertifikaten in diesen Speichern zur Auswahl, Verwaltung und Verwendung zur Auswahl. |
+| [**Vorlage**](template.md)                       | Stellt die Zertifikaterweiterungsvorlage des Zertifikats dar.                                                       |
 
 
 
  
 
-## <a name="digital-signature-objects"></a>Digitale Signatur Objekte
+## <a name="digital-signature-objects"></a>Digitale Signaturobjekte
 
 Die folgenden Objekte werden exportiert, um Daten digital zu signieren und digitale Signaturen zu überprüfen.
 
@@ -56,39 +56,39 @@ Die folgenden Objekte werden exportiert, um Daten digital zu signieren und digit
 
 | Object                           | BESCHREIBUNG                                                                                                 |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [**Signedcode**](signedcode.md) | Objekt, das zum Signieren von Code mit einer digitalen Authenticode-Signatur und zum Überprüfen der Signatur für signierten Code verwendet wird. |
-| [**SignedData**](signeddata.md) | Zum Signieren von Daten und zum Überprüfen der Signatur von signierten Daten verwendetes Objekt.                                        |
-| [**Signatur Geber**](signer.md)         | Informationen zu einem einzelnen Daten Signatur Geber, einschließlich des Zertifikats des Signatur Gebers.                                    |
-| [**Signatur Geber**](signers.md)       | Sammlung von [**Signatur**](signer.md) Geber Objekten.                                                             |
+| [**SignedCode**](signedcode.md) | Objekt, das verwendet wird, um Code mit einer digitalen Authenticode-Signatur zu signieren und die Signatur für signierten Code zu überprüfen. |
+| [**SignedData**](signeddata.md) | Objekt, das zum Signieren von Daten und zum Überprüfen der Signatur signierter Daten verwendet wird.                                        |
+| [**Signer**](signer.md)         | Informationen zu einem einzelnen Daten signieren, einschließlich des Zertifikats des Signers.                                    |
+| [**Unterzeichner**](signers.md)       | Sammlung von [**Signer-Objekten.**](signer.md)                                                             |
 
 
 
  
 
-## <a name="enveloped-data-objects"></a>Eingeschlossene Datenobjekte
+## <a name="enveloped-data-objects"></a>Umhumschlagte Datenobjekte
 
-Die folgenden Objekte werden exportiert, um eingehüllte Daten Nachrichten für den Datenschutz zu erstellen und um Daten in eingeschlossenen Nachrichten zu entschlüsseln.
+Die folgenden Objekte werden exportiert, um umhumhierte Datennachrichten für den Datenschutz zu erstellen und Daten in umumschlagten Nachrichten zu entschlüsseln.
 
 
 
 | Object                                 | BESCHREIBUNG                                                                                                                                |
 |----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**EnvelopedData**](envelopeddata.md) | -Objekte, die zum Erstellen, senden und empfangen von Daten verwendet werden. Eingeschlossene Daten werden so verschlüsselt, dass Sie nur von den vorgesehenen Empfängern entschlüsselt werden können. |
-| [**Empfänger**](recipients.md)       | Sammlung der [**Zertifikat**](certificate.md) Objekte der vorgesehenen Empfänger einer eingeschlossenen Nachricht.                           |
+| [**EnvelopedData**](envelopeddata.md) | Objekte, die zum Erstellen, Senden und Empfangen von umhumhierten Daten verwendet werden. Umschlagdaten werden verschlüsselt, sodass sie nur von den vorgesehenen Empfängern entschlüsselt werden können. |
+| [**Empfänger**](recipients.md)       | Auflistung der [**Certificate-Objekte**](certificate.md) der vorgesehenen Empfänger einer umschlagenen Nachricht.                           |
 
 
 
  
 
-## <a name="data-encryption-objects"></a>Daten Verschlüsselungs Objekte
+## <a name="data-encryption-objects"></a>Datenverschlüsselungsobjekte
 
-Das folgende Objekt wird exportiert, um beliebige Daten für den Datenschutz zu verschlüsseln und verschlüsselte Daten zu entschlüsseln.
+Das folgende Objekt wird exportiert, um beliebige Daten zum Schutz des Datenschutzes zu verschlüsseln und verschlüsselte Daten zu entschlüsseln.
 
 
 
 | Object                                 | BESCHREIBUNG                                                                                                        |
 |----------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [**EncryptedData**](encrypteddata.md) | Objekte, die zum Verschlüsseln von Daten verwendet werden. Verschlüsselte Daten in einem [**verschlüsselteddata**](encrypteddata.md) -Objekt können entschlüsselt werden. |
+| [**Encrypteddata**](encrypteddata.md) | Objekte, die zum Verschlüsseln von Daten verwendet werden. Verschlüsselte Daten in einem [**EncryptedData-Objekt**](encrypteddata.md) können entschlüsselt werden. |
 
 
 
@@ -96,44 +96,44 @@ Das folgende Objekt wird exportiert, um beliebige Daten für den Datenschutz zu 
 
 ## <a name="auxiliary-objects"></a>Hilfsobjekte
 
-Die folgenden Objekte werden exportiert, um das Standardverhalten anderer Objekte zu ändern und um Zertifikate, Zertifikat Speicher und Nachrichten zu verwalten.
+Die folgenden Objekte werden exportiert, um das Standardverhalten anderer Objekte zu ändern und Zertifikate, Zertifikatspeicher und Nachrichten zu verwalten.
 
 
 
 | Object                                         | BESCHREIBUNG                                                                                                                                     |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Algorithmus**](algorithm.md)                 | Legt den Algorithmus und die [*Schlüssellänge*](../secgloss/k-gly.md) fest, die bei kryptografischen Vorgängen verwendet werden sollen. |
-| [**Versehen**](attribute.md)                 | Bietet ein einzelnes Element mit zusätzlichen Informationen über eine Signatur, z. b. den Zeitpunkt der Signierung.                                                    |
-| [**Attribute**](attributes.md)               | Sammlung von [**Attribut**](attribute.md) Objekten.                                                                                           |
-| [**Basiceinschränkungen**](basicconstraints.md)   | Bietet schreibgeschützten Zugriff auf grundlegende Einschränkungen der Verwendung eines Zertifikats.                                                                    |
-| [**EKU**](eku.md)                             | Bietet Zugriff auf EKU-Eigenschaften von Zertifikaten.                                                                                              |
-| [**EKUs**](ekus.md)                           | Sammlung von [**EKU**](eku.md) -Objekten.                                                                                                       |
-| [**Encoddata**](encodeddata.md)             | Stellt einen Block codierter Daten dar.                                                                                                             |
-| [**Extendedkeyusage**](extendedkeyusage.md)   | Bietet schreibgeschützten Zugriff auf die Eigenschaften der erweiterten Schlüssel Verwendung von Zertifikaten.                                                                 |
-| [**HashedData**](hasheddata.md)               | Bietet Funktionen zum Anwenden eines Hash Algorithmus auf eine Zeichenfolge.                                                                               |
-| [**Endeinheits Zertifikaten der**](keyusage.md)                   | Bietet schreibgeschützten Zugriff auf Schlüssel Verwendungs Eigenschaften von Zertifikaten.                                                                              |
-| [**Benachrichtifür Notierungen**](noticenumbers.md)         | Stellt eine Auflistung von [**Erweiterungs**](extension.md) Objekten dar.                                                                              |
-| [**OID**](oid.md)                             | Stellt einen Objekt Bezeichner dar, der von mehreren CAPICOM-Eigenschaften verwendet wird.                                                                     |
-| [**OIDs**](oids.md)                           | Stellt eine Auflistung von [**OID**](oid.md) -Objekten dar.                                                                                          |
-| [**Policyinformation**](policyinformation.md) | Bietet Zugriff auf die OIDs der Richtlinie einer Erweiterung.                                                                                             |
-| [**Qualifizierer**](qualifier.md)                 | Stellt einen CPS-Zeiger (Certification Practice Statement) oder einen Benutzer Hinweis Qualifizierer dar.                                                           |
+| [**Algorithmus**](algorithm.md)                 | Legt den Algorithmus und die [*Schlüssellänge fest,*](../secgloss/k-gly.md) die in kryptografischen Vorgängen verwendet werden sollen. |
+| [**attribute**](attribute.md)                 | Stellt eine einzelne hinzugefügte Information über eine Signatur zur Verfügung, z. B. den Zeitpunkt der Signatur.                                                    |
+| [**Attribute**](attributes.md)               | Auflistung von [**Attributobjekten.**](attribute.md)                                                                                           |
+| [**BasicConstraints**](basicconstraints.md)   | Bietet schreibgeschützten Zugriff auf grundlegende Einschränkungen für die Verwendung eines Zertifikats.                                                                    |
+| [**EKU**](eku.md)                             | Ermöglicht den Zugriff auf EKU-Eigenschaften von Zertifikaten.                                                                                              |
+| [**EKUs**](ekus.md)                           | Auflistung von [**EKU-Objekten.**](eku.md)                                                                                                       |
+| [**Codierte Daten**](encodeddata.md)             | Stellt einen Block codierter Daten dar.                                                                                                             |
+| [**ExtendedKeyUsage**](extendedkeyusage.md)   | Bietet schreibgeschützten Zugriff auf die erweiterten Schlüsselverwendungseigenschaften von Zertifikaten.                                                                 |
+| [**HashedData**](hasheddata.md)               | Stellt Funktionen zum Anwenden eines Hashalgorithmus auf eine Zeichenfolge zur Verfügung.                                                                               |
+| [**KeyUsage**](keyusage.md)                   | Bietet schreibgeschützten Zugriff auf Schlüsselverwendungseigenschaften von Zertifikaten.                                                                              |
+| [**NoticeNumbers**](noticenumbers.md)         | Stellt eine Auflistung von [**Extension-Objekten**](extension.md) dar.                                                                              |
+| [**Oid**](oid.md)                             | Stellt einen Objektbezeichner dar, der von mehreren CAPICOM-Eigenschaften verwendet wird.                                                                     |
+| [**OIDs**](oids.md)                           | Stellt eine Auflistung von [**OID-Objekten**](oid.md) dar.                                                                                          |
+| [**PolicyInformation**](policyinformation.md) | Ermöglicht den Zugriff auf die Richtlinien-OIDs einer Erweiterung.                                                                                             |
+| [**Qualifizierer**](qualifier.md)                 | Stellt einen CPS-Zeiger (Certification Practice Statement) oder einen Qualifizierer für Benutzerhinweise dar.                                                           |
 | [**Qualifikation**](qualifiers.md)               | Stellt eine Auflistung von Qualifizierern dar.                                                                                                          |
-| [**Einstellungen**](settings.md)                   | Aktiviert oder deaktiviert Dialogfelder, um zur Eingabe des Signatur Gebers oder der Absender Identität aufzufordern, wenn diese Identität nicht angegeben ist.                                     |
-| [**Versorgungsunternehmen**](utilities.md)                 | Stellt Funktionen für häufige Aufgaben bereit.                                                                                                        |
+| [**Einstellungen**](settings.md)                   | Aktiviert oder deaktiviert Dialogfelder, um zur Eingabe der Signierer- oder Absenderidentität aufzufordern, wenn diese Identität nicht angegeben ist.                                     |
+| [**Hilfsprogramme**](utilities.md)                 | Stellt Funktionen für allgemeine Aufgaben bereit.                                                                                                        |
 
 
 
  
 
-## <a name="certificate-enrollment-objects"></a>Zertifikat Registrierungs Objekte
+## <a name="certificate-enrollment-objects"></a>Zertifikatregistrierungsobjekte
 
-Das folgende Objekt wird für die Zertifikat Registrierung verwendet.
+Das folgende Objekt wird für die Zertifikatregistrierung verwendet.
 
 
 
 | Object                     | BESCHREIBUNG                                                                                                                                      |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CEnroll**](/previous-versions/windows/desktop/legacy/aa376007(v=vs.85)) | Objekt, das das Zertifikat Registrierungs Steuerelement darstellt. Sie wird in erster Linie verwendet, wenn Sie in Visual Basic oder einer anderen Automatisierungs Sprache programmieren. |
+| [**CEnroll**](/previous-versions/windows/desktop/legacy/aa376007(v=vs.85)) | Objekt, das das Zertifikatregistrierungssteuerelement darstellt. Sie wird hauptsächlich bei der Programmierung in Visual Basic oder einer anderen Automation-Sprache verwendet. |
 
 
 

@@ -1,25 +1,25 @@
 ---
-description: Legt die Toleranz (in Millisekunden) fest, die verwendet wird, wenn die ASF-Medienquelle iterative Suchvorgänge ausführt.
+description: Legt die Toleranz in Millisekunden fest, die verwendet wird, wenn die ASF-Medienquelle iterative Suchungen ausführt.
 ms.assetid: 3ee4410f-857c-4978-a308-87decfba0e2f
-title: MFPKEY_ASFMediaSource_IterativeSeek_Tolerance_In_MilliSecond-Eigenschaft (mspdl. h)
+title: MFPKEY_ASFMediaSource_IterativeSeek_Tolerance_In_MilliSecond (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4190d9f87d906a701908dfc17b61633204fe8a2
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: b8cfc1ef656e1cff3da4bb33f19a3c2176729035f94a194a4ede21354f5dbc54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106351846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117874131"
 ---
-# <a name="mfpkey_asfmediasource_iterativeseek_tolerance_in_millisecond-property"></a>Mfpkey \_ asfmediasource \_ iterativeseek \_ Tolerance \_ in \_ millisecond (Eigenschaft)
+# <a name="mfpkey_asfmediasource_iterativeseek_tolerance_in_millisecond-property"></a>MFPKEY \_ ASFMediaSource \_ IterativeSeek \_ Tolerance In \_ \_ MilliSecond -Eigenschaft
 
-Legt die Toleranz (in Millisekunden) fest, die verwendet wird, wenn die ASF-Medienquelle iterative Suchvorgänge ausführt.
+Legt die Toleranz in Millisekunden fest, die verwendet wird, wenn die ASF-Medienquelle iterative Suchungen ausführt.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -31,13 +31,13 @@ VT \_ UI4
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Eigenschaft, um die ASF-Medienquelle zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger an den quellresolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle](configuring-a-media-source.md).
+Verwenden Sie diese Eigenschaft, um die ASF-Medienquelle zu konfigurieren. Übergeben Sie zum Festlegen der -Eigenschaft einen **IPropertyStore-Zeiger** an den Quellre resolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle.](configuring-a-media-source.md)
 
-Diese Eigenschaft gilt nur, wenn iteratives suchen aktiviert ist. Weitere Informationen finden Sie unter [mfpkey \_ asfmediasource \_ iterativeseekifnoindex](mfpkey-asfmediasource-iterativeseekifnoindex.md).
+Diese Eigenschaft gilt nur, wenn die iterative Suche aktiviert ist. Weitere Informationen finden Sie unter [MFPKEY \_ ASFMediaSource \_ IterativeSeekIfNoIndex](mfpkey-asfmediasource-iterativeseekifnoindex.md).
 
-Der iterative Suchalgorithmus stoppt, wenn er ein Paket findet, dessen Abstand von der Suchzeit innerhalb der angegebenen Toleranz liegt. Der Standardwert ist 8000 Millisekunden.
+Der iterative Suchalgorithmus hält an, wenn er ein Paket findet, dessen Abstand zur Suchzeit innerhalb der angegebenen Toleranz liegt. Der Standardwert ist 8.000 Millisekunden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Der iterative Suchalgorithmus stoppt, wenn er ein Paket findet, dessen Abstand v
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Die folgende Meldung wird mit Geräte Kontexten verwendet.
+description: Die folgende Meldung wird mit Gerätekontexten verwendet.
 ms.assetid: eede7b06-80d6-48e1-8f9d-c83b097e6c4b
-title: Gerätekontext Meldungen
+title: Gerätekontextnachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61ab2c7e8fd75b684feaf13561e76e514c9485c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4c3bfbebd88edca6122fa20869ae48b1062605119633418c14fa584366148a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117887460"
 ---
-# <a name="device-context-messages"></a>Gerätekontext Meldungen
+# <a name="device-context-messages"></a>Gerätekontextnachrichten
 
-Die folgende Meldung wird mit Geräte Kontexten verwendet.
+Die folgende Meldung wird mit Gerätekontexten verwendet.
 
-[**WM \_ devmodechange**](wm-devmodechange.md)
+[**WM \_ DEVMODECHANGE**](wm-devmodechange.md)
 
  
 

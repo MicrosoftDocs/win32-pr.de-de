@@ -1,19 +1,19 @@
 ---
-title: Iagentcommand setvoice
-description: Iagentcommand setvoice
+title: IAgentCommand SetVoice
+description: IAgentCommand SetVoice
 ms.assetid: bee06616-26bf-4e1e-89da-6765dd77fb02
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36bed7e86cb93824fc26c770c1d01336077fda39
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e45af753dea18e9fda7b613e3b800ac886d949eb6494fd969cd8b7ceb488dfc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118477240"
 ---
-# <a name="iagentcommandsetvoice"></a>Iagentcommand:: setvoice
+# <a name="iagentcommandsetvoice"></a>IAgentCommand::SetVoice
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetVoice(
@@ -21,72 +21,72 @@ HRESULT SetVoice(
 );
 ```
 
-Legt die [**Voice**](voice-property.md) -Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
+Legt die [**Voice-Eigenschaft**](voice-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bszVoice"></span><span id="bszvoice"></span><span id="BSZVOICE"></span>*bszvoice*
+<span id="bszVoice"></span><span id="bszvoice"></span><span id="BSZVOICE"></span>*bszVoice*
 </dt> <dd>
 
-Ein BSTR, der den Text für die [**Voice**](voice-property.md) -Eigenschaft eines [**Befehls**](/windows/desktop/lwef/the-command-object)angibt.
+Ein BSTR, der den Text für die [**Voice-Eigenschaft**](voice-property.md) eines [**Befehls**](/windows/desktop/lwef/the-command-object)angibt.
 
 </dd> </dl>
 
-Für einen [**Befehl**](/windows/desktop/lwef/the-command-object) muss die [**sprach**](voice-property.md) Eigenschaft und die [**aktivierte**](enabled-property.md) Eigenschaft auf sprach Zugriff festgelegt sein. Außerdem muss die [**voicecaption**](voicecaption-property.md) -Eigenschaft im **Fenster "Sprachbefehle**" angezeigt werden. (Aus Gründen der Abwärtskompatibilität wird die [**Beschriftungs**](caption-property.md) Einstellung verwendet, wenn keine **voicecaption** vorhanden ist.)
+Für einen [**Befehl**](/windows/desktop/lwef/the-command-object) müssen die [**Voice-Eigenschaft**](voice-property.md) und die [**Enabled-Eigenschaft**](enabled-property.md) so festgelegt sein, dass die Stimme zugänglich ist. Außerdem muss die [**VoiceCaption-Eigenschaft**](voicecaption-property.md) so festgelegt sein, dass sie im **Fenster "Sprachbefehle"** angezeigt wird. (Aus Gründen der Abwärtskompatibilität wird die [**Einstellung Caption**](caption-property.md) verwendet, wenn keine **VoiceCaption** vorhanden ist.)
 
-Der von Ihnen bereitgestellte BSTR-Ausdruck kann eckige Klammer Zeichen ( \[ \] ) enthalten, um optionale Wörter und vertikale Balken Zeichen ( \| ) anzugeben, um alternative Zeichen folgen anzugeben. Alternativen müssen in Klammern eingeschlossen werden. Beispiel: "(Hello \[ there \] \| HI)" weist die Sprach-Engine an, "Hello", "Hello There" oder "Hi" für den Befehl zu akzeptieren. Denken Sie daran, die entsprechenden Leerzeichen zwischen dem Text in Klammern oder Klammern und dem Text, der sich nicht in Klammern oder Klammern befindet, einzufügen.
+Der von Ihnen angegebenen BSTR-Ausdruck kann eckige Klammern \[ \] () enthalten, um optionale Wörter und vertikale Balkenzeichen ( \| ) anzugeben, um alternative Zeichenfolgen anzugeben. Alternative Müssen in Klammern eingeschlossen werden. Beispielsweise weist "(hello \[ there \] \| hi)" die Sprach-Engine an, "hello", "hello there" oder "hi" für den Befehl zu akzeptieren. Denken Sie daran, geeignete Leerzeichen zwischen dem Text in Klammern oder Klammern und dem Text, der sich nicht in Klammern oder Klammern bezieht, einzuschließen.
 
-Sie können den Stern ( \* )-Operator verwenden, um NULL oder mehr Instanzen der in der Gruppe enthaltenen Wörter anzugeben, oder den Plus (+)-Operator, um eine oder mehrere Instanzen anzugeben. Der folgende Code führt beispielsweise zu einer Grammatik, die "try this", "try this" und "try this" (Bitte probieren Sie dies) mit unbegrenzten Iterationen "bitte" unterstützt:
+Sie können den \* Sternoperator ( ) verwenden, um null oder mehr Instanzen der in der Gruppe enthaltenen Wörter anzugeben, oder den Plusoperator (+), um eine oder mehrere Instanzen anzugeben. Das folgende Ergebnis führt beispielsweise zu einer Grammatik, die "try this", "please try this" und "please please try this" mit unbegrenzten Iterationen von "please" unterstützt:
 
 ``` syntax
    "please* try this"
 ```
 
-Das folgende Grammatik Format schließt "try this" aus, da der +-Operator mindestens eine Instanz von "bitte" definiert:
+Das folgende Grammatikformat schließt "try this" aus, da der Operator + mindestens eine Instanz von "please" definiert:
 
 ``` syntax
    "please+ try this"
 ```
 
-Die Wiederholungs Operatoren befolgen normale Rangfolge und gelten für das unmittelbar vorangehende Textelement. Die folgende Grammatik ergibt beispielsweise "New York" und "New York York", aber nicht "New York New York":
+Die Wiederholungsoperatoren folgen normalen Rangfolgeregeln und gelten für das unmittelbar vorangehende Textelement. Die folgende Grammatik führt beispielsweise zu "New York" und "New York York", aber nicht zu "New York New York":
 
 ``` syntax
    "New York+"
 ```
 
-Daher sollten Sie diese Operatoren in der Regel mit den Gruppierungs Zeichen verwenden. Die folgende Grammatik enthält z. b. "New York" und "New York New York":
+Daher sollten Sie diese Operatoren in der Regel mit den Gruppierungszeichen verwenden. Die folgende Grammatik enthält beispielsweise sowohl "New York" als auch "New York New York":
 
 ``` syntax
    "(New York)+"
 ```
 
-Wiederholungs Operatoren sind nützlich, wenn Sie eine Grammatik verfassen möchten, die eine wiederholte Sequenz, z. b. eine Telefonnummer oder eine Angabe einer Liste von Elementen, umfasst:
+Wiederholungsoperatoren sind nützlich, wenn Sie eine Grammatik erstellen möchten, die eine wiederholte Sequenz enthält, z. B. eine Telefonnummer oder eine Spezifikation einer Liste von Elementen:
 
 ``` syntax
    "call (one|two|three|four|five|six|seven|eight|nine|zero|oh)*"
    "I'd like (cheese|pepperoni|pineapple|canadian bacon|mushrooms|and)+"
 ```
 
-Obwohl die Operatoren auch mit den eckigen Klammern (einem optionalen Gruppierungs Zeichen) verwendet werden können, kann dadurch die Effizienz der Agentverarbeitung der Grammatik verringert werden.
+Obwohl die Operatoren auch mit den eckigen Klammern (einem optionalen Gruppierungszeichen) verwendet werden können, kann dies die Effizienz der Verarbeitung der Grammatik durch den -Agent verringern.
 
-Sie können auch ein Auslassungs Zeichen (...) verwenden, um die Erkennung von Wörtern zu unterstützen, d. h., das sprach Erkennungs Modul soll Wörter ignorieren, die an dieser Position in dem Ausdruck *gesprochen werden (* manchmal als " *Garbage* Words" bezeichnet) Daher erkennt die Sprach-Engine nur bestimmte Wörter in der Zeichenfolge, unabhängig davon, wann Sie mit benachbarten Wörtern oder Ausdrücken gesprochen werden. Wenn Sie diese Eigenschaft beispielsweise auf " \[ ... \] e-Mail-Überprüfung \[ ... \] "die Spracherkennungs-Engine entspricht den Ausdrücken wie" Bitte überprüfen Sie die e-Mail "oder" Mail überprüfen "auf diesen Befehl. Ellipsen können überall innerhalb einer Zeichenfolge verwendet werden. Seien Sie jedoch vorsichtig, wenn Sie diese Technik verwenden, da Spracheinstellungen mit Ellipsen möglicherweise das Potenzial unerwünschter Übereinstimmungen erhöhen.
+Sie können auch auslassungspunkte (...) verwenden, um die *Worterkennung* zu unterstützen, d. h., die Spracherkennungs-Engine soll Wörter ignorieren, die an dieser Position im Ausdruck gesprochen werden (manchmal auch als *Garbage* Words bezeichnet). Daher erkennt die Sprach-Engine nur bestimmte Wörter in der Zeichenfolge, unabhängig davon, ob sie mit angrenzenden Wörtern oder Ausdrücken gesprochen werden. Wenn Sie diese Eigenschaft z. B. auf " \[ ... \] check mail \[ ... \] " Die Spracherkennungs-Engine stimmt mit Ausdrücken wie "please check mail" oder "check mail please" mit diesem Befehl überein. Ellipsen können an einer beliebigen Stelle innerhalb einer Zeichenfolge verwendet werden. Seien Sie jedoch vorsichtig mit dieser Technik, da Spracheinstellungen mit Ellipsen das Potenzial unerwünschter Übereinstimmungen erhöhen können.
 
-Wenn Sie die Wörter und die Grammatik für den Befehl definieren, stellen Sie immer sicher, dass Sie mindestens ein Wort einschließen, das erforderlich ist. Dies bedeutet, dass nur optionale Wörter bereitgestellt werden. Stellen Sie außerdem sicher, dass das Wort nur sprechbare Wörter und Buchstaben enthält. Bei Zahlen ist es besser, das Wort anstelle der numerischen Darstellung zu buchstabieren. Lassen Sie außerdem alle Interpunktions Zeichen oder Symbole aus. Verwenden Sie beispielsweise anstelle von "The \# $1 10 Pizza!" die Zahl 1 10 Dollar Pizza. Das einschließen nicht-sprechbarer Zeichen oder Symbole für einen Befehl kann dazu führen, dass die Sprach-Engine die Grammatik für alle Befehle nicht kompiliert. Legen Sie schließlich ihren Voice-Parameter so eindeutig wie möglich von anderen Sprachbefehlen, die Sie definieren. Umso größer die Ähnlichkeit zwischen der Sprachgrammatik für Befehle, desto wahrscheinlicher wird die Sprach-Engine einen Erkennungs Fehler. Sie können auch die Vertrauens Ergebnisse verwenden, um zwischen zwei Befehlen besser zu unterscheiden, die eine ähnliche oder ähnlich klingende Sprachgrammatik aufweisen können.
+Stellen Sie beim Definieren der Wörter und Grammatik für Ihren Befehl immer sicher, dass Sie mindestens ein erforderliches Wort einschließen. Vermeiden Sie also, nur optionale Wörter zu verwenden. Stellen Sie außerdem sicher, dass das Wort nur aussprechbare Wörter und Buchstaben enthält. Bei Zahlen ist es besser, das Wort zu schreiben, anstatt die numerische Darstellung zu verwenden. Achten Sie außerdem darauf, alle Interpunktionszeichen oder Symbole auszulassen. Verwenden Sie beispielsweise anstelle von \# "1 $10 pizza!" die "Zehn-Dollar-Pizza Nummer 1". Das Einschließen nicht aussprechbarer Zeichen oder Symbole für einen Befehl kann dazu führen, dass die Sprach-Engine die Grammatik für alle Befehle nicht kompiliert. Machen Sie schließlich Ihren Sprachparameter so unterschiedlich wie möglich von anderen von Ihnen definierten Sprachbefehlen. Je größer die Ähnlichkeit zwischen der Sprachgrammatik für Befehle ist, desto wahrscheinlicher wird die Sprach-Engine einen Erkennungsfehler machen. Sie können auch die Zuverlässigkeitsbewertungen verwenden, um besser zwischen zwei Befehlen zu unterscheiden, die eine ähnliche oder ähnlich klingende Sprachgrammatik aufweisen können.
 
-Wenn Sie die [**Voice**](voice-property.md) -Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object) festlegen, werden die Sprachdienste des-Agents automatisch aktiviert, sodass der Abhör Schlüssel und der lauschtip verfügbar sind Die sprach Erkennungs-Engine wird jedoch nicht geladen.
+Wenn Sie die [**Voice-Eigenschaft**](voice-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object) festlegen, werden die Sprachdienste des -Agents automatisch aktiviert, sodass die Überwachungsschlüssel und der Lauschende Tipp verfügbar sind. Die Spracherkennungs-Engine wird jedoch nicht geladen.
 
 > [!Note]  
-> Welche Grammatik Features verfügbar sind, hängt möglicherweise von der Spracherkennungs-Engine ab. Möglicherweise möchten Sie sich an den Hersteller der Engine wenden, um zu ermitteln, welche Grammatik Optionen unterstützt werden. Verwenden Sie [**iagentcharakteriex:: srmodeid**](https://www.bing.com/search?q=**IAgentCharacterEx::SRModeID**) , um eine Engine anzugeben.
+> Die verfügbaren Grammatikfeatures hängen möglicherweise von der Spracherkennungs-Engine ab. Möglicherweise sollten Sie beim Anbieter der Engine nachsehen, welche Grammatikoptionen unterstützt werden. Verwenden Sie [**IAgentCharacterEx::SRModeID,**](https://www.bing.com/search?q=**IAgentCharacterEx::SRModeID**) um eine Engine anzugeben.
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommand:: getvoice**](iagentcommand--getvoice.md), [**iagentcommand:: setCaption**](iagentcommand--setcaption.md), [**iagentcommand:: SetEnabled**](iagentcommand--setenabled.md), [**iagentcommands:: Add**](iagentcommands--add.md), [**iagentcommands:: Insert**](iagentcommands--insert.md)
+[**IAgentCommand::GetVoice**](iagentcommand--getvoice.md), [**IAgentCommand::SetCaption**](iagentcommand--setcaption.md), [**IAgentCommand::SetEnabled**](iagentcommand--setenabled.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
- 
+ 
 
- 
+ 

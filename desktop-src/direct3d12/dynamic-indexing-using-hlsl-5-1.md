@@ -1,34 +1,34 @@
 ---
 title: Dynamische Indizierung mit HLSL 5.1
-description: Das D3D12DynamicIndexing-Beispiel veranschaulicht einige der neuen HLSL-Features, die im Shader-Modell 5,1 verfügbar sind, insbesondere dynamische Indizierung und ungebundene Arrays, um das gleiche Mesh mehrmals zu rendern, wobei jedes Mal ein dynamisch ausgewähltes Material gerendert wird. Bei der dynamischen Indizierung können Shader jetzt in ein Array indizieren, ohne den Wert des Indexes zur Kompilierzeit zu kennen. In Kombination mit unbegrenzten Arrays wird dadurch eine weitere dereferenzierungsstufe und Flexibilität für Shader-Autoren und Kunst Pipelines hinzugefügt.
+description: Das D3D12DynamicIndexing-Beispiel veranschaulicht einige der neuen HLSL-Features, die in Shader Model 5.1 verfügbar sind – insbesondere dynamische Indizierung und ungebundene Arrays –, um dasselbe Gittermodell mehrmals zu rendern, jedes Mal, wenn es mit einem dynamisch ausgewählten Material gerendert wird. Mit der dynamischen Indizierung können Shader jetzt in ein Array indiziert werden, ohne den Wert des Indexes zur Kompilierzeit zu kennen. In Kombination mit ungebundenen Arrays wird dadurch eine weitere Dekonstruktion und Flexibilität für Shaderautoren und -pipelines hinzugefügt.
 ms.assetid: 9821AEDF-E83D-4034-863A-2B820D9B7455
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e41892e7deff23c8d11f8be1c38dac3fcba1de9
-ms.sourcegitcommit: 4c00910ed754d7d0a68c9a833751d714c06e3b39
+ms.openlocfilehash: bc560a71ac602f7c78d41e4805d90cb404c2210790b462fb5353b9e5b3ad48f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "104548679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118529291"
 ---
 # <a name="dynamic-indexing-using-hlsl-51"></a>Dynamische Indizierung mit HLSL 5.1
 
-Das **D3D12DynamicIndexing** -Beispiel veranschaulicht einige der neuen HLSL-Features, die im Shader-Modell 5,1 verfügbar sind, insbesondere dynamische Indizierung und ungebundene Arrays, um das gleiche Mesh mehrmals zu rendern, wobei jedes Mal ein dynamisch ausgewähltes Material gerendert wird. Bei der dynamischen Indizierung können Shader jetzt in ein Array indizieren, ohne den Wert des Indexes zur Kompilierzeit zu kennen. In Kombination mit unbegrenzten Arrays wird dadurch eine weitere dereferenzierungsstufe und Flexibilität für Shader-Autoren und Kunst Pipelines hinzugefügt.
+Das **D3D12DynamicIndexing-Beispiel** veranschaulicht einige der neuen HLSL-Features, die in Shader Model 5.1 verfügbar sind – insbesondere dynamische Indizierung und ungebundene Arrays –, um dasselbe Gittermodell mehrmals zu rendern, jedes Mal, wenn es mit einem dynamisch ausgewählten Material gerendert wird. Mit der dynamischen Indizierung können Shader jetzt in ein Array indiziert werden, ohne den Wert des Indexes zur Kompilierzeit zu kennen. In Kombination mit ungebundenen Arrays wird dadurch eine weitere Dekonstruktion und Flexibilität für Shaderautoren und -pipelines hinzugefügt.
 
--   [Einrichten des Pixelshaders](#set-up-the-pixel-shader)
--   [Einrichten der Stamm Signatur](#set-up-the-root-signature)
+-   [Einrichten des Pixelshader](#set-up-the-pixel-shader)
+-   [Einrichten der Stammsignatur](#set-up-the-root-signature)
 -   [Erstellen der Texturen](#create-the-textures)
--   [Hochladen der Textur Daten](#upload-the-texture-data)
--   [Diffuses Textur laden](#load-the-diffuse-texture)
+-   [Hochladen der Texturdaten](#upload-the-texture-data)
+-   [Laden der diffusen Textur](#load-the-diffuse-texture)
 -   [Erstellen eines Samplers](#create-a-sampler)
--   [Dynamisches Ändern des Stamm Parameter Indexes](#dynamically-change-the-root-parameter-index)
+-   [Dynamisches Ändern des Stammparameterindexes](#dynamically-change-the-root-parameter-index)
 -   [Ausführen des Beispiels](#run-the-sample)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="set-up-the-pixel-shader"></a>Einrichten des Pixelshaders
+## <a name="set-up-the-pixel-shader"></a>Einrichten des Pixelshader
 
-Sehen wir uns zuerst den Shader an, der für dieses Beispiel ein Pixelshader ist.
+Sehen wir uns zunächst den Shader selbst an, der für dieses Beispiel ein Pixel-Shader ist.
 
 ``` syntax
 Texture2D        g_txDiffuse : register(t0);
@@ -55,17 +55,17 @@ float4 PSSceneMain(PSSceneIn input) : SV_Target
 }
 ```
 
-Die Funktion für ungebundene Arrays wird durch das `g_txMats[]` Array veranschaulicht, da keine Array Größe angegeben wird. Dynamische Indizierung wird zum Indizieren von `g_txMats[]` mit verwendet `matIndex` , das als Stamm Konstante definiert ist. Der Shader kennt die Größe oder das Array oder den Wert des Indexes zur Kompilierzeit nicht. Beide Attribute werden in der Stamm Signatur des Pipeline Zustands Objekts definiert, das mit dem Shader verwendet wird.
+Das Feature für ungebundene Arrays wird vom Array veranschaulicht, `g_txMats[]` da es keine Arraygröße angibt. Die dynamische Indizierung wird zum Indizieren in `g_txMats[]` mit `matIndex` verwendet, das als Stammkonstante definiert ist. Der Shader hat keine Kenntnis der Größe, des Arrays oder des Werts des Indexes zur Kompilierzeit. Beide Attribute werden in der Stammsignatur des Pipelinezustandsobjekts definiert, das mit dem Shader verwendet wird.
 
-Um die Funktionen der dynamischen Indizierung in HLSL nutzen zu können, muss der Shader mit SM 5,1 kompiliert werden. Außerdem muss das Flag " **/enable \_ ungebundene \_ Deskriptor \_ Tables** " verwendet werden, um ungebundene Arrays zu verwenden. Die folgenden Befehlszeilenoptionen werden verwendet, um diesen Shader mit dem [Effekt-Compilertool](/windows/desktop/direct3dtools/fxc) (FXC) zu kompilieren:
+Um die Dynamischen Indizierungsfeatures in HLSL nutzen zu können, muss der Shader mit SM 5.1 kompiliert werden. Darüber hinaus muss auch das Flag **/enable \_ unbounded \_ descriptor \_ tables** verwendet werden, um ungebundene Arrays zu verwenden. Die folgenden Befehlszeilenoptionen werden verwendet, um diesen Shader mit dem [Effect-Compiler Tool](/windows/desktop/direct3dtools/fxc) (FXC) zu kompilieren:
 
 ``` syntax
 fxc /Zi /E"PSSceneMain" /Od /Fo"dynamic_indexing_pixel.cso" /ps"_5_1" /nologo /enable_unbounded_descriptor_tables
 ```
 
-## <a name="set-up-the-root-signature"></a>Einrichten der Stamm Signatur
+## <a name="set-up-the-root-signature"></a>Einrichten der Stammsignatur
 
-Sehen wir uns nun die Definition der Stamm Signatur an, insbesondere, wie wir die Größe des unbegrenzten Arrays definieren und eine Stamm Konstante mit verknüpfen `matIndex` . Für den Pixelshader definieren wir drei Dinge: eine Deskriptortabelle für Srvs (unsere Texture2Ds), eine Deskriptortabelle für Samplers und eine einzelne Stamm Konstante. Die Deskriptortabelle für unsere Srvs enthält `CityMaterialCount + 1` Einträge. `CityMaterialCount` ist eine Konstante, die die Länge von definiert, `g_txMats[]` und + 1 ist für `g_txDiffuse` . Die Deskriptortabelle für unsere Samplers enthält nur einen Eintrag, und in der **loadassets** -Methode wird nur der 1 32-Bit-root-Konstante Wert über **initaskonstanten**(...) definiert.
+Sehen wir uns nun die Stammsignaturdefinition an, insbesondere wie wir die Größe des ungebundenen Arrays definieren und eine Stammkonstante mit `matIndex` verknüpfen. Für den Pixelshader definieren wir drei Dinge: eine Deskriptortabelle für SRVs (unsere Texture2Ds), eine Deskriptortabelle für Sampler und eine einzelne Stammkonstante. Die Deskriptortabelle für unsere SRVs enthält `CityMaterialCount + 1` Einträge. `CityMaterialCount` ist eine Konstante, die die Länge von `g_txMats[]` definiert, und + 1 ist für `g_txDiffuse` . Die Deskriptortabelle für unsere Sampler enthält nur einen Eintrag, und wir definieren nur einen 32-Bit-Stammkonstantenwert über **InitAsConstants**(...) in der **LoadAssets-Methode.**
 
 ``` syntax
  // Create the root signature.
@@ -93,14 +93,14 @@ Sehen wir uns nun die Definition der Stamm Signatur an, insbesondere, wie wir di
 
 
 
-| Aufruffluss                                                             | Parameter                                                            |
+| Aufrufflow                                                             | Parameter                                                            |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [**CD3DX12- \_ \_ Deskriptorbereich**](cd3dx12-descriptor-range.md)        | [**D3D12- \_ \_ deskriptorbereichstyp \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) |
-| [**CD3DX12 \_ root- \_ Parameter**](cd3dx12-root-parameter.md)            | [**D3D12- \_ Shader- \_ Sichtbarkeit**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
-| [**CD3DX12 \_ Stamm \_ Signatur \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ root \_ Signature- \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
+| [**CD3DX12 \_ DESCRIPTOR \_ RANGE**](cd3dx12-descriptor-range.md)        | [**\_D3D12-DESKRIPTORBEREICHSTYP \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) |
+| [**CD3DX12 \_ \_ ROOT-PARAMETER**](cd3dx12-root-parameter.md)            | [**SICHTBARKEIT DES \_ D3D12-SHADERS \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
+| [**CD3DX12 \_ ROOT \_ SIGNATURE \_ DESC**](cd3dx12-root-signature-desc.md) | [**\_D3D12-STAMMSIGNATURFLAGS \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
 | [**ID3DBlob**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85))                                   |                                                                       |
-| [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**D3D \_ Stamm \_ Signatur \_ Version**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
-| [**"Kreaterootsignature"**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
+| [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**\_ \_ D3D-STAMMSIGNATURVERSION \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
+| [**CreateRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
 
 
 
@@ -108,7 +108,7 @@ Sehen wir uns nun die Definition der Stamm Signatur an, insbesondere, wie wir di
 
 ## <a name="create-the-textures"></a>Erstellen der Texturen
 
-Der Inhalt von `g_txMats[]` sind prozedurale generierte Texturen, die in **loadassets** erstellt werden. Jede Stadt, die in der Szene gerendert wird, hat dieselbe diffuse Textur, aber jede verfügt auch über eine eigene prozedurale generierte Textur. Das Array von Texturen erstreckt sich über das Regenbogen Spektrum, um die Indizierungs Technik leicht visuell darzustellen.
+Der Inhalt von `g_txMats[]` sind prozedural generierte Texturen, die in **LoadAssets** erstellt werden. Jede in der Szene gerenderte Stadt hat dieselbe diffuse Textur, verfügt aber auch über eine eigene prozedural generierte Textur. Das Array von Texturen umfasst das Spektrum der Farben, um die Indizierungstechnik einfach zu visualisieren.
 
 ``` syntax
  // Create the textures and sampler.
@@ -177,7 +177,7 @@ Der Inhalt von `g_txMats[]` sind prozedurale generierte Texturen, die in **loada
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -186,22 +186,22 @@ Der Inhalt von `g_txMats[]` sind prozedurale generierte Texturen, die in **loada
 <td><a href="/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc"><strong>D3D12_RESOURCE_DESC</strong></a></td>
 <td><dl><a href="/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format"><strong>DXGI_FORMAT</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags"><strong>D3D12_RESOURCE_FLAGS</strong></a><br />
-<a href=""></a>[<strong>D3D12_RESOURCE_DIMENSION</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_resource_dimension)<br />
+<a href=""></a>[<strong>D3D12_RESOURCE_DIMENSION</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension)<br />
 </dl></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>"Kreatecommittedresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>CreateCommittedResource</strong></a></td>
 <td><dl><a href="cd3dx12-heap-properties.md"><strong>CD3DX12_HEAP_PROPERTIES</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type"><strong>D3D12_HEAP_TYPE</strong></a><br />
-<a href=""></a>[<strong>D3D12_HEAP_FLAG</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_heap_flags)<br />
+<a href=""></a>[<strong>D3D12_HEAP_FLAG</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags)<br />
 <a href="/windows/desktop/direct3d12/cd3dx12-resource-desc"><strong>CD3DX12_RESOURCE_DESC</strong></a><br />
-<a href=""></a>[<strong>D3D12_RESOURCE_STATES</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_resource_states)<br />
+<a href=""></a>[<strong>D3D12_RESOURCE_STATES</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states)<br />
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/dxmath/xmvector-data-type"><strong>Xmvector</strong></a></td>
-<td><dl><a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorset"><strong>Xmvector Set</strong></a><br />
-<a href=""></a>[<strong>Xmcolorhsltor GB</strong>] (/windows/desktop/api/directxmath/nf-directxmath-xmcolorhsltorgb)<br />
+<td><a href="/windows/desktop/dxmath/xmvector-data-type"><strong>XMVECTOR</strong></a></td>
+<td><dl><a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorset"><strong>XMVectorSet</strong></a><br />
+<a href=""></a>[<strong>XMColorHSLToRGB</strong>] (/windows/desktop/api/directxmath/nf-directxmath-xmcolorhsltorgb)<br />
 </dl></td>
 </tr>
 </tbody>
@@ -211,9 +211,9 @@ Der Inhalt von `g_txMats[]` sind prozedurale generierte Texturen, die in **loada
 
  
 
-## <a name="upload-the-texture-data"></a>Hochladen der Textur Daten
+## <a name="upload-the-texture-data"></a>Hochladen der Texturdaten
 
-Textur Daten werden über einen uploadheap in die GPU hochgeladen, und Srvs werden für jeden erstellt und in einem SRV-deskriptorheap gespeichert.
+Texturdaten werden über einen Uploadheap auf die GPU hochgeladen, und SRVs werden jeweils erstellt und in einem SRV-Deskriptorheap gespeichert.
 
 ``` syntax
          // Upload texture data to the default heap resources.
@@ -252,17 +252,17 @@ Textur Daten werden über einen uploadheap in die GPU hochgeladen, und Srvs werd
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="getrequiredintermediatesize.md"><strong>Getrequiredintermediatesize</strong></a></td>
+<td><a href="getrequiredintermediatesize.md"><strong>GetRequiredIntermediateSize</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>"Kreatecommittedresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>CreateCommittedResource</strong></a></td>
 <td><dl><a href="cd3dx12-heap-properties.md"><strong>CD3DX12_HEAP_PROPERTIES</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type"><strong>D3D12_HEAP_TYPE</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags"><strong>D3D12_HEAP_FLAG</strong></a><br />
@@ -279,7 +279,7 @@ Textur Daten werden über einen uploadheap in die GPU hochgeladen, und Srvs werd
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 <td><dl><a href="/windows/desktop/direct3d12/cd3dx12-resource-barrier"><strong>CD3DX12_RESOURCE_BARRIER</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states"><strong>D3D12_RESOURCE_STATES</strong></a><br />
 </dl></td>
@@ -291,9 +291,9 @@ Textur Daten werden über einen uploadheap in die GPU hochgeladen, und Srvs werd
 
  
 
-## <a name="load-the-diffuse-texture"></a>Diffuses Textur laden
+## <a name="load-the-diffuse-texture"></a>Laden der diffusen Textur
 
-Die diffuse Textur g wird \_ `txDiffuse` auf ähnliche Weise hochgeladen und erhält auch einen eigenen SRV, aber die Textur Daten sind bereits in "occcity. bin" definiert.
+Die diffuse Textur g \_ `txDiffuse` wird auf ähnliche Weise hochgeladen und erhält auch einen eigenen SRV, aber die Texturdaten sind bereits in occcity.bin definiert.
 
 ``` syntax
 // Load the occcity diffuse texture with baked-in ambient lighting.
@@ -350,7 +350,7 @@ Die diffuse Textur g wird \_ `txDiffuse` auf ähnliche Weise hochgeladen und erh
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -362,7 +362,7 @@ Die diffuse Textur g wird \_ `txDiffuse` auf ähnliche Weise hochgeladen und erh
 </dl></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>"Kreatecommittedresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>CreateCommittedResource</strong></a></td>
 <td><dl><a href="cd3dx12-heap-properties.md"><strong>CD3DX12_HEAP_PROPERTIES</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type"><strong>D3D12_HEAP_TYPE</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags"><strong>D3D12_HEAP_FLAG</strong></a><br />
@@ -371,11 +371,11 @@ Die diffuse Textur g wird \_ `txDiffuse` auf ähnliche Weise hochgeladen und erh
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="getrequiredintermediatesize.md"><strong>Getrequiredintermediatesize</strong></a></td>
+<td><a href="getrequiredintermediatesize.md"><strong>GetRequiredIntermediateSize</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>"Kreatecommittedresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>CreateCommittedResource</strong></a></td>
 <td><dl><a href="cd3dx12-heap-properties.md"><strong>CD3DX12_HEAP_PROPERTIES</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type"><strong>D3D12_HEAP_TYPE</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags"><strong>D3D12_HEAP_FLAG</strong></a><br />
@@ -388,7 +388,7 @@ Die diffuse Textur g wird \_ `txDiffuse` auf ähnliche Weise hochgeladen und erh
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 <td><dl><a href="/windows/desktop/direct3d12/cd3dx12-resource-barrier"><strong>CD3DX12_RESOURCE_BARRIER</strong></a><br />
 <a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states"><strong>D3D12_RESOURCE_STATES</strong></a><br />
 </dl></td>
@@ -402,7 +402,7 @@ Die diffuse Textur g wird \_ `txDiffuse` auf ähnliche Weise hochgeladen und erh
 
 ## <a name="create-a-sampler"></a>Erstellen eines Samplers
 
-Schließlich wird für **loadassets** ein einzelner Sampler erstellt, um eine Stichprobe aus der diffusen Textur oder dem Textur Array zu erstellen.
+Schließlich wird **für LoadAssets** ein einzelner Sampler erstellt, um eine Stichprobe aus der diffusen Textur oder dem Texturarray zu erstellen.
 
 ``` syntax
  // Describe and create a sampler.
@@ -447,7 +447,7 @@ Schließlich wird für **loadassets** ein einzelner Sampler erstellt, um eine St
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Anruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -461,12 +461,12 @@ D3D12_FLOAT32_MAX (<a href="constants.md"><strong>Konstanten</strong></a>)<br />
 </dl></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createsampler"><strong>"Kreatesampler"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createsampler"><strong>CreateSampler</strong></a></td>
 
 </tr>
 <tr class="odd">
 <td><a href="cd3dx12-cpu-descriptor-handle.md"><strong>CD3DX12_CPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>Getcpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>GetCPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc"><strong>D3D12_SHADER_RESOURCE_VIEW_DESC</strong></a></td>
@@ -475,7 +475,7 @@ D3D12_FLOAT32_MAX (<a href="constants.md"><strong>Konstanten</strong></a>)<br />
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>"Kreateshaderresourceview"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>CreateShaderResourceView</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -486,7 +486,7 @@ D3D12_FLOAT32_MAX (<a href="constants.md"><strong>Konstanten</strong></a>)<br />
 </dl></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>"Kreateshaderresourceview"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview"><strong>CreateShaderResourceView</strong></a></td>
 
 </tr>
 </tbody>
@@ -496,13 +496,13 @@ D3D12_FLOAT32_MAX (<a href="constants.md"><strong>Konstanten</strong></a>)<br />
 
  
 
-## <a name="dynamically-change-the-root-parameter-index"></a>Dynamisches Ändern des Stamm Parameter Indexes
+## <a name="dynamically-change-the-root-parameter-index"></a>Dynamisches Ändern des Stammparameterindexes
 
-Wenn wir die Szene jetzt Rendering haben, würden alle Städte identisch sein, da wir den Wert der Stamm Konstante nicht festgelegt haben `matIndex` . Jeder Pixelshader würde in den nullten-Slot von indizieren, `g_txMats` und die Szene würde wie folgt aussehen:
+Wenn wir die Szene jetzt rendern würden, würden alle Städte gleich erscheinen, da wir nicht den Wert unserer Stammkonst constant, , festgelegt `matIndex` haben. Jeder Pixel-Shader würde in den 0. Slot von indiziert, `g_txMats` und die Szene würde wie die folgenden aussehen:
 
-![Alle Städte werden in derselben Farbe angezeigt.](images/dynamicindexing-image1.png)
+![Alle Städte werden in der gleichen Farbe angezeigt.](images/dynamicindexing-image1.png)
 
-Der Wert der root-Konstante wird in **frameresource::P opulatecommandlists** festgelegt. In der Double **for** -Schleife, in der ein Draw-Befehl für jede Stadt aufgezeichnet wird, zeichnen wir einen [**SetGraphicsRoot32BitConstants**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsroot32bitconstants) auf, der den Stamm Parameter Index in Bezug auf die Stamm Signatur angibt – in diesem Fall 3 – den Wert des dynamischen Indexes und einen Offset – in diesem Fall 0. Da die Länge von `g_txMats` gleich der Anzahl der von uns erstellenden Städte ist, wird der Wert des Indexes für jede Stadt inkrementell festgelegt.
+Der Wert der Stammkonst constant wird in **FrameResource::P opulateCommandLists festgelegt.** In der  doppelten for-Schleife, in der ein Draw-Befehl für jede Stadt aufgezeichnet wird, zeichnen wir einen Aufruf von [**SetGraphicsRoot32BitConstants**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsroot32bitconstants) auf, der unseren Stammparameterindex in Bezug auf die Stammsignatur angibt – in diesem Fall 3 – den Wert des dynamischen Indexes und einen Offset – in diesem Fall 0. Da die Länge von gleich der Anzahl der gerenderten Städte ist, wird der Wert des Indexes inkrementell `g_txMats` für jede Stadt festgelegt.
 
 ``` syntax
  for (UINT i = 0; i < m_cityRowCount; i++)
@@ -525,37 +525,37 @@ Der Wert der root-Konstante wird in **frameresource::P opulatecommandlists** fes
 
 
 
-| Aufruffluss                                                                                          | Parameter |
+| Anruffluss                                                                                          | Parameter |
 |----------------------------------------------------------------------------------------------------|------------|
-| [**Setpipelinestate**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)                             |            |
+| [**SetPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)                             |            |
 | [**SetGraphicsRoot32BitConstant**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsroot32bitconstant)     |            |
-| [**Setgraphicsrootdescriptor Table**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable) |            |
-| [**Drawindexedinstangeleitet**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced)                     |            |
+| [**SetGraphicsRootDescriptorTable**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable) |            |
+| [**DrawIndexedInstanced**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced)                     |            |
 
 ## <a name="run-the-sample"></a>Ausführen des Beispiels
 
-Wenn wir nun die Szene Rendering, hat jede Stadt einen anderen Wert für, `matIndex` und es wird daher eine andere Textur angezeigt, von `g_txMats[]` der die Szene wie folgt aussieht:
+Wenn wir nun die Szene rendern, hat jede Stadt einen anderen Wert für und sucht daher eine andere Textur als die Szene `matIndex` sieht wie die folgenden `g_txMats[]` aus:
 
 ![Alle Städte werden in unterschiedlichen Farben angezeigt.](images/dynamicindexing-image2.png)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 </dt> <dt>
 
-[Effekt-Compilertool](/windows/desktop/direct3dtools/fxc)
+[Effect-Compiler-Tool](/windows/desktop/direct3dtools/fxc)
 </dt> <dt>
 
-[HLSL-Shader-Modell 5,1 Features für Direct3D 12](/windows/desktop/direct3dhlsl/hlsl-shader-model-5-1-features-for-direct3d-12)
+[HLSL-Shadermodell 5.1-Features für Direct3D 12](/windows/desktop/direct3dhlsl/hlsl-shader-model-5-1-features-for-direct3d-12)
 </dt> <dt>
 
-[Ressourcen Bindung in HLSL](resource-binding-in-hlsl.md)
+[Ressourcenbindung in HLSL](resource-binding-in-hlsl.md)
 </dt> <dt>
 
-[Shadermodell 5,1](/windows/desktop/direct3dhlsl/shader-model-5-1)
+[Shadermodell 5.1](/windows/desktop/direct3dhlsl/shader-model-5-1)
 </dt> <dt>
 
-[Angeben von Stamm Signaturen in HLSL](specifying-root-signatures-in-hlsl.md)
+[Festlegen von Stammsignaturen in HLSL](specifying-root-signatures-in-hlsl.md)
 </dt> </dl>

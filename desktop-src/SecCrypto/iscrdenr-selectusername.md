@@ -1,7 +1,7 @@
 ---
-description: Zeigt eine Benutzeroberfläche zum auswählen an, sodass ein Benutzername ausgewählt werden kann.
+description: Zeigt eine Benutzeroberfläche auswählen an, sodass ein Benutzername ausgewählt werden kann.
 ms.assetid: 0a02d9e5-b2cf-4818-a2e1-89e6019e53d4
-title: 'Iscrdenr:: selectusername-Methode'
+title: ISCrdEnr::selectUserName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: 13059775abc8520c39a0ad3dea2d604fc8d65455
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6414b78c07f9dff8761456f92b1088c5ed7eb6c23e7c7ed0eb2cd3980677dca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119409420"
 ---
-# <a name="iscrdenrselectusername-method"></a>Iscrdenr:: selectusername-Methode
+# <a name="iscrdenrselectusername-method"></a>ISCrdEnr::selectUserName-Methode
 
-Die **selectusername** -Methode zeigt eine Benutzeroberfläche zum **auswählen** an, sodass ein Benutzername ausgewählt werden kann.
+Die **selectUserName-Methode** zeigt eine **Benutzeroberfläche auswählen** an, sodass ein Benutzername ausgewählt werden kann.
 
-Der Benutzername gilt für den Benutzer, für den die Zertifikat Registrierung vorgesehen ist.
+Der Benutzername gilt für den Benutzer, in dessen Namen die Zertifikatregistrierung vorgesehen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ SCrdEnr.selectUserName( _
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Für die zukünftige Verwendung reserviert. Legen Sie diesen Wert auf NULL fest.
+Für die zukünftige Verwendung reserviert. Legen Sie diesen Wert auf 0 (null) fest.
 
 </dd> </dl>
 
@@ -63,15 +63,15 @@ Für die zukünftige Verwendung reserviert. Legen Sie diesen Wert auf NULL fest.
 
 ### <a name="vb"></a>VB
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Methode fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](common-hresult-values.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, um den Namen des Benutzers auszuwählen. Nachdem ein Benutzername ausgewählt wurde, kann der zugehörige Wert durch Aufrufen der [**iscrdenr:: GetUserName**](iscrdenr-getusername.md) -Methode abgerufen werden.
+Verwenden Sie diese Methode, um den Namen des Benutzers auszuwählen. Nachdem ein Benutzername ausgewählt wurde, kann sein Wert durch Aufrufen der [**ISCrdEnr::getUserName-Methode**](iscrdenr-getusername.md) abgerufen werden.
 
-Eine Alternative zum Verwenden der Benutzeroberfläche "Select User" ist das Angeben eines Benutzers durch Aufrufen der [**iscrdenr:: setUserName**](iscrdenr-setusername.md) -Methode.
+Eine Alternative zur Verwendung der Benutzeroberfläche "Benutzer auswählen" ist das Angeben eines Benutzers durch Aufrufen der [**ISCrdEnr::setUserName-Methode.**](iscrdenr-setusername.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,26 +80,26 @@ Eine Alternative zum Verwenden der Benutzeroberfläche "Select User" ist das Ang
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: GetUserName**](iscrdenr-getusername.md)
+[**ISCrdEnr::getUserName**](iscrdenr-getusername.md)
 </dt> <dt>
 
-[**Iscrdenr:: resetuser**](iscrdenr-resetuser.md)
+[**ISCrdEnr::resetUser**](iscrdenr-resetuser.md)
 </dt> <dt>
 
-[**Iscrdenr:: setUserName**](iscrdenr-setusername.md)
+[**ISCrdEnr::setUserName**](iscrdenr-setusername.md)
 </dt> </dl>
 
  

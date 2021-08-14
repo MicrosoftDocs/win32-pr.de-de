@@ -1,24 +1,24 @@
 ---
-title: Reihenfolge der Verwendung der SDO-API
-description: In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufgerufen werden.
+title: Reihenfolge, in der die SDO-API verwendet werden soll
+description: In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufruft werden.
 ms.assetid: 77ec6ed1-fc29-4962-8939-3ab0160df1f8
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 224c24c890a8bbebd019cce9fd83d34a1cbe94ea
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f4ac505b6738946d3d140ecf9ec9018d9162e861372cef3ce90ef8c81e7f2ef9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118361586"
 ---
-# <a name="order-in-which-to-use-the-sdo-api"></a>Reihenfolge der Verwendung der SDO-API
+# <a name="order-in-which-to-use-the-sdo-api"></a>Reihenfolge, in der die SDO-API verwendet werden soll
 
-In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufgerufen werden.
+In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufruft werden.
 
--   [Abrufen eines Computers SDO](/windows/desktop/Nps/sdo-obtaining-a-machine-sdo)
+-   [Abrufen eines Computer-SDO](/windows/desktop/Nps/sdo-obtaining-a-machine-sdo)
 -   [Anfügen an den SDO-Computer](/windows/desktop/Nps/sdo-attaching-to-the-sdo-computer)
--   [Abrufen von Dienst-und Benutzer-SDOs](/windows/desktop/Nps/sdo-obtaining-service-and-user-sdos)
+-   [Abrufen von Dienst- und Benutzer-SDOs](/windows/desktop/Nps/sdo-obtaining-service-and-user-sdos)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -27,6 +27,6 @@ In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die versch
 [Elemente der SDO-API](/windows/desktop/Nps/sdo-elements-of-the-sdo-api)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,28 +1,28 @@
 ---
-description: Wenn Sie Microsoft Windows-Dialogfelder verwenden, müssen Sie alle Steuerelemente bezeichnen, um die sprach Funktionalität zu vereinfachen. Im folgenden Dialogfeld Ausführen wird eine statische Text Steuerelement-Bezeichnung für ein Dropdown-Listenfeld angezeigt. Statischer Text endet mit einem Doppelpunkt.
+description: Wenn Sie Microsoft Windows-Dialogfelder verwenden, müssen Sie alle Steuerelemente beschriften, um die Sprachfunktionalität zu vereinfachen. Im folgenden Dialogfeld Ausführen wird eine statische Textsteuerzeichenbezeichnung für ein Dropdownlistenfeld angezeigt. Statischer Text endet mit einem Doppelpunkt.
 ms.assetid: 3b01a4d2-9deb-413f-bab8-566df86b6af9
-title: Benennen von Steuerelementen in Dialog Feldern
+title: Benennen von Steuerelementen in Dialogfeldern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f0f74ecb3737b422450388ee87ab4177e899aa6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c33720c08a7f5454b54d7d982b14c091fe6e1df4c18a49cd649f54690f2eb11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104565119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449827"
 ---
-# <a name="naming-controls-in-dialog-boxes"></a>Benennen von Steuerelementen in Dialog Feldern
+# <a name="naming-controls-in-dialog-boxes"></a>Benennen von Steuerelementen in Dialogfeldern
 
-Wenn Sie Microsoft Windows-Dialogfelder verwenden, müssen Sie alle Steuerelemente bezeichnen, um die sprach Funktionalität zu vereinfachen. Im folgenden Dialogfeld **Ausführen** wird eine statische Text Steuerelement-Bezeichnung für ein Dropdown-Listenfeld angezeigt. Statischer Text endet mit einem Doppelpunkt.
+Wenn Sie Microsoft Windows-Dialogfelder verwenden, müssen Sie alle Steuerelemente beschriften, um die Sprachfunktionalität zu vereinfachen. Im folgenden **Dialogfeld** Ausführen wird eine statische Textsteuerzeichenbezeichnung für ein Dropdownlistenfeld angezeigt. Statischer Text endet mit einem Doppelpunkt.
 
-![Screenshot mit dem Dialogfeld "ausführen"](images/fb0bd076-e9f9-4260-a54a-9d7db93157da.jpg)
+![Screenshot des Dialogfelds "Ausführen"](images/fb0bd076-e9f9-4260-a54a-9d7db93157da.jpg)
 
 Es gibt zwei Arten von Kontrollen:
 
--   Steuerelemente, die über Beschriftungen als Eigenschaft dieses Steuer Elements verfügen, z. b. Befehls Schaltflächen und Kontrollkästchen. Barrierefreiheits Hilfen haben keine Probleme, diese Steuerelemente zu identifizieren, solange die Beschriftung ordnungsgemäß definiert ist.
--   Steuerelemente, die nicht über eigene Beschriftungen verfügen (z. b. Bearbeitungs Steuerelemente, Listenfelder und Listenansichten), müssen mithilfe separater statischer Text Steuerelemente beschriftet werden. Weitere Informationen zu Steuerelementen, die über keine eigenen Beschriftungen verfügen, finden Sie unter Steuer [Elemente ohne Beschriftungs Eigenschaften](controls-without-caption-properties.md).
+-   Steuerelemente, deren Beschriftungen eine Eigenschaft dieses Steuerelements sind, z. B. Befehlsschaltflächen und Kontrollkästchen. Barrierefreiheitshilfen haben keine Probleme beim Identifizieren dieser Steuerelemente, solange die Beschriftung ordnungsgemäß definiert ist.
+-   Steuerelemente, die nicht über eigene Beschriftungen verfügen, z. B. Bearbeitungssteuerelemente, Listenfelder und Listenansichten, müssen mithilfe separater statischer Textsteuerelemente bezeichnet werden. Weitere Informationen zu Steuerelementen, die nicht über eigene Beschriftungen verfügen, finden Sie unter [Steuerelemente ohne Beschriftungseigenschaften.](controls-without-caption-properties.md)
 
-Es können mehrere Techniken verwendet werden, um Situationen zu überwinden, in denen Steuerelemente nicht über eigene Beschriftungen verfügen, aber nur für Windows wirksam sind, die vom Standard Dialog-Manager (SDM) angezeigt werden. Alle anderen Fenster müssen die Namen und Beziehungen zwischen Steuerelementen verfügbar machen, indem Microsoft Active Accessibility explizit unterstützt wird. Weitere Informationen zu Active Accessibility finden Sie im Abschnitt zur [Barrierefreiheit](/windows/desktop/accessibility) in der MSDN Library.
+Verschiedene Techniken können verwendet werden, um Situationen zu überwinden, in denen Steuerelemente nicht über eigene Untertitel verfügen, aber nur für Fenster wirksam sind, die vom Standarddialog-Manager (STANDARD Dialog Manager, SDM) angezeigt werden. Alle anderen Fenster müssen die Namen und die Beziehung zwischen Steuerelementen durch explizite Unterstützung Microsoft Active Accessibility. Weitere Informationen zu Active Accessibility finden Sie im Abschnitt [Barrierefreiheit](/windows/desktop/accessibility) der MSDN Library.
 
  
 

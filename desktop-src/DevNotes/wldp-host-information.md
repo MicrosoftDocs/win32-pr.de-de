@@ -1,7 +1,7 @@
 ---
-description: Eine-Struktur, die den zu bewertenden Host und die Quelldatei identifiziert.
+description: Eine Struktur, die den Host und die Quelldatei identifiziert, die ausgewertet werden sollen.
 ms.assetid: 547EF59E-7DE5-45E4-948F-109547FAAEE7
-title: WLDP_HOST_INFORMATION Struktur (wldp. h)
+title: WLDP_HOST_INFORMATION-Struktur (Wldp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wldp.h
-ms.openlocfilehash: ad20be7fa5887e42c09248d04e14f5ff8cffcd54
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cc1bed8fd104b4aa6abb83d3eb7e19faa37a0301429312c8f0799e256ce32ec6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118404069"
 ---
-# <a name="wldp_host_information-structure"></a>Wldp- \_ Host \_ Informationsstruktur
+# <a name="wldp_host_information-structure"></a>Struktur der \_ WLDP-HOSTINFORMATIONEN \_
 
-Eine-Struktur, die den zu bewertenden Host und die Quelldatei identifiziert.
+Eine Struktur, die den Host und die Quelldatei identifiziert, die ausgewertet werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ typedef struct _WLDP_HOST_INFORMATION {
 
 <dl> <dt>
 
-**dwrevision**
+**dwRevision**
 </dt> <dd>
 
-Muss eine **wldp- \_ Host \_ Informations \_ Revision** sein.
+Muss **WLDP \_ HOST \_ INFORMATION \_ REVISION** sein.
 
 </dd> <dt>
 
-**dwhostid**
+**dwHostId**
 </dt> <dd>
 
-Enumerationswert aus der [**wldp- \_ Host- \_ ID**](wldp-host-id.md) , die die Host-ID beschreibt.
+Enumerationswert aus [**der WLDP-HOST-ID, \_ \_**](wldp-host-id.md) der die Host-ID beschreibt.
 
 </dd> <dt>
 
-**szsource**
+**szSource**
 </dt> <dd>
 
-Vollständiger Pfad-und Skript Name mit der Erweiterung. NULL für die **globale wldp- \_ Host- \_ ID \_** oder die manuelle Skriptausführung.
+Vollständiger Pfad und Skriptname mit der Erweiterung. NULL für **WLDP \_ HOST ID \_ \_ GLOBAL** oder manuelle Skriptausführung.
 
 </dd> <dt>
 
-**hsource**
+**hSource**
 </dt> <dd>
 
 Zusätzlich zum Namen kann der Aufrufer ein Handle für die Datei angeben, die für die Validierung verwendet wird.
@@ -76,9 +76,9 @@ Zusätzlich zum Namen kann der Aufrufer ein Handle für die Datei angeben, die f
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Wldp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Wldp.h</dt> </dl> |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: MS-TS-unterbrochene-Connection-action-Attribut
-description: Die Aktion "Terminaldienste-Sitzungs unterbrochene Verbindung" gibt die Aktion an, die ausgeführt werden soll, wenn eine Terminaldienstesitzung erreicht wird
+title: ms-TS-Broken-Connection-Action-Attribut
+description: Terminal services session Broken Connection Action gibt die Aktion an, die beim Erreichen eines Sitzungslimits für Terminaldienste erforderlich ist.
 ms.assetid: a3c1556d-2de7-4945-aa91-7ef8d0ac8cd0
 ms.tgt_platform: multiple
 keywords:
-- MS-TS-unterbrochene-Connection-action-Attribut AD-Schema
-- AD-Schema für mstsbrokenconnectionaction-Attribut
+- MS-TS-Broken-Connection-Action-Attribut AD-Schema
+- AD-Schema des msTSBrokenConnectionAction-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8b48beadd31964cbfe48dbe477a9463e16db77b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c7cf31e02a31b750a5d555f3357f28059196360c6f18e25c855a69ad8974243d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118424775"
 ---
-# <a name="ms-ts-broken-connection-action-attribute"></a>MS-TS-unterbrochene-Connection-action-Attribut
+# <a name="ms-ts-broken-connection-action-attribute"></a>ms-TS-Broken-Connection-Action-Attribut
 
-Die Aktion "Terminaldienste-Sitzungs unterbrochene Verbindung" gibt die Aktion an, die ausgeführt werden soll, wenn eine Terminaldienstesitzung erreicht wird
+Terminal services session Broken Connection Action gibt die Aktion an, die beim Erreichen eines Sitzungslimits für Terminaldienste erforderlich ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-unterbrochene Verbindungs Aktion       |
-| LDAP-Display-Name | mstsbrokenconnectionaction           |
+| CN                | ms-TS-Broken-Connection-Action       |
+| Ldap-Anzeigename | msTSBrokenConnectionAction           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1985              |
-| System-ID-GUID    | 1cf41bba-5604-463e-94D6-1a1287b72ca3 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 1cf41bba-5604-463e-94d6-1a1287b72ca3 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -55,10 +55,10 @@ Die Aktion "Terminaldienste-Sitzungs unterbrochene Verbindung" gibt die Aktion a
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Die Aktion "Terminaldienste-Sitzungs unterbrochene Verbindung" gibt die Aktion a
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Die Aktion "Terminaldienste-Sitzungs unterbrochene Verbindung" gibt die Aktion a
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

@@ -1,19 +1,19 @@
 ---
-description: Der Installer legt die colorbits-Eigenschaft auf die Anzahl der angrenzenden Farbbits für jedes Pixel fest.
+description: Das Installationsprogramm legt die ColorBits-Eigenschaft auf die Anzahl der angrenzenden Farbbits für jedes Pixel fest.
 ms.assetid: a4cb81dc-2499-4918-a82a-f5fd0e9e9593
-title: Colorbits (Eigenschaft)
+title: ColorBits-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2da25cab7dde035e6b7c0922c0544bca7c134937
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2da16d4294b8024cf538adadf75613261cd2c1534b5ee9644bfa5db9696eb98a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118380826"
 ---
-# <a name="colorbits-property"></a>Colorbits (Eigenschaft)
+# <a name="colorbits-property"></a>ColorBits-Eigenschaft
 
-Der Installer legt die **colorbits** -Eigenschaft auf die Anzahl der angrenzenden Farbbits für jedes Pixel fest.
+Das Installationsprogramm legt die **ColorBits-Eigenschaft** auf die Anzahl der angrenzenden Farbbits für jedes Pixel fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Der Installer legt die **colorbits** -Eigenschaft auf die Anzahl der angrenzende
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

@@ -4,18 +4,18 @@ ms.assetid: 0ea1de35-34ea-4e94-b90d-0f89503cb3fb
 title: Dynamischer Arbeitsspeicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfcc54a1b85f4fc39bf6383e05a2e6e535edd1d4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 408e54aa1a1d238a98bb0eff8af2dd76862b32b77c26b3d3812d8707bc0099f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108088468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118329852"
 ---
 # <a name="dynamic-memory"></a>Dynamischer Arbeitsspeicher
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Clients (als virtuelle Computer ausgeführt)** – Windows Vista \| Windows 7  
+**Clients (die als virtuelle Computer ausgeführt werden)** – Windows Vista \| Windows 7  
 **Server** – Windows Server 2008 R2 Hyper-V SP1  
 
 
@@ -45,20 +45,20 @@ Alte Tools, die einen neuen Windows Server 2008 R2 SP1-Server verwalten, können
 
 Entwickler, die Software für die Verwendung auf einem virtuellen Computer schreiben, der für die Verwendung von Dynamischer Arbeitsspeicher müssen bedenken, dass der Arbeitsspeicher des VM-Systems nicht mehr konstant ist. Daher sollte ihre Anwendung Arbeitsspeicher frei geben, wenn sie nicht mehr benötigt wird, um anderen Anwendungen die Nutzung der Ressource zu ermöglichen.
 
-Speicherzuweisungen und Dasentlegungen funktionieren für Benutzeranwendungen weiterhin wie gewohnt. Dynamischer Arbeitsspeicher ist für die meisten Endbenutzeranwendungen vollständig transparent. Wenn die entwickelte Software jedoch Speicherleistungsindikatoren auf dem virtuellen Computer verwendet, sollten sie in einer Dynamischer Arbeitsspeicher aktivierten Umgebung sorgfältig getestet werden, um sicherzustellen, dass die Software die Änderungen berücksichtigt, die an der Speicherbelegung des Gastbetriebssystems vorgenommen werden. Verfügbarer Arbeitsspeicher ist aus Sicht des virtuellen Computers nicht mehr "statisch".
+Speicherzuweisungen und Dasentlegungen funktionieren für Benutzeranwendungen weiterhin wie gewohnt. Dynamischer Arbeitsspeicher ist für die meisten Endbenutzeranwendungen vollständig transparent. Wenn die entwickelte Software jedoch Arbeitsspeicherleistungsindikatoren auf dem virtuellen Computer nutzt, sollten in einer Dynamischer Arbeitsspeicher-fähigen Umgebung sorgfältige Tests durchgeführt werden, um sicherzustellen, dass die Software die Änderungen berücksichtigt, die an der Speicherzuordnung des Gastbetriebssystems vorgenommen werden. Der verfügbare Arbeitsspeicher ist aus Sicht des virtuellen Computers nicht mehr "statisch".
 
 ## <a name="solutions"></a>Lösungen
 
-Auf virtuellen Computern müssen aktualisierte Integrationsdienste (SP1) installiert sein, um Dynamischer Arbeitsspeicher nutzen zu können. Stellen Sie sicher, dass alle Computer, die in der Verwaltung virtueller Hyper-V-Computer verwendet werden, die neuesten Windows Server 2008 R2 SP1-Bits verwenden.
+Auf virtuellen Computern müssen aktualisierte Integrationsdienste (SP1) installiert sein, um die Vorteile der Dynamischer Arbeitsspeicher. Stellen Sie sicher, dass alle Computer, die in der Verwaltung virtueller Hyper-V-Computer verwendet werden, die neuesten Windows Server 2008 R2 SP1-Bits verwenden.
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 
--   [Blog zu Dynamischer Arbeitsspeicher Coming To Hyper-V](https://blogs.technet.com/b/virtualization/archive/2010/03/18/dynamic-memory-coming-to-hyper-v.aspx)
+-   [Dynamischer Arbeitsspeicher Coming To Hyper-V-Blog](https://blogs.technet.com/b/virtualization/archive/2010/03/18/dynamic-memory-coming-to-hyper-v.aspx)
 -   [Verwenden des Hyper-V-WMI-Anbieters](/previous-versions/windows/desktop/virtual/using-the-virtualization-wmi-provider)
 
 ## <a name="disclaimer"></a>Haftungsausschluss
 
-Die in diesem Dokument enthaltenen Informationen beziehen sich auf vorab veröffentlichte Softwareprodukte, die vor dem ersten kommerziellen Release erheblich geändert werden können. Entsprechend können die Informationen das Softwareprodukt bei der ersten kommerziellen Veröffentlichung nicht genau beschreiben oder widerspiegeln. Dieses Dokument dient nur zu Informationszwecken. MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, IN THIS DOCUMENT.
+Die in diesem Dokument enthaltenen Informationen beziehen sich auf Vorabversionssoftwareprodukt, das vor der ersten kommerziellen Veröffentlichung erheblich geändert werden kann. Entsprechend können die Informationen das Softwareprodukt bei der ersten kommerziellen Version nicht genau beschreiben oder widerspiegeln. Dieses Dokument dient nur zu Informationszwecken. MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, IN THIS DOCUMENT.
 
  
 

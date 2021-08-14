@@ -1,8 +1,8 @@
 ---
-description: Stellt den Index des Elements in seinem übergeordneten "taubemaktusher"-Objekt dar.
+description: Stellt den Index des Elements im übergeordneten SWbemRefresher-Objekt dar.
 ms.assetid: f076eb01-1e71-487d-a1af-687a052b4d67
 ms.tgt_platform: multiple
-title: Taubemaktuableitem. Index-Eigenschaft (wbemdisp. h)
+title: SWbemRefreshableItem.Index-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 6ef1e7f4c646337f615d435587e0ae68286a8702
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: e3c2da7800b74c45c917936f1a1e1f4cbf7de92c0362e70b446b7918a0c76a19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104132185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118312929"
 ---
-# <a name="swbemrefreshableitemindex-property"></a>Taubemerfrischendes ableitem. Index-Eigenschaft
+# <a name="swbemrefreshableitemindex-property"></a>SWbemRefreshableItem.Index-Eigenschaft
 
-Die Eigenschaft " **taubemfreshableitem. Index** " stellt den Index des Elements im übergeordneten " [**taubemaktusher**](swbemrefresher.md) "-Objekt dar.
+Die **SWbemRefreshableItem.Index-Eigenschaft** stellt den Index des Elements im übergeordneten [**SWbemRefresher-Objekt**](swbemrefresher.md) dar.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,22 +51,22 @@ SWbemRefreshableItem.Index As Long
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID, \_ Swap-ableitem<br/>                                                  |
-| IID<br/>                      | IID \_ iswbemerfrischendes ableitem<br/>                                                   |
+| CLSID<br/>                    | CLSID \_ SWbemRefreshableItem<br/>                                                  |
+| IID<br/>                      | IID \_ ISWbemRefreshableItem<br/>                                                   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Swap-aktuableitem**](swbemrefreshableitem.md)
+[**SWbemRefreshableItem**](swbemrefreshableitem.md)
 </dt> <dt>
 
-[**Swap-aktuableitem**](swbemrefresher.md)
+[**SWbemRefreshableItem**](swbemrefresher.md)
 </dt> </dl>
 
  

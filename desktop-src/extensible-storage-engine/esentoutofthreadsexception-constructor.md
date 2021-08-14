@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentouto fthreadsexception-Konstruktor'
-title: Esentouto fthreadsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentOutOfThreadsException-Konstruktor'
+title: EsentOutOfThreadsException-Konstruktor
 TOCTitle: 'EsentOutOfThreadsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfThreadsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofthreadsexception.esentoutofthreadsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5484da68d13488eaa50ca19889f0d21658361594
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2543fc6887849cd594fc1df6085a5cd54854034ad3eb0a84c0e5b75c3e926a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118492287"
 ---
-# <a name="esentoutofthreadsexception-constructor"></a>Esentouto fthreadsexception-Konstruktor
+# <a name="esentoutofthreadsexception-constructor"></a>EsentOutOfThreadsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouto fthreadsexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfThreadsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentOutOfThreadsException()
 public EsentOutOfThreadsException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentouto fthreadsexception-Klasse](./esentoutofthreadsexception-class.md)
+[EsentOutOfThreadsException-Klasse](./esentoutofthreadsexception-class.md)
 
-[Esentouto fthreadsexception-Elemente](./esentoutofthreadsexception-members.md)
+[EsentOutOfThreadsException-Member](./esentoutofthreadsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

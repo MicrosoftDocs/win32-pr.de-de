@@ -1,10 +1,10 @@
 ---
-title: Gruppe "Gruppe"
-description: Definiert die Gruppe von Aktionen, die von einer Aufgabe durchgeführt werden können.
+title: actionGroup Group
+description: Definiert die Gruppe von Aktionen, die eine Aufgabe ausführen kann.
 ms.assetid: a43ba021-4a40-4e2c-a57f-bd6ee17706ba
 keywords:
-- Gruppe "Aktionsgruppe" Taskplaner
-- Aktionsgruppen Taskplaner
+- actionGroup-Taskplaner
+- actionGroup Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: af06598c6eca092f474467bea16a7d7b95a9563f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bcfd37187373e8bebdcc6b2af22323fd5475a6893791158b83b16c278752e420
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118357177"
 ---
-# <a name="actiongroup-group"></a>Gruppe "Gruppe"
+# <a name="actiongroup-group"></a>actionGroup Group
 
-Definiert die Gruppe von Aktionen, die von einer Aufgabe durchgeführt werden können.
+Definiert die Gruppe von Aktionen, die eine Aufgabe ausführen kann.
 
 ``` syntax
 <xs:group name="actionGroup">
@@ -50,16 +50,16 @@ Definiert die Gruppe von Aktionen, die von einer Aufgabe durchgeführt werden k�
 
 | Element                                                                    | type                                                                       | BESCHREIBUNG                                                             |
 |----------------------------------------------------------------------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [**Comhandler**](taskschedulerschema-comhandler-actiongroup-element.md)   | [**comhandlertype**](taskschedulerschema-comhandlertype-complextype.md)   | Stellt eine Aktion dar, die einen Handler auslöst.<br/>                   |
-| [**Exec**](taskschedulerschema-exec-actiongroup-element.md)               | [**exectype**](taskschedulerschema-exectype-complextype.md)               | Stellt eine Aktion dar, die einen Befehlszeilen Vorgang ausführt.<br/> |
-| [**SendEmail**](taskschedulerschema-sendemail-actiongroup-element.md)     | [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md)     | Stellt eine Aktion dar, die eine e-Mail-Nachricht sendet.<br/>            |
-| [**ShowMessage**](taskschedulerschema-showmessage-actiongroup-element.md) | [**showmessagetype**](taskschedulerschema-showmessagetype-complextype.md) | Stellt eine Aktion dar, die ein Meldungs Feld anzeigt.<br/>               |
+| [**ComHandler**](taskschedulerschema-comhandler-actiongroup-element.md)   | [**comHandlerType**](taskschedulerschema-comhandlertype-complextype.md)   | Stellt eine Aktion dar, die einen Handler ausspricht.<br/>                   |
+| [**Exec**](taskschedulerschema-exec-actiongroup-element.md)               | [**execType**](taskschedulerschema-exectype-complextype.md)               | Stellt eine Aktion dar, die einen Befehlszeilenvorgang ausgeführt.<br/> |
+| [**Sendemail**](taskschedulerschema-sendemail-actiongroup-element.md)     | [**sendEmailType**](taskschedulerschema-sendemailtype-complextype.md)     | Stellt eine Aktion dar, die eine E-Mail sendet.<br/>            |
+| [**Showmessage**](taskschedulerschema-showmessage-actiongroup-element.md) | [**showMessageType**](taskschedulerschema-showmessagetype-complextype.md) | Stellt eine Aktion dar, die ein Meldungsfeld zeigt.<br/>               |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML sind die Elemente, die von dieser Gruppe definiert werden, die untergeordneten Elemente des [**Actions**](taskschedulerschema-actions-tasktype-element.md) -Elements.
+Beim Lesen oder Schreiben von XML sind die von dieser Gruppe definierten Elemente die untergeordneten Elemente des [**Actions-Elements.**](taskschedulerschema-actions-tasktype-element.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,12 +67,12 @@ Beim Lesen oder Schreiben von XML sind die Elemente, die von dieser Gruppe defin
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

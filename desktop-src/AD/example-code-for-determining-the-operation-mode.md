@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für die Bestimmung des Betriebsmodus
-description: Dieses Thema enthält ein Codebeispiel, in dem die nTMixedDomain-Eigenschaft einer Domäne gelesen und der Betriebsmodus bestimmt wird.
+title: Beispielcode zum Bestimmen des Betriebsmodus
+description: Dieses Thema enthält ein Codebeispiel, das die ntMixedDomain-Eigenschaft einer Domäne liest und den Betriebsmodus bestimmt.
 ms.assetid: 4ea1ddc5-6f48-45d3-9763-7ef0e6e704e3
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, bestimmen des Betriebsmodus
+- 'Active Directory-Beispiele: Active Directory, Bestimmen des Betriebsmodus'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a059a750cf98efc066ac510c2c8acf58a65ab8c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a2bb4a7d00a61298ad8b9b29d9208a50023a6885360d31b14933f83a3102ab1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190773"
 ---
-# <a name="example-code-for-determining-the-operation-mode"></a>Beispiel Code für die Bestimmung des Betriebsmodus
+# <a name="example-code-for-determining-the-operation-mode"></a>Beispielcode zum Bestimmen des Betriebsmodus
 
-Dieses Thema enthält ein Codebeispiel, in dem die **nTMixedDomain** -Eigenschaft einer Domäne gelesen und der Betriebsmodus bestimmt wird.
+Dieses Thema enthält ein Codebeispiel, das die **ntMixedDomain-Eigenschaft** einer Domäne liest und den Betriebsmodus bestimmt.
 
-Im folgenden C++-Codebeispiel wird die **nTMixedDomain** -Eigenschaft einer Domäne gelesen und der Betriebsmodus bestimmt.
+Im folgenden C++-Codebeispiel wird die **ntMixedDomain-Eigenschaft** einer Domäne gelesen und der Betriebsmodus bestimmt.
 
 
 ```C++
@@ -59,7 +59,7 @@ return hr;
 
 
 
-Im folgenden Visual Basic Codebeispiel wird die **nTMixedDomain** -Eigenschaft einer Domäne gelesen und der Betriebsmodus bestimmt.
+Im folgenden Visual Basic Codebeispiel wird die **ntMixedDomain-Eigenschaft** einer Domäne gelesen und der Betriebsmodus bestimmt.
 
 
 ```VB
@@ -142,7 +142,7 @@ End Sub
 
 
 
-Im folgenden Visual Basic Scripting Edition Codebeispiel wird die **nTMixedDomain** -Eigenschaft einer Domäne gelesen und der Betriebsmodus bestimmt.
+Im folgenden Visual Basic Scripting Edition-Codebeispiel wird die **ntMixedDomain-Eigenschaft** einer Domäne gelesen und der Betriebsmodus bestimmt.
 
 
 ```VB
@@ -217,9 +217,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

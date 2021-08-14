@@ -1,11 +1,11 @@
 ---
-title: MS-TS-managingls-Attribut
-description: Terminal Dienste, die den Lizenzserver verwalten.
+title: MS-TS-ManagingLS-Attribut
+description: Terminaldienste zum Verwalten des Lizenzservers.
 ms.assetid: 657f005e-0f89-4df4-b0f8-00752827bece
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MS-TS-managingls-Attributs
-- AD-Schema des mstsmanagingls-Attributs
+- AD-Schema des MS-TS-ManagingLS-Attributs
+- msTSManagingLS-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 75944922fc648d124d9e10f8039a1fd94c28841f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e8c79a91032e6f34f3cc69b9d7f172d9e28c0e757c20bda14f651b8810f71138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118424118"
 ---
-# <a name="ms-ts-managingls-attribute"></a>MS-TS-managingls-Attribut
+# <a name="ms-ts-managingls-attribute"></a>MS-TS-ManagingLS-Attribut
 
-Terminal Dienste, die den Lizenzserver verwalten.
+Terminaldienste zum Verwalten des Lizenzservers.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-TS-managingls                            |
-| LDAP-Display-Name | mstsmanagingls                              |
+| CN                | MS-TS-ManagingLS                            |
+| Ldap-Anzeigename | msTSManagingLS                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1995                     |
 | System-ID-GUID    | f3bcc547-85b0-432c-9ac0-304506bf2c83        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -55,10 +55,10 @@ Terminal Dienste, die den Lizenzserver verwalten.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |
@@ -76,10 +76,10 @@ Terminal Dienste, die den Lizenzserver verwalten.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |
@@ -97,10 +97,10 @@ Terminal Dienste, die den Lizenzserver verwalten.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |

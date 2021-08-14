@@ -1,10 +1,10 @@
 ---
-title: Iadsclass-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadsclass-Schnittstelle werden die folgenden Eigenschaften festgelegt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsClass-Eigenschaftenmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsClass-Schnittstelle erhalten oder legen die folgenden Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 191f6873-c4bd-4e71-9d23-478454b7cec2
 ms.tgt_platform: multiple
 keywords:
-- Iadsclass-Eigenschaften Methoden ADSI
+- IADsClass-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -59,32 +59,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 358bc33347f035af92303a4ce9879105cd247a3f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0b8640c6a1d1f12ef959530b72618a503245992fae791dce4e6b9e9aec05bcb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428299"
 ---
-# <a name="iadsclass-property-methods"></a>Iadsclass-Eigenschaften Methoden
+# <a name="iadsclass-property-methods"></a>IADsClass-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass) -Schnittstelle werden die folgenden Eigenschaften festgelegt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsClass-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsclass) erhalten oder legen die folgenden Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Kter**
+**Zusammenfassung**
 </dt> <dd> <dl>
 
-Boolescher Wert, der angibt, ob diese Klasse abstrakt oder nicht abstrakt ist. Wenn **true**, ist diese Klasse eine abstrakte Klasse und kann im Verzeichnisdienst nicht direkt instanziiert werden. Abstrakte Klassen können nur als Superklassen verwendet werden.
+Boolescher Wert, der angibt, ob diese Klasse abstrakt oder nicht abstrakt ist. True **gibt an,** dass diese Klasse eine abstrakte Klasse ist und nicht direkt im Verzeichnisdienst instanziiert werden kann. Abstrakte Klassen können nur als Superklassen verwendet werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **BOOLEAN**
 </dt> <dt>
 
 
@@ -102,17 +102,17 @@ HRESULT put_Abstract(
 
 </dt> </dl> </dd> <dt>
 
-**"Auxderivedfrom"**
+**AuxDerivedFrom**
 </dt> <dd> <dl>
 
-Array von ADsPath-Zeichen folgen, die die Super-Hilfssysteme angeben, von denen diese Klasse abgeleitet ist.
+Array von ADsPath-Zeichenfolgen, die die super Auxiliary-Klassen angeben, von denen diese Klasse ableiten.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -130,17 +130,17 @@ HRESULT put_AuxDerivedFrom(
 
 </dt> </dl> </dd> <dt>
 
-**Sten**
+**Hilfs**
 </dt> <dd> <dl>
 
-Boolescher Wert, der angibt, ob diese Klasse eine Hilfselemente ist. Wenn **true**, ist diese Klasse eine Hilfsklasse und kann nicht direkt im Verzeichnisdienst instanziiert werden. Erweiterungs Klassen können nur als Superklassen anderer Erweiterungs Klassen oder als Quelle zusätzlicher Eigenschaften für Struktur Klassen verwendet werden.
+Boolescher Wert, der angibt, ob diese Klasse "Auxiliary" ist. True **gibt an,** dass diese Klasse eine Auxiliary-Klasse ist und nicht direkt im Verzeichnisdienst instanziiert werden kann. Hilfsklassen können nur als Superklassen anderer Hilfsklassen oder als Quelle zusätzlicher Eigenschaften für strukturelle Klassen verwendet werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **BOOLEAN**
 </dt> <dt>
 
 
@@ -158,7 +158,7 @@ HRESULT put_Auxiliary(
 
 </dt> </dl> </dd> <dt>
 
-**CLSID**
+**Clsid**
 </dt> <dd> <dl>
 
 Optionale anbieterspezifische CLSID, die das COM-Objekt identifiziert, das diese Klasse implementiert.
@@ -168,7 +168,7 @@ Optionale anbieterspezifische CLSID, die das COM-Objekt identifiziert, das diese
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -189,14 +189,14 @@ HRESULT put_CLSID(
 **Container**
 </dt> <dd> <dl>
 
-Boolescher Wert, der angibt, ob diese Klasse ein Container anderer Objektklassen sein kann. Wenn dieser Wert **true** ist, können Sie die **get \_ Container** -Methode zum Abrufen eines Arrays von Objektklassen abrufen, die diese Klasse enthalten kann.
+Boolescher Wert, der angibt, ob diese Klasse ein Container anderer Objektklassen sein kann. Wenn dieser Wert **TRUE ist,** können Sie die **get \_ Container-Methode** aufrufen, um ein Array der Objektklassen zu erhalten, die diese Klasse enthalten kann.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **BOOLEAN**
 </dt> <dt>
 
 
@@ -217,14 +217,14 @@ HRESULT put_Container(
 **Containment**
 </dt> <dd> <dl>
 
-Ein **BSTR** -Array, in dem jedes Element der Name einer Objektklasse ist, die diese Klasse enthalten kann.
+Ein **BSTR-Array,** in dem jedes Element der Name einer Objektklasse ist, die diese Klasse enthalten kann.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -242,17 +242,17 @@ HRESULT put_Containment(
 
 </dt> </dl> </dd> <dt>
 
-**Derivedfrom**
+**DerivedFrom**
 </dt> <dd> <dl>
 
-Array von ADsPath-Zeichen folgen, die angeben, von welchen Klassen diese Klasse abgeleitet wurde.
+Array von ADsPath-Zeichenfolgen, die angeben, von welchen Klassen diese Klasse abgeleitet wurde.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -270,17 +270,17 @@ HRESULT put_DerivedFrom(
 
 </dt> </dl> </dd> <dt>
 
-**Helpfilecontext**
+**HelpFileContext**
 </dt> <dd> <dl>
 
-Die Kontext-ID in **helpfilename** , in der spezifische Informationen für diese Klasse gefunden werden können.
+Kontext-ID in **HelpFileName,** wobei bestimmte Informationen für diese Klasse gefunden werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **long**
 </dt> <dt>
 
 
@@ -298,17 +298,17 @@ HRESULT put_HelpFileContext(
 
 </dt> </dl> </dd> <dt>
 
-**Helpfilename**
+**HelpFileName**
 </dt> <dd> <dl>
 
-Der Name einer Hilfedatei, die weitere Informationen zu Objekten dieser Klasse enthält.
+Name einer Hilfedatei, die weitere Informationen zu Objekten dieser Klasse enthält.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -329,14 +329,14 @@ HRESULT put_HelpFileName(
 **MandatoryProperties**
 </dt> <dd> <dl>
 
-**SAFEARRAY** von **Variant** s, die die Eigenschaften auflistet, die festgelegt werden müssen, damit diese Klasse in den Speicher geschrieben wird. Wenn die Klasse nur eine Eigenschaft enthält, gibt **get \_ MandatoryProperties** einen **BSTR** zurück.
+**SAFEARRAY von** **VARIANT** s, das die Eigenschaften auflistet, die festgelegt werden müssen, damit diese Klasse in den Speicher geschrieben werden kann. Wenn die Klasse nur eine Eigenschaft enthält, gibt **\_ get MandatoryProperties** einen **BSTR zurück.**
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -354,17 +354,17 @@ HRESULT put_MandatoryProperties(
 
 </dt> </dl> </dd> <dt>
 
-**Namingproperties**
+**NamingProperties**
 </dt> <dd> <dl>
 
-**SAFEARRAY** von **BSTR** s, das die Eigenschaften auflistet, die zum Benennen von Attributen dieser Schema Klasse verwendet werden.
+**SAFEARRAY von** **BSTR** s, das die Eigenschaften auflistet, die zum Benennen von Attributen dieser Schemaklasse verwendet werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -382,17 +382,17 @@ HRESULT put_NamingProperties(
 
 </dt> </dl> </dd> <dt>
 
-**OID**
+**Oid**
 </dt> <dd> <dl>
 
-Anbieter spezifischer Objekt Bezeichner, der diese Klasse definiert. Dies wird bereitgestellt, um die Schema Erweiterung mithilfe von Active Directory in Verzeichnisdiensten zuzulassen, die anbieterspezifische OIDs für Klassen erfordern.
+Anbieterspezifischer Objektbezeichner, der diese Klasse definiert. Dies wird bereitgestellt, um die Schemaerweiterung mithilfe von Active Directory in Verzeichnisdiensten zu ermöglichen, die anbieterspezifische OIDs für Klassen erfordern.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -413,14 +413,14 @@ HRESULT put_OID(
 **OptionalProperties**
 </dt> <dd> <dl>
 
-**SAFEARRAY** von **Variant** s, die die optionalen Eigenschaften für diese Schema Klasse auflistet. Wenn die Klasse nur eine Eigenschaft enthält, gibt **get \_ OptionalProperties** einen **BSTR** zurück.
+**SAFEARRAY von** **VARIANT** s, das die optionalen Eigenschaften für diese Schemaklasse auflistet. Wenn die Klasse nur eine Eigenschaft enthält, gibt **get \_ OptionalProperties** einen **BSTR zurück.**
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -438,17 +438,17 @@ HRESULT put_OptionalProperties(
 
 </dt> </dl> </dd> <dt>
 
-**Possiblevorgesetzten**
+**PossibleSuperiors**
 </dt> <dd> <dl>
 
-Array von ADsPath-Zeichen folgen, die die Schema Klassen angeben, die Instanzen dieser Klasse enthalten können.
+Array von ADsPath-Zeichenfolgen, die die Schemaklassen angeben, die Instanzen dieser Klasse enthalten können.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -466,17 +466,17 @@ HRESULT put_PossibleSuperiors(
 
 </dt> </dl> </dd> <dt>
 
-**Primaryinterface**
+**PrimaryInterface**
 </dt> <dd> <dl>
 
-Optionaler Anbieter spezifischer Bezeichner-GUID, der Objekten dieser Schema Klasse eine Schnittstelle zuordnet. Beispielsweise wird die "User"-Klasse, die [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser) und **primaryinterface** unterstützt, durch **IID \_ IADsUser** identifiziert. Dies muss das Standard Zeichen folgen Format einer GUID aufweisen, wie durch com definiert. Diese GUID ist der Wert, der in der [**IADs:: get- \_ GUID**](/windows/desktop/api/Iads/nn-iads-iads) -Eigenschaft in Instanzen dieser Klasse für Anbieter angezeigt wird, die diese Eigenschaft implementieren. Durch die Identifizierung einer Schema Klasse durch die IID der primären Schnittstelle des Klassen Codes kann die Verwendung von **QueryInterface** zur Laufzeit bestimmt werden, ob ein Objekt der gewünschten Klasse entspricht.
+Optionale anbieterspezifische Bezeichner-GUID, die Objekten dieser Schemaklasse eine Schnittstelle zu ordnet. Beispielsweise wird die Klasse "User", die [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser) und **PrimaryInterface** unterstützt, durch **IID \_ IADsUser identifiziert.** Dies muss im standarden Zeichenfolgenformat einer GUID vorliegen, wie von COM definiert. Diese GUID ist der Wert, der in der [**IADs::get \_ GUID-Eigenschaft**](/windows/desktop/api/Iads/nn-iads-iads) in Instanzen dieser Klasse für Anbieter angezeigt wird, die diese Eigenschaft implementieren. Das Identifizieren einer Schemaklasse durch IID der primären Schnittstelle des Klassencodes ermöglicht die Verwendung von **QueryInterface** zur Laufzeit, um zu bestimmen, ob ein Objekt der gewünschten Klasse entspricht.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -495,7 +495,7 @@ HRESULT get_PrimaryInterface(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie die [**iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass) -Schnittstelle verwendet wird, um zu bestimmen, ob ein Objekt ein Container sein kann. wenn dies der Fall ist, werden die Namen aller enthaltenen Objekte aufgelistet.
+Das folgende Codebeispiel zeigt, wie die [**IADsClass-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsclass) verwendet wird, um zu bestimmen, ob ein Objekt ein Container sein kann, und listet in diesem Fall die Namen aller enthaltenen Objekte auf.
 
 
 ```VB
@@ -523,7 +523,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie die [**iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass) -Schnittstelle verwendet wird, um zu bestimmen, ob ein Objekt ein Container sein kann. wenn dies der Fall ist, werden die Namen aller enthaltenen Objekte aufgelistet.
+Das folgende Codebeispiel zeigt, wie die [**IADsClass-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsclass) verwendet wird, um zu bestimmen, ob ein Objekt ein Container sein kann, und listet in diesem Fall die Namen aller enthaltenen Objekte auf.
 
 
 ```C++
@@ -576,20 +576,20 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsclass ist als C8F93DD0-4AE0-11CF-9E73-00AA004A5691 definiert.<br/>            |
+| IID<br/>                      | IID \_ IADsClass ist als C8F93DD0-4AE0-11CF-9E73-00AA004A5691 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
+[**IADsClass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
 </dt> <dt>
 
-[**Iadsclass:: Qualifizierer**](/windows/desktop/api/Iads/nf-iads-iadsclass-qualifiers)
+[**IADsClass::Qualifiers**](/windows/desktop/api/Iads/nf-iads-iadsclass-qualifiers)
 </dt> </dl>
 
  

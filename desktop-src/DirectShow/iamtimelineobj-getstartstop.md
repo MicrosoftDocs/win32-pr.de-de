@@ -1,7 +1,7 @@
 ---
-description: Die getstartend-Methode ruft die Start-und Endzeit des Objekts relativ zum übergeordneten Element des Objekts ab.
+description: Die GetStartStop-Methode ruft die Start- und Stoppzeiten des Objekts relativ zum übergeordneten Element des Objekts ab.
 ms.assetid: de77e332-85ba-48bf-ae37-f198ce7c3a73
-title: 'Iamtimelineobj:: getstartstoppt-Methode (qedit. h)'
+title: IAMTimelineObj::GetStartStop-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: aa4204f2bd41d72a6d3ef67f633f8b64a58051b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d808d7ac2ee3b6c1cbeddc39c730fc38b7032bde86ce726af03379d71241679c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118400786"
 ---
-# <a name="iamtimelineobjgetstartstop-method"></a>Iamtimelineobj:: getstartstoppt-Methode
+# <a name="iamtimelineobjgetstartstop-method"></a>IAMTimelineObj::GetStartStop-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `GetStartStop` -Methode ruft die Start-und Endzeit des Objekts relativ zum übergeordneten Element des Objekts ab.
+Die -Methode ruft die Start- und Stoppzeiten des Objekts `GetStartStop` relativ zum übergeordneten Element des Objekts ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,39 +46,39 @@ HRESULT GetStartStop(
 
 <dl> <dt>
 
-*PStart* 
+*pStart* 
 </dt> <dd>
 
-Empfängt die Startzeit in 100-Nanosecond-Einheiten.
+Empfängt die Startzeit in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*pstopps* 
+*Pstop* 
 </dt> <dd>
 
-Empfängt die Endzeit in 100-Nanosecond-Einheiten.
+Empfängt die Stoppzeit in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Komposition, Gruppen und Spuren haben immer eine Startzeit von 0.
+Kompositionen, Gruppen und Spuren haben immer eine Startzeit von 0.
 
-Während des Renderings rundet der die Start-und Endzeit eines Objekts auf die nächste Frame Grenze. Allerdings werden die Zeiten des Objekts von der nicht überschrieben. Wenn Sie die Gruppen Frame Rate ändern, werden die gerundeten Zeiten immer aus den ursprünglichen Zeiten berechnet. Weitere Informationen finden Sie unter [DirectShow-Bearbeitungs Dienste](time-in-directshow-editing-services.md).
+Während des Renderings rundet DES die Start- und Stoppzeiten eines Objekts auf die nächste Framegrenze. Des überschreibt jedoch nicht die Zeiten des Objekts. Wenn Sie die Gruppenbildrate ändern, werden die gerundeten Zeiten immer anhand der ursprünglichen Zeiten berechnet. Weitere Informationen finden Sie unter [Time in DirectShow Editing Services](time-in-directshow-editing-services.md).
 
-Um die Start-und Endzeiten im gerenderten Projekt zu bestimmen, übergeben Sie die von zurückgegebenen Werte `GetStartStop` an die [**iamtimelineobj:: fixtimes**](iamtimelineobj-fixtimes.md) -Methode.
+Um die Start- und Stoppzeiten im gerenderten Projekt zu bestimmen, übergeben Sie die von zurückgegebenen Werte an die `GetStartStop` [**IAMTimelineObj::FixTimes-Methode.**](iamtimelineobj-fixtimes.md)
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -88,19 +88,19 @@ Um die Start-und Endzeiten im gerenderten Projekt zu bestimmen, übergeben Sie d
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelineobj-Schnittstelle**](iamtimelineobj.md)
+[**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

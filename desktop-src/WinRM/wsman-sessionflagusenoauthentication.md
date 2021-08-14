@@ -1,12 +1,12 @@
 ---
-title: WSMAN. sessionflagusenoauthentication-Methode (WSManDisp. h)
-description: Gibt den Wert des wsmanflagusenoauthentication-Authentifizierungsflags für die Verwendung im flags-Parameter der WSMAN. kreatesession-Methode zurück.
+title: WSMan.SessionFlagUseNoAuthentication-Methode (WSManDisp.h)
+description: Gibt den Wert des WSManFlagUseNoAuthentication-Authentifizierungsflags zur Verwendung im flags-Parameter der WSMan.CreateSession-Methode zurück.
 ms.assetid: 22a8107a-8e5e-4636-bf7d-a261f885e074
 ms.tgt_platform: multiple
 keywords:
-- Sessionflagusenoauthentication-Methode Windows-Remoteverwaltung
-- Sessionflagusenoauthentication-Methode Windows-Remoteverwaltung, WSMAN-Objekt
-- WSMAN-Objekt Windows-Remoteverwaltung, sessionflagusenoauthentication-Methode
+- SessionFlagUseNoAuthentication-Methode Windows Remoteverwaltung
+- SessionFlagUseNoAuthentication-Methode Windows Remoteverwaltung, WSMan-Objekt
+- WSMan-Windows Remoteverwaltung, SessionFlagUseNoAuthentication-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b9676d3baa9a18ae8a3feb5eb4092c63586a94b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1edb428a8c739c224e55bd4437dfdd6f544e9adf3039afb61df659b4969fb9ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119412400"
 ---
-# <a name="wsmansessionflagusenoauthentication-method"></a>WSMAN. sessionflagusenoauthentication-Methode
+# <a name="wsmansessionflagusenoauthentication-method"></a>WSMan.SessionFlagUseNoAuthentication-Methode
 
-Die **WSMAN. sessionflagusenoauthentication** -Methode gibt den Wert des **wsmanflagusenoauthentication** -Authentifizierungsflags zur Verwendung im *Flags* -Parameter der [**WSMAN. kreatesession**](wsman-createsession.md) -Methode zurück. Diese Methode bietet eine effizientere Syntax für die Verwendung der-Konstante, damit Skripts keinen konstanten Wert festlegen müssen. Weitere Informationen zum Abrufen dieser Methode finden Sie unter [Sitzungs Konstanten](session-constants.md).
+Die **WSMan.SessionFlagUseNoAuthentication-Methode** gibt den Wert des **WSManFlagUseNoAuthentication-Authentifizierungsflags** zur Verwendung im *flags-Parameter* der [**WSMan.CreateSession-Methode**](wsman-createsession.md) zurück. Diese Methode bietet eine effizientere Syntax für die Verwendung der -Konstante, sodass Skripts nicht zum Festlegen eines konstanten Werts erforderlich sind. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Sitzungskonst constants](session-constants.md).
 
-**Wsmanflagusenoauthentication** ist eine Konstante in der **\_ \_ wsmansessionflags** -Enumeration. Weitere Informationen finden Sie unter//[Authentifizierungs Konstanten](authentication-constants.md).
+**WSManFlagUseNoAuthentication** ist eine Konstante in der **\_ \_ WSManSessionFlags-Enumeration.** Weitere Informationen finden Sie unter /[Authentifizierungskonst konstanten](authentication-constants.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ WSMan.SessionFlagUseNoAuthentication( _
 
 <dl> <dt>
 
-*Flags* \[ vorgenommen\]
+*Flags* \[ out\]
 </dt> <dd>
 
 Der Wert der Konstante.
@@ -54,7 +54,7 @@ Der Wert der Konstante.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,21 +64,21 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**WSMAN**](wsman.md)
+[**Wsman**](wsman.md)
 </dt> <dt>
 
-[**Sitzung**](session.md)
+[**Sitzungskonsistenz**](session.md)
 </dt> </dl>
 
  

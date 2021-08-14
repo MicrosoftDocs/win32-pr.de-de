@@ -1,5 +1,5 @@
 ---
-description: Meldet ein Namespace-Erstellungs Ereignis, bei dem es sich um einen Typ eines systeminternen Ereignisses handelt, das beim Hinzufügen eines neuen Namespace zum aktuellen Namespace generiert wird.
+description: Meldet ein Namespaceerstellungsereignis, bei dem es sich um einen Typ systeminterner Ereignisse handelt, der generiert wird, wenn dem aktuellen Namespace ein neuer Namespace hinzugefügt wird.
 ms.assetid: 50b9860a-d6e8-4dab-a7d0-09da9dd37b6b
 ms.tgt_platform: multiple
 title: __NamespaceCreationEvent-Klasse
@@ -17,18 +17,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 8432bcfb2c96c70b91a7f0d187297217082e2d28
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f84e0c584d3afb63b166523a5920d4d5b3367638bc0000c33a8cfba979e64c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118320724"
 ---
-# <a name="__namespacecreationevent-class"></a>\_\_Namespacecreationevent-Klasse
+# <a name="__namespacecreationevent-class"></a>\_\_NamespaceCreationEvent-Klasse
 
-Die Namespace-System Klasse meldet ein Namespace-Erstellungs Ereignis, bei dem es sich um einen Typ eines systeminternen [Ereignisses](determining-the-type-of-event-to-receive.md) handelt, das beim Hinzufügen eines neuen **\_ \_ Namespaces** zum aktuellen Namespace generiert wird.
+Die **\_ \_ Systemklasse NamespaceCreationEvent** meldet ein Namespaceerstellungsereignis, bei dem es sich um einen Typ systeminterner Ereignisse handelt, der generiert wird, wenn dem aktuellen Namespace ein neuer Namespace hinzugefügt wird. [](determining-the-type-of-event-to-receive.md)
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ class __NamespaceCreationEvent : __NamespaceOperationEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ namespacecreationevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ NamespaceCreationEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ namespacecreationevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ NamespaceCreationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
 </dd> <dt>
 
-**TargetNamespace**
+**Targetnamespace**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **\_ \_ Namespace**
@@ -75,28 +75,28 @@ Datentyp: **\_ \_ Namespace**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kopie der erstellten [**\_ \_ Namespace**](--namespace.md) Instanz. Die **Name** -Eigenschaft der **\_ \_ Namespace** Instanz gibt an, welcher Namespace erstellt wurde. Diese Eigenschaft wird von [**\_ \_ namespaceoperationevent**](--namespaceoperationevent.md)geerbt.
+Kopie der [**\_ \_ Namespaceinstanz,**](--namespace.md) die erstellt wurde. Die **Name-Eigenschaft** der **\_ \_ Namespace-Instanz** gibt an, welcher Namespace erstellt wurde. Diese Eigenschaft wird von [**\_ \_ NamespaceOperationEvent geerbt.**](--namespaceoperationevent.md)
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordinierte Weltzeit) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen haben das format koordinierte Weltzeit (UTC). Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ namespacecreationevent** -Klasse wird von [**\_ \_ namespaceoperationevent**](--namespaceoperationevent.md)abgeleitet.
+Die **\_ \_ NamespaceCreationEvent-Klasse** wird von [**\_ \_ NamespaceOperationEvent abgeleitet.**](--namespaceoperationevent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,14 +110,14 @@ Die **\_ \_ namespacecreationevent** -Klasse wird von [**\_ \_ namespaceoperatio
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_Namespaceoperationevent**](/windows/desktop/WmiSdk/--namespaceoperationevent)
+[**\_\_NamespaceOperationEvent**](/windows/desktop/WmiSdk/--namespaceoperationevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

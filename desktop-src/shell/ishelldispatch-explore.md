@@ -1,5 +1,5 @@
 ---
-description: 'IShellDispatch.Explore-Methode: Öffnet einen angegebenen Ordner in einem Windows-Explorer Fenster.'
+description: 'IShellDispatch.Explore-Methode: Öffnet einen angegebenen Ordner in einem Windows Explorer-Fenster.'
 ms.assetid: DB434D02-56B2-4e8f-9E43-BBF47C7BE377
 title: IShellDispatch.Explore-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: e693985cf7d8d83bd5a00595c42cd4427b0ebd5b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: dd3696c5c07324c9a6827e5ac9521c51c9ff90d3622cc2249b0421c3bc9b4b88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108100558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118221507"
 ---
 # <a name="ishelldispatchexplore-method"></a>IShellDispatch.Explore-Methode
 
-Öffnet einen angegebenen Ordner in einem Windows-Explorer Fenster.
+Öffnet einen angegebenen Ordner in einem Windows Explorer-Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ IShellDispatch.Explore( _
 
 Typ: **Variant**
 
-Der anzuzeigende Ordner. Dies kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Der anzuzeigende Ordner. Dies kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) angibt. Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
 </dd> </dl>
 
@@ -68,7 +68,7 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird implementiert und über die [**Shell.Explore-Methode**](shell-explore.md) aufgerufen.
 
@@ -76,7 +76,7 @@ Diese Methode wird implementiert und über die [**Shell.Explore-Methode**](shell
 
 Die folgenden Beispiele zeigen die Verwendung von **Explore** in JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -132,9 +132,9 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
