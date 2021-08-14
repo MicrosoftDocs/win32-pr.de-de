@@ -1,7 +1,7 @@
 ---
-description: Gibt den Byte Zeiger frei, der auf den von einer IStream-com-Schnittstelle verwalteten HGLOBAL-Speicherblock zeigt.
+description: Gibt den Bytezeiger frei, der auf den HGLOBAL-Speicherblock, der von einer IStream COM-Schnittstelle verwaltet wird, verweisen.
 ms.assetid: a76c97a9-d0e9-4eb0-9f97-15f22111187d
-title: 'Iscardtypekonv:: freeistreammemoryptr-Methode (scarddat. h)'
+title: ISCardTypeConv::FreeIStreamMemoryPtr-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 12912b8130ed6e1ccaa995f88069b59e96f57c09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 62e91f9d8fca06c812370091b407edb73fed433a4c576857a7e089db28d6d856
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103756876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922389"
 ---
-# <a name="iscardtypeconvfreeistreammemoryptr-method"></a>Iscardtypekonv:: freeistreammemoryptr-Methode
+# <a name="iscardtypeconvfreeistreammemoryptr-method"></a>ISCardTypeConv::FreeIStreamMemoryPtr-Methode
 
-\[Die **freeistreammemoryptr** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **FreeIStreamMemoryPtr-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **freeistreammemoryptr** -Methode gibt den Byte Zeiger frei, der auf den von einer **IStream** -com-Schnittstelle verwalteten HGLOBAL-Speicherblock zeigt.
+Die **FreeIStreamMemoryPtr-Methode** gibt den Bytezeiger frei, der auf den HGLOBAL-Speicherblock, der von einer **IStream** COM-Schnittstelle verwaltet wird, verweisen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,40 +42,40 @@ HRESULT FreeIStreamMemoryPtr(
 
 <dl> <dt>
 
-*pstraum* \[ in\]
+*pStrm* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die **IStream** -Schnittstelle, die den Speicherblock verwaltet, auf den *pMem* zeigt.
+Zeiger auf die **IStream-Schnittstelle,** die den Speicherblock verwaltet, auf den *pMem zeigt.*
 
 </dd> <dt>
 
-*pMem* \[ in\]
+*pMem* \[ In\]
 </dt> <dd>
 
-Zeiger auf den von der **IStream** -Schnittstelle verwalteten Speicherblock.
+Zeiger auf den Speicherblock, der von der **IStream-Schnittstelle verwaltet** wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>          | Der Arbeitsspeicher wurde erfolgreich zugewiesen.<br/>                                                        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Bei einem oder mehreren Parametern, die an die Funktion weitergegeben wurden, ist ein Fehler aufgetreten.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
+| <dl> <dt>**S \_ OK**</dt> </dl>          | Arbeitsspeicher erfolgreich zugeordnet.<br/>                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Es liegt ein Fehler mit einem oder mehr parametern vor, die an die Funktion übergeben werden.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher zum Erfüllen der Anforderung.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion gibt vollständig und sauber den Byte Zeiger frei, der auf den von der **IStream** -Schnittstelle verwalteten HGLOBAL-Speicherblock zeigt. Der Byte Zeiger wird durch einen get-Befehl von [**getatistreammemory**](iscardtypeconv-getatistreammemory.md)abgerufen.
+Diese Funktion gibt den Bytezeiger, der auf den von der **IStream-Schnittstelle** verwalteten HGLOBAL-Speicherblockzeigt, vollständig und sauber frei. Der Bytezeiger wird durch einen Aufruf von [**GetAtIStreamMemory erhalten.**](iscardtypeconv-getatistreammemory.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,28 +83,28 @@ Diese Funktion gibt vollständig und sauber den Byte Zeiger frei, der auf den vo
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardtypec ist als 53b6aa63-3F 56-11D0-916b-00aa00c18068 definiert.<br/>       |
+| IID<br/>                      | IID \_ ISCardTypeConv ist als 53B6AA63-3F56-11D0-916B-00AA00C18068 definiert.<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardtypeconfiguration**](iscardtypeconv.md)
+[**ISCardTypeConv**](iscardtypeconv.md)
 </dt> <dt>
 
 [Smartcard-Rückgabewerte](authentication-return-values.md)
 </dt> <dt>
 
-[**Getatistreammemory**](iscardtypeconv-getatistreammemory.md)
+[**GetAtIStreamMemory**](iscardtypeconv-getatistreammemory.md)
 </dt> </dl>
 
  

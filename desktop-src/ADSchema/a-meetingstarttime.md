@@ -1,10 +1,10 @@
 ---
-title: meetingstarttime-Attribut
-description: Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
+title: meetingStartTime-Attribut
+description: Das Datum und die Uhrzeit des Beginns der Besprechung.
 ms.assetid: ac13a3c9-20c0-48de-b3d2-9034af9dbde8
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "meetingstarttime"
+- AD-Schema des meetingStartTime-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9a612680ec6c137274d7b29c0fffe6059dbc9a0
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0a47a5f517b46302def48c5187690c6019924dfce55ae963c5c4d08cadc1a73e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343911"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300590"
 ---
-# <a name="meetingstarttime-attribute"></a>meetingstarttime-Attribut
+# <a name="meetingstarttime-attribute"></a>meetingStartTime-Attribut
 
-Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
+Das Datum und die Uhrzeit des Beginns der Besprechung.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | meetingstarttime                                                                 |
-| LDAP-Display-Name | meetingstarttime                                                                 |
+| CN                | meetingStartTime                                                                 |
+| Ldap-Anzeigename | meetingStartTime                                                                 |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt basierend auf der Sicherheit des Objekts, das erstellt wird, aktualisieren. |
-| Aktualisierungshäufigkeit  | \-                                                                               |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt basierend auf der Sicherheit des zu erstellenden Objekts aktualisieren. |
+| Updatehäufigkeit  | \-                                                                               |
 | Attribute-Id      | 1.2.840.113556.1.4.587                                                           |
-| System-ID-GUID    | 11b6cc90-48C4-11d1-a9c3-0000t80367c1                                             |
+| System-Id-Guid    | 11b6cc90-48c4-11d1-a9c3-0000f80367c1                                             |
 | Syntax            | [**String(Generalized-Time)**](s-string-generalized-time.md)                    |
 
 
@@ -42,7 +42,7 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,19 +57,19 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,15 +78,15 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -162,15 +162,15 @@ Das Datum und die Uhrzeit, zu der die Besprechung beginnt.
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
 | System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
+| Is-Single-Valued       | False                                   |
 | Ist indiziert             | False                                   |
 | Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 

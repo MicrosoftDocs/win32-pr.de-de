@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über das JobPrimaryCoverBackSource-Element, das die Quelle für ein benutzerdefiniertes primäres Back-Cover-Blatt für den Auftrag angibt.
+description: Erfahren Sie mehr über das JobPrimaryCoverBackSource-Element, das die Quelle für ein benutzerdefiniertes back-cover primary sheet für den Auftrag angibt.
 ms.assetid: b5c8e79c-cdae-4c53-b594-915726423b4f
 title: JobPrimaryCoverBackSource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74ed9bbc1b49e230eabc3fd7f45773a73401e058
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 70ac990caca0f10e03f33eda9971ad967c1c7192ae07a1326675f66880c27857
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118471682"
 ---
 # <a name="jobprimarycoverbacksource"></a>JobPrimaryCoverBackSource
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Quelle für ein benutzerdefiniertes primäres Back-Cover-Blatt für den Auftrag an.
+Gibt die Quelle für ein benutzerdefiniertes back-cover primary sheet für den Auftrag an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt die Quelle für ein benutzerdefiniertes primäres Back-Cover-Blatt für den
 |----------------------------|-------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                   |
 | Bereichspräfix <br/> | Auftrag<br/>                            |
-| Hinweise <br/>          | Mit JobCoverBack-Element verknüpft<br/> |
+| Hinweise <br/>          | Verknüpft mit dem JobCoverBack-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Quelle für ein benutzerdefiniertes primäres Back-Cover-Blatt für den
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobPrimaryCoverBackSource">
@@ -63,7 +63,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

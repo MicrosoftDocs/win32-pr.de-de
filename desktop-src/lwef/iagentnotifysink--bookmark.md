@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink-Lesezeichen
-description: Iagentnotifysink-Lesezeichen
+title: IAgentNotifySink-Lesezeichen
+description: IAgentNotifySink-Lesezeichen
 ms.assetid: 172042af-a524-4ea4-955d-4e3dee079344
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1febedfc962904544a49b8621812d0518026b459
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 02562b7cbf42c3445a25edc5071476da1b2d8dc53d80923ad875fddf09e5d31b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118477096"
 ---
-# <a name="iagentnotifysinkbookmark"></a>Iagentnotifysink:: Bookmark
+# <a name="iagentnotifysinkbookmark"></a>IAgentNotifySink::Bookmark
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Bookmark(
@@ -21,29 +21,29 @@ HRESULT Bookmark(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, wenn Ihr Lesezeichen abgeschlossen ist.
+Benachrichtigt eine Clientanwendung, wenn ihr Lesezeichen abgeschlossen ist.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwBookMarkID"></span><span id="dwbookmarkid"></span><span id="DWBOOKMARKID"></span>*dwbookmarkid*
+<span id="dwBookMarkID"></span><span id="dwbookmarkid"></span><span id="DWBOOKMARKID"></span>*dwBookMarkID*
 </dt> <dd>
 
-Der Bezeichner des Lesezeichens, das zum Auslösen des Ereignisses geführt hat.
+Bezeichner des Lesezeichens, das zum Auslösen des Ereignisses geführt hat.
 
 </dd> </dl>
 
-Wenn Sie Lesezeichen Tags in eine [**Sprech**](speak-method.md) Methode einbeziehen, können Sie nachverfolgen, wann Sie mit diesem Ereignis auftreten.
+Wenn Sie Lesezeichentags in eine [**Speak-Methode**](speak-method.md) einschließen, können Sie nachverfolgen, wann sie bei diesem Ereignis auftreten.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter::**](iagentcharacter--speak.md)Speech, [Microsoft Agent Speech Output-Tags](microsoft-agent-speech-output-tags.md)
+[**IAgentCharacter::Speak**](iagentcharacter--speak.md), [Microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

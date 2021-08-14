@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 651138eb687cfd83406bc6e1a7fcf520ff001171
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 71bc0502d45e4092decfe1b712ed11f75a02bf50d112436ad1d21f9e02c17e72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118221021"
 ---
 # <a name="ishelldispatch2servicestop-method"></a>IShellDispatch2.ServiceStop-Methode
 
@@ -65,7 +65,7 @@ Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 Typ: **Variant**
 
-Legen Sie auf **TRUE** fest, damit der Dienst vom Dienststeuerungs-Manager gestartet wird, wenn [**ServiceStart**](ishelldispatch2-servicestart.md) aufgerufen wird. Um die Dienstkonfiguration unverändert zu lassen, legen *Sie vPersistent auf* **false fest.**
+Legen Sie diese Einstellung auf **TRUE** fest, damit der Dienst vom Dienststeuerungs-Manager gestartet wird, wenn [**ServiceStart**](ishelldispatch2-servicestart.md) aufgerufen wird. Um die Dienstkonfiguration unverändert zu lassen, legen Sie *vPersistent* auf **false** fest.
 
 </dd> </dl>
 
@@ -75,27 +75,27 @@ Legen Sie auf **TRUE** fest, damit der Dienst vom Dienststeuerungs-Manager gesta
 
 Typ: **\* Variant**
 
-Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
+Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
 Typ: **\* Variant**
 
-Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
+Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird implementiert und über die [**Shell.ServiceStop-Methode**](./shell-servicestop.md) aufgerufen.
 
-Die Methode gibt **FALSE zurück,** wenn der Dienst bereits beendet wurde. Vor dem Aufrufen dieser Methode können Sie [**Shell.IsServiceRunning**](./shell-isservicerunning.md) aufrufen, um den Status des Diensts zu ermitteln.
+Die Methode gibt **FALSE** zurück, wenn der Dienst bereits beendet wurde. Vor dem Aufrufen dieser Methode können Sie [**Shell.IsServiceRunning**](./shell-isservicerunning.md) aufrufen, um den Status des Diensts zu ermitteln.
 
-Diese Methode ist derzeit in Microsoft Visual Basic.
+Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **ServiceStop zum** Beenden des Messenger-Diensts gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
+In den folgenden Beispielen wird die Verwendung von **ServiceStop** zum Beenden des Messenger-Diensts gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -136,10 +136,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

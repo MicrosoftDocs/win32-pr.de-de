@@ -1,21 +1,21 @@
 ---
 title: Der Header
-description: Der folgende Header stellt einen der Header Stile dar, der von der aktuellen Version von "Mittel l" generiert werden kann. Zur einfacheren Bereitstellung wird hier die vollständige Liste der Header Felder bereitgestellt.
+description: Der folgende Header stellt einen der Headerstile dar, die von der aktuellen Midl-Version generiert werden können. Der Einfachheit halber finden Sie hier die vollständige Liste der Headerfelder.
 ms.assetid: 2078d2d9-1757-4449-9cc1-a21804654722
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0afcc9ad880278fdbcb8efc45fdabdc22ad06224
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b27ee00425f3611234b0cd001f254b1499a0d4873d05846c65a2828c3eeffe57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118924539"
 ---
 # <a name="the-header"></a>Der Header
 
-Der folgende Header stellt einen der Header Stile dar, der von der aktuellen Version von "Mittel l" generiert werden kann. Zur einfacheren Bereitstellung wird hier die vollständige Liste der Header Felder bereitgestellt.
+Der folgende Header stellt einen der Headerstile dar, die von der aktuellen Midl-Version generiert werden können. Der Einfachheit halber finden Sie hier die vollständige Liste der Headerfelder.
 
-([**– OIF**](/windows/desktop/Midl/-oi) -Header)
+([**–Oif-Header)**](/windows/desktop/Midl/-oi)
 
 ``` syntax
 handle_type<1> 
@@ -30,7 +30,7 @@ INTERPRETER_OPT_FLAGS<1>
 number_of_params<1>
 ```
 
-Erweiterungen beginnend mit Windows 2000: <8> für 32-Bit, <12> für 64-Bit)
+Erweiterungen ab Windows 2000: <8> für 32-Bit, <12> für 64-Bit)
 
 ``` syntax
 extension_version<1>
@@ -41,9 +41,9 @@ NotifyIndex<2>
 [ FloatDoubleMask<2> ]
 ```
 
-Die Erweiterungs \_ Version<1> gibt die Größe des Erweiterungs Abschnitts in Bytes an. Dies ermöglicht es der aktuellen NDR-Engine, den Erweiterungs Abschnitt auch dann ordnungsgemäß zu überspringen, wenn der Abschnitt von einer neueren Compilerversion mit mehr Feldern stammt, als die aktuelle Engine versteht.
+Die \_ Erweiterungsversion<1> gibt die Größe des Erweiterungsabschnitts in Bytes an. Auf diese Weise kann die aktuelle NDR-Engine den Erweiterungsabschnitt ordnungsgemäß durchgehen, auch wenn der Abschnitt aus einer späteren Compilerversion mit mehr Feldern stammen sollte, als die aktuelle Engine versteht.
 
-Die \_ interpreteropt- \_ FLAGS2 werden wie folgt definiert:
+Interpreter \_ OPT \_ FLAGS2 werden wie folgt definiert:
 
 ``` syntax
 typedef struct
@@ -57,39 +57,39 @@ typedef struct
   } INTERPRETER_OPT_FLAGS2, *PINTERPRETER_OPT_FLAGS2;
 ```
 
-Der **hasnewcorrdesc** -Member gibt an, ob neue Korrelations Deskriptoren in den vom Compiler generierten Format Zeichenfolgen verwendet werden. Der neue Korrelations Deskriptor bezieht sich auf die Funktion zum Verweigern von Angriffen. Die **clientcorrcheck** -und **servercorrcheck** -Elemente werden festgelegt, wenn die Routine die Korrelations Überprüfung auf der angegeben Seite benötigt.
+Der **HasNewCorrDesc-Member** gibt an, ob neue Korrelationsdeskriptoren in den vom Compiler generierten Formatzeichenfolgen verwendet werden. Der neue Korrelationsdeskriptor bezieht sich auf die Denial-of-Attack-Funktionalität. Die **Member ClientCorrCheck** und **ServerCorrCheck** werden festgelegt, wenn die Routine die Korrelationsprüfung auf der angegebenen Seite benötigt.
 
-Die Flags **hasnotify** und **HasNotify2** geben an, dass die Routine das Benachrichtigungs Feature verwendet, das von den Kennzeichen Attributen **\[ \] Benachrichtigen** bzw. **\[ Benachrichtigen \_ \]** definiert wird.
+Die **Flags HasNotify** und **HasNotify2** geben an, dass die Routine die Benachrichtigungsfunktion verwendet, die durch die Attribute **\[ notify \]** bzw. **\[ notify \_ \]** definiert ist.
 
-Der **clientcorrcheck** -Member ist ein Cache Größen Hinweis auf der Clientseite, und **servercorrcheck** ist ein Hinweis auf der Serverseite. Wenn die Größe Null ergibt, sollte eine Standardgröße verwendet werden.
+Der **ClientCorrCheck-Member** ist ein Cachegrößenhinweis auf clientseitiger Seite, und **ServerCorrCheck** ist ein Hinweis auf serverseitiger Seite. Wenn die Größe als 0 (null) angezeigt wird, sollte eine Standardgröße verwendet werden.
 
-Das **notifyindex** -Element ist ein Index für eine Benachrichtigungs Routine, wenn eine verwendet wird.
+Das **NotifyIndex-Element** ist ein Index für eine Benachrichtigungsroutine, sofern eins verwendet wird.
 
-Das **floatdoublemask** -Element adressiert das Problem eines Gleit Komma Arguments für 64-Bit-Windows. Dieses Feld wird nur für 64-Bit-stubwerte generiert. Die Maske ist für die Assemblyroutinen erforderlich, die die Register/Upload-Register von/zum virtuellen Stapel ausführen, um Gleit Komma Argumente zu verarbeiten und ordnungsgemäß zu registrieren. Die Maske besteht aus 2 Bits pro Argument oder und nicht mit einem Gleit Komma Register. Das Codieren lautet wie folgt: die am wenigsten wichtigen Bits entsprechen dem ersten FP-Register, die nächsten 2 Bits entsprechen dem zweiten Register usw.
+Das **FloatDoubleMask-Element** behandelt das Problem eines Gleitkommaarguments für 64-Bit-Windows. Dieses Feld wird nur für 64-Bit-Stubs generiert. Die Maske wird für die Assemblyroutinen benötigt, die Register vom/zum virtuellen Stapel herunterladen/hochladen, um Gleitkommaargumente zu verarbeiten und ordnungsgemäß zu registrieren. Die Maske besteht aus 2 Bits pro Argument oder stattdessen pro Gleitkommaregister. Die Codierung sieht wie folgt aus: Die am wenigsten signifikanten Bits entsprechen dem ersten FP-Register, die nächsten 2 Bits entsprechen dem zweiten Register usw.
 
 > [!Note]  
-> Bei Objekt Routinen endet das erste Argument im zweiten Register, da dieser Zeiger zuerst ist. Für jedes Register ist die Bedeutung von Bits wie in der folgenden Tabelle dargestellt.
+> Bei Objektroutinen endet das erste Argument im zweiten Register, da dieser Zeiger zuerst ist. Für jedes Register ist die Bedeutung von Bits wie in der folgenden Tabelle dargestellt.
 
- 
+ 
 
 
 
 | Bits | Bedeutung                                          |
 |------|--------------------------------------------------|
-| 01   | Ein float-Wert muss in das Register geladen werden.  |
-| 10   | Ein Double-Wert muss in das Register geladen werden. |
+| 01   | Ein float-Wert sollte in das Register geladen werden.  |
+| 10   | Ein double-Wert sollte in das Register geladen werden. |
 
 
 
- 
+ 
 
 00 und 11 sind ungültige Werte für die Bits.
 
-Zurzeit gibt es acht FP-Register in einem Intel-Architektur-64-Bit-Prozessor, sodass für die Maske nur die niedrigsten 16B-Bits festgelegt werden können. Die Masken Größe wurde auf eine Summe von 16 Bits festgelegt, die auf der nicht geänderten C-compilermaske basiert.
+Derzeit gibt es acht FP-Register in einem Intel Architecture-64-Bit-Prozessor, sodass für die Maske nur 16b niedrigste Bits festgelegt werden können. Die Maskengröße wurde auf insgesamt 16 Bits festgelegt, basierend darauf, dass die C-Compilermaske unverändert bleibt.
 
-## <a name="header-streamlining-for-performance"></a>Header Optimierung für Leistung
+## <a name="header-streamlining-for-performance"></a>Header Streamlining for Performance
 
-Um den Code zu vereinfachen und die Leistung zu verbessern, versucht der Compiler, wann immer möglich, einen Header fester Größe zu generieren. Insbesondere wird der folgende Header für Async DCOM verwendet:
+Um Code zu vereinfachen und die Leistung zu verbessern, versucht der Compiler nach Möglichkeit, einen Header mit fester Größe zu generieren. Insbesondere wird der folgende Header für asynchrone DCOM verwendet:
 
 ``` syntax
 typedef struct _NDR_DCOM_OI2_PROC_HEADER
@@ -108,6 +108,6 @@ typedef struct _NDR_DCOM_OI2_PROC_HEADER
   } NDR_DCOM_OI2_PROC_HEADER, *PNDR_DCOM_OI2_PROC_HEADER;
 ```
 
- 
+ 
 
- 
+ 

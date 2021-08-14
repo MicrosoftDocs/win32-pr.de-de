@@ -1,11 +1,11 @@
 ---
 title: MSAD_ReplCursor-Klasse
-description: Stellt eingehende Replikations Zustandsinformationen zu allen Replikaten eines angegebenen Namens Kontexts (NC) bereit.
+description: Stellt eingehende Replikationsstatusinformationen zu allen Replikaten eines bestimmten Namenskontexts (NC) bereit.
 ms.assetid: 5746cfe9-b113-4be3-b609-15cb937c271b
 ms.tgt_platform: multiple
 keywords:
-- MSAD_ReplCursor-Klasse Active Directory
-- MSAD_ReplCursor Klasse Active Directory, beschrieben
+- MSAD_ReplCursor Active Directory-Klasse
+- MSAD_ReplCursor Active Directory-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f725ac8e9eee9f921ce4109e0b0e42ed85e75ab8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c001adf774321ba61e232298d070fb4a29d4b3f0740dd8ef900ff4ea0b4cb83a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118186065"
 ---
-# <a name="msad_replcursor-class"></a>MSAD \_ replcursor-Klasse
+# <a name="msad_replcursor-class"></a>MSAD \_ ReplCursor-Klasse
 
-Stellt eingehende Replikations Zustandsinformationen zu allen Replikaten eines angegebenen Namens Kontexts (NC) bereit.
+Stellt eingehende Replikationsstatusinformationen zu allen Replikaten eines bestimmten Namenskontexts (NC) bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,17 +48,17 @@ class MSAD_ReplCursor
 
 ## <a name="members"></a>Member
 
-Die **MSAD \_ replcursor** -Klasse verfügt über diese Typen von Membern:
+Die **MSAD \_ ReplCursor-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSAD \_ replcursor** -Klasse verfügt über diese Eigenschaften.
+Die **MSAD \_ ReplCursor-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Namingcontextdn**
+**NamingContextDN**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -67,14 +67,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft den X. 500-Pfad für den namens Kontext (NC) ab, der diesen Cursor enthält.
+Ruft den X.500-Pfad für den Namenskontext (NC) ab, der diesen Cursor enthält.
 
 </dd> <dt>
 
-**Sourcedsadn**
+**SourceDsaDN**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -83,11 +83,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den X. 500-Pfad für den Verzeichnis System-Agent (DSA) ab, der den Quell Domänen Controller (DC) darstellt.
+Ruft den X.500-Pfad für den Verzeichnissystem-Agent (Directory System Agent, DSA) ab, der den Quelldomänencontroller (DC) darstellt.
 
 </dd> <dt>
 
-**Sourcedsainvocationid**
+**SourceDsaInvocationID**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -96,36 +96,36 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft den Aufruf Bezeichner des Ursprungs Servers ab, **dem der Wert** von "".
+Ruft den Aufrufbezeichner des Ursprungsservers ab, dem der **USNAttributeFilter** entspricht.
 
 </dd> <dt>
 
-**Timeoflastsuccess fulsync**
+**TimeOfLastSuccessfulSync**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den Zeitstempel der letzten erfolgreichen Replikations Synchronisierung mit der Quell-DSA ab. Gibt den Zeitpunkt an, zu dem dieser Domänen Controller zuletzt Änderungen am Quell-DSA für diesen NC feststellte.
+Ruft den Zeitstempel der letzten erfolgreichen Replikationssynchronisierung mit dem Quell-DSA ab. Gibt den Zeitpunkt an, zu dem dieser Domänencontroller zuletzt Änderungen am Quell-DSA für diesen NC vorgenommen hat.
 
 </dd> <dt>
 
-**"", "".**
+**USNAttributeFilter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft die maximale Update Sequenznummer ab, auf die der Zielserver angeben kann, dass alle Änderungen, die vom angegebenen Server stammen, in den Update Sequenznummern, die kleiner oder gleich dieser Update Sequenznummer sind, aufgezeichnet wurden. Diese Eigenschaft wird zum Filtern von Änderungen verwendet, die der Zielserver bereits auf Replikations Quell Servern angewendet hat.
+Ruft die maximale Updatesequenznummer ab, für die der Zielserver angeben kann, dass er alle Änderungen aufgezeichnet hat, die vom angegebenen Server stammen, wenn die Updatesequenznummern kleiner oder gleich dieser Updatesequenznummer sind. Diese Eigenschaft wird verwendet, um Änderungen zu filtern, die der Zielserver bereits auf Replikationsquellserver angewendet hat.
 
 </dd> </dl>
 
@@ -137,17 +137,17 @@ Ruft die maximale Update Sequenznummer ab, auf die der Zielserver angeben kann, 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | \\Microsoftactivedirectory-Stammverzeichnis<br/>                                               |
-| MOF<br/>                      | <dl> <dt>ReplProv. MOF</dt> </dl> |
+| Namespace<br/>                | \\MicrosoftActiveDirectory-Stammverzeichnis<br/>                                               |
+| MOF<br/>                      | <dl> <dt>Replprov.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Replprov.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DS- \_ repl- \_ Cursor**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor)
+[**DS \_ REPL \_ CURSOR**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor)
 </dt> </dl>
 
  

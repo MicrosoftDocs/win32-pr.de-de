@@ -1,36 +1,36 @@
 ---
-description: Die pkey \_ audioendpoint \_ fullrangespeakers-Eigenschaft gibt die Kanal konfigurationsmaske für die vollständig gültigen Referenten an, die mit dem audioendpunktgerät verbunden sind.
+description: Die PKEY \_ AudioEndpoint FullRangeSpeakers-Eigenschaft gibt die Kanalkonfigurationsmaske für die Lautsprecher im gesamten Bereich an, die mit dem \_ Audioendpunktgerät verbunden sind.
 ms.assetid: c0a54b3d-84dc-4771-8891-167ce00e2218
-title: PKEY_AudioEndpoint_FullRangeSpeakers (mmdeviceapi. h)
+title: PKEY_AudioEndpoint_FullRangeSpeakers (Mmdeviceapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0990d08e3d78eddf0fa6397e888b1e26c9f9a767
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ad27e5623189ce3ba78707377837493c1ea8dccb248d02ddd3d8e2c64570bed6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118406446"
 ---
-# <a name="pkey_audioendpoint_fullrangespeakers"></a>Pkey- \_ audioendpoint \_ fullrangespeakers
+# <a name="pkey_audioendpoint_fullrangespeakers"></a>PKEY \_ AudioEndpoint \_ FullRangeSpeakers
 
-Die **pkey \_ audioendpoint \_ fullrangespeakers** -Eigenschaft gibt die Kanal konfigurationsmaske für die vollständig gültigen Referenten an, die mit dem audioendpunktgerät verbunden sind. Die Maske gibt die physische Konfiguration der vollständigen Referenten an und gibt die Zuweisung von Kanälen zu diesen Referenten an.
+Die **PKEY \_ AudioEndpoint \_ FullRangeSpeakers-Eigenschaft** gibt die Kanalkonfigurationsmaske für die Lautsprecher im gesamten Bereich an, die mit dem Audioendpunktgerät verbunden sind. Die Maske gibt die physische Konfiguration der Lautsprecher mit vollem Bereich an und gibt die Zuweisung von Kanälen zu diesen Sprechern an.
 
-Der **VT** -Member der **PROPVARIANT** -Struktur ist auf VT \_ UI4 festgelegt.
+Der **vt-Member** der **PROPVARIANT-Struktur** ist auf VT \_ UI4 festgelegt.
 
-Der **uintval** -Member der **PROPVARIANT** -Struktur enthält eine kanalkonfigurationsmaske, die in den **uint**-Typ umgewandelt wird.
+Der **uintVal-Member** der **PROPVARIANT-Struktur** enthält eine Kanalkonfigurationsmaske, die in den Typ **UINT umgeformt wird.**
 
-Ein Volltext-Redner ist in der Lage, Sounds über den vollen Bereich von Bass bis Treble zu spielen. In der Regel sind größere Redner in vollem Umfang, aber kleinere Redner sind deutlich weniger in der Lage, Bass Sounds wiedergeben zu können. In Windows Vista verwendet die Audioengine diese Eigenschaft zum Verwalten von Bass Ebenen im audioausgabestream, der vom audioendpunktgerät wiedergegeben wird.
+Ein Full-Range-Lautsprecher ist in der Lage, Sounds über den gesamten Bereich von Derben bis zum Treble zu spielen. In der Regel sind größere Lautsprecher voll, aber kleinere Lautsprecher sind deutlich weniger in der Lage, Laute zu spielen. In Windows Vista verwendet die Audio-Engine diese Eigenschaft, um Dieebenen im Audioausgabestream zu verwalten, der vom Audioendpunktgerät abgespielt wird.
 
-Die Kanal konfigurationsmaske für diese Eigenschaft hat das gleiche Format wie die channelkonfigurationsmaske für die [**pkey \_ audioendpoint \_ physicalspeakers**](pkey-audioendpoint-physicalspeakers.md) -Eigenschaft. Weitere Informationen zu kanalkonfigurationsmasken finden Sie hier:
+Die Kanalkonfigurationsmaske für diese Eigenschaft hat das gleiche Format wie die Kanalkonfigurationsmaske für die [**PKEY \_ AudioEndpoint \_ PhysicalSpeakers-Eigenschaft.**](pkey-audioendpoint-physicalspeakers.md) Weitere Informationen zu Kanalkonfigurationsmasken finden Sie in den folgenden Themen:
 
--   Die Beschreibung der Eigenschaft "ksproperty \_ \_ AudioChannel \_ config" in der Windows-DDK-Dokumentation.
--   Das Whitepaper "audiotreiberunterstützung für Home-Theater-Sprecher-Konfigurationen" auf der Website " [audiogerätetechnologien für Windows](https://www.microsoft.com/whdc/device/audio/default.mspx) ".
+-   Die Beschreibung der KSPROPERTY \_ AUDIO \_ CHANNEL \_ CONFIG-Eigenschaft in der Windows DDK-Dokumentation.
+-   Das Whitepaper "Audio Driver Support for Home Home Speaker Speaker Configurations" (Audiotreiberunterstützung für Home-Lautsprecher-Sprecherkonfigurationen) auf der Website [audio device technologies for Windows (Audiogerätetechnologien für](https://www.microsoft.com/whdc/device/audio/default.mspx) Windows Website).
 
-Das System ruft die Kanal konfigurationsmaske für die pkey \_ audioendpoint \_ fullrangespeakers-Eigenschaft des Benutzers ab. Der Benutzer gibt diese Informationen über die Windows-Multimedia-Systemsteuerung ein, Mmsys.cpl. Weitere Informationen zu Mmsys.cpl finden Sie in der Windows-DDK-Dokumentation.
+Das System erhält die Kanalkonfigurationsmaske für die PKEY \_ AudioEndpoint \_ FullRangeSpeakers-Eigenschaft vom Benutzer. Der Benutzer gibt diese Informationen über Windows Multimedia-Systemsteuerung ein, Mmsys.cpl. Weitere Informationen zu Mmsys.cpl finden Sie in der Windows DDK-Dokumentation.
 
-Die Kanal konfigurationsmaske für die pkey \_ audioendpoint \_ fullrangespeakers-Eigenschaft eines audioendpunktgeräts ist eine Teilmenge der channelkonfigurationsmaske für die pkey \_ audioendpoint \_ physicalspeakers-Eigenschaft desselben Geräts.
+Die Kanalkonfigurationsmaske für die PKEY AudioEndpoint FullRangeSpeakers-Eigenschaft eines Audioendpunktgeräts ist eine Teilmenge der Kanalkonfigurationsmaske für die \_ \_ PKEY \_ AudioEndpoint \_ PhysicalSpeakers-Eigenschaft desselben Geräts.
 
-Wenn ein audioendpunktgerät beispielsweise einen Satz von 5,1-umschließenden Lautsprechern steuert, ist die channelkonfigurationsmaske für die pkey \_ audioendpoint \_ physicalspeakers-Eigenschaft der ksaudio- \_ Sprecher \_ 5point1. Diese Maske gibt das vorhanden sein von Front-Left, Front-Right, Front-Center, Side-Left und Side-right Speakers – plus eines Subwoofers an. Wenn die nach-links-und Front-Right-Redner groß genug sind, um Bass Sounds zu bilden, aber die kleineren Front-Center-und Seite-Sprecher sind nicht, dann ist die channelkonfigurationsmaske für die pkey- \_ audioendpoint \_ fullrangespeakers-Eigenschaft ksaudio- \_ Sprecher \_ Stereo, der nur die Front-Left-und Front-Right-Sprecher anzeigt. Kanalkonfigurationsmasken \_ der ksaudiosprecher \_ 5point1 und \_ ksaudiosprecherstereo \_ sind in der Header Datei "ksmedia. h" definiert.
+Wenn z. B. ein Audioendpunktgerät einen Satz von 5.1-Surround-Sound-Lautsprechern steuert, ist die Kanalkonfigurationsmaske für die PKEY \_ AudioEndpoint \_ PhysicalSpeakers-Eigenschaft KSAUDIO \_ SPEAKER \_ 5POINT1. Diese Maske gibt das Vorhandensein von Lautsprechern von links nach vorn, von rechts nach vorn, von vorne nach rechts, von links nach links und von rechts nach rechts sowie von einem Subwoofer an. Wenn die Lautsprecher von vorn links und rechts groß genug sind, um Laute zu erzeugen, aber die kleineren Lautsprecher in der Front-Center- und Seitenbereich nicht, dann ist die Kanalkonfigurationsmaske für die PKEY \_ AudioEndpoint \_ FullRangeSpeakers-Eigenschaft KSAUDIO SPEAKER STEREO, was nur den Vorder-Links- und den \_ \_ Front-Right-Lautsprecher angibt. Die Kanalkonfigurationsmasken KSAUDIO \_ SPEAKER \_ 5POINT1 und KSAUDIO SPEAKER STEREO werden \_ in der \_ Headerdatei Ksmedia.h definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,23 +38,23 @@ Wenn ein audioendpunktgerät beispielsweise einen Satz von 5,1-umschließenden L
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Mmdeviceapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Mmdeviceapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Eigenschaften des audioendpunkts**](audio-endpoint-properties.md)
+[**Audioendpunkteigenschaften**](audio-endpoint-properties.md)
 </dt> <dt>
 
 [Kernaudioeigenschaften](core-audio-properties.md)
 </dt> <dt>
 
-[**Pkey \_ audioendpoint \_ physicalspeakers (Eigenschaft)**](pkey-audioendpoint-physicalspeakers.md)
+[**PKEY \_ AudioEndpoint \_ PhysicalSpeakers-Eigenschaft**](pkey-audioendpoint-physicalspeakers.md)
 </dt> </dl>
 
  

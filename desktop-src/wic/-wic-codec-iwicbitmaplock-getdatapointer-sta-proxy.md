@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getdatapointer-Methode.
+description: Proxyfunktion für die GetDataPointer-Methode.
 ms.assetid: 7256d6eb-cb7c-4067-8382-511d64da6825
 title: IWICBitmapLock_GetDataPointer_STA_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 957ae5974d65430bd39ea41f2e094e9f9c7efb06
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b693c78ba3a3d7c68c33f68ec1494997536ffb10272cc384d89d9e94ded7145b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118206746"
 ---
-# <a name="iwicbitmaplock_getdatapointer_sta_proxy-function"></a>Iwicbitmaplock \_ getdatapointer \_ STA- \_ Proxy Funktion
+# <a name="iwicbitmaplock_getdatapointer_sta_proxy-function"></a>STA-Proxyfunktion "IWICBitmapLock \_ GetDataPointer" \_ \_
 
-Proxy Funktion für die [**getdatapointer**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmaplock-getdatapointer) -Methode.
+Proxyfunktion für die [**GetDataPointer-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmaplock-getdatapointer)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT IWICBitmapLock_GetDataPointer_STA_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) \** _
+Typ: **[ **IWICBitmapLock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)\***
 
-Zeiger auf dieses [_ *iwicbitmaplock* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) -Objekt.
+Zeiger auf dieses [**IWICBitmapLock-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)
 
 </dd> <dt>
 
-*pcbbuffersize* \[ vorgenommen\]
+*pwBufferSize* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
 Ein Zeiger, der die Größe des Puffers empfängt.
 
 </dd> <dt>
 
-_ppbData * \[ out\]
+*ppbData* \[ out\]
 </dt> <dd>
 
-Type: **Byte \* \***
+Typ: **BYTE \* \***
 
-Ein Zeiger, der einen Zeiger auf den oberen linken Pixel im gesperrten Rechteck empfängt.
+Ein Zeiger, der einen Zeiger auf das obere linke Pixel im gesperrten Rechteck empfängt.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Ein Zeiger, der einen Zeiger auf den oberen linken Pixel im gesperrten Rechteck 
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -83,9 +83,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

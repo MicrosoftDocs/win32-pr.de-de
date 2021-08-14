@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. ClearData-Methode
-description: Löscht alle Datenfelder im-Steuerelement.
+title: SystemMonitor.ClearData-Methode
+description: Löscht alle Datenfelder im -Steuerelement.
 ms.assetid: 6d7e510c-7f76-42b1-b470-1110d124448f
 keywords:
-- ClearData-Methode (Sysmon)
-- ClearData-Methode (Sysmon), Systemmonitor-Objekt
-- Systemmonitor-Objekt "sysmon", ClearData-Methode
+- ClearData-Methode SysMon
+- ClearData-Methode SysMon , SystemMonitor-Objekt
+- SystemMonitor-Objekt SysMon , ClearData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b346dacaf9df945be8c4c55ce9ee2be3eb76e9d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ebd2ad0e748a3b914db8bb92e8a7b6405dbef8fdc56e04a5b6cd02bfe9a74b8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882645"
 ---
-# <a name="systemmonitorcleardata-method"></a>Systemmonitor. ClearData-Methode
+# <a name="systemmonitorcleardata-method"></a>SystemMonitor.ClearData-Methode
 
-Löscht alle Datenfelder im-Steuerelement.
+Löscht alle Datenfelder im -Steuerelement.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,17 +50,17 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> </dl>
 
  

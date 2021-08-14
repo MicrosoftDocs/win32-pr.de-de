@@ -1,7 +1,7 @@
 ---
-description: Enthält Such Kontextinformationen.
+description: Enthält Suchkontextinformationen.
 ms.assetid: 4b865563-98c2-459b-bb2b-75420d51d6a7
-title: FIND_INFO Struktur
+title: FIND_INFO-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 7d6b6dea42c008178c22f6e342a64b2f8d193ec5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1ee5eb66928322019a455c78d71abf5461e56b1296ae79d94b83c40c2d45379e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118404783"
 ---
-# <a name="find_info-structure"></a>\_Informationsstruktur suchen
+# <a name="find_info-structure"></a>FIND \_ INFO-Struktur
 
-Enthält Such Kontextinformationen.
+Enthält Suchkontextinformationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,73 +49,73 @@ typedef struct _FIND_INFO {
 
 <dl> <dt>
 
-**tiindex**
+**tiIndex**
 </dt> <dd>
 
-Die **TagID** für den Index, der gesucht werden soll.
+Die **TAGID** für den zu durchsuchenden Index.
 
 </dd> <dt>
 
-**ticurrent**
+**tiCurrent**
 </dt> <dd>
 
-Die **TagID** für das aktuelle Element, das gefunden wurde.
+Die **TAGID** für das aktuelle Element, das sich befand.
 
 </dd> <dt>
 
-**tikodindex**
+**tiEndIndex**
 </dt> <dd>
 
-Die **TagID** für den letzten Datensatz nach FindFirst, wenn der Index eindeutig ist.
+Die **TAGID für** den letzten Datensatz nach FindFirst, wenn der Index UNIQUE ist.
 
 </dd> <dt>
 
 **tName**
 </dt> <dd>
 
-Der Typ des zu suchenden Elements. Siehe [Tagtypen](tag-types.md).
+Der Typ des zu befindenden Elements. Weitere Informationen [finden Sie unter TAG-Typen.](tag-types.md)
 
 </dd> <dt>
 
-**dwindexrec**
+**dwIndexRec**
 </dt> <dd>
 
-Ein interner Indikator, mit dem nachverfolgt wird, wo im Index der nächste Suchvorgang beginnen soll.
+Ein interner Zähler, mit dem nachverfolgt wird, wo im Index der nächste Find-Vorgang gestartet werden soll.
 
 </dd> <dt>
 
 **dwFlags**
 </dt> <dd>
 
-Dieser Member kann 0 oder ein eindeutiger **shimdb- \_ Index \_ \_** (0x00000001) sein, was darauf hinweist, dass es sich hierbei um einen eindeutigen Schlüssel Index handelt.
+Dieser Member kann 0 oder **SHIMDB \_ INDEX \_ UNIQUE \_ KEY** (0x00000001) sein, was angibt, dass es sich um einen eindeutigen Schlüsselindex handelt.
 
 </dd> <dt>
 
-**ullkey**
+**ullKey**
 </dt> <dd>
 
 Der Schlüssel für den aktuellen Eintrag.
 
 </dd> <dt>
 
-**szName**
+**Szname**
 </dt> <dd>
 
-Die aktuelle Zeichenfolge (wenn der Tagtyp **" \_ TagType \_**" ist).
+Die aktuelle Zeichenfolge (wenn der Tagtyp **TAG \_ TYPE \_ STRINGREF ist).**
 
 </dd> <dt>
 
-**dwname**
+**dwName**
 </dt> <dd>
 
-Der aktuelle **DWORD** -Wert (wenn der Tagtyp **\_ \_ DWORD** ist).
+Der aktuelle **DWORD-Wert** (wenn der Tagtyp **TAG TYPE \_ \_ DWORD ist).**
 
 </dd> <dt>
 
-**pguidname**
+**pguidName**
 </dt> <dd>
 
-Der aktuelle GUID-Wert (wenn der Tagtyp **\_ \_ Binär** ist und das Tag eine **\_ Tagdatenbank- \_ ID** ist).
+Der aktuelle GUID-Wert (wenn der Tagtyp **TAG \_ TYPE \_ BINARY** und das TAG TAG **DATABASE ID \_ \_ ist).**
 
 </dd> </dl>
 
@@ -125,16 +125,16 @@ Der aktuelle GUID-Wert (wenn der Tagtyp **\_ \_ Binär** ist und das Tag eine **
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sdbfindfirstdwordindexedtag**](sdbfindfirstdwordindexedtag.md)
+[**SdbFindFirstDWORDIndexedTag**](sdbfindfirstdwordindexedtag.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
 title: Die eigenständige Anwendung
-description: Diese eigenständige Anwendung, die aus einem Rückruf einer einzelnen Funktion besteht, bildet die Grundlage der verteilten Anwendung.
+description: Diese eigenständige Anwendung, die aus einem Aufruf einer einzelnen Funktion besteht, bildet die Grundlage unserer verteilten Anwendung.
 ms.assetid: 640f5d01-84c8-4fe8-9dae-f4d55cc6f06b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ddf1b11df2372a1db5c74659d1800b62e53b7309
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 946d76d0259fd3db971da345a10108cb3dbe11c23184b4ea9a88254e4ecb5e0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923864"
 ---
 # <a name="the-standalone-application"></a>Die eigenständige Anwendung
 
-Diese eigenständige Anwendung, die aus einem Rückruf einer einzelnen Funktion besteht, bildet die Grundlage der verteilten Anwendung. Die **helloproc**-Funktion wird in ihrer eigenen Quelldatei definiert, sodass Sie kompiliert und mit einer eigenständigen Anwendung oder einer verteilten Anwendung verknüpft werden kann.
+Diese eigenständige Anwendung, die aus einem Aufruf einer einzelnen Funktion besteht, bildet die Grundlage unserer verteilten Anwendung. Die Funktion **HelloProc wird** in einer eigenen Quelldatei definiert, sodass sie kompiliert und entweder mit einer eigenständigen Anwendung oder einer verteilten Anwendung verknüpft werden kann.
 
 
 ```C++
@@ -38,9 +38,9 @@ void main(void)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

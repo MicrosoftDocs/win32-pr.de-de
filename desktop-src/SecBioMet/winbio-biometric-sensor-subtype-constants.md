@@ -1,6 +1,6 @@
 ---
-title: WINBIO_BIOMETRIC_SENSOR_SUBTYPE Konstanten (winbio \_ types. h)
-description: Geben Sie eine Bitmaske zum Integrieren von Sensor Funktionen an.
+title: WINBIO_BIOMETRIC_SENSOR_SUBTYPE Konstanten (Winbio \_ types.h)
+description: Geben Sie eine Bitmaske für integrierte Sensorfunktionen an.
 ms.assetid: ED2A26BC-AED4-4304-9A17-A9BA126B0AFC
 topic_type:
 - apiref
@@ -14,24 +14,24 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 26229634f3d404921f877bb65d83f7d75634ecbe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 08cb98e4645b3e65a5dd56d60450acbc0d949ea673afec25baba6d335217ffa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911033"
 ---
-# <a name="winbio_biometric_sensor_subtype-constants"></a>\_ \_ \_ Subtypkonstanten für den Subtyp "winbio-biometrische
+# <a name="winbio_biometric_sensor_subtype-constants"></a>WINBIO \_ BIOMETRIC \_ SENSOR \_ SUBTYPE Constants
 
-Die folgenden Konstanten können als Bitmaske für den *Funktionsparameter der* [**winbio- \_ Einheiten \_ Schema**](winbio-unit-schema.md) Struktur verwendet werden. Diese Informationen beziehen sich auf die Funktionen des integrierten Sensors.
+Die folgenden Konstanten können als Bitmaske für den *Capabilities-Parameter* der [**WINBIO \_ UNIT \_ SCHEMA-Struktur verwendet**](winbio-unit-schema.md) werden. Diese beziehen sich auf die Integrierten Sensorfunktionen.
 
 
 
 | Konstante                                                                                                                                                                                                            | BESCHREIBUNG                                        |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------|
-| <span id="WINBIO_SENSOR_SUBTYPE_UNKNOWN"></span><span id="winbio_sensor_subtype_unknown"></span><dl> <dt>**der winbio- \_ Sensor \_ Untertyp ist \_ unbekannt.**</dt> </dl>     | Die Sensor Untertypen sind nicht bekannt.<br/>      |
-| <span id="WINBIO_FP_SENSOR_SUBTYPE_SWIPE"></span><span id="winbio_fp_sensor_subtype_swipe"></span><dl> <dt>**winbio- \_ FP- \_ \_ unter Typ \_ schwenken**</dt> </dl> | Der Sensor unterstützt Fingerabdruck.<br/> |
-| <span id="WINBIO_FP_SENSOR_SUBTYPE_TOUCH"></span><span id="winbio_fp_sensor_subtype_touch"></span><dl> <dt>**Fingereingabe von winbio \_ FP- \_ Sensor \_ unter Typ \_**</dt> </dl> | Der Sensor unterstützt Finger Berührungen.<br/>     |
+| <span id="WINBIO_SENSOR_SUBTYPE_UNKNOWN"></span><span id="winbio_sensor_subtype_unknown"></span><dl> <dt>**\_WINBIO-SENSORUNTERTYP \_ \_ UNBEKANNT**</dt> </dl>     | Die Untertypen des Sensors sind nicht bekannt.<br/>      |
+| <span id="WINBIO_FP_SENSOR_SUBTYPE_SWIPE"></span><span id="winbio_fp_sensor_subtype_swipe"></span><dl> <dt>**WINBIO \_ FP \_ SENSOR \_ SUBTYPE \_ SWIPE**</dt> </dl> | Der Sensor unterstützt Fingerabdruckwischen.<br/> |
+| <span id="WINBIO_FP_SENSOR_SUBTYPE_TOUCH"></span><span id="winbio_fp_sensor_subtype_touch"></span><dl> <dt>**WINBIO \_ FP \_ SENSOR \_ SUBTYPE \_ TOUCH**</dt> </dl> | Der Sensor unterstützt Fingertipps.<br/>     |
 
 
 
@@ -41,20 +41,20 @@ Die folgenden Konstanten können als Bitmaske für den *Funktionsparameter der* 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstant](client-application-constants.md)
 </dt> <dt>
 
-[**winbio- \_ Einheits \_ Schema**](winbio-unit-schema.md)
+[**\_WINBIO-EINHEITENSCHEMA \_**](winbio-unit-schema.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: IWMPMediaCollection2 getbyattributeandmediatype-Methode
-description: Die getbyattributeandmediatype-Methode gibt eine iwmpwiedergabe-Schnittstelle zurück, die den Zugriff auf Medienelemente mit einem angegebenen Attribut und Medientyp ermöglicht.
+title: IWMPMediaCollection2 getByAttributeAndMediaType-Methode
+description: Die getByAttributeAndMediaType-Methode gibt eine IWMPPlaylist-Schnittstelle zurück, die Zugriff auf Medienelemente mit einem angegebenen Attribut und Medientyp bietet.
 ms.assetid: dce9cef4-1d12-4bee-a75d-42274556c5bc
 keywords:
-- getbyattributeandmediatype-Methode, Windows Media Player
-- getbyattributeandmediatype-Methode, Windows Media Player, IWMPMediaCollection2-Schnittstelle
-- IWMPMediaCollection2 Interface, Windows Media Player, getbyattributeandmediatype-Methode
+- getByAttributeAndMediaType-Methode Windows Media Player
+- getByAttributeAndMediaType-Methode Windows Media Player , IWMPMediaCollection2-Schnittstelle
+- IWMPMediaCollection2-Schnittstelle Windows Media Player , getByAttributeAndMediaType-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb1ee4e9421b4546cdc8ace6173dacab5034b905
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e08d38954dd24246b4d35b7842f890caba6eea94868901a528396e9a22b38c1a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119246430"
 ---
-# <a name="iwmpmediacollection2getbyattributeandmediatype-method"></a>IWMPMediaCollection2:: getbyattributeandmediatype-Methode
+# <a name="iwmpmediacollection2getbyattributeandmediatype-method"></a>IWMPMediaCollection2::getByAttributeAndMediaType-Methode
 
-Die- `getByAttributeAndMediaType` Methode gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf Medienelemente mit einem angegebenen Attribut und Medientyp ermöglicht.
+Die `getByAttributeAndMediaType` -Methode gibt eine **IWMPPlaylist-Schnittstelle** zurück, die Zugriff auf Medienelemente mit einem angegebenen Attribut und Medientyp bietet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,30 +57,30 @@ Implements IWMPMediaCollection2.getByAttributeAndMediaType
 
 <dl> <dt>
 
-*bstrattribute* \[ in\]
+*bstrAttribute* \[ In\]
 </dt> <dd>
 
-Die **System. String** -Eigenschaft, die das angegebene Attribut ist.
+Die **System.String,** die das angegebene Attribut ist.
 
 </dd> <dt>
 
-*bstrauvalue* \[ in\]
+*bstrValue* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den angegebenen Wert für das in *bstrattribute* angegebene Attribut ist.
+Die **System.String,** die der angegebene Wert für das Attribut ist, das in *bstrAttribute angegeben ist.*
 
 </dd> <dt>
 
-*bstraumediatype* \[ in\]
+*bstrMediaType* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den angegebenen Medientyp ist.
+Die **System.String,** die der angegebene Medientyp ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgerufene Wiedergabeliste.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgerufene Wiedergabeliste.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,14 +94,14 @@ Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgerufene Wiedergabelis
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPMediaCollection2-Schnittstelle (VB und c#)**](iwmpmediacollection2--vb-and-c.md)
+[**IWMPMediaCollection2-Schnittstelle (VB und C#)**](iwmpmediacollection2--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

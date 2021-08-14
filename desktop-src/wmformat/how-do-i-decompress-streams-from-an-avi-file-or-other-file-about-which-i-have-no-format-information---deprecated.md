@@ -1,9 +1,9 @@
 ---
-title: Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, die keine Formatinformationen hat.
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, die keine Formatinformationen hat.
+title: Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, zu der ich keine Formatinformationen habe
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, zu der ich keine Formatinformationen habe
 ms.assetid: ba283da2-4ae4-442e-9efc-754c4e1fe0ac
 keywords:
-- Dekomprimieren von Datenströmen aus einer AVI-Datei oder einer anderen Datei, für die ich keine Formatinformationen habe, Windows Media-Format Gewusst wie
+- Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, zu der ich keine Formatinformationen habe Windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a522fcacf51050a481aadca230cb0cccdf2dff2e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f92234be5c987ff7da3efdd970f180f757a08987aa9c5bf94f417e5f46fc6467
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118198491"
 ---
-# <a name="how-do-i-decompress-streams-from-an-avi-file-or-other-file-about-which-i-have-no-format-information"></a>Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, die keine Formatinformationen hat.
+# <a name="how-do-i-decompress-streams-from-an-avi-file-or-other-file-about-which-i-have-no-format-information"></a>Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, zu der ich keine Formatinformationen habe
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

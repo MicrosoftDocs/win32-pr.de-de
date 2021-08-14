@@ -1,9 +1,9 @@
 ---
-title: CBEN_ENDEDIT Benachrichtigungs Code (kommctrl. h)
-description: Wird gesendet, wenn der Benutzer einen Vorgang innerhalb des Bearbeitungs Felds abgeschlossen hat oder ein Element aus der Dropdown Liste des Steuer Elements ausgewählt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: CBEN_ENDEDIT Benachrichtigungscode (Commctrl.h)
+description: Wird gesendet, wenn der Benutzer einen Vorgang im Bearbeitungsfeld abgeschlossen oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b6b50951-7304-4499-b57b-a5b592de2190
 keywords:
-- Windows-Steuerelemente für CBEN_ENDEDIT Benachrichtigungs
+- CBEN_ENDEDIT Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 679b9f878dbd8f7f374b461ee548f9ce2c62e281
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 22ae9205e84e4f1c0b10e516b1f406f2d167f1bc5cc38417a31379d20e16fcac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118413950"
 ---
-# <a name="cben_endedit-notification-code"></a>Cben \_ EndEdit-Benachrichtigungs Code
+# <a name="cben_endedit-notification-code"></a>CBEN \_ ENDEDIT-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer einen Vorgang innerhalb des Bearbeitungs Felds abgeschlossen hat oder ein Element aus der Dropdown Liste des Steuer Elements ausgewählt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird gesendet, wenn der Benutzer einen Vorgang im Bearbeitungsfeld abgeschlossen oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,13 +43,13 @@ CBEN_ENDEDIT
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmcbeendedit**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbeendedita) -Struktur, die Informationen darüber enthält, wie der Benutzer den Bearbeitungsvorgang abgeschlossen hat.
+Ein Zeiger auf eine [**NMCBEENDEDIT-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbeendedita) die Informationen darüber enthält, wie der Benutzer den Bearbeitungsvorgang abgeschlossen hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**False** , um den Benachrichtigungs Code zu akzeptieren und dem Steuerelement das Anzeigen des ausgewählten Elements zu ermöglichen. andernfalls **true**.
+**FALSE,** um den Benachrichtigungscode zu akzeptieren und dem Steuerelement das Anzeigen des ausgewählten Elements zu ermöglichen; Andernfalls **TRUE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,14 +57,14 @@ Ein Zeiger auf eine [**nmcbeendedit**](/windows/desktop/api/Commctrl/ns-commctrl
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Cben \_ "Dededitw** (Unicode)" und " **cben \_** " (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **CBEN \_ ENDEDITW** (Unicode) und **CBEN \_ ENDEDITA** (ANSI)<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

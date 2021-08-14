@@ -1,104 +1,104 @@
 ---
-title: Portieren von Beleuchtungs-und Material Funktionen
-description: Die OpenGL-Funktionen für Beleuchtung und Material unterscheiden sich erheblich von den Iris GL-Funktionen. Anders als IRIS GL bietet OpenGL separate Funktionen für das Festlegen von Lichtern, hellen Modellen und Materialien.
+title: Portieren von Beleuchtungs- und Materialfunktionen
+description: OpenGL-Funktionen für Beleuchtung und Materialien unterscheiden sich erheblich von den IRIS GL-Funktionen. Im Gegensatz zu IRIS GL verfügt OpenGL über separate Funktionen zum Festlegen von Licht, Lichtmodellen und Materialien.
 ms.assetid: de57d041-1ea1-46d0-b584-009608625ea5
 keywords:
-- IRIS GL portieren, Beleuchtung
+- IRIS GL-Portierung, Beleuchtung
 - Portieren von IRIS GL, Beleuchtung
-- Portieren auf OpenGL von IRIS GL, Beleuchtung
-- OpenGL-Portierung von IRIS GL, Beleuchtung
-- IRIS GL portieren, Materialien
-- Portieren von IRIS GL, Material
-- Portieren auf OpenGL von IRIS GL, Material
-- OpenGL-Portierung von IRIS GL, Material
+- Portieren von IRIS GL zu OpenGL, Beleuchtung
+- OpenGL-Portierung von IRIS GL,Beleuchtung
+- IRIS GL-Portierung, Materialien
+- Portieren von IRIS GL,Materialien
+- Portieren von IRIS GL,Materialien zu OpenGL
+- OpenGL-Portierung aus IRIS GL,Materialien
 - Belichtung
-- Werk
+- Materialien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c775670b7ae49e41fed35c192385c72e72e880b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 45041dde0902f983648c6d258f4c4a8220085d0d8bbeddc6fbdbc970033a50ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118933030"
 ---
-# <a name="porting-lighting-and-materials-functions"></a>Portieren von Beleuchtungs-und Material Funktionen
+# <a name="porting-lighting-and-materials-functions"></a>Portieren von Beleuchtungs- und Materialfunktionen
 
-Die OpenGL-Funktionen für Beleuchtung und Material unterscheiden sich erheblich von den Iris GL-Funktionen. Anders als IRIS GL bietet OpenGL separate Funktionen für das Festlegen von Lichtern, hellen Modellen und Materialien.
+OpenGL-Funktionen für Beleuchtung und Materialien unterscheiden sich erheblich von den IRIS GL-Funktionen. Im Gegensatz zu IRIS GL verfügt OpenGL über separate Funktionen zum Festlegen von Licht, Lichtmodellen und Materialien.
 
-Beachten Sie beim Portieren von Beleuchtungs-und Material Funktionen die folgenden Punkte:
+Beachten Sie beim Portieren von Beleuchtungs- und Materialfunktionen folgende Punkte:
 
--   OpenGL hat keine Tabelle mit gespeicherten Definitionen. Mithilfe von Anzeigelisten können Sie den Iris GL-DEF-/Bindungsmechanismus imitieren. Weitere Informationen zu defs und Bindungen finden Sie unter [Portieren von defs, Bindungen und Sets](porting-defs--binds--and-sets.md).
--   Bei OpenGL ist die Dämpfung mit den einzelnen Lichtquellen und nicht mit dem Gesamt Beleuchtungsmodell verknüpft.
--   Diffuse und Glanz Komponenten werden in OpenGL-Lichtquellen getrennt.
--   OpenGL-Lichtquellen verfügen über eine Alpha-Komponente. Wenn Sie den Iris GL-Code portieren, legen Sie diese Alpha Komponente auf 1,0 fest, um 100% nicht transparent anzugeben. Die Alpha Werte werden dann nur von der Alpha Komponente ihrer Materialien bestimmt, sodass die Objekte in Ihrer Szene genauso aussehen wie in IRIS GL.
+-   OpenGL verfügt über keine Tabelle mit gespeicherten Definitionen. Sie können Anzeigelisten verwenden, um den IRIS GL-Def/Bind-Mechanismus zu imitieren. Weitere Informationen zu Defs und Binds finden Sie unter [Portieren von Defs, Binds und Sets.](porting-defs--binds--and-sets.md)
+-   Bei OpenGL ist die Dämpfung jeder Lichtquelle und nicht dem gesamten Beleuchtungsmodell zugeordnet.
+-   Diffuse und specular-Komponenten werden in OpenGL-Lichtquellen getrennt.
+-   OpenGL-Lichtquellen verfügen über eine Alphakomponente. Legen Sie beim Portieren Ihres IRIS GL-Codes diese Alphakomponente auf 1,0 fest, was 100 % undurchsichtig angibt. Die Alphawerte werden dann nur durch die Alphakomponente Ihrer Materialien bestimmt, sodass die Objekte in Ihrer Szene genauso aussehen wie in IRIS GL.
 
-In der folgenden Tabelle sind die Funktionen von IRIS GL, Beleuchtung und Material sowie die entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind die Beleuchtungs- und Materialfunktionen von IRIS GL sowie die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion                 | OpenGL-Funktion                               | Bedeutung                                                       |
 |----------------------------------|-----------------------------------------------|---------------------------------------------------------------|
-| **Imdef (deflight**,... **)**    | [gllight](gllight-functions.md)              | Definieren Sie eine Lichtquelle.                                        |
-| **Imdef (deflmodel**,... **)**   | [gllightmodel](gllightmodel-functions.md)    | Definieren eines Beleuchtungs Modells.                                      |
-| **Bindung aufheben**                       | [**glEnable**](glenable.md) (GL \_ Light *i*) | Light *i* aktivieren.                                             |
-| **Bindung aufheben**                       | **glEnable**(GL- \_ Beleuchtung)                  | Aktivieren der Beleuchtung.                                              |
-| **Imdef (defmaterial**,... **)** | [**glmaterial**](glmaterial-functions.md)    | Definieren Sie ein Material.                                            |
-| **Imcolor**                      | [**glcolormaterial**](glcolormaterial.md)    | Ändern Sie die Auswirkung von Farb Befehlen, während die Beleuchtung aktiv ist. |
-|                                  | [**glgetmaterial**](glgetmaterial.md)        | Erhalten von Materialparametern.                                      |
+| **Imdef(DEFLIGHT**, ... **)**    | [glLight](gllight-functions.md)              | Definieren Sie eine Lichtquelle.                                        |
+| **Imdef(DEFLMODEL**, ... **)**   | [glLightModel](gllightmodel-functions.md)    | Definieren Sie ein Beleuchtungsmodell.                                      |
+| **Imbinden**                       | [**glEnable**](glenable.md) ( GL \_ LIGHT *i*) | Aktivieren Sie light *i*.                                             |
+| **Imbinden**                       | **glEnable**( GL \_ LIGHTING )                  | Aktivieren Sie die Beleuchtung.                                              |
+| **Imdef(DEFMATERIAL**, ... **)** | [**glMaterial**](glmaterial-functions.md)    | Definieren Sie ein Material.                                            |
+| **Imcolor**                      | [**glColorMaterial**](glcolormaterial.md)    | Ändern Sie den Effekt von Farbbefehlen, während die Beleuchtung aktiv ist. |
+|                                  | [**glGetMaterial**](glgetmaterial.md)        | Materialparameter erhalten.                                      |
 
 
 
  
 
-In der folgenden Tabelle werden verschiedene Materialparameter von IRIS GL und ihre entsprechenden OpenGL-Parameter aufgelistet.
+In der folgenden Tabelle sind verschiedene IRIS GL-Materialparameter und die entsprechenden OpenGL-Parameter aufgeführt.
 
 
 
-| Imdef-Index  | glmaterial-Parameter                              | Standard              | Bedeutung                                                                                       |
+| Imdef-Index  | glMaterial-Parameter                              | Standard              | Bedeutung                                                                                       |
 |--------------|---------------------------------------------------|----------------------|-----------------------------------------------------------------------------------------------|
-| ALPHA        | GL- \_ diffuses                                       |                      | Der vierte Wert im GL- \_ diffusen Parameter gibt den Alpha-Wert an.                      |
-| AMBIENT      | GL- \_ AMBIENT                                       | (0,2, 0,2, 0,2, 1,0) | Umgebungs Farbe.                                                                                |
-| User      | GL- \_ diffuses                                       | (0,8, 0,8, 0,8, 1,0) | Diffuse Farbe.                                                                                |
-| Glanz     | GL \_ Glanz                                      | (0,0, 0,0, 0,0, 1,0) | Emissive-Farbe.                                                                               |
-| Glanz    | GL \_ shininess GL \_ AMBIENT \_ und \_ diffuse<br/> | 0,0                  | Glanz Exponent. Äquivalent zum doppelten Aufrufen von **glmaterial** mit denselben Werten.<br/> |
-| Colorindexes | GL- \_ Farb \_ Indizes                                |                      | Farbindizes für Ambient, diffuse und Glanz Beleuchtung.                                    |
+| ALPHA        | GL \_ DIFFUSE                                       |                      | Der vierte Wert im GL \_ DIFFUSE-Parameter gibt den Alphawert an.                      |
+| Ambient      | GL \_ AMBIENT                                       | (0.2, 0.2, 0.2, 1.0) | Umgebungsfarbe.                                                                                |
+| Diffuse      | GL \_ DIFFUSE                                       | (0.8, 0.8, 0.8, 1.0) | Diffuse Farbe.                                                                                |
+| Specular     | GL \_ SPECULAR                                      | (0.0, 0.0, 0.0, 1.0) | Farbliche Farbgebung.                                                                               |
+| SCHLÄFRIGKEIT    | \_GL-GL-GL-AMBIENT \_ \_ UND \_ DIFFUSE<br/> | 0,0                  | Specular-Exponent. Entspricht dem **zweimalen Aufrufen von glMaterial** mit denselben Werten.<br/> |
+| COLORINDEXES | \_ \_ GL-FARBINDIZES                                |                      | Farbindizes für Umgebungs-, diffuse und speculare Beleuchtung.                                    |
 
 
 
  
 
-Wenn der erste Parameter von **imdef** "defmodel" ist, ist die entsprechende OpenGL-Übersetzung die Funktion " [**gllightmodel**](gllightmodel-functions.md)". Die Ausnahme ist, wenn der Parameter "defmodel" auf "Dämpfung" folgt: die entsprechende OpenGL-Funktion ist " [**gllight**](gllight-functions.md)".
+Wenn der erste Parameter von **Imdef** DEFMODEL ist, ist die entsprechende OpenGL-Übersetzung die [**Funktion glLightModel**](gllightmodel-functions.md). Die Ausnahme ist, wenn der Parameter nach DEFMODEL ATTENUATION ist: Dann ist die entsprechende OpenGL-Funktion [**glLight.**](gllight-functions.md)
 
-In der folgenden Tabelle sind die entsprechenden Beleuchtungsmodell Parameter für Iris GL und OpenGL aufgeführt.
+In der folgenden Tabelle sind die entsprechenden Beleuchtungsmodellparameter für IRIS GL und OpenGL aufgeführt.
 
 
 
-| Imdef-Index | gllightmodel-Parameter          | Standard              | Bedeutung                                          |
+| Imdef-Index | glLightModel-Parameter          | Standard              | Bedeutung                                          |
 |-------------|---------------------------------|----------------------|--------------------------------------------------|
-| AMBIENT     | GL- \_ Light- \_ Modell \_ AMBIENT       | (0,2, 0,2, 0,2, 1,0) | Umgebungs Farbe der Szene.                          |
-| Dämpfung |                                 |                      | Siehe [**gllight**](gllight-functions.md).        |
-| Localviewer | \_ \_ \_ lokaler \_ Viewer für GL-Light-Modell | GL \_ false            | Viewer local (**true**) oder Infinite (**false**). |
-| Twoside     | GL \_ lightmodel \_ zwei \_ seitig       | GL \_ false            | Verwenden Sie die zweiseitige Beleuchtung, wenn **true**.            |
+| Ambient     | GL \_ LIGHT \_ MODEL \_ AMBIENT       | (0.2, 0.2, 0.2, 1.0) | Umgebungsfarbe der Szene.                          |
+| Dämpfung |                                 |                      | Siehe [**glLight**](gllight-functions.md).        |
+| LOCALVIEWER | GL \_ LIGHT \_ MODEL \_ LOCAL \_ VIEWER | GL \_ FALSE            | Viewer local (**TRUE**) oder infinite (**FALSE**). |
+| TWOSIDE     | GL \_ LIGHTMODEL \_ TWO \_ SIDE       | GL \_ FALSE            | Verwenden Sie bei TRUE die zweiseitige **Beleuchtung.**            |
 
 
 
  
 
-Wenn der erste Parameter von **imdef** deflight ist, ist die entsprechende OpenGL-Übersetzung die [**gllight**](gllight-functions.md) -Funktion.
+Wenn der erste Parameter von **Imdef** DEFLIGHT ist, ist die entsprechende OpenGL-Übersetzung die [**glLight-Funktion.**](gllight-functions.md)
 
-In der folgenden Tabelle sind die entsprechenden Beleuchtungs Parameter für Iris GL und OpenGL aufgeführt.
+In der folgenden Tabelle sind die entsprechenden Beleuchtungsparameter für IRIS GL und OpenGL aufgeführt.
 
 
 
-| Imdef-Index           | gllight-Parameter                                                                                 | Standard                                                                             | Bedeutung                                                                        |
+| Imdef-Index           | glLight-Parameter                                                                                 | Standard                                                                             | Bedeutung                                                                        |
 |-----------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| AMBIENT               | "GL \_ ambientgl \_ diffuse"<br/> GL \_ Glanz<br/>                                         | (0,0, 0,0, 0,0, 1,0) (1,0, 1,0, 1,0, 1,0)<br/> (1,0, 1,0, 1,0, 1,0)<br/> | Umgebungs Intensität. Diffuse Intensität.<br/> Glanz Intensität.<br/> |
-| Lcolor                | Keine Entsprechung                                                                                    |                                                                                     |                                                                                |
-| POSITION              | GL- \_ Position                                                                                      | (0,0, 0,0, 1,0, 0,0)                                                                | Die Position des Lichts.                                                             |
-| Spotdirection         | GL- \_ Spot- \_ Richtung                                                                               | (0,0)                                                                           | Richtung des Spotlight.                                                        |
-| Gerückt             | GL- \_ Spot \_ exponentgl-Spot-Umstellungs \_ Punkt \_<br/>                                                     | 0180<br/>                                                                     | Intensität Verteilung. Der maximale verteilte Winkel der Lichtquelle.<br/>        |
-| defmodel, Dämpfung | GL- \_ Konstante \_ Dämpfung, \_ lineare \_ Dämpfung<br/> GL. \_ quadratische \_ Dämpfung<br/> | (1, 0, 0)                                                                           | Dämpfungsfaktoren.                                                           |
+| Ambient               | GL \_ AMBIENTGL \_ DIFFUSE<br/> GL \_ SPECULAR<br/>                                         | (0.0, 0.0, 0.0, 1.0) (1.0, 1.0, 1.0, 1.0)<br/> (1.0, 1.0, 1.0, 1.0)<br/> | Umgebungsdichte. Diffuse Intensität.<br/> Glanzstärke.<br/> |
+| LCOLOR                | Keine Entsprechung                                                                                    |                                                                                     |                                                                                |
+| POSITION              | \_GL-POSITION                                                                                      | (0.0, 0.0, 1.0, 0.0)                                                                | Position des Lichts.                                                             |
+| SPOTDIRECTION         | GL \_ SPOT \_ DIRECTION                                                                               | (0, 0, 1)                                                                           | Richtung des Blickpunkts.                                                        |
+| Spotlight             | GL \_ SPOT \_ EXPONENTGL \_ SPOT \_ CUTOFF<br/>                                                     | 0180<br/>                                                                     | Intensitätsverteilung. Maximaler Verteilungswinkel der Lichtquelle.<br/>        |
+| DEFMODEL, ATTENUATION | GL \_ CONSTANT \_ ATTENUATIONGL \_ LINEAR \_ ATTENUATION<br/> GL \_ QUADRATISCHE \_ DÄMPFUNG<br/> | (1, 0, 0)                                                                           | Dämpfungsfaktoren.                                                           |
 
 
 

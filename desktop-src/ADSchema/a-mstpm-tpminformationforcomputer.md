@@ -1,11 +1,11 @@
 ---
-title: ms-TPM-TPM-Information-for-Computer-Attribut
-description: Mit diesem Attribut wird ein Computer Objekt mit einem TPM-Objekt verknüpft.
+title: ms-TPM-Tpm-Information-For-Computer-Attribut
+description: Dieses Attribut verknüpft ein Computer-Objekt mit einem TPM-Objekt.
 ms.assetid: 6b0711a6-ef7f-4afa-9bea-e09515b56882
 ms.tgt_platform: multiple
 keywords:
-- ms-TPM-TPM-Information-for-Computer-Attribut AD-Schema
-- mstpm-tpminformationforcomputer-Attribut AD-Schema
+- MS-TPM-Tpm-Information-For-Computer-Attribut AD-Schema
+- MSTPM-TpmInformationForComputer-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f5b1576ee14af1027b525e7232d6581c01809f9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 05496febb9395a753aaaf0eb34c4bfe7843a36502a8bfbdd5439314be32f7378
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118424891"
 ---
-# <a name="ms-tpm-tpm-information-for-computer-attribute"></a>ms-TPM-TPM-Information-for-Computer-Attribut
+# <a name="ms-tpm-tpm-information-for-computer-attribute"></a>ms-TPM-Tpm-Information-For-Computer-Attribut
 
-Mit diesem Attribut wird ein Computer Objekt mit einem TPM-Objekt verknüpft.
+Dieses Attribut verknüpft ein Computer-Objekt mit einem TPM-Objekt.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-TPM-TPM-Information-für-Computer     |
-| LDAP-Display-Name | mstpm-tpminformationforcomputer         |
+| CN                | ms-TPM-Tpm-Information-for-Computer     |
+| Ldap-Anzeigename | msTPM-TpmInformationForComputer         |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2109                 |
 | System-ID-GUID    | ea1b7b93-5e48-46d5-bc6c-4df4fda78a35    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -53,10 +53,10 @@ Mit diesem Attribut wird ein Computer Objekt mit einem TPM-Objekt verknüpft.
 | Link-ID                | 2182                                      |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000010                                |

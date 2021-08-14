@@ -1,7 +1,7 @@
 ---
-description: Liefert Operator Überladungen und Typumwandlungen für D3DXFLOAT16-Strukturen.
+description: Stellt Operatorüberladungen und Typcasts für D3DXFLOAT16-Strukturen zurEntspricht.
 ms.assetid: d287efb5-d15e-46dc-924d-012e1a108efc
-title: D3DXFLOAT16 Extensions (D3dx9math. h)
+title: D3DXFLOAT16-Erweiterungen (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: f97e8917f453e7c2c2db99b8f894d557d7b7909f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 63b3dfa3ae42ead2088193c42b2eef86c05ebb82c04d4a07162fb26970c5d29c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118526144"
 ---
 # <a name="d3dxfloat16-extensions"></a>D3DXFLOAT16-Erweiterungen
 
-Liefert Operator Überladungen und Typumwandlungen für [**D3DXFLOAT16**](d3dxfloat16.md) -Strukturen.
+Stellt Operatorüberladungen und Typcasts für [**D3DXFLOAT16-Strukturen**](d3dxfloat16.md) zurEntspricht.
 
 ``` syntax
 typedef struct D3DXFLOAT16
@@ -50,11 +50,11 @@ Abgeleitete Typen: \* LPD3DXFLOAT16
 
 ## <a name="members"></a>Member
 
-Weitere Informationen zu Strukturmembern finden Sie unter D3DXFLOAT16.
+Weitere Informationen zu Strukturmitgliedern finden Sie unter D3DXFLOAT16.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Operator Überladungen und Typumwandlungen für diese Struktur werden in d3dx9math. INL implementiert.
+Operatorüberladungen und Typcasts für diese Struktur werden in d3dx9math.inl implementiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,11 +62,11 @@ Operator Überladungen und Typumwandlungen für diese Struktur werden in d3dx9ma
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

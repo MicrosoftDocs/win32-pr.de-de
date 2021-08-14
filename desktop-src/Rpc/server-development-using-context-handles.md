@@ -1,25 +1,25 @@
 ---
-title: Server Entwicklung mithilfe von Kontext Handles
-description: Aus Sicht der Serverprogramm Entwicklung ist ein Kontext Handle ein nicht typisierter Zeiger. Server Programme initialisieren Kontext Handles, indem Sie Sie auf Daten im Arbeitsspeicher oder in einer anderen Form von Speicher (z. b. Dateien auf Datenträgern) verweisen.
+title: Serverentwicklung mit Kontexthandles
+description: Aus Der Perspektive der Serverprogrammentwicklung ist ein Kontexthandle ein nicht typischer Zeiger. Serverprogramme initialisieren Kontexthandles, indem sie auf Daten im Arbeitsspeicher oder auf eine andere Form von Speicher verweisen (z. B. Dateien auf Datenträgern).
 ms.assetid: 6a1aabca-4cb9-401c-90c7-0cff7a69b7b6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f743a4a6aa4a2aa7b6987bb54dc56e55cffbc76
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: db05441f7314fba628d1ec07db5f99266c595c84e672ada976b38f7576ab5d1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118925336"
 ---
-# <a name="server-development-using-context-handles"></a>Server Entwicklung mithilfe von Kontext Handles
+# <a name="server-development-using-context-handles"></a>Serverentwicklung mit Kontexthandles
 
-Aus Sicht der Serverprogramm Entwicklung ist ein Kontext Handle ein nicht typisierter Zeiger. Server Programme initialisieren Kontext Handles, indem Sie Sie auf Daten im Arbeitsspeicher oder in einer anderen Form von Speicher (z. b. Dateien auf Datenträgern) verweisen.
+Aus Der Perspektive der Serverprogrammentwicklung ist ein Kontexthandle ein nicht typischer Zeiger. Serverprogramme initialisieren Kontexthandles, indem sie auf Daten im Arbeitsspeicher oder auf eine andere Form von Speicher verweisen (z. B. Dateien auf Datenträgern).
 
-Nehmen wir beispielsweise an, dass ein Client ein Kontext Handle verwendet, um eine Reihe von Updates für einen Datensatz in einer Datenbank anzufordern. Der Client ruft eine Remote Prozedur auf dem Server auf und übergibt ihm einen Suchschlüssel. Das Serverprogramm sucht in der Datenbank nach dem Suchschlüssel und ruft die ganzzahlige Datensatznummer des übereinstimmenden Datensatzes ab. Der Server kann dann einen Zeiger auf den Speicherort, der die Datensatznummer enthält, auf "void" zeigen. Wenn der Wert zurückgegeben wird, muss die Remote Prozedur den Zeiger als Kontext Handle über seinen Rückgabewert oder seine Parameterliste zurückgeben. Der Client müsste den Zeiger an den Server übergeben, wenn er Remote Prozeduren zum Aktualisieren des Datensatzes aufgerufen hat. Während jedes dieser Aktualisierungs Vorgänge wandelt der Server den void-Zeiger in einen Zeiger auf eine Ganzzahl um.
+Angenommen, ein Client verwendet ein Kontexthandle, um eine Reihe von Updates für einen Datensatz in einer Datenbank anzufordern. Der Client ruft eine Remoteprozedur auf dem Server auf und übergibt ihr einen Suchschlüssel. Das Serverprogramm durchsucht die Datenbank nach dem Suchschlüssel und ruft die ganzzahlige Datensatznummer des übereinstimmenden Datensatzes ab. Der Server kann dann einen Zeiger auf void an einer Speicherposition zeigen, die die Datensatznummer enthält. Nach der Rückgabe muss die Remoteprozedur den Zeiger als Kontexthandle über den Rückgabewert oder die Parameterliste zurückgeben. Der Client muss den Zeiger jedes Mal an den Server übergeben, wenn er Remoteprozeduren aufgerufen hat, um den Datensatz zu aktualisieren. Bei jedem dieser Aktualisierungsvorgänge würde der Server den void-Zeiger in einen Zeiger auf eine ganze Zahl umwerfen.
 
-Nachdem das Serverprogramm das Kontext Handle auf Kontext Daten verweist, gilt das Handle als geöffnet. Handles, die einen **null** -Wert enthalten, werden geschlossen. Der Server verwaltet ein geöffnetes Kontext Handle, bis der Client eine Remote Prozedur aufruft, die ihn schließt. Wenn die Client Sitzung beendet wird, während das Handle geöffnet ist, ruft die RPC-Laufzeit die Server-Lauf Zeit Routine auf, um das Handle freizugeben.
+Nachdem das Serverprogramm das Kontexthandle auf Kontextdaten verweist, gilt das Handle als geöffnet. Handles, die einen **NULL-Wert** enthalten, werden geschlossen. Der Server verwaltet ein geöffnetes Kontexthandle, bis der Client eine Remoteprozedur aufruft, die sie schließt. Wenn die Clientsitzung beendet wird, während das Handle geöffnet ist, ruft die RPC-Laufzeit die Server-Run-Down-Routine auf, um das Handle frei zu machen.
 
-Das folgende Code Fragment veranschaulicht, wie ein-Server ein Kontext Handle implementieren kann. In diesem Beispiel verwaltet der Server eine Datendatei, in die der Client mithilfe von Remote Prozeduren schreibt. Die Kontextinformationen sind ein Datei Handle, das den aktuellen Speicherort in der Datei nachverfolgt, an der der Serverdaten schreibt. Das Datei Handle wird als Kontext Handle in der Parameterliste für Remote Prozedur Aufrufe verpackt. Eine-Struktur enthält den Dateinamen und das Datei handle. Die Schnittstellen Definition für dieses Beispiel wird unter [Schnittstellen Entwicklung mithilfe von Kontext Handles](interface-development-using-context-handles.md)gezeigt.
+Das folgende Codefragment veranschaulicht, wie ein Server ein Kontexthandle implementieren kann. In diesem Beispiel verwaltet der Server eine Datendatei, in die der Client mithilfe von Remoteprozeduren schreibt. Die Kontextinformationen sind ein Dateihandle, das den aktuellen Speicherort in der Datei nachverfolgt, an der der Server Daten schreibt. Das Dateihandle wird als Kontexthandle in der Parameterliste für Remoteprozeduraufrufe gepackt. Eine -Struktur enthält den Dateinamen und das Dateihandle. Die Schnittstellendefinition für dieses Beispiel wird unter [Schnittstellenentwicklung mit Kontexthandles](interface-development-using-context-handles.md)gezeigt.
 
 
 ```C++
@@ -33,7 +33,7 @@ typedef struct
 
 
 
-Die Funktion remoteopen öffnet eine Datei auf dem Server:
+Die Funktion RemoteOpen öffnet eine Datei auf dem Server:
 
 
 ```C++
@@ -86,7 +86,7 @@ short RemoteRead(
 
 
 
-Die Funktion remoteclose schließt eine Datei auf dem Server. Beachten Sie, dass die Serveranwendung dem Kontext Handle als Teil der Close-Funktion **null** zuweisen muss. Dies kommuniziert mit dem Serverstub und der RPC-Lauf Zeit Bibliothek, dass das Kontext Handle gelöscht wurde. Andernfalls wird die Verbindung geöffnet, und schließlich wird eine Kontext Zusammenführung ausgeführt.
+Die Funktion RemoteClose schließt eine Datei auf dem Server. Beachten Sie, dass die Serveranwendung dem Kontexthandle als Teil der Close-Funktion **NULL** zuweisen muss. Dadurch wird dem Serverstub und der RPC-Laufzeitbibliothek mitgeteilt, dass das Kontexthandle gelöscht wurde. Andernfalls bleibt die Verbindung geöffnet, und schließlich kommt es zu einem Kontextablauf.
 
 
 ```C++
@@ -113,13 +113,13 @@ void RemoteClose(PPCONTEXT_HANDLE_TYPE pphContext)
 
 
 > [!Note]  
-> Es wird erwartet, dass der Client ein gültiges Kontext Handle an einen Aufruf mit \[ in-, out- \] direktionalen Attributen übergibt, dass RPC keine **null** -Kontext Handles für diese Kombination aus direktionalen Attributen ablehnt. Das **null** -Kontext Handle wird als **null** -Zeiger an den Server übermittelt. Der Servercode für Aufrufe, die ein \[ in-, out- \] Kontext Handle enthalten, sollte geschrieben werden, um eine Zugriffsverletzung beim Empfang eines **null** -Zeigers zu vermeiden.
+> Es ist zwar zu erwarten, dass der Client ein gültiges Kontexthandle an einen Aufruf mit \[ in- und ausgehenden \] richtungsweisen Attributen übergibt, RPC lehnt **jedoch KEINE NULL-Kontexthandles** für diese Kombination von richtungsweisen Attributen ab. Das **NULL-Kontexthandle** wird als **NULL-Zeiger** an den Server übergeben. Der Servercode für Aufrufe, die ein \[ In-Out-Kontexthandle enthalten, \] sollte geschrieben werden, um eine Zugriffsverletzung zu vermeiden, wenn ein **NULL-Zeiger** empfangen wird.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

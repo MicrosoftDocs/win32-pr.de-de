@@ -1,7 +1,7 @@
 ---
-description: Ressourcen Statistik, die von D3DDEVINFO \_ ResourceManager erfasst wird, wenn der asynchrone Abfrage Mechanismus verwendet wird.
+description: Vom ResourceManager D3DDEVINFO erfasste Ressourcenstatistiken \_ bei Verwendung des asynchronen Abfragemechanismus.
 ms.assetid: f4d9c6db-4002-439c-9a88-485763badc82
-title: D3DRESOURCESTATS-Struktur (D3D9Types. h)
+title: D3DRESOURCESTATS-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: f6f549011b9750f69187c0e0cbf34ec94764c9ef
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: dc992c5b8246ce302cda8924b8521c923575c8914c83b35c8c1e789e4bc1c826
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118527472"
 ---
 # <a name="d3dresourcestats-structure"></a>D3DRESOURCESTATS-Struktur
 
-Ressourcen Statistik, die von [**D3DDEVINFO \_ ResourceManager**](d3ddevinfo-resourcemanager.md) erfasst wird, wenn der asynchrone Abfrage Mechanismus verwendet wird.
+Vom [**\_ ResourceManager D3DDEVINFO**](d3ddevinfo-resourcemanager.md) erfasste Ressourcenstatistiken bei Verwendung des asynchronen Abfragemechanismus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,29 +49,29 @@ typedef struct D3DRESOURCESTATS {
 
 <dl> <dt>
 
-**bthrashing**
+**bThrashing**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Gibt an, ob eine Überlastung auftritt.
+Gibt an, ob ein Thrashing erfolgt.
 
 </dd> <dt>
 
-**Approxbytesherunter geladen**
+**ApproxBytesDownloaded**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ungefähre Anzahl von Bytes, die vom Ressourcen-Manager heruntergeladen werden.
+Ungefähre Anzahl von Bytes, die vom Ressourcen-Manager heruntergeladen wurden.
 
 </dd> <dt>
 
-**Numevicts**
+**NumEvicts**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -82,47 +82,47 @@ Anzahl der entfernten Objekte.
 
 </dd> <dt>
 
-**Numviderstellt**
+**NumVidCreates**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl von Objekten, die im Videospeicher erstellt wurden.
+Anzahl der im Videospeicher erstellten Objekte.
 
 </dd> <dt>
 
-**Lastpri**
+**LastPri**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Priorität des letzten Objekts, das entfernt wurde.
+Priorität des letzten entfernten Objekts.
 
 </dd> <dt>
 
-**Numused**
+**NumUsed**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl von Objekten, die auf das Gerät festgelegt sind.
+Anzahl der auf das Gerät festgelegten Objekte.
 
 </dd> <dt>
 
-**Numusedinvidmem**
+**NumUsedInVidMem**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Objekte, die auf das Gerät festgelegt sind, die bereits im Videospeicher vorhanden sind.
+Anzahl der auf das Gerät festgelegten Objekte, die sich bereits im Videospeicher befinden.
 
 </dd> <dt>
 
@@ -133,29 +133,29 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl von Objekten im Videospeicher.
+Anzahl der Objekte im Videospeicher.
 
 </dd> <dt>
 
-**Workingsetbytes**
+**WorkingSetBytes**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl von Bytes im Videospeicher.
+Anzahl der Bytes im Videospeicher.
 
 </dd> <dt>
 
-**Totalmanaged**
+**TotalManaged**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Gesamtanzahl verwalteter Objekte.
+Gesamtzahl der verwalteten Objekte.
 
 </dd> <dt>
 
@@ -166,7 +166,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Gesamtanzahl der Bytes von verwalteten Objekten.
+Gesamtanzahl der Bytes verwalteter Objekte.
 
 </dd> </dl>
 
@@ -176,11 +176,11 @@ Gesamtanzahl der Bytes von verwalteten Objekten.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

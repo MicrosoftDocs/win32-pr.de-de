@@ -1,9 +1,9 @@
 ---
-title: pack_matrix pragma-Direktive
-description: Pragma-Direktive, die die Verpackungs Ausrichtung für Matrizen angibt.
+title: pack_matrix Pragma-Direktive
+description: Pragma-Direktive, die die Komprimierungsausrichtung für Matrizen angibt.
 ms.assetid: e77dc007-d915-4d78-9fff-d44d4999e4da
 keywords:
-- pack_matrix pragma-Direktive HLSL
+- pack_matrix Pragmadirektive HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4bb5474702a1caba3f772002c34677601715caff
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 1c12129b6840197b21d1d259cc13bd07e75620176bdc797e6828c10d71e1c95d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118514783"
 ---
-# <a name="pack_matrix-pragma-directive"></a>packmatrix- \_ pragma-Direktive
+# <a name="pack_matrix-pragma-directive"></a>\_Paketmatrix-Pragmadirektive
 
-Pragma-Direktive, die die Verpackungs Ausrichtung für Matrizen angibt.
+Pragma-Direktive, die die Komprimierungsausrichtung für Matrizen angibt.
 
 
 
-| \#Pragma Pack- \_ Matrix ( *Ausrichtung* ) |
+| \#pragma pack \_ matrix( *alignment* ) |
 |--------------------------------------|
 
 
@@ -50,8 +50,8 @@ Pragma-Direktive, die die Verpackungs Ausrichtung für Matrizen angibt.
 </thead>
 <tbody>
 <tr class="odd">
-<td><span id="alignment"></span><span id="ALIGNMENT"></span><em>Richt</em><br/></td>
-<td>Ausrichtung, die für Matrizen festgelegt wird. Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen. <br/> 
+<td><span id="alignment"></span><span id="ALIGNMENT"></span><em>Ausrichtung</em><br/></td>
+<td>Ausrichtung, die für Matrizen festgelegt werden soll. Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen. <br/> 
 <table>
 <thead>
 <tr class="header">
@@ -62,11 +62,11 @@ Pragma-Direktive, die die Verpackungs Ausrichtung für Matrizen angibt.
 <tbody>
 <tr class="odd">
 <td>column_major</td>
-<td>Standard. Legt die Ausrichtung der Matrix Verpackung auf den Spalten Hauptwert fest.</td>
+<td>Standard. Legt die Matrix-Komprimierungsausrichtung auf die Spaltenhauptspalte fest.</td>
 </tr>
 <tr class="even">
 <td>row_major</td>
-<td>Legt die Ausrichtung der Matrix Verpackung auf den Hauptabschnitt der Zeile fest.</td>
+<td>Legt die Matrix-Komprimierungsausrichtung auf Zeilenmatrizen fest.</td>
 </tr>
 </tbody>
 </table>
@@ -82,7 +82,7 @@ Pragma-Direktive, die die Verpackungs Ausrichtung für Matrizen angibt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Ausrichtung der Matrix Verpackung auf Zeilen Hauptwert festgelegt.
+Im folgenden Beispiel wird die Matrixpackungsausrichtung auf Zeilenmatrizen festgelegt.
 
 
 ```

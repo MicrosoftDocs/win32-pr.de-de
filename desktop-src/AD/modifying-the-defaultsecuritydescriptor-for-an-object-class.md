@@ -1,30 +1,30 @@
 ---
 title: Ändern von defaultSecurityDescriptor für eine Objektklasse
-description: Im folgenden Codebeispiel wird die Standard Sicherheits Beschreibung für eine Objektklasse abgerufen, ein ACE der DACL hinzugefügt und dann die geänderte Sicherheits Beschreibung für die Objektklasse festgelegt.
+description: Das folgende Codebeispiel ruft die Standardsicherheitsbeschreibung für eine Objektklasse ab, fügt der DACL einen ACE hinzu und legt dann die geänderte Sicherheitsbeschreibung für die Objektklasse fest.
 ms.assetid: 38b4d129-f98f-43da-9bd9-1ae23c090657
 ms.tgt_platform: multiple
 keywords:
-- Sicherheits Deskriptoren AD, Ändern von defaultSecurityDescriptor für eine Objektklasse
-- Objekte AD, Ändern von defaultSecurityDescriptor für eine Objektklasse
-- Klasse AD, Ändern von defaultSecurityDescriptor für eine Objektklasse
+- Sicherheitsdeskriptoren AD , Ändern von defaultSecurityDescriptor für eine Objektklasse
+- Objekte AD , Ändern des defaultSecurityDescriptor für eine Objektklasse
+- AD-Klasse, ändern des defaultSecurityDescriptor für eine Objektklasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efc3bd441cb19c43ee36550520d18ee38726b05e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: be0d837530454e8e563718d3f5974be22e5b7d42dfa5e29b8424a51c7a5c993d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118186325"
 ---
 # <a name="modifying-the-defaultsecuritydescriptor-for-an-object-class"></a>Ändern von defaultSecurityDescriptor für eine Objektklasse
 
-Im folgenden Codebeispiel wird die Standard Sicherheits Beschreibung für eine Objektklasse abgerufen, ein ACE der DACL hinzugefügt und dann die geänderte Sicherheits Beschreibung für die Objektklasse festgelegt.
+Das folgende Codebeispiel ruft die Standardsicherheitsbeschreibung für eine Objektklasse ab, fügt der DACL einen ACE hinzu und legt dann die geänderte Sicherheitsbeschreibung für die Objektklasse fest.
 
-Beachten Sie, dass die Schema Änderung standardmäßig auf allen Windows 2000-Domänen Controllern deaktiviert ist. Um die Schema Änderung an einem bestimmten Domänen Controller zu aktivieren, legen Sie \_ unter dem folgenden Registrierungsschlüssel einen reg DWORD-Wert mit dem Namen "Schema Update zulässig" fest:
+Beachten Sie, dass die Schemaänderung standardmäßig auf allen Domänencontrollern Windows 2000 deaktiviert ist. Um die Schemaänderung an einem bestimmten Domänencontroller zu aktivieren, legen Sie unter dem folgenden Registrierungsschlüssel einen REG DWORD-Wert namens \_ "Schemaupdate zulässig" fest:
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **NTDS**- \\ **Parameter**
+**HKEY \_ LOCAL \_ MACHINE-System** \\  \\ **CurrentControlSet** \\ **Services** \\ **NTDS-Parameter** \\ 
 
-Fügen Sie diesen Wert hinzu, wenn er nicht bereits vorhanden ist. Legen Sie diesen Wert auf 1 fest, um die Schema Änderung zu aktivieren. Wenn dieser Wert 0 (null) ist, ist die Schema Änderung deaktiviert. Das MMC-Snap-in "Schema-Manager" stellt ein Kontrollkästchen bereit, mit dem dieser Registrierungsschlüssel ausgewählt oder gelöscht wird.
+Fügen Sie diesen Wert hinzu, wenn er noch nicht vorhanden ist. Legen Sie diesen Wert auf 1 fest, um die Schemaänderung zu aktivieren. Wenn dieser Wert 0 (null) ist, wird die Schemaänderung deaktiviert. Das MMC-Snap-In "Schema-Manager" stellt ein Kontrollkästchen zur Auswahl oder Zum Löschen dieses Registrierungsschlüssels zur Auswahl.
 
 
 ```C++
@@ -276,9 +276,9 @@ return hr;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

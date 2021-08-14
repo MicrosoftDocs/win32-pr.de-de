@@ -1,6 +1,6 @@
 ---
-description: Ruft die Zustände "automatisch ausblenden" und "Always on-Top" der Windows-Taskleiste ab.
-title: ABM_GETSTATE Meldung (shellapi. h)
+description: Ruft den Automatischhide- und Always On-Top-Zustände der Windows ab.
+title: ABM_GETSTATE (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 18e16752-16be-492b-a4fa-c951e18dc86c
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 71225cd8d93de09a07cb0049066e52be08c18a36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1a3618be793f4728dc6184b50b7a4e0e57c3ffd2c4d2cd8acde17372aa031f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118225229"
 ---
-# <a name="abm_getstate-message"></a>ABM \_ GetState-Nachricht
+# <a name="abm_getstate-message"></a>ABM \_ GETSTATE-Nachricht
 
-Ruft die Zustände "automatisch ausblenden" und "Always on-Top" der Windows-Taskleiste ab.
+Ruft den Automatischhide- und Always On-Top-Zustände der Windows ab.
 
 
 ```C++
@@ -38,13 +38,13 @@ uState = (UINT) SHAppBarMessage(ABM_GETSTATE, pabd);
 *pabd* 
 </dt> <dd>
 
-Zeiger auf eine [**appbardata**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) -Struktur. Beim Senden dieser Nachricht muss das **CBSIZE** -Element angegeben werden. alle anderen Member werden ignoriert.
+Zeiger auf eine [**APPBARDATA-Struktur.**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) Sie müssen das **cbSize-Mitglied beim** Senden dieser Nachricht angeben. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn sich die Taskleiste weder im automatisch ausblenden-noch bei Always on-Top-Zustand befindet. Andernfalls ist der Rückgabewert eine oder beide der folgenden:
+Gibt 0 (null) zurück, wenn sich die Taskleiste weder im Autohide- noch im Always On-Top-Zustand befindet. Andernfalls ist der Rückgabewert eine oder beide der folgenden Werte:
 
 
 
@@ -62,16 +62,16 @@ Gibt 0 (null) zurück, wenn sich die Taskleiste weder im automatisch ausblenden-
 <tbody>
 <tr class="odd">
 <td><dl> <dt><strong>ABS_ALWAYSONTOP</strong></dt> </dl></td>
-<td>Die Taskleiste befindet sich im Status "Always on-Top". <br/>
+<td>Die Taskleiste befindet sich im Always On-Top-Zustand. <br/>
 <blockquote>
 [!Note]<br />
-Ab Windows 7 wird ABS_ALWAYSONTOP nicht mehr zurückgegeben, da sich die Taskleiste immer in diesem Zustand befindet. Der ältere Code sollte aktualisiert werden, damit das Fehlen dieses Werts ignoriert wird. angenommen, der Rückgabewert bedeutet, dass sich die Taskleiste nicht im Status "Always on-Top" befindet.
+Ab Windows 7 wird ABS_ALWAYSONTOP nicht mehr zurückgegeben, da sich die Taskleiste immer in diesem Zustand befindet. Älterer Code sollte aktualisiert werden, um das Fehlen dieses Werts in zu ignorieren und nicht davon auszugehen, dass dieser Rückgabewert bedeutet, dass sich die Taskleiste nicht im Always On-Top-Zustand befindet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>ABS_AUTOHIDE</strong></dt> </dl></td>
-<td>Die Taskleiste befindet sich im Zustand "automatisch ausblenden".<br/></td>
+<td>Die Taskleiste befindet sich im Automatischhide-Zustand.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -80,15 +80,15 @@ Ab Windows 7 wird ABS_ALWAYSONTOP nicht mehr zurückgegeben, da sich die Tasklei
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

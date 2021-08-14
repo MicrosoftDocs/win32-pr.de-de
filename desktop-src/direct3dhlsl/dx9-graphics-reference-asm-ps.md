@@ -1,6 +1,6 @@
 ---
-title: Pixel-Shader
-description: Pixel-Shader
+title: Pixelshader
+description: Pixelshader
 ms.assetid: d5a6a9a6-5866-4b20-8529-97ce807ec5b6
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,33 +9,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f962038c8f0f6eb4bc836da5ad7b667d454fa5e9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
-ms.translationtype: HT
+ms.openlocfilehash: 9a6efea68568fa62705d463bbcdad367151d7e51ce820ff0a052b388724006dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104976152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118512840"
 ---
-# <a name="pixel-shaders"></a>Pixel-Shader
+# <a name="pixel-shaders"></a>Pixelshader
 
--   [PS \_ 1 \_ 1, PS \_ 1 \_ 2, PS \_ 1 \_ 3, PS \_ 1 \_ 4](dx9-graphics-reference-asm-ps-1-x.md)
--   [PS \_ 2 \_ 0](dx9-graphics-reference-asm-ps-2-0.md)
--   [PS \_ 2 \_ x](dx9-graphics-reference-asm-ps-2-x.md)
--   [PS \_ 3 \_ 0](dx9-graphics-reference-asm-ps-3-0.md)
+-   [ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 \_ 3, ps \_ 1 \_ 4](dx9-graphics-reference-asm-ps-1-x.md)
+-   [ps \_ 2 \_ 0](dx9-graphics-reference-asm-ps-2-0.md)
+-   [ps \_ 2 \_ x](dx9-graphics-reference-asm-ps-2-x.md)
+-   [ps \_ 3 \_ 0](dx9-graphics-reference-asm-ps-3-0.md)
 -   [Register](dx9-graphics-reference-asm-ps-registers.md)
 -   [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
--   [Pixel-Shader-Unterschiede](dx9-graphics-reference-asm-ps-differences.md)
+-   [Unterschiede beim Pixelshader](dx9-graphics-reference-asm-ps-differences.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[ASM-Shader-Referenz](dx9-graphics-reference-asm.md)
+[Asm-Shaderreferenz](dx9-graphics-reference-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

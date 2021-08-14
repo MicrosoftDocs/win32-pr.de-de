@@ -1,6 +1,6 @@
 ---
-title: ps_1_1, ps_1_2 ps_1_3, ps_1_4
-description: Der Pixelshader-Assembler besteht aus einer Reihe von Anweisungen, die auf Pixeldaten in Registern angewendet werden.
+title: ps_1_1, ps_1_2, ps_1_3, ps_1_4
+description: Der Pixel-Shader-Assembler besteht aus einer Reihe von Anweisungen, die mit Pixeldaten arbeiten, die in Registern enthalten sind.
 ms.assetid: 51b59f98-2fa8-4280-bc36-f4328a646168
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,48 +9,48 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 761721a4de64e8a9168bcfea49ce7adf567ea7ef
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3e10e4eee48490e7ae998e39d71265aef74339c1979112e2fcf0e47e5b07cda7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118512941"
 ---
-# <a name="ps_1_1-ps_1_2-ps_1_3-ps_1_4"></a>PS \_ 1 \_ 1, PS \_ 1 \_ 2, PS \_ 1 \_ 3, PS \_ 1 \_ 4
+# <a name="ps_1_1-ps_1_2-ps_1_3-ps_1_4"></a>ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 \_ 3, ps \_ 1 \_ 4
 
-Der Pixelshader-Assembler besteht aus einer Reihe von Anweisungen, die auf Pixeldaten in Registern angewendet werden. Vorgänge werden als Anweisungen ausgedrückt, die aus einem Operator und einem oder mehreren Operanden bestehen. In den Anweisungen werden Register zum Übertragen von Daten in den und aus dem Pixelshader Alu verwendet. Register können auch in einigen Anweisungen verwendet werden, um temporäre Ergebnisse zu speichern.
+Der Pixel-Shader-Assembler besteht aus einer Reihe von Anweisungen, die mit Pixeldaten arbeiten, die in Registern enthalten sind. Vorgänge werden als Anweisungen ausgedrückt, die aus einem Operator und mindestens einem Operanden bestehen. Anweisungen verwenden Register zum Übertragen von Daten in und aus der Pixel-Shader-ALU. Register können auch von einigen Anweisungen verwendet werden, um temporäre Ergebnisse zu enthalten.
 
 > [!Note]  
-> Die HLSL-Unterstützung für Pixel Shader 1. x ist veraltet.
+> HLSL-Unterstützung für Pixel-Shader 1.x ist veraltet.
 
- 
+ 
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-Es gibt zwei Hauptkategorien von pixelshaderanweisungen: arithmetische Anweisungen und Anweisungen zur Textur Adressierung. Arithmetische Anweisungen ändern von Farbdaten. Textur Adressierungs Vorgänge verarbeiten Texturkoordinaten Daten und in den meisten Fällen eine Textur. Pixelshaderanweisungen werden pro Pixel ausgeführt. Das heißt, Sie haben keine Kenntnis von anderen Pixeln in der Pipeline.
+Es gibt zwei Hauptkategorien von Anweisungen für Pixel-Shader: arithmetische Anweisungen und Anweisungen zur Textur adressierung. Arithmetische Anweisungen ändern Farbdaten. Textur adressierungsvorgänge verarbeiten Texturkoordinatendaten und in den meisten Fällen Stichproben einer Textur. Die Anweisungen für Den Pixel-Shader werden pro Pixel ausgeführt. Das heißt, sie haben keine Kenntnis über andere Pixel in der Pipeline.
 
-Textur Adressierungs Anweisungen verwenden jeweils einen Slot, aber arithmetische Anweisungen können kombiniert werden, um sowohl Farbkomponenten (RGB) als auch eine Alpha Komponenten Anweisung in einem einzelnen Slot zu aktivieren.
+Textur-Adressierungsanweisungen verbrauchen jeweils einen Slot, aber arithmetische Anweisungen können gekoppelt werden, um sowohl Farbkomponenten (RGB) als auch eine Alphakomponentenanweisung in einem einzelnen Slot zu aktivieren.
 
-[PS \_ 1 \_ 1, PS \_ 1 \_ 2, PS \_ 1 \_ 3, PS \_ 1 \_ 4 Anweisungen](dx9-graphics-reference-asm-ps-instructions-ps-1-x.md) enthalten eine Liste der verfügbaren Anweisungen.
+[ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 \_ 3, ps \_ 1 \_ 4 Instructions](dx9-graphics-reference-asm-ps-instructions-ps-1-x.md) enthält eine Liste der verfügbaren Anweisungen.
 
-Wenn die multisamplinggrad-Funktion aktiviert ist, werden Pixel-Shader nur einmal pro Pixel und nicht einmal für jedes Subpixel ausgeführt. Multisampling erhöht nur die Auflösung von Polygon Rändern sowie tiefen-und Schablonen Tests. Wenn z. b. 3X3-multisamplinggrad aktiviert ist und ein Dreieck, das rasterisiert wird, fünf der neun Subpixel für ein bestimmtes Pixel abdeckt, wird der Pixelshader einmal ausgeführt, und das gleiche Farbergebnis wird auf alle fünf Subpixel angewendet.
+Wenn Multisampling aktiviert ist, werden Pixel-Shader nur einmal pro Pixel ausgeführt, nicht einmal für jedes Subpixel. Multisampling erhöht nur die Auflösung von Polygonrändern sowie Tiefen- und Schablonentests. Wenn z. B. 3x3 Multisampling aktiviert ist und ein rasterfähiges Dreieck fünf der neun Subpixel für ein bestimmtes Pixel abdecken soll, wird der Pixelschattenr einmal ausgeführt, und das gleiche Farbergebnis wird auf alle fünf Subpixel angewendet.
 
 ## <a name="registers"></a>Register
 
-[PS \_ 1 \_ 1 \_ \_ PS \_ 1 \_ 2 \_ \_ PS \_ 1 \_ 3 \_ \_ PS \_ 1 \_ 4 Register](dx9-graphics-reference-asm-ps-registers-ps-1-x.md) listet die verschiedenen Register auf, die von Shader Alu verwendet werden.
+[ps \_ 1 \_ 1 \_ \_ ps \_ 1 \_ 2 ps \_ \_ \_ 1 \_ 3 ps \_ \_ \_ 1 \_ 4 Register listet](dx9-graphics-reference-asm-ps-registers-ps-1-x.md) die verschiedenen Register auf, die vom Shader ALU verwendet werden.
 
 ## <a name="modifiers"></a>Modifizierer
 
-[Modifiziererer für PS \_ 1 \_ X](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-1-x.md) können verwendet werden, um die Funktionalität einer Anweisung oder die aus einem Register gelesenen oder geschriebenen Daten zu ändern.
+[Modifizierer für ps \_ 1 \_ X](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-1-x.md) können verwendet werden, um die Funktionalität einer Anweisung oder die aus einem Register gelesenen oder in ein Register geschriebenen Daten zu ändern.
 
-Direct3D 9 erfordert Zwischenberechnungen, um mindestens eine 8-Bit-Genauigkeit für alle Oberflächen Formate beizubehalten. Es wird empfohlen, eine höhere Genauigkeit (12-Bit) für in-Stage-Mathematik und eine Sättigung von 8 Bits zwischen Textur Phasen zu erhalten. Es werden keine änderbaren Rundungs Modi oder Ausnahmen unterstützt. Multiplikation sollte mit einer Round-to-Next-Genauigkeit unterstützt werden, um den Genauigkeits Verlust minimal zu halten.
+Direct3D 9 erfordert Zwischenberechnungen, um für alle Oberflächenformate eine Genauigkeit von mindestens 8 Bit zu erhalten. Sowohl eine höhere Genauigkeit (12 Bit) für die In-Stage-Mathematik als auch eine Sättigung von 8 Bits zwischen Texturstufen werden empfohlen. Änderbare Rundungsmodi oder Ausnahmen werden nicht unterstützt. Multiplikation sollte mit einer Genauigkeit von Rund-zu-Nächste unterstützt werden, um den Genauigkeitsverlust auf ein Minimum zu beschränken.
 
 ## <a name="sampler-count"></a>Sampleranzahl
 
-Die Anzahl der verfügbaren Textur-Samplern ist:
+Die Anzahl der verfügbaren Texturs sampler ist:
 
--   Für PS \_ 1 \_ 0-PS \_ 1 \_ 3 beträgt der Höchstwert 4.
--   Für PS \_ 1 \_ 4 ist der Höchstwert 6.
+-   Für ps \_ 1 \_ 0 - ps \_ 1 \_ 3 beträgt der Höchstwert 4.
+-   Für ps \_ 1 \_ 4 beträgt der Höchstwert 6.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -59,9 +59,9 @@ Die Anzahl der verfügbaren Textur-Samplern ist:
 [Pixel-Shader](dx9-graphics-reference-asm-ps.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

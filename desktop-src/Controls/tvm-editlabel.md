@@ -1,9 +1,9 @@
 ---
-title: TVM_EDITLABEL Meldung (kommstrg. h)
-description: Beginnt die direkte Bearbeitung des Texts des angegebenen Elements und ersetzt den Text des Elements durch ein einzeilige Bearbeitungs Steuerelement, das den Text enthält.
+title: TVM_EDITLABEL Nachricht (Commctrl.h)
+description: Beginnt die direkte Bearbeitung des Texts des angegebenen Elements und ersetzt den Text des Elements durch ein einzeiliges Bearbeitungssteuerelement, das den Text enthält.
 ms.assetid: ae844cbf-fa43-4f91-90cc-688f44bf77a5
 keywords:
-- Windows-Steuerelemente für TVM_EDITLABEL Meldung
+- TVM_EDITLABEL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3608c3f959c45571d9bc085518b763cf505180ee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 87ba9f9d0af4d6afb3c454f5e5477ccd67728bdec7f378b0f0a04adc901ba322
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118408587"
 ---
-# <a name="tvm_editlabel-message"></a>TVM \_ EditLabel-Meldung
+# <a name="tvm_editlabel-message"></a>TVM \_ EDITLABEL-Nachricht
 
-Beginnt die direkte Bearbeitung des Texts des angegebenen Elements und ersetzt den Text des Elements durch ein einzeilige Bearbeitungs Steuerelement, das den Text enthält. Diese Meldung wählt das angegebene Element implizit aus und konzentriert dieses. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ EditLabel**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_editlabel) -Makros senden.
+Beginnt die direkte Bearbeitung des Texts des angegebenen Elements und ersetzt den Text des Elements durch ein einzeiliges Bearbeitungssteuerelement, das den Text enthält. Diese Meldung wählt implizit das angegebene Element aus und konzentriert es. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ EditLabel-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_editlabel) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -43,15 +43,15 @@ Handle für das zu bearbeitende Element.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das Bearbeitungs Steuerelement zurück, mit dem der Element Text bei erfolgreicher Bearbeitung bearbeitet wird, andernfalls **null** .
+Gibt das Handle für das Bearbeitungssteuerelement zurück, das verwendet wird, um den Elementtext bei Erfolg zu bearbeiten, oder **andernfalls NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung sendet einen [TVN \_ beginlabeledit](tvn-beginlabeledit.md) -Benachrichtigungs Code an das übergeordnete Element des Strukturansicht-Steuer Elements.
+Diese Nachricht sendet einen [TVN \_ BEGINLABELEDIT-Benachrichtigungscode](tvn-beginlabeledit.md) an das übergeordnete Element des Strukturansichtssteuerelements.
 
-Wenn der Benutzer die Bearbeitung abschließt oder abbricht, wird das Bearbeitungs Steuerelement zerstört und das Handle ist nicht mehr gültig. Sie können das Bearbeitungs Steuerelement Unterklassen, aber nicht zerstören.
+Wenn der Benutzer die Bearbeitung abschließt oder abbricht, wird das Bearbeitungssteuerelement zerstört, und das Handle ist nicht mehr gültig. Sie können das Bearbeitungssteuerelement untergliedern, aber nicht zerstören.
 
-Vor dem Senden dieser Nachricht an das-Steuerelement muss das-Steuerelement den Fokus haben. Der Fokus kann mithilfe der [**SetFocus**](/windows/desktop/api/winuser/nf-winuser-setfocus) -Funktion festgelegt werden.
+Das Steuerelement muss den Fokus haben, bevor Sie diese Nachricht an das Steuerelement senden. Der Fokus kann mithilfe der [**SetFocus-Funktion**](/windows/desktop/api/winuser/nf-winuser-setfocus) festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Vor dem Senden dieser Nachricht an das-Steuerelement muss das-Steuerelement den 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TVM \_ Editlabelw** (Unicode) und **TVM \_ editlabela** (ANSI)<br/>               |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TVM \_ EDITLABELW** (Unicode) und **TVM \_ EDITLABELA** (ANSI)<br/>               |
 
 
 

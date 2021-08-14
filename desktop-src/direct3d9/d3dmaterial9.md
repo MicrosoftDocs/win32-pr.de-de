@@ -1,7 +1,7 @@
 ---
 description: Gibt Materialeigenschaften an.
 ms.assetid: 943e6f6d-8091-462f-8c44-e0c27686934a
-title: D3DMATERIAL9-Struktur (D3D9Types. h)
+title: D3DMATERIAL9-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: b9c3ad93fe2cb80fe758e2e66da37cce9d4267ad
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 640fd4ce0110f47aa20a04d0df595b0ae8bf5052c229825dd93e1066150c6306
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118527580"
 ---
 # <a name="d3dmaterial9-structure"></a>D3DMATERIAL9-Struktur
 
@@ -50,7 +50,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Ein-Wert, der die diffuse Farbe des Materials angibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
+Wert, der die diffuse Farbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Ein-Wert, der die Ambiente-Farbe des Materials angibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
+Wert, der die Umgebungsfarbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
 
 </dd> <dt>
 
@@ -72,7 +72,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Ein-Wert, der die Glanz Farbe des Materials angibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
+Wert, der die Glanzfarbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
 
 </dd> <dt>
 
@@ -83,7 +83,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Ein-Wert, der die selbst leuchtendes Farbe des Materials angibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
+Wert, der die freizügige Farbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
 
 </dd> <dt>
 
@@ -94,15 +94,15 @@ Typ: **float**
 
 </dd> <dd>
 
-Ein Gleit Komma Wert, der die Schärfe von Glanzlichtern angibt. Je höher der Wert ist, desto stärker ist die Hervorhebung.
+Gleitkommawert, der die Schärfe von Glanzlichter angibt. Je höher der Wert, desto schärfer die Hervorhebung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Glanzlichter zu deaktivieren, legen Sie D3DRS \_ specularenable mithilfe von [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md)auf **false** fest. Dies ist die schnellste Option, da keine Glanzlichter berechnet werden.
+Um Glanzlichter zu deaktivieren, legen Sie D3DRS \_ SPECULARENABLE mithilfe von [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md)auf **FALSE** fest. Dies ist die schnellste Option, da keine Glanzlichter berechnet werden.
 
-Weitere Informationen zur Berechnung Glanzlichter mithilfe der Beleuchtungs-Engine finden Sie unter Glanz [Beleuchtung (Direct3D 9)](specular-lighting.md).
+Weitere Informationen zur Verwendung des Beleuchtungsmoduls zum Berechnen der Glanzlichter finden Sie unter [Specular Lighting (Direct3D 9) ( Glanzlicht (Direct3D 9)](specular-lighting.md)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,21 +110,21 @@ Weitere Informationen zur Berechnung Glanzlichter mithilfe der Beleuchtungs-Engi
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**IDirect3DDevice9:: getmaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getmaterial)
+[**IDirect3DDevice9::GetMaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getmaterial)
 </dt> <dt>
 
-[**IDirect3DDevice9:: setmaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial)
+[**IDirect3DDevice9::SetMaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial)
 </dt> </dl>
 
  

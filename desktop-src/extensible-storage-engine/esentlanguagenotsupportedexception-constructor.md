@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlanguagenotsupportedexception-Konstruktor'
-title: Esentlanguagenotsupportedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLanguageNotSupportedException-Konstruktor'
+title: EsentLanguageNotSupportedException-Konstruktor
 TOCTitle: 'EsentLanguageNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLanguageNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlanguagenotsupportedexception.esentlanguagenotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3301c00ca1f0534c83828e83e97bad5bc4e8d49f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5bb9b7fc229ed5f5cb759b0f4e83a36a0c802c3fc611c13dbd8511f913a9db8c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119275051"
 ---
-# <a name="esentlanguagenotsupportedexception-constructor"></a>Esentlanguagenotsupportedexception-Konstruktor
+# <a name="esentlanguagenotsupportedexception-constructor"></a>EsentLanguageNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlanguagenotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentLanguageNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLanguageNotSupportedException()
 public EsentLanguageNotSupportedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlanguagenotsupportedexception-Klasse](./esentlanguagenotsupportedexception-class.md)
+[EsentLanguageNotSupportedException-Klasse](./esentlanguagenotsupportedexception-class.md)
 
-[Esentlanguagenotsupportedexception-Elemente](./esentlanguagenotsupportedexception-members.md)
+[EsentLanguageNotSupportedException-Member](./esentlanguagenotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

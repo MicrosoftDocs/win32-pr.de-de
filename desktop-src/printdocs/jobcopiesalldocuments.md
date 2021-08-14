@@ -4,12 +4,12 @@ ms.assetid: 584a71cd-fc32-485e-a627-27be95c377a9
 title: JobCopiesAllDocuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05166715a5985c5ddee33fa6808d0fb6b150774b
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 597aea94f62ee7ce5b5663a301ce5a1783113baa6f40fcbdf465ec159d72fe61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118471693"
 ---
 # <a name="jobcopiesalldocuments"></a>JobCopiesAllDocuments
 

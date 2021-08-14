@@ -1,7 +1,7 @@
 ---
-description: Ruft alle einem Gerät zugeordneten Scan Profile ab.
+description: Ruft alle einem Gerät zugeordneten Scanprofile ab.
 ms.assetid: 2e509f01-9c5e-4d17-8888-b08b6b4b9fa9
-title: 'Iscanprofilemgr:: getprofilesfordeviceid-Methode (scanprofilemgr. h)'
+title: IScanProfileMgr::GetProfilesforDeviceID-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: 10a7d891a114fc36de3f91341febf1616a06ed22
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ca150d02aff2f84becf8b36aca87e2da24b2b83c9ccd85c0cf5a1c5ced0d664
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118209056"
 ---
-# <a name="iscanprofilemgrgetprofilesfordeviceid-method"></a>Iscanprofilemgr:: getprofilesfordeviceid-Methode
+# <a name="iscanprofilemgrgetprofilesfordeviceid-method"></a>IScanProfileMgr::GetProfilesforDeviceID-Methode
 
-Ruft alle einem Gerät zugeordneten Scan Profile ab.
+Ruft alle einem Gerät zugeordneten Scanprofile ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ HRESULT GetProfilesforDeviceID(
 
 <dl> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -50,19 +50,19 @@ Die ID des Geräts.
 
 </dd> <dt>
 
-*pulnumprofiles* \[ in, out\]
+*pulNumProfiles* \[ in, out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
-Bei Übergabe ein Zeiger auf die maximale Anzahl von Profilen, die zurückgegeben werden sollen. Wenn die Rückgabe zurückgegeben wird, ist dies ein Zeiger auf die Anzahl der zurückgegebenen Profile.
+Wenn sie übergeben wird, ein Zeiger auf die maximale Anzahl von Profilen, die zurückgegeben werden sollen. Wenn zurückgegeben, der ein Zeiger auf die Anzahl der zurückgegebenen Profile ist.
 
 </dd> <dt>
 
-_ppScanProfile * \[ out\]
+*ppScanProfile* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iscanprofile**](-wia-iscanprofile.md)\*\***
+Typ: **[ **IScanProfile**](-wia-iscanprofile.md)\*\***
 
 Die Adresse eines Zeigers auf ein Array von Profilen.
 
@@ -72,11 +72,11 @@ Die Adresse eines Zeigers auf ein Array von Profilen.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Gesamtanzahl der Profile, die dem Gerät zugeordnet sind, kleiner ist als der an *pulnumprofiles* weiter gegebene Wert, gibt *pulnumprofiles* diese Summe zurück. Andernfalls wird derselbe Wert zurückgegeben, der an ihn übermittelt wurde.
+Wenn die Gesamtzahl der profile, die dem Gerät zugeordnet sind, kleiner als der An *pulNumProfiles* übergebene Wert ist, gibt *pulNumProfiles* diese Summe zurück. Andernfalls wird der gleiche Wert zurückgegeben, der an ihn übergeben wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,21 +84,21 @@ Wenn die Gesamtanzahl der Profile, die dem Gerät zugeordnet sind, kleiner ist a
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

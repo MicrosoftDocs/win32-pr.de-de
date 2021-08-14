@@ -1,29 +1,29 @@
 ---
-description: Der Kerneltransaktions-Manager (KTM) ist ein Transaktions Verwaltungsdienst. Transaktionen werden als Kernel Objekte zur Verfügung gestellt, und es werden Transaktions Verwaltungsdienste für Systemkomponenten wie Transaktions-NTFS (TxF) bereitgestellt.
+description: Kernel Transaction Manager (KTM) ist ein Transaktionsverwaltungsdienst. Sie stellt Transaktionen als Kernelobjekte zur Verfügung und stellt Transaktionsverwaltungsdienste für Systemkomponenten wie Transactional NTFS (TxF) bereit.
 ms.assetid: 85a79698-a1ae-45a4-805e-25175034fa65
 title: Informationen zu KTM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd1c477c7f9ae54b86fcee03435310416b38ea8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a08aca70afbd44b1c23243239ec86839639ff46c3e16e698b65e96ff8a250b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118388919"
 ---
 # <a name="about-ktm"></a>Informationen zu KTM
 
-Der Kerneltransaktions-Manager (KTM) ist ein Transaktions Verwaltungsdienst. Transaktionen werden als Kernel Objekte zur Verfügung gestellt, und es werden Transaktions Verwaltungsdienste für Systemkomponenten wie [Transaktions-NTFS](/windows/desktop/FileIO/transactional-ntfs-portal) (TxF) bereitgestellt.
+Kernel Transaction Manager (KTM) ist ein Transaktionsverwaltungsdienst. Sie stellt Transaktionen als Kernelobjekte zur Verfügung und stellt Transaktionsverwaltungsdienste für Systemkomponenten wie [Transactional NTFS](/windows/desktop/FileIO/transactional-ntfs-portal) (TxF) bereit.
 
-In den folgenden Themen werden die Verwendungsmöglichkeiten und Funktionen von KTM beschrieben:
+In den folgenden Themen werden die Verwendungsmöglichkeiten und Features von KTM beschrieben:
 
 -   [Was ist eine Transaktion?](what-is-a-transaction.md)
 -   [Arbeiten mit Transaktionen](programming-model.md)
--   [Schreiben einer Ressourcen-Manager](writing-a-resource-manager.md)
--   [Interoperabilität mit anderen Windows-Features](interoperability-with-other-windows-features.md)
--   [Sicherheit und Zugriffsrechte für KTM](ktm-security-and-access-rights.md)
+-   [Schreiben eines Resource Manager](writing-a-resource-manager.md)
+-   [Interoperabilität mit anderen Windows Funktionen](interoperability-with-other-windows-features.md)
+-   [KTM-Sicherheit und -Zugriffsrechte](ktm-security-and-access-rights.md)
 
-KTM basiert auf der [gemeinsames Protokolldateisystem](/previous-versions/windows/desktop/clfs/common-log-file-system-portal) für seinen Vorgang. CLFS ist ein Protokollierungs System, das Transaktionen aktivieren kann.
+KTM verwendet die Gemeinsames Protokolldateisystem [für](/previous-versions/windows/desktop/clfs/common-log-file-system-portal) den Betrieb. CLFS ist ein Protokollierungssystem, das Transaktionen aktivieren kann.
 
  
 

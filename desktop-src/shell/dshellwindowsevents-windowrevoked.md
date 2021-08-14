@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shdocvw.dll
 ms.assetid: 92e8653f-7f41-4e0b-97e5-429fddc51951
-ms.openlocfilehash: 7ed78dcaa545b2321b04aff9ff2f4e711f93c992
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 571808962d65d25d4fb08f8d4cb57ffd1d51da67a7ba60def191edcf2fe19575
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459847"
 ---
 # <a name="dshellwindowseventswindowrevoked-method"></a>DShellWindowsEvents.WindowRevoked-Methode
 
@@ -62,12 +62,12 @@ Einem Fenster wird ein Cookie gewährt, wenn es als Shellfenster registriert ist
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Produkt<br/> | Internet Explorer 5<br/>                                                                                           |
+| Product (Produkt)<br/> | Internet Explorer 5<br/>                                                                                           |
 | DLL<br/>     | <dl> <dt>Shdocvw.dll (Version 5.00.2014.0216 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -77,7 +77,7 @@ Einem Fenster wird ein Cookie gewährt, wenn es als Shellfenster registriert ist
 [**WindowRegistered**](dshellwindowsevents-windowregistered.md)
 </dt> <dt>
 
-[**Revoke**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-revoke)
+[**Widerrufen**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-revoke)
 </dt> </dl>
 
  

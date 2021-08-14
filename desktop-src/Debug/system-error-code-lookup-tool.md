@@ -1,44 +1,44 @@
 ---
-description: Beschreibt, wie Sie mit dem Microsoft Error Lookup-Tool Texterklärungen von hexadezimalen Fehlercodes in Windows finden.
-title: Das Microsoft-Tool zur Fehlersuche
+description: Beschreibt, wie sie das Microsoft Error Lookup Tool verwenden, um Texterklärungen von hexadezimalen Fehlercodes in Windows.
+title: Das Microsoft-Fehlersuchtool
 ms.topic: article
 ms.date: 12/4/2019
-ms.openlocfilehash: e39b5623458fc176f5ecc81eae71212ba279945c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 534b2af92b8dc0e906bd033e8ce1f0fbd08ead0cda21406d1818a318356db613
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118405890"
 ---
-# <a name="the-microsoft-error-lookup-tool"></a>Das Microsoft-Tool zur Fehlersuche
+# <a name="the-microsoft-error-lookup-tool"></a>Das Microsoft-Fehlersuchtool
 
-Das Microsoft-Tool für die Fehlersuche zeigt den Meldungs Text an, der einem hexadezimalen Statuscode (oder anderem Code) zugeordnet ist. Dieser Text wird in verschiedenen Microsoft-Quell Code Headern definiert, wie z. b. "Winerror. h", "Setupapi. h" usw.
+Das Microsoft Error Lookup Tool zeigt den Meldungstext an, der einem hexadezimalen Statuscode (oder einem anderen Code) zugeordnet ist. Dieser Text wird in verschiedenen Microsoft-Quellcodeheaderdateien definiert, z.B. Winerror.h, Setupapi.h und so weiter.
 
-Das Tool wird von Microsoft digital signiert. Im folgenden finden Sie die SHA256-Informationen zum Herunterladen von Dateien:  
+Das Tool wird von Microsoft digital signiert. Im Folgenden finden Sie die SHA256-Informationen für den Dateidownload:  
 
 |Algorithmus |Hash |
 | --- | --- |
-|SHA256 |88739ec82ba16a0b4a3c83c1dd2f ca6336ad8e2a1e5b1238c085b1e86ab8834a |
+|SHA256 |88739EC82BA16A0B4A3C83C1DD2FCA6336AD8E2A1E5F1238C085B1E86AB8834A |
 
 > [!NOTE]
-> Geschäftsumgebungen können einschränken, welche Dateien ausgeführt werden können und von wo aus. Bevor Sie dieses Tool herunterladen und ausführen, überprüfen Sie die folgenden Details:
-> - Müssen Sie über eine Berechtigung oder eine Sicherheits Ausnahme verfügen, damit das Tool heruntergeladen oder ausgeführt werden kann?
-> - Können Sie dieses Tool auf Ihrem Computer speichern und ausführen (z. b. im Ordner "Dokumente")? Oder müssen Sie das Tool auf einem spezialisierten Computer, z. b. einem zentralen Dateiserver, speichern und ausführen?
+> Geschäftsumgebungen können einschränken, welche Dateien von wo aus ausgeführt werden können. Bevor Sie dieses Tool herunterladen und ausführen, überprüfen Sie die folgenden Details:
+> - Benötigen Sie eine Berechtigung oder eine Sicherheitsausnahme, um das Tool herunterladen oder ausführen zu können?
+> - Können Sie dieses Tool auf Ihrem Computer speichern und ausführen (z. B. im Ordner Dokumente)? Oder müssen Sie das Tool auf einem spezialisierten Computer wie einem zentralen Dateiserver speichern und ausführen?
 
 ## <a name="usage"></a>Verbrauch
 
-1. Wählen Sie [diesen Link](https://download.microsoft.com/download/4/3/2/432140e8-fb6c-4145-8192-25242838c542/Err_6.4.5/Err_6.4.5.exe)aus, um das Tool herunterzuladen.
-1. Wenn Sie in Schritt 1 keinen Speicherort angegeben haben, navigieren Sie zu Ihrem Downloadordner, und kopieren oder verschieben Sie die heruntergeladene Datei (Err_6.4.5.exe) in den Ordner, in dem Sie das Tool speichern. Sie müssen die Datei nicht erweitern oder installieren.
+1. Laden Sie das Tool herunter, indem Sie [diesen Link auswählen.](https://download.microsoft.com/download/4/3/2/432140e8-fb6c-4145-8192-25242838c542/Err_6.4.5/Err_6.4.5.exe)
+1. Wenn Sie in Schritt 1 keinen Speicherort angegeben haben, wechseln Sie zu Ihrem Downloadordner, und kopieren oder verschieben Sie die heruntergeladene Datei (Err_6.4.5.exe) in den Ordner, in dem Sie das Tool speichern. Sie müssen die Datei nicht erweitern oder installieren.
    > [!NOTE]
-   > Wenn Sie die Datei in einen Ordner kopieren oder verschieben, der in der **path** -Umgebungsvariable Ihres Betriebssystems aufgeführt ist, funktioniert Sie an jeder Eingabeaufforderung.
+   > Wenn Sie die Datei kopieren oder in einen Ordner verschieben, der in der Path-Umgebungsvariablen Ihres Betriebssystems aufgeführt ist, funktioniert sie an jeder Eingabeaufforderung. 
 
-1. Öffnen Sie ein Eingabeaufforderungsfenster. Ändern Sie ggf. das Verzeichnis in den Speicherort des Tools für die Fehlersuche.
+1. Öffnen Sie ein Eingabeaufforderungsfenster. Ändern Sie bei Bedarf das Verzeichnis in den Speicherort des Fehlersuchetools.
 1. Führen Sie den folgenden Befehl aus:
    ```cmd
    Err_6.4.5.exe <error code>
    ```
    > [!NOTE]  
-   > In diesem Befehl \<*error code*> stellt den Hexadezimal Code dar, den Sie suchen möchten.
+   > In diesem Befehl stellt \<*error code*> den hexadezimalen Code dar, den Sie suchen möchten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -75,4 +75,4 @@ C:\Tools>Err_6.4.5.exe 7b
 
 ## <a name="more-information"></a>Weitere Informationen
 
-Beachten Sie, dass es sich hierbei um ein "Point-in-Time"-Tool handelt. Das Microsoft Error Lookup-Tool decodiert die meisten Microsoft-Fehlercodes ab dem Zeitpunkt, an dem das Tool kompiliert wurde. Wenn neue Versionen von Windows neue Ereignis-und Fehlercodes hinzufügen, müssen Sie möglicherweise eine neue Version des Tools für die Fehlersuche herunterladen. Überprüfen Sie das Microsoft Download Center auf eine neue Version, oder sehen Sie sich die [Fehler Codes](system-error-codes.md)an.
+Beachten Sie, dass es sich dabei um ein "Point-in-Time"-Tool handelt. Das Microsoft Error Lookup Tool decodiert die meisten Microsoft-Fehlercodes ab dem Datum, an dem das Tool kompiliert wurde. Wenn neue Releases von Windows neue Ereignis- und Fehlercodes hinzufügen, müssen Sie möglicherweise eine neue Version des Fehlersuchetools herunterladen. Überprüfen Sie das Microsoft Download Center auf eine neue Version, oder lesen Sie [Fehlercodes](system-error-codes.md).

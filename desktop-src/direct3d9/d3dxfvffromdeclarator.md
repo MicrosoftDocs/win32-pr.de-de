@@ -1,7 +1,7 @@
 ---
-description: Gibt einen FVF-Code (Flexible Vertex-Format) aus einem Deklarator zurück.
+description: Gibt einen FVF-Code (Flexible Vertex Format) von einem Deklarator zurück.
 ms.assetid: 4f30087e-0042-44bc-a7a5-5386b18fcad7
-title: D3DXFVFFromDeclarator-Funktion (D3DX9Mesh. h)
+title: D3DXFVFFromDeclarator-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: fdaf6f80340a08562ed644ee44ac92c42874d149
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5f9bad9968a52fb6c3b11de96936f48e432bd038e172318cb52f21fad4b08ae2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118525647"
 ---
 # <a name="d3dxfvffromdeclarator-function"></a>D3DXFVFFromDeclarator-Funktion
 
-Gibt einen FVF-Code (Flexible Vertex-Format) aus einem Deklarator zurück.
+Gibt einen FVF-Code (Flexible Vertex Format) von einem Deklarator zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT D3DXFVFFromDeclarator(
 
 <dl> <dt>
 
-*pdeclaration* \[ in\]
+*pDeclaration* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**LPD3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**LPD3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen, das den Code für den Code von Code beschreibt.
+Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das den FVF-Code beschreibt.
 
 </dd> <dt>
 
-*pfvf* \[ vorgenommen\]
+*pFVF* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf einen DWORD-Wert, der die zurückgegebene Kombination von [D3DFVF](d3dfvf.md) darstellt, die das vom Deklarator zurückgegebene Scheitelpunkt Format beschreibt.
+Zeiger auf einen DWORD-Wert, der die zurückgegebene Kombination von [D3DFVF](d3dfvf.md) darstellt, die das vom Deklarator zurückgegebene Scheitelpunktformat beschreibt.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Ein Zeiger auf einen DWORD-Wert, der die zurückgegebene Kombination von [D3DFVF
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert lauten: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann für alle Deklaratoren, die nicht direkt einer FVF zugeordnet sind, nicht ausgeführt werden.
+Diese Funktion schlägt für jeden Deklarator fehl, der nicht direkt einer FVF zugeordnet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,16 +75,16 @@ Diese Funktion kann für alle Deklaratoren, die nicht direkt einer FVF zugeordne
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXDeclaratorFromFVF**](d3dxdeclaratorfromfvf.md)

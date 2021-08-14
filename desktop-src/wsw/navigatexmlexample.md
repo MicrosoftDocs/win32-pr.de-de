@@ -1,6 +1,6 @@
 ---
 title: NavigateXmlExample
-description: Überprüfen Sie ein XML-Navigationsbeispiel, das die Windows Web Services-API (WWSAPI) verwendet. In diesem Beispiel wird XML in einen XML-Puffer geschrieben und anschließend zurückgelesen.
+description: Überprüfen Sie ein XML-Navigationsbeispiel, das Windows Web Services-API (WWSAPI) verwendet. In diesem Beispiel wird XML in einen XML-Puffer geschrieben und anschließend zurückgelesen.
 ms.assetid: b37da839-de05-4fb6-b1aa-b00801e88e47
 keywords:
 - NavigateXmlExample-Webdienste für Windows
@@ -8,12 +8,12 @@ keywords:
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d056a7931ed469bdb84c3b27cc947e463db4cad5
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 6315b163af28fd754bfb7d1dfdc8aa44c14058a7191002122e708571e26e4d82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118192886"
 ---
 # <a name="navigatexmlexample"></a>NavigateXmlExample
 

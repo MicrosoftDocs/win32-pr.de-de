@@ -4,12 +4,12 @@ description: Identifiziert die \_ PKEY \_ QuickAccessToolbarDock-Eigenschaft der
 ms.assetid: 77f7b0a8-f276-4501-9d53-fb5a3185edcc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e28ec2e153755fd243bf78ee389cad40485a348
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 2b9011cceb9b2ec96680ea3badd0ad40ae6121c14a70e065cfbfff5f5fe8e1f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118201378"
 ---
 # <a name="ui_pkey_quickaccesstoolbardock"></a>UI \_ PKEY \_ QuickAccessToolbarDock
 

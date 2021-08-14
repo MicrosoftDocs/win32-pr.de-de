@@ -1,50 +1,50 @@
 ---
-title: RPC-Zeichen folgen im Format
-description: RPC-Format Zeichenfolgen (Remote Prozedur Aufruf).
+title: RPC-NDR-Formatzeichenfolgen
+description: RPC-Formatzeichenfolgen (Remote Procedure Call, Remoteprozeduraufruf).
 ms.assetid: 9c83a039-49d3-491d-8110-29d1548730de
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf0569a913d6c5a4b19b342cc288d6a8682dfc4a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3d0a481e2c992f3fd4dda2d5552fbbabb7e9b01e6eb639a092e25ba9a26bd59a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118926304"
 ---
-# <a name="rpc-ndr-format-strings"></a>RPC-Zeichen folgen im Format
+# <a name="rpc-ndr-format-strings"></a>RPC-NDR-Formatzeichenfolgen
 
 ## <a name="ndr-engine-32-bit-interpreter"></a>NDR-Engine: 32-Bit-Interpreter
 
-In diesem Dokument werden die Format Zeichenfolgen-Deskriptoren (manchmal auch als "Mops" bezeichnet) für die 32-Bit-NDR-Engine beschrieben. In diesem Abschnitt werden die Änderungen beschrieben, die mit der Entwicklung des [**– Oi**](/windows/desktop/Midl/-oi) -interpreterers zur **– OIF** -interpreterebene verknüpft sind, sowie Ergänzungen, die sich auf Pipes und asynchrone Unterstützung beziehen.
+In diesem Dokument werden die Formatzeichenfolgendeskriptoren für die 32-Bit-NDR-Engine beschrieben, die manchmal auch als MOPs bezeichnet werden. In diesem Abschnitt werden Änderungen im Zusammenhang mit der Entwicklung vom [**–Oi-Interpreter**](/windows/desktop/Midl/-oi) zur **–Oif-Interpreterebene** sowie Ergänzungen im Zusammenhang mit Pipes und asynchroner Unterstützung beschrieben.
 
-In diesem Dokument wird die aktuelle Microsoft Interface Definition Language-Technologie (Mittel l) aus der Engine-Perspektive und die aktuelle-NDR-Engine beschrieben.
+In diesem Dokument werden die Microsoft Interface Definition Language (MIDL)-Technologie aus Der Engine-Perspektive und die aktuelle NDR-Engine beschrieben.
 
 ## <a name="overview"></a>Übersicht
 
-Die NDR-Engine ist das marshallingmodul der Remote Prozedur Aufruf (RPC)-und DCOM-Komponenten. Sie behandelt alle stubbezogenen Probleme eines Remote Aufrufes. Als Prozess wird das NDR-Marshalling durch den C-Code von mit mittlerer l generierten Stub, von einem Mittelwert-JIT-typgenerator oder durch von anderen Tools generierte Stub-und manuell geschriebene Stub-Vorgänge gesteuert. Die NDR-Engine steuert wiederum die zugrunde liegende Laufzeit (DCOM oder RPC), die mit bestimmten Transporten kommuniziert.
+Die NDR-Engine ist die Marshalling-Engine der RPC- (Remote Procedure Call) und DCOM-Komponenten. Er behandelt alle Stub-bezogenen Probleme eines Remoteaufrufs. Als Prozess wird das NDR-Marshalling durch den C-Code aus MIDL-generierten Stubs, einem MIDL JIT-Typgenerator oder durch Stubs gesteuert, die von anderen Tools generiert oder manuell geschrieben wurden. Die NDR-Engine steuert wiederum die zugrunde liegende Laufzeit (DCOM oder RPC), die mit bestimmten Transporten kommuniziert.
 
-Das ursprüngliche Ziel des Entwurfs war, ein Tool für ein effektives Marshalling für beliebige Daten bereitzustellen, basierend auf Informationen, die vom Mittelwert Compiler bereitgestellt werden. Die in diesem Dokument beschriebenen Format Zeichenfolgen – und tatsächlich alle vom Compiler generierten Informationen für die Nutzung der NDR-Engine – wurden stets als interne Schnittstelle zwischen dem Compiler und der Engine betrachtet. Ebenso sind Schnittstellen, die für die Engine zur Behandlung von Lauf Zeitproblemen verfügbar sind, größtenteils intern (einige Ausnahmen sind auf der RPC-Lauf Zeit Seite vorhanden, und einige der von der Engine verwendeten DCOM-Schnittstellen sind extern).
+Das ursprüngliche Ziel des Entwurfs war es, ein Tool für effektives Marshalling für beliebige Daten basierend auf den vom MIDL-Compiler bereitgestellten Informationen zu bieten. Die in diesem Dokument beschriebenen Formatzeichenfolgen – und tatsächlich alle vom Compiler für die NDR-Engine-Verbrauch generierten Informationen – wurden immer als interne Schnittstelle zwischen dem Compiler und der Engine betrachtet. Ebenso sind schnittstellen, die der Engine zur Behandlung von Laufzeitproblemen zur Verfügung stehen, größtenteils intern (einige Ausnahmen sind auf der RPC-Laufzeitseite vorhanden, und einige von der Engine verwendete DCOM-Schnittstellen sind extern).
 
-Zwei typische Ansätze für das Mars Hallen sind immer Inline-und datengesteuerte (interpretierte) Technologien. Die Mittel l unterstützt sowohl über die [**– OS**](/windows/desktop/Midl/-os) -und [**– Oi \***](/windows/desktop/Midl/-oi) -Switches in den von C generierten Stubs. Außerdem kann die Mittel l die TLB-Bibliotheken generieren, die vom oleautomation-Paket verwendet werden. Dementsprechend besteht eine Perspektive der internale der Engine darin, dass Sie aus zwei Teilen besteht.
+Zwei typische Ansätze für das Marshalling waren immer Inline- und datengesteuerte (interpretierte) Technologien. MIDL unterstützt sowohl über die [**Schalter "-Os"**](/windows/desktop/Midl/-os) als auch [**"-Oi" \***](/windows/desktop/Midl/-oi) in den von C generierten Stubs. Darüber hinaus kann MIDL die vom oleautomation-Paket verwendeten TLB-Bibliotheken generieren. Entsprechend besteht eine Perspektive der Internen der Engine darin, dass sie aus zwei Teilen besteht.
 
-Der erste besteht aus einem Satz von Routinen, die die Größe, das Marshalling usw. verarbeiten, entsprechend den typischen Datentyp Objekten, wie z. b. einer Struktur oder einem Array. Diese Routinen sind für die Leistung optimiert. so versuchen Sie z. b. in der Regel, Daten zu blockieren, soweit dies möglich ist. Dieser Teil wird häufig als Kern-NDR-Engine bezeichnet.
+Die erste ist eine Reihe von Routinen, die Größen- und Marshallingaufgaben verarbeiten, die typischen Datentypobjekten wie einer Struktur oder einem Array entspricht. Diese Routinen sind für die Leistung optimiert. Beispielsweise versuchen sie in der Regel, das Kopieren von Daten nach Möglichkeit zu blockieren. Dieser Teil wird häufig als NDR-Kern-Engine bezeichnet.
 
-Der zweite Teil besteht aus einem Interpreter und den zugehörigen Teilen. Der Interpreter verwendet Routinen aus der Kern-NDR-Engine, wie aus einer internen Bibliothek, um einen Remote-Befehl auszuführen, bei dem alle zugehörigen Argumente gemarshallt und nach Bedarf gemarshallt werden.
+Der zweite Teil besteht aus einem Interpreter und den zugehörigen Teilen. Der Interpreter verwendet Routinen aus der NDR-Kern-Engine wie aus einer internen Bibliothek, um einen Remoteaufruf auszuführen, bei dem alle Argumente gemarshallt und nicht gemarshallt werden.
 
-Die Core-NDR-Engine wird auf ähnliche Weise verwendet, unabhängig davon, ob Sie von Inline-Stubdaten oder vom Interpreter verwendet wird. Alle Kern-Engine-Routinen hängen von dem Zustand ab, der von einer Stub-Nachrichtenstruktur weitergegeben wurde. Die Struktur wird vom Inline-Stub oder vom Interpreter ordnungsgemäß eingerichtet. Im Laufe der Jahre wurde die Kern-Engine in einem anderen Kontext verwendet. Derzeit ist der Interpreter tatsächlich eine Reihe von verschiedenen interpreterschleifen. Diese stehen im Zusammenhang mit den alten und neuen ([**– Oi**](/windows/desktop/Midl/-oi) / **– OIF**)-Interpretern sowie mit Schleifen im Zusammenhang mit der Datenserialisierung (Picking), der RPC-asynchronen Unterstützung und der Unterstützung für asynchrone DCOM-Unterstützung (RPC und DCOM haben unterschiedliche asynchrone Programmier Modelle)
+Die NDR-Kern-Engine wird auf ähnliche Weise verwendet, unabhängig davon, ob sie von Inlinestubs oder vom Interpreter verwendet wird. Alle Kern-Engine-Routinen hängen vom Zustand ab, der von einer Stubnachrichtenstruktur übergeben wird. Die -Struktur wird entsprechend durch den Inlinestub oder den Interpreter eingerichtet. Im Laufe der Jahre wurde die Kern-Engine in einem anderen Kontext verwendet. Derzeit besteht der Interpreter tatsächlich aus mehreren unterschiedlichen Interpreterschleifen. Diese stehen im Zusammenhang mit den alten und neuen Interpretern [**(–Oi**](/windows/desktop/Midl/-oi) im Vergleich zu **–Oif)** sowie mit Schleifen im Zusammenhang mit datenserialisierung (Pickling), rpc-asynchroner Unterstützung und Asynchroner DCOM-Unterstützung (RPC und DCOM verfügen über unterschiedliche asynchrone Programmiermodelle).
 
-Neben dem Hinzufügen neuer Features ist ein wichtiger Aspekt der Weiterentwicklung der NDR-Engine eine allgemeine Umstellung des Ansatzes auf Interpretern. Die Version 1.1 von NDR begann im Rahmen eines neuen Mittel-2,0-Ansatzes für das Mars Hallen, wobei die Inline-stubpunkte für Leistungsaspekte bevorzugt werden. Mit der neuesten Version von NDR ist [**– OIF**](/windows/desktop/Midl/-oi) zum häufigsten verwendeten Modus des Compilers geworden, fast zum Ausschluss von Inline-stubstuf.
+Abgesehen von neuen Features ist ein wichtiger Aspekt der Entwicklung der NDR-Engine eine allgemeine Verschiebung des Interpreteransatzes. NDR Version 1.1 begann im Rahmen eines neuen MIDL 2.0-Ansatzes für das Marshalling, bei dem die Inlinestubs aus Leistungsaspekten bevorzugt wurden. Mit der neuesten Version von NDR ist [**–Oif**](/windows/desktop/Midl/-oi) zum am häufigsten verwendeten Modus des Compilers geworden, fast bis zum Ausschluss von Inlinestubs.
 
-Die Format Zeichenfolgen Deskriptoren der RPC-Engine für die RPC-Engine werden in den folgenden Themen ausführlicher beschrieben:
+Formatzeichenfolgendeskriptoren der RPC-NDR-Engine werden in den folgenden Themen ausführlicher beschrieben:
 
 -   [Formatzeichenfolgen](format-strings.md)
--   [Prozedur Format Zeichenfolgen](procedure-format-strings.md)
--   [Prozedur Header Deskriptor](procedure-header-descriptor.md)
--   [Hand](handles.md)
+-   [Prozedurformatzeichenfolgen](procedure-format-strings.md)
+-   [Prozedurheaderdeskriptor](procedure-header-descriptor.md)
+-   [Ziehpunkte](handles.md)
 -   [Der Header](the-header.md)
--   [Parameter Deskriptoren](parameter-descriptors.md)
+-   [Parameterdeskriptoren](parameter-descriptors.md)
 -   [Typformatzeichenfolgen](type-format-strings.md)
 
- 
+ 
 
- 
+ 

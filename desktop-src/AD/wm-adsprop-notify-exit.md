@@ -1,10 +1,10 @@
 ---
-title: WM_ADSPROP_NOTIFY_EXIT Meldung (adsprop. h)
-description: Eine Active Directory-Eigenschafts Blatt Erweiterung sendet die WM-Benachrichtigung zum \_ \_ Benachrichtigen der \_ Nachricht an das Benachrichtigungs Objekt, wenn das Benachrichtigungs Objekt nicht mehr benötigt wird.
+title: WM_ADSPROP_NOTIFY_EXIT-Nachricht (Adsprop.h)
+description: Eine Active Directory-Eigenschaftenblatterweiterung sendet die WM \_ ADSPROP \_ NOTIFY \_ EXIT-Nachricht an das Benachrichtigungsobjekt, wenn das Benachrichtigungsobjekt nicht mehr benötigt wird.
 ms.assetid: b0f58c73-8953-412d-b801-bf34967fe0b4
 ms.tgt_platform: multiple
 keywords:
-- WM_ADSPROP_NOTIFY_EXIT Meldung Active Directory
+- WM_ADSPROP_NOTIFY_EXIT-Meldung Active Directory
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 32d74ef4b7dfa525cfb77a6d89499837cbfac8f9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e144bb0b24112cabe1a806d4c746aac07708443665c0f457df8756be36d80b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118181964"
 ---
-# <a name="wm_adsprop_notify_exit-message"></a>WM \_ adsprop \_ Notify \_ Exit Message
+# <a name="wm_adsprop_notify_exit-message"></a>WM \_ ADSPROP \_ NOTIFY \_ EXIT-Nachricht
 
-Eine Active Directory-Eigenschafts Blatt Erweiterung sendet die WM-Benachrichtigung zum **\_ \_ Benachrichtigen \_** der Nachricht an das Benachrichtigungs Objekt, wenn das Benachrichtigungs Objekt nicht mehr benötigt wird.
+Eine Active Directory-Eigenschaftenblatterweiterung sendet die **WM \_ ADSPROP \_ NOTIFY \_ EXIT-Nachricht** an das Benachrichtigungsobjekt, wenn das Benachrichtigungsobjekt nicht mehr benötigt wird.
 
 
 ```C++
@@ -41,24 +41,24 @@ WM_ADSPROP_NOTIFY_EXIT
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Das Handle des Benachrichtigungs Objekts. Rufen Sie zum Abrufen dieses Handles [**adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)auf.
+Das Handle des Benachrichtigungsobjekts. Rufen Sie [**ADsPropCreateNotifyObj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)auf, um dieses Handle abzurufen.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
@@ -66,9 +66,9 @@ Nicht verwendet.
 
 Diese Nachricht weist keinen Rückgabewert auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Benachrichtigungs Objekt wird als Antwort auf diese Nachricht gelöscht. Wenn diese Nachricht gesendet wurde, sollte das Benachrichtigungs Objekt Handle als ungültig betrachtet werden.
+Das Benachrichtigungsobjekt löscht sich selbst als Antwort auf diese Meldung. Wenn diese Nachricht gesendet wurde, sollte das Handle des Benachrichtigungsobjekts als ungültig betrachtet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,15 +78,15 @@ Das Benachrichtigungs Objekt wird als Antwort auf diese Nachricht gelöscht. Wen
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Adsprop. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Adsprop.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
+[**ADsPropCreateNotifyObj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
 </dt> <dt>
 
 [Nachrichten in Active Directory Domain Services](messages-in-active-directory-domain-services.md)

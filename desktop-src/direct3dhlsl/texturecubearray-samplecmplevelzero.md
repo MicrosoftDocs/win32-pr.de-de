@@ -1,9 +1,9 @@
 ---
-title: 'Texturecubearray:: texturecubearray samplecmplevelzero-Methoden'
-description: 'Stichproben eine Textur nur auf MipMap-Ebene 0, wobei ein Vergleichswert zum ablehnen von Beispielen verwendet wird. | Texturecubearray:: texturecubearray samplecmplevelzero-Methoden'
+title: TextureCubeArray::TextureCubeArray SampleCmpLevelZero-Methoden
+description: Probieren Sie eine Textur nur auf Mipmapebene 0 aus, und verwenden Sie einen Vergleichswert, um Stichproben abzulehnen. | TextureCubeArray::TextureCubeArray SampleCmpLevelZero-Methoden
 ms.assetid: 85A7DAC6-25E3-4BB5-BE80-F0A32FCBEF80
 keywords:
-- Samplecmplevelzero-Methoden HLSL
+- SampleCmpLevelZero-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 6831b06c92dd1dbeda296409f31980adc699ecee
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b1211d83391d729e16b1d4549657a54447997ecba6566271871f6e4aff6a3b32
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119276170"
 ---
-# <a name="texturecubearraysamplecmplevelzero-methods"></a>Texturecubearray:: samplecmplevelzero-Methoden
+# <a name="texturecubearraysamplecmplevelzero-methods"></a>TextureCubeArray::SampleCmpLevelZero-Methoden
 
-Stichproben eine Textur nur auf MipMap-Ebene 0, wobei ein Vergleichswert zum ablehnen von Beispielen verwendet wird.
+Probieren Sie eine Textur nur auf Mipmapebene 0 aus, und verwenden Sie einen Vergleichswert, um Stichproben abzulehnen.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Stichproben eine Textur nur auf MipMap-Ebene 0, wobei ein Vergleichswert zum abl
 
 | Methode                                                                                              | BESCHREIBUNG                                                                                                                            |
 |:----------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| [**Samplecmplevelzero (S, float, float)**](dx-graphics-hlsl-to-samplecmplevelzero.md)                 | Vergleicht nur eine Textur auf MipMap-Ebene 0 und vergleicht das Ergebnis mit einem Vergleichswert.<br/>                                     |
-| [**Samplecmplevelzero (S, float, float, uint)**](tcubearray-samplecmplevelzero-s-float-float-uint-.md) | Vergleicht nur eine Textur auf MipMap-Ebene 0 und vergleicht das Ergebnis mit einem Vergleichswert. Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleCmpLevelZero(S,float,float)**](dx-graphics-hlsl-to-samplecmplevelzero.md)                 | Probieren Sie eine Textur nur auf Mipmapebene 0 aus und vergleicht das Ergebnis mit einem Vergleichswert.<br/>                                     |
+| [**SampleCmpLevelZero(S,float,float,uint)**](tcubearray-samplecmplevelzero-s-float-float-uint-.md) | Probieren Sie eine Textur nur auf Mipmapebene 0 aus und vergleicht das Ergebnis mit einem Vergleichswert. Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
@@ -38,10 +38,10 @@ Stichproben eine Textur nur auf MipMap-Ebene 0, wobei ein Vergleichswert zum abl
 
 <dl> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

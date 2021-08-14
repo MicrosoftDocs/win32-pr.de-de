@@ -1,32 +1,32 @@
 ---
-title: Client Entwicklung mithilfe von Kontext Handles
-description: Die einzige Verwendung eines Client Programms für ein Kontext Handle besteht darin, dass jedes Mal, wenn der Client einen Remote Prozedur Aufruf durchführt, an den Server übergeben wird.
+title: Cliententwicklung mitHilfe von Kontexthandles
+description: Die einzige Verwendung eines Clientprogramms für ein Kontexthand handle besteht im Übergeben an den Server bei jedem Aufruf einer Remoteprozedur durch den Client.
 ms.assetid: fcbdfb1e-4f1e-4d22-9a3e-cf5a29d300d0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7c7d2dfca901085c743b25eb233ee2493b893e7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 72ff599bebdf042bc2021d53538cff1c0203d2de875bdc52c50a72675b73a47f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931841"
 ---
-# <a name="client-development-using-context-handles"></a>Client Entwicklung mithilfe von Kontext Handles
+# <a name="client-development-using-context-handles"></a>Cliententwicklung mitHilfe von Kontexthandles
 
-Die einzige Verwendung eines Client Programms für ein Kontext Handle besteht darin, dass jedes Mal, wenn der Client einen Remote Prozedur Aufruf durchführt, an den Server übergeben wird. Die Client Anwendung muss nicht auf den Inhalt des Handles zugreifen können. Es sollte nicht versucht werden, die Daten des Kontext Handles in irgendeiner Weise zu ändern. Die vom Client aufgerufenen Remote Prozeduren führen alle notwendigen Vorgänge im Kontext des Servers aus.
+Die einzige Verwendung eines Clientprogramms für ein Kontexthand handle besteht im Übergeben an den Server bei jedem Aufruf einer Remoteprozedur durch den Client. Die Clientanwendung muss nicht auf den Inhalt des Handle zugreifen. Es sollte nicht versucht werden, die Kontexthandhanddaten in irgendeiner Weise zu ändern. Die Remoteverfahren, die der Client aufruft, führen alle erforderlichen Vorgänge im Kontext des Servers aus.
 
-Vor dem Anfordern eines Kontext Handles von einem Server müssen Clients eine Bindung mit dem Server herstellen. Der Client kann ein automatisches, implizites oder explizites Bindungs Handle verwenden. Mit einem gültigen Bindungs Handle kann der Client eine Remote Prozedur auf dem Server aufrufen, die entweder ein geöffnetes Kontext Handle (nicht **null**) zurückgibt oder einen **\[ out \]** -Parameter in der Parameterliste der Remote Prozedur übergibt.
+Vor dem Anfordern eines Kontexthandpunkts von einem Server müssen Clients eine Bindung mit dem Server herstellen. Der Client kann ein automatisches, implizites oder explizites Bindungshand handle verwenden. Mit einem gültigen Bindungshand handle kann der Client eine Remoteprozedur auf dem Server aufrufen, die entweder ein geöffnetes Kontexthand handle (nicht **NULL)** zurückgibt oder eines über einen **\[ out-Parameter \]** in der Parameterliste der Remoteprozedur übergibt.
 
-Clients können geöffnete Kontext Handles in beliebiger Weise verwenden. Sie sollten das Handle jedoch für ungültig erklären, wenn es nicht mehr benötigt wird. Hierfür gibt es zwei Möglichkeiten:
+Clients können geöffnete Kontexthandles auf jede Weise verwenden, die sie benötigen. Sie sollten das Handle jedoch für ungültig erklären, wenn es nicht mehr benötigt wird. Es gibt zwei Wege, dies zu tun:
 
--   Um eine Remote Prozedur aufzurufen, die vom Serverprogramm bereitgestellt wird, das den Kontext freigibt und das Kontext Handle schließt (legt es auf **null** fest).
--   Wenn der Server nicht erreichbar ist, müssen Sie die [**rpcssdestroyclientcontext**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdestroyclientcontext) -Funktion aufzurufen.
+-   So rufen Sie eine Remoteprozedur auf, die vom Serverprogramm angeboten wird, das den Kontext freigibt und das Kontexthand handle schließt (legt es auf **NULL fest).**
+-   Wenn der Server nicht erreichbar ist, rufen Sie die [**RpcSsDestroyClientContext-Funktion**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdestroyclientcontext) auf.
 
-Beim zweiten Ansatz wird nur der Client seitige Zustand bereinigt, und der serverseitige Zustand wird nicht bereinigt. er sollte daher nur verwendet werden, wenn die Netzwerk Partition vermutet wird, und der Client und der Server führen eine unabhängige Bereinigung durch. Der Server führt eine unabhängige Bereinigung durch die Lauf-Down-Routine durch, und der Client führt dies mithilfe der [**rpcssdestroyclientcontext**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdestroyclientcontext) -Funktion aus.
+Der zweite Ansatz bereinigt nur den clientseitigen Zustand und nicht den serverseitigen Zustand. Daher sollte er nur verwendet werden, wenn eine Netzwerkpartition vermutet wird, und der Client und der Server werden eine unabhängige Bereinigung ausführen. Der Server führt eine unabhängige Bereinigung durch die Run-Down-Routine durch. Der Client verwendet dazu die [**RpcSsDestroyClientContext-Funktion.**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdestroyclientcontext)
 
-Das folgende Code Fragment zeigt ein Beispiel für die Verwendung eines Kontext Handles durch einen Client. Informationen zum Anzeigen der Definition der Schnittstelle, die in diesem Beispiel verwendet wird, finden Sie unter [Schnittstellen Entwicklung mithilfe von Kontext Handles](interface-development-using-context-handles.md). Informationen zur Server Implementierung finden [Sie unter Serverentwicklung mithilfe von Kontext Handles](server-development-using-context-handles.md).
+Das folgende Codefragment zeigt ein Beispiel dafür, wie ein Client ein Kontexthand handle verwenden kann. Informationen zum Anzeigen der Definition der Schnittstelle, die in diesem Beispiel verwendet wird, finden Sie unter [Schnittstellenentwicklung mithilfe von Kontexthandles.](interface-development-using-context-handles.md) Informationen zur Serverimplementierung finden Sie unter [Serverentwicklung mithilfe von Kontexthandles.](server-development-using-context-handles.md)
 
-In diesem Beispiel ruft der Client remoteopen auf, um ein Kontext Handle zu erhalten, das gültige Daten enthält. Der Client kann dann das Kontext Handle in Remote Prozedur aufrufen verwenden. Da das Bindungs Handle nicht mehr benötigt wird, kann der Client das explizite handle freigeben, das zum Erstellen des Kontext Handles verwendet wurde:
+In diesem Beispiel ruft der Client RemoteOpen auf, um ein Kontexthand handle zu erhalten, das gültige Daten enthält. Der Client kann dann das Kontexthand handle in Remoteprozeduraufrufen verwenden. Da das Bindungshand handle nicht mehr benötigt wird, kann der Client das explizite Handle, das er zum Erstellen des Kontexthandpunkts verwendet hat, frei verwenden:
 
 
 ```C++
@@ -49,7 +49,7 @@ if (status)
 
 
 
-Die Client Anwendung in diesem Beispiel verwendet eine Prozedur namens RemoteRead, um eine Datendatei auf dem Server zu lesen, bis das Ende der Datei gefunden wird. Anschließend wird die Datei durch Aufrufen von remoteclose geschlossen. Das Kontext Handle wird als Parameter in den Funktionen RemoteRead und remoteclose wie folgt angezeigt:
+Die Clientanwendung in diesem Beispiel verwendet eine Prozedur namens RemoteRead, um eine Datendatei auf dem Server zu lesen, bis ein Dateiende vorgelegen hat. Anschließend wird die Datei durch Aufrufen von RemoteClose geschlossen. Das Kontexthandles wird als Parameter in den Funktionen RemoteRead und RemoteClose wie im folgenden Beispiel angezeigt:
 
 
 ```C++
@@ -73,9 +73,9 @@ if (RemoteClose(&phContext) < 0 )
 
 
 
- 
+ 
 
- 
+ 
 
 
 

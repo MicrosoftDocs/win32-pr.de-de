@@ -4,19 +4,19 @@ ms.assetid: 451a45f6-d77e-4860-84b1-362ea1f00578
 title: XMBYTEN2-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fad7c5406419ccbf6fb9f2cb6acf5811eb5139dd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 411b268551aedeca04f79eeca3d0410f4a66634018df85778e7a7c13a52bab07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118501387"
 ---
 # <a name="xmbyten2-operators"></a>XMBYTEN2-Operatoren
 
-Die [**XMBYTEN2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmbyten2) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMBYTEN2-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmbyten2) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
-> Die hier aufgeführten Operatoren sind nur in C++ verfügbar.
+> Die hier aufgeführten Operatoren sind nur mit C++ verfügbar.
 
  
 
@@ -26,7 +26,7 @@ Die [**XMBYTEN2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvect
 
 | Methoden                                               | BESCHREIBUNG                                                                                                          |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**Operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmbyten2-operator-assign)<br/> | Weist die Vektor Komponenten Daten einer Instanz von `XMBYTEN2` der aktuellen Instanz von zu `XMBYTEN2` . <br/> |
+| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmbyten2-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMBYTEN2` der aktuellen Instanz von `XMBYTEN2` zu. <br/> |
 
 
 
@@ -39,7 +39,7 @@ Die [**XMBYTEN2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvect
 [XMBYTEN2-Erweiterungen](ovw-xmbyten2-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMBYTEN2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmbyten2)

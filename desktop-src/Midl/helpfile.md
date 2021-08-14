@@ -1,9 +1,9 @@
 ---
 title: helpfile-Attribut
-description: Das Attribut \ HelpFile \ legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
+description: Das Attribut \helpfile\legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
 ms.assetid: caa248b1-a1a7-4c36-886a-079a66a01907
 keywords:
-- HelpFile-Attribut-Mittel l
+- Helpfile-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0b4283b0285631a710af774d364a01b82c9d44b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1557d96f35913e5e1ed9b784bedfc430e6c4d77b65954583ca6923e4728af9a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384020"
 ---
 # <a name="helpfile-attribute"></a>helpfile-Attribut
 
-Das **\[ HelpFile \]** -Attribut legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
+Das **\[ Helpfile-Attribut \]** legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
 
 ``` syntax
 [
@@ -39,10 +39,10 @@ library
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige Identifikationsnummer für die [**Bibliothek**](library.md)an.
+Gibt eine universell eindeutige ID für die Bibliothek [**an.**](library.md)
 
 </dd> <dt>
 
@@ -53,23 +53,23 @@ Gibt den Namen der Datei an, die den Hilfetext enthält.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die der mittlerer l-Compiler auf die [**Bibliothek**](library.md)anwendet.
+Gibt null oder mehr Attribute an, die der MIDL-Compiler auf die Bibliothek [**anwenden soll.**](library.md)
 
 </dd> <dt>
 
-*Bibliotheks Anweisungen* 
+*Library-Anweisungen* 
 </dt> <dd>
 
-Gibt eine oder mehrere Mittell-Anweisungen an, die die Bibliotheks Schnittstelle definieren.
+Gibt eine oder mehrere MIDL-Anweisungen an, die die Bibliotheksschnittstelle definieren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **GetDocumentation** -Funktionen in den Schnittstellen **ITypeLib** und **ITypeInfo** , um den Dateinamen abzurufen.
+Verwenden Sie **die GetDocumentation-Funktionen** in den **Schnittstellen ITypeLib** und **ITypeInfo,** um den Dateinamen abzurufen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -93,15 +93,15 @@ library Hello
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

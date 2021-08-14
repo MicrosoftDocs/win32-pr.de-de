@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie mit dem shellprogrammierungs Modell eine Suche mit Abfrage Einschränkungen erstellt wird.
+description: Veranschaulicht das Erstellen einer Suche mit Abfrageeinschränkungen mithilfe des Shell-Programmiermodells.
 title: Suchordner (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,34 +9,34 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: c86a29c4a7d01fad3b91db20035cb84751e0b78a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8af53b6617ad2d655367969195e16854715e9ab75b65416bd9c75deaa9932988
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219816"
 ---
 # <a name="search-folder-sample"></a>Suchordner (Beispiel)
 
-Veranschaulicht, wie mit dem shellprogrammierungs Modell eine Suche mit Abfrage Einschränkungen erstellt wird.
+Veranschaulicht das Erstellen einer Suche mit Abfrageeinschränkungen mithilfe des Shell-Programmiermodells.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Beschreibung](#description)
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
 ## <a name="description"></a>BESCHREIBUNG
 
-In diesem Beispiel wird gezeigt, wie eine eingeschränkte Suche mithilfe der [**isearchfolderitemfactory**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isearchfolderitemfactory) -Schnittstelle erstellt wird, um ein Ordner shellelement (einen Container) zu erstellen, das die Abfrage darstellt. Die Ergebnisse werden mithilfe des Dialog Felds zum Öffnen von Dateien angezeigt.
+In diesem Beispiel wird gezeigt, wie Sie eine eingeschränkte Suche mithilfe der [**ISearchFolderItemFactory-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isearchfolderitemfactory) erstellen, um ein Shell-Ordnerelement (einen Container) zu erstellen, das die Abfrage darstellt. Die Ergebnisse werden im Dialogfeld zum Öffnen der Datei angezeigt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestversion des Produkts |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -45,21 +45,21 @@ In diesem Beispiel wird gezeigt, wie eine eingeschränkte Suche mithilfe der [**
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Beispiel für SearchFolder](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/searchfolder) |
+| GitHub  | [SearchFolder-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/searchfolder) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
  
 

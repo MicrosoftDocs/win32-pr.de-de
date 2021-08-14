@@ -1,25 +1,25 @@
 ---
-title: Server seitiges Cleanup
-description: Server seitiges Bereinigung und Remote Prozedur Aufruf (RPC).
+title: Serverseitige Bereinigung
+description: Serverseitige Bereinigung und Remoteprozeduraufruf (RPC).
 ms.assetid: 8a48f698-82ae-464b-bdd9-f0245bbc7733
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 72a66272fc3cca209d6825ac34d5158094ddff39
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 223cd15eb659a62c4a758098e9b0f70e977ebb069a2a305d2909b97b5fb12010
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118925292"
 ---
-# <a name="server-side-cleanup"></a>Server seitiges Cleanup
+# <a name="server-side-cleanup"></a>Serverseitige Bereinigung
 
-Stellen Sie sich das folgende Szenario vor:
+Imagine das folgende Szenario:
 
-Ein Client öffnet ein Kontext Handle und beendet oder verliert die Verbindung mit dem Server. Wie erkennt der Server, dass der Client fehlgeschlagen ist und der Kontext Handle ausgeführt werden soll? Es gibt zwei unter Szenarios: eine besteht darin, dass der Client ordnungsgemäß heruntergefahren wird. In diesem Fall wird der Server benachrichtigt, dass er heruntergefahren wird, und der Server kann bereinigt werden, einschließlich der Ausführung von Kontext-Laufzeiten. Wenn der Client nicht ordnungsgemäß heruntergefahren wird oder der Server nicht benachrichtigt werden kann, verwendet der Server Keep-Alives, um zu bestimmen, ob der Client noch verfügbar ist. Auf der Serverseite hat die [**RpcMgmtSetComTimeout**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtsetcomtimeout) -Funktion keine Auswirkung. Stattdessen verwendet der Server die Einstellung Global pro Computer – Keep Alive, die standardmäßig ungefähr zwei Stunden beträgt. Wenn der Client nicht auf die Keep-Alives des Servers antwortet, wird die Verbindung geschlossen. Wenn alle Verbindungen mit einem bestimmten Client Prozess geschlossen sind, bereinigt der Server die ausstehenden Kontext Handles und führt Sie aus.
+Ein Client öffnet ein Kontexthandle und beendet oder verliert dann die Verbindung mit dem Server. Wie erkennt der Server, dass der Client ausgefallen ist und das Kontexthandle herunterfahren sollte? Es gibt zwei Unterszenarios: Einer ist, dass der Client ordnungsgemäß heruntergefahren wird. In diesem Fall benachrichtigt er den Server, dass er heruntergefahren wird, und der Server kann bereinigt werden, einschließlich der Ausführung von Kontext run downs. Wenn der Client nicht ordnungsgemäß heruntergefahren wird oder den Server nicht benachrichtigen kann, verwendet der Server Keep Alives, um zu bestimmen, ob der Client noch verfügbar ist. Auf serverseitiger Seite hat die [**RpcMgmtSetComTimeout-Funktion**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtsetcomtimeout) keine Auswirkungen. Stattdessen verwendet der Server die globale Einstellung pro Computer – Keep Alive, die standardmäßig ungefähr zwei Stunden beträgt. Wenn der Client nicht auf die Keep-Alive-Funktionen des Servers reagiert, wird die Verbindung geschlossen. Wenn alle Verbindungen mit einem bestimmten Clientprozess geschlossen werden, bereinigt der Server und führt ausstehende Kontexthandles aus.
 
- 
+ 
 
- 
+ 
 
 
 

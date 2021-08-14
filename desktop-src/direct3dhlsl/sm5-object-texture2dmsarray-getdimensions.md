@@ -1,6 +1,6 @@
 ---
-title: 'Texture2DMSArray:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | Texture2DMSArray:: GetDimensions-Funktion'
+title: Texture2DMSArray::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | Texture2DMSArray::GetDimensions-Funktion
 ms.assetid: 86d54e0d-f168-479f-b2af-f021b8994741
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e22a225178c2fa965ea842b8c86692d09b87168f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6d6f9d4fc24cb1f8933bdb67796aebe3fe7d7406b114eea8a12f507c5f04591f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118508426"
 ---
-# <a name="texture2dmsarraygetdimensions-function"></a>Texture2DMSArray:: GetDimensions-Funktion
+# <a name="texture2dmsarraygetdimensions-function"></a>Texture2DMSArray::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -39,39 +39,39 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
-*Höhe* \[ vorgenommen\]
+*Höhe* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Höhe in Texels.
+Die Ressourcenhöhe in Texeln.
 
 </dd> <dt>
 
-*Elemente* \[ vorgenommen\]
+*Elemente* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Anzahl der Elemente im Array.
 
 </dd> <dt>
 
-*Anzahl von Beispielen* \[ vorgenommen\]
+*NumberOfSamples* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der Beispiel Speicherorte.
+Die Anzahl der Beispielstandorte.
 
 </dd> </dl>
 
@@ -79,7 +79,7 @@ Die Anzahl der Beispiel Speicherorte.
 
 Nichts
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -93,11 +93,11 @@ void GetDimensions(out float Width,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -112,7 +112,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture2DMSArray](sm5-object-texture2dmsarray.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

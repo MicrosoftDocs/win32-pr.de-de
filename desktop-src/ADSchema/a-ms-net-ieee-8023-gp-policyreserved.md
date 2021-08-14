@@ -1,10 +1,10 @@
 ---
-title: ms-net-IEEE-8023-GP-policyreserved-Attribut
-description: Für die zukünftige Verwendung reserviert. | ms-net-IEEE-8023-GP-policyreserved-Attribut
+title: ms-net-ieee-8023-GP-PolicyReserved-Attribut
+description: Für die zukünftige Verwendung reserviert. | ms-net-ieee-8023-GP-PolicyReserved-Attribut
 ms.assetid: 387a43d4-8f7f-4540-9ead-838f890f40ef
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-net-IEEE-8023-GP-policyreserved\"-Attribut AD-Schema"
+- ms-net-ieee-8023-GP-PolicyReserved attribute AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37b2e4a6e69185f78b0f0806e776043ec182517f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8b2c69413aabc62f7d6596d9d6e42eef97ea437e23c2bd6deab9c7bd3f29b268
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106373442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300110"
 ---
-# <a name="ms-net-ieee-8023-gp-policyreserved-attribute"></a>ms-net-IEEE-8023-GP-policyreserved-Attribut
+# <a name="ms-net-ieee-8023-gp-policyreserved-attribute"></a>ms-net-ieee-8023-GP-PolicyReserved-Attribut
 
 Für die zukünftige Verwendung reserviert.
 
@@ -28,13 +28,13 @@ Für die zukünftige Verwendung reserviert.
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-net-IEEE-8023-GP-policyreserved                    |
-| LDAP-Display-Name | ms-net-IEEE-8023-GP-policyreserved                    |
+| CN                | ms-net-ieee-8023-GP-PolicyReserved                    |
+| Ldap-Anzeigename | ms-net-ieee-8023-GP-PolicyReserved                    |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1956                               |
-| System-ID-GUID    | d3c527c7-2606-4deb-8cfd-18426feec8ce                  |
+| System-Id-Guid    | d3c527c7-2606-4deb-8cfd-18426feec8ce                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -54,15 +54,15 @@ Für die zukünftige Verwendung reserviert.
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
 | System-Only            | False                                                                             |
-| Ist-einwertig       | Richtig                                                                              |
+| Is-Single-Valued       | True                                                                              |
 | Ist indiziert             | False                                                                             |
 | Im globalen Katalog      | False                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
 | Search-Flags           | 0x00000000                                                                        |
 | System-Flags           | 0x00000010                                                                        |
-| In verwendete Klassen        | [**ms-net-IEEE-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Für die zukünftige Verwendung reserviert.
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
 | System-Only            | False                                                                             |
-| Ist-einwertig       | Richtig                                                                              |
+| Is-Single-Valued       | True                                                                              |
 | Ist indiziert             | False                                                                             |
 | Im globalen Katalog      | False                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
 | Search-Flags           | 0x00000000                                                                        |
 | System-Flags           | 0x00000010                                                                        |
-| In verwendete Klassen        | [**ms-net-IEEE-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
 
 
 
@@ -96,15 +96,15 @@ Für die zukünftige Verwendung reserviert.
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
 | System-Only            | False                                                                             |
-| Ist-einwertig       | Richtig                                                                              |
+| Is-Single-Valued       | True                                                                              |
 | Ist indiziert             | False                                                                             |
 | Im globalen Katalog      | False                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
 | Search-Flags           | 0x00000000                                                                        |
 | System-Flags           | 0x00000010                                                                        |
-| In verwendete Klassen        | [**ms-net-IEEE-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-8023-GroupPolicy**](c-ms-net-ieee-8023-grouppolicy.md)<br/> |
 
 
 

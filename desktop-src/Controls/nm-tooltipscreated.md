@@ -1,9 +1,9 @@
 ---
-title: NM_TOOLTIPSCREATED Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Steuer Elements, dass das Steuerelement ein QuickInfo-Steuerelement erstellt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_TOOLTIPSCREATED Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement ein QuickInfo-Steuerelement erstellt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 8108f084-212d-4a16-b604-1ec134b1bb43
 keywords:
-- Windows-Steuerelemente für NM_TOOLTIPSCREATED Benachrichtigungs
+- NM_TOOLTIPSCREATED Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e2e99850b17b0f2b06948a09b70a89e67e65a50
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 35006c7c7f4cc66cc9ce5e387a362f423db43b6b7aab914d26360dd08d13b37b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118410313"
 ---
-# <a name="nm_tooltipscreated-notification-code"></a>NM- \_ tooltipscreated-Benachrichtigungs Code
+# <a name="nm_tooltipscreated-notification-code"></a>NM \_ QUICKINFOCREATED-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Steuer Elements, dass das Steuerelement ein QuickInfo-Steuerelement erstellt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement ein QuickInfo-Steuerelement erstellt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_TOOLTIPSCREATED
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmtooltipscreated**](/windows/win32/api/commctrl/ns-commctrl-nmtooltipscreated) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Ein Zeiger auf eine [**NMTOOLTIPSCREATED-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmtooltipscreated) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Sofern nicht anders angegeben, ignoriert das Steuerelement den Rückgabewert aus diesem Benachrichtigungs Code.
+Sofern nicht anders angegeben, ignoriert das Steuerelement den Rückgabewert aus diesem Benachrichtigungscode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Sofern nicht anders angegeben, ignoriert das Steuerelement den Rückgabewert aus
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

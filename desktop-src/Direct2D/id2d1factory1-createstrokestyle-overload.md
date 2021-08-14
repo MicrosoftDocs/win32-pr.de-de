@@ -1,9 +1,9 @@
 ---
-title: ID2D1Factory1-Methoden für die Methode "deestrokestyle"
+title: ID2D1Factory1 CreateStrokeStyle-Methoden
 description: Erstellt ein ID2D1StrokeStyle1-Objekt.
 ms.assetid: FFC85600-A352-4348-BFAA-CBCAF34A692C
 keywords:
-- Methoden für "kreatestrokestyle" Direct2D
+- CreateStrokeStyle-Methoden Direct2D
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: c7e0de21c5591ce89f6bfff278b44b23c8ca393d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e874f0832af55802b63a8e3ee66beb59374d194a3f1d1e73a3811a4dcc6ec646
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119304810"
 ---
-# <a name="id2d1factory1createstrokestyle-methods"></a>ID2D1Factory1:: kreatestrokestyle-Methoden
+# <a name="id2d1factory1createstrokestyle-methods"></a>ID2D1Factory1::CreateStrokeStyle-Methoden
 
-Erstellt ein [**ID2D1StrokeStyle1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1) -Objekt.
+Erstellt ein [**ID2D1StrokeStyle1-Objekt.**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,12 +29,12 @@ Erstellt ein [**ID2D1StrokeStyle1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1st
 
 | Methode                                                                                                                                     | BESCHREIBUNG                                                                 |
 |:-------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
-| [**"Kreatestrokestyle" (D2D1 \_ Stroke \_ Style \_ PROPERTIES1 \* , float \* , UInt32, ID2D1StrokeStyle1 \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1factory1-createstrokestyle(constd2d1_stroke_style_properties1_constfloat_uint32_id2d1strokestyle1)) | Erstellt ein [**ID2D1StrokeStyle1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1) -Objekt.<br/> |
-| [**"Kreatestrokestyle" (D2D1 \_ Stroke \_ Style \_ PROPERTIES1&, float \* , UInt32, ID2D1StrokeStyle1 \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1factory1-createstrokestyle(constd2d1_stroke_style_properties1__constfloat_uint32_id2d1strokestyle1)) | Erstellt ein [**ID2D1StrokeStyle1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1) -Objekt.<br/> |
+| [**CreateStrokeStyle (D2D1 \_ STROKE \_ STYLE \_ PROPERTIES1 , FLOAT , \* \* UINT32, ID2D1StrokeStyle1 \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1factory1-createstrokestyle(constd2d1_stroke_style_properties1_constfloat_uint32_id2d1strokestyle1)) | Erstellt ein [**ID2D1StrokeStyle1-Objekt.**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1)<br/> |
+| [**CreateStrokeStyle (D2D1 \_ STROKE \_ STYLE \_ PROPERTIES1&, \* FLOAT, UINT32, ID2D1StrokeStyle1 \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1factory1-createstrokestyle(constd2d1_stroke_style_properties1__constfloat_uint32_id2d1strokestyle1)) | Erstellt ein [**ID2D1StrokeStyle1-Objekt.**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1strokestyle1)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

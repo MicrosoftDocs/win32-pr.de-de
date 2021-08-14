@@ -1,76 +1,76 @@
 ---
-description: Die Speicherung von hart codierten Zeichen folgen in der Registrierung ist Teil eines Lokalisierungs Modells vor Windows Vista.
+description: Storage hart codierten Zeichenfolgen in der Registrierung ist Teil eines Windows Vista-Lokalisierungsmodells.
 ms.assetid: 70185942-7d32-4151-a4e1-f71cf45e87af
-title: Verwenden von Registrierungs Zeichenfolgen
+title: Verwenden der Umleitung von Registrierungszeichenfolgen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 287f6e1420aae0ff41c386e19852bebbd1a322c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30f0804d0586f8340e5a84e9da9c82ca39ffc30b55f72f4695d5216cbb26aab6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118389416"
 ---
-# <a name="using-registry-string-redirection"></a>Verwenden von Registrierungs Zeichenfolgen
+# <a name="using-registry-string-redirection"></a>Verwenden der Umleitung von Registrierungszeichenfolgen
 
-Die Speicherung von hart codierten Zeichen folgen in der Registrierung ist Teil eines Lokalisierungs Modells vor Windows Vista. Sie wird von MUI nicht unterstützt. Im aktuellen Modell wird die Benutzeroberfläche für das Betriebssystem in sprachspezifischen Ressourcen Dateien oberhalb einer sprach neutralen Basis ausgeführt. Die Komponenten des Betriebssystems verwenden die Registrierung auf sprachneutrale Weise.
+Storage hart codierten Zeichenfolgen in der Registrierung ist Teil eines Windows Vista-Lokalisierungsmodells. Dies wird von DER -Datei nicht unterstützt. Im aktuellen Modell wird die Benutzeroberfläche für das Betriebssystem in sprachspezifischen Ressourcendateien zusätzlich zu einer sprachneutralen Basis ausgeführt. Die Komponenten des Betriebssystems verwenden die Registrierung sprachneutral.
 
-MUI verwendet nur umgeleitete Registrierungs Zeichenfolgen, die von Win32 PE-Ressourcen in der Ressourcen Datei der Basis Sprache definiert werden. Die Umleitung wird separat definiert, z. b. in einer INF-Datei. Diese Art von Speicher ermöglicht es dem Ressourcen Lader, beim Laden von Ressourcen Modulen automatisch die richtigen Sprachressourcen auszuwählen.
+BEI DER WERDEN nur umgeleitete Registrierungszeichenfolgen verwendet, die von Win32 PE-Ressourcen in der Ressourcendatei der Basissprache definiert werden. Die Umleitung wird separat definiert, z. B. in einer INF-Datei. Mit dieser Art von Speicher kann das Ressourcenlademodul beim Laden des Ressourcenmoduls automatisch die richtigen Sprachressourcen auswählen.
 
 > [!Note]  
-> Dieses Thema bezieht sich nur auf Win32 PE-Ressourcen. Bei Verwendung von nicht-Win32 PE-Ressourcen müssen Sie ggf. eine angepasste Registrierung für die Registrierungs Zeichenfolge bereitstellen.
+> Dieses Thema bezieht sich nur auf Win32 PE-Ressourcen. Wenn Sie Nicht-Win32 PE-Ressourcen verwenden, müssen Sie bei Bedarf eine benutzerdefinierte Umleitung von Registrierungszeichenfolgen bereitstellen.
 
  
 
 ## <a name="create-a-language-neutral-resource"></a>Erstellen einer Language-Neutral Ressource
 
-Eine MUI-Anwendung, die unter Windows Vista und höher ausgeführt wird, verwendet eine sprachneutrale Zeichen folgen Ressource, um den Zugriff auf sprachspezifische Zeichen folgen zuzulassen, die in einer Zeichen folgen Ressourcen Tabelle gespeichert sind. Anwendungscode, der diese Werte aus der Registrierung liest, wird im Abschnitt Laden eines Language-Neutral Registrierungs Werts untersuchen von [umgeleiteten](locating-redirected-strings.md)Zeichen folgen beschrieben.
+Eine unter Windows Vista ausgeführte PROGRAMMANWENDUNG verwendet eine sprachneutrale Zeichenfolgenressource, um den Zugriff auf sprachspezifische Zeichenfolgen zu ermöglichen, die in einer Zeichenfolgenressourcentabelle gespeichert sind. Anwendungscode, der diese Werte aus der Registrierung liest, wird im Abschnitt Laden eines Language-Neutral-Registrierungswerts unter Suchen von umgeleiteten [Zeichenfolgen beschrieben.](locating-redirected-strings.md)
 
-Die Daten für einen sprach neutralen Registrierungs Wert haben das Format " `@<PE-path>,-<stringID>[;<comment>]` ", wobei Folgendes gilt:
+Die Daten für einen sprachneutralen Registrierungswert haben das Format `@<PE-path>,-<stringID>[;<comment>]` " ", wobei:
 
--   *PE-Path* gibt den Pfad der ausführbaren Datei an. Sie können den Pfad mithilfe einer Umgebungsvariablen, z. b .% Program Files%, angeben, um die Bereitstellung zu unterstützen. Eine Alternative zum Erstellen des Zeichen folgen Verweises besteht darin, die Dateipfad Informationen auszulassen. In diesem Fall muss Ihre Anwendung über eine bestimmte Möglichkeit verfügen, z. b. einen anderen Registrierungs Wert, um Ihr eigenes Installationsverzeichnis zu kommunizieren.
--   *stringID* gibt den numerischen Ressourcen Bezeichner der relevanten Zeichen folgen Ressource an, die wie jede andere lokalisierbare Zeichen folgen Ressource implementiert wird.
--   der *Kommentar* gibt optionale Informationen zum Debuggen oder zur besseren Lesbarkeit des Registrierungs Werts an. Die Registrierungs-API-Funktionen ignorieren den Kommentar beim Laden der Zeichenfolge.
+-   *PE-path* gibt den Pfad der ausführbaren Datei an. Sie können den Pfad mithilfe einer Umgebungsvariablen wie %ProgramFiles% angeben, um die Bereitstellung zu unterstützen. Eine Alternative zum Erstellen ihres Zeichenfolgenverweises ist das Weglassen der Dateipfadinformationen. In diesem Fall muss Ihre Anwendung über einige Mittel verfügen, z. B. einen anderen Registrierungswert, um ihr eigenes Installationsverzeichnis zu kommunizieren.
+-   *stringID* gibt den numerischen Ressourcenbezeichner der relevanten Zeichenfolgenressource an, der wie jede andere lokalisierbare Zeichenfolgenressource implementiert wird.
+-   *comment* gibt optionale Informationen für das Debuggen oder die Lesbarkeit des Registrierungswerts an. Die Registrierungs-API-Funktionen ignorieren den Kommentar beim Laden der Zeichenfolge.
 
 > [!Note]  
-> Die Daten für den Registrierungs Wert machen keinen expliziten Verweis auf die sprachspezifische Ressourcen Datei. Die richtige Datei wird zur Laufzeit basierend auf den aktuellen Spracheinstellungen der Benutzeroberfläche festgelegt.
+> Die Daten für den Registrierungswert verweisen nicht explizit auf die sprachspezifische Ressourcendatei. Die richtige Datei wird zur Laufzeit basierend auf den aktuellen Spracheinstellungen der Benutzeroberfläche bestimmt.
 
  
 
-Ein Registrierungs Wert wird ohne Leerzeichen zwischen "," und "-" eingegeben. Ein korrekter Registrierungs Wert lautet wie folgt:
+Ein Registrierungswert wird ohne Leerzeichen zwischen "," und "-" eingegeben. Ein richtiger Registrierungswert ist:
 
 `shell32.dll,-22912`
 
-Ein falscher Registrierungs Wert ist:
+Ein falscher Registrierungswert ist:
 
 `shell32.dll, -22912`
 
-Ein Beispiel aus Windows Vista ist der Registrierungs Wert mit den folgenden Daten:
+Ein Beispiel aus Windows Vista ist der Registrierungswert mit den folgenden Daten:
 
 `@%SystemRoot%\system32\input.dll,-5020`
 
-## <a name="create-resources-for-shortcut-strings"></a>Erstellen von Ressourcen für Tastenkombinationen
+## <a name="create-resources-for-shortcut-strings"></a>Erstellen von Ressourcen für Verknüpfungszeichenfolgen
 
-Wenn die MUI-Anwendung den Namen in der shellbenutzerschnittstelle anzeigt, wird für das Anwendungssymbol eine infotip-Zeichenfolge angezeigt. Sie sollten Zeichen folgen Ressourcen für den anzeigen amen der Anwendung und die zugehörige infotip-Zeichenfolge für jede unterstützte Sprache erstellen. Wenn die Ressourcen bereit sind, kann Ihre Anwendung die Zeichen folgen verwenden, wie im Abschnitt Verwenden der Shell-API zum Laden von Verknüpfungs Zeichenfolgen aus dem Registrierungs Abschnitt untersuchen von [umgeleiteten](locating-redirected-strings.md)Zeichen folgen beschrieben.
+Wenn die BEZEICHNUNG-Anwendung ihren Namen auf der Shell-Benutzeroberfläche anzeigt, wird eine InfoTip-Zeichenfolge für das Anwendungssymbol angezeigt. Sie sollten Zeichenfolgenressourcen für den Anzeigenamen Ihrer Anwendung und die zugehörige InfoTip-Zeichenfolge für jede unterstützte Sprache erstellen. Wenn die Ressourcen bereit sind, kann Ihre Anwendung die Zeichenfolgen wie im Abschnitt Verwenden der Shell-API zum Laden von Verknüpfungszeichenfolgen aus der Registrierung unter Suchen von umgeleiteten Zeichenfolgen [beschrieben verwenden.](locating-redirected-strings.md)
 
-### <a name="prepare-resources-for-a-shortcut-created-with-windows-installer"></a>Vorbereiten von Ressourcen für eine Verknüpfung, die mit Windows Installer erstellt wurde
+### <a name="prepare-resources-for-a-shortcut-created-with-windows-installer"></a>Vorbereiten von Ressourcen für eine Verknüpfung, die mit dem Windows erstellt wurde
 
-Wenn Sie Windows Installer (MSI) verwenden, um eine Verknüpfung zu erstellen, enthalten Zeichen folgen Ressourcen den anzeigen Amen und die Beschreibung der Verknüpfung. In der [MSI](../msi/shortcut-table.md)-Verknüpfungs Tabelle wird auf die Ressourcen-DLL in den entsprechenden Spalten verwiesen, und die Ressourcen Bezeichner für den Kontext anzeigen Amen und die Beschreibung werden in den entsprechenden Spalten des Ressourcen Bezeichners verwendet.
+Wenn Sie mit Windows Installer (MSI) eine Verknüpfung erstellen, enthalten Zeichenfolgenressourcen den Anzeigenamen und die Beschreibung der Verknüpfung. In der [MSI-Verknüpfungstabelle](../msi/shortcut-table.md)wird in den entsprechenden Spalten auf die Ressourcen-DLL verwiesen, und die Ressourcenbezeichner für den Kontextanzeigenamen und die Beschreibung werden in den entsprechenden Ressourcenbezeichnerspalten verwendet.
 
-Damit die Anwendungs Verknüpfung ordnungsgemäß mit der MUI-Ressourcen Technologie funktioniert, sollten Sie die folgenden Punkte beachten, wenn Sie die Verknüpfungs Zeichenfolgen vorbereiten:
+Damit die Anwendungsverknüpfung ordnungsgemäß mit DER RESSOURCENtechnologie funktioniert, beachten Sie beim Vorbereiten der Verknüpfungszeichenfolgen folgende Punkte:
 
--   Verwenden Sie entweder Umgebungsvariablen oder einen relativen Pfad, um die dll zu registrieren. Sie können @% SystemRoot% System32shell32.dll angeben, solange \\ \\ der Registrierungs Zeichenfolgentyp "reg \_ Expand SZ" lautet \_ . Der Zeichen folgen Ressourcen Bezeichner für "Text Document" in Shell32.dll ist 12345.
+-   Verwenden Sie entweder Umgebungsvariablen oder einen relativen Pfad, um die DLL zu registrieren. Sie können @%systemroot% system32shell32.dll, solange der Registrierungszeichenfolgentyp \\ \\ REG EXPAND SZ \_ \_ ist. Der Zeichenfolgenressourcenbezeichner für "Textdokument" in Shell32.dll ist 12345.
 -   Verwenden Sie keine Leerzeichen um die Symbole "," und "-". Ein richtiges Beispiel ist "shell32.dll,-22912".
--   Verwenden Sie keinen kurzen Dateinamen. Diese Art von Name funktioniert nicht mit dem Ressourcen Lade Modul.
+-   Verwenden Sie keinen kurzen Dateinamen. Dieser Namenstyp funktioniert nicht mit dem Ressourcenlader.
 
-### <a name="prepare-resources-for-a-shortcut-using-inf-format"></a>Vorbereiten von Ressourcen für eine Verknüpfung mit dem INF-Format
+### <a name="prepare-resources-for-a-shortcut-using-inf-format"></a>Vorbereiten von Ressourcen für eine Verknüpfung im INF-Format
 
-Wenn Sie das INF-Dateiformat verwenden, um Verknüpfungs Zeichenfolgen zu erstellen, sollte die Ressourcen Datei die folgenden Registrierungs Einstellungen erstellen. Bei diesen Anweisungen wird davon ausgegangen, dass die profileitems-Syntax der Setup-API verwendet wird.
+Wenn Sie das INF-Dateiformat verwenden, um Verknüpfungszeichenfolgen zu erstellen, sollte die Ressourcendatei die folgenden Registrierungseinstellungen vornehmen. Bei diesen Anweisungen wird davon ausgegangen, dass die ProfileItems-Syntax der Setup-API verwendet wird.
 
-1.  Ändern Sie den infotip-Wert, um auf den Verweis auf die Zeichen folgen Umleitung mit dem Pfad und dem Ressourcen Bezeichner zu verweisen.
-2.  Fügen Sie den neuen Wert displayresource unter den Profilen für die profileitems-Installation hinzu.
+1.  Ändern Sie den InfoTip-Wert so, dass er auf den Zeichenfolgenumleitungsverweis verweist, indem Sie den Pfad und den Ressourcenbezeichner verwenden.
+2.  Fügen Sie den neuen Wert DisplayResource unter den ProfileItems-Installationsabschnitten hinzu.
 
-Im folgenden Beispiel wird gezeigt, wie die Rechner Anwendung zum **Startmenü** hinzugefügt wird:
+Das folgende Beispiel zeigt das Hinzufügen der Anwendung Calculator zum **Startmenü:**
 
 
 ```C++
@@ -87,7 +87,7 @@ Im folgenden Beispiel wird gezeigt, wie die Rechner Anwendung zum **Startmenü**
 
 
 
-Verwenden Sie die unten gezeigte Syntax, wenn Sie mit INF dem **Startmenü** Elemente hinzufügen, z. b. einen Zugriffs Gruppenordner. Diese Syntax setzt voraus, dass die \[ Unterstützung von "startmenuitems" \] von Setup verwendet wird, ähnlich der Syntax in "syssetup. inf".
+Verwenden Sie die unten gezeigte Syntax, wenn Sie INF verwenden, um Dem Startmenü Elemente hinzuzufügen, z. B. **einen** Ordner "Zugriffsgruppe". Bei dieser Syntax wird davon ausgegangen, dass die StartMenuItems-Unterstützung von Setup verwendet wird, ähnlich der Syntax, die \[ \] in Syssetup.inf verwendet wird.
 
 
 ```C++
@@ -97,21 +97,21 @@ Verwenden Sie die unten gezeigte Syntax, wenn Sie mit INF dem **Startmenü** Ele
 
 
 
-Legen Sie den Wert *Infotipp* auf den Zeichen folgen Verweis " `@<path>,-resID` " fest.
+Legen Sie den Wert *infotip* auf den Zeichenfolgenverweis "" `@<path>,-resID` fest.
 
-Der Anzeige Name wird durch die Werte " *ResDll* " und " *RESID* " bestimmt. Der Wert *RESID* gibt den Ressourcen Bezeichner für eine Zeichen folgen Ressource an, die der sprach neutralen Datei zugeordnet ist. Der *ResDll* -Wert gibt den Pfad zu der sprach neutralen Datei an.
+Der Anzeigename wird durch die *ResDLL- und* *resID-Werte* bestimmt. Der *resID-Wert* gibt den Ressourcenbezeichner für eine Zeichenfolgenressource an, die der sprachneutralen Datei zugeordnet ist. Der *resDLL-Wert* gibt den Pfad zur sprachneutralen Datei an.
 
-## <a name="create-resources-for-friendly-document-type-names"></a>Erstellen von Ressourcen für benutzerfreundliche Dokumenttyp Namen
+## <a name="create-resources-for-friendly-document-type-names"></a>Erstellen von Ressourcen für benutzerfreundliche Dokumenttypnamen
 
-Sie müssen Anzeige Name-und infotip-Zeichen folgen für die Anwendung als Zeichen folgen Ressourcen implementieren. Damit benutzerfreundliche Dokumenttyp Namen auf die Sprache der Benutzeroberfläche reagieren können, muss die Anwendung die Namen mit dem Wert friendlytyid unter dem Programm Bezeichner-Schlüssel für den Dateityp registrieren. Der Standardwert für den programmbezeichnerschlüssel sollte beibehalten werden, um die Abwärtskompatibilität zu gewährleisten. Weitere Informationen über den Zugriff auf die Namen Ihrer Anwendung finden Sie in den Typnamen der Abfrage freundlichen Dokumente im Registrierungs Abschnitt der [Suche nach umgeleiteten](locating-redirected-strings.md)Zeichen folgen.
+Sie müssen Denknamen und InfoTip-Zeichenfolgen für Ihre Anwendung als Zeichenfolgenressourcen implementieren. Damit benutzerfreundliche Dokumenttypnamen auf die Benutzeroberflächensprache reagieren können, muss die Anwendung die Namen mithilfe des FriendlyTypeName-Werts unter dem Programmbezeichnerschlüssel für den Dateityp registrieren. Der Standardwert für den Programmbezeichnerschlüssel sollte beibehalten werden, um abwärtskompatibel zu bleiben. Informationen zum Zugreifen auf die Namen aus Ihrer Anwendung finden Sie im Abschnitt Abfragefreundliche Dokumenttypnamen im Abschnitt Registrierung unter Suchen von [umgeleiteten Zeichenfolgen.](locating-redirected-strings.md)
 
-Die jeweilige Aufgabe umfasst die folgenden Schritte:
+Die spezifische Arbeit umfasst die folgenden Schritte:
 
-1.  Implementieren Sie den anzeigen Amen und die infotip-Zeichen folgen als sprachspezifische Zeichen folgen Ressourcen.
-2.  Fügen Sie den Wert friendlytyadapame unter dem Dokumenttyp-Registrierungsschlüssel hinzu. Die Daten für den Wert entsprechen dem Muster " `@<path>,-<resID>` ", wobei " *path* " angibt, dass die ausführbare Datei und die *RESID* der Ressourcen Bezeichner einer lokalisierbaren Zeichen folgen Ressource sind, die dieser ausführbaren Datei
-3.  Geben Sie den infotip-Registrierungs Wert gemäß dem Format " `@<path>,-<resID>` " an.
+1.  Implementieren Sie den Benutzerfreundlichen Namen und infotip-Zeichenfolgen als sprachspezifische Zeichenfolgenressourcen.
+2.  Fügen Sie den FriendlyTypeName-Wert unter dem Registrierungsschlüssel des Dokumenttyps hinzu. Die Daten für den Wert folgen dem Muster " ", wobei path die ausführbare Datei angibt und resID der Ressourcenbezeichner einer lokalisierbaren Zeichenfolgenressource ist, die `@<path>,-<resID>` dieser ausführbaren Datei zugeordnet ist.  
+3.  Geben Sie den InfoTip-Registrierungswert im Format "" `@<path>,-<resID>` an.
 
-Das folgende Beispiel zeigt die Registrierungs Einstellungen für eine txt-Datei:
+Das folgende Beispiel zeigt die Registrierungseinstellungen für eine .txt Datei:
 
 
 ```C++
@@ -129,11 +129,11 @@ HKCR\txtfile
 
 
 
-## <a name="provide-resources-for-shell-verb-action-strings"></a>Bereitstellen von Ressourcen für shellverb-Aktions Zeichenfolgen
+## <a name="provide-resources-for-shell-verb-action-strings"></a>Bereitstellen von Ressourcen für Shellverb-Aktionszeichenfolgen
 
-Aktions Zeichenfolgen für bestimmte Verben (z. b. "Öffnen" und "Bearbeiten") werden im Popup Menü angezeigt, wenn der Benutzer mit der rechten Maustaste auf eine Datei in Windows-Explorer klickt. Die Anwendung muss keine Zeichen folgen für gängige Shellverben angeben, da die Shell über eigene MUI-aktivierte Standardwerte für diese Verben verfügt. Sie sollten jedoch lokalisierbare Zeichen folgen Ressourcen für Zeichen folgen bereitstellen, die ungewöhnliche Verben darstellen.
+Aktionszeichenfolgen für bestimmte Verben, z. B. "öffnen" und "bearbeiten", werden im Popupmenü angezeigt, das angezeigt wird, wenn der Benutzer im Explorer mit der rechten Maustaste auf eine Datei Windows klickt. Ihre Anwendung muss keine Zeichenfolgen für allgemeine Shellverben angeben, da die Shell über eigene STANDARD-fähige Standardeinstellungen für diese Verben verfügt. Sie sollten jedoch lokalisierbare Zeichenfolgenressourcen für Zeichenfolgen bereitstellen, die ungewöhnliche Verben darstellen.
 
-Unter den Betriebssystemen vor Windows XP werden Zeichen folgen für Shellverben in der Registrierung mit der folgenden Syntax gerendert, wobei *Verb* den tatsächlichen Verb Namen angibt:
+Bei xp-Windows werden Zeichenfolgen für Shellverben in der Registrierung mithilfe der folgenden Syntax gerendert, wobei *verb* den tatsächlichen Verbnamen angibt:
 
 
 ```C++
@@ -143,7 +143,7 @@ HKCR\<progid>\shell\<verb>
 
 
 
-Hier sehen Sie ein Beispiel:
+Ein Beispiel:
 
 
 ```C++
@@ -153,7 +153,7 @@ HKCR\Sample.app\shell\Disc
 
 
 
-Unter Windows XP und höher können Sie eine dereferenzierungsstufe verwenden, um eine Aktions Zeichenfolge von der Benutzeroberflächen Sprache abhängig zu machen. Diese Betriebssysteme unterstützen einen MUIVerb-Wert für die Definition einer MUI-kompatiblen Zeichenfolge. Im folgenden finden Sie ein Beispiel für einen Registrierungs Eintrag für ein ungewöhnliches Verb:
+Bei Windows XP und höher können Sie eine Deskriptionsebene verwenden, um eine Aktionszeichenfolge von der Sprache der Benutzeroberfläche abhängig zu machen. Diese Betriebssysteme unterstützen einen TBVerb-Wert für die Definition einer MIT DER KOMPATIBLEN Zeichenfolge. Hier ist ein Beispiel für einen Registrierungseintrag für ein ungewöhnliches Verb:
 
 
 ```C++
@@ -164,7 +164,7 @@ HKCR\Sample.app\shell\Disc
 
 
 
-Ihre MUI-Anwendung sollte außerdem in der Lage sein, den alten Standardwert als lokalisierbare Zeichenfolge zu registrieren, wie unten dargestellt:
+IhreSTELLUNG-Anwendung sollte auch in der Lage sein, den alten Standardwert als lokalisierbare Zeichenfolge zu registrieren, wie unten dargestellt:
 
 
 ```C++
@@ -175,13 +175,13 @@ HKCR\Sample.app\shell\Disc
 
 
 > [!Note]  
-> Die Registrierung des alten Standardwerts wird nicht empfohlen, da für Windows XP und höher unter Windows XP und höher eine andere Einrichtung als bei älteren Betriebssystemen erforderlich ist.
+> Die Registrierung des alten Standardwerts wird nicht empfohlen, da ein anderes Setup auf Windows XP und höher erforderlich ist als das Setup, das unter früheren Betriebssystemen verwendet wird.
 
  
 
-## <a name="create-resources-for-verb-protocol-and-auxusertype-strings"></a>Erstellen von Ressourcen für die Zeichen folgen Verb, Protocol und auxusertype
+## <a name="create-resources-for-verb-protocol-and-auxusertype-strings"></a>Erstellen von Ressourcen für Verb-, Protokoll- und AuxUserType-Zeichenfolgen
 
-Sie sollten lokalisierbare Zeichen folgen Ressourcen für Verb-, Protokoll-und auxusertype-Zeichen folgen erstellen. Verwenden Sie die folgenden Registrierungs Einstellungen:
+Sie sollten lokalisierbare Zeichenfolgenressourcen für Verb-, Protokoll- und AuxUserType-Zeichenfolgen erstellen. Verwenden Sie die folgenden Registrierungseinstellungen:
 
 
 ```C++
@@ -202,34 +202,34 @@ HKCR\<Your_Name>\protocol\StdFileEditing\verb\<number>
 
 
 
-Der für LocalizedString angegebene Wert enthält oder ersetzt den Wert für *Ihr Verb*, nicht die zwei Flagwerte.
+Der für LocalizedString angegebene Wert enthält oder ersetzt nur den Wert für *Ihr Verb,* nicht die beiden Flagwerte.
 
-Hier finden Sie eine Zusammenfassung, die Ihnen hilft, die richtigen Registrierungs Einstellungen sicherzustellen:
+Im Folgenden finden Sie eine Zusammenfassung, mit der Sie die richtigen Registrierungseinstellungen sicherstellen können:
 
--   Wenn CLSID über einen \\ eininsertable-Schlüssel der HKCR CLSID \\ {CLSID} verfügt \\ , definieren Sie den CLSID-Standardwert mithilfe von HKCR \\ CLSID \\ {CLSID} \\ LocalizedString.
--   Wenn CLSID mindestens einen Unterschlüssel unter HKCR \\ CLSID \\ {CLSID} Verb aufweist \\ , definieren Sie jede einzelne Verb Zeichenfolge mithilfe von HKCR \\ CLSID \\ {CLSID} \\ Verb \\ xxx \\ LocalizedString.
--   Wenn die CLSID mindestens einen Unterschlüssel unter dem HKCR \\ {ProgID} \\ Protocol \\ stdfilebearbeitungs- \\ Verb aufweist, definieren Sie jede einzelne Verb Zeichenfolge mit dem HKCR \\ {ProgID} \\ Protocol \\ stdfilebearbeitungs \\ Verb \\ xxx \\ LocalizedString.
--   Wenn die CLSID mindestens einen aufgelisteten "auxusertype"-Unterschlüssel unter "HKCR \\ CLSID \\ {CLSID}" ist \\ , definieren Sie jeden "auxusertype"-Eintrag mit "HKCR \\ CLSID \\ {CLSID}" ( \\ \\ \\ LocalizedString).
+-   Wenn CLSID über eine HKCR \\ CLSID \\ {clsid} Insertable Key verfügt, definieren Sie den \\ CLSID-Standardwert mit hkcr \\ clsid \\ {clsid} \\ LocalizedString.
+-   Wenn CLSID über einen oder mehrere Unterschlüssel unter HKCR \\ CLSID {clsid} Verb verfügt, definieren Sie jede einzelne \\ Verbzeichenfolge mithilfe von \\ HKCR \\ CLSID \\ {clsid} \\ Verb \\ xxx \\ LocalizedString.
+-   Wenn CLSID über einen oder mehrere Unterschlüssel unter HKCR \\ {progid} Protocol Stdfileediting Verb verfügt, definieren Sie jede einzelne Verbzeichenfolge mit \\ \\ \\ hkcr \\ {progid} \\ Protocol \\ Stdfileediting \\ Verb \\ xxx \\ LocalizedString.
+-   Wenn CLSID mindestens einen aufgelisteten AuxUserType-Unterschlüssel unter HKCR \\ CLSID \\ {clsid} AuxUserType enthält, definieren Sie jeden \\ AuxUserType-Eintrag mit hkcr \\ \\ clsid {clsid} \\ AuxUserType \\ xxx \\ LocalizedString.
 
 ## <a name="create-a-resource-for-the-uninstall-program"></a>Erstellen einer Ressource für das Deinstallationsprogramm
 
-Um das Deinstallationsprogramm für die Anwendung zu registrieren, können Sie Registrierungs Werte im eindeutigen bezeichnerunter Schlüssel für die Anwendung unter dem Registrierungsschlüssel HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows \\ CurrentVersion \\ Uninstall erstellen. Zu den festzulegenden Werten gehören: Display Name, Display Version, Publisher, ProductID, RegOwner, RegCompany, urlinfoabout, helptelefon, HelpLink, INSTALLLOCATION, InstallSource, InstallDate, Contact, comments, DisplayIcon, Info, urlupdateinfo.
+Um das Deinstallationsprogramm für die Anwendung zu registrieren, können Sie Registrierungswerte im Unterschlüssel des eindeutigen Bezeichners für die Anwendung unter dem Registrierungsschlüssel HKEY \_ LOCAL MACHINE Software Microsoft Windows \_ \\ \\ \\ \\ CurrentVersion Uninstall \\ erstellen. Folgende Werte müssen festgelegt werden: DisplayName, DisplayVersion, Publisher, ProductID, RegOwner, RegCompany, UrlInfoAbout, HelpTelephone, HelpLink, InstallLocation, InstallSource, InstallDate, Contact, Comments, DisplayIcon, Readme, UrlUpdateInfo.
 
 > [!Note]  
-> Um die MUI-Technologie für jeden Wert zu aktivieren, können Sie " \_ lokalisiert" an den Wertnamen anhängen.
+> Um DIE TECHNOLOGY für jeden Wert zu aktivieren, können Sie \_ "Lokalisiert" an den Wertnamen anfügen.
 
  
 
-Betriebssystemkomponenten müssen einen Wert für Display Name bereitstellen, \_ der auf eine MUI-spezifische Weise lokalisiert wird. Sie sollten den anzeigen Amen in einer DLL (z. b. Res.dll) als Zeichen folgen Ressource platzieren, vorausgesetzt, dass der Bezeichner 1245 lautet. Anschließend kann die Anwendung den anzeigen Amen als Display Name registrieren \_ , der mit dem Wert "@ \\res.DLL,-1245" lokalisiert wird. Alle anderen Registrierungs Einstellungen sollten unverändert beibehalten werden, einschließlich des ursprünglichen Werts für Display Name.
+Betriebssystemkomponenten müssen einen Wert für DisplayName \_ Localized auf EINE BESTIMMTE Weise bereitstellen. Sie sollten den Anzeigenamen in einer DLL wie Res.dll als Zeichenfolgenressource platzieren, vorausgesetzt, der Bezeichner ist 1245. Anschließend kann die Anwendung den Anzeigenamen als DisplayName Localized mit dem Wert \_ "@ \\res.DLL,-1245" registrieren. Alle anderen Registrierungseinstellungen sollten so beibehalten werden, wie sie sind, einschließlich des ursprünglichen Werts für DisplayName.
 
-## <a name="create-resources-for-sound-events"></a>Erstellen von Ressourcen für Sound Ereignisse
+## <a name="create-resources-for-sound-events"></a>Erstellen von Ressourcen für Soundereignisse
 
-In Windows werden bestimmte Ereignisse mit Audiodateien verknüpft, z. b. ein neues e-Mail-Benachrichtigungs Ereignis oder ein kritischer Akku Alarm Ereignis. Die Ereignis Namen müssen von der Benutzeroberfläche angezeigt werden und müssen die Globalisierung unterstützen. Daher sollten Sie eine lokalisierbare Zeichen folgen Ressource für die Beschreibung der einzelnen Ereignis Beschreibungen implementieren. Fügen Sie zusätzlich zu dem hart codierten Standardwert einen neuen Registrierungs Wert für jeden Ereignis Namen hinzu.
+Windows bestimmte Ereignisse sound-Dateien zu, z. B. einem New Mail Notification-Ereignis oder einem Critical Battery Alarm-Ereignis. Die Ereignisnamen müssen von der Benutzeroberfläche angezeigt werden und die Globalisierung unterstützen. Daher sollten Sie eine lokalisierbare Zeichenfolgenressource für die Beschreibung der einzelnen Ereignisbeschreibungen implementieren. Fügen Sie zusätzlich zum hart codierten Standardwert einen neuen Registrierungswert für jeden Ereignisnamen hinzu.
 
-Gehen Sie folgendermaßen vor, um ein Sound Ereignis zu aktivieren:
+Gehen Sie wie folgt vor, um ein Soundereignis zu aktivieren:
 
-1.  Implementieren Sie die Beschreibung als lokalisierbare Zeichen folgen Ressource.
-2.  Fügen Sie neben dem hart codierten Standardwert einen neuen Registrierungs Wert für den anzeigen Amen hinzu. Das zugehörige Registrierungs Layout wird unten angezeigt:
+1.  Implementieren Sie die Beschreibung als lokalisierbare Zeichenfolgenressource.
+2.  Fügen Sie zusätzlich zum hart codierten Standardwert einen neuen Registrierungswert für den Anzeigenamen hinzu. Das zugeordnete Registrierungslayout ist unten dargestellt:
 
 
 ```C++
@@ -241,30 +241,30 @@ HKCR\AppEvents\EventLabels
 
 
 
-Wenn die Shell den Wert von "dispfilename" nicht finden oder abrufen kann, wird die Standardbeschreibung verwendet.
+Wenn die Shell den Wert von DispFileName nicht finden oder abrufen kann, wird die Standardbeschreibung verwendet.
 
-## <a name="create-resources-for-keyboard-layout-strings"></a>Erstellen von Ressourcen für Tastatur Layout-Zeichen folgen
+## <a name="create-resources-for-keyboard-layout-strings"></a>Erstellen von Ressourcen für Tastaturlayoutzeichenfolgen
 
-Wenn Ihre Anwendung ein Tastaturlayout implementiert, erfordert Sie eine lokalisierbare Zeichen folgen Ressource für den Namen des Layouts für die Bildschirm Anzeige, z. b. in Listen mit Tastaturlayouts. Jedes Tastaturlayout verfügt über einen Registrierungsschlüssel unter HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Control \\ Tastatur Layouts.
+Wenn Ihre Anwendung ein Tastaturlayout implementiert, ist eine lokalisierbare Zeichenfolgenressource für den Namen des Layouts für die Bildschirmanzeige erforderlich, z. B. in Listen von Tastaturlayouts. Jedes Tastaturlayout verfügt unter HKEY \_ LOCAL \_ MACHINE System \\ \\ CurrentControlSet Control Keyboard Layouts über \\ einen \\ Registrierungsschlüssel.
 
-Zu den Werten für diesen Schlüssel gehören Layouttext, ein lesbarer Name für die Abwärtskompatibilität und layoutanzeigename. Die für den layoutanzeigenamen angegebenen Daten sollten ein Zeichen folgen Verweis im Format " `@<path>,-resID` " sein, der auf eine lokalisierbare Zeichen folgen Ressource verweist, die dem Tastatur Layout zugeordnet ist.
+Zu den Werten für diesen Schlüssel gehören Layouttext, ein für Menschen lesbarer Name aus Gründen der Abwärtskompatibilität und Layoutanzeigename. Die für Layout Display Name bereitgestellten Daten sollten ein Zeichenfolgenverweis im Formular "" sein, der auf eine lokalisierbare Zeichenfolgenressource verweist, die dem `@<path>,-resID` Tastaturlayout zugeordnet ist.
 
-Im folgenden finden Sie ein Beispiel für eine Registrierungs Einstellung für das Spanisch (Spanien)-Tastaturlayout:
+Hier ist ein Beispiel für eine Registrierungseinstellung für das Spanisch (Spanien)-Tastaturlayout:
 
 `Layout Display Name=@%SystemRoot%\system32\input.dll,-5020`
 
-## <a name="represent-ole-insert-object-common-dialog-strings"></a>Darstellung der allgemeinen Dialog Felder für OLE-Einfügevorgänge
+## <a name="represent-ole-insert-object-common-dialog-strings"></a>Darstellen von allgemeinen Dialogfeldzeichenfolgen für OLE Insert-Objekte
 
-Sie können den anzeigen Amen eines OLE-einfügbar-Objekts als lokalisierbare Zeichen folgen Ressource implementieren, die dem Code zugeordnet ist, der das Objekt implementiert. Das [OLE-Dialogfeld "Objekt einfügen](/cpp/mfc/reference/coleinsertdialog-class) " erhält einen anzeigen Amen aus dem Registrierungsschlüssel HKCR \\ CLSID \\ { *<GUID>* }, wobei *GUID* den Klassen Bezeichner eines einfügbar OLE-Objekts identifiziert. Windows Vista und höher implementieren diesen Objekttyp auf lokalisierbare Weise. dabei wird ein MUI-kompatibler Anzeige Name verwendet, der die Anpassung an die Benutzeroberflächen Sprache ermöglicht. Im Gegensatz dazu implementieren Pre-Windows Vista-Betriebssysteme den anzeigen Amen für diesen Objekttyp mit dem Standardwert des entsprechenden Registrierungsschlüssels. In der Regel ist dieser Name entweder ein englischer Name (USA) oder ein Name in der Standardbenutzer Oberflächen Sprache des Systems.
+Sie können den Anzeigenamen eines einfügebaren OLE-Objekts als lokalisierbare Zeichenfolgenressource implementieren, die dem Code zugeordnet ist, der dieses Objekt implementiert. Das [Dialogfeld OLE-Objekt](/cpp/mfc/reference/coleinsertdialog-class) einfügen ruft einen Anzeigenamen aus dem Registrierungsschlüssel HKCR CLSID { } ab, wobei GUID den Klassenbezeichner eines einfügebaren \\ \\ *<GUID>* OLE-Objekts identifiziert.  Windows Vista und höher implementieren diese Art von Objekt auf lokalisierbare Weise, indem Sie einen MIT DER KOMPATIBLEn Anzeigenamen verwenden, der die Anpassung an die Benutzeroberflächensprache ermöglicht. Im Gegensatz dazu implementieren Windows Vista-Betriebssysteme den Anzeigenamen für diesen Objekttyp unter Verwendung des Standardwerts des entsprechenden Registrierungsschlüssels. In der Regel ist dieser Name entweder ein englischer (USA) oder ein Name in der Standardsprache der Systembenutzeroberfläche.
 
 > [!Note]  
-> Nicht alle Objekte, die den unter Schlüsseln des Registrierungsschlüssels entsprechen, sind Insertable.
+> Nicht alle Objekte, die Unterschlüsseln des Registrierungsschlüssels entsprechen, können eingefügt werden.
 
  
 
-Der Standardwert des Schlüssels "HKCR \\ CLSID \\ { *<GUID>* }" sollte einen lesbaren Namen aus Gründen der Abwärtskompatibilität beibehalten. Er sollte jedoch auch den Wert von LocalizedString im Format " `@<path>,-ResID` " definieren, wobei Path die ausführbare Datei identifiziert, die das Objekt implementiert. Der Wert Resid gibt den Ressourcen Bezeichner der lokalisierbaren Zeichenfolge für den anzeigen Amen an.
+Der Standardwert des HKCR \\ CLSID {}-Schlüssels sollte aus Gründen der Abwärtskompatibilität einen \\ *<GUID>* lesbaren Namen beibehalten. Es sollte jedoch auch den LocalizedString-Wert im Format " " definieren, wobei path die ausführbare Datei identifiziert, die `@<path>,-ResID` das Objekt implementieren. Der ResID-Wert gibt den Ressourcenbezeichner der lokalisierbaren Zeichenfolge für den Anzeigenamen an.
 
-Das Registrierungs Skript für das einfügbar Media Clip-Objekt enthält z. b. die folgenden Zeilen:
+Das Registrierungsskript für das einfügebare Media Clip-Objekt enthält beispielsweise die folgenden Zeilen:
 
 
 ```C++
@@ -274,17 +274,17 @@ HKCR,"CLSID\%CLSID_Media_Clip%","LocalizedString",,"@%systemroot%\system32\mplay
 
 
 
-Die erste Zeile bietet Abwärtskompatibilität, indem eine einfache Text Zeichenfolge in der Registrierung als Standard Anzeige Name platziert wird. Die zweite Zeile ermöglicht den Zugriff auf den MUI-kompatiblen anzeigen Amen. Gibt den Zeichen folgen Bezeichner an, der in Mplay32.exe gespeichert ist. Die Zeichenfolge mit dem Bezeichner 9217 in Mplay32.exe kann den Zeichen folgen Ressourcen Werten für eine beliebige Anzahl von Sprachen zugeordnet werden. Der englische Name (USA) ist "Media Clip".
+Die erste Zeile bietet Abwärtskompatibilität, indem eine einfache Textzeichenfolge in der Registrierung als Standardanzeigename platziert wird. Die zweite Zeile ermöglicht den Zugriff auf den ANZEIGEnamen mit DER-Konformität. Gibt den in der Tabelle gespeicherten Zeichenfolgenbezeichner Mplay32.exe. Die Zeichenfolge mit dem Bezeichner 9217 in Mplay32.exe kann Zeichenfolgenressourcenwerten für eine beliebige Anzahl von Sprachen zugeordnet werden. Der englische (USA) Name ist "Media Clip".
 
-## <a name="create-string-resources-for-microsoft-management-console-snap-ins"></a>Erstellen von Zeichen folgen Ressourcen für die Microsoft Management Console Snap-Ins
+## <a name="create-string-resources-for-microsoft-management-console-snap-ins"></a>Erstellen von Zeichenfolgenressourcen für Microsoft Management Console Snap-Ins
 
-Sie sollten für jedes MMC-Snap-in (Microsoft Management Console), das von ihrer MUI-Anwendung verwendet wird, eine lokalisierbare Zeichen folgen Ressource erstellen. Da ein Snap-in Teil einer Konsole ist, verfügt es über eine Benutzeroberfläche und muss globalisiert werden, um in mehreren Sprachen arbeiten zu können.
+Sie sollten eine lokalisierbare Zeichenfolgenressource für jedes Microsoft Management Console (MMC)-Snap-In erstellen, das von Ihrer SNAP-Anwendung verwendet wird. Da ein Snap-In Teil einer Konsole ist, verfügt es über eine Benutzeroberfläche und muss für den Betrieb in mehr als einer Sprache globalisiert werden.
 
-Zum größten Teil haben MMC-Snap-Ins dieselben Globalisierungs-und Lokalisierungs Probleme wie die MUI-Anwendung selbst. Ein MMC-Snap-in muss seinen Namen in der Registrierung für die Anzeige widerspiegeln. Der Registrierungs Eintrag sollte sowohl einen indirekten Verweis auf eine lokalisierbare Zeichen folgen Ressource als auch eine Literalzeichenfolge für die Abwärtskompatibilität enthalten.
+In den meisten Jahren lösen MMC-Snap-Ins die gleichen Globalisierungs- und Lokalisierungsprobleme wie die SELBST-ANWENDUNG aus. Ein MMC-Snap-In muss seinen Namen in der Registrierung zur Anzeige widerspiegeln. Der Registrierungseintrag sollte aus Gründen der Abwärtskompatibilität sowohl einen indirekten Verweis auf eine lokalisierbare Zeichenfolgenressource als auch eine Literalzeichenfolge enthalten.
 
-Jedes MMC-Snap-in verfügt über einen Registrierungsschlüssel unter HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ MMC \\ SnapIns. Zu den Werten für diesen Schlüssel gehören namestring, ein lesbarer Name für die Abwärtskompatibilität und NameStringIndirect, der einen indirekten Verweis auf eine lokalisierbare Zeichen folgen Ressource angibt. Für NameStringIndirect sollten Sie einen Zeichen folgen Verweis im Format "" bereitstellen `@<path>,-resID` , das eine lokalisierbare Zeichen folgen Ressource darstellt.
+Jedes MMC-Snap-In verfügt unter HKEY \_ LOCAL MACHINE Software Microsoft \_ \\ \\ \\ MMC \\ SnapIns über einen Registrierungsschlüssel. Zu den Werten für diesen Schlüssel gehören NameString, der einen für Menschen lesbaren Namen aus Gründen der Abwärtskompatibilität angibt, und NameStringIndirect, der einen indirekten Verweis auf eine lokalisierbare Zeichenfolgenressource angibt. Für NameStringIndirect sollten Sie einen Zeichenfolgenverweis im Formular "" angeben, der eine `@<path>,-resID` lokalisierbare Zeichenfolgenressource darstellt.
 
-Beispielsweise können Sie die folgende Einstellung für Mymmc.dll festlegen, wobei 12345 der Bezeichner der entsprechenden Zeichen folgen Ressource mit dem lokalisierbaren Namen des Snap-Ins ist:
+Beispielsweise können Sie die folgende Einstellung für Mymmc.dll festlegen, wobei 12345 der Bezeichner der entsprechenden Zeichenfolgenressource ist, die den lokalisierbaren Namen des Snap-Ins enthält:
 
 
 ```C++
@@ -293,13 +293,13 @@ NameStringIndirect=@%systemroot%@c:\windir\system32\mymmc.dll,-12345
 
 
 
-Einige Snap-Ins registrieren andere Registrierungszeichen folgen Werte, die von MMC nicht aus der Registrierung gelesen werden. Weitere Informationen zur Verwendung dieser Werte finden Sie unter Registrieren von Microsoft Management Console Snap-In Zeichen folgen, die nicht aus der Registrierung gelesen wurden, beim Suchen von [umgeleiteten](locating-redirected-strings.md)Zeichen folgen.
+Einige Snap-Ins registrieren andere Registrierungszeichenfolgenwerte, die MMC nicht aus der Registrierung liest. Weitere Informationen zur Verwendung dieser Werte finden Sie unter Register Microsoft Management Console Snap-In Strings Not Read from the Registry in [Locating Redirected Strings](locating-redirected-strings.md).
 
-## <a name="create-string-resources-for-a-windows-service"></a>Erstellen von Zeichen folgen Ressourcen für einen Windows-Dienst
+## <a name="create-string-resources-for-a-windows-service"></a>Erstellen von Zeichenfolgenressourcen für einen Windows Dienst
 
-Obwohl ein Windows-Dienst in der Regel nur wenige oder keine Benutzeroberfläche besitzt, muss er einen MUI-kompatiblen Namen anzeigen und in der Regel eine MUI-kompatible sprachspezifische Beschreibung bereitstellen. Der Registrierungsschlüssel, der einen Windows-Dienst beschreibt, unterstützt nur den Display Name-Wert für den Dienstnamen und den Beschreibungs Wert für die Dienst Beschreibung.
+Obwohl ein Windows-Dienst in der Regel nur wenig oder gar keine Benutzeroberfläche hat, muss er einen MIT DER-konformen Namen anzeigen und in der Regel eine sprachspezifische Beschreibung mit DER-Konformität angeben. Der Registrierungsschlüssel, der einen Windows-Dienst beschreibt, unterstützt nur den DisplayName-Wert für den Dienstnamen und den Description-Wert für die Dienstbeschreibung.
 
-Die Einstellungen für den Windows-Dienst werden von der Anwendung hergestellt, wie unter Festlegen des anzeigen Amens und der Beschreibung für einen Windows-Dienst aus der Registrierung beim Suchen von [umgeleiteten](locating-redirected-strings.md)Zeichen folgen beschrieben. Wenn Ihre Anwendung die Registrierungs Werte für die Dienst Benutzeroberfläche nicht festgelegt hat, bleiben die Werte in der Registrierung auf Englisch festgelegt, auch wenn die Benutzeroberfläche in einer anderen Sprache vorhanden ist.
+Einstellungen für den Windows-Dienst werden aus der Anwendung hergestellt, wie unter Festlegen des Anzeigenamens und der Beschreibung für einen Windows-Dienst aus der Registrierung unter Suchen von umgeleiteten Zeichenfolgen [beschrieben.](locating-redirected-strings.md) Wenn Ihre Anwendung die Registrierungswerte für die Dienstbenutzeroberfläche nicht festgelegt, bleiben die Werte in der Registrierung auf Englisch festgelegt, auch wenn sich die Benutzeroberfläche in einer anderen Sprache befindet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -308,7 +308,7 @@ Die Einstellungen für den Windows-Dienst werden von der Anwendung hergestellt, 
 [Vorbereiten von Ressourcen](preparing-resources.md)
 </dt> <dt>
 
-[Suchen umgeleitet-Zeichen folgen](locating-redirected-strings.md)
+[Suchen von umgeleiteten Zeichenfolgen](locating-redirected-strings.md)
 </dt> </dl>
 
  
